@@ -1,0 +1,35 @@
+{
+  "name": "eigo-quest",
+  "version": "0.1.0",
+  "private": true,
+  "description": "3歳〜小学生向け 毎日30分・ゲーミフィケーション英語学習アプリ（学校テスト対策 × フォニックス × 反射神経）",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "worksheets": "python3 worksheets/generate_worksheets.py --all"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "@prisma/client": "^6.6.0",
+    "next": "15.3.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "prisma": "^6.6.0",
+    "tailwindcss": "^4.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.1.0"
+  }
+}
