@@ -67,7 +67,7 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
             {result.passed ? (<>
               <StandingFigure id="haru" pose="cheer" height={110} />
               <StandingFigure id="birimo" mood="excited" height={84} />
-              {kind === "BOSS" && <MonsterFigure id="m-alpha-dragon" size={80} flip className="opacity-60 grayscale" />}
+              {kind === "BOSS" && <MonsterFigure id="mon-006" size={80} flip className="opacity-60 grayscale" />}
             </>) : (<>
               <StandingFigure id="riko" pose="cheer" height={100} />
               <StandingFigure id="birimo" mood="cheer" height={84} />
@@ -128,10 +128,10 @@ function BossHp({ total, answered }: { total: number; answered: number }) {
       </div>
       <span className="font-title text-lg text-[var(--volt)]">VS</span>
       <div className="flex-1">
-        <p className="font-title text-xs text-[var(--on-dark-2)]">遺跡のボス・アルファドラゴン</p>
+        <p className="font-title text-xs text-[var(--on-dark-2)]">遺跡のボス・アンブラ・ドラゴン</p>
         <div className="rpg-gauge mt-1"><span style={{ width: `${100 - (answered / total) * 100}%`, ["--gauge" as string]: "linear-gradient(90deg,#ff6fa5,#e5484d)" }} /></div>
       </div>
-      <MonsterFigure id="m-alpha-dragon" size={56} flip className="bob" />
+      <MonsterFigure id="mon-006" size={56} flip className="bob" />
     </div>
   );
 }

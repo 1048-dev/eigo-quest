@@ -1,6 +1,6 @@
 /**
- * キャラクターの全身「立ち絵」（3Dアニメ風の陰影つき・オリジナル）。
- * 座標系は 100×170。頭部は CharacterArt の顔を再利用し、その下に体・腕・足を描く。
+ * キャラクターの全身「立ち絵」（オリジナル）。座標系は 100×170。
+ * アニメの公式設定画のような約5頭身（頭は小さめ・手足は長め）で、服のしわ・ベルト・ブーツまで陰影つきで描く。
  * ポーズ: idle（気をつけ）/ wave（手をふる）/ point（前を指さす）/ cheer（ばんざい）
  */
 import { BirimoArt, HaruArt, KikoArt, RikoArt } from "./CharacterArt";
@@ -12,130 +12,165 @@ export type Pose = "idle" | "wave" | "point" | "cheer";
 
 const LINE = "#2a170a";
 
-function Arm({ side, pose, sleeve }: { side: "L" | "R"; pose: Pose; sleeve: string }) {
+type Pt = [number, number];
+
+/** 腕の関節（肩→ひじ→手） */
+function armPoints(side: "L" | "R", pose: Pose): [Pt, Pt, Pt] {
   const s = side === "L" ? -1 : 1;
-  const sx = 50 + s * 22;
-  const sy = 96;
-  let hand: [number, number];
-  if (pose === "cheer") hand = [50 + s * 36, 62];
-  else if (pose === "wave" && side === "R") hand = [86, 64];
-  else if (pose === "point" && side === "R") hand = [93, 98];
-  else hand = [50 + s * 27, 126];
-  const [hx, hy] = hand;
-  const mx = (sx + hx) / 2 + s * 3;
-  const my = (sy + hy) / 2;
-  const d = `M${sx} ${sy} Q${mx} ${my} ${hx} ${hy}`;
+  const shoulder: Pt = [50 + s * 19, 53];
+  if (pose === "cheer") return [shoulder, [50 + s * 25, 32], [50 + s * 29, 10]];
+  if (pose === "wave" && side === "R") return [shoulder, [80, 40], [84, 18]];
+  if (pose === "point" && side === "R") return [shoulder, [80, 60], [97, 57]];
+  return [shoulder, [50 + s * 24, 77], [50 + s * 25, 99]];
+}
+
+/** 手足（太さのある線＋円柱の陰影＋光のふち） */
+function Limb({ pts, w, fill }: { pts: Pt[]; w: number; fill: string }) {
+  const d = `M${pts[0][0]} ${pts[0][1]} ` + pts.slice(1).map((p) => `L${p[0]} ${p[1]}`).join(" ");
   return (
     <g>
-      <path d={d} stroke={sleeve} strokeWidth={12} strokeLinecap="round" fill="none" />
-      <path d={d} stroke="#000" strokeOpacity={0.18} strokeWidth={5} strokeLinecap="round" fill="none" transform={`translate(${s * 2.5} 1)`} />
-      <path d={d} stroke="#fff" strokeOpacity={0.22} strokeWidth={3} strokeLinecap="round" fill="none" transform={`translate(${-s * 2.5} -1)`} />
-      <circle cx={hx} cy={hy} r={6.8} fill="url(#g-skin)" />
-      <circle cx={hx} cy={hy} r={6.8} fill="url(#shade-sphere)" opacity={0.6} />
-      {pose === "point" && side === "R" && <path d={`M${hx + 4} ${hy - 1} l9 -2`} stroke="#ffd2ad" strokeWidth={4} strokeLinecap="round" />}
+      <path d={d} stroke={fill} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <path d={d} stroke="#000" strokeOpacity={0.22} strokeWidth={w * 0.4} strokeLinecap="round" strokeLinejoin="round" fill="none" transform="translate(1.4 0.6)" />
+      <path d={d} stroke="#fff" strokeOpacity={0.2} strokeWidth={w * 0.25} strokeLinecap="round" strokeLinejoin="round" fill="none" transform="translate(-1.6 -0.6)" />
     </g>
   );
 }
 
-function Legs({ pants, skirt, boots = "url(#g-boot)" }: { pants?: string; skirt?: string; boots?: string }) {
-  const top = skirt ? 142 : 138;
+function Hand({ at, pointing = false }: { at: Pt; pointing?: boolean }) {
+  const [x, y] = at;
   return (
     <g>
-      {[36, 55].map((x) => (
-        <g key={x}>
-          <rect x={x} y={top} width={9.5} height={20} rx={3.5} fill="url(#g-skin)" />
-          <rect x={x} y={top} width={9.5} height={20} rx={3.5} fill="url(#shade-cyl)" />
+      <ellipse cx={x} cy={y} rx={4.2} ry={4.6} fill="url(#g-skin)" />
+      <ellipse cx={x} cy={y} rx={4.2} ry={4.6} fill="url(#shade-sphere)" opacity={0.55} />
+      {pointing && <path d={`M${x + 3} ${y - 1} l6 -1`} stroke="#ffd2ad" strokeWidth={2.6} strokeLinecap="round" />}
+    </g>
+  );
+}
+
+function Arm({ side, pose, sleeve, cuff, long = false }: { side: "L" | "R"; pose: Pose; sleeve: string; cuff?: string; long?: boolean }) {
+  const [sh, el, ha] = armPoints(side, pose);
+  // long=false: ひじから先は袖をまくった素肌 / long=true: 手首までの長袖
+  const wrist: Pt = [el[0] + (ha[0] - el[0]) * 0.82, el[1] + (ha[1] - el[1]) * 0.82];
+  return (
+    <g>
+      <Limb pts={[sh, el]} w={10.5} fill={sleeve} />
+      <Limb pts={[el, wrist]} w={long ? 9 : 7.5} fill={long ? sleeve : "url(#g-skin)"} />
+      {cuff && <circle cx={el[0]} cy={el[1]} r={4.6} fill={cuff} />}
+      <Hand at={ha} pointing={pose === "point" && side === "R"} />
+    </g>
+  );
+}
+
+function Legs({ pants, boot = "url(#g-boot)", skin = false }: { pants: string; boot?: string; skin?: boolean }) {
+  const legs: [Pt, Pt, Pt][] = [[[43.5, 98], [42.5, 128], [42.5, 154]], [[56.5, 98], [57.5, 128], [57.5, 154]]];
+  return (
+    <g>
+      {legs.map((pts, i) => (
+        <g key={i}>
+          <Limb pts={pts} w={12} fill={skin ? "url(#g-skin)" : pants} />
+          {/* ブーツ（つや・ふち） */}
+          <path d={`M${pts[2][0] - 6} 146 L${pts[2][0] + 5} 146 L${pts[2][0] + 6} 160 Q${pts[2][0] + (i ? 12 : 10)} 162 ${pts[2][0] + (i ? 12 : 10)} 166 L${pts[2][0] - 6} 166 Z`} fill={boot} />
+          <path d={`M${pts[2][0] - 6} 146 L${pts[2][0] + 5} 146 L${pts[2][0] + 5.5} 149 L${pts[2][0] - 6} 149 Z`} fill="url(#metal-gold)" opacity={0.8} />
+          <ellipse cx={pts[2][0] - 2} cy={153} rx={1.6} ry={4} fill="#fff" opacity={0.3} />
         </g>
       ))}
-      {skirt ? (
-        <g>
-          <path d="M29 116 L71 116 L82 143 Q50 152 18 143 Z" fill={skirt} />
-          <path d="M29 116 L71 116 L82 143 Q50 152 18 143 Z" fill="url(#shade-cyl)" />
-          <path d="M40 118 L36 146 M50 118 L50 149 M60 118 L64 146" stroke="#000" strokeOpacity={0.15} strokeWidth={1.4} />
-        </g>
-      ) : (
-        <g>
-          <path d="M31 116 L69 116 L71 140 L53 140 L50 127 L47 140 L29 140 Z" fill={pants} />
-          <path d="M31 116 L69 116 L71 140 L53 140 L50 127 L47 140 L29 140 Z" fill="url(#shade-cyl)" />
-        </g>
-      )}
-      {[40.5, 59.5].map((x) => (
-        <g key={x}>
-          <path d={`M${x - 8} 158 Q${x - 8} 152 ${x} 152 Q${x + 9} 152 ${x + 10} 162 Q${x} 167 ${x - 9} 164 Z`} fill={boots} />
-          <ellipse cx={x - 1} cy={155} rx={4} ry={1.6} fill="#fff" opacity={0.45} />
-        </g>
-      ))}
     </g>
   );
 }
 
-function Torso({ fill, accent }: { fill: string; accent?: string }) {
-  const d = "M27 92 Q50 83 73 92 L71 122 Q50 129 29 122 Z";
-  return (
-    <g>
-      <path d={d} fill={fill} />
-      <path d={d} fill="url(#shade-cyl)" />
-      <path d="M30 120 Q50 126 70 120" stroke="#000" strokeOpacity={0.2} strokeWidth={2} fill="none" />
-      {accent && <path d="M44 92 L50 107 L56 92" fill="none" stroke={accent} strokeWidth={3} strokeLinejoin="round" />}
-    </g>
-  );
-}
+/** 接地影（アンビエントオクルージョン風） */
+const Floor = ({ rx = 26 }: { rx?: number }) => <ellipse cx={50} cy={166} rx={rx} ry={5} fill="url(#ao-floor)" />;
 
-/** 接地影（アンビエントオクルージョン風のやわらかい影） */
-const Floor = ({ rx = 32 }: { rx?: number }) => <ellipse cx={50} cy={165} rx={rx} ry={6} fill="url(#ao-floor)" />;
-
+/** 頭部（首から上だけ）を小さめに置く */
 function Head({ children }: { children: React.ReactNode }) {
-  return <g transform="translate(6 -4) scale(0.88)">{children}</g>;
+  return <g transform="translate(27 0) scale(0.46)">{children}</g>;
 }
 
+function Neck() {
+  return (
+    <g>
+      <rect x={45} y={33} width={10} height={16} rx={3} fill="url(#g-skin)" />
+      <rect x={45} y={33} width={10} height={6} fill="#000" opacity={0.14} />
+    </g>
+  );
+}
+
+/** 主人公ハル（10歳）: 探検ジャケット・金のバックルのベルト・ななめがけのかばん・カーゴパンツ・ブーツ */
 export function HaruStanding({ pose = "idle" }: { pose?: Pose }) {
   return (
     <g>
       <Floor />
       <Legs pants="url(#g-shorts)" />
-      <Torso fill="url(#g-vest)" accent="#f6efe0" />
-      <path d="M29 94 L68 122" stroke="#5a3418" strokeWidth={4} />
-      <g>
-        <rect x={61} y={113} width={16} height={12} rx={2.5} fill="url(#g-boot)" />
-        <rect x={61} y={113} width={16} height={4} rx={2} fill="#fff" opacity={0.18} />
-        <circle cx={69} cy={119} r={1.6} fill="url(#metal-gold)" />
-      </g>
+      <Neck />
+      {/* ジャケット */}
+      <path d="M28 52 Q30 45 50 44 Q70 45 72 52 L72 92 Q50 98 28 92 Z" fill="url(#g-vest)" />
+      <path d="M28 52 Q30 45 50 44 Q70 45 72 52 L72 92 Q50 98 28 92 Z" fill="url(#shade-cyl)" />
+      <path d="M44 48 L50 66 L56 48 Z" fill="#f6efe0" />
+      <path d="M44 48 L50 66 M56 48 L50 66" stroke="#173d28" strokeWidth={1.4} />
+      <path d="M50 66 L50 92" stroke="#173d28" strokeWidth={1.2} />
+      {[72, 80].map((y) => <rect key={y} x={34} y={y} width={9} height={6} rx={1} fill="#1f5236" stroke="#173d28" strokeWidth={0.8} />)}
+      <path d="M36 58 Q40 64 36 72 M64 58 Q60 64 64 72" stroke="#000" strokeOpacity={0.18} strokeWidth={1.2} fill="none" />
+      {/* ベルト */}
+      <rect x={28} y={89} width={44} height={6} fill="#3a1d0a" />
+      <rect x={46.5} y={88.5} width={7} height={7} rx={1} fill="url(#metal-gold)" />
+      {/* かばんのベルトとかばん */}
+      <path d="M34 50 L66 88" stroke="#5a3418" strokeWidth={3.4} />
+      <rect x={60} y={84} width={15} height={12} rx={2.4} fill="url(#g-boot)" />
+      <rect x={60} y={84} width={15} height={4} rx={2} fill="#fff" opacity={0.15} />
+      <circle cx={67.5} cy={90} r={1.4} fill="url(#metal-gold)" />
       <Arm side="L" pose={pose} sleeve="url(#g-vest)" />
       <Arm side="R" pose={pose} sleeve="url(#g-vest)" />
-      <Head><HaruArt /></Head>
+      <Head><HaruArt bust={false} /></Head>
     </g>
   );
 }
 
+/** なかまリコ（8歳）: オレンジのチュニック・黄色の帯・スカーフ・レギンス・ブーツ */
 export function RikoStanding({ pose = "idle" }: { pose?: Pose }) {
   return (
     <g>
       <Floor />
-      <Legs skirt="url(#g-riko-dress)" boots="url(#gem-topaz)" />
-      <Torso fill="url(#g-riko-dress)" accent="#ffd23f" />
-      <Arm side="L" pose={pose} sleeve="url(#g-riko-dress)" />
-      <Arm side="R" pose={pose} sleeve="url(#g-riko-dress)" />
-      <Head><RikoArt /></Head>
+      <Legs pants="#3a2a4a" boot="url(#g-boot)" />
+      <Neck />
+      <path d="M29 52 Q31 46 50 45 Q69 46 71 52 L76 116 Q50 124 24 116 Z" fill="url(#g-riko-dress)" />
+      <path d="M29 52 Q31 46 50 45 Q69 46 71 52 L76 116 Q50 124 24 116 Z" fill="url(#shade-cyl)" />
+      <path d="M40 98 L36 116 M50 98 L50 120 M60 98 L64 116" stroke="#000" strokeOpacity={0.15} strokeWidth={1.4} />
+      <rect x={29} y={86} width={42} height={6} rx={2} fill="url(#gem-topaz)" />
+      {/* スカーフ */}
+      <path d="M40 47 Q50 54 60 47 L58 53 Q50 58 42 53 Z" fill="#ffd23f" />
+      <path d="M56 52 L60 66 L54 62 Z" fill="#f0a81c" />
+      <Arm side="L" pose={pose} sleeve="url(#g-riko-dress)" long />
+      <Arm side="R" pose={pose} sleeve="url(#g-riko-dress)" long />
+      <Head><RikoArt bust={false} /></Head>
     </g>
   );
 }
 
+/** なかまキコ（7歳）: フードつきのマント・ラベンダーのワンピース・タイツ・ことばノート */
 export function KikoStanding({ pose = "idle" }: { pose?: Pose }) {
   return (
     <g>
-      <Floor rx={29} />
-      <Legs skirt="url(#g-kiko-dress)" boots="url(#gem-amethyst)" />
-      <Torso fill="url(#g-kiko-dress)" accent="#ff8fc0" />
-      {/* ことばノート（金の留め具つき） */}
-      <g transform="rotate(-12 26 120)">
-        <rect x={17} y={109} width={18} height={22} rx={2} fill="#7a3a12" />
-        <rect x={19} y={111} width={14} height={18} rx={1.5} fill="#fff4d2" />
-        <rect x={17} y={109} width={18} height={22} rx={2} fill="url(#shade-cyl)" />
-        <rect x={31} y={118} width={4} height={4} fill="url(#metal-gold)" />
+      <Floor rx={28} />
+      <Legs pants="#2c1a5c" boot="url(#gem-amethyst)" />
+      {/* マント（背中） */}
+      <path d="M26 50 Q50 40 74 50 L84 128 Q50 136 16 128 Z" fill="#3a2270" />
+      <path d="M26 50 Q50 40 74 50 L84 128 Q50 136 16 128 Z" fill="url(#shade-cyl)" />
+      <Neck />
+      <path d="M31 53 Q33 47 50 46 Q67 47 69 53 L73 118 Q50 126 27 118 Z" fill="url(#g-kiko-dress)" />
+      <path d="M31 53 Q33 47 50 46 Q67 47 69 53 L73 118 Q50 126 27 118 Z" fill="url(#shade-cyl)" />
+      <path d="M42 96 L38 118 M58 96 L62 118" stroke="#000" strokeOpacity={0.15} strokeWidth={1.4} />
+      {/* マントの留め具 */}
+      <circle cx={50} cy={52} r={3} fill="url(#gem-topaz)" />
+      <path d="M38 50 Q50 56 62 50" stroke="#2a1660" strokeWidth={2.4} fill="none" />
+      {/* ことばノート */}
+      <g transform="rotate(-10 26 104)">
+        <rect x={18} y={94} width={15} height={19} rx={2} fill="#7a3a12" />
+        <rect x={20} y={96} width={11} height={15} rx={1.5} fill="#fff4d2" />
+        <rect x={30} y={102} width={3} height={4} fill="url(#metal-gold)" />
       </g>
-      <Arm side="L" pose={pose === "point" ? "idle" : pose} sleeve="url(#g-kiko-dress)" />
-      <Arm side="R" pose={pose} sleeve="url(#g-kiko-dress)" />
-      <Head><KikoArt /></Head>
+      <Arm side="L" pose={pose === "point" ? "idle" : pose} sleeve="url(#g-kiko-dress)" long />
+      <Arm side="R" pose={pose} sleeve="url(#g-kiko-dress)" long />
+      <Head><KikoArt bust={false} /></Head>
     </g>
   );
 }
@@ -143,8 +178,8 @@ export function KikoStanding({ pose = "idle" }: { pose?: Pose }) {
 export function BirimoStanding({ mood = "happy" }: { mood?: Mood }) {
   return (
     <g>
-      <Floor rx={27} />
-      <g transform="translate(0 72)"><BirimoArt mood={mood} /></g>
+      <Floor rx={24} />
+      <g transform="translate(8 86) scale(0.84)"><BirimoArt mood={mood} /></g>
     </g>
   );
 }
@@ -175,5 +210,4 @@ export function StandingFigure({ id, pose, mood, height = 160, className = "", f
   );
 }
 
-/** 立ち絵の線の色（他コンポーネント用） */
 export const ART_LINE = LINE;

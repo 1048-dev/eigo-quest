@@ -1,214 +1,370 @@
 /**
- * 英語モンスター図鑑のモンスター（3Dアニメ風の陰影つき・オリジナルSVG・100×100）。
- * id は content/curriculum/monsters.json と対応。専用の絵がないモンスターは「ことだまスライム」を色ちがいで描く。
- * 立体感は、色の形の上に共通の陰影（url(#shade-sphere) など）とハイライトを重ねて出す。
+ * 英語モンスター（全100体）のイラスト。100×100 の座標系、地面は y≒94。
+ *
+ * 「種族の形」（10種）×「属性の色と光」（10種）で描く。色は ArtDefs の url(#el-<属性>-body) などを参照。
+ * レア度が上がるほど装飾が増える: RARE＝金の装飾 / EPIC＝オーラ＋プラチナの装飾 / LEGENDARY＝光輪＋ルーン＋強いオーラ。
+ * どんな id を渡しても lib/game/monsters の resolveMonster が必ず1体を返すので、表示が欠けることはない。
  */
-const LINE = "#2a170a";
+import { elementOf, resolveMonster, type ArchetypeId, type ElementDef, type MonsterDef, type Rarity } from "@/lib/game/monsters";
 
-type Shape =
-  | { t: "circle"; cx: number; cy: number; r: number }
-  | { t: "ellipse"; cx: number; cy: number; rx: number; ry: number; rot?: number }
-  | { t: "path"; d: string };
+const LINE = "#140a06";
 
-/** 色＋陰影＋（任意で）ハイライトを重ねた立体パーツ */
-function Vol({ s, fill, shade = "url(#shade-sphere)", spec = true, opacity = 1 }: { s: Shape; fill: string; shade?: string; spec?: boolean; opacity?: number }) {
-  const draw = (f: string, o = 1) =>
-    s.t === "circle" ? <circle cx={s.cx} cy={s.cy} r={s.r} fill={f} opacity={o} />
-    : s.t === "ellipse" ? <ellipse cx={s.cx} cy={s.cy} rx={s.rx} ry={s.ry} fill={f} opacity={o} transform={s.rot ? `rotate(${s.rot} ${s.cx} ${s.cy})` : undefined} />
-    : <path d={s.d} fill={f} opacity={o} />;
-  let hl: React.ReactNode = null;
-  if (spec && s.t !== "path") {
-    const cx = s.cx, cy = s.cy, r = s.t === "circle" ? s.r : Math.min(s.rx, s.ry);
-    hl = <ellipse cx={cx - r * 0.38} cy={cy - r * 0.45} rx={r * 0.32} ry={r * 0.18} fill="url(#spec)" transform={`rotate(-30 ${cx - r * 0.38} ${cy - r * 0.45})`} />;
-  }
-  return <g opacity={opacity}>{draw(fill)}{draw(shade, 0.9)}{hl}</g>;
+interface P {
+  el: ElementDef;
+  body: string; // 体（陰影つきの属性グラデーション）
+  wing: string; // 翼膜・ひれ
+  trim: string; // 角・よろいの金属
+  tier: number; // 0=COMMON … 3=LEGENDARY
 }
 
-/** つやのある黒目（大きなハイライト2つ） */
-function Face({ x = 50, y = 50, gap = 10, mouth = "smile", glow }: { x?: number; y?: number; gap?: number; mouth?: "smile" | "o" | "grin"; glow?: string }) {
+const TIER: Record<Rarity, number> = { COMMON: 0, RARE: 1, EPIC: 2, LEGENDARY: 3 };
+
+/** 光る目 */
+function GlowEye({ x, y, rx = 2.6, ry = 1.5, c, rot = 0 }: { x: number; y: number; rx?: number; ry?: number; c: string; rot?: number }) {
+  return (
+    <g filter="url(#f-bloom)">
+      <ellipse cx={x} cy={y} rx={rx} ry={ry} fill={c} transform={`rotate(${rot} ${x} ${y})`} />
+      <ellipse cx={x} cy={y} rx={rx * 0.35} ry={ry * 0.8} fill="#fff" transform={`rotate(${rot} ${x} ${y})`} />
+    </g>
+  );
+}
+
+/** 体のパーツ: 色＋立体の陰影 */
+function Shape({ d, fill, shade = "url(#shade-sphere)", o = 0.85 }: { d: string; fill: string; shade?: string; o?: number }) {
+  return <g><path d={d} fill={fill} /><path d={d} fill={shade} opacity={o} /></g>;
+}
+
+const Floor = ({ rx = 34 }: { rx?: number }) => <ellipse cx={50} cy={94} rx={rx} ry={5} fill="url(#ao-floor)" />;
+
+/** レア度の演出（オーラ・光輪・ルーン） */
+function Aura({ p, cx = 50, cy = 54, r = 46 }: { p: P; cx?: number; cy?: number; r?: number }) {
+  if (p.tier < 2) return null;
   return (
     <g>
-      {[x - gap, x + gap].map((cx) => (
-        <g key={cx}>
-          <ellipse cx={cx} cy={y} rx={4} ry={5.2} fill={glow ? glow : "#120a05"} filter={glow ? "url(#f-bloom-gold)" : undefined} />
-          <ellipse cx={cx - 1.2} cy={y - 2} rx={1.6} ry={2} fill="#fff" />
-          <circle cx={cx + 1.4} cy={y + 2} r={0.8} fill="#fff" opacity={0.8} />
+      <circle cx={cx} cy={cy} r={r} fill={`url(#el-${p.el.id}-aura)`} className="pulse-glow" />
+      {p.tier >= 3 && (
+        <g filter="url(#f-bloom)" opacity={0.85}>
+          <circle cx={cx} cy={cy} r={r * 0.86} fill="none" stroke={p.el.glow} strokeWidth={0.8} strokeDasharray="2 4" />
+          {Array.from({ length: 8 }, (_, i) => {
+            const a = (i / 8) * Math.PI * 2;
+            return <text key={i} x={cx + Math.cos(a) * r * 0.86} y={cy + Math.sin(a) * r * 0.86 + 2} fontSize={5} textAnchor="middle" fill={p.el.light}>{"ᚠᚱᚨᛟᛉᛞᛊᛏ"[i]}</text>;
+          })}
+        </g>
+      )}
+    </g>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// 種族ごとの形
+// ---------------------------------------------------------------------------
+
+function Dragon({ p }: { p: P }) {
+  return (
+    <g>
+      <Aura p={p} cy={50} />
+      <Floor rx={38} />
+      {/* 奥の翼 */}
+      <path d="M52 46 L90 6 L86 22 L98 20 L84 36 L94 40 L70 52 Z" fill={p.wing} opacity={0.75} />
+      {/* 尾 */}
+      <path d="M36 70 Q14 74 8 62 Q4 54 12 50" stroke={p.el.dark} strokeWidth={9} fill="none" strokeLinecap="round" />
+      <path d="M36 70 Q14 74 8 62 Q4 54 12 50" stroke={p.body} strokeWidth={6} fill="none" strokeLinecap="round" />
+      <path d="M12 50 l-6 -6 l9 2 z" fill={p.trim} />
+      {/* 後ろ足・胴 */}
+      <Shape d="M30 70 Q28 84 34 92 L42 92 L40 76 Z" fill={p.body} shade="url(#shade-cyl)" />
+      <Shape d="M26 64 Q30 46 52 48 Q72 50 72 66 Q68 80 48 80 Q30 80 26 64 Z" fill={p.body} />
+      <path d="M36 74 Q48 80 62 74 Q56 66 46 66 Q38 68 36 74 Z" fill={p.el.light} opacity={0.55} />
+      {[40, 46, 52, 58].map((x) => <path key={x} d={`M${x} 68 l1 9`} stroke={p.el.dark} strokeOpacity={0.4} strokeWidth={1} />)}
+      {/* 前足（爪） */}
+      <Shape d="M60 72 Q64 84 62 92 L70 92 L70 78 Z" fill={p.body} shade="url(#shade-cyl)" />
+      <path d="M61 92 l-2 3 M65 92 l0 3 M69 92 l2 3" stroke={p.trim} strokeWidth={1.4} strokeLinecap="round" />
+      {/* 手前の翼（骨と膜） */}
+      <path d="M48 50 L18 8 L22 26 L6 22 L20 38 L4 42 L34 56 Z" fill={p.wing} />
+      <path d="M48 50 L18 8 M48 50 L6 22 M48 50 L4 42" stroke={p.el.dark} strokeWidth={1.6} fill="none" />
+      <path d="M48 50 L18 8 L22 26 L6 22" fill="url(#shade-top)" opacity={0.5} />
+      {/* 首と頭 */}
+      <path d="M64 56 Q70 40 72 28" stroke={p.el.dark} strokeWidth={13} fill="none" strokeLinecap="round" />
+      <path d="M64 56 Q70 40 72 28" stroke={p.body} strokeWidth={10} fill="none" strokeLinecap="round" />
+      {[44, 38, 32].map((y, i) => <path key={y} d={`M${62 + i * 2} ${y + 8} l-5 -3 l4 -3`} fill={p.trim} />)}
+      <Shape d="M64 24 Q70 14 82 17 L95 24 Q88 30 76 31 Q66 31 64 24 Z" fill={p.body} />
+      <path d="M78 28 L95 24" stroke={LINE} strokeWidth={1} opacity={0.6} />
+      <path d="M70 18 L58 4 L74 14 Z M76 16 L70 2 L80 13 Z" fill={p.trim} />
+      <GlowEye x={78} y={21} c={p.el.glow} rot={-12} />
+      {p.tier >= 1 && <path d="M66 20 q6 -3 12 -1" stroke={p.trim} strokeWidth={1.2} fill="none" />}
+      {p.tier >= 3 && <path d="M66 12 l3 -8 l3 6 l3 -8 l3 8" stroke={p.trim} strokeWidth={1.6} fill="none" filter="url(#f-bloom)" />}
+    </g>
+  );
+}
+
+function Wolf({ p }: { p: P }) {
+  return (
+    <g>
+      <Aura p={p} />
+      <Floor rx={32} />
+      {/* しっぽ（先が属性の光） */}
+      <path d="M68 78 Q92 76 90 54 Q88 44 80 42" stroke={p.body} strokeWidth={10} fill="none" strokeLinecap="round" />
+      <path d="M86 50 Q90 44 82 40" stroke={p.el.glow} strokeWidth={6} fill="none" strokeLinecap="round" filter="url(#f-bloom)" />
+      {/* 座った体 */}
+      <Shape d="M40 54 Q36 70 42 90 L76 90 Q82 72 72 58 Q60 48 40 54 Z" fill={p.body} />
+      <Shape d="M42 70 L40 92 L48 92 L50 72 Z M54 70 L54 92 L62 92 L60 72 Z" fill={p.body} shade="url(#shade-cyl)" />
+      {/* たてがみ（胸の毛） */}
+      <path d="M30 40 L26 54 L34 50 L30 64 L40 58 L38 72 L48 62 L52 46 Z" fill={p.el.light} opacity={0.75} />
+      {/* 頭 */}
+      <Shape d="M28 26 Q30 14 44 14 Q56 16 58 28 Q58 38 48 42 L32 44 Q22 40 14 36 Q20 30 28 26 Z" fill={p.body} />
+      <path d="M14 36 Q20 36 26 40" stroke={LINE} strokeWidth={1} fill="none" opacity={0.6} />
+      <path d="M38 16 L36 0 L46 12 Z M48 16 L52 2 L56 18 Z" fill={p.body} />
+      <path d="M39 13 L37.5 4 L44 11 Z" fill={p.el.dark} />
+      <GlowEye x={36} y={27} c={p.el.glow} rot={-8} />
+      {/* 肩のルーン */}
+      {p.tier >= 1 && <path d="M60 64 l4 -8 l4 8 m-6 -3 h4" stroke={p.el.glow} strokeWidth={1.4} fill="none" filter="url(#f-bloom)" />}
+      {p.tier >= 2 && <path d="M40 46 Q50 50 58 44" stroke={p.trim} strokeWidth={3} fill="none" />}
+      {p.tier >= 3 && <circle cx={50} cy={47} r={2.6} fill={p.el.glow} filter="url(#f-bloom)" />}
+    </g>
+  );
+}
+
+function Behemoth({ p }: { p: P }) {
+  return (
+    <g>
+      <Aura p={p} cy={60} />
+      <Floor rx={42} />
+      {[18, 32, 64, 78].map((x) => <Shape key={x} d={`M${x} 74 L${x - 1} 92 L${x + 10} 92 L${x + 9} 74 Z`} fill={p.el.dark} shade="url(#shade-cyl)" />)}
+      <Shape d="M10 62 Q12 40 44 38 Q80 38 88 58 Q90 76 70 80 L22 80 Q8 78 10 62 Z" fill={p.body} />
+      {/* よろいの板（とがった装甲が重なる） */}
+      {[22, 38, 54, 70].map((x, i) => (
+        <g key={x}>
+          <path d={`M${x - 9} 50 L${x - 6} ${40 - (i % 2) * 3} L${x} ${30 - (i % 2) * 3} L${x + 6} ${40 - (i % 2) * 3} L${x + 9} 50 L${x + 5} 60 L${x - 5} 60 Z`} fill={p.trim} />
+          <path d={`M${x - 9} 50 L${x - 6} ${40 - (i % 2) * 3} L${x} ${30 - (i % 2) * 3} L${x} 60 L${x - 5} 60 Z`} fill="#fff" opacity={0.18} />
+          <path d={`M${x - 9} 50 L${x + 9} 50`} stroke="#000" strokeOpacity={0.35} strokeWidth={1} />
         </g>
       ))}
-      {mouth === "o" ? <ellipse cx={x} cy={y + 9} rx={3} ry={3.5} fill="#8a1e30" />
-        : mouth === "grin" ? <path d={`M${x - 7} ${y + 7} Q${x} ${y + 15} ${x + 7} ${y + 7} Z`} fill="#8a1e30" />
-        : <path d={`M${x - 5} ${y + 7} Q${x} ${y + 12} ${x + 5} ${y + 7}`} stroke={LINE} strokeWidth={2} fill="none" strokeLinecap="round" />}
-      <ellipse cx={x - gap - 5} cy={y + 7} rx={4} ry={2.6} fill="url(#blush)" />
-      <ellipse cx={x + gap + 5} cy={y + 7} rx={4} ry={2.6} fill="url(#blush)" />
+      {/* 頭と角 */}
+      <Shape d="M78 50 Q96 50 98 66 Q96 76 84 76 L74 70 Z" fill={p.body} />
+      <path d="M90 56 Q100 44 94 30 Q92 44 84 52 Z" fill={p.trim} />
+      <path d="M86 72 q6 6 10 2" stroke="#fff4dc" strokeWidth={2.2} fill="none" strokeLinecap="round" />
+      <GlowEye x={86} y={60} c={p.el.glow} />
+      {p.tier >= 2 && <path d="M30 64 h40" stroke={p.el.glow} strokeWidth={1.6} strokeDasharray="4 3" filter="url(#f-bloom)" />}
     </g>
   );
 }
 
-/** 左右反転したモンスターでも文字が鏡文字にならないよう、文字だけ反転し直す */
-function Txt({ flip, cx, children }: { flip?: boolean; cx: number; children: React.ReactNode }) {
-  return <g transform={flip ? `translate(${2 * cx} 0) scale(-1 1)` : undefined}>{children}</g>;
-}
-
-const Floor = ({ rx = 30 }: { rx?: number }) => <ellipse cx={50} cy={94} rx={rx} ry={5.5} fill="url(#ao-floor)" />;
-
-/** スースーへび（s の音） */
-function Snake() {
-  const body = "M20 88 Q10 70 30 66 Q55 62 52 48 Q48 34 66 30";
+function Phoenix({ p }: { p: P }) {
+  const feathers = [-60, -45, -30, -15];
   return (
     <g>
-      <Floor rx={34} />
-      <path d={body} stroke="#2f8a43" strokeWidth={19} fill="none" strokeLinecap="round" />
-      <path d={body} stroke="#6fd36a" strokeWidth={13} fill="none" strokeLinecap="round" />
-      <path d={body} stroke="#d8ffc9" strokeWidth={4} fill="none" strokeLinecap="round" strokeDasharray="3 9" opacity={0.7} transform="translate(-2 -3)" />
-      <Vol s={{ t: "circle", cx: 70, cy: 28, r: 16 }} fill="#5bbf5a" />
-      <Face x={70} y={26} gap={6} />
-      <path d="M84 34 l7 2 m-7 -2 l6 5" stroke="#e5484d" strokeWidth={2} strokeLinecap="round" />
-    </g>
-  );
-}
-
-/** アリンコ（a の音） */
-function Ant() {
-  return (
-    <g>
-      <Floor />
-      {[30, 45, 60].map((x) => <path key={x} d={`M${x} 74 l-6 16 M${x + 8} 74 l6 16`} stroke="#3a0d10" strokeWidth={3} strokeLinecap="round" />)}
-      <Vol s={{ t: "ellipse", cx: 34, cy: 70, rx: 14, ry: 12 }} fill="#d8343b" />
-      <Vol s={{ t: "ellipse", cx: 56, cy: 70, rx: 12, ry: 10 }} fill="#d8343b" />
-      <path d="M62 34 Q56 18 50 20 M74 34 Q80 18 86 20" stroke="#3a0d10" strokeWidth={2.5} fill="none" strokeLinecap="round" />
-      <circle cx={50} cy={20} r={3.4} fill="url(#gem-topaz)" /><circle cx={86} cy={20} r={3.4} fill="url(#gem-topaz)" />
-      <Vol s={{ t: "circle", cx: 68, cy: 50, r: 18 }} fill="#f05a5f" />
-      <Face x={68} y={48} gap={7} mouth="grin" />
-    </g>
-  );
-}
-
-/** タップタイガー（t の音） */
-function Tiger() {
-  return (
-    <g>
-      <Floor />
-      <path d="M78 74 Q96 66 90 50" stroke="#c4621a" strokeWidth={9} fill="none" strokeLinecap="round" />
-      <path d="M78 74 Q96 66 90 50" stroke="#ffb15e" strokeWidth={5} fill="none" strokeLinecap="round" />
-      <Vol s={{ t: "ellipse", cx: 50, cy: 74, rx: 26, ry: 18 }} fill="#ff9a3d" />
-      <Vol s={{ t: "circle", cx: 28, cy: 30, r: 9 }} fill="#ff9a3d" spec={false} />
-      <Vol s={{ t: "circle", cx: 72, cy: 30, r: 9 }} fill="#ff9a3d" spec={false} />
-      <Vol s={{ t: "circle", cx: 50, cy: 46, r: 26 }} fill="#ffad55" />
-      <path d="M50 21 l0 9 M40 23 l2 8 M60 23 l-2 8 M25 44 l8 2 M75 44 l-8 2" stroke="#5a2a08" strokeWidth={3} strokeLinecap="round" />
-      <ellipse cx={50} cy={58} rx={13} ry={9} fill="#fff1dd" />
-      <Face x={50} y={46} gap={10} mouth="o" />
-    </g>
-  );
-}
-
-/** ポップペンギン（p の音） */
-function Penguin() {
-  return (
-    <g>
-      <Floor rx={24} />
-      <Vol s={{ t: "ellipse", cx: 50, cy: 58, rx: 28, ry: 36 }} fill="#24324f" />
-      <ellipse cx={50} cy={66} rx={19} ry={26} fill="#f6f7fb" />
-      <ellipse cx={50} cy={66} rx={19} ry={26} fill="url(#shade-sphere)" opacity={0.5} />
-      <path d="M22 56 Q12 70 20 80" stroke="#1a2440" strokeWidth={8} fill="none" strokeLinecap="round" />
-      <path d="M78 56 Q88 70 80 80" stroke="#1a2440" strokeWidth={8} fill="none" strokeLinecap="round" />
-      <Face x={50} y={44} gap={9} />
-      <path d="M45 53 L55 53 L50 59 Z" fill="url(#gem-topaz)" />
-      <ellipse cx={40} cy={93} rx={8} ry={4} fill="url(#gem-topaz)" /><ellipse cx={60} cy={93} rx={8} ry={4} fill="url(#gem-topaz)" />
-    </g>
-  );
-}
-
-/** シーゴースト（sh の音）: 半透明で青白く光る */
-function Ghost({ flip }: { flip?: boolean }) {
-  const d = "M22 84 L22 46 Q22 16 50 16 Q78 16 78 46 L78 84 L70 78 L62 86 L54 78 L46 86 L38 78 L30 86 Z";
-  return (
-    <g>
+      <Aura p={p} cy={46} r={48} />
       <Floor rx={22} />
-      <path d={d} fill="#bfe9ff" opacity={0.5} filter="url(#f-glow-soft)" />
-      <path d={d} fill="#f2f0ff" opacity={0.92} />
-      <path d={d} fill="url(#shade-sphere)" opacity={0.55} />
-      <Face x={50} y={44} gap={10} mouth="o" glow="#3b6cff" />
-      <rect x={58} y={48} width={6} height={16} rx={3} fill="#e7e0ff" />
-      <Txt flip={flip} cx={79}><text x={70} y={30} fontSize={12} fontWeight={900} fill="#c9b8ff">shh</text></Txt>
+      {/* 尾羽（扇のように広がり、先が光る） */}
+      {[-30, -15, 0, 15, 30].map((r, i) => (
+        <g key={r} transform={`rotate(${r} 50 64)`}>
+          <path d="M50 64 Q46 80 50 96 Q54 80 50 64 Z" fill={i === 2 ? p.body : p.wing} />
+          <ellipse cx={50} cy={95} rx={3} ry={2.2} fill={p.el.glow} filter="url(#f-bloom)" />
+        </g>
+      ))}
+      {/* 翼（左右に重ねた羽根） */}
+      {[-1, 1].map((s) => (
+        <g key={s} transform={s < 0 ? "translate(100 0) scale(-1 1)" : undefined}>
+          {feathers.map((r, i) => (
+            <path key={r} d="M54 48 Q74 30 96 18 Q84 36 60 54 Z" fill={i % 2 ? p.wing : p.body} transform={`rotate(${r + 60} 54 48)`} opacity={0.95} />
+          ))}
+          <path d="M54 48 Q74 30 96 18" stroke={p.el.light} strokeOpacity={0.6} strokeWidth={1.2} fill="none" />
+        </g>
+      ))}
+      {/* 体と頭 */}
+      <Shape d="M50 30 Q62 36 60 54 Q58 68 50 70 Q42 68 40 54 Q38 36 50 30 Z" fill={p.body} />
+      <Shape d="M50 14 Q58 16 58 26 Q56 34 50 34 Q44 34 42 26 Q42 16 50 14 Z" fill={p.body} />
+      <path d="M50 14 Q46 4 40 2 Q48 2 52 8 Q54 2 60 0 Q56 8 54 14 Z" fill={p.el.glow} filter="url(#f-bloom)" />
+      <path d="M48 26 L50 32 L52 26 Z" fill={p.trim} />
+      <GlowEye x={46} y={23} rx={1.8} ry={1.2} c={p.el.light} />
+      <GlowEye x={54} y={23} rx={1.8} ry={1.2} c={p.el.light} />
+      {p.tier >= 1 && <circle cx={50} cy={44} r={2.4} fill={p.trim} />}
     </g>
   );
 }
 
-/** まほうのEフェアリー（magic e）: 光る羽と杖 */
-function Fairy({ flip }: { flip?: boolean }) {
+function Leviathan({ p }: { p: P }) {
+  const body = "M14 92 Q8 70 28 66 Q52 62 50 44 Q48 26 68 22";
   return (
     <g>
-      <Floor rx={18} />
-      <g opacity={0.85} filter="url(#f-bloom-gold)">
-        <ellipse cx={30} cy={48} rx={16} ry={24} fill="#bdf3ff" opacity={0.7} transform="rotate(-20 30 48)" />
-        <ellipse cx={70} cy={48} rx={16} ry={24} fill="#bdf3ff" opacity={0.7} transform="rotate(20 70 48)" />
-      </g>
-      <Vol s={{ t: "path", d: "M40 60 L60 60 L66 86 L34 86 Z" }} fill="#ff7eb6" shade="url(#shade-cyl)" />
-      <Vol s={{ t: "circle", cx: 50, cy: 42, r: 16 }} fill="#ffd8b8" />
-      <path d="M34 40 Q36 22 50 24 Q64 22 66 40 Q58 30 50 32 Q42 30 34 40 Z" fill="url(#gem-topaz)" />
-      <Face x={50} y={44} gap={6} />
-      <path d="M68 66 L84 44" stroke="url(#metal-gold)" strokeWidth={3} strokeLinecap="round" />
-      <circle cx={86} cy={40} r={9} fill="url(#g-magic)" filter="url(#f-bloom-gold)" />
-      <Txt flip={flip} cx={85}><text x={82} y={44} fontSize={11} fontWeight={900} fill="#7a4e0c">e</text></Txt>
+      <Aura p={p} cy={50} />
+      {/* 水しぶき */}
+      <path d="M2 94 Q14 84 26 94 Q38 84 50 94 Q62 84 74 94 Q86 84 98 94 L98 100 L2 100 Z" fill={p.el.dark} opacity={0.75} />
+      <path d="M4 92 Q14 86 24 92 M52 92 Q62 86 72 92" stroke={p.el.light} strokeWidth={1.4} fill="none" opacity={0.8} />
+      {/* 体（うろこの光）とひれ */}
+      <path d={body} stroke={p.el.dark} strokeWidth={17} fill="none" strokeLinecap="round" />
+      <path d={body} stroke={p.el.main} strokeWidth={13} fill="none" strokeLinecap="round" />
+      <path d={body} stroke={p.el.light} strokeWidth={3} fill="none" strokeLinecap="round" strokeDasharray="5 6" opacity={0.65} transform="translate(-2 -3)" />
+      <path d="M30 60 L24 46 L36 56 Z M46 52 L44 36 L52 48 Z M52 36 L58 22 L60 34 Z" fill={p.wing} />
+      {/* 頭（えらのひれ・角） */}
+      <Shape d="M60 22 Q66 10 80 12 L96 18 Q90 26 78 28 Q64 30 60 22 Z" fill={p.body} />
+      <path d="M64 14 L54 4 L66 10 Z M70 12 L66 0 L74 9 Z" fill={p.wing} />
+      <path d="M62 26 L52 34 L64 30 Z" fill={p.wing} />
+      <path d="M80 24 L96 18" stroke={LINE} strokeWidth={0.9} opacity={0.6} />
+      <GlowEye x={78} y={17} c={p.el.glow} rot={-8} />
+      {p.tier >= 2 && <path d="M66 10 q6 -6 12 -2" stroke={p.trim} strokeWidth={1.6} fill="none" />}
     </g>
   );
 }
 
-/** アルファベットドラゴン（ワールド1のボス）: 金のつのと光る目 */
-function Dragon({ flip }: { flip?: boolean }) {
+function Spirit({ p, letter }: { p: P; letter?: string }) {
+  const robe = "M50 26 Q66 30 70 50 Q76 72 88 92 Q70 88 60 96 Q52 86 46 96 Q36 86 14 92 Q28 72 30 50 Q34 30 50 26 Z";
   return (
     <g>
+      <circle cx={50} cy={50} r={46} fill={`url(#el-${p.el.id}-aura)`} opacity={p.tier >= 2 ? 1 : 0.6} className="pulse-glow" />
+      <Aura p={p} />
+      {/* 衣（下に向かって透ける） */}
+      <path d={robe} fill={p.wing} opacity={0.85} />
+      <path d={robe} fill="url(#shade-top)" />
+      <path d="M50 30 Q44 60 34 90 M50 30 Q56 60 66 90" stroke={p.el.light} strokeOpacity={0.5} strokeWidth={1.2} fill="none" />
+      {/* 腕（ひろげる）と光の玉 */}
+      <path d="M36 46 Q22 40 12 30 M64 46 Q78 40 88 30" stroke={p.body} strokeWidth={5} fill="none" strokeLinecap="round" />
+      {[[10, 28], [90, 28]].map(([x, y]) => <circle key={x} cx={x} cy={y} r={4} fill={p.el.glow} filter="url(#f-bloom)" />)}
+      {/* 顔（仮面）と冠 */}
+      <Shape d="M50 10 Q60 12 60 24 Q58 34 50 36 Q42 34 40 24 Q40 12 50 10 Z" fill={p.el.light} />
+      <GlowEye x={46} y={22} rx={2} ry={1.2} c={p.el.glow} />
+      <GlowEye x={54} y={22} rx={2} ry={1.2} c={p.el.glow} />
+      <path d="M40 12 L44 2 L48 10 L50 0 L52 10 L56 2 L60 12 Z" fill={p.trim} />
+      {p.tier >= 3 && <ellipse cx={50} cy={4} rx={14} ry={3} fill="none" stroke={p.el.glow} strokeWidth={1.4} filter="url(#f-bloom)" />}
+      {letter && <text x={50} y={60} textAnchor="middle" fontSize={14} fontWeight={900} fill={p.el.light} filter="url(#f-bloom)" fontFamily="Georgia, serif">{letter}</text>}
+    </g>
+  );
+}
+
+function Golem({ p }: { p: P }) {
+  return (
+    <g>
+      <Aura p={p} />
       <Floor rx={36} />
-      <Vol s={{ t: "path", d: "M14 58 Q2 30 26 34 L36 50 Z" }} fill="#5fca63" shade="url(#shade-top)" />
-      <Vol s={{ t: "path", d: "M86 58 Q98 30 74 34 L64 50 Z" }} fill="#5fca63" shade="url(#shade-top)" />
-      <path d="M74 84 Q96 84 94 66" stroke="#1f6e35" strokeWidth={10} fill="none" strokeLinecap="round" />
-      <path d="M74 84 Q96 84 94 66" stroke="#4cc05e" strokeWidth={6} fill="none" strokeLinecap="round" />
-      <Vol s={{ t: "ellipse", cx: 50, cy: 70, rx: 28, ry: 22 }} fill="#3fae5c" />
-      <ellipse cx={50} cy={74} rx={17} ry={14} fill="#fff1a6" />
-      <ellipse cx={50} cy={74} rx={17} ry={14} fill="url(#shade-sphere)" opacity={0.5} />
-      <Txt flip={flip} cx={50}><text x={50} y={79} textAnchor="middle" fontSize={11} fontWeight={900} fill="#7a4e0c">ABC</text></Txt>
-      <Vol s={{ t: "circle", cx: 50, cy: 36, r: 22 }} fill="#4cc05e" />
-      <path d="M34 20 L30 4 L41 16 Z M66 20 L70 4 L59 16 Z" fill="url(#metal-gold)" />
-      <Face x={50} y={34} gap={9} mouth="grin" glow="#ffd23f" />
-      <circle cx={44} cy={48} r={1.6} fill={LINE} /><circle cx={56} cy={48} r={1.6} fill={LINE} />
+      <Shape d="M34 72 L30 92 L44 92 L46 74 Z M56 74 L56 92 L70 92 L66 72 Z" fill="url(#g-stone)" shade="url(#shade-cyl)" />
+      {/* 胴（石＋ひび） */}
+      <g filter="url(#f-texture)">
+        <Shape d="M28 36 L72 36 L78 60 L66 76 L34 76 L22 60 Z" fill="url(#g-stone-warm)" />
+      </g>
+      <path d="M40 40 l4 10 l-3 8 l5 10 M62 42 l-3 8 l4 6" stroke="#000" strokeOpacity={0.45} strokeWidth={1.2} fill="none" />
+      {/* 腕とこぶし */}
+      <Shape d="M24 40 L10 60 L14 76 L24 72 L24 58 L32 46 Z" fill="url(#g-stone)" />
+      <Shape d="M76 40 L90 60 L86 76 L76 72 L76 58 L68 46 Z" fill="url(#g-stone)" />
+      {/* 肩の結晶 */}
+      {[[26, 34], [74, 34]].map(([x, y]) => (
+        <g key={x} filter="url(#f-bloom)">
+          <path d={`M${x - 6} ${y + 4} L${x - 3} ${y - 10} L${x} ${y + 2} L${x + 3} ${y - 14} L${x + 6} ${y + 4} Z`} fill={p.body} />
+        </g>
+      ))}
+      {/* 頭と核 */}
+      <Shape d="M40 18 L60 18 L62 34 L38 34 Z" fill="url(#g-stone-warm)" />
+      <rect x={42} y={24} width={16} height={3.4} rx={1.7} fill={p.el.glow} filter="url(#f-bloom)" />
+      <g filter="url(#f-bloom)">
+        <circle cx={50} cy={54} r={6 + p.tier} fill={p.el.glow} opacity={0.9} />
+        <path d="M50 46 l3 8 l-3 8 l-3 -8 z" fill="#fff" />
+      </g>
     </g>
   );
 }
 
-/** ことだまスライム（汎用・色ちがい）: ぷるっとした半透明のつや */
-function Slime({ color = "#4cc9f0", letter, flip }: { color?: string; letter?: string; flip?: boolean }) {
-  const d = "M18 86 Q14 50 50 30 Q86 50 82 86 Z";
+function Unicorn({ p }: { p: P }) {
   return (
     <g>
-      <Floor />
-      <path d={d} fill={color} opacity={0.95} />
-      <path d={d} fill="url(#shade-sphere)" />
-      <path d="M32 52 Q38 40 48 37" stroke="#fff" strokeOpacity={0.8} strokeWidth={5} fill="none" strokeLinecap="round" />
-      <ellipse cx={62} cy={74} rx={8} ry={4} fill="#fff" opacity={0.18} />
-      <Face x={50} y={62} gap={10} />
-      {letter && <Txt flip={flip} cx={50}><text x={50} y={28} textAnchor="middle" fontSize={16} fontWeight={900} fill="#fff" stroke={LINE} strokeWidth={0.8}>{letter}</text></Txt>}
+      <Aura p={p} cy={50} />
+      <Floor rx={34} />
+      {/* 足 */}
+      {[30, 38, 62, 70].map((x, i) => <Shape key={x} d={`M${x} 64 L${x - 1 + (i % 2) * 2} 90 L${x + 5} 90 L${x + 6} 64 Z`} fill={p.el.light} shade="url(#shade-cyl)" />)}
+      {[29, 37, 61, 69].map((x) => <rect key={x} x={x} y={89} width={7} height={3} rx={1} fill={p.trim} />)}
+      {/* しっぽ */}
+      <path d="M24 52 Q8 58 12 80 Q16 70 24 64" fill={p.wing} />
+      {/* 胴と首 */}
+      <Shape d="M24 50 Q28 40 46 42 L66 42 Q78 44 78 56 Q76 68 62 68 L32 68 Q22 64 24 50 Z" fill={p.el.light} />
+      <Shape d="M64 46 Q66 30 74 22 L84 26 Q78 38 76 50 Z" fill={p.el.light} />
+      {/* 頭 */}
+      <Shape d="M72 18 Q80 12 88 18 L96 32 Q92 36 86 34 L78 28 Z" fill={p.el.light} />
+      <GlowEye x={82} y={22} rx={1.8} ry={1.3} c={p.el.main} />
+      {/* たてがみ（属性の色が流れる） */}
+      <path d="M72 16 Q60 22 62 34 Q56 30 58 44 Q52 40 54 50 Q66 40 70 30 Q72 24 76 20 Z" fill={p.body} />
+      {/* らせんの角（光る） */}
+      <g filter="url(#f-bloom)">
+        <path d="M80 14 L90 -4 L84 16 Z" fill={p.trim} />
+        <path d="M82 10 l4 -1 M84 6 l3 -1 M86 2 l2 -1" stroke={p.el.glow} strokeWidth={1} />
+      </g>
+      {p.tier >= 2 && <path d="M40 48 Q52 54 64 48" stroke={p.trim} strokeWidth={2.2} fill="none" />}
     </g>
   );
 }
 
-const SLIME_COLORS = ["#3cc4f0", "#ff6fa5", "#8a55e8", "#f0a81c", "#3fcf7a", "#ff7a3d"];
+function Griffin({ p }: { p: P }) {
+  return (
+    <g>
+      <Aura p={p} cy={48} />
+      <Floor rx={34} />
+      {/* 翼（上に広げる） */}
+      <path d="M44 44 Q30 10 6 4 Q16 18 14 26 Q24 22 22 34 Q30 30 32 42 Z" fill={p.wing} />
+      <path d="M56 44 Q72 8 98 2 Q88 16 90 26 Q80 22 82 34 Q72 30 70 42 Z" fill={p.wing} />
+      <path d="M44 44 Q30 10 6 4 M56 44 Q72 8 98 2" stroke={p.el.light} strokeOpacity={0.6} strokeWidth={1.2} fill="none" />
+      {/* 獅子の体と後ろ足・しっぽ */}
+      <path d="M26 72 Q12 70 10 56" stroke="#b5894f" strokeWidth={4} fill="none" strokeLinecap="round" />
+      <Shape d="M26 60 Q28 48 46 48 L64 48 Q74 52 72 66 Q70 76 60 76 L34 76 Q24 72 26 60 Z" fill="#c9a06a" />
+      <Shape d="M30 70 L28 92 L36 92 L38 72 Z" fill="#b5894f" shade="url(#shade-cyl)" />
+      {/* 鷲の胸と前足（かぎ爪） */}
+      <Shape d="M54 40 Q70 38 72 54 Q70 66 58 66 Q50 60 54 40 Z" fill={p.body} />
+      <Shape d="M60 64 L62 92 L70 92 L68 66 Z" fill={p.trim} shade="url(#shade-cyl)" />
+      {/* 鷲の頭 */}
+      <Shape d="M56 22 Q66 16 74 24 Q76 32 70 38 L58 40 Q52 32 56 22 Z" fill={p.el.light} />
+      <path d="M72 26 Q84 28 80 36 Q76 32 70 32 Z" fill={p.trim} />
+      <GlowEye x={66} y={27} rx={1.8} ry={1.4} c={p.el.glow} />
+      <path d="M56 22 L52 14 L60 20" fill={p.el.light} />
+      {p.tier >= 2 && <path d="M58 40 Q64 44 70 40" stroke={p.trim} strokeWidth={2} fill="none" />}
+    </g>
+  );
+}
 
-/** flip: 外側で左右反転して置くときに true（文字だけ読める向きに戻す） */
-export function MonsterArt({ id, letter, flip }: { id: string; letter?: string; flip?: boolean }) {
-  switch (id) {
-    case "m-sammy-snake": return <Snake />;
-    case "m-ant-anty": return <Ant />;
-    case "m-tiger-tap": return <Tiger />;
-    case "m-penguin-pop": return <Penguin />;
-    case "m-shhh-ghost": return <Ghost flip={flip} />;
-    case "m-magic-e-fairy": return <Fairy flip={flip} />;
-    case "m-alpha-dragon": return <Dragon flip={flip} />;
-    default: {
-      let h = 0;
-      for (const ch of id) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-      return <Slime color={SLIME_COLORS[h % SLIME_COLORS.length]} letter={letter} flip={flip} />;
-    }
-  }
+function Lion({ p }: { p: P }) {
+  return (
+    <g>
+      <Aura p={p} cy={46} />
+      <Floor rx={36} />
+      {/* 体（伏せの姿勢）と前足 */}
+      <Shape d="M14 70 Q16 58 34 56 L70 56 Q86 60 86 74 Q84 86 70 86 L24 86 Q12 82 14 70 Z" fill="#d6a868" />
+      <Shape d="M54 78 L52 92 L66 92 L66 80 Z M70 78 L70 92 L84 92 L82 80 Z" fill="#c99a5c" shade="url(#shade-cyl)" />
+      <path d="M14 76 Q2 70 6 58" stroke="#b5894f" strokeWidth={4} fill="none" strokeLinecap="round" />
+      <circle cx={6} cy={57} r={4} fill={p.body} />
+      {/* たてがみ（属性の色の炎のよう） */}
+      <g filter="url(#f-organic)">
+        <circle cx={64} cy={40} r={26} fill={p.body} />
+      </g>
+      <circle cx={64} cy={40} r={26} fill="url(#shade-sphere)" opacity={0.6} />
+      {/* 顔 */}
+      <Shape d="M52 30 Q64 22 76 30 Q80 42 74 52 Q64 60 54 52 Q48 42 52 30 Z" fill="#e8bd7c" />
+      <path d="M60 46 Q64 50 68 46 L64 42 Z" fill="#3a1d0a" />
+      <path d="M58 52 Q64 56 70 52" stroke="#3a1d0a" strokeWidth={1.2} fill="none" />
+      <GlowEye x={58} y={36} rx={2} ry={1.2} c={p.el.glow} rot={8} />
+      <GlowEye x={70} y={36} rx={2} ry={1.2} c={p.el.glow} rot={-8} />
+      {/* 額のかぶと／王冠 */}
+      <path d="M54 26 L58 16 L62 24 L64 12 L66 24 L70 16 L74 26 Q64 22 54 26 Z" fill={p.trim} />
+      {p.tier >= 1 && <circle cx={64} cy={22} r={2} fill={p.el.glow} filter="url(#f-bloom)" />}
+    </g>
+  );
+}
+
+const DRAW: Record<ArchetypeId, (props: { p: P; letter?: string }) => React.ReactElement> = {
+  dragon: Dragon, wolf: Wolf, behemoth: Behemoth, phoenix: Phoenix, leviathan: Leviathan,
+  spirit: Spirit, golem: Golem, unicorn: Unicorn, griffin: Griffin, lion: Lion,
+};
+
+function paletteOf(m: MonsterDef): P {
+  const el = elementOf(m);
+  const tier = TIER[m.rarity] ?? 0;
+  return {
+    el,
+    body: `url(#el-${el.id}-body)`,
+    wing: `url(#el-${el.id}-wing)`,
+    trim: tier >= 2 ? "url(#metal-platinum)" : tier >= 1 ? "url(#metal-gold)" : el.light,
+    tier,
+  };
+}
+
+/** flip: 外側で左右反転して置くときに true（ルーンや文字は読める向きのまま） */
+export function MonsterArt({ id, letter, flip: _flip }: { id: string; letter?: string; flip?: boolean }) {
+  const m = resolveMonster(id);
+  const Draw = DRAW[m.archetype] ?? Dragon;
+  return <Draw p={paletteOf(m)} letter={letter} />;
 }
 
 export function MonsterFigure({ id, size = 64, className = "", letter, flip = false, rim = true }: { id: string; size?: number; className?: string; letter?: string; flip?: boolean; rim?: boolean }) {

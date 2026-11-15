@@ -10,6 +10,8 @@
  *  - f-relief  : 石の彫刻（スペキュラーライティングで凹凸を出す）
  *  - metal-gold: ダークゴールドのメタル
  */
+import { ELEMENTS } from "@/lib/game/monsters";
+
 export function ArtDefs() {
   return (
     <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden focusable="false">
@@ -91,6 +93,24 @@ export function ArtDefs() {
           <stop offset="0%" stopColor="#8ff5e6" stopOpacity=".8" /><stop offset="100%" stopColor="#1fb5a0" stopOpacity="0" />
         </radialGradient>
 
+        {/* ---------- モンスターの属性ごとの色（体の陰影・オーラ・光る目） ---------- */}
+        {ELEMENTS.map((e) => (
+          <g key={e.id}>
+            <radialGradient id={`el-${e.id}-body`} cx="36%" cy="28%" r="80%">
+              <stop offset="0%" stopColor={e.light} /><stop offset="42%" stopColor={e.main} /><stop offset="100%" stopColor={e.dark} />
+            </radialGradient>
+            <linearGradient id={`el-${e.id}-wing`} x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor={e.main} stopOpacity=".95" /><stop offset="100%" stopColor={e.dark} stopOpacity=".9" />
+            </linearGradient>
+            <radialGradient id={`el-${e.id}-aura`} cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor={e.glow} stopOpacity=".75" /><stop offset="55%" stopColor={e.glow} stopOpacity=".22" /><stop offset="100%" stopColor={e.glow} stopOpacity="0" />
+            </radialGradient>
+          </g>
+        ))}
+        <linearGradient id="metal-platinum" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#ffffff" /><stop offset="25%" stopColor="#cfd8e6" /><stop offset="50%" stopColor="#6b7a90" /><stop offset="65%" stopColor="#e6edf7" /><stop offset="100%" stopColor="#4a5568" />
+        </linearGradient>
+
         {/* ---------- フィルター ---------- */}
         <filter id="f-drop" x="-30%" y="-30%" width="160%" height="170%">
           <feDropShadow dx="0" dy="2" stdDeviation="1.5" floodColor="#000" floodOpacity=".35" />
@@ -118,6 +138,23 @@ export function ArtDefs() {
           <feMerge><feMergeNode in="g" /><feMergeNode in="g" /><feMergeNode in="SourceGraphic" /></feMerge>
         </filter>
         <filter id="f-glow-soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" /></filter>
+        {/* 光（色を変えない発光） */}
+        <filter id="f-bloom" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2.4" result="b" />
+          <feMerge><feMergeNode in="b" /><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+        {/* ふちを自然にゆらす（葉のしげみ・岩の輪郭を「描いた円」から「本物の形」に） */}
+        <filter id="f-organic" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="2" seed="7" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        {/* 細かい表面のざらつき（石・樹皮の質感） */}
+        <filter id="f-texture" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" result="n" />
+          <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.4 1.1" result="grain" />
+          <feComposite in="grain" in2="SourceAlpha" operator="in" result="g2" />
+          <feBlend in="SourceGraphic" in2="g2" mode="multiply" />
+        </filter>
         <filter id="f-dof-1" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.2" /></filter>
         <filter id="f-dof-2" x="-15%" y="-15%" width="130%" height="130%"><feGaussianBlur stdDeviation="2.6" /></filter>
         <filter id="f-dof-4" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5" /></filter>

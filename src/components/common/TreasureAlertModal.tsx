@@ -14,7 +14,7 @@ export function TreasureAlertModal({ alert, message, onClose }: { alert: Treasur
         <div className="relative mx-auto flex h-32 items-end justify-center gap-1" aria-hidden>
           <StandingFigure id="haru" pose="point" height={118} />
           <svg viewBox="0 0 100 100" className="glow h-20 w-20 bob"><BirimoArt mood="excited" /></svg>
-          <MonsterFigure id="m-slime-a" size={60} letter="?" />
+          <MonsterFigure id="mon-019" size={60} letter="?" />
         </div>
         <h2 id="treasure-title" className="font-title mt-1 text-2xl text-[var(--gold-dark)]">お宝はっけん！</h2>
         <p className="speech mt-3 px-3 py-2 text-left text-sm font-bold">{message}</p>

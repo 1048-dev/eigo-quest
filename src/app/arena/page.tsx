@@ -18,7 +18,7 @@ const MODES: { mode: string; label: string; buddy: CharacterId }[] = [
   { mode: "SPEAKING", label: "はつおん", buddy: "riko" },
   { mode: "WRITING", label: "ひっき", buddy: "kiko" },
 ];
-const ARENA_BOSSES = ["m-alpha-dragon", "m-shhh-ghost", "m-tiger-tap"];
+const ARENA_BOSSES = ["mon-006", "mon-056", "mon-091"];
 
 export default function ArenaPage() {
   const [arenas, setArenas] = useState<MapResponse["arenas"] | null>(null);
@@ -44,9 +44,9 @@ export default function ArenaPage() {
 
       {arenas.length === 0 && (
         <div className="card rpg-rivets relative mt-10 flex items-center gap-3 p-5">
-          <PeekMonster id="m-alpha-dragon" size={64} />
-          <MonsterFigure id="m-alpha-dragon" size={64} />
-          <p className="font-bold">Lesson 30 のボス「アルファベットドラゴン」をたおすと、アリーナが ひらくよ！</p>
+          <PeekMonster id="mon-006" size={64} />
+          <MonsterFigure id="mon-006" size={64} />
+          <p className="font-bold">Lesson 30 のボス「アンブラ・ドラゴン」をたおすと、アリーナが ひらくよ！</p>
         </div>
       )}
 

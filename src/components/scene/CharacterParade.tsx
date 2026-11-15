@@ -17,9 +17,9 @@ export function CharacterParade() {
     { id: "birimo" as const, x: 300, s: 0.44 },
   ];
   const mons = [
-    { id: "m-penguin-pop", x: 128, s: 0.44 },
-    { id: "m-sammy-snake", x: 338, s: 0.4, flip: true },
-    { id: "m-slime-c", x: 26, s: 0.36 },
+    { id: "mon-037", x: 128, s: 0.44 },
+    { id: "mon-044", x: 338, s: 0.4, flip: true },
+    { id: "mon-089", x: 26, s: 0.36 },
   ];
   return (
     <div className="pointer-events-none -mx-4 mt-8 sm:mx-0" aria-hidden>

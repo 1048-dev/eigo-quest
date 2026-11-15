@@ -10,7 +10,7 @@ const LINE = "#2a170a";
 /** つやのある瞳（白目・グラデーションの虹彩・瞳孔・2つのハイライト・まつげ） */
 function Eye({ x, y, iris, size = 1, closed = false }: { x: number; y: number; iris: string; size?: number; closed?: boolean }) {
   if (closed) return <path d={`M${x - 5 * size} ${y} q${5 * size} ${4 * size} ${10 * size} 0`} stroke={LINE} strokeWidth={2.4} fill="none" strokeLinecap="round" />;
-  const rx = 5.2 * size, ry = 6.6 * size;
+  const rx = 5.2 * size, ry = 5.9 * size;
   return (
     <g>
       <ellipse cx={x} cy={y} rx={rx} ry={ry} fill="#fffaf5" />
@@ -24,17 +24,25 @@ function Eye({ x, y, iris, size = 1, closed = false }: { x: number; y: number; i
   );
 }
 
+/** あごの線のある輪郭（幼い丸顔ではなく、少し大人びた顔立ち） */
+function jaw(cx: number, cy: number, r: number) {
+  return `M${cx - r} ${cy - 2} Q${cx - r} ${cy - r * 1.05} ${cx} ${cy - r * 1.05} Q${cx + r} ${cy - r * 1.05} ${cx + r} ${cy - 2} Q${cx + r * 0.98} ${cy + r * 0.55} ${cx + r * 0.45} ${cy + r * 0.92} Q${cx} ${cy + r * 1.18} ${cx - r * 0.45} ${cy + r * 0.92} Q${cx - r * 0.98} ${cy + r * 0.55} ${cx - r} ${cy - 2} Z`;
+}
+
 /** 顔の土台（肌のグラデーション＋陰影＋耳＋ほお） */
 function Face({ cx = 50, cy = 52, r = 25 }: { cx?: number; cy?: number; r?: number }) {
   return (
     <g>
       <ellipse cx={cx - r + 1} cy={cy + 3} rx={4.5} ry={6} fill="url(#g-skin)" />
       <ellipse cx={cx + r - 1} cy={cy + 3} rx={4.5} ry={6} fill="url(#g-skin)" />
-      <ellipse cx={cx} cy={cy} rx={r} ry={r * 1.02} fill="url(#g-skin)" />
-      <ellipse cx={cx} cy={cy} rx={r} ry={r * 1.02} fill="url(#shade-sphere)" opacity={0.55} />
+      <path d={jaw(cx, cy, r)} fill="url(#g-skin)" />
+      <path d={jaw(cx, cy, r)} fill="url(#shade-sphere)" opacity={0.55} />
+      {/* ほおの下の影（輪郭を引きしめる） */}
+      <path d={`M${cx - r * 0.92} ${cy + r * 0.2} Q${cx - r * 0.7} ${cy + r * 0.85} ${cx} ${cy + r * 1.08}`} stroke="#b06a45" strokeOpacity={0.25} strokeWidth={2.4} fill="none" />
       <ellipse cx={cx - r * 0.55} cy={cy + r * 0.42} rx={6} ry={3.6} fill="url(#blush)" />
       <ellipse cx={cx + r * 0.55} cy={cy + r * 0.42} rx={6} ry={3.6} fill="url(#blush)" />
-      <path d={`M${cx - 1} ${cy + 6} q1.5 2 3 0`} stroke="#c9825c" strokeWidth={1.4} fill="none" strokeLinecap="round" />
+      <path d={`M${cx + 0.5} ${cy - 2} L${cx - 0.5} ${cy + 5}`} stroke="#fff" strokeOpacity={0.35} strokeWidth={1.4} strokeLinecap="round" />
+      <path d={`M${cx - 1.5} ${cy + 6.5} q1.8 1.6 3.4 0`} stroke="#b9714c" strokeWidth={1.4} fill="none" strokeLinecap="round" />
     </g>
   );
 }
@@ -51,11 +59,11 @@ function Neck({ color }: { color: string }) {
 }
 
 /** 主人公ハル（10歳）: ツンツン髪＋赤いバンダナ＋探検ベスト。自信のある笑顔 */
-export function HaruArt() {
+export function HaruArt({ bust = true }: { bust?: boolean } = {}) {
   return (
     <g>
-      <Neck color="url(#g-vest)" />
-      <path d="M40 78 L50 92 L60 78" fill="#f6efe0" />
+      {bust && <Neck color="url(#g-vest)" />}
+      {bust && <path d="M40 78 L50 92 L60 78" fill="#f6efe0" />}
       <Face />
       {/* 髪（後ろ→前の順に重ねる） */}
       <path d="M22 50 L20 26 L32 30 L34 12 L46 24 L54 6 L60 22 L72 10 L74 28 L84 24 L80 48 Q72 34 50 33 Q30 33 22 50 Z" fill="url(#g-hair-haru)" />
@@ -66,7 +74,7 @@ export function HaruArt() {
       <path d="M23 40 Q50 27 77 40" stroke="#ffb3b3" strokeWidth={1.5} fill="none" opacity={0.8} />
       <path d="M76 42 l12 -6 l-3 10 z M77 45 l11 5 l-9 3 z" fill="url(#g-bandana)" />
       {/* 眉・目・口 */}
-      <path d="M34 47 Q39 44 44 46 M56 46 Q61 44 66 47" stroke={LINE} strokeWidth={2.4} fill="none" strokeLinecap="round" />
+      <path d="M33 47 Q39 43 45 45 M55 45 Q61 43 67 47" stroke={LINE} strokeWidth={2.8} fill="none" strokeLinecap="round" />
       <Eye x={39} y={55} iris="brown" />
       <Eye x={61} y={55} iris="brown" />
       <path d="M42 66 Q50 73 58 66 Q50 69 42 66 Z" fill="#7a2a1a" />
@@ -76,10 +84,10 @@ export function HaruArt() {
 }
 
 /** なかまリコ（8歳）: オレンジのツインテール＋黄色いヘアバンド＋そばかす */
-export function RikoArt() {
+export function RikoArt({ bust = true }: { bust?: boolean } = {}) {
   return (
     <g>
-      <Neck color="url(#g-riko-dress)" />
+      {bust && <Neck color="url(#g-riko-dress)" />}
       <g>
         <path d="M24 44 Q6 50 10 76 Q14 66 22 62 Z" fill="url(#g-hair-riko)" />
         <path d="M76 44 Q94 50 90 76 Q86 66 78 62 Z" fill="url(#g-hair-riko)" />
@@ -103,10 +111,10 @@ export function RikoArt() {
 }
 
 /** なかまキコ（7歳）: むらさきのボブ＋花のヘアピン＋大きな目 */
-export function KikoArt() {
+export function KikoArt({ bust = true }: { bust?: boolean } = {}) {
   return (
     <g>
-      <Neck color="url(#g-kiko-dress)" />
+      {bust && <Neck color="url(#g-kiko-dress)" />}
       <path d="M20 66 Q14 24 50 22 Q86 24 80 66 L71 70 L71 46 L29 46 L29 70 Z" fill="url(#g-hair-kiko)" />
       <Face cy={54} r={23} />
       <path d="M27 52 Q28 30 50 29 Q72 30 73 52 Q62 40 52 45 Q42 39 27 52 Z" fill="url(#g-hair-kiko)" />

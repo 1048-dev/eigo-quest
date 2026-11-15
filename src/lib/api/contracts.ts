@@ -143,9 +143,23 @@ export const MonsterSchema = z.object({
 export const GachaResponseSchema = z.object({
   ok: bool(false),
   monster: nullable(MonsterSchema),
+  /** はじめて手に入れたモンスターなら true */
+  isNew: bool(false),
+  coins: num(0),
+  rareTickets: num(0),
   reasonJa: str(""),
 });
 export type GachaResponse = z.output<typeof GachaResponseSchema>;
+
+// ---------------------------------------------------------------------------
+// GET /api/monsters（図鑑: 持っているモンスター）
+// ---------------------------------------------------------------------------
+export const CollectionResponseSchema = z.object({
+  owned: safeArray(z.object({ id: z.string(), count: num(1) })),
+  coins: num(0),
+  rareTickets: num(0),
+});
+export type CollectionResponse = z.output<typeof CollectionResponseSchema>;
 
 // ---------------------------------------------------------------------------
 // GET /api/lessons/:n , POST /api/lessons/:n/complete

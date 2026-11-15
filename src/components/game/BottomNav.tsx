@@ -9,7 +9,7 @@ type Icon = { char: CharacterId } | { monster: string };
 
 const NAV: { href: string; label: string; icon: Icon }[] = [
   { href: "/map", label: "ぼうけん", icon: { char: "haru" } },
-  { href: "/arena", label: "アリーナ", icon: { monster: "m-alpha-dragon" } },
+  { href: "/arena", label: "アリーナ", icon: { monster: "mon-006" } },
   { href: "/gacha", label: "ずかん", icon: { char: "birimo" } },
   { href: "/ranking", label: "ランキング", icon: { char: "riko" } },
   { href: "/dashboard", label: "ステータス", icon: { char: "kiko" } },

@@ -1,25 +1,40 @@
 {
-  "monsters": [
-    { "id": "m-sammy-snake", "nameEn": "Sammy Snake", "nameJa": "スースーへび", "rarity": "COMMON", "theme": "s", "imageKey": "🐍" },
-    { "id": "m-ant-anty", "nameEn": "Anty", "nameJa": "アリンコ", "rarity": "COMMON", "theme": "a", "imageKey": "🐜" },
-    { "id": "m-tiger-tap", "nameEn": "Tap Tiger", "nameJa": "タップタイガー", "rarity": "COMMON", "theme": "t", "imageKey": "🐯" },
-    { "id": "m-penguin-pop", "nameEn": "Pop Penguin", "nameJa": "ポップペンギン", "rarity": "COMMON", "theme": "p", "imageKey": "🐧" },
-    { "id": "m-inky-insect", "nameEn": "Inky", "nameJa": "インキー", "rarity": "COMMON", "theme": "i", "imageKey": "🐞" },
-    { "id": "m-nutty-newt", "nameEn": "Nutty Newt", "nameJa": "ナッティイモリ", "rarity": "COMMON", "theme": "n", "imageKey": "🦎" },
-    { "id": "m-muddy-monkey", "nameEn": "Muddy Monkey", "nameJa": "マディモンキー", "rarity": "COMMON", "theme": "m", "imageKey": "🐒" },
-    { "id": "m-gogo-goose", "nameEn": "Gogo Goose", "nameJa": "ゴーゴーグース", "rarity": "COMMON", "theme": "g", "imageKey": "🪿" },
-    { "id": "m-shhh-ghost", "nameEn": "Shhh Ghost", "nameJa": "シーゴースト", "rarity": "RARE", "theme": "sh", "imageKey": "👻" },
-    { "id": "m-choo-train", "nameEn": "Choo Choo", "nameJa": "チューチュー", "rarity": "RARE", "theme": "ch", "imageKey": "🚂" },
-    { "id": "m-thor-thunder", "nameEn": "Thunder Thor", "nameJa": "サンダーソー", "rarity": "RARE", "theme": "th", "imageKey": "⚡" },
-    { "id": "m-magic-e-fairy", "nameEn": "Magic E Fairy", "nameJa": "まほうのEフェアリー", "rarity": "EPIC", "theme": "magic-e", "imageKey": "🧚" },
-    { "id": "m-vowel-twins", "nameEn": "Vowel Twins", "nameJa": "ボウエルツインズ", "rarity": "EPIC", "theme": "vowel-team", "imageKey": "👯" },
-    { "id": "m-alpha-dragon", "nameEn": "Alphabet Dragon", "nameJa": "アルファベットドラゴン", "rarity": "LEGENDARY", "theme": "world-1-boss", "imageKey": "🐉" }
-  ],
+  "note": "モンスター図鑑（100体）は src/lib/game/monsters.ts で生成します。このファイルはショップの品目だけを持ちます。",
   "shop": [
-    { "id": "hat-cap", "slot": "hat", "name": "ぼうし（キャップ）", "price": 80, "imageKey": "🧢" },
-    { "id": "hat-crown", "slot": "hat", "name": "おうかん", "price": 500, "imageKey": "👑" },
-    { "id": "outfit-wizard", "slot": "outfit", "name": "まほうつかいのローブ", "price": 300, "imageKey": "🧙" },
-    { "id": "pet-chick", "slot": "pet", "name": "ひよこのおとも", "price": 150, "imageKey": "🐥" },
-    { "id": "bg-space", "slot": "background", "name": "うちゅうの背景", "price": 400, "imageKey": "🌌" }
+    {
+      "id": "hat-cap",
+      "slot": "hat",
+      "name": "ぼうし（キャップ）",
+      "price": 80,
+      "imageKey": "🧢"
+    },
+    {
+      "id": "hat-crown",
+      "slot": "hat",
+      "name": "おうかん",
+      "price": 500,
+      "imageKey": "👑"
+    },
+    {
+      "id": "outfit-wizard",
+      "slot": "outfit",
+      "name": "まほうつかいのローブ",
+      "price": 300,
+      "imageKey": "🧙"
+    },
+    {
+      "id": "pet-chick",
+      "slot": "pet",
+      "name": "ひよこのおとも",
+      "price": 150,
+      "imageKey": "🐥"
+    },
+    {
+      "id": "bg-space",
+      "slot": "background",
+      "name": "うちゅうの背景",
+      "price": 400,
+      "imageKey": "🌌"
+    }
   ]
 }

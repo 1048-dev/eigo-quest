@@ -17,7 +17,7 @@ import type { CharacterId } from "@/lib/game/characters";
 const SHORT: Record<Skill, string> = { SCHOOL_TEST: "学校テスト", PHONICS: "フォニックス", LISTENING: "リスニング", SPEAKING: "発音", VOCABULARY: "語彙", WRITING: "筆記" };
 /** 6つの力それぞれの「担当キャラ」 */
 const SKILL_BUDDY: Record<Skill, CharacterId> = { SCHOOL_TEST: "haru", PHONICS: "riko", LISTENING: "birimo", SPEAKING: "haru", VOCABULARY: "kiko", WRITING: "kiko" };
-const WEAK_MONSTERS = ["m-slime-a", "m-slime-b", "m-slime-c", "m-slime-d", "m-slime-e"];
+const WEAK_MONSTERS = ["mon-019", "mon-080", "mon-089", "mon-070", "mon-014"];
 
 export default function DashboardPage() {
   const [d, setD] = useState<DashboardResponse | null>(null);
@@ -61,7 +61,7 @@ export default function DashboardPage() {
 
       <section className="card rpg-rivets relative mt-12 p-4">
         <PeekCharacter id="kiko" pose="wave" place="top-left" />
-        <PeekMonster id="m-magic-e-fairy" place="top-right" />
+        <PeekMonster id="mon-055" place="top-right" />
         <h2 className="font-title text-center text-lg text-[var(--gold-dark)]">6つのちから</h2>
         <p className="text-center text-xs text-[var(--ink-2)]">いま思い出せる度合い（わすれると少しずつ下がるよ）</p>
         <MasteryRadar axes={SKILLS.map((s) => ({ key: s, label: SHORT[s], value: scores[s] ?? 0 }))} />
@@ -85,7 +85,7 @@ export default function DashboardPage() {
       </section>
 
       <section className="card rpg-rivets relative mt-12 p-4">
-        <PeekMonster id="m-penguin-pop" place="top-right" />
+        <PeekMonster id="mon-037" place="top-right" />
         <h2 className="font-title text-lg text-[var(--gold-dark)]">総合習得率のきろく</h2>
         <TrendLine points={history.map((h) => ({ date: h.date, value: h.overall }))} />
       </section>

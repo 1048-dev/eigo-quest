@@ -43,7 +43,7 @@ http://localhost:3000 を開くとマップ画面が表示されます。デモ�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・60件） |
+| `npm test` | 単体テスト（vitest・70件） |
 | `npm run typecheck` | 型チェック |
 | `npx tsx scripts/e2e-smoke.ts http://localhost:3000` | 実サーバーとDBを使い、30日分のプレイ（ボス戦・アリーナ・お宝アラートまで）を早送りで実行 |
 | `pip install -r worksheets/requirements.txt` | PDF生成に必要な reportlab をインストール |
@@ -117,11 +117,19 @@ eigo-quest/
 
 **ビジュアル（シネマティック・3Dアニメ風）**
 - `src/components/art/ArtDefs.tsx`：全イラスト共通の質感。陰影（立体感・アンビエントオクルージョン風）、スペキュラーハイライト、多層ドロップシャドウ、逆光のふち取り、ブルーム、被写界深度のぼかし、石の彫刻（スペキュラーライティング）、ダークゴールドのメタル、宝石のグラデーション。layout で1回だけ描画し、各SVGから `url(#id)` で参照する
-- `src/components/characters/`：ハル・リコ・キコ・ビリモ・エマ先生・モンスター。肌・髪・服・瞳（グラデーションの虹彩と2つのハイライト）に陰影をつけた立ち絵と顔
+- `src/components/characters/`：ハル・リコ・キコ・ビリモ・エマ先生。約5頭身の公式設定画のような立ち絵（あごの線のある顔立ち・服のしわ・ベルト・ブーツ）と、陰影・つやのある瞳の顔
 - `src/components/scene/CinematicScenery.tsx`：巨大な古代樹、手前のシダ、遺跡のレリーフ壁、神殿の門、ゴッドレイ、霧、光の粒、魔法陣、光る水晶、ビネット
 - `src/components/scene/HeroScene.tsx`：各ページ上部のキービジュアル（月・オーロラ・そびえるボスのシルエット・神殿の光・レリーフ・パーティとモンスター・手前のぼけ）
 - `src/app/globals.css`：すりガラスのパネル＋ダークゴールドのメタル枠、宝石の立体ボタン、光るゲージ、金属の金文字
 - `src/lib/art/renderedArt.ts`：3DCGでレンダリングした本物のキャラクター画像の差し替え口。`public/art/` に画像を置いてパスを書くと、立ち絵がその画像に置きかわる
+
+**英語モンスター図鑑（100体）**
+- `src/lib/game/monsters.ts`：10種族（ドラゴン・フェンリル・ベヒモス・フェニックス・リヴァイアサン・スピリット・ゴーレム・ユニコーン・グリフォン・レオ）× 10属性（炎・水・雷・森・光・闇・氷・大地・風・晶）＝100体。名前・二つ名・覚える英単語・ちからを決まったルールで生成
+- ランクと額縁：通常種＝ブロンズ（50体）／希少種＝ゴールド（30体）／英雄級＝プラチナ・ホロ（14体）／神話級＝ダークエピック・プリズムのオーラ（6体）
+- `src/components/characters/MonsterArt.tsx`：種族の形×属性の色と光で描画。ランクが上がるほどオーラ・プラチナの装飾・光輪・ルーンが増える
+- `src/components/monsters/MonsterCard.tsx` と `/gacha`：召喚の祭壇（光の演出つきのカード出現）、出現率の表示、100体の図鑑（まだ出会っていないモンスターはシルエット）
+- `GET /api/monsters`：持っているモンスター・コイン・レアガチャ券。`resolveMonster()` はどんな id でも必ず1体を返し、以前のモンスターID（m-…）も新しいモンスターに対応させる
+- 開発用プレビュー：`npx tsx --tsconfig scripts/tsconfig.json scripts/render-monsters-preview.tsx > preview.html`（100体を一覧）、`scripts/render-characters-preview.tsx`（キャラクターの全ポーズ）
 
 **エラーに強い作り**
 - `src/lib/api/contracts.ts`：各APIの返すデータの形を zod で1か所に定義。ルートは `satisfies` でこの形に合わせ、画面も同じ定義で受け取る

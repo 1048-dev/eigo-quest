@@ -17,14 +17,17 @@ export function AncientTree({ s = 1, depth = "mid", seed = 0 }: { s?: number; de
   const d = DEPTH[depth];
   const clusters: [number, number, number][] = [
     [-46, -150, 34], [-10, -178, 40], [34, -158, 36], [60, -128, 28], [-68, -120, 26], [6, -132, 30], [-30, -116, 24], [38, -112, 22],
+    [-60, -168, 22], [52, -176, 24], [16, -196, 24], [-28, -196, 20], [76, -150, 18], [-82, -142, 16],
   ];
   return (
     <g transform={`scale(${s})`} filter={d.filter}>
       {/* 幹と板根 */}
-      <path d="M-16 0 Q-14 -60 -8 -120 L10 -120 Q16 -60 20 0 Z" fill={d.trunk} />
+      <path d="M-16 0 Q-14 -60 -8 -120 L10 -120 Q16 -60 20 0 Z" fill={d.trunk} filter="url(#f-texture)" />
+      <path d="M-6 -10 Q-4 -60 -2 -110 M6 -12 Q8 -60 4 -112" stroke="#000" strokeOpacity={0.3} strokeWidth={1.2} fill="none" />
       <path d="M-16 0 Q-40 -6 -52 4 Q-30 -10 -14 -30 Z M20 0 Q44 -6 58 4 Q34 -12 18 -34 Z M-4 0 Q-10 -20 -2 -40 Q6 -20 8 0 Z" fill={d.trunk} />
       <path d="M-8 -120 Q-12 -60 -14 0" stroke="#fff" strokeOpacity={d.rim * 0.4} strokeWidth={3} fill="none" />
-      {/* 葉のかたまり（奥→手前） */}
+      {/* 葉のかたまり（奥→手前）。f-organic で輪郭をゆらして本物のしげみの形に */}
+      <g filter="url(#f-organic)">
       {clusters.map(([x, y, r], i) => (
         <g key={i}>
           <circle cx={x + ((seed * 7 + i * 3) % 6)} cy={y} r={r} fill={d.leaf[i % 2]} />
@@ -32,6 +35,7 @@ export function AncientTree({ s = 1, depth = "mid", seed = 0 }: { s?: number; de
           <path d={`M${x - r * 0.7} ${y - r * 0.55} A${r} ${r} 0 0 1 ${x + r * 0.2} ${y - r * 0.95}`} stroke="#ffe39a" strokeOpacity={d.rim} strokeWidth={2.5} fill="none" strokeLinecap="round" />
         </g>
       ))}
+      </g>
       {/* つた */}
       {[-40, -14, 22, 50].map((x, i) => (
         <path key={x} d={`M${x} -120 Q${x + 6} -90 ${x - 2} ${-64 + i * 6} Q${x - 8} -40 ${x + 2} ${-24 + i * 4}`} stroke={d.leaf[1]} strokeWidth={2.5} fill="none" />
@@ -60,7 +64,7 @@ export function Fern({ s = 1, flip = false, blur = true }: { s?: number; flip?: 
 export function RuinRelief({ w = 120, h = 90, glyphs = ["A", "B", "C"], glow = false }: { w?: number; h?: number; glyphs?: string[]; glow?: boolean }) {
   return (
     <g>
-      <rect x={-w / 2} y={-h} width={w} height={h} fill="url(#g-stone-warm)" />
+      <rect x={-w / 2} y={-h} width={w} height={h} fill="url(#g-stone-warm)" filter="url(#f-texture)" />
       <rect x={-w / 2} y={-h} width={w} height={h} fill="url(#shade-top)" opacity={0.7} />
       {/* 石積みの目地 */}
       {[0.33, 0.66].map((f) => <line key={f} x1={-w / 2} x2={w / 2} y1={-h * f} y2={-h * f} stroke="#000" strokeOpacity={0.25} strokeWidth={1.5} />)}

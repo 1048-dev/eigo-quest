@@ -3,7 +3,8 @@
  *   npm run db:seed
  */
 import { PrismaClient } from "@prisma/client";
-import monsters from "../content/curriculum/monsters.json";
+import shopData from "../content/curriculum/monsters.json";
+import { MONSTERS } from "../src/lib/game/monsters";
 import { ASSESSMENTS, LESSONS, itemsOfLesson } from "../src/lib/curriculum";
 
 const prisma = new PrismaClient();
@@ -32,11 +33,12 @@ async function main() {
     update: {},
   });
 
-  for (const m of monsters.monsters) {
-    const { id, rarity, ...d } = m;
-    await prisma.monster.upsert({ where: { id }, create: { id, rarity: rarity as never, ...d }, update: { rarity: rarity as never, ...d } });
+  // モンスター図鑑（100体）
+  for (const m of MONSTERS) {
+    const d = { nameEn: m.nameEn, nameJa: m.nameJa, rarity: m.rarity, theme: m.theme, imageKey: m.imageKey };
+    await prisma.monster.upsert({ where: { id: m.id }, create: { id: m.id, ...d }, update: d });
   }
-  for (const s of monsters.shop) {
+  for (const s of shopData.shop ?? []) {
     const { id, ...d } = s;
     await prisma.shopItem.upsert({ where: { id }, create: { id, ...d }, update: d });
   }
@@ -47,7 +49,7 @@ async function main() {
     update: {},
   });
 
-  console.log(`seeded ${LESSONS.length} lessons, ${ASSESSMENTS.length} assessments`);
+  console.log(`seeded ${LESSONS.length} lessons, ${ASSESSMENTS.length} assessments, ${MONSTERS.length} monsters`);
 }
 
 main().finally(() => prisma.$disconnect());

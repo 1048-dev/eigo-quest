@@ -14,13 +14,13 @@ export function rollRarity(kind: "NORMAL" | "RARE", rng: () => number): Rarity {
   return kind === "RARE" ? "RARE" : "COMMON";
 }
 
-export function rollMonster(pool: readonly MonsterDef[], kind: "NORMAL" | "RARE", rng: () => number): MonsterDef {
+export function rollMonster<T extends MonsterDef>(pool: readonly T[], kind: "NORMAL" | "RARE", rng: () => number): T {
   const rarity = rollRarity(kind, rng);
   // 該当レア度がプールに無ければ1段階ずつ下げる
   const order: Rarity[] = ["LEGENDARY", "EPIC", "RARE", "COMMON"];
   for (let i = order.indexOf(rarity); i < order.length; i++) {
     const c = pool.filter((m) => m.rarity === order[i]);
-    if (c.length) return c[Math.floor(rng() * c.length)];
+    if (c.length) return c[Math.min(c.length - 1, Math.floor(rng() * c.length))];
   }
   return pool[0];
 }

@@ -38,17 +38,17 @@ export function FieldBackdrop() {
       {/* 広い画面: 左右の余白にキャラクター（奥のモンスターはぼかして奥行きを出す） */}
       <div className="absolute inset-y-0 left-0 hidden w-[calc((100vw-48rem)/2)] items-end justify-center gap-2 pb-28 lg:flex">
         <StandingFigure id="riko" pose="wave" height={220} />
-        <MonsterFigure id="m-sammy-snake" size={110} />
+        <MonsterFigure id="mon-044" size={110} />
       </div>
       <div className="absolute inset-y-0 right-0 hidden w-[calc((100vw-48rem)/2)] items-end justify-center gap-2 pb-28 lg:flex">
-        <MonsterFigure id="m-tiger-tap" size={110} flip />
+        <MonsterFigure id="mon-091" size={110} flip />
         <StandingFigure id="kiko" pose="cheer" height={210} />
       </div>
       <div className="absolute left-0 top-28 hidden w-[calc((100vw-48rem)/2)] justify-center opacity-80 blur-[1.5px] lg:flex">
-        <MonsterFigure id="m-shhh-ghost" size={100} className="float-slow" />
+        <MonsterFigure id="mon-056" size={100} className="float-slow" />
       </div>
       <div className="absolute right-0 top-40 hidden w-[calc((100vw-48rem)/2)] justify-center opacity-80 blur-[1.5px] lg:flex">
-        <MonsterFigure id="m-magic-e-fairy" size={100} className="float-slow" />
+        <MonsterFigure id="mon-055" size={100} className="float-slow" />
       </div>
     </div>
   );
