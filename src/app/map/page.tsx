@@ -60,7 +60,7 @@ export default function MapPage() {
 
   return (
     <div className="space-y-5">
-      <HeroScene title="⚔️ 英語クエスト ⚔️" subtitle="ハルたちと えいごの遺跡を探検しよう！" variant="map" />
+      <HeroScene title="英語クエスト" subtitle="ハルたちと えいごの遺跡を探検しよう！" variant="map" />
 
       <ErrorBanner message={error} />
 
@@ -74,7 +74,7 @@ export default function MapPage() {
             <span className="shrink-0">{QUEST[cur.type].icon}</span>
             <div>
               <p className="font-title text-xs text-[var(--gold-dark)]">きょうのクエスト</p>
-              <p className="text-lg font-black">{QUEST[cur.type].text(cur.lessonNo)}</p>
+              <p className="text-base font-black leading-snug">{QUEST[cur.type].text(cur.lessonNo)}</p>
             </div>
           </div>
           {cur.status === "WAIT_TOMORROW" ? (

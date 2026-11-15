@@ -29,7 +29,7 @@ export function PeekCharacter({ id, pose, mood, place = "top-right", height = 76
 export function PeekMonster({ id, place = "top-right", size = 56, flip, letter }: { id: string; place?: Place; size?: number; flip?: boolean; letter?: string }) {
   return (
     <div className={`pointer-events-none absolute z-10 ${place === "top-right" ? "-top-10 right-4" : "-top-10 left-4"}`} aria-hidden>
-      <MonsterFigure id={id} size={size} flip={flip} letter={letter} className="drop-shadow-[0_3px_0_rgba(0,0,0,.25)]" />
+      <MonsterFigure id={id} size={size} flip={flip} letter={letter} />
     </div>
   );
 }

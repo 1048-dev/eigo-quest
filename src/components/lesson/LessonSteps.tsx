@@ -9,6 +9,7 @@ import type { AnswerLog } from "@/lib/services/progressService";
 import { playItemAudio, speak, speakMixed } from "@/lib/speech/tts";
 import { QuestionView, SpeakButton, type AnswerEvent } from "@/components/test/QuestionView";
 import { apiPost } from "@/lib/api/client";
+import { TeacherArt } from "@/components/characters/TeacherArt";
 import { GradeResponseSchema } from "@/lib/api/contracts";
 
 export type Done = (logs?: AnswerLog[]) => void;
@@ -33,17 +34,11 @@ export function TeacherVideo({ script, videoUrl, teacherName, onDone }: { script
         // 本番: 口の動き・ジェスチャー付きのAIアバター動画（事前生成して CDN 配信）
         <video src={videoUrl} controls playsInline className="aspect-video w-full bg-black" onEnded={() => onDone()} />
       ) : (
-        <div className="relative grid aspect-video place-items-center bg-gradient-to-b from-sky-200 to-sky-50">
-          <svg viewBox="0 0 200 200" className={`h-48 ${talking ? "bob" : ""}`} aria-label={teacherName}>
-            <circle cx="100" cy="80" r="52" fill="#ffd9b8" />
-            <path d="M48 70 Q100 0 152 70 Q150 40 100 30 Q50 40 48 70" fill="#7a4a2a" />
-            <circle cx="80" cy="80" r="6" fill="#333" /><circle cx="120" cy="80" r="6" fill="#333" />
-            <ellipse cx="100" cy="108" rx="14" ry="8" fill="#d0466b" className={talking ? "mouth-talk" : ""} />
-            <rect x="60" y="132" width="80" height="60" rx="24" fill="var(--accent)" />
-            {/* ジェスチャー: 話している間は手をふる */}
-            <circle cx={talking ? 160 : 150} cy={talking ? 120 : 160} r="12" fill="#ffd9b8" />
+        <div className="relative grid aspect-video place-items-center bg-[radial-gradient(120%_90%_at_50%_10%,#f2c46a_0%,#1d4a52_55%,#0b1f2e_100%)]">
+          <svg viewBox="0 0 200 200" className={`h-52 ${talking ? "bob" : ""}`} role="img" aria-label={teacherName} overflow="visible">
+            <g filter="url(#f-rim)"><TeacherArt talking={talking} /></g>
           </svg>
-          {subtitle && <p className="absolute inset-x-4 bottom-3 rounded-lg bg-black/60 p-2 text-center text-white">{subtitle}</p>}
+          {subtitle && <p className="absolute inset-x-4 bottom-3 rounded-lg border border-[#b8862a]/60 bg-black/70 p-2 text-center text-white backdrop-blur">{subtitle}</p>}
         </div>
       )}
       <div className="p-4">

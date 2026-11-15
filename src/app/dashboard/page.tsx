@@ -47,7 +47,7 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-5">
-      <HeroScene title="📜 ぼうけんのステータス" subtitle="パーティの成長をチェック！" variant="dashboard" />
+      <HeroScene title="ぼうけんのステータス" subtitle="パーティの成長をチェック！" variant="dashboard" />
 
       <ErrorBanner message={error} />
 

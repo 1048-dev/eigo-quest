@@ -30,7 +30,7 @@ export default function RankingPage() {
   );
   return (
     <div className="space-y-4">
-      <HeroScene title="🏆 ランキング" subtitle="ぜんこくの冒険者と きそおう！" variant="ranking" />
+      <HeroScene title="ランキング" subtitle="ぜんこくの冒険者と きそおう！" variant="ranking" />
       <ErrorBanner message={error} />
       <div className="flex gap-2"><Tab on={scope === "national"} onClick={() => setScope("national")}>ぜんこく</Tab><Tab on={scope === "friends"} onClick={() => setScope("friends")}>フレンド</Tab></div>
       <div className="flex gap-2"><Tab on={metric === "coins"} onClick={() => setMetric("coins")}>こんしゅうのコイン</Tab><Tab on={metric === "streak"} onClick={() => setMetric("streak")}>れんぞく日数</Tab></div>

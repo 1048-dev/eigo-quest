@@ -1,190 +1,254 @@
 @import "tailwindcss";
 
 /*
- * 英語クエスト RPGテーマ
- *  - 背景: ジャングルの深緑 → 遺跡の土色 のグラデーション ＋ ドット柄
- *  - パネル: 羊皮紙（クリーム）＋ ゴールドの二重枠（RPGのウィンドウ風）
- *  - ボタン: 下に厚みのある立体ボタン（押すと沈む）
- * 既存画面が使っている変数名（--surface / --accent / --coin ...）はそのまま、値だけ差し替える。
+ * 英語クエスト シネマティックテーマ
+ *  - 背景: 夜明け前のジャングルに眠る古代遺跡のイラスト（components/scene/FieldBackdrop.tsx）
+ *  - パネル: すりガラス（backdrop-filter）＋ ダークゴールドのメタル枠（面取りハイライト＋多層シャドウ）
+ *  - ボタン: 宝石のようなつやのある立体ボタン（エメラルド / ゴールド / ルビー）
+ *  - 文字: 暗いガラスの上にクリーム色。見出しは金属の金文字
+ * 画面側は変数名（--surface / --ink / --accent ...）とクラス名（.card / .btn ...）だけを使うので、ここを変えれば全画面に反映される。
  */
 :root {
-  /* 背景（体） */
-  --jungle-950: #0b2016;
-  --jungle-800: #153a27;
-  --jungle-600: #24603f;
-  --earth-700: #4a3a24;
-  /* パネル（羊皮紙） */
-  --surface: #fdf6e3;
-  --bg: #f3e4bd;            /* パネル内の入力欄・小箱 */
-  --parchment-edge: #e7cf93;
-  --gold: #e8b63a;
-  --gold-dark: #a87a12;
-  --gold-deep: #5c4310;
-  /* 文字 */
-  --ink: #2b2216;
-  --ink-2: #6b5a40;
-  --on-dark: #fdf6e3;
-  --on-dark-2: #d8e8c8;
-  /* アクセント（パステル＋ビビッド） */
-  --accent: #23a26b;        /* エメラルド: 主要ボタン・グラフ */
-  --coin: #e8b63a;
-  --ok: #2fae5c;
-  --ng: #e5484d;
-  --volt: #ffd23f;          /* 相棒ビリモ */
+  --surface: rgba(16, 38, 38, 0.66);
+  --bg: rgba(255, 244, 214, 0.07);
+  --parchment-edge: rgba(242, 207, 106, 0.22);
+  --gold: #e9b949;
+  --gold-dark: #f2cf6a;     /* 暗い背景の上の金色の見出し */
+  --gold-deep: #2a1a03;
+  --ink: #f7ecd4;
+  --ink-2: #b8c8b8;
+  --on-dark: #f7ecd4;
+  --on-dark-2: #c9d6c4;
+  --accent: #2fd08a;
+  --coin: #f2c14e;
+  --ok: #3fd27f;
+  --ng: #ff5a64;
+  --volt: #ffd83a;
   --sky: #4cc9f0;
   --berry: #ff6fa5;
   --grape: #9b6bff;
-  --locked: #b9ab8a;
-  /* マップ */
-  --grass: #4f9b5b;
-  --path: #d9b77a;
+  --locked: #56645c;
+  --path: #c9a86a;
+  --metal: linear-gradient(180deg, #fff2b0 0%, #e9b949 18%, #7a4e0c 46%, #f2cf6a 60%, #8a5a0a 82%, #3a2404 100%);
 }
 
+/* 下地の色は html に置く（body に背景を置くと、固定のイラスト背景 FieldBackdrop の上に塗られて隠れてしまう） */
+html { background: linear-gradient(180deg, #06121a 0%, #0d2b2c 40%, #173c2c 75%, #24190e 100%) fixed #06121a; }
 body {
-  color: var(--on-dark);
-  /* 背景のイラストは FieldBackdrop（固定SVG）が描く。これは読み込み前の下地 */
-  background: linear-gradient(180deg, #123a28 0%, #1f5a3a 45%, #4a3a24 100%);
-  background-attachment: fixed;
+  color: var(--ink);
+  background: transparent;
   font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+input, textarea { color: inherit; }
 
-/* 見出し（丸ゴシックの極太。ドット文字は使わない） */
+/* ---------------- 文字 ---------------- */
 .font-title { font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif; font-weight: 900; letter-spacing: 0.02em; }
 .rpg-title {
   font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif;
   font-weight: 900;
-  color: var(--volt);
-  text-shadow: 0 2px 0 var(--gold-deep), 0 0 12px rgba(255, 210, 63, 0.35);
+  color: var(--gold-dark);
+  text-shadow: 0 1px 0 #fff3c2, 0 2px 0 #5a3806, 0 0 18px rgba(242, 193, 78, 0.45);
   letter-spacing: 0.03em;
 }
+/* 金属の金文字（グラデーション＋面取りの影） */
+.title-metal {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, #fffbe0 0%, #f6d77a 38%, #b07a1c 55%, #ffe7a0 70%, #c48a22 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 0 #2a1a03) drop-shadow(0 3px 4px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 10px rgba(242, 193, 78, 0.35));
+}
 
-/* --- RPGウィンドウ（羊皮紙パネル） --- */
+/* ---------------- メタル枠のガラスパネル ---------------- */
 .card {
   position: relative;
   color: var(--ink);
-  background: linear-gradient(180deg, #fffaf0 0%, var(--surface) 45%, #f6e8c4 100%);
-  border: 3px solid var(--gold-dark);
-  border-radius: 18px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background:
+    linear-gradient(160deg, rgba(34, 70, 66, 0.74), rgba(8, 22, 24, 0.82)) padding-box,
+    var(--metal) border-box;
+  -webkit-backdrop-filter: blur(14px) saturate(1.25);
+  backdrop-filter: blur(14px) saturate(1.25);
   box-shadow:
-    inset 0 0 0 2px #fff6d6,
-    inset 0 0 0 4px var(--parchment-edge),
-    0 5px 0 var(--gold-deep),
-    0 10px 22px rgba(0, 0, 0, 0.35);
+    inset 0 1px 0 rgba(255, 240, 200, 0.28),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    inset 0 0 32px rgba(0, 0, 0, 0.35),
+    0 2px 0 #1a1004,
+    0 14px 30px rgba(0, 0, 0, 0.5),
+    0 30px 60px -20px rgba(0, 0, 0, 0.6);
 }
-/* 四隅の金のびょう */
+/* 四隅の宝石びょう */
 .rpg-rivets::before,
 .rpg-rivets::after {
   content: "";
   position: absolute;
-  top: 7px;
-  width: 8px;
-  height: 8px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 9999px;
-  background: radial-gradient(circle at 35% 35%, #fff3b0, var(--gold) 55%, var(--gold-dark));
-  box-shadow: 0 1px 0 var(--gold-deep);
+  background: radial-gradient(circle at 35% 30%, #fff8d0, #f2c14e 40%, #7a4e0c 100%);
+  box-shadow: 0 0 0 1.5px #2a1a03, 0 0 8px rgba(242, 193, 78, 0.7);
 }
-.rpg-rivets::before { left: 7px; }
-.rpg-rivets::after { right: 7px; }
+.rpg-rivets::before { left: 8px; }
+.rpg-rivets::after { right: 8px; }
 
-/* 暗い木のパネル（ステータスボードの帯など） */
+/* より重厚なメタルパネル（ステータスボード・レッスンの見出し） */
 .rpg-wood {
+  position: relative;
   color: var(--on-dark);
+  border: 3px solid transparent;
+  border-radius: 22px;
   background:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 22px),
-    linear-gradient(180deg, #6b4a2b, #4a321c);
-  border: 3px solid var(--gold);
-  border-radius: 18px;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.15), 0 5px 0 #2b1b0c, 0 10px 22px rgba(0, 0, 0, 0.4);
+    radial-gradient(120% 80% at 20% 0%, rgba(242, 193, 78, 0.16), transparent 60%) padding-box,
+    linear-gradient(165deg, rgba(20, 44, 42, 0.86), rgba(6, 14, 16, 0.92)) padding-box,
+    var(--metal) border-box;
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 240, 200, 0.3),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.5),
+    inset 0 0 40px rgba(0, 0, 0, 0.45),
+    0 3px 0 #1a1004,
+    0 18px 40px rgba(0, 0, 0, 0.55),
+    0 0 40px -10px rgba(242, 193, 78, 0.25);
 }
 
-/* --- 立体ボタン --- */
+/* キービジュアルの額縁 */
+.hero-frame {
+  border-bottom: 3px solid #b8862a;
+  box-shadow: 0 1px 0 #fff2b0 inset, 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 640px) {
+  .hero-frame { border: 4px solid transparent; border-radius: 26px; background: var(--metal) border-box; }
+  .hero-frame > svg { border-radius: 22px; }
+}
+.title-plate {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(10, 24, 26, 0.82), rgba(4, 10, 12, 0.88)) padding-box, var(--metal) border-box;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255, 240, 200, 0.25), 0 6px 18px rgba(0, 0, 0, 0.55), 0 0 24px rgba(242, 193, 78, 0.2);
+}
+
+/* ---------------- 宝石ボタン ---------------- */
 .btn {
+  position: relative;
   display: inline-block;
+  overflow: hidden;
   border-radius: 14px;
   padding: 0.75rem 1.5rem;
   font-weight: 900;
   color: var(--ink);
-  border: 3px solid rgba(43, 34, 22, 0.55);
-  box-shadow: 0 5px 0 rgba(43, 34, 22, 0.55), inset 0 2px 0 rgba(255, 255, 255, 0.55);
-  transition: transform 0.08s, box-shadow 0.08s, filter 0.15s;
+  border: 2px solid transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)) padding-box, var(--metal) border-box;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 3px 0 #1a1004, 0 8px 18px rgba(0, 0, 0, 0.45);
+  transition: transform 0.08s, box-shadow 0.12s, filter 0.15s;
 }
-.btn:hover { filter: brightness(1.06); }
-.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 rgba(43, 34, 22, 0.55), inset 0 2px 0 rgba(255, 255, 255, 0.4); }
-.btn:disabled { filter: grayscale(0.6); opacity: 0.6; }
+/* 上半分のつや */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px 6px 50% 6px;
+  border-radius: 10px 10px 40% 40%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+.btn:hover { filter: brightness(1.08) saturate(1.1); }
+.btn:active { transform: translateY(3px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 0 #1a1004, 0 3px 8px rgba(0, 0, 0, 0.45); }
+.btn:disabled { filter: grayscale(0.7) brightness(0.8); }
+.btn:focus-visible { outline: 3px solid var(--volt); outline-offset: 2px; }
 .btn-primary {
   color: #fff;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
-  background: linear-gradient(180deg, #5fe39a 0%, var(--accent) 55%, #17824f 100%);
-  border-color: #0f5c37;
-  box-shadow: 0 5px 0 #0f5c37, inset 0 2px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  background: radial-gradient(120% 90% at 50% 0%, #8dffcb 0%, #2fd08a 38%, #0f7a48 75%, #06402a 100%) padding-box, var(--metal) border-box;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 3px 0 #1a1004, 0 8px 18px rgba(0, 0, 0, 0.45), 0 0 22px rgba(47, 208, 138, 0.45);
 }
 .btn-coin {
-  color: #3b2a00;
-  background: linear-gradient(180deg, #fff1a6 0%, var(--gold) 60%, #c98f12 100%);
-  border-color: var(--gold-deep);
-  box-shadow: 0 5px 0 var(--gold-deep), inset 0 2px 0 rgba(255, 255, 255, 0.6);
+  color: #2a1a03;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  background: radial-gradient(120% 90% at 50% 0%, #fff8cf 0%, #f2c14e 40%, #b07a1c 78%, #6b4508 100%) padding-box, var(--metal) border-box;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 3px 0 #1a1004, 0 8px 18px rgba(0, 0, 0, 0.45), 0 0 22px rgba(242, 193, 78, 0.45);
 }
 .btn-berry {
   color: #fff;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
-  background: linear-gradient(180deg, #ffa3c7 0%, var(--berry) 60%, #d9447d 100%);
-  border-color: #8f2350;
-  box-shadow: 0 5px 0 #8f2350, inset 0 2px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  background: radial-gradient(120% 90% at 50% 0%, #ffc0d4 0%, #ff4f7a 40%, #a8183f 78%, #5c0a22 100%) padding-box, var(--metal) border-box;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 3px 0 #1a1004, 0 8px 18px rgba(0, 0, 0, 0.45), 0 0 24px rgba(255, 79, 122, 0.5);
 }
 
-/* ゲージ（HP/EXPバー風） */
+/* ---------------- ゲージ ---------------- */
 .rpg-gauge {
   height: 12px;
   border-radius: 9999px;
-  background: #2b1b0c;
-  border: 2px solid #1a1007;
+  background: linear-gradient(180deg, #050b0c, #142224);
+  border: 1.5px solid #7a4e0c;
   overflow: hidden;
-  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 240, 200, 0.18);
 }
 .rpg-gauge > span {
   display: block;
   height: 100%;
   border-radius: 9999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0 35%, transparent 35%), var(--gauge, var(--accent));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0 30%, rgba(255, 255, 255, 0) 55%), var(--gauge, var(--accent));
+  box-shadow: 0 0 10px rgba(255, 230, 160, 0.45);
 }
 
-/* 吹き出し */
+/* ---------------- 吹き出し（明るいガラス。中の文字は濃い色） ---------------- */
 .speech {
   position: relative;
-  color: var(--ink);
-  background: #fffdf3;
-  border: 3px solid var(--ink);
+  color: #241a0e;
+  background: linear-gradient(180deg, rgba(255, 251, 238, 0.97), rgba(246, 234, 206, 0.95));
+  border: 2px solid #b8862a;
   border-radius: 16px;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 1px 0 #fff, 0 6px 16px rgba(0, 0, 0, 0.45);
 }
+.speech-name { color: #8a5a0a; }
 .speech::before {
   content: "";
   position: absolute;
-  left: -12px;
+  left: -11px;
   bottom: 14px;
-  border-width: 8px 12px 8px 0;
+  border-width: 8px 11px 8px 0;
   border-style: solid;
-  border-color: transparent var(--ink) transparent transparent;
+  border-color: transparent #b8862a transparent transparent;
 }
 .speech::after {
   content: "";
   position: absolute;
   left: -7px;
   bottom: 16px;
-  border-width: 6px 9px 6px 0;
+  border-width: 6px 8px 6px 0;
   border-style: solid;
-  border-color: transparent #fffdf3 transparent transparent;
+  border-color: transparent #f9efd6 transparent transparent;
 }
 
+/* ---------------- 動き ---------------- */
 @keyframes bob { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
-.bob { animation: bob 1.4s ease-in-out infinite; }
+.bob { animation: bob 1.6s ease-in-out infinite; }
+@keyframes float-slow { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+.float-slow { animation: float-slow 5s ease-in-out infinite; }
 @keyframes talk { 0%, 100% { transform: scaleY(.3) } 50% { transform: scaleY(1) } }
 .mouth-talk { animation: talk .22s ease-in-out infinite; transform-origin: center; }
 @keyframes spark { 0%, 100% { opacity: .35; transform: scale(.85) } 50% { opacity: 1; transform: scale(1.1) } }
 .spark { animation: spark 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-@keyframes glow { 0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 210, 63, .5)) } 50% { filter: drop-shadow(0 0 10px rgba(255, 210, 63, .95)) } }
-.glow { animation: glow 1.8s ease-in-out infinite; }
+@keyframes glow { 0%, 100% { filter: drop-shadow(0 0 3px rgba(255, 216, 58, .5)) } 50% { filter: drop-shadow(0 0 14px rgba(255, 216, 58, .95)) } }
+.glow { animation: glow 2s ease-in-out infinite; }
+@keyframes twinkle { 0%, 100% { opacity: .25 } 50% { opacity: 1 } }
+.mote { animation: twinkle 3.6s ease-in-out infinite; }
+@keyframes pulse-glow { 0%, 100% { opacity: .55 } 50% { opacity: 1 } }
+.pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-  .bob, .spark, .glow, .mouth-talk { animation: none; }
+  .bob, .float-slow, .spark, .glow, .mouth-talk, .mote, .pulse-glow { animation: none; }
+}
+/* backdrop-filter が使えない古い端末では、ガラスを少し濃くして読みやすさを保つ */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card { background: linear-gradient(160deg, rgba(24, 52, 50, 0.96), rgba(8, 20, 22, 0.97)) padding-box, var(--metal) border-box; }
+  .rpg-wood { background: linear-gradient(165deg, rgba(18, 40, 38, 0.97), rgba(6, 14, 16, 0.98)) padding-box, var(--metal) border-box; }
 }

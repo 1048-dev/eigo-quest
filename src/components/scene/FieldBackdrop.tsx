@@ -1,10 +1,11 @@
 /**
- * 画面全体の背景（固定）。ドット柄をやめ、ジャングルの丘・遺跡・木々を重ねたイラスト背景にする。
- * 広い画面（lg以上）では、中央のカラムの左右にキャラクターとモンスターの立ち絵が並ぶ。
+ * 画面全体の背景（固定）。夜明け前のジャングルの奥に眠る古代遺跡。
+ * 巨大な古代樹・神殿の光・ゴッドレイ・霧・光の粒を重ね、パネルはガラス越しにこの景色が透けて見える。
+ * 広い画面（lg以上）では、中央の左右にキャラクターとモンスターが逆光の中に立つ。
  */
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
-import { JungleTree, Palm, RuinPillar } from "./SceneryArt";
+import { AncientTree, At, Fern, Fog, GodRays, Motes, RuinRelief, TempleGate } from "./CinematicScenery";
 
 export function FieldBackdrop() {
   return (
@@ -12,40 +13,42 @@ export function FieldBackdrop() {
       <svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full">
         <defs>
           <linearGradient id="bd-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#123a28" /><stop offset="45%" stopColor="#1f5a3a" /><stop offset="100%" stopColor="#4a3a24" />
+            <stop offset="0%" stopColor="#06121a" /><stop offset="35%" stopColor="#0d2b2c" /><stop offset="70%" stopColor="#173c2c" /><stop offset="100%" stopColor="#24190e" />
           </linearGradient>
-          <radialGradient id="bd-light" cx="20%" cy="8%" r="55%">
-            <stop offset="0%" stopColor="#ffe9a8" stopOpacity=".45" /><stop offset="100%" stopColor="#ffe9a8" stopOpacity="0" />
+          <radialGradient id="bd-glow" cx="50%" cy="34%" r="45%">
+            <stop offset="0%" stopColor="#f2c46a" stopOpacity=".38" /><stop offset="100%" stopColor="#f2c46a" stopOpacity="0" />
           </radialGradient>
         </defs>
         <rect width="400" height="800" fill="url(#bd-sky)" />
-        <rect width="400" height="800" fill="url(#bd-light)" />
-        {/* 光の筋 */}
-        {[40, 110, 190].map((x, i) => <path key={x} d={`M${x} 0 L${x + 60} 0 L${x + 160} 800 L${x + 90} 800 Z`} fill="#fff6d0" opacity={0.05 + i * 0.01} />)}
-        {/* 奥の丘 */}
-        <path d="M0 520 Q100 470 200 510 Q300 550 400 500 L400 800 L0 800 Z" fill="#245c3c" opacity={0.85} />
-        <path d="M0 640 Q120 600 220 640 Q320 680 400 630 L400 800 L0 800 Z" fill="#2c6b45" />
-        <g opacity={0.55}>
-          <g transform="translate(40 540)"><JungleTree s={1.1} tone={2} /></g>
-          <g transform="translate(360 520)"><Palm s={1.2} /></g>
-          <g transform="translate(300 640)"><RuinPillar s={1.1} broken /></g>
-          <g transform="translate(90 690)"><RuinPillar s={0.9} /></g>
-        </g>
+        <rect width="400" height="800" fill="url(#bd-glow)" />
+        <At x={200} y={360} filter="url(#f-dof-2)" opacity={0.7}><TempleGate s={1.5} /></At>
+        <GodRays x={70} w={260} h={800} count={6} opacity={0.1} />
+        <At x={40} y={520} opacity={0.85}><AncientTree s={2.1} depth="far" seed={1} /></At>
+        <At x={370} y={500} opacity={0.85}><AncientTree s={2.3} depth="far" seed={4} /></At>
+        <Fog y={430} w={400} opacity={0.18} />
+        <At x={90} y={700} opacity={0.75}><RuinRelief w={150} h={110} glyphs={["A", "B", "C"]} /></At>
+        <At x={320} y={720} opacity={0.75}><RuinRelief w={140} h={96} glyphs={["X", "Y"]} /></At>
+        <At x={0} y={820}><AncientTree s={1.4} depth="near" seed={2} /></At>
+        <At x={410} y={830}><AncientTree s={1.3} depth="near" seed={6} /></At>
+        <At x={-20} y={800}><Fern s={1.6} /></At>
+        <At x={420} y={800}><Fern s={1.5} flip /></At>
+        <Fog y={680} w={400} opacity={0.22} />
+        <Motes w={400} h={760} n={26} seed={3} />
       </svg>
-      {/* 広い画面では左右の余白にキャラクターが立つ */}
+      {/* 広い画面: 左右の余白にキャラクター（奥のモンスターはぼかして奥行きを出す） */}
       <div className="absolute inset-y-0 left-0 hidden w-[calc((100vw-48rem)/2)] items-end justify-center gap-2 pb-28 lg:flex">
-        <StandingFigure id="riko" pose="wave" height={190} />
-        <MonsterFigure id="m-sammy-snake" size={96} />
+        <StandingFigure id="riko" pose="wave" height={220} />
+        <MonsterFigure id="m-sammy-snake" size={110} />
       </div>
       <div className="absolute inset-y-0 right-0 hidden w-[calc((100vw-48rem)/2)] items-end justify-center gap-2 pb-28 lg:flex">
-        <MonsterFigure id="m-tiger-tap" size={96} flip />
-        <StandingFigure id="kiko" pose="cheer" height={180} />
+        <MonsterFigure id="m-tiger-tap" size={110} flip />
+        <StandingFigure id="kiko" pose="cheer" height={210} />
       </div>
-      <div className="absolute left-0 top-24 hidden w-[calc((100vw-48rem)/2)] justify-center lg:flex">
-        <MonsterFigure id="m-shhh-ghost" size={90} className="bob" />
+      <div className="absolute left-0 top-28 hidden w-[calc((100vw-48rem)/2)] justify-center opacity-80 blur-[1.5px] lg:flex">
+        <MonsterFigure id="m-shhh-ghost" size={100} className="float-slow" />
       </div>
-      <div className="absolute right-0 top-32 hidden w-[calc((100vw-48rem)/2)] justify-center lg:flex">
-        <MonsterFigure id="m-magic-e-fairy" size={90} className="bob" />
+      <div className="absolute right-0 top-40 hidden w-[calc((100vw-48rem)/2)] justify-center opacity-80 blur-[1.5px] lg:flex">
+        <MonsterFigure id="m-magic-e-fairy" size={100} className="float-slow" />
       </div>
     </div>
   );

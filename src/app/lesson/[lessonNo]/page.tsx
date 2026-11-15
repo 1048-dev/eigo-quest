@@ -9,6 +9,7 @@ import type { LessonStep } from "@/lib/curriculum/questions";
 import type { AnswerLog } from "@/lib/services/progressService";
 import { Flashcards, Phonics, Pronunciation, QuizRun, SchoolExpressions, SpeedListening, TeacherVideo, TprDrill } from "@/components/lesson/LessonSteps";
 import { StandingFigure } from "@/components/characters/StandingArt";
+import { HeroScene } from "@/components/scene/HeroScene";
 import { apiGet, apiPost } from "@/lib/api/client";
 import { LessonCompleteResponseSchema, LessonResponseSchema, type LessonCompleteResponse, type LessonResponse } from "@/lib/api/contracts";
 
@@ -85,14 +86,16 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
   }
 
   const s = steps[step];
+  if (!s) return <p className="rpg-title p-8 text-center text-xl">きろくしています…</p>;
   return (
     <div className="space-y-4">
+      {s.kind === "teacher_video" && <HeroScene title={`Session ${lesson.lessonNo}`} subtitle={`${lesson.title}｜${lesson.titleJa}`} variant="lesson" />}
       <header className="rpg-wood p-3">
         <p className="font-title text-xs text-[var(--volt)]">Session {lesson.lessonNo} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
         <h1 className="text-xl font-black">{lesson.title} <span className="text-base text-[var(--on-dark-2)]">{lesson.titleJa}</span></h1>
         <ol className="mt-3 flex gap-1" aria-label="レッスンの進み具合">
           {steps.map((x, i) => (
-            <li key={i} className={`flex-1 rounded-md border-2 py-1 text-center text-[10px] font-black ${i < step ? "border-[#0f5c37] bg-[var(--ok)] text-white" : i === step ? "border-[var(--gold-deep)] bg-gradient-to-b from-[#fff1a6] to-[var(--gold)] text-[#3b2a00]" : "border-black/40 bg-black/30 text-[var(--on-dark-2)]"}`}>{STEP_LABEL[x.kind]}</li>
+            <li key={i} className={`flex-1 rounded-md border-2 py-1 text-center text-[10px] font-black ${i < step ? "border-[#0b5e37] bg-[radial-gradient(120%_90%_at_50%_0%,#8dffcb,#2fd08a_45%,#0f7a48)] text-white" : i === step ? "border-[#7a4e0c] bg-[radial-gradient(120%_90%_at_50%_0%,#fff8cf,#f2c14e_45%,#b07a1c)] text-[#2a1a03] shadow-[0_0_12px_rgba(242,193,78,.5)]" : "border-[#7a4e0c]/60 bg-black/40 text-[var(--on-dark-2)]"}`}>{STEP_LABEL[x.kind]}</li>
           ))}
         </ol>
       </header>

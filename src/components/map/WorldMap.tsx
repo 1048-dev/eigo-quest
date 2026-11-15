@@ -1,229 +1,237 @@
 "use client";
 /**
- * RPG風ぼうけんマップ。ジャングル → 古代遺跡 の上を土の道がくねくね進み、
- * ステージ（石のメダル=レッスン / 宝石=翌日テスト / 宝箱=まとめ / 神殿=ボス）が並ぶ。
- * 現在地にはハルたちパーティと相棒ビリモが立つ。ノードの状態は domain/progression.ts が決める。
+ * シネマティックなぼうけんマップ。
+ * 夜のジャングルの古代遺跡を、金のルーンが光る石の参道がくねくね進む。
+ * ステージ: レッスン＝金枠の宝玉 / 翌日テスト＝カットされた宝石 / まとめ＝金具の宝箱 / ボス＝神殿の門。
+ * 道の両側には古代樹・レリーフの壁・シダと、ひそむモンスター。現在地にはスポットライトの中にパーティが立つ。
+ * ノードの状態は domain/progression.ts が決め、API（/api/map）の契約どおりに受け取る。
  */
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import type { StageNode } from "@/lib/domain/progression";
-import { BirimoArt, CharacterArt } from "@/components/characters/CharacterArt";
-import type { CharacterId } from "@/lib/game/characters";
+import type { MapResponse } from "@/lib/api/contracts";
+import { Standing } from "@/components/characters/StandingArt";
 import { MonsterArt } from "@/components/characters/MonsterArt";
-import { Bush, Flowers, JungleTree, Palm, Rock, RuinPillar } from "@/components/scene/SceneryArt";
+import { BirimoArt } from "@/components/characters/CharacterArt";
+import { AncientTree, At, Crystals, Fern, Fog, Motes, RuinRelief, TempleGate } from "@/components/scene/CinematicScenery";
 
-type Decor = "tree" | "palm" | "bush" | "ruin" | "ruinBroken" | "rock" | "flowers";
+type StageNode = MapResponse["nodes"][number];
 
-const WORLD_THEMES: Record<number, { name: string; top: string; bottom: string; decor: Decor[]; monsters: string[] }> = {
-  1: { name: "はじまりのジャングル", top: "#3d9a57", bottom: "#246b3e", decor: ["tree", "bush", "ruinBroken", "palm", "flowers", "rock", "ruin"], monsters: ["m-sammy-snake", "m-ant-anty", "m-tiger-tap", "m-penguin-pop", "m-slime-a", "m-shhh-ghost", "m-magic-e-fairy"] },
-  2: { name: "フォニックス火山", top: "#9a5a34", bottom: "#5a2e18", decor: ["rock", "ruinBroken", "bush", "rock"], monsters: ["m-slime-fire", "m-tiger-tap", "m-slime-b"] },
-  3: { name: "グラマーの海の遺跡", top: "#2f7f9a", bottom: "#184a60", decor: ["palm", "ruin", "flowers", "rock"], monsters: ["m-penguin-pop", "m-slime-c", "m-shhh-ghost"] },
-  4: { name: "スピーキング天空城", top: "#7464b5", bottom: "#3b2f72", decor: ["ruin", "flowers", "bush"], monsters: ["m-magic-e-fairy", "m-slime-d"] },
+const WORLD_THEMES: Record<number, { name: string; top: string; bottom: string; fog: string; monsters: string[]; glyphs: string[][] }> = {
+  1: { name: "はじまりのジャングル遺跡", top: "#0e2a24", bottom: "#081814", fog: "#bfe6d6", monsters: ["m-sammy-snake", "m-ant-anty", "m-tiger-tap", "m-penguin-pop", "m-slime-a", "m-shhh-ghost", "m-magic-e-fairy"], glyphs: [["A", "B"], ["C", "D"], ["E", "F"], ["G", "H"]] },
+  2: { name: "フォニックス火山の神殿", top: "#2e1408", bottom: "#140804", fog: "#ffcf9a", monsters: ["m-slime-fire", "m-tiger-tap", "m-slime-b"], glyphs: [["sh"], ["ch"], ["th"]] },
+  3: { name: "グラマーの海底遺跡", top: "#0b2236", bottom: "#05101c", fog: "#a8e2ff", monsters: ["m-penguin-pop", "m-slime-c", "m-shhh-ghost"], glyphs: [["I", "am"], ["is"], ["are"]] },
+  4: { name: "スピーキング天空城", top: "#1d1a3e", bottom: "#0c0a20", fog: "#d9ccff", monsters: ["m-magic-e-fairy", "m-slime-d"], glyphs: [["Hi"], ["Yes"]] },
 };
 
-function DecorArt({ kind, s }: { kind: Decor; s: number }) {
-  switch (kind) {
-    case "tree": return <JungleTree s={s * 0.7} tone={1} />;
-    case "palm": return <Palm s={s * 0.8} />;
-    case "bush": return <Bush s={s} />;
-    case "ruin": return <RuinPillar s={s * 0.75} />;
-    case "ruinBroken": return <RuinPillar s={s * 0.75} broken />;
-    case "rock": return <Rock s={s} />;
-    case "flowers": return <Flowers s={s * 1.2} />;
-  }
-}
-
 const W = 360;
-const STEP = 92;
-const TOP = 120;
+const STEP = 96;
+const TOP = 130;
 
-const pos = (i: number) => ({ x: W / 2 + Math.sin(i * 0.85) * 105, y: TOP + i * STEP });
+const pos = (i: number) => ({ x: W / 2 + Math.sin(i * 0.85) * 100, y: TOP + i * STEP });
 
-function statusColors(n: StageNode) {
-  switch (n.status) {
-    case "CLEARED": return { fill: "url(#gem-clear)", ring: "#e8b63a", text: "#fff" };
-    case "AVAILABLE": return { fill: n.type === "BOSS" ? "url(#gem-boss)" : "url(#gem-open)", ring: "#fff1a6", text: "#fff" };
-    case "WAIT_TOMORROW": return { fill: "url(#gem-night)", ring: "#c9b8ff", text: "#fff" };
-    default: return { fill: "url(#gem-stone)", ring: "#8b7d62", text: "#e9e2cf" };
-  }
-}
+const GEM: Record<StageNode["status"], string> = {
+  CLEARED: "url(#gem-emerald)",
+  AVAILABLE: "url(#gem-sapphire)",
+  WAIT_TOMORROW: "url(#gem-amethyst)",
+  LOCKED: "url(#gem-obsidian)",
+};
 
 function Node({ n }: { n: StageNode }) {
-  const c = statusColors(n);
+  const gem = n.type === "BOSS" && n.status === "AVAILABLE" ? "url(#gem-ruby)" : GEM[n.status];
+  const lit = n.status !== "LOCKED";
   switch (n.type) {
     case "LESSON":
       return (
         <g>
-          <circle r={31} fill="#2b1b0c" opacity={0.35} cy={5} />
-          <circle r={30} fill={c.ring} stroke="#5c4310" strokeWidth={2.5} />
-          <circle r={23} fill={c.fill} stroke="rgba(0,0,0,.35)" strokeWidth={2} />
-          <path d="M-14 -10 Q0 -22 14 -10" stroke="rgba(255,255,255,.45)" strokeWidth={3} fill="none" strokeLinecap="round" />
-          <text y={7} textAnchor="middle" fontSize={20} fontWeight={900} fill={c.text} className="font-title" style={{ paintOrder: "stroke", stroke: "rgba(0,0,0,.45)", strokeWidth: 3 }}>{n.lessonNo}</text>
+          <ellipse cy={26} rx={28} ry={7} fill="url(#ao-floor)" />
+          {lit && <circle r={40} fill="url(#g-magic)" opacity={n.status === "AVAILABLE" ? 0.75 : 0.3} className={n.status === "AVAILABLE" ? "pulse-glow" : undefined} />}
+          <circle r={30} fill="url(#metal-gold)" />
+          <circle r={27} fill="none" stroke="#2a1a03" strokeWidth={1.5} />
+          <circle r={24} fill={gem} />
+          <circle r={24} fill="url(#shade-sphere)" opacity={0.5} />
+          <ellipse cx={-8} cy={-11} rx={9} ry={5} fill="url(#spec)" transform="rotate(-30 -8 -11)" />
+          <text y={7} textAnchor="middle" fontSize={19} fontWeight={900} fill={lit ? "#fffbe6" : "#9a9a8a"} style={{ paintOrder: "stroke", stroke: "rgba(0,0,0,.55)", strokeWidth: 3 }}>{n.lessonNo}</text>
         </g>
       );
     case "CHECK":
       return (
         <g>
-          <rect x={-13} y={-13} width={26} height={26} rx={4} transform="rotate(45)" fill={c.fill} stroke={c.ring} strokeWidth={3} />
-          <text y={5} textAnchor="middle" fontSize={13} fontWeight={900} fill="#fff">✓</text>
+          <ellipse cy={16} rx={14} ry={4} fill="url(#ao-floor)" />
+          <path d="M0 -16 L14 -4 L8 14 L-8 14 L-14 -4 Z" fill={gem} stroke="url(#metal-gold)" strokeWidth={2.5} strokeLinejoin="round" />
+          <path d="M0 -16 L4 -4 L-4 -4 Z M-14 -4 L-4 -4 L-8 14 Z" fill="#fff" opacity={0.3} />
+          <text y={6} textAnchor="middle" fontSize={11} fontWeight={900} fill="#fff">✓</text>
         </g>
       );
     case "MINI":
       return (
         <g>
-          <ellipse cy={18} rx={26} ry={6} fill="#2b1b0c" opacity={0.35} />
-          <rect x={-22} y={-6} width={44} height={24} rx={4} fill={n.status === "LOCKED" ? "#8b7d62" : "#a0522d"} stroke="#5c3010" strokeWidth={2.5} />
-          <path d="M-22 -6 Q0 -26 22 -6 Z" fill={n.status === "LOCKED" ? "#9c8e72" : "#c46a35"} stroke="#5c3010" strokeWidth={2.5} />
-          <rect x={-22} y={-2} width={44} height={5} fill={c.ring} />
-          <rect x={-5} y={-4} width={10} height={12} rx={2} fill={c.ring} stroke="#5c4310" strokeWidth={1.5} />
-          {n.status !== "LOCKED" && <text x={18} y={-16} fontSize={14} className="spark">✨</text>}
+          <ellipse cy={20} rx={28} ry={6} fill="url(#ao-floor)" />
+          {lit && <circle r={36} fill="url(#g-magic)" opacity={0.45} className="pulse-glow" />}
+          <rect x={-22} y={-4} width={44} height={24} rx={3} fill={lit ? "#7a3a12" : "#3a2c22"} />
+          <path d="M-22 -4 Q0 -26 22 -4 Z" fill={lit ? "#9a4e1c" : "#4a3a2c"} />
+          <rect x={-22} y={-4} width={44} height={24} rx={3} fill="url(#shade-cyl)" />
+          <path d="M-22 -4 Q0 -26 22 -4" fill="url(#shade-top)" />
+          {[-14, 14].map((x) => <rect key={x} x={x - 2.5} y={-17} width={5} height={37} fill="url(#metal-gold)" />)}
+          <rect x={-22} y={-1} width={44} height={4} fill="url(#metal-gold)" />
+          <rect x={-5} y={-3} width={10} height={11} rx={2} fill="url(#metal-gold)" />
+          <circle cy={2} r={1.6} fill="#2a1a03" />
         </g>
       );
     case "BOSS":
       return (
         <g>
-          {n.status === "AVAILABLE" && <circle r={46} fill="#e5484d" opacity={0.35} className="spark" />}
-          <ellipse cy={30} rx={40} ry={8} fill="#2b1b0c" opacity={0.4} />
-          <path d="M-36 30 L-36 -8 L0 -34 L36 -8 L36 30 Z" fill={n.status === "LOCKED" ? "#7d725c" : "#b69a6a"} stroke="#4a3a24" strokeWidth={3} />
-          {[-24, -8, 8, 24].map((x) => <rect key={x} x={x - 4} y={-4} width={8} height={30} fill="rgba(0,0,0,.18)" />)}
-          <path d="M-12 30 L-12 8 Q0 -4 12 8 L12 30 Z" fill="#2b1b0c" />
-          <circle cy={-14} r={7} fill={n.status === "LOCKED" ? "#5a5246" : "#e5484d"} stroke="#ffd23f" strokeWidth={2} />
-          <text y={52} textAnchor="middle" fontSize={11} fontWeight={900} fill="#ffd23f" className="font-title" style={{ paintOrder: "stroke", stroke: "#2b1b0c", strokeWidth: 3 }}>BOSS</text>
+          {n.status === "AVAILABLE" && <circle r={60} fill="#ff4f5a" opacity={0.28} filter="url(#f-glow-soft)" className="pulse-glow" />}
+          <ellipse cy={30} rx={48} ry={9} fill="url(#ao-floor)" />
+          <g transform="translate(0 30)" opacity={lit ? 1 : 0.55}><TempleGate s={0.42} glow={lit} /></g>
+          <circle cy={-6} r={9} fill={gem} stroke="url(#metal-gold)" strokeWidth={2} />
+          <text y={52} textAnchor="middle" fontSize={11} fontWeight={900} fill="#ffd96a" style={{ paintOrder: "stroke", stroke: "#000", strokeWidth: 3 }}>BOSS</text>
         </g>
       );
   }
 }
 
-/** マップ上のキャラクターピン（丸メダル） */
-function Pin({ id, x, y, size }: { id: CharacterId; x: number; y: number; size: number }) {
-  return (
-    <svg x={x} y={y} width={size} height={size} viewBox="0 0 100 100" overflow="visible">
-      <circle cx={50} cy={50} r={48} fill="#e8b63a" stroke="#5c4310" strokeWidth={4} />
-      <clipPath id={`map-clip-${id}`}><circle cx={50} cy={50} r={43} /></clipPath>
-      <circle cx={50} cy={50} r={43} fill="#fff8dc" />
-      <g clipPath={`url(#map-clip-${id})`}><CharacterArt id={id} /></g>
-    </svg>
-  );
-}
-
 export function WorldMap({ nodes }: { nodes: StageNode[] }) {
   const router = useRouter();
   const currentRef = useRef<SVGGElement>(null);
-  const height = TOP + 80 + nodes.length * STEP;
+  const safeNodes = nodes ?? [];
+  const height = TOP + 90 + safeNodes.length * STEP;
 
   useEffect(() => {
     currentRef.current?.scrollIntoView({ block: "center", behavior: "smooth" });
-  }, [nodes]);
+  }, [safeNodes]);
 
-  const pts = nodes.map((_, i) => pos(i));
+  const pts = safeNodes.map((_, i) => pos(i));
   const path = pts.map((p, i) => (i === 0 ? `M${p.x},${p.y}` : `Q${(pts[i - 1].x + p.x) / 2 + (i % 2 ? 30 : -30)},${(pts[i - 1].y + p.y) / 2} ${p.x},${p.y}`)).join(" ");
 
   const open = (n: StageNode) => {
     if (n.status === "LOCKED") return;
     if (n.status === "WAIT_TOMORROW") return alert("このテストは あした うけられるよ！今日はよくがんばったね 🌙");
-    router.push(n.type === "LESSON" ? `/lesson/${n.lessonNo}` : `/test/${n.assessmentId}`);
+    if (n.type === "LESSON") return router.push(`/lesson/${n.lessonNo}`);
+    if (n.assessmentId) router.push(`/test/${encodeURIComponent(n.assessmentId)}`);
   };
+
+  const curIdx = safeNodes.findIndex((n) => n.status === "AVAILABLE" || n.status === "WAIT_TOMORROW");
 
   return (
     <svg viewBox={`0 0 ${W} ${height}`} className="w-full" role="list" aria-label="ぼうけんマップ">
-      <defs>
-        <radialGradient id="gem-clear" cx="35%" cy="30%"><stop offset="0%" stopColor="#9dffc5" /><stop offset="100%" stopColor="#1f9d5a" /></radialGradient>
-        <radialGradient id="gem-open" cx="35%" cy="30%"><stop offset="0%" stopColor="#bdf3ff" /><stop offset="100%" stopColor="#1f7fa8" /></radialGradient>
-        <radialGradient id="gem-boss" cx="35%" cy="30%"><stop offset="0%" stopColor="#ffb3b5" /><stop offset="100%" stopColor="#b42328" /></radialGradient>
-        <radialGradient id="gem-night" cx="35%" cy="30%"><stop offset="0%" stopColor="#d9ccff" /><stop offset="100%" stopColor="#5a3fb0" /></radialGradient>
-        <radialGradient id="gem-stone" cx="35%" cy="30%"><stop offset="0%" stopColor="#b9ab8a" /><stop offset="100%" stopColor="#6e624c" /></radialGradient>
-      </defs>
-
       {/* ワールドごとの地形 */}
-      {[...new Set(nodes.map((n) => n.world))].map((w) => {
-        const idx = nodes.map((n, i) => (n.world === w ? i : -1)).filter((i) => i >= 0);
-        const y0 = pos(idx[0]).y - 100;
-        const y1 = pos(idx[idx.length - 1]).y + 70;
+      {[...new Set(safeNodes.map((n) => n.world))].map((w) => {
+        const idx = safeNodes.map((n, i) => (n.world === w ? i : -1)).filter((i) => i >= 0);
+        if (idx.length === 0) return null;
+        const y0 = pos(idx[0]).y - 110;
+        const y1 = pos(idx[idx.length - 1]).y + 80;
         const t = WORLD_THEMES[w] ?? WORLD_THEMES[1];
         return (
           <g key={w}>
             <linearGradient id={`world-${w}`} x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor={t.top} /><stop offset="100%" stopColor={t.bottom} />
             </linearGradient>
-            <rect x={0} y={y0} width={W} height={y1 - y0} fill={`url(#world-${w})`} rx={22} />
-            {/* 草地のまだら模様（明るい草むら） */}
-            {idx.filter((i) => i % 2 === 0).map((i) => (
-              <ellipse key={`g${i}`} cx={(i * 97) % W} cy={pos(i).y + 30} rx={70} ry={22} fill="rgba(255,255,255,.07)" />
-            ))}
-            {/* ワールド名の看板 */}
-            <g transform={`translate(${W / 2} ${y0 + 34})`}>
-              <rect x={-120} y={-18} width={240} height={34} rx={8} fill="#6b4a2b" stroke="#e8b63a" strokeWidth={3} />
-              <text y={5} textAnchor="middle" fontSize={15} fill="#ffd23f" className="font-title" style={{ paintOrder: "stroke", stroke: "#2b1b0c", strokeWidth: 3 }}>WORLD {w}・{t.name}</text>
-            </g>
-            {/* かざり（道の反対側）: 木・遺跡・草花と、モンスターを交互に置く */}
+            <rect x={0} y={y0} width={W} height={y1 - y0} fill={`url(#world-${w})`} />
+            {/* 奥の古代樹（ぼかし）とレリーフ壁・霧を交互に */}
             {idx.map((i) => {
               const p = pos(i);
               const side = p.x > W / 2 ? -1 : 1;
-              const x = Math.max(36, Math.min(W - 36, W / 2 + side * (78 + ((i * 37) % 50))));
-              const y = p.y + 26 + ((i * 23) % 20);
-              if (i % 3 === 1) {
-                const id = t.monsters[i % t.monsters.length];
-                const s2 = 0.42 + ((i * 13) % 10) / 100;
-                return (
-                  <g key={i} transform={`translate(${x - 50 * s2} ${y - 100 * s2})`}>
-                    <g transform={`scale(${s2})${side < 0 ? " translate(100 0) scale(-1 1)" : ""}`}><MonsterArt id={id} flip={side < 0} /></g>
-                  </g>
-                );
-              }
-              return <g key={i} transform={`translate(${x} ${y})`}><DecorArt kind={t.decor[i % t.decor.length]} s={0.9} /></g>;
+              const x = W / 2 + side * (120 + ((i * 29) % 30));
+              if (i % 4 === 0) return <At key={`t${i}`} x={x} y={p.y + 70} opacity={0.75}><AncientTree s={0.75} depth="far" seed={i} /></At>;
+              if (i % 4 === 2) return <At key={`r${i}`} x={x} y={p.y + 50}><RuinRelief w={88} h={58} glyphs={t.glyphs[i % t.glyphs.length]} glow={i % 8 === 2} /></At>;
+              // 道と同じ側の画面のふち: 手前の大きな古代樹（ぼかし）
+              return <At key={`n${i}`} x={side < 0 ? W + 18 : -18} y={p.y + 120} opacity={0.85}><AncientTree s={0.7} depth="near" seed={i + 3} /></At>;
             })}
+            {idx.filter((i) => i % 3 === 0).map((i) => <Fog key={`f${i}`} y={pos(i).y + 40} w={W} opacity={0.16} />)}
+            {/* ワールド名のメタルプレート */}
+            <g transform={`translate(${W / 2} ${y0 + 40})`}>
+              <rect x={-132} y={-19} width={264} height={36} rx={10} fill="url(#metal-gold)" />
+              <rect x={-129} y={-16} width={258} height={30} rx={8} fill="#08150f" opacity={0.92} />
+              <text y={5} textAnchor="middle" fontSize={14} fontWeight={900} fill="#f2cf6a" letterSpacing={1}>WORLD {w}・{t.name}</text>
+            </g>
           </g>
         );
       })}
 
-      {/* 土の道 */}
-      <path d={path} fill="none" stroke="#5c3d1e" strokeWidth={30} strokeLinecap="round" strokeLinejoin="round" opacity={0.55} />
-      <path d={path} fill="none" stroke="var(--path)" strokeWidth={22} strokeLinecap="round" strokeLinejoin="round" />
-      <path d={path} fill="none" stroke="#fff6d6" strokeOpacity={0.55} strokeWidth={3} strokeDasharray="2 12" strokeLinecap="round" />
+      {/* 石の参道（影→石→金のルーンの光） */}
+      <path d={path} fill="none" stroke="#000" strokeOpacity={0.5} strokeWidth={34} strokeLinecap="round" strokeLinejoin="round" transform="translate(0 4)" />
+      <path d={path} fill="none" stroke="#2f5a34" strokeWidth={30} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={path} fill="none" stroke="#6e5f45" strokeWidth={24} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={path} fill="none" stroke="#a8946c" strokeWidth={20} strokeLinejoin="round" strokeDasharray="18 3" />
+      <path d={path} fill="none" stroke="#fff1c9" strokeOpacity={0.18} strokeWidth={6} strokeLinejoin="round" transform="translate(-2 -2)" />
+      <path d={path} fill="none" stroke="#ffd96a" strokeOpacity={0.35} strokeWidth={3} strokeLinecap="round" filter="url(#f-bloom-gold)" />
 
-      {nodes.map((n, i) => {
+      {/* 道ばたにひそむモンスターと手前のシダ */}
+      <g filter="url(#f-rim)">
+        {safeNodes.map((n, i) => {
+          if (i % 3 !== 1) return null;
+          const t = WORLD_THEMES[n.world] ?? WORLD_THEMES[1];
+          const p = pos(i);
+          const side = p.x > W / 2 ? -1 : 1;
+          const x = Math.max(40, Math.min(W - 40, W / 2 + side * (86 + ((i * 37) % 40))));
+          const s = 0.44 + ((i * 13) % 10) / 100;
+          return (
+            <g key={`m${i}`} transform={`translate(${x - 50 * s} ${p.y + 30 - 100 * s})`}>
+              <g transform={`scale(${s})${side < 0 ? " translate(100 0) scale(-1 1)" : ""}`}><MonsterArt id={t.monsters[i % t.monsters.length]} flip={side < 0} /></g>
+            </g>
+          );
+        })}
+      </g>
+      {safeNodes.map((_, i) => {
+        if (i % 3 !== 2) return null;
         const p = pos(i);
-        const isCurrent = n.status === "AVAILABLE" || n.status === "WAIT_TOMORROW";
+        const side = p.x > W / 2 ? -1 : 1;
+        const gems = ["sapphire", "amethyst", "emerald", "topaz"] as const;
+        return <At key={`cr${i}`} x={Math.max(34, Math.min(W - 34, W / 2 + side * 72))} y={p.y + 44}><Crystals s={0.55} gem={gems[i % 4]} /></At>;
+      })}
+      {safeNodes.map((_, i) => {
+        if (i % 5 !== 3) return null;
+        const p = pos(i);
+        const left = p.x > W / 2;
+        return <At key={`fern${i}`} x={left ? 6 : W - 6} y={p.y + 60} opacity={0.9}><Fern s={0.55} flip={!left} /></At>;
+      })}
+
+      {/* ステージ */}
+      {safeNodes.map((n, i) => {
+        const p = pos(i);
+        const isCurrent = i === curIdx;
         return (
           <g
             key={n.key}
             ref={isCurrent ? currentRef : undefined}
             role="listitem"
-            aria-label={`${n.type === "LESSON" ? `レッスン${n.lessonNo}` : n.assessmentId} ${n.status}`}
+            aria-label={`${n.type === "LESSON" ? `レッスン${n.lessonNo}` : n.assessmentId ?? "テスト"} ${n.status}`}
             transform={`translate(${p.x} ${p.y})`}
             onClick={() => open(n)}
             className={n.status === "LOCKED" ? "cursor-not-allowed" : "cursor-pointer"}
           >
-            <circle r={40} fill="transparent" />
-            <g className={isCurrent ? "glow" : ""}><Node n={n} /></g>
-            {n.status === "LOCKED" && n.type !== "BOSS" && <text x={18} y={-16} fontSize={13}>🔒</text>}
-            {n.status === "WAIT_TOMORROW" && <text x={20} y={-18} fontSize={16}>🌙</text>}
+            <circle r={42} fill="transparent" />
+            <Node n={n} />
+            {n.status === "LOCKED" && n.type !== "BOSS" && <text x={18} y={-16} fontSize={12}>🔒</text>}
+            {n.status === "WAIT_TOMORROW" && <text x={20} y={-18} fontSize={15}>🌙</text>}
           </g>
         );
       })}
 
-      {/* 現在地のパーティ */}
-      {(() => {
-        const i = nodes.findIndex((n) => n.status === "AVAILABLE" || n.status === "WAIT_TOMORROW");
-        if (i < 0) return null;
-        const p = pos(i);
+      {/* 現在地: スポットライトの中に立つパーティ */}
+      {curIdx >= 0 && (() => {
+        const p = pos(curIdx);
         const left = p.x > W / 2;
-        const bx = left ? p.x - 118 : p.x + 40;
+        const bx = left ? p.x - 150 : p.x + 38;
+        const sleepy = safeNodes[curIdx]?.status === "WAIT_TOMORROW";
         return (
-          <g className="bob" pointerEvents="none">
-            <Pin id="haru" x={bx + 22} y={p.y - 58} size={44} />
-            <Pin id="riko" x={bx} y={p.y - 22} size={32} />
-            <Pin id="kiko" x={bx + 52} y={p.y - 20} size={30} />
-            <svg x={left ? p.x - 52 : p.x + 4} y={p.y - 86} width={46} height={46} viewBox="0 0 100 100" overflow="visible">
-              <BirimoArt mood={nodes[i].status === "WAIT_TOMORROW" ? "sleepy" : "excited"} />
-            </svg>
-            <g transform={`translate(${left ? p.x - 30 : p.x + 26} ${p.y - 94})`}>
-              <rect x={-24} y={-14} width={48} height={20} rx={10} fill="#fffdf3" stroke="#2b2216" strokeWidth={2} />
-              <text y={1} textAnchor="middle" fontSize={11} fontWeight={900} fill="#2b2216">ここ！</text>
+          <g pointerEvents="none">
+            <path d={`M${bx + 30} ${p.y - 170} L${bx + 70} ${p.y - 170} L${bx + 112} ${p.y + 30} L${bx - 12} ${p.y + 30} Z`} fill="#fff1c2" opacity={0.12} filter="url(#f-dof-2)" />
+            <ellipse cx={bx + 50} cy={p.y + 28} rx={62} ry={9} fill="url(#g-magic)" opacity={0.5} />
+            <g filter="url(#f-rim)">
+              {([["riko", 0, 0.42], ["kiko", 66, 0.4], ["haru", 26, 0.5]] as const).map(([id, dx, s]) => (
+                <g key={id} transform={`translate(${bx + dx} ${p.y + 30 - 170 * s})`}><g transform={`scale(${s})`}><Standing id={id} pose={id === "haru" ? "point" : "wave"} /></g></g>
+              ))}
+              <g transform={`translate(${left ? p.x - 54 : p.x + 8} ${p.y - 92}) scale(0.46)`}><g className="bob"><BirimoArt mood={sleepy ? "sleepy" : "excited"} /></g></g>
+            </g>
+            <g transform={`translate(${left ? p.x - 28 : p.x + 30} ${p.y - 100})`}>
+              <rect x={-26} y={-14} width={52} height={20} rx={10} fill="#08150f" stroke="#e9b949" strokeWidth={1.5} />
+              <text y={1} textAnchor="middle" fontSize={11} fontWeight={900} fill="#f2cf6a">{sleepy ? "また明日" : "ここ！"}</text>
             </g>
           </g>
         );
       })()}
+      <Motes w={W} h={height} n={Math.min(60, 8 + safeNodes.length)} seed={5} />
     </svg>
   );
 }

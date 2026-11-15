@@ -29,7 +29,7 @@ export default function GachaPage() {
 
   return (
     <div className="space-y-5">
-      <HeroScene title="🥚 えいごモンスター ガチャ" subtitle="コインでなかまを ふやそう！" variant="gacha" />
+      <HeroScene title="えいごモンスター ガチャ" subtitle="コインでなかまを ふやそう！" variant="gacha" />
       <ErrorBanner message={msg} />
 
       <div className="card rpg-rivets relative grid place-items-center overflow-hidden p-6">

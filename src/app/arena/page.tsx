@@ -38,7 +38,7 @@ export default function ArenaPage() {
 
   return (
     <div className="space-y-5">
-      <HeroScene title="⚔️ 復習アリーナ" subtitle="なんどでも ちょうせんOK！" variant="arena" />
+      <HeroScene title="復習アリーナ" subtitle="なんどでも ちょうせんOK！" variant="arena" />
       <ErrorBanner message={error} />
       <CompanionBubble line={{ mood: "excited", text: `1回 🪙${COIN_RULES.arenaPlay}（1日${COIN_RULES.arenaFullRewardPlaysPerDay}回まで）もらえるビリ！わすれかけの もんだいが でやすいビリ。` }} />
 
@@ -58,7 +58,7 @@ export default function ArenaPage() {
             <div className="mt-3 grid grid-cols-4 gap-2">
               {MODES.map((m) => (
                 <Link key={m.mode} href={`/test/${encodeURIComponent(a.assessment.id)}?mode=${m.mode}`}
-                  className="btn flex flex-col items-center gap-1 bg-gradient-to-b from-[#fffaf0] to-[var(--bg)] px-1 py-2 text-xs">
+                  className="btn flex flex-col items-center gap-1 px-1 py-2 text-xs">
                   <Portrait id={m.buddy} size={34} />{m.label}
                 </Link>
               ))}
