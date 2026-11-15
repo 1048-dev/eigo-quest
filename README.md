@@ -43,7 +43,7 @@ http://localhost:3000 を開くとマップ画面が表示されます。デモ�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | ドメインロジックの単体テスト（vitest・40件） |
+| `npm test` | 単体テスト（vitest・60件） |
 | `npm run typecheck` | 型チェック |
 | `npx tsx scripts/e2e-smoke.ts http://localhost:3000` | 実サーバーとDBを使い、30日分のプレイ（ボス戦・アリーナ・お宝アラートまで）を早送りで実行 |
 | `pip install -r worksheets/requirements.txt` | PDF生成に必要な reportlab をインストール |
@@ -110,8 +110,23 @@ eigo-quest/
 - キャラクターはすべてオリジナルのSVG（`src/components/characters/CharacterArt.tsx`）。設定は `src/lib/game/characters.ts`。
 - ビリモのセリフは `src/lib/game/companion.ts` が状況（今日のクエスト・翌日待ち・ボス・お宝・苦手な力）から選ぶ。
 - パーティのレベルは5レッスン（まとめテスト1回）ごとに上がる。
-- テーマは `src/app/globals.css`：ジャングルの深緑〜遺跡の土色のグラデーション＋ドット柄の背景、羊皮紙＋金の二重枠のパネル（`.card` / `.rpg-wood`）、立体ボタン（`.btn-primary` / `.btn-coin` / `.btn-berry`）、HP/EXP風ゲージ（`.rpg-gauge`）。見出しは DotGothic16（ドット文字）。
-- マップはワールドごとに地形と看板が変わり、レッスン＝石のメダル、翌日テスト＝宝石、まとめ＝宝箱、ボス＝神殿で表示する。
+- テーマは `src/app/globals.css`：羊皮紙＋金の二重枠のパネル（`.card` / `.rpg-wood`）、立体ボタン（`.btn-primary` / `.btn-coin` / `.btn-berry`）、HP/EXP風ゲージ（`.rpg-gauge`）。見出しは丸ゴシックの極太（`.font-title`）。
+- マップはワールドごとに地形と看板が変わり、レッスン＝石のメダル、翌日テスト＝宝石、まとめ＝宝箱、ボス＝神殿で表示する。道の両側には木・遺跡・モンスターのイラストが並ぶ。
+
+## キャラクタービジュアルとエラーに強い作り
+
+**ビジュアル**（ドット柄・ドット文字・絵文字のかざりは使わない）
+- `src/components/characters/StandingArt.tsx`：ハル・リコ・キコ・ビリモの全身の立ち絵（ポーズ：気をつけ・手をふる・指さす・ばんざい）
+- `src/components/characters/MonsterArt.tsx`：図鑑のモンスターのイラスト（へび・アリ・トラ・ペンギン・ゴースト・フェアリー・ドラゴン、ほかは色ちがいのスライム）
+- `src/components/scene/`：木・遺跡・草花の素材、ページ上部の冒険シーン（HeroScene）、カードのふちからのぞくキャラ（Peek）、ページ下のキャラクターの行進（CharacterParade）、画面全体のイラスト背景（FieldBackdrop。広い画面では左右の余白にもキャラが立つ）
+- キャラはカードの外側や背景に置き、`pointer-events-none` なので文字やボタンのじゃまをしない
+
+**エラーに強い作り**
+- `src/lib/api/contracts.ts`：各APIの返すデータの形を zod で1か所に定義。ルートは `satisfies` でこの形に合わせ、画面も同じ定義で受け取る
+- 各項目に安全なデフォルト値（`[]`・`0`・`null` など）があり、項目の欠け・型ちがい・壊れた要素があってもデフォルトで埋まる
+- `src/lib/api/client.ts`（`apiGet` / `apiPost`）：通信失敗・HTTPエラー・空のボディ・HTMLのエラーページでも例外を投げず、契約どおりの形と表示用のメッセージを返す
+- `src/lib/api/server.ts`（`withApi`）：ルートで例外が起きても必ず JSON（`{ ok: false, error }`）を返す
+- `tests/api-contracts.test.ts`：壊れたレスポンスでも落ちないこと、サーバーの正しい形がそのまま通ることを確認
 
 ## カリキュラムとステージの流れ
 

@@ -42,22 +42,20 @@
 
 body {
   color: var(--on-dark);
-  background:
-    radial-gradient(circle at 15% 8%, rgba(232, 182, 58, 0.22), transparent 38%),
-    radial-gradient(circle at 85% 92%, rgba(76, 201, 240, 0.12), transparent 42%),
-    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1.6px) 0 0 / 14px 14px,
-    linear-gradient(180deg, var(--jungle-950) 0%, var(--jungle-800) 40%, #2a4a2c 70%, var(--earth-700) 100%);
+  /* 背景のイラストは FieldBackdrop（固定SVG）が描く。これは読み込み前の下地 */
+  background: linear-gradient(180deg, #123a28 0%, #1f5a3a 45%, #4a3a24 100%);
   background-attachment: fixed;
   font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", system-ui, sans-serif;
 }
 
-/* ドット文字の見出し（RPGのウィンドウタイトル） */
-.font-pixel { font-family: "DotGothic16", "M PLUS Rounded 1c", monospace; letter-spacing: 0.04em; }
+/* 見出し（丸ゴシックの極太。ドット文字は使わない） */
+.font-title { font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif; font-weight: 900; letter-spacing: 0.02em; }
 .rpg-title {
-  font-family: "DotGothic16", "M PLUS Rounded 1c", monospace;
+  font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif;
+  font-weight: 900;
   color: var(--volt);
   text-shadow: 0 2px 0 var(--gold-deep), 0 0 12px rgba(255, 210, 63, 0.35);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 /* --- RPGウィンドウ（羊皮紙パネル） --- */

@@ -1,15 +1,20 @@
-import { NextResponse } from "next/server";
 import { currentUserId } from "@/lib/auth";
 import { dismissTreasureAlert, getOrCreateTreasureAlert } from "@/lib/services/progressService";
+import { jsonOk, withApi } from "@/lib/api/server";
+import type { TreasureAlertResponse } from "@/lib/api/contracts";
 
 /** GET /api/treasure-alert — ログイン時に呼ぶ。忘れかけレッスンがあればランダムでお宝アラート */
-export async function GET() {
-  return NextResponse.json(await getOrCreateTreasureAlert(await currentUserId()));
-}
+export const GET = withApi("treasure-alert", async () => {
+  const r = await getOrCreateTreasureAlert(await currentUserId());
+  const body: TreasureAlertResponse = r.show && "alert" in r && r.alert
+    ? { show: true, alert: { id: r.alert.id, lessonNo: r.alert.lessonNo, multiplier: r.alert.multiplier }, messageJa: r.messageJa ?? "" }
+    : { show: false, alert: null, messageJa: "" };
+  return jsonOk(body);
+});
 
 /** DELETE /api/treasure-alert?id=... — 「あとで」 */
-export async function DELETE(req: Request) {
+export const DELETE = withApi("treasure-alert", async (req) => {
   const id = new URL(req.url).searchParams.get("id");
   if (id) await dismissTreasureAlert(await currentUserId(), id);
-  return NextResponse.json({ ok: true });
-}
+  return jsonOk({ show: false, alert: null, messageJa: "" } satisfies TreasureAlertResponse);
+});

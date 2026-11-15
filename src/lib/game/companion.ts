@@ -67,3 +67,9 @@ export function companionLine(i: CompanionInput): CompanionLine {
   }
   return { mood: "happy", text: `いつでもアリーナでコインをかせげるビリ！いまは ${i.coins} コイン持ってるビリ。` };
 }
+
+/** データを読みこめなかったときのセリフ */
+export const OFFLINE_LINE: CompanionLine = {
+  mood: "worried",
+  text: "つうしんが うまくいかないみたいビリ…。すこし待ってから、もう一度ひらいてみてビリ！",
+};

@@ -1,7 +1,8 @@
-import { NextResponse } from "next/server";
 import { z } from "zod";
 import { currentUserId } from "@/lib/auth";
 import { completeLesson } from "@/lib/services/progressService";
+import { jsonError, jsonOk, readJsonBody, withApi } from "@/lib/api/server";
+import type { LessonCompleteResponse } from "@/lib/api/contracts";
 
 const Body = z.object({
   quizScore: z.number().min(0).max(1),
@@ -15,13 +16,16 @@ const Body = z.object({
     responseMs: z.number().int().nonnegative().optional(),
     playbackRate: z.number().optional(),
     answer: z.string().max(200).optional(),
-  })).max(200),
+  })).max(200).default([]),
 });
 
 /** POST /api/lessons/:n/complete — レッスン完了・コイン付与・記憶モデル更新 */
-export async function POST(req: Request, { params }: { params: Promise<{ lessonNo: string }> }) {
-  const parsed = Body.safeParse(await req.json());
-  if (!parsed.success) return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
-  const result = await completeLesson(await currentUserId(), Number((await params).lessonNo), parsed.data);
-  return NextResponse.json(result, { status: result.ok ? 200 : 403 });
-}
+export const POST = withApi<{ params: Promise<{ lessonNo: string }> }>("lesson-complete", async (req, { params }) => {
+  const parsed = Body.safeParse(await readJsonBody(req));
+  if (!parsed.success) return jsonError("記録を読みとれなかったよ。", 400);
+  const r = await completeLesson(await currentUserId(), Number((await params).lessonNo), parsed.data);
+  const body: LessonCompleteResponse = r.ok
+    ? { ok: true, reasonJa: "", reward: { total: r.reward.total, rareGachaTickets: r.reward.rareGachaTickets, coins: r.reward.coins.map((c) => ({ amount: c.amount, labelJa: c.labelJa })) }, nextTest: r.nextTest }
+    : { ok: false, reasonJa: r.reasonJa ?? "", reward: { total: 0, rareGachaTickets: 0, coins: [] }, nextTest: undefined };
+  return jsonOk(body, r.ok ? 200 : 403);
+});

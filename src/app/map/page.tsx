@@ -3,80 +3,104 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { WorldMap } from "@/components/map/WorldMap";
 import { StatusBoard } from "@/components/game/StatusBoard";
-import { TreasureAlertModal, type TreasureAlert } from "@/components/common/TreasureAlertModal";
-import type { StageNode } from "@/lib/domain/progression";
-import { companionLine } from "@/lib/game/companion";
+import { TreasureAlertModal } from "@/components/common/TreasureAlertModal";
+import { ErrorBanner } from "@/components/common/ErrorBanner";
+import { HeroScene } from "@/components/scene/HeroScene";
+import { PeekCharacter } from "@/components/scene/Peek";
+import { Portrait } from "@/components/characters/CharacterArt";
+import { MonsterFigure } from "@/components/characters/MonsterArt";
+import { apiDelete, apiGet } from "@/lib/api/client";
+import { DEFAULT_USER, MapResponseSchema, TreasureAlertResponseSchema, type MapResponse, type TreasureAlertResponse } from "@/lib/api/contracts";
+import { companionLine, OFFLINE_LINE } from "@/lib/game/companion";
 
-interface MapResponse {
-  nodes: StageNode[];
-  current: StageNode | null;
-  user: { nickname: string; coins: number; streakDays: number } | null;
-}
+type NodeType = MapResponse["nodes"][number]["type"];
 
-const QUEST_LABEL: Record<StageNode["type"], { icon: string; text: (n: number) => string }> = {
-  LESSON: { icon: "🗝️", text: (n) => `Lesson ${n} を探検する` },
-  CHECK: { icon: "💎", text: (n) => `Lesson ${n} の翌日テスト` },
-  MINI: { icon: "🧰", text: () => "宝箱のまとめテスト" },
-  BOSS: { icon: "🐉", text: () => "遺跡のボスにいどむ！" },
+const QUEST: Record<NodeType, { text: (n: number) => string; icon: React.ReactNode }> = {
+  LESSON: { text: (n) => `Lesson ${n} を探検する`, icon: <Portrait id="haru" size={48} /> },
+  CHECK: { text: (n) => `Lesson ${n} の翌日テスト`, icon: <Portrait id="riko" size={48} ring="#ff8a3d" /> },
+  MINI: { text: () => "宝箱のまとめテスト", icon: <Portrait id="kiko" size={48} ring="#9b6bff" /> },
+  BOSS: { text: () => "遺跡のボスにいどむ！", icon: <MonsterFigure id="m-alpha-dragon" size={52} /> },
 };
 
 export default function MapPage() {
   const [data, setData] = useState<MapResponse | null>(null);
-  const [alert, setAlert] = useState<{ alert: TreasureAlert; messageJa: string } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [alert, setAlert] = useState<TreasureAlertResponse | null>(null);
 
   useEffect(() => {
-    fetch("/api/map").then((r) => r.json()).then(setData);
+    let alive = true;
+    apiGet("/api/map", MapResponseSchema).then((r) => {
+      if (!alive) return;
+      setData(r.data); // 失敗しても data は空の安全な形
+      setError(r.error);
+    });
     // ログイン（マップ表示）時にお宝復習アラートを判定
-    fetch("/api/treasure-alert").then((r) => r.json()).then((r) => r.show && setAlert(r));
+    apiGet("/api/treasure-alert", TreasureAlertResponseSchema).then((r) => {
+      if (alive && r.ok && r.data.show && r.data.alert) setAlert(r.data);
+    });
+    return () => { alive = false; };
   }, []);
 
   if (!data) return <p className="rpg-title p-8 text-center text-xl">ぼうけんの じゅんびちゅう…</p>;
-  const cur = data.current;
-  const lessonsCleared = data.nodes.filter((n) => n.type === "LESSON" && n.status === "CLEARED").length;
-  const totalLessons = data.nodes.filter((n) => n.type === "LESSON").length;
-  const name = data.user?.nickname ?? "ハル";
-  const line = companionLine({
-    playerName: name,
-    streakDays: data.user?.streakDays ?? 0,
-    coins: data.user?.coins ?? 0,
+
+  const nodes = data.nodes ?? [];
+  const user = data.user ?? DEFAULT_USER;
+  const cur = data.current ?? null;
+  const lessonsCleared = nodes.filter((n) => n.type === "LESSON" && n.status === "CLEARED").length;
+  const totalLessons = nodes.filter((n) => n.type === "LESSON").length;
+  const line = error ? OFFLINE_LINE : companionLine({
+    playerName: user.nickname,
+    streakDays: user.streakDays,
+    coins: user.coins,
     lessonsCleared,
     current: cur,
-    hasTreasureAlert: !!alert,
+    hasTreasureAlert: !!alert?.alert,
     hour: new Date().getHours(),
   });
 
   return (
-    <div className="space-y-4">
-      <h1 className="rpg-title text-center text-2xl">⚔️ 英語クエスト ⚔️</h1>
+    <div className="space-y-5">
+      <HeroScene title="⚔️ 英語クエスト ⚔️" subtitle="ハルたちと えいごの遺跡を探検しよう！" variant="map" />
 
-      <StatusBoard playerName={name} coins={data.user?.coins ?? 0} streakDays={data.user?.streakDays ?? 0}
+      <ErrorBanner message={error} />
+
+      <StatusBoard playerName={user.nickname} coins={user.coins} streakDays={user.streakDays}
         lessonsCleared={lessonsCleared} totalLessons={totalLessons} line={line} />
 
       {cur && (
-        <div className="card rpg-rivets flex items-center justify-between gap-3 p-4">
+        <div className="card rpg-rivets relative mt-10 flex items-center justify-between gap-3 p-4">
+          <PeekCharacter id="riko" pose="point" place="top-right" />
           <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-xl border-2 border-[var(--gold-dark)] bg-[var(--bg)] text-3xl">{QUEST_LABEL[cur.type].icon}</span>
+            <span className="shrink-0">{QUEST[cur.type].icon}</span>
             <div>
-              <p className="font-pixel text-xs text-[var(--gold-dark)]">きょうのクエスト</p>
-              <p className="text-lg font-black">{QUEST_LABEL[cur.type].text(cur.lessonNo)}</p>
+              <p className="font-title text-xs text-[var(--gold-dark)]">きょうのクエスト</p>
+              <p className="text-lg font-black">{QUEST[cur.type].text(cur.lessonNo)}</p>
             </div>
           </div>
           {cur.status === "WAIT_TOMORROW" ? (
             <span className="text-sm font-bold text-[var(--ink-2)]">あしたまで<br />まってね 🌙</span>
           ) : (
-            <Link className={`btn shrink-0 whitespace-nowrap px-4 ${cur.type === "BOSS" ? "btn-berry" : "btn-primary"}`} href={cur.type === "LESSON" ? `/lesson/${cur.lessonNo}` : `/test/${cur.assessmentId}`}>しゅっぱつ！</Link>
+            <Link className={`btn shrink-0 whitespace-nowrap px-4 ${cur.type === "BOSS" ? "btn-berry" : "btn-primary"}`}
+              href={cur.type === "LESSON" ? `/lesson/${cur.lessonNo}` : `/test/${cur.assessmentId ?? ""}`}>しゅっぱつ！</Link>
           )}
         </div>
       )}
 
-      <div className="overflow-hidden rounded-[24px] border-4 border-[var(--gold)] shadow-[0_6px_0_var(--gold-deep),0_14px_28px_rgba(0,0,0,.45)]">
-        <WorldMap nodes={data.nodes} />
-      </div>
+      {nodes.length > 0 ? (
+        <div className="overflow-hidden rounded-[24px] border-4 border-[var(--gold)] shadow-[0_6px_0_var(--gold-deep),0_14px_28px_rgba(0,0,0,.45)]">
+          <WorldMap nodes={nodes} />
+        </div>
+      ) : (
+        <div className="card rpg-rivets p-6 text-center font-bold">マップを よみこめなかったよ。ページを読みこみなおしてね。</div>
+      )}
 
-      {alert && <TreasureAlertModal alert={alert.alert} message={alert.messageJa} onClose={() => {
-        fetch(`/api/treasure-alert?id=${alert.alert.id}`, { method: "DELETE" });
-        setAlert(null);
-      }} />}
+      {alert?.alert && (
+        <TreasureAlertModal alert={alert.alert} message={alert.messageJa} onClose={() => {
+          void apiDelete(`/api/treasure-alert?id=${encodeURIComponent(alert.alert!.id)}`, TreasureAlertResponseSchema);
+          setAlert(null);
+        }} />
+      )}
     </div>
   );
 }
+

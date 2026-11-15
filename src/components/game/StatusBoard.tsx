@@ -23,7 +23,7 @@ export function Gauge({ label, value, max, color, right }: { label: string; valu
   return (
     <div>
       <div className="mb-1 flex justify-between text-[11px] font-black text-[var(--on-dark-2)]">
-        <span className="font-pixel">{label}</span>
+        <span className="font-title">{label}</span>
         <span className="tabular-nums text-[var(--on-dark)]">{right ?? `${value} / ${max}`}</span>
       </div>
       <div className="rpg-gauge" role="progressbar" aria-label={label} aria-valuenow={value} aria-valuemin={0} aria-valuemax={max}>
@@ -41,7 +41,7 @@ export function StatusBoard({ playerName, coins, streakDays, lessonsCleared, tot
         <div className="flex items-center gap-2">
           <Portrait id="haru" size={64} ring={CHARACTERS.haru.color} />
           <div>
-            <p className="font-pixel whitespace-nowrap text-[11px] text-[var(--volt)]">Lv.{lv.level} {CHARACTERS.haru.title}</p>
+            <p className="font-title whitespace-nowrap text-[11px] text-[var(--volt)]">Lv.{lv.level} {CHARACTERS.haru.title}</p>
             <p className="text-xl font-black leading-tight">{playerName}</p>
             <div className="mt-1 flex -space-x-2">
               <Portrait id="riko" size={30} ring={CHARACTERS.riko.color} className="drop-shadow" />
@@ -63,7 +63,7 @@ export function StatusBoard({ playerName, coins, streakDays, lessonsCleared, tot
           {extra.map((e) => (
             <div key={e.label} className="rounded-xl border-2 border-[var(--gold)]/60 bg-black/25 px-2 py-1.5 text-center">
               <dt className="text-[10px] font-bold text-[var(--on-dark-2)]">{e.label}</dt>
-              <dd className="font-pixel text-lg text-[var(--volt)] tabular-nums">{e.value}</dd>
+              <dd className="font-title text-lg text-[var(--volt)] tabular-nums">{e.value}</dd>
             </div>
           ))}
         </dl>

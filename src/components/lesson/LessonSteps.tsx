@@ -8,6 +8,8 @@ import { audioKeyOf, toPublic, type Question } from "@/lib/curriculum/questions"
 import type { AnswerLog } from "@/lib/services/progressService";
 import { playItemAudio, speak, speakMixed } from "@/lib/speech/tts";
 import { QuestionView, SpeakButton, type AnswerEvent } from "@/components/test/QuestionView";
+import { apiPost } from "@/lib/api/client";
+import { GradeResponseSchema } from "@/lib/api/contracts";
 
 export type Done = (logs?: AnswerLog[]) => void;
 const NextBtn = ({ onClick, label = "つぎへ ▶" }: { onClick: () => void; label?: string }) => (
@@ -139,8 +141,8 @@ export function SchoolExpressions({ items, testPoints, onDone }: { items: Learni
   const target = core[k];
 
   const check = async () => {
-    const r = await fetch("/api/grade/written", { method: "POST", body: JSON.stringify({ itemId: target.id, answer: text }) }).then((x) => x.json());
-    setRes(r);
+    const { data: r } = await apiPost("/api/grade/written", GradeResponseSchema, { itemId: target.id, answer: text });
+    setRes(r); // 失敗しても「うまく採点できなかったよ」というデフォルトの形で返る
     setLogs((l) => [...l, { itemId: target.id, skill: "WRITING", questionType: "spell", correct: r.verdict === "PASS", answer: text }]);
   };
 

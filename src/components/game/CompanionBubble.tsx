@@ -9,7 +9,7 @@ export function CompanionBubble({ line, size = 72, className = "" }: { line: Com
         <BirimoArt mood={line.mood} />
       </svg>
       <p className="speech flex-1 px-3 py-2 text-sm font-bold leading-relaxed">
-        <span className="font-pixel mr-1 text-[var(--gold-dark)]">ビリモ</span>
+        <span className="font-title mr-1 text-[var(--gold-dark)]">ビリモ</span>
         {line.text}
       </p>
     </div>
