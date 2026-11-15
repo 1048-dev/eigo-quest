@@ -91,15 +91,21 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
   // 選択肢IDは位置ベースの記号（a,b,c,d）。正解はその記号。
   const LETTERS = "abcd";
   let correctId = "";
-  const opts = (labelOf: (i: LearningItemDef) => string, n = 3) =>
-    shuffle([item, ...distractors(item, pool, n, rng)], rng).map((i, k) => {
+  let optItems: LearningItemDef[] = [];
+  const opts = (labelOf: (i: LearningItemDef) => string, n = 3) => {
+    optItems = shuffle([item, ...distractors(item, pool, n, rng)], rng);
+    return optItems.map((i, k) => {
       if (i.id === item.id) correctId = LETTERS[k];
       return { id: LETTERS[k], label: labelOf(i) };
     });
+  };
 
   switch (type) {
     case "listen_choose": {
-      const choices = opts((i) => i.emoji ?? i.ja);
+      const raw = opts((i) => i.emoji ?? i.ja);
+      // 絵だけで区別できないとき（曜日がすべて📅など）は日本語も添える
+      const pics = optItems.map((i) => i.emoji ?? i.ja);
+      const choices = new Set(pics).size === pics.length ? raw : raw.map((c, k) => ({ ...c, label: `${pics[k]} ${optItems[k].ja}` }));
       return { ...base, type, skill: "LISTENING", promptJa: "きこえた ことばの えを えらんでね", audioText: item.text,
         choices, answer: correctId,
         explanationJa: `「${item.text}」は「${item.ja}」だよ。もう一度きいてみよう！` };

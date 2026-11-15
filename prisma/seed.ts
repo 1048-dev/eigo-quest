@@ -43,7 +43,7 @@ async function main() {
 
   await prisma.user.upsert({
     where: { id: "demo-user" },
-    create: { id: "demo-user", nickname: "ゆうき", schoolGrade: 3, friendCode: "DEMO-0001" },
+    create: { id: "demo-user", nickname: "ハル", schoolGrade: 3, friendCode: "DEMO-0001" },
     update: {},
   });
 

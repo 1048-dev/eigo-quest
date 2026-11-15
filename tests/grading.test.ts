@@ -54,3 +54,17 @@ describe("出題の安全性", () => {
     expect(buildTestQuestions(a, { seed: 7 })).toEqual(buildTestQuestions(a, { seed: 7 }));
   });
 });
+
+import { makeQuestion, seededRng } from "@/lib/curriculum/questions";
+import { getLesson, itemsOfLesson } from "@/lib/curriculum";
+
+describe("リスニングの選択肢", () => {
+  it("絵が同じ（曜日がすべて📅）でも選択肢を見分けられる", () => {
+    const items = itemsOfLesson(getLesson(12)!).filter((i) => i.kind === "WORD");
+    for (let s = 0; s < 20; s++) {
+      const q = makeQuestion(items[0], "listen_choose", items, seededRng(s), 0);
+      const labels = q.choices!.map((c) => c.label);
+      expect(new Set(labels).size).toBe(labels.length);
+    }
+  });
+});

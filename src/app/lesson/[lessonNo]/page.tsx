@@ -49,7 +49,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
 
   if (result) {
     return (
-      <div className="card p-6 text-center">
+      <div className="card rpg-rivets p-6 text-center">
         <p className="text-6xl">{result.ok ? "🎉" : "🔁"}</p>
         <h2 className="mt-2 text-2xl font-black">{result.ok ? `Lesson ${lesson.lessonNo} クリア！` : result.reasonJa}</h2>
         {result.ok && <p className="mt-2 text-xl font-black text-[var(--coin)]">🪙 +{result.reward?.total ?? 0}</p>}
@@ -63,12 +63,12 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
   const s = steps[step];
   return (
     <div className="space-y-4">
-      <header>
-        <p className="text-xs font-bold text-[var(--ink-2)]">Session {lesson.lessonNo} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
-        <h1 className="text-xl font-black">{lesson.title} <span className="text-base text-[var(--ink-2)]">{lesson.titleJa}</span></h1>
+      <header className="rpg-wood p-3">
+        <p className="font-pixel text-xs text-[var(--volt)]">Session {lesson.lessonNo} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
+        <h1 className="text-xl font-black">{lesson.title} <span className="text-base text-[var(--on-dark-2)]">{lesson.titleJa}</span></h1>
         <ol className="mt-3 flex gap-1" aria-label="レッスンの進み具合">
           {steps.map((x, i) => (
-            <li key={i} className={`flex-1 rounded-full py-1 text-center text-[10px] font-bold ${i < step ? "bg-[var(--ok)] text-white" : i === step ? "bg-[var(--accent)] text-white" : "bg-[var(--locked)]"}`}>{STEP_LABEL[x.kind]}</li>
+            <li key={i} className={`flex-1 rounded-md border-2 py-1 text-center text-[10px] font-black ${i < step ? "border-[#0f5c37] bg-[var(--ok)] text-white" : i === step ? "border-[var(--gold-deep)] bg-gradient-to-b from-[#fff1a6] to-[var(--gold)] text-[#3b2a00]" : "border-black/40 bg-black/30 text-[var(--on-dark-2)]"}`}>{STEP_LABEL[x.kind]}</li>
           ))}
         </ol>
       </header>

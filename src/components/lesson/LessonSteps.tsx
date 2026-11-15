@@ -63,7 +63,7 @@ export function Flashcards({ items, onDone }: { items: LearningItemDef[]; onDone
   const next = () => (i + 1 < items.length ? (setI(i + 1), setFlipped(false)) : onDone());
   return (
     <div className="text-center">
-      <p className="font-bold text-[var(--ink-2)]">カードをタップしてね（{i + 1}/{items.length}）</p>
+      <p className="font-bold text-[var(--on-dark-2)]">カードをタップしてね（{i + 1}/{items.length}）</p>
       <button className="card mx-auto mt-4 grid aspect-[3/4] w-64 place-items-center p-6" onClick={() => { setFlipped(!flipped); playItemAudio(audioKeyOf(it.id), it.text); }}>
         {flipped ? <span><span className="block text-4xl font-black">{it.text}</span><span className="mt-3 block text-xl text-[var(--ink-2)]">{it.ja}</span></span>
           : <span className="text-8xl">{it.emoji ?? "❓"}</span>}

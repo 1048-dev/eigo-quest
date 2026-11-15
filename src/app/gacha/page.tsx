@@ -14,8 +14,8 @@ export default function GachaPage() {
   };
   return (
     <div className="space-y-4 text-center">
-      <h1 className="text-xl font-black">🥚 えいごモンスター ガチャ</h1>
-      <div className="card grid place-items-center p-8">
+      <h1 className="rpg-title text-2xl">🥚 えいごモンスター ガチャ</h1>
+      <div className="card rpg-rivets grid place-items-center p-8">
         <span className="bob text-8xl">{got ? got.imageKey : "🥚"}</span>
         {got && <p className="mt-3 text-xl font-black">{got.nameEn}<span className="block text-sm text-[var(--ink-2)]">{got.nameJa}・{got.rarity}</span></p>}
         {msg && <p className="mt-3 font-bold text-[var(--ng)]">{msg}</p>}

@@ -8,6 +8,7 @@ import Link from "next/link";
 import type { PublicQuestion } from "@/lib/curriculum/questions";
 import type { AssessmentDef } from "@/lib/domain/types";
 import { QuestionView, type AnswerEvent } from "./QuestionView";
+import { Portrait } from "@/components/characters/CharacterArt";
 
 interface Feedback { questionId: string; correct: boolean; verdict?: string; feedbackJa: string; explanationJa?: string; correctAnswer?: string }
 interface SubmitResult {
@@ -55,9 +56,9 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
     const wrong = result.feedback.filter((f) => !f.correct);
     return (
       <div className="space-y-4">
-        <div className="card p-6 text-center">
+        <div className="card rpg-rivets p-6 text-center">
           <p className="text-6xl">{result.passed ? (kind === "BOSS" ? "🐉💥" : "🎉") : "💪"}</p>
-          <h2 className="mt-2 text-2xl font-black">{result.passed ? "ごうかく！" : "おしい！もう一回ちょうせんしよう"}</h2>
+          <h2 className="font-pixel mt-2 text-2xl text-[var(--gold-dark)]">{result.passed ? "ごうかく！" : "おしい！もう一回ちょうせんしよう"}</h2>
           <p className="mt-1 text-[var(--ink-2)]">せいかいりつ {Math.round(result.score * 100)}%（ごうかくライン {Math.round(result.passRate * 100)}%）</p>
           {result.reward.coins.map((c, i) => <p key={i} className="mt-2 text-lg font-black text-[var(--coin)]">🪙 +{c.amount} {c.labelJa}</p>)}
           {result.reward.rareGachaTickets > 0 && <p className="mt-2 text-lg font-black">🎟️ レアガチャけん ×{result.reward.rareGachaTickets}</p>}
@@ -91,8 +92,8 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-lg font-black">{kind === "BOSS" ? "🏰 " : kind === "ARENA" ? "⚔️ " : "📝 "}{TITLES[kind]} {session.assessment.rangeStart}〜{session.assessment.rangeEnd}</h1>
-        <span className="font-bold text-[var(--ink-2)]">{idx + 1} / {session.questions.length}</span>
+        <h1 className="rpg-title text-lg">{kind === "BOSS" ? "🏰 " : kind === "ARENA" ? "⚔️ " : "📝 "}{TITLES[kind]} {session.assessment.rangeStart}〜{session.assessment.rangeEnd}</h1>
+        <span className="rounded-full border-2 border-[var(--gold)] bg-black/30 px-3 py-0.5 font-pixel text-[var(--volt)]">{idx + 1} / {session.questions.length}</span>
       </div>
       {kind === "BOSS" && <BossHp total={session.questions.length} answered={idx} />}
       <QuestionView key={q.id} q={q} onAnswer={onAnswer} />
@@ -100,14 +101,21 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
   );
 }
 
-/** ボス戦の演出（HPバー）。正誤は提出後にわかるので、ここでは進行度で減らす */
+/** ボス戦の演出: ハルたちパーティ vs 遺跡のボス。正誤は提出後にわかるので、HPは進行度で減らす */
 function BossHp({ total, answered }: { total: number; answered: number }) {
   return (
-    <div className="card flex items-center gap-3 p-3">
-      <span className="text-4xl bob">🐉</span>
-      <div className="h-4 flex-1 overflow-hidden rounded-full bg-[var(--locked)]">
-        <div className="h-full bg-[var(--ng)] transition-[width]" style={{ width: `${100 - (answered / total) * 100}%` }} />
+    <div className="rpg-wood flex items-center gap-3 p-3">
+      <div className="flex -space-x-3">
+        <Portrait id="haru" size={44} ring="#e5484d" />
+        <Portrait id="riko" size={36} ring="#ff8a3d" />
+        <Portrait id="kiko" size={36} ring="#9b6bff" />
       </div>
+      <span className="font-pixel text-lg text-[var(--volt)]">VS</span>
+      <div className="flex-1">
+        <p className="font-pixel text-xs text-[var(--on-dark-2)]">遺跡のボス・アルファドラゴン</p>
+        <div className="rpg-gauge mt-1"><span style={{ width: `${100 - (answered / total) * 100}%`, ["--gauge" as string]: "linear-gradient(90deg,#ff6fa5,#e5484d)" }} /></div>
+      </div>
+      <span className="text-4xl bob" aria-hidden>🐉</span>
     </div>
   );
 }
