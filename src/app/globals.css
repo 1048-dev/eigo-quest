@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f3f8ff;
+  --surface: #ffffff;
+  --ink: #1d2433;
+  --ink-2: #5a6478;
+  --accent: #2a78d6;      /* 習得率・メインカラー */
+  --coin: #eda100;
+  --ok: #1baf7a;
+  --ng: #e34948;
+  --locked: #c9d1de;
+  --grass: #bfe6a8;
+  --path: #f1d9a6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161f; --surface: #1c2230; --ink: #f0efec; --ink-2: #b8bfcc;
+    --accent: #3987e5; --coin: #f0b429; --ok: #199e70; --ng: #e66767; --locked: #3a4252; --grass: #22402a; --path: #5a4a2c;
+  }
+}
+body { background: var(--bg); color: var(--ink); font-family: "Hiragino Maru Gothic ProN", "M PLUS Rounded 1c", system-ui, sans-serif; }
+.card { background: var(--surface); border-radius: 1.25rem; box-shadow: 0 4px 0 rgba(0,0,0,.08); }
+.btn { border-radius: 9999px; padding: .75rem 1.5rem; font-weight: 800; box-shadow: 0 4px 0 rgba(0,0,0,.18); transition: transform .08s; }
+.btn:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,.18); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-coin { background: var(--coin); color: #3b2a00; }
+@keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+.bob { animation: bob 1.4s ease-in-out infinite; }
+@keyframes talk { 0%,100% { transform: scaleY(.3) } 50% { transform: scaleY(1) } }
+.mouth-talk { animation: talk .22s ease-in-out infinite; transform-origin: center; }
