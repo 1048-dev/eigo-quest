@@ -1,7 +1,8 @@
 import { z } from "zod";
 import { currentUserId } from "@/lib/auth";
 import { submitTest } from "@/lib/services/progressService";
-import { jsonError, jsonOk, readJsonBody, withApi } from "@/lib/api/server";
+import { jsonError, jsonOk, readJsonBody, withOffline } from "@/lib/api/server";
+import { offlineTestSubmit } from "@/lib/offline/tests";
 import type { TestSubmitResponse } from "@/lib/api/contracts";
 
 const Body = z.object({
@@ -12,7 +13,7 @@ const Body = z.object({
 });
 
 /** POST /api/tests/:id/submit — 採点（選択式＋AI筆記採点）・解説（救済措置）・コイン付与 */
-export const POST = withApi<{ params: Promise<{ assessmentId: string }> }>("test-submit", async (req, { params }) => {
+export const POST = withOffline<{ params: Promise<{ assessmentId: string }> }>("test-submit", async (req, { params }) => {
   const parsed = Body.safeParse(await readJsonBody(req));
   if (!parsed.success) return jsonError("こたえを読みとれなかったよ。", 400);
   const r = await submitTest(await currentUserId(), { assessmentId: (await params).assessmentId, ...parsed.data });
@@ -23,4 +24,7 @@ export const POST = withApi<{ params: Promise<{ assessmentId: string }> }>("test
     reward: { total: r.reward.total, rareGachaTickets: r.reward.rareGachaTickets, coins: r.reward.coins.map((c) => ({ amount: c.amount, labelJa: c.labelJa })) },
     unlocksLesson: r.unlocksLesson,
   } satisfies TestSubmitResponse);
+}, async (req, { params }) => {
+  const parsed = Body.safeParse(await readJsonBody(req));
+  return offlineTestSubmit((await params).assessmentId, parsed.success ? parsed.data : {});
 });

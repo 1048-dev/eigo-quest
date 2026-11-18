@@ -41,15 +41,21 @@ export function coerce<S extends z.ZodTypeAny>(schema: S, raw: unknown): z.outpu
   throw new Error("contract schema must accept an empty object");
 }
 
-export async function apiRequest<S extends z.ZodTypeAny>(url: string, schema: S, init?: RequestInit): Promise<ApiResult<z.output<S>>> {
+/** 1回分のリクエスト（タイムアウト付き）。例外は投げない */
+async function requestOnce<S extends z.ZodTypeAny>(url: string, schema: S, init: RequestInit | undefined, timeoutMs: number): Promise<ApiResult<z.output<S>>> {
+  const ctrl = typeof AbortController !== "undefined" ? new AbortController() : undefined;
+  const timer = ctrl ? setTimeout(() => ctrl.abort(), timeoutMs) : undefined;
   let res: Response;
   try {
     res = await fetch(url, {
       ...init,
+      signal: ctrl?.signal,
       headers: { "content-type": "application/json", ...(init?.headers ?? {}) },
     });
   } catch {
     return { data: coerce(schema, undefined), ok: false, status: 0, error: NETWORK_ERROR };
+  } finally {
+    if (timer) clearTimeout(timer);
   }
 
   let text = "";
@@ -70,6 +76,25 @@ export async function apiRequest<S extends z.ZodTypeAny>(url: string, schema: S,
     return { data, ok: false, status: res.status, error: SERVER_ERROR };
   }
   return { data, ok: true, status: res.status, error: null };
+}
+
+/** 通信失敗（status 0）・5xx・JSONでない応答 = 「サーバーに届かなかった」扱い。画面は内蔵データに切り替える */
+export function isUnreachable(r: { ok: boolean; status: number }): boolean {
+  return !r.ok && (r.status === 0 || r.status >= 500 || r.status === 200);
+}
+
+export interface RequestOptions { timeoutMs?: number; retries?: number }
+
+export async function apiRequest<S extends z.ZodTypeAny>(url: string, schema: S, init?: RequestInit, opts: RequestOptions = {}): Promise<ApiResult<z.output<S>>> {
+  const timeoutMs = opts.timeoutMs ?? 8000;
+  // GET はつながらなければ少し待って自動でもう一回（POSTは二重送信を避けるためリトライしない）
+  const retries = opts.retries ?? ((init?.method ?? "GET") === "GET" ? 1 : 0);
+  let r = await requestOnce(url, schema, init, timeoutMs);
+  for (let i = 0; i < retries && isUnreachable(r); i++) {
+    await new Promise((ok) => setTimeout(ok, 700 * (i + 1)));
+    r = await requestOnce(url, schema, init, timeoutMs);
+  }
+  return r;
 }
 
 export const apiGet = <S extends z.ZodTypeAny>(url: string, schema: S) => apiRequest(url, schema);

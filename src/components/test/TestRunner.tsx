@@ -10,7 +10,10 @@ import { QuestionView, type AnswerEvent } from "./QuestionView";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { StandingFigure } from "@/components/characters/StandingArt";
-import { apiPost } from "@/lib/api/client";
+import { apiPost, isUnreachable } from "@/lib/api/client";
+import { offlineTestStart, offlineTestSubmit } from "@/lib/offline/tests";
+import type { ArenaMode } from "@/lib/domain/arena";
+import { OfflineNote } from "@/components/common/OfflineNote";
 import { TestStartResponseSchema, TestSubmitResponseSchema, type TestStartResponse, type TestSubmitResponse } from "@/lib/api/contracts";
 
 type Session = Omit<TestStartResponse, "assessment"> & { assessment: NonNullable<TestStartResponse["assessment"]> };
@@ -24,15 +27,20 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
   const [answers, setAnswers] = useState<{ questionId: string; value: string; responseMs: number }[]>([]);
   const [result, setResult] = useState<TestSubmitResponse | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [offline, setOffline] = useState(false);
+  const mode = arenaMode as ArenaMode | undefined;
 
   const start = useCallback(() => {
     setResult(null); setIdx(0); setAnswers([]); setError(null);
-    apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/start`, TestStartResponseSchema, { arenaMode, reviewAlertId }).then((r) => {
+    apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/start`, TestStartResponseSchema, { arenaMode, reviewAlertId }).then((res) => {
+      // サーバーに届かない → 同じ問題をブラウザで作って、そのまま挑戦できる
+      const r = isUnreachable(res) ? { ...res, ok: true, error: null, data: offlineTestStart(assessmentId, { arenaMode: mode }) } : res;
       const a = r.data.assessment;
-      if (!r.ok || !a || r.data.questions.length === 0) return setError(r.error ?? "テストを よみこめなかったよ。");
+      if (!r.ok || !a || r.data.questions.length === 0) return setError(r.error ?? "このテストは まだ ひらいていないよ。");
+      setOffline(!!r.data.offline);
       setSession({ ...r.data, assessment: a });
     });
-  }, [assessmentId, arenaMode, reviewAlertId]);
+  }, [assessmentId, arenaMode, reviewAlertId, mode]);
 
   useEffect(start, [start]);
 
@@ -45,12 +53,15 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
     if (idx + 1 < session.questions.length) return setIdx(idx + 1);
     setSubmitting(true);
     apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/submit`, TestSubmitResponseSchema, { seed: session.seed, arenaMode, reviewAlertId, answers: next })
-      .then((r) => {
+      .then((res) => {
+        // 届かないときはブラウザで採点（記録はされない）
+        const r = isUnreachable(res) ? { ...res, ok: true, data: offlineTestSubmit(assessmentId, { seed: session.seed, arenaMode: mode, answers: next }) } : res;
+        if (r.data.offline) setOffline(true);
         if (r.ok && r.data.ok) setResult(r.data);
-        else setError(r.data.reasonJa || r.error || "採点できなかったよ。もう一回ためしてね。");
+        else setError(r.data.reasonJa || r.error || "もう一回ためしてね。");
       })
       .finally(() => setSubmitting(false));
-  }, [session, idx, answers, assessmentId, arenaMode, reviewAlertId]);
+  }, [session, idx, answers, assessmentId, arenaMode, reviewAlertId, mode]);
 
   if (error) return <div className="card p-6 text-center"><p className="text-lg font-bold">{error}</p><Link className="btn btn-primary mt-4 inline-block" href="/map">マップへ</Link></div>;
   if (!session) return <p className="p-8 text-center">じゅんびちゅう…</p>;
@@ -78,6 +89,7 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
           {result.reward.coins.map((c, i) => <p key={i} className="mt-2 text-lg font-black text-[var(--coin)]">🪙 +{c.amount} {c.labelJa}</p>)}
           {result.reward.rareGachaTickets > 0 && <p className="mt-2 text-lg font-black">🎟️ レアガチャけん ×{result.reward.rareGachaTickets}</p>}
           {result.unlocksLesson && <p className="mt-2 font-bold">🔓 Lesson {result.unlocksLesson} がひらいた！</p>}
+          {offline && <div className="mt-3"><OfflineNote show note="今回のきろくとコインは保存されないよ" /></div>}
         </div>
 
         {wrong.length > 0 && (
@@ -107,6 +119,7 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
   if (!q) return <p className="rpg-title p-8 text-center text-xl">さいてんちゅう…</p>;
   return (
     <div className="space-y-4">
+      <OfflineNote show={offline} />
       <div className="flex items-center justify-between">
         <h1 className="rpg-title text-lg">{kind === "BOSS" ? "🏰 " : kind === "ARENA" ? "⚔️ " : "📝 "}{TITLES[kind]} {session.assessment.rangeStart}〜{session.assessment.rangeEnd}</h1>
         <span className="rounded-full border-2 border-[var(--gold)] bg-black/30 px-3 py-0.5 font-title text-[var(--volt)]">{idx + 1} / {session.questions.length}</span>

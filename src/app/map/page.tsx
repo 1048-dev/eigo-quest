@@ -4,12 +4,14 @@ import Link from "next/link";
 import { WorldMap } from "@/components/map/WorldMap";
 import { StatusBoard } from "@/components/game/StatusBoard";
 import { TreasureAlertModal } from "@/components/common/TreasureAlertModal";
-import { ErrorBanner } from "@/components/common/ErrorBanner";
+import { OfflineNote } from "@/components/common/OfflineNote";
+import { AnnouncementsPanel } from "@/components/common/AnnouncementsPanel";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { PeekCharacter } from "@/components/scene/Peek";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
-import { apiDelete, apiGet } from "@/lib/api/client";
+import { apiDelete, apiGet, isUnreachable } from "@/lib/api/client";
+import { offlineMap } from "@/lib/offline";
 import { DEFAULT_USER, MapResponseSchema, TreasureAlertResponseSchema, type MapResponse, type TreasureAlertResponse } from "@/lib/api/contracts";
 import { companionLine, OFFLINE_LINE } from "@/lib/game/companion";
 
@@ -24,15 +26,18 @@ const QUEST: Record<NodeType, { text: (n: number) => string; icon: React.ReactNo
 
 export default function MapPage() {
   const [data, setData] = useState<MapResponse | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
   const [alert, setAlert] = useState<TreasureAlertResponse | null>(null);
 
   useEffect(() => {
     let alive = true;
     apiGet("/api/map", MapResponseSchema).then((r) => {
       if (!alive) return;
-      setData(r.data); // 失敗しても data は空の安全な形
-      setError(r.error);
+      // サーバーに届かない・中身が空 → 内蔵データ（Lesson 1 から遊べるマップ）に切り替える
+      const usable = r.ok && (r.data.nodes ?? []).length > 0;
+      const d = usable ? r.data : isUnreachable(r) || (r.data.nodes ?? []).length === 0 ? offlineMap() : r.data;
+      setData(d);
+      setOffline(!!d.offline);
     });
     // ログイン（マップ表示）時にお宝復習アラートを判定
     apiGet("/api/treasure-alert", TreasureAlertResponseSchema).then((r) => {
@@ -50,7 +55,7 @@ export default function MapPage() {
   const totalLessons = nodes.filter((n) => n.type === "LESSON").length;
   // いちばん新しく クリアした レッスン（きょうのまとめ用）
   const latestCleared = nodes.reduce((m, n) => (n.type === "LESSON" && n.status === "CLEARED" ? Math.max(m, n.lessonNo) : m), 0);
-  const line = error ? OFFLINE_LINE : companionLine({
+  const line = offline ? OFFLINE_LINE : companionLine({
     playerName: user.nickname,
     streakDays: user.streakDays,
     coins: user.coins,
@@ -64,7 +69,7 @@ export default function MapPage() {
     <div className="space-y-5">
       <HeroScene title="英語クエスト" subtitle="ハルたちと えいごの遺跡を探検しよう！" variant="map" />
 
-      <ErrorBanner message={error} />
+      <OfflineNote show={offline} note="きろくは つながったら また つけられるよ" />
 
       <StatusBoard playerName={user.nickname} coins={user.coins} streakDays={user.streakDays}
         lessonsCleared={lessonsCleared} totalLessons={totalLessons} line={line} />
@@ -101,13 +106,11 @@ export default function MapPage() {
         </Link>
       )}
 
-      {nodes.length > 0 ? (
-        <div className="overflow-hidden rounded-[24px] border-4 border-[var(--gold)] shadow-[0_6px_0_var(--gold-deep),0_14px_28px_rgba(0,0,0,.45)]">
-          <WorldMap nodes={nodes} />
-        </div>
-      ) : (
-        <div className="card rpg-rivets p-6 text-center font-bold">マップを よみこめなかったよ。ページを読みこみなおしてね。</div>
-      )}
+      <div className="overflow-hidden rounded-[24px] border-4 border-[var(--gold)] shadow-[0_6px_0_var(--gold-deep),0_14px_28px_rgba(0,0,0,.45)]">
+        <WorldMap nodes={nodes.length > 0 ? nodes : offlineMap().nodes} />
+      </div>
+
+      <AnnouncementsPanel />
 
       {alert?.alert && (
         <TreasureAlertModal alert={alert.alert} message={alert.messageJa} onClose={() => {

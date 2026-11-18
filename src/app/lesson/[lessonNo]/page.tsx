@@ -11,7 +11,9 @@ import { Flashcards, Phonics, Pronunciation, QuizRun, SchoolExpressions, SpeedLi
 import { ConversationStep } from "@/components/lesson/ConversationStep";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { HeroScene } from "@/components/scene/HeroScene";
-import { apiGet, apiPost } from "@/lib/api/client";
+import { apiGet, apiPost, isUnreachable } from "@/lib/api/client";
+import { offlineLesson, offlineLessonComplete } from "@/lib/offline";
+import { OfflineNote } from "@/components/common/OfflineNote";
 import { LessonCompleteResponseSchema, LessonResponseSchema, type LessonCompleteResponse, type LessonResponse } from "@/lib/api/contracts";
 
 const STEP_LABEL: Record<LessonStep["kind"], string> = {
@@ -23,6 +25,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
   const { lessonNo } = use(params);
   const [data, setData] = useState<LessonResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
   const [step, setStep] = useState(0);
   const [logs, setLogs] = useState<AnswerLog[]>([]);
   const [quizScore, setQuizScore] = useState(0);
@@ -33,8 +36,14 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
     let alive = true;
     apiGet(`/api/lessons/${encodeURIComponent(lessonNo)}`, LessonResponseSchema).then((r) => {
       if (!alive) return;
-      if (!r.ok || !r.data.lesson || r.data.steps.length === 0) setError(r.error ?? "レッスンを よみこめなかったよ。");
-      else setData(r.data);
+      if (r.ok && r.data.lesson && r.data.steps.length > 0) { setData(r.data); setOffline(!!r.data.offline); return; }
+      // サーバーに届かない → 内蔵の教材でそのままレッスンできる
+      if (isUnreachable(r) || (r.ok && !r.data.lesson)) {
+        const o = offlineLesson(Number(lessonNo));
+        if (o.lesson && o.steps.length > 0) { setData(o); setOffline(true); return; }
+      }
+      // ここに来るのは「まだひらいていない」などゲーム上の理由だけ
+      setError(r.error ?? "このレッスンは まだ ひらいていないよ。");
     });
     return () => { alive = false; };
   }, [lessonNo]);
@@ -64,7 +73,9 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
     const all = [...logs, ...more];
     setLogs(all);
     const r = await apiPost(`/api/lessons/${lesson.lessonNo}/complete`, LessonCompleteResponseSchema, { quizScore, speedListeningBest: speedBest, logs: all });
-    setResult(r.ok ? r.data : { ...r.data, ok: false, reasonJa: r.data.reasonJa || r.error || "記録できなかったよ。もう一回ためしてね。" });
+    if (isUnreachable(r)) { setOffline(true); setResult(offlineLessonComplete(lesson.lessonNo)); return; }
+    if (r.data.offline) setOffline(true);
+    setResult(r.ok ? r.data : { ...r.data, ok: false, reasonJa: r.data.reasonJa || r.error || "もう一回ためしてね。" });
   };
 
   if (result) {
@@ -85,6 +96,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
           ? <Link href={`/test/${encodeURIComponent(result.nextTest ?? "")}`} className="btn btn-coin mt-4 block">{result.nextTest?.startsWith("boss-") ? "ボスに いどむ！" : "まとめテストへ"}</Link>
           : <Link href={`/lesson/${lesson.lessonNo + 1}`} className="btn btn-coin mt-4 block">つぎのレッスンへ</Link>)}
         {result.ok && <Link href={`/recap/${lesson.lessonNo}`} className="btn btn-primary mt-3 block">🎬 きょうのまとめを見る（2ぷん・おまけ）</Link>}
+        {offline && <div className="mt-3"><OfflineNote show note="今回のきろくとコインは保存されないよ" /></div>}
         {!result.ok && <button className="btn btn-coin mt-4" onClick={() => { setResult(null); setStep(Math.max(0, steps.findIndex((s) => s.kind === "quiz"))); }}>クイズをもう一回</button>}
         <Link href="/map" className="btn btn-primary mt-4 block">マップへもどる</Link>
       </div>
@@ -95,6 +107,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
   if (!s) return <p className="rpg-title p-8 text-center text-xl">きろくしています…</p>;
   return (
     <div className="space-y-4">
+      <OfflineNote show={offline} />
       {s.kind === "teacher_video" && <HeroScene title={`Session ${lesson.lessonNo}`} subtitle={`${lesson.title}｜${lesson.titleJa}`} variant="lesson" />}
       <header className="rpg-wood p-3">
         <p className="font-title text-xs text-[var(--volt)]">Session {lesson.lessonNo} ・ {lesson.school.grade}「{lesson.school.topic}」</p>

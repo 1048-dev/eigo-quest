@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { HeroScene } from "@/components/scene/HeroScene";
-import { ErrorBanner } from "@/components/common/ErrorBanner";
+import { OfflineNote } from "@/components/common/OfflineNote";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { apiGet } from "@/lib/api/client";
 import { RankingResponseSchema, type RankingResponse } from "@/lib/api/contracts";
@@ -13,14 +13,14 @@ export default function RankingPage() {
   const [scope, setScope] = useState<"national" | "friends">("national");
   const [metric, setMetric] = useState<"coins" | "streak">("coins");
   const [rows, setRows] = useState<RankingResponse["rows"]>([]);
-  const [error, setError] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
 
   useEffect(() => {
     let alive = true;
     apiGet(`/api/ranking?scope=${scope}&metric=${metric}`, RankingResponseSchema).then((r) => {
       if (!alive) return;
       setRows(r.data.rows ?? []);
-      setError(r.error);
+      setOffline(!r.ok || !!r.data.offline);
     });
     return () => { alive = false; };
   }, [scope, metric]);
@@ -31,7 +31,7 @@ export default function RankingPage() {
   return (
     <div className="space-y-4">
       <HeroScene title="ランキング" subtitle="ぜんこくの冒険者と きそおう！" variant="ranking" />
-      <ErrorBanner message={error} />
+      <OfflineNote show={offline} note="ランキングは つながると見られるよ" />
       <div className="flex gap-2"><Tab on={scope === "national"} onClick={() => setScope("national")}>ぜんこく</Tab><Tab on={scope === "friends"} onClick={() => setScope("friends")}>フレンド</Tab></div>
       <div className="flex gap-2"><Tab on={metric === "coins"} onClick={() => setMetric("coins")}>こんしゅうのコイン</Tab><Tab on={metric === "streak"} onClick={() => setMetric("streak")}>れんぞく日数</Tab></div>
       <ol className="card rpg-rivets divide-y-2 divide-dashed divide-[var(--parchment-edge)]">

@@ -3,11 +3,12 @@ import { prisma } from "@/lib/db";
 import { GACHA_RULES } from "@/lib/domain/config";
 import { rollMonster } from "@/lib/domain/gacha";
 import { MONSTERS } from "@/lib/game/monsters";
-import { jsonOk, readJsonBody, withApi } from "@/lib/api/server";
+import { jsonOk, readJsonBody, withOffline } from "@/lib/api/server";
+import { offlineGacha } from "@/lib/offline";
 import type { GachaResponse } from "@/lib/api/contracts";
 
 /** POST /api/gacha  body: { useRareTicket?: boolean } — コイン（またはレア券）でガチャを1回。図鑑100体から出る */
-export const POST = withApi("gacha", async (req) => {
+export const POST = withOffline("gacha", async (req) => {
   const userId = await currentUserId();
   const body = (await readJsonBody(req)) as { useRareTicket?: unknown };
   const useRareTicket = body?.useRareTicket === true;
@@ -52,4 +53,8 @@ export const POST = withApi("gacha", async (req) => {
     };
   });
   return jsonOk(result, result.ok ? 200 : 400);
+}, async (req) => {
+  // DBにつながらないときは「おためし召喚」（記録はされない）
+  const body = (await readJsonBody(req)) as { useRareTicket?: unknown };
+  return offlineGacha(body?.useRareTicket === true);
 });

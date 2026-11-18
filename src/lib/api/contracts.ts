@@ -36,6 +36,16 @@ export function nullable<T extends z.ZodTypeAny>(s: T) {
   });
 }
 
+/**
+ * すべてのレスポンスに付く共通の目印。
+ *  success: 処理として成功したか（オフラインのデータを返したときも true）
+ *  offline: DBにつながらず、内蔵のオフライン用データを返したとき true
+ */
+export const META = {
+  success: z.boolean().optional().catch(undefined),
+  offline: z.boolean().optional().catch(undefined),
+};
+
 const SKILL = z.enum(["SCHOOL_TEST", "PHONICS", "LISTENING", "SPEAKING", "VOCABULARY", "WRITING"]);
 
 export const UserSummarySchema = z.object({
@@ -86,6 +96,7 @@ const LearningItemSchema = z.object({
 // GET /api/map
 // ---------------------------------------------------------------------------
 export const MapResponseSchema = z.object({
+  ...META,
   nodes: safeArray(StageNodeSchema),
   current: nullable(StageNodeSchema),
   arenas: safeArray(ArenaInfoSchema),
@@ -100,6 +111,7 @@ const ScoresSchema = z.object({
   SCHOOL_TEST: num(0), PHONICS: num(0), LISTENING: num(0), SPEAKING: num(0), VOCABULARY: num(0), WRITING: num(0),
 });
 export const DashboardResponseSchema = z.object({
+  ...META,
   user: nullable(UserSummarySchema),
   scores: ScoresSchema.catch({ SCHOOL_TEST: 0, PHONICS: 0, LISTENING: 0, SPEAKING: 0, VOCABULARY: 0, WRITING: 0 }),
   overall: num(0),
@@ -116,6 +128,7 @@ export type DashboardResponse = z.output<typeof DashboardResponseSchema>;
 // ---------------------------------------------------------------------------
 export const TreasureAlertSchema = z.object({ id: z.string(), lessonNo: z.number(), multiplier: num(2) });
 export const TreasureAlertResponseSchema = z.object({
+  ...META,
   show: bool(false),
   alert: nullable(TreasureAlertSchema),
   messageJa: str(""),
@@ -126,6 +139,7 @@ export type TreasureAlertResponse = z.output<typeof TreasureAlertResponseSchema>
 // GET /api/ranking
 // ---------------------------------------------------------------------------
 export const RankingResponseSchema = z.object({
+  ...META,
   scope: z.enum(["national", "friends"]).catch("national"),
   metric: z.enum(["coins", "streak"]).catch("coins"),
   rows: safeArray(z.object({ rank: z.number(), userId: z.string(), nickname: str("???"), value: num(0) })),
@@ -141,6 +155,7 @@ export const MonsterSchema = z.object({
   theme: str(), imageKey: str(),
 });
 export const GachaResponseSchema = z.object({
+  ...META,
   ok: bool(false),
   monster: nullable(MonsterSchema),
   /** はじめて手に入れたモンスターなら true */
@@ -155,6 +170,7 @@ export type GachaResponse = z.output<typeof GachaResponseSchema>;
 // GET /api/monsters（図鑑: 持っているモンスター）
 // ---------------------------------------------------------------------------
 export const CollectionResponseSchema = z.object({
+  ...META,
   owned: safeArray(z.object({ id: z.string(), count: num(1) })),
   coins: num(0),
   rareTickets: num(0),
@@ -203,6 +219,7 @@ const LessonSchema = z.object({
   recap: nullable(z.object({ highlightsJa: safeArray(z.string()) })).optional(),
 });
 export const LessonResponseSchema = z.object({
+  ...META,
   lesson: nullable(LessonSchema),
   teacher: z.object({ name: str("Ms. Emma"), nameJa: str("エマ先生") }).catch({ name: "Ms. Emma", nameJa: "エマ先生" }),
   items: safeArray(LearningItemSchema),
@@ -215,6 +232,7 @@ const RewardSchema = z.object({ total: num(0), rareGachaTickets: num(0), coins: 
   .catch({ total: 0, rareGachaTickets: 0, coins: [] });
 
 export const LessonCompleteResponseSchema = z.object({
+  ...META,
   ok: bool(false),
   reasonJa: str(""),
   reward: RewardSchema,
@@ -227,6 +245,7 @@ export type LessonCompleteResponse = z.output<typeof LessonCompleteResponseSchem
 // ---------------------------------------------------------------------------
 const PublicQuestionSchema = QuestionSchema.omit({ itemId: true, answer: true, explanationJa: true }).extend({ audioKey: str("") });
 export const TestStartResponseSchema = z.object({
+  ...META,
   assessment: nullable(AssessmentSchema),
   seed: num(0),
   questions: safeArray(PublicQuestionSchema),
@@ -234,6 +253,7 @@ export const TestStartResponseSchema = z.object({
 export type TestStartResponse = z.output<typeof TestStartResponseSchema>;
 
 export const TestSubmitResponseSchema = z.object({
+  ...META,
   ok: bool(false),
   reasonJa: str(""),
   score: num(0),
@@ -252,6 +272,7 @@ export type TestSubmitResponse = z.output<typeof TestSubmitResponseSchema>;
 // POST /api/grade/written
 // ---------------------------------------------------------------------------
 export const GradeResponseSchema = z.object({
+  ...META,
   verdict: z.enum(["PASS", "RETRY", "WRONG"]).catch("WRONG"),
   feedbackJa: str("うまく採点できなかったよ。もう一回おしてね。"),
 });
@@ -262,6 +283,7 @@ export type GradeResponse = z.output<typeof GradeResponseSchema>;
 // DB が止まっていても ok:true（コイン 0）。まとめは「おまけ」なので失敗を子どもに見せない
 // ---------------------------------------------------------------------------
 export const RecapWatchedResponseSchema = z.object({
+  ...META,
   ok: bool(true),
   /** 今回もらえたコイン（もう今日もらった・記録できなかったときは 0） */
   coinsAwarded: num(0),
@@ -303,3 +325,21 @@ export type ConversationResponse = z.output<typeof ConversationResponseSchema>;
 
 /** すべてのエラーレスポンスの形（ok=false + error） */
 export const ErrorBodySchema = z.object({ error: str("") });
+
+// ---------------------------------------------------------------------------
+// GET /api/announcements（おしらせ）
+// ---------------------------------------------------------------------------
+export const AnnouncementSchema = z.object({
+  id: z.string(),
+  category: z.enum(["update", "event", "tips", "parents", "maintenance"]).catch("update"),
+  title: str(""),
+  body: str(""),
+  date: str(""),
+  pinned: bool(false),
+});
+export type Announcement = z.output<typeof AnnouncementSchema>;
+export const AnnouncementsResponseSchema = z.object({
+  ...META,
+  announcements: safeArray(AnnouncementSchema),
+});
+export type AnnouncementsResponse = z.output<typeof AnnouncementsResponseSchema>;

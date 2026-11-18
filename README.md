@@ -158,6 +158,22 @@ eigo-quest/
 - `src/lib/api/server.ts`（`withApi`）：ルートで例外が起きても必ず JSON（`{ ok: false, error }`）を返す
 - `tests/api-contracts.test.ts`：壊れたレスポンスでも落ちないこと、サーバーの正しい形がそのまま通ることを確認
 
+## DBが止まっていても動く「おためしモード」
+
+PostgreSQL が止まっている・サーバーに届かないときでも、エラー画面は出さずに内蔵データで遊べます。
+
+- **API（src/lib/api/server.ts の `withOffline`）**: 全ルートが DB 接続を事前チェック（`isDbUp()`、1.5秒タイムアウト・結果は短時間キャッシュ）。
+  DB が落ちている／P1001 などの接続エラー／想定外の例外 → **200 + `success: true, offline: true`** で `src/lib/offline` のモックデータを返します。エラー内容は外に出しません（サーバーログにだけ残ります）。
+- **画面**: `apiGet` は8秒でタイムアウトし、GET は1回だけ自動リトライ。それでも届かなければ `isUnreachable()` で判定して、ブラウザ側で同じ内蔵データに切り替えます（マップは Lesson 1 から、レッスン・テストはブラウザで出題・採点）。
+- 画面には小さな「おためしモードで表示中」チップだけを出します（`src/components/common/OfflineNote.tsx`）。召喚・レッスン完了・テスト結果は「記録されない」ことを明記します。
+- ゲーム上の理由（まだひらいていないレッスンなど 4xx）は、これまでどおりメッセージを表示します。
+- おしらせは `content/announcements.json`（`GET /api/announcements`、マップ画面下に表示）。DB を使わないので常に表示できます。
+
+### seed（`npm run db:seed` / `npx prisma db seed`）
+最初に接続確認 → データ検証（ID重複・空欄・件数）→ セクションごとに upsert（何度実行しても同じ結果）。
+書きこむ列は**生成済み Prisma スキーマに実在する列だけ**に絞り、スキーマ側にある必須列（例: `category`）がデータに無ければ既定値で埋めます
+（ShopItem → slot、Monster → theme、Announcement → JSON の category）。`Announcement` モデルがあれば、おしらせも投入します。
+
 ## カリキュラムとステージの流れ
 
 1日の流れは「**きのうまでの復習クエスト（3〜5分）→ 新しいレッスン（約25分・何回でも）**」です。いちばん大事なのは毎日つづけることです。

@@ -2,7 +2,8 @@ import { z } from "zod";
 import { currentUserId } from "@/lib/auth";
 import { toPublic } from "@/lib/curriculum/questions";
 import { startTest } from "@/lib/services/progressService";
-import { jsonError, jsonOk, readJsonBody, withApi } from "@/lib/api/server";
+import { jsonError, jsonOk, readJsonBody, withOffline } from "@/lib/api/server";
+import { offlineTestStart } from "@/lib/offline/tests";
 import type { TestStartResponse } from "@/lib/api/contracts";
 
 const Body = z.object({
@@ -11,9 +12,9 @@ const Body = z.object({
 }).catch({});
 
 /** POST /api/tests/:id/start — 出題（正解は伏せて返す）。body: { arenaMode?, reviewAlertId? } */
-export const POST = withApi<{ params: Promise<{ assessmentId: string }> }>("test-start", async (req, { params }) => {
+export const POST = withOffline<{ params: Promise<{ assessmentId: string }> }>("test-start", async (req, { params }) => {
   const body = Body.parse(await readJsonBody(req));
   const r = await startTest(await currentUserId(), (await params).assessmentId, body);
   if (!r.ok) return jsonError(r.reasonJa ?? "テストを始められなかったよ。", 403);
   return jsonOk({ assessment: r.assessment, seed: r.seed, questions: r.questions.map(toPublic) } satisfies TestStartResponse);
-});
+}, async (req, { params }) => offlineTestStart((await params).assessmentId, Body.parse(await readJsonBody(req))));

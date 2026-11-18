@@ -2,11 +2,12 @@ import { currentUserId } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { TOTAL_LESSONS } from "@/lib/curriculum";
 import { getDashboard } from "@/lib/services/progressService";
-import { jsonOk, withApi } from "@/lib/api/server";
+import { jsonOk, withOffline } from "@/lib/api/server";
+import { offlineDashboard } from "@/lib/offline";
 import type { DashboardResponse } from "@/lib/api/contracts";
 
 /** GET /api/dashboard — リアルタイム習得率（6軸 + 総合 + 進捗 + 推移 + にがて項目）+ ステータスボード用のユーザー情報 */
-export const GET = withApi("dashboard", async () => {
+export const GET = withOffline("dashboard", async () => {
   const userId = await currentUserId();
   const [d, user] = await Promise.all([
     getDashboard(userId),
@@ -22,4 +23,4 @@ export const GET = withApi("dashboard", async () => {
     weakest: d.weakest.filter((w): w is NonNullable<typeof w> => !!w),
     history: d.history.map((h) => ({ date: h.date, overall: h.overall })),
   } satisfies DashboardResponse);
-});
+}, () => offlineDashboard());

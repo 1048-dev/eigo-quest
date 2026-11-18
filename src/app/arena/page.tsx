@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { PeekMonster } from "@/components/scene/Peek";
-import { ErrorBanner } from "@/components/common/ErrorBanner";
+import { OfflineNote } from "@/components/common/OfflineNote";
 import { CompanionBubble } from "@/components/game/CompanionBubble";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { apiGet } from "@/lib/api/client";
+import { offlineMap } from "@/lib/offline";
 import { MapResponseSchema, type MapResponse } from "@/lib/api/contracts";
 import { COIN_RULES } from "@/lib/domain/config";
 import type { CharacterId } from "@/lib/game/characters";
@@ -22,14 +23,15 @@ const ARENA_BOSSES = ["mon-006", "mon-056", "mon-091"];
 
 export default function ArenaPage() {
   const [arenas, setArenas] = useState<MapResponse["arenas"] | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
 
   useEffect(() => {
     let alive = true;
     apiGet("/api/map", MapResponseSchema).then((r) => {
       if (!alive) return;
-      setArenas(r.data.arenas ?? []);
-      setError(r.error);
+      const d = r.ok && (r.data.arenas ?? []).length > 0 ? r.data : offlineMap();
+      setArenas(d.arenas ?? []);
+      setOffline(!!d.offline);
     });
     return () => { alive = false; };
   }, []);
@@ -39,7 +41,7 @@ export default function ArenaPage() {
   return (
     <div className="space-y-5">
       <HeroScene title="復習アリーナ" subtitle="なんどでも ちょうせんOK！" variant="arena" />
-      <ErrorBanner message={error} />
+      <OfflineNote show={offline} note="コインは きろくされないよ" />
       <CompanionBubble line={{ mood: "excited", text: `1回 🪙${COIN_RULES.arenaPlay}（1日${COIN_RULES.arenaFullRewardPlaysPerDay}回まで）もらえるビリ！わすれかけの もんだいが でやすいビリ。` }} />
 
       {arenas.length === 0 && (

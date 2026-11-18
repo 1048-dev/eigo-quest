@@ -8,10 +8,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { ErrorBanner } from "@/components/common/ErrorBanner";
+import { OfflineNote } from "@/components/common/OfflineNote";
 import { CoinBadge } from "@/components/common/CoinBadge";
 import { MonsterCard } from "@/components/monsters/MonsterCard";
 import { CompanionBubble } from "@/components/game/CompanionBubble";
-import { apiGet, apiPost } from "@/lib/api/client";
+import { apiGet, apiPost, isUnreachable } from "@/lib/api/client";
+import { offlineGacha } from "@/lib/offline";
 import { CollectionResponseSchema, GachaResponseSchema, type CollectionResponse, type GachaResponse } from "@/lib/api/contracts";
 import { GACHA_RULES } from "@/lib/domain/config";
 import { MONSTERS, MONSTER_COUNT, RARITIES, RARITY_STYLE, resolveMonster, type Rarity } from "@/lib/game/monsters";
@@ -25,14 +27,15 @@ export default function GachaPage() {
   const [col, setCol] = useState<CollectionResponse>({ owned: [], coins: 0, rareTickets: 0 });
   const [result, setResult] = useState<GachaResponse | null>(null);
   const [msg, setMsg] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
   const [busy, setBusy] = useState(false);
   const [filter, setFilter] = useState<Filter>("ALL");
   const [selected, setSelected] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     const r = await apiGet("/api/monsters", CollectionResponseSchema);
-    setCol(r.data);
-    if (r.error) setMsg(r.error);
+    setCol(r.data); // 届かなくても空の図鑑として表示できる
+    setOffline(!r.ok || !!r.data.offline);
   }, []);
 
   useEffect(() => { void load(); }, [load]);
@@ -45,8 +48,11 @@ export default function GachaPage() {
     setMsg(null);
     setBusy(true);
     setResult(null);
-    const r = await apiPost("/api/gacha", GachaResponseSchema, { useRareTicket });
+    const res = await apiPost("/api/gacha", GachaResponseSchema, { useRareTicket });
+    // サーバーに届かないときは「おためし召喚」（記録はされない）
+    const r = isUnreachable(res) ? { ...res, ok: true, data: offlineGacha(useRareTicket) } : res;
     setBusy(false);
+    if (r.data.offline) setOffline(true);
     if (r.data.ok && r.data.monster) {
       setResult(r.data);
       setCol((c) => ({
@@ -67,6 +73,7 @@ export default function GachaPage() {
   return (
     <div className="space-y-5">
       <HeroScene title="召喚の神殿" subtitle={`英語モンスター図鑑 ${ownedCount} / ${MONSTER_COUNT}`} variant="gacha" />
+      <OfflineNote show={offline} note="おためし召喚は きろくされないよ" />
       <ErrorBanner message={msg} />
 
       <div className="flex items-center justify-between gap-2">

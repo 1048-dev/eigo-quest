@@ -2,12 +2,13 @@
 import { useEffect, useState } from "react";
 import { MasteryRadar, TrendLine } from "@/components/dashboard/MasteryRadar";
 import { StatusBoard } from "@/components/game/StatusBoard";
-import { ErrorBanner } from "@/components/common/ErrorBanner";
+import { OfflineNote } from "@/components/common/OfflineNote";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { PeekCharacter, PeekMonster } from "@/components/scene/Peek";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { apiGet } from "@/lib/api/client";
+import { offlineDashboard } from "@/lib/offline";
 import { DashboardResponseSchema, DEFAULT_USER, type DashboardResponse } from "@/lib/api/contracts";
 import { SKILL_LABELS_JA } from "@/lib/domain/mastery";
 import { SKILLS, type Skill } from "@/lib/domain/types";
@@ -21,15 +22,17 @@ const WEAK_MONSTERS = ["mon-019", "mon-080", "mon-089", "mon-070", "mon-014"];
 
 export default function DashboardPage() {
   const [d, setD] = useState<DashboardResponse | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
 
   useEffect(() => {
     let alive = true;
     const load = () => apiGet("/api/dashboard", DashboardResponseSchema).then((r) => {
       if (!alive) return;
       // 再読み込みに失敗しても、前回の正しいデータは消さない
-      setD((prev) => (r.ok || !prev ? r.data : prev));
-      setError(r.error);
+      if (r.ok) { setD(r.data); setOffline(!!r.data.offline); return; }
+      // 届かないときは内蔵データで表示（前回の正しいデータがあればそれを残す）
+      setD((prev) => prev ?? offlineDashboard());
+      setOffline(true);
     });
     void load();
     const id = setInterval(load, 30_000); // 学習中もリアルタイムに更新（忘却で少しずつ下がるのも見える）
@@ -43,13 +46,13 @@ export default function DashboardPage() {
   const weakest = d.weakest ?? [];
   const history = d.history ?? [];
   const weakestSkill = d.lessonsCompleted > 0 ? [...SKILLS].sort((a, b) => (scores[a] ?? 0) - (scores[b] ?? 0))[0] : null;
-  const line = error ? OFFLINE_LINE : companionLine({ playerName: user.nickname, streakDays: user.streakDays, coins: user.coins, lessonsCleared: d.lessonsCompleted, weakestSkill });
+  const line = offline ? OFFLINE_LINE : companionLine({ playerName: user.nickname, streakDays: user.streakDays, coins: user.coins, lessonsCleared: d.lessonsCompleted, weakestSkill });
 
   return (
     <div className="space-y-5">
       <HeroScene title="ぼうけんのステータス" subtitle="パーティの成長をチェック！" variant="dashboard" />
 
-      <ErrorBanner message={error} />
+      <OfflineNote show={offline} />
 
       <StatusBoard playerName={user.nickname} coins={user.coins} streakDays={user.streakDays}
         lessonsCleared={d.lessonsCompleted} totalLessons={d.totalLessons} line={line}

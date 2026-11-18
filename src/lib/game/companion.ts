@@ -68,8 +68,8 @@ export function companionLine(i: CompanionInput): CompanionLine {
   return { mood: "happy", text: `いつでもアリーナでコインをかせげるビリ！いまは ${i.coins} コイン持ってるビリ。` };
 }
 
-/** データを読みこめなかったときのセリフ */
+/** オフラインモード（内蔵データで表示中）のセリフ。こわがらせず、そのまま遊べることを伝える */
 export const OFFLINE_LINE: CompanionLine = {
-  mood: "worried",
-  text: "つうしんが うまくいかないみたいビリ…。すこし待ってから、もう一度ひらいてみてビリ！",
+  mood: "happy",
+  text: "いまは おためしモードで あそべるビリ！Lesson 1 から ぼうけんしてみようビリ！",
 };
