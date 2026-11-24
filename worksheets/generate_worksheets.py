@@ -12,6 +12,9 @@ A4ワークシート（PDF）自動生成スクリプト。
   python3 worksheets/generate_worksheets.py --test mini --range 1-5
   python3 worksheets/generate_worksheets.py --test boss --range 1-30
   python3 worksheets/generate_worksheets.py --all            # 全レッスン＋全テスト
+  python3 worksheets/generate_worksheets.py --month --world 1  # 月間まとめ（1ワールド＝約1か月、表紙・よていひょう・こたえつき）
+  python3 worksheets/generate_worksheets.py --month --all      # 12ワールド分の 月間まとめ
+  （npm run worksheets:month -- --world 1 ／ npm run worksheets:month -- --all）
 
 日本語フォントは IPAexゴシック等の TTF を自動検出して埋め込む（EIGO_JA_FONT で指定可）。
 見つからない場合は ReportLab 内蔵 CID フォントにフォールバック（日本語フォントのある環境でのみ表示）。
@@ -22,7 +25,9 @@ import argparse
 import json
 import os
 import random
+import re
 import sys
+from io import BytesIO
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -110,17 +115,65 @@ def items_of(lesson: dict) -> list[Item]:
     return out
 
 
+def load_world_names() -> dict[int, str]:
+    """ワールド名は src/lib/game/worlds.ts がただ1つのもと。そこから読む。"""
+    src = (ROOT / "src" / "lib" / "game" / "worlds.ts").read_text(encoding="utf-8")
+    block = src.split("WORLD_NAMES", 1)[1].split("};", 1)[0]
+    return {int(k): v for k, v in re.findall(r'(\d+):\s*"([^"]+)"', block)}
+
+
+NO_LINE_START = set("、。，．）」』】！？!?)・ーっゃゅょァィゥェォッャュョ")
+
+
+def wrap_text(s: str, font: str, size: float, width: float) -> list[str]:
+    """1文字ずつ幅をはかって折り返す（日本語向け。英単語の途中では なるべく切らない）。"""
+    lines: list[str] = []
+    cur = ""
+    for ch in s:
+        # 行頭禁則: 句読点・閉じかっこは 少しはみ出しても 前の行に つける
+        if pdfmetrics.stringWidth(cur + ch, font, size) <= width or (ch in NO_LINE_START and cur):
+            cur += ch
+            continue
+        # 英単語の途中なら、直前の空白で切る
+        cut = cur.rfind(" ")
+        if ch != " " and cur and cur[-1].isascii() and cur[-1].isalnum() and cut > 0:
+            lines.append(cur[:cut])
+            cur = cur[cut + 1:] + ch
+        else:
+            lines.append(cur)
+            cur = ch.lstrip()
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def fit_text(s: str, font: str, size: float, width: float) -> str:
+    """幅に入らなければ「…」で切る。"""
+    if pdfmetrics.stringWidth(s, font, size) <= width:
+        return s
+    while s and pdfmetrics.stringWidth(s + "…", font, size) > width:
+        s = s[:-1]
+    return s + "…"
+
+
 # ---------------------------------------------------------------------------
 # 描画ヘルパ
 # ---------------------------------------------------------------------------
 class Sheet:
-    def __init__(self, path: Path, title: str):
-        path.parent.mkdir(parents=True, exist_ok=True)
-        self.c = Canvas(str(path), pagesize=A4)
+    def __init__(self, target, title: str, footer_label: str = "Eigo Quest", total_pages: int | None = None):
+        """target: 出力先パス、または BytesIO（ページ数をはかる下書き用）。"""
+        if isinstance(target, Path):
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target = str(target)
+        self.c = Canvas(target, pagesize=A4)
         self.c.setTitle(title)
         self.c.setAuthor("Eigo Quest")
         self.y = PAGE_H - MARGIN
         self.page_no = 0
+        self.footer_label = footer_label
+        self.total_pages = total_pages
+        # need() で自動改ページしたときに出す見出し（None なら出さない）
+        self.cont_header: str | None = None
 
     # --- 基本 ---
     def text(self, x, y, s, size=11, font=None, color=colors.black):
@@ -132,6 +185,8 @@ class Sheet:
     def need(self, h):
         if self.y - h < MARGIN + 10 * mm:
             self.new_page()
+            if self.cont_header:
+                self.header(self.cont_header, with_name=False)
 
     def new_page(self, header: str | None = None):
         if self.page_no > 0:
@@ -145,15 +200,26 @@ class Sheet:
     def footer(self):
         self.c.setFont(JA, 8)
         self.c.setFillColor(INK2)
-        self.c.drawCentredString(PAGE_W / 2, 9 * mm, f"Eigo Quest  —  {self.page_no}")
+        no = f"{self.page_no} / {self.total_pages}" if self.total_pages else f"{self.page_no}"
+        self.c.drawCentredString(PAGE_W / 2, 9 * mm, f"{self.footer_label}  —  {no}")
+
+    def wrapped(self, x, s, size=10, width=None, color=colors.black, line_h=None):
+        """日本語まじりの文を幅で折り返して書き、self.y を進める。"""
+        width = width or (PAGE_W - MARGIN - x)
+        line_h = line_h or size * 1.55
+        for line in wrap_text(s, JA, size, width):
+            self.need(line_h)
+            self.text(x, self.y, line, size, JA, color)
+            self.y -= line_h
 
     def header(self, title: str, sub: str = "", with_name=True):
         c = self.c
         c.setFillColor(ACCENT)
         c.roundRect(MARGIN, self.y - 16 * mm, PAGE_W - 2 * MARGIN, 16 * mm, 4 * mm, fill=1, stroke=0)
-        self.text(MARGIN + 5 * mm, self.y - 10.5 * mm, title, 16, JA, colors.white)
+        inner = PAGE_W - 2 * MARGIN - 10 * mm
+        self.text(MARGIN + 5 * mm, self.y - 10.5 * mm, fit_text(title, JA, 16, inner), 16, JA, colors.white)
         if sub:
-            self.text(MARGIN + 5 * mm, self.y - 14.5 * mm, sub, 8, JA, colors.white)
+            self.text(MARGIN + 5 * mm, self.y - 14.5 * mm, fit_text(sub, JA, 8, inner), 8, JA, colors.white)
         self.y -= 20 * mm
         if with_name:
             self.text(MARGIN, self.y, "なまえ", 10)
@@ -169,8 +235,10 @@ class Sheet:
         self.c.circle(MARGIN + 2.5 * mm, self.y + 1.2 * mm, 2.5 * mm, fill=1, stroke=0)
         self.text(MARGIN + 7 * mm, self.y, title, 12.5, JA)
         if note:
-            self.text(MARGIN + 7 * mm, self.y - 5 * mm, note, 8.5, JA, INK2)
-            self.y -= 5 * mm
+            for line in wrap_text(note, JA, 8.5, PAGE_W - 2 * MARGIN - 7 * mm):
+                self.text(MARGIN + 7 * mm, self.y - 5 * mm, line, 8.5, JA, INK2)
+                self.y -= 4.2 * mm
+            self.y -= 0.8 * mm
         self.y -= 8 * mm
 
     def four_lines(self, x, y_top, width, trace: str | None = None, height=12 * mm, trace_size=None):
@@ -234,18 +302,46 @@ def flashcard_page(s: Sheet, lesson: dict):
             s.text(x + 6 * mm, y + ch - 7.4 * mm, "TPR めいれい", 7, JA, colors.white)
         s.picture_box(x + cw / 2 - 22 * mm, y + ch * 0.42, 44 * mm, ch * 0.42)
         size = 26 if len(en) <= 10 else 18
+        while size > 10 and pdfmetrics.stringWidth(en, EN_BOLD, size) > cw - 8 * mm:
+            size -= 1
         c.setFont(EN_BOLD, size)
         c.setFillColor(colors.black)
         c.drawCentredString(x + cw / 2, y + ch * 0.22, en)
-        c.setFont(JA, 10)
         c.setFillColor(INK2)
-        c.drawCentredString(x + cw / 2, y + ch * 0.1, ja + (f"（{note[4:]}）" if note else ""))
+        line = ja + (f"（{note[4:]}）" if note else "")
+        if pdfmetrics.stringWidth(line, JA, 10) <= cw - 6 * mm:
+            c.setFont(JA, 10)
+            c.drawCentredString(x + cw / 2, y + ch * 0.1, line)
+        else:  # 長い うごきの説明は 2行目に小さく
+            c.setFont(JA, 10)
+            c.drawCentredString(x + cw / 2, y + ch * 0.12, fit_text(ja, JA, 10, cw - 6 * mm))
+            c.setFont(JA, 7.5)
+            c.drawCentredString(x + cw / 2, y + ch * 0.12 - 4.2 * mm, fit_text(f"（{note[4:]}）" if note else "", JA, 7.5, cw - 6 * mm))
     s.y = MARGIN
+
+
+@dataclass
+class LessonKey:
+    """レッスン教材の こたえ（解答ページを あとで まとめて書くために持ち回す）"""
+    phon: list[str]
+    exprs: list[Item]
+    choices: list[Item]
 
 
 def lesson_worksheet(lesson: dict, out: Path):
     n = lesson["lessonNo"]
     s = Sheet(out, f"Eigo Quest Session {n} ワークシート")
+    key = lesson_student_pages(s, lesson)
+    # ---- p3: 解答・保護者メモ ----
+    s.new_page()
+    s.header(f"Session {n}  こたえ・おうちの方へ", "", with_name=False)
+    lesson_answer_block(s, lesson, key, compact=False)
+    s.save()
+
+
+def lesson_student_pages(s: Sheet, lesson: dict) -> LessonKey:
+    """子どもが使うページ（フラッシュカード＋ワーク）を書き、こたえを返す。"""
+    n = lesson["lessonNo"]
     items = items_of(lesson)
 
     # ---- p1: フラッシュカード ----
@@ -301,48 +397,93 @@ def lesson_worksheet(lesson: dict, out: Path):
         s.c.setStrokeColor(colors.black)
         s.c.rect(x + bw / 2 - 4 * mm, s.y - 20 * mm, 8 * mm, 6 * mm)
     s.y -= 26 * mm
+    return LessonKey(phon, exprs, choices)
 
-    # ---- p3: 解答・保護者メモ ----
-    s.new_page()
-    s.header(f"Session {n}  こたえ・おうちの方へ", "", with_name=False)
-    s.section("こたえ")
-    for i, w in enumerate(phon):
-        s.text(MARGIN + 6 * mm, s.y, f"2-({i + 1})  {w} → {w[0]}", 10.5, EN)
-        s.y -= 6 * mm
-    for i, e in enumerate(exprs):
-        s.text(MARGIN + 6 * mm, s.y, f"3-({i + 1})  {e.text}", 10.5, EN)
-        s.y -= 6 * mm
-    s.y -= 4 * mm
-    s.section("4. よみあげ文（ゆっくり2回ずつ）")
+
+def lesson_answer_block(s: Sheet, lesson: dict, key: LessonKey, compact: bool):
+    """こたえ・よみあげ文・保護者メモ。compact=True は月間まとめ用（見出し1行＋詰めた行間で流し込む）。"""
+    n = lesson["lessonNo"]
+    phon, exprs, choices = key.phon, key.exprs, key.choices
     order = choices[:]
     random.Random(n * 7).shuffle(order)
+    x = MARGIN + 6 * mm
+    lh = 5 * mm if compact else 6 * mm
+    size = 9.5 if compact else 10.5
+
+    if compact:
+        rows = len(phon) + len(exprs) + len(order) + len(lesson["school"]["testPoints"]) + len(lesson["tpr"]) + 5
+        s.need(min(rows * lh + 12 * mm, 120 * mm))
+        s.c.setFillColor(colors.HexColor("#e8f0fb"))
+        s.c.roundRect(MARGIN, s.y - 2.2 * mm, PAGE_W - 2 * MARGIN, 7.5 * mm, 2 * mm, fill=1, stroke=0)
+        s.text(MARGIN + 3 * mm, s.y, f"Session {n}  {lesson['titleJa']}", 11, JA, ACCENT)
+        s.y -= 9 * mm
+        s.need(lh * 3)
+        s.text(x, s.y, "こたえ", size, JA, INK2)
+        s.y -= lh
+        ans = [f"2-({i + 1}) {w} → {w[0]}" for i, w in enumerate(phon)]
+        ans += [f"3-({i + 1}) {e.text}" for i, e in enumerate(exprs)]
+        s.wrapped(x + 4 * mm, "    ".join(ans), size, line_h=lh)
+        s.need(lh * 2)
+        s.text(x, s.y, "4. よみあげ文（ゆっくり2回ずつ）", size, JA, INK2)
+        s.y -= lh
+        reads = [f"({i + 1}) “{ch.text}” → {choices.index(ch) + 1}" for i, ch in enumerate(order)]
+        s.wrapped(x + 4 * mm, "   ".join(reads) + "   （数字は 左から なんばんめ か）", size, line_h=lh)
+        s.need(lh * 2)
+        s.text(x, s.y, "テストの ねらいめ", size, JA, INK2)
+        s.y -= lh
+        s.wrapped(x + 4 * mm, " ／ ".join(lesson["school"]["testPoints"]), size, line_h=lh)
+        s.need(lh * 2)
+        s.text(x, s.y, "TPR あそび", size, JA, INK2)
+        s.y -= lh
+        s.wrapped(x + 4 * mm, " ／ ".join(f"{t['en']}（{t['ja']}）… {t['action']}" for t in lesson["tpr"]), size, line_h=lh)
+        s.y -= 3 * mm
+        return
+
+    s.section("こたえ")
+    for i, w in enumerate(phon):
+        s.text(x, s.y, f"2-({i + 1})  {w} → {w[0]}", size, JA)
+        s.y -= lh
+    for i, e in enumerate(exprs):
+        s.text(x, s.y, f"3-({i + 1})  {e.text}", size, EN)
+        s.y -= lh
+    s.y -= 4 * mm
+    s.section("4. よみあげ文（ゆっくり2回ずつ）")
     for i, ch in enumerate(order):
         pos = choices.index(ch) + 1
-        s.text(MARGIN + 6 * mm, s.y, f"({i + 1})  “{ch.text}”   → こたえ: 左から{pos}ばんめ", 10.5, JA)
-        s.y -= 6 * mm
+        s.text(x, s.y, f"({i + 1})  “{ch.text}”   → こたえ: 左から{pos}ばんめ", size, JA)
+        s.y -= lh
     s.y -= 4 * mm
     s.section("学校のテストで ねらわれるポイント")
     for t in lesson["school"]["testPoints"]:
-        s.text(MARGIN + 6 * mm, s.y, "・" + t, 10.5, JA)
-        s.y -= 6 * mm
+        s.wrapped(x, "・" + t, size, line_h=lh)
     s.y -= 4 * mm
     s.section("TPR（からだで おぼえる）あそびかた")
     for t in lesson["tpr"]:
-        s.text(MARGIN + 6 * mm, s.y, f"・{t['en']}（{t['ja']}）… {t['action']}", 10.5, JA)
-        s.y -= 6 * mm
-    s.text(MARGIN + 6 * mm, s.y - 2 * mm, "おうちの人が英語で命令 → 子どもが動く。慣れたらスピードアップ！（アプリのスピードリスニングと連動）", 9, JA, INK2)
-    s.save()
+        s.wrapped(x, f"・{t['en']}（{t['ja']}）… {t['action']}", size, line_h=lh)
+    s.text(x, s.y - 2 * mm, "おうちの人が英語で命令 → 子どもが動く。慣れたらスピードアップ！（アプリのスピードリスニングと連動）", 9, JA, INK2)
 
 
 # ---------------------------------------------------------------------------
 # まとめテスト / ボス戦テスト
 # ---------------------------------------------------------------------------
+def test_label(kind: str) -> str:
+    return "まとめテスト" if kind == "mini" else "ボス戦 総まとめテスト"
+
+
 def test_worksheet(kind: str, start: int, end: int, lessons: list[dict], out: Path):
+    s = Sheet(out, f"Eigo Quest {test_label(kind)} {start}-{end}")
+    answers = test_question_pages(s, kind, start, end, lessons)
+    s.new_page()
+    test_answer_block(s, kind, start, end, answers, compact=False)
+    s.save()
+
+
+def test_question_pages(s: Sheet, kind: str, start: int, end: int, lessons: list[dict]) -> list[str]:
+    """問題ページを書き、こたえの行リストを返す。"""
     pool = [it for l in lessons if start <= l["lessonNo"] <= end for it in items_of(l)]
     total = MINI_QUESTIONS if kind == "mini" else BOSS_QUESTIONS
     rng = random.Random(f"{kind}-{start}-{end}")
-    label = "まとめテスト" if kind == "mini" else "ボス戦 総まとめテスト"
-    s = Sheet(out, f"Eigo Quest {label} {start}-{end}")
+    label = test_label(kind)
     s.new_page()
     s.header(f"{label}  Lesson {start}〜{end}", "アプリのテストと同じ範囲・同じルールで出題。ごうかくライン 80%（ボスは75%）")
 
@@ -425,16 +566,208 @@ def test_worksheet(kind: str, start: int, end: int, lessons: list[dict], out: Pa
         s.text(MARGIN + 4 * mm, s.y, "えらぶ日本語は解答ページの「よみあげ」を参考に、おうちの人が3択で提示してください。", 8.5, JA, INK2)
         s.y -= 8 * mm
 
-    # 解答
-    s.new_page()
-    s.header(f"{label} {start}〜{end}  こたえ・よみあげ", f"全{q}問 ／ ごうかく {int(q * (0.8 if kind == 'mini' else 0.75) + 0.999)}問以上", with_name=False)
+    return answers
+
+
+def test_answer_block(s: Sheet, kind: str, start: int, end: int, answers: list[str], compact: bool):
+    """テストのこたえ（2列）。compact=False は見出し帯つきで新しいページの先頭に書く。"""
+    label = test_label(kind)
+    q = len(answers)
+    passing = int(q * (0.8 if kind == "mini" else 0.75) + 0.999)
+    rows = (q + 1) // 2
+    row_h = 5.5 * mm if compact else 6.5 * mm
     col_w = (PAGE_W - 2 * MARGIN) / 2
+    if compact:
+        s.need(rows * row_h + 14 * mm)
+        s.c.setFillColor(colors.HexColor("#fdf1d6"))
+        s.c.roundRect(MARGIN, s.y - 2.2 * mm, PAGE_W - 2 * MARGIN, 7.5 * mm, 2 * mm, fill=1, stroke=0)
+        s.text(MARGIN + 3 * mm, s.y, f"{label}  Lesson {start}〜{end}", 11, JA, colors.HexColor("#9a6a00"))
+        s.text(PAGE_W - MARGIN - 52 * mm, s.y, f"全{q}問 ／ ごうかく {passing}問以上", 9, JA, INK2)
+        s.y -= 9 * mm
+    else:
+        s.header(f"{label} {start}〜{end}  こたえ・よみあげ", f"全{q}問 ／ ごうかく {passing}問以上", with_name=False)
     y0 = s.y
     for i, a in enumerate(answers):
-        col = 0 if i < (len(answers) + 1) // 2 else 1
-        row = i if col == 0 else i - (len(answers) + 1) // 2
-        s.text(MARGIN + col * col_w, y0 - row * 6.5 * mm, a, 9.5, JA if not a.isascii() else EN)
-    s.save()
+        col = 0 if i < rows else 1
+        row = i if col == 0 else i - rows
+        a = fit_text(a, JA, 9.5, col_w - 3 * mm)
+        s.text(MARGIN + col * col_w, y0 - row * row_h, a, 9.5, JA if not a.isascii() else EN)
+    s.y = y0 - rows * row_h - 4 * mm
+
+
+# ---------------------------------------------------------------------------
+# 月間まとめ（1ワールド＝30レッスン＝約1か月を 1冊の PDF に）
+# ---------------------------------------------------------------------------
+@dataclass
+class BundleLayout:
+    """1回目の下書きで はかった ページ番号（表紙の よていひょうに書く）"""
+    total: int
+    lesson_pages: dict[int, tuple[int, int]]
+    test_pages: dict[int, tuple[int, int]]  # テスト直前のレッスン番号 → ページ範囲
+    answers_from: int
+
+
+def gate_after(n: int) -> tuple[str, int, int] | None:
+    """レッスン n の後のテスト（アプリの マップと同じ: 30の倍数→ボス 1〜n、5の倍数→まとめ n-4〜n）"""
+    if n % BOSS_EVERY == 0:
+        return ("boss", 1, n)
+    if n % MINI_EVERY == 0:
+        return ("mini", n - MINI_EVERY + 1, n)
+    return None
+
+
+def pages_label(r: tuple[int, int] | None) -> str:
+    if not r:
+        return "p.??"
+    return f"p.{r[0]}" if r[0] == r[1] else f"p.{r[0]}〜{r[1]}"
+
+
+def bundle_cover(s: Sheet, world: int, name: str, wl: list[dict], layout: BundleLayout | None):
+    a, b = wl[0]["lessonNo"], wl[-1]["lessonNo"]
+    lp = layout.lesson_pages if layout else {}
+    tp = layout.test_pages if layout else {}
+    ans = f"p.{layout.answers_from}〜{layout.total}" if layout else "p.??〜??"
+    lesson_range = f"p.{lp[a][0]}〜{tp[b][1]}" if layout else "p.??〜??"
+
+    # ---- 表紙1: おうちの方へ ----
+    s.new_page()
+    s.header(f"ワールド{world}「{name}」 1か月ワークブック",
+             f"Lesson {a}〜{b}（30回）／ 1日1レッスンで 約1か月 ／ おうちの方へ", with_name=False)
+    x = MARGIN + 6 * mm
+    s.section("このワークブックについて")
+    s.wrapped(x, "アプリ「Eigo Quest」の Lesson " f"{a}〜{b} と まったく同じ ことば・表現で作った 紙の教材です。"
+              "1回分は「フラッシュカード 1まい＋ワーク 1まい」。5回ごとに まとめテスト、30回目に ボス戦テストが入っています。"
+              "こたえ と よみあげ文は さいごに まとめてあります。", 10)
+    grades = sorted({l["school"]["grade"] for l in wl})
+    topics: list[str] = []
+    for l in wl:
+        if l["school"]["topic"] not in topics and not l["school"]["topic"].startswith("まとめ"):
+            topics.append(l["school"]["topic"])
+    s.y -= 1 * mm
+    s.wrapped(x, f"がっこうの めやす: {'・'.join(grades)} ／ テーマ: " + "、".join(topics), 9, color=INK2)
+    s.y -= 3 * mm
+
+    s.section("いんさつの しかた")
+    for t in [
+        "A4・片面で 印刷してください。白黒でも だいじょうぶです。",
+        "倍率は「実際のサイズ（100%）」。「ページに合わせる」だと 英語の4線が 小さくなります。",
+        f"まとめて 印刷するなら 子ども用は {lesson_range}、おうちの方用の こたえは {ans}（子どもには わたさない）。",
+        "毎日 印刷するなら、下の よていひょうの「ページ」だけを ページ指定して 印刷します。",
+        "フラッシュカードは 厚めの紙に 印刷すると ながもちします。点線で 切ってください。",
+    ]:
+        s.wrapped(x, "・" + t, 10)
+    s.y -= 3 * mm
+
+    s.section("1日の すすめかた（15〜20分）")
+    for i, t in enumerate([
+        "アプリで その日の レッスンを する（約25分。紙だけの日が あっても OK）。",
+        "フラッシュカードを 切って、TPR あそび（おうちの人が「Look!」→ 子どもが うごく）。",
+        "ワークの ページ: なぞり書き → フォニックス → 学校テスト → リスニング。"
+        "フォニックスと リスニングは、おうちの人が こたえページの「よみあげ文」を ゆっくり2回 読みます。",
+        "こたえ合わせを して、できたら ○ や シールを。まちがいは 責めずに もういちど いっしょに。",
+        "5回ごとの まとめテスト（ごうかく 80%）、30回目の ボス戦テスト（ごうかく 75%）は アプリの テストと 同じ範囲です。",
+    ]):
+        s.wrapped(x, f"{i + 1}. {t}", 10)
+    s.y -= 3 * mm
+
+    s.section("ページの みかた")
+    for t in [
+        "p.1〜2: この あんない と 30日の よていひょう",
+        f"{lesson_range}: 子どもが つかう ページ（レッスン と テスト）",
+        f"{ans}: こたえ・よみあげ文・学校テストの ねらいめ・TPR あそび（おうちの方用）",
+    ]:
+        s.wrapped(x, "・" + t, 10)
+
+    # ---- 表紙2: 30日の よていひょう ----
+    s.new_page()
+    s.header(f"30日の よていひょう（ワールド{world}「{name}」）",
+             "おわった日に □ に ✓ を。1日1回が めやすですが、ペースは おうちに あわせて だいじょうぶ。", with_name=False)
+    cols = [("", 8), ("日め", 12), ("Lesson", 16), ("ないよう", 78), ("ページ", 26), ("テスト", 40)]
+    xs = [MARGIN]
+    for _, w in cols:
+        xs.append(xs[-1] + w * mm)
+    row_h = (s.y - MARGIN - 14 * mm) / (len(wl) + 1)
+    row_h = min(row_h, 8 * mm)
+    c = s.c
+    c.setFillColor(colors.HexColor("#e8f0fb"))
+    c.rect(MARGIN, s.y - row_h, xs[-1] - MARGIN, row_h, fill=1, stroke=0)
+    for i, (label, _) in enumerate(cols):
+        s.text(xs[i] + 1.5 * mm, s.y - row_h + 2.4 * mm, label, 9, JA, INK2)
+    s.y -= row_h
+    for day, l in enumerate(wl, start=1):
+        n = l["lessonNo"]
+        top = s.y
+        if day % 2 == 0:
+            c.setFillColor(colors.HexColor("#f6f8fb"))
+            c.rect(MARGIN, top - row_h, xs[-1] - MARGIN, row_h, fill=1, stroke=0)
+        base = top - row_h + 2.4 * mm
+        c.setStrokeColor(INK2)
+        c.setLineWidth(0.6)
+        c.rect(xs[0] + 2 * mm, base - 0.6 * mm, 3.6 * mm, 3.6 * mm)
+        s.text(xs[1] + 1.5 * mm, base, f"{day}", 9.5, EN)
+        s.text(xs[2] + 1.5 * mm, base, f"L{n}", 9.5, EN_BOLD)
+        s.text(xs[3] + 1.5 * mm, base, fit_text(l["titleJa"], JA, 9, cols[3][1] * mm - 3 * mm), 9, JA)
+        s.text(xs[4] + 1.5 * mm, base, pages_label(lp.get(n)), 9, JA)
+        gate = gate_after(n)
+        if gate:
+            kind, ga, gb = gate
+            label = ("まとめ" if kind == "mini" else "ボス戦") + " " + pages_label(tp.get(n))
+            s.text(xs[5] + 1.5 * mm, base, label, 9, JA, colors.HexColor("#9a6a00") if kind == "boss" else ACCENT)
+        c.setStrokeColor(colors.HexColor("#dde3ec"))
+        c.setLineWidth(0.4)
+        c.line(MARGIN, top - row_h, xs[-1], top - row_h)
+        s.y -= row_h
+    s.y -= 5 * mm
+    s.text(MARGIN, s.y, f"こたえ・よみあげ文: {ans}（おうちの方用）", 9, JA, INK2)
+
+
+def bundle_worksheet(world: int, name: str, lessons: list[dict], out: Path) -> int:
+    """ワールド1つ分の月間まとめ PDF を作る。ページ番号を表紙に書くため、下書き→本番の2回描く。返り値は総ページ数。"""
+    wl = [l for l in lessons if l["world"] == world]
+    if not wl:
+        raise SystemExit(f"ワールド{world} の レッスンが ありません")
+    wl.sort(key=lambda l: l["lessonNo"])
+    title = f"Eigo Quest ワールド{world}「{name}」 1か月ワークブック"
+
+    def render(target, layout: BundleLayout | None) -> BundleLayout:
+        s = Sheet(target, title, footer_label=f"Eigo Quest  ワールド{world}「{name}」",
+                  total_pages=layout.total if layout else None)
+        bundle_cover(s, world, name, wl, layout)
+        lesson_pages: dict[int, tuple[int, int]] = {}
+        test_pages: dict[int, tuple[int, int]] = {}
+        keys: dict[int, LessonKey] = {}
+        test_answers: dict[int, list[str]] = {}
+        for l in wl:
+            n = l["lessonNo"]
+            first = s.page_no + 1
+            keys[n] = lesson_student_pages(s, l)
+            lesson_pages[n] = (first, s.page_no)
+            gate = gate_after(n)
+            if gate:
+                first = s.page_no + 1
+                test_answers[n] = test_question_pages(s, gate[0], gate[1], gate[2], lessons)
+                test_pages[n] = (first, s.page_no)
+        # ---- こたえ（おうちの方用）----
+        s.new_page()
+        answers_from = s.page_no
+        s.cont_header = f"こたえ・よみあげ文（ワールド{world} つづき）"
+        s.header(f"こたえ・よみあげ文（ワールド{world}「{name}」）",
+                 "おうちの方用。フォニックス・リスニングは ここの よみあげ文を ゆっくり2回ずつ 読んでください。", with_name=False)
+        for l in wl:
+            n = l["lessonNo"]
+            lesson_answer_block(s, l, keys[n], compact=True)
+            gate = gate_after(n)
+            if gate:
+                test_answer_block(s, gate[0], gate[1], gate[2], test_answers[n], compact=True)
+        total = s.page_no
+        s.save()
+        return BundleLayout(total, lesson_pages, test_pages, answers_from)
+
+    draft = render(BytesIO(), None)
+    final = render(out, draft)
+    if final.total != draft.total or final.lesson_pages != draft.lesson_pages:
+        raise SystemExit(f"ワールド{world}: 下書きと本番で ページ数が ちがいます（{draft.total} → {final.total}）")
+    return final.total
 
 
 # ---------------------------------------------------------------------------
@@ -445,7 +778,9 @@ def main():
     ap.add_argument("--lesson", type=int, help="レッスン番号（Session）")
     ap.add_argument("--test", choices=["mini", "boss"], help="テスト種別")
     ap.add_argument("--range", help="テスト範囲 例: 1-5, 1-30")
-    ap.add_argument("--all", action="store_true", help="全レッスン＋全テストを生成")
+    ap.add_argument("--all", action="store_true", help="全レッスン＋全テストを生成（--month と いっしょなら 12ワールド分の 月間まとめ）")
+    ap.add_argument("--month", action="store_true", help="月間まとめ（1ワールド＝30レッスン）モード。--world N か --all と いっしょに")
+    ap.add_argument("--world", type=int, help="月間まとめを作る ワールド番号（1〜12）")
     ap.add_argument("--out", type=Path, default=OUT_DIR)
     args = ap.parse_args()
 
@@ -463,6 +798,19 @@ def main():
         p = args.out / "tests" / f"{kind}-{a}-{b}.pdf"
         test_worksheet(kind, a, b, lessons, p)
         made.append(p)
+
+    if args.month or args.world:
+        names = load_world_names()
+        worlds = sorted({l["world"] for l in lessons}) if args.all else [args.world] if args.world else []
+        if not worlds:
+            ap.error("--month には --world N か --all を つけてください")
+        for w in worlds:
+            if w not in names:
+                ap.error(f"ワールド{w} は ありません（1〜{max(names)}）")
+            p = args.out / "monthly" / f"world-{w:02d}.pdf"
+            pages = bundle_worksheet(w, names[w], lessons, p)
+            print(f"{p.relative_to(ROOT)}  ({pages} ページ)")
+        return
 
     if args.all:
         for n in by_no:

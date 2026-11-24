@@ -12,6 +12,7 @@
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
     "worksheets": "python3 worksheets/generate_worksheets.py --all",
+    "worksheets:month": "python3 worksheets/generate_worksheets.py --month",
     "smoke": "tsx scripts/smoke.ts"
   },
   "dependencies": {
