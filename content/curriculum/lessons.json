@@ -4998,6 +4998,1690 @@
       "recap": {
         "highlightsJa": ["スピード TPR で ワールド3の めいれいを ふくしゅう","あいさつ・きもち・かず・すきなものを ぜんぶ つかえたね","ダイグラフ sh ch th wh ck ng nk を ぜんぶ よめたよ。ワールド4では st や bl などの ブレンドを ならうよ！"]
       }
+    },
+    {
+      "lessonNo": 91,
+      "world": 4,
+      "title": "The ABC Song",
+      "titleJa": "ABCの うた",
+      "school": {
+        "grade": "小3",
+        "topic": "アルファベット 大文字（A〜M）",
+        "grammar": "Let's sing the ABC song. / What letter is this? ― It's A.",
+        "expressions": [
+          {"en":"Let's sing the ABC song.","ja":"ABCの うたを うたおう。","core":true},
+          {"en":"What letter is this? ― It's A.","ja":"これは なんの もじ？ ― A だよ。"},
+          {"en":"Sing with me!","ja":"いっしょに うたおう！"}
+        ],
+        "testPoints": ["A〜M の 大文字を みて いえる","What letter is this? と きかれて It's ～. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Stand up straight.","ja":"せすじを のばして たって。","action":"まっすぐ きをつけの しせいで たつ","emoji":"🧍"},
+        {"en":"Step forward.","ja":"まえに 1ぽ すすんで。","action":"まえに 1ぽ ふみだす","emoji":"👣"},
+        {"en":"Draw an A in the air.","ja":"くうちゅうに A を かいて。","action":"ゆびで くうちゅうに おおきな A を かく","emoji":"✍️"},
+        {"en":"Stop and clap.","ja":"とまって てを たたいて。","action":"ぴたっと とまって 1かい てを たたく","emoji":"👏"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["st"],
+        "sounds": ["/st/"],
+        "words": ["stop","step","stick","stamp"],
+        "tipJa": "st は s と t を くっつけて「スト」。あいだに「ウ」を いれないのが コツ！ s-t-o-p → stop！"
+      },
+      "vocab": [
+        {"en":"letter","ja":"もじ","emoji":"🔤","core":true},
+        {"en":"alphabet","ja":"アルファベット","emoji":"🔠"},
+        {"en":"song","ja":"うた","emoji":"🎵"},
+        {"en":"capital letter","ja":"おおもじ（大文字）","emoji":"🅰️"}
+      ],
+      "teacherScript": "Hello! ワールド4 なぞなぞ山へ ようこそ！きょうは アルファベットの 大文字。ABCの うたを うたいながら A から M まで みてみよう。「What letter is this?」と きかれたら「It's A.」だよ。",
+      "conversation": {
+        "scene": "A big stone gate with letters at the foot of Riddle Mountain",
+        "sceneJa": "なぞなぞ山の ふもと、もじが ほってある いしの もん",
+        "lines": [
+          {"speaker":"Birimo","en":"Welcome to Riddle Mountain! Look at the gate!","ja":"なぞなぞ山へ ようこそ！もんを みて！"},
+          {"speaker":"Riko","en":"Letters! What letter is this?","ja":"もじが ある！これは なんの もじ？"},
+          {"speaker":"Haru","en":"It's A. And this is B!","ja":"A だよ。こっちは B！"},
+          {"speaker":"Kiko","en":"Let's sing the ABC song!","ja":"ABCの うたを うたおう！"},
+          {"speaker":"Ms. Emma","en":"Good idea! A, B, C, D... Sing with me!","ja":"いいね！A、B、C、D… いっしょに うたおう！"}
+        ],
+        "aiTask": {
+          "goalJa": "What letter is this? と きかれたら It's ～. で もじを こたえよう（A〜M）",
+          "starterEn": "Look! Letters on the gate! What letter is this?",
+          "targetExpressions": ["It's ～.","What letter is this?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["ABCの うたで A〜M の 大文字を みたね","What letter is this? ― It's A. で こたえられたよ","stop, step！ st を つなげて よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 92,
+      "world": 4,
+      "title": "What Do You Want?",
+      "titleJa": "なにが ほしい？",
+      "school": {
+        "grade": "小3",
+        "topic": "アルファベット 大文字（N〜Z）・ほしい もじ",
+        "grammar": "What do you want? ― N, please. / Here you are. ― Thank you.",
+        "expressions": [
+          {"en":"What do you want?","ja":"なにが ほしい？","core":true},
+          {"en":"N, please.","ja":"N を ください。"},
+          {"en":"Here you are. ― Thank you.","ja":"はい、どうぞ。― ありがとう。"}
+        ],
+        "testPoints": ["N〜Z の 大文字を みて いえる","What do you want? と きかれて ～, please. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Spin around.","ja":"くるっと まわって。","action":"その ばで 1かい まわる","emoji":"🌀"},
+        {"en":"Point to the N.","ja":"N を ゆびさして。","action":"N の カードを ゆびさす","emoji":"👉"},
+        {"en":"Pick up a card.","ja":"カードを 1まい とって。","action":"つくえの カードを 1まい ひろう","emoji":"🃏"},
+        {"en":"Give it to me.","ja":"わたしに ちょうだい。","action":"あいてに りょうてで わたす","emoji":"🤲"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["sp"],
+        "sounds": ["/sp/"],
+        "words": ["spot","spin","spell","spun"],
+        "tipJa": "sp は s と p を くっつけて「スプ」。くちびるを ぱっと ひらこう。s-p-i-n → spin！"
+      },
+      "vocab": [
+        {"en":"want","ja":"ほしい","emoji":"🙏","core":true},
+        {"en":"card","ja":"カード","emoji":"🃏"},
+        {"en":"queen","ja":"じょおう","emoji":"👸"},
+        {"en":"zebra","ja":"しまうま","emoji":"🦓"}
+      ],
+      "teacherScript": "きょうは N から Z まで。カードを こうかんするときは「What do you want?」（なにが ほしい？）、こたえは「N, please.」（N を ください）だよ。",
+      "conversation": {
+        "scene": "Sorting letter cards during a rest on the mountain path",
+        "sceneJa": "やまみちの きゅうけいで もじカードを ならべる",
+        "lines": [
+          {"speaker":"Haru","en":"I have N, O, P and Q. What do you want, Kiko?","ja":"N と O と P と Q が あるよ。キコは なにが ほしい？"},
+          {"speaker":"Kiko","en":"Q, please! Q is for queen.","ja":"Q を ください！Q は queen の Q。"},
+          {"speaker":"Haru","en":"Here you are.","ja":"はい、どうぞ。"},
+          {"speaker":"Kiko","en":"Thank you! What do you want, Riko?","ja":"ありがとう！リコは なにが ほしい？"},
+          {"speaker":"Riko","en":"Z, please. Z is for zebra!","ja":"Z を ください。Z は zebra の Z！"}
+        ],
+        "aiTask": {
+          "goalJa": "What do you want? と きかれたら ほしい もじを ～, please. で いおう",
+          "starterEn": "I have letter cards. What do you want?",
+          "targetExpressions": ["～, please.","Thank you."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["N〜Z の 大文字を みたね","What do you want? ― N, please. で カードを もらえたよ","spin, spot！ sp を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 93,
+      "world": 4,
+      "title": "Find the Letters!",
+      "titleJa": "もじを さがそう！",
+      "school": {
+        "grade": "小3",
+        "topic": "まちの 大文字さがし",
+        "grammar": "I see a T. / Where is the S? ― Here!",
+        "expressions": [
+          {"en":"I see a T.","ja":"T が みえるよ。","core":true},
+          {"en":"Where is the S? ― Here!","ja":"S は どこ？ ― ここ！"},
+          {"en":"Look! It's a big M.","ja":"みて！おおきな M だよ。"}
+        ],
+        "testPoints": ["かんばんの 大文字を みつけて いえる","I see a ～. で みつけた ものを いえる"]
+      },
+      "tpr": [
+        {"en":"Snap your fingers.","ja":"ゆびを ならして。","action":"ゆびを パチンと ならす","emoji":"🫰"},
+        {"en":"Smell the flowers.","ja":"はなの においを かいで。","action":"はなに かおを ちかづけて くんくん","emoji":"🌸"},
+        {"en":"Look up.","ja":"うえを みて。","action":"かおを あげて うえを みる","emoji":"👀"},
+        {"en":"Find the T.","ja":"T を みつけて。","action":"まわりを みて T を さがす","emoji":"🔍"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["sn","sm"],
+        "sounds": ["/sn/","/sm/"],
+        "words": ["snap","snack","smell","smash"],
+        "tipJa": "sn は「スン」、sm は「スム」。s の あと すぐ はなに ひびかせるよ。s-n-a-p → snap、s-m-e-ll → smell！"
+      },
+      "vocab": [
+        {"en":"see","ja":"みる・みえる","emoji":"👀","core":true},
+        {"en":"sign","ja":"かんばん","emoji":"🪧"},
+        {"en":"shop","ja":"おみせ","emoji":"🏪"},
+        {"en":"station","ja":"えき","emoji":"🚉"}
+      ],
+      "teacherScript": "まちには 大文字が いっぱい！STOP、BUS、TAXI… みつけたら「I see a T.」と いってみよう。",
+      "conversation": {
+        "scene": "Riding a cable car to the mountain village and reading signs",
+        "sceneJa": "ロープウェイで やまの むらへ。かんばんの もじを さがす",
+        "lines": [
+          {"speaker":"Riko","en":"Look at the signs! I see a T.","ja":"かんばんを みて！T が みえる。"},
+          {"speaker":"Haru","en":"T is for taxi. I see a B. B is for bus!","ja":"T は taxi の T。B が みえるよ。B は bus の B！"},
+          {"speaker":"Kiko","en":"Where is the S?","ja":"S は どこ？"},
+          {"speaker":"Birimo","en":"Here! S, T, O, P. Stop!","ja":"ここ！S・T・O・P。ストップ！"},
+          {"speaker":"Ms. Emma","en":"Great job! You can read big letters.","ja":"すごいね！大文字が よめるね。"}
+        ],
+        "aiTask": {
+          "goalJa": "まちの かんばんで みつけた 大文字を I see a ～. で いおう",
+          "starterEn": "We're in town. Look at the signs! I see a B. What do you see?",
+          "targetExpressions": ["I see a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["まちの かんばんで 大文字を みつけたね","I see a T. で みつけた もじを いえたよ","snap, smell！ sn と sm を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 94,
+      "world": 4,
+      "title": "Body Letters",
+      "titleJa": "からだで もじ",
+      "school": {
+        "grade": "小3",
+        "topic": "からだで もじづくり",
+        "grammar": "Let's make a T. / How many letters? ― Two.",
+        "expressions": [
+          {"en":"Let's make a T.","ja":"T を つくろう。","core":true},
+          {"en":"How many letters? ― Two.","ja":"もじは いくつ？ ― 2つ。"},
+          {"en":"Is this an X? ― Yes!","ja":"これは X？ ― そう！"}
+        ],
+        "testPoints": ["Let's make a ～. で からだで もじを つくろうと さそえる","How many letters? と きかれて かずを こたえられる"]
+      },
+      "tpr": [
+        {"en":"Skip to the wall.","ja":"かべまで スキップして。","action":"かべまで スキップで すすむ","emoji":"💃"},
+        {"en":"Swing your arms.","ja":"うでを ふって。","action":"うでを まえと うしろに おおきく ふる","emoji":"💪"},
+        {"en":"Make an X with your body.","ja":"からだで X を つくって。","action":"てと あしを ななめに ひろげる","emoji":"❌"},
+        {"en":"Make a Y with your arms.","ja":"うでで Y を つくって。","action":"りょううでを ななめ うえに あげる","emoji":"🙆"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["sk","sw"],
+        "sounds": ["/sk/","/sw/"],
+        "words": ["skip","skin","swim","swing"],
+        "tipJa": "sk は「スク」、sw は「スウ」。swim は くちを まるく して s-w-i-m！"
+      },
+      "vocab": [
+        {"en":"make","ja":"つくる","emoji":"🛠️","core":true},
+        {"en":"arm","ja":"うで","emoji":"💪"},
+        {"en":"body","ja":"からだ","emoji":"🧍"},
+        {"en":"line","ja":"せん","emoji":"📏"}
+      ],
+      "teacherScript": "きょうは からだで もじを つくるよ！りょううでを ななめに あげたら Y。「Let's make a T.」で ともだちと いっしょに つくろう。",
+      "conversation": {
+        "scene": "Making letters with our bodies on a grassy hilltop",
+        "sceneJa": "くさの おかの うえで からだで もじづくり",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Let's make letters with our bodies!","ja":"からだで もじを つくろう！"},
+          {"speaker":"Haru","en":"Let's make a T. Arms out!","ja":"T を つくろう。うでを よこに！"},
+          {"speaker":"Kiko","en":"Look at me! Is this an X?","ja":"みて！これは X？"},
+          {"speaker":"Riko","en":"Yes! Now let's make H and I. Two letters!","ja":"そう！こんどは H と I。もじ 2つ！"},
+          {"speaker":"Birimo","en":"How many letters? Two! H, I. Hi!","ja":"もじは いくつ？2つ！H と I で ハイ！"}
+        ],
+        "aiTask": {
+          "goalJa": "Let's make a ～. で つくりたい もじを いおう。How many letters? にも こたえよう",
+          "starterEn": "Let's make letters with our bodies! Let's make a T. What letter is next?",
+          "targetExpressions": ["Let's make a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["からだで T や X を つくったね","Let's make a T. / How many letters? が つかえたよ","skip, swim！ sk と sw を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 95,
+      "world": 4,
+      "title": "Letter Card Swap",
+      "titleJa": "もじカード こうかんかい",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：もじカード こうかん",
+        "grammar": "What do you want? ― K, please. / Here you are. ― Thank you.",
+        "expressions": [
+          {"en":"K, please.","ja":"K を ください。","core":true},
+          {"en":"What do you want? ― H, please.","ja":"なにが ほしい？ ― H を ください。"},
+          {"en":"Here you are. ― Thank you!","ja":"はい、どうぞ。― ありがとう！"}
+        ],
+        "testPoints": ["What do you want? ― ～, please. で カードを こうかんできる","A〜Z の 大文字を よめる"]
+      },
+      "tpr": [
+        {"en":"Stand in a circle.","ja":"わに なって たって。","action":"みんなで まるく ならぶ","emoji":"⭕"},
+        {"en":"Swap cards.","ja":"カードを こうかんして。","action":"となりの ひとと カードを とりかえる","emoji":"🔄"},
+        {"en":"Show me the K.","ja":"K を みせて。","action":"K の カードを たかく あげる","emoji":"🃏"},
+        {"en":"Sit down.","ja":"すわって。","action":"その ばに すわる","emoji":"🪑"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["st","sp","sn","sm","sk","sw"],
+        "sounds": [],
+        "words": ["step","spin","snap","smell","skip","swim"],
+        "tipJa": "s の ブレンドを ぜんぶ よもう。st-e-p、sp-i-n、sn-a-p、sm-e-ll、sk-i-p、sw-i-m！ s の あとに すぐ つぎの おと！"
+      },
+      "vocab": [
+        {"en":"card","ja":"カード","emoji":"🃏","core":true},
+        {"en":"swap","ja":"こうかんする","emoji":"🔄"},
+        {"en":"word","ja":"ことば（たんご）","emoji":"💬"},
+        {"en":"collect","ja":"あつめる","emoji":"🧺"}
+      ],
+      "teacherScript": "まとめの カードこうかん！ほしい もじを あつめて、ことばを つくろう。「What do you want?」「K, please.」「Here you are.」「Thank you!」",
+      "conversation": {
+        "scene": "The letter card swap at the mountain hut",
+        "sceneJa": "やまごやの もじカード こうかんかい",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Collect C, A and T. Make a word!","ja":"C と A と T を あつめて。ことばを つくろう！"},
+          {"speaker":"Riko","en":"I have C. What do you want, Haru?","ja":"C が あるよ。ハルは なにが ほしい？"},
+          {"speaker":"Haru","en":"A, please. Here you are, T!","ja":"A を ください。はい、T を どうぞ！"},
+          {"speaker":"Riko","en":"Thank you! C, A, T. Cat!","ja":"ありがとう！C・A・T。cat！"},
+          {"speaker":"Kiko","en":"Meow! K, please, Birimo!","ja":"ニャー！ビリモ、K を ちょうだい！"}
+        ],
+        "aiTask": {
+          "goalJa": "カードこうかんを しよう。What do you want? ― ～, please. / Here you are. / Thank you. を つかおう",
+          "starterEn": "Let's swap letter cards! I have A, C and T. What do you want?",
+          "targetExpressions": ["～, please.","Here you are.","Thank you."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["もじカードを こうかんして ことばを つくったね","What do you want? ― K, please. Here you are. が いえたよ","st sp sn sm sk sw！ s の ブレンドを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 96,
+      "world": 4,
+      "title": "What Shape Is It?",
+      "titleJa": "なんの かたち？",
+      "school": {
+        "grade": "小3",
+        "topic": "かたち",
+        "grammar": "What shape is it? ― It's a star. / A star, please.",
+        "expressions": [
+          {"en":"A star, please.","ja":"ほしを ください。","core":true},
+          {"en":"What shape is it? ― It's a heart.","ja":"なんの かたち？ ― ハートだよ。"},
+          {"en":"I like this circle.","ja":"この まるが すき。"}
+        ],
+        "testPoints": ["star / heart / circle / triangle が いえる","A star, please. で ほしい かたちを たのめる"]
+      },
+      "tpr": [
+        {"en":"Draw a big circle.","ja":"おおきな まるを かいて。","action":"うでで くうちゅうに おおきな まるを かく","emoji":"⭕"},
+        {"en":"Make a triangle with your hands.","ja":"てで さんかくを つくって。","action":"りょうての ゆびで さんかくを つくる","emoji":"🔺"},
+        {"en":"Blink your eyes.","ja":"まばたきして。","action":"めを パチパチ させる","emoji":"😉"},
+        {"en":"Stack the blocks.","ja":"つみきを つんで。","action":"つみきを つむ まね","emoji":"🧱"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["bl"],
+        "sounds": ["/bl/"],
+        "words": ["black","block","blink","blob"],
+        "tipJa": "bl は b と l を くっつけて「ブル」。l は したの さきを うえの はの うらに つけるよ。b-l-o-ck → block！"
+      },
+      "vocab": [
+        {"en":"star","ja":"ほし","emoji":"⭐","core":true},
+        {"en":"heart","ja":"ハート","emoji":"❤️"},
+        {"en":"circle","ja":"まる","emoji":"⭕"},
+        {"en":"triangle","ja":"さんかく","emoji":"🔺"}
+      ],
+      "teacherScript": "きょうは かたち！ほし、ハート、まる、さんかく。ほしい かたちは「A star, please.」で たのめるよ。",
+      "conversation": {
+        "scene": "Picking shape stickers at the craft corner of the mountain lodge",
+        "sceneJa": "やまの ロッジの こうさくコーナーで かたちシール えらび",
+        "lines": [
+          {"speaker":"Kiko","en":"What shape is it?","ja":"これ なんの かたち？"},
+          {"speaker":"Riko","en":"It's a heart. I like this heart.","ja":"ハートだよ。この ハート すき。"},
+          {"speaker":"Ms. Emma","en":"What do you want, Haru?","ja":"ハルは なにが ほしい？"},
+          {"speaker":"Haru","en":"A star, please. A black star!","ja":"ほしを ください。くろい ほし！"},
+          {"speaker":"Birimo","en":"Here you are! Stars and hearts for everyone!","ja":"はい、どうぞ！みんなに ほしと ハート！"}
+        ],
+        "aiTask": {
+          "goalJa": "What shape is it? に It's a ～. で こたえて、A ～, please. で ほしい かたちを たのもう",
+          "starterEn": "I have stars, hearts and circles. What do you want?",
+          "targetExpressions": ["A ～, please.","It's a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["ほし・ハート・まる・さんかくを いえたね","A star, please. で ほしい かたちを たのめたよ","black, block！ bl を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 97,
+      "world": 4,
+      "title": "How Many Stars?",
+      "titleJa": "ほしは いくつ？",
+      "school": {
+        "grade": "小3",
+        "topic": "いろと かたちと かず",
+        "grammar": "Two red hearts, please. / How many stars? ― Five stars.",
+        "expressions": [
+          {"en":"Two red hearts, please.","ja":"あかい ハートを 2つ ください。","core":true},
+          {"en":"How many stars? ― Five stars.","ja":"ほしは いくつ？ ― 5つ。"},
+          {"en":"Blue squares, please.","ja":"あおい しかくを ください。"}
+        ],
+        "testPoints": ["かず＋いろ＋かたちで たのめる","How many ～? に かずで こたえられる"]
+      },
+      "tpr": [
+        {"en":"Clap three times.","ja":"3かい てを たたいて。","action":"てを 3かい たたく","emoji":"👏"},
+        {"en":"Close your eyes.","ja":"めを とじて。","action":"めを ぎゅっと とじる","emoji":"🙈"},
+        {"en":"Count the stars.","ja":"ほしを かぞえて。","action":"ゆびを おりながら かぞえる","emoji":"🔢"},
+        {"en":"Hold up two fingers.","ja":"ゆびを 2ほん たてて。","action":"ゆびで 2を つくる","emoji":"✌️"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["cl"],
+        "sounds": ["/kl/"],
+        "words": ["clap","clock","clip","club"],
+        "tipJa": "cl は c（ク）と l を くっつけて「クル」。c-l-a-p → clap！ てを たたく clap だね。"
+      },
+      "vocab": [
+        {"en":"square","ja":"しかく","emoji":"🟦","core":true},
+        {"en":"diamond","ja":"ひしがた","emoji":"🔷"},
+        {"en":"sticker","ja":"シール","emoji":"✨"},
+        {"en":"shop","ja":"おみせ","emoji":"🏪"}
+      ],
+      "teacherScript": "いろと かたちと かずを あわせると「Two red hearts, please.」。ながい ぶんでも だいじょうぶ。ゆっくり いってみよう。",
+      "conversation": {
+        "scene": "Riko and Haru buy shape stickers at Birimo's sticker shop",
+        "sceneJa": "ビリモの シールやさん",
+        "lines": [
+          {"speaker":"Birimo","en":"Welcome! Stars, hearts and squares!","ja":"いらっしゃい！ほし、ハート、しかく！"},
+          {"speaker":"Riko","en":"Two red hearts, please.","ja":"あかい ハートを 2つ ください。"},
+          {"speaker":"Birimo","en":"Here you are. Two red hearts!","ja":"はい、どうぞ。あかい ハート 2つ！"},
+          {"speaker":"Haru","en":"Blue squares, please. How many stars do you have?","ja":"あおい しかくを ください。ほしは いくつ ある？"},
+          {"speaker":"Birimo","en":"Five stars! Clap, clap!","ja":"ほしは 5つ！パチパチ！"}
+        ],
+        "aiTask": {
+          "goalJa": "かず・いろ・かたちを あわせて ～, please. で シールを たのもう",
+          "starterEn": "Welcome to my sticker shop! I have red hearts and yellow stars. What do you want?",
+          "targetExpressions": ["～, please.","How many ～?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["かず＋いろ＋かたちで シールを たのめたね","How many stars? ― Five stars. が いえたよ","clap, clock！ cl を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 98,
+      "world": 4,
+      "title": "Let's Make a Card!",
+      "titleJa": "カードを つくろう！",
+      "school": {
+        "grade": "小3",
+        "topic": "カードづくり",
+        "grammar": "Let's make a card. / Glue, please. / Fold. Cut. Glue.",
+        "expressions": [
+          {"en":"Let's make a card.","ja":"カードを つくろう。","core":true},
+          {"en":"Glue, please.","ja":"のりを かして。"},
+          {"en":"Look! It's a flag card.","ja":"みて！はたの カードだよ。"}
+        ],
+        "testPoints": ["Let's make a card. で さそえる","カードづくりの めいれい（fold / cut / glue）が わかる"]
+      },
+      "tpr": [
+        {"en":"Fold the paper.","ja":"かみを おって。","action":"かみを はんぶんに おる まね","emoji":"📄"},
+        {"en":"Cut out a star.","ja":"ほしを きりぬいて。","action":"はさみで ほしを きる まね","emoji":"✂️"},
+        {"en":"Glue it on.","ja":"のりで はって。","action":"のりを ぬって ぎゅっと おす","emoji":"🧴"},
+        {"en":"Flip the card.","ja":"カードを うらがえして。","action":"カードを くるっと うらがえす","emoji":"🔁"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["fl","gl"],
+        "sounds": ["/fl/","/gl/"],
+        "words": ["flag","flip","glad","glass"],
+        "tipJa": "fl は「フル」、gl は「グル」。f-l-a-g → flag、g-l-a-d → glad（うれしい）！"
+      },
+      "vocab": [
+        {"en":"paper","ja":"かみ","emoji":"📄","core":true},
+        {"en":"scissors","ja":"はさみ","emoji":"✂️"},
+        {"en":"glue","ja":"のり","emoji":"🧴"},
+        {"en":"pen","ja":"ペン","emoji":"🖊️"}
+      ],
+      "teacherScript": "きょうは カードづくり。かみを おって（Fold）、きって（Cut）、はって（Glue）。「Let's make a card.」で ともだちを さそおう。",
+      "conversation": {
+        "scene": "Making cards at a big table in the lodge",
+        "sceneJa": "ロッジの おおきな テーブルで カードづくり",
+        "lines": [
+          {"speaker":"Haru","en":"Let's make a card!","ja":"カードを つくろう！"},
+          {"speaker":"Kiko","en":"Fold the paper. Cut out a star.","ja":"かみを おって。ほしを きりぬいて。"},
+          {"speaker":"Riko","en":"Glue, please.","ja":"のりを かして。"},
+          {"speaker":"Kiko","en":"Here you are.","ja":"はい、どうぞ。"},
+          {"speaker":"Riko","en":"Look! It's a flag card. I'm glad!","ja":"みて！はたの カードだよ。うれしい！"}
+        ],
+        "aiTask": {
+          "goalJa": "Let's make a card. で さそって、～, please. で どうぐを かりよう",
+          "starterEn": "Let's make a card! I have paper and scissors. What do you want?",
+          "targetExpressions": ["Let's make a card.","～, please."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["カードづくりの めいれい Fold / Cut / Glue が わかったね","Let's make a card. Glue, please. が いえたよ","flag, glad！ fl と gl を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 99,
+      "world": 4,
+      "title": "This Is for You!",
+      "titleJa": "これ、あなたに！",
+      "school": {
+        "grade": "小3",
+        "topic": "カードを わたす",
+        "grammar": "This is for you. ― Thank you. I like it! / You're welcome.",
+        "expressions": [
+          {"en":"This is for you.","ja":"これ、あなたに。","core":true},
+          {"en":"Thank you. I like it!","ja":"ありがとう。きにいったよ！"},
+          {"en":"You're welcome.","ja":"どういたしまして。"}
+        ],
+        "testPoints": ["This is for you. で ものを わたせる","Thank you. / You're welcome. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Slide to the right.","ja":"みぎに スライドして。","action":"みぎに すーっと よこあるき","emoji":"➡️"},
+        {"en":"Hold the card with two hands.","ja":"カードを りょうてで もって。","action":"カードを りょうてで まえに もつ","emoji":"🤲"},
+        {"en":"Smile.","ja":"にっこり わらって。","action":"にっこり えがお","emoji":"😊"},
+        {"en":"Bow a little.","ja":"ちょっと おじぎして。","action":"かるく あたまを さげる","emoji":"🙇"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["pl","sl"],
+        "sounds": ["/pl/","/sl/"],
+        "words": ["plan","plum","sled","slip"],
+        "tipJa": "pl は「プル」、sl は「スル」。p-l-u-m → plum（すもも）、s-l-e-d → sled（そり）！"
+      },
+      "vocab": [
+        {"en":"present","ja":"プレゼント","emoji":"🎁","core":true},
+        {"en":"for you","ja":"あなたに","emoji":"💝"},
+        {"en":"flower","ja":"はな","emoji":"🌷"},
+        {"en":"ribbon","ja":"リボン","emoji":"🎀"}
+      ],
+      "teacherScript": "つくった カードを わたすときは「This is for you.」。もらったら「Thank you. I like it!」、おれいを いわれたら「You're welcome.」だよ。",
+      "conversation": {
+        "scene": "Kiko gives Birimo a card on a snowy slope",
+        "sceneJa": "ゆきの さかで、キコが ビリモに カードを わたす",
+        "lines": [
+          {"speaker":"Kiko","en":"Birimo! This is for you.","ja":"ビリモ！これ、あなたに。"},
+          {"speaker":"Birimo","en":"Wow! A sled card! Thank you. I like it!","ja":"わあ！そりの カード！ありがとう。きにいったよ！"},
+          {"speaker":"Kiko","en":"You're welcome.","ja":"どういたしまして。"},
+          {"speaker":"Haru","en":"Riko, this is for you. It's a plum.","ja":"リコ、これ あげる。すももだよ。"},
+          {"speaker":"Riko","en":"Thank you, Haru! Let's slide on the sled!","ja":"ありがとう、ハル！そりで すべろう！"}
+        ],
+        "aiTask": {
+          "goalJa": "This is for you. で わたす・Thank you. / You're welcome. で こたえる やりとりを しよう",
+          "starterEn": "Hello! I made a card. This is for you!",
+          "targetExpressions": ["Thank you.","This is for you.","You're welcome."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["This is for you. で カードを わたせたね","Thank you. ― You're welcome. の やりとりが できたよ","plum, sled！ pl と sl を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 100,
+      "world": 4,
+      "title": "Thank-You Cards",
+      "titleJa": "ありがとうカード",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：ありがとうカード",
+        "grammar": "A heart, please. / This is for you. It's a thank-you card. / Thank you. I like it!",
+        "expressions": [
+          {"en":"It's a thank-you card.","ja":"ありがとうカードだよ。","core":true},
+          {"en":"This is for you.","ja":"これ、あなたに。"},
+          {"en":"A heart, please. ― Here you are.","ja":"ハートを ください。― はい、どうぞ。"}
+        ],
+        "testPoints": ["かたち・カードづくり・わたす ときの ことばを つかえる","bl cl fl gl pl sl の ことばを よめる"]
+      },
+      "tpr": [
+        {"en":"Fold, cut, glue!","ja":"おって、きって、はって！","action":"カードづくりの うごきを はやく つづけて","emoji":"✂️"},
+        {"en":"Draw a heart.","ja":"ハートを かいて。","action":"ゆびで くうちゅうに ハートを かく","emoji":"❤️"},
+        {"en":"Give the card.","ja":"カードを わたして。","action":"りょうてで カードを さしだす","emoji":"💌"},
+        {"en":"Clap for your friends.","ja":"ともだちに はくしゅ。","action":"みんなに むかって はくしゅ","emoji":"👏"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["bl","cl","fl","gl","pl","sl"],
+        "sounds": [],
+        "words": ["block","clap","flag","glad","plum","sled"],
+        "tipJa": "l の ブレンドを ぜんぶ よもう。bl-o-ck、cl-a-p、fl-a-g、gl-a-d、pl-u-m、sl-e-d！ l は したの さきを うえに つけてね。"
+      },
+      "vocab": [
+        {"en":"thank you","ja":"ありがとう","emoji":"🙏","core":true},
+        {"en":"teacher","ja":"せんせい","emoji":"🧑‍🏫"},
+        {"en":"friend","ja":"ともだち","emoji":"🧒"},
+        {"en":"school nurse","ja":"ほけんの せんせい","emoji":"🩺"}
+      ],
+      "teacherScript": "まとめは ありがとうカード！かたちを えらんで、カードを つくって、「This is for you. It's a thank-you card.」で わたそう。",
+      "conversation": {
+        "scene": "Giving a thank-you card to Ms. Emma at the mountain school",
+        "sceneJa": "やまの がっこうで エマ先生に ありがとうカード",
+        "lines": [
+          {"speaker":"Riko","en":"A heart, please.","ja":"ハートを ください。"},
+          {"speaker":"Haru","en":"Here you are. Let's glue it on!","ja":"はい、どうぞ。はろう！"},
+          {"speaker":"Kiko","en":"Ms. Emma! This is for you. It's a thank-you card.","ja":"エマせんせい！これ どうぞ。ありがとうカードだよ。"},
+          {"speaker":"Ms. Emma","en":"Oh, a flag and a heart! Thank you. I like it!","ja":"まあ、はたと ハート！ありがとう。きにいったわ！"},
+          {"speaker":"Birimo","en":"You're welcome! Clap, clap!","ja":"どういたしまして！パチパチ！"}
+        ],
+        "aiTask": {
+          "goalJa": "ありがとうカードを わたそう。This is for you. It's a ～. と いって、かたちや いろも つたえよう",
+          "starterEn": "Oh, hello! Is that a card?",
+          "targetExpressions": ["This is for you.","It's a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["かたちを えらんで ありがとうカードを つくったね","This is for you. It's a thank-you card. が いえたよ","bl cl fl gl pl sl！ l の ブレンドを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 101,
+      "world": 4,
+      "title": "What's This?",
+      "titleJa": "これ なあに？",
+      "school": {
+        "grade": "小3",
+        "topic": "これなあに？クイズ",
+        "grammar": "What's this? ― It's a crab. / I don't know.",
+        "expressions": [
+          {"en":"What's this?","ja":"これ なあに？","core":true},
+          {"en":"It's a crab.","ja":"かにだよ。"},
+          {"en":"I don't know.","ja":"わからない。"}
+        ],
+        "testPoints": ["What's this? と きける","It's a ～. で こたえられる（わからない ときは I don't know.）"]
+      },
+      "tpr": [
+        {"en":"Brush your teeth.","ja":"はを みがいて。","action":"はブラシで はを みがく まね","emoji":"🪥"},
+        {"en":"Walk like a crab.","ja":"かにみたいに あるいて。","action":"よこに ちょこちょこ あるく","emoji":"🦀"},
+        {"en":"Cover your eyes.","ja":"めを かくして。","action":"てで めを かくす","emoji":"🙈"},
+        {"en":"Open your eyes.","ja":"めを あけて。","action":"てを はなして めを あける","emoji":"👀"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["br","cr"],
+        "sounds": ["/br/","/kr/"],
+        "words": ["brick","brush","crab","crib"],
+        "tipJa": "br は「ブル」、cr は「クル」。r は したを どこにも つけないで、くちを まるく！ c-r-a-b → crab！"
+      },
+      "vocab": [
+        {"en":"quiz","ja":"クイズ","emoji":"❓","core":true},
+        {"en":"crab","ja":"かに","emoji":"🦀"},
+        {"en":"box","ja":"はこ","emoji":"📦"},
+        {"en":"guess","ja":"あてる","emoji":"🤔"}
+      ],
+      "teacherScript": "なぞなぞ山の クイズが はじまるよ！「What's this?」（これ なあに？）と きかれたら「It's a ～.」。わからなければ「I don't know.」で だいじょうぶ。",
+      "conversation": {
+        "scene": "A mystery box quiz in the riddle cave",
+        "sceneJa": "なぞなぞの どうくつで はこの なかみ あて",
+        "lines": [
+          {"speaker":"Birimo","en":"Touch the box. What's this?","ja":"はこを さわって。これ なあに？"},
+          {"speaker":"Kiko","en":"Hmm... I don't know.","ja":"うーん… わからない。"},
+          {"speaker":"Haru","en":"It's hard. It's a brick!","ja":"かたいね。れんがだ！"},
+          {"speaker":"Birimo","en":"No! Look! It's a crab!","ja":"ちがう！みて！かにだよ！"},
+          {"speaker":"Riko","en":"A crab? Let's walk like a crab!","ja":"かに？かにみたいに あるこう！"}
+        ],
+        "aiTask": {
+          "goalJa": "What's this? と きかれたら It's a ～. で こたえよう。わからない ときは I don't know.",
+          "starterEn": "I have a mystery box. Touch it. What's this?",
+          "targetExpressions": ["It's a ～.","I don't know."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["What's this? ― It's a crab. の クイズを したね","わからない ときは I don't know. と いえるよ","crab, brush！ br と cr を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 102,
+      "world": 4,
+      "title": "Hint, Please!",
+      "titleJa": "ヒントを ください！",
+      "school": {
+        "grade": "小3",
+        "topic": "ヒントを たのむ",
+        "grammar": "Hint, please. ― It's red. It's round. / It's an apple!",
+        "expressions": [
+          {"en":"Hint, please.","ja":"ヒントを ください。","core":true},
+          {"en":"It's red. It's round.","ja":"あかいよ。まるいよ。"},
+          {"en":"I know! It's an apple!","ja":"わかった！りんごだ！"}
+        ],
+        "testPoints": ["Hint, please. で ヒントを たのめる","いろ・かたちの ヒントを きいて こたえられる"]
+      },
+      "tpr": [
+        {"en":"Drop the ball.","ja":"ボールを おとして。","action":"もっている ボールを ぽとんと おとす まね","emoji":"⚽"},
+        {"en":"Drum on the desk.","ja":"つくえで たいこを たたいて。","action":"つくえを トントン たたく","emoji":"🥁"},
+        {"en":"Raise your hand.","ja":"てを あげて。","action":"てを まっすぐ あげる","emoji":"✋"},
+        {"en":"Whisper the answer.","ja":"こたえを こそこそ いって。","action":"となりの ひとに ちいさな こえで いう","emoji":"🤫"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["dr"],
+        "sounds": ["/dr/"],
+        "words": ["drum","drip","drop","dress"],
+        "tipJa": "dr は d と r で「ジュル」に ちかい おと。d-r-u-m → drum（たいこ）！"
+      },
+      "vocab": [
+        {"en":"hint","ja":"ヒント","emoji":"💡","core":true},
+        {"en":"round","ja":"まるい","emoji":"⚪"},
+        {"en":"answer","ja":"こたえ","emoji":"✅"},
+        {"en":"drum","ja":"たいこ","emoji":"🥁"}
+      ],
+      "teacherScript": "クイズが むずかしい ときは「Hint, please.」。ヒントは「It's red. It's round.」みたいに いろや かたちで いうよ。",
+      "conversation": {
+        "scene": "A hint quiz by the campfire",
+        "sceneJa": "キャンプファイヤーの そばで ヒントクイズ",
+        "lines": [
+          {"speaker":"Riko","en":"Quiz time! What's this?","ja":"クイズ タイム！これ なあに？"},
+          {"speaker":"Haru","en":"Hint, please.","ja":"ヒントを ください。"},
+          {"speaker":"Riko","en":"It's red. It's round. It's sweet.","ja":"あかいよ。まるいよ。あまいよ。"},
+          {"speaker":"Haru","en":"I know! It's an apple!","ja":"わかった！りんごだ！"},
+          {"speaker":"Birimo","en":"That's right! Drum roll for Haru!","ja":"せいかい！ハルに ドラムロール！"}
+        ],
+        "aiTask": {
+          "goalJa": "Hint, please. で ヒントを もらって、It's a ～. で こたえを いおう",
+          "starterEn": "Quiz time! I'm thinking of a fruit. What's this?",
+          "targetExpressions": ["Hint, please.","It's a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Hint, please. で ヒントを たのめたね","It's red. It's round. の ヒントで こたえが わかったよ","drum, drop！ dr を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 103,
+      "world": 4,
+      "title": "Is It a Frog?",
+      "titleJa": "かえるかな？",
+      "school": {
+        "grade": "小3",
+        "topic": "クイズの しつもんと こたえ",
+        "grammar": "Is it a frog? ― Yes, it is. / No, it isn't. / That's right!",
+        "expressions": [
+          {"en":"That's right!","ja":"せいかい！","core":true},
+          {"en":"Is it a frog? ― Yes, it is.","ja":"かえる？ ― そうだよ。"},
+          {"en":"Is it a fish? ― No, it isn't.","ja":"さかな？ ― ちがうよ。"}
+        ],
+        "testPoints": ["Is it a ～? で きいて あてられる","Yes, it is. / No, it isn't. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Hop like a frog.","ja":"かえるみたいに はねて。","action":"しゃがんで ぴょんと はねる","emoji":"🐸"},
+        {"en":"Grab the ball.","ja":"ボールを つかんで。","action":"ボールを ぎゅっと つかむ まね","emoji":"🫳"},
+        {"en":"Grin.","ja":"にっこり わらって。","action":"はを みせて にっこり","emoji":"😁"},
+        {"en":"Shake your head.","ja":"くびを よこに ふって。","action":"くびを よこに ふって「ちがう」","emoji":"🙅"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["fr","gr"],
+        "sounds": ["/fr/","/gr/"],
+        "words": ["frog","from","grab","grin"],
+        "tipJa": "fr は「フル」、gr は「グル」。f-r-o-g → frog、g-r-i-n → grin（にっこり）！"
+      },
+      "vocab": [
+        {"en":"frog","ja":"かえる","emoji":"🐸","core":true},
+        {"en":"right","ja":"せいかい（ただしい）","emoji":"⭕"},
+        {"en":"wrong","ja":"まちがい","emoji":"❌"},
+        {"en":"pond","ja":"いけ","emoji":"🏞️"}
+      ],
+      "teacherScript": "クイズで「Is it a frog?」と きいてみよう。せいかいなら「Yes, it is. That's right!」、ちがったら「No, it isn't.」だよ。",
+      "conversation": {
+        "scene": "Guessing an animal hiding behind a rock at the pond",
+        "sceneJa": "いけの いわの かげに かくれた いきもの あて",
+        "lines": [
+          {"speaker":"Kiko","en":"Something is green. What's this?","ja":"なにか みどりの ものが いる。これ なあに？"},
+          {"speaker":"Haru","en":"Is it a fish?","ja":"さかな？"},
+          {"speaker":"Kiko","en":"No, it isn't. It can jump.","ja":"ちがうよ。ジャンプ できるよ。"},
+          {"speaker":"Riko","en":"Is it a frog?","ja":"かえる？"},
+          {"speaker":"Kiko","en":"Yes, it is! That's right!","ja":"そう！せいかい！"}
+        ],
+        "aiTask": {
+          "goalJa": "Is it a ～? で きいて あてよう。きかれたら Yes, it is. / No, it isn't. で こたえよう",
+          "starterEn": "Guess my animal! It's green. It can jump.",
+          "targetExpressions": ["Is it a ～?","Yes, it is.","No, it isn't."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Is it a frog? で きいて あてられたね","Yes, it is. / No, it isn't. That's right! が いえたよ","frog, grin！ fr と gr を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 104,
+      "world": 4,
+      "title": "Shadow Quiz",
+      "titleJa": "かげクイズ",
+      "school": {
+        "grade": "小3",
+        "topic": "シルエットクイズ",
+        "grammar": "One more hint, please. / I know! It's a truck. / Good try!",
+        "expressions": [
+          {"en":"I know! It's a truck.","ja":"わかった！トラックだ。","core":true},
+          {"en":"One more hint, please.","ja":"もう 1つ ヒントを ください。"},
+          {"en":"Good try!","ja":"おしい！"}
+        ],
+        "testPoints": ["かげを みて It's a ～. で こたえられる","One more hint, please. で もっと ヒントを たのめる"]
+      },
+      "tpr": [
+        {"en":"Trace the shadow.","ja":"かげを なぞって。","action":"ゆびで かげの ふちを なぞる","emoji":"✏️"},
+        {"en":"Make a shadow bunny.","ja":"てで うさぎの かげを つくって。","action":"ゆびで うさぎの みみを つくる","emoji":"🐰"},
+        {"en":"Turn off the light.","ja":"でんきを けして。","action":"スイッチを おす まね","emoji":"💡"},
+        {"en":"Trot like a horse.","ja":"うまみたいに パカパカ はしって。","action":"ひざを あげて かるく はしる","emoji":"🐴"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["tr"],
+        "sounds": ["/tr/"],
+        "words": ["truck","trip","trap","track"],
+        "tipJa": "tr は t と r で「チュル」に ちかい おと。t-r-u-ck → truck！"
+      },
+      "vocab": [
+        {"en":"shadow","ja":"かげ","emoji":"👤","core":true},
+        {"en":"truck","ja":"トラック","emoji":"🚚"},
+        {"en":"light","ja":"ひかり・でんき","emoji":"💡"},
+        {"en":"train","ja":"でんしゃ","emoji":"🚆"}
+      ],
+      "teacherScript": "でんきを けして、かげクイズ！かげだけ みて「I know! It's a truck.」。わからなければ「One more hint, please.」",
+      "conversation": {
+        "scene": "A shadow quiz with a flashlight in a dark tent",
+        "sceneJa": "くらい テントで かいちゅうでんとうの かげクイズ",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Look at the shadow. What's this?","ja":"かげを みて。これ なあに？"},
+          {"speaker":"Haru","en":"Is it a train?","ja":"でんしゃ？"},
+          {"speaker":"Ms. Emma","en":"Good try! It's big. It's on the road.","ja":"おしい！おおきいよ。どうろに いるよ。"},
+          {"speaker":"Riko","en":"One more hint, please.","ja":"もう 1つ ヒントを ください。"},
+          {"speaker":"Ms. Emma","en":"Beep, beep!","ja":"ブッブー！"},
+          {"speaker":"Kiko","en":"I know! It's a truck!","ja":"わかった！トラックだ！"}
+        ],
+        "aiTask": {
+          "goalJa": "かげクイズ！ One more hint, please. で ヒントを もらって、I know! It's a ～. で こたえよう",
+          "starterEn": "Look at the shadow. It's long. What's this?",
+          "targetExpressions": ["One more hint, please.","I know! It's a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["かげを みて I know! It's a truck. と こたえたね","One more hint, please. で ヒントを もっと もらえたよ","truck, trip！ tr を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 105,
+      "world": 4,
+      "title": "Hint Quiz Show",
+      "titleJa": "ヒントクイズ たいかい",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：ヒントクイズ大会",
+        "grammar": "What's this? ― Hint, please. / Is it a ～? ― That's right!",
+        "expressions": [
+          {"en":"Is it a crab?","ja":"かに？","core":true},
+          {"en":"What's this? ― Hint, please.","ja":"これ なあに？ ― ヒントを ください。"},
+          {"en":"It's red. It's small. ― It's a crab!","ja":"あかいよ。ちいさいよ。― かにだ！"}
+        ],
+        "testPoints": ["ヒントを たのんで こたえを あてられる","br cr dr fr gr tr の ことばを よめる"]
+      },
+      "tpr": [
+        {"en":"Press the button.","ja":"ボタンを おして。","action":"つくえの ボタンを ポンと おす まね","emoji":"🔴"},
+        {"en":"Grab the mic.","ja":"マイクを もって。","action":"マイクを にぎる まね","emoji":"🎤"},
+        {"en":"Try again.","ja":"もう いちど やって。","action":"ゆびを 1ぽん たてて もう いっかい","emoji":"🔁"},
+        {"en":"Cheer for the winner.","ja":"かった ひとを おうえんして。","action":"りょうてを あげて おうえん","emoji":"🎉"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["br","cr","dr","fr","gr","tr"],
+        "sounds": [],
+        "words": ["brush","crab","drum","frog","grin","truck"],
+        "tipJa": "r の ブレンドを ぜんぶ よもう。br-u-sh、cr-a-b、dr-u-m、fr-o-g、gr-i-n、tr-u-ck！ r は したを どこにも つけないよ。"
+      },
+      "vocab": [
+        {"en":"team","ja":"チーム","emoji":"👫","core":true},
+        {"en":"winner","ja":"かった ひと（ゆうしょう）","emoji":"🏆"},
+        {"en":"point","ja":"てん","emoji":"💯"},
+        {"en":"button","ja":"ボタン","emoji":"🔴"}
+      ],
+      "teacherScript": "ヒントクイズ大会！ボタンを おして こたえよう。「What's this?」「Hint, please.」「Is it a crab?」「That's right!」ぜんぶ つかってね。",
+      "conversation": {
+        "scene": "The Riddle Mountain hint quiz show on a stage",
+        "sceneJa": "なぞなぞ山の ヒントクイズ大会（ステージ）",
+        "lines": [
+          {"speaker":"Birimo","en":"Welcome to the Quiz Show! What's this?","ja":"クイズ大会へ ようこそ！これ なあに？"},
+          {"speaker":"Haru","en":"Hint, please.","ja":"ヒントを ください。"},
+          {"speaker":"Birimo","en":"It's red. It's small. It's in the sea.","ja":"あかいよ。ちいさいよ。うみに いるよ。"},
+          {"speaker":"Riko","en":"Is it a crab?","ja":"かに？"},
+          {"speaker":"Birimo","en":"That's right! One point for Team Riko!","ja":"せいかい！リコチームに 1てん！"}
+        ],
+        "aiTask": {
+          "goalJa": "クイズ大会！ Hint, please. で ヒントを もらい、Is it a ～? で こたえよう",
+          "starterEn": "Welcome to the Quiz Show! Here's a quiz. What's this?",
+          "targetExpressions": ["Hint, please.","Is it a ～?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["ヒントクイズ大会で クイズを だしあったね","What's this? Hint, please. Is it a crab? が つかえたよ","br cr dr fr gr tr！ r の ブレンドを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 106,
+      "world": 4,
+      "title": "Who Are You?",
+      "titleJa": "あなたは だれ？",
+      "school": {
+        "grade": "小3",
+        "topic": "どうぶつの えほん・だれ？",
+        "grammar": "Who are you? ― I'm a rabbit.",
+        "expressions": [
+          {"en":"Who are you?","ja":"あなたは だれ？","core":true},
+          {"en":"I'm a rabbit.","ja":"わたしは うさぎ。"},
+          {"en":"Hello, Rabbit!","ja":"こんにちは、うさぎさん！"}
+        ],
+        "testPoints": ["Who are you? と きける","I'm a ～. で どうぶつに なりきって こたえられる"]
+      },
+      "tpr": [
+        {"en":"Twist your body.","ja":"からだを ひねって。","action":"こしを ひねって みぎ・ひだり","emoji":"🌪️"},
+        {"en":"Turn the page.","ja":"ページを めくって。","action":"えほんの ページを めくる まね","emoji":"📖"},
+        {"en":"Hop like a rabbit.","ja":"うさぎみたいに ぴょんぴょん。","action":"りょうあしで ぴょんぴょん はねる","emoji":"🐰"},
+        {"en":"Hide behind the tree.","ja":"きの うしろに かくれて。","action":"てで かおを かくして しゃがむ","emoji":"🌳"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["tw"],
+        "sounds": ["/tw/"],
+        "words": ["twin","twig","twist"],
+        "tipJa": "tw は t と w で「トゥ」。くちを まるく とがらせるよ。t-w-i-n → twin（ふたご）！"
+      },
+      "vocab": [
+        {"en":"who","ja":"だれ","emoji":"❓","core":true},
+        {"en":"rabbit","ja":"うさぎ","emoji":"🐰"},
+        {"en":"picture book","ja":"えほん","emoji":"📖"},
+        {"en":"forest","ja":"もり","emoji":"🌲"}
+      ],
+      "teacherScript": "きょうから どうぶつの えほん！もりで だれかに あったら「Who are you?」。どうぶつは「I'm a rabbit.」と こたえるよ。",
+      "conversation": {
+        "scene": "Reading a picture book in the mountain library",
+        "sceneJa": "やまの としょかんで どうぶつの えほんを よむ",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Let's read a picture book. Turn the page.","ja":"えほんを よもう。ページを めくって。"},
+          {"speaker":"Riko","en":"Rustle, rustle... Who are you?","ja":"ガサガサ… あなたは だれ？"},
+          {"speaker":"Kiko","en":"I'm a rabbit. Hop, hop!","ja":"うさぎだよ。ぴょん、ぴょん！"},
+          {"speaker":"Haru","en":"Who are you?","ja":"きみは だれ？"},
+          {"speaker":"Birimo","en":"I'm a bird. Tweet, tweet! I'm on the twig.","ja":"とりだよ。ピッピッ！えだの うえに いるよ。"}
+        ],
+        "aiTask": {
+          "goalJa": "えほんの どうぶつに なりきろう。Who are you? と きかれたら I'm a ～. で こたえよう",
+          "starterEn": "Rustle, rustle... Who are you?",
+          "targetExpressions": ["I'm a ～.","Who are you?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["えほんで Who are you? と きいたね","I'm a rabbit. で どうぶつに なりきれたよ","twin, twig！ tw を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 107,
+      "world": 4,
+      "title": "Are You a Cat?",
+      "titleJa": "あなたは ねこ？",
+      "school": {
+        "grade": "小3",
+        "topic": "どうぶつ あて（Are you ～?）",
+        "grammar": "Are you a cat? ― Yes, I am. / No, I'm not. I'm a dog.",
+        "expressions": [
+          {"en":"Are you a cat?","ja":"あなたは ねこ？","core":true},
+          {"en":"Yes, I am.","ja":"うん、そうだよ。"},
+          {"en":"No, I'm not. I'm a dog.","ja":"ううん、ちがう。いぬだよ。"}
+        ],
+        "testPoints": ["Are you a ～? と きける","Yes, I am. / No, I'm not. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Clap like a seal.","ja":"あざらしみたいに てを たたいて。","action":"うでを のばして ぱたぱた たたく","emoji":"🦭"},
+        {"en":"Crawl like a baby.","ja":"あかちゃんみたいに はいはい。","action":"よつんばいで すすむ","emoji":"👶"},
+        {"en":"Scratch like a cat.","ja":"ねこみたいに ひっかく まね。","action":"てを まるめて くうちゅうを ひっかく","emoji":"🐱"},
+        {"en":"Wag your tail.","ja":"しっぽを ふって。","action":"おしりを ふりふり","emoji":"🐶"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["cl","cr"],
+        "sounds": ["/kl/","/kr/"],
+        "words": ["clap","crab","clip","crib"],
+        "tipJa": "cl と cr を くらべよう。clap（クラップ）と crab（クラブ）。l は したを うえに、r は したを どこにも つけない！"
+      },
+      "vocab": [
+        {"en":"cat","ja":"ねこ","emoji":"🐱","core":true},
+        {"en":"dog","ja":"いぬ","emoji":"🐶"},
+        {"en":"mouse","ja":"ねずみ","emoji":"🐭"},
+        {"en":"seal","ja":"あざらし","emoji":"🦭"}
+      ],
+      "teacherScript": "どうぶつの おめんを つけて あてっこ！「Are you a cat?」と きかれたら「Yes, I am.」か「No, I'm not. I'm a dog.」だよ。",
+      "conversation": {
+        "scene": "An animal mask guessing game in the picture book corner",
+        "sceneJa": "えほんコーナーで おめんの あてっこ ゲーム",
+        "lines": [
+          {"speaker":"Haru","en":"Meow? Are you a cat, Kiko?","ja":"ニャー？キコは ねこ？"},
+          {"speaker":"Kiko","en":"No, I'm not. I'm a dog. Woof!","ja":"ううん、ちがう。いぬだよ。ワン！"},
+          {"speaker":"Riko","en":"Squeak! Are you a mouse, Birimo?","ja":"チュー！ビリモは ねずみ？"},
+          {"speaker":"Birimo","en":"Yes, I am! Squeak, squeak!","ja":"うん、そうだよ！チューチュー！"},
+          {"speaker":"Ms. Emma","en":"Great! Are you a cat, Haru?","ja":"いいね！ハルは ねこ？"},
+          {"speaker":"Haru","en":"Yes, I am. Meow!","ja":"うん、そうだよ。ニャー！"}
+        ],
+        "aiTask": {
+          "goalJa": "Are you a ～? と きかれたら Yes, I am. / No, I'm not. I'm a ～. で こたえよう",
+          "starterEn": "Woof! Are you a cat?",
+          "targetExpressions": ["Yes, I am.","No, I'm not.","I'm a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Are you a cat? で どうぶつを あてたね","Yes, I am. / No, I'm not. I'm a dog. が いえたよ","clap と crab！ l と r の ちがいを きいたよ"]
+      }
+    },
+    {
+      "lessonNo": 108,
+      "world": 4,
+      "title": "Guess Who!",
+      "titleJa": "だれでしょう？",
+      "school": {
+        "grade": "小3",
+        "topic": "なきごえ あて・なりきり",
+        "grammar": "Guess who! / Are you a pig? ― No, I'm not. / I'm a duck.",
+        "expressions": [
+          {"en":"I'm a duck.","ja":"わたしは あひる。","core":true},
+          {"en":"Guess who!","ja":"だれでしょう？"},
+          {"en":"Are you a pig? ― No, I'm not.","ja":"ぶた？ ― ちがうよ。"}
+        ],
+        "testPoints": ["なきごえを きいて Are you a ～? で あてられる","I'm a ～. で じぶんの どうぶつを いえる"]
+      },
+      "tpr": [
+        {"en":"Flap your wings.","ja":"はねを ぱたぱた して。","action":"うでを はねのように ぱたぱた","emoji":"🪽"},
+        {"en":"Freeze!","ja":"とまって！（こおって）","action":"その ばで ぴたっと とまる","emoji":"🧊"},
+        {"en":"Quack like a duck.","ja":"あひるみたいに ガーガー。","action":"くちを とがらせて ガーガー","emoji":"🦆"},
+        {"en":"Walk like a bear.","ja":"くまみたいに のっしのっし あるいて。","action":"おおきく ゆっくり あるく","emoji":"🐻"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["fl","fr","bl","br"],
+        "sounds": ["/fl/","/fr/","/bl/","/br/"],
+        "words": ["flap","frog","black","brick"],
+        "tipJa": "l と r の ブレンド くらべ。fl-a-p と fr-o-g、bl-a-ck と br-i-ck。くちの かたちの ちがいを かんじよう！"
+      },
+      "vocab": [
+        {"en":"duck","ja":"あひる","emoji":"🦆","core":true},
+        {"en":"bear","ja":"くま","emoji":"🐻"},
+        {"en":"pig","ja":"ぶた","emoji":"🐷"},
+        {"en":"wing","ja":"はね","emoji":"🪽"}
+      ],
+      "teacherScript": "えほんの なりきり ゲーム。なきごえを きいて「Are you a pig?」。こたえは「No, I'm not. I'm a duck.」だよ。",
+      "conversation": {
+        "scene": "A voice-guessing game behind a curtain",
+        "sceneJa": "カーテンの うしろから なきごえ あて",
+        "lines": [
+          {"speaker":"Riko","en":"Quack, quack! Guess who!","ja":"ガーガー！だれでしょう？"},
+          {"speaker":"Haru","en":"Are you a pig?","ja":"ぶた？"},
+          {"speaker":"Riko","en":"No, I'm not.","ja":"ちがうよ。"},
+          {"speaker":"Kiko","en":"Are you a duck?","ja":"あひる？"},
+          {"speaker":"Riko","en":"Yes, I am! I'm a duck. Flap, flap!","ja":"そう！あひるだよ。パタパタ！"}
+        ],
+        "aiTask": {
+          "goalJa": "なきごえクイズ！ Are you a ～? で あてたり、I'm a ～. で なりきったり しよう",
+          "starterEn": "Oink, oink! Guess who!",
+          "targetExpressions": ["Are you a ～?","I'm a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["なきごえを きいて どうぶつを あてたね","I'm a duck. Are you a pig? が つかえたよ","flap と frog、black と brick！ l と r を くらべたよ"]
+      }
+    },
+    {
+      "lessonNo": 109,
+      "world": 4,
+      "title": "The Little Mouse's Trip",
+      "titleJa": "ちいさな ねずみの たび",
+      "school": {
+        "grade": "小3",
+        "topic": "えほんの よみきかせ",
+        "grammar": "Who are you? ― I'm a big bear. / Come with me! / Let's go together.",
+        "expressions": [
+          {"en":"Come with me!","ja":"いっしょに おいで！","core":true},
+          {"en":"Who are you? ― I'm a big bear.","ja":"だれ？ ― おおきな くまだよ。"},
+          {"en":"Let's go together.","ja":"いっしょに いこう。"}
+        ],
+        "testPoints": ["えほんの セリフを まねして いえる","Come with me! / Let's go together. で さそえる"]
+      },
+      "tpr": [
+        {"en":"Strap on your bag.","ja":"かばんを せおって。","action":"リュックを せおう まね","emoji":"🎒"},
+        {"en":"Sprint to the door.","ja":"ドアまで ダッシュ。","action":"その ばで はやく はしる","emoji":"🏃"},
+        {"en":"Scrub your hands.","ja":"てを ごしごし あらって。","action":"てを こすりあわせる","emoji":"🧼"},
+        {"en":"Tiptoe.","ja":"つまさきで あるいて。","action":"そーっと つまさきで あるく","emoji":"🩰"}
+      ],
+      "phonics": {
+        "rule": "blend",
+        "focus": ["str","spr","scr"],
+        "sounds": ["/str/","/spr/","/skr/"],
+        "words": ["strap","strip","sprint","scrub"],
+        "tipJa": "3つの おとの ブレンドに チャレンジ！ s-t-r で str、s-p-r で spr、s-c-r で scr。s-t-r-a-p → strap！"
+      },
+      "vocab": [
+        {"en":"story","ja":"おはなし","emoji":"📚","core":true},
+        {"en":"mouse","ja":"ねずみ","emoji":"🐭"},
+        {"en":"owl","ja":"ふくろう","emoji":"🦉"},
+        {"en":"bear","ja":"くま","emoji":"🐻"}
+      ],
+      "teacherScript": "きょうは えほんの よみきかせ。もりで どうぶつに あうたびに「Who are you?」。さいごは みんなで「Let's go together.」！",
+      "conversation": {
+        "scene": "Ms. Emma reads a story about a little mouse in the forest",
+        "sceneJa": "エマ先生の よみきかせ「ちいさな ねずみの もりの たび」",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Here is a little mouse in the forest.","ja":"もりに ちいさな ねずみが いました。"},
+          {"speaker":"Kiko","en":"I'm a mouse. Who are you?","ja":"ねずみだよ。あなたは だれ？"},
+          {"speaker":"Haru","en":"Hoo, hoo! I'm an owl. Come with me!","ja":"ホーホー！ふくろうだよ。いっしょに おいで！"},
+          {"speaker":"Riko","en":"Grr! I'm a big bear. Who are you?","ja":"ガオー！おおきな くまだよ。きみたちは だれ？"},
+          {"speaker":"Birimo","en":"Don't be scared! Let's go together!","ja":"こわくないよ！いっしょに いこう！"}
+        ],
+        "aiTask": {
+          "goalJa": "えほんの どうぶつに なって、Who are you? ― I'm a ～. / Come with me! を つかおう",
+          "starterEn": "Hoo, hoo! I'm an owl. Who are you?",
+          "targetExpressions": ["I'm a ～.","Come with me!"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["えほんの よみきかせで どうぶつの セリフを いったね","Come with me! Let's go together. で さそえたよ","strap, sprint, scrub！ 3つの おとの ブレンドも よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 110,
+      "world": 4,
+      "title": "Picture Book Play",
+      "titleJa": "えほんの げき",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：えほんの げき",
+        "grammar": "Who are you? ― I'm a ～. / Are you a ～? ― Yes, I am. / No, I'm not.",
+        "expressions": [
+          {"en":"Hello! I'm a frog.","ja":"こんにちは！ぼくは かえる。","core":true},
+          {"en":"Who are you? ― I'm a rabbit.","ja":"だれ？ ― うさぎだよ。"},
+          {"en":"Are you a bear? ― No, I'm not.","ja":"くま？ ― ちがうよ。"}
+        ],
+        "testPoints": ["えほんの げきで Who are you? / Are you a ～? の やりとりが できる","いろいろな ブレンドの ことばを よめる"]
+      },
+      "tpr": [
+        {"en":"Stand on the stage.","ja":"ステージに たって。","action":"まえに でて むねを はる","emoji":"🎭"},
+        {"en":"Swim like a fish.","ja":"さかなみたいに およいで。","action":"てを あわせて くねくね すすむ","emoji":"🐟"},
+        {"en":"Twist and turn.","ja":"ひねって まわって。","action":"からだを ひねって くるっと まわる","emoji":"🌀"},
+        {"en":"Take a bow.","ja":"おじぎを して。","action":"さいごに ゆっくり おじぎ","emoji":"🙇"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["st","sw","cl","fr","tw","str"],
+        "sounds": [],
+        "words": ["stop","swim","clap","frog","twin","strap"],
+        "tipJa": "ワールド4の ブレンドを まぜて よもう。st-o-p、sw-i-m、cl-a-p、fr-o-g、tw-i-n、str-a-p！"
+      },
+      "vocab": [
+        {"en":"animal","ja":"どうぶつ","emoji":"🐾","core":true},
+        {"en":"play","ja":"げき（おしばい）","emoji":"🎬"},
+        {"en":"mask","ja":"おめん","emoji":"🎭"},
+        {"en":"stage","ja":"ステージ","emoji":"🎤"}
+      ],
+      "teacherScript": "まとめは えほんの げき！おめんを つけて、どうぶつに なりきろう。「Who are you?」「Are you a ～?」で やりとり してね。",
+      "conversation": {
+        "scene": "A picture book play on the lodge stage",
+        "sceneJa": "ロッジの ステージで えほんの げき",
+        "lines": [
+          {"speaker":"Riko","en":"Who are you?","ja":"あなたは だれ？"},
+          {"speaker":"Haru","en":"Hello! I'm a frog. Ribbit!","ja":"こんにちは！かえるだよ。ケロケロ！"},
+          {"speaker":"Riko","en":"Grr... Are you a bear, Kiko?","ja":"ガオー… キコは くま？"},
+          {"speaker":"Kiko","en":"No, I'm not. I'm a rabbit!","ja":"ちがうよ。うさぎだよ！"},
+          {"speaker":"Birimo","en":"Let's go together! The end!","ja":"いっしょに いこう！おしまい！"},
+          {"speaker":"Ms. Emma","en":"Wonderful play! Take a bow.","ja":"すてきな げき！おじぎを して。"}
+        ],
+        "aiTask": {
+          "goalJa": "えほんの げきを しよう。Who are you? / Are you a ～? / I'm a ～. を つかおう（すきな どうぶつに なりきって OK）",
+          "starterEn": "Welcome to our play! Who are you?",
+          "targetExpressions": ["I'm a ～.","Are you a ～?","No, I'm not."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["えほんの げきで どうぶつに なりきったね","Who are you? / Are you a ～? / I'm a ～. が ぜんぶ つかえたよ","st sw cl fr tw str！ ブレンドを まぜて よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 111,
+      "world": 4,
+      "title": "It's Long!",
+      "titleJa": "ながーい！",
+      "school": {
+        "grade": "小3",
+        "topic": "いきものの ようす（ながい・みじかい）",
+        "grammar": "It's long. / It's short.",
+        "expressions": [
+          {"en":"It's long.","ja":"ながいね。","core":true},
+          {"en":"It's short.","ja":"みじかいね。"},
+          {"en":"Look at the snake. It's very long!","ja":"へびを みて。とても ながい！"}
+        ],
+        "testPoints": ["long / short で ようすを いえる","It's ～. で どうぶつの ようすを つたえられる"]
+      },
+      "tpr": [
+        {"en":"Stretch your arms.","ja":"うでを のばして。","action":"りょううでを ながーく のばす","emoji":"🙆"},
+        {"en":"Swing like a monkey.","ja":"さるみたいに ぶらさがって ゆれて。","action":"うでを あげて からだを ゆらす","emoji":"🐒"},
+        {"en":"Sneak like a snake.","ja":"へびみたいに そーっと すすんで。","action":"ひくい しせいで くねくね すすむ","emoji":"🐍"},
+        {"en":"Skip in a circle.","ja":"わに なって スキップ。","action":"まるく スキップで まわる","emoji":"💫"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["st","sn","sw","sk"],
+        "sounds": [],
+        "words": ["stuck","snug","swing","skunk"],
+        "tipJa": "s の ブレンドの ふりかえり。st-u-ck、sn-u-g、sw-i-ng、sk-u-nk！ さいごの ck・ng・nk も わすれずに。"
+      },
+      "vocab": [
+        {"en":"long","ja":"ながい","emoji":"📏","core":true},
+        {"en":"short","ja":"みじかい","emoji":"🤏"},
+        {"en":"snake","ja":"へび","emoji":"🐍"},
+        {"en":"giraffe","ja":"キリン","emoji":"🦒"}
+      ],
+      "teacherScript": "どうぶつえんの ガイドに なろう！へびは「It's long.」、ビリモの しっぽは「It's short.」。ようすを いう ことばだよ。",
+      "conversation": {
+        "scene": "Walking around the Riddle Mountain Zoo",
+        "sceneJa": "なぞなぞ山どうぶつえんを さんぽ",
+        "lines": [
+          {"speaker":"Kiko","en":"Look at the snake!","ja":"へびを みて！"},
+          {"speaker":"Haru","en":"It's long. It's very long!","ja":"ながいね。とても ながい！"},
+          {"speaker":"Riko","en":"Look at the giraffe. Long neck! Wow!","ja":"キリンを みて。くびが ながい！わあ！"},
+          {"speaker":"Birimo","en":"Look at my tail. It's short!","ja":"ぼくの しっぽを みて。みじかいよ！"},
+          {"speaker":"Kiko","en":"Ha ha! It's short and cute!","ja":"あはは！みじかくて かわいい！"}
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつを みて It's long. / It's short. で ようすを いおう",
+          "starterEn": "Look at the snake! Is it long or short?",
+          "targetExpressions": ["It's long.","It's short."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["どうぶつを みて It's long. / It's short. と いえたね","へびや キリンの ようすを つたえられたよ","stuck, swing, skunk！ s の ブレンドを ふりかえったよ"]
+      }
+    },
+    {
+      "lessonNo": 112,
+      "world": 4,
+      "title": "It's Big! It's Small!",
+      "titleJa": "おおきい！ちいさい！",
+      "school": {
+        "grade": "小3",
+        "topic": "いきものの ようす（おおきい・ちいさい・いろ）",
+        "grammar": "It's big. / It's small. / It's big and gray.",
+        "expressions": [
+          {"en":"It's small.","ja":"ちいさいね。","core":true},
+          {"en":"It's big and gray.","ja":"おおきくて はいいろ。"},
+          {"en":"Wow! It's so big!","ja":"わあ！すごく おおきい！"}
+        ],
+        "testPoints": ["big / small に いろを くわえて いえる","It's ～ and ～. で 2つの ようすを いえる"]
+      },
+      "tpr": [
+        {"en":"Make yourself big.","ja":"からだを おおきく して。","action":"てと あしを おおきく ひろげる","emoji":"🙌"},
+        {"en":"Make yourself small.","ja":"からだを ちいさく して。","action":"しゃがんで まるく なる","emoji":"🤏"},
+        {"en":"Flash a big smile.","ja":"にっこり わらって。","action":"おおきな えがおを みせる","emoji":"😁"},
+        {"en":"Move slowly like a sloth.","ja":"なまけものみたいに ゆっくり うごいて。","action":"とても ゆっくり てを のばす","emoji":"🦥"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["sl","fl","cl","bl"],
+        "sounds": [],
+        "words": ["sloth","flash","cluck","blush"],
+        "tipJa": "l の ブレンドの ふりかえり。sl-o-th、fl-a-sh、cl-u-ck、bl-u-sh！ さいごの th・sh・ck も よめるね。"
+      },
+      "vocab": [
+        {"en":"small","ja":"ちいさい","emoji":"🐜","core":true},
+        {"en":"big","ja":"おおきい","emoji":"⛰️"},
+        {"en":"elephant","ja":"ぞう","emoji":"🐘"},
+        {"en":"gray","ja":"はいいろ","emoji":"🩶"}
+      ],
+      "teacherScript": "「It's big.」「It's small.」に いろを くっつけると「It's big and gray.」。どうぶつえんの ガイドっぽく なるね！",
+      "conversation": {
+        "scene": "At the elephant and sloth area of the zoo",
+        "sceneJa": "どうぶつえんの ぞうと なまけものの コーナー",
+        "lines": [
+          {"speaker":"Riko","en":"Look! An elephant!","ja":"みて！ぞう！"},
+          {"speaker":"Haru","en":"Wow! It's so big! It's big and gray.","ja":"わあ！すごく おおきい！おおきくて はいいろ。"},
+          {"speaker":"Kiko","en":"Look at the sloth. It's small. It's slow.","ja":"なまけものを みて。ちいさいね。ゆっくりだね。"},
+          {"speaker":"Ms. Emma","en":"Good guides! Is the mouse big?","ja":"いい ガイドね！ねずみは おおきい？"},
+          {"speaker":"Birimo","en":"No! It's small. Very, very small!","ja":"ううん！ちいさいよ。とっても ちいさい！"}
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつの ようすを It's big. / It's small. / It's ～ and ～. で つたえよう",
+          "starterEn": "Look at the elephant! Is it big or small?",
+          "targetExpressions": ["It's big.","It's small.","It's ～ and ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["It's big. / It's small. で おおきさを いえたね","It's big and gray. で いろも つたえられたよ","sloth, flash！ l の ブレンドを ふりかえったよ"]
+      }
+    },
+    {
+      "lessonNo": 113,
+      "world": 4,
+      "title": "It's Fast! It's Slow!",
+      "titleJa": "はやい！ゆっくり！",
+      "school": {
+        "grade": "小3",
+        "topic": "いきものの ようす（はやい・ゆっくり・つよい）",
+        "grammar": "It's fast. / It's slow. / It's strong.",
+        "expressions": [
+          {"en":"It's fast.","ja":"はやいね。","core":true},
+          {"en":"It's slow.","ja":"ゆっくりだね。"},
+          {"en":"It's strong.","ja":"つよいね。"}
+        ],
+        "testPoints": ["fast / slow / strong で うごきや ちからを いえる","どうぶつの とくちょうを It's ～. で つたえられる"]
+      },
+      "tpr": [
+        {"en":"Run fast like a cheetah.","ja":"チーターみたいに はやく はしって。","action":"その ばで とても はやく はしる","emoji":"🐆"},
+        {"en":"Walk slowly like a turtle.","ja":"かめみたいに ゆっくり あるいて。","action":"とても ゆっくり あるく","emoji":"🐢"},
+        {"en":"Trumpet like an elephant.","ja":"ぞうみたいに パオーン。","action":"うでを はなに して あげて パオーン","emoji":"🐘"},
+        {"en":"Show your strong arms.","ja":"つよい うでを みせて。","action":"うでを まげて ちからこぶ","emoji":"💪"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["cr","dr","tr","fr"],
+        "sounds": [],
+        "words": ["crash","drink","trunk","frost"],
+        "tipJa": "r の ブレンドの ふりかえり。cr-a-sh、dr-i-nk、tr-u-nk（ぞうの はな）、fr-o-st！"
+      },
+      "vocab": [
+        {"en":"fast","ja":"はやい","emoji":"💨","core":true},
+        {"en":"slow","ja":"ゆっくり（おそい）","emoji":"🐌"},
+        {"en":"strong","ja":"つよい","emoji":"💪"},
+        {"en":"turtle","ja":"かめ","emoji":"🐢"}
+      ],
+      "teacherScript": "うごきの ようすも いえるよ。チーターは「It's fast.」、かめは「It's slow.」、ぞうは「It's strong.」！",
+      "conversation": {
+        "scene": "Watching an animal race video at the zoo museum",
+        "sceneJa": "どうぶつえんの はくぶつかんで どうぶつ レースの ビデオ",
+        "lines": [
+          {"speaker":"Haru","en":"Look! A cheetah! It's fast!","ja":"みて！チーター！はやい！"},
+          {"speaker":"Kiko","en":"The turtle is slow. Go, turtle, go!","ja":"かめは ゆっくり。がんばれ、かめ！"},
+          {"speaker":"Riko","en":"Look at the elephant's trunk. It's strong!","ja":"ぞうの はなを みて。つよい！"},
+          {"speaker":"Birimo","en":"I'm fast too! Zoom!","ja":"ぼくも はやいよ！ビューン！"},
+          {"speaker":"Ms. Emma","en":"Ha ha! You're slow, Birimo.","ja":"あはは！ビリモは ゆっくりよ。"}
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつの うごきを It's fast. / It's slow. / It's strong. で いおう",
+          "starterEn": "Look at the cheetah! Is it fast or slow?",
+          "targetExpressions": ["It's fast.","It's slow.","It's strong."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["It's fast. / It's slow. で うごきの ようすを いえたね","It's strong. で つよさも つたえられたよ","crash, trunk！ r の ブレンドを ふりかえったよ"]
+      }
+    },
+    {
+      "lessonNo": 114,
+      "world": 4,
+      "title": "Animal Riddles",
+      "titleJa": "どうぶつ なぞなぞ",
+      "school": {
+        "grade": "小3",
+        "topic": "ようすで なぞなぞ",
+        "grammar": "It's long and green. What animal is it? ― It's a snake!",
+        "expressions": [
+          {"en":"It's long and green.","ja":"ながくて みどり。","core":true},
+          {"en":"What animal is it? ― It's a snake!","ja":"なんの どうぶつ？ ― へびだ！"},
+          {"en":"It's big. It's strong. It's gray.","ja":"おおきい。つよい。はいいろ。"}
+        ],
+        "testPoints": ["ようすの ことばを つなげて なぞなぞを だせる","ヒントを きいて どうぶつを あてられる"]
+      },
+      "tpr": [
+        {"en":"Stomp like an elephant.","ja":"ぞうみたいに ドシンドシン。","action":"あしを おおきく ふみならす","emoji":"🐘"},
+        {"en":"Blink like an owl.","ja":"ふくろうみたいに まばたき。","action":"めを おおきく ゆっくり パチパチ","emoji":"🦉"},
+        {"en":"Trot like a pony.","ja":"ポニーみたいに パカパカ。","action":"ひざを あげて かるく はしる","emoji":"🐴"},
+        {"en":"Twist like a snake.","ja":"へびみたいに くねくね。","action":"からだを くねくね させる","emoji":"🐍"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["st","bl","tr","tw"],
+        "sounds": [],
+        "words": ["stomp","blink","trot","twist"],
+        "tipJa": "いろいろな ブレンドを しわけよう。st-o-mp、bl-i-nk、tr-o-t、tw-i-st！ どれも さいしょの 2つの おとを くっつけるよ。"
+      },
+      "vocab": [
+        {"en":"riddle","ja":"なぞなぞ","emoji":"❓","core":true},
+        {"en":"green","ja":"みどり","emoji":"💚"},
+        {"en":"owl","ja":"ふくろう","emoji":"🦉"},
+        {"en":"pony","ja":"ポニー","emoji":"🐴"}
+      ],
+      "teacherScript": "ようすの ことばで なぞなぞを つくろう。「It's long and green. What animal is it?」…こたえは へび！",
+      "conversation": {
+        "scene": "A riddle game on the hill in the zoo",
+        "sceneJa": "どうぶつえんの おかの うえで なぞなぞ ゲーム",
+        "lines": [
+          {"speaker":"Riko","en":"Riddle time! It's long and green.","ja":"なぞなぞ タイム！ながくて みどり。"},
+          {"speaker":"Kiko","en":"What animal is it? Hint, please.","ja":"なんの どうぶつ？ヒントを ください。"},
+          {"speaker":"Riko","en":"It can't walk. It can twist.","ja":"あるけないよ。くねくね できるよ。"},
+          {"speaker":"Kiko","en":"I know! It's a snake!","ja":"わかった！へびだ！"},
+          {"speaker":"Haru","en":"My turn! It's big. It's strong. It's gray.","ja":"ぼくの ばん！おおきい。つよい。はいいろ。"},
+          {"speaker":"Birimo","en":"It's an elephant!","ja":"ぞうだ！"}
+        ],
+        "aiTask": {
+          "goalJa": "ようすの ことば（long / big / small / fast / いろ）で なぞなぞを だしあおう",
+          "starterEn": "Riddle time! It's small. It's white. It can hop. What animal is it?",
+          "targetExpressions": ["It's ～.","It's a ～!"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["ようすの ことばで どうぶつ なぞなぞを したね","It's long and green. で ヒントが だせたよ","stomp, blink, trot, twist！ ブレンドを しわけたよ"]
+      }
+    },
+    {
+      "lessonNo": 115,
+      "world": 4,
+      "title": "Zoo Guide",
+      "titleJa": "どうぶつえんガイド",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：どうぶつえんガイド",
+        "grammar": "This is a ～. It's ～. It can ～.",
+        "expressions": [
+          {"en":"This is a swan. It's white.","ja":"これは はくちょう。しろいよ。","core":true},
+          {"en":"It can swim.","ja":"およげるよ。"},
+          {"en":"Welcome to the zoo! Follow me.","ja":"どうぶつえんへ ようこそ！ついてきて。"}
+        ],
+        "testPoints": ["This is a ～. It's ～. It can ～. で どうぶつを しょうかいできる","語頭ブレンド（s- l- r- tw）の ことばを よめる"]
+      },
+      "tpr": [
+        {"en":"Follow me.","ja":"ついてきて。","action":"せんとうの ひとの うしろを あるく","emoji":"🚶"},
+        {"en":"Point to the swan.","ja":"はくちょうを ゆびさして。","action":"はくちょうの えを ゆびさす","emoji":"🦢"},
+        {"en":"Wave to the animals.","ja":"どうぶつに てを ふって。","action":"おおきく てを ふる","emoji":"👋"},
+        {"en":"Clap for the guide.","ja":"ガイドに はくしゅ。","action":"ガイドに むかって はくしゅ","emoji":"👏"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["cr","fr","sl","sk","sw","cl"],
+        "sounds": [],
+        "words": ["crab","frog","sloth","skunk","swan","clam"],
+        "tipJa": "どうぶつの なまえで ブレンドの そうふくしゅう。cr-a-b、fr-o-g、sl-o-th、sk-u-nk、sw-a-n、cl-a-m！"
+      },
+      "vocab": [
+        {"en":"zoo","ja":"どうぶつえん","emoji":"🦁","core":true},
+        {"en":"guide","ja":"あんないする ひと（ガイド）","emoji":"🧭"},
+        {"en":"swan","ja":"はくちょう","emoji":"🦢"},
+        {"en":"skunk","ja":"スカンク","emoji":"🦨"}
+      ],
+      "teacherScript": "まとめは どうぶつえんガイド！「This is a swan. It's white. It can swim.」みたいに、なまえ・ようす・できる ことを つなげよう。",
+      "conversation": {
+        "scene": "The children guide Ms. Emma around the zoo",
+        "sceneJa": "子どもたちが エマ先生を どうぶつえんで あんない",
+        "lines": [
+          {"speaker":"Haru","en":"Welcome to the zoo! Follow me.","ja":"どうぶつえんへ ようこそ！ついてきて。"},
+          {"speaker":"Riko","en":"This is a swan. It's white. It can swim.","ja":"これは はくちょう。しろいよ。およげるよ。"},
+          {"speaker":"Kiko","en":"This is a sloth. It's slow. It's cute!","ja":"これは なまけもの。ゆっくりだよ。かわいい！"},
+          {"speaker":"Ms. Emma","en":"What's this? It's black and white.","ja":"これは なあに？くろと しろね。"},
+          {"speaker":"Birimo","en":"It's a skunk! Don't touch!","ja":"スカンクだよ！さわらないで！"}
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつえんガイドに なろう。This is a ～. It's ～. It can ～. で どうぶつを しょうかいしよう",
+          "starterEn": "Hello, guide! I'm at the zoo. What's this animal?",
+          "targetExpressions": ["This is a ～.","It's ～.","It can ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["どうぶつえんガイドに なって どうぶつを しょうかいしたね","This is a ～. It's ～. It can ～. が つなげて いえたよ","crab, frog, sloth, skunk, swan, clam！ ブレンドを ぜんぶ ふりかえったよ"]
+      }
+    },
+    {
+      "lessonNo": 116,
+      "world": 4,
+      "title": "My Poster",
+      "titleJa": "わたしの ポスター",
+      "school": {
+        "grade": "小3",
+        "topic": "じこしょうかいポスターづくり",
+        "grammar": "I'm ～. I like ～. I can ～. / Let's make a poster.",
+        "expressions": [
+          {"en":"I like stars.","ja":"ほしが すき。","core":true},
+          {"en":"I'm Kiko. I can swim.","ja":"キコです。およげるよ。"},
+          {"en":"Let's make a poster.","ja":"ポスターを つくろう。"}
+        ],
+        "testPoints": ["I'm ～. I like ～. I can ～. で じこしょうかいが できる","ながい ことばを 2つに わけて よめる"]
+      },
+      "tpr": [
+        {"en":"Write a big letter.","ja":"おおきな もじを かいて。","action":"くうちゅうに おおきく もじを かく","emoji":"✍️"},
+        {"en":"Color the stars.","ja":"ほしに いろを ぬって。","action":"クレヨンで ぬる まね","emoji":"🖍️"},
+        {"en":"Hang up the poster.","ja":"ポスターを はって。","action":"かべに ポスターを はる まね","emoji":"📌"},
+        {"en":"Step back and look.","ja":"うしろに さがって みて。","action":"2ほ さがって ながめる","emoji":"👀"}
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": ["sun-set","hot-dog","bath-tub","lap-top"],
+        "sounds": [],
+        "words": ["sunset","hotdog","bathtub","laptop"],
+        "tipJa": "ながい ことばは 2つに わけて よもう。sun と set で sunset（ゆうひ）、hot と dog で hotdog！ 1つずつ よめば かんたん。"
+      },
+      "vocab": [
+        {"en":"poster","ja":"ポスター","emoji":"🖼️","core":true},
+        {"en":"crayon","ja":"クレヨン","emoji":"🖍️"},
+        {"en":"sunset","ja":"ゆうひ","emoji":"🌅"},
+        {"en":"hotdog","ja":"ホットドッグ","emoji":"🌭"}
+      ],
+      "teacherScript": "小3の まとめが はじまるよ。さいごは はっぴょうかい！まずは じこしょうかいポスター。「I'm ～. I like ～. I can ～.」を かこう。",
+      "conversation": {
+        "scene": "Making self-introduction posters as the sun sets over the mountain",
+        "sceneJa": "やまに ゆうひが しずむころ、じこしょうかいポスターづくり",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Let's make a poster about you!","ja":"じぶんの ポスターを つくろう！"},
+          {"speaker":"Kiko","en":"I'm Kiko. I like stars. I can swim.","ja":"キコです。ほしが すき。およげるよ。"},
+          {"speaker":"Haru","en":"I like hotdogs! I can run fast.","ja":"ぼくは ホットドッグが すき！はやく はしれるよ。"},
+          {"speaker":"Riko","en":"I like the sunset. It's red and orange.","ja":"わたしは ゆうひが すき。あかと オレンジ。"},
+          {"speaker":"Birimo","en":"Hang up the posters! Beautiful!","ja":"ポスターを はろう！きれい！"}
+        ],
+        "aiTask": {
+          "goalJa": "ポスターに かく じこしょうかいを いおう。I'm ～. I like ～. I can ～.（なまえは ニックネームでも OK）",
+          "starterEn": "Let's make posters! I'm Haru. I like hotdogs. I can run fast. How about you?",
+          "targetExpressions": ["I'm ～.","I like ～.","I can ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["じこしょうかいポスターを つくったね","I'm ～. I like ～. I can ～. を つなげて いえたよ","sun-set、hot-dog！ 2つに わけて ながい ことばを よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 117,
+      "world": 4,
+      "title": "My Treasure",
+      "titleJa": "わたしの たからもの",
+      "school": {
+        "grade": "小3",
+        "topic": "たからもの しょうかい",
+        "grammar": "This is my treasure. It's a ～. It's ～.",
+        "expressions": [
+          {"en":"This is my treasure.","ja":"これは わたしの たからもの。","core":true},
+          {"en":"It's a backpack. It's blue.","ja":"リュックだよ。あおいよ。"},
+          {"en":"Nice!","ja":"いいね！"}
+        ],
+        "testPoints": ["This is my ～. で ものを しょうかいできる","It's ～. で いろや ようすを つけたせる"]
+      },
+      "tpr": [
+        {"en":"Open your backpack.","ja":"リュックを あけて。","action":"リュックの チャックを あける まね","emoji":"🎒"},
+        {"en":"Take out your treasure.","ja":"たからものを だして。","action":"なかから そっと とりだす まね","emoji":"💎"},
+        {"en":"Show it to your friend.","ja":"ともだちに みせて。","action":"りょうてで まえに さしだす","emoji":"🙌"},
+        {"en":"Put it back.","ja":"もとに もどして。","action":"リュックに しまう まね","emoji":"↩️"}
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": ["back-pack","cat-fish","chip-munk","cob-web"],
+        "sounds": [],
+        "words": ["backpack","catfish","chipmunk","cobweb"],
+        "tipJa": "2つに わけよう。back と pack、cat と fish、chip と munk、cob と web。ck・sh・ch も ちゃんと よめるね！"
+      },
+      "vocab": [
+        {"en":"treasure","ja":"たからもの","emoji":"💎","core":true},
+        {"en":"backpack","ja":"リュック","emoji":"🎒"},
+        {"en":"shell","ja":"かいがら","emoji":"🐚"},
+        {"en":"rock","ja":"いし","emoji":"🪨"}
+      ],
+      "teacherScript": "じぶんの たからものを しょうかいしよう。「This is my treasure. It's a ～. It's ～.」。ほんものでも、えでも OK！",
+      "conversation": {
+        "scene": "Show and tell with treasures in the mountain hut",
+        "sceneJa": "やまごやで たからもの しょうかい",
+        "lines": [
+          {"speaker":"Riko","en":"This is my treasure. It's a shell. It's pink.","ja":"これは わたしの たからもの。かいがらだよ。ピンクなの。"},
+          {"speaker":"Haru","en":"Nice! This is my treasure. It's a backpack. It's blue.","ja":"いいね！これが ぼくの たからもの。リュックだよ。あおいよ。"},
+          {"speaker":"Kiko","en":"This is my treasure. It's a rock. It's a heart rock!","ja":"これが わたしの たからもの。いしだよ。ハートの いし！"},
+          {"speaker":"Birimo","en":"Wow, a heart! Nice!","ja":"わあ、ハート！いいね！"}
+        ],
+        "aiTask": {
+          "goalJa": "すきな ものを たからものとして This is my treasure. It's a ～. で しょうかいしよう（えや おもちゃ でも OK）",
+          "starterEn": "This is my treasure. It's a backpack. It's blue. What's your treasure?",
+          "targetExpressions": ["This is my treasure.","It's a ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["たからものを This is my treasure. で しょうかいしたね","It's a shell. It's pink. で いろも つたえられたよ","back-pack、chip-munk！ 2つの パーツで よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 118,
+      "world": 4,
+      "title": "Practice Time",
+      "titleJa": "れんしゅう タイム",
+      "school": {
+        "grade": "小3",
+        "topic": "はっぴょうの れんしゅう",
+        "grammar": "You can do it! / Speak loudly, please. / One more time!",
+        "expressions": [
+          {"en":"You can do it!","ja":"きみなら できるよ！","core":true},
+          {"en":"Speak loudly, please.","ja":"おおきな こえで いってね。"},
+          {"en":"One more time!","ja":"もう いっかい！"}
+        ],
+        "testPoints": ["You can do it! で おうえんできる","はっぴょうの めいれい（speak loudly / look at me）が わかる"]
+      },
+      "tpr": [
+        {"en":"Speak loudly.","ja":"おおきな こえで いって。","action":"おなかから おおきな こえを だす","emoji":"📢"},
+        {"en":"Look at me.","ja":"わたしを みて。","action":"あいての めを みる","emoji":"👀"},
+        {"en":"Stand tall.","ja":"せすじを のばして。","action":"むねを はって まっすぐ たつ","emoji":"🧍"},
+        {"en":"Give a thumbs-up.","ja":"グッドの ポーズ。","action":"おやゆびを たてる","emoji":"👍"}
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": ["desk-top","drum-stick","hand-stand","gum-drop"],
+        "sounds": [],
+        "words": ["desktop","drumstick","handstand","gumdrop"],
+        "tipJa": "ブレンドが はいった ながい ことばも 2つに わければ OK。desk と top、drum と stick、hand と stand、gum と drop！"
+      },
+      "vocab": [
+        {"en":"practice","ja":"れんしゅう","emoji":"🔁","core":true},
+        {"en":"voice","ja":"こえ","emoji":"🗣️"},
+        {"en":"loud","ja":"（こえが）おおきい","emoji":"📢"},
+        {"en":"mic","ja":"マイク","emoji":"🎤"}
+      ],
+      "teacherScript": "はっぴょうかいの れんしゅう！ともだちが どきどき していたら「You can do it!」。おおきな こえで、あいての めを みて はなそう。",
+      "conversation": {
+        "scene": "Rehearsing for the presentation in the school gym",
+        "sceneJa": "たいいくかんで はっぴょうの リハーサル",
+        "lines": [
+          {"speaker":"Kiko","en":"I'm nervous...","ja":"どきどきする…"},
+          {"speaker":"Haru","en":"You can do it, Kiko!","ja":"キコなら できるよ！"},
+          {"speaker":"Ms. Emma","en":"Speak loudly, please. Look at me.","ja":"おおきな こえで いってね。わたしを みて。"},
+          {"speaker":"Kiko","en":"I'm Kiko. I like stars!","ja":"キコです。ほしが すき！"},
+          {"speaker":"Riko","en":"Great! One more time!","ja":"すごい！もう いっかい！"}
+        ],
+        "aiTask": {
+          "goalJa": "はっぴょうの れんしゅう。じこしょうかいを おおきな こえで いって、You can do it! で おうえんも しよう（なまえは ニックネームでも OK）",
+          "starterEn": "Let's practice! Speak loudly, please. What do you like?",
+          "targetExpressions": ["I'm ～.","I like ～.","You can do it!"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["はっぴょうの れんしゅうを したね","You can do it! で ともだちを おうえん できたよ","drum-stick、hand-stand！ ブレンド入りの ながい ことばも よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 119,
+      "world": 4,
+      "title": "Any Questions?",
+      "titleJa": "しつもんタイム",
+      "school": {
+        "grade": "小3",
+        "topic": "はっぴょうの あとの しつもん",
+        "grammar": "Any questions? / Do you like ～? / What color do you like?",
+        "expressions": [
+          {"en":"Do you like frogs?","ja":"かえるは すき？","core":true},
+          {"en":"What color do you like? ― I like green.","ja":"なにいろが すき？ ― みどりが すき。"},
+          {"en":"Any questions?","ja":"しつもんは ありますか？"}
+        ],
+        "testPoints": ["はっぴょうの あとに Do you like ～? などで しつもんできる","しつもんに こたえられる"]
+      },
+      "tpr": [
+        {"en":"Raise your hand to ask.","ja":"しつもんが あったら てを あげて。","action":"てを まっすぐ あげる","emoji":"🙋"},
+        {"en":"Pick up beans with chopsticks.","ja":"おはしで まめを つまんで。","action":"おはしで つまむ まね","emoji":"🥢"},
+        {"en":"Nod your head.","ja":"うなずいて。","action":"くびを たてに ふる","emoji":"😊"},
+        {"en":"Dust off your hands.","ja":"てを パンパン はらって。","action":"てを パンパンと はらう","emoji":"👐"}
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": ["chop-stick","shell-fish","hill-top","dust-pan"],
+        "sounds": [],
+        "words": ["chopstick","shellfish","hilltop","dustpan"],
+        "tipJa": "chop と stick、shell と fish、hill と top、dust と pan。ch・sh・ll・st、ワールド2〜4で ならった つづりが ぜんぶ でてくるね！"
+      },
+      "vocab": [
+        {"en":"question","ja":"しつもん","emoji":"❓","core":true},
+        {"en":"chopsticks","ja":"おはし","emoji":"🥢"},
+        {"en":"answer","ja":"こたえ","emoji":"💬"},
+        {"en":"hilltop","ja":"おかの うえ","emoji":"⛰️"}
+      ],
+      "teacherScript": "はっぴょうの あとは しつもんタイム。「Any questions?」と きかれたら てを あげて「Do you like frogs?」みたいに きいてみよう。",
+      "conversation": {
+        "scene": "Question time after Riko's practice presentation on the hilltop",
+        "sceneJa": "おかの うえで リコの はっぴょうの あとの しつもんタイム",
+        "lines": [
+          {"speaker":"Riko","en":"I'm Riko. I like frogs. Any questions?","ja":"リコです。かえるが すき。しつもんは ありますか？"},
+          {"speaker":"Haru","en":"Do you like snakes?","ja":"へびは すき？"},
+          {"speaker":"Riko","en":"No, I don't. I like frogs!","ja":"ううん、すきじゃない。かえるが すき！"},
+          {"speaker":"Kiko","en":"What color do you like?","ja":"なにいろが すき？"},
+          {"speaker":"Riko","en":"I like green. Frogs are green!","ja":"みどりが すき。かえるは みどり！"},
+          {"speaker":"Birimo","en":"Great questions! Clap, clap!","ja":"いい しつもん！パチパチ！"}
+        ],
+        "aiTask": {
+          "goalJa": "はっぴょうを きいて Do you like ～? / What color do you like? で しつもんしよう",
+          "starterEn": "I'm Haru. I like soccer and hotdogs. Any questions?",
+          "targetExpressions": ["Do you like ～?","What color do you like?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["しつもんタイムで Do you like frogs? と きけたね","What color do you like? にも こたえられたよ","chop-stick、shell-fish！ 2つに わけて よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 120,
+      "world": 4,
+      "title": "World 4 Grand Review",
+      "titleJa": "ワールド4 そうふくしゅう",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：小3 はっぴょうかい（ワールド4 ぜんぶ）",
+        "grammar": "I'm ～. I like ～. / What do you want? / This is for you. / What's this? / Who are you? / It's big.",
+        "expressions": [
+          {"en":"I'm Kiko. I like stars and frogs.","ja":"キコです。ほしと かえるが すき。","core":true},
+          {"en":"What's this? ― Hint, please.","ja":"これ なあに？ ― ヒントを ください。"},
+          {"en":"This is for you. ― Thank you!","ja":"これ どうぞ。― ありがとう！"}
+        ],
+        "testPoints": ["じこしょうかい・すきなもの・クイズ・どうぶつの ようすを つなげて いえる","語頭ブレンドと 2つに わけて よむ ことばを よめる"]
+      },
+      "tpr": [
+        {"en":"Look! Stop! Come here! Go!","ja":"みて！とまって！きて！いって！","action":"ワールド1の 4つの めいれいを はやく","emoji":"⚡"},
+        {"en":"Make a T with your body.","ja":"からだで T を つくって。","action":"りょううでを よこに のばす","emoji":"🙆"},
+        {"en":"Hop like a frog! Stomp like an elephant!","ja":"かえるで ぴょん！ぞうで ドシン！","action":"どうぶつの うごきを すばやく つづけて","emoji":"🐸"},
+        {"en":"Take a bow.","ja":"おじぎを して。","action":"さいごに ゆっくり おじぎ","emoji":"🙇"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["st","cl","fr","tw","sun-set","back-pack"],
+        "sounds": [],
+        "words": ["stop","clap","frog","twin","sunset","backpack"],
+        "tipJa": "ワールド4の そうまとめ。st-o-p、cl-a-p、fr-o-g、tw-i-n、そして sun-set、back-pack！ ブレンドも ながい ことばも よめるね。"
+      },
+      "vocab": [
+        {"en":"star","ja":"ほし","emoji":"⭐","core":true},
+        {"en":"mountain","ja":"やま","emoji":"🏔️"},
+        {"en":"presentation","ja":"はっぴょう","emoji":"🎤"},
+        {"en":"riddle","ja":"なぞなぞ","emoji":"❓"}
+      ],
+      "teacherScript": "Congratulations! ワールド4 さいごの レッスン！まずは スピード TPR。そのあと 小3の はっぴょうかい。じこしょうかいと すきなものを いって、なぞなぞも だそう！あしたは ボスせんだよ。",
+      "conversation": {
+        "scene": "The Grade 3 presentation at the top of Riddle Mountain",
+        "sceneJa": "なぞなぞ山の ちょうじょうで 小3 はっぴょうかい",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Welcome to the presentation! Who's first?","ja":"はっぴょうかいへ ようこそ！だれから？"},
+          {"speaker":"Kiko","en":"Hello. I'm Kiko. I like stars and frogs. I can swim.","ja":"こんにちは。キコです。ほしと かえるが すき。およげるよ。"},
+          {"speaker":"Haru","en":"Riddle time! It's long and green. What's this?","ja":"なぞなぞ タイム！ながくて みどり。これ なあに？"},
+          {"speaker":"Riko","en":"Hint, please... I know! It's a snake!","ja":"ヒントを ください… わかった！へびだ！"},
+          {"speaker":"Birimo","en":"This is for you, everyone! A star card! Let's go to World 5!","ja":"みんなに これ どうぞ！ほしの カード！ワールド5へ いこう！"}
+        ],
+        "aiTask": {
+          "goalJa": "ワールド4の ことばで はっぴょうしよう（じこしょうかい・すきなもの・できること。なまえは ニックネームでも OK）。さいごに なぞなぞも だしてみよう",
+          "starterEn": "Welcome to the presentation! I'm Kiko. I like stars and frogs. Your turn!",
+          "targetExpressions": ["I'm ～.","I like ～.","I can ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["スピード TPR で ワールド4の めいれいを ふくしゅう","じこしょうかい・クイズ・どうぶつの ようすを ぜんぶ つかえたね","st cl fr tw の ブレンドと sun-set を よめたよ。ワールド5では ことばの おわりの ブレンド（-st -nd など）を ならうよ！"]
+      }
     }
   ]
 }

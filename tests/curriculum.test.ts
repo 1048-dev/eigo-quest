@@ -43,8 +43,8 @@ const LessonSchema = z.object({
 /** ワールド → 学年（docs/curriculum-plan.md） */
 const gradeOfWorld = (w: number) => (w <= 2 ? `小${w}` : w <= 4 ? "小3" : w <= 6 ? "小4" : w <= 8 ? "小5" : "小6");
 
-/** フォーカス（"a_e" のような magic e も）を正規表現に */
-const focusRe = (f: string) => new RegExp(f.toLowerCase().replace(/_/g, "[a-z]"));
+/** フォーカス（"a_e" のような magic e、"sun-set" のような 2つに わける語も）を正規表現に */
+const focusRe = (f: string) => new RegExp(f.toLowerCase().replace(/-/g, "").replace(/_/g, "[a-z]"));
 
 const data = raw as { meta: { lessonsPerWorld: number; miniTestEvery: number; teacher: { name: string } }; lessons: unknown[] };
 
@@ -246,5 +246,85 @@ describe("カリキュラム: ワールド3 の決まりごと", () => {
     expect(ex(81, 85)).toContain("What sport do you like?");
     expect(ex(81, 85)).toContain("What food do you like?");
     expect(ex(81, 85)).toContain("I don't like");
+  });
+});
+
+describe("カリキュラム: ワールド4 の決まりごと", () => {
+  const w4 = LESSONS.filter((l) => l.world === 4);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const S = ["st", "sp", "sn", "sm", "sk", "sw"];
+  const L = ["bl", "cl", "fl", "gl", "pl", "sl"];
+  const R = ["br", "cr", "dr", "fr", "gr", "tr"];
+
+  it("ワールド4 は 91〜120 の 30 レッスン、学年は小3", () => {
+    if (w4.length === 0) return; // 未作成ならスキップ
+    expect(w4.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 91 + i));
+    for (const l of w4) expect(l.school.grade).toBe("小3");
+  });
+
+  it("語頭ブレンドを s- → l- → r- → tw・3つの ブレンドの順に（5の倍数はふりかえり）", () => {
+    if (w4.length === 0) return;
+    const block = (a: number, set: string[]) => {
+      const ls = range(a, a + 4);
+      for (const l of ls.slice(0, 4)) {
+        expect(l.phonics.rule, `L${l.lessonNo}`).toBe("blend");
+        for (const f of l.phonics.focus) expect(set, `L${l.lessonNo}: ${f}`).toContain(f);
+      }
+      expect(ls.slice(0, 4).flatMap((l) => l.phonics.focus).sort()).toEqual([...set].sort());
+      expect(ls[4].phonics.rule, `L${a + 4}`).toBe("review");
+      expect([...ls[4].phonics.focus].sort(), `L${a + 4}`).toEqual([...set].sort());
+    };
+    block(91, S);
+    block(96, L);
+    block(101, R);
+    expect(at(106)!.phonics.focus).toEqual(["tw"]);
+    expect(at(109)!.phonics.focus).toEqual(["str", "spr", "scr"]);
+    for (const l of range(106, 109)) expect(l.phonics.rule, `L${l.lessonNo}`).toBe("blend");
+    for (const l of range(110, 115)) expect(l.phonics.rule, `L${l.lessonNo}`).toBe("review");
+  });
+
+  it("ブレンドの回（L91〜115）の単語は ブレンドで始まり、短母音1つだけ", () => {
+    if (w4.length === 0) return;
+    for (const l of range(91, 115)) {
+      for (const w of l.phonics.words) {
+        expect(l.phonics.focus.some((f) => w.startsWith(f)), `L${l.lessonNo}: ${w}`).toBe(true);
+        expect(w.match(/[aeiou]/g)?.length, `L${l.lessonNo}: ${w}`).toBe(1);
+      }
+    }
+  });
+
+  it("L116〜119 は 2つに わけて よむ ことば（focus は sun-set の形、単語は 母音2つ）", () => {
+    if (w4.length === 0) return;
+    for (const l of range(116, 119)) {
+      expect(l.phonics.rule, `L${l.lessonNo}`).toBe("syllable");
+      expect(l.phonics.focus.map((f) => f.replace(/-/g, "")), `L${l.lessonNo}`).toEqual(l.phonics.words);
+      for (const f of l.phonics.focus) expect(f, `L${l.lessonNo}`).toMatch(/^[a-z]+-[a-z]+$/);
+      for (const w of l.phonics.words) expect(w.match(/[aeiou]/g)?.length, `L${l.lessonNo}: ${w}`).toBe(2);
+    }
+  });
+
+  it("L120 はワールドのまとめでスピード TPR", () => {
+    if (w4.length === 0) return;
+    const l120 = at(120)!;
+    expect(l120.phonics.rule).toBe("review");
+    expect(l120.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("表現の型が計画（Let's Try! 1 後半のテーマ）どおり入っている", () => {
+    if (w4.length === 0) return;
+    const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(ex(91, 95)).toContain("What do you want?");
+    expect(ex(91, 95)).toMatch(/\b[A-Z], please\./);
+    expect(ex(96, 100)).toContain("This is for you.");
+    expect(ex(96, 100)).toContain("A star, please.");
+    expect(ex(101, 105)).toContain("What's this?");
+    expect(ex(101, 105)).toContain("Hint, please.");
+    expect(ex(101, 105)).toMatch(/It's an? \w+/);
+    expect(ex(106, 110)).toContain("Who are you?");
+    expect(ex(106, 110)).toMatch(/I'm an? \w+\./);
+    expect(ex(106, 110)).toMatch(/Are you an? \w+\?/);
+    for (const w of ["It's long.", "It's small.", "It's big", "It's fast."]) expect(ex(111, 115)).toContain(w);
+    expect(ex(116, 120)).toMatch(/I like/);
   });
 });

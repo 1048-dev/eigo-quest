@@ -253,3 +253,39 @@
 ### オーナーへの質問
 - ワールド3の名前は計画書では「せかいの港」、マップでは「グラマーの海底遺跡」です。ワールド2と同じく、どちらかに統一しますか？（今回もマップの名前は変えていません）
 - ダイグラフの回だけ、フォニックス問題が「どの つづりが はいってる？」の形にもなります。小さい子には むずかしければ、「さいしょの おと」だけに しぼることもできます。
+
+
+## Phase 8 — ワールド4（レッスン91〜120・小3／Let's Try! 1 後半）（2026-11-24）
+
+### やったこと
+1. **content/curriculum/lessons.json にレッスン91〜120を追加**（ワールド4「なぞなぞ山」・school.grade は小3）。ワールド1〜3と同じ形式（conversation・recap つき）、英文はすべてオリジナル（教科書の文は使っていない）。既存のレッスン1〜90は変えず、末尾に同じ書式で追記しただけ。
+   - 91〜95 アルファベット大文字（ABCの うた、What do you want? ― N, please.、まちの かんばんで I see a T.、からだで Let's make a T.、もじカード こうかんかい）
+   - 96〜100 かたち・カードづくり（A star, please.、Two red hearts, please.、Let's make a card.、This is for you. ― Thank you. I like it! / You're welcome.、エマ先生に ありがとうカード）
+   - 101〜105 これなあに？クイズ（What's this? / I don't know.、Hint, please.、Is it a frog? ― Yes, it is. / No, it isn't. / That's right!、かげクイズ One more hint, please.、ヒントクイズ大会）
+   - 106〜110 動物の絵本（Who are you? ― I'm a rabbit.、Are you a cat? ― Yes, I am. / No, I'm not.、なきごえ あて、よみきかせ Come with me! / Let's go together.、えほんの げき）
+   - 111〜115 いきもののようす（It's long / short、It's big / small / big and gray、It's fast / slow / strong、どうぶつ なぞなぞ、どうぶつえんガイド This is a swan. It's white. It can swim.）
+   - 116〜120 小3まとめ（じこしょうかいポスター、たからもの しょうかい、はっぴょうの れんしゅう You can do it!、しつもんタイム Any questions?、L120 はスピードTPRつきの ワールド総まとめ「小3 はっぴょうかい」）
+2. **フォニックス: 語頭ブレンド** s-（st sp sn sm sk sw）→ l-（bl cl fl gl pl sl）→ r-（br cr dr fr gr tr）を4レッスンずつ（5の倍数回はふりかえり）、L106 tw、L107〜108 l と r の くらべ、L109 3つのブレンド str spr scr、L110〜115 ふりかえり。単語は「ブレンド＋短母音1つ」だけ。L116〜119 は **2音節語の入門**（sunset, backpack, drumstick, chopstick など、習ったつづりだけでできる合成語）。`phonics.rule` は "blend" / "review" / "syllable"。
+3. **フォニックス問題をブレンド対応に（src/lib/curriculum/questions.ts）**: 今までは stop の答えが「s」になっていた（まちがいではないが、ブレンドの練習にならない）。ブレンドの回は「さいしょの 2つの おとは どれ？」（strap は「3つ」→ str）。まちがいの選択肢は cl ↔ cr（1文字目が同じ）や cl ↔ bl（2文字目が同じ）を優先して、聞きくらべの問題にした。あわせて **sh / ch / th / wh で始まる語は、どの回でも ダイグラフで問う**ように した（chipmunk の最初の音が「c」に なる まちがいを防ぐ。ワールド1〜2には該当する語が無いことを確認済みで、影響なし）。
+4. **まとめ動画（src/lib/recap/script.ts の1行）**: 2音節語のフォーカス "sun-set" を sunset に一致させて文字を表示するようにした。
+5. **テスト**: tests/curriculum.test.ts にワールド4の決まりごと（91〜120・小3、ブレンドの順番と rule、単語は ブレンドで始まり母音1つ、2音節語の形、L120 のスピードTPR、各ブロックの表現の型）、tests/phonics-blend.test.ts（新規・7件）。合計 299件。
+6. **docs/curriculum-plan.md** に「6-4. ワールド4 のレッスン詳細」を追加、ブロック表と データの書き方（ハイフン）を更新。マップのワールド4の壁のもじ（Hi / Yes）を ABC / st / bl / tr / tw に変更（WorldMap.tsx の1行）。
+7. `npx tsc --noEmit` / `npx vitest run`（299件）/ `npx next build` すべて成功。まとめ動画は全120レッスンで2〜3分に収まることをテストで確認。worksheets のスクリプトが読むフィールドが全120レッスンで読めることも Python で確認。
+
+### 判断したこと
+- 計画書の s-ブレンドは st sp sn sk sw の5つだったが、sm も よく出るので L93 に sn と いっしょに入れた。l-ブレンドも計画の bl cl fl pl sl に gl を足した（L98 fl と いっしょ）。
+- 計画の「106〜110 tw・ブレンドふりかえり」は、tw だけでは1回分なので、l と r の くらべ（日本の子が いちばん にがてな所）と 3つのブレンド（str spr scr）を入れた。
+- 2音節語の回は `focus` を "sun-set" のように ハイフンで書く形にした（画面で2つに わかれて見え、読み上げも sun set に なる）。検証テストの「単語がフォーカスを含む」は ハイフンを のぞいて比べるようにした。2音節語の フォニックス問題は今までどおり「さいしょの おと」（sunset → s）。
+- 3人称（likes, has など）はまだ使わない方針を守り、ナレーションや ヒントも It's ～. / It can ～. の形にした（「It's in the sea.」など）。
+- AI 会話タスクでは子どもの本名・年齢・学校などは聞かない（なまえは ニックネームで OK と goalJa に明記。たからものは「えや おもちゃ でも OK」）。
+- ワールド4の会話の舞台は計画書の名前「なぞなぞ山」に合わせた（マップの名前「スピーキング天空城」は変えていない）。
+
+### スキップ / 未対応
+- 新しいレッスン用の復習クエスト・まとめテスト・ボス（check-91〜120、mini-91-95 …、boss-1-120、arena-91-120、arena-1-120）は ASSESSMENTS には自動で入るが、DB には次回の `npm run db:seed` で入る（マイグレーション不要）。
+- worksheets/generate_worksheets.py の実行は Phase 2 と同じ理由（reportlab 未インストール）でスキップ。
+- 画面での目視確認はしていない（データ追加と問題文の分岐のみ）。
+
+### オーナーへの質問
+- ワールド4の名前は計画書では「なぞなぞ山」、マップでは「スピーキング天空城」です。ワールド2・3と あわせて、どちらかに統一しますか？
+- ブレンドの回のフォニックス問題は「さいしょの 2つの おと」（選択肢 st / sp / sl など）です。小さい子には むずかしければ、ふりかえり回だけに しぼることもできます。
+- 2音節語（sunset など）を小3まとめで少しだけ入れました。本格的な2音節（rabbit, picnic）は計画どおりワールド5（L141〜145）です。

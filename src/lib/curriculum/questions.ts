@@ -83,9 +83,10 @@ const START_DIGRAPHS = ["sh", "ch", "th", "wh"];
  */
 export function digraphQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
   const focus = getLesson(item.lessonNo)?.phonics.focus ?? [];
-  if (!focus.some((f) => (DIGRAPHS as readonly string[]).includes(f))) return null;
   const w = item.text.toLowerCase();
   const start = START_DIGRAPHS.find((d) => w.startsWith(d));
+  // sh / ch / th / wh で始まる語は、どの回でもダイグラフで問う（chipmunk の最初の音を「c」にしない）
+  if (!start && !focus.some((f) => (DIGRAPHS as readonly string[]).includes(f))) return null;
   if (start) {
     return { promptJa: "さいしょの おとは どれ？", choices: shuffle(START_DIGRAPHS, rng).map((d) => ({ id: d, label: d })), answer: start,
       explanationJa: `${item.text} は「${start}」の音ではじまるよ。2もじで 1つの おと！` };
@@ -95,6 +96,35 @@ export function digraphQuestion(item: LearningItemDef, rng: () => number): Pick<
   const others = shuffle(DIGRAPHS.filter((d) => !w.includes(d)), rng).slice(0, 3);
   return { promptJa: "どの つづりが はいってる？", choices: shuffle([inside, ...others], rng).map((d) => ({ id: d, label: d })), answer: inside,
     explanationJa: `${item.text} には「${inside}」が はいってるよ。2もじで 1つの おと！` };
+}
+
+/** 語頭ブレンド（ワールド4）。2つの子音を つなげて読む */
+export const BLENDS = ["st", "sp", "sn", "sm", "sk", "sw", "bl", "cl", "fl", "gl", "pl", "sl", "br", "cr", "dr", "fr", "gr", "tr", "tw"] as const;
+/** 3つの子音のブレンド */
+export const THREE_BLENDS = ["str", "spr", "scr", "spl"] as const;
+
+/**
+ * その回のフォーカスに語頭ブレンドがあり、語がブレンドで始まるなら「さいしょの 2つ（3つ）の おと」で問う
+ * （stop の答えを「s」だけにしない）。まちがいの選択肢は、同じ1文字目（cl ↔ cr）や
+ * 同じ2文字目（cl ↔ bl）のブレンドを優先する＝聞きくらべの練習になる。
+ */
+export function blendQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
+  const focus = getLesson(item.lessonNo)?.phonics.focus ?? [];
+  const all: readonly string[] = [...THREE_BLENDS, ...BLENDS];
+  if (!focus.some((f) => all.includes(f))) return null;
+  const w = item.text.toLowerCase();
+  const start = all.find((b) => w.startsWith(b));
+  if (!start) return null;
+  const pool = (start.length === 3 ? THREE_BLENDS : BLENDS).filter((b) => b !== start && !w.startsWith(b)) as string[];
+  const sameFirst = shuffle(pool.filter((b) => b[0] === start[0]), rng);
+  const sameSecond = shuffle(pool.filter((b) => b[0] !== start[0] && b[1] === start[1]), rng);
+  const rest = shuffle(pool.filter((b) => !sameFirst.includes(b) && !sameSecond.includes(b)), rng);
+  // 同じ1文字目だけだと s- ブレンドばかりになるので、1つは2文字目が同じものを入れる
+  const near = [...sameFirst.slice(0, 2), ...sameSecond.slice(0, 1)];
+  const others = [...near, ...sameFirst.slice(2), ...sameSecond.slice(1), ...rest].slice(0, 3);
+  const n = start.length === 3 ? "3つ" : "2つ";
+  return { promptJa: `さいしょの ${n}の おとは どれ？`, choices: shuffle([start, ...others], rng).map((b) => ({ id: b, label: b })), answer: start,
+    explanationJa: `${item.text} は「${start}」ではじまるよ。${start.split("").join(" と ")} を くっつけて よもう！` };
 }
 
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
@@ -156,7 +186,7 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
-      const dq = digraphQuestion(item, rng);
+      const dq = blendQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
       // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない

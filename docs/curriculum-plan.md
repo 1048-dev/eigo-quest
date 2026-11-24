@@ -113,9 +113,9 @@
 | 91〜95 | アルファベット大文字 | What do you want? ― "A", please. | s-ブレンド（st sp sn sk sw） | 文字カード交換 |
 | 96〜100 | かたち・カードづくり | This is for you. / A star, please. | l-ブレンド（bl cl fl pl sl） | ありがとうカード |
 | 101〜105 | これなあに？クイズ | What's this? Hint, please. ― It's a ～. | r-ブレンド（br cr dr fr gr tr） | ヒントクイズ大会 |
-| 106〜110 | 動物の絵本 | Who are you? ― I'm a ～. / Are you a ～? | tw・ブレンドふりかえり | 絵本の動物になりきり |
-| 111〜115 | いきもののようす | It's long / big / small. | 語頭ブレンド総まとめ | 動物園ガイド |
-| 116〜120 | 小3まとめ | 自己紹介＋すきなもの | 2音節語の読み方入門 | 小3発表会 |
+| 106〜110 | 動物の絵本 | Who are you? ― I'm a ～. / Are you a ～? | tw・l と r のくらべ・3つのブレンド（str spr scr） | 絵本の動物になりきり |
+| 111〜115 | いきもののようす | It's long / big / small / fast. | 語頭ブレンド総まとめ | 動物園ガイド |
+| 116〜120 | 小3まとめ | 自己紹介＋すきなもの | 2音節語の読み方入門（sun-set のように2つにわける） | 小3発表会 |
 
 ### ワールド5（小4・Let's Try! 2 前半）
 
@@ -319,12 +319,52 @@
 | 89 | Birimo's World Trip | あいさつ・かず・いろ | Thank you. See you! | sh ch th wh しわけ | ビリモと ふねで せかい りょこう |
 | 90 | World 3 Grand Review | ワールド総まとめ（スピードTPR） | I'm Haru. I like blue and soccer. | ダイグラフ総まとめ | せかいの港の すきなもの はっぴょうかい |
 
+## 6-4. ワールド4 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: 語頭ブレンド（2つの子音を くっつけて読む）を s- → l- → r- の順に4レッスンずつ、5の倍数回はそのなかまのふりかえり。L106 tw、L107〜108 l と r のくらべ（cl/cr、fl/fr、bl/br）、L109 3つのブレンド（str spr scr）、L110〜115 ふりかえり。単語は「ブレンド＋短母音1つ」だけ。`phonics.rule` は "blend" / "review"。
+- L116〜119 は 2音節語の入門（`phonics.rule` は "syllable"）。`focus` は "sun-set" のように ハイフンで2つに わけて書き、`words` は "sunset"。2つとも ここまでに習ったつづり（CVC・ダイグラフ・ブレンド）だけでできる語にした。
+- フォニックス問題: その回のフォーカスにブレンドがあり、語がブレンドで始まるときは「さいしょの 2つ（3つ）の おとは どれ？」（答えは st など。まちがいの選択肢は cl ↔ cr のように 1文字目が同じもの、cl ↔ bl のように 2文字目が同じものを優先＝聞きくらべ）。sh / ch / th / wh で始まる語（chipmunk, chopstick）は、どの回でも ダイグラフで問う（src/lib/curriculum/questions.ts の `blendQuestion` / `digraphQuestion`）。
+- 表現の型: What do you want? ― K, please. / I see a T. / Let's make a T. → A star, please. / This is for you. / You're welcome. → What's this? / Hint, please. / Is it a ～? ― Yes, it is. / That's right! → Who are you? ― I'm a ～. / Are you a ～? ― Yes, I am. / No, I'm not. / Come with me! → It's long / short / big / small / fast / slow / strong. → This is my treasure. / You can do it! / Any questions?
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 91 | The ABC Song | 大文字 A〜M | Let's sing the ABC song. | st（stop, step, stick, stamp） | なぞなぞ山の ふもとの もじの もん |
+| 92 | What Do You Want? | 大文字 N〜Z・ほしい もじ | What do you want? | sp（spot, spin, spell, spun） | やまみちで もじカード |
+| 93 | Find the Letters! | まちの 大文字さがし | I see a T. | sn, sm（snap, snack, smell, smash） | ロープウェイから かんばんさがし |
+| 94 | Body Letters | からだで もじ | Let's make a T. | sk, sw（skip, skin, swim, swing） | おかの うえで からだで もじ |
+| 95 | Letter Card Swap | まとめ | K, please. | s-ブレンド ふりかえり | やまごやの もじカード こうかんかい |
+| 96 | What Shape Is It? | かたち | A star, please. | bl（black, block, blink, blob） | ロッジで かたちシール えらび |
+| 97 | How Many Stars? | いろ・かたち・かず | Two red hearts, please. | cl（clap, clock, clip, club） | ビリモの シールやさん |
+| 98 | Let's Make a Card! | カードづくり | Let's make a card. | fl, gl（flag, flip, glad, glass） | ロッジで カードづくり |
+| 99 | This Is for You! | カードを わたす | This is for you. | pl, sl（plan, plum, sled, slip） | ゆきの さかで カードを プレゼント |
+| 100 | Thank-You Cards | まとめ | It's a thank-you card. | l-ブレンド ふりかえり | エマ先生に ありがとうカード |
+| 101 | What's This? | これなあに？クイズ | What's this? | br, cr（brick, brush, crab, crib） | どうくつで はこの なかみ あて |
+| 102 | Hint, Please! | ヒントを たのむ | Hint, please. | dr（drum, drip, drop, dress） | キャンプファイヤーで ヒントクイズ |
+| 103 | Is It a Frog? | Is it a ～? | That's right! | fr, gr（frog, from, grab, grin） | いけの いきもの あて |
+| 104 | Shadow Quiz | シルエットクイズ | I know! It's a truck. | tr（truck, trip, trap, track） | テントで かげクイズ |
+| 105 | Hint Quiz Show | まとめ | Is it a crab? | r-ブレンド ふりかえり | ヒントクイズ大会 |
+| 106 | Who Are You? | どうぶつの えほん | Who are you? | tw（twin, twig, twist） | としょかんで えほん |
+| 107 | Are You a Cat? | Are you a ～? | Are you a cat? | cl と cr くらべ | おめんの あてっこ |
+| 108 | Guess Who! | なきごえ あて | I'm a duck. | fl/fr・bl/br くらべ | カーテンの うしろの なきごえ あて |
+| 109 | The Little Mouse's Trip | えほんの よみきかせ | Come with me! | str, spr, scr（strap, strip, sprint, scrub） | エマ先生の よみきかせ |
+| 110 | Picture Book Play | まとめ | Hello! I'm a frog. | ブレンド まぜて ふりかえり | ロッジの ステージで えほんの げき |
+| 111 | It's Long! | ながい・みじかい | It's long. | s-ブレンド＋ck ng nk | どうぶつえんを さんぽ |
+| 112 | It's Big! It's Small! | おおきい・ちいさい・いろ | It's small. | l-ブレンド＋th sh ck | ぞうと なまけもの |
+| 113 | It's Fast! It's Slow! | はやい・ゆっくり・つよい | It's fast. | r-ブレンド＋sh nk st | どうぶつ レースの ビデオ |
+| 114 | Animal Riddles | ようすで なぞなぞ | It's long and green. | ブレンド しわけ | おかの うえで なぞなぞ |
+| 115 | Zoo Guide | まとめ | This is a swan. It's white. | どうぶつの なまえで ブレンド総まとめ | エマ先生を どうぶつえんで あんない |
+| 116 | My Poster | じこしょうかいポスター | I like stars. | sun-set, hot-dog, bath-tub, lap-top | ゆうひの なかで ポスターづくり |
+| 117 | My Treasure | たからもの しょうかい | This is my treasure. | back-pack, cat-fish, chip-munk, cob-web | やまごやで たからもの しょうかい |
+| 118 | Practice Time | はっぴょうの れんしゅう | You can do it! | desk-top, drum-stick, hand-stand, gum-drop | たいいくかんで リハーサル |
+| 119 | Any Questions? | しつもんタイム | Do you like frogs? | chop-stick, shell-fish, hill-top, dust-pan | おかの うえで しつもんタイム |
+| 120 | World 4 Grand Review | ワールド総まとめ（スピードTPR） | I'm Kiko. I like stars and frogs. | ブレンド＋2音節 総まとめ | なぞなぞ山の ちょうじょうで 小3 はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。
 - `conversation.lines[].speaker` は `Haru` `Riko` `Kiko` `Birimo` `Ms. Emma` のどれか。
 - `aiTask` では個人情報（本名・年齢・住所・学校名など）を聞かない。名前はニックネームで OK と書く。
-- `phonics.words` にはその回の `focus` のつづりを必ず含める（magic e は `a_e` のように書く）。
+- `phonics.words` にはその回の `focus` のつづりを必ず含める（magic e は `a_e` のように書く。2音節語は `sun-set` のように ハイフンで わける）。
 - 1レッスン内で、同じ種類（vocab どうし・tpr どうし・phonics.words どうし）に同じ語を重複させない（学習項目 ID が重複するため）。
 - `school.grade` はワールド1→小1、2→小2、3〜4→小3、5〜6→小4、7〜8→小5、9〜12→小6。
 - 追加後は `npx vitest run tests/curriculum.test.ts` で検証する。
