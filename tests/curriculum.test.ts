@@ -404,3 +404,82 @@ describe("カリキュラム: ワールド5 の決まりごと", () => {
     expect(ex(141, 145)).toContain("No, I don't.");
   });
 });
+
+describe("カリキュラム: ワールド6 の決まりごと", () => {
+  const w6 = LESSONS.filter((l) => l.world === 6);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** マジック e の形: 母音＋子音1つ＋e（cakes のような -s、cupcake のような 2音節語も） */
+  const MAGIC = /[aeiou][b-df-hj-np-tv-z]es?$/;
+
+  it("ワールド6 は 151〜180 の 30 レッスン、学年は小4", () => {
+    if (w6.length === 0) return; // 未作成ならスキップ
+    expect(w6.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 151 + i));
+    for (const l of w6) expect(l.school.grade).toBe("小4");
+  });
+
+  it("マジック e を a_e → i_e → o_e → u_e・e_e の順に（5の倍数はふりかえり）、L171〜180 は ふりかえり", () => {
+    if (w6.length === 0) return;
+    const plan: [number, string[]][] = [[151, ["a_e"]], [156, ["i_e"]], [161, ["o_e"]]];
+    for (const [start, focus] of plan) {
+      for (let k = 0; k < 5; k++) {
+        const l = at(start + k)!;
+        expect(l.phonics.focus, `L${l.lessonNo}`).toEqual(focus);
+        expect(l.phonics.rule, `L${l.lessonNo}`).toBe(k === 4 ? "review" : "magic-e");
+      }
+    }
+    expect([166, 167, 168, 169].map((n) => at(n)!.phonics.focus)).toEqual([["u_e"], ["u_e"], ["e_e"], ["u_e", "e_e"]]);
+    for (const n of [166, 167, 168, 169]) expect(at(n)!.phonics.rule, `L${n}`).toBe("magic-e");
+    for (const l of range(170, 180)) expect(l.phonics.rule, `L${l.lessonNo}`).toBe("review");
+    expect([...at(180)!.phonics.focus].sort()).toEqual(["a_e", "e_e", "i_e", "o_e", "u_e"]);
+  });
+
+  it("マジック e の回（L151〜170, L175〜180）の単語は すべて マジック e の形", () => {
+    if (w6.length === 0) return;
+    for (const l of [...range(151, 170), ...range(175, 180)]) {
+      for (const w of l.phonics.words) expect(w.toLowerCase(), `L${l.lessonNo}: ${w}`).toMatch(MAGIC);
+    }
+  });
+
+  it("L171〜174 は みじかい母音と マジック e の くらべ（cap / cape のペア）", () => {
+    if (w6.length === 0) return;
+    for (const [n, v] of [[171, "a"], [172, "i"], [173, "o"], [174, "u"]] as const) {
+      const l = at(n)!;
+      expect(l.phonics.focus, `L${n}`).toEqual([v, `${v}_e`]);
+      const short = l.phonics.words.filter((w) => !MAGIC.test(w));
+      expect(short.length, `L${n}`).toBe(2);
+      for (const s of short) expect(l.phonics.words, `L${n}: ${s}`).toContain(`${s}e`);
+    }
+  });
+
+  it("L180 はワールドのまとめでスピード TPR", () => {
+    if (w6.length === 0) return;
+    expect(at(180)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("表現の型が計画（Let's Try! 2 後半のテーマ）どおり入っている", () => {
+    if (w6.length === 0) return;
+    const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(ex(151, 155)).toContain("What's this letter?");
+    expect(ex(151, 155)).toContain("Look at the sign.");
+    expect(ex(151, 155)).toMatch(/It's a small [a-z]\./);
+    expect(ex(156, 160)).toContain("What do you want?");
+    expect(ex(156, 160)).toMatch(/I want an? \w+/);
+    expect(ex(156, 160)).toContain("How many");
+    expect(ex(161, 165)).toContain("This is my favorite place.");
+    expect(ex(161, 165)).toContain("Go straight.");
+    expect(ex(161, 165)).toMatch(/Turn (right|left)\./);
+    for (const w of ["I wake up", "I eat breakfast", "I go to school"]) expect(ex(166, 170)).toContain(w);
+    expect(ex(171, 175)).toMatch(/First, .*Then, /s);
+    expect(ex(176, 180)).toMatch(/favorite place/);
+  });
+
+  it("3人称の動詞（has / says / likes など）は まだ つかわない（表現・セリフ・AI の さいしょの ことば）", () => {
+    if (w6.length === 0) return;
+    const third = /\b(has|says|likes|wants|goes|eats|does)\b/;
+    for (const l of w6) {
+      const texts = [...l.school.expressions.map((e) => e.en), ...(l.conversation?.lines.map((x) => x.en) ?? []), l.conversation?.aiTask.starterEn ?? ""];
+      for (const t of texts) expect(t, `L${l.lessonNo}`).not.toMatch(third);
+    }
+  });
+});

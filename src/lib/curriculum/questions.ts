@@ -163,6 +163,38 @@ export function endingQuestion(item: LearningItemDef, rng: () => number): Pick<Q
     explanationJa: `${item.text} は「${end}」で おわるよ。${end.split("").join(" と ")} を くっつけて よもう！` };
 }
 
+/** マジック e（ワールド6）。focus では "a_e" のように書く（_ に子音が1つ入る） */
+export const MAGIC_E = ["a_e", "i_e", "o_e", "u_e", "e_e"] as const;
+const SHORT_VOWELS = ["a", "i", "o", "u", "e"] as const;
+/** 長い母音＝アルファベットの なまえの よみ */
+const LETTER_NAME: Record<string, string> = { a: "エイ", i: "アイ", o: "オウ", u: "ユー（ウー）", e: "イー" };
+
+/**
+ * その回のフォーカスにマジック e（"a_e" など）があれば、母音の おとで問う（cake の答えを 最初の「c」にしない）。
+ * - cake / cakes / cupcake（おわりが 母音＋子音1つ＋e）→ 正解は a_e
+ * - cap（短母音1つ。くらべの回）→ 正解は a
+ * まちがいの選択肢には かならず 同じ母音の ペア（a ↔ a_e）を入れる＝みじかい おと と ながい おとの 聞きくらべ。
+ */
+export function magicEQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
+  const focus = getLesson(item.lessonNo)?.phonics.focus ?? [];
+  if (!focus.some((f) => (MAGIC_E as readonly string[]).includes(f))) return null;
+  const w = item.text.toLowerCase();
+  const magic = w.match(/([aeiou])[b-df-hj-np-tv-z]es?$/);
+  const short = w.match(/^[^aeiou]*([aeiou])[^aeiou]+$/);
+  const v = magic?.[1] ?? short?.[1];
+  if (!v) return null;
+  const answer = magic ? `${v}_e` : v;
+  const pair = magic ? v : `${v}_e`;
+  const all: string[] = [...MAGIC_E, ...SHORT_VOWELS];
+  const rest = all.filter((x) => x !== answer && x !== pair);
+  // その回の フォーカスに ある おとを 先に（ふりかえり回は a_e / i_e / o_e の 聞きわけに なる）
+  const others = [...shuffle(rest.filter((x) => focus.includes(x)), rng), ...shuffle(rest.filter((x) => !focus.includes(x)), rng)].slice(0, 2);
+  return { promptJa: "きこえた ぼいん（a i u e o）の おとは どれ？", choices: shuffle([answer, pair, ...others], rng).map((x) => ({ id: x, label: x })), answer,
+    explanationJa: magic
+      ? `${item.text} は「${answer}」。おわりの e は よまないで、${v} を なまえの「${LETTER_NAME[v]}」で よむよ。`
+      : `${item.text} は みじかい「${v}」の おと。おわりに e が ないね。` };
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -222,8 +254,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
-      // 語頭ブレンド → 語末（-st / -s / -ing）→ ダイグラフ の順（shopping は sh ではなく ing の回の問題にする）
-      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? digraphQuestion(item, rng);
+      // 語頭ブレンド → 語末（-st / -s / -ing）→ マジック e → ダイグラフ の順
+      // （shopping は sh ではなく ing の回の問題、shape は sh ではなく a_e の回の問題にする）
+      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
       // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない

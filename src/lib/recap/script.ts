@@ -143,8 +143,8 @@ function draftSegments(lesson: LessonDef, lim: typeof LIMITS, extraRounds: numbe
     const focus = lesson.phonics.focus.filter((f) => f.trim());
     d.push(talk("phonics", "birimo", lesson.phonics.tipJa || "おとに ちゅうもく！", { emoji: "🔤", letters: focus }));
     for (const w of words) {
-      // "sun-set" のような 2つに わける フォーカスも sunset に一致させる
-      const letters = focus.filter((f) => w.toLowerCase().includes(f.toLowerCase().replace(/-/g, "")));
+      // "sun-set" のような 2つに わける フォーカスも sunset に、"a_e" のような マジック e も cake に一致させる
+      const letters = focus.filter((f) => new RegExp(f.toLowerCase().replace(/-/g, "").replace(/_/g, "[a-z]")).test(w.toLowerCase()));
       d.push(phrase("phonics", "haru", "おとを よく きいてね", w, { letters: letters.length > 0 ? letters : focus }));
     }
   }

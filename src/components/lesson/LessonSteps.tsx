@@ -109,7 +109,7 @@ export function Phonics({ focus, words, tipJa, onDone }: { focus: string[]; word
     <div className="card p-6">
       <p className="rounded-xl bg-[var(--bg)] p-3 text-sm">💡 {tipJa}</p>
       <div className="mt-4 flex flex-wrap justify-center gap-3">
-        {focus.map((f) => <button key={f} className="card px-5 py-3 text-4xl font-black text-[var(--accent)]" onClick={() => speak(f.replace(/^-/, ""), 0.7)}>{f}</button>)}
+        {focus.map((f) => <button key={f} className="card px-5 py-3 text-4xl font-black text-[var(--accent)]" onClick={() => speak(f.replace(/^-/, "").replace(/_/g, " "), 0.7)}>{f}</button>)}
       </div>
       <p className="mt-6 text-center font-bold text-[var(--ink-2)]">おとを つなげて よもう（ブレンディング）</p>
       <div className="mt-3 grid grid-cols-2 gap-3">

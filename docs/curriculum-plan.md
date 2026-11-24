@@ -136,7 +136,7 @@
 | 156〜160 | ほしい食べもの | What do you want? ― I want ～. How many? | i_e | パフェ屋さん |
 | 161〜165 | 学校の場所 | This is my favorite place. / Go straight. | o_e | 転校生に校内ツアー |
 | 166〜170 | わたしの1日 | I wake up. I eat breakfast. I go to school. | u_e, e_e | 1日の流れを紹介 |
-| 171〜175 | えほん・ものがたり | 動作の連続（First, ～. Then, ～.） | マジック e ふりかえり | 絵本の読み聞かせ |
+| 171〜175 | えほん・ものがたり | 動作の連続（First, ～. Then, ～.） | マジック e ふりかえり（cap / cape のような みじかい母音との くらべ） | 絵本の読み聞かせ |
 | 176〜180 | 小4まとめ | お気に入りの場所紹介 | マジック e 総まとめ | 小4発表会 |
 
 ### ワールド7（小5・NEW HORIZON 5 前半）
@@ -398,6 +398,46 @@
 | 148 | My Week | まとめ（1しゅうかん） | I like Saturdays. | -s と -ing（stamps, gifts, jumping, swimming） | キコの 1しゅうかん はっぴょう |
 | 149 | Ready for School! | まとめ（がっこうの じゅんび） | I have a pencil and a ruler. | -nd -lk -lp -ing ふりかえり | げつようびの あさの じゅんび |
 | 150 | World 5 Grand Review | ワールド総まとめ（スピードTPR） | It's Sunday. Let's play tag! | ブレンド・-s・-ing・2音節 総まとめ | じかんの塔の てっぺんで「わたしの 1しゅうかん」はっぴょうかい |
+
+## 6-6. ワールド6 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: マジック e（おわりの e は よまず、まえの母音を アルファベットの なまえの おとで よむ）を a_e（L151〜154）→ i_e（L156〜159）→ o_e（L161〜164）→ u_e（L166〜167。L167 は rule / flute の「ウー」）→ e_e（L168）→ u_e と e_e（L169）。5の倍数回は ふりかえり。L171〜174 は みじかい母音との くらべ（cap / cape、kit / kite、hop / hope、cub / cube。focus は ["a","a_e"] の形）、L175〜180 は 総まとめ（ブレンド＋マジック e、sh / wh / th / ch ＋マジック e、cakes のような -s、cupcake のような 2音節語）。`phonics.rule` は "magic-e" / "review"。
+- フォニックス問題: focus に マジック e（"a_e" など）が あるときは「きこえた ぼいん（a i u e o）の おとは どれ？」。おわりが「母音＋子音1つ＋e（＋s）」の語は a_e など、短母音1つの語（くらべ回の cap）は a。まちがいの選択肢には かならず 同じ母音の ペア（a ↔ a_e）を入れる（src/lib/curriculum/questions.ts の `magicEQuestion`）。順番は 語頭ブレンド → 語末 → マジック e → ダイグラフ（shape は sh ではなく a_e で問う）。
+- 表現の型: What's this letter? ― It's a small b. / Is this p or q? / Look at the sign. / I see a small k. → What do you want? ― I want a hamburger. / How many cherries? ― Three cherries, please. / I want ～ and ～. → This is the library. / This is my favorite place. / Go straight. Turn right. / Where is the nurse's office? → I wake up at six. / I eat breakfast. / I go to school. / I do my homework. / I go to bed. → First, ～. Then, ～. Next, ～. / Once upon a time. / The end. → Let's practice together. / Welcome to my favorite place!
+- 3人称（has / says / likes など）は まだ つかわない（テストで確認）。
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 151 | Small Letters a to m | こもじ a〜m | What's this letter? | a_e（cake, game, name, gate） | まなびの城の もじの もん |
+| 152 | Small Letters n to z | こもじ n〜z・にている もじ | Is this p or q? | a_e（make, lake, tape, cape） | 城の ろうかの もじパズル |
+| 153 | Look at the Sign! | まちの かんばん | Look at the sign. | a_e（plane, snake, skate, grape） | 城下町で かんばんを よむ |
+| 154 | Letters Around Town | まちの ばしょと こもじ | I see a small k. | a_e（shape, shade, wave, same） | 城下町の ちずで こもじ さがし |
+| 155 | Town Sign Hunt | まとめ | Look at the sign. It's a cake shop. | a_e ふりかえり（bake, late, safe, made） | かんばん たんけんゲーム |
+| 156 | What Do You Want? | しょくじ | What do you want? | i_e（bike, kite, five, nine） | 城の カフェで おひるごはん |
+| 157 | I Want a Parfait! | デザート | I want a parfait. | i_e（ride, hide, line, time） | デザート タイム |
+| 158 | How Many Cherries? | トッピングと かず | How many cherries? | i_e（slide, smile, prize, white） | パフェの カウンター |
+| 159 | My Dream Parfait | くみあわせ | I want ice cream and bananas. | i_e（like, pine, dive, wipe） | 城の キッチンで ゆめの パフェ |
+| 160 | The Parfait Shop | まとめ | I want a parfait, please. | i_e ふりかえり（bite, mile, side, fine） | おまつりで パフェやさんごっこ |
+| 161 | This Is Our School | がっこうの へや | This is the library. | o_e（home, bone, rope, nose） | てんこうせい ピポに がっこう あんない |
+| 162 | My Favorite Place | おきにいりの ばしょ | This is my favorite place. | o_e（hole, note, pole, rose） | 城の がっこうの おきにいりの ばしょ |
+| 163 | Go Straight! | みちあんない | Go straight. | o_e（stone, smoke, globe, stove） | ピポを ずこうしつへ |
+| 164 | Where Is the Nurse's Office? | ばしょを たずねる | Where is the nurse's office? | o_e（hope, joke, poke, vote） | ろうかで ちょっとした けが |
+| 165 | School Tour | まとめ | This is my favorite place. It's the library. | o_e ふりかえり（code, mole, robe, cone） | ピポの こうない ツアー |
+| 166 | I Wake Up | あさ | I wake up. | u_e（cute, tube, mule, cube） | 城の しんしつの あさ |
+| 167 | I Eat Breakfast | ごはん | I eat breakfast. | u_e「ウー」（June, rule, flute, tune） | 城の しょくどうで あさごはん |
+| 168 | I Go to School | とうこう | I go to school. | e_e（these, theme, eve, complete） | みんなで がっこうへ |
+| 169 | I Do My Homework | ほうかごと よる | I do my homework. | u_e・e_e（use, rude, dune, delete） | 城の とうの ゆうがた |
+| 170 | My Day | まとめ | I wake up at seven. I go to school. | u_e e_e ふりかえり（cute, tune, these, eve） | 「わたしの 1日」とけい |
+| 171 | First, Then | じゅんばん | First, I wash my hands. | a と a_e くらべ（cap, cape, tap, tape） | 城の キッチンで サンドイッチ |
+| 172 | The Hungry Rabbit | えほん（なりきり） | First, I eat a carrot. | i と i_e くらべ（kit, kite, pin, pine） | 「はらぺこ うさぎ」 |
+| 173 | Let's Make Pancakes! | つくりかた | First, mix the eggs. | o と o_e くらべ（hop, hope, not, note） | パンケーキ クッキングショー |
+| 174 | Story Time | よみきかせ | Once upon a time. | u と u_e くらべ（cub, cube, tub, tube） | エマ先生の「ちいさな くも」 |
+| 175 | Our Picture Book | まとめ | First, I go to the park. Then, I play tag. | マジック e 5つ（gate, ride, bone, mule, these） | じぶんたちの えほんを よむ |
+| 176 | My Favorite Place Speech | スピーチづくり | This is the music room. I like singing. | ブレンド＋マジック e（plane, slide, stone, flute） | 城の きょうしつで スピーチづくり |
+| 177 | My School Day | がっこうの 1日 | I go to the library after lunch. | ダイグラフ＋マジック e（shape, white, those, chase） | がっこうの 1日の おしゃべり |
+| 178 | Small Letter Quiz Show | こもじ クイズ | It's a small g. | マジック e＋s（cakes, bikes, bones, cubes） | 城の ホールで クイズショー |
+| 179 | Practice Time | はっぴょうの れんしゅう | Let's practice together. | 2音節＋マジック e（cupcake, sunshine, bedtime, trombone） | 城の ステージで リハーサル |
+| 180 | World 6 Grand Review | ワールド総まとめ（スピードTPR） | Welcome to my favorite place! | マジック e 総まとめ（cake, kite, rope, cute, these） | まなびの城の 大ひろまで 小4 はっぴょうかい |
 
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
