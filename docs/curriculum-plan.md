@@ -612,6 +612,52 @@
 | 299 | Ocean of Life Review | いきもの・せかい・おすすめ | In Japan, people eat fish. Let's keep the sea clean. | c g -y -le ふりかえり（rice, gem, baby, bubble） | いのちの海の しま ふりかえり さんぽ |
 | 300 | World 10 Grand Review | 小6中盤 はっぴょうかい（ワールド10 ぜんぶ） | We can save the sea. Let's start today! | 総まとめ（ice, giant, happy, apple, draw, sauce, new） | いのちの海の ステージで 小6中盤 はっぴょうかい |
 
+## 6-11. ワールド11 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: -ed の 3つの おと（L301 は jumped の「ト」、L302 は played の「ド」、L303 は wanted の「イド」、L304 は まざる。focus "-ed"・rule "ending-ed"）→ サイトワード was（L306）・were（L307）・said（L308）・there（L309）（rule "sight-words"）→ -er（L311 teacher の「～する ひと」、L312 baker の e を とる、L313 swimmer の もじを 2つに、L314 taller の「もっと」。focus "-er"・rule "ending-er"）→ -est（L316〜319。tallest → oldest → biggest〈もじを 2つに〉→ nicest / happiest〈e を とる・y を i に〉。focus "-est"・rule "ending-est"）→ サイトワード could（L321）・would（L322）・because（L323）・could would because（L324）。5の倍数回と L326〜330 は ふりかえり。
+- サイトワードの 回の phonics.words は、その サイトワード ＋ にている ことば（was / saw / what / want、were / we / her / where、said / say / says / again、there / where / here / then、could / would / should / good、would / wood / look / foot、because / why / so / but）。rule "sight-words" の 回は「フォーカスの つづりを ふくむ」チェックの たいしょうがい（既存テストの とおり）。
+- おとの表: `src/lib/curriculum/w11Phonics.ts`（W11_INTRO・edSound・ER_MORE_WORDS・SIGHT_TIP・w11Say）。-ed は まえの もじで きめる（t / d → イド、p k f s sh ch x・ce → ト、それ以外 → ド）。used のような 1つの s の -sed は つかわない（テストで 確認）。
+- フォニックス問題（questions.ts の `w11Question`。ワールド10 の つぎ・語末の まえ）:
+  - -ed: 「この ことばの おわりの -ed は どの おと？」（ト（t）/ ド（d）/ イド（id）の 3つ）。まえの もじで きまるので ことばを 画面に 出す。
+  - -er / -est: 「おわりに きこえる おとは どれ？」（-er / -est / -ed / -ing）。解説で「～する ひと」「もっと」「いちばん」を 見わける。"-est" は 語末ブレンド（-st）の 問題に しない。
+  - サイトワード: 「きこえた ことばは どれ？」（画面は 🔊。選択肢は その回の にている ことば → ならった サイトワード の じゅん。-ed / -er / -est の ことばは 入れない）。there は th（ダイグラフ）ではなく サイトワードで 問う。
+- フォーカスの 読み上げ: -ed / -er / -est は その回の 1つめの ことば（"ed" を「エド」と よまない）、サイトワードは ことばの まま。
+- 表現の型: What's your best memory? ― My best memory is ～. / I enjoyed ～. / What did you do? ― We visited ～. / This is me at ～. → We had ～. It was exciting. / ～ was ～. ～ were ～. / ～ said, "～." / There was ～. There were ～. → What do you want to be? ― I want to be ～. / Why? ― Because ～. / I practice ～ every day. / When I'm older, ～. → What club do you want to join? ― I want to join ～. / I want to ～ in junior high school. / ～ is the biggest club. / Can I try it? → Thank you for ～. / I could ～. / I would like to ～. / ～ because ～. / Because of you, I could ～. → My dream is to be ～. / He (She) wants to be ～. / Let me tell you about my dream. / Thank you for listening. → 小6 はっぴょうかい（ゆめの スピーチ）。
+- AI 会話タスクでは 本名・がっこうの なまえ・せんせいの なまえを きかない（L310・L315・L316・L320・L321・L324・L325・L327・L329・L330 の goalJa に 明記・テストで 確認）。
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 301 | What's Your Best Memory? | おもいでを たずねる | What's your best memory? | -ed ト（jumped, walked, cooked, helped） | ゆめの都の はじめての 日。そつぎょうアルバムづくり |
+| 302 | My Best Memory Is Sports Day | たのしかった こと | My best memory is sports day. | -ed ド（played, cleaned, opened, called） | アルバムに いれる うんどうかいの しゃしんを えらぶ |
+| 303 | We Visited Kyoto | した ことを くわしく | We visited Kyoto. | -ed イド（wanted, painted, visited, started） | しゅうがくりょこうの しゃしんに ひとことを かく |
+| 304 | My Album Page | しゃしんと ひとこと | This is me at the music festival. | -ed まざる（washed, smiled, needed, danced） | としょかんで アルバムの ページづくり |
+| 305 | Graduation Album | そつぎょうアルバムづくり（まとめ） | My best memory is the school trip. We visited Nara. | -ed ふりかえり（jumped, played, wanted, cooked, cleaned） | みんなで そつぎょうアルバムを かんせい |
+| 306 | We Had Sports Day | あった ぎょうじ | We had sports day. | was（was, saw, what, want） | うんどうかいの ふりかえり |
+| 307 | The Races Were Exciting | ぎょうじの ようす | The races were exciting. | were（were, we, her, where） | うんどうかいの ビデオを みる |
+| 308 | Our Teacher Said Well Done | がっしょうコンクール | We had a chorus contest. | said（said, say, says, again） | ホールで がっしょうコンクールの あと |
+| 309 | There Were Many People | がくえんさいの ようす | There were many people. | there（there, where, here, then） | ビリモに がくえんさいの ことを はなす |
+| 310 | Sports Day News | うんどうかい しんぶん（まとめ） | We had sports day. It was exciting. | was were said there ふりかえり | うんどうかいの かべしんぶんづくり |
+| 311 | What Do You Want to Be? | なりたい しごと | What do you want to be? | -er ひと（teacher, player, singer, helper） | ゆめ インタビューの 日 |
+| 312 | Because I Like Bread | りゆうを つたえる | I want to be a baker. Because I like bread. | -er e を とる（baker, driver, writer, dancer） | パンやさんの まえで ゆめ インタビュー |
+| 313 | I Practice Every Day | ゆめの ために がんばる こと | I practice swimming every day. | -er もじを 2つに（swimmer, runner, winner, shopper） | スポーツセンターで インタビュー |
+| 314 | When I'm Older | みらいの じぶん | I want to run faster. | -er もっと（taller, faster, bigger, older） | みらいの じぶんへ てがみを かく |
+| 315 | Dream Radio Interview | ゆめ インタビュー（まとめ） | I want to be a singer. Because I like music. | -er -ed ふりかえり（teacher, baker, swimmer, taller, played） | ラジオきょくで ゆめ インタビュー ばんぐみ |
+| 316 | What Club Do You Want to Join? | はいりたい ぶかつ | What club do you want to join? | -est（tallest, fastest, longest, smallest） | ちゅうがっこうの ぶかつ しょうかいを みる |
+| 317 | In Junior High School | ちゅうがくで がんばりたい こと | I want to study English hard. | -est（oldest, coldest, highest, strongest） | ちゅうがっこうの せいふくを きてみる 日 |
+| 318 | The Biggest Club | ぶかつの ようす | The soccer club is the biggest club. | -est もじを 2つに（biggest, hottest, wettest, saddest） | ぶかつ ガイドを よむ |
+| 319 | Club Trial Day | たいけんにゅうぶ | This is the happiest day. | -est e・y（nicest, largest, happiest, funniest） | ちゅうがっこうで たいけんにゅうぶ |
+| 320 | Club Posters | ぶかつ しょうかい（まとめ） | I want to join the tennis team. Because I like tennis. | -er -est くらべ（taller, tallest, bigger, biggest） | ぶかつ しょうかいポスターの はっぴょう |
+| 321 | Thank You for Your Help | かんしゃを つたえる | Thank you for your help. | could（could, would, should, good） | ありがとうカードを かく |
+| 322 | I Would Like to Say Thank You | ていねいに つたえる | I would like to say thank you. | would（would, wood, look, foot） | しょくいんしつに てがみを とどける |
+| 323 | Because You Were Kind | りゆうを そえる | Thank you for being my friend. | because（because, why, so, but） | こうえんで メッセージ こうかん |
+| 324 | A Message for Our Teacher | 先生へのメッセージ | Because of you, I could speak English. | could would because（+ should） | エマ先生に ないしょで よせがき |
+| 325 | Thank-You Party | ありがとうパーティー（まとめ） | Thank you for teaching us English. | could would because said ふりかえり | サプライズ ありがとうパーティー |
+| 326 | My Dream Speech | ゆめの スピーチづくり | My dream is to be a doctor. | -ed -er ふりかえり（walked, cleaned, started, singer） | としょかんで ゆめの スピーチづくり |
+| 327 | Dream Quiz Show | ともだちの ゆめ クイズ | She wants to be a singer. | -er -est ふりかえり（writer, runner, longest, nicest） | ステージで ゆめ クイズショー |
+| 328 | Speech Practice | スピーチの れんしゅう | Let me tell you about my dream. | サイトワード ふりかえり（was, there, would, because） | ステージで スピーチの リハーサル |
+| 329 | City of Dreams Review | おもいで・ゆめ・ぶかつ・ありがとう | My best memory is sports day. I want to be a teacher. | -ed -er -est ふりかえり（helped, opened, dancer, biggest） | ゆめの都 ふりかえり さんぽ |
+| 330 | World 11 Grand Review | 小6 はっぴょうかい（ワールド11 ぜんぶ） | My dream is to be a singer. Thank you for listening. | 総まとめ（jumped, played, wanted, teacher, tallest, was, because） | ゆめの都の ステージで 小6 はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。

@@ -538,3 +538,44 @@
 - soft c / g の 問題で ことばを 画面に 出しています（「この ことばの c は どの おと？」）。音声だけで 聞かせたい 場合は 表示を 🔊 に もどせますが、その ときは ルールでは なく 耳だけの 問題に なります。
 - aw / au のボタンは "awe"、ew のボタンは "oo" と 読ませています。ブラウザの声が 不自然なら ことば（saw / new）を 読む形に かえられます。
 - -y の「イー」と「アイ」の 見わけかたを「ほかに 母音が あるか」で 説明しています（happy は a が ある → イー、fly は ない → アイ）。学校の 説明と ちがう 場合は 解説を なおせます。
+
+
+## Phase 15 — ワールド11（レッスン301〜330・小6／NEW HORIZON Elementary 6 後半）（2026-11-24）
+
+### やったこと
+1. **content/curriculum/lessons.json にレッスン301〜330を追加**（ワールド11「ゆめの都」・school.grade は小6）。ワールド1〜10と同じ形式（conversation・recap つき）、英文はすべてオリジナル（教科書の文は使っていない）。既存のレッスン1〜300は変えず、末尾に同じ書式で追記しただけ。
+   - 301〜305 いちばんの思い出（What's your best memory? ― My best memory is ～.、I enjoyed the relay.、What did you do? ― We visited Kyoto.、This is me at the music festival.、そつぎょうアルバムづくり）
+   - 306〜310 学校行事（We had sports day. It was exciting.、The races were exciting.〈was / were〉、Our teacher said, "Well done!"〈がっしょうコンクール〉、There were many people.〈がくえんさい〉、うんどうかい かべしんぶん）
+   - 311〜315 将来の夢（What do you want to be? ― I want to be a teacher.、Because I like bread.、I practice swimming every day.、When I'm older, ～. / I want to run faster.、ゆめラジオ インタビュー）
+   - 316〜320 中学でしたいこと（What club do you want to join? ― I want to join the brass band.、I want to study English hard.、The soccer club is the biggest club.、Can I try it?〈たいけんにゅうぶ〉、ぶかつ しょうかいポスター）
+   - 321〜325 ありがとうメッセージ（Thank you for your help.、I could swim 25 meters.、I would like to say thank you.、I'm happy because you were kind to me.、Because of you, I could speak English.〈よせがき〉、サプライズ ありがとうパーティー）
+   - 326〜330 まとめ（ゆめの スピーチづくり〈おもいで → My dream is to be ～. → Because ～.〉、ゆめ クイズショー〈He / She wants to be ～.〉、スピーチの れんしゅう〈Let me tell you about my dream. / Thank you for listening.〉、ゆめの都 ふりかえり、L330 はスピードTPRつきの ワールド総まとめ「小6 はっぴょうかい」）
+2. **フォニックス**: -ed の 3つの おと（L301 ト・L302 ド・L303 イド・L304 まざる。focus "-ed"・rule "ending-ed"）→ サイトワード was / were / said / there（L306〜309・rule "sight-words"）→ -er（L311 ～する ひと・L312 e を とる・L313 もじを 2つに・L314「もっと」。"-er"・"ending-er"）→ -est（L316〜319。"-est"・"ending-est"）→ サイトワード could / would / because（L321〜324）。5の倍数回と L326〜330 は ふりかえり。`phonics.rule` の 値が 4つ ふえた（新しい フィールドは なし）。"sight-words" は 既存テストで すでに 想定されていた 値。
+3. **おとの表を 新しいファイルに（src/lib/curriculum/w11Phonics.ts）**: -ed の おと（まえの もじで ト / ド / イド）、「もっと」の -er の ことば表、サイトワードの よみかたヒント、フォーカスの 読み上げ。import の無い 純粋な データ。
+4. **フォニックス問題（questions.ts に `w11Question` を 追加。ワールド10 の つぎ・語末の まえ）**: -ed は「この ことばの おわりの -ed は どの おと？」（ト（t）/ ド（d）/ イド（id）の 3択。ことばを 画面に 出す）、-er / -est は「おわりに きこえる おとは どれ？」（-er / -est / -ed / -ing。解説で ひと・もっと・いちばんを 見わける）、サイトワードは「きこえた ことばは どれ？」（画面は 🔊、選択肢は その回の にている ことば〈was / saw / what / want など〉→ ならった サイトワード）。there は th ではなく サイトワードで 問う。既存の 問題関数は 変更なし（呼び出し順に 1つ 足しただけ）。
+5. **フォーカスの 読み上げ（vowelTeams.ts の focusSay に 2行）**: -ed / -er / -est は その回の 1つめの ことばを 読む（"ed" を「エド」と 読まない）。サイトワードは ことばの まま。LessonSteps.tsx は 変更なし。
+6. **マップ（WorldMap.tsx の1行）**: ワールド11「ゆめの都」（ゆうやけの むらさき・壁のもじ -ed / was / -er / -est / said）を追加。
+7. **テスト**: tests/curriculum.test.ts にワールド11の決まりごと（301〜330・小6、フォニックスの 順番と rule、サイトワードの 回は その ことばを ふくむ、-ed の ト / ド / イド の 回わけ・-sed を 出さない、-er / -est の 語尾・L314 は「もっと」、L330 のスピードTPR、ブロックごとの表現の型、AI 会話で 本名・がっこうの なまえを きかない）、tests/phonics-w11.test.ts（新規・8件: おとの表・読み上げ・jumped / played / wanted / teacher / tallest / taller / was / said / there・ワールド11 全語の 選択肢チェック・makeQuestion と 一致・ワールド10 までは 影響なし）。合計 615件。
+8. **docs/curriculum-plan.md** に「6-11. ワールド11 のレッスン詳細」を追加。
+9. `npx tsc --noEmit` / `npx vitest run`（615件）/ `npx next build` すべて成功。
+
+### 判断したこと
+- -ed は 計画どおり「3つの おと」を 1回ずつ（ト → ド → イド）→ L304 で まざる 形に した。音声だけでは ルールを 考えられないので、soft c / g と おなじく ことばを 画面に 出す。選択肢は 3つの おとだけ（4つめに 意味の ない 選択肢を 足さない）。
+- passed / used のように s で おわる ことばは ss と s で おとが かわるので、-sed の ことばは 使わなかった（テストで 確認）。
+- サイトワードは 「つづりの きまりで よめない ことば」なので、問題は「にている つづりから きこえた ことばを えらぶ」形に した（was / saw の さかさま、would / wood の おなじ おと など、まちがえやすい ペアを その回の ことばに 入れた）。
+- 計画の サイトワード（could, would, because）は 3つなので、L324 は 3つ いっしょ ＋ should（-ould の なかま）に した。
+- -er は「～する ひと」（teacher）だけでなく、L314 で「もっと」（taller）も あつかい、つぎの -est（いちばん）に つなげた。L320 で taller / tallest の くらべ。
+- ワールド9 で とっておいた「いちばんの おもいで（best memory）」と -ed の 3つの おとを、ここで はじめて 出した。
+- 中学校の 話は 一般的な ぶかつ（サッカー・バスケ・すいそうがく・びじゅつ・テニス・かがく・えんげき・バドミントン）だけ。ぶかつ・ありがとう・まとめの 回の AI 会話には「ほんとうの なまえ / がっこうの なまえ / せんせいの なまえは いわなくて OK」を 明記。
+- キャラの ゆめは 回を またいで そろえた（ハル＝サッカーせんしゅ、リコ＝せんせい、キコ＝かしゅ、ビリモ＝パンやさん）。
+
+### スキップ / 未対応
+- 新しいレッスン用の 復習クエスト・まとめテスト・ボス（check-301〜330、mini-301-305 …、boss-1-330、arena など）は ASSESSMENTS には 自動で入るが、DB には 次回の `npm run db:seed` で入る（マイグレーション不要）。
+- worksheets/generate_worksheets.py の実行は 前回と同じ理由（reportlab 未インストール）でスキップ。新しい フィールドは 追加していない（phonics.rule の 値が ふえただけ）。
+- 画面での目視確認はしていない（データ追加・問題の分岐・マップの色・読み上げの表のみ）。
+- NEW HORIZON Elementary 6 の 最新版の 単元一覧は 夜間は 確認できなかった（ネット確認なし）。計画書の テーマに そのまま 合わせた。
+
+### オーナーへの質問
+- -ed の 問題の 選択肢を「ト（t）/ ド（d）/ イド（id）」の 3つに しています。ほかの 問題と おなじ 4択に そろえたい 場合は おしえてください。
+- サイトワードの 回の ことばに saw / wood / why などの「にている ことば」を 入れています。サイトワードだけ（was, were …）で 4つ そろえたい 場合は 入れかえられます。
+- -er の「もっと」（taller）を ワールド11 で 出しました。比較級は 中学の 内容なので、小学校の はんいに とどめたい 場合は L314 を ほかの「～する ひと」の ことばに もどせます。

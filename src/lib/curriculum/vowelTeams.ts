@@ -8,6 +8,7 @@
  */
 import { R_SAY } from "./rControlled";
 import { w10Say } from "./w10Phonics";
+import { w11Say } from "./w11Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -71,6 +72,8 @@ export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
   const w10 = w10Say(focus, words); // soft c / g・-y・-le・aw au ew（ワールド10）
   if (w10) return w10;
+  const w11 = w11Say(focus, words); // -ed・-er・-est（ワールド11）
+  if (w11) return w11;
   const withF = words.filter((w) => w.toLowerCase().includes(focus));
   switch (focus) {
     case "ai": case "ay": return "ay";

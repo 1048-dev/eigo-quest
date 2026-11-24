@@ -9,6 +9,7 @@ import { getLesson, itemsInRange, itemsOfLesson } from "./index";
 import { VOWEL_TEAMS, VOWEL_TEAM_INTRO, possibleSounds, shortVowelOf, teamSound } from "./vowelTeams";
 import { R_MOUTH, R_VOWELS, R_VOWEL_INTRO, findRSpellings, rSound, shortVowelOfR } from "./rControlled";
 import { CG_CHOICES, CG_KANA, CG_LETTER, W10_INTRO as W10_INTRO_MAP, W10_TEAMS, Y_TEAM, cgSounds, w10TeamSound, ySound } from "./w10Phonics";
+import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP, W11_SIGHT_WORDS, edSound } from "./w11Phonics";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -335,6 +336,53 @@ export function w10Question(item: LearningItemDef, rng: () => number): Pick<Ques
   return null;
 }
 
+/** ワールド11（-ed・-er・-est・サイトワード）。おとの表は ./w11Phonics.ts */
+export { W11_FOCUS, W11_INTRO } from "./w11Phonics";
+
+/**
+ * その回のフォーカスに ワールド11 の つづりが あれば（W11_INTRO より あとの 回だけ）、フォーカスの 順に ことばに あうもので 問う。
+ * - "-ed": 「この ことばの おわりの -ed は どの おと？」（ト / ド / イド）。まえの もじで きまるので ことばを 画面に 出す。
+ * - "-er" / "-est": 「おわりに きこえる おとは どれ？」（-er / -est / -ed / -ing）
+ * - サイトワード: 「きこえた ことばは どれ？」（その回の ことば・ならった サイトワードから にている つづりを 選択肢に）。
+ *   サイトワードの 回（rule "sight-words"）は、その回の ことば（saw, wood など）も おなじ 形で 問う。
+ * 語末（endingQuestion）より 先に よぶ。
+ */
+export function w11Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  const lesson = getLesson(item.lessonNo);
+  const focus = (lesson?.phonics.focus ?? []).filter((f) => W11_INTRO_MAP[f] !== undefined && W11_INTRO_MAP[f] <= item.lessonNo);
+  if (!lesson || focus.length === 0) return null;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of focus) {
+    if (f === "-ed") {
+      const s = edSound(w);
+      if (!s) continue;
+      const why = s === "id" ? "t や d の あとの -ed は「イド」と よむよ。"
+        : s === "t" ? "p・k・s・sh・ch のような いきだけの おとの あとの -ed は ちいさく「ト」と よむよ。"
+        : "こえの でる おと（n・l・y など）の あとの -ed は「ド」と よむよ。";
+      return { promptJa: "この ことばの おわりの -ed は どの おと？", display: item.text,
+        choices: shuffle(["t", "d", "id"] as const, rng).map((x) => ({ id: x, label: ED_LABEL[x] })), answer: s,
+        explanationJa: `${item.text} の -ed は「${ED_KANA[s]}」。${why}` };
+    }
+    if (f === "-er" || f === "-est") {
+      const end = f.slice(1);
+      if (!w.endsWith(end)) continue;
+      const mean = f === "-est" ? "「いちばん」の いみ" : ER_MORE_WORDS.has(w) ? "「もっと」の いみ" : "「～する ひと」の いみ";
+      return { promptJa: "おわりに きこえる おとは どれ？", choices: pick(["-er", "-est", "-ed", "-ing"]), answer: f,
+        explanationJa: `${item.text} は おわりが「${f}」。${f} が つくと ${mean}に なるよ。` };
+    }
+    // サイトワード: その ことばか、サイトワードの 回の ことば
+    if (w !== f && lesson.phonics.rule !== "sight-words") continue;
+    const ending = (x: string) => focus.some((e) => e.startsWith("-") && x.endsWith(e.slice(1)));
+    const fromLesson = lesson.phonics.words.map((x) => x.toLowerCase()).filter((x) => x !== w && !ending(x));
+    const learned = W11_SIGHT_WORDS.filter((x) => W11_INTRO_MAP[x] <= item.lessonNo && x !== w && !fromLesson.includes(x));
+    const others = [...shuffle(fromLesson, rng), ...shuffle(learned, rng)].slice(0, 3);
+    return { promptJa: "きこえた ことばは どれ？", choices: pick([w, ...others]), answer: w,
+      explanationJa: `${SIGHT_TIP[w] ?? `${item.text} は サイトワード。`}もじを みたら すぐ よめるように しよう。` };
+  }
+  return null;
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -394,10 +442,10 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
-      // 語頭ブレンド → ワールド10（soft c / g・-y・-le・aw au ew）→ 語末（-st / -s / -ing）→ マジック e → 母音チーム → r の つく母音 → ダイグラフ の順
+      // 語頭ブレンド → ワールド10（soft c / g・-y・-le・aw au ew）→ ワールド11（-ed・-er・-est・サイトワード）→ 語末（-st / -s / -ing）→ マジック e → 母音チーム → r の つく母音 → ダイグラフ の順
       // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回、shark は sh ではなく ar の回、
       //   shy は sh ではなく -y の回、chew は ch ではなく ew の回の問題にする）
-      const dq = blendQuestion(item, rng) ?? w10Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      const dq = blendQuestion(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
