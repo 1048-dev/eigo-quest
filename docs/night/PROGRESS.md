@@ -495,3 +495,46 @@
 - ar のボタンは "are"、er / ir / ur のボタンは "er" と 読ませています。ブラウザの声で "er" が 不自然なら、"her" や "bird" のような ことばを 読む形に かえられます。
 - ar「アー」と er「ア～」の カタカナ表記で よいでしょうか（どちらも「アー」と 書く 教材も あります）。
 - 過去形（went / was / saw / ate / enjoyed / played / watched）を ワールド9 後半で まとめて 出しています。量が 多ければ 1回に 1つずつに へらせます。
+
+
+## Phase 14 — ワールド10（レッスン271〜300・小6／NEW HORIZON Elementary 6 中盤）（2026-11-24）
+
+### やったこと
+1. **content/curriculum/lessons.json にレッスン271〜300を追加**（ワールド10「いのちの海」・school.grade は小6）。ワールド1〜9と同じ形式（conversation・recap つき）、英文はすべてオリジナル（教科書の文は使っていない）。既存のレッスン1〜270は変えず、末尾に同じ書式で追記しただけ。
+   - 271〜275 いきものと地球（Where do sea turtles live? ― They live in the sea.、Penguins live in cold places.、What do ～ eat?、Sea turtles are in danger.、うみの いきもの クイズ）
+   - 276〜280 食べもののつながり（Where is this banana from? ― It's from the Philippines.、This milk is from Hokkaido.、What's in the curry?〈きゅうしょくの ざいりょう〉、Rabbits eat grass.〈しょくもつれんさ〉、きゅうしょく たんていだん）
+   - 281〜285 世界のくらし（In India, people eat curry.、In Australia, Christmas is in summer.、In Japan, people bow.、In Venice, people go by boat.、せかいの こどもの 1日〈In Finland, children start school at seven.〉）
+   - 286〜290 おすすめ（I recommend this book. It's exciting.、I recommend apple pie. It's sweet.、I recommend the park. You can ～.、Why do you recommend it?、おすすめ ずかんづくり）
+   - 291〜295 わたしたちにできること（We can pick up trash. / Let's clean the beach.、We can turn off the water.、Reduce, reuse, recycle、We can walk or ride a bike.、ちきゅうを まもる アイデア かいぎ）
+   - 296〜300 まとめ（ていあん スピーチづくり〈もんだい → We can ～. → Let's ～.〉、ちきゅう クイズショー、スピーチの れんしゅう〈Look at this picture. / Thank you for listening.〉、ふりかえり、L300 はスピードTPRつきの ワールド総まとめ「小6中盤 はっぴょうかい」）
+2. **フォニックス**: soft c（L271〜274・focus "c"・rule "soft-c"）→ soft g（L276〜279・"g"・"soft-g"）→ おわりの y（L281〜282 イー、L283 アイ、L284 くらべ・"-y"・"ending-y"）→ おわりの -le（L286〜289・"-le"・"ending-le"）→ aw（L291）→ au（L292）→ ew（L293）→ aw au ew（L294・"vowel-team"）。5の倍数回と L296〜300 は ふりかえり（L275 city / cat、L280 giant / goat の くらべ）。`phonics.rule` の 値が 4つ ふえた（新しい フィールドは なし）。
+3. **おとの表を 新しいファイルに（src/lib/curriculum/w10Phonics.ts）**: c / g の soft・hard（あとに e・i・y → soft。ch・ck・sc・gh・ng は かぞえない、get / girl などは れいがい表）、おわりの y（ほかに 母音が なければ アイ）、aw・au「オー」/ ew「ウー」、フォーカスの 読み上げ。import の無い 純粋な データ。
+4. **フォニックス問題（questions.ts に `w10Question` を 追加。語頭ブレンドの つぎ・語末の まえ）**: c / g は「この ことばの c は どの おと？」（s / k / ch / sh、g は j / g / ch / d。ことばを 画面に 出す）、-y は「おわりの y は どの つづりと おなじ おと？」（ee / igh ＋ 2つ）、-le は「おわりに きこえる おとは どれ？」（-le / -y / -er / -ing）、aw au ew は 母音チームと おなじ 形（aw と au は いっしょに 出さない・ew の ときは oo を 出さない・まだ ならっていない つづりは 出さない）。endingQuestion は "-y" "-le" を 無視する ように 1行 追加（語末ブレンドの 選択肢に ならない）。shy / chew は sh・ch ではなく -y・ew で 問う。
+5. **フォーカスの 読み上げ（vowelTeams.ts の focusSay に 2行）**: aw / au → "awe"、ew → "oo"、-y → "ee" / "eye"、-le と soft c / g の 回は 1つめの ことば。ワールド1 の c・g の 回は いままでどおり（テストで 確認）。LessonSteps.tsx は 変更なし。
+6. **マップ（WorldMap.tsx の1行）**: ワールド10「いのちの海」（うみの みどりがかった あお・壁のもじ ce / ge / -y / -le / aw）を追加。
+7. **テスト**: tests/curriculum.test.ts にワールド10の決まりごと（271〜300・小6、フォニックスの 順番と rule、c / g の おとが ことばの 中で まざらない・れいがい語を 出さない、-y の イー / アイ の 回わけ、few を 出さない、L300 のスピードTPR、ブロックごとの表現の型、AI 会話で 本名・ばしょの なまえを きかない）、tests/phonics-w10.test.ts（新規・12件: おとの表・読み上げ・city / cat / giant / goat / happy / fly / apple / shy / chew / saw / flew・ワールド10 全語の 選択肢チェック・ワールド9 までは 影響なし）。合計 569件。
+8. **docs/curriculum-plan.md** に「6-10. ワールド10 のレッスン詳細」を追加。
+9. `npx tsc --noEmit` / `npx vitest run`（569件）/ `npx next build` すべて成功。まとめ動画は全300レッスンで2〜3分に収まることを既存テストで確認。
+
+### 判断したこと
+- soft c / soft g の focus は "c" / "g"（計画の「soft c（city, ice）」どおり、つづりの テストが そのまま 通る）。ワールド1 の 文字の 音と おなじ 書き方なので、問題・読み上げは「L271（g は L276）より あとの 回だけ」「ことばが ぜんぶ soft の ときだけ」に かぎった。
+- c / g の 問題は 音声だけ では「どちらの おとか」を ルールで 考えられないので、ことばを 画面に 出した（c の あとの もじを みて きめる 練習）。
+- bicycle / circle のように 1つの ことばに soft と hard が まざる ことばは 出さない（テストで 確認）。
+- おわりの y は 計画の 例（happy, fly）どおり「イー」と「アイ」を 分けて 教え、L284 で くらべ。July / apply のような れいがいは 出さない。
+- -le の 問題は つづりの ちがい（-le / -el / -al）だと 音声で 聞きわけられないので、ちがう おとの 語尾（-y / -er / -ing）と くらべる 形に した。
+- aw / au / ew は 計画どおり 1ブロック（L291〜295）。aw・au・ew を 1回ずつ → L294 で 3つ いっしょ。ew は「ウー」の ことばだけ（few / new の「ユー」は 避けた。new は アメリカ英語の「ヌー」に 近い 読みで あつかった）。
+- 「or」（ワールド9）と aw / au は カタカナでは どちらも「オー」だが、aw の 問題の 選択肢には or が 入らない（r の つく母音は 別の 問題）ので 混乱は ない と 判断。
+- せかいの くらしは 一般的な ことがら（なつの クリスマス、ベネチアの ボート、フィンランドは 7さいで 入学、おじぎ / あくしゅ）だけに し、こくみんせいを きめつける 文は 書かなかった。
+- 海外の 話は ワールド8 と おなじく「エマ先生の めいっこ リリー（オーストラリア）」を 通して（speaker は 5人の まま）。
+- 「将来の夢・いちばんの思い出」は ワールド11 なので 使わず、L300 の しめくくりは「We can save the sea. Let's start today!」（ていあん）に した。
+
+### スキップ / 未対応
+- 新しいレッスン用の 復習クエスト・まとめテスト・ボス（check-271〜300、mini-271-275 …、boss-1-300、arena-271-300、arena-1-300）は ASSESSMENTS には 自動で入るが、DB には 次回の `npm run db:seed` で入る（マイグレーション不要）。
+- worksheets/generate_worksheets.py の実行は 前回と同じ理由（reportlab 未インストール）でスキップ。新しい フィールドは 追加していない（phonics.rule の 値が ふえただけ）。
+- 画面での目視確認はしていない（データ追加・問題の分岐・マップの色・読み上げの表のみ）。
+- NEW HORIZON Elementary 6 の 最新版の 単元一覧は 夜間は 確認できなかった（ネット確認なし）。計画書の テーマに そのまま 合わせた。
+
+### オーナーへの質問
+- soft c / g の 問題で ことばを 画面に 出しています（「この ことばの c は どの おと？」）。音声だけで 聞かせたい 場合は 表示を 🔊 に もどせますが、その ときは ルールでは なく 耳だけの 問題に なります。
+- aw / au のボタンは "awe"、ew のボタンは "oo" と 読ませています。ブラウザの声が 不自然なら ことば（saw / new）を 読む形に かえられます。
+- -y の「イー」と「アイ」の 見わけかたを「ほかに 母音が あるか」で 説明しています（happy は a が ある → イー、fly は ない → アイ）。学校の 説明と ちがう 場合は 解説を なおせます。

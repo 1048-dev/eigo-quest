@@ -8,6 +8,7 @@ import { MAX_CONVERSATION_TURNS } from "@/lib/conversation/engine";
 import { getLesson, itemsInRange, itemsOfLesson } from "./index";
 import { VOWEL_TEAMS, VOWEL_TEAM_INTRO, possibleSounds, shortVowelOf, teamSound } from "./vowelTeams";
 import { R_MOUTH, R_VOWELS, R_VOWEL_INTRO, findRSpellings, rSound, shortVowelOfR } from "./rControlled";
+import { CG_CHOICES, CG_KANA, CG_LETTER, W10_INTRO as W10_INTRO_MAP, W10_TEAMS, Y_TEAM, cgSounds, w10TeamSound, ySound } from "./w10Phonics";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -142,7 +143,9 @@ export const SUFFIXES = ["ing", "s"] as const;
  * - -s / -ing → 「おわりに ついている のは どれ？」
  */
 export function endingQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
-  const endings = (getLesson(item.lessonNo)?.phonics.focus ?? []).filter((f) => f.startsWith("-")).map((f) => f.slice(1).toLowerCase());
+  // ワールド10 の "-y" "-le" は w10Question で 問う（語末ブレンドの 選択肢に しない）
+  const known: readonly string[] = [...SUFFIXES, ...FINAL_BLENDS];
+  const endings = (getLesson(item.lessonNo)?.phonics.focus ?? []).filter((f) => f.startsWith("-")).map((f) => f.slice(1).toLowerCase()).filter((e) => known.includes(e));
   if (endings.length === 0) return null;
   const w = item.text.toLowerCase();
   const end = endings.filter((e) => w.endsWith(e)).sort((a, b) => b.length - a.length)[0];
@@ -272,6 +275,66 @@ export function rControlledQuestion(item: LearningItemDef, rng: () => number): P
     explanationJa: `${item.text} は「${answer}」。r が つくと ${R_MOUTH[ja]}「${ja}」の おとに なるよ（みじかい ${short} とは ちがう おと）。` };
 }
 
+/** ワールド10（soft c・soft g・-y・-le・aw au ew）。おとの表は ./w10Phonics.ts */
+export { W10_FOCUS, W10_INTRO } from "./w10Phonics";
+
+/**
+ * その回のフォーカスに ワールド10 の つづりが あれば（W10_INTRO より あとの 回だけ）、フォーカスの 順に ことばに あうもので 問う。
+ * - "c" / "g": 「この ことばの c は どの おと？」（s / k / ch / sh、g は j / g / ch / d）。ことばを 画面に 出す（あとの もじで きまる ため）。
+ *   ことばの 中で c（g）の おとが まざる とき（bicycle）は 問わない。
+ * - "-y": 「おわりの y は どの つづりと おなじ おと？」（happy → ee、fly → igh ＋ ほかの ながい おと 2つ）
+ * - "-le": 「おわりに きこえる おとは どれ？」（-le ＋ -y / -er / -ing）
+ * - "aw" "au" "ew": 「きこえた ぼいんの おとは どれ？」（正解 ＋ みじかい母音 ＋ ちがう おとの つづり。aw と au は いっしょに 出さない）
+ * 語末（endingQuestion）より 先に よぶ（"-y" "-le" を 語末ブレンドとして 問わない）。
+ */
+export function w10Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  const focus = (getLesson(item.lessonNo)?.phonics.focus ?? []).filter((f) => W10_INTRO_MAP[f] !== undefined && W10_INTRO_MAP[f] <= item.lessonNo);
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of focus) {
+    if (f === "c" || f === "g") {
+      const s = cgSounds(f, w);
+      if (s.length === 0 || s.some((x) => x !== s[0])) continue;
+      const answer = CG_LETTER[f][s[0]];
+      const kana = CG_KANA[f][s[0]];
+      const why = s[0] === "soft" ? `${f} の あとに e・i・y が くると「${kana}」に なるよ。` : `${f} の あとが e・i・y では ない ときは「${kana}」だよ。`;
+      return { promptJa: `この ことばの ${f} は どの おと？`, display: item.text, choices: pick(CG_CHOICES[f]), answer,
+        explanationJa: `${item.text} の ${f} は「${kana}」（${answer} と おなじ おと）。${why}` };
+    }
+    if (f === "-y") {
+      const ys = ySound(w);
+      if (!ys) continue;
+      const answer = Y_TEAM[ys];
+      const other = Y_TEAM[ys === "イー" ? "アイ" : "イー"];
+      const fill = shuffle(["ai", "oa", "oo", "oi"], rng).slice(0, 2);
+      return { promptJa: "おわりの y は どの つづりと おなじ おと？", display: item.text, choices: pick([answer, other, ...fill]), answer,
+        explanationJa: ys === "イー"
+          ? `${item.text} の おわりの y は「イー」（ee と おなじ おと）。2つ いじょうの まとまりの ことばの おわりの y は「イー」が おおいよ。`
+          : `${item.text} の おわりの y は「アイ」（igh と おなじ おと）。ほかに ぼいんの ない みじかい ことばの y は「アイ」だよ。` };
+    }
+    if (f === "-le") {
+      if (!w.endsWith("le")) continue;
+      return { promptJa: "おわりに きこえる おとは どれ？", choices: pick(["-le", "-y", "-er", "-ing"]), answer: "-le",
+        explanationJa: `${item.text} は おわりが「-le」。さいごの e は よまないで、かるく「ル」と よむよ。` };
+    }
+    if ((W10_TEAMS as readonly string[]).includes(f)) {
+      if (!w.includes(f)) continue;
+      const ja = w10TeamSound(f);
+      const short = f[0];
+      // aw と au は おなじ おと。ew の ときは aw（au）を、aw / au の ときは ew を（ならっていれば）くらべに 入れる
+      const pair = (ja === "オー" ? ["ew"] : ["aw", "au"]).filter((x) => W10_INTRO_MAP[x] <= item.lessonNo || focus.includes(x));
+      const contrast = shuffle(pair, rng).slice(0, 1);
+      const fill = shuffle(["ai", "ee", "igh", "oi", "ou"].filter((x) => !w.includes(x)), rng);
+      const choices = [f, short, ...contrast, ...fill].slice(0, 4);
+      return { promptJa: "きこえた ぼいんの おとは どれ？", choices: pick(choices), answer: f,
+        explanationJa: ja === "オー"
+          ? `${item.text} は「${f}」。2つの もじで「オー」の おとに なるよ（aw と au は おなじ おと。みじかい a とは ちがう）。`
+          : `${item.text} は「ew」。2つの もじで「ウー」の おとに なるよ（moon の oo と おなじ おと）。` };
+    }
+  }
+  return null;
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -331,9 +394,10 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
-      // 語頭ブレンド → 語末（-st / -s / -ing）→ マジック e → 母音チーム → r の つく母音 → ダイグラフ の順
-      // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回、shark は sh ではなく ar の回の問題にする）
-      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // 語頭ブレンド → ワールド10（soft c / g・-y・-le・aw au ew）→ 語末（-st / -s / -ing）→ マジック e → 母音チーム → r の つく母音 → ダイグラフ の順
+      // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回、shark は sh ではなく ar の回、
+      //   shy は sh ではなく -y の回、chew は ch ではなく ew の回の問題にする）
+      const dq = blendQuestion(item, rng) ?? w10Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

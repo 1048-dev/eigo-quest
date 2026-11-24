@@ -565,6 +565,53 @@
 | 269 | Sky Continent Review | じこしょうかいと いきたい くに | I'm good at drawing. I want to go to France. | air ear ar or ふりかえり（chair, year, park, horse） | そらの大陸 ふりかえり さんぽ |
 | 270 | World 9 Grand Review | 小6前半 はっぴょうかい（ワールド9 ぜんぶ） | I went to the sea with my family. It was fun. | ar or er ir ur air ear ふりかえり（star, corn, fern, girl, turn, hair, ear） | そらの大陸の てっぺんで 小6前半 はっぴょうかい |
 
+## 6-10. ワールド10 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: soft c（c の あとに e・i・y が くると「ス」。L271〜274、focus "c"・rule "soft-c"）→ soft g（g の あとに e・i・y が くると「ジ」。L276〜279、focus "g"・rule "soft-g"）→ おわりの y（L281〜282 は happy の「イー」、L283 は fly の「アイ」、L284 は くらべ。focus "-y"・rule "ending-y"）→ おわりの -le（apple の「ル」。L286〜289、focus "-le"・rule "ending-le"）→ aw（L291）→ au（L292）→ ew（L293）→ aw au ew（L294。rule "vowel-team"）。5の倍数回と L296〜300 は ふりかえり（L275 は city / cat、L280 は giant / goat の くらべ）。
+- おとの表: `src/lib/curriculum/w10Phonics.ts`（W10_INTRO・cgSounds・ySound・w10TeamSound・w10Say）。"c" "g" は ワールド1 の 文字の 音と おなじ focus なので、L271 / L276 より前の 回では ワールド10 の 問題に しない。ことばの 中で c / g の おとが まざる ことば（bicycle, circle）、get / girl / give のような れいがい、July / apply、few（ew が「ユー」）は つかわない（テストで 確認）。
+- フォニックス問題（questions.ts の `w10Question`。語頭ブレンドの つぎ・語末の まえ）:
+  - c / g: 「この ことばの c は どの おと？」（選択肢 s / k / ch / sh、g は j / g / ch / d）。あとの もじで きまるので ことばを 画面に 出す。
+  - -y: 「おわりの y は どの つづりと おなじ おと？」（happy → ee、fly → igh。2つの おとを かならず 選択肢に）。
+  - -le: 「おわりに きこえる おとは どれ？」（-le / -y / -er / -ing）。"-y" "-le" は 語末ブレンドの 問題（endingQuestion）に しない。
+  - aw / au / ew: 「きこえた ぼいんの おとは どれ？」（正解 ＋ みじかい母音 ＋ ちがう おとの つづり。aw と au は おなじ「オー」なので いっしょに 出さない。ew は moon の oo と おなじ「ウー」なので oo は 出さない）。shy / chew は sh・ch ではなく -y・ew で 問う。
+- フォーカスの 読み上げ: aw / au → "awe"、ew → "oo"、-y → "ee" / "eye"（まざる回は ことば）、-le と soft c / g の 回は 1つめの ことば。
+- 表現の型: Where do sea turtles live? ― They live in the sea. / ～ live in ～. / What do ～ eat? / ～ are in danger. → Where is ～ from? ― It's from ～. / ～ is from ～. / What's in ～? / ～ eat ～.（たべものの つながり）→ In ～, people ～. / In ～, Christmas is in summer. → I recommend ～. It's ～. / You can ～. / Why do you recommend it? → We can ～. / Let's ～. → Look at this picture. / Thank you for listening. → 小6中盤 はっぴょうかい（ていあん スピーチ）。
+- せかいの くらしは 一般的な ことがら（オーストラリアの なつの クリスマス、ベネチアの ボート、フィンランドは 7さいで しょうがっこう など）だけ。こくみんせいを きめつける 文は 書かない。
+- AI 会話タスクでは 本名・ほんとうの ばしょの なまえを きかない（L280・L288・L289・L300 の goalJa に 明記・テストで 確認）。
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 271 | Where Do Sea Turtles Live? | すんでいる ところ | Where do sea turtles live? | soft c（ice, city, rice, pencil） | いのちの海の すいぞくかんの はじめての 日 |
+| 272 | Animals and Their Homes | いろいろな すみか | Penguins live in cold places. | soft c（face, dance, juice, place） | すいぞくかんで いきものの すみかマップづくり |
+| 273 | What Do Whales Eat? | いきものの たべもの | Whales eat small fish. | soft c（mice, space, slice, race） | すいぞくかんの えさの じかん |
+| 274 | Animals in Danger | いきものを まもる | Sea turtles are in danger. | soft c（fancy, cent, cell, prince） | あぶない めに あっている うみの いきものの ポスター |
+| 275 | Sea Creature Quiz | うみの いきもの クイズ（まとめ） | They live in the sea. They eat fish. | c の くらべ（city, cat, ice, cup） | すいぞくかんの ステージで クイズ |
+| 276 | Where Is This Banana From? | どこから きたか | Where is this banana from? | soft g（giant, page, gem, cage） | みなとの いちばで たべものの ラベルを みる |
+| 277 | It's from Hokkaido | にほんの さんち | This milk is from Hokkaido. | soft g（huge, large, stage, orange） | みなとの いちばで にほんの たべものマップ |
+| 278 | What's in Our School Lunch? | きゅうしょくの ざいりょう | The rice is from Niigata. | soft g（gym, magic, giraffe, energy） | きゅうしょくの ざいりょう さがし |
+| 279 | The Food Chain | たべものの つながり | Rabbits eat grass. | soft g（gentle, germ, ginger, bridge） | すなはまに たべものの つながりを かく |
+| 280 | School Lunch Detectives | きゅうしょく たんていだん（まとめ） | The beef is from Australia. | g の くらべ（giant, goat, page, bag） | きゅうしょく たんていだんの はっぴょう |
+| 281 | Life Around the World | せかいの たべもの | In India, people eat curry. | -y イー（happy, baby, candy, funny） | せかいの たべもの まつり |
+| 282 | Christmas in Summer? | きせつと ぎょうじ | In Australia, Christmas is in summer. | -y イー（sunny, puppy, story, body） | エマ先生の めいっこ リリーと オンライン |
+| 283 | Greetings Around the World | せかいの あいさつ | In Japan, people bow. | -y アイ（fly, sky, cry, try） | みなとで おきゃくさんへの あいさつれんしゅう |
+| 284 | Homes Around the World | いえと のりもの | In Venice, people go by boat. | -y くらべ（dry, shy, lady, pony） | せかいの いえの しゃしんを みる |
+| 285 | A Day Around the World | せかいの こどもの 1日（まとめ） | In Finland, children start school at seven. | -y ふりかえり（happy, fly, baby, sky） | せかいの こどもの 1日 はっぴょうかい |
+| 286 | I Recommend This Book | おすすめの ほん | I recommend this book. | -le（apple, little, table, bubble） | しまの としょかんで ほんを すすめあう |
+| 287 | My Recommended Food | おすすめの たべもの | I recommend apple pie. It's sweet. | -le（candle, puzzle, bottle, simple） | しまの カフェで おすすめメニューづくり |
+| 288 | A Great Place in Our Town | まちの おすすめの ばしょ | I recommend the park. It's beautiful. | -le（turtle, purple, jungle, eagle） | おきゃくさんむけの まちの ガイドづくり |
+| 289 | Why Do You Recommend It? | りゆうを つたえる | I recommend the zoo. You can see pandas. | -le（uncle, tickle, giggle, needle） | エマ先生と しゅうまつの おでかけの はなし |
+| 290 | Our Recommendation Book | おすすめ ずかんづくり（まとめ） | I recommend sea turtles. They are cute. | -y -le ふりかえり（candy, sky, little, purple） | みんなで おすすめ ずかんづくり |
+| 291 | We Can Save the Sea | うみを まもる | We can pick up trash. | aw（saw, draw, paw, straw） | しまで ビーチそうじ |
+| 292 | Let's Save Water | みずを まもる | We can turn off the water. | au（sauce, autumn, launch, pause） | しまの がっこうで みずの つかいかた |
+| 293 | Reduce, Reuse, Recycle | 3つの R | We can use our own bags. | ew（new, grew, flew, chew） | しまの リサイクルセンター |
+| 294 | Save Energy | でんきと のりもの | We can walk or ride a bike. | aw au ew（claw, astronaut, drew, stew） | しまの がっこうで エネルギー チェック |
+| 295 | Save the Earth Idea Meeting | ちきゅうを まもる アイデア かいぎ（まとめ） | Let's use our own bottles. | aw au ew ふりかえり（hawk, sauce, blew, yawn） | ちきゅうを まもる アイデア かいぎ |
+| 296 | My Proposal Speech | ていあん スピーチづくり | Let's save the sea turtles. | c g ふりかえり（ice, giant, juice, huge） | しまの としょかんで スピーチづくり |
+| 297 | Earth Quiz Show | ちきゅう クイズショー | Sea turtles live in warm seas. | -y -le ふりかえり（sunny, cry, puzzle, eagle） | しまの ステージで クイズショー |
+| 298 | Speech Practice | スピーチの れんしゅう | Thank you for listening. | aw au ew ふりかえり（draw, autumn, flew, lawn） | すなはまの ステージで リハーサル |
+| 299 | Ocean of Life Review | いきもの・せかい・おすすめ | In Japan, people eat fish. Let's keep the sea clean. | c g -y -le ふりかえり（rice, gem, baby, bubble） | いのちの海の しま ふりかえり さんぽ |
+| 300 | World 10 Grand Review | 小6中盤 はっぴょうかい（ワールド10 ぜんぶ） | We can save the sea. Let's start today! | 総まとめ（ice, giant, happy, apple, draw, sauce, new） | いのちの海の ステージで 小6中盤 はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。

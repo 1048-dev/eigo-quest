@@ -1,5 +1,5 @@
 /**
- * 母音チーム（ワールド7〜8）の「おと」の表。純粋な データ（import は おなじく 純粋な ./rControlled だけ）なので、レッスン画面（クライアント）からも使える。
+ * 母音チーム（ワールド7〜8）の「おと」の表。純粋な データ（import は おなじく 純粋な ./rControlled と ./w10Phonics だけ）なので、レッスン画面（クライアント）からも使える。
  *
  * つづりと おとは 1対1 では ない:
  *   - oo は moon の「ウー」と book の「ウ」
@@ -7,6 +7,7 @@
  * どちらの おとかは ことばで きまるので、ことばの 表（OO_SHORT_WORDS / OW_AU_WORDS）で 見分ける。
  */
 import { R_SAY } from "./rControlled";
+import { w10Say } from "./w10Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -68,6 +69,8 @@ export const shortVowelOf = (team: string) => team[0];
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
+  const w10 = w10Say(focus, words); // soft c / g・-y・-le・aw au ew（ワールド10）
+  if (w10) return w10;
   const withF = words.filter((w) => w.toLowerCase().includes(focus));
   switch (focus) {
     case "ai": case "ay": return "ay";
