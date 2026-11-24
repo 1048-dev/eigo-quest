@@ -82,6 +82,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
         {result.ok && (/^(mini|boss)-/.test(result.nextTest ?? "")
           ? <Link href={`/test/${encodeURIComponent(result.nextTest ?? "")}`} className="btn btn-coin mt-4 block">{result.nextTest?.startsWith("boss-") ? "ボスに いどむ！" : "まとめテストへ"}</Link>
           : <Link href={`/lesson/${lesson.lessonNo + 1}`} className="btn btn-coin mt-4 block">つぎのレッスンへ</Link>)}
+        {result.ok && <Link href={`/recap/${lesson.lessonNo}`} className="btn btn-primary mt-3 block">🎬 きょうのまとめを見る（2ぷん・おまけ）</Link>}
         {!result.ok && <button className="btn btn-coin mt-4" onClick={() => { setResult(null); setStep(Math.max(0, steps.findIndex((s) => s.kind === "quiz"))); }}>クイズをもう一回</button>}
         <Link href="/map" className="btn btn-primary mt-4 block">マップへもどる</Link>
       </div>

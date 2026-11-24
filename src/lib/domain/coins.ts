@@ -13,7 +13,8 @@ export type CoinReason =
   | "BOSS_TEST_PASS"
   | "TREASURE_ALERT_CLEAR"
   | "ARENA_PLAY"
-  | "STREAK_BONUS";
+  | "STREAK_BONUS"
+  | "RECAP_WATCHED";
 
 export interface CoinAward {
   amount: number;
@@ -122,6 +123,12 @@ export function rewardForStreak(newStreakDays: number): Reward {
     tickets = C.streakBigBonusRareTickets;
   }
   return finalize(coins, tickets);
+}
+
+/** 「きょうのまとめ」動画を最後まで見た。1日1回だけ（alreadyRewardedToday なら 0） */
+export function rewardForRecap(input: { alreadyRewardedToday: boolean }): Reward {
+  if (input.alreadyRewardedToday) return finalize([]);
+  return finalize([award(C.recapWatched, "RECAP_WATCHED", "きょうの まとめを みた！")]);
 }
 
 /** 連続日数の更新（同日2回目は変化なし、1日空いたらリセット） */

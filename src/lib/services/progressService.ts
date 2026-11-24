@@ -102,7 +102,7 @@ async function recordResponses(tx: Tx, userId: string, logs: AnswerLog[], contex
 async function grantReward(tx: Tx, userId: string, reward: Reward, refType: string, refId: string) {
   for (const [i, c] of reward.coins.entries()) {
     await tx.coinLedger.create({
-      data: { userId, amount: c.amount, reason: c.reason, multiplier: c.multiplier, refType, refId, idempotencyKey: `${refType}:${refId}:${c.reason}:${i}` },
+      data: { userId, amount: c.amount, reason: c.reason, multiplier: c.multiplier, refType, refId, idempotencyKey: `${userId}:${refType}:${refId}:${c.reason}:${i}` }, // idempotencyKey は全ユーザーで一意 → userId を入れる
     });
   }
   for (let i = 0; i < reward.rareGachaTickets; i++) {

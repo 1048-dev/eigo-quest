@@ -29,6 +29,7 @@ export const CURRICULUM_RULES = {
  *   お宝アラート    基本報酬(20) × 2倍
  *   アリーナ        15 coin/回（1日5回まで満額、以降は3coin）
  *   連続学習（いちばん大きな報酬）: 毎日 +min(連続日数,10)、7日ごと +50、30日ごと +300＋レアガチャ券
+ *   きょうのまとめ動画（任意）  5 coin / 約2〜3分。1日1回だけ（何本みても同じ）
  */
 export const COIN_RULES = {
   /** 1日1回目のレッスン（互換用。= lessonCoinsByDailyIndex[0]） */
@@ -55,6 +56,8 @@ export const COIN_RULES = {
   streakBigBonusEvery: 30, // 30日連続ごと
   streakBigBonus: 300,
   streakBigBonusRareTickets: 1,
+  /** 「きょうのまとめ」動画を最後まで見た（1日1回まで） */
+  recapWatched: 5,
 } as const;
 
 export const GACHA_RULES = {

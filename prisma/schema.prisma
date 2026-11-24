@@ -282,6 +282,7 @@ enum CoinReason {
   TREASURE_ALERT_CLEAR    /// お宝復習アラート経由（2倍）
   ARENA_PLAY
   STREAK_BONUS
+  RECAP_WATCHED           /// きょうのまとめ動画（1日1回）
   GACHA_SPEND
   SHOP_SPEND
 }

@@ -256,5 +256,21 @@ export const GradeResponseSchema = z.object({
 });
 export type GradeResponse = z.output<typeof GradeResponseSchema>;
 
+// ---------------------------------------------------------------------------
+// POST /api/recap/:n/watched（きょうのまとめを最後まで見た → 1日1回 5コイン）
+// DB が止まっていても ok:true（コイン 0）。まとめは「おまけ」なので失敗を子どもに見せない
+// ---------------------------------------------------------------------------
+export const RecapWatchedResponseSchema = z.object({
+  ok: bool(true),
+  /** 今回もらえたコイン（もう今日もらった・記録できなかったときは 0） */
+  coinsAwarded: num(0),
+  /** 今日の分はもう受け取りずみ */
+  alreadyToday: bool(false),
+  /** 記録できたか（DB が止まっていると false） */
+  saved: bool(false),
+  messageJa: str("さいごまで みたね！ すごい！"),
+});
+export type RecapWatchedResponse = z.output<typeof RecapWatchedResponseSchema>;
+
 /** すべてのエラーレスポンスの形（ok=false + error） */
 export const ErrorBodySchema = z.object({ error: str("") });

@@ -48,6 +48,8 @@ export default function MapPage() {
   const cur = data.current ?? null;
   const lessonsCleared = nodes.filter((n) => n.type === "LESSON" && n.status === "CLEARED").length;
   const totalLessons = nodes.filter((n) => n.type === "LESSON").length;
+  // いちばん新しく クリアした レッスン（きょうのまとめ用）
+  const latestCleared = nodes.reduce((m, n) => (n.type === "LESSON" && n.status === "CLEARED" ? Math.max(m, n.lessonNo) : m), 0);
   const line = error ? OFFLINE_LINE : companionLine({
     playerName: user.nickname,
     streakDays: user.streakDays,
@@ -84,6 +86,19 @@ export default function MapPage() {
               href={cur.type === "LESSON" ? `/lesson/${cur.lessonNo}` : `/test/${cur.assessmentId ?? ""}`}>しゅっぱつ！</Link>
           )}
         </div>
+      )}
+
+      {latestCleared > 0 && (
+        <Link href={`/recap/${latestCleared}`} className="card rpg-rivets flex items-center justify-between gap-3 p-3">
+          <span className="flex items-center gap-3">
+            <Portrait id="birimo" size={44} />
+            <span>
+              <span className="block text-base font-black">🎬 きょうのまとめを見る</span>
+              <span className="block text-xs text-[var(--ink-2)]">Lesson {latestCleared} を 2ぷんで おさらい（1日1かい 🪙+5）</span>
+            </span>
+          </span>
+          <span className="btn btn-primary shrink-0 px-3 py-2 text-sm">▶</span>
+        </Link>
       )}
 
       {nodes.length > 0 ? (
