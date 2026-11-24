@@ -1,15 +1,16 @@
 /**
  * キャラクターの全身「立ち絵」（オリジナル・3DCGアニメ映画風）。座標系は 100×170、床は y=166。
  *
- * 年齢どおりの頭身（ちびキャラにしない）:
- *   ハル10歳 ≒ 6頭身 / リコ8歳 ≒ 5.6頭身 / キコ7歳 ≒ 5.3頭身。
+ * 3DCGアニメ映画の子どもの頭身（ちびキャラにはしないが、頭は少し大きめで かわいく）:
+ *   ハル10歳 ≒ 4.7頭身 / リコ8歳 ≒ 4.4頭身 / キコ7歳 ≒ 4.2頭身（髪をふくむ）。
+ * 手足は 関節をまたいで 1本の なめらかな輪郭（parts.tsx の SmoothLimb）。人形の関節のような 継ぎ目を出さない。
  *   どのキャラも箱いっぱい（同じ高さ）に描くので、並べるときの身長差は置く側の scale で付ける
  *   （目安: リコ = ハル×0.92、キコ = ハル×0.88）。
  * 手足は先が細くなる円柱（影・つや・逆光つき）、服は布のしわ・すその波、足もとに接地影。
  * ポーズ: idle（気をつけ）/ wave（手をふる）/ point（前を指さす）/ cheer（ばんざい）
  */
 import { BirimoArt, FACE_GEO, HaruArt, KikoArt, RikoArt } from "./CharacterArt";
-import { Folds, Limb, capsule, type Pt } from "./parts";
+import { Folds, Limb, SmoothLimb, capsule, type Pt } from "./parts";
 import type { CharacterId } from "@/lib/game/characters";
 import type { Mood } from "@/lib/game/companion";
 import { RENDERED_STANDING } from "@/lib/art/renderedArt";
@@ -44,9 +45,9 @@ interface Rig {
 }
 
 const RIG: Record<"haru" | "riko" | "kiko", Rig> = {
-  haru: { head: 0.44, chin: 38, neckHW: 3.6, shY: 45.5, shX: 16, chestY: 60, waistY: 82, waistX: 12.2, hipX: 13.6, crotchY: 92, kneeY: 128, ankleY: 158, legX: 6.6, upper: 27, fore: 23.5, armR: [3.9, 3.2, 2.5], legR: [5.7, 4.1, 4.5, 2.9], hand: 1 },
-  riko: { head: 0.494, chin: 41, neckHW: 3.4, shY: 48.5, shX: 15, chestY: 62, waistY: 84, waistX: 11.5, hipX: 13.4, crotchY: 94.5, kneeY: 129, ankleY: 158.5, legX: 6.4, upper: 26, fore: 22.5, armR: [3.7, 3, 2.4], legR: [5.4, 4, 4.3, 2.8], hand: 0.96 },
-  kiko: { head: 0.539, chin: 43, neckHW: 3.4, shY: 50.5, shX: 14.5, chestY: 64, waistY: 86, waistX: 11.8, hipX: 13.4, crotchY: 96.5, kneeY: 130, ankleY: 158.5, legX: 6.4, upper: 25, fore: 21.5, armR: [3.7, 3, 2.45], legR: [5.5, 4.1, 4.4, 2.9], hand: 0.94 },
+  haru: { head: 0.5, chin: 42, neckHW: 3.9, shY: 49, shX: 16.2, chestY: 63, waistY: 84, waistX: 12.4, hipX: 13.8, crotchY: 94, kneeY: 129, ankleY: 158, legX: 6.6, upper: 25.5, fore: 22, armR: [4.2, 3.5, 2.8], legR: [6.2, 4.5, 4.9, 3.1], hand: 1.08 },
+  riko: { head: 0.555, chin: 45.5, neckHW: 3.6, shY: 52, shX: 15.2, chestY: 65, waistY: 86, waistX: 11.6, hipX: 13.4, crotchY: 96, kneeY: 130, ankleY: 158.5, legX: 6.4, upper: 24.5, fore: 21, armR: [4, 3.3, 2.65], legR: [5.9, 4.3, 4.7, 3], hand: 1.04 },
+  kiko: { head: 0.605, chin: 47.5, neckHW: 3.6, shY: 54, shX: 14.8, chestY: 67, waistY: 88, waistX: 12, hipX: 13.4, crotchY: 98, kneeY: 131, ankleY: 158.5, legX: 6.4, upper: 23.5, fore: 20, armR: [4, 3.3, 2.7], legR: [6, 4.4, 4.8, 3.1], hand: 1.02 },
 };
 
 // ---------------------------------------------------------------------------
@@ -122,28 +123,84 @@ function Hand({ g, k = 1 }: { g: ArmGeo; k?: number }) {
   );
 }
 
-/** そで（上腕・前腕）＋手。rolled=true は半そで（ひじでまくったそで口・前腕は素肌） */
-function Arm({ g, r, sleeve, cuff, rolled = false }: { g: ArmGeo; r: Rig; sleeve: string; cuff?: string; rolled?: boolean }) {
-  const [rs, re, rw] = r.armR;
-  const u: Pt = [(g.el[0] - g.sh[0]) / r.upper, (g.el[1] - g.sh[1]) / r.upper];
-  const cuffA: Pt = [g.el[0] - u[0] * 4, g.el[1] - u[1] * 4];
-  const wristIn: Pt = [g.wr[0] - g.dir[0] * 1.2, g.wr[1] - g.dir[1] * 1.2];
+const lerp = (a: Pt, b: Pt, t: number): Pt => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+
+/**
+ * 腕に まく 布の 帯（そで口・まくった そで）。capsule だと 短いときに 丸い 玉に なるので、
+ * 両はしを 腕の 向きに 少し ふくらんだ 弧に した 四角で 描く。
+ */
+function band(a: Pt, b: Pt, ra: number, rb: number, bulge = 0.9): string {
+  const dx = b[0] - a[0], dy = b[1] - a[1];
+  const L = Math.hypot(dx, dy) || 0.001;
+  const u: Pt = [dx / L, dy / L], n: Pt = [-u[1], u[0]];
+  const p = (c: Pt, k: number): string => `${f(c[0] + n[0] * k)} ${f(c[1] + n[1] * k)}`;
+  const ca: Pt = [a[0] - u[0] * bulge, a[1] - u[1] * bulge];
+  const cb: Pt = [b[0] + u[0] * bulge, b[1] + u[1] * bulge];
+  return `M${p(a, ra)} L${p(b, rb)} Q${p(cb, 0)} ${p(b, -rb)} L${p(a, -ra)} Q${p(ca, 0)} ${p(a, ra)} Z`;
+}
+
+function Band({ a, b, ra, rb, fill, bulge }: { a: Pt; b: Pt; ra: number; rb: number; fill: string; bulge?: number }) {
+  const d = band(a, b, ra, rb, bulge);
   return (
     <g>
-      {rolled ? (
-        <>
-          <Limb a={g.el} b={g.wr} ra={re - 0.2} rb={rw} fill="url(#g-skin)" gloss={0.14} />
-          <Limb a={g.sh} b={g.el} ra={rs + 0.9} rb={re + 0.9} fill={sleeve} />
-          <Limb a={cuffA} b={g.el} ra={re + 1.5} rb={re + 1.5} fill={cuff ?? sleeve} gloss={0.26} />
-        </>
-      ) : (
-        <>
-          <Limb a={g.el} b={wristIn} ra={re + 0.6} rb={rw + 0.9} fill={sleeve} />
-          <Limb a={g.sh} b={g.el} ra={rs + 0.9} rb={re + 0.7} fill={sleeve} />
-          <path d={`M${f(g.el[0] - 1.6)} ${f(g.el[1] - 1)} q1.6 1.4 3.2 0`} stroke="#1a0a04" strokeOpacity={0.25} strokeWidth={0.8} fill="none" />
-          {cuff && <Limb a={[wristIn[0] - g.dir[0] * 2.2, wristIn[1] - g.dir[1] * 2.2]} b={wristIn} ra={rw + 1.2} rb={rw + 1.2} fill={cuff} gloss={0.24} />}
-        </>
-      )}
+      <path d={d} fill={fill} />
+      <path d={d} fill="url(#shade-cyl)" opacity={0.6} />
+      <path d={d} fill="url(#cloth-shade)" />
+    </g>
+  );
+}
+
+/**
+ * そで（上腕・前腕）＋手。肩→ひじ→手首を 1本の なめらかな輪郭で描く（関節の継ぎ目を出さない）。
+ *   sleeve="long"（長そで）/ "rolled"（ひじまで まくった そで・前腕は素肌）/ "puff"（ふんわりした 半そで・腕は素肌）
+ */
+function Arm({ g, r, sleeve, cuff, kind = "long" }: { g: ArmGeo; r: Rig; sleeve: string; cuff?: string; kind?: "long" | "rolled" | "puff" }) {
+  const [rs, re, rw] = r.armR;
+  const wristIn: Pt = [g.wr[0] - g.dir[0] * 1.2, g.wr[1] - g.dir[1] * 1.2];
+  const mid1 = lerp(g.sh, g.el, 0.5);
+  const mid2 = lerp(g.el, g.wr, 0.5);
+  const skinArm = <SmoothLimb pts={[g.sh, mid1, g.el, mid2, g.wr]} radii={[rs, (rs + re) / 2 + 0.15, re - 0.1, (re + rw) / 2 + 0.2, rw]} fill="url(#g-skin)" gloss={0.14} />;
+  let cloth: React.ReactNode;
+  if (kind === "rolled") {
+    const a = lerp(g.sh, g.el, 0.78);
+    cloth = (
+      <>
+        <SmoothLimb pts={[g.sh, mid1, a]} radii={[rs + 1, rs + 0.75, re + 1.1]} fill={sleeve} />
+        {/* まくった そで口（ひじの上で 布が 2重に たたまれた 帯） */}
+        <Band a={lerp(g.sh, g.el, 0.68)} b={lerp(g.sh, g.el, 0.95)} ra={re + 1.35} rb={re + 1.2} fill={cuff ?? sleeve} />
+        {/* たたんだ 布の 折り目 */}
+        <Folds paths={[(() => {
+          const c = lerp(g.sh, g.el, 0.815);
+          const L = Math.hypot(g.el[0] - g.sh[0], g.el[1] - g.sh[1]) || 1;
+          const n: Pt = [-(g.el[1] - g.sh[1]) / L, (g.el[0] - g.sh[0]) / L];
+          const w = re + 1.1;
+          return `M${f(c[0] + n[0] * w)} ${f(c[1] + n[1] * w)} L${f(c[0] - n[0] * w)} ${f(c[1] - n[1] * w)}`;
+        })()]} o={1.2} />
+      </>
+    );
+  } else if (kind === "puff") {
+    const a = lerp(g.sh, g.el, 0.5);
+    cloth = (
+      <>
+        <SmoothLimb pts={[g.sh, lerp(g.sh, g.el, 0.22), a]} radii={[rs + 1.3, rs + 1.7, rs + 0.9]} fill={sleeve} gloss={0.22} />
+        {/* そで口の 細い ふち（ゴムで きゅっと しまった ところ） */}
+        <Band a={lerp(g.sh, g.el, 0.45)} b={lerp(g.sh, g.el, 0.53)} ra={rs + 0.95} rb={rs + 0.75} fill={cuff ?? sleeve} bulge={0.7} />
+        <path d={capsule(lerp(g.sh, g.el, 0.2), lerp(g.sh, g.el, 0.42), rs * 0.5, rs * 0.3)} fill="#1a0a04" opacity={0.12} filter="url(#f-soft)" />
+      </>
+    );
+  } else {
+    cloth = (
+      <>
+        <SmoothLimb pts={[g.sh, mid1, g.el, lerp(g.el, wristIn, 0.5), wristIn]} radii={[rs + 0.9, (rs + re) / 2 + 0.9, re + 0.8, (re + rw) / 2 + 0.95, rw + 1]} fill={sleeve} />
+        <path d={`M${f(g.el[0] - 1.6)} ${f(g.el[1] - 1)} q1.6 1.4 3.2 0`} stroke="#1a0a04" strokeOpacity={0.2} strokeWidth={0.7} fill="none" strokeLinecap="round" />
+        {cuff && <Band a={[wristIn[0] - g.dir[0] * 2.4, wristIn[1] - g.dir[1] * 2.4]} b={[wristIn[0] - g.dir[0] * 0.2, wristIn[1] - g.dir[1] * 0.2]} ra={rw + 1.05} rb={rw + 1} fill={cuff} bulge={0.6} />}
+      </>
+    );
+  }
+  return (
+    <g>
+      {kind !== "long" && skinArm}
+      {cloth}
       <Hand g={g} k={r.hand} />
     </g>
   );
@@ -183,19 +240,42 @@ function Cloth({ d, fill }: { d: string; fill: string }) {
   );
 }
 
-function Leg({ r, s, fill }: { r: Rig; s: 1 | -1; fill: string }) {
+/** 脚の骨組み（もも→ひざ→ふくらはぎ→足首）。from で ひざ下だけ などを切り出す（くつ下） */
+function legPts(r: Rig, s: 1 | -1): { pts: Pt[]; radii: number[] } {
   const x = 50 + s * r.legX;
   const [rt, rk, rc, ra] = r.legR;
-  const hip: Pt = [50 + s * (r.legX - 0.6), r.crotchY - 5];
-  const knee: Pt = [x + s * 0.3, r.kneeY];
-  const calf: Pt = [x + s * 0.4, r.kneeY + 9];
-  const ankle: Pt = [x, r.ankleY];
+  return {
+    pts: [[50 + s * (r.legX - 0.6), r.crotchY - 5], [x + s * 0.1, (r.crotchY + r.kneeY) / 2 - 2], [x + s * 0.3, r.kneeY], [x + s * 0.45, r.kneeY + 9], [x + s * 0.15, (r.kneeY + r.ankleY) / 2 + 7], [x, r.ankleY]],
+    radii: [rt, (rt + rk) / 2 + 0.25, rk, rc, (rc + ra) / 2 - 0.1, ra],
+  };
+}
+
+function Leg({ r, s, fill }: { r: Rig; s: 1 | -1; fill: string }) {
+  const { pts, radii } = legPts(r, s);
   return (
     <g>
-      <Limb a={hip} b={knee} ra={rt} rb={rk} fill={fill} />
-      <Limb a={knee} b={calf} ra={rk} rb={rc} fill={fill} />
-      <Limb a={calf} b={ankle} ra={rc} rb={ra} fill={fill} />
-      <ellipse cx={knee[0] - 0.8} cy={knee[1] - 0.5} rx={1.8} ry={1.2} fill="#fff" opacity={0.18} />
+      <SmoothLimb pts={pts} radii={radii} fill={fill} gloss={0.12} />
+      {/* ひざの おさらの やわらかい 影 */}
+      <path d={`M${f(pts[2][0] - 2)} ${f(r.kneeY + 2)} q2 1.2 4 0`} stroke="#7a3418" strokeOpacity={0.16} strokeWidth={0.7} fill="none" strokeLinecap="round" />
+    </g>
+  );
+}
+
+/** くつ下（脚の形に そって 少しだけ 太い）。top は くつ下の上はしの y */
+function Sock({ r, s, top, fill }: { r: Rig; s: 1 | -1; top: number; fill: string }) {
+  const { pts, radii } = legPts(r, s);
+  const keep = pts.map((p, i) => ({ p, r: radii[i] })).filter(({ p }) => p[1] > top);
+  const first = pts.findIndex((p) => p[1] > top);
+  const a = pts[first - 1], b = pts[first];
+  const t = (top - a[1]) / (b[1] - a[1]);
+  const rTop = radii[first - 1] + (radii[first] - radii[first - 1]) * t;
+  const P: Pt[] = [lerp(a, b, t), ...keep.map((k) => k.p)];
+  const Rr = [rTop + 0.35, ...keep.map((k) => k.r + 0.3)];
+  return (
+    <g>
+      <SmoothLimb pts={P} radii={Rr} fill={fill} gloss={0.28} />
+      <ellipse cx={P[0][0]} cy={top} rx={Rr[0] + 0.1} ry={0.9} fill="#fff" opacity={0.5} />
+      <ellipse cx={P[0][0]} cy={top + 0.9} rx={Rr[0]} ry={0.5} fill="#000" opacity={0.08} />
     </g>
   );
 }
@@ -257,7 +337,7 @@ export function HaruStanding({ pose = "idle" }: { pose?: Pose }) {
     <g>
       <Floor rx={27} />
       {([-1, 1] as const).map((s) => <Leg key={s} r={r} s={s} fill="url(#g-skin)" />)}
-      {([-1, 1] as const).map((s) => <Limb key={`sock${s}`} a={[50 + s * r.legX, r.ankleY - 7]} b={[50 + s * r.legX, r.ankleY - 1]} ra={3.5} rb={3.3} fill="#f4efe6" gloss={0.3} />)}
+      {([-1, 1] as const).map((s) => <Sock key={`sock${s}`} r={r} s={s} top={r.ankleY - 7} fill="#f4efe6" />)}
       {([-1, 1] as const).map((s) => <Shoe key={`shoe${s}`} x={50 + s * r.legX} y={r.ankleY} fill="url(#g-boot)" shaft={3} laces />)}
       {/* ハーフパンツ（カーゴポケット・しわ） */}
       <Cloth d={shorts} fill="url(#g-shorts)" />
@@ -293,8 +373,8 @@ export function HaruStanding({ pose = "idle" }: { pose?: Pose }) {
         <path d={`M${50 + r.hipX - 5.4} ${r.waistY + 1} h13 v1.2 h-13 Z`} fill="#fff" opacity={0.18} />
         <rect x={50 + r.hipX} y={r.waistY + 4.6} width={2.4} height={2.6} rx={0.5} fill="url(#metal-gold)" />
       </g>
-      <Arm g={a.L} r={r} sleeve="url(#g-vest)" cuff="#5aa874" rolled />
-      <Arm g={a.R} r={r} sleeve="url(#g-vest)" cuff="#5aa874" rolled />
+      <Arm g={a.L} r={r} sleeve="url(#g-vest)" cuff="#4e9a68" kind="rolled" />
+      <Arm g={a.R} r={r} sleeve="url(#g-vest)" cuff="#4e9a68" kind="rolled" />
       <HeadAt r={r} faceChin={FACE_GEO.haru.chin}><HaruArt bust={false} /></HeadAt>
     </g>
   );
@@ -331,8 +411,8 @@ export function RikoStanding({ pose = "idle" }: { pose?: Pose }) {
       <path d={`M${50 - 6.4} ${r.shY - 3} Q50 ${r.shY + 3} ${50 + 6.4} ${r.shY - 3} L${50 + 6} ${r.shY + 1.6} Q50 ${r.shY + 7} ${50 - 6} ${r.shY + 1.6} Z`} fill="#ffd23f" />
       <path d={`M${50 - 6.4} ${r.shY - 3} Q50 ${r.shY + 3} ${50 + 6.4} ${r.shY - 3} L${50 + 6} ${r.shY + 1.6} Q50 ${r.shY + 7} ${50 - 6} ${r.shY + 1.6} Z`} fill="url(#cloth-shade)" />
       <path d={`M${50 + 3} ${r.shY + 3} L${50 + 6.5} ${r.shY + 15} L${50 + 2} ${r.shY + 12} Z`} fill="#f0a81c" />
-      <Arm g={a.L} r={r} sleeve="url(#g-riko-dress)" cuff="#ffd23f" />
-      <Arm g={a.R} r={r} sleeve="url(#g-riko-dress)" cuff="#ffd23f" />
+      <Arm g={a.L} r={r} sleeve="url(#g-riko-dress)" cuff="#ffd23f" kind="puff" />
+      <Arm g={a.R} r={r} sleeve="url(#g-riko-dress)" cuff="#ffd23f" kind="puff" />
       <HeadAt r={r} faceChin={FACE_GEO.riko.chin}><RikoArt bust={false} /></HeadAt>
     </g>
   );
@@ -354,8 +434,7 @@ export function KikoStanding({ pose = "idle" }: { pose?: Pose }) {
       <Cloth d={cape} fill="url(#g-kiko-cape)" />
       <Folds paths={[`M${50 - r.shX - 4} ${r.chestY} Q${50 - r.shX - 8} ${r.waistY + 20} ${50 - r.shX - 8} ${r.kneeY + 8}`, `M${50 + r.shX + 4} ${r.chestY} Q${50 + r.shX + 8} ${r.waistY + 20} ${50 + r.shX + 8} ${r.kneeY + 8}`]} />
       {([-1, 1] as const).map((s) => <Leg key={s} r={r} s={s} fill="url(#g-skin)" />)}
-      {([-1, 1] as const).map((s) => <Limb key={`sock${s}`} a={[50 + s * r.legX, r.kneeY + 3]} b={[50 + s * r.legX, r.ankleY]} ra={4.5} rb={3.3} fill="#f6f2fb" gloss={0.3} />)}
-      {([-1, 1] as const).map((s) => <ellipse key={`cuff${s}`} cx={50 + s * (r.legX + 0.3)} cy={r.kneeY + 3} rx={4.9} ry={1.4} fill="#e4dcf0" />)}
+      {([-1, 1] as const).map((s) => <Sock key={`sock${s}`} r={r} s={s} top={r.kneeY + 4} fill="#f6f2fb" />)}
       {([-1, 1] as const).map((s) => <Shoe key={`shoe${s}`} x={50 + s * r.legX} y={r.ankleY} fill="url(#gem-amethyst)" strap />)}
       <Neck r={r} />
       {/* ワンピース */}
@@ -365,23 +444,42 @@ export function KikoStanding({ pose = "idle" }: { pose?: Pose }) {
         return `M${f(50 + (x - 50) * 0.5)} ${r.waistY + 3} Q${f(50 + (x - 50) * 0.82)} ${f((r.waistY + hemY) / 2 + 2)} ${f(x)} ${f(hemY - (i % 2 ? 0 : 1))}`;
       })} />
       <path d={`M${50 - r.waistX - 0.5} ${r.waistY - 1.6} Q50 ${r.waistY} ${50 + r.waistX + 0.5} ${r.waistY - 1.6} L${50 + r.waistX + 0.7} ${r.waistY + 1.4} Q50 ${r.waistY + 3} ${50 - r.waistX - 0.7} ${r.waistY + 1.4} Z`} fill="#5a33b8" />
-      {/* ことばノート（左手でかかえる） */}
-      {holdBook && (
-        <g transform={`translate(${f(a.L.wr[0] + 1)} ${f(a.L.wr[1] - 4)}) rotate(-8)`}>
-          <rect x={-8} y={-2} width={13} height={17} rx={1.6} fill="#7a3a12" />
-          <rect x={-8} y={-2} width={13} height={17} rx={1.6} fill="url(#shade-cyl)" />
-          <rect x={-6.4} y={-0.4} width={9.6} height={13.6} rx={1} fill="#fff4d2" />
-          <text x={-1.6} y={8.6} textAnchor="middle" fontSize={6} fontWeight={900} fill="#7a3a12" fontFamily="Georgia, serif">Aa</text>
-          <rect x={3.4} y={4} width={2.4} height={3.4} fill="url(#metal-gold)" />
-        </g>
-      )}
       <Arm g={a.L} r={r} sleeve="url(#g-kiko-dress)" cuff="#fff8ee" />
       <Arm g={a.R} r={r} sleeve="url(#g-kiko-dress)" cuff="#fff8ee" />
+      {/* ことばノート（左手で わきに かかえる。表紙の 手前に 指先が かかる） */}
+      {holdBook && (
+        <g transform={`translate(${f(a.L.wr[0] + 2.4)} ${f(a.L.wr[1] - 1)}) rotate(-8)`}>
+          <rect x={-7.6} y={-2} width={13} height={17} rx={1.6} fill="#000" opacity={0.25} transform="translate(1 1)" filter="url(#f-soft)" />
+          <rect x={-8} y={-2} width={13} height={17} rx={1.6} fill="#7a3a12" />
+          <rect x={-8} y={-2} width={13} height={17} rx={1.6} fill="url(#shade-cyl)" />
+          <rect x={-8} y={-2} width={2.2} height={17} rx={1} fill="#5a2608" />
+          <rect x={-5.4} y={-0.4} width={9} height={13.6} rx={1} fill="#fff4d2" />
+          <rect x={-5.4} y={-0.4} width={9} height={13.6} rx={1} fill="url(#cloth-shade)" />
+          {/* 左右反転（flip）しても 読めるように、左右対称の「A」1文字 */}
+          <text x={-0.9} y={9} textAnchor="middle" fontSize={7.4} fontWeight={900} fill="#7a3a12" fontFamily="Georgia, serif">A</text>
+          <rect x={3.6} y={4} width={2.2} height={3.4} rx={0.4} fill="url(#metal-gold)" />
+          {[2.6, 5.2, 7.8].map((y) => (
+            <g key={y}>
+              <ellipse cx={-7.6} cy={y} rx={1.9} ry={1.15} fill="url(#g-skin)" />
+              <ellipse cx={-7.6} cy={y} rx={1.9} ry={1.15} fill="url(#skin-shade)" />
+            </g>
+          ))}
+        </g>
+      )}
       {/* 肩のケープ・白いえり・留め具 */}
-      {([-1, 1] as const).map((s) => {
-        const d = `M${50 + s * 3.8} ${r.shY - 3.4} C${50 + s * 10} ${r.shY - 3} ${50 + s * (r.shX + 1)} ${r.shY - 1.5} ${50 + s * (r.shX + 2.8)} ${r.shY + 5} L${50 + s * (r.shX + 1.2)} ${r.shY + 12.5} Q${50 + s * (r.shX - 5)} ${r.shY + 13.5} ${50 + s * 5.2} ${r.shY + 5.5} Z`;
-        return <Cloth key={s} d={d} fill="url(#g-kiko-cape)" />;
-      })}
+      {/* 肩を おおう 1枚の ケープレット。前は 首もとで とめて 下に ひらく（胸を かくさない） */}
+      {(() => {
+        const y = r.shY, w = r.shX;
+        const d = `M${50 - 4} ${y - 3.6} C${50 - 10} ${y - 3.4} ${50 - w - 1} ${y - 2} ${50 - w - 2.6} ${y + 4} C${50 - w - 3.2} ${y + 6.5} ${50 - w - 3} ${y + 8.5} ${50 - w - 2.2} ${y + 10} Q${50 - w + 3} ${y + 11.6} ${50 - 6.5} ${y + 7.4} Q${50 - 3} ${y + 5.5} 50 ${y + 3} Q${50 + 3} ${y + 5.5} ${50 + 6.5} ${y + 7.4} Q${50 + w - 3} ${y + 11.6} ${50 + w + 2.2} ${y + 10} C${50 + w + 3} ${y + 8.5} ${50 + w + 3.2} ${y + 6.5} ${50 + w + 2.6} ${y + 4} C${50 + w + 1} ${y - 2} ${50 + 10} ${y - 3.4} ${50 + 4} ${y - 3.6} Z`;
+        return (
+          <g>
+            <path d={`M${50 - w - 1} ${y + 11} Q${50 - 8} ${y + 11} ${50 - 4} ${y + 6} M${50 + w + 1} ${y + 11} Q${50 + 8} ${y + 11} ${50 + 4} ${y + 6}`} stroke="#1e0b45" strokeOpacity={0.28} strokeWidth={2} fill="none" filter="url(#f-soft)" />
+            <Cloth d={d} fill="url(#g-kiko-cape)" />
+            <path d={`M${50 - w - 2.2} ${y + 10} Q${50 - w + 3} ${y + 11.6} ${50 - 6.5} ${y + 7.4} Q${50 - 3} ${y + 5.5} 50 ${y + 3} Q${50 + 3} ${y + 5.5} ${50 + 6.5} ${y + 7.4} Q${50 + w - 3} ${y + 11.6} ${50 + w + 2.2} ${y + 10}`} stroke="#d6c4ff" strokeOpacity={0.55} strokeWidth={0.6} fill="none" />
+            <Folds paths={[`M${50 - w + 1} ${y + 2} q-1 3.5 -0.4 7`, `M${50 + w - 1} ${y + 2} q1 3.5 0.4 7`]} o={0.8} />
+          </g>
+        );
+      })()}
       <path d={`M${50 - 6.4} ${r.shY - 2.6} C${50 - 6.6} ${r.shY + 3} ${50 - 2.4} ${r.shY + 4.6} 50 ${r.shY + 2.6} C${50 + 2.4} ${r.shY + 4.6} ${50 + 6.6} ${r.shY + 3} ${50 + 6.4} ${r.shY - 2.6} Q50 ${r.shY + 0.6} ${50 - 6.4} ${r.shY - 2.6} Z`} fill="#fff8ee" />
       <circle cx={50} cy={r.shY + 3.6} r={1.9} fill="url(#gem-topaz)" />
       <circle cx={49.4} cy={r.shY + 3} r={0.55} fill="#fff" opacity={0.9} />

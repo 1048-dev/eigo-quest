@@ -9,7 +9,7 @@
  */
 import type { CharacterId } from "@/lib/game/characters";
 import type { Mood } from "@/lib/game/companion";
-import { Brow, BustNeck, Eye, Face, Folds, Hair, Mouth, Nose, type FaceGeo } from "./parts";
+import { Brow, BustNeck, Eye, Face, Folds, Hair, HairHalo, Mouth, Nose, type FaceGeo } from "./parts";
 
 const LINE = "#2a170a";
 
@@ -57,12 +57,15 @@ export function HaruArt({ bust = true }: { bust?: boolean } = {}) {
       )}
       <Face g={g} blush={0.8} />
       {/* 髪（後ろ→前の順に重ねる） */}
+      {/* 頭の まるみに そって 右へ 流れる 毛束（ブラシのように 真上へ 立てない） */}
       <Hair
-        d="M25.5 52 C22 38 24.5 26 34 19 C31 15 30.5 12 31.5 8.5 C35 11.5 38.5 13 42 13.5 C42.5 9 44 5.5 47 2.5 C49 7 51 9.5 54 11 C56 7 58.5 4.5 62 3 C62.5 7 63 10 64.5 13 C67.5 11 70.5 10 74 10 C72.5 13.5 71.5 16.5 71 19.5 C78 26 79.5 40 74.5 52 C73 45 71 41 68 39 L32 39 C29 41 27 45 25.5 52 Z"
+        d="M25.5 52 C22 40 23 30 28 23 C26 19 26.5 15 29 12 C31 15 33 16.5 35.5 17 C35 12 37 8 40.5 5.5 C41.5 9.5 43.5 12 46.5 13 C47.5 8.5 50.5 5 55 3.5 C55 7.5 56 10.5 58.5 12.5 C61 9.5 64.5 8 69 8 C67 11 66.5 14 67 16.5 C70 15.5 73 16 76 18 C73.5 20 72.5 22.5 72.5 25 C77.5 31 79 42 74.5 52 C73 45 71 41 68 39 L32 39 C29 41 27 45 25.5 52 Z"
         fill="url(#g-hair-haru)"
-        dark={["M34 19 C38 24 40 30 40 38", "M47 3 C48 14 49 24 48 37", "M62 3 C60 14 58 26 59 37", "M71 19.5 C68 26 66 32 66 38", "M42 13.5 C44 20 44 28 43 38", "M28 34 C29 40 29 45 28 50"]}
-        light={["M37 20 C40 24 41.5 28 42 33", "M51 10 C52 16 52.5 22 52 28", "M61 12 C60 18 59.5 22 60 27", "M68 20 C67 24 66.5 27 66.5 30"]}
+        dark={["M29 12 C30.5 18 31.5 25 31 33", "M40.5 5.5 C40 14 40.5 24 41.5 36", "M55 3.5 C51 12 50 24 50.5 36", "M69 8 C64 15 61 25 60.5 36", "M76 18 C71 24 68.5 30 68 37", "M35.5 17 C36.5 24 36.5 30 35.5 37", "M27 32 C28 38 28.4 44 27.6 50"]}
+        light={["M33 15.5 C34.5 20 35.5 25 36 30", "M44.5 9.5 C44.6 15 45.2 20 46 25", "M57.5 8.5 C55.6 14 55 19 55.4 24", "M68 12 C65 17 63.6 21 63.2 26"]}
+        lightColor="#c99464"
       />
+      <HairHalo cx={50} cy={37} rx={22.5} ry={22} a0={-158} a1={-28} w={3} o={0.3} color="#ffd9a8" />
       <path d="M26.5 48 C26 52 26.6 56 28 59 C28.6 55 29 51.5 30 49 Z M73.5 48 C74 52 73.4 56 72 59 C71.4 55 71 51.5 70 49 Z" fill="url(#g-hair-haru)" />
       {/* バンダナ（布のしわ・小さな模様・結び目） */}
       <path d="M27 48.5 Q50 38 73 48.5 Q50 42.5 27 51 Z" fill="#7a3418" opacity={0.25} filter="url(#f-soft)" />
@@ -128,7 +131,17 @@ export function RikoArt({ bust = true }: { bust?: boolean } = {}) {
         light={["M80 49 C85 55 86.2 63 85.4 70"]}
         darkColor="#6a2408" lightColor="#ffe2b8"
       />
+      {/* ツインテールの 内側の 毛束（ボリュームと 奥行き） */}
+      {([-1, 1] as const).map((s) => (
+        <g key={`tail${s}`} transform={s > 0 ? "translate(100 0) scale(-1 1)" : undefined}>
+          <path d="M27.5 50 C20.5 55 17.5 64 18.6 74 C19.4 80 21.4 84 23.6 86.4 C22.6 80 22.6 73 24 67 C25.4 61.5 28 58 31 56 Z" fill="#a8400e" opacity={0.55} />
+          <Hair d="M28 51.5 C22.5 56.5 20.5 65 21.6 73.5 C22.2 78 23.6 81.5 25.4 83.6 C25 78 25.2 72 26.6 66.5 C27.8 61.8 29.6 58.6 31.6 56.6 Z" fill="url(#g-hair-riko)" dark={["M27 55 C23.5 61 22.8 69 24 77"]} darkColor="#6a2408" />
+          <HairHalo cx={30} cy={66} rx={16} ry={18} a0={-170} a1={-120} w={2.4} o={0.35} color="#ffe6c4" />
+        </g>
+      ))}
       <path d="M26 52 C23 34 33 24 50 23.5 C67 24 77 34 74 52 Z" fill="url(#g-hair-riko)" />
+      <path d="M26 52 C23 34 33 24 50 23.5 C67 24 77 34 74 52 Z" fill="url(#hair-sheen)" />
+      <HairHalo cx={50} cy={46} rx={22.5} ry={21.5} a0={-150} a1={-32} w={2.6} o={0.32} color="#fff0d6" />
       {[26, 74].map((x) => (
         <g key={x}>
           <circle cx={x} cy={46} r={3.8} fill="url(#gem-topaz)" />
@@ -195,11 +208,13 @@ export function KikoArt({ bust = true }: { bust?: boolean } = {}) {
         d="M27 56 C25.5 38 33 28 50 27.5 C67 28 74.5 38 73 56 C72 51.5 71 48 70 45.5 C68 46 66 46.2 64 45.6 L61.5 44 C59 45.8 56 46.2 53 45.5 L50 44 C47 45.8 44 46.2 41 45.5 L38.5 44 C36 45.8 33.5 46 30.5 45.5 C29 48.5 27.8 52 27 56 Z"
         fill="url(#g-hair-kiko)"
         dark={["M41 30 C40 36 40.5 41 41 45.5", "M50 28 L50 44", "M59 30 C60 36 59.5 41 59 45.5", "M31 36 C28.5 44 27.6 50 27.6 55", "M69 36 C71.5 44 72.4 50 72.4 55"]}
-        light={["M36 33 Q50 28.5 64 33", "M45 31.5 C44.6 35 44.8 38 45.2 41"]}
+        light={["M45 31.5 C44.6 35 44.8 38 45.2 41", "M56 31.5 C56.3 35 56.1 38 55.6 40.5"]}
         darkColor="#120630" lightColor="#d6c4ff"
       />
-      <Hair d="M27 50 C25.8 57 26.5 64 29.5 69 C30 63 30.5 57 31.5 51 Z" fill="url(#g-hair-kiko)" darkColor="#120630" />
-      <Hair d="M73 50 C74.2 57 73.5 64 70.5 69 C70 63 69.5 57 68.5 51 Z" fill="url(#g-hair-kiko)" darkColor="#120630" />
+      <HairHalo cx={50} cy={50} rx={21.5} ry={20.5} a0={-152} a1={-30} w={2.8} o={0.34} color="#e6dcff" />
+      {/* 顔まわりの 毛束（あごの 横で 内側に まるまる） */}
+      <Hair d="M27 50 C25.6 57 26 64 28.4 69.4 C29.4 70.8 31 70.8 31.8 69.6 C30.8 63 30.9 57 31.6 51 Z" fill="url(#g-hair-kiko)" dark={["M29 54 C28.2 59 28.4 64 29.6 68"]} darkColor="#120630" />
+      <Hair d="M73 50 C74.4 57 74 64 71.6 69.4 C70.6 70.8 69 70.8 68.2 69.6 C69.2 63 69.1 57 68.4 51 Z" fill="url(#g-hair-kiko)" dark={["M71 54 C71.8 59 71.6 64 70.4 68"]} darkColor="#120630" />
       <path d="M30 46 Q50 41 70 46 Q50 44 30 48 Z" fill="#3a1a6a" opacity={0.25} filter="url(#f-soft)" />
       {/* 花のヘアピン */}
       <g transform="translate(69.5 35)">
@@ -345,7 +360,8 @@ export function Portrait({ id, size = 56, ring, mood, className = "" }: { id: Ch
       <circle cx="50" cy="50" r="48" fill="url(#metal-gold)" />
       <circle cx="50" cy="50" r="44.5" fill="none" stroke="#3a2404" strokeWidth={1.5} />
       <circle cx="50" cy="50" r="42" fill={`url(#bg-${id}-${size})`} />
-      <g clipPath={`url(#${clip})`}><CharacterArt id={id} mood={mood} /></g>
+      {/* 人間の 3人は 少し 小さく・下げて、髪の 先が 枠で 切れないように */}
+      <g clipPath={`url(#${clip})`}><g transform={id === "birimo" ? undefined : "translate(5 9) scale(0.9)"}><CharacterArt id={id} mood={mood} /></g></g>
       <circle cx="50" cy="50" r="42" fill="none" stroke="#000" strokeOpacity={0.35} strokeWidth={2} />
       <path d="M14 38 A40 40 0 0 1 50 10" stroke="#fff8d6" strokeWidth={2} fill="none" opacity={0.7} strokeLinecap="round" />
     </svg>
