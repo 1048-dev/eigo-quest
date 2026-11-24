@@ -8,6 +8,7 @@ import raw from "@content/curriculum/lessons.json";
 import { ALL_ITEMS, ASSESSMENTS, LESSONS, TEACHER, itemsOfLesson } from "@/lib/curriculum";
 import { buildLessonFlow } from "@/lib/curriculum/questions";
 import { teamSound } from "@/lib/curriculum/vowelTeams";
+import { findRSpellings } from "@/lib/curriculum/rControlled";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -620,5 +621,78 @@ describe("カリキュラム: ワールド8 の決まりごと", () => {
     if (w8.length === 0) return;
     for (const n of [231, 232, 234, 235, 240]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toContain("まちの なまえは いわなくて OK");
     for (const n of [226, 230, 236, 240]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえ(は|や)/);
+  });
+});
+
+describe("カリキュラム: ワールド9 の決まりごと", () => {
+  const w9 = LESSONS.filter((l) => l.world === 9);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const R = ["ar", "or", "er", "ir", "ur", "air", "ear"];
+
+  it("ワールド9 は 241〜270 の 30 レッスン、学年は小6", () => {
+    if (w9.length === 0) return; // 未作成ならスキップ
+    expect(w9.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 241 + i));
+    for (const l of w9) expect(l.school.grade).toBe("小6");
+  });
+
+  it("r の つく母音を ar → or → er → ir → ur → air → ear の順に（5の倍数はふりかえり）、L261〜270 は ふりかえり", () => {
+    if (w9.length === 0) return;
+    const plan: [number, string[]][] = [[241, ["ar"]], [242, ["ar"]], [243, ["ar"]], [244, ["ar"]], [246, ["or"]], [247, ["or"]], [248, ["or"]], [249, ["or"]],
+      [251, ["er"]], [252, ["ir"]], [253, ["ur"]], [254, ["er", "ir", "ur"]], [256, ["air"]], [257, ["air"]], [258, ["ear"]], [259, ["ear"]]];
+    for (const [n, f] of plan) {
+      expect(at(n)!.phonics.focus, `L${n}`).toEqual(f);
+      expect(at(n)!.phonics.rule, `L${n}`).toBe("r-controlled");
+    }
+    for (const n of [245, 250, 255, 260, ...Array.from({ length: 10 }, (_, i) => 261 + i)]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    expect([...at(270)!.phonics.focus].sort()).toEqual([...R].sort());
+    for (const l of w9) for (const f of l.phonics.focus) expect(R, `L${l.lessonNo}`).toContain(f);
+  });
+
+  it("r の つく母音として よめない ことば（bear / earth の ear、work の or、r の あとに 母音）は 出さない", () => {
+    if (w9.length === 0) return;
+    for (const l of w9) for (const w of l.phonics.words) {
+      expect(findRSpellings(w).some((s) => l.phonics.focus.includes(s)), `L${l.lessonNo} ${w}`).toBe(true);
+      expect(w, `L${l.lessonNo}`).not.toMatch(/^(bear|pear|wear|earth|learn|early|heart|work|word|world|worm|war|warm|warn)s?$/);
+    }
+  });
+
+  it("L270 はワールドのまとめでスピード TPR", () => {
+    if (w9.length === 0) return;
+    expect(at(270)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("表現の型が計画（NEW HORIZON Elementary 6 前半のテーマ）どおり入っている", () => {
+    if (w9.length === 0) return;
+    const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(ex(241, 245)).toMatch(/I'm good at \w+/);
+    expect(ex(241, 245)).toMatch(/My favorite \w+ is [\w ]+\./);
+    expect(ex(241, 245)).toMatch(/What's your favorite \w+\?/);
+    expect(ex(246, 250)).toContain("What time do you get up?");
+    expect(ex(246, 250)).toMatch(/I usually \w+/);
+    expect(ex(251, 255)).toContain("Where do you want to go?");
+    expect(ex(251, 255)).toMatch(/I want to go to \w+/);
+    expect(ex(251, 255)).toMatch(/You can \w+ [\w ]+ in \w+\./);
+    expect(ex(256, 260)).toContain("How was your summer?");
+    expect(ex(256, 260)).toMatch(/I went to [\w ']+\./);
+    expect(ex(256, 260)).toContain("It was fun.");
+    expect(ex(261, 265)).toMatch(/I saw /);
+    expect(ex(261, 265)).toMatch(/I ate /);
+    expect(ex(261, 265)).toMatch(/I enjoyed /);
+  });
+
+  it("すぎた ことの いいかた（went / was / saw / ate / enjoyed …）は L256 から。L241〜255 の 表現・セリフには 出さない", () => {
+    if (w9.length === 0) return;
+    const past = /\b(went|was|were|saw|ate|enjoyed|played|watched|did)\b/;
+    for (const l of range(241, 255)) {
+      const texts = [...l.school.expressions.map((e) => e.en), ...(l.conversation?.lines.map((x) => x.en) ?? []), l.conversation?.aiTask.starterEn ?? ""];
+      for (const t of texts) expect(t, `L${l.lessonNo}`).not.toMatch(past);
+    }
+  });
+
+  it("AI 会話で ほんとうの なまえ・ばしょを きかない（じこしょうかい・おもいでの回は goalJa に 明記）", () => {
+    if (w9.length === 0) return;
+    for (const n of [241, 243, 245]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toContain("ニックネームで OK");
+    for (const n of [256, 260, 270]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ばしょの なまえは いわなくて OK/);
   });
 });

@@ -522,6 +522,49 @@
 | 239 | Speech Rehearsal | 小5 はっぴょうかいの リハーサル | Please listen to my speech. | oo ou ow oy igh ふりかえり（moonlight, playground, cowboy, football） | やがいステージで はっぴょうかいの リハーサル |
 | 240 | World 8 Grand Review | 小5 はっぴょうかい（ワールド8 ぜんぶ） | This is my hero. He is brave and kind. | 母音チーム総まとめ（moon, house, cow, coin, boy, night, pie） | たびだちの道の ゴールで 小5 はっぴょうかい |
 
+## 6-9. ワールド9 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: r の つく母音（r が つくと 母音の おとが かわる）を ar（car の「アー」L241〜244）→ or（fork の「オー」L246〜249）→ er（L251）→ ir（L252）→ ur（L253）→ er・ir・ur（おなじ「ア～」L254）→ air（hair の「エア」L256〜257）→ ear（ear の「イア」L258〜259）。5の倍数回と L261〜270 は ふりかえり（ar / or・ar / ur の くらべ〈far / fur、cord / card〉、air / ear の くらべ、starfish / sunburn / hairbrush の 2音節語）。`phonics.rule` は "r-controlled" / "review"。
+- おとの表: `src/lib/curriculum/rControlled.ts`。ことばを 左から よんで ながい つづりを 先に とる（year の ear を ar と まちがえない）。r の あとに 母音が くる ことば（here, hero, orange）や、ear が「エア」「ア～」に なる ことば（bear, earth）、w の あとの or（work, world）は つかわない（テストで 確認）。
+- フォニックス問題（questions.ts の `rControlledQuestion`）: 「きこえた ぼいんの おとは どれ？」。選択肢 = 正解 ＋ みじかい母音（つづりの 1もじめ。bird ↔ i）＋ ほかの おとの つづり 2つ（その回の フォーカスを 先に）。er / ir / ur は おなじ おとなので いっしょに 出さない。ことばの 中に ある ほかの r の つく母音（airport の or）も 出さない。まだ ならっていない つづりは 出さず、たりない ぶんは みじかい母音で うめる。順番は ブレンド → 語末 → マジック e → 母音チーム → r の つく母音 → ダイグラフ（shark / chair / third は sh・ch・th ではなく ar・air・ir で 問う）。
+- 表現の型: I'm good at ～. / My favorite ～ is ～. / Please call me ～. / What's your favorite ～? → What time do you get up? ― I get up at ～. / I usually ～. / I always ～. / I sometimes ～. / What do you do after school? → Where do you want to go? ― I want to go to ～. / I want to see ～. / You can ～ in ～. / It's a beautiful country. → I went to ～. / It was ～. / How was your summer? / I went to ～ with ～. → I saw ～. / I ate ～. / I enjoyed ～. / What did you do on Sunday? → Let me tell you about my summer. / Speak loudly and slowly. → 小6前半 はっぴょうかい。
+- すぎた ことの いいかた（went / was / saw / ate / enjoyed / played …）は L256 から。L241〜255 の 表現・セリフには 出さない（テストで確認）。-ed の 3つの おと（フォニックス）は 計画どおり ワールド11。
+- 「いちばんの おもいで（best memory）」は ワールド11 の テーマなので、ワールド9 では「なつやすみの おもいで」「えにっき」に とどめた。
+- AI 会話タスクでは 本名・ほんとうの ばしょの なまえを きかない（goalJa に「ニックネームで OK」「ばしょの なまえは いわなくて OK」と 明記・テストで 確認）。
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 241 | This Is Me! | とくいな こと | I'm good at drawing. | ar（car, star, park, farm） | そらの大陸の はじめての 日。じこしょうかいカードづくり |
+| 242 | My Favorite Things | おきにいり | My favorite food is curry. | ar（art, card, jar, yard） | そらの にわで おきにいりを はなす |
+| 243 | Please Call Me Haru | よびかたと たんじょうび | Please call me Haru. | ar（shark, smart, start, dark） | くもの みなとで なふだを つくる |
+| 244 | What's Your Favorite Animal? | おきにいりを たずねる | What's your favorite animal? | ar（garden, market, party, carpet） | そらの いちばで おきにいり クイズ |
+| 245 | This Is Me Cards | じこしょうかいカード（まとめ） | Please call me Riko. I'm good at swimming. | ar ふりかえり（arm, bark, hard, scarf） | くもの はしで じこしょうかいカード こうかん |
+| 246 | What Time Do You Get Up? | おきる じかん・ねる じかん | What time do you get up? | or（fork, corn, horse, short） | そらの がっこうで あさの じかんくらべ |
+| 247 | I Usually Walk to School | いつもの こと | I usually walk to school. | or（sport, north, storm, born） | そらの みちで がっこうへの いきかた トーク |
+| 248 | My School Day | いつも・ときどき | I always eat lunch with my friends. | or（morning, popcorn, torch, fort） | そらの がっこうの 1日を ビデオで しょうかい |
+| 249 | What Do You Do After School? | ほうかご | What do you do after school? | or（thorn, pork, cord, stork） | そらの がっこうの もんで ほうかごの はなし |
+| 250 | Schools Around the World | せかいの がっこう くらべ（まとめ） | In Japan, we clean our classroom. | ar or ふりかえり（car, corn, park, sport） | そらの ちずで せかいの がっこう くらべ |
+| 251 | Where Do You Want to Go? | いきたい くに | Where do you want to go? | er（her, fern, herd, perch） | そらの くうこうで せかいちずを みる |
+| 252 | I Want to See the Pyramids | その くにで したい こと | I want to see the pyramids. | ir（bird, girl, shirt, first） | くうこうの カフェで ゆめの たびの はなし |
+| 253 | You Can Eat Pizza in Italy | その くにで できる こと | You can eat pizza in Italy. | ur（turn, nurse, purple, hurt） | そらの としょかんで りょこうポスターづくり |
+| 254 | It's a Beautiful Country | くにの ようす | It's a beautiful country. | er ir ur（her, sir, fur, burst） | そらの大陸の りょこう クイズ |
+| 255 | Travel Agency Role-Play | りょこうがいしゃごっこ（まとめ） | Let's go to Italy. You can eat pizza. | er ir ur ふりかえり（fern, girl, turn, birthday） | そらの くうこうで りょこうがいしゃごっこ |
+| 256 | I Went to the Sea | いった ところ | I went to the sea. | air（hair, chair, fair, pair） | なつやすみ あけ、そらの はまべで おもいで トーク |
+| 257 | It Was Fun | かんそう | It was fun. | air（stairs, airport, fairy, haircut） | そらの くうこうで なつやすみの しゃしんを みせあう |
+| 258 | How Was Your Summer? | たずねる・こたえる | How was your summer? | ear（ear, hear, near, year） | そらの大陸で 2がっきの はじまり |
+| 259 | I Went There with My Family | だれと・なにで いったか | I went to Okinawa with my family. | ear（clear, dear, beard, gear） | そらの でんしゃで なつやすみの はなし |
+| 260 | Summer Talk | なつやすみ トーク（まとめ） | I went to the sea. It was fun. | air ear ふりかえり（hair, ear, chair, year） | そらの ステージで なつやすみ トークショー |
+| 261 | I Saw a Rainbow | みた もの | I saw a rainbow. | ar or ふりかえり（farm, horn, harp, cork） | そらの きょうしつで えにっきを かく |
+| 262 | I Ate Shaved Ice | たべた もの | I ate shaved ice. | er ir ur ふりかえり（herd, third, church, curl） | そらの やたいで なつの たべもの おもいで |
+| 263 | I Enjoyed Swimming | たのしんだ こと | I enjoyed swimming. | air ear ふりかえり（fair, near, stair, fear） | ペアで えにっきの れんしゅう |
+| 264 | What Did You Do on Sunday? | しゅうまつの できごと | What did you do on Sunday? | ar ur ふりかえり（far, fur, barn, burn） | そらの大陸の げつようびの あさの おしゃべり |
+| 265 | My Picture Diary | えにっきの はっぴょう（まとめ） | I went to the zoo. I saw a baby panda. | or ar ふりかえり（cord, card, form, farm） | そらの きょうしつで えにっきの はっぴょう |
+| 266 | My Memory Speech | おもいで スピーチづくり | Let me tell you about my summer. | ar or ur ir ふりかえり（starfish, shortcut, sunburn, thirsty） | そらの としょかんで おもいで スピーチづくり |
+| 267 | Sky Memory Quiz Show | ともだちの おもいで クイズ | Haru went to Okinawa. | er air ear ふりかえり（summer, hairbrush, nearby, sister） | そらの大陸の おもいで クイズショー |
+| 268 | Speech Practice | はっぴょうの れんしゅう | Speak loudly and slowly. | ar or er ir ur ふりかえり（car, fork, her, bird, nurse） | そらの ステージで スピーチの リハーサル |
+| 269 | Sky Continent Review | じこしょうかいと いきたい くに | I'm good at drawing. I want to go to France. | air ear ar or ふりかえり（chair, year, park, horse） | そらの大陸 ふりかえり さんぽ |
+| 270 | World 9 Grand Review | 小6前半 はっぴょうかい（ワールド9 ぜんぶ） | I went to the sea with my family. It was fun. | ar or er ir ur air ear ふりかえり（star, corn, fern, girl, turn, hair, ear） | そらの大陸の てっぺんで 小6前半 はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。

@@ -7,6 +7,7 @@ import { pickArenaItems, type ArenaMode } from "@/lib/domain/arena";
 import { MAX_CONVERSATION_TURNS } from "@/lib/conversation/engine";
 import { getLesson, itemsInRange, itemsOfLesson } from "./index";
 import { VOWEL_TEAMS, VOWEL_TEAM_INTRO, possibleSounds, shortVowelOf, teamSound } from "./vowelTeams";
+import { R_MOUTH, R_VOWELS, R_VOWEL_INTRO, findRSpellings, rSound, shortVowelOfR } from "./rControlled";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -234,6 +235,43 @@ export function vowelTeamQuestion(item: LearningItemDef, rng: () => number): Pic
     explanationJa: `${item.text} は「${answer}」。${answer.length}つの もじで「${ja}」の おとに なるよ（みじかい ${short} とは ちがう おと）。` };
 }
 
+/** r の つく母音（ワールド9）。おとの表は ./rControlled.ts（er / ir / ur は おなじ おと） */
+export { R_VOWEL_GROUPS, R_VOWELS } from "./rControlled";
+
+/**
+ * その回のフォーカスに r の つく母音（"ar" "er" "air" など）があれば、母音の おとで問う（car の答えを 最初の「c」に、
+ * shark の答えを「sh」に しない）。
+ * 音声だけの問題なので、おなじ おとの つづり（er ↔ ir ↔ ur）は いっしょに 選択肢に 出さない。
+ * ことばの 中に ある ほかの r の つく母音（airport の or、farmer の er）の おとも 出さない。
+ * 選択肢 = 正解 ＋ みじかい母音（car ↔ a、bird ↔ i）＋ ほかの おとの つづり 2つ（その回の フォーカスを 先に。
+ * まだ ならっていない つづりは 出さない。たりない ときは のこりの みじかい母音で うめる）。
+ * ことばに 2つ あるとき（farmer、airport）は フォーカスの 順で 先の もの。
+ */
+export function rControlledQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
+  const focus = (getLesson(item.lessonNo)?.phonics.focus ?? []).filter((f) => R_VOWELS.includes(f));
+  if (focus.length === 0) return null;
+  const found = findRSpellings(item.text);
+  const answer = focus.find((f) => found.includes(f));
+  if (!answer) return null;
+  const ja = rSound(answer);
+  const short = shortVowelOfR(answer);
+  const blocked = new Set<string>([ja, ...found.map(rSound)]);
+  const lessonFocus = getLesson(item.lessonNo)?.phonics.focus ?? [];
+  const learned = R_VOWELS.filter((x) => x !== answer && (R_VOWEL_INTRO[x] <= item.lessonNo || lessonFocus.includes(x)));
+  const ordered = [...shuffle(learned.filter((x) => lessonFocus.includes(x)), rng), ...shuffle(learned.filter((x) => !lessonFocus.includes(x)), rng)];
+  const others: string[] = [];
+  for (const x of ordered) {
+    if (others.length === 2) break;
+    if (blocked.has(rSound(x))) continue;
+    others.push(x);
+    blocked.add(rSound(x));
+  }
+  const fill = shuffle(["a", "e", "i", "o", "u"].filter((x) => x !== short), rng);
+  const choices = [answer, short, ...others, ...fill].slice(0, 4);
+  return { promptJa: "きこえた ぼいんの おとは どれ？", choices: shuffle(choices, rng).map((x) => ({ id: x, label: x })), answer,
+    explanationJa: `${item.text} は「${answer}」。r が つくと ${R_MOUTH[ja]}「${ja}」の おとに なるよ（みじかい ${short} とは ちがう おと）。` };
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -293,9 +331,10 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
-      // 語頭ブレンド → 語末（-st / -s / -ing）→ マジック e → 母音チーム → ダイグラフ の順
-      // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回の問題にする）
-      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng) ?? digraphQuestion(item, rng);
+      // 語頭ブレンド → 語末（-st / -s / -ing）→ マジック e → 母音チーム → r の つく母音 → ダイグラフ の順
+      // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回、shark は sh ではなく ar の回の問題にする）
+      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+        ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
       // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない

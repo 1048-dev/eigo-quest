@@ -454,3 +454,44 @@
 - 「book の ウ」の 回は フォーカスの ボタンで ことば "book" を 読みます（"oo" だと ブラウザが「ウー」と 読むため）。おとだけを 聞かせたい 場合は 録音の 音声が 必要です。
 - 母音チームの 問題の まちがいの 選択肢に、ow（オウ／アウ の 2つの おと）が 出ることが あります（答えが oo や oi の とき）。こどもが まよう ようなら、ow を まちがいの 選択肢から はずせます。
 - 3人称の -s（helps, has）を ワールド8で 少し ふやしました。NEW HORIZON 5 の 範囲より 少し 先どりかも しれません。気になる 場合は He is ～. / He can ～. だけに もどせます。
+
+
+## Phase 13 — ワールド9（レッスン241〜270・小6／NEW HORIZON Elementary 6 前半）（2026-11-24）
+
+### やったこと
+1. **content/curriculum/lessons.json にレッスン241〜270を追加**（ワールド9「そらの大陸」・school.grade は小6）。ワールド1〜8と同じ形式（conversation・recap つき）、英文はすべてオリジナル（教科書の文は使っていない）。既存のレッスン1〜240は変えず、末尾に同じ書式で追記しただけ。
+   - 241〜245 This is me（I'm good at drawing.、My favorite food is curry.、Please call me Haru.、What's your favorite animal?、じこしょうかいカード こうかん）
+   - 246〜250 学校生活と1日（What time do you get up? ― I get up at six thirty.、I usually walk to school.、I always / sometimes ～.、What do you do after school?、せかいの がっこう くらべ〈In Japan, we clean our classroom.〉）
+   - 251〜255 行きたい国（Where do you want to go? ― I want to go to Italy.、I want to see the pyramids.、You can eat pizza in Italy.、It's a beautiful country. / Canada is famous for maple syrup.、りょこうがいしゃごっこ）
+   - 256〜260 夏休みの思い出（I went to the sea.、It was fun.、How was your summer?、I went to Okinawa with my family. / by plane、なつやすみ トーク）
+   - 261〜265 過去のできごと（I saw a rainbow.、I ate shaved ice.、I enjoyed swimming.、What did you do on Sunday? ― I played / watched ～.、えにっきの はっぴょう）
+   - 266〜270 まとめ（おもいで スピーチづくり〈Let me tell you about my summer.〉、おもいで クイズショー〈Haru went to Okinawa.〉、スピーチの れんしゅう〈Speak loudly and slowly.〉、ふりかえり、L270 はスピードTPRつきの ワールド総まとめ「小6前半 はっぴょうかい」）
+2. **フォニックス: r の つく母音** ar（L241〜244）→ or（L246〜249）→ er（L251）→ ir（L252）→ ur（L253）→ er・ir・ur（L254）→ air（L256〜257）→ ear（L258〜259）。5の倍数回と L261〜270 は ふりかえり（far / fur・cord / card の くらべ、air / ear の くらべ、starfish / sunburn / hairbrush などの 2音節語）。`phonics.rule` は "r-controlled"（新しい 値）/ "review"。
+3. **r の つく母音の おとの表を 新しいファイルに（src/lib/curriculum/rControlled.ts）**: ar「アー」、or「オー」、er / ir / ur「ア～」（3つ おなじ）、air「エア」、ear「イア」。ことばを 左から よんで ながい つづりを 先に とる（year の 中の ar、chair の 中の ai に まどわされない）。import の無い 純粋な データ。
+4. **フォニックス問題（questions.ts に `rControlledQuestion` を 追加）**: 「きこえた ぼいんの おとは どれ？」。選択肢 = 正解 ＋ みじかい母音（bird ↔ i）＋ ほかの おとの つづり 2つ。er / ir / ur を いっしょに 出さない、ことばの 中の ほかの r の つく母音（airport の or）を 出さない、まだ ならっていない つづりは 出さない（たりない ぶんは みじかい母音で うめる）。shark / chair / third は sh・ch・th ではなく ar・air・ir で 問う（母音チームの つぎ、ダイグラフの まえ）。
+5. **フォーカスの 読み上げ（vowelTeams.ts の focusSay に 1行）**: ar → "are"、or → "or"、er / ir / ur → "er"、air → "air"、ear → "ear"（つづりの まま だと「エー・アール」と よまれるため）。LessonSteps.tsx は 変更なし。
+6. **マップ（WorldMap.tsx の1行）**: ワールド9「そらの大陸」（よぞらの あお・壁のもじ ar / or / er / ir / air）を追加。
+7. **テスト**: tests/curriculum.test.ts にワールド9の決まりごと（241〜270・小6、r の つく母音の 順番と rule、r の つく母音として よめない ことばを 出さない、L270 のスピードTPR、ブロックごとの表現の型、すぎた ことの いいかたは L256 から、AI 会話で 本名・ばしょの なまえを きかない）、tests/phonics-r-controlled.test.ts（新規・11件: おとの表・ながい つづり優先・読み上げ・car / bird / shark / chair / third / airport / far・fur・ワールド9 全語の 選択肢チェック）。合計 519件。
+8. **docs/curriculum-plan.md** に「6-9. ワールド9 のレッスン詳細」を追加。
+9. `npx tsc --noEmit` / `npx vitest run`（519件）/ `npx next build` すべて成功。まとめ動画は全270レッスンで2〜3分に収まることをテストで確認。
+
+### 判断したこと
+- er / ir / ur は 1ブロック（L251〜255）なので、1回ずつ → L254 で 3つ いっしょ（her / sir / fur）→ L255 ふりかえり。air と ear は 2回ずつ。
+- カタカナの めやすは ar「アー」と er「ア～」を 分けた（どちらも「アー」に きこえやすいので、解説に「くちを おおきく」「くちを ちいさく して したを まるめて」と くちの かたちを そえた）。
+- ear は「イア」（ear, hear, near, year, clear, dear, beard, gear）だけ。bear / pear（エア）や earth / learn（ア～）は まぎらわしいので 出さない。work / world の or（ア～）、here / hero の er（r の あとに 母音）も 出さない（テストで 自動チェック）。
+- 過去形は 計画どおり L256（夏休みの思い出）から。went / was / saw / ate は ことばとして おぼえる。enjoyed / played / watched の ed は「すぎた こと」と かんたんに せつめいし、-ed の おとの ちがい（フォニックス）は 計画どおり ワールド11 に のこした。L241〜255 には 過去形を 出さない（テストで 確認）。
+- 「いちばんの おもいで（My best memory is ～.）」は ワールド11 なので 使わず、「Let me tell you about my summer.」で スピーチを はじめる 形に した。
+- 世界の学校くらべは オーストラリア（がっこうで ぼうしを かぶる・9じごろ はじまる）を れいに した。一般的な ことがらだけ。
+- L243 の よびかた（Please call me ～.）は ニックネームで OK。キャラの たんじょうびは ワールド7で きめた ものを そのまま（リコ 6/2、ビリモ 2/29）。キコの ニックネームは「キキ」、ビリモは「ビビ」（会話の中だけ）。
+- vocab の thirty の ja が 数字だけ（"30"）だと スキーマテストの「日本語の欄に日本語が無い」に かかるので「30（さんじゅう）」に した。
+
+### スキップ / 未対応
+- 新しいレッスン用の 復習クエスト・まとめテスト・ボス（check-241〜270、mini-241-245 …、boss-1-270、arena-241-270、arena-1-270）は ASSESSMENTS には 自動で入るが、DB には 次回の `npm run db:seed` で入る（マイグレーション不要）。
+- worksheets/generate_worksheets.py の実行は 前回と同じ理由（reportlab 未インストール）でスキップ。新しい フィールドは 追加していない（phonics.rule の 値が 1つ ふえただけ）。
+- 画面での目視確認はしていない（データ追加・問題の分岐・マップの色・読み上げの表のみ）。
+- NEW HORIZON Elementary 6 の 最新版の 単元一覧は 夜間は 確認できなかった（ネット確認なし）。計画書の テーマに そのまま 合わせた。
+
+### オーナーへの質問
+- ar のボタンは "are"、er / ir / ur のボタンは "er" と 読ませています。ブラウザの声で "er" が 不自然なら、"her" や "bird" のような ことばを 読む形に かえられます。
+- ar「アー」と er「ア～」の カタカナ表記で よいでしょうか（どちらも「アー」と 書く 教材も あります）。
+- 過去形（went / was / saw / ate / enjoyed / played / watched）を ワールド9 後半で まとめて 出しています。量が 多ければ 1回に 1つずつに へらせます。
