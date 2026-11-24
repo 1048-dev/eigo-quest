@@ -79,7 +79,7 @@
 |---|---|---|
 | 1〜5 | あいさつ・さようなら・げんき？・きもち・まとめ | s a / t / p / i / ふりかえり（sat, tip） |
 | 6〜10 | 色・すきな色・数1〜5・数6〜10・まとめ（風船屋さん） | n / m / d / g / ふりかえり（man, dig） |
-| 11〜15 | からだ・かお・もちもの・教室のことば・まとめ（めいれいゲーム） | o / c k / e / u / ふりかえり（cup, bus） |
+| 11〜15 | からだ・かお・もちもの・教室のことば・まとめ（めいれいゲーム） | o / c k / e / u / ふりかえり（cup, sun） |
 | 16〜20 | ペット・動物園・くだもの・あさごはん・まとめ（ピクニック） | r / h / b / f / ふりかえり（hat, fun） |
 | 21〜25 | 天気・ふく・かぞく・あそび・まとめ（家族で公園） | l / j / v / w / ふりかえり（van, jet） |
 | 26〜30 | かたち・できること・誕生日・マナー・ワールドまとめ | x / y / z / qu / 26音すべて |
@@ -223,7 +223,7 @@
 | 12 | This Is My Nose | かお | This is my nose. | c, k | おもしろい顔をかく |
 | 13 | What's This? | もちもの | What's this? ― It's a pencil. | e | かばんの中に何がある？ |
 | 14 | I'm Sorry. That's OK. | 教室のことば | I'm sorry. ― That's OK. | u | 教室でうっかり |
-| 15 | Emma Says! | まとめ | めいれいゲーム / My turn! | ふりかえり（cup, bus） | 「エマ先生が言いました」ゲーム |
+| 15 | Emma Says! | まとめ | めいれいゲーム / My turn! | ふりかえり（cup, sun） | 「エマ先生が言いました」ゲーム |
 | 16 | I Like Cats! | ペット | I like cats. / It's cute! | r | ペットショップ |
 | 17 | At the Zoo | 動物園 | It's a lion. / It's big! | h | 動物園 |
 | 18 | Do You Like Bananas? | くだもの | Do you like ～? ― Yes, I do. / No, I don't. | b | くだもの屋さん |
@@ -300,7 +300,7 @@
 | 70 | At the Nurse's Office | まとめ | Are you OK? | ch ふりかえり | ほけんしつで だいじょうぶ？ |
 | 71 | Numbers 11 to 15 | かず 11〜15 | How many cards? | th /θ/（thin, thick, moth） | カードの まいすうを かぞえる |
 | 72 | Numbers 16 to 20 | かず 16〜20 | Twenty stickers! | th /ð/（this, that, then） | シールを かぞえる |
-| 73 | How Many Balls? | かず 1〜20・しつもん | How many balls? | th（bath, math, with） | たいいくの あと ボールを かたづける |
+| 73 | How Many Balls? | かず 1〜20・しつもん | How many balls? | th（bath, math, tenth） | たいいくの あと ボールを かたづける |
 | 74 | Rock, Paper, Scissors! | じゃんけん | I win! | th くらべ（thick / that） | きょうしつで じゃんけん たいかい |
 | 75 | Bowling Tournament | まとめ | How many pins? | th ふりかえり | ボウリング たいかい |
 | 76 | What Color Do You Like? | すきな いろ | What color do you like? | wh（when, whip, whiz） | クラスの はたの いろを きめる |

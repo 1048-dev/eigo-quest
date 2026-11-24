@@ -27,7 +27,7 @@
         {"en":"Look!","ja":"みて！","action":"りょうてで めがねを つくって まえを みる","emoji":"👀"},
         {"en":"Stop!","ja":"とまって！","action":"その ばで ピタッと とまる","emoji":"✋"},
         {"en":"Come here!","ja":"こっちに きて！","action":"せんせいの ほうへ あるいて くる","emoji":"🫴"},
-        {"en":"Go!","ja":"いって！","action":"ゆびさした ほうへ はしりだす","emoji":"🏃"}
+        {"en":"Go!","ja":"いって！","action":"ゆびさした ほうへ 2、3ぽ あるいて すすむ","emoji":"🏃"}
       ],
       "phonics": {
         "rule": "letter-sound",
@@ -128,7 +128,7 @@
           {"en":"I'm fine, thank you.","ja":"げんきだよ、ありがとう。","core":true},
           {"en":"I'm great!","ja":"すごく げんき！"}
         ],
-        "testPoints": ["How are you? に こたえられる","fine / great / good の いみが わかる"]
+        "testPoints": ["How are you? に こたえられる","fine / great / OK の いみが わかる"]
       },
       "tpr": [
         {"en":"Clap your hands.","ja":"てを たたいて。","action":"パチパチと てを たたく","emoji":"👏"},
@@ -211,11 +211,11 @@
           {"speaker":"Kiko","en":"Me too!","ja":"わたしも！"},
           {"speaker":"Birimo","en":"I'm sleepy...","ja":"ねむい…"},
           {"speaker":"Kiko","en":"Are you OK, Birimo?","ja":"だいじょうぶ、ビリモ？"},
-          {"speaker":"Birimo","en":"Yes! I'm happy now!","ja":"うん！もう げんき いっぱい！"}
+          {"speaker":"Birimo","en":"Yes! I'm happy now!","ja":"うん！いまは うれしいよ！"}
         ],
         "aiTask": {
           "goalJa": "いまの きもちを I'm ～. で いおう（happy, sad, hungry, sleepy）",
-          "starterEn": "I'm hungry! How about you?",
+          "starterEn": "I'm hungry! How are you?",
           "targetExpressions": ["I'm happy.","I'm hungry.","I'm sleepy.","Me too!"]
         }
       },
@@ -320,7 +320,7 @@
         "aiTask": {
           "goalJa": "What color is it? と きかれたら It's ～. で いろを こたえよう",
           "starterEn": "Look at my apple picture. What color is it?",
-          "targetExpressions": ["It's red.","It's blue.","It's yellow.","It's green."]
+          "targetExpressions": ["It's red.","It's blue.","What color is it?"]
         }
       },
       "recap": {
@@ -391,7 +391,7 @@
         "grammar": "How many? ― ～.",
         "expressions": [
           {"en":"How many apples?","ja":"りんごは いくつ？","core":true},
-          {"en":"Three apples.","ja":"みっつ。"},
+          {"en":"Three apples.","ja":"りんご みっつ。"},
           {"en":"One, two, three!","ja":"いち、に、さん！"}
         ],
         "testPoints": ["1〜5 を えいごで かぞえられる","How many? の いみが わかる"]
@@ -421,8 +421,8 @@
         "sceneJa": "おうちで りんごを かぞえる",
         "lines": [
           {"speaker":"Haru","en":"How many apples?","ja":"りんごは いくつ？"},
-          {"speaker":"Kiko","en":"One, two, three... Three apples!","ja":"いち、に、さん…みっつ！"},
-          {"speaker":"Haru","en":"Yes! Three!","ja":"そう！みっつ！"},
+          {"speaker":"Kiko","en":"One, two, three, four, five. Five apples!","ja":"いち、に、さん、よん、ご。いつつ！"},
+          {"speaker":"Haru","en":"Yes! Five!","ja":"そう！いつつ！"},
           {"speaker":"Kiko","en":"I'm hungry!","ja":"おなか すいた！"},
           {"speaker":"Haru","en":"Me too!","ja":"ぼくも！"}
         ],
@@ -475,7 +475,7 @@
         "sceneJa": "かくれんぼ",
         "lines": [
           {"speaker":"Riko","en":"Let's play hide-and-seek!","ja":"かくれんぼ しよう！"},
-          {"speaker":"Haru","en":"OK! One, two, three... ten!","ja":"いいよ！いち、に、さん…じゅう！"},
+          {"speaker":"Haru","en":"OK! One, two, three. Four, five, six. Seven, eight, nine, ten!","ja":"いいよ！いち、に、さん。よん、ご、ろく。なな、はち、きゅう、じゅう！"},
           {"speaker":"Haru","en":"Where are you?","ja":"どこに いるの？"},
           {"speaker":"Riko","en":"Here I am!","ja":"ここだよ！"},
           {"speaker":"Haru","en":"I see you!","ja":"みーつけた！"}
@@ -533,7 +533,8 @@
           {"speaker":"Haru","en":"Red, please.","ja":"あかを ください。"},
           {"speaker":"Birimo","en":"How many?","ja":"いくつ？"},
           {"speaker":"Haru","en":"Two, please.","ja":"2つ ください。"},
-          {"speaker":"Birimo","en":"Here you are.","ja":"はい、どうぞ。"}
+          {"speaker":"Birimo","en":"Here you are.","ja":"はい、どうぞ。"},
+          {"speaker":"Haru","en":"Thank you!","ja":"ありがとう！"}
         ],
         "aiTask": {
           "goalJa": "ふうせんやさんで いろと かずを いって かってみよう",
@@ -541,7 +542,7 @@
           "targetExpressions": ["Red, please.","Two, please.","Thank you!"]
         }
       },
-      "recap": {"highlightsJa":["Two red balloons, please. で おかいもの できたね","Here you are. は「はい、どうぞ」","m-a-n → man！4つの おとを つなげたよ"]}
+      "recap": {"highlightsJa":["Two red balloons, please. で おかいもの できたね","Here you are. は「はい、どうぞ」","n m d g の おとも つなげて よめたよ（m-a-n → man！）"]}
     },
     {
       "lessonNo": 11,
@@ -634,7 +635,7 @@
         "lines": [
           {"speaker":"Haru","en":"Look! This is my picture.","ja":"みて！ぼくの え。"},
           {"speaker":"Riko","en":"Big eyes!","ja":"おおきな め！"},
-          {"speaker":"Haru","en":"And this is a big nose.","ja":"これは おおきな はな。"},
+          {"speaker":"Haru","en":"And this is the nose. Big nose!","ja":"これが はな。おおきな はな！"},
           {"speaker":"Riko","en":"Ha ha! Funny!","ja":"あはは！おもしろい！"},
           {"speaker":"Haru","en":"Where's the mouth?","ja":"くちは どこ？"},
           {"speaker":"Riko","en":"Here!","ja":"ここ！"}
@@ -688,12 +689,12 @@
           {"speaker":"Kiko","en":"What's this?","ja":"これは？"},
           {"speaker":"Haru","en":"It's a book!","ja":"ほんだよ！"},
           {"speaker":"Kiko","en":"And this?","ja":"これは？"},
-          {"speaker":"Haru","en":"It's a banana! I'm hungry.","ja":"バナナ！おなか すいた。"}
+          {"speaker":"Haru","en":"It's a banana! I'm hungry.","ja":"バナナだよ！おなか すいた。"}
         ],
         "aiTask": {
           "goalJa": "What's this? と きかれたら It's a ～. で こたえよう",
           "starterEn": "What's in my bag? What's this?",
-          "targetExpressions": ["It's a pencil.","It's a book.","It's a bag.","What's this?"]
+          "targetExpressions": ["It's a pencil.","It's a book.","It's a ～.","What's this?"]
         }
       },
       "recap": {"highlightsJa":["What's this? ― It's a pencil. の やりとり","pencil, pen, book, bag, ruler","e の おと「エ」を ならったよ"]}
@@ -742,7 +743,7 @@
         ],
         "aiTask": {
           "goalJa": "あやまる とき I'm sorry.、ゆるす とき That's OK. を つかおう",
-          "starterEn": "Oh no! I dropped your pencil. I'm sorry!",
+          "starterEn": "Oops! Your pencil! I'm sorry!",
           "targetExpressions": ["That's OK.","I'm sorry."]
         }
       },
@@ -774,7 +775,7 @@
         "rule": "review",
         "focus": ["o","c","k","e","u"],
         "sounds": [],
-        "words": ["dog","pen","cup","bus","kid"],
+        "words": ["dog","pen","cup","sun","kid"],
         "tipJa": "o c k e u を いれて つなげよう。c-u-p → cup！"
       },
       "vocab": [
@@ -791,18 +792,18 @@
         "lines": [
           {"speaker":"Ms. Emma","en":"Emma says, touch your head.","ja":"エマせんせいが いいました、あたまを さわって。"},
           {"speaker":"Kiko","en":"Head!","ja":"あたま！"},
-          {"speaker":"Ms. Emma","en":"Touch your nose.","ja":"はなを さわって。"},
-          {"speaker":"Kiko","en":"Nose!","ja":"はな！"},
+          {"speaker":"Ms. Emma","en":"Open your mouth.","ja":"くちを あけて。"},
+          {"speaker":"Kiko","en":"Ahh!","ja":"あーん！"},
           {"speaker":"Ms. Emma","en":"Oh! I didn't say 'Emma says'!","ja":"あれ！「エマせんせいが いいました」って いってないよ！"},
           {"speaker":"Kiko","en":"Oops! My turn!","ja":"しまった！こんどは わたしの ばん！"}
         ],
         "aiTask": {
           "goalJa": "めいれいゲーム！ Touch your ～. を きいて こたえたり、だしたり しよう",
-          "starterEn": "Let's play! Haru says, touch your nose!",
+          "starterEn": "Let's play! Emma says, touch your nose!",
           "targetExpressions": ["Touch your ～.","My turn!","Open your ～."]
         }
       },
-      "recap": {"highlightsJa":["めいれいゲームで からだを うごかしたね","My turn! は「わたしの ばん！」","c-u-p → cup！5つの おとを つなげたよ"]}
+      "recap": {"highlightsJa":["めいれいゲームで からだを うごかしたね","My turn! は「わたしの ばん！」","o c k e u の おとも つなげて よめたよ（c-u-p → cup！）"]}
     },
     {
       "lessonNo": 16,
@@ -902,7 +903,7 @@
         ],
         "aiTask": {
           "goalJa": "どうぶつの なまえを It's a ～. で いおう。おおきさも いってみよう",
-          "starterEn": "Let's go to the zoo! Look! What's this? It has a long nose.",
+          "starterEn": "Let's go to the zoo! Look! A long, long nose! What's this?",
           "targetExpressions": ["It's an elephant.","It's big!","It's a lion."]
         }
       },
@@ -995,7 +996,7 @@
         "tipJa": "f は うわの はで したくちびるを かるく かんで「フー」。"
       },
       "vocab": [
-        {"en":"milk","ja":"ぎゅうにゅう","emoji":"🥛","core":true},
+        {"en":"milk","ja":"ミルク・ぎゅうにゅう","emoji":"🥛","core":true},
         {"en":"bread","ja":"パン","emoji":"🍞","core":true},
         {"en":"rice","ja":"ごはん","emoji":"🍚"},
         {"en":"juice","ja":"ジュース","emoji":"🧃"},
@@ -1119,7 +1120,7 @@
         "aiTask": {
           "goalJa": "How's the weather? に It's ～. で こたえよう",
           "starterEn": "Good morning! Look outside. How's the weather today?",
-          "targetExpressions": ["It's sunny.","It's rainy.","It's cloudy.","It's snowy."]
+          "targetExpressions": ["It's sunny.","It's rainy.","It's ～."]
         }
       },
       "recap": {"highlightsJa":["sunny, rainy, cloudy, snowy, windy","How's the weather? ― It's sunny.","l の おと「ルー」を ならったよ"]}
@@ -1172,7 +1173,7 @@
         ],
         "aiTask": {
           "goalJa": "そとが さむい！ Put on your ～. で したくを てつだおう",
-          "starterEn": "Brr! It's cold outside. What do I put on?",
+          "starterEn": "Brr! It's cold outside. Help me get ready!",
           "targetExpressions": ["Put on your coat.","Put on your hat.","It's cold!"]
         }
       },
@@ -1209,8 +1210,8 @@
       "vocab": [
         {"en":"mom","ja":"ママ・おかあさん","emoji":"👩","core":true},
         {"en":"dad","ja":"パパ・おとうさん","emoji":"👨","core":true},
-        {"en":"brother","ja":"きょうだい（おとこ）","emoji":"👦"},
-        {"en":"sister","ja":"きょうだい（おんな）","emoji":"👧"},
+        {"en":"brother","ja":"おにいちゃん・おとうと","emoji":"👦"},
+        {"en":"sister","ja":"おねえちゃん・いもうと","emoji":"👧"},
         {"en":"grandma","ja":"おばあちゃん","emoji":"👵"},
         {"en":"grandpa","ja":"おじいちゃん","emoji":"👴"}
       ],
@@ -1227,7 +1228,7 @@
         ],
         "aiTask": {
           "goalJa": "This is my ～. で かぞくを しょうかい しよう（ほんとうの なまえは いわなくて OK）",
-          "starterEn": "Look at my family photo! This is my dad. Can you guess who this is?",
+          "starterEn": "Look! This is my family. This is my dad. Show me your family!",
           "targetExpressions": ["This is my mom.","This is my dad.","Who's this?"]
         }
       },
@@ -1277,8 +1278,8 @@
         "lines": [
           {"speaker":"Haru","en":"Let's play!","ja":"あそぼう！"},
           {"speaker":"Kiko","en":"OK! Let's play catch.","ja":"いいよ！キャッチボール しよう。"},
-          {"speaker":"Haru","en":"Ready? Throw!","ja":"いくよ？えいっ！"},
-          {"speaker":"Kiko","en":"Catch! Your turn!","ja":"とった！きみの ばん！"},
+          {"speaker":"Haru","en":"Ready? Catch!","ja":"いくよ？キャッチ！"},
+          {"speaker":"Kiko","en":"Got it! Your turn. Catch!","ja":"とった！こんどは きみの ばん。キャッチ！"},
           {"speaker":"Haru","en":"Got it!","ja":"とれた！"}
         ],
         "aiTask": {
@@ -1390,8 +1391,8 @@
         ],
         "aiTask": {
           "goalJa": "かたちの ことばを いいながら、This is for you. で カードを わたそう",
-          "starterEn": "I'm making a card. I have a star. What shape do you like?",
-          "targetExpressions": ["This is for you.","A heart.","It's a star.","Thank you!"]
+          "starterEn": "Let's make a card! Look, a star! What shape do you like?",
+          "targetExpressions": ["This is for you.","A heart.","It's a heart!","Thank you!"]
         }
       },
       "recap": {"highlightsJa":["circle, square, triangle, star, heart","This is for you. で プレゼント","x の おと「クス」を ならったよ"]}
@@ -1422,7 +1423,7 @@
         "rule": "letter-sound",
         "focus": ["y"],
         "sounds": ["/j/"],
-        "words": ["yes","yak","yam","yo-yo"],
+        "words": ["yes","yellow","yak","yo-yo"],
         "tipJa": "y は「イ」の くちから すぐ つぎの おとへ「ィヤ」。yes の y！"
       },
       "vocab": [
@@ -1440,12 +1441,12 @@
           {"speaker":"Haru","en":"I can run fast!","ja":"ぼく、はやく はしれるよ！"},
           {"speaker":"Riko","en":"I can jump high!","ja":"わたしは たかく とべる！"},
           {"speaker":"Haru","en":"Can you swim?","ja":"およげる？"},
-          {"speaker":"Riko","en":"Yes, I can!","ja":"うん、できる！"},
+          {"speaker":"Riko","en":"Yes, I can! I can swim.","ja":"うん、できる！およげるよ。"},
           {"speaker":"Birimo","en":"I can fly! Look!","ja":"ぼくは とべるよ！みて！"}
         ],
         "aiTask": {
           "goalJa": "できる ことを I can ～. で じまんしよう",
-          "starterEn": "Sports day is coming! I can run fast. What can you do?",
+          "starterEn": "Let's practice for sports day! I can run fast. What can you do?",
           "targetExpressions": ["I can jump.","I can swim.","Yes, I can.","I can ～."]
         }
       },
@@ -1500,7 +1501,7 @@
         ],
         "aiTask": {
           "goalJa": "おいわいの パーティー！ Happy birthday! と いって、プレゼントを わたそう",
-          "starterEn": "Today is Birimo's birthday party! Let's say it together!",
+          "starterEn": "Hi! I'm Kiko. It's my birthday today! Welcome to my party!",
           "targetExpressions": ["Happy birthday!","This is for you.","How old are you?"]
         }
       },
@@ -1555,7 +1556,7 @@
         ],
         "aiTask": {
           "goalJa": "おやつを ～, please. で たのんで、Thank you. / You're welcome. を つかおう",
-          "starterEn": "Snack time! I have cookies and candy. What would you like?",
+          "starterEn": "Snack time! I have cookies and candy. Cookies or candy?",
           "targetExpressions": ["A cookie, please.","Thank you.","You're welcome."]
         }
       },
@@ -1581,7 +1582,7 @@
       },
       "tpr": [
         {"en":"Look! Stop! Come here! Go!","ja":"みて！とまって！きて！いって！","action":"Session 1 の 4つの めいれいを はやく","emoji":"⚡"},
-        {"en":"Touch your head. Touch your toes.","ja":"あたま！つまさき！","action":"あたまと つまさきを すばやく さわる","emoji":"🔥"},
+        {"en":"Touch your head. Touch your toes.","ja":"あたまを さわって。つまさきを さわって。","action":"あたまと つまさきを すばやく さわる","emoji":"🔥"},
         {"en":"Stand up! Sit down! Jump!","ja":"たって！すわって！ジャンプ！","action":"どんどん はやく うごく","emoji":"💨"},
         {"en":"Take a bow.","ja":"おじぎを して。","action":"さいごに おじぎ","emoji":"🙇"}
       ],
@@ -1606,6 +1607,7 @@
         "lines": [
           {"speaker":"Birimo","en":"Hello, everyone! How are you?","ja":"みんな、こんにちは！げんき？"},
           {"speaker":"Haru","en":"I'm great!","ja":"すごく げんき！"},
+          {"speaker":"Birimo","en":"Great! Haru, your turn!","ja":"いいね！ハル、どうぞ！"},
           {"speaker":"Haru","en":"Hello. I'm Haru. I like blue. I can run fast.","ja":"こんにちは。ハルです。あおが すき。はやく はしれるよ。"},
           {
             "speaker": "Riko",
@@ -2058,7 +2060,8 @@
           {"speaker":"Riko","en":"Strawberry, please.","ja":"いちごを ください。"},
           {"speaker":"Birimo","en":"One or two?","ja":"ひとつ？ ふたつ？"},
           {"speaker":"Riko","en":"Two, please!","ja":"ふたつ ください！"},
-          {"speaker":"Birimo","en":"Here you are. Enjoy!","ja":"はい、どうぞ。めしあがれ！"}
+          {"speaker":"Birimo","en":"Here you are. Enjoy!","ja":"はい、どうぞ。めしあがれ！"},
+          {"speaker":"Riko","en":"Thank you!","ja":"ありがとう！"}
         ],
         "aiTask": {
           "goalJa": "アイスクリームやさんで すきな あじと かずを たのもう",
@@ -2112,9 +2115,9 @@
         "lines": [
           {"speaker":"Ms. Emma","en":"Try this lemon.","ja":"この レモンを たべてみて。"},
           {"speaker":"Haru","en":"It's sour!","ja":"すっぱい！"},
-          {"speaker":"Ms. Emma","en":"Ha ha! Try this honey.","ja":"あはは！この はちみつは どう？"},
+          {"speaker":"Ms. Emma","en":"Ha ha! Try this strawberry.","ja":"あはは！この いちごは どう？"},
           {"speaker":"Haru","en":"Mmm, it's sweet. It's yummy!","ja":"うーん、あまい。おいしい！"},
-          {"speaker":"Kiko","en":"I want honey, too!","ja":"わたしも はちみつ ほしい！"}
+          {"speaker":"Kiko","en":"I want a strawberry, too!","ja":"わたしも いちご ほしい！"}
         ],
         "aiTask": {
           "goalJa": "たべものの あじを It's sweet. / It's sour. などで いおう",
@@ -2145,7 +2148,7 @@
       "tpr": [
         {"en":"Open the door.","ja":"ドアを あけて。","action":"おみせの ドアを あける まね","emoji":"🚪"},
         {"en":"Pick a snack.","ja":"おやつを えらんで。","action":"たなから おやつを えらぶ まね","emoji":"🍪"},
-        {"en":"Pay the money.","ja":"おかねを はらって。","action":"おかねを わたす まね","emoji":"🪙"}
+        {"en":"Pay for it.","ja":"おかねを はらって。","action":"おかねを わたす まね","emoji":"🪙"}
       ],
       "phonics": {
         "rule": "review",
@@ -2193,7 +2196,7 @@
         "expressions": [
           {"en":"Can it fly?","ja":"それは とべる？","core":true},
           {"en":"Yes, it can.","ja":"うん、とべるよ。"},
-          {"en":"It has wings.","ja":"はねが あるよ。"}
+          {"en":"Look at its wings!","ja":"はねを みて！"}
         ],
         "testPoints": ["Can it fly? の いみが わかる","Yes, it can. で こたえられる"]
       },
@@ -2206,7 +2209,7 @@
         "rule": "cvc",
         "focus": ["o"],
         "sounds": ["/ɑ/"],
-        "words": ["dog","log","fog","hog"],
+        "words": ["dog","log","fog","job"],
         "tipJa": "o は くちを たてに おおきく あけて「ア」に ちかい「オ」。d-o-g → dog！ -og の なかま。"
       },
       "vocab": [
@@ -2223,7 +2226,7 @@
         "lines": [
           {"speaker":"Kiko","en":"Look! A butterfly!","ja":"みて！ちょうちょ！"},
           {"speaker":"Haru","en":"Can it fly?","ja":"とべるの？"},
-          {"speaker":"Kiko","en":"Yes, it can. It has wings.","ja":"うん、とべるよ。はねが あるもん。"},
+          {"speaker":"Kiko","en":"Yes, it can. Look at its wings!","ja":"うん、とべるよ。はねを みて！"},
           {"speaker":"Haru","en":"Wow! It can fly high!","ja":"わあ！たかく とべるね！"},
           {"speaker":"Birimo","en":"I can fly, too!","ja":"ぼくも とべるよ！"}
         ],
@@ -2280,8 +2283,8 @@
           {"speaker":"Riko","en":"Look! A turtle!","ja":"みて！カメだ！"},
           {"speaker":"Haru","en":"Can it swim?","ja":"およげるの？"},
           {"speaker":"Riko","en":"Yes, it can.","ja":"うん、およげるよ。"},
-          {"speaker":"Haru","en":"Can a cat swim?","ja":"ねこは およげる？"},
-          {"speaker":"Riko","en":"Hmm… no, it can't!","ja":"うーん…およげないよ！"}
+          {"speaker":"Haru","en":"Can it fly?","ja":"とべるの？"},
+          {"speaker":"Riko","en":"Ha ha! No, it can't!","ja":"あはは！とべないよ！"}
         ],
         "aiTask": {
           "goalJa": "Can it swim? に Yes, it can. / No, it can't. で こたえよう",
@@ -2337,7 +2340,7 @@
           {"speaker":"Kiko","en":"Where?","ja":"どこ？"},
           {"speaker":"Haru","en":"On the leaf. It's so small!","ja":"はっぱの うえ。すごく ちいさい！"},
           {"speaker":"Kiko","en":"I see an ant!","ja":"わたしは アリを みつけた！"},
-          {"speaker":"Haru","en":"Can it fly? No, it can't!","ja":"とべるかな？ううん、とべないね！"}
+          {"speaker":"Haru","en":"Look! The ladybug can fly!","ja":"みて！テントウムシは とべるんだね！"}
         ],
         "aiTask": {
           "goalJa": "I see a ～. で みつけた むしを いおう",
@@ -2366,7 +2369,7 @@
         "testPoints": ["It can ～. で いきものの できる ことを いえる","climb / run / jump の いみが わかる"]
       },
       "tpr": [
-        {"en":"Climb a tree.","ja":"きに のぼって。","action":"てと あしで きに のぼる まね","emoji":"🧗"},
+        {"en":"Climb a tree.","ja":"きに のぼって。","action":"その ばで てと あしを うごかして きに のぼる まね","emoji":"🧗"},
         {"en":"Run fast.","ja":"はやく はしって。","action":"その ばで はやく あしぶみ","emoji":"🏃"},
         {"en":"Jump like a kangaroo.","ja":"カンガルーみたいに とんで。","action":"りょうあしで ぴょんぴょん とぶ","emoji":"🦘"},
         {"en":"Move slowly.","ja":"ゆっくり うごいて。","action":"カタツムリのように ゆっくり うごく","emoji":"🐌"}
@@ -2394,7 +2397,7 @@
           {"speaker":"Riko","en":"It can climb!","ja":"のぼれるね！"},
           {"speaker":"Haru","en":"Look at the cheetah. It can run fast!","ja":"チーターを みて。はやく はしれる！"},
           {"speaker":"Kiko","en":"Can a snail run fast?","ja":"カタツムリは はやく はしれる？"},
-          {"speaker":"Riko","en":"No! It can't. It's slow.","ja":"ううん！はしれない。ゆっくりだよ。"}
+          {"speaker":"Riko","en":"No, it can't! It's slow.","ja":"ううん、はしれない！ゆっくりだよ。"}
         ],
         "aiTask": {
           "goalJa": "どうぶつの できる ことを It can ～. で いおう",
@@ -2449,8 +2452,8 @@
           {"speaker":"Birimo","en":"Quiz time! It's an animal.","ja":"クイズの じかん！どうぶつだよ。"},
           {"speaker":"Haru","en":"Can it fly?","ja":"とべる？"},
           {"speaker":"Birimo","en":"No, it can't.","ja":"ううん、とべない。"},
-          {"speaker":"Riko","en":"Can it swim?","ja":"およげる？"},
-          {"speaker":"Birimo","en":"Yes, it can. It's a turtle! That's right!","ja":"うん、およげる。カメでした！せいかい！"}
+          {"speaker":"Riko","en":"Can it swim? Is it a turtle?","ja":"およげる？ カメかな？"},
+          {"speaker":"Birimo","en":"Yes, it can. That's right! It's a turtle!","ja":"うん、およげる。せいかい！カメでした！"}
         ],
         "aiTask": {
           "goalJa": "Can it fly? / Can it swim? と しつもんして、ハルの いきものを あてよう",
@@ -2487,8 +2490,8 @@
         "rule": "cvc",
         "focus": ["e"],
         "sounds": ["/ɛ/"],
-        "words": ["bed","red","fed","led"],
-        "tipJa": "e は くちを すこし よこに ひらいて「エ」。b-e-d → bed！ おわりが -ed の なかま。"
+        "words": ["bed","red","fed","get"],
+        "tipJa": "e は くちを すこし よこに ひらいて「エ」。b-e-d → bed！ おわりが -ed の なかまと、g-e-t → get も よもう。"
       },
       "vocab": [
         {"en":"room","ja":"へや","emoji":"🚪","core":true},
@@ -2509,7 +2512,7 @@
           {"speaker":"Riko","en":"Cool! I like your room.","ja":"すてき！ハルの へや すき。"}
         ],
         "aiTask": {
-          "goalJa": "ハルの おうちで This is ～. を つかって へやを いおう",
+          "goalJa": "おうちの へやを This is ～. で しょうかいしよう",
           "starterEn": "Welcome to my house! This is the kitchen. What's this room?",
           "targetExpressions": ["This is ～.","Come in!"]
         }
@@ -2558,9 +2561,9 @@
         "scene": "Looking for a cap before school",
         "sceneJa": "がっこうへ いく まえに ぼうしさがし",
         "lines": [
-          {"speaker":"Haru","en":"Mom! Where is my cap?","ja":"ママ！ぼくの ぼうしは どこ？"},
+          {"speaker":"Haru","en":"Oh no! Where is my cap?","ja":"あれ？ぼくの ぼうしは どこ？"},
           {"speaker":"Kiko","en":"Is it in the box?","ja":"はこの なかかな？"},
-          {"speaker":"Haru","en":"No… not in the box.","ja":"ううん…はこには ない。"},
+          {"speaker":"Haru","en":"No, it isn't.","ja":"ううん、ない。"},
           {"speaker":"Kiko","en":"Look! It's on the chair!","ja":"みて！いすの うえに ある！"},
           {"speaker":"Haru","en":"Thank you, Kiko!","ja":"ありがとう、キコ！"}
         ],
@@ -2591,8 +2594,8 @@
         "testPoints": ["under（した）と by（そば）の いみが わかる","It's under ～. で ばしょを いえる"]
       },
       "tpr": [
-        {"en":"Crawl under the table.","ja":"テーブルの したを くぐって。","action":"しゃがんで くぐる まね","emoji":"🧎"},
-        {"en":"Stand by the door.","ja":"ドアの そばに たって。","action":"かべの そばに まっすぐ たつ","emoji":"🚪"},
+        {"en":"Put your hands under your chin.","ja":"てを あごの したに。","action":"りょうてを あごの したに あてる","emoji":"🤲"},
+        {"en":"Stand by the door.","ja":"ドアの そばに たって。","action":"ドアの そばに まっすぐ たつ","emoji":"🚪"},
         {"en":"Sit on the sofa.","ja":"ソファに すわって。","action":"ふかふかの ソファに すわる まね","emoji":"🛋️"}
       ],
       "phonics": {
@@ -2609,7 +2612,7 @@
         {"en":"shelf","ja":"たな","emoji":"🗄️"},
         {"en":"under","ja":"した","emoji":"⬇️"}
       ],
-      "teacherScript": "Peekaboo! きょうは under（した）と by（そば）。「It's under the table.」 からだを つかって くぐったり、そばに たったり しよう！",
+      "teacherScript": "Peekaboo! きょうは under（した）と by（そば）。「It's under the table.」 からだを つかって「した」と「そば」を おぼえよう！",
       "conversation": {
         "scene": "Looking for Birimo's ball in the living room",
         "sceneJa": "リビングで ビリモの ボールさがし",
@@ -2786,7 +2789,7 @@
           {"speaker":"Riko","en":"Let's go to the park!","ja":"こうえんへ いこう！"},
           {"speaker":"Haru","en":"Hmm… it's hot. Let's go to the library.","ja":"うーん…あついよ。としょかんへ いこう。"},
           {"speaker":"Riko","en":"Sounds good!","ja":"いいね！"},
-          {"speaker":"Kiko","en":"I like books. Me too!","ja":"ほん すき。わたしも いく！"},
+          {"speaker":"Kiko","en":"Me too! I like books.","ja":"わたしも いく！ほん すき。"},
           {"speaker":"Haru","en":"Let's go!","ja":"しゅっぱつ！"}
         ],
         "aiTask": {
@@ -2898,7 +2901,7 @@
         "sceneJa": "エマせんせいと どうろを わたる",
         "lines": [
           {"speaker":"Ms. Emma","en":"Stop! It's red.","ja":"とまって！あかよ。"},
-          {"speaker":"Kiko","en":"OK. We wait.","ja":"はい。まちます。"},
+          {"speaker":"Kiko","en":"OK. Let's wait.","ja":"うん。まとう。"},
           {"speaker":"Haru","en":"It's green now!","ja":"みどりに なった！"},
           {"speaker":"Ms. Emma","en":"Look left and right.","ja":"ひだりと みぎを みて。"},
           {"speaker":"Kiko","en":"No cars. Let's go!","ja":"くるま なし。いこう！"}
@@ -2945,7 +2948,7 @@
         {"en":"bakery","ja":"パンやさん","emoji":"🥐","core":true},
         {"en":"bread","ja":"パン","emoji":"🍞"},
         {"en":"flower","ja":"はな","emoji":"🌸"},
-        {"en":"florist","ja":"はなやさん","emoji":"💐"},
+        {"en":"flower shop","ja":"はなやさん","emoji":"💐"},
         {"en":"bag","ja":"ふくろ","emoji":"🛍️"}
       ],
       "teacherScript": "Mmm, bread! きょうは まちの おみせ。「Let's go to the bakery.」で さそって、おみせで「I want ～.」と いおう。",
@@ -2954,7 +2957,7 @@
         "sceneJa": "まちの パンやさんで かいもの",
         "lines": [
           {"speaker":"Riko","en":"Let's go to the bakery.","ja":"パンやさんへ いこう。"},
-          {"speaker":"Kiko","en":"Yes! It smells good!","ja":"うん！いい におい！"},
+          {"speaker":"Kiko","en":"Yes! Mmm, it smells good!","ja":"うん！うーん、いい におい！"},
           {"speaker":"Birimo","en":"Hello! What do you want?","ja":"いらっしゃい！なにに する？"},
           {"speaker":"Kiko","en":"I want a melon bun, please.","ja":"メロンパンを ください。"},
           {"speaker":"Riko","en":"Me too! Two, please.","ja":"わたしも！ふたつ ください。"}
@@ -2966,7 +2969,7 @@
         }
       },
       "recap": {
-        "highlightsJa": ["Let's go to the ～. と I want ～. を つなげられたね","bakery・florist など おみせの ことばを おぼえたよ","b-u-s → bus！ u の CVC を よんだよ"]
+        "highlightsJa": ["Let's go to the ～. と I want ～. を つなげられたね","bakery・flower shop など おみせの ことばを おぼえたよ","b-u-s → bus！ u の CVC を よんだよ"]
       }
     },
     {
@@ -3051,8 +3054,8 @@
         "rule": "floss",
         "focus": ["ff"],
         "sounds": ["/f/"],
-        "words": ["off","puff","cuff","huff"],
-        "tipJa": "みじかい ことばの おわりの f は ff と 2つ かくことが おおいよ。o-ff → off！ よむ ときは f ひとつぶん。"
+        "words": ["off","puff","huff","cuff"],
+        "tipJa": "みじかい ことばの おわりの f は ff と 2つ かくことが おおいよ。o-ff → off！ よむ ときは f ひとつぶん。huff と puff は おおかみが「ふーっ」と いきを ふく おとだよ。"
       },
       "vocab": [
         {"en":"summer","ja":"なつ","emoji":"🌻","core":true},
@@ -3130,7 +3133,7 @@
         ],
         "aiTask": {
           "goalJa": "おまつりで Let's go to the festival! / Look at ～! を つかって おしゃべりしよう",
-          "starterEn": "Let's go to the summer festival! Look at the fireworks! What do you want to do?",
+          "starterEn": "Let's go to the festival! Oh, look up! What do you see?",
           "targetExpressions": ["Let's go to the ～.","Look at ～!","How pretty!"]
         }
       },
@@ -3157,13 +3160,13 @@
       "tpr": [
         {"en":"Knock knock.","ja":"トントン。","action":"ドアを ノックする まね","emoji":"🚪"},
         {"en":"Make a scary face.","ja":"こわい かおを して。","action":"てを つめの ように して こわい かお","emoji":"👻"},
-        {"en":"Fly on a broom.","ja":"ほうきで とんで。","action":"ほうきに またがって はしる まね","emoji":"🧹"}
+        {"en":"Fly on a broom.","ja":"ほうきで とんで。","action":"ほうきに またがる まねを して その ばで あしぶみ","emoji":"🧹"}
       ],
       "phonics": {
         "rule": "floss",
         "focus": ["ss"],
         "sounds": ["/s/"],
-        "words": ["kiss","mess","hiss","moss","pass"],
+        "words": ["kiss","mess","hiss","boss","pass"],
         "tipJa": "おわりの s も ss と 2つ かくことが おおいよ。h-i-ss → hiss は ヘビの「シュー」！"
       },
       "vocab": [
@@ -3248,7 +3251,7 @@
         }
       },
       "recap": {
-        "highlightsJa": ["Happy New Year! と Merry Christmas! が いえたね","This is for you. で プレゼントを わたしたよ","b-u-zz → buzz！ ff ll ss zz の 4きょうだいを よんだよ"]
+        "highlightsJa": ["Happy New Year! と Merry Christmas! が いえたね","This is for you. で プレゼントを わたす ことばも おぼえたよ","b-u-zz → buzz！ ff ll ss zz の 4きょうだいを よんだよ"]
       }
     },
     {
@@ -3262,7 +3265,7 @@
         "grammar": "I like ～. / I want ～. / Can it ～? / Where is ～? / Let's go to the ～.",
         "expressions": [
           {"en":"I like summer. I want ice cream.","ja":"なつが すき。アイスクリームが ほしい。","core":true},
-          {"en":"Where is Birimo? ― He's under the table!","ja":"ビリモは どこ？ ― テーブルの したに いるよ！"},
+          {"en":"Where is my cap? ― It's under the table!","ja":"ぼくの ぼうしは どこ？ ― テーブルの したに あるよ！"},
           {"en":"Let's go to the zoo by bus.","ja":"バスで どうぶつえんへ いこう。"}
         ],
         "testPoints": ["すきな もの・ほしい もの・ばしょ・おでかけを つづけて いえる","a i o e u の CVC ことばと ff ll ss zz を よめる"]
@@ -3278,7 +3281,7 @@
         "focus": ["a","i","o","e","u","ff","ll","ss","zz"],
         "sounds": [],
         "words": ["cat","pig","dog","bed","bus","bell"],
-        "tipJa": "ワールド2で ならった CVC を ぜんぶ よもう。c-a-t、p-i-g、d-o-g、b-e-d、b-u-s！ まんなかの ぼいんを よく きいてね。"
+        "tipJa": "ワールド2で ならった CVC を ぜんぶ よもう。c-a-t、p-i-g、d-o-g、b-e-d、b-u-s！ まんなかの ぼいんを よく きいてね。b-e-ll → bell の ll も わすれずに。"
       },
       "vocab": [
         {"en":"like","ja":"すき","emoji":"💖","core":true},
@@ -3294,12 +3297,12 @@
         "lines": [
           {"speaker":"Birimo","en":"Welcome to the World 2 show! What do you like?","ja":"ワールド2 ショーへ ようこそ！なにが すき？"},
           {"speaker":"Riko","en":"I like summer. I want ice cream!","ja":"なつが すき。アイスクリームが ほしい！"},
-          {"speaker":"Haru","en":"Where is Birimo? Oh, he's under the table!","ja":"ビリモは どこ？あ、テーブルの したに いる！"},
-          {"speaker":"Kiko","en":"Can Birimo fly? Yes, he can!","ja":"ビリモは とべる？うん、とべるよ！"},
-          {"speaker":"Birimo","en":"Great job! Let's go to World 3!","ja":"すごい！ワールド3へ いこう！"}
+          {"speaker":"Haru","en":"Where is my cap? Oh, it's under the table!","ja":"ぼくの ぼうしは どこ？あ、テーブルの したに ある！"},
+          {"speaker":"Kiko","en":"Birimo, can you fly?","ja":"ビリモ、とべる？"},
+          {"speaker":"Birimo","en":"Yes, I can! Great job, everyone! Let's go to World 3!","ja":"うん、とべるよ！みんな すごい！ワールド3へ いこう！"}
         ],
         "aiTask": {
-          "goalJa": "ワールド2の ことばで ハルと たくさん おしゃべりしよう（すきな もの・ほしい もの・おでかけ）",
+          "goalJa": "ワールド2の ことばで ビリモと たくさん おしゃべりしよう（すきな もの・ほしい もの・おでかけ）",
           "starterEn": "Welcome to the World 2 show! I like summer. I want ice cream. What do you like?",
           "targetExpressions": ["I like ～.","I want ～.","Let's go to the ～."]
         }
@@ -3480,7 +3483,7 @@
       "lessonNo": 64,
       "world": 3,
       "title": "Greetings Around the World",
-      "titleJa": "せかいの あいさつの しかた",
+      "titleJa": "あいさつの ジェスチャー",
       "school": {
         "grade": "小3",
         "topic": "せかいの あいさつ・ジェスチャー",
@@ -3575,7 +3578,7 @@
           {"speaker":"Ms. Emma","en":"We're online! Say hello to the world!","ja":"オンラインに つながったよ！せかいに あいさつ しよう！"},
           {"speaker":"Haru","en":"Hello! I'm Haru. Nice to meet you!","ja":"こんにちは！ハルです。はじめまして！"},
           {"speaker":"Birimo","en":"Hola! Bonjour! Ni hao! What's your name?","ja":"オラ！ボンジュール！ニーハオ！なまえは なに？"},
-          {"speaker":"Riko","en":"I'm Riko. Here you are, my name card!","ja":"リコです。はい、わたしの なまえカード！"},
+          {"speaker":"Riko","en":"I'm Riko. Look! This is my name card!","ja":"リコです。みて！わたしの なまえカード！"},
           {"speaker":"Kiko","en":"Thank you, everyone! See you!","ja":"みんな ありがとう！またね！"}
         ],
         "aiTask": {
@@ -3635,7 +3638,7 @@
           {"speaker":"Ms. Emma","en":"So-so? Let's have a fun day!","ja":"まあまあ？たのしい いちにちに しようね！"}
         ],
         "aiTask": {
-          "goalJa": "How are you? と きかれたら I'm great. / I'm good. / I'm so-so. で こたえて、ハルにも ききかえそう",
+          "goalJa": "How are you? と きかれたら I'm great. / I'm good. / I'm so-so. で こたえて、あいてにも How are you? と ききかえそう",
           "starterEn": "Good morning! I'm great today. How are you?",
           "targetExpressions": ["I'm ～.","How are you?"]
         }
@@ -3688,7 +3691,7 @@
           {"speaker":"Riko","en":"Me too. I'm sleepy.","ja":"わたしも。ねむい。"},
           {"speaker":"Kiko","en":"Let's take a break.","ja":"ひとやすみ しよう。"},
           {"speaker":"Birimo","en":"Here! Have some water.","ja":"はい！おみずを どうぞ。"},
-          {"speaker":"Haru","en":"Thank you, Birimo! I'm happy now.","ja":"ありがとう、ビリモ！げんきが でたよ。"}
+          {"speaker":"Haru","en":"Thank you, Birimo! I'm happy now.","ja":"ありがとう、ビリモ！これで うれしい！"}
         ],
         "aiTask": {
           "goalJa": "I'm tired. / I'm sleepy. / I'm sad. など、いまの きもちを I'm ～. で つたえよう",
@@ -3854,7 +3857,7 @@
         "sceneJa": "ほけんしつで ともだちを しんぱい",
         "lines": [
           {"speaker":"Riko","en":"Haru, are you OK?","ja":"ハル、だいじょうぶ？"},
-          {"speaker":"Haru","en":"I'm tired and cold.","ja":"つかれて さむいの。"},
+          {"speaker":"Haru","en":"I'm tired and cold.","ja":"つかれたし、さむいんだ。"},
           {"speaker":"Ms. Emma","en":"Lie down and rest, Haru.","ja":"よこに なって やすんでね、ハル。"},
           {"speaker":"Kiko","en":"Here's some water.","ja":"おみずを どうぞ。"},
           {"speaker":"Haru","en":"Thank you. I'm OK now.","ja":"ありがとう。もう だいじょうぶ。"},
@@ -3972,12 +3975,12 @@
           {"speaker":"Riko","en":"Wow, so many! How many stickers?","ja":"わあ、たくさん！なんまい？"},
           {"speaker":"Kiko","en":"Let's count. Eighteen, nineteen, twenty!","ja":"かぞえよう。18、19、20！"},
           {"speaker":"Haru","en":"Twenty stickers! Cool!","ja":"シール 20まい！すごい！"},
-          {"speaker":"Birimo","en":"This one is my favorite!","ja":"これが いちばん すき！"}
+          {"speaker":"Birimo","en":"I like this one!","ja":"ぼくは これが すき！"}
         ],
         "aiTask": {
           "goalJa": "How many ～? と きかれたら 16〜20 の かずで こたえよう",
-          "starterEn": "Look at the stars! Let's count to twenty. How many stars?",
-          "targetExpressions": ["How many ～?","Twenty."]
+          "starterEn": "Look at my stickers! Let's count to twenty. How many stickers?",
+          "targetExpressions": ["How many ～?","Twenty stickers!"]
         }
       },
       "recap": {
@@ -4010,8 +4013,8 @@
         "rule": "digraph",
         "focus": ["th"],
         "sounds": ["/θ/"],
-        "words": ["bath","math","path","with"],
-        "tipJa": "th は おわりにも くるよ。b-a-th → bath（おふろ）、m-a-th → math（さんすう）。さいごに したを ちょこっと だそう。"
+        "words": ["bath","math","path","tenth"],
+        "tipJa": "th は おわりにも くるよ。b-a-th → bath（おふろ）、m-a-th → math（さんすう）。さいごに したを ちょこっと だそう。tenth（10ばんめ）も おわりが th だよ。"
       },
       "vocab": [
         {"en":"ball","ja":"ボール","emoji":"⚽","core":true},
@@ -4026,7 +4029,7 @@
         "lines": [
           {"speaker":"Ms. Emma","en":"How many balls in the basket?","ja":"かごに ボールは いくつ？"},
           {"speaker":"Haru","en":"Let's count! One, two, three... thirteen balls.","ja":"かぞえよう！1、2、3…13こ。"},
-          {"speaker":"Ms. Emma","en":"We need twenty balls.","ja":"20こ ひつようよ。"},
+          {"speaker":"Ms. Emma","en":"We need twenty balls.","ja":"ボールは 20こ そろえたいの。"},
           {"speaker":"Riko","en":"Here! Fourteen, fifteen, sixteen, seventeen.","ja":"はい！14、15、16、17。"},
           {"speaker":"Kiko","en":"Eighteen, nineteen, twenty! Done!","ja":"18、19、20！できた！"}
         ],
@@ -4110,7 +4113,7 @@
           {"en":"Twenty points! I win!","ja":"20てん！かった！"},
           {"en":"Good job!","ja":"よく がんばったね！"}
         ],
-        "testPoints": ["1〜20 の かずを きいて わかる・いえる","How many ～? で かずを きける","th の ことば（thin, this, bath, with）を よめる"]
+        "testPoints": ["1〜20 の かずを きいて わかる・いえる","How many ～? で かずを きける","th の ことば（thin, this, bath, that）を よめる"]
       },
       "tpr": [
         {"en":"Roll the ball.","ja":"ボールを ころがして。","action":"ボウリングの ボールを ころがす まね","emoji":"🎳"},
@@ -4122,8 +4125,8 @@
         "rule": "review",
         "focus": ["th"],
         "sounds": ["/θ/","/ð/"],
-        "words": ["thin","this","bath","with","that"],
-        "tipJa": "th の なかまを ぜんぶ よもう。いきだけの th：thin, bath, with。こえの th：this, that。"
+        "words": ["thin","this","bath","math","that"],
+        "tipJa": "th の なかまを ぜんぶ よもう。いきだけの th：thin, bath, math。こえの th：this, that。"
       },
       "vocab": [
         {"en":"pin","ja":"ピン","emoji":"🎳","core":true},
@@ -4144,7 +4147,7 @@
         ],
         "aiTask": {
           "goalJa": "ボウリングで How many pins? と きいたり、かずで こたえたり しよう",
-          "starterEn": "My turn! Go! Eight pins! How many pins for you?",
+          "starterEn": "My turn! Go! Eight pins! Now it's your turn. How many pins?",
           "targetExpressions": ["How many ～?","～ pins.","Good job!"]
         }
       },
@@ -4199,7 +4202,7 @@
           {"speaker":"Birimo","en":"Blue and purple! Nice flag!","ja":"あおと むらさき！すてきな はた！"}
         ],
         "aiTask": {
-          "goalJa": "What color do you like? と きかれたら I like ～. で すきな いろを こたえよう。ハルにも きいてみよう",
+          "goalJa": "What color do you like? と きかれたら I like ～. で すきな いろを こたえよう。あいてにも What color do you like? と きいてみよう",
           "starterEn": "I like blue. What color do you like?",
           "targetExpressions": ["I like ～.","What color do you like?"]
         }
@@ -4430,7 +4433,7 @@
         }
       },
       "recap": {
-        "highlightsJa": ["What color do you like? / Do you like ～? を ふくしゅう したね","A blue T-shirt, please. で ほしい ものを たのめたよ","wh の ことばを ぜんぶ よめたよ"]
+        "highlightsJa": ["What color do you like? で すきな いろを きけたね","A blue T-shirt, please. で ほしい ものを たのめたよ","wh の ことばを ぜんぶ よめたよ"]
       }
     },
     {
@@ -4648,7 +4651,7 @@
           {"speaker":"Haru","en":"No, I don't. I play soccer.","ja":"ううん、しない。サッカーを するよ。"},
           {"speaker":"Riko","en":"Do you play soccer, Kiko?","ja":"キコは サッカーを する？"},
           {"speaker":"Kiko","en":"Yes, I do! Let's play!","ja":"うん、するよ！いっしょに やろう！"},
-          {"speaker":"Birimo","en":"Go, go! I wave the pink flag!","ja":"がんばれ！ピンクの はたを ふるよ！"}
+          {"speaker":"Birimo","en":"Go, go! Look at my pink flag!","ja":"がんばれ！ぼくの ピンクの はたを みて！"}
         ],
         "aiTask": {
           "goalJa": "Do you play ～? と きかれたら Yes, I do. / No, I don't. で こたえて、I play ～. で する スポーツを いおう",
@@ -4760,7 +4763,7 @@
           {"speaker":"Riko","en":"Look at my card! Hello. I'm Riko. I like pink.","ja":"わたしの カードを みて！こんにちは。リコです。ピンクが すき。"},
           {"speaker":"Haru","en":"Nice card! What food do you like?","ja":"すてきな カード！なんの たべものが すき？"},
           {"speaker":"Riko","en":"I like chocolate. I don't like spiders!","ja":"チョコレートが すき。クモは すきじゃない！"},
-          {"speaker":"Haru","en":"Ha ha! Spiders are not food!","ja":"あはは！クモは たべものじゃないよ！"},
+          {"speaker":"Haru","en":"Ha ha! Spiders aren't food!","ja":"あはは！クモは たべものじゃないよ！"},
           {"speaker":"Kiko","en":"My card! I'm Kiko. I like fish and chips.","ja":"わたしの カード！キコです。フィッシュ・アンド・チップスが すき。"}
         ],
         "aiTask": {
@@ -4808,7 +4811,7 @@
         {"en":"six","ja":"ろく（6）","emoji":"6️⃣"},
         {"en":"game","ja":"ゲーム","emoji":"🎮"}
       ],
-      "teacherScript": "Hi! きょうは きもち サイコロ ゲーム。サイコロの かずで きもちが きまるよ。1は happy、2は sleepy… でた きもちを「I'm ～.」で いおう！",
+      "teacherScript": "Hi! きょうは きもち サイコロ ゲーム。サイコロの かずで きもちが きまるよ。1は happy、3は sleepy、6は hungry… でた きもちを「I'm ～.」で いおう！",
       "conversation": {
         "scene": "Playing a feelings dice game",
         "sceneJa": "きもち サイコロで あそぶ",
@@ -4820,8 +4823,8 @@
           {"speaker":"Birimo","en":"I'm great!","ja":"すごく げんき！"}
         ],
         "aiTask": {
-          "goalJa": "サイコロの かずを いって、その きもちを I'm ～. で いおう。ハルにも How are you? と きこう",
-          "starterEn": "Let's play! One is happy, two is sleepy, three is hungry. Roll the dice! How many?",
+          "goalJa": "サイコロの かずを いって、その きもちを I'm ～. で いおう。あいてにも How are you? と きこう",
+          "starterEn": "Let's play! One is happy, three is sleepy, six is hungry. Roll the dice! How many?",
           "targetExpressions": ["I'm ～.","How are you?"]
         }
       },
@@ -4874,7 +4877,8 @@
           {"speaker":"Ms. Emma","en":"No, I don't.","ja":"ううん、すきじゃない。"},
           {"speaker":"Riko","en":"Do you like tennis?","ja":"テニスは すき？"},
           {"speaker":"Ms. Emma","en":"Yes, I do. I play tennis. Bingo!","ja":"うん、すき。テニスを するよ。せいかい！"},
-          {"speaker":"Kiko","en":"What food do you like?","ja":"なんの たべものが すき？"}
+          {"speaker":"Kiko","en":"What food do you like?","ja":"なんの たべものが すき？"},
+          {"speaker":"Ms. Emma","en":"I like pizza! Next quiz!","ja":"ピザが すき！つぎの クイズ！"}
         ],
         "aiTask": {
           "goalJa": "Do you like ～? で ハルの すきな ものを あてよう。きかれたら Yes, I do. / No, I don't. で こたえよう",
@@ -4968,7 +4972,7 @@
       "phonics": {
         "rule": "review",
         "focus": ["sh","ch","th","wh","ck","ng","nk"],
-        "sounds": [],
+        "sounds": ["/ʃ/","/tʃ/","/θ/","/w/","/k/","/ŋ/","/ŋk/"],
         "words": ["ship","chip","thin","when","duck","ring","pink"],
         "tipJa": "ワールド3で ならった ダイグラフを ぜんぶ よもう。sh-i-p、ch-i-p、th-i-n、wh-e-n、d-u-ck、r-i-ng、p-i-nk！ 2もじで 1つの おとだよ。"
       },
