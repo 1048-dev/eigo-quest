@@ -123,3 +123,33 @@
 - ワールド9〜12 の topic にある「学校生活と1日」「行きたい国」などの漢字は、計画書の単元名と そろえた 保護者向けの見出しで、ワールド10〜12 も 同じ書き方なので そのまま
 - 「He can't swim.」（L197）の あとも L263「I enjoyed swimming in the sea.」は 1年後の できごととして 残した（中心表現のため）
 - 重複タイトルで 相手が ワールド10〜12 の回（L246 ↔ L341「What Time Do You Get Up?」、L226 ↔ L351「Who Is Your Hero?」、L268 ↔ L298・L328「Speech Practice」、L64 ↔ L283）は、あとの回を ワールド10〜12 の レビューで 直す ことにした
+
+## Phase 5 — カリキュラム品質レビュー ワールド10〜12（Lesson 271〜360、docs/night2/REVIEW.md）
+
+### やったこと
+- 90レッスンを ぜんぶ読み、REVIEW.md のチェック項目で その場で直した。スキーマ・レッスン数・フォニックス（focus・rule・words）・ファイルの書式は変えていない（レッスンごとの範囲で「1か所だけ一致」を確かめながら 文字列を置きかえる スクリプトで修正）
+- **なおしたレッスン: 60 / 90**（ワールド10: 13、ワールド11: 18、ワールド12: 29）＋ ワールド8 の L212（タイトルの重複。前回のレビューで見のがしていた）
+- 内容別のおおよその件数（1レッスンで複数あり）
+  - **キャラ設定の くいちがい: 約20**（いちばん多かった）。ワールド11〜12 で キャラの ゆめ・ぶかつ・おもいでが 回ごとに ばらばらだったので 統一した → ハル: ゆめ サッカーせんしゅ／バスケットボールぶ／いちばんの おもいで しゅうがくりょこう、リコ: ゆめ せんせい／テニスぶ、キコ: ゆめ かしゅ／びじゅつぶ（えが とくい）、ビリモ: ゆめ パンやさん
+  - **AI 会話の最初のことばと 相手キャラの くいちがい: 約25**。ローテーションで決まる相手が、ほかのキャラの セリフ・設定を 自分の ことのように 言っていた（L313 ハルが「I want to be a swimmer.」、L315 キコが「I want to be a baker.」、L346 リコが「I went to the sea.」など）。また「I am Kiko.」は 自己紹介として 読まれず、名前が 出た キャラが 相手から 外れるため、L331・L335・L356 では 名のる キャラと 実際の 相手が ちがっていた → 「I'm Haru.」「I'm Riko.」の形に。**全90回の 相手を プログラムで出して 照らし合わせ、くいちがいが 0 件**であることを 確認
+  - 目標表現・中心表現が 会話に 出てこない: 約25（L312 の「Why do you want to be a baker?」、L315「Why do you want to be a singer?」、L354「Why ～?」の やりとりを 追加、L337「No, I can't.」、L346「I went to the sea in summer.」、L360 の 中心表現「Thank you for a wonderful year.」を 会話に、L336・L338・L340・L341・L344・L345・L349・L350・L355・L357 は 表現を 会話の 中身に 合わせた）
+  - タイトルの重複: 9（L283・L298・L328・L334・L341・L346・L349・L351 と L212）。計画書の表も更新
+  - 英語・文法: 約10（L274「Turtles think they are jellyfish」→ the bags are、L282・L286 の 3人称単数 says / wears / goes をさけた言い方に、L288・L316・L356 の will をさけた言い方に、L307「Where were my shoes?」→ My shoes were so muddy、L296「call out to everyone」→ ask everyone to help など）
+  - 会話の流れ: 約6（L332 1年間 教えている エマ先生が ハルに「Nice to meet you」→ ともだちしょうかいの れんしゅうに、L333 キコが リコに ビリモを「おにいさん？」→ キコの おにいちゃん〈L247 の 設定〉の はなしに、L355 インタビューされた キコが「インタビュー ありがとう」→ インタビューした リコが いう、L306 そつぎょうする 小6が「らいねんも はしりたい」→ ちゅうがくでも）
+  - TPR の安全・しやすさ: 7（L289「はりに いとを とおす」→ えの なかの はりを ゆびさす、「ともだちを くすぐる」→ じぶんの おなか、L278・L341・L344 の「～へ はしって」→ その ばで、L293 はしる まね → その ばで、L297「Cry "Hooray!"」→ Shout）
+  - 日本語: 直したセリフ・表現に合わせて 訳も 見直し（約60）
+- 例
+  - L305 アルバムの まとめ: ハルが「いちばんの おもいでは おんがくかい」（L301 では しゅうがくりょこう）、リコが「しゅうがくりょこう」（L302 では うんどうかい）→ ハル＝しゅうがくりょこう（なら）、リコ＝うんどうかい、ビリモ＝おんがくかいで ドラム
+  - L326 リコの ゆめ「いしゃ」（L311・L314・L329・L330 では せんせい）→「My dream is to be a teacher. Because I want to teach children.」。中心表現・単語（sick / hospital → children / school）・計画書も更新
+  - L320 ハルが テニスぶに さそう／キコが かがくぶ → ハル「I want to join the basketball team. It's the strongest team!」、キコ「I want to join the art club.」
+  - L339・L340: キコ「おんがくぶ」↔ びじゅつぶ、リコ「びじゅつぶ」↔ テニスぶ を 統一
+  - L353 ハルの 最初のことば「I like summer because I can swim.」（ハルは ふゆが すきで、L197 で およげない）→「I like winter because I can ski.」
+- タイトルは 1〜360 で すべて別々（英語・日本語とも。記号を のぞいて くらべた）であることを確認
+- tsc / vitest（24ファイル・700件）/ next build すべて通過
+
+### 判断したこと
+- 中心表現が 会話では 2つの セリフに 分かれて出る回（L312「I want to be a baker.」→ Why? →「Because I like bread!」、L315 も 同じ）は、インタビューの 自然な やりとりなので そのまま
+- 表現が 会話では 少し ちがう形で 出る回（L308「Our teacher said, "Well done!"」↔「Ms. Emma said, "Well done!"」、L343「I have six classes a day.」↔「They have six classes a day.」、L352「When is the concert?」↔「when is your concert?」など 約15件）は、意味と 型が 同じなので そのまま
+- L321「I could swim 25 meters.」の could（1回できた ことには ふつう was able to）は、小学校の 教科書の 型に そろえて 残した
+- ワールド10 の 3人称単数（lives / says）は 先生の セリフでも さけ、ワールド11 の L327（She wants to be ～.）から 出す 形に そろえた
+- L313 の 単語 doctor（中心）は、ゆめの しごとの 単語として 残した（会話には 出ないが 単語クイズで つかう）

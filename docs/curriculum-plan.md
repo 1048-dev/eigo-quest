@@ -492,7 +492,7 @@
 | L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
 |---|---|---|---|---|---|
 | 211 | Where Is the Station? | ばしょを たずねる | Where is the station? | oo（moon, zoo, food, pool） | たびだちの道で みちに まよった たびびと（エマ先生が たびびと やく） |
-| 212 | Go Straight | すすむ ほうこう | Go straight. | oo（spoon, room, boot, cool） | たびだちの道の こうさてんで みちあんない |
+| 212 | At the Crossroads | すすむ ほうこう | Go straight. | oo（spoon, room, boot, cool） | たびだちの道の こうさてんで みちあんない |
 | 213 | It's on Your Right | ばしょを つたえる | It's on your right. | oo（book, look, cook, good） | たびだちの道の まちで ほんやを さがす |
 | 214 | Next to the Park | となり・あいだ・まえ | It's next to the park. | oo（foot, wood, hook, wool） | こうえんの となりの カフェを さがす |
 | 215 | Help the Traveler | たびびとを たすけよう（まとめ） | Go straight and turn left. | oo ふりかえり（moon, book, food, foot） | たびびとを どうぶつえんまで あんない |
@@ -593,7 +593,7 @@
 | 280 | School Lunch Detectives | きゅうしょく たんていだん（まとめ） | The beef is from Australia. | g の くらべ（giant, goat, page, bag） | きゅうしょく たんていだんの はっぴょう |
 | 281 | Life Around the World | せかいの たべもの | In India, people eat curry. | -y イー（happy, baby, candy, funny） | せかいの たべもの まつり |
 | 282 | Christmas in Summer? | きせつと ぎょうじ | In Australia, Christmas is in summer. | -y イー（sunny, puppy, story, body） | エマ先生の めいっこ リリーと オンライン |
-| 283 | Greetings Around the World | せかいの あいさつ | In Japan, people bow. | -y アイ（fly, sky, cry, try） | みなとで おきゃくさんへの あいさつれんしゅう |
+| 283 | Bow or Shake Hands? | せかいの あいさつ | In Japan, people bow. | -y アイ（fly, sky, cry, try） | みなとで おきゃくさんへの あいさつれんしゅう |
 | 284 | Homes Around the World | いえと のりもの | In Venice, people go by boat. | -y くらべ（dry, shy, lady, pony） | せかいの いえの しゃしんを みる |
 | 285 | A Day Around the World | せかいの こどもの 1日（まとめ） | In Finland, children start school at seven. | -y ふりかえり（happy, fly, baby, sky） | せかいの こどもの 1日 はっぴょうかい |
 | 286 | I Recommend This Book | おすすめの ほん | I recommend this book. | -le（apple, little, table, bubble） | しまの としょかんで ほんを すすめあう |
@@ -608,7 +608,7 @@
 | 295 | Save the Earth Idea Meeting | ちきゅうを まもる アイデア かいぎ（まとめ） | Let's use our own bottles. | aw au ew ふりかえり（hawk, sauce, blew, yawn） | ちきゅうを まもる アイデア かいぎ |
 | 296 | My Proposal Speech | ていあん スピーチづくり | Let's save the sea turtles. | c g ふりかえり（ice, giant, juice, huge） | しまの としょかんで スピーチづくり |
 | 297 | Earth Quiz Show | ちきゅう クイズショー | Sea turtles live in warm seas. | -y -le ふりかえり（sunny, cry, puzzle, eagle） | しまの ステージで クイズショー |
-| 298 | Speech Practice | スピーチの れんしゅう | Thank you for listening. | aw au ew ふりかえり（draw, autumn, flew, lawn） | すなはまの ステージで リハーサル |
+| 298 | Proposal Speech Rehearsal | スピーチの れんしゅう | Thank you for listening. | aw au ew ふりかえり（draw, autumn, flew, lawn） | すなはまの ステージで リハーサル |
 | 299 | Ocean of Life Review | いきもの・せかい・おすすめ | In Japan, people eat fish. Let's keep the sea clean. | c g -y -le ふりかえり（rice, gem, baby, bubble） | いのちの海の しま ふりかえり さんぽ |
 | 300 | World 10 Grand Review | 小6中盤 はっぴょうかい（ワールド10 ぜんぶ） | We can save the sea. Let's start today! | 総まとめ（ice, giant, happy, apple, draw, sauce, new） | いのちの海の ステージで 小6中盤 はっぴょうかい |
 
@@ -652,9 +652,9 @@
 | 323 | Because You Were Kind | りゆうを そえる | Thank you for being my friend. | because（because, why, so, but） | こうえんで メッセージ こうかん |
 | 324 | A Message for Our Teacher | 先生へのメッセージ | Because of you, I could speak English. | could would because（+ should） | エマ先生に ないしょで よせがき |
 | 325 | Thank-You Party | ありがとうパーティー（まとめ） | Thank you for teaching us English. | could would because said ふりかえり | サプライズ ありがとうパーティー |
-| 326 | My Dream Speech | ゆめの スピーチづくり | My dream is to be a doctor. | -ed -er ふりかえり（walked, cleaned, started, singer） | としょかんで ゆめの スピーチづくり |
+| 326 | My Dream Speech | ゆめの スピーチづくり | My dream is to be a teacher. | -ed -er ふりかえり（walked, cleaned, started, singer） | としょかんで ゆめの スピーチづくり |
 | 327 | Dream Quiz Show | ともだちの ゆめ クイズ | She wants to be a singer. | -er -est ふりかえり（writer, runner, longest, nicest） | ステージで ゆめ クイズショー |
-| 328 | Speech Practice | スピーチの れんしゅう | Let me tell you about my dream. | サイトワード ふりかえり（was, there, would, because） | ステージで スピーチの リハーサル |
+| 328 | Dream Speech Rehearsal | スピーチの れんしゅう | Let me tell you about my dream. | サイトワード ふりかえり（was, there, would, because） | ステージで スピーチの リハーサル |
 | 329 | City of Dreams Review | おもいで・ゆめ・ぶかつ・ありがとう | My best memory is sports day. I want to be a teacher. | -ed -er -est ふりかえり（helped, opened, dancer, biggest） | ゆめの都 ふりかえり さんぽ |
 | 330 | World 11 Grand Review | 小6 はっぴょうかい（ワールド11 ぜんぶ） | My dream is to be a singer. Thank you for listening. | 総まとめ（jumped, played, wanted, teacher, tallest, was, because） | ゆめの都の ステージで 小6 はっぴょうかい |
 
@@ -677,24 +677,24 @@
 | 331 | I Am a New Student. | I am / You are | I am a new student. | サイトワード are was were | ちゅうがっこうの にゅうがくしき |
 | 332 | He Is My Friend. | He is / She is / They are | He is my friend. | サイトワード they said there | にゅうがくしきの あとで ともだちしょうかい |
 | 333 | Are You Ready? | Are you ～? / Is he ～? | Is he your brother? | サイトワード should could would | はじめての じゅぎょうの じゅんび |
-| 334 | This Is My Friend. | ともだちを くわしく しょうかい | She likes music. | サイトワード friend people because | ともだち ポスターづくり |
+| 334 | My Friend Poster | ともだちを くわしく しょうかい | She likes music. | サイトワード friend people because | ともだち ポスターづくり |
 | 335 | Hello, Junior High! | じこしょうかい まとめ | Hello, I am Riko. I like books. | ふりかえり（are they should friend people） | じこしょうかい タイム |
 | 336 | Do You Like Basketball? | Do you like ～? | Do you like basketball? | bas-ket-ball vol-ley-ball bad-min-ton pi-a-no | ぶかつ たいけん ウィーク |
 | 337 | I Can Use a Computer. | I can / Can you ～? | I can use a computer. | com-pu-ter ba-na-na to-ma-to po-ta-to | コンピューターぶと りょうりぶ |
 | 338 | I Want a New Racket. | I want / I want to | I want a new racket. | wa-ter-mel-on hel-i-cop-ter cal-cu-la-tor cat-er-pil-lar | テニスぶと かがくぶ |
 | 339 | I Like It and I Can Do It! | like / can / want | I like art. I can draw well. | pen-cil fan-tas-tic beau-ti-ful el-e-va-tor | びじゅつぶ |
 | 340 | Club Trial Review | ぶかつ たいけん まとめ | I want to join the basketball club. | ふりかえり（sun-set bas-ket-ball ba-na-na wa-ter-mel-on） | ぶかつを えらぶ |
-| 341 | What Time Do You Get Up? | What time ～? | What time do you get up? | 音読 a_e i_e o_e（wake, time, home, ride） | ちゅうがっこうの 1日を しらべる |
+| 341 | Busy Junior High Mornings | What time ～? | What time do you get up? | 音読 a_e i_e o_e（wake, time, home, ride） | ちゅうがっこうの 1日を しらべる |
 | 342 | Where Is the Library? | Where is ～? | Where is the library? | 音読 ai ee ea oa（train, street, teach, road） | こうしゃ ツアー |
 | 343 | My Day at Junior High | 1日の ながれ | I have six classes a day. | 音読 oo ou（school, room, house, out） | ちゅうがくせいと すごす 1日 |
 | 344 | Where Do You Practice? | Where / What time | Where do you practice? | 音読 ar or ir ur（park, sport, first, turn） | ぶかつの れんしゅう じかん |
-| 345 | My Day Speech | 1日の スピーチ まとめ | I get up at six. | ふりかえり音読（name, green, noon, morning） | わたしの 1日 スピーチ |
-| 346 | I Went to the Sea. | I went to ～. | I went to the sea in summer. | 音読 -ed（played, watched, visited, enjoyed） | できごとトーク：なつ |
+| 345 | My Day Speech | 1日の スピーチ まとめ | I get up at seven. | ふりかえり音読（name, green, noon, morning） | わたしの 1日 スピーチ |
+| 346 | Where Did You Go? | I went to ～. | I went to the sea in summer. | 音読 -ed（played, watched, visited, enjoyed） | できごとトーク：なつ |
 | 347 | I Saw a Big Tree. | I saw ～. | I saw a big tree. | 音読 c g（city, dance, page, giant） | できごとトーク：えんそく |
 | 348 | I Ate Curry and Rice. | I ate ～. It was ～. | I ate curry and rice. | 音読 -y -le（happy, fly, little, table） | できごとトーク：たべもの |
-| 349 | It Was Fun! | How was ～? ― It was ～. | It was fun. | 音読 aw au ew（saw, autumn, drew, flew） | できごとトーク：ぎょうじ |
+| 349 | How Was the Festival? | How was ～? ― It was ～. | It was fun. | 音読 aw au ew（saw, autumn, drew, flew） | できごとトーク：ぎょうじ |
 | 350 | My Year Talk Show | できごと まとめ | I went to the zoo. It was fun. | ふりかえり（jumped, rice, sunny, draw） | 1ねんの できごと トークショー |
-| 351 | Who Is Your Hero? | Who / What | Who is your hero? | サイトワード who what | インタビュー たいかいの はじまり |
+| 351 | Who and What Questions | Who / What | Who is your hero? | サイトワード who what | インタビュー たいかいの はじまり |
 | 352 | When Is the Concert? | When / Where | When is the concert? | サイトワード when where | コンサートの よてい |
 | 353 | Why Do You Like It? | Why / How | Why do you like winter? | サイトワード why how | りゆうを きく |
 | 354 | Interview Contest | 5W1H ぜんぶ | Where do you want to go? | サイトワード who what when where why how | インタビュー たいかいの けっしょう |
