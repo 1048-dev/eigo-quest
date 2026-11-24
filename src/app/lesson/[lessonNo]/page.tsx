@@ -1,13 +1,14 @@
 "use client";
 /**
  * 1日1レッスン（約25〜30分）のプレイヤー。
- * 教師動画 → フラッシュカード → TPR → フォニックス → 学校テスト対策 → 発音 → 確認クイズ → スピードリスニング → 完了（コイン）
+ * 教師動画 → フラッシュカード → TPR → フォニックス → 学校テスト対策 → 発音 → 確認クイズ → スピードリスニング → AIキャラと かいわ → 完了（コイン）
  */
 import { use, useEffect, useState } from "react";
 import Link from "next/link";
 import type { LessonStep } from "@/lib/curriculum/questions";
 import type { AnswerLog } from "@/lib/services/progressService";
 import { Flashcards, Phonics, Pronunciation, QuizRun, SchoolExpressions, SpeedListening, TeacherVideo, TprDrill } from "@/components/lesson/LessonSteps";
+import { ConversationStep } from "@/components/lesson/ConversationStep";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { apiGet, apiPost } from "@/lib/api/client";
@@ -15,7 +16,7 @@ import { LessonCompleteResponseSchema, LessonResponseSchema, type LessonComplete
 
 const STEP_LABEL: Record<LessonStep["kind"], string> = {
   teacher_video: "せんせい", flashcards: "カード", tpr: "うごこう", phonics: "フォニックス",
-  school_expressions: "がっこう", pronunciation: "はつおん", quiz: "クイズ", speed_listening: "スピード",
+  school_expressions: "がっこう", pronunciation: "はつおん", quiz: "クイズ", speed_listening: "スピード", conversation: "かいわ",
 };
 
 export default function LessonPage({ params }: { params: Promise<{ lessonNo: string }> }) {
@@ -25,6 +26,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
   const [step, setStep] = useState(0);
   const [logs, setLogs] = useState<AnswerLog[]>([]);
   const [quizScore, setQuizScore] = useState(0);
+  const [speedBest, setSpeedBest] = useState(0);
   const [result, setResult] = useState<LessonCompleteResponse | null>(null);
 
   useEffect(() => {
@@ -111,7 +113,11 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
       {s.kind === "school_expressions" && <SchoolExpressions items={byIds(s.itemIds)} testPoints={s.testPoints} onDone={next} />}
       {s.kind === "pronunciation" && <Pronunciation items={byIds(s.itemIds)} onDone={next} />}
       {s.kind === "quiz" && <QuizRun title="✅ かくにんクイズ" questions={s.questions} onDone={(l, score) => { setQuizScore(score); next(l); }} />}
-      {s.kind === "speed_listening" && <SpeedListening rounds={s.rounds} onDone={finish} />}
+      {s.kind === "speed_listening" && <SpeedListening rounds={s.rounds} onDone={(l, best) => {
+        // さいごの「かいわ」ステップがあれば そこへ。なければ ここで完了
+        if (steps[step + 1]?.kind === "conversation") { setSpeedBest(best); next(l); } else void finish(l, best);
+      }} />}
+      {s.kind === "conversation" && <ConversationStep lessonNo={lesson.lessonNo} conversation={lesson.conversation} character={s.character} maxTurns={s.maxTurns} items={items} onDone={(l) => void finish(l, speedBest)} />}
     </div>
   );
 }

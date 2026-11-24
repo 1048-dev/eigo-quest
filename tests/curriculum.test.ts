@@ -114,7 +114,8 @@ describe("カリキュラム: 全体の整合性", () => {
   it("どのレッスンもレッスンフローを作れて、API 契約を通しても会話が残る", () => {
     for (const l of LESSONS) {
       const steps = buildLessonFlow(l);
-      expect(steps.length).toBe(8);
+      expect(steps.length).toBe(9);
+      expect(steps[steps.length - 1].kind).toBe("conversation");
       const v = LessonResponseSchema.parse(JSON.parse(JSON.stringify({ lesson: l, teacher: TEACHER, items: itemsOfLesson(l), steps })));
       expect(v.lesson?.conversation?.lines.length).toBe(l.conversation?.lines.length);
       expect(v.lesson?.conversation?.aiTask.starterEn).toBe(l.conversation?.aiTask.starterEn);

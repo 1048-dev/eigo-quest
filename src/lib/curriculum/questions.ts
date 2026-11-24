@@ -4,6 +4,7 @@
  */
 import type { AssessmentDef, LearningItemDef, LessonDef, MemoryState, Skill } from "@/lib/domain/types";
 import { pickArenaItems, type ArenaMode } from "@/lib/domain/arena";
+import { MAX_CONVERSATION_TURNS } from "@/lib/conversation/engine";
 import { itemsInRange, itemsOfLesson } from "./index";
 
 export type QuestionType =
@@ -226,7 +227,8 @@ export type LessonStep =
   | { kind: "school_expressions"; minutes: number; itemIds: string[]; testPoints: string[] }
   | { kind: "pronunciation"; minutes: number; itemIds: string[] }
   | { kind: "quiz"; minutes: number; questions: Question[] }
-  | { kind: "speed_listening"; minutes: number; rounds: { rate: number; questions: Question[] }[] };
+  | { kind: "speed_listening"; minutes: number; rounds: { rate: number; questions: Question[] }[] }
+  | { kind: "conversation"; minutes: number; character: "haru" | "riko" | "kiko" | "birimo"; maxTurns: number };
 
 export const SPEED_ROUNDS = [0.8, 1.0, 1.2] as const;
 
@@ -259,5 +261,9 @@ export function buildLessonFlow(lesson: LessonDef, seed = lesson.lessonNo): Less
         })),
       })),
     },
+    // さいごに AIキャラ（ふだんはハル）と かいわ。会話データのある レッスンだけ
+    ...(lesson.conversation
+      ? [{ kind: "conversation" as const, minutes: 3, character: "haru" as const, maxTurns: MAX_CONVERSATION_TURNS }]
+      : []),
   ];
 }

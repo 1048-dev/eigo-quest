@@ -184,6 +184,7 @@ const LessonStepSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.literal("pronunciation"), minutes: num(3), itemIds: safeArray(z.string()) }),
   z.object({ kind: z.literal("quiz"), minutes: num(4), questions: safeArray(QuestionSchema) }),
   z.object({ kind: z.literal("speed_listening"), minutes: num(3), rounds: safeArray(z.object({ rate: num(1), questions: safeArray(QuestionSchema) })) }),
+  z.object({ kind: z.literal("conversation"), minutes: num(3), character: z.enum(["haru", "riko", "kiko", "birimo"]).catch("haru"), maxTurns: num(6) }),
 ]);
 const LessonSchema = z.object({
   lessonNo: z.number(), world: num(1), title: str(), titleJa: str(),
@@ -271,6 +272,34 @@ export const RecapWatchedResponseSchema = z.object({
   messageJa: str("さいごまで みたね！ すごい！"),
 });
 export type RecapWatchedResponse = z.output<typeof RecapWatchedResponseSchema>;
+
+// ---------------------------------------------------------------------------
+// POST /api/conversation（レッスンさいごの AIキャラとの かいわ）
+// いつでも success:true。AI が使えないときは台本の返事（source:"script"）
+// ---------------------------------------------------------------------------
+export const ConversationTurnSchema = z.object({
+  role: z.enum(["ai", "child"]).catch("child"),
+  text: z.string().max(300).catch(""),
+});
+export const ConversationRequestSchema = z.object({
+  lessonNo: z.coerce.number().int().min(1).catch(1),
+  character: z.enum(["haru", "riko", "kiko", "birimo"]).catch("haru"),
+  history: safeArray(ConversationTurnSchema).transform((h) => h.slice(-12)),
+  childText: z.string().catch("").transform((s) => s.slice(0, 200)),
+});
+export type ConversationRequest = z.input<typeof ConversationRequestSchema>;
+export const ConversationResponseSchema = z.object({
+  success: bool(true),
+  replyEn: str("Great job! Let's talk again!"),
+  replyJa: str("よく できたね！ また おはなししよう！"),
+  suggestions: safeArray(z.string()),
+  usedTarget: bool(false),
+  done: bool(false),
+  turn: num(0),
+  maxTurns: num(6),
+  source: z.enum(["ai", "script"]).catch("script"),
+});
+export type ConversationResponse = z.output<typeof ConversationResponseSchema>;
 
 /** すべてのエラーレスポンスの形（ok=false + error） */
 export const ErrorBodySchema = z.object({ error: str("") });

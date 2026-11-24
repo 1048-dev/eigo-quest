@@ -6,6 +6,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   DashboardResponseSchema, GachaResponseSchema, GradeResponseSchema, LessonCompleteResponseSchema, LessonResponseSchema,
   MapResponseSchema, RankingResponseSchema, TestStartResponseSchema, TestSubmitResponseSchema, TreasureAlertResponseSchema,
+  ConversationResponseSchema,
 } from "@/lib/api/contracts";
 import { apiGet, apiPost, coerce, parseJsonSafely } from "@/lib/api/client";
 import { buildStageMap } from "@/lib/domain/progression";
@@ -15,6 +16,7 @@ import { buildLessonFlow } from "@/lib/curriculum/questions";
 const ALL = {
   MapResponseSchema, DashboardResponseSchema, TreasureAlertResponseSchema, RankingResponseSchema, GachaResponseSchema,
   LessonResponseSchema, LessonCompleteResponseSchema, TestStartResponseSchema, TestSubmitResponseSchema, GradeResponseSchema,
+  ConversationResponseSchema,
 };
 const GARBAGE: unknown[] = [undefined, null, "", "<html>500</html>", 42, [], {}, { nodes: "x", user: 5, scores: null, rows: [null, 1, { rank: "a" }] }];
 
@@ -54,11 +56,13 @@ describe("サーバーが返す正しい形はそのまま通る（バックエ�
     expect(v.user).toEqual({ nickname: "ハル", coins: 5, streakDays: 2 });
   });
 
-  it("lesson の構成（8ステップ・クイズの正解つき）", () => {
+  it("lesson の構成（9ステップ・さいごは かいわ・クイズの正解つき）", () => {
     const lesson = getLesson(1)!;
     const v = coerce(LessonResponseSchema, JSON.parse(JSON.stringify({ lesson, teacher: TEACHER, items: itemsOfLesson(lesson), steps: buildLessonFlow(lesson) })));
     expect(v.lesson?.lessonNo).toBe(1);
-    expect(v.steps.map((s) => s.kind)).toEqual(["teacher_video", "flashcards", "tpr", "phonics", "school_expressions", "pronunciation", "quiz", "speed_listening"]);
+    expect(v.steps.map((s) => s.kind)).toEqual(["teacher_video", "flashcards", "tpr", "phonics", "school_expressions", "pronunciation", "quiz", "speed_listening", "conversation"]);
+    const conv = v.steps.find((s) => s.kind === "conversation");
+    expect(conv && conv.kind === "conversation" ? [conv.character, conv.maxTurns] : null).toEqual(["haru", 6]);
     const quiz = v.steps.find((s) => s.kind === "quiz");
     expect(quiz && quiz.kind === "quiz" ? quiz.questions.length : 0).toBeGreaterThan(0);
   });
