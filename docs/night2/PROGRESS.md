@@ -96,3 +96,30 @@
 - 「Once upon a time, I'm a little cloud.」のような 現在形の おはなし（L174・L175）は、過去形がまだなので わざと そのままにした
 - 「It's hello in Kenya.」: Jambo はスワヒリ語で ケニア以外でも使うが、小4向けには「ケニアの こんにちは」で十分と判断
 - 「I want to draw ～」（L141）、「I'm nervous」（L118・L179）、「Don't be scared!」（L109）などは、場面に自然な決まり文句として残した
+
+## Phase 4 — カリキュラム品質レビュー ワールド7〜9（Lesson 181〜270、docs/night2/REVIEW.md）
+
+### やったこと
+- 90レッスンを ぜんぶ読み、REVIEW.md のチェック項目で その場で直した。スキーマ・レッスン数・フォニックスの単語・ファイルの書式は変えていない（該当の文字列だけを置きかえ）
+- **なおしたレッスン: 55 / 90**（ワールド7: 21、ワールド8: 12、ワールド9: 22）
+- 内容別のおおよその件数（1レッスンで複数あり）
+  - **AI 会話の最初のことばと 相手キャラの くいちがい: 約40**（いちばん多かった）。会話相手は レッスンごとに ハル→リコ→キコ→ビリモ と回るのに、最初のことばが「My name is Birimo.」「My birthday is February 29th.」（ビリモの設定）のままで、リコや キコが ビリモの なまえ・たんじょうびを 名のっていた（L181・185・187・188・190・206・210）。ほかにも「I like science.」（その回の キコは math と English）、「Please call me Haru.」を キコが いう（L243）、「I went to Okinawa」を キコが いう（L259。おきなわは ハル）など。**全90回の 相手を プログラムで出して 1つずつ 照らし合わせ**、相手キャラの台本・設定に合うように直した
+  - キャラ設定の くいちがい: 約12（L207 キコの いちばん すきな きょうか music → art〈L194 と同じ〉、L228・L229・L230 リコの ヒーローを「おばあちゃん（おいしゃさん）」に統一、L236 エマ先生の スピーチを ビリモに〈キコの ヒーローは しょうぼうし〉、L270 キコの とくい singing → drawing、L205 エマ先生が「じゅうい」と名のる → インタビューごっこで じゅうい やく と わかるように）
+  - タイトルの重複: 4（L184「What Animal Do You Like?」= L34、L185「My Name Card」= L63、L239「Speech Rehearsal」= L209、L248「My School Day」= L177）。計画書の表も更新
+  - 英語: 約10（「I don't like spiders, too」→ either、「cheese cake」→ cheesecake、「Cook a soup」→ Make some soup、「What don't you have?」→ Do you have an aquarium?、「I can hear summer stories all day」→ I want to hear more summer stories! など）
+  - 会話の流れ: 約6（L219 お会計のあとに「That's all.」→ 先に Anything? ― That's all, thank you. → Your total is…、L266 リコが ハルの スピーチの つづきを 先に いう → ハル自身が Then, I saw a starfish. と つなげる、L206 ビリモが 話していないのに「Thank you for listening!」など）
+  - 日本語: 直したセリフに合わせた訳 ＋ L243 の「5月5日」などの漢字の日づけを「5がつ 5にち」に
+- 例
+  - L181 最初のことば「Hello! My name is Birimo.」（実際は ハルが 話す）→「Hello! I'm Haru. Nice to meet you. What's your name?」
+  - L192「Let's clean the classroom, too!」（ようびの 時間わりの こたえとして 不自然）→「Science is fun!」
+  - L195 ハルの ゆめの時間わり swimming → soccer（L197 で「He can't swim.」）、キコ「I want your timetables!」→「I like your timetables!」
+  - L221・L225 ハルが「I'm from far away.」「I'm visiting Japan.」→「Let's role-play! I'm a friend from far away.」のように ごっこ遊びと わかる形に
+  - L233 プールが ほしい セリフを リコに（およげないはずの ハルから）、相手キコの 最初のことばを パイやさんに
+- タイトルは 1〜270 で すべて別々（英語・日本語とも）であることを確認
+- tsc / vitest（24ファイル・700件）/ next build すべて通過
+
+### 判断したこと
+- 会話相手を決める `pickConversationPartner` は「I'm ～.」だけを 自己紹介として 見る。コードは変えず、最初のことばのほうを「I'm Riko.」の形にしたり、キャラの なまえを 出さない形にしたりして 合わせた（コードを変えると ほかの ワールドの ローテーションも 変わるため）
+- ワールド9〜12 の topic にある「学校生活と1日」「行きたい国」などの漢字は、計画書の単元名と そろえた 保護者向けの見出しで、ワールド10〜12 も 同じ書き方なので そのまま
+- 「He can't swim.」（L197）の あとも L263「I enjoyed swimming in the sea.」は 1年後の できごととして 残した（中心表現のため）
+- 重複タイトルで 相手が ワールド10〜12 の回（L246 ↔ L341「What Time Do You Get Up?」、L226 ↔ L351「Who Is Your Hero?」、L268 ↔ L298・L328「Speech Practice」、L64 ↔ L283）は、あとの回を ワールド10〜12 の レビューで 直す ことにした

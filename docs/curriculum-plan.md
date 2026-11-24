@@ -452,8 +452,8 @@
 | 181 | Hello, New Friends! | なまえを いう | My name is Haru. | ai（rain, mail, tail, paint） | ひかりの島の あたらしい クラスの はじめての 日 |
 | 182 | How Do You Spell It? | なまえの つづり | How do you spell it? | ai（train, snail, nail, wait） | クラスで なまえカードづくり |
 | 183 | I Like Soccer | すきな もの | I like soccer. | ay（day, play, say, May） | がっこうの テラスで すきな もの トーク |
-| 184 | What Animal Do You Like? | すきな ものを たずねる | What animal do you like? | ay（gray, stay, tray, clay） | 島の クラスで すきな もの しらべ |
-| 185 | My Name Card | じこしょうかいカード | My name is Kiko. I like cats. | ai ay ふりかえり（rain, day, paint, play） | はまべで なまえカード こうかん |
+| 184 | Class Likes Survey | すきな ものを たずねる | What animal do you like? | ay（gray, stay, tray, clay） | 島の クラスで すきな もの しらべ |
+| 185 | Let's Swap Name Cards! | じこしょうかいカード | My name is Kiko. I like cats. | ai ay ふりかえり（rain, day, paint, play） | はまべで なまえカード こうかん |
 | 186 | Twelve Months | つき（1月〜12月） | It's April. | ee（see, tree, bee, feet） | 島の カレンダーの きの したで つきの うた |
 | 187 | When Is Your Birthday? | たずねる・こたえる | When is your birthday? | ee（green, sheep, week, three） | エマ先生の たんじょうび インタビュー |
 | 188 | First, Second, Third | ひづけ（1st 2nd 3rd…） | My birthday is July 3rd. | ee（sleep, teeth, queen, seed） | 島の こうえんで たんじょうびじゅんに ならぶ ゲーム |
@@ -473,9 +473,9 @@
 | 202 | She Is a Baker | しごとと できること | She is a baker. | ow（low, row, blow, glow） | 島の パンやさんを たずねる |
 | 203 | She Works at a Hospital | はたらく ばしょ | She works at a hospital. | ow（window, yellow, pillow, shadow） | だれが どこで はたらくかの まちの ちずづくり |
 | 204 | Who Is This? | ヒントクイズ | Who is this? | ow（bowl, grown, throw, below） | まちの ひろばで しごと クイズショー |
-| 205 | Town Interview | まちの ひと インタビュー | She is a vet. She works at an animal hospital. | oa ow ふりかえり（boat, snow, coat, grow） | クラスしんぶんの ために まちの ひとに インタビュー |
+| 205 | Town Interview | まちの ひと インタビュー | She is a vet. She works at an animal hospital. | oa ow ふりかえり（boat, snow, coat, grow） | クラスしんぶんの ために インタビューごっこ（エマ先生が じゅうい やく） |
 | 206 | My Self-Introduction | じこしょうかい スピーチを つくる | My name is Riko. My birthday is June 2nd. | ai ay ee ふりかえり（train, play, tree, sheep） | きょうしつで じこしょうかい スピーチづくり |
-| 207 | My Week at School | じかんわりと すきな きょうか | My favorite subject is music. I have music on Tuesday. | ea oa ふりかえり（read, toast, teach, coach） | 島の フェリーで がっこうの 1しゅうかんトーク |
+| 207 | My Week at School | じかんわりと すきな きょうか | My favorite subject is art. I have art on Tuesday. | ea oa ふりかえり（read, toast, teach, coach） | 島の フェリーで がっこうの 1しゅうかんトーク |
 | 208 | Island Quiz Show | he / she クイズ | She is a vet. She can help animals. | ai ee oa ow ふりかえり（mail, queen, goat, yellow） | ひかりの島 クイズショー |
 | 209 | Speech Rehearsal | はっぴょうの れんしゅう | Let's practice our speeches. | ai ay ee ea ow ふりかえり（railway, seaweed, mailbox, snowman） | とうだいの ステージで リハーサル |
 | 210 | World 7 Grand Review | 小5前半 はっぴょうかい（ワールド7 ぜんぶ） | Hello! My name is Haru. My birthday is May 5th. | 母音チーム総まとめ（rain, play, tree, sea, boat, snow） | ひかりの島の とうだいで 小5前半 はっぴょうかい |
@@ -519,7 +519,7 @@
 | 236 | My Hero Speech | ヒーロー しょうかい スピーチを つくる | My hero is Ms. Emma. She is kind. | oo ou ふりかえり（spoon, foot, mouth, round） | きょうしつで ヒーロー スピーチづくり |
 | 237 | Treasure Hunt | みちあんない ゲーム | Turn right at the second corner. | ow oi oy ふりかえり（brown, join, toy, crowd） | みちあんないで たからさがし ゲーム |
 | 238 | Road Cafe Quiz Show | ちゅうもんと にほん しょうかい クイズショー | In Japan, we have ramen. It's delicious. | igh ie oo ふりかえり（bright, fries, school, wood） | たびだちの道の カフェで クイズショー |
-| 239 | Speech Rehearsal | 小5 はっぴょうかいの リハーサル | Please listen to my speech. | oo ou ow oy igh ふりかえり（moonlight, playground, cowboy, football） | やがいステージで はっぴょうかいの リハーサル |
+| 239 | Hero Speech Rehearsal | 小5 はっぴょうかいの リハーサル | Please listen to my speech. | oo ou ow oy igh ふりかえり（moonlight, playground, cowboy, football） | やがいステージで はっぴょうかいの リハーサル |
 | 240 | World 8 Grand Review | 小5 はっぴょうかい（ワールド8 ぜんぶ） | This is my hero. He is brave and kind. | 母音チーム総まとめ（moon, house, cow, coin, boy, night, pie） | たびだちの道の ゴールで 小5 はっぴょうかい |
 
 ## 6-9. ワールド9 のレッスン詳細（content/curriculum/lessons.json に実装済み）
@@ -541,7 +541,7 @@
 | 245 | This Is Me Cards | じこしょうかいカード（まとめ） | Please call me Riko. I'm good at swimming. | ar ふりかえり（arm, bark, hard, scarf） | くもの はしで じこしょうかいカード こうかん |
 | 246 | What Time Do You Get Up? | おきる じかん・ねる じかん | What time do you get up? | or（fork, corn, horse, short） | そらの がっこうで あさの じかんくらべ |
 | 247 | I Usually Walk to School | いつもの こと | I usually walk to school. | or（sport, north, storm, born） | そらの みちで がっこうへの いきかた トーク |
-| 248 | My School Day | いつも・ときどき | I always eat lunch with my friends. | or（morning, popcorn, torch, fort） | そらの がっこうの 1日を ビデオで しょうかい |
+| 248 | A Day at Sky School | いつも・ときどき | I always eat lunch with my friends. | or（morning, popcorn, torch, fort） | そらの がっこうの 1日を ビデオで しょうかい |
 | 249 | What Do You Do After School? | ほうかご | What do you do after school? | or（thorn, pork, cord, stork） | そらの がっこうの もんで ほうかごの はなし |
 | 250 | Schools Around the World | せかいの がっこう くらべ（まとめ） | In Japan, we clean our classroom. | ar or ふりかえり（car, corn, park, sport） | そらの ちずで せかいの がっこう くらべ |
 | 251 | Where Do You Want to Go? | いきたい くに | Where do you want to go? | er（her, fern, herd, perch） | そらの くうこうで せかいちずを みる |

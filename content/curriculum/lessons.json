@@ -10112,7 +10112,7 @@
         ],
         "aiTask": {
           "goalJa": "My name is ～. と Nice to meet you. で じこしょうかいしよう（なまえは ニックネームでも OK）",
-          "starterEn": "Hello! My name is Birimo. Nice to meet you. What's your name?",
+          "starterEn": "Hello! I'm Haru. Nice to meet you. What's your name?",
           "targetExpressions": ["My name is ～.","Nice to meet you."]
         }
       },
@@ -10219,11 +10219,11 @@
           {"speaker":"Haru","en":"I like soccer. I play every day.","ja":"ぼくは サッカーが すき。まいにち するよ。"},
           {"speaker":"Kiko","en":"Me, too! I like soccer.","ja":"わたしも！サッカー すき。"},
           {"speaker":"Riko","en":"I like music. I don't like spiders.","ja":"わたしは おんがくが すき。クモは すきじゃない。"},
-          {"speaker":"Birimo","en":"I don't like spiders, too! I like games.","ja":"ぼくも クモは にがて！ゲームが すき。"}
+          {"speaker":"Birimo","en":"I don't like spiders, either! I like games.","ja":"ぼくも クモは にがて！ゲームが すき。"}
         ],
         "aiTask": {
           "goalJa": "I like ～. と I don't like ～. で すきな もの・にがてな ものを つたえよう",
-          "starterEn": "I like music. I don't like spiders. What do you like?",
+          "starterEn": "I like soccer. I don't like snakes. What do you like?",
           "targetExpressions": ["I like ～.","I don't like ～."]
         }
       },
@@ -10234,8 +10234,8 @@
     {
       "lessonNo": 184,
       "world": 7,
-      "title": "What Animal Do You Like?",
-      "titleJa": "なんの どうぶつが すき？",
+      "title": "Class Likes Survey",
+      "titleJa": "クラスの すきな もの しらべ",
       "school": {
         "grade": "小5",
         "topic": "じこしょうかい：すきな ものを たずねる",
@@ -10275,7 +10275,7 @@
           {"speaker":"Haru","en":"I like penguins.","ja":"ペンギンが すき。"},
           {"speaker":"Kiko","en":"Why?","ja":"どうして？"},
           {"speaker":"Haru","en":"Because they are cute! What color do you like?","ja":"かわいいから！なにいろが すき？"},
-          {"speaker":"Kiko","en":"I like gray. Gray like a penguin!","ja":"はいいろが すき。ペンギンみたいな はいいろ！"}
+          {"speaker":"Kiko","en":"I like gray. Baby penguins are gray!","ja":"はいいろが すき。ペンギンの あかちゃんは はいいろだよ！"}
         ],
         "aiTask": {
           "goalJa": "What animal do you like? / What color do you like? で しつもんして、こたえよう",
@@ -10290,8 +10290,8 @@
     {
       "lessonNo": 185,
       "world": 7,
-      "title": "My Name Card",
-      "titleJa": "わたしの なまえカード",
+      "title": "Let's Swap Name Cards!",
+      "titleJa": "なまえカードを こうかんしよう",
       "school": {
         "grade": "小5",
         "topic": "まとめ：じこしょうかいカード",
@@ -10334,7 +10334,7 @@
         ],
         "aiTask": {
           "goalJa": "なまえ・つづり・すきな ものを いって、カードを こうかんしよう（なまえは ニックネームでも OK）",
-          "starterEn": "Hello! My name is Birimo. B-I-R-I-M-O. I like games. Let's swap cards!",
+          "starterEn": "Hello! I'm Riko. R-I-K-O. I like swimming. Let's swap cards!",
           "targetExpressions": ["My name is ～.","How do you spell it?","I like ～."]
         }
       },
@@ -10390,7 +10390,7 @@
         ],
         "aiTask": {
           "goalJa": "What month is it? に こたえたり、すきな つきを I like ～. で いおう",
-          "starterEn": "Let's sing the month song! January, February, March... What month do you like?",
+          "starterEn": "Let's sing the month song! January, February, March... What month is it now? What month do you like?",
           "targetExpressions": ["It's ～.","I like ～."]
         }
       },
@@ -10446,7 +10446,7 @@
         ],
         "aiTask": {
           "goalJa": "When is your birthday? と きいたり、My birthday is ～. で こたえよう（ほんとうの 日でなくても OK）",
-          "starterEn": "Hi! Let's talk about birthdays. My birthday is February 29th. When is your birthday?",
+          "starterEn": "Hi! Let's talk about birthdays. My birthday is December 8th. When is your birthday?",
           "targetExpressions": ["When is your birthday?","My birthday is ～."]
         }
       },
@@ -10501,7 +10501,7 @@
         ],
         "aiTask": {
           "goalJa": "My birthday is ～ 1st / 2nd / 3rd. のように ひづけまで いってみよう",
-          "starterEn": "Let's line up by birthday! My birthday is February 29th. When is your birthday?",
+          "starterEn": "Let's line up by birthday! My birthday is June 2nd. When is your birthday?",
           "targetExpressions": ["My birthday is ～.","When is your birthday?"]
         }
       },
@@ -10552,7 +10552,7 @@
           {"speaker":"Haru","en":"Kiko, what do you want for your birthday?","ja":"キコ、たんじょうびに なにが ほしい？"},
           {"speaker":"Kiko","en":"I want a new bike! And a sweet cake!","ja":"あたらしい じてんしゃ！あと あまい ケーキ！"},
           {"speaker":"Riko","en":"Happy birthday, Kiko! This is for you.","ja":"キコ、おめでとう！これ、どうぞ。"},
-          {"speaker":"Kiko","en":"Thank you! Wow, a cheese cake!","ja":"ありがとう！わあ、チーズケーキ！"},
+          {"speaker":"Kiko","en":"Thank you! Wow, a cheesecake!","ja":"ありがとう！わあ、チーズケーキ！"},
           {"speaker":"Birimo","en":"Make a wish, Kiko!","ja":"キコ、ねがいごとを して！"}
         ],
         "aiTask": {
@@ -10613,7 +10613,7 @@
         ],
         "aiTask": {
           "goalJa": "たんじょうびを ききあって、My birthday is ～. で こたえよう",
-          "starterEn": "Let's make a birthday calendar together! My birthday is February 29th. When is your birthday?",
+          "starterEn": "Let's make a birthday calendar together! My birthday is June 2nd. When is your birthday?",
           "targetExpressions": ["When is your birthday?","My birthday is ～."]
         }
       },
@@ -10663,12 +10663,12 @@
         "lines": [
           {"speaker":"Riko","en":"What subject do you like, Haru?","ja":"ハルは なんの きょうかが すき？"},
           {"speaker":"Haru","en":"I like P.E. I like running.","ja":"たいいくが すき。はしるのが すき。"},
-          {"speaker":"Riko","en":"I like science. I like the sea animals!","ja":"わたしは りかが すき。うみの いきものが すき！"},
+          {"speaker":"Riko","en":"I like science. I like sea animals!","ja":"わたしは りかが すき。うみの いきものが すき！"},
           {"speaker":"Kiko","en":"I like math and English!","ja":"わたしは さんすうと えいご！"}
         ],
         "aiTask": {
           "goalJa": "What subject do you like? に I like ～. で こたえて、あいてにも きこう",
-          "starterEn": "Hi! I like science. What subject do you like?",
+          "starterEn": "Hi! I like math and English. What subject do you like?",
           "targetExpressions": ["What subject do you like?","I like ～."]
         }
       },
@@ -10719,7 +10719,7 @@
           {"speaker":"Kiko","en":"What do you have on Monday?","ja":"げつようびは なにが ある？"},
           {"speaker":"Haru","en":"I have math and music.","ja":"さんすうと おんがく。"},
           {"speaker":"Kiko","en":"What do you have on Tuesday?","ja":"かようびは？"},
-          {"speaker":"Haru","en":"I have P.E. and science. Let's clean the classroom, too!","ja":"たいいくと りか。そうじも あるよ！"}
+          {"speaker":"Haru","en":"I have P.E. and science. Science is fun!","ja":"たいいくと りか。りかは たのしいよ！"}
         ],
         "aiTask": {
           "goalJa": "What do you have on ～? と きいたり、I have ～. で こたえよう",
@@ -10874,7 +10874,7 @@
       "vocab": [
         {"en":"dream","ja":"ゆめ","emoji":"💭","core":true},
         {"en":"week","ja":"しゅう・1しゅうかん","emoji":"📅"},
-        {"en":"swimming","ja":"すいえい","emoji":"🏊"},
+        {"en":"soccer","ja":"サッカー","emoji":"⚽"},
         {"en":"cooking","ja":"りょうり","emoji":"🍳"}
       ],
       "teacherScript": "まとめ！ ゆめの じかんわりを つくろう。「This is my dream timetable. I have music and P.E. on Friday.」",
@@ -10884,9 +10884,9 @@
         "lines": [
           {"speaker":"Haru","en":"This is my dream timetable. I have P.E. on Monday, Tuesday, and Wednesday!","ja":"これが ぼくの ゆめの じかんわり。げつ・か・すいは たいいく！"},
           {"speaker":"Riko","en":"What do you have on Thursday?","ja":"もくようびは？"},
-          {"speaker":"Haru","en":"I have swimming on Thursday!","ja":"もくようびは すいえい！"},
+          {"speaker":"Haru","en":"I have soccer on Thursday!","ja":"もくようびは サッカー！"},
           {"speaker":"Riko","en":"I have music and cooking on Friday.","ja":"わたしは きんようびに おんがくと りょうり。"},
-          {"speaker":"Kiko","en":"I want your timetables!","ja":"その じかんわり いいな！"}
+          {"speaker":"Kiko","en":"I like your timetables!","ja":"ふたりの じかんわり、いいね！"}
         ],
         "aiTask": {
           "goalJa": "This is my dream timetable. I have ～ on ～. で ゆめの じかんわりを しょうかいしよう",
@@ -10946,7 +10946,7 @@
         ],
         "aiTask": {
           "goalJa": "Can you ～? と きいたり、Yes, I can. / No, I can't. で こたえよう",
-          "starterEn": "Welcome to the harbor! I can row a boat. Can you swim?",
+          "starterEn": "Welcome to the harbor! I can float on the water. Can you swim?",
           "targetExpressions": ["Can you ～?","Yes, I can.","No, I can't."]
         }
       },
@@ -11028,7 +11028,7 @@
       "tpr": [
         {"en":"Point to a girl.","ja":"おんなのこを ゆびさして。","action":"おんなのこの カードを さす","emoji":"👧"},
         {"en":"Play the piano.","ja":"ピアノを ひいて。","action":"ゆびで けんばんを たたく まね","emoji":"🎹"},
-        {"en":"Cook a soup.","ja":"スープを つくって。","action":"なべを まぜる まね","emoji":"🍲"},
+        {"en":"Make some soup.","ja":"スープを つくって。","action":"なべを まぜる まね","emoji":"🍲"},
         {"en":"Dance.","ja":"おどって。","action":"すきに おどる","emoji":"💃"}
       ],
       "phonics": {
@@ -11113,7 +11113,7 @@
         ],
         "aiTask": {
           "goalJa": "He / She is good at ～. で ともだちの とくいな ことを、I'm good at ～. で じぶんの ことを いおう",
-          "starterEn": "Let's talk about good things! Ms. Emma is good at cooking. What are you good at?",
+          "starterEn": "Ms. Emma is good at cooking. Kiko is good at drawing. What are you good at?",
           "targetExpressions": ["He is good at ～.","She is good at ～.","I'm good at ～."]
         }
       },
@@ -11273,13 +11273,13 @@
         "sceneJa": "島の パンやさんを たずねる",
         "lines": [
           {"speaker":"Riko","en":"She is a baker. She can make bread well.","ja":"かのじょは パンやさん。パンづくりが じょうず。"},
-          {"speaker":"Kiko","en":"This bread is warm! It's glowing!","ja":"この パン あったかい！ひかってる！"},
+          {"speaker":"Kiko","en":"This bread is warm! Yummy!","ja":"この パン あったかい！おいしそう！"},
           {"speaker":"Haru","en":"He is a farmer. He can grow rice and wheat.","ja":"かれは のうか。おこめと こむぎを そだてる。"},
           {"speaker":"Birimo","en":"Thank you, farmer! Thank you, baker!","ja":"のうかさん、ありがとう！パンやさん、ありがとう！"}
         ],
         "aiTask": {
           "goalJa": "He / She is a ～. He / She can ～. で まちの ひとを しょうかいしよう",
-          "starterEn": "Welcome to the bakery! She is a baker. She can make bread well. Who else works in town?",
+          "starterEn": "Welcome to the bakery! She is a baker. She can make bread well. Tell me about a farmer or a teacher!",
           "targetExpressions": ["She is a ～.","She can ～ well."]
         }
       },
@@ -11334,7 +11334,7 @@
         ],
         "aiTask": {
           "goalJa": "He / She works at ～. で まちの ひとが はたらく ばしょを いおう",
-          "starterEn": "Let's make a town map! She works at a hospital. Who works at the station?",
+          "starterEn": "Let's make a town map! She works at a hospital. Who works at the fire station?",
           "targetExpressions": ["He works at ～.","She works at ～."]
         }
       },
@@ -11435,9 +11435,10 @@
       ],
       "teacherScript": "まとめ！ まちの ひとに インタビューしよう。「What do you do?」 さいごは「Thank you for your time.」 そのあと he / she で しょうかい。",
       "conversation": {
-        "scene": "Interviewing people in town for the class newspaper",
-        "sceneJa": "クラスしんぶんの ために まちの ひとに インタビュー",
+        "scene": "Interview role-play for the class newspaper",
+        "sceneJa": "クラスしんぶんの ために インタビューごっこ",
         "lines": [
+          {"speaker":"Ms. Emma","en":"Let's role-play an interview! Today, I'm a vet.","ja":"インタビューごっこを しよう！きょう 先生は じゅういさん やく。"},
           {"speaker":"Riko","en":"Hello! What do you do?","ja":"こんにちは！おしごとは なんですか？"},
           {"speaker":"Ms. Emma","en":"I'm a vet. I work at an animal hospital.","ja":"じゅういです。どうぶつびょういんで はたらいています。"},
           {"speaker":"Riko","en":"Thank you for your time!","ja":"おじかんを ありがとうございました！"},
@@ -11446,7 +11447,7 @@
         ],
         "aiTask": {
           "goalJa": "What do you do? と インタビューして、He / She is a ～. He / She works at ～. で しょうかいしよう",
-          "starterEn": "Hello, reporter! I'm a baker. I work at a bakery. Ask me a question!",
+          "starterEn": "Hello, reporter! Let's role-play. Today, I'm a baker. Ask me a question!",
           "targetExpressions": ["What do you do?","She is a ～.","She works at ～."]
         }
       },
@@ -11496,12 +11497,12 @@
         "lines": [
           {"speaker":"Ms. Emma","en":"Let's make a self-introduction speech.","ja":"じこしょうかい スピーチを つくろう。"},
           {"speaker":"Riko","en":"My name is Riko. My birthday is June 2nd. I like music. I can play the piano.","ja":"わたしは リコ。たんじょうびは 6がつ 2にち。おんがくが すき。ピアノが ひけるよ。"},
-          {"speaker":"Haru","en":"My name is Haru. My birthday is May 5th. I can run fast.","ja":"ぼくは ハル。たんじょうびは 5がつ 5にち。はやく はしれる。"},
-          {"speaker":"Birimo","en":"Thank you for listening!","ja":"きいてくれて ありがとう！"}
+          {"speaker":"Haru","en":"My name is Haru. My birthday is May 5th. I can run fast. Thank you for listening!","ja":"ぼくは ハル。たんじょうびは 5がつ 5にち。はやく はしれる。きいてくれて ありがとう！"},
+          {"speaker":"Birimo","en":"Great speeches! Now it's my turn!","ja":"すてきな スピーチ！つぎは ぼくの ばん！"}
         ],
         "aiTask": {
           "goalJa": "My name is ～. My birthday is ～. I like ～. I can ～. で じこしょうかい スピーチを しよう（ニックネーム・ほんとうでない 日でも OK）",
-          "starterEn": "Let's practice your speech! My name is Birimo. My birthday is February 29th. Your turn!",
+          "starterEn": "Let's practice our speeches! I'm Riko. My birthday is June 2nd. I can play the piano. Your turn!",
           "targetExpressions": ["My name is ～.","My birthday is ～.","I can ～."]
         }
       },
@@ -11519,7 +11520,7 @@
         "topic": "まとめ：じかんわりと すきな きょうか",
         "grammar": "I have ～ on ～. / My favorite subject is ～. / I'm good at ～.",
         "expressions": [
-          {"en":"My favorite subject is music. I have music on Tuesday.","ja":"いちばん すきな きょうかは おんがく。かようびに あるよ。","core":true},
+          {"en":"My favorite subject is art. I have art on Tuesday.","ja":"いちばん すきな きょうかは ずこう。かようびに あるよ。","core":true},
           {"en":"I'm good at math.","ja":"さんすうが とくい。"},
           {"en":"What do you have on Thursday? ― I have science.","ja":"もくようびは なに？ ― りか。"}
         ],
@@ -11544,19 +11545,19 @@
         {"en":"Thursday","ja":"もくようび","emoji":"4️⃣"},
         {"en":"drum","ja":"たいこ","emoji":"🥁"}
       ],
-      "teacherScript": "スピーチに がっこうの ことを たそう。「My favorite subject is music. I have music on Tuesday.」「I'm good at math.」",
+      "teacherScript": "スピーチに がっこうの ことを たそう。「My favorite subject is art. I have art on Tuesday.」「I'm good at math.」",
       "conversation": {
         "scene": "Talking about our school week on the island ferry",
         "sceneJa": "島の フェリーで がっこうの 1しゅうかんトーク",
         "lines": [
-          {"speaker":"Kiko","en":"My favorite subject is music. I have music on Tuesday.","ja":"いちばん すきなのは おんがく。かようびに あるよ。"},
+          {"speaker":"Kiko","en":"My favorite subject is art. I have art on Tuesday.","ja":"いちばん すきなのは ずこう。かようびに あるよ。"},
           {"speaker":"Haru","en":"I'm good at math. What do you have on Thursday?","ja":"ぼくは さんすうが とくい。もくようびは なに？"},
           {"speaker":"Kiko","en":"I have science. We do experiments!","ja":"りか。じっけんを するよ！"},
           {"speaker":"Riko","en":"I like science, too. I'm good at reading.","ja":"わたしも りか すき。わたしは よむのが とくい。"}
         ],
         "aiTask": {
           "goalJa": "My favorite subject is ～. I have ～ on ～. I'm good at ～. で がっこうの ことを はなそう",
-          "starterEn": "Tell me about your school week! My favorite subject is art. I have art on Friday. What about you?",
+          "starterEn": "Tell me about your school week! I have music on Monday. What's your favorite subject?",
           "targetExpressions": ["My favorite subject is ～.","I have ～ on ～.","I'm good at ～."]
         }
       },
@@ -11724,7 +11725,7 @@
         ],
         "aiTask": {
           "goalJa": "ワールド7の ことばで はっぴょうしよう（なまえと つづり・たんじょうび・すきな きょうか・ともだち しょうかい。ニックネームでも OK）",
-          "starterEn": "Welcome to the Grade 5 show! My name is Birimo. My birthday is February 29th. Your turn!",
+          "starterEn": "Welcome to the Grade 5 show! I'm Riko. My birthday is June 2nd. My favorite subject is science. Your turn!",
           "targetExpressions": ["My name is ～.","My birthday is ～.","He / She can ～."]
         }
       },
@@ -12214,14 +12215,15 @@
         "scene": "Paying at the cafe counter",
         "sceneJa": "レストランの レジで おかいけい",
         "lines": [
+          {"speaker":"Haru","en":"Anything else?","ja":"ほかに ございますか？"},
+          {"speaker":"Kiko","en":"That's all, thank you.","ja":"いじょうです、ありがとう。"},
           {"speaker":"Haru","en":"Your total is 1,000 yen.","ja":"ごうけいで 1000えんです。"},
           {"speaker":"Kiko","en":"Here you are.","ja":"はい、どうぞ。"},
-          {"speaker":"Haru","en":"Thank you. Here's your bag.","ja":"ありがとうございます。ふくろです。"},
-          {"speaker":"Kiko","en":"Thank you! That's all.","ja":"ありがとう！いじょうです。"}
+          {"speaker":"Haru","en":"Thank you. Here's your bag.","ja":"ありがとうございます。ふくろです。"}
         ],
         "aiTask": {
           "goalJa": "Here you are. / That's all. で おみせの やりとりを しよう",
-          "starterEn": "Hello! Your total is 600 yen, please.",
+          "starterEn": "Here's your sandwich. Anything else?",
           "targetExpressions": ["Here you are.","That's all, thank you."]
         }
       },
@@ -12332,7 +12334,7 @@
         ],
         "aiTask": {
           "goalJa": "In Japan, we have ～. で にほんの すてきな ものを しょうかいしよう",
-          "starterEn": "Hi! I'm from far away. What do you have in Japan?",
+          "starterEn": "Let's role-play! I'm a friend from far away. What do you have in Japan?",
           "targetExpressions": ["In Japan, we have ～."]
         }
       },
@@ -12552,7 +12554,7 @@
         ],
         "aiTask": {
           "goalJa": "にほん しょうかいガイドに なろう（In Japan, we have ～. / You can ～. / It's ～.）",
-          "starterEn": "Hi! I'm visiting Japan next month. What's fun in Japan?",
+          "starterEn": "Let's role-play! I'm a visitor from abroad. What's fun in Japan?",
           "targetExpressions": ["In Japan, we have ～.","You can ～."]
         }
       },
@@ -12607,7 +12609,7 @@
         ],
         "aiTask": {
           "goalJa": "Who is your hero? に My hero is ～. で こたえよう（かぞく・まんがの キャラ・どうぶつ でも OK。ほんとうの なまえは いわなくて OK）",
-          "starterEn": "Hi! My hero is Ms. Emma. Who is your hero?",
+          "starterEn": "Hi! My hero is my grandmother. She is strong. Who is your hero?",
           "targetExpressions": ["My hero is ～.","Who is your hero?"]
         }
       },
@@ -12662,7 +12664,7 @@
         ],
         "aiTask": {
           "goalJa": "He / She is brave. など せいかくの ことばで ヒーローを しょうかいしよう",
-          "starterEn": "My hero is a doctor. She is kind. Tell me about your hero!",
+          "starterEn": "My hero is a firefighter. She is brave. Tell me about your hero!",
           "targetExpressions": ["He is ～.","She is ～."]
         }
       },
@@ -12710,9 +12712,9 @@
         "scene": "Talking about heroes at the sports field",
         "sceneJa": "グラウンドで ヒーローの とくいな こと トーク",
         "lines": [
-          {"speaker":"Haru","en":"This boy is my hero. He is good at soccer.","ja":"この おとこのこが ぼくの ヒーロー。サッカーが とくいなんだ。"},
+          {"speaker":"Haru","en":"My hero is my coach. He is good at soccer.","ja":"ぼくの ヒーローは コーチ。サッカーが とくいなんだ。"},
           {"speaker":"Riko","en":"He can kick very well!","ja":"けるのが すごく じょうず！"},
-          {"speaker":"Kiko","en":"My hero is a singer. She can sing very well.","ja":"わたしの ヒーローは かしゅ。うたが とても じょうずなの。"},
+          {"speaker":"Kiko","en":"I like this singer. She can sing very well.","ja":"わたしは この かしゅが すき。うたが とても じょうずなの。"},
           {"speaker":"Birimo","en":"I enjoy her songs, too!","ja":"ぼくも かのじょの うたが すき！"}
         ],
         "aiTask": {
@@ -12767,12 +12769,12 @@
         "lines": [
           {"speaker":"Ms. Emma","en":"Why is the firefighter your hero, Kiko?","ja":"キコ、どうして しょうぼうしが ヒーローなの？"},
           {"speaker":"Kiko","en":"She helps people. She is brave.","ja":"ひとを たすけるから。ゆうかんだから。"},
-          {"speaker":"Riko","en":"My hero is a vet. She helps sick animals.","ja":"わたしの ヒーローは じゅうい。びょうきの どうぶつを たすけるの。"},
+          {"speaker":"Riko","en":"My hero is my grandmother. She is a doctor. She helps sick people.","ja":"わたしの ヒーローは おばあちゃん。おいしゃさんで、びょうきの ひとを たすけるの。"},
           {"speaker":"Haru","en":"Heroes help everyone!","ja":"ヒーローは みんなを たすけるんだね！"}
         ],
         "aiTask": {
           "goalJa": "He / She helps ～. で ヒーローの わけを つたえよう",
-          "starterEn": "My hero is a nurse. She helps sick people. Why is your hero cool?",
+          "starterEn": "My hero is my coach. He helps everyone on the team. Why is your hero cool?",
           "targetExpressions": ["He helps ～.","She helps ～."]
         }
       },
@@ -12792,7 +12794,7 @@
         "expressions": [
           {"en":"This is my hero.","ja":"これが わたしの ヒーローです。","core":true},
           {"en":"She is a doctor. She helps sick people.","ja":"かのじょは いしゃ。びょうきの ひとを たすけます。"},
-          {"en":"He is kind and he is good at cooking.","ja":"かれは やさしくて りょうりが とくい。"}
+          {"en":"He is kind. He is good at cooking.","ja":"かれは やさしい。りょうりが とくい。"}
         ],
         "testPoints": ["しごと・せいかく・とくいな こと・わけを つなげて ヒーローを しょうかいできる","oi と oy（オイ）を よみわけられる"]
       },
@@ -12820,7 +12822,7 @@
         "scene": "Hero poster show",
         "sceneJa": "ヒーロー しょうかい ポスターの はっぴょう",
         "lines": [
-          {"speaker":"Riko","en":"This is my hero. She is a doctor. She helps sick people.","ja":"これが わたしの ヒーロー。おいしゃさん。びょうきの ひとを たすけるの。"},
+          {"speaker":"Riko","en":"This is my hero, my grandmother. She is a doctor. She helps sick people.","ja":"これが わたしの ヒーロー、おばあちゃん。おいしゃさんで、びょうきの ひとを たすけるの。"},
           {"speaker":"Haru","en":"Cool! Why is she your hero?","ja":"かっこいい！どうして ヒーローなの？"},
           {"speaker":"Riko","en":"She is kind and brave.","ja":"やさしくて ゆうかんだから。"},
           {"speaker":"Ms. Emma","en":"Great speech, Riko! Next is Birimo.","ja":"リコ、すてきな スピーチ！つぎは ビリモ。"}
@@ -12937,7 +12939,7 @@
         ],
         "aiTask": {
           "goalJa": "We don't have a ～. で まちに ない ものを つたえよう（ほんとうの まちの なまえは いわなくて OK）",
-          "starterEn": "We have a station in our town, but we don't have an airport. What don't you have?",
+          "starterEn": "We have a station in our town, but we don't have an airport. Do you have an aquarium in your town?",
           "targetExpressions": ["We don't have a ～."]
         }
       },
@@ -12985,14 +12987,14 @@
         "scene": "Ideas for a dream town",
         "sceneJa": "ゆめの まちの アイデア かいぎ",
         "lines": [
-          {"speaker":"Haru","en":"I want a pool in our town. I like swimming.","ja":"まちに プールが ほしいな。およぐのが すきだから。"},
+          {"speaker":"Riko","en":"I want a pool in our town. I like swimming.","ja":"まちに プールが ほしいな。およぐのが すきだから。"},
           {"speaker":"Kiko","en":"I want a pie shop! I like apple pie.","ja":"パイやさんが ほしい！アップルパイが すき。"},
-          {"speaker":"Birimo","en":"I want a French fries shop!","ja":"フライドポテトやさんが ほしい！"},
+          {"speaker":"Birimo","en":"I want a shop with French fries!","ja":"フライドポテトの おみせが ほしい！"},
           {"speaker":"Ms. Emma","en":"Great ideas! Let's put them on our map.","ja":"いい アイデア！ちずに かきこもう。"}
         ],
         "aiTask": {
           "goalJa": "I want a ～ in our town. で まちに ほしい ものと わけを つたえよう",
-          "starterEn": "I want a big library in our town. I like books. What do you want in your town?",
+          "starterEn": "I want a pie shop in our town. I like apple pie. What do you want in your town?",
           "targetExpressions": ["I want a ～ in our town."]
         }
       },
@@ -13150,14 +13152,14 @@
         "scene": "Writing hero speeches in class",
         "sceneJa": "きょうしつで ヒーロー スピーチづくり",
         "lines": [
-          {"speaker":"Kiko","en":"My hero is Ms. Emma. She is kind.","ja":"わたしの ヒーローは エマ先生。やさしいの。"},
+          {"speaker":"Birimo","en":"My hero is Ms. Emma. She is kind.","ja":"ぼくの ヒーローは エマ先生。やさしいんだ。"},
           {"speaker":"Haru","en":"Good! What can she do?","ja":"いいね！なにが できるの？"},
-          {"speaker":"Kiko","en":"She can speak three languages. She helps us every day.","ja":"3つの ことばが はなせるの。まいにち たすけてくれる。"},
-          {"speaker":"Ms. Emma","en":"Oh, thank you, Kiko! That's a lovely speech.","ja":"まあ、ありがとう キコ！すてきな スピーチね。"}
+          {"speaker":"Birimo","en":"She can speak three languages. She helps us every day.","ja":"3つの ことばが はなせるんだ。まいにち たすけてくれる。"},
+          {"speaker":"Ms. Emma","en":"Oh, thank you, Birimo! That's a lovely speech.","ja":"まあ、ありがとう ビリモ！すてきな スピーチね。"}
         ],
         "aiTask": {
           "goalJa": "ヒーロー スピーチを つくろう（My hero is ～. / He / She is ～. / He / She can ～.）。ほんとうの なまえは いわなくて OK",
-          "starterEn": "Let's make a hero speech! My hero is my coach. He is strong. Who is your hero?",
+          "starterEn": "Let's make a hero speech! My hero is Ms. Emma. She is kind. Who is your hero?",
           "targetExpressions": ["My hero is ～.","He / She is ～.","He / She can ～."]
         }
       },
@@ -13278,8 +13280,8 @@
     {
       "lessonNo": 239,
       "world": 8,
-      "title": "Speech Rehearsal",
-      "titleJa": "はっぴょうの リハーサル",
+      "title": "Hero Speech Rehearsal",
+      "titleJa": "ヒーロー スピーチの リハーサル",
       "school": {
         "grade": "小5",
         "topic": "まとめ：小5 はっぴょうかいの リハーサル",
@@ -13496,12 +13498,12 @@
             "ja": "ぼくは はしるのが とくい。とても はやく はしれるよ！"
           },
           {
-            "speaker": "Riko",
+            "speaker": "Kiko",
             "en": "I'm good at drawing. I can draw a star on my card.",
             "ja": "わたしは えを かくのが とくい。カードに ほしを かくね。"
           },
           {
-            "speaker": "Kiko",
+            "speaker": "Riko",
             "en": "What are you good at, Birimo?",
             "ja": "ビリモは なにが とくい？"
           },
@@ -13680,7 +13682,7 @@
           },
           {
             "en": "My birthday is May 5th.",
-            "ja": "たんじょうびは 5月5日です。"
+            "ja": "たんじょうびは 5がつ 5にち です。"
           },
           {
             "en": "I'm from Japan.",
@@ -13775,17 +13777,17 @@
           {
             "speaker": "Riko",
             "en": "My birthday is June 2nd. I'm from Japan.",
-            "ja": "わたしの たんじょうびは 6月2日。にほん しゅっしんだよ。"
+            "ja": "わたしの たんじょうびは 6がつ 2にち。にほん しゅっしんだよ。"
           },
           {
             "speaker": "Birimo",
             "en": "Please call me Bibi! My birthday is February 29th!",
-            "ja": "ぼくは ビビって よんで！たんじょうびは 2月29日！"
+            "ja": "ぼくは ビビって よんで！たんじょうびは 2がつ 29にち！"
           }
         ],
         "aiTask": {
           "goalJa": "Please call me ～. で よんでほしい なまえを つたえよう（ほんとうの なまえや たんじょうびは いわなくて OK。ニックネームで OK）",
-          "starterEn": "Hi! Please call me Haru. What can I call you?",
+          "starterEn": "Hi! I'm Kiko. Please call me Kiki. What can I call you?",
           "targetExpressions": [
             "Please call me ～."
           ]
@@ -13926,7 +13928,7 @@
         ],
         "aiTask": {
           "goalJa": "What's your favorite ～? で ともだちの おきにいりを きいて、こたえよう",
-          "starterEn": "My favorite animal is the panda. What's your favorite animal?",
+          "starterEn": "My favorite season is spring. What's your favorite animal?",
           "targetExpressions": [
             "What's your favorite ～?",
             "My favorite ～ is ～."
@@ -14063,7 +14065,7 @@
         ],
         "aiTask": {
           "goalJa": "よびかた・とくいな こと・おきにいりを つなげて じこしょうかいしよう（なまえは ニックネームで OK）",
-          "starterEn": "Hi! Please call me Riko. I'm good at swimming. Tell me about you!",
+          "starterEn": "Hi! I'm Haru. I'm good at running. My favorite food is ramen. Tell me about you!",
           "targetExpressions": [
             "Please call me ～.",
             "I'm good at ～.",
@@ -14201,7 +14203,7 @@
         ],
         "aiTask": {
           "goalJa": "What time do you get up? ― I get up at ～. で おきる じかんを つたえよう（ほんとうの じかんで なくても OK）",
-          "starterEn": "I get up at six thirty. What time do you get up?",
+          "starterEn": "I get up at five. I like the morning sky! What time do you get up?",
           "targetExpressions": [
             "I get up at ～."
           ]
@@ -14354,8 +14356,8 @@
     {
       "lessonNo": 248,
       "world": 9,
-      "title": "My School Day",
-      "titleJa": "わたしの がっこうの 1日",
+      "title": "A Day at Sky School",
+      "titleJa": "そらの がっこうの 1日",
       "school": {
         "grade": "小6",
         "topic": "学校生活と1日：いつも・ときどき",
@@ -14901,7 +14903,7 @@
         ],
         "aiTask": {
           "goalJa": "Where do you want to go? ― I want to go to ～. で いきたい くにを つたえよう",
-          "starterEn": "I want to go to Italy. Where do you want to go?",
+          "starterEn": "I want to go to Australia. I want to see koalas. Where do you want to go?",
           "targetExpressions": [
             "I want to go to ～."
           ]
@@ -15037,7 +15039,7 @@
         ],
         "aiTask": {
           "goalJa": "I want to see ～. / I want to eat ～. で その くにで したい ことを つたえよう",
-          "starterEn": "I want to see the pyramids in Egypt. What do you want to see?",
+          "starterEn": "I want to see colorful birds in Australia. What do you want to see?",
           "targetExpressions": [
             "I want to see ～.",
             "I want to eat ～."
@@ -15174,7 +15176,7 @@
         ],
         "aiTask": {
           "goalJa": "You can ～ in ～. で その くにで できる ことを しょうかいしよう",
-          "starterEn": "You can see kangaroos in Australia. What can you do in your favorite country?",
+          "starterEn": "You can visit old castles in Germany. What can you do in your favorite country?",
           "targetExpressions": [
             "You can ～ in ～."
           ]
@@ -15577,8 +15579,8 @@
         "lines": [
           {
             "speaker": "Haru",
-            "en": "I went to the sea. I swam a lot!",
-            "ja": "うみへ いったよ。たくさん およいだ！"
+            "en": "I went to the sea. I played on the beach!",
+            "ja": "うみへ いったよ。すなはまで あそんだ！"
           },
           {
             "speaker": "Riko",
@@ -15598,7 +15600,7 @@
         ],
         "aiTask": {
           "goalJa": "I went to ～. で なつやすみに いった ところを つたえよう（ほんとうの ばしょの なまえは いわなくて OK）",
-          "starterEn": "I went to the sea in summer. Where did you go?",
+          "starterEn": "I went to a summer fair. Where did you go in summer?",
           "targetExpressions": [
             "I went to ～."
           ]
@@ -15728,8 +15730,8 @@
           },
           {
             "speaker": "Ms. Emma",
-            "en": "Wonderful! Your summer was great.",
-            "ja": "すてき！みんな いい なつだったのね。"
+            "en": "Wonderful! You all had a great summer.",
+            "ja": "すてき！みんな いい なつやすみ だったのね。"
           }
         ],
         "aiTask": {
@@ -15869,8 +15871,8 @@
           },
           {
             "speaker": "Birimo",
-            "en": "I can hear summer stories all day!",
-            "ja": "なつの はなし、1にちじゅう きいていたい！"
+            "en": "I want to hear more summer stories!",
+            "ja": "なつの はなし、もっと ききたい！"
           }
         ],
         "aiTask": {
@@ -16012,7 +16014,7 @@
         ],
         "aiTask": {
           "goalJa": "I went to ～ with ～. で だれと どこへ いったかを つたえよう（ほんとうの ばしょで なくても OK）",
-          "starterEn": "I went to Okinawa with my family. Where did you go in summer?",
+          "starterEn": "I went camping with my family. Where did you go in summer? Who did you go with?",
           "targetExpressions": [
             "I went to ～ with ～."
           ]
@@ -16289,7 +16291,7 @@
         ],
         "aiTask": {
           "goalJa": "I saw ～. で みた ものを つたえよう",
-          "starterEn": "I saw a rainbow last week. What did you see?",
+          "starterEn": "I saw a big fish at the aquarium. What did you see?",
           "targetExpressions": [
             "I saw ～."
           ]
@@ -16429,7 +16431,7 @@
         ],
         "aiTask": {
           "goalJa": "I ate ～. It was ～. で たべた ものと あじを つたえよう",
-          "starterEn": "I ate shaved ice. It was cold and sweet. What did you eat?",
+          "starterEn": "I ate corn at a summer festival. It was hot and sweet. What did you eat?",
           "targetExpressions": [
             "I ate ～."
           ]
@@ -16567,7 +16569,7 @@
         ],
         "aiTask": {
           "goalJa": "I enjoyed ～. で たのしんだ ことを つたえよう",
-          "starterEn": "I enjoyed swimming in summer. What did you enjoy?",
+          "starterEn": "I enjoyed the fireworks at the festival. What did you enjoy?",
           "targetExpressions": [
             "I enjoyed ～."
           ]
@@ -16705,7 +16707,7 @@
         ],
         "aiTask": {
           "goalJa": "What did you do on Sunday? ― I played ～. / I watched ～. で しゅうまつの ことを ききあおう",
-          "starterEn": "I played soccer on Sunday. What did you do on Sunday?",
+          "starterEn": "I played with the cows on the farm on Sunday. What did you do on Sunday?",
           "targetExpressions": [
             "What did you do on Sunday?",
             "I played ～."
@@ -16844,7 +16846,7 @@
         ],
         "aiTask": {
           "goalJa": "I went to ～. I saw ～. I ate ～. を つなげて えにっきを はっぴょうしよう",
-          "starterEn": "This is my picture diary. I went to the zoo. I saw a baby panda. Tell me about your day!",
+          "starterEn": "This is my picture diary. I went to the park. I ate ice cream. It was delicious. Tell me about your day!",
           "targetExpressions": [
             "I went to ～.",
             "I saw ～.",
@@ -16977,18 +16979,18 @@
           },
           {
             "speaker": "Riko",
-            "en": "Then, you saw a starfish, right?",
-            "ja": "それから ヒトデを みたんだよね？"
+            "en": "Nice! What did you do then?",
+            "ja": "いいね！それから なにを したの？"
           },
           {
             "speaker": "Haru",
-            "en": "Yes! It was a wonderful summer.",
-            "ja": "うん！すばらしい なつだったよ。"
+            "en": "Then, I saw a starfish. It was a wonderful summer!",
+            "ja": "それから ヒトデを みました。すばらしい なつでした！"
           }
         ],
         "aiTask": {
           "goalJa": "Let me tell you about my summer. First, ～. で おもいで スピーチの はじめを つくろう",
-          "starterEn": "Let me tell you about my summer. First, I went to the sea. What did you do first?",
+          "starterEn": "Let me tell you about my summer. First, I went to the mountains. What did you do first?",
           "targetExpressions": [
             "Let me tell you about my summer.",
             "First, I went to ～."
@@ -17274,7 +17276,7 @@
         ],
         "aiTask": {
           "goalJa": "Let me tell you about my summer. から はじめて、おおきな こえで おもいでを はなそう",
-          "starterEn": "Let me tell you about my summer. I went camping. What about you?",
+          "starterEn": "Let me tell you about my summer. I went to a summer fair. What about you?",
           "targetExpressions": [
             "Let me tell you about my summer.",
             "I went to ～."
@@ -17422,7 +17424,7 @@
         ],
         "aiTask": {
           "goalJa": "I'm good at ～. I want to go to ～. で じこしょうかいと いきたい くにを つなげよう",
-          "starterEn": "I'm good at drawing. I want to go to France. What are you good at?",
+          "starterEn": "I'm good at running. I want to go to Egypt. What are you good at?",
           "targetExpressions": [
             "I'm good at ～.",
             "I want to go to ～."
@@ -17453,8 +17455,8 @@
             "core": true
           },
           {
-            "en": "Please call me Kiki. I'm good at singing.",
-            "ja": "キキと よんでください。うたが とくいです。"
+            "en": "Please call me Kiki. I'm good at drawing.",
+            "ja": "キキと よんでください。えを かくのが とくいです。"
           },
           {
             "en": "I want to go to Australia. You can see koalas.",
@@ -17558,8 +17560,8 @@
           },
           {
             "speaker": "Kiko",
-            "en": "Please call me Kiki. I'm good at singing. I want to go to Australia. You can see koalas.",
-            "ja": "キキって よんでね。うたが とくい。オーストラリアへ いきたいな。コアラが みられるよ。"
+            "en": "Please call me Kiki. I'm good at drawing. I want to go to Australia. You can see koalas.",
+            "ja": "キキって よんでね。えを かくのが とくい。オーストラリアへ いきたいな。コアラが みられるよ。"
           },
           {
             "speaker": "Haru",
@@ -17579,7 +17581,7 @@
         ],
         "aiTask": {
           "goalJa": "ワールド9の ことばで はっぴょうしよう（じこしょうかい・いきたい くに・なつの おもいで。ほんとうの なまえや ばしょの なまえは いわなくて OK）",
-          "starterEn": "Welcome to the Grade 6 show! I went to the sea in summer. It was fun. Tell me about you!",
+          "starterEn": "Welcome to the Grade 6 show! I went to the mountains with my family. It was fun. Tell me about you!",
           "targetExpressions": [
             "I'm good at ～.",
             "I want to go to ～.",
