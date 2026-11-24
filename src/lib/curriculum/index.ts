@@ -82,7 +82,8 @@ export function buildAssessments(totalLessons = TOTAL_LESSONS): AssessmentDef[] 
   for (let n = 1; n <= totalLessons; n++) {
     list.push({ id: `check-${n}`, kind: "DAILY_CHECK", rangeStart: n, rangeEnd: n, questionCount: r.checkQuestions, passRate: r.checkPassRate, unlocksLesson: null });
     if (n % r.bossEvery === 0) {
-      list.push({ id: `boss-1-${n}`, kind: "BOSS", rangeStart: 1, rangeEnd: n, questionCount: r.bossQuestions, passRate: r.bossPassRate, unlocksLesson: n + 1 });
+      // さいごの ボス（全レッスンの あと）は ひらく レッスンが ないので null（「Lesson 361 が ひらいた」と 出さない）
+      list.push({ id: `boss-1-${n}`, kind: "BOSS", rangeStart: 1, rangeEnd: n, questionCount: r.bossQuestions, passRate: r.bossPassRate, unlocksLesson: n < totalLessons ? n + 1 : null });
       list.push({ id: `arena-${n - r.bossEvery + 1}-${n}`, kind: "ARENA", rangeStart: n - r.bossEvery + 1, rangeEnd: n, questionCount: r.arenaQuestions, passRate: r.arenaCoinMinScore, unlocksLesson: null });
       if (n > r.bossEvery) {
         list.push({ id: `arena-1-${n}`, kind: "ARENA", rangeStart: 1, rangeEnd: n, questionCount: r.arenaQuestions, passRate: r.arenaCoinMinScore, unlocksLesson: null });

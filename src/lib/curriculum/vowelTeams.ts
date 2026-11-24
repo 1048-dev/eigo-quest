@@ -9,6 +9,7 @@
 import { R_SAY } from "./rControlled";
 import { w10Say } from "./w10Phonics";
 import { w11Say } from "./w11Phonics";
+import { w12Say } from "./w12Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -74,6 +75,8 @@ export function focusSay(focus: string, words: readonly string[] = []): string {
   if (w10) return w10;
   const w11 = w11Say(focus, words); // -ed・-er・-est（ワールド11）
   if (w11) return w11;
+  const w12 = w12Say(focus); // "bas-ket-ball" は ことば まるごと（ワールド12。L116〜144 の "sun-set" も おなじ）
+  if (w12) return w12;
   const withF = words.filter((w) => w.toLowerCase().includes(focus));
   switch (focus) {
     case "ai": case "ay": return "ay";

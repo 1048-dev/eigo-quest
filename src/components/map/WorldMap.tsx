@@ -28,6 +28,7 @@ const WORLD_THEMES: Record<number, { name: string; top: string; bottom: string; 
   9: { name: "そらの大陸", top: "#14234a", bottom: "#080f24", fog: "#cfe4ff", monsters: ["mon-056", "mon-091", "mon-055"], glyphs: [["ar"], ["or"], ["er"], ["ir"], ["air"]] },
   10: { name: "いのちの海", top: "#06303a", bottom: "#021418", fog: "#b8fff0", monsters: ["mon-031", "mon-080", "mon-070"], glyphs: [["ce"], ["ge"], ["-y"], ["-le"], ["aw"]] },
   11: { name: "ゆめの都", top: "#2a1640", bottom: "#120820", fog: "#ffd6f5", monsters: ["mon-091", "mon-037", "mon-055"], glyphs: [["-ed"], ["was"], ["-er"], ["-est"], ["said"]] },
+  12: { name: "グランドフィナーレ", top: "#3a2a08", bottom: "#181004", fog: "#ffeaa0", monsters: ["mon-044", "mon-055", "mon-091", "mon-037"], glyphs: [["who"], ["why"], ["how"], ["bas-ket"], ["360"]] },
 };
 
 const W = 360;

@@ -872,3 +872,96 @@ describe("カリキュラム: ワールド11 の決まりごと", () => {
     for (const n of [310, 315, 316, 320, 321, 324, 325, 327, 329, 330]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえは いわなくて OK/);
   });
 });
+
+describe("カリキュラム: ワールド12 の決まりごと", () => {
+  const w12 = LESSONS.filter((l) => l.world === 12);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+
+  it("ワールド12 は 331〜360 の 30 レッスン、学年は小6。カリキュラムは ぜんぶで 360 レッスン", () => {
+    if (w12.length === 0) return; // 未作成ならスキップ
+    expect(w12.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 331 + i));
+    for (const l of w12) expect(l.school.grade).toBe("小6");
+    expect(LESSONS).toHaveLength(360);
+  });
+
+  it("フォニックス: サイトワード総復習 → 多音節語 → 音読（まえの ワールドの つづり）→ 5W1H の サイトワード（5の倍数と L356〜360 は ふりかえり）", () => {
+    if (w12.length === 0) return;
+    const plan: [number, string[], string][] = [
+      [331, ["are", "was", "were"], "sight-words"], [332, ["they", "said", "there"], "sight-words"],
+      [333, ["should", "could", "would"], "sight-words"], [334, ["friend", "people", "because"], "sight-words"],
+      [341, ["a_e", "i_e", "o_e"], "reading"], [342, ["ai", "ee", "ea", "oa"], "reading"], [343, ["oo", "ou"], "reading"], [344, ["ar", "or", "ir", "ur"], "reading"],
+      [346, ["-ed"], "reading"], [347, ["c", "g"], "reading"], [348, ["-y", "-le"], "reading"], [349, ["aw", "au", "ew"], "reading"],
+      [351, ["who", "what"], "sight-words"], [352, ["when", "where"], "sight-words"], [353, ["why", "how"], "sight-words"],
+      [354, ["who", "what", "when", "where", "why", "how"], "sight-words"],
+    ];
+    for (const [n, f, rule] of plan) {
+      expect(at(n)!.phonics.focus, `L${n}`).toEqual(f);
+      expect(at(n)!.phonics.rule, `L${n}`).toBe(rule);
+    }
+    for (const n of [336, 337, 338, 339]) expect(at(n)!.phonics.rule, `L${n}`).toBe("syllable");
+    for (const n of [335, 340, 345, 350, 355, 356, 357, 358, 359, 360]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+  });
+
+  it("サイトワードの 回は その サイトワードを ことばに ふくむ", () => {
+    if (w12.length === 0) return;
+    for (const l of w12.filter((x) => x.phonics.rule === "sight-words")) {
+      for (const f of l.phonics.focus) expect(l.phonics.words, `L${l.lessonNo}`).toContain(f);
+    }
+  });
+
+  it("多音節語: focus は まとまりを ハイフンで わけ、words は つなげた ことば。L336・L337 は 3つ、L338 は 4つ、L339 は 2〜4つ", () => {
+    if (w12.length === 0) return;
+    for (const n of [336, 337, 338, 339, 340]) {
+      const l = at(n)!;
+      for (const f of l.phonics.focus) expect(f, `L${n}`).toMatch(/^[a-z]+(-[a-z]+)+$/);
+      expect(l.phonics.focus.map((f) => f.replace(/-/g, "")), `L${n}`).toEqual(l.phonics.words);
+    }
+    const counts = (n: number) => at(n)!.phonics.focus.map((f) => f.split("-").length);
+    expect(new Set(counts(336))).toEqual(new Set([3]));
+    expect(new Set(counts(337))).toEqual(new Set([3]));
+    expect(new Set(counts(338))).toEqual(new Set([4]));
+    expect(new Set(counts(339))).toEqual(new Set([2, 3, 4]));
+  });
+
+  it("音読の 回の ことばは ならった つづりの きまりどおり（-ed の おと・c / g の おと・おわりの y）", () => {
+    if (w12.length === 0) return;
+    expect(at(346)!.phonics.words.map(edSound)).toEqual(["d", "t", "id", "d"]);
+    expect(at(347)!.phonics.words.map((w) => [...cgSounds("c", w), ...cgSounds("g", w)])).toEqual([["soft"], ["soft"], ["soft"], ["soft"]]);
+    expect(at(348)!.phonics.words.map(ySound)).toEqual(["イー", "アイ", null, null]);
+    for (const w of at(359)!.phonics.words.filter((x) => x.endsWith("er"))) expect(ER_MORE_WORDS.has(w), w).toBe(false);
+  });
+
+  it("L360 は さいごの まとめで スピード TPR、さいごの ボスは ひらく レッスンが ない", () => {
+    if (w12.length === 0) return;
+    expect(at(360)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+    expect(ASSESSMENTS.find((a) => a.id === "boss-1-360")?.unlocksLesson).toBeNull();
+    expect(ASSESSMENTS.find((a) => a.id === "boss-1-330")?.unlocksLesson).toBe(331);
+  });
+
+  it("表現の型が計画（総復習・5W1H・1年のふりかえり）どおり入っている", () => {
+    if (w12.length === 0) return;
+    const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(ex(331, 335)).toMatch(/I am [\w ]+\./);
+    expect(ex(331, 335)).toMatch(/You are [\w ]+\./);
+    expect(ex(331, 335)).toMatch(/He is [\w ]+\./);
+    expect(ex(336, 340)).toContain("Do you like");
+    expect(ex(336, 340)).toMatch(/I can [\w ]+\./);
+    expect(ex(336, 340)).toMatch(/I want [\w ]+\./);
+    expect(ex(341, 345)).toContain("What time do you");
+    expect(ex(341, 345)).toContain("Where is the");
+    expect(ex(346, 350)).toMatch(/I went to [\w ]+\./);
+    expect(ex(346, 350)).toMatch(/I saw [\w ]+\./);
+    expect(ex(346, 350)).toMatch(/I ate [\w ]+\./);
+    expect(ex(346, 350)).toMatch(/It was [\w ]+\./);
+    for (const q of ["Who", "What", "When", "Where", "Why", "How"]) expect(ex(351, 355), q).toMatch(new RegExp(`${q} [\\w ]+\\?`));
+    expect(ex(356, 360)).toContain("Thank you for a wonderful year.");
+  });
+
+  it("AI 会話で ほんとうの なまえ・がっこうの なまえ・ばしょの なまえを きかない（じこしょうかい・インタビュー・パーティーの 回は goalJa に 明記）", () => {
+    if (w12.length === 0) return;
+    for (const n of [331, 332, 334, 335, 340, 344, 345, 346, 350, 351, 352, 354, 355, 356, 358, 359, 360]) {
+      expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえは いわなくて OK/);
+    }
+  });
+});

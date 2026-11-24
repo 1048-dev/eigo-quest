@@ -658,6 +658,53 @@
 | 329 | City of Dreams Review | おもいで・ゆめ・ぶかつ・ありがとう | My best memory is sports day. I want to be a teacher. | -ed -er -est ふりかえり（helped, opened, dancer, biggest） | ゆめの都 ふりかえり さんぽ |
 | 330 | World 11 Grand Review | 小6 はっぴょうかい（ワールド11 ぜんぶ） | My dream is to be a singer. Thank you for listening. | 総まとめ（jumped, played, wanted, teacher, tallest, was, because） | ゆめの都の ステージで 小6 はっぴょうかい |
 
+## 6-12. ワールド12 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: サイトワード総復習（L331 are was were・L332 they said there・L333 should could would・L334 friend people because。rule "sight-words"。are / they / should / friend / people は あたらしい サイトワード）→ 多音節語（L336〜339。rule "syllable"。focus は "bas-ket-ball" のように まとまりを ハイフンで わけ、words は "basketball"。L336・L337 は 3つ、L338 は 4つ、L339 は 2〜4つ が まざる）→ 短い文章の音読（L341〜344。rule "reading"。a_e i_e o_e / ai ee ea oa / oo ou / ar or ir ur）→ 音読（L346〜349。rule "reading"。-ed / c g / -y -le / aw au ew）→ 5W1H の サイトワード（L351 who what・L352 when where・L353 why how・L354 6つ ぜんぶ）。5の倍数回と L356〜360 は ふりかえり。
+- 音読の 回の phonics.words は 1語ずつ（フォニックス画面は 1もじずつ ひかる ブレンディング表示なので 文は 入れない）。短い文章は tipJa の「音読：「…」」に 書き、先生・会話・表現で つかう。
+- おとの表: `src/lib/curriculum/w12Phonics.ts`（W12_INTRO・W12_SIGHT_TIP・syllablesOf・w12Say）。
+- フォニックス問題（questions.ts の `w12Question`。語頭ブレンドの つぎ・ワールド10 の まえ。L331 より前は かならず null）:
+  - サイトワード: 「きこえた ことばは どれ？」（w11Question と おなじ 形。選択肢は その回の ことば → ならった サイトワード〈ワールド11 ＋ ワールド12〉）。what / when / where / why の wh、then / there の th は ダイグラフではなく サイトワードで 問う。
+  - 多音節語（L336〜）: 「この ことばは いくつに わけて よむ？（てを たたいて かぞえよう）」。ことばを 画面に 出し、選択肢は 1〜5 の うち ちかい かず 4つ。L116〜144 の 2つに わける ことばは いままでどおり（問題は かわらない）。
+  - 音読の 回は まえの ワールドの 問題（magicEQuestion・vowelTeamQuestion・rControlledQuestion・w10Question・w11Question）を そのまま つかう。マジック e の 回に みじかい母音1つの ことば（park など）を まぜると「a」の 問題に なるので、まぜない。
+- フォーカスの 読み上げ: "bas-ket-ball" は ことば まるごと（"basketball"）。L116〜144 の "sun-set" なども おなじに なった。
+- 表現の型: I am ～. / You are ～. / He (She) is ～. / They are ～. / Are you ～? / Is he ～? → Do you like ～? / I can ～. / Can you ～? / I want ～. / I want to ～. → What time do you ～? / Where is ～? / I have ～. / After school, ～. / Where do you practice? → I went to ～. / I saw ～. / I ate ～. / It was ～. / How was ～? → Who / What / When / Where / Why / How ～? / Because ～. / Thank you for the interview. → Welcome to the party! / I can speak English. / My best memory is ～. / Thank you for a wonderful year.
+- さいごの ボス（boss-1-360）は ひらく レッスンが ないので unlocksLesson を null に した（「Lesson 361 が ひらいた」と 出さない）。
+- AI 会話タスクでは 本名・がっこうの なまえ・ばしょの なまえを きかない（L331・L332・L334・L335・L340・L344・L345・L346・L350・L351・L352・L354〜L356・L358〜L360 の goalJa に 明記・テストで 確認）。
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 331 | I Am a New Student. | I am / You are | I am a new student. | サイトワード are was were | ちゅうがっこうの にゅうがくしき |
+| 332 | He Is My Friend. | He is / She is / They are | He is my friend. | サイトワード they said there | にゅうがくしきの あとで ともだちしょうかい |
+| 333 | Are You Ready? | Are you ～? / Is he ～? | Is he your brother? | サイトワード should could would | はじめての じゅぎょうの じゅんび |
+| 334 | This Is My Friend. | ともだちを くわしく しょうかい | She likes music. | サイトワード friend people because | ともだち ポスターづくり |
+| 335 | Hello, Junior High! | じこしょうかい まとめ | Hello, I am Riko. I like books. | ふりかえり（are they should friend people） | じこしょうかい タイム |
+| 336 | Do You Like Basketball? | Do you like ～? | Do you like basketball? | bas-ket-ball vol-ley-ball bad-min-ton pi-a-no | ぶかつ たいけん ウィーク |
+| 337 | I Can Use a Computer. | I can / Can you ～? | I can use a computer. | com-pu-ter ba-na-na to-ma-to po-ta-to | コンピューターぶと りょうりぶ |
+| 338 | I Want a New Racket. | I want / I want to | I want a new racket. | wa-ter-mel-on hel-i-cop-ter cal-cu-la-tor cat-er-pil-lar | テニスぶと かがくぶ |
+| 339 | I Like It and I Can Do It! | like / can / want | I like art. I can draw well. | pen-cil fan-tas-tic beau-ti-ful el-e-va-tor | びじゅつぶ |
+| 340 | Club Trial Review | ぶかつ たいけん まとめ | I want to join the basketball club. | ふりかえり（sun-set bas-ket-ball ba-na-na wa-ter-mel-on） | ぶかつを えらぶ |
+| 341 | What Time Do You Get Up? | What time ～? | What time do you get up? | 音読 a_e i_e o_e（wake, time, home, ride） | ちゅうがっこうの 1日を しらべる |
+| 342 | Where Is the Library? | Where is ～? | Where is the library? | 音読 ai ee ea oa（train, street, teach, road） | こうしゃ ツアー |
+| 343 | My Day at Junior High | 1日の ながれ | I have six classes a day. | 音読 oo ou（school, room, house, out） | ちゅうがくせいと すごす 1日 |
+| 344 | Where Do You Practice? | Where / What time | Where do you practice? | 音読 ar or ir ur（park, sport, first, turn） | ぶかつの れんしゅう じかん |
+| 345 | My Day Speech | 1日の スピーチ まとめ | I get up at six. | ふりかえり音読（name, green, noon, morning） | わたしの 1日 スピーチ |
+| 346 | I Went to the Sea. | I went to ～. | I went to the sea in summer. | 音読 -ed（played, watched, visited, enjoyed） | できごとトーク：なつ |
+| 347 | I Saw a Big Tree. | I saw ～. | I saw a big tree. | 音読 c g（city, dance, page, giant） | できごとトーク：えんそく |
+| 348 | I Ate Curry and Rice. | I ate ～. It was ～. | I ate curry and rice. | 音読 -y -le（happy, fly, little, table） | できごとトーク：たべもの |
+| 349 | It Was Fun! | How was ～? ― It was ～. | It was fun. | 音読 aw au ew（saw, autumn, drew, flew） | できごとトーク：ぎょうじ |
+| 350 | My Year Talk Show | できごと まとめ | I went to the zoo. It was fun. | ふりかえり（jumped, rice, sunny, draw） | 1ねんの できごと トークショー |
+| 351 | Who Is Your Hero? | Who / What | Who is your hero? | サイトワード who what | インタビュー たいかいの はじまり |
+| 352 | When Is the Concert? | When / Where | When is the concert? | サイトワード when where | コンサートの よてい |
+| 353 | Why Do You Like It? | Why / How | Why do you like winter? | サイトワード why how | りゆうを きく |
+| 354 | Interview Contest | 5W1H ぜんぶ | Where do you want to go? | サイトワード who what when where why how | インタビュー たいかいの けっしょう |
+| 355 | Question Master | インタビュー まとめ | Thank you for the interview. | ふりかえり（friend people who why） | インタビューの けっかを はっぴょう |
+| 356 | Welcome to the Party! | あいさつ・じこしょうかい | Welcome to the party! | ふりかえり（was were said they） | パーティーの じゅんび |
+| 357 | I Can Speak English! | できること・したいこと | I can speak English. | ふりかえり（cake, rain, tree, moon） | パーティーで ねがいごと |
+| 358 | Memories of the Year | 1ねんの おもいで | My best memory is camp. | ふりかえり（star, corn, summer, hair） | アルバムで おもいでトーク |
+| 359 | Grand Finale Review | しつもんと こたえ | What did you learn this year? | ふりかえり（helped, singer, biggest, city, happy） | パーティーの しつもんゲーム |
+| 360 | World 12 Grand Finale | グランドフィナーレ（360レッスン ぜんぶ） | Thank you for a wonderful year. | 総まとめ（because, who, rain, green, park, played, basketball） | グランドフィナーレ・パーティー |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。
