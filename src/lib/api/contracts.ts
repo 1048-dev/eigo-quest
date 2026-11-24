@@ -192,6 +192,14 @@ const LessonSchema = z.object({
   phonics: z.object({ rule: str(), focus: safeArray(z.string()), sounds: safeArray(z.string()), words: safeArray(z.string()), tipJa: str() }),
   vocab: safeArray(z.object({ en: str(), ja: str(), emoji: str(), core: z.boolean().optional() })),
   teacherScript: str(),
+  // 新しいレッスンだけが持つ（旧データ・壊れたデータは undefined / null になり、画面は会話ステップを出さない）
+  conversation: nullable(z.object({
+    scene: str(), sceneJa: str(),
+    lines: safeArray(z.object({ speaker: str("Haru"), en: str(), ja: str() })),
+    aiTask: z.object({ goalJa: str(), starterEn: str(), targetExpressions: safeArray(z.string()) })
+      .catch({ goalJa: "", starterEn: "", targetExpressions: [] }),
+  })).optional(),
+  recap: nullable(z.object({ highlightsJa: safeArray(z.string()) })).optional(),
 });
 export const LessonResponseSchema = z.object({
   lesson: nullable(LessonSchema),

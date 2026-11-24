@@ -129,7 +129,10 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
     }
     case "phonics_sound": {
       const first = item.text[0];
-      const letters = shuffle([...new Set([first, ...shuffle("satpinmdgockeurhbfl".split(""), rng)])].slice(0, 4), rng);
+      // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない
+      const sameSound = first === "c" ? "k" : first === "k" ? "c" : "";
+      const letterPool = "satpinmdgockeurhbfl".split("").filter((l) => l !== sameSound);
+      const letters = shuffle([...new Set([first, ...shuffle(letterPool, rng)])].slice(0, 4), rng);
       return { ...base, type, skill: "PHONICS", promptJa: "さいしょの おとは どれ？", audioText: item.text, display: "🔊",
         choices: letters.map((l) => ({ id: l, label: l })), answer: first,
         explanationJa: `${item.text} は「${first}」の音ではじまるよ。${item.ja}` };

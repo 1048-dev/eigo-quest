@@ -58,7 +58,7 @@ http://localhost:3000 を開くとマップ画面が表示されます。デモ�
 ```
 eigo-quest/
 ├── content/curriculum/
-│   ├── lessons.json          カリキュラム（Session 1〜30）。学校単元・表現・テストのポイント・TPR・フォニックス・単語・教師の台本
+│   ├── lessons.json          カリキュラム（Session 1〜30）。学校単元・表現・テストのポイント・TPR・フォニックス・単語・教師の台本・会話シーン・まとめ。年間計画は docs/curriculum-plan.md
 │   └── monsters.json         モンスター図鑑・アバターショップ
 ├── prisma/
 │   ├── schema.prisma         データベース設計（下記）

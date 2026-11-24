@@ -23,6 +23,31 @@ export interface LessonDef {
   phonics: { rule: string; focus: string[]; sounds: string[]; words: string[]; tipJa: string };
   vocab: { en: string; ja: string; emoji: string; core?: boolean }[];
   teacherScript: string;
+  /** その日の「日常会話シーン」（インプット → AIキャラとのアウトプット）。旧データには無いので省略可 */
+  conversation?: LessonConversation;
+  /** 「きょうのまとめ」動画用のハイライト（省略可） */
+  recap?: { highlightsJa: string[] };
+}
+
+export interface ConversationLine {
+  /** 話す人: "Haru" | "Riko" | "Kiko" | "Birimo" | "Ms. Emma" */
+  speaker: string;
+  en: string;
+  ja: string;
+}
+
+export interface LessonConversation {
+  scene: string;
+  sceneJa: string;
+  lines: ConversationLine[];
+  aiTask: {
+    /** 子ども向けのゴール（ひらがな多め） */
+    goalJa: string;
+    /** AIキャラの最初のひとこと */
+    starterEn: string;
+    /** 使ってほしい表現（"I'm ～." のように ～ はあき） */
+    targetExpressions: string[];
+  };
 }
 
 export interface LearningItemDef {
