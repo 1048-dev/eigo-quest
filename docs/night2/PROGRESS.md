@@ -107,7 +107,7 @@
   - キャラ設定の くいちがい: 約12（L207 キコの いちばん すきな きょうか music → art〈L194 と同じ〉、L228・L229・L230 リコの ヒーローを「おばあちゃん（おいしゃさん）」に統一、L236 エマ先生の スピーチを ビリモに〈キコの ヒーローは しょうぼうし〉、L270 キコの とくい singing → drawing、L205 エマ先生が「じゅうい」と名のる → インタビューごっこで じゅうい やく と わかるように）
   - タイトルの重複: 4（L184「What Animal Do You Like?」= L34、L185「My Name Card」= L63、L239「Speech Rehearsal」= L209、L248「My School Day」= L177）。計画書の表も更新
   - 英語: 約10（「I don't like spiders, too」→ either、「cheese cake」→ cheesecake、「Cook a soup」→ Make some soup、「What don't you have?」→ Do you have an aquarium?、「I can hear summer stories all day」→ I want to hear more summer stories! など）
-  - 会話の流れ: 約6（L219 お会計のあとに「That's all.」→ 先に Anything? ― That's all, thank you. → Your total is…、L266 リコが ハルの スピーチの つづきを 先に いう → ハル自身が Then, I saw a starfish. と つなげる、L206 ビリモが 話していないのに「Thank you for listening!」など）
+  - 会話の流れ: 約6（L219 お会計のあとに「That's all.」→ 先に Anything else? ― That's all, thank you. → Your total is…、L266 リコが ハルの スピーチの つづきを 先に いう → ハル自身が Then, I saw a starfish. と つなげる、L206 ビリモが 話していないのに「Thank you for listening!」など）
   - 日本語: 直したセリフに合わせた訳 ＋ L243 の「5月5日」などの漢字の日づけを「5がつ 5にち」に
 - 例
   - L181 最初のことば「Hello! My name is Birimo.」（実際は ハルが 話す）→「Hello! I'm Haru. Nice to meet you. What's your name?」
