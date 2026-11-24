@@ -5,7 +5,7 @@
 **学校テスト対策（教科書の単元・表現・筆記）× フォニックス × TPR（体で反応する反射神経）× 日常会話のインプットとアウトプット** を、1つのカリキュラムJSONにまとめています。アプリのレッスン・テスト・まとめ動画・AI会話・PDF教材は、すべてこのJSONから作られます。
 
 - **全360レッスン（12ワールド×30）** が完成しています。小1〜小6・中学準備のテーマに合わせ、フォニックスは文字の音26音から多音節語・サイトワードまで1年分を順に積み上げます。
-- 各レッスンの最後に **AIキャラ（ハル）との英語の会話**、終わったあとに任意の **2〜3分「きょうのまとめ動画」**（レッスンデータから自動生成）があります。
+- 各レッスンの最後に **AIキャラ（ハル・リコ・キコ・ビリモがレッスンごとに交代）との英語の会話**（最後まで話すと +5コイン）、終わったあとに任意の **2〜3分「きょうのまとめ動画」**（レッスンデータから自動生成）があります。
 
 ```
 content/curriculum/lessons.json   ← カリキュラムの元データはここだけ
@@ -48,16 +48,17 @@ http://localhost:3000 を開くとマップ画面が表示されます。デモ�
 
 > マイグレーション（`prisma/migrations/`）には、コインの理由 `RECAP_WATCHED`（まとめ動画のごほうび）の追加が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください（レッスン31〜360と、その復習クエスト・まとめ・ボス・アリーナが入ります）。
 >
-> **DBが動いていないとき**: マップ・レッスン・テストはエラー表示になります（落ちはしません）。`/recap/1` などの まとめ動画は DB なしでも見られます。キャラクターの絵は `docs/night/screens/characters-preview.html` をブラウザで開くと確認できます。
+> **DBが動いていないとき**: Docker・DB なしで `npm run dev` だけでも、エラー画面を出さずに「おためしモード」で遊べます（下の「DBが止まっていても動く『おためしモード』」）。クリアしたレッスンはそのブラウザにだけ記録され、マップに ✓ が付きます（コイン・習得率は保存されません）。キャラクターの絵は `docs/night/screens/characters-preview.html` をブラウザで開くと確認できます。
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・22ファイル・661件） |
+| `npm test` | 単体テスト（vitest・25ファイル・703件） |
 | `npm run typecheck` | 型チェック |
+| `npm run smoke -- http://localhost:3000` | Playwright で21画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npx tsx scripts/e2e-smoke.ts http://localhost:3000` | 実サーバーとDBを使い、30日分のプレイ（ボス戦・アリーナ・お宝アラートまで）を早送りで実行 |
 | `pip install -r worksheets/requirements.txt` | PDF生成に必要な reportlab をインストール |
 | `npm run worksheets` | 全レッスン＋全テストのPDFを `worksheets/out/` に出力 |
-| `python3 worksheets/generate_worksheets.py --lesson 1` | Session 1 の教材だけ出力 |
+| `python3 worksheets/generate_worksheets.py --lesson 1` | Lesson 1 の教材だけ出力 |
 | `python3 worksheets/generate_worksheets.py --test boss --range 1-30` | ボス戦テスト（1〜30）を出力 |
 | `npm run worksheets:month -- --world 1` | ワールド1の月間まとめ（30レッスン＝約1か月を1冊）を `worksheets/out/monthly/` に出力 |
 | `npm run worksheets:month -- --all` | 12ワールド分の月間まとめを出力 |
@@ -69,7 +70,7 @@ http://localhost:3000 を開くとマップ画面が表示されます。デモ�
 ```
 eigo-quest/
 ├── content/curriculum/
-│   ├── lessons.json          カリキュラム（Session 1〜360・12ワールド）。学校単元・表現・テストのポイント・TPR・フォニックス・単語・教師の台本・会話シーン・まとめ。年間計画は docs/curriculum-plan.md
+│   ├── lessons.json          カリキュラム（Lesson 1〜360・12ワールド）。学校単元・表現・テストのポイント・TPR・フォニックス・単語・教師の台本・会話シーン・まとめ。年間計画は docs/curriculum-plan.md
 │   └── monsters.json         モンスター図鑑・アバターショップ
 ├── prisma/
 │   ├── schema.prisma         データベース設計（下記）
@@ -113,9 +114,10 @@ eigo-quest/
 │   └── api/                  ルートハンドラ
 ├── src/components/           WorldMap / QuestionView / TestRunner / LessonSteps / ConversationStep / RecapPlayer / MasteryRadar ...
 ├── worksheets/generate_worksheets.py   A4 PDF生成
-├── scripts/e2e-smoke.ts      30日分の通しプレイを早送りで実行
+├── scripts/e2e-smoke.ts      30日分の通しプレイを早送りで実行（DB が必要）
+├── scripts/smoke.ts          Playwright の全画面スモークテスト（DB なしでも可）
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
-├── docs/night/               夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー）
+├── docs/night/ docs/night2/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
 ```
 
@@ -129,7 +131,7 @@ eigo-quest/
 | **ビリモ** | 相棒の電撃モンスター（オリジナル）。口ぐせは「〜ビリ！」 | ステータスボードの吹き出し、マップのナビ、お宝アラート、まとめ動画のホスト |
 | **エマ先生** | 英語の先生（大人） | レッスンのAI教師、会話シーン |
 
-- キャラクターはすべてオリジナルのSVG（`src/components/characters/`）。年齢どおりの頭身（ハル≒6頭身・リコ≒5.6・キコ≒5.3）で、並べるときはリコ＝ハル×0.92、キコ＝ハル×0.88 の大きさにします。設定は `src/lib/game/characters.ts`。
+- キャラクターはすべてオリジナルのSVG（`src/components/characters/`）。3DCGアニメ映画の子どもの頭身（髪をふくめて ハル≒4.7頭身・リコ≒4.4・キコ≒4.2）で、並べるときはリコ＝ハル×0.92、キコ＝ハル×0.88 の大きさにします。設定は `src/lib/game/characters.ts`。
 - ビリモのセリフは `src/lib/game/companion.ts` が状況（今日のクエスト・復習クエスト待ち・ボス・お宝・苦手な力）から選ぶ。
 - パーティのレベルは5レッスン（まとめテスト1回）ごとに上がる。
 - テーマは `src/app/globals.css`：羊皮紙＋金の二重枠のパネル（`.card` / `.rpg-wood`）、立体ボタン（`.btn-primary` / `.btn-coin` / `.btn-berry`）、HP/EXP風ゲージ（`.rpg-gauge`）。見出しは丸ゴシックの極太（`.font-title`）。
@@ -151,7 +153,7 @@ eigo-quest/
 - `src/components/characters/MonsterArt.tsx`：種族の形×属性の色と光で描画。ランクが上がるほどオーラ・プラチナの装飾・光輪・ルーンが増える
 - `src/components/monsters/MonsterCard.tsx` と `/gacha`：召喚の祭壇（光の演出つきのカード出現）、出現率の表示、100体の図鑑（まだ出会っていないモンスターはシルエット）
 - `GET /api/monsters`：持っているモンスター・コイン・レアガチャ券。`resolveMonster()` はどんな id でも必ず1体を返し、以前のモンスターID（m-…）も新しいモンスターに対応させる
-- 開発用プレビュー：`npx tsx --tsconfig scripts/tsconfig.json scripts/render-monsters-preview.tsx > preview.html`（100体を一覧）、`scripts/render-characters-preview.tsx`（キャラクターの全ポーズ）
+- 開発用プレビュー（Playwright で PNG を `docs/night2/screens/` に保存）：`npx tsx --tsconfig scripts/tsconfig.json scripts/render-kids-preview.tsx <名前>`（ハル・リコ・キコの全ポーズ）、`render-adults-preview.tsx <名前>`（エマ先生・ビリモ・ヒーロー場面・背景）、`render-monsters-preview.tsx <名前>`（モンスター100体・カード・額縁）。全キャラ一覧の HTML は `docs/night/screens/characters-preview.html`
 
 **エラーに強い作り**
 - `src/lib/api/contracts.ts`：各APIの返すデータの形を zod で1か所に定義。ルートは `satisfies` でこの形に合わせ、画面も同じ定義で受け取る
@@ -167,6 +169,7 @@ PostgreSQL が止まっている・サーバーに届かないときでも、エ
 - **API（src/lib/api/server.ts の `withOffline`）**: 全ルートが DB 接続を事前チェック（`isDbUp()`、1.5秒タイムアウト・結果は短時間キャッシュ）。
   DB が落ちている／P1001 などの接続エラー／想定外の例外 → **200 + `success: true, offline: true`** で `src/lib/offline` のモックデータを返します。エラー内容は外に出しません（サーバーログにだけ残ります）。
 - **画面**: `apiGet` は8秒でタイムアウトし、GET は1回だけ自動リトライ。それでも届かなければ `isUnreachable()` で判定して、ブラウザ側で同じ内蔵データに切り替えます（マップは Lesson 1 から、レッスン・テストはブラウザで出題・採点）。
+- おためしモードでクリアしたレッスン・合格したテストは、そのブラウザの localStorage にだけ記録します（`src/lib/offline/localProgress.ts`）。マップはこの記録をのせて作り直すので、✓ と「きょうのまとめ」リンクが出ます（コイン・習得率は保存しません）。
 - 画面には小さな「おためしモードで表示中」チップだけを出します（`src/components/common/OfflineNote.tsx`）。召喚・レッスン完了・テスト結果は「記録されない」ことを明記します。
 - ゲーム上の理由（まだひらいていないレッスンなど 4xx）は、これまでどおりメッセージを表示します。
 - おしらせは `content/announcements.json`（`GET /api/announcements`、マップ画面下に表示）。DB を使わないので常に表示できます。
@@ -190,7 +193,7 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 - テストは何度でも再挑戦できます。間違えた問題には解説が出ます（救済措置）。
 - まとめテストとボス戦は「学校モード」で採点します。文頭や曜日の小文字、ピリオド忘れなど、学校のテストで×になる誤りは「再挑戦」になります。
 - 1日のレッスンは9ステップです。AI教師 → フラッシュカード → TPR → フォニックス → 学校テスト対策（書き取り＋AI採点）→ 発音 → 確認クイズ → スピードリスニング（0.8 → 1.0 → 1.2倍速）→ **AIキャラとの会話**。合格の条件は確認クイズだけで、会話はブロックしません。
-- 最後のボス（`boss-1-360`）の後に開くレッスンはありません（全クリア後の画面はまだありません）。
+- Lesson 360 のクリア画面と最後のボス（`boss-1-360`）の合格画面では「つぎのレッスンへ」を出さず「🎉 ぜんぶクリア！」を表示します（全クリア後の体験はまだ未定）。
 
 ### 12ワールド（docs/curriculum-plan.md）
 
@@ -223,13 +226,13 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 
 ## AIキャラとの会話（src/lib/conversation・POST /api/conversation）
 
-- レッスン最後のステップ。場面と 🎯 ゴールを見せ、ハルが話しかけます。子どもは 🎤 音声認識（使えるブラウザだけ）／お手本のタップ／キーボードのどれでも答えられます。6ターンで「かいわ クリア！」。
+- レッスン最後のステップ。場面と 🎯 ゴールを見せ、その回の相手キャラが話しかけます。相手はレッスンごとに ハル → リコ → キコ → ビリモ と交代し、その回の会話シーンで話しているキャラから選びます（`pickConversationPartner`）。子どもは 🎤 音声認識（使えるブラウザだけ）／お手本のタップ／キーボードのどれでも答えられます。6ターンで「かいわ クリア！」。最後まで話すと **+5コイン（レッスンごとに1回）**。とばしたとき・途中でやめたときは付きません。
 - `ANTHROPIC_API_KEY` があれば Claude（`CONVERSATION_MODEL`）が返事を作ります。キーが無い・エラー・返事がおかしいときは、台本エンジン（`engine.ts`）がレッスンのセリフから返事を作ります。サーバーにつながらないときはクライアントが同じエンジンで返事を作るので、子どもが止まることはありません。
 - API はいつも `success:true` を返します。サーバーは状態を持たず、履歴（最大12）をクライアントが送ります。子どもの発話はDBに保存しません。
 - 安全: 個人情報は聞かない・繰り返さない、3けた以上の数字・メール・URL は AI に送る前に `***` に伏せる、`<child>` タグの中は指示ではなくデータとして扱う。
 - 目標表現を言えたら、その表現の SPEAKING の正解ログとして記憶モデル・習得率に反映します。
 
-**Session 1** は TPR の4つの基本命令「Look! / Stop! / Come here! / Go!」のフラッシュカードと、あいさつ（Hello. I'm ～.）、フォニックスの s と a で始まります。Session 30 の総復習では、この4つの命令を高速で出して反射を確認します。
+**Lesson 1** は TPR の4つの基本命令「Look! / Stop! / Come here! / Go!」のフラッシュカードと、あいさつ（Hello. I'm ～.）、フォニックスの s と a で始まります。Lesson 30 の総復習では、この4つの命令を高速で出して反射を確認します。
 
 ## データベース設計（prisma/schema.prisma）
 
@@ -256,6 +259,7 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 | 30日ごとのボス合格 | 300 ＋ レアガチャ券（RARE以上確定） | 一度きりの大ボーナス |
 | お宝アラート経由でクリア | 12 × **2倍** = 24（復習クエスト一発の30より少ない） | — |
 | きょうのまとめ動画を最後まで見る | 5（1日1回） | おまけ |
+| AIキャラとの会話を最後まで | 5（レッスンごとに1回） | おまけ |
 | 復習アリーナ | 1回15（1日5回まで。その後は3）・満点で＋10 | 日常のコイン稼ぎ |
 | **連続学習（いちばん大きな報酬）** | 毎日 ＋min(連続日数, 10)、7日ごと ＋50、30日ごと ＋300 ＋ レアガチャ券 | — |
 
@@ -303,7 +307,7 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 ## A4ワークシート（worksheets/generate_worksheets.py）
 
 - **レッスン教材（3ページ）**
-  1. 切り取り用フラッシュカード（Session 1 は Look / Stop / Come here / Go から始まる）
+  1. 切り取り用フラッシュカード（Lesson 1 は Look / Stop / Come here / Go から始まる）
   2. 英語の4線（3本目は赤）でなぞり書き、フォニックス（最初の音）、学校テストの書き取り、おうちの人が読み上げるリスニング
   3. 解答・読み上げる文・学校テストのポイント・TPRの遊び方
 - **まとめテスト（5回ごと）とボス戦テスト（30回ごと）**: アプリと同じ範囲ルールで出題（線むすび・スペル・記号選択・フォニックス・TPRリスニング）し、最後に解答ページを付けます。
@@ -316,10 +320,10 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 |---|---|---|
 | 認証 | cookie `uid` とデモユーザー | 保護者アカウントでログインし、子どものプロフィールを選ぶ。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
 | AI教師の動画 | SVGアバター（口とジェスチャーのアニメーション）＋ブラウザの音声合成 | 事前に生成したアバター動画を `Lesson.videoUrl` に入れる（UIはすでに対応済み） |
-| 音声 | ブラウザの音声合成（`/media/audio/{audioKey}.mp3` があればそちらを優先） | ネイティブの収録音声か、事前に生成したTTS |
+| 音声 | ブラウザの音声合成（`NEXT_PUBLIC_RECORDED_AUDIO=1` のときだけ `/media/audio/{audioKey}.mp3` を優先） | ネイティブの収録音声か、事前に生成したTTS |
 | 発音判定 | Web Speech API で単語の一致率 × 確信度 | 音素単位で評価できるAPIを `PronunciationScorer` の実装として差し替える |
 | アリーナの採点 | seed と現在の記憶状態から問題を作り直す | 出題した内容を TestSession テーブルに保存して採点する |
 | まとめ動画 | 台本＋ブラウザの音声合成で自動再生 | リアルなAI先生の動画サービスで生成した動画（`videoUrl` の差し替え口を使う） |
-| AI会話 | Claude ＋ 台本フォールバック（相手はハル固定） | 保護者の同意・プライバシーポリシーを整えてから本番で有効化 |
+| AI会話 | Claude ＋ 台本フォールバック（相手は4人のローテーション） | 同意フォームは不要（オーナー決定）。電話・メール・URL の伏せ字と「子どもの発話は保存しない」を守ったまま有効化 |
 | カリキュラム | 360レッスン（12ワールド）完成 | 全クリア後の体験（おめでとう画面・2周目・中学コース）は未定 |
 | 月額課金・無料体験・保護者へのLINE月報PDF | 未実装 | 今後のフェーズで実装 |
