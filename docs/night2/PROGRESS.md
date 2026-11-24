@@ -314,7 +314,7 @@ PyMuPDF で 12冊 すべてを 開いて 確認: どの冊も 表紙2 ＋ レッ
 - `scripts/smoke.ts` に 保存先の 引数を 追加（`npx tsx scripts/smoke.ts <URL> docs/night2/screens/final`）
 
 ### 2回目（さいご）
-- 作りなおして 新しい サーバーで もう一度 → **21画面＋おためしの 流れ すべて OK・問題 0**。スクリーンショットは `docs/night2/screens/final/`、ログは `night-logs/night2/10-smoke.log`
+- 作りなおして 新しい サーバーで もう一度 → **21画面＋おためしの 流れ すべて OK・問題 0**。スクリーンショットは `docs/night2/screens/final/`（`night-logs/night2/10-smoke.log` は 夜間ランナーが 書きこみ中で ロックされていて 書けなかったので、結果は ここに 記録）
 - tsc / vitest（25ファイル・703件）/ next build すべて 通過
 
 ### 判断したこと
