@@ -193,8 +193,23 @@ export function ArtDefs() {
             <radialGradient id={`el-${e.id}-aura`} cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor={e.glow} stopOpacity=".75" /><stop offset="55%" stopColor={e.glow} stopOpacity=".22" /><stop offset="100%" stopColor={e.glow} stopOpacity="0" />
             </radialGradient>
+            {/* 白っぽい毛なみ（ユニコーン・鷲の頭）: 白 → 属性の淡い色 → 属性の色 */}
+            <radialGradient id={`el-${e.id}-pale`} cx="36%" cy="26%" r="85%">
+              <stop offset="0%" stopColor="#ffffff" /><stop offset="45%" stopColor={e.light} /><stop offset="100%" stopColor={e.main} />
+            </radialGradient>
           </g>
         ))}
+        {/* 獅子の毛なみ（レオ・グリフォンの後ろ半分） */}
+        <radialGradient id="g-tawny" cx="36%" cy="26%" r="85%">
+          <stop offset="0%" stopColor="#ffe9bf" /><stop offset="40%" stopColor="#dcae6c" /><stop offset="80%" stopColor="#a26e34" /><stop offset="100%" stopColor="#5e3a16" />
+        </radialGradient>
+        {/* 精霊の衣: 下に向かって 透けて消える */}
+        <linearGradient id="mon-fade-g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#fff" /><stop offset="62%" stopColor="#fff" stopOpacity=".85" /><stop offset="100%" stopColor="#fff" stopOpacity="0" />
+        </linearGradient>
+        <mask id="mon-fade" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="-20" y="-20" width="140" height="140">
+          <rect x="-20" y="-20" width="140" height="120" fill="url(#mon-fade-g)" />
+        </mask>
         <linearGradient id="metal-platinum" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#ffffff" /><stop offset="25%" stopColor="#cfd8e6" /><stop offset="50%" stopColor="#6b7a90" /><stop offset="65%" stopColor="#e6edf7" /><stop offset="100%" stopColor="#4a5568" />
         </linearGradient>
