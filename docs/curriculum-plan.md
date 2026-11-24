@@ -240,6 +240,45 @@
 | 29 | Please and Thank You | マナー | ～, please. / You're welcome. | qu | おやつの時間 |
 | 30 | World 1 Grand Review | ワールド総まとめ（スピードTPR） | I'm ～. I like ～. I can ～. | 26音すべて | ビリモのワールド1ショー |
 
+## 6-2. ワールド2 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: 短母音ごとに CVC を5レッスンずつ（1レッスン1つの「ことばの なかま」: -at, -ap, -ag, -an/-am …）。5の倍数回はその母音のふりかえり。L56〜59 は ff ll ss zz（floss ルール）、L60 は CVC 総まとめ。
+- サイトワード（I, a, the, is, go, to）は `phonics.words` に入れず、ふりかえり回の `tipJa` と表現の中で扱う（「さいしょの おとは どれ？」問題で the → t のような まちがった答えを出さないため）。
+- 表現の型: What do you like? → I want ～. → Can it ～? → Where is ～? It's on / in / under ～. → Let's go to the ～. / By bus! → I like summer. / Happy New Year!
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 31 | What Do You Like? | すきなもの | What do you like? | a（cat, bat, mat） | あたらしいクラスで すきなもの こうかん |
+| 32 | Let's Be Friends! | ともだち | Let's be friends! | a（map, cap, nap） | クラスメートに ともだちを しょうかい |
+| 33 | I Like Drawing! | すきなこと | I like drawing. | a（bag, tag, wag） | きょうしつの やすみじかん |
+| 34 | What Animal Do You Like? | すきな動物 | What animal do you like? | a（can, fan, ham） | 動物の えほんを みながら |
+| 35 | Show and Tell | まとめ | I'm Kiko. I like drawing. | ふりかえり（cat, map, bag）・I, a | すきなもの はっぴょうかい |
+| 36 | I Want a Cookie! | おやつ | I want a cookie. | i（pig, big, dig） | いえで おやつ |
+| 37 | What Do You Want? | のみもの・たべもの | What do you want? | i（sit, hit, kit） | えんそくの おひるごはん |
+| 38 | The Ice Cream Shop | あじ | Strawberry, please. | i（pin, win, fin） | アイスクリームやさん |
+| 39 | It's Sweet! | あじ・かんそう | It's sweet. | i（lid, kid, zip） | くだものの あじみ |
+| 40 | The Snack Shop | まとめ | I want two cookies, please. | ふりかえり（pig, sit, win）・the | おやつやさんごっこ |
+| 41 | Can It Fly? | いきもの・とぶ | Can it fly? | o（dog, log, fog） | にわで いきもの さがし |
+| 42 | Can It Swim? | みずの いきもの | Can it swim? | o（hot, pot, dot） | すいぞくかん |
+| 43 | I See a Ladybug! | むし | I see a ladybug. | o（mop, top, hop） | こうえんで むしさがし |
+| 44 | It Can Climb! | 動物の うごき | It can climb. | o（box, fox, jog） | 動物園 |
+| 45 | Creature Quiz | まとめ | Is it a fish? | ふりかえり（dog, hot, box）・is | いきものクイズ |
+| 46 | This Is My Room | おうち・へや | This is my room. | e（bed, red, fed） | おうちを あんない |
+| 47 | Where Is My Cap? | ばしょ（on / in） | Where is my cap? | e（pen, ten, hen） | ぼうしさがし |
+| 48 | It's Under the Table! | ばしょ（under / by） | It's under the table. | e（net, wet, jet） | ボールさがし |
+| 49 | Clean Up Time | かたづけ | Clean up, please. | e（leg, peg, web） | あそびべやの おかたづけ |
+| 50 | Lost and Found | まとめ | It's in the box. | ふりかえり（bed, pen, net） | なくしもの探し（エマ先生の かぎ） |
+| 51 | Let's Go to the Park! | まちの ばしょ | Let's go to the park. | u（sun, bun, run） | どこへ いくか そうだん |
+| 52 | By Bus! | のりもの | By bus! | u（bug, hug, mug） | 動物園への いきかた |
+| 53 | Stop! It's Red! | こうつうルール | Stop! It's red. | u（cut, hut, nut） | どうろを わたる |
+| 54 | At the Bakery | まちの おみせ | Let's go to the bakery. | u（cub, tub, bus） | パンやさん |
+| 55 | Bus Trip | まとめ | Let's go to the zoo by bus. | ふりかえり（sun, hug, nut）・go, to | バスで おでかけ |
+| 56 | I Like Summer! | きせつ | I like summer. | ff（off, puff, cuff） | すきな きせつ |
+| 57 | The Summer Festival | なつの ぎょうじ | Let's go to the festival! | ll（bell, doll, hill） | なつまつり |
+| 58 | Trick or Treat! | ハロウィン | Trick or treat! | ss（kiss, mess, hiss） | ハロウィンの よる |
+| 59 | Happy New Year! | ふゆの ぎょうじ | Happy New Year! | zz（buzz, fizz, jazz） | おしょうがつ |
+| 60 | World 2 Grand Review | ワールド総まとめ（スピードTPR） | I like summer. I want ice cream. | CVC 総まとめ（cat, pig, dog, bed, bus, bell） | ビリモの ワールド2 ショー |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。

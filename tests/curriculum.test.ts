@@ -100,6 +100,10 @@ describe("カリキュラム: 全体の整合性", () => {
     }
   });
 
+  it("core の表現（スペル問題になる）には ― や ～ を入れない", () => {
+    for (const l of LESSONS) for (const e of l.school.expressions.filter((x) => x.core)) expect(e.en, `L${l.lessonNo}`).not.toMatch(/[―～]/);
+  });
+
   it("フォニックスの単語はレッスン内で重複しない", () => {
     for (const l of LESSONS) expect(new Set(l.phonics.words).size, `L${l.lessonNo}`).toBe(l.phonics.words.length);
   });
@@ -142,5 +146,49 @@ describe("カリキュラム: ワールド1 の決まりごと", () => {
     if (!l30) return; // ワールド1 が未完成のときはスキップ
     expect(l30.phonics.rule).toBe("review");
     expect(l30.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+});
+
+describe("カリキュラム: ワールド2 の決まりごと", () => {
+  const w2 = LESSONS.filter((l) => l.world === 2);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+
+  it("ワールド2 は 31〜60 の 30 レッスン", () => {
+    if (w2.length === 0) return; // 未作成ならスキップ
+    expect(w2.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 31 + i));
+  });
+
+  it("短母音の CVC を a → i → o → e → u の順に、5レッスンずつ（5の倍数はふりかえり）", () => {
+    if (w2.length === 0) return;
+    "aioeu".split("").forEach((v, b) => {
+      for (let k = 0; k < 5; k++) {
+        const l = at(31 + b * 5 + k)!;
+        expect(l.phonics.focus, `L${l.lessonNo}`).toEqual([v]);
+        expect(l.phonics.rule, `L${l.lessonNo}`).toBe(k === 4 ? "review" : "cvc");
+        // CVC: 子音-短母音-子音 の3文字（box の x もふくむ）
+        for (const w of l.phonics.words) expect(w, `L${l.lessonNo}`).toMatch(new RegExp(`^[b-df-hj-np-tv-z]${v}[b-df-hj-np-tv-z]$`));
+      }
+    });
+  });
+
+  it("L56〜59 は ff ll ss zz（floss）、L60 はワールドのまとめでスピード TPR", () => {
+    if (w2.length === 0) return;
+    expect([56, 57, 58, 59].map((n) => at(n)!.phonics.focus)).toEqual([["ff"], ["ll"], ["ss"], ["zz"]]);
+    const l60 = at(60)!;
+    expect(l60.phonics.rule).toBe("review");
+    expect(l60.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("学年は小2、表現の型が計画どおり入っている", () => {
+    if (w2.length === 0) return;
+    const grammar = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(grammar(31, 35)).toContain("What do you like?");
+    expect(grammar(36, 40)).toContain("I want");
+    expect(grammar(41, 45)).toContain("Can it");
+    expect(grammar(46, 50)).toMatch(/Where is .*It's (on|in|under)/s);
+    expect(grammar(51, 55)).toContain("Let's go to the");
+    expect(grammar(51, 55)).toContain("By bus!");
+    expect(grammar(56, 60)).toContain("I like summer.");
+    expect(grammar(56, 60)).toContain("Happy New Year!");
   });
 });
