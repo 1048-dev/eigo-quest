@@ -435,8 +435,20 @@ function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
 }
 
 function distractors(target: LearningItemDef, pool: readonly LearningItemDef[], n: number, rng: () => number) {
-  const same = pool.filter((p) => p.id !== target.id && p.kind === target.kind && p.text !== target.text);
-  return shuffle(same, rng).slice(0, n);
+  // おなじ ことば・おなじ 日本語の 項目が べつの 回にも あるので、選択肢が かさならないように 1つずつに する
+  const norm = (s: string) => s.trim().toLowerCase();
+  const seenText = new Set([norm(target.text)]);
+  const seenJa = new Set([target.ja.trim()]);
+  const out: LearningItemDef[] = [];
+  for (const p of shuffle(pool, rng)) {
+    if (out.length >= n) break;
+    if (p.id === target.id || p.kind !== target.kind) continue;
+    if (seenText.has(norm(p.text)) || seenJa.has(p.ja.trim())) continue;
+    seenText.add(norm(p.text));
+    seenJa.add(p.ja.trim());
+    out.push(p);
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------------------

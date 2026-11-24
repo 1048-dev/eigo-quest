@@ -7,6 +7,7 @@
  *
  *   npx next build && npx next start -p 3100
  *   npx tsx scripts/smoke.ts http://localhost:3100
+ *   npx tsx scripts/smoke.ts http://localhost:3100 docs/night2/screens/final
  *
  * さいごに おためしモードの 流れも 確かめる:
  *   API（DB なし）: レッスン完了・かいわ・まとめ視聴 が success / ok で 返る
@@ -17,7 +18,8 @@ import path from "node:path";
 import { chromium, type Browser, type Page } from "playwright";
 
 const BASE = (process.argv[2] ?? process.env.SMOKE_URL ?? "http://localhost:3000").replace(/\/$/, "");
-const OUT = path.resolve(__dirname, "../docs/night2/screens");
+/** 保存先（2つめの 引数 か SMOKE_OUT で かえられる。さいごの 確認は docs/night2/screens/final） */
+const OUT = path.resolve(process.argv[3] ?? process.env.SMOKE_OUT ?? path.resolve(__dirname, "../docs/night2/screens"));
 
 /** 各ワールドの さいしょの レッスン（1, 31, 61, … 331） */
 const WORLD_LESSONS = Array.from({ length: 12 }, (_, i) => i * 30 + 1);

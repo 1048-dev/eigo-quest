@@ -119,9 +119,9 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
   return (
     <div className="space-y-4">
       <OfflineNote show={offline} />
-      {s.kind === "teacher_video" && <HeroScene title={`Session ${lesson.lessonNo}`} subtitle={`${lesson.title}｜${lesson.titleJa}`} variant="lesson" />}
+      {s.kind === "teacher_video" && <HeroScene title={`Lesson ${lesson.lessonNo}`} subtitle={`${lesson.title}｜${lesson.titleJa}`} variant="lesson" />}
       <header className="rpg-wood p-3">
-        <p className="font-title text-xs text-[var(--volt)]">Session {lesson.lessonNo} ・ {worldName(lesson.world)} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
+        <p className="font-title text-xs text-[var(--volt)]">Lesson {lesson.lessonNo} ・ {worldName(lesson.world)} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
         <h1 className="text-xl font-black">{lesson.title} <span className="text-base text-[var(--on-dark-2)]">{lesson.titleJa}</span></h1>
         <ol className="mt-3 flex gap-1" aria-label="レッスンの進み具合">
           {steps.map((x, i) => (

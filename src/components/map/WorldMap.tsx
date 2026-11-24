@@ -229,6 +229,10 @@ export function WorldMap({ nodes }: { nodes: StageNode[] }) {
         const left = p.x > W / 2;
         const bx = left ? p.x - 150 : p.x + 38;
         const sleepy = safeNodes[curIdx]?.status === "WAIT_TOMORROW";
+        // ワールドの さいしょの ステージでは 上に ワールド名の プレートが あるので、ビリモと「ここ！」は ステージの よこ（パーティと はんたい がわ）に おく
+        const firstOfWorld = curIdx === 0 || safeNodes[curIdx - 1]?.world !== safeNodes[curIdx]?.world;
+        const birimo = firstOfWorld ? { x: left ? p.x + 30 : p.x - 76, y: p.y - 26 } : { x: left ? p.x - 54 : p.x + 8, y: p.y - 92 };
+        const tag = firstOfWorld ? { x: birimo.x + 23, y: p.y - 34 } : { x: left ? p.x - 28 : p.x + 30, y: p.y - 100 };
         return (
           <g pointerEvents="none">
             <path d={`M${bx + 30} ${p.y - 170} L${bx + 70} ${p.y - 170} L${bx + 112} ${p.y + 30} L${bx - 12} ${p.y + 30} Z`} fill="#fff1c2" opacity={0.12} filter="url(#f-dof-2)" />
@@ -237,9 +241,9 @@ export function WorldMap({ nodes }: { nodes: StageNode[] }) {
               {([["riko", 0, 0.42], ["kiko", 66, 0.4], ["haru", 26, 0.5]] as const).map(([id, dx, s]) => (
                 <g key={id} transform={`translate(${bx + dx} ${p.y + 30 - 170 * s})`}><g transform={`scale(${s})`}><Standing id={id} pose={id === "haru" ? "point" : "wave"} /></g></g>
               ))}
-              <g transform={`translate(${left ? p.x - 54 : p.x + 8} ${p.y - 92}) scale(0.46)`}><g className="bob"><BirimoArt mood={sleepy ? "sleepy" : "excited"} /></g></g>
+              <g transform={`translate(${birimo.x} ${birimo.y}) scale(0.46)`}><g className="bob"><BirimoArt mood={sleepy ? "sleepy" : "excited"} /></g></g>
             </g>
-            <g transform={`translate(${left ? p.x - 28 : p.x + 30} ${p.y - 100})`}>
+            <g transform={`translate(${tag.x} ${tag.y})`}>
               <rect x={-26} y={-14} width={52} height={20} rx={10} fill="#08150f" stroke="#e9b949" strokeWidth={1.5} />
               <text y={1} textAnchor="middle" fontSize={11} fontWeight={900} fill="#f2cf6a">{sleepy ? "また明日" : "ここ！"}</text>
             </g>

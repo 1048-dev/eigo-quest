@@ -90,6 +90,13 @@ describe("台本エンジン: 返事", () => {
     expect(r.turn).toBe(1);
   });
 
+  it("2つの 文（Hello! I'm Ken.）は 台本の 先の 行に あわせて すすむ（Hi! だけに ならない）", () => {
+    const r = scriptedReply({ conversation: C1, history: start, childText: "Hello! I'm Ken." });
+    expect(r.replyEn).not.toMatch(/^(Great! )?Hi!$/);
+    expect(r.replyEn).not.toContain("Ken");
+    expect(r.usedTarget).toBe(true);
+  });
+
   it("子どもの名前をオウム返ししない", () => {
     const r = scriptedReply({ conversation: C1, history: start, childText: "I'm Takeshi" });
     expect(r.replyEn).not.toMatch(/takeshi/i);

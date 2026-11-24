@@ -204,14 +204,19 @@ export function scriptedReply(input: ScriptedInput): ConversationReply {
   const aiSaid = new Set(history.filter((t) => t.role === "ai").map((t) => t.text.toLowerCase()));
   const childWords = new Set(normalizeWords(childText));
   const childContent = new Set(contentWords(childText));
+  // 子どもが 2つの 文を 言ったとき（"Hello! I'm Ken."）は、台本の いちばん 先まで すすんだ 行に あわせる
+  // （さいしょの "Hello!" に あわせると 返事が "Hi!" だけに なり、かいわが すすまない）
   let bestIdx = -1;
   let bestScore = 0;
+  const contentIdx: number[] = [];
   conv.lines.forEach((l, i) => {
     const lw = normalizeWords(l.en);
     if (lw.length === 0) return;
     const content = lw.filter((w) => !STOPWORDS.has(w));
-    const score = content.filter((w) => childContent.has(w)).length * 2 + lw.filter((w) => childWords.has(w)).length / lw.length;
+    const contentHits = content.filter((w) => childContent.has(w)).length;
+    const score = contentHits * 2 + lw.filter((w) => childWords.has(w)).length / lw.length;
     if (score > bestScore) { bestScore = score; bestIdx = i; }
+    if (contentHits > 0) contentIdx.push(i);
   });
 
   const aiSaidList = [...aiSaid];
@@ -219,6 +224,9 @@ export function scriptedReply(input: ScriptedInput): ConversationReply {
     const en = conv.lines[i]?.en.trim().toLowerCase();
     return !!en && !aiSaidList.some((s) => s === en || s.endsWith(` ${en}`));
   };
+  const hasNext = (i: number) => conv.lines.some((_, j) => j > i && unused(j));
+  const furthest = [...contentIdx].reverse().find(hasNext);
+  if (furthest !== undefined && furthest > bestIdx && hasNext(furthest)) bestIdx = furthest;
   let pick = -1;
   if (bestIdx >= 0) for (let i = bestIdx + 1; i < conv.lines.length; i++) if (unused(i)) { pick = i; break; }
   // 見つからないときは、まだ言っていない行を順番に
