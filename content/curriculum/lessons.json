@@ -3307,6 +3307,1697 @@
       "recap": {
         "highlightsJa": ["スピード TPR で ワールド2の めいれいを ふくしゅう","すきな もの・ほしい もの・ばしょ・おでかけを ぜんぶ つかえたね","a i o e u の CVC と ff ll ss zz を ぜんぶ よめたよ。ワールド3では sh や ch を ならうよ！"]
       }
+    },
+    {
+      "lessonNo": 61,
+      "world": 3,
+      "title": "Hello, World!",
+      "titleJa": "せかいの あいさつ",
+      "school": {
+        "grade": "小3",
+        "topic": "せかいの あいさつ",
+        "grammar": "Hello. / Hola. / Ni hao. ― I'm ～. Nice to meet you.",
+        "expressions": [
+          {"en":"Nice to meet you.","ja":"はじめまして。よろしくね。","core":true},
+          {"en":"Hola! I'm Riko.","ja":"オラ！（スペインごの こんにちは）リコです。"},
+          {"en":"Ni hao! Hello!","ja":"ニーハオ！（ちゅうごくごの こんにちは）こんにちは！"}
+        ],
+        "testPoints": ["Nice to meet you. の いみが わかる","せかいの いろいろな こんにちはを しっている"]
+      },
+      "tpr": [
+        {"en":"Wave your hand.","ja":"てを ふって。","action":"かたてを おおきく ふる","emoji":"👋"},
+        {"en":"Bow.","ja":"おじぎ。","action":"せなかを まっすぐに して おじぎを する","emoji":"🙇"},
+        {"en":"Shake hands.","ja":"あくしゅ。","action":"ともだちと みぎてで あくしゅする","emoji":"🤝"},
+        {"en":"Spin the globe.","ja":"ちきゅうぎを まわして。","action":"ちきゅうぎを くるっと まわす まね","emoji":"🌏"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["sh"],
+        "sounds": ["/ʃ/"],
+        "words": ["ship","shop","shed","shell"],
+        "tipJa": "s と h が くっつくと sh。「しーっ、しずかに」の「シュ」の おとに なるよ。sh-i-p → ship（ふね）！"
+      },
+      "vocab": [
+        {"en":"hello","ja":"こんにちは","emoji":"👋","core":true},
+        {"en":"world","ja":"せかい","emoji":"🌏"},
+        {"en":"country","ja":"くに","emoji":"🗺️"},
+        {"en":"flag","ja":"はた","emoji":"🚩"}
+      ],
+      "teacherScript": "Hello, everyone! ワールド3「せかいの港」へ ようこそ！ここからは 小学3年生の えいごの テーマだよ。きょうは せかいの いろいろな「こんにちは」を ならおう。さいごは「Nice to meet you.」で あいさつ！",
+      "conversation": {
+        "scene": "Birimo is back from a trip around the world",
+        "sceneJa": "せかい りょこうから かえってきた ビリモ",
+        "lines": [
+          {"speaker":"Birimo","en":"Hola! Ni hao! Bonjour! I'm back!","ja":"オラ！ニーハオ！ボンジュール！ただいま！"},
+          {"speaker":"Kiko","en":"Wow! What's Hola?","ja":"わあ！オラって なに？"},
+          {"speaker":"Birimo","en":"It's hello in Spanish!","ja":"スペインごの こんにちは だよ！"},
+          {"speaker":"Riko","en":"Hola, Birimo! I'm Riko. Nice to meet you!","ja":"オラ、ビリモ！リコです。はじめまして！"},
+          {"speaker":"Haru","en":"Ha ha! We know Birimo!","ja":"あはは！ビリモの こと しってるよ！"}
+        ],
+        "aiTask": {
+          "goalJa": "せかいの こんにちはで あいさつして、I'm ～. Nice to meet you. で じこしょうかい しよう（なまえは ニックネームでも OK）",
+          "starterEn": "Hola! Hello! I'm Haru. Nice to meet you!",
+          "targetExpressions": ["Nice to meet you.","I'm ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["せかいの いろいろな こんにちは（Hola, Ni hao, Bonjour）を しったね","Nice to meet you. で はじめましての あいさつが できたよ","s と h で sh！ ship, shop を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 62,
+      "world": 3,
+      "title": "What's Your Name?",
+      "titleJa": "なまえは なに？",
+      "school": {
+        "grade": "小3",
+        "topic": "なまえの ききかた",
+        "grammar": "What's your name? ― I'm ～. And you?",
+        "expressions": [
+          {"en":"What's your name?","ja":"なまえは なに？","core":true},
+          {"en":"I'm Kiko. And you?","ja":"キコだよ。あなたは？"},
+          {"en":"Nice to meet you, too.","ja":"こちらこそ よろしくね。"}
+        ],
+        "testPoints": ["What's your name? と きかれて なまえを こたえられる","Nice to meet you, too. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Stand in a circle.","ja":"わに なって たって。","action":"みんなで まるく ならんで たつ","emoji":"⭕"},
+        {"en":"Pass the ball.","ja":"ボールを わたして。","action":"となりの ひとに ボールを わたす まね","emoji":"🏐"},
+        {"en":"Say your name.","ja":"なまえを いって。","action":"おおきな こえで なまえを いう","emoji":"🗣️"},
+        {"en":"Sit down.","ja":"すわって。","action":"その ばで すわる","emoji":"🪑"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["sh"],
+        "sounds": ["/ʃ/"],
+        "words": ["fish","dish","wish","cash"],
+        "tipJa": "sh は ことばの おわりにも くるよ。f-i-sh → fish（さかな）！ おわりの「シュ」は しずかに いおう。"
+      },
+      "vocab": [
+        {"en":"name","ja":"なまえ","emoji":"📛","core":true},
+        {"en":"you","ja":"あなた","emoji":"👉"},
+        {"en":"and","ja":"と・そして","emoji":"➕"},
+        {"en":"circle","ja":"まる・わ","emoji":"⭕"}
+      ],
+      "teacherScript": "Hi! きょうは なまえの ききかた。「What's your name?」って きかれたら「I'm ～.」で こたえよう。「And you?」で ききかえして、さいごに「Nice to meet you, too.」も いえたら かっこいいよ。",
+      "conversation": {
+        "scene": "A name game in a circle",
+        "sceneJa": "わに なって なまえゲーム",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Let's play the name game! Catch the ball and say your name.","ja":"なまえゲームを しよう！ボールを とったら なまえを いってね。"},
+          {"speaker":"Haru","en":"Here you go! What's your name?","ja":"はい！なまえは なに？"},
+          {"speaker":"Kiko","en":"I'm Kiko. And you?","ja":"キコだよ。あなたは？"},
+          {"speaker":"Haru","en":"I'm Haru. Nice to meet you!","ja":"ハルだよ。よろしくね！"},
+          {"speaker":"Kiko","en":"Nice to meet you, too!","ja":"こちらこそ よろしくね！"}
+        ],
+        "aiTask": {
+          "goalJa": "What's your name? と きかれたら I'm ～. で こたえて、Nice to meet you, too. も いおう（なまえは ニックネームでも OK）",
+          "starterEn": "Hi! I'm Haru. What's your name?",
+          "targetExpressions": ["I'm ～.","Nice to meet you, too."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["What's your name? で なまえを きけたね","I'm ～. And you? で ききかえせたよ","おわりの sh！ fish, dish を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 63,
+      "world": 3,
+      "title": "My Name Card",
+      "titleJa": "なまえカードを つくろう",
+      "school": {
+        "grade": "小3",
+        "topic": "なまえカード・こうかん",
+        "grammar": "This is my name card. / Here you are. ― Thank you.",
+        "expressions": [
+          {"en":"Here you are.","ja":"はい、どうぞ。","core":true},
+          {"en":"This is my name card.","ja":"これが わたしの なまえカード。"},
+          {"en":"Thank you! Nice card!","ja":"ありがとう！すてきな カード！"}
+        ],
+        "testPoints": ["Here you are. で ものを わたせる","Thank you. で おれいが いえる"]
+      },
+      "tpr": [
+        {"en":"Cut the paper.","ja":"かみを きって。","action":"はさみで かみを きる まね","emoji":"✂️"},
+        {"en":"Write your name.","ja":"なまえを かいて。","action":"ゆびで くうちゅうに なまえを かく","emoji":"✍️"},
+        {"en":"Color the card.","ja":"カードに いろを ぬって。","action":"クレヨンで ぬる まね","emoji":"🖍️"},
+        {"en":"Give it to a friend.","ja":"ともだちに わたして。","action":"りょうてで カードを わたす まね","emoji":"🎁"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["sh"],
+        "sounds": ["/ʃ/"],
+        "words": ["shut","shin","shot","mash"],
+        "tipJa": "sh-u-t → shut（しめる）、m-a-sh → mash（つぶす）。sh が まえでも うしろでも おなじ「シュ」の おとだよ。"
+      },
+      "vocab": [
+        {"en":"card","ja":"カード","emoji":"🪪","core":true},
+        {"en":"paper","ja":"かみ","emoji":"📄"},
+        {"en":"scissors","ja":"はさみ","emoji":"✂️"},
+        {"en":"pen","ja":"ペン","emoji":"🖊️"}
+      ],
+      "teacherScript": "Hello! きょうは なまえカードを つくって こうかんするよ。わたすときは「Here you are.」、もらったら「Thank you!」。すてきな カードを つくろうね。",
+      "conversation": {
+        "scene": "Making and trading name cards",
+        "sceneJa": "なまえカードを つくって こうかん",
+        "lines": [
+          {"speaker":"Riko","en":"Look! This is my name card.","ja":"みて！わたしの なまえカード。"},
+          {"speaker":"Haru","en":"Cool! It's pink!","ja":"かっこいい！ピンクだ！"},
+          {"speaker":"Riko","en":"Here you are, Haru.","ja":"はい、どうぞ、ハル。"},
+          {"speaker":"Haru","en":"Thank you! This is my card. Here you are.","ja":"ありがとう！これが ぼくの カード。はい、どうぞ。"},
+          {"speaker":"Riko","en":"Thank you! Nice card!","ja":"ありがとう！すてきな カード！"}
+        ],
+        "aiTask": {
+          "goalJa": "なまえカードを こうかんしよう。Here you are. で わたして、もらったら Thank you. と いおう",
+          "starterEn": "This is my name card. Here you are!",
+          "targetExpressions": ["Thank you.","Here you are."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Here you are. で カードを わたせたね","Thank you. で おれいが いえたよ","shut, shin, mash！ sh の ことばが ふえたよ"]
+      }
+    },
+    {
+      "lessonNo": 64,
+      "world": 3,
+      "title": "Greetings Around the World",
+      "titleJa": "せかいの あいさつの しかた",
+      "school": {
+        "grade": "小3",
+        "topic": "せかいの あいさつ・ジェスチャー",
+        "grammar": "Let's shake hands. / Let's bow. / Namaste!",
+        "expressions": [
+          {"en":"Let's shake hands.","ja":"あくしゅ しよう。","core":true},
+          {"en":"Let's bow.","ja":"おじぎ しよう。"},
+          {"en":"Namaste!","ja":"ナマステ！（インドの あいさつ）"}
+        ],
+        "testPoints": ["Let's shake hands. の いみが わかる","せかいには いろいろな あいさつの しかたが あると しっている"]
+      },
+      "tpr": [
+        {"en":"Put your hands together.","ja":"てを あわせて。","action":"むねの まえで りょうての ひらを あわせる","emoji":"🙏"},
+        {"en":"Shake hands.","ja":"あくしゅ。","action":"ともだちと みぎてで あくしゅする","emoji":"🤝"},
+        {"en":"Bow.","ja":"おじぎ。","action":"ゆっくり おじぎを する","emoji":"🙇"},
+        {"en":"Give me five!","ja":"ハイタッチ！","action":"ともだちと てのひらを パチンと あわせる","emoji":"🖐️"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["sh"],
+        "sounds": ["/ʃ/"],
+        "words": ["rush","hush","dash","gosh"],
+        "tipJa": "おわりの sh を もう いちど。r-u-sh → rush（いそぐ）、h-u-sh → hush（しーっ）、d-a-sh → dash（ダッシュ）！"
+      },
+      "vocab": [
+        {"en":"hand","ja":"て","emoji":"✋","core":true},
+        {"en":"bow","ja":"おじぎ","emoji":"🙇"},
+        {"en":"hug","ja":"ハグ","emoji":"🤗"},
+        {"en":"together","ja":"いっしょに","emoji":"🤲"}
+      ],
+      "teacherScript": "Hi! せかいには いろいろな あいさつの しかたが あるよ。あくしゅ、おじぎ、てを あわせる ナマステ。「Let's shake hands.」で ともだちと あくしゅ しよう！",
+      "conversation": {
+        "scene": "Trying greeting gestures from around the world",
+        "sceneJa": "せかいの あいさつの しかたを ためす",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"In many countries, people shake hands.","ja":"おおくの くにでは あくしゅを するよ。"},
+          {"speaker":"Haru","en":"Let's shake hands, Riko!","ja":"あくしゅ しよう、リコ！"},
+          {"speaker":"Riko","en":"OK! Nice to meet you!","ja":"いいよ！はじめまして！"},
+          {"speaker":"Kiko","en":"Namaste! Look, hands together.","ja":"ナマステ！みて、てを あわせるの。"},
+          {"speaker":"Birimo","en":"And in Japan, let's bow!","ja":"にほんでは おじぎ しよう！"}
+        ],
+        "aiTask": {
+          "goalJa": "Let's shake hands. や Let's bow. で せかいの あいさつごっこを しよう",
+          "starterEn": "Hello! Let's shake hands! Nice to meet you!",
+          "targetExpressions": ["Let's shake hands.","Nice to meet you."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Let's shake hands. で あくしゅに さそえたね","ナマステや おじぎ など、せかいの あいさつを しったよ","rush, hush, dash！ おわりの sh を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 65,
+      "world": 3,
+      "title": "Online Hello Party (Review)",
+      "titleJa": "まとめ：オンラインで せかいに あいさつ",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：せかいの あいさつ・なまえ",
+        "grammar": "Hello. I'm ～. Nice to meet you. / What's your name? / See you!",
+        "expressions": [
+          {"en":"Hello. I'm Haru. Nice to meet you.","ja":"こんにちは。ハルです。はじめまして。","core":true},
+          {"en":"What's your name?","ja":"なまえは なに？"},
+          {"en":"See you!","ja":"またね！"}
+        ],
+        "testPoints": ["あいさつ・なまえ・はじめまして を つづけて いえる","sh の ことば（ship, fish, shop, dish）を よめる"]
+      },
+      "tpr": [
+        {"en":"Look at the screen.","ja":"がめんを みて。","action":"パソコンの がめんを みる まね","emoji":"💻"},
+        {"en":"Wave to your friends.","ja":"ともだちに てを ふって。","action":"がめんの むこうに てを ふる","emoji":"👋"},
+        {"en":"Say hello.","ja":"ハローって いって。","action":"えがおで Hello! と いう","emoji":"🗣️"},
+        {"en":"Take a bow.","ja":"おじぎを して。","action":"さいごに ゆっくり おじぎ","emoji":"🙇"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["sh"],
+        "sounds": ["/ʃ/"],
+        "words": ["ship","fish","shop","dish","shell"],
+        "tipJa": "sh の なかまを ぜんぶ よもう。まえの sh：ship, shop, shell。うしろの sh：fish, dish。"
+      },
+      "vocab": [
+        {"en":"name","ja":"なまえ","emoji":"📛","core":true},
+        {"en":"world","ja":"せかい","emoji":"🌏"},
+        {"en":"screen","ja":"がめん","emoji":"💻"},
+        {"en":"party","ja":"パーティー","emoji":"🎉"}
+      ],
+      "teacherScript": "Great job! きょうは まとめ。オンラインで せかいの ともだちに あいさつ しよう。「Hello. I'm ～. Nice to meet you.」を つづけて いえるかな？",
+      "conversation": {
+        "scene": "An online hello party hosted by Birimo",
+        "sceneJa": "ビリモの オンライン あいさつパーティー",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"We're online! Say hello to the world!","ja":"オンラインに つながったよ！せかいに あいさつ しよう！"},
+          {"speaker":"Haru","en":"Hello! I'm Haru. Nice to meet you!","ja":"こんにちは！ハルです。はじめまして！"},
+          {"speaker":"Birimo","en":"Hola! Bonjour! Ni hao! What's your name?","ja":"オラ！ボンジュール！ニーハオ！なまえは なに？"},
+          {"speaker":"Riko","en":"I'm Riko. Here you are, my name card!","ja":"リコです。はい、わたしの なまえカード！"},
+          {"speaker":"Kiko","en":"Thank you, everyone! See you!","ja":"みんな ありがとう！またね！"}
+        ],
+        "aiTask": {
+          "goalJa": "オンライン パーティーで Hello. I'm ～. Nice to meet you. と あいさつして、What's your name? と ききかえそう（なまえは ニックネームでも OK）",
+          "starterEn": "Hola! Hello! I'm Haru. Nice to meet you. What's your name?",
+          "targetExpressions": ["I'm ～.","Nice to meet you.","What's your name?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Hello. I'm ～. Nice to meet you. を つづけて いえたね","What's your name? で ききかえせたよ","sh の ことばを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 66,
+      "world": 3,
+      "title": "How Are You Today?",
+      "titleJa": "きょうの ちょうしは？",
+      "school": {
+        "grade": "小3",
+        "topic": "ちょうし・きもち",
+        "grammar": "How are you? ― I'm great. / I'm good. / I'm so-so.",
+        "expressions": [
+          {"en":"I'm great!","ja":"すごく げんき！","core":true},
+          {"en":"How are you today?","ja":"きょうの ちょうしは どう？"},
+          {"en":"I'm so-so.","ja":"まあまあ。"}
+        ],
+        "testPoints": ["How are you? と きかれて ちょうしを こたえられる","great / good / so-so の ちがいが わかる"]
+      },
+      "tpr": [
+        {"en":"Thumbs up.","ja":"グッド。","action":"おやゆびを うえに たてる","emoji":"👍"},
+        {"en":"Thumbs down.","ja":"ブー。","action":"おやゆびを したに むける","emoji":"👎"},
+        {"en":"Jump for joy.","ja":"よろこんで ジャンプ。","action":"ばんざいを しながら ジャンプ","emoji":"🤸"},
+        {"en":"Show me so-so.","ja":"まあまあの ポーズ。","action":"てのひらを よこに ゆらゆら させる","emoji":"🤷"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["ch"],
+        "sounds": ["/tʃ/"],
+        "words": ["chip","chin","chop","chat"],
+        "tipJa": "c と h が くっつくと ch。くしゃみの「ハクチュン」の「チュ」みたいな つよい おとだよ。ch-i-p → chip！"
+      },
+      "vocab": [
+        {"en":"great","ja":"すごく いい","emoji":"🤩","core":true},
+        {"en":"good","ja":"いい","emoji":"🙂"},
+        {"en":"so-so","ja":"まあまあ","emoji":"😐"},
+        {"en":"today","ja":"きょう","emoji":"📅"}
+      ],
+      "teacherScript": "Hello, everyone! How are you today? きょうは ちょうしの こたえかたを ふやそう。great（さいこう）、good（いいよ）、so-so（まあまあ）。ジェスチャーも つけてね！",
+      "conversation": {
+        "scene": "Morning check-in at the classroom door",
+        "sceneJa": "あさの きょうしつの いりぐち",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Good morning, Kiko! How are you today?","ja":"おはよう、キコ！きょうの ちょうしは？"},
+          {"speaker":"Kiko","en":"I'm great! Thumbs up!","ja":"すごく げんき！グッド！"},
+          {"speaker":"Ms. Emma","en":"Good morning, Haru. How are you?","ja":"おはよう、ハル。ちょうしは どう？"},
+          {"speaker":"Haru","en":"Hmm... I'm so-so.","ja":"うーん…まあまあ。"},
+          {"speaker":"Ms. Emma","en":"So-so? Let's have a fun day!","ja":"まあまあ？たのしい いちにちに しようね！"}
+        ],
+        "aiTask": {
+          "goalJa": "How are you? と きかれたら I'm great. / I'm good. / I'm so-so. で こたえて、ハルにも ききかえそう",
+          "starterEn": "Good morning! I'm great today. How are you?",
+          "targetExpressions": ["I'm ～.","How are you?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["How are you today? で ちょうしを きけたね","I'm great. / I'm so-so. で こたえられたよ","c と h で ch！ chip, chop を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 67,
+      "world": 3,
+      "title": "I'm Tired.",
+      "titleJa": "つかれた！",
+      "school": {
+        "grade": "小3",
+        "topic": "きもち・ようす",
+        "grammar": "I'm tired. / I'm sleepy. / I'm sad.",
+        "expressions": [
+          {"en":"I'm tired.","ja":"つかれた。","core":true},
+          {"en":"Me too. I'm sleepy.","ja":"わたしも。ねむい。"},
+          {"en":"Let's take a break.","ja":"ひとやすみ しよう。"}
+        ],
+        "testPoints": ["I'm tired. / I'm sleepy. / I'm sad. の いみが わかる","いまの きもちを I'm ～. で いえる"]
+      },
+      "tpr": [
+        {"en":"Stretch your arms.","ja":"うでを のばして。","action":"りょううでを うえに ぐーっと のばす","emoji":"🙆"},
+        {"en":"Yawn.","ja":"あくび。","action":"くちを おおきく あけて あくびの まね","emoji":"🥱"},
+        {"en":"Sit and rest.","ja":"すわって やすんで。","action":"すわって ひと いき つく","emoji":"🪑"},
+        {"en":"Take a deep breath.","ja":"しんこきゅう して。","action":"ゆっくり すって ゆっくり はく","emoji":"😮‍💨"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["ch"],
+        "sounds": ["/tʃ/"],
+        "words": ["much","such","rich","chess"],
+        "tipJa": "ch は おわりにも くるよ。m-u-ch → much（たくさん）！ chess（チェス）は まえに ch、おわりに ss が あるね。"
+      },
+      "vocab": [
+        {"en":"tired","ja":"つかれた","emoji":"😫","core":true},
+        {"en":"sleepy","ja":"ねむい","emoji":"😴"},
+        {"en":"sad","ja":"かなしい","emoji":"😢"},
+        {"en":"break","ja":"ひとやすみ","emoji":"☕"}
+      ],
+      "teacherScript": "Hi! たくさん あそぶと つかれるよね。そんなときは「I'm tired.」。ねむいときは「I'm sleepy.」、かなしいときは「I'm sad.」だよ。",
+      "conversation": {
+        "scene": "After running at recess",
+        "sceneJa": "やすみじかんに たくさん はしった あと",
+        "lines": [
+          {"speaker":"Haru","en":"Whew! I'm tired.","ja":"ふう！つかれた。"},
+          {"speaker":"Riko","en":"Me too. I'm sleepy.","ja":"わたしも。ねむい。"},
+          {"speaker":"Kiko","en":"Let's take a break.","ja":"ひとやすみ しよう。"},
+          {"speaker":"Birimo","en":"Here! Have some water.","ja":"はい！おみずを どうぞ。"},
+          {"speaker":"Haru","en":"Thank you, Birimo! I'm happy now.","ja":"ありがとう、ビリモ！げんきが でたよ。"}
+        ],
+        "aiTask": {
+          "goalJa": "I'm tired. / I'm sleepy. / I'm sad. など、いまの きもちを I'm ～. で つたえよう",
+          "starterEn": "Whew! I'm tired. How are you?",
+          "targetExpressions": ["I'm ～.","Me too."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["I'm tired. / I'm sleepy. / I'm sad. で きもちを いえたね","Let's take a break. で ひとやすみに さそえたよ","おわりの ch！ much, rich を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 68,
+      "world": 3,
+      "title": "Are You Happy?",
+      "titleJa": "うれしい？",
+      "school": {
+        "grade": "小3",
+        "topic": "きもちを たずねる",
+        "grammar": "Are you happy? ― Yes, I am. / No, I'm not.",
+        "expressions": [
+          {"en":"Are you happy?","ja":"うれしい？","core":true},
+          {"en":"Yes, I am.","ja":"うん、そうだよ。"},
+          {"en":"No, I'm not. I'm hungry.","ja":"ううん。おなかが すいてるの。"}
+        ],
+        "testPoints": ["Are you ～? の しつもんが わかる","Yes, I am. / No, I'm not. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Smile.","ja":"にっこり。","action":"にっこり わらう","emoji":"😊"},
+        {"en":"Make a sad face.","ja":"かなしい かお。","action":"まゆを さげて かなしい かお","emoji":"😢"},
+        {"en":"Make an angry face.","ja":"おこった かお。","action":"ほっぺを ふくらませて おこった かお","emoji":"😠"},
+        {"en":"Shake your head.","ja":"くびを よこに ふって。","action":"くびを よこに ふって「ちがうよ」","emoji":"🙅"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["ch"],
+        "sounds": ["/tʃ/"],
+        "words": ["chick","check","chin","chill"],
+        "tipJa": "chick（ひよこ）は まえが ch、おわりが ck。ck は もうすこし あとで ならうよ。ch-i-ck → chick！"
+      },
+      "vocab": [
+        {"en":"happy","ja":"うれしい","emoji":"😊","core":true},
+        {"en":"angry","ja":"おこっている","emoji":"😠"},
+        {"en":"hungry","ja":"おなかが すいた","emoji":"😋"},
+        {"en":"scared","ja":"こわい","emoji":"😨"}
+      ],
+      "teacherScript": "Hello! きょうは「Are you happy?」（うれしい？）と きく れんしゅう。こたえは「Yes, I am.」か「No, I'm not.」。かおの ひょうじょうも まねしてね。",
+      "conversation": {
+        "scene": "Asking friends how they feel",
+        "sceneJa": "ともだちの きもちを きいてみる",
+        "lines": [
+          {"speaker":"Haru","en":"Riko, are you happy?","ja":"リコ、うれしい？"},
+          {"speaker":"Riko","en":"Yes, I am! I have a new pen.","ja":"うん！あたらしい ペンが あるの。"},
+          {"speaker":"Riko","en":"Kiko, are you happy?","ja":"キコは うれしい？"},
+          {"speaker":"Kiko","en":"No, I'm not. I'm hungry.","ja":"ううん。おなかが すいてるの。"},
+          {"speaker":"Birimo","en":"Here's a cookie! Are you happy now?","ja":"クッキー どうぞ！これで うれしい？"},
+          {"speaker":"Kiko","en":"Yes, I am! Thank you!","ja":"うん！ありがとう！"}
+        ],
+        "aiTask": {
+          "goalJa": "Are you happy? と きかれたら Yes, I am. か No, I'm not. で こたえよう",
+          "starterEn": "I'm happy today! Are you happy?",
+          "targetExpressions": ["Yes, I am.","No, I'm not.","Are you ～?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Are you happy? で きもちを きけたね","Yes, I am. / No, I'm not. で こたえられたよ","chick, check！ ch の ことばを よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 69,
+      "world": 3,
+      "title": "I'm Hot! I'm Cold!",
+      "titleJa": "あつい！さむい！",
+      "school": {
+        "grade": "小3",
+        "topic": "からだの かんじ",
+        "grammar": "I'm hot. / I'm cold. / Here's my ～.",
+        "expressions": [
+          {"en":"I'm cold.","ja":"さむい。","core":true},
+          {"en":"I'm hot. Let's eat ice cream!","ja":"あつい。アイスを たべよう！"},
+          {"en":"Here's my jacket.","ja":"わたしの ジャケットを どうぞ。"}
+        ],
+        "testPoints": ["I'm hot. / I'm cold. の いみが わかる","からだの かんじを I'm ～. で いえる"]
+      },
+      "tpr": [
+        {"en":"Shiver.","ja":"ブルブル ふるえて。","action":"からだを ちぢめて ブルブル ふるえる","emoji":"🥶"},
+        {"en":"Fan your face.","ja":"かおを あおいで。","action":"てで かおを パタパタ あおぐ","emoji":"🥵"},
+        {"en":"Put on your jacket.","ja":"ジャケットを きて。","action":"ジャケットに うでを とおす まね","emoji":"🧥"},
+        {"en":"Rub your hands.","ja":"てを こすって。","action":"りょうてを すりすり こする","emoji":"🙌"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["ch"],
+        "sounds": ["/tʃ/"],
+        "words": ["lunch","bunch","munch","bench"],
+        "tipJa": "n の あとの ch も「チ」の おと。l-u-n-ch → lunch（おひるごはん）！ n と ch を なめらかに つなげよう。"
+      },
+      "vocab": [
+        {"en":"hot","ja":"あつい","emoji":"🥵","core":true},
+        {"en":"cold","ja":"さむい","emoji":"🥶"},
+        {"en":"jacket","ja":"ジャケット","emoji":"🧥"},
+        {"en":"scarf","ja":"マフラー","emoji":"🧣"}
+      ],
+      "teacherScript": "Hi! あついときは「I'm hot.」、さむいときは「I'm cold.」。からだの かんじも えいごで いえるよ。ブルブル、パタパタの ジェスチャーも しよう！",
+      "conversation": {
+        "scene": "A picnic on a windy day",
+        "sceneJa": "かぜの つよい ひの ピクニック",
+        "lines": [
+          {"speaker":"Kiko","en":"Brr! I'm cold.","ja":"ブルブル！さむい。"},
+          {"speaker":"Haru","en":"Here's my jacket, Kiko.","ja":"ぼくの ジャケットを どうぞ、キコ。"},
+          {"speaker":"Kiko","en":"Thank you, Haru!","ja":"ありがとう、ハル！"},
+          {"speaker":"Riko","en":"I'm not cold. I'm hot!","ja":"わたしは さむくない。あついよ！"},
+          {"speaker":"Birimo","en":"Ha ha! Let's eat lunch on the bench!","ja":"あはは！ベンチで おひるごはんを たべよう！"}
+        ],
+        "aiTask": {
+          "goalJa": "I'm hot. / I'm cold. で からだの かんじを つたえよう",
+          "starterEn": "Brr! It's windy. I'm cold. Are you cold?",
+          "targetExpressions": ["I'm cold.","I'm hot."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["I'm hot. / I'm cold. で からだの かんじを いえたね","Here's my jacket. で やさしく できたよ","lunch, bench！ n の あとの ch を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 70,
+      "world": 3,
+      "title": "At the Nurse's Office (Review)",
+      "titleJa": "まとめ：ほけんしつで だいじょうぶ？",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：きもち・ようす",
+        "grammar": "Are you OK? ― I'm tired. / How are you? ― I'm ～. / Take care.",
+        "expressions": [
+          {"en":"Are you OK?","ja":"だいじょうぶ？","core":true},
+          {"en":"I'm tired and cold.","ja":"つかれて さむいの。"},
+          {"en":"Take care.","ja":"おだいじに。"}
+        ],
+        "testPoints": ["Are you OK? / How are you? で あいての ようすを きける","きもち・からだの かんじを I'm ～. で こたえられる","ch の ことば（chip, much, chick, lunch）を よめる"]
+      },
+      "tpr": [
+        {"en":"Lie down.","ja":"よこに なって。","action":"ゆっくり よこに なる まね","emoji":"🛏️"},
+        {"en":"Close your eyes.","ja":"めを とじて。","action":"そっと めを とじる","emoji":"😌"},
+        {"en":"Drink some water.","ja":"おみずを のんで。","action":"コップで おみずを のむ まね","emoji":"🥤"},
+        {"en":"Sit up slowly.","ja":"ゆっくり おきて。","action":"ゆっくり からだを おこす","emoji":"🧍"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["ch"],
+        "sounds": ["/tʃ/"],
+        "words": ["chip","much","chick","lunch","chop"],
+        "tipJa": "ch の なかまを ぜんぶ よもう。まえの ch：chip, chick, chop。うしろの ch：much, lunch。"
+      },
+      "vocab": [
+        {"en":"OK","ja":"だいじょうぶ","emoji":"👌","core":true},
+        {"en":"nurse","ja":"ほけんの せんせい","emoji":"🧑‍⚕️"},
+        {"en":"water","ja":"みず","emoji":"💧"},
+        {"en":"bed","ja":"ベッド","emoji":"🛏️"}
+      ],
+      "teacherScript": "Great job! きょうは まとめ。ほけんしつで「Are you OK?」と きいて、きもちや からだの かんじを こたえよう。さいごは「Take care.」（おだいじに）で やさしく ね。",
+      "conversation": {
+        "scene": "Checking on a friend at the nurse's office",
+        "sceneJa": "ほけんしつで ともだちを しんぱい",
+        "lines": [
+          {"speaker":"Riko","en":"Haru, are you OK?","ja":"ハル、だいじょうぶ？"},
+          {"speaker":"Haru","en":"I'm tired and cold.","ja":"つかれて さむいの。"},
+          {"speaker":"Ms. Emma","en":"Lie down and rest, Haru.","ja":"よこに なって やすんでね、ハル。"},
+          {"speaker":"Kiko","en":"Here's some water.","ja":"おみずを どうぞ。"},
+          {"speaker":"Haru","en":"Thank you. I'm OK now.","ja":"ありがとう。もう だいじょうぶ。"},
+          {"speaker":"Riko","en":"Good! Take care!","ja":"よかった！おだいじに！"}
+        ],
+        "aiTask": {
+          "goalJa": "Are you OK? / How are you? と きかれたら いまの ようすを I'm ～. で こたえよう",
+          "starterEn": "Hi! You look tired. Are you OK?",
+          "targetExpressions": ["I'm ～.","Are you OK?","Thank you."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Are you OK? で ともだちを しんぱい できたね","I'm tired and cold. のように 2つ つなげて いえたよ","ch の ことばを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 71,
+      "world": 3,
+      "title": "Numbers 11 to 15",
+      "titleJa": "かず 11〜15",
+      "school": {
+        "grade": "小3",
+        "topic": "かず 11〜15",
+        "grammar": "How many ～? ― Eleven. / Twelve.",
+        "expressions": [
+          {"en":"How many cards?","ja":"カードは なんまい？","core":true},
+          {"en":"Twelve cards.","ja":"カードは 12まい。"},
+          {"en":"Let's count!","ja":"かぞえよう！"}
+        ],
+        "testPoints": ["11〜15 を えいごで いえる","How many ～? で かずを きける"]
+      },
+      "tpr": [
+        {"en":"Clap eleven times.","ja":"11かい てを たたいて。","action":"かぞえながら 11かい はくしゅ","emoji":"👏"},
+        {"en":"Jump twelve times.","ja":"12かい ジャンプ。","action":"かぞえながら 12かい ジャンプ","emoji":"🦘"},
+        {"en":"Stomp thirteen times.","ja":"13かい あしぶみ。","action":"かぞえながら 13かい あしぶみ","emoji":"🦶"},
+        {"en":"Count with me.","ja":"いっしょに かぞえよう。","action":"ゆびを おりながら いっしょに かぞえる","emoji":"🔢"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["th"],
+        "sounds": ["/θ/"],
+        "words": ["thin","thick","thud","moth"],
+        "tipJa": "t と h が くっつくと th。したの さきを はで かるく はさんで「ス」と いきだけ だすよ。th-i-n → thin（ほそい）！"
+      },
+      "vocab": [
+        {"en":"eleven","ja":"じゅういち（11）","emoji":"11"},
+        {"en":"twelve","ja":"じゅうに（12）","emoji":"12","core":true},
+        {"en":"thirteen","ja":"じゅうさん（13）","emoji":"13"},
+        {"en":"fourteen","ja":"じゅうよん（14）","emoji":"14"},
+        {"en":"fifteen","ja":"じゅうご（15）","emoji":"15"}
+      ],
+      "teacherScript": "Hello! きょうは 11から 15。eleven, twelve は とくべつな いいかた。13・14・15 は おわりが -teen に なるよ。thirteen の th は したを はさんでね。いっしょに かぞえよう！",
+      "conversation": {
+        "scene": "Counting cards after a card game",
+        "sceneJa": "カードゲームの あとで まいすうを かぞえる",
+        "lines": [
+          {"speaker":"Riko","en":"How many cards, Haru?","ja":"ハル、カードは なんまい？"},
+          {"speaker":"Haru","en":"Let's count! Ten, eleven, twelve. Twelve cards!","ja":"かぞえよう！10、11、12。12まい！"},
+          {"speaker":"Riko","en":"I have fourteen cards!","ja":"わたしは 14まい！"},
+          {"speaker":"Kiko","en":"I have fifteen!","ja":"わたしは 15まい！"},
+          {"speaker":"Birimo","en":"Wow, Kiko! Fifteen cards!","ja":"すごい、キコ！15まい！"}
+        ],
+        "aiTask": {
+          "goalJa": "How many ～? と きかれたら 11〜15 の かずで こたえよう",
+          "starterEn": "Let's count cards! I have thirteen cards. How many cards?",
+          "targetExpressions": ["How many ～?","～ cards."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["11〜15 を えいごで いえたね","How many cards? で かずを きけたよ","t と h で th！ thin, thick を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 72,
+      "world": 3,
+      "title": "Numbers 16 to 20",
+      "titleJa": "かず 16〜20",
+      "school": {
+        "grade": "小3",
+        "topic": "かず 16〜20",
+        "grammar": "How many ～? ― Sixteen. / Twenty.",
+        "expressions": [
+          {"en":"Twenty stickers!","ja":"シール 20まい！","core":true},
+          {"en":"How many stickers?","ja":"シールは なんまい？"},
+          {"en":"Wow, so many!","ja":"わあ、たくさん！"}
+        ],
+        "testPoints": ["16〜20 を えいごで いえる","-teen の かずを ききわけられる"]
+      },
+      "tpr": [
+        {"en":"Hop sixteen times.","ja":"16かい ケンケン。","action":"かたあしで 16かい とぶ","emoji":"🐸"},
+        {"en":"Spin around.","ja":"くるっと まわって。","action":"その ばで 1かい まわる","emoji":"🌀"},
+        {"en":"Count to twenty.","ja":"20まで かぞえて。","action":"ゆびを つかって 20まで かぞえる","emoji":"🔢"},
+        {"en":"Stomp your feet.","ja":"あしぶみ して。","action":"その ばで ドンドン あしぶみ","emoji":"🦶"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["th"],
+        "sounds": ["/ð/"],
+        "words": ["this","that","then","them"],
+        "tipJa": "th には もう1つの おとが あるよ。したを はさんだまま こえを だすと「ズ」に にた おと。th-i-s → this、th-a-t → that！"
+      },
+      "vocab": [
+        {"en":"sixteen","ja":"じゅうろく（16）","emoji":"16"},
+        {"en":"seventeen","ja":"じゅうなな（17）","emoji":"17"},
+        {"en":"eighteen","ja":"じゅうはち（18）","emoji":"18"},
+        {"en":"nineteen","ja":"じゅうきゅう（19）","emoji":"19"},
+        {"en":"twenty","ja":"にじゅう（20）","emoji":"20","core":true}
+      ],
+      "teacherScript": "Hi! きょうは 16から 20。sixteen, seventeen, eighteen, nineteen… そして twenty！ -teen の おとを はっきり のばして いおう。",
+      "conversation": {
+        "scene": "Counting stickers on a sticker sheet",
+        "sceneJa": "シールちょうの シールを かぞえる",
+        "lines": [
+          {"speaker":"Kiko","en":"Look at my stickers!","ja":"わたしの シールを みて！"},
+          {"speaker":"Riko","en":"Wow, so many! How many stickers?","ja":"わあ、たくさん！なんまい？"},
+          {"speaker":"Kiko","en":"Let's count. Eighteen, nineteen, twenty!","ja":"かぞえよう。18、19、20！"},
+          {"speaker":"Haru","en":"Twenty stickers! Cool!","ja":"シール 20まい！すごい！"},
+          {"speaker":"Birimo","en":"This one is my favorite!","ja":"これが いちばん すき！"}
+        ],
+        "aiTask": {
+          "goalJa": "How many ～? と きかれたら 16〜20 の かずで こたえよう",
+          "starterEn": "Look at the stars! Let's count to twenty. How many stars?",
+          "targetExpressions": ["How many ～?","Twenty."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["16〜20 を えいごで いえたね","How many stickers? で かずを きけたよ","this, that！ th の 2つめの おとを よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 73,
+      "world": 3,
+      "title": "How Many Balls?",
+      "titleJa": "ボールは いくつ？",
+      "school": {
+        "grade": "小3",
+        "topic": "かず 1〜20・しつもん",
+        "grammar": "How many ～? ― Thirteen balls.",
+        "expressions": [
+          {"en":"How many balls?","ja":"ボールは いくつ？","core":true},
+          {"en":"Thirteen balls.","ja":"ボールは 13こ。"},
+          {"en":"One more!","ja":"もう 1こ！"}
+        ],
+        "testPoints": ["How many ～? で かずを きける","1〜20 の かずで こたえられる"]
+      },
+      "tpr": [
+        {"en":"Bounce the ball.","ja":"ボールを ついて。","action":"ボールを ポンポン つく まね","emoji":"🏀"},
+        {"en":"Roll the ball.","ja":"ボールを ころがして。","action":"ボールを ゆかに ころがす まね","emoji":"⚽"},
+        {"en":"Catch the ball.","ja":"ボールを とって。","action":"りょうてで ボールを とる まね","emoji":"🙌"},
+        {"en":"Put it in the basket.","ja":"かごに いれて。","action":"ボールを かごに いれる まね","emoji":"🧺"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["th"],
+        "sounds": ["/θ/"],
+        "words": ["bath","math","path","with"],
+        "tipJa": "th は おわりにも くるよ。b-a-th → bath（おふろ）、m-a-th → math（さんすう）。さいごに したを ちょこっと だそう。"
+      },
+      "vocab": [
+        {"en":"ball","ja":"ボール","emoji":"⚽","core":true},
+        {"en":"basket","ja":"かご","emoji":"🧺"},
+        {"en":"gym","ja":"たいいくかん","emoji":"🏟️"},
+        {"en":"number","ja":"かず","emoji":"🔢"}
+      ],
+      "teacherScript": "Hello! きょうは 1から 20を ぜんぶ つかうよ。「How many balls?」と きかれたら「Thirteen balls.」のように こたえよう。",
+      "conversation": {
+        "scene": "Putting balls away after PE",
+        "sceneJa": "たいいくの あと ボールを かたづける",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"How many balls in the basket?","ja":"かごに ボールは いくつ？"},
+          {"speaker":"Haru","en":"Let's count! One, two, three... thirteen balls.","ja":"かぞえよう！1、2、3…13こ。"},
+          {"speaker":"Ms. Emma","en":"We need twenty balls.","ja":"20こ ひつようよ。"},
+          {"speaker":"Riko","en":"Here! Fourteen, fifteen, sixteen, seventeen.","ja":"はい！14、15、16、17。"},
+          {"speaker":"Kiko","en":"Eighteen, nineteen, twenty! Done!","ja":"18、19、20！できた！"}
+        ],
+        "aiTask": {
+          "goalJa": "How many ～? の しつもんに 1〜20 の かずで こたえよう",
+          "starterEn": "Let's count balls! How many balls?",
+          "targetExpressions": ["～ balls.","How many ～?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["How many balls? で かずを きけたね","1〜20 を つかって こたえられたよ","bath, math！ おわりの th を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 74,
+      "world": 3,
+      "title": "Rock, Paper, Scissors!",
+      "titleJa": "じゃんけん ぽん！",
+      "school": {
+        "grade": "小3",
+        "topic": "じゃんけん・かず",
+        "grammar": "Rock, paper, scissors, one, two, three! ― I win! / You win!",
+        "expressions": [
+          {"en":"I win!","ja":"かった！","core":true},
+          {"en":"Rock, paper, scissors, one, two, three!","ja":"じゃんけん ぽん！"},
+          {"en":"You win! One more time!","ja":"あなたの かち！もう いっかい！"}
+        ],
+        "testPoints": ["じゃんけんの かけごえを えいごで いえる","I win! / You win! の いみが わかる"]
+      },
+      "tpr": [
+        {"en":"Make a rock.","ja":"グー。","action":"てを ぎゅっと にぎって グー","emoji":"✊"},
+        {"en":"Make paper.","ja":"パー。","action":"てを ひろげて パー","emoji":"✋"},
+        {"en":"Make scissors.","ja":"チョキ。","action":"ゆびを 2ほん だして チョキ","emoji":"✌️"},
+        {"en":"Shake hands.","ja":"あくしゅ。","action":"さいごに あいてと あくしゅ","emoji":"🤝"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["th"],
+        "sounds": ["/θ/","/ð/"],
+        "words": ["thick","that","moth","than"],
+        "tipJa": "th の 2つの おとを くらべよう。いきだけ：thick, moth。こえも だす：that, than。"
+      },
+      "vocab": [
+        {"en":"rock","ja":"グー","emoji":"✊","core":true},
+        {"en":"paper","ja":"パー","emoji":"✋"},
+        {"en":"scissors","ja":"チョキ","emoji":"✌️"},
+        {"en":"win","ja":"かつ","emoji":"🏆"}
+      ],
+      "teacherScript": "Hi! じゃんけんは えいごで「Rock, paper, scissors, one, two, three!」。かったら「I win!」、まけたら「You win!」。かった かずも かぞえよう！",
+      "conversation": {
+        "scene": "A rock-paper-scissors game in the classroom",
+        "sceneJa": "きょうしつで じゃんけん たいかい",
+        "lines": [
+          {"speaker":"Haru","en":"Let's play rock, paper, scissors!","ja":"じゃんけん しよう！"},
+          {"speaker":"Riko","en":"OK! Rock, paper, scissors, one, two, three!","ja":"いいよ！じゃんけん ぽん！"},
+          {"speaker":"Haru","en":"Yes! I win!","ja":"やった！かった！"},
+          {"speaker":"Riko","en":"Oh no! You win. One more time!","ja":"ああ！あなたの かち。もう いっかい！"},
+          {"speaker":"Birimo","en":"Let's count the wins. Haru, three! Riko, four!","ja":"かった かずを かぞえよう。ハル 3かい！リコ 4かい！"}
+        ],
+        "aiTask": {
+          "goalJa": "えいごで じゃんけんを しよう。かったら I win!、まけたら You win! と いおう",
+          "starterEn": "Let's play rock, paper, scissors! Rock, paper, scissors, one, two, three!",
+          "targetExpressions": ["I win!","You win!","One more time!"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["じゃんけんを えいごで できたね","I win! / You win! が いえたよ","thick と that！ th の 2つの おとを くらべたよ"]
+      }
+    },
+    {
+      "lessonNo": 75,
+      "world": 3,
+      "title": "Bowling Tournament (Review)",
+      "titleJa": "まとめ：ボウリング たいかい",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：かず 1〜20",
+        "grammar": "How many pins? ― Ten pins! / I win! / Good job!",
+        "expressions": [
+          {"en":"How many pins?","ja":"ピンは なんぼん？","core":true},
+          {"en":"Twenty points! I win!","ja":"20てん！かった！"},
+          {"en":"Good job!","ja":"よく がんばったね！"}
+        ],
+        "testPoints": ["1〜20 の かずを きいて わかる・いえる","How many ～? で かずを きける","th の ことば（thin, this, bath, with）を よめる"]
+      },
+      "tpr": [
+        {"en":"Roll the ball.","ja":"ボールを ころがして。","action":"ボウリングの ボールを ころがす まね","emoji":"🎳"},
+        {"en":"Count the pins.","ja":"ピンを かぞえて。","action":"ゆびさしながら ピンを かぞえる","emoji":"🔢"},
+        {"en":"Cheer for your friend.","ja":"ともだちを おうえん して。","action":"Go! Go! と おうえんする","emoji":"📣"},
+        {"en":"Give me five!","ja":"ハイタッチ！","action":"ともだちと ハイタッチ","emoji":"🖐️"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["th"],
+        "sounds": ["/θ/","/ð/"],
+        "words": ["thin","this","bath","with","that"],
+        "tipJa": "th の なかまを ぜんぶ よもう。いきだけの th：thin, bath, with。こえの th：this, that。"
+      },
+      "vocab": [
+        {"en":"pin","ja":"ピン","emoji":"🎳","core":true},
+        {"en":"point","ja":"てん","emoji":"⭐"},
+        {"en":"team","ja":"チーム","emoji":"👫"},
+        {"en":"turn","ja":"じゅんばん","emoji":"🔄"}
+      ],
+      "teacherScript": "Great job! きょうは まとめ。ボウリング たいかいで かずを かぞえよう。「How many pins?」で きいて、1〜20 で こたえてね。",
+      "conversation": {
+        "scene": "A class bowling tournament",
+        "sceneJa": "クラスの ボウリング たいかい",
+        "lines": [
+          {"speaker":"Haru","en":"Go! Yes! Strike!","ja":"いけ！やった！ストライク！"},
+          {"speaker":"Riko","en":"How many pins?","ja":"ピンは なんぼん？"},
+          {"speaker":"Haru","en":"Ten pins! Ten points!","ja":"10ぽん！10てん！"},
+          {"speaker":"Kiko","en":"My turn! Seven pins.","ja":"わたしの ばん！7ほん。"},
+          {"speaker":"Ms. Emma","en":"Haru, twenty points! Kiko, seventeen points. Good job, everyone!","ja":"ハル 20てん！キコ 17てん。みんな よく がんばったね！"}
+        ],
+        "aiTask": {
+          "goalJa": "ボウリングで How many pins? と きいたり、かずで こたえたり しよう",
+          "starterEn": "My turn! Go! Eight pins! How many pins for you?",
+          "targetExpressions": ["How many ～?","～ pins.","Good job!"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["How many pins? で かずを きけたね","1〜20 で とくてんを いえたよ","th の ことばを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 76,
+      "world": 3,
+      "title": "What Color Do You Like?",
+      "titleJa": "なにいろが すき？",
+      "school": {
+        "grade": "小3",
+        "topic": "すきな いろ",
+        "grammar": "What color do you like? ― I like blue.",
+        "expressions": [
+          {"en":"What color do you like?","ja":"なにいろが すき？","core":true},
+          {"en":"I like blue.","ja":"あおが すき。"},
+          {"en":"Me too! Blue is cool.","ja":"わたしも！あおは かっこいい。"}
+        ],
+        "testPoints": ["What color do you like? の いみが わかる","I like ～. で すきな いろを こたえられる"]
+      },
+      "tpr": [
+        {"en":"Touch something blue.","ja":"あおい ものを さわって。","action":"ちかくの あおい ものを さわる","emoji":"🔵"},
+        {"en":"Point to something red.","ja":"あかい ものを ゆびさして。","action":"あかい ものを ゆびさす","emoji":"🔴"},
+        {"en":"Find something green.","ja":"みどりの ものを さがして。","action":"みどりの ものを さがして みせる","emoji":"🟢"},
+        {"en":"Jump if you like pink.","ja":"ピンクが すきなら ジャンプ。","action":"ピンクが すきな ひとは ジャンプ","emoji":"💗"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["wh"],
+        "sounds": ["/w/"],
+        "words": ["when","whip","whiz","whim"],
+        "tipJa": "w と h が くっつくと wh。くちを まるく して「ウ」。h は ほとんど きこえないよ。wh-e-n → when（いつ）！"
+      },
+      "vocab": [
+        {"en":"blue","ja":"あお","emoji":"🔵","core":true},
+        {"en":"green","ja":"みどり","emoji":"🟢"},
+        {"en":"purple","ja":"むらさき","emoji":"🟣"},
+        {"en":"color","ja":"いろ","emoji":"🎨"}
+      ],
+      "teacherScript": "Hello! きょうは すきな いろの ききかた。「What color do you like?」って きいて、「I like blue.」で こたえよう。",
+      "conversation": {
+        "scene": "Choosing colors for a class flag",
+        "sceneJa": "クラスの はたの いろを きめる",
+        "lines": [
+          {"speaker":"Riko","en":"Let's make a class flag! What color do you like, Haru?","ja":"クラスの はたを つくろう！ハルは なにいろが すき？"},
+          {"speaker":"Haru","en":"I like blue.","ja":"あおが すき。"},
+          {"speaker":"Riko","en":"Me too! Blue is cool. What color do you like, Kiko?","ja":"わたしも！あおは かっこいい。キコは？"},
+          {"speaker":"Kiko","en":"I like purple.","ja":"むらさきが すき。"},
+          {"speaker":"Birimo","en":"Blue and purple! Nice flag!","ja":"あおと むらさき！すてきな はた！"}
+        ],
+        "aiTask": {
+          "goalJa": "What color do you like? と きかれたら I like ～. で すきな いろを こたえよう。ハルにも きいてみよう",
+          "starterEn": "I like blue. What color do you like?",
+          "targetExpressions": ["I like ～.","What color do you like?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["What color do you like? で すきな いろを きけたね","I like blue. のように こたえられたよ","w と h で wh！ when, whip を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 77,
+      "world": 3,
+      "title": "Do You Like Red?",
+      "titleJa": "あかは すき？",
+      "school": {
+        "grade": "小3",
+        "topic": "すきな いろ・しつもん",
+        "grammar": "Do you like red? ― Yes, I do. / No, I don't.",
+        "expressions": [
+          {"en":"Do you like red?","ja":"あかは すき？","core":true},
+          {"en":"Yes, I do. I like red.","ja":"うん、すき。あかが すき。"},
+          {"en":"No, I don't. I like yellow.","ja":"ううん。きいろが すき。"}
+        ],
+        "testPoints": ["Do you like ～? の しつもんが わかる","Yes, I do. / No, I don't. で こたえられる"]
+      },
+      "tpr": [
+        {"en":"Stand up if you like red.","ja":"あかが すきなら たって。","action":"あかが すきな ひとは たつ","emoji":"🔴"},
+        {"en":"Sit down if you like yellow.","ja":"きいろが すきなら すわって。","action":"きいろが すきな ひとは すわる","emoji":"🟡"},
+        {"en":"Make a big circle.","ja":"おおきな まるを つくって。","action":"りょううでで あたまの うえに まる","emoji":"⭕"},
+        {"en":"Cross your arms.","ja":"うでで バツ。","action":"うでを まえで クロスして バツ","emoji":"❌"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["wh"],
+        "sounds": ["/w/"],
+        "words": ["which","whack","whiff","when"],
+        "tipJa": "which（どっち）は まえが wh、おわりが ch！ wh-i-ch → which。whack（パシッ）、whiff（ぷんと におう）も よもう。"
+      },
+      "vocab": [
+        {"en":"red","ja":"あか","emoji":"🔴","core":true},
+        {"en":"yellow","ja":"きいろ","emoji":"🟡"},
+        {"en":"orange","ja":"オレンジいろ","emoji":"🟠"},
+        {"en":"black","ja":"くろ","emoji":"⚫"}
+      ],
+      "teacherScript": "Hi! きょうは「Do you like red?」（あかは すき？）。こたえは「Yes, I do.」か「No, I don't.」。ワールド1でも くだもので やったね。いろで やってみよう！",
+      "conversation": {
+        "scene": "Choosing paints in art class",
+        "sceneJa": "ずこうで えのぐを えらぶ",
+        "lines": [
+          {"speaker":"Haru","en":"Do you like red, Kiko?","ja":"キコ、あかは すき？"},
+          {"speaker":"Kiko","en":"No, I don't. I like yellow.","ja":"ううん。きいろが すき。"},
+          {"speaker":"Haru","en":"OK. Here's yellow!","ja":"わかった。きいろ どうぞ！"},
+          {"speaker":"Kiko","en":"Thank you! Do you like red, Haru?","ja":"ありがとう！ハルは あかが すき？"},
+          {"speaker":"Haru","en":"Yes, I do. Red is my color!","ja":"うん、すき。あかは ぼくの いろ！"}
+        ],
+        "aiTask": {
+          "goalJa": "Do you like ～? と きかれたら Yes, I do. か No, I don't. で こたえよう",
+          "starterEn": "I like red. Do you like red?",
+          "targetExpressions": ["Yes, I do.","No, I don't.","Do you like ～?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Do you like red? で すきか どうか きけたね","Yes, I do. / No, I don't. で こたえられたよ","which, whack！ wh の ことばを よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 78,
+      "world": 3,
+      "title": "Mixing Colors",
+      "titleJa": "いろを まぜよう",
+      "school": {
+        "grade": "小3",
+        "topic": "いろ・いろまぜ",
+        "grammar": "Red and yellow make orange. / What color is it? ― It's orange.",
+        "expressions": [
+          {"en":"It's orange!","ja":"オレンジいろだ！","core":true},
+          {"en":"Red and yellow make orange.","ja":"あかと きいろで オレンジいろに なる。"},
+          {"en":"Let's mix blue and yellow.","ja":"あおと きいろを まぜよう。"}
+        ],
+        "testPoints": ["It's ～. で いろを こたえられる","いろの なまえを きいて わかる"]
+      },
+      "tpr": [
+        {"en":"Mix the paints.","ja":"えのぐを まぜて。","action":"パレットで えのぐを まぜる まね","emoji":"🎨"},
+        {"en":"Stir, stir, stir.","ja":"ぐるぐる まぜて。","action":"ふでで ぐるぐる まぜる まね","emoji":"🥄"},
+        {"en":"Paint a big circle.","ja":"おおきな まるを ぬって。","action":"ふでで おおきな まるを かく","emoji":"🖌️"},
+        {"en":"Wash your brush.","ja":"ふでを あらって。","action":"ふでを みずで あらう まね","emoji":"🚰"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["wh"],
+        "sounds": ["/w/"],
+        "words": ["whiz","whip","whim","wham"],
+        "tipJa": "whip は クリームを あわだてる こと。wh-i-p → whip、wh-i-z → whiz（ビュン！）。white（しろ）も wh で はじまるよ。"
+      },
+      "vocab": [
+        {"en":"paint","ja":"えのぐ","emoji":"🎨","core":true},
+        {"en":"brush","ja":"ふで","emoji":"🖌️"},
+        {"en":"mix","ja":"まぜる","emoji":"🥣"},
+        {"en":"white","ja":"しろ","emoji":"⚪"}
+      ],
+      "teacherScript": "Hello! いろを まぜると あたらしい いろが できるよ。「Red and yellow make orange.」 できた いろは「It's orange!」で いおう。white（しろ）も wh で はじまるね。",
+      "conversation": {
+        "scene": "A color mixing experiment in art class",
+        "sceneJa": "ずこうの じかんに いろまぜ じっけん",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Let's mix red and yellow. What color is it?","ja":"あかと きいろを まぜよう。なにいろ？"},
+          {"speaker":"Riko","en":"It's orange!","ja":"オレンジいろだ！"},
+          {"speaker":"Haru","en":"Let's mix blue and yellow.","ja":"あおと きいろを まぜよう。"},
+          {"speaker":"Kiko","en":"Wow! It's green!","ja":"わあ！みどりだ！"},
+          {"speaker":"Birimo","en":"Red and white make pink!","ja":"あかと しろで ピンク！"}
+        ],
+        "aiTask": {
+          "goalJa": "いろを まぜて できた いろを It's ～. で こたえよう",
+          "starterEn": "Let's mix red and yellow! What color is it?",
+          "targetExpressions": ["It's ～.","Let's mix ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["いろを まぜて It's orange! と いえたね","Red and yellow make orange. を きいて わかったよ","whip, whiz！ wh を よめたよ。white も wh だね"]
+      }
+    },
+    {
+      "lessonNo": 79,
+      "world": 3,
+      "title": "Rainbow Colors",
+      "titleJa": "にじの いろ",
+      "school": {
+        "grade": "小3",
+        "topic": "いろ・にじ",
+        "grammar": "How many colors? ― Seven colors. / What color do you like? ― I like ～.",
+        "expressions": [
+          {"en":"How many colors?","ja":"いろは いくつ？","core":true},
+          {"en":"Seven colors!","ja":"7しょく！"},
+          {"en":"Look! A rainbow!","ja":"みて！にじ！"}
+        ],
+        "testPoints": ["How many colors? で いろの かずを きける","にじの いろを えいごで いえる"]
+      },
+      "tpr": [
+        {"en":"Look up at the sky.","ja":"そらを みあげて。","action":"かおを あげて そらを みる","emoji":"☁️"},
+        {"en":"Draw a rainbow in the air.","ja":"くうちゅうに にじを かいて。","action":"うでで おおきな にじを かく","emoji":"🌈"},
+        {"en":"Count the colors.","ja":"いろを かぞえて。","action":"ゆびを おりながら いろを かぞえる","emoji":"🔢"},
+        {"en":"Say wow!","ja":"わあって いって。","action":"おどろいた かおで Wow! と いう","emoji":"😲"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["wh"],
+        "sounds": ["/w/"],
+        "words": ["when","wham","whiff","whiz"],
+        "tipJa": "wh の ことばを はやく よんでみよう。wh-e-n → when、wh-a-m → wham（ドカン）！ くちを まるく するのを わすれずに。"
+      },
+      "vocab": [
+        {"en":"rainbow","ja":"にじ","emoji":"🌈","core":true},
+        {"en":"sky","ja":"そら","emoji":"🌤️"},
+        {"en":"pink","ja":"ピンク","emoji":"💗"},
+        {"en":"brown","ja":"ちゃいろ","emoji":"🟤"}
+      ],
+      "teacherScript": "Hi! あめの あとに そらを みると… にじ！ にじの いろは いくつ かな？「How many colors?」で きいて、かぞえてみよう。",
+      "conversation": {
+        "scene": "Finding a rainbow after the rain",
+        "sceneJa": "あめあがりに にじを みつける",
+        "lines": [
+          {"speaker":"Kiko","en":"Look! A rainbow!","ja":"みて！にじ！"},
+          {"speaker":"Haru","en":"Wow! How many colors?","ja":"わあ！いろは いくつ？"},
+          {"speaker":"Riko","en":"Let's count. Red, orange, yellow, green, blue... seven colors!","ja":"かぞえよう。あか、オレンジ、きいろ、みどり、あお…7しょく！"},
+          {"speaker":"Kiko","en":"What color do you like, Riko?","ja":"リコは なにいろが すき？"},
+          {"speaker":"Riko","en":"I like purple!","ja":"むらさきが すき！"},
+          {"speaker":"Birimo","en":"I like all the colors!","ja":"ぼくは ぜんぶの いろが すき！"}
+        ],
+        "aiTask": {
+          "goalJa": "にじを みながら How many colors? や What color do you like? で おしゃべりしよう",
+          "starterEn": "Look! A rainbow! How many colors?",
+          "targetExpressions": ["How many colors?","I like ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["How many colors? で にじの いろを かぞえたね","すきな いろを I like ～. で いえたよ","when, wham！ wh を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 80,
+      "world": 3,
+      "title": "T-shirt Shop (Review)",
+      "titleJa": "まとめ：Tシャツづくり",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：すきな いろ",
+        "grammar": "What color do you like? ― I like ～. / A blue T-shirt, please. ― Here you are.",
+        "expressions": [
+          {"en":"A blue T-shirt, please.","ja":"あおい Tシャツを ください。","core":true},
+          {"en":"What color do you like?","ja":"なにいろが すき？"},
+          {"en":"Here you are.","ja":"はい、どうぞ。"}
+        ],
+        "testPoints": ["What color do you like? / Do you like ～? で いろの すききらいを きける","～, please. で ほしい いろを つたえられる","wh の ことば（when, whip, which）を よめる"]
+      },
+      "tpr": [
+        {"en":"Choose a color.","ja":"いろを えらんで。","action":"すきな いろを ゆびさして えらぶ","emoji":"🎨"},
+        {"en":"Paint a star.","ja":"ほしを ぬって。","action":"くうちゅうに ほしを かいて ぬる","emoji":"⭐"},
+        {"en":"Put on your T-shirt.","ja":"Tシャツを きて。","action":"あたまから Tシャツを きる まね","emoji":"👕"},
+        {"en":"Turn around.","ja":"くるっと まわって。","action":"その ばで くるっと まわって みせる","emoji":"🔄"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["wh"],
+        "sounds": ["/w/"],
+        "words": ["when","whip","which","whiz","whack"],
+        "tipJa": "wh の なかまを ぜんぶ よもう。when, whip, which, whiz, whack。くちを まるく して「ウ」から はじめよう。"
+      },
+      "vocab": [
+        {"en":"T-shirt","ja":"Tシャツ","emoji":"👕","core":true},
+        {"en":"star","ja":"ほし","emoji":"⭐"},
+        {"en":"heart","ja":"ハート","emoji":"❤️"},
+        {"en":"shop","ja":"おみせ","emoji":"🏪"}
+      ],
+      "teacherScript": "Great job! きょうは まとめ。Tシャツやさんで すきな いろの Tシャツを つくろう。「A blue T-shirt, please.」で たのめるかな？",
+      "conversation": {
+        "scene": "Designing T-shirts at Birimo's shop",
+        "sceneJa": "ビリモの Tシャツやさんで オリジナル Tシャツづくり",
+        "lines": [
+          {"speaker":"Birimo","en":"Welcome to my T-shirt shop! What color do you like?","ja":"ぼくの Tシャツやさんへ ようこそ！なにいろが すき？"},
+          {"speaker":"Haru","en":"I like blue. A blue T-shirt, please.","ja":"あおが すき。あおい Tシャツを ください。"},
+          {"speaker":"Birimo","en":"Here you are! A star or a heart?","ja":"はい、どうぞ！ほしと ハート、どっち？"},
+          {"speaker":"Haru","en":"A star, please! Thank you.","ja":"ほしを ください！ありがとう。"},
+          {"speaker":"Kiko","en":"A pink T-shirt with a heart, please!","ja":"ハートの ついた ピンクの Tシャツを ください！"}
+        ],
+        "aiTask": {
+          "goalJa": "Tシャツやさんで すきな いろを つたえて、～, please. で たのもう",
+          "starterEn": "Welcome to my T-shirt shop! What color do you like?",
+          "targetExpressions": ["I like ～.","～, please."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["What color do you like? / Do you like ～? を ふくしゅう したね","A blue T-shirt, please. で ほしい ものを たのめたよ","wh の ことばを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 81,
+      "world": 3,
+      "title": "What Sport Do You Like?",
+      "titleJa": "なんの スポーツが すき？",
+      "school": {
+        "grade": "小3",
+        "topic": "すきな スポーツ",
+        "grammar": "What sport do you like? ― I like soccer.",
+        "expressions": [
+          {"en":"What sport do you like?","ja":"なんの スポーツが すき？","core":true},
+          {"en":"I like basketball.","ja":"バスケットボールが すき。"},
+          {"en":"Let's play together!","ja":"いっしょに やろう！"}
+        ],
+        "testPoints": ["What sport do you like? の いみが わかる","I like ～. で すきな スポーツを こたえられる"]
+      },
+      "tpr": [
+        {"en":"Kick the ball.","ja":"ボールを けって。","action":"ボールを ける まね","emoji":"⚽"},
+        {"en":"Swing the bat.","ja":"バットを ふって。","action":"バットを ふる まね","emoji":"⚾"},
+        {"en":"Shoot!","ja":"シュート！","action":"バスケットボールを なげる まね","emoji":"🏀"},
+        {"en":"Swim.","ja":"およいで。","action":"クロールで およぐ まね","emoji":"🏊"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["ck"],
+        "sounds": ["/k/"],
+        "words": ["duck","sock","back","kick"],
+        "tipJa": "c と k が ならぶと ck。どちらも /k/ の おとだから「ク」と 1かい だけ いうよ。d-u-ck → duck（あひる）！"
+      },
+      "vocab": [
+        {"en":"sport","ja":"スポーツ","emoji":"🏅","core":true},
+        {"en":"baseball","ja":"やきゅう","emoji":"⚾"},
+        {"en":"basketball","ja":"バスケットボール","emoji":"🏀"},
+        {"en":"swimming","ja":"すいえい","emoji":"🏊"}
+      ],
+      "teacherScript": "Hello! きょうは すきな スポーツ。「What sport do you like?」って きいて、「I like basketball.」のように こたえよう。",
+      "conversation": {
+        "scene": "Talking about sports on the playground",
+        "sceneJa": "こうていで スポーツの はなし",
+        "lines": [
+          {"speaker":"Haru","en":"What sport do you like, Riko?","ja":"リコは なんの スポーツが すき？"},
+          {"speaker":"Riko","en":"I like basketball. Shoot!","ja":"バスケットボールが すき。シュート！"},
+          {"speaker":"Riko","en":"What sport do you like, Haru?","ja":"ハルは なんの スポーツが すき？"},
+          {"speaker":"Haru","en":"I like soccer. Kick!","ja":"サッカーが すき。キック！"},
+          {"speaker":"Kiko","en":"I like swimming!","ja":"わたしは すいえいが すき！"},
+          {"speaker":"Birimo","en":"Let's play together!","ja":"いっしょに やろう！"}
+        ],
+        "aiTask": {
+          "goalJa": "What sport do you like? と きかれたら I like ～. で すきな スポーツを こたえよう",
+          "starterEn": "I like soccer! What sport do you like?",
+          "targetExpressions": ["I like ～.","What sport do you like?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["What sport do you like? で すきな スポーツを きけたね","I like ～. で こたえられたよ","duck, kick！ おわりの ck を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 82,
+      "world": 3,
+      "title": "What Food Do You Like?",
+      "titleJa": "なんの たべものが すき？",
+      "school": {
+        "grade": "小3",
+        "topic": "すきな たべもの",
+        "grammar": "What food do you like? ― I like sushi.",
+        "expressions": [
+          {"en":"What food do you like?","ja":"なんの たべものが すき？","core":true},
+          {"en":"I like curry and rice.","ja":"カレーライスが すき。"},
+          {"en":"Yummy!","ja":"おいしい！"}
+        ],
+        "testPoints": ["What food do you like? の いみが わかる","I like ～. で すきな たべものを こたえられる"]
+      },
+      "tpr": [
+        {"en":"Eat some noodles.","ja":"めんを たべて。","action":"おはしで めんを すする まね","emoji":"🍜"},
+        {"en":"Cut the pizza.","ja":"ピザを きって。","action":"ピザを きりわける まね","emoji":"🍕"},
+        {"en":"Rub your tummy.","ja":"おなかを さすって。","action":"おなかを まるく さする","emoji":"😋"},
+        {"en":"Say yummy!","ja":"おいしいって いって。","action":"えがおで Yummy! と いう","emoji":"😄"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["ck"],
+        "sounds": ["/k/"],
+        "words": ["neck","rock","pick","lock"],
+        "tipJa": "ck を もっと よもう。n-e-ck → neck（くび）、r-o-ck → rock（いわ）。ck の まえの ぼいんは みじかい おとだよ。"
+      },
+      "vocab": [
+        {"en":"food","ja":"たべもの","emoji":"🍽️","core":true},
+        {"en":"pizza","ja":"ピザ","emoji":"🍕"},
+        {"en":"curry and rice","ja":"カレーライス","emoji":"🍛"},
+        {"en":"noodles","ja":"めん","emoji":"🍜"},
+        {"en":"sushi","ja":"おすし","emoji":"🍣"}
+      ],
+      "teacherScript": "Hi! きょうは すきな たべもの。「What food do you like?」って きいてね。おすしも ピザも えいごで いえるよ。",
+      "conversation": {
+        "scene": "Lunchtime talk in the classroom",
+        "sceneJa": "きゅうしょくの じかんの おしゃべり",
+        "lines": [
+          {"speaker":"Kiko","en":"Yummy! What food do you like, Haru?","ja":"おいしい！ハルは なんの たべものが すき？"},
+          {"speaker":"Haru","en":"I like curry and rice.","ja":"カレーライスが すき。"},
+          {"speaker":"Kiko","en":"Me too! What food do you like, Riko?","ja":"わたしも！リコは？"},
+          {"speaker":"Riko","en":"I like sushi.","ja":"おすしが すき。"},
+          {"speaker":"Birimo","en":"I like everything!","ja":"ぼくは ぜんぶ すき！"}
+        ],
+        "aiTask": {
+          "goalJa": "What food do you like? と きかれたら I like ～. で すきな たべものを こたえよう",
+          "starterEn": "Lunchtime! I like curry and rice. What food do you like?",
+          "targetExpressions": ["I like ～.","What food do you like?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["What food do you like? で すきな たべものを きけたね","I like sushi. のように こたえられたよ","neck, rock！ ck を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 83,
+      "world": 3,
+      "title": "I Don't Like Onions!",
+      "titleJa": "たまねぎは すきじゃない！",
+      "school": {
+        "grade": "小3",
+        "topic": "すきな もの・すきじゃない もの",
+        "grammar": "I like ～. / I don't like ～.",
+        "expressions": [
+          {"en":"I don't like onions.","ja":"たまねぎは すきじゃない。","core":true},
+          {"en":"I like tomatoes.","ja":"トマトが すき。"},
+          {"en":"Really? I like onions!","ja":"ほんとう？わたしは たまねぎ すき！"}
+        ],
+        "testPoints": ["I don't like ～. の いみが わかる","すきな もの・すきじゃない ものを いえる"]
+      },
+      "tpr": [
+        {"en":"Wash the tomatoes.","ja":"トマトを あらって。","action":"トマトを みずで あらう まね","emoji":"🍅"},
+        {"en":"Peel the onion.","ja":"たまねぎの かわを むいて。","action":"たまねぎの かわを むく まね","emoji":"🧅"},
+        {"en":"Mix the salad.","ja":"サラダを まぜて。","action":"ボウルの サラダを まぜる まね","emoji":"🥗"},
+        {"en":"Taste it.","ja":"あじみ して。","action":"スプーンで あじみを する まね","emoji":"👅"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["ng"],
+        "sounds": ["/ŋ/"],
+        "words": ["ring","sing","king","long"],
+        "tipJa": "n と g が くっつくと ng。はなに ひびく「ン(グ)」の おと。g は はっきり いわないよ。s-i-ng → sing（うたう）！"
+      },
+      "vocab": [
+        {"en":"onion","ja":"たまねぎ","emoji":"🧅","core":true},
+        {"en":"tomato","ja":"トマト","emoji":"🍅"},
+        {"en":"carrot","ja":"にんじん","emoji":"🥕"},
+        {"en":"salad","ja":"サラダ","emoji":"🥗"}
+      ],
+      "teacherScript": "Hello! すきじゃない ものは「I don't like ～.」で いえるよ。「I don't like onions.」 でも、いつか すきに なるかもね！",
+      "conversation": {
+        "scene": "Making salad in cooking class",
+        "sceneJa": "りょうりの じかんに サラダづくり",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Let's make a salad! Tomatoes, carrots and onions.","ja":"サラダを つくろう！トマト、にんじん、たまねぎ。"},
+          {"speaker":"Haru","en":"I like tomatoes. Yummy!","ja":"トマトが すき。おいしい！"},
+          {"speaker":"Kiko","en":"I don't like onions.","ja":"たまねぎは すきじゃない。"},
+          {"speaker":"Riko","en":"Really? I like onions!","ja":"ほんとう？わたしは たまねぎ すき！"},
+          {"speaker":"Birimo","en":"Kiko, try a little! It's good.","ja":"キコ、すこし たべてみて！おいしいよ。"},
+          {"speaker":"Kiko","en":"Hmm... It's OK!","ja":"うーん…わるくない！"}
+        ],
+        "aiTask": {
+          "goalJa": "I like ～. と I don't like ～. で すきな やさいと すきじゃない やさいを つたえよう",
+          "starterEn": "I like tomatoes. I don't like onions. How about you?",
+          "targetExpressions": ["I like ～.","I don't like ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["I don't like ～. で すきじゃない ものを いえたね","I like ～. と くらべて いえたよ","ring, sing！ はなに ひびく ng を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 84,
+      "world": 3,
+      "title": "I Play Tennis.",
+      "titleJa": "テニスを するよ",
+      "school": {
+        "grade": "小3",
+        "topic": "する スポーツ",
+        "grammar": "I play ～. / Do you play ～? ― Yes, I do. / No, I don't.",
+        "expressions": [
+          {"en":"I play tennis.","ja":"テニスを するよ。","core":true},
+          {"en":"Do you play soccer?","ja":"サッカーを する？"},
+          {"en":"Yes, I do. Let's play!","ja":"うん、するよ。いっしょに やろう！"}
+        ],
+        "testPoints": ["I play ～. で する スポーツを いえる","Do you play ～? と きかれて こたえられる"]
+      },
+      "tpr": [
+        {"en":"Hit the ball.","ja":"ボールを うって。","action":"ラケットで ボールを うつ まね","emoji":"🎾"},
+        {"en":"Run fast.","ja":"はやく はしって。","action":"その ばで はやく はしる","emoji":"🏃"},
+        {"en":"Catch the ball.","ja":"ボールを とって。","action":"グローブで ボールを とる まね","emoji":"🧤"},
+        {"en":"Wave the pink flag.","ja":"ピンクの はたを ふって。","action":"はたを おおきく ふって おうえん","emoji":"🚩"}
+      ],
+      "phonics": {
+        "rule": "digraph",
+        "focus": ["nk"],
+        "sounds": ["/ŋk/"],
+        "words": ["pink","sink","wink","bank"],
+        "tipJa": "nk は ng の おとの あとに k。「ンク」と いうよ。p-i-nk → pink！ thank you の nk も おなじ おとだね。"
+      },
+      "vocab": [
+        {"en":"play","ja":"（スポーツを）する","emoji":"🤾"},
+        {"en":"tennis","ja":"テニス","emoji":"🎾","core":true},
+        {"en":"volleyball","ja":"バレーボール","emoji":"🏐"},
+        {"en":"badminton","ja":"バドミントン","emoji":"🏸"}
+      ],
+      "teacherScript": "Hi! スポーツを「する」は play。「I play tennis.」（テニスを するよ）。ともだちに「Do you play soccer?」って きいてみよう。",
+      "conversation": {
+        "scene": "Sports club after school",
+        "sceneJa": "ほうかごの スポーツクラブ",
+        "lines": [
+          {"speaker":"Riko","en":"I play tennis. Do you play tennis, Haru?","ja":"わたしは テニスを するよ。ハルは テニスを する？"},
+          {"speaker":"Haru","en":"No, I don't. I play soccer.","ja":"ううん、しない。サッカーを するよ。"},
+          {"speaker":"Riko","en":"Do you play soccer, Kiko?","ja":"キコは サッカーを する？"},
+          {"speaker":"Kiko","en":"Yes, I do! Let's play!","ja":"うん、するよ！いっしょに やろう！"},
+          {"speaker":"Birimo","en":"Go, go! I wave the pink flag!","ja":"がんばれ！ピンクの はたを ふるよ！"}
+        ],
+        "aiTask": {
+          "goalJa": "Do you play ～? と きかれたら Yes, I do. / No, I don't. で こたえて、I play ～. で する スポーツを いおう",
+          "starterEn": "I play soccer. Do you play soccer?",
+          "targetExpressions": ["I play ～.","Yes, I do.","No, I don't."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["I play tennis. で する スポーツを いえたね","Do you play ～? で ともだちに きけたよ","pink, wink！ nk を よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 85,
+      "world": 3,
+      "title": "Class Survey (Review)",
+      "titleJa": "まとめ：クラスの すきなもの しらべ",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：すきな スポーツ・たべもの",
+        "grammar": "What sport / food do you like? ― I like ～. / I don't like ～.",
+        "expressions": [
+          {"en":"I like soccer and pizza.","ja":"サッカーと ピザが すき。","core":true},
+          {"en":"What sport do you like?","ja":"なんの スポーツが すき？"},
+          {"en":"What food do you like?","ja":"なんの たべものが すき？"}
+        ],
+        "testPoints": ["What sport / food do you like? で すきな ものを きける","I like ～. / I don't like ～. で こたえられる","ck ng nk の ことば（duck, ring, pink）を よめる"]
+      },
+      "tpr": [
+        {"en":"Walk and talk.","ja":"あるいて はなそう。","action":"あるいて ともだちの ところへ いく","emoji":"🚶"},
+        {"en":"Ask a friend.","ja":"ともだちに きいて。","action":"ともだちに しつもんする まね","emoji":"🗣️"},
+        {"en":"Write it down.","ja":"かいて。","action":"ノートに メモする まね","emoji":"📝"},
+        {"en":"Show the chart.","ja":"ひょうを みせて。","action":"できた ひょうを みんなに みせる","emoji":"📊"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["ck","ng","nk"],
+        "sounds": ["/k/","/ŋ/","/ŋk/"],
+        "words": ["duck","sock","ring","king","pink","sink"],
+        "tipJa": "ck・ng・nk を ぜんぶ よもう。ck は「ク」、ng は はなに ひびく「ン」、nk は「ンク」。ring と pink の ちがいを きいてね。"
+      },
+      "vocab": [
+        {"en":"food","ja":"たべもの","emoji":"🍽️","core":true},
+        {"en":"sport","ja":"スポーツ","emoji":"🏅"},
+        {"en":"survey","ja":"アンケート・しらべ","emoji":"📋"},
+        {"en":"chart","ja":"ひょう","emoji":"📊"}
+      ],
+      "teacherScript": "Great job! きょうは まとめ。クラスの みんなに すきな スポーツと たべものを きいて、ひょうに しよう。「I like soccer and pizza.」のように 2つ つなげて いえるかな？",
+      "conversation": {
+        "scene": "A class survey of favorite sports and foods",
+        "sceneJa": "クラスの すきなもの アンケート",
+        "lines": [
+          {"speaker":"Riko","en":"Survey time! Haru, what sport do you like?","ja":"アンケートの じかん！ハル、なんの スポーツが すき？"},
+          {"speaker":"Haru","en":"I like soccer.","ja":"サッカーが すき。"},
+          {"speaker":"Riko","en":"What food do you like?","ja":"なんの たべものが すき？"},
+          {"speaker":"Haru","en":"I like pizza. I like soccer and pizza!","ja":"ピザが すき。サッカーと ピザが すき！"},
+          {"speaker":"Riko","en":"Thanks! Kiko, what food do you like?","ja":"ありがとう！キコは なんの たべものが すき？"},
+          {"speaker":"Kiko","en":"I like sushi. I don't like onions!","ja":"おすしが すき。たまねぎは すきじゃない！"}
+        ],
+        "aiTask": {
+          "goalJa": "すきな スポーツと たべものを きかれたら I like ～. で こたえよう。すきじゃない ものは I don't like ～.",
+          "starterEn": "Survey time! What sport do you like?",
+          "targetExpressions": ["I like ～.","I don't like ～.","What food do you like?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["What sport / food do you like? で しらべられたね","I like soccer and pizza. のように つなげて いえたよ","ck ng nk の ことばを ぜんぶ よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 86,
+      "world": 3,
+      "title": "My Profile Card",
+      "titleJa": "じこしょうかいカード",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：じこしょうかい",
+        "grammar": "Hello. I'm ～. I like ～. I don't like ～.",
+        "expressions": [
+          {"en":"Hello. I'm Riko. I like pink.","ja":"こんにちは。リコです。ピンクが すき。","core":true},
+          {"en":"I don't like spiders.","ja":"クモは すきじゃない。"},
+          {"en":"Nice to meet you.","ja":"はじめまして。"}
+        ],
+        "testPoints": ["あいさつ・なまえ・すきな ものを つづけて いえる","sh と ch を よみわけられる"]
+      },
+      "tpr": [
+        {"en":"Draw your face.","ja":"じぶんの かおを かいて。","action":"くうちゅうに かおを かく","emoji":"🙂"},
+        {"en":"Write your name.","ja":"なまえを かいて。","action":"ゆびで なまえを かく","emoji":"✍️"},
+        {"en":"Draw your favorite food.","ja":"すきな たべものを かいて。","action":"すきな たべものの えを かく まね","emoji":"🍕"},
+        {"en":"Show your card.","ja":"カードを みせて。","action":"カードを りょうてで みせる","emoji":"🪪"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["sh","ch"],
+        "sounds": ["/ʃ/","/tʃ/"],
+        "words": ["ship","fish","chip","much","shop","chin"],
+        "tipJa": "sh と ch を くらべよう。sh は しずかに「シュ」、ch は つよく「チ」。ship と chip、どっちかな？"
+      },
+      "vocab": [
+        {"en":"card","ja":"カード","emoji":"🪪","core":true},
+        {"en":"face","ja":"かお","emoji":"🙂"},
+        {"en":"favorite","ja":"いちばん すきな","emoji":"⭐"},
+        {"en":"spider","ja":"クモ","emoji":"🕷️"}
+      ],
+      "teacherScript": "Hello! ワールド3 さいごの ブロック。ここまでの ことばを ぜんぶ つかって、じこしょうかいカードを つくろう。「Hello. I'm ～. I like ～.」",
+      "conversation": {
+        "scene": "Making profile cards for the presentation",
+        "sceneJa": "はっぴょうかいの じこしょうかいカードづくり",
+        "lines": [
+          {"speaker":"Riko","en":"Look at my card! Hello. I'm Riko. I like pink.","ja":"わたしの カードを みて！こんにちは。リコです。ピンクが すき。"},
+          {"speaker":"Haru","en":"Nice card! What food do you like?","ja":"すてきな カード！なんの たべものが すき？"},
+          {"speaker":"Riko","en":"I like chocolate. I don't like spiders!","ja":"チョコレートが すき。クモは すきじゃない！"},
+          {"speaker":"Haru","en":"Ha ha! Spiders are not food!","ja":"あはは！クモは たべものじゃないよ！"},
+          {"speaker":"Kiko","en":"My card! I'm Kiko. I like fish and chips.","ja":"わたしの カード！キコです。フィッシュ・アンド・チップスが すき。"}
+        ],
+        "aiTask": {
+          "goalJa": "Hello. I'm ～. I like ～. で じこしょうかいカードを よみあげよう（なまえは ニックネームでも OK）",
+          "starterEn": "Look at my card! Hello. I'm Haru. I like soccer. Your turn!",
+          "targetExpressions": ["I'm ～.","I like ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Hello. I'm ～. I like ～. で じこしょうかい できたね","I don't like ～. も つかえたよ","sh と ch を くらべて よめたよ（ship と chip）"]
+      }
+    },
+    {
+      "lessonNo": 87,
+      "world": 3,
+      "title": "Feelings Dice",
+      "titleJa": "きもち サイコロ",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：きもち・かず",
+        "grammar": "How many? ― Six. / How are you? ― I'm ～.",
+        "expressions": [
+          {"en":"I'm happy. How are you?","ja":"うれしいよ。あなたは？","core":true},
+          {"en":"Roll the dice. How many?","ja":"サイコロを ふって。いくつ？"},
+          {"en":"Six! I'm hungry!","ja":"6！おなかが すいた！"}
+        ],
+        "testPoints": ["サイコロの かずを えいごで いえる","きもちを I'm ～. で いえる","th と wh を よみわけられる"]
+      },
+      "tpr": [
+        {"en":"Roll the dice.","ja":"サイコロを ふって。","action":"サイコロを ころがす まね","emoji":"🎲"},
+        {"en":"Make a happy face.","ja":"うれしい かお。","action":"にっこり うれしい かお","emoji":"😊"},
+        {"en":"Make a sleepy face.","ja":"ねむい かお。","action":"めを とろんと させて ねむい かお","emoji":"😴"},
+        {"en":"Jump six times.","ja":"6かい ジャンプ。","action":"かぞえながら 6かい ジャンプ","emoji":"🦘"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["th","wh"],
+        "sounds": ["/θ/","/ð/","/w/"],
+        "words": ["thin","this","bath","when","whip","which"],
+        "tipJa": "th と wh を くらべよう。th は したを はさむ、wh は くちを まるく。this と when、ゆっくり よもう。"
+      },
+      "vocab": [
+        {"en":"dice","ja":"サイコロ","emoji":"🎲","core":true},
+        {"en":"feeling","ja":"きもち","emoji":"💭"},
+        {"en":"six","ja":"ろく（6）","emoji":"6️⃣"},
+        {"en":"game","ja":"ゲーム","emoji":"🎮"}
+      ],
+      "teacherScript": "Hi! きょうは きもち サイコロ ゲーム。サイコロの かずで きもちが きまるよ。1は happy、2は sleepy… でた きもちを「I'm ～.」で いおう！",
+      "conversation": {
+        "scene": "Playing a feelings dice game",
+        "sceneJa": "きもち サイコロで あそぶ",
+        "lines": [
+          {"speaker":"Birimo","en":"One is happy. Three is sleepy. Six is hungry. Roll the dice, Haru!","ja":"1は うれしい。3は ねむい。6は おなかぺこぺこ。ハル、サイコロを ふって！"},
+          {"speaker":"Haru","en":"Three! I'm sleepy.","ja":"3！ねむい。"},
+          {"speaker":"Kiko","en":"My turn! Six! I'm hungry!","ja":"わたしの ばん！6！おなかが すいた！"},
+          {"speaker":"Riko","en":"One! I'm happy. How are you, Birimo?","ja":"1！うれしい。ビリモは どう？"},
+          {"speaker":"Birimo","en":"I'm great!","ja":"すごく げんき！"}
+        ],
+        "aiTask": {
+          "goalJa": "サイコロの かずを いって、その きもちを I'm ～. で いおう。ハルにも How are you? と きこう",
+          "starterEn": "Let's play! One is happy, two is sleepy, three is hungry. Roll the dice! How many?",
+          "targetExpressions": ["I'm ～.","How are you?"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["サイコロの かずを えいごで いえたね","でた きもちを I'm ～. で いえたよ","th と wh を くらべて よめたよ"]
+      }
+    },
+    {
+      "lessonNo": 88,
+      "world": 3,
+      "title": "Favorites Quiz",
+      "titleJa": "すきなもの クイズ",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：すきな もの",
+        "grammar": "Do you like ～? ― Yes, I do. / No, I don't. / What sport / food do you like?",
+        "expressions": [
+          {"en":"Do you like tennis?","ja":"テニスは すき？","core":true},
+          {"en":"Yes, I do. I play tennis.","ja":"うん、すき。テニスを するよ。"},
+          {"en":"Bingo! You got it!","ja":"あたり！せいかい！"}
+        ],
+        "testPoints": ["Do you like ～? で あいての すきな ものを きける","Yes, I do. / No, I don't. で こたえられる","ck ng nk の ことばを よめる"]
+      },
+      "tpr": [
+        {"en":"Think.","ja":"かんがえて。","action":"うでを くんで かんがえる ポーズ","emoji":"🤔"},
+        {"en":"Say bingo!","ja":"ビンゴって いって。","action":"りょうてを あげて Bingo! と いう","emoji":"🎉"},
+        {"en":"Give a thumbs up.","ja":"グッドして。","action":"おやゆびを たてて グッド","emoji":"👍"},
+        {"en":"Turn to your friend.","ja":"ともだちの ほうを むいて。","action":"となりの ともだちの ほうを むく","emoji":"🔄"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["ck","ng","nk"],
+        "sounds": ["/k/","/ŋ/","/ŋk/"],
+        "words": ["back","kick","sing","long","wink","bank"],
+        "tipJa": "ck・ng・nk の ことばを しわけしよう。back, kick は ck。sing, long は ng。wink, bank は nk。"
+      },
+      "vocab": [
+        {"en":"quiz","ja":"クイズ","emoji":"❓","core":true},
+        {"en":"guess","ja":"あてる","emoji":"🤔"},
+        {"en":"right","ja":"せいかい","emoji":"⭕"},
+        {"en":"wrong","ja":"まちがい","emoji":"❌"}
+      ],
+      "teacherScript": "Hello! きょうは すきなもの クイズ。エマ先生の すきな ものを「Do you like ～?」で あてよう。あたったら「Bingo!」",
+      "conversation": {
+        "scene": "Guessing Ms. Emma's favorite things",
+        "sceneJa": "エマ先生の すきなもの あてクイズ",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Quiz time! Guess my favorite sport.","ja":"クイズの じかん！わたしの すきな スポーツを あててね。"},
+          {"speaker":"Haru","en":"Do you like soccer?","ja":"サッカーは すき？"},
+          {"speaker":"Ms. Emma","en":"No, I don't.","ja":"ううん、すきじゃない。"},
+          {"speaker":"Riko","en":"Do you like tennis?","ja":"テニスは すき？"},
+          {"speaker":"Ms. Emma","en":"Yes, I do. I play tennis. Bingo!","ja":"うん、すき。テニスを するよ。せいかい！"},
+          {"speaker":"Kiko","en":"What food do you like?","ja":"なんの たべものが すき？"}
+        ],
+        "aiTask": {
+          "goalJa": "Do you like ～? で ハルの すきな ものを あてよう。きかれたら Yes, I do. / No, I don't. で こたえよう",
+          "starterEn": "Quiz time! Guess my favorite sport. Ask me a question!",
+          "targetExpressions": ["Do you like ～?","Yes, I do.","No, I don't."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["Do you like ～? で すきな ものを あてられたね","Yes, I do. / No, I don't. で こたえられたよ","ck ng nk の ことばを しわけ できたよ"]
+      }
+    },
+    {
+      "lessonNo": 89,
+      "world": 3,
+      "title": "Birimo's World Trip",
+      "titleJa": "ビリモの せかい りょこう",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：あいさつ・かず・いろ",
+        "grammar": "Hello. / How are you? / How many ～? / What color do you like? / See you!",
+        "expressions": [
+          {"en":"Thank you. See you!","ja":"ありがとう。またね！","core":true},
+          {"en":"Bonjour! How are you?","ja":"ボンジュール！げんき？"},
+          {"en":"How many flags? Twelve flags!","ja":"はたは いくつ？12まい！"}
+        ],
+        "testPoints": ["あいさつ・きもち・かず・いろの しつもんに こたえられる","sh ch th wh を しわけ できる"]
+      },
+      "tpr": [
+        {"en":"Get on the ship.","ja":"ふねに のって。","action":"ふねに のりこむ まね","emoji":"🚢"},
+        {"en":"Wave to the fish.","ja":"さかなに てを ふって。","action":"うみを のぞいて てを ふる","emoji":"🐟"},
+        {"en":"Count the flags.","ja":"はたを かぞえて。","action":"ゆびさしながら はたを かぞえる","emoji":"🚩"},
+        {"en":"Say goodbye.","ja":"さようならを いって。","action":"てを ふって Goodbye! と いう","emoji":"👋"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["sh","ch","th","wh"],
+        "sounds": ["/ʃ/","/tʃ/","/θ/","/w/"],
+        "words": ["shop","chop","thin","whiz","shed","chin"],
+        "tipJa": "ダイグラフ（2もじで 1つの おと）を しわけしよう。sh・ch・th・wh、どの なかまかな？ shop と chop は 1もじ ちがいだよ。"
+      },
+      "vocab": [
+        {"en":"ship","ja":"ふね","emoji":"🚢","core":true},
+        {"en":"map","ja":"ちず","emoji":"🗺️"},
+        {"en":"trip","ja":"りょこう","emoji":"🧳"},
+        {"en":"port","ja":"みなと","emoji":"⚓"}
+      ],
+      "teacherScript": "Hi! ビリモと いっしょに ふねで せかい りょこう！みなとに つくたびに あいさつ、かず、いろの しつもんを しよう。さいごは「Thank you. See you!」",
+      "conversation": {
+        "scene": "A ship trip around the world with Birimo",
+        "sceneJa": "ビリモと ふねで せかい りょこう",
+        "lines": [
+          {"speaker":"Birimo","en":"All aboard! Let's go around the world!","ja":"みんな のって！せかいを まわろう！"},
+          {"speaker":"Riko","en":"Bonjour! How are you?","ja":"ボンジュール！げんき？"},
+          {"speaker":"Birimo","en":"I'm great! Look, how many flags?","ja":"すごく げんき！みて、はたは いくつ？"},
+          {"speaker":"Haru","en":"Twelve flags! What color do you like, Kiko?","ja":"12まい！キコは なにいろが すき？"},
+          {"speaker":"Kiko","en":"I like the red flag!","ja":"あかい はたが すき！"},
+          {"speaker":"Birimo","en":"Thank you, everyone. See you at the next port!","ja":"みんな ありがとう。つぎの みなとで またね！"}
+        ],
+        "aiTask": {
+          "goalJa": "せかい りょこうで あいさつ・かず・いろの しつもんに こたえよう。さいごは Thank you. See you! で おわろう",
+          "starterEn": "All aboard! Bonjour! How are you?",
+          "targetExpressions": ["I'm ～.","I like ～.","See you!"]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["あいさつ・きもち・かず・いろを つなげて つかえたね","Thank you. See you! で きもちよく おわれたよ","sh ch th wh を しわけ できたよ"]
+      }
+    },
+    {
+      "lessonNo": 90,
+      "world": 3,
+      "title": "World 3 Grand Review",
+      "titleJa": "ワールド3 そうふくしゅう",
+      "school": {
+        "grade": "小3",
+        "topic": "まとめ：ワールド3 ぜんぶ",
+        "grammar": "Hello. I'm ～. / How are you? / How many ～? / What color / sport / food do you like?",
+        "expressions": [
+          {"en":"I'm Haru. I like blue and soccer.","ja":"ハルです。あおと サッカーが すき。","core":true},
+          {"en":"How are you? ― I'm great!","ja":"げんき？ ― すごく げんき！"},
+          {"en":"What food do you like? ― I like sushi.","ja":"なんの たべものが すき？ ― おすしが すき。"}
+        ],
+        "testPoints": ["あいさつ・きもち・かず・すきな ものを つづけて いえる","sh ch th wh ck ng nk の ことばを よめる"]
+      },
+      "tpr": [
+        {"en":"Look! Stop! Come here! Go!","ja":"みて！とまって！きて！いって！","action":"ワールド1の 4つの めいれいを はやく","emoji":"⚡"},
+        {"en":"Shake hands. Bow.","ja":"あくしゅ。おじぎ。","action":"あくしゅの あと すばやく おじぎ","emoji":"🤝"},
+        {"en":"Kick! Shoot! Swim!","ja":"キック！シュート！およいで！","action":"スポーツの まねを すばやく つづけて","emoji":"💨"},
+        {"en":"Take a bow.","ja":"おじぎを して。","action":"さいごに ゆっくり おじぎ","emoji":"🙇"}
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": ["sh","ch","th","wh","ck","ng","nk"],
+        "sounds": [],
+        "words": ["ship","chip","thin","when","duck","ring","pink"],
+        "tipJa": "ワールド3で ならった ダイグラフを ぜんぶ よもう。sh-i-p、ch-i-p、th-i-n、wh-e-n、d-u-ck、r-i-ng、p-i-nk！ 2もじで 1つの おとだよ。"
+      },
+      "vocab": [
+        {"en":"like","ja":"すき","emoji":"💖","core":true},
+        {"en":"world","ja":"せかい","emoji":"🌏"},
+        {"en":"presentation","ja":"はっぴょう","emoji":"🎤"},
+        {"en":"port","ja":"みなと","emoji":"⚓"}
+      ],
+      "teacherScript": "Congratulations! ワールド3 さいごの レッスン！まずは スピード TPR。どんどん はやく なるよ。そのあと すきなもの はっぴょうかいで、ワールド3の ことばを ぜんぶ つかおう！あしたは ボスせんだよ。",
+      "conversation": {
+        "scene": "The favorite things presentation at the World Port",
+        "sceneJa": "せかいの港の すきなもの はっぴょうかい",
+        "lines": [
+          {"speaker":"Ms. Emma","en":"Welcome to the presentation! Who's first?","ja":"はっぴょうかいへ ようこそ！だれから？"},
+          {"speaker":"Haru","en":"Hello. I'm Haru. I like blue and soccer.","ja":"こんにちは。ハルです。あおと サッカーが すき。"},
+          {"speaker":"Riko","en":"How are you, everyone? I'm great! I like pink and tennis.","ja":"みんな げんき？わたしは すごく げんき！ピンクと テニスが すき。"},
+          {"speaker":"Kiko","en":"I'm Kiko. I like sushi. I don't like onions!","ja":"キコです。おすしが すき。たまねぎは すきじゃない！"},
+          {"speaker":"Birimo","en":"Twenty claps for everyone! Let's go to World 4!","ja":"みんなに はくしゅ 20かい！ワールド4へ いこう！"}
+        ],
+        "aiTask": {
+          "goalJa": "ワールド3の ことばで はっぴょうしよう（あいさつ・きもち・すきな いろ・スポーツ・たべもの。なまえは ニックネームでも OK）",
+          "starterEn": "Welcome to the presentation! Hello. I'm Haru. I like blue and soccer. Your turn!",
+          "targetExpressions": ["I'm ～.","I like ～.","I don't like ～."]
+        }
+      },
+      "recap": {
+        "highlightsJa": ["スピード TPR で ワールド3の めいれいを ふくしゅう","あいさつ・きもち・かず・すきなものを ぜんぶ つかえたね","ダイグラフ sh ch th wh ck ng nk を ぜんぶ よめたよ。ワールド4では st や bl などの ブレンドを ならうよ！"]
+      }
     }
   ]
 }

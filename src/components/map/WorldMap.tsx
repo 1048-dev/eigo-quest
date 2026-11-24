@@ -19,7 +19,7 @@ type StageNode = MapResponse["nodes"][number];
 const WORLD_THEMES: Record<number, { name: string; top: string; bottom: string; fog: string; monsters: string[]; glyphs: string[][] }> = {
   1: { name: "はじまりのジャングル遺跡", top: "#0e2a24", bottom: "#081814", fog: "#bfe6d6", monsters: ["mon-044", "mon-028", "mon-091", "mon-037", "mon-019", "mon-056", "mon-055"], glyphs: [["A", "B"], ["C", "D"], ["E", "F"], ["G", "H"]] },
   2: { name: "フォニックス火山の神殿", top: "#2e1408", bottom: "#140804", fog: "#ffcf9a", monsters: ["mon-031", "mon-091", "mon-080"], glyphs: [["cat"], ["pig"], ["dog"], ["bed"], ["bus"]] },
-  3: { name: "グラマーの海底遺跡", top: "#0b2236", bottom: "#05101c", fog: "#a8e2ff", monsters: ["mon-037", "mon-089", "mon-056"], glyphs: [["I", "am"], ["is"], ["are"]] },
+  3: { name: "グラマーの海底遺跡", top: "#0b2236", bottom: "#05101c", fog: "#a8e2ff", monsters: ["mon-037", "mon-089", "mon-056"], glyphs: [["sh"], ["ch"], ["th"], ["wh"], ["ck"]] },
   4: { name: "スピーキング天空城", top: "#1d1a3e", bottom: "#0c0a20", fog: "#d9ccff", monsters: ["mon-055", "mon-070"], glyphs: [["Hi"], ["Yes"]] },
 };
 

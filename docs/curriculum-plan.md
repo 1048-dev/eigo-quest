@@ -279,6 +279,46 @@
 | 59 | Happy New Year! | ふゆの ぎょうじ | Happy New Year! | zz（buzz, fizz, jazz） | おしょうがつ |
 | 60 | World 2 Grand Review | ワールド総まとめ（スピードTPR） | I like summer. I want ice cream. | CVC 総まとめ（cat, pig, dog, bed, bus, bell） | ビリモの ワールド2 ショー |
 
+## 6-3. ワールド3 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: ダイグラフ（2文字で1つの音）を sh → ch → th → wh → ck → ng → nk の順に。単語は「短母音1つ＋子音・ダイグラフ」だけ（magic e や母音チームはまだ使わない）。`phonics.rule` は "digraph" / "review"。
+- th は L71・L73 が いきだけの /θ/（thin, bath）、L72 が こえの /ð/（this, that）、L74 で くらべる。
+- フォニックス問題: その回のフォーカスがダイグラフのときは、sh / ch / th / wh で始まる語は「さいしょの おとは どれ？」（答えは sh など）、途中・おわりにある語（fish, duck, ring, pink）は「どの つづりが はいってる？」で問う（src/lib/curriculum/questions.ts の `digraphQuestion`）。
+- 表現の型: Nice to meet you. / What's your name? → How are you? ― I'm great. / Are you happy? ― Yes, I am. → How many ～?（1〜20）→ What color do you like? / Do you like red? → What sport / food do you like? / I don't like ～. / I play ～.
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 61 | Hello, World! | せかいの あいさつ | Nice to meet you. | sh（ship, shop, shed） | せかい りょこうから かえってきた ビリモ |
+| 62 | What's Your Name? | なまえの ききかた | What's your name? | sh（fish, dish, wish） | わに なって なまえゲーム |
+| 63 | My Name Card | なまえカード・こうかん | Here you are. | sh（shut, shin, mash） | なまえカードを つくって こうかん |
+| 64 | Greetings Around the World | あいさつの ジェスチャー | Let's shake hands. | sh（rush, hush, dash） | せかいの あいさつの しかたを ためす |
+| 65 | Online Hello Party | まとめ | Hello. I'm Haru. Nice to meet you. | sh ふりかえり | オンラインで せかいに あいさつ |
+| 66 | How Are You Today? | ちょうし | I'm great! | ch（chip, chin, chop） | あさの きょうしつの いりぐち |
+| 67 | I'm Tired. | きもち・ようす | I'm tired. | ch（much, such, rich） | やすみじかんに はしった あと |
+| 68 | Are You Happy? | きもちを たずねる | Are you happy? | ch（chick, check, chin） | ともだちの きもちを きく |
+| 69 | I'm Hot! I'm Cold! | からだの かんじ | I'm cold. | ch（lunch, bunch, bench） | かぜの つよい ひの ピクニック |
+| 70 | At the Nurse's Office | まとめ | Are you OK? | ch ふりかえり | ほけんしつで だいじょうぶ？ |
+| 71 | Numbers 11 to 15 | かず 11〜15 | How many cards? | th /θ/（thin, thick, moth） | カードの まいすうを かぞえる |
+| 72 | Numbers 16 to 20 | かず 16〜20 | Twenty stickers! | th /ð/（this, that, then） | シールを かぞえる |
+| 73 | How Many Balls? | かず 1〜20・しつもん | How many balls? | th（bath, math, with） | たいいくの あと ボールを かたづける |
+| 74 | Rock, Paper, Scissors! | じゃんけん | I win! | th くらべ（thick / that） | きょうしつで じゃんけん たいかい |
+| 75 | Bowling Tournament | まとめ | How many pins? | th ふりかえり | ボウリング たいかい |
+| 76 | What Color Do You Like? | すきな いろ | What color do you like? | wh（when, whip, whiz） | クラスの はたの いろを きめる |
+| 77 | Do You Like Red? | すきな いろ・しつもん | Do you like red? | wh（which, whack, whiff） | ずこうで えのぐを えらぶ |
+| 78 | Mixing Colors | いろまぜ | It's orange! | wh（whiz, whip, wham） | いろまぜ じっけん |
+| 79 | Rainbow Colors | にじ | How many colors? | wh（when, wham, whiff） | あめあがりの にじ |
+| 80 | T-shirt Shop | まとめ | A blue T-shirt, please. | wh ふりかえり | ビリモの Tシャツやさん |
+| 81 | What Sport Do You Like? | すきな スポーツ | What sport do you like? | ck（duck, sock, kick） | こうていで スポーツの はなし |
+| 82 | What Food Do You Like? | すきな たべもの | What food do you like? | ck（neck, rock, pick） | きゅうしょくの おしゃべり |
+| 83 | I Don't Like Onions! | すき・すきじゃない | I don't like onions. | ng（ring, sing, king） | りょうりの じかんに サラダづくり |
+| 84 | I Play Tennis. | する スポーツ | I play tennis. | nk（pink, sink, wink） | ほうかごの スポーツクラブ |
+| 85 | Class Survey | まとめ | I like soccer and pizza. | ck ng nk ふりかえり | クラスの すきなもの アンケート |
+| 86 | My Profile Card | じこしょうかい | Hello. I'm Riko. I like pink. | sh と ch くらべ | じこしょうかいカードづくり |
+| 87 | Feelings Dice | きもち・かず | I'm happy. How are you? | th と wh くらべ | きもち サイコロ |
+| 88 | Favorites Quiz | すきな もの | Do you like tennis? | ck ng nk しわけ | エマ先生の すきなもの あてクイズ |
+| 89 | Birimo's World Trip | あいさつ・かず・いろ | Thank you. See you! | sh ch th wh しわけ | ビリモと ふねで せかい りょこう |
+| 90 | World 3 Grand Review | ワールド総まとめ（スピードTPR） | I'm Haru. I like blue and soccer. | ダイグラフ総まとめ | せかいの港の すきなもの はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。

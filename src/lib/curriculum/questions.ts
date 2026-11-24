@@ -5,7 +5,7 @@
 import type { AssessmentDef, LearningItemDef, LessonDef, MemoryState, Skill } from "@/lib/domain/types";
 import { pickArenaItems, type ArenaMode } from "@/lib/domain/arena";
 import { MAX_CONVERSATION_TURNS } from "@/lib/conversation/engine";
-import { itemsInRange, itemsOfLesson } from "./index";
+import { getLesson, itemsInRange, itemsOfLesson } from "./index";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -70,6 +70,33 @@ export function hashSeed(s: string): number {
   return h >>> 0;
 }
 
+/** ダイグラフ（2文字で1つの音。ワールド3） */
+export const DIGRAPHS = ["sh", "ch", "th", "wh", "ck", "ng", "nk"] as const;
+/** ことばの はじめに来るダイグラフ */
+const START_DIGRAPHS = ["sh", "ch", "th", "wh"];
+
+/**
+ * その回のフォーカスがダイグラフなら、ダイグラフで問う（ship の最初の音を「s」にしない）。
+ * - sh / ch / th / wh で始まる → 「さいしょの おとは どれ？」（選択肢はダイグラフ4つ）
+ * - 途中・おわりにある（fish, duck, ring）→ 「どの つづりが はいってる？」
+ * フォーカスが1文字の回（ワールド1の duck など）は、今までどおり最初の文字で問う。
+ */
+export function digraphQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
+  const focus = getLesson(item.lessonNo)?.phonics.focus ?? [];
+  if (!focus.some((f) => (DIGRAPHS as readonly string[]).includes(f))) return null;
+  const w = item.text.toLowerCase();
+  const start = START_DIGRAPHS.find((d) => w.startsWith(d));
+  if (start) {
+    return { promptJa: "さいしょの おとは どれ？", choices: shuffle(START_DIGRAPHS, rng).map((d) => ({ id: d, label: d })), answer: start,
+      explanationJa: `${item.text} は「${start}」の音ではじまるよ。2もじで 1つの おと！` };
+  }
+  const inside = DIGRAPHS.find((d) => w.includes(d));
+  if (!inside) return null;
+  const others = shuffle(DIGRAPHS.filter((d) => !w.includes(d)), rng).slice(0, 3);
+  return { promptJa: "どの つづりが はいってる？", choices: shuffle([inside, ...others], rng).map((d) => ({ id: d, label: d })), answer: inside,
+    explanationJa: `${item.text} には「${inside}」が はいってるよ。2もじで 1つの おと！` };
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -129,6 +156,8 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
+      const dq = digraphQuestion(item, rng);
+      if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
       // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない
       const sameSound = first === "c" ? "k" : first === "k" ? "c" : "";

@@ -192,3 +192,59 @@ describe("カリキュラム: ワールド2 の決まりごと", () => {
     expect(grammar(56, 60)).toContain("Happy New Year!");
   });
 });
+
+describe("カリキュラム: ワールド3 の決まりごと", () => {
+  const w3 = LESSONS.filter((l) => l.world === 3);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+
+  it("ワールド3 は 61〜90 の 30 レッスン、学年は小3", () => {
+    if (w3.length === 0) return; // 未作成ならスキップ
+    expect(w3.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 61 + i));
+    for (const l of w3) expect(l.school.grade).toBe("小3");
+  });
+
+  it("ダイグラフを sh → ch → th → wh → ck・ng・nk の順に（ブロックの最後はふりかえり）", () => {
+    if (w3.length === 0) return;
+    const plan: [number, string][] = [[61, "sh"], [66, "ch"], [71, "th"], [76, "wh"]];
+    for (const [start, focus] of plan) {
+      for (let k = 0; k < 5; k++) {
+        const l = at(start + k)!;
+        expect(l.phonics.focus, `L${l.lessonNo}`).toEqual([focus]);
+        expect(l.phonics.rule, `L${l.lessonNo}`).toBe(k === 4 ? "review" : "digraph");
+      }
+    }
+    expect([81, 82, 83, 84].map((n) => at(n)!.phonics.focus)).toEqual([["ck"], ["ck"], ["ng"], ["nk"]]);
+    expect(at(85)!.phonics.focus).toEqual(["ck", "ng", "nk"]);
+    for (const l of range(85, 90)) expect(l.phonics.rule, `L${l.lessonNo}`).toBe("review");
+    expect([...at(90)!.phonics.focus].sort()).toEqual(["ch", "ck", "ng", "nk", "sh", "th", "wh"]);
+  });
+
+  it("フォニックスの単語は短母音1つ＋子音・ダイグラフ（まだ magic e や母音チームを使わない）", () => {
+    if (w3.length === 0) return;
+    for (const l of w3) for (const w of l.phonics.words) expect(w.match(/[aeiou]/g)?.length, `L${l.lessonNo}: ${w}`).toBe(1);
+  });
+
+  it("L90 はワールドのまとめでスピード TPR", () => {
+    if (w3.length === 0) return;
+    expect(at(90)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("表現の型が計画（Let's Try! 1 前半のテーマ）どおり入っている", () => {
+    if (w3.length === 0) return;
+    const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(ex(61, 65)).toContain("Nice to meet you.");
+    expect(ex(61, 65)).toContain("What's your name?");
+    expect(ex(66, 70)).toContain("How are you");
+    expect(ex(66, 70)).toContain("Are you happy?");
+    expect(ex(71, 75)).toMatch(/How many \w+\?/);
+    expect(range(71, 72).flatMap((l) => l.vocab.map((v) => v.en))).toEqual(
+      expect.arrayContaining(["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]),
+    );
+    expect(ex(76, 80)).toContain("What color do you like?");
+    expect(ex(76, 80)).toContain("Do you like red?");
+    expect(ex(81, 85)).toContain("What sport do you like?");
+    expect(ex(81, 85)).toContain("What food do you like?");
+    expect(ex(81, 85)).toContain("I don't like");
+  });
+});
