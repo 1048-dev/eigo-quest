@@ -5062,8 +5062,8 @@
     {
       "lessonNo": 92,
       "world": 4,
-      "title": "What Do You Want?",
-      "titleJa": "なにが ほしい？",
+      "title": "Letter Cards, Please!",
+      "titleJa": "もじカード ください！",
       "school": {
         "grade": "小3",
         "topic": "アルファベット 大文字（N〜Z）・ほしい もじ",
@@ -5188,7 +5188,7 @@
         "testPoints": ["Let's make a ～. で からだで もじを つくろうと さそえる","How many letters? と きかれて かずを こたえられる"]
       },
       "tpr": [
-        {"en":"Skip to the wall.","ja":"かべまで スキップして。","action":"かべまで スキップで すすむ","emoji":"💃"},
+        {"en":"Skip in place.","ja":"その ばで スキップして。","action":"その ばで かるく スキップ","emoji":"💃"},
         {"en":"Swing your arms.","ja":"うでを ふって。","action":"うでを まえと うしろに おおきく ふる","emoji":"💪"},
         {"en":"Make an X with your body.","ja":"からだで X を つくって。","action":"てと あしを ななめに ひろげる","emoji":"❌"},
         {"en":"Make a Y with your arms.","ja":"うでで Y を つくって。","action":"りょううでを ななめ うえに あげる","emoji":"🙆"}
@@ -5268,8 +5268,9 @@
         "sceneJa": "やまごやの もじカード こうかんかい",
         "lines": [
           {"speaker":"Ms. Emma","en":"Collect C, A and T. Make a word!","ja":"C と A と T を あつめて。ことばを つくろう！"},
-          {"speaker":"Riko","en":"I have C. What do you want, Haru?","ja":"C が あるよ。ハルは なにが ほしい？"},
-          {"speaker":"Haru","en":"A, please. Here you are, T!","ja":"A を ください。はい、T を どうぞ！"},
+          {"speaker":"Haru","en":"I have A and T. What do you want, Riko?","ja":"A と T が あるよ。リコは なにが ほしい？"},
+          {"speaker":"Riko","en":"A, please. And T, please!","ja":"A を ください。T も ください！"},
+          {"speaker":"Haru","en":"Here you are.","ja":"はい、どうぞ。"},
           {"speaker":"Riko","en":"Thank you! C, A, T. Cat!","ja":"ありがとう！C・A・T。cat！"},
           {"speaker":"Kiko","en":"Meow! K, please, Birimo!","ja":"ニャー！ビリモ、K を ちょうだい！"}
         ],
@@ -5454,8 +5455,8 @@
     {
       "lessonNo": 99,
       "world": 4,
-      "title": "This Is for You!",
-      "titleJa": "これ、あなたに！",
+      "title": "A Card for You!",
+      "titleJa": "カードの プレゼント",
       "school": {
         "grade": "小3",
         "topic": "カードを わたす",
@@ -5499,7 +5500,7 @@
         ],
         "aiTask": {
           "goalJa": "This is for you. で わたす・Thank you. / You're welcome. で こたえる やりとりを しよう",
-          "starterEn": "Hello! I made a card. This is for you!",
+          "starterEn": "Hello! Look, a card! This is for you!",
           "targetExpressions": ["Thank you.","This is for you.","You're welcome."]
         }
       },
@@ -5566,8 +5567,8 @@
     {
       "lessonNo": 101,
       "world": 4,
-      "title": "What's This?",
-      "titleJa": "これ なあに？",
+      "title": "Mystery Box Quiz",
+      "titleJa": "はこの なかみ クイズ",
       "school": {
         "grade": "小3",
         "topic": "これなあに？クイズ",
@@ -5667,7 +5668,7 @@
         ],
         "aiTask": {
           "goalJa": "Hint, please. で ヒントを もらって、It's a ～. で こたえを いおう",
-          "starterEn": "Quiz time! I'm thinking of a fruit. What's this?",
+          "starterEn": "Quiz time! It's a fruit. What's this?",
           "targetExpressions": ["Hint, please.","It's a ～."]
         }
       },
@@ -5715,7 +5716,7 @@
         "scene": "Guessing an animal hiding behind a rock at the pond",
         "sceneJa": "いけの いわの かげに かくれた いきもの あて",
         "lines": [
-          {"speaker":"Kiko","en":"Something is green. What's this?","ja":"なにか みどりの ものが いる。これ なあに？"},
+          {"speaker":"Kiko","en":"Look! Something green! What's this?","ja":"みて！なにか みどりの ものが いる！これ なあに？"},
           {"speaker":"Haru","en":"Is it a fish?","ja":"さかな？"},
           {"speaker":"Kiko","en":"No, it isn't. It can jump.","ja":"ちがうよ。ジャンプ できるよ。"},
           {"speaker":"Riko","en":"Is it a frog?","ja":"かえる？"},
@@ -5751,7 +5752,7 @@
         {"en":"Trace the shadow.","ja":"かげを なぞって。","action":"ゆびで かげの ふちを なぞる","emoji":"✏️"},
         {"en":"Make a shadow bunny.","ja":"てで うさぎの かげを つくって。","action":"ゆびで うさぎの みみを つくる","emoji":"🐰"},
         {"en":"Turn off the light.","ja":"でんきを けして。","action":"スイッチを おす まね","emoji":"💡"},
-        {"en":"Trot like a horse.","ja":"うまみたいに パカパカ はしって。","action":"ひざを あげて かるく はしる","emoji":"🐴"}
+        {"en":"Trot like a horse.","ja":"うまみたいに その ばで パカパカ。","action":"その ばで ひざを あげて パカパカ","emoji":"🐴"}
       ],
       "phonics": {
         "rule": "blend",
@@ -6031,7 +6032,7 @@
       },
       "tpr": [
         {"en":"Strap on your bag.","ja":"かばんを せおって。","action":"リュックを せおう まね","emoji":"🎒"},
-        {"en":"Sprint to the door.","ja":"ドアまで ダッシュ。","action":"その ばで はやく はしる","emoji":"🏃"},
+        {"en":"Sprint in place!","ja":"その ばで ダッシュ！","action":"その ばで はやく あしぶみ","emoji":"🏃"},
         {"en":"Scrub your hands.","ja":"てを ごしごし あらって。","action":"てを こすりあわせる","emoji":"🧼"},
         {"en":"Tiptoe.","ja":"つまさきで あるいて。","action":"そーっと つまさきで あるく","emoji":"🩰"}
       ],
@@ -6111,7 +6112,7 @@
         "lines": [
           {"speaker":"Riko","en":"Who are you?","ja":"あなたは だれ？"},
           {"speaker":"Haru","en":"Hello! I'm a frog. Ribbit!","ja":"こんにちは！かえるだよ。ケロケロ！"},
-          {"speaker":"Riko","en":"Grr... Are you a bear, Kiko?","ja":"ガオー… キコは くま？"},
+          {"speaker":"Riko","en":"Are you a bear, Kiko?","ja":"キコは くま？"},
           {"speaker":"Kiko","en":"No, I'm not. I'm a rabbit!","ja":"ちがうよ。うさぎだよ！"},
           {"speaker":"Birimo","en":"Let's go together! The end!","ja":"いっしょに いこう！おしまい！"},
           {"speaker":"Ms. Emma","en":"Wonderful play! Take a bow.","ja":"すてきな げき！おじぎを して。"}
@@ -6168,7 +6169,7 @@
         "lines": [
           {"speaker":"Kiko","en":"Look at the snake!","ja":"へびを みて！"},
           {"speaker":"Haru","en":"It's long. It's very long!","ja":"ながいね。とても ながい！"},
-          {"speaker":"Riko","en":"Look at the giraffe. Long neck! Wow!","ja":"キリンを みて。くびが ながい！わあ！"},
+          {"speaker":"Riko","en":"Look at the giraffe. Its neck is long! Wow!","ja":"キリンを みて。くびが ながい！わあ！"},
           {"speaker":"Birimo","en":"Look at my tail. It's short!","ja":"ぼくの しっぽを みて。みじかいよ！"},
           {"speaker":"Kiko","en":"Ha ha! It's short and cute!","ja":"あはは！みじかくて かわいい！"}
         ],
@@ -6279,7 +6280,7 @@
         "sceneJa": "どうぶつえんの はくぶつかんで どうぶつ レースの ビデオ",
         "lines": [
           {"speaker":"Haru","en":"Look! A cheetah! It's fast!","ja":"みて！チーター！はやい！"},
-          {"speaker":"Kiko","en":"The turtle is slow. Go, turtle, go!","ja":"かめは ゆっくり。がんばれ、かめ！"},
+          {"speaker":"Kiko","en":"Look at the turtle. It's slow. Go, turtle, go!","ja":"かめを みて。ゆっくりだね。がんばれ、かめ！"},
           {"speaker":"Riko","en":"Look at the elephant's trunk. It's strong!","ja":"ぞうの はなを みて。つよい！"},
           {"speaker":"Birimo","en":"I'm fast too! Zoom!","ja":"ぼくも はやいよ！ビューン！"},
           {"speaker":"Ms. Emma","en":"Ha ha! You're slow, Birimo.","ja":"あはは！ビリモは ゆっくりよ。"}
@@ -6313,7 +6314,7 @@
       "tpr": [
         {"en":"Stomp like an elephant.","ja":"ぞうみたいに ドシンドシン。","action":"あしを おおきく ふみならす","emoji":"🐘"},
         {"en":"Blink like an owl.","ja":"ふくろうみたいに まばたき。","action":"めを おおきく ゆっくり パチパチ","emoji":"🦉"},
-        {"en":"Trot like a pony.","ja":"ポニーみたいに パカパカ。","action":"ひざを あげて かるく はしる","emoji":"🐴"},
+        {"en":"Trot like a pony.","ja":"ポニーみたいに その ばで パカパカ。","action":"その ばで ひざを あげて パカパカ","emoji":"🐴"},
         {"en":"Twist like a snake.","ja":"へびみたいに くねくね。","action":"からだを くねくね させる","emoji":"🐍"}
       ],
       "phonics": {
@@ -6614,12 +6615,13 @@
         "scene": "Question time after Riko's practice presentation on the hilltop",
         "sceneJa": "おかの うえで リコの はっぴょうの あとの しつもんタイム",
         "lines": [
-          {"speaker":"Riko","en":"I'm Riko. I like frogs. Any questions?","ja":"リコです。かえるが すき。しつもんは ありますか？"},
-          {"speaker":"Haru","en":"Do you like snakes?","ja":"へびは すき？"},
-          {"speaker":"Riko","en":"No, I don't. I like frogs!","ja":"ううん、すきじゃない。かえるが すき！"},
-          {"speaker":"Kiko","en":"What color do you like?","ja":"なにいろが すき？"},
-          {"speaker":"Riko","en":"I like green. Frogs are green!","ja":"みどりが すき。かえるは みどり！"},
-          {"speaker":"Birimo","en":"Great questions! Clap, clap!","ja":"いい しつもん！パチパチ！"}
+          {"speaker":"Riko","en":"I'm Riko. I like animals. Any questions?","ja":"リコです。どうぶつが すき。しつもんは ありますか？"},
+          {"speaker":"Haru","en":"Do you like frogs?","ja":"かえるは すき？"},
+          {"speaker":"Riko","en":"Yes, I do! Frogs are cute.","ja":"うん、すき！かえるは かわいい。"},
+          {"speaker":"Kiko","en":"Do you like snakes?","ja":"へびは すき？"},
+          {"speaker":"Riko","en":"No, I don't.","ja":"ううん、すきじゃない。"},
+          {"speaker":"Birimo","en":"What color do you like?","ja":"なにいろが すき？"},
+          {"speaker":"Riko","en":"I like green. Frogs are green!","ja":"みどりが すき。かえるは みどり！"}
         ],
         "aiTask": {
           "goalJa": "はっぴょうを きいて Do you like ～? / What color do you like? で しつもんしよう",
@@ -6755,7 +6757,7 @@
         "grammar": "Hello, world! / How are you? ― I'm good.",
         "expressions": [
           {"en":"Hello, world!","ja":"こんにちは、せかい！","core":true},
-          {"en":"Jambo means hello.","ja":"ジャンボは こんにちは という いみ。"},
+          {"en":"Jambo! It's hello in Kenya.","ja":"ジャンボ！ケニアの こんにちはだよ。"},
           {"en":"How are you? ― I'm good.","ja":"げんき？ ― げんきだよ。"}
         ],
         "testPoints": ["Hello, world! など いろいろな あいさつを いえる","せかいには いろいろな ことばの あいさつが あると しる"]
@@ -6785,11 +6787,11 @@
         "sceneJa": "とうの なかで ビリモが 大きな ちきゅうぎを まわす",
         "lines": [
           {"speaker":"Birimo","en":"Let's spin the globe! Stop! Kenya!","ja":"ちきゅうぎを まわそう！ストップ！ケニア！"},
-          {"speaker":"Ms. Emma","en":"In Kenya, people say Jambo. It means hello.","ja":"ケニアでは ジャンボと いうよ。こんにちは という いみ。"},
-          {"speaker":"Riko","en":"Jambo! Hello!","ja":"ジャンボ！こんにちは！"},
+          {"speaker":"Ms. Emma","en":"In Kenya, people say Jambo. It's hello!","ja":"ケニアでは ジャンボと いうよ。こんにちは の ことだよ！"},
+          {"speaker":"Riko","en":"Jambo, Haru! How are you?","ja":"ジャンボ、ハル！げんき？"},
+          {"speaker":"Haru","en":"Jambo! I'm good.","ja":"ジャンボ！げんきだよ。"},
           {"speaker":"Birimo","en":"Spin again! Italy! Ciao!","ja":"もういちど！イタリア！チャオ！"},
-          {"speaker":"Haru","en":"Ciao! Let's say hello to the world. Hello, world!","ja":"チャオ！せかいに あいさつしよう。こんにちは、せかい！"},
-          {"speaker":"Kiko","en":"Hello, world! Give me a high five!","ja":"こんにちは、せかい！ハイタッチ！"}
+          {"speaker":"Kiko","en":"Ciao! Let's say hello to the world. Hello, world!","ja":"チャオ！せかいに あいさつしよう。こんにちは、せかい！"}
         ],
         "aiTask": {
           "goalJa": "Hello, world! や せかいの あいさつで げんきに あいさつしよう。How are you? にも こたえてみよう",
@@ -6870,7 +6872,7 @@
         "expressions": [
           {"en":"See you later.","ja":"またあとでね。","core":true},
           {"en":"Have a nice day!","ja":"いい 1日を！"},
-          {"en":"Adios means goodbye.","ja":"アディオスは さようなら という いみ。"}
+          {"en":"Adios! It's goodbye in Spain.","ja":"アディオス！スペインの さようならだよ。"}
         ],
         "testPoints": ["See you later. / Have a nice day! で わかれの あいさつが できる","あいさつに あわせて てを ふれる"]
       },
@@ -6898,7 +6900,7 @@
         "scene": "Saying goodbye to Birimo's friends at the tower gate",
         "sceneJa": "とうの もんで ビリモの ともだちを みおくる",
         "lines": [
-          {"speaker":"Birimo","en":"My friends must go home now.","ja":"ぼくの ともだちが もう かえる じかん。"},
+          {"speaker":"Birimo","en":"Bye, my friends! It's time to go home.","ja":"ともだち、バイバイ！もう かえる じかんだね。"},
           {"speaker":"Riko","en":"Goodbye! Have a nice day!","ja":"さようなら！いい 1日を！"},
           {"speaker":"Ms. Emma","en":"In Spain, people say Adios.","ja":"スペインでは アディオスと いうよ。"},
           {"speaker":"Haru","en":"Adios! See you later!","ja":"アディオス！またあとでね！"},
@@ -6906,7 +6908,7 @@
         ],
         "aiTask": {
           "goalJa": "わかれの あいさつ See you later. / Have a nice day! / Goodbye. を つかおう",
-          "starterEn": "I must go home now. Goodbye!",
+          "starterEn": "It's time to go home. Goodbye!",
           "targetExpressions": ["See you later.","Have a nice day!","Goodbye."]
         }
       },
@@ -7044,7 +7046,7 @@
         "testPoints": ["Let's play ～. で あそびに さそえる","Yes, let's! で こたえられる"]
       },
       "tpr": [
-        {"en":"Run and tag a friend.","ja":"はしって ともだちに タッチ。","action":"はしって かたに タッチ","emoji":"🏃"},
+        {"en":"Tag a friend.","ja":"ともだちに タッチ。","action":"ともだちの かたに そっと タッチ","emoji":"👋"},
         {"en":"Hide behind a tree.","ja":"きの うしろに かくれて。","action":"しゃがんで かくれる","emoji":"🌳"},
         {"en":"Freeze!","ja":"こおって！（とまって）","action":"ぴたっと とまる","emoji":"🧊"},
         {"en":"Jump rope.","ja":"なわとびを して。","action":"なわとびの まねで ぴょんぴょん","emoji":"🪢"}
@@ -7293,7 +7295,7 @@
         "scene": "The seven day rooms of the Tower of Time",
         "sceneJa": "じかんの塔の 7つの ようびの へや",
         "lines": [
-          {"speaker":"Birimo","en":"This tower has seven rooms. One for each day!","ja":"この とうには 7つの へや。ようびごとに 1つ！"},
+          {"speaker":"Birimo","en":"Look! Seven rooms. One for each day!","ja":"みて！へやが 7つ。ようびごとに 1つ！"},
           {"speaker":"Kiko","en":"What day is it?","ja":"なんようび？"},
           {"speaker":"Ms. Emma","en":"It's Monday. Let's open the Monday room.","ja":"げつようび。げつようびの へやを あけよう。"},
           {"speaker":"Haru","en":"Next is the Tuesday room!","ja":"つぎは かようびの へや！"},
@@ -7408,8 +7410,8 @@
         "lines": [
           {"speaker":"Haru","en":"I like Mondays. I play soccer on Mondays.","ja":"げつようびが すき。げつようびに サッカーを するんだ。"},
           {"speaker":"Kiko","en":"Do you like Fridays, Riko?","ja":"リコ、きんようびは すき？"},
-          {"speaker":"Riko","en":"Yes, I do! I play the piano on Fridays.","ja":"うん、すき！きんようびに ピアノを ひくの。"},
-          {"speaker":"Birimo","en":"I like Sundays. Sleep, sleep, sleep!","ja":"ぼくは にちようびが すき。ねて、ねて、ねる！"},
+          {"speaker":"Riko","en":"Yes, I do! I play the piano on Fridays. Do you like Mondays, Birimo?","ja":"うん、すき！きんようびに ピアノを ひくの。ビリモ、げつようびは すき？"},
+          {"speaker":"Birimo","en":"No, I don't. I like Sundays. Sleep, sleep, sleep!","ja":"ううん、すきじゃない。にちようびが すき。ねて、ねて、ねる！"},
           {"speaker":"Ms. Emma","en":"Ha ha! I like Saturdays.","ja":"あはは！先生は どようびが すき。"}
         ],
         "aiTask": {
@@ -7433,7 +7435,7 @@
         "grammar": "Let's play on ～. / Sorry. I have ～ on ～.",
         "expressions": [
           {"en":"Let's play on Saturday.","ja":"どようびに あそぼう。","core":true},
-          {"en":"Sorry. I have piano on Saturday.","ja":"ごめんね。どようびは ピアノが あるの。"},
+          {"en":"Sorry. I have swimming on Saturday.","ja":"ごめんね。どようびは すいえいが あるの。"},
           {"en":"OK. Let's play on Sunday!","ja":"いいよ。にちようびに あそぼう！"}
         ],
         "testPoints": ["Let's play on ようび. で よていを きめられる","ことわる ときに Sorry. と いえる"]
@@ -7463,10 +7465,10 @@
         "sceneJa": "とうの カレンダーで しゅうまつの よていを きめる",
         "lines": [
           {"speaker":"Kiko","en":"Let's play on Saturday!","ja":"どようびに あそぼう！"},
-          {"speaker":"Riko","en":"Sorry. I have piano on Saturday.","ja":"ごめんね。どようびは ピアノが あるの。"},
+          {"speaker":"Riko","en":"Sorry. I have swimming on Saturday.","ja":"ごめんね。どようびは すいえいが あるの。"},
           {"speaker":"Haru","en":"OK. Let's play on Sunday!","ja":"いいよ。にちようびに あそぼう！"},
           {"speaker":"Riko","en":"Yes, let's! Sunday is good.","ja":"うん、そうしよう！にちようびなら だいじょうぶ。"},
-          {"speaker":"Birimo","en":"I'm writing it on the calendar. Sunday, play!","ja":"カレンダーに かくね。にちようび、あそぶ！"}
+          {"speaker":"Birimo","en":"Let's write it on the calendar. Sunday, play!","ja":"カレンダーに かこう。にちようび、あそぶ！"}
         ],
         "aiTask": {
           "goalJa": "ようびを えらんで Let's play on ～. で あそぶ よていを きめよう",
@@ -7610,7 +7612,7 @@
         {"en":"Eat your breakfast.","ja":"あさごはんを たべて。","action":"スプーンで たべる まね","emoji":"🍳"},
         {"en":"Wash your hands.","ja":"てを あらって。","action":"てを ごしごし あらう まね","emoji":"🧼"},
         {"en":"Get in the bath.","ja":"おふろに はいって。","action":"かたまで おゆに つかる まね","emoji":"🛁"},
-        {"en":"Run to the table.","ja":"テーブルへ はしって。","action":"その ばで はしる","emoji":"🏃"}
+        {"en":"Sit at the table.","ja":"テーブルに すわって。","action":"いすに すわる まね","emoji":"🪑"}
       ],
       "phonics": {
         "rule": "ing",
@@ -7688,7 +7690,7 @@
         "lines": [
           {"speaker":"Birimo","en":"Ring, ring! Wake up! It's seven o'clock!","ja":"リンリン！おきて！7じだよ！"},
           {"speaker":"Haru","en":"Five more minutes...","ja":"あと 5ふん…"},
-          {"speaker":"Kiko","en":"Wake up, Haru! It's breakfast time!","ja":"ハル、おきて！あさごはんの じかんだよ！"},
+          {"speaker":"Kiko","en":"Good morning, Haru! Wake up! It's breakfast time!","ja":"ハル、おはよう！おきて！あさごはんの じかんだよ！"},
           {"speaker":"Riko","en":"Now it's nine o'clock at night. It's bedtime.","ja":"いまは よるの 9じ。ねる じかん。"},
           {"speaker":"Ms. Emma","en":"Brush your teeth. Good night, everyone.","ja":"はを みがいてね。みんな、おやすみ。"}
         ],
@@ -8142,7 +8144,7 @@
           {"speaker":"Haru","en":"Good morning! It's seven o'clock. Wake up, Birimo!","ja":"おはよう！7じだよ。ビリモ、おきて！"},
           {"speaker":"Birimo","en":"Good morning... How's the weather?","ja":"おはよう…てんきは どう？"},
           {"speaker":"Haru","en":"It's sunny! Open the curtains!","ja":"はれ！カーテンを あけて！"},
-          {"speaker":"Kiko","en":"It's breakfast time. I like toast and juice.","ja":"あさごはんの じかん。トーストと ジュースが すき。"},
+          {"speaker":"Kiko","en":"Good morning! It's breakfast time. I like toast and juice.","ja":"おはよう！あさごはんの じかん。トーストと ジュースが すき。"},
           {"speaker":"Ms. Emma","en":"What a nice morning video!","ja":"すてきな あさの ビデオね！"}
         ],
         "aiTask": {
@@ -8365,7 +8367,7 @@
         "lines": [
           {"speaker":"Ms. Emma","en":"Good morning, everyone! It's presentation day!","ja":"みなさん おはよう！きょうは はっぴょうかい！"},
           {"speaker":"Riko","en":"Good morning. I'm Riko. I like Fridays. I have art on Fridays.","ja":"おはよう。リコです。きんようびが すき。きんようびは ずこうが あるの。"},
-          {"speaker":"Haru","en":"What time is it? It's ten o'clock. It's sunny. Let's play tag!","ja":"なんじ？10じ。はれだ。おにごっこ しよう！"},
+          {"speaker":"Haru","en":"It's ten o'clock. It's sunny. It's Sunday. Let's play tag!","ja":"10じ。はれ。にちようびだ。おにごっこ しよう！"},
           {"speaker":"Kiko","en":"Do you have a pen? Let's write our week!","ja":"ペン もってる？1しゅうかんを かこう！"},
           {"speaker":"Birimo","en":"Ding, dong! Great job, everyone! Let's go to World 6!","ja":"ディン ドン！みんな よく できました！ワールド6へ いこう！"}
         ],
@@ -8422,8 +8424,8 @@
           {"speaker":"Birimo","en":"Look! Small letters on the gate.","ja":"みて！もんに こもじが ある。"},
           {"speaker":"Kiko","en":"What's this letter?","ja":"これは なんの もじ？"},
           {"speaker":"Haru","en":"It's a small b. Capital B, small b.","ja":"こもじの b だよ。おおもじの B、こもじの b。"},
-          {"speaker":"Riko","en":"And this is a small d. b and d look the same!","ja":"こっちは こもじの d。b と d、にてる！"},
-          {"speaker":"Ms. Emma","en":"Good! Say the letters, and the gate will open.","ja":"いいね！もじを いうと もんが ひらくよ。"}
+          {"speaker":"Riko","en":"And this is a small d. b and d look like twins!","ja":"こっちは こもじの d。b と d、ふたごみたい！"},
+          {"speaker":"Ms. Emma","en":"Good! Say the letters and open the gate!","ja":"いいね！もじを いって、もんを あけよう！"}
         ],
         "aiTask": {
           "goalJa": "What's this letter? と きかれたら It's a small ～. で こたえよう（a〜m の こもじ）",
@@ -8539,7 +8541,7 @@
         ],
         "aiTask": {
           "goalJa": "Look at the sign. で かんばんを しめして、What's this sign? ― It's a ～ sign. で はなそう",
-          "starterEn": "We are in the town. Look at the sign! What's this sign?",
+          "starterEn": "We're in town. Look at the sign! What's this sign?",
           "targetExpressions": ["Look at the sign.","What's this sign?","It's a ～ sign."]
         }
       },
@@ -8647,7 +8649,7 @@
           {"speaker":"Riko","en":"Look at the sign. It's a cake shop!","ja":"かんばんを みて。ケーキやさんだ！"},
           {"speaker":"Haru","en":"What's this letter? It's a small g.","ja":"これは なんの もじ？ こもじの g だ。"},
           {"speaker":"Kiko","en":"I see a small r. It's a flower shop. Roses!","ja":"こもじの r が みえる。はなやさんだ。バラ！"},
-          {"speaker":"Birimo","en":"I found ten letters! I win!","ja":"ぼく もじを 10こ みつけた！ぼくの かち！"}
+          {"speaker":"Birimo","en":"Look! Ten letters! I win!","ja":"みて！もじが 10こ！ぼくの かち！"}
         ],
         "aiTask": {
           "goalJa": "Look at the sign. / I see a small ～. / It's a ～ shop. で まちの かんばん たんけんを しよう",
@@ -8662,8 +8664,8 @@
     {
       "lessonNo": 156,
       "world": 6,
-      "title": "What Do You Want?",
-      "titleJa": "なにが ほしい？",
+      "title": "Lunch at the Café",
+      "titleJa": "カフェで おひるごはん",
       "school": {
         "grade": "小4",
         "topic": "ほしい たべもの（しょくじ）",
@@ -8727,7 +8729,7 @@
         "expressions": [
           {"en":"I want a parfait.","ja":"パフェが ほしい。","core":true},
           {"en":"What do you want? ― I want pudding.","ja":"なにが ほしい？ ― プリンが ほしい。"},
-          {"en":"It looks yummy!","ja":"おいしそう！"}
+          {"en":"Yummy!","ja":"おいしそう！"}
         ],
         "testPoints": ["I want ～. で ほしい デザートを いえる","デザートの なまえが わかる"]
       },
@@ -8756,10 +8758,10 @@
         "sceneJa": "おひるの あとの デザート タイム",
         "lines": [
           {"speaker":"Riko","en":"It's dessert time! What do you want?","ja":"デザートの じかん！なにが ほしい？"},
-          {"speaker":"Kiko","en":"I want a parfait. It looks yummy!","ja":"パフェが ほしい。おいしそう！"},
+          {"speaker":"Kiko","en":"I want a parfait. Yummy!","ja":"パフェが ほしい。おいしそう！"},
           {"speaker":"Haru","en":"I want pudding.","ja":"ぼくは プリンが ほしい。"},
           {"speaker":"Birimo","en":"I want ice cream and jelly and pudding!","ja":"ぼくは アイスと ゼリーと プリン！"},
-          {"speaker":"Ms. Emma","en":"Birimo! One, please.","ja":"ビリモ！ひとつ だけね。"}
+          {"speaker":"Ms. Emma","en":"Birimo! Just one, please.","ja":"ビリモ！ひとつ だけね。"}
         ],
         "aiTask": {
           "goalJa": "What do you want? と きかれたら I want ～. で ほしい デザートを こたえよう。あいてにも きいてみよう",
@@ -8928,7 +8930,7 @@
           {"speaker":"Riko","en":"How many strawberries?","ja":"いちご いくつ？"},
           {"speaker":"Haru","en":"Two, please. And chocolate sauce.","ja":"2つ ください。チョコソースも。"},
           {"speaker":"Riko","en":"Here you are!","ja":"はい どうぞ！"},
-          {"speaker":"Birimo","en":"Next customer is me! I want a big, big parfait!","ja":"つぎの おきゃくさんは ぼく！おおきい おおきい パフェ！"}
+          {"speaker":"Birimo","en":"I'm the next customer! I want a big, big parfait!","ja":"つぎの おきゃくさんは ぼく！おおきい おおきい パフェ！"}
         ],
         "aiTask": {
           "goalJa": "パフェやさんで What do you want? / How many? に こたえて、I want ～. / ～, please. で ちゅうもんしよう",
@@ -8960,7 +8962,7 @@
         {"en":"Open the door.","ja":"ドアを あけて。","action":"ドアノブを まわして あける まね","emoji":"🚪"},
         {"en":"Read a book quietly.","ja":"しずかに ほんを よんで。","action":"ほんを ひらいて しーっ","emoji":"📖"},
         {"en":"Play the drums.","ja":"たいこを たたいて。","action":"りょうてで トントン","emoji":"🥁"},
-        {"en":"Run around the gym.","ja":"たいいくかんを はしって。","action":"その ばで ぐるっと はしる","emoji":"🏃"}
+        {"en":"Bounce a ball.","ja":"ボールを ついて。","action":"ボールを ポンポン つく まね","emoji":"🏀"}
       ],
       "phonics": {
         "rule": "magic-e",
@@ -9096,7 +9098,7 @@
           {"speaker":"Haru","en":"Go up the stairs. Turn right.","ja":"かいだんを のぼって。みぎに まがって。"},
           {"speaker":"Birimo","en":"Right? This way?","ja":"みぎ？ こっち？"},
           {"speaker":"Riko","en":"No, Birimo! That's left! Turn right.","ja":"ちがうよ ビリモ！それは ひだり！みぎに まがって。"},
-          {"speaker":"Kiko","en":"Stop. This is the art room. Here we are!","ja":"とまって。ここが ずこうしつ。ついたよ！"}
+          {"speaker":"Kiko","en":"Now turn left. Stop. This is the art room!","ja":"こんどは ひだりに まがって。とまって。ここが ずこうしつ！"}
         ],
         "aiTask": {
           "goalJa": "Go straight. / Turn right. / Turn left. / Stop. で あいてを ばしょまで あんないしよう",
@@ -9150,7 +9152,7 @@
         "lines": [
           {"speaker":"Birimo","en":"Ouch! My knee! Where is the nurse's office?","ja":"いたっ！ひざが！ほけんしつは どこ？"},
           {"speaker":"Riko","en":"Go straight and turn left.","ja":"まっすぐ いって ひだりに まがって。"},
-          {"speaker":"Haru","en":"Walk slowly, Birimo. I'll come with you.","ja":"ゆっくり あるいて、ビリモ。いっしょに いくよ。"},
+          {"speaker":"Haru","en":"Walk slowly, Birimo. Let's go together.","ja":"ゆっくり あるいて、ビリモ。いっしょに いこう。"},
           {"speaker":"Kiko","en":"Here it is! The nurse's office.","ja":"ここだよ！ほけんしつ。"},
           {"speaker":"Ms. Emma","en":"Are you OK, Birimo? Here's a bandage.","ja":"だいじょうぶ、ビリモ？ばんそうこう どうぞ。"}
         ],
@@ -9655,7 +9657,7 @@
           {"speaker":"Riko","en":"Welcome to the cooking show! Let's make pancakes.","ja":"クッキングショーへ ようこそ！パンケーキを つくろう。"},
           {"speaker":"Riko","en":"First, mix the eggs and milk.","ja":"まず、たまごと ぎゅうにゅうを まぜて。"},
           {"speaker":"Haru","en":"Then, cook it in the pan. Flip!","ja":"それから、フライパンで やく。ひっくりかえす！"},
-          {"speaker":"Kiko","en":"Next, put on some honey. It looks yummy!","ja":"つぎに、はちみつを かけて。おいしそう！"},
+          {"speaker":"Kiko","en":"Next, put on some honey. Yummy!","ja":"つぎに、はちみつを かけて。おいしそう！"},
           {"speaker":"Birimo","en":"Then, I eat it! Thank you, chefs!","ja":"そして ぼくが たべる！シェフの みんな ありがとう！"}
         ],
         "aiTask": {
@@ -9712,7 +9714,7 @@
           {"speaker":"Riko","en":"I'm the little cloud! First, I fly over the sea.","ja":"わたしは ちいさな くも！まず、うみの うえを とぶ。"},
           {"speaker":"Haru","en":"Then, I make rain. Drip, drop!","ja":"それから、あめを ふらせる。ぽつ、ぽつ！"},
           {"speaker":"Kiko","en":"Look! The sun! I make a rainbow!","ja":"みて！たいよう！にじを つくる！"},
-          {"speaker":"Ms. Emma","en":"The end. Did you like the story?","ja":"おしまい。おはなし すきだった？"},
+          {"speaker":"Ms. Emma","en":"The end. Do you like the story?","ja":"おしまい。おはなし、すき？"},
           {"speaker":"Birimo","en":"Yes! One more time, please!","ja":"うん！もう いっかい！"}
         ],
         "aiTask": {
@@ -9857,7 +9859,7 @@
         {"en":"Open your textbook.","ja":"きょうかしょを ひらいて。","action":"ほんを ひらく まね","emoji":"📘"},
         {"en":"Write on the board.","ja":"こくばんに かいて。","action":"チョークで かく まね","emoji":"🧑‍🏫"},
         {"en":"Line up.","ja":"ならんで。","action":"まっすぐ たって まえを むく","emoji":"🚶"},
-        {"en":"Run to the playground.","ja":"こうていへ はしって。","action":"その ばで はしる","emoji":"🏃"}
+        {"en":"Walk to the playground.","ja":"こうていへ あるいて。","action":"その ばで あるく","emoji":"🚶"}
       ],
       "phonics": {
         "rule": "review",
@@ -9937,7 +9939,7 @@
           {"speaker":"Haru","en":"It's a small g!","ja":"こもじの g！"},
           {"speaker":"Birimo","en":"That's right! One point! Next, look at the sign. What's this shop?","ja":"せいかい！1てん！つぎ、かんばんを みて。なんの おみせ？"},
           {"speaker":"Riko","en":"It's a cake shop! I want five cakes!","ja":"ケーキやさん！ケーキ 5つ ほしい！"},
-          {"speaker":"Kiko","en":"Look at the points. We are the winners!","ja":"とくてんを みて。わたしたちの ゆうしょう！"}
+          {"speaker":"Kiko","en":"Look at the points. We're the winners!","ja":"とくてんを みて。わたしたちの ゆうしょう！"}
         ],
         "aiTask": {
           "goalJa": "クイズで What's this letter? に It's a small ～. で こたえよう。あいてにも もんだいを だしてみよう",
@@ -9952,8 +9954,8 @@
     {
       "lessonNo": 179,
       "world": 6,
-      "title": "Practice Time",
-      "titleJa": "はっぴょうの れんしゅう",
+      "title": "Let's Practice Together!",
+      "titleJa": "いっしょに れんしゅう！",
       "school": {
         "grade": "小4",
         "topic": "まとめ：小4 はっぴょうかいの れんしゅう",
@@ -10055,7 +10057,7 @@
         "aiTask": {
           "goalJa": "ワールド6の ことばで はっぴょうしよう（おきにいりの ばしょ・みちあんない・わたしの 1日・ほしい もの。なまえは ニックネームでも OK）",
           "starterEn": "Welcome to the Grade 4 show! Welcome to my favorite place! It's the library. Your turn!",
-          "targetExpressions": ["This is my favorite place.","I want ～.","First, ～. Then, ～."]
+          "targetExpressions": ["Welcome to my favorite place!","I want ～.","First, ～. Then, ～."]
         }
       },
       "recap": {

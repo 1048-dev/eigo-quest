@@ -64,3 +64,35 @@
 - 目標表現が会話に無いときは、セリフを足すか、レッスン内にある表現に目標を変えるか、自然なほうを選んだ（L6 は会話テストが「It's red.」の判定を使うので、色の目標を「It's ～.」にまとめず「It's red. / It's blue. / What color is it?」に）
 - 計画書にある少しめずらしい単語（whim, whiff, cuff, fuzz, peg など）は、ブレンドを使わない代わりの単語がほとんど無いので残した
 - L26 の「You're welcome!」（L29 で習う）は、場面に自然で よく使う決まり文句なので そのまま
+
+## Phase 3 — カリキュラム品質レビュー ワールド4〜6（Lesson 91〜180、docs/night2/REVIEW.md）
+
+### やったこと
+- 90レッスンを ぜんぶ読み、REVIEW.md のチェック項目で その場で直した。スキーマ・レッスン数・フォニックスの単語・話す人の顔ぶれは変えていない（ファイルの書式も そのまま、該当の文字列だけを置きかえ）
+- **なおしたレッスン: 39 / 90**（ワールド4: 14、ワールド5: 10、ワールド6: 15）
+- 内容別のおおよその件数（1レッスンで複数あり）
+  - 会話・aiTask: 約20（目標表現・中心表現が会話に出てこない 9件を解消、流れの不自然なセリフ、キャラ設定の食いちがい、むずかしい AI の最初のことば）
+  - まだ習っていない文法: 12（3人称の has / means / looks、過去形 made / found / did、will / I'll、must、進行形）
+  - TPR の安全: 8（「かべまで スキップ」「ドアまで ダッシュ」「はしって タッチ」「テーブルへ はしって」などを その場の動きや すわる・あるく に）
+  - タイトルの重複: 5（ワールド1〜2・4 と同じ英語／日本語タイトルだった L92・L99・L101・L156・L179）
+  - 日本語: 直したセリフに合わせて訳も見直し（約15）
+- 例
+  - L92「What Do You Want?」（L37 と同じ）→「Letter Cards, Please! / もじカード ください！」、L156 →「Lunch at the Café / カフェで おひるごはん」、L99 →「A Card for You! / カードの プレゼント」、L101 →「Mystery Box Quiz / はこの なかみ クイズ」、L179「Practice Time」（L118 と同じ）→「Let's Practice Together! / いっしょに れんしゅう！」。計画書の表も更新
+  - L95: ハルが「A, please. Here you are, T!」と、ほしい人と あげる人が ごちゃまぜ → ハルが A と T を持っていて、リコが「A, please. And T, please!」でもらい、C・A・T で cat に
+  - L119: 中心表現「Do you like frogs?」が会話に無かった → リコの発表を「I like animals.」にして、「Do you like frogs? ― Yes, I do!」「Do you like snakes? ― No, I don't.」を入れた
+  - L122: 目標表現「How are you? / I'm good.」が会話に無かった → 「Jambo, Haru! How are you? ― Jambo! I'm good.」を追加。「Jambo means hello.」（3人称）→「Jambo! It's hello in Kenya.」（L124 の Adios も同様）
+  - L131「This tower has seven rooms.」→「Look! Seven rooms.」、L157・L173「It looks yummy!」→「Yummy!」（ワールド6は3人称を使わない決まり）
+  - L133: 目標表現「No, I don't.」がどこにも無かった → ビリモが「Do you like Mondays?」に「No, I don't. I like Sundays.」と答える
+  - L134: リコのピアノが L133 では金曜、L134 では土曜 → L134 は「I have swimming on Saturday.」に
+  - L155「I found ten letters!」→「Look! Ten letters!」、L174「Did you like the story?」→「Do you like the story?」（過去形はワールド9から）
+  - L163: 目標表現「Turn left.」が会話に無かった → 最後に「Now turn left. Stop. This is the art room!」
+  - L180: 目標表現「This is my favorite place.」が会話に無い → その回の中心表現「Welcome to my favorite place!」に
+  - L102 の AI の最初のことば「I'm thinking of a fruit.」→「It's a fruit.」
+- タイトルは 1〜180 で すべて別々（英語・日本語とも）であることを確認
+- tsc / vitest（24ファイル・700件）/ next build すべて通過
+
+### 判断したこと
+- 中心表現が2人のセリフに分かれて出てくるだけの回（L146・L147・L170 の「Good afternoon. Let's play soccer.」のような 2文の まとめ表現）は、それぞれの文が会話にあるので そのまま
+- 「Once upon a time, I'm a little cloud.」のような 現在形の おはなし（L174・L175）は、過去形がまだなので わざと そのままにした
+- 「It's hello in Kenya.」: Jambo はスワヒリ語で ケニア以外でも使うが、小4向けには「ケニアの こんにちは」で十分と判断
+- 「I want to draw ～」（L141）、「I'm nervous」（L118・L179）、「Don't be scared!」（L109）などは、場面に自然な決まり文句として残した

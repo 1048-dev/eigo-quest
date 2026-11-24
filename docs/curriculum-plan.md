@@ -329,16 +329,16 @@
 | L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
 |---|---|---|---|---|---|
 | 91 | The ABC Song | 大文字 A〜M | Let's sing the ABC song. | st（stop, step, stick, stamp） | なぞなぞ山の ふもとの もじの もん |
-| 92 | What Do You Want? | 大文字 N〜Z・ほしい もじ | What do you want? | sp（spot, spin, spell, spun） | やまみちで もじカード |
+| 92 | Letter Cards, Please! | 大文字 N〜Z・ほしい もじ | What do you want? | sp（spot, spin, spell, spun） | やまみちで もじカード |
 | 93 | Find the Letters! | まちの 大文字さがし | I see a T. | sn, sm（snap, snack, smell, smash） | ロープウェイから かんばんさがし |
 | 94 | Body Letters | からだで もじ | Let's make a T. | sk, sw（skip, skin, swim, swing） | おかの うえで からだで もじ |
 | 95 | Letter Card Swap | まとめ | K, please. | s-ブレンド ふりかえり | やまごやの もじカード こうかんかい |
 | 96 | What Shape Is It? | かたち | A star, please. | bl（black, block, blink, blob） | ロッジで かたちシール えらび |
 | 97 | How Many Stars? | いろ・かたち・かず | Two red hearts, please. | cl（clap, clock, clip, club） | ビリモの シールやさん |
 | 98 | Let's Make a Card! | カードづくり | Let's make a card. | fl, gl（flag, flip, glad, glass） | ロッジで カードづくり |
-| 99 | This Is for You! | カードを わたす | This is for you. | pl, sl（plan, plum, sled, slip） | ゆきの さかで カードを プレゼント |
+| 99 | A Card for You! | カードを わたす | This is for you. | pl, sl（plan, plum, sled, slip） | ゆきの さかで カードを プレゼント |
 | 100 | Thank-You Cards | まとめ | It's a thank-you card. | l-ブレンド ふりかえり | エマ先生に ありがとうカード |
-| 101 | What's This? | これなあに？クイズ | What's this? | br, cr（brick, brush, crab, crib） | どうくつで はこの なかみ あて |
+| 101 | Mystery Box Quiz | これなあに？クイズ | What's this? | br, cr（brick, brush, crab, crib） | どうくつで はこの なかみ あて |
 | 102 | Hint, Please! | ヒントを たのむ | Hint, please. | dr（drum, drip, drop, dress） | キャンプファイヤーで ヒントクイズ |
 | 103 | Is It a Frog? | Is it a ～? | That's right! | fr, gr（frog, from, grab, grin） | いけの いきもの あて |
 | 104 | Shadow Quiz | シルエットクイズ | I know! It's a truck. | tr（truck, trip, trap, track） | テントで かげクイズ |
@@ -413,7 +413,7 @@
 | 153 | Look at the Sign! | まちの かんばん | Look at the sign. | a_e（plane, snake, skate, grape） | 城下町で かんばんを よむ |
 | 154 | Letters Around Town | まちの ばしょと こもじ | I see a small k. | a_e（shape, shade, wave, same） | 城下町の ちずで こもじ さがし |
 | 155 | Town Sign Hunt | まとめ | Look at the sign. It's a cake shop. | a_e ふりかえり（bake, late, safe, made） | かんばん たんけんゲーム |
-| 156 | What Do You Want? | しょくじ | What do you want? | i_e（bike, kite, five, nine） | 城の カフェで おひるごはん |
+| 156 | Lunch at the Café | しょくじ | What do you want? | i_e（bike, kite, five, nine） | 城の カフェで おひるごはん |
 | 157 | I Want a Parfait! | デザート | I want a parfait. | i_e（ride, hide, line, time） | デザート タイム |
 | 158 | How Many Cherries? | トッピングと かず | How many cherries? | i_e（slide, smile, prize, white） | パフェの カウンター |
 | 159 | My Dream Parfait | くみあわせ | I want ice cream and bananas. | i_e（like, pine, dive, wipe） | 城の キッチンで ゆめの パフェ |
@@ -436,7 +436,7 @@
 | 176 | My Favorite Place Speech | スピーチづくり | This is the music room. I like singing. | ブレンド＋マジック e（plane, slide, stone, flute） | 城の きょうしつで スピーチづくり |
 | 177 | My School Day | がっこうの 1日 | I go to the library after lunch. | ダイグラフ＋マジック e（shape, white, those, chase） | がっこうの 1日の おしゃべり |
 | 178 | Small Letter Quiz Show | こもじ クイズ | It's a small g. | マジック e＋s（cakes, bikes, bones, cubes） | 城の ホールで クイズショー |
-| 179 | Practice Time | はっぴょうの れんしゅう | Let's practice together. | 2音節＋マジック e（cupcake, sunshine, bedtime, trombone） | 城の ステージで リハーサル |
+| 179 | Let's Practice Together! | はっぴょうの れんしゅう | Let's practice together. | 2音節＋マジック e（cupcake, sunshine, bedtime, trombone） | 城の ステージで リハーサル |
 | 180 | World 6 Grand Review | ワールド総まとめ（スピードTPR） | Welcome to my favorite place! | マジック e 総まとめ（cake, kite, rope, cute, these） | まなびの城の 大ひろまで 小4 はっぴょうかい |
 
 ## 6-7. ワールド7 のレッスン詳細（content/curriculum/lessons.json に実装済み）
