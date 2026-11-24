@@ -5,36 +5,56 @@
  */
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
-import { AncientTree, At, ColorGrade, Fern, Fog, GodRays, Motes, RuinRelief, TempleGate } from "./CinematicScenery";
+import { AncientTree, At, ColorGrade, Fern, Flagstones, Fog, GodRays, Motes, Mountains, RuinRelief, TempleGate } from "./CinematicScenery";
 
 export function FieldBackdrop() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden>
-      <svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full">
+      {/*
+        横長（1200×900）の 1枚絵を slice で しきつめる。スマホ（たて長）では まんなかの 約420幅（神殿）だけが、
+        広い 画面では 左右の 森・遺跡・山なみまで 見える。以前の たて長 400×800 は 広い 画面で 3倍以上に 拡大されて ぼやけていた。
+      */}
+      <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full">
         <defs>
           <linearGradient id="bd-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#06121a" /><stop offset="35%" stopColor="#0d2b2c" /><stop offset="70%" stopColor="#173c2c" /><stop offset="100%" stopColor="#24190e" />
+            <stop offset="0%" stopColor="#06121a" /><stop offset="30%" stopColor="#0d2b2c" /><stop offset="55%" stopColor="#1d4a46" /><stop offset="66%" stopColor="#173c2c" /><stop offset="100%" stopColor="#1c140b" />
           </linearGradient>
-          <radialGradient id="bd-glow" cx="50%" cy="34%" r="45%">
-            <stop offset="0%" stopColor="#f2c46a" stopOpacity=".38" /><stop offset="100%" stopColor="#f2c46a" stopOpacity="0" />
+          <radialGradient id="bd-glow" cx="50%" cy="50%" r="34%">
+            <stop offset="0%" stopColor="#f2c46a" stopOpacity=".55" /><stop offset="100%" stopColor="#f2c46a" stopOpacity="0" />
           </radialGradient>
+          <linearGradient id="bd-ground" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#3a3222" /><stop offset="100%" stopColor="#120e08" />
+          </linearGradient>
         </defs>
-        <rect width="400" height="800" fill="url(#bd-sky)" />
-        <rect width="400" height="800" fill="url(#bd-glow)" />
-        <At x={200} y={360} filter="url(#f-dof-2)" opacity={0.7}><TempleGate s={1.5} /></At>
-        <GodRays x={70} w={260} h={800} count={6} opacity={0.1} />
-        <At x={40} y={520} opacity={0.85}><AncientTree s={2.1} depth="far" seed={1} /></At>
-        <At x={370} y={500} opacity={0.85}><AncientTree s={2.3} depth="far" seed={4} /></At>
-        <Fog y={430} w={400} opacity={0.18} />
-        <At x={90} y={700} opacity={0.75}><RuinRelief w={150} h={110} glyphs={["A", "B", "C"]} /></At>
-        <At x={320} y={720} opacity={0.75}><RuinRelief w={140} h={96} glyphs={["X", "Y"]} /></At>
-        <At x={0} y={820}><AncientTree s={1.4} depth="near" seed={2} /></At>
-        <At x={410} y={830}><AncientTree s={1.3} depth="near" seed={6} /></At>
-        <At x={-20} y={800}><Fern s={1.6} /></At>
-        <At x={420} y={800}><Fern s={1.5} flip /></At>
-        <Fog y={680} w={400} opacity={0.22} />
-        <Motes w={400} h={760} n={26} seed={3} />
-        <ColorGrade w={400} h={800} />
+        <rect width="1200" height="900" fill="url(#bd-sky)" />
+        <circle cx={860} cy={150} r={60} fill="#ffe9b0" opacity={0.22} filter="url(#f-glow-soft)" />
+        <circle cx={860} cy={150} r={15} fill="#fff6dc" />
+        <circle cx={855} cy={146} r={4} fill="#f0dca8" opacity={0.6} />
+        <At x={0} y={560} opacity={0.9}><Mountains w={1200} h={190} seed={7} layers={3} /></At>
+        <rect width="1200" height="900" fill="url(#bd-glow)" />
+        <At x={600} y={560} filter="url(#f-dof-1)" opacity={0.85}><TempleGate s={2.1} /></At>
+        <GodRays x={360} w={480} h={900} count={7} opacity={0.1} />
+        <Fog y={540} w={1200} opacity={0.2} />
+        {/* 広場（石だたみ） */}
+        <path d="M0 600 Q600 560 1200 600 L1200 900 L0 900 Z" fill="url(#bd-ground)" />
+        <At x={600} y={585}><Flagstones w={1200} h={315} opacity={0.3} /></At>
+        <ellipse cx={600} cy={610} rx={260} ry={30} fill="#ffd98a" opacity={0.12} filter="url(#f-glow-soft)" />
+        {/* 奥の 古代樹（画面の 左右） */}
+        <At x={150} y={640} opacity={0.9}><AncientTree s={2.4} depth="far" seed={1} /></At>
+        <At x={1060} y={630} opacity={0.9}><AncientTree s={2.5} depth="far" seed={4} /></At>
+        <At x={330} y={640} opacity={0.8}><AncientTree s={1.25} depth="far" seed={8} /></At>
+        <At x={880} y={640} opacity={0.8}><AncientTree s={1.3} depth="far" seed={9} /></At>
+        {/* 中景の 遺跡の かべ */}
+        <At x={270} y={760} opacity={0.85}><RuinRelief w={170} h={110} glyphs={["A", "B", "C"]} /></At>
+        <At x={940} y={770} opacity={0.85}><RuinRelief w={160} h={100} glyphs={["X", "Y"]} /></At>
+        {/* 手前の 古代樹・シダ（ぼかして 被写界深度） */}
+        <At x={-40} y={960}><AncientTree s={2.2} depth="near" seed={2} /></At>
+        <At x={1250} y={970}><AncientTree s={2.1} depth="near" seed={6} /></At>
+        <At x={380} y={920}><Fern s={1.6} /></At>
+        <At x={820} y={920}><Fern s={1.5} flip /></At>
+        <Fog y={800} w={1200} opacity={0.18} />
+        <Motes w={1200} h={860} n={34} seed={3} />
+        <ColorGrade w={1200} h={900} />
       </svg>
       {/* 広い画面: 左右の余白にキャラクター（奥のモンスターはぼかして奥行きを出す） */}
       <div className="absolute inset-y-0 left-0 hidden w-[calc((100vw-48rem)/2)] items-end justify-center gap-2 pb-28 lg:flex">

@@ -258,69 +258,97 @@ function MascotEye({ x, y, closed }: { x: number; y: number; closed?: boolean })
  * つやのあるレモン色のまんまるボディ・雲形のおなか・星のアンテナ・空色のいなずましっぽ・ほっぺの星。
  */
 export function BirimoArt({ mood = "happy" }: { mood?: Mood }) {
+  const happyUp = mood === "excited" || mood === "cheer";
+  const BROWN = "#5a2a0a";
   const mouth =
-    mood === "excited" || mood === "cheer" ? (
+    happyUp ? (
       <g>
-        <path d="M42 64 Q50 78 58 64 Q50 66.5 42 64 Z" fill="#7a1828" />
-        <path d="M45.5 70.5 Q50 67.5 54.5 70.5 Q50 74.5 45.5 70.5 Z" fill="#ff7088" />
-        <path d="M42 64 Q50 66.5 58 64" stroke={LINE} strokeWidth={1.3} fill="none" strokeLinecap="round" />
+        <path d="M42.5 64 Q50 77 57.5 64 Q50 66.2 42.5 64 Z" fill="#7a1828" />
+        <path d="M45.5 70.2 Q50 67.4 54.5 70.2 Q50 74.2 45.5 70.2 Z" fill="#ff7088" />
+        <path d="M42.5 64 Q50 66.2 57.5 64" stroke={BROWN} strokeWidth={1.2} fill="none" strokeLinecap="round" />
       </g>
     )
-    : mood === "sleepy" ? <ellipse cx="50" cy="66" rx="3" ry="2.4" fill={LINE} />
-    : mood === "worried" ? <path d="M43 68 Q50 63 57 68" stroke={LINE} strokeWidth={2.2} fill="none" strokeLinecap="round" />
-    : <path d="M43 64 Q46.5 68 50 64 Q53.5 68 57 64" stroke={LINE} strokeWidth={2.2} fill="none" strokeLinecap="round" />;
+    : mood === "sleepy" ? <ellipse cx="50" cy="66" rx="2.6" ry="2.1" fill="#7a1828" />
+    : mood === "worried" ? <path d="M44 68 Q50 64 56 68" stroke={BROWN} strokeWidth={1.7} fill="none" strokeLinecap="round" />
+    : <path d="M43.5 64.2 Q46.8 67.6 50 64.4 Q53.2 67.6 56.5 64.2" stroke={BROWN} strokeWidth={1.6} fill="none" strokeLinecap="round" strokeLinejoin="round" />;
+  /**
+   * まるい 耳（内側は 空色の くぼみ）。とがった 耳＋黄色い 体＋いなずまの しっぽ に すると
+   * 有名な キャラクターに 似てしまうので、耳は まるく・しっぽは くるくるの 電気の ばね に する（オリジナルの 形を 守る）。
+   */
+  const ear = (x: number, rot: number) => (
+    <g transform={`translate(${x} 33) rotate(${rot})`}>
+      <ellipse cx={0} cy={0} rx={11} ry={10.4} fill="url(#g-volt)" />
+      <ellipse cx={0.6} cy={1.4} rx={6.4} ry={5.8} fill="#0e5e88" opacity={0.45} filter="url(#f-soft)" />
+      <ellipse cx={0} cy={0.6} rx={6} ry={5.4} fill="url(#g-sky)" />
+      <path d="M-4.6 2.4 A6 5.4 0 0 1 -1.4 -4.6" stroke="#0b4a70" strokeOpacity={0.35} strokeWidth={1.4} fill="none" strokeLinecap="round" />
+      <ellipse cx={0} cy={0} rx={11} ry={10.4} fill="url(#shade-sphere)" opacity={0.42} />
+      <path d="M-8.4 -3 A10 9.4 0 0 1 -1 -9.6" stroke="#fffbe0" strokeOpacity={0.55} strokeWidth={1.3} fill="none" strokeLinecap="round" filter="url(#f-soft)" />
+    </g>
+  );
+  /** 体の 前に そえた 小さな 手（体の 輪郭の 内側。下に やわらかい 影） */
+  const hand = (x: number, y: number, rot: number) => (
+    <g transform={`rotate(${rot} ${x} ${y})`}>
+      <ellipse cx={x + 1} cy={y + 2} rx={4.6} ry={5.8} fill="#8a4a00" opacity={0.25} filter="url(#f-soft)" />
+      <ellipse cx={x} cy={y} rx={4.4} ry={5.8} fill="url(#g-volt)" />
+      <ellipse cx={x} cy={y} rx={4.4} ry={5.8} fill="url(#shade-sphere)" opacity={0.5} />
+      <path d={`M${x - 1.4} ${y + 4.4} l0 1.2 M${x + 1.4} ${y + 4.4} l0 1.2`} stroke="#b86e00" strokeOpacity={0.5} strokeWidth={0.6} strokeLinecap="round" />
+    </g>
+  );
   return (
     <g>
-      {/* いなずましっぽ（発光） */}
+      {/* くるくるの 電気の ばねの しっぽ（体の 右下の うしろから 生え、先に 光る 玉） */}
       <g filter="url(#f-bloom-volt)">
-        <path d="M74 66 L92 52 L84 50 L96 34 L76 48 L84 50 Z" fill="url(#g-sky)" stroke="#0d5b80" strokeWidth={1} strokeLinejoin="round" />
-        <path d="M78 63 L88 55 M80 48 L92 38" stroke="#eafcff" strokeWidth={1} strokeLinecap="round" opacity={0.8} />
+        <path d="M74 78 C84 80 90 74 86 68 C82 62 74 68 80 72 C88 77 96 68 92 60 C88 52 80 58 86 62 C92 66 98 58 96 50" stroke="#0d5b80" strokeWidth={4.6} fill="none" strokeLinecap="round" />
+        <path d="M74 78 C84 80 90 74 86 68 C82 62 74 68 80 72 C88 77 96 68 92 60 C88 52 80 58 86 62 C92 66 98 58 96 50" stroke="url(#g-sky)" strokeWidth={3.2} fill="none" strokeLinecap="round" />
+        <path d="M75 77 C83 78.6 88 74 85.4 69 M80.6 71.4 C87 75 94 68 91.2 61" stroke="#eafcff" strokeOpacity={0.7} strokeWidth={0.9} fill="none" strokeLinecap="round" />
+        <circle cx={96} cy={48} r={4} fill="url(#g-sky)" />
+        <circle cx={96} cy={48} r={4} fill="url(#shade-sphere)" opacity={0.6} />
+        <circle cx={94.8} cy={46.8} r={1.2} fill="#fff" opacity={0.9} />
       </g>
       {/* アンテナと星 */}
-      <path d="M50 26 Q50 12 60 12 Q66 12 64 18 Q62 22 58 19" stroke="#0e5e88" strokeWidth={3.2} fill="none" strokeLinecap="round" />
-      <path d="M50 26 Q50 12 60 12 Q66 12 64 18" stroke="#9fe6ff" strokeWidth={1} fill="none" strokeLinecap="round" opacity={0.8} />
+      <path d="M50 27 Q50 12 60 12 Q66 12 64 18 Q62 22 58 19" stroke="#0e5e88" strokeWidth={3} fill="none" strokeLinecap="round" />
+      <path d="M49.4 26 Q49.4 12.6 60 12.4 Q65 12.6 63.6 17" stroke="#9fe6ff" strokeWidth={0.9} fill="none" strokeLinecap="round" opacity={0.8} />
       <g filter="url(#f-bloom-volt)">
-        <path d="M64 4 l2.6 5.4 5.9 .8 -4.3 4.1 1 5.8 -5.2 -2.8 -5.2 2.8 1 -5.8 -4.3 -4.1 5.9 -.8z" fill="#fff7a8" stroke="#e8a400" strokeWidth={1} />
+        <path d="M64 4 l2.6 5.4 5.9 .8 -4.3 4.1 1 5.8 -5.2 -2.8 -5.2 2.8 1 -5.8 -4.3 -4.1 5.9 -.8z" fill="#fff7a8" stroke="#e8a400" strokeWidth={0.9} strokeLinejoin="round" />
+        <path d="M64 6.6 l1.5 3.2 -3 .4 z" fill="#fff" opacity={0.8} />
       </g>
-      {/* 耳 */}
-      {[26, 74].map((x) => (
+      {/* 耳（しずく形・先が 空色） */}
+      {ear(27, -18)}
+      {ear(73, 18)}
+      {/* 足（体の 下から のぞく。足の うらの 影と 指の すじ） */}
+      {[38, 62].map((x) => (
         <g key={x}>
-          <circle cx={x} cy={34} r={11} fill="url(#g-volt)" />
-          <circle cx={x} cy={34.6} r={5.8} fill="#0e5e88" opacity={0.5} />
-          <circle cx={x} cy={34} r={5.5} fill="url(#g-sky)" />
-          <circle cx={x} cy={34} r={11} fill="url(#shade-sphere)" opacity={0.45} />
-          <circle cx={x} cy={34} r={11} fill="url(#rim-cool)" />
+          <ellipse cx={x} cy={88.6} rx={8.2} ry={4.6} fill="url(#g-volt)" />
+          <ellipse cx={x} cy={88.6} rx={8.2} ry={4.6} fill="url(#shade-sphere)" opacity={0.55} />
+          <path d={`M${x - 2.4} 90.6 l0 1.6 M${x + 2.4} 90.6 l0 1.6`} stroke="#b86e00" strokeOpacity={0.55} strokeWidth={0.7} strokeLinecap="round" />
         </g>
       ))}
-      {/* 足 */}
-      {[37, 63].map((x) => (
-        <g key={x}>
-          <ellipse cx={x} cy={88.5} rx={8.5} ry={4.6} fill="url(#g-volt)" />
-          <ellipse cx={x} cy={88.5} rx={8.5} ry={4.6} fill="url(#shade-sphere)" opacity={0.6} />
-        </g>
-      ))}
-      {/* ボディ（球体の陰影＋皮下散乱＋スペキュラー＋逆光） */}
+      {/* ボディ（ベルベットのような やわらかい 毛なみ: かたい 白い 反射の 線は 使わず、ぼかした つやと ふちの 産毛） */}
       <circle cx="50" cy="58" r="32" fill="url(#g-volt)" />
-      <circle cx="50" cy="58" r="32" fill="url(#skin-sss)" opacity={0.5} />
-      <path d="M32 78 Q30 68 40 68 Q42 60 50 62 Q58 60 60 68 Q70 68 68 78 Q60 88 50 88 Q40 88 32 78 Z" fill="url(#g-volt-belly)" />
-      <path d="M33 70 Q38 66 42 68 Q46 62 50 63 Q56 62 58 68 Q63 66 67 70" stroke="#c98a10" strokeOpacity={0.35} strokeWidth={1.4} fill="none" filter="url(#f-soft)" />
-      <circle cx="50" cy="58" r="32" fill="url(#shade-sphere)" opacity={0.45} />
+      <circle cx="50" cy="58" r="32" fill="url(#skin-sss)" opacity={0.55} />
+      <circle cx="50" cy="58" r="32" fill="url(#shade-sphere)" opacity={0.38} />
+      {/* おなか（ふちを ぼかして 毛なみに とけこませる） */}
+      <ellipse cx="50" cy="76" rx="17.5" ry="13" fill="url(#g-volt-belly)" opacity={0.7} filter="url(#f-soft)" />
+      <path d="M35 75 C35 66.5 42 63.5 50 64.5 C58 63.5 65 66.5 65 75 C65 84 58 88.5 50 88.5 C42 88.5 35 84 35 75 Z" fill="url(#g-volt-belly)" />
+      <path d="M35 75 C35 66.5 42 63.5 50 64.5 C58 63.5 65 66.5 65 75 C65 84 58 88.5 50 88.5 C42 88.5 35 84 35 75 Z" fill="url(#shade-sphere)" opacity={0.22} />
       <circle cx="50" cy="58" r="32" fill="url(#rim-cool)" />
-      <path d="M22.5 50 A28 28 0 0 1 42 30.8" stroke="#fffbe0" strokeWidth={1.6} fill="none" strokeLinecap="round" opacity={0.75} />
-      <ellipse cx="38" cy="38" rx="9" ry="5" fill="url(#spec)" transform="rotate(-30 38 38)" />
-      {/* 小さな手 */}
-      {[[20, 66, 20], [80, 66, -20]].map(([x, y, r]) => (
-        <g key={x} transform={`rotate(${r} ${x} ${y})`}>
-          <ellipse cx={x} cy={y} rx={5} ry={7.5} fill="url(#g-volt)" />
-          <ellipse cx={x} cy={y} rx={5} ry={7.5} fill="url(#shade-sphere)" opacity={0.6} />
-        </g>
-      ))}
+      <circle cx="50" cy="58" r="31.4" fill="none" stroke="#fff6c0" strokeOpacity={0.4} strokeWidth={1.4} filter="url(#f-soft)" />
+      <ellipse cx="39" cy="40" rx="11" ry="6.5" fill="#fff" opacity={0.42} transform="rotate(-32 39 40)" filter="url(#f-soft)" />
+      <ellipse cx="36.5" cy="37.5" rx="3.6" ry="2" fill="#fff" opacity={0.7} transform="rotate(-32 36.5 37.5)" filter="url(#f-soft)" />
+      {/* アンテナの 根もと */}
+      <ellipse cx={50} cy={27} rx={3} ry={1.6} fill="#0e5e88" />
+      {/* 手（きぶんで 位置が かわる。よろこぶと ばんざい） */}
+      {happyUp ? (<>{hand(22, 46, 28)}{hand(78, 46, -28)}</>) : (<>{hand(25, 69, 24)}{hand(75, 69, -24)}</>)}
+      {/* まゆ（よろこび・しんぱいの 気もちが 伝わるように） */}
+      {happyUp && <path d="M33 42.6 Q38 39 43 41.6 M57 41.6 Q62 39 67 42.6" stroke="#a85e00" strokeOpacity={0.75} strokeWidth={1.4} fill="none" strokeLinecap="round" />}
+      {mood === "worried" && <path d="M33 43.6 Q38 43 43 40 M67 43.6 Q62 43 57 40" stroke="#a85e00" strokeOpacity={0.75} strokeWidth={1.4} fill="none" strokeLinecap="round" />}
       <MascotEye x={38} y={52} closed={mood === "sleepy"} />
       <MascotEye x={62} y={52} closed={mood === "sleepy"} />
-      {/* ほっぺの星（発光） */}
+      {/* ほっぺ（赤みの ぼかし＋小さく 光る 星） */}
+      {[30, 70].map((x) => <ellipse key={`b${x}`} cx={x} cy={63} rx={6.4} ry={3.8} fill="url(#blush)" />)}
       <g filter="url(#f-bloom-gold)">
         {[30, 70].map((x) => (
-          <path key={x} d="M0 -4.5 l1.3 3 3.2 .3 -2.4 2.1 .7 3.2 -2.8 -1.7 -2.8 1.7 .7 -3.2 -2.4 -2.1 3.2 -.3z" fill="#ff9a3d" transform={`translate(${x} 63)`} />
+          <path key={x} d="M0 -4.5 l1.3 3 3.2 .3 -2.4 2.1 .7 3.2 -2.8 -1.7 -2.8 1.7 .7 -3.2 -2.4 -2.1 3.2 -.3z" fill="#ff9a3d" transform={`translate(${x} 63) scale(0.8)`} />
         ))}
       </g>
       {mouth}

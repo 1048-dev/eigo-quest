@@ -8,7 +8,7 @@ import { Standing, type Pose } from "@/components/characters/StandingArt";
 import { MonsterArt } from "@/components/characters/MonsterArt";
 import type { CharacterId } from "@/lib/game/characters";
 import type { Mood } from "@/lib/game/companion";
-import { AncientTree, At, ColorGrade, Fern, Fog, GodRays, KeyLight, MagicCircle, Motes, RuinRelief, TempleGate, Vignette } from "./CinematicScenery";
+import { AncientTree, At, ColorGrade, Fern, Flagstones, Fog, GodRays, KeyLight, MagicCircle, Motes, Mountains, RuinRelief, TempleGate, Vignette } from "./CinematicScenery";
 
 export type HeroVariant = "map" | "dashboard" | "arena" | "gacha" | "ranking" | "lesson";
 
@@ -69,20 +69,37 @@ const CASTS: Record<HeroVariant, (Cast | Mon)[]> = {
   ],
 };
 
-/** 背景にそびえるボスのシルエット（ドラゴン型・光る目） */
-function LoomingBoss({ x, y, s }: { x: number; y: number; s: number }) {
+/**
+ * 背景に そびえる ボスの シルエット（つばさを ひろげた 竜・光る目）。霧の 中から 上半身が あらわれる。
+ * まるい かたまりだと 黒い しみに 見えるので、つの・首・つばさの 骨と 膜が わかる 輪郭に し、上の ふちだけ 逆光で ひからせる。
+ */
+function LoomingBoss({ x, y, s, id }: { x: number; y: number; s: number; id: string }) {
+  const wing = "M-18 -40 C-50 -70 -96 -96 -150 -92 C-132 -80 -124 -68 -122 -56 C-108 -62 -96 -60 -88 -52 C-80 -60 -66 -60 -58 -50 C-50 -58 -38 -56 -30 -46 Z";
+  const body = "M-34 60 C-40 20 -34 -14 -20 -34 C-14 -48 -12 -66 -16 -84 C-18 -98 -10 -112 4 -116 C14 -118 26 -114 32 -106 L44 -104 L34 -96 C30 -88 22 -84 14 -84 C10 -66 14 -48 22 -34 C36 -14 42 20 36 60 Z";
+  const horns = "M-2 -112 C-10 -126 -14 -138 -10 -150 C-4 -138 2 -126 6 -114 Z M12 -114 C14 -128 20 -138 30 -144 C26 -132 22 -122 20 -110 Z";
   return (
-    <g transform={`translate(${x} ${y}) scale(${s})`} opacity={0.9}>
-      <g stroke="#5fe0c8" strokeOpacity={0.45} strokeWidth={3} fill="none" filter="url(#f-dof-1)">
-        <circle cx={0} cy={-30} r={47} /><path d="M-30 -66 L-40 -110 L-14 -76 M30 -66 L40 -110 L14 -76" />
+    <g transform={`translate(${x} ${y}) scale(${s})`}>
+      <linearGradient id={`boss-${id}`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#14302c" /><stop offset="60%" stopColor="#0f2622" stopOpacity=".9" /><stop offset="100%" stopColor="#0f2622" stopOpacity="0" />
+      </linearGradient>
+      <g fill={`url(#boss-${id})`} opacity={0.85}>
+        <path d={wing} />
+        <path d={wing} transform="scale(-1 1)" />
+        <path d={body} />
+        <path d={horns} />
       </g>
-      <path d="M-120 60 Q-150 -10 -80 -30 L-40 10 Z M120 60 Q150 -10 80 -30 L40 10 Z" fill="#0c1a17" />
-      <ellipse cx={0} cy={40} rx={70} ry={60} fill="#0c1a17" />
-      <circle cx={0} cy={-30} r={46} fill="#0c1a17" />
-      <path d="M-30 -66 L-40 -110 L-14 -76 Z M30 -66 L40 -110 L14 -76 Z" fill="#0c1a17" />
+      {/* つばさの 骨（膜の すじ） */}
+      <g stroke="#2c5a52" strokeOpacity={0.6} strokeWidth={1.4} fill="none">
+        {[1, -1].map((k) => <path key={k} transform={`scale(${k} 1)`} d="M-20 -42 L-150 -92 M-60 -66 L-88 -52 M-90 -80 L-122 -56 M-40 -54 L-58 -50" />)}
+      </g>
+      {/* 上の ふちの 逆光（月の 光） */}
+      <g stroke="#9ff0dc" strokeOpacity={0.35} strokeWidth={1.2} fill="none" filter="url(#f-soft)">
+        <path d="M-18 -40 C-50 -70 -96 -96 -150 -92 M18 -40 C50 -70 96 -96 150 -92" />
+        <path d="M-16 -84 C-18 -98 -10 -112 4 -116 C14 -118 26 -114 32 -106 L44 -104" />
+      </g>
       <g filter="url(#f-bloom-gold)">
-        <ellipse cx={-16} cy={-30} rx={7} ry={4} fill="#ffcf4a" />
-        <ellipse cx={16} cy={-30} rx={7} ry={4} fill="#ffcf4a" />
+        <path d="M14 -104 l8 -1.6 l-2 3.4 Z" fill="#ffcf4a" />
+        <circle cx={18} cy={-103.5} r={1.2} fill="#fff6c8" />
       </g>
     </g>
   );
@@ -101,7 +118,7 @@ export function HeroScene({ title, subtitle, variant = "map" }: { title: string;
             <stop offset="100%" stopColor="#f2c46a" />
           </linearGradient>
           <linearGradient id={`plaza-${v}`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#6a5a3e" /><stop offset="100%" stopColor="#2a2216" />
+            <stop offset="0%" stopColor="#4e4430" /><stop offset="35%" stopColor="#3a3222" /><stop offset="100%" stopColor="#1e180f" />
           </linearGradient>
         </defs>
         <rect width={W} height={H} fill={`url(#sky-${v})`} />
@@ -113,8 +130,10 @@ export function HeroScene({ title, subtitle, variant = "map" }: { title: string;
         <path d="M-20 70 Q90 30 180 62 T380 50" stroke="#7ff5d6" strokeOpacity={0.22} strokeWidth={22} fill="none" filter="url(#f-glow-soft)" />
         <path d="M-20 92 Q110 60 200 84 T380 76" stroke="#b8a8ff" strokeOpacity={0.16} strokeWidth={16} fill="none" filter="url(#f-glow-soft)" />
 
-        {/* 遠景: 神殿と光、そびえるボス */}
-        {(v === "arena" || v === "map") && <LoomingBoss x={v === "arena" ? 250 : 286} y={120} s={0.9} />}
+        {/* 遠景: 山なみ（空気遠近法）→ そびえるボス → 神殿と光 */}
+        <At x={0} y={206} opacity={0.95}><Mountains w={W} h={70} seed={3} /></At>
+        {(v === "arena" || v === "map") && <LoomingBoss x={v === "arena" ? 262 : 312} y={v === "arena" ? 198 : 186} s={v === "arena" ? 0.72 : 0.8} id={v} />}
+        <Fog y={190} w={W} opacity={0.22} />
         <At x={180} y={196} filter="url(#f-dof-1)" opacity={0.95}><TempleGate s={0.95} /></At>
         <GodRays x={60} w={260} h={H} count={6} opacity={0.16} />
         <At x={24} y={210} opacity={0.9}><AncientTree s={0.85} depth="far" seed={1} /></At>
@@ -129,6 +148,9 @@ export function HeroScene({ title, subtitle, variant = "map" }: { title: string;
         {/* 広場と魔法陣 */}
         <path d={`M0 ${GROUND - 18} Q180 ${GROUND - 34} 360 ${GROUND - 18} L360 ${H} L0 ${H} Z`} fill={`url(#plaza-${v})`} />
         <path d={`M0 ${GROUND - 18} Q180 ${GROUND - 34} 360 ${GROUND - 18}`} stroke="#f2c46a" strokeOpacity={0.35} strokeWidth={1.5} fill="none" />
+        <At x={180} y={GROUND - 24}><Flagstones w={W} h={H - GROUND + 24} opacity={0.4} /></At>
+        {/* 神殿の 光が 石だたみに 映る */}
+        <ellipse cx={180} cy={GROUND - 12} rx={120} ry={14} fill="#ffd98a" opacity={0.16} filter="url(#f-glow-soft)" />
         <At x={180} y={GROUND - 4}><MagicCircle rx={110} ry={16} /></At>
         <Fog y={GROUND - 22} w={W} opacity={0.28} />
         <KeyLight x={180} y={GROUND - 90} rx={150} ry={80} opacity={0.3} />
@@ -156,7 +178,7 @@ export function HeroScene({ title, subtitle, variant = "map" }: { title: string;
         {/* 手前: ぼけたシダ・霧・光の粒・ビネット */}
         <At x={-10} y={H + 6}><Fern s={0.9} /></At>
         <At x={W + 10} y={H + 6}><Fern s={0.85} flip /></At>
-        <Motes w={W} h={H - 40} n={16} seed={v.length} />
+        <Motes w={W} h={H - 40} n={12} seed={v.length} />
         <ColorGrade w={W} h={H} />
         <Vignette w={W} h={H} id={`vig-${v}`} />
       </svg>
