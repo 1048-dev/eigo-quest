@@ -43,36 +43,124 @@ export function ArtDefs() {
           <stop offset="100%" stopColor="#ff7f8f" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="ao-floor" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#000" stopOpacity=".55" />
+          <stop offset="0%" stopColor="#000" stopOpacity=".62" />
+          <stop offset="35%" stopColor="#000" stopOpacity=".38" />
+          <stop offset="70%" stopColor="#000" stopOpacity=".12" />
           <stop offset="100%" stopColor="#000" stopOpacity="0" />
         </radialGradient>
+        {/* 足の真下の濃い接地影（コンタクトシャドウ） */}
+        <radialGradient id="ao-contact" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#000" stopOpacity=".85" />
+          <stop offset="60%" stopColor="#000" stopOpacity=".35" />
+          <stop offset="100%" stopColor="#000" stopOpacity="0" />
+        </radialGradient>
+        {/* リムライト（逆光）: 形の右のふちに冷たい光、左上に暖かい光 */}
+        <linearGradient id="rim-cool" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="#9fe6ff" stopOpacity="0" />
+          <stop offset="78%" stopColor="#9fe6ff" stopOpacity="0" />
+          <stop offset="100%" stopColor="#bdf0ff" stopOpacity=".55" />
+        </linearGradient>
+        <linearGradient id="rim-warm" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#fff1c8" stopOpacity=".6" />
+          <stop offset="22%" stopColor="#fff1c8" stopOpacity="0" />
+        </linearGradient>
+        {/* 髪の「天使の輪」（帯状のつや） */}
+        <linearGradient id="hair-sheen" x1="0" y1="0" x2="0.25" y2="1">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="24%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="31%" stopColor="#fff" stopOpacity=".34" />
+          <stop offset="36%" stopColor="#fff" stopOpacity=".1" />
+          <stop offset="42%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="100%" stopColor="#000" stopOpacity=".25" />
+        </linearGradient>
+        {/* 布の陰影（上から光・すそが暗い） */}
+        <linearGradient id="cloth-shade" x1="0" y1="0" x2="0.35" y2="1">
+          <stop offset="0%" stopColor="#fff" stopOpacity=".22" />
+          <stop offset="30%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="70%" stopColor="#000" stopOpacity=".1" />
+          <stop offset="100%" stopColor="#000" stopOpacity=".38" />
+        </linearGradient>
+        {/* ゴッドレイ（上ほど明るく、下で消える） */}
+        <linearGradient id="ray-fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#fff4cf" stopOpacity="1" />
+          <stop offset="60%" stopColor="#fff4cf" stopOpacity=".35" />
+          <stop offset="100%" stopColor="#fff4cf" stopOpacity="0" />
+        </linearGradient>
+        {/* 映画のカラーグレーディング（上は暖色・下はティール） */}
+        <linearGradient id="grade-teal-orange" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#ffb35a" stopOpacity=".16" />
+          <stop offset="55%" stopColor="#ffb35a" stopOpacity="0" />
+          <stop offset="100%" stopColor="#0b4a52" stopOpacity=".28" />
+        </linearGradient>
 
         {/* ---------- 肌・瞳 ---------- */}
-        <radialGradient id="g-skin" cx="42%" cy="32%" r="72%">
-          <stop offset="0%" stopColor="#fff0e2" />
-          <stop offset="55%" stopColor="#ffd2ad" />
-          <stop offset="100%" stopColor="#e2a079" />
+        <radialGradient id="g-skin" cx="40%" cy="30%" r="78%">
+          <stop offset="0%" stopColor="#fff5ec" />
+          <stop offset="22%" stopColor="#ffe3cb" />
+          <stop offset="52%" stopColor="#f8caa6" />
+          <stop offset="80%" stopColor="#e9a985" />
+          <stop offset="100%" stopColor="#c98262" />
         </radialGradient>
-        {[["brown", "#f3b25a", "#8a4a12", "#3b1d06"], ["green", "#9fe08a", "#2f8a4a", "#0f3b1d"], ["violet", "#d9b8ff", "#6a3fd1", "#24104f"], ["night", "#9ad7ff", "#1f5fa8", "#0b1f45"]].map(([n, a, b, c]) => (
-          <radialGradient key={n} id={`iris-${n}`} cx="50%" cy="62%" r="60%">
-            <stop offset="0%" stopColor={a} /><stop offset="60%" stopColor={b} /><stop offset="100%" stopColor={c} />
+        {/* 肌の陰（右下ほど暖かい影）・皮下散乱（ふちがほんのり赤い） */}
+        <radialGradient id="skin-shade" cx="32%" cy="26%" r="92%">
+          <stop offset="0%" stopColor="#7a3418" stopOpacity="0" />
+          <stop offset="55%" stopColor="#7a3418" stopOpacity="0" />
+          <stop offset="82%" stopColor="#7a3418" stopOpacity=".2" />
+          <stop offset="100%" stopColor="#5a200c" stopOpacity=".42" />
+        </radialGradient>
+        <radialGradient id="skin-sss" cx="50%" cy="46%" r="54%">
+          <stop offset="0%" stopColor="#ff5a46" stopOpacity="0" />
+          <stop offset="68%" stopColor="#ff5a46" stopOpacity="0" />
+          <stop offset="100%" stopColor="#ff4a3a" stopOpacity=".24" />
+        </radialGradient>
+        <linearGradient id="skin-rim" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="84%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="100%" stopColor="#ffeed8" stopOpacity=".5" />
+        </linearGradient>
+        <radialGradient id="eye-white" cx="50%" cy="72%" r="70%">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="65%" stopColor="#f6efea" />
+          <stop offset="100%" stopColor="#d8c4ba" />
+        </radialGradient>
+        {/* まぶたが白目に落とす影 */}
+        <linearGradient id="eye-lid" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#4a1e0c" stopOpacity=".6" />
+          <stop offset="42%" stopColor="#4a1e0c" stopOpacity=".08" />
+          <stop offset="60%" stopColor="#4a1e0c" stopOpacity="0" />
+        </linearGradient>
+        {[["brown", "#ffd08a", "#c27a2a", "#7a3e0c", "#2e1404"], ["green", "#d4ffb0", "#5cc46a", "#23753c", "#0b2e16"], ["violet", "#f0dcff", "#a57af0", "#5a30c0", "#1e0b45"], ["night", "#d4f1ff", "#56b4f0", "#1d58a6", "#081a3d"], ["hazel", "#ffe2a0", "#9a9a3a", "#55602a", "#1f240c"]].map(([n, a, b, c, d]) => (
+          <radialGradient key={n} id={`iris-${n}`} cx="50%" cy="66%" r="62%">
+            <stop offset="0%" stopColor={a} /><stop offset="35%" stopColor={b} /><stop offset="75%" stopColor={c} /><stop offset="100%" stopColor={d} />
           </radialGradient>
         ))}
 
         {/* ---------- 髪・服（キャラ別） ---------- */}
-        <linearGradient id="g-hair-haru" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#8a5a33" /><stop offset="50%" stopColor="#5a3418" /><stop offset="100%" stopColor="#2e180a" /></linearGradient>
-        <linearGradient id="g-hair-riko" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#ffb469" /><stop offset="55%" stopColor="#ef7a2c" /><stop offset="100%" stopColor="#a8440f" /></linearGradient>
-        <linearGradient id="g-hair-kiko" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#7e5ac8" /><stop offset="55%" stopColor="#4a2c8e" /><stop offset="100%" stopColor="#1f1047" /></linearGradient>
-        <linearGradient id="g-bandana" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#ff6b6b" /><stop offset="100%" stopColor="#b3202a" /></linearGradient>
-        <linearGradient id="g-vest" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#5fb47a" /><stop offset="100%" stopColor="#1f5236" /></linearGradient>
-        <linearGradient id="g-shorts" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#d6a86a" /><stop offset="100%" stopColor="#7a5226" /></linearGradient>
-        <linearGradient id="g-riko-dress" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#ffb06b" /><stop offset="100%" stopColor="#c4521a" /></linearGradient>
-        <linearGradient id="g-kiko-dress" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#c4a3ff" /><stop offset="100%" stopColor="#5a33b8" /></linearGradient>
-        <linearGradient id="g-boot" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#9a5a2e" /><stop offset="100%" stopColor="#3a1d0a" /></linearGradient>
+        <linearGradient id="g-hair-haru" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stopColor="#a06a3c" /><stop offset="30%" stopColor="#6e4020" /><stop offset="65%" stopColor="#4a2a12" /><stop offset="100%" stopColor="#24120a" /></linearGradient>
+        <linearGradient id="g-hair-riko" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stopColor="#ffc787" /><stop offset="30%" stopColor="#ff9a48" /><stop offset="65%" stopColor="#e2681e" /><stop offset="100%" stopColor="#8e350b" /></linearGradient>
+        <linearGradient id="g-hair-kiko" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stopColor="#9a7ae0" /><stop offset="30%" stopColor="#6a48b8" /><stop offset="65%" stopColor="#432784" /><stop offset="100%" stopColor="#1a0d3f" /></linearGradient>
+        <linearGradient id="g-hair-emma" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stopColor="#d08a52" /><stop offset="30%" stopColor="#a35a2c" /><stop offset="65%" stopColor="#6e3216" /><stop offset="100%" stopColor="#331408" /></linearGradient>
+        <linearGradient id="g-bandana" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#ff8a80" /><stop offset="40%" stopColor="#e8403e" /><stop offset="100%" stopColor="#8e1420" /></linearGradient>
+        <linearGradient id="g-vest" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#86d09c" /><stop offset="35%" stopColor="#4e9e68" /><stop offset="70%" stopColor="#2c6a44" /><stop offset="100%" stopColor="#163c26" /></linearGradient>
+        <linearGradient id="g-tee" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#ffffff" /><stop offset="55%" stopColor="#efe7d8" /><stop offset="100%" stopColor="#c9bca4" /></linearGradient>
+        <linearGradient id="g-shorts" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#e8c08a" /><stop offset="40%" stopColor="#bf8e52" /><stop offset="100%" stopColor="#6a4520" /></linearGradient>
+        <linearGradient id="g-riko-dress" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#ffcf96" /><stop offset="35%" stopColor="#ff9648" /><stop offset="70%" stopColor="#e0641f" /><stop offset="100%" stopColor="#9a3a10" /></linearGradient>
+        <linearGradient id="g-kiko-dress" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#e6d6ff" /><stop offset="35%" stopColor="#b694ff" /><stop offset="70%" stopColor="#7c55e0" /><stop offset="100%" stopColor="#40208e" /></linearGradient>
+        <linearGradient id="g-kiko-cape" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#5a3ca8" /><stop offset="50%" stopColor="#36207a" /><stop offset="100%" stopColor="#170b3c" /></linearGradient>
+        <linearGradient id="g-leggings" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stopColor="#6a5a90" /><stop offset="45%" stopColor="#3e3060" /><stop offset="100%" stopColor="#1e1632" /></linearGradient>
+        <linearGradient id="g-boot" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0%" stopColor="#c07c42" /><stop offset="35%" stopColor="#8a4e22" /><stop offset="75%" stopColor="#4e2a10" /><stop offset="100%" stopColor="#241005" /></linearGradient>
+        <linearGradient id="g-emma-jacket" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#5cc0c4" /><stop offset="35%" stopColor="#2a8a92" /><stop offset="70%" stopColor="#1a5e66" /><stop offset="100%" stopColor="#0b3238" /></linearGradient>
 
         {/* ---------- 相棒ビリモ ---------- */}
-        <radialGradient id="g-volt" cx="38%" cy="30%" r="75%"><stop offset="0%" stopColor="#fff6b8" /><stop offset="45%" stopColor="#ffd83a" /><stop offset="100%" stopColor="#d48a00" /></radialGradient>
-        <linearGradient id="g-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#b8f1ff" /><stop offset="50%" stopColor="#3cc4f0" /><stop offset="100%" stopColor="#136f9c" /></linearGradient>
+        <radialGradient id="g-volt" cx="36%" cy="28%" r="78%"><stop offset="0%" stopColor="#fffbe0" /><stop offset="18%" stopColor="#fff09a" /><stop offset="50%" stopColor="#ffd53a" /><stop offset="82%" stopColor="#f0a510" /><stop offset="100%" stopColor="#b86e00" /></radialGradient>
+        <radialGradient id="g-volt-belly" cx="45%" cy="30%" r="80%"><stop offset="0%" stopColor="#fffef6" /><stop offset="60%" stopColor="#fff3c8" /><stop offset="100%" stopColor="#f2d488" /></radialGradient>
+        <linearGradient id="g-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#d6f8ff" /><stop offset="30%" stopColor="#7adcff" /><stop offset="60%" stopColor="#2eaee0" /><stop offset="100%" stopColor="#0e5e88" /></linearGradient>
+        {/* モンスター共通のリムライト（どの属性の色の上にも重ねる） */}
+        <linearGradient id="mon-rim" x1="0" y1="0" x2="1" y2="0.3">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="80%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="100%" stopColor="#e8fbff" stopOpacity=".45" />
+        </linearGradient>
 
         {/* ---------- メタル・石・宝石 ---------- */}
         <linearGradient id="metal-gold" x1="0" y1="0" x2="0" y2="1">
@@ -116,17 +204,24 @@ export function ArtDefs() {
           <feDropShadow dx="0" dy="2" stdDeviation="1.5" floodColor="#000" floodOpacity=".35" />
           <feDropShadow dx="0" dy="8" stdDeviation="6" floodColor="#000" floodOpacity=".35" />
         </filter>
-        <filter id="f-rim" x="-20%" y="-20%" width="140%" height="140%">
-          {/* 逆光のふち取り（左上から金色の光） */}
-          <feMorphology in="SourceAlpha" operator="dilate" radius=".7" result="d" />
-          <feOffset in="d" dx="-1" dy="-1" result="o" />
-          <feComposite in="o" in2="SourceAlpha" operator="out" result="edge" />
-          <feFlood floodColor="#ffd98a" floodOpacity=".5" />
-          <feComposite in2="edge" operator="in" result="rim" />
-          <feGaussianBlur in="rim" stdDeviation=".9" result="rimb" />
-          <feDropShadow in="SourceGraphic" dx="0" dy="6" stdDeviation="5" floodColor="#000" floodOpacity=".45" result="shadowed" />
-          <feMerge><feMergeNode in="shadowed" /><feMergeNode in="rimb" /></feMerge>
+        <filter id="f-rim" x="-25%" y="-20%" width="150%" height="145%" colorInterpolationFilters="sRGB">
+          {/* 映画の3灯ライティング風: 左上から暖かいキーライトのふち＋右から冷たい逆光のふち（どちらも形の内側）＋やわらかい影 */}
+          <feOffset in="SourceAlpha" dx="1.1" dy="1.3" result="sw" />
+          <feComposite in="SourceAlpha" in2="sw" operator="out" result="edgeW" />
+          <feGaussianBlur in="edgeW" stdDeviation=".45" result="edgeWb" />
+          <feFlood floodColor="#ffe6b0" floodOpacity=".8" />
+          <feComposite in2="edgeWb" operator="in" result="warm" />
+          <feOffset in="SourceAlpha" dx="-1.5" dy=".2" result="sc" />
+          <feComposite in="SourceAlpha" in2="sc" operator="out" result="edgeC" />
+          <feGaussianBlur in="edgeC" stdDeviation=".55" result="edgeCb" />
+          <feFlood floodColor="#94e2ff" floodOpacity=".6" />
+          <feComposite in2="edgeCb" operator="in" result="coolRaw" />
+          <feComposite in="coolRaw" in2="SourceAlpha" operator="in" result="cool" />
+          <feDropShadow in="SourceGraphic" dx="0" dy="5" stdDeviation="4.5" floodColor="#05100e" floodOpacity=".5" result="shadowed" />
+          <feMerge><feMergeNode in="shadowed" /><feMergeNode in="warm" /><feMergeNode in="cool" /></feMerge>
         </filter>
+        {/* 小さなぼかし（髪が額に落とす影など） */}
+        <filter id="f-soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation=".8" /></filter>
         <filter id="f-bloom-gold" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b" />
           <feColorMatrix in="b" type="matrix" values="1 0 0 0 .2  0 .9 0 0 .12  0 0 .4 0 0  0 0 0 .9 0" result="g" />

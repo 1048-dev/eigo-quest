@@ -3,7 +3,7 @@
  */
 import { Standing } from "@/components/characters/StandingArt";
 import { MonsterArt } from "@/components/characters/MonsterArt";
-import { At, Fog, MagicCircle, Motes, RuinRelief } from "./CinematicScenery";
+import { At, Fog, KeyLight, MagicCircle, Motes, RuinRelief } from "./CinematicScenery";
 
 const W = 360;
 const H = 170;
@@ -11,9 +11,10 @@ const G = 150;
 
 export function CharacterParade() {
   const chars = [
-    { id: "kiko" as const, x: 78, s: 0.56, pose: "wave" as const },
+    // 身長差は年齢どおり（リコ＝ハル×0.92、キコ＝ハル×0.88）
+    { id: "kiko" as const, x: 78, s: 0.58, pose: "wave" as const },
     { id: "haru" as const, x: 180, s: 0.66, pose: "cheer" as const },
-    { id: "riko" as const, x: 248, s: 0.56, pose: "wave" as const },
+    { id: "riko" as const, x: 248, s: 0.61, pose: "wave" as const },
     { id: "birimo" as const, x: 300, s: 0.44 },
   ];
   const mons = [
@@ -44,6 +45,7 @@ export function CharacterParade() {
         <path d={`M0 ${G - 10} L${W} ${G - 10} L${W} ${H} L0 ${H} Z`} fill="url(#parade-stage)" />
         <path d={`M0 ${G - 10} L${W} ${G - 10}`} stroke="#f2c46a" strokeOpacity={0.5} strokeWidth={1.4} />
         <At x={180} y={G - 2}><MagicCircle rx={120} ry={10} /></At>
+        <KeyLight x={W / 2} y={G - 60} rx={150} ry={60} opacity={0.25} />
         <g filter="url(#f-rim)">
           {mons.map((m) => (
             <g key={m.id} transform={`translate(${m.x - 50 * m.s} ${G - 100 * m.s + 2})`}>

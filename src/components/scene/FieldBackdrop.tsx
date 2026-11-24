@@ -5,7 +5,7 @@
  */
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
-import { AncientTree, At, Fern, Fog, GodRays, Motes, RuinRelief, TempleGate } from "./CinematicScenery";
+import { AncientTree, At, ColorGrade, Fern, Fog, GodRays, Motes, RuinRelief, TempleGate } from "./CinematicScenery";
 
 export function FieldBackdrop() {
   return (
@@ -34,6 +34,7 @@ export function FieldBackdrop() {
         <At x={420} y={800}><Fern s={1.5} flip /></At>
         <Fog y={680} w={400} opacity={0.22} />
         <Motes w={400} h={760} n={26} seed={3} />
+        <ColorGrade w={400} h={800} />
       </svg>
       {/* 広い画面: 左右の余白にキャラクター（奥のモンスターはぼかして奥行きを出す） */}
       <div className="absolute inset-y-0 left-0 hidden w-[calc((100vw-48rem)/2)] items-end justify-center gap-2 pb-28 lg:flex">

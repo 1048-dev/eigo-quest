@@ -32,6 +32,7 @@ export function AncientTree({ s = 1, depth = "mid", seed = 0 }: { s?: number; de
         <g key={i}>
           <circle cx={x + ((seed * 7 + i * 3) % 6)} cy={y} r={r} fill={d.leaf[i % 2]} />
           <circle cx={x + ((seed * 7 + i * 3) % 6)} cy={y} r={r} fill="url(#shade-sphere)" opacity={0.7} />
+          <circle cx={x + ((seed * 7 + i * 3) % 6) - r * 0.3} cy={y - r * 0.35} r={r * 0.45} fill="#e8ffb0" opacity={d.rim * 0.18} />
           <path d={`M${x - r * 0.7} ${y - r * 0.55} A${r} ${r} 0 0 1 ${x + r * 0.2} ${y - r * 0.95}`} stroke="#ffe39a" strokeOpacity={d.rim} strokeWidth={2.5} fill="none" strokeLinecap="round" />
         </g>
       ))}
@@ -103,6 +104,9 @@ export function TempleGate({ s = 1, glow = true }: { s?: number; glow?: boolean 
         <g key={x}>
           <rect x={x - 7} y={-104} width={14} height={92} fill="url(#g-stone-warm)" />
           <rect x={x - 7} y={-104} width={14} height={92} fill="url(#shade-cyl)" />
+          {/* 柱のみぞ（フルーティング）と逆光 */}
+          <path d={`M${x - 3} -100 V-16 M${x + 1} -100 V-16`} stroke="#000" strokeOpacity={0.18} strokeWidth={1} />
+          <rect x={x + 5.6} y={-104} width={1.4} height={92} fill="#bfefff" opacity={0.25} />
         </g>
       ))}
       <path d="M-62 -104 L62 -104 L52 -124 L-52 -124 Z" fill="url(#g-stone-warm)" />
@@ -123,10 +127,25 @@ export function GodRays({ x = 0, w = 400, h = 300, count = 5, opacity = 0.12 }: 
     <g opacity={opacity} style={{ mixBlendMode: "screen" }}>
       {Array.from({ length: count }, (_, i) => {
         const x0 = x + (w / count) * i;
-        return <path key={i} d={`M${x0} 0 L${x0 + 26} 0 L${x0 + 110 + i * 10} ${h} L${x0 + 60 + i * 6} ${h} Z`} fill="#fff1c2" filter="url(#f-dof-2)" />;
+        return <path key={i} d={`M${x0} 0 L${x0 + 26} 0 L${x0 + 110 + i * 10} ${h} L${x0 + 60 + i * 6} ${h} Z`} fill="url(#ray-fade)" filter="url(#f-dof-2)" />;
       })}
     </g>
   );
+}
+
+/** キャラクターの後ろから当たる大きなキーライト（光のにじみ） */
+export function KeyLight({ x, y, rx = 120, ry = 70, color = "#ffe2a0", opacity = 0.35 }: { x: number; y: number; rx?: number; ry?: number; color?: string; opacity?: number }) {
+  return (
+    <g style={{ mixBlendMode: "screen" }} opacity={opacity}>
+      <ellipse cx={x} cy={y} rx={rx} ry={ry} fill={color} filter="url(#f-dof-4)" opacity={0.5} />
+      <ellipse cx={x} cy={y} rx={rx * 0.45} ry={ry * 0.45} fill="#fff6dc" filter="url(#f-dof-4)" opacity={0.6} />
+    </g>
+  );
+}
+
+/** 映画のカラーグレーディング（上は暖色・下はティール）を画面全体に重ねる */
+export function ColorGrade({ w, h }: { w: number; h: number }) {
+  return <rect width={w} height={h} fill="url(#grade-teal-orange)" pointerEvents="none" />;
 }
 
 /** 霧の層 */
@@ -184,6 +203,8 @@ export function Crystals({ s = 1, gem = "sapphire" }: { s?: number; gem?: "sapph
           <g key={i} transform={`translate(${x} 0) rotate(${r})`}>
             <path d={`M${-w} 0 L${-w} ${-h * 0.75} L0 ${-h} L${w} ${-h * 0.75} L${w} 0 Z`} fill={`url(#gem-${gem})`} />
             <path d={`M${-w} ${-h * 0.75} L0 ${-h} L0 0 L${-w} 0 Z`} fill="#fff" opacity={0.22} />
+            <path d={`M${w} ${-h * 0.75} L0 ${-h} L0 0 L${w} 0 Z`} fill="#000" opacity={0.18} />
+            <path d={`M${-w * 0.4} ${-h * 0.2} L${-w * 0.2} ${-h * 0.8}`} stroke="#fff" strokeOpacity={0.6} strokeWidth={0.8} strokeLinecap="round" />
           </g>
         ))}
       </g>

@@ -8,7 +8,7 @@ import { Standing, type Pose } from "@/components/characters/StandingArt";
 import { MonsterArt } from "@/components/characters/MonsterArt";
 import type { CharacterId } from "@/lib/game/characters";
 import type { Mood } from "@/lib/game/companion";
-import { AncientTree, At, Fern, Fog, GodRays, MagicCircle, Motes, RuinRelief, TempleGate, Vignette } from "./CinematicScenery";
+import { AncientTree, At, ColorGrade, Fern, Fog, GodRays, KeyLight, MagicCircle, Motes, RuinRelief, TempleGate, Vignette } from "./CinematicScenery";
 
 export type HeroVariant = "map" | "dashboard" | "arena" | "gacha" | "ranking" | "lesson";
 
@@ -23,8 +23,8 @@ const CASTS: Record<HeroVariant, (Cast | Mon)[]> = {
   map: [
     { kind: "mon", id: "mon-044", x: 22, s: 0.5, y: -6 },
     { kind: "mon", id: "mon-028", x: 330, s: 0.45, flip: true, y: -8 },
-    { kind: "char", id: "riko", x: 108, s: 0.7, pose: "wave" },
-    { kind: "char", id: "kiko", x: 252, s: 0.68, pose: "cheer", flip: true },
+    { kind: "char", id: "riko", x: 106, s: 0.79, pose: "wave" },
+    { kind: "char", id: "kiko", x: 254, s: 0.76, pose: "cheer", flip: true },
     { kind: "mon", id: "mon-091", x: 300, s: 0.55, flip: true },
     { kind: "char", id: "haru", x: 180, s: 0.86, pose: "point" },
     { kind: "char", id: "birimo", x: 66, s: 0.52, mood: "excited" },
@@ -32,8 +32,8 @@ const CASTS: Record<HeroVariant, (Cast | Mon)[]> = {
   dashboard: [
     { kind: "mon", id: "mon-055", x: 316, s: 0.5, flip: true, y: -40 },
     { kind: "mon", id: "mon-037", x: 28, s: 0.5 },
-    { kind: "char", id: "kiko", x: 100, s: 0.7, pose: "wave" },
-    { kind: "char", id: "riko", x: 258, s: 0.7, pose: "idle", flip: true },
+    { kind: "char", id: "kiko", x: 100, s: 0.76, pose: "wave" },
+    { kind: "char", id: "riko", x: 258, s: 0.79, pose: "idle", flip: true },
     { kind: "char", id: "haru", x: 180, s: 0.86, pose: "cheer" },
     { kind: "char", id: "birimo", x: 320, s: 0.5, mood: "happy" },
   ],
@@ -56,15 +56,15 @@ const CASTS: Record<HeroVariant, (Cast | Mon)[]> = {
   ranking: [
     { kind: "mon", id: "mon-037", x: 28, s: 0.45 },
     { kind: "mon", id: "mon-091", x: 334, s: 0.45, flip: true },
-    { kind: "char", id: "riko", x: 96, s: 0.72, pose: "cheer" },
-    { kind: "char", id: "kiko", x: 264, s: 0.72, pose: "cheer", flip: true },
+    { kind: "char", id: "riko", x: 96, s: 0.83, pose: "cheer" },
+    { kind: "char", id: "kiko", x: 264, s: 0.79, pose: "cheer", flip: true },
     { kind: "char", id: "haru", x: 180, s: 0.9, pose: "cheer" },
     { kind: "char", id: "birimo", x: 230, s: 0.45, mood: "excited", y: -110 },
   ],
   lesson: [
-    { kind: "char", id: "riko", x: 70, s: 0.68, pose: "wave" },
+    { kind: "char", id: "riko", x: 68, s: 0.74, pose: "wave" },
     { kind: "char", id: "haru", x: 140, s: 0.8, pose: "point" },
-    { kind: "char", id: "kiko", x: 214, s: 0.66, pose: "idle", flip: true },
+    { kind: "char", id: "kiko", x: 214, s: 0.7, pose: "idle", flip: true },
     { kind: "char", id: "birimo", x: 290, s: 0.5, mood: "happy" },
   ],
 };
@@ -131,6 +131,7 @@ export function HeroScene({ title, subtitle, variant = "map" }: { title: string;
         <path d={`M0 ${GROUND - 18} Q180 ${GROUND - 34} 360 ${GROUND - 18}`} stroke="#f2c46a" strokeOpacity={0.35} strokeWidth={1.5} fill="none" />
         <At x={180} y={GROUND - 4}><MagicCircle rx={110} ry={16} /></At>
         <Fog y={GROUND - 22} w={W} opacity={0.28} />
+        <KeyLight x={180} y={GROUND - 90} rx={150} ry={80} opacity={0.3} />
 
         {/* キャラクターとモンスター（逆光のふち取り＋影） */}
         <g filter="url(#f-rim)">
@@ -156,6 +157,7 @@ export function HeroScene({ title, subtitle, variant = "map" }: { title: string;
         <At x={-10} y={H + 6}><Fern s={0.9} /></At>
         <At x={W + 10} y={H + 6}><Fern s={0.85} flip /></At>
         <Motes w={W} h={H - 40} n={16} seed={v.length} />
+        <ColorGrade w={W} h={H} />
         <Vignette w={W} h={H} id={`vig-${v}`} />
       </svg>
 
