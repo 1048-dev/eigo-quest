@@ -6,6 +6,7 @@ import type { AssessmentDef, LearningItemDef, LessonDef, MemoryState, Skill } fr
 import { pickArenaItems, type ArenaMode } from "@/lib/domain/arena";
 import { MAX_CONVERSATION_TURNS } from "@/lib/conversation/engine";
 import { getLesson, itemsInRange, itemsOfLesson } from "./index";
+import { VOWEL_TEAMS, VOWEL_TEAM_INTRO, possibleSounds, shortVowelOf, teamSound } from "./vowelTeams";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -195,40 +196,42 @@ export function magicEQuestion(item: LearningItemDef, rng: () => number): Pick<Q
       : `${item.text} は みじかい「${v}」の おと。おわりに e が ないね。` };
 }
 
-/** 母音チーム（ワールド7）。おなじ おとの グループごと（ai と ay は どちらも「エイ」） */
-export const VOWEL_TEAM_GROUPS = [["ai", "ay"], ["ee", "ea"], ["oa", "ow"]] as const;
-export const VOWEL_TEAMS = VOWEL_TEAM_GROUPS.flat();
-/** グループの おと（カタカナの めやす）と、くらべる みじかい母音 */
-const TEAM_SOUND: Record<string, { ja: string; short: string }> = {
-  ai: { ja: "エイ", short: "a" }, ay: { ja: "エイ", short: "a" },
-  ee: { ja: "イー", short: "e" }, ea: { ja: "イー", short: "e" },
-  oa: { ja: "オウ", short: "o" }, ow: { ja: "オウ", short: "o" },
-};
-const groupOf = (team: string) => VOWEL_TEAM_GROUPS.find((g) => (g as readonly string[]).includes(team)) as readonly string[];
+/** 母音チーム（ワールド7〜8）。おとの表は ./vowelTeams.ts（oo・ow は ことばで おとが かわる） */
+export { VOWEL_TEAM_GROUPS, VOWEL_TEAMS } from "./vowelTeams";
 
 /**
- * その回のフォーカスに母音チーム（"ai" など）があれば、母音の おとで問う（rain の答えを 最初の「r」にしない）。
- * 音声だけの問題なので、おなじ おとの つづり（ai ↔ ay、ee ↔ ea、oa ↔ ow）は いっしょに 選択肢に 出さない（聞きわけられない）。
- * 選択肢 = 正解 ＋ みじかい母音（rain ↔ ran の a）＋ ほかの 2つの おとの グループから 1つずつ。
- * ことばに 入っている チームが 2つ あるとき（railway）は フォーカスの 順で 先の もの。
+ * その回のフォーカスに母音チーム（"ai" "oo" "igh" など）があれば、母音の おとで問う（rain の答えを 最初の「r」にしない）。
+ * 音声だけの問題なので、おなじ おとに なりうる つづり（ai ↔ ay、ee ↔ ea、oa ↔ ow、ou ↔ ow、oi ↔ oy、igh ↔ ie）は
+ * いっしょに 選択肢に 出さない（聞きわけられない）。ことばの 中に きこえる おとの つづりも 出さない（playground の ay など）。
+ * 選択肢 = 正解 ＋ みじかい母音（rain ↔ a、night ↔ i）＋ ほかの おとの つづり 2つ（その回の フォーカスを 先に。まだ ならっていない つづりは 出さない）。
+ * ことばに 入っている チームが 2つ あるとき（railway、moonlight）は フォーカスの 順で 先の もの。
  */
 export function vowelTeamQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
   const focus = getLesson(item.lessonNo)?.phonics.focus ?? [];
-  const teams = focus.filter((f) => (VOWEL_TEAMS as readonly string[]).includes(f));
+  const teams = focus.filter((f) => VOWEL_TEAMS.includes(f));
   if (teams.length === 0) return null;
   const w = item.text.toLowerCase();
   const answer = teams.find((f) => w.includes(f));
   if (!answer) return null;
-  const { ja, short } = TEAM_SOUND[answer];
-  const heard = new Set(VOWEL_TEAMS.filter((x) => w.includes(x)).map((x) => TEAM_SOUND[x].ja));
-  // ほかの おとの グループ（ことばに 入っている おとの グループは のぞく）から 1つずつ。その回の フォーカスに ある つづりを 先に
-  const others = VOWEL_TEAM_GROUPS.filter((g) => g !== groupOf(answer) && !heard.has(TEAM_SOUND[g[0]].ja))
-    .map((g) => { const inFocus = g.filter((x) => focus.includes(x)); return shuffle(inFocus.length > 0 ? inFocus : g, rng)[0]; });
-  // 2つめの グループが のぞかれた とき（seaweed＋ai など）は、のこりの みじかい母音で うめる
-  const fill = shuffle(["a", "e", "o"].filter((x) => x !== short && !others.some((o) => TEAM_SOUND[o].short === x)), rng);
+  const ja = teamSound(answer, w);
+  const short = shortVowelOf(answer);
+  // 正解の つづりが なりうる おと（ow なら オウ と アウ → oa も ou も 出さない）と、ことばの 中で きこえる おとは 出さない
+  const blocked = new Set<string>([ja, ...possibleSounds(answer), ...VOWEL_TEAMS.filter((x) => w.includes(x)).map((x) => teamSound(x, w))]);
+  const learned = VOWEL_TEAMS.filter((x) => x !== answer && (VOWEL_TEAM_INTRO[x] <= item.lessonNo || focus.includes(x)));
+  const ordered = [...shuffle(learned.filter((x) => focus.includes(x)), rng), ...shuffle(learned.filter((x) => !focus.includes(x)), rng)];
+  const others: string[] = [];
+  for (const x of ordered) {
+    if (others.length === 2) break;
+    const s = possibleSounds(x);
+    if (s.some((v) => blocked.has(v))) continue;
+    others.push(x);
+    s.forEach((v) => blocked.add(v));
+  }
+  // おとの グループが たりない とき（seaweed＋ai など）は、のこりの みじかい母音で うめる
+  const fill = shuffle(["a", "e", "i", "o", "u"].filter((x) => x !== short && !others.some((o) => shortVowelOf(o) === x)), rng);
   const choices = [answer, short, ...others, ...fill].slice(0, 4);
   return { promptJa: "きこえた ぼいんの おとは どれ？", choices: shuffle(choices, rng).map((x) => ({ id: x, label: x })), answer,
-    explanationJa: `${item.text} は「${answer}」。2つの もじで「${ja}」の おとに なるよ（みじかい ${short} とは ちがう おと）。` };
+    explanationJa: `${item.text} は「${answer}」。${answer.length}つの もじで「${ja}」の おとに なるよ（みじかい ${short} とは ちがう おと）。` };
 }
 
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {

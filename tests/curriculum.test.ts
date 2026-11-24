@@ -7,6 +7,7 @@ import { z } from "zod";
 import raw from "@content/curriculum/lessons.json";
 import { ALL_ITEMS, ASSESSMENTS, LESSONS, TEACHER, itemsOfLesson } from "@/lib/curriculum";
 import { buildLessonFlow } from "@/lib/curriculum/questions";
+import { teamSound } from "@/lib/curriculum/vowelTeams";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -546,5 +547,78 @@ describe("カリキュラム: ワールド7 の決まりごと", () => {
       const texts = [...l.school.expressions.map((e) => e.en), ...(l.conversation?.lines.map((x) => x.en) ?? []), l.conversation?.aiTask.starterEn ?? ""];
       for (const t of texts) expect(t, `L${l.lessonNo}`).not.toMatch(third);
     }
+  });
+});
+
+describe("カリキュラム: ワールド8 の決まりごと", () => {
+  const w8 = LESSONS.filter((l) => l.world === 8);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const TEAMS = ["oo", "ou", "ow", "oi", "oy", "igh", "ie"];
+
+  it("ワールド8 は 211〜240 の 30 レッスン、学年は小5", () => {
+    if (w8.length === 0) return; // 未作成ならスキップ
+    expect(w8.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 211 + i));
+    for (const l of w8) expect(l.school.grade).toBe("小5");
+  });
+
+  it("母音チームを oo → ou → ow → oi → oy → igh → ie の順に（5の倍数はふりかえり）、L236〜240 は ふりかえり", () => {
+    if (w8.length === 0) return;
+    const plan: [number, string][] = [[211, "oo"], [212, "oo"], [213, "oo"], [214, "oo"], [216, "ou"], [217, "ou"], [218, "ou"], [219, "ou"],
+      [221, "ow"], [222, "ow"], [223, "ow"], [224, "ow"], [226, "oi"], [227, "oi"], [228, "oy"], [229, "oy"],
+      [231, "igh"], [232, "igh"], [233, "ie"], [234, "ie"]];
+    for (const [n, f] of plan) {
+      expect(at(n)!.phonics.focus, `L${n}`).toEqual([f]);
+      expect(at(n)!.phonics.rule, `L${n}`).toBe("vowel-team");
+    }
+    for (const n of [215, 220, 225, 230, 235, 236, 237, 238, 239, 240]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    expect([...at(240)!.phonics.focus].sort()).toEqual([...TEAMS].sort());
+    for (const l of w8) for (const f of l.phonics.focus) expect(TEAMS, `L${l.lessonNo}`).toContain(f);
+  });
+
+  it("oo: L211〜212 は moon の「ウー」、L213〜214 は book の「ウ」。ow は ワールド8では cow の「アウ」だけ", () => {
+    if (w8.length === 0) return;
+    for (const n of [211, 212]) for (const w of at(n)!.phonics.words) expect(teamSound("oo", w), `L${n} ${w}`).toBe("ウー");
+    for (const n of [213, 214]) for (const w of at(n)!.phonics.words) expect(teamSound("oo", w), `L${n} ${w}`).toBe("ウ");
+    expect(at(215)!.phonics.words.map((w) => teamSound("oo", w))).toEqual(expect.arrayContaining(["ウー", "ウ"]));
+    for (const l of w8) for (const w of l.phonics.words.filter((x) => x.includes("ow"))) expect(teamSound("ow", w), `L${l.lessonNo} ${w}`).toBe("アウ");
+  });
+
+  it("ie は pie の「アイ」だけ（piece / field のような「イー」の ie は 出さない）", () => {
+    if (w8.length === 0) return;
+    for (const l of w8) for (const w of l.phonics.words) expect(w, `L${l.lessonNo}`).not.toMatch(/(piece|field|chief|thief|niece|shield|movie|cookie)/);
+  });
+
+  it("L240 はワールドのまとめでスピード TPR", () => {
+    if (w8.length === 0) return;
+    expect(at(240)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("表現の型が計画（NEW HORIZON Elementary 5 後半のテーマ）どおり入っている", () => {
+    if (w8.length === 0) return;
+    const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(ex(211, 215)).toMatch(/Where is the \w+\?/);
+    expect(ex(211, 215)).toContain("Go straight");
+    expect(ex(211, 215)).toMatch(/Turn (right|left)/);
+    expect(ex(211, 215)).toMatch(/It's on your (right|left)\./);
+    expect(ex(211, 215)).toMatch(/It's next to the \w+\./);
+    expect(ex(216, 220)).toContain("What would you like?");
+    expect(ex(216, 220)).toMatch(/I'd like [\w ]+, please\./);
+    expect(ex(216, 220)).toContain("How much is it?");
+    expect(ex(216, 220)).toMatch(/It's \d+ yen\./);
+    expect(ex(221, 225)).toMatch(/In Japan, we have \w+/);
+    expect(ex(221, 225)).toMatch(/You can \w+/);
+    expect(ex(226, 230)).toContain("Who is your hero?");
+    expect(ex(226, 230)).toMatch(/My hero is [\w ]+\./);
+    expect(ex(226, 230)).toMatch(/(He|She) is good at \w+/);
+    expect(ex(231, 235)).toMatch(/We have an? \w+ in our town\./);
+    expect(ex(231, 235)).toMatch(/We don't have an? \w+/);
+    expect(ex(236, 240)).toMatch(/My hero is /);
+  });
+
+  it("AI 会話で ほんとうの まちの なまえ・ひとの なまえを きかない（まち・ヒーローの回は goalJa に 明記）", () => {
+    if (w8.length === 0) return;
+    for (const n of [231, 232, 234, 235, 240]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toContain("まちの なまえは いわなくて OK");
+    for (const n of [226, 230, 236, 240]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえ(は|や)/);
   });
 });

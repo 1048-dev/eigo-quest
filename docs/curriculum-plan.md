@@ -480,6 +480,48 @@
 | 209 | Speech Rehearsal | はっぴょうの れんしゅう | Let's practice our speeches. | ai ay ee ea ow ふりかえり（railway, seaweed, mailbox, snowman） | とうだいの ステージで リハーサル |
 | 210 | World 7 Grand Review | 小5前半 はっぴょうかい（ワールド7 ぜんぶ） | Hello! My name is Haru. My birthday is May 5th. | 母音チーム総まとめ（rain, play, tree, sea, boat, snow） | ひかりの島の とうだいで 小5前半 はっぴょうかい |
 
+## 6-8. ワールド8 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: 母音チーム後半を oo（moon の「ウー」L211〜212、book の「ウ」L213〜214）→ ou（L216〜219）→ ow（cow の「アウ」L221〜224）→ oi（L226〜227）→ oy（L228〜229）→ igh（L231〜232）→ ie（pie の「アイ」L233〜234）。5の倍数回と L236〜240 は ふりかえり（oo の 2つの おと、ou / ow・oi / oy・igh / ie の おなじ おとの ペア、moonlight / playground / cowboy / football の 2音節語）。ワールド8の ow は「アウ」だけ、ie は「アイ」だけ（piece の「イー」は 出さない）。`phonics.rule` は "vowel-team" / "review"。
+- おとの表: `src/lib/curriculum/vowelTeams.ts`。oo と ow は つづりが おなじでも おとが ちがうので、ことばの 表（`OO_SHORT_WORDS` = book の「ウ」、`OW_AU_WORDS` = cow の「アウ」）で 見分ける。**新しい oo / ow の ことばを つかうときは この表に 足す**（足さないと moon の「ウー」・snow の「オウ」あつかい）。
+- フォニックス問題（`vowelTeamQuestion`）: 選択肢 = 正解 ＋ みじかい母音（つづりの 1もじめ。night ↔ i）＋ ほかの おとの つづり 2つ。おなじ おとに なりうる つづり（ou ↔ ow ↔ oa、oi ↔ oy、igh ↔ ie）や、ことばの 中で きこえる おとの つづり（playground の ay）は 出さない。まだ ならっていない つづり（`VOWEL_TEAM_INTRO`）も 出さない。
+- 表現の型: Where is the ～? / Go straight. / Turn right (left). / It's on your right. / It's next to ～. → What would you like? ― I'd like ～, please. / How much is it? ― It's ～ yen. / Here you are. → In Japan, we have ～. / You can ～. / It's delicious. → Who is your hero? ― My hero is ～. / He / She is brave. / He / She is good at ～. / He / She helps ～. → We have a ～ in our town. / We don't have a ～. / I want a ～ in our town. / Our town is ～. → ヒーロー しょうかい スピーチ・小5 はっぴょうかい。
+- 会話の かいがいの ともだち: エマ先生の めいっこ「リリー」（会話の中だけ。セリフは 無い。speaker は今までどおり 5人だけ）。
+- AI 会話タスクでは ほんとうの まちの なまえ・ヒーローの ほんとうの なまえを きかない（goalJa に 明記・テストで 確認）。
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 211 | Where Is the Station? | ばしょを たずねる | Where is the station? | oo（moon, zoo, food, pool） | たびだちの道で みちに まよった たびびと（エマ先生が たびびと やく） |
+| 212 | Go Straight | すすむ ほうこう | Go straight. | oo（spoon, room, boot, cool） | たびだちの道の こうさてんで みちあんない |
+| 213 | It's on Your Right | ばしょを つたえる | It's on your right. | oo（book, look, cook, good） | たびだちの道の まちで ほんやを さがす |
+| 214 | Next to the Park | となり・あいだ・まえ | It's next to the park. | oo（foot, wood, hook, wool） | こうえんの となりの カフェを さがす |
+| 215 | Help the Traveler | たびびとを たすけよう（まとめ） | Go straight and turn left. | oo ふりかえり（moon, book, food, foot） | たびびとを どうぶつえんまで あんない |
+| 216 | What Would You Like? | ていねいに たずねる | What would you like? | ou（out, house, mouse, cloud） | たびだちの道の レストランで はじめての ちゅうもん |
+| 217 | I'd Like Spaghetti | たべものと のみもの | I'd like spaghetti, please. | ou（mouth, round, found, sound） | レストランで ランチと のみものを ちゅうもん |
+| 218 | How Much Is It? | いくら？ | How much is it? | ou（count, loud, shout, south） | たびだちの道の やたいで ねだんを たずねる |
+| 219 | Here You Are | わたす・うけとる | Here you are. | ou（ground, proud, couch, pouch） | レストランの レジで おかいけい |
+| 220 | Restaurant Role-Play | レストランごっこ（まとめ） | I'd like curry and rice, please. | ou oo ふりかえり（house, cloud, moon, book） | レストランごっこ（てんいんさんと おきゃくさん） |
+| 221 | In Japan, We Have Sushi | にほんに ある もの | In Japan, we have sushi. | ow（cow, now, how, wow） | エマ先生の めいっこ（かいがいの ともだち）と オンラインで にほん しょうかい |
+| 222 | You Can See Mount Fuji | できる こと | You can see Mount Fuji. | ow（town, down, brown, crown） | にほんの りょこうポスターづくり |
+| 223 | Festivals in Japan | ぎょうじと まつり | You can enjoy fireworks. | ow（owl, clown, flower, tower） | かいがいの ともだちに にほんの おまつりを しょうかい |
+| 224 | It's Delicious | たべものの ようす | It's delicious. | ow（crowd, growl, howl, power） | まちの ひろばの にほんの たべもの フェア |
+| 225 | Welcome to Japan! | にほん しょうかいガイド（まとめ） | Welcome to Japan! You can eat sushi. | ou ow ふりかえり（out, owl, house, town） | かいがいの ともだちに オンラインで にほん ツアー |
+| 226 | Who Is Your Hero? | ヒーローを たずねる | Who is your hero? | oi（coin, oil, boil, point） | たびだちの道の キャンプで ヒーロー トーク |
+| 227 | She Is Brave | しごとと せいかく | She is brave. | oi（soil, join, noise, voice） | ヒーローの ポスターを かく |
+| 228 | He Is Good at Soccer | できる ことと とくいな こと | He is good at soccer. | oy（boy, toy, joy, enjoy） | グラウンドで ヒーローの とくいな こと トーク |
+| 229 | He Helps People | ヒーローの わけ | He helps people. | oy（soy, oyster, cowboy, annoy） | どうして ヒーローなのか はなしあう |
+| 230 | This Is My Hero | ヒーロー しょうかい（まとめ） | This is my hero. | oi oy ふりかえり（coin, boy, point, toy） | ヒーロー しょうかい ポスターの はっぴょう |
+| 231 | Our Town | まちに ある もの | We have a park in our town. | igh（high, night, light, right） | たびだちの道の まちの ガイドブックづくり |
+| 232 | We Don't Have a Zoo | ない もの | We don't have a zoo. | igh（bright, flight, sight, tight） | まちに ない ものを かぞえる |
+| 233 | I Want a Pool in Our Town | ほしい もの | I want a pool in our town. | ie（pie, tie, lie, fries） | ゆめの まちの アイデア かいぎ |
+| 234 | Our Town Is Nice | まちの よさ | Our town is nice. | ie（skies, flies, spies, cries） | まちの いいところを ガイドブックに かく |
+| 235 | Town Guidebook | まちの ガイドブック（まとめ） | We have a big park. You can play soccer there. | igh ie ふりかえり（night, pie, light, tie） | まちの ガイドブックを かんせい させる |
+| 236 | My Hero Speech | ヒーロー しょうかい スピーチを つくる | My hero is Ms. Emma. She is kind. | oo ou ふりかえり（spoon, foot, mouth, round） | きょうしつで ヒーロー スピーチづくり |
+| 237 | Treasure Hunt | みちあんない ゲーム | Turn right at the second corner. | ow oi oy ふりかえり（brown, join, toy, crowd） | みちあんないで たからさがし ゲーム |
+| 238 | Road Cafe Quiz Show | ちゅうもんと にほん しょうかい クイズショー | In Japan, we have ramen. It's delicious. | igh ie oo ふりかえり（bright, fries, school, wood） | たびだちの道の カフェで クイズショー |
+| 239 | Speech Rehearsal | 小5 はっぴょうかいの リハーサル | Please listen to my speech. | oo ou ow oy igh ふりかえり（moonlight, playground, cowboy, football） | やがいステージで はっぴょうかいの リハーサル |
+| 240 | World 8 Grand Review | 小5 はっぴょうかい（ワールド8 ぜんぶ） | This is my hero. He is brave and kind. | 母音チーム総まとめ（moon, house, cow, coin, boy, night, pie） | たびだちの道の ゴールで 小5 はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。

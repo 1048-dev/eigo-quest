@@ -409,3 +409,48 @@
 - 母音チームの ボタンの 読み上げは "ay" / "ee" / "oh" に しました。ブラウザの声で 不自然なら、「rain の ai」のように れいの語を 読む形に かえられます。
 - 母音チームの 問題では ai と ay（ee と ea、oa と ow）を いっしょに 出さない ように しました（音だけでは 区別できないため）。「どちらの つづりか」を 見て えらぶ 問題（文字を 見せる形）も ほしければ 追加します。
 - ワールド7の テーマは NEW HORIZON Elementary 5 の 版によって 単元の 順番が ちがう ことが あります。最新版の 単元一覧と ずれが あれば 教えてください（ブロックごと 入れかえられる 作りに しています）。
+
+
+## Phase 12 — ワールド8（レッスン211〜240・小5／NEW HORIZON Elementary 5 後半）（2026-11-24）
+
+### やったこと
+1. **content/curriculum/lessons.json にレッスン211〜240を追加**（ワールド8「たびだちの道」・school.grade は小5）。ワールド1〜7と同じ形式（conversation・recap つき）、英文はすべてオリジナル（教科書の文は使っていない）。既存のレッスン1〜210は変えず、末尾に同じ書式で追記しただけ。
+   - 211〜215 みちあんない（Where is the station?、Go straight. / Turn right. / Turn left.、It's on your right.、It's next to the park. / between ～ and ～、たびびとを たすけよう）
+   - 216〜220 ちゅうもんと ねだん（What would you like? ― I'd like ～, please.、What would you like to drink?、How much is it? ― It's 500 yen.、Here you are. / That's all.、レストランごっこ）
+   - 221〜225 にほんの すてき しょうかい（In Japan, we have sushi.、You can see Mount Fuji.、We have Tanabata in July. / You can enjoy fireworks.、It's delicious.、にほん しょうかいガイド）
+   - 226〜230 あこがれの ひと（Who is your hero? ― My hero is ～.、She is brave.、He is good at soccer.、He helps people.、ヒーロー しょうかい ポスター）
+   - 231〜235 わたしたちの まち（We have a park in our town.、We don't have a zoo.、I want a pool in our town.、Our town is nice. / You can see stars at night.、まちの ガイドブック）
+   - 236〜240 小5まとめ（ヒーロー スピーチづくり、たからさがし みちあんない〈Turn right at the second corner.〉、カフェで クイズショー、リハーサル〈Please listen to my speech. / Thank you for listening.〉、L240 はスピードTPRつきの ワールド総まとめ「小5 はっぴょうかい」）
+2. **フォニックス: 母音チーム後半** oo〈moon の ウー〉（L211〜212）→ oo〈book の ウ〉（L213〜214）→ ou（L216〜219）→ ow〈cow の アウ〉（L221〜224）→ oi（L226〜227）→ oy（L228〜229）→ igh（L231〜232）→ ie〈pie の アイ〉（L233〜234）。5の倍数回と L236〜240 は ふりかえり（oo の 2つの おと、ou / ow・oi / oy・igh / ie の おなじ おとの ペア、moonlight / playground / cowboy / football の 2音節語）。`phonics.rule` は "vowel-team" / "review"。
+3. **母音チームの おとの表を 新しいファイルに（src/lib/curriculum/vowelTeams.ts）**: oo（ウー／ウ）と ow（オウ／アウ）は つづりが おなじでも おとが ちがうので、ことばの 表（book の仲間・cow の仲間）で 見分けるようにした。import の無い 純粋な データなので、レッスン画面からも使える。
+4. **フォニックス問題を 母音チーム後半に対応（questions.ts の `vowelTeamQuestion` を 一般化）**: 選択肢 = 正解 ＋ みじかい母音（つづりの 1もじめ。night ↔ i）＋ ほかの おとの つづり 2つ。音声だけの問題なので:
+   - おなじ おとに なりうる つづり（ou ↔ ow ↔ oa、oi ↔ oy、igh ↔ ie、ai ↔ ay、ee ↔ ea）は いっしょに 出さない
+   - ことばの 中で きこえる ほかの おとの つづり（playground の ay、cowboy の ow）も 出さない
+   - **まだ ならっていない つづりは 出さない**（ワールド7の 回に igh などが 出ない。いままでは L195 でも まだ ならっていない oa が 出ていたので、それも なおった）
+   - 解説は「moon は「oo」。2つの もじで「ウー」の おと」「book は …「ウ」の おと」「night は「igh」。3つの もじで「アイ」の おと」のように ことばごとの おと。
+5. **レッスン画面（LessonSteps.tsx）**: フォーカスの ボタンの 読み上げを vowelTeams.ts の `focusSay` に まとめた。ow は その回の ことばで "oh"（snow）か "ow"（cow）、oo は "oo"（book だけの 回は ことば "book" を よむ）、ou → "ow"、oi / oy → "oy"、igh / ie → "eye"。
+6. **マップ（WorldMap.tsx の1行）**: ワールド8「たびだちの道」（ゆうやけの オレンジ・壁のもじ oo / ou / ow / oy / igh）を追加。
+7. **テスト**: tests/curriculum.test.ts にワールド8の決まりごと（211〜240・小5、母音チームの順番と rule、oo の ウー／ウ の 回わけ、ow は アウ だけ、ie は アイ だけ、L240 のスピードTPR、ブロックごとの表現の型、AI 会話で まちの なまえ・ヒーローの なまえを きかない）、tests/phonics-vowel-team-w8.test.ts（新規・9件: おとの表・読み上げ・cow / night / cowboy / playground・ワールド8 全語の 選択肢チェック・ワールド7に ワールド8の つづりが 出ない）。合計 471件。
+8. **docs/curriculum-plan.md** に「6-8. ワールド8 のレッスン詳細」を追加（oo / ow の ことばを 足すときは vowelTeams.ts の 表にも 足す、と 明記）。
+9. `npx tsc --noEmit` / `npx vitest run`（471件）/ `npx next build` すべて成功。まとめ動画は全240レッスンで2〜3分に収まることをテストで確認。
+
+### 判断したこと
+- 計画の「oo（moon / book）」は 2つの おとが あるので、2回ずつに わけた（ウー → ウ）。L215 で くらべる。問題の 答えは どちらも「oo」で、解説で おとを 分けた。
+- ow は ワールド7（snow の オウ）と ワールド8（cow の アウ）で おとが ちがう。つづりだけでは 決められないので、cow の仲間の ことばの 表で 見分ける形にした。ワールド8の ow の ことばは ぜんぶ アウ（テストで 自動チェック）。
+- ie は「アイ」（pie, tie）だけ。piece / field のような「イー」の ie は 出さない（テストで チェック）。ie の 本当の ことばが 少ないので、L234 は skies / flies / spies / cries（y → ies）に した。
+- 計画の「oi, oy」は 1ブロックなので、oi 2回 → oy 2回 → L230 で くらべ。igh / ie も 同じ 形。
+- かいがいの ともだちは speaker が 5人だけの ルールを まもるため、「エマ先生の めいっこ リリー」と オンラインで はなす 形（リリーの セリフは エマ先生が つたえる）に した。
+- ヒーローは 実在の 有名人を つかわず、コーチ・おばあちゃん・しょうぼうし・じゅうい・かしゅ・エマ先生 など。AI 会話では「ほんとうの なまえは いわなくて OK」、まちの 回は「ほんとうの まちの なまえは いわなくて OK」と goalJa に 明記した。
+- 3人称単数の -s は helps（L229）と has（L227 の セリフ）を 追加。works（L203）と おなじ せつめいに した。
+- I want to be ～（しょうらいの ゆめ）は ワールド11 なので 使わず、「I want a pool in our town.」（ほしい もの）に した。L237 は ワールド7の first / second を つかった みちあんない（Turn right at the second corner.）。
+- ねだんは えん（yen）だけ。数字は 100 / 300 / 500 / 800 / 1,000 など。
+
+### スキップ / 未対応
+- 新しいレッスン用の 復習クエスト・まとめテスト・ボス（check-211〜240、mini-211-215 …、boss-1-240、arena-211-240、arena-1-240）は ASSESSMENTS には 自動で入るが、DB には 次回の `npm run db:seed` で入る（マイグレーション不要）。
+- worksheets/generate_worksheets.py の実行は 前回と同じ理由（reportlab 未インストール）でスキップ。読むフィールドは スキーマテストで 必須にしているので 読める。
+- 画面での目視確認はしていない（データ追加・問題の分岐・マップの色・読み上げの まとめのみ）。
+
+### オーナーへの質問
+- 「book の ウ」の 回は フォーカスの ボタンで ことば "book" を 読みます（"oo" だと ブラウザが「ウー」と 読むため）。おとだけを 聞かせたい 場合は 録音の 音声が 必要です。
+- 母音チームの 問題の まちがいの 選択肢に、ow（オウ／アウ の 2つの おと）が 出ることが あります（答えが oo や oi の とき）。こどもが まよう ようなら、ow を まちがいの 選択肢から はずせます。
+- 3人称の -s（helps, has）を ワールド8で 少し ふやしました。NEW HORIZON 5 の 範囲より 少し 先どりかも しれません。気になる 場合は He is ～. / He can ～. だけに もどせます。
