@@ -328,3 +328,79 @@ describe("カリキュラム: ワールド4 の決まりごと", () => {
     expect(ex(116, 120)).toMatch(/I like/);
   });
 });
+
+describe("カリキュラム: ワールド5 の決まりごと", () => {
+  const w5 = LESSONS.filter((l) => l.world === 5);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const FINAL = ["-st", "-nd", "-mp", "-nt", "-lk", "-ft", "-sk", "-lp"];
+
+  it("ワールド5 は 121〜150 の 30 レッスン、学年は小4", () => {
+    if (w5.length === 0) return; // 未作成ならスキップ
+    expect(w5.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 121 + i));
+    for (const l of w5) expect(l.school.grade).toBe("小4");
+  });
+
+  it("語末ブレンド → 複数形 -s → -ing → 2音節 → ブレンド総まとめ の順（5の倍数はふりかえり）", () => {
+    if (w5.length === 0) return;
+    const plan: [number, string[], string][] = [
+      [121, ["-st"], "final-blend"], [122, ["-nd"], "final-blend"], [123, ["-mp"], "final-blend"], [124, ["-st", "-nd", "-mp"], "final-blend"],
+      [126, ["-nt"], "final-blend"], [127, ["-lk"], "final-blend"], [128, ["-ft"], "final-blend"], [129, ["-nt", "-lk", "-ft"], "final-blend"],
+      [131, ["-sk"], "final-blend"], [132, ["-lp"], "final-blend"], [133, ["-s"], "plural"], [134, ["-s"], "plural"],
+      [136, ["-ing"], "ing"], [137, ["-ing"], "ing"], [138, ["-ing"], "ing"], [139, ["-ing"], "ing"],
+    ];
+    for (const [n, focus, rule] of plan) {
+      expect(at(n)!.phonics.focus, `L${n}`).toEqual(focus);
+      expect(at(n)!.phonics.rule, `L${n}`).toBe(rule);
+    }
+    for (const l of range(141, 144)) expect(l.phonics.rule, `L${l.lessonNo}`).toBe("syllable");
+    for (const n of [125, 130, 135, 140, 145, 146, 147, 148, 149, 150]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // 語末ブレンド 8つを すべて あつかう
+    const taught = new Set(range(121, 135).flatMap((l) => l.phonics.focus));
+    for (const f of FINAL) expect(taught.has(f), f).toBe(true);
+  });
+
+  it("語末の回の単語は、その回の語末（-st / -s / -ing）で おわる", () => {
+    if (w5.length === 0) return;
+    for (const l of range(121, 140)) {
+      const ends = l.phonics.focus.filter((f) => f.startsWith("-")).map((f) => f.slice(1));
+      for (const w of l.phonics.words) expect(ends.some((e) => w.endsWith(e)), `L${l.lessonNo}: ${w}`).toBe(true);
+    }
+    // 語末ブレンドの回の単語は 短母音1つ（まだ magic e や母音チームを使わない）
+    for (const l of range(121, 132)) for (const w of l.phonics.words) expect(w.match(/[aeiou]/g)?.length, `L${l.lessonNo}: ${w}`).toBe(1);
+  });
+
+  it("L141〜144 は 2音節の ことば（focus は pic-nic の形、単語は 母音2つ）", () => {
+    if (w5.length === 0) return;
+    for (const l of range(141, 144)) {
+      expect(l.phonics.focus.map((f) => f.replace(/-/g, "")), `L${l.lessonNo}`).toEqual(l.phonics.words);
+      for (const f of l.phonics.focus) expect(f, `L${l.lessonNo}`).toMatch(/^[a-z]+-[a-z]+$/);
+      for (const w of l.phonics.words) expect(w.match(/[aeiou]/g)?.length, `L${l.lessonNo}: ${w}`).toBe(2);
+    }
+  });
+
+  it("L150 はワールドのまとめでスピード TPR", () => {
+    if (w5.length === 0) return;
+    expect(at(150)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("表現の型が計画（Let's Try! 2 前半のテーマ）どおり入っている", () => {
+    if (w5.length === 0) return;
+    const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+    expect(ex(121, 125)).toContain("Good morning.");
+    expect(ex(121, 125)).toContain("Hello, world!");
+    expect(ex(126, 130)).toContain("How's the weather?");
+    expect(ex(126, 130)).toMatch(/Let's play \w+\./);
+    expect(ex(131, 135)).toContain("What day is it?");
+    expect(ex(131, 135)).toContain("I like Mondays.");
+    expect(range(131, 132).flatMap((l) => l.vocab.map((v) => v.en))).toEqual(
+      expect.arrayContaining(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]),
+    );
+    expect(ex(136, 140)).toContain("What time is it?");
+    expect(ex(136, 140)).toMatch(/It's \w+ o'clock\./);
+    expect(ex(136, 140)).toMatch(/It's \w+ time\./);
+    expect(ex(141, 145)).toContain("Do you have a pen?");
+    expect(ex(141, 145)).toContain("Yes, I do.");
+    expect(ex(141, 145)).toContain("No, I don't.");
+  });
+});

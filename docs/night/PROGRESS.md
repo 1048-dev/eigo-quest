@@ -289,3 +289,44 @@
 - ワールド4の名前は計画書では「なぞなぞ山」、マップでは「スピーキング天空城」です。ワールド2・3と あわせて、どちらかに統一しますか？
 - ブレンドの回のフォニックス問題は「さいしょの 2つの おと」（選択肢 st / sp / sl など）です。小さい子には むずかしければ、ふりかえり回だけに しぼることもできます。
 - 2音節語（sunset など）を小3まとめで少しだけ入れました。本格的な2音節（rabbit, picnic）は計画どおりワールド5（L141〜145）です。
+
+
+## Phase 9 — ワールド5（レッスン121〜150・小4／Let's Try! 2 前半）（2026-11-24）
+
+### やったこと
+1. **content/curriculum/lessons.json にレッスン121〜150を追加**（ワールド5「じかんの塔」・school.grade は小4）。ワールド1〜4と同じ形式（conversation・recap つき）、英文はすべてオリジナル（教科書の文は使っていない）。既存のレッスン1〜120は変えず、末尾に同じ書式で追記しただけ。
+   - 121〜125 せかいの あいさつ（Good morning. / Good afternoon. / Good night.、Hello, world!、せかいの あさごはん I like toast.、See you later. / Have a nice day!、あさごはん パーティー）
+   - 126〜130 てんきと あそび（How's the weather? ― It's rainy.、Let's play tag. ― Yes, let's!、あめの ひ Let's play cards. / Your turn.、It's hot. Let's swim.、あめの ひの あそび そうだん）
+   - 131〜135 ようび（What day is it? ― It's Monday.、7つの ようび、I like Mondays.、Let's play on Saturday. / Sorry.、1しゅうかんの よていひょう）
+   - 136〜140 じこく・せいかつ（What time is it? ― It's seven o'clock.、It's breakfast time.、Wake up! / It's bedtime.、せかいの いま なんじ？ It's morning in Tokyo.、とけい クイズ It's snack time!）
+   - 141〜145 ぶんぼうぐ（Do you have a pen? ― Yes, I do. / No, I don't.、I have a ruler. / I don't have scissors.、This is my pencil case.、I have three pencils.、かしかり Do you have a red pen?）
+   - 146〜150 まとめ「1日の くらし」（わたしの あさ・ごご・1しゅうかん・がっこうの じゅんび、L150 はスピードTPRつきの ワールド総まとめ「わたしの 1しゅうかん はっぴょうかい」）
+2. **フォニックス**: 語末ブレンド -st -nd -mp（L121〜124）→ -nt -lk -ft（L126〜129）→ -sk -lp（L131〜132）、複数形 -s（L133〜134。nests / lamps のように ブレンド語にも）、-ing（L136〜139。running のように もじを ふやす語も）、2音節語（L141〜144。picnic, rabbit, magnet, pumpkin …）、L146〜150 は ブレンド総まとめ。`phonics.rule` は "final-blend" / "plural" / "ing" / "syllable" / "review"。
+3. **フォニックス問題を語末に対応（src/lib/curriculum/questions.ts に `endingQuestion` を追加）**: 今までのままだと nest の答えが「n」（最初の文字）になり、語末ブレンドの練習にならなかった。focus が "-st" のように ハイフンで はじまる回は:
+   - 語末ブレンド → 「おわりの 2つの おとは どれ？」（まちがいの選択肢は nd ↔ nt のような 1文字目が同じもの、st ↔ nt のような 2文字目が同じものを優先＝聞きくらべ）
+   - -s / -ing → 「おわりに ついている のは どれ？」
+   - 順番は 語頭ブレンド → 語末 → ダイグラフ（shopping は ing の回なので sh ではなく ing で問う）。ワールド1〜4には "-" で はじまる focus が無いので影響なし（テストで確認）。
+4. **レッスン画面（LessonSteps.tsx の1行）**: フォーカスの ボタン "-st" を おしたとき、読み上げで「ダッシュ」と いわないように 先頭の ハイフンを とって読む。
+5. **マップ（WorldMap.tsx の1行）**: ワールド5の テーマが無く、ワールド1の「はじまりのジャングル遺跡」が表示されてしまう状態だったので、「じかんの塔」（金色っぽい色・壁のもじ -st / -nd / -s / -ing / 7:00）を追加。
+6. **テスト**: tests/curriculum.test.ts にワールド5の決まりごと（121〜150・小4、フォニックスの順番と rule、語末の単語が その語末で おわる、語末ブレンドの単語は 母音1つ、2音節語の形、L150 のスピードTPR、各ブロックの表現の型と 7つの ようび）、tests/phonics-ending.test.ts（新規・7件）。合計 342件。
+7. **docs/curriculum-plan.md** に「6-5. ワールド5 のレッスン詳細」を追加し、データの書き方に「語末は先頭にハイフン」を追記。
+8. `npx tsc --noEmit` / `npx vitest run`（342件）/ `npx next build` すべて成功。まとめ動画は全150レッスンで2〜3分に収まることをテストで確認。worksheets のスクリプトが読むフィールドが全150レッスンで読めることも Python で確認。
+
+### 判断したこと
+- **語末は focus に "-st" のように 先頭ハイフンで書く**ことにした。語頭ブレンドの "st"（stop）と 区別でき、問題の出し方を データだけで きりかえられるため。検証テストの「単語がフォーカスを含む」とまとめ動画の文字表示は、もともと ハイフンを のぞいて比べているので そのまま動く。
+- 計画書の「136〜140 -ing（playing, running）」の playing は 母音チーム（ay、ワールド7）なので使わず、jumping / singing など ならった つづりだけの語にした。
+- 3人称（likes, has）はまだ使わない方針を守った。「What do you do on Saturdays?」「I play tennis on Saturdays.」は 1・2人称だけ。
+- じこくは「○じ ちょうど（o'clock）」だけ（Let's Try! 2 の範囲）。せかいの じこくは 11月（日本時間 8時 → ロンドン 23時・ニューヨーク 18時・シドニー 10時）で計算した。
+- 「I eat ～.」は ワールド6（わたしの1日）の型なので、あさごはんの回は I like toast. / Rice, please. に した。
+- AI 会話タスクでは子どもの本名・年齢・学校名などは聞かない（なまえは ニックネームで OK と goalJa に明記。ふでばこは「えでも OK」）。がっこうの じゅんびの回も もちものだけを聞く。
+- ワールド5の会話の舞台は計画書の名前「じかんの塔」に合わせ、マップの名前も同じにした（ワールド5はマップに名前が無かったため）。
+
+### スキップ / 未対応
+- 新しいレッスン用の復習クエスト・まとめテスト・ボス（check-121〜150、mini-121-125 …、boss-1-150、arena-121-150、arena-1-150）は ASSESSMENTS には自動で入るが、DB には次回の `npm run db:seed` で入る（マイグレーション不要）。
+- worksheets/generate_worksheets.py の実行は Phase 2 と同じ理由（reportlab 未インストール）でスキップ。
+- 画面での目視確認はしていない（データ追加と問題文の分岐・マップの色の追加のみ）。
+
+### オーナーへの質問
+- 語末の回のフォニックス問題は「おわりの 2つの おと」「おわりに ついている のは どれ？」です。選択肢の表示は "st" "ing" のように ハイフンなしにしました。「-st」のように ハイフンつきで 見せた方が わかりやすければ 変えます。
+- ワールド5の マップ名は「じかんの塔」にしました（ワールド2〜4は マップと計画書で名前が ちがうまま）。統一の方針を決めていただければ まとめて直します。
+- 2音節語（picnic など）は ぶんぼうぐの テーマとは 関係が うすい語です（ぶんぼうぐの 名前は pencil / eraser / scissors など 2音節 CVC に ならない語が多いため）。会話の中で picnic poster・magnet・pumpkin を使って つなげました。

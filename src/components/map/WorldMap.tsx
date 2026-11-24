@@ -21,6 +21,7 @@ const WORLD_THEMES: Record<number, { name: string; top: string; bottom: string; 
   2: { name: "フォニックス火山の神殿", top: "#2e1408", bottom: "#140804", fog: "#ffcf9a", monsters: ["mon-031", "mon-091", "mon-080"], glyphs: [["cat"], ["pig"], ["dog"], ["bed"], ["bus"]] },
   3: { name: "グラマーの海底遺跡", top: "#0b2236", bottom: "#05101c", fog: "#a8e2ff", monsters: ["mon-037", "mon-089", "mon-056"], glyphs: [["sh"], ["ch"], ["th"], ["wh"], ["ck"]] },
   4: { name: "スピーキング天空城", top: "#1d1a3e", bottom: "#0c0a20", fog: "#d9ccff", monsters: ["mon-055", "mon-070"], glyphs: [["ABC"], ["st"], ["bl"], ["tr"], ["tw"]] },
+  5: { name: "じかんの塔", top: "#2a1f0c", bottom: "#120c04", fog: "#ffe7a8", monsters: ["mon-080", "mon-089", "mon-031"], glyphs: [["-st"], ["-nd"], ["-s"], ["-ing"], ["7:00"]] },
 };
 
 const W = 360;

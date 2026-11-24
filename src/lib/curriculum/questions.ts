@@ -127,6 +127,42 @@ export function blendQuestion(item: LearningItemDef, rng: () => number): Pick<Qu
     explanationJa: `${item.text} は「${start}」ではじまるよ。${start.split("").join(" と ")} を くっつけて よもう！` };
 }
 
+/** 語末ブレンド（ワールド5）。focus では "-st" のように 先頭に ハイフンを つけて「ことばの おわり」を あらわす */
+export const FINAL_BLENDS = ["st", "nd", "mp", "nt", "lk", "ft", "sk", "lp"] as const;
+/** 語尾（ワールド5）: 複数形の -s と -ing */
+export const SUFFIXES = ["ing", "s"] as const;
+
+/**
+ * その回のフォーカスに語末（"-st" "-s" "-ing" など）があり、語が それで おわるなら「おわりの おと」で問う
+ * （nest の答えを 最初の「n」にしない）。
+ * - 語末ブレンド → 「おわりの 2つの おとは どれ？」（まちがいの選択肢は nd ↔ nt のような 1文字目が同じもの、
+ *   st ↔ nt のような 2文字目が同じものを優先＝聞きくらべ）
+ * - -s / -ing → 「おわりに ついている のは どれ？」
+ */
+export function endingQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
+  const endings = (getLesson(item.lessonNo)?.phonics.focus ?? []).filter((f) => f.startsWith("-")).map((f) => f.slice(1).toLowerCase());
+  if (endings.length === 0) return null;
+  const w = item.text.toLowerCase();
+  const end = endings.filter((e) => w.endsWith(e)).sort((a, b) => b.length - a.length)[0];
+  if (!end) return null;
+  const all: readonly string[] = [...SUFFIXES, ...FINAL_BLENDS];
+  const pool = all.filter((e) => e !== end && !w.endsWith(e));
+  if ((SUFFIXES as readonly string[]).includes(end)) {
+    const others = [...pool.filter((e) => (SUFFIXES as readonly string[]).includes(e)), ...shuffle(pool.filter((e) => !(SUFFIXES as readonly string[]).includes(e)), rng)].slice(0, 3);
+    return { promptJa: "おわりに ついている のは どれ？", choices: shuffle([end, ...others], rng).map((e) => ({ id: e, label: e })), answer: end,
+      explanationJa: end === "s"
+        ? `${item.text} は おわりに「s」。ふたつ いじょうの ときに つけるよ。`
+        : `${item.text} は おわりに「ing」。「〜している」の いみに なるよ。` };
+  }
+  const blends = pool.filter((e) => (FINAL_BLENDS as readonly string[]).includes(e));
+  const sameFirst = shuffle(blends.filter((b) => b[0] === end[0]), rng);
+  const sameSecond = shuffle(blends.filter((b) => b[0] !== end[0] && b[1] === end[1]), rng);
+  const rest = shuffle(blends.filter((b) => !sameFirst.includes(b) && !sameSecond.includes(b)), rng);
+  const others = [...sameFirst.slice(0, 1), ...sameSecond.slice(0, 1), ...sameFirst.slice(1), ...sameSecond.slice(1), ...rest].slice(0, 3);
+  return { promptJa: "おわりの 2つの おとは どれ？", choices: shuffle([end, ...others], rng).map((e) => ({ id: e, label: e })), answer: end,
+    explanationJa: `${item.text} は「${end}」で おわるよ。${end.split("").join(" と ")} を くっつけて よもう！` };
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -186,7 +222,8 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
-      const dq = blendQuestion(item, rng) ?? digraphQuestion(item, rng);
+      // 語頭ブレンド → 語末（-st / -s / -ing）→ ダイグラフ の順（shopping は sh ではなく ing の回の問題にする）
+      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
       // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない

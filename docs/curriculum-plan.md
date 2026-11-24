@@ -359,12 +359,52 @@
 | 119 | Any Questions? | しつもんタイム | Do you like frogs? | chop-stick, shell-fish, hill-top, dust-pan | おかの うえで しつもんタイム |
 | 120 | World 4 Grand Review | ワールド総まとめ（スピードTPR） | I'm Kiko. I like stars and frogs. | ブレンド＋2音節 総まとめ | なぞなぞ山の ちょうじょうで 小3 はっぴょうかい |
 
+## 6-5. ワールド5 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: 語末ブレンド（ことばの おわりの 2つの子音）を -st -nd -mp（L121〜124）→ -nt -lk -ft（L126〜129）→ -sk -lp（L131〜132）、複数形 -s（L133〜134。ブレンド語にも nests / lamps）、-ing（L136〜139。running のように もじを ふやす語、fishing のように そのまま つける語）、2音節語（L141〜144。pic-nic, rab-bit, mag-net, pump-kin など）。5の倍数回と L146〜150 は ふりかえり。`phonics.rule` は "final-blend" / "plural" / "ing" / "syllable" / "review"。
+- **語末は focus の先頭に ハイフン**を つけて書く（"-st"、"-s"、"-ing"）。語頭ブレンド "st"（stop）と 区別するため。2音節語は今までどおり "pic-nic"（まんなかに ハイフン）。
+- フォニックス問題: focus に語末（"-" で はじまる）があり、語が それで おわるときは、語末ブレンドなら「おわりの 2つの おとは どれ？」（nd ↔ nt のように 1文字目が同じもの、st ↔ nt のように 2文字目が同じものを優先）、-s / -ing なら「おわりに ついている のは どれ？」（src/lib/curriculum/questions.ts の `endingQuestion`）。順番は 語頭ブレンド → 語末 → ダイグラフ（shopping は ing の回の問題）。
+- 表現の型: Good morning. / Hello, world! / See you later. → How's the weather? / Let's play ～. / It's hot. Let's swim. → What day is it? / I like Mondays. / Let's play on Saturday. → What time is it? ― It's seven o'clock. / It's breakfast time. / It's morning in Tokyo. → Do you have a pen? ― Yes, I do. / No, I don't. / I have ～. / This is my pencil case.
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 121 | Good Morning, World! | じかんに あわせた あいさつ | Good morning. | -st（nest, best, fast, list） | じかんの塔の まえの あさ |
+| 122 | Hello Around the World | せかいの こんにちは | Hello, world! | -nd（hand, sand, pond, bend） | ビリモの 大きな ちきゅうぎ |
+| 123 | What's for Breakfast? | せかいの あさごはん | I like toast. | -mp（camp, jump, lamp, bump） | とうの キッチンで せかいの あさごはん |
+| 124 | See You Later! | せかいの さようなら | See you later. | -st -nd -mp くらべ | とうの もんで みおくり |
+| 125 | World Breakfast Party | まとめ | Good morning. I'm Riko. | 語末 st nd mp ふりかえり | とうの てっぺんで あさごはん パーティー |
+| 126 | How's the Weather Today? | てんき | How's the weather? | -nt（tent, hunt, plant, mint） | とうの まどから そとを みる |
+| 127 | Let's Play Tag! | そとの あそび | Let's play tag. | -lk（milk, silk, bulk, elk） | はれた ひの こうえん |
+| 128 | Rainy Day Games | へやの なかの あそび | Let's play cards. | -ft（gift, lift, raft, soft） | あめの ごごの あそびべや |
+| 129 | Hot Day, Cold Day | てんきと あそび | It's hot. Let's swim. | -nt -lk -ft くらべ | まほうの てんき どけい |
+| 130 | Rainy Day Plans | まとめ | It's rainy. Let's play cards. | 語末 nt lk ft ふりかえり | あめの ひの あそび そうだん |
+| 131 | What Day Is It? | ようび（げつ〜もく） | What day is it? | -sk（desk, mask, task, dusk） | 7つの ようびの へや |
+| 132 | Friday, Saturday, Sunday | ようび（きん〜にち） | It's Sunday. | -lp（help, gulp, yelp, kelp） | ようびの うた |
+| 133 | I Like Mondays! | すきな ようび | I like Mondays. | 複数形 -s（cats, dogs, pens, bugs） | とうの にわで すきな ようび |
+| 134 | Let's Play on Saturday! | ようびと よてい | Let's play on Saturday. | 複数形 -s（nests, hands, lamps, gifts） | しゅうまつの よていを きめる |
+| 135 | Our Weekly Schedule | まとめ | It's Monday. I like Mondays. | -sk -lp -s ふりかえり | 1しゅうかんの よていひょう |
+| 136 | What Time Is It? | じこく | What time is it? | -ing（jumping, singing, resting, helping） | とうの てっぺんの 大きな とけい |
+| 137 | It's Breakfast Time! | せいかつの じかん | It's breakfast time. | -ing（running, sitting, swimming, hopping） | じかんごとに なる とけい |
+| 138 | Wake Up! It's Seven O'Clock! | 1日の はじまりと おわり | It's seven o'clock. | -ing（camping, fishing, drinking, standing） | とうの しんしつの あさと よる |
+| 139 | What Time Is It in London? | せかいの じこく | It's morning in Tokyo. | -ing（getting, digging, shopping, spinning） | せかいの とけいの へや |
+| 140 | World Clock Quiz | まとめ | It's snack time! | -ing ふりかえり | せかいの とけい クイズショー |
+| 141 | Do You Have a Pen? | ぶんぼうぐ | Do you have a pen? | pic-nic, rab-bit, nap-kin, kit-ten | ずこうしつで おえかき |
+| 142 | I Have a Ruler. | もっている ぶんぼうぐ | I have a ruler. | mag-net, bas-ket, pup-pet, muf-fin | パペットづくりの じゅんび |
+| 143 | My Pencil Case | ふでばこの なか | This is my pencil case. | den-tist, in-sect, cac-tus, gob-lin | ふでばこを みせあう |
+| 144 | How Many Pencils? | ぶんぼうぐと かず | I have three pencils. | pump-kin, plas-tic, pock-et, hel-met | かぼちゃの えの じゅんび |
+| 145 | Stationery Swap | まとめ | Do you have a red pen? | 2音節 ふりかえり | ピクニックの ポスターで かしかり |
+| 146 | My Morning | まとめ（あさ） | Good morning. It's breakfast time. | 語頭＋語末ブレンド（stamp, blend, crust, stand） | ハルの あさの ビデオにっき |
+| 147 | My Afternoon | まとめ（ごご） | Good afternoon. Let's play soccer. | 語頭＋語末ブレンド（print, drift, flask, plant） | リコの ごご、こうえんで |
+| 148 | My Week | まとめ（1しゅうかん） | I like Saturdays. | -s と -ing（stamps, gifts, jumping, swimming） | キコの 1しゅうかん はっぴょう |
+| 149 | Ready for School! | まとめ（がっこうの じゅんび） | I have a pencil and a ruler. | -nd -lk -lp -ing ふりかえり | げつようびの あさの じゅんび |
+| 150 | World 5 Grand Review | ワールド総まとめ（スピードTPR） | It's Sunday. Let's play tag! | ブレンド・-s・-ing・2音節 総まとめ | じかんの塔の てっぺんで「わたしの 1しゅうかん」はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。
 - `conversation.lines[].speaker` は `Haru` `Riko` `Kiko` `Birimo` `Ms. Emma` のどれか。
 - `aiTask` では個人情報（本名・年齢・住所・学校名など）を聞かない。名前はニックネームで OK と書く。
-- `phonics.words` にはその回の `focus` のつづりを必ず含める（magic e は `a_e` のように書く。2音節語は `sun-set` のように ハイフンで わける）。
+- `phonics.words` にはその回の `focus` のつづりを必ず含める（magic e は `a_e` のように書く。2音節語は `sun-set` のように ハイフンで わける。語末は `-st` `-s` `-ing` のように 先頭に ハイフン）。
 - 1レッスン内で、同じ種類（vocab どうし・tpr どうし・phonics.words どうし）に同じ語を重複させない（学習項目 ID が重複するため）。
 - `school.grade` はワールド1→小1、2→小2、3〜4→小3、5〜6→小4、7〜8→小5、9〜12→小6。
 - 追加後は `npx vitest run tests/curriculum.test.ts` で検証する。
