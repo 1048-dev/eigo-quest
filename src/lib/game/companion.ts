@@ -41,7 +41,7 @@ export function companionLine(i: CompanionInput): CompanionLine {
   }
   const c = i.current;
   if (c?.status === "WAIT_TOMORROW") {
-    return { mood: "sleepy", text: `今日の冒険はここまでビリ…。あした翌日テストに一発合格すると30コインもらえるビリ！` };
+    return { mood: "sleepy", text: `今日の冒険はここまでビリ…。あしたの復習クエストに一発合格すると30コインもらえるビリ！` };
   }
   if (c?.type === "BOSS") {
     return { mood: "excited", text: `ついにボスのいる遺跡ビリ！1〜30の総まとめ、みんなの力をあわせてたおすビリ！` };
@@ -50,7 +50,7 @@ export function companionLine(i: CompanionInput): CompanionLine {
     return { mood: "cheer", text: `宝箱のまとめテストビリ！何回でもちょうせんできるから、こわくないビリ。` };
   }
   if (c?.type === "CHECK") {
-    return { mood: "cheer", text: `きのうの Lesson ${c.lessonNo} をおぼえてるビリ？一発合格でボーナスコインビリ！` };
+    return { mood: "cheer", text: `Lesson ${c.lessonNo} の復習クエストビリ！おぼえてるかな？一発クリアで30コイン、いちばんお得ビリ！` };
   }
   if (i.weakestSkill) {
     return { mood: "worried", text: SKILL_TIPS[i.weakestSkill] };

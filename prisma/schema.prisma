@@ -143,7 +143,7 @@ model Assessment {
 }
 
 enum AssessmentKind {
-  DAILY_CHECK  /// 翌日のテスト（前日レッスンの確認）
+  DAILY_CHECK  /// 復習クエスト（各レッスンの確認。完了の翌日から。進行はブロックしない）
   MINI         /// 5レッスンごとのまとめテスト
   BOSS         /// 30レッスンごとの総まとめ（ボス戦）
   ARENA        /// 復習アリーナ（周回）
@@ -161,7 +161,7 @@ model LessonProgress {
   status      LessonStatus @default(IN_PROGRESS)
   startedAt   DateTime  @default(now())
   completedAt DateTime?
-  completedOn String?   /// "YYYY-MM-DD"（翌日ロック判定用、APP_TIMEZONE基準）
+  completedOn String?   /// "YYYY-MM-DD"（復習クエストの翌日判定・1日のレッスン回数用、APP_TIMEZONE基準）
   quizScore   Float?
   speedListeningBest Float? /// 1.2倍速まで到達した正答率など
 
@@ -275,7 +275,7 @@ model CoinLedger {
 
 enum CoinReason {
   LESSON_COMPLETE
-  DAILY_CHECK_FIRST_TRY   /// 翌日テスト一発合格（一番お得）
+  DAILY_CHECK_FIRST_TRY   /// 復習クエスト一発合格（1分あたり一番お得）
   DAILY_CHECK_PASS
   MINI_TEST_PASS
   BOSS_TEST_PASS

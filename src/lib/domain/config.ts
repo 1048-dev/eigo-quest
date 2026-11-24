@@ -21,16 +21,21 @@ export const CURRICULUM_RULES = {
 
 /**
  * コイン報酬表。
- * 「翌日テスト一発合格」が “1分あたり” 最もお得になるよう設計（目安所要時間で割った効率）。
- *   レッスン       10 coin / 約25分 = 0.4/分（基本報酬。毎日の習慣そのものに対する報酬）
- *   翌日一発合格   30 coin / 約3分  = 10/分 ← 一番お得
- *   5日ごとテスト  60 coin / 約8分  = 7.5/分（中ボーナス）
- *   30日ボス      300 coin + レアガチャ券（大ボーナス・一回きり）
- *   お宝アラート   基本報酬(20) × 2倍
- *   アリーナ       15 coin/回（1日5回まで満額、以降は3coin）
+ * 「復習クエスト一発合格」が “1分あたり” 最もお得になるよう設計（目安所要時間で割った効率）。
+ *   新しいレッスン  その日1〜3回目 10 / 4回目 6 / 5回目 4 / 6回目以降 2（約25分。一気にやるより毎日つづける方がお得）
+ *   復習クエスト一発 30 coin / 約3分  = 10/分 ← 1分あたり一番お得
+ *   まとめテスト    60 coin / 約8分  = 7.5/分（中ボーナス）
+ *   ボス           300 coin + レアガチャ券（大ボーナス・一回きり）
+ *   お宝アラート    基本報酬(20) × 2倍
+ *   アリーナ        15 coin/回（1日5回まで満額、以降は3coin）
+ *   連続学習（いちばん大きな報酬）: 毎日 +min(連続日数,10)、7日ごと +50、30日ごと +300＋レアガチャ券
  */
 export const COIN_RULES = {
+  /** 1日1回目のレッスン（互換用。= lessonCoinsByDailyIndex[0]） */
   lessonComplete: 10,
+  /** その日の新しいレッスン k 回目（0始まり）のコイン。表より後ろは lessonCoinsAfterTable */
+  lessonCoinsByDailyIndex: [10, 10, 10, 6, 4],
+  lessonCoinsAfterTable: 2,
   dailyCheckFirstTry: 30,
   dailyCheckRetryPass: 5,
   miniTestFirstTry: 60,
@@ -44,8 +49,12 @@ export const COIN_RULES = {
   arenaPlayAfterCap: 3,
   arenaFullRewardPlaysPerDay: 5,
   arenaPerfectBonus: 10,
+  streakDailyMax: 10, // 毎日 +min(連続日数, 10)
   streakBonusEvery: 7, // 7日連続ごと
   streakBonus: 50,
+  streakBigBonusEvery: 30, // 30日連続ごと
+  streakBigBonus: 300,
+  streakBigBonusRareTickets: 1,
 } as const;
 
 export const GACHA_RULES = {

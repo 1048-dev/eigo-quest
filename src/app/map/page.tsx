@@ -17,7 +17,7 @@ type NodeType = MapResponse["nodes"][number]["type"];
 
 const QUEST: Record<NodeType, { text: (n: number) => string; icon: React.ReactNode }> = {
   LESSON: { text: (n) => `Lesson ${n} を探検する`, icon: <Portrait id="haru" size={48} /> },
-  CHECK: { text: (n) => `Lesson ${n} の翌日テスト`, icon: <Portrait id="riko" size={48} ring="#ff8a3d" /> },
+  CHECK: { text: (n) => `Lesson ${n} の復習クエスト`, icon: <Portrait id="riko" size={48} ring="#ff8a3d" /> },
   MINI: { text: () => "宝箱のまとめテスト", icon: <Portrait id="kiko" size={48} ring="#9b6bff" /> },
   BOSS: { text: () => "遺跡のボスにいどむ！", icon: <MonsterFigure id="mon-006" size={52} /> },
 };

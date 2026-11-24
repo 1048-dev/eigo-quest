@@ -30,7 +30,7 @@ export function findForgettingLessons(
 ): AlertCandidate[] {
   const byLesson = new Map<number, { id: string; r: number }[]>();
   for (const item of items) {
-    if (item.lessonNo > currentLessonNo - 2) continue; // 昨日・今日の分は対象外（翌日テストが担当）
+    if (item.lessonNo > currentLessonNo - 2) continue; // 昨日・今日の分は対象外（復習クエストが担当）
     const mem = memories.get(item.id);
     if (!mem) continue;
     const r = retrievability(mem, now);

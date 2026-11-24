@@ -167,7 +167,7 @@ function typesFor(item: LearningItemDef, allowSpeak: boolean): QuestionType[] {
 }
 
 // ---------------------------------------------------------------------------
-// テスト（翌日 / まとめ / ボス / アリーナ / お宝）
+// テスト（復習クエスト / まとめ / ボス / アリーナ / お宝）
 // ---------------------------------------------------------------------------
 export interface BuildTestOptions {
   seed: number;

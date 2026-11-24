@@ -71,15 +71,16 @@ export function getItem(id: string): LearningItemDef | undefined {
 
 /**
  * テスト定義をルールで生成。
- *  - DAILY_CHECK: 各レッスンの翌日テスト（5の倍数レッスンは MINI が兼ねる、30の倍数は BOSS が兼ねる）
- *  - MINI: 5レッスンごと（1-5, 6-10, ...）
- *  - BOSS: 30レッスンごと（1-30, 31-60 ... ボスは範囲 1〜n の累積）
+ *  - DAILY_CHECK: すべてのレッスンの「復習クエスト」（完了の翌日から受けられる。進行はブロックしない＝unlocksLesson null）
+ *  - MINI: 5レッスンごと（1-5, 6-10, ...。30の倍数は BOSS が兼ねる）→ 次のレッスンを開くゲート
+ *  - BOSS: 30レッスンごと（ボスは範囲 1〜n の累積）→ 次のレッスンを開くゲート
  *  - ARENA: ボス合格ごとに「直近30」と「1〜n累積」の2種
  */
 export function buildAssessments(totalLessons = TOTAL_LESSONS): AssessmentDef[] {
   const r = CURRICULUM_RULES;
   const list: AssessmentDef[] = [];
   for (let n = 1; n <= totalLessons; n++) {
+    list.push({ id: `check-${n}`, kind: "DAILY_CHECK", rangeStart: n, rangeEnd: n, questionCount: r.checkQuestions, passRate: r.checkPassRate, unlocksLesson: null });
     if (n % r.bossEvery === 0) {
       list.push({ id: `boss-1-${n}`, kind: "BOSS", rangeStart: 1, rangeEnd: n, questionCount: r.bossQuestions, passRate: r.bossPassRate, unlocksLesson: n + 1 });
       list.push({ id: `arena-${n - r.bossEvery + 1}-${n}`, kind: "ARENA", rangeStart: n - r.bossEvery + 1, rangeEnd: n, questionCount: r.arenaQuestions, passRate: r.arenaCoinMinScore, unlocksLesson: null });
@@ -88,8 +89,6 @@ export function buildAssessments(totalLessons = TOTAL_LESSONS): AssessmentDef[] 
       }
     } else if (n % r.miniTestEvery === 0) {
       list.push({ id: `mini-${n - r.miniTestEvery + 1}-${n}`, kind: "MINI", rangeStart: n - r.miniTestEvery + 1, rangeEnd: n, questionCount: r.miniQuestions, passRate: r.miniPassRate, unlocksLesson: n + 1 });
-    } else {
-      list.push({ id: `check-${n}`, kind: "DAILY_CHECK", rangeStart: n, rangeEnd: n, questionCount: r.checkQuestions, passRate: r.checkPassRate, unlocksLesson: n + 1 });
     }
   }
   return list;
@@ -101,7 +100,12 @@ export function getAssessment(id: string): AssessmentDef | undefined {
   return ASSESSMENTS.find((a) => a.id === id);
 }
 
-/** レッスン n を終えた翌日に受けるテスト（チェック / ミニ / ボス のどれか） */
+/** レッスン n の後にある「ゲート」（まとめ / ボス）。合格すると次のレッスンが開く。無ければ undefined */
 export function gateTestAfterLesson(n: number): AssessmentDef | undefined {
-  return ASSESSMENTS.find((a) => a.kind !== "ARENA" && a.rangeEnd === n);
+  return ASSESSMENTS.find((a) => (a.kind === "MINI" || a.kind === "BOSS") && a.rangeEnd === n);
+}
+
+/** レッスン n の復習クエスト（完了の翌日から。進行はブロックしない） */
+export function reviewQuestFor(n: number): AssessmentDef | undefined {
+  return ASSESSMENTS.find((a) => a.kind === "DAILY_CHECK" && a.rangeEnd === n);
 }

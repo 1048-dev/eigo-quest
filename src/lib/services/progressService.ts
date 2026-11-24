@@ -4,7 +4,7 @@
  */
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
-import { ALL_ITEMS, ASSESSMENTS, TOTAL_LESSONS, gateTestAfterLesson, getAssessment, getItem, itemsInRange } from "@/lib/curriculum";
+import { ALL_ITEMS, ASSESSMENTS, TOTAL_LESSONS, gateTestAfterLesson, getAssessment, getItem, itemsInRange, reviewQuestFor } from "@/lib/curriculum";
 import { buildTestQuestions, hashSeed, type Question } from "@/lib/curriculum/questions";
 import { CURRICULUM_RULES, MEMORY_RULES } from "@/lib/domain/config";
 import { daysBetween, endOfLocalDay, localDate } from "@/lib/domain/dates";
@@ -50,6 +50,7 @@ export async function getStageMap(userId: string, now = new Date()) {
     completedLessons,
     passedTests,
     gateTestAfter: gateTestAfterLesson,
+    reviewQuestFor,
     today: localDate(now),
     skipDailyLock: process.env.SKIP_DAILY_LOCK === "1",
   });
@@ -135,17 +136,20 @@ export async function completeLesson(userId: string, lessonNo: number, input: { 
   return prisma.$transaction(async (tx) => {
     const prev = await tx.lessonProgress.findUnique({ where: { userId_lessonNo: { userId, lessonNo } } });
     const alreadyCompleted = prev?.status === "COMPLETED";
+    // 今日これまでに完了した新しいレッスン数（今回を含まない）→ 1日の回数でコインが変わる
+    const completedTodayBefore = alreadyCompleted ? 0 : await tx.lessonProgress.count({ where: { userId, status: "COMPLETED", completedOn: today } });
     await tx.lessonProgress.upsert({
       where: { userId_lessonNo: { userId, lessonNo } },
       create: { userId, lessonNo, status: "COMPLETED", completedAt: now, completedOn: today, quizScore: input.quizScore, speedListeningBest: input.speedListeningBest },
       update: alreadyCompleted ? { quizScore: Math.max(prev!.quizScore ?? 0, input.quizScore) } : { status: "COMPLETED", completedAt: now, completedOn: today, quizScore: input.quizScore, speedListeningBest: input.speedListeningBest },
     });
     await recordResponses(tx, userId, input.logs, "NORMAL", null, now);
-    const reward = rewardForLesson({ alreadyCompleted });
+    const reward = rewardForLesson({ alreadyCompleted, completedTodayBefore });
     await grantReward(tx, userId, reward, "lesson", `${lessonNo}`);
     const streakReward = await touchStreak(tx, userId, today);
     await grantReward(tx, userId, streakReward, "streak", today);
-    return { ok: true as const, reward, streakReward, nextTest: gateTestAfterLesson(lessonNo)?.id };
+    // nextTest: 次に進むためのゲート（まとめ/ボス）があればそれ、無ければ復習クエスト（あした）
+    return { ok: true as const, reward, streakReward, nextTest: (gateTestAfterLesson(lessonNo) ?? reviewQuestFor(lessonNo))?.id };
   });
 }
 

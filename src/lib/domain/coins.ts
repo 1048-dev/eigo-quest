@@ -42,10 +42,16 @@ const finalize = (coins: CoinAward[], rareGachaTickets = 0): Reward => ({
   total: coins.reduce((s, c) => s + c.amount, 0),
 });
 
-/** 通常レッスン完了 */
-export function rewardForLesson(input: { alreadyCompleted: boolean }): Reward {
+/** その日 k 回目（0始まり＝今日これまでに完了した新しいレッスン数）の新しいレッスンのコイン */
+export function lessonCoinsForDailyIndex(completedTodayBefore: number): number {
+  const k = Math.max(0, Math.floor(completedTodayBefore));
+  return C.lessonCoinsByDailyIndex[k] ?? C.lessonCoinsAfterTable;
+}
+
+/** 通常レッスン完了。completedTodayBefore = 今日これまでに完了した新しいレッスンの数（今回を含まない） */
+export function rewardForLesson(input: { alreadyCompleted: boolean; completedTodayBefore?: number }): Reward {
   if (input.alreadyCompleted) return finalize([]); // 復習受講は経験値のみ（コイン稼ぎはアリーナへ誘導）
-  return finalize([award(C.lessonComplete, "LESSON_COMPLETE", "レッスンクリア！")]);
+  return finalize([award(lessonCoinsForDailyIndex(input.completedTodayBefore ?? 0), "LESSON_COMPLETE", "レッスンクリア！")]);
 }
 
 export interface TestResultInput {
@@ -67,8 +73,8 @@ export function rewardForTest(t: TestResultInput): Reward {
     case "DAILY_CHECK":
       if (!t.passed || t.alreadyPassed) return finalize([]);
       return t.isFirstAttempt
-        ? finalize([award(C.dailyCheckFirstTry, "DAILY_CHECK_FIRST_TRY", "翌日テスト 一発合格ボーナス！")])
-        : finalize([award(C.dailyCheckRetryPass, "DAILY_CHECK_PASS", "翌日テスト合格！")]);
+        ? finalize([award(C.dailyCheckFirstTry, "DAILY_CHECK_FIRST_TRY", "復習クエスト 一発クリアボーナス！")])
+        : finalize([award(C.dailyCheckRetryPass, "DAILY_CHECK_PASS", "復習クエスト クリア！")]);
 
     case "MINI":
       if (!t.passed || t.alreadyPassed) return finalize([]);
@@ -101,12 +107,21 @@ export function rewardForTest(t: TestResultInput): Reward {
   }
 }
 
-/** 連続学習ボーナス（7日ごと） */
+/**
+ * 連続学習ボーナス（いちばん大きな報酬）。その日はじめて学習したときに1回だけ呼ぶ。
+ *   毎日 +min(連続日数, 10) / 7日ごと +50 / 30日ごと +300 とレアガチャ券1枚
+ */
 export function rewardForStreak(newStreakDays: number): Reward {
-  if (newStreakDays > 0 && newStreakDays % C.streakBonusEvery === 0) {
-    return finalize([award(C.streakBonus, "STREAK_BONUS", `${newStreakDays}日連続ボーナス！`)]);
+  const d = Math.floor(newStreakDays);
+  if (d <= 0) return finalize([]);
+  const coins = [award(Math.min(d, C.streakDailyMax), "STREAK_BONUS", `${d}日れんぞく！まいにちボーナス`)];
+  if (d % C.streakBonusEvery === 0) coins.push(award(C.streakBonus, "STREAK_BONUS", `${d}日連続ボーナス！`));
+  let tickets = 0;
+  if (d % C.streakBigBonusEvery === 0) {
+    coins.push(award(C.streakBigBonus, "STREAK_BONUS", `${d}日連続！だいボーナス！`));
+    tickets = C.streakBigBonusRareTickets;
   }
-  return finalize([]);
+  return finalize(coins, tickets);
 }
 
 /** 連続日数の更新（同日2回目は変化なし、1日空いたらリセット） */

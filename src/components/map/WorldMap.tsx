@@ -2,7 +2,7 @@
 /**
  * シネマティックなぼうけんマップ。
  * 夜のジャングルの古代遺跡を、金のルーンが光る石の参道がくねくね進む。
- * ステージ: レッスン＝金枠の宝玉 / 翌日テスト＝カットされた宝石 / まとめ＝金具の宝箱 / ボス＝神殿の門。
+ * ステージ: レッスン＝金枠の宝玉 / 復習クエスト＝カットされた宝石 / まとめ＝金具の宝箱 / ボス＝神殿の門。
  * 道の両側には古代樹・レリーフの壁・シダと、ひそむモンスター。現在地にはスポットライトの中にパーティが立つ。
  * ノードの状態は domain/progression.ts が決め、API（/api/map）の契約どおりに受け取る。
  */
@@ -105,12 +105,18 @@ export function WorldMap({ nodes }: { nodes: StageNode[] }) {
 
   const open = (n: StageNode) => {
     if (n.status === "LOCKED") return;
-    if (n.status === "WAIT_TOMORROW") return alert("このテストは あした うけられるよ！今日はよくがんばったね 🌙");
+    if (n.status === "WAIT_TOMORROW") return alert("この復習クエストは あした ひらくよ！きょうは つぎのレッスンに すすめるよ 🌙");
     if (n.type === "LESSON") return router.push(`/lesson/${n.lessonNo}`);
     if (n.assessmentId) router.push(`/test/${encodeURIComponent(n.assessmentId)}`);
   };
 
-  const curIdx = safeNodes.findIndex((n) => n.status === "AVAILABLE" || n.status === "WAIT_TOMORROW");
+  // 現在地 = domain/progression.ts の pickCurrent と同じ優先順（受けられる復習クエスト → 次のレッスン/ゲート）
+  const firstIdx = (f: (n: StageNode) => boolean) => safeNodes.findIndex(f);
+  const curIdx = [
+    firstIdx((n) => n.type === "CHECK" && n.status === "AVAILABLE"),
+    firstIdx((n) => n.type !== "CHECK" && n.status === "AVAILABLE"),
+    firstIdx((n) => n.status === "WAIT_TOMORROW"),
+  ].find((i) => i >= 0) ?? -1;
 
   return (
     <svg viewBox={`0 0 ${W} ${height}`} className="w-full" role="list" aria-label="ぼうけんマップ">

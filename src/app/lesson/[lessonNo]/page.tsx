@@ -78,7 +78,10 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
         </div>
         <h2 className="font-title mt-2 text-2xl text-[var(--gold-dark)]">{result.ok ? `Lesson ${lesson.lessonNo} クリア！` : result.reasonJa}</h2>
         {result.ok && <p className="mt-2 text-xl font-black text-[var(--coin)]">🪙 +{result.reward?.total ?? 0}</p>}
-        {result.ok && <p className="mt-3 text-[var(--ink-2)]">あしたは「翌日テスト」からスタート！一発合格でボーナスコインだよ。</p>}
+        {result.ok && <p className="mt-3 text-[var(--ink-2)]">このまま つぎのレッスンに すすめるよ！<br />あしたは「復習クエスト」から はじめよう。いちばん コインが もらえるよ 🪙</p>}
+        {result.ok && (/^(mini|boss)-/.test(result.nextTest ?? "")
+          ? <Link href={`/test/${encodeURIComponent(result.nextTest ?? "")}`} className="btn btn-coin mt-4 block">{result.nextTest?.startsWith("boss-") ? "ボスに いどむ！" : "まとめテストへ"}</Link>
+          : <Link href={`/lesson/${lesson.lessonNo + 1}`} className="btn btn-coin mt-4 block">つぎのレッスンへ</Link>)}
         {!result.ok && <button className="btn btn-coin mt-4" onClick={() => { setResult(null); setStep(Math.max(0, steps.findIndex((s) => s.kind === "quiz"))); }}>クイズをもう一回</button>}
         <Link href="/map" className="btn btn-primary mt-4 block">マップへもどる</Link>
       </div>

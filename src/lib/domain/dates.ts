@@ -1,6 +1,6 @@
 import { APP_TIMEZONE } from "./config";
 
-/** APP_TIMEZONE 基準の "YYYY-MM-DD"。毎日1レッスン・翌日テストの判定はすべてこの日付で行う。 */
+/** APP_TIMEZONE 基準の "YYYY-MM-DD"。1日のレッスン回数・復習クエスト（完了の翌日から）の判定はすべてこの日付で行う。 */
 export function localDate(d: Date, tz: string = APP_TIMEZONE): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
 }

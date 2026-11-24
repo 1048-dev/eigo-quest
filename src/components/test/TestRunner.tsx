@@ -1,6 +1,6 @@
 "use client";
 /**
- * テスト画面（翌日テスト / 5回ごとまとめ / 30回ごとボス戦 / 復習アリーナ / お宝アラート）。
+ * テスト画面（復習クエスト /5回ごとまとめ / 30回ごとボス戦 / 復習アリーナ / お宝アラート）。
  * 1問ずつ解答 → まとめて提出 → サーバー採点（筆記はAI採点）→ 結果と「まちがえた問題の解説」（救済措置）→ 何度でも再挑戦。
  */
 import { useCallback, useEffect, useState } from "react";
@@ -15,7 +15,7 @@ import { TestStartResponseSchema, TestSubmitResponseSchema, type TestStartRespon
 
 type Session = Omit<TestStartResponse, "assessment"> & { assessment: NonNullable<TestStartResponse["assessment"]> };
 
-const TITLES: Record<string, string> = { DAILY_CHECK: "翌日テスト", MINI: "まとめテスト", BOSS: "ボス戦", ARENA: "復習アリーナ", TREASURE: "お宝クエスト" };
+const TITLES: Record<string, string> = { DAILY_CHECK: "復習クエスト", MINI: "まとめテスト", BOSS: "ボス戦", ARENA: "復習アリーナ", TREASURE: "お宝クエスト" };
 
 export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessmentId: string; arenaMode?: string; reviewAlertId?: string }) {
   const [session, setSession] = useState<Session | null>(null);

@@ -62,23 +62,22 @@ async function main() {
 
   console.log("== Day 1 ==");
   await doLesson(1);
-  await doTest("check-1"); // 当日は受けられない
+  await doTest("check-1"); // 復習クエストは当日は受けられない
   console.log("map current:", (await j("/api/map")).body.current);
-  await doLesson(2); // まだロック
+  await doLesson(2); // 同じ日でもすぐ次のレッスンに進める（2回目も10コイン）
 
   console.log("== Day 2 ==");
   await shiftDay();
   await doTest("check-1", { correct: false }); // 不合格 → 解説
   await doTest("check-1"); // 再挑戦合格（一発合格ボーナスなし）
-  await doLesson(2);
+  await doTest("check-2"); // 復習クエスト一発合格
 
   console.log("== Days 3-30（早送り） ==");
   for (let n = 3; n <= 30; n++) {
     await shiftDay();
-    const prevGate = n - 1;
-    const gate = prevGate % 5 === 0 ? `mini-${prevGate - 4}-${prevGate}` : `check-${prevGate}`;
-    if (n === 3 || n === 6) await doTest(gate);
-    else await doTest(gate).catch(() => undefined);
+    const prev = n - 1;
+    if (prev >= 3) await doTest(`check-${prev}`).catch(() => undefined); // 復習クエスト（ブロックしない）
+    if (prev % 5 === 0) await doTest(`mini-${prev - 4}-${prev}`); // 関門
     await doLesson(n);
   }
   await shiftDay();

@@ -10,12 +10,14 @@ describe("相棒ビリモのセリフ", () => {
     expect(l.mood).toBe("excited");
     expect(l.text).toContain("2倍");
   });
-  it("翌日待ちのときはねむそうに、明日のボーナスを予告", () => {
+  it("復習クエスト待ちのときはねむそうに、明日のボーナスを予告", () => {
     const l = companionLine({ ...base, current: { type: "CHECK", status: "WAIT_TOMORROW", lessonNo: 3 } });
     expect(l.mood).toBe("sleepy");
     expect(l.text).toContain("30コイン");
+    expect(l.text).toContain("復習クエスト");
   });
-  it("ボス・まとめ・翌日テストで声かけが変わる", () => {
+  it("ボス・まとめ・復習クエストで声かけが変わる", () => {
+    expect(companionLine({ ...base, current: { type: "CHECK", status: "AVAILABLE", lessonNo: 7 } }).text).toContain("復習クエスト");
     expect(companionLine({ ...base, current: { type: "BOSS", status: "AVAILABLE", lessonNo: 30 } }).text).toContain("ボス");
     expect(companionLine({ ...base, current: { type: "MINI", status: "AVAILABLE", lessonNo: 5 } }).text).toContain("まとめテスト");
     expect(companionLine({ ...base, current: { type: "CHECK", status: "AVAILABLE", lessonNo: 7 } }).text).toContain("Lesson 7");
