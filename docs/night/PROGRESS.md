@@ -370,3 +370,42 @@
 - マジック e の問題の選択肢は「a_e」「a」のように 表示しています。こどもには「a_e」の見た目が むずかしければ、「a（エイ）」「a（ア）」のような ラベルに かえられます。
 - フォーカスの ボタン「a_e」の 読み上げは「a e」です。ブラウザの声によっては 不自然なので、「cake の a」のような れいの語を 読む形に したほうが よければ 直します。
 - ワールド7の テーマ（NEW HORIZON 5）は 版によって 単元が かわるので、作る前に 最新版の単元一覧の確認を おねがいします（計画書の 方針どおり）。
+
+
+## Phase 11 — ワールド7（レッスン181〜210・小5／NEW HORIZON Elementary 5 前半）（2026-11-24）
+
+### やったこと
+1. **content/curriculum/lessons.json にレッスン181〜210を追加**（ワールド7「ひかりの島」・school.grade は小5）。ワールド1〜6と同じ形式（conversation・recap つき）、英文はすべてオリジナル（教科書の文は使っていない）。既存のレッスン1〜180は変えず、末尾に同じ書式で追記しただけ。
+   - 181〜185 じこしょうかい（My name is ～. / Nice to meet you. / How do you spell it? ― H-A-R-U. / I like ～. I don't like ～. / What animal do you like?、なまえカード こうかん）
+   - 186〜190 たんじょうびと つき（12の つき、When is your birthday? ― My birthday is May 5th.、first / second / third、What do you want for your birthday?、たんじょうび カレンダーづくり）
+   - 191〜195 きょうかと じかんわり（What subject do you like?、What do you have on Monday? ― I have math and music.、Do you have ～? ― Yes, I do. / No, I don't.、My favorite subject is ～.、ゆめの じかんわり）
+   - 196〜200 できること（Can you swim? ― Yes, I can. / No, I can't.、He can run fast.、She can play the piano.、She is good at cooking.、ともだち しょうかい）
+   - 201〜205 まちの ひと・しごと（He is a doctor.、She is a baker. She can make bread well.、She works at a hospital.、Who is this? Hint, please.、まちの ひと インタビュー）
+   - 206〜210 小5前半まとめ（じこしょうかい スピーチ、がっこうの 1しゅうかん、he / she クイズショー、リハーサル、L210 はスピードTPRつきの ワールド総まとめ「小5前半 はっぴょうかい」）
+2. **フォニックス: 母音チーム前半** ai（L181〜182）→ ay（L183〜184）→ ee（L186〜189）→ ea（L191〜194）→ oa（L196〜199）→ ow〈snow の オウ〉（L201〜204）。5の倍数回と L206〜210 は ふりかえり（ai/ay・ee/ea・oa/ow の おなじ おとの ペア、see / sea・meet / meat の 同音語、railway / seaweed / mailbox / snowman の 2音節語）。`phonics.rule` は "vowel-team" / "review"。
+3. **フォニックス問題を母音チームに対応（questions.ts に `vowelTeamQuestion` を追加）**: このままだと rain の答えが「r」、sheep の答えが「sh」になり 母音チームの練習に ならなかった。focus に 母音チームが ある回は「きこえた ぼいんの おとは どれ？」。音声だけの問題なので、おなじ おとの つづり（ai ↔ ay、ee ↔ ea、oa ↔ ow）は いっしょに 選択肢に 出さない（聞きわけられないため）。選択肢は 正解＋みじかい母音（rain なら a）＋ほかの おとの グループから 1つずつ。順番は ブレンド → 語末 → マジック e → 母音チーム → ダイグラフ。ワールド1〜6には 影響なし（テストで確認）。
+4. **レッスン画面（LessonSteps.tsx）**: フォーカスの ボタン「ai」を おすと「エー・アイ」と 読まれてしまうので、母音チームだけ おとの よみ（ai/ay → "ay"、ee/ea → "ee"、oa/ow → "oh"）を 読むように 小さな表を追加。
+5. **マップ（WorldMap.tsx の1行）**: ワールド7「ひかりの島」（うみの あお・ひかりの きいろ、壁のもじ ai / ee / ea / oa / ow）を追加。
+6. **テスト**: tests/curriculum.test.ts にワールド7の決まりごと（181〜210・小5、母音チームの順番と rule、cow の ow を 出さない、L210 のスピードTPR、ブロックごとの表現の型、he / she は L196 から）、tests/phonics-vowel-team.test.ts（新規・5件）。合計 425件。
+7. **docs/curriculum-plan.md** に「6-7. ワールド7 のレッスン詳細」を追加。
+8. `npx tsc --noEmit` / `npx vitest run`（425件）/ `npx next build` すべて成功。
+
+### 判断したこと
+- 計画書の ブロック表どおり ai,ay / ee / ea / oa / ow（snow）の 順に した。ay は ai の あとに 2回だけ（ことばの おわりの「エイ」）、ee と ea は 同じ おとなので L195 で see / sea の くらべに した。
+- ow は ワールド7では snow の「オウ」だけ。cow / town の「アウ」は 計画どおり ワールド8（テストで 自動チェック）。tipJa にも「cow の ow は ワールド8で」と書いた。
+- ea は bread / head のような「エ」と よむ語を さけ、「イー」と よむ語だけに した。
+- 3人称（he / she）は 計画どおり L196「できること」から。L181〜195 の 表現・セリフには 出さない（テストで 自動チェック）。works の s は L203 の teacherScript で かんたんに せつめい（文法用語は つかわない）。
+- 会話の 一貫性のため キャラの たんじょうびを きめた（ハル 5/5 こどもの日、リコ 6/2、キコ 12/8、エマ先生 10/10、ビリモ 2/29「とくべつな 日」）。計画書にも書いた。
+- AI 会話タスクでは 本名・本当の たんじょうびを 聞きださない（goalJa に「ニックネームでも OK」「ほんとうの 日でなくても OK」と明記）。
+- L210 の 3つめの 表現は、最初「I want to be a doctor. He is my hero.」と書いたが、あこがれの人（ワールド8）・将来の夢（ワールド11）の 先どりに なるので「What do you have on Thursday? ― I have science.」に 書きかえた。
+- NEW HORIZON Elementary 5 の 最新版の 単元一覧は 夜間は 確認できなかった（ネット確認なし）。計画書の テーマ（自己紹介・誕生日・教科と時間割・できること・まちの人）に そのまま 合わせた。
+
+### スキップ / 未対応
+- 新しいレッスン用の 復習クエスト・まとめテスト・ボス（check-181〜210、mini-181-185 …、boss-1-210、arena-181-210、arena-1-210）は ASSESSMENTS には 自動で入るが、DB には 次回の `npm run db:seed` で入る（マイグレーション不要）。
+- worksheets/generate_worksheets.py の実行は 前回と同じ理由（reportlab 未インストール）でスキップ。読むフィールドは スキーマテストで 必須にしているので 読める。
+- 画面での目視確認はしていない（データ追加・問題の分岐・マップの色・読み上げの表のみ）。
+
+### オーナーへの質問
+- 母音チームの ボタンの 読み上げは "ay" / "ee" / "oh" に しました。ブラウザの声で 不自然なら、「rain の ai」のように れいの語を 読む形に かえられます。
+- 母音チームの 問題では ai と ay（ee と ea、oa と ow）を いっしょに 出さない ように しました（音だけでは 区別できないため）。「どちらの つづりか」を 見て えらぶ 問題（文字を 見せる形）も ほしければ 追加します。
+- ワールド7の テーマは NEW HORIZON Elementary 5 の 版によって 単元の 順番が ちがう ことが あります。最新版の 単元一覧と ずれが あれば 教えてください（ブロックごと 入れかえられる 作りに しています）。

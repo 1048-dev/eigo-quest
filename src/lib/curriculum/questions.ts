@@ -195,6 +195,42 @@ export function magicEQuestion(item: LearningItemDef, rng: () => number): Pick<Q
       : `${item.text} は みじかい「${v}」の おと。おわりに e が ないね。` };
 }
 
+/** 母音チーム（ワールド7）。おなじ おとの グループごと（ai と ay は どちらも「エイ」） */
+export const VOWEL_TEAM_GROUPS = [["ai", "ay"], ["ee", "ea"], ["oa", "ow"]] as const;
+export const VOWEL_TEAMS = VOWEL_TEAM_GROUPS.flat();
+/** グループの おと（カタカナの めやす）と、くらべる みじかい母音 */
+const TEAM_SOUND: Record<string, { ja: string; short: string }> = {
+  ai: { ja: "エイ", short: "a" }, ay: { ja: "エイ", short: "a" },
+  ee: { ja: "イー", short: "e" }, ea: { ja: "イー", short: "e" },
+  oa: { ja: "オウ", short: "o" }, ow: { ja: "オウ", short: "o" },
+};
+const groupOf = (team: string) => VOWEL_TEAM_GROUPS.find((g) => (g as readonly string[]).includes(team)) as readonly string[];
+
+/**
+ * その回のフォーカスに母音チーム（"ai" など）があれば、母音の おとで問う（rain の答えを 最初の「r」にしない）。
+ * 音声だけの問題なので、おなじ おとの つづり（ai ↔ ay、ee ↔ ea、oa ↔ ow）は いっしょに 選択肢に 出さない（聞きわけられない）。
+ * 選択肢 = 正解 ＋ みじかい母音（rain ↔ ran の a）＋ ほかの 2つの おとの グループから 1つずつ。
+ * ことばに 入っている チームが 2つ あるとき（railway）は フォーカスの 順で 先の もの。
+ */
+export function vowelTeamQuestion(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa"> | null {
+  const focus = getLesson(item.lessonNo)?.phonics.focus ?? [];
+  const teams = focus.filter((f) => (VOWEL_TEAMS as readonly string[]).includes(f));
+  if (teams.length === 0) return null;
+  const w = item.text.toLowerCase();
+  const answer = teams.find((f) => w.includes(f));
+  if (!answer) return null;
+  const { ja, short } = TEAM_SOUND[answer];
+  const heard = new Set(VOWEL_TEAMS.filter((x) => w.includes(x)).map((x) => TEAM_SOUND[x].ja));
+  // ほかの おとの グループ（ことばに 入っている おとの グループは のぞく）から 1つずつ。その回の フォーカスに ある つづりを 先に
+  const others = VOWEL_TEAM_GROUPS.filter((g) => g !== groupOf(answer) && !heard.has(TEAM_SOUND[g[0]].ja))
+    .map((g) => { const inFocus = g.filter((x) => focus.includes(x)); return shuffle(inFocus.length > 0 ? inFocus : g, rng)[0]; });
+  // 2つめの グループが のぞかれた とき（seaweed＋ai など）は、のこりの みじかい母音で うめる
+  const fill = shuffle(["a", "e", "o"].filter((x) => x !== short && !others.some((o) => TEAM_SOUND[o].short === x)), rng);
+  const choices = [answer, short, ...others, ...fill].slice(0, 4);
+  return { promptJa: "きこえた ぼいんの おとは どれ？", choices: shuffle(choices, rng).map((x) => ({ id: x, label: x })), answer,
+    explanationJa: `${item.text} は「${answer}」。2つの もじで「${ja}」の おとに なるよ（みじかい ${short} とは ちがう おと）。` };
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -254,9 +290,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
         explanationJa: `正解は「${item.text}」。文の最初は大文字、最後はピリオド（.）かクエスチョンマーク（?）だよ。` };
     }
     case "phonics_sound": {
-      // 語頭ブレンド → 語末（-st / -s / -ing）→ マジック e → ダイグラフ の順
-      // （shopping は sh ではなく ing の回の問題、shape は sh ではなく a_e の回の問題にする）
-      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? digraphQuestion(item, rng);
+      // 語頭ブレンド → 語末（-st / -s / -ing）→ マジック e → 母音チーム → ダイグラフ の順
+      // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回の問題にする）
+      const dq = blendQuestion(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
       // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない

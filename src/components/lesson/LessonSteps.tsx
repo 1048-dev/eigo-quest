@@ -13,6 +13,8 @@ import { TeacherArt } from "@/components/characters/TeacherArt";
 import { GradeResponseSchema } from "@/lib/api/contracts";
 
 export type Done = (logs?: AnswerLog[]) => void;
+/** つづりのままだと 読み上げが へんになる フォーカス（"ai" を「エーアイ」と よまない）→ おとの よみ */
+const FOCUS_SAY: Record<string, string> = { ai: "ay", ay: "ay", ee: "ee", ea: "ee", oa: "oh", ow: "oh" };
 const NextBtn = ({ onClick, label = "つぎへ ▶" }: { onClick: () => void; label?: string }) => (
   <button className="btn btn-primary mt-6 w-full" onClick={onClick}>{label}</button>
 );
@@ -109,7 +111,7 @@ export function Phonics({ focus, words, tipJa, onDone }: { focus: string[]; word
     <div className="card p-6">
       <p className="rounded-xl bg-[var(--bg)] p-3 text-sm">💡 {tipJa}</p>
       <div className="mt-4 flex flex-wrap justify-center gap-3">
-        {focus.map((f) => <button key={f} className="card px-5 py-3 text-4xl font-black text-[var(--accent)]" onClick={() => speak(f.replace(/^-/, "").replace(/_/g, " "), 0.7)}>{f}</button>)}
+        {focus.map((f) => <button key={f} className="card px-5 py-3 text-4xl font-black text-[var(--accent)]" onClick={() => speak(FOCUS_SAY[f] ?? f.replace(/^-/, "").replace(/_/g, " "), 0.7)}>{f}</button>)}
       </div>
       <p className="mt-6 text-center font-bold text-[var(--ink-2)]">おとを つなげて よもう（ブレンディング）</p>
       <div className="mt-3 grid grid-cols-2 gap-3">

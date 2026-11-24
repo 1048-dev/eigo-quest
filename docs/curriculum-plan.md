@@ -439,6 +439,47 @@
 | 179 | Practice Time | はっぴょうの れんしゅう | Let's practice together. | 2音節＋マジック e（cupcake, sunshine, bedtime, trombone） | 城の ステージで リハーサル |
 | 180 | World 6 Grand Review | ワールド総まとめ（スピードTPR） | Welcome to my favorite place! | マジック e 総まとめ（cake, kite, rope, cute, these） | まなびの城の 大ひろまで 小4 はっぴょうかい |
 
+## 6-7. ワールド7 のレッスン詳細（content/curriculum/lessons.json に実装済み）
+
+- フォニックス: 母音チーム（2つの ぼいんで 1つの おと。はじめの ぼいんを なまえの おとで よむ）を ai（L181〜182）→ ay（L183〜184）→ ee（L186〜189）→ ea（L191〜194）→ oa（L196〜199）→ ow（snow の「オウ」。L201〜204）。5の倍数回と L206〜210 は ふりかえり（おなじ おとの ペア ai/ay・ee/ea・oa/ow、see / sea のような 同音語、railway のような 2音節語）。cow の ow は ワールド8 なので 出さない（テストで確認）。`phonics.rule` は "vowel-team" / "review"。
+- フォニックス問題: focus に 母音チームが あるときは「きこえた ぼいんの おとは どれ？」（src/lib/curriculum/questions.ts の `vowelTeamQuestion`）。音声だけの問題なので、おなじ おとの つづり（ai ↔ ay など）は いっしょに 選択肢に 出さない。選択肢は 正解＋みじかい母音（rain ↔ a）＋ほかの おとの グループから 1つずつ。sheep / cheese / show も sh・ch ではなく 母音チームで問う（順番は ブレンド → 語末 → マジック e → 母音チーム → ダイグラフ）。
+- 表現の型: My name is ～. / Nice to meet you. / How do you spell it? / I like ～. / What ～ do you like? → What month is it? / When is your birthday? ― My birthday is May 5th. / first, second, third / What do you want for your birthday? → What subject do you like? / What do you have on Monday? ― I have math. / Do you have ～? / My favorite subject is ～. → Can you swim? ― Yes, I can. / He can ～. / She can ～. / She is good at ～. → He is a doctor. / She works at a hospital. / Who is this? Hint, please. / What do you do? → 自己紹介スピーチ（なまえ・つづり・たんじょうび・すきな きょうか・ともだち しょうかい）。
+- he / she（3人称）は L196 から。L181〜195 の 表現・セリフには 出さない（テストで確認）。works（3人称単数の -s）は L203 で「he / she の ときは s が つく」と せつめい。
+- キャラの たんじょうび（会話で 固定）: ハル 5/5、リコ 6/2、キコ 12/8、エマ先生 10/10、ビリモ 2/29。
+
+| L | タイトル | テーマ | 中心の表現（core） | フォニックス | 会話シーン |
+|---|---|---|---|---|---|
+| 181 | Hello, New Friends! | なまえを いう | My name is Haru. | ai（rain, mail, tail, paint） | ひかりの島の あたらしい クラスの はじめての 日 |
+| 182 | How Do You Spell It? | なまえの つづり | How do you spell it? | ai（train, snail, nail, wait） | クラスで なまえカードづくり |
+| 183 | I Like Soccer | すきな もの | I like soccer. | ay（day, play, say, May） | がっこうの テラスで すきな もの トーク |
+| 184 | What Animal Do You Like? | すきな ものを たずねる | What animal do you like? | ay（gray, stay, tray, clay） | 島の クラスで すきな もの しらべ |
+| 185 | My Name Card | じこしょうかいカード | My name is Kiko. I like cats. | ai ay ふりかえり（rain, day, paint, play） | はまべで なまえカード こうかん |
+| 186 | Twelve Months | つき（1月〜12月） | It's April. | ee（see, tree, bee, feet） | 島の カレンダーの きの したで つきの うた |
+| 187 | When Is Your Birthday? | たずねる・こたえる | When is your birthday? | ee（green, sheep, week, three） | エマ先生の たんじょうび インタビュー |
+| 188 | First, Second, Third | ひづけ（1st 2nd 3rd…） | My birthday is July 3rd. | ee（sleep, teeth, queen, seed） | 島の こうえんで たんじょうびじゅんに ならぶ ゲーム |
+| 189 | A Birthday Wish | ほしい もの | What do you want for your birthday? | ee（street, sweet, cheese, keep） | キコの たんじょうびパーティーの じゅんび |
+| 190 | Our Birthday Calendar | たんじょうび カレンダーづくり | My birthday is October 10th. | ee ai ay ふりかえり（tree, rain, day, week） | クラスの たんじょうび カレンダーづくり |
+| 191 | School Subjects | きょうかの なまえ | I like science. | ea（eat, sea, tea, read） | 島の きょうしつで じかんわりを みる |
+| 192 | What Do You Have on Monday? | ようびと きょうか | What do you have on Monday? | ea（team, leaf, beach, clean） | 1しゅうかんの じかんわりを たしかめる |
+| 193 | I Have Math and Art | 1日の じかんわり | I have math and art on Wednesday. | ea（peach, dream, meat, seat） | オンラインの ともだちと じかんわり くらべ |
+| 194 | My Favorite Subject | すきな きょうかと わけ | My favorite subject is art. | ea（speak, teach, heat, bean） | きゅうしょくの じかんに すきな きょうか トーク |
+| 195 | My Dream Timetable | ゆめの じかんわりづくり | I have music and P.E. on Friday. | ee ea ふりかえり（see, sea, meet, meat） | ゆめの じかんわり はっぴょう |
+| 196 | Can You Swim? | Can you ～? | Can you swim? | oa（boat, coat, road, goat） | 島の みなとで ボートの 日 |
+| 197 | He Can Run Fast | He can ～.（ともだち しょうかい） | He can run fast. | oa（soap, toast, coach, float） | 島の グラウンドで ともだち しょうかい |
+| 198 | She Can Play the Piano | She can ～. | She can play the piano. | oa（goal, toad, roast, loaf） | 島の おんがくホールで リコを しょうかい |
+| 199 | She Is Good at Cooking | とくいな こと | She is good at cooking. | oa（oak, foam, cloak, throat） | 島の キッチンで とくいな こと トーク |
+| 200 | This Is My Friend | ともだち しょうかい | This is Kiko. She can dance well. | oa ea ふりかえり（boat, beach, goat, team） | はまべの ステージで ともだち しょうかいショー |
+| 201 | Jobs in Town | しごとの なまえ | He is a doctor. | ow（snow, grow, slow, show） | ひかりの島の まちを おさんぽ |
+| 202 | She Is a Baker | しごとと できること | She is a baker. | ow（low, row, blow, glow） | 島の パンやさんを たずねる |
+| 203 | She Works at a Hospital | はたらく ばしょ | She works at a hospital. | ow（window, yellow, pillow, shadow） | だれが どこで はたらくかの まちの ちずづくり |
+| 204 | Who Is This? | ヒントクイズ | Who is this? | ow（bowl, grown, throw, below） | まちの ひろばで しごと クイズショー |
+| 205 | Town Interview | まちの ひと インタビュー | She is a vet. She works at an animal hospital. | oa ow ふりかえり（boat, snow, coat, grow） | クラスしんぶんの ために まちの ひとに インタビュー |
+| 206 | My Self-Introduction | じこしょうかい スピーチを つくる | My name is Riko. My birthday is June 2nd. | ai ay ee ふりかえり（train, play, tree, sheep） | きょうしつで じこしょうかい スピーチづくり |
+| 207 | My Week at School | じかんわりと すきな きょうか | My favorite subject is music. I have music on Tuesday. | ea oa ふりかえり（read, toast, teach, coach） | 島の フェリーで がっこうの 1しゅうかんトーク |
+| 208 | Island Quiz Show | he / she クイズ | She is a vet. She can help animals. | ai ee oa ow ふりかえり（mail, queen, goat, yellow） | ひかりの島 クイズショー |
+| 209 | Speech Rehearsal | はっぴょうの れんしゅう | Let's practice our speeches. | ai ay ee ea ow ふりかえり（railway, seaweed, mailbox, snowman） | とうだいの ステージで リハーサル |
+| 210 | World 7 Grand Review | 小5前半 はっぴょうかい（ワールド7 ぜんぶ） | Hello! My name is Haru. My birthday is May 5th. | 母音チーム総まとめ（rain, play, tree, sea, boat, snow） | ひかりの島の とうだいで 小5前半 はっぴょうかい |
+
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。
 - 必須: 既存フィールドすべて。新しいレッスンには `conversation`（scene / sceneJa / lines 3行以上 / aiTask）と `recap.highlightsJa` を必ず入れる。
