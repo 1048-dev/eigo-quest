@@ -9,6 +9,7 @@ import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { apiGet } from "@/lib/api/client";
 import { offlineMap } from "@/lib/offline";
+import { readLocalProgress } from "@/lib/offline/localProgress";
 import { MapResponseSchema, type MapResponse } from "@/lib/api/contracts";
 import { COIN_RULES } from "@/lib/domain/config";
 import type { CharacterId } from "@/lib/game/characters";
@@ -29,7 +30,7 @@ export default function ArenaPage() {
     let alive = true;
     apiGet("/api/map", MapResponseSchema).then((r) => {
       if (!alive) return;
-      const d = r.ok && (r.data.arenas ?? []).length > 0 ? r.data : offlineMap();
+      const d = r.ok && !r.data.offline && (r.data.arenas ?? []).length > 0 ? r.data : offlineMap(new Date(), readLocalProgress());
       setArenas(d.arenas ?? []);
       setOffline(!!d.offline);
     });

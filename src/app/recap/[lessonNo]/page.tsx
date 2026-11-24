@@ -9,12 +9,15 @@ import { currentUserId } from "@/lib/auth";
 import { getLesson } from "@/lib/curriculum";
 import { buildRecapScript } from "@/lib/recap/script";
 import { isLessonCompleted } from "@/lib/services/recapService";
+import { isDbUp } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
 /** 完了判定。DB が止まっている・おそいときは null（＝わからない → 見せる） */
 async function completedOrUnknown(lessonNo: number): Promise<boolean | null> {
   try {
+    // DB が止まっているのが わかっていれば すぐ「わからない」（キャッシュつきの 1.5秒チェック）
+    if (!(await isDbUp())) return null;
     const uid = await currentUserId();
     return await Promise.race([
       isLessonCompleted(uid, lessonNo),

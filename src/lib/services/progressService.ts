@@ -8,7 +8,7 @@ import { ALL_ITEMS, ASSESSMENTS, TOTAL_LESSONS, gateTestAfterLesson, getAssessme
 import { buildTestQuestions, hashSeed, type Question } from "@/lib/curriculum/questions";
 import { CURRICULUM_RULES, MEMORY_RULES } from "@/lib/domain/config";
 import { daysBetween, endOfLocalDay, localDate } from "@/lib/domain/dates";
-import { nextStreak, rewardForLesson, rewardForStreak, rewardForTest, type Reward } from "@/lib/domain/coins";
+import { mergeRewards, nextStreak, rewardForConversation, rewardForLesson, rewardForStreak, rewardForTest, type Reward } from "@/lib/domain/coins";
 import { buildStageMap, canStartLesson, canTakeGateTest } from "@/lib/domain/progression";
 import { updateMemory } from "@/lib/domain/memory";
 import { computeMastery } from "@/lib/domain/mastery";
@@ -124,7 +124,7 @@ async function touchStreak(tx: Tx, userId: string, today: string): Promise<Rewar
 // ---------------------------------------------------------------------------
 // レッスン完了
 // ---------------------------------------------------------------------------
-export async function completeLesson(userId: string, lessonNo: number, input: { quizScore: number; speedListeningBest?: number; logs: AnswerLog[] }, now = new Date()) {
+export async function completeLesson(userId: string, lessonNo: number, input: { quizScore: number; speedListeningBest?: number; logs: AnswerLog[]; conversationFinished?: boolean }, now = new Date()) {
   const { nodes } = await getStageMap(userId, now);
   const guard = canStartLesson(nodes, lessonNo);
   if (!guard.ok) return { ok: false as const, reasonJa: guard.reasonJa };
@@ -146,10 +146,15 @@ export async function completeLesson(userId: string, lessonNo: number, input: { 
     await recordResponses(tx, userId, input.logs, "NORMAL", null, now);
     const reward = rewardForLesson({ alreadyCompleted, completedTodayBefore });
     await grantReward(tx, userId, reward, "lesson", `${lessonNo}`);
+    // AIキャラとの かいわを さいごまで やった → レッスンごとに1回だけ +5（台帳の idempotencyKey で二重付与を防ぐ）
+    const convKey = `${userId}:conversation:${lessonNo}:CONVERSATION_FINISHED:0`;
+    const convAlready = input.conversationFinished ? (await tx.coinLedger.findUnique({ where: { idempotencyKey: convKey } })) != null : true;
+    const convReward = rewardForConversation({ finished: !!input.conversationFinished, alreadyRewarded: convAlready });
+    await grantReward(tx, userId, convReward, "conversation", `${lessonNo}`);
     const streakReward = await touchStreak(tx, userId, today);
     await grantReward(tx, userId, streakReward, "streak", today);
     // nextTest: 次に進むためのゲート（まとめ/ボス）があればそれ、無ければ復習クエスト（あした）
-    return { ok: true as const, reward, streakReward, nextTest: (gateTestAfterLesson(lessonNo) ?? reviewQuestFor(lessonNo))?.id };
+    return { ok: true as const, reward: mergeRewards(reward, convReward), streakReward, nextTest: (gateTestAfterLesson(lessonNo) ?? reviewQuestFor(lessonNo))?.id };
   });
 }
 

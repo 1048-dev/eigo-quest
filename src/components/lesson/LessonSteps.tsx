@@ -5,7 +5,7 @@
 import { useState } from "react";
 import type { LearningItemDef } from "@/lib/domain/types";
 import { audioKeyOf, toPublic, type Question } from "@/lib/curriculum/questions";
-import { focusSay } from "@/lib/curriculum/vowelTeams";
+import { focusExampleWord, focusLabel } from "@/lib/curriculum/phonicsButtons";
 import type { AnswerLog } from "@/lib/services/progressService";
 import { playItemAudio, speak, speakMixed } from "@/lib/speech/tts";
 import { QuestionView, SpeakButton, type AnswerEvent } from "@/components/test/QuestionView";
@@ -98,19 +98,31 @@ export function TprDrill({ items, actions, onDone }: { items: LearningItemDef[];
 // ---------------------------------------------------------------------------
 export function Phonics({ focus, words, tipJa, onDone }: { focus: string[]; words: string[]; tipJa: string; onDone: Done }) {
   const [lit, setLit] = useState<{ word: string; n: number } | null>(null);
+  // 文字の なまえ（シー・エー・ティー）は 読まない。もじを じゅんばんに 光らせてから、ことばを ゆっくり → ふつうの はやさで
   const blend = async (w: string) => {
     for (let n = 1; n <= w.length; n++) {
       setLit({ word: w, n });
-      await speak(w[n - 1], 0.6);
+      await new Promise((ok) => setTimeout(ok, 220));
     }
-    await speak(w, 0.8);
+    await speak(w, 0.6);
+    await speak(w, 0.9);
     setLit(null);
   };
   return (
     <div className="card p-6">
       <p className="rounded-xl bg-[var(--bg)] p-3 text-sm">💡 {tipJa}</p>
       <div className="mt-4 flex flex-wrap justify-center gap-3">
-        {focus.map((f) => <button key={f} className="card px-5 py-3 text-4xl font-black text-[var(--accent)]" onClick={() => speak(focusSay(f, words), 0.7)}>{f}</button>)}
+        {focus.map((f) => {
+          const label = focusLabel(f);
+          const example = focusExampleWord(f, words);
+          return (
+            <button key={f} className="card flex min-w-24 flex-col items-center px-5 py-3" onClick={() => speak(example, 0.75)} aria-label={`${label.main}（${example} を きく）`}>
+              <span className="text-4xl font-black text-[var(--accent)]">{label.main}</span>
+              {label.hintJa && <span className="text-xs font-bold text-[var(--ink-2)]">{label.hintJa}</span>}
+              <span className="mt-1 text-sm font-bold text-[var(--ink-2)]">🔊 {example}</span>
+            </button>
+          );
+        })}
       </div>
       <p className="mt-6 text-center font-bold text-[var(--ink-2)]">おとを つなげて よもう（ブレンディング）</p>
       <div className="mt-3 grid grid-cols-2 gap-3">

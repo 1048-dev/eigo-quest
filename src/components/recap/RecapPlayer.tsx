@@ -13,6 +13,7 @@ import type { Pose } from "@/components/characters/StandingArt";
 import type { CharacterId } from "@/lib/game/characters";
 import { apiPost } from "@/lib/api/client";
 import { RecapWatchedResponseSchema, type RecapWatchedResponse } from "@/lib/api/contracts";
+import { focusLabel } from "@/lib/curriculum/phonicsButtons";
 import { recapProgress, RECAP_TIMING, type RecapScript, type RecapSegment } from "@/lib/recap/script";
 import { speak } from "@/lib/speech/tts";
 
@@ -187,7 +188,7 @@ export function RecapPlayer({ script, offline = false }: { script: RecapScript; 
             {seg.letters && seg.letters.length > 0 && (
               <div className="mb-1 flex gap-2" aria-label="フォニックスの もじ">
                 {seg.letters.map((l) => (
-                  <span key={l} className="font-title rounded-lg bg-[#f2c14e] px-3 py-1 text-3xl font-black text-[#2a1a03]">{l}</span>
+                  <span key={l} className="font-title rounded-lg bg-[#f2c14e] px-3 py-1 text-3xl font-black text-[#2a1a03]">{focusLabel(l).main}</span>
                 ))}
               </div>
             )}

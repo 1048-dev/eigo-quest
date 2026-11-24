@@ -6,13 +6,14 @@
  * 中身はすべて契約（lib/api/contracts.ts）どおりの形で、offline: true の目印が付く。
  */
 import announcementsRaw from "@content/announcements.json";
-import { ASSESSMENTS, TOTAL_LESSONS, gateTestAfterLesson, getLesson, itemsOfLesson, TEACHER } from "@/lib/curriculum";
+import { ASSESSMENTS, TOTAL_LESSONS, gateTestAfterLesson, getLesson, itemsOfLesson, reviewQuestFor, TEACHER } from "@/lib/curriculum";
+import { toProgressMaps, type LocalProgress } from "./localProgress";
 import { buildLessonFlow } from "@/lib/curriculum/questions";
 import { CURRICULUM_RULES } from "@/lib/domain/config";
 import { localDate } from "@/lib/domain/dates";
 import { buildStageMap } from "@/lib/domain/progression";
 import { listArenas } from "@/lib/domain/arena";
-import { rewardForLesson } from "@/lib/domain/coins";
+import { mergeRewards, rewardForConversation, rewardForLesson } from "@/lib/domain/coins";
 import { rollMonster } from "@/lib/domain/gacha";
 import { MONSTERS } from "@/lib/game/monsters";
 import {
@@ -23,17 +24,22 @@ import {
 
 const OFF = { success: true, offline: true } as const;
 
-/** ぼうけんマップ: はじめから（Lesson 1 から遊べる状態）。ステージの並び・ロックは本物と同じルール */
-export function offlineMap(now = new Date()): MapResponse {
+/**
+ * ぼうけんマップ: ふつうは はじめから（Lesson 1 から遊べる状態）。ステージの並び・ロックは本物と同じルール。
+ * ブラウザでは、おためしモードで クリアした分（lib/offline/localProgress）を progress に わたすと、そこまで すすんだ マップになる。
+ */
+export function offlineMap(now = new Date(), progress?: LocalProgress): MapResponse {
+  const { completedLessons, passedTests } = toProgressMaps(progress ?? { lessons: {}, tests: {} });
   const map = buildStageMap({
     totalLessons: TOTAL_LESSONS,
     lessonsPerWorld: CURRICULUM_RULES.lessonsPerWorld,
-    completedLessons: new Map(),
-    passedTests: new Map(),
+    completedLessons,
+    passedTests,
     gateTestAfter: gateTestAfterLesson,
+    reviewQuestFor,
     today: localDate(now),
   });
-  return { ...OFF, nodes: map.nodes, current: map.current, arenas: listArenas(ASSESSMENTS, new Map()), user: DEFAULT_USER };
+  return { ...OFF, nodes: map.nodes, current: map.current, arenas: listArenas(ASSESSMENTS, passedTests), user: DEFAULT_USER };
 }
 
 /** ステータス（習得率）: まだ記録がない状態 */
@@ -87,7 +93,10 @@ export function offlineLesson(lessonNo: number): LessonResponse {
 }
 
 /** レッスン完了（記録はされない。もらえるはずのコインだけ表示する） */
-export function offlineLessonComplete(lessonNo = 1): LessonCompleteResponse {
-  const r = rewardForLesson({ alreadyCompleted: false });
+export function offlineLessonComplete(lessonNo = 1, opts: { conversationFinished?: boolean } = {}): LessonCompleteResponse {
+  const r = mergeRewards(
+    rewardForLesson({ alreadyCompleted: false }),
+    rewardForConversation({ finished: !!opts.conversationFinished, alreadyRewarded: false }),
+  );
   return { ...OFF, ok: true, reasonJa: "", reward: { total: r.total, rareGachaTickets: r.rareGachaTickets, coins: r.coins.map((c) => ({ amount: c.amount, labelJa: c.labelJa })) }, nextTest: gateTestAfterLesson(lessonNo)?.id };
 }

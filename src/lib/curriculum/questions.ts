@@ -4,7 +4,7 @@
  */
 import type { AssessmentDef, LearningItemDef, LessonDef, MemoryState, Skill } from "@/lib/domain/types";
 import { pickArenaItems, type ArenaMode } from "@/lib/domain/arena";
-import { MAX_CONVERSATION_TURNS } from "@/lib/conversation/engine";
+import { MAX_CONVERSATION_TURNS, pickConversationPartner } from "@/lib/conversation/engine";
 import { getLesson, itemsInRange, itemsOfLesson } from "./index";
 import { VOWEL_TEAMS, VOWEL_TEAM_INTRO, possibleSounds, shortVowelOf, teamSound } from "./vowelTeams";
 import { R_MOUTH, R_VOWELS, R_VOWEL_INTRO, findRSpellings, rSound, shortVowelOfR } from "./rControlled";
@@ -622,9 +622,9 @@ export function buildLessonFlow(lesson: LessonDef, seed = lesson.lessonNo): Less
         })),
       })),
     },
-    // さいごに AIキャラ（ふだんはハル）と かいわ。会話データのある レッスンだけ
+    // さいごに AIキャラと かいわ（相手は レッスンごとに Haru → Riko → Kiko → Birimo。その回の 台本で 話す キャラから）。会話データのある レッスンだけ
     ...(lesson.conversation
-      ? [{ kind: "conversation" as const, minutes: 3, character: "haru" as const, maxTurns: MAX_CONVERSATION_TURNS }]
+      ? [{ kind: "conversation" as const, minutes: 3, character: pickConversationPartner(lesson.lessonNo, lesson.conversation), maxTurns: MAX_CONVERSATION_TURNS }]
       : []),
   ];
 }

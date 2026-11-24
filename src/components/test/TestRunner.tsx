@@ -12,6 +12,8 @@ import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { apiPost, isUnreachable } from "@/lib/api/client";
 import { offlineTestStart, offlineTestSubmit } from "@/lib/offline/tests";
+import { recordLocalTestPass } from "@/lib/offline/localProgress";
+import { TOTAL_LESSONS } from "@/lib/curriculum";
 import type { ArenaMode } from "@/lib/domain/arena";
 import { OfflineNote } from "@/components/common/OfflineNote";
 import { TestStartResponseSchema, TestSubmitResponseSchema, type TestStartResponse, type TestSubmitResponse } from "@/lib/api/contracts";
@@ -56,7 +58,11 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
       .then((res) => {
         // 届かないときはブラウザで採点（記録はされない）
         const r = isUnreachable(res) ? { ...res, ok: true, data: offlineTestSubmit(assessmentId, { seed: session.seed, arenaMode: mode, answers: next }) } : res;
-        if (r.data.offline) setOffline(true);
+        if (r.data.offline) {
+          setOffline(true);
+          // おためしモードで 合格 → この ブラウザの マップに だけ 反映（アリーナ・お宝は マップに 出ないので のぞく）
+          if (r.ok && r.data.passed && !/^(arena|treasure)-/.test(assessmentId)) recordLocalTestPass(assessmentId);
+        }
         if (r.ok && r.data.ok) setResult(r.data);
         else setError(r.data.reasonJa || r.error || "もう一回ためしてね。");
       })
@@ -88,6 +94,9 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
           <p className="mt-1 text-[var(--ink-2)]">せいかいりつ {Math.round(result.score * 100)}%（ごうかくライン {Math.round(result.passRate * 100)}%）</p>
           {result.reward.coins.map((c, i) => <p key={i} className="mt-2 text-lg font-black text-[var(--coin)]">🪙 +{c.amount} {c.labelJa}</p>)}
           {result.reward.rareGachaTickets > 0 && <p className="mt-2 text-lg font-black">🎟️ レアガチャけん ×{result.reward.rareGachaTickets}</p>}
+          {result.passed && kind === "BOSS" && session.assessment.rangeEnd >= TOTAL_LESSONS && (
+            <p className="font-title mt-3 text-3xl text-[var(--coin)]">🎉 ぜんぶクリア！ 🎉</p>
+          )}
           {result.unlocksLesson && <p className="mt-2 font-bold">🔓 Lesson {result.unlocksLesson} がひらいた！</p>}
           {offline && <div className="mt-3"><OfflineNote show note="今回のきろくとコインは保存されないよ" /></div>}
         </div>

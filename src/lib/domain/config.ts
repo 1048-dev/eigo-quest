@@ -26,9 +26,10 @@ export const CURRICULUM_RULES = {
  *   復習クエスト一発 30 coin / 約3分  = 10/分 ← 1分あたり一番お得
  *   まとめテスト    60 coin / 約8分  = 7.5/分（中ボーナス）
  *   ボス           300 coin + レアガチャ券（大ボーナス・一回きり）
- *   お宝アラート    基本報酬(20) × 2倍
+ *   お宝アラート    基本報酬(12) × 2倍 = 24 coin（復習クエスト一発の30より少なくする＝毎日の復習がいちばんお得）
  *   アリーナ        15 coin/回（1日5回まで満額、以降は3coin）
  *   連続学習（いちばん大きな報酬）: 毎日 +min(連続日数,10)、7日ごと +50、30日ごと +300＋レアガチャ券
+ *   AIキャラとの かいわを さいごまで  5 coin（レッスンごとに1回だけ）
  *   きょうのまとめ動画（任意）  5 coin / 約2〜3分。1日1回だけ（何本みても同じ）
  */
 export const COIN_RULES = {
@@ -44,7 +45,7 @@ export const COIN_RULES = {
   bossFirstTry: 300,
   bossRetryPass: 150,
   bossRareTickets: 1,
-  treasureBase: 20,
+  treasureBase: 12,
   treasureMultiplier: 2,
   arenaPlay: 15,
   arenaPlayAfterCap: 3,
@@ -58,6 +59,8 @@ export const COIN_RULES = {
   streakBigBonusRareTickets: 1,
   /** 「きょうのまとめ」動画を最後まで見た（1日1回まで） */
   recapWatched: 5,
+  /** レッスンさいごの AIキャラとの かいわを さいごまで やった（レッスンごとに1回だけ） */
+  conversationFinished: 5,
 } as const;
 
 export const GACHA_RULES = {

@@ -1,6 +1,7 @@
 import { currentUserId } from "@/lib/auth";
 import { getLesson } from "@/lib/curriculum";
 import { recordRecapWatched } from "@/lib/services/recapService";
+import { isDbUp } from "@/lib/db";
 import { jsonError, jsonOk, withApi } from "@/lib/api/server";
 import type { RecapWatchedResponse } from "@/lib/api/contracts";
 
@@ -14,6 +15,8 @@ export const POST = withApi<{ params: Promise<{ lessonNo: string }> }>("recap-wa
 
   let body: RecapWatchedResponse;
   try {
+    // DB が止まっているのが わかっていれば 待たずに「コインなしで成功」（接続待ちで 画面を 止めない）
+    if (!(await isDbUp())) throw new Error("database is down");
     const r = await recordRecapWatched(await currentUserId(), n);
     body = r.status === "AWARDED"
       ? { ok: true, coinsAwarded: r.coins, alreadyToday: false, saved: true, messageJa: `${r.labelJa} コイン +${r.coins}` }

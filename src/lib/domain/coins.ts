@@ -14,7 +14,8 @@ export type CoinReason =
   | "TREASURE_ALERT_CLEAR"
   | "ARENA_PLAY"
   | "STREAK_BONUS"
-  | "RECAP_WATCHED";
+  | "RECAP_WATCHED"
+  | "CONVERSATION_FINISHED";
 
 export interface CoinAward {
   amount: number;
@@ -129,6 +130,17 @@ export function rewardForStreak(newStreakDays: number): Reward {
 export function rewardForRecap(input: { alreadyRewardedToday: boolean }): Reward {
   if (input.alreadyRewardedToday) return finalize([]);
   return finalize([award(C.recapWatched, "RECAP_WATCHED", "きょうの まとめを みた！")]);
+}
+
+/** レッスンさいごの AIキャラとの かいわを さいごまで やった。レッスンごとに1回だけ（alreadyRewarded なら 0） */
+export function rewardForConversation(input: { finished: boolean; alreadyRewarded: boolean }): Reward {
+  if (!input.finished || input.alreadyRewarded) return finalize([]);
+  return finalize([award(C.conversationFinished, "CONVERSATION_FINISHED", "かいわ クリア！")]);
+}
+
+/** 2つの ごほうびを 1つに まとめる（表示用） */
+export function mergeRewards(a: Reward, b: Reward): Reward {
+  return finalize([...a.coins, ...b.coins], a.rareGachaTickets + b.rareGachaTickets);
 }
 
 /** 連続日数の更新（同日2回目は変化なし、1日空いたらリセット） */

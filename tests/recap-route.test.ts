@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 const record = vi.fn();
 vi.mock("@/lib/auth", () => ({ currentUserId: async () => "u1" }));
 let dbDown = false;
+vi.mock("@/lib/db", () => ({ isDbUp: async () => true, markDbDown: () => {}, prisma: {} }));
 vi.mock("@/lib/services/recapService", () => ({
   recordRecapWatched: async (...a: unknown[]) => {
     if (dbDown) throw new Error("Can't reach database server");

@@ -283,6 +283,7 @@ enum CoinReason {
   ARENA_PLAY
   STREAK_BONUS
   RECAP_WATCHED           /// きょうのまとめ動画（1日1回）
+  CONVERSATION_FINISHED   /// AIキャラとの かいわを さいごまで（レッスンごとに1回）
   GACHA_SPEND
   SHOP_SPEND
 }

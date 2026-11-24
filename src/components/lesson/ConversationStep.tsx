@@ -18,6 +18,7 @@ import {
 import { speak } from "@/lib/speech/tts";
 import { isSpeechRecognitionSupported, listenOnce, type Listening } from "@/lib/speech/recognition";
 import { StandingFigure } from "@/components/characters/StandingArt";
+import { COIN_RULES } from "@/lib/domain/config";
 
 interface Bubble extends ConversationTurn { ja?: string }
 
@@ -41,7 +42,8 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
   character?: ConversationCharacter;
   maxTurns?: number;
   items: LearningItemDef[];
-  onDone: (logs: AnswerLog[]) => void;
+  /** finished = さいごまで おはなし できた（レッスンごとに1回 コイン+5） */
+  onDone: (logs: AnswerLog[], finished: boolean) => void;
 }) {
   const conv = conversation ?? GENERIC_CONVERSATION;
   const name = CHARACTER_NAME[character];
@@ -117,7 +119,7 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
   const finish = () => {
     window.speechSynthesis?.cancel();
     const childTexts = bubbles.filter((b) => b.role === "child").map((b) => b.text);
-    onDone(conversationLogs(childTexts, conv.aiTask.targetExpressions, items));
+    onDone(conversationLogs(childTexts, conv.aiTask.targetExpressions, items), done);
   };
 
   if (!started) {
@@ -128,8 +130,9 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
         <p className="text-sm text-[var(--ink-2)]">ばめん：{conv.sceneJa}</p>
         <p className="mt-2 rounded-lg bg-[var(--surface)] p-3 font-bold">🎯 {conv.aiTask.goalJa}</p>
         <p className="mt-2 text-xs text-[var(--ink-2)]">{micOk ? "🎤 で えいごを はなしてね。ことばを タップしても いいよ。" : "ことばを タップするか、キーボードで いれてね。"}</p>
+        <p className="mt-2 text-sm font-black text-[var(--coin)]">さいごまで おはなし すると 🪙+{COIN_RULES.conversationFinished}</p>
         <button className="btn btn-coin mt-4 w-full" onClick={start}>▶ はじめる</button>
-        <button className="mt-3 text-sm text-[var(--ink-2)] underline" onClick={() => onDone([])}>きょうは とばす</button>
+        <button className="mt-3 text-sm text-[var(--ink-2)] underline" onClick={() => onDone([], false)}>きょうは とばす</button>
       </div>
     );
   }
@@ -163,7 +166,7 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
       {done ? (
         <div className="mt-4 text-center">
           <p className="text-4xl">🎉</p>
-          <p className="font-black">かいわ クリア！ {stars > 0 ? `つかえた ひょうげん ⭐×${stars}` : "さいごまで おはなし できたね！"}</p>
+          <p className="font-black">かいわ クリア！ 🪙+{COIN_RULES.conversationFinished} {stars > 0 ? `つかえた ひょうげん ⭐×${stars}` : "さいごまで おはなし できたね！"}</p>
           <button className="btn btn-coin mt-3 w-full" onClick={finish}>レッスン クリア！ ▶</button>
         </div>
       ) : (

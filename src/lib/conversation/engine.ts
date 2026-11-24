@@ -14,6 +14,40 @@ export type ConversationCharacter = "haru" | "riko" | "kiko" | "birimo";
 export const CONVERSATION_CHARACTERS: readonly ConversationCharacter[] = ["haru", "riko", "kiko", "birimo"];
 export const CHARACTER_NAME: Record<ConversationCharacter, string> = { haru: "Haru", riko: "Riko", kiko: "Kiko", birimo: "Birimo" };
 
+const byName = (name: string): ConversationCharacter | undefined =>
+  CONVERSATION_CHARACTERS.find((c) => CHARACTER_NAME[c].toLowerCase() === name.trim().toLowerCase());
+
+/**
+ * そのレッスンの かいわ相手（Haru → Riko → Kiko → Birimo の じゅんばんで レッスンごとに かわる）。
+ *  1. さいしょの ひとことが「I'm Haru.」のような 自己紹介なら、その キャラ（セリフと 話し手を そろえる）
+ *  2. その回の 台本で 話している キャラの 中から えらぶ（Ms. Emma は 先生なので かいわ相手に しない）
+ *     - じゅんばんの キャラが 台本に いれば その キャラ、いなければ 台本の キャラを じゅんばんに
+ *     - ひとことの 中で 3人称で 出てくる キャラ（"Birimo's birthday", "Haru says"）は 相手に しない
+ *  3. 台本に だれも いなければ じゅんばんの キャラ
+ */
+export function pickConversationPartner(lessonNo: number, conv: LessonConversation | null | undefined): ConversationCharacter {
+  const n = Number.isInteger(lessonNo) && lessonNo > 0 ? lessonNo : 1;
+  const turn = CONVERSATION_CHARACTERS[(n - 1) % CONVERSATION_CHARACTERS.length];
+  if (!conv) return turn;
+  const starter = conv.aiTask?.starterEn ?? "";
+  const self = /\bI'?m ([A-Z][a-z]+)\b/.exec(starter);
+  const selfChar = self ? byName(self[1]) : undefined;
+  if (selfChar) return selfChar;
+  const mentioned = new Set(CONVERSATION_CHARACTERS.filter((c) => new RegExp(`\\b${CHARACTER_NAME[c]}\\b`).test(starter)));
+  const speakers: ConversationCharacter[] = [];
+  for (const line of conv.lines ?? []) {
+    const c = byName(line.speaker ?? "");
+    if (c && !speakers.includes(c)) speakers.push(c);
+  }
+  const ok = speakers.filter((c) => !mentioned.has(c));
+  const pool = ok.length > 0 ? ok : speakers;
+  if (pool.length === 0) return turn;
+  if (pool.includes(turn)) return turn;
+  // 台本に いる キャラを、じゅんばん（Haru → Riko → Kiko → Birimo）に ならべて レッスン番号で まわす
+  const ordered = CONVERSATION_CHARACTERS.filter((c) => pool.includes(c));
+  return ordered[(n - 1) % ordered.length];
+}
+
 export interface ConversationTurn {
   role: "ai" | "child";
   text: string;

@@ -19,8 +19,13 @@ export function speak(text: string, rate = 1.0, lang: "en-US" | "ja-JP" = "en-US
   });
 }
 
+const RECORDED_AUDIO = process.env.NEXT_PUBLIC_RECORDED_AUDIO === "1";
+
 /** audioKey = audioKeyOf(itemId)。音声生成パイプラインも同じハッシュでファイル名を付ける */
 export async function playItemAudio(audioKey: string, fallbackText: string, rate = 1.0) {
+  // 収録音声（public/media/audio）を 置いて NEXT_PUBLIC_RECORDED_AUDIO=1 に するまでは 読み上げだけ。
+  // ない ファイルを 毎回 取りに いくと 404 と コンソールの エラーが 出て、音も おくれる
+  if (!RECORDED_AUDIO) return speak(fallbackText, rate);
   const audio = new Audio(`/media/audio/${audioKey}.mp3`);
   audio.playbackRate = rate;
   audio.preservesPitch = true;

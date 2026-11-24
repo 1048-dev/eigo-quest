@@ -12,6 +12,7 @@ import { Portrait } from "@/components/characters/CharacterArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { apiDelete, apiGet, isUnreachable } from "@/lib/api/client";
 import { offlineMap } from "@/lib/offline";
+import { readLocalProgress } from "@/lib/offline/localProgress";
 import { DEFAULT_USER, MapResponseSchema, TreasureAlertResponseSchema, type MapResponse, type TreasureAlertResponse } from "@/lib/api/contracts";
 import { companionLine, OFFLINE_LINE } from "@/lib/game/companion";
 
@@ -35,7 +36,8 @@ export default function MapPage() {
       if (!alive) return;
       // サーバーに届かない・中身が空 → 内蔵データ（Lesson 1 から遊べるマップ）に切り替える
       const usable = r.ok && (r.data.nodes ?? []).length > 0;
-      const d = usable ? r.data : isUnreachable(r) || (r.data.nodes ?? []).length === 0 ? offlineMap() : r.data;
+      // サーバーが「おためしモード」の マップを返したときも、この ブラウザで クリアした分を のせて 作りなおす
+      const d = usable && !r.data.offline ? r.data : usable || isUnreachable(r) || (r.data.nodes ?? []).length === 0 ? offlineMap(new Date(), readLocalProgress()) : r.data;
       setData(d);
       setOffline(!!d.offline);
     });
@@ -107,7 +109,7 @@ export default function MapPage() {
       )}
 
       <div className="overflow-hidden rounded-[24px] border-4 border-[var(--gold)] shadow-[0_6px_0_var(--gold-deep),0_14px_28px_rgba(0,0,0,.45)]">
-        <WorldMap nodes={nodes.length > 0 ? nodes : offlineMap().nodes} />
+        <WorldMap nodes={nodes.length > 0 ? nodes : offlineMap(new Date(), readLocalProgress()).nodes} />
       </div>
 
       <AnnouncementsPanel />

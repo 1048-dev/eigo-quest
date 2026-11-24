@@ -8,6 +8,8 @@ import type { LessonCompleteResponse } from "@/lib/api/contracts";
 const Body = z.object({
   quizScore: z.number().min(0).max(1),
   speedListeningBest: z.number().min(0).max(1).optional(),
+  /** AIキャラとの かいわを さいごまで やった（レッスンごとに1回 +5） */
+  conversationFinished: z.boolean().optional(),
   logs: z.array(z.object({
     itemId: z.string(),
     skill: z.enum(["SCHOOL_TEST", "PHONICS", "LISTENING", "SPEAKING", "VOCABULARY", "WRITING"]),
@@ -29,4 +31,8 @@ export const POST = withOffline<{ params: Promise<{ lessonNo: string }> }>("less
     ? { ok: true, reasonJa: "", reward: { total: r.reward.total, rareGachaTickets: r.reward.rareGachaTickets, coins: r.reward.coins.map((c) => ({ amount: c.amount, labelJa: c.labelJa })) }, nextTest: r.nextTest }
     : { ok: false, reasonJa: r.reasonJa ?? "", reward: { total: 0, rareGachaTickets: 0, coins: [] }, nextTest: undefined };
   return jsonOk(body, r.ok ? 200 : 403);
-}, async (_req, { params }) => offlineLessonComplete(Number((await params).lessonNo)));
+}, async (req, { params }) => {
+  const b = await readJsonBody(req);
+  const conversationFinished = !!(b && typeof b === "object" && (b as { conversationFinished?: unknown }).conversationFinished === true);
+  return offlineLessonComplete(Number((await params).lessonNo), { conversationFinished });
+});

@@ -13,6 +13,9 @@ import { StandingFigure } from "@/components/characters/StandingArt";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { apiGet, apiPost, isUnreachable } from "@/lib/api/client";
 import { offlineLesson, offlineLessonComplete } from "@/lib/offline";
+import { recordLocalLesson } from "@/lib/offline/localProgress";
+import { TOTAL_LESSONS } from "@/lib/curriculum";
+import { worldName } from "@/lib/game/worlds";
 import { OfflineNote } from "@/components/common/OfflineNote";
 import { LessonCompleteResponseSchema, LessonResponseSchema, type LessonCompleteResponse, type LessonResponse } from "@/lib/api/contracts";
 
@@ -69,16 +72,19 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
   });
   const next = (more: AnswerLog[] = []) => { setLogs((l) => [...l, ...more]); setStep((s) => s + 1); };
 
-  const finish = async (more: AnswerLog[], speedBest: number) => {
+  const finish = async (more: AnswerLog[], speedBest: number, conversationFinished = false) => {
     const all = [...logs, ...more];
     setLogs(all);
-    const r = await apiPost(`/api/lessons/${lesson.lessonNo}/complete`, LessonCompleteResponseSchema, { quizScore, speedListeningBest: speedBest, logs: all });
-    if (isUnreachable(r)) { setOffline(true); setResult(offlineLessonComplete(lesson.lessonNo)); return; }
-    if (r.data.offline) setOffline(true);
+    const r = await apiPost(`/api/lessons/${lesson.lessonNo}/complete`, LessonCompleteResponseSchema, { quizScore, speedListeningBest: speedBest, logs: all, conversationFinished });
+    // おためしモード: この ブラウザに だけ クリアを おぼえておく（マップに ✓ と「きょうのまとめ」が 出る）
+    if (isUnreachable(r)) { setOffline(true); recordLocalLesson(lesson.lessonNo); setResult(offlineLessonComplete(lesson.lessonNo, { conversationFinished })); return; }
+    if (r.data.offline) { setOffline(true); if (r.ok && r.data.ok) recordLocalLesson(lesson.lessonNo); }
     setResult(r.ok ? r.data : { ...r.data, ok: false, reasonJa: r.data.reasonJa || r.error || "もう一回ためしてね。" });
   };
 
   if (result) {
+    const isLast = lesson.lessonNo >= TOTAL_LESSONS;
+    const gate = /^(mini|boss)-/.test(result.nextTest ?? "") ? result.nextTest ?? "" : "";
     return (
       <div className="card rpg-rivets p-6 text-center">
         <div className="flex items-end justify-center gap-1" aria-hidden>
@@ -91,10 +97,15 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
         </div>
         <h2 className="font-title mt-2 text-2xl text-[var(--gold-dark)]">{result.ok ? `Lesson ${lesson.lessonNo} クリア！` : result.reasonJa}</h2>
         {result.ok && <p className="mt-2 text-xl font-black text-[var(--coin)]">🪙 +{result.reward?.total ?? 0}</p>}
-        {result.ok && <p className="mt-3 text-[var(--ink-2)]">このまま つぎのレッスンに すすめるよ！<br />あしたは「復習クエスト」から はじめよう。いちばん コインが もらえるよ 🪙</p>}
-        {result.ok && (/^(mini|boss)-/.test(result.nextTest ?? "")
-          ? <Link href={`/test/${encodeURIComponent(result.nextTest ?? "")}`} className="btn btn-coin mt-4 block">{result.nextTest?.startsWith("boss-") ? "ボスに いどむ！" : "まとめテストへ"}</Link>
-          : <Link href={`/lesson/${lesson.lessonNo + 1}`} className="btn btn-coin mt-4 block">つぎのレッスンへ</Link>)}
+        {result.ok && (result.reward?.coins ?? []).length > 1 && (
+          <ul className="mt-1 text-sm font-bold text-[var(--ink-2)]">{result.reward.coins.map((c, i) => <li key={i}>{c.labelJa} +{c.amount}</li>)}</ul>
+        )}
+        {result.ok && isLast && <p className="font-title mt-3 text-3xl text-[var(--coin)]">🎉 ぜんぶクリア！ 🎉</p>}
+        {result.ok && isLast && <p className="mt-1 text-[var(--ink-2)]">{TOTAL_LESSONS}こ ぜんぶの レッスンを クリアしたよ！ ほんとうに すごい！</p>}
+        {result.ok && !isLast && <p className="mt-3 text-[var(--ink-2)]">このまま つぎのレッスンに すすめるよ！<br />あしたは「復習クエスト」から はじめよう。いちばん コインが もらえるよ 🪙</p>}
+        {result.ok && (gate
+          ? <Link href={`/test/${encodeURIComponent(gate)}`} className="btn btn-coin mt-4 block">{gate.startsWith("boss-") ? (isLast ? "さいごの ボスに いどむ！" : "ボスに いどむ！") : "まとめテストへ"}</Link>
+          : !isLast && <Link href={`/lesson/${lesson.lessonNo + 1}`} className="btn btn-coin mt-4 block">つぎのレッスンへ</Link>)}
         {result.ok && <Link href={`/recap/${lesson.lessonNo}`} className="btn btn-primary mt-3 block">🎬 きょうのまとめを見る（2ぷん・おまけ）</Link>}
         {offline && <div className="mt-3"><OfflineNote show note="今回のきろくとコインは保存されないよ" /></div>}
         {!result.ok && <button className="btn btn-coin mt-4" onClick={() => { setResult(null); setStep(Math.max(0, steps.findIndex((s) => s.kind === "quiz"))); }}>クイズをもう一回</button>}
@@ -110,7 +121,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
       <OfflineNote show={offline} />
       {s.kind === "teacher_video" && <HeroScene title={`Session ${lesson.lessonNo}`} subtitle={`${lesson.title}｜${lesson.titleJa}`} variant="lesson" />}
       <header className="rpg-wood p-3">
-        <p className="font-title text-xs text-[var(--volt)]">Session {lesson.lessonNo} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
+        <p className="font-title text-xs text-[var(--volt)]">Session {lesson.lessonNo} ・ {worldName(lesson.world)} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
         <h1 className="text-xl font-black">{lesson.title} <span className="text-base text-[var(--on-dark-2)]">{lesson.titleJa}</span></h1>
         <ol className="mt-3 flex gap-1" aria-label="レッスンの進み具合">
           {steps.map((x, i) => (
@@ -130,7 +141,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
         // さいごの「かいわ」ステップがあれば そこへ。なければ ここで完了
         if (steps[step + 1]?.kind === "conversation") { setSpeedBest(best); next(l); } else void finish(l, best);
       }} />}
-      {s.kind === "conversation" && <ConversationStep lessonNo={lesson.lessonNo} conversation={lesson.conversation} character={s.character} maxTurns={s.maxTurns} items={items} onDone={(l) => void finish(l, speedBest)} />}
+      {s.kind === "conversation" && <ConversationStep lessonNo={lesson.lessonNo} conversation={lesson.conversation} character={s.character} maxTurns={s.maxTurns} items={items} onDone={(l, finished) => void finish(l, speedBest, finished)} />}
     </div>
   );
 }

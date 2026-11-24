@@ -12,23 +12,24 @@ import type { MapResponse } from "@/lib/api/contracts";
 import { Standing } from "@/components/characters/StandingArt";
 import { MonsterArt } from "@/components/characters/MonsterArt";
 import { BirimoArt } from "@/components/characters/CharacterArt";
+import { worldName } from "@/lib/game/worlds";
 import { AncientTree, At, Crystals, Fern, Fog, Motes, RuinRelief, TempleGate } from "@/components/scene/CinematicScenery";
 
 type StageNode = MapResponse["nodes"][number];
 
-const WORLD_THEMES: Record<number, { name: string; top: string; bottom: string; fog: string; monsters: string[]; glyphs: string[][] }> = {
-  1: { name: "はじまりのジャングル遺跡", top: "#0e2a24", bottom: "#081814", fog: "#bfe6d6", monsters: ["mon-044", "mon-028", "mon-091", "mon-037", "mon-019", "mon-056", "mon-055"], glyphs: [["A", "B"], ["C", "D"], ["E", "F"], ["G", "H"]] },
-  2: { name: "フォニックス火山の神殿", top: "#2e1408", bottom: "#140804", fog: "#ffcf9a", monsters: ["mon-031", "mon-091", "mon-080"], glyphs: [["cat"], ["pig"], ["dog"], ["bed"], ["bus"]] },
-  3: { name: "グラマーの海底遺跡", top: "#0b2236", bottom: "#05101c", fog: "#a8e2ff", monsters: ["mon-037", "mon-089", "mon-056"], glyphs: [["sh"], ["ch"], ["th"], ["wh"], ["ck"]] },
-  4: { name: "スピーキング天空城", top: "#1d1a3e", bottom: "#0c0a20", fog: "#d9ccff", monsters: ["mon-055", "mon-070"], glyphs: [["ABC"], ["st"], ["bl"], ["tr"], ["tw"]] },
-  5: { name: "じかんの塔", top: "#2a1f0c", bottom: "#120c04", fog: "#ffe7a8", monsters: ["mon-080", "mon-089", "mon-031"], glyphs: [["-st"], ["-nd"], ["-s"], ["-ing"], ["7:00"]] },
-  6: { name: "まなびの城", top: "#1a2a1c", bottom: "#0a140c", fog: "#c8f5c0", monsters: ["mon-055", "mon-037", "mon-091"], glyphs: [["a_e"], ["i_e"], ["o_e"], ["u_e"], ["abc"]] },
-  7: { name: "ひかりの島", top: "#0c2a33", bottom: "#04141a", fog: "#fff2b0", monsters: ["mon-080", "mon-056", "mon-031"], glyphs: [["ai"], ["ee"], ["ea"], ["oa"], ["ow"]] },
-  8: { name: "たびだちの道", top: "#2e1a0e", bottom: "#140a04", fog: "#ffd2a6", monsters: ["mon-037", "mon-070", "mon-089"], glyphs: [["oo"], ["ou"], ["ow"], ["oy"], ["igh"]] },
-  9: { name: "そらの大陸", top: "#14234a", bottom: "#080f24", fog: "#cfe4ff", monsters: ["mon-056", "mon-091", "mon-055"], glyphs: [["ar"], ["or"], ["er"], ["ir"], ["air"]] },
-  10: { name: "いのちの海", top: "#06303a", bottom: "#021418", fog: "#b8fff0", monsters: ["mon-031", "mon-080", "mon-070"], glyphs: [["ce"], ["ge"], ["-y"], ["-le"], ["aw"]] },
-  11: { name: "ゆめの都", top: "#2a1640", bottom: "#120820", fog: "#ffd6f5", monsters: ["mon-091", "mon-037", "mon-055"], glyphs: [["-ed"], ["was"], ["-er"], ["-est"], ["said"]] },
-  12: { name: "グランドフィナーレ", top: "#3a2a08", bottom: "#181004", fog: "#ffeaa0", monsters: ["mon-044", "mon-055", "mon-091", "mon-037"], glyphs: [["who"], ["why"], ["how"], ["bas-ket"], ["360"]] },
+const WORLD_THEMES: Record<number, { top: string; bottom: string; fog: string; monsters: string[]; glyphs: string[][] }> = {
+  1: { top: "#0e2a24", bottom: "#081814", fog: "#bfe6d6", monsters: ["mon-044", "mon-028", "mon-091", "mon-037", "mon-019", "mon-056", "mon-055"], glyphs: [["A", "B"], ["C", "D"], ["E", "F"], ["G", "H"]] },
+  2: { top: "#2e1408", bottom: "#140804", fog: "#ffcf9a", monsters: ["mon-031", "mon-091", "mon-080"], glyphs: [["cat"], ["pig"], ["dog"], ["bed"], ["bus"]] },
+  3: { top: "#0b2236", bottom: "#05101c", fog: "#a8e2ff", monsters: ["mon-037", "mon-089", "mon-056"], glyphs: [["sh"], ["ch"], ["th"], ["wh"], ["ck"]] },
+  4: { top: "#1d1a3e", bottom: "#0c0a20", fog: "#d9ccff", monsters: ["mon-055", "mon-070"], glyphs: [["ABC"], ["st"], ["bl"], ["tr"], ["tw"]] },
+  5: { top: "#2a1f0c", bottom: "#120c04", fog: "#ffe7a8", monsters: ["mon-080", "mon-089", "mon-031"], glyphs: [["-st"], ["-nd"], ["-s"], ["-ing"], ["7:00"]] },
+  6: { top: "#1a2a1c", bottom: "#0a140c", fog: "#c8f5c0", monsters: ["mon-055", "mon-037", "mon-091"], glyphs: [["a_e"], ["i_e"], ["o_e"], ["u_e"], ["abc"]] },
+  7: { top: "#0c2a33", bottom: "#04141a", fog: "#fff2b0", monsters: ["mon-080", "mon-056", "mon-031"], glyphs: [["ai"], ["ee"], ["ea"], ["oa"], ["ow"]] },
+  8: { top: "#2e1a0e", bottom: "#140a04", fog: "#ffd2a6", monsters: ["mon-037", "mon-070", "mon-089"], glyphs: [["oo"], ["ou"], ["ow"], ["oy"], ["igh"]] },
+  9: { top: "#14234a", bottom: "#080f24", fog: "#cfe4ff", monsters: ["mon-056", "mon-091", "mon-055"], glyphs: [["ar"], ["or"], ["er"], ["ir"], ["air"]] },
+  10: { top: "#06303a", bottom: "#021418", fog: "#b8fff0", monsters: ["mon-031", "mon-080", "mon-070"], glyphs: [["ce"], ["ge"], ["-y"], ["-le"], ["aw"]] },
+  11: { top: "#2a1640", bottom: "#120820", fog: "#ffd6f5", monsters: ["mon-091", "mon-037", "mon-055"], glyphs: [["-ed"], ["was"], ["-er"], ["-est"], ["said"]] },
+  12: { top: "#3a2a08", bottom: "#181004", fog: "#ffeaa0", monsters: ["mon-044", "mon-055", "mon-091", "mon-037"], glyphs: [["who"], ["why"], ["how"], ["bas-ket"], ["360"]] },
 };
 
 const W = 360;
@@ -156,7 +157,7 @@ export function WorldMap({ nodes }: { nodes: StageNode[] }) {
             <g transform={`translate(${W / 2} ${y0 + 40})`}>
               <rect x={-132} y={-19} width={264} height={36} rx={10} fill="url(#metal-gold)" />
               <rect x={-129} y={-16} width={258} height={30} rx={8} fill="#08150f" opacity={0.92} />
-              <text y={5} textAnchor="middle" fontSize={14} fontWeight={900} fill="#f2cf6a" letterSpacing={1}>WORLD {w}・{t.name}</text>
+              <text y={5} textAnchor="middle" fontSize={14} fontWeight={900} fill="#f2cf6a" letterSpacing={1}>WORLD {w}・{worldName(w)}</text>
             </g>
           </g>
         );
