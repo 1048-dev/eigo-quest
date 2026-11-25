@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W39_START, bigNumberDisplay, bigNumberOf, bigNumberWhy, debateDisplay, debateOf, debateWhy, ecoWordDisplay, ecoWordOf, ecoWordWhy, hedgeDisplay, hedgeOf, hedgeWhy, markerDisplay, markerOf, markerWhy } from "./w39Phonics";
 import { W38_START, characterDisplay, characterOf, characterWhy, feelingSpellDisplay, feelingSpellOf, feelingSpellWhy, idiomDisplay, idiomOf, idiomWhy, phrasalDisplay, phrasalOf, phrasalWhy, toneDisplay, toneOf, toneWhy } from "./w38Phonics";
 import { W37_START, adverbDisplay, adverbOf, adverbWhy, simileDisplay, simileOf, simileWhy, soundWordDisplay, soundWordOf, soundWordWhy, storyVerbDisplay, storyVerbOf, storyVerbWhy, suspenseDisplay, suspenseOf, suspenseWhy } from "./w37Phonics";
 import { W36_START, academicDisplay, academicOf, academicWhy, bioDisplay, bioOf, bioWhy, ologyDisplay, ologyOf, ologyWhy, pauseDisplay, pauseOf, pauseWhy,unitDisplay, unitOf, unitWhy } from "./w36Phonics";
@@ -585,6 +586,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド39（せかいの円卓・L1141〜）の フォニックス（環境の ことばの パーツ・大きな 数と 割合・ディベートの プロソディ・つなぎの ことば・ヘッジの ことば）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - パーツ（"renewable"）: 「環境の ことばの パーツ。＿＿ に 入る パーツは どれ？」（re ＋ ＿＿ ＋ able → new / cycle / duce）
+ * - 数（"one million"）: 「大きな 数と 割合。英語で どう よむ？」（1,000,000 → one million / one billion / ten thousand）
+ * - プロソディ（"We believe that"）: 「ディベートの プロソディ。いちばん つよく いう ことばは どれ？」（We believe that schools should have gardens. → believe）
+ * - つなぎ（"However"）: 「つなぎの ことば。＿＿ に 入る ことばは どれ？」（Plastic is useful. ＿＿, it can harm the sea. → However）
+ * - ヘッジ（"probably"）: 「ヘッジの ことば。いいすぎない ことばは どれ？」（It will ＿＿ rain this afternoon.（たぶん）→ probably / definitely / never）
+ * あてはまらなければ null。ワールド38 の 問題より 先に よぶ。
+ */
+export function w39Question(item: LearningItemDef, rng: () => number): (Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> & { audioText?: string }) | null {
+  if (item.lessonNo < W39_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const e = ecoWordOf(item.text);
+  if (e && focus.includes(e.word)) return { promptJa: "環境の ことばの パーツ。＿＿ に 入る パーツは どれ？", display: ecoWordDisplay(e), choices: pick([e.answer, ...e.wrong]), answer: e.answer, explanationJa: ecoWordWhy(e) };
+  const n = bigNumberOf(item.text);
+  if (n && focus.includes(n.word)) return { promptJa: "大きな 数と 割合。英語で どう よむ？", display: bigNumberDisplay(n), choices: pick([n.answer, ...n.wrong]), answer: n.answer, explanationJa: bigNumberWhy(n), audioText: n.answer };
+  const d = debateOf(item.text);
+  if (d && focus.includes(d.phrase.toLowerCase())) return { promptJa: "ディベートの プロソディ。いちばん つよく いう ことばは どれ？", display: debateDisplay(d), choices: pick([d.answer, ...d.wrong]), answer: d.answer, explanationJa: debateWhy(d), audioText: d.sentence };
+  const m = markerOf(item.text);
+  if (m && focus.includes(m.marker.toLowerCase())) return { promptJa: "つなぎの ことば。＿＿ に 入る ことばは どれ？", display: markerDisplay(m), choices: pick([m.answer, ...m.wrong]), answer: m.answer, explanationJa: markerWhy(m) };
+  const h = hedgeOf(item.text);
+  if (h && focus.includes(h.word)) return { promptJa: "ヘッジの ことば。いいすぎない ことばは どれ？", display: hedgeDisplay(h), choices: pick([h.answer, ...h.wrong]), answer: h.answer, explanationJa: hedgeWhy(h) };
   return null;
 }
 
@@ -1508,8 +1538,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド35（-ity・inter- と co-・対比の 強勢・あらたまった ことば・語根の まとめ）は その 先（interrupt を ワールド33 の rupt、respect を ワールド29 の spect の 問いで 問わない）
       // ワールド36（bio・学習語彙の 強勢・発表の 区切り・-ology・数と たんい）は その 先（biology を ワールド23 の 強勢、-2°C を まえの ワールドで 問わない）
       // ワールド37（物語の 動詞・音の ことば・語りの 間・-ly・たとえ）は その 先（bravely を ワールド18 の -ly、crash を ワールド4 の cr で 問わない）
-      // ワールド38（気持ちの つづり・句動詞・共感の イントネーション・慣用句・性格の ことば）は いちばん 先（helpful を まえの ワールドの -ful、cheer up を 音の つながりで 問わない）
-      const dq = w38Question(item, rng) ?? w37Question(item, rng) ?? w36Question(item, rng) ?? w35Question(item, rng) ?? w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド38（気持ちの つづり・句動詞・共感の イントネーション・慣用句・性格の ことば）は その 先（helpful を まえの ワールドの -ful、cheer up を 音の つながりで 問わない）
+      // ワールド39（環境の ことばの パーツ・大きな 数と 割合・ディベートの プロソディ・つなぎの ことば・ヘッジ）は いちばん 先（renewable を まえの ワールドの 接頭辞、seventy percent を まえの 数の 問題で 問わない）
+      const dq = w39Question(item, rng) ?? w38Question(item, rng) ?? w37Question(item, rng) ?? w36Question(item, rng) ?? w35Question(item, rng) ?? w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
