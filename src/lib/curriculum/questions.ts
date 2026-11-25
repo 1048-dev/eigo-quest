@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { ED_WHY, IRREGULAR_FOCUS_OF, IRREGULAR_WHY, W16_ED_FOCUS, W16_ED_SOUND_RULE, W16_IRREGULAR_FOCUS, W16_START, edSpelling, irregularPast } from "./w16Phonics";
 import { ING_WHY, W15_CONTRACTION_FOCUS, W15_ING_FOCUS, W15_START, W15_Y_FOCUS, Y3_LABEL, Y3_SOUNDS, Y3_WHY, compoundChoices, compoundSplit, compoundWhy, contractionOf, contractionWhy, ingSpelling, y3Sound } from "./w15Phonics";
 
 export type QuestionType =
@@ -565,6 +566,48 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
   return null;
 }
 
+/**
+ * ワールド16（きおくの遺跡・L451〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
+ * - "-ed": 「ed を つけた ただしい つづりは？」（stop → stopped / stoped / stopeed、cry → cried / cryed / cryied）。
+ *   rule が "ed-sounds" の 回は「おわりの -ed は どの おと？」（ト / ド / イド）
+ * - "a" "o_e" "ew" "ought" "aught": 「すぎた ことの かたちは？」（sing → sang / singed / sanged、buy → bought / buyed / baught）。
+ *   表に ある ふきそくな 過去形だけ
+ * あてはまらなければ null。ワールド15 の 問題より 先に よぶ（wrote を マジック e、stopped を はじめの ブレンドで 問わない）。
+ */
+export function w16Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W16_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of focus) {
+    if ((W16_ED_FOCUS as readonly string[]).includes(f)) {
+      if (lesson.phonics.rule === W16_ED_SOUND_RULE) {
+        const s = edSound(w);
+        if (!s) continue;
+        const why = s === "id" ? "t や d の あとの -ed は「イド」と よむよ。"
+          : s === "t" ? "p・k・s・sh・ch のような いきだけの おとの あとの -ed は ちいさく「ト」と よむよ。"
+          : "こえの でる おと（n・l・y など）の あとの -ed は「ド」と よむよ。";
+        return { promptJa: "この ことばの おわりの -ed は どの おと？", display: item.text,
+          choices: shuffle(["t", "d", "id"] as const, rng).map((x) => ({ id: x, label: ED_LABEL[x] })), answer: s,
+          explanationJa: `${item.text} の -ed は「${ED_KANA[s]}」。${why}` };
+      }
+      const e = edSpelling(w);
+      if (!e) continue;
+      return { promptJa: "ed を つけた ただしい つづりは どれ？", display: `${e.base} → ？`, choices: pick([e.answer, ...e.wrong]), answer: e.answer,
+        explanationJa: `${e.base} → ${e.answer}。${ED_WHY[e.kind](e.base)}` };
+    }
+    if ((W16_IRREGULAR_FOCUS as readonly string[]).includes(f)) {
+      const p = irregularPast(w);
+      if (!p || IRREGULAR_FOCUS_OF[p.kind] !== f) continue;
+      return { promptJa: "すぎた ことの かたちは どれ？", display: `${p.base} → ？`, choices: pick([p.answer, ...p.wrong]), answer: p.answer,
+        explanationJa: IRREGULAR_WHY[p.kind](p.base, p.answer) };
+    }
+  }
+  return null;
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -641,8 +684,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       //   shy は sh ではなく -y の回、chew は ch ではなく ew の回、what は wh ではなく サイトワードの 回の問題にする）
       // ワールド13（3 単現の -s・-tch / -dge）は いちばん 先（likes を 複数形の -s、catch を ダイグラフの ch で 問わない）
       // ワールド14（複数形・だまっている もじ・数の つづり）は さらに その 先（boxes を ワールド13 の -s の おと、knife を さいしょの おとで 問わない）
-      // ワールド15（-ing の つづり・複合語・短縮形・y の 3つの おと）は いちばん 先（running を 語末の -ing、sunflower を はくの 数で 問わない）
-      const dq = w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド15（-ing の つづり・複合語・短縮形・y の 3つの おと）は その 先（running を 語末の -ing、sunflower を はくの 数で 問わない）
+      // ワールド16（-ed の つづり・ふきそくな 過去形・-ed の おと）は いちばん 先（wrote を マジック e、stopped を ブレンドで 問わない）
+      const dq = w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

@@ -21,6 +21,7 @@ import { ER_MORE_WORDS, edSound } from "@/lib/curriculum/w11Phonics";
 import { chBlank, heSpelling, sSound } from "@/lib/curriculum/w13Phonics";
 import { numberSpelling, pluralSpelling } from "@/lib/curriculum/w14Phonics";
 import { compoundSplit, contractionOf, ingSpelling, y3Sound } from "@/lib/curriculum/w15Phonics";
+import { edSpelling, irregularPast } from "@/lib/curriculum/w16Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -1329,5 +1330,113 @@ describe("カリキュラム: ワールド15 の決まりごと（かぜの草�
     if (w15.length === 0) return;
     for (const n of [425, 445, 450]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえ.*(いわなくて|かかなくて) OK/);
     expect(at(425)!.teacherScript).toMatch(/don't say your address/);
+  });
+});
+
+describe("カリキュラム: ワールド16 の決まりごと（きおくの遺跡）", () => {
+  const w16 = LESSONS.filter((l) => l.world === 16);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+
+  it("ワールド16 は 451〜480 の 30 レッスン、ステージ2・A1+、学年の めやすは 中1", () => {
+    if (w16.length === 0) return; // 未作成ならスキップ
+    expect(w16.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 451 + i));
+    for (const l of w16) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中1");
+      expect(l.stage, `L${l.lessonNo}`).toBe(2);
+      expect(l.level, `L${l.lessonNo}`).toBe("A1+");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w16.length === 0) return;
+    expect(at(451)!.title).toBe("The Old Ruins");
+    expect(at(452)!.title).toBe("What Did You Do Yesterday?");
+    expect(at(462)!.title).toBe("I Thought It Was a Ghost!");
+    expect(at(466)!.title).toBe("Once Upon a Time");
+    expect(at(473)!.title).toBe("Sounds Fun! Oh No!");
+    expect(at(480)!.title).toBe("World 16 Grand Review");
+  });
+
+  it("フォニックス: -ed の つづり → i → a → o…e・ew → ought / aught → -ed の おと（各ブロックの 5回目と L476〜480 は ふりかえり）", () => {
+    if (w16.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(451, 454, "ed-spelling");
+    rule(456, 459, "past-i-a");
+    rule(461, 462, "past-o-e");
+    rule(463, 464, "past-ew");
+    rule(466, 469, "ought-aught");
+    rule(471, 474, "ed-sounds");
+    for (const n of [455, 460, 465, 470, 475, 476, 477, 478, 479, 480]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    for (const l of range(451, 455)) for (const w of l.phonics.words) expect(edSpelling(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(at(451)!.phonics.words.map((w) => edSpelling(w)?.kind)).toEqual(["drop-e", "drop-e", "drop-e", "drop-e"]);
+    expect(at(452)!.phonics.words.map((w) => edSpelling(w)?.kind)).toEqual(["y-i", "y-i", "y-i", "y-i"]);
+    expect(at(453)!.phonics.words.map((w) => edSpelling(w)?.kind)).toEqual(["double", "double", "double", "double"]);
+    const kinds = (a: number, b: number) => [...new Set(range(a, b).flatMap((l) => l.phonics.words.map((w) => irregularPast(w)?.kind)))];
+    expect(kinds(456, 459)).toEqual(["i-a"]);
+    expect(kinds(461, 462)).toEqual(["o-e"]);
+    expect(kinds(463, 464)).toEqual(["ew"]);
+    expect(kinds(466, 469).sort()).toEqual(["aught", "ought"]);
+    for (const l of range(471, 474)) for (const w of l.phonics.words) expect(edSound(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    // -ed の おとの 回は 3つの おとが まざる
+    expect(new Set(range(471, 474).flatMap((l) => l.phonics.words.map(edSound)))).toEqual(new Set(["t", "d", "id"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w16.length === 0) return;
+    expect(ex(451, 455)).toContain("People lived here long ago.");
+    expect(ex(451, 455)).toContain("What did you do yesterday?");
+    expect(ex(451, 455)).toContain("We stopped and looked at the wall.");
+    expect(ex(451, 455)).toContain("Did you see that?");
+    expect(ex(451, 455)).toContain("Yes, I did!");
+    expect(ex(451, 455)).toContain("No, I didn't.");
+    expect(ex(451, 455)).toContain("We walked to the ruins. We found a door.");
+    expect(ex(451, 455)).toContain("weren't");
+    expect(ex(456, 460)).toContain("We sang a song by the campfire.");
+    expect(ex(456, 460)).toContain("I wrote a letter to my grandma.");
+    expect(ex(456, 460)).toContain("Birimo knew the answer!");
+    expect(ex(456, 460)).toContain("Where did you go last weekend?");
+    expect(ex(456, 460)).toContain("I went to the river. I caught a fish.");
+    expect(ex(461, 465)).toContain("I bought a map at the shop.");
+    expect(ex(461, 465)).toContain("I thought it was a ghost!");
+    expect(ex(461, 465)).toContain("Who taught you?");
+    expect(ex(461, 465)).toContain("It wasn't easy, but I did it.");
+    expect(ex(461, 465)).toContain("Were you tired?");
+    expect(ex(466, 470)).toContain("Once upon a time, a king lived here.");
+    expect(ex(466, 470)).toContain("First, he opened the box. Then, he looked inside.");
+    expect(ex(466, 470)).toContain("After that,");
+    expect(ex(466, 470)).toContain("Finally, the king smiled.");
+    expect(ex(466, 470)).toContain("How did he feel?");
+    expect(ex(471, 475)).toContain("How was your summer?");
+    expect(ex(471, 475)).toContain("Who did you go with?");
+    expect(ex(471, 475)).toContain("Sounds fun!");
+    expect(ex(471, 475)).toContain("Oh no! What happened?");
+    expect(ex(471, 475)).toContain("My best day was my birthday.");
+    expect(ex(471, 475)).toContain("When did you");
+    expect(ex(476, 480)).toContain("I went, I saw, I ate, I bought.");
+    expect(ex(476, 480)).toContain("Last Sunday, I went to the library. It was quiet.");
+    expect(ex(476, 480)).toContain("Once upon a time, four friends found a map.");
+  });
+
+  it("ステージ2: 先生の 台本は ほぼ 英語（日本語の たすけは みじかく）、会話シーンは 4〜7 行、L480 は スピード TPR", () => {
+    if (w16.length === 0) return;
+    for (const l of w16) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.25);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(120);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(4);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+    }
+    expect(at(480)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("日記・インタビュー・発表の AI 会話は「なまえ（・じゅうしょ）は いわなくて OK」。手紙と 日記の 台本でも じゅうしょを 教えないと 教える", () => {
+    if (w16.length === 0) return;
+    for (const n of [455, 475, 478, 480]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえ.*(いわなくて|かかなくて) OK/);
+    expect(at(457)!.conversation!.aiTask.goalJa).toMatch(/じゅうしょは いわなくて OK/);
+    expect(at(457)!.teacherScript).toMatch(/never share your address/);
+    for (const n of [455, 478]) expect(at(n)!.teacherScript, `L${n}`).toMatch(/don't need to write your real name or address/);
   });
 });

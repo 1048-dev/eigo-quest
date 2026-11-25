@@ -1,0 +1,4651 @@
+{
+  "world": 16,
+  "stage": 2,
+  "level": "A1+",
+  "lessons": [
+    {
+      "lessonNo": 451,
+      "world": 16,
+      "title": "The Old Ruins",
+      "titleJa": "ふるい いせき",
+      "school": {
+        "grade": "中1",
+        "topic": "People lived here long ago.：むかしの ことを いう（過去形の ひろがり）",
+        "grammar": "過去形（-ed）・long ago",
+        "expressions": [
+          {
+            "en": "People lived here long ago.",
+            "ja": "むかし ここに 人が すんでいました。",
+            "core": true
+          },
+          {
+            "en": "This place is very old.",
+            "ja": "この ばしょは とても ふるいです。"
+          },
+          {
+            "en": "They lived in stone houses.",
+            "ja": "かれらは いしの いえに すんでいました。"
+          }
+        ],
+        "testPoints": [
+          "People lived here long ago. で むかしの ことを いえる",
+          "live → lived、dance → danced（e で おわる ことばは d だけ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Touch the old wall gently.",
+          "ja": "ふるい かべに そっと さわって。",
+          "action": "ゆびで やさしく さわる まね",
+          "emoji": "🧱"
+        },
+        {
+          "en": "Brush off the dust.",
+          "ja": "ほこりを はらって。",
+          "action": "てで さっさと はらう まね",
+          "emoji": "🧹"
+        },
+        {
+          "en": "Look up at the tower.",
+          "ja": "とうを みあげて。",
+          "action": "くびを うえに むけて みあげる",
+          "emoji": "🗼"
+        },
+        {
+          "en": "Step over the rock.",
+          "ja": "いわを またいで。",
+          "action": "あしを たかく あげて またぐ",
+          "emoji": "🪨"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-spelling",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/d/",
+          "/t/"
+        ],
+        "words": [
+          "lived",
+          "liked",
+          "danced",
+          "smiled"
+        ],
+        "tipJa": "e で おわる ことばは d だけ つける: live → lived、like → liked、dance → danced、smile → smiled。"
+      },
+      "vocab": [
+        {
+          "en": "ruins",
+          "ja": "いせき",
+          "emoji": "🏛️",
+          "core": true
+        },
+        {
+          "en": "wall",
+          "ja": "かべ",
+          "emoji": "🧱"
+        },
+        {
+          "en": "tower",
+          "ja": "とう",
+          "emoji": "🗼"
+        },
+        {
+          "en": "stone",
+          "ja": "いし",
+          "emoji": "🪨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to World 16, the Ruins of Memory. Last time, the wind feather showed us old stone ruins on the map. And now we are here! Look at these old walls and this tall tower. Long, long ago, people lived here. Today's sentence is: People lived here long ago. Say it with me. People lived here long ago. Great! Lived is the past form of live. We use past forms for things that already happened. このワールドでは「すぎた こと」を たくさん はなすよ。 Long ago means a very long time before now. Now, phonics. Live, lived. Like, liked. Dance, danced. Smile, smiled. These words end in e, so we just add d. Easy, right? Here's a tip. Ruins are very old and easy to break, so we touch them gently. Let's be careful explorers. Ready? Let's explore the ruins!",
+      "conversation": {
+        "scene": "Past the plains, the team finds old stone ruins",
+        "sceneJa": "草原の 先で、古い 遺跡を 見つける",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! Stone walls and a tall tower!",
+            "ja": "みて！いしの かべと たかい とう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow. Is this the place on the map?",
+            "ja": "わあ。ちずの ばしょって ここ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. These are ruins. People lived here long ago.",
+            "ja": "そうよ。これは いせき。むかし ここに 人が すんでいたの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Long ago? How long ago?",
+            "ja": "むかし？どれくらい まえ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Maybe a thousand years ago. They lived in stone houses.",
+            "ja": "たぶん 千年くらい まえね。いしの いえに すんでいたのよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look at this painting on the wall. The people danced and smiled!",
+            "ja": "かべの えを みて。みんな おどって、わらってる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "They liked music, too. I want to know more!",
+            "ja": "おんがくも すきだったんだね。もっと しりたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いせきを みて、People lived here long ago. の ように むかしの ことを いってみよう",
+          "starterEn": "Hi! I'm Kiko. Look at these old stone walls! People lived here long ago. What do you see?",
+          "targetExpressions": [
+            "People lived here long ago.",
+            "This place is very old.",
+            "They lived in ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "People lived here long ago.（むかし ここに 人が すんでいた）",
+          "live → lived、like → liked、dance → danced（e で おわる ことばは d だけ）",
+          "ruins（いせき）・wall・tower・stone"
+        ]
+      }
+    },
+    {
+      "lessonNo": 452,
+      "world": 16,
+      "title": "What Did You Do Yesterday?",
+      "titleJa": "きのう なにを したの？",
+      "school": {
+        "grade": "中1",
+        "topic": "What did you do yesterday?：きのうの ことを きく・こたえる",
+        "grammar": "What did you do yesterday? ― I ～ed.",
+        "expressions": [
+          {
+            "en": "What did you do yesterday?",
+            "ja": "きのうは なにを しましたか？",
+            "core": true
+          },
+          {
+            "en": "I played soccer with my friends.",
+            "ja": "ともだちと サッカーを しました。"
+          },
+          {
+            "en": "I tried a new food. It was good!",
+            "ja": "あたらしい たべものを ためしました。おいしかった！"
+          }
+        ],
+        "testPoints": [
+          "What did you do yesterday? と きいて、すぎた かたちで こたえられる",
+          "cry → cried、study → studied（子音＋y は y を i に かえて ed）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Kick the ball.",
+          "ja": "ボールを けって。",
+          "action": "あしで ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Carry the bags.",
+          "ja": "にもつを はこんで。",
+          "action": "おもい にもつを りょうてで もつ まね",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Try again.",
+          "ja": "もう いちど やってみて。",
+          "action": "こぶしを にぎって もう いっかい",
+          "emoji": "💪"
+        },
+        {
+          "en": "Dry your hands.",
+          "ja": "てを ふいて。",
+          "action": "タオルで てを ふく まね",
+          "emoji": "🧻"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-spelling",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/d/"
+        ],
+        "words": [
+          "cried",
+          "tried",
+          "carried",
+          "studied"
+        ],
+        "tipJa": "子音＋y で おわる ことばは y を i に かえて ed: cry → cried、try → tried、carry → carried、study → studied。"
+      },
+      "vocab": [
+        {
+          "en": "yesterday",
+          "ja": "きのう",
+          "emoji": "📅",
+          "core": true
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "pancake",
+          "ja": "パンケーキ",
+          "emoji": "🥞"
+        },
+        {
+          "en": "bag",
+          "ja": "かばん",
+          "emoji": "🎒"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! We're at the entrance of the ruins. Before we go in, let's talk about yesterday. To ask about yesterday, say, What did you do yesterday? Say it with me. What did you do yesterday? Great! Did is the past form of do. In the answer, we use a past form. I played soccer with my friends. I tried a new food. It was good! きのうの ことは did で きいて、played の ような すぎた かたちで こたえるよ。 Now, phonics. Cry, cried. Try, tried. Carry, carried. Study, studied. When a word ends in a consonant and y, change the y to i and add ed. Let's spell cried together. C, r, i, e, d. Good! Here's a tip. When your friend answers, ask one more question, like, Was it fun? Then it's a real conversation. Okay, let's ask our friends about yesterday!",
+      "conversation": {
+        "scene": "At the entrance of the ruins, the team talks about yesterday",
+        "sceneJa": "遺跡の 入り口で、昨日の ことを 話す",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Good morning, Riko! What did you do yesterday?",
+            "ja": "おはよう、リコ！きのう なにを した？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I danced at the live show. Then I studied the map.",
+            "ja": "ライブショーで おどったよ。それから ちずを しらべたの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I tried a plains pancake. It was really good!",
+            "ja": "ぼくは 草原の パンケーキを たべてみた。すごく おいしかった！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I carried all the bags to the tent. They were heavy!",
+            "ja": "ぼくは にもつを ぜんぶ テントに はこんだよ。おもかった！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thank you, Birimo. What did you do yesterday, Kiko?",
+            "ja": "ありがとう、ビリモ。キコは きのう なにを した？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I cried a little at the goodbye picnic.",
+            "ja": "さよならピクニックで すこし ないちゃった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Me too. But now we have new ruins to explore!",
+            "ja": "わたしも。でも いまは たんけんする いせきが あるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What did you do yesterday? と きいたり、I played ～. の ように きのうの ことを こたえたり しよう",
+          "starterEn": "Hi! I'm Haru. Good morning! I tried a pancake yesterday. It was good! What did you do yesterday?",
+          "targetExpressions": [
+            "What did you do yesterday?",
+            "I ～ed ～.",
+            "It was ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What did you do yesterday? ― I played soccer with my friends.",
+          "cry → cried、try → tried、carry → carried、study → studied（y を i に かえて ed）",
+          "こたえを きいたら Was it fun? と もう ひとつ きこう"
+        ]
+      }
+    },
+    {
+      "lessonNo": 453,
+      "world": 16,
+      "title": "We Stopped and Looked",
+      "titleJa": "とまって みてみた",
+      "school": {
+        "grade": "中1",
+        "topic": "We stopped and looked at the wall.：すぎた ことを 2つ つなげて いう",
+        "grammar": "過去形 ＋ and ＋ 過去形（stopped and looked）",
+        "expressions": [
+          {
+            "en": "We stopped and looked at the wall.",
+            "ja": "わたしたちは とまって かべを みました。",
+            "core": true
+          },
+          {
+            "en": "The people in the painting clapped their hands.",
+            "ja": "えの なかの 人たちは てを たたいていました。"
+          },
+          {
+            "en": "We walked slowly and looked carefully.",
+            "ja": "わたしたちは ゆっくり あるいて、よく みました。"
+          }
+        ],
+        "testPoints": [
+          "2つの すぎた ことを and で つなげて いえる（stopped and looked）",
+          "stop → stopped、clap → clapped（子音を 重ねて ed）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stop and look.",
+          "ja": "とまって みて。",
+          "action": "ぴたっと とまって ゆびさす",
+          "emoji": "✋"
+        },
+        {
+          "en": "Clap your hands.",
+          "ja": "てを たたいて。",
+          "action": "パンパンと てを たたく",
+          "emoji": "👏"
+        },
+        {
+          "en": "Hop on one foot.",
+          "ja": "かたあしで はねて。",
+          "action": "かたあしで ぴょんぴょん",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Drop the ball.",
+          "ja": "ボールを おとして。",
+          "action": "てを ひらいて おとす まね",
+          "emoji": "⚾"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-spelling",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/"
+        ],
+        "words": [
+          "stopped",
+          "clapped",
+          "hopped",
+          "dropped"
+        ],
+        "tipJa": "みじかい 母音＋子音 1つで おわる ことばは、さいごの もじを 2つに して ed: stop → stopped、clap → clapped、hop → hopped、drop → dropped。"
+      },
+      "vocab": [
+        {
+          "en": "painting",
+          "ja": "え（かいた え）",
+          "emoji": "🖼️",
+          "core": true
+        },
+        {
+          "en": "flashlight",
+          "ja": "かいちゅうでんとう",
+          "emoji": "🔦"
+        },
+        {
+          "en": "deer",
+          "ja": "しか",
+          "emoji": "🦌"
+        },
+        {
+          "en": "drum",
+          "ja": "たいこ",
+          "emoji": "🥁"
+        }
+      ],
+      "teacherScript": "Hello, explorers! We're walking inside the ruins. It's a little dark, so we have flashlights. Suddenly, Riko says, Stop! There's a big painting on the wall. Later, we can say, We stopped and looked at the wall. Say it with me. We stopped and looked at the wall. Great! You can join two past actions with and. Stopped and looked. Walked and talked. Now, phonics. Stop, stopped. Clap, clapped. Hop, hopped. Drop, dropped. These words have a short vowel and end in one consonant. So we double the last letter and add ed. 2つ かさねる ルールは -ing の ときと おなじだね。 Here's a tip. In a dark place, walk slowly and stay with your group. Don't run! Okay, let's look at the painting together. What did the people do long ago?",
+      "conversation": {
+        "scene": "In front of a big wall painting inside the ruins",
+        "sceneJa": "遺跡の 壁画の 前で",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Wait! Stop! Look at this wall.",
+            "ja": "まって！とまって！この かべを みて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow, it's a big painting!",
+            "ja": "わあ、おおきな えだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The people in the painting clapped their hands. Maybe it was a party.",
+            "ja": "えの 人たち、てを たたいてる。パーティー だったのかな。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And this boy hopped like a rabbit. Look at his legs!",
+            "ja": "この おとこのこは うさぎみたいに はねてる。あしを みて！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Long ago, people painted their happy days on walls.",
+            "ja": "むかしの 人は たのしい 日の ことを かべに かいたのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh no, I dropped my flashlight! Okay, I got it.",
+            "ja": "あっ、かいちゅうでんとうを おとしちゃった！よし、ひろった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Today we stopped and looked at the wall. Let's write it in our diaries!",
+            "ja": "きょうは とまって かべを みたね。にっきに かこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かべの えを みて、えの 人が した ことを ～ed で いってみよう",
+          "starterEn": "Hi! I'm Riko. We stopped and looked at a big painting. The people clapped their hands! What did you see today?",
+          "targetExpressions": [
+            "We stopped and looked at ～.",
+            "They ～ed.",
+            "What did you see?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We stopped and looked at the wall.（とまって かべを みた）",
+          "stop → stopped、clap → clapped、hop → hopped、drop → dropped（子音を 重ねて ed）",
+          "くらい ところでは ゆっくり、みんなと いっしょに"
+        ]
+      }
+    },
+    {
+      "lessonNo": 454,
+      "world": 16,
+      "title": "Did You See That?",
+      "titleJa": "いまの、みた？",
+      "school": {
+        "grade": "中1",
+        "topic": "Did you ～? ― Yes, I did. / No, I didn't.：すぎた ことを きく・こたえる",
+        "grammar": "Did you ～? ― Yes, I did. / No, I didn't.",
+        "expressions": [
+          {
+            "en": "Did you see that?",
+            "ja": "いまの、みた？",
+            "core": true
+          },
+          {
+            "en": "Yes, I did! Something moved!",
+            "ja": "うん、みた！なにかが うごいた！"
+          },
+          {
+            "en": "Did you hear a noise? ― No, I didn't.",
+            "ja": "もの音が きこえた？ ― ううん、きこえなかった。"
+          }
+        ],
+        "testPoints": [
+          "Did you ～? に Yes, I did. / No, I didn't. で こたえられる",
+          "jumped・waved・hugged・hurried（ed の つけかた 4つの まとめ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jump back.",
+          "ja": "うしろに とんで。",
+          "action": "びっくりして うしろに ぴょん",
+          "emoji": "😲"
+        },
+        {
+          "en": "Hurry up.",
+          "ja": "いそいで。",
+          "action": "その場で はやあし",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Hug your friend.",
+          "ja": "ともだちを ぎゅっと して。",
+          "action": "じぶんを ぎゅっと だきしめる",
+          "emoji": "🤗"
+        },
+        {
+          "en": "Wave bye-bye.",
+          "ja": "バイバイ して。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-spelling",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/"
+        ],
+        "words": [
+          "jumped",
+          "waved",
+          "hugged",
+          "hurried"
+        ],
+        "tipJa": "ed の つけかた 4つ: そのまま（jump → jumped）、d だけ（wave → waved）、重ねる（hug → hugged）、y を i に（hurry → hurried）。"
+      },
+      "vocab": [
+        {
+          "en": "shadow",
+          "ja": "かげ",
+          "emoji": "👤",
+          "core": true
+        },
+        {
+          "en": "noise",
+          "ja": "もの音",
+          "emoji": "🔊"
+        },
+        {
+          "en": "lizard",
+          "ja": "とかげ",
+          "emoji": "🦎"
+        },
+        {
+          "en": "hole",
+          "ja": "あな",
+          "emoji": "🕳️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're in a long, dark passage in the ruins. Shh! What was that? Something moved! To ask a friend, say, Did you see that? Say it with me. Did you see that? Good! For a yes answer, say, Yes, I did. For a no answer, say, No, I didn't. Didn't means did not. Did ～? の しつもんには、Yes, I did. か No, I didn't. で こたえるよ。 Let's try one more. Did you hear a noise? No, I didn't. Now, phonics. Today we mix all the rules. Jump, jumped. Just add ed. Wave, waved. Just add d. Hug, hugged. Double the g. Hurry, hurried. Change y to i. Here's a tip. If you see a small wild animal, don't touch it. Just watch it quietly. Okay, let's find out what moved!",
+      "conversation": {
+        "scene": "In a dark passage, something moves",
+        "sceneJa": "遺跡の 通路で、何かが 動いた",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Did you see that? Something moved!",
+            "ja": "いまの みた？なにかが うごいた！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, I did! It was a small shadow.",
+            "ja": "うん、みた！ちいさな かげ だった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Did you hear a noise, Birimo?",
+            "ja": "もの音 きこえた、ビリモ？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, I didn't. But I jumped!",
+            "ja": "ううん、きこえなかった。でも とびあがっちゃった！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look, it's just a little lizard. It hurried into a hole.",
+            "ja": "みて、ちいさな とかげよ。いそいで あなに はいったわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Phew! I hugged Riko because I was scared.",
+            "ja": "ふう！こわくて リコに だきついちゃった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "That's okay. Bye, little lizard!",
+            "ja": "だいじょうぶだよ。バイバイ、とかげさん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Did you see that? と きいたり、Yes, I did. / No, I didn't. で こたえたり しよう",
+          "starterEn": "Hi! I'm Kiko. Something moved in the dark passage! Did you see that?",
+          "targetExpressions": [
+            "Did you see that?",
+            "Yes, I did.",
+            "No, I didn't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Did you see that? ― Yes, I did! / No, I didn't.",
+          "jump → jumped、wave → waved、hug → hugged、hurry → hurried",
+          "やせいの いきものは さわらずに しずかに みる"
+        ]
+      }
+    },
+    {
+      "lessonNo": 455,
+      "world": 16,
+      "title": "Ruins Diary, Day One",
+      "titleJa": "いせき にっき 1日め",
+      "school": {
+        "grade": "中1",
+        "topic": "We walked to the ruins. We found a door.：日記を すぎた かたちで かく・よむ",
+        "grammar": "過去形の 文を ならべる・was / were の 否定（wasn't / weren't）",
+        "expressions": [
+          {
+            "en": "We walked to the ruins. We found a door.",
+            "ja": "わたしたちは いせきまで あるきました。とびらを みつけました。",
+            "core": true
+          },
+          {
+            "en": "It was dark, but we weren't scared.",
+            "ja": "くらかったけど、わたしたちは こわく なかったです。"
+          },
+          {
+            "en": "Was it fun? ― Yes, it was!",
+            "ja": "たのしかった？ ― うん、たのしかった！"
+          }
+        ],
+        "testPoints": [
+          "すぎた かたちの 文を 2〜3 つ ならべて 日記が かける",
+          "ed の つけかた 4つ（そのまま・d だけ・重ねる・y を i に）の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your diary.",
+          "ja": "にっきを ひらいて。",
+          "action": "ノートを ひらく まね",
+          "emoji": "📔"
+        },
+        {
+          "en": "Write the date.",
+          "ja": "ひづけを かいて。",
+          "action": "ゆびで そらに すうじを かく",
+          "emoji": "📅"
+        },
+        {
+          "en": "Read it aloud.",
+          "ja": "こえに だして よんで。",
+          "action": "ノートを もって よむ まね",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Close the door.",
+          "ja": "とびらを しめて。",
+          "action": "とびらを しめる まね",
+          "emoji": "🚪"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/"
+        ],
+        "words": [
+          "walked",
+          "arrived",
+          "clapped",
+          "carried"
+        ],
+        "tipJa": "ふりかえり: walk → walked（そのまま）、arrive → arrived（d だけ）、clap → clapped（重ねる）、carry → carried（y を i に）。"
+      },
+      "vocab": [
+        {
+          "en": "diary",
+          "ja": "にっき",
+          "emoji": "📔",
+          "core": true
+        },
+        {
+          "en": "door",
+          "ja": "とびら",
+          "emoji": "🚪"
+        },
+        {
+          "en": "date",
+          "ja": "ひづけ",
+          "emoji": "📅"
+        },
+        {
+          "en": "tent",
+          "ja": "テント",
+          "emoji": "⛺"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Our first day at the ruins is over. Tonight, let's write a ruins diary in the tent. In a diary, we write about things that already happened, so we use past forms. Today's sentences are: We walked to the ruins. We found a door. Say them with me. We walked to the ruins. We found a door. Great! Walked has ed, but found is a special past form. Find, found. 日記は すぎた ことだから、すぎた かたちで かくよ。 You can also use was and were. It was dark, but we weren't scared. Weren't means were not. Now, phonics review. Walked. Arrived. Clapped. Carried. Remember the four ed rules! Here's a tip. In a diary for sharing, you don't need to write your real name or address. Okay, let's read our diaries to each other!",
+      "conversation": {
+        "scene": "In the tent, the team reads their ruins diaries, Day One",
+        "sceneJa": "テントで、遺跡日記の 1日目を 読み合う",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's read our ruins diaries. Who wants to go first?",
+            "ja": "いせき にっきを よみあいましょう。だれから よむ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Me! We walked to the ruins. We found a door.",
+            "ja": "ぼく！いせきまで あるいた。とびらを みつけた。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Nice! Was it dark inside?",
+            "ja": "いいね！なかは くらかった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, it was. But we weren't scared.",
+            "ja": "うん、くらかった。でも こわく なかったよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hmm. Kiko was a little scared!",
+            "ja": "うーん。キコは ちょっと こわがってたよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Just a little! My diary says, We arrived in the morning. We clapped at the big painting.",
+            "ja": "ちょっと だけ！わたしの にっきは「あさ ついた。おおきな えに はくしゅした」。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And Birimo carried all the bags. Thank you, Birimo!",
+            "ja": "それに ビリモが にもつを ぜんぶ はこんでくれた。ありがとう、ビリモ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "遺跡日記を We walked ～. We found ～. の ように すぎた かたちで 3文 かいて よもう（ほんとうの なまえ・じゅうしょは かかなくて OK）",
+          "starterEn": "Hi! I'm Haru. Here's my diary. We walked to the ruins. We found a door. What did you do today? Tell me your diary!",
+          "targetExpressions": [
+            "We walked to ～.",
+            "We found ～.",
+            "It was ～, but we weren't ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We walked to the ruins. We found a door.（日記は すぎた かたちで）",
+          "It was dark, but we weren't scared.（weren't = were not）",
+          "walked・arrived・clapped・carried（ed の 4つの きまり）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 456,
+      "world": 16,
+      "title": "We Sang by the Fire",
+      "titleJa": "たきびの そばで うたったよ",
+      "school": {
+        "grade": "中1",
+        "topic": "We sang a song by the campfire.：ふきそくな 過去形（i → a）",
+        "grammar": "不規則動詞の 過去形（sing → sang, drink → drank）",
+        "expressions": [
+          {
+            "en": "We sang a song by the campfire.",
+            "ja": "わたしたちは キャンプファイヤーの そばで うたを うたいました。",
+            "core": true
+          },
+          {
+            "en": "I drank hot milk. It was warm.",
+            "ja": "あたたかい ミルクを のみました。ぽかぽか でした。"
+          },
+          {
+            "en": "Did you sing, too? ― Yes, I did.",
+            "ja": "あなたも うたった？ ― うん、うたったよ。"
+          }
+        ],
+        "testPoints": [
+          "We sang ～. / I drank ～. で たきびの おもいでを いえる",
+          "sing → sang、drink → drank（i が a に かわる。ed は つけない）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sing a song.",
+          "ja": "うたを うたって。",
+          "action": "くちを おおきく あけて うたう",
+          "emoji": "🎵"
+        },
+        {
+          "en": "Swim like a fish.",
+          "ja": "さかなみたいに およいで。",
+          "action": "てを くねくね させて およぐ まね",
+          "emoji": "🐟"
+        },
+        {
+          "en": "Drink some water.",
+          "ja": "みずを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "🥤"
+        },
+        {
+          "en": "Ring the bell.",
+          "ja": "かねを ならして。",
+          "action": "ひもを ひいて カランカラン",
+          "emoji": "🔔"
+        }
+      ],
+      "phonics": {
+        "rule": "past-i-a",
+        "focus": [
+          "a"
+        ],
+        "sounds": [
+          "/æ/"
+        ],
+        "words": [
+          "sang",
+          "swam",
+          "drank",
+          "rang"
+        ],
+        "tipJa": "ed を つけない とくべつな かたち: sing → sang、swim → swam、drink → drank、ring → rang（i が a に かわる）。"
+      },
+      "vocab": [
+        {
+          "en": "campfire",
+          "ja": "キャンプファイヤー",
+          "emoji": "🔥",
+          "core": true
+        },
+        {
+          "en": "song",
+          "ja": "うた",
+          "emoji": "🎵"
+        },
+        {
+          "en": "bell",
+          "ja": "かね",
+          "emoji": "🔔"
+        },
+        {
+          "en": "marshmallow",
+          "ja": "マシュマロ",
+          "emoji": "🍡"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! Last night, we all made a campfire together in the plaza. Do you remember? Today's sentence is: We sang a song by the campfire. Say it with me. We sang a song by the campfire. Wonderful! Sang is the past form of sing. Some verbs don't use ed. They change their spelling instead. sing の すぎた かたちは singed では なく、sang だよ。 Now, phonics. Sing, sang. Swim, swam. Drink, drank. Ring, rang. Can you hear it? The i changes to a. Let's say them again quickly. Sang, swam, drank, rang! Great! You can also ask a friend, Did you sing, too? Yes, I did. Here's a tip. A campfire is very hot, so always make one with a grown-up. Never play with fire. Okay, let's talk about our campfire night!",
+      "conversation": {
+        "scene": "In the plaza of the ruins, the team remembers last night's campfire",
+        "sceneJa": "遺跡の 広場で、たき火の 思い出",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Last night was so much fun!",
+            "ja": "ゆうべは すごく たのしかったね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes! We sang a song by the campfire.",
+            "ja": "うん！キャンプファイヤーの そばで うたを うたったね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I drank hot milk. It was warm and sweet.",
+            "ja": "ぼくは あたたかい ミルクを のんだ。ぽかぽかで あまかった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Did you sing, too, Birimo?",
+            "ja": "ビリモも うたった？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, I did! I sang very loudly.",
+            "ja": "うん、うたったよ！すごく おおきな こえで。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Then someone rang the old bell. Ding, dong!",
+            "ja": "それから だれかが ふるい かねを ならしたのよね。カーン、コーン！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That was me! Sorry. The sound was so beautiful.",
+            "ja": "それ ぼく！ごめんね。おとが とても きれい だったから。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "たのしかった よるの ことを We sang ～. I drank ～. の ように はなそう",
+          "starterEn": "Hi! I'm Riko. Last night, we sang a song by the campfire. It was so much fun! Did you sing a song yesterday?",
+          "targetExpressions": [
+            "We sang ～.",
+            "I drank ～.",
+            "Did you sing, too?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We sang a song by the campfire.（sing → sang）",
+          "sing → sang、swim → swam、drink → drank、ring → rang（i が a に）",
+          "ひは かならず おとなと いっしょに"
+        ]
+      }
+    },
+    {
+      "lessonNo": 457,
+      "world": 16,
+      "title": "I Wrote a Letter",
+      "titleJa": "てがみを かいたよ",
+      "school": {
+        "grade": "中1",
+        "topic": "I wrote a letter to my grandma.：てがみを かいた ことを いう",
+        "grammar": "不規則動詞の 過去形（write → wrote, begin → began）・to ＋ 人",
+        "expressions": [
+          {
+            "en": "I wrote a letter to my grandma.",
+            "ja": "おばあちゃんに てがみを かきました。",
+            "core": true
+          },
+          {
+            "en": "I began with Dear Grandma.",
+            "ja": "「Dear Grandma（だいすきな おばあちゃんへ）」で かきはじめました。"
+          },
+          {
+            "en": "Who did you write to? ― My grandpa.",
+            "ja": "だれに かいたの？ ― おじいちゃん。"
+          }
+        ],
+        "testPoints": [
+          "I wrote a letter to ～. で てがみの ことを いえる",
+          "begin → began、give → gave（i が a に かわる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write a letter.",
+          "ja": "てがみを かいて。",
+          "action": "ペンで かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Fold the paper.",
+          "ja": "かみを おって。",
+          "action": "かみを はんぶんに おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Put it in the envelope.",
+          "ja": "ふうとうに いれて。",
+          "action": "かみを ふうとうに いれる まね",
+          "emoji": "✉️"
+        },
+        {
+          "en": "Drop it in the mailbox.",
+          "ja": "ポストに いれて。",
+          "action": "ポストに ことんと いれる まね",
+          "emoji": "📮"
+        }
+      ],
+      "phonics": {
+        "rule": "past-i-a",
+        "focus": [
+          "a"
+        ],
+        "sounds": [
+          "/æ/",
+          "/eɪ/"
+        ],
+        "words": [
+          "began",
+          "gave",
+          "sank",
+          "drank"
+        ],
+        "tipJa": "i が a に かわる: begin → began、give → gave、sink → sank、drink → drank。gave の a は magic e で「エイ」。"
+      },
+      "vocab": [
+        {
+          "en": "letter",
+          "ja": "てがみ",
+          "emoji": "✉️",
+          "core": true
+        },
+        {
+          "en": "mailbox",
+          "ja": "ポスト",
+          "emoji": "📮"
+        },
+        {
+          "en": "stamp",
+          "ja": "きって",
+          "emoji": "🏷️"
+        },
+        {
+          "en": "envelope",
+          "ja": "ふうとう",
+          "emoji": "📨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Look, there's an old mailbox near the ruins. And it still works! Last night, Riko wrote a letter. Today's sentence is: I wrote a letter to my grandma. Say it with me. I wrote a letter to my grandma. Great! Wrote is the past form of write. We'll practice words like this soon. A letter starts with Dear. Dear Grandma. And it often ends with Love, and your name. てがみの はじめは Dear ～, だよ。 Now, phonics. Begin, began. Give, gave. Sink, sank. Drink, drank. The i changes to a again. Here's a tip. On an envelope, we write an address. But on the internet or in a chat, never share your address. That's a safety rule. Okay, who will you write to? Let's write a short letter!",
+      "conversation": {
+        "scene": "At an old mailbox near the ruins, the team sends letters",
+        "sceneJa": "遺跡の 郵便ポストで、手紙を 出す",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look, an old mailbox! Does it still work?",
+            "ja": "みて、ふるい ポスト！まだ つかえるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, it does. A mail carrier comes every Monday.",
+            "ja": "ええ、つかえるわ。まいしゅう げつようびに ゆうびんやさんが くるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Great! I wrote a letter to my grandma last night.",
+            "ja": "よかった！ゆうべ おばあちゃんに てがみを かいたの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Me too. I began with Dear Grandpa.",
+            "ja": "ぼくも。「Dear Grandpa」で かきはじめたよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What did you write about?",
+            "ja": "なにに ついて かいたの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I wrote about the ruins and the big painting. I drew a picture, too.",
+            "ja": "いせきと おおきな えの こと。えも かいたよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's put our letters in the mailbox. Here we go!",
+            "ja": "てがみを ポストに いれよう。せーの！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "だれかに てがみを かいた つもりで、I wrote a letter to ～. と はなそう（ほんとうの じゅうしょは いわなくて OK）",
+          "starterEn": "Hi! I'm Riko. I wrote a letter to my grandma. I told her about the ruins. Who do you want to write to?",
+          "targetExpressions": [
+            "I wrote a letter to ～.",
+            "I wrote about ～.",
+            "Who did you write to?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I wrote a letter to my grandma.（write → wrote）",
+          "begin → began、give → gave、sink → sank、drink → drank",
+          "インターネットや チャットでは じゅうしょを おしえない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 458,
+      "world": 16,
+      "title": "Birimo Knew the Answer",
+      "titleJa": "ビリモは こたえを しっていた",
+      "school": {
+        "grade": "中1",
+        "topic": "Birimo knew the answer!：なぞなぞで、しっていた・しらなかったを いう",
+        "grammar": "不規則動詞の 過去形（know → knew）・I didn't know.",
+        "expressions": [
+          {
+            "en": "Birimo knew the answer!",
+            "ja": "ビリモは こたえを しっていました！",
+            "core": true
+          },
+          {
+            "en": "I didn't know the answer.",
+            "ja": "わたしは こたえが わかりませんでした。"
+          },
+          {
+            "en": "Did you know that? ― No, I didn't!",
+            "ja": "それ、しってた？ ― ううん、しらなかった！"
+          }
+        ],
+        "testPoints": [
+          "knew / didn't know で わかった・わからなかったを いえる",
+          "swim → swam、begin → began（i が a に かわる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "あたまに ゆびを あてて うーん",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Push the stone door.",
+          "ja": "いしの とびらを おして。",
+          "action": "りょうてで ぐーっと おす",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Say the answer.",
+          "ja": "こたえを いって。",
+          "action": "てを くちに あてて おおきな こえで",
+          "emoji": "💡"
+        }
+      ],
+      "phonics": {
+        "rule": "past-i-a",
+        "focus": [
+          "a"
+        ],
+        "sounds": [
+          "/æ/"
+        ],
+        "words": [
+          "swam",
+          "rang",
+          "sang",
+          "began"
+        ],
+        "tipJa": "i が a に かわる: swim → swam、ring → rang、sing → sang、begin → began。swimed や singed とは かかないよ。"
+      },
+      "vocab": [
+        {
+          "en": "riddle",
+          "ja": "なぞなぞ",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "💡"
+        },
+        {
+          "en": "book",
+          "ja": "ほん",
+          "emoji": "📖"
+        },
+        {
+          "en": "clue",
+          "ja": "ヒント",
+          "emoji": "🔍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we found a big stone door. There's a riddle on it. I have many words, but I can't talk. You open me, but I'm not a door. What am I? Think hard! Birimo knew the answer. It's a book! Today's sentence is: Birimo knew the answer! Say it with me. Birimo knew the answer! Great! Knew is the past form of know. The k is silent, so we don't say it. know も knew も k は よまないよ。 If you didn't know, say, I didn't know the answer. Now, phonics. Swim, swam. Ring, rang. Sing, sang. Begin, began. The i changes to a. Here's a tip. When a friend gets the answer, say, Good job! And when you don't know, that's okay. Okay, let's make riddles for each other!",
+      "conversation": {
+        "scene": "A stone door in the ruins opens when you answer its riddle",
+        "sceneJa": "遺跡の なぞなぞの 扉",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This door has a riddle. I have many words, but I can't talk. You open me, but I'm not a door. What am I?",
+            "ja": "この とびらに なぞなぞが あるわ。「ことばは たくさん あるけど はなせない。ひらくけど とびらじゃ ない。なーんだ？」"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hmm. A box?",
+            "ja": "うーん。はこ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I didn't know the answer, either.",
+            "ja": "わたしも こたえが わからなかった。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I know! It's a book!",
+            "ja": "わかった！ほん だ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look, the door is opening! Birimo knew the answer!",
+            "ja": "みて、とびらが ひらいてる！ビリモは こたえを しってたんだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow, Birimo! How did you know?",
+            "ja": "すごい、ビリモ！どうして わかったの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I read a lot of books!",
+            "ja": "ほんを たくさん よんでるからね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "なぞなぞを だしあって、I knew the answer! / I didn't know. と いってみよう",
+          "starterEn": "Hi! I'm Birimo. I knew the answer to the riddle door! Now it's your turn. Can you make a riddle for me?",
+          "targetExpressions": [
+            "I knew the answer!",
+            "I didn't know.",
+            "Did you know that?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Birimo knew the answer!（know → knew。k は よまない）",
+          "I didn't know the answer.（しらなかった）",
+          "swim → swam、ring → rang、sing → sang、begin → began"
+        ]
+      }
+    },
+    {
+      "lessonNo": 459,
+      "world": 16,
+      "title": "Where Did You Go Last Weekend?",
+      "titleJa": "せんしゅうまつは どこへ いったの？",
+      "school": {
+        "grade": "中1",
+        "topic": "Where did you go last weekend?：しゅうまつの ことを きく・こたえる",
+        "grammar": "Where did you go? ― I went to ～.・last weekend",
+        "expressions": [
+          {
+            "en": "Where did you go last weekend?",
+            "ja": "せんしゅうまつは どこへ いきましたか？",
+            "core": true
+          },
+          {
+            "en": "I went to the beach with my family.",
+            "ja": "かぞくと うみべに いきました。"
+          },
+          {
+            "en": "I stayed home and read a book.",
+            "ja": "いえに いて、ほんを よみました。"
+          }
+        ],
+        "testPoints": [
+          "Where did you go last weekend? と きいて、I went to ～. で こたえられる",
+          "どこにも いかなかった ときは I stayed home. で こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the river.",
+          "ja": "かわを ゆびさして。",
+          "action": "とおくを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Walk to the gate.",
+          "ja": "もんまで あるいて。",
+          "action": "その場で あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Read the sign.",
+          "ja": "かんばんを よんで。",
+          "action": "めを ほそめて よむ まね",
+          "emoji": "🪧"
+        },
+        {
+          "en": "Sit on the bench.",
+          "ja": "ベンチに すわって。",
+          "action": "こしを おろす まね",
+          "emoji": "🪑"
+        }
+      ],
+      "phonics": {
+        "rule": "past-i-a",
+        "focus": [
+          "a"
+        ],
+        "sounds": [
+          "/æ/",
+          "/eɪ/"
+        ],
+        "words": [
+          "gave",
+          "drank",
+          "swam",
+          "sank"
+        ],
+        "tipJa": "i が a に かわる: give → gave、drink → drank、swim → swam、sink → sank。"
+      },
+      "vocab": [
+        {
+          "en": "weekend",
+          "ja": "しゅうまつ",
+          "emoji": "🗓️",
+          "core": true
+        },
+        {
+          "en": "beach",
+          "ja": "うみべ",
+          "emoji": "🏖️"
+        },
+        {
+          "en": "aquarium",
+          "ja": "すいぞくかん",
+          "emoji": "🐠"
+        },
+        {
+          "en": "zoo",
+          "ja": "どうぶつえん",
+          "emoji": "🦁"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we met the guide of the ruins. Ms. Emma will play the guide's daughter, Sana. Let's talk about last weekend. To ask, say, Where did you go last weekend? Say it with me. Where did you go last weekend? Great! To answer, use went. Went is the past form of go. I went to the beach with my family. If you didn't go anywhere, that's okay. Say, I stayed home and read a book. どこにも いかなかった ときは I stayed home. で いいよ。 Let's practice. Where did you go last weekend? I went to the zoo. Sounds fun! Now, phonics. Give, gave. Drink, drank. Swim, swam. Sink, sank. The i changes to a. Here's a tip. After the answer, ask one more question, like, Was it fun? Okay, let's talk about our weekends!",
+      "conversation": {
+        "scene": "The team meets the guide's daughter, played by Ms. Emma",
+        "sceneJa": "遺跡の 案内人の 子（エマ先生の ごっこ）と、週末の 話",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's do a role-play. I'm the guide's daughter, Sana. Hi! Welcome to the ruins!",
+            "ja": "ごっこを しましょう。わたしは あんないにんの むすめ、サナ。こんにちは！いせきへ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hi, Sana! Where did you go last weekend?",
+            "ja": "こんにちは、サナ！せんしゅうまつは どこへ いったの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I went to the beach with my family. I swam in the sea.",
+            "ja": "かぞくと うみべに いったの。うみで およいだわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sounds fun! Was it hot?",
+            "ja": "たのしそう！あつかった？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, it was sunny and hot. I drank a lot of water.",
+            "ja": "ええ、はれて あつかったわ。みずを たくさん のんだの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I went to the aquarium last weekend. I saw a big shark!",
+            "ja": "わたしは せんしゅうまつ すいぞくかんに いったよ。おおきな サメを みた！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I stayed home and read a book. It was nice, too!",
+            "ja": "ぼくは いえで ほんを よんでた。それも よかったよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Where did you go last weekend? と きいて、I went to ～. で こたえよう（どこにも いかなかったら I stayed home. で OK）",
+          "starterEn": "Hi! I'm Haru. Last weekend, I went to the zoo. I saw a baby elephant! Where did you go last weekend?",
+          "targetExpressions": [
+            "Where did you go last weekend?",
+            "I went to ～.",
+            "I stayed home."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where did you go last weekend? ― I went to the beach with my family.",
+          "I stayed home and read a book.（いえに いた ときの こたえ）",
+          "give → gave、drink → drank、swim → swam、sink → sank"
+        ]
+      }
+    },
+    {
+      "lessonNo": 460,
+      "world": 16,
+      "title": "Weekend Talk",
+      "titleJa": "しゅうまつ トーク",
+      "school": {
+        "grade": "中1",
+        "topic": "I went to the river. I caught a fish.：しゅうまつの ことを 2〜3文で はなす",
+        "grammar": "過去形の 文を つなげる・What did you do there?",
+        "expressions": [
+          {
+            "en": "I went to the river. I caught a fish.",
+            "ja": "かわに いきました。さかなを つりました。",
+            "core": true
+          },
+          {
+            "en": "What did you do there?",
+            "ja": "そこで なにを しましたか？"
+          },
+          {
+            "en": "It was exciting!",
+            "ja": "わくわく しました！"
+          }
+        ],
+        "testPoints": [
+          "しゅうまつの ことを すぎた かたちで 2〜3文 つづけて いえる",
+          "swam・sang（i → a）と stopped・tried（ed）の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Cast the line.",
+          "ja": "つりいとを なげて。",
+          "action": "つりざおを ふる まね",
+          "emoji": "🎣"
+        },
+        {
+          "en": "Pull it up.",
+          "ja": "ひきあげて。",
+          "action": "ぐいっと ひっぱる",
+          "emoji": "💪"
+        },
+        {
+          "en": "Let the fish go.",
+          "ja": "さかなを はなして。",
+          "action": "そっと みずに もどす まね",
+          "emoji": "🐟"
+        },
+        {
+          "en": "Sit down and rest.",
+          "ja": "すわって やすんで。",
+          "action": "すわって ふうっと いき",
+          "emoji": "😌"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "a",
+          "-ed"
+        ],
+        "sounds": [
+          "/æ/",
+          "/t/",
+          "/d/"
+        ],
+        "words": [
+          "swam",
+          "sang",
+          "stopped",
+          "tried"
+        ],
+        "tipJa": "ふりかえり: swim → swam、sing → sang（i が a に）と、stop → stopped（重ねる）、try → tried（y を i に）。"
+      },
+      "vocab": [
+        {
+          "en": "river",
+          "ja": "かわ",
+          "emoji": "🏞️",
+          "core": true
+        },
+        {
+          "en": "fish",
+          "ja": "さかな",
+          "emoji": "🐟"
+        },
+        {
+          "en": "fishing rod",
+          "ja": "つりざお",
+          "emoji": "🎣"
+        },
+        {
+          "en": "bench",
+          "ja": "ベンチ",
+          "emoji": "🪑"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're taking a break at the rest area of the ruins. Let's have a weekend talk. Today's sentences are: I went to the river. I caught a fish. Say them with me. I went to the river. I caught a fish. Great! Caught is the past form of catch. We'll learn more about it later. To keep talking, a friend can ask, What did you do there? Then answer with two or three past sentences. 2〜3文で はなすと、ほんとうの かいわに なるよ。 And add your feeling. It was exciting! Let's try. What did you do there? I played with my dog. It was fun! Now, phonics review. Swam. Sang. Stopped. Tried. Do you remember the rules? Here's a tip. Near a river, always stay with a grown-up, and don't go into deep water. Okay, let's share our weekends!",
+      "conversation": {
+        "scene": "At a rest area in the ruins, the team has a weekend talk",
+        "sceneJa": "遺跡の 休けい所で、週末トーク",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "This is a nice place to rest. Let's talk about last weekend!",
+            "ja": "ここ、やすむのに いい ところ。せんしゅうまつの はなしを しよう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Last weekend, I went to the river. I caught a fish!",
+            "ja": "せんしゅうまつ、かわに いったんだ。さかなを つったよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really? What did you do there?",
+            "ja": "ほんと？そこで なにを したの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I fished with Ms. Emma. Then we stopped and ate lunch.",
+            "ja": "エマ先生と つりを した。それから ひとやすみして おひるを たべたよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Sounds fun! Was the fish big?",
+            "ja": "たのしそう！さかなは おおきかった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, it was! It was exciting. But I let it go.",
+            "ja": "うん、おおきかった！わくわく したよ。でも にがして あげた。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I sang songs by the river. The birds sang, too!",
+            "ja": "ぼくは かわの そばで うたを うたったよ。とりも うたってた！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "しゅうまつの ことを I went to ～. I ～ed. で 2〜3文 はなして、ともだちにも きいてみよう",
+          "starterEn": "Hi! I'm Kiko. Let's have a weekend talk! Last weekend, I went to the park. I played with my friends. What did you do last weekend?",
+          "targetExpressions": [
+            "I went to ～.",
+            "What did you do there?",
+            "It was exciting!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I went to the river. I caught a fish.（2〜3文で はなす）",
+          "What did you do there? で もっと きく",
+          "swam・sang（i → a）、stopped・tried（ed の きまり）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 461,
+      "world": 16,
+      "title": "I Bought a Map",
+      "titleJa": "ちずを かったよ",
+      "school": {
+        "grade": "中1",
+        "topic": "I bought a map at the shop.：かった ものを いう・きく",
+        "grammar": "不規則動詞の 過去形（buy → bought）・What did you buy?",
+        "expressions": [
+          {
+            "en": "I bought a map at the shop.",
+            "ja": "おみせで ちずを かいました。",
+            "core": true
+          },
+          {
+            "en": "What did you buy?",
+            "ja": "なにを かったの？"
+          },
+          {
+            "en": "I bought a postcard for my mom.",
+            "ja": "おかあさんに えはがきを かいました。"
+          }
+        ],
+        "testPoints": [
+          "I bought ～. / What did you buy? で かいものの ことを はなせる",
+          "write → wrote、ride → rode（i が o に かわって o…e の かたち）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up the map.",
+          "ja": "ちずを てに とって。",
+          "action": "たなから とる まね",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Pay at the counter.",
+          "ja": "レジで おかねを はらって。",
+          "action": "おかねを わたす まね",
+          "emoji": "💴"
+        },
+        {
+          "en": "Put it in your bag.",
+          "ja": "かばんに いれて。",
+          "action": "かばんに しまう まね",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Say thank you.",
+          "ja": "ありがとうと いって。",
+          "action": "にっこり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "past-o-e",
+        "focus": [
+          "o_e"
+        ],
+        "sounds": [
+          "/oʊ/"
+        ],
+        "words": [
+          "wrote",
+          "rode",
+          "drove",
+          "rose"
+        ],
+        "tipJa": "i が o に かわって o…e（magic e）の かたち: write → wrote、ride → rode、drive → drove、rise → rose。"
+      },
+      "vocab": [
+        {
+          "en": "souvenir",
+          "ja": "おみやげ",
+          "emoji": "🎁",
+          "core": true
+        },
+        {
+          "en": "postcard",
+          "ja": "えはがき",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "keychain",
+          "ja": "キーホルダー",
+          "emoji": "🔑"
+        },
+        {
+          "en": "shop",
+          "ja": "おみせ",
+          "emoji": "🏪"
+        }
+      ],
+      "teacherScript": "Hello, everyone! There's a souvenir shop near the gate of the ruins. Souvenirs are things you buy on a trip to remember it. Today's sentence is: I bought a map at the shop. Say it with me. I bought a map at the shop. Great! Bought is the past form of buy. Buy, bought. It looks very different! To ask a friend, say, What did you buy? buy の すぎた かたちは bought。かたちが ぜんぜん ちがうね。 Now, phonics. Today we learn a new pattern. Write, wrote. Ride, rode. Drive, drove. Rise, rose. The i changes to o, and the word still ends with magic e. So the o says its name. Here's a tip. When you buy something, look at the clerk and say thank you. Okay, let's go shopping!",
+      "conversation": {
+        "scene": "At the souvenir shop of the ruins",
+        "sceneJa": "遺跡の おみやげ屋さん",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here we are, the souvenir shop. You can buy one thing each.",
+            "ja": "さあ、おみやげやさんよ。ひとり ひとつずつ かえるわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I bought a map at the shop. It shows all of the ruins!",
+            "ja": "おみせで ちずを かったよ。いせきが ぜんぶ のってるの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Nice! What did you buy, Riko?",
+            "ja": "いいね！リコは なにを かったの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I bought a postcard for my mom. It has the tower on it.",
+            "ja": "おかあさんに えはがきを かったの。とうの えが ついてるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I bought a little stone keychain. It was only two hundred yen.",
+            "ja": "ぼくは ちいさな いしの キーホルダー。たった 200えん だったよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hmm, I can't choose. Everything looks great!",
+            "ja": "うーん、えらべない。ぜんぶ よく みえる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Take your time, Haru.",
+            "ja": "ゆっくり えらんでね、ハル。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おみやげやさんで かった ものを I bought ～. で いおう。What did you buy? と きいてみよう",
+          "starterEn": "Hi! I'm Riko. I bought a postcard for my mom at the souvenir shop. What did you buy?",
+          "targetExpressions": [
+            "I bought ～.",
+            "What did you buy?",
+            "I bought ～ for ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I bought a map at the shop.（buy → bought）",
+          "What did you buy? ― I bought a postcard for my mom.",
+          "write → wrote、ride → rode、drive → drove、rise → rose（o…e）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 462,
+      "world": 16,
+      "title": "I Thought It Was a Ghost!",
+      "titleJa": "おばけだと おもった！",
+      "school": {
+        "grade": "中1",
+        "topic": "I thought it was a ghost!：かんちがいを いう",
+        "grammar": "I thought it was ～.・Were you ～? ― Yes, I was.",
+        "expressions": [
+          {
+            "en": "I thought it was a ghost!",
+            "ja": "おばけだと おもいました！",
+            "core": true
+          },
+          {
+            "en": "It was just a sheet.",
+            "ja": "ただの シーツ でした。"
+          },
+          {
+            "en": "Were you scared? ― Yes, I was!",
+            "ja": "こわかった？ ― うん、こわかった！"
+          }
+        ],
+        "testPoints": [
+          "I thought it was ～. で かんちがいを いえる",
+          "wake → woke、speak → spoke（o…e の かたちに なる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shine your flashlight.",
+          "ja": "かいちゅうでんとうで てらして。",
+          "action": "ライトを まえに むける まね",
+          "emoji": "🔦"
+        },
+        {
+          "en": "Tiptoe quietly.",
+          "ja": "つまさきで そっと あるいて。",
+          "action": "つまさきで そろそろ",
+          "emoji": "🤫"
+        },
+        {
+          "en": "Hold hands.",
+          "ja": "てを つないで。",
+          "action": "となりの 人と てを つなぐ まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Pull the sheet.",
+          "ja": "シーツを ひっぱって。",
+          "action": "ぬのを ひく まね",
+          "emoji": "🛏️"
+        }
+      ],
+      "phonics": {
+        "rule": "past-o-e",
+        "focus": [
+          "o_e"
+        ],
+        "sounds": [
+          "/oʊ/"
+        ],
+        "words": [
+          "woke",
+          "broke",
+          "spoke",
+          "chose"
+        ],
+        "tipJa": "o…e の かたちに なる 過去形: wake → woke、break → broke、speak → spoke、choose → chose。"
+      },
+      "vocab": [
+        {
+          "en": "ghost",
+          "ja": "おばけ",
+          "emoji": "👻",
+          "core": true
+        },
+        {
+          "en": "sheet",
+          "ja": "シーツ",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "moon",
+          "ja": "つき",
+          "emoji": "🌙"
+        },
+        {
+          "en": "night",
+          "ja": "よる",
+          "emoji": "🌃"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last night, something funny happened. Haru woke up and saw something white moving in the dark. Was it a ghost? No! It was just a sheet drying in the wind. Today's sentence is: I thought it was a ghost! Say it with me. I thought it was a ghost! Great! Thought is the past form of think. We use I thought when we were wrong about something. かんちがい した ときに つかえるよ。 You can also ask, Were you scared? Yes, I was. Let's practice. Were you scared? Yes, I was. Or, No, I wasn't. Now, phonics. Wake, woke. Break, broke. Speak, spoke. Choose, chose. Again, the past form has o and magic e. Here's a tip. If you feel scared at night, that's okay. Tell a grown-up. Okay, let's tell our funny stories!",
+      "conversation": {
+        "scene": "At night in the ruins, the team sees something white",
+        "sceneJa": "夜の 遺跡で 白い ものを 見る（正体は 干してあった シーツ）",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I woke up and came outside. Look! Something white is moving over there!",
+            "ja": "めが さめて そとに でたんだ。みて！あっちで しろい ものが うごいてる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Eek! Is it a ghost?",
+            "ja": "きゃっ！おばけ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's hold hands and go slowly.",
+            "ja": "てを つないで ゆっくり いこう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ha ha! It's just a sheet. It's drying in the wind.",
+            "ja": "あはは！ただの シーツだよ。かぜで かわかしてるんだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Phew! I thought it was a ghost!",
+            "ja": "ふう！おばけだと おもった！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Were you scared, Kiko?",
+            "ja": "キコ、こわかった？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, I was! But now I'm laughing.",
+            "ja": "うん、こわかった！でも いまは わらっちゃう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I thought it was ～! と、かんちがいした おもしろい はなしを しよう（こわい はなしは しなくて OK）",
+          "starterEn": "Hi! I'm Kiko. Last night, I saw something white. I thought it was a ghost! But it was just a sheet. Did you ever make a funny mistake like that?",
+          "targetExpressions": [
+            "I thought it was ～!",
+            "It was just ～.",
+            "Were you scared?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I thought it was a ghost! ― It was just a sheet.（think → thought）",
+          "Were you scared? ― Yes, I was!",
+          "wake → woke、break → broke、speak → spoke、choose → chose"
+        ]
+      }
+    },
+    {
+      "lessonNo": 463,
+      "world": 16,
+      "title": "Who Taught You?",
+      "titleJa": "だれに おそわったの？",
+      "school": {
+        "grade": "中1",
+        "topic": "Who taught you? ― My grandpa did.：だれに おそわったかを きく",
+        "grammar": "Who ＋ 過去形 ～?・～ did.（みじかい こたえ）",
+        "expressions": [
+          {
+            "en": "Who taught you?",
+            "ja": "だれに おそわったの？",
+            "core": true
+          },
+          {
+            "en": "My grandpa taught me.",
+            "ja": "おじいちゃんが おしえて くれました。"
+          },
+          {
+            "en": "Who made this pot? ― I did.",
+            "ja": "この つぼは だれが つくったの？ ― わたしです。"
+          }
+        ],
+        "testPoints": [
+          "Who taught you? と きいて、My ～ taught me. / My ～ did. で こたえられる",
+          "know → knew、grow → grew（おわりが ew に かわる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Roll the clay.",
+          "ja": "ねんどを ころがして。",
+          "action": "てのひらで ころころ",
+          "emoji": "🟤"
+        },
+        {
+          "en": "Make a cup.",
+          "ja": "コップを つくって。",
+          "action": "りょうてで まるく かたちを つくる",
+          "emoji": "🏺"
+        },
+        {
+          "en": "Paint a pattern.",
+          "ja": "もようを かいて。",
+          "action": "ふでで なみの もようを かく まね",
+          "emoji": "🖌️"
+        },
+        {
+          "en": "Wash your hands.",
+          "ja": "てを あらって。",
+          "action": "ごしごし てを あらう まね",
+          "emoji": "🧼"
+        }
+      ],
+      "phonics": {
+        "rule": "past-ew",
+        "focus": [
+          "ew"
+        ],
+        "sounds": [
+          "/uː/"
+        ],
+        "words": [
+          "knew",
+          "grew",
+          "threw",
+          "blew"
+        ],
+        "tipJa": "おわりが ew（ウー）に かわる: know → knew、grow → grew、throw → threw、blow → blew。"
+      },
+      "vocab": [
+        {
+          "en": "pot",
+          "ja": "つぼ",
+          "emoji": "🏺",
+          "core": true
+        },
+        {
+          "en": "clay",
+          "ja": "ねんど",
+          "emoji": "🟤"
+        },
+        {
+          "en": "pattern",
+          "ja": "もよう",
+          "emoji": "〰️"
+        },
+        {
+          "en": "workshop",
+          "ja": "しごとば",
+          "emoji": "🛠️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we visit a pot maker's workshop at the ruins. Ms. Emma will play the pot maker. Look at these beautiful old patterns. To ask who taught someone, say, Who taught you? Say it with me. Who taught you? Great! Taught is the past form of teach. To answer, say, My grandpa taught me. Or say it short, My grandpa did. Who ～? の こたえは「～ did.」と みじかく いっても いいよ。 Let's practice. Who taught you? My mom taught me. My mom did. Now, phonics. Know, knew. Grow, grew. Throw, threw. Blow, blew. The past form ends in ew. It sounds like oo, as in moon. Here's a tip. When someone teaches you something, say, Thank you for teaching me! Let's say it. Thank you for teaching me! Okay, let's ask the pot maker!",
+      "conversation": {
+        "scene": "At a pot maker's workshop in the ruins, played by Ms. Emma",
+        "sceneJa": "遺跡の 職人さん（エマ先生の ごっこ）に、作り方を 聞く",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's pretend. I'm a pot maker at the ruins. Welcome to my workshop!",
+            "ja": "ごっこを しましょう。わたしは いせきの つぼ しょくにん。しごとばへ ようこそ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow, these pots are beautiful. Who made this pot?",
+            "ja": "わあ、きれいな つぼ。この つぼは だれが つくったんですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I did. I made it last week.",
+            "ja": "わたしよ。せんしゅう つくったの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Who taught you?",
+            "ja": "だれに おそわったんですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "My grandpa taught me. He knew all the old patterns.",
+            "ja": "おじいちゃんが おしえて くれたの。むかしの もようを ぜんぶ しっていたのよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Cool! Can you teach us, too?",
+            "ja": "かっこいい！ぼくたちにも おしえて くれる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, please! Thank you for teaching us!",
+            "ja": "ぜひ！おしえて くれて ありがとう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "できる ことを いって、Who taught you? ― My ～ taught me. と きいたり こたえたり しよう",
+          "starterEn": "Hi! I'm Riko. I can fold a paper crane. My grandma taught me. What can you do? Who taught you?",
+          "targetExpressions": [
+            "Who taught you?",
+            "My ～ taught me.",
+            "My ～ did."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Who taught you? ― My grandpa taught me. / My grandpa did.（teach → taught）",
+          "know → knew、grow → grew、throw → threw、blow → blew（ew）",
+          "おしえて もらったら Thank you for teaching me!"
+        ]
+      }
+    },
+    {
+      "lessonNo": 464,
+      "world": 16,
+      "title": "It Wasn't Easy",
+      "titleJa": "かんたんじゃ なかった",
+      "school": {
+        "grade": "中1",
+        "topic": "It wasn't easy, but I did it.：was / were の 否定・疑問",
+        "grammar": "wasn't / weren't・Were you ～? ― Yes, I was. / No, I wasn't.",
+        "expressions": [
+          {
+            "en": "It wasn't easy, but I did it.",
+            "ja": "かんたんでは なかったけど、やりとげました。",
+            "core": true
+          },
+          {
+            "en": "Were you tired? ― Yes, I was.",
+            "ja": "つかれた？ ― うん、つかれた。"
+          },
+          {
+            "en": "The stairs weren't wide, so we were careful.",
+            "ja": "かいだんは ひろく なかったので、きを つけました。"
+          }
+        ],
+        "testPoints": [
+          "wasn't / weren't で「～では なかった」が いえる",
+          "fly → flew、draw → drew（おわりが ew に かわる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Climb the stairs.",
+          "ja": "かいだんを のぼって。",
+          "action": "ももを あげて のぼる まね",
+          "emoji": "🪜"
+        },
+        {
+          "en": "Hold the rail.",
+          "ja": "てすりを もって。",
+          "action": "よこの てすりを にぎる まね",
+          "emoji": "✊"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "しんこきゅう して。",
+          "action": "すーっと すって はーっと はく",
+          "emoji": "😮‍💨"
+        },
+        {
+          "en": "Look at the view.",
+          "ja": "けしきを みて。",
+          "action": "てを ひたいに あてて とおくを みる",
+          "emoji": "🏞️"
+        }
+      ],
+      "phonics": {
+        "rule": "past-ew",
+        "focus": [
+          "ew"
+        ],
+        "sounds": [
+          "/uː/"
+        ],
+        "words": [
+          "flew",
+          "drew",
+          "threw",
+          "grew"
+        ],
+        "tipJa": "おわりが ew（ウー）に かわる: fly → flew、draw → drew、throw → threw、grow → grew。flied や drawed とは かかないよ。"
+      },
+      "vocab": [
+        {
+          "en": "stairs",
+          "ja": "かいだん",
+          "emoji": "🪜",
+          "core": true
+        },
+        {
+          "en": "top",
+          "ja": "てっぺん",
+          "emoji": "🔝"
+        },
+        {
+          "en": "view",
+          "ja": "けしき",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "rail",
+          "ja": "てすり",
+          "emoji": "🛤️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Look up. Can you see the top of the tower? There are one hundred stairs! Let's climb. Today's sentence is: It wasn't easy, but I did it. Say it with me. It wasn't easy, but I did it. Great! Wasn't means was not. You can use this sentence for things that were hard for you. You can also ask, Were you tired? Yes, I was. Or, No, I wasn't. was / were の いいえは wasn't / weren't だよ。 Now, phonics. Fly, flew. Draw, drew. Throw, threw. Grow, grew. The past form ends in ew again. Here's a tip. On high stairs, hold the rail and never push your friends. Go one step at a time. Okay, let's climb carefully and talk about hard things we did!",
+      "conversation": {
+        "scene": "The team climbs the high stairs of the ruins' tower",
+        "sceneJa": "遺跡の 高い 階段を のぼる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "So many stairs! Ninety-eight, ninety-nine... one hundred!",
+            "ja": "かいだんが いっぱい！98、99……100！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hold the rail, everyone. These stairs aren't very wide.",
+            "ja": "みんな、てすりを もって。この かいだん、あまり ひろく ないよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Phew, we're at the top! Were you tired, Kiko?",
+            "ja": "ふう、てっぺんに ついた！キコ、つかれた？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, I was. It wasn't easy, but I did it!",
+            "ja": "うん、つかれた。かんたんじゃ なかったけど、やったよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! A big bird flew over the tower.",
+            "ja": "みて！おおきな とりが とうの うえを とんでいった。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job, everyone. You didn't give up.",
+            "ja": "みんな、よく がんばったわね。あきらめなかったわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's draw this view in our diaries!",
+            "ja": "この けしきを にっきに かこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "むずかしかった ことを It wasn't easy, but I did it. で はなそう。Were you ～? とも きいてみよう",
+          "starterEn": "Hi! I'm Kiko. We climbed one hundred stairs! It wasn't easy, but I did it. What was hard for you? Did you do it?",
+          "targetExpressions": [
+            "It wasn't easy, but I did it.",
+            "Were you tired?",
+            "Yes, I was. / No, I wasn't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It wasn't easy, but I did it.（wasn't = was not）",
+          "Were you tired? ― Yes, I was. / No, I wasn't.",
+          "fly → flew、draw → drew、throw → threw、grow → grew"
+        ]
+      }
+    },
+    {
+      "lessonNo": 465,
+      "world": 16,
+      "title": "A Day at the Ruins",
+      "titleJa": "いせきでの 1日",
+      "school": {
+        "grade": "中1",
+        "topic": "We climbed, we found a key, and we laughed.：1日を ふりかえって 3つの ことを いう",
+        "grammar": "過去形を 3つ ならべる（A, B, and C）・What was your favorite part?",
+        "expressions": [
+          {
+            "en": "We climbed, we found a key, and we laughed.",
+            "ja": "わたしたちは のぼって、かぎを みつけて、わらいました。",
+            "core": true
+          },
+          {
+            "en": "In the morning, we explored the tower.",
+            "ja": "あさは とうを たんけん しました。"
+          },
+          {
+            "en": "What was your favorite part? ― The view!",
+            "ja": "いちばん よかった ところは？ ― けしき！"
+          }
+        ],
+        "testPoints": [
+          "した ことを 3つ、A, B, and C. の かたちで いえる",
+          "wrote・froze（o…e）と grew・flew（ew）の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up the key.",
+          "ja": "かぎを たかく もって。",
+          "action": "かぎを たかく かかげる",
+          "emoji": "🗝️"
+        },
+        {
+          "en": "Laugh out loud.",
+          "ja": "おおきな こえで わらって。",
+          "action": "おなかを かかえて あはは",
+          "emoji": "😂"
+        },
+        {
+          "en": "Give me a high five.",
+          "ja": "ハイタッチ して。",
+          "action": "てのひらを パチン",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Count to three.",
+          "ja": "3まで かぞえて。",
+          "action": "ゆびを 1、2、3と たてる",
+          "emoji": "3️⃣"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "o_e",
+          "ew"
+        ],
+        "sounds": [
+          "/oʊ/",
+          "/uː/"
+        ],
+        "words": [
+          "wrote",
+          "froze",
+          "grew",
+          "flew"
+        ],
+        "tipJa": "ふりかえり: write → wrote、freeze → froze（o…e）と、grow → grew、fly → flew（ew）。"
+      },
+      "vocab": [
+        {
+          "en": "key",
+          "ja": "かぎ",
+          "emoji": "🗝️",
+          "core": true
+        },
+        {
+          "en": "treasure box",
+          "ja": "たからばこ",
+          "emoji": "🧰"
+        },
+        {
+          "en": "morning",
+          "ja": "あさ",
+          "emoji": "🌅"
+        },
+        {
+          "en": "evening",
+          "ja": "ゆうがた",
+          "emoji": "🌇"
+        }
+      ],
+      "teacherScript": "Hello, everyone! What a busy day at the ruins! We climbed the tower, and at the top, we found an old key under a stone. Let's look back on our day. Today's sentence is: We climbed, we found a key, and we laughed. Say it with me. We climbed, we found a key, and we laughed. Great! You can put three past actions in one sentence. Use commas, and put and before the last one. 3つの ことを いう ときは、さいごの まえに and を つけるよ。 Then ask a friend, What was your favorite part? Now, phonics review. Wrote. Froze. Grew. Flew. Which ones have o and magic e? Which ones end in ew? Here's a tip. At the end of the day, share one happy thing with your family. Okay, let's look back on our day!",
+      "conversation": {
+        "scene": "In the evening, the team looks back on their day at the ruins",
+        "sceneJa": "遺跡での 1日を、みんなで ふりかえる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a day! Let's look back. What did we do today?",
+            "ja": "すごい 1日だったわね！ふりかえりましょう。きょうは なにを した？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We climbed, we found a key, and we laughed!",
+            "ja": "のぼって、かぎを みつけて、わらった！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Where did we find the key?",
+            "ja": "かぎは どこで みつけたっけ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "At the top of the tower. It was under a stone.",
+            "ja": "とうの てっぺん。いしの したに あったの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What was your favorite part, Riko?",
+            "ja": "リコの いちばん よかった ところは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The view! A bird flew right next to us.",
+            "ja": "けしき！とりが すぐ よこを とんでいったの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I wrote about the key in my diary. Maybe it opens something!",
+            "ja": "かぎの ことを にっきに かいたよ。なにかを あける かぎかも！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "きょう した ことを 3つ、We ～ed, we ～, and we ～. の ように つなげて いってみよう",
+          "starterEn": "Hi! I'm Haru. What a day! We climbed, we found a key, and we laughed. What did you do today? Tell me three things!",
+          "targetExpressions": [
+            "We ～ed, we ～ed, and we ～ed.",
+            "What was your favorite part?",
+            "In the morning, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We climbed, we found a key, and we laughed.（3つ ならべる ときは さいごに and）",
+          "What was your favorite part? ― The view!",
+          "wrote・froze（o…e）、grew・flew（ew）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 466,
+      "world": 16,
+      "title": "Once Upon a Time",
+      "titleJa": "むかしむかし",
+      "school": {
+        "grade": "中1",
+        "topic": "Once upon a time, a king lived here.：おはなしを はじめる",
+        "grammar": "Once upon a time, ～.・One day, ～.（おはなしの 過去形）",
+        "expressions": [
+          {
+            "en": "Once upon a time, a king lived here.",
+            "ja": "むかしむかし、ここに 王さまが すんでいました。",
+            "core": true
+          },
+          {
+            "en": "He had a big castle, but he was lonely.",
+            "ja": "王さまは おおきな おしろを もっていましたが、さびしかったのです。"
+          },
+          {
+            "en": "One day, a little bird brought him a box.",
+            "ja": "ある日、ちいさな とりが 王さまに はこを もってきました。"
+          }
+        ],
+        "testPoints": [
+          "Once upon a time, ～. / One day, ～. で おはなしを はじめられる",
+          "buy → bought、think → thought（ought。gh は よまない）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Read the stone.",
+          "ja": "いしを よんで。",
+          "action": "ゆびで もじを なぞる まね",
+          "emoji": "🪨"
+        },
+        {
+          "en": "Bow like a king.",
+          "ja": "王さまみたいに おじぎして。",
+          "action": "むねに てを あてて ゆっくり おじぎ",
+          "emoji": "👑"
+        },
+        {
+          "en": "Sit on the throne.",
+          "ja": "王さまの いすに すわって。",
+          "action": "むねを はって えらそうに すわる",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Flap like a bird.",
+          "ja": "とりみたいに はばたいて。",
+          "action": "りょううでを ぱたぱた",
+          "emoji": "🐦"
+        }
+      ],
+      "phonics": {
+        "rule": "ought-aught",
+        "focus": [
+          "ought"
+        ],
+        "sounds": [
+          "/ɔːt/"
+        ],
+        "words": [
+          "bought",
+          "thought",
+          "brought",
+          "fought"
+        ],
+        "tipJa": "ought は「オート」。gh は よまない: buy → bought、think → thought、bring → brought、fight → fought。"
+      },
+      "vocab": [
+        {
+          "en": "king",
+          "ja": "王さま",
+          "emoji": "👑",
+          "core": true
+        },
+        {
+          "en": "castle",
+          "ja": "おしろ",
+          "emoji": "🏰"
+        },
+        {
+          "en": "gold",
+          "ja": "きん",
+          "emoji": "🪙"
+        },
+        {
+          "en": "stone tablet",
+          "ja": "せきばん（もじの ある いし）",
+          "emoji": "🪨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we found a big stone with old words on it. It's a story! Many stories start with Once upon a time. It means long, long ago. むかしむかし、と おなじ いみだよ。 Today's sentence is: Once upon a time, a king lived here. Say it with me. Once upon a time, a king lived here. Wonderful! Let's read on. He had a big castle, but he was lonely. One day, a little bird brought him a box. One day is another good story word. Now, phonics. Buy, bought. Think, thought. Bring, brought. Fight, fought. These past forms have ought. The g and h are silent. Here's a tip. When you listen to a story, make pictures in your head. Okay, let's read the story on the stone!",
+      "conversation": {
+        "scene": "The team reads a stone tablet, and an old story begins",
+        "sceneJa": "遺跡の 石版を 読むと、むかし話が 始まる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look, there are words on this stone. Can you read them, Ms. Emma?",
+            "ja": "みて、この いしに もじが ある。エマ先生、よめる？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's read together. Once upon a time, a king lived here.",
+            "ja": "いっしょに よみましょう。「むかしむかし、ここに 王さまが すんでいました」。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "A king! Was he kind?",
+            "ja": "王さま！やさしい 人 だった？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "He had a big castle and lots of gold, but he was lonely.",
+            "ja": "おおきな おしろと きんを たくさん もっていたけど、さびしかったの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Lonely? Didn't he have any friends?",
+            "ja": "さびしい？ともだちは いなかったの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, he didn't. Then one day, a little bird brought him a box.",
+            "ja": "ええ、いなかったの。そして ある日、ちいさな とりが 王さまに はこを もってきたの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "A box? What was inside? I want to know!",
+            "ja": "はこ？なにが はいってたの？しりたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Once upon a time, ～ lived ～. で おはなしを はじめてみよう",
+          "starterEn": "Hi! I'm Birimo. Let's make a story together! Once upon a time, a king lived here. What was the king like?",
+          "targetExpressions": [
+            "Once upon a time, ～ lived ～.",
+            "One day, ～.",
+            "He was ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Once upon a time, a king lived here.（むかしむかし）",
+          "One day, a little bird brought him a box.（ある日）",
+          "bought・thought・brought・fought（ought は「オート」。gh は よまない）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 467,
+      "world": 16,
+      "title": "First, Then, After That",
+      "titleJa": "まず、それから、そのあと",
+      "school": {
+        "grade": "中1",
+        "topic": "First, he opened the box. Then, he looked inside.：おはなしの じゅんばんを いう",
+        "grammar": "First / Then / After that（じゅんばんの ことば）・What happened next?",
+        "expressions": [
+          {
+            "en": "First, he opened the box. Then, he looked inside.",
+            "ja": "まず、王さまは はこを あけました。それから、なかを のぞきました。",
+            "core": true
+          },
+          {
+            "en": "After that, he planted a seed.",
+            "ja": "そのあと、たねを うえました。"
+          },
+          {
+            "en": "What happened next?",
+            "ja": "つぎに どう なったの？"
+          }
+        ],
+        "testPoints": [
+          "First, ～. Then, ～. After that, ～. で じゅんばんに いえる",
+          "catch → caught、teach → taught（aught）と bought・thought（ought）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the box.",
+          "ja": "はこを あけて。",
+          "action": "ふたを そっと あける まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Look inside.",
+          "ja": "なかを のぞいて。",
+          "action": "かがんで のぞきこむ",
+          "emoji": "👀"
+        },
+        {
+          "en": "Plant a seed.",
+          "ja": "たねを うえて。",
+          "action": "つちに たねを おして いれる まね",
+          "emoji": "🌱"
+        },
+        {
+          "en": "Water the plant.",
+          "ja": "しょくぶつに みずを あげて。",
+          "action": "じょうろで みずを かける まね",
+          "emoji": "🚿"
+        }
+      ],
+      "phonics": {
+        "rule": "ought-aught",
+        "focus": [
+          "aught",
+          "ought"
+        ],
+        "sounds": [
+          "/ɔːt/"
+        ],
+        "words": [
+          "caught",
+          "taught",
+          "bought",
+          "thought"
+        ],
+        "tipJa": "aught と ought は おなじ「オート」: catch → caught、teach → taught（aught）、buy → bought、think → thought（ought）。"
+      },
+      "vocab": [
+        {
+          "en": "seed",
+          "ja": "たね",
+          "emoji": "🌱",
+          "core": true
+        },
+        {
+          "en": "box",
+          "ja": "はこ",
+          "emoji": "📦"
+        },
+        {
+          "en": "garden",
+          "ja": "にわ",
+          "emoji": "🌷"
+        },
+        {
+          "en": "watering can",
+          "ja": "じょうろ",
+          "emoji": "🚿"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Let's read more of the king's story. Stories happen in order, so we use special words to show the order. First. Then. After that. Today's sentences are: First, he opened the box. Then, he looked inside. Say them with me. First, he opened the box. Then, he looked inside. Great! What did he find? A tiny seed! After that, he planted the seed. じゅんばんを あらわす ことばを つかうと、おはなしが わかりやすく なるよ。 Let's say the order words again. First. Then. After that. To ask about a story, say, What happened next? Now, phonics. Catch, caught. Teach, taught. Buy, bought. Think, thought. Caught and taught have aught. Bought and thought have ought. They sound the same! Here's a tip. Remember the cooking class in World 14? First, then, after that. It's the same! Okay, let's read on!",
+      "conversation": {
+        "scene": "The team reads more of the king's story on the stone tablet",
+        "sceneJa": "石版の 物語の 続きを 読む",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "What happened next? Please read more!",
+            "ja": "つぎに どう なったの？もっと よんで！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "First, he opened the box. Then, he looked inside.",
+            "ja": "「まず、王さまは はこを あけました。それから、なかを のぞきました」。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What did he find?",
+            "ja": "なにを みつけたの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "He found a tiny seed. After that, he planted it in his garden.",
+            "ja": "「ちいさな たねを みつけました。そのあと、それを にわに うえました」。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Just a seed? Maybe he thought it was treasure.",
+            "ja": "たねだけ？たからものだと おもったのかも。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "He watered it every day. Look, there's a picture of him!",
+            "ja": "まいにち みずを あげたんだって。みて、王さまの えが ある！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "First, then, after that. It's like a recipe!",
+            "ja": "まず、それから、そのあと。レシピ みたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "First, ～. Then, ～. After that, ～. で じゅんばんに おはなしを つづけよう",
+          "starterEn": "Hi! I'm Kiko. Let's tell the king's story in order. First, he opened the box. What happened next?",
+          "targetExpressions": [
+            "First, ～.",
+            "Then, ～.",
+            "After that, ～.",
+            "What happened next?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, he opened the box. Then, he looked inside.",
+          "After that, he planted a seed.（そのあと）／ What happened next?",
+          "caught・taught（aught）と bought・thought（ought）は おなじ おと"
+        ]
+      }
+    },
+    {
+      "lessonNo": 468,
+      "world": 16,
+      "title": "Finally, He Smiled",
+      "titleJa": "さいごに、王さまは わらった",
+      "school": {
+        "grade": "中1",
+        "topic": "Finally, the king smiled.：おはなしの おわりを いう",
+        "grammar": "Finally, ～.・not ～ anymore",
+        "expressions": [
+          {
+            "en": "Finally, the king smiled.",
+            "ja": "さいごに、王さまは にっこり わらいました。",
+            "core": true
+          },
+          {
+            "en": "A big tree grew, and children played under it.",
+            "ja": "おおきな きが そだって、こどもたちが その したで あそびました。"
+          },
+          {
+            "en": "He wasn't lonely anymore.",
+            "ja": "王さまは もう さびしく ありませんでした。"
+          }
+        ],
+        "testPoints": [
+          "Finally, ～. で おはなしの おわりを いえる",
+          "bring → brought、fight → fought（ought）と caught・taught（aught）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Grow like a tree.",
+          "ja": "きみたいに そだって。",
+          "action": "しゃがんでから ゆっくり たちあがる",
+          "emoji": "🌳"
+        },
+        {
+          "en": "Stretch your arms.",
+          "ja": "うでを のばして。",
+          "action": "えだの ように うでを ひろげる",
+          "emoji": "🙆"
+        },
+        {
+          "en": "Pick an apple.",
+          "ja": "りんごを とって。",
+          "action": "てを のばして もぐ まね",
+          "emoji": "🍎"
+        },
+        {
+          "en": "Smile big.",
+          "ja": "にっこり わらって。",
+          "action": "おおきな えがお",
+          "emoji": "😄"
+        }
+      ],
+      "phonics": {
+        "rule": "ought-aught",
+        "focus": [
+          "ought",
+          "aught"
+        ],
+        "sounds": [
+          "/ɔːt/"
+        ],
+        "words": [
+          "brought",
+          "fought",
+          "caught",
+          "taught"
+        ],
+        "tipJa": "bring → brought、fight → fought（ought）と catch → caught、teach → taught（aught）。おとは おなじ、つづりで みわけよう。"
+      },
+      "vocab": [
+        {
+          "en": "tree",
+          "ja": "き",
+          "emoji": "🌳",
+          "core": true
+        },
+        {
+          "en": "children",
+          "ja": "こどもたち",
+          "emoji": "🧒"
+        },
+        {
+          "en": "apple",
+          "ja": "りんご",
+          "emoji": "🍎"
+        },
+        {
+          "en": "the end",
+          "ja": "おしまい",
+          "emoji": "🔚"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we read the end of the king's story. The seed grew and grew into a big tree. Children came and played under it. The king brought them apples from the tree. Today's sentence is: Finally, the king smiled. Say it with me. Finally, the king smiled. Great! Finally means at the end. We use it for the last part of a story. Finally は「さいごに」。おはなしの おわりに つかうよ。 He wasn't lonely anymore. The end! Let's say the last part again together. Finally, the king smiled. The end! Now, phonics. Bring, brought. Fight, fought. Catch, caught. Teach, taught. Ought or aught? Look carefully at the spelling. Here's a tip. A good story ending makes people feel something. Happy, surprised, or warm inside. Okay, let's finish the story!",
+      "conversation": {
+        "scene": "The team reads the end of the king's story",
+        "sceneJa": "物語の 終わりを 読む",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Here's the last part of the story. Let's read it!",
+            "ja": "ここが おはなしの さいごの ところ。よもう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "The seed grew and grew. A big tree grew next to the castle.",
+            "ja": "「たねは ぐんぐん そだちました。おしろの よこに おおきな きが そだちました」。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And then children came and played under it!",
+            "ja": "それから こどもたちが きて、その したで あそんだんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The king brought them apples from the tree.",
+            "ja": "王さまは その きの りんごを こどもたちに もってきたんだね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Finally, the king smiled. He wasn't lonely anymore.",
+            "ja": "「さいごに、王さまは にっこり わらいました。もう さびしく ありませんでした」。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The end! That's a happy story.",
+            "ja": "おしまい！しあわせな おはなしだね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I think the little bird knew the king was lonely.",
+            "ja": "ちいさな とりは、王さまが さびしいって しってたんだと おもう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Finally, ～. で おはなしの おわりを いってみよう",
+          "starterEn": "Hi! I'm Riko. The king's story had a happy ending. Finally, the king smiled. How do you want your story to end? Tell me with Finally!",
+          "targetExpressions": [
+            "Finally, ～.",
+            "He wasn't ～ anymore.",
+            "The end!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Finally, the king smiled.（さいごに）",
+          "He wasn't lonely anymore.（もう ～ では なかった）",
+          "brought・fought（ought）と caught・taught（aught）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 469,
+      "world": 16,
+      "title": "How Did He Feel?",
+      "titleJa": "どんな きもち だった？",
+      "school": {
+        "grade": "中1",
+        "topic": "How did he feel? ― He felt sad.：おはなしの 人の きもちを はなす",
+        "grammar": "How did he feel? ― He felt ～.・because",
+        "expressions": [
+          {
+            "en": "How did he feel?",
+            "ja": "かれは どんな きもち でしたか？",
+            "core": true
+          },
+          {
+            "en": "He felt sad because he was lonely.",
+            "ja": "さびしかったので、かなしい きもち でした。"
+          },
+          {
+            "en": "At the end, he felt happy.",
+            "ja": "さいごには、しあわせな きもち でした。"
+          }
+        ],
+        "testPoints": [
+          "How did he feel? と きいて、He felt ～. で こたえられる",
+          "ought / aught の つづりの まとめ（thought・caught・bought・taught）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a sad face.",
+          "ja": "かなしい かおを して。",
+          "action": "まゆを さげて しょんぼり",
+          "emoji": "😢"
+        },
+        {
+          "en": "Make a happy face.",
+          "ja": "うれしい かおを して。",
+          "action": "にこにこ えがお",
+          "emoji": "😊"
+        },
+        {
+          "en": "Show me surprised.",
+          "ja": "びっくりした かおを みせて。",
+          "action": "めと くちを まるく あける",
+          "emoji": "😲"
+        },
+        {
+          "en": "Hug yourself.",
+          "ja": "じぶんを ぎゅっと して。",
+          "action": "じぶんの かたを だきしめる",
+          "emoji": "🤗"
+        }
+      ],
+      "phonics": {
+        "rule": "ought-aught",
+        "focus": [
+          "ought",
+          "aught"
+        ],
+        "sounds": [
+          "/ɔːt/"
+        ],
+        "words": [
+          "thought",
+          "caught",
+          "bought",
+          "taught"
+        ],
+        "tipJa": "はやく いってみよう: thought、caught、bought、taught。おとは みんな「オート」、つづりは ought と aught。"
+      },
+      "vocab": [
+        {
+          "en": "feeling",
+          "ja": "きもち",
+          "emoji": "💭",
+          "core": true
+        },
+        {
+          "en": "sad",
+          "ja": "かなしい",
+          "emoji": "😢"
+        },
+        {
+          "en": "surprised",
+          "ja": "びっくりした",
+          "emoji": "😲"
+        },
+        {
+          "en": "lonely",
+          "ja": "さびしい",
+          "emoji": "🥺"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Let's think about the king's feelings. To ask, say, How did he feel? Say it with me. How did he feel? Good! Felt is the past form of feel. He felt sad. He felt surprised. He felt happy. You can add a reason with because. He felt sad because he was lonely. きもちと りゆうを いえると、おはなしが もっと ふかく わかるよ。 At the start, he felt sad. At the end, he felt happy. Feelings can change in a story. Let's practice. How did she feel? She felt happy because she won the race. Now, phonics. Think, thought. Catch, caught. Buy, bought. Teach, taught. Let's say them fast. Thought, caught, bought, taught! Here's a tip. Thinking about feelings in stories helps us be kind to real people, too. Okay, let's talk about feelings!",
+      "conversation": {
+        "scene": "The team talks about the feelings of the people in the story",
+        "sceneJa": "物語の 登場人物の 気持ちを 話し合う",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's talk about the king. At the start, how did he feel?",
+            "ja": "王さまの ことを はなしましょう。はじめは どんな きもち だった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "He felt sad. He was lonely in his big castle.",
+            "ja": "かなしかったと おもう。おおきな おしろで さびしかったんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How did he feel when the bird came?",
+            "ja": "とりが きた とき、どんな きもち だった？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think he felt surprised. He didn't expect a box!",
+            "ja": "びっくりしたと おもう。はこが くるなんて おもって なかったから！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And at the end, he felt happy. He wasn't alone.",
+            "ja": "それで さいごは しあわせ だった。ひとりじゃ なかったから。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great thinking! How did you feel when you read it?",
+            "ja": "よく かんがえたわね！みんなは よんで どう かんじた？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I felt warm. I thought it was a kind story.",
+            "ja": "あたたかい きもちに なった。やさしい おはなしだと おもったよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おはなしの 人の きもちを How did he feel? ― He felt ～. で はなそう。because で りゆうも いえたら すごい！",
+          "starterEn": "Hi! I'm Kiko. Do you remember the king's story? At first, he was lonely. How did he feel at the end?",
+          "targetExpressions": [
+            "How did he feel?",
+            "He felt ～.",
+            "He felt ～ because ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How did he feel? ― He felt sad.（feel → felt）",
+          "He felt sad because he was lonely.（because で りゆう）",
+          "thought・caught・bought・taught（ought / aught）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 470,
+      "world": 16,
+      "title": "Story Time at the Ruins",
+      "titleJa": "いせきの おはなし タイム",
+      "school": {
+        "grade": "中1",
+        "topic": "Once upon a time, ～. First, ～. Finally, ～.：みじかい おはなしを かたる",
+        "grammar": "おはなしの くみたて（Once upon a time / First / Then / After that / Finally）",
+        "expressions": [
+          {
+            "en": "Once upon a time, a little dragon lived in the tower.",
+            "ja": "むかしむかし、とうに ちいさな ドラゴンが すんでいました。",
+            "core": true
+          },
+          {
+            "en": "First, it flew to the river. Then, it met a fish.",
+            "ja": "まず、ドラゴンは かわへ とんでいきました。それから、さかなに あいました。"
+          },
+          {
+            "en": "Finally, they became best friends. The end!",
+            "ja": "さいごに、ふたりは なかよしに なりました。おしまい！"
+          }
+        ],
+        "testPoints": [
+          "Once upon a time から Finally まで、じゅんばんの ことばで おはなしが かたれる",
+          "ふきそくな 過去形の まとめ（thought・caught・rode・knew）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sit in a circle.",
+          "ja": "まるく すわって。",
+          "action": "みんなで わに なる まね",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Hold the story stick.",
+          "ja": "おはなしの ぼうを もって。",
+          "action": "ぼうを むねの まえで もつ",
+          "emoji": "🪄"
+        },
+        {
+          "en": "Speak loudly.",
+          "ja": "おおきな こえで はなして。",
+          "action": "むねを はって はっきり",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Clap for your friend.",
+          "ja": "ともだちに はくしゅ して。",
+          "action": "パチパチ はくしゅ",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ought",
+          "aught",
+          "o_e",
+          "ew"
+        ],
+        "sounds": [
+          "/ɔːt/",
+          "/oʊ/",
+          "/uː/"
+        ],
+        "words": [
+          "thought",
+          "caught",
+          "rode",
+          "knew"
+        ],
+        "tipJa": "ふりかえり: think → thought（ought）、catch → caught（aught）、ride → rode（o…e）、know → knew（ew）。"
+      },
+      "vocab": [
+        {
+          "en": "story",
+          "ja": "おはなし",
+          "emoji": "📖",
+          "core": true
+        },
+        {
+          "en": "dragon",
+          "ja": "ドラゴン",
+          "emoji": "🐉"
+        },
+        {
+          "en": "circle",
+          "ja": "わ（まる）",
+          "emoji": "⭕"
+        },
+        {
+          "en": "best friend",
+          "ja": "なかよし",
+          "emoji": "🤝"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Tonight is story time in the plaza of the ruins. Each of us will tell a short story. Use these story words. Once upon a time. First. Then. After that. Finally. Today's sentence is: Once upon a time, a little dragon lived in the tower. Say it with me. Once upon a time, a little dragon lived in the tower. Great! First, it flew to the river. Then, it met a fish. Finally, they became best friends. Your story can be about anything. An animal, a robot, or a magic tree. おはなしの なかみは じゆう。すきな ものを だしてね。 Now, phonics review. Thought. Caught. Rode. Knew. Here's a tip. When a friend tells a story, listen quietly and clap at the end. Okay, who wants to go first?",
+      "conversation": {
+        "scene": "In the plaza of the ruins, the friends tell short stories",
+        "sceneJa": "遺跡の 広場で、4人が 短い おはなしを 語る",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's story time! Who wants to tell a story?",
+            "ja": "おはなし タイムよ！だれが はなす？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me! Once upon a time, a little dragon lived in the tower.",
+            "ja": "わたし！むかしむかし、とうに ちいさな ドラゴンが すんでいました。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh, a dragon! What happened?",
+            "ja": "おっ、ドラゴン！どう なったの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "First, it flew to the river. Then, it met a fish. After that, they played all day.",
+            "ja": "まず、かわへ とんでいったの。それから さかなに あったの。そのあと、1日じゅう あそんだの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How did the dragon feel?",
+            "ja": "ドラゴンは どんな きもち だった？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It felt happy. Finally, they became best friends. The end!",
+            "ja": "しあわせ だった。さいごに、ふたりは なかよしに なりました。おしまい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great story, Kiko! My turn next!",
+            "ja": "いい おはなし、キコ！つぎは ぼくの ばん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Once upon a time, ～. First, ～. Finally, ～. で みじかい おはなしを つくって かたろう（でてくる 人や どうぶつは じぶんで きめて OK）",
+          "starterEn": "Hi! I'm Birimo. It's story time! Once upon a time, a little robot lived in a forest. Can you tell me a story, too?",
+          "targetExpressions": [
+            "Once upon a time, ～.",
+            "First, ～. Then, ～.",
+            "Finally, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Once upon a time, a little dragon lived in the tower.",
+          "First, ～. Then, ～. After that, ～. Finally, ～.（おはなしの じゅんばん）",
+          "thought・caught・rode・knew（ふきそくな 過去形の まとめ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 471,
+      "world": 16,
+      "title": "Summer Stories",
+      "titleJa": "なつやすみの おはなし",
+      "school": {
+        "grade": "中1",
+        "topic": "How was your summer? ― It was great!：やすみの ことを きく・こたえる",
+        "grammar": "How was ～? ― It was ～.・How about you?",
+        "expressions": [
+          {
+            "en": "How was your summer?",
+            "ja": "なつやすみは どうでしたか？",
+            "core": true
+          },
+          {
+            "en": "It was great! I went to the mountains.",
+            "ja": "さいこう でした！やまに いきました。"
+          },
+          {
+            "en": "How about you?",
+            "ja": "あなたは どう？"
+          }
+        ],
+        "testPoints": [
+          "How was your summer? と きいて、It was ～. ＋ 1文で こたえられる",
+          "-ed の 3つの おと（played の ド・jumped の ト・wanted の イド）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your hat.",
+          "ja": "ぼうしを かぶって。",
+          "action": "ぼうしを かぶる まね",
+          "emoji": "👒"
+        },
+        {
+          "en": "Fan yourself.",
+          "ja": "うちわで あおいで。",
+          "action": "てで ぱたぱた あおぐ",
+          "emoji": "🪭"
+        },
+        {
+          "en": "Eat some watermelon.",
+          "ja": "すいかを たべて。",
+          "action": "りょうてで もって がぶり",
+          "emoji": "🍉"
+        },
+        {
+          "en": "Look at the fireworks.",
+          "ja": "はなびを みて。",
+          "action": "そらを みあげて わあ",
+          "emoji": "🎆"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-sounds",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/",
+          "/ɪd/"
+        ],
+        "words": [
+          "played",
+          "jumped",
+          "wanted",
+          "enjoyed"
+        ],
+        "tipJa": "-ed の おとは 3つ: played・enjoyed は「ド」、jumped は ちいさく「ト」、wanted は「イド」。"
+      },
+      "vocab": [
+        {
+          "en": "summer",
+          "ja": "なつ",
+          "emoji": "☀️",
+          "core": true
+        },
+        {
+          "en": "vacation",
+          "ja": "やすみ",
+          "emoji": "🏖️"
+        },
+        {
+          "en": "watermelon",
+          "ja": "すいか",
+          "emoji": "🍉"
+        },
+        {
+          "en": "fireworks",
+          "ja": "はなび",
+          "emoji": "🎆"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we meet a traveler at the ruins. Birimo will play the traveler, Leo. Let's talk about summer vacation. To ask, say, How was your summer? Say it with me. How was your summer? Great! To answer, say, It was great! Or, It was fun! Then add one more sentence about what you did. I went to the mountains. And then ask back, How about you? How about you? と ききかえすと、かいわが つづくよ。 Now, phonics. Today, let's listen to the sounds of ed. Played. The ed sounds like d. Jumped. It sounds like t. Wanted. It sounds like id. Enjoyed. It sounds like d. Here's a tip. When you say jumped, the ed is short and quiet. Don't say jump-ed! Okay, let's share our summer stories!",
+      "conversation": {
+        "scene": "The team meets a traveling kid, played by Birimo",
+        "sceneJa": "遺跡で 会った 旅の 子（ビリモの ごっこ）と、夏休みの 話",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Let's pretend. I'm a traveler named Leo. Hi! I came from the north.",
+            "ja": "ごっこを しよう。ぼくは たびびとの レオ。やあ！きたから きたんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hi, Leo! How was your summer?",
+            "ja": "こんにちは、レオ！なつやすみは どうだった？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It was great! I went to the mountains. I enjoyed hiking.",
+            "ja": "さいこう だった！やまに いったよ。ハイキングを たのしんだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sounds fun! I played at the beach and jumped in the waves.",
+            "ja": "たのしそう！ぼくは うみべで あそんで、なみに とびこんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Cool! How about you, Kiko?",
+            "ja": "いいね！キコは どう？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My summer was great, too. I wanted to see fireworks, and I did!",
+            "ja": "わたしの なつも さいこう だった。はなびが みたくて、みられたの！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! Summer memories are special.",
+            "ja": "すてき！なつの おもいでは とくべつね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "How was your summer? と きいて、It was great! I ～ed. で こたえよう（いつの やすみの はなしでも OK）",
+          "starterEn": "Hi! I'm Riko. Let's talk about vacations! My summer was great. I went to the beach. How was your summer?",
+          "targetExpressions": [
+            "How was your summer?",
+            "It was great!",
+            "How about you?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How was your summer? ― It was great! I went to the mountains.",
+          "How about you? で ききかえす",
+          "played・enjoyed（ド）、jumped（ト）、wanted（イド）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 472,
+      "world": 16,
+      "title": "Who Did You Go With?",
+      "titleJa": "だれと いったの？",
+      "school": {
+        "grade": "中1",
+        "topic": "Who did you go with? ― With my family.：ついかの しつもんで くわしく きく",
+        "grammar": "Who did you go with?・How long did you stay? ― For ～ days.",
+        "expressions": [
+          {
+            "en": "Who did you go with?",
+            "ja": "だれと いきましたか？",
+            "core": true
+          },
+          {
+            "en": "I went with my family.",
+            "ja": "かぞくと いきました。"
+          },
+          {
+            "en": "How long did you stay? ― For three days.",
+            "ja": "どのくらい いたの？ ― 3日かん。"
+          }
+        ],
+        "testPoints": [
+          "Who did you go with? / How long did you stay? で ついかの しつもんが できる",
+          "-ed の 3つの おと（visited の イド・stayed の ド・walked と laughed の ト）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pack your bag.",
+          "ja": "かばんに にもつを つめて。",
+          "action": "ものを かばんに いれる まね",
+          "emoji": "🧳"
+        },
+        {
+          "en": "Get on the train.",
+          "ja": "でんしゃに のって。",
+          "action": "いっぽ まえに のる まね",
+          "emoji": "🚃"
+        },
+        {
+          "en": "Take a photo.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえて カシャ",
+          "emoji": "📷"
+        },
+        {
+          "en": "Wave goodbye.",
+          "ja": "てを ふって さよなら して。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-sounds",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/",
+          "/ɪd/"
+        ],
+        "words": [
+          "visited",
+          "stayed",
+          "walked",
+          "laughed"
+        ],
+        "tipJa": "visited は「イド」、stayed は「ド」、walked と laughed は ちいさく「ト」。laughed の gh は f の おとだよ。"
+      },
+      "vocab": [
+        {
+          "en": "family",
+          "ja": "かぞく",
+          "emoji": "👨‍👩‍👧",
+          "core": true
+        },
+        {
+          "en": "cousin",
+          "ja": "いとこ",
+          "emoji": "🧒"
+        },
+        {
+          "en": "train",
+          "ja": "でんしゃ",
+          "emoji": "🚃"
+        },
+        {
+          "en": "hotel",
+          "ja": "ホテル",
+          "emoji": "🏨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Yesterday we talked about summer. Today, let's ask more questions to learn more. These are called follow-up questions. One good question is, Who did you go with? Say it with me. Who did you go with? Great! The answer can be short. With my family. With my friends. Another question is, How long did you stay? For three days. もう ひとつ しつもんを すると、あいての はなしが もっと よく わかるよ。 Let's practice. Who did you go with? With my friends. How long did you stay? For two days. Now, phonics. Listen to the ed sounds. Visited, id. Stayed, d. Walked, t. Laughed, t. In laughed, g h sounds like f, and the ed sounds like t. Here's a tip. Ask questions because you are interested, and listen to the answers with a smile. Okay, let's ask follow-up questions!",
+      "conversation": {
+        "scene": "The team asks Kiko more about her summer trip",
+        "sceneJa": "夏休みの 話を くわしく 聞く",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "In summer, I visited my cousin's town by the sea.",
+            "ja": "なつに、うみの そばの いとこの まちに いったの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Nice! Who did you go with?",
+            "ja": "いいね！だれと いったの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I went with my family. We went by train.",
+            "ja": "かぞくと いったよ。でんしゃで いったの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How long did you stay?",
+            "ja": "どのくらい いたの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "For three days. We walked by the sea and laughed a lot.",
+            "ja": "3日かん。うみべを あるいて、たくさん わらったよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sounds fun! What was the best part?",
+            "ja": "たのしそう！いちばん よかったのは？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We stayed up late and looked at the stars!",
+            "ja": "よる おそくまで おきて、ほしを みたこと！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Who did you go with? How long did you stay? と、ついかの しつもんで くわしく きこう（ほんとうの ばしょの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Haru. Last summer, I visited my grandpa. I went with my mom. Who did you go with on your last trip?",
+          "targetExpressions": [
+            "Who did you go with?",
+            "How long did you stay?",
+            "I went with ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Who did you go with? ― I went with my family.",
+          "How long did you stay? ― For three days.",
+          "visited（イド）・stayed（ド）・walked・laughed（ト）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 473,
+      "world": 16,
+      "title": "Sounds Fun! Oh No!",
+      "titleJa": "たのしそう！ えっ、たいへん！",
+      "school": {
+        "grade": "中1",
+        "topic": "Sounds fun! / Oh no! What happened?：あいての はなしに はんのう する",
+        "grammar": "はんのうの ことば（Sounds fun! / Oh no! / What happened?）",
+        "expressions": [
+          {
+            "en": "Sounds fun!",
+            "ja": "たのしそう！",
+            "core": true
+          },
+          {
+            "en": "Oh no! What happened?",
+            "ja": "えっ、たいへん！どう したの？"
+          },
+          {
+            "en": "Are you okay now? ― Yes, I'm fine.",
+            "ja": "いまは だいじょうぶ？ ― うん、だいじょうぶ。"
+          }
+        ],
+        "testPoints": [
+          "たのしい はなしには Sounds fun!、こまった はなしには Oh no! What happened? で はんのう できる",
+          "-ed の 3つの おと（dropped と missed の ト・cried の ド・shouted の イド）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a surprised face.",
+          "ja": "びっくりした かおを して。",
+          "action": "めを まるく して えっ！",
+          "emoji": "😲"
+        },
+        {
+          "en": "Cover your mouth.",
+          "ja": "くちを てで おさえて。",
+          "action": "りょうてで くちを おおう",
+          "emoji": "🤭"
+        },
+        {
+          "en": "Give a thumbs up.",
+          "ja": "グッドの サインを して。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        },
+        {
+          "en": "Shake your head.",
+          "ja": "くびを よこに ふって。",
+          "action": "くびを ゆっくり よこに ふる",
+          "emoji": "🙅"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-sounds",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/",
+          "/ɪd/"
+        ],
+        "words": [
+          "dropped",
+          "cried",
+          "shouted",
+          "missed"
+        ],
+        "tipJa": "dropped・missed は ちいさく「ト」、cried は「ド」、shouted は「イド」。"
+      },
+      "vocab": [
+        {
+          "en": "mistake",
+          "ja": "しっぱい",
+          "emoji": "😅",
+          "core": true
+        },
+        {
+          "en": "ice cream",
+          "ja": "アイスクリーム",
+          "emoji": "🍦"
+        },
+        {
+          "en": "bus",
+          "ja": "バス",
+          "emoji": "🚌"
+        },
+        {
+          "en": "puddle",
+          "ja": "みずたまり",
+          "emoji": "💧"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Good listeners react to stories. Today, let's learn two reactions. For a happy story, say, Sounds fun! Say it with me. Sounds fun! For a bad story, say, Oh no! What happened? Say it with me. Oh no! What happened? Great! たのしい はなしには Sounds fun!、こまった はなしには Oh no! だよ。 Then you can ask, Are you okay now? Yes, I'm fine. Let's practice. I lost my pencil case yesterday. Oh no! What happened? I went to the zoo with my class. Sounds fun! Wonderful reactions! Now, phonics. Listen to the ed sounds. Dropped, t. Cried, d. Shouted, id. Missed, t. Here's a tip. Everyone makes mistakes. When a friend shares a funny mistake, don't laugh at them. Laugh with them. Okay, let's tell our stories and react!",
+      "conversation": {
+        "scene": "The team shares funny mistakes and reacts to each other",
+        "sceneJa": "失敗の 思い出に 反応する",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Last week, I dropped my ice cream on the ground.",
+            "ja": "せんしゅう、アイスクリームを じめんに おとしちゃったんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh no! What happened then?",
+            "ja": "えっ、たいへん！それから どう なったの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A dog ate it! I shouted, Hey! That's mine!",
+            "ja": "いぬが たべちゃった！「こら！ぼくのだよ！」って さけんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Were you sad?",
+            "ja": "あはは！かなしかった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A little. But my dad bought me a new one, and we laughed.",
+            "ja": "ちょっと ね。でも おとうさんが あたらしいのを かってくれて、いっしょに わらったよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sounds fun! Well, not the first part.",
+            "ja": "たのしそう！あ、さいしょの ところ いがいは ね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great reactions, everyone! They make talking more fun.",
+            "ja": "みんな、いい はんのうね！はんのう すると かいわが もっと たのしく なるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あいての はなしに Sounds fun! / Oh no! What happened? と はんのう しよう。じぶんの しっぱいの はなしも してみよう",
+          "starterEn": "Hi! I'm Haru. Last week, I dropped my ice cream! A dog ate it! Do you have a funny story? Tell me, and I'll react!",
+          "targetExpressions": [
+            "Sounds fun!",
+            "Oh no! What happened?",
+            "Are you okay now?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Sounds fun!（たのしい はなしに）",
+          "Oh no! What happened?（こまった はなしに）",
+          "dropped・missed（ト）、cried（ド）、shouted（イド）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 474,
+      "world": 16,
+      "title": "My Best Day Ever",
+      "titleJa": "いままでで いちばんの 日",
+      "school": {
+        "grade": "中1",
+        "topic": "My best day was my birthday.：いちばんの 日の ことを はなす",
+        "grammar": "My best day was ～.・Why was it ～?",
+        "expressions": [
+          {
+            "en": "My best day was my birthday.",
+            "ja": "わたしの いちばんの 日は たんじょうび でした。",
+            "core": true
+          },
+          {
+            "en": "My family had a party for me. I was so happy!",
+            "ja": "かぞくが パーティーを して くれました。とても うれしかったです！"
+          },
+          {
+            "en": "Why was it your best day?",
+            "ja": "どうして それが いちばんの 日 だったの？"
+          }
+        ],
+        "testPoints": [
+          "My best day was ～. と、できごと・きもちを 2〜3文で はなせる",
+          "-ed の 3つの おと（needed の イド・loved と opened の ド・watched の ト）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the present.",
+          "ja": "プレゼントを あけて。",
+          "action": "リボンを ほどいて あける まね",
+          "emoji": "🎁"
+        },
+        {
+          "en": "Blow out the candles.",
+          "ja": "ろうそくを ふきけして。",
+          "action": "ふーっと いきを ふく",
+          "emoji": "🕯️"
+        },
+        {
+          "en": "Make a wish.",
+          "ja": "ねがいごとを して。",
+          "action": "めを とじて てを あわせる",
+          "emoji": "🌟"
+        },
+        {
+          "en": "Cheer loudly.",
+          "ja": "おおきな こえで おいわい して。",
+          "action": "りょうてを あげて やったー",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-sounds",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/",
+          "/ɪd/"
+        ],
+        "words": [
+          "needed",
+          "loved",
+          "watched",
+          "opened"
+        ],
+        "tipJa": "needed は「イド」、loved・opened は「ド」、watched は ちいさく「ト」。"
+      },
+      "vocab": [
+        {
+          "en": "birthday",
+          "ja": "たんじょうび",
+          "emoji": "🎂",
+          "core": true
+        },
+        {
+          "en": "present",
+          "ja": "プレゼント",
+          "emoji": "🎁"
+        },
+        {
+          "en": "candle",
+          "ja": "ろうそく",
+          "emoji": "🕯️"
+        },
+        {
+          "en": "party",
+          "ja": "パーティー",
+          "emoji": "🎉"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're at the lookout on top of the ruins. What a view! Let's talk about our best days ever. Today's sentence is: My best day was my birthday. Say it with me. My best day was my birthday. Great! Then say what happened and how you felt. My family had a party for me. I was so happy! A friend can ask, Why was it your best day? いちばんの 日の ことを、できごとと きもちで はなそう。 Let's practice. Why was it your best day? Because I saw my grandma. Now, phonics. Listen to the ed sounds. Needed, id. Loved, d. Watched, t. Opened, d. Here's a tip. Your best day doesn't need to be a big, special day. A fun, quiet day with your family is great, too. Okay, let's share our best days!",
+      "conversation": {
+        "scene": "At the lookout of the ruins, the team talks about their best days",
+        "sceneJa": "遺跡の 展望台で、いちばんの 日を 話す",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "What a view! Let's talk about our best days ever.",
+            "ja": "すごい けしき！いままでで いちばんの 日の はなしを しよう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My best day was my birthday. My family had a party for me.",
+            "ja": "わたしの いちばんの 日は たんじょうび。かぞくが パーティーを してくれたの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Why was it your best day?",
+            "ja": "どうして それが いちばん だったの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I opened a big present. It was a new bike! I loved it.",
+            "ja": "おおきな プレゼントを あけたら、あたらしい じてんしゃ だったの！すごく うれしかった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My best day was our school play. I needed a lot of practice, but I did it.",
+            "ja": "わたしの いちばんの 日は がっこうの げき。たくさん れんしゅうが ひつよう だったけど、やりとげたよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My best day is today! I watched the sunset with all of you.",
+            "ja": "ぼくの いちばんの 日は きょう！みんなと ゆうひを みたから。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いちばんの 日を My best day was ～. で いって、なにを したか・どう かんじたかを 2〜3文で はなそう",
+          "starterEn": "Hi! I'm Riko. My best day was the day of our school play. I was nervous, but I did it! What was your best day ever?",
+          "targetExpressions": [
+            "My best day was ～.",
+            "I was so happy!",
+            "Why was it your best day?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My best day was my birthday.（いちばんの 日）",
+          "Why was it your best day? で りゆうを きく",
+          "needed（イド）・loved・opened（ド）・watched（ト）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 475,
+      "world": 16,
+      "title": "Memory Interview",
+      "titleJa": "おもいで インタビュー",
+      "school": {
+        "grade": "中1",
+        "topic": "When did you ～? How was it?：おもいでを インタビュー する",
+        "grammar": "When did you ～?・How was it?",
+        "expressions": [
+          {
+            "en": "When did you learn to ride a bike?",
+            "ja": "いつ じてんしゃに のれるように なりましたか？",
+            "core": true
+          },
+          {
+            "en": "Last year. It was hard at first.",
+            "ja": "きょねんです。さいしょは むずかしかったです。"
+          },
+          {
+            "en": "How was it in the end? ― It was great!",
+            "ja": "さいごは どうだった？ ― さいこう だった！"
+          }
+        ],
+        "testPoints": [
+          "When did you ～? How was it? で おもいでを くわしく きける",
+          "ed の つけかた 4つの ふりかえり（asked・worried・nodded・smiled）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the microphone.",
+          "ja": "マイクを もって。",
+          "action": "マイクを くちの まえで もつ まね",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Ask a question.",
+          "ja": "しつもん して。",
+          "action": "マイクを あいてに むける",
+          "emoji": "❓"
+        },
+        {
+          "en": "Nod your head.",
+          "ja": "うなずいて。",
+          "action": "くびを たてに ふる",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Write the answer.",
+          "ja": "こたえを かいて。",
+          "action": "メモを とる まね",
+          "emoji": "📝"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/",
+          "/ɪd/"
+        ],
+        "words": [
+          "asked",
+          "worried",
+          "nodded",
+          "smiled"
+        ],
+        "tipJa": "ふりかえり: ask → asked（そのまま）、worry → worried（y を i に）、nod → nodded（重ねる）、smile → smiled（d だけ）。"
+      },
+      "vocab": [
+        {
+          "en": "interview",
+          "ja": "インタビュー",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "bike",
+          "ja": "じてんしゃ",
+          "emoji": "🚲"
+        },
+        {
+          "en": "memory",
+          "ja": "おもいで",
+          "emoji": "💭"
+        },
+        {
+          "en": "question",
+          "ja": "しつもん",
+          "emoji": "❓"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're reporters. Let's do a memory interview. To ask about the time, say, When did you learn to ride a bike? Say it with me. When did you learn to ride a bike? Great! Answers can be short. Last year. When I was five. Then ask, How was it? It was hard at first. And then, How was it in the end? It was great! いつ？ どうだった？ と きくと、おもいでの はなしが ひろがるよ。 Let's practice once more. When did you learn to swim? When I was six. How was it? It was fun! Now, phonics review. Asked. Worried. Nodded. Smiled. Do you remember the four ed rules? Here's a tip. In an interview, you don't need to say your real name. Just have fun and listen well. Okay, let's start the interview!",
+      "conversation": {
+        "scene": "The four friends interview each other about their memories",
+        "sceneJa": "4人で、思い出インタビュー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's do a memory interview. Riko, you're the interviewer.",
+            "ja": "おもいで インタビューを しましょう。リコが インタビュアーよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay! Haru, when did you learn to ride a bike?",
+            "ja": "はい！ハル、いつ じてんしゃに のれるように なったの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Last year. It was hard at first. I worried a lot.",
+            "ja": "きょねん。さいしょは むずかしかった。すごく しんぱい だったよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How was it in the end?",
+            "ja": "さいごは どうだった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Great! My mom helped me, and I smiled all day.",
+            "ja": "さいこう！おかあさんが てつだって くれて、1日じゅう にこにこ だった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you! Next, Kiko. When did you first meet Birimo?",
+            "ja": "ありがとう！つぎは キコ。はじめて ビリモに あったのは いつ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "At the start of our trip! I was shy, so I just nodded.",
+            "ja": "たびの はじめ！はずかしくて、うなずく だけ だったの。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おもいで インタビュー。When did you ～? How was it? と きいたり こたえたり しよう（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Riko. I'm the interviewer today! When did you learn to ride a bike? How was it?",
+          "targetExpressions": [
+            "When did you ～?",
+            "How was it?",
+            "It was hard at first."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "When did you learn to ride a bike? ― Last year.",
+          "How was it? ― It was hard at first.",
+          "asked・worried・nodded・smiled（ed の 4つの きまり）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 476,
+      "world": 16,
+      "title": "Past Tense Quest",
+      "titleJa": "すぎた かたち クエスト",
+      "school": {
+        "grade": "中1",
+        "topic": "I went, I saw, I ate, I bought.：ふきそくな 過去形の まとめ",
+        "grammar": "不規則動詞の 過去形（go → went, see → saw, eat → ate, buy → bought ほか）",
+        "expressions": [
+          {
+            "en": "I went, I saw, I ate, I bought.",
+            "ja": "いった、みた、たべた、かった。",
+            "core": true
+          },
+          {
+            "en": "Go, went. See, saw. Eat, ate. Buy, bought.",
+            "ja": "いく → went、みる → saw、たべる → ate、かう → bought。"
+          },
+          {
+            "en": "The box is open! We did it!",
+            "ja": "はこが あいた！やったね！"
+          }
+        ],
+        "testPoints": [
+          "よく つかう ふきそくな 過去形（went・saw・ate・bought など）が すぐ いえる",
+          "bought（ought）・sang（i → a）・knew（ew）・wrote（o…e）の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn the key.",
+          "ja": "かぎを まわして。",
+          "action": "かぎを ひねる まね",
+          "emoji": "🗝️"
+        },
+        {
+          "en": "Lift the lid.",
+          "ja": "ふたを もちあげて。",
+          "action": "りょうてで ふたを あける まね",
+          "emoji": "🧰"
+        },
+        {
+          "en": "Say the password.",
+          "ja": "あいことばを いって。",
+          "action": "てを くちに あてて ひそひそ",
+          "emoji": "🔐"
+        },
+        {
+          "en": "Jump for joy.",
+          "ja": "よろこんで とびはねて。",
+          "action": "りょうてを あげて ジャンプ",
+          "emoji": "🥳"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ought",
+          "a",
+          "ew",
+          "o_e"
+        ],
+        "sounds": [
+          "/ɔːt/",
+          "/æ/",
+          "/uː/",
+          "/oʊ/"
+        ],
+        "words": [
+          "bought",
+          "sang",
+          "knew",
+          "wrote"
+        ],
+        "tipJa": "とくべつな かたちの まとめ: buy → bought、sing → sang、know → knew、write → wrote。"
+      },
+      "vocab": [
+        {
+          "en": "treasure",
+          "ja": "たから",
+          "emoji": "💎",
+          "core": true
+        },
+        {
+          "en": "lid",
+          "ja": "ふた",
+          "emoji": "🧰"
+        },
+        {
+          "en": "password",
+          "ja": "あいことば",
+          "emoji": "🔐"
+        },
+        {
+          "en": "quest",
+          "ja": "クエスト（ぼうけんの かだい）",
+          "emoji": "⚔️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Do you remember the key we found at the top of the tower? Today we found a treasure box for it! But the box has a password. To open it, we must say past forms. Today's sentence is: I went, I saw, I ate, I bought. Say it with me. I went, I saw, I ate, I bought. Great! Go, went. See, saw. Eat, ate. Buy, bought. These past forms are special. ed を つけない とくべつな かたちだよ。 Remember, we don't say goed or eated. Those words are not English. Let's try more. Sing, sang. Know, knew. Write, wrote. Now, phonics review. Bought. Sang. Knew. Wrote. Let's say them fast! Here's a tip. Make past form cards and play a game with your family. Okay, let's open the treasure box!",
+      "conversation": {
+        "scene": "The team opens a treasure box with the key by saying past forms",
+        "sceneJa": "遺跡の 宝箱を 開ける、過去形クエスト",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "This box has a keyhole. Let's try our key!",
+            "ja": "この はこ、かぎあなが ある。わたしたちの かぎを ためそう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wait. There are words on the lid. Say the past forms, and it will open.",
+            "ja": "まって。ふたに ことばが あるわ。すぎた かたちを いえば あくそうよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Go, went! See, saw!",
+            "ja": "go は went！see は saw！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Eat, ate! Buy, bought!",
+            "ja": "eat は ate！buy は bought！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sing, sang! Know, knew! Write, wrote!",
+            "ja": "sing は sang！know は knew！write は wrote！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Click! The box is open! We did it!",
+            "ja": "カチッ！はこが あいた！やったね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look inside. It's a very old diary!",
+            "ja": "なかを みて。とても ふるい にっきよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビリモが いう ことばの すぎた かたちを こたえよう（go → went、see → saw …）。こんどは きみが もんだいを だしてみよう",
+          "starterEn": "Hi! I'm Birimo. Let's play a past tense quest! I say a word, and you say the past form. Ready? Go!",
+          "targetExpressions": [
+            "Go, went.",
+            "See, saw.",
+            "Eat, ate.",
+            "Buy, bought."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I went, I saw, I ate, I bought.（ed を つけない とくべつな かたち）",
+          "go → went、see → saw、eat → ate、buy → bought",
+          "bought・sang・knew・wrote の まとめ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 477,
+      "world": 16,
+      "title": "Picture Story",
+      "titleJa": "えで おはなし",
+      "school": {
+        "grade": "中1",
+        "topic": "Yesterday, Kiko went to the park. She lost her hat.：4コマの えを みて おはなしを する",
+        "grammar": "3人称の 過去形の おはなし（She went / She lost）",
+        "expressions": [
+          {
+            "en": "Yesterday, Kiko went to the park. She lost her hat.",
+            "ja": "きのう、キコは こうえんに いきました。ぼうしを なくしました。",
+            "core": true
+          },
+          {
+            "en": "The wind blew hard. Her hat flew into a tree.",
+            "ja": "かぜが つよく ふきました。ぼうしが きの うえに とんでいきました。"
+          },
+          {
+            "en": "Finally, she got her hat back.",
+            "ja": "さいごに、ぼうしが もどってきました。"
+          }
+        ],
+        "testPoints": [
+          "4コマの えを みて、すぎた かたちで おはなしが つなげられる",
+          "dropped・cried・hurried（ed）と caught（aught）の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to picture one.",
+          "ja": "1まいめの えを ゆびさして。",
+          "action": "ゆびで 1を さす",
+          "emoji": "1️⃣"
+        },
+        {
+          "en": "Hold your hat.",
+          "ja": "ぼうしを おさえて。",
+          "action": "あたまを りょうてで おさえる",
+          "emoji": "👒"
+        },
+        {
+          "en": "Blow like the wind.",
+          "ja": "かぜみたいに ふいて。",
+          "action": "ふーっと つよく いきを ふく",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Catch the hat.",
+          "ja": "ぼうしを つかまえて。",
+          "action": "ジャンプして つかむ まね",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ed",
+          "aught"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/",
+          "/ɔːt/"
+        ],
+        "words": [
+          "dropped",
+          "cried",
+          "hurried",
+          "caught"
+        ],
+        "tipJa": "ふりかえり: drop → dropped、cry → cried、hurry → hurried（ed の きまり）と catch → caught（aught）。"
+      },
+      "vocab": [
+        {
+          "en": "hat",
+          "ja": "ぼうし",
+          "emoji": "👒",
+          "core": true
+        },
+        {
+          "en": "park",
+          "ja": "こうえん",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "wind",
+          "ja": "かぜ",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "branch",
+          "ja": "えだ",
+          "emoji": "🌿"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Birimo drew a picture story with four pictures. Let's tell the story together. Picture one. Today's sentences are: Yesterday, Kiko went to the park. She lost her hat. Say them with me. Yesterday, Kiko went to the park. She lost her hat. Great! Lost is the past form of lose. Picture two. The wind blew hard. Picture three. Her hat flew into a tree, and she cried. Picture four. A tall man hurried over and caught it. Finally, she got her hat back. Let's say the ending together. Finally, she got her hat back! えを 1まいずつ みて、すぎた かたちで おはなしを つなげよう。 Now, phonics review. Dropped. Cried. Hurried. Caught. Here's a tip. A good picture story has a beginning, a middle, and an end. Okay, let's make our own picture stories!",
+      "conversation": {
+        "scene": "Birimo shows a four-picture story about Kiko",
+        "sceneJa": "4コマ絵を 見て、物語を 話す",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I drew a picture story. Look! Yesterday, Kiko went to the park.",
+            "ja": "4コマの えを かいたよ。みて！きのう、キコは こうえんに いきました。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What happened next?",
+            "ja": "つぎは どう なったの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The wind blew hard. She lost her hat!",
+            "ja": "かぜが つよく ふいて、ぼうしを なくしちゃった！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh no! Where did it go?",
+            "ja": "えっ、たいへん！どこに いったの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It flew into a tree, and Kiko cried. Then a tall man hurried over and caught it.",
+            "ja": "きの うえに とんでいって、キコは ないちゃった。そこへ せの たかい 男の人が いそいで きて、つかまえて くれたんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hey, that's me! But it's true. Finally, I got my hat back.",
+            "ja": "ちょっと、それ わたし！でも ほんとうの はなし。さいごに ぼうしが もどってきたの。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great picture story, Birimo. It has a beginning, a middle, and an end.",
+            "ja": "すてきな 4コマね、ビリモ。はじめ・なか・おわりが ちゃんと あるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "4コマの えを みて、Yesterday, ～. Then, ～. Finally, ～. で おはなしを つづけよう",
+          "starterEn": "Hi! I'm Birimo. Look at my four pictures! Yesterday, Kiko went to the park. She lost her hat. What happened next? You tell the story!",
+          "targetExpressions": [
+            "Yesterday, ～ went to ～.",
+            "Then, ～.",
+            "Finally, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Yesterday, Kiko went to the park. She lost her hat.",
+          "The wind blew hard. Finally, she got her hat back.（はじめ・なか・おわり）",
+          "dropped・cried・hurried・caught の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 478,
+      "world": 16,
+      "title": "My Diary Page",
+      "titleJa": "わたしの にっき",
+      "school": {
+        "grade": "中1",
+        "topic": "Last Sunday, I went to the library. It was quiet.：むかしの 日記を よみ、じぶんの 日記を かく",
+        "grammar": "日記の 文（いつ・どこ・なにを した・きもち）",
+        "expressions": [
+          {
+            "en": "Last Sunday, I went to the library. It was quiet.",
+            "ja": "このまえの 日ようび、としょかんに いきました。しずか でした。",
+            "core": true
+          },
+          {
+            "en": "I read a book about dinosaurs.",
+            "ja": "きょうりゅうの ほんを よみました。"
+          },
+          {
+            "en": "I was tired, but I was happy.",
+            "ja": "つかれたけど、しあわせ でした。"
+          }
+        ],
+        "testPoints": [
+          "5文の むかしの 日記を よんで わかる。じぶんの 日記を 3〜4文で かける",
+          "visited・studied（ed）と swam・gave（i → a）の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your notebook.",
+          "ja": "ノートを ひらいて。",
+          "action": "ノートを ひらく まね",
+          "emoji": "📓"
+        },
+        {
+          "en": "Write the day.",
+          "ja": "ようびを かいて。",
+          "action": "ゆびで そらに かく",
+          "emoji": "📅"
+        },
+        {
+          "en": "Draw a small picture.",
+          "ja": "ちいさな えを かいて。",
+          "action": "ゆびで ちいさく まるを かく",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Read your diary aloud.",
+          "ja": "にっきを こえに だして よんで。",
+          "action": "ノートを もって よむ まね",
+          "emoji": "🗣️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ed",
+          "a"
+        ],
+        "sounds": [
+          "/ɪd/",
+          "/d/",
+          "/æ/",
+          "/eɪ/"
+        ],
+        "words": [
+          "visited",
+          "studied",
+          "swam",
+          "gave"
+        ],
+        "tipJa": "ふりかえり: visit → visited（そのまま）、study → studied（y を i に）、swim → swam・give → gave（i が a に）。"
+      },
+      "vocab": [
+        {
+          "en": "library",
+          "ja": "としょかん",
+          "emoji": "📚",
+          "core": true
+        },
+        {
+          "en": "notebook",
+          "ja": "ノート",
+          "emoji": "📓"
+        },
+        {
+          "en": "Sunday",
+          "ja": "にちようび",
+          "emoji": "📅"
+        },
+        {
+          "en": "dinosaur",
+          "ja": "きょうりゅう",
+          "emoji": "🦕"
+        }
+      ],
+      "teacherScript": "Hello, everyone! In the treasure box, we found an old diary. A child wrote it long ago. Let's read it. Today, I helped my mother. We made bread. Then I played by the big tree. The king waved to me. I was happy. Now, let's write our own diary pages. Today's sentence is: Last Sunday, I went to the library. It was quiet. Say it with me. Last Sunday, I went to the library. It was quiet. Great! Write three or four sentences. When was it? Where did you go? What did you do? How did you feel? いつ・どこ・なにを した・きもち の じゅんに かこう。 Now, phonics review. Visited. Studied. Swam. Gave. Here's a tip. You don't need to write your real name or address. Okay, let's write!",
+      "conversation": {
+        "scene": "The team reads the old diary and writes their own diaries",
+        "sceneJa": "むかしの 日記を 読んで、日記を 書いて 読み合う",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's read the old diary from the box. Today, I helped my mother. We made bread.",
+            "ja": "はこの ふるい にっきを よみましょう。「きょう、おかあさんの おてつだいを しました。パンを つくりました」。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Then what?",
+            "ja": "それから？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Then I played by the big tree. The king waved to me. I was happy.",
+            "ja": "「それから おおきな きの そばで あそびました。王さまが てを ふって くれました。しあわせ でした」。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The big tree! It's the tree from the king's story!",
+            "ja": "おおきな き！王さまの おはなしの きだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's write our own diaries, too. Last Sunday, I went to the library. It was quiet.",
+            "ja": "わたしたちも にっきを かこう。「このまえの 日ようび、としょかんに いきました。しずか でした」。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I visited the tower and studied the map. I was tired, but I was happy.",
+            "ja": "ぼくは とうに いって、ちずを しらべた。つかれたけど、しあわせ だった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Nice diaries! Maybe someday, someone will read ours, too.",
+            "ja": "いい にっき！いつか だれかが わたしたちの にっきを よむかもね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "日記を Last ～, I went to ～. It was ～. の ように 3〜4文 かいて よもう（ほんとうの なまえ・じゅうしょは かかなくて OK）",
+          "starterEn": "Hi! I'm Riko. Here's my diary page. Last Sunday, I went to the library. It was quiet. I read a book about dinosaurs. What did you do last Sunday?",
+          "targetExpressions": [
+            "Last ～, I went to ～.",
+            "It was ～.",
+            "I was ～, but I was ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Last Sunday, I went to the library. It was quiet.",
+          "日記は いつ・どこ・なにを した・きもち の じゅんに",
+          "visited・studied・swam・gave の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 479,
+      "world": 16,
+      "title": "Ruins of Memory Review",
+      "titleJa": "きおくの遺跡 ふりかえり",
+      "school": {
+        "grade": "中1",
+        "topic": "What did you do? Where did you go?：すぎた ことを きく しつもんの まとめ",
+        "grammar": "What / Where / Who did you ～?・How was ～?・Did you ～?",
+        "expressions": [
+          {
+            "en": "What did you do at the ruins?",
+            "ja": "いせきで なにを しましたか？",
+            "core": true
+          },
+          {
+            "en": "Where did you go first? ― I went to the wall painting.",
+            "ja": "さいしょに どこへ いった？ ― かべの えの ところ。"
+          },
+          {
+            "en": "Did you like the riddle door? ― Yes, I did!",
+            "ja": "なぞなぞの とびらは すきだった？ ― うん！"
+          }
+        ],
+        "testPoints": [
+          "What / Where / Who did you ～? と Did you ～? を つかいわけて きける",
+          "stopped（ed）・began（i → a）・rode（o…e）・taught（aught）の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk through the gate.",
+          "ja": "もんを くぐって。",
+          "action": "かがんで くぐる まね",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Look back at the tower.",
+          "ja": "とうを ふりかえって みて。",
+          "action": "うしろを ふりむく",
+          "emoji": "🗼"
+        },
+        {
+          "en": "Pick up your trash.",
+          "ja": "ごみを ひろって。",
+          "action": "かがんで ひろう まね",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "Wave goodbye to the ruins.",
+          "ja": "いせきに さよならの てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ed",
+          "a",
+          "o_e",
+          "aught"
+        ],
+        "sounds": [
+          "/t/",
+          "/æ/",
+          "/oʊ/",
+          "/ɔːt/"
+        ],
+        "words": [
+          "stopped",
+          "began",
+          "rode",
+          "taught"
+        ],
+        "tipJa": "まとめ: stop → stopped（ed）、begin → began（i → a）、ride → rode（o…e）、teach → taught（aught）。"
+      },
+      "vocab": [
+        {
+          "en": "tour",
+          "ja": "ツアー",
+          "emoji": "🗺️",
+          "core": true
+        },
+        {
+          "en": "gate",
+          "ja": "もん",
+          "emoji": "🚪"
+        },
+        {
+          "en": "trash",
+          "ja": "ごみ",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This is our last tour of the Ruins of Memory. Let's look back at everything we did. Ask your friends, What did you do at the ruins? Where did you go first? Did you like it? Say it with me. What did you do at the ruins? Great! Remember these question starters. What did. Where did. Who did. And How was. They help you talk about the past. すぎた ことを きく しつもんを ぜんぶ つかってみよう。 Let's practice. Where did you go first? I went to the tower. Did you like it? Yes, I did! Now, phonics review. Stopped. Began. Rode. Taught. We learned ed words and special past forms! Here's a tip. Thank the places you visit, and leave them clean for the next visitors. Okay, let's start the goodbye tour!",
+      "conversation": {
+        "scene": "The team takes a goodbye tour of the ruins",
+        "sceneJa": "遺跡の さよならツアー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is our goodbye tour. What did you do at the ruins?",
+            "ja": "さよならツアーよ。いせきで なにを した？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I climbed the tower and found the key!",
+            "ja": "とうに のぼって、かぎを みつけた！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Where did you go first, Kiko?",
+            "ja": "キコは さいしょに どこへ いった？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I went to the wall painting. The people danced in the picture.",
+            "ja": "かべの えの ところ。えの 人たちが おどってたね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Did you like the riddle door?",
+            "ja": "なぞなぞの とびらは すきだった？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I did! You knew the answer, Birimo.",
+            "ja": "うん！ビリモが こたえを しってたね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "We have so many memories here. Goodbye, ruins!",
+            "ja": "ここには たくさんの おもいでが あるわね。さようなら、いせき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "遺跡の さよならツアー。What did you do? Where did you go? Did you ～? を つかって ふりかえろう",
+          "starterEn": "Hi! I'm Haru. It's our goodbye tour of the ruins. I climbed the tower. What did you do here? Where did you go?",
+          "targetExpressions": [
+            "What did you do?",
+            "Where did you go?",
+            "Did you like ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What did you do at the ruins? ／ Where did you go first?",
+          "Did you like the riddle door? ― Yes, I did!",
+          "stopped・began・rode・taught（ed と とくべつな かたちの まとめ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 480,
+      "world": 16,
+      "title": "World 16 Grand Review",
+      "titleJa": "ワールド16 グランドレビュー",
+      "school": {
+        "grade": "中1",
+        "topic": "Once upon a time, four friends found a map.：遺跡の 広場で おはなし発表会",
+        "grammar": "過去形の まとめ（-ed・ふきそくな 過去形・was / were・Did you ～?・おはなしの じゅんばん）",
+        "expressions": [
+          {
+            "en": "Once upon a time, four friends found a map.",
+            "ja": "むかしむかし、4人の ともだちが ちずを みつけました。",
+            "core": true
+          },
+          {
+            "en": "First, they walked to the ruins. Then, they found a key.",
+            "ja": "まず、いせきまで あるきました。それから、かぎを みつけました。"
+          },
+          {
+            "en": "Finally, they read the old story, and they smiled.",
+            "ja": "さいごに、ふるい おはなしを よんで、にっこり わらいました。"
+          }
+        ],
+        "testPoints": [
+          "すぎた かたちと じゅんばんの ことばで おはなしを 発表できる",
+          "-ed の つづりと おと・ふきそくな 過去形（i → a・o…e・ew・ought / aught）の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Sing! Swim! Write! Fly!",
+          "ja": "うたって！およいで！かいて！とんで！",
+          "action": "ワールド16 の ことばの うごきを はやく",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Stand on the stage.",
+          "ja": "ステージに たって。",
+          "action": "むねを はって まえに でる",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ed",
+          "a",
+          "ew",
+          "ought",
+          "o_e"
+        ],
+        "sounds": [
+          "/d/",
+          "/æ/",
+          "/uː/",
+          "/ɔːt/",
+          "/oʊ/"
+        ],
+        "words": [
+          "lived",
+          "sang",
+          "flew",
+          "thought",
+          "wrote"
+        ],
+        "tipJa": "ワールド16 の まとめ: live → lived、sing → sang、fly → flew、think → thought、write → wrote。"
+      },
+      "vocab": [
+        {
+          "en": "presentation",
+          "ja": "はっぴょう",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎭"
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👏"
+        },
+        {
+          "en": "star map",
+          "ja": "ほしの ちず",
+          "emoji": "✨"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! This is the last lesson of World 16. ワールド16 さいごの レッスンだよ。 First, speed TPR! Look! Stop! Come here! Go! Sing! Swim! Write! Fly! Great! Now, it's the World 16 story show in the plaza. Today's sentence is: Once upon a time, four friends found a map. Say it with me. Once upon a time, four friends found a map. Wonderful! A good story uses order words. First. Then. After that. Finally. And it uses past forms. Walked. Found. Opened. Smiled. Now, the last phonics review. Lived. Sang. Flew. Thought. Wrote. Amazing! And look, the old diary has one more page. It's a map of the stars! Where are we going next? But first, your story show. Speak loudly and smile. You can do it!",
+      "conversation": {
+        "scene": "In the plaza of the ruins, the World 16 story show",
+        "sceneJa": "遺跡の 広場で、ワールド16 おはなし発表会",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the World 16 story show! Who's first?",
+            "ja": "ワールド16 おはなし はっぴょうかいへ ようこそ！さいしょは だれ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Once upon a time, four friends found a map.",
+            "ja": "むかしむかし、4人の ともだちが ちずを みつけました。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "First, they walked to the ruins. Then, they found a key.",
+            "ja": "まず、いせきまで あるきました。それから、かぎを みつけました。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "After that, they opened a box. There was an old diary inside.",
+            "ja": "そのあと、はこを あけました。なかには ふるい にっきが ありました。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Finally, they read the old story, and they smiled. The end!",
+            "ja": "さいごに、ふるい おはなしを よんで、にっこり わらいました。おしまい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Bravo! Oh, look at the last page of the diary. It's a map of the stars!",
+            "ja": "ブラボー！あら、にっきの さいごの ページを みて。ほしの ちずよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "There's a tower on a mountain, too. Is that our next stop?",
+            "ja": "やまの うえに とうも かいてある。つぎは あそこ かな？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド16 おはなし発表会。Once upon a time, ～. First, ～. Then, ～. Finally, ～. で おはなしを かたろう（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the World 16 story show! I'm Haru. Once upon a time, four friends found a map. Now it's your turn. Tell us a story!",
+          "targetExpressions": [
+            "Once upon a time, ～.",
+            "First, ～. Then, ～.",
+            "After that, ～.",
+            "Finally, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Once upon a time, four friends found a map.（おはなし発表会）",
+          "First / Then / After that / Finally と すぎた かたちで かたる",
+          "lived・sang・flew・thought・wrote（ワールド16 の つづりの まとめ）"
+        ]
+      }
+    }
+  ]
+}

@@ -175,3 +175,37 @@
 - `npx vitest run`: 45 ファイル・1,167 テスト すべて成功
 - `npx next build`: 成功。First Load JS は /map 192 kB（190 → +2）、/lesson/[lessonNo] 195 kB（193 → +2）、/gacha 180 kB、/test/[assessmentId] 179 kB、/parent 158 kB（増えたのは ワールド15 の 問題の コードと 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 22`: No.22（L421〜440・62 ページ）を 作れることを 確認
+
+## WORLD — ワールド16「きおくの遺跡」（L451〜480）（2026-11-25）
+
+### やったこと
+- `content/curriculum/worlds/world-16.json` を 新しく 作成（30 レッスン、ステージ2・A1+、`school.grade` は「中1」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 480 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 121、会話の セリフ 209 行（1 回 6〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 1 回 平均 約 126 語の 英語（最少 121 語）＋短い 日本語の たすけ。
+- ブロック構成: 451〜455 過去形の ひろがり People lived here long ago.・What did you do yesterday?・We stopped and looked.・Did you see that? ― Yes, I did. / No, I didn't.・遺跡日記（wasn't / weren't）→ 456〜460 ふきそくな 過去形 sang・wrote・knew・Where did you go last weekend? ― I went to ～. / I stayed home.・週末トーク → 461〜465 bought・I thought it was a ghost!（正体は シーツ）・Who taught you? ― My grandpa did.・It wasn't easy, but I did it. / Were you tired?・1日の ふりかえり（A, B, and C）→ 466〜470 はじめての「おはなし」Once upon a time・First / Then / After that・Finally・How did he feel? ― He felt sad because ～.・おはなし タイム → 471〜475 ついかの しつもんと はんのう How was your summer?・Who did you go with? / How long did you stay?・Sounds fun! / Oh no! What happened?・My best day was ～.・思い出インタビュー When did you ～? How was it? → 476〜480 ふりかえり（過去形クエスト・4コマの おはなし・むかしの 日記 5文を よんで 自分の 日記・さよならツアー・おはなし発表会）。
+- 物語の 糸: L451 で かぜの はねが しめした いせきに つく。L466〜469 の 石版の むかし話（さびしい 王さまに とりが はこを とどけ、たねから 大きな 木が そだち、こどもたちが あそびに きて 王さまが わらう）は オリジナル。L465 で とうの てっぺんで かぎを 見つけ、L476 で その かぎの たからばこを あけると「むかしの 日記」が 出てきて、L478 で よむ（王さまの 木が 出てくる）。L480 で 日記の さいごの ページに「ほしの ちず」と「やまの うえの とう」（ワールド17 ほしふる天文台）。
+- フォニックスの 問題（`src/lib/curriculum/w16Phonics.ts`・`questions.ts` の `w16Question`。w15Question より 先に よぶ）:
+  - -ed の つづり "-ed": 「ed を つけた ただしい つづりは？」（like → liked / likeed / likked、stop → stopped / stoped / stopeed、cry → cried / cryed / cryied、walk → walked / walkked / walkt）。
+  - ふきそくな 過去形 "a"（i → a）"o_e" "ew" "ought" "aught": 「すぎた ことの かたちは？」（sing → sang / singed / sanged、write → wrote / writed / wroted、fly → flew / flied / flewed、buy → bought / buyed / baught、catch → caught / catched / cought）。表に ある 30 語だけ 出題。
+  - -ed の 3つの おと（rule が "ed-sounds" の L471〜474）: ワールド11 と おなじ「おわりの -ed は どの おと？」（ト / ド / イド）。ふりかえり回（rule: review）の -ed は つづりの 問題。
+- テスト: `tests/curriculum.test.ts` に ワールド16 の 決まりごと（範囲・ステージ・タイトル・フォニックスの 順と 種類・文法と 会話の 型・先生の台本の 英語の 割合・会話の 行数・L480 スピード TPR・日記／インタビュー／発表で なまえ・じゅうしょを いわなくて OK・手紙と 日記の 台本で じゅうしょを 教えない）を 追加。`tests/phonics-w16.test.ts`（7 テスト）を 追加。
+
+### 決めたこと（理由）
+- **新しい phonics.rule**: "ed-spelling" "past-i-a" "past-o-e" "past-ew" "ought-aught" "ed-sounds"（ふりかえりは "review"）。計画の B3「i → o・o → e」は、o…e に なる もの（wrote・woke・broke …）と ew に なる もの（knew・flew・drew …）に 2回ずつ わけた。
+- **focus は ことばに ふくまれる つづり**（全体テスト「フォニックスの単語は フォーカスを 含む」を そのまま 通すため）。i → a は "a"、o…e は マジック e と おなじ "o_e"（wrote は ほんとうに o…e の かたちなので ボタンの「o…e マジック e」も まちがいでは ない）。ふきそくな 過去形は focus の もじが あっても 表に ない ことばは 出題しない。
+- **まちがいの 選択肢**: こどもが ほんとうに しがちな「きそくどおりの -ed」（singed・buyed・flied）と「過去形に もう一度 ed」（sanged・wroted）。ought / aught は 2つめを いれかえ（baught・cought）に して、つづりの みわけを 練習させる。sat（→ sated が ほんとうの ことば）の ような まぎらわしい ものは レッスンに 入れなかった。
+- **-ed の つづりの「そのまま」**: まちがいは 重ねた 形（walkked）と 音の とおりの 形（walkt・playd・wantid）。agreed の ような e の つづく ことばは 出題しない。
+- **新しい 話し手は 増やさない**: 案内人の むすめ（L459）・つぼ職人（L463）は エマ先生、旅の子 レオ（L471）は ビリモが「ごっこ」で 演じる。
+- **やすみの 話**: どこにも いかなかった 子の ために L459 で I stayed home and read a book. を 表現に 入れ、AI の goalJa にも「I stayed home. で OK」と 書いた。L472 の AI 会話は「ほんとうの ばしょの なまえは いわなくて OK」。L462 の おばけは こわく しない（正体は シーツ、goalJa に「こわい はなしは しなくて OK」）。L473 は「しっぱいを わらうのでは なく いっしょに わらう」と 台本で 教える。
+- 自分で 1 回 見なおして なおした ところ: L476 の 日本語欄が 英語だけに なっていた（スキーマの 検証で 発見 → 日本語に）、L456 の 台本で エマ先生が 自分を「with Ms. Emma」と よぶ 文、L451 の sounds（liked・danced は /t/）、L477 の 台本の 流れ（おはなしを くりかえす と いって すぐ フォニックスに うつっていた）、台本が 120 語に 足りない 回（L459・460・462・463・467〜469・472〜477・479）に 練習の やりとりを 1〜2 文 足した。
+
+### 例（L462「I Thought It Was a Ghost!」）
+- 表現（core）: I thought it was a ghost! ／ It was just a sheet. ／ Were you scared? ― Yes, I was!
+- 会話（夜の 遺跡）: Haru「Look! Something white is moving over there!」 Kiko「Eek! Is it a ghost?」 Birimo「Ha ha! It's just a sheet. It's drying in the wind.」 Haru「Phew! I thought it was a ghost!」
+- フォニックス: woke / broke / spoke / chose（o…e に なる 過去形。問題は wake → ？ で woke / waked / woked）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 46 ファイル・1,210 テスト すべて成功
+- `npx next build`: 成功。First Load JS は /map 193 kB（192 → +1）、/lesson/[lessonNo] 196 kB（195 → +1）、/gacha 181 kB、/test/[assessmentId] 181 kB、/parent 158 kB（増えたのは ワールド16 の 問題の コードと 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 24`: No.24（L461〜480・61 ページ）を 作れることを 確認
