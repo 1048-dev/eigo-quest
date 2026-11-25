@@ -112,7 +112,7 @@ REPORT_STORAGE_DIR=""
 - **LINE ログインと Messaging API のチャネルシークレットは別の値**です。入れまちがえに注意してください。
 - `LINE_LOGIN_CALLBACK_URL` と `APP_BASE_URL` は同じドメインにします。
 - 入れたら **サーバーを起動しなおします**（環境変数は起動時に読みます）。
-- レポートの PDF を日本語フォントつきで作るには、サーバーに Python 3 と reportlab、日本語フォント（IPAexゴシックなど）が必要です（README の「ワークシート」）。
+- （run5 で変更）レポートの PDF は サーバーが Node だけで作ります（日本語フォントは アプリに同梱）。サーバーに Python は いりません。ワークブックは あらかじめ作って置き場所にアップロードします（[docs/run5/DEPLOY.md](../run5/DEPLOY.md) の手順3）。
 
 > キー（シークレット・アクセストークン）は人に見せない・Git に入れない・チャットに貼らないでください。
 > 漏れたかもしれないときは、LINE Developers でシークレットの再発行／アクセストークンの取り消し→再発行をして、`.env` を入れかえてください。
@@ -134,6 +134,8 @@ REPORT_STORAGE_DIR=""
 ---
 
 ## 6. 毎月の自動配信（cron）
+
+> **Vercel で公開する場合は この設定は不要です。** `vercel.json` の Cron Jobs が `/api/cron/line-monthly` を呼びます（[docs/run5/DEPLOY.md](../run5/DEPLOY.md) の手順8）。以下は 自分のサーバーで動かす場合です。
 
 毎月1日の朝に、先月の分を送るように設定します（サーバーの cron やスケジューラーで）。
 

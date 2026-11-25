@@ -15,7 +15,7 @@ const FIELD_MESSAGES: Record<string, string> = {
  * 保護者を登録してそのままログインする。登録直後は子どもを追加できるよう、保護者PINも入力ずみとして扱う。
  */
 export const POST = withAuthApi("register", async (req) => {
-  const limit = registerLimiter.hit(clientIp(req));
+  const limit = await registerLimiter.hit(clientIp(req));
   if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
 
   const parsed = await parseBody(req, RegisterRequestSchema);

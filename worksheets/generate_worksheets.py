@@ -855,6 +855,16 @@ def progress_report(data: dict, out: Path):
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+def show_path(p: Path) -> str:
+    """表示用のパス。プロジェクトの中なら相対パス、外（--out に別のフォルダ）なら そのまま。
+    run5: 以前は relative_to(ROOT) で 外のフォルダだと ValueError になり、PDF はできているのに
+    終了コード 1 になって「ワークシートを作れませんでした」になっていた。"""
+    try:
+        return str(p.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(p)
+
+
 def main():
     ap = argparse.ArgumentParser(description="Eigo Quest A4ワークシート生成")
     ap.add_argument("--lesson", type=int, help="レッスン番号（Session）")
@@ -900,7 +910,7 @@ def main():
                 ap.error(f"ワールド{w} は ありません（1〜{max(names)}）")
             p = args.out / "monthly" / f"world-{w:02d}.pdf"
             pages = bundle_worksheet(w, names[w], lessons, p)
-            print(f"{p.relative_to(ROOT)}  ({pages} ページ)")
+            print(f"{show_path(p)}  ({pages} ページ)", flush=True)
         return
 
     if args.all:
@@ -921,7 +931,7 @@ def main():
         ap.error("--lesson / --test + --range / --all のいずれかを指定してください")
 
     for p in made:
-        print(p.relative_to(ROOT))
+        print(show_path(p))
 
 
 if __name__ == "__main__":

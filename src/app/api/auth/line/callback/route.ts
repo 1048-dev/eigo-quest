@@ -56,7 +56,7 @@ async function finishLogin(cfg: LineConfig, req: Request, identity: LineIdentity
     return lineRedirect(cfg, existing.hasPin ? "/who" : "/setup-pin", req);
   }
   // 新しい保護者を作る（メールの登録と同じく、同じ IP からの登録回数を制限）
-  const limit = registerLimiter.hit(clientIp(req));
+  const limit = await registerLimiter.hit(clientIp(req));
   if (!limit.ok) return lineRedirect(cfg, "/login?line=rate_limited", req);
   const created = await createLineParent(identity);
   await beginSession(created.id);

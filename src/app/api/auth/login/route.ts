@@ -14,18 +14,18 @@ export const POST = withAuthApi("login", async (req) => {
 
   const ip = clientIp(req);
   const key = `${ip}|${parsed.data.email}`;
-  const byIp = loginIpLimiter.hit(ip);
+  const byIp = await loginIpLimiter.hit(ip);
   if (!byIp.ok) return tooManyAttempts(byIp.retryAfterSec);
-  const byKey = loginLimiter.hit(key);
+  const byKey = await loginLimiter.hit(key);
   if (!byKey.ok) return tooManyAttempts(byKey.retryAfterSec);
-  const byEmail = loginEmailLimiter.hit(parsed.data.email);
+  const byEmail = await loginEmailLimiter.hit(parsed.data.email);
   if (!byEmail.ok) return tooManyAttempts(byEmail.retryAfterSec);
 
   const parent = await authenticateParent(parsed.data.email, parsed.data.password);
   if (!parent) return authFail(LOGIN_FAILED_JA, 401, "LOGIN_FAILED");
 
-  loginLimiter.reset(key);
-  loginEmailLimiter.reset(parsed.data.email);
+  await loginLimiter.reset(key);
+  await loginEmailLimiter.reset(parsed.data.email);
   await beginSession(parent.id);
   return authOk({ messageJa: "ログインしました。" });
 });

@@ -21,7 +21,7 @@ export const POST = withAuthApi("parent-email-add", async (req) => {
   const pre = await canAddEmail(ctx.parent.id);
   if (!pre.ok) return authFail("このアカウントには、すでにメールアドレスが登録されています。", 409, "HAS_EMAIL");
 
-  const limit = emailAddLimiter.hit(`email-add:${ctx.parent.id}`);
+  const limit = await emailAddLimiter.hit(`email-add:${ctx.parent.id}`);
   if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
 
   const { email, password } = parsed.data;

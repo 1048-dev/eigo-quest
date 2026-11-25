@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "vercel-build": "node scripts/vercel-build.mjs",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -13,6 +14,8 @@
     "db:seed": "tsx prisma/seed.ts",
     "worksheets": "python3 worksheets/generate_worksheets.py --all",
     "worksheets:month": "python3 worksheets/generate_worksheets.py --month",
+    "worksheets:upload": "tsx scripts/upload-worksheets.ts",
+    "db:deploy": "prisma migrate deploy",
     "smoke": "tsx scripts/smoke.ts",
     "smoke:offline": "tsx scripts/smoke-offline.ts",
     "check:auth-db": "tsx scripts/auth-db-check.ts",
@@ -26,9 +29,11 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",
+    "@pdf-lib/fontkit": "^1.1.1",
     "@prisma/client": "^6.6.0",
     "next": "15.3.2",
     "nodemailer": "^6.10.1",
+    "pdf-lib": "^1.17.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "zod": "^3.24.0"

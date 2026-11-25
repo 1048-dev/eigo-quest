@@ -34,10 +34,10 @@ export const POST = withAuthApi("reset-pin", async (req) => {
   if (password !== undefined) {
     if (!ctx.parent.passwordHash) return authFail("このアカウントにはパスワードがありません。LINE で本人確認してください。", 400, "NO_PASSWORD");
     const key = `pw:${ctx.parent.id}`;
-    const limit = reauthLimiter.hit(key);
+    const limit = await reauthLimiter.hit(key);
     if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
     if (!(await verifyParentPassword(ctx.parent.id, password))) return authFail(WRONG_PASSWORD_JA, 401, "WRONG_PASSWORD");
-    reauthLimiter.reset(key);
+    await reauthLimiter.reset(key);
   } else if (!ctx.parent.lineUserId || !isLineReauthFresh(ctx.session)) {
     return authFail(
       ctx.parent.passwordHash ? "アカウントのパスワードを入力してください。" : "さきに LINE で本人確認をしてください（確認から10分以内に暗証番号を決めてください）。",

@@ -12,7 +12,7 @@ import { confirmEmailAddition } from "@/lib/services/accountRecoveryService";
 export const POST = withAuthApi("email-confirm", async (req) => {
   const parsed = await parseBody(req, MailTokenRequestSchema);
   if (!parsed.success) return authFail(INVALID_EMAIL_LINK_JA, 400, "INVALID_TOKEN");
-  const limit = tokenIpLimiter.hit(clientIp(req));
+  const limit = await tokenIpLimiter.hit(clientIp(req));
   if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
   const r = await confirmEmailAddition(parsed.data.token);
   if (r.ok) return authOk({ messageJa: "メールアドレスを確認しました。次からは、メールアドレスとパスワードでもログインできます。" });

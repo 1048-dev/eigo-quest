@@ -14,11 +14,11 @@ export const POST = withAuthApi("password-reset-request", async (req) => {
   const parsed = await parseBody(req, ForgotPasswordRequestSchema);
   if (!parsed.success) return authFail("メールアドレスを正しく入力してください。", 400, "INVALID_INPUT");
 
-  const byIp = forgotIpLimiter.hit(clientIp(req));
+  const byIp = await forgotIpLimiter.hit(clientIp(req));
   if (!byIp.ok) return tooManyAttempts(byIp.retryAfterSec);
 
   const email = parsed.data.email;
-  if (forgotEmailLimiter.hit(email).ok) {
+  if ((await forgotEmailLimiter.hit(email)).ok) {
     const base = mailLinkBase(req);
     runAfterResponse("password-reset", () => requestPasswordReset(email, base));
   }

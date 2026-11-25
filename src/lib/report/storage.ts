@@ -1,66 +1,64 @@
 /**
- * 配信する PDF の置き場所（REPORT_STORAGE_DIR。未設定なら <プロジェクト>/.data/reports）。
+ * 配信する PDF の置き場所でのキー（場所）とワークブック（run5 Phase 3: ファイルの置き場所は src/lib/storage）。
  *  reports/<保護者ID>/<YYYY-MM>/<ランダム>.pdf   … お子さまごとの学習レポート（その家だけのもの）
  *  worksheets/monthly/world-NN.pdf                … ワールドごとの 1か月ワークブック（どの家も同じ内容なので使い回す）
- * DB（ReportDelivery.files）には この置き場所からの相対パスだけを入れる。読むときは必ず resolveStored で
- * 置き場所の外に出ないことを確かめる。
+ * DB（ReportDelivery.files）には このキーだけを入れる。
+ *
+ * サーバーでは Python を動かさない。ワークブックは あらかじめ
+ *   npm run worksheets:month -- --all   （12ワールド分を worksheets/out/monthly に作る。Python + reportlab）
+ *   npm run worksheets:upload           （置き場所へ アップロード）
+ * で置いておく。
  */
-import { copyFile, mkdir, rm, stat } from "node:fs/promises";
+import { randomBytes } from "node:crypto";
 import { existsSync } from "node:fs";
+import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { runGenerator } from "./pdf";
+import { getStorage, isValidKey, storageConfig } from "@/lib/storage";
+import { resolveInRoot } from "@/lib/storage/local";
 
+/** 置き場所（ローカルのとき）のフォルダ */
 export function reportStorageDir(env: Record<string, string | undefined> = process.env): string {
-  return path.resolve(env.REPORT_STORAGE_DIR?.trim() || path.join(process.cwd(), ".data", "reports"));
+  return storageConfig(env).localRoot;
 }
 
-/** 相対パス → 絶対パス。置き場所の外を指していたら null */
-export function resolveStored(rel: string, root = reportStorageDir()): string | null {
-  if (!rel || path.isAbsolute(rel) || rel.includes("\0")) return null;
-  const abs = path.resolve(root, rel);
-  const rootWithSep = root.endsWith(path.sep) ? root : root + path.sep;
-  return abs.startsWith(rootWithSep) ? abs : null;
+/** キー → ローカルの絶対パス（置き場所の外・おかしなキーは null） */
+export function resolveStored(key: string, root = reportStorageDir()): string | null {
+  return resolveInRoot(root, key);
 }
 
-export function toStoredRel(abs: string, root = reportStorageDir()): string {
-  return path.relative(root, abs).split(path.sep).join("/");
+export const worksheetKey = (world: number) => `worksheets/monthly/world-${String(world).padStart(2, "0")}.pdf`;
+/** 古い名前（run4） */
+export const worksheetRel = worksheetKey;
+
+export function newReportKey(parentId: string, month: string): string {
+  const key = `reports/${parentId}/${month}/${randomBytes(12).toString("hex")}.pdf`;
+  if (!isValidKey(key)) throw new Error("invalid report key");
+  return key;
 }
 
-export async function fileSize(abs: string): Promise<number> {
-  try {
-    return (await stat(abs)).size;
-  } catch {
-    return 0;
-  }
+/** npm run worksheets:month -- --all が作るフォルダ */
+export function prebuiltWorksheetDir(): string {
+  return path.join(process.cwd(), "worksheets", "out", "monthly");
 }
 
-export async function removeStored(rel: string, root = reportStorageDir()): Promise<void> {
-  const abs = resolveStored(rel, root);
-  if (abs) await rm(abs, { force: true });
-}
-
-export const worksheetRel = (world: number) => `worksheets/monthly/world-${String(world).padStart(2, "0")}.pdf`;
-
-export type WorksheetProvider = (world: number) => Promise<string | null>;
+export type WorksheetProvider = (world: number) => Promise<{ key: string; bytes: number } | null>;
 
 /**
- * そのワールドの 1か月ワークブックを用意して相対パスを返す（作れなければ null = レポートだけ送る）。
- * 1) 置き場所にあれば それ 2) npm run worksheets:month で作ったもの（worksheets/out/monthly）があれば コピー
- * 3) なければ生成スクリプトで作る（ワールドごとに1回だけ。数秒〜数十秒かかる）
+ * そのワールドの 1か月ワークブックのキーを返す（置き場所に無ければ null = レポートだけ送る）。
+ * 1) 置き場所にあれば それ
+ * 2) 開発用: このパソコンで npm run worksheets:month を実行ずみ（worksheets/out/monthly にある）なら アップロードして使う
  */
 export const ensureWorksheetBundle: WorksheetProvider = async (world) => {
-  const root = reportStorageDir();
-  const rel = worksheetRel(world);
-  const abs = resolveStored(rel, root)!;
-  if (existsSync(abs)) return rel;
-  await mkdir(path.dirname(abs), { recursive: true });
-  const prebuilt = path.join(process.cwd(), "worksheets", "out", "monthly", path.basename(abs));
+  const storage = getStorage();
+  const key = worksheetKey(world);
+  const found = await storage.head(key);
+  if (found) return { key, bytes: found.size };
+  const prebuilt = path.join(prebuiltWorksheetDir(), path.basename(key));
   if (existsSync(prebuilt)) {
-    await copyFile(prebuilt, abs);
-    return rel;
+    const data = new Uint8Array(await readFile(prebuilt));
+    await storage.put(key, data, "application/pdf");
+    return { key, bytes: data.length };
   }
-  const r = await runGenerator(["--month", "--world", String(world), "--out", path.join(root, "worksheets")]);
-  if (r.ok && existsSync(abs)) return rel;
-  console.warn(`[report] ワールド${world} のワークシートを作れませんでした（レポートだけ送ります）`);
+  console.warn(`[report] ワールド${world} のワークブックが置き場所にありません（レポートだけ送ります）。npm run worksheets:month -- --all のあと npm run worksheets:upload を実行してください`);
   return null;
 };

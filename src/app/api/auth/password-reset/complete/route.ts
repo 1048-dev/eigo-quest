@@ -19,7 +19,7 @@ export const POST = withAuthApi("password-reset-complete", async (req) => {
       ? authFail(`新しいパスワードは${PASSWORD_RULES_JA}`, 400, "INVALID_INPUT")
       : authFail(INVALID_RESET_LINK_JA, 400, "INVALID_TOKEN");
   }
-  const limit = tokenIpLimiter.hit(clientIp(req));
+  const limit = await tokenIpLimiter.hit(clientIp(req));
   if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
 
   const r = await resetPassword(parsed.data.token, parsed.data.newPassword);

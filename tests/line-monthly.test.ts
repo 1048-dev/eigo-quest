@@ -8,7 +8,7 @@
  *  - おうちの方 API: 配信のオン/オフ・「今すぐ送る」の回数制限・暗証番号が必要
  * PDF の生成は かんたんな PDF（Python を呼ばない）、ワークシートは小さなダミーにする。
  */
-import { mkdtempSync, readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import { mkdtempSync, readFileSync, readdirSync, existsSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -27,11 +27,11 @@ vi.mock("@/lib/report/storage", async (importOriginal) => {
   return {
     ...orig,
     ensureWorksheetBundle: async (world: number) => {
-      const rel = orig.worksheetRel(world);
-      const abs = orig.resolveStored(rel)!;
-      mkdirSync(path.dirname(abs), { recursive: true });
-      writeFileSync(abs, `%PDF-1.4 fake worksheets world ${world}`);
-      return rel;
+      const key = orig.worksheetKey(world);
+      const { getStorage } = await import("@/lib/storage");
+      const data = new TextEncoder().encode(`%PDF-1.4 fake worksheets world ${world}`);
+      await getStorage().put(key, data, "application/pdf");
+      return { key, bytes: data.length };
     },
   };
 });
@@ -652,6 +652,9 @@ describe("おうちの方 API（/api/parent/line-monthly）", () => {
     const del = await call(childRoute.DELETE as AnyHandler, "DELETE", undefined, { id: childId });
     expect(del.status).toBe(200);
     expect(deliveries()).toHaveLength(0);
+    // PDF の削除は トランザクションの外（応答のあと）
+    const { flushBackgroundTasks } = await import("@/lib/mail/background");
+    await flushBackgroundTasks();
     expect(existsSync(path.join(storage, rel))).toBe(false);
   });
 });

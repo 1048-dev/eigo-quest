@@ -5,6 +5,8 @@ const g = globalThis as unknown as { prisma?: PrismaClient; dbHealth?: { up: boo
 let client: PrismaClient | undefined = g.prisma;
 function getClient(): PrismaClient {
   if (!client) {
+    // schema.prisma の directUrl（マイグレーション用）が未設定でも アプリは動くように（使うのは DATABASE_URL だけ）
+    if (!process.env.DIRECT_URL && process.env.DATABASE_URL) process.env.DIRECT_URL = process.env.DATABASE_URL;
     client = new PrismaClient();
     if (process.env.NODE_ENV !== "production") g.prisma = client;
   }

@@ -6,6 +6,7 @@
  *   npm run line:monthly -- --parent <保護者ID>   # 1人だけ（dry-run なら LINE 未連携の保護者でも可）
  *   npm run line:monthly -- --month 2026-11       # 月を指定
  *   npm run line:monthly -- --force               # 送信ずみ・配信オフでも送る
+ *   npm run line:monthly -- --timeout 1800        # 何秒で やめるか（既定 1800秒）
  *
  * LINE_MESSAGING_CHANNEL_ACCESS_TOKEN と APP_BASE_URL がそろっていないときは、自動的に dry-run になる。
  * 同じ月を2回実行しても、送信ずみのお子さまには送らない（--force を除く）。
@@ -40,7 +41,7 @@ async function main() {
   const { isValidMonth } = await import("@/lib/report/monthlyReport");
   const { canPush, lineMessagingConfig } = await import("@/lib/line/messaging");
   const { outboxDir, runMonthlyDelivery } = await import("@/lib/services/monthlyDeliveryService");
-  const { reportStorageDir } = await import("@/lib/report/storage");
+  const { getStorage } = await import("@/lib/storage");
 
   const month = arg("month");
   if (month !== undefined && !isValidMonth(month)) {
@@ -64,10 +65,24 @@ async function main() {
     const missing = [!cfg.accessToken && "LINE_MESSAGING_CHANNEL_ACCESS_TOKEN", !cfg.baseUrl && "APP_BASE_URL"].filter(Boolean).join(", ");
     console.log(`   未設定: ${missing} → dry-run で実行します`);
   }
-  console.log(`   PDF の置き場所: ${reportStorageDir()}`);
+  console.log(`   PDF の置き場所: ${getStorage().description}`);
   if (dryRun) console.log(`   outbox: ${outboxDir()}`);
 
-  const summary = await runMonthlyDelivery({ dryRun, parentId, month, force: has("force") });
+  const timeoutSec = arg("timeout") === undefined ? 1800 : Number(arg("timeout"));
+  if (!Number.isFinite(timeoutSec) || timeoutSec <= 0) {
+    console.error(`--timeout は 秒数（正の数）で指定してください: ${arg("timeout")}`);
+    process.exit(2);
+  }
+  // 時間を すぎたら 次の保護者へ進まない（のこりは もう一度 実行すれば送る）。さらに +60秒で強制終了
+  const killer = setTimeout(() => {
+    console.error(`⏱ ${timeoutSec + 60}秒を こえたので 中止しました。`);
+    process.exit(3);
+  }, (timeoutSec + 60) * 1000);
+  killer.unref();
+  const summary = await runMonthlyDelivery({
+    dryRun, parentId, month, force: has("force"), deadline: Date.now() + timeoutSec * 1000,
+    onProgress: ({ done, total, last }) => console.log(`   … ${done}/${total} ${last.status}`),
+  });
   console.log(`   対象月: ${summary.month} ／ 期限切れの配信を ${summary.purged} 件削除`);
   if (summary.results.length === 0) console.log("   送る相手がいません（LINE と連携ずみで、配信オンの保護者がいない）");
   const count: Record<string, number> = {};
@@ -81,6 +96,7 @@ async function main() {
     if (r.outboxPath) console.log(`    → ${path.join(r.outboxPath, "message.json")}`);
   }
   console.log(`\n== おわり: ${Object.entries(count).map(([k, v]) => `${k} ${v}`).join(" / ") || "0 件"}`);
+  if (summary.remaining > 0) console.log(`⚠ 時間ぎれ: のこり ${summary.remaining} 人（もう一度 実行すると 送信ずみの子をとばして つづきを送ります）`);
   await prisma.$disconnect();
   if ((count.failed ?? 0) > 0) process.exitCode = 1;
 }

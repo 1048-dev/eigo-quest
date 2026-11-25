@@ -38,14 +38,14 @@ export const PATCH = withAuthApi("parent-settings", async (req) => {
   const passwords = [changePin?.password, changePassword?.currentPassword].filter((p): p is string => p !== undefined);
   if (passwords.length > 0) {
     const key = `pw:${ctx.parent.id}`;
-    const limit = reauthLimiter.hit(key);
+    const limit = await reauthLimiter.hit(key);
     if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
     for (const p of passwords) {
       if (!(await verifyParentReauth(ctx.parent.id, p))) {
         return hasPassword ? authFail(WRONG_PASSWORD_JA, 401, "WRONG_PASSWORD") : authFail(WRONG_PIN_JA, 401, "WRONG_PIN");
       }
     }
-    reauthLimiter.reset(key);
+    await reauthLimiter.reset(key);
   }
 
   let settings = undefined;

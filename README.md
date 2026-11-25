@@ -383,8 +383,9 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 毎月、保護者の LINE にお子さまごとの「学習レポート（A4 1ページ）」と「いまのワールドの 1か月ワークブック」を届けます。
 LINE の Messaging API は PDF ファイルそのものを送れないため、**ダウンロードページへのリンク**を Flex メッセージ（お子さまの名前・要約・「PDFをひらく」ボタン。きょうだいはカルーセル）で送ります。
 
-- **レポートの中身**: 今月のレッスン数・学習した日数・合格したテスト、連続日数・最長連続、6つの力の習得率（送信時点）、にがて（低い力・忘れかけの ことば）、来月の予定（次のレッスンからの単元・フォニックス）、おうちの方への ひとこと。PDF は `worksheets/generate_worksheets.py --report-json`（ReportLab・日本語フォント埋め込み）で作り、Python が使えないときは依存なしの かんたんな PDF で代わりに作ります（日本語は表示する側のフォント頼み）。
-- **ワークブック**: お子さまが いま いる（これから始める）ワールドの 1か月ワークブック（`worksheets:month` と同じもの）。ワールドごとに1回だけ作り、`REPORT_STORAGE_DIR/worksheets/` で使い回します（`worksheets/out/monthly/` にあれば それをコピー）。
+- **レポートの中身**: 今月のレッスン数・学習した日数・合格したテスト、連続日数・最長連続、6つの力の習得率（送信時点）、にがて（低い力・忘れかけの ことば）、来月の予定（次のレッスンからの単元・フォニックス）、おうちの方への ひとこと。PDF は **Node だけ**で作ります（run5: `pdf-lib` + 日本語フォント Noto Sans JP を使った文字だけ埋め込み。`src/lib/report/pdf.ts`。フォントは `assets/fonts/`・SIL Open Font License）。サーバーで Python は使いません。フォントが読めないときは依存なしの かんたんな PDF で代わりに作ります。
+- **ワークブック**: お子さまが いま いる（これから始める）ワールドの 1か月ワークブック（`worksheets:month` と同じもの。どの家も同じ内容）。**あらかじめ作って置き場所にアップロード**しておきます（`npm run worksheets:month -- --all` → `npm run worksheets:upload`）。置き場所に無いワールドは レポートだけ送ります（開発中は `worksheets/out/monthly/` にあれば 自動でアップロード）。
+- **置き場所（run5）**: `STORAGE_DRIVER=local`（`REPORT_STORAGE_DIR`、既定 `.data/reports/`）か `s3`（S3 互換: AWS S3・Cloudflare R2・Supabase Storage の S3 API。`S3_BUCKET`・`S3_ENDPOINT`・`S3_REGION`・`S3_ACCESS_KEY_ID`・`S3_SECRET_ACCESS_KEY`）。`src/lib/storage/`。SDK なしで fetch + 署名（AWS Signature V4）だけで話します。Vercel などのサーバーレスでは ファイルが残らないので `s3` にします（[docs/run5/DEPLOY.md](docs/run5/DEPLOY.md)）。
 - **ダウンロードページ `/d/<token>`**: トークンは 256 ビットのランダム値で、DB（`ReportDelivery.tokenHash`）には SHA-256 だけを保存。30日で期限切れ。その配信のファイル（`/d/<token>/report`・`/d/<token>/worksheets`）だけを返し、レポートはその家のフォルダ（`reports/<保護者ID>/`）にあるものだけ。ログイン不要（LINE のアプリ内ブラウザで開くため）、検索エンジンに載せない・リファラーを送らない・キャッシュしない。期限切れの配信と PDF は次の一斉配信のときに消えます。お子さまの削除・退会でも消えます。LINE の連携を解除すると、それまでに送ったリンクもすぐ使えなくなります。
 - **送信**: `Parent.lineUserId` に push（`X-Line-Retry-Key` 付きで二重送信なし）。毎月の配信は「LINE と連携ずみ・配信オン（`Parent.lineMonthlyEnabled`）・ブロックされていない」保護者だけ。同じ月の送信ずみのお子さまには送りません（`--force` を除く）。
 - **webhook `POST /api/line/webhook`**: `X-Line-Signature` を `LINE_MESSAGING_CHANNEL_SECRET` で受け取ったバイト列のまま確かめ（違えば 401。1MB を超える本文は読み切らずに 413）、follow / unfollow で `Parent.lineFriend` を更新します（ブロック中の保護者には送らない）。LINE Developers の「Webhook URL」に `https://<ドメイン>/api/line/webhook` を登録し、「Webhook の利用」をオンにします。
@@ -398,14 +399,26 @@ npm run line:monthly -- --parent <保護者ID>   # 1人だけ（dry-run なら L
 npm run line:monthly -- --month 2026-11 --force
 ```
 
+公開したサーバー（Vercel など）では、`vercel.json` の Cron Jobs が `GET /api/cron/line-monthly`（毎月1〜3日の 9:00 日本時間。2日目・3日目は送れなかった分だけ）と `GET /api/cron/trial-cleanup`（毎日 3:30）を `Authorization: Bearer <CRON_SECRET>` 付きで呼びます。`CRON_SECRET` が無いと 何もしません（503）。ほかのスケジューラからも同じヘッダーで GET / POST できます。
+
 - **LINE Developers での準備**（くわしい手順: [docs/run4/LINE-SETUP.md](docs/run4/LINE-SETUP.md)）: LINE ログインのチャネルと**同じプロバイダー**に Messaging API チャネル（公式アカウント）を作ります（プロバイダーがちがうと LINE のユーザーID が一致せず届きません）。長期のチャネルアクセストークンを `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`、チャネルシークレットを `LINE_MESSAGING_CHANNEL_SECRET`、公開 URL を `APP_BASE_URL` に入れます。LINE ログインのチャネルにこの公式アカウントをリンクすると、ログインのときに友だち追加をすすめられます。
-- 環境変数: `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`・`LINE_MESSAGING_CHANNEL_SECRET`・`APP_BASE_URL`・`REPORT_STORAGE_DIR`（既定 `.data/reports/`）・`LINE_OUTBOX_DIR`・`PYTHON`（既定は python3 → python。reportlab が必要）。
+- 環境変数: `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`・`LINE_MESSAGING_CHANNEL_SECRET`・`APP_BASE_URL`・`STORAGE_DRIVER`・`REPORT_STORAGE_DIR`（既定 `.data/reports/`）・`S3_*`・`LINE_OUTBOX_DIR`・`CRON_SECRET`。（run5 で `PYTHON` は使わなくなりました。Python + reportlab は ワークシートを作るコマンドだけに必要です）
+
+## 公開（Vercel + Neon / Supabase）（run5）
+
+手順書: **[docs/run5/DEPLOY.md](docs/run5/DEPLOY.md)**（オーナー向け・チェックリストつき）。要点:
+
+- **DB**: `DATABASE_URL`（プールの接続）と `DIRECT_URL`（マイグレーション用の直接の接続）。ビルドは `npm run vercel-build`（`prisma generate` → 本番デプロイのときだけ `prisma migrate deploy` → `next build`。`MIGRATE_ON_BUILD` で切りかえ）。手で流すときは `npm run db:deploy`（= `npx prisma migrate deploy`）。
+- **ファイル**: `STORAGE_DRIVER=s3`。ワークブックは `npm run worksheets:month -- --all` → `npm run worksheets:upload`（本番の `S3_*` を入れて実行）。
+- **レート制限**: ログイン・暗証番号・再設定・メールの回数制限は DB の表 `RateLimitBucket` で数えます（サーバーが何台でも同じ。キーは SHA-256 で、メールアドレスや IP はそのまま保存しない）。DB が止まっているときは そのサーバーのメモリで数えます。「今すぐ送る」の同時実行も DB のロックで1つずつ。
+- **定期実行**: `vercel.json` の `crons`（上の「LINE で月間レポート」）。`CRON_SECRET` が必要。
+- **ようすの確認**: `GET /api/health` → DB・置き場所に つながるか、LINE・メール・cron が設定されているか（秘密・バケット名・ホスト名は出しません）。つながらなければ 503。
 
 ## 骨組みとして残している部分（本番に向けて差し替える）
 
 | 項目 | 今の実装 | 本番での想定 |
 |---|---|---|
-| 認証 | 保護者アカウント（メール＋パスワード・LINE・暗証番号・子どもを選ぶ）、パスワードの再設定・暗証番号を忘れた・メールアドレスの確認（run5）は実装済み。レート制限はメモリ内 | 送信サービス（Resend か SMTP）のキーと `MAIL_FROM`・`APP_BASE_URL` を設定。サーバーを複数台にするならレート制限を DB / Redis へ。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
+| 認証 | 保護者アカウント（メール＋パスワード・LINE・暗証番号・子どもを選ぶ）、パスワードの再設定・暗証番号を忘れた・メールアドレスの確認（run5）は実装済み。レート制限は DB（run5。DB 停止中はメモリ） | 送信サービス（Resend か SMTP）のキーと `MAIL_FROM`・`APP_BASE_URL` を設定。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
 | AI教師の動画 | SVGアバター（口とジェスチャーのアニメーション）＋ブラウザの音声合成 | 事前に生成したアバター動画を `Lesson.videoUrl` に入れる（UIはすでに対応済み） |
 | 音声 | ブラウザの音声合成（`NEXT_PUBLIC_RECORDED_AUDIO=1` のときだけ `/media/audio/{audioKey}.mp3` を優先） | ネイティブの収録音声か、事前に生成したTTS |
 | 発音判定 | Web Speech API で単語の一致率 × 確信度 | 音素単位で評価できるAPIを `PronunciationScorer` の実装として差し替える |
@@ -414,4 +427,4 @@ npm run line:monthly -- --month 2026-11 --force
 | AI会話 | Claude ＋ 台本フォールバック（相手は4人のローテーション） | 同意フォームは不要（オーナー決定）。電話・メール・URL の伏せ字と「子どもの発話は保存しない」を守ったまま有効化 |
 | カリキュラム | 360レッスン（12ワールド）完成 | 全クリア後の体験（おめでとう画面・2周目・中学コース）は未定 |
 | 月額課金・無料体験 | 未実装（保護者アカウントとようす画面が土台） | 今後のフェーズで実装 |
-| LINE の月間レポート | 実装済み（キーが無い間は dry-run）。PDF はサーバーのフォルダ（`REPORT_STORAGE_DIR`）に保存 | サーバーを複数台にするなら、PDF の置き場所を共有ストレージ（S3 など）にする |
+| LINE の月間レポート | 実装済み（キーが無い間は dry-run）。PDF の置き場所は ローカル / S3 互換（run5）、毎月の送信は Cron Jobs | 本番の `S3_*`・`CRON_SECRET` を設定し、ワークブックをアップロード（docs/run5/DEPLOY.md） |

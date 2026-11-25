@@ -2,22 +2,25 @@
  * 月ごとの学習レポート（PDF）を LINE で届けるサービス層。
  *
  *  1. お子さまごとに「学習レポート（1ページ）」と「いまのワールドの 1か月ワークブック」を用意する
- *     （REPORT_STORAGE_DIR に保存。src/lib/report/storage.ts）
+ *     （置き場所は STORAGE_DRIVER=local|s3。src/lib/storage。ワークブックは あらかじめアップロードしたもの）
  *  2. ダウンロード用のランダムなトークンを作り、DB（ReportDelivery）には SHA-256 だけを入れる（30日で期限切れ）
  *  3. 保護者の LINE（Parent.lineUserId）に Flex メッセージ（名前・要約・「PDFをひらく」）を push する
  *     キーが無い・dry-run のときは送らず、outbox フォルダにメッセージと PDF を書く
  *
  * 呼び出し元: npm run line:monthly（scripts/line-monthly.ts）と、おうちの方ページの「今月のPDFを今すぐ送る」。
  */
-import { randomBytes, randomUUID } from "node:crypto";
-import { copyFile, mkdir, writeFile } from "node:fs/promises";
+import { randomUUID } from "node:crypto";
+import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { hashToken, isWellFormedToken, newToken } from "@/lib/auth/session";
+import { acquireLock } from "@/lib/auth/rateLimit";
+import { runAfterResponse } from "@/lib/mail/background";
 import { buildMonthlyReport, monthDayRange, monthOf, previousMonth, type MonthlyReport, type ReportSummary } from "@/lib/report/monthlyReport";
 import { renderReportPdf, type ReportRenderer } from "@/lib/report/pdf";
-import { ensureWorksheetBundle, fileSize, removeStored, reportStorageDir, resolveStored, toStoredRel, type WorksheetProvider } from "@/lib/report/storage";
+import { ensureWorksheetBundle, newReportKey, type WorksheetProvider } from "@/lib/report/storage";
+import { getStorage, isValidKey, type ObjectStorage } from "@/lib/storage";
 import { buildMonthlyFlexMessage, canPush, downloadUrl, lineMessagingConfig, pushMessage, type LineMessagingConfig } from "@/lib/line/messaging";
 import { computeUserMastery } from "@/lib/services/progressService";
 
@@ -32,7 +35,7 @@ export type DeliveryFileId = "report" | "worksheets";
 export interface DeliveryFile {
   id: DeliveryFileId;
   labelJa: string;
-  /** REPORT_STORAGE_DIR からの相対パス */
+  /** 置き場所（src/lib/storage）でのキー（例: reports/<保護者ID>/2026-11/<ランダム>.pdf） */
   path: string;
   /** ダウンロードするときのファイル名（ASCII） */
   filename: string;
@@ -42,10 +45,13 @@ export interface DeliveryFile {
 export interface DeliveryDeps {
   renderReport?: ReportRenderer;
   worksheets?: WorksheetProvider;
+  storage?: ObjectStorage;
   fetchImpl?: (input: string, init?: RequestInit) => Promise<Response>;
   env?: Record<string, string | undefined>;
   log?: (line: string) => void;
 }
+
+const storageOf = (deps: DeliveryDeps = {}) => deps.storage ?? getStorage(deps.env);
 
 export function outboxDir(env: Record<string, string | undefined> = process.env): string {
   return path.resolve(env.LINE_OUTBOX_DIR?.trim() || path.join(process.cwd(), ".data", "line-outbox"));
@@ -80,22 +86,27 @@ async function preparePackage(
 ): Promise<PreparedPackage | null> {
   const report = await buildReportForChild(child.id, month, now);
   if (!report) return null;
-  const root = reportStorageDir(deps.env);
-  const reportRel = `reports/${parentId}/${month}/${randomBytes(12).toString("hex")}.pdf`;
-  const reportAbs = resolveStored(reportRel, root)!;
-  await (deps.renderReport ?? renderReportPdf)(report, reportAbs);
+  const storage = storageOf(deps);
+  const reportKey = newReportKey(parentId, month);
+  const { bytes } = await (deps.renderReport ?? renderReportPdf)(report);
+  await storage.put(reportKey, bytes, "application/pdf");
   const files: DeliveryFile[] = [
-    { id: "report", labelJa: `${report.monthLabelJa}の 学習レポート（1ページ）`, path: toStoredRel(reportAbs, root), filename: `eigo-quest-report-${month}.pdf`, bytes: await fileSize(reportAbs) },
+    { id: "report", labelJa: `${report.monthLabelJa}の 学習レポート（1ページ）`, path: reportKey, filename: `eigo-quest-report-${month}.pdf`, bytes: bytes.length },
   ];
-  const wsRel = await (deps.worksheets ?? ensureWorksheetBundle)(report.world);
-  const wsAbs = wsRel ? resolveStored(wsRel, root) : null;
-  if (wsRel && wsAbs) {
+  let ws: { key: string; bytes: number } | null = null;
+  try {
+    ws = await (deps.worksheets ?? ensureWorksheetBundle)(report.world);
+  } catch (e) {
+    // ワークブックが用意できなくても レポートだけは届ける
+    console.warn(`[report] ワールド${report.world} のワークブックを確認できませんでした（${(e as Error)?.name ?? "Error"}）`);
+  }
+  if (ws && isValidKey(ws.key)) {
     files.push({
       id: "worksheets",
       labelJa: `ワールド${report.world}「${report.worldNameJa}」 1か月ワークブック`,
-      path: wsRel,
+      path: ws.key,
       filename: `eigo-quest-world-${String(report.world).padStart(2, "0")}-workbook.pdf`,
-      bytes: await fileSize(wsAbs),
+      bytes: ws.bytes,
     });
   }
   const summary: ReportSummary = {
@@ -182,7 +193,13 @@ export async function deliverToParent(
   }
 
   const reason = opts.dryRun ? "DRY_RUN_FLAG" : "NOT_CONFIGURED";
-  const outboxPath = await writeOutbox({ parentId, to: parent.lineUserId, message, packages, reason, cfg, now, deps });
+  let outboxPath: string | undefined;
+  try {
+    outboxPath = await writeOutbox({ parentId, to: parent.lineUserId, message, packages, reason, cfg, now, deps });
+  } catch (e) {
+    // サーバーレス（ファイルを書けない）でも「今すぐ送る」のリンクは返す
+    console.warn(`[line-monthly] outbox に書けませんでした（${(e as NodeJS.ErrnoException)?.code ?? (e as Error)?.name ?? "Error"}）`);
+  }
   await prisma.reportDelivery.updateMany({ where: { id: { in: ids } }, data: { status: "DRY_RUN" } });
   return { ...base, status: "dry-run", reason, children: childrenOut, outboxPath };
 }
@@ -194,14 +211,14 @@ async function writeOutbox(a: {
   const stamp = a.now.toISOString().replace(/[:.]/g, "-");
   const dir = path.join(outboxDir(a.deps.env), `${stamp}-${a.parentId}`);
   await mkdir(dir, { recursive: true });
-  const root = reportStorageDir(a.deps.env);
+  const storage = storageOf(a.deps);
   const copied: string[] = [];
   for (const [i, p] of a.packages.entries()) {
     for (const f of p.files) {
-      const src = resolveStored(f.path, root);
-      if (!src) continue;
+      const data = isValidKey(f.path) ? await storage.get(f.path) : null;
+      if (!data) continue;
       const name = `${i + 1}-${f.id === "report" ? "report" : f.filename.replace(/^eigo-quest-/, "")}`.replace(/\.pdf$/, "") + ".pdf";
-      await copyFile(src, path.join(dir, name));
+      await writeFile(path.join(dir, name), data);
       copied.push(name);
     }
   }
@@ -228,6 +245,10 @@ export interface MonthlyRunOptions {
   force?: boolean;
   now?: Date;
   deps?: DeliveryDeps;
+  /** これを すぎたら 次の保護者へ進まずに やめる（ミリ秒の時刻。cron の時間切れ対策。のこりは次の実行で送る） */
+  deadline?: number;
+  /** 進みぐあい（保護者1人ごと） */
+  onProgress?: (p: { done: number; total: number; last: ParentDeliveryResult }) => void;
 }
 
 export interface MonthlyRunSummary {
@@ -235,6 +256,8 @@ export interface MonthlyRunSummary {
   mode: "live" | "dry-run";
   results: ParentDeliveryResult[];
   purged: number;
+  /** 時間切れで まだ見ていない保護者の数（0 なら全員） */
+  remaining: number;
 }
 
 export async function runMonthlyDelivery(opts: MonthlyRunOptions = {}): Promise<MonthlyRunSummary> {
@@ -242,20 +265,22 @@ export async function runMonthlyDelivery(opts: MonthlyRunOptions = {}): Promise<
   const deps = opts.deps ?? {};
   const month = opts.month ?? previousMonth(monthOf(now));
   const live = !opts.dryRun && canPush(lineMessagingConfig(deps.env));
-  const purged = await purgeExpiredDeliveries(now, deps.env);
+  const purged = await purgeExpiredDeliveries(now, deps.env, deps.storage);
   const parents = opts.parentId
     ? [{ id: opts.parentId }]
     : await prisma.parent.findMany({ where: { lineUserId: { not: null }, lineMonthlyEnabled: true }, select: { id: true }, orderBy: { createdAt: "asc" } });
   const results: ParentDeliveryResult[] = [];
   for (const p of parents) {
+    if (opts.deadline && Date.now() > opts.deadline) break;
     try {
       results.push(await deliverToParent(p.id, { month, trigger: "MONTHLY", dryRun: opts.dryRun, force: opts.force, allowUnlinkedDryRun: !!opts.parentId, now, deps }));
     } catch (e) {
       const err = e as { name?: string; code?: string } | null;
       results.push({ parentId: p.id, status: "failed", reason: `${err?.name ?? "Error"}${err?.code ? ` (${err.code})` : ""}`, month, children: [] });
     }
+    opts.onProgress?.({ done: results.length, total: parents.length, last: results[results.length - 1]! });
   }
-  return { month, mode: live ? "live" : "dry-run", results, purged };
+  return { month, mode: live ? "live" : "dry-run", results, purged, remaining: parents.length - results.length };
 }
 
 // ---------------------------------------------------------------------------
@@ -310,7 +335,8 @@ export async function setLineMonthlyEnabled(parentId: string, enabled: boolean):
   await prisma.parent.update({ where: { id: parentId }, data: { lineMonthlyEnabled: enabled } });
 }
 
-const inFlight = new Set<string>();
+/** 「今すぐ送る」を同時に2回動かさないための ロックの長さ（落ちても この時間で とける） */
+const SEND_NOW_LOCK_MS = 5 * 60_000;
 
 export type SendNowResult =
   | { ok: true; result: ParentDeliveryResult }
@@ -322,8 +348,9 @@ export type SendNowResult =
  * LINE の送信が設定されていないときは dry-run（outbox に書く）。LINE と連携していなければ送れない。
  */
 export async function sendNowForParent(parentId: string, now = new Date(), deps: DeliveryDeps = {}): Promise<SendNowResult> {
-  if (inFlight.has(parentId)) return { ok: false, reason: "BUSY" };
-  inFlight.add(parentId);
+  // ロックは DB に置く（サーバーが何台あっても 同じ保護者の「今すぐ送る」は1つずつ）。DB が使えないときは このサーバーの中だけ
+  const release = await acquireLock("send-now", parentId, SEND_NOW_LOCK_MS);
+  if (!release) return { ok: false, reason: "BUSY" };
   try {
     const allowedAt = await sendNowAllowedAt(parentId, now);
     if (allowedAt) return { ok: false, reason: "RATE_LIMITED", retryAfterSec: Math.ceil((allowedAt.getTime() - now.getTime()) / 1000) };
@@ -333,7 +360,7 @@ export async function sendNowForParent(parentId: string, now = new Date(), deps:
     if (r.reason === "NOT_FRIEND" || r.reason === "NO_CHILDREN") return { ok: false, reason: r.reason };
     return { ok: false, reason: "NOT_LINKED" };
   } finally {
-    inFlight.delete(parentId);
+    await release();
   }
 }
 
@@ -375,39 +402,47 @@ export async function findDeliveryByToken(token: unknown, now = new Date()): Pro
   return { id: row.id, parentId: row.parentId, childName: row.childName, month: row.month, summary: parseSummary(row.summary), files: parseFiles(row.files), expiresAt: row.expiresAt };
 }
 
-/** その配信のファイルだけを返す（ほかの id・置き場所の外は null） */
-export function deliveryFileFor(view: DeliveryView, fileId: string, env: Record<string, string | undefined> = process.env): { file: DeliveryFile; abs: string } | null {
+/**
+ * その配信のファイルだけを返す（ほかの id・おかしなキーは null）。
+ * お子さまのレポートは その家の場所（reports/<保護者ID>/）の中だけ、ワークブックは共有の場所（worksheets/）の中だけ。
+ * キーは「.」「..」・空のセグメントを受け付けない（isValidKey）ので、「reports/<家>/../<ほかの家>/…」でも抜けられない。
+ */
+export function deliveryFileFor(view: DeliveryView, fileId: string): { file: DeliveryFile; key: string } | null {
   const file = view.files.find((f) => f.id === fileId);
-  if (!file) return null;
-  const root = reportStorageDir(env);
-  const abs = resolveStored(file.path, root);
-  if (!abs) return null;
-  // お子さまのレポートは、その家のフォルダの中にあるものだけ。ワークシートは共有のフォルダの中だけ。
-  // 「reports/<家>/../<ほかの家>/…」のような書き方でも抜けられないよう、正規化したあとの絶対パスで確かめる
-  const allowed = file.id === "report" ? path.join(root, "reports", view.parentId) : file.id === "worksheets" ? path.join(root, "worksheets") : null;
-  if (!allowed || !abs.startsWith(allowed + path.sep)) return null;
-  return { file, abs };
+  if (!file || !isValidKey(file.path)) return null;
+  const allowed = file.id === "report" ? `reports/${view.parentId}/` : file.id === "worksheets" ? "worksheets/" : null;
+  if (!allowed || !file.path.startsWith(allowed)) return null;
+  return { file, key: file.path };
+}
+
+async function removeReportFiles(rows: { files: unknown }[], storage: ObjectStorage): Promise<void> {
+  for (const r of rows) {
+    for (const f of parseFiles(r.files)) {
+      if (f.id === "report" && isValidKey(f.path)) await storage.delete(f.path).catch(() => {});
+    }
+  }
 }
 
 /** 期限切れの配信を消す（その家のレポート PDF も消す。ワークシートは共有なので残す） */
-export async function purgeExpiredDeliveries(now = new Date(), env: Record<string, string | undefined> = process.env): Promise<number> {
+export async function purgeExpiredDeliveries(now = new Date(), env: Record<string, string | undefined> = process.env, storage?: ObjectStorage): Promise<number> {
   const old = await prisma.reportDelivery.findMany({ where: { expiresAt: { lt: now } }, select: { id: true, files: true } });
   if (old.length === 0) return 0;
-  const root = reportStorageDir(env);
-  for (const r of old) {
-    for (const f of parseFiles(r.files)) if (f.id === "report") await removeStored(f.path, root).catch(() => {});
-  }
+  await removeReportFiles(old, storage ?? getStorage(env));
   const { count } = await prisma.reportDelivery.deleteMany({ where: { id: { in: old.map((r) => r.id) } } });
   return count;
 }
 
-/** お子さまを消すとき: その子の配信と レポート PDF を消す */
+/**
+ * お子さまを消すとき: その子の配信と レポート PDF を消す。
+ * PDF の削除（S3 なら ネットワーク）は DB のトランザクションの中で待たず、応答のあとに行う（トランザクションの時間切れを防ぐ）。
+ */
 export async function deleteDeliveriesForChildren(tx: Prisma.TransactionClient, childIds: string[], env: Record<string, string | undefined> = process.env): Promise<void> {
   if (childIds.length === 0) return;
   const rows = await tx.reportDelivery.findMany({ where: { childId: { in: childIds } }, select: { files: true } });
   await tx.reportDelivery.deleteMany({ where: { childId: { in: childIds } } });
-  const root = reportStorageDir(env);
-  for (const r of rows) for (const f of parseFiles(r.files)) if (f.id === "report") await removeStored(f.path, root).catch(() => {});
+  if (rows.length === 0) return;
+  const storage = getStorage(env);
+  runAfterResponse("report-files-delete", () => removeReportFiles(rows, storage));
 }
 
 // ---------------------------------------------------------------------------

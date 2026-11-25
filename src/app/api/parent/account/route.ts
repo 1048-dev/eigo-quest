@@ -16,12 +16,12 @@ export const DELETE = withAuthApi("parent-account-delete", async (req) => {
   if (!parsed.success) return authFail("確認のため、パスワードを入力してください。", 400, "INVALID_INPUT");
 
   const key = `pw:${ctx.parent.id}`;
-  const limit = reauthLimiter.hit(key);
+  const limit = await reauthLimiter.hit(key);
   if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
   if (!(await verifyParentReauth(ctx.parent.id, parsed.data.password))) {
     return ctx.parent.passwordHash ? authFail(WRONG_PASSWORD_JA, 401, "WRONG_PASSWORD") : authFail(WRONG_PIN_JA, 401, "WRONG_PIN");
   }
-  reauthLimiter.reset(key);
+  await reauthLimiter.reset(key);
 
   await deleteParentAccount(ctx.parent.id);
   await clearSessionToken();

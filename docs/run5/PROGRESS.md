@@ -74,3 +74,65 @@
 - `npx tsc --noEmit`（本体・scripts）OK、`npx vitest run` 36ファイル 952件 OK、`npx next build` OK。
 - `npm run smoke:offline`（DB 停止 + next start + Playwright）: 新しい4画面を含めて ぜんぶ OK。
 - 本物の DB（Docker の PostgreSQL・ポート 5544）での確認は **できませんでした**: Docker Desktop が起動していないため（Phase 1 と同じ）。`scripts/reset-db-check.ts` を用意したので、Phase 4 で Docker が使えれば `npm run check:reset-db -- --db postgresql://eigo:eigo@localhost:5544/eigo_quest?schema=public` で通し確認します。
+
+## Phase 3: 公開の準備（Vercel + マネージド PostgreSQL）（完了）
+
+### やったこと
+- **ファイルの置き場所（`src/lib/storage/`）**: `STORAGE_DRIVER=local|s3`。
+  - `local`: これまでどおり `REPORT_STORAGE_DIR`（既定 `.data/reports`）。書くときは別名で書いてから置きかえる。
+  - `s3`: S3 互換（AWS S3・Cloudflare R2・Supabase Storage の S3 API・MinIO）。**SDK を入れず** fetch + AWS Signature V4 を自前で実装（PUT / GET / HEAD / DELETE / ListObjectsV2 を1件だけ）。署名は AWS の公式の例と同じ値になることをテストで確認。パス形式（R2・Supabase）とバーチャルホスト形式（AWS）、`S3_PREFIX` に対応。ヘッダーが届くまで 15秒（PUT は 60秒）で時間切れ。エラーには HTTP のステータスだけを入れ、キー・秘密は出さない。
+  - キーは「英数字と ._-/ だけ・`.` `..` や空のセグメントは だめ」（`isValidKey`）。どの置き場所でも 外に出る書き方ができない。
+  - STORAGE_DRIVER が空なら `S3_BUCKET` があれば s3、なければ local。
+- **ダウンロード `/d/<token>/<file>`**: 置き場所から **少しずつ流して** 返す（S3 の本文をそのまま中継。`content-length` つき）。置き場所が こわれていれば 503、ファイルが無ければ 404。持ち主チェック（レポートは `reports/<保護者ID>/` の中だけ、ワークブックは `worksheets/` の中だけ）は キーの文字列で行う（`..` は キーとして受け付けないので抜けられない）。
+- **Python をサーバーから外した**:
+  - 学習レポート（1ページ）は **Node だけ**で作る（`src/lib/report/pdf.ts`）: `pdf-lib` + `@pdf-lib/fontkit` + 日本語フォント **Noto Sans JP Regular**（SIL Open Font License 1.1。`assets/fonts/NotoSansJP-Regular.ttf` と `OFL.txt`）を **使った文字だけ埋め込む（サブセット）**。1ページ 約20KB、作るのに 約0.2秒。フォントが読めないときは これまでの依存なしの かんたんな PDF。レイアウトは2つのエンジンで共通の関数（`layoutReport`）。
+  - フォントは npm の `@expo-google-fonts/noto-sans-jp`（Google Fonts の TTF をそのまま入れた パッケージ）から Regular だけを取り出しました（直接のダウンロードは この環境では許可されなかったため）。
+  - **fontkit の不具合を見つけて回避**: `@pdf-lib/fontkit` のサブセットは、グリフの位置表（loca）を「短い形式」で書くとき 長さが奇数バイトのグリフを 1バイト切ってしまい、それ以降のグリフが すべてずれる（＝文字化け）。Noto Sans JP は 17808 グリフ中 13345 が奇数・4の倍数でない長さだったため、`scripts/prepare-report-font.ts` で **すべてのグリフを 4バイト単位にゼロで うめた** フォントを作って同梱（loca は長い形式・チェックサムも計算しなおし。見た目は変わらない）。埋め込んだサブセットのグリフが 元のフォントと同じバイトで、すべて読めることを確認し、テストにも入れた。
+  - ワークブック（ワールドごとの 1か月分。どの家も同じ）は あらかじめ作って アップロード: `npm run worksheets:month -- --all` → **`npm run worksheets:upload`**（`scripts/upload-worksheets.ts`。1件ごとに進みぐあいを表示・アップロード後に大きさを確認・すでにあれば とばす（`--force` で上書き）・`--world`・`--dry-run`・`--dir`・`--timeout`（既定600秒、+30秒で強制終了））。サーバーは置き場所にあるものを使い、無ければ警告して レポートだけ送る（開発中は `worksheets/out/monthly/` にあれば 自動でアップロード）。
+  - `PYTHON` 環境変数と `runGenerator`（Python を呼ぶ処理）を削除。Python + reportlab は ワークシートを作るコマンドだけに必要。
+- **「ワールド1 のワークシートを作れませんでした」の原因と修正**: `generate_worksheets.py` が 作り終わったあと 出力先を `p.relative_to(ROOT)`（プロジェクトからの相対パス）で表示していて、出力先が プロジェクトの外（テストの一時フォルダ・`REPORT_STORAGE_DIR` を外に設定したとき）だと `ValueError` で 終了コード 1 になっていた（**PDF は できているのに 失敗あつかい**）。プロジェクトの外なら そのままのパスを表示するように直しました（実際に一時フォルダへ出力して 終了コード 0 を確認）。なお Phase 3 からは サーバーは そもそも Python を呼びません。
+- **レート制限を DB へ**（`src/lib/auth/rateLimit.ts`）: 新しい表 `RateLimitBucket(key, count, resetAt)`（マイグレーション `20261201090000_rate_limit_bucket`。`prisma migrate diff` の出力と一字一句同じことを確認）。
+  - `SharedRateLimiter`: 1つの SQL（`INSERT ... ON CONFLICT DO UPDATE ... RETURNING`）で数えるので、サーバーが何台あっても・同時に来ても 数えもれがない。キーは「制限の名前:SHA-256」で、メールアドレス・IP は そのまま保存しない。
+  - DB が止まっている・SQL が失敗したときは そのサーバーのメモリで数える（ログイン自体は止めない。警告は1回だけ）。
+  - ログイン（3種）・登録・暗証番号・パスワードの再入力・パスワードを忘れた（2種）・リンクの確認・メールアドレスの追加 の 10個すべてを置きかえ、15のルートで `await` するように変更。
+  - 「今すぐ送る」: 回数（10分・1日3回）は これまでどおり DB（ReportDelivery）で数え、**同時に2回動かさないロック**も DB に（`acquireLock`。5分で自動に とける）。これまでの メモリの `inFlight` を置きかえ。
+  - 期限が切れて1時間たった行は 毎日の cron で消す。
+- **定期実行（`vercel.json` の crons）**:
+  - `GET /api/cron/line-monthly`: 毎月 **1〜3日の 9:00（日本時間）**。1日に送り、2日・3日は 送れなかった分（時間切れ・LINE のエラー）だけ（送信ずみの子には二重に送らない）。1回 約4分で区切り（`maxDuration = 300`）、のこりは翌日。`?month=YYYY-MM` で月を指定可。LINE の送信が未設定なら 何もしない（サーバーレスで outbox を書こうとしない）。
+  - `GET /api/cron/trial-cleanup`: 毎日 3:30（日本時間）。おためし学習者の そうじ（60日）＋ レート制限の行の そうじ。
+  - どちらも `Authorization: Bearer <CRON_SECRET>` が必要（`src/lib/cron.ts`。ハッシュどうしを一定時間で比較）。`CRON_SECRET` が無い・16文字未満なら 503 で何もしない、ちがえば 401。POST でも呼べる（Vercel 以外のスケジューラ用）。進みぐあいを1人ごとにログに出す。
+  - `npm run line:monthly` にも `--timeout`（既定1800秒・+60秒で強制終了）と 進みぐあいの表示を追加。
+- **`GET /api/health`**: DB に つながるか・置き場所に つながるか（5秒で見切り）・置き場所が消えない場所か（Vercel で local なら `persistent: false`）・LINE（ログイン / 送信 / webhook）・メールの送り方・cron の合い言葉が 設定されているか。DB と置き場所の両方が OK なら 200、どちらかが だめなら 503。**秘密・バケット名・ホスト名・パスは出さない**（テストで確認）。
+- **Prisma**: `directUrl = env("DIRECT_URL")`（`DATABASE_URL` = プール、`DIRECT_URL` = マイグレーション用の直接の接続）。`DIRECT_URL` が無くても アプリは動く（`src/lib/db.ts` で `DATABASE_URL` を使う）。
+  - `npm run vercel-build`（`scripts/vercel-build.mjs`、`vercel.json` の buildCommand）: `prisma generate` → **本番デプロイのときだけ** `prisma migrate deploy` → `next build`。プレビューのビルドで 本番の DB を書きかえない（`MIGRATE_ON_BUILD=1/0` で切りかえ）。各手順に時間制限と30秒ごとの進みぐあい。
+  - `npm run db:deploy`（= `prisma migrate deploy`）を追加。
+- **ビルドの中身**: フォント（5.7MB）は 必要な2つの API（`/api/parent/line-monthly`・`/api/cron/line-monthly`）にだけ入るようにした（`outputFileTracingIncludes`。最初は 自動の依存追跡で 41 の API すべてに入っていたので、パスを組み立てる形にして止めた。`.next/**/*.nft.json` で確認）。`vercel.json` の `regions` は東京（`hnd1`）。
+- **手順書 `docs/run5/DEPLOY.md`**（オーナー向け・日本語）: Neon / Supabase の接続文字列（プールと直接）・R2 / Supabase Storage / AWS S3・ワークブックのアップロード・Vercel の環境変数の表・メール（Resend）・seed・独自ドメイン・LINE の URL・Cron Jobs・`/api/health` の見かた・チェックリスト・こまったとき・費用の目安。LINE-SETUP.md と README も更新。
+- `.env.example` と README に `DIRECT_URL`・`STORAGE_DRIVER`・`S3_BUCKET`・`S3_REGION`・`S3_ENDPOINT`・`S3_ACCESS_KEY_ID`・`S3_SECRET_ACCESS_KEY`・`S3_FORCE_PATH_STYLE`・`S3_PREFIX`・`CRON_SECRET`・`MIGRATE_ON_BUILD` を追加（値は空。`DIRECT_URL` だけ `"${DATABASE_URL}"`）。`PYTHON` を削除。
+- 手元の `.env` に `DIRECT_URL="${DATABASE_URL}"` を1行追加しました（`prisma migrate dev` が `DIRECT_URL` を必要とするため。値は DATABASE_URL と同じ）。
+- **テスト**（新しく 4ファイル 38件）:
+  - `tests/storage.test.ts`（13件）: キーの形・ローカルの往復と外に出られないこと・S3 の往復（モックの S3 が 署名と本文のハッシュを確認）・AWS の公式の署名の例・URL の形（AWS / R2 / Supabase）・403 やネットワークエラー・時間切れ（秘密やキーが メッセージに入らない）・設定のえらび方・サーバーレスで local・ワークブック（あれば使う / 無ければ null）・サーバーのコードが child_process を使わないこと。
+  - `tests/report-pdf.test.ts`（7件）: A4・1ページ・サブセット（40万バイト未満）・FontFile2・「学」「は」の ToUnicode・長い名前でも1ページ・フォントが無いときのフォールバック・**フォントのグリフが すべて4バイト単位**・**埋め込んだグリフが すべて読める**。
+  - `tests/rate-limit-db.test.ts`（8件）: 2台のサーバーで同じ数・ウィンドウ・reset・キーに個人情報が入らない・そうじ・ロック（1つだけ / はずす / 期限）・DB 停止や SQL 失敗でメモリに切りかえ。
+  - `tests/deploy-routes.test.ts`（10件）: cron の認証（503 / 401 / OK）・cron → LINE のリンク → S3 から PDF が流れてくる（レポート・ワークブック）・2回目は送らない・置き場所の故障は 503・未設定なら何もしない・POST・おためしの そうじ・health（200 / 503・秘密が出ない・Vercel で local）。
+  - 既存: `line-monthly.test.ts` を新しい置き場所の形に合わせて更新（子どもの削除で PDF が消えるのは 応答のあと）。
+
+### 決めたこと（理由）
+- S3 は SDK（`@aws-sdk/client-s3`）を入れずに 自前の署名にした: 使う操作が5つだけで、依存が大きく（サーバーレスの起動も重くなる）、R2・Supabase・MinIO でも同じコードで動くため。署名は AWS の公式の例で検証。
+- ダウンロードは「アプリを通して流す」（署名つき URL へのリダイレクトにしない）: 合い言葉つきの URL・期限・持ち主チェックを これまでどおりアプリだけで管理でき、バケットを完全に非公開にできるため。PDF は小さいので 転送の負担も小さい。
+- フォントは Regular の1つだけ（太字なし）: リポジトリに 5.7MB 増えるだけで済ませるため。見出しは 大きさと色で区別。
+- 「ワークブックが無ければ その場で作る」は やめた（サーバーで Python を動かさない指示）。かわりにアップロードのスクリプトと、無いときの警告（ログ）で知らせる。
+- レート制限は DB が使えないときに「止める」ではなく「メモリで数える」: DB 停止中でも おためしモードを動かす方針と そろえるため（ログイン自体は DB が無いと できないので 実害はない）。
+- DB で数えるときは 上限をこえた回も数える（メモリ版は数えない）: 1つの SQL で 原子的に数えるため。ウィンドウの終わりは 変わらないので 待つ時間は同じ。
+- cron は 1日だけでなく 1〜3日の3回: サーバーレスの時間制限で とちゅうで切れても・LINE が一時的にエラーでも、のこりを自動で送るため（送信ずみの子は とばすので 二重にならない）。Vercel の Hobby プランでも 1日1回の cron は使える。
+- cron の時刻: 月次は UTC 0:00（日本時間 9:00）、そうじは UTC 18:30（日本時間 3:30）。
+- マイグレーションは 本番デプロイのビルドでだけ自動: プレビューのビルドが 本番の DB を書きかえる事故を防ぐ。
+- お子さま・アカウントを消すときの PDF の削除は トランザクションの外（応答のあと）: S3 の通信を トランザクションの中で待つと 時間切れ（Prisma の既定 5秒）で 削除ぜんたいが失敗するおそれがあるため。万一 トランザクションが失敗すると PDF だけ先に消えることがあるが、その場合は リンクが「ファイルが見つかりません」になるだけ。
+- `/api/health` は公開（ログイン不要）: 外部の死活監視から使えるように。出すのは true/false と 送り方の名前だけ。
+- `vercel.json` の `regions: ["hnd1"]`（東京）: DB を東京に置き、利用者も日本のため。
+
+### 確認
+- `npx tsc --noEmit`（本体・scripts）OK、`npx vitest run` 40ファイル 990件 OK、`npx next build` OK（新しい API `/api/cron/line-monthly`・`/api/cron/trial-cleanup`・`/api/health` を含む）。
+- `npm run smoke:offline`（DB 停止 + next start + Playwright）: ぜんぶ OK（ダウンロードは DB 停止中 503・no-store・noindex のまま）。
+- `generate_worksheets.py --month --world 1 --out <プロジェクトの外>`: 修正前は ValueError で終了コード 1、修正後は 終了コード 0（86ページ）。
+- 本物の PostgreSQL での確認（`RateLimitBucket` の SQL を本物で流す）は **できませんでした**（Docker Desktop が起動していないため。Phase 1・2 と同じ）。SQL は Prisma の `migrate diff` で表の形を確認し、数え方の SQL は メモリ内の まね で動きを確認しています。本物の S3 / R2 への接続も この環境では していません（AWS の公式の署名の例とモックで確認）。

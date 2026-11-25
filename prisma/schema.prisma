@@ -11,9 +11,22 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// DATABASE_URL: アプリが使う接続（Neon / Supabase では「プール（pooler）」の URL）
+// DIRECT_URL  : マイグレーション（npx prisma migrate deploy）が使う 直接の接続。ローカルでは DATABASE_URL と同じでよい
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+/// レート制限・ロック（run5 Phase 3）。サーバーが何台あっても同じ数え方をするため DB に置く。
+/// key は「制限の名前:キーの SHA-256」（メールアドレスや IP は そのまま入れない）。期限切れの行は cron のそうじで消す。
+model RateLimitBucket {
+  key     String   @id
+  count   Int
+  resetAt DateTime
+
+  @@index([resetAt])
 }
 
 // -----------------------------------------------------------------------------

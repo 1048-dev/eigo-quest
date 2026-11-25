@@ -8,7 +8,7 @@ import { checkEmailToken } from "@/lib/services/accountRecoveryService";
 export const POST = withAuthApi("email-check", async (req) => {
   const parsed = await parseBody(req, MailTokenRequestSchema);
   if (!parsed.success) return authFail(INVALID_EMAIL_LINK_JA, 400, "INVALID_TOKEN", { valid: false, maskedEmail: null });
-  const limit = tokenIpLimiter.hit(clientIp(req));
+  const limit = await tokenIpLimiter.hit(clientIp(req));
   if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
   const r = await checkEmailToken(parsed.data.token);
   return r.valid ? authOk(r) : authFail(INVALID_EMAIL_LINK_JA, 400, "INVALID_TOKEN", { valid: false, maskedEmail: null });

@@ -1,6 +1,6 @@
-import { readFile } from "node:fs/promises";
 import { isDbConnectionError } from "@/lib/api/server";
 import { isDbUp, markDbDown } from "@/lib/db";
+import { getStorage } from "@/lib/storage";
 import { deliveryFileFor, findDeliveryByToken } from "@/lib/services/monthlyDeliveryService";
 
 export const runtime = "nodejs";
@@ -18,8 +18,8 @@ function text(msg: string, status: number) {
 }
 
 /**
- * GET /d/<token>/<report|worksheets> — PDF をそのまま返す。
- * トークンが正しく期限内で、その配信の files に入っているファイルだけ（ほかの家・置き場所の外は 404）。
+ * GET /d/<token>/<report|worksheets> — PDF を置き場所（ローカル / S3 互換）から少しずつ流して返す。
+ * トークンが正しく期限内で、その配信の files に入っているファイルだけ（ほかの家・おかしなキーは 404）。
  */
 export async function GET(_req: Request, { params }: { params: Promise<{ token: string; file: string }> }) {
   const { token, file } = await params;
@@ -28,17 +28,19 @@ export async function GET(_req: Request, { params }: { params: Promise<{ token: 
     const view = await findDeliveryByToken(token);
     const target = view ? deliveryFileFor(view, file) : null;
     if (!target) return text("このリンクは有効期限が切れているか、正しくありません。", 404);
-    let data: Buffer;
+    let obj;
     try {
-      data = await readFile(target.abs);
-    } catch {
-      return text("ファイルが見つかりません。おうちの方のページから もう一度送ってください。", 404);
+      obj = await getStorage().stream(target.key);
+    } catch (e) {
+      console.error(`[download] storage ${(e as { code?: string; name?: string } | null)?.code ?? (e as Error)?.name ?? "Error"}`);
+      return text("ただいま表示できません。しばらくしてからもう一度お試しください。", 503);
     }
-    return new Response(new Uint8Array(data), {
+    if (!obj) return text("ファイルが見つかりません。おうちの方のページから もう一度送ってください。", 404);
+    return new Response(obj.body, {
       headers: {
         ...PRIVATE_HEADERS,
         "content-type": "application/pdf",
-        "content-length": String(data.length),
+        ...(obj.size != null ? { "content-length": String(obj.size) } : {}),
         "content-disposition": `inline; filename="${target.file.filename.replace(/[^A-Za-z0-9._-]/g, "_")}"`,
       },
     });
