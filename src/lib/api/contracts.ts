@@ -237,6 +237,8 @@ export const LessonCompleteResponseSchema = z.object({
   reasonJa: str(""),
   reward: RewardSchema,
   nextTest: z.string().optional().catch(undefined),
+  /** ok:false の理由（"DAILY_LIMIT" = おうちの方が決めた1日の回数に届いた） */
+  code: z.string().optional().catch(undefined),
 });
 export type LessonCompleteResponse = z.output<typeof LessonCompleteResponseSchema>;
 
@@ -343,3 +345,142 @@ export const AnnouncementsResponseSchema = z.object({
   announcements: safeArray(AnnouncementSchema),
 });
 export type AnnouncementsResponse = z.output<typeof AnnouncementsResponseSchema>;
+
+// ===========================================================================
+// 保護者アカウント（run3）
+//  - リクエスト（〜RequestSchema）: サーバーが厳しく検証する（.catch を付けない。だめなら 400）
+//  - レスポンス（〜ResponseSchema）: ほかと同じく .catch で安全なデフォルトに置きかわる
+//  - 保護者向けの文言はていねい語、子ども向け（だれが あそぶ？・回数制限）はひらがな多め
+// ===========================================================================
+
+export const PASSWORD_RULES_JA = "8文字以上で、英字と数字を両方ふくめてください。";
+export const AUTH_LIMITS = { maxChildren: 6, nicknameMax: 12, dailyLessonLimitMax: 10, passwordMin: 8, passwordMax: 128 } as const;
+
+const EmailInput = z.string().trim().toLowerCase().min(3).max(254).email();
+const PasswordInput = z.string().min(AUTH_LIMITS.passwordMin).max(AUTH_LIMITS.passwordMax)
+  .refine((s) => /[A-Za-z]/.test(s) && /[0-9]/.test(s), { message: "password must contain letters and digits" });
+const PinInput = z.string().regex(/^\d{4}$/);
+const ChildIdInput = z.string().min(1).max(64).regex(/^[A-Za-z0-9_-]+$/);
+const NicknameInput = z.string().trim().min(1).max(AUTH_LIMITS.nicknameMax)
+  // 制御文字・HTML の山かっこは入れない
+  .refine((s) => !/[\u0000-\u001f\u007f<>]/.test(s), { message: "invalid characters" });
+const SchoolGradeInput = z.number().int().min(1).max(6);
+const BirthYearInput = z.number().int().min(2000).max(2100).nullable();
+
+export const RegisterRequestSchema = z.object({ email: EmailInput, password: PasswordInput, pin: PinInput });
+export type RegisterRequest = z.input<typeof RegisterRequestSchema>;
+
+/** ログインはルールを見せない（パスワードの形だけでヒントを与えない）。長すぎるものだけ弾く */
+export const LoginRequestSchema = z.object({ email: z.string().trim().toLowerCase().min(1).max(254), password: z.string().min(1).max(AUTH_LIMITS.passwordMax) });
+export type LoginRequest = z.input<typeof LoginRequestSchema>;
+
+export const ChildCreateRequestSchema = z.object({
+  nickname: NicknameInput,
+  schoolGrade: SchoolGradeInput,
+  birthYear: BirthYearInput.optional(),
+});
+export type ChildCreateRequest = z.input<typeof ChildCreateRequestSchema>;
+
+export const ChildUpdateRequestSchema = z.object({
+  nickname: NicknameInput.optional(),
+  schoolGrade: SchoolGradeInput.optional(),
+  birthYear: BirthYearInput.optional(),
+}).refine((v) => v.nickname !== undefined || v.schoolGrade !== undefined || v.birthYear !== undefined, { message: "nothing to update" });
+export type ChildUpdateRequest = z.input<typeof ChildUpdateRequestSchema>;
+
+export const ChildIdSchema = ChildIdInput;
+
+export const VerifyPinRequestSchema = z.object({ pin: PinInput });
+
+export const ParentSettingsRequestSchema = z.object({
+  /** 子どもごとの1日のレッスン回数の上限。null で「制限なし」 */
+  dailyLessonLimit: z.object({ childId: ChildIdInput, limit: z.number().int().min(1).max(AUTH_LIMITS.dailyLessonLimitMax).nullable() }).optional(),
+  /** PIN の変更（パスワードの再入力が必要） */
+  changePin: z.object({ password: z.string().min(1).max(AUTH_LIMITS.passwordMax), newPin: PinInput }).optional(),
+  /** パスワードの変更（今のパスワードが必要。ほかの端末はログアウト） */
+  changePassword: z.object({ currentPassword: z.string().min(1).max(AUTH_LIMITS.passwordMax), newPassword: PasswordInput }).optional(),
+}).refine((v) => v.dailyLessonLimit || v.changePin || v.changePassword, { message: "nothing to update" });
+export type ParentSettingsRequest = z.input<typeof ParentSettingsRequestSchema>;
+
+export const DeleteAccountRequestSchema = z.object({ password: z.string().min(1).max(AUTH_LIMITS.passwordMax) });
+
+// --- レスポンス -------------------------------------------------------------
+const AUTH_META = {
+  ...META,
+  ok: bool(false),
+  /** 画面にそのまま出せるメッセージ（成功時は空のこともある） */
+  messageJa: str(""),
+  /** 機械向けの理由（"PIN_REQUIRED" | "NOT_LOGGED_IN" | "DAILY_LIMIT" など） */
+  code: z.string().optional().catch(undefined),
+};
+
+export const ChildSchema = z.object({
+  id: z.string(),
+  nickname: str("なまえ"),
+  schoolGrade: z.number().int().nullable().catch(null),
+  birthYear: z.number().int().nullable().catch(null),
+});
+export type Child = z.output<typeof ChildSchema>;
+
+export const AuthResultResponseSchema = z.object({ ...AUTH_META });
+export type AuthResultResponse = z.output<typeof AuthResultResponseSchema>;
+
+/** GET /api/auth/me — 未ログイン・DB 停止のときは loggedIn:false（= おためしモード） */
+export const AuthMeResponseSchema = z.object({
+  ...AUTH_META,
+  loggedIn: bool(false),
+  parent: nullable(z.object({ email: str("") })),
+  children: safeArray(ChildSchema),
+  selectedChildId: z.string().nullable().catch(null),
+  /** 保護者PINを入れてから一定時間内（おうちの方エリアに入れる） */
+  pinUnlocked: bool(false),
+});
+export type AuthMeResponse = z.output<typeof AuthMeResponseSchema>;
+
+export const ChildrenResponseSchema = z.object({
+  ...AUTH_META,
+  children: safeArray(ChildSchema),
+  selectedChildId: z.string().nullable().catch(null),
+});
+export type ChildrenResponse = z.output<typeof ChildrenResponseSchema>;
+
+export const ChildResponseSchema = z.object({ ...AUTH_META, child: nullable(ChildSchema) });
+export type ChildResponse = z.output<typeof ChildResponseSchema>;
+
+export const VerifyPinResponseSchema = z.object({ ...AUTH_META, unlockedUntil: z.string().nullable().catch(null) });
+export type VerifyPinResponse = z.output<typeof VerifyPinResponseSchema>;
+
+export const ChildOverviewSchema = z.object({
+  id: z.string(),
+  nickname: str("なまえ"),
+  schoolGrade: z.number().int().nullable().catch(null),
+  lessonsDone: num(0),
+  totalLessons: num(0),
+  lessonsToday: num(0),
+  streakDays: num(0),
+  longestStreak: num(0),
+  coins: num(0),
+  /** 総合習得率 0〜100 */
+  masteryOverall: num(0),
+  lastStudyDate: z.string().nullable().catch(null),
+  /** 習得率の低い能力（低い順・最大3つ。まだ学習していなければ空） */
+  weakestSkills: safeArray(z.object({ skill: SKILL, labelJa: str(""), score: num(0) })),
+  dailyLessonLimit: z.number().int().nullable().catch(null),
+});
+export type ChildOverview = z.output<typeof ChildOverviewSchema>;
+
+export const ParentOverviewResponseSchema = z.object({ ...AUTH_META, children: safeArray(ChildOverviewSchema) });
+export type ParentOverviewResponse = z.output<typeof ParentOverviewResponseSchema>;
+
+export const ParentSettingsSchema = z.object({
+  // 1つだけ壊れた値があっても、ほかの子の設定は残す（値ごとに検証して整数だけ通す）
+  dailyLessonLimits: z.record(z.string(), z.unknown()).catch({})
+    .transform((o) => Object.fromEntries(Object.entries(o).filter((e): e is [string, number] => Number.isInteger(e[1])))),
+});
+export type ParentSettings = z.output<typeof ParentSettingsSchema>;
+
+export const ParentSettingsResponseSchema = z.object({
+  ...AUTH_META,
+  settings: ParentSettingsSchema.catch({ dailyLessonLimits: {} }),
+});
+export type ParentSettingsResponse = z.output<typeof ParentSettingsResponseSchema>;

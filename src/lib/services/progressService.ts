@@ -17,6 +17,7 @@ import { listArenas, type ArenaMode } from "@/lib/domain/arena";
 import type { AttemptSource, MemoryState, ResponseLog, Skill } from "@/lib/domain/types";
 import { gradeWritten } from "@/lib/grading/aiGrader";
 import type { Strictness, Verdict } from "@/lib/grading/localGrader";
+import { checkDailyLessonLimit } from "@/lib/services/dailyLimit";
 
 type Tx = Prisma.TransactionClient;
 
@@ -128,6 +129,9 @@ export async function completeLesson(userId: string, lessonNo: number, input: { 
   const { nodes } = await getStageMap(userId, now);
   const guard = canStartLesson(nodes, lessonNo);
   if (!guard.ok) return { ok: false as const, reasonJa: guard.reasonJa };
+  // おうちの方が決めた「1日のレッスン回数」（設定がなければ制限なし）
+  const limit = await checkDailyLessonLimit(userId, lessonNo, now);
+  if (!limit.ok) return { ok: false as const, reasonJa: limit.reasonJa, code: limit.code };
   if (input.quizScore < CURRICULUM_RULES.lessonQuizPassRate) {
     return { ok: false as const, reasonJa: "クイズをもう一回やってみよう！7割できたらクリアだよ。" };
   }
@@ -330,13 +334,13 @@ export async function dismissTreasureAlert(userId: string, alertId: string) {
 // ---------------------------------------------------------------------------
 // 習得率ダッシュボード
 // ---------------------------------------------------------------------------
-export async function getDashboard(userId: string, now = new Date()) {
+/** 習得率を計算するだけ（DB には書かない）。保護者の「ようす」画面でも使う */
+export async function computeUserMastery(userId: string, now = new Date()) {
   const since = new Date(now.getTime() - 30 * 86_400_000);
-  const [memories, { completedLessons }, recent, history] = await Promise.all([
+  const [memories, { completedLessons }, recent] = await Promise.all([
     loadMemories(userId),
     loadProgress(userId),
     prisma.itemResponse.findMany({ where: { userId, createdAt: { gte: since } }, orderBy: { createdAt: "desc" }, take: 500 }),
-    prisma.masterySnapshot.findMany({ where: { userId }, orderBy: { date: "asc" }, take: 60 }),
   ]);
   const introduced = ALL_ITEMS.filter((i) => completedLessons.has(i.lessonNo));
   const result = computeMastery({
@@ -346,6 +350,14 @@ export async function getDashboard(userId: string, now = new Date()) {
     recentResponses: recent as ResponseLog[],
     now,
   });
+  return { result, completedLessons };
+}
+
+export async function getDashboard(userId: string, now = new Date()) {
+  const [{ result, completedLessons }, history] = await Promise.all([
+    computeUserMastery(userId, now),
+    prisma.masterySnapshot.findMany({ where: { userId }, orderBy: { date: "asc" }, take: 60 }),
+  ]);
 
   // 日次スナップショット（推移グラフ用）。同日は上書き。
   const date = localDate(now);

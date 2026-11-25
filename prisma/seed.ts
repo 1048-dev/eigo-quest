@@ -15,6 +15,7 @@ import shopData from "../content/curriculum/monsters.json";
 import announcementsData from "../content/announcements.json";
 import { MONSTERS } from "../src/lib/game/monsters";
 import { ASSESSMENTS, LESSONS, itemsOfLesson } from "../src/lib/curriculum";
+import { hashSecret } from "../src/lib/auth/password";
 
 const prisma = new PrismaClient();
 const ANNOUNCEMENTS = announcementsData.announcements ?? [];
@@ -215,6 +216,23 @@ async function main(): Promise<number> {
       await upsertRow("User", "id", { id: "demo-user", nickname: "ハル", schoolGrade: 3, friendCode: "DEMO-0001" }, {}, false);
       return "demo-user（ハル）";
     }),
+    // デモ保護者（開発用。SEED_DEMO_PARENT=1 のときだけ。本番 DB に既知のパスワードを入れないため既定はオフ）
+    // demo-user（おためしモード）とは別の子どもを作る。demo-user は保護者にひもづけない
+    ...(process.env.SEED_DEMO_PARENT === "1"
+      ? [await section("demo parent", async () => {
+          const email = "demo-parent@example.com";
+          const password = "demo-pass-1234";
+          const pin = "1234";
+          const [passwordHash, pinHash] = await Promise.all([hashSecret(password), hashSecret(pin)]);
+          const parent = await prisma.parent.upsert({ where: { email }, create: { email, passwordHash, pinHash, settings: {} }, update: {} });
+          await prisma.user.upsert({
+            where: { friendCode: "DEMO-0002" },
+            create: { parentId: parent.id, nickname: "リコ", schoolGrade: 4, friendCode: "DEMO-0002" },
+            update: {},
+          });
+          return `${email} / パスワード ${password} / PIN ${pin}（子ども: リコ）`;
+        })]
+      : []),
   ];
 
   const failed = results.filter((ok) => !ok).length;

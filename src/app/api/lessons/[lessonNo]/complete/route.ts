@@ -29,7 +29,7 @@ export const POST = withOffline<{ params: Promise<{ lessonNo: string }> }>("less
   const r = await completeLesson(await currentUserId(), Number((await params).lessonNo), parsed.data);
   const body: LessonCompleteResponse = r.ok
     ? { ok: true, reasonJa: "", reward: { total: r.reward.total, rareGachaTickets: r.reward.rareGachaTickets, coins: r.reward.coins.map((c) => ({ amount: c.amount, labelJa: c.labelJa })) }, nextTest: r.nextTest }
-    : { ok: false, reasonJa: r.reasonJa ?? "", reward: { total: 0, rareGachaTickets: 0, coins: [] }, nextTest: undefined };
+    : { ok: false, reasonJa: r.reasonJa ?? "", reward: { total: 0, rareGachaTickets: 0, coins: [] }, nextTest: undefined, code: "code" in r ? r.code : undefined };
   return jsonOk(body, r.ok ? 200 : 403);
 }, async (req, { params }) => {
   const b = await readJsonBody(req);

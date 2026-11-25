@@ -13,7 +13,8 @@
     "db:seed": "tsx prisma/seed.ts",
     "worksheets": "python3 worksheets/generate_worksheets.py --all",
     "worksheets:month": "python3 worksheets/generate_worksheets.py --month",
-    "smoke": "tsx scripts/smoke.ts"
+    "smoke": "tsx scripts/smoke.ts",
+    "check:auth-db": "tsx scripts/auth-db-check.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",
