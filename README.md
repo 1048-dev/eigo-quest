@@ -67,7 +67,9 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `npm run trial:cleanup [-- --dry-run] [-- --days 60]` | 60日 遊ばれていない おためし学習者（と その学習記録）を消す。1日1回 cron で実行する想定（下の「端末ごとの おためし学習者」） |
 | `npm run line:monthly [-- --dry-run] [-- --parent <id>]` | 月間レポート（PDF）を LINE で届ける。キーが無ければ dry-run（下の「LINE で月間レポート」） |
 | `npm run check:line-monthly-db -- --db <テスト用URL> [--port 3463]` | 本物の DB + `next start` で webhook の署名・`line:monthly --dry-run`・ダウンロードページ・おうちの方 API・期限切れ・退会 まで 32項目を確認（LINE には接続しない）。**使い捨ての DB を指定すること** |
-| `npm run check:run4-flow -- --db <テスト用URL> [--port 3475]` | 本物の DB + `next start` + ブラウザで、おためしで遊ぶ → 新規登録 → お子さまを追加（キャラクター）→ おためしの きろくを ひきつぐ → おうちの方ページに反映 → `line:monthly --dry-run` のリンクを開いて PDF まで を通しで確認（スクリーンショット `docs/run4/screens/p4-flow/`）。**使い捨ての DB を指定すること** |
+| `npm run check:run4-flow -- --db <テスト用URL> [--port 3475] [--timeout 900]` | 本物の DB + `next start` + ブラウザで、おためしで遊ぶ → 新規登録 → お子さまを追加（キャラクター）→ おためしの きろくを ひきつぐ → おうちの方ページに反映 → `line:monthly --dry-run` のリンクを開いて PDF まで を通しで確認（スクリーンショット `docs/run4/screens/p4-flow/`）。**使い捨ての DB を指定すること** |
+| `npm run check:run5-flow -- --db <テスト用URL> [--port 3485] [--timeout 900]` | 本物の DB + `next start` + ブラウザで、2つのブラウザで おためし（きろく・コインが べつべつ）→ 新規登録 →「ひきつぐ？」に いいえ → おうちの方ページのボタンで ひきつぐ → パスワードを忘れた（outbox のメール）→ 再設定 → ほかの端末もログアウト → 暗証番号を忘れた → `line:monthly --dry-run`（`STORAGE_DRIVER=local`）のリンクで Node 製のレポート PDF とワークブック → cron・health まで 約60項目（スクリーンショット `docs/run5/screens/p4-flow/`）。**使い捨ての DB を指定すること** |
+| （共通） | `*-check.ts` は どれも 進みぐあいを1行ずつ表示し、`--timeout <秒>`（既定 600〜900）で とちゅうでも止まります（`scripts/lib/checkKit.ts`）。Docker が使えないときは、使い捨ての PostgreSQL 16 を 5544 で動かしてから渡してください |
 | `npm run screens:auth -- --db <テスト用URL>` | 本物の DB と DB 停止の両方で、保護者アカウントの画面を Playwright で操作してスクリーンショット（`docs/run3/screens/`） |
 | `npx tsx scripts/e2e-smoke.ts http://localhost:3000` | 実サーバーとDBを使い、30日分のプレイ（ボス戦・アリーナ・お宝アラートまで）を早送りで実行 |
 | `pip install -r worksheets/requirements.txt` | PDF生成に必要な reportlab をインストール |

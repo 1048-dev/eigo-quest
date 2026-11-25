@@ -29,6 +29,22 @@ export interface StorageConfig {
 const truthy = (v: string | undefined) => /^(1|true|yes|on)$/i.test(v?.trim() ?? "");
 const falsy = (v: string | undefined) => /^(0|false|no|off)$/i.test(v?.trim() ?? "");
 
+/**
+ * S3_ENDPOINT は https だけ（お子さまの学習レポートを 暗号化なしで 送らない）。
+ * http は 同じパソコンの中（localhost / 127.0.0.1 / ::1。手元の MinIO など）だけ みとめる（run5 Phase 4 のセキュリティの見直し）。
+ */
+export function isAllowedEndpoint(endpoint: string): boolean {
+  let u: URL;
+  try {
+    u = new URL(endpoint);
+  } catch {
+    return false;
+  }
+  if (u.username || u.password) return false; // キーは URL に入れず S3_ACCESS_KEY_ID / S3_SECRET_ACCESS_KEY へ
+  if (u.protocol === "https:") return true;
+  return u.protocol === "http:" && ["localhost", "127.0.0.1", "[::1]"].includes(u.hostname);
+}
+
 export function storageConfig(env: Env = process.env): StorageConfig {
   const want = env.STORAGE_DRIVER?.trim().toLowerCase();
   const driver: "local" | "s3" = want === "s3" || want === "local" ? want : env.S3_BUCKET?.trim() ? "s3" : "local";
@@ -41,7 +57,7 @@ export function storageConfig(env: Env = process.env): StorageConfig {
     S3_SECRET_ACCESS_KEY: env.S3_SECRET_ACCESS_KEY?.trim() ?? "",
   };
   const missing = Object.entries(values).filter(([, v]) => !v).map(([k]) => k);
-  if (endpoint && !/^https?:\/\//i.test(endpoint)) missing.push("S3_ENDPOINT");
+  if (endpoint && !isAllowedEndpoint(endpoint)) missing.push("S3_ENDPOINT");
   let prefix = (env.S3_PREFIX?.trim() ?? "").replace(/^\/+/, "");
   if (prefix && !prefix.endsWith("/")) prefix += "/";
   const s3: S3Config = {

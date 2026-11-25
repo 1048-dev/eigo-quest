@@ -2,7 +2,9 @@
  * run4 Phase 4: 本物の PostgreSQL + next start + ブラウザ（Playwright）での通し確認。
  *
  *   npx next build
- *   npx tsx scripts/run4-flow-check.ts --db postgresql://postgres:pw@localhost:5544/eq_check [--port 3475]
+ *   npx tsx scripts/run4-flow-check.ts --db postgresql://postgres:pw@localhost:5544/eq_check [--port 3475] [--timeout 900]
+ *
+ * 進みぐあいを 1行ずつ表示。--timeout 秒（既定 900）で とちゅうでも やめる。コマンドは それぞれ 5分、ブラウザの操作は 30秒で 時間切れ。
  *
  * 1. prisma migrate deploy → seed → next start（LINE のキーなし = dry-run）
  * 2. おためしモードで あそぶ（スタート画面 →「おためしで あそぶ」→ レッスン1・2 をクリア）
@@ -16,12 +18,13 @@
  * スクリーンショット: docs/run4/screens/p4-flow/
  * ※ テスト用の DB を渡すこと。
  */
-import { spawn, spawnSync, type ChildProcess } from "node:child_process";
+import { spawnSync, type ChildProcess } from "node:child_process";
 import { createHash } from "node:crypto";
 import { mkdirSync, rmSync } from "node:fs";
 import path from "node:path";
 import { PrismaClient } from "@prisma/client";
 import { chromium, type Page } from "playwright";
+import { clearRateLimits, installDeadline, isWin, run as runCmd, startServer, stopServer, timeoutArg, waitForServer as waitUp } from "./lib/checkKit";
 
 const arg = (name: string, d?: string) => {
   const i = process.argv.indexOf(`--${name}`);
@@ -50,12 +53,12 @@ const env: NodeJS.ProcessEnv = {
   LINE_LOGIN_CHANNEL_SECRET: "",
   LINE_LOGIN_CALLBACK_URL: "",
 };
-const isWin = process.platform === "win32";
+/** ぜんたいの時間制限（--timeout 秒。既定 900） */
+const TIMEOUT_SEC = timeoutArg(900);
+env.DIRECT_URL = DB;
 
 function run(cmd: string, args: string[]) {
-  console.log(`$ ${cmd} ${args.join(" ")}`);
-  const r = spawnSync(cmd, args, { env, stdio: "inherit", shell: isWin });
-  if (r.status !== 0) throw new Error(`${cmd} ${args[0]} failed (${r.status})`);
+  runCmd(cmd, args, env, 300_000);
 }
 
 let failures = 0;
@@ -67,16 +70,8 @@ function check(label: string, cond: boolean, detail?: unknown) {
   }
 }
 
-async function waitForServer(server: ChildProcess) {
-  for (let i = 0; i < 60; i++) {
-    if (server.exitCode != null) throw new Error("next start exited");
-    try {
-      if ((await fetch(`${BASE}/api/auth/me`)).ok) return;
-    } catch { /* まだ */ }
-    await new Promise((r) => setTimeout(r, 1000));
-  }
-  throw new Error("server did not start");
-}
+const waitForServer = (server: ChildProcess) => waitUp(server, BASE);
+const step = (s: string) => console.log(`\n▶ ${s}`);
 
 const db = new PrismaClient({ datasourceUrl: DB });
 const shot = (page: Page, name: string) => page.screenshot({ path: path.join(SHOTS, `${name}.png`), fullPage: true });
@@ -89,12 +84,15 @@ async function flow() {
 
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ viewport: { width: 420, height: 900 }, locale: "ja-JP" });
+  // 1つ1つの 操作にも 時間制限（止まったまま 待ちつづけない）
+  ctx.setDefaultTimeout(30_000);
+  ctx.setDefaultNavigationTimeout(45_000);
   const page = await ctx.newPage();
   const pageErrors: string[] = [];
   page.on("pageerror", (e) => pageErrors.push(e.message));
   page.on("response", (r) => { if (r.status() >= 500) pageErrors.push(`${r.status()} ${r.url()}`); });
   try {
-    // 1. おためしモード
+    step("1. おためしモード");
     await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
     await page.waitForURL(/\/welcome$/, { timeout: 30_000 });
     await page.getByRole("button", { name: "おためしで あそぶ" }).click();
@@ -117,11 +115,13 @@ async function flow() {
     await page.goto(BASE + "/map", { waitUntil: "networkidle" });
     const trialToken = (await ctx.cookies()).find((c) => c.name === "eq_trial_learner");
     check("おためし学習者の cookie は httpOnly", !!trialToken?.httpOnly, trialToken?.name);
-    const trialUser = trialToken ? await db.user.findFirst({ where: { trialTokenHash: createHash("sha256").update(trialToken.value).digest("hex") }, select: { id: true, isTrial: true, lessonProgress: { select: { lessonNo: true } } } }) : null;
+    const trialUser = trialToken ? await db.user.findFirst({ where: { trialTokenHash: createHash("sha256").update(trialToken.value).digest("hex") }, select: { id: true, isTrial: true, coins: true, lessonProgress: { select: { lessonNo: true } } } }) : null;
     check("DB: この端末の おためし学習者に レッスン1・2", !!trialUser?.isTrial && trialUser.lessonProgress.map((l) => l.lessonNo).sort().join(",") === "1,2", trialUser);
+    // run5 Phase 4: ほうしゅうの合計のほかに ログインボーナスなどが のるので、ひきつぐ コインは DB の値を使う
+    if (trialUser && trialUser.coins >= trialCoins) trialCoins = trialUser.coins;
     await shot(page, "01-trial-map");
 
-    // 2. 新規登録（画面）
+    step("2. 新規登録（画面）");
     const email = `p4-flow-${Date.now()}@example.com`;
     await page.goto(BASE + "/register", { waitUntil: "networkidle" });
     await page.getByLabel("メールアドレス").fill(email);
@@ -133,7 +133,7 @@ async function flow() {
     await page.waitForURL(/\/parent/, { timeout: 30_000 });
     check("登録 → おうちの方ページ", page.url().includes("/parent"));
 
-    // 3. お子さまを追加（キャラクター キコ）
+    step("3. お子さまを追加（キャラクター キコ）");
     const form = page.getByRole("form", { name: "お子さまを追加" });
     const addButton = page.getByRole("button", { name: "＋ お子さまを追加" });
     // 登録直後は ?add=1 で フォームが ひらいている（ひらいていなければ ボタンを おす）
@@ -148,7 +148,7 @@ async function flow() {
     const kid = parent?.children[0];
     check("お子さまを追加（キャラクター kiko）", kid?.nickname === "そら" && kid.avatarCharacter === "kiko", parent);
 
-    // 4. だれが あそぶ？ → ひきつぐ？ → はい
+    step("4. だれが あそぶ？ → ひきつぐ？ → はい");
     await page.goto(BASE + "/who", { waitUntil: "networkidle" });
     await shot(page, "03-who");
     await page.getByRole("button", { name: /^そらさん/ }).click();
@@ -170,7 +170,7 @@ async function flow() {
     const kidRow = await db.user.findUnique({ where: { id: kid!.id }, select: { coins: true, lessonProgress: { select: { lessonNo: true } } } });
     check("DB: そらさんに レッスン1・2 と コイン", kidRow?.lessonProgress.map((l) => l.lessonNo).sort().join(",") === "1,2" && kidRow.coins === trialCoins, { kidRow, trialCoins });
 
-    // 5. おうちの方ページ（ようす）
+    step("5. おうちの方ページ（ようす）");
     await page.goto(BASE + "/parent", { waitUntil: "networkidle" });
     await page.getByRole("heading", { name: "お子さまのようす" }).waitFor({ timeout: 30_000 });
     const card = page.locator("article", { has: page.getByRole("heading", { name: /そら/ }) });
@@ -181,7 +181,7 @@ async function flow() {
     check("ようす API: lessonsDone 2・顔 kiko", ch?.lessonsDone === 2 && ch?.avatarCharacter === "kiko", ch);
     await shot(page, "07-parent-overview");
 
-    // 6. line:monthly --dry-run → ダウンロードの リンク
+    step("6. line:monthly --dry-run → ダウンロードの リンク");
     const month = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit" }).format(new Date()).slice(0, 7);
     console.log(`$ npx tsx scripts/line-monthly.ts --dry-run --parent ${parent!.id} --month ${month}`);
     const out = spawnSync("npx", ["tsx", "scripts/line-monthly.ts", "--dry-run", "--parent", parent!.id, "--month", month], { env, shell: isWin, encoding: "utf8", timeout: 300_000 });
@@ -208,26 +208,31 @@ async function flow() {
   }
 }
 
+let server: ChildProcess | null = null;
+
 async function main() {
+  installDeadline(TIMEOUT_SEC, () => stopServer(server));
+  console.log(`run4 flow check（最長 ${TIMEOUT_SEC}秒）: ${BASE}`);
   rmSync(WORK, { recursive: true, force: true });
   mkdirSync(SHOTS, { recursive: true });
   run("npx", ["prisma", "migrate", "deploy"]);
+  await clearRateLimits(db);
   run("npx", ["tsx", "prisma/seed.ts"]);
-  console.log(`$ next start -p ${PORT}`);
-  const server = spawn("npx", ["next", "start", "-p", String(PORT)], { env: { ...env, NODE_ENV: "production" }, stdio: ["ignore", "ignore", "inherit"], shell: isWin });
+  server = startServer(PORT, env);
   try {
     await waitForServer(server);
     await flow();
   } finally {
-    if (isWin && server.pid) spawnSync("taskkill", ["/pid", String(server.pid), "/T", "/F"], { stdio: "ignore" });
-    else server.kill();
+    stopServer(server);
+    server = null;
     await db.$disconnect();
   }
   console.log(failures === 0 ? "🎉 すべて OK" : `✖ ${failures} 件 失敗`);
-  process.exitCode = failures === 0 ? 0 : 1;
+  process.exit(failures === 0 ? 0 : 1);
 }
 
 main().catch((e) => {
   console.error("✖", e instanceof Error ? e.message : e);
-  process.exitCode = 1;
+  stopServer(server);
+  process.exit(1);
 });

@@ -245,6 +245,57 @@ async function accountOfflineFlow(browser: Browser) {
     else console.log(`  ✓ ダウンロード ${p} → ${r.status}（no-store・noindex）`);
   }
 
+  // run5: パスワードの再設定・メールアドレスの確認・暗証番号を忘れた（DB 停止中は 503 + offline のていねいな案内）
+  // 画面を ひらいたときに呼ぶ API（check・reset-pin の状態）は 200 + offline:true（画面が「利用できません」を出す）。それ以外は 503
+  const run5Offline: [string, "GET" | "POST" | "PATCH" | "DELETE", string, unknown, 200 | 503][] = [
+    ["パスワードを忘れた", "POST", "/api/auth/password-reset/request", { email: "smoke@example.com" }, 503],
+    ["再設定リンクの確認", "POST", "/api/auth/password-reset/check", { token: "x".repeat(43) }, 200],
+    ["パスワードの再設定", "POST", "/api/auth/password-reset/complete", { token: "x".repeat(43), newPassword: "passw0rd2" }, 503],
+    ["メール確認リンクの確認", "POST", "/api/auth/email/check", { token: "x".repeat(43) }, 200],
+    ["メールアドレスの確定", "POST", "/api/auth/email/confirm", { token: "x".repeat(43) }, 503],
+    ["メールアドレスの追加", "POST", "/api/parent/email", { email: "smoke@example.com", password: "passw0rd1" }, 503],
+    ["暗証番号を忘れた（状態）", "GET", "/api/parent/reset-pin", undefined, 200],
+    ["暗証番号を忘れた（決める）", "POST", "/api/parent/reset-pin", { password: "passw0rd1", newPin: "1234" }, 503],
+  ];
+  for (const [label, method, url, body, want] of run5Offline) {
+    const r = await api(method, url, body);
+    if (r.status !== want || r.json.offline !== true || r.json.success !== false || typeof r.json.messageJa !== "string") fail(`api ${url}`, "api", `${r.status} ${JSON.stringify(r.json)}`);
+    else console.log(`  ✓ ${label} → ${want} offline（ていねいな 案内）`);
+  }
+  // おためしの きろく（DB 停止中は「なし」を 200 で）
+  const trial = await api("GET", "/api/trial");
+  if (trial.status !== 200 || trial.json.offline !== true || trial.json.hasProgress !== false) fail("api trial", "api", `${trial.status} ${JSON.stringify(trial.json)}`);
+  else console.log("  ✓ おためしの きろく → 200 offline・なし");
+
+  // /api/health: DB 停止 → 503・ok:false。接続文字列・ホスト・パスは 出さない
+  {
+    const r = await fetch(`${BASE}/api/health`);
+    const text = await r.text();
+    let j: { ok?: boolean; db?: { reachable?: boolean } } = {};
+    try { j = JSON.parse(text); } catch { /* 下で失敗 */ }
+    const leaks = [/5999/, /eigo:eigo/, /127\.0\.0\.1/, /postgres(ql)?:\/\//i, /\.data/, /[A-Z]:\\\\/].filter((re) => re.test(text));
+    if (r.status !== 503 || j.ok !== false || j.db?.reachable !== false || !/no-store/.test(r.headers.get("cache-control") ?? "")) fail("api health", "api", `${r.status} ${text.slice(0, 200)}`);
+    else if (leaks.length) fail("api health", "leak", `health に 出してはいけない文字列: ${leaks.map(String).join(" ")}`);
+    else console.log("  ✓ health → 503（DB 停止）・秘密やパスは 出ない");
+  }
+  // cron: 合い言葉なし → 401（CRON_SECRET 設定ずみ）/ 503（未設定）。まちがった合い言葉 → 401。正しい合い言葉 → DB 停止で 503 / LINE 未設定で 何もしない
+  const cronSecret = process.env.SMOKE_CRON_SECRET ?? "";
+  for (const p of ["/api/cron/trial-cleanup", "/api/cron/line-monthly"]) {
+    const none = await fetch(BASE + p);
+    const wantNone = cronSecret ? 401 : 503;
+    if (none.status !== wantNone) fail(`cron ${p}`, "api", `合い言葉なし → ${none.status}（期待 ${wantNone}）`);
+    else console.log(`  ✓ cron ${p} 合い言葉なし → ${none.status}`);
+    if (!cronSecret) continue;
+    const wrong = await fetch(BASE + p, { headers: { authorization: `Bearer ${cronSecret}x` } });
+    if (wrong.status !== 401) fail(`cron ${p}`, "api", `まちがった合い言葉 → ${wrong.status}`);
+    else console.log(`  ✓ cron ${p} まちがった合い言葉 → 401`);
+    const right = await fetch(BASE + p, { headers: { authorization: `Bearer ${cronSecret}` } });
+    const rj = (await right.json().catch(() => ({}))) as { code?: string; skipped?: string };
+    const okRight = p.endsWith("trial-cleanup") ? right.status === 503 && rj.code === "DB_UNAVAILABLE" : right.status === 200 && rj.skipped === "LINE_NOT_CONFIGURED";
+    if (!okRight) fail(`cron ${p}`, "api", `正しい合い言葉 → ${right.status} ${JSON.stringify(rj)}`);
+    else console.log(`  ✓ cron ${p} 正しい合い言葉 → ${right.status} ${rj.code ?? rj.skipped}`);
+  }
+
   const out = await api("POST", "/api/auth/logout");
   if (out.status !== 200 || out.json.ok !== true) fail("api auth/logout", "api", JSON.stringify(out.json));
   else console.log("  ✓ ログアウト → 200");
@@ -332,6 +383,14 @@ async function accountOfflineFlow(browser: Browser) {
     await page.getByText("ただいまアカウント機能を利用できません").first().waitFor({ timeout: 20_000 });
   }, stale);
 }
+
+/** スモーク ぜんたいの 時間制限（SMOKE_TIMEOUT_SEC。既定 15分）。こえたら 失敗で 終わる */
+const TOTAL_TIMEOUT_MS = Math.max(60, Number(process.env.SMOKE_TIMEOUT_SEC) || 900) * 1000;
+setTimeout(() => {
+  console.error(`\n✗ 時間切れ（${TOTAL_TIMEOUT_MS / 1000}秒）。とちゅうまでの 問題: ${problems.length} こ`);
+  for (const p of problems) console.error(`  [${p.page}] ${p.kind}: ${p.detail}`);
+  process.exit(1);
+}, TOTAL_TIMEOUT_MS).unref();
 
 async function main() {
   mkdirSync(OUT, { recursive: true });

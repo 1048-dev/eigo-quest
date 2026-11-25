@@ -15,6 +15,10 @@ import { existsSync, readFileSync, readdirSync, rmSync } from "node:fs";
 import path from "node:path";
 import { spawn, spawnSync, type ChildProcess } from "node:child_process";
 import { PrismaClient } from "@prisma/client";
+import { clearRateLimits, installDeadline, timeoutArg, track } from "./lib/checkKit";
+
+// run5 Phase 4: ぜんたいの時間制限（--timeout 秒。既定 600）
+installDeadline(timeoutArg(600));
 
 const arg = (name: string, d?: string) => {
   const i = process.argv.indexOf(`--${name}`);
@@ -32,6 +36,9 @@ const SECRET = "dry-run-channel-secret-not-real";
 const env: NodeJS.ProcessEnv = {
   ...process.env,
   DATABASE_URL: DB,
+  DIRECT_URL: DB, // run5 Phase 3 から prisma migrate は DIRECT_URL を使う
+  STORAGE_DRIVER: "local",
+  S3_BUCKET: "",
   PORT: String(PORT),
   REPORT_STORAGE_DIR: path.join(WORK, "reports"),
   LINE_OUTBOX_DIR: path.join(WORK, "outbox"),
@@ -43,7 +50,7 @@ const isWin = process.platform === "win32";
 
 function run(cmd: string, args: string[]) {
   console.log(`$ ${cmd} ${args.join(" ")}`);
-  const r = spawnSync(cmd, args, { env, stdio: "inherit", shell: isWin });
+  const r = spawnSync(cmd, args, { env, stdio: "inherit", shell: isWin, timeout: 300_000 });
   if (r.status !== 0) throw new Error(`${cmd} ${args[0]} failed (${r.status})`);
 }
 
@@ -192,9 +199,10 @@ async function flow() {
 
 async function main() {
   run("npx", ["prisma", "migrate", "deploy"]);
+  await clearRateLimits(db);
   run("npx", ["tsx", "prisma/seed.ts"]);
   rmSync(WORK, { recursive: true, force: true });
-  const server = spawn("npx", ["next", "start", "-p", String(PORT)], { env, stdio: "ignore", shell: isWin });
+  const server = track(spawn("npx", ["next", "start", "-p", String(PORT)], { env, stdio: "ignore", shell: isWin }));
   try {
     await waitForServer(server);
     await flow();

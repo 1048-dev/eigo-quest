@@ -142,6 +142,6 @@ export async function sendMail(m: MailMessage, opts: { env?: Env; fetchImpl?: Fe
   if (cfg.provider === "resend") return sendResend(cfg, m, opts.fetchImpl ?? fetch);
   if (cfg.provider === "smtp") return sendSmtp(cfg, m);
   if (cfg.fallbackReason) console.warn(`[mail] ${cfg.fallbackReason} → outbox に書きます（メールは届きません）`);
-  else if (process.env.NODE_ENV === "production") console.warn("[mail] MAIL_PROVIDER が未設定のため outbox に書きます（メールは届きません）");
+  else if (process.env.NODE_ENV === "production") console.warn("[mail] 送り方が outbox のため ファイルに書きます（メールは届きません。本番では MAIL_PROVIDER=resend か smtp を設定してください）");
   return writeOutbox(cfg, m, opts.now ?? new Date());
 }

@@ -13,6 +13,10 @@
  */
 import { spawn, spawnSync, type ChildProcess } from "node:child_process";
 import { PrismaClient } from "@prisma/client";
+import { clearRateLimits, installDeadline, timeoutArg, track } from "./lib/checkKit";
+
+// run5 Phase 4: ぜんたいの時間制限（--timeout 秒。既定 600）
+installDeadline(timeoutArg(600));
 
 const arg = (name: string, d?: string) => {
   const i = process.argv.indexOf(`--${name}`);
@@ -24,13 +28,14 @@ if (!DB) {
   console.error("使い方: npx tsx scripts/auth-db-check.ts --db <テスト用 DATABASE_URL> [--port 3457]");
   process.exit(2);
 }
-const env = { ...process.env, DATABASE_URL: DB, SEED_DEMO_PARENT: "1", SKIP_DAILY_LOCK: "1", PORT: String(PORT) };
+// DIRECT_URL も同じ DB に（run5 Phase 3 から prisma migrate は DIRECT_URL を使う。.env の値のままだと ほかの DB を見てしまう）
+const env = { ...process.env, DATABASE_URL: DB, DIRECT_URL: DB, SEED_DEMO_PARENT: "1", SKIP_DAILY_LOCK: "1", PORT: String(PORT) };
 const BASE = `http://localhost:${PORT}`;
 const isWin = process.platform === "win32";
 
 function run(cmd: string, args: string[]) {
   console.log(`$ ${cmd} ${args.join(" ")}`);
-  const r = spawnSync(cmd, args, { env, stdio: "inherit", shell: isWin });
+  const r = spawnSync(cmd, args, { env, stdio: "inherit", shell: isWin, timeout: 300_000 });
   if (r.status !== 0) throw new Error(`${cmd} ${args[0]} failed (${r.status})`);
 }
 
@@ -210,9 +215,10 @@ const db = new PrismaClient({ datasourceUrl: DB });
 
 async function main() {
   run("npx", ["prisma", "migrate", "deploy"]);
+  await clearRateLimits(db);
   run("npx", ["tsx", "prisma/seed.ts"]);
   console.log(`$ next start -p ${PORT}`);
-  const server = spawn("npx", ["next", "start", "-p", String(PORT)], { env: { ...env, NODE_ENV: "production" }, stdio: ["ignore", "pipe", "inherit"], shell: isWin });
+  const server = track(spawn("npx", ["next", "start", "-p", String(PORT)], { env: { ...env, NODE_ENV: "production" }, stdio: ["ignore", "ignore", "inherit"], shell: isWin }));
   try {
     await waitForServer(server);
     await flow();

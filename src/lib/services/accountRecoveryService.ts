@@ -25,6 +25,9 @@ const PURGE_AFTER_MS = 7 * 86_400_000;
 
 export type TokenPurpose = "PASSWORD_RESET" | "EMAIL_VERIFY";
 
+/** トランザクションを 取り消すための しるし（メールアドレスが とちゅうで かわった） */
+class TokenRaceAbort extends Error {}
+
 function isUniqueViolation(e: unknown): boolean {
   return (e as { code?: string } | null)?.code === "P2002";
 }
@@ -143,12 +146,22 @@ export async function resetPassword(token: unknown, newPassword: string, now = n
   // 送ったあとで メールアドレスが かわった・アカウントが消えた → 使えない
   if (!parent?.email || parent.email !== row.email) return { ok: false, reason: "INVALID_TOKEN" };
   const passwordHash = await hashSecret(newPassword);
-  if (!(await consumeToken(row.id, now))) return { ok: false, reason: "INVALID_TOKEN" };
-  await prisma.$transaction([
-    prisma.parent.update({ where: { id: parent.id }, data: { passwordHash } }),
-    prisma.authToken.deleteMany({ where: { parentId: parent.id, purpose: "PASSWORD_RESET", id: { not: row.id } } }),
-    prisma.session.deleteMany({ where: { parentId: parent.id } }),
-  ]);
+  // run5 Phase 4: 「トークンを使う」と「パスワードを入れかえる・セッションを消す」を 1つのトランザクションに
+  // （とちゅうで失敗したとき リンクだけ使われて パスワードが かわらない・セッションが のこる ことが無いように）。
+  // パスワードを書くのは メールアドレスが まだ トークンと同じときだけ（ハッシュ計算の間に かわっていたら やめる）
+  const done = await prisma.$transaction(async (tx) => {
+    const used = await tx.authToken.updateMany({ where: { id: row.id, usedAt: null, expiresAt: { gt: now } }, data: { usedAt: now } });
+    if (used.count !== 1) return false;
+    const updated = await tx.parent.updateMany({ where: { id: parent.id, email: row.email }, data: { passwordHash } });
+    if (updated.count !== 1) throw new TokenRaceAbort();
+    await tx.authToken.deleteMany({ where: { parentId: parent.id, purpose: "PASSWORD_RESET", id: { not: row.id } } });
+    await tx.session.deleteMany({ where: { parentId: parent.id } });
+    return true;
+  }).catch((e) => {
+    if (e instanceof TokenRaceAbort) return false;
+    throw e;
+  });
+  if (!done) return { ok: false, reason: "INVALID_TOKEN" };
   return { ok: true, parentId: parent.id, email: parent.email };
 }
 

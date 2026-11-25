@@ -17,6 +17,7 @@ import { existsSync, readdirSync, readFileSync, rmSync } from "node:fs";
 import path from "node:path";
 import { PrismaClient } from "@prisma/client";
 import { createHash } from "node:crypto";
+import { clearRateLimits } from "./lib/checkKit";
 
 const arg = (name: string, d?: string) => {
   const i = process.argv.indexOf(`--${name}`);
@@ -31,7 +32,8 @@ if (!DB) {
 }
 const BASE = `http://localhost:${PORT}`;
 const OUTBOX = path.join(process.cwd(), ".data", `mail-check-${Date.now()}`);
-const env = { ...process.env, DATABASE_URL: DB, PORT: String(PORT), MAIL_PROVIDER: "outbox", MAIL_OUTBOX_DIR: OUTBOX, APP_BASE_URL: BASE };
+// DIRECT_URL も同じ DB に（run5 Phase 3 から prisma migrate は DIRECT_URL を使う。.env の値のままだと ほかの DB を見てしまう）
+const env = { ...process.env, DATABASE_URL: DB, DIRECT_URL: DB, PORT: String(PORT), MAIL_PROVIDER: "outbox", MAIL_OUTBOX_DIR: OUTBOX, APP_BASE_URL: BASE };
 const isWin = process.platform === "win32";
 
 function run(cmd: string, args: string[]) {
@@ -153,8 +155,9 @@ async function main() {
   }, TIMEOUT_SEC * 1000);
   timer.unref();
   run("npx", ["prisma", "migrate", "deploy"]);
+  await clearRateLimits(db);
   console.log(`$ next start -p ${PORT}`);
-  server = spawn("npx", ["next", "start", "-p", String(PORT)], { env: { ...env, NODE_ENV: "production" }, stdio: ["ignore", "pipe", "inherit"], shell: isWin });
+  server = spawn("npx", ["next", "start", "-p", String(PORT)], { env: { ...env, NODE_ENV: "production" }, stdio: ["ignore", "ignore", "inherit"], shell: isWin });
   try {
     await waitForServer(server);
     await flow();

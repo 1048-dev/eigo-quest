@@ -136,3 +136,55 @@
 - `npm run smoke:offline`（DB 停止 + next start + Playwright）: ぜんぶ OK（ダウンロードは DB 停止中 503・no-store・noindex のまま）。
 - `generate_worksheets.py --month --world 1 --out <プロジェクトの外>`: 修正前は ValueError で終了コード 1、修正後は 終了コード 0（86ページ）。
 - 本物の PostgreSQL での確認（`RateLimitBucket` の SQL を本物で流す）は **できませんでした**（Docker Desktop が起動していないため。Phase 1・2 と同じ）。SQL は Prisma の `migrate diff` で表の形を確認し、数え方の SQL は メモリ内の まね で動きを確認しています。本物の S3 / R2 への接続も この環境では していません（AWS の公式の署名の例とモックで確認）。
+
+## Phase 4: 全体チェック（完了）
+
+### やったこと
+- **ビルド → DB 停止で起動 → スモーク**（`npm run smoke:offline -- docs/run5/screens/p4-smoke`）: 41画面＋おためし・アカウントの流れ ぜんぶ OK。スモークに run5 の API を追加:
+  - パスワードを忘れた・再設定・メールアドレスの確定／追加・暗証番号を忘れた → 503 + offline（画面を開いたときに呼ぶ `password-reset/check`・`email/check`・`reset-pin` の状態 は 200 + offline:true。画面が「利用できません」を出す設計どおり）
+  - `/api/trial` → 200・なし、`/api/health` → 503（DB 停止）で 接続文字列・ホスト・パスが出ないこと
+  - cron（2つ）: 合い言葉なし → 401、ちがう → 401、正しい → そうじは 503 `DB_UNAVAILABLE`・LINE は 未設定なので 何もしない（`smoke-offline.ts` が 使いすての `CRON_SECRET` を サーバーと スモークの両方に渡す）
+  - スモーク全体に 15分（`SMOKE_TIMEOUT_SEC`）、smoke-offline に 20分の時間制限と 起動待ちの進みぐあい表示。
+- **本物の PostgreSQL での通し確認**: Docker Desktop は この実行でも起動の許可が得られなかったため、**Docker なしで 本物の PostgreSQL 16**（npm の `embedded-postgres` が入れる公式のバイナリ。`.tmp/pg/` に置いただけで アプリの依存には入れていない）を **ポート 5544** で動かして確認しました（docker-compose と同じ postgres 16）。10 のマイグレーションが すべて本物の DB に当たり、seed も OK。
+- **新しい通しの確認 `scripts/run5-flow-check.ts`**（`npm run check:run5-flow -- --db <テスト用URL>`。約60項目・スクリーンショット `docs/run5/screens/p4-flow/`）: ぜんぶ OK。
+  1. 2つのブラウザ（cookie も localStorage も べつ）で おためし → DB の おためし学習者が べつべつ・レッスン（A 2 / B 1）とコイン（A 31 / B 16）も べつべつ
+  2. A: 新規登録 → お子さま追加 →「ひきつぐ？」に いいえ（0のまま）→ **おうちの方ページの「おためしの きろくを ひきつぐ」ボタン** → 確認 → 引き継ぎ（レッスン1・2・コイン31）。A の おためし cookie は消え、B の おためしは そのまま。2回目は ふえない
+  3. 別の端末 C でもログイン → ログインしていないブラウザで「パスワードを忘れた方」→ **outbox のメール**（30分・リンクは APP_BASE_URL から・登録の無いアドレスには送らない・DB には SHA-256 だけ）→ リンクを開くと URL から token が消える → 再設定 → `/login?reset=1` → **A（古いセッション）も C も ログアウト**・DB のセッション 0・リンクの2回目は 400・「再設定しました」のメール（リンク・トークンなし）・古いパスワードは 401 → 新しいパスワードでログイン
+  4. 暗証番号パッドの「暗証番号を忘れた」→ まちがったパスワードでは だめ → 正しいパスワード + 新しい暗証番号 → そのまま おうちの方ページ・古い暗証番号は だめ
+  5. ワールド1のワークブックを `upload-worksheets.ts` で **`STORAGE_DRIVER=local`** の置き場所へ → `line:monthly --dry-run` → リンク → **レポートの PDF（1ページ・Producer「Eigo Quest」= Node の pdf-lib 製・約29KB・no-store・noindex）** と **ワークブックの PDF（アップロードしたものと同じ 363037 バイト）** がダウンロードできる・置き場所は `reports/<保護者ID>/<月>/<24けた>.pdf`・でたらめなリンクは 404
+  6. cron（合い言葉なし 401・ちがう 401・正しい 200。遊んだばかりの おためし学習者は消えない・LINE 未設定なら何もしない）・`/api/health` 200 で 秘密やパスが出ない・4つのブラウザで 画面のエラー／5xx なし
+- **これまでの確認スクリプトも 本物の DB で ぜんぶ OK**: `run4-flow-check`・`reset-db-check`・`carry-db-check`・`auth-db-check`・`line-db-check`・`line-monthly-db-check`。とちゅうで見つけて直したもの:
+  - **Phase 3 からの こわれ**: `prisma migrate deploy` が `DIRECT_URL` を使うようになったのに、古い確認スクリプトは `DATABASE_URL` しか渡しておらず、`.env` の `DIRECT_URL`（ふだんの DB・5432）へ migrate しようとして失敗していた → すべてのスクリプトで `DIRECT_URL` も テスト用の DB に。
+  - **レート制限が DB に残る**（Phase 3）ため、同じ テスト用の DB で確認を くりかえすと 登録が 429 になっていた → 確認スクリプトは はじめに `RateLimitBucket` を空にする（`clearRateLimits`。テスト用の DB にだけ使う）。
+  - run4 の通しの「コイン」は ほうしゅうの合計（30）と くらべていたが、DB には ログインボーナス等で 31 入る → DB の値と くらべるように（アプリの不具合ではない）。
+- **確認スクリプトの進みぐあいと時間制限**（`scripts/lib/checkKit.ts` を新設）: `run()`（コマンドごとに時間制限。既定 3分、seed などは 5分）・`startServer()`／`stopServer()`・`waitForServer()`（10秒ごとに表示・60秒で失敗）・`installDeadline()`（全体の時間制限。こえたら サーバーを止めて 終了コード 1）・`timeoutArg()`（`--timeout` 秒）。
+  - `run4-flow-check.ts`: `--timeout`（既定 900秒）・各手順の見出し・ブラウザの操作は 30秒／ページ移動は 45秒で時間切れ。
+  - `auth-db-check`・`carry-db-check`・`line-db-check`・`line-monthly-db-check`: `--timeout`（既定 600秒）と コマンドの時間制限を追加。
+  - **next start の標準出力を パイプにしたまま読んでいなかった**（`auth-db-check`・`carry-db-check`・`reset-db-check`）→ ログが たまると サーバーが止まるおそれ → 捨てる（ignore）に。
+  - テスト `tests/security-p4.test.ts` で「すべての `*-check.ts` に 全体の時間制限・spawnSync の timeout・読まないパイプなし・migrate するなら DIRECT_URL」を確認。
+
+### セキュリティの見直し（リセットトークン・メール・置き場所・cron）
+見た結果と直したもの:
+1. **パスワードの再設定が 1つのトランザクションでなかった**（直した）: 「トークンを使った しるし」を書いてから、べつのトランザクションで パスワードの入れかえ・セッションの削除をしていた。あとの方が失敗すると **リンクだけ使われて パスワードは かわらず、ほかの端末のログインも のこる**。また メールアドレスの確認は ハッシュ計算（時間がかかる）の前だけだった → 「トークンを使う・パスワードを書く（メールアドレスが まだ トークンと同じときだけ）・ほかのトークンを消す・すべてのセッションを消す」を 1つのトランザクションに。メールアドレスが とちゅうで かわっていたら 全部 取り消し。本物の DB の `reset-db-check`・`run5-flow-check` で確認。
+2. **画面の共通のセキュリティヘッダーが無かった**（直した。`next.config.ts`）: すべての画面に `X-Frame-Options: DENY` と `Content-Security-Policy: frame-ancestors 'none'`（ほかのサイトの iframe に入れて 暗証番号・パスワードの画面を クリックさせる攻撃を防ぐ）・`X-Content-Type-Options: nosniff`・`Referrer-Policy: strict-origin-when-cross-origin`。メールのリンクで開く `/reset-password`・`/verify-email` は HTTP ヘッダーでも `Referrer-Policy: no-referrer`・`X-Robots-Tag: noindex`（これまでは HTML の meta だけで、meta を読む前の読みこみには効かなかった）。
+3. **S3_ENDPOINT に http:// を書けた**（直した。`src/lib/storage/index.ts` の `isAllowedEndpoint`）: お子さまの学習レポートが 暗号化されずに流れるおそれ → **https だけ**（http は localhost / 127.0.0.1 / ::1 の 手元の MinIO だけ）。URL に ユーザー名・パスワードを入れた形も だめ（キーは専用の変数へ）。だめなときは「設定が足りない」あつかい（`/api/health` で `storage.configured: false`）。`.env.example`・DEPLOY.md に記載。
+4. メールの警告文: `MAIL_PROVIDER=outbox` を自分で えらんでいても「未設定」と出ていた → 「送り方が outbox のため メールは届きません（本番では resend か smtp を）」に。
+5. 問題なしと確認したもの:
+   - リセットトークン: 32バイトの乱数・DB には SHA-256 だけ（本物の DB で確認）・30分・1回だけ（`updateMany` の条件つき更新）・新しく送ると古いものは消える・パスワード変更／退会で消える・登録の有無で答えも時間も同じ（応答のあとに処理）・リンクの確認と使用は IP ごとに回数制限・本番で `APP_BASE_URL` が無ければ送らない（Host ヘッダーの書きかえ対策）・設定画面でパスワードを変えると ほかの端末はログアウト。
+   - メール: 文面の HTML はエスケープ・http(s) 以外のリンクは うけつけない・ログに あて先・本文・トークンを出さない（outbox はファイルの場所だけ）・Resend／SMTP は 15秒で時間切れ・エラーには 種類だけ。「心当たりのない場合は破棄」の一文あり。
+   - 置き場所: キーは 英数字と `._-/` だけ・`..` や空のセグメントは だめ（ローカルで 外に出られない・`/d/` の持ち主チェックも キーの文字列で安全）・ダウンロードは 43文字の乱数トークン・期限つき・`no-store`・`noindex`・`no-referrer`・`nosniff`・ファイル名は英数字に。S3 のエラーに キー・秘密が入らない。
+   - cron: `Authorization: Bearer <CRON_SECRET>` を ハッシュどうし 一定時間で比較・16文字未満なら 何もしない（503）・`?month=` は形を確認。`/api/health` は true/false と送り方の名前だけ（本物の DB で 合い言葉・パス・ポートが出ないことを確認）。
+   - 気になるが 今回は そのまま（記録だけ）: outbox は トークンつきのメールを サーバーのファイルに書く（開発用。本番で resend／smtp を設定しないと届かないことは DEPLOY.md・health の `mail.deliverable` で わかる）。`/api/health` は LINE・メール・cron が設定ずみかを 公開で答える（死活監視のため。秘密は出さない）。メールアドレスの追加の確認リンクは ログインしていなくても「確定」できる（そのアドレスに届いたメールを開ける人＝本人、という前提。心当たりのない人には「破棄してください」）。
+
+### 決めたこと（理由）
+- Docker の かわりに `embedded-postgres`（PostgreSQL 16 の公式バイナリを npm で配っているもの）を `.tmp/pg/` にだけ入れた: Docker Desktop を起動する許可が無く、本物の PostgreSQL で SQL（`INSERT ... ON CONFLICT`・トランザクション・ユニーク制約）を確かめることが このフェーズの目的だったため。アプリの `package.json` には入れていない（`.tmp/` は git に入らない）。
+- 「2つのブラウザ」は Playwright の べつべつの コンテキスト（cookie・localStorage が完全に べつ）で確かめた（firefox の取得は不要と判断）。
+- 確認スクリプトが はじめに レート制限の表を空にするのは テスト用の DB だから（README にも「使い捨ての DB を指定すること」とある）。アプリ側の動き（回数は DB に残る）は 正しいので かえない。
+- `/reset-password` の `Cache-Control` は 指定しない: Next.js は本番で 静的なページの Cache-Control を上書きするうえ、HTML には トークンが入らない（画面がすぐ URL から消す）ため。
+- run4 の スクリーンショット（`docs/run4/screens/p4-flow/`）は 確認のときに上書きされたが、run4 の記録として 元にもどした。
+
+### 確認
+- `npx tsc --noEmit`（本体・scripts）OK、`npx vitest run` 41ファイル 1010件 OK（新しく `tests/security-p4.test.ts` 20件）、`npx next build` OK。
+- `npm run smoke:offline`（DB 停止 + next start + Playwright）: ぜんぶ OK。
+- 本物の PostgreSQL 16（ポート 5544）: `run5-flow-check`・`run4-flow-check`・`reset-db-check`・`carry-db-check`・`auth-db-check`・`line-db-check`・`line-monthly-db-check` すべて OK。
+- 本物の S3 / R2・本物のメール送信（Resend / SMTP）・本物の LINE への接続は この環境では していません（キーが無いため。dry-run・outbox・モックで確認）。

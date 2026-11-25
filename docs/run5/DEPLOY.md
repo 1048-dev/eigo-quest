@@ -345,7 +345,7 @@ Vercel 以外で動かすときは、cron-job.org や GitHub Actions などか�
 |---|---|
 | ビルドで `prisma migrate deploy` が失敗 | `DIRECT_URL` がプールの URL になっていないか（Neon は `-pooler` なし、Supabase は 5432）。パスワードの記号は URL エンコード（`@` → `%40` など） |
 | アプリが「おためしモード」になる・`db.reachable: false` | `DATABASE_URL` の値・`?sslmode=require`・DB が一時停止していないか（Neon の無料プランは しばらく使わないと止まり、最初の接続に数秒かかります） |
-| `storage.reachable: false` | `S3_ENDPOINT`・`S3_REGION`・鍵の権限（Read & Write）・バケット名 |
+| `storage.reachable: false` / `storage.configured: false` | `S3_ENDPOINT`（**https:// だけ**。http は手元の localhost だけ。URL にキーを入れない）・`S3_REGION`・鍵の権限（Read & Write）・バケット名 |
 | LINE で届いたレポートに ワークブックが無い | 手順3のアップロードが済んでいるか（Vercel の Logs に「ワークブックが置き場所にありません」） |
 | Cron Jobs が 401 | `CRON_SECRET` を入れたあと Redeploy したか |
 | Cron Jobs が 503 `CRON_NOT_CONFIGURED` | `CRON_SECRET` が空か 16文字未満 |
