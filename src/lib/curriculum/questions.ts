@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W37_START, adverbDisplay, adverbOf, adverbWhy, simileDisplay, simileOf, simileWhy, soundWordDisplay, soundWordOf, soundWordWhy, storyVerbDisplay, storyVerbOf, storyVerbWhy, suspenseDisplay, suspenseOf, suspenseWhy } from "./w37Phonics";
 import { W36_START, academicDisplay, academicOf, academicWhy, bioDisplay, bioOf, bioWhy, ologyDisplay, ologyOf, ologyWhy, pauseDisplay, pauseOf, pauseWhy,unitDisplay, unitOf, unitWhy } from "./w36Phonics";
 import { W35_START, contrastDisplay, contrastOf, contrastWhy, formalDisplay, formalOf, formalWhy, interCoDisplay, interCoOf, interCoWhy, ityDisplay, ityOf, ityWhy, rootDisplay, rootOf, rootWhy } from "./w35Phonics";
 import { W34_START, doubleDisplay, doubleOf, doubleWhy, izeDisplay, izeOf, izeWhy, travelNumberDisplay, travelNumberOf, travelNumberWhy, ukUsDisplay, ukUsOf, ukUsPrompt, ukUsWhy, visDisplay, visOf, visWhy } from "./w34Phonics";
@@ -583,6 +584,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド37（おとぎの迷宮・L1081〜）の フォニックス（物語の 動詞・音の ことば・語りの 間・-ly の 副詞・たとえ）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - 物語の 動詞（"whisper"）: 「物語の ことば。ふつうの いいかたを ようすが 見える ことばに すると？」（say very quietly, using only your breath → ＿＿ → whisper / grin / stumble）
+ * - 音の ことば（"splash"）: 「音の ことば。この 場面の 音は どれ？」（The frog jumped into the pond. ＿＿! → splash / creak / hiss）
+ * - 語りの 間（"She opened the box, and inside was a tiny dragon"）: 「お話を 語る ときの 間。どきどき させる 間（…）を とるのは どの ことばの あと？」（was / She / tiny）
+ * - -ly（"silently"）: 「どんな ふうに？ ＿＿ に あう -ly の ことばは どれ？」（英語の 文 → silently / proudly / eagerly）
+ * - たとえ（"as brave as a lion"）: 「たとえ（as ～ as・like）。＿＿ に 入る ことばは どれ？」（as brave as a ＿＿ → lion / mouse / snail）
+ * あてはまらなければ null。ワールド36 の 問題より 先に よぶ。
+ */
+export function w37Question(item: LearningItemDef, rng: () => number): (Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> & { audioText?: string }) | null {
+  if (item.lessonNo < W37_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const v = storyVerbOf(item.text);
+  if (v && focus.includes(v.word)) return { promptJa: "物語の ことば。ふつうの いいかたを ようすが 見える ことばに すると？", display: storyVerbDisplay(v), choices: pick([v.answer, ...v.wrong]), answer: v.answer, explanationJa: storyVerbWhy(v) };
+  const so = soundWordOf(item.text);
+  if (so && focus.includes(so.word)) return { promptJa: "音の ことば。この 場面の 音は どれ？", display: soundWordDisplay(so), choices: pick([so.answer, ...so.wrong]), answer: so.answer, explanationJa: soundWordWhy(so) };
+  const p = suspenseOf(item.text);
+  if (p && focus.includes(p.pause.toLowerCase())) return { promptJa: "お話を 語る ときの 間。どきどき させる 間（…）を とるのは どの ことばの あと？", display: suspenseDisplay(p), choices: pick([p.answer, ...p.wrong]), answer: p.answer, explanationJa: suspenseWhy(p) };
+  const a = adverbOf(item.text);
+  if (a && focus.includes("-ly")) return { promptJa: "どんな ふうに？ ＿＿ に あう -ly の ことばは どれ？", display: adverbDisplay(a), choices: pick([a.answer, ...a.wrong]), answer: a.answer, explanationJa: adverbWhy(a) };
+  const m = simileOf(item.text);
+  if (m && focus.includes(m.kind)) return { promptJa: "たとえ（as ～ as・like）。＿＿ に 入る ことばは どれ？", display: simileDisplay(m), choices: pick([m.answer, ...m.wrong]), answer: m.answer, explanationJa: simileWhy(m) };
   return null;
 }
 
@@ -1446,8 +1476,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド33（rupt・-ance / -ence / -ency / -ty・-proof・リストの 読みかた・ject）は その 先（eruption を ワールド23 の -tion、safety を まえの ワールドで 問わない）
       // ワールド34（空港の 数字・vis・2つ ならぶ 文字・-ize・イギリスと アメリカの 英語）は その 先（vacation を ワールド17 の -tion、vis の ことばを まえの ワールドで 問わない）
       // ワールド35（-ity・inter- と co-・対比の 強勢・あらたまった ことば・語根の まとめ）は その 先（interrupt を ワールド33 の rupt、respect を ワールド29 の spect の 問いで 問わない）
-      // ワールド36（bio・学習語彙の 強勢・発表の 区切り・-ology・数と たんい）は いちばん 先（biology を ワールド23 の 強勢、-2°C を まえの ワールドで 問わない）
-      const dq = w36Question(item, rng) ?? w35Question(item, rng) ?? w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド36（bio・学習語彙の 強勢・発表の 区切り・-ology・数と たんい）は その 先（biology を ワールド23 の 強勢、-2°C を まえの ワールドで 問わない）
+      // ワールド37（物語の 動詞・音の ことば・語りの 間・-ly・たとえ）は いちばん 先（bravely を ワールド18 の -ly、crash を ワールド4 の cr で 問わない）
+      const dq = w37Question(item, rng) ?? w36Question(item, rng) ?? w35Question(item, rng) ?? w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

@@ -28,6 +28,7 @@ import { w33Say } from "./w33Phonics";
 import { w34Say } from "./w34Phonics";
 import { w35Say } from "./w35Phonics";
 import { w36Say } from "./w36Phonics";
+import { w37Say } from "./w37Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -88,6 +89,9 @@ export const shortVowelOf = (team: string) => team[0];
  * ow と oo は その回の ことばで おとを きめる（cow の回は "ow"、snow の回は "oh"。book だけの回は ことばを そのまま よむ）。
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
+  // ワールド37 は その回の ことば・文・たとえで よむ（"-ly" "as" だけで よまない。語りの 間は 文を よむ）
+  const w37 = w37Say(focus, words);
+  if (w37) return w37;
   // ワールド36 は その回の ことば・文で よむ（"bio" "-ology" だけで よまない。区切りは 文、数は 英語の 読みかた: -2°C → minus two degrees）
   const w36 = w36Say(focus, words);
   if (w36) return w36;

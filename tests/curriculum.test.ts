@@ -42,6 +42,7 @@ import { jectOf, listOf, nounEndOf, proofOf, ruptOf, w33FocusOf } from "@/lib/cu
 import { doubleOf, izeOf, travelNumberOf, ukUsOf, visOf, w34FocusOf } from "@/lib/curriculum/w34Phonics";
 import { contrastOf, formalOf, interCoOf, ityOf, rootOf, w35FocusOf } from "@/lib/curriculum/w35Phonics";
 import { academicOf, bioOf, ologyOf, pauseOf, unitOf, w36FocusOf } from "@/lib/curriculum/w36Phonics";
+import { adverbOf, simileOf, soundWordOf, storyVerbOf, suspenseOf, w37FocusOf } from "@/lib/curriculum/w37Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -4145,5 +4146,156 @@ describe("カリキュラム: ワールド36 の決まりごと（しんかい�
     for (const n of [1055, 1060, 1065, 1070, 1075, 1080]) expect(story(n), `L${n}`).toMatch(/\bpearl\b/i);
     expect(story(1079)).toMatch(/\bdoor\b/i);
     expect(story(1080)).toMatch(/\bdoor\b/i);
+  });
+});
+
+describe("カリキュラム: ワールド37 の決まりごと（おとぎの迷宮）", () => {
+  const w37 = LESSONS.filter((l) => l.world === 37);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (storyVerbOf(w) ? "verb" : soundWordOf(w) ? "sound" : suspenseOf(w) ? "suspense" : adverbOf(w) ? "ly" : simileOf(w) ? "simile" : "?");
+
+  it("ワールド37 は 1081〜1110 の 30 レッスン、ステージ5・B1+、学年の めやすは 高校中級", () => {
+    if (w37.length === 0) return; // 未作成ならスキップ
+    expect(w37.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 1081 + i));
+    for (const l of w37) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校中級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(5);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1+");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w37.length === 0) return;
+    const titles = ["The Labyrinth of Tales", "The Clever Rabbit", "Why the Moon Changes", "Tales from Many Lands", "What's the Lesson?",
+      "Setting, Characters, Problem", "Show, Don't Tell", "As Brave as a Lion", "Crash! Splash! Creak!", "Story Lab",
+      "If I Were a Dragon", "I Wish I Could…", "What Would You Do?", "She Had Never Seen the Sea", "Three Wishes",
+      "Planning My Story", "A Strong Beginning", "The Turning Point", "A Satisfying Ending", "Lesson 1100 Story Party",
+      "Telling a Story Aloud", "Talking to the Audience", "Feedback for Friends", "Rewrite and Improve", "Storytelling Night",
+      "Reading a Longer Tale", "Same Story, Different Hero", "My Final Story", "Labyrinth of Tales Review", "World 37 Grand Review"];
+    expect(w37.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: 物語の 動詞 → 音の ことば → 語りの 間 → -ly の 副詞 → たとえ（各ブロックの 5回目と L1106〜1110 は ふりかえり）", () => {
+    if (w37.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(1081, 1084, "story-verbs");
+    rule(1086, 1089, "sound-words");
+    rule(1091, 1094, "suspense-pause");
+    rule(1096, 1099, "adverb-ly");
+    rule(1101, 1104, "simile");
+    for (const n of [1085, 1090, 1095, 1100, 1105, 1106, 1107, 1108, 1109, 1110]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド37 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w37) {
+      for (const w of l.phonics.words) {
+        const f = w37FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w37FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w37.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["whisper", "glimmer", "tremble", "crash", "splash", "creak", "suddenly", "carefully", "bravely", "as brave as a lion", "like a shooting star"]));
+    // たとえは as と like の 両方
+    expect(new Set(range(1101, 1104).flatMap((l) => l.phonics.words).map((w) => simileOf(w)!.kind))).toEqual(new Set(["as", "like"]));
+    // ふりかえり L1106〜1110 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(1106, 1110)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["verb", "sound", "suspense", "ly", "simile"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w37.length === 0) return;
+    const want: Record<number, string> = {
+      1081: "Every path in this maze tells a story.", 1082: "The rabbit tricked the tiger with a smart idea.", 1083: "Long ago, people told stories to explain the moon.",
+      1084: "Many countries have stories about brave children.", 1086: "The story takes place in a frozen kingdom.", 1088: "He was as brave as a lion.",
+      1089: "Creak! The old door slowly opened.", 1090: "The forest was so quiet that she could hear her heartbeat.", 1091: "If I were a dragon, I would fly over the ocean.",
+      1092: "I wish I could talk to animals.", 1093: "What would you do if you found a magic key?", 1094: "She had never seen the sea before.",
+      1096: "My hero is a girl who can talk to the wind.", 1098: "Just then, she heard a voice behind her.", 1099: "In the end, the wind carried her home.",
+      1100: "Let's share our story ideas!", 1102: "Can you guess what happened next?", 1107: "What if the story were told by the wolf?",
+      1110: "Every one of us has a story to tell.",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(1085)).toMatch(/^The lesson of this story is/);
+    expect(core(1087)).toMatch(/^Her hands were shaking/);
+    expect(core(1095)).toMatch(/^If I had three wishes, I would /);
+    expect(core(1097)).toMatch(/^On the coldest night of the year, /);
+    expect(core(1101)).toMatch(/^Pause\. Lower your voice\. Then/);
+    expect(core(1103)).toMatch(/^I loved the part where .*\. Maybe you could /);
+    expect(core(1104)).toMatch(/^I changed 'said' to 'whispered/);
+    expect(core(1105)).toMatch(/^Once, in a land beyond the clouds, /);
+    expect(core(1106)).toMatch(/^Read the tale\. Why did the king change his mind\?/);
+    expect(core(1108)).toMatch(/The Girl Who Talked to the Wind/);
+    expect(core(1109)).toMatch(/^If I were .*, I would .* as \w+ as /);
+  });
+
+  it("文法の じゅんばん: as ～ as は L1088、so ～ that は L1090、If I were は L1091、I wish I could は L1092、What would you do if は L1093、had never は L1094、If I had は L1095、Just then は L1098、In the end は L1099、What if は L1107 から", () => {
+    if (w37.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bas (?!well\b|soon\b|long\b|much\b|many\b|far\b|good\b|usual\b)[a-z]+ as (a|an|the)\b/i, 1088],
+      [/\bso (?!that\b)[a-z]+ that\b/i, 1090],
+      [/\bif (i|you|he|she|it|we|they) were\b/i, 1091],
+      [/\bi wish i could\b/i, 1092],
+      [/\bwhat would you do if\b/i, 1093],
+      [/\bhad never\b/i, 1094],
+      [/\bif i had\b/i, 1095],
+      [/\bjust then\b/i, 1098],
+      [/\bin the end\b/i, 1099],
+      [/\bwhat if\b/i, 1107],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(1081, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ5: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・320 語 以上で 95 語 以上の 読みものを ふくむ、会話シーンは 7〜9 行（ブロックの まとめは 10 行まで）、AI 会話は 6 かい いじょう、L1110 は スピード TPR", () => {
+    if (w37.length === 0) return;
+    const ends = [1085, 1090, 1095, 1100, 1105, 1110];
+    for (const l of w37) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z0-9']/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(320);
+      const reading = (s.match(/"([^"]+)"/) ?? ["", ""])[1];
+      expect(reading.split(/\s+/).filter(Boolean).length, `L${l.lessonNo} の 読みもの`).toBeGreaterThanOrEqual(95);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(7);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(ends.includes(l.lessonNo) ? 10 : 9);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+      expect(l.conversation!.aiTask.goalJa, `L${l.lessonNo}`).toMatch(/6 ?かい/);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（Show, don't tell・had never seen）
+    expect(w37.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([1087, 1094]);
+    expect(at(1110)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。であい・物語の 計画・さいごの 物語の 回は ほんとうの なまえや じゅうしょを いわなくて よいと goalJa に 明記。こわい ことばを つかわない", () => {
+    if (w37.length === 0) return;
+    for (const l of w37) {
+      expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (real |full )?(name|address|school|age|birthday|phone|email|passport number)|where do you live|how old are you|when were you born/i);
+      expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(kill|killed|blood|dead|die|died|gun|knife)\b/i);
+    }
+    for (const n of [1081, 1096, 1108]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+  });
+
+  it("物語: L1081 で 物語の 迷宮・ニブ・物語の 本 → L1091 サフラン → L1101 ウィラおばあさん → 6まいの 金の ページ → L1109 みどりの 高原 → L1110", () => {
+    if (w37.length === 0) return;
+    const story = (n: number) => at(n)!.teacherScript + " " + said(n);
+    expect(story(1081)).toMatch(/Labyrinth of Tales/);
+    expect(story(1081)).toMatch(/\bNib\b/);
+    expect(story(1081)).toMatch(/Storybook/);
+    expect(story(1091)).toMatch(/Saffron/);
+    expect(story(1101)).toMatch(/Willa/);
+    for (const n of [1085, 1090, 1095, 1100, 1105, 1110]) expect(story(n), `L${n}`).toMatch(/\bgolden page\b/i);
+    expect(story(1109)).toMatch(/\bhills?\b/i);
+    expect(story(1110)).toMatch(/\bhills?\b|Highlands/i);
   });
 });
