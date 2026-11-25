@@ -9,7 +9,7 @@
     "miniTestEvery": 5,
     "note": "6年カリキュラム（docs/curriculum-6year.md）。ワールド1〜12（L1〜360）= ステージ1、13〜40 = ステージ2〜5。レッスンは worlds/world-NN.json に ワールドごとに 分けて置く。教科書の本文・イラストは転載せず、テーマと表現の型だけを合わせたオリジナル文。"
   },
-  "totalLessons": 1110,
+  "totalLessons": 1140,
   "worlds": [
     {
       "world": 1,
@@ -342,6 +342,15 @@
       "level": "B1+",
       "firstLesson": 1081,
       "lastLesson": 1110,
+      "lessonCount": 30
+    },
+    {
+      "world": 38,
+      "file": "world-38.json",
+      "stage": 5,
+      "level": "B1+",
+      "firstLesson": 1111,
+      "lastLesson": 1140,
       "lessonCount": 30
     }
   ]

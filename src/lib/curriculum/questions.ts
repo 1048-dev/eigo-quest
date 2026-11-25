@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W38_START, characterDisplay, characterOf, characterWhy, feelingSpellDisplay, feelingSpellOf, feelingSpellWhy, idiomDisplay, idiomOf, idiomWhy, phrasalDisplay, phrasalOf, phrasalWhy, toneDisplay, toneOf, toneWhy } from "./w38Phonics";
 import { W37_START, adverbDisplay, adverbOf, adverbWhy, simileDisplay, simileOf, simileWhy, soundWordDisplay, soundWordOf, soundWordWhy, storyVerbDisplay, storyVerbOf, storyVerbWhy, suspenseDisplay, suspenseOf, suspenseWhy } from "./w37Phonics";
 import { W36_START, academicDisplay, academicOf, academicWhy, bioDisplay, bioOf, bioWhy, ologyDisplay, ologyOf, ologyWhy, pauseDisplay, pauseOf, pauseWhy,unitDisplay, unitOf, unitWhy } from "./w36Phonics";
 import { W35_START, contrastDisplay, contrastOf, contrastWhy, formalDisplay, formalOf, formalWhy, interCoDisplay, interCoOf, interCoWhy, ityDisplay, ityOf, ityWhy, rootDisplay, rootOf, rootWhy } from "./w35Phonics";
@@ -584,6 +585,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド38（こころの高原・L1111〜）の フォニックス（気持ちの ことばの つづり・句動詞・共感の イントネーション・慣用句・性格の ことば）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - つづり（"embarrassed"）: 「気持ちの ことばの つづり。ただしい つづりは どれ？」（I fell in front of everyone. I was so ＿＿. → embarrassed / embarassed / embarrased）
+ * - 句動詞（"cheer up"）: 「気持ちの 句動詞。＿＿ に 入る ことばは どれ？」（Cheer ＿＿! You'll do better next time. → up / down / off）
+ * - イントネーション（"Oh no"）: 「共感の イントネーション。この 返事は どんな 声で いう？」（↘ ひくく・ゆっくり・やさしく など）
+ * - 慣用句（"over the moon"）: 「気持ちの 慣用句。＿＿ に 入る ことばは どれ？」（I'm over the ＿＿! → moon / sun / rain）
+ * - 性格の ことば（"helpful"）: 「性格の ことば。＿＿ に 入る おわりは どれ？」（help＿＿ → -ful / -ive / -ous）
+ * あてはまらなければ null。ワールド37 の 問題より 先に よぶ。
+ */
+export function w38Question(item: LearningItemDef, rng: () => number): (Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> & { audioText?: string }) | null {
+  if (item.lessonNo < W38_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const f = feelingSpellOf(item.text);
+  if (f && focus.includes(f.word)) return { promptJa: "気持ちの ことばの つづり。ただしい つづりは どれ？", display: feelingSpellDisplay(f), choices: pick([f.answer, ...f.wrong]), answer: f.answer, explanationJa: feelingSpellWhy(f) };
+  const p = phrasalOf(item.text);
+  if (p && focus.includes(p.phrase)) return { promptJa: "気持ちの 句動詞。＿＿ に 入る ことばは どれ？", display: phrasalDisplay(p), choices: pick([p.answer, ...p.wrong]), answer: p.answer, explanationJa: phrasalWhy(p) };
+  const t = toneOf(item.text);
+  if (t && focus.includes(t.phrase.toLowerCase())) return { promptJa: "共感の イントネーション。この 返事は どんな 声で いう？", display: toneDisplay(t), choices: pick([t.answer, ...t.wrong]), answer: t.answer, explanationJa: toneWhy(t) };
+  const i = idiomOf(item.text);
+  if (i && focus.includes(i.key)) return { promptJa: "気持ちの 慣用句。＿＿ に 入る ことばは どれ？", display: idiomDisplay(i), choices: pick([i.answer, ...i.wrong]), answer: i.answer, explanationJa: idiomWhy(i) };
+  const c = characterOf(item.text);
+  if (c && focus.includes(c.suffix)) return { promptJa: "性格の ことば。＿＿ に 入る おわりは どれ？", display: characterDisplay(c), choices: pick([c.answer, ...c.wrong]), answer: c.answer, explanationJa: characterWhy(c) };
   return null;
 }
 
@@ -1477,8 +1507,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド34（空港の 数字・vis・2つ ならぶ 文字・-ize・イギリスと アメリカの 英語）は その 先（vacation を ワールド17 の -tion、vis の ことばを まえの ワールドで 問わない）
       // ワールド35（-ity・inter- と co-・対比の 強勢・あらたまった ことば・語根の まとめ）は その 先（interrupt を ワールド33 の rupt、respect を ワールド29 の spect の 問いで 問わない）
       // ワールド36（bio・学習語彙の 強勢・発表の 区切り・-ology・数と たんい）は その 先（biology を ワールド23 の 強勢、-2°C を まえの ワールドで 問わない）
-      // ワールド37（物語の 動詞・音の ことば・語りの 間・-ly・たとえ）は いちばん 先（bravely を ワールド18 の -ly、crash を ワールド4 の cr で 問わない）
-      const dq = w37Question(item, rng) ?? w36Question(item, rng) ?? w35Question(item, rng) ?? w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド37（物語の 動詞・音の ことば・語りの 間・-ly・たとえ）は その 先（bravely を ワールド18 の -ly、crash を ワールド4 の cr で 問わない）
+      // ワールド38（気持ちの つづり・句動詞・共感の イントネーション・慣用句・性格の ことば）は いちばん 先（helpful を まえの ワールドの -ful、cheer up を 音の つながりで 問わない）
+      const dq = w38Question(item, rng) ?? w37Question(item, rng) ?? w36Question(item, rng) ?? w35Question(item, rng) ?? w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

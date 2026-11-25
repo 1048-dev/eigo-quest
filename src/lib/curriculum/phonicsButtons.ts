@@ -18,6 +18,7 @@ import { w34Example } from "./w34Phonics";
 import { w35Example } from "./w35Phonics";
 import { w36Example } from "./w36Phonics";
 import { w37Example } from "./w37Phonics";
+import { w38Example } from "./w38Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -62,6 +63,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   const ws = words.map((w) => w.trim()).filter(Boolean);
   const lower = (w: string) => w.toLowerCase();
 
+  // ワールド38（気持ちの つづり・句動詞・共感の イントネーション・慣用句・性格の ことば）は その focus で 問う ことば・句動詞・返事・慣用句を よむ
+  const w38 = w38Example(focus.trim(), ws);
+  if (w38) return w38;
   // ワールド37（物語の 動詞・音の ことば・語りの 間・-ly・たとえ）は その focus で 問う ことば・文・たとえを よむ
   const w37 = w37Example(focus.trim(), ws);
   if (w37) return w37;

@@ -43,6 +43,7 @@ import { doubleOf, izeOf, travelNumberOf, ukUsOf, visOf, w34FocusOf } from "@/li
 import { contrastOf, formalOf, interCoOf, ityOf, rootOf, w35FocusOf } from "@/lib/curriculum/w35Phonics";
 import { academicOf, bioOf, ologyOf, pauseOf, unitOf, w36FocusOf } from "@/lib/curriculum/w36Phonics";
 import { adverbOf, simileOf, soundWordOf, storyVerbOf, suspenseOf, w37FocusOf } from "@/lib/curriculum/w37Phonics";
+import { characterOf, feelingSpellOf, idiomOf, phrasalOf, toneOf, w38FocusOf } from "@/lib/curriculum/w38Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -4297,5 +4298,156 @@ describe("カリキュラム: ワールド37 の決まりごと（おとぎの�
     for (const n of [1085, 1090, 1095, 1100, 1105, 1110]) expect(story(n), `L${n}`).toMatch(/\bgolden page\b/i);
     expect(story(1109)).toMatch(/\bhills?\b/i);
     expect(story(1110)).toMatch(/\bhills?\b|Highlands/i);
+  });
+});
+
+describe("カリキュラム: ワールド38 の決まりごと（こころの高原）", () => {
+  const w38 = LESSONS.filter((l) => l.world === 38);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (feelingSpellOf(w) ? "spell" : phrasalOf(w) ? "phrasal" : toneOf(w) ? "tone" : idiomOf(w) ? "idiom" : characterOf(w) ? "character" : "?");
+
+  it("ワールド38 は 1111〜1140 の 30 レッスン、ステージ5・B1+、学年の めやすは 高校中級", () => {
+    if (w38.length === 0) return; // 未作成ならスキップ
+    expect(w38.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 1111 + i));
+    for (const l of w38) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校中級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(5);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1+");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w38.length === 0) return;
+    const titles = ["The Highlands of the Heart", 'Not Just "Happy"', "Annoyed or Angry?", "Relieved and Embarrassed", "Feelings Weather Report",
+      "That Must Be Hard", "I Know How You Feel", "Just Listening", "Cheer Up!", "Good Listener Role-Play",
+      "We Had a Fight", "I Didn't Mean to Hurt You", "I Should Have Listened", "Let's Make Up", "Conflict Solving Steps",
+      "Wouldn't It Be Better If…?", "Trust Me", "Persuade with Reasons", "Saying No Politely", "Persuasion Challenge",
+      "Someone I Look Up To", "Deep Interview Questions", "Interview a Grandparent", "Writing an Interview Article", "Interview Show",
+      "Idioms of the Heart", "A Letter to a Friend", "Kindness Chain", "Highlands of the Heart Review", "World 38 Grand Review"];
+    expect(w38.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: 気持ちの つづり → 句動詞 → 共感の イントネーション → 慣用句 → 性格の ことば（各ブロックの 5回目と L1136〜1140 は ふりかえり）", () => {
+    if (w38.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(1111, 1114, "feeling-spelling");
+    rule(1116, 1119, "phrasal-verbs");
+    rule(1121, 1124, "empathy-tone");
+    rule(1126, 1129, "idioms");
+    rule(1131, 1134, "character-suffix");
+    for (const n of [1115, 1120, 1125, 1130, 1135, 1136, 1137, 1138, 1139, 1140]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド38 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w38) {
+      for (const w of l.phonics.words) {
+        const f = w38FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w38FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w38.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["embarrassed", "frustrated", "calm down", "cheer up", "make up", "Oh no", "That's great", "over the moon", "feel blue", "a piece of cake"]));
+    // イントネーションは 3 しゅるい（↘・↗↘・↗）、性格の ことばは -ful・-ive・-ous の 3 つ
+    expect(new Set(range(1121, 1124).flatMap((l) => l.phonics.words).map((w) => toneOf(w)!.kind))).toEqual(new Set(["sad", "happy", "ask"]));
+    for (const l of range(1131, 1134)) expect(l.phonics.focus, `L${l.lessonNo}`).toEqual(["-ful", "-ive", "-ous"]);
+    // ふりかえり L1136〜1140 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(1136, 1140)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["spell", "phrasal", "tone", "idiom", "character"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w38.length === 0) return;
+    const want: Record<number, string> = {
+      1111: "The weather here changes with your feelings.", 1112: "I'm not just happy. I'm over the moon!", 1113: "I'm a little annoyed, not angry.",
+      1114: "I was so embarrassed, but then I felt relieved.", 1115: "Today, my feelings are cloudy with some sunshine.", 1116: "That must be hard. I'm sorry to hear that.",
+      1117: "I know how you feel. I had the same problem.", 1118: "Do you want advice, or do you just want me to listen?", 1119: "Cheer up! You'll do better next time.",
+      1120: "Tell me what happened.", 1121: "Haru and Riko had a fight about the map.", 1122: "I'm sorry. I didn't mean to hurt you.", 1123: "I should have listened to you.",
+      1125: "Calm down. Listen. Say how you feel. Find a solution.", 1126: "Wouldn't it be better if we left early?", 1127: "Trust me. It'll be worth it.",
+      1128: "If we do this, everyone will benefit.", 1129: "Thanks for asking, but I'd rather not.", 1130: "Let me tell you why this is a great idea.",
+      1131: "I look up to my aunt because she's so patient.", 1132: "How did you feel at that moment?", 1133: "What was your childhood like?",
+      1136: "Learning English is a piece of cake now? Not yet!", 1137: "I wanted to tell you how much you mean to me.", 1138: "One kind word can change someone's day.",
+      1140: "Words can heal hearts.",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(1124)).toMatch(/^Let's make up\. Friends\?/);
+    expect(core(1134)).toMatch(/^'I never gave up,' she told me/);
+    expect(core(1135)).toMatch(/^Our guest today is /);
+    expect(core(1139)).toMatch(/That must be hard.*I should have /);
+  });
+
+  it("文法の じゅんばん: must be は L1116、I know how you feel は L1117、didn't mean to は L1122、should have / could have は L1123、Wouldn't it be better if は L1126、I'd rather not は L1129 から", () => {
+    if (w38.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\b(that|it) must be\b/i, 1116],
+      [/\bi know how you feel\b/i, 1117],
+      [/\bdidn't mean to\b/i, 1122],
+      [/\bshould have\b/i, 1123],
+      [/\bcould have\b/i, 1123],
+      [/\bwouldn't it be better if\b/i, 1126],
+      [/\bi'd rather not\b/i, 1129],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(1111, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ5: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・330 語 以上で 100 語 以上の 読みものを ふくむ、会話シーンは 7〜9 行（ブロックの まとめは 10 行まで）、AI 会話は 6 かい いじょう、L1140 は スピード TPR", () => {
+    if (w38.length === 0) return;
+    const ends = [1115, 1120, 1125, 1130, 1135, 1140];
+    for (const l of w38) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z0-9']/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(330);
+      const reading = (s.match(/"([^"]+)"/) ?? ["", ""])[1];
+      expect(reading.split(/\s+/).filter(Boolean).length, `L${l.lessonNo} の 読みもの`).toBeGreaterThanOrEqual(100);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(7);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(ends.includes(l.lessonNo) ? 10 : 9);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+      expect(l.conversation!.aiTask.goalJa, `L${l.lessonNo}`).toMatch(/6 ?かい/);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（embarrassed・a piece of cake）
+    expect(w38.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([1114, 1136]);
+    expect(at(1140)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("こころの あんぜん: AI 会話で 個人情報を きかない。きずつける ことばを つかわない。であい・あこがれの 人・インタビュー・手紙の 回は ほんとうの なまえを いわなくて よい、聞き上手の 回は つらい ことは おうちの 人や 先生に と goalJa に 明記", () => {
+    if (w38.length === 0) return;
+    for (const l of w38) {
+      expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (real |full )?(name|address|school|age|birthday|phone|email|passport number)|where do you live|how old are you|when were you born/i);
+      expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(kill|killed|blood|dead|die|died|death|gun|knife|hate|hated|stupid|idiot|dumb|ugly|loser|shut up)\b/i);
+    }
+    for (const n of [1111, 1131, 1133, 1137]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+    for (const n of [1116, 1118, 1120]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/おうちの 人/);
+  });
+
+  it("物語: L1111 で 高原・パフ・ローワンおばあさん・色の きえた にじ → 6 つの まとめで にじに 色が もどる（赤・オレンジ・黄・みどり・青・むらさき）→ L1128 ブラムさんと ベンチ → L1140 円卓", () => {
+    if (w38.length === 0) return;
+    const story = (n: number) => at(n)!.teacherScript + " " + said(n);
+    expect(story(1111)).toMatch(/Highlands of the Heart/);
+    expect(story(1111)).toMatch(/\bPuff\b/);
+    expect(story(1111)).toMatch(/\bRowan\b/);
+    expect(story(1111)).toMatch(/\brainbow\b/i);
+    expect(story(1121)).toMatch(/\bmap\b/i);
+    expect(story(1128)).toMatch(/\bBram\b/);
+    expect(story(1128)).toMatch(/\bbench\b/i);
+    expect(story(1133)).toMatch(/\bRowan\b/);
+    const colors: Record<number, string> = { 1115: "red", 1120: "orange", 1125: "yellow", 1130: "green", 1135: "blue", 1140: "purple" };
+    for (const [n, c] of Object.entries(colors)) {
+      expect(story(Number(n)), `L${n}`).toMatch(/\brainbow\b/i);
+      expect(story(Number(n)), `L${n}`).toMatch(new RegExp(`\\b${c}\\b`, "i"));
+    }
+    expect(story(1140)).toMatch(/round table/i);
   });
 });
