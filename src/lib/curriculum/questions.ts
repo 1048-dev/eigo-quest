@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { ENDING_WHY, OR_FOCUS_OF, OR_WHY, W17_CONTRACTION_FOCUS, W17_ENDING_FOCUS, W17_HOMOPHONE_RULE, W17_OR_FOCUS, W17_START, endingSpelling, homophoneOf, homophoneWhy, orSpelling, willContraction, willContractionWhy } from "./w17Phonics";
 import { ED_WHY, IRREGULAR_FOCUS_OF, IRREGULAR_WHY, W16_ED_FOCUS, W16_ED_SOUND_RULE, W16_IRREGULAR_FOCUS, W16_START, edSpelling, irregularPast } from "./w16Phonics";
 import { ING_WHY, W15_CONTRACTION_FOCUS, W15_ING_FOCUS, W15_START, W15_Y_FOCUS, Y3_LABEL, Y3_SOUNDS, Y3_WHY, compoundChoices, compoundSplit, compoundWhy, contractionOf, contractionWhy, ingSpelling, y3Sound } from "./w15Phonics";
 
@@ -567,6 +568,50 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
 }
 
 /**
+ * ワールド17（ほしふる天文台・L481〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
+ * - "-tion" "-sion" "-ture": 「ただしい つづりは？」（sta＿＿＿＿（えき）→ station / stasion / stashun、fu＿＿＿＿ → future / fucher / fuchur）
+ * - "'ll" "n't": 「みじかい かたちは？」（I will → I'll / I'will / Il'l、will not → won't / willn't / wo'nt）
+ * - 同音異義語（rule が "homophones" の 回、ふりかえりでは 表に ある ことば）: 「ぶんに あう ことばは？」（I can ＿＿ the stars. → see / sea / meet）
+ * - "or" "ore" "oar" "our": 「「オー」の ただしい つづりは？」（4（よん）→ four / for / fore / foar）
+ * あてはまらなければ null。ワールド16 の 問題より 先に よぶ（blew を ew の 過去形、won't を ワールド15 の n't で 問わない）。
+ */
+export function w17Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W17_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const homophone = () => {
+    const h = homophoneOf(w);
+    if (!h) return null;
+    return { promptJa: "ぶんに あう ことばは どれ？", display: h.sentence, choices: pick([w, ...h.choices]), answer: w, explanationJa: homophoneWhy(w, h) };
+  };
+  if (lesson.phonics.rule === W17_HOMOPHONE_RULE) return homophone();
+  for (const f of lesson.phonics.focus) {
+    if ((W17_ENDING_FOCUS as readonly string[]).includes(f)) {
+      const e = endingSpelling(w);
+      if (!e || `-${e.kind}` !== f) continue;
+      return { promptJa: "ただしい つづりは どれ？", display: `${e.stem}＿＿＿＿（${e.meaning}）`, choices: pick([e.answer, ...e.wrong]), answer: e.answer,
+        explanationJa: ENDING_WHY[e.kind](e.answer) };
+    }
+    if ((W17_CONTRACTION_FOCUS as readonly string[]).includes(f)) {
+      const c = willContraction(item.text);
+      if (!c || !w.includes(f)) continue;
+      return { promptJa: "みじかい かたちは どれ？", display: `${c.full} → ？`, choices: pick([c.answer, ...c.wrong]), answer: c.answer,
+        explanationJa: willContractionWhy(c.full, c.answer) };
+    }
+    if ((W17_OR_FOCUS as readonly string[]).includes(f)) {
+      const o = orSpelling(w);
+      if (!o || OR_FOCUS_OF[o.kind] !== f) continue;
+      return { promptJa: "「オー」の ただしい つづりは どれ？", display: `「${o.meaning}」`, choices: pick([o.answer, ...o.wrong]), answer: o.answer,
+        explanationJa: OR_WHY[o.kind](o.answer) };
+    }
+  }
+  // ふりかえりの 回: 母音の つづりの focus（ee / ea / o …）の 同音異義語
+  return homophone();
+}
+
+/**
  * ワールド16（きおくの遺跡・L451〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
  * - "-ed": 「ed を つけた ただしい つづりは？」（stop → stopped / stoped / stopeed、cry → cried / cryed / cryied）。
  *   rule が "ed-sounds" の 回は「おわりの -ed は どの おと？」（ト / ド / イド）
@@ -685,8 +730,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド13（3 単現の -s・-tch / -dge）は いちばん 先（likes を 複数形の -s、catch を ダイグラフの ch で 問わない）
       // ワールド14（複数形・だまっている もじ・数の つづり）は さらに その 先（boxes を ワールド13 の -s の おと、knife を さいしょの おとで 問わない）
       // ワールド15（-ing の つづり・複合語・短縮形・y の 3つの おと）は その 先（running を 語末の -ing、sunflower を はくの 数で 問わない）
-      // ワールド16（-ed の つづり・ふきそくな 過去形・-ed の おと）は いちばん 先（wrote を マジック e、stopped を ブレンドで 問わない）
-      const dq = w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド16（-ed の つづり・ふきそくな 過去形・-ed の おと）は その 先（wrote を マジック e、stopped を ブレンドで 問わない）
+      // ワールド17（-tion / -sion / -ture・'ll / won't・同音異義語・or ore oar our）は いちばん 先（blew を ew の 過去形、won't を n't で 問わない）
+      const dq = w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

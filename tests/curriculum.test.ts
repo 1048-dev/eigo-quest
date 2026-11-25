@@ -22,6 +22,7 @@ import { chBlank, heSpelling, sSound } from "@/lib/curriculum/w13Phonics";
 import { numberSpelling, pluralSpelling } from "@/lib/curriculum/w14Phonics";
 import { compoundSplit, contractionOf, ingSpelling, y3Sound } from "@/lib/curriculum/w15Phonics";
 import { edSpelling, irregularPast } from "@/lib/curriculum/w16Phonics";
+import { endingSpelling, homophoneOf, orSpelling, willContraction } from "@/lib/curriculum/w17Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -1438,5 +1439,111 @@ describe("カリキュラム: ワールド16 の決まりごと（きおくの�
     expect(at(457)!.conversation!.aiTask.goalJa).toMatch(/じゅうしょは いわなくて OK/);
     expect(at(457)!.teacherScript).toMatch(/never share your address/);
     for (const n of [455, 478]) expect(at(n)!.teacherScript, `L${n}`).toMatch(/don't need to write your real name or address/);
+  });
+});
+
+describe("カリキュラム: ワールド17 の決まりごと（ほしふる天文台）", () => {
+  const w17 = LESSONS.filter((l) => l.world === 17);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+
+  it("ワールド17 は 481〜510 の 30 レッスン、ステージ2・A2、学年の めやすは 中2", () => {
+    if (w17.length === 0) return; // 未作成ならスキップ
+    expect(w17.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 481 + i));
+    for (const l of w17) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中2");
+      expect(l.stage, `L${l.lessonNo}`).toBe(2);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w17.length === 0) return;
+    expect(at(481)!.title).toBe("The Observatory on the Hill");
+    expect(at(486)!.title).toBe("Will It Rain Tomorrow?");
+    expect(at(489)!.title).toBe("I'll Help You");
+    expect(at(500)!.title).toBe("Lesson 500 Star Party");
+    expect(at(504)!.title).toBe("I'll Call You Tomorrow");
+    expect(at(510)!.title).toBe("World 17 Grand Review");
+  });
+
+  it("フォニックス: -tion → -sion・-ture → 'll・won't → 同音異義語 → or ore oar our（各ブロックの 5回目と L506〜510 は ふりかえり）", () => {
+    if (w17.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(481, 484, "tion");
+    rule(486, 487, "sion");
+    rule(488, 489, "ture");
+    rule(491, 494, "contractions-will");
+    rule(496, 499, "homophones");
+    rule(501, 504, "or-spellings");
+    for (const n of [485, 490, 495, 500, 505, 506, 507, 508, 509, 510]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    const kinds = (a: number, b: number) => [...new Set(range(a, b).flatMap((l) => l.phonics.words.map((w) => endingSpelling(w)?.kind)))];
+    expect(kinds(481, 485)).toEqual(["tion"]);
+    expect(kinds(486, 487)).toEqual(["sion"]);
+    expect(kinds(488, 489)).toEqual(["ture"]);
+    for (const l of range(491, 494)) for (const w of l.phonics.words) expect(willContraction(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(491, 494).flatMap((l) => l.phonics.words)).toContain("won't");
+    for (const l of range(496, 499)) for (const w of l.phonics.words) expect(homophoneOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    for (const w of ["see", "sea", "son", "sun", "two", "to", "too", "there", "their"]) expect(range(496, 499).flatMap((l) => l.phonics.words)).toContain(w);
+    expect(at(501)!.phonics.words.map((w) => orSpelling(w)?.kind)).toEqual(["or", "or", "or", "or"]);
+    expect(at(502)!.phonics.words.map((w) => orSpelling(w)?.kind)).toEqual(["ore", "ore", "ore", "ore"]);
+    expect(at(503)!.phonics.words.map((w) => orSpelling(w)?.kind)).toEqual(["oar", "oar", "oar", "oar"]);
+    expect(at(504)!.phonics.words.map((w) => orSpelling(w)?.kind)).toEqual(["our", "our", "our", "our"]);
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w17.length === 0) return;
+    expect(ex(481, 485)).toContain("We're going to see the stars tonight.");
+    expect(ex(481, 485)).toContain("What are you going to do this weekend?");
+    expect(ex(481, 485)).toContain("I'm going to visit my grandma.");
+    expect(ex(481, 485)).toContain("Are you going to join us?");
+    expect(ex(481, 485)).toContain("First, we're going to eat. Then, we're going to watch the stars.");
+    expect(ex(486, 490)).toContain("Will it rain tomorrow?");
+    expect(ex(486, 490)).toContain("I think it will.");
+    expect(ex(486, 490)).toContain("It will be sunny tomorrow.");
+    expect(ex(486, 490)).toContain("It won't be cold. Don't worry.");
+    expect(ex(486, 490)).toContain("I'll help you.");
+    expect(ex(486, 490)).toContain("Tomorrow, it will be cloudy in the morning.");
+    expect(ex(491, 495)).toContain("The moon goes around the Earth.");
+    expect(ex(491, 495)).toContain("Mars is red. Jupiter is very big.");
+    expect(ex(491, 495)).toContain("Astronauts sleep in sleeping bags.");
+    expect(ex(491, 495)).toContain("Look! A shooting star! Make a wish!");
+    expect(ex(491, 495)).toContain("Which planet is the biggest?");
+    expect(ex(496, 500)).toContain("Someday I will go to space.");
+    expect(ex(496, 500)).toContain("What will you be in twenty years?");
+    expect(ex(496, 500)).toContain("I think robots will help us at home.");
+    expect(ex(496, 500)).toContain("I want to go to Mars because it's exciting.");
+    expect(ex(496, 500)).toContain("Let's celebrate! We will keep going!");
+    expect(ex(501, 505)).toContain("Long ago, people saw pictures in the stars.");
+    expect(ex(501, 505)).toContain("These stars look like a bear.");
+    expect(ex(501, 505)).toContain("Hello! We live on Earth. We like music.");
+    expect(ex(501, 505)).toContain("I'll call you tomorrow. I promise.");
+    expect(ex(501, 505)).toContain("In the future, I'm going to");
+    expect(ex(506, 510)).toContain("What are you going to eat tonight?");
+    expect(ex(506, 510)).toContain("How about you?");
+    expect(ex(506, 510)).toContain("Dear future me, I will");
+    expect(ex(506, 510)).toContain("Someday we will travel to the stars!");
+  });
+
+  it("ステージ2: 先生の 台本は ほぼ 英語（日本語の たすけは みじかく）、会話シーンは 4〜7 行、L510 は スピード TPR", () => {
+    if (w17.length === 0) return;
+    for (const l of w17) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.25);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(120);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(4);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+    }
+    expect(at(510)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("メッセージ・やくそく・メモ・発表の AI 会話は「なまえ（・じゅうしょ）は いわなくて OK」。台本でも じゅうしょを 教えないと 教える", () => {
+    if (w17.length === 0) return;
+    for (const n of [503, 505, 508, 510]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえ.*(いわなくて|かかなくて) OK/);
+    expect(at(504)!.conversation!.aiTask.goalJa).toMatch(/じゅうしょや でんわばんごうは いわなくて OK/);
+    expect(at(504)!.teacherScript).toMatch(/don't share your address or password online/);
+    for (const n of [503, 508]) expect(at(n)!.teacherScript, `L${n}`).toMatch(/don't need to write your real name or address/);
   });
 });

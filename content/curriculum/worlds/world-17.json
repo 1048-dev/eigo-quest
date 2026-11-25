@@ -1,0 +1,4635 @@
+{
+  "world": 17,
+  "stage": 2,
+  "level": "A2",
+  "lessons": [
+    {
+      "lessonNo": 481,
+      "world": 17,
+      "title": "The Observatory on the Hill",
+      "titleJa": "おかの うえの てんもんだい",
+      "school": {
+        "grade": "中2",
+        "topic": "We're going to see the stars tonight.：これからの よていを いう（be going to）",
+        "grammar": "be going to ～（よてい）・We're going to ～.",
+        "expressions": [
+          {
+            "en": "We're going to see the stars tonight.",
+            "ja": "こんや、ほしを みる よていです。",
+            "core": true
+          },
+          {
+            "en": "What's that big building? ― It's an observatory.",
+            "ja": "あの おおきな たてものは なに？ ― てんもんだいだよ。"
+          },
+          {
+            "en": "We're going to stay here for a while.",
+            "ja": "しばらく ここに いる よていです。"
+          }
+        ],
+        "testPoints": [
+          "We're going to ～. で これからの よていを いえる",
+          "-tion の つづり（station・vacation・information）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Climb the hill.",
+          "ja": "おかを のぼって。",
+          "action": "その ばで あしを たかく あげて あるく",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "Open the big door.",
+          "ja": "おおきな ドアを あけて。",
+          "action": "りょうてで ドアを おす まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Look up at the dome.",
+          "ja": "ドームを みあげて。",
+          "action": "くびを うしろに そらして うえを みる",
+          "emoji": "🔭"
+        },
+        {
+          "en": "Wave to the stars.",
+          "ja": "ほしに てを ふって。",
+          "action": "そらに むかって てを ふる",
+          "emoji": "✨"
+        }
+      ],
+      "phonics": {
+        "rule": "tion",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "station",
+          "vacation",
+          "information",
+          "observation"
+        ],
+        "tipJa": "station・vacation・information・observation。おわりの「ション」は tion と かく ことが いちばん おおい。"
+      },
+      "vocab": [
+        {
+          "en": "observatory",
+          "ja": "てんもんだい",
+          "emoji": "🔭",
+          "core": true
+        },
+        {
+          "en": "star",
+          "ja": "ほし",
+          "emoji": "⭐"
+        },
+        {
+          "en": "hill",
+          "ja": "おか",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "tonight",
+          "ja": "こんや",
+          "emoji": "🌙"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to World 17, Starfall Observatory! Remember the star map from the old diary? It brought us here, to a white building on a hill. It's an observatory. People look at the stars here with a big telescope. Today, we're going to talk about plans. Today's sentence is: We're going to see the stars tonight. Say it with me. We're going to see the stars tonight. Great! We use going to for plans. これから する ことを いう ときに つかうよ。 I'm going to, you're going to, we're going to. Let's try. I'm going to eat dinner. We're going to sing a song. Good job! Now, phonics. Listen. Station. Vacation. Information. Observation. They all end with the same sound, shun. We spell it t, i, o, n. Station, vacation. Easy! Okay, what are you going to do tonight? Let's talk!",
+      "conversation": {
+        "scene": "The team arrives at an observatory on a hill",
+        "sceneJa": "遺跡の 先の 丘の 上、天文台に 着く",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! There's a white building on the hill!",
+            "ja": "みて！おかの うえに しろい たてものが ある！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What's that big round roof?",
+            "ja": "あの おおきな まるい やねは なに？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a dome. This is an observatory. People look at the stars here.",
+            "ja": "ドームよ。ここは てんもんだい。ここで ほしを みるのよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The star map shows this place! We found it!",
+            "ja": "ほしの ちずに ここが のってる！みつけた！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Are we going to stay here?",
+            "ja": "ここに いる よてい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. We're going to see the stars tonight.",
+            "ja": "ええ。こんや ほしを みる よていよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yay! I'm going to find the brightest star!",
+            "ja": "やった！ぼくは いちばん あかるい ほしを さがすぞ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We're going to ～. で こんやの よていを いおう",
+          "starterEn": "Hi! I'm Riko. We're at the observatory! We're going to see the stars tonight. What are you going to do tonight?",
+          "targetExpressions": [
+            "We're going to ～.",
+            "I'm going to ～.",
+            "What are you going to do tonight?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We're going to see the stars tonight.（be going to で よていを いう）",
+          "observatory（てんもんだい）・dome（ドーム）",
+          "station・vacation・information・observation（おわりは tion）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 482,
+      "world": 17,
+      "title": "What Are You Going to Do?",
+      "titleJa": "なにを する よてい？",
+      "school": {
+        "grade": "中2",
+        "topic": "What are you going to do this weekend?：よていを きく",
+        "grammar": "What are you going to do ～? ― I'm going to ～.",
+        "expressions": [
+          {
+            "en": "What are you going to do this weekend?",
+            "ja": "こんしゅうまつ、なにを する よてい？",
+            "core": true
+          },
+          {
+            "en": "I'm going to clean my room.",
+            "ja": "へやを そうじする よていだよ。"
+          },
+          {
+            "en": "That sounds nice. How about you?",
+            "ja": "いいね。あなたは？"
+          }
+        ],
+        "testPoints": [
+          "What are you going to do ～? で よていを きける",
+          "-tion の つづり（action・direction・collection）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up a tray.",
+          "ja": "トレーを とって。",
+          "action": "りょうてで トレーを もつ まね",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "Pour some milk.",
+          "ja": "ミルクを ついで。",
+          "action": "コップに ミルクを そそぐ まね",
+          "emoji": "🥛"
+        },
+        {
+          "en": "Sit down and eat.",
+          "ja": "すわって たべて。",
+          "action": "すわって スプーンで たべる まね",
+          "emoji": "🥄"
+        },
+        {
+          "en": "Clean the table.",
+          "ja": "テーブルを ふいて。",
+          "action": "てで テーブルを ふく まね",
+          "emoji": "🧽"
+        }
+      ],
+      "phonics": {
+        "rule": "tion",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "action",
+          "direction",
+          "collection",
+          "invitation"
+        ],
+        "tipJa": "action・direction・collection・invitation。おわりの「ション」は tion と かく ことが いちばん おおい。"
+      },
+      "vocab": [
+        {
+          "en": "weekend",
+          "ja": "しゅうまつ",
+          "emoji": "📅",
+          "core": true
+        },
+        {
+          "en": "cafeteria",
+          "ja": "しょくどう",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "plan",
+          "ja": "よてい",
+          "emoji": "📝"
+        },
+        {
+          "en": "clean",
+          "ja": "そうじする",
+          "emoji": "🧹"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! We're in the observatory cafeteria. Mmm, I smell pancakes! Today, we have a day off. So let's talk about plans for the weekend. Today's sentence is: What are you going to do this weekend? Say it with me. What are you going to do this weekend? Nice! You can answer, I'm going to clean my room. I'm going to play soccer. I'm going to read a book. しゅうまつの よていを きいて、こたえよう。 After you answer, ask back. How about you? That's a good conversation skill. Let's practice. What are you going to do this weekend? I'm going to draw pictures. How about you? Great! Now, phonics. Action. Direction. Collection. Invitation. Shun, shun, shun. Remember, t, i, o, n. Okay, now ask your friends about their weekend plans!",
+      "conversation": {
+        "scene": "In the observatory cafeteria, the team talks about weekend plans",
+        "sceneJa": "天文台の 食堂で、週末の 予定を 話す",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "What are you going to do this weekend, Haru?",
+            "ja": "ハル、こんしゅうまつ なにを する よてい？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'm going to clean the telescope with the staff. How about you?",
+            "ja": "スタッフの ひとと ぼうえんきょうを そうじする よてい。リコは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm going to read a book about planets.",
+            "ja": "わくせいの ほんを よむ よてい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm going to draw the dome. Birimo, how about you?",
+            "ja": "わたしは ドームの えを かく よてい。ビリモは？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm going to bake star cookies!",
+            "ja": "ほしの クッキーを やく よてい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That sounds nice! Can I have one?",
+            "ja": "いいね！ひとつ もらえる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sure! I'm going to make lots.",
+            "ja": "もちろん！たくさん つくる よていだよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What are you going to do this weekend? と きかれたら、I'm going to ～. と こたえて、How about you? と ききかえそう",
+          "starterEn": "Hi! I'm Haru. I'm going to clean the big telescope this weekend. What are you going to do this weekend?",
+          "targetExpressions": [
+            "What are you going to do this weekend?",
+            "I'm going to ～.",
+            "How about you?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What are you going to do this weekend? ― I'm going to clean my room.",
+          "こたえたら How about you? と ききかえす",
+          "action・direction・collection・invitation"
+        ]
+      }
+    },
+    {
+      "lessonNo": 483,
+      "world": 17,
+      "title": "I'm Going to Visit My Grandma",
+      "titleJa": "おばあちゃんに あいに いく よてい",
+      "school": {
+        "grade": "中2",
+        "topic": "I'm going to visit my grandma.：じぶんの よていと だれの ための ものかを いう",
+        "grammar": "I'm going to ～.・This is for ～.",
+        "expressions": [
+          {
+            "en": "I'm going to visit my grandma.",
+            "ja": "おばあちゃんに あいに いく よていです。",
+            "core": true
+          },
+          {
+            "en": "I'm going to give her this key chain.",
+            "ja": "この キーホルダーを あげる よていです。"
+          },
+          {
+            "en": "This is for my brother.",
+            "ja": "これは おとうとの ぶんです。"
+          }
+        ],
+        "testPoints": [
+          "I'm going to ～. で じぶんの よていを いえる",
+          "-tion の つづり（lotion・motion・emotion）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up a souvenir.",
+          "ja": "おみやげを とって。",
+          "action": "たなから ものを とる まね",
+          "emoji": "🎁"
+        },
+        {
+          "en": "Wrap it nicely.",
+          "ja": "きれいに つつんで。",
+          "action": "つつみがみで くるむ まね",
+          "emoji": "🎀"
+        },
+        {
+          "en": "Put it in your bag.",
+          "ja": "かばんに いれて。",
+          "action": "かばんに そっと いれる まね",
+          "emoji": "👜"
+        },
+        {
+          "en": "Pay at the counter.",
+          "ja": "レジで はらって。",
+          "action": "おかねを わたす まね",
+          "emoji": "💴"
+        }
+      ],
+      "phonics": {
+        "rule": "tion",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "lotion",
+          "motion",
+          "section",
+          "emotion"
+        ],
+        "tipJa": "lotion・motion・section・emotion。おわりの「ション」は tion と かく ことが いちばん おおい。"
+      },
+      "vocab": [
+        {
+          "en": "souvenir",
+          "ja": "おみやげ",
+          "emoji": "🎁",
+          "core": true
+        },
+        {
+          "en": "grandma",
+          "ja": "おばあちゃん",
+          "emoji": "👵"
+        },
+        {
+          "en": "key chain",
+          "ja": "キーホルダー",
+          "emoji": "🔑"
+        },
+        {
+          "en": "postcard",
+          "ja": "ポストカード",
+          "emoji": "💌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're at the observatory gift shop. Look at all the star goods! There are star key chains, moon postcards, and planet stickers. Kiko wants to buy something for her family. Today's sentence is: I'm going to visit my grandma. Say it with me. I'm going to visit my grandma. Wonderful! You can also say who a present is for. This is for my brother. This is for my mom. だれへの おみやげか いえるよ。 And you can say your plan with it. I'm going to give her this key chain. Let's practice. I'm going to visit my grandpa. I'm going to give him this postcard. Great job! Now, phonics. Lotion. Motion. Section. Emotion. All of them end with t, i, o, n, shun. Okay, who are you going to visit? Let's talk about it!",
+      "conversation": {
+        "scene": "At the observatory gift shop, choosing presents for family",
+        "sceneJa": "天文台の 売店で、家族への おみやげを 選ぶ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at these star key chains! They're so cute.",
+            "ja": "この ほしの キーホルダー みて！すごく かわいい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Are you going to buy one?",
+            "ja": "ひとつ かう よてい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes. I'm going to visit my grandma next month.",
+            "ja": "うん。らいげつ おばあちゃんに あいに いく よていなの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm going to give her this key chain.",
+            "ja": "この キーホルダーを あげる よてい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This moon postcard is for my brother. He loves the moon.",
+            "ja": "この つきの ポストカードは おとうとの ぶん。つきが だいすきなんだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm going to buy a planet sticker for me!",
+            "ja": "ぼくは じぶんに わくせいの シールを かうよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good choices, everyone. Let's pay at the counter.",
+            "ja": "みんな いい えらびかたね。レジで はらいましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おみやげを えらんで、I'm going to ～. This is for ～. と いおう（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Kiko. I'm going to visit my grandma. This key chain is for her. Who are you going to give a present to?",
+          "targetExpressions": [
+            "I'm going to visit ～.",
+            "I'm going to give ～.",
+            "This is for ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm going to visit my grandma.（じぶんの よてい）",
+          "This is for my brother.（だれへの ものか）",
+          "lotion・motion・section・emotion"
+        ]
+      }
+    },
+    {
+      "lessonNo": 484,
+      "world": 17,
+      "title": "Are You Going to Join Us?",
+      "titleJa": "いっしょに くる？",
+      "school": {
+        "grade": "中2",
+        "topic": "Are you going to join us?：さそう・よていを たずねる",
+        "grammar": "Are you going to ～? ― Yes, I am. / No, I'm not.",
+        "expressions": [
+          {
+            "en": "Are you going to join us?",
+            "ja": "いっしょに くる？",
+            "core": true
+          },
+          {
+            "en": "Yes, I am! ― No, I'm not. I'm going to sleep early.",
+            "ja": "うん、いくよ！ ― ううん、いかない。はやく ねる よていなの。"
+          },
+          {
+            "en": "Okay. Maybe next time!",
+            "ja": "わかった。また こんどね！"
+          }
+        ],
+        "testPoints": [
+          "Are you going to ～? で あいての よていを きける",
+          "-tion の つづり（imagination・exploration・solution）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Knock on the door.",
+          "ja": "ドアを ノックして。",
+          "action": "こぶしで トントン",
+          "emoji": "✊"
+        },
+        {
+          "en": "Show the poster.",
+          "ja": "ポスターを みせて。",
+          "action": "りょうてで かみを ひろげて みせる",
+          "emoji": "📜"
+        },
+        {
+          "en": "Nod your head.",
+          "ja": "うなずいて。",
+          "action": "くびを たてに ふる",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Shake your head.",
+          "ja": "くびを よこに ふって。",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        }
+      ],
+      "phonics": {
+        "rule": "tion",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "imagination",
+          "competition",
+          "exploration",
+          "solution"
+        ],
+        "tipJa": "imagination・competition・exploration・solution。ながい ことばも おわりは tion。"
+      },
+      "vocab": [
+        {
+          "en": "join",
+          "ja": "くわわる",
+          "emoji": "🙋",
+          "core": true
+        },
+        {
+          "en": "party",
+          "ja": "パーティー",
+          "emoji": "🎉"
+        },
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "📜"
+        },
+        {
+          "en": "early",
+          "ja": "はやく",
+          "emoji": "⏰"
+        }
+      ],
+      "teacherScript": "Hi, everyone! There's a poster on the wall. Star Party Tonight! Riko wants to invite everyone. How do we invite people? Today's sentence is: Are you going to join us? Say it with me. Are you going to join us? Great! The answer is, Yes, I am. Or, No, I'm not. If you say no, tell your plan. No, I'm not. I'm going to sleep early. ことわる ときは、よていも いうと やさしいね。 And if your friend says no, you can say, Okay. Maybe next time! Let's practice. Are you going to join us? Yes, I am! Are you going to join us? No, I'm not. I'm going to do my homework. Maybe next time! Nice! Now, phonics. Imagination. Competition. Exploration. Solution. Long words, but the end is easy. t, i, o, n. Okay, let's invite our friends!",
+      "conversation": {
+        "scene": "Inviting friends to the stargazing party",
+        "sceneJa": "星空観察会に さそう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look at this poster! Star Party Tonight! Kiko, are you going to join us?",
+            "ja": "この ポスター みて！こんや ほしの パーティー！キコ、いっしょに くる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, I am! I'm going to bring my sketchbook.",
+            "ja": "うん、いく！スケッチブックを もっていく。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Haru, are you going to join us?",
+            "ja": "ハル、いっしょに くる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hmm, no, I'm not. I'm going to sleep early. I'm so tired.",
+            "ja": "うーん、いかない。はやく ねる よてい。すごく つかれてて。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay. Maybe next time!",
+            "ja": "わかった。また こんどね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Haru, there's hot cocoa at the party.",
+            "ja": "ハル、パーティーには ホットココアが あるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hot cocoa? Okay, I'm going to join you!",
+            "ja": "ホットココア？じゃあ、いく！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Are you going to join us? と さそったり、Yes, I am. / No, I'm not. I'm going to ～. と こたえたり しよう",
+          "starterEn": "Hi! I'm Riko. We're going to have a star party tonight. Are you going to join us?",
+          "targetExpressions": [
+            "Are you going to join us?",
+            "Yes, I am.",
+            "No, I'm not. I'm going to ～.",
+            "Maybe next time!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Are you going to join us? ― Yes, I am! / No, I'm not.",
+          "ことわる ときは よていも いう・Maybe next time!",
+          "imagination・competition・exploration・solution"
+        ]
+      }
+    },
+    {
+      "lessonNo": 485,
+      "world": 17,
+      "title": "Our Plan for Tonight",
+      "titleJa": "こんやの けいかく",
+      "school": {
+        "grade": "中2",
+        "topic": "First, we're going to eat. Then, we're going to watch the stars.：じゅんばんに よていを いう（まとめ・発表）",
+        "grammar": "First, ～. Then, ～. After that, ～.（be going to で けいかくを いう）",
+        "expressions": [
+          {
+            "en": "First, we're going to eat. Then, we're going to watch the stars.",
+            "ja": "まず、たべます。それから、ほしを みます。",
+            "core": true
+          },
+          {
+            "en": "After that, we're going to drink hot cocoa.",
+            "ja": "そのあと、ホットココアを のみます。"
+          },
+          {
+            "en": "Finally, we're going to go to bed.",
+            "ja": "さいごに、ねます。"
+          }
+        ],
+        "testPoints": [
+          "First / Then / After that / Finally と be going to で けいかくを はっぴょうできる",
+          "-tion の まとめ（nation・rotation・celebration）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Eat dinner.",
+          "ja": "ばんごはんを たべて。",
+          "action": "おはしで たべる まね",
+          "emoji": "🍛"
+        },
+        {
+          "en": "Put on your jacket.",
+          "ja": "ジャケットを きて。",
+          "action": "そでに うでを とおす まね",
+          "emoji": "🧥"
+        },
+        {
+          "en": "Watch the stars.",
+          "ja": "ほしを みて。",
+          "action": "そらを みあげる",
+          "emoji": "🌌"
+        },
+        {
+          "en": "Drink hot cocoa.",
+          "ja": "ホットココアを のんで。",
+          "action": "ふうふう して のむ まね",
+          "emoji": "☕"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "nation",
+          "rotation",
+          "population",
+          "celebration"
+        ],
+        "tipJa": "ブロック1 の まとめ: nation・rotation・population・celebration。おわりの「ション」は tion と かく ことが いちばん おおい。"
+      },
+      "vocab": [
+        {
+          "en": "schedule",
+          "ja": "スケジュール",
+          "emoji": "🗓️",
+          "core": true
+        },
+        {
+          "en": "dinner",
+          "ja": "ばんごはん",
+          "emoji": "🍛"
+        },
+        {
+          "en": "jacket",
+          "ja": "ジャケット",
+          "emoji": "🧥"
+        },
+        {
+          "en": "cocoa",
+          "ja": "ココア",
+          "emoji": "☕"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The star party is tonight. Let's make a plan together. In World 16, we used order words for stories. First, then, after that, finally. Today, we use them for plans. Today's sentence is: First, we're going to eat. Then, we're going to watch the stars. Say it with me. First, we're going to eat. Then, we're going to watch the stars. Excellent! After that, we're going to drink hot cocoa. Finally, we're going to go to bed. じゅんばんの ことばで けいかくを いおう。 Now, it's your turn. Tell us your plan for tonight. You can use four sentences. Then your friend can ask, What time? Asking one more question is a great skill. Now, phonics review. Nation. Rotation. Population. Celebration. All t, i, o, n. Fantastic! Okay, let's present our plans!",
+      "conversation": {
+        "scene": "Making a plan for the night-time stargazing party",
+        "sceneJa": "夜の 観察会の 計画を 立てる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make a plan for tonight. Who wants to start?",
+            "ja": "こんやの けいかくを たてましょう。だれから はじめる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "First, we're going to eat dinner.",
+            "ja": "まず、ばんごはんを たべる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Then, we're going to put on our jackets and go to the roof.",
+            "ja": "それから、ジャケットを きて やねに いく。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "After that, we're going to watch the stars and drink hot cocoa.",
+            "ja": "そのあと、ほしを みて ホットココアを のむ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Finally, we're going to go to bed. What time?",
+            "ja": "さいごに、ねる。なんじに？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "At ten o'clock. It's a great plan!",
+            "ja": "10じよ。すてきな けいかくね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "First, ～. Then, ～. After that, ～. Finally, ～. と、じぶんの こんやの けいかくを 4つの ぶんで はっぴょうしよう",
+          "starterEn": "Hi! I'm Birimo. Let's share our plans for tonight! First, I'm going to eat dinner. What about you? Tell me your plan!",
+          "targetExpressions": [
+            "First, I'm going to ～.",
+            "Then, I'm going to ～.",
+            "After that, ～.",
+            "Finally, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, we're going to eat. Then, we're going to watch the stars.",
+          "After that, ～. Finally, ～. で けいかくを はっぴょう",
+          "nation・rotation・population・celebration（tion の まとめ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 486,
+      "world": 17,
+      "title": "Will It Rain Tomorrow?",
+      "titleJa": "あしたは あめが ふる？",
+      "school": {
+        "grade": "中2",
+        "topic": "Will it rain tomorrow? ― I think it will.：あしたの てんきを よそうする（will）",
+        "grammar": "Will it ～? ― I think it will. / I don't think so.",
+        "expressions": [
+          {
+            "en": "Will it rain tomorrow?",
+            "ja": "あした あめは ふるかな？",
+            "core": true
+          },
+          {
+            "en": "I think it will. ― I don't think so.",
+            "ja": "ふると おもう。 ― ふらないと おもう。"
+          },
+          {
+            "en": "Look at the clouds. They're dark.",
+            "ja": "くもを みて。くろいよ。"
+          }
+        ],
+        "testPoints": [
+          "Will it ～? で よそうを きける・I think it will. で こたえられる",
+          "-sion の つづり（television・vision・decision）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the screen.",
+          "ja": "がめんを みて。",
+          "action": "まえを ゆびさして みる",
+          "emoji": "🖥️"
+        },
+        {
+          "en": "Point to the map.",
+          "ja": "ちずを ゆびさして。",
+          "action": "ゆびで ちずを さす まね",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Open your umbrella.",
+          "ja": "かさを ひらいて。",
+          "action": "かさを パッと ひらく まね",
+          "emoji": "☂️"
+        },
+        {
+          "en": "Feel the wind.",
+          "ja": "かぜを かんじて。",
+          "action": "めを とじて かおを あげる",
+          "emoji": "🌬️"
+        }
+      ],
+      "phonics": {
+        "rule": "sion",
+        "focus": [
+          "-sion"
+        ],
+        "sounds": [
+          "/ʒən/"
+        ],
+        "words": [
+          "television",
+          "vision",
+          "decision",
+          "division"
+        ],
+        "tipJa": "television・vision・decision・division。「ジョン」の おわりは sion と かく。"
+      },
+      "vocab": [
+        {
+          "en": "weather",
+          "ja": "てんき",
+          "emoji": "🌦️",
+          "core": true
+        },
+        {
+          "en": "rain",
+          "ja": "あめ",
+          "emoji": "🌧️"
+        },
+        {
+          "en": "cloud",
+          "ja": "くも",
+          "emoji": "☁️"
+        },
+        {
+          "en": "tomorrow",
+          "ja": "あした",
+          "emoji": "📅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're in the weather room of the observatory. There are lots of screens and maps. Stargazers need good weather. If it rains, we can't see the stars! Today, we learn a new word for the future, will. Today's sentence is: Will it rain tomorrow? Say it with me. Will it rain tomorrow? Great! The answer is, I think it will. Or, I don't think so. We aren't sure about tomorrow, so we say I think. わからない ことを よそうする ときは will を つかうよ。 Let's practice. Will it be sunny tomorrow? I think it will. Will it snow tomorrow? I don't think so. Good job! Now, phonics. Television. Vision. Decision. Division. Listen to the end. Zhun. We spell it s, i, o, n. Not t, i, o, n. Okay, will it rain tomorrow where you live? Let's guess!",
+      "conversation": {
+        "scene": "In the weather room, the team checks the forecast",
+        "sceneJa": "天文台の 気象室で、天気予報を 見る",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Wow, look at all these screens!",
+            "ja": "わあ、がめんが いっぱい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ms. Emma, will it rain tomorrow?",
+            "ja": "エマせんせい、あしたは あめが ふる？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's look at the map. There are lots of clouds here.",
+            "ja": "ちずを みてみましょう。ここに くもが たくさん あるわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think it will. The clouds are dark.",
+            "ja": "ふると おもう。くもが くろいもん。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I don't think so. The wind is strong. It will blow the clouds away.",
+            "ja": "ふらないと おもうな。かぜが つよいから。くもを ふきとばすよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I hope Birimo is right! We want to see the stars.",
+            "ja": "ビリモが あたってると いいな！ほしが みたいもん。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Will it rain tomorrow? と きいて、I think it will. / I don't think so. と よそうしよう（すんでいる まちの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Kiko. I'm in the weather room. Look at the clouds! Will it rain tomorrow? What do you think?",
+          "targetExpressions": [
+            "Will it rain tomorrow?",
+            "I think it will.",
+            "I don't think so."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Will it rain tomorrow? ― I think it will. / I don't think so.",
+          "will は これからの よそう（I think を つける）",
+          "television・vision・decision・division（ジョンは sion）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 487,
+      "world": 17,
+      "title": "Tomorrow's Weather",
+      "titleJa": "あしたの てんき",
+      "school": {
+        "grade": "中2",
+        "topic": "It will be sunny tomorrow.：てんきよほうを いう",
+        "grammar": "It will be ～.・It will ～.",
+        "expressions": [
+          {
+            "en": "It will be sunny tomorrow.",
+            "ja": "あしたは はれるでしょう。",
+            "core": true
+          },
+          {
+            "en": "It will rain in the afternoon.",
+            "ja": "ごごは あめが ふるでしょう。"
+          },
+          {
+            "en": "Don't forget your umbrella!",
+            "ja": "かさを わすれないでね！"
+          }
+        ],
+        "testPoints": [
+          "It will be ～. で てんきよほうを いえる",
+          "-sion の つづり（mission・permission・expression）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand in front of the map.",
+          "ja": "ちずの まえに たって。",
+          "action": "せすじを のばして たつ",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Hold the microphone.",
+          "ja": "マイクを もって。",
+          "action": "マイクを くちの まえで もつ まね",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Point to the sun.",
+          "ja": "たいようを ゆびさして。",
+          "action": "うえを ゆびさす",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Smile at the camera.",
+          "ja": "カメラに にっこり して。",
+          "action": "まえを みて にっこり",
+          "emoji": "📹"
+        }
+      ],
+      "phonics": {
+        "rule": "sion",
+        "focus": [
+          "-sion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "mission",
+          "permission",
+          "expression",
+          "discussion"
+        ],
+        "tipJa": "mission・permission・expression・discussion。ss の あとの「ション」も sion と かく。"
+      },
+      "vocab": [
+        {
+          "en": "sunny",
+          "ja": "はれ",
+          "emoji": "☀️",
+          "core": true
+        },
+        {
+          "en": "forecast",
+          "ja": "てんきよほう",
+          "emoji": "📺"
+        },
+        {
+          "en": "umbrella",
+          "ja": "かさ",
+          "emoji": "☂️"
+        },
+        {
+          "en": "afternoon",
+          "ja": "ごご",
+          "emoji": "🕒"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! Today, we're going to be weather reporters. Riko is going to stand in front of the map. Haru has the microphone. Kiko is the camera person. Today's sentence is: It will be sunny tomorrow. Say it with me. It will be sunny tomorrow. Wonderful! It will be cloudy. It will be windy. It will be cold. You can also say, It will rain. It will snow. will の あとは うごきの ことばの もとの かたちだよ。 Rain, not rains. Let's practice. Look at the map. It will be sunny in the morning. It will rain in the afternoon. And a weather reporter often says, Don't forget your umbrella! Nice! Now, phonics. Mission. Permission. Expression. Discussion. These words have double s, then i, o, n. Shun. Okay, it's your turn. Tell us tomorrow's weather!",
+      "conversation": {
+        "scene": "In the weather room, playing weather reporter",
+        "sceneJa": "気象室で、天気予報キャスターごっこ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Good evening! Here is tomorrow's weather.",
+            "ja": "こんばんは！あしたの てんきです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It will be sunny in the morning.",
+            "ja": "あさは はれるでしょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "But it will rain in the afternoon.",
+            "ja": "でも ごごは あめが ふるでしょう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Don't forget your umbrella!",
+            "ja": "かさを わすれないでね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! You sound like real reporters!",
+            "ja": "あはは！ほんものの キャスター みたい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What about tomorrow night? Will it be clear?",
+            "ja": "あしたの よるは？はれるかな？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes. It will be clear at night. We can see the stars!",
+            "ja": "うん。よるは はれるでしょう。ほしが みえるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "てんきよほうの キャスターに なって、It will be ～. It will rain. で あしたの てんきを つたえよう",
+          "starterEn": "Good evening! I'm Haru, the weather reporter. It will be sunny tomorrow morning. Now it's your turn. What will the weather be like?",
+          "targetExpressions": [
+            "It will be sunny.",
+            "It will rain.",
+            "Don't forget your umbrella!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It will be sunny tomorrow.（てんきよほう）",
+          "It will rain. ― will の あとは もとの かたち",
+          "mission・permission・expression・discussion（ss の あとの sion）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 488,
+      "world": 17,
+      "title": "It Won't Be Cold",
+      "titleJa": "さむく ならないよ",
+      "school": {
+        "grade": "中2",
+        "topic": "It won't be cold. Don't worry.：あんしんさせる（won't）",
+        "grammar": "It won't ～.・Will it ～? ― No, it won't.",
+        "expressions": [
+          {
+            "en": "It won't be cold. Don't worry.",
+            "ja": "さむく ならないよ。しんぱい しないで。",
+            "core": true
+          },
+          {
+            "en": "Will it be windy tonight? ― No, it won't.",
+            "ja": "こんや かぜは つよいかな？ ― ううん、つよく ならないよ。"
+          },
+          {
+            "en": "Let's bring a blanket, just in case.",
+            "ja": "ねんのため もうふを もっていこう。"
+          }
+        ],
+        "testPoints": [
+          "won't（= will not）で「〜しないでしょう」と いえる",
+          "-ture の つづり（temperature・picture・nature）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Check the thermometer.",
+          "ja": "おんどけいを みて。",
+          "action": "めを ちかづけて みる まね",
+          "emoji": "🌡️"
+        },
+        {
+          "en": "Fold the blanket.",
+          "ja": "もうふを たたんで。",
+          "action": "ぬのを はんぶんに たたむ まね",
+          "emoji": "🛌"
+        },
+        {
+          "en": "Pack your bag.",
+          "ja": "かばんに つめて。",
+          "action": "ものを かばんに いれる まね",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Zip up your jacket.",
+          "ja": "ジャケットの チャックを しめて。",
+          "action": "したから うえに チャックを あげる まね",
+          "emoji": "🧥"
+        }
+      ],
+      "phonics": {
+        "rule": "ture",
+        "focus": [
+          "-ture"
+        ],
+        "sounds": [
+          "/tʃər/"
+        ],
+        "words": [
+          "temperature",
+          "picture",
+          "nature",
+          "adventure"
+        ],
+        "tipJa": "temperature・picture・nature・adventure。おわりの「チャー」は ture と かく。"
+      },
+      "vocab": [
+        {
+          "en": "cold",
+          "ja": "さむい",
+          "emoji": "🥶",
+          "core": true
+        },
+        {
+          "en": "blanket",
+          "ja": "もうふ",
+          "emoji": "🛌"
+        },
+        {
+          "en": "thermometer",
+          "ja": "おんどけい",
+          "emoji": "🌡️"
+        },
+        {
+          "en": "worry",
+          "ja": "しんぱいする",
+          "emoji": "😟"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're getting ready for the star party. Kiko is worried. She thinks it will be cold on the roof. Let's check the thermometer. Today's sentence is: It won't be cold. Don't worry. Say it with me. It won't be cold. Don't worry. Great! Won't means will not. It won't rain. It won't be windy. 「〜しないでしょう」は won't だよ。 You can answer a question, too. Will it be cold tonight? No, it won't. Will it be cloudy tonight? No, it won't. When a friend is worried, you can say, Don't worry. That's a kind thing to say. And it's good to bring a blanket, just in case. Now, phonics. Temperature. Picture. Nature. Adventure. The end sounds like cher, but we spell it t, u, r, e. Okay, let's pack our bags for the party!",
+      "conversation": {
+        "scene": "Getting ready for the stargazing party",
+        "sceneJa": "星空観察会の じゅんび",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Will it be cold on the roof tonight? I'm a little worried.",
+            "ja": "こんや やねの うえは さむいかな？ちょっと しんぱい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's check the temperature. It's fifteen degrees.",
+            "ja": "きおんを みてみよう。15ど だよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It won't be cold. Don't worry.",
+            "ja": "さむく ならないよ。しんぱい しないで。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Will it be windy?",
+            "ja": "かぜは つよい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, it won't. But let's bring a blanket, just in case.",
+            "ja": "ううん、つよく ならないよ。でも ねんのため もうふを もっていこう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thanks, everyone. I feel better now.",
+            "ja": "みんな ありがとう。あんしん した。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "しんぱいしている キコに、It won't be ～. Don't worry. と やさしく いって あんしん させよう",
+          "starterEn": "Hi! I'm Kiko. I'm going to watch the stars tonight, but I'm worried. Will it be cold? Will it rain?",
+          "targetExpressions": [
+            "It won't be cold.",
+            "No, it won't.",
+            "Don't worry."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It won't be cold. Don't worry.（won't = will not）",
+          "Will it be windy? ― No, it won't.",
+          "temperature・picture・nature・adventure（チャーは ture）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 489,
+      "world": 17,
+      "title": "I'll Help You",
+      "titleJa": "てつだうよ",
+      "school": {
+        "grade": "中2",
+        "topic": "I'll help you. ― Thanks!：その場で きめて もうしでる（I'll）",
+        "grammar": "I'll ～.（その場で きめた こと・もうしで）",
+        "expressions": [
+          {
+            "en": "I'll help you.",
+            "ja": "てつだうよ。",
+            "core": true
+          },
+          {
+            "en": "This box is heavy. ― I'll carry it.",
+            "ja": "この はこ おもいね。 ― ぼくが はこぶよ。"
+          },
+          {
+            "en": "I'll open the door for you. ― Thanks!",
+            "ja": "ドアを あけて あげるね。 ― ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "I'll ～. で もうしでが できる",
+          "-ture の つづり（future・creature・furniture）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Lift the box together.",
+          "ja": "いっしょに はこを もちあげて。",
+          "action": "ひざを まげて もちあげる まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Walk slowly.",
+          "ja": "ゆっくり あるいて。",
+          "action": "そろそろ あるく",
+          "emoji": "🐢"
+        },
+        {
+          "en": "Hold the door.",
+          "ja": "ドアを おさえて。",
+          "action": "てで ドアを おさえる まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Give me a high five.",
+          "ja": "ハイタッチ して。",
+          "action": "てを あげて パチン",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "ture",
+        "focus": [
+          "-ture"
+        ],
+        "sounds": [
+          "/tʃər/"
+        ],
+        "words": [
+          "future",
+          "creature",
+          "furniture",
+          "capture"
+        ],
+        "tipJa": "future・creature・furniture・capture。おわりの「チャー」は ture と かく。"
+      },
+      "vocab": [
+        {
+          "en": "telescope",
+          "ja": "ぼうえんきょう",
+          "emoji": "🔭",
+          "core": true
+        },
+        {
+          "en": "heavy",
+          "ja": "おもい",
+          "emoji": "🏋️"
+        },
+        {
+          "en": "carry",
+          "ja": "はこぶ",
+          "emoji": "📦"
+        },
+        {
+          "en": "roof",
+          "ja": "やね",
+          "emoji": "🏠"
+        }
+      ],
+      "teacherScript": "Hi, everyone! We need to carry the telescope to the roof. Oh, it's heavy! Who can help? Today's sentence is: I'll help you. Say it with me. I'll help you. Great! I'll is short for I will. We use I'll when we decide something right now. その場で「〜するよ」と きめた ときは I'll だよ。 This box is heavy. I'll carry it. It's dark. I'll get a flashlight. When someone helps you, say, Thanks! Let's practice. This bag is heavy. I'll carry it. Thanks! The door is closed. I'll open the door for you. Thank you! Helping is a wonderful thing. Now, phonics. Future. Creature. Furniture. Capture. Remember, cher at the end is t, u, r, e. Okay, look around you. How can you help your friends today? Let's say, I'll help you!",
+      "conversation": {
+        "scene": "Helping to carry the telescope to the roof",
+        "sceneJa": "望遠鏡を 運ぶのを 手伝う",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "We need to take the telescope to the roof. But this box is heavy.",
+            "ja": "ぼうえんきょうを やねに もっていかないと。でも この はこ おもいわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'll help you!",
+            "ja": "てつだいます！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thanks, Haru! Let's lift it together.",
+            "ja": "ありがとう、ハル！いっしょに もちあげましょう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'll open the door for you.",
+            "ja": "ドアを あけるね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's dark on the stairs. I'll get a flashlight.",
+            "ja": "かいだんが くらい。かいちゅうでんとうを もってくる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And I'll carry the blankets!",
+            "ja": "ぼくは もうふを はこぶよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a great team! Thank you, everyone.",
+            "ja": "すばらしい チームね！みんな ありがとう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "こまっている ひとに I'll help you. / I'll carry it. と もうしでよう。たすけて もらったら Thanks! と いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Oh no, this box of star maps is so heavy. And the door is closed. Can anyone help me?",
+          "targetExpressions": [
+            "I'll help you.",
+            "I'll carry it.",
+            "I'll open the door.",
+            "Thanks!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'll help you. ― Thanks!（I'll = I will）",
+          "その場で きめた ことは I'll ～.",
+          "future・creature・furniture・capture"
+        ]
+      }
+    },
+    {
+      "lessonNo": 490,
+      "world": 17,
+      "title": "Weather Report Show",
+      "titleJa": "てんきよほう ばんぐみ",
+      "school": {
+        "grade": "中2",
+        "topic": "Tomorrow, it will be cloudy in the morning.：てんきよほうの ばんぐみを つくって 発表する（まとめ）",
+        "grammar": "It will be ～ in the morning / afternoon.・It won't ～.",
+        "expressions": [
+          {
+            "en": "Tomorrow, it will be cloudy in the morning.",
+            "ja": "あしたは、あさ くもりでしょう。",
+            "core": true
+          },
+          {
+            "en": "In the afternoon, it will be sunny. It won't rain.",
+            "ja": "ごごは はれるでしょう。あめは ふらないでしょう。"
+          },
+          {
+            "en": "That's all for today's weather. Have a nice day!",
+            "ja": "きょうの てんきは いじょうです。よい いちにちを！"
+          }
+        ],
+        "testPoints": [
+          "will / won't と じかんの ことばで てんきよほうを はっぴょうできる",
+          "-tion・-sion・-ture の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Bow to the audience.",
+          "ja": "かんきゃくに おじぎ して。",
+          "action": "ゆっくり おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Point to the clouds.",
+          "ja": "くもを ゆびさして。",
+          "action": "ちずの うえを ゆびさす",
+          "emoji": "☁️"
+        },
+        {
+          "en": "Draw a sun.",
+          "ja": "たいようを かいて。",
+          "action": "そらに まると ひかりを かく",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Wave goodbye.",
+          "ja": "さよならと てを ふって。",
+          "action": "カメラに てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-tion",
+          "-sion",
+          "-ture"
+        ],
+        "sounds": [
+          "/ʃən/",
+          "/ʒən/",
+          "/tʃər/"
+        ],
+        "words": [
+          "station",
+          "television",
+          "mission",
+          "future",
+          "mixture"
+        ],
+        "tipJa": "ブロック2 の まとめ: station（tion）・television・mission（sion）・future・mixture（ture）。"
+      },
+      "vocab": [
+        {
+          "en": "show",
+          "ja": "ばんぐみ",
+          "emoji": "📺",
+          "core": true
+        },
+        {
+          "en": "cloudy",
+          "ja": "くもり",
+          "emoji": "☁️"
+        },
+        {
+          "en": "snowy",
+          "ja": "ゆき",
+          "emoji": "❄️"
+        },
+        {
+          "en": "windy",
+          "ja": "かぜが つよい",
+          "emoji": "🌬️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is a big day. We're going to make a weather report show! Our show is going to be on the observatory television. Today's sentence is: Tomorrow, it will be cloudy in the morning. Say it with me. Tomorrow, it will be cloudy in the morning. Great! In the afternoon, it will be sunny. It won't rain. And at the end, That's all for today's weather. Have a nice day! ばんぐみの さいごの あいさつも いえると かっこいいね。 Tips for a good show. Look at the camera. Speak slowly and clearly. Use your hands to point to the map. Riko and Haru are the reporters. Kiko is going to hold the camera, and Birimo is the director. Now, phonics review. Station. Television. Mission. Future. Mixture. Tion, sion, ture. You know them all! Okay, three, two, one, action! Let's start our weather show!",
+      "conversation": {
+        "scene": "Making and presenting a weather report show",
+        "sceneJa": "天気予報番組を 作って 発表する",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Three, two, one, action!",
+            "ja": "3、2、1、アクション！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hello! This is the Starfall Weather Show.",
+            "ja": "こんにちは！ほしふる てんきよほうです。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Tomorrow, it will be cloudy in the morning.",
+            "ja": "あしたは、あさ くもりでしょう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "In the afternoon, it will be sunny. It won't rain.",
+            "ja": "ごごは はれるでしょう。あめは ふらないでしょう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "At night, it will be clear. It's a good night for stars!",
+            "ja": "よるは はれるでしょう。ほしを みるのに いい よるです！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's all for today's weather. Have a nice day!",
+            "ja": "きょうの てんきは いじょうです。よい いちにちを！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Bravo! That was a wonderful show.",
+            "ja": "ブラボー！すばらしい ばんぐみ だったわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "てんきよほうの ばんぐみを つくろう。in the morning / in the afternoon と It will be ～. It won't ～. で つたえて、さいごの あいさつも いおう",
+          "starterEn": "Three, two, one, action! Hi! I'm Riko. Welcome to the weather show. Today, you're the reporter. What will the weather be like tomorrow?",
+          "targetExpressions": [
+            "Tomorrow, it will be ～ in the morning.",
+            "In the afternoon, it will ～.",
+            "It won't ～.",
+            "That's all for today's weather."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Tomorrow, it will be cloudy in the morning.（てんきよほう ばんぐみ）",
+          "It won't rain.・That's all for today's weather.",
+          "station・television・mission・future・mixture（tion・sion・ture の まとめ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 491,
+      "world": 17,
+      "title": "The Moon and the Earth",
+      "titleJa": "つきと ちきゅう",
+      "school": {
+        "grade": "中2",
+        "topic": "The moon goes around the Earth.：うちゅうの じじつを いう",
+        "grammar": "The moon goes around ～.・It takes about ～.（いつも ほんとうの ことは げんざいけい）",
+        "expressions": [
+          {
+            "en": "The moon goes around the Earth.",
+            "ja": "つきは ちきゅうの まわりを まわっています。",
+            "core": true
+          },
+          {
+            "en": "The Earth goes around the sun.",
+            "ja": "ちきゅうは たいようの まわりを まわっています。"
+          },
+          {
+            "en": "It takes about one year.",
+            "ja": "だいたい 1ねん かかります。"
+          }
+        ],
+        "testPoints": [
+          "いつも ほんとうの ことは goes / takes（げんざいけい）で いえる",
+          "will の みじかい かたち I'll・we'll・you'll・they'll"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spin around.",
+          "ja": "くるっと まわって。",
+          "action": "その ばで 1かい まわる",
+          "emoji": "🌀"
+        },
+        {
+          "en": "Walk in a circle.",
+          "ja": "まるく あるいて。",
+          "action": "おおきな まるを かいて あるく",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Be the sun.",
+          "ja": "たいように なって。",
+          "action": "りょうてを ひろげて かがやく まね",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Be the moon.",
+          "ja": "つきに なって。",
+          "action": "ともだちの まわりを ゆっくり まわる",
+          "emoji": "🌙"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions-will",
+        "focus": [
+          "'ll"
+        ],
+        "sounds": [
+          "/l/"
+        ],
+        "words": [
+          "I'll",
+          "we'll",
+          "you'll",
+          "they'll"
+        ],
+        "tipJa": "I will → I'll、we will → we'll、you will → you'll、they will → they'll。will を みじかく すると 'll（I will → I'll）。' は きえた wi の しるし。"
+      },
+      "vocab": [
+        {
+          "en": "moon",
+          "ja": "つき",
+          "emoji": "🌙",
+          "core": true
+        },
+        {
+          "en": "Earth",
+          "ja": "ちきゅう",
+          "emoji": "🌍"
+        },
+        {
+          "en": "sun",
+          "ja": "たいよう",
+          "emoji": "☀️"
+        },
+        {
+          "en": "planetarium",
+          "ja": "プラネタリウム",
+          "emoji": "🌌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're in the planetarium. The room is dark, and the stars are on the ceiling. It's beautiful! Today, we're going to learn about the moon and the Earth. Today's sentence is: The moon goes around the Earth. Say it with me. The moon goes around the Earth. Great! And the Earth goes around the sun. It takes about one year. いつも ほんとうの ことは goes や takes の かたちで いうよ。 Let's do it with our bodies. Be the sun. Be the Earth. Now, walk around the sun. Riko is the moon. She goes around the Earth. It takes about one month. Fun! Now, phonics. I will. I'll. We will. We'll. You will. You'll. They will. They'll. The apostrophe shows the missing letters, w and i. Okay, let's talk about the moon and the sun!",
+      "conversation": {
+        "scene": "In the planetarium, learning how the moon and the Earth move",
+        "sceneJa": "天文台の プラネタリウムで",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Wow, the ceiling is full of stars!",
+            "ja": "わあ、てんじょうが ほしで いっぱい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look. This is the Earth, and this is the moon. The moon goes around the Earth.",
+            "ja": "みて。これが ちきゅうで、これが つき。つきは ちきゅうの まわりを まわるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How long does it take?",
+            "ja": "どのくらい かかるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It takes about one month.",
+            "ja": "だいたい 1かげつよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And the Earth goes around the sun, right?",
+            "ja": "それで、ちきゅうは たいようの まわりを まわるんだよね？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes! It takes about one year. So one trip is one birthday!",
+            "ja": "そう！だいたい 1ねん かかる。だから 1しゅうで おたんじょうび 1かい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Cool! I'll tell my family.",
+            "ja": "すごい！かぞくに おしえよう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "The moon goes around the Earth. の ように、うちゅうの ことを 1つ おしえて あげよう。How long does it take? と きかれたら It takes about ～. で こたえよう",
+          "starterEn": "Hi! I'm Birimo. We're in the planetarium. The moon goes around the Earth. Do you know something about space? Tell me!",
+          "targetExpressions": [
+            "The moon goes around the Earth.",
+            "The Earth goes around the sun.",
+            "It takes about ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The moon goes around the Earth.（いつもの ことは goes）",
+          "It takes about one month / one year.",
+          "I'll・we'll・you'll・they'll（' は きえた wi）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 492,
+      "world": 17,
+      "title": "Planets in Space",
+      "titleJa": "うちゅうの わくせい",
+      "school": {
+        "grade": "中2",
+        "topic": "Mars is red. Jupiter is very big.：わくせいの とくちょうを せつめいする",
+        "grammar": "～ is ＋ようす.・～ has ～.",
+        "expressions": [
+          {
+            "en": "Mars is red. Jupiter is very big.",
+            "ja": "かせいは あかい。もくせいは とても おおきい。",
+            "core": true
+          },
+          {
+            "en": "Saturn has beautiful rings.",
+            "ja": "どせいには きれいな わが あります。"
+          },
+          {
+            "en": "She'll love this model!",
+            "ja": "かのじょは この もけいが きっと きにいるよ！"
+          }
+        ],
+        "testPoints": [
+          "わくせいの いろ・おおきさ・とくちょうを ～ is ～. ～ has ～. で いえる",
+          "he'll・she'll・it'll・that'll"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a big ball.",
+          "ja": "おおきな ボールを つくって。",
+          "action": "りょうてで おおきな まるを つくる",
+          "emoji": "🟠"
+        },
+        {
+          "en": "Make a small ball.",
+          "ja": "ちいさな ボールを つくって。",
+          "action": "ゆびで ちいさな まるを つくる",
+          "emoji": "🔴"
+        },
+        {
+          "en": "Draw a ring.",
+          "ja": "わを かいて。",
+          "action": "ゆびで まわりに わを かく",
+          "emoji": "🪐"
+        },
+        {
+          "en": "Count the planets.",
+          "ja": "わくせいを かぞえて。",
+          "action": "ゆびを おって 1から 8まで かぞえる",
+          "emoji": "🔢"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions-will",
+        "focus": [
+          "'ll"
+        ],
+        "sounds": [
+          "/l/"
+        ],
+        "words": [
+          "he'll",
+          "she'll",
+          "it'll",
+          "that'll"
+        ],
+        "tipJa": "he will → he'll、she will → she'll、it will → it'll、that will → that'll。will を みじかく すると 'll（I will → I'll）。' は きえた wi の しるし。"
+      },
+      "vocab": [
+        {
+          "en": "planet",
+          "ja": "わくせい",
+          "emoji": "🪐",
+          "core": true
+        },
+        {
+          "en": "Mars",
+          "ja": "かせい",
+          "emoji": "🔴"
+        },
+        {
+          "en": "Jupiter",
+          "ja": "もくせい",
+          "emoji": "🟠"
+        },
+        {
+          "en": "ring",
+          "ja": "わ",
+          "emoji": "💍"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Look at these planet models. They're hanging from the ceiling. There are eight planets around our sun. Today, we're going to describe them. Today's sentence is: Mars is red. Jupiter is very big. Say it with me. Mars is red. Jupiter is very big. Excellent! We can also say, Saturn has beautiful rings. Venus is very hot. いろや おおきさで わくせいを せつめい しよう。 Let's practice. Which planet is red? Mars is red. Which planet has rings? Saturn has rings. Which planet do we live on? We live on the Earth. Very good! Now, phonics. He will. He'll. She will. She'll. It will. It'll. That will. That'll. Listen to two sentences. My sister loves Saturn. She'll love this model! That'll be fun! It'll be great! Okay, choose your favorite planet and tell us about it!",
+      "conversation": {
+        "scene": "Looking at the planet models",
+        "sceneJa": "惑星の 模型を 見る",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at that red planet! Is that Mars?",
+            "ja": "あの あかい わくせい みて！あれ かせい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. Mars is red. And this big one is Jupiter.",
+            "ja": "ええ。かせいは あかいの。そして この おおきいのが もくせい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Jupiter is very big! Much bigger than the Earth.",
+            "ja": "もくせいって すごく おおきい！ちきゅうより ずっと おおきいね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My favorite is Saturn. It has beautiful rings.",
+            "ja": "わたしの おきにいりは どせい。きれいな わが あるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My sister loves Saturn, too. She'll love this model!",
+            "ja": "ぼくの いもうとも どせいが だいすき。この もけい きっと きにいるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's take a picture of it. It'll be a nice present.",
+            "ja": "しゃしんを とろう。いい プレゼントに なるよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな わくせいを えらんで、～ is red / big. ～ has rings. の ように せつめい しよう",
+          "starterEn": "Hi! I'm Kiko. My favorite planet is Saturn. It has beautiful rings. What's your favorite planet? Tell me about it!",
+          "targetExpressions": [
+            "Mars is red.",
+            "Jupiter is very big.",
+            "Saturn has rings.",
+            "My favorite planet is ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Mars is red. Jupiter is very big.（わくせいの せつめい）",
+          "Saturn has beautiful rings.",
+          "he'll・she'll・it'll・that'll"
+        ]
+      }
+    },
+    {
+      "lessonNo": 493,
+      "world": 17,
+      "title": "Life on a Space Station",
+      "titleJa": "うちゅうステーションの くらし",
+      "school": {
+        "grade": "中2",
+        "topic": "Astronauts sleep in sleeping bags.：うちゅうでの くらしを せつめいする",
+        "grammar": "Astronauts ～.（ふだんの こと）・They can't ～.",
+        "expressions": [
+          {
+            "en": "Astronauts sleep in sleeping bags.",
+            "ja": "うちゅうひこうしは ねぶくろで ねます。",
+            "core": true
+          },
+          {
+            "en": "They float in the space station.",
+            "ja": "うちゅうステーションの なかで ういています。"
+          },
+          {
+            "en": "They can't take a bath. They use wet towels.",
+            "ja": "おふろに はいれません。ぬれた タオルを つかいます。"
+          }
+        ],
+        "testPoints": [
+          "うちゅうでの くらしを ふだんの ことの かたちで いえる",
+          "won't・didn't・weren't・couldn't（n't の みじかい かたち）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Float like an astronaut.",
+          "ja": "うちゅうひこうしみたいに ういて。",
+          "action": "ゆっくり うでを うごかして ふわふわ",
+          "emoji": "👩‍🚀"
+        },
+        {
+          "en": "Get into your sleeping bag.",
+          "ja": "ねぶくろに はいって。",
+          "action": "あしから ふくろに はいる まね",
+          "emoji": "🛌"
+        },
+        {
+          "en": "Push the wall softly.",
+          "ja": "かべを そっと おして。",
+          "action": "てで そっと おして うしろへ",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Catch the floating water.",
+          "ja": "ういている みずを つかまえて。",
+          "action": "くちで ぱくっと する まね",
+          "emoji": "💧"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions-will",
+        "focus": [
+          "n't"
+        ],
+        "sounds": [
+          "/nt/"
+        ],
+        "words": [
+          "won't",
+          "didn't",
+          "weren't",
+          "couldn't"
+        ],
+        "tipJa": "will not → won't（willn't では ない）。did not → didn't、were not → weren't、could not → couldn't。' は きえた o の しるし。"
+      },
+      "vocab": [
+        {
+          "en": "astronaut",
+          "ja": "うちゅうひこうし",
+          "emoji": "👩‍🚀",
+          "core": true
+        },
+        {
+          "en": "space station",
+          "ja": "うちゅうステーション",
+          "emoji": "🛰️"
+        },
+        {
+          "en": "float",
+          "ja": "うく",
+          "emoji": "🎈"
+        },
+        {
+          "en": "sleeping bag",
+          "ja": "ねぶくろ",
+          "emoji": "🛌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we're in the space station room. There's a model of a real space station. Astronauts live there for months! How do they live? Today's sentence is: Astronauts sleep in sleeping bags. Say it with me. Astronauts sleep in sleeping bags. Great! The bags are on the wall, so they don't float away. In space, everything floats. They float in the space station. They can't take a bath. They use wet towels. うちゅうでは みずも ういて しまうんだ。 Let's pretend. Float like an astronaut. Get into your sleeping bag. Good night! Now, phonics. Will not. Won't. Won't is special. We don't say willn't. Did not. Didn't. Were not. Weren't. Could not. Couldn't. The apostrophe shows the missing o. Okay, what do you want to know about life in space? Let's talk!",
+      "conversation": {
+        "scene": "In the space station exhibit room",
+        "sceneJa": "宇宙ステーションの 展示室で",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! There are sleeping bags on the wall.",
+            "ja": "みて！かべに ねぶくろが ある。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Astronauts sleep in sleeping bags. Everything floats in space.",
+            "ja": "うちゅうひこうしは ねぶくろで ねるの。うちゅうでは なんでも うくのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "So they float in the space station all day?",
+            "ja": "じゃあ いちにちじゅう うちゅうステーションの なかで ういてるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right. And they can't take a bath. They use wet towels.",
+            "ja": "そうよ。それに おふろに はいれないの。ぬれた タオルを つかうのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "No bath? I couldn't live there!",
+            "ja": "おふろ なし？わたしは そこでは くらせないな！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Don't worry. You won't live there. You'll visit for a short time!",
+            "ja": "だいじょうぶ。すむわけじゃ ないよ。ちょっと いくだけ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha! Right.",
+            "ja": "あはは！そうだね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "うちゅうの くらしで しりたい ことを きいたり、Astronauts ～. で せつめい したり しよう",
+          "starterEn": "Hi! I'm Haru. I'm at the space station model. Astronauts sleep in sleeping bags! What do you want to know about life in space?",
+          "targetExpressions": [
+            "Astronauts sleep in sleeping bags.",
+            "They float.",
+            "They can't take a bath."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Astronauts sleep in sleeping bags.（うちゅうの くらし）",
+          "They float. They can't take a bath.",
+          "won't（will not）・didn't・weren't・couldn't"
+        ]
+      }
+    },
+    {
+      "lessonNo": 494,
+      "world": 17,
+      "title": "Shooting Stars",
+      "titleJa": "ながれぼし",
+      "school": {
+        "grade": "中2",
+        "topic": "Look! A shooting star! Make a wish!：みつけた ものを しらせる・ねがいごと",
+        "grammar": "Look! A ～!・Make a wish!・What did you wish for? ― It's a secret!",
+        "expressions": [
+          {
+            "en": "Look! A shooting star! Make a wish!",
+            "ja": "みて！ながれぼし！おねがい ごとを して！",
+            "core": true
+          },
+          {
+            "en": "What did you wish for? ― It's a secret!",
+            "ja": "なにを ねがったの？ ― ひみつ！"
+          },
+          {
+            "en": "We'll see more tonight.",
+            "ja": "こんや もっと みられるよ。"
+          }
+        ],
+        "testPoints": [
+          "Look! A ～! で みつけた ものを しらせられる",
+          "I'll・we'll・won't・don't の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Lie down on the blanket.",
+          "ja": "もうふに ねころんで。",
+          "action": "せなかを つけて ねる まね",
+          "emoji": "🛌"
+        },
+        {
+          "en": "Look at the sky.",
+          "ja": "そらを みて。",
+          "action": "うえを じっと みる",
+          "emoji": "🌌"
+        },
+        {
+          "en": "Point quickly!",
+          "ja": "はやく ゆびさして！",
+          "action": "さっと そらを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Close your eyes and wish.",
+          "ja": "めを とじて ねがって。",
+          "action": "てを あわせて めを とじる",
+          "emoji": "🙏"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions-will",
+        "focus": [
+          "'ll",
+          "n't"
+        ],
+        "sounds": [
+          "/l/",
+          "/nt/"
+        ],
+        "words": [
+          "I'll",
+          "we'll",
+          "won't",
+          "don't"
+        ],
+        "tipJa": "I'll・we'll（will の みじかい かたち）と won't・don't（not の みじかい かたち）。"
+      },
+      "vocab": [
+        {
+          "en": "shooting star",
+          "ja": "ながれぼし",
+          "emoji": "🌠",
+          "core": true
+        },
+        {
+          "en": "wish",
+          "ja": "ねがいごと",
+          "emoji": "🙏"
+        },
+        {
+          "en": "secret",
+          "ja": "ひみつ",
+          "emoji": "🤫"
+        },
+        {
+          "en": "sky",
+          "ja": "そら",
+          "emoji": "🌌"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! It's dark, and we're on the roof. We're lying on our blankets. Tonight, there will be lots of shooting stars. Keep your eyes open! Today's sentence is: Look! A shooting star! Make a wish! Say it with me. Look! A shooting star! Make a wish! Great! When you see something exciting, say Look! A shooting star! Look! A rainbow! Look! A big moon! Then ask your friend, What did you wish for? Your friend can say, It's a secret! ねがいごとは ひみつに しても いいよ。 Let's practice. Look! A shooting star! Make a wish! What did you wish for? It's a secret! Now, phonics. I'll. We'll. Won't. Don't. Will becomes 'll. Not becomes n't. And will not is won't. Okay, look at the sky. What will you wish for?",
+      "conversation": {
+        "scene": "On the roof, watching shooting stars",
+        "sceneJa": "屋上で 流れ星を 見る",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look! A shooting star!",
+            "ja": "みて！ながれぼし！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Make a wish! Quick!",
+            "ja": "おねがい ごとを して！はやく！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh, it's gone. Did you make a wish?",
+            "ja": "あ、きえちゃった。おねがい した？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, I did.",
+            "ja": "うん、したよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What did you wish for?",
+            "ja": "なにを ねがったの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's a secret! I won't tell you.",
+            "ja": "ひみつ！おしえないよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Don't worry, Kiko. We'll see more tonight.",
+            "ja": "しんぱい しないで、キコ。こんや もっと みられるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ながれぼしを みつけたら Look! A shooting star! Make a wish! と いおう。ねがいごとを きかれても It's a secret! で OK",
+          "starterEn": "Look! Look! A shooting star! Make a wish! I'm Riko. Did you make a wish? What did you wish for?",
+          "targetExpressions": [
+            "Look! A shooting star!",
+            "Make a wish!",
+            "What did you wish for?",
+            "It's a secret!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Look! A shooting star! Make a wish!",
+          "What did you wish for? ― It's a secret!",
+          "I'll・we'll・won't・don't"
+        ]
+      }
+    },
+    {
+      "lessonNo": 495,
+      "world": 17,
+      "title": "Space Quiz Night",
+      "titleJa": "うちゅう クイズナイト",
+      "school": {
+        "grade": "中2",
+        "topic": "Which planet is the biggest?：うちゅうクイズを だしあう（まとめ）",
+        "grammar": "Which planet is ～?・I think it's ～.・That's right! / Good try!",
+        "expressions": [
+          {
+            "en": "Which planet is the biggest?",
+            "ja": "いちばん おおきい わくせいは どれ？",
+            "core": true
+          },
+          {
+            "en": "I think it's Jupiter. ― That's right!",
+            "ja": "もくせいだと おもう。 ― せいかい！"
+          },
+          {
+            "en": "Good try! The answer is Mars.",
+            "ja": "おしい！こたえは かせいです。"
+          }
+        ],
+        "testPoints": [
+          "Which ～? で クイズを だせる・I think it's ～. で こたえられる",
+          "'ll・won't・-tion・-sion の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Press the buzzer.",
+          "ja": "ボタンを おして。",
+          "action": "てのひらで ボタンを ポン",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "あごに てを あてて かんがえる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Cheer for your team.",
+          "ja": "チームを おうえん して。",
+          "action": "こぶしを あげて「がんばれ！」",
+          "emoji": "📣"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "'ll",
+          "n't",
+          "-tion",
+          "-sion"
+        ],
+        "sounds": [
+          "/l/",
+          "/nt/",
+          "/ʃən/",
+          "/ʒən/"
+        ],
+        "words": [
+          "I'll",
+          "won't",
+          "she'll",
+          "rotation",
+          "vision"
+        ],
+        "tipJa": "ブロック3 の まとめ: I'll・she'll・won't（みじかい かたち）と rotation（tion）・vision（sion）。"
+      },
+      "vocab": [
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "💡"
+        },
+        {
+          "en": "team",
+          "ja": "チーム",
+          "emoji": "👥"
+        },
+        {
+          "en": "point",
+          "ja": "てんすう",
+          "emoji": "💯"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! It's Space Quiz Night at the observatory! We have two teams. Red team and blue team. Today's sentence is: Which planet is the biggest? Say it with me. Which planet is the biggest? Great! The biggest means number one in size. いちばん おおきいは the biggest だよ。 To answer, say, I think it's Jupiter. If it's correct, the quiz master says, That's right! If not, Good try! The answer is Mars. Let's make our own quiz questions, too. Which planet is red? Which planet has rings? What goes around the Earth? Great questions! Listen carefully, and don't shout the answer. Wait for your turn. Now, phonics review. I'll. Won't. She'll. Rotation. Vision. You remember them all! Okay, are you ready? Raise your hand and answer! Good luck, everyone!",
+      "conversation": {
+        "scene": "Space Quiz Night at the observatory",
+        "sceneJa": "天文台の 宇宙クイズナイト",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to Space Quiz Night! Question one. Which planet is the biggest?",
+            "ja": "うちゅう クイズナイトへ ようこそ！だい1もん。いちばん おおきい わくせいは どれ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I think it's Jupiter!",
+            "ja": "もくせいだと おもう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right! One point for the red team.",
+            "ja": "せいかい！あかチームに 1てん。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Question two. Which planet is red?",
+            "ja": "だい2もん。あかい わくせいは どれ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think it's Saturn.",
+            "ja": "どせいだと おもう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Good try! The answer is Mars.",
+            "ja": "おしい！こたえは かせいです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'll get the next one!",
+            "ja": "つぎは わたしが あてるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "うちゅうクイズを だしあおう。Which planet is ～? と きいて、I think it's ～. で こたえよう。あいてが まちがえたら Good try! と いおう",
+          "starterEn": "Welcome to Space Quiz Night! I'm Birimo, the quiz master. Question one. Which planet is red? What do you think?",
+          "targetExpressions": [
+            "Which planet is ～?",
+            "I think it's ～.",
+            "That's right!",
+            "Good try!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Which planet is the biggest? ― I think it's Jupiter.",
+          "That's right! / Good try! The answer is ～.",
+          "I'll・won't・she'll・rotation・vision"
+        ]
+      }
+    },
+    {
+      "lessonNo": 496,
+      "world": 17,
+      "title": "Someday I Will Fly",
+      "titleJa": "いつか そらを とぶ",
+      "school": {
+        "grade": "中2",
+        "topic": "Someday I will go to space.：しょうらいの ゆめを いう（will）",
+        "grammar": "Someday I will ～.・I will be ～.",
+        "expressions": [
+          {
+            "en": "Someday I will go to space.",
+            "ja": "いつか うちゅうへ いきます。",
+            "core": true
+          },
+          {
+            "en": "I will be an astronaut.",
+            "ja": "うちゅうひこうしに なります。"
+          },
+          {
+            "en": "I will see the Earth from space.",
+            "ja": "うちゅうから ちきゅうを みます。"
+          }
+        ],
+        "testPoints": [
+          "Someday I will ～. で ゆめを いえる",
+          "おなじ おとで つづりの ちがう ことば（see / sea、meet / meat）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your helmet.",
+          "ja": "ヘルメットを かぶって。",
+          "action": "りょうてで ヘルメットを かぶる まね",
+          "emoji": "⛑️"
+        },
+        {
+          "en": "Count down from five.",
+          "ja": "5から カウントダウン して。",
+          "action": "ゆびを 5から おって いく",
+          "emoji": "🔢"
+        },
+        {
+          "en": "Blast off!",
+          "ja": "はっしゃ！",
+          "action": "しゃがんでから ジャンプ",
+          "emoji": "🚀"
+        },
+        {
+          "en": "Wave to the Earth.",
+          "ja": "ちきゅうに てを ふって。",
+          "action": "したを みて てを ふる",
+          "emoji": "🌍"
+        }
+      ],
+      "phonics": {
+        "rule": "homophones",
+        "focus": [
+          "ee",
+          "ea"
+        ],
+        "sounds": [
+          "/iː/"
+        ],
+        "words": [
+          "see",
+          "sea",
+          "meet",
+          "meat"
+        ],
+        "tipJa": "see（みる）と sea（うみ）、meet（あう）と meat（にく）は おなじ おと。いみで つづりを えらぶ。"
+      },
+      "vocab": [
+        {
+          "en": "someday",
+          "ja": "いつか",
+          "emoji": "🌈",
+          "core": true
+        },
+        {
+          "en": "dream",
+          "ja": "ゆめ",
+          "emoji": "💭"
+        },
+        {
+          "en": "rocket",
+          "ja": "ロケット",
+          "emoji": "🚀"
+        },
+        {
+          "en": "helmet",
+          "ja": "ヘルメット",
+          "emoji": "⛑️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Look at these photos on the wall. They're astronauts. They are floating and smiling. Do you want to go to space someday? Today's sentence is: Someday I will go to space. Say it with me. Someday I will go to space. Wonderful! Someday means one day in the future. いつかの ゆめは Someday I will ～. で いえるよ。 I will be an astronaut. I will see the Earth from space. Your dream doesn't have to be about space. Someday I will be a baker. Someday I will swim in the sea. Let's practice. Someday I will travel. Great! Now, phonics. See and sea. They sound the same, but the meanings are different. See is with your eyes. Sea is the ocean. Meet and meat. Nice to meet you. I like meat. Okay, what's your dream?",
+      "conversation": {
+        "scene": "Looking at astronaut photos and sharing dreams",
+        "sceneJa": "宇宙飛行士の 写真を 見て、夢を 話す",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at this photo. The astronaut is smiling in space.",
+            "ja": "この しゃしん みて。うちゅうひこうしが うちゅうで わらってる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "So cool! Someday I will go to space.",
+            "ja": "かっこいい！いつか ぼくも うちゅうへ いく。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Me too. I will see the Earth from space.",
+            "ja": "わたしも。うちゅうから ちきゅうを みるんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My dream is different. Someday I will draw picture books.",
+            "ja": "わたしの ゆめは ちがうよ。いつか えほんを かくの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great! You can draw a book about space!",
+            "ja": "いいね！うちゅうの えほんを かけるよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful dreams, everyone.",
+            "ja": "みんな すてきな ゆめね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Someday I will ～. で じぶんの ゆめを いおう（うちゅう いがいの ゆめでも OK）",
+          "starterEn": "Hi! I'm Haru. Someday I will go to space! I will see the Earth from a rocket. What's your dream? What will you do someday?",
+          "targetExpressions": [
+            "Someday I will ～.",
+            "I will be ～.",
+            "My dream is ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Someday I will go to space.（いつかの ゆめ）",
+          "I will be an astronaut.",
+          "see / sea・meet / meat（おなじ おと、ちがう いみ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 497,
+      "world": 17,
+      "title": "What Will You Be?",
+      "titleJa": "なにに なる？",
+      "school": {
+        "grade": "中2",
+        "topic": "What will you be in twenty years?：しょうらいの じぶんを そうぞうする",
+        "grammar": "What will you be ～? ― I'll be ～.・I think I'll be ～.",
+        "expressions": [
+          {
+            "en": "What will you be in twenty years?",
+            "ja": "20ねんごは なにに なっているかな？",
+            "core": true
+          },
+          {
+            "en": "I'll be a doctor.",
+            "ja": "おいしゃさんに なっていると おもう。"
+          },
+          {
+            "en": "I think I'll be a teacher. I like helping people.",
+            "ja": "せんせいに なっていると おもう。ひとを たすけるのが すきだから。"
+          }
+        ],
+        "testPoints": [
+          "What will you be ～? と きいて、I'll be ～. で こたえられる",
+          "sun / son、one / won（おなじ おと、ちがう いみ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Be a doctor.",
+          "ja": "おいしゃさんに なって。",
+          "action": "ちょうしんきを あてる まね",
+          "emoji": "🩺"
+        },
+        {
+          "en": "Be a chef.",
+          "ja": "シェフに なって。",
+          "action": "フライパンを ふる まね",
+          "emoji": "🍳"
+        },
+        {
+          "en": "Be a pilot.",
+          "ja": "パイロットに なって。",
+          "action": "りょううでを つばさに して とぶ",
+          "emoji": "✈️"
+        },
+        {
+          "en": "Be a singer.",
+          "ja": "かしゅに なって。",
+          "action": "マイクを もって うたう まね",
+          "emoji": "🎤"
+        }
+      ],
+      "phonics": {
+        "rule": "homophones",
+        "focus": [
+          "u",
+          "o"
+        ],
+        "sounds": [
+          "/ʌ/"
+        ],
+        "words": [
+          "sun",
+          "son",
+          "one",
+          "won"
+        ],
+        "tipJa": "sun（たいよう）と son（むすこ）、one（ひとつ）と won（かった）は おなじ おと。いみで つづりを えらぶ。"
+      },
+      "vocab": [
+        {
+          "en": "future",
+          "ja": "みらい",
+          "emoji": "🔮",
+          "core": true
+        },
+        {
+          "en": "doctor",
+          "ja": "いしゃ",
+          "emoji": "🩺"
+        },
+        {
+          "en": "chef",
+          "ja": "シェフ",
+          "emoji": "👨‍🍳"
+        },
+        {
+          "en": "pilot",
+          "ja": "パイロット",
+          "emoji": "✈️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today, let's use our imagination. Close your eyes. It's twenty years from now. You're a grown-up! What are you doing? Today's sentence is: What will you be in twenty years? Say it with me. What will you be in twenty years? Great! You can answer, I'll be a doctor. I'll be a chef. We aren't sure, so we can say, I think I'll be a teacher. Add a reason. I like helping people. I like cooking. りゆうを ひとこと いうと、もっと つたわるね。 Let's practice. What will you be in twenty years? I think I'll be a pilot. I like airplanes. Great! Now, phonics. Sun and son. One and won. The sun is hot. He is her son. I have one cat. We won the game! Same sounds, different spellings. Okay, what will you be?",
+      "conversation": {
+        "scene": "Imagining their future selves",
+        "sceneJa": "未来の 自分を 想像する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Close your eyes. It's twenty years from now. What will you be?",
+            "ja": "めを とじて。いまから 20ねんご。なにに なっているかしら？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I think I'll be a doctor. I like helping people.",
+            "ja": "おいしゃさんに なっていると おもう。ひとを たすけるのが すきだから。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'll be a pilot! I'll fly all over the world.",
+            "ja": "パイロット！せかいじゅうを とぶんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'll be a picture book artist. What will you be, Birimo?",
+            "ja": "えほん さっか。ビリモは なにに なる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'll be a chef. I'll cook star cookies for you every day!",
+            "ja": "シェフ。まいにち ほしの クッキーを つくって あげるね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yum! I'll visit your restaurant.",
+            "ja": "おいしそう！ビリモの レストランに いくよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What will you be in twenty years? と きかれたら、I think I'll be ～. I like ～. と りゆうも いおう（まだ きまって いなくても OK）",
+          "starterEn": "Hi! I'm Riko. Let's imagine. It's twenty years from now. I think I'll be a doctor. What will you be in twenty years?",
+          "targetExpressions": [
+            "What will you be in twenty years?",
+            "I'll be ～.",
+            "I think I'll be ～.",
+            "I like ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What will you be in twenty years? ― I'll be a doctor.",
+          "I think I'll be ～. I like ～.（りゆうも ひとこと）",
+          "sun / son・one / won"
+        ]
+      }
+    },
+    {
+      "lessonNo": 498,
+      "world": 17,
+      "title": "Robots Will Help Us",
+      "titleJa": "ロボットが てつだって くれる",
+      "school": {
+        "grade": "中2",
+        "topic": "I think robots will help us at home.：みらいの くらしを よそうする",
+        "grammar": "I think ～ will ～.・I don't think ～ will ～.",
+        "expressions": [
+          {
+            "en": "I think robots will help us at home.",
+            "ja": "ロボットが いえで てつだって くれると おもう。",
+            "core": true
+          },
+          {
+            "en": "I think cars will fly in the sky.",
+            "ja": "くるまが そらを とぶと おもう。"
+          },
+          {
+            "en": "I don't think so. ― Really? Why?",
+            "ja": "そうは おもわないな。 ― ほんとう？どうして？"
+          }
+        ],
+        "testPoints": [
+          "I think ～ will ～. で みらいを よそうできる",
+          "two / to / too、blue / blew（おなじ おと、ちがう いみ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk like a robot.",
+          "ja": "ロボットみたいに あるいて。",
+          "action": "かくかく うごいて あるく",
+          "emoji": "🤖"
+        },
+        {
+          "en": "Drive a flying car.",
+          "ja": "そらとぶ くるまを うんてん して。",
+          "action": "ハンドルを もって うえへ",
+          "emoji": "🚗"
+        },
+        {
+          "en": "Fold the laundry.",
+          "ja": "せんたくものを たたんで。",
+          "action": "シャツを たたむ まね",
+          "emoji": "👕"
+        },
+        {
+          "en": "Beep beep!",
+          "ja": "ピピッ！",
+          "action": "ロボットの こえで いう",
+          "emoji": "🔊"
+        }
+      ],
+      "phonics": {
+        "rule": "homophones",
+        "focus": [
+          "o",
+          "ue",
+          "ew"
+        ],
+        "sounds": [
+          "/uː/"
+        ],
+        "words": [
+          "two",
+          "to",
+          "too",
+          "blue",
+          "blew"
+        ],
+        "tipJa": "two（ふたつ）・to（〜へ）・too（〜も）、blue（あお）と blew（ふいた）は おなじ おと。いみで つづりを えらぶ。"
+      },
+      "vocab": [
+        {
+          "en": "robot",
+          "ja": "ロボット",
+          "emoji": "🤖",
+          "core": true
+        },
+        {
+          "en": "home",
+          "ja": "いえ",
+          "emoji": "🏠"
+        },
+        {
+          "en": "laundry",
+          "ja": "せんたくもの",
+          "emoji": "👕"
+        },
+        {
+          "en": "flying car",
+          "ja": "そらとぶ くるま",
+          "emoji": "🚗"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're in the Future Life room. Look! There's a robot folding laundry, and a model of a flying car. What will life be like in the future? Today's sentence is: I think robots will help us at home. Say it with me. I think robots will help us at home. Excellent! I think cars will fly in the sky. I think we will live on the moon. Your friend may say, I don't think so. That's okay. Ask, Really? Why? いけんが ちがっても だいじょうぶ。りゆうを きいてみよう。 Let's practice. I think robots will cook dinner. Really? I don't think so. Why? Robots can't taste food! Ha ha! Now, phonics. Two, to, too. I have two eyes. Let's go to the moon. I like it, too. Blue and blew. The sky is blue. The wind blew. Okay, what will the future be like? Tell us your idea!",
+      "conversation": {
+        "scene": "In the Future Life exhibit room",
+        "sceneJa": "未来の くらし展示室で",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look! That robot is folding laundry!",
+            "ja": "みて！あの ロボット せんたくものを たたんでる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I think robots will help us at home.",
+            "ja": "ロボットが いえで てつだって くれると おもう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think cars will fly in the sky, too.",
+            "ja": "くるまも そらを とぶと おもう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hmm, I don't think so.",
+            "ja": "うーん、そうは おもわないな。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Really? Why?",
+            "ja": "ほんとう？どうして？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The sky will be too busy! Birds won't like it.",
+            "ja": "そらが こみすぎちゃう！とりが いやがるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good point, Birimo. Everyone has different ideas.",
+            "ja": "いい ところに きづいたわね、ビリモ。みんな ちがう かんがえが あるのね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I think ～ will ～. で みらいの くらしを よそうしよう。いけんが ちがったら Really? Why? と きいてみよう",
+          "starterEn": "Hi! I'm Riko. I'm in the Future Life room. I think robots will help us at home. What do you think the future will be like?",
+          "targetExpressions": [
+            "I think ～ will ～.",
+            "I don't think so.",
+            "Really? Why?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I think robots will help us at home.（みらいの よそう）",
+          "I don't think so. ― Really? Why?",
+          "two / to / too・blue / blew"
+        ]
+      }
+    },
+    {
+      "lessonNo": 499,
+      "world": 17,
+      "title": "Because It's Exciting",
+      "titleJa": "わくわく するから",
+      "school": {
+        "grade": "中2",
+        "topic": "I want to go to Mars because it's exciting.：りゆうを つけて いう（because）",
+        "grammar": "I want to ～ because ～.・Why? ― Because ～.",
+        "expressions": [
+          {
+            "en": "I want to go to Mars because it's exciting.",
+            "ja": "かせいに いきたい。わくわく するから。",
+            "core": true
+          },
+          {
+            "en": "Why do you want to go there? ― Because I like red.",
+            "ja": "どうして そこへ いきたいの？ ― あかが すきだから。"
+          },
+          {
+            "en": "I want to go to the moon because it's close.",
+            "ja": "つきに いきたい。ちかいから。"
+          }
+        ],
+        "testPoints": [
+          "because で りゆうを いえる・Why? と きける",
+          "there / their、here / hear（おなじ おと、ちがう いみ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jump on the moon.",
+          "ja": "つきで ジャンプ して。",
+          "action": "ゆっくり ふわっと ジャンプ",
+          "emoji": "🌕"
+        },
+        {
+          "en": "Pick up a red rock.",
+          "ja": "あかい いしを ひろって。",
+          "action": "しゃがんで いしを ひろう まね",
+          "emoji": "🪨"
+        },
+        {
+          "en": "Look through the window.",
+          "ja": "まどから みて。",
+          "action": "まるい まどを のぞく まね",
+          "emoji": "🪟"
+        },
+        {
+          "en": "Give a thumbs-up.",
+          "ja": "おやゆびを たてて。",
+          "action": "グッドの ポーズ",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "homophones",
+        "focus": [
+          "ere",
+          "eir",
+          "ear"
+        ],
+        "sounds": [
+          "/ɛər/",
+          "/ɪər/"
+        ],
+        "words": [
+          "there",
+          "their",
+          "here",
+          "hear"
+        ],
+        "tipJa": "there（あそこ）と their（かれらの）、here（ここ）と hear（きく）は おなじ おと。いみで つづりを えらぶ。"
+      },
+      "vocab": [
+        {
+          "en": "because",
+          "ja": "なぜなら",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "exciting",
+          "ja": "わくわく する",
+          "emoji": "🤩"
+        },
+        {
+          "en": "reason",
+          "ja": "りゆう",
+          "emoji": "🗨️"
+        },
+        {
+          "en": "trip",
+          "ja": "りょこう",
+          "emoji": "🧳"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Imagine you have a space rocket. You can go anywhere! Where do you want to go? And why? Today's sentence is: I want to go to Mars because it's exciting. Say it with me. I want to go to Mars because it's exciting. Great! Because tells the reason. I want to go to the moon because it's close. I want to go to Saturn because the rings are pretty. りゆうは because の あとに いうよ。 Your friend can ask, Why? Then you say, Because I like red. Let's practice. Where do you want to go? I want to go to Jupiter. Why? Because it's very big! Great job! Now, phonics. There and their. Look over there! It's their telescope. Here and hear. Come here. I can hear music. Okay, where do you want to go, and why?",
+      "conversation": {
+        "scene": "Talking about which planet they want to visit and why",
+        "sceneJa": "理由を つけて、行きたい 星を 話す",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Imagine we have a rocket. Where do you want to go?",
+            "ja": "ロケットが あると そうぞう してみて。どこに いきたい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I want to go to Mars because it's exciting.",
+            "ja": "かせいに いきたい。わくわく するから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want to go to Saturn because the rings are pretty.",
+            "ja": "どせいに いきたい。わが きれいだから。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Birimo, where do you want to go?",
+            "ja": "ビリモは どこに いきたい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I want to go to the moon.",
+            "ja": "つきに いきたい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Why?",
+            "ja": "どうして？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Because it's close. I can come home for dinner!",
+            "ja": "ちかいから。ばんごはんに かえって これるもん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I want to go to ～ because ～. で いきたい ばしょと りゆうを いおう。Why? と きかれたら Because ～. で こたえよう",
+          "starterEn": "Hi! I'm Kiko. I want to go to Saturn because the rings are pretty. Where do you want to go? Why?",
+          "targetExpressions": [
+            "I want to go to ～ because ～.",
+            "Why?",
+            "Because ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I want to go to Mars because it's exciting.（because で りゆう）",
+          "Why? ― Because ～.",
+          "there / their・here / hear"
+        ]
+      }
+    },
+    {
+      "lessonNo": 500,
+      "world": 17,
+      "title": "Lesson 500 Star Party",
+      "titleJa": "レッスン500 ほしぞら パーティー",
+      "school": {
+        "grade": "中2",
+        "topic": "Let's celebrate! We will keep going!：500かいを いわって、これからを ちかう（まとめ）",
+        "grammar": "Let's ～!・We will ～.・Congratulations!",
+        "expressions": [
+          {
+            "en": "Let's celebrate! We will keep going!",
+            "ja": "おいわい しよう！これからも つづけるよ！",
+            "core": true
+          },
+          {
+            "en": "Congratulations! ― Thank you!",
+            "ja": "おめでとう！ ― ありがとう！"
+          },
+          {
+            "en": "We studied together for five hundred lessons.",
+            "ja": "500かい いっしょに べんきょう したね。"
+          }
+        ],
+        "testPoints": [
+          "Let's celebrate! We will keep going! で おいわいと これからの けついを いえる",
+          "ワールド17 前半の つづりの まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Clap your hands.",
+          "ja": "てを たたいて。",
+          "action": "おおきく パチパチ",
+          "emoji": "👏"
+        },
+        {
+          "en": "Hold up five fingers.",
+          "ja": "ゆびを 5ほん たてて。",
+          "action": "かたてを ひらいて あげる",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Make a circle.",
+          "ja": "まるを つくって。",
+          "action": "りょうてで おおきな まる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Jump for joy!",
+          "ja": "よろこんで ジャンプ！",
+          "action": "ばんざいして ジャンプ",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ea",
+          "o",
+          "eir",
+          "-tion",
+          "'ll"
+        ],
+        "sounds": [
+          "/iː/",
+          "/uː/",
+          "/ɛər/",
+          "/ʃən/",
+          "/l/"
+        ],
+        "words": [
+          "sea",
+          "two",
+          "their",
+          "celebration",
+          "we'll"
+        ],
+        "tipJa": "ワールド17 前半の まとめ: sea・two・their（おなじ おとの ことば）、celebration（tion）、we'll（'ll）。"
+      },
+      "vocab": [
+        {
+          "en": "celebrate",
+          "ja": "いわう",
+          "emoji": "🎉",
+          "core": true
+        },
+        {
+          "en": "congratulations",
+          "ja": "おめでとう",
+          "emoji": "🎊"
+        },
+        {
+          "en": "hundred",
+          "ja": "ひゃく",
+          "emoji": "💯"
+        },
+        {
+          "en": "cake",
+          "ja": "ケーキ",
+          "emoji": "🎂"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! This is Lesson 500! Five hundred lessons! You studied so hard. Let's have a star party! Today's sentence is: Let's celebrate! We will keep going! Say it with me. Let's celebrate! We will keep going! Wonderful! When your friend does something great, say, Congratulations! And when someone says it to you, say, Thank you! ここまで がんばった じぶんを ほめてね。 Do you remember Lesson 1? Look! Stop! Come here! Go! Now you can talk about the future, the past, and your dreams. You can ask questions, give reasons, and tell stories. Amazing! Now, phonics. Sea, two, their. Same sounds, different spellings. Celebration. We'll. Great! There are seven hundred more lessons. Step by step, we will keep going together. Let's eat some cake first! What will you do in the next lesson? Let's find out together! Okay, let's celebrate!",
+      "conversation": {
+        "scene": "A star party to celebrate the 500th lesson",
+        "sceneJa": "500 回記念の 星空パーティー",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Everyone, look at this cake! It says 500!",
+            "ja": "みんな、この ケーキ みて！500 って かいてある！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Congratulations! We studied together for five hundred lessons.",
+            "ja": "おめでとう！500かい いっしょに べんきょう したわね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you! Do you remember the first lesson? Look! Stop! Come here! Go!",
+            "ja": "ありがとう！さいしょの レッスン おぼえてる？みて！とまって！きて！いって！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha! Now we can talk about the future.",
+            "ja": "あはは！いまは みらいの ことも はなせるね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let's celebrate! We will keep going!",
+            "ja": "おいわい しよう！これからも つづけるよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. We'll travel to many more places together.",
+            "ja": "ええ。これからも いっしょに たくさんの ばしょへ いきましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "500かいの おいわい！Congratulations! と いって、We will keep going! と これからの ことを いおう",
+          "starterEn": "Congratulations! This is Lesson 500! I'm Ms. Emma. Let's celebrate! What do you want to do in the next lessons?",
+          "targetExpressions": [
+            "Congratulations!",
+            "Let's celebrate!",
+            "We will keep going!",
+            "Thank you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let's celebrate! We will keep going!（500かい おめでとう）",
+          "Congratulations! ― Thank you!",
+          "sea・two・their・celebration・we'll"
+        ]
+      }
+    },
+    {
+      "lessonNo": 501,
+      "world": 17,
+      "title": "Night Sky Story",
+      "titleJa": "よぞらの おはなし",
+      "school": {
+        "grade": "中2",
+        "topic": "Long ago, people saw pictures in the stars.：せいざの むかし話を きく",
+        "grammar": "Long ago, ～.（すぎた かたちで かたる）・They called it ～.",
+        "expressions": [
+          {
+            "en": "Long ago, people saw pictures in the stars.",
+            "ja": "むかし、ひとびとは ほしの なかに えを みました。",
+            "core": true
+          },
+          {
+            "en": "They connected the stars with lines.",
+            "ja": "ほしと ほしを せんで つなぎました。"
+          },
+          {
+            "en": "They called it the Sleepy Bear.",
+            "ja": "それを「ねむい くま」と よびました。"
+          }
+        ],
+        "testPoints": [
+          "Long ago, ～. で むかしの ことを かたれる",
+          "or の つづり（north・storm・orbit）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Connect the dots.",
+          "ja": "てんを つないで。",
+          "action": "ゆびで そらに せんを ひく",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Walk like a bear.",
+          "ja": "くまみたいに あるいて。",
+          "action": "のっしのっし あるく",
+          "emoji": "🐻"
+        },
+        {
+          "en": "Yawn and stretch.",
+          "ja": "あくびを して のびを して。",
+          "action": "おおきく あくびして のびー",
+          "emoji": "🥱"
+        },
+        {
+          "en": "Climb up to the sky.",
+          "ja": "そらへ のぼって。",
+          "action": "はしごを のぼる まね",
+          "emoji": "🪜"
+        }
+      ],
+      "phonics": {
+        "rule": "or-spellings",
+        "focus": [
+          "or"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "north",
+          "storm",
+          "orbit",
+          "short"
+        ],
+        "tipJa": "north・storm・orbit・short。「オー」の つづりで いちばん よく あるのは or。"
+      },
+      "vocab": [
+        {
+          "en": "constellation",
+          "ja": "せいざ",
+          "emoji": "✨",
+          "core": true
+        },
+        {
+          "en": "bear",
+          "ja": "くま",
+          "emoji": "🐻"
+        },
+        {
+          "en": "line",
+          "ja": "せん",
+          "emoji": "📏"
+        },
+        {
+          "en": "long ago",
+          "ja": "むかし",
+          "emoji": "📜"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! Tonight, we're going to listen to an old story about the stars. Long ago, there were no lights in the towns. The night sky was very dark, and the stars were very bright. Today's sentence is: Long ago, people saw pictures in the stars. Say it with me. Long ago, people saw pictures in the stars. Great! They connected the stars with lines. They called it the Sleepy Bear. ほしを せんで つなぐと、えに みえるんだ。 Here's our story. A little bear lived in the north. Every night, it looked up at the sky. One night, the stars said, Come up and sleep with us! The bear climbed up, and it fell asleep in the sky. Now, phonics. North. Storm. Orbit. Short. The or sound. Okay, let's tell the story together!",
+      "conversation": {
+        "scene": "Listening to an old story about a constellation",
+        "sceneJa": "星座の むかし話を 聞く",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Long ago, people saw pictures in the stars.",
+            "ja": "むかし、ひとびとは ほしの なかに えを みたの。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "A little bear lived in the north. Every night, it looked up at the sky.",
+            "ja": "きたの くにに こぐまが すんでいたの。まいばん そらを みあげていたのよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What happened next?",
+            "ja": "それから どうなったの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "One night, the stars said, Come up and sleep with us! So the bear climbed up.",
+            "ja": "ある よる、ほしたちが いったの。「のぼって きて、いっしょに ねよう！」それで くまは のぼったの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And it fell asleep in the sky?",
+            "ja": "それで そらで ねむっちゃったの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. People connected the stars and called it the Sleepy Bear.",
+            "ja": "そう。ひとびとは ほしを つないで「ねむい くま」と よんだのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I love that story! Let's find the Sleepy Bear tonight.",
+            "ja": "その おはなし だいすき！こんや ねむい くまを さがそう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ねむい くまの おはなしを きいて、Long ago, ～. で つづきや じぶんの おはなしを かたろう",
+          "starterEn": "Hi! I'm Ms. Emma. Long ago, people saw pictures in the stars. A little bear lived in the north. Can you tell me what happened next?",
+          "targetExpressions": [
+            "Long ago, ～.",
+            "They called it ～.",
+            "What happened next?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Long ago, people saw pictures in the stars.（むかし話）",
+          "They connected the stars. They called it the Sleepy Bear.",
+          "north・storm・orbit・short（or）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 502,
+      "world": 17,
+      "title": "My Own Constellation",
+      "titleJa": "じぶんだけの せいざ",
+      "school": {
+        "grade": "中2",
+        "topic": "These stars look like a bear.：かたちを たとえる・なまえを つける",
+        "grammar": "These stars look like ～.・Let's call it ～.",
+        "expressions": [
+          {
+            "en": "These stars look like a bear.",
+            "ja": "これらの ほしは くまみたいに みえる。",
+            "core": true
+          },
+          {
+            "en": "Let's call it the Happy Cat.",
+            "ja": "「しあわせ ねこ」と よぼう。"
+          },
+          {
+            "en": "What does it look like? ― It looks like a guitar.",
+            "ja": "なにに みえる？ ― ギターに みえる。"
+          }
+        ],
+        "testPoints": [
+          "look like ～ で なにに みえるか いえる",
+          "ore の つづり（more・shore・explore）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a star.",
+          "ja": "ほしを かいて。",
+          "action": "ゆびで そらに ほしを かく",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Connect five stars.",
+          "ja": "ほしを 5つ つないで。",
+          "action": "ゆびで てんを つなぐ",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Show your picture.",
+          "ja": "えを みせて。",
+          "action": "かみを まえに ひろげる",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Give it a name.",
+          "ja": "なまえを つけて。",
+          "action": "ひとさしゆびを たてて「これ！」",
+          "emoji": "🏷️"
+        }
+      ],
+      "phonics": {
+        "rule": "or-spellings",
+        "focus": [
+          "ore"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "more",
+          "shore",
+          "before",
+          "explore"
+        ],
+        "tipJa": "more・shore・before・explore。ことばの おわりの「オー」は ore が おおい。"
+      },
+      "vocab": [
+        {
+          "en": "shape",
+          "ja": "かたち",
+          "emoji": "🔷",
+          "core": true
+        },
+        {
+          "en": "guitar",
+          "ja": "ギター",
+          "emoji": "🎸"
+        },
+        {
+          "en": "name",
+          "ja": "なまえ",
+          "emoji": "🏷️"
+        },
+        {
+          "en": "dot",
+          "ja": "てん",
+          "emoji": "⚫"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Yesterday, we heard the story of the Sleepy Bear. Today, we're going to make our own constellations! Look at the dots on your paper. Connect them. What does it look like? Today's sentence is: These stars look like a bear. Say it with me. These stars look like a bear. Great! Look like means the shape is like something. ～みたいに みえる だよ。 These stars look like a guitar. These stars look like a rabbit. Then give it a name. Let's call it the Happy Cat. Your friend can ask, What does it look like? Let's practice. What does it look like? It looks like an ice cream cone. Let's call it the Sweet Cone! Yummy! Now, phonics. More. Shore. Before. Explore. At the end of a word, the or sound is often o, r, e. Okay, make your constellation and give it a name!",
+      "conversation": {
+        "scene": "Making their own constellations and naming them",
+        "sceneJa": "自分で 星座を 作って 名前を つける",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at these stars. They look like a bear!",
+            "ja": "この ほし みて。くまみたいに みえる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really? I think they look like a guitar.",
+            "ja": "ほんとう？わたしは ギターに みえるな。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I connected these five stars. What does it look like?",
+            "ja": "わたしは この 5つの ほしを つないだの。なにに みえる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It looks like a cat! A happy cat!",
+            "ja": "ねこ みたい！しあわせな ねこ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes! Let's call it the Happy Cat.",
+            "ja": "そう！「しあわせ ねこ」って よぼう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a lovely name. Let's make more!",
+            "ja": "すてきな なまえね。もっと つくりましょう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "てんを つないで じぶんの せいざを つくろう。These stars look like ～. Let's call it ～. と いおう",
+          "starterEn": "Hi! I'm Kiko. I made a constellation. These stars look like a cat. Let's call it the Happy Cat! What does your constellation look like?",
+          "targetExpressions": [
+            "These stars look like ～.",
+            "Let's call it ～.",
+            "What does it look like?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "These stars look like a bear.（look like で たとえる）",
+          "Let's call it the Happy Cat.（なまえを つける）",
+          "more・shore・before・explore（ore）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 503,
+      "world": 17,
+      "title": "A Message to Space",
+      "titleJa": "うちゅうへの メッセージ",
+      "school": {
+        "grade": "中2",
+        "topic": "Hello! We live on Earth. We like music.：じぶんたちの ことを しょうかいする メッセージを かく",
+        "grammar": "We live on ～.・We like ～.・Please ～.",
+        "expressions": [
+          {
+            "en": "Hello! We live on Earth. We like music.",
+            "ja": "こんにちは！わたしたちは ちきゅうに すんでいます。おんがくが すきです。",
+            "core": true
+          },
+          {
+            "en": "We have oceans, forests, and many animals.",
+            "ja": "うみや もりや たくさんの どうぶつが あります。"
+          },
+          {
+            "en": "Please write back to us!",
+            "ja": "おへんじ ください！"
+          }
+        ],
+        "testPoints": [
+          "We live on ～. We like ～. で じぶんたちを しょうかいする メッセージを かける",
+          "oar の つづり（roar・board・aboard）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write a message.",
+          "ja": "メッセージを かいて。",
+          "action": "えんぴつで かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Fold the paper.",
+          "ja": "かみを おって。",
+          "action": "かみを はんぶんに おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Put it in the capsule.",
+          "ja": "カプセルに いれて。",
+          "action": "そっと いれて ふたを する",
+          "emoji": "💊"
+        },
+        {
+          "en": "Send it to the stars.",
+          "ja": "ほしへ おくって。",
+          "action": "そらに むかって りょうてを のばす",
+          "emoji": "📡"
+        }
+      ],
+      "phonics": {
+        "rule": "or-spellings",
+        "focus": [
+          "oar"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "roar",
+          "board",
+          "aboard",
+          "keyboard"
+        ],
+        "tipJa": "roar・board・aboard・keyboard。oa の あとに r で「オー」。"
+      },
+      "vocab": [
+        {
+          "en": "message",
+          "ja": "メッセージ",
+          "emoji": "💌",
+          "core": true
+        },
+        {
+          "en": "ocean",
+          "ja": "うみ",
+          "emoji": "🌊"
+        },
+        {
+          "en": "forest",
+          "ja": "もり",
+          "emoji": "🌲"
+        },
+        {
+          "en": "capsule",
+          "ja": "カプセル",
+          "emoji": "🛸"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The observatory is going to send a message into space. Maybe someone far away will read it! What do we want to say about Earth? Today's sentence is: Hello! We live on Earth. We like music. Say it with me. Hello! We live on Earth. We like music. Great! Tell them about our planet. We have oceans, forests, and many animals. We like soccer. We eat rice and bread. And at the end, Please write back to us! Here's an important rule. You don't need to write your real name or address. ほんとうの なまえや じゅうしょは かかなくて いいよ。 You can sign it, From the children of Earth. Now, phonics. Roar. Board. Aboard. Keyboard. The or sound here is o, a, r. Lions roar. All aboard! Okay, let's write our message to space!",
+      "conversation": {
+        "scene": "Writing a message to send into space",
+        "sceneJa": "宇宙への メッセージを 書く",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "The observatory is going to send a message into space. What should we write?",
+            "ja": "てんもんだいが うちゅうへ メッセージを おくるの。なんて かこうかしら？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hello! We live on Earth.",
+            "ja": "こんにちは！わたしたちは ちきゅうに すんでいます。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We like music and soccer.",
+            "ja": "おんがくと サッカーが すきです。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We have oceans, forests, and many animals.",
+            "ja": "うみや もりや たくさんの どうぶつが います。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Please write back to us! From the children of Earth.",
+            "ja": "おへんじ ください！ちきゅうの こどもたちより。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Should we write our names and address?",
+            "ja": "なまえと じゅうしょも かく？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No. From the children of Earth is perfect.",
+            "ja": "いいえ。「ちきゅうの こどもたちより」で ばっちりよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "うちゅうへの メッセージを つくろう。We live on Earth. We like ～. We have ～. で ちきゅうを しょうかいしよう（ほんとうの なまえや じゅうしょは かかなくて OK）",
+          "starterEn": "Hi! I'm Birimo. We're writing a message to space! We live on Earth. We like music. What do you want to tell them about Earth?",
+          "targetExpressions": [
+            "Hello! We live on Earth.",
+            "We like ～.",
+            "We have ～.",
+            "Please write back to us!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Hello! We live on Earth. We like music.（うちゅうへの メッセージ）",
+          "なまえや じゅうしょは かかない（From the children of Earth）",
+          "roar・board・aboard・keyboard（oar）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 504,
+      "world": 17,
+      "title": "I'll Call You Tomorrow",
+      "titleJa": "あした でんわ するね",
+      "school": {
+        "grade": "中2",
+        "topic": "I'll call you tomorrow. I promise.：やくそくする",
+        "grammar": "I'll ～.（やくそく）・I promise.・Don't forget! ― I won't!",
+        "expressions": [
+          {
+            "en": "I'll call you tomorrow. I promise.",
+            "ja": "あした でんわ するね。やくそく する。",
+            "core": true
+          },
+          {
+            "en": "Don't forget! ― I won't!",
+            "ja": "わすれないでね！ ― わすれないよ！"
+          },
+          {
+            "en": "Can you hear me? ― Yes, I can hear you.",
+            "ja": "きこえる？ ― うん、きこえるよ。"
+          }
+        ],
+        "testPoints": [
+          "I'll ～. I promise. で やくそくが できる",
+          "our の つづり（four・pour・your）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up the phone.",
+          "ja": "でんわに でて。",
+          "action": "みみに でんわを あてる まね",
+          "emoji": "📞"
+        },
+        {
+          "en": "Pinky promise.",
+          "ja": "ゆびきり して。",
+          "action": "こゆびを からめる まね",
+          "emoji": "🤙"
+        },
+        {
+          "en": "Wave to the screen.",
+          "ja": "がめんに てを ふって。",
+          "action": "まえに むかって てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Hang up.",
+          "ja": "でんわを きって。",
+          "action": "でんわを おく まね",
+          "emoji": "📴"
+        }
+      ],
+      "phonics": {
+        "rule": "or-spellings",
+        "focus": [
+          "our"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "four",
+          "pour",
+          "your",
+          "fourteen"
+        ],
+        "tipJa": "four・pour・your・fourteen。この「オー」は our と かく（hour・our は「アウア」で ちがう おと）。"
+      },
+      "vocab": [
+        {
+          "en": "promise",
+          "ja": "やくそく",
+          "emoji": "🤙",
+          "core": true
+        },
+        {
+          "en": "phone",
+          "ja": "でんわ",
+          "emoji": "📞"
+        },
+        {
+          "en": "video call",
+          "ja": "ビデオつうわ",
+          "emoji": "💻"
+        },
+        {
+          "en": "forget",
+          "ja": "わすれる",
+          "emoji": "💭"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today, Birimo is going to play a boy who lives at the observatory. His name is Luka. Luka loves stars, and he wants to talk with us again. Today's sentence is: I'll call you tomorrow. I promise. Say it with me. I'll call you tomorrow. I promise. Great! I'll is also for promises. I'll write to you. I'll visit you again. やくそくの ときも I'll を つかうよ。 Your friend may say, Don't forget! Then you say, I won't! On a video call, you can ask, Can you hear me? Yes, I can hear you. Remember, ask a grown-up before you make a call. And don't share your address or password online. Now, phonics. Four. Pour. Your. Fourteen. The or sound is o, u, r here. Okay, let's make a promise!",
+      "conversation": {
+        "scene": "Making a promise with a kid at the observatory",
+        "sceneJa": "天文台の 子と 約束を する",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm Luka. I live at the observatory. Thank you for coming!",
+            "ja": "ぼくは ルカ。てんもんだいに すんでるんだ。きてくれて ありがとう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thank you, Luka. Can we talk again?",
+            "ja": "ありがとう、ルカ。また おはなし できる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sure! I'll call you tomorrow. I promise.",
+            "ja": "もちろん！あした でんわ するよ。やくそく する。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What time?",
+            "ja": "なんじに？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "At four o'clock. Is that okay?",
+            "ja": "4じ。それで いい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes! Don't forget!",
+            "ja": "うん！わすれないでね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I won't! See you tomorrow on the screen!",
+            "ja": "わすれないよ！あした がめんで あおうね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ルカと やくそくを しよう。I'll call you tomorrow. I promise. と いって、What time? と じかんも きめよう（じゅうしょや でんわばんごうは いわなくて OK）",
+          "starterEn": "Hi! I'm Luka. I live at the observatory. Let's talk again! I'll call you tomorrow. What time is good for you?",
+          "targetExpressions": [
+            "I'll call you tomorrow.",
+            "I promise.",
+            "Don't forget!",
+            "I won't!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'll call you tomorrow. I promise.（やくそくの I'll）",
+          "Don't forget! ― I won't!・Can you hear me?",
+          "four・pour・your・fourteen（our）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 505,
+      "world": 17,
+      "title": "Future Fair",
+      "titleJa": "みらい フェア",
+      "school": {
+        "grade": "中2",
+        "topic": "In the future, I'm going to ～.：みらいの けいかくを 発表する（まとめ）",
+        "grammar": "In the future, I'm going to ～.・I'm going to ～ because ～.",
+        "expressions": [
+          {
+            "en": "In the future, I'm going to be a scientist.",
+            "ja": "しょうらい、かがくしゃに なる つもりです。",
+            "core": true
+          },
+          {
+            "en": "I'm going to study the stars because they're beautiful.",
+            "ja": "ほしを けんきゅう します。ほしは きれいだから。"
+          },
+          {
+            "en": "Thank you for listening. Any questions?",
+            "ja": "きいて くれて ありがとう。しつもんは ありますか？"
+          }
+        ],
+        "testPoints": [
+          "In the future, I'm going to ～. と りゆうを つけて 発表できる",
+          "or・ore・oar・our の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand at the booth.",
+          "ja": "ブースに たって。",
+          "action": "せすじを のばして たつ",
+          "emoji": "🎪"
+        },
+        {
+          "en": "Show your poster.",
+          "ja": "ポスターを みせて。",
+          "action": "りょうてで ポスターを ひろげる",
+          "emoji": "📜"
+        },
+        {
+          "en": "Answer a question.",
+          "ja": "しつもんに こたえて。",
+          "action": "てを あげた ひとを ゆびさす",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Say thank you.",
+          "ja": "ありがとうと いって。",
+          "action": "にっこり して おじぎ",
+          "emoji": "🙏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "or",
+          "ore",
+          "oar",
+          "our"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "sport",
+          "score",
+          "board",
+          "your"
+        ],
+        "tipJa": "ブロック5 の まとめ: sport（or）・score（ore）・board（oar）・your（our）。どれも おなじ「オー」。"
+      },
+      "vocab": [
+        {
+          "en": "fair",
+          "ja": "フェア",
+          "emoji": "🎪",
+          "core": true
+        },
+        {
+          "en": "scientist",
+          "ja": "かがくしゃ",
+          "emoji": "🧑‍🔬"
+        },
+        {
+          "en": "booth",
+          "ja": "ブース",
+          "emoji": "🏬"
+        },
+        {
+          "en": "question",
+          "ja": "しつもん",
+          "emoji": "❓"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the Future Fair! Everyone has a booth and a poster. You're going to talk about your future plans. Today's sentence is: In the future, I'm going to be a scientist. Say it with me. In the future, I'm going to be a scientist. Great! Then add more. I'm going to study the stars because they're beautiful. At the end, say, Thank you for listening. Any questions? さいごに しつもんを うけると、ほんものの はっぴょう みたいだね。 Listeners, ask one question. What are you going to study? Where are you going to work? A good speaker looks at the people and speaks slowly. Hold your poster up high so everyone can see it. And smile! Now, phonics review. Sport. Score. Board. Your. Four spellings, one sound. Okay, let's start the Future Fair!",
+      "conversation": {
+        "scene": "Presenting future plans at the observatory's Future Fair",
+        "sceneJa": "天文台の 未来フェアで 発表する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Future Fair! Riko, please start.",
+            "ja": "みらい フェアへ ようこそ！リコ、はじめて ください。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In the future, I'm going to be a scientist. I'm going to study the stars because they're beautiful.",
+            "ja": "しょうらい、かがくしゃに なる つもりです。ほしを けんきゅう します。きれいだから。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you for listening. Any questions?",
+            "ja": "きいて くれて ありがとう。しつもんは ありますか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Where are you going to work?",
+            "ja": "どこで はたらく よてい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "At an observatory like this one!",
+            "ja": "ここみたいな てんもんだいで！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's a great plan! I'm going to visit you.",
+            "ja": "すてきな けいかく！あいに いくね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "みらい フェアで はっぴょう しよう。In the future, I'm going to ～ because ～. と いって、Any questions? と しつもんを うけよう（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Welcome to my booth at the Future Fair! I'm Riko. In the future, I'm going to be a scientist. What are you going to do in the future?",
+          "targetExpressions": [
+            "In the future, I'm going to ～.",
+            "because ～.",
+            "Thank you for listening.",
+            "Any questions?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In the future, I'm going to be a scientist.（みらいの けいかく）",
+          "because で りゆう・Any questions? で しつもんを うける",
+          "sport・score・board・your（or・ore・oar・our）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 506,
+      "world": 17,
+      "title": "Going-to Bingo",
+      "titleJa": "ゴーイングトゥー ビンゴ",
+      "school": {
+        "grade": "中2",
+        "topic": "What are you going to eat tonight?：ビンゴで よていを ききあう（ふりかえり）",
+        "grammar": "What are you going to ～? ― I'm going to ～.・Are you going to ～?",
+        "expressions": [
+          {
+            "en": "What are you going to eat tonight?",
+            "ja": "こんや なにを たべる よてい？",
+            "core": true
+          },
+          {
+            "en": "I'm going to eat curry and rice.",
+            "ja": "カレーライスを たべる よていだよ。"
+          },
+          {
+            "en": "Bingo! ― Wow, you got a line!",
+            "ja": "ビンゴ！ ― わあ、そろったね！"
+          }
+        ],
+        "testPoints": [
+          "What are you going to ～? で いろいろな よていを ききあえる",
+          "-tion・-sion・-ture・'ll の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at your card.",
+          "ja": "カードを みて。",
+          "action": "てもとの カードを みる",
+          "emoji": "🃏"
+        },
+        {
+          "en": "Ask a friend.",
+          "ja": "ともだちに きいて。",
+          "action": "となりを むいて てを さしだす",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Mark the box.",
+          "ja": "ますに しるしを つけて。",
+          "action": "ゆびで まるを かく",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Shout Bingo!",
+          "ja": "ビンゴ！と さけんで。",
+          "action": "てを あげて「ビンゴ！」",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-tion",
+          "-sion",
+          "-ture",
+          "'ll"
+        ],
+        "sounds": [
+          "/ʃən/",
+          "/ʒən/",
+          "/tʃər/",
+          "/l/"
+        ],
+        "words": [
+          "vacation",
+          "television",
+          "picture",
+          "I'll"
+        ],
+        "tipJa": "ふりかえり: vacation（tion）・television（sion）・picture（ture）・I'll（'ll）。"
+      },
+      "vocab": [
+        {
+          "en": "bingo",
+          "ja": "ビンゴ",
+          "emoji": "🎱",
+          "core": true
+        },
+        {
+          "en": "curry",
+          "ja": "カレー",
+          "emoji": "🍛"
+        },
+        {
+          "en": "card",
+          "ja": "カード",
+          "emoji": "🃏"
+        },
+        {
+          "en": "line",
+          "ja": "れつ",
+          "emoji": "➖"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Let's play Going-to Bingo! Look at your bingo card. Each box has a question. Ask your friends and find someone who says yes. Today's sentence is: What are you going to eat tonight? Say it with me. What are you going to eat tonight? Great! The answer is, I'm going to eat curry and rice. Other questions are, What are you going to watch on TV? What are you going to do after dinner? Are you going to take a bath? カードの しつもんを どんどん きいてみよう。 When you get a line, shout, Bingo! Remember to say thank you after each answer. And your friends can say, Wow, you got a line! Now, phonics review. Vacation. Television. Picture. I'll. Tion, sion, ture, and the short form of I will. Okay, ready? Let's play bingo!",
+      "conversation": {
+        "scene": "Asking each other about plans in a bingo game",
+        "sceneJa": "ビンゴで 予定を 聞き合う",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Kiko, what are you going to eat tonight?",
+            "ja": "キコ、こんや なにを たべる よてい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm going to eat curry and rice.",
+            "ja": "カレーライスを たべる よてい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Curry! I'll mark this box. Riko, are you going to take a bath tonight?",
+            "ja": "カレー！この ますに しるしを つけよう。リコ、こんや おふろに はいる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I am. What are you going to do after dinner, Birimo?",
+            "ja": "うん、はいるよ。ビリモ、ばんごはんの あと なにを する よてい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm going to watch the stars, of course!",
+            "ja": "もちろん、ほしを みる よてい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes! Bingo!",
+            "ja": "やった！ビンゴ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow, you got a line!",
+            "ja": "わあ、そろったね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビンゴの しつもんで What are you going to ～? / Are you going to ～? と ききあおう",
+          "starterEn": "Let's play Going-to Bingo! I'm Haru. Here's my first question. What are you going to eat tonight?",
+          "targetExpressions": [
+            "What are you going to ～?",
+            "Are you going to ～?",
+            "I'm going to ～.",
+            "Bingo!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What are you going to eat tonight? ― I'm going to eat curry and rice.",
+          "Are you going to ～? ― Yes, I am.・Bingo!",
+          "vacation・television・picture・I'll"
+        ]
+      }
+    },
+    {
+      "lessonNo": 507,
+      "world": 17,
+      "title": "Weekend Plan Talk",
+      "titleJa": "しゅうまつの けいかく",
+      "school": {
+        "grade": "中2",
+        "topic": "I'm going to ～. How about you?：しゅうまつの けいかくを そうだんする（ふりかえり）",
+        "grammar": "I'm going to ～. How about you?・Why don't we ～ together?・We'll ～.",
+        "expressions": [
+          {
+            "en": "I'm going to go hiking. How about you?",
+            "ja": "ハイキングに いく よてい。あなたは？",
+            "core": true
+          },
+          {
+            "en": "Why don't we go together?",
+            "ja": "いっしょに いかない？"
+          },
+          {
+            "en": "Great idea! We'll have fun.",
+            "ja": "いい かんがえ！きっと たのしいね。"
+          }
+        ],
+        "testPoints": [
+          "I'm going to ～. How about you? で けいかくを はなしあえる",
+          "'ll・won't・sun / son の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the calendar.",
+          "ja": "カレンダーを みて。",
+          "action": "かべを ゆびさして みる",
+          "emoji": "📅"
+        },
+        {
+          "en": "Write your plan.",
+          "ja": "けいかくを かいて。",
+          "action": "えんぴつで かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Shake hands.",
+          "ja": "あくしゅ して。",
+          "action": "てを さしだして あくしゅ",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Put on your backpack.",
+          "ja": "リュックを せおって。",
+          "action": "りょうかたに かける まね",
+          "emoji": "🎒"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "'ll",
+          "n't",
+          "u",
+          "o"
+        ],
+        "sounds": [
+          "/l/",
+          "/nt/",
+          "/ʌ/"
+        ],
+        "words": [
+          "we'll",
+          "won't",
+          "sun",
+          "son"
+        ],
+        "tipJa": "ふりかえり: we'll・won't（みじかい かたち）と sun（たいよう）・son（むすこ）。"
+      },
+      "vocab": [
+        {
+          "en": "hiking",
+          "ja": "ハイキング",
+          "emoji": "🥾",
+          "core": true
+        },
+        {
+          "en": "together",
+          "ja": "いっしょに",
+          "emoji": "🤝"
+        },
+        {
+          "en": "idea",
+          "ja": "かんがえ",
+          "emoji": "💡"
+        },
+        {
+          "en": "calendar",
+          "ja": "カレンダー",
+          "emoji": "📅"
+        }
+      ],
+      "teacherScript": "Hi, everyone! The weekend is coming. Let's talk about our plans with friends. Today's sentence is: I'm going to go hiking. How about you? Say it with me. I'm going to go hiking. How about you? Great! After you share your plan, ask, How about you? If your friend has the same idea, say, Why don't we go together? That means, let's go together. いっしょに しようと さそう いいかただよ。 Your friend can say, Great idea! We'll have fun. If your friend is busy, it's okay. Just say, Maybe next time! Let's practice. I'm going to go to the park. How about you? I'm going to go to the park, too! Why don't we go together? Great idea! Now, phonics review. We'll. Won't. Sun. Son. Okay, what are you going to do this weekend? Let's make plans!",
+      "conversation": {
+        "scene": "Talking about weekend plans and deciding to go together",
+        "sceneJa": "週末の 計画を 相談する",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "What are you going to do this weekend?",
+            "ja": "こんしゅうまつ なにを する よてい？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'm going to go hiking up the hill. How about you?",
+            "ja": "おかの うえへ ハイキングに いく よてい。キコは？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm going to draw pictures of nature.",
+            "ja": "しぜんの えを かく よてい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Why don't we go together? You can draw on the hill.",
+            "ja": "いっしょに いかない？おかの うえで かけるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Great idea! We'll have fun.",
+            "ja": "いい かんがえ！きっと たのしいね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Can I come, too? I won't be late!",
+            "ja": "わたしも いって いい？ちこく しないから！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Of course! Let's meet at nine.",
+            "ja": "もちろん！9じに あつまろう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I'm going to ～. How about you? と しゅうまつの けいかくを はなして、Why don't we ～ together? と さそってみよう",
+          "starterEn": "Hi! I'm Kiko. This weekend, I'm going to draw pictures in the park. How about you? What are you going to do?",
+          "targetExpressions": [
+            "I'm going to ～. How about you?",
+            "Why don't we ～ together?",
+            "Great idea! We'll have fun."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm going to go hiking. How about you?",
+          "Why don't we go together? ― Great idea! We'll have fun.",
+          "we'll・won't・sun・son"
+        ]
+      }
+    },
+    {
+      "lessonNo": 508,
+      "world": 17,
+      "title": "A Note to Future Me",
+      "titleJa": "みらいの じぶんへの メモ",
+      "school": {
+        "grade": "中2",
+        "topic": "Dear future me, I will ～.：みらいの じぶんへの メモを かく（ふりかえり）",
+        "grammar": "Dear future me,・I will ～.・I hope ～.",
+        "expressions": [
+          {
+            "en": "Dear future me, I will keep studying English.",
+            "ja": "みらいの わたしへ。わたしは えいごの べんきょうを つづけます。",
+            "core": true
+          },
+          {
+            "en": "I hope you are happy.",
+            "ja": "あなたが しあわせだと いいな。"
+          },
+          {
+            "en": "Are you still drawing pictures?",
+            "ja": "いまも えを かいていますか？"
+          }
+        ],
+        "testPoints": [
+          "Dear future me, I will ～. で みらいの じぶんへ メモを かける",
+          "-ture と ore の ふりかえり（future・adventure・explore）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take out a pencil.",
+          "ja": "えんぴつを だして。",
+          "action": "ふでばこから とりだす まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Write Dear future me.",
+          "ja": "Dear future me と かいて。",
+          "action": "そらに もじを かく",
+          "emoji": "📝"
+        },
+        {
+          "en": "Seal the envelope.",
+          "ja": "ふうとうを とじて。",
+          "action": "ふうとうの ふたを とじる まね",
+          "emoji": "✉️"
+        },
+        {
+          "en": "Put it in the time capsule.",
+          "ja": "タイムカプセルに いれて。",
+          "action": "はこに いれて ふたを する まね",
+          "emoji": "📦"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ture",
+          "ore"
+        ],
+        "sounds": [
+          "/tʃər/",
+          "/ɔːr/"
+        ],
+        "words": [
+          "future",
+          "adventure",
+          "explore",
+          "before"
+        ],
+        "tipJa": "ふりかえり: future・adventure（ture）と explore・before（ore）。"
+      },
+      "vocab": [
+        {
+          "en": "note",
+          "ja": "メモ",
+          "emoji": "📝",
+          "core": true
+        },
+        {
+          "en": "time capsule",
+          "ja": "タイムカプセル",
+          "emoji": "📦"
+        },
+        {
+          "en": "envelope",
+          "ja": "ふうとう",
+          "emoji": "✉️"
+        },
+        {
+          "en": "hope",
+          "ja": "ねがう",
+          "emoji": "🌟"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we're going to write a note to ourselves. Not for today, for the future! We'll put the notes in the observatory time capsule. Today's sentence is: Dear future me, I will keep studying English. Say it with me. Dear future me, I will keep studying English. Wonderful! Write three or four sentences. I will practice the piano. I hope you are happy. Are you still drawing pictures? みらいの じぶんに しつもんを しても いいよ。 And remember, you don't need to write your real name or address. You can sign it, From me. Read your note to a friend. Your friend can say, That's a nice note! Maybe you'll open the time capsule when you're grown up. Now, phonics review. Future. Adventure. Explore. Before. Okay, take out your pencils, and let's write to future you!",
+      "conversation": {
+        "scene": "Writing notes to their future selves for a time capsule",
+        "sceneJa": "未来の 自分への メモを 書く",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's write notes to our future selves. Who wants to read first?",
+            "ja": "みらいの じぶんへ メモを かきましょう。さいしょに よむのは だれ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Dear future me, I will keep drawing pictures. Are you a picture book artist now?",
+            "ja": "みらいの わたしへ。わたしは えを かきつづけます。いまは えほん さっかですか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's a nice note! Here's mine. Dear future me, I will keep studying English.",
+            "ja": "すてきな メモ！ぼくのは これ。みらいの ぼくへ。ぼくは えいごの べんきょうを つづけます。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I hope you are happy. From me.",
+            "ja": "しあわせだと いいな。ぼくより。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Should I write my address?",
+            "ja": "じゅうしょも かいた ほうが いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, you don't need to. Just write From me.",
+            "ja": "いいえ、かかなくて いいのよ。「わたしより」で OK。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's put them in the time capsule!",
+            "ja": "タイムカプセルに いれよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Dear future me, I will ～. I hope ～. で みらいの じぶんへの メモを つくって よもう（ほんとうの なまえや じゅうしょは かかなくて OK）",
+          "starterEn": "Hi! I'm Kiko. I wrote a note to future me. Dear future me, I will keep drawing pictures. What will you write to your future self?",
+          "targetExpressions": [
+            "Dear future me,",
+            "I will ～.",
+            "I hope ～.",
+            "Are you still ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Dear future me, I will keep studying English.（みらいの じぶんへ）",
+          "I hope you are happy.・なまえや じゅうしょは かかない",
+          "future・adventure・explore・before"
+        ]
+      }
+    },
+    {
+      "lessonNo": 509,
+      "world": 17,
+      "title": "Starfall Observatory Review",
+      "titleJa": "ほしふる天文台 ふりかえり",
+      "school": {
+        "grade": "中2",
+        "topic": "Will it ～? I'm going to ～.：天文台の さよなら観察会で ワールド17 を ふりかえる",
+        "grammar": "be going to と will の まとめ（よてい・よそう・もうしで・やくそく）",
+        "expressions": [
+          {
+            "en": "Will it be clear tonight?",
+            "ja": "こんや はれるかな？",
+            "core": true
+          },
+          {
+            "en": "I think it will. I'm going to remember this place.",
+            "ja": "はれると おもう。この ばしょを ずっと おぼえておくよ。"
+          },
+          {
+            "en": "I'll miss the observatory.",
+            "ja": "てんもんだいと おわかれ するのは さびしいな。"
+          }
+        ],
+        "testPoints": [
+          "be going to（よてい）と will（よそう・もうしで・やくそく）を つかいわけられる",
+          "ワールド17 の つづりの ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look through the telescope.",
+          "ja": "ぼうえんきょうを のぞいて。",
+          "action": "かためを とじて のぞく まね",
+          "emoji": "🔭"
+        },
+        {
+          "en": "Find the Sleepy Bear.",
+          "ja": "ねむい くまを さがして。",
+          "action": "そらを ゆびで なぞる",
+          "emoji": "🐻"
+        },
+        {
+          "en": "Hug your friend.",
+          "ja": "ともだちを ハグして。",
+          "action": "りょううでで やさしく ハグ",
+          "emoji": "🤗"
+        },
+        {
+          "en": "Say goodbye to Luka.",
+          "ja": "ルカに さよならを いって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-tion",
+          "'ll",
+          "ee",
+          "or",
+          "our"
+        ],
+        "sounds": [
+          "/ʃən/",
+          "/l/",
+          "/iː/",
+          "/ɔːr/"
+        ],
+        "words": [
+          "station",
+          "it'll",
+          "see",
+          "north",
+          "four"
+        ],
+        "tipJa": "ふりかえり: station（tion）・it'll（'ll）・see（おなじ おとの ことば）・north（or）・four（our）。"
+      },
+      "vocab": [
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋",
+          "core": true
+        },
+        {
+          "en": "miss",
+          "ja": "さびしく おもう",
+          "emoji": "🥲"
+        },
+        {
+          "en": "memory",
+          "ja": "おもいで",
+          "emoji": "💭"
+        },
+        {
+          "en": "clear",
+          "ja": "はれた",
+          "emoji": "🌌"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! This is our last night at the observatory. Let's have a goodbye stargazing party and look back at World 17. Today's sentence is: Will it be clear tonight? I think it will. Say it with me. Will it be clear tonight? I think it will. Great! Let's remember. Going to is for plans. I'm going to visit my grandma. Will is for guesses. It will rain. Will is also for offers and promises. I'll help you. I'll call you. よてい、よそう、もうしで、やくそく。ぜんぶ いえるね。 And you can say, I'll miss the observatory. That means you will feel sad because you're leaving. We had so many good times here. Thank you, observatory! Now, phonics review. Station. It'll. See. North. Four. Okay, let's look at the stars one more time!",
+      "conversation": {
+        "scene": "A goodbye stargazing party at the observatory",
+        "sceneJa": "天文台の さよなら観察会",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Will it be clear tonight?",
+            "ja": "こんや はれるかな？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I think it will. Look, there are no clouds.",
+            "ja": "はれると おもうわ。みて、くもが ないもの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm going to find the Sleepy Bear!",
+            "ja": "ねむい くまを さがすぞ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "There it is! I can see it in the north.",
+            "ja": "あそこだ！きたの ほうに みえる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'll miss the observatory.",
+            "ja": "てんもんだいと おわかれ するのは さびしいな。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Me too. But Luka will call us. He promised.",
+            "ja": "わたしも。でも ルカが でんわ くれるよ。やくそく したもん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "And we're going to remember this place forever.",
+            "ja": "それに、この ばしょの ことは ずっと おぼえているわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "さよなら観察会で、Will it ～? I'm going to ～. I'll ～. を つかって ワールド17 の おもいでを はなそう",
+          "starterEn": "Good evening! I'm Riko. It's our last night at the observatory. Will it be clear tonight? What's your favorite memory here?",
+          "targetExpressions": [
+            "Will it ～?",
+            "I'm going to ～.",
+            "I'll ～.",
+            "I'll miss ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Will it be clear tonight? ― I think it will.",
+          "going to は よてい、will は よそう・もうしで・やくそく",
+          "station・it'll・see・north・four"
+        ]
+      }
+    },
+    {
+      "lessonNo": 510,
+      "world": 17,
+      "title": "World 17 Grand Review",
+      "titleJa": "ワールド17 グランドレビュー",
+      "school": {
+        "grade": "中2",
+        "topic": "Someday we will travel to the stars!：天文台の ドームで ワールド17 ほしぞらショー",
+        "grammar": "未来の いいかたの まとめ（be going to・will・won't・I'll・I think ～ will ～・because）",
+        "expressions": [
+          {
+            "en": "Someday we will travel to the stars!",
+            "ja": "いつか わたしたちは ほしへ たびを します！",
+            "core": true
+          },
+          {
+            "en": "Tonight, we're going to show you the night sky.",
+            "ja": "こんや、よぞらを おみせ します。"
+          },
+          {
+            "en": "I think it will be a wonderful show. Please enjoy!",
+            "ja": "すばらしい ショーに なると おもいます。たのしんで ください！"
+          }
+        ],
+        "testPoints": [
+          "be going to・will で よていや ゆめを 発表できる",
+          "-tion・-sion・-ture・'ll・同音異義語・oar の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Blast off! Float! Make a wish!",
+          "ja": "はっしゃ！ういて！ねがって！",
+          "action": "ワールド17 の うごきを はやく",
+          "emoji": "🚀"
+        },
+        {
+          "en": "Stand under the dome.",
+          "ja": "ドームの したに たって。",
+          "action": "うえを みて むねを はる",
+          "emoji": "🔭"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-tion",
+          "-sion",
+          "-ture",
+          "'ll",
+          "ere",
+          "oar"
+        ],
+        "sounds": [
+          "/ʃən/",
+          "/ʃən/",
+          "/tʃər/",
+          "/l/",
+          "/ɛər/",
+          "/ɔːr/"
+        ],
+        "words": [
+          "constellation",
+          "mission",
+          "future",
+          "we'll",
+          "there",
+          "roar"
+        ],
+        "tipJa": "ワールド17 の まとめ: constellation（tion）・mission（sion）・future（ture）・we'll（'ll）・there（おなじ おとの ことば）・roar（oar）。"
+      },
+      "vocab": [
+        {
+          "en": "show",
+          "ja": "ショー",
+          "emoji": "🎭",
+          "core": true
+        },
+        {
+          "en": "dome",
+          "ja": "ドーム",
+          "emoji": "🔭"
+        },
+        {
+          "en": "travel",
+          "ja": "たびを する",
+          "emoji": "🧳"
+        },
+        {
+          "en": "valley",
+          "ja": "たに",
+          "emoji": "🏞️"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! This is the last lesson of World 17. ワールド17 さいごの レッスンだよ。 First, speed TPR! Look! Stop! Come here! Go! Blast off! Float! Make a wish! Great! Now, it's the World 17 star show under the dome. Today's sentence is: Someday we will travel to the stars! Say it with me. Someday we will travel to the stars! Wonderful! In this world, you learned to talk about the future. Plans with going to. Guesses with will. Offers and promises with I'll. And reasons with because. Now, the last phonics review. Constellation. Mission. Future. We'll. There. Roar. Amazing! And look through the telescope. There's a green valley between the mountains. Hello! Hello! Hello! Our voices come back. It's an echo! Is that our next stop? But first, your star show. Speak loudly and smile. You can do it!",
+      "conversation": {
+        "scene": "Under the observatory dome, the World 17 star show",
+        "sceneJa": "天文台の ドームで、ワールド17 ほしぞらショー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the World 17 star show!",
+            "ja": "ワールド17 ほしぞらショーへ ようこそ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Tonight, we're going to show you the night sky.",
+            "ja": "こんや、よぞらを おみせ します。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This is the Sleepy Bear. Long ago, a little bear climbed up to the sky.",
+            "ja": "これが ねむい くま。むかし、こぐまが そらへ のぼったんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And this is our constellation, the Happy Cat!",
+            "ja": "そして これが わたしたちの せいざ、しあわせ ねこ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Someday we will travel to the stars!",
+            "ja": "いつか ぼくたちは ほしへ たびを するんだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Bravo! Now, look through the telescope. There's a green valley between the mountains.",
+            "ja": "ブラボー！さあ、ぼうえんきょうを のぞいて。やまの あいだに みどりの たにが あるわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hello! Hello! Oh, my voice came back. Is that our next stop?",
+            "ja": "ハロー！ハロー！あ、こえが かえってきた。つぎは あそこ かな？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド17 ほしぞらショー。Someday we will ～. Tonight, we're going to ～. I think ～ will ～. で ゆめと よていを はっぴょう しよう（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the World 17 star show! I'm Birimo. Someday we will travel to the stars! What will you do someday? Tell us your dream!",
+          "targetExpressions": [
+            "Someday we will ～.",
+            "We're going to ～.",
+            "I think ～ will ～.",
+            "because ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Someday we will travel to the stars!（ほしぞらショー）",
+          "going to の よてい・will の よそうと ゆめ・I'll の もうしでと やくそく",
+          "constellation・mission・future・we'll・there・roar（ワールド17 の つづりの まとめ）"
+        ]
+      }
+    }
+  ]
+}

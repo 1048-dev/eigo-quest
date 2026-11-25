@@ -209,3 +209,40 @@
 - `npx vitest run`: 46 ファイル・1,210 テスト すべて成功
 - `npx next build`: 成功。First Load JS は /map 193 kB（192 → +1）、/lesson/[lessonNo] 196 kB（195 → +1）、/gacha 181 kB、/test/[assessmentId] 181 kB、/parent 158 kB（増えたのは ワールド16 の 問題の コードと 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 24`: No.24（L461〜480・61 ページ）を 作れることを 確認
+
+## WORLD — ワールド17「ほしふる天文台」（L481〜510）（2026-11-25）
+
+### やったこと
+- `content/curriculum/worlds/world-17.json` を 新しく 作成（30 レッスン、ステージ2・A2、`school.grade` は「中2」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 510 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 127、会話の セリフ 201 行（1 回 6〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 1 回 平均 約 130 語の 英語（最少 125 語）＋短い 日本語の たすけ（1〜2 文）。
+- ブロック構成: 481〜485 be going to（We're going to see the stars tonight.・What are you going to do this weekend?・I'm going to visit my grandma.・Are you going to join us? ― Yes, I am. / No, I'm not.・First, we're going to ～. Then, ～. の けいかく発表）→ 486〜490 will（Will it rain tomorrow? ― I think it will. / I don't think so.・It will be sunny tomorrow.・It won't be cold. Don't worry.・I'll help you.・てんきよほう ばんぐみ）→ 491〜495 うちゅう（The moon goes around the Earth.・Mars is red.・Astronauts sleep in sleeping bags.・Look! A shooting star! Make a wish!・Which planet is the biggest? の クイズナイト）→ 496〜500 ゆめと みらい（Someday I will go to space.・What will you be in twenty years? ― I'll be ～.・I think robots will help us at home.・I want to go to Mars because it's exciting.・L500 記念パーティー）→ 501〜505 せいざと メッセージ（Long ago, people saw pictures in the stars.・These stars look like a bear.・うちゅうへの メッセージ・I'll call you tomorrow. I promise. ― Don't forget! ― I won't!・みらいフェア）→ 506〜510 ふりかえり（ゴーイングトゥー ビンゴ・Why don't we go together?・Dear future me, I will ～.・さよなら観察会・ほしぞらショー）。
+- 物語の 糸: ワールド16 の「ほしの ちず」が しめす 丘の 上の 天文台に 着く（L481）。L501 の せいざの むかし話（北の くにの こぐまが ほしに よばれて そらで ねむる「ねむい くま」）は オリジナル。L502 で キコが 自分の せいざ「しあわせ ねこ」を つくり、L510 の ショーで 2つを 紹介。L504 の 天文台の 子 ルカ と やくそくし、L509 で「ルカが でんわ くれる」と ふりかえる。L510 で 望遠鏡の むこうに 山の あいだの みどりの 谷が 見え、Hello! が かえってくる（ワールド18 こだまの谷 L511「Hello! Hello! Hello!」へ）。
+- フォニックスの 問題（`src/lib/curriculum/w17Phonics.ts`・`questions.ts` の `w17Question`。w16Question より 先に よぶ）:
+  - -tion / -sion / -ture "-tion" "-sion" "-ture": 「ただしい つづりは どれ？」（sta＿＿＿＿（えき）→ station / stasion / stashun、fu＿＿＿＿（みらい）→ future / fucher / fuchur）。
+  - will の 短縮形 "'ll" と "n't": 「みじかい かたちは どれ？」（I will → I'll / I'will / Il'l、will not → won't / willn't / wo'nt、did not → didn't / didnt / did'nt）。
+  - 同音異義語（rule が "homophones" の 回と、ふりかえりの 回の 表に ある ことば）: 「ぶんに あう ことばは どれ？」（Fish swim in the ＿＿. → sea / see / meat、I like stars, ＿＿. → too / to / two）。
+  - or・ore・oar・our "or" "ore" "oar" "our": 「「オー」の ただしい つづりは どれ？」（「4（よん）」→ four / for / fore / foar）。
+- テスト: `tests/curriculum.test.ts` に ワールド17 の 決まりごと（範囲・ステージ・タイトル・フォニックスの 順と 種類・文法と 会話の 型・先生の台本の 英語の 割合・会話の 行数・L510 スピード TPR・メッセージ／やくそく／メモ／発表で なまえ・じゅうしょを いわなくて OK・台本で じゅうしょや パスワードを 教えない）を 追加。`tests/phonics-w17.test.ts`（10 テスト）を 追加。
+
+### 決めたこと（理由）
+- **新しい phonics.rule**: "tion" "sion" "ture" "contractions-will" "homophones" "or-spellings"（ふりかえりは "review"）。計画の B2「-sion と -ture」は 486〜487 を -sion（ジョンの vision 系と ss の mission 系に 1回ずつ）、488〜489 を -ture に わけた。
+- **つづりの 問題は いみを いっしょに 見せる**（sta＿＿＿＿（えき）、「4（よん）」）。four / for、board / bored の ように ほんとうに ある ことばが まちがいの 選択肢に なっても、いみで 1つに きまる。そのため 出題は `W17_MEANING` の 表に ある ことばだけ。question・mansion の ような よみの ちがう ことばは 入れていない。
+- **-tion / -sion の まちがいは「もう 一方の おわり」と「音の とおりの shun」**、-ture は「cher / chur」（こどもが 音の まま かきがちな 形）。
+- **'ll の まちがいに「' を とった 形」を つかわない**（he'll → hell、we'll → well に なるため）。かわりに I'will（will を のこす）と Il'l（' の いち）。won't は こどもが つくりがちな willn't を まちがいに した。
+- **同音異義語の focus は その 回の ことばの 母音の つづり**（"ee" "ea"、"u" "o"、"o" "ue" "ew"、"ere" "eir" "ear"）。全体テスト「フォニックスの単語は フォーカスを 含む」を そのまま 通し、ボタンも「ee」「ea」の ように おなじ おとの ちがう つづりを 見せられる。2つ組の ことばは 3つめの 選択肢に おなじ 回の べつの 組の ことば（see / sea / meet）を つかう（にせの つづりを 見せない）。
+- **新しい 話し手は 増やさない**: 天文台の 子 ルカ（L504）は ビリモが「ごっこ」で 演じる。
+- **文法の さきどり**: L492 の Much bigger than ～、L495 の Which planet is the biggest? は ワールド18（比較）の「ききなれ」だけで、テストの core には しない。L507 の Why don't we ～? は さそいの 決まり文句として 入れた。
+- **こじん じょうほう**: うちゅうへの メッセージ（L503）と みらいの じぶんへの メモ（L508）は「From the children of Earth」「From me」で おわり、台本と 会話で「ほんとうの なまえや じゅうしょは かかなくて いい」と 教える。L504 の ビデオ通話は「でんわの まえに おとなに きく・じゅうしょや パスワードを ネットで いわない」と 台本で 教え、AI の goalJa は「じゅうしょや でんわばんごうは いわなくて OK」。L496・L497 の ゆめは「うちゅう いがいでも・まだ きまって いなくても OK」。
+- 自分で 1 回 見なおして なおした ところ: core の 表現に ― が 入っていた（L489「I'll help you. ― Thanks!」、L509「Will it be clear tonight? ― I think it will.」→ core を 前半だけに）、L500 の 単語の 日本語欄が「100」だけ（→「ひゃく」）、L484 の 会話で ハルが ことわった まま おわっていた（ココアで「いく！」に かわる 1 行を 足し、リコの 2 行を 1 行に まとめて 7 行に）、L493 の ビリモの セリフ（You won't go there tomorrow → You won't live there.）、L499 の If we have a rocket（→ Imagine we have a rocket.）、L509 の 日本語訳（なつかしく なる → おわかれ するのは さびしい）、台本が 125 語に 足りない 回（L487・490・492・495・500・505〜509）に 1〜2 文 足した。
+
+### 例（L489「I'll Help You」）
+- 表現（core）: I'll help you. ／ This box is heavy. ― I'll carry it. ／ I'll open the door for you. ― Thanks!
+- 会話（天文台の かいだん）: Ms. Emma「We need to take the telescope to the roof. But this box is heavy.」 Haru「I'll help you!」 Riko「I'll open the door for you.」 Kiko「It's dark on the stairs. I'll get a flashlight.」 Birimo「And I'll carry the blankets!」
+- フォニックス: future / creature / furniture / capture（おわりの「チャー」は ture。問題は fu＿＿＿＿（みらい）で future / fucher / fuchur）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 47 ファイル・1,256 テスト すべて成功
+- `npx next build`: 成功。First Load JS は /map 195 kB（193 → +2）、/lesson/[lessonNo] 199 kB（196 → +3）、/gacha 184 kB（181 → +3）、/test/[assessmentId] 183 kB（181 → +2）、/parent 158 kB（増えたのは ワールド17 の 問題の コード・いみの 表と 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 25`: No.25（L481〜500・61 ページ）を 作れることを 確認
