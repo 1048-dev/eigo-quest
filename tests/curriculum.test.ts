@@ -40,6 +40,7 @@ import { familyOf as familyOf31, personOf as personOf31, portOf, structOf, w31Fo
 import { alOf, dataOf, directionOf, geoOf, numberOf, w32FocusOf } from "@/lib/curriculum/w32Phonics";
 import { jectOf, listOf, nounEndOf, proofOf, ruptOf, w33FocusOf } from "@/lib/curriculum/w33Phonics";
 import { doubleOf, izeOf, travelNumberOf, ukUsOf, visOf, w34FocusOf } from "@/lib/curriculum/w34Phonics";
+import { contrastOf, formalOf, interCoOf, ityOf, rootOf, w35FocusOf } from "@/lib/curriculum/w35Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -3852,5 +3853,148 @@ describe("カリキュラム: ワールド34 の決まりごと（つばさの�
     expect(story(1000)).toMatch(/1,000|thousand/i);
     for (const n of [995, 1000, 1005, 1010, 1015, 1020]) expect(story(n), `L${n}`).toMatch(/stamp/i);
     expect(story(1020)).toMatch(/Hall of Wisdom/);
+  });
+});
+
+describe("カリキュラム: ワールド35 の決まりごと（ちえの議事堂）", () => {
+  const w35 = LESSONS.filter((l) => l.world === 35);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (ityOf(w) ? "ity" : interCoOf(w) ? "interco" : contrastOf(w) ? "contrast" : formalOf(w) ? "formal" : rootOf(w) ? "root" : "?");
+
+  it("ワールド35 は 1021〜1050 の 30 レッスン、ステージ4・B1、学年の めやすは 高校中級", () => {
+    if (w35.length === 0) return; // 未作成ならスキップ
+    expect(w35.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 1021 + i));
+    for (const l of w35) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校中級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(4);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w35.length === 0) return;
+    const titles = ["The Hall of Wisdom", "Should Students Wear Uniforms?", "Longer Breaks?", "School Rules Survey", "School Rules Discussion",
+      "Fair or Not Fair?", "Everyone Should Have a Chance", "Standing Up for a Friend", "Including Everyone", "Kindness Campaign",
+      "Children Have Rights", "We Are Responsible For…", "Helping at Home", "Our Community", "Rights and Responsibilities Talk",
+      "I Suggest That We…", "How About Making a Map?", "Let's Find a Compromise", "Vote and Report", "Children's Proposal",
+      "Animals and Us", "Less Plastic", "Stage 4 Review: Opinions", "Stage 4 Review: Explaining", "Stage 4 Review: Polite Requests",
+      "Two Sides of a Story", "My Proposal Letter", "Final Debate Practice", "Hall of Wisdom Review", "World 35 Grand Review"];
+    expect(w35.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: -ity → inter- と co- → 対比の 強勢 → あらたまった ことば → ステージ4 の 語根（各ブロックの 5回目と L1046〜1050 は ふりかえり）", () => {
+    if (w35.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(1021, 1024, "suffix-ity");
+    rule(1026, 1029, "prefix-inter-co");
+    rule(1031, 1034, "contrast-stress");
+    rule(1036, 1039, "formal-casual");
+    rule(1041, 1044, "root-review");
+    for (const n of [1025, 1030, 1035, 1040, 1045, 1046, 1047, 1048, 1049, 1050]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド35 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w35) {
+      for (const w of l.phonics.words) {
+        const f = w35FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w35FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば（community は もとの 形容詞が ないので 単語と 台本で あつかう）
+    const all = w35.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["equality", "responsibility", "international", "cooperate", "I like this one", "children", "receive", "respect", "predict", "structure", "transport", "interrupt", "reject"]));
+    // inter- と co- は 両方、語根は ステージ4 の 6つ ぜんぶ
+    expect(new Set(range(1026, 1029).flatMap((l) => l.phonics.words).map((w) => interCoOf(w)!.prefix))).toEqual(new Set(["inter", "co"]));
+    expect(new Set(range(1041, 1044).flatMap((l) => l.phonics.words).map((w) => rootOf(w)!.root))).toEqual(new Set(["spect", "dict", "struct", "port", "rupt", "ject"]));
+    // ふりかえり L1046〜1050 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(1046, 1050)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["ity", "interco", "contrast", "formal", "root"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w35.length === 0) return;
+    const want: Record<number, string> = {
+      1021: "Children from many places meet here to talk.", 1022: "Should students wear uniforms?", 1026: "It's not fair if only some people can play.",
+      1027: "Everyone should have a chance to try.", 1028: "Stop it. That's not kind.", 1029: "Do you want to join us?", 1030: "Let's make our school a kind place.",
+      1031: "Children have the right to learn and play.", 1032: "We are responsible for taking care of our pets.", 1033: "I'm responsible for washing the dishes.",
+      1034: "What can children do for our community?", 1036: "I suggest that we plant flowers at the station.", 1037: "How about making a map for visitors?",
+      1038: "Let's find a compromise.", 1039: "Twelve people voted for the idea.", 1041: "Should people keep wild animals as pets?",
+      1042: "I suggest that we bring our own bottles.", 1046: "Read two opinions. Which do you agree with?", 1050: "Children's voices can change the world.",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(1023)).toMatch(/^I think we should have longer breaks because /);
+    expect(core(1024)).toMatch(/^Most students want to /);
+    expect(core(1025)).toMatch(/^On the one hand, .*\. On the other hand, /);
+    expect(core(1035)).toMatch(/^We have the right to .*, and we should /);
+    expect(core(1040)).toMatch(/^Our proposal is .*\. It will help /);
+    expect(core(1043)).toMatch(/^I see your point, but /);
+    expect(core(1044)).toMatch(/^The graph shows /);
+    expect(core(1045)).toMatch(/^Would you mind /);
+    expect(core(1047)).toMatch(/^Dear Mayor, I suggest that /);
+    expect(core(1048)).toMatch(/^First, I'd like to say /);
+    expect(core(1049)).toMatch(/On the other hand, /);
+  });
+
+  it("文法の じゅんばん: On the one hand / On the other hand は L1025、have a chance to は L1027、have the right to は L1031、responsible for は L1032、suggest that は L1036、compromise は L1038 から", () => {
+    if (w35.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bon the one hand\b/i, 1025],
+      [/\bon the other hand\b/i, 1025],
+      [/\bhave a chance to\b/i, 1027],
+      [/\b(have|has) the right to\b/i, 1031],
+      [/\bresponsible for\b/i, 1032],
+      [/\bsuggest that\b/i, 1036],
+      [/\bcompromise\b/i, 1038],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(1021, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ4: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・200 語 以上で 読みものを ふくむ、会話シーンは 6〜7 行（L1030・L1040・L1050 は 8 行まで）、L1050 は スピード TPR", () => {
+    if (w35.length === 0) return;
+    for (const l of w35) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(200);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{200,}"/);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(6);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual([1030, 1040, 1050].includes(l.lessonNo) ? 8 : 7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（On the one hand・compromise）
+    expect(w35.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([1025, 1038]);
+    expect(at(1050)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。であい・アンケート・手紙の 回は ほんとうの なまえや じゅうしょを いわなくて よいと goalJa に 明記", () => {
+    if (w35.length === 0) return;
+    for (const l of w35) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (real |full )?(name|address|school|age|birthday|phone|email|passport number)|where do you live|how old are you|when were you born/i);
+    for (const n of [1021, 1024, 1047]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+  });
+
+  it("物語: L1021 で ちえの議事堂・オリーブ・声の木・ウィローフォード → L1036 ハート市長 → 6まいの 金の 葉っぱ → L1049 海の底への 地図 → L1050 フィナーレ", () => {
+    if (w35.length === 0) return;
+    const story = (n: number) => at(n)!.teacherScript + " " + said(n);
+    expect(story(1021)).toMatch(/Hall of Wisdom/);
+    expect(story(1021)).toMatch(/\bOlive\b/);
+    expect(story(1021)).toMatch(/Tree of Voices/);
+    expect(story(1021)).toMatch(/Willowford/);
+    expect(story(1036)).toMatch(/Mayor Hart/);
+    for (const n of [1025, 1030, 1035, 1040, 1045, 1050]) expect(story(n), `L${n}`).toMatch(/\bleaf\b/i);
+    expect(story(1049)).toMatch(/\bmap\b/i);
+    expect(story(1049)).toMatch(/\bsea\b/i);
+    expect(story(1050)).toMatch(/\bsea\b/i);
   });
 });

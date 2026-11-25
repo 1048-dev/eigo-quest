@@ -993,3 +993,42 @@
 - `npx vitest run`: 68 ファイル・2,221 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 255 → 260 kB、/lesson/[lessonNo] 261 → 265 kB、/gacha 243 → 248 kB、/test/[assessmentId] 243 → 248 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド34 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 50`（L981〜1000）: 63 ページ（ワールド34 が できたので 32 → 63 ページ）。`--pack 51`（L1001〜1020）: 63 ページ
+
+## WORLD — ワールド35「ちえの議事堂」（L1021〜1050・ステージ4・B1・ステージ4 の 総まとめ）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-35.json` を 新しく 作成（30 レッスン、ステージ4・`level` は B1、`school.grade` は 計画どおり「高校中級」）。計画書 §10 の タイトル・会話シーンどおり（中心の表現は 下の「決めたこと」の ところだけ ことばを ととのえた）。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 1,050 レッスン。ステージ4 が そろった）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30・ワールドの なかで かさなり なし・ワールド34 とも かさなり なし）、フォニックスの ことば 107、会話の セリフ 210 行（1 回 6〜7 行、L1030・L1040・L1050 は 8 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 317 語・最少 294 語・最大 329 語）で、まいかい「読みもの」（オリーブの あいさつ・アンケート結果・アマラの 物語・レオの ボール計画・絵本・子どもの 権利の リスト・家の しごと表・公園そうじの おしらせ・ハート市長の 手紙・投票結果・提案書・グラフの せつめい・2 つの 意見文・市長への 手紙・こども議会の メッセージ など。61〜90 語）を 読む。日本語の ヒントは 2 回だけ（L1025「On the one hand（いっぽうでは）」・L1038「compromise（だきょうあん）」）。
+- ブロック構成: 1021〜1025 学校の ルール（Children from many places meet here to talk.・Should students wear uniforms?・I think we should have longer breaks because ～.・Most students want to choose their own seats.・On the one hand / On the other hand は L1025 から）→ 1026〜1030 公平と やさしさ（It's not fair if only some people can play.・have a chance to は L1027 から・Stop it. That's not kind.・Do you want to join us?・Let's make our school a kind place.）→ 1031〜1035 権利と 役割（have the right to は L1031 から・responsible for は L1032 から・What can children do for our community?・We have the right to speak, and we should listen to others.）→ 1036〜1040 提案（suggest that は L1036 から・How about making a map for visitors?・compromise は L1038 から・Twelve people voted for the idea.・Our proposal is ～. It will help ～.）→ 1041〜1045 動物と 環境・ステージ4 の ふりかえり（野生の 動物を ペットに？・マイボトル・I see your point, but ～.・The graph shows that ～.・Would you mind ～ing?）→ 1046〜1050 まとめ（2 つの 意見文を 読みくらべる・市長への 提案の 手紙・ディベート練習 First, I'd like to say that ～.・L1049 さよなら・L1050 Children's voices can change the world.）。
+- 物語の 糸: L1020 の しょうたいじょうで、架空の まち ウィローフォード（Willowford）の まるい みどりの やねの「ちえの議事堂（Hall of Wisdom）」へ（L1021）。案内役は まるい めがねの メンフクロウ、こども議会の 議長 オリーブ（Olive・口ぐせ Every voice matters!・小さな 木の ベルを ならす）。ホールの まんなかの「声の木（Tree of Voices）」の 6 本の えだに、ブロックの まとめごとに 金の 葉っぱが 1 まいずつ（1025・1030・1035・1040・1045・1050）。議会の 子どもは レオ（山の まち）・アマラ（海辺の 村）・プリヤ（大きな 都市）で、台本の なかか ビリモの やくだけ。L1036 から ハート市長（Mayor Hart・赤い スカーフ）。あき地は 花だん＋小さな 遊び場の 妥協案（L1038）、投票で 観光客の 地図が 20 票中 12 票（L1039）、市長が 地図の 提案を うけいれる（L1040）。L1047 の 手紙で 公園に ベンチ 4 つ（L1050 で 決定）。L1049 で ビリモが 議事堂の 図書室で「Deep Sea City」と かかれた 海の底への 古い 地図を 見つけ（ミス・エマが 高い たなから とって くれる）、L1050 で 声の木に 白い 花が さき、地図が 青く ひかる ― ワールド36「しんかいの都」への つなぎ。
+- フォニックス（`src/lib/curriculum/w35Phonics.ts`・`questions.ts` の `w35Question`。w34Question より 先に よぶ）:
+  - -ity の 名詞（rule "suffix-ity"。focus "-ity"）: 「-ity の ことば。もとの ことば（形容詞）は どれ？」（responsibility（せきにん・やくわり）→ もとの ことば: ＿＿（せきにんの ある）→ responsible / responsable / responsibil）。14 語。ble → bil・ous → os・e を とる かわりかたと、-ity の すぐ まえを つよく いう こと（re-spon-si-BIL-i-ty）を せつめい。
+  - inter- と co-（rule "prefix-inter-co"。focus "inter" "co"）: 「inter（あいだ）と co（いっしょに）の ことば。文に あう ことばは どれ？」（If we all ＿＿, we can finish the poster faster. → cooperate / interview / intersection）。12 語。日本語の ヒントなしで 英語の 文だけから えらぶ（B1 の 一歩）。
+  - 対比の 強勢（rule "contrast-stress"。focus は つよく いう ことばの 小文字）: 「B は くらべて いって いるよ。B の 文で いちばん つよく いう ことばは どれ？」（A: Did you say Tuesday?　B: I said Thursday. → Thursday / I / said）。16 文。ワールド29 の 意見を 強める 強勢と ちがい、A の 文と くらべて ちがう ことばを みつける。
+  - あらたまった ことばと くだけた ことば（rule "formal-casual"。focus は その ことば そのもの）: 「あらたまった ことば（手紙・発表で つかう）は どれ？」（ふだん: get（うけとる・もらう）→ あらたまった: ＿＿ → receive / recieve / receeve）。12 語（children・receive・request・purchase・assist・provide・perhaps・require・repair・inform・bicycle・photograph）。
+  - ステージ4 の 語根の まとめ（rule "root-review"。focus "spect" "dict" "struct" "port" "rupt" "ject"）: 「ステージ4 の 語根。＿＿ に 入る パーツは どれ？」（in＿＿（中まで よく 見る → しらべる）→ spect / port / rupt）。12 語。まちがいの 語根は 入れても ことばに ならない もの だけ（eject・report・prospect の ような ほんとうの ことばに なる くみあわせは さけた）。
+- フォーカスの ボタン（`phonicsButtons.ts` の `w35Example`）と 読み上げ（`vowelTeams.ts` の `w35Say`・いちばん 先に みる）は その focus で 問う ことば・文を よむ。L1020 までの どの 回でも はたらかない ことを テストで たしかめる。
+- テスト: `tests/curriculum.test.ts` に ワールド35 の 決まりごと（範囲・ステージ4・B1・高校中級・タイトル 30・フォニックスの 順と 種類・inter と co の 両方・語根 6 つ ぜんぶ・ふりかえり L1046〜1050 は 5 つの きまりを ぜんぶ・core の 表現・文法の じゅんばん（On the one hand / On the other hand / have a chance to / have the right to / responsible for / suggest that / compromise）・台本は 英語だけで 200 語 以上＋読みもの・日本語の ヒントは L1025 と L1038 だけ・AI 会話で 個人情報を きかない・L1021・L1024・L1047 は goalJa に「ほんとうの なまえや じゅうしょは いわなくて いいよ」・物語）の 8 テストを 追加。`tests/phonics-w35.test.ts`（13 テスト）を 追加。
+
+### 決めたこと（理由）
+- **学年の めやすは「高校中級」**: 計画書どおり（ワールド29〜34 は 高校初級）。スキーマの きまり（高校 で はじまる）にも あう。
+- **-ity の 問いの 角度を「名詞 → もとの 形容詞」に した**: ワールド33（-ty）・ワールド34（-ize）は「もとの ことば → あたらしい つづり」だったので、ぎゃくむきに した。計画の community は もとの 形容詞が はっきり しない（common とは つづりも ちがう）ので フォニックスの 表に 入れず、L1034 の 単語・台本で あつかった。
+- **あらたまった ことばは つづりで 問う**: kids / children の ような ペアを 選択肢に すると いみで すぐ わかって しまうので、ふだんの ことばを 見せて あらたまった ことばの ただしい つづり（receive の ei など まちがえやすい もの）を えらぶ 形に した。どちらも ただしい 英語で ばめんで つかいわける ことを せつめいに 入れた。
+- **中心の表現を ととのえた**: 計画の「～」を 物語に あわせて きめた（L1023 because we need time to relax・L1024 choose their own seats・L1025 せいふくの 両がわ・L1035 We have the right to speak, and we should listen to others.・L1040 地図の 提案・L1043 野生の 動物・L1044 クラスの プラスチック・L1045 いすの じゅんび・L1047 公園の ベンチ・L1048 学校の 畑）。L1049 は「I suggest ～ / On the other hand ～」を さよならの 回に しぜんに あう On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. に した（I suggest that ～ は L1036・L1042・L1047 で なんども つかって いるので、さよならの 回は 両がわを みる 言いかたを 中心に した）。
+- **あんぜんと かたよらない こと**: 話し合いの 話題（せいふく・休み時間・宿題・野生の 動物・学校の 畑）は かならず 両がわの 理由を のせ、どちらかを ばかに しない。政治・政党・ニュースは あつかわない。いじわるの 回（L1028）は 絵本の 物語に して、おちついて「Stop it. That's not kind.」・友だちの そばに いる・すぐ 大人に 知らせる・けんかしない、を おしえ、つぎの 日に あやまって なかなおり。子どもの 権利は「たくさんの 国が やくそくした」と だけ いい、団体の 名前は 出さない。野生の 動物の 法律・プラスチックが なくなるまで 何百年も かかる こと は たしかな 事実だけ。子どもは いつも 大人と いっしょ（犬の さんぽ・公園そうじ・プリヤが 駅で まよう 場面も 先生と いっしょ）。
+- **新しい 話し手は 増やさない**: オリーブ・レオ・アマラ・プリヤ・ハート市長・ケン（L1029 で 仲間に 入る 子）は 台本の なかか、ビリモが「I'm playing ～!」と やくを する。
+- **作りかた**: 下書きの きまり（`.tmp/w35/RULES.md`・`spec.mjs`）と チェックの スクリプトを 書き、30 レッスンを 3 つの まとまり（1021〜1030・1031〜1040・1041〜1050）で 並行して 書き、まとめてから 自分で 1 回 見なおした。チェックの スクリプトの 正規表現に \b の かわりに バックスペース文字が 入って いた ミスを なおした。なおした ところ: 3 つの まとまりの あいだで かさなった 単語 5 こ（opinion・result・bench×2・point of view → voice・show of hands・tally・buddy・side）。
+
+### 例（L1038「Let's Find a Compromise」）
+- 表現（core）: Let's find a compromise. ／ What if we make a flower garden with a small playground? ― That sounds fair. ／ I see your point, but children need a place to run.
+- 読みもの（台本より）: "The Empty Lot. Leo's idea: a playground. Good points: children can run, climb, and play together. Amara's idea: a flower garden. Good points: it is beautiful, quiet, and good for bees. Our compromise: perhaps we can use both halves of the lot. A flower garden on one side and a small playground on the other side. It will require some benches and a path in the middle, so families can enjoy both."
+- 会話: Birimo（レオの やく）「I think this lot should be a playground, because kids love to climb and play soccer.」 Riko「I agree with Amara. I think a flower garden is better, because flowers make people happy.」 … Ms. Emma「You both have good reasons. Let's find a compromise.」 Kiko「What if we make a flower garden with a small playground?」
+- フォニックス: perhaps ／ require ／ repair（問題は「あらたまった ことば（手紙・発表で つかう）は どれ？」ふだん: maybe（もしかすると・たぶん）→ あらたまった: ＿＿ → perhaps ／ perhap ／ prehaps）
+
+### 確認
+- `node .tmp/w35/check-part.mjs content/curriculum/worlds/world-35.json`: OK
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 69 ファイル・2,272 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 260 → 264 kB、/lesson/[lessonNo] 265 → 270 kB、/gacha 248 → 253 kB、/test/[assessmentId] 248 → 252 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド35 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 52`（L1021〜1040）: 63 ページ。`--pack 53`（L1041〜1060）: 32 ページ（ワールド36 が まだ ないので L1041〜1050 だけ）

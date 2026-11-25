@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W35_START, contrastDisplay, contrastOf, contrastWhy, formalDisplay, formalOf, formalWhy, interCoDisplay, interCoOf, interCoWhy, ityDisplay, ityOf, ityWhy, rootDisplay, rootOf, rootWhy } from "./w35Phonics";
 import { W34_START, doubleDisplay, doubleOf, doubleWhy, izeDisplay, izeOf, izeWhy, travelNumberDisplay, travelNumberOf, travelNumberWhy, ukUsDisplay, ukUsOf, ukUsPrompt, ukUsWhy, visDisplay, visOf, visWhy } from "./w34Phonics";
 import { W33_START, jectDisplay, jectOf, jectWhy, listDisplay, listOf, listPrompt, listWhy, nounEndDisplay, nounEndOf, nounEndWhy, proofDisplay, proofOf, proofWhy, ruptDisplay, ruptOf, ruptWhy } from "./w33Phonics";
 import { W32_START, alDisplay, alOf, alWhy, dataDisplay, dataOf, dataWhy, directionDisplay, directionOf, directionWhy, geoDisplay, geoOf, geoWhy, numberDisplay, numberOf, numberWhy } from "./w32Phonics";
@@ -581,6 +582,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド35（ちえの議事堂・L1021〜）の フォニックス（-ity の 名詞・inter- と co-・対比の 強勢・あらたまった ことば・ステージ4 の 語根の まとめ）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - -ity（"responsibility"）: 「-ity の ことば。もとの ことば（形容詞）は どれ？」（responsible / responsable / responsibil）
+ * - inter- と co-（"cooperate"）: 「inter（あいだ）と co（いっしょに）の ことば。文に あう ことばは どれ？」（英語の 文 → cooperate / interview / intersection）
+ * - 対比の 強勢（"I said Thursday"）: 「B は くらべて いって いるよ。B の 文で いちばん つよく いう ことばは どれ？」（A: Did you say Tuesday? → Thursday / I / said）
+ * - あらたまった ことば（"receive"）: 「あらたまった ことば（手紙・発表で つかう）は どれ？」（ふだん: get → receive / recieve / receeve）
+ * - 語根（"inspect"）: 「ステージ4 の 語根。＿＿ に 入る パーツは どれ？」（in＿＿（中まで よく 見る）→ spect / port / rupt）
+ * あてはまらなければ null。ワールド34 の 問題より 先に よぶ。
+ */
+export function w35Question(item: LearningItemDef, rng: () => number): (Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> & { audioText?: string }) | null {
+  if (item.lessonNo < W35_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const t = ityOf(item.text);
+  if (t && focus.includes("-ity")) return { promptJa: "-ity の ことば。もとの ことば（形容詞）は どれ？", display: ityDisplay(t), choices: pick([t.answer, ...t.wrong]), answer: t.answer, explanationJa: ityWhy(t) };
+  const ic = interCoOf(item.text);
+  if (ic && focus.includes(ic.prefix)) return { promptJa: "inter（あいだ）と co（いっしょに）の ことば。文に あう ことばは どれ？", display: interCoDisplay(ic), choices: pick([ic.answer, ...ic.wrong]), answer: ic.answer, explanationJa: interCoWhy(ic) };
+  const c = contrastOf(item.text);
+  if (c && focus.includes(c.strong.toLowerCase())) return { promptJa: "B は くらべて いって いるよ。B の 文で いちばん つよく いう ことばは どれ？", display: contrastDisplay(c), choices: pick([c.answer, ...c.wrong]), answer: c.answer, explanationJa: contrastWhy(c) };
+  const fm = formalOf(item.text);
+  if (fm && focus.includes(fm.word)) return { promptJa: "あらたまった ことば（手紙・発表で つかう）は どれ？", display: formalDisplay(fm), choices: pick([fm.answer, ...fm.wrong]), answer: fm.answer, explanationJa: formalWhy(fm) };
+  const r = rootOf(item.text);
+  if (r && focus.includes(r.root)) return { promptJa: "ステージ4 の 語根。＿＿ に 入る パーツは どれ？", display: rootDisplay(r), choices: pick([r.answer, ...r.wrong]), answer: r.answer, explanationJa: rootWhy(r), audioText: r.word };
   return null;
 }
 
@@ -1384,8 +1414,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド31（動詞と 名詞の 家族・年号・struct・-ian / -ist・port）は その 先（invention を ワールド23 の -tion、magician を ワールド30 で 問わない）
       // ワールド32（geo・-al・方角・数の 読みかた・データの つづり）は その 先（natural を ワールド31 の 家族、geologist を -ist で 問わない）
       // ワールド33（rupt・-ance / -ence / -ency / -ty・-proof・リストの 読みかた・ject）は その 先（eruption を ワールド23 の -tion、safety を まえの ワールドで 問わない）
-      // ワールド34（空港の 数字・vis・2つ ならぶ 文字・-ize・イギリスと アメリカの 英語）は いちばん 先（vacation を ワールド17 の -tion、vis の ことばを まえの ワールドで 問わない）
-      const dq = w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド34（空港の 数字・vis・2つ ならぶ 文字・-ize・イギリスと アメリカの 英語）は その 先（vacation を ワールド17 の -tion、vis の ことばを まえの ワールドで 問わない）
+      // ワールド35（-ity・inter- と co-・対比の 強勢・あらたまった ことば・語根の まとめ）は いちばん 先（interrupt を ワールド33 の rupt、respect を ワールド29 の spect の 問いで 問わない）
+      const dq = w35Question(item, rng) ?? w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
