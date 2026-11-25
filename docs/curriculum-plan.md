@@ -69,7 +69,7 @@
 | 9 そらの大陸 | 241〜270 | 小6（NEW HORIZON 6 前半）：This is me・学校生活と1日・行きたい国・夏休みの思い出 | r のつく母音 ar or er ir ur air ear | 行きたい国のプレゼン / 夏休みトーク |
 | 10 いのちの海 | 271〜300 | 小6（NEW HORIZON 6 中盤）：いきものと地球・食べもののつながり・世界のくらし・おすすめ・わたしたちにできること | soft c/g・-y・-le・aw au ew | 海の生き物クイズ / 地球を守るアイデア会議 |
 | 11 ゆめの都 | 301〜330 | 小6（NEW HORIZON 6 後半）：いちばんの思い出・学校行事・将来の夢・中学でしたいこと・ありがとうメッセージ | -ed -er -est・サイトワード | 卒業アルバムづくり / 夢のスピーチ |
-| 12 グランドフィナーレ | 331〜360 | 小6〜中学準備：1年の総復習・5W1H の質問・短い文章の音読 | サイトワード・多音節語・音読 | 中学校見学 / 1年のふりかえりパーティー |
+| 12 えいごの王国 | 331〜360 | 小6〜中学準備：1年の総復習・5W1H の質問・短い文章の音読 | サイトワード・多音節語・音読 | 中学校見学 / 1年のふりかえりパーティー |
 
 ## 5. ワールドごとのブロック表（5レッスン＝1ブロック。各ブロックの最後はまとめ回）
 
@@ -703,7 +703,7 @@
 | 357 | I Can Speak English! | できること・したいこと | I can speak English. | ふりかえり（cake, rain, tree, moon） | パーティーで ねがいごと |
 | 358 | Memories of the Year | 1ねんの おもいで | My best memory is camp. | ふりかえり（star, corn, summer, hair） | アルバムで おもいでトーク |
 | 359 | Grand Finale Review | しつもんと こたえ | What did you learn this year? | ふりかえり（helped, singer, biggest, city, happy） | パーティーの しつもんゲーム |
-| 360 | World 12 Grand Finale | グランドフィナーレ（360レッスン ぜんぶ） | Thank you for a wonderful year. | 総まとめ（because, who, rain, green, park, played, basketball） | グランドフィナーレ・パーティー |
+| 360 | World 12 Grand Finale | えいごの王国の グランドフィナーレ（360レッスン ぜんぶ） | Thank you for a wonderful year. | 総まとめ（because, who, rain, green, park, played, basketball） | グランドフィナーレ・パーティー |
 
 ## 7. データの書き方（新しいワールドを作るとき）
 - `content/curriculum/lessons.json` に追記。型は `src/lib/domain/types.ts` の `LessonDef`。

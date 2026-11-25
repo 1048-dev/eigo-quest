@@ -15,7 +15,7 @@ export const WORLD_NAMES: Readonly<Record<number, string>> = {
   9: "そらの大陸",
   10: "いのちの海",
   11: "ゆめの都",
-  12: "グランドフィナーレ",
+  12: "えいごの王国",
 };
 
 export const WORLD_COUNT = 12;
