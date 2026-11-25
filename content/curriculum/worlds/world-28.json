@@ -1,0 +1,4711 @@
+{
+  "world": 28,
+  "stage": 3,
+  "level": "A2+",
+  "lessons": [
+    {
+      "lessonNo": 811,
+      "world": 28,
+      "title": "A Rainbow Bridge",
+      "titleJa": "にじの架け橋",
+      "school": {
+        "grade": "中3",
+        "topic": "This bridge connects many countries.：くもの 上の 大きな にじの はしに とうちゃく",
+        "grammar": "This ～ connects ～. / Welcome to ～! / Why are ～? ― ～.",
+        "expressions": [
+          {
+            "en": "This bridge connects many countries.",
+            "ja": "この はしは たくさんの 国を つないで いるよ。",
+            "core": true
+          },
+          {
+            "en": "Welcome to the Rainbow Bridge!",
+            "ja": "にじの架け橋へ ようこそ！"
+          },
+          {
+            "en": "Why are the colors so pale? ― Not many friends visit now.",
+            "ja": "どうして いろが こんなに うすいの？ ― いまは あまり ともだちが こないのよ。"
+          }
+        ],
+        "testPoints": [
+          "This bridge connects many countries. で もの・ばしょの はたらきを つたえ、Why are ～? と りゆうを きける",
+          "カタカナ語と 英語の 音（energy は EN-er-gy と さいしょを つよく。エネルギー では ない）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Climb up the rainbow.",
+          "ja": "にじを のぼって。",
+          "action": "その ばで ゆっくり のぼる まね",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Bow to Iris.",
+          "ja": "イリスに おじぎして。",
+          "action": "ていねいに おじぎする",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Spread your arms like a crane.",
+          "ja": "ツルの ように りょうてを ひろげて。",
+          "action": "りょうてを おおきく ひろげて はばたく",
+          "emoji": "🕊️"
+        },
+        {
+          "en": "Point at the pale colors.",
+          "ja": "うすい いろを ゆびさして。",
+          "action": "はしの いろを ゆびさす",
+          "emoji": "👉"
+        }
+      ],
+      "phonics": {
+        "rule": "katakana",
+        "focus": [
+          "en-er-gy",
+          "al-ler-gy",
+          "vi-ta-min",
+          "ham-bur-ger"
+        ],
+        "sounds": [
+          "EN",
+          "AL",
+          "VI",
+          "HAM"
+        ],
+        "words": [
+          "energy",
+          "allergy",
+          "vitamin",
+          "hamburger"
+        ],
+        "tipJa": "エネルギー・アレルギーは カタカナと 英語で おとが ちがうよ。英語では EN-er-gy・AL-ler-gy・VI-ta-min・HAM-bur-ger と、大きい もじの ところを つよく いおう。"
+      },
+      "vocab": [
+        {
+          "en": "bridge",
+          "ja": "はし",
+          "emoji": "🌉",
+          "core": true
+        },
+        {
+          "en": "connect",
+          "ja": "つなぐ",
+          "emoji": "🔗"
+        },
+        {
+          "en": "country",
+          "ja": "国",
+          "emoji": "🌍"
+        },
+        {
+          "en": "pale",
+          "ja": "（いろが）うすい",
+          "emoji": "🎨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Healthy body, happy mind! Today, we follow the rainbow from the Village of Springs. We climb up, up, up, above the clouds. Look! The rainbow is a huge bridge! But its colors are very pale. An old white crane flies down to meet us. Her name is Iris. She is the keeper of the bridge. She says, Welcome to the Rainbow Bridge! This bridge connects many countries. Say it with me. This bridge connects many countries. Wonderful! Kiko asks, Why are the colors so pale? Iris answers, Not many friends visit now. Let's read the sign at the bridge gate. \"Welcome to the Rainbow Bridge! This bridge connects many countries. Please walk to Friendship Plaza in the middle. Meet new friends and share your stories. Every kind word brings back one color. When all seven colors shine, the bridge will be happy again. From Iris, Keeper of the Bridge.\" Where is Friendship Plaza? In the middle of the bridge. How many colors are there? Seven. Now, phonics. Today, we listen to words we use in Japanese, too. But English sounds different! Energy. EN-er-gy. Not e-ne-ru-gi. Allergy. AL-ler-gy. Vitamin. VI-ta-min. Hamburger. HAM-bur-ger. Say the strong part loudly. Let's walk to Friendship Plaza!",
+      "conversation": {
+        "scene": "The friends arrive at the Rainbow Bridge",
+        "sceneJa": "くもの 上の にじの はしに とうちゃく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! The rainbow is a giant bridge!",
+            "ja": "みて！ にじが 大きな はしに なってる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Iris! Welcome to the Rainbow Bridge!",
+            "ja": "ぼくが イリスの やくね！ にじの架け橋へ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Where does it go?",
+            "ja": "どこに つながって いるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "This bridge connects many countries.",
+            "ja": "この はしは たくさんの 国を つないで いるのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Why are the colors so pale?",
+            "ja": "どうして いろが こんなに うすいの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Not many friends visit now.",
+            "ja": "いまは あまり ともだちが こないのよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Then let's make new friends and bring the colors back!",
+            "ja": "それなら あたらしい ともだちを つくって、いろを とりもどしましょう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の イリスに あいさつして、Why are the colors so pale? と りゆうを きいて みよう",
+          "starterEn": "Welcome to the Rainbow Bridge! I'm Iris, the keeper. What can you see from up here?",
+          "targetExpressions": [
+            "This bridge connects many countries.",
+            "Welcome to the Rainbow Bridge!",
+            "Why are the colors so pale? ― Not many friends visit now."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This bridge connects many countries.",
+          "Welcome to the Rainbow Bridge! / Why are the colors so pale? ― Not many friends visit now.",
+          "energy・allergy・vitamin・hamburger"
+        ]
+      }
+    },
+    {
+      "lessonNo": 812,
+      "world": 28,
+      "title": "Same or Different?",
+      "titleJa": "おなじ？ ちがう？",
+      "school": {
+        "grade": "中3",
+        "topic": "In Japan, we take off our shoes at home.：はしの 上の ひろばで、ちがう 国の 子と であう",
+        "grammar": "In Japan, we ～. / In my family, we ～. / Is it the same or different? ― It's the same!",
+        "expressions": [
+          {
+            "en": "In Japan, we take off our shoes at home.",
+            "ja": "日本では、いえで くつを ぬぐよ。",
+            "core": true
+          },
+          {
+            "en": "In my family, we wear slippers at home.",
+            "ja": "ぼくの いえでは、いえの なかで スリッパを はくよ。"
+          },
+          {
+            "en": "Is it the same or different? ― It's the same!",
+            "ja": "おなじ？ ちがう？ ― おなじだね！"
+          }
+        ],
+        "testPoints": [
+          "In Japan, we ～. / In my family, we ～. で くらしの しゅうかんを つたえ、Is it the same or different? と くらべられる",
+          "カタカナ語と 英語の 音（camera は CAM-er-a、video は VID-e-o と さいしょを つよく）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take off your shoes.",
+          "ja": "くつを ぬいで。",
+          "action": "くつを ぬぐ まね",
+          "emoji": "👟"
+        },
+        {
+          "en": "Line them up neatly.",
+          "ja": "きちんと ならべて。",
+          "action": "くつを そろえて ならべる まね",
+          "emoji": "📏"
+        },
+        {
+          "en": "Wave and say Moi!",
+          "ja": "てを ふって Moi! と いって。",
+          "action": "てを ふって あいさつする",
+          "emoji": "👋"
+        },
+        {
+          "en": "Sit on the blue carpet.",
+          "ja": "あおい カーペットに すわって。",
+          "action": "その ばに すわる",
+          "emoji": "🟦"
+        }
+      ],
+      "phonics": {
+        "rule": "katakana",
+        "focus": [
+          "cam-er-a",
+          "vid-e-o",
+          "ra-di-o",
+          "cal-en-dar"
+        ],
+        "sounds": [
+          "CAM",
+          "VID",
+          "RA",
+          "CAL"
+        ],
+        "words": [
+          "camera",
+          "video",
+          "radio",
+          "calendar"
+        ],
+        "tipJa": "カメラ・ビデオ・ラジオ・カレンダーも 英語では おとが ちがうよ。CAM-er-a・VID-e-o・RA-di-o・CAL-en-dar と、さいしょを つよく いおう。"
+      },
+      "vocab": [
+        {
+          "en": "same",
+          "ja": "おなじ",
+          "emoji": "🟰",
+          "core": true
+        },
+        {
+          "en": "different",
+          "ja": "ちがう",
+          "emoji": "↔️"
+        },
+        {
+          "en": "shoes",
+          "ja": "くつ",
+          "emoji": "👟"
+        },
+        {
+          "en": "slippers",
+          "ja": "スリッパ",
+          "emoji": "🩴"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, This bridge connects many countries. Today, we arrive at Friendship Plaza in the middle of the bridge. Three children are waiting for us. Aino is from Finland. She says, Moi! Amara is from Kenya. She says, Jambo! Mateo is from Mexico. He says, Hola! Birimo is our interpreter. Moi, Jambo, Hola! That means hello, hello, hello! Before we sit down on the soft carpet, Haru takes off his shoes. He says, In Japan, we take off our shoes at home. Say it with me. In Japan, we take off our shoes at home. Great! Aino smiles. In my family, we take off our shoes, too. It's the same! Mateo says, In my family, we wear slippers at home. Iris says, Every family is different. Let's read the plaza board. \"Friendship Plaza Rules. Please say hello in your own language. Ask questions about your new friends. Listen carefully and smile. Some things are the same. Some things are different. Both are wonderful! Please take off your shoes on the blue carpet. Thank you! From Iris.\" Where do you take off your shoes? On the blue carpet. What should you do with new friends? Ask questions and listen. Now, phonics. Camera. CAM-er-a. Not ka-me-ra. Video. VID-e-o. Radio. RA-di-o. Calendar. CAL-en-dar. Say the strong part loudly. Same or different? Let's find out!",
+      "conversation": {
+        "scene": "Meeting new friends at Friendship Plaza",
+        "sceneJa": "はしの 上の ひろばで、ちがう 国の 子と であう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "In Japan, we take off our shoes at home.",
+            "ja": "日本では、いえで くつを ぬぐよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Aino! Moi! In my family, we take off our shoes, too.",
+            "ja": "ぼくが アイノの やくね！ モイ！ わたしの いえでも くつを ぬぐよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Is it the same or different?",
+            "ja": "おなじ？ ちがう？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's the same!",
+            "ja": "おなじだね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And Mateo says, In my family, we wear slippers at home.",
+            "ja": "それから マテオは「ぼくの いえでは、いえの なかで スリッパを はくよ」って。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Every family is different. That's what makes it fun!",
+            "ja": "いえに よって ちがうのね。だから たのしいのよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アイノに In Japan, we ～. と 日本の いえの しゅうかんを つたえて、おなじか ちがうか はなそう",
+          "starterEn": "Moi! I'm Aino from Finland. In my family, we take off our shoes at home. How about in Japan?",
+          "targetExpressions": [
+            "In Japan, we take off our shoes at home.",
+            "In my family, we wear slippers at home.",
+            "Is it the same or different? ― It's the same!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Japan, we take off our shoes at home.",
+          "In my family, we wear slippers at home. / Is it the same or different? ― It's the same!",
+          "camera・video・radio・calendar"
+        ]
+      }
+    },
+    {
+      "lessonNo": 813,
+      "world": 28,
+      "title": "How About in Your Country?",
+      "titleJa": "きみの 国では？",
+      "school": {
+        "grade": "中3",
+        "topic": "How about in your country?：がっこうの くらしを くらべる",
+        "grammar": "How about in your country? / In Japan, we ～. / At my school, ～.",
+        "expressions": [
+          {
+            "en": "How about in your country?",
+            "ja": "きみの 国では どう？",
+            "core": true
+          },
+          {
+            "en": "In Japan, we clean our classroom. ― That's cool!",
+            "ja": "日本では、じぶんたちで きょうしつを そうじするよ。 ― かっこいいね！"
+          },
+          {
+            "en": "At my school, the school year starts in January.",
+            "ja": "わたしの がっこうでは、1がつに あたらしい がくねんが はじまるの。"
+          }
+        ],
+        "testPoints": [
+          "How about in your country? で あいての 国の ようすを きき、In Japan, we ～. / At my school, ～. で くらべられる",
+          "カタカナ語と 英語の 音（idea は i-DE-a、museum は mu-SE-um と まんなかを つよく）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sweep the floor.",
+          "ja": "ゆかを はいて。",
+          "action": "ほうきで はく まね",
+          "emoji": "🧹"
+        },
+        {
+          "en": "Wipe your desk.",
+          "ja": "つくえを ふいて。",
+          "action": "ぞうきんで ふく まね",
+          "emoji": "🧽"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Point to January on the calendar.",
+          "ja": "カレンダーの 1がつを ゆびさして。",
+          "action": "カレンダーを ゆびさす まね",
+          "emoji": "📅"
+        }
+      ],
+      "phonics": {
+        "rule": "katakana",
+        "focus": [
+          "i-de-a",
+          "pi-an-o",
+          "mu-se-um",
+          "vol-un-teer"
+        ],
+        "sounds": [
+          "DE",
+          "AN",
+          "SE",
+          "TEER"
+        ],
+        "words": [
+          "idea",
+          "piano",
+          "museum",
+          "volunteer"
+        ],
+        "tipJa": "アイデア・ピアノ・ミュージアム・ボランティアは、英語では つよい ところが まんなかや おわりに あるよ。i-DE-a・pi-AN-o・mu-SE-um・vol-un-TEER。"
+      },
+      "vocab": [
+        {
+          "en": "country",
+          "ja": "国",
+          "emoji": "🌍",
+          "core": true
+        },
+        {
+          "en": "school year",
+          "ja": "がっこうの 1ねん（がくねん）",
+          "emoji": "📅"
+        },
+        {
+          "en": "uniform",
+          "ja": "せいふく",
+          "emoji": "👔"
+        },
+        {
+          "en": "classroom",
+          "ja": "きょうしつ",
+          "emoji": "🏫"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, In Japan, we take off our shoes at home. Today, we talk about school life on the bridge. Riko says, In Japan, the school year starts in April. How about in your country? Say it with me. How about in your country? Wonderful! Amara says, At my school, the school year starts in January. Mateo says, In Mexico, it starts in late August. Aino says, In Finland, children start school at seven. Kiko is surprised. Seven? Wow! Then Haru says, In Japan, we clean our classroom. Mateo says, That's cool! Let's read Amara's school card. \"Jambo! I'm Amara. At my school, the school year starts in January. We wear green uniforms. Our first class starts at eight. My favorite subject is science, because I love the stars. After school, I go running with my friends. How about in your country? Please tell me!\" When does Amara's school year start? In January. What is her favorite subject? Science. Now, phonics. These words sound different in English, too. Idea. i-DE-a. Not ai-de-a. Piano. pi-AN-o. Museum. mu-SE-um. Volunteer. vol-un-TEER. The strong part is in the middle or at the end. Let's ask our new friends more questions!",
+      "conversation": {
+        "scene": "Comparing school life",
+        "sceneJa": "がっこうの くらしを くらべる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "In Japan, the school year starts in April. How about in your country?",
+            "ja": "日本では、4がつに あたらしい がくねんが はじまるの。きみの 国では どう？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Amara! At my school, the school year starts in January.",
+            "ja": "ぼくが アマラの やくね！ わたしの がっこうでは、1がつに はじまるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "January? That's different!",
+            "ja": "1がつ？ ちがうね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In Japan, we clean our classroom.",
+            "ja": "日本では、じぶんたちで きょうしつを そうじするよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Now I'm Mateo! That's cool! Do you clean the windows, too?",
+            "ja": "こんどは マテオ！ かっこいいね！ まども そうじするの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes! The windows, the floor, and the desks.",
+            "ja": "うん！ まども ゆかも つくえもね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great questions, everyone. Keep asking, How about in your country?",
+            "ja": "いい しつもんね。どんどん「きみの 国では どう？」と きいて みましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アマラの はなしを きいて、How about in your country? と きかれたら In Japan, we ～. と 日本の がっこうの ことを つたえよう",
+          "starterEn": "Jambo! I'm Amara from Kenya. At my school, we wear green uniforms. How about in Japan?",
+          "targetExpressions": [
+            "How about in your country?",
+            "In Japan, we clean our classroom. ― That's cool!",
+            "At my school, the school year starts in January."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How about in your country?",
+          "In Japan, we clean our classroom. ― That's cool! / At my school, the school year starts in January.",
+          "idea・piano・museum・volunteer"
+        ]
+      }
+    },
+    {
+      "lessonNo": 814,
+      "world": 28,
+      "title": "That's Interesting!",
+      "titleJa": "おもしろいね！",
+      "school": {
+        "grade": "中3",
+        "topic": "That's interesting! We do it differently.：ちがいを たのしむ いいかた",
+        "grammar": "That's interesting! We do it differently. / In ～, I ～. / Let's try it your way!",
+        "expressions": [
+          {
+            "en": "That's interesting! We do it differently.",
+            "ja": "おもしろいね！ わたしたちは ちがう やりかたを するよ。",
+            "core": true
+          },
+          {
+            "en": "In Mexico, I eat tortillas with my hands. ― Really? Can you show me?",
+            "ja": "メキシコでは、トルティーヤを てで たべるよ。 ― ほんとう？ やって みせて くれる？"
+          },
+          {
+            "en": "Let's try it your way!",
+            "ja": "きみの やりかたで やって みよう！"
+          }
+        ],
+        "testPoints": [
+          "That's interesting! We do it differently. で ちがいを みとめて たのしみ、Let's try it your way! と さそえる",
+          "カタカナ語と 英語の 音（vanilla は va-NIL-la、spaghetti は spa-GHET-ti と まんなかを つよく）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold your chopsticks.",
+          "ja": "おはしを もって。",
+          "action": "おはしを もつ まね",
+          "emoji": "🥢"
+        },
+        {
+          "en": "Pick up a rice ball.",
+          "ja": "おにぎりを とって。",
+          "action": "おにぎりを つまむ まね",
+          "emoji": "🍙"
+        },
+        {
+          "en": "Fold a tortilla.",
+          "ja": "トルティーヤを おって。",
+          "action": "てで はんぶんに おる まね",
+          "emoji": "🌮"
+        },
+        {
+          "en": "Take a big bite!",
+          "ja": "おおきく ひとくち！",
+          "action": "おおきな くちで たべる まね",
+          "emoji": "😋"
+        }
+      ],
+      "phonics": {
+        "rule": "katakana",
+        "focus": [
+          "va-nil-la",
+          "pa-ja-mas",
+          "spa-ghet-ti",
+          "mac-a-ro-ni"
+        ],
+        "sounds": [
+          "NIL",
+          "JA",
+          "GHET",
+          "RO"
+        ],
+        "words": [
+          "vanilla",
+          "pajamas",
+          "spaghetti",
+          "macaroni"
+        ],
+        "tipJa": "バニラ・パジャマ・スパゲッティ・マカロニは、英語では va-NIL-la・pa-JA-mas・spa-GHET-ti・mac-a-RO-ni と、大きい もじの ところを つよく ながく いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "interesting",
+          "ja": "おもしろい・きょうみぶかい",
+          "emoji": "🤔",
+          "core": true
+        },
+        {
+          "en": "chopsticks",
+          "ja": "おはし",
+          "emoji": "🥢"
+        },
+        {
+          "en": "tortilla",
+          "ja": "トルティーヤ",
+          "emoji": "🌮"
+        },
+        {
+          "en": "way",
+          "ja": "やりかた",
+          "emoji": "🛤️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, How about in your country? Today, it's lunchtime on the bridge. Everyone opens a lunch box. Haru uses chopsticks. Mateo eats a tortilla with his hands. He says, In Mexico, I eat tortillas with my hands. Kiko says, That's interesting! We do it differently（ちがう やりかたで）. We use chopsticks. Say it with me. That's interesting! We do it differently. Great! Mateo asks, Can you show me? Haru shows him how to hold chopsticks. Then Mateo shows Haru how to fold a tortilla. Riko says, Let's try it your way! Aino says, At my school, lunch is free for everyone. Let's read today's lunch menu. \"Friendship Plaza Lunch. Today we have rice balls from Japan, tortillas with beans from Mexico, fish soup from Finland, and chapati from Kenya. You can use chopsticks, a fork, a spoon, or your hands. Try something new today! For dessert, there is vanilla ice cream.\" What is from Finland? Fish soup. What is for dessert? Vanilla ice cream. Now, phonics. Vanilla. va-NIL-la. Pajamas. pa-JA-mas. Spaghetti. spa-GHET-ti. Macaroni. mac-a-RO-ni. Say the strong part loudly and a little longer. Let's try new food together!",
+      "conversation": {
+        "scene": "Lunchtime on the bridge",
+        "sceneJa": "はしの 上の おひるごはんで、ちがいを たのしむ",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mateo! In Mexico, I eat tortillas with my hands.",
+            "ja": "ぼくが マテオの やくね！ メキシコでは、トルティーヤを てで たべるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Really? Can you show me?",
+            "ja": "ほんとう？ やって みせて くれる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's interesting! We do it differently. We use chopsticks.",
+            "ja": "おもしろいね！ わたしたちは ちがう やりかたを するよ。おはしを つかうの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Chopsticks? Can you show me, too? Oops! My rice fell!",
+            "ja": "おはし？ ぼくにも おしえて！ あっ！ ごはんが おちちゃった！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's try it your way, Mateo! Hands are easy!",
+            "ja": "マテオの やりかたで やって みよう！ てなら かんたん！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful. There are many good ways to eat.",
+            "ja": "すてきね。たべかたには いい やりかたが たくさん あるのね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の マテオの はなしに That's interesting! We do it differently. と こたえて、日本の たべかたを つたえよう",
+          "starterEn": "Hola! I'm Mateo. In Mexico, I eat tortillas with my hands. How do you eat rice in Japan?",
+          "targetExpressions": [
+            "That's interesting! We do it differently.",
+            "In Mexico, I eat tortillas with my hands. ― Really? Can you show me?",
+            "Let's try it your way!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "That's interesting! We do it differently.",
+          "In Mexico, I eat tortillas with my hands. ― Really? Can you show me? / Let's try it your way!",
+          "vanilla・pajamas・spaghetti・macaroni"
+        ]
+      }
+    },
+    {
+      "lessonNo": 815,
+      "world": 28,
+      "title": "Culture Comparison Chart",
+      "titleJa": "文化くらべ表",
+      "school": {
+        "grade": "中3",
+        "topic": "In both countries, people celebrate New Year.：日本と フィンランドの 文化くらべ表を はっぴょうする（まとめ）",
+        "grammar": "In both countries, people ～. / In Japan, we ～. In Finland, people ～. / What's the same? ― ～.",
+        "expressions": [
+          {
+            "en": "In both countries, people celebrate New Year.",
+            "ja": "どちらの 国でも、ひとびとは おしょうがつを おいわいするよ。",
+            "core": true
+          },
+          {
+            "en": "In Japan, we eat soba on New Year's Eve. In Finland, people watch fireworks.",
+            "ja": "日本では おおみそかに そばを たべるよ。フィンランドでは はなびを みるんだって。"
+          },
+          {
+            "en": "What's the same? ― We all love holidays!",
+            "ja": "なにが おなじ？ ― みんな おやすみの ひが だいすき！"
+          }
+        ],
+        "testPoints": [
+          "In both countries, people ～. で おなじ ところを まとめ、In Japan, we ～. In Finland, people ～. で ちがいを くらべられる",
+          "カタカナ語の つよい はくの ふりかえり（EN-er-gy・CAM-er-a・i-DE-a・spa-GHET-ti）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a big chart.",
+          "ja": "大きな ひょうを かいて。",
+          "action": "くうちゅうに おおきな しかくを かく",
+          "emoji": "📊"
+        },
+        {
+          "en": "Write Japan on the left.",
+          "ja": "ひだりに Japan と かいて。",
+          "action": "ひだりがわに もじを かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Clap for the red color!",
+          "ja": "あかい いろに はくしゅ！",
+          "action": "おおきく はくしゅする",
+          "emoji": "👏"
+        },
+        {
+          "en": "Count the colors with your fingers.",
+          "ja": "ゆびで いろを かぞえて。",
+          "action": "ゆびを 1ぽんずつ おって かぞえる",
+          "emoji": "🖐️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "en-er-gy",
+          "cam-er-a",
+          "i-de-a",
+          "spa-ghet-ti"
+        ],
+        "sounds": [
+          "EN",
+          "CAM",
+          "DE",
+          "GHET"
+        ],
+        "words": [
+          "energy",
+          "camera",
+          "idea",
+          "spaghetti"
+        ],
+        "tipJa": "カタカナ語の ふりかえり: EN-er-gy・CAM-er-a は さいしょ、i-DE-a・spa-GHET-ti は まんなかを つよく いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "both",
+          "ja": "りょうほうの・どちらも",
+          "emoji": "👫",
+          "core": true
+        },
+        {
+          "en": "celebrate",
+          "ja": "おいわいする",
+          "emoji": "🎉"
+        },
+        {
+          "en": "chart",
+          "ja": "ひょう",
+          "emoji": "📊"
+        },
+        {
+          "en": "fireworks",
+          "ja": "はなび",
+          "emoji": "🎆"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, That's interesting! We do it differently. Today, we make a culture comparison chart. Riko draws a big chart on the plaza board. Japan and Finland. What's the same? What's different? Aino says, In Finland, people watch fireworks on New Year's Eve. Haru says, In Japan, we eat soba on New Year's Eve. Then Kiko says, In both countries, people celebrate New Year. Say it with me. In both countries, people celebrate New Year. Fantastic! Let's read the chart. \"Culture Comparison Chart: Japan and Finland. New Year's Eve: In Japan, many people eat soba. In Finland, many people watch fireworks. School starts: April in Japan, August in Finland. Shoes at home: In both countries, people take off their shoes. Winter: Both countries have lots of snow!\" When does school start in Finland? In August. What is the same? Shoes at home and snow. Everyone claps. Look! A red light runs across the bridge. The first color is back! Iris says, Thank you, friends. Every friend is a color. Now, phonics review. Energy. EN-er-gy. Camera. CAM-er-a. Idea. i-DE-a. Spaghetti. spa-GHET-ti. One color is back. Six more to go!",
+      "conversation": {
+        "scene": "Presenting a culture comparison chart",
+        "sceneJa": "文化くらべ表を はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's make a culture comparison chart. Japan and Finland!",
+            "ja": "文化くらべ表を つくろう。日本と フィンランド！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In Japan, we eat soba on New Year's Eve.",
+            "ja": "日本では おおみそかに そばを たべるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Aino! In Finland, people watch fireworks.",
+            "ja": "ぼくが アイノの やくね！ フィンランドでは はなびを みるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "In both countries, people celebrate New Year.",
+            "ja": "どちらの 国でも、おしょうがつを おいわいするんだね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What's the same?",
+            "ja": "なにが おなじ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We all love holidays!",
+            "ja": "みんな おやすみの ひが だいすき！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look! The red color is back on the bridge!",
+            "ja": "みて！ はしに あかい いろが もどったわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アイノと 日本と フィンランドの おしょうがつを くらべて、In both countries, ～. と まとめよう",
+          "starterEn": "Moi! Let's make a chart together. In Finland, people watch fireworks on New Year's Eve. What do people do in Japan?",
+          "targetExpressions": [
+            "In both countries, people celebrate New Year.",
+            "In Japan, we eat soba on New Year's Eve. In Finland, people watch fireworks.",
+            "What's the same? ― We all love holidays!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In both countries, people celebrate New Year.",
+          "In Japan, we eat soba on New Year's Eve. In Finland, people watch fireworks. / What's the same? ― We all love holidays!",
+          "energy・camera・idea・spaghetti"
+        ]
+      }
+    },
+    {
+      "lessonNo": 816,
+      "world": 28,
+      "title": "It's a Kind of Rice Ball",
+      "titleJa": "おにぎりって なに？",
+      "school": {
+        "grade": "中3",
+        "topic": "Onigiri is a kind of rice ball.：日本の たべものを せつめいする",
+        "grammar": "～ is a kind of ～. / You can put ～ inside. / What's it like? ― It's ～.",
+        "expressions": [
+          {
+            "en": "Onigiri is a kind of rice ball.",
+            "ja": "おにぎりは ごはんを まるめた たべものの いっしゅだよ。",
+            "core": true
+          },
+          {
+            "en": "You can put salmon or umeboshi inside.",
+            "ja": "なかに さけや うめぼしを いれられるよ。"
+          },
+          {
+            "en": "What's it like? ― It's salty and delicious.",
+            "ja": "どんな あじ？ ― しょっぱくて おいしいよ。"
+          }
+        ],
+        "testPoints": [
+          "～ is a kind of ～. で しらない ものを せつめいし、What's it like? ― It's ～. で あじや ようすを つたえられる",
+          "英語に なった 日本語の つづり（sushi・tofu・tempura・bento。shi・fu、p の まえは m）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a rice ball with your hands.",
+          "ja": "てで おにぎりを にぎって。",
+          "action": "りょうてで おにぎりを にぎる まね",
+          "emoji": "🍙"
+        },
+        {
+          "en": "Wrap it in seaweed.",
+          "ja": "のりで まいて。",
+          "action": "のりを まく まね",
+          "emoji": "🟩"
+        },
+        {
+          "en": "Take a bite.",
+          "ja": "ひとくち たべて。",
+          "action": "ぱくっと たべる まね",
+          "emoji": "😋"
+        },
+        {
+          "en": "Rub your tummy. Yummy!",
+          "ja": "おなかを さすって。おいしい！",
+          "action": "おなかを なでる",
+          "emoji": "🤤"
+        }
+      ],
+      "phonics": {
+        "rule": "japanese-loan",
+        "focus": [
+          "sushi",
+          "tofu",
+          "tempura",
+          "bento"
+        ],
+        "sounds": [
+          "/ˈsuːʃi/",
+          "/ˈtoʊfuː/",
+          "/temˈpʊrə/",
+          "/ˈbentoʊ/"
+        ],
+        "words": [
+          "sushi",
+          "tofu",
+          "tempura",
+          "bento"
+        ],
+        "tipJa": "sushi・tofu・tempura・bento は 英語でも つかう 日本語。英語の つづりは shi・fu と かき、p の まえは n では なく m（tempura）だよ。"
+      },
+      "vocab": [
+        {
+          "en": "rice ball",
+          "ja": "おにぎり",
+          "emoji": "🍙",
+          "core": true
+        },
+        {
+          "en": "salmon",
+          "ja": "さけ（さかな）",
+          "emoji": "🐟"
+        },
+        {
+          "en": "salty",
+          "ja": "しょっぱい",
+          "emoji": "🧂"
+        },
+        {
+          "en": "inside",
+          "ja": "なかに",
+          "emoji": "📦"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, In both countries, people celebrate New Year. Today, Kiko opens her lunch box. Mateo points and asks, What's that? Kiko says, Onigiri is a kind of rice ball. Say it with me. Onigiri is a kind of rice ball. Wonderful! Kiko says, You can put salmon or umeboshi inside. Aino asks, What's it like? Haru says, It's salty and delicious. Then Birimo eats one, two, three, four onigiri! Birimo, slow down! Let's read Kiko's food cards. \"Japanese Food Cards. Onigiri is a kind of rice ball. You can put salmon, tuna, or umeboshi inside. Umeboshi is a sour pickled plum. Miso soup is a kind of soup. It has tofu and green onions in it. Mochi is a kind of rice cake. It is soft and sticky. Enjoy!\" What is umeboshi? A sour pickled plum. What is in the miso soup? Tofu and green onions. Now, phonics. English speakers use some Japanese words, too! Sushi. We write s h i for shi. Tofu. We write f u for fu. Tempura. Before p, we write m, not n. Bento. It's a lunch box. Let's explain more Japanese food to our friends!",
+      "conversation": {
+        "scene": "Explaining Japanese food",
+        "sceneJa": "日本の たべものを せつめいする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mateo! What's that?",
+            "ja": "ぼくが マテオの やくね！ それ なあに？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Onigiri is a kind of rice ball.",
+            "ja": "おにぎりは ごはんを まるめた たべものの いっしゅだよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You can put salmon or umeboshi inside.",
+            "ja": "なかに さけや うめぼしを いれられるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Now I'm Aino! What's it like?",
+            "ja": "こんどは アイノ！ どんな あじ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's salty and delicious. Try one!",
+            "ja": "しょっぱくて おいしいよ。たべて みて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Mmm! One more… and one more… and one more!",
+            "ja": "うーん！ もう 1こ… もう 1こ… もう 1こ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Birimo, that's four onigiri! Save some for our friends.",
+            "ja": "ビリモ、それで 4こ目よ！ ともだちの ぶんも のこしてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の マテオに ～ is a kind of ～. で 日本の たべものを せつめいして、あじも つたえよう",
+          "starterEn": "Hola! I'm Mateo. I see a white triangle in your lunch box. What is it?",
+          "targetExpressions": [
+            "Onigiri is a kind of rice ball.",
+            "You can put salmon or umeboshi inside.",
+            "What's it like? ― It's salty and delicious."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Onigiri is a kind of rice ball.",
+          "You can put salmon or umeboshi inside. / What's it like? ― It's salty and delicious.",
+          "sushi・tofu・tempura・bento"
+        ]
+      }
+    },
+    {
+      "lessonNo": 817,
+      "world": 28,
+      "title": "It's Used for Wrapping",
+      "titleJa": "つつむ ための もの",
+      "school": {
+        "grade": "中3",
+        "topic": "A furoshiki is used for wrapping things.：日本の どうぐを せつめいする",
+        "grammar": "～ is used for ～ing. / It's made of ～. / What is it used for? ― It's used for ～ing.",
+        "expressions": [
+          {
+            "en": "A furoshiki is used for wrapping things.",
+            "ja": "ふろしきは ものを つつむ ために つかわれるよ。",
+            "core": true
+          },
+          {
+            "en": "It's made of cloth. You can carry a lunch box in it.",
+            "ja": "ぬので できて いるよ。おべんとうばこを つつんで はこべるよ。"
+          },
+          {
+            "en": "What is it used for? ― It's used for carrying things.",
+            "ja": "なにに つかうの？ ― ものを はこぶ ために つかうよ。"
+          }
+        ],
+        "testPoints": [
+          "～ is used for ～ing. で どうぐの つかいみちを せつめいし、It's made of ～. で ざいりょうを つたえられる",
+          "英語に なった 日本語の つづり（origami・futon・kimono・emoji。fu は f、ji は j）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spread the cloth on the table.",
+          "ja": "ぬのを テーブルに ひろげて。",
+          "action": "ぬのを ひろげる まね",
+          "emoji": "🟪"
+        },
+        {
+          "en": "Put the box in the middle.",
+          "ja": "はこを まんなかに おいて。",
+          "action": "はこを そっと おく まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Tie the corners.",
+          "ja": "かどを むすんで。",
+          "action": "ぬのの かどを むすぶ まね",
+          "emoji": "🎀"
+        },
+        {
+          "en": "Carry your bag.",
+          "ja": "バッグを もって あるいて。",
+          "action": "てに さげて あるく",
+          "emoji": "👜"
+        }
+      ],
+      "phonics": {
+        "rule": "japanese-loan",
+        "focus": [
+          "origami",
+          "futon",
+          "kimono",
+          "emoji"
+        ],
+        "sounds": [
+          "/ˌɔːrɪˈɡɑːmi/",
+          "/ˈfuːtɑːn/",
+          "/kɪˈmoʊnoʊ/",
+          "/ɪˈmoʊdʒi/"
+        ],
+        "words": [
+          "origami",
+          "futon",
+          "kimono",
+          "emoji"
+        ],
+        "tipJa": "origami・futon・kimono・emoji も 英語に なった 日本語。fu は f で、ji は j で かくよ（huton・emozi では ない）。"
+      },
+      "vocab": [
+        {
+          "en": "wrap",
+          "ja": "つつむ",
+          "emoji": "🎁",
+          "core": true
+        },
+        {
+          "en": "cloth",
+          "ja": "ぬの",
+          "emoji": "🧣"
+        },
+        {
+          "en": "carry",
+          "ja": "はこぶ",
+          "emoji": "👜"
+        },
+        {
+          "en": "tie",
+          "ja": "むすぶ",
+          "emoji": "🎀"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Onigiri is a kind of rice ball. Today, Kiko takes out a beautiful square cloth. Amara asks, What is it used for? Kiko says, A furoshiki is used for wrapping things. Say it with me. A furoshiki is used for wrapping things. Great! It's made of cloth. You can carry a lunch box in it. Kiko ties the corners, and it becomes a bag! Haru shows a paper fan. It's used for cooling your face. Riko shows chopsticks. They're used for eating. Let's read the labels at the Japan table. \"Japanese Tools. Furoshiki: It's used for wrapping and carrying things. It's made of cloth. You can use it again and again. Uchiwa: It's a paper fan. It's used for cooling your face on hot days. Chopsticks: They're used for eating. Please touch them and try!\" What is a furoshiki made of? Cloth. What is an uchiwa used for? Cooling your face. Now, phonics. These Japanese words are English words, too! Origami. In English, we say o-ri-GA-mi. Futon. We write f u for fu. Kimono. ki-MO-no. Emoji. We write j i for ji. Let's wrap something together!",
+      "conversation": {
+        "scene": "Explaining Japanese tools",
+        "sceneJa": "日本の どうぐを せつめいする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Amara! What is it used for?",
+            "ja": "ぼくが アマラの やくね！ それは なにに つかうの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "A furoshiki is used for wrapping things.",
+            "ja": "ふろしきは ものを つつむ ために つかうの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's made of cloth. You can carry a lunch box in it.",
+            "ja": "ぬので できて いるよ。おべんとうばこを つつんで はこべるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look! Kiko made a bag!",
+            "ja": "みて！ キコが バッグを つくったよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can you wrap me in it? I'm a present!",
+            "ja": "ぼくを つつんで くれる？ ぼく、プレゼント！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! You're too big, Birimo. Let's wrap a lunch box.",
+            "ja": "ふふ！ ビリモは 大きすぎるわ。おべんとうばこを つつみましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アマラに ～ is used for ～ing. で 日本の どうぐの つかいみちを せつめいしよう",
+          "starterEn": "Jambo! I'm Amara. What is this pretty square cloth? What is it used for?",
+          "targetExpressions": [
+            "A furoshiki is used for wrapping things.",
+            "It's made of cloth. You can carry a lunch box in it.",
+            "What is it used for? ― It's used for carrying things."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "A furoshiki is used for wrapping things.",
+          "It's made of cloth. You can carry a lunch box in it. / What is it used for? ― It's used for carrying things.",
+          "origami・futon・kimono・emoji"
+        ]
+      }
+    },
+    {
+      "lessonNo": 818,
+      "world": 28,
+      "title": "You Can See It in Spring",
+      "titleJa": "はるに 見られるよ",
+      "school": {
+        "grade": "中3",
+        "topic": "You can see cherry blossoms in spring.：日本の きせつと ぎょうじを せつめいする",
+        "grammar": "You can see ～ in ～. / In ～, you can ～. / When is the best time to ～?",
+        "expressions": [
+          {
+            "en": "You can see cherry blossoms in spring.",
+            "ja": "はるには さくらが 見られるよ。",
+            "core": true
+          },
+          {
+            "en": "In summer, you can watch fireworks.",
+            "ja": "なつには はなびが 見られるよ。"
+          },
+          {
+            "en": "When is the best time to visit? ― I think autumn is the best. The leaves turn red.",
+            "ja": "いつ いくのが いちばん いい？ ― あきが いちばんだと おもう。はっぱが あかく なるよ。"
+          }
+        ],
+        "testPoints": [
+          "You can see ～ in ～. / In ～, you can ～. で きせつの たのしみを せつめいし、When is the best time to visit? に いけんで こたえられる",
+          "英語に なった 日本語の つづり（haiku・karaoke・tsunami・samurai。tsunami は tsu）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look up at the cherry blossoms.",
+          "ja": "さくらを 見あげて。",
+          "action": "うえを 見あげる",
+          "emoji": "🌸"
+        },
+        {
+          "en": "Watch the fireworks. Boom!",
+          "ja": "はなびを 見て。ドーン！",
+          "action": "りょうてを ぱっと ひらく",
+          "emoji": "🎆"
+        },
+        {
+          "en": "Catch a falling leaf.",
+          "ja": "おちて くる はっぱを つかまえて。",
+          "action": "ひらひら おちる はっぱを つかむ まね",
+          "emoji": "🍁"
+        },
+        {
+          "en": "Build a little snowman.",
+          "ja": "ちいさな ゆきだるまを つくって。",
+          "action": "ゆきを まるめる まね",
+          "emoji": "⛄"
+        }
+      ],
+      "phonics": {
+        "rule": "japanese-loan",
+        "focus": [
+          "haiku",
+          "karaoke",
+          "tsunami",
+          "samurai"
+        ],
+        "sounds": [
+          "/ˈhaɪkuː/",
+          "/ˌkæriˈoʊki/",
+          "/tsuːˈnɑːmi/",
+          "/ˈsæmʊraɪ/"
+        ],
+        "words": [
+          "haiku",
+          "karaoke",
+          "tsunami",
+          "samurai"
+        ],
+        "tipJa": "haiku・karaoke・tsunami・samurai は 英語でも つかう 日本語。tsunami は tsu と かくよ（tunami では ない）。karaoke は 英語では キャリオウキ のように よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "cherry blossoms",
+          "ja": "さくら（の はな）",
+          "emoji": "🌸",
+          "core": true
+        },
+        {
+          "en": "season",
+          "ja": "きせつ",
+          "emoji": "🗓️"
+        },
+        {
+          "en": "leaf",
+          "ja": "はっぱ",
+          "emoji": "🍁"
+        },
+        {
+          "en": "visit",
+          "ja": "たずねる・おとずれる",
+          "emoji": "✈️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, A furoshiki is used for wrapping things. Today, our new friends ask, When is the best time to visit Japan? Riko shows a photo of pink trees. You can see cherry blossoms in spring. Say it with me. You can see cherry blossoms in spring. Wonderful! Haru says, In summer, you can watch fireworks. Kiko says, I think autumn is the best. The leaves turn red. Aino says, In Finland, the summer days are very long. Let's read Riko's season guide. \"Japan in Four Seasons. In spring, you can see cherry blossoms. People have picnics under the trees. In summer, you can watch fireworks and write wishes for Tanabata. In autumn, the leaves turn red and yellow. In winter, you can see snow festivals in the north. Every season is special!\" What can you see in spring? Cherry blossoms. What do people write for Tanabata? Wishes. Now, phonics. These words came from Japan. Haiku. A short Japanese poem. Karaoke. In English, people say ka-ri-O-ki. Tsunami. A very big wave from the sea. We write t s u. Samurai. SA-mu-rai. Let's write a haiku about spring!",
+      "conversation": {
+        "scene": "Explaining Japanese seasons and events",
+        "sceneJa": "日本の きせつと ぎょうじを せつめいする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mateo! When is the best time to visit?",
+            "ja": "ぼくが マテオの やくね！ いつ いくのが いちばん いい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You can see cherry blossoms in spring.",
+            "ja": "はるには さくらが 見られるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In summer, you can watch fireworks.",
+            "ja": "なつには はなびが 見られるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think autumn is the best. The leaves turn red.",
+            "ja": "あきが いちばんだと おもう。はっぱが あかく なるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And in winter, you can eat hot noodles! Every season is noodle season!",
+            "ja": "それに ふゆは あつい めんが たべられる！ いつでも めんの きせつ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Every season in Japan is special.",
+            "ja": "ふふ！ 日本は どの きせつも とくべつね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の マテオに You can see ～ in ～. で 日本の きせつと ぎょうじを せつめいして、いちばん いい きせつも つたえよう",
+          "starterEn": "Hola! I want to visit Japan someday. When is the best time to visit?",
+          "targetExpressions": [
+            "You can see cherry blossoms in spring.",
+            "In summer, you can watch fireworks.",
+            "When is the best time to visit? ― I think autumn is the best. The leaves turn red."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You can see cherry blossoms in spring.",
+          "In summer, you can watch fireworks. / When is the best time to visit? ― I think autumn is the best. The leaves turn red.",
+          "haiku・karaoke・tsunami・samurai"
+        ]
+      }
+    },
+    {
+      "lessonNo": 819,
+      "world": 28,
+      "title": "Let Me Tell You About Japan",
+      "titleJa": "日本の ことを はなすね",
+      "school": {
+        "grade": "中3",
+        "topic": "Let me tell you about my town.：じぶんの まちを しょうかいする",
+        "grammar": "Let me tell you about ～. / My town has ～. / What's special about ～? ― We have ～.",
+        "expressions": [
+          {
+            "en": "Let me tell you about my town.",
+            "ja": "ぼくの まちの ことを はなすね。",
+            "core": true
+          },
+          {
+            "en": "My town has a big river and a famous festival.",
+            "ja": "ぼくの まちには 大きな かわと ゆうめいな おまつりが あるよ。"
+          },
+          {
+            "en": "What's special about your town? ― We have a beautiful old temple.",
+            "ja": "きみの まちの とくべつな ところは？ ― きれいで ふるい おてらが あるよ。"
+          }
+        ],
+        "testPoints": [
+          "Let me tell you about ～. で はなしを はじめ、My town has ～. で まちの すてきな ところを しょうかいできる（じゅうしょは いわない）",
+          "英語に なった 日本語の つづり（judo・manga・anime・ninja。ju・ja は j）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand up and wave.",
+          "ja": "たって てを ふって。",
+          "action": "たちあがって てを ふる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Draw a river in the air.",
+          "ja": "くうちゅうに かわを かいて。",
+          "action": "ゆびで くねくねした せんを かく",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "Point to the old temple.",
+          "ja": "ふるい おてらを ゆびさして。",
+          "action": "とおくを ゆびさす",
+          "emoji": "🛕"
+        },
+        {
+          "en": "Bow like a judo player.",
+          "ja": "じゅうどうの せんしゅの ように れい。",
+          "action": "きちんと れいを する",
+          "emoji": "🥋"
+        }
+      ],
+      "phonics": {
+        "rule": "japanese-loan",
+        "focus": [
+          "judo",
+          "manga",
+          "anime",
+          "ninja"
+        ],
+        "sounds": [
+          "/ˈdʒuːdoʊ/",
+          "/ˈmɑːŋɡə/",
+          "/ˈænɪmeɪ/",
+          "/ˈnɪndʒə/"
+        ],
+        "words": [
+          "judo",
+          "manga",
+          "anime",
+          "ninja"
+        ],
+        "tipJa": "judo・manga・anime・ninja も 英語に なった 日本語。ju・ja は j で かくよ（zyudo・ninzya では ない）。anime は 英語では アニメイ のように よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "town",
+          "ja": "まち",
+          "emoji": "🏘️",
+          "core": true
+        },
+        {
+          "en": "river",
+          "ja": "かわ",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "temple",
+          "ja": "おてら",
+          "emoji": "🛕"
+        },
+        {
+          "en": "festival",
+          "ja": "おまつり",
+          "emoji": "🏮"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, You can see cherry blossoms in spring. Today, everyone talks about their town. Haru stands up and says, Let me tell you about my town. Say it with me. Let me tell you about my town. Great! Haru says, My town has a big river and a famous festival. Amara asks, What's special about your town? Riko says, We have a beautiful old temple. Mateo says, My town has a big market and colorful houses. Iris says, You don't need to say your address. Just tell us about the fun places. Let's read Haru's town speech. \"Let me tell you about my town. My town has a big river. In summer, there is a famous festival by the river. People dance and eat shaved ice. There is also a judo club at the park. I go there every Saturday. My town is small, but I love it!\" What is in Haru's town? A big river. When does Haru go to judo? Every Saturday. Now, phonics. These words came from Japan, too. Judo. We write j u. Manga. Japanese comics. Anime. In English, people say AN-i-may. Ninja. We write j a. Let's tell our friends more about Japan!",
+      "conversation": {
+        "scene": "Telling friends about our towns",
+        "sceneJa": "じぶんの まちを しょうかいする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Let me tell you about my town. It has a big river and a famous festival.",
+            "ja": "ぼくの まちの ことを はなすね。大きな かわと ゆうめいな おまつりが あるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Amara! What's special about your town, Riko?",
+            "ja": "ぼくが アマラの やくね！ リコの まちの とくべつな ところは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We have a beautiful old temple.",
+            "ja": "きれいで ふるい おてらが あるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My town has a big library. You can read manga all day!",
+            "ja": "わたしの まちには 大きな としょかんが あるの。いちにちじゅう まんがが よめるよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My town has a giant cake shop! Just kidding. I don't have a town.",
+            "ja": "ぼくの まちには きょだいな ケーキやさんが あるよ！ なんてね。ぼく、まちが ないんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "This bridge is your town now, Birimo! And remember, everyone, don't say your address.",
+            "ja": "いまは この はしが ビリモの まちね！ みんな、じゅうしょは いわない ようにね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アマラに Let me tell you about ～. で すきな まちの すてきな ところを しょうかいしよう（じゅうしょは いわない）",
+          "starterEn": "Jambo! I'd love to hear about towns in Japan. What's special about a town you like?",
+          "targetExpressions": [
+            "Let me tell you about my town.",
+            "My town has a big river and a famous festival.",
+            "What's special about your town? ― We have a beautiful old temple."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let me tell you about my town.",
+          "My town has a big river and a famous festival. / What's special about your town? ― We have a beautiful old temple.",
+          "judo・manga・anime・ninja"
+        ]
+      }
+    },
+    {
+      "lessonNo": 820,
+      "world": 28,
+      "title": "Japan Guide Video",
+      "titleJa": "日本しょうかいビデオ",
+      "school": {
+        "grade": "中3",
+        "topic": "Welcome to Japan! Let me show you around.：日本しょうかいビデオを つくる（まとめ）",
+        "grammar": "Welcome to ～! Let me show you around. / This is ～. You can ～ here. / Thank you for watching!",
+        "expressions": [
+          {
+            "en": "Welcome to Japan! Let me show you around.",
+            "ja": "日本へ ようこそ！ あんないするね。",
+            "core": true
+          },
+          {
+            "en": "This is a shrine. You can make a wish here.",
+            "ja": "ここは じんじゃだよ。ここで おねがいごとが できるよ。"
+          },
+          {
+            "en": "Thank you for watching! See you in Japan!",
+            "ja": "見て くれて ありがとう！ 日本で あおうね！"
+          }
+        ],
+        "testPoints": [
+          "Welcome to ～! Let me show you around. で あんないを はじめ、This is ～. You can ～ here. で ばしょを せつめいできる",
+          "英語に なった 日本語と カタカナ語の ふりかえり（tempura・emoji・tsunami・AL-ler-gy・mu-SE-um）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the camera with two hands.",
+          "ja": "りょうてで カメラを もって。",
+          "action": "カメラを かまえる まね",
+          "emoji": "📹"
+        },
+        {
+          "en": "Say action!",
+          "ja": "アクション！ と いって。",
+          "action": "てを ぱんと たたいて いう",
+          "emoji": "🎬"
+        },
+        {
+          "en": "Smile and wave to the camera.",
+          "ja": "カメラに わらって てを ふって。",
+          "action": "にっこり わらって てを ふる",
+          "emoji": "😊"
+        },
+        {
+          "en": "Make a wish. Clap, clap!",
+          "ja": "おねがいごとを して。パン、パン！",
+          "action": "てを 2かい たたいて てを あわせる",
+          "emoji": "🙏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "tempura",
+          "emoji",
+          "tsunami",
+          "al-ler-gy",
+          "mu-se-um"
+        ],
+        "sounds": [
+          "/temˈpʊrə/",
+          "/ɪˈmoʊdʒi/",
+          "/tsuːˈnɑːmi/",
+          "AL",
+          "SE"
+        ],
+        "words": [
+          "tempura",
+          "emoji",
+          "tsunami",
+          "allergy",
+          "museum"
+        ],
+        "tipJa": "ふりかえり: tempura は p の まえが m、emoji は ji、tsunami は tsu。カタカナ語の allergy は AL-ler-gy、museum は mu-SE-um と つよく いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "guide",
+          "ja": "あんない",
+          "emoji": "🗺️",
+          "core": true
+        },
+        {
+          "en": "show around",
+          "ja": "あんないして まわる",
+          "emoji": "🚶"
+        },
+        {
+          "en": "shrine",
+          "ja": "じんじゃ",
+          "emoji": "⛩️"
+        },
+        {
+          "en": "wish",
+          "ja": "ねがいごと",
+          "emoji": "🌠"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Let me tell you about my town. Today, we make a Japan guide video with Iris's camera. Birimo is the camera operator. Kiko smiles at the camera and says, Welcome to Japan! Let me show you around. Say it with me. Welcome to Japan! Let me show you around. Fantastic! Riko shows a picture of a shrine. This is a shrine. You can make a wish here. Haru shows tempura and onigiri. At the end, everyone waves. Thank you for watching! See you in Japan! Oh no, Birimo's camera is upside down! Let's try again. Let's read the video plan. \"Japan Guide Video Plan. Scene one: Kiko says welcome. Scene two: Riko shows a shrine. Scene three: Haru explains tempura and onigiri. Scene four: Everyone shows origami and emoji cards. Last scene: Everyone waves and says goodbye. Camera: Birimo. Please hold the camera the right way!\" Who shows a shrine? Riko. Who holds the camera? Birimo. After the video, an orange light runs across the bridge. The second color is back! Now, phonics review. Tempura. Before p, write m. Emoji. We write j i. Tsunami. We write t s u. Allergy. AL-ler-gy. Museum. mu-SE-um. Two colors are back. Let's keep going!",
+      "conversation": {
+        "scene": "Making a Japan guide video",
+        "sceneJa": "日本しょうかいビデオを つくる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Camera ready! Three, two, one, action!",
+            "ja": "カメラ じゅんび OK！ 3、2、1、アクション！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Welcome to Japan! Let me show you around.",
+            "ja": "日本へ ようこそ！ あんないするね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This is a shrine. You can make a wish here.",
+            "ja": "ここは じんじゃだよ。ここで おねがいごとが できるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And this is tempura. It's a kind of fried food.",
+            "ja": "そして これは てんぷら。あげものの いっしゅだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oops! The camera is upside down!",
+            "ja": "あっ！ カメラが さかさまだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Thank you for watching! See you in Japan!",
+            "ja": "あはは！ 見て くれて ありがとう！ 日本で あおうね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look! The orange color is back!",
+            "ja": "みて！ オレンジいろが もどったわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に Welcome to Japan! Let me show you around. と いって、日本の すきな ばしょを あんないしよう",
+          "starterEn": "Hello! I'm watching your Japan guide video. Can you show me around Japan?",
+          "targetExpressions": [
+            "Welcome to Japan! Let me show you around.",
+            "This is a shrine. You can make a wish here.",
+            "Thank you for watching! See you in Japan!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Welcome to Japan! Let me show you around.",
+          "This is a shrine. You can make a wish here. / Thank you for watching! See you in Japan!",
+          "tempura・emoji・tsunami・allergy・museum"
+        ]
+      }
+    },
+    {
+      "lessonNo": 821,
+      "world": 28,
+      "title": "I Think… Because…",
+      "titleJa": "ぼくは こう おもう。なぜなら…",
+      "school": {
+        "grade": "中3",
+        "topic": "I think summer is the best season because we can swim in the sea.：はしの ひろばで、すきな きせつに ついて いけんと りゆうを いう",
+        "grammar": "I think ～ because ～. / Why do you think so? ― Because ～.",
+        "expressions": [
+          {
+            "en": "I think summer is the best season because we can swim in the sea.",
+            "ja": "うみで およげるから、なつが いちばん いい きせつだと おもう。",
+            "core": true
+          },
+          {
+            "en": "Why do you think so? ― Because it's warm.",
+            "ja": "どうして そう おもうの？ ― あたたかいから。"
+          },
+          {
+            "en": "I think winter is the best because I love snow.",
+            "ja": "わたしは ふゆが いちばんだと おもう。ゆきが だいすきだから。"
+          }
+        ],
+        "testPoints": [
+          "I think ～ because ～. で いけんと りゆうを いい、Why do you think so? と りゆうを きける",
+          "英語の リズム: 小さい ことば（and・to・for・can）は よわく みじかく いう"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pretend to swim in the sea.",
+          "ja": "うみで およぐ まねを して。",
+          "action": "りょうてで クロールの まねを する",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Catch a snowflake.",
+          "ja": "ゆきの つぶを つかまえて。",
+          "action": "そらに てを のばして そっと つかむ",
+          "emoji": "❄️"
+        },
+        {
+          "en": "Fan yourself. It's hot!",
+          "ja": "あおいで。あついね！",
+          "action": "てで かおを ぱたぱた あおぐ",
+          "emoji": "🌞"
+        },
+        {
+          "en": "Hold up four fingers for four seasons.",
+          "ja": "4つの きせつ、ゆびを 4ほん たてて。",
+          "action": "ゆびを 4ほん たてる",
+          "emoji": "🍂"
+        }
+      ],
+      "phonics": {
+        "rule": "rhythm",
+        "focus": [
+          "and",
+          "to",
+          "for",
+          "can"
+        ],
+        "sounds": [
+          "/ən/",
+          "/tə/",
+          "/fər/",
+          "/kən/"
+        ],
+        "words": [
+          "I like summer and winter",
+          "I want to swim in the sea",
+          "It's the best season for swimming",
+          "We can see fireworks in summer"
+        ],
+        "tipJa": "and・to・for・can のような 小さい ことばは よわく みじかく、summer・swim・best・fireworks のような 大きい ことばは つよく はっきり いう。これが 英語の リズムだよ。"
+      },
+      "vocab": [
+        {
+          "en": "season",
+          "ja": "きせつ",
+          "emoji": "🍂",
+          "core": true
+        },
+        {
+          "en": "reason",
+          "ja": "りゆう",
+          "emoji": "💭"
+        },
+        {
+          "en": "best",
+          "ja": "いちばん いい",
+          "emoji": "🏆"
+        },
+        {
+          "en": "snow",
+          "ja": "ゆき",
+          "emoji": "❄️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Welcome to Japan! Let me show you around. Our video was a big hit on the bridge! Today, we talk about our favorite seasons at Friendship Plaza. Iris asks, Which season is the best? Haru says, I think summer is the best season because we can swim in the sea. Say it with me. I think summer is the best season because we can swim in the sea. Wonderful! First, say what you think. Then, say because and give a reason. Aino says, I think winter is the best because I love snow. In Finland, winter is long and white. Amara asks, Why do you think so? Aino laughs and says, Because skiing is so much fun! Let's read the seasons board on the plaza. \"Our Favorite Seasons. Haru likes summer because he can swim in the sea. Aino likes winter because she loves snow and skiing. Amara likes the rainy season because the plants grow fast. Mateo likes autumn because his birthday is in October. Every season is someone's favorite!\" Why does Amara like the rainy season? Because the plants grow fast. When is Mateo's birthday? In October. Now, phonics. Listen to the rhythm. I like SUMMER and WINTER. And is small and quick. I want to SWIM in the SEA. To is weak. It's the BEST SEASON for SWIMMING. For is short. We can SEE FIREWORKS in SUMMER. Can is soft. Big words are strong. Small words are weak. Which season do you like best?",
+      "conversation": {
+        "scene": "The friends share their favorite seasons at Friendship Plaza",
+        "sceneJa": "はしの ひろばで、すきな きせつを はなす",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Which season do you like the best, Haru?",
+            "ja": "ハルは どの きせつが いちばん すき？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I think summer is the best season because we can swim in the sea.",
+            "ja": "うみで およげるから、なつが いちばん いい きせつだと おもう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Why do you think so? Is it the sea or the ice cream?",
+            "ja": "どうして そう おもうの？ うみ？ それとも アイス？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Both! And because it's warm.",
+            "ja": "りょうほう！ それに あたたかいから。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Aino! I think winter is the best because I love snow.",
+            "ja": "ぼくが アイノの やく！ わたしは ふゆが いちばんだと おもう。ゆきが だいすきだから。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great reasons, everyone! Look, the bridge is a little brighter.",
+            "ja": "みんな、いい りゆうね！ みて、はしが すこし あかるく なったわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アイノに すきな きせつを きかれたら、I think ～ because ～. で こたえて、Why do you think so? と ききかえそう",
+          "starterEn": "Moi! I'm Aino. I think winter is the best season because I love snow. Which season do you like?",
+          "targetExpressions": [
+            "I think summer is the best season because we can swim in the sea.",
+            "Why do you think so? ― Because it's warm.",
+            "I think winter is the best because I love snow."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I think summer is the best season because we can swim in the sea.",
+          "Why do you think so? ― Because it's warm. / I think winter is the best because I love snow.",
+          "I like summer and winter・I want to swim in the sea・It's the best season for swimming・We can see fireworks in summer"
+        ]
+      }
+    },
+    {
+      "lessonNo": 822,
+      "world": 28,
+      "title": "In My Opinion",
+      "titleJa": "わたしの 意見では",
+      "school": {
+        "grade": "中3",
+        "topic": "In my opinion, school lunch is great.：はしの ひろばで、日本の きゅうしょくに ついて いけんを いう",
+        "grammar": "In my opinion, ～. / What's your opinion? ― I think ～.",
+        "expressions": [
+          {
+            "en": "In my opinion, school lunch is great.",
+            "ja": "わたしの いけんでは、きゅうしょくは すばらしいと おもう。",
+            "core": true
+          },
+          {
+            "en": "In my opinion, we should have more time to eat.",
+            "ja": "ぼくの いけんでは、たべる じかんが もっと あった ほうが いい。"
+          },
+          {
+            "en": "What's your opinion? ― I think it's delicious.",
+            "ja": "あなたの いけんは？ ― おいしいと おもう。"
+          }
+        ],
+        "testPoints": [
+          "In my opinion, ～. で ていねいに いけんを いい、What's your opinion? と あいての いけんを きける",
+          "英語の リズム: of・at・or・to は よわく みじかく いう"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold your tray with both hands.",
+          "ja": "りょうてで トレーを もって。",
+          "action": "トレーを まっすぐ もつ まね",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "Put your hands together and say itadakimasu.",
+          "ja": "てを あわせて いただきます。",
+          "action": "てを あわせて あたまを さげる",
+          "emoji": "🙏"
+        },
+        {
+          "en": "Pass the bread to your friend.",
+          "ja": "ともだちに パンを わたして。",
+          "action": "となりの ひとに わたす まね",
+          "emoji": "🍞"
+        },
+        {
+          "en": "Raise your hand and give your opinion.",
+          "ja": "てを あげて いけんを いって。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🙋"
+        }
+      ],
+      "phonics": {
+        "rule": "rhythm",
+        "focus": [
+          "of",
+          "at",
+          "or",
+          "to"
+        ],
+        "sounds": [
+          "/əv/",
+          "/ət/",
+          "/ər/",
+          "/tə/"
+        ],
+        "words": [
+          "We have a bowl of rice",
+          "We eat lunch at school",
+          "Do you want rice or bread",
+          "We serve lunch to our classmates"
+        ],
+        "tipJa": "of・at・or・to は よわく みじかく いう。bowl・rice・lunch・school・bread・classmates のような 大きい ことばは つよく はっきり いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "opinion",
+          "ja": "いけん",
+          "emoji": "💬",
+          "core": true
+        },
+        {
+          "en": "school lunch",
+          "ja": "きゅうしょく",
+          "emoji": "🍱"
+        },
+        {
+          "en": "tray",
+          "ja": "トレー・おぼん",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "delicious",
+          "ja": "とても おいしい",
+          "emoji": "😋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I think summer is the best season because we can swim in the sea. Today, it's lunchtime on the bridge. Kiko shows a photo of a Japanese school lunch. Rice, miso soup, fish, and milk. Mateo says, Wow! You eat lunch in your classroom? Haru says, Yes. We serve lunch to our classmates. Then Riko gives her opinion（いけん）. In my opinion, school lunch is great. Say it with me. In my opinion, school lunch is great. Excellent! In my opinion means I think. It's a polite way to start. Aino says, In my opinion, we should have more time to eat. At my school in Finland, lunch is free for every student. Let's read Kiko's lunch menu card. \"Friday School Lunch. Rice and a small bowl of miso soup. Grilled fish with lemon. Salad with corn and carrots. A carton of milk. Dessert is an orange. Lunch starts at twelve fifteen. Students serve the food and clean up together. Please eat everything and say thank you!\" What is the dessert? An orange. What time does lunch start? At twelve fifteen. Now, phonics. Listen to the rhythm. We have a BOWL of RICE. Of is tiny. We eat LUNCH at SCHOOL. At is quick. Do you want RICE or BREAD? Or is soft. We serve LUNCH to our CLASSMATES. To is weak. What's your opinion about school lunch?",
+      "conversation": {
+        "scene": "The friends talk about Japanese school lunch on the bridge",
+        "sceneJa": "はしの 上で、日本の きゅうしょくに ついて はなす",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "This is our school lunch in Japan. Rice, soup, fish, and milk.",
+            "ja": "これが 日本の きゅうしょく。ごはん、しる、さかな、ぎゅうにゅう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mateo! You eat lunch in your classroom? Cool!",
+            "ja": "ぼくが マテオの やく！ きょうしつで おひるを たべるの？ かっこいい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes! In my opinion, school lunch is great.",
+            "ja": "うん！ わたしの いけんでは、きゅうしょくは すばらしいと おもう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In my opinion, we should have more time to eat. I'm always the last one!",
+            "ja": "ぼくの いけんでは、たべる じかんが もっと あった ほうが いい。ぼく いつも さいごなんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Birimo, what's your opinion?",
+            "ja": "ビリモ、あなたの いけんは？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I think it's delicious. Can I have seconds?",
+            "ja": "おいしいと おもう。おかわり しても いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Great opinions, everyone.",
+            "ja": "あはは！ みんな、すてきな いけんね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の マテオに 日本の きゅうしょくを しょうかいして、In my opinion, ～. で いけんを いおう",
+          "starterEn": "Hola! I'm Mateo. I heard you have school lunch in your classroom in Japan. What's your opinion about it?",
+          "targetExpressions": [
+            "In my opinion, school lunch is great.",
+            "In my opinion, we should have more time to eat.",
+            "What's your opinion? ― I think it's delicious."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In my opinion, school lunch is great.",
+          "In my opinion, we should have more time to eat. / What's your opinion? ― I think it's delicious.",
+          "We have a bowl of rice・We eat lunch at school・Do you want rice or bread・We serve lunch to our classmates"
+        ]
+      }
+    },
+    {
+      "lessonNo": 823,
+      "world": 28,
+      "title": "Do You Agree?",
+      "titleJa": "さんせい？",
+      "school": {
+        "grade": "中3",
+        "topic": "Do you agree?：いけんに さんせいか きいて、ちがう いけんも やさしく いう",
+        "grammar": "Do you agree? ― Yes, I agree. / I'm not sure. / I see your point, but ～.",
+        "expressions": [
+          {
+            "en": "Do you agree?",
+            "ja": "さんせい？",
+            "core": true
+          },
+          {
+            "en": "Yes, I agree. ― Me too!",
+            "ja": "うん、さんせい。― わたしも！"
+          },
+          {
+            "en": "I'm not sure. I see your point, but I like winter better.",
+            "ja": "どうかな。いいたい ことは わかるけど、わたしは ふゆの ほうが すき。"
+          }
+        ],
+        "testPoints": [
+          "Do you agree? と きき、Yes, I agree. / I'm not sure. I see your point, but ～. で ていねいに こたえられる",
+          "英語の リズム: of・can・was・are は よわく みじかく いう"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Give a thumbs-up if you agree.",
+          "ja": "さんせいなら おやゆびを たてて。",
+          "action": "おやゆびを ぐっと たてる",
+          "emoji": "👍"
+        },
+        {
+          "en": "Tilt your head if you're not sure.",
+          "ja": "わからない ときは くびを かしげて。",
+          "action": "くびを すこし かしげる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Nod your head slowly.",
+          "ja": "ゆっくり うなずいて。",
+          "action": "ゆっくり 2かい うなずく",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Shake hands with a friend.",
+          "ja": "ともだちと あくしゅ して。",
+          "action": "となりの ひとと あくしゅ する",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "rhythm",
+        "focus": [
+          "of",
+          "can",
+          "was",
+          "are"
+        ],
+        "sounds": [
+          "/əv/",
+          "/kən/",
+          "/wəz/",
+          "/ər/"
+        ],
+        "words": [
+          "What do you think of my idea",
+          "Can I ask a question",
+          "I was surprised at first",
+          "Are your reasons the same"
+        ],
+        "tipJa": "of・can・was・are は 文の なかで よわく みじかく いう。think・idea・ask・question・surprised・reasons のような 大きい ことばは つよく いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "agree",
+          "ja": "さんせい する",
+          "emoji": "🤝",
+          "core": true
+        },
+        {
+          "en": "sure",
+          "ja": "たしかな",
+          "emoji": "✅"
+        },
+        {
+          "en": "point",
+          "ja": "いいたい こと・ポイント",
+          "emoji": "👉"
+        },
+        {
+          "en": "idea",
+          "ja": "かんがえ・アイデア",
+          "emoji": "💡"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, In my opinion, school lunch is great. Today, Iris has a question for everyone on the plaza. Which is better, a summer vacation at the sea or a winter vacation in the snow? Haru says, The sea is better. Then he asks, Do you agree? Say it with me. Do you agree? Great! Riko says, Yes, I agree. Kiko says, Me too! But Aino says, I'm not sure. I see your point, but I like winter better. Everyone smiles. It's OK to have different opinions. We listen, and we speak kindly. Let's read Iris's sign about talking rules. \"Friendship Plaza Talking Rules. Listen to the end. Don't stop your friend in the middle. Say I agree, or say I'm not sure. Use kind words, like I see your point. Give a reason for your opinion. Different ideas make our bridge brighter. Thank you!\" What should you do first? Listen to the end. What makes the bridge brighter? Different ideas. Now, phonics. Listen to the rhythm. What do you THINK of my IDEA? Of is tiny. Can I ASK a QUESTION? Can is soft. I was SURPRISED at FIRST. Was is quick. Are your REASONS the SAME? Are is weak. Different opinions, kind words!",
+      "conversation": {
+        "scene": "The friends share opinions about vacations and ask if others agree",
+        "sceneJa": "なつやすみと ふゆやすみ、どちらが いいか いけんを いいあう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I think the sea is better than the snow. Do you agree?",
+            "ja": "ゆきより うみの ほうが いいと おもう。さんせい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I agree. Swimming is so much fun!",
+            "ja": "うん、さんせい。およぐのって すごく たのしい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me too!",
+            "ja": "わたしも！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Aino. Hmm, I'm not sure. I see your point, but I like winter better.",
+            "ja": "ぼくが アイノの やく。うーん、どうかな。いいたい ことは わかるけど、わたしは ふゆの ほうが すき。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Why do you like winter better?",
+            "ja": "どうして ふゆの ほうが すきなの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Because I can make a giant snow Birimo!",
+            "ja": "おおきな ゆきの ビリモが つくれるから！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Different opinions and kind words. Very good!",
+            "ja": "ちがう いけんと やさしい ことば。とても いいわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アイノの いけんを きいて、Yes, I agree. や I'm not sure. I see your point, but ～. で こたえ、Do you agree? と きいて みよう",
+          "starterEn": "Moi! I think winter vacation is better than summer vacation. Do you agree?",
+          "targetExpressions": [
+            "Do you agree?",
+            "Yes, I agree. ― Me too!",
+            "I'm not sure. I see your point, but I like winter better."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Do you agree?",
+          "Yes, I agree. ― Me too! / I'm not sure. I see your point, but I like winter better.",
+          "What do you think of my idea・Can I ask a question・I was surprised at first・Are your reasons the same"
+        ]
+      }
+    },
+    {
+      "lessonNo": 824,
+      "world": 28,
+      "title": "Two Reasons",
+      "titleJa": "りゆうを 2つ",
+      "school": {
+        "grade": "中3",
+        "topic": "First, it's fun. Second, it's good for our health.：あるいて がっこうに いく ことに ついて、りゆうを 2つ いう",
+        "grammar": "I think ～. First, ～. Second, ～. / Do you have another reason?",
+        "expressions": [
+          {
+            "en": "First, it's fun. Second, it's good for our health.",
+            "ja": "1つめ、たのしい。2つめ、からだに いい。",
+            "core": true
+          },
+          {
+            "en": "I think walking to school is good.",
+            "ja": "あるいて がっこうに いくのは いいと おもう。"
+          },
+          {
+            "en": "Do you have another reason? ― Yes. We can talk with friends.",
+            "ja": "ほかにも りゆうは ある？ ― うん。ともだちと はなせるよ。"
+          }
+        ],
+        "testPoints": [
+          "I think ～. の あとに First, ～. Second, ～. で りゆうを 2つ いえる",
+          "英語の リズム: for・to・are・them は よわく みじかく いう"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up one finger. First!",
+          "ja": "ゆびを 1ぽん たてて。1つめ！",
+          "action": "ひとさしゆびを たてる",
+          "emoji": "☝️"
+        },
+        {
+          "en": "Hold up two fingers. Second!",
+          "ja": "ゆびを 2ほん たてて。2つめ！",
+          "action": "ゆびを 2ほん たてる",
+          "emoji": "✌️"
+        },
+        {
+          "en": "Walk in place.",
+          "ja": "その ばで あるいて。",
+          "action": "その ばで あしぶみ する",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Wave to a friend on the way.",
+          "ja": "みちで ともだちに てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "rhythm",
+        "focus": [
+          "for",
+          "to",
+          "are",
+          "them"
+        ],
+        "sounds": [
+          "/fər/",
+          "/tə/",
+          "/ər/",
+          "/ðəm/"
+        ],
+        "words": [
+          "It's good for our health",
+          "It's fun to cook with friends",
+          "Vegetables are good for your body",
+          "Let's ask them to help"
+        ],
+        "tipJa": "for・to・are・them は よわく みじかく いう。good・health・fun・cook・vegetables・ask・help のような 大きい ことばは つよく いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "first",
+          "ja": "1つめ・さいしょに",
+          "emoji": "1️⃣",
+          "core": true
+        },
+        {
+          "en": "second",
+          "ja": "2つめ・つぎに",
+          "emoji": "2️⃣"
+        },
+        {
+          "en": "health",
+          "ja": "けんこう",
+          "emoji": "💪"
+        },
+        {
+          "en": "another",
+          "ja": "もう 1つの・ほかの",
+          "emoji": "➕"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Do you agree? Today, we learn a strong way to give an opinion. Give two reasons! Amara loves running. She walks to school every day. Haru says, I think walking to school is good. First, it's fun. Second, it's good for our health. Say it with me. First, it's fun. Second, it's good for our health. Super! First and second make your opinion clear. Mateo asks, Do you have another reason? Riko says, Yes. We can talk with friends. Let's read Amara's opinion card. \"Walking to School, by Amara. I think walking to school is great. First, it's good for my health. My legs are strong, so I can run fast in races. Second, I can see beautiful things on the way. I see birds, trees, and the morning sky. I walk with my sister every day. It's my favorite time.\" What is her first reason? It's good for her health. Who does she walk with? Her sister. Now, phonics. Listen to the rhythm. It's GOOD for our HEALTH. For is short. It's FUN to COOK with FRIENDS. To is weak. VEGETABLES are GOOD for your BODY. Are is quick. Let's ASK them to HELP. Them is soft. First, practice. Second, have fun!",
+      "conversation": {
+        "scene": "The friends give two reasons for walking to school",
+        "sceneJa": "あるいて がっこうに いく ことの りゆうを 2つ いう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Amara walks to school every day. I think walking to school is good.",
+            "ja": "アマラは まいにち あるいて がっこうに いくんだって。あるいて いくのは いいと おもう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Why? A bus is faster!",
+            "ja": "なんで？ バスの ほうが はやいよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "First, it's fun. Second, it's good for our health.",
+            "ja": "1つめ、たのしい。2つめ、からだに いい。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hmm. Do you have another reason?",
+            "ja": "うーん。ほかにも りゆうは ある？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes. We can talk with friends on the way.",
+            "ja": "うん。みちで ともだちと はなせるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "OK, I agree! Tomorrow, I'll walk… to the snack shop.",
+            "ja": "わかった、さんせい！ あしたは あるいて いくよ…おかしやさんまで。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Two reasons make your opinion strong.",
+            "ja": "あはは！ りゆうが 2つ あると いけんが つよく なるわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アマラに あるいて がっこうに いく ことの いけんを いって、First, ～. Second, ～. で りゆうを 2つ いおう",
+          "starterEn": "Jambo! I'm Amara. I walk to school every day. What do you think about walking to school? Can you give two reasons?",
+          "targetExpressions": [
+            "First, it's fun. Second, it's good for our health.",
+            "I think walking to school is good.",
+            "Do you have another reason? ― Yes. We can talk with friends."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, it's fun. Second, it's good for our health.",
+          "I think walking to school is good. / Do you have another reason? ― Yes. We can talk with friends.",
+          "It's good for our health・It's fun to cook with friends・Vegetables are good for your body・Let's ask them to help"
+        ]
+      }
+    },
+    {
+      "lessonNo": 825,
+      "world": 28,
+      "title": "Opinion Corner",
+      "titleJa": "意見はっぴょうコーナー",
+      "school": {
+        "grade": "中3",
+        "topic": "I think picnics are the best. First, the food is tasty. Second, we can play outside.：はしの 上の いけん はっぴょう コーナーで、りゆう 2つを つけて はっぴょうする（まとめ）",
+        "grammar": "I think ～. First, ～. Second, ～. / Do you agree? / That's a good point!",
+        "expressions": [
+          {
+            "en": "I think picnics are the best. First, the food is tasty. Second, we can play outside.",
+            "ja": "ピクニックが いちばんだと おもう。1つめ、たべものが おいしい。2つめ、そとで あそべる。",
+            "core": true
+          },
+          {
+            "en": "Thank you for listening. Do you agree?",
+            "ja": "きいて くれて ありがとう。さんせいですか？"
+          },
+          {
+            "en": "That's a good point! ― Thank you.",
+            "ja": "それは いい ポイントだね！ ― ありがとう。"
+          }
+        ],
+        "testPoints": [
+          "I think ～. First, ～. Second, ～. で いけんと りゆう 2つを はっぴょうし、Do you agree? と きける",
+          "まとめ: よわく いう can・of、英語に なった 日本語（ninja）、カタカナと ちがう 強勢（VI-ta-min）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand up and face the audience.",
+          "ja": "たって おきゃくさんの ほうを むいて。",
+          "action": "たちあがって まえを むく",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Hold up your opinion card.",
+          "ja": "いけんの カードを みせて。",
+          "action": "カードを むねの まえに もつ まね",
+          "emoji": "🪧"
+        },
+        {
+          "en": "Clap for the speaker.",
+          "ja": "はっぴょうした ひとに はくしゅ。",
+          "action": "おおきく はくしゅ する",
+          "emoji": "👏"
+        },
+        {
+          "en": "Give a thumbs-up for a good point.",
+          "ja": "いい ポイントに おやゆびを たてて。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "can",
+          "of",
+          "ninja",
+          "vi-ta-min"
+        ],
+        "sounds": [
+          "/kən/",
+          "/əv/",
+          "/ˈnɪndʒə/",
+          "VI"
+        ],
+        "words": [
+          "We can see fireworks in summer",
+          "What do you think of my idea",
+          "ninja",
+          "vitamin"
+        ],
+        "tipJa": "We can see fireworks in summer の can と、What do you think of my idea の of は よわく みじかく。ninja は 英語でも つかう 日本語。vitamin は カタカナの ビタミンと ちがって VI を つよく いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "picnic",
+          "ja": "ピクニック",
+          "emoji": "🧺",
+          "core": true
+        },
+        {
+          "en": "outside",
+          "ja": "そとで",
+          "emoji": "🌳"
+        },
+        {
+          "en": "tasty",
+          "ja": "おいしい",
+          "emoji": "😋"
+        },
+        {
+          "en": "speaker",
+          "ja": "はっぴょうする ひと",
+          "emoji": "🎤"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, First, it's fun. Second, it's good for our health. Today is Opinion Corner on the Rainbow Bridge! There is a little stage in the middle of Friendship Plaza. Each friend gives an opinion with two reasons. Kiko goes first. I think picnics are the best. First, the food is tasty. Second, we can play outside. Say it with me. I think picnics are the best. First, the food is tasty. Second, we can play outside. Fantastic! Then Kiko says, Thank you for listening. Do you agree? Mateo says, That's a good point! Kiko says, Thank you. Look! The bridge is shining. The yellow color is back! Let's read the Opinion Corner program. \"Opinion Corner on the Bridge. Speaker one, Kiko: Picnics are the best. Speaker two, Mateo: Drawing is a great hobby. Speaker three, Aino: Everyone should try a sauna. Speaker four, Birimo: Snacks are important. Each speaker has one minute. Please listen quietly and clap at the end.\" How long does each speaker have? One minute. What is Mateo's topic? Drawing. Now, phonics. We can SEE FIREWORKS in SUMMER. Can is soft. What do you THINK of my IDEA? Of is tiny. Ninja. English speakers use this Japanese word too. Vitamin. VI-ta-min. Say the VI part strongly. Great speeches, everyone!",
+      "conversation": {
+        "scene": "Opinion Corner on a small stage in Friendship Plaza",
+        "sceneJa": "はしの ひろばの ちいさな ステージで、いけん はっぴょう コーナー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to Opinion Corner! Kiko, you're first.",
+            "ja": "いけん はっぴょう コーナーへ ようこそ！ キコ、さいしょは あなたよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think picnics are the best. First, the food is tasty. Second, we can play outside. Thank you for listening. Do you agree?",
+            "ja": "ピクニックが いちばんだと おもう。1つめ、たべものが おいしい。2つめ、そとで あそべる。きいて くれて ありがとう。さんせいですか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's a good point! Playing outside is great.",
+            "ja": "それは いい ポイントだね！ そとで あそぶのは さいこう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thank you.",
+            "ja": "ありがとう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My turn! I think snacks are important. First, they're tasty. Second… they're tasty!",
+            "ja": "ぼくの ばん！ おやつは だいじだと おもう。1つめ、おいしい。2つめ…おいしい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Birimo, your two reasons are the same!",
+            "ja": "ビリモ、りゆうが 2つとも おなじだよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Look, the yellow color is back on the bridge!",
+            "ja": "あはは！ みて、はしに きいろが もどって きたわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の イリスの まえで、I think ～. First, ～. Second, ～. で いけんを はっぴょうして、Do you agree? と きこう",
+          "starterEn": "Welcome to Opinion Corner! I'm Iris. What do you think is the best? Please give two reasons.",
+          "targetExpressions": [
+            "I think picnics are the best. First, the food is tasty. Second, we can play outside.",
+            "Thank you for listening. Do you agree?",
+            "That's a good point! ― Thank you."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I think picnics are the best. First, the food is tasty. Second, we can play outside.",
+          "Thank you for listening. Do you agree? / That's a good point! ― Thank you.",
+          "We can see fireworks in summer・What do you think of my idea・ninja・vitamin"
+        ]
+      }
+    },
+    {
+      "lessonNo": 826,
+      "world": 28,
+      "title": "Video Call with a Pen Pal",
+      "titleJa": "ペンパルと ビデオ通話",
+      "school": {
+        "grade": "中3",
+        "topic": "It's nice to finally see you!：はしの ひろばの おおきな がめんで、ペンパルの レオと ながい ビデオ通話を する",
+        "grammar": "It's nice to finally see you! / Can you hear me? / Could you say that again?",
+        "expressions": [
+          {
+            "en": "It's nice to finally see you!",
+            "ja": "やっと かおを みて はなせて うれしいよ！",
+            "core": true
+          },
+          {
+            "en": "Can you hear me? ― Yes, loud and clear!",
+            "ja": "きこえる？ ― うん、はっきり きこえるよ！"
+          },
+          {
+            "en": "Sorry, could you say that again?",
+            "ja": "ごめん、もう いちど いって くれる？"
+          }
+        ],
+        "testPoints": [
+          "It's nice to finally see you! で あいさつし、Can you hear me? / Could you say that again? で ビデオ通話を すすめられる",
+          "音の つながり: t / d ＋ you は「チュ」「ジュ」（meet you・could you・would you・did you）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wave at the screen.",
+          "ja": "がめんに てを ふって。",
+          "action": "まえに むかって てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Lean closer to the microphone.",
+          "ja": "マイクに ちかづいて。",
+          "action": "すこし まえに かがむ",
+          "emoji": "🎙️"
+        },
+        {
+          "en": "Cup your ear. Can you hear me?",
+          "ja": "みみに てを あてて。きこえる？",
+          "action": "みみに てを あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Give a big smile to the camera.",
+          "ja": "カメラに にっこり わらって。",
+          "action": "まえを むいて にっこり する",
+          "emoji": "😄"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "meet you",
+          "could you",
+          "would you",
+          "did you"
+        ],
+        "sounds": [
+          "ミーチュー",
+          "クッジュー",
+          "ウッジュー",
+          "ディジュー"
+        ],
+        "words": [
+          "meet you",
+          "could you",
+          "would you",
+          "did you"
+        ],
+        "tipJa": "meet you は「ミーチュー」、could you・would you・did you は「クッジュー」「ウッジュー」「ディジュー」。t や d の あとに you が くると、つながって「チュ」「ジュ」の おとに なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "video call",
+          "ja": "ビデオ通話",
+          "emoji": "📹",
+          "core": true
+        },
+        {
+          "en": "screen",
+          "ja": "がめん",
+          "emoji": "🖥️"
+        },
+        {
+          "en": "microphone",
+          "ja": "マイク",
+          "emoji": "🎙️"
+        },
+        {
+          "en": "finally",
+          "ja": "やっと・ついに",
+          "emoji": "🎉"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I think picnics are the best. First, the food is tasty. Second, we can play outside. Today is a special day for Haru. Do you remember Leo? He is Haru's pen pal from the Tower of Messages. They wrote emails, but they have never talked face to face. Today, Iris turns on the big screen at Friendship Plaza. It's a video call! Leo waves from his home near the snowy mountains. Haru says, It's nice to finally see you! Say it with me. It's nice to finally see you! Wonderful! Then Haru asks, Can you hear me? Leo says, Yes, loud and clear! Sometimes the sound is bad. Then we say, Sorry, could you say that again? Let's read Iris's card about video call manners. \"Video Call Manners. Find a quiet place. Look at the camera and smile. Wave hello at the start. If the sound is bad, ask, Could you say that again? Wait for your turn to speak. Use the mute button when it's noisy. Don't share your address or your school name. Say goodbye with a wave.\" Where should you look? At the camera. What should you not share? Your address or your school name. Now, phonics. Meet you. Meet-chu! The t and the y join. Could you. Could-joo. Would you. Would-joo. Did you. Did-joo. Nice to meet you, everyone!",
+      "conversation": {
+        "scene": "Haru has a long video call with his pen pal Leo on the big screen",
+        "sceneJa": "ハルが おおきな がめんで ペンパルの レオと ビデオ通話",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Hi, Leo! It's nice to finally see you!",
+            "ja": "やあ、レオ！ やっと かおを みて はなせて うれしいよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Leo! Hi, Haru! It's nice to meet you, too!",
+            "ja": "ぼくが レオの やく！ やあ、ハル！ ぼくも あえて うれしいよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Can you hear me?",
+            "ja": "きこえる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, loud and clear! Did you get my last email?",
+            "ja": "うん、はっきり きこえるよ！ この まえの メール、とどいた？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry, could you say that again? The sound is a little bad.",
+            "ja": "ごめん、もう いちど いって くれる？ おとが すこし わるいんだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Did you get my email? I sent a photo of my skis!",
+            "ja": "メール とどいた？ ぼくの スキーの しゃしんを おくったんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Leo, would you like to see the Rainbow Bridge? Look!",
+            "ja": "レオ、にじの はしを みたい？ みて！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful video call manners, Haru!",
+            "ja": "ハル、ビデオ通話の マナーが すばらしいわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の レオと ビデオ通話を して、It's nice to finally see you! と あいさつし、きこえない ときは Could you say that again? と たのもう",
+          "starterEn": "Hi! I'm Leo. Can you hear me? It's nice to finally see you on video!",
+          "targetExpressions": [
+            "It's nice to finally see you!",
+            "Can you hear me? ― Yes, loud and clear!",
+            "Sorry, could you say that again?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's nice to finally see you!",
+          "Can you hear me? ― Yes, loud and clear! / Sorry, could you say that again?",
+          "meet you・could you・would you・did you"
+        ]
+      }
+    },
+    {
+      "lessonNo": 827,
+      "world": 28,
+      "title": "A Gift from Japan",
+      "titleJa": "日本からの おくりもの",
+      "school": {
+        "grade": "中3",
+        "topic": "I've made this for you. It's a paper crane.：アイノ・アマラ・マテオに おりづるを わたして、いみを せつめいする",
+        "grammar": "I've made this for you. / It's made of ～. / In Japan, ～ mean ～.",
+        "expressions": [
+          {
+            "en": "I've made this for you. It's a paper crane.",
+            "ja": "これ、あなたの ために つくったの。おりづるだよ。",
+            "core": true
+          },
+          {
+            "en": "It's made of paper. In Japan, cranes mean long life.",
+            "ja": "かみで できて いるよ。日本では、つるは ながいきの しるしなんだ。"
+          },
+          {
+            "en": "Thank you! I'll keep it forever.",
+            "ja": "ありがとう！ ずっと たいせつに するね。"
+          }
+        ],
+        "testPoints": [
+          "I've made this for you. It's a ～. で おくりものを わたし、It's made of ～. で せつめい できる",
+          "音の つながり: しいん ＋ ぼいんで つながる（a kind of・made of・put it on・keep in touch）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fold the paper in half.",
+          "ja": "かみを はんぶんに おって。",
+          "action": "かみを おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Give the crane to a friend with both hands.",
+          "ja": "りょうてで ともだちに つるを わたして。",
+          "action": "りょうてで そっと わたす まね",
+          "emoji": "🎁"
+        },
+        {
+          "en": "Bow and say thank you.",
+          "ja": "おじぎを して ありがとうと いって。",
+          "action": "ていねいに おじぎ する",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Flap your arms like a crane.",
+          "ja": "つるの ように うでを はばたかせて。",
+          "action": "りょううでを ゆっくり はばたかせる",
+          "emoji": "🕊️"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "a kind of",
+          "made of",
+          "put it on",
+          "keep in touch"
+        ],
+        "sounds": [
+          "アカインダヴ",
+          "メイダヴ",
+          "プティトン",
+          "キーピンタッチ"
+        ],
+        "words": [
+          "a kind of",
+          "made of",
+          "put it on",
+          "keep in touch"
+        ],
+        "tipJa": "a kind of は「アカインダヴ」、made of は「メイダヴ」、put it on は「プティトン」、keep in touch は「キーピンタッチ」。しいんで おわる ことばの あとに ぼいんが くると つながるよ。"
+      },
+      "vocab": [
+        {
+          "en": "paper crane",
+          "ja": "おりづる",
+          "emoji": "🕊️",
+          "core": true
+        },
+        {
+          "en": "gift",
+          "ja": "おくりもの",
+          "emoji": "🎁"
+        },
+        {
+          "en": "fold",
+          "ja": "おる",
+          "emoji": "📄"
+        },
+        {
+          "en": "forever",
+          "ja": "ずっと・えいえんに",
+          "emoji": "♾️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It's nice to finally see you! Today, Kiko has a surprise. Last night, she folded paper cranes for our new friends. She gives one to Amara. I've made this for you. It's a paper crane. Say it with me. I've made this for you. It's a paper crane. Beautiful! Amara asks, What is it made of? Kiko says, It's made of paper. In Japan, cranes mean long life. Amara says, Thank you! I'll keep it forever. Then Iris laughs. Iris is a crane, too! She says, Now I have many little sisters! Let's read the card with the cranes. \"To Aino, Amara, and Mateo. These are paper cranes. They are a kind of origami. We made them from one square of paper. No scissors and no glue! In Japan, people sometimes fold one thousand cranes for a wish. Our wish is easy. Please keep in touch! From Kiko and friends.\" How many cranes do people fold for a wish? One thousand. What is their wish? Keep in touch. Now, phonics. A kind of. A-kind-of. The words hold hands. Made of. Made-of. Put it on. Pu-ti-ton. Keep in touch. Kee-pin-touch. Let's fold a crane together!",
+      "conversation": {
+        "scene": "Kiko gives paper cranes to the new friends",
+        "sceneJa": "キコが あたらしい ともだちに おりづるを わたす",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Amara, I've made this for you. It's a paper crane.",
+            "ja": "アマラ、これ、あなたの ために つくったの。おりづるだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Amara! Wow, it's so cute! What is it made of?",
+            "ja": "ぼくが アマラの やく！ わあ、すごく かわいい！ なにで できて いるの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's made of paper. In Japan, cranes mean long life.",
+            "ja": "かみで できて いるよ。日本では、つるは ながいきの しるしなんだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thank you! I'll keep it forever.",
+            "ja": "ありがとう！ ずっと たいせつに するね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look! Iris is laughing. She's a crane, too!",
+            "ja": "みて！ イリスが わらってる。イリスも つるだもんね！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Mateo, here's one for you. You can put it on your desk.",
+            "ja": "マテオ、これは あなたの ぶん。つくえの 上に おいてね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a kind gift. Let's keep in touch with our friends.",
+            "ja": "なんて やさしい おくりもの。ともだちと ずっと れんらくを とりあいましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アマラに おりづるを わたして、I've made this for you. と いい、It's made of paper. と せつめいしよう",
+          "starterEn": "Jambo! Oh, what's that in your hand? Is it for me?",
+          "targetExpressions": [
+            "I've made this for you. It's a paper crane.",
+            "It's made of paper. In Japan, cranes mean long life.",
+            "Thank you! I'll keep it forever."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I've made this for you. It's a paper crane.",
+          "It's made of paper. In Japan, cranes mean long life. / Thank you! I'll keep it forever.",
+          "a kind of・made of・put it on・keep in touch"
+        ]
+      }
+    },
+    {
+      "lessonNo": 828,
+      "world": 28,
+      "title": "Stage 3 Review: Story and Mystery",
+      "titleJa": "ステージ3 ふりかえり：ものがたりと なぞとき",
+      "school": {
+        "grade": "中3",
+        "topic": "First, we found a clue. Suddenly, we heard a noise. It must be a bird!：はしの 上の なぞとき。ステージ3 の ものがたりと すいりを ふりかえる",
+        "grammar": "First, ～. Suddenly, ～. / It must be ～. / Where did it go?",
+        "expressions": [
+          {
+            "en": "First, we found a clue. Suddenly, we heard a noise. It must be a bird!",
+            "ja": "まず、てがかりを みつけた。すると とつぜん、おとが きこえた。ことりに ちがいない！",
+            "core": true
+          },
+          {
+            "en": "Aino's scarf is gone! Where did it go?",
+            "ja": "アイノの マフラーが ない！ どこへ いったの？"
+          },
+          {
+            "en": "Look! A baby bird is sleeping in it.",
+            "ja": "みて！ ひなどりが その なかで ねて いるよ。"
+          }
+        ],
+        "testPoints": [
+          "First, ～. Suddenly, ～. で できごとを じゅんに いい、It must be ～. で すいり できる",
+          "音の つながり: おなじ おとが つづくと 1かいだけ いう（bus stop・take care・good day・hot tea）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look for clues with a magnifying glass.",
+          "ja": "むしめがねで てがかりを さがして。",
+          "action": "むしめがねを のぞく まね",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Freeze! Did you hear that?",
+          "ja": "とまって！ いまの きこえた？",
+          "action": "ぴたっと とまって みみを すます",
+          "emoji": "🫢"
+        },
+        {
+          "en": "Tiptoe quietly.",
+          "ja": "しずかに つまさきで あるいて。",
+          "action": "つまさきで そっと あるく",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Point up at the nest.",
+          "ja": "うえの すを ゆびさして。",
+          "action": "うえを ゆびさす",
+          "emoji": "🪺"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "bus stop",
+          "take care",
+          "good day",
+          "hot tea"
+        ],
+        "sounds": [
+          "バスタップ",
+          "テイケア",
+          "グッデイ",
+          "ハッティー"
+        ],
+        "words": [
+          "bus stop",
+          "take care",
+          "good day",
+          "hot tea"
+        ],
+        "tipJa": "bus stop・take care・good day・hot tea は、おなじ おとが つづくので 1かいだけ いう。「バスタップ」「テイケア」「グッデイ」「ハッティー」の ように きこえるよ。"
+      },
+      "vocab": [
+        {
+          "en": "clue",
+          "ja": "てがかり",
+          "emoji": "🔍",
+          "core": true
+        },
+        {
+          "en": "scarf",
+          "ja": "マフラー",
+          "emoji": "🧣"
+        },
+        {
+          "en": "nest",
+          "ja": "す（とりの）",
+          "emoji": "🪺"
+        },
+        {
+          "en": "noise",
+          "ja": "もの おと",
+          "emoji": "🔊"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I've made this for you. It's a paper crane. Today, there is a mystery on the bridge! Aino says, My scarf is gone! Where did it go? Do you remember the Cave of Riddles? We are good detectives now. First, Riko finds a clue. It's a blue thread on the railing. Then, everyone is quiet. Suddenly, they hear a noise. Peep, peep! Haru says, First, we found a clue. Suddenly, we heard a noise. It must be a bird! Say it with me. First, we found a clue. Suddenly, we heard a noise. It must be a bird! Excellent! Kiko looks up and says, Look! A baby bird is sleeping in it. The scarf is a warm nest! Let's read Riko's detective notes. \"The Case of the Missing Scarf. Clue one: a blue thread on the railing. Clue two: small feathers near the lamp. Clue three: a peep peep sound from above. Answer: a mother bird took the scarf. Now her baby is warm and happy. Aino says the bird can keep it. Case closed!\" What was clue two? Small feathers near the lamp. Who took the scarf? A mother bird. Now, phonics. Bus stop. Say the s sound only once. Take care. One k sound. Good day. One d sound. Hot tea. One t sound. Great detective work, everyone!",
+      "conversation": {
+        "scene": "A small mystery on the bridge: Aino's scarf is missing",
+        "sceneJa": "はしの 上の なぞとき：アイノの マフラーが きえた",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Aino. Oh no! My scarf is gone! Where did it go?",
+            "ja": "ぼくが アイノの やく。たいへん！ マフラーが ない！ どこへ いったの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look, a blue thread on the railing. It's a clue!",
+            "ja": "みて、てすりに あおい いとが ある。てがかりよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Shh! Did you hear that? Peep, peep!",
+            "ja": "しっ！ いまの きこえた？ ピヨ、ピヨ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "First, we found a clue. Suddenly, we heard a noise. It must be a bird!",
+            "ja": "まず、てがかりを みつけた。すると とつぜん、おとが きこえた。ことりに ちがいない！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look! A baby bird is sleeping in it.",
+            "ja": "みて！ ひなどりが その なかで ねて いるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Aww. OK, little bird, you can keep my scarf. Take care!",
+            "ja": "わあ。いいよ、ことりさん、マフラーは あげる。げんきでね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Case closed! You're great detectives.",
+            "ja": "じけん かいけつ！ みんな すばらしい たんていね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アイノと なくなった マフラーの なぞを といて、First, ～. Suddenly, ～. It must be ～. で せつめいしよう",
+          "starterEn": "Moi! Oh no, my scarf is gone! Can you help me find it? What did you find first?",
+          "targetExpressions": [
+            "First, we found a clue. Suddenly, we heard a noise. It must be a bird!",
+            "Aino's scarf is gone! Where did it go?",
+            "Look! A baby bird is sleeping in it."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, we found a clue. Suddenly, we heard a noise. It must be a bird!",
+          "Aino's scarf is gone! Where did it go? / Look! A baby bird is sleeping in it.",
+          "bus stop・take care・good day・hot tea"
+        ]
+      }
+    },
+    {
+      "lessonNo": 829,
+      "world": 28,
+      "title": "Stage 3 Review: Experiences",
+      "titleJa": "ステージ3 ふりかえり：けいけん",
+      "school": {
+        "grade": "中3",
+        "topic": "Have you ever made sushi?：けいけんと ずっと つづけて いる ことを はなす。ステージ3 の たびを ふりかえる",
+        "grammar": "Have you ever ～? / I've ～ since ～. / I've never ～.",
+        "expressions": [
+          {
+            "en": "Have you ever made sushi?",
+            "ja": "すしを つくった ことは ある？",
+            "core": true
+          },
+          {
+            "en": "I've played soccer since I was six. ― Wow! Do you play every day?",
+            "ja": "6さいの ときから サッカーを して いるよ。― すごい！ まいにち するの？"
+          },
+          {
+            "en": "I've never seen snow. ― You should come to Finland!",
+            "ja": "ゆきを みた ことが ないの。― フィンランドに おいでよ！"
+          }
+        ],
+        "testPoints": [
+          "Have you ever ～? / I've never ～. で けいけんを たずね・こたえ、I've ～ since ～. で つづけて いる ことを いえる",
+          "音の つながり: don't you（チュ）・take off・all over（つながる）・this summer（おなじ おと）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pretend to roll sushi.",
+          "ja": "すしを まく まねを して。",
+          "action": "りょうてで くるくる まく まね",
+          "emoji": "🍣"
+        },
+        {
+          "en": "Kick a soccer ball.",
+          "ja": "サッカーボールを けって。",
+          "action": "かるく ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Shiver like it's snowing.",
+          "ja": "ゆきの ひの ように ぶるぶる ふるえて。",
+          "action": "からだを ぶるぶる させる",
+          "emoji": "🥶"
+        },
+        {
+          "en": "Take off your hat and wave it.",
+          "ja": "ぼうしを とって ふって。",
+          "action": "ぼうしを とって ふる まね",
+          "emoji": "🧢"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "don't you",
+          "take off",
+          "all over",
+          "this summer"
+        ],
+        "sounds": [
+          "ドンチュー",
+          "テイコフ",
+          "オーロウヴァー",
+          "ディサマー"
+        ],
+        "words": [
+          "don't you",
+          "take off",
+          "all over",
+          "this summer"
+        ],
+        "tipJa": "don't you は「ドンチュー」。take off は「テイコフ」、all over は「オーロウヴァー」と つながる。this summer は s の おとが つづくので 1かいだけ いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "experience",
+          "ja": "けいけん",
+          "emoji": "🌟",
+          "core": true
+        },
+        {
+          "en": "ever",
+          "ja": "いままでに",
+          "emoji": "❓"
+        },
+        {
+          "en": "never",
+          "ja": "いちども ～ない",
+          "emoji": "🚫"
+        },
+        {
+          "en": "since",
+          "ja": "～から ずっと",
+          "emoji": "⏳"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, First, we found a clue. Suddenly, we heard a noise. It must be a bird! Today, we talk about experiences. Do you remember the Cloudtop Railway? We asked, Have you ever seen a rainbow train? Now, Haru asks Mateo, Have you ever made sushi? Say it with me. Have you ever made sushi? Great! Mateo says, No, I haven't. But I've made tacos many times! Then Mateo says, I've played soccer since I was six. In the Village of Springs, we learned since. Do you remember? Amara says, I've never seen snow. Aino smiles and says, You should come to Finland! Let's read the bingo card on the plaza. \"Experience Bingo. Find a friend for each box. Have you ever seen snow? Have you ever ridden a train above the clouds? Have you ever made a paper crane? Have you ever been on a stage? Have you ever eaten tacos? Write your friend's name in the box. Get five in a row and shout, Bingo!\" How many in a row for bingo? Five. What do you write in the box? Your friend's name. Now, phonics. Don't you. Don-chu. The t and the y join. Take off. Tay-koff. All over. Aw-lover. This summer. Say the s sound only once. Have you ever played bingo in English?",
+      "conversation": {
+        "scene": "The friends talk about their experiences on the bridge",
+        "sceneJa": "はしの 上で、けいけんと つづけて いる ことを はなす",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mateo! Hola, everyone!",
+            "ja": "ぼくが マテオの やく！ オラ、みんな！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Mateo, have you ever made sushi?",
+            "ja": "マテオ、すしを つくった ことは ある？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, I haven't. But I've played soccer since I was six.",
+            "ja": "ううん、ないよ。でも 6さいの ときから サッカーを して いるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow! Do you play every day?",
+            "ja": "すごい！ まいにち するの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Almost every day! Now I'm playing Amara. I've never seen snow.",
+            "ja": "ほとんど まいにち！ こんどは アマラの やく。ゆきを みた ことが ないの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Aino says, You should come to Finland! There's snow all over in winter.",
+            "ja": "アイノが「フィンランドに おいでよ！」だって。ふゆは そこらじゅう ゆきなんだって。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great! You remember Have you ever and since from our trip.",
+            "ja": "すばらしい！ たびで ならった Have you ever と since を おぼえて いるわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の マテオと けいけんを はなして、Have you ever ～? と きき、I've ～ since ～. で つづけて いる ことを いおう",
+          "starterEn": "Hola! I'm Mateo. I've played soccer since I was six. Have you ever made sushi?",
+          "targetExpressions": [
+            "Have you ever made sushi?",
+            "I've played soccer since I was six. ― Wow! Do you play every day?",
+            "I've never seen snow. ― You should come to Finland!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Have you ever made sushi?",
+          "I've played soccer since I was six. ― Wow! Do you play every day? / I've never seen snow. ― You should come to Finland!",
+          "don't you・take off・all over・this summer"
+        ]
+      }
+    },
+    {
+      "lessonNo": 830,
+      "world": 28,
+      "title": "Stage 3 Review: Explain and Advise",
+      "titleJa": "ステージ3 ふりかえり：せつめいと アドバイス",
+      "school": {
+        "grade": "中3",
+        "topic": "It's made of paper. You should try it!：日本の ものを せつめいして、アドバイスも する（まとめ）",
+        "grammar": "It's made of ～. / It's used for ～. / You should ～.",
+        "expressions": [
+          {
+            "en": "It's made of paper. You should try it!",
+            "ja": "かみで できて いるよ。やって みて！",
+            "core": true
+          },
+          {
+            "en": "This is a kendama. It's used for playing.",
+            "ja": "これは けんだまだよ。あそぶ ための ものだよ。"
+          },
+          {
+            "en": "It's a little difficult. You should practice every day.",
+            "ja": "すこし むずかしいよ。まいにち れんしゅう した ほうが いいよ。"
+          }
+        ],
+        "testPoints": [
+          "It's made of ～. / It's used for ～. で せつめいし、You should ～. で アドバイス できる",
+          "まとめ: keep in touch（つながる）・to（よわく）・origami（英語に なった 日本語）・VID-e-o（強勢）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fold a paper boat.",
+          "ja": "かみで ふねを おって。",
+          "action": "かみを おる まね",
+          "emoji": "⛵"
+        },
+        {
+          "en": "Swing the kendama ball up.",
+          "ja": "けんだまの たまを ふりあげて。",
+          "action": "てを くいっと うえに あげる",
+          "emoji": "🎯"
+        },
+        {
+          "en": "Catch the ball on the cup!",
+          "ja": "たまを おさらで うけて！",
+          "action": "ひざを まげて うける まね",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Try again and smile.",
+          "ja": "もう いちど やって、にっこり。",
+          "action": "にっこり わらって もう いちど",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "keep in touch",
+          "to",
+          "origami",
+          "vid-e-o"
+        ],
+        "sounds": [
+          "キーピンタッチ",
+          "/tə/",
+          "/ˌɔːrɪˈɡɑːmi/",
+          "VID"
+        ],
+        "words": [
+          "keep in touch",
+          "I want to swim in the sea",
+          "origami",
+          "video"
+        ],
+        "tipJa": "keep in touch は つながって「キーピンタッチ」。I want to swim in the sea の to は よわく。origami は 英語でも つかう 日本語。video は カタカナの ビデオと ちがって VID を つよく いうよ。"
+      },
+      "vocab": [
+        {
+          "en": "kendama",
+          "ja": "けんだま",
+          "emoji": "🎯",
+          "core": true
+        },
+        {
+          "en": "practice",
+          "ja": "れんしゅう する",
+          "emoji": "🔁"
+        },
+        {
+          "en": "difficult",
+          "ja": "むずかしい",
+          "emoji": "😣"
+        },
+        {
+          "en": "try",
+          "ja": "やって みる",
+          "emoji": "💪"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Have you ever made sushi? Today, we use two big skills from Stage 3. We explain, and we give advice. Do you remember the Green Laboratory? We said, This chair is made of wood. And in the Village of Springs, we said, You should drink more water. Now, Riko shows Aino an origami frog. It's made of paper. You should try it! Say it with me. It's made of paper. You should try it! Wonderful! Then Haru shows Mateo a kendama. This is a kendama. It's used for playing. Mateo tries, but the ball falls. Haru says, It's a little difficult. You should practice every day. Let's read the label on the kendama box. \"Kendama. A Japanese toy. It's made of wood. There is a ball on a string and three cups. Swing the ball up and catch it in a cup. It looks easy, but it's difficult at first. Practice for ten minutes every day. Soon you can do amazing tricks!\" What is it made of? Wood. How many cups are there? Three. Look! The bridge is shining. The green color is back! Now, phonics. Keep in touch. Kee-pin-touch. I want to SWIM in the SEA. To is weak. Origami. English speakers use this Japanese word too. Video. VID-e-o. Say the VID part strongly. You should try it, too!",
+      "conversation": {
+        "scene": "The friends explain Japanese toys and give advice",
+        "sceneJa": "日本の おもちゃを せつめいして、アドバイス する",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Aino, look! This is an origami frog. It's made of paper. You should try it!",
+            "ja": "アイノ、みて！ これは おりがみの かえる。かみで できて いるよ。やって みて！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Aino says, It's so cute! Can you show me how?",
+            "ja": "アイノが「すごく かわいい！ おしえて くれる？」だって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And this is a kendama. It's used for playing.",
+            "ja": "それに、これは けんだま。あそぶ ための ものだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mateo. Let me try! Oops! The ball fell.",
+            "ja": "ぼくが マテオの やく。やらせて！ おっと！ たまが おちた。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's a little difficult. You should practice every day.",
+            "ja": "すこし むずかしいよ。まいにち れんしゅう した ほうが いいよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "OK! I'll practice for ten minutes every day… after snacks.",
+            "ja": "わかった！ まいにち 10ぷん れんしゅう する…おやつの あとでね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look! The green color is back on the bridge!",
+            "ja": "みて！ はしに みどりが もどって きたわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アイノに 日本の おもちゃや おりがみを It's made of ～. / It's used for ～. で せつめいして、You should ～. で アドバイス しよう",
+          "starterEn": "Moi! What's that? Is it a toy? What is it made of?",
+          "targetExpressions": [
+            "It's made of paper. You should try it!",
+            "This is a kendama. It's used for playing.",
+            "It's a little difficult. You should practice every day."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's made of paper. You should try it!",
+          "This is a kendama. It's used for playing. / It's a little difficult. You should practice every day.",
+          "keep in touch・I want to swim in the sea・origami・video"
+        ]
+      }
+    },
+    {
+      "lessonNo": 831,
+      "world": 28,
+      "title": "My Journey So Far",
+      "titleJa": "これまでの たび",
+      "school": {
+        "grade": "中3",
+        "topic": "I've traveled to many places.：はしの 上の 大きな ちずで、ステージ3 の たびを ふりかえる",
+        "grammar": "I've traveled to ～. / We've been to ～. / Which place was your favorite?",
+        "expressions": [
+          {
+            "en": "I've traveled to many places.",
+            "ja": "ぼくは たくさんの ばしょを たびして きたよ。",
+            "core": true
+          },
+          {
+            "en": "We've been to a tower, a library, a laboratory, and a cave!",
+            "ja": "とう、としょかん、けんきゅうじょ、それに どうくつにも いったね！"
+          },
+          {
+            "en": "Which place was your favorite? ― I liked the Theater of Echoes the best.",
+            "ja": "どの ばしょが いちばん すきだった？ ― ひびきの劇場が いちばん よかった。"
+          }
+        ],
+        "testPoints": [
+          "I've traveled to ～. / We've been to ～. で これまでの けいけんを まとめて いい、Which place was your favorite? と きいて こたえられる",
+          "dis- と un-（disappear・unnatural・dishonest・unusual。パーツを くっつけた つづり）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the big map.",
+          "ja": "大きな ちずを 見て。",
+          "action": "ゆびで ちずを さがす まね",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Point at the tower.",
+          "ja": "とうを ゆびさして。",
+          "action": "たかい ところを ゆびさす",
+          "emoji": "🗼"
+        },
+        {
+          "en": "Trace the train line with your finger.",
+          "ja": "ゆびで せんろを なぞって。",
+          "action": "くうちゅうで ながい せんを なぞる",
+          "emoji": "🚂"
+        },
+        {
+          "en": "Give yourself a pat on the back.",
+          "ja": "じぶんの せなかを ぽんと たたいて。",
+          "action": "かたごしに せなかを かるく たたく",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "dis-",
+          "un-"
+        ],
+        "sounds": [
+          "/dɪs/",
+          "/ʌn/"
+        ],
+        "words": [
+          "disappear",
+          "unnatural",
+          "dishonest",
+          "unusual"
+        ],
+        "tipJa": "dis- と un- は「〜ない・はんたい」の パーツ。dis＋appear で disappear（きえる）、un＋natural で unnatural（しぜんで ない）。un の n と natural の n が かさなって n が 2つに なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "journey",
+          "ja": "たび",
+          "emoji": "🗺️",
+          "core": true
+        },
+        {
+          "en": "travel",
+          "ja": "たびを する",
+          "emoji": "✈️"
+        },
+        {
+          "en": "place",
+          "ja": "ばしょ",
+          "emoji": "📍"
+        },
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "⭐"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It's made of paper. You should try it! Today, Iris shows us a big map on the bridge. It's a map of our journey. Look! There is the Tower of Messages, the Amber Library, and the Green Laboratory. There is the Cloudtop Railway, the Cave of Riddles, the Theater of Echoes, and the Village of Springs. Haru smiles and says, I've traveled to many places. Say it with me. I've traveled to many places. Wonderful! Riko points at the map and says, We've been to a tower, a library, a laboratory, and a cave! Kiko asks, Which place was your favorite? Birimo says, The Village of Springs. The food was so good! Let's read the words under the map. \"Stage 3 Journey Map. You started at the Tower of Messages. You wrote emails and made phone calls. You rode a train above the clouds. You solved mysteries in a dark cave. You acted in a play. You learned about health in a warm village. Now you are on the Rainbow Bridge. Well done, travelers!\" Where did they ride a train? Above the clouds. Where did they solve mysteries? In a dark cave. Now, phonics. Disappear. Dis plus appear. One s and two p's. Unnatural. Un plus natural. Two n's! Dishonest. Dis plus honest. The h is silent. Unusual. Un plus usual. Not usual at all! What an amazing journey!",
+      "conversation": {
+        "scene": "Looking back at the Stage 3 journey map",
+        "sceneJa": "ステージ3 の たびの ちずを みんなで ふりかえる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at this map! I've traveled to many places.",
+            "ja": "この ちずを 見て！ ぼく、たくさんの ばしょを たびして きたんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We've been to a tower, a library, a laboratory, and a cave!",
+            "ja": "とう、としょかん、けんきゅうじょ、それに どうくつにも いったね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Which place was your favorite?",
+            "ja": "どの ばしょが いちばん すきだった？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I liked the Theater of Echoes the best. I loved our play.",
+            "ja": "ひびきの劇場が いちばん よかった。わたしたちの げき、だいすき。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The Village of Springs! The food was unusual and delicious.",
+            "ja": "いずみの里！ たべものが めずらしくて おいしかった。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a journey! And now we're on the Rainbow Bridge.",
+            "ja": "すごい たびね！ そして いまは にじの架け橋の 上よ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の イリスに これまでの たびを はなそう。I've traveled to many places. / We've been to ～. を つかって、いちばん すきな ばしょと その りゆうを つたえよう",
+          "starterEn": "Hello, traveler! I'm Iris. Look at this map of your journey. Which place was your favorite?",
+          "targetExpressions": [
+            "I've traveled to many places.",
+            "We've been to a tower, a library, a laboratory, and a cave!",
+            "Which place was your favorite? ― I liked the Theater of Echoes the best."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I've traveled to many places.",
+          "We've been to a tower, a library, a laboratory, and a cave! / Which place was your favorite? ― I liked the Theater of Echoes the best.",
+          "disappear・unnatural・dishonest・unusual"
+        ]
+      }
+    },
+    {
+      "lessonNo": 832,
+      "world": 28,
+      "title": "Things I Can Do Now",
+      "titleJa": "いま できる こと",
+      "school": {
+        "grade": "中3",
+        "topic": "I can make phone calls in English now.：ステージ3 で できるように なった ことを はなしあう",
+        "grammar": "I can ～ now. / Before, I couldn't ～. Now I can! / What can you do now?",
+        "expressions": [
+          {
+            "en": "I can make phone calls in English now.",
+            "ja": "いまは 英語で でんわが できるよ。",
+            "core": true
+          },
+          {
+            "en": "Before, I couldn't write emails. Now I can!",
+            "ja": "まえは メールが かけなかった。いまは かける！"
+          },
+          {
+            "en": "What can you do now? ― I can tell stories in English.",
+            "ja": "いま なにが できる？ ― 英語で ものがたりを はなせるよ。"
+          }
+        ],
+        "testPoints": [
+          "I can ～ now. / Before, I couldn't ～. で まえと いまを くらべて、できるように なった ことを いえる",
+          "-ful（beautiful・helpful・wonderful・peaceful。y を i に かえる・l は 1つ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up a pretend phone.",
+          "ja": "でんわを もつ まねを して。",
+          "action": "みみに てを あてて でんわの まね",
+          "emoji": "📞"
+        },
+        {
+          "en": "Type an email in the air.",
+          "ja": "くうちゅうで メールを うって。",
+          "action": "ゆびで キーボードを うつ まね",
+          "emoji": "📧"
+        },
+        {
+          "en": "Count on your fingers.",
+          "ja": "ゆびで かぞえて。",
+          "action": "ゆびを 1ぽんずつ おる",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Raise both arms. You did it!",
+          "ja": "りょうてを あげて。やったね！",
+          "action": "りょううでを たかく あげる",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "-ful"
+        ],
+        "sounds": [
+          "/fəl/"
+        ],
+        "words": [
+          "beautiful",
+          "helpful",
+          "wonderful",
+          "peaceful"
+        ],
+        "tipJa": "-ful は「〜で いっぱい」の パーツで、l は 1つだけ。beauty の y は i に かえて beautiful、peace の e は のこして peaceful に なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "phone call",
+          "ja": "でんわ",
+          "emoji": "📞",
+          "core": true
+        },
+        {
+          "en": "email",
+          "ja": "メール",
+          "emoji": "📧"
+        },
+        {
+          "en": "story",
+          "ja": "ものがたり",
+          "emoji": "📖"
+        },
+        {
+          "en": "before",
+          "ja": "まえは",
+          "emoji": "⏪"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I've traveled to many places. Today, Iris asks a big question. What can you do now? Think about the start of Stage 3. At the Tower of Messages, Haru was nervous on the phone. Now he says, I can make phone calls in English now. Say it with me. I can make phone calls in English now. Great! Riko says, Before, I couldn't write emails. Now I can! Kiko says, I can tell stories in English. Birimo says, I can order three desserts in English! Ha ha. Let's read Kiko's list. \"Things I Can Do Now. I can make phone calls and leave messages. I can write emails to a pen pal. I can tell a story with First, Then, and Suddenly. I can explain how things are made. I can give helpful advice to my friends. I can't speak perfectly yet, but I'm not afraid anymore!\" Can Kiko write emails? Yes, she can. Is she afraid now? No, she isn't. Now, phonics. Beautiful. Beauty, change the y to i, plus ful. Helpful. Help plus ful. Only one l! Wonderful. Wonder plus ful. Peaceful. Peace plus ful. Keep the e. You are all wonderful learners!",
+      "conversation": {
+        "scene": "Talking about things they can do now",
+        "sceneJa": "いま できるように なった ことを はなしあう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's think. What can you do now?",
+            "ja": "かんがえて みましょう。いま なにが できる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I can make phone calls in English now. I was so nervous before!",
+            "ja": "いまは 英語で でんわが できるよ。まえは すごく きんちょう してたのに！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Before, I couldn't write emails. Now I can!",
+            "ja": "まえは メールが かけなかった。いまは かける！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I can tell stories in English. Once upon a time…",
+            "ja": "わたしは 英語で ものがたりを はなせるよ。むかし むかし…"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I can order three desserts in English! Cake, pudding, and ice cream, please!",
+            "ja": "ぼくは 英語で デザートを 3つ たのめるよ！ ケーキと プリンと アイス、ください！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! You've all worked so hard.",
+            "ja": "すばらしい！ みんな ほんとうに がんばったわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "エマ先生（AI）に、いま 英語で できる ことを はなそう。Before, I couldn't ～. Now I can! を つかって、まえと いまを くらべよう",
+          "starterEn": "Hi! It's Ms. Emma. You've learned so much on this journey. What can you do in English now?",
+          "targetExpressions": [
+            "I can make phone calls in English now.",
+            "Before, I couldn't write emails. Now I can!",
+            "What can you do now? ― I can tell stories in English."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I can make phone calls in English now.",
+          "Before, I couldn't write emails. Now I can! / What can you do now? ― I can tell stories in English.",
+          "beautiful・helpful・wonderful・peaceful"
+        ]
+      }
+    },
+    {
+      "lessonNo": 833,
+      "world": 28,
+      "title": "A Speech About Friendship",
+      "titleJa": "ゆうじょうの スピーチ",
+      "school": {
+        "grade": "中3",
+        "topic": "Friends can be different, but we can learn from each other.：フェスティバルで はなす ゆうじょうの スピーチを かく",
+        "grammar": "Friends can be ～, but we can ～. / ～ taught me ～. / ～ is the best ～.",
+        "expressions": [
+          {
+            "en": "Friends can be different, but we can learn from each other.",
+            "ja": "ともだちは ちがって いても いい。でも おたがいから まなべるんだ。",
+            "core": true
+          },
+          {
+            "en": "My friend Amara taught me Swahili. Jambo means hello!",
+            "ja": "ともだちの アマラが スワヒリ語を おしえて くれたよ。ジャンボは こんにちはって いみ！"
+          },
+          {
+            "en": "Kindness is the best language.",
+            "ja": "やさしさは いちばんの ことばだよ。"
+          }
+        ],
+        "testPoints": [
+          "Friends can be different, but ～. で いけんを のべ、～ taught me ～. で ともだちから まなんだ ことを いえる",
+          "-ness（kindness・happiness・friendliness・openness。y を i に・n が 2つ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold your pen and write.",
+          "ja": "ペンを もって かいて。",
+          "action": "ペンを もって かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Shake hands with a friend.",
+          "ja": "ともだちと あくしゅして。",
+          "action": "となりの ひとと あくしゅ する",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Wave and say, Jambo!",
+          "ja": "てを ふって ジャンボ！と いって。",
+          "action": "てを ふって あいさつ する",
+          "emoji": "👋"
+        },
+        {
+          "en": "Put your hand on your heart.",
+          "ja": "むねに てを あてて。",
+          "action": "むねに そっと てを あてる",
+          "emoji": "❤️"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "-ness"
+        ],
+        "sounds": [
+          "/nəs/"
+        ],
+        "words": [
+          "kindness",
+          "happiness",
+          "friendliness",
+          "openness"
+        ],
+        "tipJa": "-ness は「〜な こと・ようす」の パーツ。happy・friendly の y は i に かえて happiness・friendliness。open＋ness の openness は n が 2つ に なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "friendship",
+          "ja": "ゆうじょう",
+          "emoji": "🤝",
+          "core": true
+        },
+        {
+          "en": "speech",
+          "ja": "スピーチ",
+          "emoji": "🎤"
+        },
+        {
+          "en": "different",
+          "ja": "ちがう",
+          "emoji": "🌈"
+        },
+        {
+          "en": "each other",
+          "ja": "おたがい",
+          "emoji": "👫"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I can make phone calls in English now. The Friendship Festival is coming soon. Each of us will give a short speech about friendship. Riko starts her draft. She thinks about Aino, Amara, and Mateo. They live in different countries. They eat different food. But they are our friends. Riko writes, Friends can be different, but we can learn from each other. Say it with me. Friends can be different, but we can learn from each other. Beautiful! Let's read Riko's speech draft. \"My Friends on the Bridge. Hello, everyone. My friend Amara taught me Swahili. Jambo means hello! Aino taught me a winter game. Mateo taught me how to draw a funny cat. We are all different, and that is wonderful. Friends can be different, but we can learn from each other. Kindness is the best language. Thank you.\" What does Jambo mean? Hello. Who taught Riko a winter game? Aino did. Now, phonics. Kindness. Kind plus ness. Happiness. Happy, change the y to i, plus ness. Friendliness. Friendly, y to i, plus ness. Openness. Open plus ness. Two n's! Let's write our speeches with kindness and happiness!",
+      "conversation": {
+        "scene": "Writing friendship speeches for the festival",
+        "sceneJa": "フェスティバルの ゆうじょうの スピーチを かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm writing my friendship speech. Can you listen?",
+            "ja": "ゆうじょうの スピーチを かいてるの。きいて くれる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sure! Go ahead.",
+            "ja": "もちろん！ どうぞ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Friends can be different, but we can learn from each other.",
+            "ja": "ともだちは ちがって いても いい。でも おたがいから まなべるんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like that! My friend Amara taught me Swahili. Jambo means hello!",
+            "ja": "それ いいね！ ともだちの アマラが スワヒリ語を おしえて くれたよ。ジャンボは こんにちはって いみ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Jambo! Jambo! Wait… does it mean jam?",
+            "ja": "ジャンボ！ ジャンボ！ まって… ジャムって いみ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha, no. Remember, kindness is the best language.",
+            "ja": "ふふ、ちがうわ。わすれないで、やさしさは いちばんの ことばよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アマラに ゆうじょうの スピーチを きいて もらおう。Friends can be different, but ～. と、ともだちから まなんだ ことを つたえよう",
+          "starterEn": "Jambo! I'm Amara. I hear you're writing a speech about friendship. What will you say?",
+          "targetExpressions": [
+            "Friends can be different, but we can learn from each other.",
+            "My friend Amara taught me Swahili. Jambo means hello!",
+            "Kindness is the best language."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Friends can be different, but we can learn from each other.",
+          "My friend Amara taught me Swahili. Jambo means hello! / Kindness is the best language.",
+          "kindness・happiness・friendliness・openness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 834,
+      "world": 28,
+      "title": "Rehearsal on the Bridge",
+      "titleJa": "はしの 上の リハーサル",
+      "school": {
+        "grade": "中3",
+        "topic": "Speak clearly. Smile at the audience.：はしの 上の ステージで スピーチの リハーサルを する",
+        "grammar": "Speak clearly. / Smile at ～. / Look up from ～. / Don't hurry. Take your time.",
+        "expressions": [
+          {
+            "en": "Speak clearly. Smile at the audience.",
+            "ja": "はっきり はなして。おきゃくさんに ほほえんで。",
+            "core": true
+          },
+          {
+            "en": "Look up from your paper. ― OK, I'll try.",
+            "ja": "かみから かおを あげて。― うん、やって みる。"
+          },
+          {
+            "en": "Don't hurry. Take your time.",
+            "ja": "あわてないで。ゆっくりで いいよ。"
+          }
+        ],
+        "testPoints": [
+          "Speak clearly. / Smile at the audience. / Don't hurry. で スピーチの アドバイスを つたえ、OK, I'll try. と こたえられる",
+          "-ment（excitement・argument・enjoyment・amazement。e を のこす・e を とる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand up straight.",
+          "ja": "せすじを のばして たって。",
+          "action": "まっすぐ たつ",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Look up and smile.",
+          "ja": "かおを あげて ほほえんで。",
+          "action": "まえを 見て にっこり する",
+          "emoji": "😊"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "ふかく いきを すって。",
+          "action": "ゆっくり いきを すって はく",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Bow to the audience.",
+          "ja": "おきゃくさんに おじぎを して。",
+          "action": "ていねいに おじぎ する",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "excitement",
+          "argument",
+          "enjoyment",
+          "amazement"
+        ],
+        "tipJa": "-ment は「〜する こと」の パーツ。excite＋ment・amaze＋ment は e を のこして excitement・amazement、でも argue＋ment は e を とって argument に なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "rehearsal",
+          "ja": "リハーサル",
+          "emoji": "🎭",
+          "core": true
+        },
+        {
+          "en": "audience",
+          "ja": "おきゃくさん",
+          "emoji": "👥"
+        },
+        {
+          "en": "clearly",
+          "ja": "はっきりと",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎤"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Friends can be different, but we can learn from each other. Today is rehearsal day on the bridge. There is a small stage in Friendship Plaza. Kiko goes first. She reads her speech very fast, and she only looks at her paper. Ms. Emma gives her some tips. Speak clearly. Smile at the audience. Say it with me. Speak clearly. Smile at the audience. Great! Then Ms. Emma says, Look up from your paper. Kiko says, OK, I'll try. Remember the theater and the springs? Take a deep breath. Don't hurry. Take your time. Iris hangs a list of speech tips next to the stage. Let's read it. \"Five Speech Tips. One, speak clearly and slowly. Two, look up from your paper. Three, smile at the audience. Four, stand up straight. Five, if you make a mistake, don't worry. Just take a breath and go on. Your friends are here to help you. Enjoy your speech!\" What is tip number two? Look up from your paper. What do you do after a mistake? Take a breath and go on. Now, phonics. Excitement. Excite plus ment. Keep the e. Argument. Argue, drop the e, plus ment. Enjoyment. Enjoy plus ment. Amazement. Amaze plus ment. Keep the e again. Kiko, you can do it!",
+      "conversation": {
+        "scene": "Practicing speeches on the bridge stage",
+        "sceneJa": "はしの 上の ステージで スピーチの れんしゅう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Hello, everyone. My speech is about… um… friendship.",
+            "ja": "みなさん、こんにちは。わたしの スピーチは… えっと… ゆうじょうに ついてです。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good start! Speak clearly. Smile at the audience.",
+            "ja": "いい スタートよ！ はっきり はなして。おきゃくさんに ほほえんで。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And look up from your paper, Kiko.",
+            "ja": "それと かみから かおを あげて、キコ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "OK, I'll try. But I'm so nervous.",
+            "ja": "うん、やって みる。でも すごく きんちょう する。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Don't hurry. Take your time. Take a deep breath first.",
+            "ja": "あわてないで。ゆっくりで いいよ。まず ふかく いきを すって。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look at me, Kiko! I'm the audience. I'm smiling!",
+            "ja": "ぼくを 見て、キコ！ ぼくが おきゃくさん。にこにこ してるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Thanks, Birimo. Hello, everyone! My speech is about friendship.",
+            "ja": "あはは！ ありがとう、ビリモ。みなさん、こんにちは！ わたしの スピーチは ゆうじょうに ついてです。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "エマ先生（AI）と スピーチの れんしゅうを しよう。さいしょの ひとことを いって、Speak clearly. / Don't hurry. などの アドバイスを もらったり、あげたり しよう",
+          "starterEn": "Hi! It's Ms. Emma. Let's practice your speech. Can you say your first line for me?",
+          "targetExpressions": [
+            "Speak clearly. Smile at the audience.",
+            "Look up from your paper. ― OK, I'll try.",
+            "Don't hurry. Take your time."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Speak clearly. Smile at the audience.",
+          "Look up from your paper. ― OK, I'll try. / Don't hurry. Take your time.",
+          "excitement・argument・enjoyment・amazement"
+        ]
+      }
+    },
+    {
+      "lessonNo": 835,
+      "world": 28,
+      "title": "Friendship Festival",
+      "titleJa": "ゆうじょうフェスティバル",
+      "school": {
+        "grade": "中3",
+        "topic": "Welcome to the friendship festival!：にじの はしの 上で ゆうじょうフェスティバル。あおと あいいろが もどる",
+        "grammar": "Welcome to ～! / Let's share ～. / ～ was so much fun! ― I loved ～.",
+        "expressions": [
+          {
+            "en": "Welcome to the friendship festival!",
+            "ja": "ゆうじょうフェスティバルへ ようこそ！",
+            "core": true
+          },
+          {
+            "en": "Let's share our songs, games, and food!",
+            "ja": "うたと ゲームと たべものを わけあおう！"
+          },
+          {
+            "en": "Mateo's piñata game was so much fun! ― I loved Aino's dance.",
+            "ja": "マテオの ピニャータ ゲーム、すごく たのしかった！ ― わたしは アイノの ダンスが だいすきだった。"
+          }
+        ],
+        "testPoints": [
+          "Welcome to ～! / Let's share ～. で フェスティバルを すすめ、～ was so much fun! と かんそうを いえる",
+          "ふりかえり（disagreement の パーツ・meet you の つながり・Can I ask a question の よわい can・haiku）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Clap for the speakers.",
+          "ja": "スピーチを した ひとに はくしゅして。",
+          "action": "おおきく はくしゅ する",
+          "emoji": "👏"
+        },
+        {
+          "en": "Swing the stick at the piñata!",
+          "ja": "ピニャータに むかって ぼうを ふって！",
+          "action": "ぼうを ふる まね",
+          "emoji": "🪅"
+        },
+        {
+          "en": "Dance with your friends.",
+          "ja": "ともだちと おどって。",
+          "action": "その ばで たのしく おどる",
+          "emoji": "💃"
+        },
+        {
+          "en": "Share a snack with a friend.",
+          "ja": "ともだちと おやつを わけて。",
+          "action": "おやつを わたす まね",
+          "emoji": "🍪"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ment",
+          "meet you",
+          "can",
+          "haiku"
+        ],
+        "sounds": [
+          "/mənt/",
+          "ミーチュー",
+          "/kən/",
+          "/ˈhaɪkuː/"
+        ],
+        "words": [
+          "disagreement",
+          "meet you",
+          "Can I ask a question",
+          "haiku"
+        ],
+        "tipJa": "dis＋agree＋ment で disagreement。meet you は「ミーチュー」と つながる。Can I ask a question の can は よわく みじかく。haiku は 英語でも つかう 日本語だよ。"
+      },
+      "vocab": [
+        {
+          "en": "festival",
+          "ja": "おまつり",
+          "emoji": "🎉",
+          "core": true
+        },
+        {
+          "en": "share",
+          "ja": "わけあう",
+          "emoji": "🤲"
+        },
+        {
+          "en": "dance",
+          "ja": "おどり・おどる",
+          "emoji": "💃"
+        },
+        {
+          "en": "program",
+          "ja": "プログラム",
+          "emoji": "📋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Speak clearly. Smile at the audience. Today is the big day. It's the Friendship Festival on the Rainbow Bridge! Children from many countries are here. Iris opens the festival. She says, Welcome to the friendship festival! Say it with me. Welcome to the friendship festival! Fantastic! Then Haru says, Let's share our songs, games, and food! Kiko gives her speech. She speaks clearly and smiles. Everyone claps. Mateo brings a piñata. Aino teaches a dance. Amara sings a song in Swahili. Birimo shares onigiri, but first, he eats three! Let's read the festival program. \"Friendship Festival Program. At one, opening words from Iris. At half past one, friendship speeches. At two, songs from many countries. At half past two, games, like the piñata and the paper crane contest. At three, food from around the world. Please share, smile, and make new friends!\" What time are the speeches? At half past one. What happens at three? Food from around the world. Look up! The bridge is shining blue and indigo now. Now, phonics. Disagreement. Dis plus agree plus ment. Meet you. Meet-chu! Can I ask a question? Can is small and quick. Haiku. A short Japanese poem. What a wonderful festival!",
+      "conversation": {
+        "scene": "The Friendship Festival on the Rainbow Bridge",
+        "sceneJa": "にじの架け橋の 上の ゆうじょうフェスティバル",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Iris! Welcome to the friendship festival!",
+            "ja": "ぼくが イリスの やくね！ ゆうじょうフェスティバルへ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's share our songs, games, and food!",
+            "ja": "うたと ゲームと たべものを わけあおう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I did my speech! I spoke clearly and smiled.",
+            "ja": "スピーチ できたよ！ はっきり はなして、にっこり できた。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You were great, Kiko! Mateo's piñata game was so much fun!",
+            "ja": "キコ、すごかったよ！ マテオの ピニャータ ゲーム、すごく たのしかった！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I loved Aino's dance. Look! The bridge is shining blue now.",
+            "ja": "ぼくは アイノの ダンスが だいすきだった。見て！ はしが あおく ひかってる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "And indigo, too! Only one color is still missing.",
+            "ja": "あいいろも！ あと 1つの いろだけが まだ ないわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の マテオと フェスティバルを たのしもう。Let's share ～. で なにを わけあうか いい、～ was so much fun! と かんそうを つたえよう",
+          "starterEn": "Hola! I'm Mateo. Welcome to the friendship festival! What would you like to share with everyone?",
+          "targetExpressions": [
+            "Welcome to the friendship festival!",
+            "Let's share our songs, games, and food!",
+            "Mateo's piñata game was so much fun! ― I loved Aino's dance."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Welcome to the friendship festival!",
+          "Let's share our songs, games, and food! / Mateo's piñata game was so much fun! ― I loved Aino's dance.",
+          "disagreement・meet you・Can I ask a question・haiku"
+        ]
+      }
+    },
+    {
+      "lessonNo": 836,
+      "world": 28,
+      "title": "Letters Across the Bridge",
+      "titleJa": "はしを こえる てがみ",
+      "school": {
+        "grade": "中3",
+        "topic": "Dear friend, thank you for sharing your culture with me.：あたらしい ともだちに おれいの てがみを かく",
+        "grammar": "Dear ～, thank you for ～ing. / I enjoyed ～ing. / Please write back soon.",
+        "expressions": [
+          {
+            "en": "Dear friend, thank you for sharing your culture with me.",
+            "ja": "ともだちへ。あなたの くにの ぶんかを おしえて くれて ありがとう。",
+            "core": true
+          },
+          {
+            "en": "I enjoyed learning about your school.",
+            "ja": "あなたの がっこうの ことを しれて たのしかったよ。"
+          },
+          {
+            "en": "Please write back soon. ― Your friend, Haru",
+            "ja": "また すぐ へんじを ちょうだいね。― あなたの ともだち、ハルより"
+          }
+        ],
+        "testPoints": [
+          "Dear ～, thank you for ～ing. / I enjoyed ～ing. で おれいの てがみを かき、さいごの あいさつで しめくくれる",
+          "ふりかえり（piano の 強勢・sushi・them の よわい おと・could you の つながり・thankfulness の パーツ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up your pen.",
+          "ja": "ペンを とって。",
+          "action": "ペンを もつ まね",
+          "emoji": "🖊️"
+        },
+        {
+          "en": "Write Dear friend at the top.",
+          "ja": "いちばん うえに Dear friend と かいて。",
+          "action": "くうちゅうに もじを かく",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Fold the letter in half.",
+          "ja": "てがみを はんぶんに おって。",
+          "action": "かみを はんぶんに おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Put it in an envelope.",
+          "ja": "ふうとうに いれて。",
+          "action": "ふうとうに てがみを いれる まね",
+          "emoji": "✉️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "pi-an-o",
+          "sushi",
+          "them",
+          "could you",
+          "-ful"
+        ],
+        "sounds": [
+          "AN",
+          "/ˈsuːʃi/",
+          "/ðəm/",
+          "クッジュー",
+          "/fəl/"
+        ],
+        "words": [
+          "piano",
+          "sushi",
+          "Let's ask them to help",
+          "could you",
+          "thankfulness"
+        ],
+        "tipJa": "piano は pi-AN-o と AN を つよく。sushi は 英語でも つかう 日本語。Let's ask them to help の them は よわく。could you は「クッジュー」。thank＋ful＋ness で thankfulness だよ。"
+      },
+      "vocab": [
+        {
+          "en": "letter",
+          "ja": "てがみ",
+          "emoji": "✉️",
+          "core": true
+        },
+        {
+          "en": "culture",
+          "ja": "ぶんか",
+          "emoji": "🎎"
+        },
+        {
+          "en": "envelope",
+          "ja": "ふうとう",
+          "emoji": "📩"
+        },
+        {
+          "en": "write back",
+          "ja": "へんじを かく",
+          "emoji": "↩️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Welcome to the friendship festival! The festival was a big success. Now, our new friends are going home soon. So we're writing letters. Haru writes to his pen pal Leo, and Riko writes to Aino. Haru starts his letter like this. Dear friend, thank you for sharing your culture with me. Say it with me. Dear friend, thank you for sharing your culture with me. Great! Then he writes, I enjoyed learning about your school. At the end, he writes, Please write back soon. Your friend, Haru. Remember, we don't write our address or our school name. Let's read Riko's letter to Aino. \"Dear Aino, Thank you for sharing your culture with me. I enjoyed learning about your school. I was surprised to hear you start school at seven! Your winter game was so much fun. Someday, I want to see the long summer days in Finland. Could you send me a photo of the snow? Please write back soon. Your friend, Riko\" When does Aino start school? At seven. What does Riko ask for? A photo of the snow. Now, phonics. Piano. pi-AN-o. Sushi. A Japanese word in English. Let's ask them to help. Them is small and quick. Could you. Could-ju. Thankfulness. Thank plus ful plus ness. My heart is full of thankfulness!",
+      "conversation": {
+        "scene": "Writing thank-you letters to new friends",
+        "sceneJa": "あたらしい ともだちに おれいの てがみを かく",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I'm writing a letter to Leo. How should I start?",
+            "ja": "レオに てがみを かいてるんだ。どう はじめたら いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Try this. Dear friend, thank you for sharing your culture with me.",
+            "ja": "こう かいて みて。ともだちへ。あなたの くにの ぶんかを おしえて くれて ありがとう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm writing to Aino. I enjoyed learning about your school.",
+            "ja": "わたしは アイノに かいてる。あなたの がっこうの ことを しれて たのしかったよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Don't forget the ending. Please write back soon.",
+            "ja": "さいごを わすれないでね。また すぐ へんじを ちょうだいね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Your friend, Haru. Done! And I didn't write my address.",
+            "ja": "あなたの ともだち、ハルより。できた！ じゅうしょも かいて ないよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My letter is ready, too! Dear Mateo, thank you for the piñata game. Let's play again!",
+            "ja": "ぼくの てがみも できた！ マテオへ。ピニャータの ゲームを ありがとう。また あそぼうね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の レオと てがみの はなしを しよう。thank you for ～ing. / I enjoyed ～ing. を つかって、はしで たのしかった ことを つたえよう（じゅうしょや がっこうの なまえは いわない）",
+          "starterEn": "Hi, it's Leo! I just got your letter. Thank you! What did you enjoy learning about on the bridge?",
+          "targetExpressions": [
+            "Dear friend, thank you for sharing your culture with me.",
+            "I enjoyed learning about your school.",
+            "Please write back soon. ― Your friend, Haru"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Dear friend, thank you for sharing your culture with me.",
+          "I enjoyed learning about your school. / Please write back soon. ― Your friend, Haru",
+          "piano・sushi・Let's ask them to help・could you・thankfulness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 837,
+      "world": 28,
+      "title": "Questions for the World",
+      "titleJa": "せかいへの しつもん",
+      "school": {
+        "grade": "中3",
+        "topic": "What do children in your country do for fun?：せかいの 子どもへの しつもんを かんがえて、しつもんばこに いれる",
+        "grammar": "What do children in your country ～? / What time does ～ start? / What's a popular ～?",
+        "expressions": [
+          {
+            "en": "What do children in your country do for fun?",
+            "ja": "あなたの 国の 子どもは なにを して あそぶの？",
+            "core": true
+          },
+          {
+            "en": "What time does school start in your country?",
+            "ja": "あなたの 国では がっこうは なんじに はじまるの？"
+          },
+          {
+            "en": "What's a popular food in your country? ― Tacos are popular in Mexico.",
+            "ja": "あなたの 国で にんきの たべものは なに？ ― メキシコでは タコスが にんきだよ。"
+          }
+        ],
+        "testPoints": [
+          "What do children in your country ～? / What's a popular ～? で せかいの 子どもに しつもんし、つづけて もう 1つ きける",
+          "ふりかえり（calendar の 強勢・kimono・or の よわい おと・take care の おなじ おと・unhelpful の パーツ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write a question on a card.",
+          "ja": "カードに しつもんを かいて。",
+          "action": "カードに かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Put the card in the box.",
+          "ja": "カードを はこに いれて。",
+          "action": "はこに カードを いれる まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Raise your hand to ask.",
+          "ja": "てを あげて しつもんして。",
+          "action": "てを まっすぐ あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Shake the question box.",
+          "ja": "しつもんばこを ふって。",
+          "action": "はこを りょうてで ふる まね",
+          "emoji": "🎁"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "cal-en-dar",
+          "kimono",
+          "or",
+          "take care",
+          "un-"
+        ],
+        "sounds": [
+          "CAL",
+          "/kɪˈmoʊnoʊ/",
+          "/ər/",
+          "テイケア",
+          "/ʌn/"
+        ],
+        "words": [
+          "calendar",
+          "kimono",
+          "Do you want rice or bread",
+          "take care",
+          "unhelpful"
+        ],
+        "tipJa": "calendar は CAL-en-dar と CAL を つよく。kimono は 英語でも つかう 日本語。rice or bread の or は よわく。take care は k の おとを 1かいだけ。un＋help＋ful で unhelpful だよ。"
+      },
+      "vocab": [
+        {
+          "en": "question",
+          "ja": "しつもん",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "country",
+          "ja": "国",
+          "emoji": "🌍"
+        },
+        {
+          "en": "popular",
+          "ja": "にんきの ある",
+          "emoji": "🔥"
+        },
+        {
+          "en": "for fun",
+          "ja": "たのしみで",
+          "emoji": "🎈"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Dear friend, thank you for sharing your culture with me. Today, Iris has an idea. She says, This bridge connects many countries. Let's make a question box for children around the world! Good questions help us learn. Kiko asks her first question. What do children in your country do for fun? Say it with me. What do children in your country do for fun? Excellent! Haru asks, What time does school start in your country? Riko asks, What's a popular food in your country? Mateo answers, Tacos are popular in Mexico. Then Riko asks a follow-up question. What do you put in your tacos? Let's read the card on the question box. \"The World Question Box. Write one question on a card. Ask about school, food, games, or holidays. Good questions start with What, When, Where, Why, or How. Please don't ask for names or addresses. Every week, children from other countries will answer. Then you can ask a follow-up question!\" What words do good questions start with? What, When, Where, Why, or How. What should you not ask for? Names or addresses. Now, phonics. Calendar. CAL-en-dar. Kimono. A Japanese word in English. Do you want rice or bread? Or is small and quick. Take care. Say the k sound only once. Unhelpful. Un plus help plus ful. Keep asking good questions!",
+      "conversation": {
+        "scene": "Making a question box for children around the world",
+        "sceneJa": "せかいの 子どもへの しつもんばこを つくる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "What do children in your country do for fun?",
+            "ja": "あなたの 国の 子どもは なにを して あそぶの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Amara! We play football and run races. And I love looking at the stars.",
+            "ja": "ぼくが アマラの やくね！ サッカーを したり、かけっこを したり するよ。それに ほしを 見るのが だいすき。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What time does school start in your country?",
+            "ja": "あなたの 国では がっこうは なんじに はじまるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What's a popular food in your country?",
+            "ja": "あなたの 国で にんきの たべものは なに？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Now I'm Mateo! Tacos are popular in Mexico.",
+            "ja": "こんどは マテオ！ メキシコでは タコスが にんきだよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yum! What do you put in your tacos?",
+            "ja": "おいしそう！ タコスには なにを いれるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great follow-up question, Riko!",
+            "ja": "いい つづきの しつもんね、リコ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アマラに ケニアの ことを しつもんしよう。What do children in your country do for fun? などで きいて、こたえを きいたら もう 1つ しつもんを つづけよう",
+          "starterEn": "Jambo! I'm Amara from Kenya. Do you have any questions about my country? Ask me anything!",
+          "targetExpressions": [
+            "What do children in your country do for fun?",
+            "What time does school start in your country?",
+            "What's a popular food in your country? ― Tacos are popular in Mexico."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What do children in your country do for fun?",
+          "What time does school start in your country? / What's a popular food in your country? ― Tacos are popular in Mexico.",
+          "calendar・kimono・Do you want rice or bread・take care・unhelpful"
+        ]
+      }
+    },
+    {
+      "lessonNo": 838,
+      "world": 28,
+      "title": "My Japan Introduction",
+      "titleJa": "わたしの 日本しょうかい文",
+      "school": {
+        "grade": "中3",
+        "topic": "Japan has four seasons.：せかいの ともだちに むけて、8〜10 文の 日本の しょうかい文を かく",
+        "grammar": "Japan has ～. / In my town, there is ～. / People in Japan say ～. It means ～.",
+        "expressions": [
+          {
+            "en": "Japan has four seasons.",
+            "ja": "日本には 4つの きせつが あります。",
+            "core": true
+          },
+          {
+            "en": "In my town, there is a big festival in summer.",
+            "ja": "わたしの まちでは、なつに 大きな おまつりが あります。"
+          },
+          {
+            "en": "People in Japan say itadakimasu before meals. It means thank you for the food.",
+            "ja": "日本の ひとは ごはんの まえに いただきますと いいます。たべものに ありがとうと いう いみです。"
+          }
+        ],
+        "testPoints": [
+          "Japan has ～. / In my town, there is ～. / It means ～. を つかって、日本の しょうかい文を かける",
+          "ふりかえり（hamburger の 強勢・judo・at の よわい おと・made of の つながり・unhappiness の パーツ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Show four fingers for four seasons.",
+          "ja": "4つの きせつで ゆびを 4ほん 見せて。",
+          "action": "ゆびを 4ほん たてる",
+          "emoji": "🍂"
+        },
+        {
+          "en": "Pretend to watch fireworks.",
+          "ja": "はなびを 見る まねを して。",
+          "action": "そらを 見あげて わあっと いう",
+          "emoji": "🎆"
+        },
+        {
+          "en": "Put your hands together and say itadakimasu.",
+          "ja": "てを あわせて いただきますと いって。",
+          "action": "てを あわせる",
+          "emoji": "🙏"
+        },
+        {
+          "en": "Hold up your writing.",
+          "ja": "かいた ものを 見せて。",
+          "action": "かみを りょうてで もちあげる",
+          "emoji": "📝"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ham-bur-ger",
+          "judo",
+          "at",
+          "made of",
+          "-ness"
+        ],
+        "sounds": [
+          "HAM",
+          "/ˈdʒuːdoʊ/",
+          "/ət/",
+          "メイダヴ",
+          "/nəs/"
+        ],
+        "words": [
+          "hamburger",
+          "judo",
+          "We eat lunch at school",
+          "made of",
+          "unhappiness"
+        ],
+        "tipJa": "hamburger は HAM-bur-ger と HAM を つよく。judo は 英語でも つかう 日本語。lunch at school の at は よわく。made of は「メイダヴ」と つながる。un＋happy＋ness で unhappiness（y を i に）だよ。"
+      },
+      "vocab": [
+        {
+          "en": "season",
+          "ja": "きせつ",
+          "emoji": "🍂",
+          "core": true
+        },
+        {
+          "en": "introduction",
+          "ja": "しょうかい",
+          "emoji": "📝"
+        },
+        {
+          "en": "meal",
+          "ja": "しょくじ",
+          "emoji": "🍱"
+        },
+        {
+          "en": "island",
+          "ja": "しま",
+          "emoji": "🏝️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, What do children in your country do for fun? Today, we are writing an introduction of Japan for the World Question Box. Riko starts with a big fact. Japan has four seasons. Say it with me. Japan has four seasons. Wonderful! Then she writes about her town. In my town, there is a big festival in summer. A good introduction has a beginning, some facts, and an ending. Let's read Riko's draft. \"My Japan. Japan has four seasons. In spring, you can see cherry blossoms. In summer, we watch fireworks. In autumn, the leaves turn red and yellow. In winter, it snows in many places. In my town, there is a big festival in summer. People in Japan say itadakimasu before meals. It means thank you for the food. Please visit Japan someday!\" What can you see in spring? Cherry blossoms. What does itadakimasu mean? Thank you for the food. Count the sentences. There are nine. Perfect! Now, phonics. Hamburger. HAM-bur-ger. Judo. A Japanese word in English. We eat lunch at school. At is small and quick. Made of. Made-of, the words hold hands. Unhappiness. Un plus happy, change the y to i, plus ness. Japan is a wonderful place to introduce!",
+      "conversation": {
+        "scene": "Writing an introduction of Japan",
+        "sceneJa": "日本の しょうかい文を かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm writing about Japan. Japan has four seasons.",
+            "ja": "日本の ことを かいてるの。日本には 4つの きせつが あります。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Nice start! What will you write next?",
+            "ja": "いい はじまり！ つぎは なにを かくの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In my town, there is a big festival in summer.",
+            "ja": "わたしの まちでは、なつに 大きな おまつりが あります。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Write about meals, too. People in Japan say itadakimasu before meals.",
+            "ja": "ごはんの ことも かいたら？ 日本の ひとは ごはんの まえに いただきますと いうよね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It means thank you for the food! I say it ten times a day.",
+            "ja": "たべものに ありがとうって いみ！ ぼくは 1日 10かい いうよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! That's a wonderful introduction, Riko.",
+            "ja": "ふふ！ すてきな しょうかい文ね、リコ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の アイノに 日本を しょうかいしよう。Japan has four seasons. / In my town, there is ～. / It means ～. を つかって、きせつや ごはんの ことを つたえよう（まちの なまえは いわなくて いいよ）",
+          "starterEn": "Moi! I'm Aino from Finland. I want to learn about Japan. Can you tell me about the seasons there?",
+          "targetExpressions": [
+            "Japan has four seasons.",
+            "In my town, there is a big festival in summer.",
+            "People in Japan say itadakimasu before meals. It means thank you for the food."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Japan has four seasons.",
+          "In my town, there is a big festival in summer. / People in Japan say itadakimasu before meals. It means thank you for the food.",
+          "hamburger・judo・We eat lunch at school・made of・unhappiness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 839,
+      "world": 28,
+      "title": "Rainbow Bridge Review",
+      "titleJa": "にじの架け橋 ふりかえり",
+      "school": {
+        "grade": "中3",
+        "topic": "Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet.：はしの さよなら さんぽ。ビリモが とおくに あたらしい とうだいの ひかりを 見つける",
+        "grammar": "～ is a kind of ～. / I think ～ because ～. / We eat it to ～. / It must be ～.",
+        "expressions": [
+          {
+            "en": "Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet.",
+            "ja": "おもちは おこめの ケーキの 1しゅるいだよ。やわらかくて あまいから、きっと だいすきに なるよ。",
+            "core": true
+          },
+          {
+            "en": "We eat it to celebrate New Year.",
+            "ja": "おしょうがつを おいわいする ために たべるよ。"
+          },
+          {
+            "en": "Look! What's that light over there? ― It must be a lighthouse!",
+            "ja": "見て！ あそこの ひかりは なに？ ― きっと とうだいだ！"
+          }
+        ],
+        "testPoints": [
+          "～ is a kind of ～. / I think ～ because ～. / It must be ～. を まとめて つかい、日本の ものを せつめいして すすめられる",
+          "ふりかえり（pajamas の 強勢・manga・of の よわい おと・all over の つながり・disrespectful の パーツ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk slowly along the bridge.",
+          "ja": "はしの 上を ゆっくり あるいて。",
+          "action": "ゆっくり あるく",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Hand a gift to a friend.",
+          "ja": "ともだちに プレゼントを わたして。",
+          "action": "りょうてで わたす まね",
+          "emoji": "🎁"
+        },
+        {
+          "en": "Point at the light far away.",
+          "ja": "とおくの ひかりを ゆびさして。",
+          "action": "とおくを ゆびさす",
+          "emoji": "💡"
+        },
+        {
+          "en": "Shade your eyes and look.",
+          "ja": "てで ひかりを さえぎって 見て。",
+          "action": "おでこに てを あてて とおくを 見る",
+          "emoji": "👀"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "pa-ja-mas",
+          "manga",
+          "of",
+          "all over",
+          "dis-"
+        ],
+        "sounds": [
+          "JA",
+          "/ˈmɑːŋɡə/",
+          "/əv/",
+          "オーロウヴァー",
+          "/dɪs/"
+        ],
+        "words": [
+          "pajamas",
+          "manga",
+          "What do you think of my idea",
+          "all over",
+          "disrespectful"
+        ],
+        "tipJa": "pajamas は pa-JA-mas と JA を つよく。manga は 英語でも つかう 日本語。think of の of は よわく。all over は「オーロウヴァー」と つながる。dis＋respect＋ful で disrespectful だよ。"
+      },
+      "vocab": [
+        {
+          "en": "rice cake",
+          "ja": "おもち",
+          "emoji": "🍡",
+          "core": true
+        },
+        {
+          "en": "lighthouse",
+          "ja": "とうだい",
+          "emoji": "🗼"
+        },
+        {
+          "en": "light",
+          "ja": "ひかり",
+          "emoji": "💡"
+        },
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Japan has four seasons. Today is our goodbye walk on the Rainbow Bridge. Kiko gives Amara a little box of mochi. She explains, Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet. Say it with me. Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet. Great! Haru adds, We eat it to celebrate New Year. Amara says, Asante! That means thank you. Then Birimo stops and points far away. Look! What's that light over there? Riko says, It must be a lighthouse! Iris smiles and says, Yes. That is the Lighthouse of Ideas. Let's read Iris's goodbye card. \"Dear friends, Thank you for visiting the Rainbow Bridge. You shared your food, your games, and your kind words. Now six colors are bright again. Tomorrow, the last color will come back. Far away, you can see a light. It shines from a lighthouse by the sea. Follow the light, and keep sharing your ideas. Love, Iris\" How many colors are bright now? Six. Where does the light come from? A lighthouse by the sea. Now, phonics. Pajamas. pa-JA-mas. Manga. A Japanese word in English. What do you think of my idea? Of is small and quick. All over. All-over, the words hold hands. Disrespectful. Dis plus respect plus ful. What a beautiful goodbye walk!",
+      "conversation": {
+        "scene": "A goodbye walk on the Rainbow Bridge",
+        "sceneJa": "にじの架け橋の さよなら さんぽ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Amara, this is for you. Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet.",
+            "ja": "アマラ、これ あげる。おもちは おこめの ケーキの 1しゅるいだよ。やわらかくて あまいから、きっと だいすきに なるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We eat it to celebrate New Year.",
+            "ja": "おしょうがつを おいわいする ときに つかうんだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! What's that light over there?",
+            "ja": "見て！ あそこの ひかりは なに？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It must be a lighthouse!",
+            "ja": "きっと とうだいだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Iris says it's the Lighthouse of Ideas. That's our next stop.",
+            "ja": "イリスが かんがえる灯台だって いってたわ。つぎの いきさきよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ideas? I have one. Let's eat the mochi first!",
+            "ja": "アイデア？ ぼく、1つ あるよ。まず おもちを たべよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の イリスに すきな 日本の たべものを せつめいしよう。～ is a kind of ～. / I think you'll love it because ～. / It's used for ～. を つかおう",
+          "starterEn": "Hello, my friend. This is our last walk on the bridge. Can you tell me about a Japanese food you love?",
+          "targetExpressions": [
+            "Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet.",
+            "We eat it to celebrate New Year.",
+            "Look! What's that light over there? ― It must be a lighthouse!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet.",
+          "We eat it to celebrate New Year. / Look! What's that light over there? ― It must be a lighthouse!",
+          "pajamas・manga・What do you think of my idea・all over・disrespectful"
+        ]
+      }
+    },
+    {
+      "lessonNo": 840,
+      "world": 28,
+      "title": "World 28 Grand Review",
+      "titleJa": "ワールド28 グランドフィナーレ",
+      "school": {
+        "grade": "中3",
+        "topic": "Our languages are different, but our hearts are the same.：にじの はしが 7しょくに かがやき、ステージ3 の グランドフィナーレ",
+        "grammar": "Our ～ are different, but our ～ are the same. / Thank you, ～! / Next stop, ～!",
+        "expressions": [
+          {
+            "en": "Our languages are different, but our hearts are the same.",
+            "ja": "わたしたちの ことばは ちがうけど、こころは おなじだよ。",
+            "core": true
+          },
+          {
+            "en": "Thank you, Iris! Thank you, everyone!",
+            "ja": "ありがとう、イリス！ みんな、ありがとう！"
+          },
+          {
+            "en": "Next stop, the Lighthouse of Ideas!",
+            "ja": "つぎは、かんがえる灯台へ！"
+          }
+        ],
+        "testPoints": [
+          "Our languages are different, but our hearts are the same. で ステージ3 の まとめの ことばを いい、おれいと つぎの もくひょうを つたえられる",
+          "ワールド28 の まとめ（volunteer の 強勢・karaoke・and の よわい おと・keep in touch の つながり・unkindness と friendliness の パーツ）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "見て！ とまって！ こっちに きて！ いって！",
+          "action": "さいごの スピード TPR。すばやく うごく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Hold hands and make a bridge.",
+          "ja": "てを つないで はしを つくって。",
+          "action": "となりの ひとと てを つないで アーチを つくる",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Wave goodbye to Iris.",
+          "ja": "イリスに てを ふって さよならして。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Walk toward the lighthouse.",
+          "ja": "とうだいに むかって あるいて。",
+          "action": "まえを 見て あるく",
+          "emoji": "🗼"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "vol-un-teer",
+          "karaoke",
+          "and",
+          "keep in touch",
+          "un-",
+          "-ness"
+        ],
+        "sounds": [
+          "TEER",
+          "/ˌkæriˈoʊki/",
+          "/ən/",
+          "キーピンタッチ",
+          "/ʌn/",
+          "/nəs/"
+        ],
+        "words": [
+          "volunteer",
+          "karaoke",
+          "I like summer and winter",
+          "keep in touch",
+          "unkindness",
+          "friendliness"
+        ],
+        "tipJa": "ワールド28 の まとめ: volunteer は vol-un-TEER と さいごを つよく。karaoke は 英語でも つかう 日本語。summer and winter の and は よわく。keep in touch は「キーピンタッチ」。un＋kind＋ness で unkindness、friendly＋ness で friendliness（y を i に）。"
+      },
+      "vocab": [
+        {
+          "en": "language",
+          "ja": "ことば・げんご",
+          "emoji": "🗣️",
+          "core": true
+        },
+        {
+          "en": "heart",
+          "ja": "こころ",
+          "emoji": "❤️"
+        },
+        {
+          "en": "rainbow",
+          "ja": "にじ",
+          "emoji": "🌈"
+        },
+        {
+          "en": "badge",
+          "ja": "バッジ",
+          "emoji": "🏅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Mochi is a kind of rice cake. I think you'll love it because it's soft and sweet. Today is the grand finale on the Rainbow Bridge. All our friends stand together. Aino says Moi, Amara says Jambo, and Mateo says Hola. They are different words, but they all mean hello. Haru says, Our languages are different, but our hearts are the same. Say it with me. Our languages are different, but our hearts are the same. Fantastic! Suddenly, the last color comes back. Violet! Now the bridge shines in all seven colors. Iris gives us a special badge. Let's read it. \"Rainbow Bridge Friendship Badge. This badge is for Haru, Riko, Kiko, and Birimo. You explained Japan, shared your opinions, and listened to new friends. You made the bridge shine again. Congratulations! You finished Stage 3. Keep in touch with your friends, and keep your hearts open. From Iris\" What color came back last? Violet. What did they finish? Stage 3. We say, Thank you, Iris! Thank you, everyone! Then we look at the light far away. Next stop, the Lighthouse of Ideas! Now, phonics. Volunteer. vol-un-TEER. Karaoke. A Japanese word in English. I like summer and winter. And is small and quick. Keep in touch. Keep-in-touch. Unkindness. Un plus kind plus ness. Friendliness. Friendly, change the y to i, plus ness. See you at the lighthouse!",
+      "conversation": {
+        "scene": "The grand finale on the Rainbow Bridge",
+        "sceneJa": "にじの架け橋の 上で ステージ3 の グランドフィナーレ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Moi, Jambo, Hola. Our languages are different, but our hearts are the same.",
+            "ja": "モイ、ジャンボ、オラ。わたしたちの ことばは ちがうけど、こころは おなじだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! The last color is back. Violet!",
+            "ja": "見て！ さいごの いろが もどった。むらさき！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The bridge is shining in all seven colors!",
+            "ja": "はしが 7しょく ぜんぶで かがやいてる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "We finished Stage 3! Thank you, Iris! Thank you, everyone!",
+            "ja": "ステージ3 クリア！ ありがとう、イリス！ みんな、ありがとう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Keep in touch with your new friends. Next stop, the Lighthouse of Ideas!",
+            "ja": "あたらしい ともだちと れんらくを とりあってね。つぎは、かんがえる灯台へ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Do they have snacks at the lighthouse?",
+            "ja": "とうだいに おやつは あるかな？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の イリスに にじの架け橋で まなんだ ことを はなそう。Our languages are different, but our hearts are the same. と、おれいの ことばを つたえよう",
+          "starterEn": "My friends, the bridge is shining again! Before you go, what did you learn on the Rainbow Bridge?",
+          "targetExpressions": [
+            "Our languages are different, but our hearts are the same.",
+            "Thank you, Iris! Thank you, everyone!",
+            "Next stop, the Lighthouse of Ideas!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Our languages are different, but our hearts are the same.",
+          "Thank you, Iris! Thank you, everyone! / Next stop, the Lighthouse of Ideas!",
+          "volunteer・karaoke・I like summer and winter・keep in touch・unkindness・friendliness"
+        ]
+      }
+    }
+  ]
+}

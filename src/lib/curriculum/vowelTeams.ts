@@ -19,6 +19,7 @@ import { w24Say } from "./w24Phonics";
 import { w25Say } from "./w25Phonics";
 import { w26Say } from "./w26Phonics";
 import { w27Say } from "./w27Phonics";
+import { w28Say } from "./w28Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -80,6 +81,9 @@ export const shortVowelOf = (team: string) => team[0];
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
+  // ワールド28 は その回の ことば・文・フレーズで よむ（"to" や "-ness" だけで よまない）
+  const w28 = w28Say(focus, words);
+  if (w28) return w28;
   // ワールド27 は その回の ことば・フレーズで よむ（"ch" を「チ」、"-able" を「エイブル」だけで よまない）
   const w27 = w27Say(focus, words);
   if (w27) return w27;

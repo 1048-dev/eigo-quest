@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W28_START, katakanaDisplay, katakanaOf, katakanaWhy, linkOf as link28Of, linkWhy as link28Why, loanOf, loanWhy, partsDisplay, partsOf, partsWhy, rhythmDisplay, rhythmOf, rhythmWhy } from "./w28Phonics";
 import { FOR_SINCE_CHOICES, W27_START, ableDisplay, ableOf, ableWhy, chKOf, chKWhy, forSinceDisplay, forSinceOf, forSinceWhy, homoOf, homoWhy, silentOf, silentWhy } from "./w27Phonics";
 import { VOICE_CHOICES, W26_START, edIngDisplay, edIngOf, edIngWhy, punctOf, punctWhy, stressOf as meaningStressOf, stressWhy as meaningStressWhy, twisterDisplay, twisterOf, twisterWhy, voiceOf, voiceWhy } from "./w26Phonics";
 import { INTONATION_CHOICES, W25_IVE_FOCUS, W25_NESS_FOCUS, W25_START, compoundDisplay, compoundOf, compoundWhy25, intonationOf, intonationWhy, iveDisplay, iveOf, iveWhy, nessDisplay, nessOf, nessWhy, synOf, synWhy } from "./w25Phonics";
@@ -574,6 +575,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド28（にじの架け橋・L811〜）の フォニックス（カタカナ語と 英語の おと・英語に なった 日本語・英語の リズム・音の つながりの まとめ・ことばの パーツの まとめ）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - カタカナ語（"energy"）: 「英語で いうと、つよく よむ ところは どれ？」（EN-er-gy / en-ER-gy / en-er-GY。選択肢は きまった 順）
+ * - 英語に なった 日本語（"tsunami"）: 「英語に なった 日本語。英語の つづりは どれ？」（tsunami / tunami / sunami）
+ * - リズム（"I want to swim in the sea"）: 「ふつうに いう とき、よわく みじかく いう ことばは どれ？」（to / swim / sea）
+ * - 音の つながり（"meet you"）: 「つなげて いうと どう きこえる？」（ミーチュー / ミート・ユー / …）
+ * - ことばの パーツ（"unhappiness"）: 「パーツを くっつけた ことばで ただしい つづりは どれ？」
+ * あてはまらなければ null。ワールド27 の 問題より 先に よぶ（video を ワールド12 の はく、unhappiness を ワールド21 の -ness で 問わない）。
+ */
+export function w28Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W28_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const k = katakanaOf(item.text);
+  if (k && focus.includes(k.syllables)) return { promptJa: "英語で いうと、つよく よむ ところは どれ？", display: katakanaDisplay(k), choices: k.choices.map((x) => ({ id: x, label: x })), answer: k.answer, explanationJa: katakanaWhy(k) };
+  const j = loanOf(item.text);
+  if (j && focus.includes(j.word)) return { promptJa: "英語に なった 日本語。英語の つづりは どれ？", display: `🔊（${j.meaning}）`, choices: pick([j.answer, ...j.wrong]), answer: j.answer, explanationJa: loanWhy(j) };
+  const r = rhythmOf(item.text);
+  if (r && focus.includes(r.weak)) return { promptJa: "ふつうに いう とき、よわく みじかく いう ことばは どれ？", display: rhythmDisplay(r), choices: pick([r.answer, ...r.wrong]), answer: r.answer, explanationJa: rhythmWhy(r) };
+  const l = link28Of(item.text);
+  if (l && focus.includes(l.phrase)) return { promptJa: "つなげて いうと どう きこえる？", display: `${l.phrase}（${l.meaning}）`, choices: pick([l.answer, ...l.wrong]), answer: l.answer, explanationJa: link28Why(l) };
+  const p = partsOf(item.text);
+  if (p && focus.includes(p.focus)) return { promptJa: "パーツを くっつけた ことばで ただしい つづりは どれ？", display: partsDisplay(p), choices: pick([p.answer, ...p.wrong]), answer: p.answer, explanationJa: partsWhy(p) };
   return null;
 }
 
@@ -1166,8 +1196,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド24（地名の 強勢・過去分詞・I've / haven't / she's・over- / under-・im- / in-）は その 先（she's を ワールド15 の she is、Canada を ワールド12 の はくで 問わない）
       // ワールド25（-ness・-ive・複合語・にた いみ・イントネーション）は その 先（kindness を ワールド21、active を ワールド22、something を ワールド15 で 問わない）
       // ワールド26（きもちの こえ・-ed / -ing・セリフの くとうてん・強勢・はやくちことば）は その 先（excited を ワールド11 の -ed の おとで 問わない）
-      // ワールド27（ch / -ache・だまって いる もじ・for / since・-able・同音異義語 2）は いちばん 先（knee を ワールド14 の kn、here を ワールド17 で 問わない）
-      const dq = w27Question(item, rng) ?? w26Question(item, rng) ??w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド27（ch / -ache・だまって いる もじ・for / since・-able・同音異義語 2）は その 先（knee を ワールド14 の kn、here を ワールド17 で 問わない）
+      // ワールド28（カタカナ語・英語に なった 日本語・リズム・音の つながり・ことばの パーツ）は いちばん 先（video を ワールド12 の はく、unhappiness を ワールド21 の -ness で 問わない）
+      const dq = w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

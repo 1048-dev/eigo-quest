@@ -8,6 +8,7 @@
  */
 import { w26Example } from "./w26Phonics";
 import { w27Example } from "./w27Phonics";
+import { w28Example } from "./w28Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -58,6 +59,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   // ワールド27（k の おとの ch・だまって いる もじ・for / since・同音異義語）は その focus で 問う ことば・フレーズを よむ（ch を chip、l を lion で よまない）
   const w27 = w27Example(focus.trim(), ws);
   if (w27) return w27;
+  // ワールド28（カタカナ語・日本語・リズム・音の つながり・パーツ）は その focus で 問う ことば・文・フレーズを よむ（"to" "dis-" だけで よまない）
+  const w28 = w28Example(focus.trim(), ws);
+  if (w28) return w28;
 
   // sun-set → sunset（はくに わけた ことばは ことば まるごと）
   if (isSyllables(f)) return f.replace(/-/g, "");
