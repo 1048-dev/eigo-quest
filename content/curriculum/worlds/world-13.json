@@ -1,0 +1,4433 @@
+{
+  "world": 13,
+  "stage": 2,
+  "level": "A1+",
+  "lessons": [
+    {
+      "lessonNo": 361,
+      "world": 13,
+      "title": "A New Map",
+      "titleJa": "あたらしい ちず",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数の -s：He / She ＋ うごき・has",
+        "grammar": "He has ～. / She likes ～. （I have → he has、I like → she likes）",
+        "expressions": [
+          {
+            "en": "Birimo has a new map.",
+            "ja": "ビリモは あたらしい ちずを もっています。",
+            "core": true
+          },
+          {
+            "en": "He likes old maps.",
+            "ja": "かれは ふるい ちずが すきです。"
+          },
+          {
+            "en": "Ms. Emma reads the map with us.",
+            "ja": "エマ先生は わたしたちと ちずを よみます。"
+          }
+        ],
+        "testPoints": [
+          "he / she / ひとの なまえの あとの うごきに s を つけられる（like → likes、have → has）",
+          "おわりの s が「ス」と きこえる ことば（likes, eats, jumps, sleeps）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the map.",
+          "ja": "ちずを ひらいて。",
+          "action": "おおきな ちずを りょうてで ひろげる まね",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Point to the sea.",
+          "ja": "うみを ゆびさして。",
+          "action": "ちずの うみを ゆびで さす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Fold the map.",
+          "ja": "ちずを たたんで。",
+          "action": "ちずを はんぶんに おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Put it in your bag.",
+          "ja": "かばんに いれて。",
+          "action": "かばんに しまう まね",
+          "emoji": "🎒"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-s",
+        "focus": [
+          "-s"
+        ],
+        "sounds": [
+          "/s/"
+        ],
+        "words": [
+          "likes",
+          "eats",
+          "jumps",
+          "sleeps"
+        ],
+        "tipJa": "he / she の ときは うごきに s が つくよ。k・t・p の あとの s は ちいさく「ス」。likes（ライクス）、eats（イーツ）、jumps（ジャンプス）、sleeps（スリープス）。"
+      },
+      "vocab": [
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️",
+          "core": true
+        },
+        {
+          "en": "library",
+          "ja": "としょしつ",
+          "emoji": "📚"
+        },
+        {
+          "en": "island",
+          "ja": "しま",
+          "emoji": "🏝️"
+        },
+        {
+          "en": "journey",
+          "ja": "たび",
+          "emoji": "🧭"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to Stage 2. ステージ2では、わたしは ほとんど えいごで はなすよ。Don't worry. Listen and enjoy! Look, Birimo found something in the library. It's a map! A map of places that are not on any map yet. Wow! Today's sentence is: Birimo has a new map. Say it with me. Birimo has a new map. Great! Listen again. I have a map. But Birimo has a map. When we talk about one person, like he or she, the verb changes. ひとり の ひと の ことを いう ときは、うごきの ことばに s が つくよ。 have は has に なるよ。 I like maps. He likes maps. I eat bread. She eats bread. Can you hear the s? Now, phonics time. Listen to the end of these words: likes, eats, jumps, sleeps. The s is a quiet sound, like a little snake. Sss. Likes. Eats. Jumps. Sleeps. Nice! Our new journey starts today. Let's see the map with Birimo and our friends. Ready? Let's go!",
+      "conversation": {
+        "scene": "The library of the Kingdom of English, where Birimo finds a strange old map",
+        "sceneJa": "王国の としょしつで、ビリモが「まだ ちずに ない せかい」の ちずを みつける",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Look, everyone! I found an old map in this book!",
+            "ja": "みんな、みて！この ほんの なかに ふるい ちずが あったよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow! Birimo has a new map. What's on it?",
+            "ja": "わあ！ビリモが あたらしい ちずを もってる。なにが かいてあるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I see islands, a harbor, and a big mountain!",
+            "ja": "しまと、みなとと、おおきな やまが みえる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "These places are not on any map yet. Birimo likes adventures, right?",
+            "ja": "ここは まだ どの ちずにも ない ばしょよ。ビリモは ぼうけんが すきよね？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "He loves adventures! Let's go on a new journey together!",
+            "ja": "だいすきだよ！みんなで あたらしい たびに でよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビリモの ちずを みて、He has ～. / He likes ～. で ビリモの ことを いってみよう",
+          "starterEn": "Hi! I'm Birimo. Look at my new map! What do you see on it?",
+          "targetExpressions": [
+            "He has ～.",
+            "He likes ～.",
+            "I see ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Birimo has a new map. ひとりの ひとの ときは has！",
+          "He likes ～. うごきに s が つくね",
+          "likes・eats・jumps・sleeps の おわりは ちいさい「ス」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 362,
+      "world": 13,
+      "title": "All Aboard!",
+      "titleJa": "ふねに のろう！",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数の -s：The ship leaves ～. / He plays ～.",
+        "grammar": "The ship leaves at ～. / He plays ～. （もの・ひと ひとつの ときも s）",
+        "expressions": [
+          {
+            "en": "The ship leaves at seven.",
+            "ja": "ふねは 7じに しゅっぱつします。",
+            "core": true
+          },
+          {
+            "en": "The captain waves to us.",
+            "ja": "せんちょうさんが わたしたちに てを ふります。"
+          },
+          {
+            "en": "Kiko runs to the ship.",
+            "ja": "キコは ふねに はしっていきます。"
+          }
+        ],
+        "testPoints": [
+          "ひとつの もの・ひとりの ひとの ときに うごきに s を つけられる（The ship leaves ～.）",
+          "おわりの s が「ズ」と きこえる ことば（plays, runs, swims, reads）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Climb the ladder.",
+          "ja": "はしごを のぼって。",
+          "action": "てと あしで はしごを のぼる まね",
+          "emoji": "🪜"
+        },
+        {
+          "en": "Wave goodbye.",
+          "ja": "てを ふって さようなら。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Pull the rope.",
+          "ja": "ロープを ひいて。",
+          "action": "ロープを ぐいっと ひく まね",
+          "emoji": "🪢"
+        },
+        {
+          "en": "Hold on tight!",
+          "ja": "しっかり つかまって！",
+          "action": "てすりに ぎゅっと つかまる まね",
+          "emoji": "✊"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-s",
+        "focus": [
+          "-s"
+        ],
+        "sounds": [
+          "/z/"
+        ],
+        "words": [
+          "plays",
+          "runs",
+          "swims",
+          "reads"
+        ],
+        "tipJa": "こえの でる おと（y・n・m・d）の あとの s は「ズ」と にごるよ。plays（プレイズ）、runs（ランズ）、swims（スウィムズ）、reads（リーズ）。のどに てを あてると ふるえるよ。"
+      },
+      "vocab": [
+        {
+          "en": "ship",
+          "ja": "ふね",
+          "emoji": "🚢",
+          "core": true
+        },
+        {
+          "en": "captain",
+          "ja": "せんちょう",
+          "emoji": "👨‍✈️"
+        },
+        {
+          "en": "harbor",
+          "ja": "みなと",
+          "emoji": "⚓"
+        },
+        {
+          "en": "ticket",
+          "ja": "きっぷ",
+          "emoji": "🎫"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! Today is a big day. We go to the harbor and get on a big ship. Do you have your ticket? Me too! Today's sentence is: The ship leaves at seven. Say it with me. The ship leaves at seven. Good! The ship is one thing, so we say leaves, with an s. ひとつの もの の ときも、うごきの ことばに s が つくよ。 One more. The captain waves to us. Kiko runs to the ship. Waves. Runs. Can you hear the s? Now, phonics. Yesterday our s was quiet, like sss. Today, listen carefully. Plays. Runs. Swims. Reads. This s sounds like z, zzz, like a bee. ハチの ような「ズ」の おとだよ。 Put your hand on your throat. Say zzz. Can you feel it shake? That's the z sound. Plays. Runs. Great job! Before we go, one tip. On a ship, people say, All aboard! That means, everybody, get on the ship now! Let's say it together. All aboard! Here we go!",
+      "conversation": {
+        "scene": "A busy harbor in the morning, getting on a big ship",
+        "sceneJa": "朝の みなとで、おおきな ふねに のりこむ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at that big ship! Is that our ship?",
+            "ja": "あの おおきな ふね みて！あれが ぼくたちの ふね？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, it is. The ship leaves at seven. Hurry up!",
+            "ja": "そうよ。ふねは 7じに でるの。いそいで！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The captain waves to us. Good morning, Captain!",
+            "ja": "せんちょうさんが てを ふってる。おはようございます、せんちょうさん！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wait for me! I have my ticket!",
+            "ja": "まって！きっぷ もってるよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "All aboard! Next stop, the new world!",
+            "ja": "みんな のって！つぎは あたらしい せかいだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ふねの ことを The ship leaves at ～. と いってみよう。じかんを きかれたら こたえてね",
+          "starterEn": "Good morning! I'm Haru. Look, here's our ship! What time does it leave?",
+          "targetExpressions": [
+            "The ship leaves at ～.",
+            "All aboard!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The ship leaves at seven. ふねも ひとつだから s！",
+          "plays・runs・swims・reads の s は にごって「ズ」",
+          "All aboard! で みんな ふねに のったね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 363,
+      "world": 13,
+      "title": "Haru Likes the Sea",
+      "titleJa": "ハルは うみが すき",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数の -s：ともだちの すきな ものを しょうかいする",
+        "grammar": "Haru likes ～. / She loves ～. / I like ～, too.",
+        "expressions": [
+          {
+            "en": "Haru likes the sea.",
+            "ja": "ハルは うみが すきです。",
+            "core": true
+          },
+          {
+            "en": "Riko loves dolphins.",
+            "ja": "リコは イルカが だいすきです。"
+          },
+          {
+            "en": "I like the sea, too.",
+            "ja": "わたしも うみが すきです。"
+          }
+        ],
+        "testPoints": [
+          "ともだちの すきな ものを ～ likes …. で いえる",
+          "おわりの s の「ス」と「ズ」を ききわけられる（walks / sings）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look through the binoculars.",
+          "ja": "そうがんきょうで みて。",
+          "action": "りょうてで わを つくって めに あてる",
+          "emoji": "🔭"
+        },
+        {
+          "en": "Feel the wind.",
+          "ja": "かぜを かんじて。",
+          "action": "りょうてを ひろげて めを とじる",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Swim like a dolphin.",
+          "ja": "イルカの ように およいで。",
+          "action": "からだを なみの ように うごかす",
+          "emoji": "🐬"
+        },
+        {
+          "en": "Lean on the rail.",
+          "ja": "てすりに もたれて。",
+          "action": "まえに すこし もたれる まね",
+          "emoji": "🛳️"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-s",
+        "focus": [
+          "-s"
+        ],
+        "sounds": [
+          "/s/",
+          "/z/"
+        ],
+        "words": [
+          "walks",
+          "sings",
+          "helps",
+          "rides"
+        ],
+        "tipJa": "「ス」と「ズ」の くらべっこ。walks・helps は「ス」、sings・rides は「ズ」。まえの おとが いきだけ なら「ス」、こえが でる なら「ズ」だよ。"
+      },
+      "vocab": [
+        {
+          "en": "sea",
+          "ja": "うみ",
+          "emoji": "🌊",
+          "core": true
+        },
+        {
+          "en": "dolphin",
+          "ja": "イルカ",
+          "emoji": "🐬"
+        },
+        {
+          "en": "deck",
+          "ja": "デッキ（ふねの うえの ゆか）",
+          "emoji": "🛳️"
+        },
+        {
+          "en": "wave",
+          "ja": "なみ",
+          "emoji": "🌊"
+        }
+      ],
+      "teacherScript": "Hello again! We're on the ship now. Can you see the blue sea? It's so beautiful. Today, we talk about what our friends like. Today's sentence is: Haru likes the sea. Say it with me. Haru likes the sea. Wonderful! Remember, Haru is one person, so likes has an s. Now listen. I like the sea. Haru likes the sea. Riko loves dolphins. And if you like it, too, you can say, I like the sea, too. ～も すき、と いいたい ときは、さいごに too を つけるよ。 Now, phonics. Let's compare two sounds. Walks. Helps. Those s sounds are quiet. Sss. Sings. Rides. Those s sounds buzz. Zzz. Listen again. Walks, sings. Helps, rides. Can you hear the difference? Try it with me. Walks. Sings. Helps. Rides. Super! Here's a speaking tip. When your friend tells you something, say Me too! or Really? It makes talking fun. Now let's go out on the deck and meet our friends.",
+      "conversation": {
+        "scene": "On the deck of the ship, friends talk about what they like",
+        "sceneJa": "ふねの デッキで、おたがいの すきな ものを しょうかいし あう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I love the sea! The waves are so big today.",
+            "ja": "ぼく、うみが だいすき！きょうは なみが すごく おおきいね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Haru likes the sea. And Riko loves dolphins!",
+            "ja": "ハルは うみが すきなんだね。それに リコは イルカが だいすき！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look! A dolphin! It jumps so high!",
+            "ja": "みて！イルカ！すごく たかく とぶよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like the sea, too. But I don't like the wind!",
+            "ja": "ぼくも うみが すき。でも かぜは にがて！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hold on to your hat, Birimo!",
+            "ja": "ぼうしを おさえて、ビリモ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ハルの すきな ものを きいて、Haru likes ～. / I like ～, too. と いってみよう",
+          "starterEn": "Hi, I'm Haru! I really like the sea. What do you like?",
+          "targetExpressions": [
+            "Haru likes ～.",
+            "I like ～, too.",
+            "I like ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Haru likes the sea. ともだちの すきな ものが いえたね",
+          "I like ～, too. で「わたしも」",
+          "walks・helps は「ス」、sings・rides は「ズ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 364,
+      "world": 13,
+      "title": "Riko Has a Notebook",
+      "titleJa": "リコは ノートを もっている",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数：has と -s（ひとの もちもの・すること）",
+        "grammar": "She has ～. / She writes ～. / He wants ～.",
+        "expressions": [
+          {
+            "en": "Riko has a notebook.",
+            "ja": "リコは ノートを もっています。",
+            "core": true
+          },
+          {
+            "en": "She writes about the trip every day.",
+            "ja": "かのじょは まいにち たびの ことを かきます。"
+          },
+          {
+            "en": "Haru wants a notebook, too.",
+            "ja": "ハルも ノートを ほしがっています。"
+          }
+        ],
+        "testPoints": [
+          "have → has を つかって ひとの もちものを いえる",
+          "-s の「ス」「ズ」を ききわけて よめる（makes, comes, wants, opens）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your notebook.",
+          "ja": "ノートを ひらいて。",
+          "action": "ノートを ひらく まね",
+          "emoji": "📓"
+        },
+        {
+          "en": "Draw a ship.",
+          "ja": "ふねを かいて。",
+          "action": "くうちゅうに ふねの えを かく",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Stick a sticker.",
+          "ja": "シールを はって。",
+          "action": "ゆびで ぺたっと はる まね",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Close your notebook.",
+          "ja": "ノートを とじて。",
+          "action": "ぱたんと とじる まね",
+          "emoji": "📕"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-s",
+        "focus": [
+          "-s"
+        ],
+        "sounds": [
+          "/s/",
+          "/z/"
+        ],
+        "words": [
+          "makes",
+          "comes",
+          "wants",
+          "opens"
+        ],
+        "tipJa": "おわりの e は よまないよ。make の k の あとだから makes は「ス」、come の m の あとだから comes は「ズ」。wants は「ツ」に ちかい「ス」、opens は「ズ」。"
+      },
+      "vocab": [
+        {
+          "en": "notebook",
+          "ja": "ノート",
+          "emoji": "📓",
+          "core": true
+        },
+        {
+          "en": "cabin",
+          "ja": "せんしつ（ふねの へや）",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "sticker",
+          "ja": "シール",
+          "emoji": "⭐"
+        },
+        {
+          "en": "diary",
+          "ja": "にっき",
+          "emoji": "📔"
+        }
+      ],
+      "teacherScript": "Hi, everyone! We're in our cabin on the ship. Riko has something special. Let's take a look. Today's sentence is: Riko has a notebook. Say it with me. Riko has a notebook. Good! Do you remember? I have, but she has. Let's practice. I have a pencil. She has a pencil. I have a sticker. He has a sticker. Great! Riko writes about the trip every day. It's like a diary. Writes, with an s. Haru wants a notebook, too. Wants, with an s. Now, phonics. Today's words end with s. Listen. Makes. Comes. Wants. Opens. Makes ends with a quiet s. Comes ends with a buzzy z. The e at the end is silent. おわりの e は よまないで、その まえの おとを きいてね。 Say them with me. Makes. Comes. Wants. Opens. Excellent! One more tip. When you want to see something, you can ask, Can I see it? That's very polite. Let's visit Riko's cabin now.",
+      "conversation": {
+        "scene": "Riko's cabin on the ship, looking at her travel notebook",
+        "sceneJa": "ふねの せんしつで、リコの たびノートを みせて もらう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Riko has a notebook. What do you write in it?",
+            "ja": "リコ、ノート もってるね。なにを かいてるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I write about our trip every day. I draw pictures, too.",
+            "ja": "まいにち たびの ことを かいてるの。えも かくよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Can I see it? Wow, you drew the dolphin!",
+            "ja": "みても いい？わあ、イルカを かいたんだ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And that's me! Riko makes great pictures.",
+            "ja": "それに これ ぼくだ！リコは えが じょうずだね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I want a notebook, too!",
+            "ja": "ぼくも ノートが ほしい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here you are, Haru. Now everyone has a notebook!",
+            "ja": "はい、どうぞ ハル。これで みんな ノートを もってるね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "リコの ノートを みせて もらって、She has ～. / She draws ～. と いってみよう",
+          "starterEn": "Hi, I'm Riko! This is my travel notebook. Do you want to see it?",
+          "targetExpressions": [
+            "She has ～.",
+            "Can I see it?",
+            "She draws ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Riko has a notebook. have → has",
+          "Can I see it? で ていねいに おねがい",
+          "makes は「ス」、comes は「ズ」。おわりの e は よまない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 365,
+      "world": 13,
+      "title": "Hello, Sunrise Harbor!",
+      "titleJa": "こんにちは、あさひの港町！",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：なかまを しょうかいする（He / She ＋ -s・has）",
+        "grammar": "This is ～. He likes ～. / She has ～.",
+        "expressions": [
+          {
+            "en": "Kiko likes fish. Haru has a camera.",
+            "ja": "キコは さかなが すきです。ハルは カメラを もっています。",
+            "core": true
+          },
+          {
+            "en": "This is Birimo. He loves adventures.",
+            "ja": "こちらは ビリモです。かれは ぼうけんが だいすきです。"
+          },
+          {
+            "en": "Nice to meet you. Welcome to Sunrise Harbor!",
+            "ja": "はじめまして。あさひの港町へ ようこそ！"
+          }
+        ],
+        "testPoints": [
+          "This is ～. He / She ＋ うごき-s. で なかまを 2文で しょうかい できる",
+          "-s の「ス」「ズ」を ききわけて よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk down the gangway.",
+          "ja": "ふねから おりる はしを あるいて。",
+          "action": "ゆっくり しゃめんを おりる まね",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Shake hands.",
+          "ja": "あくしゅして。",
+          "action": "となりの ひとと あくしゅの まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Take a picture.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえて パシャッ",
+          "emoji": "📷"
+        },
+        {
+          "en": "Smile!",
+          "ja": "にっこり わらって！",
+          "action": "おおきく にっこり",
+          "emoji": "😄"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-s"
+        ],
+        "sounds": [
+          "/s/",
+          "/z/"
+        ],
+        "words": [
+          "likes",
+          "plays",
+          "eats",
+          "sings",
+          "cooks"
+        ],
+        "tipJa": "ふりかえり！likes・eats・cooks は「ス」、plays・sings は「ズ」。he / she の ときに つく s、2つの おとを ききわけよう。"
+      },
+      "vocab": [
+        {
+          "en": "camera",
+          "ja": "カメラ",
+          "emoji": "📷",
+          "core": true
+        },
+        {
+          "en": "town",
+          "ja": "まち",
+          "emoji": "🏘️"
+        },
+        {
+          "en": "lighthouse",
+          "ja": "とうだい",
+          "emoji": "🗼"
+        },
+        {
+          "en": "seagull",
+          "ja": "カモメ",
+          "emoji": "🐦"
+        }
+      ],
+      "teacherScript": "Land ho! We can see the town! This is Sunrise Harbor. あさひの港町に ついたよ！ The people here are very kind. Let's say hello and introduce our team. Today's sentences are: Kiko likes fish. Haru has a camera. Say them with me. Kiko likes fish. Haru has a camera. Very good! To introduce a friend, first say, This is Birimo. Then say one thing about him. He loves adventures. This is Riko. She has a notebook. Two sentences. Easy, right? Now, review time for phonics. Listen and copy me. Likes. Eats. Cooks. Quiet s. Plays. Sings. Buzzy z. You did it! At the end of this lesson, it's show time. Please introduce one friend in two sentences. This is ～. He likes ～, or She has ～. You can do it. Speak slowly and smile. Okay, let's walk down to the harbor. Hello, Sunrise Harbor!",
+      "conversation": {
+        "scene": "Arriving at Sunrise Harbor and introducing the team to a harbor worker, played by Ms. Emma",
+        "sceneJa": "あさひの港町に とうちゃくし、みなとの ひと（エマ先生が やくを する）に じぶんたちを しょうかいする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's play a game. I'm a harbor worker now. Hello! Welcome to Sunrise Harbor!",
+            "ja": "ごっこあそびを しましょう。わたしは みなとで はたらく ひとよ。こんにちは！あさひの港町へ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hello! Nice to meet you. This is Kiko. She likes fish.",
+            "ja": "こんにちは！はじめまして。こちらは キコです。さかなが すきです。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And this is Haru. He has a camera. He takes a lot of pictures!",
+            "ja": "それから こちらは ハル。カメラを もってるの。しゃしんを たくさん とるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This is Birimo. He loves adventures.",
+            "ja": "こちらは ビリモ。ぼうけんが だいすきなの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hi! I have a map. Can you help us?",
+            "ja": "やあ！ぼく ちずを もってるんだ。てつだって くれる？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Of course! Our town has a big lighthouse. Let's start there.",
+            "ja": "もちろん！この まちには おおきな とうだいが あるの。そこから はじめましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "なかまを ひとり えらんで、This is ～. He (She) likes ～. の 2文で しょうかいしよう（ほんとうの なまえは いわなくて OK・ニックネームで OK）",
+          "starterEn": "Hello! Welcome to Sunrise Harbor! Who are your friends? Please tell me about them.",
+          "targetExpressions": [
+            "This is ～.",
+            "He likes ～.",
+            "She has ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "あさひの港町に とうちゃく！なかまを 2文で しょうかい できたね",
+          "Kiko likes fish. Haru has a camera.",
+          "-s の「ス」と「ズ」の ふりかえり、ばっちり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 366,
+      "world": 13,
+      "title": "My Brother Plays the Guitar",
+      "titleJa": "にいさんは ギターを ひく",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数：かぞくの ことを しょうかいする（-s / -es）",
+        "grammar": "My brother plays ～. / My mom washes ～. （s・sh・ch・x で おわる うごきは -es）",
+        "expressions": [
+          {
+            "en": "My brother plays the guitar.",
+            "ja": "わたしの にいさんは ギターを ひきます。",
+            "core": true
+          },
+          {
+            "en": "My mom washes the car on Sundays.",
+            "ja": "おかあさんは にちようびに くるまを あらいます。"
+          },
+          {
+            "en": "Who is this? ― This is my sister.",
+            "ja": "この ひとは だれ？ ― わたしの おねえさんです。"
+          }
+        ],
+        "testPoints": [
+          "かぞくの ことを My ～ plays …. のように いえる",
+          "sh で おわる うごきに es を つけて「イズ」と よめる（washes, brushes, wishes, pushes）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Play the guitar.",
+          "ja": "ギターを ひいて。",
+          "action": "ギターを じゃらんと ひく まね",
+          "emoji": "🎸"
+        },
+        {
+          "en": "Wash the car.",
+          "ja": "くるまを あらって。",
+          "action": "スポンジで ごしごし あらう まね",
+          "emoji": "🚗"
+        },
+        {
+          "en": "Brush the dog.",
+          "ja": "いぬの けを ブラシで といて。",
+          "action": "やさしく ブラシを かける まね",
+          "emoji": "🐕"
+        },
+        {
+          "en": "Push the swing.",
+          "ja": "ブランコを おして。",
+          "action": "りょうてで まえに おす",
+          "emoji": "🛝"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-es",
+        "focus": [
+          "-es"
+        ],
+        "sounds": [
+          "/ɪz/"
+        ],
+        "words": [
+          "washes",
+          "brushes",
+          "wishes",
+          "pushes"
+        ],
+        "tipJa": "sh で おわる うごきは s だけでは いいにくいので es を つけるよ。よみかたは「イズ」。wash → washes（ウォッシズ）、brush → brushes（ブラッシズ）。"
+      },
+      "vocab": [
+        {
+          "en": "brother",
+          "ja": "きょうだい（おにいさん・おとうと）",
+          "emoji": "👦",
+          "core": true
+        },
+        {
+          "en": "sister",
+          "ja": "しまい（おねえさん・いもうと）",
+          "emoji": "👧"
+        },
+        {
+          "en": "guitar",
+          "ja": "ギター",
+          "emoji": "🎸"
+        },
+        {
+          "en": "photo",
+          "ja": "しゃしん",
+          "emoji": "🖼️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at a little cafe by the harbor. It's cozy, and the hot chocolate is yummy. Our friends brought photos of their families. Let's talk about families! Today's sentence is: My brother plays the guitar. Say it with me. My brother plays the guitar. Nice! Now listen to this one. My mom washes the car on Sundays. Washes. Not washs. Wash ends with s h. After s h, we add e s, and we say iz. sh・ch・x・s で おわる ことばには es を つけて「イズ」と よむよ。 Wash, washes. Brush, brushes. Let's practice the phonics words. Washes. Brushes. Wishes. Pushes. Great! Can you hear the iz at the end? One more thing. When you see a photo, you can ask, Who is this? And your friend can say, This is my sister. Let's try. Who is this? This is my brother. Perfect! Now let's look at the family photos together.",
+      "conversation": {
+        "scene": "A cozy harbor cafe, where friends show each other family photos",
+        "sceneJa": "みなとの カフェで、かぞくの しゃしんを みせ あう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Haru, who is this in the photo?",
+            "ja": "ハル、この しゃしんの ひとは だれ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This is my brother. He plays the guitar. He's really good!",
+            "ja": "ぼくの にいさんだよ。ギターを ひくんだ。すごく じょうず！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Cool! And who is this with the dog?",
+            "ja": "かっこいい！じゃあ いぬと いる この ひとは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's my mom. She brushes our dog every morning.",
+            "ja": "おかあさんだよ。まいあさ いぬの けを ブラシで とかすんだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My family is in this photo. My dad washes the windows with his tail!",
+            "ja": "ぼくの かぞくは この しゃしん。おとうさんは しっぽで まどを あらうんだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かぞくの ひとを ひとり えらんで、My ～ plays (washes) …. と しょうかいしよう（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Riko. This is a photo of my family. Do you have a brother or a sister?",
+          "targetExpressions": [
+            "My brother plays ～.",
+            "Who is this?",
+            "This is my ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My brother plays the guitar. かぞくを しょうかい できたね",
+          "Who is this? ― This is my ～.",
+          "washes・brushes：sh の あとは es で「イズ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 367,
+      "world": 13,
+      "title": "Grandma Watches Birds",
+      "titleJa": "おばあちゃんは とりを みる",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数：ch で おわる うごき（watches・teaches）",
+        "grammar": "My grandma watches ～. / She teaches ～.",
+        "expressions": [
+          {
+            "en": "My grandma watches birds.",
+            "ja": "わたしの おばあちゃんは とりを ながめます。",
+            "core": true
+          },
+          {
+            "en": "She teaches me their names.",
+            "ja": "おばあちゃんは わたしに とりの なまえを おしえて くれます。"
+          },
+          {
+            "en": "My grandpa goes fishing.",
+            "ja": "おじいちゃんは つりに いきます。"
+          }
+        ],
+        "testPoints": [
+          "ch で おわる うごきに es を つけられる（watch → watches、teach → teaches）",
+          "-es を「イズ」と よめる（watches, teaches, reaches, touches）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Watch the birds.",
+          "ja": "とりを みて。",
+          "action": "てを ひたいに あてて とおくを みる",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Reach up high.",
+          "ja": "たかく てを のばして。",
+          "action": "せのびして てを うえに",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Touch your toes.",
+          "ja": "つまさきを さわって。",
+          "action": "まえに かがんで つまさきを さわる",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Flap your wings.",
+          "ja": "はねを ぱたぱた させて。",
+          "action": "りょうてを とりの はねの ように うごかす",
+          "emoji": "🕊️"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-es",
+        "focus": [
+          "-es"
+        ],
+        "sounds": [
+          "/ɪz/"
+        ],
+        "words": [
+          "watches",
+          "teaches",
+          "reaches",
+          "touches"
+        ],
+        "tipJa": "ch で おわる うごきにも es を つけて「イズ」。watch → watches（ウォッチズ）、teach → teaches（ティーチズ）。"
+      },
+      "vocab": [
+        {
+          "en": "grandma",
+          "ja": "おばあちゃん",
+          "emoji": "👵",
+          "core": true
+        },
+        {
+          "en": "grandpa",
+          "ja": "おじいちゃん",
+          "emoji": "👴"
+        },
+        {
+          "en": "bird",
+          "ja": "とり",
+          "emoji": "🐦"
+        },
+        {
+          "en": "bench",
+          "ja": "ベンチ",
+          "emoji": "🪑"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we're at a park by the sea. There are a lot of birds here. Look, seagulls! Kiko has a special grandma. Let's hear about her. Today's sentence is: My grandma watches birds. Say it with me. My grandma watches birds. Very nice! Watch ends with c h. So we add e s. Watches. Iz! ch で おわる ときも es を つけるよ。 Here's another one. Teach, teaches. She teaches me their names. Isn't that lovely? And one more. My grandpa goes fishing. Go becomes goes. We'll learn more about goes later. Now, phonics. Repeat after me. Watches. Teaches. Reaches. Touches. Did you hear iz at the end every time? Good listening! Here's a speaking tip. When someone tells you a story, show you're listening. Say, Oh, nice! or That's cool! Your friend will be happy. Now let's sit on the bench and listen to Kiko.",
+      "conversation": {
+        "scene": "A seaside park, where Kiko talks about her grandma",
+        "sceneJa": "海ぞいの こうえんで、キコの おばあちゃんの はなしを する",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at all the birds! My grandma watches birds every morning.",
+            "ja": "とりが いっぱい！わたしの おばあちゃんは まいあさ とりを みるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh, nice! Does she know their names?",
+            "ja": "へえ、いいね！とりの なまえを しってるの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes! She teaches me their names. That one is a seagull.",
+            "ja": "うん！なまえを おしえて くれるの。あれは カモメだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's cool! My grandpa goes fishing by the sea.",
+            "ja": "かっこいい！ぼくの おじいちゃんは うみで つりを するよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hey! That seagull watches my sandwich!",
+            "ja": "ちょっと！あの カモメ、ぼくの サンドイッチを みてる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おじいちゃんや おばあちゃん（または しりあいの おとな）が すきな ことを My grandma watches ～. のように いってみよう",
+          "starterEn": "Hi, I'm Kiko. My grandma watches birds. What does your grandma or grandpa like?",
+          "targetExpressions": [
+            "My grandma watches ～.",
+            "My grandpa likes ～.",
+            "That's cool!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My grandma watches birds. ch の あとは es",
+          "Oh, nice! / That's cool! で きいてるよ の サイン",
+          "watches・teaches・reaches・touches は「イズ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 368,
+      "world": 13,
+      "title": "He Doesn't Like Spiders",
+      "titleJa": "かれは クモが にがて",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数の 否定文：He doesn't ～.",
+        "grammar": "He doesn't like ～. （doesn't の あとの うごきには s を つけない）",
+        "expressions": [
+          {
+            "en": "He doesn't like spiders.",
+            "ja": "かれは クモが すきでは ありません。",
+            "core": true
+          },
+          {
+            "en": "Birimo doesn't eat green peppers.",
+            "ja": "ビリモは ピーマンを たべません。"
+          },
+          {
+            "en": "She doesn't have a key.",
+            "ja": "かのじょは かぎを もっていません。"
+          }
+        ],
+        "testPoints": [
+          "He / She doesn't ＋ もとの かたち の うごき で「～しない」と いえる（doesn't likes に しない）",
+          "x・ss で おわる うごきの -es を「イズ」と よめる（fixes, mixes, relaxes, misses）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shake your head.",
+          "ja": "くびを よこに ふって。",
+          "action": "いやいやと くびを ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Hide under the blanket.",
+          "ja": "もうふの したに かくれて。",
+          "action": "あたまを かかえて ちいさく なる",
+          "emoji": "🫣"
+        },
+        {
+          "en": "Tiptoe to the door.",
+          "ja": "つまさきで ドアまで あるいて。",
+          "action": "そろそろと つまさきで あるく",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Open the window.",
+          "ja": "まどを あけて。",
+          "action": "まどを よこに あける まね",
+          "emoji": "🪟"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-es",
+        "focus": [
+          "-es"
+        ],
+        "sounds": [
+          "/ɪz/"
+        ],
+        "words": [
+          "fixes",
+          "mixes",
+          "relaxes",
+          "misses"
+        ],
+        "tipJa": "x や ss で おわる うごきも es を つけて「イズ」。fix → fixes（フィクスィズ）、miss → misses（ミスィズ）。"
+      },
+      "vocab": [
+        {
+          "en": "spider",
+          "ja": "クモ",
+          "emoji": "🕷️",
+          "core": true
+        },
+        {
+          "en": "green pepper",
+          "ja": "ピーマン",
+          "emoji": "🫑"
+        },
+        {
+          "en": "blanket",
+          "ja": "もうふ",
+          "emoji": "🛌"
+        },
+        {
+          "en": "inn",
+          "ja": "やど",
+          "emoji": "🏨"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! We're staying at a small inn in the harbor town tonight. But oh no, what's that on the wall? A spider! Birimo is hiding under the blanket. Today's sentence is: He doesn't like spiders. Say it with me. He doesn't like spiders. Good! Listen carefully. He likes cats. He doesn't like spiders. In the second sentence, like has no s. 「～しない」の ときは doesn't を つかって、うしろの うごきには s を つけないよ。 doesn't が s の かわりを してくれるんだ。 He doesn't like. She doesn't have. Birimo doesn't eat green peppers. Now, phonics. Today's words end with x or double s. Fix, fixes. Mix, mixes. Relax, relaxes. Miss, misses. Say them with me. Fixes. Mixes. Relaxes. Misses. Iz, iz, iz! Wonderful! Here's a tip. When you are scared, you can say, Help! And your friend can say, Don't worry. It's okay. Let's help Birimo now!",
+      "conversation": {
+        "scene": "A room at the inn at night, where everyone finds out what Birimo is afraid of",
+        "sceneJa": "やどの へやで、ビリモの にがてな ものが みつかる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Help! There's a spider on the wall!",
+            "ja": "たすけて！かべに クモが いる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Birimo is under the blanket. He doesn't like spiders.",
+            "ja": "ビリモが もうふの したに いるよ。クモが にがてなんだね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Don't worry. It's a small spider. It doesn't bite.",
+            "ja": "だいじょうぶ。ちいさい クモだよ。かまないよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'll open the window. Bye-bye, little spider!",
+            "ja": "まどを あけるね。ばいばい、ちいさな クモさん！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thank you! I like you all. But I really don't like spiders!",
+            "ja": "ありがとう！みんな だいすき。でも クモは ほんとうに にがて！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビリモの すきな もの・にがてな ものを きいて、He likes ～. / He doesn't like ～. と いってみよう",
+          "starterEn": "Phew! That spider was scary. I don't like spiders. What don't you like?",
+          "targetExpressions": [
+            "He doesn't like ～.",
+            "I don't like ～.",
+            "Don't worry."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "He doesn't like spiders. doesn't の あとは s なし",
+          "Don't worry. It's okay. で ともだちを たすけたね",
+          "fixes・mixes・relaxes・misses は「イズ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 369,
+      "world": 13,
+      "title": "Does She Like Cats?",
+      "titleJa": "かのじょは ねこが すき？",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数の 疑問文：Does she ～? ― Yes, she does. / No, she doesn't.",
+        "grammar": "Does she like ～? ― Yes, she does. / No, she doesn't.",
+        "expressions": [
+          {
+            "en": "Does she like cats?",
+            "ja": "かのじょは ねこが すきですか。",
+            "core": true
+          },
+          {
+            "en": "Yes, she does. She has five cats!",
+            "ja": "はい、すきです。ねこを 5ひき かっています！"
+          },
+          {
+            "en": "Does he drink milk? ― No, he doesn't.",
+            "ja": "かれは ミルクを のみますか。― いいえ、のみません。"
+          }
+        ],
+        "testPoints": [
+          "Does he / she ＋ もとの かたち ～? で たずね、Yes, she does. / No, he doesn't. で こたえられる",
+          "ce・ge・ss・zz で おわる ことばの -es を「イズ」と よめる（dances, changes, passes, buzzes）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pet the cat.",
+          "ja": "ねこを なでて。",
+          "action": "やさしく ねこを なでる まね",
+          "emoji": "🐈"
+        },
+        {
+          "en": "Stretch like a cat.",
+          "ja": "ねこの ように のびを して。",
+          "action": "よつんばいで おおきく のび",
+          "emoji": "🐱"
+        },
+        {
+          "en": "Pour the milk.",
+          "ja": "ミルクを そそいで。",
+          "action": "コップに そそぐ まね",
+          "emoji": "🥛"
+        },
+        {
+          "en": "Sit quietly.",
+          "ja": "しずかに すわって。",
+          "action": "そっと すわって ゆびを くちに",
+          "emoji": "🤫"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-es",
+        "focus": [
+          "-es"
+        ],
+        "sounds": [
+          "/ɪz/"
+        ],
+        "words": [
+          "dances",
+          "changes",
+          "passes",
+          "buzzes"
+        ],
+        "tipJa": "ce・ge で おわる ことばは s を つけるだけで es に なるよ。ss・zz には es。どれも「イズ」。dances（ダンスィズ）、changes（チェインジズ）。"
+      },
+      "vocab": [
+        {
+          "en": "cat",
+          "ja": "ねこ",
+          "emoji": "🐈",
+          "core": true
+        },
+        {
+          "en": "kitten",
+          "ja": "こねこ",
+          "emoji": "🐱"
+        },
+        {
+          "en": "owner",
+          "ja": "かいぬし・おみせの ひと",
+          "emoji": "🧑‍🍳"
+        },
+        {
+          "en": "milk",
+          "ja": "ミルク",
+          "emoji": "🥛"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're visiting a cat cafe in the harbor town. There are so many cats! The owner of the cafe is very nice. We want to know about her. How can we ask? Today's sentence is: Does she like cats? Say it with me. Does she like cats? Great! To ask about he or she, start with Does. And look, like has no s. Does she like? Not, does she likes. Does の あとの うごきにも s は つけないよ。 Here are the answers. Yes, she does. No, she doesn't. Let's practice. Does he drink milk? No, he doesn't. Does she have a cat? Yes, she does. Now, phonics. Listen. Dances. Changes. Passes. Buzzes. They all end with iz. Say them with me. Dances. Changes. Passes. Buzzes. Super! A speaking tip for today. When you ask a question, make your voice go up at the end. Does she like cats? Try it. Now let's go inside, quietly. Shh, the kittens are sleeping.",
+      "conversation": {
+        "scene": "A cat cafe in the harbor town, asking questions about the owner and the cats",
+        "sceneJa": "みなとの ねこカフェで、おみせの ひとに ついて しつもんする",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "So many cats! Ms. Emma, does the owner like cats?",
+            "ja": "ねこが いっぱい！エマ先生、おみせの ひとは ねこが すきなの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, she does. She has twelve cats here!",
+            "ja": "ええ、すきよ。ここに 12ひきも いるの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Does that big cat drink milk?",
+            "ja": "あの おおきい ねこは ミルクを のむの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, he doesn't. He drinks water. Milk isn't good for cats.",
+            "ja": "いいえ、のまないの。おみずを のむのよ。ミルクは ねこには よくないの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh, I see. Does this kitten like toys?",
+            "ja": "そうなんだ。この こねこは おもちゃが すき？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, she does! Look, she dances with the ball!",
+            "ja": "すきみたい！みて、ボールと おどってる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ねこカフェの ねこに ついて Does he (she) like ～? と しつもんしてみよう。こたえは Yes, she does. / No, he doesn't.",
+          "starterEn": "Welcome to our cat cafe! I'm Riko, and I help here today. Do you have a question about the cats?",
+          "targetExpressions": [
+            "Does she like ～?",
+            "Yes, she does.",
+            "No, he doesn't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Does she like cats? ― Yes, she does. / No, she doesn't.",
+          "しつもんの おわりは こえを あげて",
+          "dances・changes・passes・buzzes は「イズ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 370,
+      "world": 13,
+      "title": "My Family Poster",
+      "titleJa": "かぞく しょうかい ポスター",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：かぞく しょうかい ポスターの はっぴょう（肯定・否定・疑問）",
+        "grammar": "This is my ～. He cooks ～. / She doesn't ～. / Does he ～?",
+        "expressions": [
+          {
+            "en": "This is my dad. He cooks dinner.",
+            "ja": "これは おとうさんです。ばんごはんを つくります。",
+            "core": true
+          },
+          {
+            "en": "My sister doesn't like tomatoes.",
+            "ja": "いもうとは トマトが すきでは ありません。"
+          },
+          {
+            "en": "Does your dad cook every day? ― Yes, he does.",
+            "ja": "あなたの おとうさんは まいにち りょうりを するの？ ― うん、するよ。"
+          }
+        ],
+        "testPoints": [
+          "かぞくを 3文（だれ・すること・しないこと）で しょうかい できる",
+          "-s と -es の 3つの おと（ス・ズ・イズ）を ききわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your poster.",
+          "ja": "ポスターを もちあげて。",
+          "action": "りょうてで ポスターを たかく もつ まね",
+          "emoji": "🪧"
+        },
+        {
+          "en": "Point to your dad.",
+          "ja": "おとうさんを ゆびさして。",
+          "action": "ポスターの え を ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Speak loudly.",
+          "ja": "おおきな こえで はなして。",
+          "action": "てを くちに あてて おおきな こえの ポーズ",
+          "emoji": "📣"
+        },
+        {
+          "en": "Give a big hand.",
+          "ja": "はくしゅを して。",
+          "action": "おおきく はくしゅ",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-s",
+          "-es"
+        ],
+        "sounds": [
+          "/s/",
+          "/z/",
+          "/ɪz/"
+        ],
+        "words": [
+          "cooks",
+          "plays",
+          "watches",
+          "washes",
+          "fixes"
+        ],
+        "tipJa": "ふりかえり！おわりの s は 3つの おと。cooks は「ス」、plays は「ズ」、watches・washes・fixes は「イズ」。"
+      },
+      "vocab": [
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "🪧",
+          "core": true
+        },
+        {
+          "en": "dad",
+          "ja": "おとうさん",
+          "emoji": "👨"
+        },
+        {
+          "en": "mom",
+          "ja": "おかあさん",
+          "emoji": "👩"
+        },
+        {
+          "en": "dinner",
+          "ja": "ばんごはん",
+          "emoji": "🍽️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's poster day! We're in the lobby of our inn, and everyone made a family poster. Today you can be a presenter. Today's sentences are: This is my dad. He cooks dinner. Say them with me. This is my dad. He cooks dinner. Excellent! A good presentation has three parts. One, who is it? This is my dad. Two, what does he do? He cooks dinner. Three, something he doesn't do or doesn't like. He doesn't like spiders. だれ・すること・しないこと、の 3つで はっぴょうしよう。 After a presentation, the listeners can ask a question. Does your dad cook every day? Yes, he does. Now, quick phonics review. Three sounds. Cooks, sss. Plays, zzz. Watches, washes, fixes, iz. Wonderful! Remember, look at your friends, speak loudly, and smile. And when your friend finishes, give a big hand! Okay, presenters, are you ready?",
+      "conversation": {
+        "scene": "The inn's lobby, where each friend presents a family poster",
+        "sceneJa": "やどの ロビーで、かぞく しょうかい ポスターを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Poster time! Who wants to go first?",
+            "ja": "ポスターの じかんよ！だれから はじめる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Me! This is my dad. He cooks dinner. He makes great curry.",
+            "ja": "わたし！これは おとうさん。ばんごはんを つくるの。カレーが すごく おいしいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This is my sister. She plays tennis. But she doesn't like tomatoes!",
+            "ja": "これは いもうと。テニスを するの。でも トマトは にがて！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Does your dad cook every day?",
+            "ja": "おとうさんは まいにち りょうりを するの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, he does. And my mom washes the dishes.",
+            "ja": "うん、するよ。それで おかあさんが おさらを あらうの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Great poster, Riko! Let's give her a big hand!",
+            "ja": "すてきな ポスター、リコ！はくしゅ しよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かぞく（または すきな ひと）を 3文で しょうかいしよう。This is my ～. He (She) ～s. He (She) doesn't ～.（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Hi, I'm Kiko! I love posters. Please tell me about your family poster. Who is on it?",
+          "targetExpressions": [
+            "This is my ～.",
+            "He cooks ～.",
+            "She doesn't ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "かぞく ポスターを 3文で はっぴょう できたね",
+          "Does your dad ～? ― Yes, he does. で しつもんも",
+          "ス・ズ・イズ、3つの s を ききわけた"
+        ]
+      }
+    },
+    {
+      "lessonNo": 371,
+      "world": 13,
+      "title": "I Always Brush My Teeth",
+      "titleJa": "いつも はを みがく",
+      "school": {
+        "grade": "中1",
+        "topic": "ひんどの ことば：always / usually（あさの しゅうかん）",
+        "grammar": "I always ～. / I usually ～. （always・usually は うごきの まえ）",
+        "expressions": [
+          {
+            "en": "I always brush my teeth.",
+            "ja": "わたしは いつも はを みがきます。",
+            "core": true
+          },
+          {
+            "en": "I usually wash my face first.",
+            "ja": "わたしは たいてい さいしょに かおを あらいます。"
+          },
+          {
+            "en": "Kiko always tries her best.",
+            "ja": "キコは いつも いっしょうけんめい がんばります。"
+          }
+        ],
+        "testPoints": [
+          "always（いつも）・usually（たいてい）を うごきの まえに おいて いえる",
+          "子音＋y で おわる うごきは y を i に かえて es（study → studies、try → tries）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Brush your teeth.",
+          "ja": "はを みがいて。",
+          "action": "はブラシで しゃかしゃか みがく まね",
+          "emoji": "🪥"
+        },
+        {
+          "en": "Wash your face.",
+          "ja": "かおを あらって。",
+          "action": "りょうてで かおを ばしゃばしゃ",
+          "emoji": "🧼"
+        },
+        {
+          "en": "Comb your hair.",
+          "ja": "かみを とかして。",
+          "action": "くしで かみを とかす まね",
+          "emoji": "💇"
+        },
+        {
+          "en": "Put on your shoes.",
+          "ja": "くつを はいて。",
+          "action": "かがんで くつを はく まね",
+          "emoji": "👟"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-ies",
+        "focus": [
+          "-ies"
+        ],
+        "sounds": [
+          "/iz/",
+          "/aɪz/"
+        ],
+        "words": [
+          "studies",
+          "cries",
+          "tries",
+          "flies"
+        ],
+        "tipJa": "y の まえが 子音の ときは、y を i に かえて es。study → studies（スタディーズ）、cry → cries（クライズ）、try → tries、fly → flies。"
+      },
+      "vocab": [
+        {
+          "en": "toothbrush",
+          "ja": "はブラシ",
+          "emoji": "🪥",
+          "core": true
+        },
+        {
+          "en": "towel",
+          "ja": "タオル",
+          "emoji": "🧻"
+        },
+        {
+          "en": "mirror",
+          "ja": "かがみ",
+          "emoji": "🪞"
+        },
+        {
+          "en": "morning",
+          "ja": "あさ",
+          "emoji": "🌅"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! It's a new morning at the inn. The sun is rising over Sunrise Harbor. What do you do every morning? Today's sentence is: I always brush my teeth. Say it with me. I always brush my teeth. Good! Always means every time. One hundred percent! Usually means most of the time. always は「いつも」、usually は「たいてい」。 うごきの まえに おくよ。 I always brush my teeth. I usually wash my face first. Now, phonics. Today we learn a new spelling rule. Study. When it's he or she, the y changes to i, and we add e s. Studies. Cry, cries. Try, tries. Fly, flies. y の まえが 子音の ときは、y を i に かえて es だよ。 Say them with me. Studies. Cries. Tries. Flies. Great! Kiko always tries her best. Isn't that nice? Speaking tip. When you ask about someone's morning, ask, What do you do in the morning? Let's get ready together. Toothbrush, ready? Let's go!",
+      "conversation": {
+        "scene": "Morning at the inn, everyone getting ready to go out",
+        "sceneJa": "やどの あさ、でかける じゅんびを する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good morning! Are you ready to go?",
+            "ja": "おはよう！でかける じゅんびは できた？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Almost! I always brush my teeth after breakfast.",
+            "ja": "もうすぐ！ぼくは いつも あさごはんの あとに はを みがくんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Me too. I usually wash my face first.",
+            "ja": "わたしも。わたしは たいてい さいしょに かおを あらうよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Where's my comb? I can't find it!",
+            "ja": "わたしの くし どこ？みつからない！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Here it is, Kiko! Kiko always tries her best, but she always loses her comb!",
+            "ja": "はい、キコ！キコは いつも がんばるけど、いつも くしを なくすね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あさ いつも する ことを I always ～. / I usually ～. で 2つ いってみよう",
+          "starterEn": "Good morning! I'm Haru. I always brush my teeth after breakfast. What do you always do in the morning?",
+          "targetExpressions": [
+            "I always ～.",
+            "I usually ～.",
+            "Me too."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I always ～. / I usually ～. で あさの しゅうかん",
+          "always・usually は うごきの まえ",
+          "study → studies：y を i に かえて es"
+        ]
+      }
+    },
+    {
+      "lessonNo": 372,
+      "world": 13,
+      "title": "Sometimes I Forget",
+      "titleJa": "ときどき わすれちゃう",
+      "school": {
+        "grade": "中1",
+        "topic": "ひんどの ことば：sometimes / never（しゅうかんを くらべる）",
+        "grammar": "I sometimes ～. / I never ～. / He often ～.",
+        "expressions": [
+          {
+            "en": "I sometimes forget my hat.",
+            "ja": "わたしは ときどき ぼうしを わすれます。",
+            "core": true
+          },
+          {
+            "en": "I never eat breakfast in bed.",
+            "ja": "わたしは ベッドで あさごはんを たべる ことは ぜったいに ありません。"
+          },
+          {
+            "en": "He often hurries to school.",
+            "ja": "かれは よく がっこうへ いそいで いきます。"
+          }
+        ],
+        "testPoints": [
+          "always・usually・often・sometimes・never の ちがいが わかり、うごきの まえに おける",
+          "carries・worries・copies・hurries の つづり（y → ies）が わかる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your hat.",
+          "ja": "ぼうしを かぶって。",
+          "action": "ぼうしを かぶる まね",
+          "emoji": "🧢"
+        },
+        {
+          "en": "Hurry up!",
+          "ja": "いそいで！",
+          "action": "その ばで はやく はしる",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Carry your bag.",
+          "ja": "かばんを もって。",
+          "action": "おもい かばんを りょうてで もつ まね",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Line up.",
+          "ja": "ならんで。",
+          "action": "まっすぐ たって まえを みる",
+          "emoji": "🚶"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-ies",
+        "focus": [
+          "-ies"
+        ],
+        "sounds": [
+          "/iz/"
+        ],
+        "words": [
+          "carries",
+          "worries",
+          "copies",
+          "hurries"
+        ],
+        "tipJa": "carry → carries、worry → worries、copy → copies、hurry → hurries。y の まえが r や p（子音）だから y を i に かえて es。よみは「イーズ」。"
+      },
+      "vocab": [
+        {
+          "en": "hat",
+          "ja": "ぼうし",
+          "emoji": "🧢",
+          "core": true
+        },
+        {
+          "en": "school bag",
+          "ja": "ランドセル・がっこうの かばん",
+          "emoji": "🎒"
+        },
+        {
+          "en": "classroom",
+          "ja": "きょうしつ",
+          "emoji": "🏫"
+        },
+        {
+          "en": "habit",
+          "ja": "しゅうかん・くせ",
+          "emoji": "🔁"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we're visiting an elementary school in Sunrise Harbor. The children here are friendly. Let's compare our habits with theirs. Today's sentence is: I sometimes forget my hat. Say it with me. I sometimes forget my hat. Good! Here's a list. Always, every time. Usually, most of the time. Often, a lot. Sometimes, now and then. Never, not at all. Zero! never は「ぜったいに しない」。 ゼロ だよ。 I never eat breakfast in bed. He often hurries to school. Now, phonics. Remember yesterday's rule? Y changes to i, and we add e s. Carry, carries. Worry, worries. Copy, copies. Hurry, hurries. Say them with me. Carries. Worries. Copies. Hurries. Wonderful! A speaking tip. When your friend says something about their habits, you can answer, Me too! or Really? I never do that! Let's meet the children now.",
+      "conversation": {
+        "scene": "Visiting an elementary school in the harbor town, comparing morning habits",
+        "sceneJa": "港町の しょうがっこうを けんがくして、あさの しゅうかんを くらべる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's pretend. I'm a student at this school. I sometimes forget my hat!",
+            "ja": "ごっこあそびね。わたしは この がっこうの せいとよ。ときどき ぼうしを わすれるの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Really? Me too! I sometimes forget my water bottle.",
+            "ja": "ほんとう？ぼくも！ぼくは ときどき すいとうを わすれる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I never forget my notebook. It's very important to me.",
+            "ja": "わたしは ノートは ぜったい わすれない。とても だいじだから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Birimo often hurries in the morning.",
+            "ja": "ビリモは あさ よく いそいでるよね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes! I usually wake up late. Hurry, hurry!",
+            "ja": "そう！たいてい ねぼうするんだ。いそげ、いそげ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I sometimes ～. / I never ～. を つかって、じぶんの しゅうかんを 2つ いってみよう",
+          "starterEn": "Hi! I'm Riko. I never forget my notebook. But I sometimes forget my hat. How about you?",
+          "targetExpressions": [
+            "I sometimes ～.",
+            "I never ～.",
+            "Really? Me too!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "always > usually > often > sometimes > never",
+          "I sometimes forget my hat. I never ～.",
+          "carries・worries・copies・hurries：y → ies"
+        ]
+      }
+    },
+    {
+      "lessonNo": 373,
+      "world": 13,
+      "title": "What Time Does She Get Up?",
+      "titleJa": "かのじょは なんじに おきる？",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数の しつもん：What time does she ～? / とくべつな かたち goes・does・has",
+        "grammar": "What time does she get up? ― She gets up at ～. / He goes ～. / She has ～.",
+        "expressions": [
+          {
+            "en": "What time does she get up?",
+            "ja": "かのじょは なんじに おきますか。",
+            "core": true
+          },
+          {
+            "en": "She gets up at four in the morning.",
+            "ja": "かのじょは あさ 4じに おきます。"
+          },
+          {
+            "en": "She goes to the bakery and has a cup of tea.",
+            "ja": "かのじょは パンやさんへ いって、こうちゃを 1ぱい のみます。"
+          }
+        ],
+        "testPoints": [
+          "What time does he / she ～? で じかんを たずね、He / She ～s at …. で こたえられる",
+          "go → goes、do → does、have → has の とくべつな かたちを つかえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wake up and stretch.",
+          "ja": "おきて のびを して。",
+          "action": "めを こすって おおきく のび",
+          "emoji": "🥱"
+        },
+        {
+          "en": "Look at the clock.",
+          "ja": "とけいを みて。",
+          "action": "かべの とけいを みる",
+          "emoji": "⏰"
+        },
+        {
+          "en": "Knead the dough.",
+          "ja": "パンの きじを こねて。",
+          "action": "りょうてで ぎゅっぎゅっと こねる",
+          "emoji": "🥖"
+        },
+        {
+          "en": "Yawn.",
+          "ja": "あくびを して。",
+          "action": "くちを おおきく あけて あくび",
+          "emoji": "😪"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-ies",
+        "focus": [
+          "goes",
+          "does",
+          "has",
+          "-ies"
+        ],
+        "sounds": [
+          "/goʊz/",
+          "/dʌz/",
+          "/hæz/"
+        ],
+        "words": [
+          "goes",
+          "does",
+          "has",
+          "studies"
+        ],
+        "tipJa": "とくべつな かたちを おぼえよう。go → goes（ゴウズ）、do → does（ダズ）、have → has（ハズ）。does は「ドゥーズ」では なく「ダズ」だよ。"
+      },
+      "vocab": [
+        {
+          "en": "baker",
+          "ja": "パンやさん（パンを やく ひと）",
+          "emoji": "🧑‍🍳",
+          "core": true
+        },
+        {
+          "en": "bread",
+          "ja": "パン",
+          "emoji": "🍞"
+        },
+        {
+          "en": "oven",
+          "ja": "オーブン",
+          "emoji": "🔥"
+        },
+        {
+          "en": "early",
+          "ja": "はやく（じかんが）",
+          "emoji": "🌄"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! We're having breakfast at the inn. Mmm, this bread is delicious! It's from the bakery next door. The baker is amazing. Guess what time she gets up! Today's sentence is: What time does she get up? Say it with me. What time does she get up? Good! She gets up at four in the morning. Four! That's very early! To ask about a time, say, What time does she, then the verb with no s. What time does he go to bed? What time does she eat lunch? Now, phonics. Some verbs have special forms. Go becomes goes. Do becomes does. Have becomes has. does は「ダズ」と よむよ。 「ドゥーズ」 じゃないよ。 Say them with me. Goes. Does. Has. And remember, study, studies. Great! Speaking tip. When you are surprised, say, Wow! or That's early! Let's ask the baker some questions!",
+      "conversation": {
+        "scene": "Breakfast at the inn, surprised to learn how early the baker gets up",
+        "sceneJa": "やどの あさごはんで、パンやさんの はやおきに おどろく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "This bread is so good! Who makes it?",
+            "ja": "この パン すごく おいしい！だれが つくってるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "The baker next door. She makes bread every morning.",
+            "ja": "となりの パンやさんよ。まいあさ パンを やくの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What time does she get up?",
+            "ja": "なんじに おきるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "She gets up at four. Then she goes to the bakery and has a cup of tea.",
+            "ja": "4じに おきるの。それから パンやさんへ いって、こうちゃを 1ぱい のむのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow, that's early! What does she do after that?",
+            "ja": "わあ、はやい！その あとは なにを するの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "She bakes bread for us! Thank you, baker!",
+            "ja": "ぼくたちの パンを やいて くれるんだ！ありがとう、パンやさん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "パンやさんの 1にちに ついて What time does she ～? と きいてみよう",
+          "starterEn": "Good morning! I'm Kiko. I love this bread. The baker next door makes it. Do you want to ask about her day?",
+          "targetExpressions": [
+            "What time does she ～?",
+            "She gets up at ～.",
+            "That's early!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What time does she get up? ― She gets up at four.",
+          "goes・does・has は とくべつな かたち",
+          "That's early! で おどろきを つたえたね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 374,
+      "world": 13,
+      "title": "She Studies After School",
+      "titleJa": "かのじょは ほうかごに べんきょうする",
+      "school": {
+        "grade": "中1",
+        "topic": "3人称単数：ほうかごに する こと（studies・plays の つづりの ちがい）",
+        "grammar": "She studies after school. / He plays ～ on Mondays. / What does she do after school?",
+        "expressions": [
+          {
+            "en": "She studies after school.",
+            "ja": "かのじょは ほうかごに べんきょうします。",
+            "core": true
+          },
+          {
+            "en": "What does he do after school?",
+            "ja": "かれは ほうかごに なにを しますか。"
+          },
+          {
+            "en": "He plays soccer on Mondays and Fridays.",
+            "ja": "かれは げつようびと きんようびに サッカーを します。"
+          }
+        ],
+        "testPoints": [
+          "What does he / she do after school? で たずね、こたえられる",
+          "y の まえが 母音なら s だけ（play → plays）、子音なら ies（cry → cries）を つかいわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Kick the ball.",
+          "ja": "ボールを けって。",
+          "action": "あしで ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Read a book.",
+          "ja": "ほんを よんで。",
+          "action": "ほんを ひらいて よむ まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Wave to your friends.",
+          "ja": "ともだちに てを ふって。",
+          "action": "にこにこ てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-ies",
+        "focus": [
+          "-ies",
+          "-s"
+        ],
+        "sounds": [
+          "/z/"
+        ],
+        "words": [
+          "cries",
+          "plays",
+          "enjoys",
+          "carries"
+        ],
+        "tipJa": "y の まえを みよう！play・enjoy は y の まえが 母音（a・o）だから そのまま s で plays・enjoys。cry・carry は 子音だから cries・carries。"
+      },
+      "vocab": [
+        {
+          "en": "after school",
+          "ja": "ほうかご",
+          "emoji": "🏫",
+          "core": true
+        },
+        {
+          "en": "homework",
+          "ja": "しゅくだい",
+          "emoji": "📝"
+        },
+        {
+          "en": "practice",
+          "ja": "れんしゅう",
+          "emoji": "🏋️"
+        },
+        {
+          "en": "playground",
+          "ja": "うんどうじょう",
+          "emoji": "🛝"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're back at the elementary school. It's the end of the day. The bell is ringing. What do the children do after school? Today's sentence is: She studies after school. Say it with me. She studies after school. Very good! To ask, say, What does he do after school? What does she do after school? He plays soccer on Mondays and Fridays. She studies at the library. Now, phonics. Today, let's be spelling detectives! Look at the letter before y. Play. A is a vowel. So we just add s. Plays. Enjoy, enjoys. Cry. R is not a vowel. So y changes to i. Cries. Carry, carries. y の まえが 母音（a i u e o）なら s だけ、子音なら ies だよ。 Say them with me. Plays. Enjoys. Cries. Carries. Good job, detectives! Speaking tip. After you answer a question, ask it back. What about you? Let's go meet the children on the playground.",
+      "conversation": {
+        "scene": "The harbor elementary school after school, asking what local children do",
+        "sceneJa": "港町の しょうがっこうで、ともだちの ほうかごに ついて きく",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's pretend again. I'm a girl from this town. I study after school.",
+            "ja": "また ごっこあそびね。わたしは この まちの おんなのこ。ほうかごは べんきょうするの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Kiko, what does she do after school?",
+            "ja": "キコ、かのじょは ほうかごに なにを するって？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "She studies after school. She enjoys math!",
+            "ja": "ほうかごに べんきょうするって。さんすうが たのしいんだって！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What does that boy do after school?",
+            "ja": "あの おとこのこは ほうかごに なにを するの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "He plays soccer on Mondays and Fridays. He carries a big ball!",
+            "ja": "げつようびと きんようびに サッカーを するんだって。おおきな ボールを もってるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ほうかごに する ことを はなそう。What do you do after school? と きかれたら こたえて、What about you? と きき かえしてね",
+          "starterEn": "Hi! I'm Haru. After school, I usually play soccer. What do you do after school?",
+          "targetExpressions": [
+            "I ～ after school.",
+            "What about you?",
+            "She studies ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What does she do after school? ― She studies after school.",
+          "What about you? で きき かえしたね",
+          "plays・enjoys は s だけ、cries・carries は ies"
+        ]
+      }
+    },
+    {
+      "lessonNo": 375,
+      "world": 13,
+      "title": "A Day in My Life Video",
+      "titleJa": "わたしの 1にち ビデオ",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：じぶんの 1にちを ビデオで しょうかいする（ひんどの ことば・じこく）",
+        "grammar": "I usually get up at ～. / I always ～. / I sometimes ～.",
+        "expressions": [
+          {
+            "en": "I usually get up at seven.",
+            "ja": "わたしは たいてい 7じに おきます。",
+            "core": true
+          },
+          {
+            "en": "I always eat breakfast with my family.",
+            "ja": "わたしは いつも かぞくと あさごはんを たべます。"
+          },
+          {
+            "en": "I sometimes read before bed.",
+            "ja": "わたしは ときどき ねる まえに ほんを よみます。"
+          }
+        ],
+        "testPoints": [
+          "じこくと ひんどの ことばを つかって じぶんの 1にちを 3〜4文で はなせる",
+          "-s・-es・-ies・とくべつな かたち（goes, does, has）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn on the camera.",
+          "ja": "カメラを つけて。",
+          "action": "ボタンを おす まね",
+          "emoji": "🎥"
+        },
+        {
+          "en": "Wave to the camera.",
+          "ja": "カメラに てを ふって。",
+          "action": "まえに むかって てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Eat breakfast.",
+          "ja": "あさごはんを たべて。",
+          "action": "スプーンで たべる まね",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Go to bed.",
+          "ja": "ねて。",
+          "action": "てを ほおに あてて ねる まね",
+          "emoji": "😴"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-s",
+          "-es",
+          "-ies",
+          "goes"
+        ],
+        "sounds": [
+          "/s/",
+          "/z/",
+          "/ɪz/"
+        ],
+        "words": [
+          "gets",
+          "washes",
+          "studies",
+          "goes"
+        ],
+        "tipJa": "ふりかえり！gets は「ス」、washes は「イズ」、studies は y → ies、goes は とくべつな かたち。he / she の ときの いろいろな かたち、もう ばっちり！"
+      },
+      "vocab": [
+        {
+          "en": "video",
+          "ja": "ビデオ",
+          "emoji": "🎥",
+          "core": true
+        },
+        {
+          "en": "breakfast",
+          "ja": "あさごはん",
+          "emoji": "🥣"
+        },
+        {
+          "en": "bedtime",
+          "ja": "ねる じかん",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "schedule",
+          "ja": "よていひょう",
+          "emoji": "🗓️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is video day! We're going to make a video diary called, A Day in My Life. わたしの 1にち、を ビデオで しょうかいするよ。 Today's sentence is: I usually get up at seven. Say it with me. I usually get up at seven. Good! Let's build our video. Start with the morning. I usually get up at seven. Then add an always sentence. I always eat breakfast with my family. Next, after school. I sometimes play with my friends. Finally, the night. I sometimes read before bed. Four sentences. That's a great video! Use time words, too. Then. After that. At night. Now, a quick phonics review. Gets. Washes. Studies. Goes. Can you hear the different endings? Super! Remember, look at the camera, speak slowly, and smile. Don't say your real address or school name in the video. ビデオでは、じゅうしょや がっこうの なまえは いわないでね。 Okay, camera on. Action!",
+      "conversation": {
+        "scene": "Making a 'Day in My Life' video diary in the inn's garden",
+        "sceneJa": "やどの にわで、じぶんの 1にちを しょうかいする ビデオ にっきを とる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Camera on! Riko, you go first.",
+            "ja": "カメラ オン！リコ、さきに どうぞ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hi! This is a day in my life. I usually get up at seven.",
+            "ja": "こんにちは！これは わたしの 1にちです。たいてい 7じに おきます。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I always eat breakfast with my family. After school, I study or play the piano.",
+            "ja": "いつも かぞくと あさごはんを たべます。ほうかごは べんきょうするか ピアノを ひきます。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Do you read before bed?",
+            "ja": "ねる まえに ほんを よむ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sometimes. I never go to bed late!",
+            "ja": "ときどきね。おそくに ねる ことは ぜったいに ないよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great video! Now it's my turn. I usually get up at noon!",
+            "ja": "いい ビデオ！つぎは ぼくの ばん。ぼくは たいてい おひるに おきるんだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの 1にちを 3〜4文で はなそう。I usually get up at ～. I always ～. I sometimes ～.（じゅうしょや がっこうの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Riko. Let's make a video! Tell me about your day. What time do you usually get up?",
+          "targetExpressions": [
+            "I usually get up at ～.",
+            "I always ～.",
+            "I sometimes ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "わたしの 1にち ビデオ、4文で はなせたね",
+          "I usually get up at seven. I always ～. I sometimes ～.",
+          "gets・washes・studies・goes の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 376,
+      "world": 13,
+      "title": "What Does He Do?",
+      "titleJa": "かれの おしごとは？",
+      "school": {
+        "grade": "中1",
+        "topic": "しごとを たずねる：What does he do? ― He's a ～.",
+        "grammar": "What does he do? ― He's a fisher. / He catches ～.",
+        "expressions": [
+          {
+            "en": "What does he do?",
+            "ja": "かれの しごとは なんですか。",
+            "core": true
+          },
+          {
+            "en": "He's a fisher. He catches fish every morning.",
+            "ja": "かれは りょうしです。まいあさ さかなを とります。"
+          },
+          {
+            "en": "She drives a boat.",
+            "ja": "かのじょは ふねを うんてんします。"
+          }
+        ],
+        "testPoints": [
+          "What does he / she do? が「しごとは なに？」の いみだと わかり、He's a ～. で こたえられる",
+          "みじかい 母音の すぐ あとの「チ」は tch と かく（catch, match, watch, kitchen）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Throw the net.",
+          "ja": "あみを なげて。",
+          "action": "りょうてで あみを なげる まね",
+          "emoji": "🎣"
+        },
+        {
+          "en": "Catch a fish!",
+          "ja": "さかなを つかまえて！",
+          "action": "りょうてで ぱっと つかむ",
+          "emoji": "🐟"
+        },
+        {
+          "en": "Row the boat.",
+          "ja": "ボートを こいで。",
+          "action": "オールで こぐ まね",
+          "emoji": "🚣"
+        },
+        {
+          "en": "Watch the sunrise.",
+          "ja": "ひのでを みて。",
+          "action": "てを かざして とおくを みる",
+          "emoji": "🌅"
+        }
+      ],
+      "phonics": {
+        "rule": "tch",
+        "focus": [
+          "tch"
+        ],
+        "sounds": [
+          "/tʃ/"
+        ],
+        "words": [
+          "catch",
+          "match",
+          "watch",
+          "kitchen"
+        ],
+        "tipJa": "みじかい 母音（a i u e o）の すぐ あとの「チ」は tch と かくよ。t は きこえないけど かく！catch・match・watch・kitchen。"
+      },
+      "vocab": [
+        {
+          "en": "fisher",
+          "ja": "りょうし",
+          "emoji": "🎣",
+          "core": true
+        },
+        {
+          "en": "net",
+          "ja": "あみ",
+          "emoji": "🥅"
+        },
+        {
+          "en": "sunrise",
+          "ja": "ひので",
+          "emoji": "🌅"
+        },
+        {
+          "en": "job",
+          "ja": "しごと",
+          "emoji": "💼"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! It's very early. Look, the sun is rising! We're at the fishing port, and the fishing boats are coming back. Today we learn how to talk about jobs. Today's sentence is: What does he do? Say it with me. What does he do? Good! Be careful. What does he do? doesn't mean, what is he doing now. It means, what's his job? What does he do? は「いま なにを している？」 では なく「おしごとは なに？」 だよ。 Answer like this. He's a fisher. He catches fish every morning. She drives a boat. Now, phonics. Listen to the end of catch. Catch. It sounds like ch, but we write t c h. After a short vowel, we use t c h. Catch. Match. Watch. Kitchen. Say them with me. Catch. Match. Watch. Kitchen. Excellent! A speaking tip. When you meet someone at work, you can say, Your job looks fun! or That's cool! Let's watch the fishers at work.",
+      "conversation": {
+        "scene": "A fishing port at dawn, watching the fishing boats come back",
+        "sceneJa": "よあけの ぎょこうを けんがくする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at all the boats! Who is that man with the big net?",
+            "ja": "ふねが いっぱい！あの おおきな あみを もった おとこの ひとは だれ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What does he do?",
+            "ja": "あの ひとの おしごとは なに？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "He's a fisher. He catches fish every morning.",
+            "ja": "りょうしさんよ。まいあさ さかなを とるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And that woman drives the boat. Her job looks fun!",
+            "ja": "それに あの おんなの ひとは ふねを うんてんしてる。たのしそうな しごと！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I want to catch a fish, too! Oops, I caught a boot!",
+            "ja": "ぼくも さかなを とりたい！あれっ、ながぐつ つれちゃった！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "みなとで はたらく ひとに ついて What does he (she) do? と きいてみよう。こたえは He's a ～.",
+          "starterEn": "Good morning! I'm Kiko. Look at all the people at the port! Who do you want to ask about?",
+          "targetExpressions": [
+            "What does he do?",
+            "He's a ～.",
+            "Her job looks fun!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What does he do? は「おしごとは なに？」",
+          "He's a fisher. He catches fish every morning.",
+          "catch・match・watch・kitchen：みじかい 母音の あとは tch"
+        ]
+      }
+    },
+    {
+      "lessonNo": 377,
+      "world": 13,
+      "title": "She Works at the Bakery",
+      "titleJa": "かのじょは パンやさんで はたらく",
+      "school": {
+        "grade": "中1",
+        "topic": "はたらく ばしょ：She works at ～.",
+        "grammar": "She works at the bakery. / Where does she work? ― She works at ～.",
+        "expressions": [
+          {
+            "en": "She works at the bakery.",
+            "ja": "かのじょは パンやさんで はたらいています。",
+            "core": true
+          },
+          {
+            "en": "Where does he work? ― He works at the post office.",
+            "ja": "かれは どこで はたらいて いますか。― ゆうびんきょくで はたらいて います。"
+          },
+          {
+            "en": "Can I help you?",
+            "ja": "おてつだい しましょうか。／いらっしゃいませ。"
+          }
+        ],
+        "testPoints": [
+          "Where does he / she work? と たずね、He / She works at ～. で こたえられる",
+          "tch の ことば（fetch, sketch, stretch, ketchup）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your apron.",
+          "ja": "エプロンを つけて。",
+          "action": "エプロンを つけて うしろで むすぶ まね",
+          "emoji": "🧑‍🍳"
+        },
+        {
+          "en": "Stretch your arms.",
+          "ja": "うでを のばして。",
+          "action": "りょううでを よこに ぐーんと のばす",
+          "emoji": "🙆"
+        },
+        {
+          "en": "Roll the dough.",
+          "ja": "きじを のばして。",
+          "action": "めんぼうで ころころ のばす まね",
+          "emoji": "🥐"
+        },
+        {
+          "en": "Put the bread on the tray.",
+          "ja": "パンを トレーに のせて。",
+          "action": "そっと パンを ならべる まね",
+          "emoji": "🍞"
+        }
+      ],
+      "phonics": {
+        "rule": "tch",
+        "focus": [
+          "tch"
+        ],
+        "sounds": [
+          "/tʃ/"
+        ],
+        "words": [
+          "fetch",
+          "sketch",
+          "stretch",
+          "ketchup"
+        ],
+        "tipJa": "e の あとの「チ」も tch。fetch（もってくる）、sketch（スケッチ）、stretch（のばす）、ketchup（ケチャップ）。"
+      },
+      "vocab": [
+        {
+          "en": "bakery",
+          "ja": "パンや",
+          "emoji": "🥐",
+          "core": true
+        },
+        {
+          "en": "apron",
+          "ja": "エプロン",
+          "emoji": "🧑‍🍳"
+        },
+        {
+          "en": "post office",
+          "ja": "ゆうびんきょく",
+          "emoji": "🏤"
+        },
+        {
+          "en": "customer",
+          "ja": "おきゃくさん",
+          "emoji": "🧍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Do you remember the baker? She gets up at four. Today we're helping at her bakery! Put on your apron. Today's sentence is: She works at the bakery. Say it with me. She works at the bakery. Good! To ask about a workplace, say, Where does she work? She works at the bakery. Where does he work? He works at the post office. はたらく ばしょ は works at の あとに いうよ。 And when a customer comes in, the workers say, Can I help you? That's a friendly way to say, hello, what do you need? Now, phonics. More t c h words! Fetch. Sketch. Stretch. Ketchup. Say them with me. Fetch. Sketch. Stretch. Ketchup. Great! After a short e, we write t c h, too. One more tip. When you get something, say, Thank you! And when someone says thank you, say, You're welcome! Okay, bakers, let's get to work!",
+      "conversation": {
+        "scene": "The early morning bakery, helping the baker, played by Ms. Emma",
+        "sceneJa": "朝の パンやさんで、おてつだいを する（エマ先生が パンやさんの やくを する）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the baker today. Good morning, helpers! Please put on your aprons.",
+            "ja": "きょうは わたしが パンやさんよ。おはよう、おてつだいさん！エプロンを つけてね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Good morning! Where does the baker work every day?",
+            "ja": "おはようございます！パンやさんは まいにち どこで はたらいて いるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "She works at this bakery, of course! Look, a customer!",
+            "ja": "もちろん この パンやさんだよ！みて、おきゃくさん！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hello! Can I help you?",
+            "ja": "いらっしゃいませ！なにに しますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm the customer! Two rolls and some ketchup, please!",
+            "ja": "ぼくが おきゃくさん！ロールパン 2つと ケチャップ ください！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ketchup? Okay. Here you are!",
+            "ja": "ケチャップ？わかった。はい、どうぞ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "パンやさんごっこを しよう。Can I help you? と きかれたら、ほしい パンを たのんでね。Where does she work? も きいてみよう",
+          "starterEn": "Good morning! Welcome to the harbor bakery. I'm Kiko, and I'm helping today. Can I help you?",
+          "targetExpressions": [
+            "Can I help you?",
+            "She works at ～.",
+            "～, please."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "She works at the bakery. はたらく ばしょは works at",
+          "Can I help you? で おみせやさんの ことば",
+          "fetch・sketch・stretch・ketchup も tch"
+        ]
+      }
+    },
+    {
+      "lessonNo": 378,
+      "world": 13,
+      "title": "He Fixes Boats",
+      "titleJa": "かれは ふねを なおす",
+      "school": {
+        "grade": "中1",
+        "topic": "しごとの ないよう：He fixes ～. / He doesn't ～.",
+        "grammar": "He fixes boats. / He uses ～. / Does he make boats? ― No, he doesn't. He fixes them.",
+        "expressions": [
+          {
+            "en": "He fixes boats.",
+            "ja": "かれは ふねを なおします。",
+            "core": true
+          },
+          {
+            "en": "He uses a hammer and a big brush.",
+            "ja": "かれは かなづちと おおきな はけを つかいます。"
+          },
+          {
+            "en": "Does he make boats? ― No, he doesn't. He fixes them.",
+            "ja": "かれは ふねを つくるの？ ― いいえ。ふねを なおすんです。"
+          }
+        ],
+        "testPoints": [
+          "しごとの ないようを He fixes ～. / He uses ～. で せつめい できる",
+          "tch の ことば（switch, patch, scratch, stitch）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hammer the nail.",
+          "ja": "くぎを うって。",
+          "action": "かなづちで とんとん うつ まね",
+          "emoji": "🔨"
+        },
+        {
+          "en": "Paint the boat.",
+          "ja": "ふねに ペンキを ぬって。",
+          "action": "はけで うえから したへ ぬる まね",
+          "emoji": "🖌️"
+        },
+        {
+          "en": "Turn on the switch.",
+          "ja": "スイッチを いれて。",
+          "action": "ゆびで カチッと おす",
+          "emoji": "💡"
+        },
+        {
+          "en": "Scratch your head.",
+          "ja": "あたまを かいて。",
+          "action": "こまった かおで あたまを かく",
+          "emoji": "🤔"
+        }
+      ],
+      "phonics": {
+        "rule": "tch",
+        "focus": [
+          "tch"
+        ],
+        "sounds": [
+          "/tʃ/"
+        ],
+        "words": [
+          "switch",
+          "patch",
+          "scratch",
+          "stitch"
+        ],
+        "tipJa": "switch（スイッチ）、patch（つぎあて）、scratch（ひっかく）、stitch（ぬう）。どれも みじかい 母音の あとの tch だよ。"
+      },
+      "vocab": [
+        {
+          "en": "shipyard",
+          "ja": "ぞうせんじょ",
+          "emoji": "🏗️",
+          "core": true
+        },
+        {
+          "en": "hammer",
+          "ja": "かなづち",
+          "emoji": "🔨"
+        },
+        {
+          "en": "paint",
+          "ja": "ペンキ",
+          "emoji": "🎨"
+        },
+        {
+          "en": "hole",
+          "ja": "あな",
+          "emoji": "🕳️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Bang, bang, bang! What's that sound? We're at the shipyard. A shipyard is a place for making and fixing boats. Today we meet a man who fixes boats. Today's sentence is: He fixes boats. Say it with me. He fixes boats. Good! Remember, fix ends with x. So we say fixes, with iz. He uses a hammer and a big brush. Uses also ends with iz. Let's try a question. Does he make boats? No, he doesn't. He fixes them. Them means the boats. them は「それらを」。 ここでは ふねの ことだよ。 Now, phonics. More t c h words. Switch. Patch. Scratch. Stitch. Say them with me. Switch. Patch. Scratch. Stitch. Wonderful! Here's a tip. When you don't know a word, ask, What's this? or What's this called? People are happy to teach you. Let's go inside the shipyard. Be careful, okay?",
+      "conversation": {
+        "scene": "A shipyard, meeting a man who repairs boats, played by Ms. Emma",
+        "sceneJa": "ぞうせんじょで、ふねを なおす ひとに あう（エマ先生が やくを する）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Now I'm a boat fixer. Welcome to my shipyard!",
+            "ja": "こんどは わたしが ふねを なおす ひとよ。ぞうせんじょへ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! Do you make boats here?",
+            "ja": "わあ！ここで ふねを つくって いるんですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, I don't. I fix them. This boat has a hole, so I put a patch on it.",
+            "ja": "いいえ。なおして いるの。この ふねには あなが あるから、つぎあてを するのよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What's this called?",
+            "ja": "これは なんて いうの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a hammer. I use it every day.",
+            "ja": "かなづちよ。まいにち つかうの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "So, he fixes boats and uses a hammer. Birimo, write that in your notebook!",
+            "ja": "つまり、ふねを なおして かなづちを つかうんだね。ビリモ、ノートに かいておいて！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ふねを なおす ひとの しごとを He fixes ～. / He uses ～. で せつめいしよう。わからない ものは What's this called? と きいてね",
+          "starterEn": "Hello! I'm Haru. We're at the shipyard. Look at that man! What does he do?",
+          "targetExpressions": [
+            "He fixes ～.",
+            "He uses ～.",
+            "What's this called?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "He fixes boats. He uses a hammer.",
+          "What's this called? で ものの なまえを きいたね",
+          "switch・patch・scratch・stitch：tch の なかま"
+        ]
+      }
+    },
+    {
+      "lessonNo": 379,
+      "world": 13,
+      "title": "Who Catches the Fish?",
+      "titleJa": "だれが さかなを とるの？",
+      "school": {
+        "grade": "中1",
+        "topic": "だれが する？：Who catches ～? ― The fisher does.",
+        "grammar": "Who catches the fish? ― The fisher does. / Who sells ～? ― She does.",
+        "expressions": [
+          {
+            "en": "Who catches the fish?",
+            "ja": "だれが さかなを とりますか。",
+            "core": true
+          },
+          {
+            "en": "The fisher does.",
+            "ja": "りょうしさんです。"
+          },
+          {
+            "en": "Who sells the fish? ― That woman does.",
+            "ja": "だれが さかなを うりますか。― あの おんなの ひとです。"
+          }
+        ],
+        "testPoints": [
+          "Who ＋ うごき-s ～? で「だれが ～する？」と たずね、～ does. で こたえられる",
+          "tch の ことば（hatch, pitch, itch, witch）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Carry the box.",
+          "ja": "はこを はこんで。",
+          "action": "おもい はこを はこぶ まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Weigh the fish.",
+          "ja": "さかなの おもさを はかって。",
+          "action": "はかりに のせる まね",
+          "emoji": "⚖️"
+        },
+        {
+          "en": "Count the money.",
+          "ja": "おかねを かぞえて。",
+          "action": "ゆびで かぞえる まね",
+          "emoji": "🪙"
+        },
+        {
+          "en": "Call out loudly.",
+          "ja": "おおきな こえで よびこんで。",
+          "action": "てを くちに あてて よびこむ",
+          "emoji": "📣"
+        }
+      ],
+      "phonics": {
+        "rule": "tch",
+        "focus": [
+          "tch"
+        ],
+        "sounds": [
+          "/tʃ/"
+        ],
+        "words": [
+          "hatch",
+          "pitch",
+          "itch",
+          "witch"
+        ],
+        "tipJa": "hatch（たまごが かえる）、pitch（なげる）、itch（かゆい）、witch（まじょ）。i や a の みじかい おとの あとだから、ぜんぶ tch で かくよ。"
+      },
+      "vocab": [
+        {
+          "en": "fish market",
+          "ja": "さかないちば",
+          "emoji": "🐟",
+          "core": true
+        },
+        {
+          "en": "box",
+          "ja": "はこ",
+          "emoji": "📦"
+        },
+        {
+          "en": "ice",
+          "ja": "こおり",
+          "emoji": "🧊"
+        },
+        {
+          "en": "price",
+          "ja": "ねだん",
+          "emoji": "🏷️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the fish market! It's noisy and busy. People are carrying boxes of fish and ice. So many jobs! Let's find out who does what. Today's sentence is: Who catches the fish? Say it with me. Who catches the fish? Good! Who means, which person? Who catches the fish? The fisher does. Who sells the fish? That woman does. Who が「だれが」の ときは、うごきに s が つくよ。 こたえは ～ does. で みじかく いえるよ。 Who carries the boxes? Those men do. Now, phonics. The last t c h words for this block. Hatch. Pitch. Itch. Witch. Say them with me. Hatch. Pitch. Itch. Witch. Great! Speaking tip. In a busy place, people talk fast. If you don't understand, it's okay. You can say, Sorry? We'll practice that soon. Now, let's be job detectives at the fish market!",
+      "conversation": {
+        "scene": "A busy fish market, finding out who does each job",
+        "sceneJa": "さかないちばで、だれが なにを するか しらべる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "This market is so busy! Who catches the fish?",
+            "ja": "この いちば、すごく にぎやか！だれが さかなを とるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The fishers do. They catch them early in the morning.",
+            "ja": "りょうしさんたちだよ。あさ はやくに とるんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Who sells the fish?",
+            "ja": "だれが さかなを うるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That woman does. She calls out the prices.",
+            "ja": "あの おんなの ひとよ。おおきな こえで ねだんを いってるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And who eats the fish? I do! Kiko does, too!",
+            "ja": "じゃあ だれが さかなを たべる？ぼく！キコも！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, I love fish!",
+            "ja": "うん、さかな だいすき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いちばの しごとに ついて Who ～s …? と きいて、～ does. で こたえよう",
+          "starterEn": "Hi! I'm Riko. This fish market is so busy! Let's play a quiz. Who catches the fish?",
+          "targetExpressions": [
+            "Who catches ～?",
+            "The fisher does.",
+            "She does."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Who catches the fish? ― The fisher does.",
+          "Who が「だれが」の ときは うごきに s",
+          "hatch・pitch・itch・witch で tch の まとめ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 380,
+      "world": 13,
+      "title": "Harbor Job Interviews",
+      "titleJa": "みなとの おしごと インタビュー",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：しごとの インタビュー（What do you do? / What do you do every day?）",
+        "grammar": "What do you do every day? ― I ～. / Do you like your job? ― Yes, I do.",
+        "expressions": [
+          {
+            "en": "What do you do every day?",
+            "ja": "まいにち なにを しますか。",
+            "core": true
+          },
+          {
+            "en": "I check the lighthouse lamp every night.",
+            "ja": "まいばん とうだいの あかりを てんけんします。"
+          },
+          {
+            "en": "Do you like your job? ― Yes, I love it!",
+            "ja": "おしごとは すきですか。― はい、だいすきです！"
+          }
+        ],
+        "testPoints": [
+          "インタビューで あいての しごとを たずね、きいた ことを He / She ～s. で ほうこく できる",
+          "tch と ch を つかいわけられる（catch / teach、kitchen / lunch）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the microphone.",
+          "ja": "マイクを もって。",
+          "action": "マイクを くちの まえに もつ まね",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Ask a question.",
+          "ja": "しつもんして。",
+          "action": "マイクを あいてに むける",
+          "emoji": "❓"
+        },
+        {
+          "en": "Take notes.",
+          "ja": "メモを とって。",
+          "action": "てのひらに さらさら かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Say thank you and bow.",
+          "ja": "ありがとうと いって おじぎ。",
+          "action": "ていねいに おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "tch",
+          "ch"
+        ],
+        "sounds": [
+          "/tʃ/"
+        ],
+        "words": [
+          "catch",
+          "kitchen",
+          "teach",
+          "lunch",
+          "sketch"
+        ],
+        "tipJa": "おなじ「チ」でも、みじかい 母音の すぐ あと なら tch（catch・kitchen・sketch）、ながい 母音（ea）や 子音（n）の あと なら ch（teach・lunch）。"
+      },
+      "vocab": [
+        {
+          "en": "interview",
+          "ja": "インタビュー",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "lighthouse keeper",
+          "ja": "とうだいもり",
+          "emoji": "🗼"
+        },
+        {
+          "en": "lamp",
+          "ja": "あかり・ランプ",
+          "emoji": "💡"
+        },
+        {
+          "en": "question",
+          "ja": "しつもん",
+          "emoji": "❓"
+        }
+      ],
+      "teacherScript": "Hello, reporters! Today, you are all news reporters. We will interview the people of Sunrise Harbor about their jobs. Microphones ready? Today's sentence is: What do you do every day? Say it with me. What do you do every day? Good! In an interview, we talk to the person, so we say you. What do you do every day? I check the lighthouse lamp every night. Do you like your job? Yes, I love it! Then, we report to our friends. He checks the lamp every night. He loves his job. インタビューでは you、ほうこくする ときは he や she に かえるよ。 Now, phonics review. Catch and teach. Both have the ch sound. But catch has a short a, so we write t c h. Teach has a long e sound, so we write c h. Kitchen, lunch, sketch. Say them with me. Catch. Kitchen. Teach. Lunch. Sketch. Excellent! At the end, always say, Thank you for your time! Let's start the interviews!",
+      "conversation": {
+        "scene": "Interviewing the lighthouse keeper, played by Ms. Emma, about the job",
+        "sceneJa": "港の 人たちに しごとの インタビューを する（エマ先生が とうだいもりの やく）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hello, reporters! I'm the lighthouse keeper. Ask me anything!",
+            "ja": "こんにちは、きしゃの みなさん！わたしは とうだいもりよ。なんでも きいてね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hello! What do you do every day?",
+            "ja": "こんにちは！まいにち なにを するんですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I check the lamp every night. The ships need the light.",
+            "ja": "まいばん あかりを てんけんするの。ふねには この ひかりが ひつようなのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Do you like your job?",
+            "ja": "おしごとは すきですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, I love it! I watch the sunrise every morning, too.",
+            "ja": "ええ、だいすき！まいあさ ひのでも みられるしね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you for your time! Everyone, she checks the lamp every night, and she loves her job!",
+            "ja": "おじかんを ありがとうございました！みんな、とうだいもりさんは まいばん あかりを てんけんして、おしごとが だいすきなんだって！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "とうだいもりさんに インタビューしよう。What do you do every day? / Do you like your job? と きいて、さいごに Thank you for your time! と いおう",
+          "starterEn": "Hello, reporter! I'm the lighthouse keeper of Sunrise Harbor. What do you want to know about my job?",
+          "targetExpressions": [
+            "What do you do every day?",
+            "Do you like your job?",
+            "Thank you for your time!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "きしゃに なって インタビュー できたね",
+          "What do you do every day? → きいた ことを She checks ～. で ほうこく",
+          "catch / teach：tch と ch の つかいわけ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 381,
+      "world": 13,
+      "title": "Really? Me Too!",
+      "titleJa": "ほんとう？ わたしも！",
+      "school": {
+        "grade": "中1",
+        "topic": "かいわの スキル：あいづち（Really? / Me too! / Oh, I see.）",
+        "grammar": "I like ～. ― Really? Me too! / I don't like ～. ― Me neither.",
+        "expressions": [
+          {
+            "en": "Really? Me too!",
+            "ja": "ほんとう？ わたしも！",
+            "core": true
+          },
+          {
+            "en": "I live near the sea. ― Oh, I see.",
+            "ja": "うみの ちかくに すんでるよ。― へえ、そうなんだ。"
+          },
+          {
+            "en": "I don't like rainy days. ― Me neither.",
+            "ja": "あめの ひは すきじゃない。― わたしも すきじゃない。"
+          }
+        ],
+        "testPoints": [
+          "あいての はなしに Really? / Me too! / Oh, I see. で あいづちが うてる",
+          "みじかい 母音の すぐ あとの「ヂ」は dge と かく（bridge, badge, edge, hedge）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Nod your head.",
+          "ja": "うなずいて。",
+          "action": "うんうんと うなずく",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Look surprised.",
+          "ja": "びっくりした かおを して。",
+          "action": "めと くちを おおきく あける",
+          "emoji": "😮"
+        },
+        {
+          "en": "Give a high five.",
+          "ja": "ハイタッチして。",
+          "action": "てを あげて パチン",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Point to yourself.",
+          "ja": "じぶんを ゆびさして。",
+          "action": "じぶんの むねを ゆびさす",
+          "emoji": "☝️"
+        }
+      ],
+      "phonics": {
+        "rule": "dge",
+        "focus": [
+          "dge"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "bridge",
+          "badge",
+          "edge",
+          "hedge"
+        ],
+        "tipJa": "みじかい 母音の すぐ あとの「ヂ」は dge と かくよ。d は きこえないけど かく！bridge（はし）、badge（バッジ）、edge（はし・ふち）、hedge（いけがき）。"
+      },
+      "vocab": [
+        {
+          "en": "badge",
+          "ja": "バッジ",
+          "emoji": "📛",
+          "core": true
+        },
+        {
+          "en": "bridge",
+          "ja": "はし（かわや うみに かかる）",
+          "emoji": "🌉"
+        },
+        {
+          "en": "local",
+          "ja": "じもとの",
+          "emoji": "🏘️"
+        },
+        {
+          "en": "hobby",
+          "ja": "しゅみ",
+          "emoji": "🎨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're under the big lighthouse. A local girl is here. She's very friendly. Let's practice real conversation! When you listen to a friend, don't be quiet like a stone. Give a reaction! はなしを きく ときは、あいづちを うとう。 Today's sentence is: Really? Me too! Say it with me. Really? Me too! Great! If your friend says, I like soccer, and you like soccer, too, say, Really? Me too! If something is new to you, say, Oh, I see. And if you both don't like something, say, Me neither. I don't like rainy days. Me neither. Now, phonics. New spelling! Listen. Bridge. Badge. Edge. Hedge. The sound is j, but we write d g e. After a short vowel, we use d g e. Say them with me. Bridge. Badge. Edge. Hedge. Wonderful! One more tip. Smile and nod when you listen. Your friend will want to talk more. Let's go and say hi!",
+      "conversation": {
+        "scene": "Under the lighthouse, chatting with a local child, played by Birimo",
+        "sceneJa": "とうだいの したで、じもとの こ（ビリモが やくを する）と おしゃべり",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Let's pretend I'm a kid from this town. Hi! I like collecting badges.",
+            "ja": "ぼくが この まちの こだって ことに しよう。やあ！ぼく、バッジを あつめるのが すきなんだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Really? Me too! I have a ship badge.",
+            "ja": "ほんとう？ぼくも！ふねの バッジを もってるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Cool! I live near the big bridge.",
+            "ja": "かっこいい！ぼくは おおきな はしの ちかくに すんでるんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh, I see. Can you see the sea from your house?",
+            "ja": "へえ、そうなんだ。いえから うみが みえる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes! But I don't like rainy days. The sea is gray.",
+            "ja": "うん！でも あめの ひは すきじゃない。うみが はいいろなんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me neither. I like sunny days!",
+            "ja": "わたしも すきじゃない。はれの ひが すき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あいての はなしに Really? Me too! / Oh, I see. / Me neither. で あいづちを うとう（すんでいる ばしょの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm a kid from Sunrise Harbor. I like collecting badges. Do you collect anything?",
+          "targetExpressions": [
+            "Really? Me too!",
+            "Oh, I see.",
+            "Me neither."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Really? Me too! / Oh, I see. / Me neither. で あいづち",
+          "うなずいて えがおで きくと かいわが つづくね",
+          "bridge・badge・edge・hedge：みじかい 母音の あとは dge"
+        ]
+      }
+    },
+    {
+      "lessonNo": 382,
+      "world": 13,
+      "title": "How About You?",
+      "titleJa": "あなたは どう？",
+      "school": {
+        "grade": "中1",
+        "topic": "かいわの スキル：しつもんを かえす（How about you? / What about you?）",
+        "grammar": "I like ～. How about you? ― I like ～.",
+        "expressions": [
+          {
+            "en": "I like soccer. How about you?",
+            "ja": "わたしは サッカーが すきです。あなたは どう？",
+            "core": true
+          },
+          {
+            "en": "I like basketball. My favorite player is fast.",
+            "ja": "わたしは バスケットボールが すきです。すきな せんしゅは あしが はやいです。"
+          },
+          {
+            "en": "I'm from Japan. What about you?",
+            "ja": "わたしは にほんから きました。あなたは？"
+          }
+        ],
+        "testPoints": [
+          "じぶんの ことを いった あとに How about you? と しつもんを かえせる",
+          "dge の ことば（judge, fudge, lodge, dodge）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Dodge the ball!",
+          "ja": "ボールを よけて！",
+          "action": "からだを よこに さっと よける",
+          "emoji": "🤸"
+        },
+        {
+          "en": "Dribble the ball.",
+          "ja": "ボールを ドリブルして。",
+          "action": "ボールを つく まね",
+          "emoji": "🏀"
+        },
+        {
+          "en": "Pass it to me.",
+          "ja": "わたしに パスして。",
+          "action": "りょうてで まえに なげる まね",
+          "emoji": "🤾"
+        },
+        {
+          "en": "Turn to your friend.",
+          "ja": "ともだちの ほうを むいて。",
+          "action": "となりの ひとの ほうを むく",
+          "emoji": "↩️"
+        }
+      ],
+      "phonics": {
+        "rule": "dge",
+        "focus": [
+          "dge"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "judge",
+          "fudge",
+          "lodge",
+          "dodge"
+        ],
+        "tipJa": "u や o の みじかい おとの あとも dge。judge（しんぱん）、fudge（ファッジ・あまい おかし）、lodge（やまごや）、dodge（よける）。"
+      },
+      "vocab": [
+        {
+          "en": "plaza",
+          "ja": "ひろば",
+          "emoji": "⛲",
+          "core": true
+        },
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "💖"
+        },
+        {
+          "en": "player",
+          "ja": "せんしゅ",
+          "emoji": "🏃"
+        },
+        {
+          "en": "team",
+          "ja": "チーム",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're in the harbor plaza. There's a fountain and kids are playing ball. Yesterday we learned reactions. Today, let's learn how to keep a conversation going. Here's the secret. After you talk about yourself, ask the same question back! じぶんの ことを いったら、おなじ しつもんを あいてに かえそう。 Today's sentence is: I like soccer. How about you? Say it with me. I like soccer. How about you? Very good! How about you? means, what do you think? What do you like? What about you? means the same thing. Let's practice. I'm from Japan. What about you? I like dogs. How about you? Now, phonics. More d g e words. Judge. Fudge. Lodge. Dodge. Say them with me. Judge. Fudge. Lodge. Dodge. Great! Another tip. Conversation is like playing catch. You throw a question, your friend throws it back. Let's play ball in the plaza. Ready? How about you?",
+      "conversation": {
+        "scene": "The harbor plaza, exchanging favorite things with local kids",
+        "sceneJa": "港の ひろばで、すきな ものを こうかんする",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I like soccer. How about you, Birimo?",
+            "ja": "わたしは サッカーが すき。ビリモは どう？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like dodgeball! I'm good at dodging.",
+            "ja": "ぼくは ドッジボールが すき！よけるのが とくい なんだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Really? Me too! My favorite food is curry. What about you, Kiko?",
+            "ja": "ほんとう？ぼくも！ぼくの すきな たべものは カレー。キコは？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My favorite food is fish, of course! How about you, Ms. Emma?",
+            "ja": "わたしは もちろん さかな！エマ先生は どう？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I like fudge. It's a sweet treat. Let's buy some later!",
+            "ja": "わたしは ファッジが すき。あまい おかしよ。あとで かいましょう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな ものを いった あとに How about you? と しつもんを かえそう。2かい いじょう かえしてみてね",
+          "starterEn": "Hi! I'm Riko. I like soccer. How about you? What sport do you like?",
+          "targetExpressions": [
+            "I like ～. How about you?",
+            "What about you?",
+            "My favorite ～ is ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I like soccer. How about you? で しつもんを かえした",
+          "かいわは キャッチボール！",
+          "judge・fudge・lodge・dodge も dge"
+        ]
+      }
+    },
+    {
+      "lessonNo": 383,
+      "world": 13,
+      "title": "What Kind of Music?",
+      "titleJa": "どんな おんがく？",
+      "school": {
+        "grade": "中1",
+        "topic": "かいわの スキル：ついかの しつもん（What kind of ～?）",
+        "grammar": "What kind of music do you like? ― I like ～. / What kind?",
+        "expressions": [
+          {
+            "en": "What kind of music do you like?",
+            "ja": "どんな おんがくが すきですか。",
+            "core": true
+          },
+          {
+            "en": "I like songs with a fast beat.",
+            "ja": "はやい リズムの うたが すきです。"
+          },
+          {
+            "en": "I like books. ― What kind?",
+            "ja": "ほんが すきなんだ。― どんな ほん？"
+          }
+        ],
+        "testPoints": [
+          "What kind of ～ do you like? / What kind? で くわしく たずねられる",
+          "dge の ことば（wedge, ledge, ridge, gadget）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Clap to the beat.",
+          "ja": "リズムに あわせて てを たたいて。",
+          "action": "リズムよく てを たたく",
+          "emoji": "👏"
+        },
+        {
+          "en": "Tap your foot.",
+          "ja": "あしで リズムを とって。",
+          "action": "つまさきで とんとん",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Play the drums.",
+          "ja": "ドラムを たたいて。",
+          "action": "スティックで たたく まね",
+          "emoji": "🥁"
+        },
+        {
+          "en": "Sway from side to side.",
+          "ja": "よこに ゆれて。",
+          "action": "からだを ゆっくり さゆうに ゆらす",
+          "emoji": "🎶"
+        }
+      ],
+      "phonics": {
+        "rule": "dge",
+        "focus": [
+          "dge"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "wedge",
+          "ledge",
+          "ridge",
+          "gadget"
+        ],
+        "tipJa": "wedge（くさび）、ledge（たなの ような でっぱり）、ridge（やまの おね）、gadget（べんりな どうぐ）。gadget は ことばの まんなかに dge が あるね。"
+      },
+      "vocab": [
+        {
+          "en": "music",
+          "ja": "おんがく",
+          "emoji": "🎵",
+          "core": true
+        },
+        {
+          "en": "concert",
+          "ja": "コンサート・おんがくかい",
+          "emoji": "🎤"
+        },
+        {
+          "en": "drum",
+          "ja": "たいこ・ドラム",
+          "emoji": "🥁"
+        },
+        {
+          "en": "beat",
+          "ja": "リズム・はく",
+          "emoji": "🎶"
+        }
+      ],
+      "teacherScript": "Hello, music lovers! Tonight there's a small concert at the harbor. Can you hear the drums? Boom, boom! Today, let's learn how to ask for more details. Sometimes a friend says, I like music. That's nice, but music is a big word. So ask, What kind? くわしく ききたい ときは What kind? 「どんな？」 と きこう。 Today's sentence is: What kind of music do you like? Say it with me. What kind of music do you like? Good! What kind of food do you like? What kind of books do you like? I like books. What kind? Funny books! Now, phonics. Here are more d g e words. Wedge. Ledge. Ridge. Gadget. In gadget, d g e is in the middle. Say them with me. Wedge. Ledge. Ridge. Gadget. Super! Speaking tip. Your friend will be happy when you ask a second question. It shows you are interested. Let's enjoy the concert and ask our friends some questions.",
+      "conversation": {
+        "scene": "A small music concert at the harbor in the evening",
+        "sceneJa": "港の 小さな おんがくかいで",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "I love music! Listen to those drums!",
+            "ja": "おんがく だいすき！あの ドラム きいて！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What kind of music do you like, Kiko?",
+            "ja": "キコは どんな おんがくが すき？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like songs with a fast beat. They make me dance!",
+            "ja": "はやい リズムの うたが すき。おどりたく なるの！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I like quiet music. I listen to it before bed.",
+            "ja": "わたしは しずかな おんがくが すき。ねる まえに きくの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like music, too. Electric music! Bzzz!",
+            "ja": "ぼくも おんがく すき。でんきの おんがく！ビビビ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What kind? Is that a real kind of music?",
+            "ja": "どんなの？それって ほんとうに ある おんがく？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな ものを きいたら What kind? / What kind of ～ do you like? と ついかの しつもんを しよう",
+          "starterEn": "Hi! I'm Kiko. I love music! What kind of music do you like?",
+          "targetExpressions": [
+            "What kind of ～ do you like?",
+            "What kind?",
+            "I like ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What kind of music do you like? で くわしく きいた",
+          "What kind? の ひとことで かいわが ひろがるね",
+          "wedge・ledge・ridge・gadget：dge の なかま"
+        ]
+      }
+    },
+    {
+      "lessonNo": 384,
+      "world": 13,
+      "title": "Sorry? One More Time, Please.",
+      "titleJa": "えっ？ もういちど おねがいします",
+      "school": {
+        "grade": "中1",
+        "topic": "かいわの スキル：ききかえす（Sorry? Can you say that again?）",
+        "grammar": "Sorry? Can you say that again? / Can you speak more slowly, please?",
+        "expressions": [
+          {
+            "en": "Sorry? Can you say that again?",
+            "ja": "えっ？ もういちど いって くれる？",
+            "core": true
+          },
+          {
+            "en": "Can you speak more slowly, please?",
+            "ja": "もう すこし ゆっくり はなして くれますか。"
+          },
+          {
+            "en": "Oh, I got it. Thank you!",
+            "ja": "ああ、わかった。ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "ききとれない ときに Sorry? / Can you say that again? と ききかえせる",
+          "dge の ことば（fridge, badger, hedgehog, porridge）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Cup your ear.",
+          "ja": "みみに てを あてて。",
+          "action": "てを みみの うしろに あてて きく ポーズ",
+          "emoji": "👂"
+        },
+        {
+          "en": "Hold your hat. It's windy!",
+          "ja": "ぼうしを おさえて。かぜが つよいよ！",
+          "action": "あたまの ぼうしを りょうてで おさえる",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Walk to the end of the pier.",
+          "ja": "さんばしの さきまで あるいて。",
+          "action": "まっすぐ ゆっくり あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Give a thumbs-up.",
+          "ja": "おやゆびを たてて。",
+          "action": "グッドの ポーズ",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "dge",
+        "focus": [
+          "dge"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "fridge",
+          "badger",
+          "hedgehog",
+          "porridge"
+        ],
+        "tipJa": "fridge（れいぞうこ）、badger（アナグマ）、hedgehog（ハリネズミ）、porridge（おかゆ・オートミール）。ながい ことばの なかの dge も みつけよう。"
+      },
+      "vocab": [
+        {
+          "en": "pier",
+          "ja": "さんばし",
+          "emoji": "🌊",
+          "core": true
+        },
+        {
+          "en": "wind",
+          "ja": "かぜ",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "hedgehog",
+          "ja": "ハリネズミ",
+          "emoji": "🦔"
+        },
+        {
+          "en": "voice",
+          "ja": "こえ",
+          "emoji": "🗣️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Whoa, it's so windy today! We're on the pier, and the wind is very loud. Sometimes we can't hear our friends. Sometimes people talk too fast. What should we do? Don't just say yes! Ask again. ききとれない ときは、わかった ふりを しないで、ききかえそう。 それは はずかしい ことじゃ ないよ。 Today's sentence is: Sorry? Can you say that again? Say it with me. Sorry? Can you say that again? Excellent! And if it's too fast, say, Can you speak more slowly, please? When you understand, say, Oh, I got it. Thank you! Let's try. Blah blah blah! Sorry? Can you say that again? Perfect! Now, phonics. Find d g e in these words. Fridge. Badger. Hedgehog. Porridge. Say them with me. Fridge. Badger. Hedgehog. Porridge. Great! Remember, good speakers ask again. It's a strong skill. Let's walk to the end of the pier. Hold your hat!",
+      "conversation": {
+        "scene": "A windy pier, asking friends to repeat what they said",
+        "sceneJa": "かぜの つよい さんばしで、ききとれなかった ことを ききかえす",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look! There's a hedgehog near the boats!",
+            "ja": "みて！ふねの ちかくに ハリネズミが いる！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry? Can you say that again? The wind is so loud!",
+            "ja": "えっ？もういちど いって くれる？かぜの おとが すごいんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "A hedgehog! Near the boats!",
+            "ja": "ハリネズミ！ふねの ちかく！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh, I got it. Thank you! It's so cute!",
+            "ja": "ああ、わかった。ありがとう！かわいい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The hedgehog eats porridge from the fridge, and the badger eats fudge on the bridge!",
+            "ja": "（とても はやくちで）ハリネズミは れいぞうこの オートミールを たべて、アナグマは はしの うえで ファッジを たべるんだよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Can you speak more slowly, please, Birimo?",
+            "ja": "ビリモ、もう すこし ゆっくり はなして くれる？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ききとれなかったら Sorry? Can you say that again? / Can you speak more slowly, please? と ききかえそう",
+          "starterEn": "Hi! I'm Birimo! The wind is so strong today, and I talk super fast when I'm excited! Can you understand me?",
+          "targetExpressions": [
+            "Sorry? Can you say that again?",
+            "Can you speak more slowly, please?",
+            "Oh, I got it."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Sorry? Can you say that again? で ききかえせたね",
+          "Can you speak more slowly, please? も つかえる",
+          "fridge・badger・hedgehog・porridge の dge"
+        ]
+      }
+    },
+    {
+      "lessonNo": 385,
+      "world": 13,
+      "title": "Chat Time at the Harbor",
+      "titleJa": "みなとで おしゃべりタイム",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：ながく おしゃべり する（あいづち・しつもんを かえす・ついかの しつもん・ききかえす）",
+        "grammar": "That's cool! What kind? / How about you? / Sorry? / Really? Me too!",
+        "expressions": [
+          {
+            "en": "That's cool! What kind?",
+            "ja": "かっこいい！ どんなの？",
+            "core": true
+          },
+          {
+            "en": "I have a pet. ― Really? What kind of pet?",
+            "ja": "ペットを かってるよ。― ほんとう？ どんな ペット？"
+          },
+          {
+            "en": "Sorry? A lizard? Wow! I have a dog. How about you?",
+            "ja": "えっ？ トカゲ？ すごい！ わたしは いぬを かってるよ。あなたは？"
+          }
+        ],
+        "testPoints": [
+          "あいづち・ついかの しつもん・しつもんを かえす・ききかえす を つかって 6往復 いじょう はなせる",
+          "dge と ge を つかいわけられる（bridge / page、badge / large）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hang up the lanterns.",
+          "ja": "ちょうちんを かざって。",
+          "action": "たかい ところに つるす まね",
+          "emoji": "🏮"
+        },
+        {
+          "en": "Sit in a circle.",
+          "ja": "わに なって すわって。",
+          "action": "みんなで まるく すわる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Pass the snacks.",
+          "ja": "おかしを まわして。",
+          "action": "となりの ひとに わたす まね",
+          "emoji": "🍪"
+        },
+        {
+          "en": "Laugh together.",
+          "ja": "いっしょに わらって。",
+          "action": "おなかを かかえて わらう",
+          "emoji": "😆"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "dge",
+          "ge"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "bridge",
+          "badge",
+          "page",
+          "huge",
+          "large"
+        ],
+        "tipJa": "おなじ「ヂ」でも、みじかい 母音の すぐ あと なら dge（bridge・badge）、ながい 母音（page・huge）や 子音（large）の あと なら ge。"
+      },
+      "vocab": [
+        {
+          "en": "lantern",
+          "ja": "ちょうちん・ランタン",
+          "emoji": "🏮",
+          "core": true
+        },
+        {
+          "en": "festival",
+          "ja": "おまつり",
+          "emoji": "🎆"
+        },
+        {
+          "en": "pet",
+          "ja": "ペット",
+          "emoji": "🐾"
+        },
+        {
+          "en": "lizard",
+          "ja": "トカゲ",
+          "emoji": "🦎"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! Tomorrow is the harbor festival. Tonight, everyone is hanging up lanterns. It's beautiful! Some local kids are here. It's chat time! Let's use all our conversation skills. Number one, react. Really? Me too! That's cool! Number two, ask a second question. What kind? Number three, ask back. How about you? Number four, if you don't understand, ask again. Sorry? 4つの わざを ぜんぶ つかって、ながく はなそう。 Today's sentence is: That's cool! What kind? Say it with me. That's cool! What kind? Great! Now, phonics review. Listen. Bridge, badge. After a short vowel, d g e. Page, huge, large. After a long vowel or a consonant, just g e. Say them with me. Bridge. Badge. Page. Huge. Large. Excellent! Here's my last tip. Try to talk for a long time. Six turns or more! If you forget a word, that's okay. Smile and keep going. Let's sit in a circle and chat.",
+      "conversation": {
+        "scene": "The night before the harbor festival, a long chat with local kids under the lanterns",
+        "sceneJa": "みなとの おまつりの まえの ばん、じもとの こ（ビリモが やくを する）と ながく おしゃべり",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm a harbor kid again! I have a pet.",
+            "ja": "また ぼくが みなとの こだよ！ぼく、ペットを かってるんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Really? What kind of pet?",
+            "ja": "ほんとう？どんな ペット？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "A lizard. His name is Rocky.",
+            "ja": "トカゲ。なまえは ロッキー。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry? A lizard? That's cool! I have a dog. How about you, Riko?",
+            "ja": "えっ？トカゲ？かっこいい！ぼくは いぬを かってる。リコは どう？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I don't have a pet. But I like hamsters. What does Rocky eat?",
+            "ja": "わたしは ペットは いないの。でも ハムスターが すき。ロッキーは なにを たべるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "He eats bugs. Yum! Just kidding, I don't eat bugs!",
+            "ja": "むしを たべるよ。おいしそう！じょうだん、ぼくは むしは たべないよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "4つの わざ（Really? Me too! / What kind? / How about you? / Sorry?）を つかって、できるだけ ながく おしゃべりしよう（ほんとうの なまえや ばしょは いわなくて OK）",
+          "starterEn": "Hi! I'm a kid from Sunrise Harbor. The festival is tomorrow! I have a pet lizard. Do you have a pet?",
+          "targetExpressions": [
+            "That's cool! What kind?",
+            "How about you?",
+            "Really? Me too!",
+            "Sorry? Can you say that again?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "4つの かいわの わざで ながく おしゃべり できたね",
+          "That's cool! What kind? / How about you?",
+          "bridge・badge は dge、page・huge・large は ge"
+        ]
+      }
+    },
+    {
+      "lessonNo": 386,
+      "world": 13,
+      "title": "Harbor Quiz Time",
+      "titleJa": "みなとの ひと クイズ",
+      "school": {
+        "grade": "中1",
+        "topic": "ふりかえり：Does he / she ～? の クイズ（しごと・ばしょ）",
+        "grammar": "Does he work at ～? ― Yes, he does. / No, he doesn't. He works at ～.",
+        "expressions": [
+          {
+            "en": "Does he work at the lighthouse?",
+            "ja": "かれは とうだいで はたらいて いますか。",
+            "core": true
+          },
+          {
+            "en": "No, he doesn't. He works at the fish market.",
+            "ja": "いいえ。かれは さかないちばで はたらいて います。"
+          },
+          {
+            "en": "Is it the baker? ― Yes! You got it!",
+            "ja": "パンやさん？ ― そう！ せいかい！"
+          }
+        ],
+        "testPoints": [
+          "Does he / she ～? で クイズを だし、Yes, he does. / No, she doesn't. で こたえられる",
+          "-s・-es の 3つの おと（ス・ズ・イズ）を ききわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Press the buzzer!",
+          "ja": "ボタンを おして！",
+          "action": "まえの ボタンを パンと たたく",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "あごに てを あてて かんがえる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Make a circle with your arms.",
+          "ja": "うでで まるを つくって。",
+          "action": "あたまの うえで まる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Make an X with your arms.",
+          "ja": "うでで バツを つくって。",
+          "action": "むねの まえで うでを クロス",
+          "emoji": "❌"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-s",
+          "-es"
+        ],
+        "sounds": [
+          "/s/",
+          "/z/",
+          "/ɪz/"
+        ],
+        "words": [
+          "works",
+          "rides",
+          "fixes",
+          "washes"
+        ],
+        "tipJa": "ふりかえり！works は「ス」、rides は「ズ」、fixes・washes は「イズ」。クイズの ヒントを きく ときも、おわりの s に ちゅうもく！"
+      },
+      "vocab": [
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "hint",
+          "ja": "ヒント",
+          "emoji": "💡"
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "✅"
+        },
+        {
+          "en": "buzzer",
+          "ja": "はやおし ボタン",
+          "emoji": "🔔"
+        }
+      ],
+      "teacherScript": "Hello, quiz fans! Welcome to Harbor Quiz Time! We're at the top of the lighthouse. We met so many people in Sunrise Harbor. The fisher, the baker, the boat fixer, the lighthouse keeper. Let's see if you remember them. Today's sentence is: Does he work at the lighthouse? Say it with me. Does he work at the lighthouse? Good! Here's how the game works. I think of a person. You ask yes or no questions with Does he or Does she. Does she work at the bakery? Yes, she does! Does he fix boats? No, he doesn't. He catches fish. クイズの こたえは Yes か No。 Does で きいてね。 When you know the answer, say, Is it the baker? Now, phonics review. Listen to the endings. Works. Rides. Fixes. Washes. Sss, zzz, iz, iz. Wonderful! Quiz tip. Listen carefully to every hint. Ready? Hands on your buzzers. Let's play!",
+      "conversation": {
+        "scene": "The top of the lighthouse, playing a guess-who quiz about the harbor people",
+        "sceneJa": "とうだいの うえで、みなとの ひと クイズ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm thinking of a person in this town. Ask me questions!",
+            "ja": "この まちの ある ひとを おもいうかべて いるわ。しつもんしてね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Does he work at the lighthouse?",
+            "ja": "その ひとは とうだいで はたらいて いる？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, he doesn't. He works near the water.",
+            "ja": "いいえ。みずの ちかくで はたらいて いるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Does he fix boats?",
+            "ja": "ふねを なおす ひと？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, he doesn't. He gets up very early and uses a big net.",
+            "ja": "いいえ。とても はやおきで、おおきな あみを つかうの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I know! Is it the fisher?",
+            "ja": "わかった！りょうしさん？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes! You got it!",
+            "ja": "そう！せいかい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "みなとの ひと クイズ！Does he (she) ～? と しつもんして、だれの ことか あてよう",
+          "starterEn": "Welcome to Harbor Quiz Time! I'm thinking of a person in Sunrise Harbor. Ask me yes or no questions!",
+          "targetExpressions": [
+            "Does he work at ～?",
+            "Does she ～?",
+            "Is it the ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Does he work at the lighthouse? ― No, he doesn't.",
+          "ヒントを きいて Is it the fisher? で せいかい！",
+          "works・rides・fixes・washes：ス・ズ・イズ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 387,
+      "world": 13,
+      "title": "My Friend's Day",
+      "titleJa": "ともだちの 1にち",
+      "school": {
+        "grade": "中1",
+        "topic": "ふりかえり：ともだちの 1にちを しょうかいする（3人称単数・ひんどの ことば）",
+        "grammar": "Riko gets up at six. She reads every morning. / She always ～. / She never ～.",
+        "expressions": [
+          {
+            "en": "Riko gets up at six. She reads every morning.",
+            "ja": "リコは 6じに おきます。まいあさ ほんを よみます。",
+            "core": true
+          },
+          {
+            "en": "She always has a notebook in her bag.",
+            "ja": "かのじょは いつも かばんに ノートを いれて います。"
+          },
+          {
+            "en": "Haru never goes to bed early!",
+            "ja": "ハルは ぜったいに はやく ねません！"
+          }
+        ],
+        "testPoints": [
+          "ともだちの 1にちを He / She ＋ うごき-s と ひんどの ことばで 3文 いじょう はなせる",
+          "studies・goes・has など he / she の ときの かたちを ただしく よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pretend to sleep.",
+          "ja": "ねた ふりを して。",
+          "action": "てを ほおに あてて めを とじる",
+          "emoji": "😴"
+        },
+        {
+          "en": "Ring the alarm clock.",
+          "ja": "めざましどけいを ならして。",
+          "action": "とけいを ジリリと ならす まね",
+          "emoji": "⏰"
+        },
+        {
+          "en": "Jump out of bed.",
+          "ja": "ベッドから とびおきて。",
+          "action": "その ばで ぴょんと とぶ",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "Read a book quietly.",
+          "ja": "しずかに ほんを よんで。",
+          "action": "ほんを もって しずかに よむ まね",
+          "emoji": "📖"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ies",
+          "goes",
+          "has",
+          "-s"
+        ],
+        "sounds": [
+          "/z/"
+        ],
+        "words": [
+          "studies",
+          "goes",
+          "has",
+          "reads"
+        ],
+        "tipJa": "ふりかえり！study → studies（y を i に かえて es）、go → goes、have → has（とくべつな かたち）、read → reads（s を つけるだけ）。"
+      },
+      "vocab": [
+        {
+          "en": "alarm clock",
+          "ja": "めざましどけい",
+          "emoji": "⏰",
+          "core": true
+        },
+        {
+          "en": "routine",
+          "ja": "まいにちの ながれ・しゅうかん",
+          "emoji": "🔁"
+        },
+        {
+          "en": "early bird",
+          "ja": "はやおきの ひと",
+          "emoji": "🐤"
+        },
+        {
+          "en": "night owl",
+          "ja": "よふかしの ひと",
+          "emoji": "🦉"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're on the ship again, sailing around the harbor. The sea is calm today. Today, let's talk about our friends' days. You know a lot about Riko, Haru, Kiko, and Birimo now. Today's sentences are: Riko gets up at six. She reads every morning. Say them with me. Riko gets up at six. She reads every morning. Very good! Remember, when we talk about a friend, the verb gets an s. Gets. Reads. And use frequency words. She always has a notebook in her bag. Haru never goes to bed early! Riko is an early bird. She gets up early. Haru is a night owl. He stays up late. early bird は はやおきの ひと、 night owl は よふかしの ひと。 Now, phonics review. Studies. Goes. Has. Reads. Say them with me. Studies. Goes. Has. Reads. Great job! Speaking tip. Use and, then, and after that to connect your sentences. Let's talk about our friends!",
+      "conversation": {
+        "scene": "On the ship sailing around the harbor, introducing each other's daily routines",
+        "sceneJa": "ふねの うえで、ともだちの 1にちを しょうかいし あう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Let me tell you about Riko's day. Riko gets up at six. She reads every morning.",
+            "ja": "リコの 1にちを しょうかいするね。リコは 6じに おきて、まいあさ ほんを よむの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "She always has a notebook in her bag. She's an early bird!",
+            "ja": "かばんには いつも ノートが はいってる。はやおきさんなの！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "That's right! Now, Haru's day. Haru plays soccer after school. Then he does his homework.",
+            "ja": "そのとおり！じゃあ ハルの 1にち。ハルは ほうかごに サッカーを して、それから しゅくだいを するよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And I never go to bed early. I'm a night owl!",
+            "ja": "それに ぼくは ぜったいに はやく ねないんだ。よふかしさん！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My turn! Birimo gets up at noon, eats lunch, and goes back to bed!",
+            "ja": "ぼくの ばん！ビリモは おひるに おきて、おひるごはんを たべて、また ねるんだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ともだち（キャラクターでも OK）の 1にちを 3文で しょうかいしよう。He gets up at ～. He always ～. Then he ～.（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Kiko. Let's talk about our friends. Tell me about a friend's day. What time does your friend get up?",
+          "targetExpressions": [
+            "He gets up at ～.",
+            "She always ～.",
+            "Then she ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Riko gets up at six. She reads every morning.",
+          "early bird と night owl、どっち かな？",
+          "studies・goes・has・reads の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 388,
+      "world": 13,
+      "title": "A Postcard from the Harbor",
+      "titleJa": "みなとからの えはがき",
+      "school": {
+        "grade": "中1",
+        "topic": "かく：えはがき（3文）を かく（This town has ～. / People ～. / I ～.）",
+        "grammar": "This town has ～. / The people here ～. / I love ～.",
+        "expressions": [
+          {
+            "en": "This town has a big lighthouse.",
+            "ja": "この まちには おおきな とうだいが あります。",
+            "core": true
+          },
+          {
+            "en": "The people here get up very early.",
+            "ja": "ここの ひとたちは とても はやおきです。"
+          },
+          {
+            "en": "I miss you. See you soon!",
+            "ja": "あいたいな。また すぐ あおうね！"
+          }
+        ],
+        "testPoints": [
+          "This town has ～. を つかって えはがきを 3文で かける（Dear ～, と さいごの なまえ も）",
+          "tch と dge の ことばを ただしく かける（sketch, catch, bridge, badge）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write a postcard.",
+          "ja": "えはがきを かいて。",
+          "action": "ペンで かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Stick on a stamp.",
+          "ja": "きってを はって。",
+          "action": "かどに ぺたっと はる まね",
+          "emoji": "📮"
+        },
+        {
+          "en": "Drop it in the mailbox.",
+          "ja": "ポストに いれて。",
+          "action": "ポストに すっと いれる まね",
+          "emoji": "📫"
+        },
+        {
+          "en": "Blow a kiss.",
+          "ja": "なげキッスを して。",
+          "action": "てのひらに キスして ふっと とばす",
+          "emoji": "😘"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "tch",
+          "dge"
+        ],
+        "sounds": [
+          "/tʃ/",
+          "/dʒ/"
+        ],
+        "words": [
+          "sketch",
+          "catch",
+          "bridge",
+          "badge"
+        ],
+        "tipJa": "ふりかえり！みじかい 母音の すぐ あとの「チ」は tch（sketch・catch）、「ヂ」は dge（bridge・badge）。えはがきに かく ときも つづりに ちゅうい！"
+      },
+      "vocab": [
+        {
+          "en": "postcard",
+          "ja": "えはがき",
+          "emoji": "🖼️",
+          "core": true
+        },
+        {
+          "en": "stamp",
+          "ja": "きって",
+          "emoji": "📮"
+        },
+        {
+          "en": "mailbox",
+          "ja": "ポスト",
+          "emoji": "📫"
+        },
+        {
+          "en": "post office clerk",
+          "ja": "ゆうびんきょくの ひと",
+          "emoji": "🧑‍💼"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're at the post office in Sunrise Harbor. Let's write postcards to our families! A postcard is short. Just three sentences is great. Today's sentence is: This town has a big lighthouse. Say it with me. This town has a big lighthouse. Good! Here's how to write a postcard. Start with Dear and the person. Dear Mom. Then write three sentences. One, about the town. This town has a big lighthouse. Two, about the people. The people here get up very early. Three, about you. I love the fish here! End with, See you soon! and your name. Dear で はじめて、3文 かいて、さいごに じぶんの なまえ。 It's easy! Now, phonics review. Sketch. Catch. Bridge. Badge. Say them with me. Sketch. Catch. Bridge. Badge. When you write these words, don't forget the t and the d! Writing tip. Start every sentence with a capital letter and end with a period. Let's get our pens!",
+      "conversation": {
+        "scene": "The harbor post office, writing postcards home",
+        "sceneJa": "ゆうびんきょくで、かぞくに えはがきを かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm writing to my mom. Dear Mom, this town has a big lighthouse.",
+            "ja": "おかあさんに かいてるの。おかあさんへ、この まちには おおきな とうだいが あります。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Nice! I'm writing to my brother. The people here get up very early.",
+            "ja": "いいね！ぼくは にいさんに かいてる。ここの ひとたちは とても はやおきです。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I drew a sketch of the bridge on my card.",
+            "ja": "わたしは カードに はしの スケッチを かいたよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "How do you spell bridge? B, R, I, J?",
+            "ja": "bridge って どう かくの？ B、R、I、J？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "No, B, R, I, D, G, E. There's a d!",
+            "ja": "ちがうよ、B、R、I、D、G、E。d が あるの！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job! Now put on a stamp and drop it in the mailbox.",
+            "ja": "よく できました！きってを はって、ポストに いれてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "えはがきに かく 3文を いってみよう。This town has ～. The people here ～. I love ～.（じぶんの じゅうしょは いわなくて OK）",
+          "starterEn": "Hi! I'm Riko. I'm writing a postcard. What can we write about this town? Let's make three sentences together!",
+          "targetExpressions": [
+            "This town has ～.",
+            "The people here ～.",
+            "See you soon!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This town has a big lighthouse. えはがきを 3文で かけたね",
+          "Dear ～, ではじめて、See you soon! で おわる",
+          "sketch・catch は tch、bridge・badge は dge"
+        ]
+      }
+    },
+    {
+      "lessonNo": 389,
+      "world": 13,
+      "title": "Sunrise Harbor Review",
+      "titleJa": "あさひの港町 ふりかえり",
+      "school": {
+        "grade": "中1",
+        "topic": "ふりかえり：まちの ひとを しょうかいする（likes・works at・doesn't・Does ～?）",
+        "grammar": "She likes ～. / He works at ～. / She doesn't ～. / Does he ～?",
+        "expressions": [
+          {
+            "en": "She likes cats. He works at the shipyard.",
+            "ja": "かのじょは ねこが すきです。かれは ぞうせんじょで はたらいて います。",
+            "core": true
+          },
+          {
+            "en": "The baker doesn't sleep late.",
+            "ja": "パンやさんは ねぼう しません。"
+          },
+          {
+            "en": "We'll miss you, Sunrise Harbor!",
+            "ja": "さびしく なるよ、あさひの港町！"
+          }
+        ],
+        "testPoints": [
+          "ワールド13 で あった ひとを 3人称単数の 文で しょうかい できる",
+          "tch / ch・dge / ge を つかいわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk along the beach.",
+          "ja": "はまべを あるいて。",
+          "action": "ゆっくり あるく",
+          "emoji": "🏖️"
+        },
+        {
+          "en": "Pick up a shell.",
+          "ja": "かいがらを ひろって。",
+          "action": "かがんで ひろう まね",
+          "emoji": "🐚"
+        },
+        {
+          "en": "Wave to the fishers.",
+          "ja": "りょうしさんに てを ふって。",
+          "action": "とおくに むかって てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Take one last picture.",
+          "ja": "さいごの しゃしんを とって。",
+          "action": "みんなで よって パシャッ",
+          "emoji": "📸"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "tch",
+          "ch",
+          "dge",
+          "ge"
+        ],
+        "sounds": [
+          "/tʃ/",
+          "/dʒ/"
+        ],
+        "words": [
+          "match",
+          "beach",
+          "fridge",
+          "page"
+        ],
+        "tipJa": "4つの つづりを ふりかえろう。match（tch）と beach（ch）、fridge（dge）と page（ge）。まえの 母音が みじかいか どうかが ヒントだよ。"
+      },
+      "vocab": [
+        {
+          "en": "beach",
+          "ja": "はまべ",
+          "emoji": "🏖️",
+          "core": true
+        },
+        {
+          "en": "shell",
+          "ja": "かいがら",
+          "emoji": "🐚"
+        },
+        {
+          "en": "memory",
+          "ja": "おもいで",
+          "emoji": "💭"
+        },
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This is our last walk in Sunrise Harbor. Let's walk along the beach and remember all the people we met. Today's sentences are: She likes cats. He works at the shipyard. Say them with me. She likes cats. He works at the shipyard. Excellent! Let's remember more. The baker gets up at four. She doesn't sleep late. The fisher catches fish. He doesn't fix boats. The cat cafe owner has twelve cats. Does she like cats? Yes, she does! You can say so many things now. 3人称単数の s、doesn't、Does ～?、ぜんぶ つかえるように なったね。 Now, phonics review. Match, beach. Fridge, page. Remember the rule. After a short vowel, t c h and d g e. Say them with me. Match. Beach. Fridge. Page. Wonderful! Speaking tip. When you leave a place, you can say, We'll miss you! It means, we will feel sad without you. Let's say goodbye to our friends in the town.",
+      "conversation": {
+        "scene": "A goodbye walk along the beach, remembering the people of Sunrise Harbor",
+        "sceneJa": "港町の さよなら さんぽ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look, there's the bakery. The baker gets up at four!",
+            "ja": "みて、パンやさんだ。パンやさんは 4じに おきるんだよね！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And the cat cafe owner likes cats. She has twelve cats!",
+            "ja": "それに ねこカフェの ひとは ねこが すき。12ひきも いるの！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The boat fixer works at the shipyard. He doesn't make boats. He fixes them.",
+            "ja": "ふねを なおす ひとは ぞうせんじょで はたらいてる。ふねは つくらないで、なおすんだよね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And the seagull still watches my sandwich!",
+            "ja": "それに あの カモメは まだ ぼくの サンドイッチを みてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "We'll miss you, Sunrise Harbor!",
+            "ja": "さびしく なるわ、あさひの港町！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あさひの港町で あった ひとを ふたり えらんで、She likes ～. / He works at ～. で しょうかいしよう",
+          "starterEn": "Hi! I'm Haru. This is our last walk in Sunrise Harbor. Who do you remember? Tell me about someone!",
+          "targetExpressions": [
+            "She likes ～.",
+            "He works at ～.",
+            "He doesn't ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "まちの ひとを She likes ～. / He works at ～. で しょうかい",
+          "doesn't・Does ～? も じょうずに つかえたね",
+          "match / beach、fridge / page の つづり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 390,
+      "world": 13,
+      "title": "World 13 Grand Review",
+      "titleJa": "ワールド13 グランドレビュー",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：ワールド13 はっぴょうかい（ともだちを しょうかいする スピーチ）",
+        "grammar": "My friend ～ loves ～. / She always ～. / He doesn't ～. / Does she ～?",
+        "expressions": [
+          {
+            "en": "My friend Kiko loves fish. She always smiles.",
+            "ja": "わたしの ともだちの キコは さかなが だいすきです。いつも にこにこ しています。",
+            "core": true
+          },
+          {
+            "en": "She gets up at seven and studies after school.",
+            "ja": "かのじょは 7じに おきて、ほうかごに べんきょうします。"
+          },
+          {
+            "en": "She doesn't like rainy days. Thank you for listening!",
+            "ja": "かのじょは あめの ひが すきでは ありません。きいて くれて ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "ともだちを 4文 いじょう（すきな もの・ひんど・1にち・しないこと）で しょうかい できる",
+          "-s / -es / -ies・tch・dge の つづりと おとが わかる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Catch the fish! Fix the boat! Wash the car!",
+          "ja": "さかなを とって！ふねを なおして！くるまを あらって！",
+          "action": "ワールド13 の おしごとの うごきを はやく",
+          "emoji": "🎣"
+        },
+        {
+          "en": "Stand on the stage.",
+          "ja": "ステージに たって。",
+          "action": "むねを はって まえに でる",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-s",
+          "-es",
+          "-ies",
+          "tch",
+          "dge"
+        ],
+        "sounds": [
+          "/s/",
+          "/z/",
+          "/ɪz/",
+          "/tʃ/",
+          "/dʒ/"
+        ],
+        "words": [
+          "likes",
+          "plays",
+          "watches",
+          "studies",
+          "bridge"
+        ],
+        "tipJa": "ワールド13 の そうまとめ！likes（ス）・plays（ズ）・watches（イズ）、studies（y → ies）、そして tch と dge。ぜんぶ よめたら あなたも つづりの たつじん！"
+      },
+      "vocab": [
+        {
+          "en": "speech",
+          "ja": "スピーチ",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎭"
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく・きいている ひと",
+          "emoji": "👥"
+        },
+        {
+          "en": "clue",
+          "ja": "てがかり",
+          "emoji": "🔍"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! This is the last lesson of World 13. ワールド13 さいごの レッスンだよ。 First, speed TPR! Look! Stop! Come here! Go! Catch the fish! Fix the boat! Great! Now, it's the World 13 presentation show in the harbor plaza. Today, you will give a speech about a friend. Today's sentences are: My friend Kiko loves fish. She always smiles. Say them with me. My friend Kiko loves fish. She always smiles. Wonderful! A good friend speech has four parts. What your friend likes. My friend Kiko loves fish. A frequency sentence. She always smiles. Her day. She gets up at seven and studies after school. And something she doesn't do. She doesn't like rainy days. Finish with, Thank you for listening! Now, the last phonics review. Likes. Plays. Watches. Studies. Bridge. Super! And listen, Birimo found a clue on the map. A busy market is waiting for us! But first, your speech. Stand up tall, look at the audience, and smile. You can do it!",
+      "conversation": {
+        "scene": "The World 13 presentation show in the harbor plaza, where everyone gives a friend speech",
+        "sceneJa": "港の ひろばで、ワールド13 はっぴょうかい",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the World 13 show! Riko, please start.",
+            "ja": "ワールド13 はっぴょうかいへ ようこそ！リコ、はじめてね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My friend Kiko loves fish. She always smiles. She gets up at seven and studies after school.",
+            "ja": "わたしの ともだちの キコは さかなが だいすき。いつも にこにこ。7じに おきて、ほうかごは べんきょうするの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "She doesn't like rainy days. Thank you for listening!",
+            "ja": "あめの ひは すきじゃないの。きいて くれて ありがとう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thank you, Riko! It's true. I always smile when I eat fish!",
+            "ja": "ありがとう、リコ！ほんとうだよ。さかなを たべる ときは いつも にこにこ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Everyone, look! The map shows a new place. A busy market with lots of food!",
+            "ja": "みんな、みて！ちずに あたらしい ばしょが でてきた。たべものが いっぱいの にぎやかな いちばだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's go! Goodbye, Sunrise Harbor!",
+            "ja": "いこう！さようなら、あさひの港町！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ともだち（キャラクターでも OK）を 4文で しょうかいする スピーチを しよう。さいごは Thank you for listening!（ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the World 13 show! I'm Haru. Please tell us about a friend. What does your friend like?",
+          "targetExpressions": [
+            "My friend ～ loves ～.",
+            "She always ～.",
+            "He doesn't ～.",
+            "Thank you for listening!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "スピード TPR から ワールド13 はっぴょうかいまで、さいこう！",
+          "My friend Kiko loves fish. She always smiles. ともだちを 4文で しょうかい",
+          "ビリモの ちずに つぎの てがかり。にぎやかな いちばへ しゅっぱつ！"
+        ]
+      }
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import { R_MOUTH, R_VOWELS, R_VOWEL_INTRO, findRSpellings, rSound, shortVowelOfR
 import { CG_CHOICES, CG_KANA, CG_LETTER, W10_INTRO as W10_INTRO_MAP, W10_TEAMS, Y_TEAM, cgSounds, w10TeamSound, ySound } from "./w10Phonics";
 import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP, W11_SIGHT_WORDS, edSound } from "./w11Phonics";
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
+import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -425,6 +426,58 @@ export function w12Question(item: LearningItemDef, rng: () => number): Pick<Ques
     explanationJa: `${W12_SIGHT_TIP[w] ?? SIGHT_TIP[w] ?? `${item.text} は サイトワード。`}もじを みたら すぐ よめるように しよう。` };
 }
 
+/** ワールド13（3 単現の -s / -es / -ies・-tch / -dge）。おとの表は ./w13Phonics.ts */
+export { W13_START } from "./w13Phonics";
+
+/**
+ * ワールド13 の 回（L361〜）で、フォーカスに ワールド13 の つづりが あれば、フォーカスの 順に ことばに あうもので 問う。
+ * - "-s" / "-es": 「この ことばの おわりの s は どの おと？」（ス / ズ / イズ。イズは -es を ならう L366 から）。ことばを 画面に 出す。
+ * - "-ies" / "goes" / "does" / "has": 「he / she の ときの ただしい つづりは どれ？」（studies / studys / studyes、plays / plaies …）
+ * - "tch" / "dge"（ふりかえりの "ch" / "ge"）: 「＿ に はいる つづりは どれ？」（ca＿ → tch、tea＿ → ch）。みじかい母音の あとかで きまる。
+ * あてはまらなければ null。語末（endingQuestion：複数形の -s）より 先に よぶ。
+ */
+export function w13Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W13_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of focus) {
+    if ((W13_S_FOCUS as readonly string[]).includes(f)) {
+      const s = sSound(w);
+      if (!s) continue;
+      const opts: SSound[] = item.lessonNo >= W13_IZ_START || s === "iz" ? ["s", "z", "iz"] : ["s", "z"];
+      const why = s === "iz" ? "s・x・ch・sh の あとは es を つけて「イズ」と よむよ。"
+        : s === "s" ? "p・t・k・f のような いきだけの おとの あとの s は「ス」と よむよ。"
+        : "こえの でる おと（n・m・l・d・y や 母音）の あとの s は「ズ」と よむよ。";
+      return { promptJa: "この ことばの おわりの s は どの おと？", display: item.text,
+        choices: shuffle(opts, rng).map((x) => ({ id: x, label: S_LABEL[x] })), answer: s,
+        explanationJa: `${item.text} の おわりは「${S_KANA[s]}」。${why}` };
+    }
+    if ((W13_HE_FOCUS as readonly string[]).includes(f)) {
+      const h = heSpelling(w);
+      if (!h) continue;
+      const why = h.kind === "ies" ? `${h.base} は y の まえが 子音なので、y を i に かえて es を つけるよ。`
+        : h.kind === "ys" ? `${h.base} は y の まえが 母音（a e i o u）なので、そのまま s を つけるよ。`
+        : `${h.base} は he / she の とき とくべつな 形「${h.answer}」に なるよ。`;
+      return { promptJa: "he / she の ときの ただしい つづりは どれ？", choices: pick([h.answer, ...h.wrong]), answer: h.answer,
+        explanationJa: `ただしい つづりは「${h.answer}」。${why}` };
+    }
+    if ((W13_CH_FOCUS as readonly string[]).includes(f)) {
+      const b = chBlank(w, focus);
+      if (!b) continue;
+      const short = b.answer === "tch" || b.answer === "dge";
+      const sound = b.answer === "tch" || b.answer === "ch" ? "チ" : "ヂ";
+      return { promptJa: "＿ に はいる つづりは どれ？", display: b.display, choices: pick(CH_CHOICES[b.answer]), answer: b.answer,
+        explanationJa: short
+          ? `${item.text} は「${b.answer}」。みじかい 母音（${b.before}）の すぐ あとの「${sound}」は ${b.answer} と かくよ。`
+          : `${item.text} は「${b.answer}」。みじかい 母音の すぐ あと では ない（${b.before} の あと）ので ${b.answer} と かくよ。` };
+    }
+  }
+  return null;
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -499,7 +552,8 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // 語頭ブレンド → ワールド12（サイトワード・多音節語）→ ワールド10（soft c / g・-y・-le・aw au ew）→ ワールド11（-ed・-er・-est・サイトワード）→ 語末（-st / -s / -ing）→ マジック e → 母音チーム → r の つく母音 → ダイグラフ の順
       // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回、shark は sh ではなく ar の回、
       //   shy は sh ではなく -y の回、chew は ch ではなく ew の回、what は wh ではなく サイトワードの 回の問題にする）
-      const dq = blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド13（3 単現の -s・-tch / -dge）は いちばん 先（likes を 複数形の -s、catch を ダイグラフの ch で 問わない）
+      const dq = w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

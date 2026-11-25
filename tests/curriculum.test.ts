@@ -18,6 +18,7 @@ import { teamSound } from "@/lib/curriculum/vowelTeams";
 import { findRSpellings } from "@/lib/curriculum/rControlled";
 import { G_HARD_WORDS, cgSounds, ySound } from "@/lib/curriculum/w10Phonics";
 import { ER_MORE_WORDS, edSound } from "@/lib/curriculum/w11Phonics";
+import { chBlank, heSpelling, sSound } from "@/lib/curriculum/w13Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -939,11 +940,11 @@ describe("カリキュラム: ワールド12 の決まりごと", () => {
   const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
   const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
 
-  it("ワールド12 は 331〜360 の 30 レッスン、学年は小6。カリキュラムは ぜんぶで 360 レッスン", () => {
+  it("ワールド12 は 331〜360 の 30 レッスン、学年は小6。ステージ1 は 360 レッスンで おわる", () => {
     if (w12.length === 0) return; // 未作成ならスキップ
     expect(w12.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 331 + i));
     for (const l of w12) expect(l.school.grade).toBe("小6");
-    expect(LESSONS).toHaveLength(360);
+    expect(LESSONS.filter((l) => l.stage === 1)).toHaveLength(360);
   });
 
   it("フォニックス: サイトワード総復習 → 多音節語 → 音読（まえの ワールドの つづり）→ 5W1H の サイトワード（5の倍数と L356〜360 は ふりかえり）", () => {
@@ -993,10 +994,11 @@ describe("カリキュラム: ワールド12 の決まりごと", () => {
     for (const w of at(359)!.phonics.words.filter((x) => x.endsWith("er"))) expect(ER_MORE_WORDS.has(w), w).toBe(false);
   });
 
-  it("L360 は さいごの まとめで スピード TPR、さいごの ボスは ひらく レッスンが ない", () => {
+  it("L360 は さいごの まとめで スピード TPR。ボス 360 は つぎの ワールドが あれば L361 を ひらく（さいごの ボスは ひらく レッスンが ない）", () => {
     if (w12.length === 0) return;
     expect(at(360)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
-    expect(ASSESSMENTS.find((a) => a.id === "boss-1-360")?.unlocksLesson).toBeNull();
+    expect(ASSESSMENTS.find((a) => a.id === "boss-1-360")?.unlocksLesson).toBe(TOTAL_LESSONS > 360 ? 361 : null);
+    expect(ASSESSMENTS.find((a) => a.id === `boss-1-${TOTAL_LESSONS}`)?.unlocksLesson).toBeNull();
     expect(ASSESSMENTS.find((a) => a.id === "boss-1-330")?.unlocksLesson).toBe(331);
   });
 
@@ -1024,5 +1026,116 @@ describe("カリキュラム: ワールド12 の決まりごと", () => {
     for (const n of [331, 332, 334, 335, 340, 344, 345, 346, 350, 351, 352, 354, 355, 356, 358, 359, 360]) {
       expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえは いわなくて OK/);
     }
+  });
+});
+
+describe("カリキュラム: ワールド13 の決まりごと（ステージ2 の はじまり）", () => {
+  const w13 = LESSONS.filter((l) => l.world === 13);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+
+  it("ワールド13 は 361〜390 の 30 レッスン、ステージ2・A1+、学年の めやすは 中1", () => {
+    if (w13.length === 0) return; // 未作成ならスキップ
+    expect(w13.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 361 + i));
+    for (const l of w13) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中1");
+      expect(l.stage, `L${l.lessonNo}`).toBe(2);
+      expect(l.level, `L${l.lessonNo}`).toBe("A1+");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w13.length === 0) return;
+    expect(at(361)!.title).toBe("A New Map");
+    expect(at(370)!.title).toBe("My Family Poster");
+    expect(at(376)!.title).toBe("What Does He Do?");
+    expect(at(384)!.title).toBe("Sorry? One More Time, Please.");
+    expect(at(390)!.title).toBe("World 13 Grand Review");
+  });
+
+  it("フォニックス: -s → -es → -ies・とくべつな 形 → tch → dge（各ブロックの 5回目と L386〜390 は ふりかえり）", () => {
+    if (w13.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(361, 364, "ending-s");
+    rule(366, 369, "ending-es");
+    rule(371, 374, "ending-ies");
+    rule(376, 379, "tch");
+    rule(381, 384, "dge");
+    for (const n of [365, 370, 375, 380, 385, 386, 387, 388, 389, 390]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    for (const l of range(366, 369)) for (const w of l.phonics.words) expect(sSound(w), `L${l.lessonNo} ${w}`).toBe("iz");
+    for (const l of range(371, 372)) for (const w of l.phonics.words) expect(heSpelling(w)?.kind, `L${l.lessonNo} ${w}`).toBe("ies");
+    expect(at(373)!.phonics.words).toEqual(expect.arrayContaining(["goes", "does", "has"]));
+  });
+
+  it("-s の 回の ことばは 計画した おと（L361 は ス、L362 は ズ、L363〜364 は まざる）", () => {
+    if (w13.length === 0) return;
+    expect(at(361)!.phonics.words.map(sSound)).toEqual(["s", "s", "s", "s"]);
+    expect(at(362)!.phonics.words.map(sSound)).toEqual(["z", "z", "z", "z"]);
+    for (const n of [363, 364]) expect(new Set(at(n)!.phonics.words.map(sSound)), `L${n}`).toEqual(new Set(["s", "z"]));
+  });
+
+  it("tch / dge の 回の ことばは みじかい 母音の あとの tch / dge。ふりかえりの ch / ge は みじかい 母音の あと では ない", () => {
+    if (w13.length === 0) return;
+    const allCh = ["tch", "ch", "dge", "ge"];
+    for (const l of [...range(376, 379), ...range(381, 384)]) {
+      for (const w of l.phonics.words) {
+        const b = chBlank(w, allCh);
+        expect(b?.answer, `L${l.lessonNo} ${w}`).toBe(l.phonics.rule);
+        expect("aeiou", `L${l.lessonNo} ${w}`).toContain(b!.before);
+      }
+    }
+    // ふりかえりの くらべ: ながい 母音（ea・マジック e）や 子音の あとは ch / ge
+    const ans = (n: number) => at(n)!.phonics.words.map((w) => chBlank(w, at(n)!.phonics.focus)?.answer);
+    expect(ans(380)).toEqual(["tch", "tch", "ch", "ch", "tch"]);
+    expect(ans(385)).toEqual(["dge", "dge", "ge", "ge", "ge"]);
+    expect(ans(388)).toEqual(["tch", "tch", "dge", "dge"]);
+    expect(ans(389)).toEqual(["tch", "ch", "dge", "ge"]);
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w13.length === 0) return;
+    expect(ex(361, 365)).toContain("Birimo has a new map.");
+    expect(ex(361, 365)).toMatch(/\b(likes|loves) [\w ]+\./);
+    expect(ex(366, 370)).toContain("doesn't like");
+    expect(ex(366, 370)).toMatch(/Does (she|he) [\w ]+\?/);
+    expect(ex(366, 370)).toMatch(/Yes, (she|he) does\./);
+    for (const f of ["always", "usually", "sometimes", "never"]) expect(ex(371, 375), f).toContain(` ${f} `);
+    expect(ex(371, 375)).toContain("What time does she get up?");
+    expect(ex(376, 380)).toContain("What does he do?");
+    expect(ex(376, 380)).toMatch(/works at the [\w ]+\./);
+    expect(ex(381, 385)).toContain("Really? Me too!");
+    expect(ex(381, 385)).toContain("How about you?");
+    expect(ex(381, 385)).toContain("What kind");
+    expect(ex(381, 385)).toContain("Can you say that again?");
+    expect(ex(386, 390)).toContain("This town has a big lighthouse.");
+  });
+
+  it("doesn't / Does の あとの うごきに s を つけない（表現・セリフ・AI の さいしょの ことば）", () => {
+    if (w13.length === 0) return;
+    const texts = w13.flatMap((l) => [...l.school.expressions.map((e) => e.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn]);
+    for (const t of texts) {
+      expect(t, t).not.toMatch(/\bdoesn't (likes|has|goes|does|eats|plays|works|makes)\b/);
+      expect(t, t).not.toMatch(/\b[Dd]oes (he|she|it|[A-Z][a-z]+) (likes|has|goes|eats|plays|works|makes|drinks)\b/);
+    }
+  });
+
+  it("ステージ2: 先生の 台本は ほぼ 英語（日本語の たすけは みじかく）、会話シーンは 4〜6 行、L390 は スピード TPR", () => {
+    if (w13.length === 0) return;
+    for (const l of w13) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.25);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(120);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(4);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+    }
+    expect(at(390)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("AI 会話で ほんとうの なまえ・じゅうしょ・がっこうの なまえを きかない（しょうかい・ビデオ・えはがき・スピーチの 回は goalJa に 明記）", () => {
+    if (w13.length === 0) return;
+    for (const n of [365, 366, 370, 385, 387, 390]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえ(は|や)[^。]*いわなくて OK/);
+    for (const n of [375, 381, 388]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/いわなくて OK/);
   });
 });
