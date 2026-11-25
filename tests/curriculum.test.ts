@@ -38,6 +38,7 @@ import { dictOf, emphasisOf, ibleOf, spectOf, w29FocusOf, weakOf } from "@/lib/c
 import { abbrOf, autoOf, casualOf, icOf, transOf, w30FocusOf } from "@/lib/curriculum/w30Phonics";
 import { familyOf as familyOf31, personOf as personOf31, portOf, structOf, w31FocusOf, yearOf } from "@/lib/curriculum/w31Phonics";
 import { alOf, dataOf, directionOf, geoOf, numberOf, w32FocusOf } from "@/lib/curriculum/w32Phonics";
+import { jectOf, listOf, nounEndOf, proofOf, ruptOf, w33FocusOf } from "@/lib/curriculum/w33Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -3569,5 +3570,143 @@ describe("カリキュラム: ワールド32 の決まりごと（たいよう�
     expect(at(956)!.teacherScript).toMatch(/made[ -]up/i);
     for (const n of [935, 940, 945, 950, 955, 960]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/crystal/i);
     expect(at(960)!.teacherScript + said(960)).toMatch(/Island of Fire/);
+  });
+});
+
+describe("カリキュラム: ワールド33 の決まりごと（ほのおの火山島）", () => {
+  const w33 = LESSONS.filter((l) => l.world === 33);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (ruptOf(w) ? "rupt" : nounEndOf(w) ? "noun" : proofOf(w) ? "proof" : listOf(w) ? "list" : jectOf(w) ? "ject" : "?");
+
+  it("ワールド33 は 961〜990 の 30 レッスン、ステージ4・B1、学年の めやすは 高校初級", () => {
+    if (w33.length === 0) return; // 未作成ならスキップ
+    expect(w33.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 961 + i));
+    for (const l of w33) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校初級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(4);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w33.length === 0) return;
+    const titles = ["The Island of Fire", "Inside the Earth", "When a Volcano Erupts", "Hot Springs and Islands", "Earth Science Show", "Why Do Earthquakes Happen?", "Typhoons and Heavy Rain", "Tsunami Warnings", "Listen to the Announcement", "Disaster Science Quiz",
+      "Our Emergency Kit", "Make Sure You…", "A Family Meeting Place", "Waterproof and Fireproof", "My Family Safety Plan", "Drop, Cover, Hold On", "Stay Calm", "As Soon As the Shaking Stops", "Unless It's Safe", "Evacuation Drill",
+      "Helping Each Other", "Kind Words for Neighbors", "Helping People Who Don't Speak Japanese", "Rebuilding Together", "Helper Role-Play", "A Safety Poster", "Reading Safety Instructions", "My Safety Promise", "Island of Fire Review", "World 33 Grand Review"];
+    expect(w33.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: rupt → 名詞の おわり → -proof → リストの 読みかた → ject（各ブロックの 5回目と L986〜990 は ふりかえり）", () => {
+    if (w33.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(961, 964, "root-rupt");
+    rule(966, 969, "noun-ending");
+    rule(971, 974, "compound-proof");
+    rule(976, 979, "list-intonation");
+    rule(981, 984, "root-ject");
+    for (const n of [965, 970, 975, 980, 985, 986, 987, 988, 989, 990]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド33 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w33) {
+      for (const w of l.phonics.words) {
+        const f = w33FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w33FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w33.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["erupt", "interrupt", "emergency", "distance", "safety", "waterproof", "fireproof", "We need water, food, and a flashlight", "project", "inject", "object"]));
+    // 名詞の おわりは -ance・-ence・-ency・-ty、リストは ならべる 文と どっち？の 文が そろう
+    expect(new Set(range(966, 969).flatMap((l) => l.phonics.focus))).toEqual(new Set(["-ance", "-ence", "-ency", "-ty"]));
+    expect(new Set(range(976, 979).flatMap((l) => l.phonics.focus))).toEqual(new Set(["and", "or"]));
+    // ふりかえり L986〜990 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(986, 990)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["rupt", "noun", "proof", "list", "ject"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w33.length === 0) return;
+    const want: Record<number, string> = {
+      961: "That mountain is a volcano.", 962: "The earth is made of layers.", 963: "When a volcano erupts, hot lava comes out.", 964: "Volcanoes make hot springs and new islands.", 965: "The earth's crust moves slowly.",
+      966: "An earthquake happens when the ground moves.", 967: "A typhoon brings strong wind and heavy rain.", 968: "If you hear a warning, go to high ground.", 970: "What should you do during a typhoon?",
+      971: "An emergency kit has water, food, and a flashlight.", 972: "Make sure you know where the exits are.", 973: "Our family meeting place is the park.", 974: "Keep your papers in a waterproof bag.",
+      976: "Get under a desk and hold on.", 977: "Stay calm. Follow your teacher.", 978: "As soon as the shaking stops, go outside carefully.", 979: "Don't go back inside unless an adult says it's safe.",
+      982: "Are you OK? Do you need anything?", 983: "This way, please. The shelter is over there.", 984: "Many houses were rebuilt by volunteers.", 985: "Don't worry. I'll show you the way.",
+      986: "Be ready! Know your exits!", 987: "Read the instructions. What should you do first?", 988: "I promise to check my emergency kit every month.", 990: "Know it, prepare for it, and help each other.",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(969)).toMatch(/^The announcement said to /);
+    expect(core(975)).toMatch(/^If there's .*, we will .*\. Our meeting place is /);
+    expect(core(980)).toMatch(/^First, .*\. As soon as .*, /);
+    expect(core(981)).toMatch(/^How can we help\? We can /);
+    expect(core(989)).toMatch(/^When .*\. If .*, .*\. Make sure /);
+  });
+
+  it("文法の じゅんばん: make sure は L972、hold on は L976、stay calm は L977、as soon as は L978、unless は L979、How can we help は L981、rebuilt は L984 から", () => {
+    if (w33.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bmake sure\b/i, 972],
+      [/\bhold on\b/i, 976],
+      [/\bstay calm\b/i, 977],
+      [/\bas soon as\b/i, 978],
+      [/\bunless\b/i, 979],
+      [/\bhow can we help\b/i, 981],
+      [/\brebuilt\b/i, 984],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(961, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ4: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・200 語 以上で 読みものを ふくむ、会話シーンは 6〜7 行（L980・L990 は 8 行まで）、L990 は スピード TPR", () => {
+    if (w33.length === 0) return;
+    for (const l of w33) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(200);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{200,}"/);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(6);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual([980, 990].includes(l.lessonNo) ? 8 : 7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（make sure・unless）
+    expect(w33.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([972, 979]);
+    expect(at(990)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。家の チェック・集合場所・防災計画・約束の 回は ほんとうの じゅうしょや ばしょを いわなくて よいと goalJa に 明記。こわがらせない・ひなんで エレベーターを つかわない", () => {
+    if (w33.length === 0) return;
+    for (const l of w33) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+    for (const n of [972, 973, 975, 988]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+    for (const l of w33) {
+      expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(died|dead|death|kill|killed|scream|screamed|terrifying|horrible)\b/i);
+      expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\blet's (take|use) the elevator\b/i);
+    }
+  });
+
+  it("物語: L961 で ほのおの火山島・エンバーと セーフティ・ランタン → L962 で モリ博士 → 6つの まど → L981 で トモおばあちゃん → L984 は つくった おはなし → L990 で つばさの空港へ", () => {
+    if (w33.length === 0) return;
+    const story = (n: number) => at(n)!.teacherScript + " " + said(n);
+    expect(story(961)).toMatch(/Island of Fire/);
+    expect(story(961)).toMatch(/\bEmber\b/);
+    expect(story(961)).toMatch(/Safety Lantern/);
+    expect(story(961)).toMatch(/Mount Cinder/);
+    expect(story(962)).toMatch(/Dr\. Mori/);
+    expect(story(981)).toMatch(/Grandma Tomo/);
+    expect(at(984)!.teacherScript).toMatch(/made[ -]up/i);
+    for (const n of [965, 970, 975, 980, 985, 990]) expect(story(n), `L${n}`).toMatch(/lantern/i);
+    expect(story(990)).toMatch(/Airport of Wings/);
   });
 });
