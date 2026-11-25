@@ -14,6 +14,7 @@ import { w30Example } from "./w30Phonics";
 import { w31Example } from "./w31Phonics";
 import { w32Example } from "./w32Phonics";
 import { w33Example } from "./w33Phonics";
+import { w34Example } from "./w34Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -58,6 +59,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   const ws = words.map((w) => w.trim()).filter(Boolean);
   const lower = (w: string) => w.toLowerCase();
 
+  // ワールド34（空港の 数字・vis・2つ ならぶ 文字・-ize・イギリスと アメリカの 英語）は その focus で 問う ことばを よむ（数字は 英語の 読みかた）
+  const w34 = w34Example(focus.trim(), ws);
+  if (w34) return w34;
   // ワールド33（rupt・名詞の おわり・-proof・リスト・ject）は その focus で 問う ことば・文を よむ（リストの 文は おわりに . か ?）
   const w33 = w33Example(focus.trim(), ws);
   if (w33) return w33;

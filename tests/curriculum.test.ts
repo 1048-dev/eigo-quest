@@ -39,6 +39,7 @@ import { abbrOf, autoOf, casualOf, icOf, transOf, w30FocusOf } from "@/lib/curri
 import { familyOf as familyOf31, personOf as personOf31, portOf, structOf, w31FocusOf, yearOf } from "@/lib/curriculum/w31Phonics";
 import { alOf, dataOf, directionOf, geoOf, numberOf, w32FocusOf } from "@/lib/curriculum/w32Phonics";
 import { jectOf, listOf, nounEndOf, proofOf, ruptOf, w33FocusOf } from "@/lib/curriculum/w33Phonics";
+import { doubleOf, izeOf, travelNumberOf, ukUsOf, visOf, w34FocusOf } from "@/lib/curriculum/w34Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -210,7 +211,7 @@ describe("カリキュラム: 全体の整合性", () => {
       expect(v.lesson?.conversation?.lines.length).toBe(l.conversation?.lines.length);
       expect(v.lesson?.conversation?.aiTask.starterEn).toBe(l.conversation?.aiTask.starterEn);
     }
-  });
+  }, 30_000); // 1,000 レッスン を こえて 全体 実行（ほかの テストと 並列）では 5 秒を こえる ことが ある
 });
 
 describe("カリキュラム: ワールド1 の決まりごと", () => {
@@ -3708,5 +3709,148 @@ describe("カリキュラム: ワールド33 の決まりごと（ほのおの�
     expect(at(984)!.teacherScript).toMatch(/made[ -]up/i);
     for (const n of [965, 970, 975, 980, 985, 990]) expect(story(n), `L${n}`).toMatch(/lantern/i);
     expect(story(990)).toMatch(/Airport of Wings/);
+  });
+});
+
+describe("カリキュラム: ワールド34 の決まりごと（つばさの空港）", () => {
+  const w34 = LESSONS.filter((l) => l.world === 34);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (travelNumberOf(w) ? "number" : visOf(w) ? "vis" : doubleOf(w) ? "double" : izeOf(w) ? "ize" : ukUsOf(w) ? "ukus" : "?");
+
+  it("ワールド34 は 991〜1020 の 30 レッスン、ステージ4・B1、学年の めやすは 高校初級", () => {
+    if (w34.length === 0) return; // 未作成ならスキップ
+    expect(w34.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 991 + i));
+    for (const l of w34) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校初級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(4);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w34.length === 0) return;
+    const titles = ["The Airport of Wings", "Checking In", "Window or Aisle?", "Gate 23B", "At the Airport", "On the Plane", "The Purpose of Your Visit", "Transfer to Another Flight", "Changing Money", "Lesson 1000 Welcome!",
+      "I Have a Reservation", "Would You Mind…?", "Do You Know Where…?", "Could You Recommend…?", "Hotel Role-Play", "My Suitcase Didn't Arrive", "I'm Afraid It's Broken", "Could You Change It Instead?", "I Lost My Passport", "Problem Solved!",
+      "Exploring the City", "At the Restaurant", "Lift or Elevator?", "Museum Tickets", "A Day in the City", "An Email to the Hotel", "Travel Brochure", "My Travel Journal", "Airport of Wings Review", "World 34 Grand Review"];
+    expect(w34.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: 空港の 数字 → vis → 2つ ならぶ 文字 → -ize → イギリスと アメリカ（各ブロックの 5回目と L1016〜1020 は ふりかえり）", () => {
+    if (w34.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(991, 994, "travel-number");
+    rule(996, 999, "root-vis");
+    rule(1001, 1004, "double-letters");
+    rule(1006, 1009, "suffix-ize");
+    rule(1011, 1014, "uk-us");
+    for (const n of [995, 1000, 1005, 1010, 1015, 1016, 1017, 1018, 1019, 1020]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド34 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w34) {
+      for (const w of l.phonics.words) {
+        const f = w34FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w34FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば（便名・ゲート・イギリスと アメリカ）
+    const all = w34.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["Flight 205", "Gate 23B", "visit", "visa", "recommend", "apologize", "lift", "elevator", "holiday", "vacation", "colour"]));
+    // 数字は 便名・時刻・座席・ゲートが そろう
+    expect(new Set(range(991, 994).flatMap((l) => l.phonics.words).map((w) => travelNumberOf(w)!.kind))).toEqual(new Set(["flight", "time", "seat", "gate"]));
+    // イギリスと アメリカは 両がわと つづりが そろう
+    const uk = range(1011, 1014).flatMap((l) => l.phonics.words).map((w) => ukUsOf(w)!);
+    expect(new Set(uk.map((u) => u.side))).toEqual(new Set(["UK", "US"]));
+    expect(uk.some((u) => u.kind === "spelling")).toBe(true);
+    // ふりかえり L1016〜1020 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(1016, 1020)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["number", "vis", "double", "ize", "ukus"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w34.length === 0) return;
+    const want: Record<number, string> = {
+      991: "Planes leave for every corner of the world.", 992: "I'd like to check in, please.", 993: "Would you like a window seat or an aisle seat?", 994: "Flight 205 is now boarding at gate 23B.",
+      995: "Excuse me. Do you know where gate 23B is?", 996: "Could I have some water, please?", 999: "I'd like to change some yen, please.", 1000: "We've arrived! This is our 1,000th lesson!",
+      1002: "Would you mind opening the window?", 1003: "Do you know where the nearest station is?", 1004: "Could you recommend a good restaurant?",
+      1006: "My suitcase didn't arrive.", 1007: "I'm afraid the air conditioner is broken.", 1008: "Could you give us a different room instead?", 1009: "I lost my passport. What should I do?",
+      1010: "Thank you for your help. That's very kind of you.", 1011: "Excuse me. Could you take our picture?", 1012: "Could we have the menu, please?", 1017: "Read the brochure. Which tour would you choose?",
+      1020: "Traveling is the best way to learn!",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(997)).toMatch(/^What's the purpose of your visit\? Sightseeing\.$/);
+    expect(core(998)).toMatch(/transfer/);
+    expect(core(1001)).toMatch(/^I have a reservation under the name /);
+    expect(core(1005)).toMatch(/^I'd like to .*\. Could you /);
+    expect(core(1013)).toMatch(/^In the UK, people say lift\.$/);
+    expect(core(1014)).toMatch(/discount\?$/);
+    expect(core(1015)).toMatch(/^We visited .*\. Then, we /);
+    expect(core(1016)).toMatch(/^I'm writing to ask about /);
+    expect(core(1018)).toMatch(/^On the first day, .*\. The best part was /);
+    expect(core(1019)).toMatch(/^Would you mind .*\? Do you know where .*\?$/);
+  });
+
+  it("文法の じゅんばん: Do you know where は L995、Would you mind は L1002、Could you tell me where は L1003、recommend は L1004、I'm afraid は L1007、instead は L1008、That's very kind of you は L1010、I'm writing to は L1016 から", () => {
+    if (w34.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bdo you know where\b/i, 995],
+      [/\bwould you mind\b/i, 1002],
+      [/\bcould you tell me (where|what|how|when|if)\b/i, 1003],
+      [/\brecommend/i, 1004],
+      [/\bI'm afraid\b/i, 1007],
+      [/\binstead\b/i, 1008],
+      [/\bthat's very kind of you\b/i, 1010],
+      [/\bI'm writing to\b/i, 1016],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(991, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ4: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・200 語 以上で 読みものを ふくむ、会話シーンは 6〜7 行（L1000・L1010・L1020 は 8 行まで）、L1020 は スピード TPR", () => {
+    if (w34.length === 0) return;
+    for (const l of w34) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(200);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{200,}"/);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(6);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual([1000, 1010, 1020].includes(l.lessonNo) ? 8 : 7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（Would you mind・I'm afraid）
+    expect(w34.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([1002, 1007]);
+    expect(at(1020)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。入国審査・よやく・パスポート・メール・旅行記の 回は ほんとうの なまえや じゅうしょを いわなくて よいと goalJa に 明記", () => {
+    if (w34.length === 0) return;
+    for (const l of w34) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (real |full )?(name|address|school|age|birthday|phone|email|passport number)|where do you live|how old are you|when were you born/i);
+    for (const n of [997, 1001, 1009, 1016, 1018]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+  });
+
+  it("物語: L991 で つばさの空港・スカイと ウィング・スタンプ帳 → L997 スカイポート → L1000 ブライトウォーター → L1001 シーガル・ホテル → 6つの スタンプ → L1020 で ちえの議事堂へ", () => {
+    if (w34.length === 0) return;
+    const story = (n: number) => at(n)!.teacherScript + " " + said(n);
+    expect(story(991)).toMatch(/Airport of Wings/);
+    expect(story(991)).toMatch(/\bSkye\b/);
+    expect(story(991)).toMatch(/Wing Stamp Book/);
+    expect(story(997)).toMatch(/Skyport/);
+    expect(story(1000)).toMatch(/Brightwater/);
+    expect(story(1001)).toMatch(/Seagull Hotel/);
+    expect(story(1000)).toMatch(/1,000|thousand/i);
+    for (const n of [995, 1000, 1005, 1010, 1015, 1020]) expect(story(n), `L${n}`).toMatch(/stamp/i);
+    expect(story(1020)).toMatch(/Hall of Wisdom/);
   });
 });

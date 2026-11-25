@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W34_START, doubleDisplay, doubleOf, doubleWhy, izeDisplay, izeOf, izeWhy, travelNumberDisplay, travelNumberOf, travelNumberWhy, ukUsDisplay, ukUsOf, ukUsPrompt, ukUsWhy, visDisplay, visOf, visWhy } from "./w34Phonics";
 import { W33_START, jectDisplay, jectOf, jectWhy, listDisplay, listOf, listPrompt, listWhy, nounEndDisplay, nounEndOf, nounEndWhy, proofDisplay, proofOf, proofWhy, ruptDisplay, ruptOf, ruptWhy } from "./w33Phonics";
 import { W32_START, alDisplay, alOf, alWhy, dataDisplay, dataOf, dataWhy, directionDisplay, directionOf, directionWhy, geoDisplay, geoOf, geoWhy, numberDisplay, numberOf, numberWhy } from "./w32Phonics";
 import { W31_START, familyDisplay as family31Display, familyOf as family31Of, familyWhy as family31Why, personDisplay as person31Display, personOf as person31Of, personWhy as person31Why, portDisplay, portOf, portWhy, structDisplay, structOf, structWhy, yearDisplay, yearOf, yearWhy } from "./w31Phonics";
@@ -580,6 +581,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド34（つばさの空港・L991〜）の フォニックス（空港の 数字の 読みかた・語根 vis・2つ ならぶ 文字・-ize の 動詞・イギリス英語と アメリカ英語）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - 数字（"Flight 205"）: 「空港の 数字。英語で なんと よむ？」（two oh five / twenty-five / two fifty）。音は 読みかたの 文（Flight two oh five.）
+ * - vis（"visa"）: 「vis（見る）の ことば。英語の せつめいに あう ことばは どれ？」（a paper or stamp that lets you enter a country → visa / vision / visit）
+ * - 2つ ならぶ 文字（"recommend"）: 「ただしい つづりは どれ？（2つ ならぶ 文字に 気を つけよう）」（recommend / reccomend / recomend）
+ * - -ize（"apologize"）: 「-ize を つけて 動詞に すると？ ただしい つづりは どれ？」（apology → apologize / apologyize / appologize）
+ * - イギリス英語と アメリカ英語（"lift"・"colour"）: 「イギリス英語では なんと いう？」（アメリカ: elevator → lift / flat / queue）・「イギリスの つづりは どれ？」
+ * あてはまらなければ null。ワールド33 の 問題より 先に よぶ。
+ */
+export function w34Question(item: LearningItemDef, rng: () => number): (Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> & { audioText?: string }) | null {
+  if (item.lessonNo < W34_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const n = travelNumberOf(item.text);
+  if (n && focus.includes(n.word)) return { promptJa: "空港の 数字。英語で なんと よむ？", display: travelNumberDisplay(n), choices: pick([n.answer, ...n.wrong]), answer: n.answer, explanationJa: travelNumberWhy(n), audioText: n.say };
+  const v = visOf(item.text);
+  if (v && focus.includes("vis")) return { promptJa: "vis（見る）の ことば。英語の せつめいに あう ことばは どれ？", display: visDisplay(v), choices: pick([v.answer, ...v.wrong]), answer: v.answer, explanationJa: visWhy(v) };
+  const d = doubleOf(item.text);
+  if (d && focus.includes(d.focus)) return { promptJa: "ただしい つづりは どれ？（2つ ならぶ 文字に 気を つけよう）", display: doubleDisplay(d), choices: pick([d.answer, ...d.wrong]), answer: d.answer, explanationJa: doubleWhy(d) };
+  const z = izeOf(item.text);
+  if (z && focus.includes("-ize")) return { promptJa: "-ize を つけて 動詞に すると？ ただしい つづりは どれ？", display: izeDisplay(z), choices: pick([z.answer, ...z.wrong]), answer: z.answer, explanationJa: izeWhy(z) };
+  const u = ukUsOf(item.text);
+  if (u && focus.includes(u.word)) return { promptJa: ukUsPrompt(u), display: ukUsDisplay(u), choices: pick([u.answer, ...u.wrong]), answer: u.answer, explanationJa: ukUsWhy(u) };
   return null;
 }
 
@@ -1353,8 +1383,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド30（auto-・trans-・-ic の 強勢・略語・話しことば）は その 先（automatic を ワールド12 の はく、translation を ワールド23 の -tion で 問わない）
       // ワールド31（動詞と 名詞の 家族・年号・struct・-ian / -ist・port）は その 先（invention を ワールド23 の -tion、magician を ワールド30 で 問わない）
       // ワールド32（geo・-al・方角・数の 読みかた・データの つづり）は その 先（natural を ワールド31 の 家族、geologist を -ist で 問わない）
-      // ワールド33（rupt・-ance / -ence / -ency / -ty・-proof・リストの 読みかた・ject）は いちばん 先（eruption を ワールド23 の -tion、safety を まえの ワールドで 問わない）
-      const dq = w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド33（rupt・-ance / -ence / -ency / -ty・-proof・リストの 読みかた・ject）は その 先（eruption を ワールド23 の -tion、safety を まえの ワールドで 問わない）
+      // ワールド34（空港の 数字・vis・2つ ならぶ 文字・-ize・イギリスと アメリカの 英語）は いちばん 先（vacation を ワールド17 の -tion、vis の ことばを まえの ワールドで 問わない）
+      const dq = w34Question(item, rng) ?? w33Question(item, rng) ?? w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

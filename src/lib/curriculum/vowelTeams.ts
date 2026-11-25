@@ -25,6 +25,7 @@ import { w30Say } from "./w30Phonics";
 import { w31Say } from "./w31Phonics";
 import { w32Say } from "./w32Phonics";
 import { w33Say } from "./w33Phonics";
+import { w34Say } from "./w34Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -85,6 +86,9 @@ export const shortVowelOf = (team: string) => team[0];
  * ow と oo は その回の ことばで おとを きめる（cow の回は "ow"、snow の回は "oh"。book だけの回は ことばを そのまま よむ）。
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
+  // ワールド34 は その回の ことばで よむ（"vis" "mm" "-ize" だけで よまない。数字は 英語の 読みかた: Flight 205 → Flight two oh five）
+  const w34 = w34Say(focus, words);
+  if (w34) return w34;
   // ワールド33 は その回の ことば・文で よむ（"rupt" "-ance" "and" "or" だけで よまない。英字と スペース だけ）。
   // リストの "or" を ワールド9 の r の つく母音（or）で よまない ように、R_SAY より 先に みる（ワールド33 の 回の ことば だけで はたらく）
   const w33 = w33Say(focus, words);
