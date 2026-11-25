@@ -48,7 +48,11 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 開発用のデモ保護者が欲しいときは、seed のときに `SEED_DEMO_PARENT=1` を付けます（`demo-parent@example.com` / `demo-pass-1234` / 暗証番号 `1234`、子ども「リコ」）。
 
-> マイグレーション（`prisma/migrations/`）には、保護者アカウント用の `20261125130000_parent_auth`（`Parent` のパスワード・暗証番号・設定、`Session` テーブル）、アバターとおためしの引き継ぎ用の `20261126090000_avatar_trial_carry`（`User.avatarCharacter`。既存の子どもには登録順の顔を入れる）、LINE ログイン用の `20261127090000_line_login`（`Parent.lineUserId` など。メール・パスワード・暗証番号を null 可に）、LINE の月間レポート用の `20261128090000_line_monthly`（`Parent.lineFriend`・`lineMonthlyEnabled`、`ReportDelivery` テーブル）、端末ごとの おためし学習者用の `20261129090000_trial_learner`（`User.isTrial`・`trialTokenHash`・`lastActiveAt`）が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください。
+> マイグレーション（`prisma/migrations/`）には、保護者アカウント用の `20261125130000_parent_auth`（`Parent` のパスワード・暗証番号・設定、`Session` テーブル）、アバターとおためしの引き継ぎ用の `20261126090000_avatar_trial_carry`（`User.avatarCharacter`。既存の子どもには登録順の顔を入れる）、LINE ログイン用の `20261127090000_line_login`（`Parent.lineUserId` など。メール・パスワード・暗証番号を null 可に）、LINE の月間レポート用の `20261128090000_line_monthly`（`Parent.lineFriend`・`lineMonthlyEnabled`、`ReportDelivery` テーブル）、端末ごとの おためし学習者用の `20261129090000_trial_learner`（`User.isTrial`・`trialTokenHash`・`lastActiveAt`）、パスワードの再設定・メールアドレスの確認用の `20261130090000_password_reset`（`AuthToken` テーブル・`Session.lineReauthAt`）、DB で数えるレート制限用の `20261201090000_rate_limit_bucket`（`RateLimitBucket` テーブル）が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください。
+>
+> `docker-compose.yml` は 5432 番を使います。ほかの PostgreSQL が 5432 を使っている PC では、`docker-compose.yml` のポートを `"5544:5432"` などに変え、`.env` の `DATABASE_URL`・`DIRECT_URL` も同じポートにしてください。
+>
+> インターネットに公開する（Vercel + Neon / Supabase）ときは [docs/run5/DEPLOY.md](docs/run5/DEPLOY.md) の手順で進めます（下の「公開」）。
 >
 > LINE（ログイン・月間レポート）を本番で使うときは [docs/run4/LINE-SETUP.md](docs/run4/LINE-SETUP.md) の手順で `.env` に値を入れます。入れていない間は LINE のボタンが出ず、レポートは送らずに `.data/line-outbox/` に書くだけ（dry-run）です。
 >
@@ -56,7 +60,7 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・36ファイル・952件） |
+| `npm test` | 単体テスト（vitest・41ファイル・1010件） |
 | `npm run typecheck` | 型チェック |
 | `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent・/setup-pin・/d/<token>・/forgot-password・/reset-password・/verify-email・/forgot-pin）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build` |
@@ -78,6 +82,10 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `python3 worksheets/generate_worksheets.py --test boss --range 1-30` | ボス戦テスト（1〜30）を出力 |
 | `npm run worksheets:month -- --world 1` | ワールド1の月間まとめ（30レッスン＝約1か月を1冊）を `worksheets/out/monthly/` に出力 |
 | `npm run worksheets:month -- --all` | 12ワールド分の月間まとめを出力 |
+| `npm run worksheets:upload [-- --dry-run] [-- --world 1] [-- --force]` | `worksheets/out/monthly/` のワークブックを置き場所（`STORAGE_DRIVER`）へアップロード。すでにあれば とばす。進みぐあいを表示・`--timeout`（既定600秒） |
+| `npm run db:deploy` | `prisma migrate deploy`（本番の DB にマイグレーションを当てる。`DIRECT_URL` を使う） |
+| `npm run vercel-build` | Vercel のビルド（`prisma generate` → 本番デプロイのときだけ `migrate deploy` → `next build`）。`vercel.json` から呼ばれる |
+| `npx tsx scripts/prepare-report-font.ts` | 同梱のレポート用フォント（Noto Sans JP）を作り直す（fontkit の不具合よけに グリフを4バイト単位に うめる）。ふだんは不要 |
 
 `ANTHROPIC_API_KEY` を設定すると、筆記テストのAI採点と、レッスン最後のAI会話（モデルは `CONVERSATION_MODEL`、既定 `claude-haiku-5-5`）が有効になります。未設定のときは、採点はルールベース、会話は台本の返事だけで動きます。開発中は `SKIP_DAILY_LOCK=1` で復習クエストの「翌日まで待つ」制限を外せます（まとめ・ボスには影響しません）。
 
@@ -125,7 +133,10 @@ eigo-quest/
 │   │   ├── monthlyDeliveryService.ts  LINE の月間レポートの作成・送信・dry-run・期限切れの掃除
 │   ├── auth/                 保護者アカウント（scrypt・セッション・cookie・Origin 確認・レート制限・currentUserId()）。line.ts は LINE ログイン（OAuth / OIDC・PKCE・署名つき state cookie）
 │   ├── line/messaging.ts     LINE Messaging API（push・Flex メッセージ・webhook の署名確認）
-│   ├── report/               月間レポートの中身（monthlyReport.ts・純粋関数）と PDF の作成（pdf.ts）
+│   ├── report/               月間レポートの中身（monthlyReport.ts・純粋関数）と PDF の作成（pdf.ts。pdf-lib + Noto Sans JP のサブセット）
+│   ├── storage/              ファイルの置き場所（local / S3 互換。fetch + AWS Signature V4）
+│   ├── mail/                 メール送信（resend / smtp / outbox）と文面
+│   ├── cron.ts               Cron の合い言葉（CRON_SECRET）の確認
 │   ├── offline/              おためしモードの内蔵データ・端末の記録（localProgress.ts）・おためしの きろく（trialLog.ts）
 │   ├── db.ts                 Prismaクライアント
 ├── src/middleware.ts         /api の POST/PUT/PATCH/DELETE の Origin を確認（CSRF 対策）
@@ -152,8 +163,12 @@ eigo-quest/
 ├── scripts/line-db-check.ts / line-monthly-db-check.ts / run4-flow-check.ts   本物の DB での LINE ログイン / 月間レポート / run4 の通し（ブラウザ）確認
 ├── scripts/line-monthly.ts   月間レポートを LINE で届けるコマンド（npm run line:monthly）
 ├── scripts/cleanup-trial.ts  使われなくなった おためし学習者の そうじ（npm run trial:cleanup）
+├── scripts/reset-db-check.ts / run5-flow-check.ts   本物の DB での パスワード再設定 / run5 の通し（ブラウザ）確認。共通部品は scripts/lib/checkKit.ts
+├── scripts/upload-worksheets.ts / vercel-build.mjs / prepare-report-font.ts   ワークブックのアップロード / Vercel のビルド / レポート用フォントの準備
+├── assets/fonts/             レポート PDF 用の Noto Sans JP（SIL Open Font License・OFL.txt）
+├── vercel.json               Vercel の設定（ビルドコマンド・東京リージョン・Cron Jobs）
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
-├── docs/night/ docs/night2/ docs/run3/ docs/run4/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md
+├── docs/night/ docs/night2/ docs/run3/ docs/run4/ docs/run5/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md、公開の手順は docs/run5/DEPLOY.md
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
 ```
 
@@ -205,9 +220,9 @@ eigo-quest/
 - **流れ**: `/welcome` → 登録（メール・パスワード・暗証番号4けた）→ お子さまを追加（6人まで）→ `/who`「だれが あそぶ？」で子どもを選ぶ → マップ。ゲームの画面の上のヘッダー（AccountBar）に いま遊んでいる子と「かわる」「おうちの方」が出ます。
 - **おうちの方ページ `/parent`**: 入るたびに暗証番号（入れてから10分有効）。お子さまごとのようす（進みぐあい・連続日数・総合習得率・今日の回数・最終学習日・伸ばしたい力）、1日のレッスン回数の上限（既定は制限なし、1〜10回）、お子さまの編集・削除、暗証番号・パスワードの変更、ログアウト、退会（保護者とすべての子どもの学習データを1つのトランザクションで完全に削除）。
 - **currentUserId() / resolveLearner()**: 学習記録を書く相手は ①ログイン中で選ばれた子ども（本当にその保護者の子のときだけ）→ ②この端末の おためし学習者 → ③DB 停止なら だれでもない（`NO_LEARNER_ID`。画面はブラウザの記録で遊ぶ おためしモード）の順。共有のデモユーザー（`demo-user`）は seed にだけ残し、遊ぶときには使いません。
-- **安全**: パスワードは Node の `crypto.scrypt`（ネイティブモジュールなし）。セッションは32バイト乱数のトークンを httpOnly・SameSite=Lax（本番は Secure）の cookie `eq_session` に入れ、DB には SHA-256 だけを期限つき（30日）で保存。ログインのたびにトークンを作り直し、1日ごとに入れ替え。状態を変える API は Origin を確認。ログイン・登録・暗証番号はメモリ内のレート制限（サーバー1台が前提）。入力はすべて zod、ログイン失敗は共通の文言、パスワード・トークン・暗証番号はログに出しません。
+- **安全**: パスワードは Node の `crypto.scrypt`（ネイティブモジュールなし）。セッションは32バイト乱数のトークンを httpOnly・SameSite=Lax（本番は Secure）の cookie `eq_session` に入れ、DB には SHA-256 だけを期限つき（30日）で保存。ログインのたびにトークンを作り直し、1日ごとに入れ替え。状態を変える API は Origin を確認。ログイン・登録・暗証番号・再設定などのレート制限は DB の表 `RateLimitBucket` で数える（run5。サーバーが何台でも同じ。DB 停止中はそのサーバーのメモリ）。すべての画面に `X-Frame-Options: DENY`・`frame-ancestors 'none'`・`nosniff`・`Referrer-Policy` を付けます（`next.config.ts`）。入力はすべて zod、ログイン失敗は共通の文言、パスワード・トークン・暗証番号はログに出しません。
 - **アバター（キャラクター）**: お子さまごとにハル・リコ・キコ・ビリモから1人を選びます（`User.avatarCharacter`、`src/lib/domain/avatars.ts`）。追加・編集のとき（おうちの方）に選べ、選ばなければ きょうだいがまだ使っていない顔になります。お子さま自身もヘッダーの顔をタッチして小さなシートから変えられます（暗証番号なし）。「だれが あそぶ？」・ヘッダー・おうちの方ページで同じ顔を表示します。
-- **端末ごとの おためし学習者（run5）**: DB が動いているとき、ログインしていない端末は最初のゲーム API で 保護者なしの `User`（`isTrial = true`、ニックネーム「おためし」）を1人作り、httpOnly cookie `eq_trial_learner` にランダムなトークン（32バイト）を入れます。DB にはトークンの SHA-256（`trialTokenHash`）だけを保存します。cookie を書けない Server Component（`/recap`）では作りません。遊ぶと `lastActiveAt` を更新し（1時間に1回まで）、全国ランキングには ほかの端末の おためし学習者を出しません。**60日** 遊ばれていない おためし学習者は `npm run trial:cleanup` が学習記録ごと消します（`--dry-run` で数だけ表示・`--timeout` 秒で途中終了し、残りは次回）。cron の例: `30 4 * * * cd /path/to/app && npm run trial:cleanup >> /var/log/eigo-quest-trial-cleanup.log 2>&1`（Vercel などでは Cron Jobs や外部のスケジューラから同じコマンドを実行）。
+- **端末ごとの おためし学習者（run5）**: DB が動いているとき、ログインしていない端末は最初のゲーム API で 保護者なしの `User`（`isTrial = true`、ニックネーム「おためし」）を1人作り、httpOnly cookie `eq_trial_learner` にランダムなトークン（32バイト）を入れます。DB にはトークンの SHA-256（`trialTokenHash`）だけを保存します。cookie を書けない Server Component（`/recap`）では作りません。遊ぶと `lastActiveAt` を更新し（1時間に1回まで）、全国ランキングには ほかの端末の おためし学習者を出しません。**60日** 遊ばれていない おためし学習者は `npm run trial:cleanup` が学習記録ごと消します（`--dry-run` で数だけ表示・`--timeout` 秒で途中終了し、残りは次回）。Vercel では `vercel.json` の Cron Jobs が毎日 `GET /api/cron/trial-cleanup` を呼ぶので設定は不要です。自分のサーバーでの cron の例: `30 4 * * * cd /path/to/app && npm run trial:cleanup >> /var/log/eigo-quest-trial-cleanup.log 2>&1`（Vercel などでは Cron Jobs や外部のスケジューラから同じコマンドを実行）。
 - **おためしの きろくの ひきつぎ**: おためしの きろくは ①この端末の おためし学習者（DB）と ②DB 停止中に遊んだ分（ブラウザの localStorage の「おためしの きろく」）の2つ。②は（`src/lib/offline/trialLog.ts`。クリアしたレッスン・合格したテスト・もらったコイン・遊んだ日・答えた項目）。保護者が登録・ログインして「だれが あそぶ？」で子どもを選ぶと、どちらかに きろくがあれば「おためしで あそんだ きろくを ひきつぐ？」と聞きます（DB 側は `GET /api/trial` で確認。作らない・書かない）。「はい」で `POST /api/children/:id/carry-over` が両方をその子に たし合わせます（レッスン・テスト合格は まだ無い分だけ、コインは合計（ブラウザの分は おためしで ありえる上限まで・DB の分はそのまま）、連続日数は大きい方、記憶はまだ無い項目だけ、モンスターは数を たす）。そのあとブラウザの きろくと `eq_trial_learner` cookie を消します（おためし学習者の行はコピー元として残り、60日後のそうじで消えます）。「いいえ」は その きろくについてだけ覚えます。**「おうちの方」ページの「おためしの きろくを ひきつぐ」ボタン**（お子さまを選んで確認）なら、「いいえ」のあとでも この端末に きろくが残っていれば引き継げます。それぞれ CoinLedger の `trial-carry:<ブラウザのID>` / `trial-carry-db:<おためし学習者のID>` で1回だけ（2回目は `alreadyCarried: true`）。ほかの家の子どもには引き継げません。計算は `src/lib/domain/trialMerge.ts`（`planDeviceTrialMerge`）。
 - **1日の回数制限**: 上限に届くと、新しいレッスンは「きょうの レッスンは ここまで！ また あした あそぼうね。」（403 + `code: "DAILY_LIMIT"`）。完了ずみのレッスンのおさらいはできます。
 - **DB 停止時**: アカウント API は 503 + `offline: true` + ていねいな案内（`GET /api/auth/me` だけは 200 + `loggedIn:false`）。画面はおためしモードへ進めます。
@@ -303,6 +318,7 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 | 区分 | モデル | 役割 |
 |---|---|---|
 | アカウント | `Parent` / `Session` / `User` / `Friendship` | 保護者（メール・パスワードと暗証番号のハッシュ・設定。LINE ログインの `lineUserId`・表示名、公式アカウントの友だち状態 `lineFriend`、毎月の配信のオン/オフ `lineMonthlyEnabled`）が月額課金し、子ども（`User`）が学習者。連続日数とコイン（台帳の合計を保存したもの）とアバター（`avatarCharacter`）を持つ。`Session` はトークンのハッシュ・選んだ子ども・暗証番号の入力時刻・期限 |
+| 本人確認・回数制限（run5） | `AuthToken` / `RateLimitBucket` | `AuthToken` はパスワード再設定（30分）・メールアドレス確認（24時間）のトークンの SHA-256（1回だけ）。`RateLimitBucket` はレート制限の回数（キーは制限の名前 + SHA-256）と「今すぐ送る」のロック。`User.isTrial`・`trialTokenHash`・`lastActiveAt` は端末ごとの おためし学習者 |
 | LINE 配信 | `ReportDelivery` | 月間レポートの送信1回・お子さま1人ごとの記録（月・きっかけ・ダウンロード用トークンの SHA-256・期限・ファイル・状態 SENT / DRY_RUN / FAILED） |
 | カリキュラム | `Lesson` / `LearningItem` / `Assessment` | JSONから投入。`LearningItem.skills` で、その項目がどの能力軸に入るかを決める |
 | 進捗 | `LessonProgress` / `TestAttempt` | `completedOn` / `takenOn` は APP_TIMEZONE の日付。復習クエストの翌日オープン・1日のレッスン回数・一発合格の判定に使う |

@@ -188,3 +188,15 @@
 - `npm run smoke:offline`（DB 停止 + next start + Playwright）: ぜんぶ OK。
 - 本物の PostgreSQL 16（ポート 5544）: `run5-flow-check`・`run4-flow-check`・`reset-db-check`・`carry-db-check`・`auth-db-check`・`line-db-check`・`line-monthly-db-check` すべて OK。
 - 本物の S3 / R2・本物のメール送信（Resend / SMTP）・本物の LINE への接続は この環境では していません（キーが無いため。dry-run・outbox・モックで確認）。
+
+## まとめ: README の更新と MORNING.md（完了）
+
+### やったこと
+- **README.md** を run5 の今の状態に合わせました: マイグレーションの一覧に `20261130090000_password_reset`・`20261201090000_rate_limit_bucket` を追加、5432 が使えない PC のポートの変え方と DEPLOY.md への案内、テスト数（41ファイル・1010件）、コマンド表に `worksheets:upload`・`db:deploy`・`vercel-build`・`prepare-report-font.ts`、安全の説明の「メモリ内のレート制限」を DB（`RateLimitBucket`）に直し 共通のセキュリティヘッダーを追記、ディレクトリ構成に `storage/`・`mail/`・`cron.ts`・新しいスクリプト・`assets/fonts/`・`vercel.json`・`docs/run5/`、DB 設計の表に `AuthToken`・`RateLimitBucket`、おためしの そうじは Vercel では Cron Jobs で自動と追記。
+- **docs/run5/MORNING.md**（オーナー向け）: かわったこと・ためしかた（DB なし／DB あり）・公開のために用意するもの（DEPLOY.md と LINE-SETUP.md へのリンク）・のこっている問題・決めてほしいこと。
+
+### 決めたこと（理由）
+- 「決めてほしいこと」は 公開に必要な選択（DB・置き場所・メールのサービス、ドメイン、Vercel のプラン）と 次の順番（月額課金）にしぼった（決定 1〜5 は BRIEF で決まったため 聞きなおさない）。
+
+### 確認
+- `npx tsc --noEmit` OK、`npx vitest run` 41ファイル 1010件 OK、`npx next build` OK。
