@@ -23,6 +23,7 @@ import { numberSpelling, pluralSpelling } from "@/lib/curriculum/w14Phonics";
 import { compoundSplit, contractionOf, ingSpelling, y3Sound } from "@/lib/curriculum/w15Phonics";
 import { edSpelling, irregularPast } from "@/lib/curriculum/w16Phonics";
 import { endingSpelling, homophoneOf, orSpelling, willContraction } from "@/lib/curriculum/w17Phonics";
+import { compareSpelling, fulLessOf, lySpelling, stressChoices, unOf } from "@/lib/curriculum/w18Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -1545,5 +1546,114 @@ describe("カリキュラム: ワールド17 の決まりごと（ほしふる�
     expect(at(504)!.conversation!.aiTask.goalJa).toMatch(/じゅうしょや でんわばんごうは いわなくて OK/);
     expect(at(504)!.teacherScript).toMatch(/don't share your address or password online/);
     for (const n of [503, 508]) expect(at(n)!.teacherScript, `L${n}`).toMatch(/don't need to write your real name or address/);
+  });
+});
+
+describe("カリキュラム: ワールド18 の決まりごと（こだまの谷）", () => {
+  const w18 = LESSONS.filter((l) => l.world === 18);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+
+  it("ワールド18 は 511〜540 の 30 レッスン、ステージ2・A2、学年の めやすは 中2", () => {
+    if (w18.length === 0) return; // 未作成ならスキップ
+    expect(w18.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 511 + i));
+    for (const l of w18) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中2");
+      expect(l.stage, `L${l.lessonNo}`).toBe(2);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w18.length === 0) return;
+    expect(at(511)!.title).toBe("Hello! Hello! Hello!");
+    expect(at(516)!.title).toBe("More Beautiful");
+    expect(at(521)!.title).toBe("As Big as a Bus");
+    expect(at(526)!.title).toBe("The Unhappy Echo");
+    expect(at(530)!.title).toBe("Dogs or Cats?");
+    expect(at(536)!.title).toBe("The Biggest Echo");
+    expect(at(540)!.title).toBe("World 18 Grand Review");
+  });
+
+  it("フォニックス: -er / -est → 強勢 → -ly → -ful・-less → un-（各ブロックの 5回目と L536〜540 は ふりかえり）", () => {
+    if (w18.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(511, 514, "er-est");
+    rule(516, 519, "stress");
+    rule(521, 524, "ly");
+    rule(526, 529, "ful-less");
+    rule(531, 534, "un");
+    for (const n of [515, 520, 525, 530, 535, 536, 537, 538, 539, 540]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    const kinds = (n: number) => at(n)!.phonics.words.map((w) => compareSpelling(w)?.kind);
+    expect(kinds(511)).toEqual(["add", "add", "add", "add"]);
+    expect(kinds(512)).toEqual(["e", "e", "e", "e"]);
+    expect(kinds(513)).toEqual(["double", "double", "double", "double"]);
+    expect(kinds(514)).toEqual(["y", "y", "y", "y"]);
+    for (const l of range(516, 520)) for (const w of l.phonics.words) expect(stressChoices(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    for (const l of range(521, 525)) for (const w of l.phonics.words) expect(lySpelling(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(at(523)!.phonics.words.map((w) => lySpelling(w)?.kind)).toEqual(["y", "y", "y", "y"]);
+    expect(at(524)!.phonics.words.map((w) => lySpelling(w)?.kind)).toEqual(["ful", "ful", "ful", "ful"]);
+    for (const l of range(526, 530)) for (const w of l.phonics.words) expect(fulLessOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(at(527)!.phonics.words).toEqual(expect.arrayContaining(["careful", "careless"]));
+    for (const l of range(531, 535)) for (const w of l.phonics.words) expect(unOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w18.length === 0) return;
+    expect(ex(511, 515)).toContain("Echo Valley is bigger than the plains.");
+    expect(ex(511, 515)).toContain("This tree is taller than that tree.");
+    expect(ex(511, 515)).toContain("This is the longest river in the valley.");
+    expect(ex(511, 515)).toContain("A blue whale is heavier than an elephant.");
+    expect(ex(511, 515)).toContain("The cheetah is the fastest land animal.");
+    expect(ex(516, 520)).toContain("This flower is more beautiful.");
+    expect(ex(516, 520)).toContain("Pandas are the most popular.");
+    expect(ex(516, 520)).toContain("I like apples better than oranges.");
+    expect(ex(516, 520)).toContain("Which do you like better, summer or winter?");
+    expect(ex(516, 520)).toContain("Soccer is the most popular sport in our group.");
+    expect(ex(521, 525)).toContain("This dinosaur was as big as a bus.");
+    expect(ex(521, 525)).toContain("I'm not as fast as a horse.");
+    expect(ex(521, 525)).toContain("Walk quietly. The birds are sleeping.");
+    expect(ex(521, 525)).toContain("That bird is more colorful than this one.");
+    expect(ex(521, 525)).toContain("The owl flies quietly. It's one of the best hunters.");
+    expect(ex(526, 530)).toContain("The echo sounds unhappy today.");
+    expect(ex(526, 530)).toContain("Be careful! Don't be careless.");
+    expect(ex(526, 530)).toContain("I think this one is better.");
+    expect(ex(526, 530)).toContain("I think so, too.");
+    expect(ex(526, 530)).toContain("I like this one better because it's cuter.");
+    expect(ex(526, 530)).toContain("I like dogs better because they're friendly.");
+    expect(ex(531, 535)).toContain("A frog can jump farther than you think!");
+    expect(ex(531, 535)).toContain("Which is older, the bridge or the tower?");
+    expect(ex(531, 535)).toContain("In picture A, the dog is bigger.");
+    expect(ex(531, 535)).toContain("My bag is heavier than Riko's bag.");
+    expect(ex(531, 535)).toContain("What is the tallest animal?");
+    expect(ex(536, 540)).toContain("Let's make the biggest echo ever!");
+    expect(ex(536, 540)).toContain("You're the best friend in the valley.");
+    expect(ex(536, 540)).toContain("This is the most beautiful place in the valley.");
+    expect(ex(536, 540)).toContain("as blue as");
+    expect(ex(536, 540)).toContain("Echo Valley is the most wonderful place!");
+  });
+
+  it("ステージ2: 先生の 台本は ほぼ 英語（日本語の たすけは みじかく）、会話シーンは 4〜7 行、L540 は スピード TPR", () => {
+    if (w18.length === 0) return;
+    for (const l of w18) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.25);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(120);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(4);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+    }
+    expect(at(540)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("ガイドブック・発表の AI 会話は「なまえは いわなくて OK」、くらべる ぶんは ひとの からだを くらべない、ペットが いなくても 話し合いに 入れる", () => {
+    if (w18.length === 0) return;
+    for (const n of [538, 540]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえは いわなくて OK/);
+    expect(at(534)!.conversation!.aiTask.goalJa).toMatch(/からだは くらべない/);
+    expect(at(534)!.teacherScript).toMatch(/Compare things, not people/);
+    expect(at(530)!.conversation!.aiTask.goalJa).toMatch(/ペットが いなくても OK/);
+    expect(at(530)!.teacherScript).toMatch(/You don't need a pet/);
+    expect(at(538)!.teacherScript).toMatch(/You don't need to write the real name/);
   });
 });

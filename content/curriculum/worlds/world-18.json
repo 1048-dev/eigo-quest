@@ -1,0 +1,4640 @@
+{
+  "world": 18,
+  "stage": 2,
+  "level": "A2",
+  "lessons": [
+    {
+      "lessonNo": 511,
+      "world": 18,
+      "title": "Hello! Hello! Hello!",
+      "titleJa": "やっほー！こだまの谷",
+      "school": {
+        "grade": "中2",
+        "topic": "Echo Valley is bigger than the plains.：2つを くらべる（比較級 ～er than）",
+        "grammar": "A is ～er than B.（比較級）",
+        "expressions": [
+          {
+            "en": "Echo Valley is bigger than the plains.",
+            "ja": "こだまの谷は 草原より ひろい。",
+            "core": true
+          },
+          {
+            "en": "The mountains are taller than the trees.",
+            "ja": "山は 木より たかい。"
+          },
+          {
+            "en": "Is the valley bigger than the observatory? ― Yes, it is!",
+            "ja": "谷は 天文台より ひろい？ ― うん、ひろいよ！"
+          }
+        ],
+        "testPoints": [
+          "A is ～er than B. で 2つを くらべられる",
+          "-er / -est の つづり（tall → taller → tallest）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Cup your hands and shout.",
+          "ja": "てを くちに あてて さけんで。",
+          "action": "りょうてを くちの よこに あてて さけぶ",
+          "emoji": "📣"
+        },
+        {
+          "en": "Listen to the echo.",
+          "ja": "こだまを きいて。",
+          "action": "てを みみに あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Point to the tallest mountain.",
+          "ja": "いちばん たかい 山を ゆびさして。",
+          "action": "とおくの 山を ゆびさす",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "Stretch your arms wide.",
+          "ja": "りょうてを ひろげて。",
+          "action": "てを よこに おおきく ひろげる",
+          "emoji": "🙆"
+        }
+      ],
+      "phonics": {
+        "rule": "er-est",
+        "focus": [
+          "-er",
+          "-est"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/"
+        ],
+        "words": [
+          "taller",
+          "tallest",
+          "longer",
+          "longest"
+        ],
+        "tipJa": "tall → taller → tallest、long → longer → longest。そのまま er（もっと）・est（いちばん）を つける。"
+      },
+      "vocab": [
+        {
+          "en": "valley",
+          "ja": "たに",
+          "emoji": "🏞️",
+          "core": true
+        },
+        {
+          "en": "echo",
+          "ja": "こだま",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "mountain",
+          "ja": "やま",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "plains",
+          "ja": "へいげん・くさはら",
+          "emoji": "🌾"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to Echo Valley! Look at the mountains. Now listen. Hello! Hello... hello... hello! That's an echo. Today we compare two things. Echo Valley is bigger than the plains. Say it with me. Echo Valley is bigger than the plains. Great! Big, bigger. Tall, taller. When we compare two things, we add e, r and say than. 2つを くらべる ときは ～er than だよ。 The mountains are taller than the trees. The river is longer than the road. Let's practice. An elephant is bigger than a dog. A giraffe is taller than a horse. Now you. Look at your pencil and your eraser. My pencil is longer than my eraser. Wonderful! Now, phonics. Taller. Tallest. Longer. Longest. Just add e, r or e, s, t. Tallest means number one. Okay, let's shout together. Hello, Echo Valley!",
+      "conversation": {
+        "scene": "Arriving at Echo Valley and playing with echoes",
+        "sceneJa": "谷に 着いて、こえの こだまを たのしむ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Wow! We're here! This is Echo Valley!",
+            "ja": "わあ！ついた！ここが こだまの谷だ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's so green. It's bigger than the plains!",
+            "ja": "みどりで いっぱい。草原より ひろいね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look at the mountains. They're taller than the observatory.",
+            "ja": "山を みて。天文台より たかいよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's try it. Hello! Hello! Hello!",
+            "ja": "やってみよう。ハロー！ハロー！ハロー！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Listen... hello... hello... That's the echo!",
+            "ja": "きいて…ハロー…ハロー…それが こだまよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My echo is louder than yours, Birimo!",
+            "ja": "ぼくの こだまの ほうが ビリモのより おおきいよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No way! Hello-o-o!",
+            "ja": "まけないぞ！ハロー！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "こだまの谷で みつけた ものを ～er than で くらべよう（The mountain is taller than the tree.）",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to Echo Valley! Look around. What can you see? Is the valley bigger than your park?",
+          "targetExpressions": [
+            "bigger than",
+            "taller than",
+            "longer than",
+            "Hello!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Echo Valley is bigger than the plains.（～er than で くらべる）",
+          "big → bigger、tall → taller",
+          "taller・tallest・longer・longest"
+        ]
+      }
+    },
+    {
+      "lessonNo": 512,
+      "world": 18,
+      "title": "Taller and Shorter",
+      "titleJa": "たかい・ひくい",
+      "school": {
+        "grade": "中2",
+        "topic": "This tree is taller than that tree.：たかさを くらべる（taller / shorter）",
+        "grammar": "This ～ is taller / shorter than that ～.",
+        "expressions": [
+          {
+            "en": "This tree is taller than that tree.",
+            "ja": "この 木は あの 木より たかい。",
+            "core": true
+          },
+          {
+            "en": "That tree is shorter than this tree.",
+            "ja": "あの 木は この 木より ひくい。"
+          },
+          {
+            "en": "Which tree is taller? ― This one is.",
+            "ja": "どっちの 木が たかい？ ― こっちだよ。"
+          }
+        ],
+        "testPoints": [
+          "taller / shorter than で たかさを くらべられる",
+          "e で おわる ことば（large → larger、nice → nicest）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand up tall like a tree.",
+          "ja": "木の ように せを のばして たって。",
+          "action": "つまさきで たって せを のばす",
+          "emoji": "🌲"
+        },
+        {
+          "en": "Crouch down small.",
+          "ja": "ちいさく しゃがんで。",
+          "action": "ひざを かかえて しゃがむ",
+          "emoji": "🐁"
+        },
+        {
+          "en": "Reach up high.",
+          "ja": "たかく てを のばして。",
+          "action": "りょうてを うえに のばす",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Sway in the wind.",
+          "ja": "かぜで ゆれて。",
+          "action": "からだを ゆっくり 左右に ゆらす",
+          "emoji": "🍃"
+        }
+      ],
+      "phonics": {
+        "rule": "er-est",
+        "focus": [
+          "-er",
+          "-est"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/"
+        ],
+        "words": [
+          "larger",
+          "nicest",
+          "wider",
+          "safest"
+        ],
+        "tipJa": "large → larger、nice → nicest、wide → wider、safe → safest。e で おわる ことばは r / st だけ つける。"
+      },
+      "vocab": [
+        {
+          "en": "tree",
+          "ja": "き",
+          "emoji": "🌳",
+          "core": true
+        },
+        {
+          "en": "forest",
+          "ja": "もり",
+          "emoji": "🌲"
+        },
+        {
+          "en": "short",
+          "ja": "ひくい・みじかい",
+          "emoji": "📏"
+        },
+        {
+          "en": "branch",
+          "ja": "えだ",
+          "emoji": "🌿"
+        }
+      ],
+      "teacherScript": "Hi, everyone! We're in the forest of Echo Valley. Look at these trees. This tree is very tall. That tree is not so tall. So, this tree is taller than that tree. Say it with me. This tree is taller than that tree. Good! And that tree is shorter than this tree. Tall, taller. Short, shorter. たかいは taller、ひくいは shorter だよ。 Let's practice. Stand up, please. Stand on your toes. You are taller now! Crouch down. Now you are shorter. Which tree is taller? This one is. Which tree is shorter? That one is. Now, phonics. Larger. Nicest. Wider. Safest. Large ends with e, so we just add r. Nice ends with e, so we just add s, t. Now look out the window. Find a tall thing. Is it taller than your house? Tell me!",
+      "conversation": {
+        "scene": "Comparing the heights of trees in the valley forest",
+        "sceneJa": "谷の 森で、木の たかさを くらべる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at this tree! It's so tall!",
+            "ja": "この 木 みて！すごく たかい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "But that tree is taller than this tree.",
+            "ja": "でも あの 木の ほうが この 木より たかいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really? I think they're the same.",
+            "ja": "ほんと？おなじくらいに みえるけど。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's check! I'll fly to the top of each tree.",
+            "ja": "たしかめよう！それぞれの てっぺんまで とんでみる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Birimo, which tree is taller?",
+            "ja": "ビリモ、どっちの 木が たかい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "That one is! This tree is shorter.",
+            "ja": "あっちだよ！この 木の ほうが ひくい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes! I was right!",
+            "ja": "やった！あたってた！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "木や たてものの たかさを taller / shorter than で くらべよう",
+          "starterEn": "Hi! I'm Ms. Emma. There are so many trees in this forest! Look at the two big ones. Which tree is taller, do you think?",
+          "targetExpressions": [
+            "This tree is taller than that tree.",
+            "That one is shorter.",
+            "Which is taller?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This tree is taller than that tree.",
+          "たかい taller ⇔ ひくい shorter",
+          "larger・nicest・wider・safest（e で おわる ことば）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 513,
+      "world": 18,
+      "title": "The Longest River",
+      "titleJa": "いちばん ながい 川",
+      "school": {
+        "grade": "中2",
+        "topic": "This is the longest river in the valley.：いちばんを いう（最上級 the ～est）",
+        "grammar": "the ～est ... in ～（最上級）",
+        "expressions": [
+          {
+            "en": "This is the longest river in the valley.",
+            "ja": "これは 谷で いちばん ながい 川です。",
+            "core": true
+          },
+          {
+            "en": "This is the biggest rock in the river.",
+            "ja": "これは 川で いちばん おおきい 石だ。"
+          },
+          {
+            "en": "Is this the deepest part? ― Yes. Be careful!",
+            "ja": "ここが いちばん ふかい ところ？ ― そう。きを つけて！"
+          }
+        ],
+        "testPoints": [
+          "the ～est in ～ で いちばんを いえる",
+          "子音を 重ねる ことば（big → bigger、hot → hottest）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk along the river.",
+          "ja": "川ぞいを あるいて。",
+          "action": "その場で てを ふって あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Skip a stone.",
+          "ja": "石を なげて みずきりして。",
+          "action": "よこから 石を なげる まね",
+          "emoji": "🪨"
+        },
+        {
+          "en": "Dip your toes in the water.",
+          "ja": "つまさきを みずに つけて。",
+          "action": "つまさきで そっと みずに ふれる まね",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Shake off the water.",
+          "ja": "みずを はらって。",
+          "action": "てを ぶるぶる ふる",
+          "emoji": "💦"
+        }
+      ],
+      "phonics": {
+        "rule": "er-est",
+        "focus": [
+          "-er",
+          "-est"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/"
+        ],
+        "words": [
+          "bigger",
+          "hottest",
+          "thinner",
+          "wettest"
+        ],
+        "tipJa": "big → bigger、hot → hottest、thin → thinner、wet → wettest。みじかい 母音 ＋ 子音 1つ の ことばは さいごの もじを 重ねる。"
+      },
+      "vocab": [
+        {
+          "en": "river",
+          "ja": "かわ",
+          "emoji": "🏞️",
+          "core": true
+        },
+        {
+          "en": "rock",
+          "ja": "いわ・いし",
+          "emoji": "🪨"
+        },
+        {
+          "en": "deep",
+          "ja": "ふかい",
+          "emoji": "🌊"
+        },
+        {
+          "en": "bridge",
+          "ja": "はし",
+          "emoji": "🌉"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Listen. Can you hear the water? We're walking along the river. This river is very, very long. It's the longest river in the valley. Say it with me. This is the longest river in the valley. Great! Long, longer, longest. For number one, we say the and add e, s, t. いちばんは the ～est だよ。 Look at this rock. It's the biggest rock in the river. And here, the water is very deep. It's the deepest part. Be careful! Let's practice. Who is the tallest in your family? My dad is the tallest in my family. What is the biggest animal? The blue whale is the biggest animal. Now, phonics. Bigger. Hottest. Thinner. Wettest. Big has a short vowel and one letter at the end, so we double the g. Big, bigger, biggest. Now, what is the longest thing in your room? Think and tell me!",
+      "conversation": {
+        "scene": "Walking along the river in the valley",
+        "sceneJa": "谷の 川ぞいを あるく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "This river is so long!",
+            "ja": "この 川、すごく ながいね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. It's the longest river in the valley.",
+            "ja": "そうよ。谷で いちばん ながい 川なの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look! That's the biggest rock in the river. Let's stand on it!",
+            "ja": "みて！あれが 川で いちばん おおきい 石だ。のって みよう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wait, Haru. The water is deep there. Be careful!",
+            "ja": "まって、ハル。そこは ふかいよ。きを つけて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Is this the deepest part?",
+            "ja": "ここが いちばん ふかい ところ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, it is. Let's walk on the bridge.",
+            "ja": "そうよ。はしを わたりましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay. The bridge is the safest way!",
+            "ja": "わかった。はしが いちばん あんぜんだね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "谷の 川で みつけた ものを the ～est で しょうかい しよう（the biggest rock / the longest river）",
+          "starterEn": "Hi! I'm Ms. Emma. We're walking along the river. Look at all the rocks! Which one is the biggest rock, do you think?",
+          "targetExpressions": [
+            "the longest river",
+            "the biggest rock",
+            "the deepest part",
+            "Be careful!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This is the longest river in the valley.",
+          "いちばんは the ～est（long → longest）",
+          "bigger・hottest・thinner・wettest（さいごの もじを 重ねる）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 514,
+      "world": 18,
+      "title": "Heavier Than an Elephant?",
+      "titleJa": "ぞうより おもい？",
+      "school": {
+        "grade": "中2",
+        "topic": "A blue whale is heavier than an elephant.：おもさを くらべる（y → i の 比較級）",
+        "grammar": "A is heavier than B.（y → ier）",
+        "expressions": [
+          {
+            "en": "A blue whale is heavier than an elephant.",
+            "ja": "シロナガスクジラは ぞうより おもい。",
+            "core": true
+          },
+          {
+            "en": "Which is heavier, a lion or a bear? ― A bear is heavier.",
+            "ja": "ライオンと くま、どっちが おもい？ ― くまの ほうが おもい。"
+          },
+          {
+            "en": "Wow! That's really heavy!",
+            "ja": "わあ！ほんとうに おもいね！"
+          }
+        ],
+        "testPoints": [
+          "heavier than で おもさを くらべられる",
+          "y を i に かえる ことば（happy → happier、heavy → heaviest）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Lift a heavy box.",
+          "ja": "おもい はこを もちあげて。",
+          "action": "ふんばって もちあげる まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Walk like an elephant.",
+          "ja": "ぞうの ように あるいて。",
+          "action": "うでを はなに して ゆっくり あるく",
+          "emoji": "🐘"
+        },
+        {
+          "en": "Swim like a whale.",
+          "ja": "くじらの ように およいで。",
+          "action": "りょうてで おおきく およぐ まね",
+          "emoji": "🐋"
+        },
+        {
+          "en": "Tiptoe like a mouse.",
+          "ja": "ねずみの ように そっと あるいて。",
+          "action": "つまさきで ちょこちょこ あるく",
+          "emoji": "🐭"
+        }
+      ],
+      "phonics": {
+        "rule": "er-est",
+        "focus": [
+          "-er",
+          "-est"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/"
+        ],
+        "words": [
+          "happier",
+          "heaviest",
+          "easier",
+          "funniest"
+        ],
+        "tipJa": "happy → happier、heavy → heaviest、easy → easier、funny → funniest。子音 ＋ y で おわる ことばは y を i に かえて er / est。"
+      },
+      "vocab": [
+        {
+          "en": "heavy",
+          "ja": "おもい",
+          "emoji": "🏋️",
+          "core": true
+        },
+        {
+          "en": "light",
+          "ja": "かるい",
+          "emoji": "🪶"
+        },
+        {
+          "en": "whale",
+          "ja": "くじら",
+          "emoji": "🐋"
+        },
+        {
+          "en": "museum",
+          "ja": "はくぶつかん",
+          "emoji": "🏛️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Welcome to the Valley Museum. Look up! This is a model of a blue whale. It's huge! Is it heavier than an elephant? Yes! A blue whale is heavier than an elephant. Say it with me. A blue whale is heavier than an elephant. Excellent! Heavy ends with y. So we change y to i and add e, r. Heavy, heavier. y で おわる ことばは y を i に かえて er だよ。 The opposite of heavy is light. A feather is lighter than a rock. Let's practice. Which is heavier, a lion or a bear? A bear is heavier. Which is heavier, a cat or a horse? A horse is heavier. Now, phonics. Happier. Heaviest. Easier. Funniest. Happy, happier. Funny, funniest. Now pick up your pencil case and your book. Which is heavier? Tell me!",
+      "conversation": {
+        "scene": "Comparing animal weights at the valley museum",
+        "sceneJa": "谷の 博物館で、動物の おもさを くらべる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look at this huge whale!",
+            "ja": "この おおきな くじら みて！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's a blue whale. A blue whale is heavier than an elephant.",
+            "ja": "シロナガスクジラよ。ぞうより おもいの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Heavier than an elephant? Wow!",
+            "ja": "ぞうより おもい？すごい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Which is heavier, a lion or a bear?",
+            "ja": "ライオンと くま、どっちが おもい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hmm... a bear is heavier, I think!",
+            "ja": "うーん…くまの ほうが おもいと おもう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right, Birimo. A big bear is heavier than two lions.",
+            "ja": "そのとおり、ビリモ。おおきな くまは ライオン 2とうより おもいのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And Birimo is lighter than all of them!",
+            "ja": "そして ビリモは だれよりも かるいね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつの おもさを heavier / lighter than で くらべよう",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the museum! Here are pictures of a horse, a dog and a hippo. Which is heavier, a horse or a dog?",
+          "targetExpressions": [
+            "heavier than",
+            "lighter than",
+            "Which is heavier?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "A blue whale is heavier than an elephant.",
+          "heavy → heavier（y を i に かえる）",
+          "happier・heaviest・easier・funniest"
+        ]
+      }
+    },
+    {
+      "lessonNo": 515,
+      "world": 18,
+      "title": "Valley Record Book",
+      "titleJa": "谷の きろくブック",
+      "school": {
+        "grade": "中2",
+        "topic": "The cheetah is the fastest land animal.：どうぶつの きろくカードを 読む・発表する",
+        "grammar": "the ～est（ふりかえり）・比較級と 最上級",
+        "expressions": [
+          {
+            "en": "The cheetah is the fastest land animal.",
+            "ja": "チーターは りくで いちばん はやい どうぶつです。",
+            "core": true
+          },
+          {
+            "en": "The giraffe is the tallest animal in the world.",
+            "ja": "キリンは せかいで いちばん せが たかい どうぶつです。"
+          },
+          {
+            "en": "It is faster than a horse.",
+            "ja": "うまより はやい。"
+          }
+        ],
+        "testPoints": [
+          "the ～est で きろくを 発表できる",
+          "-er / -est の つづりの まとめ（4つの つけかた）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Run in place like a cheetah.",
+          "ja": "チーターの ように その場で はしって。",
+          "action": "その場で すばやく はしる",
+          "emoji": "🐆"
+        },
+        {
+          "en": "Stretch your neck like a giraffe.",
+          "ja": "キリンの ように くびを のばして。",
+          "action": "あごを あげて くびを のばす",
+          "emoji": "🦒"
+        },
+        {
+          "en": "Hold up your record card.",
+          "ja": "きろくカードを みせて。",
+          "action": "カードを むねの まえに かかげる",
+          "emoji": "🪪"
+        },
+        {
+          "en": "Clap for your friends.",
+          "ja": "ともだちに はくしゅ して。",
+          "action": "おおきく はくしゅ する",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-er",
+          "-est"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/"
+        ],
+        "words": [
+          "older",
+          "cutest",
+          "hotter",
+          "earliest"
+        ],
+        "tipJa": "まとめ: old → older（そのまま）、cute → cutest（e で おわる）、hot → hotter（重ねる）、early → earliest（y → i）。"
+      },
+      "vocab": [
+        {
+          "en": "record",
+          "ja": "きろく",
+          "emoji": "🏆",
+          "core": true
+        },
+        {
+          "en": "cheetah",
+          "ja": "チーター",
+          "emoji": "🐆"
+        },
+        {
+          "en": "giraffe",
+          "ja": "キリン",
+          "emoji": "🦒"
+        },
+        {
+          "en": "land",
+          "ja": "りく",
+          "emoji": "🌍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're making the Valley Record Book. It has amazing animal records. Here is the first card. The cheetah is the fastest land animal. Say it with me. The cheetah is the fastest land animal. Great! Land means not in the water and not in the sky. Here is the next card. The giraffe is the tallest animal in the world. And the blue whale is the biggest animal. Let's read a card together. Name: cheetah. Record: the fastest land animal. It is faster than a horse. きろくカードは the ～est で 発表しよう。 Now, phonics review. Older. Cutest. Hotter. Earliest. Old, just add e, r. Cute, just add s, t. Hot, double the t. Early, change y to i. Now it's your turn. Choose an animal and make a record card. Read it to your friends!",
+      "conversation": {
+        "scene": "Presenting animal record cards at the museum",
+        "sceneJa": "博物館で、動物の きろくカードを 発表する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's present our record cards. Who's first?",
+            "ja": "きろくカードを 発表しましょう。だれから？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Me! The cheetah is the fastest land animal. It's faster than a horse.",
+            "ja": "ぼく！チーターは りくで いちばん はやい どうぶつ。うまより はやいんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My card is about the giraffe. It's the tallest animal in the world.",
+            "ja": "わたしの カードは キリン。せかいで いちばん せが たかい どうぶつ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Mine is the blue whale. It's the biggest animal on Earth.",
+            "ja": "わたしは シロナガスクジラ。ちきゅうで いちばん おおきい どうぶつ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And my card is about... me! I'm the cutest friend in the valley!",
+            "ja": "ぼくの カードは…ぼく！谷で いちばん かわいい ともだち！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Great job, everyone!",
+            "ja": "あはは！みんな よく できました！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな どうぶつの きろくを The ～ is the ～est ～. で 発表しよう",
+          "starterEn": "Hi! I'm Ms. Emma. I love the record book! Do you know the fastest land animal? Which animal do you want to tell me about?",
+          "targetExpressions": [
+            "the fastest",
+            "the tallest",
+            "the biggest",
+            "faster than"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The cheetah is the fastest land animal.",
+          "きろくカード: the ～est ＋ ～er than",
+          "older・cutest・hotter・earliest（4つの つけかた）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 516,
+      "world": 18,
+      "title": "More Beautiful",
+      "titleJa": "もっと きれい",
+      "school": {
+        "grade": "中2",
+        "topic": "This flower is more beautiful.：ながい ことばの 比較級（more ～）",
+        "grammar": "more ～ (than ...)（ながい ことば）",
+        "expressions": [
+          {
+            "en": "This flower is more beautiful.",
+            "ja": "この 花の ほうが きれい。",
+            "core": true
+          },
+          {
+            "en": "This flower is more beautiful than that one.",
+            "ja": "この 花は あの 花より きれい。"
+          },
+          {
+            "en": "Which flower is more beautiful? ― I think this one is.",
+            "ja": "どっちの 花が きれい？ ― こっちだと おもう。"
+          }
+        ],
+        "testPoints": [
+          "ながい ことばは more ～ で くらべる（more beautiful）",
+          "つよく よむ ところ（EL-e-phant・kan-ga-ROO）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Smell the flowers.",
+          "ja": "花の においを かいで。",
+          "action": "はなを くんくん させる",
+          "emoji": "🌸"
+        },
+        {
+          "en": "Pick a flower gently.",
+          "ja": "そっと 花を つんで。",
+          "action": "ゆびで やさしく つむ まね",
+          "emoji": "🌼"
+        },
+        {
+          "en": "Fly like a butterfly.",
+          "ja": "ちょうちょの ように とんで。",
+          "action": "りょうてを ひらひら させる",
+          "emoji": "🦋"
+        },
+        {
+          "en": "Make a flower with your hands.",
+          "ja": "てで 花を つくって。",
+          "action": "てくびを あわせて ゆびを ひらく",
+          "emoji": "🌷"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "el-e-phant",
+          "kan-ga-roo",
+          "go-ril-la",
+          "oc-to-pus"
+        ],
+        "sounds": [],
+        "words": [
+          "elephant",
+          "kangaroo",
+          "gorilla",
+          "octopus"
+        ],
+        "tipJa": "ながい ことばは つよく よむ ところが 1つ。EL-e-phant、kan-ga-ROO、go-RIL-la、OC-to-pus。つよい ところを おおきく・ながく よもう。"
+      },
+      "vocab": [
+        {
+          "en": "flower",
+          "ja": "はな",
+          "emoji": "🌸",
+          "core": true
+        },
+        {
+          "en": "beautiful",
+          "ja": "うつくしい",
+          "emoji": "✨"
+        },
+        {
+          "en": "field",
+          "ja": "のはら・はたけ",
+          "emoji": "🌻"
+        },
+        {
+          "en": "bee",
+          "ja": "はち",
+          "emoji": "🐝"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Wow, look at this flower field! There are so many flowers. This flower is pretty. And this flower is very, very pretty. This flower is more beautiful. Say it with me. This flower is more beautiful. Lovely! Beautiful is a long word. We don't say beautifuler. We say more beautiful. ながい ことばは more を つけるよ。 More beautiful. More exciting. More interesting. Let's practice. Which is more exciting, a game or a book? For me, a game is more exciting. Which is more interesting, a movie or a comic? A comic is more interesting! Which flower is more beautiful? I think this one is. Now, phonics. Long words have one strong part. EL-e-phant. kan-ga-ROO. go-RIL-la. OC-to-pus. Say the strong part big and long. Now, look around you. Which is more beautiful, the sky or the sea? Tell me what you think!",
+      "conversation": {
+        "scene": "In the flower field of the valley",
+        "sceneJa": "谷の 花畑で",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at all these flowers!",
+            "ja": "花が いっぱい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This red flower is pretty. But this blue flower is more beautiful.",
+            "ja": "この あかい 花も かわいい。でも この あおい 花の ほうが きれい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hmm, I like the yellow one. It's bigger and brighter.",
+            "ja": "うーん、ぼくは きいろいのが すき。もっと おおきくて あかるいから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Which flower is more beautiful, Ms. Emma?",
+            "ja": "どの 花が いちばん きれい、エマ先生？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "They're all beautiful! Each flower is special.",
+            "ja": "どれも きれいよ！どの 花も とくべつなの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! A butterfly! It's more beautiful than all the flowers!",
+            "ja": "みて！ちょうちょ！どの 花より きれいだよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha. Maybe you're right, Birimo.",
+            "ja": "あはは。そうかもね、ビリモ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "花や けしきを more beautiful で くらべよう。どれが すきかも いってみよう",
+          "starterEn": "Hi! I'm Ms. Emma. Look at the red flower and the white flower. Which flower is more beautiful, do you think?",
+          "targetExpressions": [
+            "more beautiful",
+            "more beautiful than",
+            "I think this one is."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This flower is more beautiful.（ながい ことばは more）",
+          "more beautiful / more exciting",
+          "EL-e-phant・kan-ga-ROO・go-RIL-la・OC-to-pus"
+        ]
+      }
+    },
+    {
+      "lessonNo": 517,
+      "world": 18,
+      "title": "The Most Popular Animal",
+      "titleJa": "いちばん 人気の どうぶつ",
+      "school": {
+        "grade": "中2",
+        "topic": "Pandas are the most popular.：ながい ことばの 最上級（the most ～）",
+        "grammar": "the most ～（ながい ことば）",
+        "expressions": [
+          {
+            "en": "Pandas are the most popular.",
+            "ja": "パンダが いちばん 人気です。",
+            "core": true
+          },
+          {
+            "en": "What is the most popular animal in this zoo? ― Pandas are!",
+            "ja": "この どうぶつえんで いちばん 人気の どうぶつは？ ― パンダだよ！"
+          },
+          {
+            "en": "Ten people chose pandas. Five people chose koalas.",
+            "ja": "10人が パンダを、5人が コアラを えらんだ。"
+          }
+        ],
+        "testPoints": [
+          "the most ～ で いちばんを いえる（the most popular）",
+          "つよく よむ ところ（ba-NA-na・to-MA-to）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "✋"
+        },
+        {
+          "en": "Count with your fingers.",
+          "ja": "ゆびで かぞえて。",
+          "action": "ゆびを 1本ずつ たてる",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Eat bamboo like a panda.",
+          "ja": "パンダの ように ささを たべて。",
+          "action": "すわって ささを もぐもぐ する まね",
+          "emoji": "🐼"
+        },
+        {
+          "en": "Hug a tree like a koala.",
+          "ja": "コアラの ように 木に だきついて。",
+          "action": "りょうてで 木を だく まね",
+          "emoji": "🐨"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "ba-na-na",
+          "to-ma-to",
+          "po-ta-to",
+          "pine-ap-ple"
+        ],
+        "sounds": [],
+        "words": [
+          "banana",
+          "tomato",
+          "potato",
+          "pineapple"
+        ],
+        "tipJa": "ba-NA-na、to-MA-to、po-TA-to は まんなかが つよい。PINE-ap-ple は はじめが つよい。日本語の「バナナ」と ちがうので きを つけよう。"
+      },
+      "vocab": [
+        {
+          "en": "popular",
+          "ja": "にんきの",
+          "emoji": "🌟",
+          "core": true
+        },
+        {
+          "en": "zoo",
+          "ja": "どうぶつえん",
+          "emoji": "🦁"
+        },
+        {
+          "en": "panda",
+          "ja": "パンダ",
+          "emoji": "🐼"
+        },
+        {
+          "en": "choose",
+          "ja": "えらぶ",
+          "emoji": "☝️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're at the Valley Zoo. The zoo is asking visitors a question. What is your favorite animal? Look at the results. Ten people chose pandas. Five people chose koalas. Three people chose lions. So, pandas are the most popular. Say it with me. Pandas are the most popular. Wonderful! Popular is a long word. So for number one, we say the most. The most popular. The most beautiful. The most exciting. ながい ことばの いちばんは the most だよ。 Let's practice. What is the most popular sport in your class? Maybe soccer is the most popular. What is the most popular food? Maybe curry and rice! Now, phonics. ba-NA-na. to-MA-to. po-TA-to. PINE-ap-ple. In English, banana is strong in the middle. Now, think about your class. What is the most popular game? Tell me!",
+      "conversation": {
+        "scene": "A survey at the valley zoo",
+        "sceneJa": "谷の 動物園の アンケート",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "The zoo has a survey. Let's look at the results.",
+            "ja": "どうぶつえんが アンケートを したの。けっかを みてみましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Ten people chose pandas!",
+            "ja": "10人が パンダを えらんでる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Five people chose koalas, and three chose lions.",
+            "ja": "コアラが 5人、ライオンが 3人。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "So pandas are the most popular animal.",
+            "ja": "じゃあ パンダが いちばん 人気の どうぶつだね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Who chose the snake? Only one person?",
+            "ja": "ヘビを えらんだのは だれ？ 1人だけ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That was me! Snakes are interesting.",
+            "ja": "それは わたし！ヘビって おもしろいのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Ha ha! You're the most surprising teacher, Ms. Emma!",
+            "ja": "あはは！エマ先生は いちばん びっくりする 先生だね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな どうぶつを こたえて、the most popular で いちばん 人気の ものを いおう",
+          "starterEn": "Hi! I'm Ms. Emma. I'm asking everyone at the zoo. What is your favorite animal? Do you think pandas are the most popular?",
+          "targetExpressions": [
+            "the most popular",
+            "My favorite animal is ～.",
+            "Pandas are the most popular."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Pandas are the most popular.（ながい ことばの いちばんは the most）",
+          "Ten people chose pandas.（アンケートの けっか）",
+          "ba-NA-na・to-MA-to・po-TA-to・PINE-ap-ple"
+        ]
+      }
+    },
+    {
+      "lessonNo": 518,
+      "world": 18,
+      "title": "Better and Best",
+      "titleJa": "もっと いい・いちばん いい",
+      "school": {
+        "grade": "中2",
+        "topic": "I like apples better than oranges.：good / well の 比較（better / best）・すきを くらべる",
+        "grammar": "like A better than B / like A the best（better / best）",
+        "expressions": [
+          {
+            "en": "I like apples better than oranges.",
+            "ja": "わたしは オレンジより りんごが すき。",
+            "core": true
+          },
+          {
+            "en": "I like peaches the best.",
+            "ja": "ももが いちばん すき。"
+          },
+          {
+            "en": "These apples are good, but those are better!",
+            "ja": "この りんごも いいけど、あっちの ほうが もっと いい！"
+          }
+        ],
+        "testPoints": [
+          "I like A better than B. で すきを くらべられる",
+          "good → better → best（とくべつな かたち）",
+          "つよく よむ ところ（DI-no-saur・fla-MIN-go）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick an apple.",
+          "ja": "りんごを とって。",
+          "action": "うえに てを のばして もぐ まね",
+          "emoji": "🍎"
+        },
+        {
+          "en": "Put it in the basket.",
+          "ja": "かごに いれて。",
+          "action": "そっと かごに いれる まね",
+          "emoji": "🧺"
+        },
+        {
+          "en": "Climb the ladder.",
+          "ja": "はしごを のぼって。",
+          "action": "てと あしを こうごに うごかす",
+          "emoji": "🪜"
+        },
+        {
+          "en": "Take a big bite.",
+          "ja": "おおきく ひとくち たべて。",
+          "action": "おおきな くちで かじる まね",
+          "emoji": "😋"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "di-no-saur",
+          "but-ter-fly",
+          "chim-pan-zee",
+          "fla-min-go"
+        ],
+        "sounds": [],
+        "words": [
+          "dinosaur",
+          "butterfly",
+          "chimpanzee",
+          "flamingo"
+        ],
+        "tipJa": "DI-no-saur、BUT-ter-fly は はじめ、chim-pan-ZEE は おわり、fla-MIN-go は まんなかが つよい。てを たたいて つよい ところで おおきく。"
+      },
+      "vocab": [
+        {
+          "en": "better",
+          "ja": "もっと いい",
+          "emoji": "👍",
+          "core": true
+        },
+        {
+          "en": "orchard",
+          "ja": "かじゅえん",
+          "emoji": "🌳"
+        },
+        {
+          "en": "peach",
+          "ja": "もも",
+          "emoji": "🍑"
+        },
+        {
+          "en": "basket",
+          "ja": "かご",
+          "emoji": "🧺"
+        }
+      ],
+      "teacherScript": "Hi, everyone! We're in the valley orchard. Look at all the fruit trees! There are apples, oranges and peaches. Mmm. Which do I like? I like apples better than oranges. Say it with me. I like apples better than oranges. Great! Good, better, best. Good is special. We don't say gooder. We say better and best. good は better、best に かわるよ。 And I like peaches the best. They're sweet and soft. Let's practice. Do you like dogs better than cats? I like dogs better than cats. What fruit do you like the best? I like strawberries the best. Which do you like better, juice or milk? I like juice better. Now, phonics. DI-no-saur. BUT-ter-fly. chim-pan-ZEE. fla-MIN-go. Clap and say the strong part big. Okay, your turn. Which do you like better, rice or bread? Tell me!",
+      "conversation": {
+        "scene": "Picking fruit in the valley orchard",
+        "sceneJa": "谷の 果樹園で",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look! Apples and oranges!",
+            "ja": "みて！りんごと オレンジ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like apples better than oranges. They're crunchy.",
+            "ja": "ぼくは オレンジより りんごが すき。シャキシャキ してるから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like oranges better. They're juicy!",
+            "ja": "わたしは オレンジの ほうが すき。ジューシーだもん！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like peaches the best! Look, they're so soft.",
+            "ja": "ぼくは ももが いちばん すき！みて、すごく やわらかい。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "These apples are good, but those red ones look better.",
+            "ja": "この りんごも いいけど、あっちの あかいのが もっと よさそう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's pick the best one for each of us!",
+            "ja": "1人 1こずつ いちばん いいのを とろう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay! I found the best apple in the orchard!",
+            "ja": "よし！果樹園で いちばんの りんごを みつけた！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな くだものを I like A better than B. / I like ～ the best. で いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Look at all this fruit! There are apples, oranges, grapes and peaches. Which do you like better, apples or oranges?",
+          "targetExpressions": [
+            "I like ～ better than ～.",
+            "I like ～ the best.",
+            "better",
+            "best"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I like apples better than oranges.",
+          "good → better → best",
+          "DI-no-saur・BUT-ter-fly・chim-pan-ZEE・fla-MIN-go"
+        ]
+      }
+    },
+    {
+      "lessonNo": 519,
+      "world": 18,
+      "title": "Which Do You Like Better?",
+      "titleJa": "どっちが すき？",
+      "school": {
+        "grade": "中2",
+        "topic": "Which do you like better, summer or winter?：すきを くらべて きく・こたえる",
+        "grammar": "Which do you like better, A or B? ― I like A better.",
+        "expressions": [
+          {
+            "en": "Which do you like better, summer or winter?",
+            "ja": "夏と 冬、どっちが すき？",
+            "core": true
+          },
+          {
+            "en": "I like summer better. I can swim in the sea.",
+            "ja": "夏の ほうが すき。うみで およげるから。"
+          },
+          {
+            "en": "I like winter better. ― Really? Why?",
+            "ja": "冬の ほうが すき。 ― ほんと？ どうして？"
+          }
+        ],
+        "testPoints": [
+          "Which do you like better, A or B? と きける",
+          "I like A better. と こたえて、りゆうを 1つ つけられる",
+          "つよく よむ ところ（av-o-CA-do・AL-li-ga-tor）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the sun.",
+          "ja": "たいようを ゆびさして。",
+          "action": "そらを ゆびさす",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Swim like it's summer.",
+          "ja": "夏みたいに およいで。",
+          "action": "クロールで およぐ まね",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Shiver like it's winter.",
+          "ja": "冬みたいに ふるえて。",
+          "action": "からだを だいて ぶるぶる ふるえる",
+          "emoji": "🥶"
+        },
+        {
+          "en": "Make a snowball.",
+          "ja": "ゆきだまを つくって。",
+          "action": "てで まるめる まね",
+          "emoji": "⛄"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "av-o-ca-do",
+          "al-li-ga-tor",
+          "hel-i-cop-ter",
+          "cat-er-pil-lar"
+        ],
+        "sounds": [],
+        "words": [
+          "avocado",
+          "alligator",
+          "helicopter",
+          "caterpillar"
+        ],
+        "tipJa": "4つの まとまりの ことば。av-o-CA-do は 3ばんめ、AL-li-ga-tor・HEL-i-cop-ter・CAT-er-pil-lar は はじめが つよい。"
+      },
+      "vocab": [
+        {
+          "en": "summer",
+          "ja": "なつ",
+          "emoji": "☀️",
+          "core": true
+        },
+        {
+          "en": "winter",
+          "ja": "ふゆ",
+          "emoji": "❄️"
+        },
+        {
+          "en": "dinner",
+          "ja": "ゆうごはん",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "season",
+          "ja": "きせつ",
+          "emoji": "🍂"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's dinnertime in Echo Valley. We're eating soup and talking. Here's a fun question. Which do you like better, summer or winter? Say it with me. Which do you like better, summer or winter? Good! To answer, say, I like summer better. Or, I like winter better. Then add a reason. I like summer better. I can swim in the sea. I like winter better. I can make a snowman. どっちが すきか きく ときは Which do you like better? だよ。 Let's practice. Which do you like better, cats or dogs? I like cats better. They're soft. Which do you like better, pizza or curry? I like curry better. It's spicy! Now, phonics. av-o-CA-do. AL-li-ga-tor. HEL-i-cop-ter. CAT-er-pil-lar. Four parts, one strong part. Now, ask your family tonight. Which do you like better, morning or night?",
+      "conversation": {
+        "scene": "Comparing likes over dinner",
+        "sceneJa": "夕ごはんの 話題で、すきを くらべる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This soup is warm. Let's talk while we eat. Which do you like better, summer or winter?",
+            "ja": "あたたかい スープね。たべながら おはなし しましょう。夏と 冬、どっちが すき？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like summer better. I can swim in the sea!",
+            "ja": "夏の ほうが すき。うみで およげるから！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like winter better. Snow is so pretty.",
+            "ja": "冬の ほうが すき。ゆきが すごく きれいだから。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hmm, I like both. But I like spring the best!",
+            "ja": "うーん、どっちも すき。でも 春が いちばん すき！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Haru, which do you like better, rice or bread?",
+            "ja": "ハル、ごはんと パン、どっちが すき？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Rice! How about you, Birimo?",
+            "ja": "ごはん！ビリモは？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like soup better. Can I have more?",
+            "ja": "スープの ほうが すき。おかわり いい？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Which do you like better, A or B? と きいたり、I like A better. ＋ りゆうで こたえたり しよう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's talk over dinner. Which do you like better, summer or winter? Why?",
+          "targetExpressions": [
+            "Which do you like better, ～ or ～?",
+            "I like ～ better.",
+            "How about you?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Which do you like better, summer or winter?",
+          "I like summer better. ＋ りゆう",
+          "av-o-CA-do・AL-li-ga-tor・HEL-i-cop-ter・CAT-er-pil-lar"
+        ]
+      }
+    },
+    {
+      "lessonNo": 520,
+      "world": 18,
+      "title": "Group Ranking Survey",
+      "titleJa": "グループ ランキング",
+      "school": {
+        "grade": "中2",
+        "topic": "Soccer is the most popular sport in our group.：アンケートを とって ランキングを 発表する",
+        "grammar": "the most popular ～ in our group・Number one is ～.",
+        "expressions": [
+          {
+            "en": "Soccer is the most popular sport in our group.",
+            "ja": "サッカーが わたしたちの グループで いちばん 人気の スポーツです。",
+            "core": true
+          },
+          {
+            "en": "Number one is soccer. Number two is swimming.",
+            "ja": "1位は サッカー。2位は すいえい。"
+          },
+          {
+            "en": "What sport do you like the best? ― I like swimming the best.",
+            "ja": "どの スポーツが いちばん すき？ ― すいえいが いちばん すき。"
+          }
+        ],
+        "testPoints": [
+          "the most popular ～ in our group で ランキングを 発表できる",
+          "What ～ do you like the best? と きける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a line.",
+          "ja": "1れつに ならんで。",
+          "action": "まえの ひとの うしろに ならぶ",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Hold up one finger.",
+          "ja": "ゆびを 1本 たてて。",
+          "action": "ひとさしゆびを たてる",
+          "emoji": "☝️"
+        },
+        {
+          "en": "Hold up two fingers.",
+          "ja": "ゆびを 2本 たてて。",
+          "action": "ピースの かたちに する",
+          "emoji": "✌️"
+        },
+        {
+          "en": "Bow and say thank you.",
+          "ja": "おじぎを して ありがとうと いって。",
+          "action": "おじぎを して Thank you!",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "el-e-phant",
+          "ba-na-na",
+          "but-ter-fly",
+          "al-li-ga-tor"
+        ],
+        "sounds": [],
+        "words": [
+          "elephant",
+          "banana",
+          "butterfly",
+          "alligator"
+        ],
+        "tipJa": "ふりかえり: EL-e-phant、ba-NA-na、BUT-ter-fly、AL-li-ga-tor。つよい ところが どこか、てを たたいて たしかめよう。"
+      },
+      "vocab": [
+        {
+          "en": "survey",
+          "ja": "アンケート",
+          "emoji": "📋",
+          "core": true
+        },
+        {
+          "en": "sport",
+          "ja": "スポーツ",
+          "emoji": "⚽"
+        },
+        {
+          "en": "first",
+          "ja": "1ばんめ",
+          "emoji": "🥇"
+        },
+        {
+          "en": "group",
+          "ja": "グループ",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we're doing a group survey. First, ask your friends. What sport do you like the best? Write the answers on your paper. Then count. Let's look at our results. Soccer, four people. Swimming, three people. Tennis, one person. So, soccer is the most popular sport in our group. Say it with me. Soccer is the most popular sport in our group. Wonderful! Now let's make a ranking. Number one is soccer. Number two is swimming. Number three is tennis. ランキングは Number one is ～. で 発表しよう。 Let's practice. What food do you like the best? I like sushi the best. What color do you like the best? I like green the best. Now, phonics review. EL-e-phant. ba-NA-na. BUT-ter-fly. AL-li-ga-tor. Clap the strong part. Great job! Now ask your family. What is the most popular food in your family?",
+      "conversation": {
+        "scene": "Taking a survey and presenting a ranking",
+        "sceneJa": "4人で アンケートを とって ランキング発表",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's do a survey. What sport do you like the best?",
+            "ja": "アンケートを しよう。どの スポーツが いちばん すき？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like soccer the best!",
+            "ja": "サッカーが いちばん すき！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like soccer, too. It's exciting.",
+            "ja": "わたしも サッカー。わくわく するから。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like swimming the best. Look, I can float!",
+            "ja": "ぼくは すいえいが いちばん。みて、うけるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And I like soccer. So soccer has three votes and swimming has one.",
+            "ja": "わたしも サッカー。だから サッカーが 3ひょう、すいえいが 1ぴょう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great! Riko, can you tell us the result?",
+            "ja": "いいわね！リコ、けっかを 発表して くれる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sure! Soccer is the most popular sport in our group!",
+            "ja": "うん！サッカーが わたしたちの グループで いちばん 人気の スポーツです！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What ～ do you like the best? と きいて、けっかを ～ is the most popular. で 発表しよう",
+          "starterEn": "Hi! I'm Ms. Emma. I'm making a ranking of favorite sports. What sport do you like the best?",
+          "targetExpressions": [
+            "What sport do you like the best?",
+            "I like ～ the best.",
+            "～ is the most popular."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Soccer is the most popular sport in our group.",
+          "Number one is ～. Number two is ～.",
+          "EL-e-phant・ba-NA-na・BUT-ter-fly・AL-li-ga-tor"
+        ]
+      }
+    },
+    {
+      "lessonNo": 521,
+      "world": 18,
+      "title": "As Big as a Bus",
+      "titleJa": "バスと おなじくらい おおきい",
+      "school": {
+        "grade": "中2",
+        "topic": "This dinosaur was as big as a bus.：おなじくらいを いう（as ～ as）",
+        "grammar": "A is / was as ～ as B.",
+        "expressions": [
+          {
+            "en": "This dinosaur was as big as a bus.",
+            "ja": "この きょうりゅうは バスと おなじくらい おおきかった。",
+            "core": true
+          },
+          {
+            "en": "Its tooth is as long as a banana!",
+            "ja": "その 歯は バナナと おなじくらい ながい！"
+          },
+          {
+            "en": "Was it as tall as a giraffe? ― Almost!",
+            "ja": "キリンと おなじくらい たかかった？ ― ほぼね！"
+          }
+        ],
+        "testPoints": [
+          "as ～ as で おなじくらいを いえる",
+          "-ly の つづり（quick → quickly）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Dig with your shovel.",
+          "ja": "シャベルで ほって。",
+          "action": "シャベルで ほる まね",
+          "emoji": "⛏️"
+        },
+        {
+          "en": "Brush the fossil gently.",
+          "ja": "かせきを そっと はけで はいて。",
+          "action": "はけで やさしく なでる まね",
+          "emoji": "🖌️"
+        },
+        {
+          "en": "Stomp like a dinosaur.",
+          "ja": "きょうりゅうの ように ドシドシ あるいて。",
+          "action": "おおきく あしを ふみならす",
+          "emoji": "🦖"
+        },
+        {
+          "en": "Roar like a dinosaur.",
+          "ja": "きょうりゅうの ように ほえて。",
+          "action": "おおきく くちを あけて ほえる まね",
+          "emoji": "🦕"
+        }
+      ],
+      "phonics": {
+        "rule": "ly",
+        "focus": [
+          "-ly"
+        ],
+        "sounds": [
+          "/li/"
+        ],
+        "words": [
+          "quickly",
+          "slowly",
+          "quietly",
+          "loudly"
+        ],
+        "tipJa": "quick → quickly、slow → slowly、quiet → quietly、loud → loudly。ly を つけると「どんなふうに」を あらわす ことばに なる。"
+      },
+      "vocab": [
+        {
+          "en": "fossil",
+          "ja": "かせき",
+          "emoji": "🦴",
+          "core": true
+        },
+        {
+          "en": "dinosaur",
+          "ja": "きょうりゅう",
+          "emoji": "🦖"
+        },
+        {
+          "en": "tooth",
+          "ja": "は",
+          "emoji": "🦷"
+        },
+        {
+          "en": "dig",
+          "ja": "ほる",
+          "emoji": "⛏️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at the dinosaur dig in Echo Valley. Look! People found a big fossil here. Let's look at the picture. This dinosaur was very big. It was as big as a bus. Say it with me. This dinosaur was as big as a bus. Excellent! As big as means the same size. おなじくらいは as ～ as だよ。 Look at this tooth. Its tooth is as long as a banana! Was it as tall as a giraffe? Almost! Let's practice. My bag is as heavy as a big book. You are as quick as a rabbit! This rock is as round as a ball. Now, phonics. Quickly. Slowly. Quietly. Loudly. Add l, y and we can say how something happens. Walk slowly. Dig quickly. Now, look around. Find two things that are the same size. My pencil is as long as my ruler!",
+      "conversation": {
+        "scene": "At the dinosaur fossil dig in the valley",
+        "sceneJa": "谷の 恐竜化石の 発掘場",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look! I found a bone!",
+            "ja": "みて！ほねを みつけた！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wow, that's a dinosaur fossil. This dinosaur was as big as a bus.",
+            "ja": "わあ、きょうりゅうの かせきね。この きょうりゅうは バスと おなじくらい おおきかったのよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "As big as a bus? That's huge!",
+            "ja": "バスくらい？すごく おおきい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look at this tooth. It's as long as a banana!",
+            "ja": "この 歯 みて。バナナくらい ながい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Was it as tall as a giraffe?",
+            "ja": "キリンくらい たかかった？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Almost! Let's brush the fossil slowly and carefully.",
+            "ja": "ほぼね！かせきは ゆっくり ていねいに はきましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay. I'll be as careful as a scientist!",
+            "ja": "わかった。かがくしゃみたいに ていねいに やるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "きょうりゅうの おおきさを as ～ as で つたえよう（as big as a bus / as long as a banana）",
+          "starterEn": "Hi! I'm Ms. Emma. Look at this fossil! This dinosaur was very big. Was it as big as a car? Was it as big as a bus?",
+          "targetExpressions": [
+            "as big as",
+            "as long as",
+            "as tall as"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This dinosaur was as big as a bus.（as ～ as = おなじくらい）",
+          "Its tooth is as long as a banana!",
+          "quickly・slowly・quietly・loudly"
+        ]
+      }
+    },
+    {
+      "lessonNo": 522,
+      "world": 18,
+      "title": "Not as Fast as a Horse",
+      "titleJa": "うまほど はやくない",
+      "school": {
+        "grade": "中2",
+        "topic": "I'm not as fast as a horse.：～ほど…ない（not as ～ as）",
+        "grammar": "A is not as ～ as B.",
+        "expressions": [
+          {
+            "en": "I'm not as fast as a horse.",
+            "ja": "わたしは うまほど はやくない。",
+            "core": true
+          },
+          {
+            "en": "A turtle is not as fast as a rabbit.",
+            "ja": "かめは うさぎほど はやくない。"
+          },
+          {
+            "en": "But I'm faster than a turtle! ― Ha ha, yes!",
+            "ja": "でも かめよりは はやいよ！ ― あはは、そうだね！"
+          }
+        ],
+        "testPoints": [
+          "not as ～ as で「～ほど…ない」と いえる",
+          "e で おわる ことばも そのまま ly（safe → safely）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Get ready, set, go!",
+          "ja": "よーい、どん！",
+          "action": "スタートの かまえから はしりだす",
+          "emoji": "🏁"
+        },
+        {
+          "en": "Run in place.",
+          "ja": "その場で はしって。",
+          "action": "その場で ももを あげて はしる",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Hop like a rabbit.",
+          "ja": "うさぎの ように はねて。",
+          "action": "りょうあしで ぴょんぴょん",
+          "emoji": "🐇"
+        },
+        {
+          "en": "Walk slowly like a turtle.",
+          "ja": "かめの ように ゆっくり あるいて。",
+          "action": "とても ゆっくり あるく",
+          "emoji": "🐢"
+        }
+      ],
+      "phonics": {
+        "rule": "ly",
+        "focus": [
+          "-ly"
+        ],
+        "sounds": [
+          "/li/"
+        ],
+        "words": [
+          "softly",
+          "kindly",
+          "safely",
+          "bravely"
+        ],
+        "tipJa": "soft → softly、kind → kindly、safe → safely、brave → bravely。e で おわる ことばも e を のこして ly を つける。"
+      },
+      "vocab": [
+        {
+          "en": "fast",
+          "ja": "はやい",
+          "emoji": "💨",
+          "core": true
+        },
+        {
+          "en": "race",
+          "ja": "かけっこ",
+          "emoji": "🏁"
+        },
+        {
+          "en": "horse",
+          "ja": "うま",
+          "emoji": "🐎"
+        },
+        {
+          "en": "turtle",
+          "ja": "かめ",
+          "emoji": "🐢"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we're having a race in the valley. Ready, set, go! Look, a horse is running with us. It's so fast! I can't win. I'm not as fast as a horse. Say it with me. I'm not as fast as a horse. Good! Not as fast as means the horse is faster. ～ほど…ない は not as ～ as だよ。 A turtle is not as fast as a rabbit. A mouse is not as big as a cat. But I'm faster than a turtle! Let's practice. Is a cat as big as a lion? No. A cat is not as big as a lion. Is a car as fast as a plane? No. A car is not as fast as a plane. Now, phonics. Softly. Kindly. Safely. Bravely. Safe ends with e, but we keep the e and add l, y. Speak softly. Play safely. Now, compare yourself with an animal. I'm not as strong as a gorilla!",
+      "conversation": {
+        "scene": "Comparing ourselves with animals at the valley race",
+        "sceneJa": "谷の かけっこで、動物と 自分を くらべる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Ready, set, go! ... Oh no! That horse is so fast!",
+            "ja": "よーい、どん！…あっ！あの うま、すごく はやい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm not as fast as a horse.",
+            "ja": "わたしは うまほど はやくない。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me neither. But I'm faster than that turtle!",
+            "ja": "わたしも。でも あの かめよりは はやいよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm not as fast as a horse, but I can fly!",
+            "ja": "ぼくも うまほど はやくないけど、とべるよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Everyone has a special power. A turtle is not as fast as a rabbit, but it never gives up.",
+            "ja": "みんな とくべつな 力が あるの。かめは うさぎほど はやくないけど、ぜったいに あきらめないのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Then I won't give up, like the turtle!",
+            "ja": "じゃあ ぼくも かめみたいに あきらめない！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんと どうぶつを not as ～ as で くらべよう（I'm not as fast as a horse.）",
+          "starterEn": "Hi! I'm Ms. Emma. That race was fun! Are you as fast as a horse? Are you as strong as a gorilla?",
+          "targetExpressions": [
+            "I'm not as ～ as ～.",
+            "faster than",
+            "stronger than"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm not as fast as a horse.（not as ～ as = ～ほど…ない）",
+          "A turtle is not as fast as a rabbit.",
+          "softly・kindly・safely・bravely"
+        ]
+      }
+    },
+    {
+      "lessonNo": 523,
+      "world": 18,
+      "title": "Quickly and Quietly",
+      "titleJa": "すばやく しずかに",
+      "school": {
+        "grade": "中2",
+        "topic": "Walk quietly. The birds are sleeping.：どんなふうに するかを いう（-ly の ことば）",
+        "grammar": "うごき ＋ ～ly（walk quietly / open slowly）",
+        "expressions": [
+          {
+            "en": "Walk quietly. The birds are sleeping.",
+            "ja": "しずかに あるいて。とりが ねているよ。",
+            "core": true
+          },
+          {
+            "en": "Open the window slowly.",
+            "ja": "まどを ゆっくり あけて。"
+          },
+          {
+            "en": "Speak softly, please. ― Okay.",
+            "ja": "こごえで はなしてね。 ― わかった。"
+          }
+        ],
+        "testPoints": [
+          "walk quietly の ように ～ly で どんなふうに するかを いえる",
+          "y を i に かえて ly（happy → happily）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk quietly.",
+          "ja": "しずかに あるいて。",
+          "action": "あしおとを たてずに あるく",
+          "emoji": "🤫"
+        },
+        {
+          "en": "Open the window slowly.",
+          "ja": "まどを ゆっくり あけて。",
+          "action": "ゆっくり まどを ひらく まね",
+          "emoji": "🪟"
+        },
+        {
+          "en": "Look through your binoculars.",
+          "ja": "そうがんきょうで みて。",
+          "action": "りょうてで わを つくって めに あてる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Sit down quickly.",
+          "ja": "すばやく すわって。",
+          "action": "さっと すわる",
+          "emoji": "🪑"
+        }
+      ],
+      "phonics": {
+        "rule": "ly",
+        "focus": [
+          "-ly"
+        ],
+        "sounds": [
+          "/li/"
+        ],
+        "words": [
+          "happily",
+          "easily",
+          "angrily",
+          "luckily"
+        ],
+        "tipJa": "happy → happily、easy → easily、angry → angrily、lucky → luckily。y で おわる ことばは y を i に かえて ly。"
+      },
+      "vocab": [
+        {
+          "en": "bird",
+          "ja": "とり",
+          "emoji": "🐦",
+          "core": true
+        },
+        {
+          "en": "hut",
+          "ja": "こや",
+          "emoji": "🛖"
+        },
+        {
+          "en": "nest",
+          "ja": "す",
+          "emoji": "🪺"
+        },
+        {
+          "en": "window",
+          "ja": "まど",
+          "emoji": "🪟"
+        }
+      ],
+      "teacherScript": "Hello, everyone. Shh. We're in the bird hut. Look out the window. The birds are sleeping in their nests. Walk quietly. The birds are sleeping. Say it softly with me. Walk quietly. The birds are sleeping. Very good! Quiet, quietly. Slow, slowly. Quick, quickly. ly を つけると「どんなふうに」に なるよ。 Open the window slowly. Sit down quickly. Speak softly, please. Let's practice. Show me. Walk slowly. Walk quickly. Now walk quietly. Great! Now talk softly to your friend. Hello, how are you? Good. Now clap your hands quickly. Now clap slowly. Now, phonics. Happily. Easily. Angrily. Luckily. Happy ends with y, so we change y to i and add l, y. Luckily, the birds didn't wake up! Now, how do you eat your breakfast? Quickly or slowly? Tell me!",
+      "conversation": {
+        "scene": "In the valley bird-watching hut",
+        "sceneJa": "谷の 鳥の 観察小屋",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Shh. Walk quietly. The birds are sleeping.",
+            "ja": "しーっ。しずかに あるいて。とりが ねているわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oops. Sorry.",
+            "ja": "おっと。ごめんなさい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! There's a nest in that tree.",
+            "ja": "みて！あの 木に すが ある。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's open the window slowly.",
+            "ja": "まどを ゆっくり あけよう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'll take a picture quickly. ... Click!",
+            "ja": "すばやく しゃしんを とるね。…カシャ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Luckily, the birds are still sleeping. Good job, everyone.",
+            "ja": "うんよく、とりは まだ ねているわ。みんな じょうずね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow. They look so happy and peaceful.",
+            "ja": "わあ。とっても しあわせそうで おだやかだね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "観察小屋の ルールを Walk quietly. / Open the window slowly. の ように ～ly で いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Shh, we're in the bird hut. The birds are sleeping. How should we walk? How should we talk?",
+          "targetExpressions": [
+            "Walk quietly.",
+            "Speak softly.",
+            "Open the window slowly."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Walk quietly. The birds are sleeping.",
+          "quiet → quietly、slow → slowly（どんなふうに）",
+          "happily・easily・angrily・luckily"
+        ]
+      }
+    },
+    {
+      "lessonNo": 524,
+      "world": 18,
+      "title": "Colorful Birds",
+      "titleJa": "カラフルな とり",
+      "school": {
+        "grade": "中2",
+        "topic": "That bird is more colorful than this one.：とりを くらべる（more ～ than this one）",
+        "grammar": "more ～ than this one（one = おなじ もの）",
+        "expressions": [
+          {
+            "en": "That bird is more colorful than this one.",
+            "ja": "あの とりは この とりより カラフルだ。",
+            "core": true
+          },
+          {
+            "en": "This one is smaller, but its song is more beautiful.",
+            "ja": "こっちは ちいさいけど、うたは もっと きれい。"
+          },
+          {
+            "en": "Which bird is bigger? ― That one is.",
+            "ja": "どっちの とりが おおきい？ ― あっちだよ。"
+          }
+        ],
+        "testPoints": [
+          "more ～ than this one で くらべられる（one = おなじ もの）",
+          "ful に ly を つける（careful → carefully）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Flap your wings.",
+          "ja": "はねを ぱたぱた して。",
+          "action": "りょうてを はねの ように うごかす",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Sing like a bird.",
+          "ja": "とりの ように うたって。",
+          "action": "ピピピと うたう",
+          "emoji": "🎶"
+        },
+        {
+          "en": "Point to the colorful bird.",
+          "ja": "カラフルな とりを ゆびさして。",
+          "action": "えの とりを ゆびさす",
+          "emoji": "🦜"
+        },
+        {
+          "en": "Hold the binoculars carefully.",
+          "ja": "そうがんきょうを ていねいに もって。",
+          "action": "りょうてで そっと もつ まね",
+          "emoji": "👀"
+        }
+      ],
+      "phonics": {
+        "rule": "ly",
+        "focus": [
+          "-ly"
+        ],
+        "sounds": [
+          "/li/"
+        ],
+        "words": [
+          "carefully",
+          "beautifully",
+          "wonderfully",
+          "cheerfully"
+        ],
+        "tipJa": "careful → carefully、beautiful → beautifully、wonderful → wonderfully、cheerful → cheerfully。ful に ly を つけるので l が 2つ。"
+      },
+      "vocab": [
+        {
+          "en": "colorful",
+          "ja": "カラフルな",
+          "emoji": "🌈",
+          "core": true
+        },
+        {
+          "en": "feather",
+          "ja": "はね",
+          "emoji": "🪶"
+        },
+        {
+          "en": "song",
+          "ja": "うた",
+          "emoji": "🎵"
+        },
+        {
+          "en": "gray",
+          "ja": "はいいろ",
+          "emoji": "🌫️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! We're still in the bird hut. Look at these two birds. This bird is gray. That bird is red, blue and yellow. That bird is more colorful than this one. Say it with me. That bird is more colorful than this one. Great! This one means this bird. We don't say bird two times. one で おなじ ことばを くりかえさないよ。 Now listen. This one is smaller, but its song is more beautiful. Let's practice. Which bird is bigger? That one is. Which feather is longer? This one is. Which bird is more colorful? That one is. Now, phonics. Carefully. Beautifully. Wonderfully. Cheerfully. Careful plus l, y. So we have two l's. Hold the binoculars carefully. Now, look at two things on your desk. Which one is more colorful?",
+      "conversation": {
+        "scene": "Comparing birds in the bird hut",
+        "sceneJa": "観察小屋で、鳥を くらべる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look at those two birds!",
+            "ja": "あの 2わの とり みて！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That bird is more colorful than this one. It's red, blue and yellow!",
+            "ja": "あの とりは この とりより カラフルだね。あか、あお、きいろ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "But this one is singing. Listen!",
+            "ja": "でも こっちは うたってる。きいて！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. This one is smaller, but its song is more beautiful.",
+            "ja": "そうね。こっちは ちいさいけど、うたは もっと きれいね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Which bird is bigger?",
+            "ja": "どっちの とりが おおきい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "That one is. Its feathers are longer, too.",
+            "ja": "あっちだよ。はねも ながいね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want to draw them both carefully!",
+            "ja": "2わとも ていねいに かきたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "2わの とりを more colorful than this one / bigger than this one で くらべよう",
+          "starterEn": "Hi! I'm Ms. Emma. Look at the pictures. One bird is red and yellow. One bird is gray. Which bird is more colorful?",
+          "targetExpressions": [
+            "more colorful than this one",
+            "That one is.",
+            "bigger than"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "That bird is more colorful than this one.",
+          "this one / that one（one = おなじ もの）",
+          "carefully・beautifully・wonderfully・cheerfully"
+        ]
+      }
+    },
+    {
+      "lessonNo": 525,
+      "world": 18,
+      "title": "Nature Detective Report",
+      "titleJa": "しぜんたんてい レポート",
+      "school": {
+        "grade": "中2",
+        "topic": "The owl flies quietly. It's one of the best hunters.：観察レポートを 発表する（one of the ～est）",
+        "grammar": "one of the ～est / best ＋ ふくすう",
+        "expressions": [
+          {
+            "en": "The owl flies quietly. It's one of the best hunters.",
+            "ja": "フクロウは しずかに とぶ。いちばん じょうずな かりうどの 1つです。",
+            "core": true
+          },
+          {
+            "en": "It's one of the biggest birds in the valley.",
+            "ja": "谷で いちばん おおきい とりの 1つです。"
+          },
+          {
+            "en": "It can see well at night. It's my favorite bird.",
+            "ja": "よるも よく みえる。わたしの すきな とりです。"
+          }
+        ],
+        "testPoints": [
+          "one of the ～est ＋ ふくすう で「いちばん…な ものの 1つ」と いえる",
+          "レポートを 3〜4 文で 発表できる",
+          "-ly の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your detective hat.",
+          "ja": "たんていの ぼうしを かぶって。",
+          "action": "ぼうしを かぶる まね",
+          "emoji": "🕵️"
+        },
+        {
+          "en": "Look closely.",
+          "ja": "よく みて。",
+          "action": "むしめがねを のぞく まね",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Write in your notebook.",
+          "ja": "ノートに かいて。",
+          "action": "ノートに メモする まね",
+          "emoji": "📓"
+        },
+        {
+          "en": "Fly quietly like an owl.",
+          "ja": "フクロウの ように しずかに とんで。",
+          "action": "りょうてを ひろげて そっと うごく",
+          "emoji": "🦉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ly"
+        ],
+        "sounds": [
+          "/li/"
+        ],
+        "words": [
+          "quietly",
+          "safely",
+          "happily",
+          "carefully"
+        ],
+        "tipJa": "まとめ: quiet → quietly（そのまま）、safe → safely（e も そのまま）、happy → happily（y → i）、careful → carefully（l が 2つ）。"
+      },
+      "vocab": [
+        {
+          "en": "owl",
+          "ja": "フクロウ",
+          "emoji": "🦉",
+          "core": true
+        },
+        {
+          "en": "detective",
+          "ja": "たんてい",
+          "emoji": "🕵️"
+        },
+        {
+          "en": "hunter",
+          "ja": "かりを する どうぶつ",
+          "emoji": "🏹"
+        },
+        {
+          "en": "report",
+          "ja": "レポート",
+          "emoji": "📝"
+        }
+      ],
+      "teacherScript": "Hello, nature detectives! Today you will give a report about an animal. Here's my report. The owl flies quietly. It's one of the best hunters. Say it with me. The owl flies quietly. It's one of the best hunters. Excellent! One of the best hunters means it's in the top group. いちばん…な ものの 1つ は one of the ～est だよ。 After one of the, use two or more. Hunters, with s. Let's practice. A cheetah is one of the fastest animals. A whale is one of the biggest animals. Now listen to my whole report. The owl flies quietly. It can see well at night. It's one of the best hunters in the forest. It's my favorite bird. Now, phonics review. Quietly. Safely. Happily. Carefully. Now it's your turn. Choose an animal. Say how it moves. Then say, it's one of the... Tell me your report!",
+      "conversation": {
+        "scene": "Presenting nature detective reports",
+        "sceneJa": "自然探偵として、観察レポートを 発表する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Detectives, are your reports ready?",
+            "ja": "たんていの みなさん、レポートは できた？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes! The owl flies quietly. It's one of the best hunters.",
+            "ja": "うん！フクロウは しずかに とぶ。いちばん じょうずな かりうどの 1つです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It can see well at night, too.",
+            "ja": "よるも よく みえるんだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My report is about the woodpecker. It's one of the loudest birds in the valley!",
+            "ja": "わたしの レポートは キツツキ。谷で いちばん うるさい とりの 1つ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Knock, knock, knock! Like this?",
+            "ja": "コン、コン、コン！こんな かんじ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha, yes! Wonderful reports, everyone.",
+            "ja": "あはは、そうね！みんな すばらしい レポートだわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな どうぶつの レポートを ～ly や one of the ～est を つかって 3文で 発表しよう",
+          "starterEn": "Hi! I'm Ms. Emma. You're a nature detective today! What animal did you watch? How does it move?",
+          "targetExpressions": [
+            "It moves ～ly.",
+            "It's one of the ～est ～s.",
+            "It can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The owl flies quietly. It's one of the best hunters.",
+          "one of the ～est ＋ ふくすう（hunters）",
+          "quietly・safely・happily・carefully"
+        ]
+      }
+    },
+    {
+      "lessonNo": 526,
+      "world": 18,
+      "title": "The Unhappy Echo",
+      "titleJa": "げんきの ない こだま",
+      "school": {
+        "grade": "中2",
+        "topic": "The echo sounds unhappy today.：ようすを いう（sound / look ＋ きもち）",
+        "grammar": "sound / look ＋ きもちの ことば（sounds unhappy / look sad）",
+        "expressions": [
+          {
+            "en": "The echo sounds unhappy today.",
+            "ja": "きょうは こだまが げんきが なさそうに きこえる。",
+            "core": true
+          },
+          {
+            "en": "What's wrong? You look sad.",
+            "ja": "どうしたの？ かなしそう だね。"
+          },
+          {
+            "en": "Nobody comes to the valley now. ― Oh, that's too bad.",
+            "ja": "いまは だれも 谷に こないんだ。 ― まあ、それは かわいそうに。"
+          }
+        ],
+        "testPoints": [
+          "sounds / looks ＋ きもち で ようすを いえる",
+          "What's wrong? で あいてを きづかえる",
+          "-ful の つづり（color → colorful）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put your hand to your ear.",
+          "ja": "みみに てを あてて。",
+          "action": "てを みみの うしろに あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Look sad.",
+          "ja": "かなしい かおを して。",
+          "action": "しょんぼりした かお",
+          "emoji": "😢"
+        },
+        {
+          "en": "Look cheerful.",
+          "ja": "げんきな かおを して。",
+          "action": "にっこり わらう",
+          "emoji": "😊"
+        },
+        {
+          "en": "Wave hello.",
+          "ja": "てを ふって こんにちは。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "ful-less",
+        "focus": [
+          "-ful"
+        ],
+        "sounds": [
+          "/fəl/"
+        ],
+        "words": [
+          "colorful",
+          "helpful",
+          "wonderful",
+          "cheerful"
+        ],
+        "tipJa": "color → colorful、help → helpful、wonder → wonderful、cheer → cheerful。ful は「〜が いっぱい」。full では なく l は 1つ。"
+      },
+      "vocab": [
+        {
+          "en": "unhappy",
+          "ja": "かなしい・げんきが ない",
+          "emoji": "😞",
+          "core": true
+        },
+        {
+          "en": "spirit",
+          "ja": "せい（ようせい）",
+          "emoji": "🧚"
+        },
+        {
+          "en": "lonely",
+          "ja": "さびしい",
+          "emoji": "🥺"
+        },
+        {
+          "en": "nobody",
+          "ja": "だれも〜ない",
+          "emoji": "🚫"
+        }
+      ],
+      "teacherScript": "Hello, everyone. Listen. Hello! ...hello... Hmm. The echo is very small today. The echo sounds unhappy today. Say it with me. The echo sounds unhappy today. Good. Unhappy means not happy. Sounds unhappy means I hear it, and I think it's not happy. きこえる ようすは sounds ～ だよ。 When a friend has a sad face, say, what's wrong? You look sad. Let's practice. Your friend is crying. What's wrong? You look sad. Your friend is smiling. You look cheerful! The music is slow and quiet. It sounds sad. The music is fast and loud. It sounds happy! The echo is small and quiet. It sounds unhappy. Now, phonics. Colorful. Helpful. Wonderful. Cheerful. Ful means full of something. But f, u, l has only one l. Let's be helpful friends. How can we cheer up the echo? Let's think together!",
+      "conversation": {
+        "scene": "The valley echo spirit has lost its energy",
+        "sceneJa": "谷の こだまの精が 元気を なくしている",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Hello! ... Huh? The echo is so small today.",
+            "ja": "ハロー！…あれ？きょうは こだまが すごく ちいさい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The echo sounds unhappy today.",
+            "ja": "きょうは こだまが げんきが なさそう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Listen carefully. The echo spirit is saying something.",
+            "ja": "よく きいて。こだまの精が なにか いっているわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It says, \"Nobody comes to the valley now. I'm lonely.\"",
+            "ja": "「いまは だれも 谷に こない。さびしい」って いってる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh no. That's too bad.",
+            "ja": "ええっ。かわいそう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Don't worry, Echo! We're here. We'll be your friends!",
+            "ja": "しんぱい しないで、こだま！ぼくたちが いるよ。ともだちに なるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's be helpful and cheer it up!",
+            "ja": "やくに たって、げんきに して あげよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "げんきの ない こだまに What's wrong? と きいて、やさしく はげまそう",
+          "starterEn": "Hi! I'm Ms. Emma. Listen... the echo sounds so quiet today. I think it's unhappy. What can we say to it?",
+          "targetExpressions": [
+            "What's wrong?",
+            "You sound unhappy.",
+            "Don't worry.",
+            "We'll be your friends."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The echo sounds unhappy today.（sounds ＋ きもち）",
+          "What's wrong? You look sad.",
+          "colorful・helpful・wonderful・cheerful"
+        ]
+      }
+    },
+    {
+      "lessonNo": 527,
+      "world": 18,
+      "title": "Careful, Not Careless!",
+      "titleJa": "きを つけて、ゆだん しないで！",
+      "school": {
+        "grade": "中2",
+        "topic": "Be careful! Don't be careless.：ちゅういする（Be ～! / Don't be ～.）",
+        "grammar": "Be ～! / Don't be ～.（ちゅういの いいかた）",
+        "expressions": [
+          {
+            "en": "Be careful! Don't be careless.",
+            "ja": "きを つけて！ ゆだん しないで。",
+            "core": true
+          },
+          {
+            "en": "Hold the rope with both hands.",
+            "ja": "りょうてで ロープを もって。"
+          },
+          {
+            "en": "Don't run on the bridge. Walk slowly.",
+            "ja": "はしの うえで はしらないで。ゆっくり あるいて。"
+          }
+        ],
+        "testPoints": [
+          "Be careful! / Don't be careless. で ちゅういできる",
+          "-ful と -less（careful ⇔ careless、useful ⇔ useless）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the rope with both hands.",
+          "ja": "りょうてで ロープを もって。",
+          "action": "りょうてで ロープを にぎる まね",
+          "emoji": "🪢"
+        },
+        {
+          "en": "Walk slowly on the bridge.",
+          "ja": "はしの うえを ゆっくり あるいて。",
+          "action": "いっぽずつ そっと あるく",
+          "emoji": "🌉"
+        },
+        {
+          "en": "Look straight ahead.",
+          "ja": "まっすぐ まえを みて。",
+          "action": "あごを あげて まえを みる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Wave to your friends on the other side.",
+          "ja": "むこうの ともだちに てを ふって。",
+          "action": "とおくに むかって てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "ful-less",
+        "focus": [
+          "-ful",
+          "-less"
+        ],
+        "sounds": [
+          "/fəl/",
+          "/ləs/"
+        ],
+        "words": [
+          "careful",
+          "careless",
+          "useful",
+          "useless"
+        ],
+        "tipJa": "care ＋ ful = careful（ちゅういぶかい）、care ＋ less = careless（ふちゅういな）。use も おなじ: useful ⇔ useless。less は「〜が ない」。"
+      },
+      "vocab": [
+        {
+          "en": "careful",
+          "ja": "ちゅういぶかい",
+          "emoji": "⚠️",
+          "core": true
+        },
+        {
+          "en": "careless",
+          "ja": "ふちゅういな",
+          "emoji": "😵"
+        },
+        {
+          "en": "rope",
+          "ja": "ロープ",
+          "emoji": "🪢"
+        },
+        {
+          "en": "both",
+          "ja": "りょうほうの",
+          "emoji": "🙌"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Look. This is the rope bridge over the valley. It's long, and it moves a little. Be careful! Don't be careless. Say it with me. Be careful! Don't be careless. Great! Careful means you think and you stay safe. Careless means you don't think. careful は「ちゅういぶかい」、careless は「ふちゅういな」だよ。 Here are the bridge rules. Hold the rope with both hands. Don't run on the bridge. Walk slowly. Let's practice. Your friend is running near the pool. Be careful! Don't run! Your friend is carrying hot soup. Be careful! It's hot! Your friend left a bag on the stairs. Don't be careless. Someone may fall! Now, phonics. Careful. Careless. Useful. Useless. Ful means full of. Less means without. Careful, full of care. Careless, without care. Now, when do you need to be careful at home? Tell me!",
+      "conversation": {
+        "scene": "Crossing the rope bridge over the valley",
+        "sceneJa": "谷の つり橋を わたる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Wow, a rope bridge! Let's go!",
+            "ja": "わあ、つり橋だ！いこう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Be careful! Don't be careless. Hold the rope with both hands.",
+            "ja": "きを つけて！ゆだん しないで。りょうてで ロープを もってね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay. ... Whoa, it's moving!",
+            "ja": "わかった。…うわっ、ゆれてる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Don't run on the bridge, Haru. Walk slowly.",
+            "ja": "はしの うえで はしらないで、ハル。ゆっくり あるいて。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Don't look down. Look at me. You can do it!",
+            "ja": "したを みないで。わたしを みて。できるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Phew! We made it. Thanks, everyone.",
+            "ja": "ふう！わたれた。みんな ありがとう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I didn't need the bridge. I can fly!",
+            "ja": "ぼくは はし いらなかった。とべるもん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "つり橋を わたる ともだちに Be careful! / Don't ～. / Walk slowly. と ちゅういしよう",
+          "starterEn": "Hi! I'm Ms. Emma. We're going to cross the rope bridge now. It's a little scary! What should we remember?",
+          "targetExpressions": [
+            "Be careful!",
+            "Don't be careless.",
+            "Hold the rope.",
+            "Walk slowly."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Be careful! Don't be careless.",
+          "careful（ちゅういぶかい）⇔ careless（ふちゅういな）",
+          "careful・careless・useful・useless"
+        ]
+      }
+    },
+    {
+      "lessonNo": 528,
+      "world": 18,
+      "title": "I Think So, Too",
+      "titleJa": "わたしも そう おもう",
+      "school": {
+        "grade": "中2",
+        "topic": "I think this one is better. ― I think so, too.：さんせいする・ちがう いけんを いう",
+        "grammar": "I think ～. ― I think so, too. / I don't think so.",
+        "expressions": [
+          {
+            "en": "I think this one is better.",
+            "ja": "こっちの ほうが いいと おもう。",
+            "core": true
+          },
+          {
+            "en": "I think so, too. It's cuter.",
+            "ja": "わたしも そう おもう。こっちの ほうが かわいいし。"
+          },
+          {
+            "en": "Really? I don't think so. That one is more useful.",
+            "ja": "そう？ わたしは そう おもわない。あっちの ほうが べんりだよ。"
+          }
+        ],
+        "testPoints": [
+          "I think so, too. で さんせいできる",
+          "I don't think so. ＋ りゆう で ちがう いけんを やさしく いえる",
+          "-less の つづり（endless・fearless）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Nod your head.",
+          "ja": "うなずいて。",
+          "action": "くびを たてに ふる",
+          "emoji": "🙆"
+        },
+        {
+          "en": "Shake your head.",
+          "ja": "くびを よこに ふって。",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Hold up two choices.",
+          "ja": "2つの ものを もちあげて。",
+          "action": "りょうてに 1つずつ もつ まね",
+          "emoji": "✌️"
+        },
+        {
+          "en": "Give a thumbs-up.",
+          "ja": "おやゆびを たてて。",
+          "action": "グッドの ポーズ",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "ful-less",
+        "focus": [
+          "-less"
+        ],
+        "sounds": [
+          "/ləs/"
+        ],
+        "words": [
+          "endless",
+          "fearless",
+          "harmless",
+          "spotless"
+        ],
+        "tipJa": "end ＋ less = endless（おわりの ない）、fear ＋ less = fearless、harm ＋ less = harmless、spot ＋ less = spotless。less の s は 2つ。"
+      },
+      "vocab": [
+        {
+          "en": "souvenir",
+          "ja": "おみやげ",
+          "emoji": "🎁",
+          "core": true
+        },
+        {
+          "en": "shop",
+          "ja": "みせ",
+          "emoji": "🏪"
+        },
+        {
+          "en": "keychain",
+          "ja": "キーホルダー",
+          "emoji": "🔑"
+        },
+        {
+          "en": "postcard",
+          "ja": "えはがき",
+          "emoji": "📮"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're at the valley gift shop. Let's buy a souvenir for our friends at home. Here are two choices, a keychain and a postcard. Hmm. I think the keychain is better. I think this one is better. Say it with me. I think this one is better. Good! When you agree, say, I think so, too. おなじ いけんの ときは I think so, too. だよ。 When you have a different idea, say, really? I don't think so. Then give a reason. That one is more useful. Let's practice. I think summer is better than winter. I think so, too! I think math is the easiest subject. Hmm, I don't think so. Now, phonics. Endless. Fearless. Harmless. Spotless. Less means without. Endless, without an end. Okay, I think chocolate is the best snack. Do you think so, too?",
+      "conversation": {
+        "scene": "Choosing a souvenir from two options",
+        "sceneJa": "おみやげを 2つの うちから えらぶ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Which souvenir should we buy, the keychain or the postcard?",
+            "ja": "どっちの おみやげを かう？ キーホルダーと えはがき。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I think this keychain is better. It's an echo bird!",
+            "ja": "この キーホルダーの ほうが いいと おもう。こだまの とりだよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think so, too. It's so cute.",
+            "ja": "わたしも そう おもう。すごく かわいい。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Really? I don't think so. The postcard is more useful. We can write a message.",
+            "ja": "そう？ ぼくは そう おもわない。えはがきの ほうが べんりだよ。メッセージが かけるし。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Both are good ideas. How about one keychain and one postcard?",
+            "ja": "どっちも いい かんがえね。キーホルダー 1つと えはがき 1まいは どう？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I think so, too! That's the best plan.",
+            "ja": "わたしも そう おもう！それが いちばんの けいかくだね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "2つの おみやげを えらぶ とき、I think so, too. / I don't think so. で いけんを いおう",
+          "starterEn": "Hi! I'm Ms. Emma. I want to buy a souvenir. I think this keychain is better than the postcard. Do you think so, too?",
+          "targetExpressions": [
+            "I think so, too.",
+            "I don't think so.",
+            "I think this one is better."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I think this one is better. ― I think so, too.",
+          "ちがう ときは I don't think so. ＋ りゆう",
+          "endless・fearless・harmless・spotless"
+        ]
+      }
+    },
+    {
+      "lessonNo": 529,
+      "world": 18,
+      "title": "Because It's Cuter",
+      "titleJa": "こっちの ほうが かわいいから",
+      "school": {
+        "grade": "中2",
+        "topic": "I like this one better because it's cuter.：りゆうを つけて えらぶ（better because ～）",
+        "grammar": "I like ～ better because it's ～er.・Why ～? ― Because ～.",
+        "expressions": [
+          {
+            "en": "I like this one better because it's cuter.",
+            "ja": "こっちの ほうが すき。もっと かわいいから。",
+            "core": true
+          },
+          {
+            "en": "I like the blue cup better because it's bigger.",
+            "ja": "あおい カップの ほうが すき。おおきいから。"
+          },
+          {
+            "en": "Why do you like that one? ― Because it's softer.",
+            "ja": "どうして それが すきなの？ ― もっと やわらかいから。"
+          }
+        ],
+        "testPoints": [
+          "I like ～ better because ～. で りゆうを つけて えらべる",
+          "Why ～? ― Because ～. の やりとり",
+          "-ful と -less（playful・sleepless）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the teddy bear.",
+          "ja": "くまの ぬいぐるみを もって。",
+          "action": "りょうてで だっこする まね",
+          "emoji": "🧸"
+        },
+        {
+          "en": "Squeeze it softly.",
+          "ja": "やさしく ぎゅっと して。",
+          "action": "そっと だきしめる",
+          "emoji": "🤗"
+        },
+        {
+          "en": "Point to the cuter one.",
+          "ja": "かわいい ほうを ゆびさして。",
+          "action": "すきな ほうを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Put it in your bag.",
+          "ja": "かばんに いれて。",
+          "action": "かばんに しまう まね",
+          "emoji": "🎒"
+        }
+      ],
+      "phonics": {
+        "rule": "ful-less",
+        "focus": [
+          "-ful",
+          "-less"
+        ],
+        "sounds": [
+          "/fəl/",
+          "/ləs/"
+        ],
+        "words": [
+          "playful",
+          "peaceful",
+          "thankful",
+          "sleepless"
+        ],
+        "tipJa": "play ＋ ful = playful（あそびずきな）、peace ＋ ful = peaceful、thank ＋ ful = thankful、sleep ＋ less = sleepless（ねむれない）。"
+      },
+      "vocab": [
+        {
+          "en": "reason",
+          "ja": "りゆう",
+          "emoji": "💭",
+          "core": true
+        },
+        {
+          "en": "cup",
+          "ja": "カップ",
+          "emoji": "☕"
+        },
+        {
+          "en": "soft",
+          "ja": "やわらかい",
+          "emoji": "☁️"
+        },
+        {
+          "en": "stuffed animal",
+          "ja": "ぬいぐるみ",
+          "emoji": "🧸"
+        }
+      ],
+      "teacherScript": "Hi, everyone! We're still at the gift shop. There are two stuffed animals, a bear and a rabbit. Which one do I like better? I like this one better because it's cuter. Say it with me. I like this one better because it's cuter. Wonderful! Because gives the reason. りゆうは because で つなげるよ。 If someone asks why, answer with because. Why do you like that one? Because it's softer. Let's practice. Which cup do you like better? I like the blue cup better because it's bigger. Which bag do you like better? I like the red bag better because it's lighter. Now, phonics. Playful. Peaceful. Thankful. Sleepless. Play plus f, u, l. Sleep plus l, e, s, s. Now, think of two snacks. Which one do you like better? Tell me why!",
+      "conversation": {
+        "scene": "Choosing stuffed animals with reasons",
+        "sceneJa": "りゆうを つけて えらぶ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at these stuffed animals! A bear and a rabbit.",
+            "ja": "この ぬいぐるみ みて！くまと うさぎ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like the bear better because it's bigger.",
+            "ja": "ぼくは くまの ほうが すき。おおきいから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like this rabbit better because it's cuter.",
+            "ja": "わたしは この うさぎの ほうが すき。かわいいから。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Why do you like the bear, Haru?",
+            "ja": "ハル、どうして くまが すきなの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Because it's softer, too. Feel it!",
+            "ja": "もっと やわらかいからでも あるよ。さわって みて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like the rabbit better because its ears are longer. Long ears are cool!",
+            "ja": "ぼくは うさぎの ほうが すき。みみが ながいから。ながい みみって かっこいい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You all gave great reasons!",
+            "ja": "みんな すてきな りゆうを いえたわね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "2つの うち すきな ほうを I like ～ better because ～. で りゆうと いっしょに いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Look at these two caps. One is red and one is blue. Which one do you like better? Why?",
+          "targetExpressions": [
+            "I like ～ better because ～.",
+            "Why?",
+            "Because it's ～er."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I like this one better because it's cuter.",
+          "Why ～? ― Because ～.",
+          "playful・peaceful・thankful・sleepless"
+        ]
+      }
+    },
+    {
+      "lessonNo": 530,
+      "world": 18,
+      "title": "Dogs or Cats?",
+      "titleJa": "いぬと ねこ、どっちが いい？",
+      "school": {
+        "grade": "中2",
+        "topic": "I like dogs better because they're friendly.：ミニ話し合い（いけんと りゆう）",
+        "grammar": "I like A better because they're ～.・That's a good point.",
+        "expressions": [
+          {
+            "en": "I like dogs better because they're friendly.",
+            "ja": "いぬの ほうが すき。人なつっこいから。",
+            "core": true
+          },
+          {
+            "en": "I like cats better because they're quiet and soft.",
+            "ja": "ねこの ほうが すき。しずかで やわらかいから。"
+          },
+          {
+            "en": "That's a good point. ― Thanks!",
+            "ja": "なるほどね。 ― ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "I like A better because they're ～. で いけんと りゆうを いえる",
+          "That's a good point. / I think so, too. で あいての いけんに こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wag your tail like a dog.",
+          "ja": "いぬの ように しっぽを ふって。",
+          "action": "おしりを ふりふり する",
+          "emoji": "🐕"
+        },
+        {
+          "en": "Stretch like a cat.",
+          "ja": "ねこの ように のびを して。",
+          "action": "よつんばいで せなかを のばす",
+          "emoji": "🐈"
+        },
+        {
+          "en": "Raise your hand to talk.",
+          "ja": "はなす ときは てを あげて。",
+          "action": "てを あげてから はなす",
+          "emoji": "✋"
+        },
+        {
+          "en": "Listen to your friend.",
+          "ja": "ともだちの はなしを きいて。",
+          "action": "あいての ほうを みて うなずく",
+          "emoji": "👂"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ful",
+          "-less"
+        ],
+        "sounds": [
+          "/fəl/",
+          "/ləs/"
+        ],
+        "words": [
+          "colorful",
+          "careless",
+          "playful",
+          "harmless"
+        ],
+        "tipJa": "まとめ: ful は「〜が いっぱい」（colorful・playful）、less は「〜が ない」（careless・harmless）。ful は l 1つ、less は s 2つ。"
+      },
+      "vocab": [
+        {
+          "en": "friendly",
+          "ja": "ひとなつっこい・やさしい",
+          "emoji": "😊",
+          "core": true
+        },
+        {
+          "en": "pet",
+          "ja": "ペット",
+          "emoji": "🐾"
+        },
+        {
+          "en": "quiet",
+          "ja": "しずかな",
+          "emoji": "🤫"
+        },
+        {
+          "en": "opinion",
+          "ja": "いけん",
+          "emoji": "💬"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're having a mini discussion. The question is, dogs or cats? Which do you like better? Here is my opinion. I like dogs better because they're friendly. Say it with me. I like dogs better because they're friendly. Great! They're means they are. We say they because we mean all dogs. Now listen to Riko's opinion. I like cats better because they're quiet and soft. When you hear a good reason, say, that's a good point. なるほど と おもったら That's a good point. だよ。 You don't need a pet to join the discussion. Let's practice. Which do you like better, rabbits or hamsters? I like rabbits better because they're cute. That's a good point! Now, phonics review. Colorful. Careless. Playful. Harmless. Now it's your turn. Dogs or cats? Tell me your opinion and your reason!",
+      "conversation": {
+        "scene": "A mini discussion: dogs or cats?",
+        "sceneJa": "「犬と ねこ、どっちが いい？」ミニ話し合い",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Today's question is, dogs or cats? Who wants to start?",
+            "ja": "きょうの しつもんは、いぬと ねこ どっち？ だれから はじめる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like dogs better because they're friendly. They play with you.",
+            "ja": "ぼくは いぬの ほうが すき。人なつっこいから。いっしょに あそんで くれるし。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I like cats better because they're quiet and soft.",
+            "ja": "わたしは ねこの ほうが すき。しずかで やわらかいから。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's a good point. Cats are really soft.",
+            "ja": "なるほど。ねこって ほんとに やわらかいよね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like both! Dogs are more playful, but cats are more relaxing.",
+            "ja": "わたしは どっちも すき！いぬは もっと あそびずきで、ねこは もっと いやされる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I think so, too. And I like birds the best!",
+            "ja": "ぼくも そう おもう。そして とりが いちばん すき！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful discussion, everyone. You all gave good reasons.",
+            "ja": "すばらしい はなしあいね。みんな いい りゆうを いえたわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いぬと ねこ どっちが すきか、I like ～ better because they're ～. で いおう。ペットが いなくても OK",
+          "starterEn": "Hi! I'm Ms. Emma. Let's have a mini discussion. Dogs or cats? Which do you like better, and why?",
+          "targetExpressions": [
+            "I like ～ better because they're ～.",
+            "That's a good point.",
+            "I think so, too."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I like dogs better because they're friendly.",
+          "That's a good point.（あいての いけんを みとめる）",
+          "colorful・careless・playful・harmless"
+        ]
+      }
+    },
+    {
+      "lessonNo": 531,
+      "world": 18,
+      "title": "Animal Superpowers",
+      "titleJa": "どうぶつの スーパーパワー",
+      "school": {
+        "grade": "中2",
+        "topic": "A frog can jump farther than you think!：どうぶつの すごい力を くらべる（can ＋ 比較級）",
+        "grammar": "can ～ farther / higher / faster than ～",
+        "expressions": [
+          {
+            "en": "A frog can jump farther than you think!",
+            "ja": "カエルは きみが おもうより とおくまで とべる！",
+            "core": true
+          },
+          {
+            "en": "A kangaroo can jump higher than a car!",
+            "ja": "カンガルーは くるまより たかく とべる！"
+          },
+          {
+            "en": "Which can swim faster, a penguin or a duck? ― A penguin can!",
+            "ja": "ペンギンと アヒル、どっちが はやく およげる？ ― ペンギン！"
+          }
+        ],
+        "testPoints": [
+          "can ＋ 比較級（jump farther / swim faster）で くらべられる",
+          "un- の いみ（unhappy・unkind・unfair・unsafe）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jump like a frog.",
+          "ja": "カエルの ように とんで。",
+          "action": "しゃがんでから まえに とぶ",
+          "emoji": "🐸"
+        },
+        {
+          "en": "Jump like a kangaroo.",
+          "ja": "カンガルーの ように はねて。",
+          "action": "りょうあしで たかく はねる",
+          "emoji": "🦘"
+        },
+        {
+          "en": "Swim like a penguin.",
+          "ja": "ペンギンの ように およいで。",
+          "action": "うでを よこで ぱたぱた させる",
+          "emoji": "🐧"
+        },
+        {
+          "en": "Show your muscles.",
+          "ja": "きんにくを みせて。",
+          "action": "うでを まげて ちからこぶ",
+          "emoji": "💪"
+        }
+      ],
+      "phonics": {
+        "rule": "un",
+        "focus": [
+          "un-"
+        ],
+        "sounds": [
+          "/ʌn/"
+        ],
+        "words": [
+          "unhappy",
+          "unkind",
+          "unfair",
+          "unsafe"
+        ],
+        "tipJa": "un を まえに つけると はんたいの いみ。happy → unhappy、kind → unkind、fair → unfair、safe → unsafe。"
+      },
+      "vocab": [
+        {
+          "en": "farther",
+          "ja": "もっと とおくに",
+          "emoji": "➡️",
+          "core": true
+        },
+        {
+          "en": "frog",
+          "ja": "カエル",
+          "emoji": "🐸"
+        },
+        {
+          "en": "penguin",
+          "ja": "ペンギン",
+          "emoji": "🐧"
+        },
+        {
+          "en": "superpower",
+          "ja": "すごい ちから",
+          "emoji": "🦸"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Welcome to the Animal Superpowers Quiz! Animals in the valley have amazing powers. Look at this little frog. It's small, but it can jump very far. A frog can jump farther than you think! Say it with me. A frog can jump farther than you think! Great! Far, farther. Farther means more far. far の くらべる かたちは farther だよ。 Here's another one. A kangaroo can jump higher than a car! High, higher. Quiz time! Which can swim faster, a penguin or a duck? A penguin can! Let's practice. Which can run faster, a cheetah or a horse? A cheetah can. Which can climb higher, a monkey or a dog? A monkey can. Now, phonics. Unhappy. Unkind. Unfair. Unsafe. U, n at the start makes the opposite. Now, think of an animal. What is its superpower? Tell me!",
+      "conversation": {
+        "scene": "An animal superpower quiz in the valley",
+        "sceneJa": "谷の 動物の すごい力クイズ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Quiz time! Look at this little frog. Can it jump far?",
+            "ja": "クイズの じかん！この ちいさな カエルを みて。とおくまで とべるかな？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hmm... no? It's so small.",
+            "ja": "うーん…むり？ すごく ちいさいもん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's small, but a frog can jump farther than you think!",
+            "ja": "ちいさいけど、カエルは おもったより とおくまで とべるのよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Next question! Which can swim faster, a penguin or a duck?",
+            "ja": "つぎの もんだい！ペンギンと アヒル、どっちが はやく およげる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "A penguin can! Penguins are great swimmers.",
+            "ja": "ペンギン！ペンギンは およぎの めいじんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And a kangaroo can jump higher than a car!",
+            "ja": "それに カンガルーは くるまより たかく とべるんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wow, animals have superpowers!",
+            "ja": "すごい、どうぶつには スーパーパワーが あるんだね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつの すごい力を can ～er than で しょうかい しよう（A kangaroo can jump higher than a car!）",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the superpower quiz! Which can swim faster, a penguin or a duck? What do you think?",
+          "targetExpressions": [
+            "can jump farther than",
+            "can swim faster than",
+            "can jump higher than",
+            "Which can ～ faster?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "A frog can jump farther than you think!",
+          "far → farther、high → higher（can ＋ くらべる かたち）",
+          "unhappy・unkind・unfair・unsafe"
+        ]
+      }
+    },
+    {
+      "lessonNo": 532,
+      "world": 18,
+      "title": "Which Is Older?",
+      "titleJa": "どっちが ふるい？",
+      "school": {
+        "grade": "中2",
+        "topic": "Which is older, the bridge or the tower?：2つの うち どちらかを きく（Which is ～er, A or B?）",
+        "grammar": "Which is ～er, A or B? ― A is.",
+        "expressions": [
+          {
+            "en": "Which is older, the bridge or the tower?",
+            "ja": "はしと とう、どっちが ふるい？",
+            "core": true
+          },
+          {
+            "en": "The tower is older. It's three hundred years old.",
+            "ja": "とうの ほうが ふるい。300ねん まえの ものだよ。"
+          },
+          {
+            "en": "Which is taller, the tower or the tree? ― The tower is.",
+            "ja": "とうと 木、どっちが たかい？ ― とうだよ。"
+          }
+        ],
+        "testPoints": [
+          "Which is ～er, A or B? と きける",
+          "un- の ことば（unlock・untie・unpack・unzip）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Unlock the door.",
+          "ja": "ドアの かぎを あけて。",
+          "action": "かぎを まわす まね",
+          "emoji": "🔑"
+        },
+        {
+          "en": "Climb the stairs.",
+          "ja": "かいだんを のぼって。",
+          "action": "その場で ももを あげる",
+          "emoji": "🪜"
+        },
+        {
+          "en": "Open the old door slowly.",
+          "ja": "ふるい ドアを ゆっくり あけて。",
+          "action": "ギーッと ゆっくり おす まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Look up at the tower.",
+          "ja": "とうを みあげて。",
+          "action": "うえを みあげる",
+          "emoji": "🗼"
+        }
+      ],
+      "phonics": {
+        "rule": "un",
+        "focus": [
+          "un-"
+        ],
+        "sounds": [
+          "/ʌn/"
+        ],
+        "words": [
+          "unlock",
+          "untie",
+          "unpack",
+          "unzip"
+        ],
+        "tipJa": "unlock（かぎを あける）、untie（ほどく）、unpack（にもつを だす）、unzip（ファスナーを あける）。un で「もとに もどす」いみにも なる。"
+      },
+      "vocab": [
+        {
+          "en": "tower",
+          "ja": "とう",
+          "emoji": "🗼",
+          "core": true
+        },
+        {
+          "en": "stone",
+          "ja": "いし",
+          "emoji": "🪨"
+        },
+        {
+          "en": "key",
+          "ja": "かぎ",
+          "emoji": "🔑"
+        },
+        {
+          "en": "hundred",
+          "ja": "ひゃく",
+          "emoji": "💯"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're visiting the old buildings in the valley. Here is a stone bridge and an old tower. They're both very old. But which is older? Which is older, the bridge or the tower? Say it with me. Which is older, the bridge or the tower? Excellent! To answer, say, the tower is. Or, the tower is older. どっちか きく ときは Which is ～er, A or B? だよ。 The tower is older. It's three hundred years old. The bridge is two hundred years old. Let's practice. Which is bigger, the sun or the moon? The sun is. Which is longer, a train or a bus? A train is. Now, phonics. Unlock. Untie. Unpack. Unzip. Lock, unlock. Tie, untie. Un can mean opening or undoing. The tower door is locked. Let's unlock it with this old key! Now ask your friend a question. Which is bigger, a cat or a dog?",
+      "conversation": {
+        "scene": "Touring the old buildings of the valley",
+        "sceneJa": "谷の 古い建物めぐり",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look at that stone bridge. It looks very old.",
+            "ja": "あの いしの はし みて。すごく ふるそう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The tower looks old, too. Which is older, the bridge or the tower?",
+            "ja": "とうも ふるそうだよ。はしと とう、どっちが ふるい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good question! The tower is older. It's three hundred years old.",
+            "ja": "いい しつもんね！とうの ほうが ふるいの。300ねん まえの ものよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wow! Which is taller, the tower or that tree?",
+            "ja": "すごい！とうと あの 木、どっちが たかい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'll fly up and check. ... The tower is taller!",
+            "ja": "とんで たしかめるね。…とうの ほうが たかい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here's the key. Let's unlock the door and go inside.",
+            "ja": "はい、かぎよ。ドアを あけて なかに はいりましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Which is ～er, A or B? で しつもんを つくって、こたえよう",
+          "starterEn": "Hi! I'm Ms. Emma. Here is a picture of an old castle and a new school. Which is older, the castle or the school?",
+          "targetExpressions": [
+            "Which is older, ～ or ～?",
+            "～ is older.",
+            "Which is taller?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Which is older, the bridge or the tower?",
+          "こたえは The tower is. / The tower is older.",
+          "unlock・untie・unpack・unzip"
+        ]
+      }
+    },
+    {
+      "lessonNo": 533,
+      "world": 18,
+      "title": "Compare Two Pictures",
+      "titleJa": "2まいの えを くらべる",
+      "school": {
+        "grade": "中2",
+        "topic": "In picture A, the dog is bigger.：2まいの えの ちがいを 説明する",
+        "grammar": "In picture A, ～ is ～er. In picture B, ～.",
+        "expressions": [
+          {
+            "en": "In picture A, the dog is bigger.",
+            "ja": "Aの えでは いぬの ほうが おおきい。",
+            "core": true
+          },
+          {
+            "en": "In picture B, the tree is taller than the house.",
+            "ja": "Bの えでは 木が いえより たかい。"
+          },
+          {
+            "en": "I found a difference! ― Where?",
+            "ja": "ちがいを みつけた！ ― どこ？"
+          }
+        ],
+        "testPoints": [
+          "In picture A, ～. で えを くらべて 説明できる",
+          "un- の ことば（unlucky・unusual・unknown・untidy）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at picture A.",
+          "ja": "Aの えを みて。",
+          "action": "ひだりを ゆびさして みる",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Now look at picture B.",
+          "ja": "こんどは Bの えを みて。",
+          "action": "みぎを ゆびさして みる",
+          "emoji": "🔎"
+        },
+        {
+          "en": "Circle the difference.",
+          "ja": "ちがいに まるを つけて。",
+          "action": "ゆびで くうちゅうに まるを かく",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Raise your hand when you find it.",
+          "ja": "みつけたら てを あげて。",
+          "action": "さっと てを あげる",
+          "emoji": "✋"
+        }
+      ],
+      "phonics": {
+        "rule": "un",
+        "focus": [
+          "un-"
+        ],
+        "sounds": [
+          "/ʌn/"
+        ],
+        "words": [
+          "unlucky",
+          "unusual",
+          "unknown",
+          "untidy"
+        ],
+        "tipJa": "unlucky（うんが わるい）、unusual（めずらしい）、unknown（しられて いない）、untidy（ちらかった）。lucky・usual・known・tidy の はんたい。"
+      },
+      "vocab": [
+        {
+          "en": "picture",
+          "ja": "え",
+          "emoji": "🖼️",
+          "core": true
+        },
+        {
+          "en": "difference",
+          "ja": "ちがい",
+          "emoji": "🔍"
+        },
+        {
+          "en": "same",
+          "ja": "おなじ",
+          "emoji": "🟰"
+        },
+        {
+          "en": "tent",
+          "ja": "テント",
+          "emoji": "⛺"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Let's play a game. Find the differences! Look at picture A and picture B. They look the same, but they're different. Look at the dog. In picture A, the dog is bigger. Say it with me. In picture A, the dog is bigger. Great! Now look at the tree. In picture B, the tree is taller than the house. えを くらべる ときは In picture A, ～. だよ。 When you find a difference, say, I found a difference! Let's practice. In picture A, the cat is smaller. In picture B, the tent is untidy. In picture A, the sun is bigger. Now, phonics. Unlucky. Unusual. Unknown. Untidy. Lucky, unlucky. Tidy, untidy. Look at picture B again. The tent is untidy! There are shoes everywhere. Okay, can you find one more difference? Tell me!",
+      "conversation": {
+        "scene": "Finding differences between two pictures",
+        "sceneJa": "2枚の 絵を くらべる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here are two pictures of the valley. Can you find the differences?",
+            "ja": "谷の えが 2まい あるわ。ちがいを みつけられる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I found a difference! In picture A, the dog is bigger.",
+            "ja": "ちがいを みつけた！Aの えでは いぬの ほうが おおきい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In picture B, the tree is taller than the house.",
+            "ja": "Bの えでは 木が いえより たかい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And look at the tent. In picture B, it's untidy. There are shoes everywhere!",
+            "ja": "それに テントを みて。Bの えでは ちらかってる。くつが あちこちに ある！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "That's unusual! Who left their shoes there?",
+            "ja": "めずらしいね！だれが くつを おいていったの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Ha ha. Maybe it was you, Birimo!",
+            "ja": "あはは。ビリモじゃない？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job, detectives. You found all the differences.",
+            "ja": "よく できました、たんていさんたち。ちがいを ぜんぶ みつけたわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "2まいの えの ちがいを In picture A, ～. In picture B, ～. で 説明しよう",
+          "starterEn": "Hi! I'm Ms. Emma. Imagine two pictures of a park. In picture A, the slide is small. What's different in picture B? Let's talk about it!",
+          "targetExpressions": [
+            "In picture A, ～.",
+            "In picture B, ～.",
+            "I found a difference!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In picture A, the dog is bigger.",
+          "I found a difference!（ちがいを みつけた）",
+          "unlucky・unusual・unknown・untidy"
+        ]
+      }
+    },
+    {
+      "lessonNo": 534,
+      "world": 18,
+      "title": "My Comparison Sentences",
+      "titleJa": "くらべる ぶんを かこう",
+      "school": {
+        "grade": "中2",
+        "topic": "My bag is heavier than Riko's bag.：くらべる ぶんを 3〜4 文 かいて 読みあう",
+        "grammar": "～'s（だれかの）・比較級の ぶんを つなげて かく（but）",
+        "expressions": [
+          {
+            "en": "My bag is heavier than Riko's bag.",
+            "ja": "ぼくの かばんは リコの かばんより おもい。",
+            "core": true
+          },
+          {
+            "en": "My pencil is longer than my eraser.",
+            "ja": "わたしの えんぴつは けしゴムより ながい。"
+          },
+          {
+            "en": "Riko's bag is more colorful, but my bag is bigger.",
+            "ja": "リコの かばんの ほうが カラフルだけど、ぼくの かばんの ほうが おおきい。"
+          }
+        ],
+        "testPoints": [
+          "～ is ～er than ～. の ぶんを 3〜4 文 かける",
+          "Riko's bag の ように 's で「～の」が いえる",
+          "un- の ことば（unfriendly・unwrap）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take out your notebook.",
+          "ja": "ノートを だして。",
+          "action": "かばんから ノートを だす まね",
+          "emoji": "📓"
+        },
+        {
+          "en": "Write a sentence.",
+          "ja": "ぶんを かいて。",
+          "action": "えんぴつで かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Read it to your friend.",
+          "ja": "ともだちに よんで あげて。",
+          "action": "ノートを もって こえに だす",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Clap for your friend.",
+          "ja": "ともだちに はくしゅ して。",
+          "action": "おおきく はくしゅ する",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "un",
+        "focus": [
+          "un-"
+        ],
+        "sounds": [
+          "/ʌn/"
+        ],
+        "words": [
+          "unfriendly",
+          "unhealthy",
+          "unwrap",
+          "unbutton"
+        ],
+        "tipJa": "unfriendly（なかよく しない）、unhealthy（けんこうに よくない）、unwrap（つつみを あける）、unbutton（ボタンを はずす）。"
+      },
+      "vocab": [
+        {
+          "en": "sentence",
+          "ja": "ぶん",
+          "emoji": "📝",
+          "core": true
+        },
+        {
+          "en": "notebook",
+          "ja": "ノート",
+          "emoji": "📓"
+        },
+        {
+          "en": "eraser",
+          "ja": "けしゴム",
+          "emoji": "🧽"
+        },
+        {
+          "en": "compare",
+          "ja": "くらべる",
+          "emoji": "⚖️"
+        }
+      ],
+      "teacherScript": "Hello, writers! Today you'll write comparison sentences. Let's look at Haru's sentences. My bag is heavier than Riko's bag. Say it with me. My bag is heavier than Riko's bag. Good! Riko's bag means the bag of Riko. ～の は 's で あらわすよ。 Here's the next one. My pencil is longer than my eraser. And one more. Riko's bag is more colorful, but my bag is bigger. Use but to show two sides. Now, it's your turn. Look at the things on your desk. Write three or four sentences. My book is bigger than my notebook. My eraser is smaller than my pencil case. My bag is heavier than my lunch box. Compare things, not people. That's kind. Now, phonics. Unfriendly. Unhealthy. Unwrap. Unbutton. Friendly, unfriendly. Wrap, unwrap. Okay, writers. Read your sentences to a friend!",
+      "conversation": {
+        "scene": "Writing comparison sentences and reading them",
+        "sceneJa": "くらべる文を 書いて 読み合う",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's read our comparison sentences. Haru, you're first.",
+            "ja": "くらべる ぶんを よみましょう。ハル、さいしょに どうぞ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My bag is heavier than Riko's bag. It has five books in it!",
+            "ja": "ぼくの かばんは リコの かばんより おもい。ほんが 5さつ はいってるんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "That's true! My bag is lighter. But my bag is more colorful.",
+            "ja": "ほんとだね！わたしの かばんは かるい。でも もっと カラフルだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Here's mine. My pencil is longer than my eraser.",
+            "ja": "わたしの ぶんは これ。わたしの えんぴつは けしゴムより ながい。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My sentence is about snacks. My cookie is bigger than Kiko's cookie!",
+            "ja": "ぼくの ぶんは おやつの こと。ぼくの クッキーは キコの クッキーより おおきい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Because you always choose the biggest one, Birimo.",
+            "ja": "あはは！ビリモは いつも いちばん おおきいのを えらぶからね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great sentences, everyone!",
+            "ja": "みんな すてきな ぶんね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "みのまわりの ものを くらべる ぶんを 3つ いおう（ものを くらべよう。ともだちの からだは くらべない）",
+          "starterEn": "Hi! I'm Ms. Emma. Look at the things on your desk. Can you make a comparison sentence? For example, my book is bigger than my notebook.",
+          "targetExpressions": [
+            "～ is bigger than ～.",
+            "～ is heavier than ～.",
+            "～ is more colorful than ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My bag is heavier than Riko's bag.",
+          "Riko's bag（～の）・but で 2つの ことを つなぐ",
+          "unfriendly・unhealthy・unwrap・unbutton"
+        ]
+      }
+    },
+    {
+      "lessonNo": 535,
+      "world": 18,
+      "title": "Echo Valley Quiz Show",
+      "titleJa": "こだまの谷 クイズショー",
+      "school": {
+        "grade": "中2",
+        "topic": "What is the tallest animal?：最上級で クイズを だしあう",
+        "grammar": "What is the ～est ～?",
+        "expressions": [
+          {
+            "en": "What is the tallest animal?",
+            "ja": "いちばん せの たかい どうぶつは なに？",
+            "core": true
+          },
+          {
+            "en": "It's the giraffe! ― Correct!",
+            "ja": "キリン！ ― せいかい！"
+          },
+          {
+            "en": "What is the biggest planet? ― It's Jupiter!",
+            "ja": "いちばん おおきい わくせいは？ ― もくせい！"
+          }
+        ],
+        "testPoints": [
+          "What is the ～est ～? で クイズが だせる",
+          "un- の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Press the buzzer.",
+          "ja": "ブザーを おして。",
+          "action": "てのひらで ポンと おす",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Make a big circle for yes.",
+          "ja": "せいかいなら おおきな まるを つくって。",
+          "action": "りょうてで あたまの うえに まる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Make an X for no.",
+          "ja": "ちがうなら バツを つくって。",
+          "action": "うでを むねの まえで クロス",
+          "emoji": "❌"
+        },
+        {
+          "en": "Cheer for the winner.",
+          "ja": "かった ひとを おうえん して。",
+          "action": "りょうてを あげて ばんざい",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "un-"
+        ],
+        "sounds": [
+          "/ʌn/"
+        ],
+        "words": [
+          "unhappy",
+          "unlock",
+          "unusual",
+          "unwrap"
+        ],
+        "tipJa": "まとめ: un は はんたい（unhappy・unusual）や もとに もどす（unlock・unwrap）。"
+      },
+      "vocab": [
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "buzzer",
+          "ja": "ブザー",
+          "emoji": "🔔"
+        },
+        {
+          "en": "correct",
+          "ja": "せいかいの",
+          "emoji": "⭕"
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "💬"
+        }
+      ],
+      "teacherScript": "Welcome to the Echo Valley Quiz Show! I'm your host, Ms. Emma. Are you ready? Here's the first question. What is the tallest animal? Say it with me. What is the tallest animal? Great! Do you know the answer? It's the giraffe! Correct! For a quiz, use what is the and e, s, t. クイズは What is the ～est ～? で だせるよ。 Next question. What is the biggest planet? It's Jupiter! Correct! What is the fastest land animal? It's the cheetah! Let's practice. Make your own quiz. What is the longest river in Japan? What is the coldest season? What is the biggest animal in the sea? Now, phonics review. Unhappy. Unlock. Unusual. Unwrap. Un makes the opposite, or it undoes something. Okay, it's your turn to be the host. Ask me a quiz question!",
+      "conversation": {
+        "scene": "The valley quiz show",
+        "sceneJa": "谷の クイズ番組",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Echo Valley Quiz Show! First question. What is the tallest animal?",
+            "ja": "こだまの谷 クイズショーへ ようこそ！だい1もん。いちばん せの たかい どうぶつは？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Beep! It's the giraffe!",
+            "ja": "ピンポン！キリン！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Correct! Next question. What is the biggest planet?",
+            "ja": "せいかい！つぎの もんだい。いちばん おおきい わくせいは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Beep! It's Jupiter! We learned that at the observatory.",
+            "ja": "ピンポン！もくせい！天文台で ならったよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Correct! Last question. What is the fastest land animal?",
+            "ja": "せいかい！さいごの もんだい。りくで いちばん はやい どうぶつは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Beep! It's the cheetah!",
+            "ja": "ピンポン！チーター！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Unbelievable! You're all champions!",
+            "ja": "しんじられない！みんな チャンピオンだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What is the ～est ～? で クイズを だしたり こたえたり しよう",
+          "starterEn": "Hi! I'm Ms. Emma, your quiz host! Here's a question for you. What is the biggest animal in the sea?",
+          "targetExpressions": [
+            "What is the ～est ～?",
+            "It's ～!",
+            "Correct!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What is the tallest animal? ― It's the giraffe!",
+          "クイズは What is the ～est ～?",
+          "unhappy・unlock・unusual・unwrap"
+        ]
+      }
+    },
+    {
+      "lessonNo": 536,
+      "world": 18,
+      "title": "The Biggest Echo",
+      "titleJa": "いちばん おおきな こだま",
+      "school": {
+        "grade": "中2",
+        "topic": "Let's make the biggest echo ever!：こだまの精を げんきに する 作戦会議（ていあんと 最上級）",
+        "grammar": "Let's ～.・the ～est ～ ever（いままでで いちばん）・Why don't we ～?",
+        "expressions": [
+          {
+            "en": "Let's make the biggest echo ever!",
+            "ja": "いままでで いちばん おおきな こだまを つくろう！",
+            "core": true
+          },
+          {
+            "en": "Why don't we shout together? ― Good idea!",
+            "ja": "みんなで いっしょに さけぶのは どう？ ― いいね！"
+          },
+          {
+            "en": "Our voices will be louder together.",
+            "ja": "いっしょなら こえが もっと おおきく なるよ。"
+          }
+        ],
+        "testPoints": [
+          "Let's ～ the ～est ～ ever! で ていあんできる",
+          "Why don't we ～? ― Good idea! で そうだんできる",
+          "-er / -est と -ly の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take a deep breath.",
+          "ja": "おおきく いきを すって。",
+          "action": "むねを ひろげて いきを すう",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Cup your hands.",
+          "ja": "てを くちに あてて。",
+          "action": "りょうてを メガホンの ように する",
+          "emoji": "📣"
+        },
+        {
+          "en": "Shout together.",
+          "ja": "いっしょに さけんで。",
+          "action": "みんなで こえを あわせる",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Listen quietly.",
+          "ja": "しずかに きいて。",
+          "action": "てを みみに あてて じっと する",
+          "emoji": "👂"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-er",
+          "-est",
+          "-ly"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/",
+          "/li/"
+        ],
+        "words": [
+          "biggest",
+          "louder",
+          "loudly",
+          "happily"
+        ],
+        "tipJa": "まとめ: big → biggest（重ねる）、loud → louder（そのまま er）、loud → loudly（ly）、happy → happily（y → i）。"
+      },
+      "vocab": [
+        {
+          "en": "plan",
+          "ja": "さくせん・けいかく",
+          "emoji": "🗺️",
+          "core": true
+        },
+        {
+          "en": "voice",
+          "ja": "こえ",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "together",
+          "ja": "いっしょに",
+          "emoji": "🤝"
+        },
+        {
+          "en": "ever",
+          "ja": "いままでで",
+          "emoji": "✨"
+        }
+      ],
+      "teacherScript": "Hi, everyone! The echo spirit is still unhappy. Let's make a plan to cheer it up. Here's my idea. Let's make the biggest echo ever! Say it with me. Let's make the biggest echo ever! Wonderful! Ever means in all time. The biggest echo ever is bigger than all the echoes before. ever は「いままでで」だよ。 How can we make a big echo? Why don't we shout together? Good idea! Our voices will be louder together. What should we shout? Let's shout kind words. Thank you! You're wonderful! Let's practice. Why don't we sing a song? Good idea! Why don't we invite the animals? Good idea! Why don't we clap, too? Good idea! Now, phonics review. Biggest. Louder. Loudly. Happily. Okay, everyone. Take a deep breath. Are you ready for the biggest echo ever?",
+      "conversation": {
+        "scene": "A planning meeting to cheer up the echo spirit",
+        "sceneJa": "こだまの精を 元気にする 作戦会議",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "The echo is still unhappy. What can we do?",
+            "ja": "こだまが まだ げんきが ないね。どう したら いい？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's make the biggest echo ever!",
+            "ja": "いままでで いちばん おおきな こだまを つくろう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Why don't we shout together? Our voices will be louder.",
+            "ja": "みんなで いっしょに さけぶのは どう？ こえが もっと おおきく なるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Good idea! And let's shout kind words, not just hello.",
+            "ja": "いいね！それに ハローだけじゃ なくて、やさしい ことばを さけぼう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful plan. Let's invite the animals in the valley, too.",
+            "ja": "すてきな さくせんね。谷の どうぶつたちも よびましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay, everyone. One, two, three... Thank you, Echo!",
+            "ja": "よし、みんな。いち、に、さん…ありがとう、こだま！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Listen! The echo is getting louder and happier!",
+            "ja": "きいて！こだまが どんどん おおきく、げんきに なってる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "こだまを げんきに する アイデアを Let's ～. / Why don't we ～? で だしあおう",
+          "starterEn": "Hi! I'm Ms. Emma. The echo spirit is still unhappy. We need a plan! What can we do to cheer it up?",
+          "targetExpressions": [
+            "Let's ～.",
+            "Why don't we ～?",
+            "Good idea!",
+            "the biggest echo ever"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let's make the biggest echo ever!",
+          "Why don't we ～? ― Good idea!",
+          "biggest・louder・loudly・happily"
+        ]
+      }
+    },
+    {
+      "lessonNo": 537,
+      "world": 18,
+      "title": "Thank You, Echo",
+      "titleJa": "ありがとう、こだま",
+      "school": {
+        "grade": "中2",
+        "topic": "You're the best friend in the valley.：おれいを いう・ほめる（the best ～・Thank you for ～ing.）",
+        "grammar": "You're the best ～.・Thank you for ～ing.",
+        "expressions": [
+          {
+            "en": "You're the best friend in the valley.",
+            "ja": "きみは 谷で いちばんの ともだちだよ。",
+            "core": true
+          },
+          {
+            "en": "Thank you for playing with us.",
+            "ja": "いっしょに あそんで くれて ありがとう。"
+          },
+          {
+            "en": "We'll come back again. ― Promise?",
+            "ja": "また くるね。 ― やくそく？"
+          }
+        ],
+        "testPoints": [
+          "You're the best ～. で ほめられる",
+          "Thank you for ～ing. で おれいが いえる",
+          "-ful・un-・-ly の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wave goodbye.",
+          "ja": "てを ふって さようなら。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Make a heart with your hands.",
+          "ja": "てで ハートを つくって。",
+          "action": "りょうての ゆびで ハート",
+          "emoji": "🫶"
+        },
+        {
+          "en": "Bow politely.",
+          "ja": "ていねいに おじぎを して。",
+          "action": "ゆっくり おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Whisper thank you.",
+          "ja": "こごえで ありがとうと いって。",
+          "action": "ちいさな こえで Thank you.",
+          "emoji": "🤫"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ful",
+          "un-",
+          "-ly"
+        ],
+        "sounds": [
+          "/fəl/",
+          "/ʌn/",
+          "/li/"
+        ],
+        "words": [
+          "thankful",
+          "wonderful",
+          "unhappy",
+          "kindly"
+        ],
+        "tipJa": "まとめ: thankful・wonderful（ful）、unhappy（un）、kindly（ly）。こだまは もう unhappy じゃないね！"
+      },
+      "vocab": [
+        {
+          "en": "best",
+          "ja": "いちばん いい",
+          "emoji": "🏆",
+          "core": true
+        },
+        {
+          "en": "friend",
+          "ja": "ともだち",
+          "emoji": "🤗"
+        },
+        {
+          "en": "thankful",
+          "ja": "かんしゃ している",
+          "emoji": "🙏"
+        },
+        {
+          "en": "promise",
+          "ja": "やくそく（する）",
+          "emoji": "🤙"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Listen. Hello! Hello! Hello! The echo is big and cheerful again! The echo spirit is happy. Let's say thank you. You're the best friend in the valley. Say it with me. You're the best friend in the valley. Beautiful! The best means number one. Good, better, best. いちばんの ともだちは the best friend だよ。 To say thank you for something, say thank you for, and add i, n, g to the action. Thank you for playing with us. Thank you for helping me. Let's practice. Thank you for listening. You're the best listener! Thank you for the present. You're the best! Now, phonics review. Thankful. Wonderful. Unhappy. Kindly. The echo isn't unhappy now. It's thankful. Okay, who is the best friend in your life? Think about it. Then say thank you to that person today!",
+      "conversation": {
+        "scene": "Thanking the echo spirit",
+        "sceneJa": "こだまの精に お礼を 言う",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Listen! Hello! ... Hello! Hello! Hello!",
+            "ja": "きいて！ハロー！…ハロー！ハロー！ハロー！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The echo is loud and cheerful again!",
+            "ja": "こだまが また おおきくて げんきに なった！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you for playing with us, Echo.",
+            "ja": "いっしょに あそんで くれて ありがとう、こだま。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "You're the best friend in the valley!",
+            "ja": "きみは 谷で いちばんの ともだちだよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Listen. The echo is saying, \"Thank you, my friends!\"",
+            "ja": "きいて。こだまが「ありがとう、ともだち！」って いっているわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We'll come back again. We promise!",
+            "ja": "また くるね。やくそく！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Goodbye, Echo! You're the best!",
+            "ja": "さようなら、こだま！きみは さいこうだよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "だれかに Thank you for ～ing. / You're the best ～. で おれいを いおう",
+          "starterEn": "Hi! I'm Ms. Emma. The echo is happy again! Let's say thank you. What do you want to tell the echo?",
+          "targetExpressions": [
+            "Thank you for ～ing.",
+            "You're the best friend.",
+            "We'll come back again."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You're the best friend in the valley.",
+          "Thank you for playing with us.（for ＋ ～ing）",
+          "thankful・wonderful・unhappy・kindly"
+        ]
+      }
+    },
+    {
+      "lessonNo": 538,
+      "world": 18,
+      "title": "Valley Guidebook",
+      "titleJa": "谷の ガイドブック",
+      "school": {
+        "grade": "中2",
+        "topic": "This is the most beautiful place in the valley.：ガイドブックを かく（the most ～・おすすめ）",
+        "grammar": "the most ～ place in ～・You can ～ here.",
+        "expressions": [
+          {
+            "en": "This is the most beautiful place in the valley.",
+            "ja": "ここは 谷で いちばん うつくしい ばしょです。",
+            "core": true
+          },
+          {
+            "en": "You can see colorful birds here.",
+            "ja": "ここでは カラフルな とりが みられます。"
+          },
+          {
+            "en": "It's quieter in the morning, so come early!",
+            "ja": "あさの ほうが しずかなので、はやめに きてね！"
+          }
+        ],
+        "testPoints": [
+          "the most ～ place で おすすめの ばしょを かける",
+          "You can ～ here. で できる ことを かける",
+          "-est・-ful・強勢の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the guidebook.",
+          "ja": "ガイドブックを ひらいて。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Draw a map.",
+          "ja": "ちずを かいて。",
+          "action": "ゆびで くうちゅうに ちずを かく",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Point to your favorite place.",
+          "ja": "すきな ばしょを ゆびさして。",
+          "action": "ちずの 1かしょを ゆびさす",
+          "emoji": "📍"
+        },
+        {
+          "en": "Take a photo.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえて カシャ",
+          "emoji": "📷"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-est",
+          "-ful",
+          "vol-ca-no",
+          "cam-er-a"
+        ],
+        "sounds": [
+          "/ɪst/",
+          "/fəl/"
+        ],
+        "words": [
+          "prettiest",
+          "peaceful",
+          "volcano",
+          "camera"
+        ],
+        "tipJa": "まとめ: pretty → prettiest（y → i）、peaceful（ful）、vol-CA-no・CAM-er-a（つよい ところ）。"
+      },
+      "vocab": [
+        {
+          "en": "guidebook",
+          "ja": "ガイドブック",
+          "emoji": "📖",
+          "core": true
+        },
+        {
+          "en": "place",
+          "ja": "ばしょ",
+          "emoji": "📍"
+        },
+        {
+          "en": "visitor",
+          "ja": "おとずれる ひと",
+          "emoji": "🧳"
+        },
+        {
+          "en": "view",
+          "ja": "けしき",
+          "emoji": "🌄"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we're making a guidebook for Echo Valley. More visitors will come, and the echo will never be lonely again! Let's write about our favorite places. Here's my page. This is the most beautiful place in the valley. Say it with me. This is the most beautiful place in the valley. Lovely! Then tell visitors what they can do. You can see colorful birds here. Add a tip. It's quieter in the morning, so come early! ガイドブックは the most ～ place と You can ～ here. で かこう。 Let's practice. This is the best place for a picnic. You can see the old volcano from here. This is the most peaceful place in the valley. Now, phonics review. Prettiest. Peaceful. vol-CA-no. CAM-er-a. Now, think of your favorite place in your town. You don't need to write the real name. What can people do there?",
+      "conversation": {
+        "scene": "Writing a guidebook for the valley",
+        "sceneJa": "谷の ガイドブックを 書く",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make a guidebook. Then more visitors will come to the valley.",
+            "ja": "ガイドブックを つくりましょう。そうすれば もっと たくさんの ひとが 谷に くるわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My page is about the flower field. This is the most beautiful place in the valley.",
+            "ja": "わたしの ページは 花畑。ここは 谷で いちばん うつくしい ばしょです。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My page is about the river. You can see the biggest rock here!",
+            "ja": "ぼくの ページは 川。ここでは いちばん おおきい 石が みられます！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Mine is about the bird hut. You can see colorful birds here. It's quieter in the morning.",
+            "ja": "わたしは 観察小屋。カラフルな とりが みられます。あさの ほうが しずかです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And my page is about the best place for a picnic!",
+            "ja": "ぼくの ページは ピクニックに いちばん いい ばしょ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! The echo won't be lonely now.",
+            "ja": "すばらしいわ！これで こだまは もう さびしく ないわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな ばしょを This is the most ～ place. You can ～ here. で しょうかい しよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. I'm writing a guidebook. What's your favorite place? What can people do there?",
+          "targetExpressions": [
+            "This is the most ～ place in ～.",
+            "You can ～ here.",
+            "It's ～er in the morning."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This is the most beautiful place in the valley.",
+          "You can see colorful birds here.（できる ことを かく）",
+          "prettiest・peaceful・vol-CA-no・CAM-er-a"
+        ]
+      }
+    },
+    {
+      "lessonNo": 539,
+      "world": 18,
+      "title": "Echo Valley Review",
+      "titleJa": "こだまの谷 ふりかえり",
+      "school": {
+        "grade": "中2",
+        "topic": "taller / the tallest / more / better / as ～ as：くらべる いいかたの まとめ（さよならハイキング）",
+        "grammar": "比較級・最上級・more / most・better / best・as ～ as の まとめ",
+        "expressions": [
+          {
+            "en": "This mountain is the tallest in the valley.",
+            "ja": "この 山が 谷で いちばん たかい。",
+            "core": true
+          },
+          {
+            "en": "The lake is as blue as the sky.",
+            "ja": "みずうみは そらと おなじくらい あおい。"
+          },
+          {
+            "en": "I like the river path better than the forest path.",
+            "ja": "森の みちより 川の みちの ほうが すき。"
+          }
+        ],
+        "testPoints": [
+          "比較級・最上級・as ～ as を つかいわけられる",
+          "ワールド18 の つづり（-er / -est・-ly・-less・un-）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your backpack.",
+          "ja": "リュックを せおって。",
+          "action": "かたに リュックを かける まね",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Hike up the hill.",
+          "ja": "おかを のぼって。",
+          "action": "まえかがみで ゆっくり あるく",
+          "emoji": "🥾"
+        },
+        {
+          "en": "Stop and look at the lake.",
+          "ja": "とまって みずうみを みて。",
+          "action": "たちどまって とおくを みる",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "Wave to the echo.",
+          "ja": "こだまに てを ふって。",
+          "action": "山に むかって てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-er",
+          "-est",
+          "-ly",
+          "-less",
+          "un-"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/",
+          "/li/",
+          "/ləs/",
+          "/ʌn/"
+        ],
+        "words": [
+          "taller",
+          "tallest",
+          "quietly",
+          "endless",
+          "unpack"
+        ],
+        "tipJa": "まとめ: taller・tallest（er / est）、quietly（ly）、endless（less）、unpack（un）。"
+      },
+      "vocab": [
+        {
+          "en": "hike",
+          "ja": "ハイキング",
+          "emoji": "🥾",
+          "core": true
+        },
+        {
+          "en": "lake",
+          "ja": "みずうみ",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "path",
+          "ja": "こみち",
+          "emoji": "🛤️"
+        },
+        {
+          "en": "backpack",
+          "ja": "リュック",
+          "emoji": "🎒"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is our goodbye hike in Echo Valley. Let's walk and compare things one last time. Look at that mountain. This mountain is the tallest in the valley. Say it with me. This mountain is the tallest in the valley. Great! Now look at the lake. The lake is as blue as the sky. And which path do you like? I like the river path better than the forest path. Let's review. Tall, taller, the tallest. Beautiful, more beautiful, the most beautiful. Good, better, best. As blue as. Not as fast as. One of the best. ワールド18 の くらべる いいかたを ぜんぶ つかおう。 Now, phonics review. Taller. Tallest. Quietly. Endless. Unpack. Let's unpack our lunch and eat by the lake. Now, tell me about the hike. What was the most beautiful thing you saw?",
+      "conversation": {
+        "scene": "A goodbye hike in the valley",
+        "sceneJa": "谷の さよならハイキング",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look! This mountain is the tallest in the valley.",
+            "ja": "みて！この 山が 谷で いちばん たかいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And the lake is as blue as the sky.",
+            "ja": "それに みずうみが そらと おなじくらい あおい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Which path is better, the river path or the forest path?",
+            "ja": "川の みちと 森の みち、どっちが いい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like the river path better. It's more beautiful.",
+            "ja": "ぼくは 川の みちの ほうが すき。もっと きれいだから。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I think so, too. Let's unpack our lunch by the lake.",
+            "ja": "わたしも そう おもう。みずうみの そばで おべんとうを ひろげましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This is the best lunch ever!",
+            "ja": "いままでで いちばん おいしい おべんとう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Today is my favorite day in the valley.",
+            "ja": "きょうが 谷で いちばん すきな 日だな。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ハイキングで みた ものを taller / the tallest / more / better / as ～ as で くらべて はなそう",
+          "starterEn": "Hi! I'm Ms. Emma. What a beautiful hike! Look at the mountains and the lake. What is the most beautiful thing you can see?",
+          "targetExpressions": [
+            "the tallest",
+            "as ～ as",
+            "better than",
+            "more beautiful"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This mountain is the tallest in the valley.",
+          "as blue as / better than / the most beautiful",
+          "taller・tallest・quietly・endless・unpack"
+        ]
+      }
+    },
+    {
+      "lessonNo": 540,
+      "world": 18,
+      "title": "World 18 Grand Review",
+      "titleJa": "ワールド18 グランドレビュー",
+      "school": {
+        "grade": "中2",
+        "topic": "Echo Valley is the most wonderful place!：谷の ステージで くらべっこショー（ワールド18 の まとめ）",
+        "grammar": "ワールド18 の まとめ（比較級・最上級・as ～ as・I like ～ the best because ～.）",
+        "expressions": [
+          {
+            "en": "Echo Valley is the most wonderful place!",
+            "ja": "こだまの谷は いちばん すてきな ばしょ！",
+            "core": true
+          },
+          {
+            "en": "Our echo is bigger than ever!",
+            "ja": "わたしたちの こだまは これまでで いちばん おおきい！"
+          },
+          {
+            "en": "I like Echo Valley the best because the echo is our friend.",
+            "ja": "こだまが ともだちだから、こだまの谷が いちばん すき。"
+          }
+        ],
+        "testPoints": [
+          "ワールド18 の くらべる いいかたで 発表できる",
+          "I like ～ the best because ～. で りゆうを いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Stand taller! Shout louder!",
+          "ja": "もっと せを のばして！もっと おおきな こえで！",
+          "action": "せを のばして おおきな こえを だす",
+          "emoji": "📣"
+        },
+        {
+          "en": "Walk quietly to the stage.",
+          "ja": "しずかに ステージへ あるいて。",
+          "action": "あしおとを たてずに あるく",
+          "emoji": "🤫"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-er",
+          "-est",
+          "an-i-mal",
+          "-ly",
+          "-ful",
+          "un-"
+        ],
+        "sounds": [
+          "/ər/",
+          "/ɪst/",
+          "/li/",
+          "/fəl/",
+          "/ʌn/"
+        ],
+        "words": [
+          "wider",
+          "nicest",
+          "animal",
+          "slowly",
+          "wonderful",
+          "unlock"
+        ],
+        "tipJa": "ワールド18 の まとめ: wider（e で おわる er）・nicest（est）・AN-i-mal（つよい ところ）・slowly（ly）・wonderful（ful）・unlock（un）。"
+      },
+      "vocab": [
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "show",
+          "ja": "ショー",
+          "emoji": "🎪"
+        },
+        {
+          "en": "wonderful",
+          "ja": "すてきな",
+          "emoji": "🌟"
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the World 18 Comparison Show on the valley stage! The echo spirit is watching, too. Let's start with our big sentence. Echo Valley is the most wonderful place! Say it with me. Echo Valley is the most wonderful place! Fantastic! In this world, we learned so many ways to compare. Taller, the tallest. More beautiful, the most beautiful. Better, best. As big as a bus. Not as fast as a horse. Now, share your opinion with a reason. I like Echo Valley the best because the echo is our friend. ワールド18 の まとめだよ。くらべる ことばで 発表しよう。 Let's do a quick review. A blue whale is heavier than an elephant. The cheetah is the fastest land animal. Phonics review. Wider. Nicest. AN-i-mal. Slowly. Wonderful. Unlock. You did a wonderful job! Now, take a deep breath, stand taller and shout louder. Our echo is bigger than ever!",
+      "conversation": {
+        "scene": "The World 18 comparison show on the valley stage",
+        "sceneJa": "谷の ステージで、ワールド18 くらべっこショー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the World 18 Comparison Show! Who's first?",
+            "ja": "ワールド18 くらべっこショーへ ようこそ！だれから？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The cheetah is the fastest land animal. And a blue whale is heavier than an elephant!",
+            "ja": "チーターは りくで いちばん はやい どうぶつ。そして シロナガスクジラは ぞうより おもい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm not as fast as a horse, but I can draw beautifully!",
+            "ja": "わたしは うまほど はやくないけど、えを きれいに かけるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like Echo Valley the best because the echo is our friend.",
+            "ja": "こだまが ともだちだから、こだまの谷が いちばん すき。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Echo Valley is the most wonderful place!",
+            "ja": "こだまの谷は いちばん すてきな ばしょ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Listen! What's that sound? Clink, clank, clink...",
+            "ja": "きいて！あの おとは なに？ カチン、カタン、カチン…"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's coming from over the hill. Let's go and see!",
+            "ja": "おかの むこうから きこえる。みに いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド18 で ならった くらべる いいかたで、すきな ばしょや どうぶつを 発表しよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the comparison show! Tell me about your favorite place or animal. Why do you like it the best?",
+          "targetExpressions": [
+            "the most wonderful",
+            "I like ～ the best because ～.",
+            "～er than",
+            "as ～ as"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Echo Valley is the most wonderful place!",
+          "比較級・最上級・as ～ as・better / best を ぜんぶ つかえた",
+          "wider・nicest・AN-i-mal・slowly・wonderful・unlock"
+        ]
+      }
+    }
+  ]
+}

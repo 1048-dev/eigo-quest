@@ -246,3 +246,41 @@
 - `npx vitest run`: 47 ファイル・1,256 テスト すべて成功
 - `npx next build`: 成功。First Load JS は /map 195 kB（193 → +2）、/lesson/[lessonNo] 199 kB（196 → +3）、/gacha 184 kB（181 → +3）、/test/[assessmentId] 183 kB（181 → +2）、/parent 158 kB（増えたのは ワールド17 の 問題の コード・いみの 表と 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 25`: No.25（L481〜500・61 ページ）を 作れることを 確認
+
+## WORLD — ワールド18「こだまの谷」（L511〜540）（2026-11-25）
+
+### やったこと
+- `content/curriculum/worlds/world-18.json` を 新しく 作成（30 レッスン、ステージ2・A2、`school.grade` は「中2」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 540 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 123、会話の セリフ 204 行（1 回 6〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 1 回 平均 約 135 語の 英語（最少 124 語）＋短い 日本語の たすけ（1 文）。
+- ブロック構成: 511〜515 比較級・最上級（Echo Valley is bigger than the plains.・This tree is taller than that tree.・This is the longest river in the valley.・A blue whale is heavier than an elephant.・どうぶつの きろくカード The cheetah is the fastest land animal.）→ 516〜520 more / most・better / best（This flower is more beautiful.・Pandas are the most popular.・I like apples better than oranges.・Which do you like better, summer or winter?・グループ ランキング発表）→ 521〜525 as ～ as と -ly（This dinosaur was as big as a bus.・I'm not as fast as a horse.・Walk quietly. The birds are sleeping.・more colorful than this one・観察レポート It's one of the best hunters.）→ 526〜530 きもちと いけん（The echo sounds unhappy today.・Be careful! Don't be careless.・I think so, too. / I don't think so.・I like this one better because it's cuter.・いぬと ねこの ミニ話し合い That's a good point.）→ 531〜535 くらべて 説明（A frog can jump farther than you think!・Which is older, the bridge or the tower?・In picture A, the dog is bigger.・くらべる ぶんを 3〜4 文 かく・What is the tallest animal? の クイズショー）→ 536〜540 ふりかえり（Let's make the biggest echo ever!・You're the best friend in the valley.・谷の ガイドブック・さよならハイキング・くらべっこショー）。
+- 物語の 糸: ワールド17 の 望遠鏡で 見えた みどりの 谷に 着き、こだまで あそぶ（L511）。L526 で こだまの精が「いまは だれも 谷に こない。さびしい」と げんきを なくし、L536 の 作戦会議で みんなで やさしい ことばを さけんで「いままでで いちばん おおきな こだま」を つくる。L537 で おれい、L538 で「もっと ひとが くるように」ガイドブックを つくる。L540 の ショーの さいごに おかの むこうから「カチン、カタン」と 音が して、ワールド19 からくり工房へ。
+- フォニックスの 問題（`src/lib/curriculum/w18Phonics.ts`・`questions.ts` の `w18Question`。w17Question より 先に よぶ）:
+  - -er / -est "-er" "-est": 「くらべる かたちの ただしい つづりは？」（big → ？（もっと おおきい）→ bigger / biger / biggar、heavy → ？（いちばん おもい）→ heaviest / heavyest / heavest）。
+  - 音節と 強勢（rule "stress"、focus は ワールド12 と おなじ "el-e-phant" の かたち）: 「つよく よむ ところは どこ？」（elephant（ぞう）→ EL-e-phant / el-E-phant / el-e-PHANT）。
+  - -ly "-ly": 「ly を つけた ただしい つづりは？」（happy + ly → happily / happyly / happly、careful + ly → carefully / carefuly / carefulley）。
+  - -ful / -less "-ful" "-less": 「いみに あう ことばは？」（「ふちゅういな」→ careless / careful / careles）。
+  - un- "un-": 「はんたいの いみの ことばは？」（kind → ？（はんたいの いみ）→ unkind / inkind / diskind）。
+- フォーカスの ボタン: `phonicsButtons.ts` に はじめに つける つづり（"un-" →「un…」「はじめに つける」）を 追加。`vowelTeams.ts` の 読み上げで "-ly" "-ful" "-less" "un-" を その回の ことばで よむ（「ハイフン エル ワイ」と よまない）。
+- テスト: `tests/curriculum.test.ts` に ワールド18 の 決まりごと（範囲・ステージ・タイトル・フォニックスの 順と 種類・文法と 会話の 型・先生の台本の 英語の 割合・会話の 行数・L540 スピード TPR・ガイドブック／発表で なまえを いわなくて OK・ひとの からだを くらべない・ペットが いなくても OK）を 追加。`tests/phonics-w18.test.ts`（11 テスト）を 追加。
+
+### 決めたこと（理由）
+- **新しい phonics.rule**: "er-est" "stress" "ly" "ful-less" "un"（ふりかえりは "review"）。-er / -est は 1回ごとに つけかたを 1つ（511 そのまま・512 e で おわる・513 重ねる・514 y → i）、-ly も 521 そのまま・522 e で おわる（e を のこす）・523 y → i・524 ful ＋ ly に わけた。
+- **まちがいの 選択肢は こどもが ほんとうに しがちな もの**: -er / -est は「重ねない／重ねすぎ」「e を のこす」「y の まま」と 母音の まちがい（tallar・nicist）、-ly は「y の まま」「l が 1つ」、-ful / -less は「もう一方の おわり」と「full・les」、un- は にた はたらきの in- / dis-。fat → fatter は からだの ことなので 表には あるが レッスンでは つかわない。
+- **強勢は 3つ以上の まとまりの ことばだけ**（選択肢を 3つ 以上に するため）。日本語の カタカナと つよい ところが ちがう ことば（ba-NA-na・to-MA-to・po-TA-to・av-o-CA-do・chim-pan-ZEE）を 多めに えらんだ。まとまりの わけかたは focus に かくので、ワールド12 の「はくの かず」の 表示とも そろう。
+- **-ful / -less と un- は いみを 見せて えらばせる**（colorless・fearful の ように ほんとうに ある ことばが まちがいに なっても、いみで 1つに きまる）。
+- **新しい 話し手は 増やさない**: こだまの精の ことばは エマ先生と キコが「〜って いってる」と つたえる 形に した。
+- **文法の さきどり**: L514 の Which is heavier, A or B? は L532 の ききなれ。L536 の Why don't we ～? は ワールド17 L507 の くりかえし。L537 の Thank you for ～ing. は 決まり文句として 入れた。
+- **こころの くばり**: L534 の くらべる ぶんは「もの」を くらべる（台本に Compare things, not people. That's kind.、goalJa に「ともだちの からだは くらべない」）。L530 は「ペットが いなくても OK」、L538・L540 は「ほんとうの なまえは いわなくて OK」。L522 は「かめは はやくないけど あきらめない」で だれにも とくいな ことが あると 教える。どうぶつの じじつ（シロナガスクジラ・チーター・キリン・カンガルー・ペンギン）は ほんとうの ことだけ。
+- 自分で 1 回 見なおして なおした ところ: テストの 期待値の うちまちがい（carelles → careles）、L524 の 単語の 絵文字（🩶 は ふるい 端末で 出ないので 🌫️ に）、台本が 125 語に 足りない 回（L516・518・523・526・527・534〜536・539）に 練習の やりとりを 1〜2 文 足した。
+
+### 例（L527「Careful, Not Careless!」）
+- 表現（core）: Be careful! Don't be careless. ／ Hold the rope with both hands. ／ Don't run on the bridge. Walk slowly.
+- 会話（谷の つり橋）: Birimo「Wow, a rope bridge! Let's go!」 Ms. Emma「Be careful! Don't be careless. Hold the rope with both hands.」 Haru「Okay. ... Whoa, it's moving!」 Kiko「Don't run on the bridge, Haru. Walk slowly.」 Riko「Don't look down. Look at me. You can do it!」
+- フォニックス: careful / careless / useful / useless（問題は「ふちゅういな」で careless / careful / careles）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 48 ファイル・1,303 テスト すべて成功
+- `npx next build`: 成功。First Load JS は /map 198 kB（195 → +3）、/lesson/[lessonNo] 201 kB（199 → +2）、/gacha 186 kB（184 → +2）、/test/[assessmentId] 185 kB（183 → +2）、/parent 159 kB（158 → +1）（増えたのは ワールド18 の 問題の コード・表と 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 26` / `--pack 27`: No.26（L501〜520・61 ページ）・No.27（L521〜540・62 ページ）を 作れることを 確認

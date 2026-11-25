@@ -77,6 +77,15 @@ export function focusSay(focus: string, words: readonly string[] = []): string {
   if (w11) return w11;
   const w12 = w12Say(focus); // "bas-ket-ball" は ことば まるごと（ワールド12。L116〜144 の "sun-set" も おなじ）
   if (w12) return w12;
+  // ワールド18 の -ly・-ful・-less・un- は その回の ことばで よむ（「ハイフン エル ワイ」と よまない）
+  if (/^-(ly|ful|less)$/.test(focus)) {
+    const hit = words.find((w) => w.toLowerCase().endsWith(focus.slice(1)));
+    if (hit) return hit;
+  }
+  if (focus === "un-") {
+    const hit = words.find((w) => w.toLowerCase().startsWith("un"));
+    if (hit) return hit;
+  }
   const withF = words.filter((w) => w.toLowerCase().includes(focus));
   switch (focus) {
     case "ai": case "ay": return "ay";

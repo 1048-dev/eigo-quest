@@ -19,6 +19,8 @@ const isEnding = (f: string) => /^-[a-z]+$/.test(f);
 const isSyllables = (f: string) => /^[a-z]+(-[a-z]+)+$/.test(f);
 /** 短縮形の おわり（ワールド15: 'm 's 're n't） */
 const isContraction = (f: string) => /^(n't|'[a-z]+)$/.test(f);
+/** はじめに つける つづり（ワールド18: un-） */
+const isPrefix = (f: string) => /^[a-z]+-$/.test(f);
 
 export function focusLabel(focus: string): FocusLabel {
   const f = focus.trim();
@@ -26,6 +28,7 @@ export function focusLabel(focus: string): FocusLabel {
   if (isEnding(f)) return { main: `…${f.slice(1)}`, hintJa: "おわりの おと" };
   if (isSyllables(f)) return { main: f.split("-").join("・"), hintJa: "はくで よもう" };
   if (isContraction(f)) return { main: `…${f}`, hintJa: "みじかい かたち" };
+  if (isPrefix(f)) return { main: `${f.slice(0, -1)}…`, hintJa: "はじめに つける" };
   return { main: f, hintJa: "" };
 }
 
@@ -54,6 +57,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   if (isMagicE(f)) {
     const re = new RegExp(`${f[0]}[a-z]e`);
     hit = ws.find((w) => re.test(lower(w)));
+  } else if (isPrefix(f)) {
+    const head = f.slice(0, -1);
+    hit = ws.find((w) => lower(w).startsWith(head));
   } else if (isEnding(f)) {
     const end = f.slice(1);
     hit = ws.find((w) => lower(w).endsWith(end)) ?? ws.find((w) => lower(w).includes(end));
