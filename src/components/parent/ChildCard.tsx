@@ -1,11 +1,13 @@
 "use client";
-/** 「おうちの方」ページ: お子さま1人分のようすカード（進みぐあい・連続日数・習得率・最終学習日・回数制限・編集・削除） */
+/** 「おうちの方」ページ: お子さま1人分のようすカード（キャラクター・進みぐあい・連続日数・習得率・最終学習日・回数制限・編集・削除） */
 import { useState, type FormEvent } from "react";
+import { AvatarPicker } from "@/components/account/AvatarPicker";
 import { ChildAvatar } from "@/components/account/ChildAvatar";
 import { FormMessage, inputClass, TextField } from "@/components/account/Form";
 import { Gauge } from "@/components/game/StatusBoard";
 import { AUTH_LIMITS, ChildResponseSchema, ParentSettingsResponseSchema, AuthResultResponseSchema, type ChildOverview } from "@/lib/api/contracts";
-import { sendJson } from "@/lib/auth/client";
+import { avatarFor, sendJson } from "@/lib/auth/client";
+import type { AvatarCharacter } from "@/lib/domain/avatars";
 import type { ApiResult } from "@/lib/api/client";
 
 export type Guard = <T>(r: ApiResult<T>) => boolean;
@@ -35,6 +37,8 @@ export function ChildCard({ child, index, birthYear: initialBirthYear, guard, on
   const [mode, setMode] = useState<"view" | "edit" | "remove">("view");
   const [nickname, setNickname] = useState(child.nickname);
   const [grade, setGrade] = useState<number>(child.schoolGrade ?? 1);
+  const initialAvatar = avatarFor(child.id, index, child.avatarCharacter).id as AvatarCharacter;
+  const [avatar, setAvatar] = useState<AvatarCharacter>(initialAvatar);
   const [birthYear, setBirthYear] = useState<string>(initialBirthYear ? String(initialBirthYear) : "");
   const [limit, setLimit] = useState<string>(child.dailyLessonLimit ? String(child.dailyLessonLimit) : "");
   const [busy, setBusy] = useState(false);
@@ -61,7 +65,7 @@ export function ChildCard({ child, index, birthYear: initialBirthYear, guard, on
     const by = birthYear.trim();
     if (by && !/^(20\d{2})$/.test(by)) { setError("生まれ年は西暦4けたで入力してください（空欄でもかまいません）。"); return; }
     setBusy(true);
-    const body = { nickname: name, schoolGrade: grade, birthYear: by ? Number(by) : null };
+    const body = { nickname: name, schoolGrade: grade, birthYear: by ? Number(by) : null, avatarCharacter: avatar };
     const r = await sendJson("PATCH", `/api/children/${encodeURIComponent(child.id)}`, ChildResponseSchema, body);
     setBusy(false);
     if (!guard(r)) return;
@@ -82,7 +86,7 @@ export function ChildCard({ child, index, birthYear: initialBirthYear, guard, on
   return (
     <article className="card p-4" aria-labelledby={`child-${child.id}`}>
       <div className="flex items-center gap-3">
-        <ChildAvatar childId={child.id} index={index} size={52} />
+        <ChildAvatar childId={child.id} index={index} avatar={child.avatarCharacter} size={52} />
         <div className="min-w-0 flex-1">
           <h3 id={`child-${child.id}`} className="truncate text-lg font-black">{child.nickname} さん</h3>
           <p className="text-xs text-[var(--ink-2)]">{child.schoolGrade ? `小学${child.schoolGrade}年生` : "学年未設定"}・最終学習 {formatStudyDate(child.lastStudyDate)}</p>
@@ -140,10 +144,11 @@ export function ChildCard({ child, index, birthYear: initialBirthYear, guard, on
           <FormMessage error={error} />
           <TextField label="ニックネーム" value={nickname} maxLength={AUTH_LIMITS.nicknameMax} onChange={(e) => setNickname(e.target.value)} hint={`${AUTH_LIMITS.nicknameMax}文字まで。本名でなくてかまいません。`} />
           <GradeSelect value={grade} onChange={setGrade} id={`grade-${child.id}`} />
+          <AvatarPicker name={`avatar-${child.id}`} legend="キャラクター（お子さまの画面でも変えられます）" value={avatar} onChange={setAvatar} size={40} />
           <TextField label="生まれ年（西暦・任意）" inputMode="numeric" placeholder="例：2018" maxLength={4} value={birthYear} onChange={(e) => setBirthYear(e.target.value.normalize("NFKC").replace(/\D/g, ""))} />
           <div className="flex gap-2">
             <button type="submit" className="btn btn-coin flex-1 !py-2" disabled={busy}>保存</button>
-            <button type="button" className="btn btn-ghost flex-1 !py-2" onClick={() => { setMode("view"); setNickname(child.nickname); setGrade(child.schoolGrade ?? 1); setError(null); }}>やめる</button>
+            <button type="button" className="btn btn-ghost flex-1 !py-2" onClick={() => { setMode("view"); setNickname(child.nickname); setGrade(child.schoolGrade ?? 1); setAvatar(initialAvatar); setError(null); }}>やめる</button>
           </div>
         </form>
       )}

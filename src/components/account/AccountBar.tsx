@@ -2,14 +2,17 @@
 /**
  * 画面上部のアカウントバー（ゲームの画面だけに出す）。
  *  - ログイン中: いま あそんでいる子の 顔と名前・「かわる」（→ /who）・小さな「おうちの方」（→ 暗証番号 → /parent）
+ *    顔を タッチすると 小さなシートで キャラクターを えらびなおせる（暗証番号は いらない）
  *  - ログインしていない／DB 停止: 「おためしモード」と とうろく・ログインへの入口
  *  - ログイン中なのに 子どもが選ばれていなければ /who へ（だれの記録か わからないまま 遊ばせない）
  */
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
-import type { AuthMeResponse } from "@/lib/api/contracts";
-import { ACCOUNT_EVENT, fetchMe } from "@/lib/auth/client";
+import { ChildResponseSchema, type AuthMeResponse } from "@/lib/api/contracts";
+import { ACCOUNT_EVENT, avatarFor, fetchMe, notifyAccountChanged, sendJson } from "@/lib/auth/client";
+import type { AvatarCharacter } from "@/lib/domain/avatars";
+import { AvatarSheet } from "./AvatarPicker";
 import { ChildAvatar } from "./ChildAvatar";
 import { PinDialog } from "./PinPad";
 
@@ -23,6 +26,9 @@ export function AccountBar() {
   const hidden = isAccountPath(path);
   const [me, setMe] = useState<AuthMeResponse | null>(null);
   const [pinOpen, setPinOpen] = useState(false);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const [avatarBusy, setAvatarBusy] = useState(false);
+  const [avatarError, setAvatarError] = useState<string | null>(null);
 
   const load = useCallback(() => {
     void fetchMe().then((r) => setMe(r.ok && r.data.loggedIn ? r.data : { ...r.data, loggedIn: false }));
@@ -55,11 +61,29 @@ export function AccountBar() {
   }
 
   const openParent = () => (me.pinUnlocked ? router.push("/parent") : setPinOpen(true));
+  const index = me.children.indexOf(child);
+  const current = avatarFor(child.id, index, child.avatarCharacter).id as AvatarCharacter;
+
+  const pickAvatar = async (a: AvatarCharacter) => {
+    setAvatarBusy(true);
+    setAvatarError(null);
+    const r = await sendJson("PATCH", `/api/children/${encodeURIComponent(child.id)}/avatar`, ChildResponseSchema, { avatarCharacter: a });
+    setAvatarBusy(false);
+    if (r.ok && r.data.ok) {
+      setMe({ ...me, children: me.children.map((c) => (c.id === child.id ? { ...c, avatarCharacter: a } : c)) });
+      setSheetOpen(false);
+      notifyAccountChanged();
+      return;
+    }
+    setAvatarError(r.error ?? "いまは かえられないみたい。あとで ためしてね。");
+  };
 
   return (
     <>
       <div className="mb-3 flex items-center gap-2 rounded-2xl border border-[var(--gold)]/60 bg-black/45 py-1 pl-1 pr-2 backdrop-blur" aria-label="いま あそんでいる人">
-        <ChildAvatar childId={child.id} index={me.children.indexOf(child)} size={30} />
+        <button type="button" onClick={() => { setAvatarError(null); setSheetOpen(true); }} className="rounded-full transition hover:brightness-110 focus-visible:outline-3 focus-visible:outline-[var(--volt)]" aria-label="キャラクターを かえる">
+          <ChildAvatar childId={child.id} index={index} avatar={child.avatarCharacter} size={30} />
+        </button>
         <p className="min-w-0 flex-1 truncate text-sm font-black">
           {child.nickname}<span className="ml-0.5 text-xs font-bold text-[var(--on-dark-2)]">さん</span>
         </p>
@@ -68,6 +92,7 @@ export function AccountBar() {
           おうちの方
         </button>
       </div>
+      <AvatarSheet open={sheetOpen} current={current} nickname={child.nickname} busy={avatarBusy} error={avatarError} onPick={(a) => void pickAvatar(a)} onClose={() => setSheetOpen(false)} />
       <PinDialog open={pinOpen} onClose={() => setPinOpen(false)} onUnlocked={() => { setPinOpen(false); router.push("/parent"); }} onNotLoggedIn={() => { setPinOpen(false); load(); }} />
     </>
   );

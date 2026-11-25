@@ -11,12 +11,13 @@ const UNIQUE: Record<string, string[]> = {
   parent: ["email"],
   session: ["tokenHash"],
   user: ["friendCode"],
+  coinLedger: ["idempotencyKey"],
 };
 
 const DEFAULTS: Record<string, () => Row> = {
   parent: () => ({ settings: {}, subscriptionStatus: "TRIALING", planId: null, currentPeriodEnd: null }),
   session: () => ({ selectedChildId: null, pinVerifiedAt: null }),
-  user: () => ({ parentId: null, birthYear: null, schoolGrade: null, avatar: {}, coins: 0, totalCoinsEarned: 0, streakDays: 0, longestStreak: 0, lastStudyDate: null }),
+  user: () => ({ parentId: null, birthYear: null, schoolGrade: null, avatar: {}, avatarCharacter: "haru", coins: 0, totalCoinsEarned: 0, streakDays: 0, longestStreak: 0, lastStudyDate: null }),
   lessonProgress: () => ({ status: "IN_PROGRESS", completedAt: null, completedOn: null, quizScore: null }),
 };
 

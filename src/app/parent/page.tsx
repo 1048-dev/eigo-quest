@@ -18,7 +18,7 @@ import {
   AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, ParentOverviewResponseSchema,
   type AuthMeResponse, type ChildOverview,
 } from "@/lib/api/contracts";
-import { codeOf, fetchMe, isAccountOffline, notifyAccountChanged, sendJson } from "@/lib/auth/client";
+import { avatarFor, codeOf, fetchMe, isAccountOffline, notifyAccountChanged, sendJson } from "@/lib/auth/client";
 
 type Phase = "loading" | "locked" | "ready" | "offline" | "deleted";
 
@@ -141,7 +141,7 @@ function ParentPage() {
         </div>
         {children.length === 0 && !showAdd && <p className="card p-4 text-sm">まだお子さまが登録されていません。「お子さまを追加」から登録してください。</p>}
         {children.map((c, i) => (
-          <ChildCard key={`${c.id}-${c.nickname}-${c.schoolGrade}-${c.dailyLessonLimit}`} child={c} index={i} birthYear={birthYears.get(c.id) ?? null} guard={guard} onChanged={refresh} onShowRadar={(id) => void showRadar(id)} />
+          <ChildCard key={`${c.id}-${c.nickname}-${c.schoolGrade}-${c.dailyLessonLimit}-${c.avatarCharacter}`} child={c} index={i} birthYear={birthYears.get(c.id) ?? null} guard={guard} onChanged={refresh} onShowRadar={(id) => void showRadar(id)} />
         ))}
       </section>
 
@@ -150,7 +150,7 @@ function ParentPage() {
         {!canAdd ? (
           <p className="mt-2 text-sm text-[var(--ink-2)]">登録できるお子さまは{AUTH_LIMITS.maxChildren}人までです。</p>
         ) : showAdd ? (
-          <div className="mt-3"><AddChildForm guard={guard} onAdded={(msg) => { setShowAdd(false); refresh(msg); }} onCancel={children.length > 0 ? () => setShowAdd(false) : undefined} /></div>
+          <div className="mt-3"><AddChildForm guard={guard} siblings={children.map((c, i) => avatarFor(c.id, i, c.avatarCharacter).id)} onAdded={(msg) => { setShowAdd(false); refresh(msg); }} onCancel={children.length > 0 ? () => setShowAdd(false) : undefined} /></div>
         ) : (
           <button type="button" className="btn btn-coin mt-3 w-full" onClick={() => setShowAdd(true)}>＋ お子さまを追加</button>
         )}

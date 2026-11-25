@@ -2,12 +2,13 @@
  * 画面（ブラウザ）側の保護者アカウント用ヘルパー。
  *  - API はすべて src/lib/api/client.ts の安全な fetch を通す（例外を投げない）
  *  - ログイン状態が変わったら ACCOUNT_EVENT を投げ、ヘッダー（AccountBar）が読みなおす
- *  - 子どものアバターは DB に持たず、子どもの id からキャラクターを決める（データを増やさない）
+ *  - 子どものアバター: 子どもが えらんだ顔（DB の avatarCharacter）。古いデータで無ければ 登録順で決める
  */
 import type { z } from "zod";
 import { apiRequest, type ApiResult } from "@/lib/api/client";
 import { AuthMeResponseSchema, type AuthMeResponse } from "@/lib/api/contracts";
 import type { CharacterId } from "@/lib/game/characters";
+import { isAvatarCharacter } from "@/lib/domain/avatars";
 
 export const ACCOUNT_EVENT = "eq:account-changed";
 
@@ -42,7 +43,7 @@ export function isAccountOffline(r: { status: number; data: unknown }): boolean 
   return r.status === 503 || r.status === 0 || (r.data as { offline?: unknown } | null)?.offline === true;
 }
 
-const AVATARS: { id: CharacterId; ring: string; bg: string }[] = [
+export const AVATARS: { id: CharacterId; ring: string; bg: string }[] = [
   { id: "haru", ring: "#4cc9f0", bg: "linear-gradient(160deg,#1f5a8a,#0b2236)" },
   { id: "riko", ring: "#ff6fa5", bg: "linear-gradient(160deg,#8a2a5a,#2a0b1e)" },
   { id: "kiko", ring: "#ffd83a", bg: "linear-gradient(160deg,#8a6a10,#2a1f04)" },
@@ -51,10 +52,12 @@ const AVATARS: { id: CharacterId; ring: string; bg: string }[] = [
 
 /**
  * 子どものキャラクター。
- * index（きょうだいの登録順。API はいつも登録順で返す）があれば それで決める → きょうだいで顔がかぶらない（4人目まで）。
- * 無ければ id から決める（同じ子はいつも同じ顔）。
+ * avatar（子どもが えらんだ顔）があれば それ。
+ * 無ければ index（きょうだいの登録順。API はいつも登録順で返す）で決める → きょうだいで顔がかぶらない（4人目まで）。
+ * それも無ければ id から決める（同じ子はいつも同じ顔）。
  */
-export function avatarFor(childId: string, index?: number) {
+export function avatarFor(childId: string, index?: number, avatar?: string | null) {
+  if (isAvatarCharacter(avatar)) return AVATARS.find((a) => a.id === avatar)!;
   if (index !== undefined && index >= 0) return AVATARS[index % AVATARS.length];
   let h = 0;
   for (let i = 0; i < childId.length; i++) h = (h * 31 + childId.charCodeAt(i)) >>> 0;

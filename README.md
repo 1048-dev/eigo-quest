@@ -131,6 +131,7 @@ eigo-quest/
 ├── scripts/e2e-smoke.ts      30日分の通しプレイを早送りで実行（DB が必要）
 ├── scripts/smoke.ts          Playwright の全画面スモークテスト（DB なしでも可）。smoke-offline.ts は DB 停止での起動〜スモークを1コマンドで
 ├── scripts/auth-db-check.ts / auth-ui-screens.ts   本物の DB での保護者アカウントの通し確認 / 画面の確認
+├── scripts/carry-db-check.ts 本物の DB での「おためしの きろくの ひきつぎ」とアバターの通し確認
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
 ├── docs/night/ docs/night2/ docs/run3/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
@@ -185,9 +186,11 @@ eigo-quest/
 - **おうちの方ページ `/parent`**: 入るたびに暗証番号（入れてから10分有効）。お子さまごとのようす（進みぐあい・連続日数・総合習得率・今日の回数・最終学習日・伸ばしたい力）、1日のレッスン回数の上限（既定は制限なし、1〜10回）、お子さまの編集・削除、暗証番号・パスワードの変更、ログアウト、退会（保護者とすべての子どもの学習データを1つのトランザクションで完全に削除）。
 - **currentUserId()**: ログイン中で選ばれた子どもが本当にその保護者の子のときだけその子。未ログイン・未選択・DB 停止のときはデモユーザー（おためしモード）。
 - **安全**: パスワードは Node の `crypto.scrypt`（ネイティブモジュールなし）。セッションは32バイト乱数のトークンを httpOnly・SameSite=Lax（本番は Secure）の cookie `eq_session` に入れ、DB には SHA-256 だけを期限つき（30日）で保存。ログインのたびにトークンを作り直し、1日ごとに入れ替え。状態を変える API は Origin を確認。ログイン・登録・暗証番号はメモリ内のレート制限（サーバー1台が前提）。入力はすべて zod、ログイン失敗は共通の文言、パスワード・トークン・暗証番号はログに出しません。
+- **アバター（キャラクター）**: お子さまごとにハル・リコ・キコ・ビリモから1人を選びます（`User.avatarCharacter`、`src/lib/domain/avatars.ts`）。追加・編集のとき（おうちの方）に選べ、選ばなければ きょうだいがまだ使っていない顔になります。お子さま自身もヘッダーの顔をタッチして小さなシートから変えられます（暗証番号なし）。「だれが あそぶ？」・ヘッダー・おうちの方ページで同じ顔を表示します。
+- **おためしの きろくの ひきつぎ**: この端末でおためしモード（未ログイン＝デモユーザー、または DB 停止）で遊んだ分は、ブラウザの localStorage に「おためしの きろく」として残します（`src/lib/offline/trialLog.ts`。クリアしたレッスン・合格したテスト・もらったコイン・遊んだ日・答えた項目）。保護者が登録・ログインして「だれが あそぶ？」で子どもを選ぶと、端末ごとに1回だけ「おためしで あそんだ きろくを ひきつぐ？」と聞きます。「はい」で `POST /api/children/:id/carry-over` がその子に たし合わせ（レッスン・テスト合格は まだ無い分だけ、コインは合計（おためしで ありえる上限まで）、連続日数は大きい方、記憶はまだ無い項目だけ）、端末の おためしの きろくを消します。「いいえ」でも もう聞きません。デモユーザーの DB の記録は読みも消しもしない（ほかの おためしの人と共有のため＝コピー）。同じ端末の きろくは CoinLedger の `trial-carry:<端末ID>` で1回だけ（2回目は `alreadyCarried: true`）。計算は `src/lib/domain/trialMerge.ts`。
 - **1日の回数制限**: 上限に届くと、新しいレッスンは「きょうの レッスンは ここまで！ また あした あそぼうね。」（403 + `code: "DAILY_LIMIT"`）。完了ずみのレッスンのおさらいはできます。
 - **DB 停止時**: アカウント API は 503 + `offline: true` + ていねいな案内（`GET /api/auth/me` だけは 200 + `loggedIn:false`）。画面はおためしモードへ進めます。
-- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`DELETE /api/parent/account`。
+- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`DELETE /api/parent/account`。
 - 環境変数: `ALLOWED_ORIGINS`（同じホスト以外から受け付けるオリジン。通常は空）、`SEED_DEMO_PARENT`（1 でデモ保護者を seed）。
 
 ## DBが止まっていても動く「おためしモード」

@@ -2,14 +2,17 @@
 /**
  * だれが あそぶ？ — 子どもが自分のカードを えらぶ画面（暗証番号は いらない）。
  * こどもの ついか・おうちの方のページは 暗証番号を通る。
+ * この端末に おためしの きろくが あれば、えらんだあと1回だけ「ひきつぐ？」と きく（TrialCarryDialog）。
  */
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { ChildAvatar } from "@/components/account/ChildAvatar";
+import { TrialCarryDialog } from "@/components/account/TrialCarryDialog";
 import { PinDialog } from "@/components/account/PinPad";
 import { StandingFigure } from "@/components/characters/StandingArt";
-import { AUTH_LIMITS, ChildResponseSchema, type AuthMeResponse } from "@/lib/api/contracts";
+import { AUTH_LIMITS, ChildResponseSchema, type AuthMeResponse, type Child } from "@/lib/api/contracts";
+import { shouldOfferCarryOver } from "@/lib/offline/trialLog";
 import { avatarFor, fetchMe, gradeLabel, notifyAccountChanged, rememberTrial, sendJson } from "@/lib/auth/client";
 
 export default function WhoPage() {
@@ -19,6 +22,7 @@ export default function WhoPage() {
   const [busyId, setBusyId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pinFor, setPinFor] = useState<null | "add" | "parent">(null);
+  const [carryFor, setCarryFor] = useState<{ child: Child; index: number } | null>(null);
 
   const load = useCallback(() => {
     void fetchMe().then((r) => {
@@ -34,6 +38,9 @@ export default function WhoPage() {
     const r = await sendJson("POST", `/api/children/${encodeURIComponent(id)}/select`, ChildResponseSchema);
     if (r.ok && r.data.ok) {
       notifyAccountChanged();
+      const index = me?.children.findIndex((c) => c.id === id) ?? -1;
+      // この端末で おためしで あそんでいたら、さきに「ひきつぐ？」を きく（端末ごとに1回）
+      if (index >= 0 && me && shouldOfferCarryOver()) { setCarryFor({ child: me.children[index], index }); return; }
       router.push("/map");
       return;
     }
@@ -91,7 +98,7 @@ export default function WhoPage() {
       ) : (
         <ul className="grid grid-cols-2 gap-3" aria-label="あそぶ人">
           {me.children.map((c, i) => {
-            const a = avatarFor(c.id, i);
+            const a = avatarFor(c.id, i, c.avatarCharacter);
             const selected = c.id === me.selectedChildId;
             return (
               <li key={c.id}>
@@ -99,7 +106,7 @@ export default function WhoPage() {
                   aria-label={`${c.nickname}さん ${gradeLabel(c.schoolGrade)}${selected ? "（いま えらばれているよ）" : ""}`}
                   className={`card relative flex w-full flex-col items-center gap-2 px-2 pb-3 pt-4 transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline-3 focus-visible:outline-[var(--volt)] ${selected ? "shadow-[0_0_0_3px_var(--volt),0_0_24px_rgba(255,216,58,.5)]" : ""} ${busyId === c.id ? "animate-pulse" : ""}`}>
                   {selected && <span className="absolute right-2 top-2 rounded-full bg-[var(--volt)] px-2 text-[10px] font-black text-[#2a1a03]">いま</span>}
-                  <span className="bob" style={{ animationDelay: `${(c.id.charCodeAt(0) % 5) * 0.2}s` }}><ChildAvatar childId={c.id} index={i} size={76} /></span>
+                  <span className="bob" style={{ animationDelay: `${(c.id.charCodeAt(0) % 5) * 0.2}s` }}><ChildAvatar childId={c.id} index={i} avatar={c.avatarCharacter} size={76} /></span>
                   <span className="w-full truncate text-center text-lg font-black" style={{ textShadow: `0 0 12px ${a.ring}` }}>{c.nickname}</span>
                   {c.schoolGrade && <span className="rounded-full border border-[var(--gold)]/60 bg-black/30 px-2 text-xs font-bold text-[var(--on-dark-2)]">{gradeLabel(c.schoolGrade)}</span>}
                 </button>
@@ -122,6 +129,10 @@ export default function WhoPage() {
           おうちの方
         </button>
       </div>
+
+      {carryFor && (
+        <TrialCarryDialog child={carryFor.child} index={carryFor.index} onDone={() => { setCarryFor(null); router.push("/map"); }} />
+      )}
 
       <PinDialog open={pinFor !== null} onClose={() => setPinFor(null)}
         onUnlocked={() => { const t = pinFor; setPinFor(null); router.push(t === "add" ? "/parent?add=1" : "/parent"); }}

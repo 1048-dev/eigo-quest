@@ -13,6 +13,7 @@ import { StandingFigure } from "@/components/characters/StandingArt";
 import { apiPost, isUnreachable } from "@/lib/api/client";
 import { offlineTestStart, offlineTestSubmit } from "@/lib/offline/tests";
 import { recordLocalTestPass } from "@/lib/offline/localProgress";
+import { recordTrialTest } from "@/lib/offline/trialLog";
 import { TOTAL_LESSONS } from "@/lib/curriculum";
 import type { ArenaMode } from "@/lib/domain/arena";
 import { OfflineNote } from "@/components/common/OfflineNote";
@@ -63,6 +64,8 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
           // おためしモードで 合格 → この ブラウザの マップに だけ 反映（アリーナ・お宝は マップに 出ないので のぞく）
           if (r.ok && r.data.passed && !/^(arena|treasure)-/.test(assessmentId)) recordLocalTestPass(assessmentId);
         }
+        // おためしの きろく（オフライン・デモユーザー）: あとで 子どもに ひきつげる
+        if (r.ok && r.data.ok && (r.data.offline || r.data.trial)) recordTrialTest(assessmentId, { passed: r.data.passed, coins: r.data.reward.total });
         if (r.ok && r.data.ok) setResult(r.data);
         else setError(r.data.reasonJa || r.error || "もう一回ためしてね。");
       })

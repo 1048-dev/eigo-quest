@@ -10,6 +10,7 @@ import { TOTAL_LESSONS } from "@/lib/curriculum";
 import { localDate } from "@/lib/domain/dates";
 import { SKILL_LABELS_JA } from "@/lib/domain/mastery";
 import { SKILLS } from "@/lib/domain/types";
+import { defaultAvatarForNewChild, isAvatarCharacter, type AvatarCharacter } from "@/lib/domain/avatars";
 import { AUTH_LIMITS, type Child, type ChildOverview, type ParentSettings } from "@/lib/api/contracts";
 import { dummyHash, hashSecret, verifySecret } from "@/lib/auth/password";
 import { computeUserMastery } from "@/lib/services/progressService";
@@ -17,7 +18,13 @@ import { dailyLimitFor, parseParentSettings, withDailyLimit } from "@/lib/servic
 
 type Tx = Prisma.TransactionClient;
 
-const CHILD_SELECT = { id: true, nickname: true, schoolGrade: true, birthYear: true } as const;
+const CHILD_SELECT = { id: true, nickname: true, schoolGrade: true, birthYear: true, avatarCharacter: true } as const;
+
+type ChildRow = { id: string; nickname: string; schoolGrade: number | null; birthYear: number | null; avatarCharacter: string | null };
+/** DB の行 → 契約の形（知らない顔の名前は null = 画面が登録順の顔を出す） */
+function toChild(r: ChildRow): Child {
+  return { id: r.id, nickname: r.nickname, schoolGrade: r.schoolGrade, birthYear: r.birthYear, avatarCharacter: isAvatarCharacter(r.avatarCharacter) ? r.avatarCharacter : null };
+}
 
 function isUniqueViolation(e: unknown): boolean {
   return (e as { code?: string } | null)?.code === "P2002";
@@ -48,11 +55,13 @@ export async function authenticateParent(email: string, password: string): Promi
 // 子ども
 // ---------------------------------------------------------------------------
 export async function listChildren(parentId: string): Promise<Child[]> {
-  return prisma.user.findMany({ where: { parentId }, select: CHILD_SELECT, orderBy: { createdAt: "asc" } });
+  const rows = await prisma.user.findMany({ where: { parentId }, select: CHILD_SELECT, orderBy: { createdAt: "asc" } });
+  return rows.map(toChild);
 }
 
 export async function getOwnedChild(parentId: string, childId: string): Promise<Child | null> {
-  return prisma.user.findFirst({ where: { id: childId, parentId }, select: CHILD_SELECT });
+  const r = await prisma.user.findFirst({ where: { id: childId, parentId }, select: CHILD_SELECT });
+  return r ? toChild(r) : null;
 }
 
 const FRIEND_CODE_CHARS = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // まぎらわしい 0/O・1/I は使わない
@@ -61,16 +70,17 @@ export function newFriendCode(): string {
   return `${pick(4)}-${pick(4)}`;
 }
 
-export async function createChild(parentId: string, input: { nickname: string; schoolGrade: number; birthYear?: number | null }): Promise<{ ok: true; child: Child } | { ok: false; reason: "TOO_MANY" }> {
-  const count = await prisma.user.count({ where: { parentId } });
-  if (count >= AUTH_LIMITS.maxChildren) return { ok: false, reason: "TOO_MANY" };
+export async function createChild(parentId: string, input: { nickname: string; schoolGrade: number; birthYear?: number | null; avatarCharacter?: AvatarCharacter }): Promise<{ ok: true; child: Child } | { ok: false; reason: "TOO_MANY" }> {
+  const siblings = await prisma.user.findMany({ where: { parentId }, select: { avatarCharacter: true }, orderBy: { createdAt: "asc" } });
+  if (siblings.length >= AUTH_LIMITS.maxChildren) return { ok: false, reason: "TOO_MANY" };
+  const avatarCharacter = input.avatarCharacter ?? defaultAvatarForNewChild(siblings.map((x) => x.avatarCharacter));
   for (let attempt = 0; ; attempt++) {
     try {
       const child = await prisma.user.create({
-        data: { parentId, nickname: input.nickname, schoolGrade: input.schoolGrade, birthYear: input.birthYear ?? null, friendCode: newFriendCode() },
+        data: { parentId, nickname: input.nickname, schoolGrade: input.schoolGrade, birthYear: input.birthYear ?? null, avatarCharacter, friendCode: newFriendCode() },
         select: CHILD_SELECT,
       });
-      return { ok: true, child };
+      return { ok: true, child: toChild(child) };
     } catch (e) {
       // フレンドコードが偶然かぶったら作りなおす
       if (isUniqueViolation(e) && attempt < 4) continue;
@@ -79,14 +89,20 @@ export async function createChild(parentId: string, input: { nickname: string; s
   }
 }
 
-export async function updateChild(parentId: string, childId: string, input: { nickname?: string; schoolGrade?: number; birthYear?: number | null }): Promise<Child | null> {
+export async function updateChild(parentId: string, childId: string, input: { nickname?: string; schoolGrade?: number; birthYear?: number | null; avatarCharacter?: AvatarCharacter }): Promise<Child | null> {
   const owned = await getOwnedChild(parentId, childId);
   if (!owned) return null;
   const data: Prisma.UserUpdateInput = {};
   if (input.nickname !== undefined) data.nickname = input.nickname;
   if (input.schoolGrade !== undefined) data.schoolGrade = input.schoolGrade;
   if (input.birthYear !== undefined) data.birthYear = input.birthYear;
-  return prisma.user.update({ where: { id: owned.id }, data, select: CHILD_SELECT });
+  if (input.avatarCharacter !== undefined) data.avatarCharacter = input.avatarCharacter;
+  return toChild(await prisma.user.update({ where: { id: owned.id }, data, select: CHILD_SELECT }));
+}
+
+/** 子どもが じぶんで 顔を かえる（自分の家の子どもだけ） */
+export async function setChildAvatar(parentId: string, childId: string, avatarCharacter: AvatarCharacter): Promise<Child | null> {
+  return updateChild(parentId, childId, { avatarCharacter });
 }
 
 /** 子どもの学習データをすべて消す（ハード削除） */
@@ -136,7 +152,7 @@ export async function getParentOverview(parentId: string, now = new Date()): Pro
     prisma.user.findMany({
       where: { parentId },
       orderBy: { createdAt: "asc" },
-      select: { id: true, nickname: true, schoolGrade: true, coins: true, streakDays: true, longestStreak: true, lastStudyDate: true },
+      select: { id: true, nickname: true, schoolGrade: true, avatarCharacter: true, coins: true, streakDays: true, longestStreak: true, lastStudyDate: true },
     }),
     prisma.parent.findUnique({ where: { id: parentId }, select: { settings: true } }),
   ]);
@@ -154,6 +170,7 @@ export async function getParentOverview(parentId: string, now = new Date()): Pro
       id: c.id,
       nickname: c.nickname,
       schoolGrade: c.schoolGrade,
+      avatarCharacter: isAvatarCharacter(c.avatarCharacter) ? c.avatarCharacter : null,
       lessonsDone,
       totalLessons: TOTAL_LESSONS,
       lessonsToday,

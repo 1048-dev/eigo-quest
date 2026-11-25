@@ -8,6 +8,7 @@
  *   → 画面側で `undefined.map` のような TypeError が起きない。
  */
 import { z } from "zod";
+import { AVATAR_CHARACTERS } from "@/lib/domain/avatars";
 
 // ---------------------------------------------------------------------------
 // 部品
@@ -239,6 +240,8 @@ export const LessonCompleteResponseSchema = z.object({
   nextTest: z.string().optional().catch(undefined),
   /** ok:false の理由（"DAILY_LIMIT" = おうちの方が決めた1日の回数に届いた） */
   code: z.string().optional().catch(undefined),
+  /** おためしモード（デモユーザー）の きろくとして保存された → 画面は この端末の「おためしの きろく」にも のこす */
+  trial: z.boolean().optional().catch(undefined),
 });
 export type LessonCompleteResponse = z.output<typeof LessonCompleteResponseSchema>;
 
@@ -267,6 +270,8 @@ export const TestSubmitResponseSchema = z.object({
   })),
   reward: RewardSchema,
   unlocksLesson: z.number().nullable().catch(null),
+  /** おためしモード（デモユーザー）の きろくとして保存された */
+  trial: z.boolean().optional().catch(undefined),
 });
 export type TestSubmitResponse = z.output<typeof TestSubmitResponseSchema>;
 
@@ -366,6 +371,7 @@ const NicknameInput = z.string().trim().min(1).max(AUTH_LIMITS.nicknameMax)
   .refine((s) => !/[\u0000-\u001f\u007f<>]/.test(s), { message: "invalid characters" });
 const SchoolGradeInput = z.number().int().min(1).max(6);
 const BirthYearInput = z.number().int().min(2000).max(2100).nullable();
+const AvatarInput = z.enum(AVATAR_CHARACTERS);
 
 export const RegisterRequestSchema = z.object({ email: EmailInput, password: PasswordInput, pin: PinInput });
 export type RegisterRequest = z.input<typeof RegisterRequestSchema>;
@@ -378,6 +384,8 @@ export const ChildCreateRequestSchema = z.object({
   nickname: NicknameInput,
   schoolGrade: SchoolGradeInput,
   birthYear: BirthYearInput.optional(),
+  /** えらばなければ、きょうだいが まだ使っていない顔 */
+  avatarCharacter: AvatarInput.optional(),
 });
 export type ChildCreateRequest = z.input<typeof ChildCreateRequestSchema>;
 
@@ -385,10 +393,31 @@ export const ChildUpdateRequestSchema = z.object({
   nickname: NicknameInput.optional(),
   schoolGrade: SchoolGradeInput.optional(),
   birthYear: BirthYearInput.optional(),
-}).refine((v) => v.nickname !== undefined || v.schoolGrade !== undefined || v.birthYear !== undefined, { message: "nothing to update" });
+  avatarCharacter: AvatarInput.optional(),
+}).refine((v) => v.nickname !== undefined || v.schoolGrade !== undefined || v.birthYear !== undefined || v.avatarCharacter !== undefined, { message: "nothing to update" });
 export type ChildUpdateRequest = z.input<typeof ChildUpdateRequestSchema>;
 
 export const ChildIdSchema = ChildIdInput;
+
+/** PATCH /api/children/:id/avatar — 子どもが じぶんで 顔を かえる（暗証番号は いらない） */
+export const ChildAvatarRequestSchema = z.object({ avatarCharacter: AvatarInput });
+
+const TrialDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
+export const TRIAL_LIMITS = { lessons: 400, tests: 400, studyDates: 800, items: 8000, coins: 1_000_000 } as const;
+/**
+ * POST /api/children/:id/carry-over — この端末の おためしの きろくを その子に ひきつぐ（端末の おためしIDごとに1回）。
+ * 形が おかしい・多すぎるものは 400。中身の正しさ（無いレッスン・コインの上限）はサーバーの planTrialMerge が しらべる。
+ */
+export const TrialCarryRequestSchema = z.object({
+  trialId: z.string().regex(/^[A-Za-z0-9_-]{8,64}$/),
+  lessons: z.record(z.string().regex(/^\d{1,4}$/), TrialDate).refine((o) => Object.keys(o).length <= TRIAL_LIMITS.lessons).default({}),
+  tests: z.record(z.string().regex(/^[a-z0-9-]{1,40}$/), TrialDate).refine((o) => Object.keys(o).length <= TRIAL_LIMITS.tests).default({}),
+  coins: z.number().int().min(0).max(TRIAL_LIMITS.coins).default(0),
+  studyDates: z.array(TrialDate).max(TRIAL_LIMITS.studyDates).default([]),
+  items: z.record(z.string().min(1).max(80), z.object({ t: z.number().finite(), ok: z.boolean() }))
+    .refine((o) => Object.keys(o).length <= TRIAL_LIMITS.items).default({}),
+});
+export type TrialCarryRequest = z.input<typeof TrialCarryRequestSchema>;
 
 export const VerifyPinRequestSchema = z.object({ pin: PinInput });
 
@@ -419,6 +448,8 @@ export const ChildSchema = z.object({
   nickname: str("なまえ"),
   schoolGrade: z.number().int().nullable().catch(null),
   birthYear: z.number().int().nullable().catch(null),
+  /** えらんだ顔。古いデータ・壊れた値は null（画面は登録順の顔を出す） */
+  avatarCharacter: z.enum(AVATAR_CHARACTERS).nullable().catch(null),
 });
 export type Child = z.output<typeof ChildSchema>;
 
@@ -447,6 +478,15 @@ export type ChildrenResponse = z.output<typeof ChildrenResponseSchema>;
 export const ChildResponseSchema = z.object({ ...AUTH_META, child: nullable(ChildSchema) });
 export type ChildResponse = z.output<typeof ChildResponseSchema>;
 
+/** ひきつぎの結果（なにを いくつ ひきついだか）。alreadyCarried = この端末の きろくは もう ひきついである */
+export const TrialCarryResponseSchema = z.object({
+  ...AUTH_META,
+  alreadyCarried: bool(false),
+  carried: z.object({ lessons: num(0), tests: num(0), coins: num(0), memories: num(0), streakDays: num(0) })
+    .catch({ lessons: 0, tests: 0, coins: 0, memories: 0, streakDays: 0 }),
+});
+export type TrialCarryResponse = z.output<typeof TrialCarryResponseSchema>;
+
 export const VerifyPinResponseSchema = z.object({ ...AUTH_META, unlockedUntil: z.string().nullable().catch(null) });
 export type VerifyPinResponse = z.output<typeof VerifyPinResponseSchema>;
 
@@ -454,6 +494,7 @@ export const ChildOverviewSchema = z.object({
   id: z.string(),
   nickname: str("なまえ"),
   schoolGrade: z.number().int().nullable().catch(null),
+  avatarCharacter: z.enum(AVATAR_CHARACTERS).nullable().catch(null),
   lessonsDone: num(0),
   totalLessons: num(0),
   lessonsToday: num(0),

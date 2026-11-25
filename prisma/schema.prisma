@@ -66,6 +66,7 @@ model User {
   schoolGrade      Int?      /// 0=未就学, 1〜6=小学校学年
   friendCode       String    @unique
   avatar           Json      @default("{}") /// 装備中のアバターパーツ { hat: "...", outfit: "..." }
+  avatarCharacter  String    @default("haru") /// 子どもが えらんだ キャラクター "haru" | "riko" | "kiko" | "birimo"（src/lib/domain/avatars.ts）
   coins            Int       @default(0)    /// CoinLedger 合計のキャッシュ
   totalCoinsEarned Int       @default(0)    /// ランキング用（消費しても減らない）
   streakDays       Int       @default(0)
@@ -303,6 +304,7 @@ enum CoinReason {
   STREAK_BONUS
   RECAP_WATCHED           /// きょうのまとめ動画（1日1回）
   CONVERSATION_FINISHED   /// AIキャラとの かいわを さいごまで（レッスンごとに1回）
+  TRIAL_CARRY_OVER        /// おためしモードの きろくを ひきついだ（端末ごとに1回。idempotencyKey = trial-carry:<端末のおためしID>）
   GACHA_SPEND
   SHOP_SPEND
 }

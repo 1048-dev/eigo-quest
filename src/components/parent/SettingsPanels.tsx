@@ -1,13 +1,17 @@
 "use client";
 /** 「おうちの方」ページ: お子さまの追加・暗証番号の変更・パスワードの変更・退会 */
 import { useState, type FormEvent } from "react";
+import { AvatarPicker } from "@/components/account/AvatarPicker";
 import { FormMessage, PasswordField, PinField, TextField } from "@/components/account/Form";
+import { defaultAvatarForNewChild, type AvatarCharacter } from "@/lib/domain/avatars";
 import { AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, PASSWORD_RULES_JA, ParentSettingsResponseSchema } from "@/lib/api/contracts";
 import { passwordChecks, sendJson } from "@/lib/auth/client";
 import { GradeSelect, type Guard } from "./ChildCard";
 
-export function AddChildForm({ guard, onAdded, onCancel }: { guard: Guard; onAdded: (msg: string) => void; onCancel?: () => void }) {
+export function AddChildForm({ guard, onAdded, onCancel, siblings = [] }: { guard: Guard; onAdded: (msg: string) => void; onCancel?: () => void; siblings?: string[] }) {
   const [nickname, setNickname] = useState("");
+  // はじめは きょうだいが まだ使っていない顔（お子さまと いっしょに えらんでください）
+  const [avatar, setAvatar] = useState<AvatarCharacter>(() => defaultAvatarForNewChild(siblings));
   const [grade, setGrade] = useState(1);
   const [birthYear, setBirthYear] = useState("");
   const [busy, setBusy] = useState(false);
@@ -21,7 +25,7 @@ export function AddChildForm({ guard, onAdded, onCancel }: { guard: Guard; onAdd
     if (/[<>]/.test(name)) { setError("ニックネームに < > は使えません。"); return; }
     if (birthYear && !/^20\d{2}$/.test(birthYear)) { setError("生まれ年は西暦4けたで入力してください（空欄でもかまいません）。"); return; }
     setBusy(true);
-    const r = await sendJson("POST", "/api/children", ChildResponseSchema, { nickname: name, schoolGrade: grade, ...(birthYear ? { birthYear: Number(birthYear) } : {}) });
+    const r = await sendJson("POST", "/api/children", ChildResponseSchema, { nickname: name, schoolGrade: grade, avatarCharacter: avatar, ...(birthYear ? { birthYear: Number(birthYear) } : {}) });
     setBusy(false);
     if (!guard(r)) return;
     if (r.ok && r.data.ok) { setNickname(""); setBirthYear(""); onAdded(r.data.messageJa || "お子さまを追加しました。"); }
@@ -34,6 +38,7 @@ export function AddChildForm({ guard, onAdded, onCancel }: { guard: Guard; onAdd
       <TextField label="ニックネーム" value={nickname} maxLength={AUTH_LIMITS.nicknameMax} onChange={(e) => setNickname(e.target.value)}
         hint={`画面に表示される名前です（${AUTH_LIMITS.nicknameMax}文字まで）。本名でなくてかまいません。`} placeholder="例：はるくん" />
       <GradeSelect value={grade} onChange={setGrade} id="add-grade" />
+      <AvatarPicker name="add-avatar" legend="キャラクター（あとからお子さまの画面でも変えられます）" value={avatar} onChange={setAvatar} size={44} />
       <TextField label="生まれ年（西暦・任意）" inputMode="numeric" maxLength={4} placeholder="例：2018" value={birthYear}
         onChange={(e) => setBirthYear(e.target.value.normalize("NFKC").replace(/\D/g, ""))} />
       <div className="flex gap-2">

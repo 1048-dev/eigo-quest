@@ -79,7 +79,7 @@ describe("レスポンスの安全なデフォルト", () => {
 
   it("壊れた子どもの要素だけ捨てる", () => {
     const r = coerce(C.ChildrenResponseSchema, { ok: true, children: [{ id: "c1", nickname: "ハル", schoolGrade: 3 }, { nickname: "id なし" }, null] });
-    expect(r.children).toEqual([{ id: "c1", nickname: "ハル", schoolGrade: 3, birthYear: null }]);
+    expect(r.children).toEqual([{ id: "c1", nickname: "ハル", schoolGrade: 3, birthYear: null, avatarCharacter: null }]);
   });
 
   it("ようす: 欠けた数字は 0、にがては空", () => {

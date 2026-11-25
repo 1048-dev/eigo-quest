@@ -14,6 +14,7 @@ import { HeroScene } from "@/components/scene/HeroScene";
 import { apiGet, apiPost, isUnreachable } from "@/lib/api/client";
 import { offlineLesson, offlineLessonComplete } from "@/lib/offline";
 import { recordLocalLesson } from "@/lib/offline/localProgress";
+import { recordTrialLesson } from "@/lib/offline/trialLog";
 import { TOTAL_LESSONS } from "@/lib/curriculum";
 import { worldName } from "@/lib/game/worlds";
 import { OfflineNote } from "@/components/common/OfflineNote";
@@ -77,8 +78,14 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
     setLogs(all);
     const r = await apiPost(`/api/lessons/${lesson.lessonNo}/complete`, LessonCompleteResponseSchema, { quizScore, speedListeningBest: speedBest, logs: all, conversationFinished });
     // おためしモード: この ブラウザに だけ クリアを おぼえておく（マップに ✓ と「きょうのまとめ」が 出る）
-    if (isUnreachable(r)) { setOffline(true); recordLocalLesson(lesson.lessonNo); setResult(offlineLessonComplete(lesson.lessonNo, { conversationFinished })); return; }
-    if (r.data.offline) { setOffline(true); if (r.ok && r.data.ok) recordLocalLesson(lesson.lessonNo); }
+    // おためしの きろく（あとで 保護者が登録したら 子どもに ひきつげる）: オフライン・デモユーザーのとき
+    const trialRecord = (coins: number) => recordTrialLesson(lesson.lessonNo, { coins, logs: all });
+    if (isUnreachable(r)) {
+      const off = offlineLessonComplete(lesson.lessonNo, { conversationFinished });
+      setOffline(true); recordLocalLesson(lesson.lessonNo); trialRecord(off.reward.total); setResult(off); return;
+    }
+    if (r.data.offline) { setOffline(true); if (r.ok && r.data.ok) { recordLocalLesson(lesson.lessonNo); trialRecord(r.data.reward.total); } }
+    else if (r.ok && r.data.ok && r.data.trial) trialRecord(r.data.reward.total);
     setResult(r.ok ? r.data : { ...r.data, ok: false, reasonJa: r.data.reasonJa || r.error || "もう一回ためしてね。" });
   };
 
