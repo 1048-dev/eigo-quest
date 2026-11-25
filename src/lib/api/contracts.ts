@@ -540,3 +540,31 @@ export const ParentSettingsResponseSchema = z.object({
   settings: ParentSettingsSchema.catch({ dailyLessonLimits: {} }),
 });
 export type ParentSettingsResponse = z.output<typeof ParentSettingsResponseSchema>;
+
+/** 月ごとの学習レポート（LINE）の設定・状態 */
+export const LineMonthlyStatusSchema = z.object({
+  linked: bool(false),
+  /** 公式アカウントを友だち追加しているか（null = まだ わからない） */
+  friend: z.boolean().nullable().catch(null),
+  enabled: bool(true),
+  /** LINE へ本当に送れる設定か（false = 送信は準備中。押しても LINE には届かない） */
+  messagingConfigured: bool(false),
+  lastSentAt: z.string().nullable().catch(null),
+  /** 次に「今すぐ送る」を押せる時刻（null = いつでも） */
+  nextAllowedAt: z.string().nullable().catch(null),
+});
+export type LineMonthlyStatus = z.output<typeof LineMonthlyStatusSchema>;
+const LINE_MONTHLY_DEFAULT: LineMonthlyStatus = { linked: false, friend: null, enabled: true, messagingConfigured: false, lastSentAt: null, nextAllowedAt: null };
+
+/** GET/PATCH/POST /api/parent/line-monthly */
+export const LineMonthlyResponseSchema = z.object({
+  ...AUTH_META,
+  status: LineMonthlyStatusSchema.catch(LINE_MONTHLY_DEFAULT),
+  /** POST（今すぐ送る）: LINE には送らず outbox に書いた（送信の設定がまだ） */
+  dryRun: bool(false),
+  /** POST で dryRun のときだけ: ダウンロードページへのリンク（動作確認用） */
+  links: safeArray(z.object({ childName: str(""), url: str("") })),
+});
+export type LineMonthlyResponse = z.output<typeof LineMonthlyResponseSchema>;
+
+export const LineMonthlyRequestSchema = z.object({ enabled: z.boolean() });

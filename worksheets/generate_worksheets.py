@@ -771,6 +771,88 @@ def bundle_worksheet(world: int, name: str, lessons: list[dict], out: Path) -> i
 
 
 # ---------------------------------------------------------------------------
+# 保護者向け 月間レポート（A4 1ページ）。中身はアプリ側 src/lib/report/monthlyReport.ts が作った JSON
+# ---------------------------------------------------------------------------
+def progress_report(data: dict, out: Path):
+    child = str(data.get("childName", ""))
+    month_label = str(data.get("monthLabelJa", ""))
+    s = Sheet(out, f"Eigo Quest {month_label}の学習レポート（{child}）", footer_label="Eigo Quest  学習レポート", total_pages=1)
+    s.new_page()
+    s.header(f"{month_label}の 学習レポート", f"{child} さん  ／  作成日 {data.get('generatedOn', '')}  ／  おうちの方へ", with_name=False)
+    c = s.c
+
+    # --- 数字のカード ---
+    stats = [
+        ("今月のレッスン", f"{data.get('lessonsThisMonth', 0)} 回"),
+        ("学習した日", f"{data.get('studyDaysThisMonth', 0)} 日"),
+        ("連続日数", f"{data.get('streakDays', 0)} 日"),
+        ("最長連続", f"{data.get('longestStreak', 0)} 日"),
+    ]
+    gap = 4 * mm
+    w = (PAGE_W - 2 * MARGIN - gap * 3) / 4
+    h = 20 * mm
+    top = s.y
+    for i, (label, value) in enumerate(stats):
+        x = MARGIN + i * (w + gap)
+        c.setFillColor(colors.HexColor("#eef4fc"))
+        c.roundRect(x, top - h, w, h, 3 * mm, fill=1, stroke=0)
+        s.text(x + 4 * mm, top - 6.5 * mm, label, 9, JA, INK2)
+        s.text(x + 4 * mm, top - 15.5 * mm, value, 17, JA, ACCENT)
+    s.y = top - h - 7 * mm
+    s.text(MARGIN, s.y, fit_text(
+        f"これまでに {data.get('lessonsDone', 0)} / {data.get('totalLessons', 0)} レッスン　・　合格したテスト（今月） {data.get('testsPassedThisMonth', 0)}　・　"
+        f"いまのワールド {data.get('world', '')}「{data.get('worldNameJa', '')}」", JA, 9.5, PAGE_W - 2 * MARGIN), 9.5, JA)
+    s.y -= 10 * mm
+
+    # --- 6つの力 ---
+    s.section("6つの力の 習得率", f"送信時点の値です（0〜100）。総合 {round(float(data.get('overall', 0)))}%")
+    bar_x = MARGIN + 42 * mm
+    bar_w = PAGE_W - MARGIN - bar_x - 16 * mm
+    for m in data.get("mastery", [])[:6]:
+        score = max(0.0, min(100.0, float(m.get("score", 0))))
+        s.text(MARGIN + 4 * mm, s.y, fit_text(str(m.get("labelJa", "")), JA, 9.5, 36 * mm), 9.5, JA)
+        c.setFillColor(colors.HexColor("#e3e8f0"))
+        c.roundRect(bar_x, s.y - 1 * mm, bar_w, 4 * mm, 2 * mm, fill=1, stroke=0)
+        if score > 0:
+            c.setFillColor(ACCENT if score >= 60 else (COIN if score >= 30 else FOUR_LINE_RED))
+            c.roundRect(bar_x, s.y - 1 * mm, max(4 * mm, bar_w * score / 100), 4 * mm, 2 * mm, fill=1, stroke=0)
+        s.text(bar_x + bar_w + 3 * mm, s.y, f"{round(score)}", 9.5, EN_BOLD)
+        s.y -= 7 * mm
+    s.y -= 3 * mm
+
+    # --- にがて ---
+    weak_skills = data.get("weakSkills", [])
+    weak_items = data.get("weakItems", [])
+    s.section("にがて（伸びしろ）")
+    if not weak_skills and not weak_items:
+        s.wrapped(MARGIN + 4 * mm, "まだ学習の記録が少ないため、にがての判定はこれからです。", 9.5, color=INK2)
+    else:
+        if weak_skills:
+            s.wrapped(MARGIN + 4 * mm, "力: " + "、".join(f"{x.get('labelJa', '')}（{round(float(x.get('score', 0)))}）" for x in weak_skills), 9.5)
+        if weak_items:
+            words = "　".join(f"{x.get('text', '')}（{x.get('ja', '')}）" for x in weak_items)
+            s.wrapped(MARGIN + 4 * mm, "忘れかけの ことば: " + words, 9.5)
+    s.y -= 3 * mm
+
+    # --- 来月の予定 ---
+    s.section("来月の 予定", f"Lesson {data.get('nextLessonNo')} から" if data.get("nextLessonNo") else "すべてのレッスンを終えました")
+    for t in data.get("nextTopics", [])[:6]:
+        s.wrapped(MARGIN + 4 * mm, f"・Lesson {t.get('lessonNo')}〜　{t.get('topicJa', '')}（{t.get('titleJa', '')}）", 9.5)
+    ph = data.get("nextPhonics", [])
+    if ph:
+        s.wrapped(MARGIN + 4 * mm, "フォニックス: " + "　".join(str(p) for p in ph[:6]), 9.5)
+    s.y -= 3 * mm
+
+    # --- ひとこと ---
+    s.section("おうちの方へ")
+    s.wrapped(MARGIN + 4 * mm, str(data.get("commentJa", "")), 10)
+    s.wrapped(MARGIN + 4 * mm, "同封の「1か月ワークブック」は、いまのワールドのレッスンと連動しています。1日1枚を目安に、アプリのあとで取り組んでください。", 8.5, color=INK2)
+    if s.page_no != 1:
+        raise SystemExit("レポートが1ページに収まりません")
+    s.save()
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 def main():
@@ -782,7 +864,16 @@ def main():
     ap.add_argument("--month", action="store_true", help="月間まとめ（1ワールド＝30レッスン）モード。--world N か --all と いっしょに")
     ap.add_argument("--world", type=int, help="月間まとめを作る ワールド番号（1〜12）")
     ap.add_argument("--out", type=Path, default=OUT_DIR)
+    ap.add_argument("--report-json", type=Path, help="保護者向け月間レポートの JSON（アプリが作る）。--report-out と いっしょに")
+    ap.add_argument("--report-out", type=Path, help="月間レポート PDF の出力先ファイル")
     args = ap.parse_args()
+
+    if args.report_json:
+        if not args.report_out:
+            ap.error("--report-json には --report-out を つけてください")
+        progress_report(json.loads(args.report_json.read_text(encoding="utf-8")), args.report_out)
+        print(args.report_out)
+        return
 
     data = load_curriculum()
     lessons = data["lessons"]

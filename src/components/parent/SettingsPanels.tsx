@@ -3,12 +3,15 @@
  * 「おうちの方」ページ: お子さまの追加・暗証番号の変更・パスワードの変更・LINE の連携・退会
  * usePin = true: LINE だけで登録した保護者（パスワードなし）。本人確認に今の暗証番号を使う。
  */
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
+import { apiGet } from "@/lib/api/client";
 import { AvatarPicker } from "@/components/account/AvatarPicker";
 import { FormMessage, PasswordField, PinField, TextField } from "@/components/account/Form";
 import { LineLoginButton } from "@/components/account/LineLoginButton";
 import { defaultAvatarForNewChild, type AvatarCharacter } from "@/lib/domain/avatars";
-import { AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, PASSWORD_RULES_JA, ParentSettingsResponseSchema } from "@/lib/api/contracts";
+import {
+  AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, LineMonthlyResponseSchema, PASSWORD_RULES_JA, ParentSettingsResponseSchema, type LineMonthlyStatus,
+} from "@/lib/api/contracts";
 import { passwordChecks, sendJson } from "@/lib/auth/client";
 import { GradeSelect, type Guard } from "./ChildCard";
 
@@ -239,6 +242,99 @@ export function LinePanel({ guard, available, linked, displayName, canUnlink, on
     <div className="space-y-2">
       <p className="text-xs text-[var(--ink-2)]">連携すると「LINEでログイン」でログインでき、月ごとの学習レポートを LINE で受け取れるようになります。</p>
       <LineLoginButton mode="link" label="LINE と連携する" />
+    </div>
+  );
+}
+
+function formatDateTime(iso: string | null): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? "" : new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(d);
+}
+
+/**
+ * 月ごとの学習レポート（PDF）を LINE で受け取る。
+ *  - 毎月の配信のオン/オフ
+ *  - 「今月のPDFを今すぐ送る」（10分に1回・24時間に3回まで）
+ *  - 公式アカウントをブロック中なら その案内。LINE の送信が未設定なら「準備中」と動作確認用のリンク
+ */
+export function LineMonthlyPanel({ guard, linked }: { guard: Guard; linked: boolean }) {
+  const [status, setStatus] = useState<LineMonthlyStatus | null>(null);
+  const [busy, setBusy] = useState<"toggle" | "send" | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [ok, setOk] = useState<string | null>(null);
+  const [links, setLinks] = useState<{ childName: string; url: string }[]>([]);
+
+  useEffect(() => {
+    if (!linked) return;
+    let alive = true;
+    void apiGet("/api/parent/line-monthly", LineMonthlyResponseSchema).then((r) => {
+      if (!alive || !guard(r)) return;
+      if (r.ok && r.data.ok) setStatus(r.data.status);
+      else setError(r.error ?? "設定を読み込めませんでした。");
+    });
+    return () => { alive = false; };
+  }, [guard, linked]);
+
+  if (!linked) {
+    return <p className="text-xs text-[var(--ink-2)]">LINE と連携すると、毎月の学習レポートと 1か月ワークブック（PDF）を LINE で受け取れます。</p>;
+  }
+  if (!status) return <><FormMessage error={error} /><p className="text-xs text-[var(--ink-2)]">読み込み中…</p></>;
+
+  const toggle = async (enabled: boolean) => {
+    setError(null); setOk(null);
+    setBusy("toggle");
+    const r = await sendJson("PATCH", "/api/parent/line-monthly", LineMonthlyResponseSchema, { enabled });
+    setBusy(null);
+    if (!guard(r)) return;
+    if (r.ok && r.data.ok) { setStatus(r.data.status); setOk(r.data.messageJa || null); }
+    else setError(r.error ?? "保存できませんでした。");
+  };
+
+  const sendNow = async () => {
+    setError(null); setOk(null); setLinks([]);
+    setBusy("send");
+    const r = await sendJson("POST", "/api/parent/line-monthly", LineMonthlyResponseSchema);
+    setBusy(null);
+    if (!guard(r)) return;
+    if (r.ok && r.data.ok) {
+      setStatus(r.data.status);
+      setOk(r.data.messageJa || "送りました。");
+      if (r.data.dryRun) setLinks(r.data.links);
+    } else {
+      setError(r.error ?? "送れませんでした。");
+      // 回数制限などで「次に送れる時刻」が変わっているかもしれないので読みなおす
+      void apiGet("/api/parent/line-monthly", LineMonthlyResponseSchema).then((s) => { if (s.ok && s.data.ok) setStatus(s.data.status); });
+    }
+  };
+
+  const waitUntil = status.nextAllowedAt ? formatDateTime(status.nextAllowedAt) : "";
+  return (
+    <div className="space-y-3">
+      <FormMessage error={error} ok={ok} />
+      {status.friend === false && (
+        <p className="rounded-lg bg-[var(--ng)]/10 p-2 text-xs font-bold">LINE の公式アカウントがブロックされているため、レポートを届けられません。LINE でブロックを解除（友だち追加）してください。</p>
+      )}
+      {!status.messagingConfigured && (
+        <p className="text-xs text-[var(--ink-2)]">LINE での送信は準備中です（設定されると、ここから実際に LINE へ届くようになります）。</p>
+      )}
+      <label className="flex items-start gap-2 text-sm font-bold">
+        <input type="checkbox" className="mt-1 h-4 w-4 accent-[#06C755]" checked={status.enabled} disabled={busy !== null}
+          onChange={(e) => void toggle(e.target.checked)} />
+        毎月はじめに、先月の学習レポートと 1か月ワークブック（PDF）を LINE で受け取る
+      </label>
+      {status.lastSentAt && <p className="text-xs text-[var(--ink-2)]">前回 LINE に送った日時: {formatDateTime(status.lastSentAt)}</p>}
+      <button type="button" className="btn btn-ghost w-full !py-2 text-sm" disabled={busy !== null || !!status.nextAllowedAt} onClick={() => void sendNow()}>
+        {busy === "send" ? "PDF を準備しています…（少しかかります）" : "今月のPDFを今すぐ送る"}
+      </button>
+      <p className="text-xs text-[var(--ink-2)]">
+        {waitUntil ? `次に送れるのは ${waitUntil} ごろです。` : "今月のここまでの分をお届けします（10分に1回・1日3回まで）。"}
+      </p>
+      {links.length > 0 && (
+        <ul className="space-y-1 text-sm">
+          {links.map((l) => <li key={l.url}><a className="font-bold underline" href={l.url} target="_blank" rel="noreferrer">{l.childName} さんの PDF をひらく</a></li>)}
+        </ul>
+      )}
     </div>
   );
 }

@@ -13,7 +13,7 @@ import { Suspense, useCallback, useEffect, useState } from "react";
 import { AccountHeader, FormMessage } from "@/components/account/Form";
 import { PinPad } from "@/components/account/PinPad";
 import { ChildCard, type Guard } from "@/components/parent/ChildCard";
-import { AddChildForm, ChangePasswordForm, ChangePinForm, DeleteAccountPanel, LinePanel } from "@/components/parent/SettingsPanels";
+import { AddChildForm, ChangePasswordForm, ChangePinForm, DeleteAccountPanel, LineMonthlyPanel, LinePanel } from "@/components/parent/SettingsPanels";
 import { apiGet } from "@/lib/api/client";
 import {
   AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, ParentOverviewResponseSchema,
@@ -184,6 +184,13 @@ function ParentPage() {
         <div className="mt-2">
           <LinePanel guard={guard} available={me?.lineLoginAvailable ?? false} linked={me?.parent?.lineLinked ?? false}
             displayName={lineName ?? null} canUnlink={hasPassword && !!me?.parent?.email} onChanged={refresh} />
+        </div>
+      </section>
+
+      <section className="card p-4" aria-labelledby="line-monthly-title">
+        <h2 id="line-monthly-title" className="rpg-title text-lg">LINE で学習レポート</h2>
+        <div className="mt-2">
+          <LineMonthlyPanel key={String(me?.parent?.lineLinked ?? false)} guard={guard} linked={me?.parent?.lineLinked ?? false} />
         </div>
       </section>
 

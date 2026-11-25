@@ -54,11 +54,13 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・30ファイル・791件） |
+| `npm test` | 単体テスト（vitest・33ファイル・875件） |
 | `npm run typecheck` | 型チェック |
 | `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build` |
 | `npm run check:auth-db -- --db <テスト用URL> [--port 3457]` | 本物の DB で migrate deploy → seed → `next start` → 登録・子ども2人・切りかえ・回数制限・持ち主チェック・CSRF・退会後に何も残らないこと まで 41項目を HTTP で確認。**使い捨ての DB を指定すること**（中身を書きかえます） |
+| `npm run line:monthly [-- --dry-run] [-- --parent <id>]` | 月間レポート（PDF）を LINE で届ける。キーが無ければ dry-run（下の「LINE で月間レポート」） |
+| `npm run check:line-monthly-db -- --db <テスト用URL> [--port 3463]` | 本物の DB + `next start` で webhook の署名・`line:monthly --dry-run`・ダウンロードページ・おうちの方 API・期限切れ・退会 まで 32項目を確認（LINE には接続しない）。**使い捨ての DB を指定すること** |
 | `npm run screens:auth -- --db <テスト用URL>` | 本物の DB と DB 停止の両方で、保護者アカウントの画面を Playwright で操作してスクリーンショット（`docs/run3/screens/`） |
 | `npx tsx scripts/e2e-smoke.ts http://localhost:3000` | 実サーバーとDBを使い、30日分のプレイ（ボス戦・アリーナ・お宝アラートまで）を早送りで実行 |
 | `pip install -r worksheets/requirements.txt` | PDF生成に必要な reportlab をインストール |
@@ -350,7 +352,31 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
   3. 解答・読み上げる文・学校テストのポイント・TPRの遊び方
 - **まとめテスト（5回ごと）とボス戦テスト（30回ごと）**: アプリと同じ範囲ルールで出題（線むすび・スペル・記号選択・フォニックス・TPRリスニング）し、最後に解答ページを付けます。
 - **月間まとめ（1ワールド＝30レッスン＝約1か月で1冊・約86〜91ページ）**: おうちの方向けの表紙（印刷のしかた・1日のすすめかた・ページの見かた）と「30日のよていひょう」（日ごとのレッスン・使うページ・テストのページ）のあとに、30回分の教材（フラッシュカード＋ワーク）と5回ごとのまとめテスト・30回目のボス戦テスト、最後にこたえ・よみあげ文をまとめて付けます。ワールド名は `src/lib/game/worlds.ts` から読みます。
+- **保護者向けの月間レポート（1ページ）**: `--report-json <JSON> --report-out <PDF>`。中身（JSON）はアプリの `src/lib/report/monthlyReport.ts` が作ります（下の「LINE で月間レポート」）。
 - 日本語フォントは IPAexゴシック などの TTF を自動で探して埋め込みます。`EIGO_JA_FONT` でフォントのパスを指定することもできます。
+
+## LINE で月間レポート（src/lib/services/monthlyDeliveryService.ts・`npm run line:monthly`）
+
+毎月、保護者の LINE にお子さまごとの「学習レポート（A4 1ページ）」と「いまのワールドの 1か月ワークブック」を届けます。
+LINE の Messaging API は PDF ファイルそのものを送れないため、**ダウンロードページへのリンク**を Flex メッセージ（お子さまの名前・要約・「PDFをひらく」ボタン。きょうだいはカルーセル）で送ります。
+
+- **レポートの中身**: 今月のレッスン数・学習した日数・合格したテスト、連続日数・最長連続、6つの力の習得率（送信時点）、にがて（低い力・忘れかけの ことば）、来月の予定（次のレッスンからの単元・フォニックス）、おうちの方への ひとこと。PDF は `worksheets/generate_worksheets.py --report-json`（ReportLab・日本語フォント埋め込み）で作り、Python が使えないときは依存なしの かんたんな PDF で代わりに作ります（日本語は表示する側のフォント頼み）。
+- **ワークブック**: お子さまが いま いる（これから始める）ワールドの 1か月ワークブック（`worksheets:month` と同じもの）。ワールドごとに1回だけ作り、`REPORT_STORAGE_DIR/worksheets/` で使い回します（`worksheets/out/monthly/` にあれば それをコピー）。
+- **ダウンロードページ `/d/<token>`**: トークンは 256 ビットのランダム値で、DB（`ReportDelivery.tokenHash`）には SHA-256 だけを保存。30日で期限切れ。その配信のファイル（`/d/<token>/report`・`/d/<token>/worksheets`）だけを返し、レポートはその家のフォルダ（`reports/<保護者ID>/`）にあるものだけ。ログイン不要（LINE のアプリ内ブラウザで開くため）、検索エンジンに載せない・リファラーを送らない・キャッシュしない。期限切れの配信と PDF は次の一斉配信のときに消えます。お子さまの削除・退会でも消えます。
+- **送信**: `Parent.lineUserId` に push（`X-Line-Retry-Key` 付きで二重送信なし）。毎月の配信は「LINE と連携ずみ・配信オン（`Parent.lineMonthlyEnabled`）・ブロックされていない」保護者だけ。同じ月の送信ずみのお子さまには送りません（`--force` を除く）。
+- **webhook `POST /api/line/webhook`**: `X-Line-Signature` を `LINE_MESSAGING_CHANNEL_SECRET` で確かめ（違えば 401）、follow / unfollow で `Parent.lineFriend` を更新します（ブロック中の保護者には送らない）。LINE Developers の「Webhook URL」に `https://<ドメイン>/api/line/webhook` を登録し、「Webhook の利用」をオンにします。
+- **おうちの方ページ**: 「LINE で学習レポート」で毎月の配信のオン/オフと「今月のPDFを今すぐ送る」（今月のここまでの分。前回から10分・24時間に3回まで。DB で数えるので再起動しても効く）。送信が未設定のときは「準備中」と表示し、押すと dry-run でダウンロードページへのリンクを出します。
+- **キーが無いとき（dry-run）**: `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN` と `APP_BASE_URL` がそろっていなければ、LINE には何も送らず、`LINE_OUTBOX_DIR`（既定 `.data/line-outbox/`）に送るはずだった `message.json`（push のリクエストそのもの）と PDF のコピーを書きます。
+
+```bash
+npm run line:monthly                          # 先月の分を送る（毎月1日に cron などで実行する想定）
+npm run line:monthly -- --dry-run             # 送らずに outbox へ書いて、送る内容を表示
+npm run line:monthly -- --parent <保護者ID>   # 1人だけ（dry-run なら LINE 未連携でも試せる）
+npm run line:monthly -- --month 2026-11 --force
+```
+
+- **LINE Developers での準備**: LINE ログインのチャネルと**同じプロバイダー**に Messaging API チャネル（公式アカウント）を作ります（プロバイダーがちがうと LINE のユーザーID が一致せず届きません）。長期のチャネルアクセストークンを `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`、チャネルシークレットを `LINE_MESSAGING_CHANNEL_SECRET`、公開 URL を `APP_BASE_URL` に入れます。LINE ログインのチャネルにこの公式アカウントをリンクすると、ログインのときに友だち追加をすすめられます。
+- 環境変数: `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`・`LINE_MESSAGING_CHANNEL_SECRET`・`APP_BASE_URL`・`REPORT_STORAGE_DIR`（既定 `.data/reports/`）・`LINE_OUTBOX_DIR`・`PYTHON`（既定は python3 → python。reportlab が必要）。
 
 ## 骨組みとして残している部分（本番に向けて差し替える）
 
@@ -364,4 +390,5 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 | まとめ動画 | 台本＋ブラウザの音声合成で自動再生 | リアルなAI先生の動画サービスで生成した動画（`videoUrl` の差し替え口を使う） |
 | AI会話 | Claude ＋ 台本フォールバック（相手は4人のローテーション） | 同意フォームは不要（オーナー決定）。電話・メール・URL の伏せ字と「子どもの発話は保存しない」を守ったまま有効化 |
 | カリキュラム | 360レッスン（12ワールド）完成 | 全クリア後の体験（おめでとう画面・2周目・中学コース）は未定 |
-| 月額課金・無料体験・保護者へのLINE月報PDF | 未実装（保護者アカウントとようす画面が土台） | 今後のフェーズで実装 |
+| 月額課金・無料体験 | 未実装（保護者アカウントとようす画面が土台） | 今後のフェーズで実装 |
+| LINE の月間レポート | 実装済み（キーが無い間は dry-run）。PDF はサーバーのフォルダ（`REPORT_STORAGE_DIR`）に保存 | サーバーを複数台にするなら、PDF の置き場所を共有ストレージ（S3 など）にする |

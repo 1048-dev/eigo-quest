@@ -12,10 +12,15 @@ const UNIQUE: Record<string, string[]> = {
   session: ["tokenHash"],
   user: ["friendCode"],
   coinLedger: ["idempotencyKey"],
+  reportDelivery: ["tokenHash"],
 };
 
 const DEFAULTS: Record<string, () => Row> = {
-  parent: () => ({ settings: {}, subscriptionStatus: "TRIALING", planId: null, currentPeriodEnd: null }),
+  parent: () => ({
+    settings: {}, subscriptionStatus: "TRIALING", planId: null, currentPeriodEnd: null,
+    lineUserId: null, lineDisplayName: null, lineLinkedAt: null, lineFriend: null, lineFriendChangedAt: null, lineMonthlyEnabled: true,
+  }),
+  reportDelivery: () => ({ status: "PENDING", error: null, sentAt: null }),
   session: () => ({ selectedChildId: null, pinVerifiedAt: null }),
   user: () => ({ parentId: null, birthYear: null, schoolGrade: null, avatar: {}, avatarCharacter: "haru", coins: 0, totalCoinsEarned: 0, streakDays: 0, longestStreak: 0, lastStudyDate: null }),
   lessonProgress: () => ({ status: "IN_PROGRESS", completedAt: null, completedOn: null, quizScore: null }),
@@ -31,6 +36,7 @@ function isPlain(v: unknown): v is Record<string, unknown> {
 }
 
 function eq(a: unknown, b: unknown) {
+  if (a == null && b == null) return true; // SQL の IS NULL と同じ（未設定の列 = null）
   if (a instanceof Date && b instanceof Date) return a.getTime() === b.getTime();
   return a === b;
 }

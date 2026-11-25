@@ -15,6 +15,7 @@ import { AUTH_LIMITS, type Child, type ChildOverview, type ParentSettings } from
 import { dummyHash, hashSecret, verifySecret } from "@/lib/auth/password";
 import { computeUserMastery } from "@/lib/services/progressService";
 import { dailyLimitFor, parseParentSettings, withDailyLimit } from "@/lib/services/dailyLimit";
+import { deleteDeliveriesForChildren } from "@/lib/services/monthlyDeliveryService";
 
 type Tx = Prisma.TransactionClient;
 
@@ -116,7 +117,7 @@ export async function unlinkLine(parentId: string): Promise<UnlinkLineResult> {
   const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { email: true, passwordHash: true, lineUserId: true } });
   if (!p?.lineUserId) return { ok: false, reason: "NOT_LINKED" };
   if (!p.email || !p.passwordHash) return { ok: false, reason: "NEEDS_PASSWORD" };
-  await prisma.parent.update({ where: { id: parentId }, data: { lineUserId: null, lineDisplayName: null, lineLinkedAt: null } });
+  await prisma.parent.update({ where: { id: parentId }, data: { lineUserId: null, lineDisplayName: null, lineLinkedAt: null, lineFriend: null, lineFriendChangedAt: null } });
   return { ok: true };
 }
 
@@ -198,6 +199,7 @@ export async function setChildAvatar(parentId: string, childId: string, avatarCh
 /** 子どもの学習データをすべて消す（ハード削除） */
 export async function deleteUsersData(tx: Tx, userIds: string[]): Promise<void> {
   if (userIds.length === 0) return;
+  await deleteDeliveriesForChildren(tx, userIds);
   const mine = { userId: { in: userIds } };
   await tx.friendship.deleteMany({ where: { OR: [mine, { friendId: { in: userIds } }] } });
   await tx.itemResponse.deleteMany({ where: mine });

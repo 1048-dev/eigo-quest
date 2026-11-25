@@ -22,20 +22,63 @@ datasource db {
 
 /// 保護者（支払い・管理する人）。メール + パスワード または LINE でログインし、4桁の保護者PINで「おうちの方」エリアを守る。
 model Parent {
-  id                 String             @id @default(cuid())
-  email              String?            @unique /// 小文字に正規化して保存。LINE だけで登録した保護者は null
-  passwordHash       String?            /// scrypt（src/lib/auth/password.ts の形式）。平文は保存しない。LINE だけで登録した保護者は null
-  pinHash            String?            /// 4桁PINの scrypt ハッシュ。LINE で登録して まだ暗証番号を決めていないときだけ null
-  lineUserId         String?            @unique /// LINE ログインの ユーザーID（ID トークンの sub）。連携していなければ null
-  lineDisplayName    String?            /// LINE の表示名（設定画面で「だれの LINE と連携しているか」を見せるだけ）
-  lineLinkedAt       DateTime?          /// LINE を連携した時刻
-  settings           Json               @default("{}") /// { dailyLessonLimits: { [childId]: number } } など
-  subscriptionStatus SubscriptionStatus @default(TRIALING)
-  planId             String?
-  currentPeriodEnd   DateTime?
-  children           User[]
-  sessions           Session[]
-  createdAt          DateTime           @default(now())
+  id                  String             @id @default(cuid())
+  email               String?            @unique /// 小文字に正規化して保存。LINE だけで登録した保護者は null
+  passwordHash        String? /// scrypt（src/lib/auth/password.ts の形式）。平文は保存しない。LINE だけで登録した保護者は null
+  pinHash             String? /// 4桁PINの scrypt ハッシュ。LINE で登録して まだ暗証番号を決めていないときだけ null
+  lineUserId          String?            @unique /// LINE ログインの ユーザーID（ID トークンの sub）。連携していなければ null
+  lineDisplayName     String? /// LINE の表示名（設定画面で「だれの LINE と連携しているか」を見せるだけ）
+  lineLinkedAt        DateTime? /// LINE を連携した時刻
+  lineFriend          Boolean? /// 公式アカウント（Messaging API）を友だち追加しているか。webhook の follow/unfollow で更新。null = まだ わからない
+  lineFriendChangedAt DateTime? /// lineFriend が変わった時刻
+  lineMonthlyEnabled  Boolean            @default(true) /// 毎月の学習レポート（PDF）を LINE で受け取る（おうちの方ページで切りかえ）
+  settings            Json               @default("{}") /// { dailyLessonLimits: { [childId]: number } } など
+  subscriptionStatus  SubscriptionStatus @default(TRIALING)
+  planId              String?
+  currentPeriodEnd    DateTime?
+  children            User[]
+  sessions            Session[]
+  reportDeliveries    ReportDelivery[]
+  createdAt           DateTime           @default(now())
+}
+
+/**
+ * 月ごとの学習レポート（PDF）の配信。お子さま1人・1回の送信ごとに1行。
+ * ダウンロードページ /d/<token> の token はランダム。DB には SHA-256 だけを保存し、30日で期限切れ。
+ * files に入っているファイルだけを配る（ほかの家のファイルは token が違うので見えない）。
+ */
+model ReportDelivery {
+  id        String          @id @default(cuid())
+  parentId  String
+  parent    Parent          @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  childId   String /// User.id（お子さまを削除したら この行も消す）
+  childName String /// 送ったときの ニックネーム
+  month     String /// "YYYY-MM"（APP_TIMEZONE 基準）
+  trigger   DeliveryTrigger
+  batchId   String /// 1回の送信（1つの LINE メッセージ）ごとの ID。きょうだいは同じ batchId
+  tokenHash String          @unique
+  expiresAt DateTime
+  files     Json /// [{ id: "report" | "worksheets", labelJa, path（REPORT_STORAGE_DIR からの相対パス）, bytes }]
+  summary   Json /// 画面・メッセージに出す 要約（src/lib/report/monthlyReport.ts の ReportSummary）
+  status    DeliveryStatus  @default(PENDING)
+  error     String? /// 失敗の種類だけ（トークンなどは入れない）
+  sentAt    DateTime?
+  createdAt DateTime        @default(now())
+
+  @@index([parentId, createdAt])
+  @@index([childId, month])
+}
+
+enum DeliveryTrigger {
+  MONTHLY /// npm run line:monthly（毎月）
+  MANUAL /// おうちの方ページの「今月のPDFを今すぐ送る」
+}
+
+enum DeliveryStatus {
+  PENDING
+  SENT
+  DRY_RUN /// キーが無い・--dry-run: LINE には送らず outbox に書いた
+  FAILED
 }
 
 /// ログインセッション。cookie にはランダムなトークン、DB にはその SHA-256 だけを保存する。
@@ -44,7 +87,7 @@ model Session {
   parentId        String
   parent          Parent    @relation(fields: [parentId], references: [id], onDelete: Cascade)
   tokenHash       String    @unique
-  selectedChildId String?   /// 「だれが あそぶ？」で選ばれた子ども（User.id）
+  selectedChildId String? /// 「だれが あそぶ？」で選ばれた子ども（User.id）
   pinVerifiedAt   DateTime? /// 保護者PINを入れた時刻（しばらくの間「おうちの方」エリアを開ける）
   expiresAt       DateTime
   createdAt       DateTime  @default(now())
@@ -61,21 +104,21 @@ enum SubscriptionStatus {
 
 /// 学習者（子ども）。1保護者に複数の子ども。
 model User {
-  id               String    @id @default(cuid())
+  id               String   @id @default(cuid())
   parentId         String?
-  parent           Parent?   @relation(fields: [parentId], references: [id])
+  parent           Parent?  @relation(fields: [parentId], references: [id])
   nickname         String
   birthYear        Int?
-  schoolGrade      Int?      /// 0=未就学, 1〜6=小学校学年
-  friendCode       String    @unique
-  avatar           Json      @default("{}") /// 装備中のアバターパーツ { hat: "...", outfit: "..." }
-  avatarCharacter  String    @default("haru") /// 子どもが えらんだ キャラクター "haru" | "riko" | "kiko" | "birimo"（src/lib/domain/avatars.ts）
-  coins            Int       @default(0)    /// CoinLedger 合計のキャッシュ
-  totalCoinsEarned Int       @default(0)    /// ランキング用（消費しても減らない）
-  streakDays       Int       @default(0)
-  longestStreak    Int       @default(0)
-  lastStudyDate    String?   /// "YYYY-MM-DD"（APP_TIMEZONE基準）
-  createdAt        DateTime  @default(now())
+  schoolGrade      Int? /// 0=未就学, 1〜6=小学校学年
+  friendCode       String   @unique
+  avatar           Json     @default("{}") /// 装備中のアバターパーツ { hat: "...", outfit: "..." }
+  avatarCharacter  String   @default("haru") /// 子どもが えらんだ キャラクター "haru" | "riko" | "kiko" | "birimo"（src/lib/domain/avatars.ts）
+  coins            Int      @default(0) /// CoinLedger 合計のキャッシュ
+  totalCoinsEarned Int      @default(0) /// ランキング用（消費しても減らない）
+  streakDays       Int      @default(0)
+  longestStreak    Int      @default(0)
+  lastStudyDate    String? /// "YYYY-MM-DD"（APP_TIMEZONE基準）
+  createdAt        DateTime @default(now())
 
   lessonProgress LessonProgress[]
   testAttempts   TestAttempt[]
@@ -87,8 +130,8 @@ model User {
   gachaTickets   GachaTicket[]
   items          UserShopItem[]
   snapshots      MasterySnapshot[]
-  friendsFrom    Friendship[]     @relation("FriendFrom")
-  friendsTo      Friendship[]     @relation("FriendTo")
+  friendsFrom    Friendship[]      @relation("FriendFrom")
+  friendsTo      Friendship[]      @relation("FriendTo")
 }
 
 model Friendship {
@@ -106,30 +149,30 @@ model Friendship {
 // -----------------------------------------------------------------------------
 
 model Lesson {
-  lessonNo      Int     @id                /// 1, 2, 3 ...（= Session番号 = 学習日数）
-  world         Int                        /// 30レッスンで1ワールド
+  lessonNo      Int            @id /// 1, 2, 3 ...（= Session番号 = 学習日数）
+  world         Int /// 30レッスンで1ワールド
   title         String
   titleJa       String
-  schoolGrade   String                     /// 対応する学校学年 例: "小3"
-  schoolTopic   String                     /// 学校教科書の単元テーマ 例: "あいさつ・自己紹介"
-  phonicsRule   String                     /// 例: "letter-sound", "cvc-short-a"
-  teacherScript String                     /// AI女性教師の冒頭解説台本
-  videoUrl      String?                    /// 生成済みの教師動画（無ければアニメーション＋TTS）
-  content       Json                       /// レッスンJSON全体（UI描画用）
+  schoolGrade   String /// 対応する学校学年 例: "小3"
+  schoolTopic   String /// 学校教科書の単元テーマ 例: "あいさつ・自己紹介"
+  phonicsRule   String /// 例: "letter-sound", "cvc-short-a"
+  teacherScript String /// AI女性教師の冒頭解説台本
+  videoUrl      String? /// 生成済みの教師動画（無ければアニメーション＋TTS）
+  content       Json /// レッスンJSON全体（UI描画用）
   items         LearningItem[]
 }
 
 /// 習得率・忘却判定の最小単位（単語・表現・TPR命令・フォニックス規則）
 model LearningItem {
-  id         String       @id           /// 例: "L001-W-hello", "L001-C-look", "L001-P-s"
+  id         String         @id /// 例: "L001-W-hello", "L001-C-look", "L001-P-s"
   lessonNo   Int
-  lesson     Lesson       @relation(fields: [lessonNo], references: [lessonNo])
+  lesson     Lesson         @relation(fields: [lessonNo], references: [lessonNo])
   kind       ItemKind
-  text       String                     /// 英語
-  ja         String                     /// 日本語
-  emoji      String?                    /// 仮イラスト
-  skills     Skill[]                    /// この項目で測る能力軸
-  schoolCore Boolean      @default(false) /// 学校テスト頻出（筆記対策の重点）
+  text       String /// 英語
+  ja         String /// 日本語
+  emoji      String? /// 仮イラスト
+  skills     Skill[] /// この項目で測る能力軸
+  schoolCore Boolean        @default(false) /// 学校テスト頻出（筆記対策の重点）
   responses  ItemResponse[]
   memories   ItemMemory[]
 
@@ -139,38 +182,38 @@ model LearningItem {
 enum ItemKind {
   WORD
   EXPRESSION
-  COMMAND   /// TPR 命令（Look / Stop / Come here / Go ...）
-  PHONICS   /// 文字と音・CVC・ブレンディング
+  COMMAND /// TPR 命令（Look / Stop / Come here / Go ...）
+  PHONICS /// 文字と音・CVC・ブレンディング
 }
 
 /// 能力軸（ダッシュボードのレーダーチャートの各軸）
 enum Skill {
-  SCHOOL_TEST   /// 学校テスト対応度（教科書表現・文法）
-  PHONICS       /// フォニックス定着度
-  LISTENING     /// リスニング反射力
-  SPEAKING      /// 発音
-  VOCABULARY    /// 語彙
-  WRITING       /// 筆記・スペル
+  SCHOOL_TEST /// 学校テスト対応度（教科書表現・文法）
+  PHONICS /// フォニックス定着度
+  LISTENING /// リスニング反射力
+  SPEAKING /// 発音
+  VOCABULARY /// 語彙
+  WRITING /// 筆記・スペル
 }
 
 /// テスト定義（seedでルールから自動生成）
 model Assessment {
-  id             String         @id      /// "check-12", "mini-1-5", "boss-1-30", "arena-1-60"
-  kind           AssessmentKind
-  rangeStart     Int
-  rangeEnd       Int
-  questionCount  Int
-  passRate       Float                  /// 合格ライン（0〜1）
-  unlocksLesson  Int?                   /// 合格で解放されるレッスン（アリーナはnull）
-  attempts       TestAttempt[]
+  id            String         @id /// "check-12", "mini-1-5", "boss-1-30", "arena-1-60"
+  kind          AssessmentKind
+  rangeStart    Int
+  rangeEnd      Int
+  questionCount Int
+  passRate      Float /// 合格ライン（0〜1）
+  unlocksLesson Int? /// 合格で解放されるレッスン（アリーナはnull）
+  attempts      TestAttempt[]
 }
 
 enum AssessmentKind {
-  DAILY_CHECK  /// 復習クエスト（各レッスンの確認。完了の翌日から。進行はブロックしない）
-  MINI         /// 5レッスンごとのまとめテスト
-  BOSS         /// 30レッスンごとの総まとめ（ボス戦）
-  ARENA        /// 復習アリーナ（周回）
-  TREASURE     /// お宝復習アラートのミニクエスト
+  DAILY_CHECK /// 復習クエスト（各レッスンの確認。完了の翌日から。進行はブロックしない）
+  MINI /// 5レッスンごとのまとめテスト
+  BOSS /// 30レッスンごとの総まとめ（ボス戦）
+  ARENA /// 復習アリーナ（周回）
+  TREASURE /// お宝復習アラートのミニクエスト
 }
 
 // -----------------------------------------------------------------------------
@@ -178,14 +221,14 @@ enum AssessmentKind {
 // -----------------------------------------------------------------------------
 
 model LessonProgress {
-  userId      String
-  lessonNo    Int
-  user        User      @relation(fields: [userId], references: [id])
-  status      LessonStatus @default(IN_PROGRESS)
-  startedAt   DateTime  @default(now())
-  completedAt DateTime?
-  completedOn String?   /// "YYYY-MM-DD"（復習クエストの翌日判定・1日のレッスン回数用、APP_TIMEZONE基準）
-  quizScore   Float?
+  userId             String
+  lessonNo           Int
+  user               User         @relation(fields: [userId], references: [id])
+  status             LessonStatus @default(IN_PROGRESS)
+  startedAt          DateTime     @default(now())
+  completedAt        DateTime?
+  completedOn        String? /// "YYYY-MM-DD"（復習クエストの翌日判定・1日のレッスン回数用、APP_TIMEZONE基準）
+  quizScore          Float?
   speedListeningBest Float? /// 1.2倍速まで到達した正答率など
 
   @@id([userId, lessonNo])
@@ -197,19 +240,19 @@ enum LessonStatus {
 }
 
 model TestAttempt {
-  id             String         @id @default(cuid())
+  id             String        @id @default(cuid())
   userId         String
-  user           User           @relation(fields: [userId], references: [id])
+  user           User          @relation(fields: [userId], references: [id])
   assessmentId   String
-  assessment     Assessment     @relation(fields: [assessmentId], references: [id])
-  source         AttemptSource  @default(NORMAL)
+  assessment     Assessment    @relation(fields: [assessmentId], references: [id])
+  source         AttemptSource @default(NORMAL)
   reviewAlertId  String?
-  score          Float          /// 0〜1
+  score          Float /// 0〜1
   passed         Boolean
-  isFirstAttempt Boolean        /// 一発合格ボーナス判定
-  coinsAwarded   Int            @default(0)
-  takenOn        String         /// "YYYY-MM-DD"
-  createdAt      DateTime       @default(now())
+  isFirstAttempt Boolean /// 一発合格ボーナス判定
+  coinsAwarded   Int           @default(0)
+  takenOn        String /// "YYYY-MM-DD"
+  createdAt      DateTime      @default(now())
 
   @@index([userId, assessmentId])
   @@index([userId, takenOn])
@@ -223,21 +266,21 @@ enum AttemptSource {
 
 /// 1問ごとの解答ログ。習得率・忘却曲線・弱点出題のすべての元データ。
 model ItemResponse {
-  id           String       @id @default(cuid())
+  id           String        @id @default(cuid())
   userId       String
-  user         User         @relation(fields: [userId], references: [id])
+  user         User          @relation(fields: [userId], references: [id])
   itemId       String
-  item         LearningItem @relation(fields: [itemId], references: [id])
+  item         LearningItem  @relation(fields: [itemId], references: [id])
   skill        Skill
-  questionType String       /// "listen_choose", "spell", "phonics_first_sound", "speak" ...
+  questionType String /// "listen_choose", "spell", "phonics_first_sound", "speak" ...
   correct      Boolean
-  score        Float?       /// 部分点（発音スコア・AI採点）0〜1
-  responseMs   Int?         /// 反射速度
-  playbackRate Float?       /// スピードリスニングの再生速度 0.8 / 1.0 / 1.2
-  answer       String?      /// 子どもの入力 or 音声認識結果
+  score        Float? /// 部分点（発音スコア・AI採点）0〜1
+  responseMs   Int? /// 反射速度
+  playbackRate Float? /// スピードリスニングの再生速度 0.8 / 1.0 / 1.2
+  answer       String? /// 子どもの入力 or 音声認識結果
   context      AttemptSource @default(NORMAL)
   attemptId    String?
-  createdAt    DateTime     @default(now())
+  createdAt    DateTime      @default(now())
 
   @@index([userId, itemId, createdAt])
   @@index([userId, skill, createdAt])
@@ -249,8 +292,8 @@ model ItemMemory {
   itemId         String
   user           User         @relation(fields: [userId], references: [id])
   item           LearningItem @relation(fields: [itemId], references: [id])
-  stability      Float        /// 記憶の安定度（日）。R=90%を保てる日数の目安
-  difficulty     Float        /// 1(易)〜10(難)
+  stability      Float /// 記憶の安定度（日）。R=90%を保てる日数の目安
+  difficulty     Float /// 1(易)〜10(難)
   reviewCount    Int          @default(0)
   lapses         Int          @default(0)
   accuracyEwma   Float        @default(0) /// 直近重視の正答率
@@ -260,18 +303,18 @@ model ItemMemory {
 }
 
 model MasterySnapshot {
-  id          String   @id @default(cuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
-  date        String   /// "YYYY-MM-DD"
-  schoolTest  Float
-  phonics     Float
-  listening   Float
-  speaking    Float
-  vocabulary  Float
-  writing     Float
-  overall     Float
-  coverage    Float    /// カリキュラム全体の進捗（学習済み項目/全項目）
+  id         String @id @default(cuid())
+  userId     String
+  user       User   @relation(fields: [userId], references: [id])
+  date       String /// "YYYY-MM-DD"
+  schoolTest Float
+  phonics    Float
+  listening  Float
+  speaking   Float
+  vocabulary Float
+  writing    Float
+  overall    Float
+  coverage   Float /// カリキュラム全体の進捗（学習済み項目/全項目）
 
   @@unique([userId, date])
 }
@@ -285,10 +328,10 @@ model CoinLedger {
   id             String     @id @default(cuid())
   userId         String
   user           User       @relation(fields: [userId], references: [id])
-  amount         Int        /// 獲得は正、消費は負
+  amount         Int /// 獲得は正、消費は負
   reason         CoinReason
   multiplier     Float      @default(1)
-  refType        String?    /// "lesson" | "attempt" | "gacha" | "shop"
+  refType        String? /// "lesson" | "attempt" | "gacha" | "shop"
   refId          String?
   idempotencyKey String     @unique
   createdAt      DateTime   @default(now())
@@ -298,34 +341,34 @@ model CoinLedger {
 
 enum CoinReason {
   LESSON_COMPLETE
-  DAILY_CHECK_FIRST_TRY   /// 復習クエスト一発合格（1分あたり一番お得）
+  DAILY_CHECK_FIRST_TRY /// 復習クエスト一発合格（1分あたり一番お得）
   DAILY_CHECK_PASS
   MINI_TEST_PASS
   BOSS_TEST_PASS
-  TREASURE_ALERT_CLEAR    /// お宝復習アラート経由（2倍）
+  TREASURE_ALERT_CLEAR /// お宝復習アラート経由（2倍）
   ARENA_PLAY
   STREAK_BONUS
-  RECAP_WATCHED           /// きょうのまとめ動画（1日1回）
-  CONVERSATION_FINISHED   /// AIキャラとの かいわを さいごまで（レッスンごとに1回）
-  TRIAL_CARRY_OVER        /// おためしモードの きろくを ひきついだ（端末ごとに1回。idempotencyKey = trial-carry:<端末のおためしID>）
+  RECAP_WATCHED /// きょうのまとめ動画（1日1回）
+  CONVERSATION_FINISHED /// AIキャラとの かいわを さいごまで（レッスンごとに1回）
+  TRIAL_CARRY_OVER /// おためしモードの きろくを ひきついだ（端末ごとに1回。idempotencyKey = trial-carry:<端末のおためしID>）
   GACHA_SPEND
   SHOP_SPEND
 }
 
 /// お宝復習アラート
 model ReviewAlert {
-  id          String      @id @default(cuid())
-  userId      String
-  user        User        @relation(fields: [userId], references: [id])
-  lessonNo    Int
-  itemIds     String[]    /// 出題する「忘れかけ」項目
-  retrievability Float    /// 提示時点の推定想起率
-  multiplier  Float       @default(2)
-  status      AlertStatus @default(OFFERED)
-  offeredOn   String      /// "YYYY-MM-DD"（1日1回まで）
-  expiresAt   DateTime
-  clearedAt   DateTime?
-  createdAt   DateTime    @default(now())
+  id             String      @id @default(cuid())
+  userId         String
+  user           User        @relation(fields: [userId], references: [id])
+  lessonNo       Int
+  itemIds        String[] /// 出題する「忘れかけ」項目
+  retrievability Float /// 提示時点の推定想起率
+  multiplier     Float       @default(2)
+  status         AlertStatus @default(OFFERED)
+  offeredOn      String /// "YYYY-MM-DD"（1日1回まで）
+  expiresAt      DateTime
+  clearedAt      DateTime?
+  createdAt      DateTime    @default(now())
 
   @@index([userId, offeredOn])
 }
@@ -339,13 +382,13 @@ enum AlertStatus {
 }
 
 model Monster {
-  id        String        @id   /// "m-cat", "m-sun-dragon"
-  nameEn    String
-  nameJa    String
-  rarity    Rarity
-  theme     String              /// フォニックス音やワールドに紐づくテーマ
-  imageKey  String
-  owners    UserMonster[]
+  id       String        @id /// "m-cat", "m-sun-dragon"
+  nameEn   String
+  nameJa   String
+  rarity   Rarity
+  theme    String /// フォニックス音やワールドに紐づくテーマ
+  imageKey String
+  owners   UserMonster[]
 }
 
 enum Rarity {
@@ -367,23 +410,23 @@ model UserMonster {
 }
 
 model GachaTicket {
-  id        String      @id @default(cuid())
+  id        String     @id @default(cuid())
   userId    String
-  user      User        @relation(fields: [userId], references: [id])
+  user      User       @relation(fields: [userId], references: [id])
   kind      TicketKind
-  source    String      /// "boss-1-30" など
+  source    String /// "boss-1-30" など
   usedAt    DateTime?
-  createdAt DateTime    @default(now())
+  createdAt DateTime   @default(now())
 }
 
 enum TicketKind {
   NORMAL
-  RARE   /// ボス戦合格で付与。RARE以上確定
+  RARE /// ボス戦合格で付与。RARE以上確定
 }
 
 model ShopItem {
   id       String         @id
-  slot     String         /// "hat" | "outfit" | "pet" | "background"
+  slot     String /// "hat" | "outfit" | "pet" | "background"
   name     String
   price    Int
   imageKey String
@@ -391,11 +434,11 @@ model ShopItem {
 }
 
 model UserShopItem {
-  userId     String
-  itemId     String
-  user       User     @relation(fields: [userId], references: [id])
-  item       ShopItem @relation(fields: [itemId], references: [id])
-  boughtAt   DateTime @default(now())
+  userId   String
+  itemId   String
+  user     User     @relation(fields: [userId], references: [id])
+  item     ShopItem @relation(fields: [itemId], references: [id])
+  boughtAt DateTime @default(now())
 
   @@id([userId, itemId])
 }
@@ -405,8 +448,8 @@ model UserShopItem {
 // -----------------------------------------------------------------------------
 
 model AiGradingCache {
-  key        String   @id   /// sha256(expected|answer|strictness)
-  verdict    String         /// PASS | RETRY | WRONG
+  key        String   @id /// sha256(expected|answer|strictness)
+  verdict    String /// PASS | RETRY | WRONG
   feedbackJa String
   model      String
   createdAt  DateTime @default(now())

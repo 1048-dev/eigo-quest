@@ -78,3 +78,49 @@
 ### おうちの方（オーナー）への確認事項
 - LINE Developers で「LINE ログイン」チャネルを作り、コールバック URL に `https://<本番のドメイン>/api/auth/line/callback` を登録して、チャネルID・チャネルシークレット・その URL を `.env` に入れてください。友だち追加をすすめる（`bot_prompt=aggressive`）には、そのチャネルに公式アカウント（Messaging API チャネル）をリンクする設定が必要です。
 - LINE だけで登録した方が、あとからメールアドレス・パスワードを追加できる機能が必要なら追加します。
+
+## Phase 3: 月ごとの学習レポート（PDF）を LINE で届ける（2026-11-25）
+
+### やったこと
+- **DB（マイグレーション `20261128090000_line_monthly`）**: `Parent` に `lineFriend`（公式アカウントの友だち状態。null = まだ わからない）・`lineFriendChangedAt`・`lineMonthlyEnabled`（毎月の配信のオン/オフ、既定オン）を追加。新しいテーブル `ReportDelivery`（お子さま1人・1回の送信ごとに1行: 月・きっかけ（MONTHLY / MANUAL）・batchId・トークンの SHA-256・期限・ファイル一覧・要約・状態（PENDING / SENT / DRY_RUN / FAILED）・失敗の種類）。保護者の削除で一緒に消えます（onDelete: Cascade）。`prisma migrate diff`（DB なし）で作成。
+- **レポートの中身（`src/lib/report/monthlyReport.ts`、純粋関数 `buildMonthlyReport`）**: 今月のレッスン数・学習した日数・合格したテスト、連続日数・最長連続、6つの力の習得率（送信時点・既存の `computeUserMastery` を再利用）、にがて（低い力2つ・忘れかけの ことば6つまで）、来月の予定（次のレッスンから今月のペース分（10〜30レッスン）の単元6つまで・フォニックス）、数字から決める おうちの方への ひとこと。月は APP_TIMEZONE 基準の "YYYY-MM"。
+- **PDF（`src/lib/report/pdf.ts`）**
+  - レポート（A4 1ページ）は `worksheets/generate_worksheets.py` に追加した `--report-json / --report-out`（ReportLab・日本語フォント埋め込み。ワークシートと同じ見た目）で作成。1ページに収まらなければエラー。
+  - Python・reportlab が無い・失敗したときは、依存なしの かんたんな PDF（TypeScript で直接書く・Adobe-Japan1 の CID フォントを参照）で代わりに作ります。
+  - ワークブック: お子さまが いま いる（これから始める）ワールドの 1か月ワークブック（`worksheets:month` と同じ）。ワールドごとに1回だけ作り `REPORT_STORAGE_DIR/worksheets/` で使い回し。`worksheets/out/monthly/` にあれば それをコピー。作れなければレポートだけ送ります。
+- **ダウンロードページ `/d/<token>`（`src/app/d/[token]/page.tsx`）と PDF `/d/<token>/report|worksheets`**: トークンは 32 バイトのランダム値（セッションと同じ形式）、DB には SHA-256 だけ、30日で期限切れ。その配信の files に入っているファイルだけを返し、レポートは `reports/<その保護者のID>/` の中にあるものだけ、置き場所の外（`..` など）は 404。ログイン不要、noindex・no-referrer・no-store。知らない・期限切れのトークンは区別せず「リンクが使えません」+ おうちの方ページへの案内。
+- **送信（`src/lib/line/messaging.ts`・`src/lib/services/monthlyDeliveryService.ts`）**: Messaging API の push（`https://api.line.me/v2/bot/message/push`、Bearer、`X-Line-Retry-Key` = 1回の送信の batchId で二重送信なし）。Flex メッセージは お子さま1人ならバブル、2人以上はカルーセル（ヘッダー「Eigo Quest 学習レポート」+ 月、名前、要約4行、「PDFをひらく」ボタン → `${APP_BASE_URL}/d/<token>`）。代替テキストは400文字まで。失敗しても例外にせず、DB には失敗の種類（`HTTP_400: …` など）だけを残します（トークンは残さない）。
+- **webhook `POST /api/line/webhook`**: `X-Line-Signature` を `LINE_MESSAGING_CHANNEL_SECRET` で HMAC-SHA256 → base64 にして時間一定で比較。違えば 401 で何もしない。シークレットが無ければ 503。follow / unfollow（ユーザーから）で `Parent.lineFriend` を更新。LINE の再送・順番の入れかわりに備え、前に記録したイベントより新しいときだけ上書き。「検証」ボタン（events が空）は 200。DB 停止中は 503（再送を有効にしておけば あとで届く）。
+- **コマンド `npm run line:monthly [-- --dry-run] [-- --parent <id>] [-- --month YYYY-MM] [-- --force]`（`scripts/line-monthly.ts`）**: 既定は先月の分（毎月1日に cron で実行する想定）。対象は「LINE と連携ずみ・配信オン」の保護者。ブロック中の保護者・同じ月の送信ずみのお子さまには送りません（`--force` を除く）。キーが無い・`--dry-run` のときは LINE に何も送らず、`LINE_OUTBOX_DIR`（既定 `.data/line-outbox/`）に push のリクエストそのもの（`message.json`）と PDF のコピーを書いて、送る内容（お子さま・リンク・ファイル）を表示します。期限切れの配信と その家のレポート PDF も このときに消します。`.env` を自動で読みます。
+- **おうちの方ページ**: 新しいカード「LINE で学習レポート」（`LineMonthlyPanel`）。毎月の配信のオン/オフ、「今月のPDFを今すぐ送る」（今月のここまでの分）、前回送った日時、次に送れる時刻、ブロック中の案内、送信が未設定なら「準備中」。API は `GET/PATCH/POST /api/parent/line-monthly`（暗証番号が必要）。
+- **お子さまの削除・退会**: その子の配信の行と レポート PDF も消します（`deleteUsersData` から）。LINE の連携を解除したら友だち状態も null に戻します。
+- `.env.example`・README に `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`・`LINE_MESSAGING_CHANNEL_SECRET`・`APP_BASE_URL`・`REPORT_STORAGE_DIR`・`LINE_OUTBOX_DIR`・`PYTHON`（すべて空）と LINE Developers での設定のしかたを追記。キーはどこにも書いていません。`.data/` を .gitignore に追加。
+- **テスト**: `tests/line-monthly.test.ts`（33件）。レポートの計算（月の区切り・同じテストは1つ・にがて・来月の予定・ワールドの切りかわり・まだ何もしていない子・全部おわった子・月のヘルパー）、dry-run（キーなし → outbox に message.json と PDF 4つ・fetch は呼ばない・DB は DRY_RUN・DB にトークンの平文が無い／キーがあっても --dry-run なら送らない／対象の絞りこみ／子どもなし）、push の形（URL・Bearer・retry key・宛先・バブル/カルーセル・ボタンのリンクで本当に開ける・送信ずみは送らない・あとから追加した きょうだいだけ送る・--force・LINE のエラー → FAILED → 次の実行で送り直し・ブロック中は送らない・ネットワークエラー）、トークン（30日ちょうどで期限切れ・形のおかしいトークン・ほかの家のトークン・ほかのファイル id・DB の行を書きかえて ほかの家のファイルや置き場所の外を指しても出さない・期限切れの掃除）、webhook（正しい署名・違う署名・署名なし・本文の改ざん・シークレットなし・知らないユーザー・古いイベント）、おうちの方 API（オン/オフ・dry-run のリンク・回数制限（10分・24時間に3回）・本番設定で未連携は 409・暗証番号なしは 403・未ログインは 401・お子さまの削除で配信と PDF も消える）。テスト用の偽 DB は「未設定の列 = null」として比べるように直しました。
+- **本物の DB での確認**: Docker の使い捨て PostgreSQL（ポート 5544）+ `next start` で新しいスクリプト `scripts/line-monthly-db-check.ts`（`npm run check:line-monthly-db -- --db <URL>`）を実行し 32項目すべて OK（webhook の署名 → lineFriend、`line:monthly --dry-run` の出力と outbox、`/d/<token>` のページ・レポート PDF・ワークブック PDF、知らないトークン、おうちの方 API、429、ほかのサイトからの POST は 403、期限切れ、退会で配信も消える）。LINE のサーバーには接続していません。run3 の `scripts/auth-db-check.ts` も引き続きすべて OK。
+- 実際に作ったレポート PDF（ReportLab）を画像で確認し、1ページに収まって日本語・グラフが正しく出ていることを確認しました。
+- `npx tsc --noEmit`・`npx vitest run`（33ファイル・875件）・`npx next build` すべて成功。
+
+### 決めたこと（理由）
+- **PDF は LINE で直接送れないので、トークン付きのダウンロードページ**にしました（指示どおり）。ページはログイン不要です（保護者は LINE のアプリ内ブラウザで開くため、ログイン必須だと開けないことが多い）。そのぶんトークンは 256 ビットのランダム値・ハッシュだけ保存・30日・noindex/no-referrer にしています。
+- **お子さま1人ごとにトークンを分けました**（1回の送信 = 1つの LINE メッセージ = 1つの batchId。きょうだいはカルーセルの別のバブル）。リンクを1人分だけ転送しても、きょうだいの分は見えません。
+- **毎月の一斉配信の既定は「先月の分」**（毎月1日に実行する想定）、「今すぐ送る」は「今月のここまでの分」にしました。
+- **毎月の配信は既定オン**にしました（LINE と連携した保護者は受け取りたい人が多いと考えたため。おうちの方ページでいつでもオフにできます）。「今すぐ送る」はオフでも送ります（本人が頼んだため）。
+- **「今すぐ送る」の回数制限は DB で数えます**（前回から10分・24時間に3回）。PDF を作るので重く、サーバーの再起動・複数台でも効くようにしました。同じ保護者の同時押しはサーバー内でも1つにまとめます。
+- **送信が未設定（キーなし）のときの「今すぐ送る」は dry-run で、ダウンロードページへのリンクを画面に出します**（キーを入れる前でもオーナーが中身を確認できるように）。LINE と連携していない保護者は、本番の設定では送れません（409）。dry-run の一斉配信は連携ずみの保護者だけですが、`--parent` を付けたときは未連携の保護者でも試せます（宛先は「(LINE 未連携)」）。
+- **友だち状態が「わからない（null）」の保護者にも送ります**。LINE ログインの `bot_prompt=aggressive` で友だち追加された follow イベントは、LINE の連携が終わる前に届くことがあり、そのときは記録できないためです。ブロック（unfollow）が分かっている保護者にだけ送りません。
+- **DRY_RUN は「送信ずみ」に数えません**（キーを入れたあとの本番の実行で、ちゃんと送られるように）。失敗（FAILED）も同じで、次の実行で送り直します。
+- **送信設定の切りかえ（オン/オフ）は Parent の列**にしました（`settings` の JSON は1日のレッスン回数の保存処理が形を作り直すため、別の値を入れると消えてしまう）。
+- **PDF の置き場所は `REPORT_STORAGE_DIR`（既定 `.data/reports/`）**。ワークブックはどの家も同じ内容なのでワールドごとに1つを共有し、家ごとのレポートだけ `reports/<保護者ID>/<月>/<ランダム>.pdf` に置きます。期限切れのときに消すのはレポートだけです。
+- **Python が無い環境向けの かんたんな PDF** は、日本語フォントを埋め込まない（表示する側のフォントを使う）ため、ビューアによっては日本語が出ません。本番では ワークシートと同じく Python + reportlab（+ 日本語フォント）を入れておく前提です。
+- PDF のファイル名は ASCII（`eigo-quest-report-2026-11.pdf` など）にしました（ブラウザごとの日本語ファイル名の扱いの違いを避けるため）。
+
+### やらなかったこと
+- 本物の LINE 公式アカウントでの送信確認（オーナーがチャネルを作ってから）。キーを入れて `npm run line:monthly -- --parent <自分の保護者ID>` で確認できます。
+- 定期実行（cron）の設定そのもの（サーバーの環境が決まってから。毎月1日の朝に `npm run line:monthly` を実行してください）。
+- 画面のスクリーンショット確認（Phase 4 の全体チェックでまとめて行う予定）。
+- PDF の置き場所の共有ストレージ（S3 など）対応。サーバー1台の前提です。
+
+### おうちの方（オーナー）への確認事項
+- LINE Developers で、LINE ログインのチャネルと**同じプロバイダー**に Messaging API チャネル（公式アカウント）を作ってください（プロバイダーがちがうとユーザーIDが一致せず届きません）。長期のチャネルアクセストークン・チャネルシークレット・公開 URL を `.env` の `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`・`LINE_MESSAGING_CHANNEL_SECRET`・`APP_BASE_URL` に入れ、Webhook URL に `https://<本番のドメイン>/api/line/webhook` を登録して「Webhook の利用」をオンにしてください。LINE ログインのチャネルにこの公式アカウントをリンクすると、ログイン時に友だち追加をすすめられます。
+- 毎月の配信を「既定オン」にしました。最初はオフにして、保護者が自分でオンにする形がよければ変えます。
+- 「今すぐ送る」の制限（10分に1回・1日3回）とリンクの期限（30日）は、必要なら調整します。

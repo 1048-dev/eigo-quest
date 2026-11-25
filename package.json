@@ -17,6 +17,8 @@
     "smoke:offline": "tsx scripts/smoke-offline.ts",
     "check:auth-db": "tsx scripts/auth-db-check.ts",
     "check:line-db": "tsx scripts/line-db-check.ts",
+    "line:monthly": "tsx scripts/line-monthly.ts",
+    "check:line-monthly-db": "tsx scripts/line-monthly-db-check.ts",
     "screens:auth": "tsx scripts/auth-ui-screens.ts"
   },
   "dependencies": {
