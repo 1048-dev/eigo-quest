@@ -30,6 +30,7 @@ import { disOf, linkOf, misPreBlank, partOf, suffixOf } from "@/lib/curriculum/w
 import { adjOf, familyOf, markOf, personOf, schwaStressBlank } from "@/lib/curriculum/w22Phonics";
 import { mentOf, sciPartOf, shiftOf, tionOf, yAdjOf } from "@/lib/curriculum/w23Phonics";
 import { contrOf, imInOf, overUnderOf, placeOf, placeSyllables, ppOf } from "@/lib/curriculum/w24Phonics";
+import { compoundFocus, compoundOf, intonationOf, iveOf, nessOf, synOf } from "@/lib/curriculum/w25Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -2477,5 +2478,149 @@ describe("カリキュラム: ワールド24 の決まりごと（くもの上�
     expect(said(704)).toMatch(/Yes, it is! Thank you so much!/);
     expect(said(719)).toMatch(/old map/);
     expect(said(720)).toMatch(/Cave of Riddles/);
+  });
+});
+
+describe("カリキュラム: ワールド25 の決まりごと（なぞときの洞くつ）", () => {
+  const w25 = LESSONS.filter((l) => l.world === 25);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+
+  it("ワールド25 は 721〜750 の 30 レッスン、ステージ3・A2+、学年の めやすは 中3", () => {
+    if (w25.length === 0) return; // 未作成ならスキップ
+    expect(w25.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 721 + i));
+    for (const l of w25) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中3");
+      expect(l.stage, `L${l.lessonNo}`).toBe(3);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2+");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w25.length === 0) return;
+    expect(at(721)!.title).toBe("Into the Cave");
+    expect(at(722)!.title).toBe("There's a Door at the Back");
+    expect(at(723)!.title).toBe("In the Top Left Corner");
+    expect(at(726)!.title).toBe("It Might Be a Bat");
+    expect(at(728)!.title).toBe("It Can't Be a Ghost");
+    expect(at(731)!.title).toBe("Look at These Footprints");
+    expect(at(732)!.title).toBe("The Missing Crown");
+    expect(at(736)!.title).toBe("It Has Four Legs");
+    expect(at(738)!.title).toBe("Huge, Tiny, Giant");
+    expect(at(741)!.title).toBe("Is It Bigger Than a Box?");
+    expect(at(744)!.title).toBe("The Answer Is…");
+    expect(at(746)!.title).toBe("A Mini Mystery Story");
+    expect(at(750)!.title).toBe("World 25 Grand Review");
+  });
+
+  it("フォニックス: -ness → -ive → 複合語 → にた いみの ことば → しつもんの イントネーション（各ブロックの 5回目と L746〜750 は ふりかえり）", () => {
+    if (w25.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(721, 724, "ness");
+    rule(726, 729, "ive");
+    rule(731, 734, "compound");
+    rule(736, 739, "synonym");
+    rule(741, 744, "intonation");
+    for (const n of [725, 730, 735, 740, 745, 746, 747, 748, 749, 750]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // -ness: 計画の darkness・sadness・kindness、y を i に かえる ことばも
+    for (const l of range(721, 724)) for (const w of l.phonics.words) expect(nessOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(721, 724).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["darkness", "sadness", "kindness", "happiness"]));
+    // -ive: 計画の detective・creative・active、4つの わな
+    for (const l of range(726, 729)) for (const w of l.phonics.words) expect(iveOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(726, 729).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["detective", "creative", "active"]));
+    expect(new Set(range(726, 729).flatMap((l) => l.phonics.words.map((w) => iveOf(w)!.trap)))).toEqual(new Set(["plain", "drop-e", "change", "ative"]));
+    // 複合語: focus は 2つに わけた 形で ことばと 1つずつ 対応。計画の footprint・flashlight・somebody
+    for (const l of range(731, 734)) {
+      expect(l.phonics.focus, `L${l.lessonNo}`).toEqual(l.phonics.words.map((w) => compoundFocus(w)));
+      for (const w of l.phonics.words) expect(compoundOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    }
+    expect(range(731, 734).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["footprint", "flashlight", "somebody"]));
+    // にた いみ: 計画の huge・tiny・giant
+    for (const l of range(736, 739)) for (const w of l.phonics.words) expect(synOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(736, 739).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["huge", "tiny", "giant"]));
+    // イントネーション: Wh（↘）と Yes / No（↗）が どの 回にも ある
+    for (const l of range(741, 744)) {
+      const kinds = l.phonics.words.map((w) => intonationOf(w)?.kind);
+      expect(kinds, `L${l.lessonNo}`).not.toContain(undefined);
+      expect(new Set(kinds), `L${l.lessonNo}`).toEqual(new Set(["wh", "yesno"]));
+      expect(l.phonics.sounds, `L${l.lessonNo}`).toEqual(kinds.map((k) => (k === "wh" ? "↘" : "↗")));
+    }
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w25.length === 0) return;
+    expect(ex(721, 725)).toContain("It's dark in here. Turn on your flashlight.");
+    expect(ex(721, 725)).toContain("There's a small door at the back of the cave.");
+    expect(ex(721, 725)).toContain("In the top left corner, there's a bat.");
+    expect(ex(721, 725)).toContain("There's a lamp next to the box.");
+    expect(ex(721, 725)).toContain("At the end of the tunnel, there's a lake.");
+    expect(ex(726, 730)).toContain("What's that sound?");
+    expect(ex(726, 730)).toContain("It might be a bat.");
+    expect(ex(726, 730)).toContain("It's small and gold. It must be a key.");
+    expect(ex(726, 730)).toContain("It can't be a ghost. Ghosts aren't real!");
+    expect(ex(726, 730)).toContain("It's probably a bear's footprint.");
+    expect(ex(731, 735)).toContain("Look at these footprints. Someone was here.");
+    expect(ex(731, 735)).toContain("The crown was here yesterday. Now it's gone.");
+    expect(ex(731, 735)).toContain("Where were you at three o'clock?");
+    expect(ex(731, 735)).toContain("Do you know who took it?");
+    expect(ex(731, 735)).toContain("Clue 1: wet footprints. Clue 2: a blue feather.");
+    expect(ex(736, 740)).toContain("It has four legs, but it can't walk.");
+    expect(ex(736, 740)).toContain("The more you take, the more you leave behind.");
+    expect(ex(736, 740)).toContain("It's a huge rock with a tiny hole.");
+    expect(ex(736, 740)).toContain("It's yellow. Monkeys love it.");
+    expect(ex(736, 740)).toContain("I'm round. I have a face, but no eyes.");
+    expect(ex(741, 745)).toContain("Is it bigger than a box?");
+    expect(ex(741, 745)).toContain("Was the thief tall?");
+    expect(ex(741, 745)).toContain("It can't be Haru. He was with me.");
+    expect(ex(741, 745)).toContain("The thief was the crow! It loves shiny things.");
+    expect(ex(746, 750)).toContain("Who ate the cookies?");
+    expect(ex(746, 750)).toContain("In this picture, something is strange.");
+    expect(ex(746, 750)).toContain("One night, the museum's painting disappeared.");
+    expect(ex(746, 750)).toContain("The case is closed! Great detective work!");
+  });
+
+  it("推量（might / must）は L726 から、It can't be ～ は L728 から、Do you know who ～? は L734 から。関係代名詞は 出さない", () => {
+    if (w25.length === 0) return;
+    for (const l of range(721, 725)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(might|must)\b/i);
+    for (const l of range(721, 727)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(it|that|this) can't be\b/i);
+    for (const l of range(721, 733)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\bdo you know (who|where|what|when|why|how)\b/i);
+    expect(ex(726, 726)).toMatch(/might/);
+    expect(ex(734, 734)).toMatch(/Do you know who/);
+    for (const l of w25) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(people|person|someone|somebody|a friend|the man|the woman|the animal|an animal) who\b/);
+  });
+
+  it("ステージ3: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・150 語 以上で 短い 読みものを ふくむ、会話シーンは 5〜7 行、L750 は スピード TPR", () => {
+    if (w25.length === 0) return;
+    for (const l of w25) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.03);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(150);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{40,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(5);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（probably・witness）
+    expect(w25.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([729, 734]);
+    expect(at(750)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない", () => {
+    if (w25.length === 0) return;
+    for (const l of w25) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+  });
+
+  it("物語: L721 で どうくつへ → L732 で おうかんが きえる → L735 で てがかり → L744 で カラスが はんにん → L750 で ひびきの劇場へ", () => {
+    if (w25.length === 0) return;
+    expect(said(721)).toMatch(/flashlight/);
+    expect(said(732)).toMatch(/crown/);
+    expect(said(735)).toMatch(/feather/);
+    expect(said(744)).toMatch(/crow/);
+    expect(at(749)!.teacherScript + said(749) + at(750)!.teacherScript + said(750)).toMatch(/Theater of Echoes/);
   });
 });

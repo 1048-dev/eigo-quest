@@ -18,7 +18,7 @@ describe("選択肢が かさならない", () => {
     const bad: string[] = [];
     for (const a of ASSESSMENTS) for (const seed of [1, 2, 3, 42]) bad.push(...dupes(buildTestQuestions(a, { seed })).map((d) => `${a.id}: ${d}`));
     expect(bad).toEqual([]);
-  });
+  }, 60_000); // ワールドが ふえる ほど 重く なる（全テスト × 4 seed）。まとめて 回すと 5 秒を こえる ことが ある
 
   it("すべての レッスン（クイズ・スピードリスニング）", () => {
     const bad: string[] = [];
@@ -29,5 +29,5 @@ describe("選択肢が かさならない", () => {
       }
     }
     expect(bad).toEqual([]);
-  });
+  }, 60_000); // ワールドが ふえる ほど 重く なる（全テスト × 4 seed）。まとめて 回すと 5 秒を こえる ことが ある
 });

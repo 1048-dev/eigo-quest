@@ -599,3 +599,43 @@
 - `npx vitest run`: 58 ファイル・1,716 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 211 → 214 kB、/lesson/[lessonNo] 217 → 219 kB、/gacha 200 → 202 kB、/test/[assessmentId] 199 → 202 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド24 の 問題の コードと 表と 索引の 1 ワールドぶん。ワールド23 と おなじ くらい。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 35` / `--pack 36`: No.35（L681〜700）・No.36（L701〜720）とも 62 ページで 作れることを 確認
+
+## WORLD — ワールド25「なぞときの洞くつ」（L721〜750・ステージ3・A2+）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-25.json` を 新しく 作成（30 レッスン、ステージ3・A2+、`school.grade` は「中3」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 750 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 127、会話の セリフ 186 行（1 回 5〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 167 語・最少 151 語・最大 197 語）で、まいかい「読みもの」（どうくつの いりぐちの はりがみ・ルマの メモ・かべの え の せつめい・ちずの はんれい・ハルの ノート・てがかりボード・なぞなぞの とびら・ミステリーの えほん・ショーの ポスター など 40〜75 語）を いっしょに 読む。日本語の ヒントは 2 回だけ（L729「probably（たぶん）」・L734「witness（もくげきしゃ）」）。
+- ブロック構成: 721〜725 くわしく せつめい（It's dark in here. Turn on your flashlight.・There's a small door at the back of the cave.・In the top left corner, there's a bat.・There's a lamp next to the box.・At the end of the tunnel, there's a lake.）→ 726〜730 すいりょう（What's that sound? / It might be a bat.・It must be a key.・It can't be a ghost. Ghosts aren't real!・maybe / probably / definitely・ふくろの なかみ あて）→ 731〜735 じけん（Someone was here.・The crown was here yesterday. Now it's gone.・Where were you at three o'clock?（過去進行形で アリバイ）・Do you know who took it?（間接疑問の 入門）・Clue 1 / Clue 2）→ 736〜740 なぞなぞ（It has four legs, but it can't walk.・The more you take, the more you leave behind.・huge / tiny / giant・じぶんの なぞなぞ・なぞなぞ大会）→ 741〜745 しぼりこむ・はんろん（Is it bigger than a box?・Was the thief tall?・It can't be Haru. He was with me.・The thief was the crow! It loves shiny things.・First, ～. Then, ～. So, ～.）→ 746〜750 よむ・かく（Who ate the cookies?・In this picture, something is strange.・One night, the museum's painting disappeared.・さよなら たんけん・L750 The case is closed! Great detective work!）。
+- 物語の 糸: ワールド24 の ひかる ちずで スター・ステーションの さきの どうくつへ（L721、キコの あおい かばんの かいちゅうでんとう）。どうくつの まもりびとは ひかる むしの ルマ、すんで いるのは モグラの モールさん・コウモリの ベラ・あおい とりの ピップ・カラスの コーラ（台本と、ビリモや リコが やくを する セリフの なかだけ）。L727 で みつけた きんの かぎで L738 の かぎあなの いわが ひらく。L732 で ルマの クリスタルの おうかんが きえる（きのうの ごご 3じごろ・6じに ルマが きづく）→ L733 アリバイ（モールさんは トンネル、ベラは ねて いた、ピップは たきで うたって いた、コーラだけ だれも みて いない）→ L734 ピップが「ひかる ものを もった くろい とり」を 見た → L735 ゆびが 3本の ぬれた あしあと と あおい はね（ピップが あやしい？）→ L743 ピップが ハルを うたがうが「ハルは わたしと いっしょ」・ピップも たきに いた → L744 カラスの はねは ランプの ひかりで あおく 見える、はんにんは コーラ。コーラは あやまり、「つぎは さきに きく」。L749 ルマから「ひびきの劇場」への しょうたいじょう、L750 こだまに みちびかれて ワールド26 へ。
+- フォニックス（`src/lib/curriculum/w25Phonics.ts`・`questions.ts` の `w25Question`。w24Question より 先に よぶ）:
+  - -ness: 「『〜さ』を あらわす ことばは どれ？」（dark（くらい）→ ？（くらやみ・くらさ）→ darkness / darkly / darker。happy・lazy・tidy は happyness など y の まま つけた つづりも 4つめに。ワールド21 の「おわりを つけると？」とは べつの 角度で、-ly（〜に）・-er（もっと）と 品詞を くらべる）
+  - -ive: 「ive の ことばで ただしい つづりは どれ？」（create → creative / creativ / createive。わなは 4種類: そのまま・e を とる・つづりが かわる（explode → explosive・describe → descriptive・defend → defensive）・ative（talkative・imaginative）。「英語の ことばは v で おわらない」を まいかい せつめい）
+  - 複合語（focus は "foot-print"）: 「あと 1つの ことばは どれ？」（＿＿print（あしあと）→ foot / ear / sky、some＿＿（なにか）→ thing / body / where。ワールド15 の「2つに わけると？」とは べつの 角度で、パーツの いみから 考える）
+  - にた いみの ことば（focus は ことば そのもの "huge"）: 「にた いみの ことばは どれ？」（huge（とても おおきい）→ big / small / quiet。まちがいに ほかの にた ことばを 入れない ことを テストで まもる）
+  - しつもんの イントネーション（focus は しつもん そのもの "Is it bigger than a box"）: 「この しつもんの おわりは あがる？ さがる？」（↗ あがる / ↘ さがる / → かわらない。Wh は ↘、Yes / No は ↗。Do you know who took it? は who が あっても ↗ と せつめい）
+- `vowelTeams.ts` の 読み上げで -ness・-ive は その回の ことばを よむ（`w25Say`。ワールド24 より 先。ワールド21 の -ness の 回と ことばが ぜんぶ かさなる ときは はたらかない）。複合語は ワールド12 の きまりで ことば まるごと、ことば・しつもんは そのまま。
+- テスト: `tests/curriculum.test.ts` に ワールド25 の 決まりごと（範囲・ステージ3・A2+・中3・タイトル・フォニックスの 順と 種類と わな・文法と 会話の 型・might / must は L726 から・It can't be は L728 から・Do you know who ～? は L734 から・関係代名詞なし・先生の台本は 英語だけで 150 語 以上＋読みもの・会話 5〜7 行・話し手は 5 人だけ・AI 会話で 個人情報を きかない・L750 スピード TPR・物語）を 追加。`tests/phonics-w25.test.ts`（14 テスト。L720 までの どの 回でも w25Say が はたらかない ことも たしかめる）を 追加。
+
+### 決めたこと（理由）
+- **フォニックスの ブロックの 順を 計画から 入れかえた**: 計画は B4 イントネーション → B5 にた いみの ことば だが、L738「Huge, Tiny, Giant」は 736〜739 の ブロック、20 の 質問・はい / いいえ たんていは 741〜744 の ブロックに あるので、にた いみの ことばを 736〜739、イントネーションを 741〜744 に した。
+- **新しい phonics.rule**: "ness" "ive" "compound" "synonym" "intonation"（ふりかえりは "review"）。
+- **イントネーションの 選択肢は 3つ**（↗ / ↘ / →）。ほかの ワールドの 問題と おなじく 3つ 以上に そろえる ため「→ かわらない」を わなに した。おなじ しつもんの フレーズは ワールド22 の おわりの しるしの 表（Who are you など）と かさならない ものだけに した。
+- **core の 表現には ― ・ ～ を 入れない**（全体の きまり）: L726 は core を「What's that sound?」、こたえ「It might be a bat.」を 2つめに。L730 の 計画「It might be a ～ because ～.」は「It might be a ball because it's round.」に。L741・L742・L743・L744 は 計画の 2文を core と 2つめの 表現に わけた（テストでは つなげて たしかめる）。L739 の 2つめは 3人称の なぞなぞに あわせて「What is it? ― A banana!」。L749 の core は ふりかえりで くりかえしに ならない よう「There's a light at the end of the tunnel.」。
+- **文法の じゅんばん**: 推量の might / must は L726 から（721〜725 には 義務の must も 出さない）、It can't be ～ は L728 から、間接疑問 Do you know who / where ～? は L734 から（テストで まもる）。関係代名詞（ステージ4）は 出さない。
+- **あんぜん**: L721 くらい ところでは おとなの そばに いる・ほんとうの どうくつに ひとりで 入らない。どろぼう やくの コーラは あやまって ゆるされる（こわく しない）。AI 会話は なまえ・すんで いる ところを きかない。
+- **新しい 話し手は 増やさない**: ルマ・どうくつの どうぶつたち・なぞなぞの とびらは 台本の なかか、ビリモ・リコが「I'm playing Pip!」と やくを する。L746 の ものがたり（ミア・ケン・ネコの モモ・イヌの ポチ）は オリジナル。会社名・商品名は 出さない。
+- **作りかた**: 30 レッスンを 3つの まとまり（721〜730・731〜740・741〜750）に わけて 同じ 計画書から 並行して 下書きし、まとめてから 自分で 1 回 見なおした。なおした ところ: おうかんの いれもの（treasure box → glass box に そろえる）、じけんの じかん（「きのうの よる」→ きのうの ごご 3じごろ・6じに きづく に そろえる、L732・L742・L743）、ピップの アリバイ（「ベラと うたって いた」は ベラが ねて いた L733 と あわないので「たきで うたって いた。ハルと リコが きいて いた」に、L745 も）、L736 の 先生の なぞなぞ（L740 の とけいと かぶるので「It has keys, but it can't open a door.」に）、L744 の it / her の まじり。
+- **テストの 時間**: `tests/choices-unique.test.ts` の 2つの テスト（全テスト × 4 seed・全レッスン）が、ワールドが ふえて まとめて 回すと 5 秒を こえる ように なった（単体では 通る）。中身は かえず タイムアウトを 60 秒に した。
+
+### 例（L733「Where Were You?」）
+- 表現（core）: Where were you at three o'clock? ／ I was sleeping in my nest. ／ What were you doing then? ― I was reading by the waterfall.
+- 読みもの（台本より）: "Cave animals: Mr. Mole lives in a tunnel under the big rock. Bella the bat sleeps on the ceiling in the daytime. Pip the bluebird sings by the waterfall. Cora the crow loves shiny stones. Everyone was in the cave yesterday afternoon."
+- 会話: Haru「Mr. Mole, where were you at three o'clock?」 Birimo「I'm playing Mr. Mole! I was digging a tunnel under the big rock.」 … Riko「So, where was Cora the crow? Nobody saw her.」 Ms. Emma「Good questions! Write every answer in your notebook. We'll check them later.」
+- フォニックス: keyhole / footstep / moonlight / waterfall（問題は「あと 1つの ことばは どれ？」key＿＿（かぎあな）→ hole / cup / sun）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 59 ファイル・1,768 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 214 → 218 kB、/lesson/[lessonNo] 219 → 223 kB、/gacha 202 → 206 kB、/test/[assessmentId] 202 → 206 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド25 の 問題の コードと 表と 索引の 1 ワールドぶん。ワールド24 より 少し 多い（表が 5つ・まちがいを 手で 書いた ぶん）。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 37`: No.37（L721〜740・63 ページ）を 作れることを 確認（No.38 は ワールド26 が できてから）

@@ -1,0 +1,4618 @@
+{
+  "world": 25,
+  "stage": 3,
+  "level": "A2+",
+  "lessons": [
+    {
+      "lessonNo": 721,
+      "world": 25,
+      "title": "Into the Cave",
+      "titleJa": "どうくつの なかへ",
+      "school": {
+        "grade": "中3",
+        "topic": "It's dark in here. Turn on your flashlight.：ひかる ちずに みちびかれて、なぞときの どうくつに はいる",
+        "grammar": "It's dark in here. / Turn on ～. / Where are we? ― We're in ～. / Stay close.",
+        "expressions": [
+          {
+            "en": "It's dark in here. Turn on your flashlight.",
+            "ja": "ここは くらいね。かいちゅうでんとうを つけて。",
+            "core": true
+          },
+          {
+            "en": "Where are we? ― We're in the Cave of Riddles.",
+            "ja": "ここは どこ？ ― なぞときの どうくつの なかだよ。"
+          },
+          {
+            "en": "Stay close. Don't go alone.",
+            "ja": "はなれないでね。ひとりで いかないで。"
+          }
+        ],
+        "testPoints": [
+          "It's dark in here. Turn on your flashlight. で くらい ばしょで どうするかを いえる",
+          "-ness の ことば（darkness・brightness・softness・coldness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn on your flashlight. Click!",
+          "ja": "かいちゅうでんとうを つけて。カチッ！",
+          "action": "スイッチを おす まね",
+          "emoji": "🔦"
+        },
+        {
+          "en": "Walk slowly in the dark.",
+          "ja": "くらい なかを ゆっくり あるいて。",
+          "action": "てを まえに だして ゆっくり あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Hold hands with your friend.",
+          "ja": "ともだちと てを つないで。",
+          "action": "となりの ひとと てを つなぐ まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Shine the light on the wall.",
+          "ja": "かべを てらして。",
+          "action": "ライトを かべに むける まね",
+          "emoji": "💡"
+        }
+      ],
+      "phonics": {
+        "rule": "ness",
+        "focus": [
+          "-ness"
+        ],
+        "sounds": [
+          "/nəs/"
+        ],
+        "words": [
+          "darkness",
+          "brightness",
+          "softness",
+          "coldness"
+        ],
+        "tipJa": "ようすの ことばに ness を つけると「〜さ」の なまえの ことば。dark（くらい）→ darkness（くらやみ）、bright → brightness（あかるさ）、soft → softness、cold → coldness。ness は よわく「ネス」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "flashlight",
+          "ja": "かいちゅうでんとう",
+          "emoji": "🔦",
+          "core": true
+        },
+        {
+          "en": "cave",
+          "ja": "どうくつ",
+          "emoji": "🕳️"
+        },
+        {
+          "en": "dark",
+          "ja": "くらい",
+          "emoji": "🌑"
+        },
+        {
+          "en": "entrance",
+          "ja": "いりぐち",
+          "emoji": "🚪"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I've had the best trip ever! Today, our adventure goes underground. The old map is glowing, and it points to a cave. When a place has no light, you can say, It's dark in here. Then, you can say, Turn on your flashlight. Say it with me. It's dark in here. Turn on your flashlight. Great! In a dark place, always stay close to a grown-up. Never go into a real cave alone. Let's read the sign at the cave door. \"Welcome to the Cave of Riddles! It's dark inside, so bring a flashlight. Stay with your group, and walk slowly. Listen carefully. This cave is full of secrets and riddles. Can you solve them all? From Luma, the cave keeper.\" What should you bring? A flashlight. Who is the cave keeper? Luma. Now, phonics. Darkness. Brightness. Softness. Coldness. Dark becomes darkness. Bright becomes brightness. Add n, e, s, s, and the word becomes a thing. Let's step into the darkness together!",
+      "conversation": {
+        "scene": "The friends follow the glowing map into a dark cave",
+        "sceneJa": "ひかる ちずを たどって、くらい どうくつに はいる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "The map is glowing! Look, it points to that cave.",
+            "ja": "ちずが ひかってる！みて、あの どうくつを さしてるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow. It's dark in here. I can't see anything!",
+            "ja": "わあ。ここは くらいね。なにも みえない！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Kiko, you have a flashlight in your blue bag, right?",
+            "ja": "キコ、あおい かばんに かいちゅうでんとうが はいってるよね？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes! Here it is. Turn on your flashlight, everyone!",
+            "ja": "うん！はい、これ。みんな、かいちゅうでんとうを つけて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Click! Oh, that's better. Now I can see the rocks.",
+            "ja": "カチッ！ああ、よく なった。いわが みえるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good job. Stay close to me, everyone. Don't go anywhere alone.",
+            "ja": "よく できました。みんな、わたしの そばに いてね。ひとりで どこにも いかないでね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と くらい どうくつに はいる ごっこを しよう。It's dark in here. Turn on your flashlight. と いって、なにが みえるか はなそう",
+          "starterEn": "Hello! We're standing at the door of a dark cave. What should we do first?",
+          "targetExpressions": [
+            "It's dark in here. Turn on your flashlight.",
+            "Where are we? ― We're in the Cave of Riddles.",
+            "Stay close. Don't go alone."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's dark in here. Turn on your flashlight.",
+          "Where are we? ― We're in the Cave of Riddles. / Stay close. Don't go alone.",
+          "darkness・brightness・softness・coldness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 722,
+      "world": 25,
+      "title": "There's a Door at the Back",
+      "titleJa": "おくに ドアが ある",
+      "school": {
+        "grade": "中3",
+        "topic": "There's a small door at the back of the cave.：どうくつの ひろまの ようすを せつめいする（at the back / in the middle）",
+        "grammar": "There's ～ at the back of ～. / There are ～. / What's in the middle?",
+        "expressions": [
+          {
+            "en": "There's a small door at the back of the cave.",
+            "ja": "どうくつの おくに ちいさな ドアが あるよ。",
+            "core": true
+          },
+          {
+            "en": "What's in the middle? ― There's a big stone table.",
+            "ja": "まんなかには なにが ある？ ― おおきな いしの テーブルが あるよ。"
+          },
+          {
+            "en": "There are lots of lamps on the walls.",
+            "ja": "かべに ランプが たくさん あるよ。"
+          }
+        ],
+        "testPoints": [
+          "There's ～ at the back of ～. / There are ～. で ひろまの ようすを せつめいできる",
+          "-ness の ことば（sadness・happiness・kindness・weakness。happy → happiness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the back of the hall.",
+          "ja": "ひろまの おくを ゆびさして。",
+          "action": "おくの ほうを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Knock on the small door.",
+          "ja": "ちいさな ドアを ノックして。",
+          "action": "コンコンと ノックする まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Light the lamps one by one.",
+          "ja": "ランプを 1つずつ つけて。",
+          "action": "1つずつ ひを つける まね",
+          "emoji": "🪔"
+        },
+        {
+          "en": "Try to open the door. It's locked!",
+          "ja": "ドアを あけて みて。かぎが かかってる！",
+          "action": "ドアノブを まわす まね",
+          "emoji": "🔒"
+        }
+      ],
+      "phonics": {
+        "rule": "ness",
+        "focus": [
+          "-ness"
+        ],
+        "sounds": [
+          "/nəs/"
+        ],
+        "words": [
+          "sadness",
+          "happiness",
+          "kindness",
+          "weakness"
+        ],
+        "tipJa": "sad → sadness（かなしみ）、kind → kindness（やさしさ）、weak → weakness（よわさ）。happy は y を i に かえて happiness（しあわせ）。happyness とは かかないよ。"
+      },
+      "vocab": [
+        {
+          "en": "at the back",
+          "ja": "おくに・うしろに",
+          "emoji": "🚪",
+          "core": true
+        },
+        {
+          "en": "in the middle",
+          "ja": "まんなかに",
+          "emoji": "🎯"
+        },
+        {
+          "en": "lamp",
+          "ja": "ランプ",
+          "emoji": "🪔"
+        },
+        {
+          "en": "locked",
+          "ja": "かぎが かかった",
+          "emoji": "🔒"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It's dark in here. Turn on your flashlight. Today, we're standing in a big hall in the cave. Let's describe it. There's a small door at the back of the cave. Say it with me. There's a small door at the back of the cave. Great! Use there's for one thing, and there are for two or more things. There are lots of lamps on the walls. Where is it? At the front, in the middle, at the back. Let's read Luma's welcome sign. \"This is the Great Hall. There's a stone table in the middle. There are twelve lamps on the walls. At the back, there's a small door, but it's locked. The key is hidden somewhere in the cave. Good luck, young detectives!\" What's in the middle of the hall? A stone table. Can we open the small door? No, it's locked. Now, phonics. Sadness. Happiness. Kindness. Weakness. Happy becomes happiness. Change y to i, then add ness. Let's describe the Great Hall!",
+      "conversation": {
+        "scene": "The friends describe the Great Hall of the cave",
+        "sceneJa": "どうくつの ひろまの ようすを せつめいする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Wow, this hall is so big! What's in the middle?",
+            "ja": "わあ、この ひろま、すごく ひろいね！まんなかには なにが ある？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "There's a big stone table. And there are lots of lamps on the walls.",
+            "ja": "おおきな いしの テーブルが あるよ。それに かべに ランプが たくさん。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! There's a small door at the back of the cave.",
+            "ja": "みて！どうくつの おくに ちいさな ドアが あるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's open it! Oh, no. It's locked.",
+            "ja": "あけて みよう！あれ、だめだ。かぎが かかってる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The sign says the key is hidden somewhere in the cave.",
+            "ja": "かんばんに、かぎは どうくつの どこかに かくしてあるって かいてあるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Nice describing! Front, middle, back. Now I can see the hall in my mind.",
+            "ja": "じょうずな せつめいね！まえ、まんなか、おく。ひろまが あたまに うかぶわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に ひろまの ようすを せつめいしよう。There's ～ at the back. / There are ～. を つかって、どこに なにが あるか いおう",
+          "starterEn": "I'm in a big room in a cave, but I can't see well. What's in the room?",
+          "targetExpressions": [
+            "There's a small door at the back of the cave.",
+            "What's in the middle? ― There's a big stone table.",
+            "There are lots of lamps on the walls."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "There's a small door at the back of the cave.",
+          "What's in the middle? ― There's a big stone table. / There are lots of lamps on the walls.",
+          "sadness・happiness・kindness・weakness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 723,
+      "world": 25,
+      "title": "In the Top Left Corner",
+      "titleJa": "ひだりうえの すみに",
+      "school": {
+        "grade": "中3",
+        "topic": "In the top left corner, there's a bat.：どうくつの かべの えを すみごとに くわしく せつめいする",
+        "grammar": "In the top left corner, there's ～. / In the bottom right corner, there are ～. / What's in the center?",
+        "expressions": [
+          {
+            "en": "In the top left corner, there's a bat.",
+            "ja": "ひだりうえの すみに こうもりが いるよ。",
+            "core": true
+          },
+          {
+            "en": "In the bottom right corner, there are three stars.",
+            "ja": "みぎしたの すみに ほしが 3つ あるよ。"
+          },
+          {
+            "en": "What's in the center? ― There's a big moon.",
+            "ja": "まんなかには なにが ある？ ― おおきな つきが あるよ。"
+          }
+        ],
+        "testPoints": [
+          "In the top left corner, there's ～. で えの どこに なにが あるかを くわしく いえる",
+          "-ness の ことば（loudness・sweetness・freshness・thickness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the top left corner.",
+          "ja": "ひだりうえの すみを ゆびさして。",
+          "action": "ひだりうえを ゆびさす",
+          "emoji": "↖️"
+        },
+        {
+          "en": "Point to the bottom right corner.",
+          "ja": "みぎしたの すみを ゆびさして。",
+          "action": "みぎしたを ゆびさす",
+          "emoji": "↘️"
+        },
+        {
+          "en": "Draw a big circle in the center.",
+          "ja": "まんなかに おおきな まるを かいて。",
+          "action": "くうちゅうに おおきな まるを かく",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Flap your wings like a bat.",
+          "ja": "こうもりみたいに はねを ぱたぱたして。",
+          "action": "りょうてを ぱたぱた させる",
+          "emoji": "🦇"
+        }
+      ],
+      "phonics": {
+        "rule": "ness",
+        "focus": [
+          "-ness"
+        ],
+        "sounds": [
+          "/nəs/"
+        ],
+        "words": [
+          "loudness",
+          "sweetness",
+          "freshness",
+          "thickness"
+        ],
+        "tipJa": "loud（おおきい おと）→ loudness（おとの おおきさ）、sweet → sweetness（あまさ）、fresh → freshness（しんせんさ）、thick → thickness（ぶあつさ）。もとの ことばは そのまま、おわりに ness。"
+      },
+      "vocab": [
+        {
+          "en": "corner",
+          "ja": "すみ",
+          "emoji": "📐",
+          "core": true
+        },
+        {
+          "en": "top left",
+          "ja": "ひだりうえ",
+          "emoji": "↖️"
+        },
+        {
+          "en": "bottom right",
+          "ja": "みぎした",
+          "emoji": "↘️"
+        },
+        {
+          "en": "painting",
+          "ja": "え・かいが",
+          "emoji": "🖼️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, There's a small door at the back of the cave. Today, we found an old painting on the cave wall. To describe a picture clearly, we use corners. In the top left corner, there's a bat. Say it with me. In the top left corner, there's a bat. Wonderful! Top left, top right, bottom left, bottom right, and the center. Point to each corner with me. Let's read Luma's note about the painting. \"This painting is very old. In the top left corner, there's a bat. In the top right corner, there's a gold crown. In the bottom right corner, there are three stars. In the center, there's a big moon. Look carefully. One small thing is a clue.\" Where is the bat? In the top left corner. What's in the top right corner? A gold crown. Now, phonics. Loudness. Sweetness. Freshness. Thickness. Loud, loudness. Sweet, sweetness. Fresh, freshness. Thick, thickness. Let's describe every corner!",
+      "conversation": {
+        "scene": "The friends describe an old painting on the cave wall",
+        "sceneJa": "どうくつの かべの ふるい えを せつめいする",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at this old painting on the wall!",
+            "ja": "かべの この ふるい えを みて！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In the top left corner, there's a bat.",
+            "ja": "ひだりうえの すみに こうもりが いるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And in the top right corner, there's a gold crown.",
+            "ja": "それに みぎうえの すみには きんの おうかんが あるね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What's in the center?",
+            "ja": "まんなかには なにが ある？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "There's a big moon. In the bottom right corner, there are three stars.",
+            "ja": "おおきな つきが あるよ。みぎしたの すみには ほしが 3つ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Excellent! When you say the corner first, your listener knows where to look.",
+            "ja": "すばらしい！さきに すみを いうと、きく ひとは どこを みれば いいか わかるのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いっしょに えを そうぞうして、すみごとに せつめいしよう。In the top left corner, there's ～. を つかおう",
+          "starterEn": "Let's imagine a painting together. I'll start. In the center, there's a big tree. What's in the top left corner?",
+          "targetExpressions": [
+            "In the top left corner, there's a bat.",
+            "In the bottom right corner, there are three stars.",
+            "What's in the center? ― There's a big moon."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In the top left corner, there's a bat.",
+          "In the bottom right corner, there are three stars. / What's in the center? ― There's a big moon.",
+          "loudness・sweetness・freshness・thickness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 724,
+      "world": 25,
+      "title": "Describe and Draw",
+      "titleJa": "せつめいを きいて かこう",
+      "school": {
+        "grade": "中3",
+        "topic": "There's a lamp next to the box.：せつめいを きいて えを かく ゲーム（next to / under / between）",
+        "grammar": "There's ～ next to ～. / Is it big or small? / Draw ～ under ～.",
+        "expressions": [
+          {
+            "en": "There's a lamp next to the box.",
+            "ja": "はこの となりに ランプが あるよ。",
+            "core": true
+          },
+          {
+            "en": "Is the box big or small? ― It's small.",
+            "ja": "はこは おおきい？ちいさい？ ― ちいさいよ。"
+          },
+          {
+            "en": "Now, draw a key under the table.",
+            "ja": "つぎは、テーブルの したに かぎを かいて。"
+          }
+        ],
+        "testPoints": [
+          "There's ～ next to ～. の せつめいを きいて かいたり、じぶんで せつめいしたり できる",
+          "-ness の ことば（fairness・cleverness・laziness・tidiness。lazy → laziness、tidy → tidiness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up your pencil.",
+          "ja": "えんぴつを もって。",
+          "action": "えんぴつを もつ まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Draw a box in the middle.",
+          "ja": "まんなかに はこを かいて。",
+          "action": "くうちゅうに しかくを かく",
+          "emoji": "📦"
+        },
+        {
+          "en": "Draw a lamp next to the box.",
+          "ja": "はこの となりに ランプを かいて。",
+          "action": "となりに ランプを かく まね",
+          "emoji": "🪔"
+        },
+        {
+          "en": "Show your picture to a friend.",
+          "ja": "ともだちに えを みせて。",
+          "action": "えを もちあげて みせる まね",
+          "emoji": "🖼️"
+        }
+      ],
+      "phonics": {
+        "rule": "ness",
+        "focus": [
+          "-ness"
+        ],
+        "sounds": [
+          "/nəs/"
+        ],
+        "words": [
+          "fairness",
+          "cleverness",
+          "laziness",
+          "tidiness"
+        ],
+        "tipJa": "fair（こうへいな）→ fairness、clever（かしこい）→ cleverness。lazy・tidy の ように しいん ＋ y で おわる ことばは y を i に かえて laziness・tidiness。"
+      },
+      "vocab": [
+        {
+          "en": "next to",
+          "ja": "〜の となりに",
+          "emoji": "➡️",
+          "core": true
+        },
+        {
+          "en": "under",
+          "ja": "〜の したに",
+          "emoji": "⬇️"
+        },
+        {
+          "en": "between",
+          "ja": "〜の あいだに",
+          "emoji": "↔️"
+        },
+        {
+          "en": "describe",
+          "ja": "せつめいする",
+          "emoji": "🗣️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, In the top left corner, there's a bat. Today, we'll play a game called Describe and Draw. One person describes a picture. The other person listens and draws. Listen for the position words. Next to, under, on, behind, between. There's a lamp next to the box. Say it with me. There's a lamp next to the box. Super! If you're not sure, ask a question. Is the box big or small? Let's read the game card. \"Describe and Draw. Player A: Look at the picture, but don't show it. Describe it in five sentences. Player B: Listen and draw. You can ask three questions. Then, compare the two pictures. Are they the same? Have fun!\" How many sentences does Player A say? Five. How many questions can Player B ask? Three. Now, phonics. Fairness. Cleverness. Laziness. Tidiness. Lazy, laziness. Tidy, tidiness. Change y to i before ness. Now, find a partner. Let's describe and draw!",
+      "conversation": {
+        "scene": "Riko describes a picture, and Birimo draws it",
+        "sceneJa": "リコが えを せつめいして、ビリモが かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's play Describe and Draw. I'll describe, and you draw, Birimo.",
+            "ja": "せつめいして かく ゲームを しよう。わたしが せつめいするから、ビリモが かいてね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Okay! I have my pencil.",
+            "ja": "いいよ！えんぴつ もったよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "There's a box in the middle. There's a lamp next to the box.",
+            "ja": "まんなかに はこが あるの。はこの となりに ランプが あるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Is the box big or small?",
+            "ja": "はこは おおきい？ちいさい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's small. Now, draw a key under the table.",
+            "ja": "ちいさいよ。つぎは、テーブルの したに かぎを かいて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look at Birimo's picture! It's almost the same!",
+            "ja": "ビリモの えを みて！ほとんど おなじだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job. Clear describing and good questions make a great team.",
+            "ja": "よく できました。わかりやすい せつめいと いい しつもんで、さいこうの チームね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が いう えの せつめいを きいて かこう。わからない ときは Is it big or small? と しつもんしよう。じぶんも せつめいしよう",
+          "starterEn": "Let's play Describe and Draw! Get a pencil and paper. There's a big box in the middle. Are you ready for more?",
+          "targetExpressions": [
+            "There's a lamp next to the box.",
+            "Is the box big or small? ― It's small.",
+            "Now, draw a key under the table."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "There's a lamp next to the box.",
+          "Is the box big or small? ― It's small. / Now, draw a key under the table.",
+          "fairness・cleverness・laziness・tidiness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 725,
+      "world": 25,
+      "title": "Cave Map",
+      "titleJa": "どうくつの ちず",
+      "school": {
+        "grade": "中3",
+        "topic": "At the end of the tunnel, there's a lake.：どうくつの ちずを つくって せつめいする（まとめ）",
+        "grammar": "At the end of ～, there's ～. / Go straight, and turn left at ～. / There are ～ near ～.",
+        "expressions": [
+          {
+            "en": "At the end of the tunnel, there's a lake.",
+            "ja": "トンネルの おわりに みずうみが あるよ。",
+            "core": true
+          },
+          {
+            "en": "Go straight, and turn left at the big rock.",
+            "ja": "まっすぐ いって、おおきな いわの ところを ひだりに まがって。"
+          },
+          {
+            "en": "There are two tunnels near the entrance.",
+            "ja": "いりぐちの ちかくに トンネルが 2つ あるよ。"
+          }
+        ],
+        "testPoints": [
+          "At the end of ～, there's ～. / turn left at ～ で ちずの ばしょと みちじゅんを せつめいできる",
+          "-ness の ふりかえり（darkness・kindness・happiness・laziness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a long tunnel.",
+          "ja": "ながい トンネルを かいて。",
+          "action": "くうちゅうに ながい みちを かく",
+          "emoji": "🚇"
+        },
+        {
+          "en": "Go straight. Turn left at the rock.",
+          "ja": "まっすぐ いって。いわの ところで ひだりへ。",
+          "action": "まえに すすんで ひだりを むく",
+          "emoji": "⬅️"
+        },
+        {
+          "en": "Draw a lake at the end.",
+          "ja": "おわりに みずうみを かいて。",
+          "action": "まるい みずうみを かく まね",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "Fold your map and put it in your bag.",
+          "ja": "ちずを たたんで かばんに いれて。",
+          "action": "かみを たたんで しまう まね",
+          "emoji": "🗺️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ness"
+        ],
+        "sounds": [
+          "/nəs/"
+        ],
+        "words": [
+          "darkness",
+          "kindness",
+          "happiness",
+          "laziness"
+        ],
+        "tipJa": "-ness の まとめ: dark → darkness、kind → kindness。happy → happiness、lazy → laziness（y を i に かえる）。ness が つくと「〜さ」の なまえの ことば に なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "tunnel",
+          "ja": "トンネル",
+          "emoji": "🚇",
+          "core": true
+        },
+        {
+          "en": "end",
+          "ja": "おわり・はし",
+          "emoji": "🔚"
+        },
+        {
+          "en": "lake",
+          "ja": "みずうみ",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, There's a lamp next to the box. Today, we'll make a map of the cave. A good map shows where things are. At the end of the tunnel, there's a lake. Say it with me. At the end of the tunnel, there's a lake. Great! Now we can use all our words: at the back, in the middle, next to, and at the end of. We can give directions, too. Go straight, and turn left. Let's read Kiko's cave map notes. \"From the entrance, go straight. There are two tunnels. Take the left tunnel. Turn left at the big rock. At the end of the tunnel, there's an underground lake. The Great Hall is on the right. There's a small door at the back of the hall.\" Which tunnel do we take? The left tunnel. What's at the end of the tunnel? A lake. Now, phonics review. Darkness. Kindness. Happiness. Laziness. Remember, happy becomes happiness, and lazy becomes laziness. Let's draw our cave map!",
+      "conversation": {
+        "scene": "The friends make a map of the cave together",
+        "sceneJa": "みんなで どうくつの ちずを つくる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Let's make a map of the cave. Where's the entrance?",
+            "ja": "どうくつの ちずを つくろう。いりぐちは どこ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's here, at the bottom. There are two tunnels near the entrance.",
+            "ja": "ここ、したの ほうだよ。いりぐちの ちかくに トンネルが 2つ あるね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Take the left one. Go straight, and turn left at the big rock.",
+            "ja": "ひだりの ほうだよ。まっすぐ いって、おおきな いわの ところを ひだりに まがるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "At the end of the tunnel, there's a lake! I saw it with my flashlight.",
+            "ja": "トンネルの おわりに みずうみが あるよ！かいちゅうでんとうで みたんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And the Great Hall is on the right. I'll draw the small door at the back.",
+            "ja": "それと ひろまは みぎがわ。おくの ちいさな ドアも かくね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a clear map! Now anyone can find the way.",
+            "ja": "なんて わかりやすい ちず！これで だれでも みちが わかるわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に どうくつの ちずを せつめいしよう。At the end of the tunnel, there's ～. / Turn left at ～. を つかおう",
+          "starterEn": "I want to explore the cave too. Can you tell me the way with your map?",
+          "targetExpressions": [
+            "At the end of the tunnel, there's a lake.",
+            "Go straight, and turn left at the big rock.",
+            "There are two tunnels near the entrance."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "At the end of the tunnel, there's a lake.",
+          "Go straight, and turn left at the big rock. / There are two tunnels near the entrance.",
+          "darkness・kindness・happiness・laziness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 726,
+      "world": 25,
+      "title": "It Might Be a Bat",
+      "titleJa": "こうもり かもしれない",
+      "school": {
+        "grade": "中3",
+        "topic": "What's that sound? ― It might be a bat.：くらい つうろで ふしぎな おと（might で よそうする）",
+        "grammar": "What's that sound? / It might be ～. / I'm not sure.",
+        "expressions": [
+          {
+            "en": "What's that sound?",
+            "ja": "あの おとは なに？",
+            "core": true
+          },
+          {
+            "en": "It might be a bat.",
+            "ja": "こうもり かもしれない。"
+          },
+          {
+            "en": "I'm not sure. It might be the wind.",
+            "ja": "よく わからない。かぜ かもしれない。"
+          }
+        ],
+        "testPoints": [
+          "What's that sound? ― It might be ～. で わからない ものを よそうして いえる",
+          "-ive の ことば（active・creative・detective・inventive）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Cup your ear and listen.",
+          "ja": "みみに てを あてて きいて。",
+          "action": "みみに てを あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Flap your arms like a bat.",
+          "ja": "こうもりみたいに うでを ぱたぱたして。",
+          "action": "うでを ぱたぱた させる",
+          "emoji": "🦇"
+        },
+        {
+          "en": "Tiptoe down the passage.",
+          "ja": "つうろを つまさきで あるいて。",
+          "action": "つまさきで そっと あるく",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Say Shh! with your finger.",
+          "ja": "ゆびを たてて シーッ！と いって。",
+          "action": "くちに ゆびを あてる",
+          "emoji": "🤫"
+        }
+      ],
+      "phonics": {
+        "rule": "ive",
+        "focus": [
+          "-ive"
+        ],
+        "sounds": [
+          "/ɪv/"
+        ],
+        "words": [
+          "active",
+          "creative",
+          "detective",
+          "inventive"
+        ],
+        "tipJa": "ive を つけると「〜する せいしつの」の ことば。act → active、create → creative（e を とって ive）、detect → detective（たんてい）、invent → inventive。英語の ことばは v で おわらないので、さいごの e を わすれずに。"
+      },
+      "vocab": [
+        {
+          "en": "sound",
+          "ja": "おと",
+          "emoji": "🔊",
+          "core": true
+        },
+        {
+          "en": "might",
+          "ja": "〜かもしれない",
+          "emoji": "🤔"
+        },
+        {
+          "en": "bat",
+          "ja": "こうもり",
+          "emoji": "🦇"
+        },
+        {
+          "en": "passage",
+          "ja": "つうろ",
+          "emoji": "🛤️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, At the end of the tunnel, there's a lake. Today, we're walking in a dark passage. Shh! Listen. Flap, flap, flap. What's that sound? We don't know for sure. So we can say, It might be a bat. Say it with me. What's that sound? It might be a bat. Great! Might means maybe. Use it when you're not sure. It might be the wind. It might be water. Let's read a page from Luma's cave guide. \"Sounds in the Cave. Drip, drip: It might be water from the ceiling. Whoosh: It might be the wind in the tunnels. Flap, flap: It might be Bella the bat. She flies around at night, so don't worry. She's very friendly.\" What might drip, drip be? Water from the ceiling. Who is Bella? A friendly bat. Now, phonics. Active. Creative. Detective. Inventive. Act, active. Create, creative. These words end in v and e. Let's listen like careful detectives!",
+      "conversation": {
+        "scene": "The friends hear a strange sound in a dark passage",
+        "sceneJa": "くらい つうろで ふしぎな おとを きく",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Shh! What's that sound?",
+            "ja": "シーッ！あの おとは なに？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Flap, flap, flap. It might be a bat.",
+            "ja": "パタパタ パタパタ。こうもり かもしれない。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm not sure. It might be the wind.",
+            "ja": "よく わからない。かぜ かもしれないよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's shine the flashlight up there. Look! It's a bat!",
+            "ja": "うえを てらして みよう。みて！こうもりだ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hello, little bat! Are you Bella?",
+            "ja": "こんにちは、ちいさな こうもりさん！きみが ベラ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good guessing! When you aren't sure, might is the perfect word.",
+            "ja": "いい よそうね！たしかじゃ ない ときは might が ぴったりよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が いう ふしぎな おとを きいて、It might be ～. で よそうしよう。りゆうも いえたら すごい",
+          "starterEn": "Listen! Drip, drip, drip. What's that sound?",
+          "targetExpressions": [
+            "What's that sound?",
+            "It might be a bat.",
+            "I'm not sure. It might be the wind."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What's that sound?",
+          "It might be a bat. / I'm not sure. It might be the wind.",
+          "active・creative・detective・inventive"
+        ]
+      }
+    },
+    {
+      "lessonNo": 727,
+      "world": 25,
+      "title": "It Must Be a Key",
+      "titleJa": "きっと かぎだ",
+      "school": {
+        "grade": "中3",
+        "topic": "It's small and gold. It must be a key.：いわの すきまで ひかる ものを みつけ、must で つよく すいりする",
+        "grammar": "It must be ～. / Why do you think so? ― Because ～.",
+        "expressions": [
+          {
+            "en": "It's small and gold. It must be a key.",
+            "ja": "ちいさくて きんいろ。きっと かぎだ。",
+            "core": true
+          },
+          {
+            "en": "Why do you think so? ― Because it has a round top and little teeth.",
+            "ja": "どうして そう おもうの？ ― あたまが まるくて、ちいさな ぎざぎざが あるから。"
+          },
+          {
+            "en": "It must be the key to the small door.",
+            "ja": "きっと ちいさな ドアの かぎだよ。"
+          }
+        ],
+        "testPoints": [
+          "It must be ～. と りゆう（Because ～.）で つよく すいりできる",
+          "-ive の ことば（expensive・explosive・impressive・attractive。explode → explosive）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Reach between the rocks.",
+          "ja": "いわの あいだに てを のばして。",
+          "action": "すきまに てを いれる まね",
+          "emoji": "🪨"
+        },
+        {
+          "en": "Pick up the tiny key.",
+          "ja": "ちいさな かぎを ひろって。",
+          "action": "ゆびで つまむ まね",
+          "emoji": "🔑"
+        },
+        {
+          "en": "Hold it up to the light.",
+          "ja": "ひかりに かざして。",
+          "action": "てを たかく あげて みる",
+          "emoji": "✨"
+        },
+        {
+          "en": "Put the key in your pocket.",
+          "ja": "かぎを ポケットに いれて。",
+          "action": "ポケットに しまう まね",
+          "emoji": "👖"
+        }
+      ],
+      "phonics": {
+        "rule": "ive",
+        "focus": [
+          "-ive"
+        ],
+        "sounds": [
+          "/ɪv/"
+        ],
+        "words": [
+          "expensive",
+          "explosive",
+          "impressive",
+          "attractive"
+        ],
+        "tipJa": "expense（ひよう）→ expensive（たかい）は e を とって ive。explode（ばくはつする）→ explosive は d が s に かわるよ。impress → impressive、attract → attractive は そのまま ive。"
+      },
+      "vocab": [
+        {
+          "en": "key",
+          "ja": "かぎ",
+          "emoji": "🔑",
+          "core": true
+        },
+        {
+          "en": "must",
+          "ja": "きっと 〜に ちがいない",
+          "emoji": "✅"
+        },
+        {
+          "en": "shiny",
+          "ja": "ぴかぴかの",
+          "emoji": "✨"
+        },
+        {
+          "en": "gold",
+          "ja": "きんいろの",
+          "emoji": "🟡"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, What's that sound? It might be a bat. Today, Kiko found something shiny between two rocks. It's small and gold. It has a round top and little teeth. We're almost sure what it is. So we can say, It must be a key. Say it with me. It's small and gold. It must be a key. Excellent! Might means maybe. Must means I'm almost sure. Let's read the note next to the rocks. \"Clever explorer, you found it! This small gold thing is old and very special. It opens something in the Great Hall. Don't lose it, and don't give it to anybody. Use it at the right time. From Luma.\" What does it open? Something in the Great Hall. So, it must be the key to the small door! Now, phonics. Expensive. Explosive. Impressive. Attractive. Expense, expensive. Explode, explosive. The d changes to s. Let's find more clues and use them well!",
+      "conversation": {
+        "scene": "Kiko finds something small and gold between the rocks",
+        "sceneJa": "キコが いわの あいだで ちいさな きんいろの ものを みつける",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! Something is shining between the rocks.",
+            "ja": "みて！いわの あいだで なにかが ひかってる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What is it? It's small and gold.",
+            "ja": "なんだろう？ちいさくて きんいろだね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It has a round top and little teeth. It must be a key.",
+            "ja": "あたまが まるくて、ちいさな ぎざぎざが ある。きっと かぎだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Why do you think so?",
+            "ja": "どうして そう おもうの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Because keys have teeth like that. It must be the key to the small door!",
+            "ja": "かぎには あんな ぎざぎざが あるから。きっと ちいさな ドアの かぎだよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Must means you're almost sure. And you gave a reason. Great detective thinking!",
+            "ja": "must は ほとんど たしかな ときね。りゆうも いえたわ。すばらしい すいり！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が いう ヒントを きいて、It must be ～. で あてよう。Why do you think so? と きかれたら Because ～. で りゆうを いおう",
+          "starterEn": "I'm holding something. It's round, it's orange, and it's a fruit. What do you think it is?",
+          "targetExpressions": [
+            "It's small and gold. It must be a key.",
+            "Why do you think so? ― Because it has a round top and little teeth.",
+            "It must be the key to the small door."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's small and gold. It must be a key.",
+          "Why do you think so? ― Because it has a round top and little teeth. / It must be the key to the small door.",
+          "expensive・explosive・impressive・attractive"
+        ]
+      }
+    },
+    {
+      "lessonNo": 728,
+      "world": 25,
+      "title": "It Can't Be a Ghost",
+      "titleJa": "おばけの はずが ない",
+      "school": {
+        "grade": "中3",
+        "topic": "It can't be a ghost. Ghosts aren't real!：こわがる ビリモを あんしん させる（can't で ありえない ことを いう）",
+        "grammar": "It can't be ～. / It must be ～. / Don't worry. It's only ～.",
+        "expressions": [
+          {
+            "en": "It can't be a ghost. Ghosts aren't real!",
+            "ja": "おばけの はずが ないよ。おばけは ほんとうは いないもの！",
+            "core": true
+          },
+          {
+            "en": "Don't worry. It's only the wind.",
+            "ja": "しんぱい しないで。ただの かぜだよ。"
+          },
+          {
+            "en": "It must be an echo. It can't be a monster.",
+            "ja": "きっと こだまだよ。かいぶつの はずが ない。"
+          }
+        ],
+        "testPoints": [
+          "It can't be ～. で ありえない ことを りゆうと いっしょに いえる",
+          "-ive の ことば（protective・descriptive・decorative・massive。describe → descriptive）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shake like you're scared.",
+          "ja": "こわがって ぶるぶる ふるえて。",
+          "action": "からだを ふるわせる",
+          "emoji": "😨"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "ふかく いきを すって。",
+          "action": "おおきく しんこきゅう する",
+          "emoji": "😮‍💨"
+        },
+        {
+          "en": "Shout Hello! and listen for the echo.",
+          "ja": "ハロー！と さけんで、こだまを きいて。",
+          "action": "くちに てを あてて さけび、みみを すます",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Give your friend a high five.",
+          "ja": "ともだちと ハイタッチ して。",
+          "action": "てを あげて ハイタッチ",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "ive",
+        "focus": [
+          "-ive"
+        ],
+        "sounds": [
+          "/ɪv/"
+        ],
+        "words": [
+          "protective",
+          "descriptive",
+          "decorative",
+          "massive"
+        ],
+        "tipJa": "protect（まもる）→ protective、mass（かたまり）→ massive は そのまま ive。decorate → decorative は e を とって ive。describe → descriptive は b が p に かわって t が はいるよ。"
+      },
+      "vocab": [
+        {
+          "en": "ghost",
+          "ja": "おばけ",
+          "emoji": "👻",
+          "core": true
+        },
+        {
+          "en": "real",
+          "ja": "ほんものの",
+          "emoji": "💯"
+        },
+        {
+          "en": "scared",
+          "ja": "こわがって いる",
+          "emoji": "😨"
+        },
+        {
+          "en": "echo",
+          "ja": "こだま・はんきょう",
+          "emoji": "🗣️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It's small and gold. It must be a key. Today, Birimo is scared. He heard a long, low sound. Whoooo! Is it a ghost? No! When something is impossible, we say, It can't be. It can't be a ghost. Ghosts aren't real! Say it with me. It can't be a ghost. Ghosts aren't real! Great! Remember: it must be means almost sure, yes. It can't be means almost sure, no. Let's read the poem on the cave wall. \"In the cave, the wind can sing. Whoooo, whoooo, a scary thing! But listen well, and you will hear: it's only wind, so have no fear. Your voice comes back from far away. That's an echo, so please stay!\" What makes the whoooo sound? The wind. What is an echo? Your own voice coming back. Now, phonics. Protective. Descriptive. Decorative. Massive. Describe, descriptive. Decorate, decorative. When a friend is scared, say kind words. Let's be brave together!",
+      "conversation": {
+        "scene": "Birimo is scared of a strange sound, and the friends help him",
+        "sceneJa": "ふしぎな おとを こわがる ビリモを みんなが はげます",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Whoooo! What's that? I'm scared! Is it a ghost?",
+            "ja": "ウゥゥー！なに あれ？こわいよ！おばけ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Don't worry, Birimo. It can't be a ghost. Ghosts aren't real!",
+            "ja": "しんぱい しないで、ビリモ。おばけの はずが ないよ。おばけは ほんとうは いないもの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Listen. It's coming from the tunnel. It's only the wind.",
+            "ja": "きいて。トンネルから きこえるよ。ただの かぜだよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hello! Listen, my voice is coming back. Hello, hello!",
+            "ja": "ハロー！きいて、わたしの こえが かえって くる。ハロー、ハロー！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh, it must be an echo! It can't be a monster. I feel better now.",
+            "ja": "あ、きっと こだまだ！かいぶつの はずが ないね。あんしん した。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Well done, everyone. When a friend is scared, kind words help a lot.",
+            "ja": "みんな、よく できました。ともだちが こわがって いる とき、やさしい ことばは とても たすけに なるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が こわがって いるよ。It can't be ～. と いって、りゆうを つけて あんしん させよう",
+          "starterEn": "Eek! I hear a strange sound in the dark. Is it a monster?",
+          "targetExpressions": [
+            "It can't be a ghost. Ghosts aren't real!",
+            "Don't worry. It's only the wind.",
+            "It must be an echo. It can't be a monster."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It can't be a ghost. Ghosts aren't real!",
+          "Don't worry. It's only the wind. / It must be an echo. It can't be a monster.",
+          "protective・descriptive・decorative・massive"
+        ]
+      }
+    },
+    {
+      "lessonNo": 729,
+      "world": 25,
+      "title": "Maybe, Probably, Definitely",
+      "titleJa": "もしかしたら・たぶん・ぜったい",
+      "school": {
+        "grade": "中3",
+        "topic": "It's probably a bear's footprint.：あしあとを しらべて、どの くらい たしかかを いいわける（maybe / probably / definitely）",
+        "grammar": "Maybe it's ～. / It's probably ～. / It's definitely ～.",
+        "expressions": [
+          {
+            "en": "It's probably a bear's footprint.",
+            "ja": "たぶん クマの あしあとだね。",
+            "core": true
+          },
+          {
+            "en": "Maybe it's a big dog.",
+            "ja": "もしかしたら おおきな いぬ かも。"
+          },
+          {
+            "en": "It's definitely Mr. Mole's boot!",
+            "ja": "ぜったい モグラさんの ながぐつだ！"
+          }
+        ],
+        "testPoints": [
+          "maybe・probably・definitely で どの くらい たしかかを いいわけられる",
+          "-ive の ことば（talkative・imaginative・defensive・supportive。talk → talkative）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Kneel down and look at the footprint.",
+          "ja": "ひざを ついて あしあとを みて。",
+          "action": "しゃがんで じっと みる",
+          "emoji": "👣"
+        },
+        {
+          "en": "Measure it with your hands.",
+          "ja": "てで おおきさを はかって。",
+          "action": "りょうてで ながさを はかる まね",
+          "emoji": "📏"
+        },
+        {
+          "en": "Shake your head. No claws!",
+          "ja": "くびを よこに ふって。ツメは ない！",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Stamp like a big boot.",
+          "ja": "おおきな ながぐつみたいに ドシンと ふんで。",
+          "action": "あしを ドシンと ふみならす",
+          "emoji": "🥾"
+        }
+      ],
+      "phonics": {
+        "rule": "ive",
+        "focus": [
+          "-ive"
+        ],
+        "sounds": [
+          "/ɪv/"
+        ],
+        "words": [
+          "talkative",
+          "imaginative",
+          "defensive",
+          "supportive"
+        ],
+        "tipJa": "talk → talkative（おしゃべりな）、imagine → imaginative（そうぞうりょく ゆたかな）は ive では なく ative。defend → defensive は d が s に。support → supportive は そのまま ive。"
+      },
+      "vocab": [
+        {
+          "en": "probably",
+          "ja": "たぶん",
+          "emoji": "🤔",
+          "core": true
+        },
+        {
+          "en": "maybe",
+          "ja": "もしかしたら",
+          "emoji": "❓"
+        },
+        {
+          "en": "definitely",
+          "ja": "ぜったいに",
+          "emoji": "💯"
+        },
+        {
+          "en": "footprint",
+          "ja": "あしあと",
+          "emoji": "👣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It can't be a ghost. Ghosts aren't real! Today, we found big footprints in the mud. How sure are we? We have three useful words. Maybe means about fifty percent. Probably（たぶん） means about eighty percent. Definitely means one hundred percent. It's probably a bear's footprint. Say it with me. It's probably a bear's footprint. Great! But good detectives always check the clues again before they decide. Let's read Haru's notebook. \"The footprint is very big and long. There are no claws. There's a pattern of lines, like the bottom of a shoe. Next to the footprints, there's some fresh dirt. So, it's definitely not a bear. It's probably a big boot!\" Are there claws? No. What's next to the footprints? Fresh dirt. Who loves digging in the dirt? Mr. Mole! Now, phonics. Talkative. Imaginative. Defensive. Supportive. Talk, talkative. Imagine, imaginative. Here, the ending is ative. Let's check our clues!",
+      "conversation": {
+        "scene": "The friends study big footprints in the mud",
+        "sceneJa": "どろの なかの おおきな あしあとを しらべる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at these big footprints in the mud!",
+            "ja": "どろの なかの この おおきな あしあとを みて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Maybe it's a big dog.",
+            "ja": "もしかしたら おおきな いぬ かも。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's too big for a dog. It's probably a bear's footprint.",
+            "ja": "いぬに しては おおきすぎるよ。たぶん クマの あしあとだね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "But there are no claws. And look, there are lines like a shoe.",
+            "ja": "でも ツメの あとが ないよ。それに みて、くつみたいな せんが ある。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And there's fresh dirt here. It's definitely Mr. Mole's boot!",
+            "ja": "それに ここに ほったばかりの つちが ある。ぜったい モグラさんの ながぐつだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Maybe, probably, definitely. You checked the clues before you decided. That's what real detectives do.",
+            "ja": "maybe、probably、definitely。きめる まえに てがかりを たしかめたわね。それが ほんとうの たんていよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と あしあとの なぞときを しよう。maybe・probably・definitely を つかいわけて、どの くらい たしかか いおう",
+          "starterEn": "I found some small footprints in the snow. They have four little toes. What do you think made them?",
+          "targetExpressions": [
+            "It's probably a bear's footprint.",
+            "Maybe it's a big dog.",
+            "It's definitely Mr. Mole's boot!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's probably a bear's footprint.",
+          "Maybe it's a big dog. / It's definitely Mr. Mole's boot!",
+          "talkative・imaginative・defensive・supportive"
+        ]
+      }
+    },
+    {
+      "lessonNo": 730,
+      "world": 25,
+      "title": "Guess the Object",
+      "titleJa": "なかみを すいりしよう",
+      "school": {
+        "grade": "中3",
+        "topic": "It might be a ～ because ～.：ふくろの なかみを さわって すいりする ゲーム（might / must / can't ＋ because。まとめ）",
+        "grammar": "It might be ～ because ～. / It must be ～. / It can't be ～.",
+        "expressions": [
+          {
+            "en": "It might be a ball because it's round.",
+            "ja": "まるいから、ボール かもしれない。",
+            "core": true
+          },
+          {
+            "en": "It can't be an apple. It's too soft.",
+            "ja": "りんごの はずが ない。やわらかすぎるもの。"
+          },
+          {
+            "en": "It must be a sock ball!",
+            "ja": "きっと くつしたの ボールだ！"
+          }
+        ],
+        "testPoints": [
+          "might・must・can't と because で りゆうを つけて すいりを いえる",
+          "-ness と -ive の ふりかえり（sadness・brightness・detective・expensive・imaginative）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put your hand in the bag.",
+          "ja": "ふくろに てを いれて。",
+          "action": "ふくろに てを いれる まね",
+          "emoji": "👜"
+        },
+        {
+          "en": "Feel the object carefully.",
+          "ja": "なかの ものを よく さわって。",
+          "action": "ゆびで そっと さわる まね",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Close your eyes and guess.",
+          "ja": "めを とじて あてて。",
+          "action": "めを とじて かんがえる",
+          "emoji": "🙈"
+        },
+        {
+          "en": "Pull it out. Ta-da!",
+          "ja": "とりだして。ジャジャーン！",
+          "action": "ふくろから とりだして たかく あげる",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ness",
+          "-ive"
+        ],
+        "sounds": [
+          "/nəs/",
+          "/ɪv/"
+        ],
+        "words": [
+          "sadness",
+          "brightness",
+          "detective",
+          "expensive",
+          "imaginative"
+        ],
+        "tipJa": "ness と ive の まとめ: sadness・brightness（ness で「〜さ」の なまえの ことば）、detective・expensive・imaginative（ive で ようすの ことば。imagine → imaginative は ative）。"
+      },
+      "vocab": [
+        {
+          "en": "object",
+          "ja": "もの",
+          "emoji": "📦",
+          "core": true
+        },
+        {
+          "en": "guess",
+          "ja": "すいりする・あてる",
+          "emoji": "🎯"
+        },
+        {
+          "en": "because",
+          "ja": "なぜなら",
+          "emoji": "💬"
+        },
+        {
+          "en": "reason",
+          "ja": "りゆう",
+          "emoji": "🧠"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It's probably a bear's footprint. Today, we'll play a guessing game. There's something in Luma's bag. You can touch it, but you can't look. Then, say your guess and a reason. It might be a ball because it's round. Say it with me. It might be a ball because it's round. Great! Remember our three words. Might is maybe. Must is almost sure, yes. Can't is almost sure, no. Let's read the game rules. \"Guess the Object. Put your hand in the bag. Touch the object, but don't look. Say one thing about it, like It's soft or It's round. Then, make a guess with might, must or can't. Give a reason with because. Three right guesses win a prize!\" What can't you do? Look. Which word do we use for a reason? Because. Now, phonics review. Sadness. Brightness. Detective. Expensive. Imaginative. Ness makes a thing word, and ive makes a describing word. Let's guess like detectives!",
+      "conversation": {
+        "scene": "The friends play a guessing game with Luma's bag",
+        "sceneJa": "ルーマの ふくろで なかみあて ゲームを する",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Your turn, Haru. Put your hand in the bag.",
+            "ja": "ハルの ばんだよ。ふくろに てを いれて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hmm. It's round. It might be a ball because it's round.",
+            "ja": "うーん。まるいね。まるいから、ボール かもしれない。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Is it hard or soft?",
+            "ja": "かたい？やわらかい？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's very soft and light. It can't be an apple. It's too soft.",
+            "ja": "すごく やわらかくて かるい。りんごの はずが ない。やわらかすぎるもの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It must be a sock ball! I made it this morning.",
+            "ja": "きっと くつしたの ボールだ！けさ ぼくが つくったんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! You used might, can't and must, and you gave reasons. You're real detectives now!",
+            "ja": "すばらしい！might、can't、must を つかって、りゆうも いえたわ。もう ほんものの たんていね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の ふくろの なかみを あてよう。AI の ヒントを きいて、It might be ～ because ～. / It must be ～. / It can't be ～. で こたえよう",
+          "starterEn": "I have a mystery object in my bag. It's long and thin, and you can write with it. What do you think?",
+          "targetExpressions": [
+            "It might be a ball because it's round.",
+            "It can't be an apple. It's too soft.",
+            "It must be a sock ball!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It might be a ball because it's round.",
+          "It can't be an apple. It's too soft. / It must be a sock ball!",
+          "sadness・brightness・detective・expensive・imaginative"
+        ]
+      }
+    },
+    {
+      "lessonNo": 731,
+      "world": 25,
+      "title": "Look at These Footprints",
+      "titleJa": "この あしあとを みて",
+      "school": {
+        "grade": "中3",
+        "topic": "Look at these footprints. Someone was here.：どうくつの おくで てがかりを みつけて、だれの ものか かんがえる",
+        "grammar": "Look at these ～. / Someone was here. / Whose ～ are they? ― They might be ～.",
+        "expressions": [
+          {
+            "en": "Look at these footprints. Someone was here.",
+            "ja": "この あしあとを みて。だれかが ここに いたんだ。",
+            "core": true
+          },
+          {
+            "en": "Whose footprints are they? ― They might be Mr. Mole's.",
+            "ja": "だれの あしあと？ ― モグラさんのかも しれない。"
+          },
+          {
+            "en": "Shine your flashlight here. I see a fingerprint!",
+            "ja": "ここを かいちゅうでんとうで てらして。しもんが みえる！"
+          }
+        ],
+        "testPoints": [
+          "Look at these footprints. Someone was here. で てがかりを しめして、だれの ものか かんがえを いえる",
+          "複合語（foot ＋ print・flash ＋ light・some ＋ body・finger ＋ print）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shine your flashlight on the ground.",
+          "ja": "じめんを かいちゅうでんとうで てらして。",
+          "action": "かいちゅうでんとうを したに むける まね",
+          "emoji": "🔦"
+        },
+        {
+          "en": "Bend down and look closely.",
+          "ja": "かがんで よく みて。",
+          "action": "しゃがんで じっと みる",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Point at the footprints.",
+          "ja": "あしあとを ゆびさして。",
+          "action": "ゆかを ゆびさす",
+          "emoji": "👣"
+        },
+        {
+          "en": "Tiptoe quietly behind me.",
+          "ja": "わたしの うしろを そっと つまさきで あるいて。",
+          "action": "つまさきで しずかに あるく",
+          "emoji": "🤫"
+        }
+      ],
+      "phonics": {
+        "rule": "compound",
+        "focus": [
+          "foot-print",
+          "flash-light",
+          "some-body",
+          "finger-print"
+        ],
+        "sounds": [
+          "/ˈfʊt.prɪnt/",
+          "/ˈflæʃ.laɪt/",
+          "/ˈsʌm.bɑː.di/",
+          "/ˈfɪŋ.ɡər.prɪnt/"
+        ],
+        "words": [
+          "footprint",
+          "flashlight",
+          "somebody",
+          "fingerprint"
+        ],
+        "tipJa": "2つの ことばが くっついた ことば。foot（あし）＋ print（あと）→ footprint（あしあと）、flash ＋ light → flashlight（かいちゅうでんとう）、some ＋ body → somebody（だれか）、finger ＋ print → fingerprint（しもん）。わけて よむと いみも わかるよ。"
+      },
+      "vocab": [
+        {
+          "en": "footprint",
+          "ja": "あしあと",
+          "emoji": "👣",
+          "core": true
+        },
+        {
+          "en": "clue",
+          "ja": "てがかり",
+          "emoji": "🔍"
+        },
+        {
+          "en": "someone",
+          "ja": "だれか",
+          "emoji": "👤"
+        },
+        {
+          "en": "closely",
+          "ja": "よく・じっくり",
+          "emoji": "👀"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we played a guessing game with a mystery bag. Today, we go deep into the cave and look for clues. A detective says, Look at these footprints. Someone was here. Say it with me. Look at these footprints. Someone was here. Great! Someone means a person or an animal, but we don't know which one. Let's read a note from Luma, the glowworm keeper of the cave. \"Welcome to the deep hall, explorers. Please walk slowly. The floor is wet near the lake. Yesterday evening, I cleaned the floor, so it was perfectly clean. Please tell me about anything new on the floor.\" Was the floor clean yesterday? Yes, it was. So, if we see footprints today, someone was here after Luma cleaned. That's a clue! Ask your friend, Whose footprints are they? You can answer, They might be Mr. Mole's. Now, phonics. Footprint. Foot and print. Flashlight. Flash and light. Somebody. Some and body. Fingerprint. Finger and print. Two small words make one long word. Let's look for clues like real detectives!",
+      "conversation": {
+        "scene": "The friends find footprints deep in the cave",
+        "sceneJa": "どうくつの おくで あしあとを みつける",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Shine your flashlight here, Haru. Look at these footprints!",
+            "ja": "ハル、ここを てらして。この あしあとを みて！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow, they're wet. Someone was here.",
+            "ja": "わあ、ぬれてる。だれかが ここに いたんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Luma cleaned the floor yesterday. So they're new.",
+            "ja": "ルーマは きのう ゆかを そうじしたよ。だから あたらしい あしあとね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Whose footprints are they? They're really small.",
+            "ja": "だれの あしあと？ すごく ちいさいよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "They might be Mr. Mole's. Or somebody else's.",
+            "ja": "モグラさんのかも しれない。それとも ほかの だれかの。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good thinking! Look closely. A good detective writes down every clue.",
+            "ja": "いい かんがえね！よく みて。いい たんていは てがかりを ぜんぶ かきとめるのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いっしょに てがかりを さがそう。Look at these footprints. Someone was here. と いって、だれの あしあとか They might be ～. で かんがえを いおう",
+          "starterEn": "We're detectives in a dark cave! I can see something on the floor. What can you see?",
+          "targetExpressions": [
+            "Look at these footprints. Someone was here.",
+            "Whose footprints are they? ― They might be Mr. Mole's.",
+            "Shine your flashlight here. I see a fingerprint!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Look at these footprints. Someone was here.",
+          "Whose footprints are they? ― They might be Mr. Mole's.",
+          "footprint・flashlight・somebody・fingerprint"
+        ]
+      }
+    },
+    {
+      "lessonNo": 732,
+      "world": 25,
+      "title": "The Missing Crown",
+      "titleJa": "きえた おうかん",
+      "school": {
+        "grade": "中3",
+        "topic": "The crown was here yesterday. Now it's gone.：どうくつの たからの おうかんが きえた。まえと いまを くらべて はなす",
+        "grammar": "～ was here yesterday. Now it's gone. / Nobody knows. / It must be somewhere ～.",
+        "expressions": [
+          {
+            "en": "The crown was here yesterday. Now it's gone.",
+            "ja": "おうかんは きのう ここに あった。いまは なくなって いる。",
+            "core": true
+          },
+          {
+            "en": "What happened to the crown? ― Nobody knows.",
+            "ja": "おうかんは どう なったの？ ― だれも しらない。"
+          },
+          {
+            "en": "It must be somewhere in the cave.",
+            "ja": "どうくつの どこかに ある はずだよ。"
+          }
+        ],
+        "testPoints": [
+          "The crown was here yesterday. Now it's gone. で なくなった ものの ことを いえる",
+          "複合語（no ＋ body・some ＋ where・every ＋ where・some ＋ thing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the empty box. Gasp!",
+          "ja": "からっぽの はこを みて。はっ！",
+          "action": "くちを あけて おどろく",
+          "emoji": "📦"
+        },
+        {
+          "en": "Hold your head. Oh no!",
+          "ja": "あたまを かかえて。たいへん！",
+          "action": "りょうてで あたまを かかえる",
+          "emoji": "😱"
+        },
+        {
+          "en": "Look everywhere. Left and right.",
+          "ja": "あちこち さがして。ひだりと みぎ。",
+          "action": "ひだり・みぎを きょろきょろ みる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Open the box slowly.",
+          "ja": "はこを ゆっくり あけて。",
+          "action": "ふたを そっと あける まね",
+          "emoji": "🎁"
+        }
+      ],
+      "phonics": {
+        "rule": "compound",
+        "focus": [
+          "no-body",
+          "some-where",
+          "every-where",
+          "some-thing"
+        ],
+        "sounds": [
+          "/ˈnoʊ.bɑː.di/",
+          "/ˈsʌm.wer/",
+          "/ˈev.ri.wer/",
+          "/ˈsʌm.θɪŋ/"
+        ],
+        "words": [
+          "nobody",
+          "somewhere",
+          "everywhere",
+          "something"
+        ],
+        "tipJa": "some・every・no は ほかの ことばと よく くっつく。nobody（だれも〜ない）、somewhere（どこか）、everywhere（どこでも）、something（なにか）。body は「ひと」、where は「ばしょ」、thing は「もの」の なかま だよ。"
+      },
+      "vocab": [
+        {
+          "en": "crown",
+          "ja": "おうかん",
+          "emoji": "👑",
+          "core": true
+        },
+        {
+          "en": "gone",
+          "ja": "なくなった",
+          "emoji": "💨"
+        },
+        {
+          "en": "empty",
+          "ja": "からっぽの",
+          "emoji": "📦"
+        },
+        {
+          "en": "treasure",
+          "ja": "たから",
+          "emoji": "💎"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Look at these footprints. Someone was here. Today, something terrible happens in the cave. Luma's Crystal Crown is missing! We can say, The crown was here yesterday. Now it's gone. Say it with me. The crown was here yesterday. Now it's gone. Good! Gone means not here anymore. Let's read the sign next to the glass box. \"The Crystal Crown. This crown is the treasure of the Cave of Riddles. It shines in the dark like a hundred stars. Please look, but do not touch. Every evening at six, Luma checks the crown.\" When does Luma check the crown? At six. Yesterday morning, the crown was in the box. But at six o'clock, the box was empty. What happened to the crown? Nobody knows the answer yet. But don't worry. It must be somewhere in the cave. Must means we are almost sure. Now, phonics. Nobody. No and body. Somewhere. Some and where. Everywhere. Every and where. Something. Some and thing. Let's look everywhere for the crown!",
+      "conversation": {
+        "scene": "Luma's crown is gone from the glass box",
+        "sceneJa": "たからばこから ルーマの おうかんが きえた",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look! The glass box is empty!",
+            "ja": "みて！たからばこが からっぽ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The crown was here yesterday. Now it's gone.",
+            "ja": "おうかんは きのう ここに あったのに。いまは ない。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh no! What happened to the crown?",
+            "ja": "たいへん！おうかんは どう なったの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Nobody knows. But it must be somewhere in the cave.",
+            "ja": "だれも しらない。でも どうくつの どこかに ある はずだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's look everywhere. Behind the rocks and under the bridge, too.",
+            "ja": "あちこち さがそう。いわの うしろも、はしの したも。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wait a minute. Don't touch anything yet. Something here might be a clue.",
+            "ja": "ちょっと まって。まだ なにも さわらないで。ここに てがかりが あるかも しれないわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に なくなった ものの ことを はなそう。～ was here yesterday. Now it's gone. と いって、It must be somewhere ～. で どこに あるか かんがえよう",
+          "starterEn": "Oh no! My magic pencil was on my desk yesterday. Now it's gone! Can you help me?",
+          "targetExpressions": [
+            "The crown was here yesterday. Now it's gone.",
+            "What happened to the crown? ― Nobody knows.",
+            "It must be somewhere in the cave."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The crown was here yesterday. Now it's gone.",
+          "What happened to the crown? ― Nobody knows. / It must be somewhere in the cave.",
+          "nobody・somewhere・everywhere・something"
+        ]
+      }
+    },
+    {
+      "lessonNo": 733,
+      "world": 25,
+      "title": "Where Were You?",
+      "titleJa": "どこに いたの？",
+      "school": {
+        "grade": "中3",
+        "topic": "Where were you at three o'clock?：どうくつの どうぶつたちに、その じかんに どこで なにを して いたか きく",
+        "grammar": "Where were you at ～? / I was ～ing. / What were you doing then?",
+        "expressions": [
+          {
+            "en": "Where were you at three o'clock?",
+            "ja": "3じに どこに いたの？",
+            "core": true
+          },
+          {
+            "en": "I was sleeping in my nest.",
+            "ja": "じぶんの すで ねて いたよ。"
+          },
+          {
+            "en": "What were you doing then? ― I was reading by the waterfall.",
+            "ja": "その とき なにを して いたの？ ― たきの そばで ほんを よんで いたよ。"
+          }
+        ],
+        "testPoints": [
+          "Where were you at three o'clock? / What were you doing then? で その ときの ことを きいて、I was ～ing. で こたえられる",
+          "複合語（key ＋ hole・foot ＋ step・moon ＋ light・water ＋ fall）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your notebook.",
+          "ja": "ノートを もちあげて。",
+          "action": "ノートを たかく あげる",
+          "emoji": "📓"
+        },
+        {
+          "en": "Write a note. Scribble, scribble.",
+          "ja": "メモを かいて。かきかき。",
+          "action": "ペンで かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Listen carefully and nod.",
+          "ja": "よく きいて、うなずいて。",
+          "action": "みみを かたむけて うなずく",
+          "emoji": "👂"
+        },
+        {
+          "en": "Point to the clock. Three o'clock!",
+          "ja": "とけいを ゆびさして。3じ！",
+          "action": "とけいを ゆびさす",
+          "emoji": "🕒"
+        }
+      ],
+      "phonics": {
+        "rule": "compound",
+        "focus": [
+          "key-hole",
+          "foot-step",
+          "moon-light",
+          "water-fall"
+        ],
+        "sounds": [
+          "/ˈkiː.hoʊl/",
+          "/ˈfʊt.step/",
+          "/ˈmuːn.laɪt/",
+          "/ˈwɔː.tər.fɔːl/"
+        ],
+        "words": [
+          "keyhole",
+          "footstep",
+          "moonlight",
+          "waterfall"
+        ],
+        "tipJa": "key（かぎ）＋ hole（あな）→ keyhole（かぎあな）、foot ＋ step（いっぽ）→ footstep（あしおと）、moon ＋ light → moonlight（つきの ひかり）、water ＋ fall（おちる）→ waterfall（たき）。まえの ことばを すこし つよく よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "o'clock",
+          "ja": "〜じ（ちょうど）",
+          "emoji": "🕒",
+          "core": true
+        },
+        {
+          "en": "nest",
+          "ja": "す",
+          "emoji": "🪺"
+        },
+        {
+          "en": "waterfall",
+          "ja": "たき",
+          "emoji": "🌊"
+        },
+        {
+          "en": "then",
+          "ja": "その とき",
+          "emoji": "⏰"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, The crown was here yesterday. Now it's gone. Today, we'll talk to the animals in the cave. Luma thinks the crown disappeared at about three o'clock. So, a detective asks, Where were you at three o'clock? Say it with me. Where were you at three o'clock? Great! To answer, we say, I was sleeping, or, I was reading. Let's read Luma's list of the cave animals. \"Cave animals: Mr. Mole lives in a tunnel under the big rock. Bella the bat sleeps on the ceiling in the daytime. Pip the bluebird sings by the waterfall. Cora the crow loves shiny stones. Everyone was in the cave yesterday afternoon.\" Who sings by the waterfall? Pip does. Who loves shiny stones? Cora does. Hmm. That's interesting. After the first answer, ask one more question. What were you doing then? Write every answer in your notebook. Now, phonics. Keyhole. Key and hole. Footstep. Foot and step. Moonlight. Moon and light. Waterfall. Water and fall. Let's ask good questions, detectives!",
+      "conversation": {
+        "scene": "The friends ask the cave animals about three o'clock",
+        "sceneJa": "どうくつの どうぶつたちに 3じの ことを きく",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Mr. Mole, where were you at three o'clock?",
+            "ja": "モグラさん、3じに どこに いたの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mr. Mole! I was digging a tunnel under the big rock.",
+            "ja": "ぼくが モグラさんの やくね！おおきな いわの したで トンネルを ほって いたよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And Bella the bat? What was she doing then?",
+            "ja": "コウモリの ベラは？その とき なにを して いたの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Bella said she was sleeping on the ceiling.",
+            "ja": "ベラは てんじょうで ねて いたって いってたよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Pip was singing by the waterfall. I heard him.",
+            "ja": "ピップは たきの そばで うたって いた。ぼく、きいたよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "So, where was Cora the crow? Nobody saw her.",
+            "ja": "じゃあ、カラスの コーラは どこに いたの？だれも みて いないよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good questions! Write every answer in your notebook. We'll check them later.",
+            "ja": "いい しつもんね！こたえを ぜんぶ ノートに かいて。あとで たしかめましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に Where were you at ～? と きこう。AI の こたえを きいたら、もう 1つ What were you doing then? と きいて ノートに まとめよう",
+          "starterEn": "Hello, detective! I'm Mr. Mole. I live in this cave. What do you want to ask me?",
+          "targetExpressions": [
+            "Where were you at three o'clock?",
+            "I was sleeping in my nest.",
+            "What were you doing then? ― I was reading by the waterfall."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where were you at three o'clock?",
+          "I was sleeping in my nest. / What were you doing then? ― I was reading by the waterfall.",
+          "keyhole・footstep・moonlight・waterfall"
+        ]
+      }
+    },
+    {
+      "lessonNo": 734,
+      "world": 25,
+      "title": "Do You Know Who Did It?",
+      "titleJa": "だれが やったか しってる？",
+      "school": {
+        "grade": "中3",
+        "topic": "Do you know who took it?：もくげきしゃに、だれが とったか・どこに いるか を ていねいに きく（間接的な しつもんの 入門）",
+        "grammar": "Do you know who ～? / Do you know where ～ is? / I saw ～.",
+        "expressions": [
+          {
+            "en": "Do you know who took it?",
+            "ja": "だれが それを とったか しってる？",
+            "core": true
+          },
+          {
+            "en": "Do you know where Cora is? ― Sorry, I don't know.",
+            "ja": "コーラが どこに いるか しってる？ ― ごめん、わからない。"
+          },
+          {
+            "en": "I saw a black bird near the lake.",
+            "ja": "みずうみの ちかくで くろい とりを みたよ。"
+          }
+        ],
+        "testPoints": [
+          "Do you know who took it? / Do you know where ～ is? で しって いるか たずねられる（who took it の じゅんばん）",
+          "複合語（door ＋ way・stair ＋ case・book ＋ shelf・note ＋ book）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand if you saw something.",
+          "ja": "なにか みた ひとは てを あげて。",
+          "action": "てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Cup your ear and listen.",
+          "ja": "みみに てを あてて きいて。",
+          "action": "みみに てを あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Shake your head. I don't know.",
+          "ja": "くびを よこに ふって。わからない。",
+          "action": "くびを よこに ふる",
+          "emoji": "🤷"
+        },
+        {
+          "en": "Point to the lake.",
+          "ja": "みずうみを ゆびさして。",
+          "action": "とおくを ゆびさす",
+          "emoji": "🏞️"
+        }
+      ],
+      "phonics": {
+        "rule": "compound",
+        "focus": [
+          "door-way",
+          "stair-case",
+          "book-shelf",
+          "note-book"
+        ],
+        "sounds": [
+          "/ˈdɔːr.weɪ/",
+          "/ˈster.keɪs/",
+          "/ˈbʊk.ʃelf/",
+          "/ˈnoʊt.bʊk/"
+        ],
+        "words": [
+          "doorway",
+          "staircase",
+          "bookshelf",
+          "notebook"
+        ],
+        "tipJa": "door ＋ way（みち）→ doorway（いりぐち）、stair ＋ case → staircase（かいだん）、book ＋ shelf（たな）→ bookshelf（ほんだな）、note ＋ book → notebook（ノート）。たんていの ノートは notebook だね。"
+      },
+      "vocab": [
+        {
+          "en": "witness",
+          "ja": "もくげきしゃ",
+          "emoji": "👁️",
+          "core": true
+        },
+        {
+          "en": "lake",
+          "ja": "みずうみ",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "shiny",
+          "ja": "ぴかぴかの",
+          "emoji": "✨"
+        },
+        {
+          "en": "near",
+          "ja": "〜の ちかくで",
+          "emoji": "📍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we asked, Where were you at three o'clock? Today, we'll talk to a witness（もくげきしゃ）. A witness saw something happen. We can ask, Do you know who took it? Say it with me. Do you know who took it? Wonderful! Look carefully. We don't say, Do you know who did take it. We say, Do you know who took it. You can also ask, Do you know where Cora is? If you don't know the answer, say, Sorry, I don't know. Let's read Pip's words in our notebook. \"Pip the bluebird: At three o'clock, I was singing by the waterfall. Then I saw a black bird. It flew fast toward the lake. It had something shiny in its mouth. Maybe it was a stone, but I'm not sure.\" What color was the bird? Black. Where did it fly? Toward the lake. What did it have in its mouth? Something shiny. Now, phonics. Doorway. Door and way. Staircase. Stair and case. Bookshelf. Book and shelf. Notebook. Note and book. Let's ask our witness!",
+      "conversation": {
+        "scene": "The friends ask Pip what he saw",
+        "sceneJa": "ピップに なにを みたか きく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Pip, do you know who took the crown?",
+            "ja": "ピップ、だれが おうかんを とったか しってる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm playing Pip! Sorry, I don't know. But I saw something strange.",
+            "ja": "わたしが ピップの やく！ごめん、わからない。でも へんな ものを みたの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What did you see?",
+            "ja": "なにを みたの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I saw a black bird near the lake. It had something shiny.",
+            "ja": "みずうみの ちかくで くろい とりを みたの。なにか ぴかぴかの ものを もって いたよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Do you know where Cora is? She's a black bird!",
+            "ja": "コーラが どこに いるか しってる？コーラは くろい とりだよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sorry, I don't know. Maybe she's by the lake.",
+            "ja": "ごめん、わからない。みずうみの そばかも。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Excellent! Pip is a witness. A witness tells us what they saw.",
+            "ja": "すばらしい！ピップは もくげきしゃね。もくげきしゃは みた ことを おしえて くれるのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に Do you know who ～? / Do you know where ～ is? と きいて、てがかりを あつめよう。わからない ときは Sorry, I don't know. と いおう",
+          "starterEn": "Hi! I was in the park this morning, and I saw lots of things. What do you want to know?",
+          "targetExpressions": [
+            "Do you know who took it?",
+            "Do you know where Cora is? ― Sorry, I don't know.",
+            "I saw a black bird near the lake."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Do you know who took it?",
+          "Do you know where Cora is? ― Sorry, I don't know. / I saw a black bird near the lake.",
+          "doorway・staircase・bookshelf・notebook"
+        ]
+      }
+    },
+    {
+      "lessonNo": 735,
+      "world": 25,
+      "title": "Clue Board",
+      "titleJa": "てがかりボード",
+      "school": {
+        "grade": "中3",
+        "topic": "Clue 1: wet footprints. Clue 2: a blue feather.：てがかりを ボードに ならべて、だれか かんがえる（まとめ）",
+        "grammar": "Clue 1: ～. Clue 2: ～. / It might be ～, but it can't be ～.",
+        "expressions": [
+          {
+            "en": "Clue 1: wet footprints. Clue 2: a blue feather.",
+            "ja": "てがかり 1: ぬれた あしあと。てがかり 2: あおい はね。",
+            "core": true
+          },
+          {
+            "en": "The footprints go to the lake.",
+            "ja": "あしあとは みずうみへ つづいて いる。"
+          },
+          {
+            "en": "It might be Pip, but it can't be Mr. Mole.",
+            "ja": "ピップかも しれないけど、モグラさんの はずは ない。"
+          }
+        ],
+        "testPoints": [
+          "Clue 1: ～. Clue 2: ～. で てがかりを ならべ、It might be ～, but it can't be ～. で かんがえを いえる",
+          "ふりかえり（複合語・-ness・-ive）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pin a clue on the board.",
+          "ja": "てがかりを ボードに はって。",
+          "action": "かべに かみを はる まね",
+          "emoji": "📌"
+        },
+        {
+          "en": "Draw a line between two clues.",
+          "ja": "2つの てがかりを せんで つないで。",
+          "action": "ゆびで せんを ひく",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Hold up the blue feather.",
+          "ja": "あおい はねを もちあげて。",
+          "action": "はねを つまんで あげる まね",
+          "emoji": "🪶"
+        },
+        {
+          "en": "Think hard. Hmm.",
+          "ja": "よく かんがえて。うーん。",
+          "action": "うでを くんで かんがえる",
+          "emoji": "🤔"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "foot-print",
+          "flash-light",
+          "-ness",
+          "-ive"
+        ],
+        "sounds": [
+          "/ˈfʊt.prɪnt/",
+          "/ˈflæʃ.laɪt/",
+          "/nəs/",
+          "/ɪv/"
+        ],
+        "words": [
+          "footprint",
+          "flashlight",
+          "darkness",
+          "creative"
+        ],
+        "tipJa": "まとめ: foot ＋ print → footprint（あしあと）、flash ＋ light → flashlight（かいちゅうでんとう）、dark ＋ ness → darkness（くらやみ）、create → creative（e を とって ive）。ことばの パーツが わかれば、てがかりも よめる！"
+      },
+      "vocab": [
+        {
+          "en": "feather",
+          "ja": "はね",
+          "emoji": "🪶",
+          "core": true
+        },
+        {
+          "en": "wet",
+          "ja": "ぬれた",
+          "emoji": "💧"
+        },
+        {
+          "en": "toe",
+          "ja": "あしの ゆび",
+          "emoji": "🦶"
+        },
+        {
+          "en": "board",
+          "ja": "ボード・いた",
+          "emoji": "📋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we asked, Do you know who took it? Today, let's put all our clues on a clue board. Say it with me. Clue 1: wet footprints. Clue 2: a blue feather. Good job! Let's read our clue board together. \"Clue 1: wet footprints. They are small, and they have three toes. They go from the glass box to the lake. Clue 2: a blue feather. It was next to the empty box. Clue 3: Pip saw a black bird with something shiny.\" Now, let's think together. Three toes. Those are bird feet! Mr. Mole has big paws, so it can't be Mr. Mole. The feather is blue, so it might be Pip. But wait. Pip saw a black bird. Hmm. That's strange. A good detective doesn't decide too fast. Look at every clue again, and say, It might be, or, It can't be, with a reason. Now, phonics review. Footprint. Foot and print. Flashlight. Flash and light. Darkness. Dark and ness. Creative. Create and ive. Let's check every clue, detectives!",
+      "conversation": {
+        "scene": "The friends make a clue board",
+        "sceneJa": "てがかりボードを つくる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's make a clue board. Clue 1: wet footprints.",
+            "ja": "てがかりボードを つくろう。てがかり 1: ぬれた あしあと。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Clue 2: a blue feather. It was next to the box.",
+            "ja": "てがかり 2: あおい はね。はこの となりに あった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The footprints have three toes. They're bird footprints!",
+            "ja": "あしあとは ゆびが 3本。とりの あしあとだよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "So it can't be Mr. Mole. He has big paws.",
+            "ja": "じゃあ モグラさんの はずは ないね。おおきな てだもん。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Pip is blue. It might be Pip.",
+            "ja": "ピップは あおい。ピップかも しれない。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Maybe. But don't decide too fast. Good detectives check every clue.",
+            "ja": "かもね。でも いそいで きめないで。いい たんていは てがかりを ぜんぶ たしかめるのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と てがかりを ならべよう。Clue 1: ～. Clue 2: ～. と いって、It might be ～. / It can't be ～. で りゆうと いっしょに かんがえを いおう",
+          "starterEn": "My cookie is gone! There are crumbs on the floor and a small paw print on the table. Can you make a clue list with me?",
+          "targetExpressions": [
+            "Clue 1: wet footprints. Clue 2: a blue feather.",
+            "The footprints go to the lake.",
+            "It might be Pip, but it can't be Mr. Mole."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Clue 1: wet footprints. Clue 2: a blue feather.",
+          "The footprints go to the lake. / It might be Pip, but it can't be Mr. Mole.",
+          "footprint・flashlight・darkness・creative"
+        ]
+      }
+    },
+    {
+      "lessonNo": 736,
+      "world": 25,
+      "title": "It Has Four Legs",
+      "titleJa": "あしが 4本 ある",
+      "school": {
+        "grade": "中3",
+        "topic": "It has four legs, but it can't walk.：あしあとの さきの なぞなぞの とびらで、なぞなぞに こたえる",
+        "grammar": "It has ～, but it can't ～. / What is it? ― It's ～!",
+        "expressions": [
+          {
+            "en": "It has four legs, but it can't walk.",
+            "ja": "あしが 4本 あるけど、あるけない。",
+            "core": true
+          },
+          {
+            "en": "What is it? ― It's a table!",
+            "ja": "なーんだ？ ― テーブル！"
+          },
+          {
+            "en": "Here's another riddle.",
+            "ja": "もう 1つ なぞなぞだよ。"
+          }
+        ],
+        "testPoints": [
+          "It has ～, but it can't ～. の なぞなぞを きいて こたえられる",
+          "にた いみの ことば（silent ≒ quiet・scared ≒ afraid・strange ≒ weird・clever ≒ smart）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Knock on the stone door.",
+          "ja": "いしの とびらを ノックして。",
+          "action": "こぶしで ノックする まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Stand like a table. Four legs!",
+          "ja": "テーブルの ように たって。あしが 4本！",
+          "action": "りょうてと りょうあしを ゆかに つく",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Scratch your head. Hmm.",
+          "ja": "あたまを かいて。うーん。",
+          "action": "あたまを かく",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Clap when you know the answer.",
+          "ja": "こたえが わかったら てを たたいて。",
+          "action": "てを パンと たたく",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "synonym",
+        "focus": [
+          "silent",
+          "scared",
+          "strange",
+          "clever"
+        ],
+        "sounds": [
+          "/ˈsaɪ.lənt/",
+          "/skerd/",
+          "/streɪndʒ/",
+          "/ˈklev.ər/"
+        ],
+        "words": [
+          "silent",
+          "scared",
+          "strange",
+          "clever"
+        ],
+        "tipJa": "にた いみの ことば。silent ≒ quiet（しーんと した）、scared ≒ afraid（こわがって いる）、strange ≒ weird（へんな）、clever ≒ smart（かしこい）。おなじ いみでも ちがう ことばを つかうと、なぞなぞが おもしろく なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "riddle",
+          "ja": "なぞなぞ",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "leg",
+          "ja": "あし",
+          "emoji": "🦵"
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "💡"
+        },
+        {
+          "en": "stone",
+          "ja": "いし",
+          "emoji": "🪨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we made a clue board. Today, the wet footprints lead us to a big stone door. There are words on the door. It's a riddle! Let's read it together. \"I am the Riddle Door. I have heard a thousand riddles. Answer three of my riddles, and I will open. Riddle one: It has four legs, but it can't walk. You eat your dinner on it. What is it?\" What do you think? Say it with me. It has four legs, but it can't walk. Hmm. A dog has four legs, but a dog can walk. So, it can't be a dog. You eat dinner on it. It's a table! Riddles use the word but a lot. It has a face, but it can't smile. It has teeth, but it can't eat. Can you guess them? Now, phonics. Some words have similar meanings. Silent and quiet. Scared and afraid. Strange and weird. Clever and smart. Use different words, and your riddles will sound more interesting. Let's open the Riddle Door!",
+      "conversation": {
+        "scene": "The friends answer the first riddle on the stone door",
+        "sceneJa": "いしの とびらの さいしょの なぞなぞに こたえる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "The footprints stop at this big stone door.",
+            "ja": "あしあとは この おおきな いしの とびらで とまってる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "There are words on it. It has four legs, but it can't walk.",
+            "ja": "ことばが かいて あるよ。あしが 4本 あるけど、あるけない。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "A sleeping cat?",
+            "ja": "ねて いる ネコ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "No, a cat can walk! It must be a table!",
+            "ja": "ちがう、ネコは あるけるよ！テーブルに ちがいない！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The door is opening! Riko, you're so clever.",
+            "ja": "とびらが ひらいて いく！リコ、ほんとうに かしこいね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Well done! Here's another riddle. It has keys, but it can't open a door.",
+            "ja": "よく できました！もう 1つ なぞなぞよ。かぎ（キー）が あるけど、ドアは あけられない。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の なぞなぞに こたえよう。こたえが わかったら It's a ～! と いって、じぶんも It has ～, but it can't ～. の なぞなぞを 1つ だそう",
+          "starterEn": "Here's a riddle for you. It has teeth, but it can't eat. You use it on your hair. What is it?",
+          "targetExpressions": [
+            "It has four legs, but it can't walk.",
+            "What is it? ― It's a table!",
+            "Here's another riddle."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It has four legs, but it can't walk.",
+          "What is it? ― It's a table! / Here's another riddle.",
+          "silent（≒ quiet）・scared（≒ afraid）・strange（≒ weird）・clever（≒ smart）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 737,
+      "world": 25,
+      "title": "The More You Take",
+      "titleJa": "とれば とるほど",
+      "school": {
+        "grade": "中3",
+        "topic": "The more you take, the more you leave behind.：すこし むずかしい なぞなぞに ヒントを もらって こたえる（こたえ: footsteps）",
+        "grammar": "The more you ～, the more ～. / What am I? / Let me think. / Give me a hint, please.",
+        "expressions": [
+          {
+            "en": "The more you take, the more you leave behind.",
+            "ja": "とれば とるほど、うしろに たくさん のこる。",
+            "core": true
+          },
+          {
+            "en": "What am I? ― Footsteps!",
+            "ja": "わたしは なーんだ？ ― あしあと！"
+          },
+          {
+            "en": "Let me think. Give me a hint, please.",
+            "ja": "かんがえさせて。ヒントを ちょうだい。"
+          }
+        ],
+        "testPoints": [
+          "Let me think. / Give me a hint, please. で かんがえる じかんや ヒントを たのめる",
+          "にた いみの ことば（begin ≒ start・finish ≒ end・quick ≒ fast・simple ≒ easy）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take three big steps forward.",
+          "ja": "まえに おおきく 3ぽ あるいて。",
+          "action": "おおまたで 3ぽ すすむ",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Look behind you.",
+          "ja": "うしろを みて。",
+          "action": "ふりかえる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Put your finger on your chin. Let me think.",
+          "ja": "あごに ゆびを あてて。かんがえさせて。",
+          "action": "あごに ゆびを あてる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Jump! I've got it!",
+          "ja": "ジャンプ！わかった！",
+          "action": "ぴょんと とびあがる",
+          "emoji": "💡"
+        }
+      ],
+      "phonics": {
+        "rule": "synonym",
+        "focus": [
+          "begin",
+          "finish",
+          "quick",
+          "simple"
+        ],
+        "sounds": [
+          "/bɪˈɡɪn/",
+          "/ˈfɪn.ɪʃ/",
+          "/kwɪk/",
+          "/ˈsɪm.pəl/"
+        ],
+        "words": [
+          "begin",
+          "finish",
+          "quick",
+          "simple"
+        ],
+        "tipJa": "にた いみの ことば。begin ≒ start（はじめる）、finish ≒ end（おわる）、quick ≒ fast（すばやい）、simple ≒ easy（かんたんな）。begin は うしろの gin を つよく よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "hint",
+          "ja": "ヒント",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "behind",
+          "ja": "うしろに",
+          "emoji": "🔙"
+        },
+        {
+          "en": "step",
+          "ja": "いっぽ・あしの はこび",
+          "emoji": "👣"
+        },
+        {
+          "en": "leave",
+          "ja": "のこす",
+          "emoji": "📍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we answered riddle one. It has four legs, but it can't walk. A table! Today, the Riddle Door has a more difficult riddle. Let's read it. \"Riddle two: The more you take, the more you leave behind. You make me with your feet. You can see me in the snow, in the sand and in the mud. What am I?\" Say it with me. The more you take, the more you leave behind. Great! If you don't know the answer, you can say, Let me think. Or, Give me a hint, please. Here's a hint. Take one step. Now, look behind you. What did you leave? Take two more steps. You left more! So, what's the answer? Footsteps! Now, phonics. Similar words again. Begin and start. Finish and end. Quick and fast. Simple and easy. This riddle wasn't simple, but you were quick! Let's try the next riddle soon!",
+      "conversation": {
+        "scene": "The friends think about the second riddle",
+        "sceneJa": "2つめの なぞなぞを かんがえる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Riddle two. The more you take, the more you leave behind.",
+            "ja": "なぞなぞ 2。とれば とるほど、うしろに たくさん のこる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Take what? Cookies?",
+            "ja": "なにを とるの？クッキー？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hmm. Let me think. Give me a hint, please.",
+            "ja": "うーん。かんがえさせて。ヒントを ちょうだい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The door says, You make me with your feet.",
+            "ja": "とびらに「あしで つくる」って かいて あるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I've got it! Footsteps! Look behind us. We're leaving footprints.",
+            "ja": "わかった！あしあと！うしろを みて。わたしたち、あしあとを のこしてる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Excellent! That wasn't a simple riddle. You were quick, Kiko.",
+            "ja": "すばらしい！かんたんな なぞなぞじゃ なかったのに。キコ、はやかったわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に なぞなぞを だして もらおう。わからない ときは Let me think. / Give me a hint, please. と いって、こたえを いおう",
+          "starterEn": "I have a riddle for you. The more you take away, the bigger I get. What am I?",
+          "targetExpressions": [
+            "The more you take, the more you leave behind.",
+            "What am I? ― Footsteps!",
+            "Let me think. Give me a hint, please."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The more you take, the more you leave behind.",
+          "What am I? ― Footsteps! / Let me think. Give me a hint, please.",
+          "begin（≒ start）・finish（≒ end）・quick（≒ fast）・simple（≒ easy）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 738,
+      "world": 25,
+      "title": "Huge, Tiny, Giant",
+      "titleJa": "とても おおきい・とても ちいさい",
+      "school": {
+        "grade": "中3",
+        "topic": "It's a huge rock with a tiny hole.：にた いみの ことば（huge・tiny・giant）で ようすを ゆたかに せつめいする",
+        "grammar": "a huge ～ with a tiny ～ / Look at that giant ～! / too small for ～",
+        "expressions": [
+          {
+            "en": "It's a huge rock with a tiny hole.",
+            "ja": "ちいさな あなの ある、とても おおきな いわだ。",
+            "core": true
+          },
+          {
+            "en": "Look at that giant mushroom!",
+            "ja": "あの きょだいな キノコを みて！"
+          },
+          {
+            "en": "The hole is too small for me.",
+            "ja": "あなは わたしには ちいさすぎる。"
+          }
+        ],
+        "testPoints": [
+          "huge・tiny・giant を つかって big・small より くわしく せつめいできる",
+          "にた いみの ことば（huge・giant・enormous ≒ big、tiny ≒ small）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a huge circle with your arms.",
+          "ja": "うでで とても おおきな まるを つくって。",
+          "action": "りょううでで おおきな わを つくる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Make a tiny circle with your fingers.",
+          "ja": "ゆびで とても ちいさな まるを つくって。",
+          "action": "ゆびさきで ちいさな わを つくる",
+          "emoji": "👌"
+        },
+        {
+          "en": "Walk like a giant. Stomp, stomp!",
+          "ja": "きょじんの ように あるいて。ドシン、ドシン！",
+          "action": "おもそうに ドシドシ あるく",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Peek through the tiny hole.",
+          "ja": "ちいさな あなから のぞいて。",
+          "action": "かたほうの めで のぞく",
+          "emoji": "👁️"
+        }
+      ],
+      "phonics": {
+        "rule": "synonym",
+        "focus": [
+          "huge",
+          "tiny",
+          "giant",
+          "enormous"
+        ],
+        "sounds": [
+          "/hjuːdʒ/",
+          "/ˈtaɪ.ni/",
+          "/ˈdʒaɪ.ənt/",
+          "/ɪˈnɔːr.məs/"
+        ],
+        "words": [
+          "huge",
+          "tiny",
+          "giant",
+          "enormous"
+        ],
+        "tipJa": "huge・giant・enormous は どれも big（おおきい）の なかまで、big より ずっと おおきい。tiny は small（ちいさい）より ずっと ちいさい。enormous は まんなかの nor を つよく よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "huge",
+          "ja": "とても おおきい",
+          "emoji": "🪨",
+          "core": true
+        },
+        {
+          "en": "tiny",
+          "ja": "とても ちいさい",
+          "emoji": "🐜"
+        },
+        {
+          "en": "mushroom",
+          "ja": "キノコ",
+          "emoji": "🍄"
+        },
+        {
+          "en": "hole",
+          "ja": "あな",
+          "emoji": "🕳️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, The more you take, the more you leave behind. Footsteps! The Riddle Door opened, and now we're in a new room. Today, we'll use better words for big and small. Say it with me. It's a huge rock with a tiny hole. Wonderful! Huge means very, very big. Tiny means very, very small. Let's read Riko's notebook. \"Behind the Riddle Door, there's a huge room. In the middle, there's an enormous rock. It's as tall as a house. On the rock, there's a tiny hole. Next to the rock, there are giant mushrooms. They glow green in the dark.\" How tall is the rock? As tall as a house. What color are the mushrooms? Green. Look at the tiny hole. It's shaped like a key. Do we have a key? Yes! We found a gold key in the rock wall. Now, phonics. Huge. Big. Tiny. Small. Giant. Big. Enormous. Big. Huge, giant and enormous are all bigger than big! Use them when you describe a picture. Let's describe this amazing room!",
+      "conversation": {
+        "scene": "The friends find a huge rock in a new room",
+        "sceneJa": "あたらしい へやで とても おおきな いわを みつける",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Wow! It's a huge rock with a tiny hole.",
+            "ja": "わあ！ちいさな あなの ある、とても おおきな いわだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look at that giant mushroom! It's taller than me!",
+            "ja": "あの きょだいな キノコを みて！ぼくより たかいよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Kiko, can you look through the hole?",
+            "ja": "キコ、あなから のぞける？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "No, the hole is too small for me. But wait, it's shaped like a key.",
+            "ja": "ううん、あなは わたしには ちいさすぎる。でも まって、かぎの かたちだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The gold key! We found it in the rock wall. Let's try it.",
+            "ja": "きんの かぎだ！いわの かべで みつけたやつ。ためして みよう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Huge, tiny, giant. Your words are getting better and better, detectives!",
+            "ja": "huge、tiny、giant。たんていさんたちの ことば、どんどん よく なって いるわね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と へやの ようすを くわしく はなそう。big の かわりに huge / giant、small の かわりに tiny を つかって せつめいしよう",
+          "starterEn": "I'm in a strange garden. There's a very big flower and a very small door. Can you describe it with better words?",
+          "targetExpressions": [
+            "It's a huge rock with a tiny hole.",
+            "Look at that giant mushroom!",
+            "The hole is too small for me."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's a huge rock with a tiny hole.",
+          "Look at that giant mushroom! / The hole is too small for me.",
+          "huge・giant・enormous（≒ big）・tiny（≒ small）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 739,
+      "world": 25,
+      "title": "Write Your Own Riddle",
+      "titleJa": "じぶんの なぞなぞを かこう",
+      "school": {
+        "grade": "中3",
+        "topic": "It's yellow. Monkeys love it.：こたえを きめて、ヒントを 3つ かいて、じぶんの なぞなぞを つくる",
+        "grammar": "It's ～. ～ love it. / What am I? / First, ～. Then, ～.",
+        "expressions": [
+          {
+            "en": "It's yellow. Monkeys love it.",
+            "ja": "きいろいよ。サルが だいすき。",
+            "core": true
+          },
+          {
+            "en": "What is it? ― A banana!",
+            "ja": "なーんだ？ ― バナナ！"
+          },
+          {
+            "en": "First, think of an answer. Then, write three hints.",
+            "ja": "まず、こたえを きめる。それから、ヒントを 3つ かく。"
+          }
+        ],
+        "testPoints": [
+          "こたえを きめて、It's ～. などの ヒントを 3つ かいて なぞなぞを つくれる",
+          "にた いみの ことば（large ≒ big・little ≒ small・glad ≒ happy・correct ≒ right）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up your pencil.",
+          "ja": "えんぴつを もって。",
+          "action": "えんぴつを もつ まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Write your first hint.",
+          "ja": "さいしょの ヒントを かいて。",
+          "action": "かみに かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Fold your paper in half.",
+          "ja": "かみを はんぶんに おって。",
+          "action": "かみを おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Pass your riddle to a friend.",
+          "ja": "なぞなぞを ともだちに わたして。",
+          "action": "となりに かみを わたす まね",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "synonym",
+        "focus": [
+          "large",
+          "little",
+          "glad",
+          "correct"
+        ],
+        "sounds": [
+          "/lɑːrdʒ/",
+          "/ˈlɪt.əl/",
+          "/ɡlæd/",
+          "/kəˈrekt/"
+        ],
+        "words": [
+          "large",
+          "little",
+          "glad",
+          "correct"
+        ],
+        "tipJa": "にた いみの ことば。large ≒ big（おおきい）、little ≒ small（ちいさい）、glad ≒ happy（うれしい）、correct ≒ right（ただしい）。ともだちが あてたら That's correct! と いおう。"
+      },
+      "vocab": [
+        {
+          "en": "guess",
+          "ja": "あてる・すいりする",
+          "emoji": "🤔",
+          "core": true
+        },
+        {
+          "en": "monkey",
+          "ja": "サル",
+          "emoji": "🐒"
+        },
+        {
+          "en": "peel",
+          "ja": "かわを むく",
+          "emoji": "🍌"
+        },
+        {
+          "en": "fold",
+          "ja": "おる",
+          "emoji": "📄"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It's a huge rock with a tiny hole. Tonight, there's a riddle contest in the cave, so today, we'll write our own riddles. Say it with me. It's yellow. Monkeys love it. What is it? A banana! Let's read Haru's riddle card. \"My riddle. Hint 1: I'm long and yellow. Hint 2: Monkeys love me. Hint 3: You peel me before you eat me. What am I?\" Here's how to write a good riddle. First, think of an answer. Then, write three hints. Start with a difficult hint, and finish with a simple hint. Don't say the answer in your hints! Try it now. Think of an animal or a food. Is it large or little? What color is it? Where can you find it? Now, phonics. Large and big. Little and small. Glad and happy. Correct and right. When your friend guesses the answer, say, That's correct! Let's write our riddles!",
+      "conversation": {
+        "scene": "The friends write riddles for the contest",
+        "sceneJa": "なぞなぞ たいかいの ために なぞなぞを かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's write our own riddles for the contest.",
+            "ja": "たいかいの ために じぶんの なぞなぞを かこう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Here's mine. It's yellow. Monkeys love it.",
+            "ja": "ぼくのは これ。きいろいよ。サルが だいすき。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Easy! A banana!",
+            "ja": "かんたん！バナナ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's correct! Hmm, it was too simple.",
+            "ja": "せいかい！うーん、かんたん すぎたね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "First, think of an answer. Then, write three hints. Make the first hint difficult.",
+            "ja": "まず、こたえを きめる。それから、ヒントを 3つ かく。さいしょの ヒントは むずかしく するの。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great advice, Kiko. I'm glad you're all writing. I can't wait to hear your riddles!",
+            "ja": "いい アドバイスね、キコ。みんなが かいて いて うれしいわ。なぞなぞを きくのが たのしみ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と なぞなぞを つくろう。どうぶつか たべものを 1つ きめて、It's ～. の ヒントを 3つ いって、AI に あてて もらおう",
+          "starterEn": "Let's play riddles! Think of an animal or a food. Give me three hints, and I'll guess.",
+          "targetExpressions": [
+            "It's yellow. Monkeys love it.",
+            "What is it? ― A banana!",
+            "First, think of an answer. Then, write three hints."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's yellow. Monkeys love it.",
+          "What is it? ― A banana! / First, think of an answer. Then, write three hints.",
+          "large（≒ big）・little（≒ small）・glad（≒ happy）・correct（≒ right）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 740,
+      "world": 25,
+      "title": "Riddle Contest",
+      "titleJa": "なぞなぞ たいかい",
+      "school": {
+        "grade": "中3",
+        "topic": "I'm round. I have a face, but no eyes.：どうくつの なぞなぞ たいかいで、じぶんの なぞなぞを だしあう（まとめ）",
+        "grammar": "I'm ～. I have ～, but no ～. / Are you ～? ― Yes, I am. / No, I'm not.",
+        "expressions": [
+          {
+            "en": "I'm round. I have a face, but no eyes.",
+            "ja": "わたしは まるい。かおは あるけど、めは ない。",
+            "core": true
+          },
+          {
+            "en": "Are you a clock? ― Yes, I am!",
+            "ja": "あなたは とけい？ ― そう、そのとおり！"
+          },
+          {
+            "en": "Here's a tiny hint. You look at me in the morning.",
+            "ja": "ちいさな ヒントだよ。あさ わたしを みるよ。"
+          }
+        ],
+        "testPoints": [
+          "I'm ～. I have ～, but no ～. で なぞなぞを だし、Are you ～? に こたえられる",
+          "ふりかえり（にた いみの ことば・複合語・-ness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Ring the bell. Ding!",
+          "ja": "ベルを ならして。チーン！",
+          "action": "ベルを たたく まね",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Stand up and read your riddle.",
+          "ja": "たって なぞなぞを よんで。",
+          "action": "たちあがって かみを よむ まね",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Cheer for your friends.",
+          "ja": "ともだちを おうえんして。",
+          "action": "りょうてを ふって おうえんする",
+          "emoji": "📣"
+        },
+        {
+          "en": "Bow to the audience.",
+          "ja": "かんきゃくに おじぎして。",
+          "action": "おじぎを する",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "huge",
+          "tiny",
+          "foot-step",
+          "-ness"
+        ],
+        "sounds": [
+          "/hjuːdʒ/",
+          "/ˈtaɪ.ni/",
+          "/ˈfʊt.step/",
+          "/nəs/"
+        ],
+        "words": [
+          "huge",
+          "tiny",
+          "footstep",
+          "kindness"
+        ],
+        "tipJa": "まとめ: huge ≒ big（とても おおきい）、tiny ≒ small（とても ちいさい）、foot ＋ step → footstep（あしおと）、kind ＋ ness → kindness（やさしさ）。ともだちの なぞなぞには kindness で はくしゅ！"
+      },
+      "vocab": [
+        {
+          "en": "contest",
+          "ja": "たいかい・コンテスト",
+          "emoji": "🏆",
+          "core": true
+        },
+        {
+          "en": "round",
+          "ja": "まるい",
+          "emoji": "⭕"
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👥"
+        },
+        {
+          "en": "prize",
+          "ja": "しょうひん",
+          "emoji": "🎁"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we wrote our own riddles. Today is the Cave Riddle Contest! Let's read the poster. \"The Cave Riddle Contest! Tonight at seven in the Mushroom Hall. Bring your best riddle. Read it loudly and clearly. The audience will guess the answer. The cleverest riddle wins a glowing stone. Everyone is welcome!\" Where is the contest? In the Mushroom Hall. What time does it start? At seven. What's the prize? A glowing stone. Say it with me. I'm round. I have a face, but no eyes. Great! The audience can ask, Are you a clock? Answer, Yes, I am, or, No, I'm not. If your riddle is too difficult, give a tiny hint. Please listen kindly to every riddle, and clap for your friends. Now, phonics review. Huge. Big. Tiny. Small. Footstep. Foot and step. Kindness. Kind and ness. Read your riddles loudly and clearly. Let the contest begin!",
+      "conversation": {
+        "scene": "The friends share riddles at the cave contest",
+        "sceneJa": "どうくつの なぞなぞ たいかいで なぞなぞを だしあう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Riddle Contest! Who's first?",
+            "ja": "なぞなぞ たいかいへ ようこそ！さいしょは だれ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me! I'm round. I have a face, but no eyes.",
+            "ja": "わたし！わたしは まるい。かおは あるけど、めは ない。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Are you a giant cookie?",
+            "ja": "きょだいな クッキー？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "No, I'm not! Here's a tiny hint. You look at me in the morning.",
+            "ja": "ちがうよ！ちいさな ヒントね。あさ わたしを みるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Are you a clock?",
+            "ja": "とけい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, I am! Haru gets a point!",
+            "ja": "そう、せいかい！ハルに 1てん！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "That was a clever riddle, Kiko. My turn next!",
+            "ja": "かしこい なぞなぞだったね、キコ。つぎは わたしの ばん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と なぞなぞ たいかいを しよう。I'm ～. I have ～, but no ～. で なぞなぞを だして、AI の Are you ～? に Yes, I am. / No, I'm not. で こたえよう",
+          "starterEn": "Welcome to the riddle contest! Please read your riddle first. I'll try to guess!",
+          "targetExpressions": [
+            "I'm round. I have a face, but no eyes.",
+            "Are you a clock? ― Yes, I am!",
+            "Here's a tiny hint. You look at me in the morning."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm round. I have a face, but no eyes.",
+          "Are you a clock? ― Yes, I am! / Here's a tiny hint. You look at me in the morning.",
+          "huge・tiny・footstep・kindness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 741,
+      "world": 25,
+      "title": "Is It Bigger Than a Box?",
+      "titleJa": "はこより おおきい？",
+      "school": {
+        "grade": "中3",
+        "topic": "Is it bigger than a box?：20 の しつもん ゲームで、はい・いいえの しつもんを かさねて こたえを しぼりこむ",
+        "grammar": "Is it bigger than ～? / Can it ～? / Does it have ～? ― Yes, it is. / No, it isn't.",
+        "expressions": [
+          {
+            "en": "Is it bigger than a box?",
+            "ja": "それは はこより おおきい？",
+            "core": true
+          },
+          {
+            "en": "No, it isn't. It's smaller than a box.",
+            "ja": "ううん、ちがうよ。はこより ちいさいよ。"
+          },
+          {
+            "en": "Can it fly? ― Yes, it can.",
+            "ja": "それは とべる？ ― うん、とべるよ。"
+          }
+        ],
+        "testPoints": [
+          "Is it bigger than a box? / Can it fly? の ような はい・いいえの しつもんで こたえを しぼれる",
+          "しつもんの イントネーション（Yes / No の しつもんは ↗、What・Where の しつもんは ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a big box with your arms.",
+          "ja": "うでで おおきな はこを つくって。",
+          "action": "りょううでで しかくを つくる",
+          "emoji": "📦"
+        },
+        {
+          "en": "Make a tiny box with your fingers.",
+          "ja": "ゆびで ちいさな はこを つくって。",
+          "action": "ゆびで ちいさな しかくを つくる",
+          "emoji": "🤏"
+        },
+        {
+          "en": "Flap your wings like a bat.",
+          "ja": "コウモリの ように はねを ぱたぱた させて。",
+          "action": "うでを はねの ように うごかす",
+          "emoji": "🦇"
+        },
+        {
+          "en": "Thumbs up for yes. Thumbs down for no.",
+          "ja": "はいは おやゆびを うえ、いいえは した。",
+          "action": "おやゆびを うえ・したに むける",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "intonation",
+        "focus": [
+          "Is it bigger than a box",
+          "What is it",
+          "Can it fly",
+          "Where does it live"
+        ],
+        "sounds": [
+          "↗",
+          "↘",
+          "↗",
+          "↘"
+        ],
+        "words": [
+          "Is it bigger than a box",
+          "What is it",
+          "Can it fly",
+          "Where does it live"
+        ],
+        "tipJa": "Is・Can で はじまる しつもんは Yes / No で こたえるので おわりを あげる ↗（Is it bigger than a box? ↗）。What・Where で はじまる しつもんは おわりを さげる ↘（What is it? ↘）。"
+      },
+      "vocab": [
+        {
+          "en": "bigger than",
+          "ja": "〜より おおきい",
+          "emoji": "📦",
+          "core": true
+        },
+        {
+          "en": "guess",
+          "ja": "あてる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "question",
+          "ja": "しつもん",
+          "emoji": "❓"
+        },
+        {
+          "en": "wings",
+          "ja": "はね",
+          "emoji": "🪽"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we made our own riddles and had a riddle contest. Today, we'll play a guessing game called Twenty Questions. One person thinks of an animal or a thing. The others ask yes or no questions. Listen. Is it bigger than a box? No, it isn't. It's smaller than a box. Can it fly? Yes, it can. Say it with me. Is it bigger than a box? Great! Good detectives ask big questions first, and then small questions. Let's read the rules on a stone in the cave. \"Twenty Questions. Think of an animal or a thing. Your friends can ask twenty questions. You can only answer yes or no. Ask about size, color and what it can do. If your friends guess the answer, they get a shiny stone!\" How many questions can you ask? Twenty. How can you answer? Only yes or no. Now, phonics. Listen to the end of each question. Is it bigger than a box? It goes up. What is it? It goes down. Can it fly? Up. Where does it live? Down. Yes or no questions go up. Questions with what or where go down. Let's play Twenty Questions!",
+      "conversation": {
+        "scene": "The friends play Twenty Questions in the cave",
+        "sceneJa": "洞くつで 20 の しつもん ゲーム",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm thinking of an animal. Ask me questions!",
+            "ja": "どうぶつを ひとつ かんがえたよ。しつもんして！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Is it bigger than a box?",
+            "ja": "それは はこより おおきい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, it isn't. It's smaller than a box.",
+            "ja": "ううん、ちがうよ。はこより ちいさいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Can it fly?",
+            "ja": "それは とべる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, it can. It has big wings.",
+            "ja": "うん、とべるよ。おおきな はねが あるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Does it sleep in this cave in the daytime? Is it a bat?",
+            "ja": "ひるま この 洞くつで ねむる？ コウモリ？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes! You got it in only four questions!",
+            "ja": "そう！ たった 4つの しつもんで あたり！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と 20 の しつもん ゲームを しよう。AI が かんがえた どうぶつを Is it bigger than a box? / Can it fly? など はい・いいえの しつもんで あてよう",
+          "starterEn": "Let's play Twenty Questions! I'm thinking of an animal. Ask me yes or no questions.",
+          "targetExpressions": [
+            "Is it bigger than a box?",
+            "No, it isn't. It's smaller than a box.",
+            "Can it fly? ― Yes, it can."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Is it bigger than a box?",
+          "No, it isn't. It's smaller than a box. / Can it fly? ― Yes, it can.",
+          "Yes / No の しつもんは ↗、What・Where の しつもんは ↘"
+        ]
+      }
+    },
+    {
+      "lessonNo": 742,
+      "world": 25,
+      "title": "Yes or No Detective",
+      "titleJa": "はい・いいえ たんてい",
+      "school": {
+        "grade": "中3",
+        "topic": "Was the thief tall?：コウモリの ベラに はい・いいえの しつもんを して、おうかん どろぼうを しぼりこむ",
+        "grammar": "Was the thief ～? ― Yes, it was. / No, it wasn't. / Did it have ～? ― Yes, it did.",
+        "expressions": [
+          {
+            "en": "Was the thief tall?",
+            "ja": "どろぼうは せが たかかった？",
+            "core": true
+          },
+          {
+            "en": "No, it wasn't. It was small.",
+            "ja": "ううん、ちがうよ。ちいさかったよ。"
+          },
+          {
+            "en": "Did it have wings? ― Yes, it did.",
+            "ja": "はねは あった？ ― うん、あったよ。"
+          }
+        ],
+        "testPoints": [
+          "Was the thief tall? / Did it have wings? で すぎた ことを はい・いいえで しぼりこめる",
+          "しつもんの イントネーション（Was・Did は ↗、Who・What は ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand up tall like a giant.",
+          "ja": "きょじんの ように せを のばして たって。",
+          "action": "つまさきで せのびする",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Crouch down small like a mouse.",
+          "ja": "ネズミの ように ちいさく しゃがんで。",
+          "action": "ちいさく しゃがむ",
+          "emoji": "🐭"
+        },
+        {
+          "en": "Point to the empty glass box.",
+          "ja": "からっぽの ガラスの はこを ゆびさして。",
+          "action": "まえを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Write a note in your detective notebook.",
+          "ja": "たんてい ノートに メモを かいて。",
+          "action": "てのひらに かく まね",
+          "emoji": "📝"
+        }
+      ],
+      "phonics": {
+        "rule": "intonation",
+        "focus": [
+          "Was the thief tall",
+          "Who took the crown",
+          "Did you see anything",
+          "What color was it"
+        ],
+        "sounds": [
+          "↗",
+          "↘",
+          "↗",
+          "↘"
+        ],
+        "words": [
+          "Was the thief tall",
+          "Who took the crown",
+          "Did you see anything",
+          "What color was it"
+        ],
+        "tipJa": "すぎた ことの しつもんも おなじ。Was・Did で はじまる しつもんは Yes / No で こたえるので ↗（Was the thief tall? ↗）。Who・What で はじまる しつもんは ↘（Who took the crown? ↘）。"
+      },
+      "vocab": [
+        {
+          "en": "thief",
+          "ja": "どろぼう",
+          "emoji": "🦹",
+          "core": true
+        },
+        {
+          "en": "shadow",
+          "ja": "かげ",
+          "emoji": "👤"
+        },
+        {
+          "en": "suspect",
+          "ja": "ようぎしゃ（あやしい ひと）",
+          "emoji": "🕵️"
+        },
+        {
+          "en": "shiny",
+          "ja": "ぴかぴかの",
+          "emoji": "✨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we played Twenty Questions. Is it bigger than a box? No, it isn't. Today, we'll use yes or no questions to find the thief. Remember, the crown was in the glass box yesterday. Now it's gone. When we ask about the past, we say, Was the thief tall? No, it wasn't. It was small. Did it have wings? Yes, it did. Say it with me. Was the thief tall? Wonderful! Every answer helps us. A small thief with wings. Now our list of suspects is shorter. Let's read a note from Luma, the glowworm keeper of the cave. \"Yesterday afternoon, I heard a sound near the crown. I saw a small shadow on the wall. It moved very fast. Then I heard flap, flap, flap. I was too sleepy to look carefully. Please help me find my crown!\" What did Luma see? A small shadow. What did she hear? Flap, flap, flap. Now, phonics. Was the thief tall? Up. Who took the crown? Down. Did you see anything? Up. What color was it? Down. Let's ask more questions, detectives!",
+      "conversation": {
+        "scene": "Birimo plays Bella the bat, and the friends ask yes or no questions",
+        "sceneJa": "ビリモが コウモリの ベラの やくで、みんなが はい・いいえの しつもんを する",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'll be Bella the bat today. I woke up and saw the thief!",
+            "ja": "きょうは ぼくが コウモリの ベラだよ。めが さめて、どろぼうを みたの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Was the thief tall?",
+            "ja": "どろぼうは せが たかかった？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, it wasn't. It was small.",
+            "ja": "ううん、ちがうよ。ちいさかったよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Did it have wings?",
+            "ja": "はねは あった？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, it did. And it had shiny eyes.",
+            "ja": "うん、あったよ。それに ひかる めを して いたよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Small, with wings and shiny eyes. The thief can fly!",
+            "ja": "ちいさくて、はねと ひかる め。どろぼうは とべるんだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Nice work. Each answer makes the list of suspects shorter.",
+            "ja": "いいわね。こたえを きく たびに、ようぎしゃが へって いくわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が みた どろぼうを Was the thief tall? / Did it have wings? など はい・いいえの しつもんで しぼりこもう。さいごに どんな どろぼうか まとめて いおう",
+          "starterEn": "I saw a mystery animal in the forest last night! I can only answer yes or no. Ask me questions!",
+          "targetExpressions": [
+            "Was the thief tall?",
+            "No, it wasn't. It was small.",
+            "Did it have wings? ― Yes, it did."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Was the thief tall?",
+          "No, it wasn't. It was small. / Did it have wings? ― Yes, it did.",
+          "Was・Did の しつもんは ↗、Who・What の しつもんは ↘"
+        ]
+      }
+    },
+    {
+      "lessonNo": 743,
+      "world": 25,
+      "title": "It Can't Be Haru",
+      "titleJa": "ハルの はずが ない",
+      "school": {
+        "grade": "中3",
+        "topic": "It can't be Haru. He was with me.：うたがわれた ハルを、りゆうを いって かばう（すいりに はんろんする）",
+        "grammar": "It can't be ～. ＋ りゆう（He was with me.）/ Are you sure? / Why do you think so?",
+        "expressions": [
+          {
+            "en": "It can't be Haru.",
+            "ja": "ハルの はずが ないよ。",
+            "core": true
+          },
+          {
+            "en": "He was with me.",
+            "ja": "ハルは わたしと いっしょに いたもの。"
+          },
+          {
+            "en": "Are you sure? ― Yes. We were at the waterfall together.",
+            "ja": "ほんとうに？ ― うん。わたしたちは いっしょに たきに いたよ。"
+          }
+        ],
+        "testPoints": [
+          "It can't be Haru. He was with me. で りゆうを つけて すいりに はんろんできる",
+          "しつもんの イントネーション（Were・Are は ↗、Where・Why は ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shake your head. No, no, no!",
+          "ja": "くびを よこに ふって。ちがう、ちがう！",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Stand next to your friend.",
+          "ja": "ともだちの となりに たって。",
+          "action": "となりに ならぶ",
+          "emoji": "🧑‍🤝‍🧑"
+        },
+        {
+          "en": "Hold up a blue feather.",
+          "ja": "あおい はねを もちあげて。",
+          "action": "はねを つまんで あげる まね",
+          "emoji": "🪶"
+        },
+        {
+          "en": "Look at your watch. It's three o'clock.",
+          "ja": "とけいを みて。3じ だよ。",
+          "action": "うでどけいを みる まね",
+          "emoji": "⌚"
+        }
+      ],
+      "phonics": {
+        "rule": "intonation",
+        "focus": [
+          "Where were you",
+          "Were you with Haru",
+          "Why do you think so",
+          "Are you sure"
+        ],
+        "sounds": [
+          "↘",
+          "↗",
+          "↘",
+          "↗"
+        ],
+        "words": [
+          "Where were you",
+          "Were you with Haru",
+          "Why do you think so",
+          "Are you sure"
+        ],
+        "tipJa": "Where were you? ↘ と Were you with Haru? ↗ を くらべよう。Where・Why で はじまる しつもんは ↘、Were・Are で はじまる しつもんは Yes / No で こたえるので ↗。"
+      },
+      "vocab": [
+        {
+          "en": "can't be",
+          "ja": "〜の はずが ない",
+          "emoji": "🙅",
+          "core": true
+        },
+        {
+          "en": "together",
+          "ja": "いっしょに",
+          "emoji": "🤝"
+        },
+        {
+          "en": "feather",
+          "ja": "はね（1まいの）",
+          "emoji": "🪶"
+        },
+        {
+          "en": "waterfall",
+          "ja": "たき",
+          "emoji": "🏞️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we asked yes or no questions. Was the thief tall? No, it wasn't. Today, someone thinks Haru took the crown! When you know it's not true, you can say, It can't be Haru. Then, give a reason. He was with me. Say it with me. It can't be Haru. He was with me. Excellent! A good detective listens to other ideas, too. Ask kindly, Why do you think so? Are you sure? Then explain your reason. Let's read a page from Riko's notebook. \"Three o'clock: Haru and I were at the waterfall. We took a photo of a rainbow. Pip was singing nearby. Three thirty: we walked back to the big hall with Kiko. Six o'clock: Luma told us the crown was gone.\" Where was Haru at three o'clock? At the waterfall with Riko. So, can it be Haru? No! It can't be Haru. Now, phonics. Where were you? Down. Were you with Haru? Up. Why do you think so? Down. Are you sure? Up. Let's give good reasons!",
+      "conversation": {
+        "scene": "Birimo plays Pip the bluebird, and Riko answers with a reason",
+        "sceneJa": "ビリモが あおい とりの ピップの やくで、リコが りゆうを いって はんろんする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm Pip the bluebird today. I think Haru took the crown! He touched the glass box yesterday.",
+            "ja": "きょうは ぼくが あおい とりの ピップ。ハルが おうかんを とったと おもう！ きのう ガラスの はこを さわって いたもの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It can't be Haru. He was with me.",
+            "ja": "ハルの はずが ないよ。わたしと いっしょに いたもの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Are you sure?",
+            "ja": "ほんとうに？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes. We were at the waterfall together at three o'clock.",
+            "ja": "うん。3じには いっしょに たきに いたよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thanks, Riko. But wait. We found a blue feather. Pip, where were you?",
+            "ja": "ありがとう、リコ。でも まって。あおい はねを みつけたよね。ピップ、どこに いたの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I was singing by the waterfall all afternoon. Haru and Riko heard me!",
+            "ja": "ごご ずっと たきで うたって いたよ。ハルと リコが きいて いたよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Then it can't be Pip, either. So, who did it?",
+            "ja": "じゃあ ピップでも ないね。それなら、だれが やったの？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が「ネコが ケーキを たべた」と すいりするよ。It can't be the cat. ＋ りゆう で はんろんしよう。Why do you think so? / Are you sure? も つかおう",
+          "starterEn": "Someone ate the cake! I think it was the cat. It was in the kitchen this morning.",
+          "targetExpressions": [
+            "It can't be Haru.",
+            "He was with me.",
+            "Are you sure? ― Yes. We were at the waterfall together."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It can't be Haru. He was with me.",
+          "Are you sure? ― Yes. We were at the waterfall together.",
+          "Where・Why の しつもんは ↘、Were・Are の しつもんは ↗"
+        ]
+      }
+    },
+    {
+      "lessonNo": 744,
+      "world": 25,
+      "title": "The Answer Is…",
+      "titleJa": "こたえは…",
+      "school": {
+        "grade": "中3",
+        "topic": "The thief was the crow!：てがかりを つなげて なぞを とく。カラスの コーラが おうかんを かえして あやまる",
+        "grammar": "The thief was ～! ＋ りゆう（It loves shiny things.）/ How did you know? / Clue 1 ～. Clue 2 ～.",
+        "expressions": [
+          {
+            "en": "The thief was the crow!",
+            "ja": "どろぼうは カラス だったんだ！",
+            "core": true
+          },
+          {
+            "en": "It loves shiny things.",
+            "ja": "カラスは ぴかぴかの ものが だいすきなんだ。"
+          },
+          {
+            "en": "How did you know? ― Crow feathers look blue in the lamp light.",
+            "ja": "どうして わかったの？ ― カラスの はねは ランプの ひかりで あおく みえるんだ。"
+          }
+        ],
+        "testPoints": [
+          "The thief was the crow! It loves shiny things. で こたえと りゆうを いえる",
+          "しつもんの イントネーション（Do・Does は ↗、How・When は ↘。Do you know who ～? は ↗）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Snap your fingers. I know the answer!",
+          "ja": "ゆびを ならして。こたえが わかった！",
+          "action": "ゆびを ならす",
+          "emoji": "🫰"
+        },
+        {
+          "en": "Hold your lamp up high.",
+          "ja": "ランプを たかく かかげて。",
+          "action": "かたてを たかく あげる",
+          "emoji": "🏮"
+        },
+        {
+          "en": "Peek into the nest.",
+          "ja": "すの なかを のぞいて。",
+          "action": "せのびして のぞきこむ",
+          "emoji": "🪺"
+        },
+        {
+          "en": "Give the crown back gently.",
+          "ja": "おうかんを そっと かえして。",
+          "action": "りょうてで そっと わたす",
+          "emoji": "👑"
+        }
+      ],
+      "phonics": {
+        "rule": "intonation",
+        "focus": [
+          "Do you know who took it",
+          "How did you know",
+          "Does it like shiny things",
+          "When did it happen"
+        ],
+        "sounds": [
+          "↗",
+          "↘",
+          "↗",
+          "↘"
+        ],
+        "words": [
+          "Do you know who took it",
+          "How did you know",
+          "Does it like shiny things",
+          "When did it happen"
+        ],
+        "tipJa": "Do you know who took it? は なかに who が あっても Do で はじまる Yes / No の しつもんなので ↗。How did you know? と When did it happen? は ↘。Does it like shiny things? は ↗。"
+      },
+      "vocab": [
+        {
+          "en": "crow",
+          "ja": "カラス",
+          "emoji": "🐦‍⬛",
+          "core": true
+        },
+        {
+          "en": "nest",
+          "ja": "す",
+          "emoji": "🪺"
+        },
+        {
+          "en": "clue",
+          "ja": "てがかり",
+          "emoji": "🔎"
+        },
+        {
+          "en": "say sorry",
+          "ja": "あやまる",
+          "emoji": "🙇"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, Riko said, It can't be Haru. He was with me. Today, we'll solve the mystery! When you know the answer, say it clearly, and give a reason. The thief was the crow! It loves shiny things. Say it with me. The thief was the crow! Great! Your friends may ask, How did you know? Then, connect the clues. Let's read Kiko's detective notebook. \"Clue 1: wet footprints with three toes. A bird walked by the lake. Clue 2: a blue feather. But crow feathers look blue in the lamp light. Clue 3: crows love shiny things. Answer: Cora the crow took the crown!\" How many clues did Kiko find? Three. Why did the feather look blue? Because of the lamp light. In the end, Cora gave the crown back and said sorry. She only wanted to watch it shine. Now, phonics. Do you know who took it? Up. How did you know? Down. Does it like shiny things? Up. When did it happen? Down. Let's explain our answers!",
+      "conversation": {
+        "scene": "Kiko solves the mystery, and Cora the crow says sorry",
+        "sceneJa": "キコが なぞを とき、カラスの コーラが あやまる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "I know the answer! The thief was the crow!",
+            "ja": "こたえが わかった！ どろぼうは カラス だったんだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Cora the crow? How did you know?",
+            "ja": "カラスの コーラ？ どうして わかったの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The wet footprints had three toes. And crow feathers look blue in the lamp light.",
+            "ja": "ぬれた あしあとは ゆびが 3本 だった。それに カラスの はねは ランプの ひかりで あおく みえるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And the crow loves shiny things! Look, the crown is in Cora's nest.",
+            "ja": "それに カラスは ぴかぴかの ものが だいすき！ みて、おうかんが コーラの すの なかに ある。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'll be Cora. I'm sorry. I only wanted to watch it shine.",
+            "ja": "ぼくが コーラの やくね。ごめんなさい。ひかる ところを みたかった だけなの。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great thinking, Kiko. And thank you for saying sorry, Cora. Next time, please ask first.",
+            "ja": "キコ、すばらしい すいりね。コーラ、あやまって くれて ありがとう。こんどは さきに きいてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の だす てがかりを きいて、だれが やったか あてよう。The thief was ～! と いって、It loves ～. の ように りゆうも いおう",
+          "starterEn": "Here's a mystery! Someone took the fish from the kitchen. Clue 1: there are wet paw prints. Clue 2: there's orange fur on the floor. Who was the thief?",
+          "targetExpressions": [
+            "The thief was the crow!",
+            "It loves shiny things.",
+            "How did you know? ― Crow feathers look blue in the lamp light."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The thief was the crow! It loves shiny things.",
+          "How did you know? ― Crow feathers look blue in the lamp light.",
+          "Do you know who took it? ↗（Do で はじまる）・How did you know? ↘"
+        ]
+      }
+    },
+    {
+      "lessonNo": 745,
+      "world": 25,
+      "title": "Mystery Solved",
+      "titleJa": "なぞが とけた",
+      "school": {
+        "grade": "中3",
+        "topic": "First, we found ～. Then, ～. So, ～.：おうかん じけんの すいりを じゅんばんに せつめいする はっぴょう（まとめ）",
+        "grammar": "First, we found ～. / Then, we found ～. / So, the thief was ～. / It can't be ～.",
+        "expressions": [
+          {
+            "en": "First, we found wet footprints.",
+            "ja": "まず、ぬれた あしあとを みつけました。",
+            "core": true
+          },
+          {
+            "en": "Then, we found a blue feather.",
+            "ja": "つぎに、あおい はねを みつけました。"
+          },
+          {
+            "en": "So, the thief was the crow.",
+            "ja": "だから、どろぼうは カラス でした。"
+          }
+        ],
+        "testPoints": [
+          "First, ～. Then, ～. So, ～. で すいりを じゅんばんに せつめいできる",
+          "ブロックの ふりかえり（しつもんの イントネーション・-ive）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up one finger. First!",
+          "ja": "ゆびを 1本 たてて。まず！",
+          "action": "ひとさしゆびを たてる",
+          "emoji": "☝️"
+        },
+        {
+          "en": "Hold up two fingers. Then!",
+          "ja": "ゆびを 2本 たてて。つぎに！",
+          "action": "ゆびを 2本 たてる",
+          "emoji": "✌️"
+        },
+        {
+          "en": "Point to the clue board.",
+          "ja": "てがかりボードを ゆびさして。",
+          "action": "まえを ゆびさす",
+          "emoji": "📌"
+        },
+        {
+          "en": "Take a bow. Mystery solved!",
+          "ja": "おじぎして。なぞ かいけつ！",
+          "action": "ふかく おじぎする",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "Is it bigger than a box",
+          "Where were you",
+          "Do you know who took it",
+          "-ive"
+        ],
+        "sounds": [
+          "↗",
+          "↘",
+          "↗",
+          "/ɪv/"
+        ],
+        "words": [
+          "Is it bigger than a box",
+          "Where were you",
+          "Do you know who took it",
+          "detective"
+        ],
+        "tipJa": "ふりかえり: Is it bigger than a box? ↗（Yes / No）・Where were you? ↘（Where）・Do you know who took it? ↗（Do で はじまる）。detective は detect ＋ ive。めいたんていの はっぴょうは イントネーションも だいじ！"
+      },
+      "vocab": [
+        {
+          "en": "mystery",
+          "ja": "なぞ・ミステリー",
+          "emoji": "🕵️",
+          "core": true
+        },
+        {
+          "en": "solve",
+          "ja": "とく・かいけつする",
+          "emoji": "💡"
+        },
+        {
+          "en": "explain",
+          "ja": "せつめいする",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "first",
+          "ja": "まず・さいしょに",
+          "emoji": "1️⃣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, Kiko said, The thief was the crow! It loves shiny things. Today, you are the detectives. Let's explain the whole mystery in order. Use these words. First, then, and so. First, we found wet footprints. Then, we found a blue feather. So, the thief was the crow. Say it with me. First, we found wet footprints. Wonderful! You can also say why other suspects were not the thief. It can't be Haru. He was with Riko. Let's read the report on the clue board. \"The Case of the Missing Crown. First, we found wet footprints with three toes. Then, we found a blue feather near the glass box. Haru and Pip were not the thief. They were with friends. So, the thief was Cora the crow. She gave the crown back.\" What did they find first? Wet footprints. Who gave the crown back? Cora. Now, phonics review. Is it bigger than a box? Up. Where were you? Down. Do you know who took it? Up. Detective. Detect, detective. Now, give your mystery report, detectives!",
+      "conversation": {
+        "scene": "The friends give a report about the missing crown",
+        "sceneJa": "きえた おうかん じけんの すいりを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Here's our report. First, we found wet footprints.",
+            "ja": "ぼくたちの はっぴょうです。まず、ぬれた あしあとを みつけました。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Then, we found a blue feather near the glass box.",
+            "ja": "つぎに、ガラスの はこの ちかくで あおい はねを みつけました。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Pip has blue feathers, but it can't be Pip. He was singing by the waterfall.",
+            "ja": "ピップは あおい はねだけど、ピップの はずが ない。たきで うたって いたから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "So, the thief was the crow. Crow feathers look blue in the lamp light.",
+            "ja": "だから、どろぼうは カラス でした。カラスの はねは ランプの ひかりで あおく みえるんです。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Clear and easy to follow. First, then, so. That's how detectives explain.",
+            "ja": "わかりやすくて すっきり。まず、つぎに、だから。たんていは そう やって せつめいするのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に きえた おうかんの なぞを せつめいしよう。First, we found ～. Then, ～. So, ～. の じゅんばんで はなし、AI の しつもんに こたえよう",
+          "starterEn": "I heard you solved a mystery in the cave! What happened? Can you tell me from the beginning?",
+          "targetExpressions": [
+            "First, we found wet footprints.",
+            "Then, we found a blue feather.",
+            "So, the thief was the crow."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, we found wet footprints. / Then, we found a blue feather.",
+          "So, the thief was the crow.",
+          "Is it bigger than a box? ↗・Where were you? ↘・detective"
+        ]
+      }
+    },
+    {
+      "lessonNo": 746,
+      "world": 25,
+      "title": "A Mini Mystery Story",
+      "titleJa": "みじかい ミステリーの おはなし",
+      "school": {
+        "grade": "中3",
+        "topic": "Who ate the cookies?：みじかい ミステリーを よんで、てがかりから はんにんを あてる",
+        "grammar": "Who ate ～? / It must be ～. There are ～ on its nose. / It can't be ～.",
+        "expressions": [
+          {
+            "en": "Who ate the cookies?",
+            "ja": "だれが クッキーを たべたの？",
+            "core": true
+          },
+          {
+            "en": "Read the story. Then, guess.",
+            "ja": "おはなしを よんで。それから あててね。"
+          },
+          {
+            "en": "It must be the dog. There are crumbs on its nose.",
+            "ja": "イヌに ちがいない。はなに クッキーの くずが ついて いるもの。"
+          }
+        ],
+        "testPoints": [
+          "ミステリーの みじかい はなしを よんで、てがかりから はんにんを あて、りゆうを いえる",
+          "ワールド25 の ふりかえり（-ness・-ive・複合語・にた いみ・イントネーション）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the storybook.",
+          "ja": "えほんを ひらいて。",
+          "action": "りょうてで ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Count the cookies. One, two, three.",
+          "ja": "クッキーを かぞえて。1、2、3。",
+          "action": "ゆびで かぞえる",
+          "emoji": "🍪"
+        },
+        {
+          "en": "Sniff like a dog.",
+          "ja": "イヌの ように くんくん かいで。",
+          "action": "はなを くんくん させる",
+          "emoji": "🐶"
+        },
+        {
+          "en": "Wipe the crumbs off your nose.",
+          "ja": "はなの くずを ふいて。",
+          "action": "はなを てで はらう",
+          "emoji": "🤧"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ness",
+          "-ive",
+          "foot-print",
+          "tiny",
+          "Who ate the cookies"
+        ],
+        "sounds": [
+          "/nəs/",
+          "/ɪv/",
+          "/ˈfʊt.prɪnt/",
+          "/ˈtaɪ.ni/",
+          "↘"
+        ],
+        "words": [
+          "darkness",
+          "inventive",
+          "footprint",
+          "tiny",
+          "Who ate the cookies"
+        ],
+        "tipJa": "ふりかえり: darkness（dark ＋ ness ＝ くらやみ）・inventive（invent ＋ ive）・footprint（foot ＋ print）・tiny（≒ small）・Who ate the cookies? ↘（Who で はじまる）。"
+      },
+      "vocab": [
+        {
+          "en": "crumbs",
+          "ja": "（パンや クッキーの）くず",
+          "emoji": "🍪",
+          "core": true
+        },
+        {
+          "en": "plate",
+          "ja": "おさら",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "asleep",
+          "ja": "ねむって いる",
+          "emoji": "😴"
+        },
+        {
+          "en": "paint",
+          "ja": "えのぐ",
+          "emoji": "🎨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we explained the crown mystery. First, then, so. Today, Luma has a storybook for us. It's a mini mystery. Read the story carefully. Then, guess. Who ate the cookies? Say it with me. Who ate the cookies? Good! Look for clues in every sentence. Let's read the story. \"Mia baked twelve cookies and put them on a plate. Then, she went to wash her hands. When she came back, there were only nine cookies. Her little brother Ken had blue paint on his hands. Momo the cat was asleep on the sofa. Pochi the dog had crumbs on his nose and a very happy face.\" How many cookies were gone? Three. Was the cat awake? No, it was asleep. So, who ate the cookies? It must be the dog. There are crumbs on its nose. It can't be Ken. His hands had paint, not crumbs. Now, phonics review. Darkness. Inventive. Footprint. Tiny. Who ate the cookies? Down. Let's read like detectives!",
+      "conversation": {
+        "scene": "The friends read a mini mystery from Luma's storybook",
+        "sceneJa": "ルーマの えほんで みじかい ミステリーを よむ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Three cookies are gone. Who ate the cookies?",
+            "ja": "クッキーが 3まい ない。だれが たべたの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Maybe it was Ken. He's little, and little kids love cookies!",
+            "ja": "ケンかも。ちいさい 子は クッキーが だいすきだもん！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It can't be Ken. He had blue paint on his hands, not crumbs.",
+            "ja": "ケンの はずが ないよ。てに ついて いたのは あおい えのぐで、くずじゃ ないもの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And the cat was asleep. It can't be the cat, either.",
+            "ja": "それに ネコは ねむって いた。ネコでも ないね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It must be the dog. There are crumbs on its nose!",
+            "ja": "イヌに ちがいない。はなに くずが ついて いるもの！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Case solved! You used every clue in the story.",
+            "ja": "かいけつ！ おはなしの てがかりを ぜんぶ つかったわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が みじかい ミステリーを はなすよ。よく きいて Who ～? と しつもんし、It must be ～. ＋ りゆう で はんにんを あてよう",
+          "starterEn": "Listen to my mini mystery. A sandwich disappeared from the picnic basket. The bird was in the tree. The rabbit had bread on its ears. Who ate the sandwich?",
+          "targetExpressions": [
+            "Who ate the cookies?",
+            "Read the story. Then, guess.",
+            "It must be the dog. There are crumbs on its nose."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Who ate the cookies?",
+          "It must be the dog. There are crumbs on its nose.",
+          "darkness・inventive・footprint・tiny・Who ate the cookies? ↘"
+        ]
+      }
+    },
+    {
+      "lessonNo": 747,
+      "world": 25,
+      "title": "Picture Detective",
+      "titleJa": "え の たんてい",
+      "school": {
+        "grade": "中3",
+        "topic": "In this picture, something is strange.：え の なかの おかしな ところを みつけて、ばしょと いっしょに せつめいする",
+        "grammar": "In this picture, something is strange. / There's ～ in the top left corner. / The ～ has no ～.",
+        "expressions": [
+          {
+            "en": "In this picture, something is strange.",
+            "ja": "この え の なかで、なにかが へんだよ。",
+            "core": true
+          },
+          {
+            "en": "The clock has no hands.",
+            "ja": "とけいに はりが ないよ。"
+          },
+          {
+            "en": "In the top right corner, there's a fish in the tree!",
+            "ja": "みぎうえの すみに、き の うえに さかなが いる！"
+          }
+        ],
+        "testPoints": [
+          "In this picture, something is strange. と いい、ばしょを つけて おかしな ところを せつめいできる",
+          "ワールド25 の ふりかえり（-ness・-ive・複合語・にた いみ・イントネーション）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look closely with your magnifying glass.",
+          "ja": "むしめがねで よく みて。",
+          "action": "むしめがねを のぞく まね",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Point to the top right corner.",
+          "ja": "みぎうえの すみを ゆびさして。",
+          "action": "みぎうえを ゆびさす",
+          "emoji": "↗️"
+        },
+        {
+          "en": "Point to the bottom left corner.",
+          "ja": "ひだりしたの すみを ゆびさして。",
+          "action": "ひだりしたを ゆびさす",
+          "emoji": "↙️"
+        },
+        {
+          "en": "Circle the strange thing.",
+          "ja": "へんな ものを まるで かこんで。",
+          "action": "ゆびで まるを かく",
+          "emoji": "⭕"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ness",
+          "-ive",
+          "key-hole",
+          "strange",
+          "Is something strange"
+        ],
+        "sounds": [
+          "/nəs/",
+          "/ɪv/",
+          "/ˈkiː.hoʊl/",
+          "/streɪndʒ/",
+          "↗"
+        ],
+        "words": [
+          "sadness",
+          "descriptive",
+          "keyhole",
+          "strange",
+          "Is something strange"
+        ],
+        "tipJa": "ふりかえり: sadness（sad ＋ ness ＝ かなしみ）・descriptive（describe → descriptive と つづりが かわる）・keyhole（key ＋ hole）・strange（≒ weird）・Is something strange? ↗（Is で はじまる）。"
+      },
+      "vocab": [
+        {
+          "en": "strange",
+          "ja": "へんな・ふしぎな",
+          "emoji": "🤨",
+          "core": true
+        },
+        {
+          "en": "upside down",
+          "ja": "さかさまに",
+          "emoji": "🙃"
+        },
+        {
+          "en": "corner",
+          "ja": "すみ",
+          "emoji": "📐"
+        },
+        {
+          "en": "hands (of a clock)",
+          "ja": "（とけいの）はり",
+          "emoji": "🕰️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we read a mini mystery. Who ate the cookies? It must be the dog. Today, we are picture detectives. Luma has a big painting on the cave wall. Some things in it are strange. When you find one, say, In this picture, something is strange. Then, say where it is and what is wrong. The clock has no hands. In the top right corner, there's a fish in the tree! Say it with me. In this picture, something is strange. Very good! Let's read Luma's sign next to the painting. \"Welcome, picture detectives! This is my garden party. Look very closely. There are five strange things in this picture. Find them all, and describe them in English. Use corners and words like next to and under. Good luck!\" How many strange things are there? Five. Where is the painting? On the cave wall. Now, phonics review. Sadness. Descriptive. Keyhole. Strange. Is something strange? Up. Now, let's find all five strange things, picture detectives!",
+      "conversation": {
+        "scene": "The friends find strange things in Luma's painting",
+        "sceneJa": "ルーマの え の なかの へんな ところを さがす",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "In this picture, something is strange.",
+            "ja": "この え の なかで、なにかが へんだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I see it! In the top right corner, there's a fish in the tree!",
+            "ja": "みつけた！ みぎうえの すみに、き の うえに さかなが いる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And look at the clock next to the door. The clock has no hands.",
+            "ja": "それに ドアの となりの とけいを みて。はりが ないよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The cat is drinking tea, and the cup is upside down!",
+            "ja": "ネコが おちゃを のんでるけど、カップが さかさまだよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's four. In the bottom left corner, the girl has two left shoes!",
+            "ja": "これで 4つ。ひだりしたの すみの 女の子は、ひだりの くつを 2つ はいてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "All five! You said where and what. Great describing!",
+            "ja": "5つ ぜんぶ！ どこに なにが あるか いえたわね。すばらしい せつめい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が へんな え を ことばで せつめいするよ。きいて Is something strange? と たしかめ、In this picture, something is strange. ＋ ばしょ で おかしな ところを いおう",
+          "starterEn": "Imagine a picture of a classroom. There's a teacher, a blackboard, and a dog at a desk. The dog is reading a book. What's strange?",
+          "targetExpressions": [
+            "In this picture, something is strange.",
+            "The clock has no hands.",
+            "In the top right corner, there's a fish in the tree!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In this picture, something is strange.",
+          "The clock has no hands. / In the top right corner, there's a fish in the tree!",
+          "sadness・descriptive・keyhole・strange・Is something strange? ↗"
+        ]
+      }
+    },
+    {
+      "lessonNo": 748,
+      "world": 25,
+      "title": "My Mystery Story",
+      "titleJa": "わたしの ミステリー",
+      "school": {
+        "grade": "中3",
+        "topic": "One night, the museum's painting disappeared.：はじまり・てがかり・こたえの じゅんで、じぶんの ミステリーを かく",
+        "grammar": "One night, ～ disappeared. / The next morning, ～. / In the end, ～.",
+        "expressions": [
+          {
+            "en": "One night, the museum's painting disappeared.",
+            "ja": "ある よる、はくぶつかんの え が きえました。",
+            "core": true
+          },
+          {
+            "en": "The next morning, a guard found a clue.",
+            "ja": "つぎの あさ、けいびいんさんが てがかりを みつけました。"
+          },
+          {
+            "en": "In the end, the painting was in the storeroom.",
+            "ja": "さいごに、え は そうこに ありました。"
+          }
+        ],
+        "testPoints": [
+          "はじまり（One night, ～.）・てがかり（The next morning, ～.）・こたえ（In the end, ～.）の じゅんで ミステリーを かける",
+          "ワールド25 の ふりかえり（-ness・-ive・複合語・にた いみ・イントネーション）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up your pencil.",
+          "ja": "えんぴつを もって。",
+          "action": "えんぴつを もつ まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Tiptoe like a guard at night.",
+          "ja": "よるの けいびいんさんの ように そっと あるいて。",
+          "action": "つまさきで そっと あるく",
+          "emoji": "💂"
+        },
+        {
+          "en": "Shine your flashlight on the wall.",
+          "ja": "かべを かいちゅうでんとうで てらして。",
+          "action": "ライトを むける まね",
+          "emoji": "🔦"
+        },
+        {
+          "en": "Gasp! The painting is gone!",
+          "ja": "はっ！ え が ない！",
+          "action": "りょうてで くちを おさえる",
+          "emoji": "😲"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ness",
+          "-ive",
+          "no-body",
+          "begin",
+          "Where did it go"
+        ],
+        "sounds": [
+          "/nəs/",
+          "/ɪv/",
+          "/ˈnoʊ.bɑː.di/",
+          "/bɪˈɡɪn/",
+          "↘"
+        ],
+        "words": [
+          "happiness",
+          "imaginative",
+          "nobody",
+          "begin",
+          "Where did it go"
+        ],
+        "tipJa": "ふりかえり: happiness（happy の y を i に かえて ness）・imaginative（imagine → ative）・nobody（no ＋ body ＝ だれも 〜ない）・begin（≒ start）・Where did it go? ↘（Where で はじまる）。"
+      },
+      "vocab": [
+        {
+          "en": "disappear",
+          "ja": "きえる",
+          "emoji": "🫥",
+          "core": true
+        },
+        {
+          "en": "museum",
+          "ja": "はくぶつかん・びじゅつかん",
+          "emoji": "🏛️"
+        },
+        {
+          "en": "guard",
+          "ja": "けいびいん",
+          "emoji": "💂"
+        },
+        {
+          "en": "storeroom",
+          "ja": "そうこ",
+          "emoji": "🚪"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we were picture detectives. In this picture, something is strange. Today, you'll write your own mystery story. A good mystery has three parts. The beginning. Something disappears. One night, the museum's painting disappeared. The clues. The next morning, a guard found a clue. And the answer. In the end, the painting was in the storeroom. Say it with me. One night, the museum's painting disappeared. Wonderful! Let's read my example story. \"One night, the museum's famous painting of a cat disappeared. Nobody heard anything. The next morning, a guard found a clue. There was a tiny trail of white paint on the floor. It went to the storeroom door. In the end, the painting was in the storeroom. A painter was fixing the cat's whiskers!\" What disappeared? The painting of a cat. Where was the clue? On the floor. Now, phonics review. Happiness. Imaginative. Nobody. Begin. Where did it go? Down. Now, begin your story. Be imaginative!",
+      "conversation": {
+        "scene": "The friends plan their own mystery stories",
+        "sceneJa": "じぶんの ミステリーを かんがえる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Here's my beginning. One night, the museum's painting disappeared.",
+            "ja": "わたしの はじまりは これ。ある よる、はくぶつかんの え が きえました。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Ooh, exciting! What was the clue?",
+            "ja": "わあ、どきどき する！ てがかりは なに？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The next morning, a guard found a clue. There was a tiny key on the floor.",
+            "ja": "つぎの あさ、けいびいんさんが てがかりを みつけたの。ゆかに ちいさな かぎが あったんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Where did it go? Tell us the answer!",
+            "ja": "え は どこへ いったの？ こたえを おしえて！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In the end, the painting was in the storeroom. The guard was cleaning it.",
+            "ja": "さいごに、え は そうこに あったの。けいびいんさんが きれいに して いたんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "A beginning, a clue and an answer. That's a great mystery, Riko.",
+            "ja": "はじまり、てがかり、こたえ。すてきな ミステリーね、リコ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いっしょに ミステリーを つくろう。One night, ～ disappeared. で はじめて、The next morning, ～. で てがかり、In the end, ～. で こたえを いおう",
+          "starterEn": "Let's make a mystery story together! Something disappeared one night. What was it?",
+          "targetExpressions": [
+            "One night, the museum's painting disappeared.",
+            "The next morning, a guard found a clue.",
+            "In the end, the painting was in the storeroom."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "One night, the museum's painting disappeared.",
+          "The next morning, a guard found a clue. / In the end, the painting was in the storeroom.",
+          "happiness・imaginative・nobody・begin・Where did it go? ↘"
+        ]
+      }
+    },
+    {
+      "lessonNo": 749,
+      "world": 25,
+      "title": "Cave of Riddles Review",
+      "titleJa": "なぞときの洞くつ ふりかえり",
+      "school": {
+        "grade": "中3",
+        "topic": "There's ～. / It might be ～. / It must be ～.：洞くつの さよなら たんけんで、ワールド25 の 表現を つかう。ルーマから ひびきの劇場への しょうたいじょう",
+        "grammar": "There's ～. / It might be ～. / It must be ～. / It can't be ～.",
+        "expressions": [
+          {
+            "en": "There's a light at the end of the tunnel.",
+            "ja": "トンネルの おわりに あかりが あるよ。",
+            "core": true
+          },
+          {
+            "en": "It might be a bat. ― No, it must be the wind.",
+            "ja": "コウモリ かもしれない。 ― ちがう、かぜに ちがいないよ。"
+          },
+          {
+            "en": "It can't be a ghost!",
+            "ja": "おばけの はずが ない！"
+          }
+        ],
+        "testPoints": [
+          "There's ～. で ばしょを せつめいし、It might be / It must be / It can't be ～. で すいりできる",
+          "ワールド25 の ふりかえり（-ness・-ive・複合語・にた いみ・イントネーション）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn on your flashlight.",
+          "ja": "かいちゅうでんとうを つけて。",
+          "action": "スイッチを おす まね",
+          "emoji": "🔦"
+        },
+        {
+          "en": "Walk through the tunnel slowly.",
+          "ja": "トンネルを ゆっくり あるいて。",
+          "action": "かがんで ゆっくり あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Cup your hands and listen to the echo.",
+          "ja": "てを みみに あてて、こだまを きいて。",
+          "action": "てを みみに あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Wave goodbye to Luma.",
+          "ja": "ルーマに さよならの てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ness",
+          "-ive",
+          "flash-light",
+          "huge",
+          "Was it the crow"
+        ],
+        "sounds": [
+          "/nəs/",
+          "/ɪv/",
+          "/ˈflæʃ.laɪt/",
+          "/hjuːdʒ/",
+          "↗"
+        ],
+        "words": [
+          "kindness",
+          "detective",
+          "flashlight",
+          "huge",
+          "Was it the crow"
+        ],
+        "tipJa": "ふりかえり: kindness（kind ＋ ness ＝ やさしさ）・detective（detect ＋ ive）・flashlight（flash ＋ light）・huge（≒ big）・Was it the crow? ↗（Was で はじまる）。"
+      },
+      "vocab": [
+        {
+          "en": "tunnel",
+          "ja": "トンネル",
+          "emoji": "🕳️",
+          "core": true
+        },
+        {
+          "en": "echo",
+          "ja": "こだま・ひびき",
+          "emoji": "🔊"
+        },
+        {
+          "en": "invitation",
+          "ja": "しょうたいじょう",
+          "emoji": "💌"
+        },
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we wrote our own mystery stories. One night, the museum's painting disappeared. Today, we'll take one last walk through the Cave of Riddles. Let's use everything we learned. To describe places, say, There's a light at the end of the tunnel. To guess, say, It might be a bat. It must be the wind. It can't be a ghost! Say it with me. There's a light at the end of the tunnel. Great! At the end of our walk, Luma gave us a letter. Let's read it. \"Dear detectives, thank you for finding my crown. Your kindness and your clever questions helped everyone in the cave. Cora and I are good friends again. Please take this invitation. Follow the echoes. They will take you to the Theater of Echoes. Love, Luma.\" What did Luma give us? An invitation. Where will the echoes take us? To the Theater of Echoes. Now, phonics review. Kindness. Detective. Flashlight. Huge. Was it the crow? Up. Let's say goodbye to the cave!",
+      "conversation": {
+        "scene": "The friends take a goodbye walk in the cave and get an invitation from Luma",
+        "sceneJa": "洞くつの さよなら たんけんで、ルーマから しょうたいじょうを もらう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look! There's a light at the end of the tunnel.",
+            "ja": "みて！ トンネルの おわりに あかりが あるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Whooo. What's that sound? It might be a ghost!",
+            "ja": "ひゅう〜。あの おとは なに？ おばけ かもしれない！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It can't be a ghost! It must be the wind, Birimo.",
+            "ja": "おばけの はずが ない！ かぜに ちがいないよ、ビリモ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Luma gave us an invitation. It says, Follow the echoes to the Theater of Echoes.",
+            "ja": "ルーマが しょうたいじょうを くれたよ。「こだまを たどって、ひびきの劇場へ」だって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Listen. Hello! Hello! Hello! The echoes are calling us.",
+            "ja": "きいて。ハロー！ ハロー！ ハロー！ こだまが よんでる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You described, guessed and solved. You're real detectives now.",
+            "ja": "せつめいして、すいりして、なぞを といたわね。もう ほんものの たんていよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と 洞くつを さいごに たんけんしよう。There's ～. で みえる ものを せつめいし、AI の ふしぎな おとに It might be ～. / It must be ～. / It can't be ～. で こたえよう",
+          "starterEn": "We're walking through a dark cave together. Shh! I can hear a strange sound. What do you think it is?",
+          "targetExpressions": [
+            "There's a light at the end of the tunnel.",
+            "It might be a bat. ― No, it must be the wind.",
+            "It can't be a ghost!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "There's a light at the end of the tunnel.",
+          "It might be a bat. ― No, it must be the wind. / It can't be a ghost!",
+          "kindness・detective・flashlight・huge・Was it the crow? ↗"
+        ]
+      }
+    },
+    {
+      "lessonNo": 750,
+      "world": 25,
+      "title": "World 25 Grand Review",
+      "titleJa": "ワールド25 グランド ふりかえり",
+      "school": {
+        "grade": "中3",
+        "topic": "The case is closed! Great detective work!：洞くつの 大広間で、ワールド25 なぞときショー（なぞなぞ・20 の しつもん・すいりの はっぴょう）",
+        "grammar": "There's ～. / It might be / must be / can't be ～. / Is it ～? / Do you know who ～? / First, ～. Then, ～. So, ～.",
+        "expressions": [
+          {
+            "en": "The case is closed!",
+            "ja": "じけんは かいけつ！",
+            "core": true
+          },
+          {
+            "en": "Great detective work!",
+            "ja": "みごとな たんていの しごと！"
+          },
+          {
+            "en": "Thank you for coming to our riddle show!",
+            "ja": "わたしたちの なぞときショーに きて くれて ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "ワールド25 の 表現（描写・推量・しつもんで しぼる・すいりの せつめい）を つかって なぞときショーが できる",
+          "ワールド25 の ふりかえり（-ness・-ive・複合語・にた いみ・イントネーション）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！ とまって！ こっちへ きて！ いって！",
+          "action": "スピード TPR：ことばに あわせて すばやく うごく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Tip your detective hat.",
+          "ja": "たんていの ぼうしを ちょっと あげて。",
+          "action": "ぼうしの つばを つまむ まね",
+          "emoji": "🎩"
+        },
+        {
+          "en": "Shine your flashlight on the stage.",
+          "ja": "ステージを かいちゅうでんとうで てらして。",
+          "action": "ライトを まえに むける まね",
+          "emoji": "🔦"
+        },
+        {
+          "en": "Clap for all the detectives.",
+          "ja": "たんてい みんなに はくしゅ。",
+          "action": "はくしゅする",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ness",
+          "-ive",
+          "foot-print",
+          "giant",
+          "Who did it",
+          "Is the case closed"
+        ],
+        "sounds": [
+          "/nəs/",
+          "/ɪv/",
+          "/ˈfʊt.prɪnt/",
+          "/ˈdʒaɪ.ənt/",
+          "↘",
+          "↗"
+        ],
+        "words": [
+          "darkness",
+          "creative",
+          "footprint",
+          "giant",
+          "Who did it",
+          "Is the case closed"
+        ],
+        "tipJa": "ワールド25 の まとめ: darkness（dark ＋ ness）・creative（create の e を とって ive）・footprint（foot ＋ print）・giant（≒ big）・Who did it? ↘・Is the case closed? ↗。ことばの パーツと イントネーションで、なぞも えいごも とけた！"
+      },
+      "vocab": [
+        {
+          "en": "case",
+          "ja": "じけん",
+          "emoji": "🗂️",
+          "core": true
+        },
+        {
+          "en": "show",
+          "ja": "ショー",
+          "emoji": "🎪"
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👥"
+        },
+        {
+          "en": "theater",
+          "ja": "げきじょう",
+          "emoji": "🎭"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we took a goodbye walk through the cave. There's a light at the end of the tunnel. Today is the big riddle show in the great hall. Everyone in the cave is here. Luma, Mr. Mole, Bella, Pip and Cora are in the audience. First, Haru tells a riddle. Then, we play Twenty Questions. Finally, Kiko explains the crown mystery. At the end, we all shout, The case is closed! Great detective work! Say it with me. The case is closed! Great detective work! Fantastic! Let's read the poster for the show. \"Riddle Show Tonight! Place: the great hall of the Cave of Riddles. Time: seven o'clock. Riddles, Twenty Questions, and the true story of the missing crown. Bring your flashlight and your clever ideas. Everyone is welcome!\" Where is the show? In the great hall. What should you bring? A flashlight and clever ideas. Now, phonics. Darkness. Creative. Footprint. Giant. Who did it? Down. Is the case closed? Up. Let's start the riddle show!",
+      "conversation": {
+        "scene": "The riddle show in the great hall of the cave",
+        "sceneJa": "洞くつの 大広間で なぞときショー",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Welcome to our riddle show! Here's a riddle. The more you take, the more you leave behind. What are they?",
+            "ja": "なぞときショーへ ようこそ！ なぞなぞです。とれば とるほど、うしろに のこして いく ものは なに？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Footsteps! I know that one!",
+            "ja": "あしあと！ それ しってる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Now, the crown mystery. First, we found wet footprints. Then, a blue feather. So, the thief was the crow.",
+            "ja": "つぎは おうかんの なぞ。まず ぬれた あしあと。つぎに あおい はね。だから どろぼうは カラス でした。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The case is closed! Great detective work, everyone!",
+            "ja": "じけんは かいけつ！ みんな、みごとな たんていの しごと！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Listen! The echoes are calling. Hello, hello, hello. Let's go to the Theater of Echoes!",
+            "ja": "きいて！ こだまが よんでる。ハロー、ハロー、ハロー。ひびきの劇場へ いこう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You described, guessed, asked and explained. Thank you for coming to our riddle show!",
+            "ja": "せつめいして、すいりして、しつもんして、はっぴょうしたわね。なぞときショーに きて くれて ありがとう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と なぞときショーを しよう。なぞなぞを 1つ だし、AI の なぞなぞには Is it ～? で しつもんして あてよう。さいごに The case is closed! で しめくくろう",
+          "starterEn": "Welcome to the riddle show! I have a riddle for you. I have keys, but I can't open any doors. What am I?",
+          "targetExpressions": [
+            "The case is closed!",
+            "Great detective work!",
+            "Thank you for coming to our riddle show!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The case is closed! Great detective work!",
+          "Thank you for coming to our riddle show!",
+          "darkness・creative・footprint・giant・Who did it? ↘・Is the case closed? ↗"
+        ]
+      }
+    }
+  ]
+}
