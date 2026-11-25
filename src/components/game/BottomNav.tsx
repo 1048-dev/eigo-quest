@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
 import type { CharacterId } from "@/lib/game/characters";
+import { isAccountPath } from "@/components/account/AccountBar";
 
 type Icon = { char: CharacterId } | { monster: string };
 
@@ -18,6 +19,8 @@ const NAV: { href: string; label: string; icon: Icon }[] = [
 /** 木の板＋金縁のRPGメニュー。アイコンはキャラクターの顔 */
 export function BottomNav() {
   const path = usePathname() ?? "";
+  // とうろく・ログイン・だれが あそぶ？・おうちの方 の画面では ゲームのメニューを出さない
+  if (isAccountPath(path)) return null;
   return (
     <nav className="fixed inset-x-0 bottom-0 z-20 border-t-2 border-[#b8862a] bg-[linear-gradient(180deg,rgba(14,32,32,.88),rgba(4,10,12,.95))] shadow-[inset_0_1px_0_#fff2b0,0_-10px_30px_rgba(0,0,0,.6)] backdrop-blur-xl">
       <ul className="mx-auto grid max-w-3xl grid-cols-5 px-2 pb-[env(safe-area-inset-bottom)]">

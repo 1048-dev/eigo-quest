@@ -1,0 +1,51 @@
+"use client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState, type FormEvent } from "react";
+import { AccountHeader, FormMessage, PasswordField, TextField } from "@/components/account/Form";
+import { AuthResultResponseSchema } from "@/lib/api/contracts";
+import { notifyAccountChanged, rememberTrial, sendJson, isAccountOffline } from "@/lib/auth/client";
+
+/** 保護者のログイン */
+export default function LoginPage() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
+  const [busy, setBusy] = useState(false);
+
+  const submit = async (ev: FormEvent) => {
+    ev.preventDefault();
+    setError(null);
+    if (!email.trim() || !password) { setError("メールアドレスとパスワードを入力してください。"); return; }
+    setBusy(true);
+    const r = await sendJson("POST", "/api/auth/login", AuthResultResponseSchema, { email: email.trim(), password });
+    setBusy(false);
+    if (r.ok && r.data.ok) {
+      notifyAccountChanged();
+      router.push("/who");
+      return;
+    }
+    setOffline(isAccountOffline(r));
+    setError(r.error ?? "ログインできませんでした。時間をおいてもう一度お試しください。");
+  };
+
+  return (
+    <div className="pb-6">
+      <AccountHeader title="おうちの方のログイン" back={{ href: "/welcome", label: "スタート画面へ" }} />
+      <form onSubmit={submit} noValidate className="card rpg-rivets space-y-4 p-5" aria-label="保護者のログイン">
+        <FormMessage error={error} />
+        <TextField label="メールアドレス" type="email" autoComplete="email" inputMode="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+        <PasswordField label="パスワード" autoComplete="current-password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+        <button type="submit" className="btn btn-coin block w-full text-lg" disabled={busy}>{busy ? "確認しています…" : "ログイン"}</button>
+        {offline && (
+          <button type="button" className="btn btn-primary block w-full" onClick={() => { rememberTrial(); router.push("/map"); }}>おためしで あそぶ</button>
+        )}
+        <p className="text-center text-sm text-[var(--ink-2)]">
+          はじめての方は <Link href="/register" className="font-black text-[var(--volt)] underline underline-offset-4">新規登録</Link>
+        </p>
+      </form>
+    </div>
+  );
+}
