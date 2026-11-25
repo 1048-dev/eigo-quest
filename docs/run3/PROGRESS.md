@@ -165,3 +165,18 @@
 - `npx vitest run` OK（30ファイル・791テスト）
 - `npx next build` OK
 - `npm run smoke:offline` OK、`npm run check:auth-db`（本物の DB）41項目 OK、`npm run screens:auth`（本物の DB）OK
+
+## Phase 5 - README とおはようメモ（完了）
+
+### やったこと
+- **README.md を更新**: はじめの画面（/welcome）と おためし・登録の流れ、デモ保護者（`SEED_DEMO_PARENT=1`）、マイグレーション `parent_auth`、DB 停止時のアカウント画面の案内、コマンド表（テスト件数 30ファイル・791件、`smoke:offline`・`check:auth-db`・`screens:auth` を追加）、ディレクトリ構成（`src/lib/auth/`・`parentService`・`dailyLimit`・`middleware.ts`・/welcome・/register・/login・/who・/parent・`docs/run3/`）、新しい節「保護者アカウント」、DB 設計の表に `Session`、1日の回数制限の注記、「骨組みとして残している部分」の認証の行（実装済み／パスワード再設定・メール確認は未実装）。
+- **docs/run3/MORNING.md を作成**（オーナー向け）: かわったこと、ためしかた（DB なし／DB あり・デモ保護者でのログイン手順）、のこっている問題、決めてほしいこと。
+
+### 判断したこと
+- `docker compose up -d` はこの PC ではポート 5432 の衝突で起動できなかったため、MORNING.md に注意として書いた（docker-compose.yml のポートは変えていない。ほかの環境では 5432 のままが自然なため）。
+- 「のこっている問題」に、パスワード・暗証番号を忘れたときの再設定が無いこと、おためしの記録が登録後に引きつがれないことを明記した。
+
+### チェック
+- `npx tsc --noEmit` OK
+- `npx vitest run` OK（30ファイル・791テスト）
+- `npx next build` OK

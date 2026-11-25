@@ -44,17 +44,22 @@ npm run db:seed
 npm run dev
 ```
 
-http://localhost:3000 を開くとマップ画面が表示されます。デモユーザー「ハル」で始まります。
+http://localhost:3000 を開くと、はじめてのときはスタート画面（`/welcome`）が出ます。「おうちの方：とうろく」で保護者アカウントを作ってお子さまを追加するか、「おためしで あそぶ」でログインせずにマップへ進みます（おためしはデモユーザー「ハル」の記録で遊びます。次からは `/` でそのままマップが開きます）。
 
-> マイグレーション（`prisma/migrations/`）には、コインの理由 `RECAP_WATCHED`（まとめ動画のごほうび）の追加が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください（レッスン31〜360と、その復習クエスト・まとめ・ボス・アリーナが入ります）。
+開発用のデモ保護者が欲しいときは、seed のときに `SEED_DEMO_PARENT=1` を付けます（`demo-parent@example.com` / `demo-pass-1234` / 暗証番号 `1234`、子ども「リコ」）。
+
+> マイグレーション（`prisma/migrations/`）には、保護者アカウント用の `20261125130000_parent_auth`（`Parent` のパスワード・暗証番号・設定、`Session` テーブル）が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください。
 >
-> **DBが動いていないとき**: Docker・DB なしで `npm run dev` だけでも、エラー画面を出さずに「おためしモード」で遊べます（下の「DBが止まっていても動く『おためしモード』」）。クリアしたレッスンはそのブラウザにだけ記録され、マップに ✓ が付きます（コイン・習得率は保存されません）。キャラクターの絵は `docs/night/screens/characters-preview.html` をブラウザで開くと確認できます。
+> **DBが動いていないとき**: Docker・DB なしで `npm run dev` だけでも、エラー画面を出さずに「おためしモード」で遊べます（下の「DBが止まっていても動く『おためしモード』」）。クリアしたレッスンはそのブラウザにだけ記録され、マップに ✓ が付きます（コイン・習得率は保存されません）。登録・ログインの画面は「ただいまアカウント機能を利用できません」と案内し、「おためしで あそぶ」へ進めます。キャラクターの絵は `docs/night/screens/characters-preview.html` をブラウザで開くと確認できます。
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・25ファイル・703件） |
+| `npm test` | 単体テスト（vitest・30ファイル・791件） |
 | `npm run typecheck` | 型チェック |
-| `npm run smoke -- http://localhost:3000` | Playwright で21画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
+| `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
+| `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build` |
+| `npm run check:auth-db -- --db <テスト用URL> [--port 3457]` | 本物の DB で migrate deploy → seed → `next start` → 登録・子ども2人・切りかえ・回数制限・持ち主チェック・CSRF・退会後に何も残らないこと まで 41項目を HTTP で確認。**使い捨ての DB を指定すること**（中身を書きかえます） |
+| `npm run screens:auth -- --db <テスト用URL>` | 本物の DB と DB 停止の両方で、保護者アカウントの画面を Playwright で操作してスクリーンショット（`docs/run3/screens/`） |
 | `npx tsx scripts/e2e-smoke.ts http://localhost:3000` | 実サーバーとDBを使い、30日分のプレイ（ボス戦・アリーナ・お宝アラートまで）を早送りで実行 |
 | `pip install -r worksheets/requirements.txt` | PDF生成に必要な reportlab をインストール |
 | `npm run worksheets` | 全レッスン＋全テストのPDFを `worksheets/out/` に出力 |
@@ -102,9 +107,18 @@ eigo-quest/
 │   ├── speech/
 │   │   ├── tts.ts            音声再生（0.8 / 1.0 / 1.2 倍速）・日英まじりの読み上げ
 │   │   └── pronunciation.ts  発音判定（Web Speech API と採点関数）
-│   ├── services/progressService.ts   ドメインロジックとDBをつなぐ層（トランザクション・台帳・記憶の更新）
-│   ├── db.ts / auth.ts       Prismaクライアント / 認証スタブ
+│   ├── services/
+│   │   ├── progressService.ts   ドメインロジックとDBをつなぐ層（トランザクション・台帳・記憶の更新）
+│   │   ├── parentService.ts     保護者・子ども・ようす・設定・退会（子どもの処理はすべて parentId で絞る）
+│   │   └── dailyLimit.ts        1日のレッスン回数の上限
+│   ├── auth/                 保護者アカウント（scrypt・セッション・cookie・Origin 確認・レート制限・currentUserId()）
+│   ├── db.ts                 Prismaクライアント
+├── src/middleware.ts         /api の POST/PUT/PATCH/DELETE の Origin を確認（CSRF 対策）
 ├── src/app/
+│   ├── page.tsx              入口（cookie だけで /who・/map・/welcome にふりわけ）
+│   ├── welcome/ register/ login/   スタート・保護者の登録・ログイン
+│   ├── who/                  「だれが あそぶ？」（子どもを選ぶ）
+│   ├── parent/               おうちの方ページ（暗証番号で保護。ようす・回数制限・子どもの編集・暗証番号/パスワード変更・退会）
 │   ├── map/                  RPG風ステージマップ（12ワールド）＋お宝アラートのポップアップ
 │   ├── lesson/[lessonNo]/    1日のレッスン（9ステップ・さいごは AI会話）
 │   ├── recap/[lessonNo]/     きょうのまとめ動画（自動再生）
@@ -112,12 +126,13 @@ eigo-quest/
 │   ├── dashboard/            習得率ダッシュボード（レーダーチャート・推移・苦手）
 │   ├── arena/ gacha/ ranking/
 │   └── api/                  ルートハンドラ
-├── src/components/           WorldMap / QuestionView / TestRunner / LessonSteps / ConversationStep / RecapPlayer / MasteryRadar ...
+├── src/components/           WorldMap / QuestionView / TestRunner / LessonSteps / ConversationStep / RecapPlayer / MasteryRadar / account（AccountBar・PinPad）/ parent ...
 ├── worksheets/generate_worksheets.py   A4 PDF生成
 ├── scripts/e2e-smoke.ts      30日分の通しプレイを早送りで実行（DB が必要）
-├── scripts/smoke.ts          Playwright の全画面スモークテスト（DB なしでも可）
+├── scripts/smoke.ts          Playwright の全画面スモークテスト（DB なしでも可）。smoke-offline.ts は DB 停止での起動〜スモークを1コマンドで
+├── scripts/auth-db-check.ts / auth-ui-screens.ts   本物の DB での保護者アカウントの通し確認 / 画面の確認
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
-├── docs/night/ docs/night2/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）
+├── docs/night/ docs/night2/ docs/run3/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
 ```
 
@@ -162,6 +177,19 @@ eigo-quest/
 - `src/lib/api/server.ts`（`withApi`）：ルートで例外が起きても必ず JSON（`{ ok: false, error }`）を返す
 - `tests/api-contracts.test.ts`：壊れたレスポンスでも落ちないこと、サーバーの正しい形がそのまま通ることを確認
 
+## 保護者アカウント（src/lib/auth・/welcome・/who・/parent）
+
+支払う人＝保護者（メール＋パスワード）、学ぶ人＝子ども（ニックネーム・学年1〜6・生まれ年は任意。本名は不要）。月報（LINE）や月額課金の土台で、課金・LINE はまだありません。
+
+- **流れ**: `/welcome` → 登録（メール・パスワード・暗証番号4けた）→ お子さまを追加（6人まで）→ `/who`「だれが あそぶ？」で子どもを選ぶ → マップ。ゲームの画面の上のヘッダー（AccountBar）に いま遊んでいる子と「かわる」「おうちの方」が出ます。
+- **おうちの方ページ `/parent`**: 入るたびに暗証番号（入れてから10分有効）。お子さまごとのようす（進みぐあい・連続日数・総合習得率・今日の回数・最終学習日・伸ばしたい力）、1日のレッスン回数の上限（既定は制限なし、1〜10回）、お子さまの編集・削除、暗証番号・パスワードの変更、ログアウト、退会（保護者とすべての子どもの学習データを1つのトランザクションで完全に削除）。
+- **currentUserId()**: ログイン中で選ばれた子どもが本当にその保護者の子のときだけその子。未ログイン・未選択・DB 停止のときはデモユーザー（おためしモード）。
+- **安全**: パスワードは Node の `crypto.scrypt`（ネイティブモジュールなし）。セッションは32バイト乱数のトークンを httpOnly・SameSite=Lax（本番は Secure）の cookie `eq_session` に入れ、DB には SHA-256 だけを期限つき（30日）で保存。ログインのたびにトークンを作り直し、1日ごとに入れ替え。状態を変える API は Origin を確認。ログイン・登録・暗証番号はメモリ内のレート制限（サーバー1台が前提）。入力はすべて zod、ログイン失敗は共通の文言、パスワード・トークン・暗証番号はログに出しません。
+- **1日の回数制限**: 上限に届くと、新しいレッスンは「きょうの レッスンは ここまで！ また あした あそぼうね。」（403 + `code: "DAILY_LIMIT"`）。完了ずみのレッスンのおさらいはできます。
+- **DB 停止時**: アカウント API は 503 + `offline: true` + ていねいな案内（`GET /api/auth/me` だけは 200 + `loggedIn:false`）。画面はおためしモードへ進めます。
+- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`DELETE /api/parent/account`。
+- 環境変数: `ALLOWED_ORIGINS`（同じホスト以外から受け付けるオリジン。通常は空）、`SEED_DEMO_PARENT`（1 でデモ保護者を seed）。
+
 ## DBが止まっていても動く「おためしモード」
 
 PostgreSQL が止まっている・サーバーに届かないときでも、エラー画面は出さずに内蔵データで遊べます。
@@ -187,7 +215,7 @@ PostgreSQL が止まっている・サーバーに届かないときでも、エ
 L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(1-5) → L6 … L30 → C30 → ボス(1-30) → L31 …
 ```
 
-- レッスンは1日に何回でも進められます。レッスン n を終えると、すぐにレッスン n+1 が開きます。
+- レッスンは1日に何回でも進められます（おうちの方ページで1日の上限を決めたときを除く）。レッスン n を終えると、すぐにレッスン n+1 が開きます。
 - **復習クエスト**（C）はすべてのレッスンにあり、レッスンを終えた**次の日以降**に開きます。進行はブロックしません（受けなくても先に進めます）が、一発合格がいちばんコインのもらえる「1分あたり最もお得」なクエストです。
 - 5の倍数のレッスンの後は**まとめテスト**、30の倍数の後は**ボス戦**があり、これは合格しないと次のレッスンが開かない「関門」です。関門はレッスン後すぐに受けられます。
 - テストは何度でも再挑戦できます。間違えた問題には解説が出ます（救済措置）。
@@ -238,7 +266,7 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 
 | 区分 | モデル | 役割 |
 |---|---|---|
-| アカウント | `Parent` / `User` / `Friendship` | 保護者が月額課金し、子どもが学習者。連続日数とコイン（台帳の合計を保存したもの）を持つ |
+| アカウント | `Parent` / `Session` / `User` / `Friendship` | 保護者（メール・パスワードと暗証番号のハッシュ・設定）が月額課金し、子ども（`User`）が学習者。連続日数とコイン（台帳の合計を保存したもの）を持つ。`Session` はトークンのハッシュ・選んだ子ども・暗証番号の入力時刻・期限 |
 | カリキュラム | `Lesson` / `LearningItem` / `Assessment` | JSONから投入。`LearningItem.skills` で、その項目がどの能力軸に入るかを決める |
 | 進捗 | `LessonProgress` / `TestAttempt` | `completedOn` / `takenOn` は APP_TIMEZONE の日付。復習クエストの翌日オープン・1日のレッスン回数・一発合格の判定に使う |
 | 学習ログ | `ItemResponse` | 1問ごとの正誤・反応時間・再生速度・発音スコア。習得率の元データ |
@@ -318,7 +346,7 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 
 | 項目 | 今の実装 | 本番での想定 |
 |---|---|---|
-| 認証 | cookie `uid` とデモユーザー | 保護者アカウントでログインし、子どものプロフィールを選ぶ。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
+| 認証 | 保護者アカウント（メール＋パスワード・暗証番号・子どもを選ぶ）は実装済み。パスワードを忘れたときの再設定・メールアドレスの確認は未実装。レート制限はメモリ内 | メール送信を用意して再設定と確認を追加。サーバーを複数台にするならレート制限を DB / Redis へ。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
 | AI教師の動画 | SVGアバター（口とジェスチャーのアニメーション）＋ブラウザの音声合成 | 事前に生成したアバター動画を `Lesson.videoUrl` に入れる（UIはすでに対応済み） |
 | 音声 | ブラウザの音声合成（`NEXT_PUBLIC_RECORDED_AUDIO=1` のときだけ `/media/audio/{audioKey}.mp3` を優先） | ネイティブの収録音声か、事前に生成したTTS |
 | 発音判定 | Web Speech API で単語の一致率 × 確信度 | 音素単位で評価できるAPIを `PronunciationScorer` の実装として差し替える |
@@ -326,4 +354,4 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 | まとめ動画 | 台本＋ブラウザの音声合成で自動再生 | リアルなAI先生の動画サービスで生成した動画（`videoUrl` の差し替え口を使う） |
 | AI会話 | Claude ＋ 台本フォールバック（相手は4人のローテーション） | 同意フォームは不要（オーナー決定）。電話・メール・URL の伏せ字と「子どもの発話は保存しない」を守ったまま有効化 |
 | カリキュラム | 360レッスン（12ワールド）完成 | 全クリア後の体験（おめでとう画面・2周目・中学コース）は未定 |
-| 月額課金・無料体験・保護者へのLINE月報PDF | 未実装 | 今後のフェーズで実装 |
+| 月額課金・無料体験・保護者へのLINE月報PDF | 未実装（保護者アカウントとようす画面が土台） | 今後のフェーズで実装 |
