@@ -167,12 +167,38 @@ describe("端末の おためしの きろく（localStorage）", () => {
     expect(T.shouldOfferCarryOver()).toBe(false);
     T.recordTrialLesson(1, {}, NOW);
     expect(T.shouldOfferCarryOver()).toBe(true);
-    T.markCarryOver("declined");
+    T.markCarryDeclined(null);
     expect(T.shouldOfferCarryOver()).toBe(false);
+    // 「いいえ」の あとでも 「おうちの方」の ボタン用には「ある」
+    expect(T.hasDeviceTrialProgress(null)).toBe(true);
     T.clearTrialRecords();
     expect(store.getItem(T.TRIAL_LOG_KEY)).toBeNull();
     expect(store.getItem(LOCAL_PROGRESS_KEY)).toBeNull();
-    expect(T.readCarryFlag()).toBe("declined");
+    expect(T.hasDeviceTrialProgress(null)).toBe(false);
+  });
+
+  it("「いいえ」は その きろくにだけ。サーバーに あたらしい おためしの きろくが できたら また きく（run5）", () => {
+    T.recordTrialLesson(1, {}, NOW);
+    T.markCarryDeclined(null);
+    expect(T.shouldOfferCarryOver(null)).toBe(false);
+    const server = { hasProgress: true, ref: "ref-1", lessons: 2, tests: 0, coins: 30 };
+    expect(T.shouldOfferCarryOver(server)).toBe(true);
+    T.markCarryDeclined(server);
+    expect(T.shouldOfferCarryOver(server)).toBe(false);
+    expect(T.shouldOfferCarryOver({ ...server, ref: "ref-2" })).toBe(true);
+    // ブラウザに きろくが なくても サーバーに あれば きく
+    T.clearTrialRecords();
+    expect(T.shouldOfferCarryOver(server)).toBe(true);
+    expect(T.shouldOfferCarryOver({ ...server, hasProgress: false })).toBe(false);
+  });
+
+  it("run4 の しるし（\"declined\"）は ブラウザの きろくにだけ きく", () => {
+    T.recordTrialLesson(1, {}, NOW);
+    store.setItem(T.TRIAL_CARRY_FLAG_KEY, "declined");
+    expect(T.shouldOfferCarryOver(null)).toBe(false);
+    expect(T.shouldOfferCarryOver({ hasProgress: true, ref: "r", lessons: 1, tests: 0, coins: 0 })).toBe(true);
+    store.setItem(T.TRIAL_CARRY_FLAG_KEY, "carried");
+    expect(T.shouldOfferCarryOver(null)).toBe(true);
   });
 
   it("こわれた値でも 例外に しない", () => {

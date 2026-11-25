@@ -2,7 +2,7 @@
 /**
  * だれが あそぶ？ — 子どもが自分のカードを えらぶ画面（暗証番号は いらない）。
  * こどもの ついか・おうちの方のページは 暗証番号を通る。
- * この端末に おためしの きろくが あれば、えらんだあと1回だけ「ひきつぐ？」と きく（TrialCarryDialog）。
+ * この端末に おためしの きろく（ブラウザ・DB の おためし学習者）が あれば、えらんだあと「ひきつぐ？」と きく（TrialCarryDialog）。
  */
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -12,8 +12,8 @@ import { TrialCarryDialog } from "@/components/account/TrialCarryDialog";
 import { PinDialog } from "@/components/account/PinPad";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { AUTH_LIMITS, ChildResponseSchema, type AuthMeResponse, type Child } from "@/lib/api/contracts";
-import { shouldOfferCarryOver } from "@/lib/offline/trialLog";
-import { avatarFor, fetchMe, gradeLabel, notifyAccountChanged, rememberTrial, sendJson } from "@/lib/auth/client";
+import { shouldOfferCarryOver, type ServerTrialStatus } from "@/lib/offline/trialLog";
+import { avatarFor, fetchMe, fetchTrialStatus, gradeLabel, notifyAccountChanged, rememberTrial, sendJson } from "@/lib/auth/client";
 
 export default function WhoPage() {
   const router = useRouter();
@@ -22,7 +22,7 @@ export default function WhoPage() {
   const [busyId, setBusyId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pinFor, setPinFor] = useState<null | "add" | "parent">(null);
-  const [carryFor, setCarryFor] = useState<{ child: Child; index: number } | null>(null);
+  const [carryFor, setCarryFor] = useState<{ child: Child; index: number; server: ServerTrialStatus | null } | null>(null);
 
   const load = useCallback(() => {
     void fetchMe().then((r) => {
@@ -42,7 +42,11 @@ export default function WhoPage() {
       notifyAccountChanged();
       const index = me?.children.findIndex((c) => c.id === id) ?? -1;
       // この端末で おためしで あそんでいたら、さきに「ひきつぐ？」を きく（端末ごとに1回）
-      if (index >= 0 && me && shouldOfferCarryOver()) { setCarryFor({ child: me.children[index], index }); return; }
+      // （ブラウザの きろく ＋ この端末の おためし学習者の きろく。どちらかに あれば）
+      if (index >= 0 && me) {
+        const server = await fetchTrialStatus();
+        if (shouldOfferCarryOver(server)) { setCarryFor({ child: me.children[index], index, server }); return; }
+      }
       router.push("/map");
       return;
     }
@@ -133,7 +137,7 @@ export default function WhoPage() {
       </div>
 
       {carryFor && (
-        <TrialCarryDialog child={carryFor.child} index={carryFor.index} onDone={() => { setCarryFor(null); router.push("/map"); }} />
+        <TrialCarryDialog child={carryFor.child} index={carryFor.index} server={carryFor.server} onDone={() => { setCarryFor(null); router.push("/map"); }} />
       )}
 
       <PinDialog open={pinFor !== null} onClose={() => setPinFor(null)}

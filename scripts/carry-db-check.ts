@@ -6,7 +6,7 @@
  *
  * 1. prisma migrate deploy → seed
  * 2. next start
- * 3. ログインなしで レッスン1 → trial:true（デモユーザーに記録）
+ * 3. ログインなしで レッスン1 → trial:true（run5: この端末の おためし学習者に記録。デモユーザーは かわらない）
  *    → 登録・子ども追加（アバター）→ 選ぶ → この端末の おためしの きろくを ひきつぐ → 子どもの マップ・コインに反映
  *    → 2回目は alreadyCarried → デモユーザーの きろくは のこっている → ほかの家の子どもには ひきつげない
  *    → 子どもが じぶんで アバターを かえる → ようすにも出る → 退会
@@ -83,12 +83,14 @@ async function flow() {
   const a = new Client();
   const b = new Client();
 
-  // おためしモードで レッスン1
-  const t1 = await anon.req("POST", "/api/lessons/1/complete", { quizScore: 1, logs: [] });
-  check("ログインなしの レッスン1 → trial:true（デモユーザー）", t1.status === 200 && t1.body.ok === true && t1.body.trial === true, t1.body);
-  const trialCoins = Number(t1.body.reward?.total ?? 0);
+  // おためしモードで レッスン1（run5: 端末ごとの おためし学習者。デモユーザーには 書かない）
   const demoBefore = await db.lessonProgress.count({ where: { userId: "demo-user" } });
   const demoCoinsBefore = (await db.user.findUnique({ where: { id: "demo-user" } }))?.coins;
+  const trialsBefore = await db.user.count({ where: { isTrial: true } });
+  const t1 = await anon.req("POST", "/api/lessons/1/complete", { quizScore: 1, logs: [] });
+  check("ログインなしの レッスン1 → trial:true（この端末の おためし学習者）", t1.status === 200 && t1.body.ok === true && t1.body.trial === true, t1.body);
+  check("おためし学習者が 1人 ふえる", (await db.user.count({ where: { isTrial: true } })) === trialsBefore + 1);
+  const trialCoins = Number(t1.body.reward?.total ?? 0);
 
   // 登録・子ども（アバターつき）
   check("登録", (await a.req("POST", "/api/auth/register", { email: `run4-a-${stamp}@example.com`, password: "passw0rd-a", pin: "1111" })).status === 201);

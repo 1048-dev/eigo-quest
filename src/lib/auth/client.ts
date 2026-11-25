@@ -6,7 +6,9 @@
  */
 import type { z } from "zod";
 import { apiRequest, type ApiResult } from "@/lib/api/client";
-import { AuthMeResponseSchema, type AuthMeResponse } from "@/lib/api/contracts";
+import { AuthMeResponseSchema, TrialCarryResponseSchema, TrialStatusResponseSchema, type AuthMeResponse, type TrialCarryResponse } from "@/lib/api/contracts";
+import type { ServerTrialStatus } from "@/lib/offline/trialLog";
+import { clearTrialRecords, readTrialCarryData } from "@/lib/offline/trialLog";
 import type { CharacterId } from "@/lib/game/characters";
 import { isAvatarCharacter } from "@/lib/domain/avatars";
 
@@ -26,6 +28,23 @@ export function rememberTrial() {
 
 export function fetchMe(): Promise<ApiResult<AuthMeResponse>> {
   return apiRequest("/api/auth/me", AuthMeResponseSchema, { cache: "no-store" });
+}
+
+/** この端末の おためし学習者（DB）の ようす。つながらない・DB 停止は null */
+export async function fetchTrialStatus(): Promise<ServerTrialStatus | null> {
+  const r = await apiRequest("/api/trial", TrialStatusResponseSchema, { cache: "no-store" });
+  if (!r.ok || !r.data.ok) return null;
+  return { hasProgress: r.data.hasProgress, ref: r.data.ref, lessons: r.data.lessons, tests: r.data.tests, coins: r.data.coins };
+}
+
+/**
+ * この端末の おためしの きろく（ブラウザ + DB の おためし学習者）を その子に ひきつぐ。
+ * 成功したら ブラウザの きろくを けす（DB の方は サーバーが cookie を けす）。
+ */
+export async function carryTrialTo(childId: string): Promise<ApiResult<TrialCarryResponse>> {
+  const r = await sendJson("POST", `/api/children/${encodeURIComponent(childId)}/carry-over`, TrialCarryResponseSchema, readTrialCarryData());
+  if (r.ok && r.data.ok) clearTrialRecords();
+  return r;
 }
 
 export function sendJson<S extends z.ZodTypeAny>(method: "POST" | "PATCH" | "DELETE", url: string, schema: S, body?: unknown) {

@@ -497,10 +497,26 @@ export type ChildResponse = z.output<typeof ChildResponseSchema>;
 export const TrialCarryResponseSchema = z.object({
   ...AUTH_META,
   alreadyCarried: bool(false),
-  carried: z.object({ lessons: num(0), tests: num(0), coins: num(0), memories: num(0), streakDays: num(0) })
-    .catch({ lessons: 0, tests: 0, coins: 0, memories: 0, streakDays: 0 }),
+  /** ひきつぐものが なにも なかった（この端末の おためしの きろくが 空） */
+  nothing: bool(false),
+  carried: z.object({ lessons: num(0), tests: num(0), coins: num(0), memories: num(0), streakDays: num(0), monsters: num(0) })
+    .catch({ lessons: 0, tests: 0, coins: 0, memories: 0, streakDays: 0, monsters: 0 }),
 });
 export type TrialCarryResponse = z.output<typeof TrialCarryResponseSchema>;
+
+/**
+ * GET /api/trial — この端末の おためし学習者（DB）に ひきつげる きろくが あるか（run5）。
+ * つくらない・書かない。ref は「いいえ」を おぼえておくための しるし（トークンや User.id ではない）。
+ */
+export const TrialStatusResponseSchema = z.object({
+  ...AUTH_META,
+  hasProgress: bool(false),
+  ref: z.string().nullable().catch(null),
+  lessons: num(0),
+  tests: num(0),
+  coins: num(0),
+});
+export type TrialStatusResponse = z.output<typeof TrialStatusResponseSchema>;
 
 export const VerifyPinResponseSchema = z.object({ ...AUTH_META, unlockedUntil: z.string().nullable().catch(null) });
 export type VerifyPinResponse = z.output<typeof VerifyPinResponseSchema>;

@@ -1,18 +1,27 @@
 /**
  * 認証の入口。
  *  - 保護者（メール + パスワード、または LINE）がログイン → 「だれが あそぶ？」で子どもを選ぶ → その子どもとして学習する
- *  - ログインしていない・DB が止まっている → これまでどおり「おためしモード」（デモユーザー）
+ *  - ログインしていない（または 子どもを まだ えらんでいない）→ この端末の おためし学習者（run5: 端末ごと。共有のデモユーザーは もう使わない）
+ *  - DB が止まっている → これまでどおり「おためしモード」（ブラウザの中の きろく。API は withOffline が内蔵データを返す）
  *
- * currentUserId(): 学習データを書きこむ相手（= 選ばれた子どもの User.id、無ければ DEMO_USER_ID）
+ * resolveLearner(): 学習データを書きこむ相手と その種類（child / trial / none）
+ * currentUserId(): resolveLearner().userId
  * currentParent(): ログイン中の保護者とセッション（無ければ null）
  * requireParent(): ログイン必須の API 用。無ければ AuthError(401)
  * requirePinUnlocked(): 「おうちの方」エリアの API 用。PIN を入れていなければ AuthError(403, PIN_REQUIRED)
  */
 import { prisma, isDbUp } from "@/lib/db";
 import { clearSessionToken, readSessionToken, writeSessionToken } from "./cookies";
+import { getOrCreateTrialLearner, currentTrialLearner } from "./trialLearner";
 import { createSession, destroySession, isPinUnlocked, purgeExpiredSessions, readSession, ROTATE_GRACE_MS, rotateSession, type SessionRecord } from "./session";
 
+/** seed のデモ用（共有）。run5 から あそぶときには 使わない（seed・古いデータの ためだけに のこす） */
 export const DEMO_USER_ID = "demo-user";
+/**
+ * だれでもない（DB が止まった・おためし学習者を つくれない 描画中など）。DB に この id の行は無いので、
+ * 読むと「なにも ない」、書くと 外部キーの エラー（→ withOffline が オフラインの データを返す）。
+ */
+export const NO_LEARNER_ID = "no-learner";
 
 export interface ParentRecord {
   id: string;
@@ -58,24 +67,41 @@ export async function currentParent(now = new Date()): Promise<AuthContext | nul
   }
 }
 
+export type LearnerKind = "child" | "trial" | "none";
+export interface ResolvedLearner {
+  userId: string;
+  kind: LearnerKind;
+}
+
 /**
- * 学習データを書きこむ子ども。
- * ログイン中で、選ばれた子どもが本当にその保護者の子どもなら その id。
- * それ以外（未ログイン・子ども未選択・DB 停止）はデモユーザー（おためしモード）。
+ * 学習データを書きこむ相手（この順番）
+ *  1. ログイン中の保護者が「だれが あそぶ？」で えらんだ 自分の子ども
+ *  2. この端末の おためし学習者（cookie。create = true なら 無ければ つくる）
+ *  3. どちらも無い・DB が止まっている → none（NO_LEARNER_ID）
+ * create は ルートハンドラ（cookie を書ける場所）だけ true にする。Server Component では false。
  */
-export async function currentUserId(now = new Date()): Promise<string> {
-  const token = await readSessionToken();
-  if (!token) return DEMO_USER_ID; // おためしモードは DB に問い合わせない
+export async function resolveLearner(opts: { create?: boolean } = {}, now = new Date()): Promise<ResolvedLearner> {
+  const none: ResolvedLearner = { userId: NO_LEARNER_ID, kind: "none" };
   try {
-    if (!(await isDbUp())) return DEMO_USER_ID;
-    const ctx = await currentParent(now);
-    const childId = ctx?.session.selectedChildId;
-    if (!ctx || !childId) return DEMO_USER_ID;
-    const child = await prisma.user.findFirst({ where: { id: childId, parentId: ctx.parent.id }, select: { id: true } });
-    return child?.id ?? DEMO_USER_ID;
+    if (!(await isDbUp())) return none;
+    if (await readSessionToken()) {
+      const ctx = await currentParent(now);
+      const childId = ctx?.session.selectedChildId;
+      if (ctx && childId) {
+        const child = await prisma.user.findFirst({ where: { id: childId, parentId: ctx.parent.id }, select: { id: true } });
+        if (child) return { userId: child.id, kind: "child" };
+      }
+    }
+    const trial = opts.create === false ? await currentTrialLearner() : await getOrCreateTrialLearner(now);
+    return trial ? { userId: trial.id, kind: "trial" } : none;
   } catch {
-    return DEMO_USER_ID;
+    return none;
   }
+}
+
+/** 学習データを書きこむ相手の User.id（ゲームの API 用。おためし学習者が いなければ つくる） */
+export async function currentUserId(now = new Date()): Promise<string> {
+  return (await resolveLearner({ create: true }, now)).userId;
 }
 
 export async function requireParent(now = new Date()): Promise<AuthContext> {

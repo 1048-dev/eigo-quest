@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { currentUserId, DEMO_USER_ID } from "@/lib/auth";
+import { resolveLearner } from "@/lib/auth";
 import { completeLesson } from "@/lib/services/progressService";
 import { jsonError, jsonOk, readJsonBody, withOffline } from "@/lib/api/server";
 import { offlineLessonComplete } from "@/lib/offline";
@@ -26,9 +26,10 @@ const Body = z.object({
 export const POST = withOffline<{ params: Promise<{ lessonNo: string }> }>("lesson-complete", async (req, { params }) => {
   const parsed = Body.safeParse(await readJsonBody(req));
   if (!parsed.success) return jsonError("記録を読みとれなかったよ。", 400);
-  const userId = await currentUserId();
-  const r = await completeLesson(userId, Number((await params).lessonNo), parsed.data);
-  const trial = userId === DEMO_USER_ID;
+  const learner = await resolveLearner({ create: true });
+  const r = await completeLesson(learner.userId, Number((await params).lessonNo), parsed.data);
+  // trial: ログインした子どもでは ない（この端末の おためし学習者）。きろくは DB の おためし学習者に入る
+  const trial = learner.kind !== "child";
   const body: LessonCompleteResponse = r.ok
     ? { ok: true, reasonJa: "", reward: { total: r.reward.total, rareGachaTickets: r.reward.rareGachaTickets, coins: r.reward.coins.map((c) => ({ amount: c.amount, labelJa: c.labelJa })) }, nextTest: r.nextTest, trial }
     : { ok: false, reasonJa: r.reasonJa ?? "", reward: { total: 0, rareGachaTickets: 0, coins: [] }, nextTest: undefined, code: "code" in r ? r.code : undefined };

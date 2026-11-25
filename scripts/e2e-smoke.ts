@@ -2,18 +2,32 @@
  * E2E スモークテスト（開発用）: 実サーバー + 実DBに対して「正解する子ども」を模擬する。
  *   npx tsx scripts/e2e-smoke.ts http://localhost:3000
  * 日付をまたぐ動作は DB の completedOn/takenOn を1日前にずらして再現する。
+ * run5: 記録先は この スクリプト用の おためし学習者（cookie）。共有のデモユーザーは つかわない。
  */
+import { createHash } from "node:crypto";
 import { PrismaClient } from "@prisma/client";
 import { getAssessment, getItem, getLesson } from "../src/lib/curriculum";
 import { buildLessonFlow, buildTestQuestions } from "../src/lib/curriculum/questions";
 
 const BASE = process.argv[2] ?? "http://localhost:3000";
 const prisma = new PrismaClient();
-const USER = "demo-user";
+/** run5: ログインしていない人は 端末ごとの おためし学習者（cookie eq_trial_learner）。さいしょの API で きまる */
+let USER = "";
+let trialCookie = "";
 const j = async (path: string, init?: RequestInit) => {
-  const r = await fetch(BASE + path, { ...init, headers: { "content-type": "application/json" } });
+  const r = await fetch(BASE + path, { ...init, headers: { "content-type": "application/json", origin: BASE, ...(trialCookie ? { cookie: `eq_trial_learner=${trialCookie}` } : {}) } });
+  const m = /eq_trial_learner=([A-Za-z0-9_-]{43})/.exec(r.headers.get("set-cookie") ?? "");
+  if (m) trialCookie = m[1];
   return { status: r.status, body: await r.json() };
 };
+async function resolveTrialUser() {
+  await j("/api/map");
+  if (!trialCookie) throw new Error("おためし学習者の cookie が もらえなかった（DB は動いている？）");
+  const u = await prisma.user.findFirst({ where: { trialTokenHash: createHash("sha256").update(trialCookie).digest("hex") } });
+  if (!u) throw new Error("おためし学習者が DB に ない");
+  USER = u.id;
+  console.log("おためし学習者:", USER);
+}
 const yesterday = () => {
   const d = new Date(Date.now() - 86_400_000);
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(d);
@@ -52,6 +66,7 @@ async function shiftDay() {
 }
 
 async function main() {
+  await resolveTrialUser();
   await prisma.$transaction([
     prisma.itemResponse.deleteMany({ where: { userId: USER } }), prisma.itemMemory.deleteMany({ where: { userId: USER } }),
     prisma.testAttempt.deleteMany({ where: { userId: USER } }), prisma.lessonProgress.deleteMany({ where: { userId: USER } }),

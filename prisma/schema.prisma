@@ -104,21 +104,24 @@ enum SubscriptionStatus {
 
 /// 学習者（子ども）。1保護者に複数の子ども。
 model User {
-  id               String   @id @default(cuid())
+  id               String    @id @default(cuid())
   parentId         String?
-  parent           Parent?  @relation(fields: [parentId], references: [id])
+  parent           Parent?   @relation(fields: [parentId], references: [id])
   nickname         String
   birthYear        Int?
   schoolGrade      Int? /// 0=未就学, 1〜6=小学校学年
-  friendCode       String   @unique
-  avatar           Json     @default("{}") /// 装備中のアバターパーツ { hat: "...", outfit: "..." }
-  avatarCharacter  String   @default("haru") /// 子どもが えらんだ キャラクター "haru" | "riko" | "kiko" | "birimo"（src/lib/domain/avatars.ts）
-  coins            Int      @default(0) /// CoinLedger 合計のキャッシュ
-  totalCoinsEarned Int      @default(0) /// ランキング用（消費しても減らない）
-  streakDays       Int      @default(0)
-  longestStreak    Int      @default(0)
+  friendCode       String    @unique
+  avatar           Json      @default("{}") /// 装備中のアバターパーツ { hat: "...", outfit: "..." }
+  avatarCharacter  String    @default("haru") /// 子どもが えらんだ キャラクター "haru" | "riko" | "kiko" | "birimo"（src/lib/domain/avatars.ts）
+  coins            Int       @default(0) /// CoinLedger 合計のキャッシュ
+  totalCoinsEarned Int       @default(0) /// ランキング用（消費しても減らない）
+  streakDays       Int       @default(0)
+  longestStreak    Int       @default(0)
   lastStudyDate    String? /// "YYYY-MM-DD"（APP_TIMEZONE基準）
-  createdAt        DateTime @default(now())
+  isTrial          Boolean   @default(false) /// 端末ごとの おためし学習者（保護者なし）。run5: 共有のデモユーザーの かわり
+  trialTokenHash   String?   @unique /// おためし学習者の cookie（eq_trial_learner）の トークンの SHA-256。トークンそのものは保存しない
+  lastActiveAt     DateTime? /// さいごに あそんだ時刻（おためし学習者の そうじ: 60日 つかわれていなければ消す）
+  createdAt        DateTime  @default(now())
 
   lessonProgress LessonProgress[]
   testAttempts   TestAttempt[]
@@ -132,6 +135,8 @@ model User {
   snapshots      MasterySnapshot[]
   friendsFrom    Friendship[]      @relation("FriendFrom")
   friendsTo      Friendship[]      @relation("FriendTo")
+
+  @@index([isTrial, lastActiveAt])
 }
 
 model Friendship {

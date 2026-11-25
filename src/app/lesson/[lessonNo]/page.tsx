@@ -78,14 +78,14 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
     setLogs(all);
     const r = await apiPost(`/api/lessons/${lesson.lessonNo}/complete`, LessonCompleteResponseSchema, { quizScore, speedListeningBest: speedBest, logs: all, conversationFinished });
     // おためしモード: この ブラウザに だけ クリアを おぼえておく（マップに ✓ と「きょうのまとめ」が 出る）
-    // おためしの きろく（あとで 保護者が登録したら 子どもに ひきつげる）: オフライン・デモユーザーのとき
+    // おためしの きろく（あとで 保護者が登録したら 子どもに ひきつげる）: オフラインのときだけ ブラウザに のこす。
+    // サーバーに つながるときは この端末の おためし学習者（DB）に きろくされる（run5）
     const trialRecord = (coins: number) => recordTrialLesson(lesson.lessonNo, { coins, logs: all });
     if (isUnreachable(r)) {
       const off = offlineLessonComplete(lesson.lessonNo, { conversationFinished });
       setOffline(true); recordLocalLesson(lesson.lessonNo); trialRecord(off.reward.total); setResult(off); return;
     }
     if (r.data.offline) { setOffline(true); if (r.ok && r.data.ok) { recordLocalLesson(lesson.lessonNo); trialRecord(r.data.reward.total); } }
-    else if (r.ok && r.data.ok && r.data.trial) trialRecord(r.data.reward.total);
     setResult(r.ok ? r.data : { ...r.data, ok: false, reasonJa: r.data.reasonJa || r.error || "もう一回ためしてね。" });
   };
 

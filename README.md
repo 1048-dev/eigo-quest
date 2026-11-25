@@ -44,11 +44,11 @@ npm run db:seed
 npm run dev
 ```
 
-http://localhost:3000 を開くと、はじめてのときはスタート画面（`/welcome`）が出ます。「おうちの方：とうろく」で保護者アカウントを作ってお子さまを追加するか、「おためしで あそぶ」でログインせずにマップへ進みます（おためしはデモユーザー「ハル」の記録で遊びます。次からは `/` でそのままマップが開きます）。
+http://localhost:3000 を開くと、はじめてのときはスタート画面（`/welcome`）が出ます。「おうちの方：とうろく」で保護者アカウントを作ってお子さまを追加するか、「おためしで あそぶ」でログインせずにマップへ進みます（おためしは端末ごとの「おためし学習者」の記録で遊びます。ほかの人の記録とはまざりません。次からは `/` でそのままマップが開きます）。
 
 開発用のデモ保護者が欲しいときは、seed のときに `SEED_DEMO_PARENT=1` を付けます（`demo-parent@example.com` / `demo-pass-1234` / 暗証番号 `1234`、子ども「リコ」）。
 
-> マイグレーション（`prisma/migrations/`）には、保護者アカウント用の `20261125130000_parent_auth`（`Parent` のパスワード・暗証番号・設定、`Session` テーブル）、アバターとおためしの引き継ぎ用の `20261126090000_avatar_trial_carry`（`User.avatarCharacter`。既存の子どもには登録順の顔を入れる）、LINE ログイン用の `20261127090000_line_login`（`Parent.lineUserId` など。メール・パスワード・暗証番号を null 可に）、LINE の月間レポート用の `20261128090000_line_monthly`（`Parent.lineFriend`・`lineMonthlyEnabled`、`ReportDelivery` テーブル）が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください。
+> マイグレーション（`prisma/migrations/`）には、保護者アカウント用の `20261125130000_parent_auth`（`Parent` のパスワード・暗証番号・設定、`Session` テーブル）、アバターとおためしの引き継ぎ用の `20261126090000_avatar_trial_carry`（`User.avatarCharacter`。既存の子どもには登録順の顔を入れる）、LINE ログイン用の `20261127090000_line_login`（`Parent.lineUserId` など。メール・パスワード・暗証番号を null 可に）、LINE の月間レポート用の `20261128090000_line_monthly`（`Parent.lineFriend`・`lineMonthlyEnabled`、`ReportDelivery` テーブル）、端末ごとの おためし学習者用の `20261129090000_trial_learner`（`User.isTrial`・`trialTokenHash`・`lastActiveAt`）が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください。
 >
 > LINE（ログイン・月間レポート）を本番で使うときは [docs/run4/LINE-SETUP.md](docs/run4/LINE-SETUP.md) の手順で `.env` に値を入れます。入れていない間は LINE のボタンが出ず、レポートは送らずに `.data/line-outbox/` に書くだけ（dry-run）です。
 >
@@ -63,6 +63,7 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `npm run check:auth-db -- --db <テスト用URL> [--port 3457]` | 本物の DB で migrate deploy → seed → `next start` → 登録・子ども2人・切りかえ・回数制限・持ち主チェック・CSRF・退会後に何も残らないこと まで 41項目を HTTP で確認。**使い捨ての DB を指定すること**（中身を書きかえます） |
 | `npx tsx scripts/carry-db-check.ts --db <テスト用URL> [--port 3458]` | 本物の DB + `next start` で、おためしの きろくの ひきつぎ（1回だけ・持ち主チェック）とアバターの選択・変更 を 18項目確認。**使い捨ての DB を指定すること** |
 | `npm run check:line-db -- --db <テスト用URL> [--port 3461]` | 本物の DB + `next start` で LINE ログイン（state cookie・署名・コールバック・新規登録 → 暗証番号・連携/解除）を確認（LINE のサーバーには接続しない。ダミーの値で動かす）。**使い捨ての DB を指定すること** |
+| `npm run trial:cleanup [-- --dry-run] [-- --days 60]` | 60日 遊ばれていない おためし学習者（と その学習記録）を消す。1日1回 cron で実行する想定（下の「端末ごとの おためし学習者」） |
 | `npm run line:monthly [-- --dry-run] [-- --parent <id>]` | 月間レポート（PDF）を LINE で届ける。キーが無ければ dry-run（下の「LINE で月間レポート」） |
 | `npm run check:line-monthly-db -- --db <テスト用URL> [--port 3463]` | 本物の DB + `next start` で webhook の署名・`line:monthly --dry-run`・ダウンロードページ・おうちの方 API・期限切れ・退会 まで 32項目を確認（LINE には接続しない）。**使い捨ての DB を指定すること** |
 | `npm run check:run4-flow -- --db <テスト用URL> [--port 3475]` | 本物の DB + `next start` + ブラウザで、おためしで遊ぶ → 新規登録 → お子さまを追加（キャラクター）→ おためしの きろくを ひきつぐ → おうちの方ページに反映 → `line:monthly --dry-run` のリンクを開いて PDF まで を通しで確認（スクリーンショット `docs/run4/screens/p4-flow/`）。**使い捨ての DB を指定すること** |
@@ -147,6 +148,7 @@ eigo-quest/
 ├── scripts/carry-db-check.ts 本物の DB での「おためしの きろくの ひきつぎ」とアバターの通し確認
 ├── scripts/line-db-check.ts / line-monthly-db-check.ts / run4-flow-check.ts   本物の DB での LINE ログイン / 月間レポート / run4 の通し（ブラウザ）確認
 ├── scripts/line-monthly.ts   月間レポートを LINE で届けるコマンド（npm run line:monthly）
+├── scripts/cleanup-trial.ts  使われなくなった おためし学習者の そうじ（npm run trial:cleanup）
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
 ├── docs/night/ docs/night2/ docs/run3/ docs/run4/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
@@ -199,10 +201,11 @@ eigo-quest/
 
 - **流れ**: `/welcome` → 登録（メール・パスワード・暗証番号4けた）→ お子さまを追加（6人まで）→ `/who`「だれが あそぶ？」で子どもを選ぶ → マップ。ゲームの画面の上のヘッダー（AccountBar）に いま遊んでいる子と「かわる」「おうちの方」が出ます。
 - **おうちの方ページ `/parent`**: 入るたびに暗証番号（入れてから10分有効）。お子さまごとのようす（進みぐあい・連続日数・総合習得率・今日の回数・最終学習日・伸ばしたい力）、1日のレッスン回数の上限（既定は制限なし、1〜10回）、お子さまの編集・削除、暗証番号・パスワードの変更、ログアウト、退会（保護者とすべての子どもの学習データを1つのトランザクションで完全に削除）。
-- **currentUserId()**: ログイン中で選ばれた子どもが本当にその保護者の子のときだけその子。未ログイン・未選択・DB 停止のときはデモユーザー（おためしモード）。
+- **currentUserId() / resolveLearner()**: 学習記録を書く相手は ①ログイン中で選ばれた子ども（本当にその保護者の子のときだけ）→ ②この端末の おためし学習者 → ③DB 停止なら だれでもない（`NO_LEARNER_ID`。画面はブラウザの記録で遊ぶ おためしモード）の順。共有のデモユーザー（`demo-user`）は seed にだけ残し、遊ぶときには使いません。
 - **安全**: パスワードは Node の `crypto.scrypt`（ネイティブモジュールなし）。セッションは32バイト乱数のトークンを httpOnly・SameSite=Lax（本番は Secure）の cookie `eq_session` に入れ、DB には SHA-256 だけを期限つき（30日）で保存。ログインのたびにトークンを作り直し、1日ごとに入れ替え。状態を変える API は Origin を確認。ログイン・登録・暗証番号はメモリ内のレート制限（サーバー1台が前提）。入力はすべて zod、ログイン失敗は共通の文言、パスワード・トークン・暗証番号はログに出しません。
 - **アバター（キャラクター）**: お子さまごとにハル・リコ・キコ・ビリモから1人を選びます（`User.avatarCharacter`、`src/lib/domain/avatars.ts`）。追加・編集のとき（おうちの方）に選べ、選ばなければ きょうだいがまだ使っていない顔になります。お子さま自身もヘッダーの顔をタッチして小さなシートから変えられます（暗証番号なし）。「だれが あそぶ？」・ヘッダー・おうちの方ページで同じ顔を表示します。
-- **おためしの きろくの ひきつぎ**: この端末でおためしモード（未ログイン＝デモユーザー、または DB 停止）で遊んだ分は、ブラウザの localStorage に「おためしの きろく」として残します（`src/lib/offline/trialLog.ts`。クリアしたレッスン・合格したテスト・もらったコイン・遊んだ日・答えた項目）。保護者が登録・ログインして「だれが あそぶ？」で子どもを選ぶと、端末ごとに1回だけ「おためしで あそんだ きろくを ひきつぐ？」と聞きます。「はい」で `POST /api/children/:id/carry-over` がその子に たし合わせ（レッスン・テスト合格は まだ無い分だけ、コインは合計（おためしで ありえる上限まで）、連続日数は大きい方、記憶はまだ無い項目だけ）、端末の おためしの きろくを消します。「いいえ」でも もう聞きません。デモユーザーの DB の記録は読みも消しもしない（ほかの おためしの人と共有のため＝コピー）。同じ端末の きろくは CoinLedger の `trial-carry:<端末ID>` で1回だけ（2回目は `alreadyCarried: true`）。計算は `src/lib/domain/trialMerge.ts`。
+- **端末ごとの おためし学習者（run5）**: DB が動いているとき、ログインしていない端末は最初のゲーム API で 保護者なしの `User`（`isTrial = true`、ニックネーム「おためし」）を1人作り、httpOnly cookie `eq_trial_learner` にランダムなトークン（32バイト）を入れます。DB にはトークンの SHA-256（`trialTokenHash`）だけを保存します。cookie を書けない Server Component（`/recap`）では作りません。遊ぶと `lastActiveAt` を更新し（1時間に1回まで）、全国ランキングには ほかの端末の おためし学習者を出しません。**60日** 遊ばれていない おためし学習者は `npm run trial:cleanup` が学習記録ごと消します（`--dry-run` で数だけ表示・`--timeout` 秒で途中終了し、残りは次回）。cron の例: `30 4 * * * cd /path/to/app && npm run trial:cleanup >> /var/log/eigo-quest-trial-cleanup.log 2>&1`（Vercel などでは Cron Jobs や外部のスケジューラから同じコマンドを実行）。
+- **おためしの きろくの ひきつぎ**: おためしの きろくは ①この端末の おためし学習者（DB）と ②DB 停止中に遊んだ分（ブラウザの localStorage の「おためしの きろく」）の2つ。②は（`src/lib/offline/trialLog.ts`。クリアしたレッスン・合格したテスト・もらったコイン・遊んだ日・答えた項目）。保護者が登録・ログインして「だれが あそぶ？」で子どもを選ぶと、どちらかに きろくがあれば「おためしで あそんだ きろくを ひきつぐ？」と聞きます（DB 側は `GET /api/trial` で確認。作らない・書かない）。「はい」で `POST /api/children/:id/carry-over` が両方をその子に たし合わせます（レッスン・テスト合格は まだ無い分だけ、コインは合計（ブラウザの分は おためしで ありえる上限まで・DB の分はそのまま）、連続日数は大きい方、記憶はまだ無い項目だけ、モンスターは数を たす）。そのあとブラウザの きろくと `eq_trial_learner` cookie を消します（おためし学習者の行はコピー元として残り、60日後のそうじで消えます）。「いいえ」は その きろくについてだけ覚えます。**「おうちの方」ページの「おためしの きろくを ひきつぐ」ボタン**（お子さまを選んで確認）なら、「いいえ」のあとでも この端末に きろくが残っていれば引き継げます。それぞれ CoinLedger の `trial-carry:<ブラウザのID>` / `trial-carry-db:<おためし学習者のID>` で1回だけ（2回目は `alreadyCarried: true`）。ほかの家の子どもには引き継げません。計算は `src/lib/domain/trialMerge.ts`（`planDeviceTrialMerge`）。
 - **1日の回数制限**: 上限に届くと、新しいレッスンは「きょうの レッスンは ここまで！ また あした あそぼうね。」（403 + `code: "DAILY_LIMIT"`）。完了ずみのレッスンのおさらいはできます。
 - **DB 停止時**: アカウント API は 503 + `offline: true` + ていねいな案内（`GET /api/auth/me` だけは 200 + `loggedIn:false`）。画面はおためしモードへ進めます。
 - API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET /api/auth/line/start`・`callback`、`POST /api/auth/line/pin`・`cancel`、`DELETE /api/parent/line`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`GET/PATCH/POST /api/parent/line-monthly`、`DELETE /api/parent/account`、`POST /api/line/webhook`。

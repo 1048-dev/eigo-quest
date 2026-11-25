@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { RecapPlayer } from "@/components/recap/RecapPlayer";
-import { currentUserId } from "@/lib/auth";
+import { resolveLearner } from "@/lib/auth";
 import { getLesson } from "@/lib/curriculum";
 import { buildRecapScript } from "@/lib/recap/script";
 import { isLessonCompleted } from "@/lib/services/recapService";
@@ -18,9 +18,11 @@ async function completedOrUnknown(lessonNo: number): Promise<boolean | null> {
   try {
     // DB が止まっているのが わかっていれば すぐ「わからない」（キャッシュつきの 1.5秒チェック）
     if (!(await isDbUp())) return null;
-    const uid = await currentUserId();
+    // 描画中は cookie を書けないので おためし学習者は つくらない（いなければ「まだ クリアしていない」）
+    const learner = await resolveLearner({ create: false });
+    if (learner.kind === "none") return null; // まだ だれでもない（ブラウザの中の きろくだけ）→ 見せる
     return await Promise.race([
-      isLessonCompleted(uid, lessonNo),
+      isLessonCompleted(learner.userId, lessonNo),
       new Promise<null>((r) => setTimeout(() => r(null), 3000)),
     ]);
   } catch {

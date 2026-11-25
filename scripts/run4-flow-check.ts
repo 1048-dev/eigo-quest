@@ -7,8 +7,8 @@
  * 1. prisma migrate deploy → seed → next start（LINE のキーなし = dry-run）
  * 2. おためしモードで あそぶ（スタート画面 →「おためしで あそぶ」→ レッスン1・2 をクリア）
  *    ※ レッスンの 9つの画面を クリックで すすめるのは こわれやすいので、レッスン画面が 最後に送るのと同じ
- *      「レッスン完了」の リクエストを この ブラウザから送り、レッスン画面と同じ関数（recordTrialLesson・recordLocalLesson）で
- *      この ブラウザの おためしの きろく（localStorage）を 書く
+ *      「レッスン完了」の リクエストを この ブラウザから送る。
+ *      run5: DB が動いているので きろくは この端末の おためし学習者（DB・cookie eq_trial_learner）に入る（localStorage には 書かない）
  * 3. 新規登録（画面）→ お子さまを追加（キャラクター キコ を えらぶ）
  * 4. 「だれが あそぶ？」で えらぶ →「おためしで あそんだ きろくを ひきつぐ？」→「はい」
  * 5. おうちの方ページ（ようす）に おためしの レッスンが 出ている・顔が キコ
@@ -17,6 +17,7 @@
  * ※ テスト用の DB を渡すこと。
  */
 import { spawn, spawnSync, type ChildProcess } from "node:child_process";
+import { createHash } from "node:crypto";
 import { mkdirSync, rmSync } from "node:fs";
 import path from "node:path";
 import { PrismaClient } from "@prisma/client";
@@ -77,22 +78,12 @@ async function waitForServer(server: ChildProcess) {
   throw new Error("server did not start");
 }
 
-/** レッスン画面と同じ関数で「この ブラウザの おためしの きろく」を作る（Node の中の かりの localStorage に書いて、あとで ブラウザへ うつす） */
-const memory = new Map<string, string>();
-(globalThis as { window?: unknown }).window = {
-  localStorage: {
-    getItem: (k: string) => memory.get(k) ?? null,
-    setItem: (k: string, v: string) => void memory.set(k, String(v)),
-    removeItem: (k: string) => void memory.delete(k),
-  },
-};
-
 const db = new PrismaClient({ datasourceUrl: DB });
 const shot = (page: Page, name: string) => page.screenshot({ path: path.join(SHOTS, `${name}.png`), fullPage: true });
 
 async function flow() {
-  const { recordTrialLesson, TRIAL_LOG_KEY } = await import("../src/lib/offline/trialLog");
-  const { recordLocalLesson, LOCAL_PROGRESS_KEY } = await import("../src/lib/offline/localProgress");
+  const { TRIAL_LOG_KEY } = await import("../src/lib/offline/trialLog");
+  const { LOCAL_PROGRESS_KEY } = await import("../src/lib/offline/localProgress");
   const { getLesson } = await import("../src/lib/curriculum");
   const { buildLessonFlow } = await import("../src/lib/curriculum/questions");
 
@@ -122,12 +113,12 @@ async function flow() {
       const coins = Number(r.body.reward?.total ?? 0);
       console.log(`    レッスン${n}: コイン +${coins}`);
       trialCoins += coins;
-      recordTrialLesson(n, { coins, logs });
-      recordLocalLesson(n);
     }
-    await page.evaluate((entries) => { for (const [k, v] of entries) window.localStorage.setItem(k, v); }, [...memory.entries()]);
     await page.goto(BASE + "/map", { waitUntil: "networkidle" });
-    check("この ブラウザに おためしの きろく", (await page.evaluate((k) => window.localStorage.getItem(k), TRIAL_LOG_KEY)) !== null);
+    const trialToken = (await ctx.cookies()).find((c) => c.name === "eq_trial_learner");
+    check("おためし学習者の cookie は httpOnly", !!trialToken?.httpOnly, trialToken?.name);
+    const trialUser = trialToken ? await db.user.findFirst({ where: { trialTokenHash: createHash("sha256").update(trialToken.value).digest("hex") }, select: { id: true, isTrial: true, lessonProgress: { select: { lessonNo: true } } } }) : null;
+    check("DB: この端末の おためし学習者に レッスン1・2", !!trialUser?.isTrial && trialUser.lessonProgress.map((l) => l.lessonNo).sort().join(",") === "1,2", trialUser);
     await shot(page, "01-trial-map");
 
     // 2. 新規登録（画面）

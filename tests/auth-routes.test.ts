@@ -22,7 +22,9 @@ const verifyPin = await import("@/app/api/parent/verify-pin/route");
 const overview = await import("@/app/api/parent/overview/route");
 const settings = await import("@/app/api/parent/settings/route");
 const account = await import("@/app/api/parent/account/route");
-const { currentUserId, DEMO_USER_ID } = await import("@/lib/auth");
+const { currentUserId, DEMO_USER_ID, NO_LEARNER_ID } = await import("@/lib/auth");
+/** 端末ごとの おためし学習者か（run5: 共有のデモユーザーの かわり） */
+const isTrialLearner = (id: string) => !!db.table("user").find((u) => u.id === id && u.isTrial === true && u.parentId == null) && id !== DEMO_USER_ID;
 const { resetAllLimiters } = await import("@/lib/auth/rateLimit");
 const { SESSION_COOKIE } = await import("@/lib/auth/cookies");
 const { verifySecret } = await import("@/lib/auth/password");
@@ -268,7 +270,8 @@ describe("子ども（追加・選ぶ・変更・削除）と PIN", () => {
     await registerAs(A);
     const c1 = await addChild("タロウ");
     const c2 = await addChild("ハナ", 5);
-    expect(await currentUserId()).toBe(DEMO_USER_ID); // まだ選んでいない
+    const trialId = await currentUserId(); // まだ選んでいない → この端末の おためし学習者
+    expect(isTrialLearner(trialId)).toBe(true);
     const s = await call(select.POST, "POST", undefined, { id: c2 });
     expect(s.body.child.id).toBe(c2);
     expect(await currentUserId()).toBe(c2);
@@ -288,7 +291,7 @@ describe("子ども（追加・選ぶ・変更・削除）と PIN", () => {
     expect(db.table("lessonProgress")).toHaveLength(0);
     expect(db.table("coinLedger")).toHaveLength(0);
     expect(db.table("session")[0].selectedChildId).toBeNull();
-    expect(await currentUserId()).toBe(DEMO_USER_ID);
+    expect(await currentUserId()).toBe(trialId); // 同じ端末の おためし学習者に もどる
   });
 
   it("おかしな id は 404", async () => {
@@ -312,7 +315,7 @@ describe("持ち主チェック: ほかの保護者の子どもには何もで�
 
     expect((await call(select.POST, "POST", undefined, { id: aChild })).status).toBe(404);
     expect(db.table("session").find((s) => s.tokenHash === hashToken(tokenB))!.selectedChildId).toBeNull();
-    expect(await currentUserId()).toBe(DEMO_USER_ID);
+    expect(isTrialLearner(await currentUserId())).toBe(true);
 
     expect((await call(child.PATCH, "PATCH", { nickname: "のっとり" }, { id: aChild })).status).toBe(404);
     expect(db.table("user").find((u) => u.id === aChild)!.nickname).toBe("Aのこ");
@@ -327,13 +330,15 @@ describe("持ち主チェック: ほかの保護者の子どもには何もで�
     expect(JSON.stringify(ov.body)).not.toContain("Aのこ");
   });
 
-  it("セッションに他人の子どもの id が入っていても、currentUserId はデモユーザー", async () => {
+  it("セッションに他人の子どもの id が入っていても、currentUserId は その子に ならない（この端末の おためし学習者）", async () => {
     await registerAs(A);
     const aChild = await addChild("Aのこ");
     const tokenB = await registerAs(B);
     db.table("session").find((s) => s.tokenHash === hashToken(tokenB))!.selectedChildId = aChild;
     useToken(tokenB);
-    expect(await currentUserId()).toBe(DEMO_USER_ID);
+    const id = await currentUserId();
+    expect(id).not.toBe(aChild);
+    expect(isTrialLearner(id)).toBe(true);
     expect((await call(me.GET, "GET")).body.selectedChildId).toBeNull();
   });
 });
@@ -471,7 +476,7 @@ describe("DB が止まっているとき", () => {
     }
   });
 
-  it("me は loggedIn:false（おためしモード）、currentUserId はデモユーザー", async () => {
+  it("me は loggedIn:false（おためしモード）、currentUserId は だれでもない（ブラウザの きろく）", async () => {
     await registerAs(A);
     const c1 = await addChild("タロウ");
     await call(select.POST, "POST", undefined, { id: c1 });
@@ -479,7 +484,9 @@ describe("DB が止まっているとき", () => {
     const r = await call(me.GET, "GET");
     expect(r.status).toBe(200);
     expect(r.body).toMatchObject({ success: false, offline: true, loggedIn: false });
-    expect(await currentUserId()).toBe(DEMO_USER_ID);
+    const before = db.table("user").length;
+    expect(await currentUserId()).toBe(NO_LEARNER_ID);
+    expect(db.table("user")).toHaveLength(before); // DB が止まっているときは つくらない
   });
 
   it("処理中に DB が切れても 503 の JSON", async () => {
@@ -500,14 +507,18 @@ describe("DB が止まっているとき", () => {
 });
 
 describe("currentUserId", () => {
-  it("cookie なし → デモユーザー（DB に問い合わせない）", async () => {
-    db.calls = [];
-    expect(await currentUserId()).toBe(DEMO_USER_ID);
-    expect(db.calls).toHaveLength(0);
+  it("cookie なし → この端末の おためし学習者を つくる（デモユーザーは 使わない）。同じ端末は いつも同じ", async () => {
+    const id = await currentUserId();
+    expect(id).not.toBe(DEMO_USER_ID);
+    expect(isTrialLearner(id)).toBe(true);
+    expect(await currentUserId()).toBe(id);
+    expect(db.table("user").filter((u) => u.isTrial)).toHaveLength(1);
   });
 
   it("以前のスタブの uid cookie では、なりすませない", async () => {
     jar.set("uid", "someone-else");
-    expect(await currentUserId()).toBe(DEMO_USER_ID);
+    const id = await currentUserId();
+    expect(id).not.toBe("someone-else");
+    expect(isTrialLearner(id)).toBe(true);
   });
 });

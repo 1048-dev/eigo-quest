@@ -381,8 +381,10 @@ export async function getRanking(userId: string, scope: "national" | "friends", 
   const friendIds = scope === "friends"
     ? [userId, ...(await prisma.friendship.findMany({ where: { userId } })).map((f) => f.friendId)]
     : undefined;
+  // 端末ごとの おためし学習者（run5）は 全国ランキングに のせない（自分だけは見える）
+  const visible = { OR: [{ isTrial: false }, { id: userId }] };
   if (metric === "streak") {
-    const users = await prisma.user.findMany({ where: friendIds ? { id: { in: friendIds } } : {}, orderBy: { streakDays: "desc" }, take: 50, select: { id: true, nickname: true, streakDays: true, avatar: true } });
+    const users = await prisma.user.findMany({ where: friendIds ? { id: { in: friendIds }, ...visible } : visible, orderBy: { streakDays: "desc" }, take: 50, select: { id: true, nickname: true, streakDays: true, avatar: true } });
     return users.map((u, i) => ({ rank: i + 1, userId: u.id, nickname: u.nickname, value: u.streakDays, avatar: u.avatar }));
   }
   const weekAgo = new Date(now.getTime() - 7 * 86_400_000);
@@ -391,13 +393,13 @@ export async function getRanking(userId: string, scope: "national" | "friends", 
     where: { amount: { gt: 0 }, createdAt: { gte: weekAgo }, ...(friendIds ? { userId: { in: friendIds } } : {}) },
     _sum: { amount: true },
     orderBy: { _sum: { amount: "desc" } },
-    take: 50,
+    take: 200,
   });
-  const users = await prisma.user.findMany({ where: { id: { in: rows.map((r) => r.userId) } }, select: { id: true, nickname: true, avatar: true } });
-  return rows.map((r, i) => {
+  const users = await prisma.user.findMany({ where: { id: { in: rows.map((r) => r.userId) }, ...visible }, select: { id: true, nickname: true, avatar: true } });
+  return rows.flatMap((r) => {
     const u = users.find((x) => x.id === r.userId);
-    return { rank: i + 1, userId: r.userId, nickname: u?.nickname ?? "???", value: r._sum.amount ?? 0, avatar: u?.avatar };
-  });
+    return u ? [{ userId: r.userId, nickname: u.nickname, value: r._sum.amount ?? 0, avatar: u.avatar }] : [];
+  }).slice(0, 50).map((r, i) => ({ rank: i + 1, ...r }));
 }
 
 export { itemsInRange };

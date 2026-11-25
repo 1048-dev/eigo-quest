@@ -7,7 +7,11 @@ import { FakeDb } from "./helpers/fakePrisma";
 const db = new FakeDb();
 let uid = "c1";
 vi.mock("@/lib/db", () => ({ prisma: db.client(), isDbUp: async () => true, markDbDown: () => {} }));
-vi.mock("@/lib/auth", () => ({ currentUserId: async () => uid, DEMO_USER_ID: "demo-user" }));
+vi.mock("@/lib/auth", () => ({
+  currentUserId: async () => uid,
+  resolveLearner: async () => ({ userId: uid, kind: uid === "c1" ? "child" : "trial" }),
+  DEMO_USER_ID: "demo-user",
+}));
 
 const { checkDailyLessonLimit, parseParentSettings, withDailyLimit, DAILY_LIMIT_MESSAGE_JA } = await import("@/lib/services/dailyLimit");
 const lessonRoute = await import("@/app/api/lessons/[lessonNo]/route");

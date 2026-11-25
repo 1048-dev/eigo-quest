@@ -1,11 +1,12 @@
 /**
  * この端末の「おためしの きろく」（run4 Phase 1: 保護者が登録したあと、子どもに ひきつぐため）。
  *
- *  - おためしモード（ログインしていない = デモユーザー、または サーバーに つながらない）で
+ *  - おためしモード（サーバーに つながらない）で
  *    クリアしたレッスン・合格したテスト・もらったコイン・あそんだ日・答えた項目を この ブラウザの localStorage に だけ のこす。
- *    デモユーザーは ほかの おためしの人と共有なので、DB からではなく「この端末で あそんだ分」を ここで おぼえておく。
  *  - 以前からある オフラインの きろく（localProgress）も いっしょに ひきつぐ。
- *  - 「ひきつぐ？」は 端末ごとに1回だけ（はい・いいえ どちらでも しるしを のこす）。
+ *  - run5: DB が動いているときは 端末ごとの おためし学習者（DB）に きろくされるので、ここに のこすのは オフラインで あそんだ分だけ。
+ *  - 「ひきつぐ？」は きろくごとに1回だけ きく（「いいえ」は その きろくに たいしてだけ おぼえる。
+ *    「おうちの方」ページの ボタンなら「いいえ」の あとでも ひきつげる）。
  *  - localStorage が 使えない・こわれた値 → 「なにも ない」。例外は 投げない。
  */
 import { localDate } from "@/lib/domain/dates";
@@ -13,7 +14,7 @@ import { isTrialDataEmpty, type TrialCarryData } from "@/lib/domain/trialMerge";
 import { LOCAL_PROGRESS_KEY, readLocalProgress } from "./localProgress";
 
 export const TRIAL_LOG_KEY = "eigo-quest:trial-log:v1";
-/** "carried" = ひきついだ / "declined" = 「いいえ」をえらんだ（もう きかない） */
+/** 「いいえ」を えらんだ しるし（JSON: { state: "declined", ref }。run4 の "declined" / "carried" も読める） */
 export const TRIAL_CARRY_FLAG_KEY = "eigo-quest:trial-carry:v1";
 
 const MAX_ITEMS = 8000;
@@ -132,24 +133,64 @@ export function readTrialCarryData(): TrialCarryData {
   return { ...log, lessons, tests, studyDates: [...new Set([...log.studyDates, ...Object.values(lessons), ...Object.values(tests)])].sort().slice(-MAX_DATES) };
 }
 
-export function readCarryFlag(): "carried" | "declined" | null {
+/** サーバー（この端末の おためし学習者）の ようす。GET /api/trial の答え（つながらなければ null） */
+export interface ServerTrialStatus {
+  hasProgress: boolean;
+  ref: string | null;
+  lessons: number;
+  tests: number;
+  coins: number;
+}
+
+interface CarryFlag {
+  state: "declined";
+  /** 「いいえ」を えらんだときの きろくの しるし（ブラウザの おためしID | サーバーの ref）。null = 古い形式（run4） */
+  ref: string | null;
+}
+
+/** いまの きろくの しるし（ブラウザの おためしID と サーバーの ref） */
+export function currentCarryRef(server: ServerTrialStatus | null): string {
+  return `${readTrialCarryData().trialId}|${server?.hasProgress ? server.ref ?? "" : ""}`;
+}
+
+function readFlag(): CarryFlag | null {
   try {
     const v = storage()?.getItem(TRIAL_CARRY_FLAG_KEY);
-    return v === "carried" || v === "declined" ? v : null;
+    if (!v) return null;
+    if (v === "declined") return { state: "declined", ref: null }; // run4 の形式
+    if (v === "carried") return null; // run4: ひきついだら きろくは けしてあるので しるしは いらない
+    const o = JSON.parse(v) as unknown;
+    if (isObj(o) && o.state === "declined" && typeof o.ref === "string") return { state: "declined", ref: o.ref };
+    return null;
   } catch {
     return null;
   }
 }
 
-/** 「おためしで あそんだ きろくを ひきつぐ？」を出すか（まだ きいていない + ひきつぐものが ある） */
-export function shouldOfferCarryOver(): boolean {
-  if (!storage() || readCarryFlag()) return false;
-  return !isTrialDataEmpty(readTrialCarryData());
+/** 「いいえ」を えらんだ きろくか（あたらしい きろくが ふえたら また きく） */
+export function isCarryDeclined(server: ServerTrialStatus | null): boolean {
+  const f = readFlag();
+  if (!f) return false;
+  // run4 の「いいえ」は ブラウザの きろくだけに たいする答え → サーバーに きろくが あれば また きく
+  if (f.ref === null) return !server?.hasProgress;
+  return f.ref === currentCarryRef(server);
 }
 
-export function markCarryOver(state: "carried" | "declined") {
+/** この端末に ひきつげる おためしの きろくが あるか（ブラウザ または サーバー）。「いいえ」の あとでも true */
+export function hasDeviceTrialProgress(server: ServerTrialStatus | null): boolean {
+  return !!server?.hasProgress || (!!storage() && !isTrialDataEmpty(readTrialCarryData()));
+}
+
+/** 「おためしで あそんだ きろくを ひきつぐ？」を出すか（ひきつぐものが ある + その きろくに「いいえ」と いっていない） */
+export function shouldOfferCarryOver(server: ServerTrialStatus | null = null): boolean {
+  if (!storage()) return !!server?.hasProgress;
+  return hasDeviceTrialProgress(server) && !isCarryDeclined(server);
+}
+
+/** 「いいえ」を おぼえる（いまの きろくに たいしてだけ） */
+export function markCarryDeclined(server: ServerTrialStatus | null) {
   try {
-    storage()?.setItem(TRIAL_CARRY_FLAG_KEY, state);
+    storage()?.setItem(TRIAL_CARRY_FLAG_KEY, JSON.stringify({ state: "declined", ref: currentCarryRef(server) } satisfies CarryFlag));
   } catch {
     // むし
   }
@@ -162,6 +203,7 @@ export function clearTrialRecords() {
   try {
     s.removeItem(TRIAL_LOG_KEY);
     s.removeItem(LOCAL_PROGRESS_KEY);
+    s.removeItem(TRIAL_CARRY_FLAG_KEY);
   } catch {
     // むし
   }

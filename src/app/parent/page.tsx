@@ -13,6 +13,7 @@ import { Suspense, useCallback, useEffect, useState } from "react";
 import { AccountHeader, FormMessage } from "@/components/account/Form";
 import { PinPad } from "@/components/account/PinPad";
 import { ChildCard, type Guard } from "@/components/parent/ChildCard";
+import { TrialCarryPanel } from "@/components/parent/TrialCarryPanel";
 import { AddChildForm, ChangePasswordForm, ChangePinForm, DeleteAccountPanel, LineMonthlyPanel, LinePanel } from "@/components/parent/SettingsPanels";
 import { apiGet } from "@/lib/api/client";
 import {
@@ -154,6 +155,9 @@ function ParentPage() {
           <ChildCard key={`${c.id}-${c.nickname}-${c.schoolGrade}-${c.dailyLessonLimit}-${c.avatarCharacter}`} child={c} index={i} birthYear={birthYears.get(c.id) ?? null} guard={guard} onChanged={refresh} onShowRadar={(id) => void showRadar(id)} />
         ))}
       </section>
+
+      {/* この端末に おためしの きろくが あるときだけ 出る（「いいえ」の あとでも ひきつげる） */}
+      <TrialCarryPanel kids={children} guard={guard} onCarried={(msg) => refresh(msg)} />
 
       <section className="card rpg-rivets relative p-4" aria-labelledby="add-title">
         <h2 id="add-title" className="rpg-title text-lg">お子さまを追加</h2>

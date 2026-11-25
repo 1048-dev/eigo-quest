@@ -136,3 +136,95 @@ export function planTrialMerge(child: ChildProgressState, trial: TrialCarryData,
 export function isTrialDataEmpty(t: Pick<TrialCarryData, "lessons" | "tests" | "coins">): boolean {
   return Object.keys(t.lessons ?? {}).length === 0 && Object.keys(t.tests ?? {}).length === 0 && !(t.coins > 0);
 }
+
+// ---------------------------------------------------------------------------
+// run5: 端末ごとの おためし学習者（DB）の きろくも いっしょに ひきつぐ
+// ---------------------------------------------------------------------------
+
+/** 端末の おためし学習者（DB の User, isTrial）の きろく */
+export interface DbTrialSnapshot {
+  userId: string;
+  /** lessonNo → クリアした日 */
+  lessons: Record<string, string>;
+  /** assessmentId → 合格した日（NORMAL の合格だけ） */
+  tests: Record<string, string>;
+  /** いまの コイン（DB の きろくなので 上限で おさえない。ガチャで つかった分は へっている） */
+  coins: number;
+  streakDays: number;
+  longestStreak: number;
+  lastStudyDate: string | null;
+  /** 記憶（そのまま コピーする） */
+  memories: MemoryState[];
+  /** ガチャで あつめた モンスター */
+  monsters: { monsterId: string; count: number }[];
+}
+
+export interface DeviceTrialMergePlan extends TrialMergePlan {
+  monsters: { monsterId: string; count: number }[];
+  /** coins の内わけ（台帳に べつべつに 書く） */
+  coinParts: { browser: number; db: number };
+}
+
+const earlier = (a: Record<string, string>, b: Record<string, string>): Record<string, string> => {
+  const out = { ...a };
+  for (const [k, d] of Object.entries(b)) if (!out[k] || d < out[k]) out[k] = d;
+  return out;
+};
+
+const NO_CHILD: ChildProgressState = { completedLessons: new Set(), passedTests: new Set(), memoryItemIds: new Set(), streakDays: 0, longestStreak: 0, lastStudyDate: null };
+
+/**
+ * ブラウザの おためしの きろく（browser）と 端末の おためし学習者（db）を 子どもに ひきつぐ中身を決める。
+ * どちらか片方だけでも よい（もう ひきついだ方は null で わたす）。
+ *  - レッスン・テスト: 両方を あわせて、子どもが まだ持っていない分（日付は 早い方）
+ *  - コイン: ブラウザの分は 上限で おさえる（手で書きかえられるので）＋ DB の分は そのまま
+ *  - れんぞく: 子ども・ブラウザ・DB の 大きい方
+ *  - 記憶: 子どもに無い項目だけ。DB の記憶を そのまま コピー、のこりは ブラウザの さいごの答えから
+ *  - モンスター: DB の分を たす
+ */
+export function planDeviceTrialMerge(
+  child: ChildProgressState,
+  browser: TrialCarryData | null,
+  db: DbTrialSnapshot | null,
+  catalog: TrialMergeCatalog,
+  now: Date,
+  today: string,
+): DeviceTrialMergePlan {
+  const dbMemories = (db?.memories ?? []).filter((m) => !child.memoryItemIds.has(m.itemId) && catalog.isItem(m.itemId));
+  const dbStudyDates = db ? [...Object.values(db.lessons), ...Object.values(db.tests), ...(db.lastStudyDate ? [db.lastStudyDate] : [])] : [];
+  const combined: TrialCarryData = {
+    trialId: browser?.trialId ?? db?.userId ?? "none",
+    lessons: earlier(db?.lessons ?? {}, browser?.lessons ?? {}),
+    tests: earlier(db?.tests ?? {}, browser?.tests ?? {}),
+    coins: 0, // コインは 下で べつに 計算する
+    studyDates: [...(browser?.studyDates ?? []), ...dbStudyDates],
+    items: browser?.items ?? {},
+  };
+  const base = planTrialMerge(
+    { ...child, memoryItemIds: new Set([...child.memoryItemIds, ...dbMemories.map((m) => m.itemId)]) },
+    combined, catalog, now, today,
+  );
+  const browserCoins = browser ? planTrialMerge(NO_CHILD, browser, catalog, now, today).coins : 0;
+  const dbCoins = db && Number.isFinite(db.coins) ? Math.max(0, Math.floor(db.coins)) : 0;
+
+  const streakDays = Math.max(base.streak.streakDays, db?.streakDays ?? 0);
+  const streak = {
+    streakDays,
+    longestStreak: Math.max(base.streak.longestStreak, db?.longestStreak ?? 0, streakDays),
+    lastStudyDate: base.streak.lastStudyDate,
+  };
+  const monsters = (db?.monsters ?? []).filter((m) => m.count > 0).map((m) => ({ monsterId: m.monsterId, count: Math.floor(m.count) }));
+  return {
+    ...base,
+    coins: browserCoins + dbCoins,
+    coinParts: { browser: browserCoins, db: dbCoins },
+    streak,
+    memories: [...dbMemories, ...base.memories].sort((a, b) => a.itemId.localeCompare(b.itemId)),
+    monsters,
+  };
+}
+
+/** DB の おためし学習者に ひきつぐものが あるか */
+export function isDbTrialEmpty(db: Pick<DbTrialSnapshot, "lessons" | "tests" | "coins" | "monsters"> | null): boolean {
+  return !db || (Object.keys(db.lessons).length === 0 && Object.keys(db.tests).length === 0 && !(db.coins > 0) && db.monsters.length === 0);
+}
