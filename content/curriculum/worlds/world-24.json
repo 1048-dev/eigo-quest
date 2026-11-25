@@ -1,0 +1,4613 @@
+{
+  "world": 24,
+  "stage": 3,
+  "level": "A2+",
+  "lessons": [
+    {
+      "lessonNo": 691,
+      "world": 24,
+      "title": "All Aboard the Cloud Train",
+      "titleJa": "くもの上の れっしゃに のろう",
+      "school": {
+        "grade": "中3",
+        "topic": "This train runs above the clouds!：けんきゅうじょの おくじょうの えきから、くもの上を はしる れっしゃに のる（ワールド24 の はじまり）",
+        "grammar": "This train runs above the clouds! / All aboard! / Let's find our seats.",
+        "expressions": [
+          {
+            "en": "This train runs above the clouds!",
+            "ja": "この れっしゃは くもの上を はしるんだ！",
+            "core": true
+          },
+          {
+            "en": "All aboard! The train is leaving.",
+            "ja": "ごじょうしゃ ください！れっしゃが でますよ。"
+          },
+          {
+            "en": "Let's find our seats.",
+            "ja": "じぶんたちの せきを さがそう。"
+          }
+        ],
+        "testPoints": [
+          "This train runs above the clouds! で のりものの ようすを いえる",
+          "地名の 音節と 強勢（Canada・America・Italy・Mexico）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Climb the stairs to the roof.",
+          "ja": "かいだんを のぼって おくじょうへ。",
+          "action": "その場で かいだんを のぼる まね",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Show your ticket.",
+          "ja": "きっぷを みせて。",
+          "action": "きっぷを まえに さしだす",
+          "emoji": "🎫"
+        },
+        {
+          "en": "Step back behind the yellow line.",
+          "ja": "きいろい せんの うしろに さがって。",
+          "action": "うしろに 1ぽ さがる",
+          "emoji": "⚠️"
+        },
+        {
+          "en": "All aboard! Jump on the train!",
+          "ja": "ごじょうしゃ！れっしゃに とびのって！",
+          "action": "ジャンプして のる まね",
+          "emoji": "🚆"
+        }
+      ],
+      "phonics": {
+        "rule": "place-stress",
+        "focus": [
+          "can-a-da",
+          "a-mer-i-ca",
+          "it-a-ly",
+          "mex-i-co"
+        ],
+        "sounds": [
+          "CAN",
+          "MER",
+          "IT",
+          "MEX"
+        ],
+        "words": [
+          "Canada",
+          "America",
+          "Italy",
+          "Mexico"
+        ],
+        "tipJa": "英語の 地名は 1つの はくを つよく よむ。CAN・a・da（カナダ）、a・MER・i・ca（アメリカ）、IT・a・ly（イタリア）、MEX・i・co（メキシコ）。日本語の よみかたと つよい ところが ちがうので、大きい もじの ところを つよく ながく いおう。"
+      },
+      "vocab": [
+        {
+          "en": "train",
+          "ja": "れっしゃ・でんしゃ",
+          "emoji": "🚆",
+          "core": true
+        },
+        {
+          "en": "cloud",
+          "ja": "くも",
+          "emoji": "☁️"
+        },
+        {
+          "en": "roof",
+          "ja": "おくじょう・やね",
+          "emoji": "🏠"
+        },
+        {
+          "en": "conductor",
+          "ja": "しゃしょう",
+          "emoji": "🎩"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to World 24, the Cloudtop Railway! Do you remember the silver ticket from the Sleeping Seed? Today, we climb the stairs to the roof of the lab. Look! There's a little station on the roof, and a long white train. This train runs above the clouds! Say it with me. This train runs above the clouds! Wonderful! Runs means goes. Most trains run on tracks, but this train runs on clouds. Let's read the sign on the platform. \"Welcome to Rooftop Station! The Cloud Train runs above the clouds from here to Cloud Junction. The train leaves every morning at nine. Please show your ticket to the conductor. Stand behind the yellow line. Enjoy your trip!\" What time does the train leave? At nine. Where do you stand? Behind the yellow line. Good. Listen! The conductor is calling. All aboard! The train is leaving. Now, phonics. In this world, we'll say place names the English way. Canada. America. Italy. Mexico. In English, one part is strong. CAN-a-da. a-MER-i-ca. IT-a-ly. MEX-i-co. Now, let's find our seats!",
+      "conversation": {
+        "scene": "The friends get on the Cloud Train on the roof of the lab",
+        "sceneJa": "けんきゅうじょの おくじょうで くもの れっしゃに のる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Wow! There's a station on the roof!",
+            "ja": "わあ！おくじょうに えきが あるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look at that train. It's floating on the clouds!",
+            "ja": "あの れっしゃを みて。くもの上に ういてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "This train runs above the clouds! Show your silver tickets, everyone.",
+            "ja": "この れっしゃは くもの上を はしるのよ！みんな、ぎんいろの きっぷを みせてね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Here's my ticket! Where does this train go?",
+            "ja": "ぼくの きっぷ だよ！この れっしゃは どこへ いくの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The ticket says Cloud Junction. That's the first stop.",
+            "ja": "きっぷには クラウド・ジャンクションって かいて ある。さいしょの えきね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "All aboard! The train is leaving. Let's find our seats.",
+            "ja": "ごじょうしゃ ください！れっしゃが でるわ。せきを さがしましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に くもの上の れっしゃを しょうかいしよう。AI が「どんな れっしゃ？」「どこへ いくの？」と きくから、This train runs above the clouds! の ように こたえよう",
+          "starterEn": "Wow, what a strange train! Where does it run? And where is it going?",
+          "targetExpressions": [
+            "This train runs above the clouds!",
+            "All aboard! The train is leaving.",
+            "Let's find our seats."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This train runs above the clouds!",
+          "All aboard! The train is leaving. / Let's find our seats.",
+          "Canada・America・Italy・Mexico"
+        ]
+      }
+    },
+    {
+      "lessonNo": 692,
+      "world": 24,
+      "title": "A Ticket, Please",
+      "titleJa": "きっぷを ください",
+      "school": {
+        "grade": "中3",
+        "topic": "A ticket to Star Station, please.：クラウド・ジャンクションの きっぷうりばで（ビリモが えきいんさんの やく）",
+        "grammar": "A ticket to ～, please. / How much is it? ― It's ～ coins.",
+        "expressions": [
+          {
+            "en": "A ticket to Star Station, please.",
+            "ja": "スター・ステーションまで きっぷを 1まい ください。",
+            "core": true
+          },
+          {
+            "en": "How much is it? ― It's eight coins.",
+            "ja": "いくらですか？ ― 8 コインです。"
+          },
+          {
+            "en": "Here you are. Have a nice trip!",
+            "ja": "はい どうぞ。よい たびを！"
+          }
+        ],
+        "testPoints": [
+          "A ticket to Star Station, please. で いきさきを いって きっぷを かえる",
+          "地名の 音節と 強勢（Osaka・Hokkaido・Korea・Okinawa）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand in line.",
+          "ja": "れつに ならんで。",
+          "action": "まえの ひとの うしろに ならぶ",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Count your coins.",
+          "ja": "コインを かぞえて。",
+          "action": "ゆびで 1まいずつ かぞえる まね",
+          "emoji": "💰"
+        },
+        {
+          "en": "Hold out your hand.",
+          "ja": "てを だして。",
+          "action": "てのひらを うえに して だす",
+          "emoji": "✋"
+        },
+        {
+          "en": "Put the ticket in your pocket.",
+          "ja": "きっぷを ポケットに いれて。",
+          "action": "ポケットに しまう まね",
+          "emoji": "🎫"
+        }
+      ],
+      "phonics": {
+        "rule": "place-stress",
+        "focus": [
+          "o-sa-ka",
+          "hok-kai-do",
+          "ko-re-a",
+          "o-ki-na-wa"
+        ],
+        "sounds": [
+          "SA",
+          "KAI",
+          "RE",
+          "NA"
+        ],
+        "words": [
+          "Osaka",
+          "Hokkaido",
+          "Korea",
+          "Okinawa"
+        ],
+        "tipJa": "日本の 地名も 英語の なかでは 1つの はくを つよく よむ。o・SA・ka（おおさか）、hok・KAI・do（ほっかいどう）、o・ki・NA・wa（おきなわ）。ko・RE・a（かんこく）は まんなかの RE を「リー」と ながく。"
+      },
+      "vocab": [
+        {
+          "en": "ticket",
+          "ja": "きっぷ",
+          "emoji": "🎫",
+          "core": true
+        },
+        {
+          "en": "station",
+          "ja": "えき",
+          "emoji": "🚉"
+        },
+        {
+          "en": "price",
+          "ja": "ねだん",
+          "emoji": "💰"
+        },
+        {
+          "en": "half",
+          "ja": "はんぶん",
+          "emoji": "🌗"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're at Cloud Junction. It's a very big station with lots of trains. Our silver tickets were only for the first ride, so now we need new tickets to the last stop, Star Station. Let's go to the ticket office. What do we say? A ticket to Star Station, please. Say it with me. A ticket to Star Station, please. Great! Then ask, How much is it? Let's read the price board next to the window. \"Cloudtop Railway Prices. Cloud Junction to Rainbow Falls: 4 coins. To Mist Mountain: 6 coins. To Moon Lake: 7 coins. To Star Station: 8 coins. Children under twelve pay half price.\" How much is a ticket to Star Station? Eight coins. But children pay half. Half of eight is four. So you pay four coins! When the clerk gives you the ticket, they say, Here you are. Have a nice trip! Now, phonics. Osaka. Hokkaido. Korea. Okinawa. In Japanese, we say these names flat. In English, one part is strong. o-SA-ka. hok-KAI-do. ko-RE-a. o-ki-NA-wa. Let's buy our tickets!",
+      "conversation": {
+        "scene": "Birimo plays a ticket clerk at Cloud Junction",
+        "sceneJa": "クラウド・ジャンクションで ビリモが えきいんさんの やくを する",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "This is Cloud Junction. It's a big station!",
+            "ja": "ここが クラウド・ジャンクション。おおきな えきね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We need tickets to Star Station. Where's the ticket office?",
+            "ja": "スター・ステーションまでの きっぷが いるね。きっぷうりばは どこ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Over there! Birimo, you're the clerk. Let's practice!",
+            "ja": "あそこ！ビリモ、えきいんさんの やくね。れんしゅう しよう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hello! Where are you going today?",
+            "ja": "こんにちは！きょうは どちらまで？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A ticket to Star Station, please. How much is it?",
+            "ja": "スター・ステーションまで 1まい ください。いくらですか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's eight coins, but children pay half. Four coins, please. Here you are. Have a nice trip!",
+            "ja": "8 コインですが、こどもは はんがく。4 コインです。はい どうぞ。よい たびを！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の えきいんさんから きっぷを かおう。A ticket to ～, please. / How much is it? を つかって、AI の しつもん（なんまい？ いつ？）にも こたえよう",
+          "starterEn": "Good morning! Welcome to Cloud Junction. Where are you going today?",
+          "targetExpressions": [
+            "A ticket to Star Station, please.",
+            "How much is it? ― It's eight coins.",
+            "Here you are. Have a nice trip!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "A ticket to Star Station, please.",
+          "How much is it? ― It's eight coins. / Here you are. Have a nice trip!",
+          "Osaka・Hokkaido・Korea・Okinawa"
+        ]
+      }
+    },
+    {
+      "lessonNo": 693,
+      "world": 24,
+      "title": "One Way or Round Trip?",
+      "titleJa": "かたみち？ おうふく？",
+      "school": {
+        "grade": "中3",
+        "topic": "One way or round trip?：きっぷの しゅるいを えらぶ（かたみちと おうふくの ちがい）",
+        "grammar": "One way or round trip? ― Round trip, please. / One way means ～. / Round trip means ～.",
+        "expressions": [
+          {
+            "en": "One way or round trip?",
+            "ja": "かたみちですか、おうふくですか？",
+            "core": true
+          },
+          {
+            "en": "Round trip, please. ― Round trip means you go there and come back.",
+            "ja": "おうふくで おねがいします。 ― おうふくは いって もどって くる って いう いみ。"
+          },
+          {
+            "en": "Five one-way tickets to Star Station, please.",
+            "ja": "スター・ステーションまで かたみちを 5まい ください。"
+          }
+        ],
+        "testPoints": [
+          "One way or round trip? で きっぷの しゅるいを えらんで かえる",
+          "地名の 音節と 強勢（Africa・Australia・Nagasaki・India）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point one way.",
+          "ja": "かたほうを ゆびさして。",
+          "action": "まっすぐ まえを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Go there and come back.",
+          "ja": "いって もどって きて。",
+          "action": "3ぽ すすんで 3ぽ もどる",
+          "emoji": "🔄"
+        },
+        {
+          "en": "Turn around.",
+          "ja": "くるっと まわって。",
+          "action": "その場で 1かい まわる",
+          "emoji": "↩️"
+        },
+        {
+          "en": "Wave goodbye, then wave hello.",
+          "ja": "バイバイ して、それから こんにちは。",
+          "action": "てを ふって また ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "place-stress",
+        "focus": [
+          "af-ri-ca",
+          "aus-tra-li-a",
+          "na-ga-sa-ki",
+          "in-di-a"
+        ],
+        "sounds": [
+          "AF",
+          "TRA",
+          "SA",
+          "IN"
+        ],
+        "words": [
+          "Africa",
+          "Australia",
+          "Nagasaki",
+          "India"
+        ],
+        "tipJa": "AF・ri・ca（アフリカ）と IN・di・a（インド）は さいしょを つよく。aus・TRA・li・a（オーストラリア）は 2ばんめの TRA を「トレイ」と つよく。na・ga・SA・ki（ながさき）は うしろから 2ばんめを つよく ながく。"
+      },
+      "vocab": [
+        {
+          "en": "round trip",
+          "ja": "おうふく",
+          "emoji": "🔄",
+          "core": true
+        },
+        {
+          "en": "one way",
+          "ja": "かたみち",
+          "emoji": "➡️"
+        },
+        {
+          "en": "come back",
+          "ja": "もどって くる",
+          "emoji": "↩️"
+        },
+        {
+          "en": "adult",
+          "ja": "おとな",
+          "emoji": "🧑"
+        }
+      ],
+      "teacherScript": "Hello, everyone! At the ticket office, the clerk often asks a question. One way or round trip? What does that mean? One way means you go there, and you don't come back. Round trip (おうふく) means you go there and come back. If you want to come back, say, Round trip, please. Let's practice. One way or round trip? Round trip, please. Say it with me. One way or round trip? Round trip, please. Excellent! Here is a ticket. Let's read it together. \"Cloudtop Railway. From: Cloud Junction. To: Moon Lake. Round trip. Adults: 1. Children: 4. You can use this ticket for seven days. Please keep it until the end of your trip.\" Is it one way or round trip? Round trip. How many children? Four. Good reading! But our trip ends at Star Station, so we need one-way tickets. Now, phonics. Africa. Australia. Nagasaki. India. AF-ri-ca. aus-TRA-li-a. na-ga-SA-ki. IN-di-a. Can you hear the strong part? Let's choose our tickets!",
+      "conversation": {
+        "scene": "The friends learn about one-way and round-trip tickets",
+        "sceneJa": "かたみちと おうふくの きっぷの ちがいを まなぶ",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Next, please! Where to?",
+            "ja": "つぎの かた どうぞ！どちらまで？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Moon Lake, please.",
+            "ja": "ムーン・レイクまで おねがいします。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "One way or round trip?",
+            "ja": "かたみちですか、おうふくですか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hmm. What's the difference?",
+            "ja": "うーん。なにが ちがうの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "One way means you don't come back. Round trip means you go there and come back.",
+            "ja": "かたみちは もどって こない。おうふくは いって もどって くる って いう いみよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Our trip ends at Star Station, so we need one-way tickets!",
+            "ja": "わたしたちの たびは スター・ステーションで おわるから、かたみちの きっぷね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の えきいんさんに きっぷの しゅるいを きかれるよ。One way or round trip? に こたえて、なまえは いわずに なんまい いるかも つたえよう",
+          "starterEn": "Hello! A ticket to Rainbow Falls? Sure. One way or round trip?",
+          "targetExpressions": [
+            "One way or round trip?",
+            "Round trip, please. ― Round trip means you go there and come back.",
+            "Five one-way tickets to Star Station, please."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "One way or round trip?",
+          "Round trip, please. ― Round trip means you go there and come back. / Five one-way tickets to Star Station, please.",
+          "Africa・Australia・Nagasaki・India"
+        ]
+      }
+    },
+    {
+      "lessonNo": 694,
+      "world": 24,
+      "title": "Which Platform?",
+      "titleJa": "なんばんせん？",
+      "school": {
+        "grade": "中3",
+        "topic": "Which platform does the train leave from?：えきの ホームで まよう（あんないばんを よんで、えきいんさんに きく）",
+        "grammar": "Which platform does the train leave from? ― It leaves from platform ～. / Is this the right platform for ～?",
+        "expressions": [
+          {
+            "en": "Which platform does the train leave from?",
+            "ja": "その れっしゃは なんばんせんから でますか？",
+            "core": true
+          },
+          {
+            "en": "It leaves from platform 3.",
+            "ja": "3ばんせんから でますよ。"
+          },
+          {
+            "en": "Is this the right platform for Star Station?",
+            "ja": "ここは スター・ステーションへ いく ホームで あって いますか？"
+          }
+        ],
+        "testPoints": [
+          "Which platform does the train leave from? で ホームの ばしょを たずねられる",
+          "地名の 音節と 強勢（Singapore・Antarctica・Argentina・Portugal）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look up at the board.",
+          "ja": "あんないばんを みあげて。",
+          "action": "うえを みる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Walk to platform 3.",
+          "ja": "3ばんせんまで あるいて。",
+          "action": "3ぽ あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Go up the stairs.",
+          "ja": "かいだんを のぼって。",
+          "action": "その場で かいだんを のぼる まね",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "Wait behind the line.",
+          "ja": "せんの うしろで まって。",
+          "action": "ぴたっと とまって まつ",
+          "emoji": "✋"
+        }
+      ],
+      "phonics": {
+        "rule": "place-stress",
+        "focus": [
+          "sin-ga-pore",
+          "ant-arc-ti-ca",
+          "ar-gen-ti-na",
+          "por-tu-gal"
+        ],
+        "sounds": [
+          "SIN",
+          "ARC",
+          "TI",
+          "POR"
+        ],
+        "words": [
+          "Singapore",
+          "Antarctica",
+          "Argentina",
+          "Portugal"
+        ],
+        "tipJa": "SIN・ga・pore（シンガポール）と POR・tu・gal（ポルトガル）は さいしょを つよく。ant・ARC・ti・ca（なんきょく）は ARC を つよく、ar・gen・TI・na（アルゼンチン）は TI を「ティー」と つよく ながく。"
+      },
+      "vocab": [
+        {
+          "en": "platform",
+          "ja": "ホーム・〜ばんせん",
+          "emoji": "🚉",
+          "core": true
+        },
+        {
+          "en": "board",
+          "ja": "あんないばん",
+          "emoji": "📋"
+        },
+        {
+          "en": "leave",
+          "ja": "しゅっぱつする",
+          "emoji": "🚆"
+        },
+        {
+          "en": "right",
+          "ja": "ただしい・あって いる",
+          "emoji": "✅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Cloud Junction has twelve platforms. Which one is ours? When you don't know, look at the departure board, or ask. Which platform does the train leave from? Say it with me. Which platform does the train leave from? Great! The answer is, It leaves from platform 3. Let's read the departure board. \"Departures. 10:15 Cloud Express to Star Station, platform 3. 10:30 Rainbow Line to Rainbow Falls, platform 5. 10:45 Mist Line to Mist Mountain, platform 1. Please check this board before you go to the platform.\" Which platform does the Cloud Express leave from? Platform 3. What time does the Rainbow Line leave? At 10:30. Good job! If you're not sure, ask the station staff. Excuse me. Is this the right platform for Star Station? Now, phonics. Singapore. Antarctica. Argentina. Portugal. SIN-ga-pore. ant-ARC-ti-ca. ar-gen-TI-na. POR-tu-gal. Clap on the strong part. Remember, the board can change, so check it again before the train comes. And platform 3 is up the stairs, so walk. Don't run! Let's find the right platform!",
+      "conversation": {
+        "scene": "The friends look for the right platform",
+        "sceneJa": "ただしい ホームを さがす",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Hurry! Our train leaves at 10:15.",
+            "ja": "いそいで！ぼくたちの れっしゃは 10じ15ふんに でるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Which platform does the train leave from?",
+            "ja": "その れっしゃは なんばんせんから でるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm not sure. Let's ask. Excuse me. Is this the right platform for Star Station?",
+            "ja": "わからない。きいて みよう。すみません。ここは スター・ステーションへ いく ホームですか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm the station staff now! No, this is platform 5. The Cloud Express leaves from platform 3.",
+            "ja": "いまは ぼくが えきいんさん！いいえ、ここは 5ばんせん。クラウド・エクスプレスは 3ばんせんから でますよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Platform 3? It's up the stairs. Thank you!",
+            "ja": "3ばんせん？かいだんの うえだ。ありがとう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good job asking. And always check the board, too.",
+            "ja": "よく きけたわね。それから いつも あんないばんも たしかめてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の えきいんさんに ホームを たずねよう。Which platform does the train leave from? / Is this the right platform for ～? を つかって、きいた ことを くりかえして たしかめよう",
+          "starterEn": "Hi there! You look a little lost. Which train are you taking?",
+          "targetExpressions": [
+            "Which platform does the train leave from?",
+            "It leaves from platform 3.",
+            "Is this the right platform for Star Station?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Which platform does the train leave from?",
+          "It leaves from platform 3. / Is this the right platform for Star Station?",
+          "Singapore・Antarctica・Argentina・Portugal"
+        ]
+      }
+    },
+    {
+      "lessonNo": 695,
+      "world": 24,
+      "title": "At the Station",
+      "titleJa": "えきで あんないがかり",
+      "school": {
+        "grade": "中3",
+        "topic": "The next train leaves at 10:15 from platform 3.：えきの あんないがかりの ロールプレイ（まとめ）",
+        "grammar": "The next train leaves at ～ from platform ～. / When does the next train leave? / How can I help you?",
+        "expressions": [
+          {
+            "en": "The next train leaves at 10:15 from platform 3.",
+            "ja": "つぎの れっしゃは 10じ15ふんに 3ばんせんから でます。",
+            "core": true
+          },
+          {
+            "en": "Excuse me. When does the next train to Star Station leave?",
+            "ja": "すみません。スター・ステーションいきの つぎの れっしゃは いつ でますか？"
+          },
+          {
+            "en": "Welcome to Cloud Junction! How can I help you?",
+            "ja": "クラウド・ジャンクションへ ようこそ！どう しましたか？"
+          }
+        ],
+        "testPoints": [
+          "The next train leaves at 10:15 from platform 3. で えきの あんないを できる",
+          "ワールド24 の ふりかえり（Canada・Okinawa・Australia・Argentina・Hokkaido）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the clock.",
+          "ja": "とけいを ゆびさして。",
+          "action": "かべの とけいを ゆびさす",
+          "emoji": "🕙"
+        },
+        {
+          "en": "Show three fingers. Platform 3!",
+          "ja": "ゆびを 3ぼん。3ばんせん！",
+          "action": "ゆびを 3ぼん たてる",
+          "emoji": "✋"
+        },
+        {
+          "en": "Bow like station staff.",
+          "ja": "えきいんさんの ように おじぎ して。",
+          "action": "ていねいに おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Don't run on the platform. Walk slowly.",
+          "ja": "ホームは はしらないで。ゆっくり あるいて。",
+          "action": "ゆっくり あるく",
+          "emoji": "🚶"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "can-a-da",
+          "o-ki-na-wa",
+          "aus-tra-li-a",
+          "ar-gen-ti-na",
+          "hok-kai-do"
+        ],
+        "sounds": [
+          "CAN",
+          "NA",
+          "TRA",
+          "TI",
+          "KAI"
+        ],
+        "words": [
+          "Canada",
+          "Okinawa",
+          "Australia",
+          "Argentina",
+          "Hokkaido"
+        ],
+        "tipJa": "地名の まとめ: CAN・a・da（さいしょ）、o・ki・NA・wa（うしろから 2ばんめ）、aus・TRA・li・a（2ばんめ）、ar・gen・TI・na（3ばんめ）、hok・KAI・do（まんなか）。はくに わけて、つよい ところを 大きく いおう。"
+      },
+      "vocab": [
+        {
+          "en": "next",
+          "ja": "つぎの",
+          "emoji": "⏭️",
+          "core": true
+        },
+        {
+          "en": "announcement",
+          "ja": "アナウンス・おしらせ",
+          "emoji": "📢"
+        },
+        {
+          "en": "clock",
+          "ja": "とけい",
+          "emoji": "🕙"
+        },
+        {
+          "en": "help",
+          "ja": "たすける・てつだう",
+          "emoji": "🤝"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, you are the station staff at Cloud Junction! Station staff help travelers. First, say hello. Welcome to Cloud Junction! How can I help you? Then, answer questions about trains. The next train leaves at 10:15 from platform 3. Say it with me. The next train leaves at 10:15 from platform 3. Perfect! Station staff also make announcements. Let's read this morning's announcement. \"Good morning, everyone. The next train to Star Station leaves at 10:15 from platform 3. The train to Rainbow Falls leaves at 10:30 from platform 5. Please don't run on the platform. Thank you for riding the Cloudtop Railway.\" Read it again with a clear, slow voice, like real staff. Great! Remember the words for tickets, too. A ticket to Star Station, please. One way or round trip? Which platform? Now, phonics review. Canada. Okinawa. Australia. Argentina. Hokkaido. CAN-a-da. o-ki-NA-wa. aus-TRA-li-a. ar-gen-TI-na. hok-KAI-do. Good station staff speak clearly and kindly. Look at the traveler, smile and use a polite voice. Let's open our station!",
+      "conversation": {
+        "scene": "The friends take turns playing station staff",
+        "sceneJa": "こうたいで えきの あんないがかりを する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's play station staff. Riko, you're first!",
+            "ja": "えきの あんないがかりごっこを しましょう。リコから どうぞ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Welcome to Cloud Junction! How can I help you?",
+            "ja": "クラウド・ジャンクションへ ようこそ！どう しましたか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Excuse me. When does the next train to Star Station leave?",
+            "ja": "すみません。スター・ステーションいきの つぎの れっしゃは いつ でますか？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The next train leaves at 10:15 from platform 3.",
+            "ja": "つぎの れっしゃは 10じ15ふんに 3ばんせんから でます。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And the train to Rainbow Falls? Which platform?",
+            "ja": "それと レインボー・フォールズいきは？なんばんせん？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It leaves from platform 5 at 10:30. Have a nice trip!",
+            "ja": "5ばんせんから 10じ30ぷんに でます。よい たびを！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You sound like real station staff, Riko!",
+            "ja": "リコ、ほんものの えきいんさん みたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "こんどは あなたが あんないがかり。AI の りょこうしゃに The next train leaves at ～ from platform ～. の ように こたえて、AI の しつもんにも こたえよう",
+          "starterEn": "Excuse me! I'm in a hurry. When does the next train to Star Station leave?",
+          "targetExpressions": [
+            "The next train leaves at 10:15 from platform 3.",
+            "Excuse me. When does the next train to Star Station leave?",
+            "Welcome to Cloud Junction! How can I help you?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The next train leaves at 10:15 from platform 3.",
+          "Excuse me. When does the next train to Star Station leave? / Welcome to Cloud Junction! How can I help you?",
+          "Canada・Okinawa・Australia・Argentina・Hokkaido"
+        ]
+      }
+    },
+    {
+      "lessonNo": 696,
+      "world": 24,
+      "title": "Have You Ever Seen a Rainbow Train?",
+      "titleJa": "にじいろの れっしゃを みた ことが ある？",
+      "school": {
+        "grade": "中3",
+        "topic": "Have you ever seen a rainbow train?：しゃないで、にじいろの れっしゃの はなしを する（現在完了・けいけんの はじまり）",
+        "grammar": "Have you ever seen ～? ― Yes, I have. / No, I haven't.",
+        "expressions": [
+          {
+            "en": "Have you ever seen a rainbow train?",
+            "ja": "にじいろの れっしゃを みた ことが ある？",
+            "core": true
+          },
+          {
+            "en": "Yes, I have. I saw it ten years ago.",
+            "ja": "うん、あるよ。10ねん まえに みたの。"
+          },
+          {
+            "en": "No, I haven't. I want to see it!",
+            "ja": "ううん、ないよ。みて みたい！"
+          }
+        ],
+        "testPoints": [
+          "Have you ever seen a rainbow train? で いままでに した ことが あるか たずねて こたえられる",
+          "過去分詞の かたち（seen・been・done・gone）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look out the window.",
+          "ja": "まどの そとを みて。",
+          "action": "よこを むいて のぞく",
+          "emoji": "👀"
+        },
+        {
+          "en": "Point to the rainbow.",
+          "ja": "にじを ゆびさして。",
+          "action": "そらに むかって ゆびさす",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Say, \"Yes, I have!\" with a thumbs-up.",
+          "ja": "グッドの ポーズで「Yes, I have!」。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        },
+        {
+          "en": "Say, \"No, I haven't.\" and shake your head.",
+          "ja": "くびを ふって「No, I haven't.」。",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        }
+      ],
+      "phonics": {
+        "rule": "past-participle",
+        "focus": [
+          "-een",
+          "-one"
+        ],
+        "sounds": [
+          "/iːn/",
+          "/ʌn/ /ɔːn/"
+        ],
+        "words": [
+          "seen",
+          "been",
+          "done",
+          "gone"
+        ],
+        "tipJa": "have の あとは 3つめの かたち。see → saw → seen、be → was → been、do → did → done、go → went → gone。seen と been は「イーン」、done は「ダン」、gone は「ゴーン」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "ever",
+          "ja": "いままでに",
+          "emoji": "⏳",
+          "core": true
+        },
+        {
+          "en": "rainbow",
+          "ja": "にじ",
+          "emoji": "🌈"
+        },
+        {
+          "en": "magazine",
+          "ja": "ざっし",
+          "emoji": "📖"
+        },
+        {
+          "en": "luck",
+          "ja": "うん",
+          "emoji": "🍀"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're on the Cloud Express now. Today, we'll learn how to ask about experiences. An experience is something you did in your life. Have you ever seen a rainbow? Have you ever seen a shooting star? Have you ever means, at any time in your life. Today's question is, Have you ever seen a rainbow train? Say it with me. Have you ever seen a rainbow train? Wonderful! The answer is, Yes, I have. Or, No, I haven't. Look, there's a magazine in the seat pocket. Let's read it. \"The Rainbow Train runs only once a month. It has seven cars, and each car is a different color. Many people want to see it, but only a few people have seen it. Some people say it brings good luck.\" How often does it run? Once a month. How many cars does it have? Seven. After you say Yes, I have, tell us more. Yes, I have. I saw it ten years ago. Now, phonics. Seen. Been. Done. Gone. See, saw, seen. Be, was, been. Do, did, done. Go, went, gone. After have, use seen. Keep your eyes on the window!",
+      "conversation": {
+        "scene": "The friends talk about the Rainbow Train",
+        "sceneJa": "にじいろの れっしゃの はなしを する",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at this magazine. The Rainbow Train runs only once a month.",
+            "ja": "この ざっしを みて。にじいろの れっしゃは 1か月に 1かいしか はしらないんだって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! Have you ever seen a rainbow train, Birimo?",
+            "ja": "わあ！ビリモは にじいろの れっしゃを みた ことが ある？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, I haven't. Have you ever seen it, Ms. Emma?",
+            "ja": "ううん、ないよ。エマ先生は みた ことが ある？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, I have! I saw it ten years ago. It was beautiful.",
+            "ja": "ええ、あるわ！10ねん まえに みたの。とても きれいだったわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look out the window! What's that? Seven colors!",
+            "ja": "まどの そとを みて！あれ なに？7しょく！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's the Rainbow Train! Now we've seen it, too!",
+            "ja": "にじいろの れっしゃだ！これで わたしたちも みた ことが あるね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「みた ことが ある？」の はなしを しよう。Have you ever seen ～? と きいたり、Yes, I have. / No, I haven't. で こたえたり しよう。AI は「いつ みたの？」とも きくよ",
+          "starterEn": "Hi! I love trains. Have you ever seen a rainbow? I saw one last week!",
+          "targetExpressions": [
+            "Have you ever seen a rainbow train?",
+            "Yes, I have. I saw it ten years ago.",
+            "No, I haven't. I want to see it!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Have you ever seen a rainbow train?",
+          "Yes, I have. I saw it ten years ago. / No, I haven't. I want to see it!",
+          "seen・been・done・gone"
+        ]
+      }
+    },
+    {
+      "lessonNo": 697,
+      "world": 24,
+      "title": "I've Been to Hokkaido",
+      "titleJa": "ほっかいどうに いった ことが ある",
+      "school": {
+        "grade": "中3",
+        "topic": "I've been to Hokkaido.：しゃないで、いった ことの ある ばしょを はなす（When did you go? / How was it? で はなしを ふくらませる）",
+        "grammar": "I've been to ～. / Have you ever been to ～? / When did you go? / How was it?",
+        "expressions": [
+          {
+            "en": "I've been to Hokkaido.",
+            "ja": "ほっかいどうに いった ことが あるよ。",
+            "core": true
+          },
+          {
+            "en": "When did you go? ― I went there last winter.",
+            "ja": "いつ いったの？ ― この まえの ふゆに いったよ。"
+          },
+          {
+            "en": "How was it? ― It was really cold, but fun!",
+            "ja": "どうだった？ ― すごく さむかったけど、たのしかった！"
+          }
+        ],
+        "testPoints": [
+          "I've been to Hokkaido. で いった ことの ある ばしょと その ときの ことを はなせる",
+          "過去分詞の かたち（eaten・taken・given・spoken）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shiver! It's cold in Hokkaido.",
+          "ja": "ぶるぶる！ほっかいどうは さむい。",
+          "action": "からだを ふるわせる",
+          "emoji": "🥶"
+        },
+        {
+          "en": "Roll a big snowball.",
+          "ja": "おおきな ゆきだまを ころがして。",
+          "action": "りょうてで ころがす まね",
+          "emoji": "⛄"
+        },
+        {
+          "en": "Walk carefully on the ice.",
+          "ja": "こおりの うえを そっと あるいて。",
+          "action": "つるつる すべらない ように あるく",
+          "emoji": "❄️"
+        },
+        {
+          "en": "Eat hot ramen. Slurp!",
+          "ja": "あつい ラーメンを たべて。ずるずる！",
+          "action": "はしで たべる まね",
+          "emoji": "🍜"
+        }
+      ],
+      "phonics": {
+        "rule": "past-participle",
+        "focus": [
+          "-en"
+        ],
+        "sounds": [
+          "/ən/"
+        ],
+        "words": [
+          "eaten",
+          "taken",
+          "given",
+          "spoken"
+        ],
+        "tipJa": "おわりに en が つく 3つめの かたち。eat → ate → eaten、take → took → taken、give → gave → given、speak → spoke → spoken。en は よわく「ン」と みじかく よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "been to",
+          "ja": "〜に いった ことが ある",
+          "emoji": "🗾",
+          "core": true
+        },
+        {
+          "en": "last winter",
+          "ja": "この まえの ふゆ",
+          "emoji": "❄️"
+        },
+        {
+          "en": "trip",
+          "ja": "りょこう",
+          "emoji": "🧳"
+        },
+        {
+          "en": "snowman",
+          "ja": "ゆきだるま",
+          "emoji": "⛄"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Have you ever seen a rainbow train? Today, we'll talk about places. When you went to a place in the past, you can say, I've been to Hokkaido. I've means I have. Say it with me. I've been to Hokkaido. Great! Ask your friend, Have you ever been to Okinawa? Then, a good listener asks more questions. When did you go? How was it? Let's read a page from Riko's travel notebook. \"Places I've been to: Hokkaido, Kyoto and Okinawa. My favorite was Hokkaido. I went there last winter with my family. We saw lots of snow, and we ate hot ramen. Places I want to go to: Canada and Australia.\" Where has Riko been? Hokkaido, Kyoto and Okinawa. When did she go to Hokkaido? Last winter. Look carefully. For the experience, we say, I've been to. For the time, we say, I went there last winter. Now, phonics. Eaten. Taken. Given. Spoken. Eat, ate, eaten. Take, took, taken. Give, gave, given. Speak, spoke, spoken. Let's share our trips!",
+      "conversation": {
+        "scene": "The friends talk about places they've been to",
+        "sceneJa": "いった ことの ある ばしょを はなす",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Have you ever been to Hokkaido, Haru?",
+            "ja": "ハルは ほっかいどうに いった ことが ある？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No, I haven't. Have you?",
+            "ja": "ううん、ないよ。リコは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes! I've been to Hokkaido. I went there last winter.",
+            "ja": "うん！ほっかいどうに いった ことが あるよ。この まえの ふゆに いったの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wow! How was it?",
+            "ja": "わあ！どうだった？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It was really cold, but fun! We made a big snowman.",
+            "ja": "すごく さむかったけど、たのしかった！おおきな ゆきだるまを つくったよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great follow-up question, Kiko. When did you go? How was it? Those questions keep the talk going.",
+            "ja": "キコ、いい しつもんね。いつ いったの？どうだった？で はなしが つづくのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に いった ことの ある ばしょを はなそう。I've been to ～. と いって、AI の When did you go? / How was it? に こたえよう。じぶんからも 1つ しつもんしよう",
+          "starterEn": "Hello! I love traveling. Have you ever been to the mountains or the sea?",
+          "targetExpressions": [
+            "I've been to Hokkaido.",
+            "When did you go? ― I went there last winter.",
+            "How was it? ― It was really cold, but fun!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I've been to Hokkaido.",
+          "When did you go? ― I went there last winter. / How was it? ― It was really cold, but fun!",
+          "eaten・taken・given・spoken"
+        ]
+      }
+    },
+    {
+      "lessonNo": 698,
+      "world": 24,
+      "title": "I've Never Eaten It",
+      "titleJa": "たべた ことが ない",
+      "school": {
+        "grade": "中3",
+        "topic": "I've never eaten it. Is it good?：しゃないはんばいで、しらない たべもの（I've never ～. で こたえる）",
+        "grammar": "I've never ～. / Have you ever tried ～? ― No, never.",
+        "expressions": [
+          {
+            "en": "I've never eaten it. Is it good?",
+            "ja": "たべた ことが ないよ。おいしい？",
+            "core": true
+          },
+          {
+            "en": "What's this? ― It's a cloud bun.",
+            "ja": "これ なに？ ― くもパンだよ。"
+          },
+          {
+            "en": "Have you ever tried thunder chips? ― No, never.",
+            "ja": "かみなりチップスを たべた ことは ある？ ― ううん、いちども ない。"
+          }
+        ],
+        "testPoints": [
+          "I've never eaten it. Is it good? で した ことが ない ことを いえる",
+          "過去分詞の かたち（written・ridden・forgotten・hidden）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Push the snack cart.",
+          "ja": "おやつの カートを おして。",
+          "action": "カートを おす まね",
+          "emoji": "🛒"
+        },
+        {
+          "en": "Smell the bun.",
+          "ja": "パンの においを かいで。",
+          "action": "くんくん におう",
+          "emoji": "👃"
+        },
+        {
+          "en": "Take a big bite.",
+          "ja": "おおきく ひとくち たべて。",
+          "action": "がぶっと たべる まね",
+          "emoji": "😋"
+        },
+        {
+          "en": "It's spicy! Fan your mouth.",
+          "ja": "からい！くちを あおいで。",
+          "action": "くちを てで あおぐ",
+          "emoji": "🌶️"
+        }
+      ],
+      "phonics": {
+        "rule": "past-participle",
+        "focus": [
+          "-en"
+        ],
+        "sounds": [
+          "/ən/"
+        ],
+        "words": [
+          "written",
+          "ridden",
+          "forgotten",
+          "hidden"
+        ],
+        "tipJa": "まんなかの ぼいんが みじかい おとの ときは、もじを かさねて en。write → wrote → written（t を 2つ）、ride → rode → ridden（d を 2つ）、forget → forgot → forgotten、hide → hid → hidden。"
+      },
+      "vocab": [
+        {
+          "en": "never",
+          "ja": "いちども 〜ない",
+          "emoji": "🚫",
+          "core": true
+        },
+        {
+          "en": "try",
+          "ja": "ためす・たべて みる",
+          "emoji": "🍴"
+        },
+        {
+          "en": "snack",
+          "ja": "おやつ",
+          "emoji": "🍪"
+        },
+        {
+          "en": "spicy",
+          "ja": "からい",
+          "emoji": "🌶️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Listen. Snacks! Drinks! Here comes the snack cart. On a train, you can buy food from a cart. But what are these? I've never eaten them! When you have no experience, say, I've never. Say it with me. I've never eaten it. Is it good? Wonderful! Never means not even one time. Let's read the menu on the cart. \"Cloud Cart Snacks. Cloud bun: soft and sweet, like a real cloud. 2 coins. Thunder chips: spicy and crunchy! 1 coin. Moon milk: warm milk with honey. 2 coins. Rainbow jelly: seven flavors in one cup. 3 coins.\" Which snack is spicy? Thunder chips. Which snack is like a cloud? The cloud bun. Have you ever tried thunder chips? You can answer, No, never. Or, No, I've never tried them. Try means eat something new. Now, phonics. Written. Ridden. Forgotten. Hidden. Write, wrote, written. Ride, rode, ridden. The middle sound is short, so we double the letter. Let's try something new!",
+      "conversation": {
+        "scene": "The friends buy snacks from the cart",
+        "sceneJa": "しゃないはんばいの カートで おやつを かう",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Snacks! Drinks! Cloud buns! I'm the cart seller today.",
+            "ja": "おやつ！のみもの！くもパン！きょうは ぼくが うりこさん。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What's this? It looks like a little cloud.",
+            "ja": "これ なに？ちいさな くもみたい。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's a cloud bun. It's soft and sweet.",
+            "ja": "くもパンだよ。ふわふわで あまいよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I've never eaten it. Is it good?",
+            "ja": "たべた ことが ないよ。おいしい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's delicious! Have you ever tried thunder chips? They're spicy!",
+            "ja": "とっても おいしいよ！かみなりチップスは たべた ことが ある？からいよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No, never. I'll try a cloud bun first, please.",
+            "ja": "ううん、いちども ない。まず くもパンを ください。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の うりこさんと はなそう。しらない たべものが でて くるよ。What's this? と きいて、I've never eaten it. Is it good? と いおう。さいごに 1つ えらんで かおう",
+          "starterEn": "Snacks! Drinks! Would you like something? Have you ever tried a cloud bun?",
+          "targetExpressions": [
+            "I've never eaten it. Is it good?",
+            "What's this? ― It's a cloud bun.",
+            "Have you ever tried thunder chips? ― No, never."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I've never eaten it. Is it good?",
+          "What's this? ― It's a cloud bun. / Have you ever tried thunder chips? ― No, never.",
+          "written・ridden・forgotten・hidden"
+        ]
+      }
+    },
+    {
+      "lessonNo": 699,
+      "world": 24,
+      "title": "How Many Times?",
+      "titleJa": "なんかい？",
+      "school": {
+        "grade": "中3",
+        "topic": "I've been there twice.：しゃしょうさんの ノートを よんで、けいけんの かいすうを はなす",
+        "grammar": "I've been there twice. / How many times have you ～? / once, twice, three times",
+        "expressions": [
+          {
+            "en": "I've been there twice.",
+            "ja": "そこには 2かい いった ことが あるよ。",
+            "core": true
+          },
+          {
+            "en": "How many times have you been to the sea? ― Many times.",
+            "ja": "うみには なんかい いった ことが ある？ ― なんかいも。"
+          },
+          {
+            "en": "I've ridden this train once.",
+            "ja": "この れっしゃには 1かい のった ことが あるよ。"
+          }
+        ],
+        "testPoints": [
+          "I've been there twice. で けいけんの かいすうを いえる",
+          "過去分詞の かたち（flown・drawn・grown・swum）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Clap once.",
+          "ja": "1かい てを たたいて。",
+          "action": "1かい たたく",
+          "emoji": "👏"
+        },
+        {
+          "en": "Clap twice.",
+          "ja": "2かい てを たたいて。",
+          "action": "2かい たたく",
+          "emoji": "👏"
+        },
+        {
+          "en": "Jump three times.",
+          "ja": "3かい ジャンプして。",
+          "action": "3かい とぶ",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "Fly like a bird.",
+          "ja": "とりの ように とんで。",
+          "action": "りょうてで はばたく",
+          "emoji": "🐦"
+        }
+      ],
+      "phonics": {
+        "rule": "past-participle",
+        "focus": [
+          "-wn",
+          "-um"
+        ],
+        "sounds": [
+          "/oʊn/ /ɔːn/",
+          "/ʌm/"
+        ],
+        "words": [
+          "flown",
+          "drawn",
+          "grown",
+          "swum"
+        ],
+        "tipJa": "おわりが wn に なる なかま: fly → flew → flown、draw → drew → drawn、grow → grew → grown。swim → swam → swum は a が u に かわるよ。flown・grown は「オウン」、drawn は「ドローン」と よむ。"
+      },
+      "vocab": [
+        {
+          "en": "twice",
+          "ja": "2かい",
+          "emoji": "✌️",
+          "core": true
+        },
+        {
+          "en": "once",
+          "ja": "1かい",
+          "emoji": "☝️"
+        },
+        {
+          "en": "times",
+          "ja": "〜かい",
+          "emoji": "🔁"
+        },
+        {
+          "en": "bridge",
+          "ja": "はし",
+          "emoji": "🌉"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, Conductor Nimbus showed us his old notebook. He's a tall bird with a blue hat, and he loves this train. Let's read it. \"Conductor Nimbus's Notebook. I started working on this train thirty years ago. I've crossed the Cloud Bridge more than a thousand times. I've seen the Rainbow Train fifty times. But I've never been to the Cave of Riddles. Maybe someday!\" How many times has he seen the Rainbow Train? Fifty times! When we count experiences, we say, once, twice, three times, four times. One time is once. Two times is twice. Say it with me. I've been there twice. Excellent! To ask, say, How many times have you been to the sea? You can answer, Once. Twice. Many times. Or, I've never been there. Now, phonics. Flown. Drawn. Grown. Swum. Fly, flew, flown. Draw, drew, drawn. Grow, grew, grown. Swim, swam, swum. How many times have you swum in the sea? Let's count our experiences!",
+      "conversation": {
+        "scene": "The friends count their experiences",
+        "sceneJa": "けいけんの かいすうを かぞえる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Conductor Nimbus has crossed the Cloud Bridge more than a thousand times!",
+            "ja": "ニンバスしゃしょうは クラウド・ブリッジを 1000かい いじょう わたった ことが あるのよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! I've ridden this train once. Today!",
+            "ja": "すごい！ぼくは この れっしゃに 1かい のった ことが ある。きょう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How many times have you been to the sea, Riko?",
+            "ja": "リコは うみに なんかい いった ことが ある？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Many times! And I've been to Okinawa twice.",
+            "ja": "なんかいも！それに おきなわには 2かい いった ことが あるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I've flown in the sky three times... in my dreams!",
+            "ja": "ぼくは そらを 3かい とんだ ことが あるよ…ゆめの なかで！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Once, twice, three times. Let's count!",
+            "ja": "あはは！1かい、2かい、3かい。かぞえよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と けいけんの かいすうを はなそう。How many times have you ～? と きいたり、once / twice / ～ times で こたえたり しよう",
+          "starterEn": "I've ridden this train twenty times! How many times have you ridden a train?",
+          "targetExpressions": [
+            "I've been there twice.",
+            "How many times have you been to the sea? ― Many times.",
+            "I've ridden this train once."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I've been there twice.",
+          "How many times have you been to the sea? ― Many times. / I've ridden this train once.",
+          "flown・drawn・grown・swum"
+        ]
+      }
+    },
+    {
+      "lessonNo": 700,
+      "world": 24,
+      "title": "Experience Bingo",
+      "titleJa": "けいけん ビンゴ",
+      "school": {
+        "grade": "中3",
+        "topic": "Have you ever ridden a horse?：700かい きねん、けいけん ビンゴ（まとめ）",
+        "grammar": "Have you ever ～? ― Yes, I have. I ～ at ～. / No, I haven't.",
+        "expressions": [
+          {
+            "en": "Have you ever ridden a horse?",
+            "ja": "うまに のった ことが ある？",
+            "core": true
+          },
+          {
+            "en": "Yes, I have. I rode one at a farm.",
+            "ja": "うん、あるよ。ぼくじょうで のったんだ。"
+          },
+          {
+            "en": "Bingo! I got five in a row!",
+            "ja": "ビンゴ！5つ ならんだ！"
+          }
+        ],
+        "testPoints": [
+          "Have you ever ridden a horse? で けいけんを たずねて、こたえに 1つ くわしい ことを たせる",
+          "ワールド24 の ふりかえり（seen・gone・eaten・written・flown）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Gallop like a horse.",
+          "ja": "うまの ように はねて。",
+          "action": "パカパカ スキップ",
+          "emoji": "🐴"
+        },
+        {
+          "en": "Swim in the sea.",
+          "ja": "うみで およいで。",
+          "action": "クロールの まね",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Draw a big circle on your card.",
+          "ja": "カードに おおきな まるを かいて。",
+          "action": "くうちゅうに まるを かく",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Shout, \"Bingo!\"",
+          "ja": "「ビンゴ！」と さけんで。",
+          "action": "ばんざい",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-een",
+          "-one",
+          "-en",
+          "-wn"
+        ],
+        "sounds": [
+          "/iːn/",
+          "/ɔːn/",
+          "/ən/",
+          "/oʊn/"
+        ],
+        "words": [
+          "seen",
+          "gone",
+          "eaten",
+          "written",
+          "flown"
+        ],
+        "tipJa": "過去分詞の まとめ: see → saw → seen、go → went → gone、eat → ate → eaten、write → wrote → written（t を 2つ）、fly → flew → flown。have の あとは いつも 3つめの かたち！"
+      },
+      "vocab": [
+        {
+          "en": "experience",
+          "ja": "けいけん",
+          "emoji": "🌟",
+          "core": true
+        },
+        {
+          "en": "horse",
+          "ja": "うま",
+          "emoji": "🐴"
+        },
+        {
+          "en": "bingo",
+          "ja": "ビンゴ",
+          "emoji": "🎯"
+        },
+        {
+          "en": "row",
+          "ja": "（よこ・たての）れつ",
+          "emoji": "➖"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This is our 700th lesson! Congratulations! You've come so far. Let's celebrate with Experience Bingo! Here's your bingo card. Ask your friends the questions. If your friend says, Yes, I have, write their name in the box. Let's read the card. \"Experience Bingo. Ask your friends! Have you ever ridden a horse? Have you ever eaten curry for breakfast? Have you ever seen a shooting star? Have you ever swum in the sea? Have you ever flown in a plane?\" Let's practice the first question. Have you ever ridden a horse? Say it with me. Have you ever ridden a horse? Great! When you say Yes, I have, add one more thing. Yes, I have. I rode one at a farm. When? Where? How was it? If you get five in a row, shout, Bingo! I got five in a row! Now, phonics review. Seen. Gone. Eaten. Written. Flown. See, saw, seen. Go, went, gone. Eat, ate, eaten. Write, wrote, written. Fly, flew, flown. Ready? Let's play!",
+      "conversation": {
+        "scene": "The friends play Experience Bingo for the 700th lesson",
+        "sceneJa": "700かい きねんに けいけん ビンゴを する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is our 700th lesson! Let's play Experience Bingo!",
+            "ja": "きょうは 700かいめの レッスンよ！けいけん ビンゴを しましょう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Haru, have you ever ridden a horse?",
+            "ja": "ハル、うまに のった ことが ある？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, I have. I rode one at a farm last summer.",
+            "ja": "うん、あるよ。きょねんの なつに ぼくじょうで のったんだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Birimo, have you ever swum in the sea?",
+            "ja": "ビリモ、うみで およいだ ことは ある？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, I haven't. I can't swim yet!",
+            "ja": "ううん、ないよ。まだ およげないんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Bingo! I got five in a row!",
+            "ja": "ビンゴ！5つ ならんだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Well done, everyone! Happy 700th lesson!",
+            "ja": "みんな よく できました！700かい おめでとう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と けいけん ビンゴを しよう。Have you ever ～? で 5つ きいて、AI の こたえに When? / How was it? と もう 1つ きこう。AI からの しつもんにも こたえてね",
+          "starterEn": "Let's play Experience Bingo! You ask first. What's your first question?",
+          "targetExpressions": [
+            "Have you ever ridden a horse?",
+            "Yes, I have. I rode one at a farm.",
+            "Bingo! I got five in a row!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Have you ever ridden a horse?",
+          "Yes, I have. I rode one at a farm. / Bingo! I got five in a row!",
+          "seen・gone・eaten・written・flown"
+        ]
+      }
+    },
+    {
+      "lessonNo": 701,
+      "world": 24,
+      "title": "I'm Lost",
+      "titleJa": "まいごに なった",
+      "school": {
+        "grade": "中3",
+        "topic": "Excuse me. I'm lost. Could you help me?：おおきな のりかええきで まいごに（えきいんさんや あんないじょに たすけを もとめる）",
+        "grammar": "Excuse me. I'm lost. Could you help me? / Where do you want to go? / Stay calm.",
+        "expressions": [
+          {
+            "en": "Excuse me. I'm lost. Could you help me?",
+            "ja": "すみません。まいごに なりました。たすけて もらえますか？",
+            "core": true
+          },
+          {
+            "en": "Where do you want to go? ― I want to go to the Rainbow Line.",
+            "ja": "どこへ いきたいの？ ― レインボー・ラインへ いきたいです。"
+          },
+          {
+            "en": "If you're lost, stay calm and ask the station staff.",
+            "ja": "まいごに なったら、おちついて えきいんさんに きいてね。"
+          }
+        ],
+        "testPoints": [
+          "Excuse me. I'm lost. Could you help me? で こまった ときに たすけを もとめられる",
+          "短縮形 I've / haven't / she's（has）（I've・you've・we've・they've）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look around. Where is everyone?",
+          "ja": "まわりを みて。みんな どこ？",
+          "action": "きょろきょろ みまわす",
+          "emoji": "👀"
+        },
+        {
+          "en": "Take a deep breath. Stay calm.",
+          "ja": "しんこきゅう して。おちついて。",
+          "action": "おおきく すって はく",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Walk to the information desk.",
+          "ja": "あんないじょまで あるいて。",
+          "action": "まっすぐ あるく",
+          "emoji": "ℹ️"
+        },
+        {
+          "en": "Raise your hand and say, \"Excuse me.\"",
+          "ja": "てを あげて「Excuse me.」と いって。",
+          "action": "てを あげる",
+          "emoji": "🙋"
+        }
+      ],
+      "phonics": {
+        "rule": "perfect-contraction",
+        "focus": [
+          "'ve"
+        ],
+        "sounds": [
+          "/v/"
+        ],
+        "words": [
+          "I've",
+          "you've",
+          "we've",
+          "they've"
+        ],
+        "tipJa": "have を みじかく すると 've。I have → I've、you have → you've、we have → we've、they have → they've。' は きえた ha の しるし。おわりの v は したくちびるを かるく かんで「ヴ」。"
+      },
+      "vocab": [
+        {
+          "en": "lost",
+          "ja": "まいごの・みちに まよった",
+          "emoji": "😵",
+          "core": true
+        },
+        {
+          "en": "information desk",
+          "ja": "あんないじょ",
+          "emoji": "ℹ️"
+        },
+        {
+          "en": "staff",
+          "ja": "えきいん・かかりの ひと",
+          "emoji": "🧢"
+        },
+        {
+          "en": "calm",
+          "ja": "おちついた",
+          "emoji": "😌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we're at Sky Harbor. It's the biggest station on the Cloudtop Railway. There are twenty platforms and lots of people. Oh no! Where's Birimo? He was lost for a few minutes! But he did the right thing. He went to the information desk and said, Excuse me. I'm lost. Could you help me? Say it with me. Excuse me. I'm lost. Could you help me? Very good! Look, there's a poster on the wall. Let's read it. \"Lost at the station? Don't worry! 1. Stay calm. 2. Look for station staff in blue uniforms. 3. Go to the information desk. 4. Don't go anywhere with strangers. 5. Tell the staff your group's meeting place.\" Who can help you? Station staff in blue uniforms. Should you go anywhere with strangers? No! The staff will ask, Where do you want to go? You can answer, I want to go to the Rainbow Line. Now, phonics. I've. You've. We've. They've. I have becomes I've. We have becomes we've. Bite your lip softly for the v. Stay calm, and ask for help!",
+      "conversation": {
+        "scene": "Birimo gets lost at Sky Harbor and the friends practice asking for help",
+        "sceneJa": "スカイ・ハーバーで ビリモが まいごに。たすけを もとめる れんしゅう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Sky Harbor is so big! There are twenty platforms!",
+            "ja": "スカイ・ハーバーって おおきいね！ホームが 20 も ある！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wait... where's Birimo?",
+            "ja": "まって…ビリモは どこ？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Here I am! I was lost, so I went to the information desk.",
+            "ja": "ここだよ！まいごに なったから、あんないじょへ いったんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good job! If you're lost, stay calm and ask the station staff.",
+            "ja": "えらいわ！まいごに なったら、おちついて えきいんさんに きいてね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's practice. I'm the station staff. Where do you want to go?",
+            "ja": "れんしゅう しよう。わたしが えきいんさん。どこへ いきたいですか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Excuse me. I'm lost. Could you help me? I want to go to the Rainbow Line.",
+            "ja": "すみません。まいごに なりました。たすけて もらえますか？レインボー・ラインへ いきたいです。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の えきいんさんに たすけを もとめよう。Excuse me. I'm lost. Could you help me? と いって、どこへ いきたいか つたえよう。じぶんの なまえや すんで いる ところは いわなくて OK",
+          "starterEn": "Hello! I'm the station staff. You look worried. Are you OK?",
+          "targetExpressions": [
+            "Excuse me. I'm lost. Could you help me?",
+            "Where do you want to go? ― I want to go to the Rainbow Line.",
+            "If you're lost, stay calm and ask the station staff."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Excuse me. I'm lost. Could you help me?",
+          "Where do you want to go? ― I want to go to the Rainbow Line. / If you're lost, stay calm and ask the station staff.",
+          "I've・you've・we've・they've"
+        ]
+      }
+    },
+    {
+      "lessonNo": 702,
+      "world": 24,
+      "title": "I Missed the Train!",
+      "titleJa": "のりおくれた！",
+      "school": {
+        "grade": "中3",
+        "topic": "I missed the train! When's the next one?：れっしゃに のりおくれる（じこくひょうで つぎの れっしゃを しらべる）",
+        "grammar": "I missed the train! / When's the next one? ― It comes in ～ minutes.",
+        "expressions": [
+          {
+            "en": "I missed the train! When's the next one?",
+            "ja": "のりおくれた！つぎのは いつ？",
+            "core": true
+          },
+          {
+            "en": "The next one comes in twenty minutes.",
+            "ja": "つぎのは 20ぷんごに くるよ。"
+          },
+          {
+            "en": "Let's wait on the bench.",
+            "ja": "ベンチで まとう。"
+          }
+        ],
+        "testPoints": [
+          "I missed the train! When's the next one? で のりおくれた ときに つぎの れっしゃを たずねられる",
+          "短縮形 I've / haven't / she's（has）（haven't・hasn't・I've・they've）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Run! Oh no, the doors closed.",
+          "ja": "はしって！あっ、ドアが しまった。",
+          "action": "はしって きゅうに とまる",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Look at your watch.",
+          "ja": "うでどけいを みて。",
+          "action": "てくびを みる",
+          "emoji": "⌚"
+        },
+        {
+          "en": "Sit down on the bench.",
+          "ja": "ベンチに すわって。",
+          "action": "すわる",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Wait, wait, wait.",
+          "ja": "まって、まって、まって。",
+          "action": "じっと まつ",
+          "emoji": "⏳"
+        }
+      ],
+      "phonics": {
+        "rule": "perfect-contraction",
+        "focus": [
+          "n't",
+          "'ve"
+        ],
+        "sounds": [
+          "/nt/",
+          "/v/"
+        ],
+        "words": [
+          "haven't",
+          "hasn't",
+          "I've",
+          "they've"
+        ],
+        "tipJa": "have not → haven't、has not → hasn't。' は きえた o の しるしで、n と t の あいだに はいるよ（have'nt では ない）。I've・they've の ' は きえた ha の しるし。"
+      },
+      "vocab": [
+        {
+          "en": "miss",
+          "ja": "のりおくれる",
+          "emoji": "😫",
+          "core": true
+        },
+        {
+          "en": "next",
+          "ja": "つぎの",
+          "emoji": "⏭️"
+        },
+        {
+          "en": "timetable",
+          "ja": "じこくひょう",
+          "emoji": "🗓️"
+        },
+        {
+          "en": "bench",
+          "ja": "ベンチ",
+          "emoji": "🪑"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're still at Sky Harbor. Haru went to buy snacks for everyone. But when he came back, the train doors closed! The train left without us. Oh no! We missed the train. Say it with me. I missed the train! When's the next one? Good! When's means when is. Don't worry. Let's look at the timetable. \"Rainbow Line Timetable. Sky Harbor to Rainbow Falls. 11:00, 11:20, 11:40, 12:00. Trains come every twenty minutes. The ride to Rainbow Falls is thirty minutes long.\" Which train did we miss? The 11:00 train. When's the next one? At 11:20. So, the next one comes in twenty minutes. In twenty minutes means twenty minutes from now. We haven't missed our trip. We just have to wait. Missing a train can happen to anyone, so stay calm. Let's wait on the bench. Now, phonics. Haven't. Hasn't. I've. They've. Have not becomes haven't. Has not becomes hasn't. The mark goes between n and t. Next time, let's stay together!",
+      "conversation": {
+        "scene": "The friends miss the train and check the timetable",
+        "sceneJa": "れっしゃに のりおくれて、じこくひょうを みる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I got snacks for everyone! ...Huh? Where's our train?",
+            "ja": "みんなの おやつ かって きたよ！…あれ？ぼくたちの れっしゃは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh no! The doors closed. It's leaving!",
+            "ja": "たいへん！ドアが しまった。でて いっちゃう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I missed the train! When's the next one?",
+            "ja": "のりおくれた！つぎのは いつ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look at the timetable. Trains come every twenty minutes.",
+            "ja": "じこくひょうを みて。20ぷんごとに くるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Don't worry. The next one comes in twenty minutes. Let's wait on the bench.",
+            "ja": "だいじょうぶ。つぎのは 20ぷんごに くるわ。ベンチで まちましょう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And let's eat Haru's snacks!",
+            "ja": "それから ハルの おやつを たべよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に のりおくれた ことを つたえよう。I missed the train! When's the next one? と きいて、AI の こたえを きいたら なんぷん まつか くりかえそう",
+          "starterEn": "Oh, you're out of breath! What happened? Did you miss your train?",
+          "targetExpressions": [
+            "I missed the train! When's the next one?",
+            "The next one comes in twenty minutes.",
+            "Let's wait on the bench."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I missed the train! When's the next one?",
+          "The next one comes in twenty minutes. / Let's wait on the bench.",
+          "haven't・hasn't・I've・they've"
+        ]
+      }
+    },
+    {
+      "lessonNo": 703,
+      "world": 24,
+      "title": "I Left My Bag on the Train",
+      "titleJa": "でんしゃに かばんを わすれた",
+      "school": {
+        "grade": "中3",
+        "topic": "I left my bag on the train.：わすれもの センターで（どの れっしゃに のって いたか つたえる）",
+        "grammar": "I left my bag on the train. / Which train were you on? / Let's go to the lost and found.",
+        "expressions": [
+          {
+            "en": "I left my bag on the train.",
+            "ja": "でんしゃに かばんを わすれちゃった。",
+            "core": true
+          },
+          {
+            "en": "Let's go to the lost and found.",
+            "ja": "わすれもの センターへ いこう。"
+          },
+          {
+            "en": "Which train were you on? ― The 11:20 train to Rainbow Falls.",
+            "ja": "どの れっしゃに のって いたの？ ― 11じ20ぷんの レインボー・フォールズいき。"
+          }
+        ],
+        "testPoints": [
+          "I left my bag on the train. で わすれものを した ことを つたえられる",
+          "短縮形 I've / haven't / she's（has）（she's・he's・it's・who's）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Touch your back. No bag!",
+          "ja": "せなかを さわって。かばんが ない！",
+          "action": "せなかを さわって びっくり",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Put your hands on your cheeks. Oh no!",
+          "ja": "ほっぺに てを あてて。たいへん！",
+          "action": "ほっぺに てを あてる",
+          "emoji": "😱"
+        },
+        {
+          "en": "Fill in the form.",
+          "ja": "ようしに かきこんで。",
+          "action": "かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Cross your fingers.",
+          "ja": "ゆびを かさねて いのって。",
+          "action": "ゆびを クロスする",
+          "emoji": "🤞"
+        }
+      ],
+      "phonics": {
+        "rule": "perfect-contraction",
+        "focus": [
+          "'s"
+        ],
+        "sounds": [
+          "/z/ /s/"
+        ],
+        "words": [
+          "she's",
+          "he's",
+          "it's",
+          "who's"
+        ],
+        "tipJa": "she has → she's、he has → he's、it has → it's、who has → who's。's は is の ことも has の ことも ある。She's been ～ / Who's seen ～? の ように うしろに been・seen が あれば has だよ。"
+      },
+      "vocab": [
+        {
+          "en": "leave",
+          "ja": "おいて くる・わすれる（すぎた かたちは left）",
+          "emoji": "👜",
+          "core": true
+        },
+        {
+          "en": "lost and found",
+          "ja": "わすれもの センター",
+          "emoji": "📦"
+        },
+        {
+          "en": "car",
+          "ja": "（れっしゃの）〜ごうしゃ",
+          "emoji": "🚃"
+        },
+        {
+          "en": "form",
+          "ja": "ようし",
+          "emoji": "📝"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We arrived at Rainbow Falls. But Kiko looks worried. Her small blue bag is gone. She left it on the train! Say it with me. I left my bag on the train. Good. Left is the past of leave. Where can we go? The lost and found (わすれもの センター). People bring lost things there. Let's go to the lost and found. Look, the staff gave us a form. Let's read it. \"Lost and Found. What did you lose? Which train were you on? Which car did you sit in? What does it look like? Please wait here. We'll call the train.\" Which train were you on, Kiko? The 11:20 train to Rainbow Falls. Which car? Car 4. Good. Kiko answered every question. The staff will call the train. Has anyone found it yet? Not yet. Let's wait and hope. Now, phonics. She's. He's. It's. Who's. Usually, she's means she is. But in she's been, it means she has. Who's seen my bag? Who has seen my bag? Let's cross our fingers for Kiko!",
+      "conversation": {
+        "scene": "Kiko leaves her bag on the train",
+        "sceneJa": "キコが れっしゃに かばんを わすれる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Oh no! Where's my bag? I left my bag on the train!",
+            "ja": "たいへん！かばんは どこ？れっしゃに わすれちゃった！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Don't panic, Kiko. Let's go to the lost and found.",
+            "ja": "あわてないで、キコ。わすれもの センターへ いこう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "The staff will call the train. Which train were you on, Kiko?",
+            "ja": "かかりの ひとが れっしゃに れんらくして くれるわ。キコ、どの れっしゃに のって いたの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The 11:20 train to Rainbow Falls. I sat in car 4.",
+            "ja": "11じ20ぷんの レインボー・フォールズいき。4ごうしゃに すわってた。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Has anyone found it yet?",
+            "ja": "もう だれか みつけて くれた？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Not yet. But the staff are checking car 4 now.",
+            "ja": "まだよ。でも いま かかりの ひとが 4ごうしゃを しらべて いるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の わすれもの センターの かかりの ひとに はなそう。I left my ～ on the train. と いって、Which train were you on? / Which car? に こたえよう",
+          "starterEn": "Hello, this is the lost and found. Did you lose something?",
+          "targetExpressions": [
+            "I left my bag on the train.",
+            "Let's go to the lost and found.",
+            "Which train were you on? ― The 11:20 train to Rainbow Falls."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I left my bag on the train.",
+          "Let's go to the lost and found. / Which train were you on? ― The 11:20 train to Rainbow Falls.",
+          "she's・he's・it's・who's"
+        ]
+      }
+    },
+    {
+      "lessonNo": 704,
+      "world": 24,
+      "title": "What Does It Look Like?",
+      "titleJa": "どんな かばん？",
+      "school": {
+        "grade": "中3",
+        "topic": "It's a small blue bag with a star on it.：わすれものの とくちょうを せつめいする",
+        "grammar": "What does it look like? ― It's a small blue bag with a star on it. / What's inside?",
+        "expressions": [
+          {
+            "en": "It's a small blue bag with a star on it.",
+            "ja": "ほしの マークが ついた ちいさな あおい かばんです。",
+            "core": true
+          },
+          {
+            "en": "What's inside? ― My notebook and a camera.",
+            "ja": "なかに なにが はいって いるの？ ― ノートと カメラ。"
+          },
+          {
+            "en": "Is this your bag? ― Yes, it is! Thank you!",
+            "ja": "これは あなたの かばん？ ― はい、そうです！ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "It's a small blue bag with a star on it. で ものの とくちょうを せつめいできる",
+          "短縮形 I've / haven't / she's（has）（we've・hasn't・she's・it's）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a star in the air.",
+          "ja": "くうちゅうに ほしを かいて。",
+          "action": "ゆびで ほしを かく",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Make a small circle with your hands.",
+          "ja": "てで ちいさな まるを つくって。",
+          "action": "りょうてで ちいさな わ",
+          "emoji": "👌"
+        },
+        {
+          "en": "Open the bag and look inside.",
+          "ja": "かばんを あけて なかを みて。",
+          "action": "あけて のぞく まね",
+          "emoji": "👜"
+        },
+        {
+          "en": "Hug your bag. Thank you!",
+          "ja": "かばんを だきしめて。ありがとう！",
+          "action": "ぎゅっと だきしめる",
+          "emoji": "🤗"
+        }
+      ],
+      "phonics": {
+        "rule": "perfect-contraction",
+        "focus": [
+          "'ve",
+          "n't",
+          "'s"
+        ],
+        "sounds": [
+          "/v/",
+          "/nt/",
+          "/z/ /s/"
+        ],
+        "words": [
+          "we've",
+          "hasn't",
+          "she's",
+          "it's"
+        ],
+        "tipJa": "短縮形の まとめ: we have → we've、has not → hasn't、she has → she's、it has → it's。' は きえた もじの ばしょに おく。it's（it has / it is）と its（その）は ちがう ことばだよ。"
+      },
+      "vocab": [
+        {
+          "en": "look like",
+          "ja": "〜の ように みえる・〜な みためだ",
+          "emoji": "👀",
+          "core": true
+        },
+        {
+          "en": "star",
+          "ja": "ほし",
+          "emoji": "⭐"
+        },
+        {
+          "en": "inside",
+          "ja": "なかに",
+          "emoji": "📦"
+        },
+        {
+          "en": "umbrella",
+          "ja": "かさ",
+          "emoji": "☂️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Good news! The staff found two blue bags on the train. But which one is Kiko's? The staff asked, What does it look like? This question means, Tell me about its size, color and shape. Kiko said, It's a small blue bag with a star on it. Say it with me. It's a small blue bag with a star on it. Great! The order is size, then color, then the thing. With a star on it tells us one special thing. Let's read the list of lost items. \"Today's Lost Items. 1. A big blue bag with a red flower on it. Found in car 2. 2. A small blue bag with a star on it. Found in car 4. 3. A black umbrella. Found on platform 3. 4. A green hat with a feather. Found in the dining car.\" Which one is Kiko's? Number 2! The staff asked one more question to check. What's inside? My notebook and a camera. Now, phonics. We've. Hasn't. She's. It's. We have, has not, she has, it has. Let's describe our things!",
+      "conversation": {
+        "scene": "Kiko describes her bag and gets it back",
+        "sceneJa": "キコが かばんの とくちょうを いって、かばんが もどる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "The staff found two blue bags. What does your bag look like, Kiko?",
+            "ja": "かかりの ひとが あおい かばんを 2つ みつけたわ。キコ、あなたの かばんは どんな かばん？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's a small blue bag with a star on it.",
+            "ja": "ほしの マークが ついた ちいさな あおい かばんです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look at the list. A small blue bag with a star on it. Found in car 4!",
+            "ja": "リストを みて。ほしの ついた ちいさな あおい かばん。4ごうしゃで みつかったって！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What's inside your bag?",
+            "ja": "かばんの なかには なにが はいって いるの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My notebook and a camera. Oh! And my photo of the Rainbow Train.",
+            "ja": "ノートと カメラ。あっ！それと にじいろの れっしゃの しゃしん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here it is. Is this your bag?",
+            "ja": "はい、これよ。これは あなたの かばん？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, it is! Thank you so much!",
+            "ja": "はい、そうです！ほんとうに ありがとう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に なくした ものの とくちょうを つたえよう。AI が What does it look like? / What's inside? と きくから、おおきさ・いろ・とくちょうの じゅんで こたえよう",
+          "starterEn": "We found some lost bags today. What does your bag look like?",
+          "targetExpressions": [
+            "It's a small blue bag with a star on it.",
+            "What's inside? ― My notebook and a camera.",
+            "Is this your bag? ― Yes, it is! Thank you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's a small blue bag with a star on it.",
+          "What's inside? ― My notebook and a camera. / Is this your bag? ― Yes, it is! Thank you!",
+          "we've・hasn't・she's・it's"
+        ]
+      }
+    },
+    {
+      "lessonNo": 705,
+      "world": 24,
+      "title": "Help at the Station",
+      "titleJa": "こまって いる ひとを たすけよう",
+      "school": {
+        "grade": "中3",
+        "topic": "Don't worry. I'll help you.：えきで こまって いる ひとを たすける ロールプレイ（まとめ）",
+        "grammar": "Are you OK? You look worried. / Don't worry. I'll help you. / Let's ask the station staff together.",
+        "expressions": [
+          {
+            "en": "Don't worry. I'll help you.",
+            "ja": "しんぱい しないで。てつだうよ。",
+            "core": true
+          },
+          {
+            "en": "Are you OK? You look worried.",
+            "ja": "だいじょうぶ？こまって いる みたいだね。"
+          },
+          {
+            "en": "Let's ask the station staff together.",
+            "ja": "いっしょに えきいんさんに きこう。"
+          }
+        ],
+        "testPoints": [
+          "Don't worry. I'll help you. で こまって いる ひとに こえを かけられる",
+          "ワールド24 の ふりかえり（I've・haven't・who's・it's・taken）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look worried.",
+          "ja": "こまった かおを して。",
+          "action": "まゆを さげて こまった かお",
+          "emoji": "😟"
+        },
+        {
+          "en": "Pat your friend's shoulder gently.",
+          "ja": "ともだちの かたを やさしく たたいて。",
+          "action": "やさしく かたを ぽんぽん",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Point to the station staff.",
+          "ja": "えきいんさんを ゆびさして。",
+          "action": "とおくを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Give a big smile.",
+          "ja": "にっこり わらって。",
+          "action": "おおきな えがお",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "'ve",
+          "n't",
+          "'s",
+          "-en"
+        ],
+        "sounds": [
+          "/v/",
+          "/nt/",
+          "/z/ /s/",
+          "/ən/"
+        ],
+        "words": [
+          "I've",
+          "haven't",
+          "who's",
+          "it's",
+          "taken"
+        ],
+        "tipJa": "短縮形の まとめ: I have → I've、have not → haven't、who has → who's、it has → it's。それに take → took → taken。I've taken ～ / Who's taken ～? の ように つかうよ。"
+      },
+      "vocab": [
+        {
+          "en": "worried",
+          "ja": "しんぱいな・こまった",
+          "emoji": "😟",
+          "core": true
+        },
+        {
+          "en": "together",
+          "ja": "いっしょに",
+          "emoji": "👫"
+        },
+        {
+          "en": "traveler",
+          "ja": "りょこうしゃ",
+          "emoji": "🧳"
+        },
+        {
+          "en": "kind",
+          "ja": "やさしい・しんせつな",
+          "emoji": "💗"
+        }
+      ],
+      "teacherScript": "Hello, everyone! On this trip, people helped us many times. Today, it's our turn to help other people. Let's read the Station Helper Card. \"Station Helper Card. If someone looks worried: 1. Say, Are you OK? 2. Listen carefully. 3. Say, Don't worry. I'll help you. 4. Find the station staff or your adult. Never go anywhere alone with a stranger.\" First, we ask, Are you OK? You look worried. Then, we listen. Then, we say, Don't worry. I'll help you. Say it with me. Don't worry. I'll help you. Wonderful! You are kind helpers. But remember, children help by finding an adult. Let's ask the station staff together. Today, Birimo will be a traveler with a problem. Can you help him? Use the words from this block. I'm lost. I missed the train. I left my bag on the train. It's a small blue bag. Now, phonics review. I've. Haven't. Who's. It's. Taken. Who's taken my ticket? Who has taken my ticket? Let's be station helpers!",
+      "conversation": {
+        "scene": "The friends practice helping a worried traveler",
+        "sceneJa": "こまって いる りょこうしゃを たすける れんしゅう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's practice helping people. Birimo, you're a traveler.",
+            "ja": "ひとを たすける れんしゅうを しましょう。ビリモは りょこうしゃよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh no... oh no... My train... my ticket...",
+            "ja": "どうしよう…どうしよう…れっしゃが…きっぷが…"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Are you OK? You look worried.",
+            "ja": "だいじょうぶですか？こまって いる みたいですね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I've lost my ticket, and my train leaves soon!",
+            "ja": "きっぷを なくして しまって、れっしゃが もうすぐ でるんです！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Don't worry. I'll help you. Let's ask the station staff together.",
+            "ja": "しんぱい しないで。てつだいます。いっしょに えきいんさんに きこう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wait! Look! Your ticket is in your hat!",
+            "ja": "まって！みて！きっぷ、ぼうしの なかに あるよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh! Thank you! You're great station helpers!",
+            "ja": "あっ！ありがとう！みんな すてきな えきの おてつだいさんだね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が こまって いる りょこうしゃに なるよ。Are you OK? と こえを かけて、なにに こまって いるか きいて、Don't worry. I'll help you. Let's ask the station staff together. と いおう",
+          "starterEn": "Oh dear, oh dear... I can't find my train. What should I do?",
+          "targetExpressions": [
+            "Don't worry. I'll help you.",
+            "Are you OK? You look worried.",
+            "Let's ask the station staff together."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Don't worry. I'll help you.",
+          "Are you OK? You look worried. / Let's ask the station staff together.",
+          "I've・haven't・who's・it's・taken"
+        ]
+      }
+    },
+    {
+      "lessonNo": 706,
+      "world": 24,
+      "title": "What a View!",
+      "titleJa": "なんて いい ながめ！",
+      "school": {
+        "grade": "中3",
+        "topic": "What a view! I can see the mountains.：てんぼうしゃで けしきを みる（What a ～! で かんどうを つたえる）",
+        "grammar": "What a view! / What a beautiful lake! / I can see ～.",
+        "expressions": [
+          {
+            "en": "What a view! I can see the mountains.",
+            "ja": "なんて いい ながめ！やまが みえるよ。",
+            "core": true
+          },
+          {
+            "en": "What a beautiful lake!",
+            "ja": "なんて きれいな みずうみ！"
+          },
+          {
+            "en": "Let's go to the observation car.",
+            "ja": "てんぼうしゃへ いこう。"
+          }
+        ],
+        "testPoints": [
+          "What a view! I can see the mountains. で けしきを みて かんどうを つたえられる",
+          "over- / under- の いみ（overlook・overpass・overflow・overtake）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look up at the glass roof.",
+          "ja": "ガラスの てんじょうを みあげて。",
+          "action": "うえを みあげる",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "Look down at the clouds.",
+          "ja": "したの くもを みて。",
+          "action": "したを のぞきこむ",
+          "emoji": "☁️"
+        },
+        {
+          "en": "Take a picture. Click!",
+          "ja": "しゃしんを とって。カシャ！",
+          "action": "カメラを かまえる まね",
+          "emoji": "📷"
+        },
+        {
+          "en": "Open your arms and say, \"What a view!\"",
+          "ja": "りょうてを ひろげて「What a view!」。",
+          "action": "りょうてを おおきく ひろげる",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "over-under",
+        "focus": [
+          "over-"
+        ],
+        "sounds": [
+          "/ˈoʊvər/"
+        ],
+        "words": [
+          "overlook",
+          "overpass",
+          "overflow",
+          "overtake"
+        ],
+        "tipJa": "over は「うえ・こえて」の いみの パーツ。overlook（うえから みおろす）、overpass（せんろの うえを こえる みち）、overflow（こえて ながれる → あふれる）、overtake（おいこす）。o は「オウ」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "view",
+          "ja": "ながめ・けしき",
+          "emoji": "🏞️",
+          "core": true
+        },
+        {
+          "en": "mountain",
+          "ja": "やま",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "lake",
+          "ja": "みずうみ",
+          "emoji": "🌊"
+        },
+        {
+          "en": "valley",
+          "ja": "たに",
+          "emoji": "🏔️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The train is climbing up, up, up. Let's go to the observation car. It's the best car for looking outside. Wow! When something is really amazing, we say, What a view! Say it with me. What a view! I can see the mountains. Wonderful! You can use What a with other things, too. What a beautiful lake! What a big waterfall! What a long bridge! Here's a page from the train guidebook. Let's read it. \"The Observation Car. This car has glass walls and a glass roof. From here, you can see Mist Mountain, Moon Lake and the Cloud Sea. The best view is at the top of the Cloud Bridge. Don't forget your camera!\" What can you see from the observation car? Mist Mountain, Moon Lake and the Cloud Sea. Where is the best view? At the top of the Cloud Bridge. Now, phonics. Overlook. Overpass. Overflow. Overtake. Over means above or across. The station overlooks the valley. It's up high, and you can see everything below. What a view!",
+      "conversation": {
+        "scene": "The friends enjoy the view from the observation car",
+        "sceneJa": "てんぼうしゃから けしきを たのしむ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "This car has glass walls! It's the observation car.",
+            "ja": "この しゃりょう、かべが ガラスだよ！てんぼうしゃだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What a view! I can see the mountains.",
+            "ja": "なんて いい ながめ！やまが みえるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What a beautiful lake! It looks like a mirror.",
+            "ja": "なんて きれいな みずうみ！かがみ みたい。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And look down. We're above a sea of clouds!",
+            "ja": "それに したを みて。くもの うみの うえに いるよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's Mist Mountain. The station on the top overlooks the whole valley.",
+            "ja": "あれが ミスト・マウンテン。てっぺんの えきからは たに ぜんたいが みおろせるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let's take a picture of this view!",
+            "ja": "この けしきの しゃしんを とろう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いっしょに まどの そとを みて いる つもりで はなそう。What a ～! と かんどうを いって、I can see ～. で みえる ものを 2つ いじょう つたえよう",
+          "starterEn": "Look out the window! What can you see? I think the view is amazing!",
+          "targetExpressions": [
+            "What a view! I can see the mountains.",
+            "What a beautiful lake!",
+            "Let's go to the observation car."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What a view! I can see the mountains.",
+          "What a beautiful lake! / Let's go to the observation car.",
+          "overlook・overpass・overflow・overtake"
+        ]
+      }
+    },
+    {
+      "lessonNo": 707,
+      "world": 24,
+      "title": "Look Out the Window",
+      "titleJa": "まどの そとを みて",
+      "school": {
+        "grade": "中3",
+        "topic": "Look out the window! There's a castle.：まどの そとの けしきを せつめいする（ばしょの ことばで えを せつめいする）",
+        "grammar": "Look out the window! There's ～. / It's on top of ～. / Next to ～, there's ～.",
+        "expressions": [
+          {
+            "en": "Look out the window! There's a castle.",
+            "ja": "まどの そとを みて！おしろが あるよ。",
+            "core": true
+          },
+          {
+            "en": "It's on top of a hill.",
+            "ja": "おかの うえに あるよ。"
+          },
+          {
+            "en": "Next to the castle, there's a big waterfall.",
+            "ja": "おしろの となりに、おおきな たきが あるよ。"
+          }
+        ],
+        "testPoints": [
+          "Look out the window! There's a castle. で みえる ものの ばしょを せつめいできる",
+          "over- / under- の いみ（underwater・underline・undersea・underpass）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look to the left.",
+          "ja": "ひだりを みて。",
+          "action": "ひだりを むく",
+          "emoji": "⬅️"
+        },
+        {
+          "en": "Look to the right.",
+          "ja": "みぎを みて。",
+          "action": "みぎを むく",
+          "emoji": "➡️"
+        },
+        {
+          "en": "Make a tall castle with your arms.",
+          "ja": "うでで たかい おしろを つくって。",
+          "action": "うでを あたまの うえで さんかくに",
+          "emoji": "🏰"
+        },
+        {
+          "en": "Wave at the sheep.",
+          "ja": "ひつじに てを ふって。",
+          "action": "てを ふる",
+          "emoji": "🐑"
+        }
+      ],
+      "phonics": {
+        "rule": "over-under",
+        "focus": [
+          "under-"
+        ],
+        "sounds": [
+          "/ˈʌndər/"
+        ],
+        "words": [
+          "underwater",
+          "underline",
+          "undersea",
+          "underpass"
+        ],
+        "tipJa": "under は「した」の いみの パーツ。underwater（みずの した → すいちゅうの）、underline（したに せん → かせんを ひく）、undersea（うみの した → かいていの）、underpass（したを とおる みち）。u は「ア」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "castle",
+          "ja": "おしろ",
+          "emoji": "🏰",
+          "core": true
+        },
+        {
+          "en": "hill",
+          "ja": "おか",
+          "emoji": "🌄"
+        },
+        {
+          "en": "waterfall",
+          "ja": "たき",
+          "emoji": "💦"
+        },
+        {
+          "en": "on the left",
+          "ja": "ひだりに",
+          "emoji": "⬅️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The train is passing Rainbow Falls Valley. There's so much to see! Today, we'll describe the view, like a picture. First, say what you see. Look out the window! There's a castle. Say it with me. Look out the window! There's a castle. Great! Then, tell us where it is. On the left. On the right. On top of a hill. Next to the castle. Under the waterfall. In front of the castle. Riko bought a postcard of this view. Let's read the back of it. \"A postcard from Rainbow Falls. On the left, there's an old castle on top of a hill. On the right, there's a tall waterfall. Under the waterfall, there's a small rainbow. In front of the castle, sheep are eating grass.\" Where is the castle? On top of a hill. What's under the waterfall? A small rainbow. When you describe a picture, move your eyes from left to right. Now, phonics. Underwater. Underline. Undersea. Underpass. Under means below. Underline the place words in the postcard. Let's describe the view!",
+      "conversation": {
+        "scene": "The friends describe the view out the window",
+        "sceneJa": "まどの そとの けしきを せつめいする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Look out the window! There's a castle.",
+            "ja": "まどの そとを みて！おしろが あるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Where? I can't see it.",
+            "ja": "どこ？みえないよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "On the left. It's on top of a hill.",
+            "ja": "ひだり。おかの うえに あるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Next to the castle, there's a big waterfall!",
+            "ja": "おしろの となりに、おおきな たきが ある！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And under the waterfall, there's a small rainbow.",
+            "ja": "それに たきの したに、ちいさな にじが あるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful describing! You told us where everything is.",
+            "ja": "せつめいが じょうずね！どこに なにが あるか ちゃんと つたわったわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に まどの そとの けしきを せつめいしよう。There's ～. と いって、on the left / next to / under などで ばしょも つたえよう。AI の「ほかには？」にも こたえてね",
+          "starterEn": "I'm sitting on the other side, so I can't see your window. What's out there?",
+          "targetExpressions": [
+            "Look out the window! There's a castle.",
+            "It's on top of a hill.",
+            "Next to the castle, there's a big waterfall."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Look out the window! There's a castle.",
+          "It's on top of a hill. / Next to the castle, there's a big waterfall.",
+          "underwater・underline・undersea・underpass"
+        ]
+      }
+    },
+    {
+      "lessonNo": 708,
+      "world": 24,
+      "title": "Is This Seat Taken?",
+      "titleJa": "この せき、あいて いますか？",
+      "school": {
+        "grade": "中3",
+        "topic": "Excuse me. Is this seat taken?：こんだ しゃないで せきを たずねる（しゃないの マナー）",
+        "grammar": "Excuse me. Is this seat taken? ― No, it isn't. Please sit down. / Can I put my bag up there?",
+        "expressions": [
+          {
+            "en": "Excuse me. Is this seat taken?",
+            "ja": "すみません。この せき、だれか すわって いますか？",
+            "core": true
+          },
+          {
+            "en": "No, it isn't. Please sit down.",
+            "ja": "いいえ、あいて いますよ。どうぞ すわって ください。"
+          },
+          {
+            "en": "Can I put my bag up there? ― Sure. Here, let me help.",
+            "ja": "かばんを うえに のせても いい？ ― もちろん。ほら、てつだうよ。"
+          }
+        ],
+        "testPoints": [
+          "Excuse me. Is this seat taken? で せきが あいて いるか ていねいに たずねられる",
+          "over- / under- の いみ（overhead・overcoat・undershirt・underground）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put your bag on the overhead rack.",
+          "ja": "かばんを あたまの うえの たなに のせて。",
+          "action": "りょうてで うえに のせる まね",
+          "emoji": "🧳"
+        },
+        {
+          "en": "Sit down quietly.",
+          "ja": "しずかに すわって。",
+          "action": "そっと すわる",
+          "emoji": "💺"
+        },
+        {
+          "en": "Stand up and offer your seat.",
+          "ja": "たって せきを ゆずって。",
+          "action": "たって てで「どうぞ」",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Talk quietly. Shh!",
+          "ja": "しずかに はなして。しーっ！",
+          "action": "くちに ゆびを あてる",
+          "emoji": "🤫"
+        }
+      ],
+      "phonics": {
+        "rule": "over-under",
+        "focus": [
+          "over-",
+          "under-"
+        ],
+        "sounds": [
+          "/ˈoʊvər/",
+          "/ˈʌndər/"
+        ],
+        "words": [
+          "overhead",
+          "overcoat",
+          "undershirt",
+          "underground"
+        ],
+        "tipJa": "overhead（あたまの うえの）、overcoat（いちばん うえに きる コート）は over＝うえ。undershirt（したに きる シャツ）、underground（じめんの した → ちかの）は under＝した。パーツの いみが わかれば、はじめて みる ことばも わかるね。"
+      },
+      "vocab": [
+        {
+          "en": "seat",
+          "ja": "せき",
+          "emoji": "💺",
+          "core": true
+        },
+        {
+          "en": "taken",
+          "ja": "（せきが）ふさがって いる",
+          "emoji": "🚫"
+        },
+        {
+          "en": "crowded",
+          "ja": "こんで いる",
+          "emoji": "👥"
+        },
+        {
+          "en": "rack",
+          "ja": "たな",
+          "emoji": "🗄️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! At Mist Mountain, many people got on the train. Now the car is crowded. Where can we sit? There's an empty seat, but maybe it's somebody's seat. So, we ask politely. Excuse me. Is this seat taken? Say it with me. Excuse me. Is this seat taken? Very polite! Taken means somebody is using it. If it's free, you'll hear, No, it isn't. Please sit down. Look, there's a sign about train manners. Let's read it. \"Car 6 Manners. Please put big bags on the overhead rack. Please give your seat to older people and people with small children. Please talk quietly. Please don't put your feet on the seats.\" Where do big bags go? On the overhead rack. Who should we give our seats to? Older people and people with small children. If you need help with your bag, ask, Can I put my bag up there? Now, phonics. Overhead. Overcoat. Undershirt. Underground. Over means above. Under means below. Let's be polite on the train!",
+      "conversation": {
+        "scene": "The friends find seats on a crowded train",
+        "sceneJa": "こんだ しゃないで せきを さがす",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "This car is so crowded. All the seats are full.",
+            "ja": "この しゃりょう、すごく こんでるね。せきが ぜんぶ うまってる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "There's one seat over there. Excuse me. Is this seat taken?",
+            "ja": "あそこに 1つ ある。すみません。この せき、だれか すわって いますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, it isn't! Sorry, that's my bag. Please sit down.",
+            "ja": "いいえ、あいてるよ！ごめん、それ ぼくの かばん。どうぞ すわって。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Birimo, put your bag up there. Can I put my bag up there, too?",
+            "ja": "ビリモ、かばんは うえに のせて。わたしの かばんも うえに のせて いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Sure. Big bags go on the overhead rack. Here, let me help.",
+            "ja": "もちろん。おおきな かばんは あたまの うえの たなに のせるのよ。ほら、てつだうわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh, an older man is standing. Excuse me, please take this seat.",
+            "ja": "あっ、おじいさんが たって いる。すみません、どうぞ この せきに。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と こんだ れっしゃの ロールプレイを しよう。Excuse me. Is this seat taken? と ていねいに きいて、AI の こたえに Thank you. と こたえよう",
+          "starterEn": "Hello! This train is really crowded today, isn't it?",
+          "targetExpressions": [
+            "Excuse me. Is this seat taken?",
+            "No, it isn't. Please sit down.",
+            "Can I put my bag up there? ― Sure. Here, let me help."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Excuse me. Is this seat taken?",
+          "No, it isn't. Please sit down. / Can I put my bag up there? ― Sure. Here, let me help.",
+          "overhead・overcoat・undershirt・underground"
+        ]
+      }
+    },
+    {
+      "lessonNo": 709,
+      "world": 24,
+      "title": "Lunch on the Train",
+      "titleJa": "しょくどうしゃで ランチ",
+      "school": {
+        "grade": "中3",
+        "topic": "I'll have the sandwich set, please.：しょくどうしゃで ちゅうもんする（ビリモが ウェイターの やく）",
+        "grammar": "I'll have ～, please. / Would you like something to drink? ― ～, please.",
+        "expressions": [
+          {
+            "en": "I'll have the sandwich set, please.",
+            "ja": "サンドイッチ セットに します。",
+            "core": true
+          },
+          {
+            "en": "Would you like something to drink? ― Orange juice, please.",
+            "ja": "なにか おのみものは いかがですか？ ― オレンジジュースを ください。"
+          },
+          {
+            "en": "Can I have some water, please?",
+            "ja": "おみずを もらえますか？"
+          }
+        ],
+        "testPoints": [
+          "I'll have the sandwich set, please. で レストランで ちゅうもんできる",
+          "over- / under- の いみ（overeat・oversleep・overnight・underpass）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the menu.",
+          "ja": "メニューを ひらいて。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Point and order.",
+          "ja": "ゆびさして ちゅうもん して。",
+          "action": "メニューを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Drink your juice.",
+          "ja": "ジュースを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "🥤"
+        },
+        {
+          "en": "Rub your tummy. I'm full!",
+          "ja": "おなかを さすって。おなか いっぱい！",
+          "action": "おなかを なでる",
+          "emoji": "😋"
+        }
+      ],
+      "phonics": {
+        "rule": "over-under",
+        "focus": [
+          "over-",
+          "under-"
+        ],
+        "sounds": [
+          "/ˈoʊvər/",
+          "/ˈʌndər/"
+        ],
+        "words": [
+          "overeat",
+          "oversleep",
+          "overnight",
+          "underpass"
+        ],
+        "tipJa": "over は「〜すぎる」の いみにも なる。overeat（たべすぎる）、oversleep（ねすぎる → ねぼうする）。overnight は「よるを こえて → ひとばん じゅう」。underpass は under＝した を とおる みち。"
+      },
+      "vocab": [
+        {
+          "en": "order",
+          "ja": "ちゅうもんする",
+          "emoji": "🍽️",
+          "core": true
+        },
+        {
+          "en": "menu",
+          "ja": "メニュー",
+          "emoji": "📖"
+        },
+        {
+          "en": "drink",
+          "ja": "のみもの",
+          "emoji": "🥤"
+        },
+        {
+          "en": "dining car",
+          "ja": "しょくどうしゃ",
+          "emoji": "🚃"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's lunchtime. Some trains have a dining car. It's like a restaurant on a train. Let's go and order lunch. To order, say, I'll have the sandwich set, please. Say it with me. I'll have the sandwich set, please. Delicious! The waiter will ask, Would you like something to drink? You can say, Orange juice, please. Let's read the menu first. \"Dining Car Menu. Sandwich set: two sandwiches, soup and fruit. 6 coins. Cloud curry: mild and creamy. 7 coins. Mountain noodles: hot noodles with vegetables. 6 coins. Drinks: orange juice, apple juice, milk or tea. 2 coins.\" What's in the sandwich set? Two sandwiches, soup and fruit. How much is the cloud curry? Seven coins. If you want more, ask politely. Can I have some water, please? When the food comes, say, Thank you. It looks delicious! Now, phonics. Overeat. Oversleep. Overnight. Underpass. Over can mean too much. Overeat means eat too much. Don't overeat, Haru! Let's order lunch!",
+      "conversation": {
+        "scene": "The friends order lunch in the dining car",
+        "sceneJa": "しょくどうしゃで ランチを ちゅうもんする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Welcome to the dining car! Are you ready to order?",
+            "ja": "しょくどうしゃへ ようこそ！ごちゅうもんは おきまりですか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'll have the cloud curry and the mountain noodles, please.",
+            "ja": "クラウドカレーと マウンテン ヌードルに します。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'll have the sandwich set, please.",
+            "ja": "サンドイッチ セットに します。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Would you like something to drink?",
+            "ja": "なにか おのみものは いかがですか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Orange juice, please. Oh, and can I have some water, please?",
+            "ja": "オレンジジュースを ください。あっ、それと おみずも もらえますか？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Curry and noodles? Don't overeat, Haru!",
+            "ja": "カレーと ヌードル？たべすぎないでね、ハル！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Let's eat slowly and enjoy the view.",
+            "ja": "あはは！ゆっくり たべて、けしきも たのしみましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の ウェイターに ランチを ちゅうもんしよう。I'll have ～, please. と いって、Would you like something to drink? にも こたえよう",
+          "starterEn": "Good afternoon! Welcome to the dining car. Here's the menu. What would you like?",
+          "targetExpressions": [
+            "I'll have the sandwich set, please.",
+            "Would you like something to drink? ― Orange juice, please.",
+            "Can I have some water, please?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'll have the sandwich set, please.",
+          "Would you like something to drink? ― Orange juice, please. / Can I have some water, please?",
+          "overeat・oversleep・overnight・underpass"
+        ]
+      }
+    },
+    {
+      "lessonNo": 710,
+      "world": 24,
+      "title": "Train Talk",
+      "titleJa": "のりものの なかで おしゃべり",
+      "school": {
+        "grade": "中3",
+        "topic": "Where are you going?：じょうきゃく（ビリモが やくを する）と おしゃべり（まとめ）",
+        "grammar": "Where are you going? ― I'm going to ～. / Have you ever been there? / That sounds fun!",
+        "expressions": [
+          {
+            "en": "Where are you going?",
+            "ja": "どこへ いくんですか？",
+            "core": true
+          },
+          {
+            "en": "I'm going to the sea. ― That sounds fun! Have a nice trip!",
+            "ja": "うみへ いく ところです。 ― たのしそう！よい たびを！"
+          },
+          {
+            "en": "Have you ever caught a big fish?",
+            "ja": "おおきな さかなを つった ことは ありますか？"
+          }
+        ],
+        "testPoints": [
+          "Where are you going? で あった ばかりの ひとと みじかい おしゃべりが できる",
+          "ワールド24 の ふりかえり（overlook・overtake・underwater・overhead・undersea）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Say hello and smile.",
+          "ja": "こんにちはと いって にっこり。",
+          "action": "えがおで あいさつ",
+          "emoji": "😊"
+        },
+        {
+          "en": "Cast a fishing rod.",
+          "ja": "つりざおを ふって。",
+          "action": "つりざおを なげる まね",
+          "emoji": "🎣"
+        },
+        {
+          "en": "Show me a big fish!",
+          "ja": "おおきな さかなを みせて！",
+          "action": "りょうてを おおきく ひろげる",
+          "emoji": "🐟"
+        },
+        {
+          "en": "Wave goodbye.",
+          "ja": "バイバイと てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "over-",
+          "under-"
+        ],
+        "sounds": [
+          "/ˈoʊvər/",
+          "/ˈʌndər/"
+        ],
+        "words": [
+          "overlook",
+          "overtake",
+          "underwater",
+          "overhead",
+          "undersea"
+        ],
+        "tipJa": "over- と under- の まとめ: overlook・overtake・overhead は over＝うえ・こえて、underwater・undersea は under＝した。あたらしい ことばも パーツで いみを よそう できるよ。"
+      },
+      "vocab": [
+        {
+          "en": "talk",
+          "ja": "おしゃべり・はなす",
+          "emoji": "💬",
+          "core": true
+        },
+        {
+          "en": "sea",
+          "ja": "うみ",
+          "emoji": "🌊"
+        },
+        {
+          "en": "fishing",
+          "ja": "つり",
+          "emoji": "🎣"
+        },
+        {
+          "en": "passenger",
+          "ja": "じょうきゃく",
+          "emoji": "🧳"
+        }
+      ],
+      "teacherScript": "Hello, everyone! On a long train ride, you can talk with other passengers. This is called small talk. Let's read some tips. \"Train Talk Tips. 1. Say hello and smile. 2. Ask an easy question: Where are you going? 3. Listen, and ask one more question: Have you ever been there? Why are you going there? 4. Say something nice at the end: That sounds fun! Have a nice trip!\" Let's practice the easy question. Where are you going? I'm going to the sea. Say it with me. Where are you going? I'm going to the sea. Great! The secret of good small talk is the one more question. If someone says, I love fishing, ask, Have you ever caught a big fish? Then, say something nice at the end. That sounds fun! Have a nice trip! And remember, talk with new people only when your family or teacher is with you. Now, phonics review. Overlook. Overtake. Underwater. Overhead. Undersea. Over is above. Under is below. Let's have some train talk!",
+      "conversation": {
+        "scene": "The friends chat with a passenger played by Birimo",
+        "sceneJa": "ビリモが えんじる じょうきゃくと おしゃべり",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Hello! Nice day, isn't it? I'm a passenger with a fishing rod.",
+            "ja": "こんにちは！いい てんきですね。（つりざおを もった じょうきゃくの やく）"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, it is! Where are you going?",
+            "ja": "そうですね！どこへ いくんですか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm going to the sea. I love fishing.",
+            "ja": "うみへ いく ところです。つりが だいすきでね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Have you ever caught a big fish?",
+            "ja": "おおきな さかなを つった ことは ありますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, I have! Last year, I caught a fish as big as me!",
+            "ja": "ありますよ！きょねん、ぼくと おなじ くらい おおきな さかなを つったんです！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow! That sounds fun! Have a nice trip!",
+            "ja": "すごい！たのしそう！よい たびを！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great train talk. You asked one more question, too!",
+            "ja": "すてきな おしゃべりね。もう 1つ しつもんも できたわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の じょうきゃくと おしゃべりしよう。Where are you going? と きいて、こたえに Have you ever ～? か Why ～? で もう 1つ きこう。さいごは That sounds fun! で おわろう。なまえや すんで いる ところは いわなくて OK",
+          "starterEn": "Hello! Is this your first time on the Cloudtop Railway? I'm going to the sea.",
+          "targetExpressions": [
+            "Where are you going?",
+            "I'm going to the sea. ― That sounds fun! Have a nice trip!",
+            "Have you ever caught a big fish?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where are you going?",
+          "I'm going to the sea. ― That sounds fun! Have a nice trip! / Have you ever caught a big fish?",
+          "overlook・overtake・underwater・overhead・undersea"
+        ]
+      }
+    },
+    {
+      "lessonNo": 711,
+      "world": 24,
+      "title": "How Long Does It Take?",
+      "titleJa": "どのくらい かかる？",
+      "school": {
+        "grade": "中3",
+        "topic": "How long does it take?：ろせんずを みて、たびの けいかくを たてる（かかる じかんを たずねる）",
+        "grammar": "How long does it take? ― It takes ～. / It takes about ～ by ～. / We'll arrive at ～ at ～.",
+        "expressions": [
+          {
+            "en": "How long does it take?",
+            "ja": "どのくらい かかる？",
+            "core": true
+          },
+          {
+            "en": "It takes two hours. We'll arrive at Moon Lake at six.",
+            "ja": "2じかん かかるよ。ムーン・レイクには 6じに つくよ。"
+          },
+          {
+            "en": "It takes about thirty minutes by underground.",
+            "ja": "ちかてつで 30ぷん くらい かかるよ。"
+          }
+        ],
+        "testPoints": [
+          "How long does it take? で かかる じかんを たずねて こたえられる",
+          "im- / in- の はんたいの ことば（impolite・imperfect・impatient・impossible）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Trace the line on the map.",
+          "ja": "ちずの せんを なぞって。",
+          "action": "ゆびで せんを なぞる",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Show me two fingers. Two hours!",
+          "ja": "ゆびを 2ほん。2じかん！",
+          "action": "ゆびを 2ほん たてる",
+          "emoji": "✌️"
+        },
+        {
+          "en": "Look at your watch.",
+          "ja": "うでどけいを みて。",
+          "action": "てくびを みる",
+          "emoji": "⌚"
+        },
+        {
+          "en": "Tap your foot. You're impatient!",
+          "ja": "あしを とんとん。まちきれない！",
+          "action": "あしで ゆかを とんとん",
+          "emoji": "🦶"
+        }
+      ],
+      "phonics": {
+        "rule": "im-in",
+        "focus": [
+          "im-"
+        ],
+        "sounds": [
+          "/ɪm/"
+        ],
+        "words": [
+          "impolite",
+          "imperfect",
+          "impatient",
+          "impossible"
+        ],
+        "tipJa": "p で はじまる ことばの はんたいは im-。polite → impolite（しつれいな）、perfect → imperfect、patient → impatient（まちきれない）、possible → impossible（むりな）。p の まえでは くちを とじる m に なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "take",
+          "ja": "（じかんが）かかる",
+          "emoji": "⏱️",
+          "core": true
+        },
+        {
+          "en": "hour",
+          "ja": "1じかん",
+          "emoji": "🕐"
+        },
+        {
+          "en": "minute",
+          "ja": "〜ふん",
+          "emoji": "⏲️"
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We're at Mist Mountain Station. Let's plan the rest of our trip. Here's the route map. When we plan a trip, we ask, How long does it take? Say it with me. How long does it take? It takes two hours. Great! Take here means use time. Let's read the route map. \"Cloudtop Railway Route Map. Rainbow Falls to Mist Mountain: 1 hour. Mist Mountain to Moon Lake: 2 hours. Moon Lake to Crystal City: overnight train, 9 hours. Crystal City to Star Station: 30 minutes by underground.\" How long does it take from Mist Mountain to Moon Lake? It takes two hours. And from Crystal City to Star Station? It takes about thirty minutes by underground. About means not exactly. If we leave at four, we'll arrive at Moon Lake at six. Two hours is a long time, but don't be impatient! Look out the window and enjoy the view. Now, phonics. Impolite. Imperfect. Impatient. Impossible. These words mean the opposite. Possible, impossible. Before p, we use im. Let's make our plan!",
+      "conversation": {
+        "scene": "The friends plan their trip with the route map",
+        "sceneJa": "ろせんずを みて たびの けいかくを たてる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Let's look at the route map. We're at Mist Mountain now.",
+            "ja": "ろせんずを みよう。いまは ミスト・マウンテンに いるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How long does it take to Moon Lake?",
+            "ja": "ムーン・レイクまで どのくらい かかるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It takes two hours.",
+            "ja": "2じかん かかるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Two hours? That's a long time! I'm impatient!",
+            "ja": "2じかん？ながいなあ！まちきれないよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "We'll arrive at Moon Lake at six. Then, we'll take the overnight train.",
+            "ja": "ムーン・レイクには 6じに つくわ。それから よるの れっしゃに のるのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And from Crystal City, it takes about thirty minutes to Star Station.",
+            "ja": "それで クリスタル・シティから スター・ステーションまでは 30ぷん くらい かかるんだね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と たびの けいかくを たてよう。How long does it take? と きいて、It takes ～. で こたえよう。AI が「なんじに つく？」と きいたら We'll arrive at ～. で こたえてね",
+          "starterEn": "Let's plan a trip together! Where do you want to go? How long does it take from your town?",
+          "targetExpressions": [
+            "How long does it take?",
+            "It takes two hours. We'll arrive at Moon Lake at six.",
+            "It takes about thirty minutes by underground."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How long does it take?",
+          "It takes two hours. We'll arrive at Moon Lake at six. / It takes about thirty minutes by underground.",
+          "impolite・imperfect・impatient・impossible"
+        ]
+      }
+    },
+    {
+      "lessonNo": 712,
+      "world": 24,
+      "title": "Overnight Train",
+      "titleJa": "しんだい れっしゃ",
+      "school": {
+        "grade": "中3",
+        "topic": "We're taking the overnight train.：ムーン・レイクから しんだい れっしゃに のる",
+        "grammar": "We're taking the overnight train. / Which bed is mine? ― You're on the top bunk.",
+        "expressions": [
+          {
+            "en": "We're taking the overnight train.",
+            "ja": "よるの あいだ はしる れっしゃに のるんだよ。",
+            "core": true
+          },
+          {
+            "en": "Which bed is mine? ― You're on the top bunk.",
+            "ja": "どの ベッドが わたしの？ ― あなたは 2だんベッドの うえよ。"
+          },
+          {
+            "en": "Good night! See you in the morning.",
+            "ja": "おやすみ！また あした の あさね。"
+          }
+        ],
+        "testPoints": [
+          "We're taking the overnight train. で よていと へやの ようすを いえる",
+          "im- / in- の はんたいの ことば（invisible・incorrect・incomplete・informal）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Climb up to the top bunk.",
+          "ja": "2だんベッドの うえに のぼって。",
+          "action": "はしごを のぼる まね",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "Pull up your blanket.",
+          "ja": "もうふを かけて。",
+          "action": "むねまで ひっぱりあげる",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "Yawn and stretch.",
+          "ja": "あくびを して のびを して。",
+          "action": "おおきく のび",
+          "emoji": "😪"
+        },
+        {
+          "en": "Turn off the light. Click!",
+          "ja": "でんきを けして。カチッ！",
+          "action": "スイッチを おす まね",
+          "emoji": "💡"
+        }
+      ],
+      "phonics": {
+        "rule": "im-in",
+        "focus": [
+          "in-"
+        ],
+        "sounds": [
+          "/ɪn/"
+        ],
+        "words": [
+          "invisible",
+          "incorrect",
+          "incomplete",
+          "informal"
+        ],
+        "tipJa": "p・b・m いがいで はじまる ことばの はんたいは in-。visible → invisible（みえない）、correct → incorrect（まちがった）、complete → incomplete、formal → informal（くだけた）。un- では ない ことばだよ。"
+      },
+      "vocab": [
+        {
+          "en": "overnight",
+          "ja": "ひとばん じゅう・よるの あいだの",
+          "emoji": "🌙",
+          "core": true
+        },
+        {
+          "en": "bed",
+          "ja": "ベッド",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "top",
+          "ja": "うえの・いちばん うえ",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "morning",
+          "ja": "あさ",
+          "emoji": "🌅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We arrived at Moon Lake at six. The lake is shining under the moon. Now, we have a special plan. We're taking the overnight train. Say it with me. We're taking the overnight train. Wonderful! Overnight means all through the night. We'll sleep on the train, and in the morning, we'll be in Crystal City. Let's read the guide in our room. \"Welcome to the Moonlight Express! Your beds are in car 8. Each room has four beds, two on the top and two on the bottom. The lights go off at nine. Breakfast is at seven in the dining car. Sleep well!\" How many beds are in each room? Four. What time is breakfast? At seven. Where's my bed? Which bed is mine? You're on the top bunk. A bunk is a bed on a train or in a cabin. At night, the station lights look tiny, almost invisible. Now, phonics. Invisible. Incorrect. Incomplete. Informal. Visible means you can see it. Invisible means you can't see it. Good night! See you in the morning.",
+      "conversation": {
+        "scene": "The friends get on the overnight train",
+        "sceneJa": "しんだい れっしゃに のる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "We're taking the overnight train! I've never slept on a train.",
+            "ja": "よるの れっしゃに のるんだ！れっしゃで ねた こと、いちども ないよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look, our room has four beds. Which bed is mine?",
+            "ja": "みて、へやに ベッドが 4つ ある。どれが わたしの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You're on the top bunk, Kiko. Riko, you're under Kiko.",
+            "ja": "キコは 2だんベッドの うえよ。リコは キコの した。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Where do I sleep?",
+            "ja": "ぼくは どこで ねるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "The bed next to mine, Birimo. The lights go off at nine.",
+            "ja": "わたしの となりの ベッドよ、ビリモ。9じに でんきが きえるわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look out the window! The moon is shining on the lake. Good night, everyone!",
+            "ja": "まどの そとを みて！つきが みずうみを てらしてる。みんな、おやすみ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と しんだい れっしゃの はなしを しよう。We're taking the overnight train. と いって、AI の「どの ベッド？」「なんじに ねる？」に こたえよう",
+          "starterEn": "Wow, an overnight train! I've never been on one. What's it like inside?",
+          "targetExpressions": [
+            "We're taking the overnight train.",
+            "Which bed is mine? ― You're on the top bunk.",
+            "Good night! See you in the morning."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We're taking the overnight train.",
+          "Which bed is mine? ― You're on the top bunk. / Good night! See you in the morning.",
+          "invisible・incorrect・incomplete・informal"
+        ]
+      }
+    },
+    {
+      "lessonNo": 713,
+      "world": 24,
+      "title": "Underground Station",
+      "titleJa": "ちかてつの のりかえ",
+      "school": {
+        "grade": "中3",
+        "topic": "Take the underground line to the museum.：クリスタル・シティで ちかてつを のりかえて はくぶつかんへ いく",
+        "grammar": "Take the underground line to ～. / Change trains at ～. / Get off at the second stop.",
+        "expressions": [
+          {
+            "en": "Take the underground line to the museum.",
+            "ja": "ちかてつで はくぶつかんへ いってね。",
+            "core": true
+          },
+          {
+            "en": "Change trains at Crystal Square.",
+            "ja": "クリスタル・スクエアで のりかえてね。"
+          },
+          {
+            "en": "Get off at the second stop.",
+            "ja": "2つめの えきで おりてね。"
+          }
+        ],
+        "testPoints": [
+          "Take the underground line to the museum. で のりかえの みちじゅんを せつめいできる",
+          "im- / in- の はんたいの ことば（inexpensive・imperfect・informal・impatient）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Go down the stairs.",
+          "ja": "かいだんを おりて。",
+          "action": "その場で かいだんを おりる まね",
+          "emoji": "⬇️"
+        },
+        {
+          "en": "Tap your card.",
+          "ja": "カードを タッチして。",
+          "action": "てのひらを かざす",
+          "emoji": "💳"
+        },
+        {
+          "en": "Change trains! Walk to the Green Line.",
+          "ja": "のりかえ！グリーン・ラインまで あるいて。",
+          "action": "よこに あるく",
+          "emoji": "🚇"
+        },
+        {
+          "en": "Get off. Step, step!",
+          "ja": "おりて。いち、に！",
+          "action": "まえに 2ほ",
+          "emoji": "🚶"
+        }
+      ],
+      "phonics": {
+        "rule": "im-in",
+        "focus": [
+          "im-",
+          "in-"
+        ],
+        "sounds": [
+          "/ɪm/",
+          "/ɪn/"
+        ],
+        "words": [
+          "inexpensive",
+          "imperfect",
+          "informal",
+          "impatient"
+        ],
+        "tipJa": "im- と in- の みわけかた: perfect・patient は p で はじまるので imperfect・impatient。expensive（たかい）・formal は p・b・m では ないので inexpensive（やすい）・informal。"
+      },
+      "vocab": [
+        {
+          "en": "underground",
+          "ja": "ちかの・ちかてつ",
+          "emoji": "🚇",
+          "core": true
+        },
+        {
+          "en": "change",
+          "ja": "のりかえる",
+          "emoji": "🔄"
+        },
+        {
+          "en": "stop",
+          "ja": "えき・ていりゅうじょ",
+          "emoji": "🚏"
+        },
+        {
+          "en": "exit",
+          "ja": "でぐち",
+          "emoji": "🚪"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! We slept well on the Moonlight Express, and now we're in Crystal City. Today, we'll visit the Crystal Museum. How do we get there? Take the underground line to the museum. Say it with me. Take the underground line to the museum. Great! The underground line runs under the city. Some people call it the subway. It's fast and inexpensive. Let's read the directions. \"How to get to the Crystal Museum: Take the Blue Line from Crystal City Station. Change trains at Crystal Square. Take the Green Line and get off at the second stop, Museum Park. Use Exit 4. The museum is in front of the exit.\" Where do we change trains? At Crystal Square. Which stop do we get off at? The second stop, Museum Park. Which exit? Exit 4. When you give directions, use these words. Take. Change trains at. Get off at. Use Exit 4. And stay together on the stairs. Now, phonics. Inexpensive. Imperfect. Informal. Impatient. Before p, use im. Before other letters, use in. Let's take the underground!",
+      "conversation": {
+        "scene": "The friends take the underground to the museum",
+        "sceneJa": "ちかてつを のりかえて はくぶつかんへ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Good morning! We're in Crystal City. How do we get to the museum?",
+            "ja": "おはよう！クリスタル・シティに ついたね。はくぶつかんへは どう いくの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Take the underground line to the museum. Here's the map.",
+            "ja": "ちかてつで いくんだよ。はい、ちず。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "First, take the Blue Line. Then, change trains at Crystal Square.",
+            "ja": "まず ブルー・ラインに のる。それから クリスタル・スクエアで のりかえ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And then? I'm lost already!",
+            "ja": "それから？もう わからなく なっちゃった！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Take the Green Line and get off at the second stop, Museum Park!",
+            "ja": "グリーン・ラインに のって、2つめの ミュージアム・パークで おりるの！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Perfect. Then, use Exit 4. Stay together on the stairs, everyone.",
+            "ja": "かんぺき。それから 4ばんでぐちよ。みんな、かいだんでは はなれないでね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に のりかえの みちじゅんを おしえよう。AI が「はくぶつかんへ いきたい」と いうから、Take ～. / Change trains at ～. / Get off at ～. の じゅんで せつめいしよう",
+          "starterEn": "Excuse me. I want to go to the Crystal Museum. How do I get there by underground?",
+          "targetExpressions": [
+            "Take the underground line to the museum.",
+            "Change trains at Crystal Square.",
+            "Get off at the second stop."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Take the underground line to the museum.",
+          "Change trains at Crystal Square. / Get off at the second stop.",
+          "inexpensive・imperfect・informal・impatient"
+        ]
+      }
+    },
+    {
+      "lessonNo": 714,
+      "world": 24,
+      "title": "It's Impossible!",
+      "titleJa": "ぜんぶは むり！",
+      "school": {
+        "grade": "中3",
+        "topic": "It's impossible to see everything in one day.：かんこうの けいかくで、いきさきを しぼる",
+        "grammar": "It's impossible to ～. / Let's choose ～. / I want to ～ the most.",
+        "expressions": [
+          {
+            "en": "It's impossible to see everything in one day.",
+            "ja": "1にちで ぜんぶ みるのは むりだよ。",
+            "core": true
+          },
+          {
+            "en": "Let's choose three places.",
+            "ja": "3かしょ えらぼう。"
+          },
+          {
+            "en": "I want to go to the museum the most.",
+            "ja": "わたしは はくぶつかんに いちばん いきたい。"
+          }
+        ],
+        "testPoints": [
+          "It's impossible to see everything in one day. で いきさきを えらんで りゆうを いえる",
+          "im- / in- の はんたいの ことば（impossible・incomplete・incorrect・invisible）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Count on your fingers. One, two, three.",
+          "ja": "ゆびで かぞえて。1、2、3。",
+          "action": "ゆびを おりながら かぞえる",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Shake your head. Impossible!",
+          "ja": "くびを ふって。むり！",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Choose one. Point!",
+          "ja": "1つ えらんで。ゆびさして！",
+          "action": "ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Shiver in the Ice Palace.",
+          "ja": "こおりの きゅうでんで ぶるぶる。",
+          "action": "からだを ふるわせる",
+          "emoji": "❄️"
+        }
+      ],
+      "phonics": {
+        "rule": "im-in",
+        "focus": [
+          "im-",
+          "in-"
+        ],
+        "sounds": [
+          "/ɪm/",
+          "/ɪn/"
+        ],
+        "words": [
+          "impossible",
+          "incomplete",
+          "incorrect",
+          "invisible"
+        ],
+        "tipJa": "possible（できる）→ impossible（できない・むりな）は p の まえだから im。complete・correct・visible の はんたいは in で incomplete・incorrect・invisible。"
+      },
+      "vocab": [
+        {
+          "en": "impossible",
+          "ja": "むりな・ありえない",
+          "emoji": "❌",
+          "core": true
+        },
+        {
+          "en": "everything",
+          "ja": "ぜんぶ",
+          "emoji": "🌐"
+        },
+        {
+          "en": "choose",
+          "ja": "えらぶ",
+          "emoji": "👆"
+        },
+        {
+          "en": "place",
+          "ja": "ばしょ",
+          "emoji": "📍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Crystal City is full of interesting places. Haru wants to go everywhere! But our train to Star Station leaves at four. We have only one day. So Riko said, It's impossible to see everything in one day. Say it with me. It's impossible to see everything in one day. Good! Impossible means it can't happen. So, let's choose three places. Here's the city guide. Let's read it. \"Crystal City Guide. 1. Crystal Museum: big crystals from around the world. 2. Glass Tower: see the whole city from the top. 3. Rainbow Garden: flowers in seven colors. 4. Ice Palace: a castle made of ice. 5. Starlight Market: snacks and souvenirs.\" Which place is made of ice? The Ice Palace. Where can you see the whole city? From the Glass Tower. Now, choose your favorite. I want to go to the museum the most. Then, say why. I love crystals. Now, phonics. Impossible. Incomplete. Incorrect. Invisible. Possible becomes impossible. Correct becomes incorrect. Let's choose our places!",
+      "conversation": {
+        "scene": "The friends choose three places to visit",
+        "sceneJa": "かんこうする ばしょを 3つ えらぶ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I want to go to the museum, the tower, the garden, the palace and the market!",
+            "ja": "はくぶつかんも タワーも ガーデンも きゅうでんも マーケットも いきたい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's impossible to see everything in one day.",
+            "ja": "1にちで ぜんぶ みるのは むりだよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Our train to Star Station leaves at four. Let's choose three places.",
+            "ja": "スター・ステーションいきの れっしゃは 4じに でるわ。3かしょ えらびましょう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want to go to the museum the most. I love crystals.",
+            "ja": "わたしは はくぶつかんに いちばん いきたい。すいしょうが だいすきなの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I want to see the Ice Palace. It's made of ice!",
+            "ja": "ぼくは こおりの きゅうでんが みたい。こおりで できて いるんだよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "OK. The museum, the Ice Palace and... the market for lunch!",
+            "ja": "わかった。はくぶつかんと こおりの きゅうでんと…おひるは マーケット！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と かんこうの けいかくを たてよう。AI が いきたい ばしょを 5つ いうから、It's impossible to ～. と いって、Let's choose ～. / I want to ～ the most. で えらんで りゆうも いおう",
+          "starterEn": "I have one free day in Crystal City. I want to see everything! What do you think?",
+          "targetExpressions": [
+            "It's impossible to see everything in one day.",
+            "Let's choose three places.",
+            "I want to go to the museum the most."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's impossible to see everything in one day.",
+          "Let's choose three places. / I want to go to the museum the most.",
+          "impossible・incomplete・incorrect・invisible"
+        ]
+      }
+    },
+    {
+      "lessonNo": 715,
+      "world": 24,
+      "title": "Travel Plan Presentation",
+      "titleJa": "たびの けいかくを はっぴょう",
+      "school": {
+        "grade": "中3",
+        "topic": "First, we'll take the train. It takes twenty minutes.：チームで たびの けいかくを はっぴょうする（まとめ）",
+        "grammar": "First, we'll ～. It takes ～. / Then, we'll ～. / Finally, we'll ～.",
+        "expressions": [
+          {
+            "en": "First, we'll take the train. It takes twenty minutes.",
+            "ja": "まず れっしゃに のります。20ぷん かかります。",
+            "core": true
+          },
+          {
+            "en": "Then, we'll visit the Ice Palace.",
+            "ja": "つぎに こおりの きゅうでんに いきます。"
+          },
+          {
+            "en": "Finally, we'll have lunch at the market.",
+            "ja": "さいごに マーケットで おひるを たべます。"
+          }
+        ],
+        "testPoints": [
+          "First, we'll take the train. It takes twenty minutes. で じゅんじょよく けいかくを はっぴょうできる",
+          "ワールド24 の ふりかえり（impossible・informal・overnight・underground・inexpensive）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your plan.",
+          "ja": "けいかくを かかげて。",
+          "action": "かみを りょうてで かかげる",
+          "emoji": "📋"
+        },
+        {
+          "en": "Point to the map.",
+          "ja": "ちずを ゆびさして。",
+          "action": "ゆびさす",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Count: first, then, finally.",
+          "ja": "かぞえて。まず、つぎに、さいごに。",
+          "action": "ゆびを 1ぽんずつ たてる",
+          "emoji": "☝️"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "ふかく おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "im-",
+          "in-",
+          "over-",
+          "under-"
+        ],
+        "sounds": [
+          "/ɪm/",
+          "/ɪn/",
+          "/ˈoʊvər/",
+          "/ˈʌndər/"
+        ],
+        "words": [
+          "impossible",
+          "informal",
+          "overnight",
+          "underground",
+          "inexpensive"
+        ],
+        "tipJa": "はじめに つく パーツの まとめ: impossible（p の まえは im）、informal・inexpensive（in）、overnight（over＝こえて）、underground（under＝した）。パーツの いみが わかると、ながい ことばも こわくない！"
+      },
+      "vocab": [
+        {
+          "en": "plan",
+          "ja": "けいかく",
+          "emoji": "📋",
+          "core": true
+        },
+        {
+          "en": "first",
+          "ja": "まず・さいしょに",
+          "emoji": "☝️"
+        },
+        {
+          "en": "then",
+          "ja": "つぎに・それから",
+          "emoji": "➡️"
+        },
+        {
+          "en": "finally",
+          "ja": "さいごに",
+          "emoji": "🏁"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, each team will present a travel plan for our day in Crystal City. A good plan is easy to follow. Use order words. First, then, after that, finally. And tell us the time. It takes twenty minutes. Say it with me. First, we'll take the train. It takes twenty minutes. Excellent! Let's read Kiko's plan. \"Our Day Plan. First, we'll take the Blue Line to the Crystal Museum. It takes twenty minutes. Then, we'll walk to the Ice Palace. After that, we'll have lunch at Starlight Market. It's inexpensive and delicious. Finally, we'll take the underground back to the station at three thirty.\" What will they do first? Take the Blue Line. Where will they have lunch? At Starlight Market. What time will they go back? At three thirty. When you listen, ask a question at the end. How long does it take from the market to the station? Now, phonics review. Impossible. Informal. Overnight. Underground. Inexpensive. Let's present our plans!",
+      "conversation": {
+        "scene": "Each team presents their travel plan",
+        "sceneJa": "チームごとに たびの けいかくを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Each team, please present your travel plan.",
+            "ja": "チームごとに たびの けいかくを はっぴょうしてね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "First, we'll take the train. It takes twenty minutes.",
+            "ja": "まず れっしゃに のります。20ぷん かかります。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Then, we'll visit the Ice Palace. Bring a warm jacket!",
+            "ja": "つぎに こおりの きゅうでんに いきます。あたたかい うわぎを もって きてね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Finally, we'll have lunch at the market.",
+            "ja": "さいごに マーケットで おひるを たべます。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Question! How long does it take from the market to the station?",
+            "ja": "しつもん！マーケットから えきまで どのくらい かかりますか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It takes thirty minutes by underground. We won't miss our train!",
+            "ja": "ちかてつで 30ぷん かかります。れっしゃには のりおくれません！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に たびの けいかくを はっぴょうしよう。First, ～. Then, ～. Finally, ～. の じゅんで はなして、It takes ～. で じかんも いおう。AI の しつもんにも こたえてね",
+          "starterEn": "I'm ready to listen to your travel plan! Where will you go first?",
+          "targetExpressions": [
+            "First, we'll take the train. It takes twenty minutes.",
+            "Then, we'll visit the Ice Palace.",
+            "Finally, we'll have lunch at the market."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, we'll take the train. It takes twenty minutes.",
+          "Then, we'll visit the Ice Palace. / Finally, we'll have lunch at the market.",
+          "impossible・informal・overnight・underground・inexpensive"
+        ]
+      }
+    },
+    {
+      "lessonNo": 716,
+      "world": 24,
+      "title": "My Travel Blog",
+      "titleJa": "たびの ブログ",
+      "school": {
+        "grade": "中3",
+        "topic": "Day 1: I've arrived at Star Station!：スター・ステーションに ついて、たびの ブログを かく（ネットに のせない ことも まなぶ）",
+        "grammar": "Day 1: I've arrived at ～! / Today, I visited ～. / I've never seen ～!",
+        "expressions": [
+          {
+            "en": "Day 1: I've arrived at Star Station!",
+            "ja": "1にちめ：スター・ステーションに ついたよ！",
+            "core": true
+          },
+          {
+            "en": "Today, I visited the Crystal Museum.",
+            "ja": "きょうは クリスタル ミュージアムに いったよ。"
+          },
+          {
+            "en": "Don't put your face or your school's name online.",
+            "ja": "かおや がっこうの なまえは ネットに のせないでね。"
+          }
+        ],
+        "testPoints": [
+          "Day 1: I've arrived at Star Station! で たびの できごとを ブログの かたちで かける",
+          "ワールド24 の ふりかえり（Hokkaido・eaten・I've・overnight・impossible）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Type on the keyboard.",
+          "ja": "キーボードを うって。",
+          "action": "ゆびで うつ まね",
+          "emoji": "💻"
+        },
+        {
+          "en": "Take a photo of the stars.",
+          "ja": "ほしの しゃしんを とって。",
+          "action": "うえに むけて カメラを かまえる",
+          "emoji": "📷"
+        },
+        {
+          "en": "Ask your family. Thumbs up?",
+          "ja": "おうちの ひとに きいて。OK？",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        },
+        {
+          "en": "Click \"post.\"",
+          "ja": "「とうこう」を クリック。",
+          "action": "ゆびで クリック",
+          "emoji": "🖱️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "hok-kai-do",
+          "-en",
+          "'ve",
+          "over-",
+          "im-"
+        ],
+        "sounds": [
+          "KAI",
+          "/ən/",
+          "/v/",
+          "/ˈoʊvər/",
+          "/ɪm/"
+        ],
+        "words": [
+          "Hokkaido",
+          "eaten",
+          "I've",
+          "overnight",
+          "impossible"
+        ],
+        "tipJa": "ワールド24 の ふりかえり①: hok・KAI・do（まんなかを つよく）、eat → ate → eaten、I have → I've、overnight（over＝こえて）、impossible（p の まえは im）。I've eaten ～ / I've been to Hokkaido. の ように つなげて つかおう。"
+      },
+      "vocab": [
+        {
+          "en": "blog",
+          "ja": "ブログ",
+          "emoji": "💻",
+          "core": true
+        },
+        {
+          "en": "arrive",
+          "ja": "つく・とうちゃくする",
+          "emoji": "🚉"
+        },
+        {
+          "en": "post",
+          "ja": "（ネットに）のせる",
+          "emoji": "📤"
+        },
+        {
+          "en": "online",
+          "ja": "ネットで",
+          "emoji": "🌐"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We made it! We've arrived at Star Station, the last stop on the Cloudtop Railway. The station roof is made of glass. Riko wants to write a travel blog about our trip. A blog is like a diary on the internet. Let's read her first post. \"Day 1: I've arrived at Star Station! The station roof is made of glass, so I can see the stars at night. Today, I visited the Crystal Museum and the Ice Palace. I've never seen so many crystals! Tomorrow, we'll explore the town. See you!\" How does Riko start? Day 1: I've arrived at Star Station! Say it with me. Day 1: I've arrived at Star Station! Great! For what you did today, use the past. Today, I visited the Crystal Museum. For an amazing first time, say, I've never seen so many crystals! But stop and think before you post. Don't put your face or your school's name online. And always ask your family first. Now, phonics review. Hokkaido. Eaten. I've. Overnight. Impossible. Let's write our blogs!",
+      "conversation": {
+        "scene": "Riko writes a travel blog at Star Station",
+        "sceneJa": "スター・ステーションで リコが たびの ブログを かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm writing a travel blog. Day 1: I've arrived at Star Station!",
+            "ja": "たびの ブログを かいて いるの。1にちめ：スター・ステーションに ついたよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Nice! Add a photo of the glass roof.",
+            "ja": "いいね！ガラスの やねの しゃしんも のせよう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Can we add a photo of us in front of the station?",
+            "ja": "えきの まえで とった ぼくたちの しゃしんも のせて いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good question. Don't put your face or your school's name online. Ask your family first.",
+            "ja": "いい しつもんね。かおや がっこうの なまえは ネットに のせないの。まず おうちの ひとに きいてね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "OK! I'll post a photo of the stars. No faces!",
+            "ja": "わかった！ほしの しゃしんを のせよう。かおは なし！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Today, I visited the Crystal Museum. I've never seen so many crystals!",
+            "ja": "きょうは クリスタル ミュージアムに いったよ。あんなに たくさんの すいしょう、みた こと ない！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に たびの ブログの ないようを はなそう。Day 1: I've arrived at ～! / Today, I visited ～. / I've never seen ～! を つかおう。なまえや がっこう、すんで いる ところは いわないでね",
+          "starterEn": "I love reading travel blogs! What will you write about today?",
+          "targetExpressions": [
+            "Day 1: I've arrived at Star Station!",
+            "Today, I visited the Crystal Museum.",
+            "Don't put your face or your school's name online."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Day 1: I've arrived at Star Station!",
+          "Today, I visited the Crystal Museum. / Don't put your face or your school's name online.",
+          "Hokkaido・eaten・I've・overnight・impossible"
+        ]
+      }
+    },
+    {
+      "lessonNo": 717,
+      "world": 24,
+      "title": "Souvenir Shopping",
+      "titleJa": "おみやげを かおう",
+      "school": {
+        "grade": "中3",
+        "topic": "I'll buy this for my sister.：スター・ステーションの おみやげやさんで",
+        "grammar": "I'll buy this for ～. / How about ～? / Could you wrap it, please?",
+        "expressions": [
+          {
+            "en": "I'll buy this for my sister.",
+            "ja": "これを いもうとに かうよ。",
+            "core": true
+          },
+          {
+            "en": "How about this star keychain?",
+            "ja": "この ほしの キーホルダーは どう？"
+          },
+          {
+            "en": "Could you wrap it, please?",
+            "ja": "つつんで もらえますか？"
+          }
+        ],
+        "testPoints": [
+          "I'll buy this for my sister. で だれに なにを かうか いえる",
+          "ワールド24 の ふりかえり（Italy・seen・haven't・underground・invisible）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up a keychain.",
+          "ja": "キーホルダーを てに とって。",
+          "action": "てに とる まね",
+          "emoji": "🔑"
+        },
+        {
+          "en": "Shake the snow globe.",
+          "ja": "スノードームを ふって。",
+          "action": "りょうてで ふる",
+          "emoji": "❄️"
+        },
+        {
+          "en": "Wrap the present.",
+          "ja": "プレゼントを つつんで。",
+          "action": "つつむ まね",
+          "emoji": "🎁"
+        },
+        {
+          "en": "Give it to your family.",
+          "ja": "おうちの ひとに わたして。",
+          "action": "りょうてで わたす",
+          "emoji": "💝"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "it-a-ly",
+          "-een",
+          "n't",
+          "under-",
+          "in-"
+        ],
+        "sounds": [
+          "IT",
+          "/iːn/",
+          "/nt/",
+          "/ˈʌndər/",
+          "/ɪn/"
+        ],
+        "words": [
+          "Italy",
+          "seen",
+          "haven't",
+          "underground",
+          "invisible"
+        ],
+        "tipJa": "ワールド24 の ふりかえり②: IT・a・ly（さいしょを つよく）、see → saw → seen、have not → haven't、underground（under＝した）、invisible（visible の はんたい）。I haven't seen ～. で「まだ みて いない」。"
+      },
+      "vocab": [
+        {
+          "en": "souvenir",
+          "ja": "おみやげ",
+          "emoji": "🎁",
+          "core": true
+        },
+        {
+          "en": "keychain",
+          "ja": "キーホルダー",
+          "emoji": "🔑"
+        },
+        {
+          "en": "cookie",
+          "ja": "クッキー",
+          "emoji": "🍪"
+        },
+        {
+          "en": "grandparents",
+          "ja": "おじいちゃんと おばあちゃん",
+          "emoji": "👴"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Before we leave Star Station, let's buy souvenirs. A souvenir is something you buy on a trip to remember it. Many people buy souvenirs for their family. Let's read the sign in the shop. \"Star Station Souvenirs. Star keychains: 3 coins. Cloud cookies, box of twelve: 5 coins. Rainbow pencils: 2 coins. Moon snow globes: 8 coins. We wrap gifts for free!\" How much is a box of cloud cookies? Five coins. Which souvenir is the most expensive? The snow globe. When you decide, say, I'll buy this for my sister. Say it with me. I'll buy this for my sister. Wonderful! When you give an idea to a friend, say, How about this star keychain? And if you want the staff to wrap it, ask, Could you wrap it, please? Think about the person. My sister loves stars. My grandparents love sweets. Now, phonics review. Italy. Seen. Haven't. Underground. Invisible. I haven't seen a snow globe like this! Let's go shopping!",
+      "conversation": {
+        "scene": "The friends buy souvenirs for their families",
+        "sceneJa": "かぞくへの おみやげを かう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I want to buy souvenirs for my family.",
+            "ja": "かぞくに おみやげを かいたいな。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How about this star keychain? It's cute.",
+            "ja": "この ほしの キーホルダーは どう？かわいいよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Good idea. I'll buy this for my sister. She loves stars.",
+            "ja": "いいね。これを いもうとに かうよ。ほしが だいすきなんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'll buy cloud cookies for my grandparents. They love sweets.",
+            "ja": "わたしは おじいちゃんと おばあちゃんに くもクッキーを かう。あまい ものが だいすきなの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And I'll buy a snow globe for... me!",
+            "ja": "それで ぼくは スノードームを…ぼくに かう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha, Birimo! They wrap gifts for free. Could you wrap these, please?",
+            "ja": "あはは、ビリモ！むりょうで つつんで くれるのよ。これを つつんで もらえますか？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の おみせの ひとと はなそう。だれに かうか つたえて、AI の How about ～? に こたえたり、I'll buy this for ～. で きめたり しよう。さいごに Could you wrap it, please? と たのもう",
+          "starterEn": "Welcome to the souvenir shop! Who are you shopping for today?",
+          "targetExpressions": [
+            "I'll buy this for my sister.",
+            "How about this star keychain?",
+            "Could you wrap it, please?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'll buy this for my sister.",
+          "How about this star keychain? / Could you wrap it, please?",
+          "Italy・seen・haven't・underground・invisible"
+        ]
+      }
+    },
+    {
+      "lessonNo": 718,
+      "world": 24,
+      "title": "Have You Ever Been Abroad?",
+      "titleJa": "がいこくに いった ことが ある？",
+      "school": {
+        "grade": "中3",
+        "topic": "Have you ever been abroad?：がいこくの りょこうしゃ（ビリモが やくを する）と はなす",
+        "grammar": "Have you ever been abroad? / I've been to ～ once. / Which country do you want to visit someday?",
+        "expressions": [
+          {
+            "en": "Have you ever been abroad?",
+            "ja": "がいこくに いった ことが ある？",
+            "core": true
+          },
+          {
+            "en": "I've been to Canada once. It was amazing.",
+            "ja": "カナダに 1かい いった ことが あるよ。すごかった。"
+          },
+          {
+            "en": "Which country do you want to visit someday?",
+            "ja": "いつか どの くにに いって みたい？"
+          }
+        ],
+        "testPoints": [
+          "Have you ever been abroad? で がいこくの ことを たずねたり はなしたり できる",
+          "ワールド24 の ふりかえり（Canada・America・been・we've・she's）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spin the globe.",
+          "ja": "ちきゅうぎを まわして。",
+          "action": "ゆびで くるくる まわす",
+          "emoji": "🌍"
+        },
+        {
+          "en": "Fly like a plane.",
+          "ja": "ひこうきの ように とんで。",
+          "action": "りょうてを ひろげて すすむ",
+          "emoji": "✈️"
+        },
+        {
+          "en": "Shake hands with a traveler.",
+          "ja": "りょこうしゃと あくしゅ して。",
+          "action": "あくしゅ",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Say \"Ciao!\" and wave.",
+          "ja": "「チャオ！」と いって てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "can-a-da",
+          "a-mer-i-ca",
+          "-een",
+          "'ve",
+          "'s"
+        ],
+        "sounds": [
+          "CAN",
+          "MER",
+          "/iːn/",
+          "/v/",
+          "/z/"
+        ],
+        "words": [
+          "Canada",
+          "America",
+          "been",
+          "we've",
+          "she's"
+        ],
+        "tipJa": "ワールド24 の ふりかえり③: CAN・a・da、a・MER・i・ca（くにの なまえは つよい はくごと）、be → was → been、we have → we've、she has → she's。She's been to America. ＝ かのじょは アメリカに いった ことが ある。"
+      },
+      "vocab": [
+        {
+          "en": "abroad",
+          "ja": "がいこくへ・がいこくで",
+          "emoji": "✈️",
+          "core": true
+        },
+        {
+          "en": "country",
+          "ja": "くに",
+          "emoji": "🌍"
+        },
+        {
+          "en": "someday",
+          "ja": "いつか",
+          "emoji": "🌠"
+        },
+        {
+          "en": "visit",
+          "ja": "たずねる・おとずれる",
+          "emoji": "🧳"
+        }
+      ],
+      "teacherScript": "Hello, everyone! There are travelers from many countries at Star Station. Today, Birimo will play Marco, a traveler from Italy. When you go to another country, you go abroad. To ask, say, Have you ever been abroad? Say it with me. Have you ever been abroad? Great! You can answer, Yes, I've been to Canada once. Or, No, I haven't been abroad yet. Here's a page from Marco's travel notebook. Let's read it. \"Marco's World Map. Countries I've been to: Japan, Canada, Mexico and Australia. My favorite trip was to Australia. I saw kangaroos in the wild! Next, I want to visit Argentina and Korea.\" How many countries has Marco been to? Four. What did he see in Australia? Kangaroos! Then ask about the future. Which country do you want to visit someday? I want to visit Italy someday. Remember, when you talk with new people, stay with your family or teacher. Now, phonics review. Canada. America. Been. We've. She's. She's been to America. Let's talk with Marco!",
+      "conversation": {
+        "scene": "The friends talk with Marco, a traveler played by Birimo",
+        "sceneJa": "ビリモが えんじる がいこくの りょこうしゃ マルコと はなす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's practice talking with a traveler. Birimo, you're Marco from Italy.",
+            "ja": "りょこうしゃと はなす れんしゅうを しましょう。ビリモは イタリアから きた マルコよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ciao! Hello! Is this your first trip on the Cloudtop Railway?",
+            "ja": "チャオ！こんにちは！くもの上の てつどうは はじめて？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, it is! Have you ever been abroad, Marco?",
+            "ja": "はい、そうです！マルコは がいこくに いった ことが ありますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, many times. I've been to Japan three times. Have you ever been abroad?",
+            "ja": "うん、なんども。日本には 3かい きた ことが あるよ。きみたちは がいこくに いった ことが ある？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I've been to Canada once. It was amazing.",
+            "ja": "カナダに 1かい いった ことが あります。すごかったです。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I haven't been abroad yet. I want to visit Italy someday!",
+            "ja": "ぼくは まだ がいこくに いった ことが ないんです。いつか イタリアに いきたい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great! Which country do you want to visit someday, Kiko?",
+            "ja": "いいね！キコは いつか どの くにに いって みたい？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の がいこくの りょこうしゃと はなそう。Have you ever been abroad? と きいて、こたえに When did you go? / How was it? と もう 1つ きこう。Which country do you want to visit someday? にも こたえてね",
+          "starterEn": "Ciao! I'm a traveler from far away. Have you ever been abroad?",
+          "targetExpressions": [
+            "Have you ever been abroad?",
+            "I've been to Canada once. It was amazing.",
+            "Which country do you want to visit someday?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Have you ever been abroad?",
+          "I've been to Canada once. It was amazing. / Which country do you want to visit someday?",
+          "Canada・America・been・we've・she's"
+        ]
+      }
+    },
+    {
+      "lessonNo": 719,
+      "world": 24,
+      "title": "Cloudtop Railway Review",
+      "titleJa": "くもの上の てつどう ふりかえり",
+      "school": {
+        "grade": "中3",
+        "topic": "We traveled a long way on the Cloudtop Railway.：Have you ever ～? / How long does it take?：しゅうちゃくえきの さよなら",
+        "grammar": "Have you ever ～? / How long does it take? / We traveled a long way on the Cloudtop Railway.",
+        "expressions": [
+          {
+            "en": "We traveled a long way on the Cloudtop Railway.",
+            "ja": "くもの上の てつどうで とおくまで たびを したね。",
+            "core": true
+          },
+          {
+            "en": "Have you ever ridden a cloud train? ― Yes, I have!",
+            "ja": "くもの れっしゃに のった ことが ある？ ― うん、あるよ！"
+          },
+          {
+            "en": "How long does it take to go home? ― It takes one day.",
+            "ja": "おうちまで どのくらい かかる？ ― 1にち かかるよ。"
+          }
+        ],
+        "testPoints": [
+          "We traveled a long way on the Cloudtop Railway. で ワールドの ふりかえりが できる",
+          "ワールド24 の ふりかえり（Okinawa・ridden・flown・who's・overlook・impolite）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wave to the train.",
+          "ja": "れっしゃに てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Salute like a conductor.",
+          "ja": "しゃしょうさんの ように けいれい して。",
+          "action": "おでこに てを あてて けいれい",
+          "emoji": "🎩"
+        },
+        {
+          "en": "Open the old map.",
+          "ja": "ふるい ちずを ひろげて。",
+          "action": "りょうてで ひろげる まね",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Look for the question mark.",
+          "ja": "はてなマークを さがして。",
+          "action": "ちずを のぞきこむ",
+          "emoji": "❓"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "o-ki-na-wa",
+          "-en",
+          "-wn",
+          "'s",
+          "over-",
+          "im-"
+        ],
+        "sounds": [
+          "NA",
+          "/ən/",
+          "/oʊn/",
+          "/z/",
+          "/ˈoʊvər/",
+          "/ɪm/"
+        ],
+        "words": [
+          "Okinawa",
+          "ridden",
+          "flown",
+          "who's",
+          "overlook",
+          "impolite"
+        ],
+        "tipJa": "ワールド24 の ふりかえり④: o・ki・NA・wa、ride → rode → ridden（d を 2つ）、fly → flew → flown、who has → who's、overlook（うえから みる）、impolite（p の まえは im）。Who's ridden a cloud train? で みんなに きいて みよう。"
+      },
+      "vocab": [
+        {
+          "en": "travel",
+          "ja": "たびを する",
+          "emoji": "🧳",
+          "core": true
+        },
+        {
+          "en": "letter",
+          "ja": "てがみ",
+          "emoji": "✉️"
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "riddle",
+          "ja": "なぞなぞ",
+          "emoji": "❓"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This is Star Station, the last stop. We traveled a long way on the Cloudtop Railway. Say it with me. We traveled a long way on the Cloudtop Railway. Wonderful! Let's remember. A ticket to Star Station, please. Which platform? Have you ever seen a rainbow train? I've been to Hokkaido. I'm lost. Could you help me? What a view! How long does it take? Before we leave the train, Conductor Nimbus gives us a letter and an old map. Let's read the letter. \"Dear travelers, thank you for riding the Cloudtop Railway. You asked for help, you helped others, and you made many friends. Here is a present: an old map. I've never been to the place on this map, but you are brave travelers. Maybe you can go there. Your friend, Conductor Nimbus.\" Look at the map. There's a cave with a big question mark. What is it? Now, phonics review. Okinawa. Ridden. Flown. Who's. Overlook. Impolite. Who's ridden a cloud train? We have! Let's say goodbye to the train!",
+      "conversation": {
+        "scene": "The friends say goodbye to the Cloudtop Railway",
+        "sceneJa": "くもの上の てつどうに さよならを いう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is the last stop. We traveled a long way on the Cloudtop Railway.",
+            "ja": "ここが しゅうてん。くもの上の てつどうで とおくまで たびを したわね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Remember the ticket office? A ticket to Star Station, please!",
+            "ja": "きっぷうりば、おぼえてる？スター・ステーションまで 1まい ください！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And I left my bag on the train! I've never been so worried.",
+            "ja": "それに わたし、れっしゃに かばんを わすれたよね！あんなに しんぱいした こと なかった。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Conductor Nimbus gave us a letter. And an old map!",
+            "ja": "ニンバスしゃしょうが てがみを くれたよ。それに ふるい ちずも！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look at the map. There's a cave with a big question mark.",
+            "ja": "ちずを みて。おおきな はてなマークの ついた どうくつが ある。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Have you ever been to a cave of riddles? No? Me neither!",
+            "ja": "なぞなぞの どうくつに いった こと ある？ない？ぼくも ない！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と ワールド24 の たびを ふりかえろう。AI が Have you ever ～? / How long does it take? と きくから、たびの おもいでを つかって こたえよう",
+          "starterEn": "Welcome back from your trip! What was the most exciting part? Have you ever been on such a long train ride?",
+          "targetExpressions": [
+            "We traveled a long way on the Cloudtop Railway.",
+            "Have you ever ridden a cloud train? ― Yes, I have!",
+            "How long does it take to go home? ― It takes one day."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We traveled a long way on the Cloudtop Railway.",
+          "Have you ever ridden a cloud train? ― Yes, I have! / How long does it take to go home? ― It takes one day.",
+          "Okinawa・ridden・flown・who's・overlook・impolite"
+        ]
+      }
+    },
+    {
+      "lessonNo": 720,
+      "world": 24,
+      "title": "World 24 Grand Review",
+      "titleJa": "ワールド24 グランドレビュー",
+      "school": {
+        "grade": "中3",
+        "topic": "I've had the best trip ever!：しゅうちゃくえきの ひろばで、ワールド24 たびの はっぴょうかい",
+        "grammar": "I've had the best trip ever! / My favorite part was ～. / I've ～. / Next time, I want to ～.",
+        "expressions": [
+          {
+            "en": "I've had the best trip ever!",
+            "ja": "いままでで さいこうの たびだったよ！",
+            "core": true
+          },
+          {
+            "en": "My favorite part was the observation car.",
+            "ja": "いちばん よかったのは てんぼうしゃだよ。"
+          },
+          {
+            "en": "Next time, I want to ride the Rainbow Train.",
+            "ja": "こんどは にじいろの れっしゃに のりたいな。"
+          }
+        ],
+        "testPoints": [
+          "I've had the best trip ever! で たびの おもいでを はっぴょうできる",
+          "ワールド24 の ふりかえり（Australia・done・written・they've・underwater・incorrect）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！こっちに きて！いって！",
+          "action": "スピードで うごきを かえる",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Hold up your travel poster.",
+          "ja": "たびの ポスターを かかげて。",
+          "action": "りょうてで たかく あげる",
+          "emoji": "🪧"
+        },
+        {
+          "en": "Ride the train. Choo-choo!",
+          "ja": "れっしゃに のって。シュッシュッ！",
+          "action": "うでを まわして すすむ",
+          "emoji": "🚂"
+        },
+        {
+          "en": "Cheer for the travelers!",
+          "ja": "りょこうしゃに おうえんを！",
+          "action": "りょうてを あげて ばんざい",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "aus-tra-li-a",
+          "-one",
+          "-en",
+          "'ve",
+          "under-",
+          "in-"
+        ],
+        "sounds": [
+          "TRA",
+          "/ʌn/",
+          "/ən/",
+          "/v/",
+          "/ˈʌndər/",
+          "/ɪn/"
+        ],
+        "words": [
+          "Australia",
+          "done",
+          "written",
+          "they've",
+          "underwater",
+          "incorrect"
+        ],
+        "tipJa": "ワールド24 の まとめ: aus・TRA・li・a（2ばんめを つよく）、do → did → done、write → wrote → written（t を 2つ）、they have → they've、underwater（under＝した）、incorrect（correct の はんたい）。I've done it! で たびの しめくくり！"
+      },
+      "vocab": [
+        {
+          "en": "best",
+          "ja": "いちばん よい",
+          "emoji": "🏆",
+          "core": true
+        },
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "💖"
+        },
+        {
+          "en": "part",
+          "ja": "ぶぶん・ところ",
+          "emoji": "🧩"
+        },
+        {
+          "en": "ever",
+          "ja": "いままでで",
+          "emoji": "⏳"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the World 24 Grand Review! Today is our travel show in the plaza in front of Star Station. Everyone will talk about their favorite part of the trip. Start with this. I've had the best trip ever! Say it with me. I've had the best trip ever! Fantastic! In this world, you learned so much. A ticket to Star Station, please. One way or round trip? Have you ever seen a rainbow train? I've been to Hokkaido. I've never eaten it. I left my bag on the train. What a view! Is this seat taken? How long does it take? It's impossible to see everything in one day. Here's the program. Let's read it. \"Cloudtop Railway Travel Show. Part one: Haru, Lunch on the Train. Part two: Kiko, The Lost Blue Bag. Part three: Riko, The Rainbow Train. Part four: Birimo, My First Overnight Train. Special thanks: Conductor Nimbus.\" Now, phonics review. Australia. Done. Written. They've. Underwater. Incorrect. You are wonderful travelers. Let the travel show begin!",
+      "conversation": {
+        "scene": "The friends hold a travel show, and the old map starts to glow",
+        "sceneJa": "たびの はっぴょうかい。ふるい ちずが ひかりだす",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Welcome to our travel show! I've had the best trip ever!",
+            "ja": "わたしたちの たびの はっぴょうかいへ ようこそ！いままでで さいこうの たびでした！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My favorite part was the observation car. What a view!",
+            "ja": "いちばん よかったのは てんぼうしゃ。ながめが さいこうだった！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I've eaten cloud buns, curry and cloud cookies. Delicious!",
+            "ja": "くもパンも カレーも くもクッキーも たべたよ。おいしかった！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I've slept on a train! I've never done that before!",
+            "ja": "れっしゃで ねたんだ！そんなの はじめてだったよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! Oh, look. The old map is glowing!",
+            "ja": "すばらしいわ！あら、みて。ふるい ちずが ひかって いる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The path starts behind Star Station. It goes to the Cave of Riddles!",
+            "ja": "みちは スター・ステーションの うらから はじまって、なぞときの どうくつへ つづいてる！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's go! Our next adventure is waiting!",
+            "ja": "いこう！つぎの ぼうけんが まってる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に たびの はっぴょうを しよう。I've had the best trip ever! から はじめて、My favorite part was ～. / I've ～. / Next time, I want to ～. の じゅんで はなそう。AI の しつもんにも こたえてね",
+          "starterEn": "Welcome to the travel show! I'm in the audience. Tell me about your trip. What was your favorite part?",
+          "targetExpressions": [
+            "I've had the best trip ever!",
+            "My favorite part was the observation car.",
+            "Next time, I want to ride the Rainbow Train."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I've had the best trip ever!",
+          "My favorite part was the observation car. / Next time, I want to ride the Rainbow Train.",
+          "Australia・done・written・they've・underwater・incorrect"
+        ]
+      }
+    }
+  ]
+}

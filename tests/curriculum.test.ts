@@ -29,6 +29,7 @@ import { earOf, schwaBlank, ureSound } from "@/lib/curriculum/w20Phonics";
 import { disOf, linkOf, misPreBlank, partOf, suffixOf } from "@/lib/curriculum/w21Phonics";
 import { adjOf, familyOf, markOf, personOf, schwaStressBlank } from "@/lib/curriculum/w22Phonics";
 import { mentOf, sciPartOf, shiftOf, tionOf, yAdjOf } from "@/lib/curriculum/w23Phonics";
+import { contrOf, imInOf, overUnderOf, placeOf, placeSyllables, ppOf } from "@/lib/curriculum/w24Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -2325,5 +2326,156 @@ describe("カリキュラム: ワールド23 の決まりごと（みどりの�
     expect(said(689)).toMatch(/cold winter/);
     expect(said(690)).toMatch(/sprout/);
     expect(said(690)).toMatch(/Cloudtop Railway/);
+  });
+});
+
+describe("カリキュラム: ワールド24 の決まりごと（くもの上の鉄道）", () => {
+  const w24 = LESSONS.filter((l) => l.world === 24);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+
+  it("ワールド24 は 691〜720 の 30 レッスン、ステージ3・A2+、学年の めやすは 中3", () => {
+    if (w24.length === 0) return; // 未作成ならスキップ
+    expect(w24.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 691 + i));
+    for (const l of w24) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中3");
+      expect(l.stage, `L${l.lessonNo}`).toBe(3);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2+");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w24.length === 0) return;
+    expect(at(691)!.title).toBe("All Aboard the Cloud Train");
+    expect(at(692)!.title).toBe("A Ticket, Please");
+    expect(at(693)!.title).toBe("One Way or Round Trip?");
+    expect(at(696)!.title).toBe("Have You Ever Seen a Rainbow Train?");
+    expect(at(697)!.title).toBe("I've Been to Hokkaido");
+    expect(at(700)!.title).toBe("Experience Bingo");
+    expect(at(701)!.title).toBe("I'm Lost");
+    expect(at(706)!.title).toBe("What a View!");
+    expect(at(711)!.title).toBe("How Long Does It Take?");
+    expect(at(714)!.title).toBe("It's Impossible!");
+    expect(at(716)!.title).toBe("My Travel Blog");
+    expect(at(720)!.title).toBe("World 24 Grand Review");
+  });
+
+  it("フォニックス: 地名の 強勢 → 過去分詞 → 短縮形 → over- / under- → im- / in-（各ブロックの 5回目と L716〜720 は ふりかえり）", () => {
+    if (w24.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(691, 694, "place-stress");
+    rule(696, 699, "past-participle");
+    rule(701, 704, "perfect-contraction");
+    rule(706, 709, "over-under");
+    rule(711, 714, "im-in");
+    for (const n of [695, 700, 705, 710, 715, 716, 717, 718, 719, 720]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // 地名: focus は はくで わけた 形、ことばと 1つずつ 対応。日本の 地名も 入る
+    for (const l of range(691, 695)) {
+      expect(l.phonics.focus, `L${l.lessonNo}`).toEqual(l.phonics.words.map((w) => w.toLowerCase().replace(/-/g, "")).map((w) => placeSyllables(w)));
+      for (const w of l.phonics.words) expect(placeOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    }
+    expect(range(691, 694).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["Hokkaido", "Okinawa", "Canada", "Australia"]));
+    // 過去分詞: 計画の seen・eaten・been・done・gone を ふくみ、4つの わなが そろう
+    for (const l of range(696, 700)) for (const w of l.phonics.words) expect(ppOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(696, 699).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["seen", "eaten", "been", "done", "gone"]));
+    expect(new Set(range(696, 700).flatMap((l) => l.phonics.words.map((w) => ppOf(w)!.trap)))).toEqual(new Set(["irregular", "en", "double", "wn"]));
+    // 短縮形: I've・haven't・she's（has）
+    for (const l of range(701, 704)) for (const w of l.phonics.words) expect(contrOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(701, 704).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["I've", "haven't", "she's"]));
+    // over- / under-: 両方の パーツ、計画の overnight・underground
+    for (const l of range(706, 710)) for (const w of l.phonics.words) expect(overUnderOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(706, 715).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["overnight", "underground"]));
+    // im- / in-: 計画の impossible・incorrect・invisible、両方の パーツ
+    for (const l of range(711, 714)) for (const w of l.phonics.words) expect(imInOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(711, 714).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["impossible", "incorrect", "invisible"]));
+    expect(new Set(range(711, 714).flatMap((l) => l.phonics.words.map((w) => imInOf(w)!.prefix)))).toEqual(new Set(["im", "in"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w24.length === 0) return;
+    expect(ex(691, 695)).toContain("This train runs above the clouds!");
+    expect(ex(691, 695)).toContain("A ticket to Star Station, please.");
+    expect(ex(691, 695)).toContain("One way or round trip?");
+    expect(ex(691, 695)).toContain("Round trip, please.");
+    expect(ex(691, 695)).toContain("Which platform does the train leave from?");
+    expect(ex(691, 695)).toContain("The next train leaves at 10:15 from platform 3.");
+    expect(ex(696, 700)).toContain("Have you ever seen a rainbow train?");
+    expect(ex(696, 700)).toContain("I've been to Hokkaido.");
+    expect(ex(696, 700)).toContain("When did you go?");
+    expect(ex(696, 700)).toContain("How was it?");
+    expect(ex(696, 700)).toContain("I've never eaten it. Is it good?");
+    expect(ex(696, 700)).toContain("I've been there twice.");
+    expect(ex(696, 700)).toContain("Have you ever ridden a horse?");
+    expect(ex(701, 705)).toContain("Excuse me. I'm lost. Could you help me?");
+    expect(ex(701, 705)).toContain("I missed the train! When's the next one?");
+    expect(ex(701, 705)).toContain("I left my bag on the train.");
+    expect(ex(701, 705)).toContain("It's a small blue bag with a star on it.");
+    expect(ex(701, 705)).toContain("Don't worry. I'll help you.");
+    expect(ex(706, 710)).toContain("What a view! I can see the mountains.");
+    expect(ex(706, 710)).toContain("Look out the window! There's a castle.");
+    expect(ex(706, 710)).toContain("Excuse me. Is this seat taken?");
+    expect(ex(706, 710)).toContain("I'll have the sandwich set, please.");
+    expect(ex(706, 710)).toContain("Where are you going?");
+    expect(ex(706, 710)).toContain("I'm going to the sea.");
+    expect(ex(711, 715)).toContain("How long does it take?");
+    expect(ex(711, 715)).toContain("It takes two hours.");
+    expect(ex(711, 715)).toContain("We're taking the overnight train.");
+    expect(ex(711, 715)).toContain("Take the underground line to the museum.");
+    expect(ex(711, 715)).toContain("It's impossible to see everything in one day.");
+    expect(ex(711, 715)).toContain("First, we'll take the train.");
+    expect(ex(716, 720)).toContain("Day 1: I've arrived at Star Station!");
+    expect(ex(716, 720)).toContain("I'll buy this for my sister.");
+    expect(ex(716, 720)).toContain("Have you ever been abroad?");
+    expect(ex(716, 720)).toContain("I've had the best trip ever!");
+  });
+
+  it("現在完了（I've ～ / Have you ever ～?）は L696 から（それまでの 表現・会話・台本・TPR には 出さない）", () => {
+    if (w24.length === 0) return;
+    const perfect = /\b(I've|we've|you've|they've|haven't|hasn't|have (been|seen|ever|never)|has (been|seen))\b/i;
+    for (const l of range(691, 695)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(perfect);
+    expect(ex(696, 696)).toMatch(/Have you ever seen/);
+    // 関係代名詞（ステージ4）は 出さない
+    for (const l of w24) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(people|person|someone|a friend|the man|the woman) who\b/);
+  });
+
+  it("ステージ3: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・150 語 以上で 短い 読みものを ふくむ、会話シーンは 5〜7 行、L720 は スピード TPR", () => {
+    if (w24.length === 0) return;
+    for (const l of w24) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.03);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(150);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{40,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(5);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（round trip・lost and found）
+    expect(w24.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([693, 703]);
+    expect(at(720)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("あんぜん: まいごの ときは えきいんさん・しらない ひとに ついて いかない、ネットに かおや がっこうの なまえを のせない、AI 会話で 個人情報を きかない", () => {
+    if (w24.length === 0) return;
+    expect(at(701)!.teacherScript).toContain("Don't go anywhere with strangers.");
+    expect(at(701)!.teacherScript).toContain("Look for station staff");
+    expect(at(705)!.teacherScript).toContain("Never go anywhere alone with a stranger.");
+    expect(ex(716, 716)).toContain("Don't put your face or your school's name online.");
+    expect(at(716)!.teacherScript).toContain("always ask your family first");
+    for (const l of w24) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+  });
+
+  it("物語: L691 で 研究所の おくじょうから くもの れっしゃへ → L703〜704 で キコの かばん → L719 で ふるい ちず → L720 で なぞときの どうくつへ", () => {
+    if (w24.length === 0) return;
+    expect(said(691)).toMatch(/station on the roof/);
+    expect(at(699)!.teacherScript).toMatch(/Conductor Nimbus/);
+    expect(said(703)).toMatch(/I left my bag on the train!/);
+    expect(said(704)).toMatch(/Yes, it is! Thank you so much!/);
+    expect(said(719)).toMatch(/old map/);
+    expect(said(720)).toMatch(/Cave of Riddles/);
   });
 });

@@ -15,6 +15,7 @@ import { w20Say } from "./w20Phonics";
 import { w21Say } from "./w21Phonics";
 import { w22Say } from "./w22Phonics";
 import { w23Say } from "./w23Phonics";
+import { w24Say } from "./w24Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -76,6 +77,9 @@ export const shortVowelOf = (team: string) => team[0];
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
+  // ワールド24 の 過去分詞の おわり・I've / haven't / she's・over- / under-・im- / in- は その回の ことばで よむ
+  const w24 = w24Say(focus, words);
+  if (w24) return w24;
   // ワールド23 の micro-・-scope・-meter・thermo-・-ment・-y・-tion は その回の ことばで よむ（ワールド10 の -y より 先）
   const w23 = w23Say(focus, words);
   if (w23) return w23;

@@ -557,3 +557,45 @@
 - `npx vitest run`: 57 ファイル・1,663 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 209 → 211 kB、/lesson/[lessonNo] 214 → 217 kB、/gacha 197 → 200 kB、/test/[assessmentId] 196 → 199 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド23 の 問題の コードと 表（まちがいの 選択肢を 手で 書いた ぶん）と 索引の 1 ワールドぶん。ワールド22 と おなじ くらい。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 34`: No.34（L661〜680・62 ページ）を 作れることを 確認（No.35 は ワールド24 が できてから）
+
+## WORLD — ワールド24「くもの上の鉄道」（L691〜720・ステージ3・A2+）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-24.json` を 新しく 作成（30 レッスン、ステージ3・A2+（stages.ts の きまりどおり）、`school.grade` は「中3」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 720 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 132、会話の セリフ 188 行（1 回 6〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 168 語・最少 157 語・最大 191 語）で、まいかい「読みもの」（えきの はりがみ・ねだんひょう・きっぷ・あんないばん・アナウンス・ざっし・りょこうノート・しゃないはんばいの メニュー・まいごの ポスター・じこくひょう・わすれものの リスト・ガイドブック・えはがき・しゃないの マナー・ろせんず・ブログ・てがみ など 40〜80 語）を いっしょに 読む。日本語の ヒントは 2 回だけ（L693「おうふく」・L703「わすれもの センター」）。
+- ブロック構成: 691〜695 えきと きっぷ（This train runs above the clouds!・A ticket to Star Station, please.・One way or round trip?・Which platform does the train leave from?・The next train leaves at 10:15 from platform 3.）→ 696〜700 けいけん（現在完了の はじまり。Have you ever seen a rainbow train? ― Yes, I have. / No, I haven't.・I've been to Hokkaido. ＋ When did you go? / How was it?・I've never eaten it. Is it good?・I've been there twice.・L700 は 700 かい きねんの けいけん ビンゴ）→ 701〜705 こまった とき（Excuse me. I'm lost. Could you help me?・I missed the train! When's the next one?・I left my bag on the train.・It's a small blue bag with a star on it.・Don't worry. I'll help you.）→ 706〜710 しゃないで（What a view!・Look out the window! There's a castle. ＋ on the left / next to / under・Excuse me. Is this seat taken?・I'll have the sandwich set, please.・Where are you going? ＋ もう 1つ しつもん）→ 711〜715 たびの けいかく（How long does it take? ― It takes two hours.・We're taking the overnight train.・Take the underground line / Change trains at / Get off at・It's impossible to see everything in one day.・First, ～. Then, ～. Finally, ～.）→ 716〜720 しめくくり（Day 1: I've arrived at Star Station!・I'll buy this for my sister.・Have you ever been abroad?・さよなら・L720 I've had the best trip ever!）。
+- 物語の 糸: ワールド23 の ぎんいろの きっぷで 研究所の おくじょうの えきから くもの れっしゃへ（L691）。きっぷは さいしょの えき（クラウド・ジャンクション）まで なので L692 で スター・ステーションまでの きっぷを かう。しゃしょうは あおい ぼうしの 背の 高い とりの ニンバスさん（台本と セリフの なかだけ）。L699 の ニンバスさんの ノート「なぞときの どうくつには いった ことが ない」が つなぎの ふせん。L703〜704 で キコの「ほしの ついた ちいさな あおい かばん」を わすれもの センターで とりもどす。ルートは クラウド・ジャンクション → スカイ・ハーバー → レインボー・フォールズ → ミスト・マウンテン → ムーン・レイク（しんだい れっしゃ）→ クリスタル・シティ（ちかてつ）→ スター・ステーション。L719 で ニンバスさんから てがみと ふるい ちず（はてなマークの どうくつ）、L720 で ちずが ひかって「なぞときの どうくつ」へ（ワールド25 へ）。
+- フォニックス（`src/lib/curriculum/w24Phonics.ts`・`questions.ts` の `w24Question`。w23Question より 先に よぶ）:
+  - 地名の 音節と 強勢（focus は はくで わけた 小文字の 形 "can-a-da"）: 「つよく よむ ところは どれ？」（Canada（カナダ）→ CAN-a-da / can-A-da / can-a-DA。選択肢は はくの 順の まま。日本の 地名（o-SA-ka・hok-KAI-do・o-ki-NA-wa・na-ga-SA-ki）は「日本語では たいらでも 英語では 1つを つよく」と せつめい）
+  - 過去分詞（"-een" "-one" "-en" "-wn" "-um"）: 「have の あとに くる かたちは どれ？」（I have ＿＿.（see＝みる）→ seen / saw / see。written・ridden・forgotten・hidden は かさねない つづり（writen など）も 4つめに）
+  - 短縮形（"'ve" "n't" "'s"）: 「みじかい かたちは どれ？」（I have → I've / Ive / I'have、have not → haven't / havent / have'nt、she has → she's。's が has の ときの せつめい つき）
+  - over- / under-: 「この ことばの over は どんな いみ？」（うえ・こえて・〜すぎる / した / まえ / もう いちど）
+  - im- / in-: 「ただしい ことばは どれ？」（possible（できる）の はんたい → impossible / inpossible / unpossible、visible → invisible / imvisible / unvisible）
+- `vowelTeams.ts` の 読み上げで 過去分詞の おわり・短縮形・over- / under-・im- / in- は その回の ことばを よむ（`w24Say`。ワールド23 より 先）。地名の はくの 形は ワールド12 の きまりで ことば まるごと。
+- テスト: `tests/curriculum.test.ts` に ワールド24 の 決まりごと（範囲・ステージ3・A2+・中3・タイトル・フォニックスの 順と 種類と わなの 種類・文法と 会話の 型・現在完了は L696 から・関係代名詞なし・先生の台本は 英語だけで 150 語 以上＋読みもの・会話 5〜7 行・話し手は 5 人だけ・あんぜん・L720 スピード TPR・物語）を 追加。`tests/phonics-w24.test.ts`（15 テスト。L690 までの どの 回でも w24Say が はたらかない ことも たしかめる）を 追加。
+
+### 決めたこと（理由）
+- **フォニックスの ブロックの 順を 計画から 入れかえた**: 計画は B1 過去分詞 → B2 短縮形 → B3 over- / under- → B4 im- / in- → B5 地名。過去分詞を 691〜694 に おくと 現在完了（L696〜）より まえに なるので、地名（えきと きっぷの 回に あう）を 691〜694、過去分詞を 696〜699（Have you ever ～? と おなじ ブロック）、短縮形を 701〜704、over- / under- を 706〜709（L706 overlook・L708 overhead の たな）、im- / in- を 711〜714（L714 It's impossible!）に した。overnight（L712）・underground（L713）は ふりかえり（L708・L709・L715）で あつかう。
+- **新しい phonics.rule**: "place-stress" "past-participle" "perfect-contraction" "over-under" "im-in"（ふりかえりは "review"）。
+- **過去分詞の 選択肢は 3つの かたち**: 「規則で つくった まちがい（eated・seed）」は seed・sawed の ように ほんとうに ある ことばが まじるので つかわず、すぎた かたちと もとの かたち（seen / saw / see）を くらべる 問題に した（have の あとに どれ？が いちばん だいじな ポイント）。come・run（もとの かたちと おなじ）は 入れない。もじを かさねる 4語だけ かさねない つづりを 4つめに たした。
+- **まちがいの 選択肢は 表に 手で 書く**: its（その）・inpatient（入院患者）の ように ほんとうに ある ことばは 入れない（it's の まちがいは it'has / its'、impatient の まちがいは unpatient / impatiant）。2はくの 地名（Japan・Tokyo・Kyoto）は 選択肢が 2つに なるので 入れない。
+- **core の 表現には ― を 入れない**（全体の きまり）: 計画の「One way or round trip? ― Round trip, please.」「How long does it take? ― It takes two hours.」「Where are you going? ― I'm going to the sea.」は core を 前半だけに して、こたえは 2つめの 表現に した。L715 の core は 計画の「It takes three hours.」を クリスタル・シティの 1にちの けいかくに あわせて「It takes twenty minutes.」に した。
+- **文法の じゅんばん**: 現在完了（I've / Have you ever ～? / haven't）は L696 から（691〜695 の 表現・会話・台本・TPR・AI の さいしょの ことばに 出さない ことを テストで まもる）。けいけんの こたえに「いつ？」を いう ときは すぎた かたち（Yes, I have. I saw it ten years ago. / I went there last winter.）と 台本で くらべた。L699 の しゃしょうさんの ノートは 継続の 現在完了（have worked for）を さけて I started working ～ ago. に した。関係代名詞（ステージ4）は 出さない（L708 の マナーの はりがみは people with small children、L700 の ビンゴは Find a friend who ～ を やめて Have you ever ～? の しつもんの ならびに した）。
+- **あんぜん**: L701 まいごの ときは おちついて、せいふくの えきいんさん・あんないじょへ、しらない ひとと どこにも いかない。L705 こどもは「おとなを よぶ」ことで たすける。L710・L718 あたらしい ひとと はなすのは かぞくや 先生と いっしょの とき。L716 ブログに かおや がっこうの なまえを のせない・まず おうちの ひとに きく。AI 会話は なまえ・すんで いる ところを きかない（テストで まもる）。
+- **地名・会社名**: 実在の 地名は くにと 日本の 地名だけ。駅・路線（クラウド・ジャンクション・スター・ステーション・ブルー・ライン など）と たべもの（くもパン・かみなりチップス）は ぜんぶ オリジナル。会社名・商品名は 出さない。
+- **新しい 話し手は 増やさない**: ニンバスしゃしょう・マルコ（イタリアの りょこうしゃ）は ビリモが やくを する か 台本の なかだけ。えきいんさん・うりこさん・ウェイター・じょうきゃくも ビリモや リコが ロールプレイで えんじる。
+- 自分で 1 回 見なおして なおした ところ: 短い 台本 4 回（L694・L695・L702・L709）を 150 語 以上に、L709 の「2はいめの カレー」の つじつま（ちゅうもんを カレーと ヌードルに）、L693 の ex3 を たびの いきさき（スター・ステーション・5まい）に、L720 の 日本語訳を しぜんに。ワールド19 の ouWhy と 名前が ぶつかったので overUnderOf / overUnderWhy に した。
+- 気づいた こと（このフェーズでは かえていない）: レッスンの AI 会話の プロンプトが ステージに かかわらず やさしい 文の まま なのは ワールド21〜23 と おなじ（あとの フェーズで）。vitest を まとめて 回した とき 1 回だけ 1 テスト 失敗 → 2 回 回しなおして 58 ファイル すべて 成功（時間に よる ゆれと みられる。再現しなかった）。
+
+### 例（L697「I've Been to Hokkaido」）
+- 表現（core）: I've been to Hokkaido. ／ When did you go? ― I went there last winter. ／ How was it? ― It was really cold, but fun!
+- 読みもの（台本より）: "Places I've been to: Hokkaido, Kyoto and Okinawa. My favorite was Hokkaido. I went there last winter with my family. We saw lots of snow, and we ate hot ramen. Places I want to go to: Canada and Australia."
+- 会話: Riko「Have you ever been to Hokkaido, Haru?」 Haru「No, I haven't. Have you?」 Riko「Yes! I've been to Hokkaido. I went there last winter.」 Kiko「Wow! How was it?」 … Ms. Emma「Great follow-up question, Kiko. When did you go? How was it? Those questions keep the talk going.」
+- フォニックス: eaten / taken / given / spoken（問題は「have の あとに くる かたちは どれ？」I have ＿＿.（eat＝たべる）→ eaten / ate / eat）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 58 ファイル・1,716 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 211 → 214 kB、/lesson/[lessonNo] 217 → 219 kB、/gacha 200 → 202 kB、/test/[assessmentId] 199 → 202 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド24 の 問題の コードと 表と 索引の 1 ワールドぶん。ワールド23 と おなじ くらい。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 35` / `--pack 36`: No.35（L681〜700）・No.36（L701〜720）とも 62 ページで 作れることを 確認
