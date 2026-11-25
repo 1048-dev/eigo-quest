@@ -114,7 +114,8 @@ describe("フォニックスの ボタン", () => {
     for (const l of LESSONS) {
       for (const f of l.phonics.focus) {
         // ワールド15 の 短縮形（I'm, isn't）は ことばの なかの ' だけ OK（読み上げは ふつうに よめる）
-        expect(focusExampleWord(f, l.phonics.words), `L${l.lessonNo} ${f}`).toMatch(/^[A-Za-z]+('[A-Za-z]+)?$/);
+        // ワールド21 の 音の つながり（hold on, check it out）は フレーズ まるごと（スペースで くぎった 英字）
+        expect(focusExampleWord(f, l.phonics.words), `L${l.lessonNo} ${f}`).toMatch(/^[A-Za-z]+('[A-Za-z]+)?( [A-Za-z]+)*$/);
         expect(focusLabel(f).main, `L${l.lessonNo} ${f}`).not.toMatch(/[_]|^-/);
       }
     }

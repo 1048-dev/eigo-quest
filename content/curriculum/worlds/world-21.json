@@ -1,0 +1,4631 @@
+{
+  "world": 21,
+  "stage": 3,
+  "level": "A2",
+  "lessons": [
+    {
+      "lessonNo": 601,
+      "world": 21,
+      "title": "The Tower of Messages",
+      "titleJa": "ことづての とう",
+      "school": {
+        "grade": "中2",
+        "topic": "Messages fly from this tower every day.：ことづての とうに つく（ステージ3 の はじまり・つながる ことば）",
+        "grammar": "現在形の くりかえし（every day）・Birds carry ～ to ～.・How do you ～?（ステージ2 の ふりかえり）",
+        "expressions": [
+          {
+            "en": "Messages fly from this tower every day.",
+            "ja": "まいにち この とうから メッセージが とんでいく。",
+            "core": true
+          },
+          {
+            "en": "Birds carry letters to people far away.",
+            "ja": "とりたちが とおくの ひとに てがみを はこぶ。"
+          },
+          {
+            "en": "How do you send messages to your friends?",
+            "ja": "ともだちに どうやって メッセージを おくる？"
+          }
+        ],
+        "testPoints": [
+          "Messages fly from this tower every day. を いえる（ステージ3 の はじまり）",
+          "dis は「はんたい」の パーツ（dislike・disagree・disappear）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look up at the tall tower.",
+          "ja": "たかい とうを みあげて。",
+          "action": "くびを うしろに たおして うえを みる",
+          "emoji": "🗼"
+        },
+        {
+          "en": "Flap your wings like a bird.",
+          "ja": "とりの ように はばたいて。",
+          "action": "りょうてを つばさの ように うごかす",
+          "emoji": "🕊️"
+        },
+        {
+          "en": "Catch the letter!",
+          "ja": "てがみを キャッチして！",
+          "action": "りょうてで うけとる",
+          "emoji": "✉️"
+        },
+        {
+          "en": "Climb the stairs.",
+          "ja": "かいだんを のぼって。",
+          "action": "その ばで あしを たかく あげる",
+          "emoji": "🪜"
+        }
+      ],
+      "phonics": {
+        "rule": "dis",
+        "focus": [
+          "dis-"
+        ],
+        "sounds": [
+          "/dɪs/"
+        ],
+        "words": [
+          "dislike",
+          "disagree",
+          "disappear"
+        ],
+        "tipJa": "dis は ことばの まえに つける パーツで「はんたい・〜しない」の いみ。like（すき）→ dislike（きらう）、agree（さんせいする）→ disagree、appear（あらわれる）→ disappear（きえる）。"
+      },
+      "vocab": [
+        {
+          "en": "tower",
+          "ja": "とう",
+          "emoji": "🗼",
+          "core": true
+        },
+        {
+          "en": "message",
+          "ja": "メッセージ・でんごん",
+          "emoji": "💬"
+        },
+        {
+          "en": "deliver",
+          "ja": "とどける",
+          "emoji": "📬"
+        },
+        {
+          "en": "far away",
+          "ja": "とおくに",
+          "emoji": "🌏"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to Stage 3! Look at this tall tower. It's the Tower of Messages. Messages fly from this tower every day. Say it with me. Messages fly from this tower every day. Great! Look at the birds. Birds carry letters to people far away. In this world, we will learn how to talk on the phone, how to make video calls, and how to write emails. We will connect with people who are far away. From now on, I will speak only English. （これからは えいごだけ。だいじょうぶ！） Don't worry. Listen carefully, look at the pictures, and guess. You can do it! Here is a note on the tower door. Let's read it together. \"Welcome, travelers! This is the Tower of Messages. Every morning, our birds carry letters to many towns. Please come in and look around. You can make phone calls on the second floor.\" Now, phonics. Today's word part is d i s. Like, dislike. Agree, disagree. Appear, disappear. Dis means not, or the opposite. Oh, look! The letter just disappeared! Where did it go? Ha ha, a bird took it. Let's go inside!",
+      "conversation": {
+        "scene": "Arriving at the Tower of Messages",
+        "sceneJa": "ことづての とうに つく",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Wow! Look at all the birds! They have letters!",
+            "ja": "わあ！とりが いっぱい！てがみを もってる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is the Tower of Messages. Messages fly from this tower every day.",
+            "ja": "ここは ことづての とう。まいにち ここから メッセージが とんでいくのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Where do the birds take the letters?",
+            "ja": "とりたちは てがみを どこへ もっていくの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "They carry letters to people far away.",
+            "ja": "とおくに いる ひとたちに はこぶのよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How do you send messages to your friends, Haru?",
+            "ja": "ハルは ともだちに どうやって メッセージを おくる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I usually call them. But I'd love to send a letter by bird!",
+            "ja": "ふだんは でんわかな。でも とりで てがみを おくってみたい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! That letter disappeared into the clouds!",
+            "ja": "みて！あの てがみ、くもの なかに きえちゃった！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "とうに ついた ことを はなそう。ともだちに どうやって メッセージを おくるか こたえて、エマ先生にも しつもんしよう（なまえは いわなくて OK）",
+          "starterEn": "Welcome to the Tower of Messages! Birds carry letters from here every day. How do you send messages to your friends?",
+          "targetExpressions": [
+            "Messages fly from this tower every day.",
+            "I usually ～.",
+            "How about you?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Messages fly from this tower every day.",
+          "Birds carry letters to people far away. / How do you send messages to your friends?",
+          "dislike・disagree・disappear（dis ＝ はんたい）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 602,
+      "world": 21,
+      "title": "Hello, This Is Haru",
+      "titleJa": "もしもし、ハルです",
+      "school": {
+        "grade": "中2",
+        "topic": "Hello, this is Haru. May I speak to Riko?：でんわの かけかた（なのる・とりついで もらう）",
+        "grammar": "Hello, this is ～. / May I speak to ～? / This is ～ speaking.（でんわの いいかた）",
+        "expressions": [
+          {
+            "en": "Hello, this is Haru. May I speak to Riko?",
+            "ja": "もしもし、ハルです。リコさんは いますか？",
+            "core": true
+          },
+          {
+            "en": "Yes. Just a moment, please.",
+            "ja": "はい。すこし おまちください。"
+          },
+          {
+            "en": "This is Riko speaking.",
+            "ja": "リコです（でんわで）。"
+          }
+        ],
+        "testPoints": [
+          "でんわでは I'm ～. では なく This is ～. と なのる",
+          "May I speak to ～? で とりついで もらえる",
+          "disconnect・dishonest・disobey（dis ＝ はんたい）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up the phone.",
+          "ja": "でんわを とって。",
+          "action": "じゅわきを みみに あてる",
+          "emoji": "📞"
+        },
+        {
+          "en": "Dial the number.",
+          "ja": "ばんごうを おして。",
+          "action": "ゆびで ボタンを おす",
+          "emoji": "🔢"
+        },
+        {
+          "en": "Say hello in a friendly voice.",
+          "ja": "げんきな こえで もしもしと いって。",
+          "action": "にっこり わらって あいさつ",
+          "emoji": "😊"
+        },
+        {
+          "en": "Hang up the phone.",
+          "ja": "でんわを きって。",
+          "action": "じゅわきを おく",
+          "emoji": "📴"
+        }
+      ],
+      "phonics": {
+        "rule": "dis",
+        "focus": [
+          "dis-"
+        ],
+        "sounds": [
+          "/dɪs/"
+        ],
+        "words": [
+          "disconnect",
+          "dishonest",
+          "disobey"
+        ],
+        "tipJa": "dis ＝ はんたい・〜しない。connect（つなぐ）→ disconnect（せつぞくを きる）、honest（しょうじきな）→ dishonest、obey（いうことを きく）→ disobey。"
+      },
+      "vocab": [
+        {
+          "en": "phone",
+          "ja": "でんわ",
+          "emoji": "📞",
+          "core": true
+        },
+        {
+          "en": "call",
+          "ja": "でんわを かける",
+          "emoji": "☎️"
+        },
+        {
+          "en": "speak",
+          "ja": "はなす",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "voice",
+          "ja": "こえ",
+          "emoji": "🎙️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we are in the phone room of the tower. Let's make our first phone call. On the phone, we don't say, I'm Haru. We say, This is Haru. Listen. Hello, this is Haru. May I speak to Riko? Say it with me. Hello, this is Haru. May I speak to Riko? Wonderful! May I speak to is a polite way to ask for someone. Then the other person says, Yes. Just a moment, please. Or, if Riko answers, she says, This is Riko speaking. Let's read a short phone call together. Ring, ring. \"Hello?\" \"Hello, this is Kiko. May I speak to Birimo?\" \"This is Birimo speaking! Hi, Kiko!\" \"Hi, Birimo! Are you busy?\" \"No, I'm just eating a banana.\" Ha ha. Remember, on the phone, people can't see your face. So speak slowly and clearly, and use a friendly voice. Now, phonics. Connect, disconnect. Honest, dishonest. Obey, disobey. D i s makes the opposite. If you push this red button, you disconnect the call. Don't push it yet! Now, let's call a friend.",
+      "conversation": {
+        "scene": "Making a first phone call in the tower",
+        "sceneJa": "とうの でんわしつで はじめての でんわ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Hello, this is Haru. May I speak to Riko?",
+            "ja": "もしもし、ハルです。リコさんは いますか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes. Just a moment, please. Riko! It's for you!",
+            "ja": "はい。すこし おまちください。リコ！でんわだよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This is Riko speaking. Hi, Haru!",
+            "ja": "リコです。ハル、こんにちは！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hi, Riko! Can you come to the phone room? Birimo has a surprise.",
+            "ja": "やあ、リコ！でんわしつに これる？ビリモが サプライズを よういしてるんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sure! I'll be there soon.",
+            "ja": "いいよ！すぐ いくね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oops! I pushed the red button. Did I disconnect the call?",
+            "ja": "あっ！あかい ボタンを おしちゃった。でんわ きれちゃった？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, you did, Birimo. But Haru finished his call. Good job, Haru!",
+            "ja": "そうね、ビリモ。でも ハルは もう はなしおわっていたわ。ハル、よく できました！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "でんわの ロールプレイ。This is ～. と なのって（ニックネームで OK・ほんとうの なまえは いわなくて OK）、May I speak to ～? で とりついで もらおう",
+          "starterEn": "Hello? This is the Tower of Messages. Who's calling, please?",
+          "targetExpressions": [
+            "Hello, this is ～.",
+            "May I speak to ～?",
+            "Thank you."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Hello, this is Haru. May I speak to Riko?",
+          "Just a moment, please. / This is Riko speaking.",
+          "disconnect・dishonest・disobey"
+        ]
+      }
+    },
+    {
+      "lessonNo": 603,
+      "world": 21,
+      "title": "Hold On, Please",
+      "titleJa": "すこし おまちください",
+      "school": {
+        "grade": "中2",
+        "topic": "Hold on, please. I'll get her.：でんわを とりつぐ（とうの うけつけで）",
+        "grammar": "Hold on, please. / I'll get her (him). / Who's calling, please? / Thank you for waiting.（でんわを うける がわ）",
+        "expressions": [
+          {
+            "en": "Hold on, please. I'll get her.",
+            "ja": "すこし まってね。よんでくるね。",
+            "core": true
+          },
+          {
+            "en": "Who's calling, please?",
+            "ja": "どちらさまですか？"
+          },
+          {
+            "en": "Thank you for waiting.",
+            "ja": "おまたせしました。"
+          }
+        ],
+        "testPoints": [
+          "Hold on, please. I'll get her. で でんわを とりつげる",
+          "Who's calling, please? で あいてを ていねいに きける",
+          "disorder・discomfort・dislike"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up one finger and say, wait.",
+          "ja": "ゆびを 1ぽん たてて まってと いって。",
+          "action": "ひとさしゆびを たてる",
+          "emoji": "☝️"
+        },
+        {
+          "en": "Run upstairs.",
+          "ja": "かいだんを かけあがって。",
+          "action": "その ばで はやく あしぶみ",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Knock on the door.",
+          "ja": "ドアを ノックして。",
+          "action": "こぶしで トントン",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Hand the phone to your friend.",
+          "ja": "ともだちに でんわを わたして。",
+          "action": "りょうてで わたす ポーズ",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "dis",
+        "focus": [
+          "dis-"
+        ],
+        "sounds": [
+          "/dɪs/"
+        ],
+        "words": [
+          "disorder",
+          "discomfort",
+          "dislike"
+        ],
+        "tipJa": "order（せいとん）→ disorder（ちらかった ようす）、comfort（ここちよさ）→ discomfort（ここちわるさ）、like → dislike。dis が つくと はんたいの いみ。"
+      },
+      "vocab": [
+        {
+          "en": "front desk",
+          "ja": "うけつけ",
+          "emoji": "🛎️",
+          "core": true
+        },
+        {
+          "en": "wait",
+          "ja": "まつ",
+          "emoji": "⏳"
+        },
+        {
+          "en": "get",
+          "ja": "よんでくる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "moment",
+          "ja": "すこしの あいだ",
+          "emoji": "⏱️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, Kiko is working at the front desk of the tower. The phone rings a lot! When someone calls and asks for a person, we say, Hold on, please. I'll get her. Say it with me. Hold on, please. I'll get her. Excellent! Hold on means wait a little. （hold on ＝ ちょっと まってね） For a boy, say, I'll get him. If you don't know the caller, ask politely. Who's calling, please? When you come back, say, Thank you for waiting. Let's read the front desk rules. \"Front Desk Rules. One. Answer the phone with a smile. Two. Ask, Who's calling, please? Three. Say, Hold on, please. Then get the person quickly. Four. Keep the desk tidy.\" A tidy desk helps you find the message notes quickly. Oh, look at this desk. Papers everywhere! It's in disorder. Let's tidy it up. Now, phonics. Order, disorder. Comfort, discomfort. Like, dislike. I dislike a messy desk. Do you? Now it's your turn at the front desk. Ring, ring!",
+      "conversation": {
+        "scene": "Answering phones at the tower's front desk",
+        "sceneJa": "とうの うけつけで でんわを とりつぐ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Hello, this is the Tower of Messages.",
+            "ja": "もしもし、ことづての とうです。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hello, this is Emma. May I speak to Riko?",
+            "ja": "もしもし、エマです。リコさんは いますか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hold on, please. I'll get her.",
+            "ja": "すこし まってね。よんでくるね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Riko! Ms. Emma is on the phone!",
+            "ja": "リコ！エマ先生から でんわだよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you, Kiko. Hello, Ms. Emma. Thank you for waiting.",
+            "ja": "ありがとう、キコ。もしもし、エマ先生。おまたせしました。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Kiko, you're good at this job!",
+            "ja": "キコ、この しごと じょうずだね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The next call is mine! Hello, who's calling, please?",
+            "ja": "つぎの でんわは ぼくの ばん！もしもし、どちらさまですか？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "うけつけの ロールプレイ。AI が でんわを かけて くるので、Who's calling, please? と きいて、Hold on, please. I'll get him. で とりついで みよう",
+          "starterEn": "Hello! May I speak to Birimo, please?",
+          "targetExpressions": [
+            "Who's calling, please?",
+            "Hold on, please.",
+            "I'll get him."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Hold on, please. I'll get her.",
+          "Who's calling, please? / Thank you for waiting.",
+          "disorder・discomfort・dislike"
+        ]
+      }
+    },
+    {
+      "lessonNo": 604,
+      "world": 21,
+      "title": "Sorry, Wrong Number",
+      "titleJa": "ばんごう ちがいです",
+      "school": {
+        "grade": "中2",
+        "topic": "I'm sorry. I think you have the wrong number.：まちがい でんわに ていねいに こたえる",
+        "grammar": "I think you have the wrong number. / There's no one named ～ here. / Sorry to bother you.（ていねいな いいかた）",
+        "expressions": [
+          {
+            "en": "I'm sorry. I think you have the wrong number.",
+            "ja": "すみません、ばんごうを おまちがえだと おもいます。",
+            "core": true
+          },
+          {
+            "en": "There's no one named Tom here.",
+            "ja": "ここに トムという ひとは いません。"
+          },
+          {
+            "en": "Oh, sorry to bother you.",
+            "ja": "あ、おじゃまして すみません。"
+          }
+        ],
+        "testPoints": [
+          "I think you have the wrong number. で まちがい でんわに ていねいに こたえる",
+          "しらない ひとに でんわで なまえ・じゅうしょを いわない",
+          "dis（disagree・disconnect）と un（unhappy・unlock。ワールド18）を くらべる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shake your head kindly.",
+          "ja": "やさしく くびを よこに ふって。",
+          "action": "にこにこ しながら くびを ふる",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Check the number on the paper.",
+          "ja": "かみの ばんごうを たしかめて。",
+          "action": "ゆびで かみを なぞる",
+          "emoji": "📝"
+        },
+        {
+          "en": "Bow and say sorry.",
+          "ja": "おじぎを して すみませんと いって。",
+          "action": "かるく おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Put the phone down gently.",
+          "ja": "でんわを そっと おいて。",
+          "action": "そっと じゅわきを おく",
+          "emoji": "🤲"
+        }
+      ],
+      "phonics": {
+        "rule": "dis",
+        "focus": [
+          "dis-",
+          "un-"
+        ],
+        "sounds": [
+          "/dɪs/",
+          "/ʌn/"
+        ],
+        "words": [
+          "disagree",
+          "disconnect",
+          "unhappy",
+          "unlock"
+        ],
+        "tipJa": "dis も un も「はんたい」の パーツ。disagree・disconnect は dis、unhappy・unlock は un（ワールド18）。どちらが つくかは ことばごとに おぼえよう。"
+      },
+      "vocab": [
+        {
+          "en": "number",
+          "ja": "ばんごう",
+          "emoji": "🔢",
+          "core": true
+        },
+        {
+          "en": "wrong",
+          "ja": "まちがった",
+          "emoji": "❌"
+        },
+        {
+          "en": "polite",
+          "ja": "ていねいな",
+          "emoji": "🎩"
+        },
+        {
+          "en": "bother",
+          "ja": "じゃまを する",
+          "emoji": "😣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Ring, ring! Kiko picks up the phone. \"Hello, may I speak to Tom?\" Tom? There's no one named Tom in the tower. It's a wrong number! What should we say? We say it politely. I'm sorry. I think you have the wrong number. Say it with me. I'm sorry. I think you have the wrong number. Very good! Why do we say I think? It sounds softer and kinder. The caller may say, Oh, sorry to bother you. And we can say, That's okay. Goodbye. Let's read a wrong number call. \"Hello, is this Sunny Bakery?\" \"No, this is the Tower of Messages. I think you have the wrong number.\" \"Oh, sorry to bother you!\" \"That's okay. Have a nice day!\" One more important thing. If a stranger asks your name or address on the phone, don't tell them. Just say, Please wait, and get an adult. Now, phonics. Agree, disagree. Connect, disconnect. And remember u n from World 18. Happy, unhappy. Lock, unlock. Both make the opposite. Let's practice!",
+      "conversation": {
+        "scene": "Answering a wrong number politely",
+        "sceneJa": "まちがい でんわに ていねいに こたえる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's practice wrong number calls. Haru, you call. Birimo, you answer.",
+            "ja": "まちがい でんわの れんしゅうよ。ハルが かけて、ビリモが でてね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hello, may I speak to Tom, please?",
+            "ja": "もしもし、トムさんを おねがいします。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Tom? Hmm. I'm sorry. I think you have the wrong number.",
+            "ja": "トム？うーん。すみません、ばんごうを おまちがえだと おもいます。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh, sorry to bother you.",
+            "ja": "あ、おじゃまして すみません。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "That's okay. Have a nice day!",
+            "ja": "だいじょうぶです。よい いちにちを！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow, Birimo! That was very polite.",
+            "ja": "わあ、ビリモ！とても ていねいだったね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Perfect. And never tell your address to a stranger on the phone.",
+            "ja": "かんぺき。それから、でんわで しらない ひとに じゅうしょを いわないでね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が まちがい でんわを かけて くるよ。I'm sorry. I think you have the wrong number. と ていねいに こたえよう（なまえ・じゅうしょは いわなくて OK）",
+          "starterEn": "Hello! Is this the pizza shop? I'd like one big pizza, please.",
+          "targetExpressions": [
+            "I'm sorry.",
+            "I think you have the wrong number.",
+            "That's okay."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm sorry. I think you have the wrong number.",
+          "Oh, sorry to bother you. / That's okay.（しらない ひとに じゅうしょを いわない）",
+          "disagree・disconnect（dis）・unhappy・unlock（un）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 605,
+      "world": 21,
+      "title": "Are You Free on Saturday?",
+      "titleJa": "どようび あいてる？",
+      "school": {
+        "grade": "中2",
+        "topic": "Hi, it's Kiko. Are you free on Saturday?：でんわで あそびに さそう（ロールプレイ・まとめ）",
+        "grammar": "Hi, it's ～.（ともだちへの でんわ）/ Are you free on ～? / Do you want to ～? / Sounds great!",
+        "expressions": [
+          {
+            "en": "Hi, it's Kiko. Are you free on Saturday?",
+            "ja": "もしもし、キコだよ。どようび あいてる？",
+            "core": true
+          },
+          {
+            "en": "Do you want to go to the park with me?",
+            "ja": "いっしょに こうえんに いかない？"
+          },
+          {
+            "en": "Sounds great! What time?",
+            "ja": "いいね！なんじに？"
+          }
+        ],
+        "testPoints": [
+          "ともだちには Hi, it's ～. と なのる（ていねいな ときは This is ～.）",
+          "Are you free on ～? で よていを きいて さそえる",
+          "dis の まとめ（dislike・disappear・dishonest・disobey）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write the plan on the calendar.",
+          "ja": "カレンダーに よていを かいて。",
+          "action": "かべに かく ポーズ",
+          "emoji": "📅"
+        },
+        {
+          "en": "Jump for joy!",
+          "ja": "よろこんで ジャンプ！",
+          "action": "りょうてを あげて ジャンプ",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Point to Saturday.",
+          "ja": "どようびを ゆびさして。",
+          "action": "カレンダーを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Make a big OK sign.",
+          "ja": "おおきく オーケーの サインを して。",
+          "action": "りょうてで まるを つくる",
+          "emoji": "🙆"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "dis-"
+        ],
+        "sounds": [
+          "/dɪs/"
+        ],
+        "words": [
+          "dislike",
+          "disappear",
+          "dishonest",
+          "disobey"
+        ],
+        "tipJa": "dis の まとめ: dislike（きらう）・disappear（きえる）・dishonest（しょうじきで ない）・disobey（いうことを きかない）。もとの ことばの はんたいの いみ。"
+      },
+      "vocab": [
+        {
+          "en": "free",
+          "ja": "ひまな・あいている",
+          "emoji": "🆓",
+          "core": true
+        },
+        {
+          "en": "Saturday",
+          "ja": "どようび",
+          "emoji": "📆"
+        },
+        {
+          "en": "plan",
+          "ja": "よてい",
+          "emoji": "🗓️"
+        },
+        {
+          "en": "meet",
+          "ja": "あう",
+          "emoji": "🤗"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This is our first review day in Stage 3. Today, let's invite a friend on the phone. When you call a good friend, you can say, Hi, it's Kiko. It's more friendly than This is Kiko. Then ask, Are you free on Saturday? Say it with me. Hi, it's Kiko. Are you free on Saturday? Great job! Then invite your friend. Do you want to go to the park with me? Your friend can say, Sounds great! What time? Or, I'd love to, but I'm busy. Let's read a phone call between Riko and Haru. \"Hi, Haru. It's Riko.\" \"Hi, Riko! What's up?\" \"Are you free on Saturday?\" \"Yes, I am. Why?\" \"Do you want to watch the birds with me? They fly at ten in the morning.\" \"Sounds great! See you at ten!\" Remember, friends say Hi, it's Riko. For a polite call, say This is Riko. Now, phonics review. Dislike. Disappear. Dishonest. Disobey. Don't be dishonest, and don't disappear on Saturday! Ha ha. Now, call your friend!",
+      "conversation": {
+        "scene": "Inviting a friend on the phone (role-play)",
+        "sceneJa": "でんわで あそびに さそう ロールプレイ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Hi, it's Kiko. Are you free on Saturday?",
+            "ja": "もしもし、キコだよ。どようび あいてる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hi, Kiko! Yes, I am. Why?",
+            "ja": "やあ、キコ！うん、あいてるよ。どうして？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Do you want to go to the park with me? There's a kite show.",
+            "ja": "いっしょに こうえんに いかない？たこあげ ショーが あるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sounds great! What time?",
+            "ja": "いいね！なんじに？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How about ten o'clock at the tower gate?",
+            "ja": "とうの もんで 10じは どう？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Perfect. See you on Saturday!",
+            "ja": "ばっちり。どようびに ね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can I come, too? I love kites!",
+            "ja": "ぼくも いっていい？たこ だいすき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の ともだちに でんわを かけて、Are you free on ～? で よていを きいて、あそびに さそおう。なんじに あうかも きめよう（なまえは いわなくて OK）",
+          "starterEn": "Hello? Oh, hi! It's me, Riko. What's up?",
+          "targetExpressions": [
+            "Hi, it's ～.",
+            "Are you free on Saturday?",
+            "Do you want to ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Hi, it's Kiko. Are you free on Saturday?",
+          "Do you want to go to the park with me? / Sounds great! What time?",
+          "dislike・disappear・dishonest・disobey（dis ＝ はんたい）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 606,
+      "world": 21,
+      "title": "Can You Hear Me?",
+      "titleJa": "きこえる？",
+      "school": {
+        "grade": "中2",
+        "topic": "Can you hear me? ― Yes, loud and clear.：ビデオ通話を はじめる（しまに いる エマ先生と）",
+        "grammar": "Can you hear me? / Can you see me? / Yes, loud and clear. / I can hear you, but I can't see you.",
+        "expressions": [
+          {
+            "en": "Can you hear me?",
+            "ja": "わたしの こえ、きこえる？",
+            "core": true
+          },
+          {
+            "en": "Yes, loud and clear.",
+            "ja": "うん、はっきり きこえるよ。"
+          },
+          {
+            "en": "I can hear you, but I can't see you.",
+            "ja": "こえは きこえるけど、すがたが みえないよ。"
+          }
+        ],
+        "testPoints": [
+          "Can you hear me? / Can you see me? で ビデオ通話の ようすを たしかめる",
+          "ビデオ通話の マナー（カメラを みる・はっきり はなす・じゅんばんを まつ）",
+          "mis は「まちがえて」の パーツ（mistake・misspell・mishear）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wave at the camera.",
+          "ja": "カメラに てを ふって。",
+          "action": "がめんに むかって てを ふる",
+          "emoji": "📹"
+        },
+        {
+          "en": "Put your hand behind your ear.",
+          "ja": "みみの うしろに てを あてて。",
+          "action": "きこえる？の ポーズ",
+          "emoji": "👂"
+        },
+        {
+          "en": "Move closer to the screen.",
+          "ja": "がめんに ちかづいて。",
+          "action": "かおを まえに だす",
+          "emoji": "🖥️"
+        },
+        {
+          "en": "Give two thumbs up.",
+          "ja": "りょうての おやゆびを たてて。",
+          "action": "グッドを 2つ",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "mis-pre",
+        "focus": [
+          "mis-"
+        ],
+        "sounds": [
+          "/mɪs/"
+        ],
+        "words": [
+          "mistake",
+          "misspell",
+          "mishear"
+        ],
+        "tipJa": "mis は「まちがえて」の いみの パーツ。take → mistake（まちがい）、spell → misspell（つづりを まちがえる）、hear → mishear（ききまちがえる）。misspell は s が 2つ！"
+      },
+      "vocab": [
+        {
+          "en": "video call",
+          "ja": "ビデオ通話",
+          "emoji": "📹",
+          "core": true
+        },
+        {
+          "en": "hear",
+          "ja": "きこえる",
+          "emoji": "🦻"
+        },
+        {
+          "en": "loud",
+          "ja": "おおきな（こえ・おと）",
+          "emoji": "🔊"
+        },
+        {
+          "en": "clear",
+          "ja": "はっきりした",
+          "emoji": "✨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! I went back to Festival Island for a few days. I'm helping my aunt. But we can still talk. Let's make a video call! At the start of a video call, check the sound. Ask, Can you hear me? Say it with me. Can you hear me? If you can hear well, say, Yes, loud and clear. That means the sound is good. You can also ask, Can you see me? Sometimes the camera doesn't work. Then you say, I can hear you, but I can't see you. Let's read the chat message I sent you this morning. \"Hi, everyone! Let's have a video call at four o'clock today. Please sit near the window. The internet is better there. I can't wait to see your faces! From Ms. Emma\" Here are some video call manners. Look at the camera. Speak clearly. Wait for your turn. Now, phonics. Today's word part is m i s. It means wrong. Take, mistake. Spell, misspell. Hear, mishear. On a video call, people sometimes mishear words. That's okay. Just ask again. Ready? Let's start the call!",
+      "conversation": {
+        "scene": "A video call with Ms. Emma on the island",
+        "sceneJa": "とうから しまに いる エマ先生と ビデオ通話",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Hello, Ms. Emma! Can you hear me?",
+            "ja": "エマ先生、こんにちは！きこえますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, loud and clear! Can you see me?",
+            "ja": "ええ、はっきり きこえるわ！わたしが みえる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hmm. I can hear you, but I can't see you.",
+            "ja": "うーん。こえは きこえるけど、すがたが みえません。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Oh, sorry. My camera was off. How about now?",
+            "ja": "あら、ごめんなさい。カメラが きれていたわ。これで どう？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Now we can see you! Hello!",
+            "ja": "みえました！こんにちは！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ms. Emma, you're holding a big fish!",
+            "ja": "エマ先生、おおきな さかなを もってる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha. My aunt caught it this morning!",
+            "ja": "あはは。おばが けさ つったのよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビデオ通話の はじめの ロールプレイ。Can you hear me? / Can you see me? で ようすを たしかめて、きこえたら Yes, loud and clear. と こたえよう",
+          "starterEn": "Hello! This is Ms. Emma on Festival Island. Can you hear me?",
+          "targetExpressions": [
+            "Yes, loud and clear.",
+            "Can you see me?",
+            "I can hear you, but ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Can you hear me? ― Yes, loud and clear.",
+          "Can you see me? / I can hear you, but I can't see you.",
+          "mistake・misspell・mishear（mis ＝ まちがえて）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 607,
+      "world": 21,
+      "title": "You're on Mute!",
+      "titleJa": "ミュートに なってるよ！",
+      "school": {
+        "grade": "中2",
+        "topic": "You're on mute. Click the microphone.：ビデオ通話で こえが きこえない とき",
+        "grammar": "You're on mute. / Click the microphone. / Can you turn on your camera? / Now I can hear you!",
+        "expressions": [
+          {
+            "en": "You're on mute. Click the microphone.",
+            "ja": "ミュートに なってるよ。マイクを クリックして。",
+            "core": true
+          },
+          {
+            "en": "Can you turn on your camera?",
+            "ja": "カメラを つけてくれる？"
+          },
+          {
+            "en": "Now I can hear you!",
+            "ja": "これで きこえるよ！"
+          }
+        ],
+        "testPoints": [
+          "You're on mute. Click the microphone. で やさしく おしえられる",
+          "Can you turn on your camera? で たのめる",
+          "misunderstand・misplace・mistake（mis ＝ まちがえて）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put your finger on your lips.",
+          "ja": "くちびるに ゆびを あてて。",
+          "action": "しーっの ポーズ",
+          "emoji": "🤫"
+        },
+        {
+          "en": "Click the button.",
+          "ja": "ボタンを クリックして。",
+          "action": "ゆびで カチッと おす",
+          "emoji": "🖱️"
+        },
+        {
+          "en": "Turn up the volume.",
+          "ja": "おとを おおきく して。",
+          "action": "つまみを まわす ポーズ",
+          "emoji": "🎛️"
+        },
+        {
+          "en": "Open your mouth wide.",
+          "ja": "くちを おおきく あけて。",
+          "action": "あーんと くちを あける",
+          "emoji": "😮"
+        }
+      ],
+      "phonics": {
+        "rule": "mis-pre",
+        "focus": [
+          "mis-"
+        ],
+        "sounds": [
+          "/mɪs/"
+        ],
+        "words": [
+          "misunderstand",
+          "misplace",
+          "mistake"
+        ],
+        "tipJa": "mis ＝ まちがえて。understand（わかる）→ misunderstand（かんちがいする）、place（おく）→ misplace（おきわすれる）、take → mistake（まちがい）。"
+      },
+      "vocab": [
+        {
+          "en": "mute",
+          "ja": "ミュート（おとを けす）",
+          "emoji": "🔇",
+          "core": true
+        },
+        {
+          "en": "microphone",
+          "ja": "マイク",
+          "emoji": "🎤"
+        },
+        {
+          "en": "click",
+          "ja": "クリックする",
+          "emoji": "👆"
+        },
+        {
+          "en": "volume",
+          "ja": "おとの おおきさ",
+          "emoji": "🎚️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Video calls are fun, but sometimes there are problems. Look. Birimo is talking, but we can't hear anything. Why? Look at the microphone button. It has a line on it. Birimo is on mute. （mute ＝ おとが でない） We can help him. Say, You're on mute. Click the microphone. Say it with me. You're on mute. Click the microphone. Nice! If you can't see your friend, say, Can you turn on your camera? And when it works, say, Now I can hear you! Here is a video call checklist. Read it with me. \"Before the call: Turn on your camera. Check your microphone. During the call: Mute yourself when it's noisy. Click the microphone again when you want to talk. Look at the camera, not at the floor.\" Good! Being on mute is not a big mistake. It happens to everyone, even teachers! Now, phonics. Understand, misunderstand. Place, misplace. Take, mistake. Oh no, I misplaced my glasses. Where are they? Oh, they're on my head! Ha ha. Let's practice helping a friend on mute.",
+      "conversation": {
+        "scene": "Birimo is on mute in the video call",
+        "sceneJa": "ビデオ通話で ビリモの こえが きこえない",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hello, everyone! Birimo, what are you saying? I can't hear you.",
+            "ja": "みんな、こんにちは！ビリモ、なんて いってるの？きこえないわ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "(Birimo is talking, but there is no sound.)",
+            "ja": "（ビリモが はなしているけど、おとが でない）"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Birimo, you're on mute. Click the microphone.",
+            "ja": "ビリモ、ミュートに なってるよ。マイクを クリックして。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Like this? Can you hear me now?",
+            "ja": "こう？これで きこえる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes! Now I can hear you!",
+            "ja": "うん！これで きこえるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Can you turn on your camera, too? We can only see your ears!",
+            "ja": "カメラも つけてくれる？みみしか みえないよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oops! Sorry. I misunderstood the buttons.",
+            "ja": "おっと！ごめん。ボタンを かんちがいしてた。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビデオ通話で こまっている AI を たすけよう。You're on mute. / Can you turn on your camera? で やさしく おしえて、なおったら Now I can hear you! と いおう",
+          "starterEn": "Hello? Hello? Can you hear me? Everyone looks surprised. Is something wrong with my computer?",
+          "targetExpressions": [
+            "You're on mute.",
+            "Click the microphone.",
+            "Now I can hear you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You're on mute. Click the microphone.",
+          "Can you turn on your camera? / Now I can hear you!",
+          "misunderstand・misplace・mistake（mis ＝ まちがえて）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 608,
+      "world": 21,
+      "title": "The Screen Froze",
+      "titleJa": "がめんが とまっちゃった",
+      "school": {
+        "grade": "中2",
+        "topic": "The screen froze. Can you say that again?：つながりが わるい ときの いいかた（ききかえす）",
+        "grammar": "The screen froze.（freeze の 過去形）/ Can you say that again? / Sorry, you're breaking up. / Let me call you back.",
+        "expressions": [
+          {
+            "en": "The screen froze. Can you say that again?",
+            "ja": "がめんが とまっちゃった。もう いちど いってくれる？",
+            "core": true
+          },
+          {
+            "en": "Sorry, you're breaking up.",
+            "ja": "ごめん、こえが とぎれとぎれだよ。"
+          },
+          {
+            "en": "Let me call you back.",
+            "ja": "かけなおすね。"
+          }
+        ],
+        "testPoints": [
+          "The screen froze. Can you say that again? で ききかえせる（ききかえすのは しつれいでは ない）",
+          "pre は「まえに」の パーツ（preview・preschool・preheat）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Freeze like a statue!",
+          "ja": "どうぞうの ように とまって！",
+          "action": "ぴたっと うごかない",
+          "emoji": "🗿"
+        },
+        {
+          "en": "Tap the screen twice.",
+          "ja": "がめんを 2かい タップして。",
+          "action": "ゆびで トントン",
+          "emoji": "📱"
+        },
+        {
+          "en": "Say it again, slowly.",
+          "ja": "もう いちど ゆっくり いって。",
+          "action": "くちを おおきく うごかす",
+          "emoji": "🐢"
+        },
+        {
+          "en": "Wave both hands.",
+          "ja": "りょうてを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "🙋"
+        }
+      ],
+      "phonics": {
+        "rule": "mis-pre",
+        "focus": [
+          "pre-"
+        ],
+        "sounds": [
+          "/priː/"
+        ],
+        "words": [
+          "preview",
+          "preschool",
+          "preheat"
+        ],
+        "tipJa": "pre は「まえに・まえもって」の いみの パーツ。view（みる）→ preview（まえもって みる・よこく）、school → preschool（しょうがっこうの まえの ようちえん・ほいくえん）、heat → preheat（まえもって あたためる）。"
+      },
+      "vocab": [
+        {
+          "en": "screen",
+          "ja": "がめん",
+          "emoji": "🖥️",
+          "core": true
+        },
+        {
+          "en": "freeze",
+          "ja": "（がめんが）かたまる・こおる",
+          "emoji": "🧊"
+        },
+        {
+          "en": "signal",
+          "ja": "でんぱ",
+          "emoji": "📶"
+        },
+        {
+          "en": "wind",
+          "ja": "かぜ",
+          "emoji": "🌬️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, the internet in the tower is slow because of the strong wind. Look at my face on the screen. It's not moving! The screen froze. Froze is the past of freeze. When the screen freezes, you miss some words. So you say, The screen froze. Can you say that again? Say it with me. The screen froze. Can you say that again? Super! Sometimes the voice comes and goes. Then say, Sorry, you're breaking up. If it doesn't get better, say, Let me call you back. Then hang up and call again. Let's read a chat during a video call. \"Riko: Ms. Emma, the screen froze. Can you say that again? Ms. Emma: Sure. I said, The festival was wonderful. Riko: Thanks! Now I can hear you clearly.\" Asking again is good. It's not rude. Good listeners ask again! Now, phonics. P r e means before. View, preview. School, preschool. Heat, preheat. Before a video call, you can preview your camera. Then you can check your face and your room. Let's practice!",
+      "conversation": {
+        "scene": "The video call freezes in the wind",
+        "sceneJa": "かぜで ビデオ通話が とまる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "So, tomorrow I'm going to come back and...",
+            "ja": "それで、あした わたしは もどって…"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ms. Emma? The screen froze. Can you say that again?",
+            "ja": "エマ先生？がめんが とまっちゃいました。もう いちど いってくれますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Sure. I said, I'm going to come back to the tower tomorrow.",
+            "ja": "いいわよ。あした とうに もどるって いったのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry, you're breaking up. Your voice is coming and going.",
+            "ja": "ごめんなさい、こえが とぎれとぎれです。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let me call you back.",
+            "ja": "かけなおすわね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ring, ring! It's Ms. Emma again! Hello?",
+            "ja": "リンリン！また エマ先生だ！もしもし？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yay! Now the picture is clear!",
+            "ja": "やった！こんどは がめんが きれい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "つながりが わるい ビデオ通話の ロールプレイ。きこえない ところが あったら The screen froze. Can you say that again? / Sorry, you're breaking up. で ききかえそう",
+          "starterEn": "Hi! Today I ... the ... at the ... Hmm, can you hear me?",
+          "targetExpressions": [
+            "The screen froze.",
+            "Can you say that again?",
+            "Sorry, you're breaking up."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The screen froze. Can you say that again?",
+          "Sorry, you're breaking up. / Let me call you back.",
+          "preview・preschool・preheat（pre ＝ まえに）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 609,
+      "world": 21,
+      "title": "Let Me Show You My Room",
+      "titleJa": "へやを みせるね",
+      "school": {
+        "grade": "中2",
+        "topic": "Let me show you my room.：ビデオ通話で へやを あんないする（ばしょの いいかた）",
+        "grammar": "Let me show you ～. / On the left (right), there's ～. / Next to the ～, there's ～. / This is my favorite ～.",
+        "expressions": [
+          {
+            "en": "Let me show you my room.",
+            "ja": "ぼくの へやを みせるね。",
+            "core": true
+          },
+          {
+            "en": "On the left, there's a big bookshelf.",
+            "ja": "ひだりに おおきな ほんだなが あるよ。"
+          },
+          {
+            "en": "This is my favorite poster.",
+            "ja": "これが おきにいりの ポスターだよ。"
+          }
+        ],
+        "testPoints": [
+          "Let me show you ～. で ビデオ通話で へやを あんないできる",
+          "On the left / On the right / Next to で ばしょを せつめいできる",
+          "mis と pre を くらべる（mistake・preview・misspell・pretest）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn the camera around.",
+          "ja": "カメラを くるっと まわして。",
+          "action": "てを くるっと まわす",
+          "emoji": "🔄"
+        },
+        {
+          "en": "Point to the left.",
+          "ja": "ひだりを ゆびさして。",
+          "action": "ひだりを さす",
+          "emoji": "⬅️"
+        },
+        {
+          "en": "Point to the right.",
+          "ja": "みぎを ゆびさして。",
+          "action": "みぎを さす",
+          "emoji": "➡️"
+        },
+        {
+          "en": "Hold up your favorite thing.",
+          "ja": "おきにいりの ものを みせて。",
+          "action": "りょうてで もちあげる",
+          "emoji": "🧸"
+        }
+      ],
+      "phonics": {
+        "rule": "mis-pre",
+        "focus": [
+          "mis-",
+          "pre-"
+        ],
+        "sounds": [
+          "/mɪs/",
+          "/priː/"
+        ],
+        "words": [
+          "mistake",
+          "preview",
+          "misspell",
+          "pretest"
+        ],
+        "tipJa": "mis（まちがえて）と pre（まえに）。mistake・misspell は mis、preview・pretest（まえの テスト）は pre。パーツの いみで ことばの いみが わかるよ。"
+      },
+      "vocab": [
+        {
+          "en": "show",
+          "ja": "みせる",
+          "emoji": "👀",
+          "core": true
+        },
+        {
+          "en": "bookshelf",
+          "ja": "ほんだな",
+          "emoji": "📚"
+        },
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "corner",
+          "ja": "すみ",
+          "emoji": "📐"
+        }
+      ],
+      "teacherScript": "Hello, everyone! I'm still on Festival Island, so let's have a video call again. Today, let's show our rooms on the video call. You can say, Let me show you my room. Say it with me. Let me show you my room. Great! Let me means I will do it for you. Then move your camera slowly and explain. On the left, there's a big bookshelf. On the right, there's a window. This is my favorite poster. Let's read what Haru said on his video call. \"Let me show you my room in the tower. On the left, there's a bed. Next to the bed, there's a small desk. On the desk, there's a lamp shaped like a bird. In the corner, there's a big map. This is my favorite thing. It's a map of all the worlds!\" Wonderful! One more tip. Before you show your room on a video call, check the camera. Don't show letters with your address, or family photos, to people you don't know. Now, phonics. Mistake. Misspell. Preview. Pretest. M i s means wrong. P r e means before. Let's show our rooms!",
+      "conversation": {
+        "scene": "Showing rooms on a video call",
+        "sceneJa": "ビデオ通話で へやを みせあう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Ms. Emma, let me show you my room in the tower.",
+            "ja": "エマ先生、とうの ぼくの へやを みせますね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Oh, I'd love to see it!",
+            "ja": "まあ、ぜひ みたいわ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "On the left, there's a big bookshelf. On the right, there's my bed.",
+            "ja": "ひだりに おおきな ほんだな。みぎに ベッドが あります。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What's that on the wall?",
+            "ja": "かべの それは なに？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This is my favorite poster. It's a map of all the worlds!",
+            "ja": "おきにいりの ポスターです。ぜんぶの ワールドの ちずなんです！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let me show you my room, too! Oops, it's a big mess.",
+            "ja": "ぼくの へやも みせるね！あっ、ちらかってる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Birimo, your room is in disorder!",
+            "ja": "あはは！ビリモの へや、ちらかってるね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビデオ通話で じぶんの へや（または すきな へや・そうぞうの へや）を あんないしよう。Let me show you ～. / On the left, there's ～. を つかおう（じゅうしょが わかる ものは みせない・いわなくて OK）",
+          "starterEn": "Hi! I'm in my room in the tower now. Can you show me your room? What's in it?",
+          "targetExpressions": [
+            "Let me show you my room.",
+            "On the left, there's ～.",
+            "This is my favorite ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let me show you my room.",
+          "On the left, there's a big bookshelf. / This is my favorite poster.",
+          "mistake・misspell（mis）・preview・pretest（pre）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 610,
+      "world": 21,
+      "title": "What Time Is It There?",
+      "titleJa": "そっちは なんじ？",
+      "school": {
+        "grade": "中2",
+        "topic": "What time is it there? ― It's nine at night.：じさの ある ビデオ通話（とおい くにの ともだち・まとめ）",
+        "grammar": "What time is it there? / It's ～ here. / It's nine at night. / Really?（じさを たずねる）",
+        "expressions": [
+          {
+            "en": "What time is it there?",
+            "ja": "そっちは いま なんじ？",
+            "core": true
+          },
+          {
+            "en": "It's nine at night. It's dark here.",
+            "ja": "よるの 9じだよ。こっちは くらいよ。"
+          },
+          {
+            "en": "Really? It's nine in the morning here.",
+            "ja": "ほんと？こっちは あさの 9じだよ。"
+          }
+        ],
+        "testPoints": [
+          "What time is it there? で じさを たずねられる",
+          "It's ～ here. で こちらの ようすを つたえる",
+          "dis・mis・pre の まとめ（dislike・mishear・prepay・misunderstand）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Yawn and stretch.",
+          "ja": "あくびを して のびを して。",
+          "action": "おおきく のび",
+          "emoji": "🥱"
+        },
+        {
+          "en": "Point to the sun.",
+          "ja": "おひさまを ゆびさして。",
+          "action": "うえを さす",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Point to the moon.",
+          "ja": "おつきさまを ゆびさして。",
+          "action": "よぞらを さす",
+          "emoji": "🌙"
+        },
+        {
+          "en": "Spin the globe.",
+          "ja": "ちきゅうぎを まわして。",
+          "action": "てで くるくる まわす",
+          "emoji": "🌍"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "dis-",
+          "mis-",
+          "pre-"
+        ],
+        "sounds": [
+          "/dɪs/",
+          "/mɪs/",
+          "/priː/"
+        ],
+        "words": [
+          "dislike",
+          "mishear",
+          "prepay",
+          "misunderstand"
+        ],
+        "tipJa": "パーツの まとめ: dis（はんたい）dislike、mis（まちがえて）mishear・misunderstand、pre（まえに）prepay（さきに はらう）。"
+      },
+      "vocab": [
+        {
+          "en": "time difference",
+          "ja": "じさ",
+          "emoji": "🕘",
+          "core": true
+        },
+        {
+          "en": "country",
+          "ja": "くに",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "dark",
+          "ja": "くらい",
+          "emoji": "🌑"
+        },
+        {
+          "en": "evening",
+          "ja": "ゆうがた・よる",
+          "emoji": "🌆"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The world is big. When it's morning in one country, it's night in another country. This is called the time difference. Today, Birimo will play a friend in a faraway country. When you call a friend far away, ask, What time is it there? Say it with me. What time is it there? Excellent! Your friend may say, It's nine at night. It's dark here. And you can say, Really? It's nine in the morning here. Let's read a message from a faraway friend. \"Hi! It's eight in the evening here. I just finished dinner. What time is it there? Is it morning? Let's have a video call this weekend. Saturday morning for you is Friday night for me!\" Isn't that interesting? Before you call someone far away, check the time. Don't call when your friend is sleeping! Now, phonics review. Dislike. Mishear. Prepay. Misunderstand. D i s, opposite. M i s, wrong. P r e, before. On a long-distance call, it's easy to mishear. So speak clearly. Great job this week!",
+      "conversation": {
+        "scene": "A video call with a friend in a faraway country (Birimo plays the friend)",
+        "sceneJa": "とおい くにの ともだちと じさの ある ビデオ通話（ビリモが ともだちの やく）",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Hello! I'm Bobo from a faraway country. Can you hear me?",
+            "ja": "こんにちは！とおい くにの ボボだよ。きこえる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hi, Bobo! Yes, loud and clear. What time is it there?",
+            "ja": "やあ、ボボ！うん、はっきり きこえるよ。そっちは いま なんじ？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's nine at night. It's dark here.",
+            "ja": "よるの 9じ。こっちは くらいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really? It's nine in the morning here. The sun is bright!",
+            "ja": "ほんと？こっちは あさの 9じ。おひさまが まぶしいよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Bobo, are you going to bed soon?",
+            "ja": "ボボ、もうすぐ ねるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes. I'm wearing my pajamas! Good night!",
+            "ja": "うん。パジャマを きてるよ！おやすみ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Good morning and good night!",
+            "ja": "あはは！おはようと おやすみ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "とおい くにの ともだち（AI）と ビデオ通話。What time is it there? と きいて、こちらの じかんと ようすも It's ～ here. で つたえよう",
+          "starterEn": "Hi! I'm calling from a faraway country. It's very late here, and the stars are out. What time is it there?",
+          "targetExpressions": [
+            "What time is it there?",
+            "It's ～ here.",
+            "Really?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What time is it there? ― It's nine at night.",
+          "It's dark here. / Really? It's nine in the morning here.",
+          "dislike・mishear・prepay・misunderstand"
+        ]
+      }
+    },
+    {
+      "lessonNo": 611,
+      "world": 21,
+      "title": "Can I Take a Message?",
+      "titleJa": "でんごんを うけましょうか？",
+      "school": {
+        "grade": "中2",
+        "topic": "She's out right now. Can I take a message?：とうの でんごんセンターで でんわを うける",
+        "grammar": "She's out right now. / Can I take a message? / Sure. I'll tell her.（でんごんを うける）",
+        "expressions": [
+          {
+            "en": "She's out right now. Can I take a message?",
+            "ja": "かのじょは いま でかけて います。でんごんを うけましょうか？",
+            "core": true
+          },
+          {
+            "en": "Yes, please. The bird show starts at five.",
+            "ja": "はい、おねがいします。とりの ショーは 5じからです。"
+          },
+          {
+            "en": "Sure. I'll tell her.",
+            "ja": "わかりました。つたえておきます。"
+          }
+        ],
+        "testPoints": [
+          "She's out right now. Can I take a message? で でんごんを うけられる",
+          "でんごんメモの 4つ（あてさき・だれから・じかん・でんごん）",
+          "tele は「とおく」の パーツ（telephone・telescope・television）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write a note quickly.",
+          "ja": "はやく メモを かいて。",
+          "action": "てで さらさら かく",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Hold the phone with your shoulder.",
+          "ja": "かたで でんわを はさんで。",
+          "action": "くびを かたむける",
+          "emoji": "🤳"
+        },
+        {
+          "en": "Put the note on the board.",
+          "ja": "メモを ボードに はって。",
+          "action": "ぺたっと はる",
+          "emoji": "📌"
+        },
+        {
+          "en": "Look out the window.",
+          "ja": "まどの そとを みて。",
+          "action": "てを おでこに あてて とおくを みる",
+          "emoji": "🪟"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "tele-"
+        ],
+        "sounds": [
+          "/ˈtelə/"
+        ],
+        "words": [
+          "telephone",
+          "telescope",
+          "television"
+        ],
+        "tipJa": "tele は「とおく」の いみの パーツ（ギリシャ語から）。telephone（とおくの おと＝でんわ）・telescope（とおくを みる どうぐ＝ぼうえんきょう）・television（とおくを みる＝テレビ）。"
+      },
+      "vocab": [
+        {
+          "en": "note",
+          "ja": "メモ",
+          "emoji": "📝",
+          "core": true
+        },
+        {
+          "en": "out",
+          "ja": "でかけている",
+          "emoji": "🚶"
+        },
+        {
+          "en": "right now",
+          "ja": "いま",
+          "emoji": "⏰"
+        },
+        {
+          "en": "tell",
+          "ja": "つたえる",
+          "emoji": "📣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! I'm back from the island! Thank you for all the video calls. Today, we are working at the Message Center on the fifth floor. Many people call here. Sometimes the person they want is not here. Then we say, She's out right now. Can I take a message? Say it with me. She's out right now. Can I take a message? Perfect! Out means not at home, or not here. Take a message means write down the words for someone. The caller says, Yes, please, and gives the message. You write a note and say, Sure. I'll tell her. Look at this message note. Let's read it. \"Message for: Riko. From: Kiko. Time: 3:15. Message: The bird show starts at five. Please come to the top floor.\" A good message note has four things: who it's for, who it's from, the time, and the message. Now, phonics. T e l e means far. Telephone. Phone means sound, so a telephone carries sound from far away. Telescope. You can see far stars with it. Television. You can see pictures from far away. Let's take messages!",
+      "conversation": {
+        "scene": "Taking a phone message at the Message Center",
+        "sceneJa": "でんごんセンターで でんわを うける",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Hello, Message Center. This is Haru speaking.",
+            "ja": "はい、でんごんセンターです。ハルです。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hi, Haru. This is Kiko. May I speak to Riko?",
+            "ja": "ハル、キコだよ。リコは いる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry, she's out right now. Can I take a message?",
+            "ja": "ごめん、リコは いま でかけているよ。でんごんを うけようか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, please. The bird show starts at five. Please come to the top floor.",
+            "ja": "おねがい。とりの ショーは 5じから。いちばん うえの かいに きてね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Five o'clock, top floor. Sure. I'll tell her.",
+            "ja": "5じ、いちばん うえの かいだね。わかった。つたえておくよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great note, Haru! For, from, time and message. All four!",
+            "ja": "いい メモね、ハル！あてさき・だれから・じかん・でんごん。4つ ぜんぶ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "でんごんセンターの ロールプレイ。AI が でんわを かけて くるので、She's out right now. Can I take a message? と こたえて、でんごんを きき、さいごに Sure. I'll tell her. と いおう",
+          "starterEn": "Hello! This is Birimo. May I speak to Ms. Emma, please?",
+          "targetExpressions": [
+            "She's out right now.",
+            "Can I take a message?",
+            "Sure. I'll tell her."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "She's out right now. Can I take a message?",
+          "Yes, please. / Sure. I'll tell her.（メモは あてさき・だれから・じかん・でんごん）",
+          "telephone・telescope・television（tele ＝ とおく）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 612,
+      "world": 21,
+      "title": "Could You Tell Her…?",
+      "titleJa": "つたえて もらえますか？",
+      "school": {
+        "grade": "中2",
+        "topic": "Could you tell her to call me back?：でんごんを たのむ（ていねいな おねがい）",
+        "grammar": "Could you tell her to ～? / Could you tell him (that) ～? / No problem.（たのむ ていねいな いいかた）",
+        "expressions": [
+          {
+            "en": "Could you tell her to call me back?",
+            "ja": "おりかえし でんわするよう つたえて もらえますか？",
+            "core": true
+          },
+          {
+            "en": "Could you tell him the party is at six?",
+            "ja": "パーティーは 6じだと かれに つたえて もらえますか？"
+          },
+          {
+            "en": "No problem. I'll tell her.",
+            "ja": "いいですよ。つたえておきます。"
+          }
+        ],
+        "testPoints": [
+          "Could you tell her to call me back? で でんごんを ていねいに たのめる",
+          "phone は「おと・こえ」の パーツ（microphone・headphones・smartphone・xylophone）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your headphones.",
+          "ja": "ヘッドホンを つけて。",
+          "action": "りょうみみを てで おおう",
+          "emoji": "🎧"
+        },
+        {
+          "en": "Sing into the microphone.",
+          "ja": "マイクで うたって。",
+          "action": "マイクを もつ ポーズで うたう",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Play the xylophone.",
+          "ja": "もっきんを たたいて。",
+          "action": "バチで たたく まね",
+          "emoji": "🎶"
+        },
+        {
+          "en": "Call me back!",
+          "ja": "かけなおして！",
+          "action": "てで でんわの かたちを つくる",
+          "emoji": "🤙"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "phone"
+        ],
+        "sounds": [
+          "/foʊn/"
+        ],
+        "words": [
+          "microphone",
+          "headphones",
+          "smartphone",
+          "xylophone"
+        ],
+        "tipJa": "phone は「おと・こえ」の いみの パーツ。microphone（ちいさな おとを おおきく する マイク）・headphones（あたまに つける おとの どうぐ）・smartphone・xylophone（き の おと＝もっきん）。ph は f の おと！"
+      },
+      "vocab": [
+        {
+          "en": "call back",
+          "ja": "かけなおす",
+          "emoji": "🔙",
+          "core": true
+        },
+        {
+          "en": "later",
+          "ja": "あとで",
+          "emoji": "🕒"
+        },
+        {
+          "en": "party",
+          "ja": "パーティー",
+          "emoji": "🎉"
+        },
+        {
+          "en": "favor",
+          "ja": "おねがい",
+          "emoji": "🙏"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Yesterday, we took messages. Today, let's ask someone to give a message. When the person you want is out, you can say, Could you tell her to call me back? Say it with me. Could you tell her to call me back? Very good! Could you is a polite way to ask a favor. Tell her to call me back means please ask her to call me later. For a boy, say tell him. You can also say, Could you tell him the party is at six? The other person says, No problem. I'll tell her. Let's read a phone call. \"Hello, this is Riko. May I speak to Ms. Emma?\" \"Sorry, she's out right now.\" \"Oh, okay. Could you tell her to call me back? I have a question about the bird show.\" \"No problem. I'll tell her.\" \"Thank you. Bye!\" Remember to say thank you. Now, phonics. P h o n e means sound or voice. And p h says f! Microphone. Micro means small. A microphone makes small sounds big. Headphones. Smartphone. Xylophone. Xylo means wood. A xylophone makes wooden sounds. Let's practice asking a favor!",
+      "conversation": {
+        "scene": "Asking someone to pass on a message",
+        "sceneJa": "でんごんを たのむ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Hello, this is Riko. May I speak to Ms. Emma?",
+            "ja": "もしもし、リコです。エマ先生は いますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sorry, she's out right now. She's at the bird show.",
+            "ja": "ごめん、いま でかけてる。とりの ショーに いってるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh, okay. Could you tell her to call me back?",
+            "ja": "そっか。おりかえし でんわするよう つたえて もらえる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No problem. I'll tell her.",
+            "ja": "いいよ。つたえておくね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And could you tell her the paint is ready?",
+            "ja": "それから、えのぐの じゅんびが できたって つたえて くれる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Call back, and the paint is ready. Got it! I'll write it down.",
+            "ja": "かけなおす、えのぐ じゅんび OK。わかった！メモするね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you, Birimo. Bye!",
+            "ja": "ありがとう、ビリモ。じゃあね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が でんわに でるけど、あいては いないよ。Could you tell her to call me back? / Could you tell her ～? で でんごんを たのもう",
+          "starterEn": "Hello, this is Haru at the Message Center. Sorry, Kiko is out right now. Can I take a message?",
+          "targetExpressions": [
+            "Could you tell her to call me back?",
+            "Could you tell her ～?",
+            "Thank you."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Could you tell her to call me back?",
+          "Could you tell him the party is at six? / No problem. I'll tell her.",
+          "microphone・headphones・smartphone・xylophone（phone ＝ おと）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 613,
+      "world": 21,
+      "title": "He Said He Was Busy",
+      "titleJa": "いそがしいって いってたよ",
+      "school": {
+        "grade": "中2",
+        "topic": "He said he was busy.：たのまれた でんごんを つたえる（He said ～.）",
+        "grammar": "He said (that) he was ～. / She said she would ～.（said の あとは すぎた かたち: is → was、will → would）/ ～ called you.",
+        "expressions": [
+          {
+            "en": "He said he was busy.",
+            "ja": "かれは いそがしいって いってたよ。",
+            "core": true
+          },
+          {
+            "en": "Kiko called you. She said she would call back later.",
+            "ja": "キコから でんわが あったよ。あとで かけなおすって。"
+          },
+          {
+            "en": "Thanks for telling me.",
+            "ja": "おしえてくれて ありがとう。"
+          }
+        ],
+        "testPoints": [
+          "He said he was busy. で きいた ことを つたえられる（am / is → was、will → would）",
+          "graph は「かく・えがく」の パーツ（photograph・autograph・paragraph・graphic）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Whisper the message.",
+          "ja": "でんごんを ささやいて。",
+          "action": "てを くちに あてて ひそひそ",
+          "emoji": "👄"
+        },
+        {
+          "en": "Sign your autograph.",
+          "ja": "サインを かいて。",
+          "action": "ゆびで くるくる サイン",
+          "emoji": "✒️"
+        },
+        {
+          "en": "Take a photo.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえる",
+          "emoji": "📷"
+        },
+        {
+          "en": "Nod your head.",
+          "ja": "うなずいて。",
+          "action": "こくこく うなずく",
+          "emoji": "😌"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "graph"
+        ],
+        "sounds": [
+          "/ɡræf/"
+        ],
+        "words": [
+          "photograph",
+          "autograph",
+          "paragraph",
+          "graphic"
+        ],
+        "tipJa": "graph は「かく・えがく」の いみの パーツ。photograph（ひかりで えがく＝しゃしん）・autograph（じぶんで かく＝サイン）・paragraph（ぶんしょうの だんらく）・graphic（えや ずの）。ph は f の おと。"
+      },
+      "vocab": [
+        {
+          "en": "busy",
+          "ja": "いそがしい",
+          "emoji": "🏃",
+          "core": true
+        },
+        {
+          "en": "pass on",
+          "ja": "（でんごんを）つたえる",
+          "emoji": "🗨️"
+        },
+        {
+          "en": "famous",
+          "ja": "ゆうめいな",
+          "emoji": "🌟"
+        },
+        {
+          "en": "singer",
+          "ja": "かしゅ",
+          "emoji": "🎵"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Yesterday, Riko asked Birimo to give me a message. Today, let's learn how to pass on a message. Haru says, I am busy. Later, you tell me, He said he was busy. Say it with me. He said he was busy. Wonderful! After said, we often use the past form. Am and is become was. Will becomes would. Kiko says, I will call back. You tell Riko, Kiko called you. She said she would call back later. Riko can answer, Thanks for telling me. Let's read Birimo's message for me. \"Ms. Emma, Riko called you at two. She said she had a question about the bird show. She said the paint was ready. Please call her back. From Birimo.\" Thank you, Birimo! That's a perfect message. Now, phonics. G r a p h means write or draw. Photograph. Photo means light. A photograph is a picture drawn with light! Autograph. Auto means self. An autograph is your name written by yourself. Paragraph. Graphic. Let's pass on messages!",
+      "conversation": {
+        "scene": "Passing on a message",
+        "sceneJa": "たのまれた でんごんを つたえる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Ms. Emma! Riko called you. She said she had a question.",
+            "ja": "エマ先生！リコから でんわが あったよ。しつもんが あるって。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thank you, Birimo. Anything else?",
+            "ja": "ありがとう、ビリモ。ほかには？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "She said the paint was ready.",
+            "ja": "えのぐの じゅんびが できたって。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thanks for telling me. Where's Haru? I wanted to ask him for help.",
+            "ja": "おしえてくれて ありがとう。ハルは どこ？てつだって ほしかったの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I asked him. He said he was busy. He's getting an autograph from a famous bird singer!",
+            "ja": "わたしが きいたよ。いそがしいって いってた。ゆうめいな とりの かしゅに サインを もらってるの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look! I got her autograph! She said she would sing at the top of the tower tonight!",
+            "ja": "みて！サインを もらったよ！こんや とうの てっぺんで うたうって！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "How exciting! Let's all go!",
+            "ja": "すてきね！みんなで いきましょう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に たのまれた でんごんを つたえる れんしゅう。～ called you. / She said she was ～. / He said he would ～. で つたえよう",
+          "starterEn": "Hi! Did anyone call me today? I was out all morning.",
+          "targetExpressions": [
+            "～ called you.",
+            "She said she was ～.",
+            "He said he would ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "He said he was busy.",
+          "Kiko called you. She said she would call back later. / Thanks for telling me.",
+          "photograph・autograph・paragraph・graphic（graph ＝ かく）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 614,
+      "world": 21,
+      "title": "Message Relay",
+      "titleJa": "でんごんリレー",
+      "school": {
+        "grade": "中2",
+        "topic": "Riko says the bus leaves at nine.：とうの なかで でんごんリレー ゲーム（～ says ～. で いま つたえる）",
+        "grammar": "～ says (that) ～.（いま つたえる）/ ～ said (that) ～.（まえに いった）/ Pass it on.",
+        "expressions": [
+          {
+            "en": "Riko says the bus leaves at nine.",
+            "ja": "リコが、バスは 9じに でるって いってるよ。",
+            "core": true
+          },
+          {
+            "en": "Pass it on to the next person.",
+            "ja": "つぎの ひとに つたえて。"
+          },
+          {
+            "en": "Did you hear the message right?",
+            "ja": "でんごんを ちゃんと きけた？"
+          }
+        ],
+        "testPoints": [
+          "～ says ～. で いま きいた ことを つぎの ひとに つたえられる（said との ちがい）",
+          "photo（ひかり）の パーツと tele・phone・graph の まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand in a line.",
+          "ja": "1れつに ならんで。",
+          "action": "まえの ひとの うしろに ならぶ",
+          "emoji": "🚌"
+        },
+        {
+          "en": "Whisper to the next person.",
+          "ja": "つぎの ひとに ささやいて。",
+          "action": "となりの ひとの みみに てを あてる",
+          "emoji": "🙊"
+        },
+        {
+          "en": "Say the message out loud.",
+          "ja": "でんごんを おおきな こえで いって。",
+          "action": "むねを はって いう",
+          "emoji": "📢"
+        },
+        {
+          "en": "Clap if it's right!",
+          "ja": "あっていたら てを たたいて！",
+          "action": "パチパチ はくしゅ",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "word-parts",
+        "focus": [
+          "photo-",
+          "tele-",
+          "phone",
+          "graph"
+        ],
+        "sounds": [
+          "/ˈfoʊtoʊ/",
+          "/ˈtelə/",
+          "/foʊn/",
+          "/ɡræf/"
+        ],
+        "words": [
+          "photographer",
+          "photocopy",
+          "telephone",
+          "autograph"
+        ],
+        "tipJa": "photo は「ひかり」の パーツ。photographer（しゃしんか）・photocopy（ひかりで うつす コピー）。tele（とおく）telephone・graph（かく）autograph も いっしょに。"
+      },
+      "vocab": [
+        {
+          "en": "relay",
+          "ja": "リレー",
+          "emoji": "🔀",
+          "core": true
+        },
+        {
+          "en": "line",
+          "ja": "れつ",
+          "emoji": "🧵"
+        },
+        {
+          "en": "leave",
+          "ja": "しゅっぱつする",
+          "emoji": "🛫"
+        },
+        {
+          "en": "right",
+          "ja": "ただしい",
+          "emoji": "✅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, let's play a game. It's called Message Relay. We stand in a line. The first person whispers a message. Then each person passes it on. The last person says the message out loud. Is it the same? Let's see! When you pass on a message right now, use says. Riko says the bus leaves at nine. Say it with me. Riko says the bus leaves at nine. Great! Use says for a message you are passing on now. Use said for something a person said before. Let's read the game rules. \"Message Relay Rules. One. Listen carefully. Two. Whisper the message to the next person only once. Three. Start with, Riko says. Four. The last person says the message to everyone. Five. Laugh together if it changes!\" Sometimes messages change. That's why we check. Did you hear the message right? Now, phonics. P h o t o means light. Photographer. Photocopy. Let's review the other parts, too. Telephone. Tele means far. Autograph. Graph means write. Ready? Let's play!",
+      "conversation": {
+        "scene": "Playing Message Relay in the tower",
+        "sceneJa": "とうの なかで でんごんリレー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "The first message is from Riko. Riko, whisper it to Haru.",
+            "ja": "さいしょの でんごんは リコから。リコ、ハルに ささやいて。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "(whispering) The bus leaves at nine.",
+            "ja": "（ひそひそ）バスは 9じに でるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Kiko, Riko says the bus leaves at nine.",
+            "ja": "キコ、リコが バスは 9じに でるって。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Birimo, Riko says the bus leaves at... nine? No, at night?",
+            "ja": "ビリモ、リコが バスは…9じ？ちがう、よるに でるって。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Everyone! Riko says the bananas leave at night!",
+            "ja": "みんな！リコが バナナは よるに でかけるって！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha! No! I said the bus leaves at nine!",
+            "ja": "あはは！ちがうよ！バスは 9じに でるって いったの！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Did you hear the message right? That's why we check messages!",
+            "ja": "でんごんを ちゃんと きけた？だから でんごんは たしかめるのよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "でんごんリレー。AI から きいた でんごんを ～ says ～. の かたちで つぎの ひとに つたえて、ただしいか たしかめよう",
+          "starterEn": "Let's play Message Relay! Here's the message from Kiko: The bird show starts at five on the top floor. Now, pass it on to Haru. What do you say?",
+          "targetExpressions": [
+            "～ says ～.",
+            "Pass it on.",
+            "Did you hear the message right?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Riko says the bus leaves at nine.",
+          "Pass it on to the next person. / Did you hear the message right?（says ＝ いま つたえる、said ＝ まえに いった）",
+          "photographer・photocopy（photo ＝ ひかり）・telephone・autograph"
+        ]
+      }
+    },
+    {
+      "lessonNo": 615,
+      "world": 21,
+      "title": "A Day at the Message Center",
+      "titleJa": "でんごんセンターの 1にち",
+      "school": {
+        "grade": "中2",
+        "topic": "Here's a message for you.：でんごんセンターで はたらく 1にち（でんわと でんごんの まとめ）",
+        "grammar": "Here's a message for you. / ～ called. ～ said ～. / Can I take a message? / Could you tell ～?（まとめ）",
+        "expressions": [
+          {
+            "en": "Here's a message for you.",
+            "ja": "あなたに でんごんが あるよ。",
+            "core": true
+          },
+          {
+            "en": "Ms. Emma called. She said the meeting was at four.",
+            "ja": "エマ先生から でんわが あったよ。かいぎは 4じだって。"
+          },
+          {
+            "en": "Thank you for the message.",
+            "ja": "でんごん ありがとう。"
+          }
+        ],
+        "testPoints": [
+          "Here's a message for you. で メモを わたして、～ said ～. で つたえられる",
+          "でんわの いいかたの まとめ（Hold on, please. / Can I take a message? / Could you tell her ～?）",
+          "tele・phone・graph・photo の まとめ（telephone・microphone・autograph・photographer）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hand over the message.",
+          "ja": "でんごんを わたして。",
+          "action": "りょうてで さしだす",
+          "emoji": "📄"
+        },
+        {
+          "en": "Sort the letters into boxes.",
+          "ja": "てがみを はこに わけて。",
+          "action": "みぎ ひだりに わける",
+          "emoji": "🗃️"
+        },
+        {
+          "en": "Stamp the envelope.",
+          "ja": "ふうとうに スタンプを おして。",
+          "action": "ポンと おす",
+          "emoji": "📮"
+        },
+        {
+          "en": "Stretch after work.",
+          "ja": "しごとの あとに のびを して。",
+          "action": "りょうてを うえに のばす",
+          "emoji": "💪"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "tele-",
+          "phone",
+          "graph",
+          "photo-"
+        ],
+        "sounds": [
+          "/ˈtelə/",
+          "/foʊn/",
+          "/ɡræf/",
+          "/ˈfoʊtoʊ/"
+        ],
+        "words": [
+          "telephone",
+          "microphone",
+          "autograph",
+          "photographer"
+        ],
+        "tipJa": "ことばの パーツの まとめ: tele（とおく）telephone、phone（おと）microphone、graph（かく）autograph、photo（ひかり）photographer。"
+      },
+      "vocab": [
+        {
+          "en": "job",
+          "ja": "しごと",
+          "emoji": "💼",
+          "core": true
+        },
+        {
+          "en": "envelope",
+          "ja": "ふうとう",
+          "emoji": "📩"
+        },
+        {
+          "en": "stamp",
+          "ja": "きって・スタンプ",
+          "emoji": "🏷️"
+        },
+        {
+          "en": "worker",
+          "ja": "はたらく ひと",
+          "emoji": "👷"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is a review day. We will work at the Message Center for one whole day. Let's go! In the morning, the phone rings. Hello, Message Center. Can I take a message? In the afternoon, we give the messages to people. Here's a message for you. Say it with me. Here's a message for you. Great! Then tell the message. Ms. Emma called. She said the meeting was at four. The person says, Thank you for the message. Let's read the Message Center diary. \"Today was busy! In the morning, Kiko answered ten calls. Haru took five messages. Birimo sorted the letters, but he dropped some. Riko delivered the messages to every floor. In the evening, we were tired, but happy. Our job is important. Messages connect people!\" Wonderful. Remember the words from this week. Hold on, please. Could you tell her to call me back? He said he was busy. Now, phonics review. Telephone. Microphone. Autograph. Photographer. Tele, far. Phone, sound. Graph, write. Photo, light. You did a great job today!",
+      "conversation": {
+        "scene": "A busy day at the Message Center",
+        "sceneJa": "でんごんセンターの いそがしい 1にち",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Kiko, here's a message for you.",
+            "ja": "キコ、あなたに でんごんが あるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thank you for the message. Who's it from?",
+            "ja": "でんごん ありがとう。だれから？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ms. Emma called. She said the meeting was at four.",
+            "ja": "エマ先生から でんわが あったよ。かいぎは 4じだって。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Four? Oh no, it's almost four now!",
+            "ja": "4じ？たいへん、もうすぐ 4じだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Birimo, did you sort the letters?",
+            "ja": "ビリモ、てがみ わけた？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes! But I dropped some. Here they are.",
+            "ja": "うん！でも いくつか おとしちゃった。はい、これ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thank you, everyone. Messages connect people. Great job today!",
+            "ja": "みんな ありがとう。でんごんは ひとと ひとを つなぐのよ。きょうは よく がんばったわね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "でんごんセンターの しごとの まとめ。AI に Here's a message for you. と メモを わたして、～ called. ～ said ～. で でんごんを つたえよう（なまえは いわなくて OK）",
+          "starterEn": "Hi! I just came back to the tower. Are there any messages for me?",
+          "targetExpressions": [
+            "Here's a message for you.",
+            "～ called.",
+            "She said ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Here's a message for you.",
+          "Ms. Emma called. She said the meeting was at four. / Thank you for the message.",
+          "telephone・microphone・autograph・photographer"
+        ]
+      }
+    },
+    {
+      "lessonNo": 616,
+      "world": 21,
+      "title": "What Were You Doing?",
+      "titleJa": "なにを していたの？",
+      "school": {
+        "grade": "中2",
+        "topic": "What were you doing at seven?：とうの おやつの パイが きえた！（過去進行形の はじまり）",
+        "grammar": "What were you doing at ～? / I was ～ing. / We were ～ing.（過去進行形: was / were ＋ ～ing ＝ その とき 〜していた）",
+        "expressions": [
+          {
+            "en": "What were you doing at seven?",
+            "ja": "7じに なにを していたの？",
+            "core": true
+          },
+          {
+            "en": "I was writing a letter in my room.",
+            "ja": "へやで てがみを かいていたよ。"
+          },
+          {
+            "en": "We were washing the dishes.",
+            "ja": "わたしたちは おさらを あらっていたよ。"
+          }
+        ],
+        "testPoints": [
+          "What were you doing at ～? / I was ～ing. で その とき していた ことを いえる",
+          "was（I・he・she）と were（you・we・they）の つかいわけ",
+          "ment は「〜する こと」の なまえを つくる（agreement・payment・movement）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look around like a detective.",
+          "ja": "たんていの ように みまわして。",
+          "action": "むしめがねを もって きょろきょろ",
+          "emoji": "🕵️"
+        },
+        {
+          "en": "Show your empty plate.",
+          "ja": "からっぽの おさらを みせて。",
+          "action": "りょうてで おさらを みせる",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "Gasp in surprise!",
+          "ja": "びっくりして いきを のんで！",
+          "action": "りょうてを ほおに あてる",
+          "emoji": "😱"
+        },
+        {
+          "en": "Pretend to read a book.",
+          "ja": "ほんを よむ まねを して。",
+          "action": "りょうてで ほんを ひらく",
+          "emoji": "📖"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-ness",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "agreement",
+          "payment",
+          "movement"
+        ],
+        "tipJa": "ment は うごきの ことばの あとに つけて「〜する こと」の なまえの ことばに する パーツ。agree → agreement（さんせい・やくそく）、pay → payment（しはらい）、move → movement（うごき）。move の e は のこす！"
+      },
+      "vocab": [
+        {
+          "en": "pie",
+          "ja": "パイ",
+          "emoji": "🥧",
+          "core": true
+        },
+        {
+          "en": "snack",
+          "ja": "おやつ",
+          "emoji": "🍪"
+        },
+        {
+          "en": "missing",
+          "ja": "なくなった",
+          "emoji": "🕳️"
+        },
+        {
+          "en": "clue",
+          "ja": "てがかり",
+          "emoji": "🔍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Oh no! Something happened in the tower kitchen. Last night, there was a big apple pie on the table. This morning, the pie is gone! Who ate it? Let's ask questions like detectives. We want to know what people were doing last night. We ask, What were you doing at seven? Say it with me. What were you doing at seven? Very good! This is a new form. Was or were, plus i n g. I was reading. You were sleeping. We were washing the dishes. It means the action was happening at that time. Listen. At seven, I was talking on the phone in my room. Let's read Kiko's detective notebook. \"The Missing Pie. Last night, the pie was on the kitchen table at six. At eight, it was missing. There were crumbs on the floor. There was a small feather near the window. Question: What was everyone doing at seven?\" Hmm, a feather! That's a clue. Now, phonics. M e n t makes a naming word. Agree, agreement. Pay, payment. Move, movement. Keep the e in movement! Detectives watch every movement. Let's find out who ate the pie!",
+      "conversation": {
+        "scene": "The tower's snack pie is missing!",
+        "sceneJa": "とうの おやつの パイが きえた！",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "The pie is missing! It was here at six.",
+            "ja": "パイが ない！6じには ここに あったのに。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's ask everyone. Riko, what were you doing at seven?",
+            "ja": "みんなに きいてみましょう。リコ、7じに なにを していたの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I was writing a letter in my room.",
+            "ja": "へやで てがみを かいていました。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Kiko, what were you doing at seven?",
+            "ja": "キコ、7じに なにを していたの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I was painting a picture. Birimo, what were you doing?",
+            "ja": "えを かいていました。ビリモは なにを していたの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I was reading a comic book. Really!",
+            "ja": "マンガを よんでたよ。ほんとうだよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hmm. There's a small feather by the window. That's a clue!",
+            "ja": "うーん。まどの そばに ちいさな はねが あるわ。てがかりね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "パイが きえた なぞときの ロールプレイ。AI の たんていに What were you doing at ～? と きかれたら I was ～ing. で こたえて、AI にも しつもんしよう",
+          "starterEn": "I'm the detective! The pie disappeared last night. What were you doing at seven last night?",
+          "targetExpressions": [
+            "I was ～ing.",
+            "What were you doing at ～?",
+            "We were ～ing."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What were you doing at seven?",
+          "I was writing a letter in my room. / We were washing the dishes.（was / were ＋ ～ing）",
+          "agreement・payment・movement（ment ＝ 〜する こと）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 617,
+      "world": 21,
+      "title": "I Was Taking a Bath",
+      "titleJa": "おふろに はいっていたの",
+      "school": {
+        "grade": "中2",
+        "topic": "I was taking a bath when you called.：でんわに でられなかった りゆうを いう（過去進行形 ＋ when）",
+        "grammar": "I was ～ing when you called.（ながい うごきの とちゅうに みじかい できごと）/ Why didn't you answer? / Sorry I missed your call.",
+        "expressions": [
+          {
+            "en": "I was taking a bath when you called.",
+            "ja": "でんわを くれた とき、おふろに はいっていたんだ。",
+            "core": true
+          },
+          {
+            "en": "Why didn't you answer the phone?",
+            "ja": "どうして でんわに でなかったの？"
+          },
+          {
+            "en": "Sorry I missed your call.",
+            "ja": "でんわに でられなくて ごめんね。"
+          }
+        ],
+        "testPoints": [
+          "I was ～ing when you called. で でんわに でられなかった りゆうを いえる",
+          "-ment の つづり（excitement・enjoyment・announcement・improvement）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pretend to wash your hair.",
+          "ja": "かみを あらう まねを して。",
+          "action": "あたまを ごしごし",
+          "emoji": "🧴"
+        },
+        {
+          "en": "Dry yourself with a towel.",
+          "ja": "タオルで からだを ふいて。",
+          "action": "タオルで ふく まね",
+          "emoji": "🧖"
+        },
+        {
+          "en": "Check your phone.",
+          "ja": "でんわを チェックして。",
+          "action": "てのひらを みる",
+          "emoji": "📲"
+        },
+        {
+          "en": "Bow your head a little.",
+          "ja": "すこし あたまを さげて。",
+          "action": "ぺこりと する",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-ness",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "excitement",
+          "enjoyment",
+          "announcement",
+          "improvement"
+        ],
+        "tipJa": "excite → excitement（わくわく）、enjoy → enjoyment（たのしみ）、announce → announcement（おしらせ）、improve → improvement（よく なる こと）。e で おわる ことばも e を のこして ment。"
+      },
+      "vocab": [
+        {
+          "en": "bath",
+          "ja": "おふろ",
+          "emoji": "🛁",
+          "core": true
+        },
+        {
+          "en": "answer",
+          "ja": "（でんわに）でる",
+          "emoji": "🔔"
+        },
+        {
+          "en": "miss",
+          "ja": "（でんわを）のがす",
+          "emoji": "😅"
+        },
+        {
+          "en": "shower",
+          "ja": "シャワー",
+          "emoji": "🚿"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last night at seven, I called Haru. Ring, ring, ring. But he didn't answer. Why? This morning, Haru said, I was taking a bath when you called. Say it with me. I was taking a bath when you called. Great! I was taking a bath is the long action. When you called is the short action. The phone call happened in the middle of the bath. Here's another one. I was brushing my teeth when you called. When someone asks, Why didn't you answer the phone? you can say, Sorry I missed your call. I was taking a bath. Let's read Haru's text message to me. \"Hi, Ms. Emma. Sorry I missed your call last night. I was taking a bath when you called. I saw your message after my bath, but it was late. Is it about the missing pie? I didn't eat it! Haru\" Ha ha. Okay, Haru. Now, phonics. Excite, excitement. Enjoy, enjoyment. Announce, announcement. Improve, improvement. Keep the e! Excitement has an e before m e n t. Let's practice saying why we missed a call.",
+      "conversation": {
+        "scene": "Haru explains why he missed a call",
+        "sceneJa": "でんわに でられなかった りゆうを はなす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Haru, I called you at seven last night. Why didn't you answer the phone?",
+            "ja": "ハル、きのうの よる 7じに でんわしたのよ。どうして でなかったの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry I missed your call. I was taking a bath when you called.",
+            "ja": "でられなくて ごめんなさい。でんわを くれた とき、おふろに はいっていたんです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "So Haru didn't eat the pie!",
+            "ja": "じゃあ、ハルは パイを たべてないんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I called Birimo at seven, too. He didn't answer.",
+            "ja": "わたしも 7じに ビリモに でんわしたの。でなかったよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I was reading a comic book when you called. I didn't hear the phone!",
+            "ja": "でんわを くれた とき、マンガを よんでたんだ。でんわの おとが きこえなかったよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hmm. Then who ate the pie? Let's keep looking for clues.",
+            "ja": "うーん。じゃあ だれが パイを たべたのかしら？てがかりを さがしつづけましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に「どうして でんわに でなかったの？」と きかれるよ。Sorry I missed your call. I was ～ing when you called. で りゆうを いおう",
+          "starterEn": "Hi! I called you last night at eight, but you didn't answer. What were you doing?",
+          "targetExpressions": [
+            "Sorry I missed your call.",
+            "I was ～ing when you called.",
+            "Why didn't you ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I was taking a bath when you called.",
+          "Why didn't you answer the phone? / Sorry I missed your call.",
+          "excitement・enjoyment・announcement・improvement"
+        ]
+      }
+    },
+    {
+      "lessonNo": 618,
+      "world": 21,
+      "title": "While We Were Sleeping",
+      "titleJa": "ねている あいだに",
+      "school": {
+        "grade": "中2",
+        "topic": "While we were sleeping, it snowed.：あさ おきると とうの まわりが まっしろ（while ＋ 過去進行形）",
+        "grammar": "While we were sleeping, it snowed.（〜している あいだに）/ It was still snowing when I woke up. / While I was ～ing, I saw ～.",
+        "expressions": [
+          {
+            "en": "While we were sleeping, it snowed.",
+            "ja": "ねている あいだに、ゆきが ふったよ。",
+            "core": true
+          },
+          {
+            "en": "It was still snowing when I woke up.",
+            "ja": "おきた とき、まだ ゆきが ふっていたよ。"
+          },
+          {
+            "en": "While I was looking outside, I saw tiny footprints.",
+            "ja": "そとを みている あいだに、ちいさな あしあとを みつけたよ。"
+          }
+        ],
+        "testPoints": [
+          "While we were sleeping, it snowed. で 〜している あいだに おきた ことを いえる",
+          "ness は「〜さ」の なまえを つくる（kindness・sadness・darkness・brightness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wake up and rub your eyes.",
+          "ja": "おきて めを こすって。",
+          "action": "りょうてで めを こする",
+          "emoji": "😪"
+        },
+        {
+          "en": "Catch a snowflake.",
+          "ja": "ゆきの ひとひらを つかまえて。",
+          "action": "てのひらを うえに むける",
+          "emoji": "❄️"
+        },
+        {
+          "en": "Walk in deep snow.",
+          "ja": "ふかい ゆきの なかを あるいて。",
+          "action": "あしを たかく あげて あるく",
+          "emoji": "⛄"
+        },
+        {
+          "en": "Pull up your blanket.",
+          "ja": "もうふを ひっぱりあげて。",
+          "action": "あごまで もうふを ひく",
+          "emoji": "🛌"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-ness",
+        "focus": [
+          "-ness"
+        ],
+        "sounds": [
+          "/nəs/"
+        ],
+        "words": [
+          "kindness",
+          "sadness",
+          "darkness",
+          "brightness"
+        ],
+        "tipJa": "ness は ようすの ことばの あとに つけて「〜さ」の なまえの ことばに する パーツ。kind → kindness（やさしさ）、sad → sadness（かなしみ）、dark → darkness（くらやみ）、bright → brightness（あかるさ）。ness は s が 2つ。"
+      },
+      "vocab": [
+        {
+          "en": "snow",
+          "ja": "ゆき",
+          "emoji": "🌨️",
+          "core": true
+        },
+        {
+          "en": "asleep",
+          "ja": "ねむって いる",
+          "emoji": "😴"
+        },
+        {
+          "en": "footprint",
+          "ja": "あしあと",
+          "emoji": "🐾"
+        },
+        {
+          "en": "blanket",
+          "ja": "もうふ",
+          "emoji": "🛏️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Good morning! Look out the window. Everything is white! While we were sleeping, it snowed. Say it with me. While we were sleeping, it snowed. Beautiful! While means during the time. We were sleeping for a long time. During that time, it snowed. You can say it another way, too. It was still snowing when I woke up. Let's read Riko's diary. \"This morning, I woke up early. It was very quiet. While I was sleeping, it snowed a lot. The tower was white, and the sky was bright. While I was looking outside, I saw tiny footprints in the snow. They went from the kitchen window to the top of the tower. Whose footprints were they?\" Interesting! The footprints are another clue for our pie mystery. Now, phonics. N e s s makes a naming word from a describing word. Kind, kindness. Sad, sadness. Dark, darkness. Bright, brightness. The brightness of the snow hurts my eyes! Let's follow the footprints!",
+      "conversation": {
+        "scene": "A white morning around the tower",
+        "sceneJa": "あさ おきると とうの まわりが まっしろ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Wake up, everyone! Look outside!",
+            "ja": "みんな、おきて！そとを みて！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! While we were sleeping, it snowed!",
+            "ja": "わあ！ねている あいだに、ゆきが ふったんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It was still snowing when I woke up. Now the sky is bright.",
+            "ja": "わたしが おきた ときは まだ ふっていたよ。いまは そらが あかるいね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! While I was looking outside, I saw tiny footprints!",
+            "ja": "みて！そとを みている あいだに、ちいさな あしあとを みつけたよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "They look like bird footprints. Where do they go?",
+            "ja": "とりの あしあとみたいね。どこへ つづいているのかしら？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "From the kitchen window up to the top of the tower!",
+            "ja": "だいどころの まどから とうの てっぺんまで！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ゆきの あさの はなし。While I was ～ing, ～. / It was ～ing when I woke up. を つかって、ねている あいだや あさの ようすを はなそう",
+          "starterEn": "Good morning! While we were sleeping, it snowed a lot. What did you see when you woke up today?",
+          "targetExpressions": [
+            "While we were sleeping, it snowed.",
+            "It was ～ing when I woke up.",
+            "While I was ～ing, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "While we were sleeping, it snowed.",
+          "It was still snowing when I woke up. / While I was looking outside, I saw tiny footprints.",
+          "kindness・sadness・darkness・brightness（ness ＝ 〜さ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 619,
+      "world": 21,
+      "title": "When the Phone Rang",
+      "titleJa": "でんわが なった とき",
+      "school": {
+        "grade": "中2",
+        "topic": "When the phone rang, I was cooking.：でんわの ベルと だいどころの ハプニング（when と while の くらべ）",
+        "grammar": "When the phone rang, I was ～ing.（when ＋ みじかい できごと）/ While I was ～ing, ～.（while ＋ ながい うごき）/ What happened next?",
+        "expressions": [
+          {
+            "en": "When the phone rang, I was cooking.",
+            "ja": "でんわが なった とき、わたしは りょうりを していたよ。",
+            "core": true
+          },
+          {
+            "en": "While I was talking on the phone, the pancake burned.",
+            "ja": "でんわで はなしている あいだに、パンケーキが こげちゃった。"
+          },
+          {
+            "en": "What happened next?",
+            "ja": "それから どう なったの？"
+          }
+        ],
+        "testPoints": [
+          "When ～, I was ～ing. / While I was ～ing, ～. の ちがいが わかる",
+          "What happened next? で つづきを きける",
+          "-ness の つづり（happiness・loneliness は y を i に）と -ment の くらべ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Flip the pancake!",
+          "ja": "パンケーキを ひっくりかえして！",
+          "action": "フライパンを ふる まね",
+          "emoji": "🥞"
+        },
+        {
+          "en": "Run to the phone.",
+          "ja": "でんわに かけよって。",
+          "action": "その ばで はしる",
+          "emoji": "💨"
+        },
+        {
+          "en": "Smell something burning.",
+          "ja": "こげた においを かいで。",
+          "action": "はなを くんくん",
+          "emoji": "👃"
+        },
+        {
+          "en": "Open the window wide.",
+          "ja": "まどを おおきく あけて。",
+          "action": "まどを よこに ひらく まね",
+          "emoji": "🌫️"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-ness",
+        "focus": [
+          "-ness",
+          "-ment"
+        ],
+        "sounds": [
+          "/nəs/",
+          "/mənt/"
+        ],
+        "words": [
+          "happiness",
+          "loneliness",
+          "softness",
+          "movement"
+        ],
+        "tipJa": "happy → happiness、lonely → loneliness（さびしさ）は y を i に かえて ness。soft → softness（やわらかさ）。movement は うごきの ことば ＋ ment。"
+      },
+      "vocab": [
+        {
+          "en": "ring",
+          "ja": "（でんわ・ベルが）なる",
+          "emoji": "🛎️",
+          "core": true
+        },
+        {
+          "en": "cook",
+          "ja": "りょうりする",
+          "emoji": "🍳"
+        },
+        {
+          "en": "burn",
+          "ja": "こげる",
+          "emoji": "🔥"
+        },
+        {
+          "en": "smoke",
+          "ja": "けむり",
+          "emoji": "💭"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This morning, something funny happened in the tower kitchen. Riko was cooking pancakes. Then the phone rang. Riko says, When the phone rang, I was cooking. Say it with me. When the phone rang, I was cooking. Great! Rang is the past of ring. Ring, rang. Now listen. While I was talking on the phone, the pancake burned. Oh no! Do you see the difference? When, plus a short action. The phone rang. While, plus a long action. I was talking on the phone. Let's read the story. \"This morning, Riko was cooking pancakes with Ms. Emma. When the phone rang, she was flipping a pancake. It was Captain Pip, the head bird of the tower. While Riko was talking on the phone, the pancake burned. Smoke filled the kitchen. Birimo opened the window. When the smoke went out, everyone laughed. Captain Pip said he wanted to tell us something important.\" Hmm. What does Captain Pip want to say? Remember, always cook with an adult. Now, phonics. Happy, happiness. Lonely, loneliness. Change y to i! Soft, softness. Move, movement. Let's tell our kitchen story!",
+      "conversation": {
+        "scene": "The phone rings during cooking",
+        "sceneJa": "でんわの ベルと だいどころの ハプニング",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "What's that smell? What happened?",
+            "ja": "この においは なに？なにが あったの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "When the phone rang, I was cooking pancakes with Ms. Emma.",
+            "ja": "でんわが なった とき、エマ先生と パンケーキを やいていたの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What happened next?",
+            "ja": "それから どう なったの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "While I was talking on the phone, the pancake burned.",
+            "ja": "でんわで はなしている あいだに、パンケーキが こげちゃった。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'll open the window! There. The smoke is going out.",
+            "ja": "まどを あけるね！ほら。けむりが でていくよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Who called you, Riko?",
+            "ja": "リコ、だれから でんわだったの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Captain Pip, the head bird. He said he wanted to tell us something important.",
+            "ja": "とりの リーダーの キャプテン・ピップ。だいじな ことを つたえたいって。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ちいさな ハプニングの はなし。When ～, I was ～ing. / While I was ～ing, ～. を つかって AI に はなそう（AI が What happened next? と きくよ）",
+          "starterEn": "Hi! Something funny happened to me yesterday. When the doorbell rang, I was eating noodles! Did something funny happen to you this week?",
+          "targetExpressions": [
+            "When the phone rang, I was ～ing.",
+            "While I was ～ing, ～.",
+            "What happened next?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "When the phone rang, I was cooking.",
+          "While I was talking on the phone, the pancake burned. / What happened next?",
+          "happiness・loneliness・softness（ness）・movement（ment）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 620,
+      "world": 21,
+      "title": "Who Ate the Pie?",
+      "titleJa": "パイを たべたのは だれ？",
+      "school": {
+        "grade": "中2",
+        "topic": "Birimo was reading. Kiko was painting.：「パイを たべたのは だれ？」なぞとき はっぴょう（過去進行形の まとめ）",
+        "grammar": "～ was ～ing. / ～ were ～ing.（だれが なにを していたか）/ So ～ didn't ～. / It was ～!",
+        "expressions": [
+          {
+            "en": "Birimo was reading. Kiko was painting.",
+            "ja": "ビリモは よんでいた。キコは えを かいていた。",
+            "core": true
+          },
+          {
+            "en": "So they didn't eat the pie.",
+            "ja": "だから ふたりは パイを たべていない。"
+          },
+          {
+            "en": "It was a hungry little bird!",
+            "ja": "はらぺこの ちいさな とりだった！"
+          }
+        ],
+        "testPoints": [
+          "～ was ～ing. で その とき みんなが していた ことを はっぴょうできる",
+          "てがかりを じゅんばんに ならべて はなせる（First / Then / So）",
+          "-ment・-ness の まとめ（agreement・excitement・kindness・happiness）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up a magnifying glass.",
+          "ja": "むしめがねを かかげて。",
+          "action": "むしめがねを のぞく まね",
+          "emoji": "🔎"
+        },
+        {
+          "en": "Tiptoe quietly.",
+          "ja": "そっと つまさきで あるいて。",
+          "action": "つまさきで しずかに あるく",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Point to the bird's nest.",
+          "ja": "とりの すを ゆびさして。",
+          "action": "うえの ほうを ゆびさす",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Give a big round of applause.",
+          "ja": "おおきな はくしゅを して。",
+          "action": "ながく はくしゅ",
+          "emoji": "🎊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ment",
+          "-ness"
+        ],
+        "sounds": [
+          "/mənt/",
+          "/nəs/"
+        ],
+        "words": [
+          "agreement",
+          "excitement",
+          "kindness",
+          "happiness"
+        ],
+        "tipJa": "-ment・-ness の まとめ: agreement・excitement（うごきの ことば ＋ ment）、kindness・happiness（ようすの ことば ＋ ness。happy は y を i に）。"
+      },
+      "vocab": [
+        {
+          "en": "crumb",
+          "ja": "パンくず・くず",
+          "emoji": "🍞",
+          "core": true
+        },
+        {
+          "en": "nest",
+          "ja": "（とりの）す",
+          "emoji": "🌳"
+        },
+        {
+          "en": "detective",
+          "ja": "たんてい",
+          "emoji": "🧐"
+        },
+        {
+          "en": "truth",
+          "ja": "ほんとうの こと",
+          "emoji": "💡"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is the big day. Let's solve the pie mystery! Detectives, let's check our notes. At seven, what was everyone doing? Haru was taking a bath. Riko was writing a letter. Birimo was reading. Kiko was painting. Say it with me. Birimo was reading. Kiko was painting. Good! So they didn't eat the pie. Then who did? Remember the clues. A small feather. Tiny footprints in the snow. Crumbs on the stairs. Let's read the last page of Kiko's detective notebook. \"We followed the footprints to the top of the tower. There was a nest. In the nest, there were three baby birds and Captain Pip. Their faces were covered with apple pie! Captain Pip looked sad. He said, I'm sorry. My babies were hungry.\" So it was a hungry little bird! Captain Pip wanted to tell us on the phone. We said, That's okay. Let's bake another pie together. That was real kindness. Now, phonics review. Agreement. Excitement. Kindness. Happiness. What a happy ending! Now, present your mystery story!",
+      "conversation": {
+        "scene": "Presenting the answer to the pie mystery",
+        "sceneJa": "「パイを たべたのは だれ？」なぞとき はっぴょう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "At seven, Haru was taking a bath. Riko was writing a letter.",
+            "ja": "7じに、ハルは おふろに はいっていた。リコは てがみを かいていた。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Birimo was reading. Kiko was painting. So we didn't eat the pie.",
+            "ja": "ビリモは よんでいた。キコは えを かいていた。だから ぼくたちは パイを たべていない。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "But we found a feather, tiny footprints, and crumbs on the stairs.",
+            "ja": "でも、はねと ちいさな あしあとと、かいだんの パンくずを みつけたよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And they went to Captain Pip's nest!",
+            "ja": "それが キャプテン・ピップの すに つづいていたんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It was a hungry little bird! Pip's babies were hungry.",
+            "ja": "はらぺこの ちいさな とりだった！ピップの あかちゃんたちが おなかを すかせていたの。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Mystery solved! Let's bake a new pie for everyone, and for the birds, too.",
+            "ja": "なぞは とけたわ！あたらしい パイを みんなの ぶんと とりたちの ぶんも やきましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "なぞときの はっぴょう。～ was ～ing. で 7じに みんなが していた ことを AI に せつめいして、はんにんを はっぴょうしよう（なまえは いわなくて OK）",
+          "starterEn": "Detective, did you solve the pie mystery? Please tell me! What was everyone doing at seven?",
+          "targetExpressions": [
+            "～ was ～ing.",
+            "So ～ didn't eat the pie.",
+            "It was ～!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Birimo was reading. Kiko was painting.",
+          "So they didn't eat the pie. / It was a hungry little bird!",
+          "agreement・excitement・kindness・happiness"
+        ]
+      }
+    },
+    {
+      "lessonNo": 621,
+      "world": 21,
+      "title": "Dear Ms. Emma",
+      "titleJa": "エマ先生へ",
+      "school": {
+        "grade": "中2",
+        "topic": "Dear Ms. Emma, How are you?：とうの しょさいで 先生への メールを かく（メールの かたち）",
+        "grammar": "Dear ～, / How are you? / Today, I want to tell you about ～. / Please write back soon.（あいさつ → ようけん → むすび）",
+        "expressions": [
+          {
+            "en": "Dear Ms. Emma, How are you?",
+            "ja": "エマ先生へ　おげんきですか？",
+            "core": true
+          },
+          {
+            "en": "Today, I want to tell you about the snow.",
+            "ja": "きょうは ゆきの ことを おしらせしたいです。"
+          },
+          {
+            "en": "Please write back soon.",
+            "ja": "また おへんじ ください。"
+          }
+        ],
+        "testPoints": [
+          "Dear ～, で メールを はじめて、How are you? と あいさつできる",
+          "メールの 3つの ぶぶん（あいさつ → ようけん → むすび）と けんめい（Subject）",
+          "音の つながり（hold on・can I・come in）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Type on the keyboard.",
+          "ja": "キーボードを うって。",
+          "action": "ゆびで カタカタ",
+          "emoji": "⌨️"
+        },
+        {
+          "en": "Read the screen carefully.",
+          "ja": "がめんを よく よんで。",
+          "action": "がめんに かおを ちかづける",
+          "emoji": "👓"
+        },
+        {
+          "en": "Press send!",
+          "ja": "そうしんを おして！",
+          "action": "ゆびで ポンと おす",
+          "emoji": "📤"
+        },
+        {
+          "en": "Sit up straight.",
+          "ja": "せすじを のばして すわって。",
+          "action": "いすに まっすぐ すわる",
+          "emoji": "🪑"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "hold on",
+          "can I",
+          "come in"
+        ],
+        "sounds": [
+          "hold‿on",
+          "can‿I",
+          "come‿in"
+        ],
+        "words": [
+          "hold on",
+          "can I",
+          "come in"
+        ],
+        "tipJa": "しいんで おわる ことばの あとに ぼいんで はじまる ことばが くると、つながって きこえる。hold on（ホウルドン）・can I（キャナイ）・come in（カミン）。"
+      },
+      "vocab": [
+        {
+          "en": "email",
+          "ja": "メール",
+          "emoji": "📧",
+          "core": true
+        },
+        {
+          "en": "dear",
+          "ja": "〜へ（てがみ・メールの はじめ）",
+          "emoji": "💌"
+        },
+        {
+          "en": "subject",
+          "ja": "けんめい",
+          "emoji": "🏷️"
+        },
+        {
+          "en": "study",
+          "ja": "しょさい",
+          "emoji": "🏛️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! I'm talking to you from the basement of the tower. There are many old books here, so I'm staying for a few days. Please send me emails from the tower study! An email has three parts. First, the greeting. Dear Ms. Emma, How are you? Say it with me. Dear Ms. Emma, How are you? Lovely! Second, the main message. Why are you writing? Today, I want to tell you about the snow. Third, the ending. Please write back soon. And don't forget the subject. The subject tells the main idea in a few words. Let's read Kiko's email. \"Subject: Snow at the Tower. Dear Ms. Emma, How are you? Today, I want to tell you about the snow. While we were sleeping, it snowed a lot. We made a snow bird on the roof. Captain Pip liked it! Please write back soon. From Kiko\" Wonderful! Greeting, message, ending. Now, phonics. Today, we listen to linking sounds. When one word ends with a consonant and the next word starts with a vowel, they connect. Hold on. Can I. Come in. Can I come in? Let's write an email!",
+      "conversation": {
+        "scene": "Writing an email to Ms. Emma in the tower study",
+        "sceneJa": "とうの しょさいで エマ先生に メールを かく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Can I use the computer? I want to write to Ms. Emma.",
+            "ja": "コンピューター つかっても いい？エマ先生に かきたいの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sure. Start with Dear Ms. Emma.",
+            "ja": "いいよ。Dear Ms. Emma から はじめてね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Dear Ms. Emma, How are you? Today, I want to tell you about the snow.",
+            "ja": "エマ先生へ　おげんきですか？きょうは ゆきの ことを おしらせします。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Don't forget the subject. How about Snow at the Tower?",
+            "ja": "けんめいを わすれないで。「とうの ゆき」は どう？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And at the end, write Please write back soon!",
+            "ja": "さいごに「また おへんじ ください」って かいてね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Done! Now I'll press send.",
+            "ja": "できた！そうしんを おすね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "メールの はじめかたの れんしゅう。Dear ～, How are you? で はじめて、きょう つたえたい ことを 1つ いって、Please write back soon. で おわろう（ほんとうの なまえ・じゅうしょは かかなくて OK）",
+          "starterEn": "Hi! I'm writing an email to Ms. Emma. Can you help me? How should I start it?",
+          "targetExpressions": [
+            "Dear Ms. Emma, How are you?",
+            "Today, I want to tell you about ～.",
+            "Please write back soon."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Dear Ms. Emma, How are you?",
+          "Today, I want to tell you about the snow. / Please write back soon.（あいさつ → ようけん → むすび）",
+          "hold on・can I・come in（つながる おと）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 622,
+      "world": 21,
+      "title": "Thanks for Your Email",
+      "titleJa": "メール ありがとう",
+      "school": {
+        "grade": "中2",
+        "topic": "Thanks for your email. I was happy to hear from you.：先生からの へんじを よんで、また へんじを かく",
+        "grammar": "Thanks for your email. / I was happy to hear from you. / That sounds like fun! / I have a question for you.（へんじの いいかた）",
+        "expressions": [
+          {
+            "en": "Thanks for your email. I was happy to hear from you.",
+            "ja": "メール ありがとう。れんらくを もらえて うれしかったよ。",
+            "core": true
+          },
+          {
+            "en": "That sounds like fun!",
+            "ja": "たのしそうだね！"
+          },
+          {
+            "en": "I have a question for you.",
+            "ja": "あなたに しつもんが あります。"
+          }
+        ],
+        "testPoints": [
+          "Thanks for your email. I was happy to hear from you. で へんじを はじめられる",
+          "しつもんを 1つ いれると やりとりが つづく",
+          "音の つながり（check it out・pick it up・think about it）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the email.",
+          "ja": "メールを ひらいて。",
+          "action": "ゆびで ダブルクリック",
+          "emoji": "📨"
+        },
+        {
+          "en": "Smile at the screen.",
+          "ja": "がめんに にっこり して。",
+          "action": "にこっと わらう",
+          "emoji": "😄"
+        },
+        {
+          "en": "Scroll down.",
+          "ja": "したに スクロールして。",
+          "action": "ゆびで したに なぞる",
+          "emoji": "👇"
+        },
+        {
+          "en": "Pick it up!",
+          "ja": "ひろって！",
+          "action": "ゆかから ひろう まね",
+          "emoji": "✋"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "check it out",
+          "pick it up",
+          "think about it"
+        ],
+        "sounds": [
+          "check‿it‿out",
+          "pick‿it‿up",
+          "think‿about‿it"
+        ],
+        "words": [
+          "check it out",
+          "pick it up",
+          "think about it"
+        ],
+        "tipJa": "it の まえと あとで おとが つながる。check it out（チェキタウト）・pick it up（ピキタップ）・think about it（シンカバウティット）。"
+      },
+      "vocab": [
+        {
+          "en": "reply",
+          "ja": "へんじ・へんじを する",
+          "emoji": "↩️",
+          "core": true
+        },
+        {
+          "en": "hear from",
+          "ja": "〜から れんらくが ある",
+          "emoji": "📬"
+        },
+        {
+          "en": "news",
+          "ja": "しらせ・ニュース",
+          "emoji": "📰"
+        },
+        {
+          "en": "question",
+          "ja": "しつもん",
+          "emoji": "❓"
+        }
+      ],
+      "teacherScript": "Hello, everyone! I got Kiko's email. Thank you, Kiko! Now I'll write back. When you answer an email, start with, Thanks for your email. I was happy to hear from you. Say it with me. Thanks for your email. I was happy to hear from you. Excellent! Hear from you means get a message from you. Then answer the news. That sounds like fun! And you can ask a question. I have a question for you. Asking a question is good. Then your friend will write back again. Let's read my reply. \"Subject: Re: Snow at the Tower. Dear Kiko, Thanks for your email. I was happy to hear from you. A snow bird on the roof? That sounds like fun! Here in the basement, I found a very old book about an amber library. I have a question for you. What are you going to do this week? Best wishes, Ms. Emma\" Look at the subject. R e means it's a reply. Now, phonics. Check it out. Pick it up. Think about it. Check it out! There's a new email for you. Let's write a reply!",
+      "conversation": {
+        "scene": "Reading Ms. Emma's reply and writing back",
+        "sceneJa": "エマ先生からの へんじを よんで、また へんじを かく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! Ms. Emma wrote back. Check it out!",
+            "ja": "みて！エマ先生から へんじが きたよ。みてみて！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thanks for your email. I was happy to hear from you. That's so nice!",
+            "ja": "「メール ありがとう。れんらくを もらえて うれしかったわ」だって。すてき！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "She found an old book about an amber library. That sounds like fun!",
+            "ja": "こはくの としょかんの ふるい ほんを みつけたって。おもしろそう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "She has a question. What are we going to do this week?",
+            "ja": "しつもんが あるよ。こんしゅう ぼくたちは なにを するの？だって。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let's think about it. Soon we're going to write to a pen pal!",
+            "ja": "かんがえてみよう。もうすぐ ペンパルに メールを かくんだよね！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay. I'll write: Thanks for your email. Soon we're going to write to a pen pal!",
+            "ja": "じゃあ かくね。「メール ありがとう。もうすぐ ペンパルに メールを かきます！」"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI からの メールに へんじを する ロールプレイ。Thanks for your email. I was happy to hear from you. で はじめて、That sounds ～! と こたえ、AI にも しつもんを 1つ しよう",
+          "starterEn": "Hi! I sent you an email yesterday. I told you about my new puppy. Did you read it?",
+          "targetExpressions": [
+            "Thanks for your email.",
+            "I was happy to hear from you.",
+            "I have a question for you."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Thanks for your email. I was happy to hear from you.",
+          "That sounds like fun! / I have a question for you.",
+          "check it out・pick it up・think about it（つながる おと）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 623,
+      "world": 21,
+      "title": "Best Wishes",
+      "titleJa": "メールの むすび",
+      "school": {
+        "grade": "中2",
+        "topic": "See you soon. Best wishes, Riko：メールの むすびの ことばを えらぶ（あいてに あわせて）",
+        "grammar": "See you soon. / Take care. / Talk to you later. / Best wishes, / Love,（むすびの ことば）",
+        "expressions": [
+          {
+            "en": "See you soon. Best wishes, Riko",
+            "ja": "また すぐ あおうね。　リコより",
+            "core": true
+          },
+          {
+            "en": "Take care. Talk to you later.",
+            "ja": "げんきでね。また はなそうね。"
+          },
+          {
+            "en": "Love, Kiko",
+            "ja": "だいすきな キコより（かぞくや なかよしに）"
+          }
+        ],
+        "testPoints": [
+          "See you soon. / Take care. / Best wishes, で メールを むすべる",
+          "あいて（先生・ともだち・かぞく）に あわせて むすびの ことばを えらべる",
+          "音の つながり（leave a message・take a message・send it・an email）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sign your name at the end.",
+          "ja": "さいごに なまえを かいて。",
+          "action": "ゆびで さらっと かく",
+          "emoji": "🖋️"
+        },
+        {
+          "en": "Wave and say see you soon.",
+          "ja": "てを ふって またねと いって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Hug yourself.",
+          "ja": "じぶんを ぎゅっと だきしめて。",
+          "action": "りょううでで じぶんを だく",
+          "emoji": "🤗"
+        },
+        {
+          "en": "Choose one card.",
+          "ja": "カードを 1まい えらんで。",
+          "action": "ゆびで 1まい とる",
+          "emoji": "🃏"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "leave a message",
+          "take a message",
+          "send it",
+          "an email"
+        ],
+        "sounds": [
+          "leave‿a",
+          "take‿a",
+          "send‿it",
+          "an‿email"
+        ],
+        "words": [
+          "leave a message",
+          "take a message",
+          "send it",
+          "an email"
+        ],
+        "tipJa": "leave a（リーヴァ）・take a（テイカ）・send it（センディット）・an email（アニーメイル）。a・it・email の ぼいんが まえの ことばと つながる。"
+      },
+      "vocab": [
+        {
+          "en": "closing",
+          "ja": "むすびの ことば",
+          "emoji": "🔚",
+          "core": true
+        },
+        {
+          "en": "wish",
+          "ja": "ねがい",
+          "emoji": "🌠"
+        },
+        {
+          "en": "soon",
+          "ja": "もうすぐ",
+          "emoji": "⏩"
+        },
+        {
+          "en": "care",
+          "ja": "きを つける こと",
+          "emoji": "💗"
+        }
+      ],
+      "teacherScript": "Hello, everyone! How do you end an email? Today, let's choose closing words. For a friend, you can write, See you soon. Best wishes, Riko. Say it with me. See you soon. Best wishes, Riko. Great! Best wishes is good for teachers, friends, and almost everyone. For close family or best friends, you can write, Love, Kiko. For a friend you will talk to again, write, Take care. Talk to you later. Put your name or nickname on the next line. Let's read three endings. Who is each one for? \"One. See you on Monday. Best wishes, Haru. Two. Take care, Grandma! Love, Riko. Three. Thank you for your help. Best wishes, Kiko.\" Number one is for a classmate. Number two is for Grandma. Number three is for a teacher. Good! Now, phonics. Leave a message. Take a message. Send it. An email. Listen again. Leave a. Take a. Send it. An email. Can you write an email and send it today? Let's choose endings!",
+      "conversation": {
+        "scene": "Choosing closing words for emails",
+        "sceneJa": "メールの むすびの ことばを えらぶ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I finished my email to Ms. Emma. How should I end it?",
+            "ja": "エマ先生への メール、かけたよ。さいごは どう しよう？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How about See you soon. Best wishes, Riko?",
+            "ja": "「また すぐ あいましょう。リコより」は どう？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Good idea! And what about my email to Grandma?",
+            "ja": "いいね！おばあちゃんへの メールは？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "For family, you can write Love, Riko.",
+            "ja": "かぞくには「だいすきな リコより」って かけるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'll end my email with Love, Birimo. Bananas forever!",
+            "ja": "ぼくは「だいすきな ビリモより。バナナよ えいえんに！」で おわる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha! Birimo, that's a little strange for a teacher!",
+            "ja": "あはは！ビリモ、先生には ちょっと へんだよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "メールの むすびを えらぶ れんしゅう。AI が あいて（先生・ともだち・かぞく）を いうので、See you soon. / Take care. / Best wishes, / Love, から えらんで いおう",
+          "starterEn": "Hi! I'm writing an email to my teacher. How should I end it?",
+          "targetExpressions": [
+            "Best wishes,",
+            "See you soon.",
+            "Take care."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "See you soon. Best wishes, Riko",
+          "Take care. Talk to you later. / Love, Kiko（かぞくや なかよしに）",
+          "leave a message・take a message・send it・an email"
+        ]
+      }
+    },
+    {
+      "lessonNo": 624,
+      "world": 21,
+      "title": "Stay Safe Online",
+      "titleJa": "ネットを あんぜんに",
+      "school": {
+        "grade": "中2",
+        "topic": "Don't share your address online.：インターネットの あんぜんな つかいかたを はなしあう",
+        "grammar": "Don't ～ online. / Keep ～ secret. / If ～, tell an adult.（きまりと アドバイス）",
+        "expressions": [
+          {
+            "en": "Don't share your address online.",
+            "ja": "ネットに じゅうしょを のせないでね。",
+            "core": true
+          },
+          {
+            "en": "Keep your password secret.",
+            "ja": "パスワードは ひみつに しておこう。"
+          },
+          {
+            "en": "If something feels strange, tell an adult.",
+            "ja": "なにか へんだと おもったら、おとなに はなそう。"
+          }
+        ],
+        "testPoints": [
+          "Don't share your address online. など ネットの あんぜんの きまりを いえる",
+          "If something feels strange, tell an adult. で こまった ときの こうどうを いえる",
+          "音の つながり（log in・sign in・turn on・turn off）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a big X with your arms.",
+          "ja": "うでで おおきな バツを つくって。",
+          "action": "りょううでを クロス",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Lock the door with a key.",
+          "ja": "かぎで ドアを しめて。",
+          "action": "かぎを まわす まね",
+          "emoji": "🔐"
+        },
+        {
+          "en": "Turn off the computer.",
+          "ja": "コンピューターを けして。",
+          "action": "スイッチを おす まね",
+          "emoji": "💻"
+        },
+        {
+          "en": "Raise your hand and ask for help.",
+          "ja": "てを あげて たすけを もとめて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🆘"
+        }
+      ],
+      "phonics": {
+        "rule": "linking",
+        "focus": [
+          "log in",
+          "sign in",
+          "turn on",
+          "turn off"
+        ],
+        "sounds": [
+          "log‿in",
+          "sign‿in",
+          "turn‿on",
+          "turn‿off"
+        ],
+        "words": [
+          "log in",
+          "sign in",
+          "turn on",
+          "turn off"
+        ],
+        "tipJa": "log in（ロギン）・sign in（サイニン）・turn on（ターノン）・turn off（ターノフ）。in・on・off の ぼいんが まえの ことばと つながる。"
+      },
+      "vocab": [
+        {
+          "en": "online",
+          "ja": "ネットの うえで",
+          "emoji": "🌐",
+          "core": true
+        },
+        {
+          "en": "password",
+          "ja": "パスワード",
+          "emoji": "🔑"
+        },
+        {
+          "en": "share",
+          "ja": "みんなに みせる・わける",
+          "emoji": "🍰"
+        },
+        {
+          "en": "stranger",
+          "ja": "しらない ひと",
+          "emoji": "👤"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The internet is useful and fun. We can send emails and make video calls. But we need to be careful. Today, let's talk about internet safety. Rule number one. Don't share your address online. Say it with me. Don't share your address online. Very good! Don't share your phone number, your school name, or your photos with strangers, either. Rule number two. Keep your password secret. Only your family can know it. Rule number three. If something feels strange, tell an adult. Let's read the tower's poster. \"Stay Safe Online! Use a nickname. Never meet an online friend alone. Don't click strange links. Log in only on safe sites. Be kind in your messages. If something feels strange, turn off the screen and tell an adult.\" These rules are very important. You are not in trouble when you tell an adult. Now, phonics. Log in. Sign in. Turn on. Turn off. Can you hear the links? Let's talk about safety together.",
+      "conversation": {
+        "scene": "Talking about internet safety in the tower",
+        "sceneJa": "とうで ネットの あんぜんを はなしあう",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "My new online friend asked for my address. Should I tell him?",
+            "ja": "ネットの あたらしい ともだちが じゅうしょを きいてきたよ。おしえて いい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "No, Birimo! Don't share your address online.",
+            "ja": "だめだよ、ビリモ！ネットに じゅうしょを のせないで。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Keep your password secret, too.",
+            "ja": "パスワードも ひみつに しておいてね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "If something feels strange, tell an adult.",
+            "ja": "なにか へんだと おもったら、おとなに はなそう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Okay. Ms. Emma, can I talk to you? This message feels strange.",
+            "ja": "わかった。エマ先生、はなしても いい？この メッセージ、なんだか へんなんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thank you for telling me, Birimo. You did the right thing.",
+            "ja": "おしえてくれて ありがとう、ビリモ。ただしい ことを したわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ネットの あんぜんに ついて はなそう。Don't share ～ online. / Keep your password secret. / If something feels strange, tell an adult. を つかって AI に アドバイスしよう（じぶんの じゅうしょ・パスワードは ぜったいに いわない）",
+          "starterEn": "Hi! I want to post a picture of my cat online. What should I be careful about?",
+          "targetExpressions": [
+            "Don't share your address online.",
+            "Keep your password secret.",
+            "If something feels strange, tell an adult."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Don't share your address online.",
+          "Keep your password secret. / If something feels strange, tell an adult.",
+          "log in・sign in・turn on・turn off"
+        ]
+      }
+    },
+    {
+      "lessonNo": 625,
+      "world": 21,
+      "title": "Email Exchange",
+      "titleJa": "メールこうかん",
+      "school": {
+        "grade": "中2",
+        "topic": "I'm writing to tell you about my trip.：とおい くにの ペンパルと メールこうかん（メールの まとめ）",
+        "grammar": "I'm writing to tell you about ～. / First, ～. Then, ～. Also, ～.（つなぎことば）/ What's your town like?",
+        "expressions": [
+          {
+            "en": "I'm writing to tell you about my trip.",
+            "ja": "わたしの たびの ことを つたえたくて かいています。",
+            "core": true
+          },
+          {
+            "en": "First, we visited a festival. Then, we came to a tall tower.",
+            "ja": "まず おまつりに いって、それから たかい とうに きたよ。"
+          },
+          {
+            "en": "What's your town like?",
+            "ja": "あなたの まちは どんな ところ？"
+          }
+        ],
+        "testPoints": [
+          "I'm writing to tell you about ～. で メールの ようけんを つたえられる",
+          "First, / Then, / Also, で 6〜8 ぶんの メールを かける",
+          "音の つながりの まとめ（hold on・check it out・take a message・log in）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fold the letter in half.",
+          "ja": "てがみを はんぶんに おって。",
+          "action": "かみを おる まね",
+          "emoji": "📃"
+        },
+        {
+          "en": "Draw a map in the air.",
+          "ja": "くうちゅうに ちずを かいて。",
+          "action": "ゆびで ちずを えがく",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Point far away.",
+          "ja": "とおくを ゆびさして。",
+          "action": "うでを のばして とおくを さす",
+          "emoji": "🔭"
+        },
+        {
+          "en": "High-five your pen pal!",
+          "ja": "ペンパルと ハイタッチ！",
+          "action": "てを あげて ハイタッチ",
+          "emoji": "🖐️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "hold on",
+          "check it out",
+          "take a message",
+          "log in"
+        ],
+        "sounds": [
+          "hold‿on",
+          "check‿it‿out",
+          "take‿a",
+          "log‿in"
+        ],
+        "words": [
+          "hold on",
+          "check it out",
+          "take a message",
+          "log in"
+        ],
+        "tipJa": "つながる おとの まとめ: hold on・check it out・take a message・log in。しいん ＋ ぼいんは つなげて いうと しぜんに きこえる。"
+      },
+      "vocab": [
+        {
+          "en": "pen pal",
+          "ja": "ペンパル（てがみや メールの ともだち）",
+          "emoji": "✍️",
+          "core": true
+        },
+        {
+          "en": "exchange",
+          "ja": "こうかん",
+          "emoji": "🔁"
+        },
+        {
+          "en": "trip",
+          "ja": "たび",
+          "emoji": "🧳"
+        },
+        {
+          "en": "culture",
+          "ja": "ぶんか",
+          "emoji": "🎎"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The tower has a pen pal program. You can exchange emails with children in faraway countries. Today, Haru got an email from a pen pal called Leo. Leo is a nickname. That's safe! Now, Haru is writing back. To start the main message, he writes, I'm writing to tell you about my trip. Say it with me. I'm writing to tell you about my trip. Great! Then use linking words. First. Then. Also. Let's read Haru's email. \"Subject: Hello from the Tower! Dear Leo, Thanks for your email. I was happy to hear from you. I'm writing to tell you about my trip. First, we visited a festival on an island. Then, we came to a tall tower. Birds carry letters here. Also, we solved a pie mystery! What's your town like? Please write back soon. Best wishes, Haru\" Look. A greeting. A main message with First, Then, and Also. A question. A closing. Perfect! He didn't write his address or his school. Good! Now, phonics review. Hold on. Check it out. Take a message. Log in. Let's write to a pen pal!",
+      "conversation": {
+        "scene": "An email exchange with a faraway pen pal",
+        "sceneJa": "とおい くにの ペンパルと メールこうかん",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I got an email from my pen pal, Leo! Check it out!",
+            "ja": "ペンパルの レオから メールが きたよ！みてみて！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What did he write?",
+            "ja": "なんて かいてあるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "He said he lived near the mountains. He loves skiing.",
+            "ja": "やまの ちかくに すんでいて、スキーが だいすきなんだって。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let's write back. Start with, I'm writing to tell you about my trip.",
+            "ja": "へんじを かこう。「わたしの たびの ことを つたえたくて かいています」で はじめよう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Then write First, Then, and Also! And tell him about the pie!",
+            "ja": "それから「まず・つぎに・それに」！パイの ことも かいてね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good. And remember, don't write your address or school name.",
+            "ja": "いいわね。それから、じゅうしょや がっこうの なまえは かかないでね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "とおい くにの ペンパル（AI）と メールこうかん。I'm writing to tell you about ～. と First, / Then, / Also, で たびや さいきんの ことを つたえて、AI にも しつもんしよう（ほんとうの なまえ・じゅうしょ・がっこうは いわなくて OK）",
+          "starterEn": "Hello from far away! I'm your new pen pal. You can call me Leo. I live near the mountains. What's new with you?",
+          "targetExpressions": [
+            "I'm writing to tell you about ～.",
+            "First, ～. Then, ～.",
+            "What's your town like?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm writing to tell you about my trip.",
+          "First, we visited a festival. Then, we came to a tall tower. / What's your town like?",
+          "hold on・check it out・take a message・log in"
+        ]
+      }
+    },
+    {
+      "lessonNo": 626,
+      "world": 21,
+      "title": "Emoji Talk",
+      "titleJa": "えもじで おはなし",
+      "school": {
+        "grade": "中2",
+        "topic": "This emoji means \"I'm excited.\"：えもじの いみを えいごで せつめいする",
+        "grammar": "This emoji means ～. / It looks like ～. / You can use it when ～.（せつめいする いいかた）",
+        "expressions": [
+          {
+            "en": "This emoji means \"I'm excited.\"",
+            "ja": "この えもじは「わくわくしてる」って いみだよ。",
+            "core": true
+          },
+          {
+            "en": "It looks like a face with big, shiny eyes.",
+            "ja": "キラキラした おおきな めの かおみたいだね。"
+          },
+          {
+            "en": "You can use it when you're surprised.",
+            "ja": "びっくりした ときに つかえるよ。"
+          }
+        ],
+        "testPoints": [
+          "This emoji means ～. / It looks like ～. で えもじを えいごで せつめいできる",
+          "くにに よって いみが ちがう えもじも ある・ことばで つたえる ほうが はっきり",
+          "パーツの まとめ（dislike・mistake・preview・enjoyment）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a surprised face.",
+          "ja": "びっくりした かおを して。",
+          "action": "めと くちを おおきく あける",
+          "emoji": "😲"
+        },
+        {
+          "en": "Make a sleepy face.",
+          "ja": "ねむそうな かおを して。",
+          "action": "めを ほそく する",
+          "emoji": "😑"
+        },
+        {
+          "en": "Make a heart with your hands.",
+          "ja": "てで ハートを つくって。",
+          "action": "りょうてで ハートの かたち",
+          "emoji": "💖"
+        },
+        {
+          "en": "Laugh out loud.",
+          "ja": "こえを だして わらって。",
+          "action": "おなかを かかえて わらう",
+          "emoji": "😂"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "dis-",
+          "mis-",
+          "pre-",
+          "-ment"
+        ],
+        "sounds": [
+          "/dɪs/",
+          "/mɪs/",
+          "/priː/",
+          "/mənt/"
+        ],
+        "words": [
+          "dislike",
+          "mistake",
+          "preview",
+          "enjoyment"
+        ],
+        "tipJa": "パーツの まとめ: dis（はんたい）dislike、mis（まちがえて）mistake、pre（まえに）preview、ment（〜する こと）enjoyment。"
+      },
+      "vocab": [
+        {
+          "en": "emoji",
+          "ja": "えもじ",
+          "emoji": "😀",
+          "core": true
+        },
+        {
+          "en": "mean",
+          "ja": "いみする",
+          "emoji": "💭"
+        },
+        {
+          "en": "excited",
+          "ja": "わくわくした",
+          "emoji": "🤩"
+        },
+        {
+          "en": "surprised",
+          "ja": "びっくりした",
+          "emoji": "😯"
+        }
+      ],
+      "teacherScript": "Hello, everyone! In messages, we often use emojis. Emojis are small pictures. But sometimes we don't know what they mean. Today, let's explain emojis in English. Look at this one. This emoji means \"I'm excited.\" Say it with me. This emoji means \"I'm excited.\" Wonderful! When you explain something, you can say, It looks like a face with big, shiny eyes. You can use it when you're happy about something. Let's read Kiko's emoji dictionary. \"The crying-laughing face. It looks like a face with tears. But it doesn't mean sad. It means something is very funny. The thumbs-up. It means okay, or good job. The sleepy face. You can use it when you're tired.\" Be careful! In different countries, some emojis mean different things. If you're not sure, ask. And don't use only emojis. Emojis make messages fun, but words are clearer. Now, phonics review. Dislike. Mistake. Preview. Enjoyment. Which word parts do you see? Dis, mis, pre, and ment. Let's talk about emojis!",
+      "conversation": {
+        "scene": "Explaining what emojis mean",
+        "sceneJa": "えもじの いみを えいごで せつめいする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Kiko sent me this emoji. What does it mean?",
+            "ja": "キコが この えもじを おくってきたよ。どういう いみ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "This emoji means \"I'm excited.\" It looks like a face with stars for eyes.",
+            "ja": "この えもじは「わくわくしてる」って いみ。めが ほしの かおみたいでしょ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What about this one? It's crying.",
+            "ja": "これは？ないてるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's crying, but it's laughing, too. It means something is very funny.",
+            "ja": "ないてるけど、わらってもいるの。すごく おもしろいって いみだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I see! Then this banana emoji means \"I'm hungry!\"",
+            "ja": "なるほど！じゃあ この バナナの えもじは「おなか すいた！」って いみだね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha. Only for you, Birimo! When you're not sure, ask.",
+            "ja": "あはは。それは ビリモだけね！わからない ときは きいてみてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "えもじの いみを AI に せつめいしよう。This emoji means ～. / It looks like ～. / You can use it when ～. を つかおう（AI が しつもんを かえすよ）",
+          "starterEn": "Hi! My friend sent me a message with a face with stars for eyes. What does that emoji mean?",
+          "targetExpressions": [
+            "This emoji means ～.",
+            "It looks like ～.",
+            "You can use it when ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This emoji means \"I'm excited.\"",
+          "It looks like a face with big, shiny eyes. / You can use it when you're surprised.",
+          "dislike・mistake・preview・enjoyment"
+        ]
+      }
+    },
+    {
+      "lessonNo": 627,
+      "world": 21,
+      "title": "Phone, Video or Email?",
+      "titleJa": "でんわ・ビデオ・メール どれが いい？",
+      "school": {
+        "grade": "中2",
+        "topic": "I think email is better for long messages.：れんらくの ほうほうを くらべて いけんを いう",
+        "grammar": "I think ～ is better for ～. / ～ is faster than ～. / I like ～ because ～.（くらべて りゆうを いう）",
+        "expressions": [
+          {
+            "en": "I think email is better for long messages.",
+            "ja": "ながい メッセージには メールの ほうが いいと おもう。",
+            "core": true
+          },
+          {
+            "en": "A phone call is faster than an email.",
+            "ja": "でんわは メールより はやいよ。"
+          },
+          {
+            "en": "I like video calls because I can see my friend's face.",
+            "ja": "ともだちの かおが みえるから、ビデオ通話が すき。"
+          }
+        ],
+        "testPoints": [
+          "I think ～ is better for ～. と because ～ で りゆうを つけて いけんを いえる",
+          "ひとに よって いけんが ちがって いい",
+          "パーツと おとの まとめ（telephone・autograph・kindness・hold on）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand if you like phone calls.",
+          "ja": "でんわが すきなら てを あげて。",
+          "action": "かたてを あげる",
+          "emoji": "✋"
+        },
+        {
+          "en": "Stand up if you like video calls.",
+          "ja": "ビデオ通話が すきなら たって。",
+          "action": "さっと たつ",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "Sit down if you like emails.",
+          "ja": "メールが すきなら すわって。",
+          "action": "すっと すわる",
+          "emoji": "⬇️"
+        },
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "あごに てを あてる",
+          "emoji": "🤔"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "tele-",
+          "graph",
+          "-ness",
+          "hold on"
+        ],
+        "sounds": [
+          "/ˈtelə/",
+          "/ɡræf/",
+          "/nəs/",
+          "hold‿on"
+        ],
+        "words": [
+          "telephone",
+          "autograph",
+          "kindness",
+          "hold on"
+        ],
+        "tipJa": "まとめ: telephone（tele ＝ とおく）・autograph（graph ＝ かく）・kindness（ness ＝ 〜さ）・hold on（つながる おと）。"
+      },
+      "vocab": [
+        {
+          "en": "way",
+          "ja": "ほうほう",
+          "emoji": "🛤️",
+          "core": true
+        },
+        {
+          "en": "fast",
+          "ja": "はやい",
+          "emoji": "🚀"
+        },
+        {
+          "en": "long",
+          "ja": "ながい",
+          "emoji": "📏"
+        },
+        {
+          "en": "face",
+          "ja": "かお",
+          "emoji": "👦"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We learned three ways to connect: phone calls, video calls, and emails. Which way is the best? It depends! Today, let's compare them and give our opinions. Listen. I think email is better for long messages. Say it with me. I think email is better for long messages. Great! Why? Because you can read it again later. A phone call is faster than an email. I like video calls because I can see my friend's face. Let's read what our friends said. \"Haru: I think phone calls are better for quick questions. They're fast. Riko: I like video calls because I can see my grandma's smile. Kiko: I think email is better for long messages. I can think carefully before I send it. Birimo: I like letters by bird post! They're slow, but exciting!\" Everyone has a different opinion, and that's okay. When you give an opinion, say a reason with because. Now, phonics review. Telephone. Autograph. Kindness. Hold on. Which way do you like? Let's share our opinions!",
+      "conversation": {
+        "scene": "Comparing phone, video and email",
+        "sceneJa": "れんらくの ほうほうを くらべる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Phone, video or email? Which do you like?",
+            "ja": "でんわ、ビデオ、メール。どれが すき？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I think phone calls are better for quick questions. They're fast.",
+            "ja": "みじかい しつもんには でんわが いいと おもう。はやいから。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I like video calls because I can see my grandma's smile.",
+            "ja": "おばあちゃんの えがおが みえるから、ビデオ通話が すき。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think email is better for long messages. I can read it again later.",
+            "ja": "ながい メッセージには メールが いいと おもう。あとで よみなおせるから。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like letters by bird post! They're slow, but exciting!",
+            "ja": "ぼくは とりの ゆうびんの てがみが すき！おそいけど、わくわくする！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great opinions! Everyone has a different reason.",
+            "ja": "すてきな いけんね！みんな りゆうが ちがうのね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "れんらくの ほうほう（でんわ・ビデオ通話・メール・てがみ）で どれが すきか、I think ～ is better for ～. と because ～ で りゆうを つけて はなそう。AI が しつもんを かえすよ",
+          "starterEn": "Hi! I want to tell my friend about my weekend. Should I call, make a video call, or send an email? What do you think?",
+          "targetExpressions": [
+            "I think ～ is better for ～.",
+            "because ～",
+            "～ is faster than ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I think email is better for long messages.",
+          "A phone call is faster than an email. / I like video calls because I can see my friend's face.",
+          "telephone・autograph・kindness・hold on"
+        ]
+      }
+    },
+    {
+      "lessonNo": 628,
+      "world": 21,
+      "title": "A Letter by Bird Post",
+      "titleJa": "とりの ゆうびんで てがみを",
+      "school": {
+        "grade": "中2",
+        "topic": "I'm writing this letter from the top of the tower.：とうの とりに かぞくへの てがみを たのむ（てがみの まとめ）",
+        "grammar": "I'm writing this letter from ～. / I miss you, but ～. / Could you take this letter to ～?（てがみで きもちと できごとを つたえる）",
+        "expressions": [
+          {
+            "en": "I'm writing this letter from the top of the tower.",
+            "ja": "とうの てっぺんから この てがみを かいています。",
+            "core": true
+          },
+          {
+            "en": "I miss you, but I'm having a great time.",
+            "ja": "あいたいけど、とても たのしく すごしています。"
+          },
+          {
+            "en": "Could you take this letter to my family?",
+            "ja": "この てがみを かぞくに とどけて くれる？"
+          }
+        ],
+        "testPoints": [
+          "I'm writing this letter from ～. で てがみを はじめられる（いまの ばしょと きもち）",
+          "Could you take this letter to ～? で ていねいに たのめる",
+          "パーツと おとの まとめ（disagree・photographer・excitement・check it out）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fold the letter and put it in the envelope.",
+          "ja": "てがみを おって ふうとうに いれて。",
+          "action": "おって いれる まね",
+          "emoji": "💌"
+        },
+        {
+          "en": "Tie the letter to the bird's leg.",
+          "ja": "とりの あしに てがみを むすんで。",
+          "action": "ひもを むすぶ まね",
+          "emoji": "🎀"
+        },
+        {
+          "en": "Let the bird go.",
+          "ja": "とりを はなして。",
+          "action": "りょうてを ひらいて そらへ",
+          "emoji": "🕊️"
+        },
+        {
+          "en": "Wave until you can't see it.",
+          "ja": "みえなく なるまで てを ふって。",
+          "action": "とおくに てを ふりつづける",
+          "emoji": "🌅"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "dis-",
+          "photo-",
+          "-ment",
+          "check it out"
+        ],
+        "sounds": [
+          "/dɪs/",
+          "/ˈfoʊtoʊ/",
+          "/mənt/",
+          "check‿it‿out"
+        ],
+        "words": [
+          "disagree",
+          "photographer",
+          "excitement",
+          "check it out"
+        ],
+        "tipJa": "まとめ: disagree（dis ＝ はんたい）・photographer（photo ＝ ひかり）・excitement（ment ＝ 〜する こと）・check it out（つながる おと）。"
+      },
+      "vocab": [
+        {
+          "en": "letter",
+          "ja": "てがみ",
+          "emoji": "✉️",
+          "core": true
+        },
+        {
+          "en": "top",
+          "ja": "てっぺん",
+          "emoji": "🔝"
+        },
+        {
+          "en": "family",
+          "ja": "かぞく",
+          "emoji": "👪"
+        },
+        {
+          "en": "bird post",
+          "ja": "とりの ゆうびん",
+          "emoji": "🐤"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Captain Pip has a present for us. He says, My birds can take your letters to your families. How nice! Today, let's write a letter by bird post. Start like this. I'm writing this letter from the top of the tower. Say it with me. I'm writing this letter from the top of the tower. Lovely! Then share your feelings. I miss you, but I'm having a great time. Then tell your news. And when you give the letter to the bird, ask politely. Could you take this letter to my family? Let's read Riko's letter. \"Dear Mom and Dad, How are you? I'm writing this letter from the top of the tower. I miss you, but I'm having a great time. Last week, we solved a pie mystery. I was writing a letter when the pie disappeared! It was a hungry bird. Also, it snowed! Please say hello to Grandma. Love, Riko\" Isn't it warm? Letters have the same parts as emails. Now, phonics review. Disagree. Photographer. Excitement. Check it out. Let's write our letters!",
+      "conversation": {
+        "scene": "Asking a tower bird to carry a letter home",
+        "sceneJa": "とうの とりに かぞくへの てがみを たのむ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm writing this letter from the top of the tower. Dear Mom and Dad...",
+            "ja": "とうの てっぺんから この てがみを かいています。おかあさん、おとうさんへ…"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What are you writing about?",
+            "ja": "なにに ついて かいてるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I miss them, but I'm having a great time. And I'm telling them about the pie mystery.",
+            "ja": "あいたいけど、とても たのしいって。パイの なぞときの ことも かいてるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Here comes Captain Pip! Could you take this letter to my family?",
+            "ja": "キャプテン・ピップが きたよ！この てがみを かぞくに とどけて くれる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Pip says yes! Check it out. He's flying over the clouds!",
+            "ja": "ピップが いいよって！みて。くもの うえを とんでいくよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Our letters will arrive in a few days. Your families will be so happy.",
+            "ja": "てがみは なんにちかで とどくわ。かぞくは とても よろこぶわね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かぞくや だいじな ひとへの てがみを AI と いっしょに かんがえよう。I'm writing this letter from ～. / I miss you, but ～. を つかって、つたえたい ことを はなそう（ほんとうの なまえ・じゅうしょは いわなくて OK）",
+          "starterEn": "Hi! Captain Pip can carry a letter for you. Who do you want to write to? What do you want to tell them?",
+          "targetExpressions": [
+            "I'm writing this letter from ～.",
+            "I miss you, but ～.",
+            "Could you take this letter to ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm writing this letter from the top of the tower.",
+          "I miss you, but I'm having a great time. / Could you take this letter to my family?",
+          "disagree・photographer・excitement・check it out"
+        ]
+      }
+    },
+    {
+      "lessonNo": 629,
+      "world": 21,
+      "title": "Tower of Messages Review",
+      "titleJa": "ことづての とうの ふりかえり",
+      "school": {
+        "grade": "中2",
+        "topic": "May I speak to ～? / I was ～ing when ～.：とうの さよなら けんがく（ワールド21 の ふりかえり）",
+        "grammar": "でんわ（May I speak to ～? / Hold on, please. / Can I take a message?）・過去進行形（I was ～ing when ～. / While ～）・メール（Dear ～, / Best wishes,）",
+        "expressions": [
+          {
+            "en": "May I speak to Captain Pip, please?",
+            "ja": "キャプテン・ピップさんを おねがいします。",
+            "core": true
+          },
+          {
+            "en": "We were sleeping when the snow started.",
+            "ja": "ゆきが ふりはじめた とき、わたしたちは ねていた。"
+          },
+          {
+            "en": "This floor is the Message Center. We worked here.",
+            "ja": "この かいが でんごんセンター。ここで はたらいたね。"
+          }
+        ],
+        "testPoints": [
+          "May I speak to ～? など でんわの いいかたを つかえる",
+          "I was ～ing when ～. で ワールド21 の おもいでを はなせる",
+          "ワールド21 の パーツと おとの まとめ（disconnect・misunderstand・microphone・happiness・can I）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk down the stairs.",
+          "ja": "かいだんを おりて。",
+          "action": "その ばで ゆっくり あしぶみ",
+          "emoji": "👣"
+        },
+        {
+          "en": "Ring the bell.",
+          "ja": "ベルを ならして。",
+          "action": "ベルを ふる まね",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Look at the view.",
+          "ja": "けしきを みて。",
+          "action": "てを おでこに あてて ながめる",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "Say thank you to the tower.",
+          "ja": "とうに ありがとうと いって。",
+          "action": "とうに むかって おじぎ",
+          "emoji": "🙏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "dis-",
+          "mis-",
+          "phone",
+          "-ness",
+          "can I"
+        ],
+        "sounds": [
+          "/dɪs/",
+          "/mɪs/",
+          "/foʊn/",
+          "/nəs/",
+          "can‿I"
+        ],
+        "words": [
+          "disconnect",
+          "misunderstand",
+          "microphone",
+          "happiness",
+          "can I"
+        ],
+        "tipJa": "ワールド21 の まとめ: disconnect（dis）・misunderstand（mis）・microphone（phone ＝ おと）・happiness（ness）・can I（キャナイ）。"
+      },
+      "vocab": [
+        {
+          "en": "tour",
+          "ja": "けんがく・ツアー",
+          "emoji": "🚩",
+          "core": true
+        },
+        {
+          "en": "floor",
+          "ja": "〜かい（たてもの）",
+          "emoji": "🏢"
+        },
+        {
+          "en": "view",
+          "ja": "けしき",
+          "emoji": "🌄"
+        },
+        {
+          "en": "remember",
+          "ja": "おもいだす・おぼえている",
+          "emoji": "🧠"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Tomorrow is our last day in the Tower of Messages. Today, let's take a goodbye tour of the tower and remember what we learned. First, the phone room. May I speak to Captain Pip, please? Say it with me. May I speak to Captain Pip, please? Great! Hold on, please. I'll get him. Next, the video call room. Can you hear me? You're on mute. The screen froze. Can you say that again? Then, the Message Center. Can I take a message? He said he was busy. Next, the kitchen. Do you remember the pie mystery? What were you doing at seven? I was taking a bath when you called. While we were sleeping, it snowed. Finally, the study. Dear Ms. Emma, How are you? Best wishes. Let's read the tower guide. \"Tower of Messages Guide. Second floor: phone room. Third floor: video call room. Fifth floor: Message Center. Sixth floor: kitchen. Seventh floor: study. Top floor: radio station.\" A radio station? Tomorrow, we will go there! Now, phonics review. Disconnect. Misunderstand. Microphone. Happiness. Can I. Let's start the tour!",
+      "conversation": {
+        "scene": "A goodbye tour of the tower",
+        "sceneJa": "とうの さよなら けんがく",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "This is the phone room. Hello, may I speak to Captain Pip, please?",
+            "ja": "ここが でんわしつ。もしもし、キャプテン・ピップさんを おねがいします。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hold on, please. I'll get him. Ha ha, just like the first day!",
+            "ja": "すこし おまちください。よんできますね。あはは、さいしょの ひ みたい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This floor is the Message Center. We worked here.",
+            "ja": "この かいが でんごんセンター。ここで はたらいたね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And this is the kitchen. I was reading when the pie disappeared!",
+            "ja": "で、ここが だいどころ。パイが きえた とき、ぼくは よんでたんだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a great month! Tomorrow, let's go to the radio station on the top floor.",
+            "ja": "すてきな 1か月だったわね！あしたは てっぺんの ラジオきょくに いきましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A radio show? Can I be the host?",
+            "ja": "ラジオばんぐみ？ぼくが しかいを しても いい？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド21 の ふりかえり。でんわ（May I speak to ～?）・ビデオ通話（Can you hear me?）・I was ～ing when ～. など、とうで ならった ことを つかって AI と おもいでを はなそう",
+          "starterEn": "Hi! This is our last tour of the Tower of Messages. What was your favorite room? What did you do there?",
+          "targetExpressions": [
+            "May I speak to ～?",
+            "I was ～ing when ～.",
+            "My favorite room was ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "May I speak to Captain Pip, please?",
+          "We were sleeping when the snow started. / This floor is the Message Center.",
+          "disconnect・misunderstand・microphone・happiness・can I"
+        ]
+      }
+    },
+    {
+      "lessonNo": 630,
+      "world": 21,
+      "title": "World 21 Grand Review",
+      "titleJa": "ワールド21 グランドレビュー",
+      "school": {
+        "grade": "中2",
+        "topic": "Thank you for calling. Talk to you soon!：とうの てっぺんで ワールド21 ラジオばんぐみ（ワールド21 の まとめ）",
+        "grammar": "ワールド21 の まとめ（でんわ・ビデオ通話・でんごん・過去進行形・メール）・Thank you for calling. / Talk to you soon!",
+        "expressions": [
+          {
+            "en": "Thank you for calling. Talk to you soon!",
+            "ja": "おでんわ ありがとう。また はなそうね！",
+            "core": true
+          },
+          {
+            "en": "Welcome to Tower Radio! Our first caller is on the line.",
+            "ja": "タワーラジオへ ようこそ！さいしょの おでんわが つながっています。"
+          },
+          {
+            "en": "What were you doing when you heard the news?",
+            "ja": "その しらせを きいた とき、なにを していましたか？"
+          }
+        ],
+        "testPoints": [
+          "Thank you for calling. Talk to you soon! で でんわや ばんぐみを しめくくれる",
+          "ワールド21 の いいかたを つかって ラジオばんぐみを すすめられる",
+          "ワールド21 の パーツと おとの まとめ（disappear・preview・telephone・agreement・hold on）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Put on your headset.",
+          "ja": "ヘッドセットを つけて。",
+          "action": "りょうみみに てを あてる",
+          "emoji": "🎧"
+        },
+        {
+          "en": "Talk into the microphone.",
+          "ja": "マイクに むかって はなして。",
+          "action": "マイクを くちの まえに もつ",
+          "emoji": "🎙️"
+        },
+        {
+          "en": "Wave goodbye to the listeners.",
+          "ja": "リスナーに さよならの てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "📻"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "dis-",
+          "pre-",
+          "tele-",
+          "-ment",
+          "hold on"
+        ],
+        "sounds": [
+          "/dɪs/",
+          "/priː/",
+          "/ˈtelə/",
+          "/mənt/",
+          "hold‿on"
+        ],
+        "words": [
+          "disappear",
+          "preview",
+          "telephone",
+          "agreement",
+          "hold on"
+        ],
+        "tipJa": "ワールド21 の まとめ: disappear（dis）・preview（pre）・telephone（tele）・agreement（ment）・hold on（ホウルドン）。ことばの パーツと つながる おとが わかると、えいごが もっと わかる！"
+      },
+      "vocab": [
+        {
+          "en": "radio",
+          "ja": "ラジオ",
+          "emoji": "📻",
+          "core": true
+        },
+        {
+          "en": "program",
+          "ja": "ばんぐみ",
+          "emoji": "🎬"
+        },
+        {
+          "en": "listener",
+          "ja": "きく ひと・リスナー",
+          "emoji": "👂"
+        },
+        {
+          "en": "caller",
+          "ja": "でんわを かけて くる ひと",
+          "emoji": "☎️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the World 21 Grand Review! We're at the top of the tower, in the radio station. Today, we will make a radio program called Tower Radio. People will call in, and we will answer. At the end of each call, we say, Thank you for calling. Talk to you soon! Say it with me. Thank you for calling. Talk to you soon! Fantastic! In this world, you learned so much. Hello, this is Haru. May I speak to Riko? Hold on, please. Can you hear me? You're on mute. The screen froze. Can you say that again? Can I take a message? He said he was busy. What were you doing at seven? I was taking a bath when you called. While we were sleeping, it snowed. Dear Ms. Emma. Best wishes. Don't share your address online. Here is our program plan. Let's read it. \"Tower Radio. Part one: News from the tower. Part two: Calls from listeners. Part three: A song by the bird singer. Part four: A goodbye message.\" Now, phonics review. Disappear. Preview. Telephone. Agreement. Hold on. You are great communicators. Let's go on the air!",
+      "conversation": {
+        "scene": "Tower Radio at the top of the tower",
+        "sceneJa": "とうの てっぺんで ワールド21 ラジオばんぐみ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Welcome to Tower Radio! Our first caller is on the line. Hello?",
+            "ja": "タワーラジオへ ようこそ！さいしょの おでんわが つながっています。もしもし？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hello, this is Birimo. Can you hear me?",
+            "ja": "もしもし、ビリモです。きこえますか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, loud and clear! What were you doing when you heard about our show?",
+            "ja": "はい、はっきり！ばんぐみの ことを きいた とき、なにを していましたか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I was eating a banana! I love this tower. Thank you, everyone!",
+            "ja": "バナナを たべてたよ！この とう だいすき。みんな ありがとう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you for calling. Talk to you soon!",
+            "ja": "おでんわ ありがとう。また はなそうね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great show! Now, Captain Pip has a message for us. It's about the Amber Library under the tower!",
+            "ja": "すてきな ばんぐみ！さて、キャプテン・ピップから でんごんよ。とうの したの こはくの としょかんの ことですって！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The Amber Library? Let's go downstairs and find it!",
+            "ja": "こはくの としょかん？したに おりて さがしに いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ラジオばんぐみに でんわで さんか！ワールド21 で ならった いいかた（Can you hear me? / I was ～ing when ～. / Thank you for calling.）で AI の しかいしゃと はなそう（ほんとうの なまえは いわなくて OK・ニックネームで いいよ）",
+          "starterEn": "Welcome to Tower Radio! You're on the air. Can you hear me? What's your nickname?",
+          "targetExpressions": [
+            "Can you hear me?",
+            "I was ～ing when ～.",
+            "Thank you for calling. Talk to you soon!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Thank you for calling. Talk to you soon!",
+          "Welcome to Tower Radio! / What were you doing when you heard the news?",
+          "disappear・preview・telephone・agreement・hold on"
+        ]
+      }
+    }
+  ]
+}

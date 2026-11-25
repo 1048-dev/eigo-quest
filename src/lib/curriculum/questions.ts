@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W21_DIS_FOCUS, W21_MISPRE_FOCUS, W21_PART_FOCUS, W21_START, W21_SUFFIX_FOCUS, disOf, disWhy, linkOf, linkWhy, misPreBlank, misPreWhy, partOf, partWhy, suffixOf, suffixWhy } from "./w21Phonics";
 import { EAR_CHOICES, EAR_SOUNDS, URE_SOUNDS, W20_EAR_FOCUS, W20_START, W20_URE_FOCUS, earOf, earWhy, schwaBlank, schwaWhy, ureSound, ureWhy } from "./w20Phonics";
 import { QU_CHOICES, QU_WHY, SILENT19_CHOICES, SILENT19_WHY, TOOL_CHOICES, TOOL_WHY, W19_OU_FOCUS, W19_QU_FOCUS, W19_RE_FOCUS, W19_SILENT_FOCUS, W19_START, W19_TOOL_FOCUS, ouSound, ouWhy, quBlank, reOf, reWhy, silentBlank19, toolEnding } from "./w19Phonics";
 import { COMPARE_WHY, LY_WHY, W18_COMPARE_FOCUS, W18_FUL_FOCUS, W18_LY_FOCUS, W18_START, W18_UN_FOCUS, compareSpelling, fulLessOf, fulLessWhy, lySpelling, stressChoices, stressWhy, unOf, unWhy } from "./w18Phonics";
@@ -571,6 +572,52 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
 }
 
 /**
+ * ワールド21（ことづての塔・L601〜）の フォニックス（形態素の はじまり）。フォーカスの 順に ことばに あうもので 問う。
+ * - "dis-": 「はんたいの いみの ことばは？」（agree → ？（さんせいしない）→ disagree / unagree / inagree）
+ * - "mis-" "pre-": 「＿ に はいる パーツは？」（＿spell（つづりを まちがえる）→ mis / pre / dis）
+ * - "tele-" "phone" "graph" "photo-": 「この ことばの tele は どんな いみ？」（とおく / かく・えがく / ひかり / じぶんで）
+ * - "-ment" "-ness": 「ただしい ことばは どれ？」（kind → ？（やさしさ）→ kindness / kindment / kindnes）
+ * - 音の つながり（focus が フレーズ そのもの）: 「つなげて いうと どう きこえる？」（hold on → ホウルドン / ホウルド・オン / …）
+ * あてはまらなければ null。ワールド20 の 問題より 先に よぶ（telephone を ワールド14 の ph、disappear を ear で 問わない）。
+ */
+export function w21Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W21_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of lesson.phonics.focus) {
+    if (f === W21_DIS_FOCUS) {
+      const d = disOf(w);
+      if (!d) continue;
+      return { promptJa: "はんたいの いみの ことばは どれ？", display: `${d.base}（${d.baseMeaning}）→ ？（${d.meaning}）`, choices: pick([d.answer, ...d.wrong]), answer: d.answer, explanationJa: disWhy(d) };
+    }
+    if ((W21_MISPRE_FOCUS as readonly string[]).includes(f)) {
+      const m = misPreBlank(w);
+      if (!m || `${m.answer}-` !== f) continue;
+      return { promptJa: "＿ に はいる パーツは どれ？", display: m.display, choices: pick(m.choices), answer: m.answer, explanationJa: misPreWhy(item.text, m) };
+    }
+    if ((W21_PART_FOCUS as readonly string[]).includes(f)) {
+      const p = partOf(w, [f]);
+      if (!p) continue;
+      return { promptJa: `この ことばの ${p.part} は どんな いみ？`, display: `${item.text}（${p.meaning}）`, choices: pick(p.choices), answer: p.answer, explanationJa: partWhy(item.text, p) };
+    }
+    if ((W21_SUFFIX_FOCUS as readonly string[]).includes(f)) {
+      const s = suffixOf(w);
+      if (!s || `-${s.kind}` !== f) continue;
+      return { promptJa: "ただしい ことばは どれ？", display: `${s.base}（${s.baseMeaning}）→ ？（${s.meaning}）`, choices: pick([s.answer, ...s.wrong]), answer: s.answer, explanationJa: suffixWhy(s) };
+    }
+    if (f.toLowerCase() === w) {
+      const l = linkOf(w);
+      if (!l) continue;
+      const other = l.others[Math.floor(rng() * l.others.length)];
+      return { promptJa: "つなげて いうと どう きこえる？", display: item.text, choices: pick([l.answer, l.split, other]), answer: l.answer, explanationJa: linkWhy(item.text, l) };
+    }
+  }
+  return null;
+}
+
+/**
  * ワールド20（まつりの島・L571〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
  * - "-ure": 「この ことばの ure は どの おと？」（treasure → チャー / ジャー / ユア）
  * - "ear" "eer": 「イア」の ことばは「＿ に はいる つづりは？」（ch＿（おうえんする）→ eer / ear / ere / ier）、
@@ -871,8 +918,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド17（-tion / -sion / -ture・'ll / won't・同音異義語・or ore oar our）は その 先（blew を ew の 過去形、won't を n't で 問わない）
       // ワールド18（-er / -est・強勢・-ly・-ful / -less・un-）は その 先（shorter を or の つづり、careful を まとまりで 問わない）
       // ワールド19（re-・道具の -er / -or・だまっている もじ・qu / squ・ou / ough）は その 先（opener を くらべる かたち、knob を ワールド14 で 問わない）
-      // ワールド20（-ure・ear / eer・あいまい母音）は いちばん 先（picture を -ture、bear を ワールド9 の ear、banana を 強勢で 問わない）
-      const dq = w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド20（-ure・ear / eer・あいまい母音）は その 先（picture を -ture、bear を ワールド9 の ear、banana を 強勢で 問わない）
+      // ワールド21（dis-・mis- / pre-・ことばの パーツ・-ment / -ness・音の つながり）は いちばん 先（telephone を ph、disappear を ear、kindness を ブレンドで 問わない）
+      const dq = w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

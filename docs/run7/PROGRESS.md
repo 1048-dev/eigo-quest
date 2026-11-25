@@ -432,3 +432,46 @@
 - `npx next build`: 成功。First Load JS（前 → 後）: /parent 159 → 162 kB（+3: 力だめしの 結果カード）、/map 202 → 203 kB、/lesson/[lessonNo] 207 → 208 kB、/library 168 → 169 kB（共有の contracts に 力だめしの 形を 足した ぶん）、共有 102 → 102 kB。新しい 画面: /yearly 157 kB（問題は ステージごとの 別チャンクで 受ける ステージだけ 読む）。
 - `npx tsx scripts/yearly-flow-check.ts`（DB 停止・next start）: L10 → ステージ1・▶ きくで のこり 1 かい・聞く 10/10・読む 10/10・話す・書く → 結果（推定 A1+・保護者向けの 点数）・2 回目は「おためしでは 1 かいだけ」＋ さいしんの 結果・L700 → ステージ3 の 文章、すべて OK（スクリーンショット: docs/run7/screens/yearly/）。
 - 保護者ページの 表示は DB が いるので 画面では 確かめていない（サービスと overview の テストで 確認）。AI 採点は キーなしの 環境なので 本番の 呼び出しは 未確認（まぜかた・フォールバックは テストで 確認）。
+
+## WORLD — ワールド21「ことづての塔」（L601〜630・ステージ3 の はじまり・A2）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-21.json` を 新しく 作成（30 レッスン、ステージ3・A2、`school.grade` は「中2」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 630 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 112、会話の セリフ 197 行（1 回 6〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は **英語だけ**（1 回 平均 約 176 語・最少 161 語）で、まいかい「読みもの」（ドアの はりがみ・でんごんメモ・チャット・日記・メール・ポスター・てがみ など 40〜80 語）を いっしょに 読む。日本語の ヒントは 3 回だけ（L601「これからは えいごだけ。だいじょうぶ！」・L603 hold on・L607 mute）。
+- ブロック構成: 601〜605 でんわ（Messages fly from this tower every day.・Hello, this is Haru. May I speak to Riko?・Hold on, please. I'll get her. / Who's calling, please?・I'm sorry. I think you have the wrong number.・Hi, it's Kiko. Are you free on Saturday?）→ 606〜610 ビデオ通話（Can you hear me? ― Yes, loud and clear.・You're on mute. Click the microphone.・The screen froze. Can you say that again? / You're breaking up. / Let me call you back.・Let me show you my room. / On the left, there's ～.・What time is it there?）→ 611〜615 でんごん（She's out right now. Can I take a message?・Could you tell her to call me back?・He said he was busy. / She said she would ～.・Riko says the bus leaves at nine.・Here's a message for you.）→ 616〜620 過去進行形（What were you doing at seven?・I was taking a bath when you called.・While we were sleeping, it snowed.・When the phone rang, I was cooking.・Birimo was reading. Kiko was painting.）→ 621〜625 メール（Dear Ms. Emma, How are you?・Thanks for your email. I was happy to hear from you.・See you soon. Best wishes, Riko・Don't share your address online.・I'm writing to tell you about my trip. ＋ First / Then / Also）→ 626〜630 まとめ（This emoji means "I'm excited."・I think email is better for long messages.・I'm writing this letter from the top of the tower.・とうの さよなら けんがく・L630 タワーラジオ Thank you for calling. Talk to you soon!）。
+- 物語の 糸: ワールド20 の ちずの とおり ことづての塔に つく（L601）。エマ先生は L606〜610 しまの おばの ところへ もどっていて、塔から ビデオ通話（L611 で もどる）。L616 で 塔の おやつの パイが きえ、みんなの アリバイ（ハルは おふろ・リコは てがみ・キコは え・ビリモは マンガ）→ はね・ゆきの あしあと（L618）・かいだんの パンくず → L620 で とりの リーダー キャプテン・ピップの はらぺこの ひなたちだったと わかり、パイを みんなで やきなおす（L619 の でんわは ピップからの「あやまりたい」だった）。L621〜622 エマ先生は 塔の 地下で ふるい「こはくの としょかん」の ほんを みつけ、L630 の ラジオの さいごに「とうの したの こはくの図書館へ」（ワールド22 へ）。
+- フォニックス（形態素の はじまり。`src/lib/curriculum/w21Phonics.ts`・`questions.ts` の `w21Question`。w20Question より 先に よぶ）:
+  - dis- "dis-": 「はんたいの いみの ことばは？」（appear（あらわれる）→ ？（きえる）→ disappear / unappear / inappear）
+  - mis- / pre- "mis-" "pre-": 「＿ に はいる パーツは？」（＿spell（つづりを まちがえる）→ mis / pre / dis）
+  - ことばの パーツ "tele-" "phone" "graph" "photo-": 「この ことばの tele は どんな いみ？」（telephone（でんわ）→ とおく / かく・えがく / ひかり / じぶんで）
+  - -ment / -ness: 「ただしい ことばは どれ？」（move（うごく）→ ？（うごき）→ movement / moveness / movment、happy → happiness / happiment / happyness）
+  - 音の つながり（focus は フレーズ そのもの "hold on" "can I" "check it out" …）: 「つなげて いうと どう きこえる？」（hold on → ホウルドン / ホウルド・オン / ほかの フレーズ）
+- `vowelTeams.ts` の 読み上げで dis-・mis-・pre-・パーツ・-ment・-ness は その回の ことばを、フレーズは そのまま よむ（`w21Say`）。フォーカスの ボタンは これまでの きまりで「dis…」「…ment」「hold on」と 出る。
+- テスト: `tests/curriculum.test.ts` に ワールド21 の 決まりごと（範囲・ステージ3・タイトル・フォニックスの 順と 種類・表の カバー・文法と 会話の 型・過去進行形は L616 から／while は L618 から・先生の台本は 英語だけで 150 語 以上＋読みもの・会話 5〜7 行・L630 スピード TPR・あんぜん・物語）を 追加。`tests/phonics-w21.test.ts`（14 テスト）を 追加。`tests/night2-decisions.test.ts` の「ボタンが ことば（英字だけ）を 読む」に フレーズ（スペースで くぎった 英字）を みとめる 1 行を 足した。
+
+### 決めたこと（理由）
+- **ステージ3 の 先生の台本は 英語だけ**: ステージ2（1 文の 日本語の たすけ）から きりかえ。いきなり だと こわいので L601 の さいしょに「これからは えいごだけ。だいじょうぶ！」と 1 回だけ 日本語で つたえ、「Listen carefully, look at the pictures, and guess.」と きく コツを 英語で おしえた。日本語の ヒントは ことばの いみを 1 語 そえる 2 回（hold on・mute）だけ。テストで 日本語の 割合 3% 未満・ヒントの ある 回が 601・603・607 だけ で ある ことを まもる。
+- **まいかい 読みものを 入れる**: 計画書の「毎回 80〜150 語の 短い 文章」に あわせ、台本の なかに 40〜80 語の 読みもの（はりがみ・メモ・日記・メール・ポスター）を 入れ、台本ぜんたいで 160〜190 語。ワークシートの 読みものは この 台本から そのまま つかえる。
+- **新しい phonics.rule**: "dis" "mis-pre" "word-parts" "ment-ness" "linking"（ふりかえりは "review"）。L604 は dis- と un-（ワールド18）を くらべる 回に して、un の ことばは ワールド18 の 問題を そのまま つかう。
+- **まちがいの 選択肢に ほんとうに ある ことばを 出さない**: dis- は ことばごとに 選択肢を きめた（dislike に unlike は 出さない）。mis- / pre- は パーツを かえると ある ことば（review・repay・replace・displace など）を のぞく。discover・mistrust の ような いみが ずれる・同じ いみの ことばが ある ものは 表に 入れなかった。
+- **パーツの 問題では もう 1つの パーツの いみを 出さない**: telephone の tele を きく とき「おと・こえ」も 正しく 見えて しまうため。xylo（き）・micro（ちいさい）・auto（じぶんで）は 台本と せつめいで ふれるだけ。
+- **-ment / -ness の まちがい**: もう 1つの おわり（kindment）と、子どもが じっさいに まちがえる つづり（movment・agrement・enjoiment・happyness・kindnes）を 1つずつ。「うごきの ことば ＋ ment」「ようすの ことば ＋ ness」の めやすで おしえる。
+- **音の つながりは フレーズを そのまま phonics.words に**: これまでは 1 語だけ だったが、つながりは 2 語 以上で ないと おしえられないため。カタカナは めやす（つなげた いいかた と 1 つずつの いいかた を くらべる）。アメリカ英語の t の 音の へんか（チェケラ）は ステージ4 の「聞いて わかる」に のこし、ここでは まっすぐ つなげた 形（チェキタウト）に した。come・take・leave の よまない e は その まえの しいんで つながると せつめい。
+- **過去進行形の じゅんばん**: was / were ＋ ～ing は L616 から、while の 文は L618 から（それまでの 表現・セリフ・台本に 出さない ことを テストで たしかめる）。伝言の 文（He said he was busy.）は L613 で「said の あとは すぎた かたち（is → was、will → would）」だけ。L614 で says（いま つたえる）と said を くらべた。
+- **あんぜん**: L604 でんわで しらない ひとに なまえ・じゅうしょを いわない、L609 ビデオ通話で じゅうしょの わかる ものや かぞくの しゃしんを うつさない、L619 りょうりは おとなと、L624 ネットの きまり（じゅうしょ・パスワード・ひとりで あわない・へんな リンク・へんだと おもったら おとなに。はなしても おこられない）、L625 ペンパルは ニックネームで じゅうしょ・がっこうを かかない。AI 会話の しょうかい・でんわ・メール・てがみ・ラジオの 回は「なまえ（・じゅうしょ）は いわなくて OK」。
+- **新しい 話し手は 増やさない**: キャプテン・ピップ・とりの かしゅ・ペンパルの レオは 台本と セリフの なかだけ。L610 の とおい くにの ともだち（ボボ）は ビリモが 演じる。
+- 自分で 1 回 見なおして なおした ところ: 台本が 160 語に 足りない 回（L603・L626）に 1 文 足した。L616 と L620 で アリバイが くいちがっていた（ハルが「よんでいた」）ので ハルは おふろ（L617 の でんわと つながる）に そろえた。ふるい 端末で 出ない かもしれない 絵文字（🪹・ZWJ の 🙇‍♂️ 🙋‍♀️）を かえた。つながる おとの せつめいが come in を「e で おわる」と いって いたのを「m の おと」に なおした。
+- 気づいた こと（このフェーズでは かえていない）: レッスンの AI 会話の プロンプト（`buildSystemPrompt`）は ステージに かかわらず「12 語まで の やさしい 文」の まま。ステージ3 の「4〜5 往復・AI が 1 回は 追加の しつもん」に あわせるには フリートークの `levelGuide` の ように ステージを わたす 必要が ある（あとの フェーズで）。
+
+### 例（L617「I Was Taking a Bath」）
+- 表現（core）: I was taking a bath when you called. ／ Why didn't you answer the phone? ／ Sorry I missed your call.
+- 読みもの（台本より）: "Hi, Ms. Emma. Sorry I missed your call last night. I was taking a bath when you called. I saw your message after my bath, but it was late. Is it about the missing pie? I didn't eat it! Haru"
+- 会話: Ms. Emma「Haru, I called you at seven last night. Why didn't you answer the phone?」 Haru「Sorry I missed your call. I was taking a bath when you called.」 Riko「So Haru didn't eat the pie!」 Birimo「I was reading a comic book when you called. I didn't hear the phone!」
+- フォニックス: excitement / enjoyment / announcement / improvement（問題は「ただしい ことばは どれ？」excite → excitement / exciteness / excitment）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 55 ファイル・1,561 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 203 → 206 kB、/lesson/[lessonNo] 208 → 211 kB、/gacha 191 → 194 kB、/test/[assessmentId] 190 → 194 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド21 の 問題の コードと 表（せつめいの 文・カタカナの 表）と 索引の 1 ワールドぶん。ワールド20 の +1 kB より 多いのは 5 しゅるいの 新しい 問題を 作ったため。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 31`: No.31（L601〜620・62 ページ）を 作れることを 確認（No.32 は ワールド22 が できてから）

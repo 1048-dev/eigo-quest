@@ -26,6 +26,7 @@ import { endingSpelling, homophoneOf, orSpelling, willContraction } from "@/lib/
 import { compareSpelling, fulLessOf, lySpelling, stressChoices, unOf } from "@/lib/curriculum/w18Phonics";
 import { ouSound, quBlank, reOf, silentBlank19, toolEnding } from "@/lib/curriculum/w19Phonics";
 import { earOf, schwaBlank, ureSound } from "@/lib/curriculum/w20Phonics";
+import { disOf, linkOf, misPreBlank, partOf, suffixOf } from "@/lib/curriculum/w21Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -1898,5 +1899,151 @@ describe("カリキュラム: ワールド20 の決まりごと（まつりの�
     expect(said(599)).toMatch(/new map/);
     expect(said(600)).toMatch(/600th lesson/);
     expect(said(600)).toMatch(/Tower of Messages/);
+  });
+});
+
+describe("カリキュラム: ワールド21 の決まりごと（ことづての塔・ステージ3 の はじまり）", () => {
+  const w21 = LESSONS.filter((l) => l.world === 21);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+  const texts = (a: number, b: number) => range(a, b).flatMap((l) => [...l.school.expressions.map((e) => e.en), ...l.conversation!.lines.map((x) => x.en)]).join(" ");
+
+  it("ワールド21 は 601〜630 の 30 レッスン、ステージ3・A2、学年の めやすは 中2", () => {
+    if (w21.length === 0) return; // 未作成ならスキップ
+    expect(w21.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 601 + i));
+    for (const l of w21) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中2");
+      expect(l.stage, `L${l.lessonNo}`).toBe(3);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w21.length === 0) return;
+    expect(at(601)!.title).toBe("The Tower of Messages");
+    expect(at(602)!.title).toBe("Hello, This Is Haru");
+    expect(at(607)!.title).toBe("You're on Mute!");
+    expect(at(611)!.title).toBe("Can I Take a Message?");
+    expect(at(613)!.title).toBe("He Said He Was Busy");
+    expect(at(616)!.title).toBe("What Were You Doing?");
+    expect(at(618)!.title).toBe("While We Were Sleeping");
+    expect(at(621)!.title).toBe("Dear Ms. Emma");
+    expect(at(624)!.title).toBe("Stay Safe Online");
+    expect(at(627)!.title).toBe("Phone, Video or Email?");
+    expect(at(630)!.title).toBe("World 21 Grand Review");
+  });
+
+  it("フォニックス: dis- → mis- / pre- → ことばの パーツ → -ment / -ness → 音の つながり（各ブロックの 5回目と L626〜630 は ふりかえり）", () => {
+    if (w21.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(601, 604, "dis");
+    rule(606, 609, "mis-pre");
+    rule(611, 614, "word-parts");
+    rule(616, 619, "ment-ness");
+    rule(621, 624, "linking");
+    for (const n of [605, 610, 615, 620, 625, 626, 627, 628, 629, 630]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // dis- の 回の dis の ことばは 表に ある（L604 は un- と くらべる）
+    for (const l of range(601, 605)) for (const w of l.phonics.words.filter((x) => x.startsWith("dis"))) expect(disOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(at(604)!.phonics.focus).toEqual(["dis-", "un-"]);
+    // mis- は 606〜607、pre- は 608 から、609 で まぜる
+    expect(range(606, 607).flatMap((l) => l.phonics.focus)).toEqual(["mis-", "mis-"]);
+    expect(at(608)!.phonics.focus).toEqual(["pre-"]);
+    for (const l of range(606, 610)) for (const w of l.phonics.words.filter((x) => /^(mis|pre)/.test(x))) expect(misPreBlank(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    // パーツ: tele → phone → graph → photo（どの ことばも その回の パーツで 問える）
+    expect(range(611, 613).map((l) => l.phonics.focus[0])).toEqual(["tele-", "phone", "graph"]);
+    for (const l of range(611, 615)) for (const w of l.phonics.words) expect(partOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    // -ment → -ness（y を i に かえる ことばも あつかう）
+    for (const l of range(616, 620)) for (const w of l.phonics.words) expect(suffixOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(range(616, 620).flatMap((l) => l.phonics.words.map((w) => suffixOf(w)!.trap))).toContain("y-to-i");
+    // 音の つながり: focus は フレーズ そのもの、ことばと 1つずつ 対応
+    for (const l of range(621, 625)) {
+      expect(l.phonics.focus, `L${l.lessonNo}`).toEqual(l.phonics.words);
+      for (const w of l.phonics.words) expect(linkOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    }
+    for (const p of ["hold on", "can I", "check it out"]) expect(range(621, 625).flatMap((l) => l.phonics.words)).toContain(p);
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w21.length === 0) return;
+    expect(ex(601, 605)).toContain("Messages fly from this tower every day.");
+    expect(ex(601, 605)).toContain("Hello, this is Haru. May I speak to Riko?");
+    expect(ex(601, 605)).toContain("Hold on, please. I'll get her.");
+    expect(ex(601, 605)).toContain("I think you have the wrong number.");
+    expect(ex(601, 605)).toContain("Hi, it's Kiko. Are you free on Saturday?");
+    expect(ex(606, 610)).toContain("Can you hear me?");
+    expect(ex(606, 610)).toContain("Yes, loud and clear.");
+    expect(ex(606, 610)).toContain("You're on mute. Click the microphone.");
+    expect(ex(606, 610)).toContain("The screen froze. Can you say that again?");
+    expect(ex(606, 610)).toContain("Let me show you my room.");
+    expect(ex(606, 610)).toContain("What time is it there?");
+    expect(ex(611, 615)).toContain("She's out right now. Can I take a message?");
+    expect(ex(611, 615)).toContain("Could you tell her to call me back?");
+    expect(ex(611, 615)).toContain("He said he was busy.");
+    expect(ex(611, 615)).toContain("Riko says the bus leaves at nine.");
+    expect(ex(611, 615)).toContain("Here's a message for you.");
+    expect(ex(616, 620)).toContain("What were you doing at seven?");
+    expect(ex(616, 620)).toContain("I was taking a bath when you called.");
+    expect(ex(616, 620)).toContain("While we were sleeping, it snowed.");
+    expect(ex(616, 620)).toContain("When the phone rang, I was cooking.");
+    expect(ex(616, 620)).toContain("Birimo was reading. Kiko was painting.");
+    expect(ex(621, 625)).toContain("Dear Ms. Emma, How are you?");
+    expect(ex(621, 625)).toContain("Thanks for your email. I was happy to hear from you.");
+    expect(ex(621, 625)).toContain("Best wishes, Riko");
+    expect(ex(621, 625)).toContain("Don't share your address online.");
+    expect(ex(621, 625)).toContain("I'm writing to tell you about my trip.");
+    expect(ex(626, 630)).toContain("This emoji means \"I'm excited.\"");
+    expect(ex(626, 630)).toContain("I think email is better for long messages.");
+    expect(ex(626, 630)).toContain("I'm writing this letter from the top of the tower.");
+    expect(ex(626, 630)).toContain("May I speak to");
+    expect(ex(626, 630)).toContain("Thank you for calling. Talk to you soon!");
+  });
+
+  it("過去進行形（was / were ＋ ～ing）は L616 から、while の 文は L618 から（それまでの 表現・セリフ・先生の 台本には 出さない）", () => {
+    if (w21.length === 0) return;
+    const pastProg = /\b(was|were) [a-z]+ing\b/i;
+    const before = (a: number, b: number) => texts(a, b) + " " + range(a, b).map((l) => l.teacherScript).join(" ");
+    expect(before(601, 615)).not.toMatch(pastProg);
+    expect(before(601, 617)).not.toMatch(/\bwhile\b/i);
+    expect(texts(616, 616)).toMatch(pastProg);
+  });
+
+  it("ステージ3: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・150 語 以上で 短い 読みものを ふくむ、会話シーンは 5〜7 行、L630 は スピード TPR", () => {
+    if (w21.length === 0) return;
+    for (const l of w21) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.03);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(150);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{40,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(5);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+    }
+    // 日本語の ヒントが ある 回は 3回だけ（はじめての 英語だけの 回・hold on・mute）
+    expect(w21.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([601, 603, 607]);
+    expect(at(630)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("あんぜん: でんわで じゅうしょを いわない・ネットの きまり・へやを みせる ときの ちゅうい・メールに じゅうしょを かかない、AI 会話は「なまえ（・じゅうしょ）は いわなくて OK」", () => {
+    if (w21.length === 0) return;
+    expect(at(604)!.teacherScript).toMatch(/If a stranger asks your name or address on the phone, don't tell them/);
+    expect(at(609)!.teacherScript).toMatch(/Don't show letters with your address/);
+    expect(at(624)!.teacherScript).toMatch(/Never meet an online friend alone/);
+    expect(at(624)!.school.expressions.map((e) => e.en)).toEqual(["Don't share your address online.", "Keep your password secret.", "If something feels strange, tell an adult."]);
+    expect(at(625)!.teacherScript).toMatch(/He didn't write his address or his school/);
+    expect(at(619)!.teacherScript).toMatch(/always cook with an adult/);
+    for (const n of [601, 602, 604, 605, 609, 615, 620, 621, 625, 628, 630]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/いわなくて OK|かかなくて OK/);
+    expect(at(624)!.conversation!.aiTask.goalJa).toMatch(/ぜったいに いわない/);
+  });
+
+  it("物語: L601 で 塔に つき、L606〜610 は しまの エマ先生と ビデオ通話、L616〜620 は パイの なぞとき、L630 で こはくの図書館へ", () => {
+    if (w21.length === 0) return;
+    const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+    expect(said(601)).toMatch(/Tower of Messages/);
+    expect(at(606)!.teacherScript).toMatch(/Festival Island/);
+    expect(at(611)!.teacherScript).toMatch(/I'm back/);
+    expect(said(616)).toMatch(/pie is missing/);
+    expect(said(620)).toMatch(/hungry little bird/);
+    expect(said(630)).toMatch(/Amber Library/);
   });
 });
