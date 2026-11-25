@@ -11,6 +11,7 @@ import { w10Say } from "./w10Phonics";
 import { w11Say } from "./w11Phonics";
 import { w12Say } from "./w12Phonics";
 import { w19Say } from "./w19Phonics";
+import { w20Say } from "./w20Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -87,6 +88,9 @@ export function focusSay(focus: string, words: readonly string[] = []): string {
     const hit = words.find((w) => w.toLowerCase().startsWith("un"));
     if (hit) return hit;
   }
+  // ワールド20 の -ure・eer は その回の ことばで よむ
+  const w20 = w20Say(focus, words);
+  if (w20) return w20;
   // ワールド19 の re-・-or・-stle・gu・squ・ough と、いろいろな おとの ou は その回の ことばで よむ
   const w19 = w19Say(focus, words);
   if (w19) return w19;

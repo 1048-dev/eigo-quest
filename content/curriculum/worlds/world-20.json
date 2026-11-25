@@ -1,0 +1,4694 @@
+{
+  "world": 20,
+  "stage": 2,
+  "level": "A2",
+  "lessons": [
+    {
+      "lessonNo": 571,
+      "world": 20,
+      "title": "Drums on the Island",
+      "titleJa": "たいこの なる しま",
+      "school": {
+        "grade": "中2",
+        "topic": "There's a festival on the island!：しまに ついて、おまつりの ようすを いう（There is ～ の ふくしゅう・ワールド20 の はじまり）",
+        "grammar": "There's a ～ on ～. / I can hear ～.（There is の ふくしゅう・hear）",
+        "expressions": [
+          {
+            "en": "There's a festival on the island!",
+            "ja": "しまで おまつりが あるよ！",
+            "core": true
+          },
+          {
+            "en": "I can hear drums.",
+            "ja": "たいこの おとが きこえる。"
+          },
+          {
+            "en": "What's that sound?",
+            "ja": "あの おとは なに？"
+          }
+        ],
+        "testPoints": [
+          "There's a ～. / I can hear ～. で しまの ようすを つたえられる",
+          "-ure の おと「チャー」（picture・culture・mixture・gesture）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Play the drums!",
+          "ja": "たいこを たたいて！",
+          "action": "りょうてで たいこを たたく まね",
+          "emoji": "🥁"
+        },
+        {
+          "en": "Step off the boat.",
+          "ja": "ふねから おりて。",
+          "action": "おおきく 1ぽ まえに でる",
+          "emoji": "⛵"
+        },
+        {
+          "en": "Wave to the island.",
+          "ja": "しまに てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Put your hand to your ear and listen.",
+          "ja": "みみに てを あてて きいて。",
+          "action": "みみに てを あてる",
+          "emoji": "👂"
+        }
+      ],
+      "phonics": {
+        "rule": "ure",
+        "focus": [
+          "-ure"
+        ],
+        "sounds": [
+          "/tʃər/"
+        ],
+        "words": [
+          "picture",
+          "culture",
+          "mixture",
+          "gesture"
+        ],
+        "tipJa": "t の あとの ure は「チャー」。picture（え）・culture（ぶんか）・mixture（まぜた もの）・gesture（みぶり）。"
+      },
+      "vocab": [
+        {
+          "en": "festival",
+          "ja": "おまつり",
+          "emoji": "🎉",
+          "core": true
+        },
+        {
+          "en": "island",
+          "ja": "しま",
+          "emoji": "🏝️"
+        },
+        {
+          "en": "drum",
+          "ja": "たいこ",
+          "emoji": "🥁"
+        },
+        {
+          "en": "boat",
+          "ja": "ふね・ボート",
+          "emoji": "⛵"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to World 20, Festival Island! This is the last world of Stage 2. Listen. Boom, boom, boom! What's that sound? I can hear drums. There's a festival on the island! Say it with me. There's a festival on the island! Great! There's means something is here. There's a big tree. There's a small boat. ワールド20 は おまつりの しま。ステージ2 の さいごの ワールドだよ。 Let's practice. Look at the beach. There's a red flag. There are many lanterns. I can hear the waves. I can hear the birds. Now, phonics. Picture. Culture. Mixture. Gesture. The t u r e at the end says cher. Picture, not pic-ture-e. Let's make a gesture. Wave your hand! Now, tell me. Close your eyes. What can you hear? I can hear the drums. Let's go and see the festival!",
+      "conversation": {
+        "scene": "Arriving at the island by boat and hearing drums",
+        "sceneJa": "ふねで しまに つくと、たいこの おとが きこえる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Look! I can see the island! It's full of flags!",
+            "ja": "みて！しまが みえる！はたが いっぱい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Listen. Boom, boom! What's that sound?",
+            "ja": "きいて。ドン、ドン！あの おとは なに？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I can hear drums. There's a festival on the island!",
+            "ja": "たいこの おとが きこえる。しまで おまつりが あるんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look at this poster. It has a picture of lanterns and dancers.",
+            "ja": "この ポスターを みて。ちょうちんと おどる ひとの えが あるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is Festival Island. My aunt lives here. People here love music and dancing.",
+            "ja": "ここは まつりの島。わたしの おばが すんでいるの。ここの ひとたちは おんがくと おどりが だいすきなのよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The map from the dream machine was right!",
+            "ja": "ゆめの きかいから でた ちずは ただしかったね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let's go and find the drums!",
+            "ja": "たいこを さがしに いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "しまの ようすを There's ～. / I can hear ～. で つたえよう",
+          "starterEn": "Hi! I'm Ms. Emma. We're on Festival Island! Close your eyes and listen. What can you hear? What can you see?",
+          "targetExpressions": [
+            "There's a festival on the island!",
+            "I can hear ～.",
+            "There's a ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "There's a festival on the island!",
+          "I can hear drums. / What's that sound?",
+          "picture・culture・mixture・gesture（ture ＝ チャー）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 572,
+      "world": 20,
+      "title": "Would You Like to Come?",
+      "titleJa": "おまつりに こない？",
+      "school": {
+        "grade": "中2",
+        "topic": "Would you like to come to the festival?：ていねいに さそう（Would you like to ～?）",
+        "grammar": "Would you like to ～? ― Yes, I'd love to! / Sure!（ていねいな さそいかた）",
+        "expressions": [
+          {
+            "en": "Would you like to come to the festival?",
+            "ja": "おまつりに きませんか？",
+            "core": true
+          },
+          {
+            "en": "Yes, I'd love to!",
+            "ja": "うん、ぜひ いきたい！"
+          },
+          {
+            "en": "The festival is on Saturday.",
+            "ja": "おまつりは 土曜日だよ。"
+          }
+        ],
+        "testPoints": [
+          "Would you like to ～? で ていねいに さそい、Yes, I'd love to! と こたえられる",
+          "-ure の おと「ジャー」（treasure・measure・pleasure）と「チャー」（nature）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold out the flyer.",
+          "ja": "チラシを さしだして。",
+          "action": "りょうてで かみを さしだす",
+          "emoji": "📄"
+        },
+        {
+          "en": "Nod and smile.",
+          "ja": "うなずいて にっこり。",
+          "action": "うなずいて えがお",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Shake hands.",
+          "ja": "あくしゅして。",
+          "action": "となりの ひとと あくしゅ",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Point to Saturday on the calendar.",
+          "ja": "カレンダーの 土曜日を ゆびさして。",
+          "action": "カレンダーを ゆびさす",
+          "emoji": "📅"
+        }
+      ],
+      "phonics": {
+        "rule": "ure",
+        "focus": [
+          "-ure"
+        ],
+        "sounds": [
+          "/ʒər/",
+          "/tʃər/"
+        ],
+        "words": [
+          "treasure",
+          "measure",
+          "pleasure",
+          "nature"
+        ],
+        "tipJa": "s の あとの ure は「ジャー」。treasure（たからもの）・measure（はかる）・pleasure（よろこび）。nature は t の あとなので「チャー」。"
+      },
+      "vocab": [
+        {
+          "en": "come",
+          "ja": "くる",
+          "emoji": "👋",
+          "core": true
+        },
+        {
+          "en": "invite",
+          "ja": "さそう・まねく",
+          "emoji": "✉️"
+        },
+        {
+          "en": "Saturday",
+          "ja": "土曜日",
+          "emoji": "📅"
+        },
+        {
+          "en": "flyer",
+          "ja": "チラシ",
+          "emoji": "📄"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Yesterday, we arrived on Festival Island. Today, a boy on the beach gave Birimo a flyer. The festival is on Saturday! I want to ask you nicely. Would you like to come to the festival? Say it with me. Would you like to come to the festival? Nice! Would you like to is a polite way to invite someone. It's softer than Do you want to. Answer, Yes, I'd love to! Would you like to ～? は ていねいな さそいかた。 Let's practice. Would you like to play tag? Yes, I'd love to! Would you like to see the dance? Sure! Now, phonics. Treasure. Measure. Pleasure. The s u r e says zher. Treasure, not trea-cher. Nature has t u r e, so it says cher. Listen. Treasure, nature. Now, invite me! Would you like to come to my house?",
+      "conversation": {
+        "scene": "An island boy's flyer invites them to the festival",
+        "sceneJa": "しまの おとこのこに、おまつりに さそわれる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "A boy on the beach gave me this flyer. He asked, would you like to come to the festival?",
+            "ja": "はまべの おとこのこが この チラシを くれたよ。「おまつりに こない？」って。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow! When is it?",
+            "ja": "わあ！いつ？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's on Saturday. It says, dance contest and fireworks!",
+            "ja": "土曜日だよ。ダンス大会と はなび って かいてある！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Kiko, would you like to come to the festival with us?",
+            "ja": "キコ、いっしょに おまつりに いかない？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, I'd love to! How about you, Ms. Emma?",
+            "ja": "うん、ぜひ いきたい！エマ先生は？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Sure! My aunt plays the big drum in the festival band.",
+            "ja": "もちろん！わたしの おばは おまつりの バンドで おおだいこを たたくのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's tell the boy. Yes, we'd love to!",
+            "ja": "おとこのこに つたえよう。ぜひ いきたいです！って。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Would you like to ～? で ていねいに さそったり、Yes, I'd love to! と こたえたり しよう",
+          "starterEn": "Hi! I'm Ms. Emma. There's a festival on Saturday. Would you like to come with me?",
+          "targetExpressions": [
+            "Yes, I'd love to!",
+            "Would you like to ～?",
+            "Sure!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Would you like to come to the festival?",
+          "Yes, I'd love to! / Sure!",
+          "treasure・measure・pleasure（sure ＝ ジャー）・nature（ture ＝ チャー）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 573,
+      "world": 20,
+      "title": "I'd Love To, But…",
+      "titleJa": "いきたいけど…",
+      "school": {
+        "grade": "中2",
+        "topic": "I'd love to, but I have to help my mom.：やさしく ことわる（I'd love to, but ～.）",
+        "grammar": "I'd love to, but ～. / Sorry, I can't. / Maybe next time.（ことわりかた）",
+        "expressions": [
+          {
+            "en": "I'd love to, but I have to help my mom.",
+            "ja": "いきたいけど、おかあさんの てつだいを しなきゃ いけないんだ。",
+            "core": true
+          },
+          {
+            "en": "Sorry, I can't. I'm busy today.",
+            "ja": "ごめん、いけないんだ。きょうは いそがしいの。"
+          },
+          {
+            "en": "That's okay. Maybe next time!",
+            "ja": "だいじょうぶ。また こんどね！"
+          }
+        ],
+        "testPoints": [
+          "I'd love to, but ～. で りゆうを そえて やさしく ことわれる",
+          "-ure の おと「ユア」（pure・cure・secure）と「チャー」（furniture）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put your hands together and say sorry.",
+          "ja": "てを あわせて ごめんねと いって。",
+          "action": "かおの まえで てを あわせる",
+          "emoji": "🙏"
+        },
+        {
+          "en": "Shake your head gently.",
+          "ja": "やさしく くびを ふって。",
+          "action": "ゆっくり くびを よこに ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Give a thumbs-up.",
+          "ja": "おやゆびを たてて。",
+          "action": "グッドの ポーズ",
+          "emoji": "👍"
+        },
+        {
+          "en": "Wave goodbye.",
+          "ja": "バイバイと てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "ure",
+        "focus": [
+          "-ure"
+        ],
+        "sounds": [
+          "/jʊr/",
+          "/tʃər/"
+        ],
+        "words": [
+          "pure",
+          "cure",
+          "secure",
+          "furniture"
+        ],
+        "tipJa": "p や c の あとの ure は「ユア」。pure（まじりけの ない）・cure（なおす）・secure（あんぜんな）。furniture（かぐ）は t の あとなので「チャー」。"
+      },
+      "vocab": [
+        {
+          "en": "busy",
+          "ja": "いそがしい",
+          "emoji": "🏃",
+          "core": true
+        },
+        {
+          "en": "help",
+          "ja": "てつだう",
+          "emoji": "🙌"
+        },
+        {
+          "en": "reason",
+          "ja": "りゆう",
+          "emoji": "💬"
+        },
+        {
+          "en": "next time",
+          "ja": "こんど",
+          "emoji": "🔜"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Sometimes a friend invites us, but we can't go. That's okay. We can say no kindly. Listen. Would you like to play soccer? I'd love to, but I have to help my mom. Say it with me. I'd love to, but I have to help my mom. Great! First, say I'd love to. Then, give a reason. ことわる ときは「いきたいけど」と きもちを いってから りゆうを いおう。 And when your friend says no, don't be sad. Just say, That's okay. Maybe next time! It's okay to say no. Let's practice. Would you like to go swimming? I'd love to, but I have a cold. Sorry, I can't. I'm busy today. Now, phonics. Pure. Cure. Secure. The u r e after p or c says yoor. Pure, cure. Furniture has t u r e. Cher! Now, I'll invite you. Would you like to clean my room? Ha ha!",
+      "conversation": {
+        "scene": "Practicing saying no kindly",
+        "sceneJa": "やさしく ことわる れんしゅう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's practice saying no kindly. Haru, please invite Riko.",
+            "ja": "やさしく ことわる れんしゅうを しましょう。ハル、リコを さそって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Riko, would you like to go fishing this afternoon?",
+            "ja": "リコ、きょうの ごご つりに いかない？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'd love to, but I have to help my mom. Sorry!",
+            "ja": "いきたいけど、おかあさんの てつだいを しなきゃ いけないの。ごめんね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's okay. Maybe next time!",
+            "ja": "だいじょうぶ。また こんどね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Kiko, would you like to eat ten bananas with me?",
+            "ja": "キコ、ぼくと バナナを 10ぽん たべない？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! I'd love to, but I'm full. Maybe next time!",
+            "ja": "あはは！たべたいけど、おなかが いっぱいなの。また こんどね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Perfect! First, say I'd love to. Then, give a reason.",
+            "ja": "かんぺき！まず「いきたいけど」と いって、それから りゆうを いうのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "さそいを I'd love to, but ～. で やさしく ことわろう。ことわられたら That's okay. と いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Would you like to go to the beach with me this afternoon? It's very hot today!",
+          "targetExpressions": [
+            "I'd love to, but ～.",
+            "Sorry, I can't.",
+            "Maybe next time!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'd love to, but I have to help my mom.",
+          "That's okay. Maybe next time!（ことわられても だいじょうぶ）",
+          "pure・cure・secure（ure ＝ ユア）・furniture（ture ＝ チャー）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 574,
+      "world": 20,
+      "title": "Shall We Dance?",
+      "titleJa": "いっしょに おどろうか？",
+      "school": {
+        "grade": "中2",
+        "topic": "Shall we dance? ― Sure!：いっしょに しようと さそう（Shall we ～?）",
+        "grammar": "Shall we ～? ― Sure! / Yes, let's!（いっしょに ～しようか）",
+        "expressions": [
+          {
+            "en": "Shall we dance?",
+            "ja": "いっしょに おどろうか？",
+            "core": true
+          },
+          {
+            "en": "Sure! Let's dance together.",
+            "ja": "うん！いっしょに おどろう。"
+          },
+          {
+            "en": "Shall we join the circle?",
+            "ja": "わに はいろうか？"
+          }
+        ],
+        "testPoints": [
+          "Shall we ～? で いっしょに する ことを さそえる",
+          "-ure の 3つの おと（adventure・creature ＝ チャー、measure ＝ ジャー、pure ＝ ユア）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold hands in a circle.",
+          "ja": "わに なって てを つないで。",
+          "action": "てを つないで わに なる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Step to the right.",
+          "ja": "みぎに 1ぽ。",
+          "action": "みぎに よこあるき",
+          "emoji": "➡️"
+        },
+        {
+          "en": "Clap two times.",
+          "ja": "2かい てを たたいて。",
+          "action": "パン、パンと たたく",
+          "emoji": "👏"
+        },
+        {
+          "en": "Turn around.",
+          "ja": "くるっと まわって。",
+          "action": "その ばで 1かい まわる",
+          "emoji": "🔄"
+        }
+      ],
+      "phonics": {
+        "rule": "ure",
+        "focus": [
+          "-ure"
+        ],
+        "sounds": [
+          "/tʃər/",
+          "/ʒər/",
+          "/jʊr/"
+        ],
+        "words": [
+          "adventure",
+          "measure",
+          "pure",
+          "creature"
+        ],
+        "tipJa": "ure の まえの もじを みよう。t ＋ ure ＝ チャー（adventure・creature）、s ＋ ure ＝ ジャー（measure）、p ＋ ure ＝ ユア（pure）。"
+      },
+      "vocab": [
+        {
+          "en": "dance",
+          "ja": "おどる",
+          "emoji": "💃",
+          "core": true
+        },
+        {
+          "en": "circle",
+          "ja": "わ・まる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "step",
+          "ja": "ステップ",
+          "emoji": "👣"
+        },
+        {
+          "en": "join",
+          "ja": "くわわる",
+          "emoji": "🙋"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Listen to the music. The island people are dancing in a big circle. Shall we dance? Say it with me. Shall we dance? Sure! Shall we means, let's do it together. It's like Let's, but it's a question. Shall we ～? は「いっしょに ～しようか？」と さそう いいかた。 Answer, Sure! or Yes, let's! Let's practice. Shall we join the circle? Yes, let's! Shall we sing? Sure! Shall we play the drums? Yes, let's! Shall we go to the beach? Sure! If you're shy, you can watch first and clap. That's okay, too. Now, dance with me. Step to the right. Clap two times. Turn around. Great! Phonics. Adventure, cher. Measure, zher. Pure, yoor. Creature, cher. Look at the letter before u r e. Now, invite your friend. Shall we play? Shall we sing?",
+      "conversation": {
+        "scene": "In the festival dance circle",
+        "sceneJa": "おまつりの おどりの わで",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! Everyone is dancing in a big circle.",
+            "ja": "みて！みんなが おおきな わに なって おどってる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Their steps are so cool. Shall we dance?",
+            "ja": "ステップが かっこいい。いっしょに おどろうか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sure! Let's dance together.",
+            "ja": "うん！いっしょに おどろう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Um... I'm a little shy. I don't know the steps.",
+            "ja": "えっと…ちょっと はずかしいな。ステップを しらないし。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's okay. Watch first. Step to the right, clap two times, and turn around.",
+            "ja": "だいじょうぶ。まず みてね。みぎに 1ぽ、2かい てを たたいて、くるっと まわるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Like this? Oh, it's easy! Shall we join the circle?",
+            "ja": "こう？あ、かんたん！わに はいろうか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, let's!",
+            "ja": "うん、そうしよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Shall we ～? で いっしょに しようと さそったり、Sure! / Yes, let's! と こたえたり しよう",
+          "starterEn": "Hi! I'm Ms. Emma. The festival music is starting! Everyone is dancing. Shall we dance? Or shall we do something else?",
+          "targetExpressions": [
+            "Shall we dance?",
+            "Sure!",
+            "Yes, let's!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Shall we dance? ― Sure! / Yes, let's!",
+          "Shall we join the circle?（はずかしい ときは みてからで OK）",
+          "adventure・creature（チャー）・measure（ジャー）・pure（ユア）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 575,
+      "world": 20,
+      "title": "Festival Invitation",
+      "titleJa": "おまつりの しょうたいじょう",
+      "school": {
+        "grade": "中2",
+        "topic": "Please come to our festival on Saturday.：しょうたいじょうを かいて わたす（いつ・どこ・なに）",
+        "grammar": "Please come to ～ on ～. / It starts at ～. / We hope to see you there!（しょうたいじょうの かきかた）",
+        "expressions": [
+          {
+            "en": "Please come to our festival on Saturday.",
+            "ja": "土曜日の わたしたちの おまつりに きてください。",
+            "core": true
+          },
+          {
+            "en": "It starts at five o'clock.",
+            "ja": "5じに はじまります。"
+          },
+          {
+            "en": "We hope to see you there!",
+            "ja": "そこで あえるのを たのしみに しています！"
+          }
+        ],
+        "testPoints": [
+          "しょうたいじょうで いつ・どこ・なにを つたえられる",
+          "-ure の ふりかえり（picture・treasure・cure・future）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a lantern.",
+          "ja": "ちょうちんを かいて。",
+          "action": "くうちゅうに ちょうちんを かく",
+          "emoji": "🏮"
+        },
+        {
+          "en": "Write your message.",
+          "ja": "メッセージを かいて。",
+          "action": "かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Give the card to your friend.",
+          "ja": "カードを ともだちに わたして。",
+          "action": "りょうてで わたす",
+          "emoji": "💌"
+        },
+        {
+          "en": "Put it in the mailbox.",
+          "ja": "ポストに いれて。",
+          "action": "ポストに いれる まね",
+          "emoji": "📮"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ure"
+        ],
+        "sounds": [
+          "/tʃər/",
+          "/ʒər/",
+          "/jʊr/"
+        ],
+        "words": [
+          "picture",
+          "treasure",
+          "cure",
+          "future"
+        ],
+        "tipJa": "-ure の まとめ: picture・future（チャー）、treasure（ジャー）、cure（ユア）。ure の まえの もじで おとが かわるよ。"
+      },
+      "vocab": [
+        {
+          "en": "invitation",
+          "ja": "しょうたいじょう",
+          "emoji": "💌",
+          "core": true
+        },
+        {
+          "en": "card",
+          "ja": "カード",
+          "emoji": "📇"
+        },
+        {
+          "en": "start",
+          "ja": "はじまる",
+          "emoji": "▶️"
+        },
+        {
+          "en": "hope",
+          "ja": "のぞむ・たのしみに する",
+          "emoji": "🌈"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Let's make invitation cards for our festival friends. An invitation tells three things. When? Where? What? Listen. Dear friends, please come to our festival on Saturday. It starts at five o'clock. We hope to see you there! Say it with me. Please come to our festival on Saturday. Wonderful! しょうたいじょうには「いつ・どこで・なにを」を かこう。 Let's practice. Please come to my party on Sunday. It starts at two o'clock. It's at the park. We hope to see you there! Now, phonics review. Picture, cher. Treasure, zher. Cure, yoor. Future, cher. Draw a picture of a lantern on your card! One more thing. Never write your home address on the internet. Paper cards for friends are fine. Now, read your invitation to me. When is it? What time does it start?",
+      "conversation": {
+        "scene": "Making invitation cards and giving them to island people",
+        "sceneJa": "しょうたいじょうを つくって、しまの ひとに わたす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "The island kids want to invite everyone. Let's help them make invitation cards.",
+            "ja": "しまの こどもたちが みんなを さそいたいんだって。しょうたいじょうづくりを てつだいましょう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Dear friends, please come to our festival on Saturday.",
+            "ja": "みなさんへ。土曜日の わたしたちの おまつりに きてください。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It starts at five o'clock. Where is it?",
+            "ja": "5じに はじまる。ばしょは どこ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's at the beach, by the big rock.",
+            "ja": "はまべの、おおきな いわの そばよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'll draw a picture of lanterns and the moon.",
+            "ja": "ちょうちんと つきの えを かくね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And I'll write, We hope to see you there! Can I add a banana?",
+            "ja": "ぼくは「あえるのを たのしみに しています！」って かくよ。バナナも かいて いい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha! Sure. Let's give the cards to the fishers and the shop owners.",
+            "ja": "あはは！いいよ。りょうしさんや おみせの ひとに カードを わたそう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "しょうたいじょうの ことば（Please come to ～ on ～. / It starts at ～.）で ともだちを さそおう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. I got your invitation card! Thank you! Can you read it to me? When is the party? What time does it start?",
+          "targetExpressions": [
+            "Please come to ～ on ～.",
+            "It starts at ～.",
+            "We hope to see you there!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Please come to our festival on Saturday.",
+          "It starts at five o'clock. / We hope to see you there!",
+          "picture・treasure・cure・future（ure の 3つの おと）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 576,
+      "world": 20,
+      "title": "Lantern Festival",
+      "titleJa": "ランタン まつり",
+      "school": {
+        "grade": "中2",
+        "topic": "People float lanterns on the river.：おまつりで ひとびとが する ことを せつめいする（世界の おまつり①）",
+        "grammar": "People ～.（ひとびとが すること・いまの ことを いう 文）",
+        "expressions": [
+          {
+            "en": "People float lanterns on the river.",
+            "ja": "ひとびとは かわに ランタンを うかべます。",
+            "core": true
+          },
+          {
+            "en": "Each lantern has a wish.",
+            "ja": "ランタン ひとつ ひとつに ねがいが こめられているよ。"
+          },
+          {
+            "en": "The river looks like a sky full of stars.",
+            "ja": "かわが ほしで いっぱいの そらみたい。"
+          }
+        ],
+        "testPoints": [
+          "People ～. で おまつりで する ことを せつめいできる",
+          "ear の「イア」（near・clear・year・beard）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold your lantern gently.",
+          "ja": "ランタンを そっと もって。",
+          "action": "りょうてで そっと もつ",
+          "emoji": "🏮"
+        },
+        {
+          "en": "Make a wish.",
+          "ja": "ねがいごとを して。",
+          "action": "めを とじて ねがう",
+          "emoji": "🌟"
+        },
+        {
+          "en": "Put the lantern on the water.",
+          "ja": "ランタンを みずに うかべて。",
+          "action": "しゃがんで そっと おく",
+          "emoji": "🌊"
+        },
+        {
+          "en": "Watch it float away.",
+          "ja": "ながれていくのを みて。",
+          "action": "とおくを みる",
+          "emoji": "👀"
+        }
+      ],
+      "phonics": {
+        "rule": "ear-eer",
+        "focus": [
+          "ear"
+        ],
+        "sounds": [
+          "/ɪr/"
+        ],
+        "words": [
+          "near",
+          "clear",
+          "year",
+          "beard"
+        ],
+        "tipJa": "ear は「イア」と よむ ことが おおいよ。near（ちかくに）・clear（すきとおった）・year（とし）・beard（あごひげ）。"
+      },
+      "vocab": [
+        {
+          "en": "lantern",
+          "ja": "ランタン・ちょうちん",
+          "emoji": "🏮",
+          "core": true
+        },
+        {
+          "en": "float",
+          "ja": "うかべる・うかぶ",
+          "emoji": "🛶"
+        },
+        {
+          "en": "wish",
+          "ja": "ねがい",
+          "emoji": "🌟"
+        },
+        {
+          "en": "river",
+          "ja": "かわ",
+          "emoji": "🏞️"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! Tonight is the Lantern Festival. Look at the river. People float lanterns on the river. Say it with me. People float lanterns on the river. Beautiful! Each lantern has a wish. My wish is to swim well. In Japan and some other countries, people float lanterns on rivers in summer. Fire is hot, so ask an adult to light the candle. And stay away from the edge of the water. ランタンの ひは おとなに つけてもらおう。 Let's practice. People make wishes. People watch the lanterns. The river looks like a sky full of stars. Now, phonics. Near. Clear. Year. Beard. The e a r says eer. The water is clear. The lanterns are near. Grandpa has a white beard. Now, tell me. What's your wish for this year? My wish is...",
+      "conversation": {
+        "scene": "At the night lantern festival",
+        "sceneJa": "よるの ランタンまつり",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Wow! Look at the river! It's full of lights!",
+            "ja": "わあ！かわを みて！ひかりで いっぱい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "People float lanterns on the river. Each lantern has a wish.",
+            "ja": "ひとびとは かわに ランタンを うかべるの。ランタン ひとつ ひとつに ねがいが こめられているのよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can I light the candle? I want to try!",
+            "ja": "ろうそくに ひを つけて いい？やってみたい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Fire is hot. An adult lights the candle. You can hold the lantern gently.",
+            "ja": "ひは あついの。ろうそくは おとなが つけるわ。きみは ランタンを そっと もってね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My wish is, I want to see my family soon.",
+            "ja": "ぼくの ねがいは、はやく かぞくに あいたい、だよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Mine is, I want to make friends on this island.",
+            "ja": "わたしのは、この しまで ともだちを つくりたい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The river looks like a sky full of stars.",
+            "ja": "かわが ほしで いっぱいの そらみたい。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おまつりで ひとびとが する ことを People ～. で せつめいして、ねがいごとも いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Tonight is the Lantern Festival. What do people do at this festival? And what's your wish?",
+          "targetExpressions": [
+            "People float lanterns on the river.",
+            "My wish is ～.",
+            "Each lantern has a wish."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "People float lanterns on the river.",
+          "Each lantern has a wish.（ひは おとなに つけてもらう）",
+          "near・clear・year・beard（ear ＝ イア）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 577,
+      "world": 20,
+      "title": "Color Festival",
+      "titleJa": "いろの おまつり",
+      "school": {
+        "grade": "中2",
+        "topic": "People throw colored powder and laugh.：せかいの いろの おまつりを しょうかいする（世界の おまつり②）",
+        "grammar": "People ～ and ～.（うごきを ならべて せつめいする）",
+        "expressions": [
+          {
+            "en": "People throw colored powder and laugh.",
+            "ja": "ひとびとは いろの こなを なげて わらいます。",
+            "core": true
+          },
+          {
+            "en": "In India, people celebrate spring with colors.",
+            "ja": "インドでは、いろで はるを おいわいします。"
+          },
+          {
+            "en": "Everyone gets pink, green, and yellow!",
+            "ja": "みんな ピンクや みどりや きいろに なるよ！"
+          }
+        ],
+        "testPoints": [
+          "People ～ and ～. で おまつりの ようすを せつめいできる",
+          "eer の「イア」（cheer・deer・steer・volunteer）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Throw the powder up high.",
+          "ja": "こなを たかく なげて。",
+          "action": "うえに なげる まね",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Close your eyes and mouth.",
+          "ja": "めと くちを とじて。",
+          "action": "めと くちを ぎゅっと とじる",
+          "emoji": "😌"
+        },
+        {
+          "en": "Laugh out loud.",
+          "ja": "こえを だして わらって。",
+          "action": "おなかを かかえて わらう",
+          "emoji": "😆"
+        },
+        {
+          "en": "Cheer for your friends.",
+          "ja": "ともだちを おうえんして。",
+          "action": "こぶしを あげて「フレー！」",
+          "emoji": "📣"
+        }
+      ],
+      "phonics": {
+        "rule": "ear-eer",
+        "focus": [
+          "eer"
+        ],
+        "sounds": [
+          "/ɪr/"
+        ],
+        "words": [
+          "cheer",
+          "deer",
+          "steer",
+          "volunteer"
+        ],
+        "tipJa": "eer も「イア」と よむよ。cheer（おうえんする）・deer（しか）・steer（かじを とる）・volunteer（ボランティア）。"
+      },
+      "vocab": [
+        {
+          "en": "powder",
+          "ja": "こな",
+          "emoji": "🎨",
+          "core": true
+        },
+        {
+          "en": "throw",
+          "ja": "なげる",
+          "emoji": "⚾"
+        },
+        {
+          "en": "laugh",
+          "ja": "わらう",
+          "emoji": "😂"
+        },
+        {
+          "en": "spring",
+          "ja": "はる",
+          "emoji": "🌸"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The island has a small festival museum. Let's learn about festivals around the world. Look at this picture. It's a color festival. In India, people celebrate spring with colors. People throw colored powder and laugh. Say it with me. People throw colored powder and laugh. Super! Everyone gets pink, green, and yellow! When you play with powder, close your eyes and your mouth. いろの こなが め や くちに はいらないように しよう。 Let's practice. People sing and dance. People cheer and clap. People wear white clothes. Everyone gets colorful. Then, people wash and share sweets together. Now, phonics. Cheer. Deer. Steer. Volunteer. The e e r says eer, just like e a r. Cheer! Let's cheer together. Hooray! Volunteers help at the festival. Now, tell me. What color do you want to throw?",
+      "conversation": {
+        "scene": "Learning about a color festival from around the world",
+        "sceneJa": "せかいの おまつりしょうかい：いろの おまつり",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This island has a festival museum. Look at this photo.",
+            "ja": "この しまには おまつりの はくぶつかんが あるの。この しゃしんを みて。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Whoa! Everyone is pink and green! What are they doing?",
+            "ja": "うわあ！みんな ピンクと みどり！なにを してるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a color festival. People throw colored powder and laugh.",
+            "ja": "いろの おまつりよ。いろの こなを なげて わらうの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Where is it?",
+            "ja": "どこの おまつり？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "In India, people celebrate spring with colors.",
+            "ja": "インドでは、いろで はるを おいわいするのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It looks so fun. Everyone is smiling and cheering.",
+            "ja": "すごく たのしそう。みんな わらって、さけんでる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want to throw yellow powder! But I'll close my eyes.",
+            "ja": "わたしは きいろの こなを なげたい！でも めは とじるね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いろの おまつりの ようすを People ～ and ～. で せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. Look at this photo of a color festival. What are the people doing? What color do you like?",
+          "targetExpressions": [
+            "People throw colored powder and laugh.",
+            "People ～ and ～.",
+            "I want to throw ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "People throw colored powder and laugh.",
+          "In India, people celebrate spring with colors.",
+          "cheer・deer・steer・volunteer（eer ＝ イア）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 578,
+      "world": 20,
+      "title": "Harvest Festival",
+      "titleJa": "しゅうかくさい",
+      "school": {
+        "grade": "中2",
+        "topic": "We say thank you for the food.：しゅうかくさいで かんしゃを つたえる（世界の おまつり③）",
+        "grammar": "We say thank you for ～. / Thank you for ～!（かんしゃの いいかた）",
+        "expressions": [
+          {
+            "en": "We say thank you for the food.",
+            "ja": "たべものに ありがとうを いいます。",
+            "core": true
+          },
+          {
+            "en": "Farmers grow rice and vegetables.",
+            "ja": "のうかの ひとは おこめや やさいを そだてます。"
+          },
+          {
+            "en": "Thank you for the delicious food!",
+            "ja": "おいしい たべものを ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "We say thank you for ～. で かんしゃを つたえられる",
+          "ear と eer の「イア」（dear・deer は おなじ おとで いみが ちがう）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick an apple.",
+          "ja": "りんごを とって。",
+          "action": "うえに てを のばして とる",
+          "emoji": "🍎"
+        },
+        {
+          "en": "Carry the basket.",
+          "ja": "かごを はこんで。",
+          "action": "おもそうに はこぶ",
+          "emoji": "🧺"
+        },
+        {
+          "en": "Put your hands together.",
+          "ja": "てを あわせて。",
+          "action": "むねの まえで てを あわせる",
+          "emoji": "🙏"
+        },
+        {
+          "en": "Say thank you with a bow.",
+          "ja": "おじぎして ありがとうと いって。",
+          "action": "ていねいに おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "ear-eer",
+        "focus": [
+          "ear",
+          "eer"
+        ],
+        "sounds": [
+          "/ɪr/"
+        ],
+        "words": [
+          "dear",
+          "deer",
+          "appear",
+          "engineer"
+        ],
+        "tipJa": "「イア」の つづりは ear と eer。dear（だいすきな）と deer（しか）は おなじ おとでも いみが ちがうよ。appear（あらわれる）・engineer（エンジニア）。"
+      },
+      "vocab": [
+        {
+          "en": "harvest",
+          "ja": "しゅうかく",
+          "emoji": "🌾",
+          "core": true
+        },
+        {
+          "en": "farmer",
+          "ja": "のうかの ひと",
+          "emoji": "🚜"
+        },
+        {
+          "en": "rice",
+          "ja": "おこめ",
+          "emoji": "🍚"
+        },
+        {
+          "en": "basket",
+          "ja": "かご",
+          "emoji": "🧺"
+        }
+      ],
+      "teacherScript": "Hello, everyone! In autumn, many countries have a harvest festival. Harvest means picking rice, fruit, and vegetables from the fields. At the festival, we say thank you for the food. Say it with me. We say thank you for the food. Wonderful! Farmers grow rice and vegetables. In Japan, too, there are autumn festivals for the rice harvest. しゅうかくさいは たべものに ありがとうを いう おまつり。 Let's practice. We say thank you to the farmers. We say thank you for the rain and the sun. Now, phonics. Dear. Deer. They sound the same, but the spelling is different. Dear has e a r. Deer has e e r. A deer is an animal. Dear is for letters, like Dear Grandma. Appear. Engineer. Now, tell me. What food do you want to say thank you for?",
+      "conversation": {
+        "scene": "At the island's autumn harvest festival",
+        "sceneJa": "しまの あきの しゅうかくさい",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at all the baskets! Pumpkins, rice, and sweet potatoes!",
+            "ja": "かごが いっぱい！かぼちゃに おこめに さつまいも！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is the island's harvest festival. Farmers grow rice and vegetables here.",
+            "ja": "これは しまの しゅうかくさい。ここの のうかの ひとたちが おこめや やさいを そだてているの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Why is there so much food on the big table?",
+            "ja": "どうして おおきな テーブルに たべものが いっぱい あるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "We say thank you for the food. Thank you, sun! Thank you, rain! Thank you, farmers!",
+            "ja": "たべものに ありがとうを いうのよ。おひさま、あめ、のうかの みなさん、ありがとう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! A deer appeared by the field! Is it hungry, too?",
+            "ja": "みて！はたけの そばに しかが あらわれた！おなかが すいてるのかな？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Maybe. Let's write a card. Dear farmers, thank you for the delicious food!",
+            "ja": "あはは！そうかも。カードを かこう。のうかの みなさんへ、おいしい たべものを ありがとう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Great idea. Our food comes from many people's hard work.",
+            "ja": "いいね。たべものは たくさんの ひとが がんばって つくってくれているんだね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We say thank you for ～. / Thank you for ～! で、たべものや ひとへの かんしゃを つたえよう",
+          "starterEn": "Hi! I'm Ms. Emma. Today is the harvest festival. What food do you want to say thank you for? Who do you want to thank?",
+          "targetExpressions": [
+            "We say thank you for the food.",
+            "Thank you for ～!",
+            "Farmers grow ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We say thank you for the food.",
+          "Farmers grow rice and vegetables. / Thank you for the delicious food!",
+          "dear・deer（おなじ おと、ちがう つづり）・appear・engineer"
+        ]
+      }
+    },
+    {
+      "lessonNo": 579,
+      "world": 20,
+      "title": "Winter Lights",
+      "titleJa": "ふゆの ひかりの おまつり",
+      "school": {
+        "grade": "中2",
+        "topic": "There will be lights all over the town.：これから ある ことを いう（There will be ～.・世界の おまつり④）",
+        "grammar": "There will be ～.（これから ～が ある）/ It will be ～.",
+        "expressions": [
+          {
+            "en": "There will be lights all over the town.",
+            "ja": "まちじゅうに あかりが ともるでしょう。",
+            "core": true
+          },
+          {
+            "en": "There will be a big tree in the square.",
+            "ja": "ひろばには おおきな きが あるよ。"
+          },
+          {
+            "en": "It will be cold, so wear a warm coat.",
+            "ja": "さむいから、あたたかい コートを きてね。"
+          }
+        ],
+        "testPoints": [
+          "There will be ～. で これから ある ことを つたえられる",
+          "ear の 3つの おと（near ＝ イア、bear・wear ＝ エア、learn・earth ＝ アー）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn on the lights!",
+          "ja": "あかりを つけて！",
+          "action": "スイッチを おす まね",
+          "emoji": "💡"
+        },
+        {
+          "en": "Look up at the tall tree.",
+          "ja": "たかい きを みあげて。",
+          "action": "うえを みあげる",
+          "emoji": "🎄"
+        },
+        {
+          "en": "Rub your hands. It's cold!",
+          "ja": "てを こすって。さむい！",
+          "action": "てを こすりあわせる",
+          "emoji": "🥶"
+        },
+        {
+          "en": "Make a big snowball.",
+          "ja": "おおきな ゆきだまを つくって。",
+          "action": "ゆきを まるめる まね",
+          "emoji": "⛄"
+        }
+      ],
+      "phonics": {
+        "rule": "ear-eer",
+        "focus": [
+          "ear"
+        ],
+        "sounds": [
+          "/er/",
+          "/ɜr/"
+        ],
+        "words": [
+          "bear",
+          "wear",
+          "learn",
+          "earth"
+        ],
+        "tipJa": "ear には 3つの おとが あるよ。near の「イア」、bear・wear の「エア」、learn・earth の「アー」。"
+      },
+      "vocab": [
+        {
+          "en": "light",
+          "ja": "あかり・ひかり",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "winter",
+          "ja": "ふゆ",
+          "emoji": "❄️"
+        },
+        {
+          "en": "town",
+          "ja": "まち",
+          "emoji": "🏘️"
+        },
+        {
+          "en": "coat",
+          "ja": "コート",
+          "emoji": "🧥"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Brr, imagine winter. In some cold countries, people have winter light festivals. Listen to the plan for this winter. There will be lights all over the town. Say it with me. There will be lights all over the town. Great! There will be means something will be there later. There is is for now. There will be is for the future. There will be は「これから ～が ある」と いう いいかた。 Let's practice. There will be a big tree in the square. There will be music. It will be cold, so wear a warm coat. Now, phonics. Bear. Wear. The e a r says air. Learn. Earth. The e a r says er. Near says eer. One spelling, three sounds! Now, tell me. What will there be at your winter festival?",
+      "conversation": {
+        "scene": "Hearing about a winter light festival",
+        "sceneJa": "ふゆの ひかりの おまつりの はなしを きく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Ms. Emma, what's in this photo? It's all white and shiny.",
+            "ja": "エマ先生、この しゃしんは なに？まっしろで きらきら してる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a winter light festival in a snowy town. This year, there will be lights all over the town.",
+            "ja": "ゆきの まちの、ふゆの ひかりの おまつりよ。ことしも まちじゅうに あかりが ともるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Will there be snow, too?",
+            "ja": "ゆきも ある？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes! There will be a big tree in the square and snow sculptures.",
+            "ja": "ええ！ひろばには おおきな きと、ゆきの ちょうこくが あるわ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Snow bears? Wow! What should I wear?",
+            "ja": "ゆきの くま？すごい！なにを きたら いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It will be cold, so wear a warm coat and gloves.",
+            "ja": "さむいから、あたたかい コートと てぶくろを きてね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I want to learn more about winter festivals. Let's go someday!",
+            "ja": "ふゆの おまつりの こと、もっと しりたいな。いつか いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "There will be ～. / It will be ～. で、これから ある おまつりの よていを つたえよう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's plan a winter light festival for our town! What will there be? Lights? Music? Food?",
+          "targetExpressions": [
+            "There will be lights all over the town.",
+            "There will be ～.",
+            "It will be ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "There will be lights all over the town.",
+          "There will be a big tree in the square. / It will be cold.",
+          "bear・wear（エア）・learn・earth（アー）・near（イア）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 580,
+      "world": 20,
+      "title": "Festivals Around the World Show",
+      "titleJa": "せかいの おまつり しょうかいショー",
+      "school": {
+        "grade": "中2",
+        "topic": "In some countries, people ～ at the festival.：せかいの おまつりを しょうかいする ショー（ブロックの まとめ）",
+        "grammar": "In some countries, people ～. / My favorite festival is ～ because ～.（しょうかいと りゆう）",
+        "expressions": [
+          {
+            "en": "In some countries, people float lanterns at the festival.",
+            "ja": "いくつかの くにでは、おまつりで ランタンを うかべます。",
+            "core": true
+          },
+          {
+            "en": "In winter, there will be lights all over the town.",
+            "ja": "ふゆには、まちじゅうに あかりが ともります。"
+          },
+          {
+            "en": "My favorite festival is the color festival because it looks fun.",
+            "ja": "たのしそうだから、いちばん すきな おまつりは いろの おまつりです。"
+          }
+        ],
+        "testPoints": [
+          "In some countries, people ～. で せかいの おまつりを しょうかいし、because で りゆうを いえる",
+          "-ure・ear・eer の ふりかえり（picture・near・cheer・bear・early）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Show your poster.",
+          "ja": "ポスターを みせて。",
+          "action": "ポスターを かかげる",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Point to the map.",
+          "ja": "ちずを ゆびさして。",
+          "action": "ちずを ゆびさす",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Clap for your friend.",
+          "ja": "ともだちに はくしゅ。",
+          "action": "おおきく はくしゅ",
+          "emoji": "👏"
+        },
+        {
+          "en": "Stand up and bow.",
+          "ja": "たって おじぎ。",
+          "action": "たって おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ure",
+          "ear",
+          "eer"
+        ],
+        "sounds": [
+          "/tʃər/",
+          "/ɪr/",
+          "/er/",
+          "/ɜr/"
+        ],
+        "words": [
+          "picture",
+          "near",
+          "cheer",
+          "bear",
+          "early"
+        ],
+        "tipJa": "ふりかえり: picture（チャー）・near・cheer（イア）・bear（エア）・early（アー）。"
+      },
+      "vocab": [
+        {
+          "en": "country",
+          "ja": "くに",
+          "emoji": "🌏",
+          "core": true
+        },
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "world",
+          "ja": "せかい",
+          "emoji": "🌍"
+        },
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "⭐"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the Festivals Around the World Show! Today, you'll introduce a festival. Use this sentence. In some countries, people float lanterns at the festival. Say it with me. In some countries, people float lanterns at the festival. Excellent! Then, say why you like it. My favorite festival is the color festival because it looks fun. 「どこで・なにを する・なぜ すき」の じゅんで はなそう。 Let's practice. In some countries, people throw colored powder. In autumn, people say thank you for the food. In winter, there will be lights all over the town. Now, phonics review. Picture. Near. Cheer. Bear. Early. Great job! Remember, use because to give a reason. Show your poster, too. When you present, speak slowly and look at your friends. Now, it's your turn. Which festival do you like? Why?",
+      "conversation": {
+        "scene": "The Festivals Around the World Show",
+        "sceneJa": "せかいの おまつり しょうかいショー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Festivals Around the World Show! Who's first?",
+            "ja": "せかいの おまつり しょうかいショーへ ようこそ！だれから？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me! In some countries, people float lanterns at the festival. Each lantern has a wish.",
+            "ja": "わたし！いくつかの くにでは、おまつりで ランタンを うかべます。ランタンには ねがいが こめられています。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In India, people throw colored powder and laugh. It's a spring festival.",
+            "ja": "インドでは、いろの こなを なげて わらいます。はるの おまつりです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "At the harvest festival, we say thank you for the food. My favorite festival is the harvest festival because I love sweet potatoes.",
+            "ja": "しゅうかくさいでは、たべものに ありがとうを いいます。さつまいもが だいすきだから、いちばん すきなのは しゅうかくさいです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "In winter, there will be lights all over the town. And snow bears!",
+            "ja": "ふゆには、まちじゅうに あかりが ともります。ゆきの くまも！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! Which festival do you want to go to?",
+            "ja": "すばらしい！どの おまつりに いってみたい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "All of them! But first, the island festival on Saturday!",
+            "ja": "ぜんぶ！でも まずは 土曜日の しまの おまつり！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "せかいの おまつりを In some countries, people ～. と しょうかいして、すきな りゆうも いおう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the show! Please tell me about a festival. What do people do? Why do you like it?",
+          "targetExpressions": [
+            "In some countries, people ～ at the festival.",
+            "My favorite festival is ～ because ～.",
+            "There will be ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In some countries, people float lanterns at the festival.",
+          "My favorite festival is the color festival because it looks fun.",
+          "picture・near・cheer・bear・early"
+        ]
+      }
+    },
+    {
+      "lessonNo": 581,
+      "world": 20,
+      "title": "Welcome to My House",
+      "titleJa": "ようこそ わたしの いえへ",
+      "school": {
+        "grade": "中2",
+        "topic": "Make yourself at home.：おきゃくさんを もてなす ことば（Come on in. / Make yourself at home.）",
+        "grammar": "Come on in. / Make yourself at home. / What a lovely ～!（もてなす・ほめる）",
+        "expressions": [
+          {
+            "en": "Make yourself at home.",
+            "ja": "くつろいでね。",
+            "core": true
+          },
+          {
+            "en": "Come on in. Please take off your shoes here.",
+            "ja": "どうぞ はいって。くつは ここで ぬいでね。"
+          },
+          {
+            "en": "Thank you. What a lovely house!",
+            "ja": "ありがとう。なんて すてきな いえ！"
+          }
+        ],
+        "testPoints": [
+          "Come on in. / Make yourself at home. で おきゃくさんを もてなせる",
+          "あいまい母音（about・again・away・alone の はじめの a）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Knock on the door.",
+          "ja": "ドアを ノックして。",
+          "action": "コンコンと ノック",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Take off your shoes.",
+          "ja": "くつを ぬいで。",
+          "action": "くつを ぬぐ まね",
+          "emoji": "👟"
+        },
+        {
+          "en": "Sit on the cushion.",
+          "ja": "ざぶとんに すわって。",
+          "action": "その ばに すわる",
+          "emoji": "🛋️"
+        },
+        {
+          "en": "Look around the room.",
+          "ja": "へやを みまわして。",
+          "action": "ゆっくり みまわす",
+          "emoji": "👀"
+        }
+      ],
+      "phonics": {
+        "rule": "schwa",
+        "focus": [
+          "a-bout",
+          "a-gain",
+          "a-way",
+          "a-lone"
+        ],
+        "sounds": [
+          "/ə/"
+        ],
+        "words": [
+          "about",
+          "again",
+          "away",
+          "alone"
+        ],
+        "tipJa": "はじめの a は よわく あいまいな「ア」（ə）。about・again・away・alone。つよく よむのは うしろだよ。"
+      },
+      "vocab": [
+        {
+          "en": "home",
+          "ja": "いえ・じぶんの いえ",
+          "emoji": "🏠",
+          "core": true
+        },
+        {
+          "en": "guest",
+          "ja": "おきゃくさん",
+          "emoji": "🙋"
+        },
+        {
+          "en": "shoes",
+          "ja": "くつ",
+          "emoji": "👟"
+        },
+        {
+          "en": "lovely",
+          "ja": "すてきな",
+          "emoji": "💐"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we're visiting my aunt's house on the island. When guests come, hosts say, Come on in. Make yourself at home. Say it with me. Make yourself at home. Lovely! It means, relax and feel comfortable here, like in your own home. Make yourself at home. は「くつろいでね」と いう もてなしの ことば。 Guests can say, Thank you. What a lovely house! Let's practice. Come on in. Please take off your shoes here. Please sit down. Would you like a cushion? Guests say, Thank you. Excuse me. Hosts say, Please make yourself at home. Relax! Now, phonics. About. Again. Away. Alone. The first a is very weak. It sounds like uh. Uh-bout. Uh-gain. This weak sound is very common in English. Now, I'm your guest. Knock, knock! What do you say?",
+      "conversation": {
+        "scene": "Invited to Ms. Emma's aunt's house on the island",
+        "sceneJa": "しまの おばさんの いえに まねかれる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here's my aunt's house. Come on in, everyone!",
+            "ja": "ここが おばの いえよ。みんな、どうぞ はいって！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hello! Thank you for inviting us.",
+            "ja": "こんにちは！まねいてくれて ありがとう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "My aunt says, make yourself at home. Please take off your shoes here.",
+            "ja": "おばが「くつろいでね」って。くつは ここで ぬいでね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thank you. What a lovely house! I like the drums on the wall.",
+            "ja": "ありがとう。なんて すてきな いえ！かべの たいこが すてき。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can I sit on this cushion? It's so soft!",
+            "ja": "この クッションに すわって いい？ふわふわ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Of course. My aunt is away now, but she'll be back soon.",
+            "ja": "もちろん。おばは いま でかけているけど、すぐ もどるわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This house smells like flowers. I feel at home already.",
+            "ja": "この いえ、はなの においが する。もう じぶんの いえみたいに おちつくよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おきゃくさんを Come on in. / Make yourself at home. で もてなそう",
+          "starterEn": "Hi! I'm Ms. Emma. Knock, knock! I'm visiting your house today. Hello! May I come in?",
+          "targetExpressions": [
+            "Come on in.",
+            "Make yourself at home.",
+            "Please sit down."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Make yourself at home.",
+          "Come on in. / What a lovely house!",
+          "about・again・away・alone（はじめの a は よわい「ア」）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 582,
+      "world": 20,
+      "title": "Would You Like Some Tea?",
+      "titleJa": "おちゃは いかが？",
+      "school": {
+        "grade": "中2",
+        "topic": "Would you like some tea? ― Yes, please.：のみものや たべものを すすめる・こたえる",
+        "grammar": "Would you like some ～? ― Yes, please. / No, thank you.（すすめる・こたえる）",
+        "expressions": [
+          {
+            "en": "Would you like some tea?",
+            "ja": "おちゃは いかがですか？",
+            "core": true
+          },
+          {
+            "en": "Yes, please. / No, thank you. I'm full.",
+            "ja": "はい、おねがいします。／いいえ、けっこうです。おなかが いっぱいです。"
+          },
+          {
+            "en": "This cake is delicious!",
+            "ja": "この ケーキ、とても おいしい！"
+          }
+        ],
+        "testPoints": [
+          "Would you like some ～? で すすめ、Yes, please. / No, thank you. と こたえられる",
+          "あいまい母音（banana・sofa・panda・zebra の おわりの a）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pour the tea.",
+          "ja": "おちゃを そそいで。",
+          "action": "ポットで そそぐ まね",
+          "emoji": "🍵"
+        },
+        {
+          "en": "Hold the cup with two hands.",
+          "ja": "カップを りょうてで もって。",
+          "action": "りょうてで もつ",
+          "emoji": "☕"
+        },
+        {
+          "en": "Take a small bite.",
+          "ja": "ひとくち たべて。",
+          "action": "ちいさく かじる まね",
+          "emoji": "🍰"
+        },
+        {
+          "en": "Rub your tummy and say yum!",
+          "ja": "おなかを さすって「おいしい！」",
+          "action": "おなかを さする",
+          "emoji": "😋"
+        }
+      ],
+      "phonics": {
+        "rule": "schwa",
+        "focus": [
+          "ba-na-na",
+          "so-fa",
+          "pan-da",
+          "ze-bra"
+        ],
+        "sounds": [
+          "/ə/"
+        ],
+        "words": [
+          "banana",
+          "sofa",
+          "panda",
+          "zebra"
+        ],
+        "tipJa": "おわりの a も よわい「ア」（ə）。banana・sofa・panda・zebra。「バナナー」と のばさないよ。"
+      },
+      "vocab": [
+        {
+          "en": "tea",
+          "ja": "おちゃ",
+          "emoji": "🍵",
+          "core": true
+        },
+        {
+          "en": "snack",
+          "ja": "おやつ",
+          "emoji": "🍪"
+        },
+        {
+          "en": "delicious",
+          "ja": "とても おいしい",
+          "emoji": "😋"
+        },
+        {
+          "en": "full",
+          "ja": "おなかが いっぱい",
+          "emoji": "🍽️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's snack time at my aunt's house. When we offer food or drinks, we say, Would you like some tea? Say it with me. Would you like some tea? Very nice! Answer, Yes, please. Or, No, thank you. Remember, Would you like to is for inviting. Would you like some is for offering things. Would you like some ～? は たべものや のみものを すすめる いいかた。 Let's practice. Would you like some cake? Yes, please. Would you like some juice? No, thank you. I'm full. Would you like some water? Yes, please. Would you like some more? No, thank you. Now, phonics. Banana. Sofa. Panda. Zebra. The last a is weak. Uh. Banan-uh. Sof-uh. Don't say banana-ah. Now, I'll be the host. Would you like some banana cake? What do you say?",
+      "conversation": {
+        "scene": "Snack time with the island family",
+        "sceneJa": "しまの かぞくと おやつの じかん",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Snack time! Would you like some tea?",
+            "ja": "おやつの じかんよ！おちゃは いかが？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, please. Thank you.",
+            "ja": "はい、おねがいします。ありがとう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Riko, would you like some banana cake? My aunt made it.",
+            "ja": "リコ、バナナケーキは いかが？おばが つくったのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, please! Mmm, this cake is delicious!",
+            "ja": "はい、おねがいします！んー、この ケーキ とても おいしい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Kiko, would you like some more tea?",
+            "ja": "キコ、おちゃを もう すこし いかが？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "No, thank you. I'm full.",
+            "ja": "いいえ、けっこうです。おなかが いっぱいです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'd like some more cake, please! Banana cake is the best!",
+            "ja": "ぼくは ケーキを もう すこし おねがいします！バナナケーキは さいこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Would you like some ～? と すすめたり、Yes, please. / No, thank you. と こたえたり しよう",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome! Please sit down. Would you like some tea? I also have cookies and fruit.",
+          "targetExpressions": [
+            "Yes, please.",
+            "No, thank you.",
+            "Would you like some ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Would you like some tea? ― Yes, please.",
+          "No, thank you. I'm full.（to は さそう、some は すすめる）",
+          "banana・sofa・panda・zebra（おわりの a は よわい「ア」）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 583,
+      "world": 20,
+      "title": "Thank You for Having Me",
+      "titleJa": "まねいてくれて ありがとう",
+      "school": {
+        "grade": "中2",
+        "topic": "Thank you for having me.：よその いえを でる ときの おれい",
+        "grammar": "Thank you for having me. / Thank you for ～ing. / Please come again!（おれいの ことば）",
+        "expressions": [
+          {
+            "en": "Thank you for having me.",
+            "ja": "まねいてくれて ありがとう。",
+            "core": true
+          },
+          {
+            "en": "I had a great time.",
+            "ja": "とても たのしかったです。"
+          },
+          {
+            "en": "Please come again!",
+            "ja": "また きてね！"
+          }
+        ],
+        "testPoints": [
+          "Thank you for having me. / I had a great time. で おれいを いえる",
+          "あいまい母音（lemon・melon の o、seven・garden の e）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your shoes.",
+          "ja": "くつを はいて。",
+          "action": "くつを はく まね",
+          "emoji": "👟"
+        },
+        {
+          "en": "Bow and say thank you.",
+          "ja": "おじぎして ありがとうと いって。",
+          "action": "ていねいに おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Wave goodbye.",
+          "ja": "バイバイと てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Close the door quietly.",
+          "ja": "ドアを しずかに しめて。",
+          "action": "そっと しめる まね",
+          "emoji": "🚪"
+        }
+      ],
+      "phonics": {
+        "rule": "schwa",
+        "focus": [
+          "lem-on",
+          "mel-on",
+          "sev-en",
+          "gar-den"
+        ],
+        "sounds": [
+          "/ə/"
+        ],
+        "words": [
+          "lemon",
+          "melon",
+          "seven",
+          "garden"
+        ],
+        "tipJa": "o や e も よわい「ア」に なるよ。lemon・melon（o）、seven・garden（e）。おとでは わからないので つづりで おぼえよう。"
+      },
+      "vocab": [
+        {
+          "en": "visit",
+          "ja": "たずねる",
+          "emoji": "🏡",
+          "core": true
+        },
+        {
+          "en": "great",
+          "ja": "すばらしい",
+          "emoji": "🌟"
+        },
+        {
+          "en": "garden",
+          "ja": "にわ",
+          "emoji": "🌻"
+        },
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's time to leave my aunt's house. When we leave a friend's house, we say thank you. Thank you for having me. Say it with me. Thank you for having me. Perfect! Having me means inviting me to your house. Then, add, I had a great time. The host says, Please come again! よその いえを でる ときは Thank you for having me. と いおう。 Let's practice. Thank you for the delicious dinner. Thank you for showing me your garden. I had a great time. Thank you for the lovely lemon tea, too. Now, phonics. Lemon. Melon. Seven. Garden. The o and the e are weak here. Lem-un. Sev-un. A weak sound can be spelled with any vowel letter. Now, say goodbye to me. What do you say when you leave?",
+      "conversation": {
+        "scene": "Leaving the island family's house",
+        "sceneJa": "しまの かぞくの いえを あとに する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's getting dark. It's time to go back to the inn.",
+            "ja": "くらく なってきたわ。やどに もどる じかんよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you for having me. I had a great time.",
+            "ja": "まねいてくれて ありがとう。とても たのしかったです。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you for the lemon tea and for showing us your garden.",
+            "ja": "レモンティーと、にわを みせてくれて ありがとう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The melons in the garden were so big!",
+            "ja": "にわの メロン、すごく おおきかった！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "My aunt says, please come again! She'll see you at the festival.",
+            "ja": "おばが「また きてね！」って。おまつりで あいましょうって。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thank you for having me! See you on Saturday!",
+            "ja": "まねいてくれて ありがとう！土曜日に またね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's put on our shoes and close the door quietly.",
+            "ja": "くつを はいて、ドアを しずかに しめよう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "よその いえを でる ときの おれい（Thank you for having me. / I had a great time.）を いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Oh, are you going home now? It was fun to have you here!",
+          "targetExpressions": [
+            "Thank you for having me.",
+            "I had a great time.",
+            "Thank you for ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Thank you for having me.",
+          "I had a great time. / Please come again!",
+          "lemon・melon・seven・garden（o や e も よわい「ア」）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 584,
+      "world": 20,
+      "title": "When I Was Little",
+      "titleJa": "ちいさい ころ",
+      "school": {
+        "grade": "中2",
+        "topic": "When I was little, I was scared of drums.：ちいさい ころの ことを はなす（when の 入門）",
+        "grammar": "When I was little, I ～. / When I was five, I couldn't ～.（when で むかしを いう）",
+        "expressions": [
+          {
+            "en": "When I was little, I was scared of drums.",
+            "ja": "ちいさい ころ、たいこが こわかったんだ。",
+            "core": true
+          },
+          {
+            "en": "Now I love them!",
+            "ja": "いまは だいすき！"
+          },
+          {
+            "en": "When I was five, I couldn't swim.",
+            "ja": "5さいの とき、およげなかった。"
+          }
+        ],
+        "testPoints": [
+          "When I was little, ～. で ちいさい ころの じぶんを はなせる",
+          "あいまい母音（festival・parade・balloon・today）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Cover your ears.",
+          "ja": "みみを ふさいで。",
+          "action": "りょうてで みみを ふさぐ",
+          "emoji": "🙉"
+        },
+        {
+          "en": "Hide behind your hands.",
+          "ja": "てで かおを かくして。",
+          "action": "てで かおを かくす",
+          "emoji": "🙈"
+        },
+        {
+          "en": "Grow up tall!",
+          "ja": "おおきく なって！",
+          "action": "しゃがんでから ぐーんと のびる",
+          "emoji": "🌱"
+        },
+        {
+          "en": "Play the drums proudly.",
+          "ja": "むねを はって たいこを たたいて。",
+          "action": "むねを はって たたく",
+          "emoji": "🥁"
+        }
+      ],
+      "phonics": {
+        "rule": "schwa",
+        "focus": [
+          "fes-ti-val",
+          "pa-rade",
+          "bal-loon",
+          "to-day"
+        ],
+        "sounds": [
+          "/ə/"
+        ],
+        "words": [
+          "festival",
+          "parade",
+          "balloon",
+          "today"
+        ],
+        "tipJa": "おまつりの ことばにも よわい「ア」。festival（a）・parade（a）・balloon（a）・today（o）。"
+      },
+      "vocab": [
+        {
+          "en": "little",
+          "ja": "ちいさい",
+          "emoji": "👶",
+          "core": true
+        },
+        {
+          "en": "scared",
+          "ja": "こわがって",
+          "emoji": "😨"
+        },
+        {
+          "en": "grandpa",
+          "ja": "おじいさん",
+          "emoji": "👴"
+        },
+        {
+          "en": "brave",
+          "ja": "ゆうかんな",
+          "emoji": "🦁"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Yesterday, Grandpa Toma, my aunt's father, told us a story. When he was little, he was scared of drums. Now he plays the biggest drum at the festival! Let's talk about when we were little. When I was little, I was scared of drums. Say it with me. When I was little, I was scared of drums. Great! When I was little は「ちいさい ころ」。むかしの ことなので was を つかうよ。 Now I love them! Let's practice. When I was little, I couldn't ride a bike. When I was five, I couldn't swim. Everyone was scared of something. That's okay. We grow little by little. Now, phonics. Festival. Parade. Balloon. Today. Listen for the weak uh. Festiv-ul. Puh-rade. Buh-loon. Now, tell me. When you were little, what were you scared of?",
+      "conversation": {
+        "scene": "Hearing about Grandpa Toma's childhood",
+        "sceneJa": "しまの おじいさんの こどもの ころの はなし",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Grandpa Toma plays the biggest drum at the festival. But when he was little, he was scared of drums!",
+            "ja": "トマおじいさんは おまつりで いちばん おおきな たいこを たたくの。でも ちいさい ころは たいこが こわかったのよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Really? Why?",
+            "ja": "ほんとう？どうして？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "They were too loud. He hid behind his mom at every festival parade.",
+            "ja": "おとが おおきすぎたの。おまつりの パレードの たびに おかあさんの うしろに かくれていたんだって。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me too! When I was little, I was scared of drums. Now I love them!",
+            "ja": "わたしも！ちいさい ころ、たいこが こわかった。いまは だいすき！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "When I was five, I couldn't swim. Now I can swim in the sea.",
+            "ja": "5さいの とき、ぼくは およげなかった。いまは うみで およげるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "When I was little, I was scared of balloons. Pop!",
+            "ja": "わたしは ちいさい ころ、ふうせんが こわかった。パン！って。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "When I was little, I was scared of everything! Now I'm brave!",
+            "ja": "ぼくは ちいさい ころ、なんでも こわかった！いまは ゆうかんだよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "When I was little, ～. で ちいさい ころの じぶんを はなし、Now ～. と いまの じぶんも いおう",
+          "starterEn": "Hi! I'm Ms. Emma. When I was little, I was scared of the dark. Now I'm okay! How about you? When you were little, what were you scared of?",
+          "targetExpressions": [
+            "When I was little, I was scared of ～.",
+            "Now I ～.",
+            "When I was five, I couldn't ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "When I was little, I was scared of drums.",
+          "Now I love them! / When I was five, I couldn't swim.",
+          "festival・parade・balloon・today（よわい「ア」）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 585,
+      "world": 20,
+      "title": "Host Family Day",
+      "titleJa": "ホストファミリーの 1日",
+      "school": {
+        "grade": "中2",
+        "topic": "We're going to cook together. It will be fun.：よていと よそうを はなす（be going to と will の ふくしゅう・ブロックの まとめ）",
+        "grammar": "We're going to ～. It will be ～.（よていは be going to、よそうは will）",
+        "expressions": [
+          {
+            "en": "We're going to cook together. It will be fun.",
+            "ja": "いっしょに りょうりを する よていだよ。たのしく なるよ。",
+            "core": true
+          },
+          {
+            "en": "First, we're going to buy fish at the market.",
+            "ja": "まず、いちばで さかなを かう よていだよ。"
+          },
+          {
+            "en": "After lunch, we're going to make lanterns.",
+            "ja": "おひるの あと、ランタンを つくる よていだよ。"
+          }
+        ],
+        "testPoints": [
+          "be going to と will で 1日の よていと よそうを はなせる",
+          "あいまい母音の ふりかえり（about・banana・lemon・festival）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wash the vegetables.",
+          "ja": "やさいを あらって。",
+          "action": "やさいを あらう まね",
+          "emoji": "🥕"
+        },
+        {
+          "en": "Stir the soup.",
+          "ja": "スープを まぜて。",
+          "action": "おなべを まぜる まね",
+          "emoji": "🍲"
+        },
+        {
+          "en": "Taste it.",
+          "ja": "あじみして。",
+          "action": "スプーンで あじみ",
+          "emoji": "🥄"
+        },
+        {
+          "en": "Set the table.",
+          "ja": "テーブルを ととのえて。",
+          "action": "おさらを ならべる まね",
+          "emoji": "🍽️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "a-bout",
+          "ba-na-na",
+          "lem-on",
+          "fes-ti-val"
+        ],
+        "sounds": [
+          "/ə/"
+        ],
+        "words": [
+          "about",
+          "banana",
+          "lemon",
+          "festival"
+        ],
+        "tipJa": "よわい「ア」の まとめ: about（a）・banana（a）・lemon（o）・festival（a）。どの もじかは つづりで おぼえよう。"
+      },
+      "vocab": [
+        {
+          "en": "cook",
+          "ja": "りょうりする",
+          "emoji": "🍳",
+          "core": true
+        },
+        {
+          "en": "market",
+          "ja": "いちば",
+          "emoji": "🛒"
+        },
+        {
+          "en": "schedule",
+          "ja": "よていひょう",
+          "emoji": "📋"
+        },
+        {
+          "en": "soup",
+          "ja": "スープ",
+          "emoji": "🍲"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! Today is Host Family Day. We're spending the whole day with my aunt's family. Let's talk about the plan. We're going to cook together. It will be fun. Say it with me. We're going to cook together. It will be fun. Great! Be going to is for plans. Will is for guessing. よていは be going to、よそうは will で いうよ。 First, we're going to buy fish at the market. After lunch, we're going to make lanterns. It will be exciting! Cooking tip! Always wash your hands, and ask an adult before you use a knife or the stove. Now, phonics review. About. Banana. Lemon. Festival. Each word has a weak uh. Now, tell me your plan for this weekend. What are you going to do? Will it be fun?",
+      "conversation": {
+        "scene": "Spending a day with the island family",
+        "sceneJa": "しまの かぞくと 1日を すごす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good morning! Today is Host Family Day. Here's the schedule.",
+            "ja": "おはよう！きょうは ホストファミリーの 日。これが よていひょうよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What are we going to do first?",
+            "ja": "さいしょに なにを するの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "First, we're going to buy fish at the market. Then, we're going to cook together.",
+            "ja": "まず、いちばで さかなを かうの。それから、いっしょに りょうりを するのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We're going to cook together? It will be fun!",
+            "ja": "いっしょに りょうり？たのしく なりそう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What are we going to make?",
+            "ja": "なにを つくるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Fish soup with lemon. After lunch, we're going to make lanterns for the festival.",
+            "ja": "レモン いりの さかなの スープよ。おひるの あとは、おまつりの ランタンを つくるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm going to eat three bowls of soup! It will be delicious!",
+            "ja": "ぼくは スープを 3ばい たべるよ！きっと おいしいよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We're going to ～. / It will be ～. で、1日の よていと よそうを はなそう",
+          "starterEn": "Hi! I'm Ms. Emma. Tomorrow is a holiday! What are you going to do? Will it be fun?",
+          "targetExpressions": [
+            "We're going to ～.",
+            "It will be fun.",
+            "First, ～. Then, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We're going to cook together. It will be fun.",
+          "First, we're going to buy fish. / After lunch, we're going to make lanterns.",
+          "about・banana・lemon・festival（よわい「ア」の まとめ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 586,
+      "world": 20,
+      "title": "If It Rains",
+      "titleJa": "もし あめが ふったら",
+      "school": {
+        "grade": "中2",
+        "topic": "If it rains, we will dance inside.：もしもの ときの けいかくを たてる（if の 入門）",
+        "grammar": "If it rains, we will ～. / If it's sunny, we will ～.（if で もしも）",
+        "expressions": [
+          {
+            "en": "If it rains, we will dance inside.",
+            "ja": "もし あめが ふったら、なかで おどるよ。",
+            "core": true
+          },
+          {
+            "en": "If it's sunny, we will dance on the beach.",
+            "ja": "はれたら、はまべで おどるよ。"
+          },
+          {
+            "en": "Let's check the weather.",
+            "ja": "てんきを たしかめよう。"
+          }
+        ],
+        "testPoints": [
+          "If ～, we will ～. で もしもの けいかくを いえる",
+          "ステージ2 の つづり tch（catch・kitchen・match・stretch）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your umbrella.",
+          "ja": "かさを ひらいて。",
+          "action": "かさを ひらく まね",
+          "emoji": "☂️"
+        },
+        {
+          "en": "Look at the sky.",
+          "ja": "そらを みて。",
+          "action": "そらを みあげる",
+          "emoji": "🌥️"
+        },
+        {
+          "en": "Run inside!",
+          "ja": "なかに はしって！",
+          "action": "その ばで かけあし",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Stretch your arms.",
+          "ja": "うでを のばして。",
+          "action": "うでを うえに のばす",
+          "emoji": "🙆"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "tch"
+        ],
+        "sounds": [
+          "/tʃ/"
+        ],
+        "words": [
+          "catch",
+          "kitchen",
+          "match",
+          "stretch"
+        ],
+        "tipJa": "ステージ2 の つづり①: みじかい 母音の すぐ あとの「チ」は tch。catch・kitchen・match・stretch。"
+      },
+      "vocab": [
+        {
+          "en": "rain",
+          "ja": "あめ・あめが ふる",
+          "emoji": "🌧️",
+          "core": true
+        },
+        {
+          "en": "weather",
+          "ja": "てんき",
+          "emoji": "🌤️"
+        },
+        {
+          "en": "inside",
+          "ja": "なかで",
+          "emoji": "🏠"
+        },
+        {
+          "en": "umbrella",
+          "ja": "かさ",
+          "emoji": "☂️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Oh no. Look at the weather report. There's a chance of rain on Saturday. Let's make a rain plan. If it rains, we will dance inside. Say it with me. If it rains, we will dance inside. Great! If means, maybe this will happen. Then we say what we will do. If it's sunny, we will dance on the beach. if は「もし ～なら」。あとに どう するかを will で いうよ。 Let's practice. If it's cold, we will wear jackets. If it's windy, we will hold the lanterns tightly. If it's hot, we will drink lots of water. Now, phonics. This week, let's review Stage 2 spellings. Catch. Kitchen. Match. Stretch. After a short vowel, the ch sound is spelled t c h. Now, tell me. If it rains tomorrow, what will you do?",
+      "conversation": {
+        "scene": "Changing the festival plan because of a rain forecast",
+        "sceneJa": "あめの よほうで、おまつりの けいかくを かえる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at the weather report. It says rain on Saturday.",
+            "ja": "てんきよほうを みて。土曜日は あめだって。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh no! The dance is on the beach.",
+            "ja": "ええっ！おどりは はまべなのに。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Don't worry. The island people have a plan. If it rains, we will dance inside the town hall.",
+            "ja": "しんぱい しないで。しまの ひとたちには けいかくが あるの。あめが ふったら、こうみんかんの なかで おどるのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And if it's sunny, we will dance on the beach.",
+            "ja": "それで はれたら、はまべで おどるんだね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "If it rains, will there be food?",
+            "ja": "あめが ふったら、たべものは ある？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes! If it rains, the food stands will move to the kitchen of the hall.",
+            "ja": "ええ！あめなら、やたいは こうみんかんの キッチンに うつるわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Great. Rain or sun, it will be fun!",
+            "ja": "よかった。あめでも はれでも、たのしく なるね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "If it rains, we will ～. / If it's sunny, we will ～. で、てんきに よって けいかくを たてよう",
+          "starterEn": "Hi! I'm Ms. Emma. We're going to have a picnic tomorrow. But it might rain! What will we do if it rains? And if it's sunny?",
+          "targetExpressions": [
+            "If it rains, we will ～.",
+            "If it's sunny, we will ～.",
+            "Let's check the weather."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "If it rains, we will dance inside.",
+          "If it's sunny, we will dance on the beach.",
+          "catch・kitchen・match・stretch（みじかい 母音の あとの tch）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 587,
+      "world": 20,
+      "title": "Getting Ready",
+      "titleJa": "じゅんび",
+      "school": {
+        "grade": "中2",
+        "topic": "We have to make the costumes.：はっぴょうかいの じゅんびで しなければ ならない ことを いう（have to の ふくしゅう）",
+        "grammar": "We have to ～. / We don't have to ～.（しなければ ならない・しなくて いい）",
+        "expressions": [
+          {
+            "en": "We have to make the costumes.",
+            "ja": "いしょうを つくらなきゃ。",
+            "core": true
+          },
+          {
+            "en": "We don't have to buy new cloth. We can reuse old shirts.",
+            "ja": "あたらしい ぬのを かわなくて いいよ。ふるい シャツを つかえるよ。"
+          },
+          {
+            "en": "Who's going to make the hats?",
+            "ja": "だれが ぼうしを つくる？"
+          }
+        ],
+        "testPoints": [
+          "We have to ～. / We don't have to ～. で じゅんびの ことを はなせる",
+          "ステージ2 の つづり dge（bridge・badge・edge・judge）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Measure the cloth.",
+          "ja": "ぬのを はかって。",
+          "action": "りょうてを ひろげて はかる",
+          "emoji": "📏"
+        },
+        {
+          "en": "Cut along the line.",
+          "ja": "せんに そって きって。",
+          "action": "はさみで きる まね",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Sew a button.",
+          "ja": "ボタンを ぬいつけて。",
+          "action": "はりで ぬう まね",
+          "emoji": "🧵"
+        },
+        {
+          "en": "Try on your costume.",
+          "ja": "いしょうを きてみて。",
+          "action": "きる まね",
+          "emoji": "👘"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "dge"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "bridge",
+          "badge",
+          "edge",
+          "judge"
+        ],
+        "tipJa": "ステージ2 の つづり②: みじかい 母音の すぐ あとの「ヂ」は dge。bridge・badge・edge・judge。"
+      },
+      "vocab": [
+        {
+          "en": "costume",
+          "ja": "いしょう",
+          "emoji": "👘",
+          "core": true
+        },
+        {
+          "en": "cloth",
+          "ja": "ぬの",
+          "emoji": "🧵"
+        },
+        {
+          "en": "badge",
+          "ja": "バッジ",
+          "emoji": "📛"
+        },
+        {
+          "en": "ready",
+          "ja": "じゅんびが できた",
+          "emoji": "✅"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Big news! Our island friends asked us to join their show at the festival! We have a lot to do. We have to make the costumes. Say it with me. We have to make the costumes. Excellent! Remember have to from the Gadget Workshop? It means it's necessary. We don't have to buy new cloth. We can reuse old shirts. have to は「しなければ ならない」。ワールド19 の ふくしゅうだよ。 Let's practice. We have to practice the song. We have to make a list. We don't have to hurry. We can take our time. Now, phonics. Bridge. Badge. Edge. Judge. After a short vowel, the j sound is spelled d g e. Scissors are sharp, so cut slowly and carefully. Now, tell me. What do we have to do for our show?",
+      "conversation": {
+        "scene": "The four friends get ready for the island show",
+        "sceneJa": "4にんで、しまの はっぴょうかいの じゅんび",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good news! The island kids want us to join their show at the festival.",
+            "ja": "いい しらせよ！しまの こどもたちが、おまつりの はっぴょうかいに いっしょに でてほしいって。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hooray! But we have to make the costumes.",
+            "ja": "やったあ！でも いしょうを つくらなきゃ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We don't have to buy new cloth. We can reuse old shirts.",
+            "ja": "あたらしい ぬのは かわなくて いいよ。ふるい シャツを つかえるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Good idea! I'm going to make the hats. Who's going to make the badges?",
+            "ja": "いい かんがえ！わたしは ぼうしを つくる。バッジは だれが つくる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Me! I'll make star badges for everyone.",
+            "ja": "ぼく！みんなに ほしの バッジを つくるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We have to measure everyone's arms first. Haru, stand still.",
+            "ja": "まず みんなの うでの ながさを はからなきゃ。ハル、じっと してて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay! Don't tickle me!",
+            "ja": "わかった！くすぐらないでね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We have to ～. / We don't have to ～. で、じゅんびの ことを はなそう",
+          "starterEn": "Hi! I'm Ms. Emma. We're going to have a class party next week! What do we have to do to get ready?",
+          "targetExpressions": [
+            "We have to ～.",
+            "We don't have to ～.",
+            "Who's going to ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We have to make the costumes.",
+          "We don't have to buy new cloth. We can reuse old shirts.",
+          "bridge・badge・edge・judge（みじかい 母音の あとの dge）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 588,
+      "world": 20,
+      "title": "Practice, Practice!",
+      "titleJa": "れんしゅう、れんしゅう！",
+      "school": {
+        "grade": "中2",
+        "topic": "We're practicing every day.：この ごろ つづけている ことを いう（進行形の ふくしゅう）",
+        "grammar": "We're ～ing every day. / He's ～ing, and she's ～ing.（進行形の ふくしゅう）",
+        "expressions": [
+          {
+            "en": "We're practicing every day.",
+            "ja": "まいにち れんしゅう しているよ。",
+            "core": true
+          },
+          {
+            "en": "Haru is playing the drum, and Riko is singing.",
+            "ja": "ハルは たいこを たたいていて、リコは うたっているよ。"
+          },
+          {
+            "en": "Let's try it one more time!",
+            "ja": "もう いちど やってみよう！"
+          }
+        ],
+        "testPoints": [
+          "進行形で いま がんばっている ことを はなせる",
+          "ステージ2 の つづり -tion（celebration・invitation・competition・information）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hit the drum.",
+          "ja": "たいこを たたいて。",
+          "action": "ドンと たたく",
+          "emoji": "🥁"
+        },
+        {
+          "en": "Sing loudly.",
+          "ja": "おおきな こえで うたって。",
+          "action": "くちを おおきく あけて うたう",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Count to eight.",
+          "ja": "8まで かぞえて。",
+          "action": "ゆびで 8まで かぞえる",
+          "emoji": "8️⃣"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "しんこきゅうして。",
+          "action": "おおきく すって はく",
+          "emoji": "🌬️"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "celebration",
+          "invitation",
+          "competition",
+          "information"
+        ],
+        "tipJa": "ステージ2 の つづり③: おわりの「ション」は tion が いちばん おおいよ。celebration・invitation・competition・information。"
+      },
+      "vocab": [
+        {
+          "en": "practice",
+          "ja": "れんしゅうする",
+          "emoji": "🔁",
+          "core": true
+        },
+        {
+          "en": "song",
+          "ja": "うた",
+          "emoji": "🎵"
+        },
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎭"
+        },
+        {
+          "en": "mistake",
+          "ja": "まちがい",
+          "emoji": "❌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The show is in three days. We're practicing every day. Say it with me. We're practicing every day. Great! We use be plus ing for actions happening now, and also for things we're doing these days. Haru is playing the drum, and Riko is singing. 「この ごろ ずっと している こと」も 進行形で いえるよ。 Let's practice. Kiko is dancing. Birimo is clapping. Ms. Emma is counting. One, two, three, four. We're getting better and better. Mistakes are okay. Let's try it one more time! Now, phonics. Celebration. Invitation. Competition. Information. The ending t i o n says shun. Is our show a competition? No, it's a celebration! Everyone can enjoy it. The audience can clap and dance with us. It will be a happy day. Now, tell me. What are you practicing these days?",
+      "conversation": {
+        "scene": "Practicing for the show",
+        "sceneJa": "はっぴょうかいの れんしゅう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "One, two, three, four! Haru, you're playing too fast!",
+            "ja": "ワン、ツー、スリー、フォー！ハル、はやすぎるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry! I'm so excited.",
+            "ja": "ごめん！わくわく しちゃって。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You're doing great. You're practicing every day, so you're getting better.",
+            "ja": "よく できているわ。まいにち れんしゅう しているから、どんどん じょうずに なっているのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm singing, but I always forget the second line.",
+            "ja": "うたってるけど、いつも 2ぎょうめを わすれちゃう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And I'm dancing, but I always step on my own feet!",
+            "ja": "ぼくは おどってるけど、いつも じぶんの あしを ふんじゃう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's okay. It's not a competition. It's a celebration!",
+            "ja": "だいじょうぶ。きょうそうじゃ なくて、おいわいだもん！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's try it one more time! Ready? Go!",
+            "ja": "もう いちど やってみましょう！よーい、スタート！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "進行形（We're practicing ～. / I'm ～ing.）で、いま がんばっている ことを はなそう",
+          "starterEn": "Hi! I'm Ms. Emma. I'm practicing the piano every day these days. What are you practicing these days?",
+          "targetExpressions": [
+            "We're practicing every day.",
+            "I'm ～ing.",
+            "Let's try it one more time!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We're practicing every day.",
+          "Haru is playing the drum, and Riko is singing.（まちがえても OK）",
+          "celebration・invitation・competition・information（tion ＝ ション）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 589,
+      "world": 20,
+      "title": "Why Don't We…?",
+      "titleJa": "～しない？",
+      "school": {
+        "grade": "中2",
+        "topic": "Why don't we sing together?：ていあんする（Why don't we ～?）",
+        "grammar": "Why don't we ～? ― That's a great idea! / How about ～?（ていあんする・こたえる）",
+        "expressions": [
+          {
+            "en": "Why don't we sing together?",
+            "ja": "いっしょに うたわない？",
+            "core": true
+          },
+          {
+            "en": "That's a great idea!",
+            "ja": "それは いい かんがえだね！"
+          },
+          {
+            "en": "How about a dance at the end?",
+            "ja": "さいごに おどるのは どう？"
+          }
+        ],
+        "testPoints": [
+          "Why don't we ～? で ていあんし、That's a great idea! と こたえられる",
+          "ステージ2 の つづりの まとめ（scratch・hedge・station・action）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand with an idea.",
+          "ja": "アイデアが あったら てを あげて。",
+          "action": "てを ピンと あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "うでを くんで かんがえる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Give a high five.",
+          "ja": "ハイタッチ！",
+          "action": "となりの ひとと ハイタッチ",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Write the idea on the board.",
+          "ja": "アイデアを ボードに かいて。",
+          "action": "おおきく かく まね",
+          "emoji": "📝"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "tch",
+          "dge",
+          "-tion"
+        ],
+        "sounds": [
+          "/tʃ/",
+          "/dʒ/",
+          "/ʃən/"
+        ],
+        "words": [
+          "scratch",
+          "hedge",
+          "station",
+          "action"
+        ],
+        "tipJa": "tch・dge・tion の まとめ: scratch（tch）・hedge（dge）・station・action（tion）。"
+      },
+      "vocab": [
+        {
+          "en": "idea",
+          "ja": "かんがえ・アイデア",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👥"
+        },
+        {
+          "en": "end",
+          "ja": "さいご",
+          "emoji": "🏁"
+        },
+        {
+          "en": "choose",
+          "ja": "えらぶ",
+          "emoji": "👆"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Let's decide the program for our show. When we suggest an idea, we can say, Why don't we sing together? Say it with me. Why don't we sing together? Super! It looks like a question, but it means, let's try this idea. Why don't we ～? は「～しない？」と ていあんする いいかた。 Answer, That's a great idea! Or give another idea. How about a dance at the end? Let's practice. Why don't we play the drums first? Why don't we invite the audience to dance? Listen to all the ideas. Every idea is welcome. Say thank you for every idea. Be kind. Now, phonics review. Scratch. Hedge. Station. Action. t c h, d g e, t i o n. Now, tell me your idea for a class party. Why don't we...?",
+      "conversation": {
+        "scene": "Talking about what to perform at the show",
+        "sceneJa": "はっぴょうかいの だしものを そうだんする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "We have ten minutes on stage. What shall we do?",
+            "ja": "ステージの じかんは 10ぷん。なにを しましょうか？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Why don't we sing together? Everyone can join.",
+            "ja": "いっしょに うたわない？みんなで できるし。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's a great idea! And why don't we play the drums first?",
+            "ja": "いい かんがえ！それと、さいしょに たいこを たたかない？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How about a dance at the end? Let's invite the audience to dance with us.",
+            "ja": "さいごに おどるのは どう？おきゃくさんも いっしょに おどってもらおうよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Why don't we have a banana-eating contest?",
+            "ja": "バナナの たべくらべ たいかいを しない？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha! Maybe at lunch, Birimo. Not on stage!",
+            "ja": "あはは！それは おひるに しよう、ビリモ。ステージでは なしね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Okay. Drums, then a song, then a dance. Action!",
+            "ja": "きまりね。たいこ、うた、それから おどり。はじめましょう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Why don't we ～? で ていあんして、That's a great idea! / How about ～? と こたえよう",
+          "starterEn": "Hi! I'm Ms. Emma. Our class has a free afternoon. What should we do? Do you have an idea?",
+          "targetExpressions": [
+            "Why don't we ～?",
+            "That's a great idea!",
+            "How about ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Why don't we sing together?",
+          "That's a great idea! / How about a dance at the end?",
+          "scratch・hedge・station・action（tch・dge・tion）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 590,
+      "world": 20,
+      "title": "Our Festival Plan",
+      "titleJa": "わたしたちの おまつりの けいかく",
+      "school": {
+        "grade": "中2",
+        "topic": "There will be food stands and a dance show.：じぶんたちの おまつりの けいかくを はっぴょうする（ブロックの まとめ）",
+        "grammar": "There will be ～ and ～. / It's going to start at ～. / If it rains, we will ～.（けいかくの はっぴょう）",
+        "expressions": [
+          {
+            "en": "There will be food stands and a dance show.",
+            "ja": "やたいと ダンスショーが あります。",
+            "core": true
+          },
+          {
+            "en": "It's going to start at four o'clock.",
+            "ja": "4じに はじまる よていです。"
+          },
+          {
+            "en": "If it rains, we will move inside.",
+            "ja": "あめが ふったら、なかに うつります。"
+          }
+        ],
+        "testPoints": [
+          "There will be ～. / If ～, we will ～. で おまつりの けいかくを はっぴょうできる",
+          "tch・dge・tion の ふりかえり（kitchen・badge・invitation・sketch）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Show the poster.",
+          "ja": "ポスターを みせて。",
+          "action": "ポスターを かかげる",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Point to the stage.",
+          "ja": "ステージを ゆびさして。",
+          "action": "まえを ゆびさす",
+          "emoji": "🎭"
+        },
+        {
+          "en": "Smile at the audience.",
+          "ja": "おきゃくさんに にっこり。",
+          "action": "えがおで みまわす",
+          "emoji": "😊"
+        },
+        {
+          "en": "Bow together.",
+          "ja": "いっしょに おじぎ。",
+          "action": "みんなで おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "tch",
+          "dge",
+          "-tion"
+        ],
+        "sounds": [
+          "/tʃ/",
+          "/dʒ/",
+          "/ʃən/"
+        ],
+        "words": [
+          "kitchen",
+          "badge",
+          "invitation",
+          "sketch"
+        ],
+        "tipJa": "ふりかえり: kitchen・sketch（tch）、badge（dge）、invitation（tion）。"
+      },
+      "vocab": [
+        {
+          "en": "plan",
+          "ja": "けいかく",
+          "emoji": "📋",
+          "core": true
+        },
+        {
+          "en": "food stand",
+          "ja": "やたい",
+          "emoji": "🍢"
+        },
+        {
+          "en": "fireworks",
+          "ja": "はなび",
+          "emoji": "🎆"
+        },
+        {
+          "en": "program",
+          "ja": "プログラム",
+          "emoji": "📜"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Now, let's present our own festival plan. Use There will be. There will be food stands and a dance show. Say it with me. There will be food stands and a dance show. Wonderful! Add the time. It's going to start at four o'clock. Add a rain plan. If it rains, we will move inside. ワールド20 の いいかたを たくさん つかって はっぴょうしよう。 Let's practice. There will be fireworks. There will be a drum show. Why don't we invite everyone? There will be a lantern walk at night. It's going to be beautiful. If it's sunny, we will dance on the beach. Now, phonics review. Kitchen. Badge. Invitation. Sketch. Great spelling work! When you present, speak clearly and smile. Now, show me your poster. What's the name of your festival? What will there be?",
+      "conversation": {
+        "scene": "Presenting their own festival plan",
+        "sceneJa": "じぶんたちの おまつりの けいかくを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's hear your festival plan! Please begin.",
+            "ja": "あなたたちの おまつりの けいかくを きかせて！どうぞ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Our festival is called the Rainbow Festival. There will be food stands and a dance show.",
+            "ja": "ぼくたちの おまつりは「にじまつり」です。やたいと ダンスショーが あります。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's going to start at four o'clock on the beach.",
+            "ja": "はまべで 4じに はじまる よていです。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "There will be a lantern walk at night. Everyone will carry a lantern.",
+            "ja": "よるには ランタンの さんぽが あります。みんなが ランタンを もって あるきます。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And there will be a banana pancake stand. I'm going to cook!",
+            "ja": "それと バナナパンケーキの やたいも あるよ。ぼくが やくんだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "If it rains, we will move inside the hall.",
+            "ja": "あめが ふったら、こうみんかんの なかに うつります。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a great plan! I want to go!",
+            "ja": "すてきな けいかく！いきたいわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "There will be ～. / It's going to ～. / If it rains, ～. で、じぶんの おまつりの けいかくを はっぴょうしよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. I heard you made a festival plan! What's the name of your festival? What will there be?",
+          "targetExpressions": [
+            "There will be ～.",
+            "It's going to start at ～.",
+            "If it rains, we will ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "There will be food stands and a dance show.",
+          "It's going to start at four o'clock. / If it rains, we will move inside.",
+          "kitchen・badge・invitation・sketch"
+        ]
+      }
+    },
+    {
+      "lessonNo": 591,
+      "world": 20,
+      "title": "Stage 2 Review: People",
+      "titleJa": "ステージ2 ふりかえり：ひと",
+      "school": {
+        "grade": "中2",
+        "topic": "My friend lives by the sea. She plays the drums.：たびで あった ひとを しょうかいする（3単現の ふりかえり）",
+        "grammar": "She plays ～. / He doesn't ～. / Does she ～? ― Yes, she does.（3単現の ふりかえり）",
+        "expressions": [
+          {
+            "en": "My friend lives by the sea. She plays the drums.",
+            "ja": "わたしの ともだちは うみの そばに すんでいて、たいこを たたくよ。",
+            "core": true
+          },
+          {
+            "en": "He doesn't like spiders, but he loves bananas.",
+            "ja": "かれは くもが にがてだけど、バナナが だいすき。"
+          },
+          {
+            "en": "Does she like music? ― Yes, she does.",
+            "ja": "かのじょは おんがくが すき？ ― うん、すきだよ。"
+          }
+        ],
+        "testPoints": [
+          "3単現（lives・plays・doesn't・Does ～?）で ひとを しょうかいできる",
+          "ステージ2 の つづり だまっている もじ（knock・knee・wrap・lamb）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to a friend.",
+          "ja": "ともだちを ゆびさして。",
+          "action": "となりの ひとを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Play the drums.",
+          "ja": "たいこを たたいて。",
+          "action": "たいこを たたく まね",
+          "emoji": "🥁"
+        },
+        {
+          "en": "Make a heart with your hands.",
+          "ja": "てで ハートを つくって。",
+          "action": "りょうてで ハート",
+          "emoji": "💖"
+        },
+        {
+          "en": "Pat your friend on the back.",
+          "ja": "ともだちの せなかを ぽんぽん。",
+          "action": "やさしく せなかを たたく",
+          "emoji": "🤗"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "kn",
+          "wr",
+          "mb"
+        ],
+        "sounds": [
+          "/n/",
+          "/r/",
+          "/m/"
+        ],
+        "words": [
+          "knock",
+          "knee",
+          "wrap",
+          "lamb"
+        ],
+        "tipJa": "ステージ2 の つづり④: だまっている もじ。knock・knee（k を よまない）、wrap（w を よまない）、lamb（b を よまない）。"
+      },
+      "vocab": [
+        {
+          "en": "friend",
+          "ja": "ともだち",
+          "emoji": "👭",
+          "core": true
+        },
+        {
+          "en": "sea",
+          "ja": "うみ",
+          "emoji": "🌊"
+        },
+        {
+          "en": "kind",
+          "ja": "やさしい",
+          "emoji": "💖"
+        },
+        {
+          "en": "funny",
+          "ja": "おもしろい",
+          "emoji": "🤣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This week, we'll review all of Stage 2. Today, let's talk about people. Remember Sunrise Harbor? We learned he and she sentences there. My friend lives by the sea. She plays the drums. Say it with me. My friend lives by the sea. She plays the drums. Great! Don't forget the s! Lives. Plays. He doesn't like spiders, but he loves bananas. Who is it? Birimo! 3人称の s を わすれずに。 Does she like music? Yes, she does. Does he like spiders? No, he doesn't. Does she like cats? Yes, she does. Now, phonics review. Knock. Knee. Wrap. Lamb. Silent letters! The k, the w, and the b are quiet. Now, tell me about a friend. You don't need to say the real name. Where does your friend live? What does your friend like?",
+      "conversation": {
+        "scene": "Remembering the people they met in Stage 2",
+        "sceneJa": "しまで、ステージ2 の たびで あった ひとを ふりかえる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "We met so many people on our trip. Let's remember them.",
+            "ja": "たびで たくさんの ひとに あったわね。おもいだしてみましょう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The baker at Sunrise Harbor gets up very early. She makes bread every morning.",
+            "ja": "あさひの港町の パンやさんは とても はやおき。まいあさ パンを やくの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My new friend on this island lives by the sea. She plays the drums.",
+            "ja": "この しまの あたらしい ともだちは うみの そばに すんでいて、たいこを たたくんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Does she play the big drum, too?",
+            "ja": "おおだいこも たたくの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No, she doesn't. She plays the small one. Her grandpa plays the big one.",
+            "ja": "ううん、たたかないよ。ちいさいのを たたくんだ。おおきいのは おじいさんが たたくよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And Birimo doesn't like spiders, but he loves bananas!",
+            "ja": "それから ビリモは くもが にがてだけど、バナナが だいすき！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! You're talking about yourself, Birimo!",
+            "ja": "あはは！じぶんの ことを はなしてるよ、ビリモ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "3単現（She ～s. / He doesn't ～. / Does she ～?）で ともだちや かぞくを しょうかいしよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Tell me about someone you know. Where does this person live? What does he or she like?",
+          "targetExpressions": [
+            "My friend lives ～.",
+            "She plays ～.",
+            "He doesn't ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My friend lives by the sea. She plays the drums.",
+          "He doesn't like spiders. / Does she like music? ― Yes, she does.",
+          "knock・knee・wrap・lamb（だまっている もじ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 592,
+      "world": 20,
+      "title": "Stage 2 Review: Now and Then",
+      "titleJa": "ステージ2 ふりかえり：いまと きのう",
+      "school": {
+        "grade": "中2",
+        "topic": "I'm dancing now. Yesterday, I swam.：いまの ことと きのうの ことを くらべて はなす（進行形と 過去形の ふりかえり）",
+        "grammar": "I'm ～ing now. / Yesterday, I ～ed.（進行形と 過去形の ふりかえり）",
+        "expressions": [
+          {
+            "en": "I'm dancing now. Yesterday, I swam.",
+            "ja": "いまは おどっているよ。きのうは およいだんだ。",
+            "core": true
+          },
+          {
+            "en": "What are you doing now? ― I'm making a lantern.",
+            "ja": "いま なにを しているの？ ― ランタンを つくっているよ。"
+          },
+          {
+            "en": "What did you do yesterday? ― I played on the beach.",
+            "ja": "きのうは なにを したの？ ― はまべで あそんだよ。"
+          }
+        ],
+        "testPoints": [
+          "進行形と 過去形を つかいわけて、いまと きのうを はなせる",
+          "ステージ2 の つづり -ed（danced・clapped・carried・played）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Dance now!",
+          "ja": "いま おどって！",
+          "action": "じゆうに おどる",
+          "emoji": "💃"
+        },
+        {
+          "en": "Swim like a fish.",
+          "ja": "さかなみたいに およいで。",
+          "action": "およぐ まね",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Freeze!",
+          "ja": "ストップ！かたまって！",
+          "action": "ぴたっと とまる",
+          "emoji": "🧊"
+        },
+        {
+          "en": "Show me what you did yesterday.",
+          "ja": "きのう した ことを やってみせて。",
+          "action": "ジェスチャーで みせる",
+          "emoji": "🎬"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "-ed"
+        ],
+        "sounds": [
+          "/t/",
+          "/d/"
+        ],
+        "words": [
+          "danced",
+          "clapped",
+          "carried",
+          "played"
+        ],
+        "tipJa": "ステージ2 の つづり⑤: -ed の つけかた。danced（e で おわる → d）・clapped（重ねる）・carried（y → i）・played（そのまま）。"
+      },
+      "vocab": [
+        {
+          "en": "now",
+          "ja": "いま",
+          "emoji": "⏰",
+          "core": true
+        },
+        {
+          "en": "yesterday",
+          "ja": "きのう",
+          "emoji": "📆"
+        },
+        {
+          "en": "swim",
+          "ja": "およぐ",
+          "emoji": "🏊"
+        },
+        {
+          "en": "beach",
+          "ja": "はまべ",
+          "emoji": "🏖️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, let's compare now and yesterday. In Windy Plains, we learned be plus ing. In the Ruins of Memory, we learned the past. I'm dancing now. Yesterday, I swam. Say it with me. I'm dancing now. Yesterday, I swam. Fantastic! For now, use am, is, or are, and ing. For yesterday, use the past form. いまは ing、きのうは 過去形。 Let's practice. What are you doing now? I'm making a lantern. What did you do yesterday? I played on the beach. Swim becomes swam. Eat becomes ate. Go becomes went. Make becomes made. Now, phonics review. Danced. Clapped. Carried. Played. Drop the e, double the p, change y to i, or just add e d. Now, tell me. What did you do yesterday? What are you doing now?",
+      "conversation": {
+        "scene": "Comparing now and yesterday",
+        "sceneJa": "いまと きのうを くらべて はなす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Kiko, what are you doing now?",
+            "ja": "キコ、いま なにを しているの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm dancing now. Yesterday, I swam in the sea.",
+            "ja": "いまは おどってるよ。きのうは うみで およいだの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'm making a drumstick now. Yesterday, I carried fish at the market.",
+            "ja": "ぼくは いま ばちを つくってる。きのうは いちばで さかなを はこんだよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What did you do yesterday, Birimo?",
+            "ja": "ビリモは きのう なにを したの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yesterday, I ate five banana pancakes. Now I'm... sleeping!",
+            "ja": "きのうは バナナパンケーキを 5まい たべた。いまは…ねてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wake up, Birimo! We're practicing now!",
+            "ja": "おきて、ビリモ！いまは れんしゅう ちゅうよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Okay, okay! I'm dancing now!",
+            "ja": "わかった、わかった！いま おどってるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いまの こと（I'm ～ing now.）と きのうの こと（Yesterday, I ～.）を くらべて はなそう",
+          "starterEn": "Hi! I'm Ms. Emma. I'm drinking tea now. Yesterday, I walked by the sea. What are you doing now? What did you do yesterday?",
+          "targetExpressions": [
+            "I'm ～ing now.",
+            "Yesterday, I ～.",
+            "What did you do yesterday?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm dancing now. Yesterday, I swam.",
+          "What are you doing now? / What did you do yesterday?",
+          "danced・clapped・carried・played（-ed の つけかた）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 593,
+      "world": 20,
+      "title": "Stage 2 Review: Future",
+      "titleJa": "ステージ2 ふりかえり：みらい",
+      "school": {
+        "grade": "中2",
+        "topic": "Next year, I'm going to learn the drums.：らいねんの けいかくと よそうを はなす（be going to と will の ふりかえり）",
+        "grammar": "Next year, I'm going to ～. / I think I will ～.（be going to と will の ふりかえり）",
+        "expressions": [
+          {
+            "en": "Next year, I'm going to learn the drums.",
+            "ja": "らいねん、たいこを ならう つもりだよ。",
+            "core": true
+          },
+          {
+            "en": "I think I will be taller next year.",
+            "ja": "らいねんは もっと せが たかく なると おもう。"
+          },
+          {
+            "en": "What are you going to do next year?",
+            "ja": "らいねんは なにを する つもり？"
+          }
+        ],
+        "testPoints": [
+          "be going to と will で らいねんの けいかくと よそうを はなせる",
+          "ステージ2 の つづり -ing（dancing・swimming・clapping・singing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look into the future.",
+          "ja": "みらいを のぞいて。",
+          "action": "てで わっかを つくって のぞく",
+          "emoji": "🔮"
+        },
+        {
+          "en": "Grow tall like a tree.",
+          "ja": "きのように せを のばして。",
+          "action": "つまさきだちで のびる",
+          "emoji": "🌳"
+        },
+        {
+          "en": "Point to next year on the calendar.",
+          "ja": "カレンダーで らいねんを ゆびさして。",
+          "action": "ゆびさす",
+          "emoji": "📅"
+        },
+        {
+          "en": "Jump for joy.",
+          "ja": "うれしくて ジャンプ。",
+          "action": "おもいきり ジャンプ",
+          "emoji": "🦘"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "dancing",
+          "swimming",
+          "clapping",
+          "singing"
+        ],
+        "tipJa": "ステージ2 の つづり⑥: -ing の つけかた。dancing（e を とる）・swimming・clapping（重ねる）・singing（そのまま）。"
+      },
+      "vocab": [
+        {
+          "en": "next year",
+          "ja": "らいねん",
+          "emoji": "🗓️",
+          "core": true
+        },
+        {
+          "en": "dream",
+          "ja": "ゆめ",
+          "emoji": "💭"
+        },
+        {
+          "en": "taller",
+          "ja": "もっと せが たかい",
+          "emoji": "📏"
+        },
+        {
+          "en": "someday",
+          "ja": "いつか",
+          "emoji": "🌠"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, let's talk about the future. At Starfall Observatory, we learned be going to and will. Next year, I'm going to learn the drums. Say it with me. Next year, I'm going to learn the drums. Wonderful! Going to is for plans. I think I will be taller next year. Will is for guessing. よていは going to、よそうは will。 Let's practice. What are you going to do next year? I'm going to join the swimming club. I think it will be fun. Someday, I will visit many countries. Now, phonics review. Dancing. Swimming. Clapping. Singing. Drop the e, or double the last letter, or just add i n g. Now, tell me. What are you going to do next year? What do you think will happen?",
+      "conversation": {
+        "scene": "Talking about plans for next year",
+        "sceneJa": "らいねんの けいかくを はなす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "What are you going to do next year?",
+            "ja": "らいねんは なにを する つもり？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Next year, I'm going to learn the drums. I want to play like Grandpa Toma.",
+            "ja": "らいねん、たいこを ならう つもり。トマおじいさんみたいに たたきたいんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm going to write a book about our trip. I think it will be long!",
+            "ja": "わたしは たびの ほんを かく つもり。きっと ながく なるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm going to practice swimming every week. I think I will swim faster.",
+            "ja": "わたしは まいしゅう およぎの れんしゅうを する。もっと はやく およげると おもう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Next year, I'm going to... eat a giant banana cake!",
+            "ja": "らいねん、ぼくは…きょだいな バナナケーキを たべる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! And I think you will all be great English speakers.",
+            "ja": "あはは！それに みんな えいごが とても じょうずに なると おもうわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I think so, too!",
+            "ja": "ぼくも そう おもう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Next year, I'm going to ～. / I think I will ～. で、らいねんの けいかくと よそうを はなそう",
+          "starterEn": "Hi! I'm Ms. Emma. Next year, I'm going to learn to cook new dishes. What are you going to do next year?",
+          "targetExpressions": [
+            "Next year, I'm going to ～.",
+            "I think I will ～.",
+            "What are you going to do?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Next year, I'm going to learn the drums.",
+          "I think I will be taller next year.（よていは going to、よそうは will）",
+          "dancing・swimming・clapping・singing（-ing の つけかた）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 594,
+      "world": 20,
+      "title": "Stage 2 Review: Compare",
+      "titleJa": "ステージ2 ふりかえり：くらべる",
+      "school": {
+        "grade": "中2",
+        "topic": "The island is more exciting than the market.：たびした ばしょを くらべる（比較級・最上級の ふりかえり）",
+        "grammar": "more ～ than / the ～est / as ～ as（比較級・最上級の ふりかえり）",
+        "expressions": [
+          {
+            "en": "The island is more exciting than the market.",
+            "ja": "しまは いちばより わくわくするよ。",
+            "core": true
+          },
+          {
+            "en": "Echo Valley was the quietest place.",
+            "ja": "こだまの谷が いちばん しずかな ばしょだった。"
+          },
+          {
+            "en": "The workshop was as fun as the observatory.",
+            "ja": "工房は 天文台と おなじくらい たのしかった。"
+          }
+        ],
+        "testPoints": [
+          "比較級・最上級・as ～ as で ばしょを くらべられる",
+          "だまっている もじ・-ed・-ing の まとめ（knot・hopped・cried・waving）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make yourself big.",
+          "ja": "からだを おおきく して。",
+          "action": "うでを ひろげて おおきく",
+          "emoji": "🐘"
+        },
+        {
+          "en": "Make yourself small.",
+          "ja": "からだを ちいさく して。",
+          "action": "しゃがんで ちいさく",
+          "emoji": "🐭"
+        },
+        {
+          "en": "Stand taller than me.",
+          "ja": "わたしより たかく たって。",
+          "action": "つまさきだち",
+          "emoji": "📏"
+        },
+        {
+          "en": "Show me your biggest smile.",
+          "ja": "いちばん おおきな えがおを みせて。",
+          "action": "にっこり わらう",
+          "emoji": "😁"
+        }
+      ],
+      "phonics": {
+        "rule": "stage2-spelling",
+        "focus": [
+          "kn",
+          "-ed",
+          "-ing"
+        ],
+        "sounds": [
+          "/n/",
+          "/t/",
+          "/d/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "knot",
+          "hopped",
+          "cried",
+          "waving"
+        ],
+        "tipJa": "まとめ: knot（k を よまない）・hopped（重ねて ed）・cried（y → i で ed）・waving（e を とって ing）。"
+      },
+      "vocab": [
+        {
+          "en": "exciting",
+          "ja": "わくわくする",
+          "emoji": "🤩",
+          "core": true
+        },
+        {
+          "en": "quiet",
+          "ja": "しずかな",
+          "emoji": "🤫"
+        },
+        {
+          "en": "place",
+          "ja": "ばしょ",
+          "emoji": "📍"
+        },
+        {
+          "en": "trip",
+          "ja": "たび",
+          "emoji": "🧳"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We visited eight places in Stage 2. Let's compare them. In Echo Valley, we learned bigger, the biggest, and more exciting. The island is more exciting than the market. Say it with me. The island is more exciting than the market. Excellent! Long words use more. Short words use e r. Echo Valley was the quietest place. The workshop was as fun as the observatory. ながい ことばは more、みじかい ことばは -er。 Let's practice. The sea is bigger than the river. Which place was the most beautiful? The lantern river was the most beautiful. The market was noisier than the valley. The harbor was as busy as the market. Which place was the biggest? Now, phonics review. Knot. Hopped. Cried. Waving. Now, tell me. Which place do you like the best? Why?",
+      "conversation": {
+        "scene": "Comparing the places they visited",
+        "sceneJa": "たびした ばしょを くらべる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "We visited eight places in Stage 2. Which place was the best?",
+            "ja": "ステージ2 では 8つの ばしょに いったわね。どこが いちばん よかった？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I think the island is more exciting than the market. There's music everywhere!",
+            "ja": "しまは いちばより わくわくすると おもう。どこでも おんがくが ある！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Echo Valley was the quietest place. I liked it because I could read there.",
+            "ja": "こだまの谷が いちばん しずかな ばしょだった。ほんが よめたから すきだったな。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The workshop was as fun as the observatory. I loved the machines and the stars.",
+            "ja": "工房は 天文台と おなじくらい たのしかった。きかいも ほしも だいすき。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The market had the most delicious food! The bananas were bigger than my hand!",
+            "ja": "いちばの たべものが いちばん おいしかった！バナナが ぼくの てより おおきかったよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Which was the most beautiful?",
+            "ja": "いちばん きれいだったのは？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The lantern river! It was more beautiful than a dream.",
+            "ja": "ランタンの かわ！ゆめよりも きれいだった。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "比較級・最上級（～er than / more ～ than / the ～est）で、ばしょや ものを くらべよう",
+          "starterEn": "Hi! I'm Ms. Emma. Do you like the sea or the mountains better? Which is more exciting? Why?",
+          "targetExpressions": [
+            "～ is more exciting than ～.",
+            "～ was the ～est place.",
+            "～ is as ～ as ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The island is more exciting than the market.",
+          "Echo Valley was the quietest place. / as fun as",
+          "knot・hopped・cried・waving"
+        ]
+      }
+    },
+    {
+      "lessonNo": 595,
+      "world": 20,
+      "title": "Stage 2 Review: Rules",
+      "titleJa": "ステージ2 ふりかえり：きまり",
+      "school": {
+        "grade": "中2",
+        "topic": "At the festival, you have to stay with your group.：おまつりの きまりを せつめいする（have to・must・should の ふりかえり・ブロックの まとめ）",
+        "grammar": "You have to ～. / You must not ～. / You should ～.（きまりと アドバイスの ふりかえり）",
+        "expressions": [
+          {
+            "en": "At the festival, you have to stay with your group.",
+            "ja": "おまつりでは、グループと いっしょに いなければ いけないよ。",
+            "core": true
+          },
+          {
+            "en": "You must not touch the fireworks.",
+            "ja": "はなびに さわっては いけないよ。"
+          },
+          {
+            "en": "You should drink water. It's hot.",
+            "ja": "みずを のんだ ほうが いいよ。あついから。"
+          }
+        ],
+        "testPoints": [
+          "have to / must not / should で きまりと アドバイスを せつめいできる",
+          "ステージ2 の つづりの ふりかえり（write・climb・smiled・running）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stay with your group.",
+          "ja": "グループと いっしょに いて。",
+          "action": "となりの ひとと うでを くむ",
+          "emoji": "👫"
+        },
+        {
+          "en": "Hold an adult's hand.",
+          "ja": "おとなと てを つないで。",
+          "action": "てを つなぐ まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Throw your trash in the bin.",
+          "ja": "ごみを ごみばこに すてて。",
+          "action": "ごみを すてる まね",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "Drink some water.",
+          "ja": "みずを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "💧"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "wr",
+          "mb",
+          "-ed",
+          "-ing"
+        ],
+        "sounds": [
+          "/r/",
+          "/m/",
+          "/d/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "write",
+          "climb",
+          "smiled",
+          "running"
+        ],
+        "tipJa": "ふりかえり: write（w を よまない）・climb（b を よまない）・smiled（e で おわる → d）・running（n を 重ねる）。"
+      },
+      "vocab": [
+        {
+          "en": "rule",
+          "ja": "きまり",
+          "emoji": "📜",
+          "core": true
+        },
+        {
+          "en": "group",
+          "ja": "グループ",
+          "emoji": "👫"
+        },
+        {
+          "en": "trash",
+          "ja": "ごみ",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "helper",
+          "ja": "てつだいの ひと・スタッフ",
+          "emoji": "🦺"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The festival will be crowded, so let's review the rules. At the festival, you have to stay with your group. Say it with me. At the festival, you have to stay with your group. Good! You must not touch the fireworks. You should drink water. It's hot. have to と must は きまり、should は アドバイス。 If you get lost, don't walk around. Stay in one place and ask a festival helper for help. Let's practice. You have to throw your trash in the bin. You must not run near the fire. You should wear a hat. You should walk slowly, too. Now, phonics review. Write. Climb. Smiled. Running. Silent w, silent b, drop the e, double the n. Now, tell me one festival rule and one piece of advice.",
+      "conversation": {
+        "scene": "Explaining the festival rules",
+        "sceneJa": "おまつりの きまりを せつめいする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Tomorrow, the festival will be very crowded. What are the rules?",
+            "ja": "あしたの おまつりは とても こみあうわ。きまりは なにかしら？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "At the festival, you have to stay with your group.",
+            "ja": "おまつりでは、グループと いっしょに いなければ いけない。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You must not touch the fireworks. Only adults can light them.",
+            "ja": "はなびに さわっては いけない。ひを つけるのは おとなだけ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "You should drink water. It's hot on the beach.",
+            "ja": "みずを のんだ ほうが いいよ。はまべは あついから。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "If I get lost, what should I do?",
+            "ja": "もし まいごに なったら、どう すれば いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Stay in one place and ask a festival helper. Don't walk around alone.",
+            "ja": "その ばしょで まって、おまつりの スタッフに たすけを もとめてね。ひとりで あるきまわらないこと。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Okay! And we have to throw our trash in the bin.",
+            "ja": "わかった！それと ごみは ごみばこに すてなきゃ ね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "have to / must not / should で、おまつりや がっこうの きまりを せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. I'm going to a big festival for the first time. What are the rules? What should I do?",
+          "targetExpressions": [
+            "You have to ～.",
+            "You must not ～.",
+            "You should ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "At the festival, you have to stay with your group.",
+          "You must not touch the fireworks. / You should drink water.（まいごに なったら その ばで まつ）",
+          "write・climb・smiled・running"
+        ]
+      }
+    },
+    {
+      "lessonNo": 596,
+      "world": 20,
+      "title": "Memory Album",
+      "titleJa": "おもいでの アルバム",
+      "school": {
+        "grade": "中2",
+        "topic": "My best memory of this trip is ～.：ステージ2 の たびの いちばんの おもいでを はなす",
+        "grammar": "My best memory of ～ is ～. / I'll never forget ～.（おもいでを つたえる）",
+        "expressions": [
+          {
+            "en": "My best memory of this trip is the lantern festival.",
+            "ja": "この たびの いちばんの おもいでは ランタンまつりです。",
+            "core": true
+          },
+          {
+            "en": "I'll never forget the stars at the observatory.",
+            "ja": "天文台の ほしは ぜったいに わすれないよ。"
+          },
+          {
+            "en": "This photo makes me smile.",
+            "ja": "この しゃしんを みると えがおに なるよ。"
+          }
+        ],
+        "testPoints": [
+          "My best memory of ～ is ～. で いちばんの おもいでと りゆうを はなせる",
+          "ワールド20 と ステージ2 の つづり（treasure・cheer・banana・catch）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the album.",
+          "ja": "アルバムを ひらいて。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Paste a photo.",
+          "ja": "しゃしんを はって。",
+          "action": "しゃしんを はる まね",
+          "emoji": "📷"
+        },
+        {
+          "en": "Write a caption.",
+          "ja": "せつめいを かいて。",
+          "action": "かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Show your page.",
+          "ja": "じぶんの ページを みせて。",
+          "action": "ページを みせる",
+          "emoji": "🖼️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ure",
+          "eer",
+          "ba-na-na",
+          "tch"
+        ],
+        "sounds": [
+          "/ʒər/",
+          "/ɪr/",
+          "/ə/",
+          "/tʃ/"
+        ],
+        "words": [
+          "treasure",
+          "cheer",
+          "banana",
+          "catch"
+        ],
+        "tipJa": "まとめ: treasure（ure ＝ ジャー）・cheer（eer ＝ イア）・banana（おわりの a は よわい「ア」）・catch（tch）。"
+      },
+      "vocab": [
+        {
+          "en": "memory",
+          "ja": "おもいで",
+          "emoji": "💭",
+          "core": true
+        },
+        {
+          "en": "album",
+          "ja": "アルバム",
+          "emoji": "📔"
+        },
+        {
+          "en": "photo",
+          "ja": "しゃしん",
+          "emoji": "📷"
+        },
+        {
+          "en": "forget",
+          "ja": "わすれる",
+          "emoji": "❓"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Our trip in Stage 2 is almost over. Let's make a memory album. Choose your favorite photo. My best memory of this trip is the lantern festival. Say it with me. My best memory of this trip is the lantern festival. Lovely! Then, say why. I'll never forget the river full of lights. This photo makes me smile. いちばんの おもいでと、その りゆうを かこう。 Let's practice. My best memory is the harbor. I'll never forget the market. This photo makes me laugh. My best memory is the workshop, because we made a dream machine together. I'll never forget the echo in the valley. Hello, hello, hello! Now, phonics review. Treasure. Cheer. Banana. Catch. Our memories are our treasure! Let's keep them forever. Now, show me your page. What's your best memory? Why?",
+      "conversation": {
+        "scene": "Making a Stage 2 travel album",
+        "sceneJa": "ステージ2 の たびの アルバムを つくる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make a memory album. Choose your favorite photo.",
+            "ja": "おもいでの アルバムを つくりましょう。いちばん すきな しゃしんを えらんでね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My best memory of this trip is the lantern festival. The river was full of lights.",
+            "ja": "この たびの いちばんの おもいでは ランタンまつり。かわが ひかりで いっぱいだった。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'll never forget the stars at the observatory. We saw a shooting star!",
+            "ja": "天文台の ほしは ぜったい わすれない。ながれぼしを みたんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This photo makes me smile. It's from the old ruins. We found a secret door!",
+            "ja": "この しゃしんを みると えがおに なる。ふるい 遺跡の しゃしんだよ。ひみつの ドアを みつけたの！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My best memory is the market. I tried twenty kinds of bananas!",
+            "ja": "ぼくの いちばんの おもいでは いちば。バナナを 20しゅるいも たべたんだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Our memories are our treasure.",
+            "ja": "おもいでは わたしたちの たからものね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's write a caption for every page.",
+            "ja": "ぜんぶの ページに せつめいを かこう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "My best memory of ～ is ～. で、いちばんの おもいでと その りゆうを はなそう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Let's look at some photos. What's your best memory of this year? Why?",
+          "targetExpressions": [
+            "My best memory of ～ is ～.",
+            "I'll never forget ～.",
+            "This photo makes me smile."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My best memory of this trip is the lantern festival.",
+          "I'll never forget the stars. / This photo makes me smile.",
+          "treasure・cheer・banana・catch"
+        ]
+      }
+    },
+    {
+      "lessonNo": 597,
+      "world": 20,
+      "title": "My Five-Sentence Speech",
+      "titleJa": "5ぶんの スピーチ",
+      "school": {
+        "grade": "中2",
+        "topic": "Hello. I'm ～. I like ～. Last year, ～. Next year, ～.：いま・むかし・みらいを つかって 5ぶんの スピーチを つくる",
+        "grammar": "Hello. / I'm ～. / I like ～. / Last year, ～. / Next year, ～.（5ぶんスピーチ・現在・過去・未来）",
+        "expressions": [
+          {
+            "en": "Hello. I'm Kiko. I like music.",
+            "ja": "こんにちは。キコです。おんがくが すきです。",
+            "core": true
+          },
+          {
+            "en": "Last year, I couldn't swim, but now I can.",
+            "ja": "きょねんは およげなかったけど、いまは およげます。"
+          },
+          {
+            "en": "Next year, I'm going to learn the drums. Thank you.",
+            "ja": "らいねんは たいこを ならう つもりです。ありがとうございました。"
+          }
+        ],
+        "testPoints": [
+          "5ぶん（あいさつ・なまえ・すきな もの・きょねん・らいねん）で スピーチできる",
+          "ステージ2 の つづりの まとめ（future・near・again・celebration・danced）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand up straight.",
+          "ja": "せすじを のばして たって。",
+          "action": "ピンと たつ",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Hold up five fingers.",
+          "ja": "ゆびを 5ほん たてて。",
+          "action": "てのひらを ひろげる",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Count your sentences.",
+          "ja": "ぶんを かぞえて。",
+          "action": "ゆびを おって かぞえる",
+          "emoji": "🔢"
+        },
+        {
+          "en": "Say thank you and bow.",
+          "ja": "ありがとうと いって おじぎ。",
+          "action": "おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ure",
+          "ear",
+          "a-gain",
+          "-tion",
+          "-ed"
+        ],
+        "sounds": [
+          "/tʃər/",
+          "/ɪr/",
+          "/ə/",
+          "/ʃən/",
+          "/t/"
+        ],
+        "words": [
+          "future",
+          "near",
+          "again",
+          "celebration",
+          "danced"
+        ],
+        "tipJa": "まとめ: future（チャー）・near（イア）・again（はじめの a は よわい「ア」）・celebration（tion）・danced（-ed）。"
+      },
+      "vocab": [
+        {
+          "en": "speech",
+          "ja": "スピーチ",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "sentence",
+          "ja": "ぶん",
+          "emoji": "📝"
+        },
+        {
+          "en": "last year",
+          "ja": "きょねん",
+          "emoji": "⏪"
+        },
+        {
+          "en": "proud",
+          "ja": "ほこらしい",
+          "emoji": "🏅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, let's make a five-sentence speech. Sentence one, Hello. Sentence two, I'm and your name. Sentence three, I like something. Sentence four, Last year. Sentence five, Next year. Listen. Hello. I'm Kiko. I like music. Last year, I couldn't swim, but now I can. Next year, I'm going to learn the drums. Say it with me. Hello. I'm Kiko. I like music. Great! 5つの ぶんで、いまと むかしと みらいを はなそう。 Use the present, the past, and the future. You can use a nickname. Look at Haru's speech. Hello. I'm Haru. I like soccer. Last year, I went to Sunrise Harbor. Next year, I'm going to climb a mountain. Now, phonics review. Future. Near. Again. Celebration. Danced. Now, make your speech. Hold up five fingers and count. One, two, three, four, five!",
+      "conversation": {
+        "scene": "Making five-sentence speeches",
+        "sceneJa": "5ぶんスピーチを つくる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make five-sentence speeches. Who wants to try first?",
+            "ja": "5ぶんスピーチを つくりましょう。だれから やってみる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hello. I'm Kiko. I like music. Last year, I couldn't swim. Next year, I'm going to learn the drums.",
+            "ja": "こんにちは。キコです。おんがくが すきです。きょねんは およげませんでした。らいねんは たいこを ならう つもりです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wonderful! Five sentences. The present, the past, and the future!",
+            "ja": "すばらしい！5ぶん。いまと むかしと みらいが はいってる！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hello. I'm Haru. I like soccer. Last year, I went to Sunrise Harbor. Next year, I'm going to climb a mountain.",
+            "ja": "こんにちは。ハルです。サッカーが すきです。きょねん、あさひの港町に いきました。らいねんは やまに のぼる つもりです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hello. I'm Birimo. I like bananas. Last year, I liked bananas. Next year, I'm going to like bananas!",
+            "ja": "こんにちは。ビリモです。バナナが すきです。きょねんも バナナが すきでした。らいねんも バナナが すきな つもりです！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Birimo, all your sentences are about bananas!",
+            "ja": "あはは！ビリモ、ぜんぶ バナナの はなしね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Because bananas are my life!",
+            "ja": "だって バナナは ぼくの じんせいだもん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "5ぶん（Hello. / I'm ～. / I like ～. / Last year, ～. / Next year, ～.）で スピーチしよう。ほんとうの なまえは いわなくて OK（ニックネームで いいよ）",
+          "starterEn": "Hi! I'm Ms. Emma. I want to hear your five-sentence speech! Please start with Hello.",
+          "targetExpressions": [
+            "Hello. I'm ～.",
+            "I like ～.",
+            "Last year, ～.",
+            "Next year, I'm going to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Hello. I'm Kiko. I like music.",
+          "Last year, I couldn't swim, but now I can. / Next year, I'm going to learn the drums.",
+          "future・near・again・celebration・danced"
+        ]
+      }
+    },
+    {
+      "lessonNo": 598,
+      "world": 20,
+      "title": "Rehearsal Night",
+      "titleJa": "リハーサルの よる",
+      "school": {
+        "grade": "中2",
+        "topic": "Speak slowly. Look at the audience.：はっぴょうの コツを つたえ、はげましあう",
+        "grammar": "Speak slowly. / Look at the audience. / It's okay to be nervous.（コツを つたえる・はげます）",
+        "expressions": [
+          {
+            "en": "Speak slowly. Look at the audience.",
+            "ja": "ゆっくり はなして。おきゃくさんを みて。",
+            "core": true
+          },
+          {
+            "en": "It's okay to be nervous.",
+            "ja": "きんちょうしても だいじょうぶ。"
+          },
+          {
+            "en": "Take a deep breath and smile.",
+            "ja": "しんこきゅうして、にっこり しよう。"
+          }
+        ],
+        "testPoints": [
+          "Speak slowly. / Look at the audience. で はっぴょうの コツを つたえられる",
+          "ステージ2 の つづりの まとめ（learn・festival・bridge・waving）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Speak slowly.",
+          "ja": "ゆっくり はなして。",
+          "action": "ゆっくり くちを うごかす",
+          "emoji": "🐢"
+        },
+        {
+          "en": "Look at the audience.",
+          "ja": "おきゃくさんを みて。",
+          "action": "まえを みまわす",
+          "emoji": "👀"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "しんこきゅうして。",
+          "action": "おおきく すって はく",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Stand tall and smile.",
+          "ja": "むねを はって にっこり。",
+          "action": "むねを はって えがお",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ear",
+          "fes-ti-val",
+          "dge",
+          "-ing"
+        ],
+        "sounds": [
+          "/ɜr/",
+          "/ə/",
+          "/dʒ/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "learn",
+          "festival",
+          "bridge",
+          "waving"
+        ],
+        "tipJa": "まとめ: learn（ear ＝ アー）・festival（よわい「ア」）・bridge（dge）・waving（e を とって ing）。"
+      },
+      "vocab": [
+        {
+          "en": "rehearsal",
+          "ja": "リハーサル",
+          "emoji": "🎬",
+          "core": true
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく・おきゃくさん",
+          "emoji": "👥"
+        },
+        {
+          "en": "nervous",
+          "ja": "きんちょうして",
+          "emoji": "😰"
+        },
+        {
+          "en": "slowly",
+          "ja": "ゆっくり",
+          "emoji": "🐢"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! Tonight is rehearsal night. Here are three tips for a great show. Speak slowly. Look at the audience. Say it with me. Speak slowly. Look at the audience. Perfect! Tip number three. Take a deep breath and smile. Are you nervous? It's okay to be nervous. Everyone feels nervous before a show, even teachers. きんちょうしても だいじょうぶ。ゆっくり はなそう。 Let's practice. Speak loudly. Don't speak too fast. Look at your friends' faces. Speak slowly, and smile. If you forget a word, that's okay. Take a breath and try again. Your friends will help you. We are a team! Now, phonics review. Learn. Festival. Bridge. Waving. Now, stand up and say your first sentence. Speak slowly. Look at me. Great job! You're ready for tomorrow. I believe in you!",
+      "conversation": {
+        "scene": "Rehearsal for the show",
+        "sceneJa": "はっぴょうかいの リハーサル",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Rehearsal time! Haru, please start.",
+            "ja": "リハーサルの じかんよ！ハル、はじめて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hello everyone welcome to our show!",
+            "ja": "みなさんこんにちはぼくたちのショーへようこそ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Too fast! Speak slowly. Look at the audience.",
+            "ja": "はやすぎるわ！ゆっくり はなして。おきゃくさんを みてね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hello, everyone. Welcome to our show. Oh, that's much better.",
+            "ja": "みなさん、こんにちは。ぼくたちの ショーへ ようこそ。あ、ずっと いいね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My hands are shaking. I'm so nervous.",
+            "ja": "てが ふるえてる。すごく きんちょうする。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's okay to be nervous. Take a deep breath and smile.",
+            "ja": "きんちょうしても だいじょうぶ。しんこきゅうして、にっこり しよう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Breathe in... breathe out... I feel calm now. Let's do it again!",
+            "ja": "すって…はいて…おちついたよ。もう いちど やろう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "はっぴょうの コツ（Speak slowly. / Look at the audience.）を つたえて、It's okay to be nervous. で はげまそう",
+          "starterEn": "Hi! I'm Ms. Emma. I have a speech tomorrow, and I'm so nervous! Do you have any tips for me?",
+          "targetExpressions": [
+            "Speak slowly.",
+            "Look at the audience.",
+            "It's okay to be nervous."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Speak slowly. Look at the audience.",
+          "It's okay to be nervous. / Take a deep breath and smile.",
+          "learn・festival・bridge・waving"
+        ]
+      }
+    },
+    {
+      "lessonNo": 599,
+      "world": 20,
+      "title": "Festival Eve",
+      "titleJa": "おまつりの まえの よる",
+      "school": {
+        "grade": "中2",
+        "topic": "Tomorrow is the big day!：あしたを たのしみに する・つぎの ちずを みつける",
+        "grammar": "Tomorrow is ～! / I can't wait for ～!（たのしみな きもちを いう）",
+        "expressions": [
+          {
+            "en": "Tomorrow is the big day!",
+            "ja": "あしたは だいじな 日だ！",
+            "core": true
+          },
+          {
+            "en": "I can't wait for the festival!",
+            "ja": "おまつりが まちきれない！"
+          },
+          {
+            "en": "Look! What's this? It's a new map!",
+            "ja": "みて！これ なに？あたらしい ちずだ！"
+          }
+        ],
+        "testPoints": [
+          "Tomorrow is ～! / I can't wait for ～! で たのしみな きもちを いえる",
+          "ワールド20 と ステージ2 の つづり（adventure・volunteer・parade・knock・carried）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the full moon.",
+          "ja": "まんげつを みて。",
+          "action": "そらを みあげる",
+          "emoji": "🌕"
+        },
+        {
+          "en": "Check your costume.",
+          "ja": "いしょうを たしかめて。",
+          "action": "ふくを みまわす",
+          "emoji": "👘"
+        },
+        {
+          "en": "Put your lantern by the door.",
+          "ja": "ランタンを ドアの そばに おいて。",
+          "action": "そっと おく まね",
+          "emoji": "🏮"
+        },
+        {
+          "en": "Go to bed early.",
+          "ja": "はやく ねてね。",
+          "action": "てを あわせて ほおに あてる",
+          "emoji": "🛏️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ure",
+          "eer",
+          "pa-rade",
+          "kn",
+          "-ed"
+        ],
+        "sounds": [
+          "/tʃər/",
+          "/ɪr/",
+          "/ə/",
+          "/n/",
+          "/d/"
+        ],
+        "words": [
+          "adventure",
+          "volunteer",
+          "parade",
+          "knock",
+          "carried"
+        ],
+        "tipJa": "まとめ: adventure（チャー）・volunteer（eer ＝ イア）・parade（はじめの a は よわい「ア」）・knock（k を よまない）・carried（y → i で ed）。"
+      },
+      "vocab": [
+        {
+          "en": "tomorrow",
+          "ja": "あした",
+          "emoji": "🌅",
+          "core": true
+        },
+        {
+          "en": "wait",
+          "ja": "まつ",
+          "emoji": "⏳"
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "tower",
+          "ja": "とう",
+          "emoji": "🗼"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! It's the night before the festival. Tomorrow is the big day! Say it with me. Tomorrow is the big day! Great! How do you feel? I can't wait for the festival! I can't wait means, I'm so excited. I can't wait は「まちきれない」と いう いいかた。 Let's check. Are the costumes ready? Yes, they are. Are the lanterns ready? Yes! What are you going to do first tomorrow? I'm going to watch the parade. I'm going to dance in the circle. I'm going to eat festival food. I can't wait! Now, phonics review. Adventure. Volunteer. Parade. Knock. Carried. Oh, listen. Knock, knock. Birimo found something. It's a new map! There's a tall tower on it. Our next adventure! But first, the festival. Go to bed early. Good night!",
+      "conversation": {
+        "scene": "Festival eve: Birimo finds the next map",
+        "sceneJa": "おまつりの まえの よる、ビリモが つぎの ちずを みつける",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Tomorrow is the big day! I can't wait for the festival!",
+            "ja": "あしたは だいじな 日！おまつりが まちきれない！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The costumes are ready. The lanterns are ready, too.",
+            "ja": "いしょうは できた。ランタンも できてる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'm a little nervous, but I'm excited.",
+            "ja": "ちょっと きんちょうするけど、わくわくする。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hey! Look! I found this under my pillow. What's this?",
+            "ja": "ねえ！みて！まくらの したに これが あった。これ なに？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a new map! There's a tall tower on it, and many letters are flying around it.",
+            "ja": "あたらしい ちずよ！たかい とうが かいてあって、まわりを たくさんの てがみが とんでいるわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "A tower of messages? Is it our next adventure?",
+            "ja": "ことづての とう？つぎの ぼうけんかな？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Maybe. But first, the festival! Let's go to bed early. Good night, everyone!",
+            "ja": "そうかもね。でも まずは おまつり！はやく ねましょう。みんな、おやすみ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あしたの たのしみな ことを Tomorrow is ～! / I can't wait for ～! / I'm going to ～. で はなそう",
+          "starterEn": "Hi! I'm Ms. Emma. Tomorrow is a special day for me. I'm going to a concert! Do you have a special day soon? How do you feel?",
+          "targetExpressions": [
+            "Tomorrow is the big day!",
+            "I can't wait for ～!",
+            "I'm going to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Tomorrow is the big day!",
+          "I can't wait for the festival!",
+          "adventure・volunteer・parade・knock・carried"
+        ]
+      }
+    },
+    {
+      "lessonNo": 600,
+      "world": 20,
+      "title": "World 20 Grand Festival",
+      "titleJa": "ワールド20 グランドフェスティバル",
+      "school": {
+        "grade": "中2",
+        "topic": "Thank you for coming to our festival!：しまの ステージで ステージ2 グランドフェスティバル（600 かい きねん・ステージ2 の まとめ）",
+        "grammar": "ステージ2 の まとめ（3単現・進行形・過去・未来・比較・have to・Would you like to ～?・There will be ～.）",
+        "expressions": [
+          {
+            "en": "Thank you for coming to our festival!",
+            "ja": "わたしたちの おまつりに きてくれて ありがとう！",
+            "core": true
+          },
+          {
+            "en": "Would you like to dance with us?",
+            "ja": "いっしょに おどりませんか？"
+          },
+          {
+            "en": "This is our 600th lesson. We did it!",
+            "ja": "これで 600 かいめの レッスン。やったね！"
+          }
+        ],
+        "testPoints": [
+          "ステージ2 の いいかたで おまつりの ステージを すすめられる",
+          "ワールド20 と ステージ2 の つづりの まとめ（picture・year・cheer・festival・celebration・dancing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Play the drums!",
+          "ja": "たいこを たたいて！",
+          "action": "りょうてで たたく",
+          "emoji": "🥁"
+        },
+        {
+          "en": "Dance in a circle.",
+          "ja": "わに なって おどって。",
+          "action": "わに なって まわる",
+          "emoji": "💃"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ure",
+          "ear",
+          "eer",
+          "fes-ti-val",
+          "-tion",
+          "-ing"
+        ],
+        "sounds": [
+          "/tʃər/",
+          "/ɪr/",
+          "/ɪr/",
+          "/ə/",
+          "/ʃən/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "picture",
+          "year",
+          "cheer",
+          "festival",
+          "celebration",
+          "dancing"
+        ],
+        "tipJa": "ワールド20 の まとめ: picture（チャー）・year（ear ＝ イア）・cheer（eer ＝ イア）・festival（よわい「ア」）・celebration（tion）・dancing（e を とって ing）。"
+      },
+      "vocab": [
+        {
+          "en": "celebrate",
+          "ja": "おいわいする",
+          "emoji": "🎉",
+          "core": true
+        },
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎭"
+        },
+        {
+          "en": "fireworks",
+          "ja": "はなび",
+          "emoji": "🎆"
+        },
+        {
+          "en": "proud",
+          "ja": "ほこらしい",
+          "emoji": "🏅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the World 20 Grand Festival! This is our 600th lesson! We finished Stage 2. Let's start the show with our big sentence. Thank you for coming to our festival! Say it with me. Thank you for coming to our festival! Fantastic! In Stage 2, you learned so much. She plays the drums. I'm dancing now. Yesterday, I swam. Next year, I'm going to learn more. The island is more exciting than the market. You have to stay with your group. Would you like to dance with us? Make yourself at home. Thank you for having me. Why don't we sing together? Shall we? ステージ2 クリア！600 かい、ほんとうに よく がんばったね。 Phonics review. Picture. Year. Cheer. Festival. Celebration. Dancing. You were brave travelers and great friends. Now, look at the sky. Fireworks! Let's dance together!",
+      "conversation": {
+        "scene": "The Stage 2 Grand Festival on the island stage",
+        "sceneJa": "しまの ステージで、ステージ2 グランドフェスティバル（600 かい きねん）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Grand Festival! This is our 600th lesson!",
+            "ja": "グランドフェスティバルへ ようこそ！これで 600 かいめの レッスンよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you for coming to our festival! First, the drums!",
+            "ja": "ぼくたちの おまつりに きてくれて ありがとう！まずは たいこです！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Next, we're going to sing a song. Please clap with us!",
+            "ja": "つぎは うたを うたいます。いっしょに てを たたいてね！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Would you like to dance with us? Join the circle, everyone!",
+            "ja": "いっしょに おどりませんか？みなさん、わに はいって！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! Fireworks! They're bigger than the moon!",
+            "ja": "みて！はなび！つきより おおきい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You did it! You finished Stage 2. I'm so proud of you.",
+            "ja": "やったわね！ステージ2 クリアよ。みんなを ほこりに おもうわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you, Ms. Emma! Next, let's go to the Tower of Messages!",
+            "ja": "ありがとう、エマ先生！つぎは ことづての塔へ いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ステージ2 で ならった いいかた（Thank you for coming! / Would you like to ～? / There will be ～.）で、おまつりの ステージを すすめよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the Grand Festival! You are the host today. Please welcome the audience and tell them about the show!",
+          "targetExpressions": [
+            "Thank you for coming to our festival!",
+            "Would you like to ～?",
+            "There will be ～.",
+            "First, ～. Next, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Thank you for coming to our festival!",
+          "Would you like to dance with us? / This is our 600th lesson. We did it!",
+          "picture・year・cheer・festival・celebration・dancing"
+        ]
+      }
+    }
+  ]
+}

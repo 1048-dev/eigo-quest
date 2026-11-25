@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { EAR_CHOICES, EAR_SOUNDS, URE_SOUNDS, W20_EAR_FOCUS, W20_START, W20_URE_FOCUS, earOf, earWhy, schwaBlank, schwaWhy, ureSound, ureWhy } from "./w20Phonics";
 import { QU_CHOICES, QU_WHY, SILENT19_CHOICES, SILENT19_WHY, TOOL_CHOICES, TOOL_WHY, W19_OU_FOCUS, W19_QU_FOCUS, W19_RE_FOCUS, W19_SILENT_FOCUS, W19_START, W19_TOOL_FOCUS, ouSound, ouWhy, quBlank, reOf, reWhy, silentBlank19, toolEnding } from "./w19Phonics";
 import { COMPARE_WHY, LY_WHY, W18_COMPARE_FOCUS, W18_FUL_FOCUS, W18_LY_FOCUS, W18_START, W18_UN_FOCUS, compareSpelling, fulLessOf, fulLessWhy, lySpelling, stressChoices, stressWhy, unOf, unWhy } from "./w18Phonics";
 import { ENDING_WHY, OR_FOCUS_OF, OR_WHY, W17_CONTRACTION_FOCUS, W17_ENDING_FOCUS, W17_HOMOPHONE_RULE, W17_OR_FOCUS, W17_START, endingSpelling, homophoneOf, homophoneWhy, orSpelling, willContraction, willContractionWhy } from "./w17Phonics";
@@ -570,6 +571,46 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
 }
 
 /**
+ * ワールド20（まつりの島・L571〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
+ * - "-ure": 「この ことばの ure は どの おと？」（treasure → チャー / ジャー / ユア）
+ * - "ear" "eer": 「イア」の ことばは「＿ に はいる つづりは？」（ch＿（おうえんする）→ eer / ear / ere / ier）、
+ *   bear・learn の ような ear は「この ことばの ear は どの おと？」（イア / エア / アー）
+ * - "a-bout" の ような はくの まとまり（あいまい母音の 表に ある ことば）: 「よわい『ア』の ところに はいる もじは？」（＿bout → a / u / e / o）
+ * あてはまらなければ null（ステージ2 の つづりの まとめ -tch -dge -tion・だまっている もじ・-ed・-ing は まえの ワールドの 問題へ）。
+ * ワールド19 の 問題より 先に よぶ（picture を ワールド17 の -ture、bear を ワールド9 の ear、banana を ワールド18 の 強勢で 問わない）。
+ */
+export function w20Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W20_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of lesson.phonics.focus) {
+    if (f === W20_URE_FOCUS) {
+      const u = ureSound(w);
+      if (!u) continue;
+      return { promptJa: "この ことばの ure は どの おと？", display: `${item.text}（${u.meaning}）`, choices: URE_SOUNDS.map((s) => ({ id: s, label: s })), answer: u.answer,
+        explanationJa: ureWhy(item.text, u) };
+    }
+    if ((W20_EAR_FOCUS as readonly string[]).includes(f)) {
+      const e = earOf(w);
+      if (!e || e.spelling !== f) continue;
+      if (e.kind === "blank") {
+        return { promptJa: "＿ に はいる つづりは どれ？", display: e.display, choices: pick(EAR_CHOICES), answer: e.answer, explanationJa: earWhy(item.text, e) };
+      }
+      return { promptJa: "この ことばの ear は どの おと？", display: `${item.text}（${e.meaning}）`, choices: EAR_SOUNDS.map((s) => ({ id: s, label: s })), answer: e.answer,
+        explanationJa: earWhy(item.text, e) };
+    }
+    if (f.includes("-") && f.replace(/-/g, "") === w) {
+      const s = schwaBlank(w);
+      if (!s) continue;
+      return { promptJa: "よわい「ア」の ところに はいる もじは どれ？", display: s.display, choices: pick(s.choices), answer: s.answer, explanationJa: schwaWhy(item.text, s) };
+    }
+  }
+  return null;
+}
+
+/**
  * ワールド19（からくり工房・L541〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
  * - "re-": 「『もう いちど』の いみの ことばは？」（make → ？（つくりなおす）→ remake / unmake / rimake）
  * - "-er" "-or"（道具の ことば）: 「おわりの つづりは？」（elevat＿＿（エレベーター）→ or / er / ar）
@@ -829,8 +870,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド16（-ed の つづり・ふきそくな 過去形・-ed の おと）は その 先（wrote を マジック e、stopped を ブレンドで 問わない）
       // ワールド17（-tion / -sion / -ture・'ll / won't・同音異義語・or ore oar our）は その 先（blew を ew の 過去形、won't を n't で 問わない）
       // ワールド18（-er / -est・強勢・-ly・-ful / -less・un-）は その 先（shorter を or の つづり、careful を まとまりで 問わない）
-      // ワールド19（re-・道具の -er / -or・だまっている もじ・qu / squ・ou / ough）は いちばん 先（opener を くらべる かたち、knob を ワールド14 で 問わない）
-      const dq = w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド19（re-・道具の -er / -or・だまっている もじ・qu / squ・ou / ough）は その 先（opener を くらべる かたち、knob を ワールド14 で 問わない）
+      // ワールド20（-ure・ear / eer・あいまい母音）は いちばん 先（picture を -ture、bear を ワールド9 の ear、banana を 強勢で 問わない）
+      const dq = w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

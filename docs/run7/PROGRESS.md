@@ -321,3 +321,42 @@
 - `npx vitest run`: 49 ファイル・1,352 テスト すべて成功
 - `npx next build`: 成功。First Load JS は /map 201 kB（198 → +3）、/lesson/[lessonNo] 204 kB（201 → +3）、/gacha 189 kB（186 → +3）、/test/[assessmentId] 188 kB（185 → +3）、/parent 159 kB（159 → ±0）（増えたのは ワールド19 の 問題の コード・表と 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 28`: No.28（L541〜560・61 ページ）を 作れることを 確認（No.29 は ワールド20 が できてから）
+
+## WORLD — ワールド20「まつりの島」（L571〜600・ステージ2 の 総まとめ）（2026-11-25）
+
+### やったこと
+- `content/curriculum/worlds/world-20.json` を 新しく 作成（30 レッスン、ステージ2・A2、`school.grade` は「中2」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 600 レッスン。ステージ2 が そろった）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 125、会話の セリフ 210 行（1 回 7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 1 回 平均 約 127 語の 英語（最少 125 語）＋短い 日本語の たすけ（1 文）。
+- ブロック構成: 571〜575 さそう・ことわる（There's a festival on the island!・Would you like to come to the festival? ― Yes, I'd love to!・I'd love to, but I have to help my mom. / That's okay. Maybe next time!・Shall we dance? ― Sure!・しょうたいじょう Please come to our festival on Saturday. It starts at five o'clock.）→ 576〜580 せかいの おまつり（People float lanterns on the river.・People throw colored powder and laugh.・We say thank you for the food.・There will be lights all over the town.・しょうかいショー In some countries, people float lanterns at the festival.）→ 581〜585 もてなす（Make yourself at home.・Would you like some tea? ― Yes, please. / No, thank you.・Thank you for having me.・When I was little, I was scared of drums.・We're going to cook together. It will be fun.）→ 586〜590 はっぴょうかいの じゅんび（If it rains, we will dance inside.・We have to make the costumes.・We're practicing every day.・Why don't we sing together?・おまつりの けいかく There will be food stands and a dance show.）→ 591〜595 ステージ2 の ふりかえり（3単現・進行形と 過去形・be going to と will・比較・have to / must not / should）→ 596〜600 しめくくり（おもいでの アルバム・5ぶんスピーチ・リハーサル Speak slowly. Look at the audience.・おまつり前夜・L600 グランドフェスティバル Thank you for coming to our festival!）。
+- 物語の 糸: ワールド19 の ゆめの きかいが だした ちずの とおり、たいこの なる しまに つく（L571）。島には エマ先生の おばの いえが あり、おばの いえで もてなしを うける（L581〜583）。おばの ちちの トマおじいさんの「ちいさい ころ たいこが こわかった」話（L584）。しまの こどもたちに さそわれて はっぴょうかいに でる ことに なり（L587）、じゅんび・れんしゅう・リハーサルを へて、L599 の 前夜に ビリモが まくらの したで「てがみが とびまわる たかい とう」の ちずを みつける。L600 は 600 かい きねんの ステージで、さいごに「ことづての塔へ いこう！」（ワールド21 へ）。
+- フォニックスの 問題（`src/lib/curriculum/w20Phonics.ts`・`questions.ts` の `w20Question`。w19Question より 先に よぶ）:
+  - -ure "-ure": 「この ことばの ure は どの おと？」（treasure（たからもの）→ チャー / ジャー / ユア）。t の あと＝チャー、s の あと＝ジャー、p・c の あと＝ユア。
+  - ear / eer "ear" "eer": 「イア」の ことばは「＿ に はいる つづりは？」（ch＿（おうえんする）→ eer / ear / ere / ier、n＿（ちかくに）→ ear）。bear・wear・learn・earth の ear は「この ことばの ear は どの おと？」（イア / エア / アー）。
+  - あいまい母音 "a-bout" "ba-na-na" "lem-on" "fes-ti-val" …: 「よわい『ア』の ところに はいる もじは？」（＿bout（〜に ついて）→ a / u / e / o、lem＿n → o、sev＿n → e）。
+  - ステージ2 の つづりの まとめ（586〜595）は 新しい 問題を 作らず、まえの ワールドの 問題を そのまま つかう: tch・dge（w13）、-tion（w17）、kn・wr・mb（w19 の 表 → なければ w14）、-ed（w16）、-ing（w15）。
+- フォーカスの ボタン: -ure は「…ure」、あいまい母音は「a・bout」（はくで よもう）で そのまま 出る。`vowelTeams.ts` の 読み上げで -ure と eer を その回の ことばで よむ（`w20Say`）。ear は ワールド9 の「イア」の よみかたの まま。
+- テスト: `tests/curriculum.test.ts` に ワールド20 の 決まりごと（範囲・ステージ・タイトル・フォニックスの 順と 種類・-ure 3つ／ear 3つの おとを ぜんぶ あつかう・ステージ2 の つづりの まとめの focus・文法と 会話の 型・There will be は L579 から／Why don't we は L589 から・先生の台本の 英語の 割合・会話の 行数・L600 スピード TPR・こころの くばり・発表で なまえを いわなくて OK・L599 の ちずと L600 の 600 かい きねん）を 追加。`tests/phonics-w20.test.ts`（11 テスト）を 追加。
+
+### 決めたこと（理由）
+- **新しい phonics.rule**: "ure" "ear-eer" "schwa" "stage2-spelling"（ふりかえりは "review"）。-ure は 571 チャー → 572 ジャー（＋nature と くらべる）→ 573 ユア（＋furniture と くらべる）→ 574 3つ まぜる の じゅん。ear / eer は 576 ear（イア）→ 577 eer → 578 dear / deer の くらべ → 579 イア では ない ear（エア・アー）。
+- **-ure は おとを えらぶ 問題**: -ture の つづりは ワールド17 で 問うたので、ここでは「ure の まえの もじで おとが かわる」ことを 学ぶ。sure（シュア）・figure は きまりから はずれるので 入れなかった。secure は アメリカ英語の「キュア」で ユア の なかま。
+- **ear / eer は 2しゅるいの 問題**: 「イア」は ear と eer の どちらも あるので つづりを えらぶ（おなじ おとで いみが ちがう dear / deer が いちばん わかりやすい れい）。bear・learn は つづりが 1つしか ないので おとを えらぶ。まちがいの 選択肢 ere / ier は here・pier の つづり（ワールド17 で here を ならった）。
+- **あいまい母音は「どの もじ？」を 問う**: 計画書の「a-BOUT, ba-NA-na の a」に くわえて、lemon の o・seven の e も 入れた。よわい「ア」は どの 母音でも おきるので、つづりで おぼえる ことが 学ぶ ところ。まちがいの 選択肢には「ア」に きこえる u を かならず 入れた（about → a / u / e / o）。focus を ワールド18 と おなじ はくの まとまり（a-bout）に して、ことばと 1つずつ 対応させた（ワールド18 の 強勢の 問題には ならない）。
+- **ステージ2 の つづりの まとめは 新しい コードなし**: まえの ワールドの 問題は レッスン番号の 下限しか みないので、focus に tch / dge / -tion / kn / wr / mb / -ed / -ing を かけば そのまま 出る。テストで L586〜600 の ことばが ぜんぶ 選択肢つきの 問題に なる ことを たしかめた。
+- **新しい 話し手は 増やさない**: しまの おばの かぞく・トマおじいさん・しまの こどもたちは エマ先生の はなしの なかと チラシ・しょうたいじょうで 出る。もてなしの 回（L581〜583）は エマ先生が おばの かわりに いう（「おばが『くつろいでね』って」）。
+- **文法の じゅんばん**: There will be は 計画どおり L579 から（それまでの 表現・セリフに 出さない）、Why don't we は L589 から（テストで たしかめる）。when・if は 計画どおり「入門」として When I was little, ～.（L584）と If it rains, we will ～.（L586）の かたちだけ。Would you like to ～?（さそう）と Would you like some ～?（すすめる）の ちがいは L582 の 台本で くらべて 教えた。
+- **世界の おまつり**: じっさいの くにの なまえは まちがいの ない ところだけ（インドの はるの いろの おまつり、日本などの かわに ランタンを ながす おまつり、日本の あきの おこめの しゅうかくさい）。ふゆの ひかりの おまつりは「さむい くにの まち」と ぼかした。宗教の ことばは 出さない。
+- **こころの くばり**: L573 は「ことわっても いい・ことわられても It's okay.」、L576 は「ろうそくの ひは おとなが つける・みずべに ちかづかない」、L577 は「こなが め と くちに はいらないように」、L585 は「ほうちょう・コンロは おとなに きいてから」、L587 は「はさみは ゆっくり」、L595 は「まいごに なったら その ばで まって スタッフに きく」、L598 は「きんちょうしても だいじょうぶ」、L575 は「ネットに じゅうしょを かかない」。L575・580・590・591・596・597・600 の AI 会話は「ほんとうの なまえは いわなくて OK」（L597 は ニックネームで いい）。
+- 自分で 1 回 見なおして なおした ところ: 台本が 125 語に 足りない 回（L571・574〜577・580〜583・586〜600 の 多く）に 練習の 文を 1〜3 文 足した。ふるい 端末で 出ない かもしれない 絵文字（🧑‍🌾 🧑‍🤝‍🧑）を 🚜 👭 に かえた。L596 の「It's the old ruins.」を「It's from the old ruins.」に なおした（しゃしんの せつめいとして しぜんに）。
+
+### 例（L573「I'd Love To, But…」）
+- 表現（core）: I'd love to, but I have to help my mom. ／ Sorry, I can't. I'm busy today. ／ That's okay. Maybe next time!
+- 会話（やさしく ことわる れんしゅう）: Haru「Riko, would you like to go fishing this afternoon?」 Riko「I'd love to, but I have to help my mom. Sorry!」 Haru「That's okay. Maybe next time!」 Birimo「Kiko, would you like to eat ten bananas with me?」 Kiko「Ha ha! I'd love to, but I'm full. Maybe next time!」
+- フォニックス: pure / cure / secure / furniture（問題は「この ことばの ure は どの おと？」で secure → ユア、furniture → チャー）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 50 ファイル・1,401 テスト すべて成功
+- `npx next build`: 成功。First Load JS は /map 202 kB（201 → +1）、/lesson/[lessonNo] 205 kB（204 → +1）、/gacha 190 kB（189 → +1）、/test/[assessmentId] 189 kB（188 → +1）、/parent 159 kB（159 → ±0）（増えたのは ワールド20 の 問題の コード・表と 索引の 1 ワールドぶん。ステージ2 の まとめは まえの ワールドの 問題を つかうので 増えかたが ちいさい。レッスン本文は あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 29` / `--pack 30`: No.29（L561〜580・61 ページ）・No.30（L581〜600・62 ページ）を 作れることを 確認
