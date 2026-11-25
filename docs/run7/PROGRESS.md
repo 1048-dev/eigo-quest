@@ -838,3 +838,42 @@
 - `npx vitest run`: 64 ファイル・2,018 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 237 → 241 kB、/lesson/[lessonNo] 242 → 247 kB、/gacha 225 → 230 kB、/test/[assessmentId] 225 → 229 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド30 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 44`: No.44（L861〜880・63 ページ）、`--pack 45`（L881〜900・63 ページ）を 作れる ことを 確認
+
+## WORLD — ワールド31「ときの回廊」（L901〜930・ステージ4・B1）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-31.json` を 新しく 作成（30 レッスン、ステージ4・`level` は B1、`school.grade` は「高校初級」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 930 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 120、会話の セリフ 201 行（1 回 6〜7 行、L925 と L930 は 8 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 303 語・最少 282 語・最大 322 語）で、まいかい「読みもの」（Time Map・やどの 案内板・ハナの 手紙・おもちゃの 展示カード・お城の 案内・発明の 部屋・沈没船 Silver Wave の 話・土器の カード・ステラ・モスの 絵本・ウィロー・ヒルの 年表・時の劇場の 案内・鉄道の カード・まちの 年表・偉人の 部屋・Respect Cards・ヒーロー紹介文・インタビュー・伝記・クイズカード など 61〜123 語。L926 の 伝記が いちばん 長い）を 読む。日本語の ヒントは 2 回だけ（L902「used to（むかしは ～した）」・L906「was built（たてられた）」）。
+- ブロック構成: 901〜905 むかしの くらし（used to は L902 から・There were no phones, so ～.・むかしと 今の くらべ）→ 906〜910 過去の 受け身（This castle was built about 400 years ago.・The light bulb was improved by many inventors.・was found・was made by・博物館ガイド）→ 911〜915 伝記（She was born in a small village. は L911 から・When she was ten, ～.・became・never gave up・一生を 5 文で）→ 916〜920 年表（First, ～ in 1900. Then, ～ in 1920.・過去完了の 入門 When we arrived, the show had already started. は L917 から・Before the train was built, ～.・What if ～? は L919 から・まちの 年表）→ 921〜925 世界を かえた 人（I respect her because ～. は L922 から・身近な ヒーロー・インタビュー・I'd like to talk about ～. は L925 から）→ 926〜930 まとめ（伝記を よむ・歴史クイズ・ヒーロー紹介文 80 語・さよなら散歩・L930 歴史フェスティバル）。
+- 物語の 糸: L900 の 広場の 下の とびらから「ときの回廊」へ（L901）。案内役は あるく 大どけいの オールド・トック（Old Tock）。もらった「Time Map」の 6 つの あなに 金の ギアが ブロックの まとめごとに 1 つずつ はまる（905・910・915・920・925・930）。L911〜915 は 伝記の とびらの 絵本の 天文学者 ステラ・モス（1890 年 山の ちかくの 村で 生まれ、10 さいで めがねの レンズから 望遠鏡を つくり、図書館の 本で べんきょうし、1920 年に 天文学者、「女の子は 科学者に なれない」と いわれ 望遠鏡も こわれたが あきらめず、1931 年に すい星を 発見、のちに むりょうの 星の 学校）。L916 から ネズミの 歴史家 ニブ先生（Professor Nib）。L923・925 の ヒーローは ハルの おじいちゃん（40 年 自転車屋）・キコの おばあちゃん・リコの お母さん（看護師）・ビリモは オールド・トック。L930 で ギアが ぜんぶ ひかり、さいごの とびらの 先は「たいようの砂漠（Desert of the Sun）」。
+- フォニックス（`src/lib/curriculum/w31Phonics.ts`・`questions.ts` の `w31Question`。w30Question より 先に よぶ）:
+  - 動詞と 名詞の 家族（rule "word-family"。focus は 名詞の おわり "-tion" "-ation" "-ment" "-al" "-y"）: 「動詞を 名詞（もの・こと）に すると？」（invent（はつめいする）→ ＿＿ → invention / inventment / invental）。32 語。まちがいの 選択肢は どれも ない ことば。
+  - 年号と 数の 読みかた（rule "year-reading"。focus は その ことば）: 「英語で なんと よむ？」（1868 → eighteen sixty-eight / one eight six eight / eighty-six eighteen）。2 けたずつ（1600・1868・1964・1850）・oh（1903・1801）・two thousand（2001・2008）・年代（the 1990s など）・世紀（the 21st century など）の 5 しゅるい 16 こ。
+  - 語根 struct（rule "root-struct"）: 「struct の ことば。文に あう ことばは どれ？」（The ＿＿ of the castle took twenty years. → construction / construct / constructive）。12 語。おなじ 家族の なかで 品詞を えらぶ。
+  - -ian・-ist（rule "person-ian-ist"）: 「〜を する 人は？」（music → ＿＿ → musician / musicist / musicer）。16 語。
+  - 語根 port（rule "root-port"）: 「port の ことば。いみは どれ？」（export（ex ＝ そとへ ＋ port ＝ はこぶ）→ 外国へ 売る / 外国から 買い入れる / もちはこびが できる）。はこぶ と みなと の 2 つの いみ。12 語。
+- フォーカスの ボタン（`phonicsButtons.ts` の `w31Example`）と 読み上げ（`vowelTeams.ts` の `w31Say`）は その focus で 問う ことばを よむ。年号は 英語の よみで よむ（ボタンは 英字と スペース だけの きまりなので 1868 → "eighteen sixty eight"）。L900 までの どの 回でも はたらかない ことを テストで たしかめる。
+- テスト: `tests/curriculum.test.ts` に ワールド31 の 決まりごと（範囲・ステージ4・B1・高校初級・タイトル 30・フォニックスの 順と 種類・家族の 5 つの おわり・年号の 5 しゅるい・ふりかえり L926〜930 は 5 つの きまりを ぜんぶ・core の 表現・文法の じゅんばん（used to / 過去の 受け身 / was born / 過去完了 / What if / I respect / I'd like to talk about）・台本は 英語だけで 200 語 以上＋読みもの・日本語の ヒントは L902 と L906 だけ・AI 会話で 個人情報を きかない・まちと ヒーローの 回は goalJa に「ほんとうの なまえは いわなくて いい」・物語）を 追加。`tests/phonics-w31.test.ts`（12 テスト）を 追加。
+
+### 決めたこと（理由）
+- **フォニックスの 問いは 5 しゅるいとも ちがう 角度に**: 家族は 動詞 → 名詞、年号は 英語の よみ、struct は 文に あう 品詞、-ian / -ist は もとの ことば → 人、port は ことば → いみ。ワールド30 の auto-（いみ → ことば）・trans-（パーツ）と かさならない。
+- **家族の まちがいの 選択肢は ない ことば だけ**: 「informal」は ほんとうに ある ことばなので information の 選択肢から はずした（informion に）。
+- **port の 2 つの いみ**: airport・seaport・passport の port は「みなと」（ラテン語 portus）で、import・export の「はこぶ」（portare）と もとが ちがう。いっしょに 教えるが せつめいで 分ける。transport は ワールド30 の 表に あるので つかわない。
+- **年号の 選択肢は 英語の よみ**（カタカナに しない）。2010 年 いこうは two thousand ten / twenty ten の 両方が ただしいので 出さない。
+- **歴史の 事実は たしかな ものだけ**: ライト兄弟 1903 年（約 12 秒）・ベル 1876 年・日本の 鉄道 1872 年（新橋〜横浜）・東京オリンピック 1964 年・明治 1868 年・月面着陸 1969 年・マリー・キュリー・ヘレン・ケラーと アン・サリバン。お城・沈没船・まち（ウィロー・ヒル）は 架空。ステラ・モスは 架空の 人物で、L911 と L926 で「つくった おはなし」と ことわる。
+- **むかしと 今は どちらも よい点**: 歩く 旅・手紙・木の おもちゃ・電気の ない 夜は、たいへんな 点と よい点を かならず 両方 出す。
+- **新しい 話し手は 増やさない**: オールド・トック・ニブ先生・ステラ・モスは 台本の なかか、ビリモが「I'm playing ～!」と やくを する。
+- **作りかた**: 下書きの きまり（物語・core・フォニックスの ことば・文法の じゅんばん・つかって よい 事実）と チェックの スクリプトを 書き、30 レッスンを 3 つの まとまり（901〜910・911〜920・921〜930）で 並行して 書き、まとめてから 自分で 1 回 見なおした。なおした ところ: L910 の 会話で リコが 2 行 つづけて いた ところ（1 行に まとめた）、年号の ボタンの 読み上げ（sixty-eight の ハイフンが 全体の きまり「英字と スペース だけ」に あわないので sixty eight に）。
+
+### 例（L922「I Respect Her Because…」）
+- 表現（core）: I respect her because she helped many children. ／ Who do you respect? ― I respect Helen Keller because she never gave up. ／ Why do you respect her? ― Because she was brave and patient.
+- 読みもの（台本より）: "Our Respect Cards. Riko: I respect Stella Moss because she helped many children. She opened a free star school, so any child could learn about the sky. Kiko: I respect Helen Keller because she never gave up. She learned words, wrote books, and helped many people. Haru: I respect Anne Sullivan because she was a patient teacher. Birimo: I respect Marie Curie because she was the first woman to win a Nobel Prize. And she won two!"
+- 会話: Ms. Emma「Old Tock wants to know which great person you respect.」 Riko「I respect her because she helped many children. I mean Stella Moss and her free star school.」 … Haru「Because she was brave and patient. She helped Helen learn words.」
+- フォニックス: report / reporter / support（問題は「port の ことば。いみは どれ？」support（sup ＝ 下から ＋ port ＝ はこぶ）→ 下から ささえる・おうえんする / しらせを もちかえる・ほうこくする / 外国から 買い入れる（ゆにゅう））
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 65 ファイル・2,068 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 241 → 246 kB、/lesson/[lessonNo] 247 → 252 kB、/gacha 230 → 235 kB、/test/[assessmentId] 229 → 234 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド31 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 46`: No.46（L901〜920・63 ページ）、`--pack 47`（L921〜940）は ワールド31 の 10 レッスンぶん（32 ページ）まで 作れる ことを 確認

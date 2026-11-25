@@ -11,6 +11,7 @@ import { w27Example } from "./w27Phonics";
 import { w28Example } from "./w28Phonics";
 import { w29Example } from "./w29Phonics";
 import { w30Example } from "./w30Phonics";
+import { w31Example } from "./w31Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -55,6 +56,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   const ws = words.map((w) => w.trim()).filter(Boolean);
   const lower = (w: string) => w.toLowerCase();
 
+  // ワールド31（家族・年号・struct・-ian / -ist・port）は その focus で 問う ことばを よむ（年号は 英語の よみかたで: 1868 → eighteen sixty-eight）
+  const w31 = w31Example(focus.trim(), ws);
+  if (w31) return w31;
   // ワールド30（auto-・trans-・-ic・略語・話しことば）は その focus で 問う ことば・文を よむ（略語は 読みかたで: km → kilometers）
   const w30 = w30Example(focus.trim(), ws);
   if (w30) return w30;

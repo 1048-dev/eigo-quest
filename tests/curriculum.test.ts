@@ -36,6 +36,7 @@ import { ableOf, chKOf, forSinceOf, homoOf, silentOf, w27FocusOf } from "@/lib/c
 import { katakanaOf, linkOf as link28Of, loanOf, partsOf, rhythmOf, w28FocusOf } from "@/lib/curriculum/w28Phonics";
 import { dictOf, emphasisOf, ibleOf, spectOf, w29FocusOf, weakOf } from "@/lib/curriculum/w29Phonics";
 import { abbrOf, autoOf, casualOf, icOf, transOf, w30FocusOf } from "@/lib/curriculum/w30Phonics";
+import { familyOf as familyOf31, personOf as personOf31, portOf, structOf, w31FocusOf, yearOf } from "@/lib/curriculum/w31Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -3297,5 +3298,137 @@ describe("カリキュラム: ワールド30 の決まりごと（みらい都�
     expect(at(881)!.teacherScript + said(881)).toMatch(/Mr\. Shell/);
     for (const n of [875, 880, 885, 890, 895, 900]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/badge/i);
     expect(at(900)!.teacherScript + said(900)).toMatch(/Corridor of Time/);
+  });
+});
+
+describe("カリキュラム: ワールド31 の決まりごと（ときの回廊）", () => {
+  const w31 = LESSONS.filter((l) => l.world === 31);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (familyOf31(w) ? "family" : yearOf(w) ? "year" : structOf(w) ? "struct" : personOf31(w) ? "person" : portOf(w) ? "port" : "?");
+
+  it("ワールド31 は 901〜930 の 30 レッスン、ステージ4・B1、学年の めやすは 高校初級", () => {
+    if (w31.length === 0) return; // 未作成ならスキップ
+    expect(w31.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 901 + i));
+    for (const l of w31) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校初級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(4);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w31.length === 0) return;
+    const titles = ["The Corridor of Time", "People Used to Walk", "There Were No Phones", "Old Toys, New Toys", "Then and Now", "It Was Built in 1600", "It Was Invented by…", "It Was Found Under the Sea", "Who Was It Made By?", "History Museum Guide",
+      "She Was Born in a Small Village", "When She Was Ten", "She Became a Scientist", "She Never Gave Up", "A Life in Five Sentences", "Timeline Talk", "It Had Already Started", "Before and After", "What If?", "Our Town's Timeline",
+      "People Who Changed the World", "I Respect Her Because…", "Everyday Heroes", "Interview a Historical Figure", "Hero Presentation", "A Biography to Read", "History Quiz Show", "My Hero Report", "Corridor of Time Review", "World 31 Grand Review"];
+    expect(w31.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: 動詞と 名詞の 家族 → 年号 → struct → -ian / -ist → port（各ブロックの 5回目と L926〜930 は ふりかえり）", () => {
+    if (w31.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(901, 904, "word-family");
+    rule(906, 909, "year-reading");
+    rule(911, 914, "root-struct");
+    rule(916, 919, "person-ian-ist");
+    rule(921, 924, "root-port");
+    for (const n of [905, 910, 915, 920, 925, 926, 927, 928, 929, 930]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド31 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w31) {
+      for (const w of l.phonics.words) {
+        const f = w31FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w31FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w31.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["invention", "exploration", "1868", "the 1990s", "construct", "structure", "historian", "scientist", "export", "import"]));
+    // 家族は -tion・-ation・-ment・-al・-y、年号は 4つ・oh・thousand・年代・世紀の 5しゅるいが そろう
+    expect(new Set(range(901, 904).flatMap((l) => l.phonics.focus))).toEqual(new Set(["-tion", "-ation", "-ment", "-al", "-y"]));
+    expect(new Set(all.map((w) => yearOf(w)?.kind).filter(Boolean))).toEqual(new Set(["year", "oh", "thousand", "decade", "century"]));
+    // ふりかえり L926〜930 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(926, 930)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["family", "year", "struct", "person", "port"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w31.length === 0) return;
+    const want: Record<number, string> = {
+      901: "Each door opens to a different time.", 902: "People used to walk to faraway towns.", 903: "There were no phones, so people wrote letters.", 904: "Children used to play with wooden toys.",
+      906: "This castle was built about 400 years ago.", 907: "The light bulb was improved by many inventors.", 908: "This old ship was found under the sea.", 909: "This pot was made by people long ago.", 910: "This was used for cooking about 5,000 years ago.",
+      911: "She was born in a small village.", 912: "When she was ten, she loved looking at stars.", 913: "She studied hard and became a scientist.", 914: "Many people said no, but she never gave up.",
+      917: "When we arrived, the show had already started.", 918: "Before the train was built, the trip took ten days.", 919: "What if there were no electricity?", 920: "Our town had a big festival in 1950.",
+      921: "Some people changed the world with ideas.", 922: "I respect her because she helped many children.", 923: "My grandpa is my hero. He worked hard for our family.",
+      925: "I'd like to talk about my hero.", 926: "Read the biography. What was her biggest challenge?", 927: "When was the first airplane flight?", 930: "History is the story of people like us.",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(905)).toMatch(/^People used to .*, but now they /);
+    expect(core(915)).toMatch(/^She was born .*She became .*She is famous for /);
+    expect(core(916)).toMatch(/^First, .* in \d{4}\. Then, .* in \d{4}\.$/);
+    expect(core(924)).toMatch(/^When did you .*\? Why did you .*\?$/);
+    expect(core(928)).toMatch(/^My hero is .*was born in \d{4}\..*I respect .* because /);
+    expect(core(929)).toMatch(/used to .*was built/);
+  });
+
+  it("文法の じゅんばん: used to は L902、過去の 受け身は L906、was born は L911、過去完了は L917、What if は L919、I respect は L922、I'd like to talk about は L925 から", () => {
+    if (w31.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bused to\b/i, 902],
+      [/\b(was|were) (built|invented|made|found|discovered|improved|used|painted|written|created)\b/i, 906],
+      [/\b(was|were) born\b/i, 911],
+      [/\bhad (already|started|finished|left|gone|begun|closed)\b/i, 917],
+      [/\bwhat if\b/i, 919],
+      [/\bI respect\b/i, 922],
+      [/\bI'd like to talk about\b/i, 925],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(901, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ4: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・200 語 以上で 読みものを ふくむ、会話シーンは 6〜7 行（L925・L930 は 8 行まで）、L930 は スピード TPR", () => {
+    if (w31.length === 0) return;
+    for (const l of w31) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(200);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{200,}"/);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(6);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual([925, 930].includes(l.lessonNo) ? 8 : 7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（used to・was built）
+    expect(w31.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([902, 906]);
+    expect(at(930)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。まち・ヒーローの 回は ほんとうの なまえを いわなくて よいと goalJa に 明記", () => {
+    if (w31.length === 0) return;
+    for (const l of w31) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+    for (const n of [920, 923, 925, 928]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+  });
+
+  it("物語: L901 で ときの回廊と オールド・トック → L911 で ステラ・モス（つくった おはなしと ことわる）→ L916 で ニブ先生 → 6つの ギア → L930 で たいようの砂漠へ", () => {
+    if (w31.length === 0) return;
+    expect(at(901)!.teacherScript + said(901)).toMatch(/Corridor of Time/);
+    expect(at(901)!.teacherScript + said(901)).toMatch(/Old Tock/);
+    expect(at(911)!.teacherScript + said(911)).toMatch(/Stella Moss/);
+    expect(at(911)!.teacherScript).toMatch(/made up/i);
+    expect(at(916)!.teacherScript + said(916)).toMatch(/Professor Nib/);
+    for (const n of [905, 910, 915, 920, 925, 930]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/gear/i);
+    expect(at(930)!.teacherScript + said(930)).toMatch(/Desert of the Sun/);
   });
 });
