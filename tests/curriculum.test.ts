@@ -35,6 +35,7 @@ import { edIngOf, punctOf, stressOf, twisterOf, voiceOf, w26FocusOf } from "@/li
 import { ableOf, chKOf, forSinceOf, homoOf, silentOf, w27FocusOf } from "@/lib/curriculum/w27Phonics";
 import { katakanaOf, linkOf as link28Of, loanOf, partsOf, rhythmOf, w28FocusOf } from "@/lib/curriculum/w28Phonics";
 import { dictOf, emphasisOf, ibleOf, spectOf, w29FocusOf, weakOf } from "@/lib/curriculum/w29Phonics";
+import { abbrOf, autoOf, casualOf, icOf, transOf, w30FocusOf } from "@/lib/curriculum/w30Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -3164,5 +3165,137 @@ describe("カリキュラム: ワールド29 の決まりごと（かんがえ�
     expect(at(861)!.teacherScript + said(861)).toMatch(/Pip/);
     for (const n of [845, 850, 855, 860, 865, 870]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/lens/i);
     expect(at(870)!.teacherScript + said(870)).toMatch(/City of Tomorrow/);
+  });
+});
+
+describe("カリキュラム: ワールド30 の決まりごと（みらい都市）", () => {
+  const w30 = LESSONS.filter((l) => l.world === 30);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  /** 台本の フォニックスの ところ（Now, phonics. から あと）を のぞいた 英語 */
+  const allEnNoPhonics = (l: (typeof LESSONS)[number]) => allEn(l).replace(l.teacherScript, l.teacherScript.split("Now, phonics.")[0]);
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (autoOf(w) ? "auto" : transOf(w) ? "trans" : icOf(w) ? "ic" : abbrOf(w) ? "abbr" : casualOf(w) ? "casual" : "?");
+
+  it("ワールド30 は 871〜900 の 30 レッスン、ステージ4・B1、学年の めやすは 高校初級", () => {
+    if (w30.length === 0) return; // 未作成ならスキップ
+    expect(w30.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 871 + i));
+    for (const l of w30) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校初級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(4);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w30.length === 0) return;
+    const titles = ["Welcome to the City of Tomorrow", "A Robot That Cleans", "A Bus That Drives Itself", "The Building Which Makes Energy", "City Tour Guide", "A Person Who Designs Games", "People Who Help Others", "The Girl Who Invented It", "Who Am I?", "Future Jobs",
+      "What's the Problem?", "An Idea That Helps", "How Does It Work?", "Test and Improve", "Invention Pitch", "Good Points and Problems", "Screens Everywhere", "Safe and Smart Online", "AI Helpers", "Technology Talk",
+      "In 2050…", "Schools in the Future", "Homes in the Future", "If We Use Clean Energy", "Future City Plan", "Gonna, Wanna", "Reading a Tech Article", "My Invention Proposal", "City of Tomorrow Review", "World 30 Grand Review"];
+    expect(w30.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: auto- → trans- → -ic の 強勢 → 略語 → 話しことば（各ブロックの 5回目と L896〜900 は ふりかえり）", () => {
+    if (w30.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(871, 874, "prefix-auto");
+    rule(876, 879, "prefix-trans");
+    rule(881, 884, "ic-stress");
+    rule(886, 889, "abbreviation");
+    rule(891, 894, "casual-speech");
+    for (const n of [875, 880, 885, 890, 895, 896, 897, 898, 899, 900]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド30 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w30) {
+      for (const w of l.phonics.words) {
+        const f = w30FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w30FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w30.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["automatic", "autograph", "transport", "transform", "electric", "robotic", "AI", "km", "USB", "3D", "I'm gonna try it", "I wanna see the robot"]));
+    // 略語は 1もじずつ・ことば・たんい・かず の 4しゅるいが そろう
+    expect(new Set(all.map((w) => abbrOf(w)?.kind).filter(Boolean))).toEqual(new Set(["letters", "word", "unit", "number"]));
+    // 話しことばは 8つの かたち（gonna・wanna・gotta・kinda・lemme・gimme・dunno・outta）
+    expect(range(891, 894).flatMap((l) => l.phonics.focus)).toEqual(["gonna", "wanna", "gotta", "kinda", "lemme", "gimme", "dunno", "outta"]);
+    // ふりかえり L896〜900 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(896, 900)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["auto", "trans", "ic", "abbr", "casual"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w30.length === 0) return;
+    const want: Record<number, string> = {
+      871: "Cars fly and robots work here.", 872: "This is a robot that cleans the streets.", 873: "We're riding a bus that drives itself.", 874: "That building makes its own energy.", 875: "This is a park that has solar trees.",
+      876: "She's a person who designs games.", 877: "Doctors are people who help sick people.", 878: "This is the girl who invented the robot dog.", 879: "I'm a person who works at night and keeps you safe.",
+      881: "The problem is that older people can't carry heavy bags.", 882: "My idea is a bag that follows you.", 883: "It uses sensors to find you.", 884: "It didn't work well, so we changed the design.",
+      887: "Screens are useful, but we need breaks.", 888: "Think before you post.", 889: "AI can help us, but we should check the answers.",
+      891: "In 2050, people will probably live longer.", 892: "Students might learn at home with robots.", 893: "My future home will have a garden on the roof.", 894: "If we use clean energy, the air will be cleaner.",
+      896: '"I\'m gonna try it!" means "I\'m going to try it."', 900: "The future is something that we create together.",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(880)).toMatch(/^In the future, there will be people who /);
+    expect(core(885)).toMatch(/^This is an invention that helps /);
+    expect(core(886)).toMatch(/^One good point is .*One problem is /);
+    expect(core(890)).toMatch(/^I think technology is helpful because .*However, /);
+    expect(core(895)).toMatch(/^In our future city, there will be /);
+    expect(core(897)).toMatch(/^This article is about a robot that /);
+    expect(core(898)).toMatch(/^My invention is an? .* that .*It will help /);
+    expect(core(899)).toMatch(/ that .*One good point is /);
+    expect(at(874)!.school.expressions.map((e) => e.en).join(" ")).toMatch(/\bwhich\b/);
+  });
+
+  it("文法の じゅんばん: 関係代名詞 that は L872、which は L874、who は L876 から … 話しことばは L891 から（L895 までは フォニックスの ところだけ）", () => {
+    if (w30.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\b(robots?|bus|buses|cars?|building|park|bags?|machines?|city|trees?|things?|something|invention|app|pencil|place|tower|lights?) (that|which) (is|are|was|were|has|have|[a-z]+s)\b/i, 872],
+      [/\bwhich\b/i, 874], [/\b(person|people|girl|boy|someone|man|woman|fox|tortoise|kids?|children) who\b/i, 876], [/\bone good point is\b/i, 886], [/\bone problem is\b/i, 886],
+      [/\bHowever,/, 890], [/\bwill probably\b/, 891], [/\bif we use\b/i, 894], [/\bthink before you post\b/i, 888], [/\b(gonna|wanna|gotta|kinda|lemme|gimme|dunno|outta)\b/i, 891],
+    ];
+    for (const [re, n] of from) for (const l of range(871, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+    for (const l of range(891, 895)) expect(allEnNoPhonics(l), `L${l.lessonNo}`).not.toMatch(/\b(gonna|wanna|gotta|kinda|lemme|gimme|dunno|outta)\b/i);
+  });
+
+  it("ステージ4: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・200 語 以上で 読みものを ふくむ、会話シーンは 6〜7 行（L885・L900 は 8 行まで）、L900 は スピード TPR", () => {
+    if (w30.length === 0) return;
+    for (const l of w30) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(200);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{200,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(6);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual([885, 900].includes(l.lessonNo) ? 8 : 7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（関係代名詞の that・post）
+    expect(w30.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([872, 888]);
+    expect(at(900)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。ネットの 回は 住所・学校名を 出さない ことを 教える", () => {
+    if (w30.length === 0) return;
+    for (const l of w30) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+    expect(at(888)!.teacherScript).toMatch(/address/i);
+    expect(at(889)!.teacherScript + said(889)).toMatch(/check/i);
+  });
+
+  it("物語: L871 で みらい都市と ノバ → L878 で テスと スプロケット → L881 で シェルさん → 6つの バッジ → L900 で ときの回廊へ", () => {
+    if (w30.length === 0) return;
+    expect(at(871)!.teacherScript + said(871)).toMatch(/City of Tomorrow/);
+    expect(at(871)!.teacherScript + said(871)).toMatch(/Nova/);
+    expect(at(878)!.teacherScript + said(878)).toMatch(/Tess/);
+    expect(at(878)!.teacherScript + said(878)).toMatch(/Sprocket/);
+    expect(at(881)!.teacherScript + said(881)).toMatch(/Mr\. Shell/);
+    for (const n of [875, 880, 885, 890, 895, 900]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/badge/i);
+    expect(at(900)!.teacherScript + said(900)).toMatch(/Corridor of Time/);
   });
 });

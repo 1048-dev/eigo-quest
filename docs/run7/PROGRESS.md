@@ -798,3 +798,43 @@
 - `npx vitest run`: 63 ファイル・1,968 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 233 → 237 kB、/lesson/[lessonNo] 238 → 242 kB、/gacha 221 → 225 kB、/test/[assessmentId] 221 → 225 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド29 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 43`: No.43（L841〜860・63 ページ）、`--pack 44`（L861〜880）は ワールド29 の 10 レッスンぶん（32 ページ）まで 作れる ことを 確認
+
+## WORLD — ワールド30「みらい都市」（L871〜900・ステージ4・B1）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-30.json` を 新しく 作成（30 レッスン、ステージ4・`level` は B1、`school.grade` は「高校初級」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 900 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 123、会話の セリフ 207 行（1 回 6〜7 行、L885 の プレゼンと L900 は 8 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 287 語・最少 271 語・最大 312 語）で、まいかい「読みもの」（まちの 案内板・バスの 案内・ツアーカード・しごとの カード・テスの ノート・アイデアボード・設計カード・テストの きろく・プレゼンの げんこう・ロボットの よい点と しんぱいな点の 表・画面の ルール・ネットの やくそく・AI の つかいかた・未来の 予想・The Tomorrow Times の 記事・80 語の 企画書の おてほん など 63〜84 語）を 読み、ほとんどの 回で「Is this a fact or an opinion?」を きく。日本語の ヒントは 2 回だけ（L872「a robot that cleans（そうじする ロボット）」・L888「post（とうこうする）」）。
+- ブロック構成: 871〜875 みらいの まち（Cars fly and robots work here.・関係代名詞 that は L872 から・自動運転バス・which は L874 から（It's a building which makes energy from the sun.）・ツアーガイド）→ 876〜880 しごと（who は L876 から: She's a person who designs games.・Doctors are people who help sick people.・子ども発明家・Who Am I? クイズ・In the future, there will be people who ～.）→ 881〜885 発明（The problem is that ～.・My idea is a bag that follows you.・It uses sensors to find you.・It didn't work well, so we changed the design.・発明プレゼン）→ 886〜890 テクノロジーと くらし（One good point is ～. One problem is ～.・画面と やすみ・Think before you post.・AI can help us, but we should check the answers.・However, で はなしあい）→ 891〜895 未来の 予想（will probably・might・My future home will have ～.・If we use clean energy, ～.・未来都市の 計画）→ 896〜900 まとめ（gonna / wanna・記事を よむ・企画書・さよならツアー・L900 発明博覧会）。
+- 物語の 糸: L870 の 灯台の ひかりの 先の「みらい都市」に とうちゃく（L871）。案内役は 小さな まるい ロボットの ノバ（Nova）。ノバに もらった「Expo Pass」の 6 つの ほしの バッジが ブロックの まとめごとに 1 つずつ ひかる（875・880・885・890・895・900）。そうじロボット（Street Helper Number Seven）、自動運転の Sky Line Bus（ねこの ために とまる）、太陽と 風の Sun Tower、ソーラーツリーの 公園と アヒルの子の ツアー、ゲームを つくる キツネの リンさん、11 さいの 発明家 テス（Tess）と ロボット犬 スプロケット（Sprocket）。881〜885 は 坂道で おもい にもつを 運べない カメの シェルさん（Mr. Shell）の ために「Follow-Me Bag」を 考え、ためして（ねこに ついて いって しまう）、なおして、プレゼン。889 は AI が「クモの あしは 6 本」と まちがえ、本で たしかめる。897 は 木を うえる ロボット Rooty の 記事。899 で 広場の 下の 大きな とけいの ついた とびらを 見つけ、L900（900 回記念の 発明博覧会）で バッジが ぜんぶ ひかり、とびらが ひらいて「ときの回廊（Corridor of Time）」へ。
+- フォニックス（`src/lib/curriculum/w30Phonics.ts`・`questions.ts` の `w30Question`。w29Question より 先に よぶ）:
+  - auto-（rule "prefix-auto"。focus "auto-"）: 「auto（じぶんで）の ことば。いみに あう ことばは どれ？」（「（有名な 人が じぶんで かく）サイン」→ autograph / automobile / autopilot）。spect（ことば → いみ）と ぎゃくの むき（いみ → ことば）。14 語。
+  - trans-（rule "prefix-trans"。focus "trans-"）: 「trans の あとに つづく パーツは どれ？」（trans ＋ ＿＿（はこぶ・ゆそうする）→ port / form / mit）。13 語。
+  - -ic の 強勢（rule "ic-stress"。focus "-ic"）: 「-ic の ことば。どこを いちばん つよく いう？」（electric → e-LEC-tric / E-lec-tric / e-lec-TRIC）。-ic の すぐ まえの はくを つよく いう きまり。3 はく 以上の 16 語。
+  - 略語の 読みかた（rule "abbreviation"。focus は その 略語）: 「なんと よむ？」（AI → エーアイ / アイ / エイ、km → キロメーターズ / ケーエム / クム）。1もじずつ（AI・USB・TV・PC・VR・LED・GPS・ID・DIY）・ことばとして（NASA・STEM）・たんい（km・cm・kg・mm）・かず（3D）の 4 しゅるい 16 こ。
+  - くだけた 話しことば（rule "casual-speech"。focus "gonna" など）: 「gonna を ふつうの いいかたに すると？」（going to / gone to / go and）。gonna・wanna・gotta・kinda・lemme・gimme・dunno・outta の 8 つ、16 文。
+- フォーカスの ボタン（`phonicsButtons.ts` の `w30Example`。いちばん 先に よぶ）と 読み上げ（`vowelTeams.ts` の `w30Say`）は その focus で 問う ことば・文を よむ。略語は 読みかたで よむ（km → kilometers、3D → three D、AI → A I）。L870 までの どの 回でも はたらかない ことを テストで たしかめる。
+- テスト: `tests/curriculum.test.ts` に ワールド30 の 決まりごと（範囲・ステージ4・B1・高校初級・タイトル 30・フォニックスの 順と 種類・略語 4 しゅるい・話しことば 8 つ・ふりかえり L896〜900 は 5 つの きまりを ぜんぶ・core の 表現・関係代名詞 that / which / who の はじまり・One good point is / However, / will probably / If we use / Think before you post / 話しことば の じゅんばん・台本は 英語だけで 200 語 以上＋読みもの・日本語の ヒントは L872 と L888 だけ・AI 会話で 個人情報を きかない・L888 で 住所を 出さない・L900 スピード TPR・物語）を 追加。`tests/phonics-w30.test.ts`（12 テスト）を 追加。
+
+### 決めたこと（理由）
+- **フォニックスの 問いは 5 しゅるいとも ちがう 角度に**: auto- は いみ → ことば、trans- は パーツを くみあわせる、-ic は 強勢、略語は 読みかた、話しことばは ふつうの いいかたに なおす。ワールド29 の spect（ことば → いみ）・dict（文に 入れる）と かさならない。
+- **automatic は auto- の 表だけ**: 計画では -ic の れいにも 入って いるが、1 つの ことばが 2 つの 表に あると focus が きまらないので、-ic の 回では electric・robotic など auto で はじまらない ことばを つかう（テストで w30FocusOf("automatic") は "auto-"）。
+- **-ic は 3 はく 以上の ことばだけ**: plastic・magic の ような 2 はくの ことばは 選択肢が 2 つしか 作れないので 入れない。
+- **略語の 選択肢は カタカナ**（ワールド29 の 弱形と おなじ）。大文字・小文字は 表の とおりに 見る（"ai" は 略語では ない）。会社名・商品名の 略語は つかわない。
+- **話しことばは 891〜894 の フォニックスで 先に ならい、会話や 表現で つかうのは L896 から**（テストで まもる）。L896 で「ともだちとは gonna、かく ときや テストでは going to」と おしえる。
+- **L881 の core は older people**: 計画は old people だが、ていねいな いいかたに した（L885 も おなじ）。
+- **テクノロジーは よい点と しんぱいな点を かならず 両方**: ロボット（つかれない・でも こわれる・だきしめて くれない）、画面（べんり・でも やすみが ひつよう）、ネット（たのしい・でも 住所や 学校名を 出さない、へんだと おもったら おとなに）、AI（たすけて くれる・でも 答えを たしかめる・じぶんで かんがえる）。L877 の AI は しごとに 順番を つけない よう「very important」と きく。
+- **新しい 話し手は 増やさない**: ノバ・テス・リンさん・シェルさんは 台本の なかか、ビリモが「I'm playing Nova!」と やくを するか、「Tess says, ～」と つたえる。
+- **作りかた**: 下書きの きまり（物語・core・フォニックスの ことば・文法の じゅんばん）と チェックの スクリプトを 書き、30 レッスンを 3 つの まとまり（871〜880・881〜890・891〜900）で 並行して 書き、まとめてから 自分で 1 回 見なおした。なおした ところ: L886 で ロボットの ノバが「We work at night」と じぶんを 人の がわに 入れて いた ところ（→ Robots can do hard jobs for you.）、L889 の「Spiders have eight legs is a fact」（→ Is it a fact that spiders have eight legs? Yes, it is.）、L899 の ミス・エマの さいごの セリフ（→ Maybe it will open at the Expo tomorrow. Let's bring our best ideas!）。
+
+### 例（L882「An Idea That Helps」）
+- 表現（core）: My idea is a bag that follows you. ／ Do you have any ideas? ― How about a robot arm? ／ That's a great idea! Let's draw it.
+- 読みもの（台本より）: "Tess's Idea Board. Idea 1, from Haru: a robot arm that lifts heavy bags. It is strong, but it is very big. Idea 2, from Kiko: a moving sidewalk on Hill Street. It helps everyone, but it takes years to build. Idea 3, from Birimo: balloons that lift bags into the sky. It is fun, but windy days are dangerous. Idea 4, from Riko: a bag that follows you. It is small, and it can go anywhere."
+- 会話: Ms. Emma「Do you have any ideas for Mr. Shell?」 Haru「How about a robot arm? It can lift heavy bags.」 Birimo「How about balloons? The bags can fly up the hill!」 Kiko「That's fun, but I think balloons are a problem on windy days.」 Riko「My idea is a bag that follows you. Mr. Shell doesn't have to carry it.」 …
+- フォニックス: magnetic / electronic / energetic / futuristic（問題は「-ic の ことば。どこを いちばん つよく いう？」futuristic → fu-tur-IS-tic / FU-tur-is-tic / fu-tur-is-TIC）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 64 ファイル・2,018 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 237 → 241 kB、/lesson/[lessonNo] 242 → 247 kB、/gacha 225 → 230 kB、/test/[assessmentId] 225 → 229 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド30 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 44`: No.44（L861〜880・63 ページ）、`--pack 45`（L881〜900・63 ページ）を 作れる ことを 確認

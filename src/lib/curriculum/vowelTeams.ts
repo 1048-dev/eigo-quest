@@ -21,6 +21,7 @@ import { w26Say } from "./w26Phonics";
 import { w27Say } from "./w27Phonics";
 import { w28Say } from "./w28Phonics";
 import { w29Say } from "./w29Phonics";
+import { w30Say } from "./w30Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -82,6 +83,9 @@ export const shortVowelOf = (team: string) => team[0];
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
+  // ワールド30 は その回の ことば・文で よむ（"auto-" "-ic" だけで よまない。略語は km → kilometers）
+  const w30 = w30Say(focus, words);
+  if (w30) return w30;
   // ワールド29 は その回の ことば・文で よむ（"spect" "can" "-ible" だけで よまない）
   const w29 = w29Say(focus, words);
   if (w29) return w29;

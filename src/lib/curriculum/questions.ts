@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W30_START, abbrDisplay, abbrOf, abbrWhy, autoDisplay, autoOf, autoWhy, casualDisplay, casualOf, casualPrompt, casualWhy, icDisplay, icOf, icWhy, transDisplay, transOf, transWhy } from "./w30Phonics";
 import { W29_START, dictOf, dictWhy, emphasisDisplay, emphasisOf, emphasisWhy, ibleOf, ibleWhy, spectDisplay, spectOf, spectWhy, weakDisplay, weakOf, weakPrompt, weakWhy } from "./w29Phonics";
 import { W28_START, katakanaDisplay, katakanaOf, katakanaWhy, linkOf as link28Of, linkWhy as link28Why, loanOf, loanWhy, partsDisplay, partsOf, partsWhy, rhythmDisplay, rhythmOf, rhythmWhy } from "./w28Phonics";
 import { FOR_SINCE_CHOICES, W27_START, ableDisplay, ableOf, ableWhy, chKOf, chKWhy, forSinceDisplay, forSinceOf, forSinceWhy, homoOf, homoWhy, silentOf, silentWhy } from "./w27Phonics";
@@ -576,6 +577,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド30（みらい都市・L871〜）の フォニックス（auto-・trans-・-ic の 強勢・略語の 読みかた・くだけた 話しことば）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - auto-（"autograph"）: 「auto（じぶんで）の ことば。いみに あう ことばは どれ？」（いみ → ことば）
+ * - trans-（"transport"）: 「trans の あとに つづく パーツは どれ？」（trans ＋ ＿＿（はこぶ）→ port / form / mit）
+ * - -ic（"electric"）: 「-ic の ことば。どこを いちばん つよく いう？」（e-LEC-tric / E-lec-tric / e-lec-TRIC）
+ * - 略語（"km"）: 「なんと よむ？」（キロメーターズ / ケーエム / クム）
+ * - 話しことば（"I'm gonna try it"）: 「gonna を ふつうの いいかたに すると？」（going to / gone to / go and）
+ * あてはまらなければ null。ワールド29 の 問題より 先に よぶ（automatic を ワールド12 の はく、electric を ほかの ワールドで 問わない）。
+ */
+export function w30Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W30_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const a = autoOf(item.text);
+  if (a && focus.includes("auto-")) return { promptJa: "auto（じぶんで）の ことば。いみに あう ことばは どれ？", display: autoDisplay(a), choices: pick([a.answer, ...a.wrong]), answer: a.answer, explanationJa: autoWhy(a) };
+  const t = transOf(item.text);
+  if (t && focus.includes("trans-")) return { promptJa: "trans の あとに つづく パーツは どれ？", display: transDisplay(t), choices: pick([t.answer, ...t.wrong]), answer: t.answer, explanationJa: transWhy(t) };
+  const c = icOf(item.text);
+  if (c && focus.includes("-ic")) return { promptJa: "-ic の ことば。どこを いちばん つよく いう？", display: icDisplay(c), choices: pick([c.answer, ...c.wrong]), answer: c.answer, explanationJa: icWhy(c) };
+  const b = abbrOf(item.text);
+  if (b && focus.includes(b.abbr)) return { promptJa: "なんと よむ？", display: abbrDisplay(b), choices: pick([b.answer, ...b.wrong]), answer: b.answer, explanationJa: abbrWhy(b) };
+  const k = casualOf(item.text);
+  if (k && focus.includes(k.form)) return { promptJa: casualPrompt(k), display: casualDisplay(k), choices: pick([k.answer, ...k.wrong]), answer: k.answer, explanationJa: casualWhy(k) };
   return null;
 }
 
@@ -1228,8 +1258,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド26（きもちの こえ・-ed / -ing・セリフの くとうてん・強勢・はやくちことば）は その 先（excited を ワールド11 の -ed の おとで 問わない）
       // ワールド27（ch / -ache・だまって いる もじ・for / since・-able・同音異義語 2）は その 先（knee を ワールド14 の kn、here を ワールド17 で 問わない）
       // ワールド28（カタカナ語・英語に なった 日本語・リズム・音の つながり・ことばの パーツ）は その 先（video を ワールド12 の はく、unhappiness を ワールド21 の -ness で 問わない）
-      // ワールド29（spect・dict・意見の 強勢・弱形・-ible / -able）は いちばん 先（prediction を ワールド23 の -tion、respectable を ワールド27 の -able で 問わない）
-      const dq = w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド29（spect・dict・意見の 強勢・弱形・-ible / -able）は その 先（prediction を ワールド23 の -tion、respectable を ワールド27 の -able で 問わない）
+      // ワールド30（auto-・trans-・-ic の 強勢・略語・話しことば）は いちばん 先（automatic を ワールド12 の はく、translation を ワールド23 の -tion で 問わない）
+      const dq = w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
