@@ -475,3 +475,44 @@
 - `npx vitest run`: 55 ファイル・1,561 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 203 → 206 kB、/lesson/[lessonNo] 208 → 211 kB、/gacha 191 → 194 kB、/test/[assessmentId] 190 → 194 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド21 の 問題の コードと 表（せつめいの 文・カタカナの 表）と 索引の 1 ワールドぶん。ワールド20 の +1 kB より 多いのは 5 しゅるいの 新しい 問題を 作ったため。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 31`: No.31（L601〜620・62 ページ）を 作れることを 確認（No.32 は ワールド22 が できてから）
+
+## WORLD — ワールド22「こはくの図書館」（L631〜660・ステージ3・A2）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-22.json` を 新しく 作成（30 レッスン、ステージ3・A2、`school.grade` は「中3」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 660 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 116、会話の セリフ 204 行（1 回 6〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 174 語・最少 161 語・最大 200 語）で、まいかい「読みもの」（はりがみ・うらびょうし・ポスター・ほんの 1 ページ・カード・きもちの ちず・げきの 台本・てがみ など 40〜90 語）を いっしょに 読む。日本語の ヒントは 2 回だけ（L636「しゅじんこう」・L638「わるもの」）。
+- ブロック構成: 631〜635 ほんの しょうかい（This library has a million books.・What's it about? ― It's about a brave cat.・Who wrote this book? ― A famous writer did.・You should read it. It's really funny.・This book is about ～. I like it because ～.）→ 636〜640 とうじょうじんぶつ（The main character is a shy dragon.・She's brave and kind. / What's ～ like?・The villain wanted the magic stone. / tried to・I like the fox because he's clever.・This is Mira. She's a famous inventor.）→ 641〜645 あらすじ（At the beginning, ～.・In the middle, ～. / One day / Suddenly・At the end, ～. / Finally・What happened next? / Can you tell me more? / And then?・First, ～. Then, ～. At the end, ～. を 30 びょうで）→ 646〜650 きもちと りゆう（She was sad because ～. / I think she felt ～ because ～.・He was scared, so he ran away.・When the bell rang, the door opened.・If we find the key, we can open the book.・At first, she felt lonely. Later, she felt happy.）→ 651〜655 セリフ（"Help!" shouted the boy.・She said, "～." / He asked, "～?"・きもちを こめて よむ（sadly / in surprise）・Once upon a time, ～. "Hello," said the fox.・"Who are you?" asked the dragon. で 4 人げき）→ 656〜660 まとめ（We need three words to open this book.・In my ending, the dragon flies home.・ほんの しょうかいカード・さよならツアー・L660 ブックフェスティバル This story is about friendship. I loved it!）。
+- 物語の 糸: ワールド21 の さいごの とおり 塔の 地下の かいだんを おりて こはくの図書館へ（L631・としょかんいんは ふくろうの クイルはかせ）。図書館の ほんは すべて オリジナルの 作中作: 『はずかしがりの ドラゴン』（ノラ・ベル作。ひとりぼっちの ドラゴン エンバーが ゆきの 日に まいごの ルルを たすけ、ともだちに なる。L636・641〜645・647・650・655 で くりかえし よむ）、『まほうの いし』（ヒーローの カイ・きつねの ラスティ・わるものの グリムきょう）、『ミラと はつめい』（はつめいかの ミラと ロボットの ボルト）、『ひみつの ドア』（L644 の よみきかせ → L648 で 図書館の とけいの ベルと 同時に ほんものの ドアが ひらく）。L649 で ひみつの へやの「ひらかない ほん」→ L650 きもちの ちずの うらに かぎ → L656 なぞなぞで 3 つの ことば（Friendship! Courage! Imagination!。3 さつの ほんの テーマ）を きもちを こめて いうと ほんが ひらく → 中は おわりの ない おはなしだけ → L657 じぶんの おわりかたを かんがえる → L660 さいごの ページの みどりの はっぱと ちずで「みどりの研究所」（ワールド23 へ）。
+- フォニックス（形態素の つづき。`src/lib/curriculum/w22Phonics.ts`・`questions.ts` の `w22Question`。w21Question より 先に よぶ）:
+  - 人の -er / -or / -ist "-er" "-or" "-ist": 「「〜する 人」を あらわす ことばは どれ？」（write（かく）→ ？（さっか）→ writer / writor / writist）
+  - 語の家族（focus は もとの ことば "act" "invent" "protect" "direct"）: 「act の かぞくで「はいゆう」の いみの ことばは どれ？」（actor / action / active）
+  - あいまい母音と 強勢（focus は はくの 形 "pen-cil"）: 「よわい「ア」の ところに はいる もじは どれ？」（penc＿l（PEN・cil・えんぴつ）→ i / e / u / a）
+  - -ous / -al: 「ただしい ことばは どれ？」（danger（きけん）→ ？（きけんな）→ dangerous / dangeral / dangerus、mystery → mysterious / mysterial / mysteryous）
+  - おわりの しるし（focus は フレーズ そのもの "Who are you" "Help"）: 「おわりに つける しるしは どれ？」（Who are you ＿（あなたは だれ）→ ? / ! / .）
+- `vowelTeams.ts` の 読み上げで -ist・-ous・-al は その回の ことばを、しるしの 回は フレーズを そのまま よむ（`w22Say`）。-er・-or は これまでの きまり（ワールド11・19）で その回の ことばを よむ。はくの 形は ワールド12 の きまりで ことば まるごと。
+- テスト: `tests/curriculum.test.ts` に ワールド22 の 決まりごと（範囲・ステージ3・中3・タイトル・フォニックスの 順と 種類・表の カバー・文法と 会話の 型・先生の台本は 英語だけで 150 語 以上＋読みもの・会話 5〜7 行・話し手は 5 人だけ・セリフの かぎかっこの 文は L651 から・L660 スピード TPR・物語）を 追加。`tests/phonics-w22.test.ts`（13 テスト）を 追加。
+
+### 決めたこと（理由）
+- **新しい phonics.rule**: "person-suffix" "word-family" "schwa-stress" "ous-al" "end-marks"（ふりかえりは "review"）。計画の B5「句読点と 表情を つけた 音読」は つづりでは ないので、フレーズの おわりに ? か ! を えらぶ 問題に して、表情は 台本・TPR・会話（L653）で あつかった。focus に " ? ! を 入れると テストの 正規表現・ボタンの 読み上げが こわれるため、W21 の 音の つながりと おなじく フレーズ そのものを focus に した。
+- **まちがいの 選択肢に ほんとうに ある ことばを 出さない**: 人の ことばは sailor（sailer）・visitor（visiter）・inventor（inventer）の ように べつの つづりが ある ものを 表に 入れない。-ous / -al は もう 1つの おわりで ある ことばに なる nervous（nerval）・humorous（humoral）を 入れない。あいまい母音は lesson（lessen と おなじ おと）を 入れず button に した。しるしは「.」でも 正しい Thank you の ような ことばを 入れない。
+- **しるしの 問題の いみに ！ ？ を つけない**: 1 回目の 確認で「Help ＿（たすけて！）」と こたえが みえて いたので、いみの 表から ！ ？ を とった（テストで まもる）。
+- **語の家族は もとの ことばの 形が かわらない かぞくだけ**（act・invent・protect・direct）: create → creation の ように e が きえると「ことばの なかに もとの ことばが ある」と いう 見せかたが できないため。選択肢は おなじ かぞくの 3 つ（いみで えらぶ）。
+- **あいまい母音は ワールド20 と ちがう 形**: ワールド20 は ＿ に はいる もじ だけ。ワールド22 は つよい はくを 大文字（PEN・cil・a・SLEEP）で みせて「つよく ない ところが よわく なる」と 強勢と むすびつけた（計画の a-BOUT, PEN-cil, SEC-ond）。ことばは ものがたりの ことば（asleep・dragon・giant・wizard）から。
+- **文法の じゅんばん**: because / so（L646〜647）・when（L648）・if（L649）は ステージ2 で 入門ずみ なので きびしい 制限は しない。セリフの かぎかっこの 文（"～," said ～.）は L651 から 表現に 出す（テスト）。読みものの なかでは それまでも 'Help!' の ような セリフを つかう（ものがたりを しぜんに するため）。関係代名詞（a robot who ～）・現在完了・受け身は ステージ3 の あとの ワールド・ステージ4 なので 出さない ように 1 回 見なおして なおした（L632・L634・L659 の a robot who ～ / a cat who ～ を 2 文に わけた）。"a dragon named Ember" の named は よく つかう きまった いいかたと して のこした。
+- **新しい 話し手は 増やさない**: クイルはかせ・作中作の 人物（エンバー・ルル・カイ・ラスティ・グリムきょう・ミラ・ボルト・トム・ケン）は 台本と セリフの なかだけ。L655 の げきは 4 人が やくを えんじる。
+- **あんぜん**: L654 の よみきかせは ちいさい 子に えが みえる ように もつ・やさしい こえ。AI 会話の ちかくの としょかん（L631）・ブックトーク（L635）・ブックフェスティバル（L660）は「なまえは いわなくて OK」。
+- 自分で 1 回 見なおして なおした ところ: 上の 関係代名詞 3 か所、しるしの 問題の いみの ！ ？、ZWJ の 絵文字（👩‍🏫・🧑‍🏫）と ふるい 端末で 出ない かもしれない 🫨 を かえた。joyous が「y を i に」の わなに なって こたえと おなじ つづりの 選択肢が できる バグ（o ＋ y は そのまま）を なおした。
+- 気づいた こと（このフェーズでは かえていない）: レッスンの AI 会話の プロンプトが ステージに かかわらず やさしい 文の まま なのは ワールド21 の とき と おなじ（あとの フェーズで）。
+
+### 例（L647「So He Ran Away」）
+- 表現（core）: He was scared, so he ran away. ／ Lulu was cold, so Ember made a fire. ／ He ran away because he was scared.
+- 読みもの（台本より）: "A long time ago, a hunter came to Ember's mountain. He had a loud horn and a big net. Ember was scared, so he ran away and hid in a deep cave. He stayed there for many days. Since that day, Ember was afraid of people. That's why he was so shy."
+- 会話: Haru「Why was Ember so shy? I don't understand.」 Kiko「Look at this page. A hunter came to his mountain.」 Riko「He was scared, so he ran away.」 … Kiko「He was scared, but he was brave for Lulu!」
+- フォニックス: adventurous / mysterious / joyous / envious（問題は「ただしい ことばは どれ？」mystery → mysterious / mysterial / mysteryous）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 56 ファイル・1,611 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 206 → 209 kB、/lesson/[lessonNo] 211 → 214 kB、/gacha 194 → 197 kB、/test/[assessmentId] 194 → 196 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド22 の 問題の コードと 表（せつめいの 文）と 索引の 1 ワールドぶん。ワールド21 と おなじ くらい。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 32` / `--pack 33`: No.32（L621〜640）・No.33（L641〜660）とも 62 ページで 作れることを 確認

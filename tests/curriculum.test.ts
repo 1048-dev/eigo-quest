@@ -27,6 +27,7 @@ import { compareSpelling, fulLessOf, lySpelling, stressChoices, unOf } from "@/l
 import { ouSound, quBlank, reOf, silentBlank19, toolEnding } from "@/lib/curriculum/w19Phonics";
 import { earOf, schwaBlank, ureSound } from "@/lib/curriculum/w20Phonics";
 import { disOf, linkOf, misPreBlank, partOf, suffixOf } from "@/lib/curriculum/w21Phonics";
+import { adjOf, familyOf, markOf, personOf, schwaStressBlank } from "@/lib/curriculum/w22Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -2045,5 +2046,142 @@ describe("カリキュラム: ワールド21 の決まりごと（ことづて�
     expect(said(616)).toMatch(/pie is missing/);
     expect(said(620)).toMatch(/hungry little bird/);
     expect(said(630)).toMatch(/Amber Library/);
+  });
+});
+
+describe("カリキュラム: ワールド22 の決まりごと（こはくの図書館）", () => {
+  const w22 = LESSONS.filter((l) => l.world === 22);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+
+  it("ワールド22 は 631〜660 の 30 レッスン、ステージ3・A2、学年の めやすは 中3", () => {
+    if (w22.length === 0) return; // 未作成ならスキップ
+    expect(w22.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 631 + i));
+    for (const l of w22) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中3");
+      expect(l.stage, `L${l.lessonNo}`).toBe(3);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w22.length === 0) return;
+    expect(at(631)!.title).toBe("A Library Made of Amber");
+    expect(at(632)!.title).toBe("What's It About?");
+    expect(at(636)!.title).toBe("The Main Character");
+    expect(at(638)!.title).toBe("The Hero and the Villain");
+    expect(at(641)!.title).toBe("At the Beginning");
+    expect(at(645)!.title).toBe("Retell the Story");
+    expect(at(647)!.title).toBe("So He Ran Away");
+    expect(at(649)!.title).toBe("If I Find the Key");
+    expect(at(651)!.title).toBe("\"Help!\" Shouted the Boy");
+    expect(at(656)!.title).toBe("The Book That Won't Open");
+    expect(at(660)!.title).toBe("World 22 Grand Review");
+  });
+
+  it("フォニックス: 人の -er / -or / -ist → 語の家族 → あいまい母音と 強勢 → -ous / -al → おわりの しるし（各ブロックの 5回目と L656〜660 は ふりかえり）", () => {
+    if (w22.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(631, 634, "person-suffix");
+    rule(636, 639, "word-family");
+    rule(641, 644, "schwa-stress");
+    rule(646, 649, "ous-al");
+    rule(651, 654, "end-marks");
+    for (const n of [635, 640, 645, 650, 655, 656, 657, 658, 659, 660]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // -er → -or → -ist → まぜる
+    expect(range(631, 633).map((l) => l.phonics.focus)).toEqual([["-er"], ["-or"], ["-ist"]]);
+    for (const l of range(631, 635)) for (const w of l.phonics.words) expect(personOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    // 語の家族: act → invent → protect → direct（どの ことばも その回の もとの ことばで 問える）
+    expect(range(636, 638).map((l) => l.phonics.focus[0])).toEqual(["act", "invent", "protect"]);
+    for (const l of range(636, 640)) for (const w of l.phonics.words) expect(familyOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    // あいまい母音: focus は はくで わけた 形、ことばと 1つずつ 対応
+    for (const l of range(641, 645)) {
+      expect(l.phonics.focus.map((f) => f.replace(/-/g, "")), `L${l.lessonNo}`).toEqual(l.phonics.words);
+      for (const w of l.phonics.words) expect(schwaStressBlank(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    }
+    expect(range(641, 645).flatMap((l) => l.phonics.focus)).toEqual(expect.arrayContaining(["a-sleep", "pen-cil", "sec-ond"]));
+    // -ous → -al（y を i に かえる・e を とる ことばも あつかう）
+    for (const l of range(646, 650)) for (const w of l.phonics.words) expect(adjOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    const traps = range(646, 650).flatMap((l) => l.phonics.words.map((w) => adjOf(w)!.trap));
+    expect(traps).toEqual(expect.arrayContaining(["y-to-i", "drop-e", "ous-not-us", "al-not-le"]));
+    // おわりの しるし: focus は フレーズ そのもの、? と ! の りょうほう
+    for (const l of range(651, 655)) {
+      expect(l.phonics.focus, `L${l.lessonNo}`).toEqual(l.phonics.words);
+      for (const w of l.phonics.words) expect(markOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    }
+    expect(new Set(range(651, 655).flatMap((l) => l.phonics.words.map((w) => markOf(w)!.answer)))).toEqual(new Set(["?", "!"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w22.length === 0) return;
+    expect(ex(631, 635)).toContain("This library has a million books.");
+    expect(ex(631, 635)).toContain("What's it about? It's about a brave cat.");
+    expect(ex(631, 635)).toContain("Who wrote this book? A famous writer did.");
+    expect(ex(631, 635)).toContain("You should read it. It's really funny.");
+    expect(ex(631, 635)).toContain("I like it because");
+    expect(ex(636, 640)).toContain("The main character is a shy dragon.");
+    expect(ex(636, 640)).toContain("She's brave and kind.");
+    expect(ex(636, 640)).toContain("The villain wanted the magic stone.");
+    expect(ex(636, 640)).toContain("I like the fox because he's clever.");
+    expect(ex(636, 640)).toContain("This is Mira. She's a famous inventor.");
+    expect(ex(641, 645)).toContain("At the beginning, the dragon was alone.");
+    expect(ex(641, 645)).toContain("In the middle, he met a little girl.");
+    expect(ex(641, 645)).toContain("At the end, they became friends.");
+    expect(ex(641, 645)).toContain("What happened next? He found a door.");
+    expect(ex(641, 645)).toContain("Can you tell me more?");
+    expect(ex(641, 645)).toContain("First, the dragon was alone. Then, he met a girl.");
+    expect(ex(646, 650)).toContain("She was sad because she lost her friend.");
+    expect(ex(646, 650)).toContain("I think she felt lonely because");
+    expect(ex(646, 650)).toContain("He was scared, so he ran away.");
+    expect(ex(646, 650)).toContain("When the bell rang, the door opened.");
+    expect(ex(646, 650)).toContain("If we find the key, we can open the book.");
+    expect(ex(646, 650)).toContain("At first, she felt lonely. Later, she felt happy.");
+    expect(ex(651, 655)).toContain("\"Help!\" shouted the boy.");
+    expect(ex(651, 655)).toContain("She said, \"Thank you for saving me.\"");
+    expect(ex(651, 655)).toContain("\"Oh no!\" she cried sadly.");
+    expect(ex(651, 655)).toContain("\"Oh no!\" he shouted in surprise.");
+    expect(ex(651, 655)).toContain("Once upon a time, there was a little fox.");
+    expect(ex(651, 655)).toContain("\"Hello,\" said the fox.");
+    expect(ex(651, 655)).toContain("\"Who are you?\" asked the dragon.");
+    expect(ex(656, 660)).toContain("We need three words to open this book.");
+    expect(ex(656, 660)).toContain("In my ending, the dragon flies home.");
+    expect(ex(656, 660)).toContain("You should read it because");
+    expect(ex(656, 660)).toContain("What's it about?");
+    expect(ex(656, 660)).toContain("This story is about friendship. I loved it!");
+  });
+
+  it("ステージ3: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・150 語 以上で 短い 読みものを ふくむ、会話シーンは 5〜7 行、L660 は スピード TPR", () => {
+    if (w22.length === 0) return;
+    for (const l of w22) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.03);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(150);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{40,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(5);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（main character・villain）
+    expect(w22.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([636, 638]);
+    expect(at(660)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("セリフの かぎかっこの 文（\"～,\" said ～.）は L651 から（それまでの 表現には 出さない）", () => {
+    if (w22.length === 0) return;
+    expect(ex(631, 650)).not.toMatch(/" (said|asked|shouted|whispered|cried) /);
+    expect(ex(651, 651)).toMatch(/" shouted the boy/);
+  });
+
+  it("物語: L631 で こはくの図書館に つき、L649 で ひらかない ほん、L650 で かぎ、L656 で 3つの ことば、L660 で みどりの研究所へ", () => {
+    if (w22.length === 0) return;
+    const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+    expect(said(631)).toMatch(/Amber Library/);
+    expect(at(631)!.teacherScript).toMatch(/Professor Quill/);
+    expect(said(649)).toMatch(/won't open/);
+    expect(said(650)).toMatch(/A key!/);
+    expect(said(656)).toMatch(/Friendship! Courage! Imagination!/);
+    expect(said(660)).toMatch(/Green Laboratory/);
   });
 });

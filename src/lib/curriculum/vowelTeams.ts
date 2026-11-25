@@ -13,6 +13,7 @@ import { w12Say } from "./w12Phonics";
 import { w19Say } from "./w19Phonics";
 import { w20Say } from "./w20Phonics";
 import { w21Say } from "./w21Phonics";
+import { w22Say } from "./w22Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -89,6 +90,9 @@ export function focusSay(focus: string, words: readonly string[] = []): string {
     const hit = words.find((w) => w.toLowerCase().startsWith("un"));
     if (hit) return hit;
   }
+  // ワールド22 の -ist・-ous・-al は その回の ことばで、おわりの しるしの 回は フレーズで よむ
+  const w22 = w22Say(focus, words);
+  if (w22) return w22;
   // ワールド21 の dis-・mis-・pre-・tele-・phone・graph・photo-・-ment・-ness は その回の ことばで、音の つながりは フレーズで よむ
   const w21 = w21Say(focus, words);
   if (w21) return w21;
