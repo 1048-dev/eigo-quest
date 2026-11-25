@@ -28,6 +28,7 @@ import { ouSound, quBlank, reOf, silentBlank19, toolEnding } from "@/lib/curricu
 import { earOf, schwaBlank, ureSound } from "@/lib/curriculum/w20Phonics";
 import { disOf, linkOf, misPreBlank, partOf, suffixOf } from "@/lib/curriculum/w21Phonics";
 import { adjOf, familyOf, markOf, personOf, schwaStressBlank } from "@/lib/curriculum/w22Phonics";
+import { mentOf, sciPartOf, shiftOf, tionOf, yAdjOf } from "@/lib/curriculum/w23Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -2183,5 +2184,146 @@ describe("カリキュラム: ワールド22 の決まりごと（こはくの�
     expect(said(650)).toMatch(/A key!/);
     expect(said(656)).toMatch(/Friendship! Courage! Imagination!/);
     expect(said(660)).toMatch(/Green Laboratory/);
+  });
+});
+
+describe("カリキュラム: ワールド23 の決まりごと（みどりの研究所）", () => {
+  const w23 = LESSONS.filter((l) => l.world === 23);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+
+  it("ワールド23 は 661〜690 の 30 レッスン、ステージ3・A2、学年の めやすは 中3", () => {
+    if (w23.length === 0) return; // 未作成ならスキップ
+    expect(w23.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 661 + i));
+    for (const l of w23) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中3");
+      expect(l.stage, `L${l.lessonNo}`).toBe(3);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w23.length === 0) return;
+    expect(at(661)!.title).toBe("The Green Laboratory");
+    expect(at(662)!.title).toBe("Lab Safety First");
+    expect(at(666)!.title).toBe("I Predict It Will Float");
+    expect(at(668)!.title).toBe("The Result Was Surprising");
+    expect(at(671)!.title).toBe("If You Heat Ice");
+    expect(at(673)!.title).toBe("What Happens If...?");
+    expect(at(676)!.title).toBe("It's Made of Wood");
+    expect(at(678)!.title).toBe("Rice Is Grown in Japan");
+    expect(at(681)!.title).toBe("Seeds Need Water");
+    expect(at(686)!.title).toBe("Science Fair Plan");
+    expect(at(690)!.title).toBe("World 23 Grand Review");
+  });
+
+  it("フォニックス: 理科の パーツ → -ment → 強勢の 移動 → -y → -tion（各ブロックの 5回目と L686〜690 は ふりかえり）", () => {
+    if (w23.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(661, 664, "science-parts");
+    rule(666, 669, "ment-spelling");
+    rule(671, 674, "stress-shift");
+    rule(676, 679, "y-adjective");
+    rule(681, 684, "tion-noun");
+    for (const n of [665, 670, 675, 680, 685, 686, 687, 688, 689, 690]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // micro- → -scope → -meter → まぜる（thermo- も）
+    expect(range(661, 663).map((l) => l.phonics.focus)).toEqual([["micro-"], ["-scope"], ["-meter"]]);
+    expect(at(664)!.phonics.focus).toContain("thermo-");
+    for (const l of range(661, 665)) for (const w of l.phonics.words) expect(sciPartOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    // -ment: もとの ことばの ない ことば・e を のこす・かさねない・n を わすれない
+    for (const l of range(666, 670)) for (const w of l.phonics.words) expect(mentOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(new Set(range(666, 670).flatMap((l) => l.phonics.words.map((w) => mentOf(w)!.trap)))).toEqual(new Set(["weak-ment", "keep-e", "no-double", "keep-n"]));
+    // 強勢の 移動: focus は はくで わけた 形、ことばと 1つずつ 対応。かぞくの 2つが そろう
+    for (const l of range(671, 675)) {
+      expect(l.phonics.focus.map((f) => f.replace(/-/g, "")), `L${l.lessonNo}`).toEqual(l.phonics.words);
+      for (const w of l.phonics.words) expect(shiftOf(w, l.phonics.focus), `L${l.lessonNo} ${w}`).not.toBeNull();
+    }
+    expect(range(671, 674).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["photograph", "photography", "scientist", "scientific"]));
+    // -y: 3つの きまり
+    for (const l of range(676, 680)) for (const w of l.phonics.words) expect(yAdjOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(new Set(range(676, 680).flatMap((l) => l.phonics.words.map((w) => yAdjOf(w)!.trap)))).toEqual(new Set(["add-y", "drop-e", "double"]));
+    // -tion: 3つの きまり、計画の observation・prediction・reaction を ふくむ
+    for (const l of range(681, 685)) for (const w of l.phonics.words) expect(tionOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    expect(new Set(range(681, 685).flatMap((l) => l.phonics.words.map((w) => tionOf(w)!.trap)))).toEqual(new Set(["add-ion", "drop-e", "ate-tion"]));
+    expect(range(681, 685).flatMap((l) => l.phonics.words)).toEqual(expect.arrayContaining(["observation", "prediction", "reaction"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w23.length === 0) return;
+    expect(ex(661, 665)).toContain("Scientists study plants here.");
+    expect(ex(661, 665)).toContain("Wear your goggles. Don't touch the hot plate.");
+    expect(ex(661, 665)).toContain("We need to");
+    expect(ex(661, 665)).toContain("I can see tiny circles!");
+    expect(ex(661, 665)).toContain("The water is 20 degrees.");
+    expect(ex(661, 665)).toContain("Today, I observed a leaf.");
+    expect(ex(666, 670)).toContain("I predict the apple will float.");
+    expect(ex(666, 670)).toContain("I observed small bubbles.");
+    expect(ex(666, 670)).toContain("The result was surprising. The egg floated!");
+    expect(ex(666, 670)).toContain("It happened because salt water is heavier.");
+    expect(ex(666, 670)).toContain("We predicted the egg would sink. The result was different.");
+    expect(ex(671, 675)).toContain("If you heat ice, it melts.");
+    expect(ex(671, 675)).toContain("When water freezes, it gets bigger.");
+    expect(ex(671, 675)).toContain("What happens if we mix blue and yellow?");
+    expect(ex(671, 675)).toContain("Magnets stick to iron, but not to paper.");
+    expect(ex(671, 675)).toContain("If you drop a ball, it falls.");
+    expect(ex(676, 680)).toContain("This chair is made of wood.");
+    expect(ex(676, 680)).toContain("Paper is made from trees.");
+    expect(ex(676, 680)).toContain("Rice is grown in many parts of Japan.");
+    expect(ex(676, 680)).toContain("Where is chocolate made?");
+    expect(ex(676, 680)).toContain("It's made of glass and metal.");
+    expect(ex(681, 685)).toContain("Seeds need water and warm air.");
+    expect(ex(681, 685)).toContain("First, a root grows. Then, a stem grows.");
+    expect(ex(681, 685)).toContain("A caterpillar becomes a butterfly.");
+    expect(ex(681, 685)).toContain("Plants need sunlight to grow.");
+    expect(ex(681, 685)).toContain("On day five, the stem was three centimeters tall.");
+    expect(ex(686, 690)).toContain("Our question is \"Do plants like music?\"");
+    expect(ex(686, 690)).toContain("We played music for one plant every day.");
+    expect(ex(686, 690)).toContain("purpose, prediction, result and conclusion");
+    expect(ex(686, 690)).toContain("We can't be sure yet.");
+    expect(ex(686, 690)).toContain("We found out something amazing!");
+  });
+
+  it("受け身（is made of / is grown in など）は L676 から（それまでの 表現・会話・台本には 出さない）", () => {
+    if (w23.length === 0) return;
+    for (const l of range(661, 675)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(is|are|was|were) (made|grown|called|used|built)\b/);
+    expect(ex(676, 676)).toMatch(/is made of/);
+  });
+
+  it("ステージ3: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・150 語 以上で 短い 読みものを ふくむ、会話シーンは 5〜7 行、L690 は スピード TPR", () => {
+    if (w23.length === 0) return;
+    for (const l of w23) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.03);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(150);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{40,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(5);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（caterpillar・conclusion）
+    expect(w23.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([683, 688]);
+    expect(at(690)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("あんぜん: L662 で きまり（ゴーグル・ホットプレート・おとなに きく・あじみしない）、ひを つかう 回は おとなが つける", () => {
+    if (w23.length === 0) return;
+    const s = at(662)!.teacherScript;
+    for (const r of ["Always ask an adult first.", "Wear your goggles.", "Don't touch the hot plate.", "Never taste anything in the lab."]) expect(s).toContain(r);
+    expect(at(671)!.teacherScript).toContain("An adult turns on the hot plate.");
+    expect(ex(671, 675)).toContain("Don't put a glass bottle in the freezer.");
+  });
+
+  it("物語: L661 で みどりの研究所に つき、ねむる たね → L689 で さむい ふゆ → L690 で めが でて くもの上の鉄道へ", () => {
+    if (w23.length === 0) return;
+    const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+    expect(said(661)).toMatch(/Sleeping Seed/);
+    expect(at(661)!.teacherScript).toMatch(/Dr\. Moss/);
+    expect(said(689)).toMatch(/cold winter/);
+    expect(said(690)).toMatch(/sprout/);
+    expect(said(690)).toMatch(/Cloudtop Railway/);
   });
 });

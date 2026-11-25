@@ -516,3 +516,44 @@
 - `npx vitest run`: 56 ファイル・1,611 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 206 → 209 kB、/lesson/[lessonNo] 211 → 214 kB、/gacha 194 → 197 kB、/test/[assessmentId] 194 → 196 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド22 の 問題の コードと 表（せつめいの 文）と 索引の 1 ワールドぶん。ワールド21 と おなじ くらい。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 32` / `--pack 33`: No.32（L621〜640）・No.33（L641〜660）とも 62 ページで 作れることを 確認
+
+## WORLD — ワールド23「みどりの研究所」（L661〜690・ステージ3・A2）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-23.json` を 新しく 作成（30 レッスン、ステージ3・A2、`school.grade` は「中3」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 690 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 124、会話の セリフ 192 行（1 回 6〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 173 語・最少 158 語・最大 187 語）で、まいかい「読みもの」（はりがみ・あんぜんポスター・じっけんカード・かんさつノート・レポート・いきものの ポスター・プログラム など 40〜90 語）を いっしょに 読む。日本語の ヒントは 2 回だけ（L683「いもむし」・L688「けつろん」）。
+- ブロック構成: 661〜665 けんきゅうじょと どうぐ（Scientists study plants here.・Wear your goggles. Don't touch the hot plate. / We need to ～・I can see tiny circles! / It looks like ～・The water is 20 degrees. / How long is it?・Today, I observed a leaf.）→ 666〜670 よそう・かんさつ・けっか（I predict the apple will float.・I observed small bubbles.・The result was surprising. The egg floated!・It happened because salt water is heavier.・We predicted the egg would sink. The result was different.）→ 671〜675 if / when（If you heat ice, it melts.・When water freezes, it gets bigger.・What happens if we mix blue and yellow?・Magnets stick to iron, but not to paper.・If you drop a ball, it falls.）→ 676〜680 うけみの 入門（This chair is made of wood.・Paper is made from trees.（made of と made from の ちがい）・Rice is grown in many parts of Japan.・Where is chocolate made?・What is it made of? ― It's made of glass and metal.）→ 681〜685 しょくぶつと いきもの（Seeds need water and warm air.・First, a root grows. Then, a stem grows.・A caterpillar becomes a butterfly.・Plants need sunlight to grow.・On day five, the stem was three centimeters tall.）→ 686〜690 かがくフェア（Our question is "Do plants like music?"・We played music for one plant every day.・purpose, prediction, result and conclusion / We can't be sure yet.・さよなら けんがく・L690 We found out something amazing!）。
+- 物語の 糸: ワールド22 の さいごの ちずの とおり 図書館の うらぐちから おんしつの ような 研究所へ（L661・研究所の はかせは とても としよりの カメの モスはかせ）。研究所の「ねむる たね（Sleeping Seed）」が めを ださない なぞを、じっけんで わかった こと（L681 みずと あたたかい くうき → L684 ひかりは めを だす ときには いらない）で すこしずつ しぼる。L686 で キコと ビリモが かがくフェアの テーマに する → L689 さよなら けんがくで モスはかせの おじいさんの ノート「さむい やまの たねは ふゆを まつ」を みつけ、れいぞうこで「ふゆ」を つくる → L690 かがくフェアで めが でて、さいしょの はっぱに「くもの上の鉄道」の ぎんいろの きっぷ（えきは 研究所の おくじょう。ワールド24 へ）。
+- フォニックス（理科の ことばの パーツ。`src/lib/curriculum/w23Phonics.ts`・`questions.ts` の `w23Question`。w22Question より 先に よぶ）:
+  - 理科の パーツ "micro-" "-scope" "-meter" "thermo-": 「この ことばの micro は どんな いみ？」（microscope（けんびきょう）→ ちいさい / はかる どうぐ / ねつ・あたたかさ / とおく。もう 1つの パーツの いみは 選択肢に 出さない）
+  - -ment: 「ただしい つづりは どれ？」（measure（はかる）→ ？ → measurement / measurment / measuremant、もとの ことばが ない experiment は「？（じっけん）」→ experiment / experimant / experimint）
+  - 強勢の 移動（focus は はくで わけた 小文字の 形 "pho-tog-ra-phy"）: 「つよく よむ ところは どれ？」（photography（しゃしんを とる こと）かぞく: PHO-to-graph → pho-TOG-ra-phy / PHO-tog-ra-phy / pho-tog-RA-phy …）
+  - -y の ようすの ことば: 「ただしい ことばは どれ？」（shine（ひかる）→ shiny / shiney / shinie、sun → sunny / suny / sunney）
+  - -tion の 理科の ことば: 「ただしい ことばは どれ？」（observe（かんさつする）→ observation / observetion / observasion、migrate → migration / migrateion / migrasion）
+- `vowelTeams.ts` の 読み上げで パーツ・-ment・-y・-tion は その回の ことばを よむ（`w23Say`。ワールド10 の -y より 先）。強勢の はくの 形は ワールド12 の きまりで ことば まるごと。
+- テスト: `tests/curriculum.test.ts` に ワールド23 の 決まりごと（範囲・ステージ3・中3・タイトル・フォニックスの 順と 種類と わなの 種類・文法と 会話の 型・うけみは L676 から・先生の台本は 英語だけで 150 語 以上＋読みもの・会話 5〜7 行・話し手は 5 人だけ・あんぜん・L690 スピード TPR・物語）を 追加。`tests/phonics-w23.test.ts`（15 テスト）を 追加。
+
+### 決めたこと（理由）
+- **新しい phonics.rule**: "science-parts" "ment-spelling" "stress-shift" "y-adjective" "tion-noun"（ふりかえりは "review"）。
+- **まちがいの 選択肢は 表に 手で 書く**: -ment・-y・-tion は きまりで つくると ほんとうに ある ことばや よく ある べつの つづりが まじる（shinny・smokey・stoney・predication など）ので、ワールド22 までの 自動の まちがいでは なく 1 語ずつ 書いた。stony・smoky・foggy（fogy が ある）・fury に なる furry は 表に 入れない。ワールド21 で つかった movement・agreement などの -ment は 入れない（ちがう 問題に なる）。
+- **強勢の 選択肢は 3〜4つ**: 2はくの ことば（photo・science・magnet）は 選択肢が 2つに なって しまうので 問題の ことばに せず、3はく 以上の かぞく（PHO-to-graph ↔ pho-TOG-ra-phy、SCI-en-tist ↔ sci-en-TIF-ic、EN-er-gy ↔ en-er-GET-ic、e-LEC-tric ↔ e-lec-TRIC-i-ty、bi-OL-o-gy ↔ bi-o-LOG-i-cal、mag-NET-ic ↔ MAG-ne-tism、ex-PER-i-ment ↔ ex-per-i-MEN-tal）に した。5はくの ことばは こたえの まわりの 4つ。かぞくの ことばの つよい はくを 問題に 見せて「うごく」ことが わかる ように した。focus は ワールド18 と おなじ 小文字の はくの 形（ボタンの 見た目・読み上げを そのまま つかえる）。
+- **まえの ワールドの 読み上げを かえない**: -y（L282・L297・L350）・-tion（L481〜600）の 回にも sunny・rotation・celebration が 入って いるので、`w23Say` は「その回の ことばが ぜんぶ ワールド23 の 表に ある とき」だけ はたらく。L660 までの 全レッスンで この じょうけんに あう 回が ない ことを たしかめた。
+- **文法の じゅんばん**: うけみ（is made of / made from / is grown in / is made in）は L676 から（それまでの 表現・会話・台本・TPR に 出さない ことを テストで まもる。L677・L679 の 読みものの 工場の てじゅんは 読む だけの うけみ）。現在完了（ワールド24 から）・関係代名詞（ステージ4）は 出さない ように 見なおした（L665 の「100 年 ノートを かいて いる」を every day に なおした）。L670 の We predicted the egg would sink. は ワールド21 の said ～ would と おなじ「すぎた かたち」。
+- **理科の ないようは ほんとうの こと**: たまごは しおを たくさん 入れて うく、みずは こおると 体積が ふえる、たねの はつがに ひかりは ふつう いらない（L684 で ビリモの「ひかりかも」を エマ先生が なおす）、さむい ところの たねは ふゆ（低温）を まつ（L689）、アゲハの いっしょう（たまご 約 5 日・よう虫 約 20 日・さなぎ 約 10 日）、カカオは ガーナ・コートジボワールなど。L687〜688 の「しょくぶつは おんがくが すき？」は 1 cm の ちがいで「まだ たしかとは いえない。もっと たくさんで もう いちど」と こたえを いそがない けつろんに した（かがくの たいど）。L669 の しかいは くにの なまえを 出さず「West Asia」に した。
+- **あんぜん**: L662 で きまり（さきに おとなに きく・ゴーグル・ホットプレートに さわらない・あじみ しない・てを あらう・こぼしたら おとなに）、L667 で ビリモが のんだのは じぶんの ジュースと はっきり させた、L671 は おとなが ホットプレートを つける、L672 ガラスの びんを れいとうこに 入れない、L674 じしゃくを でんわ・コンピューターに ちかづけない。
+- **新しい 話し手は 増やさない**: モスはかせ・モスはかせの おじいさんは 台本と セリフの なかだけ。ビリモは ロボットでは ないので L674 の「ロボットの うで」の じょうだんを「おべんとうばこ」に なおした。
+- 自分で 1 回 見なおして なおした ところ: 上の 現在完了と ロボットの じょうだん、electricity の つよい はくの いち（TRIC は 3ばんめ）、develop の まちがいの 選択肢（developement は ふるい つづりなので developmant に）、Unicode 14 の 絵文字（🛟 🫧 🫠 🫘 🫙）を ふるい 端末でも 出る ものに かえた。
+- 気づいた こと（このフェーズでは かえていない）: レッスンの AI 会話の プロンプトが ステージに かかわらず やさしい 文の まま なのは ワールド21・22 と おなじ（あとの フェーズで）。
+
+### 例（L668「The Result Was Surprising」）
+- 表現（core）: The result was surprising. The egg floated! ／ At first, the egg sank to the bottom. ／ After we added salt, it floated.
+- 読みもの（台本より）: "At first, the egg sank to the bottom of the glass. We added salt, one spoon at a time. After six spoons, nothing happened. After we added salt again and again, the egg slowly floated up to the top. Our prediction was wrong, and that was the best part!"
+- 会話: Haru「The egg sank to the bottom. Let's add salt.」 Kiko「One spoon... two spoons... Nothing is happening.」 … Riko「Look! It's going up! The egg floated!」 Haru「The result was surprising. I predicted it would sink.」
+- フォニックス: equipment / development / environment / experiment（問題は「ただしい つづりは どれ？」equip（そなえる）→ equipment / equippment / equipmant）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 57 ファイル・1,663 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 209 → 211 kB、/lesson/[lessonNo] 214 → 217 kB、/gacha 197 → 200 kB、/test/[assessmentId] 196 → 199 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド23 の 問題の コードと 表（まちがいの 選択肢を 手で 書いた ぶん）と 索引の 1 ワールドぶん。ワールド22 と おなじ くらい。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 34`: No.34（L661〜680・62 ページ）を 作れることを 確認（No.35 は ワールド24 が できてから）

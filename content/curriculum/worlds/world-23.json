@@ -1,0 +1,4591 @@
+{
+  "world": 23,
+  "stage": 3,
+  "level": "A2",
+  "lessons": [
+    {
+      "lessonNo": 661,
+      "world": 23,
+      "title": "The Green Laboratory",
+      "titleJa": "みどりの けんきゅうじょ",
+      "school": {
+        "grade": "中3",
+        "topic": "Scientists study plants here.：としょかんの うらぐちから、おんしつの ような けんきゅうじょに でる（ワールド23 の はじまり）",
+        "grammar": "Scientists study plants here. / What do scientists do here? / It's warm and green inside.",
+        "expressions": [
+          {
+            "en": "Scientists study plants here.",
+            "ja": "ここでは かがくしゃが しょくぶつを けんきゅうして いるよ。",
+            "core": true
+          },
+          {
+            "en": "It's warm and green inside.",
+            "ja": "なかは あたたかくて みどりで いっぱいだね。"
+          },
+          {
+            "en": "What do scientists do here?",
+            "ja": "かがくしゃは ここで なにを するの？"
+          }
+        ],
+        "testPoints": [
+          "Scientists study plants here. で ばしょと そこで する ことを いえる",
+          "理科の パーツ micro-（microscope・microphone・microwave・microchip）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the glass door.",
+          "ja": "ガラスの ドアを あけて。",
+          "action": "りょうてで ドアを おす まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Smell the flowers.",
+          "ja": "はなの においを かいで。",
+          "action": "はなを ちかづけて すうっと すう",
+          "emoji": "🌸"
+        },
+        {
+          "en": "Wipe your glasses. It's foggy!",
+          "ja": "めがねを ふいて。くもってるよ！",
+          "action": "めがねを ふく まね",
+          "emoji": "👓"
+        },
+        {
+          "en": "Shake hands with Dr. Moss.",
+          "ja": "モスはかせと あくしゅして。",
+          "action": "ゆっくり あくしゅする",
+          "emoji": "🐢"
+        }
+      ],
+      "phonics": {
+        "rule": "science-parts",
+        "focus": [
+          "micro-"
+        ],
+        "sounds": [
+          "/ˈmaɪkroʊ/"
+        ],
+        "words": [
+          "microscope",
+          "microphone",
+          "microwave",
+          "microchip"
+        ],
+        "tipJa": "micro は「ちいさい」の いみの パーツ。microscope（けんびきょう＝ちいさい ものを みる どうぐ）、microphone（マイク）、microwave（でんしレンジ＝ちいさな なみ）、microchip（ちいさな チップ）。はじめが micro なら「ちいさい」を おもいだそう。"
+      },
+      "vocab": [
+        {
+          "en": "scientist",
+          "ja": "かがくしゃ",
+          "emoji": "🔬",
+          "core": true
+        },
+        {
+          "en": "laboratory",
+          "ja": "けんきゅうじょ",
+          "emoji": "🧪"
+        },
+        {
+          "en": "greenhouse",
+          "ja": "おんしつ",
+          "emoji": "🌿"
+        },
+        {
+          "en": "study",
+          "ja": "けんきゅうする・べんきょうする",
+          "emoji": "📓"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to a brand-new world. Last time, we found a map with a green leaf in the Amber Library. We opened the back door of the library, and look! We are in a big glass house full of plants. This is the Green Laboratory. A laboratory is a place for experiments. Many people say lab for short. Scientists study plants here. Say it with me. Scientists study plants here. Great job! Here comes the head scientist. He's a very old tortoise, and his name is Dr. Moss. He moves slowly, but he thinks fast. There's a sign on the wall. Let's read it. \"Welcome to the Green Laboratory. Here, we ask questions about nature. We look closely, we measure carefully, and we write down everything. Please do not touch the Sleeping Seed.\" Hmm, the Sleeping Seed? What's that? Dr. Moss says, It's a very old seed. It never opened. Maybe you can help me someday. Now, phonics. Microscope. Microphone. Microwave. Microchip. Micro means small. A microscope helps us see small things. Let's start our science adventure!",
+      "conversation": {
+        "scene": "The friends arrive at the Green Laboratory",
+        "sceneJa": "みどりの けんきゅうじょに つく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Wow! It's warm and green inside. It's like a jungle!",
+            "ja": "わあ！なかは あたたかくて みどりで いっぱい。ジャングルみたい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What do scientists do here?",
+            "ja": "かがくしゃは ここで なにを するの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Scientists study plants here. This is Dr. Moss, the head scientist.",
+            "ja": "ここでは かがくしゃが しょくぶつを けんきゅうして いるのよ。こちらは モスはかせ、いちばん えらい かがくしゃよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Nice to meet you, Dr. Moss! What's in that glass box?",
+            "ja": "はじめまして、モスはかせ！あの ガラスの はこには なにが はいって いるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's a big seed. It says, Please do not touch the Sleeping Seed.",
+            "ja": "おおきな たねだよ。「ねむる たねに さわらないで」って かいて あるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "A sleeping seed? I want to know more!",
+            "ja": "ねむる たね？もっと しりたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と けんきゅうじょの ばしょを はなそう。AI が「ここで なにを する？」と きくから、Scientists study ～ here. の ように こたえて、さいごに AI にも しつもんを かえそう",
+          "starterEn": "Welcome to the Green Laboratory! I'm a scientist. What do you think scientists study here?",
+          "targetExpressions": [
+            "Scientists study plants here.",
+            "What do scientists do here?",
+            "It's warm and green inside."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Scientists study plants here.",
+          "It's warm and green inside. / What do scientists do here?",
+          "microscope・microphone・microwave・microchip"
+        ]
+      }
+    },
+    {
+      "lessonNo": 662,
+      "world": 23,
+      "title": "Lab Safety First",
+      "titleJa": "あんぜんが いちばん",
+      "school": {
+        "grade": "中3",
+        "topic": "Wear your goggles. Don't touch the hot plate.：けんきゅうじょの あんぜん こうしゅう",
+        "grammar": "Wear your goggles. / Don't touch the hot plate. / Always ask an adult first. / need to ～",
+        "expressions": [
+          {
+            "en": "Wear your goggles. Don't touch the hot plate.",
+            "ja": "ゴーグルを つけて。ホットプレートに さわらないで。",
+            "core": true
+          },
+          {
+            "en": "We need to wash our hands after the experiment.",
+            "ja": "じっけんの あとは てを あらう ひつようが あるよ。"
+          },
+          {
+            "en": "Always ask an adult first.",
+            "ja": "かならず さきに おとなに きいてね。"
+          }
+        ],
+        "testPoints": [
+          "Wear your goggles. Don't touch the hot plate. で あんぜんの ちゅういを つたえられる",
+          "理科の パーツ -scope（telescope・periscope・kaleidoscope・stethoscope）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your goggles.",
+          "ja": "ゴーグルを つけて。",
+          "action": "めの まわりに てで わっかを つくる",
+          "emoji": "🥽"
+        },
+        {
+          "en": "Tie back your hair.",
+          "ja": "かみを うしろで むすんで。",
+          "action": "かみを うしろで まとめる まね",
+          "emoji": "🎀"
+        },
+        {
+          "en": "Pull your hand back. It's hot!",
+          "ja": "てを ひっこめて。あついよ！",
+          "action": "さっと てを ひく",
+          "emoji": "🔥"
+        },
+        {
+          "en": "Wash your hands with soap.",
+          "ja": "せっけんで てを あらって。",
+          "action": "てを ごしごし こする",
+          "emoji": "🧼"
+        }
+      ],
+      "phonics": {
+        "rule": "science-parts",
+        "focus": [
+          "-scope"
+        ],
+        "sounds": [
+          "/skoʊp/"
+        ],
+        "words": [
+          "telescope",
+          "periscope",
+          "kaleidoscope",
+          "stethoscope"
+        ],
+        "tipJa": "scope は「みる どうぐ」の いみの パーツ。telescope（ぼうえんきょう＝とおくを みる）、periscope（せんぼうきょう＝まわりを みる）、kaleidoscope（まんげきょう＝きれいな かたちを みる）、stethoscope（ちょうしんき＝むねの おとを きく）。"
+      },
+      "vocab": [
+        {
+          "en": "goggles",
+          "ja": "ゴーグル",
+          "emoji": "🥽",
+          "core": true
+        },
+        {
+          "en": "hot plate",
+          "ja": "ホットプレート",
+          "emoji": "♨️"
+        },
+        {
+          "en": "adult",
+          "ja": "おとな",
+          "emoji": "🧑"
+        },
+        {
+          "en": "safety",
+          "ja": "あんぜん",
+          "emoji": "⛑️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Before we do any experiments, we need to learn the lab rules. Safety first! Dr. Moss is holding a pair of goggles. Goggles protect your eyes. Wear your goggles. Don't touch the hot plate. Say it with me. Wear your goggles. Don't touch the hot plate. Very good! When we tell someone a safety rule, we start with a verb. Wear. Don't touch. Wash. And we can say need to. We need to wash our hands after the experiment. Let's read the safety poster together. \"Lab Safety Rules. One: Always ask an adult first. Two: Wear your goggles. Three: Don't touch the hot plate. Four: Never taste anything in the lab. Five: Wash your hands after the experiment. Six: If something spills, tell an adult right away.\" Great reading! Rule number four is very important. Some things look like juice, but they are not juice! Now, phonics. Telescope. Periscope. Kaleidoscope. Stethoscope. Scope means a tool for looking. A telescope helps us look at faraway stars. Let's be safe scientists!",
+      "conversation": {
+        "scene": "Dr. Moss teaches the lab safety rules",
+        "sceneJa": "けんきゅうじょの あんぜん こうしゅう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Before we start, let's check the safety rules.",
+            "ja": "はじめる まえに、あんぜんの きまりを かくにんしましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wear your goggles. Don't touch the hot plate.",
+            "ja": "ゴーグルを つけて。ホットプレートに さわらないで。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "This blue water looks yummy. Can I taste it?",
+            "ja": "この あおい みず、おいしそう。のんで みても いい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "No, Birimo! Never taste anything in the lab.",
+            "ja": "だめだよ、ビリモ！けんきゅうじょでは なにも あじみしちゃ だめ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And always ask an adult first.",
+            "ja": "それに、かならず さきに おとなに きいてね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oops. Sorry! I need to read the rules again.",
+            "ja": "おっと。ごめん！きまりを もう いちど よまなくちゃ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good. We need to wash our hands after the experiment, too.",
+            "ja": "よろしい。じっけんの あとは てを あらう ことも わすれずにね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と あんぜんの きまりを いいあおう。AI が「こんな とき どうする？」と きくから、Wear ～. / Don't ～. / We need to ～. で こたえよう",
+          "starterEn": "Let's play Safety Check! I'm going to do an experiment with a hot plate. What do I need to do first?",
+          "targetExpressions": [
+            "Wear your goggles. Don't touch the hot plate.",
+            "We need to ～.",
+            "Always ask an adult first."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Wear your goggles. Don't touch the hot plate.",
+          "We need to wash our hands after the experiment. / Always ask an adult first.",
+          "telescope・periscope・kaleidoscope・stethoscope"
+        ]
+      }
+    },
+    {
+      "lessonNo": 663,
+      "world": 23,
+      "title": "Look Through the Microscope",
+      "titleJa": "けんびきょうを のぞこう",
+      "school": {
+        "grade": "中3",
+        "topic": "I can see tiny circles!：けんびきょうで はっぱを みる",
+        "grammar": "I can see tiny circles! / What can you see? / It looks like ～.",
+        "expressions": [
+          {
+            "en": "I can see tiny circles!",
+            "ja": "ちいさな まるが みえる！",
+            "core": true
+          },
+          {
+            "en": "What can you see?",
+            "ja": "なにが みえる？"
+          },
+          {
+            "en": "It looks like a green honeycomb.",
+            "ja": "みどりの ハチの すみたいに みえるよ。"
+          }
+        ],
+        "testPoints": [
+          "I can see tiny circles! で みえた ものを せつめいできる",
+          "理科の パーツ -meter（thermometer・speedometer・pedometer・barometer）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look through the microscope.",
+          "ja": "けんびきょうを のぞいて。",
+          "action": "かたほうの めを とじて のぞく まね",
+          "emoji": "🔬"
+        },
+        {
+          "en": "Turn the knob slowly.",
+          "ja": "つまみを ゆっくり まわして。",
+          "action": "ゆびで つまみを まわす まね",
+          "emoji": "🎛️"
+        },
+        {
+          "en": "Close one eye.",
+          "ja": "かためを つぶって。",
+          "action": "ウインクする",
+          "emoji": "😉"
+        },
+        {
+          "en": "Draw what you see.",
+          "ja": "みえた ものを かいて。",
+          "action": "くうちゅうに えを かく",
+          "emoji": "✏️"
+        }
+      ],
+      "phonics": {
+        "rule": "science-parts",
+        "focus": [
+          "-meter"
+        ],
+        "sounds": [
+          "/mətər/"
+        ],
+        "words": [
+          "thermometer",
+          "speedometer",
+          "pedometer",
+          "barometer"
+        ],
+        "tipJa": "meter は「はかる どうぐ」の いみの パーツ。thermometer（おんどけい＝ねつを はかる）、speedometer（スピードメーター＝はやさを はかる）、pedometer（まんぽけい＝あるいた あしの かずを はかる）、barometer（きあつけい）。まんなかの o は つなぎの もじ。"
+      },
+      "vocab": [
+        {
+          "en": "tiny",
+          "ja": "とても ちいさい",
+          "emoji": "🤏",
+          "core": true
+        },
+        {
+          "en": "circle",
+          "ja": "まる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "leaf",
+          "ja": "はっぱ",
+          "emoji": "🍃"
+        },
+        {
+          "en": "look through",
+          "ja": "のぞく",
+          "emoji": "🔍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we will use a real microscope. Dr. Moss puts a tiny piece of a leaf on a glass slide. Now, look through the microscope. Turn the knob slowly. What can you see? I can see tiny circles! Say it with me. I can see tiny circles! Wonderful! To say more, use looks like. It looks like a green honeycomb. These tiny circles are the parts of the leaf. We call them cells. Every plant has many, many cells. Let's read Dr. Moss's note about the microscope. \"This microscope makes things look one hundred times bigger. A leaf looks flat and smooth to your eyes. But under the microscope, you can see many small green boxes and circles. Plants are full of tiny surprises!\" Isn't that amazing? Remember, use small sentences. I can see. It looks like. It's green. Now, phonics. Thermometer. Speedometer. Pedometer. Barometer. Meter means a tool for measuring. A thermometer measures how hot or cold something is. Next time, we will use one! Let's look closely like real scientists!",
+      "conversation": {
+        "scene": "The friends look at a leaf through a microscope",
+        "sceneJa": "けんびきょうで はっぱを みる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Can I go first? I want to look through the microscope.",
+            "ja": "さきに いい？けんびきょうを のぞいて みたい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sure. Turn the knob slowly. What can you see?",
+            "ja": "いいよ。つまみを ゆっくり まわしてね。なにが みえる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I can see tiny circles! They're green.",
+            "ja": "ちいさな まるが みえる！みどりいろだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let me see. It looks like a green honeycomb!",
+            "ja": "みせて。みどりの ハチの すみたいだね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I can see a big black circle. Is it a monster?",
+            "ja": "おおきな くろい まるが みえる。かいぶつかな？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha. Birimo, that's your eyelash! Open your eye wider.",
+            "ja": "ふふ。ビリモ、それは あなたの まつげよ！めを もっと ひらいて。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に けんびきょうで みえた ものを つたえよう。AI が「なにが みえる？」と きくから、I can see ～. / It looks like ～. で 2つ いじょう せつめいしよう",
+          "starterEn": "Let's pretend we have a microscope. I'm looking at a drop of pond water. Now it's your turn. What can you see?",
+          "targetExpressions": [
+            "I can see tiny circles!",
+            "What can you see?",
+            "It looks like ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I can see tiny circles!",
+          "What can you see? / It looks like a green honeycomb.",
+          "thermometer・speedometer・pedometer・barometer"
+        ]
+      }
+    },
+    {
+      "lessonNo": 664,
+      "world": 23,
+      "title": "Measure It!",
+      "titleJa": "はかって みよう",
+      "school": {
+        "grade": "中3",
+        "topic": "The water is 20 degrees.：おんどけいと じょうぎで はかる",
+        "grammar": "The water is 20 degrees. / How long is it? ― It's 15 centimeters long. / How warm is the water?",
+        "expressions": [
+          {
+            "en": "The water is 20 degrees.",
+            "ja": "みずは 20 どだよ。",
+            "core": true
+          },
+          {
+            "en": "How long is it? ― It's 15 centimeters long.",
+            "ja": "どのくらいの ながさ？ ― 15 センチメートルだよ。"
+          },
+          {
+            "en": "Let's measure it again to check.",
+            "ja": "たしかめる ために もう いちど はかろう。"
+          }
+        ],
+        "testPoints": [
+          "The water is 20 degrees. で はかった けっかを いえる",
+          "理科の パーツの まとめ（microscope・telescope・thermometer・thermostat）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the ruler straight.",
+          "ja": "じょうぎを まっすぐ もって。",
+          "action": "うでを まっすぐ のばす",
+          "emoji": "📏"
+        },
+        {
+          "en": "Put the thermometer in the water.",
+          "ja": "おんどけいを みずに いれて。",
+          "action": "ぼうを そっと いれる まね",
+          "emoji": "🌡️"
+        },
+        {
+          "en": "Wait for ten seconds.",
+          "ja": "10 びょう まって。",
+          "action": "ゆびで 10 まで かぞえる",
+          "emoji": "⏱️"
+        },
+        {
+          "en": "Read the number out loud.",
+          "ja": "すうじを こえに だして よんで。",
+          "action": "てを くちの よこに あてる",
+          "emoji": "🔢"
+        }
+      ],
+      "phonics": {
+        "rule": "science-parts",
+        "focus": [
+          "micro-",
+          "-scope",
+          "-meter",
+          "thermo-"
+        ],
+        "sounds": [
+          "/ˈmaɪkroʊ/",
+          "/skoʊp/",
+          "/mətər/",
+          "/ˈθɜːrmoʊ/"
+        ],
+        "words": [
+          "microscope",
+          "telescope",
+          "thermometer",
+          "thermostat"
+        ],
+        "tipJa": "thermo は「ねつ・あたたかさ」。thermometer は thermo（ねつ）＋ meter（はかる どうぐ）＝おんどけい。thermostat は おんどを たもつ スイッチ。microscope は micro（ちいさい）＋ scope（みる どうぐ）、telescope は tele（とおく）＋ scope。"
+      },
+      "vocab": [
+        {
+          "en": "measure",
+          "ja": "はかる",
+          "emoji": "📏",
+          "core": true
+        },
+        {
+          "en": "degree",
+          "ja": "～ど（おんど）",
+          "emoji": "🌡️"
+        },
+        {
+          "en": "centimeter",
+          "ja": "センチメートル",
+          "emoji": "📐"
+        },
+        {
+          "en": "ruler",
+          "ja": "じょうぎ",
+          "emoji": "📏"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Scientists measure things carefully. Today, we will use a thermometer and a ruler. First, put the thermometer in the cup of water. Wait for ten seconds. Now, read the number. The water is 20 degrees. Say it with me. The water is 20 degrees. Good! Next, the ruler. How long is this leaf? It's 15 centimeters long. When you measure, start at zero, and hold the ruler straight. Scientists always check. Let's measure it again to check. Here is a page from Dr. Moss's measuring notebook. Let's read it. \"Monday morning. The water in the fish tank was 20 degrees. The big leaf was 15 centimeters long. The small leaf was 6 centimeters long. Monday afternoon. The water was 23 degrees. The sun made it warmer.\" So, the morning and the afternoon were different. Numbers help us see changes. Now, phonics. Microscope. Telescope. Thermometer. Thermostat. Thermo means heat. Meter means a tool for measuring. Put them together, and you get thermometer! Let's measure everything!",
+      "conversation": {
+        "scene": "The friends measure water and leaves",
+        "sceneJa": "おんどけいと じょうぎで はかる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "The thermometer is in the water. Let's wait ten seconds.",
+            "ja": "おんどけいを みずに いれたよ。10 びょう まとう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How warm is the water?",
+            "ja": "みずは どのくらい あたたかい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The water is 20 degrees.",
+            "ja": "みずは 20 どだよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This leaf is so long. How long is it?",
+            "ja": "この はっぱ、すごく ながい。どのくらい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's 15 centimeters long. No, wait... 16!",
+            "ja": "15 センチメートルだよ。あ、まって…16！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's measure it again to check. Start at zero.",
+            "ja": "たしかめる ために もう いちど はかりましょう。0 から はじめてね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh, I started at one. It's 15 centimeters long.",
+            "ja": "あ、1 から はじめてた。15 センチメートルだ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「はかる」ゲームを しよう。AI が「どのくらい？」と きくから、It's ～ centimeters long. / The water is ～ degrees. で すうじを つかって こたえよう",
+          "starterEn": "I have a cup of water and a thermometer. Let's guess together. How warm is the water? What do you think?",
+          "targetExpressions": [
+            "The water is 20 degrees.",
+            "How long is it? It's ～ centimeters long.",
+            "Let's measure it again to check."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The water is 20 degrees.",
+          "How long is it? ― It's 15 centimeters long. / Let's measure it again to check.",
+          "microscope・telescope・thermometer・thermostat"
+        ]
+      }
+    },
+    {
+      "lessonNo": 665,
+      "world": 23,
+      "title": "My Lab Notebook",
+      "titleJa": "わたしの けんきゅうノート",
+      "school": {
+        "grade": "中3",
+        "topic": "Today, I observed a leaf.：けんきゅうノートの かきかたを ならう（まとめ）",
+        "grammar": "Today, I observed ～. / Date: ～ / What I did: ～ / What I saw: ～",
+        "expressions": [
+          {
+            "en": "Today, I observed a leaf.",
+            "ja": "きょう、わたしは はっぱを かんさつしました。",
+            "core": true
+          },
+          {
+            "en": "I used a microscope and a ruler.",
+            "ja": "けんびきょうと じょうぎを つかいました。"
+          },
+          {
+            "en": "It was 15 centimeters long.",
+            "ja": "15 センチメートルの ながさでした。"
+          }
+        ],
+        "testPoints": [
+          "Today, I observed a leaf. で かんさつした ことを かける",
+          "理科の パーツの ふりかえり（microphone・periscope・pedometer・thermometer）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your notebook.",
+          "ja": "ノートを ひらいて。",
+          "action": "てを ほんの ように ひらく",
+          "emoji": "📓"
+        },
+        {
+          "en": "Write today's date.",
+          "ja": "きょうの ひづけを かいて。",
+          "action": "くうちゅうに すうじを かく",
+          "emoji": "📅"
+        },
+        {
+          "en": "Draw a big leaf.",
+          "ja": "おおきな はっぱを かいて。",
+          "action": "おおきく はっぱの かたちを えがく",
+          "emoji": "🍃"
+        },
+        {
+          "en": "Show your notebook to a friend.",
+          "ja": "ともだちに ノートを みせて。",
+          "action": "ノートを まえに さしだす",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "micro-",
+          "-scope",
+          "-meter",
+          "thermo-"
+        ],
+        "sounds": [
+          "/ˈmaɪkroʊ/",
+          "/skoʊp/",
+          "/mətər/",
+          "/ˈθɜːrmoʊ/"
+        ],
+        "words": [
+          "microphone",
+          "periscope",
+          "pedometer",
+          "thermometer"
+        ],
+        "tipJa": "パーツの まとめ: micro（ちいさい）・scope（みる どうぐ）・meter（はかる どうぐ）・thermo（ねつ）。microphone・periscope・pedometer・thermometer。パーツが わかると、はじめての どうぐの なまえも よそうできる！"
+      },
+      "vocab": [
+        {
+          "en": "observe",
+          "ja": "かんさつする",
+          "emoji": "👀",
+          "core": true
+        },
+        {
+          "en": "notebook",
+          "ja": "ノート",
+          "emoji": "📓"
+        },
+        {
+          "en": "date",
+          "ja": "ひづけ",
+          "emoji": "📅"
+        },
+        {
+          "en": "record",
+          "ja": "きろくする",
+          "emoji": "📝"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Every scientist has a lab notebook. Today, we will learn how to write one. Dr. Moss writes in his notebook every day. A good page has four parts. The date. What I did. What I saw. And a picture. Here's a new word. Observe. Observe means to look very carefully. Today, I observed a leaf. Say it with me. Today, I observed a leaf. Excellent! Let's read Haru's notebook page. \"Date: May 12. Today, I observed a leaf. I used a microscope and a ruler. The leaf was 15 centimeters long. Under the microscope, I saw tiny green circles. They looked like a honeycomb. Question: Why are leaves green?\" Wow, Haru even wrote a question. Scientists always have new questions. Use past tense in your notebook, because you write after the experiment. I used. I saw. It was. Now, phonics review. Microphone. Periscope. Pedometer. Thermometer. Small, look, measure, heat. Now, write your first notebook page. Write four or five sentences, and draw a picture. Let's be careful observers!",
+      "conversation": {
+        "scene": "The friends share their lab notebooks",
+        "sceneJa": "けんきゅうノートを みせあう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at my lab notebook. Today, I observed a leaf.",
+            "ja": "ぼくの けんきゅうノートを みて。きょう、はっぱを かんさつしたんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What did you use?",
+            "ja": "なにを つかったの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I used a microscope and a ruler. It was 15 centimeters long.",
+            "ja": "けんびきょうと じょうぎを つかったよ。15 センチメートルだった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Nice picture! And you wrote a question. Why are leaves green?",
+            "ja": "いい え！それに しつもんも かいたんだね。どうして はっぱは みどりなの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I observed the Sleeping Seed. It was very quiet.",
+            "ja": "ぼくは ねむる たねを かんさつしたよ。とても しずかだった。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha. Good job, Birimo. Don't forget to write the date!",
+            "ja": "ふふ。よく できました、ビリモ。ひづけを わすれないでね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に「けんきゅうノート」を よみあげよう。AI が「きょう なにを かんさつした？」と きくから、Today, I observed ～. I used ～. It was ～. の 3 文で こたえよう",
+          "starterEn": "Hello, young scientist! Let's write a lab notebook together. What did you observe today?",
+          "targetExpressions": [
+            "Today, I observed a leaf.",
+            "I used a microscope and a ruler.",
+            "It was 15 centimeters long."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Today, I observed a leaf.",
+          "I used a microscope and a ruler. / It was 15 centimeters long.",
+          "microphone・periscope・pedometer・thermometer"
+        ]
+      }
+    },
+    {
+      "lessonNo": 666,
+      "world": 23,
+      "title": "I Predict It Will Float",
+      "titleJa": "うくと よそうするよ",
+      "school": {
+        "grade": "中3",
+        "topic": "I predict the apple will float.：みずに うく？しずむ？じっけん",
+        "grammar": "I predict the apple will float. / What do you predict? / I think the stone will sink.",
+        "expressions": [
+          {
+            "en": "I predict the apple will float.",
+            "ja": "りんごは うくと よそうするよ。",
+            "core": true
+          },
+          {
+            "en": "What do you predict?",
+            "ja": "あなたは どう よそうする？"
+          },
+          {
+            "en": "I think the stone will sink.",
+            "ja": "いしは しずむと おもうよ。"
+          }
+        ],
+        "testPoints": [
+          "I predict the apple will float. で じっけんの よそうを いえる",
+          "-ment の つづり（experiment・instrument・document・ornament）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fill the tank with water.",
+          "ja": "すいそうに みずを いれて。",
+          "action": "バケツの みずを そそぐ まね",
+          "emoji": "🪣"
+        },
+        {
+          "en": "Hold up the apple.",
+          "ja": "りんごを たかく もって。",
+          "action": "かたてを たかく あげる",
+          "emoji": "🍎"
+        },
+        {
+          "en": "Show me float.",
+          "ja": "「うく」を からだで やって。",
+          "action": "りょうてを ひろげて ふわっと うく",
+          "emoji": "🎈"
+        },
+        {
+          "en": "Show me sink.",
+          "ja": "「しずむ」を からだで やって。",
+          "action": "ゆっくり しゃがむ",
+          "emoji": "⬇️"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-spelling",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "experiment",
+          "instrument",
+          "document",
+          "ornament"
+        ],
+        "tipJa": "experiment（じっけん）・instrument（どうぐ・がっき）・document（しょるい）・ornament（かざり）。おわりの「メント」は よわく よむので「マント」「ミント」に きこえる ことも ある。でも つづりは いつも m・e・n・t。"
+      },
+      "vocab": [
+        {
+          "en": "predict",
+          "ja": "よそうする",
+          "emoji": "🤔",
+          "core": true
+        },
+        {
+          "en": "float",
+          "ja": "うく",
+          "emoji": "🎈"
+        },
+        {
+          "en": "sink",
+          "ja": "しずむ",
+          "emoji": "⬇️"
+        },
+        {
+          "en": "tank",
+          "ja": "すいそう",
+          "emoji": "🐟"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we will do our first experiment. Before an experiment, a scientist makes a guess. That's called a prediction. Predict means to say what will happen. Here's a big tank of water. Here's an apple. Will it float or sink? I predict the apple will float. Say it with me. I predict the apple will float. Wonderful! Now, ask your friend. What do you predict? You can also say I think. I think the stone will sink. Let's read the experiment card from Dr. Moss. \"Float or Sink? You need: a tank of water, an apple, a stone, a coin, a leaf, a carrot and a plastic spoon. Step one: Hold each thing over the water. Step two: Write your prediction. Step three: Put it in the water gently. Step four: Write the result.\" Remember, a prediction is not right or wrong. It's just a smart guess. Scientists are happy when they are surprised! Now, phonics. Experiment. Instrument. Document. Ornament. The end is weak, so it sounds like ment, mant or mint. But the spelling is always m, e, n, t. Let's make predictions!",
+      "conversation": {
+        "scene": "The friends predict which things will float",
+        "sceneJa": "うくか しずむか よそうする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here's an apple. Will it float or sink? What do you predict?",
+            "ja": "りんごが あるわ。うく？しずむ？どう よそうする？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I predict the apple will float. It's light.",
+            "ja": "りんごは うくと よそうするよ。かるいから。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I think the stone will sink. It's heavy.",
+            "ja": "いしは しずむと おもう。おもいから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What about the carrot? Hmm... I predict it will sink.",
+            "ja": "にんじんは？うーん…しずむと よそうするよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I predict I will float! I'm a good swimmer.",
+            "ja": "ぼくは うくと よそうするよ！およぐの とくいだもん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha. Not today, Birimo. Let's write our predictions first.",
+            "ja": "ふふ。きょうは ちがうわ、ビリモ。まず よそうを かきましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「うく？しずむ？」の よそうゲームを しよう。AI が もの（たまご・ボール・コイン など）を いうから、I predict it will ～. / I think it will ～. と りゆうも つけて こたえよう",
+          "starterEn": "Let's play Float or Sink! I'm holding a rubber duck over the water. What do you predict?",
+          "targetExpressions": [
+            "I predict the apple will float.",
+            "What do you predict?",
+            "I think the stone will sink."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I predict the apple will float.",
+          "What do you predict? / I think the stone will sink.",
+          "experiment・instrument・document・ornament"
+        ]
+      }
+    },
+    {
+      "lessonNo": 667,
+      "world": 23,
+      "title": "What Did You Observe?",
+      "titleJa": "なにを かんさつした？",
+      "school": {
+        "grade": "中3",
+        "topic": "I observed small bubbles.：たんさんすいの じっけん",
+        "grammar": "What did you observe? / I observed small bubbles. / The raisins went up and down.",
+        "expressions": [
+          {
+            "en": "I observed small bubbles.",
+            "ja": "ちいさな あわを かんさつしたよ。",
+            "core": true
+          },
+          {
+            "en": "What did you observe?",
+            "ja": "なにを かんさつした？"
+          },
+          {
+            "en": "The raisins went up and down.",
+            "ja": "レーズンが あがったり さがったり したよ。"
+          }
+        ],
+        "testPoints": [
+          "I observed small bubbles. で かんさつした ことを ほうこくできる",
+          "-ment の つづり（measurement・arrangement・amazement・basement）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pour the soda water slowly.",
+          "ja": "たんさんすいを ゆっくり そそいで。",
+          "action": "コップを かたむける まね",
+          "emoji": "🥤"
+        },
+        {
+          "en": "Drop in three raisins.",
+          "ja": "レーズンを 3つ いれて。",
+          "action": "ゆびで 3かい つまんで おとす",
+          "emoji": "🍇"
+        },
+        {
+          "en": "Watch closely.",
+          "ja": "よーく みて。",
+          "action": "かおを ちかづけて じっと みる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Move your hand up and down like a raisin.",
+          "ja": "レーズンの ように てを うえ したに うごかして。",
+          "action": "てを ゆっくり あげさげ する",
+          "emoji": "↕️"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-spelling",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "measurement",
+          "arrangement",
+          "amazement",
+          "basement"
+        ],
+        "tipJa": "measure → measurement（はかった あたい）、arrange → arrangement（ならべかた）、amaze → amazement（おどろき）、base → basement（ちかしつ）。e で おわる ことばでも、ment は しいんで はじまるので e は とらずに のこすよ。"
+      },
+      "vocab": [
+        {
+          "en": "bubble",
+          "ja": "あわ",
+          "emoji": "⚪",
+          "core": true
+        },
+        {
+          "en": "soda water",
+          "ja": "たんさんすい",
+          "emoji": "🥤"
+        },
+        {
+          "en": "raisin",
+          "ja": "レーズン",
+          "emoji": "🍇"
+        },
+        {
+          "en": "glass",
+          "ja": "コップ・グラス",
+          "emoji": "🥛"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we made predictions. Today, we will observe. Dr. Moss gives us a glass of soda water and some raisins. Drop in three raisins and watch closely. What did you observe? I observed small bubbles. Say it with me. I observed small bubbles. Great! When you report, use the past tense, because the experiment is finished. I observed. I saw. They went up. The raisins went up and down. Let's read Kiko's observation notes. \"First, the raisins sank to the bottom. After a minute, I observed small bubbles on the raisins. The bubbles carried the raisins up to the top. At the top, the bubbles popped, and the raisins went down again. They went up and down for ten minutes. They looked like little dancers!\" Kiko's notes are very clear. She wrote what happened first, next and last. Now, phonics. Measurement. Arrangement. Amazement. Basement. Measure ends with e. Do we drop the e? No! Keep the e and add ment. Now, let's watch the dancing raisins and talk about what you observed!",
+      "conversation": {
+        "scene": "The friends watch dancing raisins in soda water",
+        "sceneJa": "たんさんすいの なかの レーズンを みる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! The raisins are moving!",
+            "ja": "みて！レーズンが うごいてる！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What did you observe, Riko?",
+            "ja": "リコは なにを かんさつした？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I observed small bubbles on the raisins.",
+            "ja": "レーズンに ちいさな あわが ついてるのを かんさつしたよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The raisins went up and down. They look like dancers!",
+            "ja": "レーズンが あがったり さがったり したね。ダンサーみたい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I observed something, too. The soda water is really yummy.",
+            "ja": "ぼくも かんさつしたよ。たんさんすいが すごく おいしい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Birimo! Never taste anything in the lab!",
+            "ja": "ビリモ！けんきゅうじょでは なにも あじみしちゃ だめ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Don't worry. That's Birimo's own soda from lunch.",
+            "ja": "だいじょうぶ。それは ビリモが おひるに もってきた じぶんの ジュースよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に かんさつした ことを ほうこくしよう。AI が「なにを みた？」と きくから、I observed ～. / First, ～. Then, ～. で すぎた かたちを つかって 2〜3 文で こたえよう",
+          "starterEn": "I heard you did the dancing raisin experiment. That sounds fun! What did you observe?",
+          "targetExpressions": [
+            "I observed small bubbles.",
+            "What did you observe?",
+            "The raisins went up and down."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I observed small bubbles.",
+          "What did you observe? / The raisins went up and down.",
+          "measurement・arrangement・amazement・basement"
+        ]
+      }
+    },
+    {
+      "lessonNo": 668,
+      "world": 23,
+      "title": "The Result Was Surprising",
+      "titleJa": "けっかに びっくり",
+      "school": {
+        "grade": "中3",
+        "topic": "The result was surprising. The egg floated!：しおみずの じっけん",
+        "grammar": "The result was surprising. / The egg floated! / At first, ～. After that, ～.",
+        "expressions": [
+          {
+            "en": "The result was surprising. The egg floated!",
+            "ja": "けっかは びっくりする ものだった。たまごが ういたんだ！",
+            "core": true
+          },
+          {
+            "en": "At first, the egg sank to the bottom.",
+            "ja": "さいしょ、たまごは そこまで しずんだ。"
+          },
+          {
+            "en": "After we added salt, it floated.",
+            "ja": "しおを いれたら、ういたよ。"
+          }
+        ],
+        "testPoints": [
+          "The result was surprising. The egg floated! で けっかを ほうこくできる",
+          "-ment の つづり（equipment・development・environment・experiment）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put the egg in the water gently.",
+          "ja": "たまごを そっと みずに いれて。",
+          "action": "そっと おく まね",
+          "emoji": "🥚"
+        },
+        {
+          "en": "Add one spoon of salt.",
+          "ja": "しおを スプーン 1ぱい いれて。",
+          "action": "スプーンで すくって いれる まね",
+          "emoji": "🧂"
+        },
+        {
+          "en": "Stir, stir, stir.",
+          "ja": "まぜて、まぜて、まぜて。",
+          "action": "ぐるぐる かきまぜる",
+          "emoji": "🥄"
+        },
+        {
+          "en": "Jump up! The egg floated!",
+          "ja": "とびあがって！たまごが ういた！",
+          "action": "ばんざいして ジャンプ",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-spelling",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "equipment",
+          "development",
+          "environment",
+          "experiment"
+        ],
+        "tipJa": "equip → equipment（せつび・どうぐ）、develop → development（そだつ こと）は おわりの しいんを かさねない。environment（かんきょう）は まんなかの n を わすれやすいので en・vi・ron・ment と はくで わけて かこう。"
+      },
+      "vocab": [
+        {
+          "en": "result",
+          "ja": "けっか",
+          "emoji": "📊",
+          "core": true
+        },
+        {
+          "en": "surprising",
+          "ja": "びっくりする",
+          "emoji": "😲"
+        },
+        {
+          "en": "salt",
+          "ja": "しお",
+          "emoji": "🧂"
+        },
+        {
+          "en": "egg",
+          "ja": "たまご",
+          "emoji": "🥚"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today's experiment is about an egg. Here's a glass of water. Put the egg in the water gently. What happened? It sank to the bottom. Now, let's add salt. One spoon. Stir. Two spoons. Stir. Three, four, five, six... Look! The egg is going up! The result was surprising. The egg floated! Say it with me. The result was surprising. The egg floated! Fantastic! The result is what happened in the end. Let's read the result part of Riko's report. \"At first, the egg sank to the bottom of the glass. We added salt, one spoon at a time. After six spoons, nothing happened. After we added salt again and again, the egg slowly floated up to the top. Our prediction was wrong, and that was the best part!\" I love that last sentence. When the result is different from the prediction, we learn something new. Now, phonics. Equipment. Development. Environment. Experiment. Equip and develop. Don't double the last letter. And don't forget the n in environment. Let's report our surprising results!",
+      "conversation": {
+        "scene": "The friends add salt to make an egg float",
+        "sceneJa": "しおを いれて たまごを うかせる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "The egg sank to the bottom. Let's add salt.",
+            "ja": "たまごが そこまで しずんだ。しおを いれよう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "One spoon... two spoons... Nothing is happening.",
+            "ja": "1ぱい…2はい…なにも おこらないね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "More salt! More salt! Stir, stir, stir!",
+            "ja": "もっと しお！もっと しお！まぜて、まぜて！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look! It's going up! The egg floated!",
+            "ja": "みて！あがって いく！たまごが ういた！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The result was surprising. I predicted it would sink.",
+            "ja": "けっかに びっくり。しずむと よそうしたのに。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great! Why do you think it floated? Let's think about it next time.",
+            "ja": "すばらしい！どうして ういたと おもう？つぎの じかんに かんがえましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に じっけんの けっかを ほうこくしよう。AI が「どう なった？」と きくから、At first, ～. After ～, ～. The result was ～. の じゅんで こたえよう",
+          "starterEn": "I want to hear about your egg experiment! What happened at first? And what was the result?",
+          "targetExpressions": [
+            "The result was surprising. The egg floated!",
+            "At first, the egg sank to the bottom.",
+            "After we added salt, it floated."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The result was surprising. The egg floated!",
+          "At first, the egg sank to the bottom. / After we added salt, it floated.",
+          "equipment・development・environment・experiment"
+        ]
+      }
+    },
+    {
+      "lessonNo": 669,
+      "world": 23,
+      "title": "Why Did It Happen?",
+      "titleJa": "どうして そう なったの？",
+      "school": {
+        "grade": "中3",
+        "topic": "It happened because salt water is heavier.：けっかの りゆうを かんがえる",
+        "grammar": "Why did it happen? / It happened because ～. / Salt water is heavier than fresh water.",
+        "expressions": [
+          {
+            "en": "It happened because salt water is heavier.",
+            "ja": "しおみずの ほうが おもいから そう なったんだ。",
+            "core": true
+          },
+          {
+            "en": "Why did it happen?",
+            "ja": "どうして そう なったの？"
+          },
+          {
+            "en": "A cup of salt water is heavier than a cup of fresh water.",
+            "ja": "コップ 1ぱいの しおみずは コップ 1ぱいの ふつうの みずより おもいよ。"
+          }
+        ],
+        "testPoints": [
+          "It happened because salt water is heavier. で けっかの りゆうを せつめいできる",
+          "-ment の つづり（measurement・equipment・environment・amazement）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put a cup on each hand.",
+          "ja": "りょうての うえに コップを のせて。",
+          "action": "てのひらを うえに むけて ひろげる",
+          "emoji": "⚖️"
+        },
+        {
+          "en": "Which is heavier? Tip to that side.",
+          "ja": "どっちが おもい？その ほうに かたむいて。",
+          "action": "からだを かたむける",
+          "emoji": "↘️"
+        },
+        {
+          "en": "Push the water down with your hand.",
+          "ja": "てで みずを おしさげて。",
+          "action": "てのひらで したへ おす",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Float like an egg in the sea.",
+          "ja": "うみの たまごの ように ういて。",
+          "action": "りょうてを ひろげて ゆらゆら",
+          "emoji": "🌊"
+        }
+      ],
+      "phonics": {
+        "rule": "ment-spelling",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "measurement",
+          "equipment",
+          "environment",
+          "amazement"
+        ],
+        "tipJa": "-ment の まとめ（ブロックの 4 回目）: measure → measurement（e を のこす）、equip → equipment（かさねない）、environment（n を わすれない）、amaze → amazement（e を のこす）。"
+      },
+      "vocab": [
+        {
+          "en": "reason",
+          "ja": "りゆう",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "heavy",
+          "ja": "おもい",
+          "emoji": "🏋️"
+        },
+        {
+          "en": "fresh water",
+          "ja": "ふつうの みず（しおが ない みず）",
+          "emoji": "💧"
+        },
+        {
+          "en": "the Dead Sea",
+          "ja": "しかい（とても しおからい みずうみ）",
+          "emoji": "🌊"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, the egg floated in salt water. But why did it happen? Scientists always ask why. Dr. Moss has two cups of water, the same size. One is fresh water. One is salt water. Let's put them on the scale. Look! The salt water is heavier. It happened because salt water is heavier. Say it with me. It happened because salt water is heavier. Good job! The heavy water pushes the egg up. Let's read about a real place. \"The Dead Sea is a big lake in West Asia. Its water is very, very salty. It's much saltier than the ocean. When people go into the water, they float easily. Some people float on their backs and read a newspaper! The salty water pushes them up.\" Isn't that amazing? Now you know why. To give a reason, use because. The egg floated because the water was salty. Now, phonics review. Measurement. Equipment. Environment. Amazement. Keep the e in measurement and amazement. Don't double the p in equipment. Now, let's explain the reasons for our results!",
+      "conversation": {
+        "scene": "The friends find out why the egg floated",
+        "sceneJa": "たまごが ういた りゆうを かんがえる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "The egg floated in salt water. Why did it happen?",
+            "ja": "たまごが しおみずで ういた。どうして そう なったの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's put the two cups on the scale.",
+            "ja": "2つの コップを はかりに のせて みよう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look! The salt water is heavier.",
+            "ja": "みて！しおみずの ほうが おもいよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "So it happened because salt water is heavier!",
+            "ja": "だから しおみずの ほうが おもいから ういたんだね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Then can I float in the bath if I put salt in it?",
+            "ja": "じゃあ おふろに しおを いれたら ぼくも うける？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You need a lot of salt, Birimo! That's why people float in the Dead Sea.",
+            "ja": "すごく たくさんの しおが いるわよ、ビリモ！だから しかいでは ひとが うくのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「どうして？」の なぞときを しよう。AI が ふしぎな けっかを いうから、It happened because ～. で りゆうを こたえて、さいごに AI にも Why did it happen? と きこう",
+          "starterEn": "Here's a mystery. I put ice in my juice, and the ice floated at the top. Why did it happen? What do you think?",
+          "targetExpressions": [
+            "It happened because salt water is heavier.",
+            "Why did it happen?",
+            "～ is heavier than ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It happened because salt water is heavier.",
+          "Why did it happen? / A cup of salt water is heavier than a cup of fresh water.",
+          "measurement・equipment・environment・amazement"
+        ]
+      }
+    },
+    {
+      "lessonNo": 670,
+      "world": 23,
+      "title": "Float or Sink Report",
+      "titleJa": "うく？しずむ？はっぴょう",
+      "school": {
+        "grade": "中3",
+        "topic": "We predicted ～. The result was ～.：じっけんけっかの はっぴょう（まとめ）",
+        "grammar": "We predicted the egg would sink. / The result was ～. / It happened because ～.",
+        "expressions": [
+          {
+            "en": "We predicted the egg would sink. The result was different.",
+            "ja": "わたしたちは たまごが しずむと よそうしました。けっかは ちがいました。",
+            "core": true
+          },
+          {
+            "en": "Our experiment was about floating and sinking.",
+            "ja": "わたしたちの じっけんは うくことと しずむことに ついてです。"
+          },
+          {
+            "en": "Thank you for listening.",
+            "ja": "きいて くれて ありがとう。"
+          }
+        ],
+        "testPoints": [
+          "We predicted ～. The result was ～. で じっけんを はっぴょうできる",
+          "-ment の ふりかえり（experiment・measurement・equipment・environment）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand in front of the class.",
+          "ja": "みんなの まえに たって。",
+          "action": "せすじを のばして たつ",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Hold up your poster.",
+          "ja": "ポスターを たかく もって。",
+          "action": "りょうてで ポスターを かかげる",
+          "emoji": "🪧"
+        },
+        {
+          "en": "Point to the picture.",
+          "ja": "えを ゆびさして。",
+          "action": "ゆびで さす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Bow and say thank you.",
+          "ja": "おじぎして ありがとうと いって。",
+          "action": "ぺこりと おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ment"
+        ],
+        "sounds": [
+          "/mənt/"
+        ],
+        "words": [
+          "experiment",
+          "measurement",
+          "equipment",
+          "environment"
+        ],
+        "tipJa": "-ment の ふりかえり: experiment（m・e・n・t）・measurement（e を のこす）・equipment（p は 1つ）・environment（n を わすれない）。はっぴょうの ポスターでも ただしく かこう！"
+      },
+      "vocab": [
+        {
+          "en": "report",
+          "ja": "ほうこく・はっぴょう",
+          "emoji": "📢",
+          "core": true
+        },
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "🪧"
+        },
+        {
+          "en": "audience",
+          "ja": "ききて・かんきゃく",
+          "emoji": "👥"
+        },
+        {
+          "en": "different",
+          "ja": "ちがう",
+          "emoji": "🔄"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is report day. Each team will present one experiment. A good science report has four parts. The question. The prediction. The result. And the reason. When we talk about our prediction, we say predicted. We predicted the egg would sink. The result was different. Say it with me. We predicted the egg would sink. The result was different. Excellent! Remember, after predicted, will becomes would. Let's read Haru and Riko's poster. \"Our question: Can an egg float? Our prediction: We predicted the egg would sink. What we did: We put an egg in water. Then we added salt, one spoon at a time. The result: The egg floated after many spoons of salt. The reason: It happened because salt water is heavier than fresh water.\" That's a perfect report. Speak slowly, look at the audience and point to your poster. At the end, ask, Do you have any questions? Now, phonics review. Experiment. Measurement. Equipment. Environment. Write them correctly on your poster. Let's give great reports!",
+      "conversation": {
+        "scene": "The teams present their float or sink experiments",
+        "sceneJa": "じっけんけっかを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Our experiment was about floating and sinking.",
+            "ja": "ぼくたちの じっけんは うくことと しずむことに ついてです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We predicted the egg would sink. The result was different.",
+            "ja": "たまごは しずむと よそうしました。けっかは ちがいました。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It floated because salt water is heavier. Do you have any questions?",
+            "ja": "しおみずの ほうが おもいから ういたんです。しつもんは ありますか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How many spoons of salt did you use?",
+            "ja": "しおを スプーン なんばい つかったの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We used twelve spoons. It took a long time!",
+            "ja": "12 はい つかったよ。じかんが かかった！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Our team predicted the carrot would float. It sank. Bye-bye, carrot!",
+            "ja": "ぼくの チームは にんじんが うくと よそうしたよ。しずんだ。にんじん、ばいばい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great reports, everyone! Thank you for listening.",
+            "ja": "みんな すばらしい はっぴょうでした！きいて くれて ありがとう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に じっけんの はっぴょうを しよう。We predicted ～. The result was ～. It happened because ～. の 3 文で はなして、AI の しつもんにも こたえよう",
+          "starterEn": "Welcome to the report corner! Please tell me about your experiment. What did you predict?",
+          "targetExpressions": [
+            "We predicted the egg would sink. The result was different.",
+            "Our experiment was about ～.",
+            "It happened because ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We predicted the egg would sink. The result was different.",
+          "Our experiment was about floating and sinking. / Thank you for listening.",
+          "experiment・measurement・equipment・environment"
+        ]
+      }
+    },
+    {
+      "lessonNo": 671,
+      "world": 23,
+      "title": "If You Heat Ice",
+      "titleJa": "こおりを あたためると",
+      "school": {
+        "grade": "中3",
+        "topic": "If you heat ice, it melts.：こおりと みずと ゆげの じっけん",
+        "grammar": "If you heat ice, it melts. / If you heat water, it turns into steam. / If you cool steam, it turns back into water.",
+        "expressions": [
+          {
+            "en": "If you heat ice, it melts.",
+            "ja": "こおりを あたためると、とけるよ。",
+            "core": true
+          },
+          {
+            "en": "If you heat water, it turns into steam.",
+            "ja": "みずを あたためると、ゆげ（すいじょうき）に なるよ。"
+          },
+          {
+            "en": "If you cool steam, it turns back into water.",
+            "ja": "ゆげを ひやすと、みずに もどるよ。"
+          }
+        ],
+        "testPoints": [
+          "If you heat ice, it melts. で「〜すると、〜なる」を いえる",
+          "強勢の 移動（PHO-to-graph → pho-TOG-ra-phy・pho-TOG-ra-pher・pho-to-GRAPH-ic）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Be an ice cube. Stand still.",
+          "ja": "こおりに なって。じっと たって。",
+          "action": "からだを かたく して とまる",
+          "emoji": "🧊"
+        },
+        {
+          "en": "The sun is out. Melt slowly.",
+          "ja": "おひさまが でたよ。ゆっくり とけて。",
+          "action": "ゆっくり くにゃっと しゃがむ",
+          "emoji": "💦"
+        },
+        {
+          "en": "Now you're water. Flow!",
+          "ja": "こんどは みずだよ。ながれて！",
+          "action": "てを なみの ように うごかす",
+          "emoji": "💧"
+        },
+        {
+          "en": "Turn into steam and float up!",
+          "ja": "ゆげに なって うえに のぼって！",
+          "action": "せのびして てを ひらひら",
+          "emoji": "♨️"
+        }
+      ],
+      "phonics": {
+        "rule": "stress-shift",
+        "focus": [
+          "pho-to-graph",
+          "pho-tog-ra-phy",
+          "pho-tog-ra-pher",
+          "pho-to-graph-ic"
+        ],
+        "sounds": [
+          "PHO",
+          "TOG",
+          "TOG",
+          "GRAPH"
+        ],
+        "words": [
+          "photograph",
+          "photography",
+          "photographer",
+          "photographic"
+        ],
+        "tipJa": "おなじ かぞくでも つよく よむ ところが うごく！ PHO・to・graph（しゃしん）→ pho・TOG・ra・phy（しゃしんを とる こと）・pho・TOG・ra・pher（しゃしんか）→ pho・to・GRAPH・ic（しゃしんの）。おわりが かわると つよい ところも かわるよ。"
+      },
+      "vocab": [
+        {
+          "en": "heat",
+          "ja": "あたためる・ねつ",
+          "emoji": "🔥",
+          "core": true
+        },
+        {
+          "en": "melt",
+          "ja": "とける",
+          "emoji": "💧"
+        },
+        {
+          "en": "steam",
+          "ja": "ゆげ・すいじょうき",
+          "emoji": "♨️"
+        },
+        {
+          "en": "ice",
+          "ja": "こおり",
+          "emoji": "🧊"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we will learn a new pattern for science. If you do something, something happens. Dr. Moss puts an ice cube in a pan. An adult turns on the hot plate. Look! The ice is getting smaller. If you heat ice, it melts. Say it with me. If you heat ice, it melts. Great job! Keep heating. The water is bubbling. If you heat water, it turns into steam. And here's a cold lid. If you cool steam, it turns back into water. Look at the drops on the lid! Let's read Dr. Moss's water poster. \"Water can change its shape. Ice is solid. You can hold it. Water is liquid. It flows. Steam is gas. It floats into the air. If you heat ice, it melts into water. If you heat water to 100 degrees, it boils and turns into steam. If you cool steam, it turns back into water.\" Water is a great shape changer! Remember, if plus the present, then the present. If you heat, it melts. Now, phonics. Photograph. Photography. Photographer. Photographic. Listen to the strong part move! Let's do the ice dance!",
+      "conversation": {
+        "scene": "The friends heat ice and watch it change",
+        "sceneJa": "こおりを あたためて へんかを みる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Watch the ice in the pan. What's happening?",
+            "ja": "フライパンの こおりを みて。なにが おきてる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's getting smaller. If you heat ice, it melts.",
+            "ja": "ちいさく なってる。こおりを あたためると とけるんだね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Now the water is bubbling. Look at the steam!",
+            "ja": "こんどは みずが ぶくぶく してる。ゆげを みて！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "If you heat water, it turns into steam.",
+            "ja": "みずを あたためると、ゆげに なるんだね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "There are drops on the cold lid. Is the lid crying?",
+            "ja": "つめたい ふたに しずくが ついてる。ふたが ないてるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, Birimo. If you cool steam, it turns back into water.",
+            "ja": "ちがうわ、ビリモ。ゆげを ひやすと、みずに もどるのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「もし〜すると？」クイズを しよう。AI が「こおりを あたためると？」の ように きくから、If you ～, it ～. の かたちで こたえよう。さいごに じぶんでも 1もん だそう",
+          "starterEn": "Let's talk about water! I have some ice cubes and a hot plate. What happens if you heat ice?",
+          "targetExpressions": [
+            "If you heat ice, it melts.",
+            "If you heat water, it turns into steam.",
+            "If you cool steam, it turns back into water."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "If you heat ice, it melts.",
+          "If you heat water, it turns into steam. / If you cool steam, it turns back into water.",
+          "photograph・photography・photographer・photographic"
+        ]
+      }
+    },
+    {
+      "lessonNo": 672,
+      "world": 23,
+      "title": "When Water Freezes",
+      "titleJa": "みずが こおると",
+      "school": {
+        "grade": "中3",
+        "topic": "When water freezes, it gets bigger.：れいとうこの じっけん",
+        "grammar": "When water freezes, it gets bigger. / When ice melts, it turns into water. / Don't put a glass bottle in the freezer.",
+        "expressions": [
+          {
+            "en": "When water freezes, it gets bigger.",
+            "ja": "みずは こおると、おおきく なるよ。",
+            "core": true
+          },
+          {
+            "en": "When ice melts, it turns into water.",
+            "ja": "こおりは とけると、みずに なるよ。"
+          },
+          {
+            "en": "Don't put a glass bottle in the freezer.",
+            "ja": "ガラスの びんを れいとうこに いれないでね。"
+          }
+        ],
+        "testPoints": [
+          "When water freezes, it gets bigger. で しぜんの きまりを いえる",
+          "強勢の 移動（SCI-en-tist → sci-en-TIF-ic・EN-er-gy → en-er-GET-ic）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fill the bottle to the top.",
+          "ja": "ボトルを いっぱいまで みたして。",
+          "action": "みずを そそぐ まね",
+          "emoji": "🍶"
+        },
+        {
+          "en": "Open the freezer. Brr!",
+          "ja": "れいとうこを あけて。さむい！",
+          "action": "ドアを ひらいて ぶるっと ふるえる",
+          "emoji": "🥶"
+        },
+        {
+          "en": "Freeze! Don't move.",
+          "ja": "こおって！うごかないで。",
+          "action": "ぴたっと とまる",
+          "emoji": "🧊"
+        },
+        {
+          "en": "Get bigger and bigger.",
+          "ja": "どんどん おおきく なって。",
+          "action": "りょうてを ひろげて ふくらむ",
+          "emoji": "🎈"
+        }
+      ],
+      "phonics": {
+        "rule": "stress-shift",
+        "focus": [
+          "sci-en-tist",
+          "sci-en-tif-ic",
+          "en-er-gy",
+          "en-er-get-ic"
+        ],
+        "sounds": [
+          "SCI",
+          "TIF",
+          "EN",
+          "GET"
+        ],
+        "words": [
+          "scientist",
+          "scientific",
+          "energy",
+          "energetic"
+        ],
+        "tipJa": "SCI・en・tist（かがくしゃ）→ sci・en・TIF・ic（かがくてきな）、EN・er・gy（エネルギー）→ en・er・GET・ic（げんきいっぱいの）。ic で おわる ことばは、ic の すぐ まえを つよく よむ ことが おおいよ。"
+      },
+      "vocab": [
+        {
+          "en": "freeze",
+          "ja": "こおる",
+          "emoji": "🧊",
+          "core": true
+        },
+        {
+          "en": "freezer",
+          "ja": "れいとうこ",
+          "emoji": "🥶"
+        },
+        {
+          "en": "bottle",
+          "ja": "ボトル・びん",
+          "emoji": "🍶"
+        },
+        {
+          "en": "bigger",
+          "ja": "もっと おおきい",
+          "emoji": "📈"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Here's a question. Does water get bigger or smaller when it freezes? Yesterday, Dr. Moss filled a plastic bottle with water and put it in the freezer. Let's open the freezer. Look at the bottle! The ice is coming out of the top! When water freezes, it gets bigger. Say it with me. When water freezes, it gets bigger. Excellent! When is like if. It shows something that always happens. When ice melts, it turns into water. Now, a safety rule. Don't put a glass bottle in the freezer. It can break! Let's read a winter story from Dr. Moss. \"One cold night, the water in a pipe outside my lab froze. When water freezes, it gets bigger. The ice pushed and pushed, and the pipe cracked. In the morning, the sun came out. When the ice melted, water sprayed everywhere! Now, I always wrap my pipes in warm blankets in winter.\" Poor Dr. Moss! Now, phonics. Scientist. Scientific. Energy. Energetic. Listen. SCI-en-tist. sci-en-TIF-ic. The strong part moves! Let's be energetic scientists!",
+      "conversation": {
+        "scene": "The friends check a frozen bottle",
+        "sceneJa": "こおった ボトルを しらべる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Let's open the freezer. Brr! It's cold!",
+            "ja": "れいとうこを あけよう。ぶるる！さむい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look at the bottle! The ice is coming out of the top!",
+            "ja": "ボトルを みて！こおりが うえから でてる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "When water freezes, it gets bigger.",
+            "ja": "みずは こおると おおきく なるんだね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can I freeze my juice in this glass bottle?",
+            "ja": "この ガラスの びんで ジュースを こおらせても いい？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No! Don't put a glass bottle in the freezer. It can break.",
+            "ja": "だめ！ガラスの びんを れいとうこに いれないで。われちゃうよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right. And when the ice melts, it turns into water again.",
+            "ja": "そのとおり。それから こおりが とけると、また みずに なるのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「〜すると いつも こう なる」を はなそう。AI が しぜんの ことを きくから、When ～, it ～. で こたえて、あんぜんの ちゅういも 1つ いおう",
+          "starterEn": "I'm making ice pops for summer! When water freezes, what happens to it? Do you know?",
+          "targetExpressions": [
+            "When water freezes, it gets bigger.",
+            "When ice melts, it turns into water.",
+            "Don't put a glass bottle in the freezer."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "When water freezes, it gets bigger.",
+          "When ice melts, it turns into water. / Don't put a glass bottle in the freezer.",
+          "scientist・scientific・energy・energetic"
+        ]
+      }
+    },
+    {
+      "lessonNo": 673,
+      "world": 23,
+      "title": "What Happens If...?",
+      "titleJa": "もし〜したら どう なる？",
+      "school": {
+        "grade": "中3",
+        "topic": "What happens if we mix blue and yellow?：いろみずの じっけん",
+        "grammar": "What happens if we mix blue and yellow? ― It turns green! / If you mix red and yellow, you get orange. / Let's try it and see.",
+        "expressions": [
+          {
+            "en": "What happens if we mix blue and yellow?",
+            "ja": "あおと きいろを まぜたら どう なる？",
+            "core": true
+          },
+          {
+            "en": "It turns green!",
+            "ja": "みどりに なるよ！"
+          },
+          {
+            "en": "If you mix red and yellow, you get orange.",
+            "ja": "あかと きいろを まぜると、オレンジに なるよ。"
+          }
+        ],
+        "testPoints": [
+          "What happens if ～? で じっけんの しつもんが できる",
+          "強勢の 移動（e-LEC-tric → e-lec-TRIC-i-ty・bi-OL-o-gy → bi-o-LOG-i-cal）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up the dropper.",
+          "ja": "スポイトを もって。",
+          "action": "ゆびで つまむ まね",
+          "emoji": "💧"
+        },
+        {
+          "en": "Add one drop of blue.",
+          "ja": "あおを 1てき いれて。",
+          "action": "ゆびを ぎゅっと おす",
+          "emoji": "🔵"
+        },
+        {
+          "en": "Add one drop of yellow.",
+          "ja": "きいろを 1てき いれて。",
+          "action": "もう いちど ゆびを おす",
+          "emoji": "🟡"
+        },
+        {
+          "en": "Swirl the cup gently.",
+          "ja": "コップを そっと まわして。",
+          "action": "コップを くるくる まわす まね",
+          "emoji": "🌀"
+        }
+      ],
+      "phonics": {
+        "rule": "stress-shift",
+        "focus": [
+          "e-lec-tric",
+          "e-lec-tric-i-ty",
+          "bi-ol-o-gy",
+          "bi-o-log-i-cal"
+        ],
+        "sounds": [
+          "LEC",
+          "TRIC",
+          "OL",
+          "LOG"
+        ],
+        "words": [
+          "electric",
+          "electricity",
+          "biology",
+          "biological"
+        ],
+        "tipJa": "e・LEC・tric（でんきの）→ e・lec・TRIC・i・ty（でんき）、bi・OL・o・gy（せいぶつがく）→ bi・o・LOG・i・cal（せいぶつの）。ity・ical が つくと、その すぐ まえの はくが つよく なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "mix",
+          "ja": "まぜる",
+          "emoji": "🥣",
+          "core": true
+        },
+        {
+          "en": "dropper",
+          "ja": "スポイト",
+          "emoji": "💧"
+        },
+        {
+          "en": "turn",
+          "ja": "（いろが）かわる・なる",
+          "emoji": "🔄"
+        },
+        {
+          "en": "orange",
+          "ja": "オレンジいろ",
+          "emoji": "🟠"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, our lab is full of colors. Dr. Moss gives us three cups of colored water. Red, blue and yellow. Scientists ask questions before they try something. What happens if we mix blue and yellow? Say it with me. What happens if we mix blue and yellow? Good! Now, let's try it and see. One drop of blue. One drop of yellow. Swirl the cup. It turns green! If you mix red and yellow, you get orange. Here's Dr. Moss's color chart. Let's read it. \"Three colors can make many new colors. If you mix blue and yellow, you get green. If you mix red and yellow, you get orange. If you mix red and blue, you get purple. What happens if you mix all three? Try it and see! Write your answer in your lab notebook.\" Hmm, what do you think? Make a prediction first. Then try it. Remember, What happens if is a great question for every scientist. Now, phonics. Electric. Electricity. Biology. Biological. Listen. e-LEC-tric, e-lec-TRIC-i-ty. The strong part moves to the right. Let's mix some colors!",
+      "conversation": {
+        "scene": "The friends mix colored water",
+        "sceneJa": "いろみずを まぜる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "What happens if we mix blue and yellow?",
+            "ja": "あおと きいろを まぜたら どう なる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's try it and see. One drop of blue, one drop of yellow...",
+            "ja": "やって みよう。あおを 1てき、きいろを 1てき…"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It turns green! Like a leaf!",
+            "ja": "みどりに なった！はっぱみたい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "If you mix red and yellow, you get orange.",
+            "ja": "あかと きいろを まぜると、オレンジに なるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What happens if we mix all the colors? Let's try!",
+            "ja": "ぜんぶの いろを まぜたら どう なる？やって みよう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh no. It's brown, like mud!",
+            "ja": "あーあ。ちゃいろだ、どろみたい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's a great result, too. Write it in your notebook.",
+            "ja": "それも りっぱな けっかよ。ノートに かいてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いろの まぜかたクイズを しよう。What happens if we mix ～ and ～? と きいたり、If you mix ～ and ～, you get ～. で こたえたり しよう",
+          "starterEn": "I have red, blue and yellow paint. Let's be color scientists! Ask me a question with What happens if?",
+          "targetExpressions": [
+            "What happens if we mix blue and yellow?",
+            "It turns green!",
+            "If you mix red and yellow, you get orange."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What happens if we mix blue and yellow?",
+          "It turns green! / If you mix red and yellow, you get orange.",
+          "electric・electricity・biology・biological"
+        ]
+      }
+    },
+    {
+      "lessonNo": 674,
+      "world": 23,
+      "title": "Magnets Stick to Iron",
+      "titleJa": "じしゃくは てつに くっつく",
+      "school": {
+        "grade": "中3",
+        "topic": "Magnets stick to iron, but not to paper.：じしゃくの じっけん",
+        "grammar": "Magnets stick to iron, but not to paper. / Does a magnet stick to ～? ― Yes, it does. / No, it doesn't.",
+        "expressions": [
+          {
+            "en": "Magnets stick to iron, but not to paper.",
+            "ja": "じしゃくは てつには くっつくけど、かみには くっつかないよ。",
+            "core": true
+          },
+          {
+            "en": "Does a magnet stick to a coin?",
+            "ja": "じしゃくは コインに くっつく？"
+          },
+          {
+            "en": "No, it doesn't. Most coins don't have iron in them.",
+            "ja": "ううん、くっつかない。たいていの コインには てつが はいって いないんだ。"
+          }
+        ],
+        "testPoints": [
+          "Magnets stick to iron, but not to paper. で じしゃくの せいしつを いえる",
+          "強勢の 移動（mag-NET-ic ↔ MAG-ne-tism・ex-PER-i-ment → ex-per-i-MEN-tal）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the magnet up high.",
+          "ja": "じしゃくを たかく もって。",
+          "action": "かたてを うえに あげる",
+          "emoji": "🧲"
+        },
+        {
+          "en": "Stick to the door like a magnet.",
+          "ja": "じしゃくの ように ドアに くっついて。",
+          "action": "てのひらを かべに ぴたっと つける",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Pull apart. It's hard!",
+          "ja": "はなして。かたいよ！",
+          "action": "りょうてを ひっぱりあう",
+          "emoji": "💪"
+        },
+        {
+          "en": "Push away! Push away!",
+          "ja": "はねかえって！はねかえって！",
+          "action": "てのひらで まえに おしかえす",
+          "emoji": "↔️"
+        }
+      ],
+      "phonics": {
+        "rule": "stress-shift",
+        "focus": [
+          "mag-net-ic",
+          "mag-ne-tism",
+          "ex-per-i-ment",
+          "ex-per-i-men-tal"
+        ],
+        "sounds": [
+          "NET",
+          "MAG",
+          "PER",
+          "MEN"
+        ],
+        "words": [
+          "magnetic",
+          "magnetism",
+          "experiment",
+          "experimental"
+        ],
+        "tipJa": "mag・NET・ic（じしゃくの）↔ MAG・ne・tism（じき）、ex・PER・i・ment（じっけん）→ ex・per・i・MEN・tal（じっけんの）。おなじ magnet の かぞくでも つよい ところが ちがう。きいて たしかめよう。"
+      },
+      "vocab": [
+        {
+          "en": "magnet",
+          "ja": "じしゃく",
+          "emoji": "🧲",
+          "core": true
+        },
+        {
+          "en": "iron",
+          "ja": "てつ",
+          "emoji": "🔩"
+        },
+        {
+          "en": "stick to",
+          "ja": "くっつく",
+          "emoji": "📎"
+        },
+        {
+          "en": "coin",
+          "ja": "コイン",
+          "emoji": "🪙"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we will test magnets. Dr. Moss has a box of things. A paper clip, a paper cup, an iron nail, a coin, a pencil, a steel can and an aluminum can. Which things will the magnet stick to? Make your predictions. Now, let's test. The paper clip? Click! It sticks. The paper cup? No. Magnets stick to iron, but not to paper. Say it with me. Magnets stick to iron, but not to paper. Wonderful! Ask a question. Does a magnet stick to a coin? No, it doesn't. Most coins don't have iron in them. Let's read Dr. Moss's magnet card. \"Magnets stick to iron and steel. Steel has iron in it. Magnets don't stick to paper, wood, glass, plastic or aluminum. Every magnet has two ends, N and S. N and S pull together. N and N push away. Be careful! Keep magnets away from phones and computers.\" Isn't that interesting? Now, phonics. Magnetic. Magnetism. Experiment. Experimental. Listen. mag-NET-ic, MAG-ne-tism. Same family, different strong part. Let's do some magnetic experiments!",
+      "conversation": {
+        "scene": "The friends test what magnets stick to",
+        "sceneJa": "じしゃくが なにに くっつくか しらべる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "The paper clip sticks! Click!",
+            "ja": "クリップが くっついた！カチッ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The paper cup doesn't. Magnets stick to iron, but not to paper.",
+            "ja": "かみコップは くっつかない。じしゃくは てつには くっつくけど、かみには くっつかないんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Does a magnet stick to a coin?",
+            "ja": "じしゃくは コインに くっつく？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "No, it doesn't. Most coins don't have iron in them.",
+            "ja": "ううん。たいていの コインには てつが はいって いないんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! The magnet sticks to my lunch box!",
+            "ja": "みて！じしゃくが ぼくの おべんとうばこに くっつく！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Your lunch box has iron in it, Birimo. But keep magnets away from phones.",
+            "ja": "ビリモの おべんとうばこには てつが はいって いるのね。でも じしゃくは でんわから はなしてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と じしゃくクイズを しよう。AI が「〜に くっつく？」と きくから、Yes, it does. / No, it doesn't. と こたえて、Magnets stick to ～, but not to ～. で りゆうも いおう",
+          "starterEn": "I have a magnet and a box of things. Let's guess together. Does a magnet stick to a spoon? What do you think?",
+          "targetExpressions": [
+            "Magnets stick to iron, but not to paper.",
+            "Does a magnet stick to a coin?",
+            "No, it doesn't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Magnets stick to iron, but not to paper.",
+          "Does a magnet stick to a coin? / No, it doesn't. Most coins don't have iron in them.",
+          "magnetic・magnetism・experiment・experimental"
+        ]
+      }
+    },
+    {
+      "lessonNo": 675,
+      "world": 23,
+      "title": "If-Then Science Quiz",
+      "titleJa": "「もし〜なら」理科クイズ",
+      "school": {
+        "grade": "中3",
+        "topic": "If you drop a ball, it falls.：「もし〜なら」理科クイズ（まとめ）",
+        "grammar": "If you drop a ball, it falls. / What happens if ～? / That's right! / Good guess!",
+        "expressions": [
+          {
+            "en": "If you drop a ball, it falls.",
+            "ja": "ボールを はなすと、おちるよ。",
+            "core": true
+          },
+          {
+            "en": "What happens if you put a magnet near a nail?",
+            "ja": "くぎの ちかくに じしゃくを おくと どう なる？"
+          },
+          {
+            "en": "That's right! Good guess!",
+            "ja": "せいかい！いい よそうだね！"
+          }
+        ],
+        "testPoints": [
+          "If you drop a ball, it falls. で 理科の きまりを クイズに できる",
+          "強勢の 移動の ふりかえり（photography・scientific・electricity・magnetic）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Drop the ball. Bounce, bounce!",
+          "ja": "ボールを おとして。ぽん、ぽん！",
+          "action": "その ばで かるく ジャンプ",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Press the buzzer!",
+          "ja": "ブザーを おして！",
+          "action": "てのひらで つくえを たたく まね",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Show me a thinking face.",
+          "ja": "かんがえる かおを して。",
+          "action": "あごに てを あてる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Give your team a high five.",
+          "ja": "チームの みんなと ハイタッチ。",
+          "action": "てを たかく あわせる",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "pho-tog-ra-phy",
+          "sci-en-tif-ic",
+          "e-lec-tric-i-ty",
+          "mag-net-ic"
+        ],
+        "sounds": [
+          "TOG",
+          "TIF",
+          "TRIC",
+          "NET"
+        ],
+        "words": [
+          "photography",
+          "scientific",
+          "electricity",
+          "magnetic"
+        ],
+        "tipJa": "強勢の 移動の ふりかえり: pho・TOG・ra・phy・sci・en・TIF・ic・e・lec・TRIC・i・ty・mag・NET・ic。ことばが ながく なると、つよい ところが うしろへ うごく ことが おおいよ。"
+      },
+      "vocab": [
+        {
+          "en": "drop",
+          "ja": "おとす・はなす",
+          "emoji": "⬇️",
+          "core": true
+        },
+        {
+          "en": "fall",
+          "ja": "おちる",
+          "emoji": "🍂"
+        },
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "❓"
+        },
+        {
+          "en": "buzzer",
+          "ja": "ブザー",
+          "emoji": "🔔"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the If-Then Science Quiz! Two teams. Red team and green team. Dr. Moss is the quiz master. He will read a question. Press the buzzer and answer with if. Here's an easy one. What happens if you drop a ball? If you drop a ball, it falls. Say it with me. If you drop a ball, it falls. Perfect! When your friend answers, you can say, That's right! Good guess! Let's read the quiz cards. \"Question one: What happens if you heat ice? Question two: What happens if you mix blue and yellow? Question three: What happens if you put a magnet near a nail? Question four: What happens if you put an egg in very salty water? Question five: What happens if you put a full bottle of water in the freezer?\" Do you know all the answers? I think you do! Answer in a full sentence. If you heat ice, it melts. Now, phonics review. Photography. Scientific. Electricity. Magnetic. Say the strong part loudly. Ready? Buzzers up. Let's start the quiz!",
+      "conversation": {
+        "scene": "The friends play an if-then science quiz",
+        "sceneJa": "「もし〜なら」理科クイズで あそぶ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Question one. What happens if you drop a ball?",
+            "ja": "だい 1もん。ボールを はなすと どう なる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "If you drop a ball, it falls!",
+            "ja": "ボールを はなすと、おちる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right! Question two. What happens if you put a magnet near a nail?",
+            "ja": "せいかい！だい 2もん。くぎの ちかくに じしゃくを おくと どう なる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The nail sticks to the magnet!",
+            "ja": "くぎが じしゃくに くっつく！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My turn! What happens if you give Birimo a cookie?",
+            "ja": "ぼくの ばん！ビリモに クッキーを あげると どう なる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "If you give Birimo a cookie, he dances!",
+            "ja": "ビリモに クッキーを あげると、おどりだす！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "That's right! Good guess!",
+            "ja": "せいかい！いい よそうだね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「もし〜なら」クイズを だしあおう。AI に What happens if ～? と もんだいを だして、AI の もんだいには If you ～, it ～. で こたえよう",
+          "starterEn": "Welcome to the If-Then Quiz Show! I'll ask first. What happens if you put ice cream in the sun?",
+          "targetExpressions": [
+            "If you drop a ball, it falls.",
+            "What happens if ～?",
+            "That's right! Good guess!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "If you drop a ball, it falls.",
+          "What happens if you put a magnet near a nail? / That's right! Good guess!",
+          "photography・scientific・electricity・magnetic"
+        ]
+      }
+    },
+    {
+      "lessonNo": 676,
+      "world": 23,
+      "title": "It's Made of Wood",
+      "titleJa": "きで できて いる",
+      "school": {
+        "grade": "中3",
+        "topic": "This chair is made of wood.：けんきゅうじょの ざいりょうこで",
+        "grammar": "This chair is made of wood. / The window is made of glass. / Is this spoon made of metal? ― Yes, it is.",
+        "expressions": [
+          {
+            "en": "This chair is made of wood.",
+            "ja": "この いすは きで できて いるよ。",
+            "core": true
+          },
+          {
+            "en": "The window is made of glass.",
+            "ja": "まどは ガラスで できて いるよ。"
+          },
+          {
+            "en": "Is this spoon made of metal? ― Yes, it is.",
+            "ja": "この スプーンは きんぞくで できて いる？ ― うん、そうだよ。"
+          }
+        ],
+        "testPoints": [
+          "This chair is made of wood. で ものの ざいりょうを いえる（うけみの にゅうもん）",
+          "-y の ようすの ことば（sticky・bumpy・rusty・dusty）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Knock on the wooden door.",
+          "ja": "きの ドアを ノックして。",
+          "action": "こぶしで とんとん たたく",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Tap the glass gently.",
+          "ja": "ガラスを そっと たたいて。",
+          "action": "ゆびさきで こつこつ",
+          "emoji": "🪟"
+        },
+        {
+          "en": "Feel the bumpy rock.",
+          "ja": "でこぼこの いしを さわって。",
+          "action": "てのひらで なでる",
+          "emoji": "🪨"
+        },
+        {
+          "en": "Pull off the sticky tape.",
+          "ja": "べたべたの テープを はがして。",
+          "action": "ゆびで ぴりっと はがす まね",
+          "emoji": "🩹"
+        }
+      ],
+      "phonics": {
+        "rule": "y-adjective",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "sticky",
+          "bumpy",
+          "rusty",
+          "dusty"
+        ],
+        "tipJa": "stick → sticky（べたべたの）、bump → bumpy（でこぼこの）、rust → rusty（さびた）、dust → dusty（ほこりっぽい）。なまえの ことばに y を つけると「〜の ような・〜だらけの」 ようすの ことばに なる。おわりは ey では なく y だけ。"
+      },
+      "vocab": [
+        {
+          "en": "wood",
+          "ja": "き（ざいりょう）",
+          "emoji": "🪵",
+          "core": true
+        },
+        {
+          "en": "glass",
+          "ja": "ガラス",
+          "emoji": "🪟"
+        },
+        {
+          "en": "metal",
+          "ja": "きんぞく",
+          "emoji": "🔩"
+        },
+        {
+          "en": "material",
+          "ja": "ざいりょう",
+          "emoji": "🧱"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we are in the lab's storeroom. It's full of materials. Materials are the things we use to make other things. Wood. Glass. Metal. Plastic. Paper. Dr. Moss's chair is very old. What is it made of? This chair is made of wood. Say it with me. This chair is made of wood. Great! Made of tells us the material. You can still see the material. The window is made of glass. Ask a question. Is this spoon made of metal? Yes, it is. Here is the storeroom list. Let's read it. \"Shelf A: Wooden blocks and wooden spoons. Shelf B: Glass jars and glass tubes. Be careful. Glass can break. Shelf C: Metal tools. Some of them are a little rusty. Shelf D: Plastic cups and sticky tape. Shelf E: Bumpy rocks from the mountain. Please clean the dusty shelves every Friday.\" It sounds like a busy storeroom! Now, phonics. Sticky. Bumpy. Rusty. Dusty. Stick plus y. Bump plus y. Add y, not e y. Let's find out what things are made of!",
+      "conversation": {
+        "scene": "The friends explore the lab storeroom",
+        "sceneJa": "ざいりょうこを たんけんする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Wow, this storeroom is dusty. Achoo!",
+            "ja": "わあ、この ざいりょうこ ほこりっぽい。はっくしょん！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look at this old chair. This chair is made of wood.",
+            "ja": "この ふるい いすを みて。きで できて いるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And the window is made of glass.",
+            "ja": "それに まどは ガラスで できて いるね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Is this spoon made of metal?",
+            "ja": "この スプーンは きんぞくで できて いる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, it is. But it's a little rusty.",
+            "ja": "うん、そうだよ。でも ちょっと さびてる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Help! My hands are stuck! This tape is so sticky!",
+            "ja": "たすけて！てが くっついちゃった！この テープ すごく べたべた！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hold still, Birimo. I'll help you.",
+            "ja": "じっと して、ビリモ。てつだうわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「なにで できて いる？」クイズを しよう。AI が みの まわりの ものを いうから、It's made of ～. で こたえて、Is it made of ～? と しつもんも しよう",
+          "starterEn": "Let's look around my room. Here's my desk. What do you think it's made of?",
+          "targetExpressions": [
+            "This chair is made of wood.",
+            "The window is made of glass.",
+            "Is this spoon made of metal? Yes, it is."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This chair is made of wood.",
+          "The window is made of glass. / Is this spoon made of metal? ― Yes, it is.",
+          "sticky・bumpy・rusty・dusty"
+        ]
+      }
+    },
+    {
+      "lessonNo": 677,
+      "world": 23,
+      "title": "Paper Is Made from Trees",
+      "titleJa": "かみは きから つくられる",
+      "school": {
+        "grade": "中3",
+        "topic": "Paper is made from trees.：かみの リサイクルこうじょうの もけいを みる",
+        "grammar": "Paper is made from trees. / Glass is made from sand. / made of と made from の ちがい / We can recycle old paper.",
+        "expressions": [
+          {
+            "en": "Paper is made from trees.",
+            "ja": "かみは きから つくられるよ。",
+            "core": true
+          },
+          {
+            "en": "Glass is made from sand.",
+            "ja": "ガラスは すなから つくられるよ。"
+          },
+          {
+            "en": "We can recycle old paper.",
+            "ja": "ふるい かみは リサイクルできるよ。"
+          }
+        ],
+        "testPoints": [
+          "Paper is made from trees. で もとの ざいりょうを いえる（made of と made from の ちがい）",
+          "-y の ようすの ことば（shiny・icy・noisy・juicy）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Chop, chop! Cut the tree.",
+          "ja": "とんとん！きを きって。",
+          "action": "おのを ふる まね",
+          "emoji": "🌲"
+        },
+        {
+          "en": "Mix the wood and water. Stir!",
+          "ja": "きと みずを まぜて。かきまぜて！",
+          "action": "おおきく かきまぜる",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Press it flat.",
+          "ja": "ぺったんこに おして。",
+          "action": "りょうてで したに おす",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Dry it in the sun.",
+          "ja": "おひさまで かわかして。",
+          "action": "てを ひらひら させて かわかす",
+          "emoji": "☀️"
+        }
+      ],
+      "phonics": {
+        "rule": "y-adjective",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "shiny",
+          "icy",
+          "noisy",
+          "juicy"
+        ],
+        "tipJa": "shine → shiny（ぴかぴかの）、ice → icy（こおりの）、noise → noisy（うるさい）、juice → juicy（みずみずしい）。e で おわる ことばは e を とってから y を つける。shiney・icey は まちがい！"
+      },
+      "vocab": [
+        {
+          "en": "paper",
+          "ja": "かみ",
+          "emoji": "📄",
+          "core": true
+        },
+        {
+          "en": "tree",
+          "ja": "き",
+          "emoji": "🌳"
+        },
+        {
+          "en": "sand",
+          "ja": "すな",
+          "emoji": "🏖️"
+        },
+        {
+          "en": "recycle",
+          "ja": "リサイクルする",
+          "emoji": "♻️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Look at this piece of paper. Is it made of wood? Well, it doesn't look like wood. But paper is made from trees. Say it with me. Paper is made from trees. Excellent! Here's the difference. Made of: you can still see the material. This chair is made of wood. Made from: the material changed, and you can't see it anymore. Glass is made from sand. Dr. Moss has a model of a paper factory. Let's read the signs on the model. \"Step one: Trees are cut into small chips. Step two: The chips are mixed with water. It's very noisy here! Step three: The wet mix is pressed flat. Step four: The paper is dried with hot rollers. Shiny paper and soft paper are made here. Step five: Old paper comes back. We can recycle old paper again and again.\" So, our notebook, our books and even our boxes come from trees. Let's use paper carefully. Now, phonics. Shiny. Icy. Noisy. Juicy. Shine, take away the e, add y. Let's learn where things come from!",
+      "conversation": {
+        "scene": "The friends look at a model of a paper factory",
+        "sceneJa": "かみの こうじょうの もけいを みる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Paper is made from trees? But it doesn't look like wood.",
+            "ja": "かみは きから つくられるの？でも きには みえないよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right. The wood changes, so we say made from.",
+            "ja": "そうね。きが かわって しまうから made from と いうのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Glass is made from sand, too. The sand changes a lot!",
+            "ja": "ガラスも すなから つくられるんだよ。すなが すごく かわるね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "This machine is so noisy! What is it doing?",
+            "ja": "この きかい すごく うるさい！なにを してるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's making shiny paper. Look, I can see my face!",
+            "ja": "ぴかぴかの かみを つくってるよ。みて、ぼくの かおが うつる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We can recycle old paper. Let's save our old notebooks.",
+            "ja": "ふるい かみは リサイクルできるね。ふるい ノートを とって おこう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「なにから できて いる？」を はなそう。AI が ものを いうから、～ is made from ～. と こたえて、リサイクルできる ものも 1つ いおう",
+          "starterEn": "Do you know where things come from? Let's start with cheese. What is cheese made from?",
+          "targetExpressions": [
+            "Paper is made from trees.",
+            "Glass is made from sand.",
+            "We can recycle old paper."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Paper is made from trees.",
+          "Glass is made from sand. / We can recycle old paper.",
+          "shiny・icy・noisy・juicy"
+        ]
+      }
+    },
+    {
+      "lessonNo": 678,
+      "world": 23,
+      "title": "Rice Is Grown in Japan",
+      "titleJa": "おこめは にほんで そだてられる",
+      "school": {
+        "grade": "中3",
+        "topic": "Rice is grown in many parts of Japan.：けんきゅうじょの たんぼで",
+        "grammar": "Rice is grown in many parts of Japan. / Rice grows in wet fields. / Apples are grown in Aomori.",
+        "expressions": [
+          {
+            "en": "Rice is grown in many parts of Japan.",
+            "ja": "おこめは にほんの いろいろな ところで そだてられて いるよ。",
+            "core": true
+          },
+          {
+            "en": "Rice grows in wet fields.",
+            "ja": "いねは みずの ある たんぼで そだつよ。"
+          },
+          {
+            "en": "Apples are grown in Aomori.",
+            "ja": "りんごは あおもりで そだてられて いるよ。"
+          }
+        ],
+        "testPoints": [
+          "Rice is grown in many parts of Japan. で そだてられて いる ばしょを いえる",
+          "-y の ようすの ことば（sunny・muddy・spotty・starry）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take off your shoes and step into the mud.",
+          "ja": "くつを ぬいで どろに はいって。",
+          "action": "そっと あしを いれる まね",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Plant the rice, one, two, three.",
+          "ja": "なえを うえて、1、2、3。",
+          "action": "こしを かがめて うえる まね",
+          "emoji": "🌾"
+        },
+        {
+          "en": "Wipe your muddy hands.",
+          "ja": "どろだらけの てを ふいて。",
+          "action": "てを ぱっぱと ふく",
+          "emoji": "🧻"
+        },
+        {
+          "en": "Look up at the sunny sky.",
+          "ja": "はれた そらを みあげて。",
+          "action": "てを ひたいに あてて みあげる",
+          "emoji": "☀️"
+        }
+      ],
+      "phonics": {
+        "rule": "y-adjective",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "sunny",
+          "muddy",
+          "spotty",
+          "starry"
+        ],
+        "tipJa": "sun → sunny（はれた）、mud → muddy（どろだらけの）、spot → spotty（てんてんの）、star → starry（ほしの いっぱいの）。みじかい ぼいん ＋ しいん 1つで おわる ことばは、しいんを かさねてから y を つける。"
+      },
+      "vocab": [
+        {
+          "en": "rice",
+          "ja": "おこめ・いね",
+          "emoji": "🍚",
+          "core": true
+        },
+        {
+          "en": "field",
+          "ja": "はたけ・たんぼ",
+          "emoji": "🌾"
+        },
+        {
+          "en": "grow",
+          "ja": "そだつ・そだてる",
+          "emoji": "🌱"
+        },
+        {
+          "en": "mud",
+          "ja": "どろ",
+          "emoji": "🟫"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Behind the Green Laboratory, there's a small rice field. Dr. Moss grows rice here every year. Rice is grown in many parts of Japan. Say it with me. Rice is grown in many parts of Japan. Wonderful! Is grown means people grow it there. We can also say, Rice grows in wet fields. Apples are grown in Aomori. Let's read the sign next to the rice field. \"Rice is grown in many parts of Asia. In Japan, people plant young rice plants in spring. The fields are full of water and mud. In summer, the plants grow tall and green in the sunny weather. In autumn, the rice turns gold, and people cut it. Niigata is famous for its rice.\" Let's think. What food is grown near your home? Maybe strawberries, or tea, or cabbages. Now, phonics. Sunny. Muddy. Spotty. Starry. Sun has a short u and one n. So, double the n and add y. Let's get muddy and plant some rice!",
+      "conversation": {
+        "scene": "The friends plant rice in the lab's rice field",
+        "sceneJa": "けんきゅうじょの たんぼで たうえを する",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "The field is full of water and mud. It's so muddy!",
+            "ja": "たんぼは みずと どろで いっぱい。すごく どろどろ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Rice grows in wet fields. Let's plant it.",
+            "ja": "いねは みずの ある たんぼで そだつんだ。うえよう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Rice is grown in many parts of Japan, right?",
+            "ja": "おこめは にほんの いろいろな ところで そだてられて いるんだよね？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. And apples are grown in Aomori. What food is grown near your home?",
+            "ja": "ええ。それに りんごは あおもりで そだてられて いるわ。あなたの いえの ちかくでは なにが そだてられて いる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oops! I fell in the mud. Now I'm a muddy Birimo!",
+            "ja": "おっと！どろの なかに ころんじゃった。どろだらけの ビリモだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Let's wash in the sunny garden.",
+            "ja": "あはは！はれた にわで あらおう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「どこで そだてられて いる？」を はなそう。AI が たべものを いうから、～ is grown in ～. / ～ are grown in ～. で こたえよう。わからない ときは I'm not sure. Where is it grown? と きこう",
+          "starterEn": "I love fruit! Let's talk about where food is grown. Do you know where apples are grown in Japan?",
+          "targetExpressions": [
+            "Rice is grown in many parts of Japan.",
+            "Rice grows in wet fields.",
+            "Apples are grown in Aomori."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Rice is grown in many parts of Japan.",
+          "Rice grows in wet fields. / Apples are grown in Aomori.",
+          "sunny・muddy・spotty・starry"
+        ]
+      }
+    },
+    {
+      "lessonNo": 679,
+      "world": 23,
+      "title": "Where Is It Made?",
+      "titleJa": "どこで つくられて いるの？",
+      "school": {
+        "grade": "中3",
+        "topic": "Where is chocolate made?：みぢかな ものの つくられかたを しらべる",
+        "grammar": "Where is chocolate made? / Chocolate is made in many countries. / Cacao beans are grown in hot countries.",
+        "expressions": [
+          {
+            "en": "Where is chocolate made?",
+            "ja": "チョコレートは どこで つくられて いるの？",
+            "core": true
+          },
+          {
+            "en": "Chocolate is made in many countries.",
+            "ja": "チョコレートは たくさんの くにで つくられて いるよ。"
+          },
+          {
+            "en": "Cacao beans are grown in hot countries, like Ghana.",
+            "ja": "カカオまめは ガーナの ような あつい くにで そだてられて いるよ。"
+          }
+        ],
+        "testPoints": [
+          "Where is chocolate made? で つくられて いる ばしょを きける",
+          "-y の ようすの ことばの まとめ（cloudy・salty・shiny・sunny）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the cacao pod.",
+          "ja": "カカオの みを わって。",
+          "action": "りょうてで ぱかっと ひらく",
+          "emoji": "🥥"
+        },
+        {
+          "en": "Dry the beans in the sun.",
+          "ja": "まめを おひさまで かわかして。",
+          "action": "てを ひろげて ならべる まね",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Smell the chocolate. Mmm!",
+          "ja": "チョコレートの においを かいで。うーん！",
+          "action": "めを とじて すうっと すう",
+          "emoji": "🍫"
+        },
+        {
+          "en": "Point to the map.",
+          "ja": "ちずを ゆびさして。",
+          "action": "ゆびで くうちゅうを さす",
+          "emoji": "🗺️"
+        }
+      ],
+      "phonics": {
+        "rule": "y-adjective",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "cloudy",
+          "salty",
+          "shiny",
+          "sunny"
+        ],
+        "tipJa": "-y の まとめ（ブロックの 4 回目）: cloud → cloudy（そのまま y）・salt → salty（そのまま y）・shine → shiny（e を とる）・sun → sunny（しいんを かさねる）。3つの きまりを くらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "chocolate",
+          "ja": "チョコレート",
+          "emoji": "🍫",
+          "core": true
+        },
+        {
+          "en": "cacao bean",
+          "ja": "カカオまめ",
+          "emoji": "🌰"
+        },
+        {
+          "en": "country",
+          "ja": "くに",
+          "emoji": "🌍"
+        },
+        {
+          "en": "factory",
+          "ja": "こうじょう",
+          "emoji": "🏭"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we will be detectives. We will find out where things are made. Let's start with something everyone loves. Chocolate! Where is chocolate made? Say it with me. Where is chocolate made? Good! Chocolate is made in many countries. Japan makes chocolate, too. But the beans come from far away. Cacao beans are grown in hot countries, like Ghana. Let's read Dr. Moss's fact card. \"Chocolate is made from cacao beans. Cacao trees like hot, sunny and rainy places near the equator. Many cacao beans are grown in Ghana and Cote d'Ivoire in West Africa. The beans are dried in the sun and sent to chocolate factories around the world. In the factories, the beans are roasted and mixed with sugar and milk.\" Wow. A chocolate bar travels a long way! Look at the label on a food package. You can often find the country. Now, phonics. Cloudy. Salty. Shiny. Sunny. Cloud plus y. Shine, drop the e, plus y. Sun, double the n, plus y. Let's be food detectives!",
+      "conversation": {
+        "scene": "The friends find out where things are made",
+        "sceneJa": "ものが どこで つくられて いるか しらべる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I love chocolate. Where is chocolate made?",
+            "ja": "ぼく チョコレート だいすき。チョコレートは どこで つくられて いるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Chocolate is made in many countries. Japan makes it, too.",
+            "ja": "チョコレートは たくさんの くにで つくられて いるよ。にほんでも つくって いるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "But cacao beans are grown in hot countries, like Ghana.",
+            "ja": "でも カカオまめは ガーナの ような あつい くにで そだてられて いるんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look at this banana label. Where are these bananas grown?",
+            "ja": "この バナナの ラベルを みて。この バナナは どこで そだてられて いるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "They're grown in the Philippines. It's sunny there.",
+            "ja": "フィリピンで そだてられて いるよ。あっちは はれの ひが おおいんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great detective work! Check the labels at home, too.",
+            "ja": "すばらしい たんていの しごとね！いえでも ラベルを しらべて みてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と「どこで つくられて いる？」クイズを しよう。Where is ～ made? / Where are ～ grown? と きいたり、～ is made in ～. で こたえたり しよう",
+          "starterEn": "I'm eating a banana right now. Let's play the Where Game! Ask me where something is made or grown.",
+          "targetExpressions": [
+            "Where is chocolate made?",
+            "Chocolate is made in many countries.",
+            "～ are grown in ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where is chocolate made?",
+          "Chocolate is made in many countries. / Cacao beans are grown in hot countries, like Ghana.",
+          "cloudy・salty・shiny・sunny"
+        ]
+      }
+    },
+    {
+      "lessonNo": 680,
+      "world": 23,
+      "title": "What Is It Made Of?",
+      "titleJa": "なにで できて いる？",
+      "school": {
+        "grade": "中3",
+        "topic": "It's made of glass and metal.：ざいりょう あてクイズ（まとめ）",
+        "grammar": "What is it made of? / It's made of glass and metal. / Is it made of plastic? ― No, it isn't.",
+        "expressions": [
+          {
+            "en": "It's made of glass and metal.",
+            "ja": "それは ガラスと きんぞくで できて いるよ。",
+            "core": true
+          },
+          {
+            "en": "What is it made of?",
+            "ja": "それは なにで できて いるの？"
+          },
+          {
+            "en": "Is it made of plastic? ― No, it isn't.",
+            "ja": "プラスチックで できて いる？ ― ううん、ちがうよ。"
+          }
+        ],
+        "testPoints": [
+          "What is it made of? ― It's made of ～. で ざいりょうを きいたり こたえたり できる",
+          "-y の ふりかえり（sticky・shiny・muddy・cloudy）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Close your eyes and touch the mystery box.",
+          "ja": "めを とじて なぞの はこを さわって。",
+          "action": "めを とじて てを のばす",
+          "emoji": "📦"
+        },
+        {
+          "en": "Is it hard? Knock, knock.",
+          "ja": "かたい？こんこん。",
+          "action": "こぶしで たたく まね",
+          "emoji": "✊"
+        },
+        {
+          "en": "Is it soft? Squeeze it.",
+          "ja": "やわらかい？ぎゅっと にぎって。",
+          "action": "てを ぎゅっと にぎる",
+          "emoji": "🧽"
+        },
+        {
+          "en": "Open your eyes. Surprise!",
+          "ja": "めを あけて。びっくり！",
+          "action": "めを ぱっと ひらいて りょうてを ひろげる",
+          "emoji": "🎁"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "sticky",
+          "shiny",
+          "muddy",
+          "cloudy"
+        ],
+        "tipJa": "-y の ふりかえり: sticky（そのまま y）・shiny（e を とる）・muddy（d を かさねる）・cloudy（そのまま y）。ようすの ことばで ざいりょうの ヒントを だそう！"
+      },
+      "vocab": [
+        {
+          "en": "plastic",
+          "ja": "プラスチック",
+          "emoji": "🥤",
+          "core": true
+        },
+        {
+          "en": "rubber",
+          "ja": "ゴム",
+          "emoji": "🎈"
+        },
+        {
+          "en": "cotton",
+          "ja": "めん（コットン）",
+          "emoji": "👕"
+        },
+        {
+          "en": "stone",
+          "ja": "いし",
+          "emoji": "🪨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the Mystery Box Quiz! Dr. Moss puts something in a box. You can ask questions, and Dr. Moss gives hints. Then you guess the material. First, ask, What is it made of? Then, guess. It's made of glass and metal. Say it with me. It's made of glass and metal. Super! You can ask yes or no questions, too. Is it made of plastic? No, it isn't. Let's read the hint cards for the first box. \"Hint one: It's hard and shiny. Hint two: It's made of glass and metal. Hint three: You can see through the glass part. Hint four: Scientists use it every day to look at tiny things. Hint five: Its name starts with micro.\" Do you know the answer? Yes! It's a microscope! You can also use your own hints. It's soft. It's sticky. It's made of cotton. Now, phonics review. Sticky. Shiny. Muddy. Cloudy. Use these words as hints in our quiz. Let's open the mystery boxes!",
+      "conversation": {
+        "scene": "The friends play a mystery box quiz",
+        "sceneJa": "なぞの はこ クイズで あそぶ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here's the mystery box. Ask me a question.",
+            "ja": "これが なぞの はこよ。しつもんして。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What is it made of?",
+            "ja": "それは なにで できて いるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's made of glass and metal. It's hard and shiny.",
+            "ja": "ガラスと きんぞくで できて いるわ。かたくて ぴかぴかよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Is it made of plastic?",
+            "ja": "プラスチックで できて いる？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, it isn't. Scientists use it to look at tiny things.",
+            "ja": "いいえ、ちがうわ。かがくしゃが ちいさな ものを みる ときに つかうのよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I know! It's a microscope!",
+            "ja": "わかった！けんびきょうだ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My turn! It's soft and sweet, and it's made from milk and sugar.",
+            "ja": "ぼくの ばん！やわらかくて あまくて、ぎゅうにゅうと さとうから できて いるよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と なぞの はこ クイズを しよう。AI が はこの なかの ものを かんがえるから、What is it made of? / Is it made of ～? と しつもんして あてよう。こうたいで じぶんも ヒントを だそう",
+          "starterEn": "I have a mystery box. There's something inside. You can ask me questions. What do you want to ask?",
+          "targetExpressions": [
+            "It's made of glass and metal.",
+            "What is it made of?",
+            "Is it made of plastic? No, it isn't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's made of glass and metal.",
+          "What is it made of? / Is it made of plastic? ― No, it isn't.",
+          "sticky・shiny・muddy・cloudy"
+        ]
+      }
+    },
+    {
+      "lessonNo": 681,
+      "world": 23,
+      "title": "Seeds Need Water",
+      "titleJa": "たねには みずが ひつよう",
+      "school": {
+        "grade": "中3",
+        "topic": "Seeds need water and warm air.：たねまき じっけん",
+        "grammar": "Seeds need water and warm air. / The seeds in the dry cup didn't change. / We need to keep the cotton wet.",
+        "expressions": [
+          {
+            "en": "Seeds need water and warm air.",
+            "ja": "たねには みずと あたたかい くうきが ひつようだよ。",
+            "core": true
+          },
+          {
+            "en": "The seeds in the dry cup didn't change.",
+            "ja": "かわいた カップの たねは かわらなかったよ。"
+          },
+          {
+            "en": "We need to keep the cotton wet.",
+            "ja": "わたを ぬらした ままに して おく ひつようが あるよ。"
+          }
+        ],
+        "testPoints": [
+          "Seeds need water and warm air. で たねが めを だす じょうけんを いえる",
+          "-tion の 理科の ことば（prediction・reaction・collection・observation）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put the cotton in the cup.",
+          "ja": "カップに わたを いれて。",
+          "action": "わたを そっと おく まね",
+          "emoji": "☁️"
+        },
+        {
+          "en": "Water it with a spray.",
+          "ja": "きりふきで みずを かけて。",
+          "action": "きりふきを しゅっしゅっ",
+          "emoji": "💦"
+        },
+        {
+          "en": "Put one cup in the fridge.",
+          "ja": "カップを 1つ れいぞうこに いれて。",
+          "action": "ドアを あけて おく まね",
+          "emoji": "🧊"
+        },
+        {
+          "en": "Curl up like a seed.",
+          "ja": "たねの ように まるく なって。",
+          "action": "しゃがんで まるく なる",
+          "emoji": "🌰"
+        }
+      ],
+      "phonics": {
+        "rule": "tion-noun",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "prediction",
+          "reaction",
+          "collection",
+          "observation"
+        ],
+        "tipJa": "predict → prediction（よそう）、react → reaction（はんのう）、collect → collection（あつめた もの）は t で おわるので ion を つけるだけ。observe → observation（かんさつ）は e を とって ation。おとは「ション」でも つづりは t・i・o・n。"
+      },
+      "vocab": [
+        {
+          "en": "seed",
+          "ja": "たね",
+          "emoji": "🌰",
+          "core": true
+        },
+        {
+          "en": "cotton",
+          "ja": "わた・だっしめん",
+          "emoji": "☁️"
+        },
+        {
+          "en": "dry",
+          "ja": "かわいた",
+          "emoji": "🏜️"
+        },
+        {
+          "en": "warm",
+          "ja": "あたたかい",
+          "emoji": "🌡️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we will start a seed experiment. What do seeds need to start growing? Dr. Moss gives us three cups. Each cup has cotton and five bean seeds. Cup A: wet cotton, in a warm room. Cup B: dry cotton, in a warm room. Cup C: wet cotton, in the fridge. Make your prediction. Three days later, here are the results. Only the seeds in cup A started to grow. Seeds need water and warm air. Say it with me. Seeds need water and warm air. Great! The seeds in the dry cup didn't change. We need to keep the cotton wet. Let's read Dr. Moss's observation card. \"Most seeds don't need light to start. They need water, air and the right temperature. When a seed drinks water, it gets bigger and softer. Then a tiny root pushes out.\" Hmm. The Sleeping Seed has water and warm air, but it's still sleeping. Maybe it needs something else. Now, phonics. Prediction. Reaction. Collection. Observation. Predict plus ion. Observe, drop the e, plus ation. Let's take care of our seeds!",
+      "conversation": {
+        "scene": "The friends check the results of the seed experiment",
+        "sceneJa": "たねの じっけんの けっかを みる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at cup A! The seeds have tiny white roots!",
+            "ja": "カップ A を みて！たねに ちいさな しろい ねが でてる！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "But the seeds in the dry cup didn't change.",
+            "ja": "でも かわいた カップの たねは かわらなかった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And cup C was in the fridge. Nothing happened.",
+            "ja": "それに カップ C は れいぞうこに あったね。なにも おきなかった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "So seeds need water and warm air.",
+            "ja": "だから たねには みずと あたたかい くうきが ひつようなんだね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The Sleeping Seed has water and warm air. Why is it still sleeping?",
+            "ja": "ねむる たねには みずも あたたかい くうきも あるよ。どうして まだ ねてるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good question, Birimo. Let's keep thinking. We need to keep the cotton wet, too.",
+            "ja": "いい しつもんね、ビリモ。かんがえつづけましょう。わたを ぬらして おく ことも わすれずに。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と たねを そだてる はなしを しよう。AI が「たねに なにが ひつよう？」と きくから、Seeds need ～. / We need to ～. で こたえて、じっけんの けっかも はなそう",
+          "starterEn": "I want to grow sunflowers this spring. I have some seeds and a pot. What do seeds need?",
+          "targetExpressions": [
+            "Seeds need water and warm air.",
+            "The seeds in the dry cup didn't change.",
+            "We need to keep the cotton wet."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Seeds need water and warm air.",
+          "The seeds in the dry cup didn't change. / We need to keep the cotton wet.",
+          "prediction・reaction・collection・observation"
+        ]
+      }
+    },
+    {
+      "lessonNo": 682,
+      "world": 23,
+      "title": "How Plants Grow",
+      "titleJa": "しょくぶつの そだちかた",
+      "school": {
+        "grade": "中3",
+        "topic": "First, a root grows. Then, a stem grows.：はつがを かんさつする",
+        "grammar": "First, a root grows. Then, a stem grows. / Next, two small leaves open. / The root grows down, and the stem grows up.",
+        "expressions": [
+          {
+            "en": "First, a root grows. Then, a stem grows.",
+            "ja": "まず ねが のびて、つぎに くきが のびるよ。",
+            "core": true
+          },
+          {
+            "en": "Next, two small leaves open.",
+            "ja": "それから 2まいの ちいさな はっぱが ひらくよ。"
+          },
+          {
+            "en": "The root grows down, and the stem grows up.",
+            "ja": "ねは したに、くきは うえに のびるよ。"
+          }
+        ],
+        "testPoints": [
+          "First, a root grows. Then, a stem grows. で じゅんばんを せつめいできる",
+          "-tion の 理科の ことば（observation・preparation・collection・prediction）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Push your feet down like roots.",
+          "ja": "ねの ように あしを したに のばして。",
+          "action": "あしを ふんばる",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Grow up like a stem.",
+          "ja": "くきの ように うえに のびて。",
+          "action": "ゆっくり せのびする",
+          "emoji": "🌱"
+        },
+        {
+          "en": "Open your hands like two leaves.",
+          "ja": "2まいの はっぱの ように てを ひらいて。",
+          "action": "りょうてを ひらく",
+          "emoji": "🌿"
+        },
+        {
+          "en": "Turn toward the sun.",
+          "ja": "おひさまの ほうを むいて。",
+          "action": "からだを まどの ほうへ むける",
+          "emoji": "🌞"
+        }
+      ],
+      "phonics": {
+        "rule": "tion-noun",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "observation",
+          "preparation",
+          "collection",
+          "prediction"
+        ],
+        "tipJa": "observe → observation（かんさつ）、prepare → preparation（じゅんび）は e を とって ation。collect → collection、predict → prediction は ion を つけるだけ。observetion・prepareation は まちがい！"
+      },
+      "vocab": [
+        {
+          "en": "root",
+          "ja": "ね",
+          "emoji": "🥕",
+          "core": true
+        },
+        {
+          "en": "stem",
+          "ja": "くき",
+          "emoji": "🌱"
+        },
+        {
+          "en": "sprout",
+          "ja": "め・めが でる",
+          "emoji": "🌱"
+        },
+        {
+          "en": "soil",
+          "ja": "つち",
+          "emoji": "🟫"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Our bean seeds are growing! Today, we will move them into pots with soil and observe them every day. Plants grow in order. Let's learn the order. First, a root grows. Then, a stem grows. Say it with me. First, a root grows. Then, a stem grows. Wonderful! Next, two small leaves open. Isn't it interesting? The root grows down, and the stem grows up. Even if you turn the seed upside down, the root still grows down! Let's read a page from Dr. Moss's plant book. \"How a bean plant grows. First, the seed drinks water and gets bigger. Then, the seed coat cracks, and a root grows down into the soil. Next, a stem grows up toward the light. After that, two small leaves open. Finally, more leaves grow, and the plant gets taller and taller.\" Use First, Then, Next, After that and Finally. They help us explain the order clearly. Now, phonics. Observation. Preparation. Collection. Prediction. Observe and prepare drop the e. Let's watch our plants grow!",
+      "conversation": {
+        "scene": "The friends observe their sprouting beans",
+        "sceneJa": "めを だした まめを かんさつする",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look at my bean. First, a root grows.",
+            "ja": "わたしの まめを みて。まず ねが のびるんだね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Then, a stem grows. Mine has a little stem now!",
+            "ja": "つぎに くきが のびる。ぼくのは もう ちいさな くきが あるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I turned my seed upside down. But the root grows down!",
+            "ja": "わたし たねを さかさまに したの。でも ねは したに のびるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The root grows down, and the stem grows up. Cool!",
+            "ja": "ねは したに、くきは うえに のびるんだ。すごい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Next, two small leaves open. They look like little hands!",
+            "ja": "それから 2まいの ちいさな はっぱが ひらく。ちいさな てみたい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great observation! Let's draw them in our notebooks.",
+            "ja": "すばらしい かんさつね！ノートに かきましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に しょくぶつの そだちかたを せつめいしよう。First, ～. Then, ～. Next, ～. Finally, ～. の じゅんで、AI に わかりやすく はなそう",
+          "starterEn": "I planted a bean seed, but I don't know what will happen. Can you explain how a bean plant grows?",
+          "targetExpressions": [
+            "First, a root grows. Then, a stem grows.",
+            "Next, two small leaves open.",
+            "The root grows down, and the stem grows up."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, a root grows. Then, a stem grows.",
+          "Next, two small leaves open. / The root grows down, and the stem grows up.",
+          "observation・preparation・collection・prediction"
+        ]
+      }
+    },
+    {
+      "lessonNo": 683,
+      "world": 23,
+      "title": "Butterflies Change",
+      "titleJa": "チョウは すがたを かえる",
+      "school": {
+        "grade": "中3",
+        "topic": "A caterpillar becomes a butterfly.：チョウの せいちょうを かんさつする",
+        "grammar": "A caterpillar becomes a butterfly. / First, a butterfly lays an egg on a leaf. / The caterpillar makes a chrysalis.",
+        "expressions": [
+          {
+            "en": "A caterpillar becomes a butterfly.",
+            "ja": "いもむしは チョウに なるよ。",
+            "core": true
+          },
+          {
+            "en": "First, a butterfly lays an egg on a leaf.",
+            "ja": "まず、チョウが はっぱに たまごを うむよ。"
+          },
+          {
+            "en": "The caterpillar makes a chrysalis.",
+            "ja": "いもむしは さなぎに なるよ。"
+          }
+        ],
+        "testPoints": [
+          "A caterpillar becomes a butterfly. で いきものの へんかを いえる",
+          "-tion の 理科の ことば（migration・rotation・evaporation・celebration）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Crawl like a caterpillar.",
+          "ja": "いもむしの ように はって。",
+          "action": "よつんばいで ゆっくり すすむ",
+          "emoji": "🐛"
+        },
+        {
+          "en": "Munch, munch! Eat the leaf.",
+          "ja": "もぐもぐ！はっぱを たべて。",
+          "action": "くちを おおきく うごかす",
+          "emoji": "🍃"
+        },
+        {
+          "en": "Wrap yourself up. Be very still.",
+          "ja": "からだを つつんで。じっと して。",
+          "action": "うでで からだを だいて とまる",
+          "emoji": "🛌"
+        },
+        {
+          "en": "Open your wings and fly!",
+          "ja": "はねを ひろげて とんで！",
+          "action": "りょうてを ひろげて はばたく",
+          "emoji": "🦋"
+        }
+      ],
+      "phonics": {
+        "rule": "tion-noun",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "migration",
+          "rotation",
+          "evaporation",
+          "celebration"
+        ],
+        "tipJa": "migrate → migration（わたり）、rotate → rotation（かいてん）、evaporate → evaporation（じょうはつ）、celebrate → celebration（おいわい）。ate で おわる ことばは te を とって tion。migrateion は まちがい！"
+      },
+      "vocab": [
+        {
+          "en": "caterpillar",
+          "ja": "いもむし・けむし",
+          "emoji": "🐛",
+          "core": true
+        },
+        {
+          "en": "butterfly",
+          "ja": "チョウ",
+          "emoji": "🦋"
+        },
+        {
+          "en": "chrysalis",
+          "ja": "さなぎ",
+          "emoji": "💤"
+        },
+        {
+          "en": "lay",
+          "ja": "（たまごを）うむ",
+          "emoji": "🥚"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Look at the lemon tree in the greenhouse. There's a little green caterpillar (いもむし) on a leaf. Dr. Moss says it will change a lot. A caterpillar becomes a butterfly. Say it with me. A caterpillar becomes a butterfly. Excellent! Becomes means changes into. Let's learn the steps. First, a butterfly lays an egg on a leaf. Then, a tiny caterpillar comes out and eats and eats. Next, the caterpillar makes a chrysalis. Let's read the life cycle poster. \"The life of a swallowtail butterfly. Day 1: A butterfly lays a small yellow egg on a lemon leaf. Day 5: A tiny caterpillar comes out of the egg. It eats the leaves and grows bigger. Day 25: The caterpillar makes a chrysalis and stays very still. Day 35: A beautiful butterfly comes out. It dries its wings and flies away.\" Some butterflies even fly to warm places in autumn. That's called migration. Now, phonics. Migration. Rotation. Evaporation. Celebration. Migrate, take away t e, add tion. Let's watch our caterpillar change!",
+      "conversation": {
+        "scene": "The friends watch a caterpillar in the greenhouse",
+        "sceneJa": "おんしつで いもむしを かんさつする",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "There's a green caterpillar on the lemon tree!",
+            "ja": "レモンの きに みどりの いもむしが いる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's eating and eating. It's hungry like me!",
+            "ja": "ずっと たべてる。ぼくみたいに はらぺこだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A caterpillar becomes a butterfly, right?",
+            "ja": "いもむしは チョウに なるんだよね？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes. First, the caterpillar makes a chrysalis.",
+            "ja": "うん。まず いもむしは さなぎに なるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Then it stays very still for ten days. Then a butterfly comes out!",
+            "ja": "それから 10 にちくらい じっと して いて、チョウが でて くるんだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's check it every day and write in our notebooks.",
+            "ja": "まいにち みて、ノートに かきましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に チョウの いっしょうを せつめいしよう。A caterpillar becomes a butterfly. と、First, ～. Then, ～. Next, ～. で じゅんばんに はなそう",
+          "starterEn": "I found a caterpillar in my garden! What will happen to it? Can you tell me the steps?",
+          "targetExpressions": [
+            "A caterpillar becomes a butterfly.",
+            "First, a butterfly lays an egg on a leaf.",
+            "The caterpillar makes a chrysalis."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "A caterpillar becomes a butterfly.",
+          "First, a butterfly lays an egg on a leaf. / The caterpillar makes a chrysalis.",
+          "migration・rotation・evaporation・celebration"
+        ]
+      }
+    },
+    {
+      "lessonNo": 684,
+      "world": 23,
+      "title": "Plants Need Sunlight",
+      "titleJa": "しょくぶつには ひかりが ひつよう",
+      "school": {
+        "grade": "中3",
+        "topic": "Plants need sunlight to grow.：ひなたと ひかげの くらべる じっけん",
+        "grammar": "Plants need sunlight to grow. / The plant in the shade was pale and thin. / We gave both plants the same water.",
+        "expressions": [
+          {
+            "en": "Plants need sunlight to grow.",
+            "ja": "しょくぶつが そだつには ひかりが ひつようだよ。",
+            "core": true
+          },
+          {
+            "en": "The plant in the shade was pale and thin.",
+            "ja": "ひかげの しょくぶつは いろが うすくて ほそかったよ。"
+          },
+          {
+            "en": "We gave both plants the same water.",
+            "ja": "どちらの しょくぶつにも おなじ みずを あげたよ。"
+          }
+        ],
+        "testPoints": [
+          "Plants need sunlight to grow. で しょくぶつに ひつような ものを いえる",
+          "-tion の まとめ（evaporation・observation・prediction・rotation）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand in the sunlight.",
+          "ja": "ひなたに たって。",
+          "action": "てを ひろげて ひなたぼっこ",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Hide in the shade.",
+          "ja": "ひかげに かくれて。",
+          "action": "しゃがんで あたまを かくす",
+          "emoji": "🌳"
+        },
+        {
+          "en": "Droop like a sad plant.",
+          "ja": "げんきの ない しょくぶつの ように しおれて。",
+          "action": "からだを まえに だらんと たらす",
+          "emoji": "🥀"
+        },
+        {
+          "en": "Stand up tall and green.",
+          "ja": "みどりで げんきに まっすぐ たって。",
+          "action": "せすじを ぴんと のばす",
+          "emoji": "🌻"
+        }
+      ],
+      "phonics": {
+        "rule": "tion-noun",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "evaporation",
+          "observation",
+          "prediction",
+          "rotation"
+        ],
+        "tipJa": "-tion の まとめ（ブロックの 4 回目）: evaporate → evaporation・rotate → rotation（te を とる）、observe → observation（e を とって ation）、predict → prediction（ion だけ）。"
+      },
+      "vocab": [
+        {
+          "en": "sunlight",
+          "ja": "ひかり・にっこう",
+          "emoji": "☀️",
+          "core": true
+        },
+        {
+          "en": "shade",
+          "ja": "ひかげ",
+          "emoji": "🌳"
+        },
+        {
+          "en": "pale",
+          "ja": "いろが うすい",
+          "emoji": "🥬"
+        },
+        {
+          "en": "both",
+          "ja": "どちらも",
+          "emoji": "✌️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Two weeks ago, we put two bean plants in two places. One plant was by the sunny window. One plant was in a dark closet. We gave both plants the same water. That's important. In a fair test, we change only one thing. Let's look at them now. The plant by the window is green and strong. The plant in the shade was pale and thin. Plants need sunlight to grow. Say it with me. Plants need sunlight to grow. Wonderful! Plants use sunlight to make their own food in their leaves. Let's read Riko's observation notes. \"Window plant: The stem was 18 centimeters tall. It had six green leaves. It looked strong and healthy. Closet plant: The stem was very long and thin, but it was weak. The leaves were small and yellow. It leaned toward the door, because a little light came in there.\" So the dark plant was looking for light! Now, phonics. Evaporation. Observation. Prediction. Rotation. Listen. The strong part comes just before tion. Let's give our plants some sunlight!",
+      "conversation": {
+        "scene": "The friends compare a sunny plant and a dark plant",
+        "sceneJa": "ひなたと ひかげの しょくぶつを くらべる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Let's look at our two bean plants.",
+            "ja": "2つの まめの しょくぶつを みて みよう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The plant by the window is green and strong.",
+            "ja": "まどの そばの しょくぶつは みどりで じょうぶだね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The plant in the shade was pale and thin. Poor thing!",
+            "ja": "ひかげの しょくぶつは いろが うすくて ほそかった。かわいそう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We gave both plants the same water. So the only difference was the light.",
+            "ja": "どちらにも おなじ みずを あげたよね。だから ちがいは ひかりだけ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Plants need sunlight to grow.",
+            "ja": "しょくぶつが そだつには ひかりが ひつようなんだね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Maybe the Sleeping Seed needs sunlight, too!",
+            "ja": "ねむる たねも ひかりが ひつようかも！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good idea. But seeds don't need light to start. Hmm, it's still a mystery.",
+            "ja": "いい かんがえね。でも たねは めを だす ときには ひかりは いらないの。うーん、まだ なぞね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と ひなたと ひかげの じっけんの はなしを しよう。Plants need ～ to grow. と、くらべた けっか（The plant in the shade was ～.）を AI に つたえよう",
+          "starterEn": "My plant looks pale and thin. I keep it in a dark corner of my room. What do you think it needs?",
+          "targetExpressions": [
+            "Plants need sunlight to grow.",
+            "The plant in the shade was pale and thin.",
+            "We gave both plants the same water."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Plants need sunlight to grow.",
+          "The plant in the shade was pale and thin. / We gave both plants the same water.",
+          "evaporation・observation・prediction・rotation"
+        ]
+      }
+    },
+    {
+      "lessonNo": 685,
+      "world": 23,
+      "title": "Growth Diary",
+      "titleJa": "せいちょう にっき",
+      "school": {
+        "grade": "中3",
+        "topic": "On day five, the stem was three centimeters tall.：せいちょう にっきの はっぴょう（まとめ）",
+        "grammar": "On day five, the stem was three centimeters tall. / On day ten, it had four leaves. / It grew two centimeters in three days.",
+        "expressions": [
+          {
+            "en": "On day five, the stem was three centimeters tall.",
+            "ja": "5 にちめに、くきは 3 センチメートルの たかさでした。",
+            "core": true
+          },
+          {
+            "en": "On day ten, it had four leaves.",
+            "ja": "10 にちめには、はっぱが 4まい ありました。"
+          },
+          {
+            "en": "It grew two centimeters in three days.",
+            "ja": "3 にちで 2 センチメートル のびました。"
+          }
+        ],
+        "testPoints": [
+          "On day five, the stem was three centimeters tall. で せいちょうの きろくを はっぴょうできる",
+          "-tion の ふりかえり（prediction・observation・migration・celebration）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your diary.",
+          "ja": "にっきを たかく もって。",
+          "action": "りょうてで かかげる",
+          "emoji": "📔"
+        },
+        {
+          "en": "Show me three centimeters with your fingers.",
+          "ja": "ゆびで 3 センチメートルを みせて。",
+          "action": "おやゆびと ひとさしゆびで はばを つくる",
+          "emoji": "🤏"
+        },
+        {
+          "en": "Count the leaves: one, two, three, four.",
+          "ja": "はっぱを かぞえて：1、2、3、4。",
+          "action": "ゆびを 1ぽんずつ たてる",
+          "emoji": "🍃"
+        },
+        {
+          "en": "Clap for your friend.",
+          "ja": "ともだちに はくしゅ。",
+          "action": "おおきく はくしゅ",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-tion"
+        ],
+        "sounds": [
+          "/ʃən/"
+        ],
+        "words": [
+          "prediction",
+          "observation",
+          "migration",
+          "celebration"
+        ],
+        "tipJa": "-tion の ふりかえり: prediction（ion だけ）・observation（e を とって ation）・migration・celebration（te を とって tion）。にっきの タイトルにも つかえるね！"
+      },
+      "vocab": [
+        {
+          "en": "diary",
+          "ja": "にっき",
+          "emoji": "📔",
+          "core": true
+        },
+        {
+          "en": "tall",
+          "ja": "たかい・〜の たかさ",
+          "emoji": "📏"
+        },
+        {
+          "en": "day",
+          "ja": "〜にちめ・ひ",
+          "emoji": "📅"
+        },
+        {
+          "en": "grow",
+          "ja": "のびる・そだつ",
+          "emoji": "🌱"
+        }
+      ],
+      "teacherScript": "Hello, everyone! For two weeks, we watched our bean plants and wrote a growth diary every day. Today, you will share your diary. Use numbers to show the changes. On day five, the stem was three centimeters tall. Say it with me. On day five, the stem was three centimeters tall. Excellent! You can talk about leaves, too. On day ten, it had four leaves. And you can talk about how fast it grew. It grew two centimeters in three days. Let's read Kiko's diary. \"Day 1: I planted my bean seed. Day 3: A small root came out. Day 5: The stem was three centimeters tall. Day 7: Two small leaves opened. Day 10: It had four leaves. The stem was eight centimeters tall. Day 14: The stem was twelve centimeters tall. It grew four centimeters in four days! My bean is growing fast.\" Great diary, Kiko! Remember to use the past tense. It was. It had. It grew. Now, phonics review. Prediction. Observation. Migration. Celebration. Let's present our growth diaries!",
+      "conversation": {
+        "scene": "The friends present their growth diaries",
+        "sceneJa": "せいちょう にっきを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Here's my growth diary. On day five, the stem was three centimeters tall.",
+            "ja": "わたしの せいちょう にっきです。5 にちめに、くきは 3 センチメートルでした。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How many leaves did it have?",
+            "ja": "はっぱは なんまい あったの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "On day ten, it had four leaves.",
+            "ja": "10 にちめには 4まい ありました。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Mine grew two centimeters in three days. It's growing fast!",
+            "ja": "わたしのは 3 にちで 2 センチメートル のびたよ。はやく そだってる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "On day fourteen, my bean had a flower!",
+            "ja": "14 にちめに、ぼくの まめに はなが さいたよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wow, that's fast! Is it really your bean, Birimo?",
+            "ja": "わあ、はやいわね！ほんとうに あなたの まめなの、ビリモ？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oops. That's Dr. Moss's flower pot!",
+            "ja": "おっと。それは モスはかせの うえきばちだった！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に せいちょう にっきを はっぴょうしよう。On day ～, the stem was ～ centimeters tall. / It had ～ leaves. の ように すうじを つかって 3 文 いじょう はなそう",
+          "starterEn": "I'd love to hear about your plant! What happened on day one? And how tall was it at the end?",
+          "targetExpressions": [
+            "On day five, the stem was three centimeters tall.",
+            "On day ten, it had four leaves.",
+            "It grew two centimeters in three days."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "On day five, the stem was three centimeters tall.",
+          "On day ten, it had four leaves. / It grew two centimeters in three days.",
+          "prediction・observation・migration・celebration"
+        ]
+      }
+    },
+    {
+      "lessonNo": 686,
+      "world": 23,
+      "title": "Science Fair Plan",
+      "titleJa": "かがくフェアの けいかく",
+      "school": {
+        "grade": "中3",
+        "topic": "Our question is \"Do plants like music?\"：かがくフェアの テーマを きめる",
+        "grammar": "Our question is \"～?\" / We will need ～. / What will you change, and what will you keep the same?",
+        "expressions": [
+          {
+            "en": "Our question is \"Do plants like music?\"",
+            "ja": "わたしたちの しつもんは「しょくぶつは おんがくが すき？」です。",
+            "core": true
+          },
+          {
+            "en": "We will need two plants, a speaker and a ruler.",
+            "ja": "しょくぶつ 2つと スピーカーと じょうぎが ひつようです。"
+          },
+          {
+            "en": "What will you change, and what will you keep the same?",
+            "ja": "なにを かえて、なにを おなじに する？"
+          }
+        ],
+        "testPoints": [
+          "Our question is \"Do plants like music?\" で じっけんの テーマを いえる",
+          "ワールド23 の ふりかえり（microscope・experiment・scientist・prediction）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand if you have an idea.",
+          "ja": "アイデアが ある ひとは てを あげて。",
+          "action": "てを ぴんと あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Write your question on a card.",
+          "ja": "しつもんを カードに かいて。",
+          "action": "カードに かく まね",
+          "emoji": "🗒️"
+        },
+        {
+          "en": "Vote for your favorite idea.",
+          "ja": "すきな アイデアに いれて。",
+          "action": "ゆびを 1ぽん たてる",
+          "emoji": "🗳️"
+        },
+        {
+          "en": "Shake hands with your team.",
+          "ja": "チームの みんなと あくしゅ。",
+          "action": "となりの ひとと あくしゅ",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "micro-",
+          "-ment",
+          "sci-en-tist",
+          "-tion"
+        ],
+        "sounds": [
+          "/ˈmaɪkroʊ/",
+          "/mənt/",
+          "SCI",
+          "/ʃən/"
+        ],
+        "words": [
+          "microscope",
+          "experiment",
+          "scientist",
+          "prediction"
+        ],
+        "tipJa": "ワールド23 の まとめ: microscope（micro＝ちいさい）・experiment（m・e・n・t）・SCI・en・tist（はじめを つよく）・prediction（ion を つける）。かがくフェアの ポスターに つかう ことばだよ！"
+      },
+      "vocab": [
+        {
+          "en": "science fair",
+          "ja": "かがくフェア",
+          "emoji": "🏆",
+          "core": true
+        },
+        {
+          "en": "question",
+          "ja": "しつもん・ぎもん",
+          "emoji": "❓"
+        },
+        {
+          "en": "speaker",
+          "ja": "スピーカー",
+          "emoji": "🔊"
+        },
+        {
+          "en": "same",
+          "ja": "おなじ",
+          "emoji": "🟰"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Big news! The Green Laboratory will have a science fair at the end of this world. Every team will do an experiment and present it. First, we need a good question. A good question is something you can test. Haru and Riko have an idea. Our question is, Do plants like music? Say it with me. Our question is, Do plants like music? Great! Next, think about what you will need. We will need two plants, a speaker and a ruler. And here's the most important question for a fair test. What will you change, and what will you keep the same? Let's read the team's plan. \"Our question: Do plants like music? What we will change: One plant will hear music every day. The other plant will not. What we will keep the same: The same kind of plant, the same pot, the same water and the same sunlight. What we will measure: The height of the plants every morning.\" That's a very scientific plan. Now, phonics review. Microscope. Experiment. Scientist. Prediction. Let's plan our science fair projects!",
+      "conversation": {
+        "scene": "The friends choose a question for the science fair",
+        "sceneJa": "かがくフェアの しつもんを きめる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Every team needs a question for the science fair. Any ideas?",
+            "ja": "どの チームも かがくフェアの しつもんが ひつようよ。アイデアは ある？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Our question is \"Do plants like music?\"",
+            "ja": "ぼくたちの しつもんは「しょくぶつは おんがくが すき？」だよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We will need two plants, a speaker and a ruler.",
+            "ja": "しょくぶつ 2つと スピーカーと じょうぎが ひつようだね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good. What will you change, and what will you keep the same?",
+            "ja": "いいわね。なにを かえて、なにを おなじに する？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We will change the music. We will keep the water and sunlight the same.",
+            "ja": "おんがくだけ かえるよ。みずと ひかりは おなじに する。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Our team's question is \"Why is the Sleeping Seed still sleeping?\"",
+            "ja": "わたしたちの チームの しつもんは「ねむる たねは どうして まだ ねて いるの？」だよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "That's a big question. I'll help!",
+            "ja": "それは おおきな しつもんだね。てつだうよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と かがくフェアの けいかくを たてよう。Our question is \"～?\" と しつもんを いって、We will need ～. / We will change ～. / We will keep ～ the same. で けいかくを せつめいしよう",
+          "starterEn": "I'm a judge at the science fair. Tell me about your plan! What's your question?",
+          "targetExpressions": [
+            "Our question is \"Do plants like music?\"",
+            "We will need two plants, a speaker and a ruler.",
+            "What will you change, and what will you keep the same?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Our question is \"Do plants like music?\"",
+          "We will need two plants, a speaker and a ruler. / What will you change, and what will you keep the same?",
+          "microscope・experiment・scientist・prediction"
+        ]
+      }
+    },
+    {
+      "lessonNo": 687,
+      "world": 23,
+      "title": "Doing the Experiment",
+      "titleJa": "じっけんを しよう",
+      "school": {
+        "grade": "中3",
+        "topic": "We played music for one plant every day.：かがくフェアの じっけんを する",
+        "grammar": "We played music for one plant every day. / We gave both plants the same water and sunlight. / We measured the plants every morning.",
+        "expressions": [
+          {
+            "en": "We played music for one plant every day.",
+            "ja": "まいにち、しょくぶつの 1つに おんがくを ながしました。",
+            "core": true
+          },
+          {
+            "en": "We gave both plants the same water and sunlight.",
+            "ja": "どちらの しょくぶつにも おなじ みずと ひかりを あげました。"
+          },
+          {
+            "en": "We measured the plants every morning.",
+            "ja": "まいあさ しょくぶつを はかりました。"
+          }
+        ],
+        "testPoints": [
+          "We played music for one plant every day. で じっけんで した ことを いえる",
+          "ワールド23 の ふりかえり（thermometer・measurement・energy・sunny）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Press play on the speaker.",
+          "ja": "スピーカーの さいせいを おして。",
+          "action": "ゆびで ボタンを おす",
+          "emoji": "▶️"
+        },
+        {
+          "en": "Dance to the music.",
+          "ja": "おんがくに あわせて おどって。",
+          "action": "からだを ゆらす",
+          "emoji": "🎵"
+        },
+        {
+          "en": "Water both plants.",
+          "ja": "どちらの しょくぶつにも みずを あげて。",
+          "action": "じょうろで 2かい みずやり",
+          "emoji": "🚿"
+        },
+        {
+          "en": "Measure the stem from the soil.",
+          "ja": "つちから くきを はかって。",
+          "action": "じょうぎを たてる まね",
+          "emoji": "📏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-meter",
+          "-ment",
+          "en-er-gy",
+          "-y"
+        ],
+        "sounds": [
+          "/mətər/",
+          "/mənt/",
+          "EN",
+          "/i/"
+        ],
+        "words": [
+          "thermometer",
+          "measurement",
+          "energy",
+          "sunny"
+        ],
+        "tipJa": "ワールド23 の まとめ: thermometer（meter＝はかる どうぐ）・measurement（e を のこす）・EN・er・gy（はじめを つよく）・sunny（n を かさねる）。"
+      },
+      "vocab": [
+        {
+          "en": "play music",
+          "ja": "おんがくを ながす",
+          "emoji": "🎶",
+          "core": true
+        },
+        {
+          "en": "every day",
+          "ja": "まいにち",
+          "emoji": "📅"
+        },
+        {
+          "en": "morning",
+          "ja": "あさ",
+          "emoji": "🌅"
+        },
+        {
+          "en": "height",
+          "ja": "たかさ",
+          "emoji": "📏"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Haru and Riko's experiment is going well. For two weeks, they played music for one plant. The other plant stayed in a quiet room. Now, let's tell people what we did. Use the past tense. We played music for one plant every day. Say it with me. We played music for one plant every day. Wonderful! Then explain the fair test. We gave both plants the same water and sunlight. And we measured the plants every morning. Let's read their measurement table. \"Music plant: Day 1, five centimeters. Day 7, nine centimeters. Day 14, fourteen centimeters. Quiet plant: Day 1, five centimeters. Day 7, nine centimeters. Day 14, thirteen centimeters. Notes: Every morning, we checked the room with a thermometer. The temperature was the same for both plants. We played gentle piano music for one hour each day.\" Hmm. The music plant is one centimeter taller. Is that a big difference? Let's think about it next time. Now, phonics review. Thermometer. Measurement. Energy. Sunny. Let's do our experiments carefully!",
+      "conversation": {
+        "scene": "The friends measure their science fair plants",
+        "sceneJa": "かがくフェアの しょくぶつを はかる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "We played music for one plant every day.",
+            "ja": "まいにち、しょくぶつの 1つに おんがくを ながしたよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We gave both plants the same water and sunlight.",
+            "ja": "どちらにも おなじ みずと ひかりを あげたよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What kind of music did you play?",
+            "ja": "どんな おんがくを ながしたの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Gentle piano music. We measured the plants every morning.",
+            "ja": "やさしい ピアノの おんがく。まいあさ しょくぶつを はかったよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I sang for the Sleeping Seed every day. But it's still sleeping.",
+            "ja": "ぼくは まいにち ねむる たねに うたったよ。でも まだ ねてる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Keep trying, Birimo. Scientists never give up.",
+            "ja": "あきらめないで、ビリモ。かがくしゃは けっして あきらめないのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に じっけんで した ことを はなそう。We played ～. / We gave ～. / We measured ～. の ように すぎた かたちで 3 文 いじょう、じゅんばんに せつめいしよう",
+          "starterEn": "I heard you did an experiment with plants and music. That's so interesting! What did you do?",
+          "targetExpressions": [
+            "We played music for one plant every day.",
+            "We gave both plants the same water and sunlight.",
+            "We measured the plants every morning."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We played music for one plant every day.",
+          "We gave both plants the same water and sunlight. / We measured the plants every morning.",
+          "thermometer・measurement・energy・sunny"
+        ]
+      }
+    },
+    {
+      "lessonNo": 688,
+      "world": 23,
+      "title": "My Lab Report",
+      "titleJa": "わたしの じっけん レポート",
+      "school": {
+        "grade": "中3",
+        "topic": "Purpose, prediction, result, conclusion：じっけん レポートを かく",
+        "grammar": "Our report has four parts. / The purpose of our experiment was to ～. / We can't be sure yet. We need to try again.",
+        "expressions": [
+          {
+            "en": "Our report has four parts: purpose, prediction, result and conclusion.",
+            "ja": "わたしたちの レポートには 4つの ぶぶんが あります。もくてき・よそう・けっか・けつろんです。",
+            "core": true
+          },
+          {
+            "en": "The purpose of our experiment was to find out about plants and music.",
+            "ja": "じっけんの もくてきは しょくぶつと おんがくに ついて しらべる ことでした。"
+          },
+          {
+            "en": "We can't be sure yet. We need to try again.",
+            "ja": "まだ たしかとは いえません。もう いちど ためす ひつようが あります。"
+          }
+        ],
+        "testPoints": [
+          "Purpose, prediction, result, conclusion の じゅんで じっけん レポートを かける",
+          "ワールド23 の ふりかえり（telescope・equipment・photography・shiny・observation）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write the title at the top.",
+          "ja": "いちばん うえに タイトルを かいて。",
+          "action": "くうちゅうに よこせんを かく",
+          "emoji": "📝"
+        },
+        {
+          "en": "Draw a graph.",
+          "ja": "グラフを かいて。",
+          "action": "くうちゅうに ぼうグラフを かく",
+          "emoji": "📊"
+        },
+        {
+          "en": "Check your spelling.",
+          "ja": "つづりを たしかめて。",
+          "action": "ゆびで 1もじずつ なぞる",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Hand in your report.",
+          "ja": "レポートを ていしゅつして。",
+          "action": "りょうてで まえに さしだす",
+          "emoji": "📤"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-scope",
+          "-ment",
+          "pho-tog-ra-phy",
+          "-y",
+          "-tion"
+        ],
+        "sounds": [
+          "/skoʊp/",
+          "/mənt/",
+          "TOG",
+          "/i/",
+          "/ʃən/"
+        ],
+        "words": [
+          "telescope",
+          "equipment",
+          "photography",
+          "shiny",
+          "observation"
+        ],
+        "tipJa": "ワールド23 の まとめ: telescope（scope＝みる どうぐ）・equipment（p は 1つ）・pho・TOG・ra・phy（2ばんめを つよく）・shiny（e を とる）・observation（e を とって ation）。"
+      },
+      "vocab": [
+        {
+          "en": "purpose",
+          "ja": "もくてき",
+          "emoji": "🎯",
+          "core": true
+        },
+        {
+          "en": "conclusion",
+          "ja": "けつろん",
+          "emoji": "✅"
+        },
+        {
+          "en": "graph",
+          "ja": "グラフ",
+          "emoji": "📊"
+        },
+        {
+          "en": "sure",
+          "ja": "たしかな",
+          "emoji": "👍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today, we will write a lab report. A lab report has four parts. Purpose. Prediction. Result. Conclusion. Our report has four parts: purpose, prediction, result and conclusion. Say it with me. Our report has four parts: purpose, prediction, result and conclusion. Great! The purpose is why we did the experiment. The conclusion (けつろん) is what we learned. Let's read Riko's lab report. \"Purpose: The purpose of our experiment was to find out about plants and music. Prediction: We predicted the music plant would grow taller. Result: After two weeks, the music plant was 14 centimeters tall. The quiet plant was 13 centimeters tall. Conclusion: The music plant grew a little more. But one centimeter is a very small difference. We only used two plants. We can't be sure yet. We need to try again with more plants.\" What an honest report! Good scientists don't jump to a big answer. They say, We can't be sure yet. Now, phonics review. Telescope. Equipment. Photography. Shiny. Observation. Let's write our lab reports!",
+      "conversation": {
+        "scene": "The friends write their lab reports",
+        "sceneJa": "じっけん レポートを かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Our report has four parts: purpose, prediction, result and conclusion.",
+            "ja": "レポートには 4つの ぶぶんが あるよ。もくてき・よそう・けっか・けつろん。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The music plant was one centimeter taller. So plants like music!",
+            "ja": "おんがくの しょくぶつの ほうが 1 センチ たかかった。だから しょくぶつは おんがくが すきなんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hmm, one centimeter is a small difference. We only used two plants.",
+            "ja": "うーん、1 センチは ちいさな ちがいだよ。しょくぶつは 2つしか つかって いないし。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You're right. We can't be sure yet. We need to try again.",
+            "ja": "そうだね。まだ たしかとは いえない。もう いちど ためす ひつようが あるね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's a great conclusion. Honest scientists say that.",
+            "ja": "すばらしい けつろんね。しょうじきな かがくしゃは そう いうのよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Our conclusion is short. The Sleeping Seed is still a mystery.",
+            "ja": "わたしたちの けつろんは みじかいよ。ねむる たねは まだ なぞです。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に じっけん レポートを はっぴょうしよう。The purpose ～ was to ～. / We predicted ～. / The result was ～. / We can't be sure yet. の じゅんで、さいごに つぎに ためしたい ことも いおう",
+          "starterEn": "I'm reading lab reports today. Please tell me about yours. What was the purpose of your experiment?",
+          "targetExpressions": [
+            "Our report has four parts: purpose, prediction, result and conclusion.",
+            "The purpose of our experiment was to ～.",
+            "We can't be sure yet. We need to try again."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Our report has four parts: purpose, prediction, result and conclusion.",
+          "The purpose of our experiment was to find out about plants and music. / We can't be sure yet. We need to try again.",
+          "telescope・equipment・photography・shiny・observation"
+        ]
+      }
+    },
+    {
+      "lessonNo": 689,
+      "world": 23,
+      "title": "Green Laboratory Review",
+      "titleJa": "みどりの けんきゅうじょ ふりかえり",
+      "school": {
+        "grade": "中3",
+        "topic": "I predict ～. / It's made of ～. / If ～, ～.：けんきゅうじょの さよなら けんがく",
+        "grammar": "I predict ～. / It's made of ～. / If ～, ～. / We learned a lot in the Green Laboratory.",
+        "expressions": [
+          {
+            "en": "We learned a lot in the Green Laboratory.",
+            "ja": "みどりの けんきゅうじょで たくさん まなんだね。",
+            "core": true
+          },
+          {
+            "en": "If you heat ice, it melts. Paper is made from trees.",
+            "ja": "こおりを あたためると とける。かみは きから つくられる。"
+          },
+          {
+            "en": "I predict the Sleeping Seed will wake up.",
+            "ja": "ねむる たねは めを さますと よそうするよ。"
+          }
+        ],
+        "testPoints": [
+          "We learned a lot in the Green Laboratory. で ワールドの ふりかえりが できる",
+          "ワールド23 の ふりかえり（thermostat・environment・magnetic・muddy・migration）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk through the greenhouse.",
+          "ja": "おんしつを あるいて とおって。",
+          "action": "その ばで ゆっくり あるく",
+          "emoji": "🌿"
+        },
+        {
+          "en": "Wave to the plants.",
+          "ja": "しょくぶつに てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Open the old notebook carefully.",
+          "ja": "ふるい ノートを そっと ひらいて。",
+          "action": "そっと ページを めくる まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Put the seed in the fridge.",
+          "ja": "たねを れいぞうこに いれて。",
+          "action": "そっと おく まね",
+          "emoji": "🧊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "thermo-",
+          "-ment",
+          "mag-net-ic",
+          "-y",
+          "-tion"
+        ],
+        "sounds": [
+          "/ˈθɜːrmoʊ/",
+          "/mənt/",
+          "NET",
+          "/i/",
+          "/ʃən/"
+        ],
+        "words": [
+          "thermostat",
+          "environment",
+          "magnetic",
+          "muddy",
+          "migration"
+        ],
+        "tipJa": "ワールド23 の まとめ: thermostat（thermo＝ねつ）・environment（n を わすれない）・mag・NET・ic（まんなかを つよく）・muddy（d を かさねる）・migration（te を とって tion）。"
+      },
+      "vocab": [
+        {
+          "en": "tour",
+          "ja": "けんがく・ツアー",
+          "emoji": "🚶",
+          "core": true
+        },
+        {
+          "en": "learn",
+          "ja": "まなぶ",
+          "emoji": "📚"
+        },
+        {
+          "en": "winter",
+          "ja": "ふゆ",
+          "emoji": "❄️"
+        },
+        {
+          "en": "wake up",
+          "ja": "めを さます",
+          "emoji": "⏰"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is our goodbye tour of the Green Laboratory. Let's remember everything. In the safety room, we learned the rules. Wear your goggles. In the water room, we said, I predict the apple will float. The egg floated! If you heat ice, it melts. In the storeroom, we said, It's made of wood. Paper is made from trees. And in the greenhouse, we said, Plants need sunlight to grow. We learned a lot in the Green Laboratory. Say it with me. We learned a lot in the Green Laboratory. Beautiful! Oh, wait! Kiko found a very old notebook in the storeroom. It belonged to Dr. Moss's grandfather. Let's read the last page. \"I found the Sleeping Seed on a snowy mountain. Seeds from cold places are clever. They wait for winter. If the seed feels a long, cold winter, it knows that spring is coming. Then it can wake up.\" A cold winter! Seeds from cold places need cold first. Dr. Moss puts the seed in the fridge for a winter. Now, phonics review. Thermostat. Environment. Magnetic. Muddy. Migration. Let's finish our goodbye tour!",
+      "conversation": {
+        "scene": "The friends take a goodbye tour and find an old notebook",
+        "sceneJa": "さよなら けんがくで ふるい ノートを みつける",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "This is the water room. Remember the egg? The result was surprising!",
+            "ja": "ここは みずの へや。たまご おぼえてる？けっかに びっくりしたよね！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And in the storeroom, everything was dusty. It's made of wood!",
+            "ja": "それに ざいりょうこは ほこりだらけだった。きで できて いる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! I found an old notebook. It says the seed needs a cold winter.",
+            "ja": "みて！ふるい ノートを みつけたよ。たねには さむい ふゆが ひつようだって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "When water freezes, it gets bigger. But seeds need cold, not ice!",
+            "ja": "みずは こおると おおきく なる。でも たねに ひつようなのは さむさで、こおりじゃないね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's put it in the fridge. I predict the Sleeping Seed will wake up!",
+            "ja": "れいぞうこに いれよう。ねむる たねは めを さますと よそうするよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "We learned a lot in the Green Laboratory. Thank you, Dr. Moss!",
+            "ja": "みどりの けんきゅうじょで たくさん まなんだわね。ありがとう、モスはかせ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と ワールド23 の ふりかえりを しよう。I predict ～. / It's made of ～. / If ～, ～. / Plants need ～. の なかから 3つ えらんで、AI に じっけんの おもいでを はなそう",
+          "starterEn": "You did so many experiments in the Green Laboratory! Which experiment was your favorite? Why?",
+          "targetExpressions": [
+            "We learned a lot in the Green Laboratory.",
+            "If you heat ice, it melts.",
+            "I predict the Sleeping Seed will wake up."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We learned a lot in the Green Laboratory.",
+          "If you heat ice, it melts. Paper is made from trees. / I predict the Sleeping Seed will wake up.",
+          "thermostat・environment・magnetic・muddy・migration"
+        ]
+      }
+    },
+    {
+      "lessonNo": 690,
+      "world": 23,
+      "title": "World 23 Grand Review",
+      "titleJa": "ワールド23 グランドレビュー",
+      "school": {
+        "grade": "中3",
+        "topic": "We found out something amazing!：けんきゅうじょの ホールで、ワールド23 かがくフェア",
+        "grammar": "We found out something amazing! / I predict ～. / The result was ～. / It's made of ～. / If ～, ～.",
+        "expressions": [
+          {
+            "en": "We found out something amazing!",
+            "ja": "すごい ことが わかったよ！",
+            "core": true
+          },
+          {
+            "en": "Welcome to the Green Laboratory Science Fair!",
+            "ja": "みどりの けんきゅうじょ かがくフェアへ ようこそ！"
+          },
+          {
+            "en": "The seed needed a cold winter, water and warm air.",
+            "ja": "その たねには さむい ふゆと みずと あたたかい くうきが ひつようだったんだ。"
+          }
+        ],
+        "testPoints": [
+          "We found out something amazing! で じっけんで わかった ことを はっぴょうできる",
+          "ワールド23 の 総まとめ（microwave・pedometer・development・scientific・cloudy・celebration）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！こっちに きて！いって！",
+          "action": "スピードで うごきを かえる",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Hold up your science poster.",
+          "ja": "かがくの ポスターを かかげて。",
+          "action": "りょうてで たかく あげる",
+          "emoji": "🪧"
+        },
+        {
+          "en": "Grow like a sprout!",
+          "ja": "めの ように のびて！",
+          "action": "しゃがんでから ゆっくり たつ",
+          "emoji": "🌱"
+        },
+        {
+          "en": "Cheer for the scientists!",
+          "ja": "かがくしゃに おうえんを！",
+          "action": "りょうてを あげて ばんざい",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "micro-",
+          "-meter",
+          "-ment",
+          "sci-en-tif-ic",
+          "-y",
+          "-tion"
+        ],
+        "sounds": [
+          "/ˈmaɪkroʊ/",
+          "/mətər/",
+          "/mənt/",
+          "TIF",
+          "/i/",
+          "/ʃən/"
+        ],
+        "words": [
+          "microwave",
+          "pedometer",
+          "development",
+          "scientific",
+          "cloudy",
+          "celebration"
+        ],
+        "tipJa": "ワールド23 の まとめ: microwave（micro＝ちいさい）・pedometer（meter＝はかる どうぐ）・development（p は 1つ）・sci・en・TIF・ic（ic の まえを つよく）・cloudy（そのまま y）・celebration（te を とって tion）。ことばの パーツが わかれば、理科の ことばも こわくない！"
+      },
+      "vocab": [
+        {
+          "en": "amazing",
+          "ja": "すごい・おどろくような",
+          "emoji": "🤩",
+          "core": true
+        },
+        {
+          "en": "find out",
+          "ja": "（しらべて）わかる",
+          "emoji": "🔎"
+        },
+        {
+          "en": "present",
+          "ja": "はっぴょうする",
+          "emoji": "🎤"
+        },
+        {
+          "en": "ticket",
+          "ja": "きっぷ",
+          "emoji": "🎫"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the World 23 Grand Review! Today is the Green Laboratory Science Fair. Every team will share their experiment. At the end of your talk, tell us the most exciting part. We found out something amazing! Say it with me. We found out something amazing! Fantastic! In this world, you learned so much. Wear your goggles. I can see tiny circles. The water is 20 degrees. I predict the apple will float. The result was surprising. If you heat ice, it melts. Magnets stick to iron. This chair is made of wood. Rice is grown in Japan. Seeds need water and warm air. Plants need sunlight to grow. Here is the science fair program. Let's read it. \"Green Laboratory Science Fair. Part one: Float or Sink. Part two: Do Plants Like Music? Part three: The Dancing Raisins. Part four: Kiko and Birimo, The Sleeping Seed. Special guest: Dr. Moss.\" Now, phonics review. Microwave. Pedometer. Development. Scientific. Cloudy. Celebration. You are wonderful scientists. Let the science fair begin!",
+      "conversation": {
+        "scene": "The Sleeping Seed wakes up at the science fair",
+        "sceneJa": "かがくフェアで ねむる たねが めを さます",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Our question was \"Why is the Sleeping Seed still sleeping?\"",
+            "ja": "わたしたちの しつもんは「ねむる たねは どうして まだ ねて いるの？」でした。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The seed needed a cold winter, water and warm air. It was in the fridge for two weeks.",
+            "ja": "その たねには さむい ふゆと みずと あたたかい くうきが ひつようだったんだ。2 しゅうかん れいぞうこに いれたよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look! The seed is opening! There's a tiny green sprout!",
+            "ja": "みて！たねが ひらいて いく！ちいさな みどりの めが でてる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We found out something amazing!",
+            "ja": "すごい ことが わかったよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "There's something on the first leaf. It's a silver ticket!",
+            "ja": "さいしょの はっぱに なにか ついてる。ぎんいろの きっぷだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It says Cloudtop Railway. The station is on the roof of the lab!",
+            "ja": "「くもの上の鉄道」って かいて あるわ。えきは けんきゅうじょの おくじょうよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Goodbye, Dr. Moss! All aboard!",
+            "ja": "さようなら、モスはかせ！しゅっぱつ しんこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に かがくフェアの はっぴょうを しよう。Our question was \"～?\" / We predicted ～. / The result was ～. / We found out ～. の じゅんで はなして、AI の しつもんにも こたえよう",
+          "starterEn": "Welcome to the science fair! I'm a visitor. Your poster looks great. What did you find out?",
+          "targetExpressions": [
+            "We found out something amazing!",
+            "Welcome to the Green Laboratory Science Fair!",
+            "The seed needed a cold winter, water and warm air."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We found out something amazing!",
+          "Welcome to the Green Laboratory Science Fair! / The seed needed a cold winter, water and warm air.",
+          "microwave・pedometer・development・scientific・cloudy・celebration"
+        ]
+      }
+    }
+  ]
+}

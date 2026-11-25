@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W23_MENT_FOCUS, W23_PART_FOCUS, W23_START, W23_TION_FOCUS, W23_Y_FOCUS, mentDisplay, mentOf, mentWhy, sciPartOf, sciPartWhy, shiftOf, shiftWhy, tionOf, tionWhy, yAdjOf, yAdjWhy } from "./w23Phonics";
 import { MARK_CHOICES, W22_ADJ_FOCUS, W22_FAMILY_FOCUS, W22_PERSON_FOCUS, W22_START, adjOf, adjWhy, familyOf, familyWhy, markOf, markWhy, personOf, personWhy, schwaStressBlank, schwaStressWhy } from "./w22Phonics";
 import { W21_DIS_FOCUS, W21_MISPRE_FOCUS, W21_PART_FOCUS, W21_START, W21_SUFFIX_FOCUS, disOf, disWhy, linkOf, linkWhy, misPreBlank, misPreWhy, partOf, partWhy, suffixOf, suffixWhy } from "./w21Phonics";
 import { EAR_CHOICES, EAR_SOUNDS, URE_SOUNDS, W20_EAR_FOCUS, W20_START, W20_URE_FOCUS, earOf, earWhy, schwaBlank, schwaWhy, ureSound, ureWhy } from "./w20Phonics";
@@ -573,6 +574,52 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
 }
 
 /**
+ * ワールド23（みどりの研究所・L661〜）の フォニックス（理科の ことばの パーツ）。フォーカスの 順に ことばに あうもので 問う。
+ * - "micro-" "-scope" "-meter" "thermo-": 「この ことばの micro は どんな いみ？」（ちいさい / はかる どうぐ / ねつ・あたたかさ / とおく）
+ * - "-ment": 「ただしい つづりは どれ？」（measure → ？（はかった あたい）→ measurement / measurment / measuremant）
+ * - "pho-tog-ra-phy" の ような はくの 形（強勢の 移動）: 「つよく よむ ところは どれ？」（pho-TOG-ra-phy / PHO-tog-ra-phy / …。かぞくの PHO-to-graph を 見せる）
+ * - "-y": 「ただしい ことばは どれ？」（shine → ？（ぴかぴかの）→ shiny / shiney / shinie）
+ * - "-tion": 「ただしい ことばは どれ？」（observe → ？（かんさつ）→ observation / observetion / observasion）
+ * あてはまらなければ null。ワールド22 の 問題より 先に よぶ（photography を ワールド22 の あいまい母音、measurement を ワールド21 の -ment、
+ * cloudy を ワールド10 の -y、prediction を ワールド17 の -tion で 問わない）。
+ */
+export function w23Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W23_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of lesson.phonics.focus) {
+    if ((W23_PART_FOCUS as readonly string[]).includes(f)) {
+      const p = sciPartOf(w, [f]);
+      if (!p) continue;
+      return { promptJa: `この ことばの ${p.part} は どんな いみ？`, display: `${item.text}（${p.meaning}）`, choices: pick(p.choices), answer: p.answer, explanationJa: sciPartWhy(item.text, p) };
+    }
+    if (f === W23_MENT_FOCUS) {
+      const m = mentOf(w);
+      if (!m) continue;
+      return { promptJa: "ただしい つづりは どれ？", display: mentDisplay(m), choices: pick([m.answer, ...m.wrong]), answer: m.answer, explanationJa: mentWhy(m) };
+    }
+    if (/^[a-z]+(-[a-z]+)+$/.test(f) && f.replace(/-/g, "") === w) {
+      const s = shiftOf(w, [f]);
+      if (!s) continue;
+      return { promptJa: "つよく よむ ところは どれ？", display: `${item.text}（${s.meaning}）　かぞく: ${s.pairStressed}`, choices: pick(s.choices), answer: s.answer, explanationJa: shiftWhy(item.text, s) };
+    }
+    if (f === W23_Y_FOCUS) {
+      const y = yAdjOf(w);
+      if (!y) continue;
+      return { promptJa: "ただしい ことばは どれ？", display: `${y.base}（${y.baseMeaning}）→ ？（${y.meaning}）`, choices: pick([y.answer, ...y.wrong]), answer: y.answer, explanationJa: yAdjWhy(y) };
+    }
+    if (f === W23_TION_FOCUS) {
+      const t = tionOf(w);
+      if (!t) continue;
+      return { promptJa: "ただしい ことばは どれ？", display: `${t.base}（${t.baseMeaning}）→ ？（${t.meaning}）`, choices: pick([t.answer, ...t.wrong]), answer: t.answer, explanationJa: tionWhy(t) };
+    }
+  }
+  return null;
+}
+
+/**
  * ワールド22（こはくの図書館・L631〜）の フォニックス（形態素の つづき）。フォーカスの 順に ことばに あうもので 問う。
  * - "-er" "-or" "-ist": 「〜する 人を あらわす ことばは どれ？」（write → ？（さっか）→ writer / writor / writist）
  * - "act" "invent" "protect" "direct"（語の家族）: 「act の かぞくで「はいゆう」は どれ？」（actor / action / active）
@@ -966,8 +1013,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド19（re-・道具の -er / -or・だまっている もじ・qu / squ・ou / ough）は その 先（opener を くらべる かたち、knob を ワールド14 で 問わない）
       // ワールド20（-ure・ear / eer・あいまい母音）は その 先（picture を -ture、bear を ワールド9 の ear、banana を 強勢で 問わない）
       // ワールド21（dis-・mis- / pre-・ことばの パーツ・-ment / -ness・音の つながり）は その 先（telephone を ph、disappear を ear、kindness を ブレンドで 問わない）
-      // ワールド22（人の -er / -or / -ist・語の家族・あいまい母音と 強勢・-ous / -al・おわりの しるし）は いちばん 先（writer を ワールド11 の -er、pencil を ワールド20 で 問わない）
-      const dq = w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド22（人の -er / -or / -ist・語の家族・あいまい母音と 強勢・-ous / -al・おわりの しるし）は その 先（writer を ワールド11 の -er、pencil を ワールド20 で 問わない）
+      // ワールド23（理科の パーツ・-ment・強勢の 移動・-y・-tion）は いちばん 先（photography を あいまい母音、cloudy を ワールド10 の -y、prediction を ワールド17 の -tion で 問わない）
+      const dq = w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];
