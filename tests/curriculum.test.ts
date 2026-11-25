@@ -24,6 +24,7 @@ import { compoundSplit, contractionOf, ingSpelling, y3Sound } from "@/lib/curric
 import { edSpelling, irregularPast } from "@/lib/curriculum/w16Phonics";
 import { endingSpelling, homophoneOf, orSpelling, willContraction } from "@/lib/curriculum/w17Phonics";
 import { compareSpelling, fulLessOf, lySpelling, stressChoices, unOf } from "@/lib/curriculum/w18Phonics";
+import { ouSound, quBlank, reOf, silentBlank19, toolEnding } from "@/lib/curriculum/w19Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -1655,5 +1656,117 @@ describe("カリキュラム: ワールド18 の決まりごと（こだまの�
     expect(at(530)!.conversation!.aiTask.goalJa).toMatch(/ペットが いなくても OK/);
     expect(at(530)!.teacherScript).toMatch(/You don't need a pet/);
     expect(at(538)!.teacherScript).toMatch(/You don't need to write the real name/);
+  });
+});
+
+describe("カリキュラム: ワールド19 の決まりごと（からくり工房）", () => {
+  const w19 = LESSONS.filter((l) => l.world === 19);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+
+  it("ワールド19 は 541〜570 の 30 レッスン、ステージ2・A2、学年の めやすは 中2", () => {
+    if (w19.length === 0) return; // 未作成ならスキップ
+    expect(w19.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 541 + i));
+    for (const l of w19) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中2");
+      expect(l.stage, `L${l.lessonNo}`).toBe(2);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w19.length === 0) return;
+    expect(at(541)!.title).toBe("Tick, Tock, Click!");
+    expect(at(546)!.title).toBe("Let's Make a Paper Plane");
+    expect(at(551)!.title).toBe("You Have to Wear Goggles");
+    expect(at(556)!.title).toBe("You Should Rest");
+    expect(at(559)!.title).toBe("That's Not Fair!");
+    expect(at(566)!.title).toBe("Squeeze, Turn, Pull");
+    expect(at(570)!.title).toBe("World 19 Grand Review");
+  });
+
+  it("フォニックス: re- → 道具の -er / -or → だまっている もじ → qu・squ → ou・ough（各ブロックの 5回目と L566〜570 は ふりかえり）", () => {
+    if (w19.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(541, 544, "re");
+    rule(546, 549, "er-or");
+    rule(551, 554, "silent");
+    rule(556, 559, "qu");
+    rule(561, 562, "ou");
+    rule(563, 564, "ough");
+    for (const n of [545, 550, 555, 560, 565, 566, 567, 568, 569, 570]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    for (const l of range(541, 545)) for (const w of l.phonics.words) expect(reOf(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    const kinds = (n: number) => at(n)!.phonics.words.map((w) => toolEnding(w)?.kind);
+    expect(kinds(546)).toEqual(["add", "add", "add", "add"]);
+    expect(kinds(548)).toEqual(["or", "or", "or", "or"]);
+    for (const l of range(546, 550)) for (const w of l.phonics.words) expect(toolEnding(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    for (const l of range(551, 555)) for (const w of l.phonics.words) expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(silentBlank19(w)?.family);
+    expect([...new Set(range(551, 555).flatMap((l) => l.phonics.focus))].sort()).toEqual(["-stle", "gu", "kn", "mb", "wr"]);
+    for (const l of range(556, 560)) for (const w of l.phonics.words) expect(quBlank(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    for (const l of range(561, 565)) for (const w of l.phonics.words) expect(ouSound(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    // ou は 3つ（アウ・ア・ウー）、ough は 4つ（ウー・アフ・オウ・オー）の おとを ぜんぶ あつかう
+    expect([...new Set(range(561, 562).flatMap((l) => l.phonics.words.map((w) => ouSound(w)!.answer)))].sort()).toEqual(["ア", "アウ", "ウー"].sort());
+    expect([...new Set(range(563, 564).flatMap((l) => l.phonics.words.map((w) => ouSound(w)!.answer)))].sort()).toEqual(["アフ", "ウー", "オウ", "オー"].sort());
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w19.length === 0) return;
+    expect(ex(541, 545)).toContain("This machine makes toys.");
+    expect(ex(541, 545)).toContain("It's used for cutting paper.");
+    expect(ex(541, 545)).toContain("How do you use it?");
+    expect(ex(541, 545)).toContain("Push this button. Then, turn it.");
+    expect(ex(541, 545)).toContain("Like this?");
+    expect(ex(541, 545)).toContain("Yes, that's right!");
+    expect(ex(541, 545)).toContain("It's used for opening cans.");
+    expect(ex(546, 550)).toContain("First, fold the paper in half.");
+    expect(ex(546, 550)).toContain("Next, cut along the line.");
+    expect(ex(546, 550)).toContain("Finally, it works!");
+    expect(ex(546, 550)).toContain("It didn't work. Let's remake it.");
+    expect(ex(546, 550)).toContain("First, cut. Next, fold. Then, glue. Finally, play!");
+    expect(ex(551, 555)).toContain("You have to wear goggles.");
+    expect(ex(551, 555)).toContain("You must not touch it. It's hot.");
+    expect(ex(551, 555)).toContain("You don't have to hurry.");
+    expect(ex(551, 555)).toContain("May I use this hammer?");
+    expect(ex(551, 555)).toContain("We must clean up. We have to share tools.");
+    expect(ex(556, 560)).toContain("You look tired. You should rest.");
+    expect(ex(556, 560)).toContain("You shouldn't");
+    expect(ex(556, 560)).toContain("First, you have to roll the dice.");
+    expect(ex(556, 560)).toContain("It's your turn. You can move three spaces.");
+    expect(ex(556, 560)).toContain("That's not fair! Let's check the rules.");
+    expect(ex(556, 560)).toContain("In our game, you have to collect stars.");
+    expect(ex(561, 565)).toContain("The telephone helps people talk.");
+    expect(ex(561, 565)).toContain("My machine can clean my room.");
+    expect(ex(561, 565)).toContain("You can start it by pushing this button.");
+    expect(ex(561, 565)).toContain("We can reuse these boxes.");
+    expect(ex(561, 565)).toContain("This is my invention. It's used for");
+    expect(ex(566, 570)).toContain("Squeeze it. Turn it. Pull it.");
+    expect(ex(566, 570)).toContain("It's broken. What should we do?");
+    expect(ex(566, 570)).toContain("How to make a paper cup: First,");
+    expect(ex(566, 570)).toContain("We made a dream machine together!");
+  });
+
+  it("ステージ2: 先生の 台本は ほぼ 英語（日本語の たすけは みじかく）、会話シーンは 4〜7 行、L570 は スピード TPR", () => {
+    if (w19.length === 0) return;
+    for (const l of w19) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.25);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(120);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(4);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+    }
+    expect(at(570)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("どうぐの 回は あんぜんを 教える（いえでは おとなに きく・あついものに さわらない）、発表の AI 会話は「なまえは いわなくて OK」", () => {
+    if (w19.length === 0) return;
+    for (const n of [542, 551]) expect(at(n)!.teacherScript, `L${n}`).toMatch(/ask an adult/);
+    expect(at(552)!.teacherScript).toMatch(/You must not touch it\. It's hot\./);
+    for (const n of [550, 560, 562, 565, 570]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえは いわなくて OK/);
+    // しっぱいしても だいじょうぶ（L549）・かんぺきで なくて いい（L553）・ずるいと おもっても おだやかに（L559）
+    expect(at(549)!.teacherScript).toMatch(/Every inventor makes mistakes/);
+    expect(at(553)!.school.expressions.map((e) => e.en)).toContain("You don't have to be perfect.");
+    expect(at(559)!.teacherScript).toMatch(/calmly/);
   });
 });

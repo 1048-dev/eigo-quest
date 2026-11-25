@@ -1,0 +1,4684 @@
+{
+  "world": 19,
+  "stage": 2,
+  "level": "A2",
+  "lessons": [
+    {
+      "lessonNo": 541,
+      "world": 19,
+      "title": "Tick, Tock, Click!",
+      "titleJa": "チク・タク・カチッ！",
+      "school": {
+        "grade": "中2",
+        "topic": "This machine makes toys.：きかいの はたらきを いう（3単現の ふくしゅう）",
+        "grammar": "This machine makes ～. / What does it do?（3単現で きかいの はたらき）",
+        "expressions": [
+          {
+            "en": "This machine makes toys.",
+            "ja": "この きかいは おもちゃを つくる。",
+            "core": true
+          },
+          {
+            "en": "What does that machine do?",
+            "ja": "あの きかいは なにを するの？"
+          },
+          {
+            "en": "It makes music.",
+            "ja": "おんがくを ならすよ。"
+          }
+        ],
+        "testPoints": [
+          "This machine makes ～. で きかいの はたらきを いえる",
+          "re-（remake・reuse・replay・redo）＝ もう いちど"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the big door slowly.",
+          "ja": "おおきな とびらを ゆっくり あけて。",
+          "action": "りょうてで とびらを おす まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Listen. Tick, tock, click!",
+          "ja": "きいて。チク、タク、カチッ！",
+          "action": "みみに てを あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Point to the machine.",
+          "ja": "きかいを ゆびさして。",
+          "action": "まえを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Turn the big wheel.",
+          "ja": "おおきな くるまを まわして。",
+          "action": "りょうてで ハンドルを まわす まね",
+          "emoji": "⚙️"
+        }
+      ],
+      "phonics": {
+        "rule": "re",
+        "focus": [
+          "re-"
+        ],
+        "sounds": [
+          "/riː/"
+        ],
+        "words": [
+          "remake",
+          "reuse",
+          "replay",
+          "redo"
+        ],
+        "tipJa": "re ＋ make = remake（つくりなおす）。re は「もう いちど」。reuse（もう いちど つかう）・replay（もう いちど あそぶ）・redo（やりなおす）。"
+      },
+      "vocab": [
+        {
+          "en": "machine",
+          "ja": "きかい",
+          "emoji": "🤖",
+          "core": true
+        },
+        {
+          "en": "workshop",
+          "ja": "こうぼう",
+          "emoji": "🏭"
+        },
+        {
+          "en": "gear",
+          "ja": "はぐるま",
+          "emoji": "⚙️"
+        },
+        {
+          "en": "toy",
+          "ja": "おもちゃ",
+          "emoji": "🧸"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to a new world. Remember the clink, clank sound? We went over the hill, and look! A big wooden door with gears on it. This is the Gadget Workshop! Let's go inside. Tick, tock, click! Look at all the machines. This machine makes toys. Say it with me. This machine makes toys. Great! What does that machine do? It makes music. ここは からくり工房。きかいが なにを するか、makes で いうよ。 Let's practice. This machine makes cookies. That machine makes bubbles. What does this machine do? It washes socks! Now, phonics. Remake. Reuse. Replay. Redo. Re means again. Make, remake. Use, reuse. Play, replay. When you see re at the start, think: one more time! This machine makes ice cream. Yum! That machine makes paper planes. Now, imagine a machine. What does your machine make? Tell me!",
+      "conversation": {
+        "scene": "Opening the door of the Gadget Workshop beyond the valley",
+        "sceneJa": "谷の むこう、からくり工房の とびらを あける",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Here's the clink, clank sound! It's coming from this door.",
+            "ja": "カチン、カタンの おとは ここだ！この とびらから きこえる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow! Look at all the machines. Tick, tock, click!",
+            "ja": "わあ！きかいが いっぱい。チク、タク、カチッ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "This machine makes toys. Look, a little wooden bird!",
+            "ja": "この きかいは おもちゃを つくるよ。みて、ちいさな 木の とり！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What does that machine do?",
+            "ja": "あの きかいは なにを するの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It makes music. Listen!",
+            "ja": "おんがくを ならすのよ。きいて！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here's a note. \"Welcome to my workshop! Please use my tools and make something wonderful. — The Inventor\"",
+            "ja": "メモが ある。「こうぼうへ ようこそ！どうぐを つかって すてきな ものを つくってね。— はつめいか」"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's make something wonderful!",
+            "ja": "すてきな ものを つくろう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "工房の きかいを みて、This machine makes ～. / What does it do? で はたらきを いいあおう",
+          "starterEn": "Hi! I'm Ms. Emma. Look at this funny machine! What do you think it makes?",
+          "targetExpressions": [
+            "This machine makes ～.",
+            "What does it do?",
+            "It makes ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This machine makes toys.",
+          "What does that machine do? ― It makes music.",
+          "remake・reuse・replay・redo（re ＝ もう いちど）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 542,
+      "world": 19,
+      "title": "What's This Tool?",
+      "titleJa": "これは なんの どうぐ？",
+      "school": {
+        "grade": "中2",
+        "topic": "It's used for cutting paper.：どうぐの つかいみちを いう（It's used for ～ing.）",
+        "grammar": "What's this tool? / It's used for ～ing.（つかいみち）",
+        "expressions": [
+          {
+            "en": "It's used for cutting paper.",
+            "ja": "かみを きる ために つかうよ。",
+            "core": true
+          },
+          {
+            "en": "What's this tool?",
+            "ja": "これは なんの どうぐ？"
+          },
+          {
+            "en": "What's it used for?",
+            "ja": "なにに つかうの？"
+          }
+        ],
+        "testPoints": [
+          "It's used for ～ing. で つかいみちを いえる",
+          "re-（retell・reread・rewrite・rebuild）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up the scissors carefully.",
+          "ja": "はさみを ていねいに もって。",
+          "action": "はさみを そっと もつ まね",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Tap the nail with the hammer.",
+          "ja": "かなづちで くぎを トントン たたいて。",
+          "action": "かるく たたく まね",
+          "emoji": "🔨"
+        },
+        {
+          "en": "Turn the screwdriver.",
+          "ja": "ドライバーを まわして。",
+          "action": "てくびを くるくる まわす",
+          "emoji": "🪛"
+        },
+        {
+          "en": "Put the tools back on the shelf.",
+          "ja": "どうぐを たなに もどして。",
+          "action": "たなに おく まね",
+          "emoji": "🧰"
+        }
+      ],
+      "phonics": {
+        "rule": "re",
+        "focus": [
+          "re-"
+        ],
+        "sounds": [
+          "/riː/"
+        ],
+        "words": [
+          "retell",
+          "reread",
+          "rewrite",
+          "rebuild"
+        ],
+        "tipJa": "re ＋ tell = retell（もう いちど はなす）。reread（よみなおす）・rewrite（かきなおす）・rebuild（くみなおす）。re の つづりは r ＋ e。"
+      },
+      "vocab": [
+        {
+          "en": "tool",
+          "ja": "どうぐ",
+          "emoji": "🧰",
+          "core": true
+        },
+        {
+          "en": "scissors",
+          "ja": "はさみ",
+          "emoji": "✂️"
+        },
+        {
+          "en": "hammer",
+          "ja": "かなづち",
+          "emoji": "🔨"
+        },
+        {
+          "en": "screwdriver",
+          "ja": "ドライバー",
+          "emoji": "🪛"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Look at this tool shelf. There are so many tools! What's this tool? These are scissors. What are they used for? It's used for cutting paper. Say it with me. It's used for cutting paper. Nice! After used for, we say a word with i n g. Cutting, painting, opening. つかいみちは used for の あとに ing の ことばを つけるよ。 Let's practice. What's this tool? It's a hammer. It's used for hitting nails. What's this? It's a screwdriver. It's used for turning screws. Remember, tools can be dangerous. At home, always ask an adult before you use them. Now, phonics. Retell. Reread. Rewrite. Rebuild. Tell, retell. Read, reread. Write, rewrite. Build, rebuild. Re means again. What's this? It's tape. It's used for sticking things. Now, look around your room. Find a tool. What's it used for? Tell me!",
+      "conversation": {
+        "scene": "At the tool shelf in the workshop",
+        "sceneJa": "工房の どうぐだなで",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "So many tools! What's this tool?",
+            "ja": "どうぐが いっぱい！これは なんの どうぐ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a screwdriver. It's used for turning screws.",
+            "ja": "ドライバーよ。ネジを まわす ために つかうの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And these are scissors. They're used for cutting paper.",
+            "ja": "これは はさみ。かみを きる ために つかうね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What's this big one? What's it used for?",
+            "ja": "この おおきいのは なに？なにに つかうの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's a hammer. It's used for hitting nails.",
+            "ja": "かなづち だよ。くぎを たたく ために つかうの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can I use it?",
+            "ja": "つかって いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Later, Birimo. First, let's learn the safety rules.",
+            "ja": "あとでね、ビリモ。まずは あんぜんの きまりを ならいましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "工房の どうぐを ゆびさして、What's this tool? / It's used for ～ing. で つかいみちを せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. Look at this tool shelf. Pick one tool and tell me what it's used for!",
+          "targetExpressions": [
+            "What's this tool?",
+            "It's used for ～ing.",
+            "What's it used for?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's used for cutting paper.",
+          "What's this tool? / What's it used for?",
+          "retell・reread・rewrite・rebuild"
+        ]
+      }
+    },
+    {
+      "lessonNo": 543,
+      "world": 19,
+      "title": "How Do You Use It?",
+      "titleJa": "どうやって つかうの？",
+      "school": {
+        "grade": "中2",
+        "topic": "Push this button. Then, turn it.：つかいかたを じゅんばんに せつめいする（命令文 ＋ Then）",
+        "grammar": "How do you use it? / Push ～. Then, ～.（てじゅんの 命令文）",
+        "expressions": [
+          {
+            "en": "Push this button. Then, turn it.",
+            "ja": "この ボタンを おして。それから まわして。",
+            "core": true
+          },
+          {
+            "en": "How do you use it?",
+            "ja": "どうやって つかうの？"
+          },
+          {
+            "en": "Pull this lever.",
+            "ja": "この レバーを ひいて。"
+          }
+        ],
+        "testPoints": [
+          "How do you use it? と きいて、Push ～. Then, ～. で こたえられる",
+          "re-（refill・reopen・repaint・restart）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Push the red button.",
+          "ja": "あかい ボタンを おして。",
+          "action": "ゆびで ボタンを おす",
+          "emoji": "🔴"
+        },
+        {
+          "en": "Then, turn the handle.",
+          "ja": "それから ハンドルを まわして。",
+          "action": "てで くるくる まわす",
+          "emoji": "🔄"
+        },
+        {
+          "en": "Pull the lever down.",
+          "ja": "レバーを したに ひいて。",
+          "action": "てで レバーを ひく まね",
+          "emoji": "🕹️"
+        },
+        {
+          "en": "Catch the ball!",
+          "ja": "ボールを キャッチ！",
+          "action": "りょうてで うけとる",
+          "emoji": "⚾"
+        }
+      ],
+      "phonics": {
+        "rule": "re",
+        "focus": [
+          "re-"
+        ],
+        "sounds": [
+          "/riː/"
+        ],
+        "words": [
+          "refill",
+          "reopen",
+          "repaint",
+          "restart"
+        ],
+        "tipJa": "re ＋ fill = refill（もう いちど いっぱいに する）。reopen（もう いちど あける）・repaint（ぬりなおす）・restart（もう いちど はじめる）。"
+      },
+      "vocab": [
+        {
+          "en": "button",
+          "ja": "ボタン",
+          "emoji": "🔘",
+          "core": true
+        },
+        {
+          "en": "lever",
+          "ja": "レバー",
+          "emoji": "🕹️"
+        },
+        {
+          "en": "handle",
+          "ja": "とって・ハンドル",
+          "emoji": "🔄"
+        },
+        {
+          "en": "push",
+          "ja": "おす",
+          "emoji": "👇"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Look at this machine. It's a gumball machine, but it's a gadget, too. How do you use it? Push this button. Then, turn it. Say it with me. Push this button. Then, turn it. Great! We use then to tell the next step. How do you use it? Pull this lever. Then, a ball comes out! てじゅんを いうときは、まず 動作の ことば、つぎに Then だよ。 Let's practice. How do you use a water bottle? Open the cap. Then, drink. How do you use a flashlight? Push the switch. Then, point it. Now, phonics. Refill. Reopen. Repaint. Restart. The machine is empty. Let's refill it! The game is over. Let's restart! Re means again. Pull the lever again. Another ball! Now, think of a machine at home. How do you use it? Tell me two steps!",
+      "conversation": {
+        "scene": "Learning how to use a gadget machine in the workshop",
+        "sceneJa": "工房の からくり機械の つかいかたを ならう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "What's this machine? It has a button and a handle.",
+            "ja": "これ なんの きかい？ボタンと ハンドルが ある。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How do you use it?",
+            "ja": "どうやって つかうの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Push this button. Then, turn it.",
+            "ja": "この ボタンを おして。それから まわしてね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay. Push... then turn... Wow! A ball came out!",
+            "ja": "よし。おして…まわして…わあ！ボールが でた！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And this lever? What does it do?",
+            "ja": "この レバーは？なにを するの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Pull this lever. Then, the machine sings a song.",
+            "ja": "この レバーを ひいて。すると きかいが うたを うたうの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's empty now. Let's refill it!",
+            "ja": "もう からっぽ。もう いちど いっぱいに しよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "きかいの つかいかたを きかれたら、Push ～. Then, ～. で 2つの ステップで こたえよう",
+          "starterEn": "Hi! I'm Ms. Emma. I have a new music box, but I don't know how to use it. Can you help me? How do you use it?",
+          "targetExpressions": [
+            "How do you use it?",
+            "Push this button.",
+            "Then, turn it.",
+            "Pull this lever."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Push this button. Then, turn it.",
+          "How do you use it? ― Pull this lever.",
+          "refill・reopen・repaint・restart"
+        ]
+      }
+    },
+    {
+      "lessonNo": 544,
+      "world": 19,
+      "title": "Like This?",
+      "titleJa": "こんな かんじ？",
+      "school": {
+        "grade": "中2",
+        "topic": "Like this? ― Yes, that's right!：やりかたを たしかめる（Like this? / Is this right?）",
+        "grammar": "Like this? / Is this right? / Yes, that's right! / Not quite.（たしかめる・こたえる）",
+        "expressions": [
+          {
+            "en": "Like this?",
+            "ja": "こんな かんじ？",
+            "core": true
+          },
+          {
+            "en": "Yes, that's right!",
+            "ja": "うん、その とおり！"
+          },
+          {
+            "en": "Not quite. Turn it the other way.",
+            "ja": "ちょっと ちがう。はんたいに まわして。"
+          }
+        ],
+        "testPoints": [
+          "Like this? / Is this right? で たしかめられる",
+          "re-（recheck・retry・refold・rewind）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the screw.",
+          "ja": "ネジを もって。",
+          "action": "ゆびで ちいさな ものを つまむ",
+          "emoji": "🔩"
+        },
+        {
+          "en": "Turn it to the right.",
+          "ja": "みぎに まわして。",
+          "action": "てくびを みぎに まわす",
+          "emoji": "↩️"
+        },
+        {
+          "en": "Turn it the other way.",
+          "ja": "はんたいに まわして。",
+          "action": "てくびを ひだりに まわす",
+          "emoji": "↪️"
+        },
+        {
+          "en": "Show me. Like this?",
+          "ja": "みせて。こんな かんじ？",
+          "action": "てを まえに だして みせる",
+          "emoji": "🙋"
+        }
+      ],
+      "phonics": {
+        "rule": "re",
+        "focus": [
+          "re-"
+        ],
+        "sounds": [
+          "/riː/"
+        ],
+        "words": [
+          "recheck",
+          "retry",
+          "refold",
+          "rewind"
+        ],
+        "tipJa": "re ＋ check = recheck（もう いちど たしかめる）。retry（もう いちど やってみる）・refold（おりなおす）・rewind（まきもどす）。"
+      },
+      "vocab": [
+        {
+          "en": "screw",
+          "ja": "ネジ",
+          "emoji": "🔩",
+          "core": true
+        },
+        {
+          "en": "right",
+          "ja": "ただしい・みぎ",
+          "emoji": "✅"
+        },
+        {
+          "en": "tight",
+          "ja": "きつい",
+          "emoji": "💪"
+        },
+        {
+          "en": "loose",
+          "ja": "ゆるい",
+          "emoji": "🔓"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we are fixing a toy robot. Its arm is loose. We need to make this screw tight. Watch me. Turn it to the right. Now you try. Like this? Yes, that's right! Say it with me. Like this? Yes, that's right! Great! When you are not sure, ask. Like this? Is this right? If it's wrong, your friend can say, not quite. Turn it the other way. わからない ときは Like this? と きけば だいじょうぶ。 Let's practice. Fold the paper like this. Like this? Yes, that's right! Put the gear here. Is this right? Not quite. Put it a little higher. Now, phonics. Recheck. Retry. Refold. Rewind. Rewind the toy and let it go. It stopped? Retry! Re means again. Now, show me how to clap three times. Like this?",
+      "conversation": {
+        "scene": "Tightening a screw in the workshop",
+        "sceneJa": "工房で、ネジを しめる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "The robot's arm is loose.",
+            "ja": "ロボットの うでが ゆるいよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make the screw tight. Turn the screwdriver to the right.",
+            "ja": "ネジを きつく しましょう。ドライバーを みぎに まわして。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Like this?",
+            "ja": "こんな かんじ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Not quite. Turn it the other way.",
+            "ja": "ちょっと ちがうわ。はんたいに まわして。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh, okay. Like this? Is this right?",
+            "ja": "あ、そうか。こんな かんじ？これで あってる？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, that's right! Good job.",
+            "ja": "うん、その とおり！よく できました。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's recheck the other arm, too.",
+            "ja": "もう かたほうの うでも たしかめよう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ネジを しめる とき、Like this? / Is this right? と たしかめながら すすめよう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's fix this toy car together. First, hold the screw. Show me. Can you do it?",
+          "targetExpressions": [
+            "Like this?",
+            "Is this right?",
+            "Yes, that's right!",
+            "Not quite."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Like this? ― Yes, that's right!",
+          "Is this right? ― Not quite. Turn it the other way.",
+          "recheck・retry・refold・rewind"
+        ]
+      }
+    },
+    {
+      "lessonNo": 545,
+      "world": 19,
+      "title": "Tool Quiz",
+      "titleJa": "どうぐ あてクイズ",
+      "school": {
+        "grade": "中2",
+        "topic": "It's used for opening cans.：つかいみちを ヒントに した どうぐクイズ（ふりかえり）",
+        "grammar": "It's used for ～ing. / Is it used for ～ing?（つかいみちの クイズ）",
+        "expressions": [
+          {
+            "en": "It's used for opening cans.",
+            "ja": "かんを あける ために つかうよ。",
+            "core": true
+          },
+          {
+            "en": "A can opener!",
+            "ja": "かんきり！"
+          },
+          {
+            "en": "Is it used for cutting?",
+            "ja": "きる ために つかうの？"
+          }
+        ],
+        "testPoints": [
+          "It's used for ～ing. で ヒントを だせる",
+          "Is it used for ～ing? で しつもんできる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Close your eyes.",
+          "ja": "めを とじて。",
+          "action": "てで めを かくす",
+          "emoji": "🙈"
+        },
+        {
+          "en": "Touch the mystery box.",
+          "ja": "ふしぎな はこを さわって。",
+          "action": "はこの なかを てで さぐる まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Guess the tool!",
+          "ja": "どうぐを あてて！",
+          "action": "ひらめいた ポーズ",
+          "emoji": "💡"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "てを たかく あげる",
+          "emoji": "✋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "re-"
+        ],
+        "sounds": [
+          "/riː/"
+        ],
+        "words": [
+          "remake",
+          "rewrite",
+          "refill",
+          "rewind"
+        ],
+        "tipJa": "re の ふりかえり: remake（つくりなおす）・rewrite（かきなおす）・refill（もう いちど いっぱいに）・rewind（まきもどす）。re ＝ もう いちど。"
+      },
+      "vocab": [
+        {
+          "en": "can opener",
+          "ja": "かんきり",
+          "emoji": "🥫",
+          "core": true
+        },
+        {
+          "en": "ruler",
+          "ja": "じょうぎ",
+          "emoji": "📏"
+        },
+        {
+          "en": "glue",
+          "ja": "のり",
+          "emoji": "🧴"
+        },
+        {
+          "en": "brush",
+          "ja": "ふで・ブラシ",
+          "emoji": "🖌️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's quiz time! I have a mystery tool in this box. Listen to my hint. It's used for opening cans. What is it? A can opener! Say it with me. It's used for opening cans. A can opener! Wonderful! You can ask questions, too. Is it used for cutting? No, it isn't. Is it used for drawing lines? Yes, it is! It's a ruler. ヒントは used for、しつもんは Is it used for ～? だよ。 Next hint. It's used for sticking paper together. Glue! Next. It's used for painting pictures. A brush! Now, phonics review. Remake. Rewrite. Refill. Rewind. Make it again, remake. Write it again, rewrite. Remember, re means again. Now, it's your turn. Think of a tool and give me a hint. It's used for what?",
+      "conversation": {
+        "scene": "A tool guessing quiz in the workshop",
+        "sceneJa": "工房で、どうぐ あてクイズ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Quiz time! My tool is used for opening cans.",
+            "ja": "クイズの じかん！わたしの どうぐは かんを あける ために つかうの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A can opener!",
+            "ja": "かんきり！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right! Next, Riko.",
+            "ja": "せいかい！つぎは リコ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay. My tool is used for drawing straight lines.",
+            "ja": "よし。わたしの どうぐは まっすぐな せんを ひく ために つかうよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Is it used for cutting?",
+            "ja": "きる ために つかうの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "No, it isn't. Here's another hint. It's long and flat.",
+            "ja": "ううん。もう ひとつ ヒント。ながくて たいらだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "A ruler!",
+            "ja": "じょうぎ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "どうぐ あてクイズ。It's used for ～ing. で ヒントを だしたり、Is it used for ～ing? と きいたり しよう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's play a tool quiz! Here's my hint. It's used for cutting paper. What is it? Then you give me a quiz!",
+          "targetExpressions": [
+            "It's used for ～ing.",
+            "Is it used for ～ing?",
+            "A can opener!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's used for opening cans. ― A can opener!",
+          "Is it used for cutting? ― No, it isn't.",
+          "remake・rewrite・refill・rewind"
+        ]
+      }
+    },
+    {
+      "lessonNo": 546,
+      "world": 19,
+      "title": "Let's Make a Paper Plane",
+      "titleJa": "かみひこうきを つくろう",
+      "school": {
+        "grade": "中2",
+        "topic": "First, fold the paper in half.：つくりかたの さいしょを いう（First, ～. / Then, ～.）",
+        "grammar": "First, ～. / Then, ～.（てじゅんの じゅんばん）",
+        "expressions": [
+          {
+            "en": "First, fold the paper in half.",
+            "ja": "まず、かみを はんぶんに おって。",
+            "core": true
+          },
+          {
+            "en": "Then, fold the corners down.",
+            "ja": "それから、かどを したに おって。"
+          },
+          {
+            "en": "Hold it here and throw it gently.",
+            "ja": "ここを もって、そっと なげて。"
+          }
+        ],
+        "testPoints": [
+          "First, ～. / Then, ～. で てじゅんを いえる",
+          "道具の -er（opener・mixer・heater・toaster）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fold the paper in half.",
+          "ja": "かみを はんぶんに おって。",
+          "action": "てで かみを おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Fold the corners down.",
+          "ja": "かどを したに おって。",
+          "action": "ゆびで さんかくを つくる",
+          "emoji": "📐"
+        },
+        {
+          "en": "Hold it here.",
+          "ja": "ここを もって。",
+          "action": "ゆびで つまむ",
+          "emoji": "🤏"
+        },
+        {
+          "en": "Throw it gently.",
+          "ja": "そっと なげて。",
+          "action": "かるく まえに なげる まね",
+          "emoji": "✈️"
+        }
+      ],
+      "phonics": {
+        "rule": "er-or",
+        "focus": [
+          "-er"
+        ],
+        "sounds": [
+          "/ər/"
+        ],
+        "words": [
+          "opener",
+          "mixer",
+          "heater",
+          "toaster"
+        ],
+        "tipJa": "open（あける）＋ er = opener（あける どうぐ）。mix ＋ er = mixer、heat ＋ er = heater、toast ＋ er = toaster。どうぐや きかいは er で おわる ことが おおい。"
+      },
+      "vocab": [
+        {
+          "en": "paper plane",
+          "ja": "かみひこうき",
+          "emoji": "✈️",
+          "core": true
+        },
+        {
+          "en": "corner",
+          "ja": "かど",
+          "emoji": "📐"
+        },
+        {
+          "en": "half",
+          "ja": "はんぶん",
+          "emoji": "🌗"
+        },
+        {
+          "en": "wing",
+          "ja": "つばさ",
+          "emoji": "🛩️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Let's make a paper plane today. I'll tell you the steps. First, fold the paper in half. Say it with me. First, fold the paper in half. Great! Then, fold the corners down. Then, fold the wings. Hold it here and throw it gently. Whoosh! さいしょの ステップは First、つぎは Then で いうよ。 Let's practice. How do you make toast? First, put the bread in the toaster. Then, wait. How do you make a smoothie? First, put fruit in the mixer. Then, push the button. Now, phonics. Opener. Mixer. Heater. Toaster. Open, opener. Mix, mixer. Heat, heater. Toast, toaster. Many tools and machines end in e r. First, turn on the heater. Then, wait. It gets warm! Now, tell me how to wash your hands. First, what? Then, what?",
+      "conversation": {
+        "scene": "Making paper planes at the workbench",
+        "sceneJa": "工房の さぎょうだいで、かみひこうきを つくる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Let's make paper planes!",
+            "ja": "かみひこうきを つくろう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How do you make one?",
+            "ja": "どうやって つくるの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "First, fold the paper in half. Then, open it again.",
+            "ja": "まず、かみを はんぶんに おる。それから もう いちど ひらく。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Then, fold the corners down. Like this?",
+            "ja": "それから、かどを したに おる。こんな かんじ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, that's right! Then, fold the wings.",
+            "ja": "うん、その とおり！それから つばさを おって。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hold it here and throw it gently... Whoosh!",
+            "ja": "ここを もって、そっと なげる…ビューン！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! It's flying to the window!",
+            "ja": "わあ！まどまで とんでる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かみひこうきの つくりかたを First, ～. / Then, ～. で じゅんばんに せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. I want to make a paper plane, but I forgot how. Can you tell me the steps? What do I do first?",
+          "targetExpressions": [
+            "First, fold the paper in half.",
+            "Then, fold the corners down.",
+            "Throw it gently."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, fold the paper in half.",
+          "Then, fold the corners down.",
+          "opener・mixer・heater・toaster（どうぐの er）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 547,
+      "world": 19,
+      "title": "Next, Cut Along the Line",
+      "titleJa": "つぎに、せんに そって きって",
+      "school": {
+        "grade": "中2",
+        "topic": "Next, cut along the line.：てじゅんの つぎを いう（Next, ～.）",
+        "grammar": "First, ～. / Next, ～. / Then, ～.（じゅんばんの ことば）",
+        "expressions": [
+          {
+            "en": "Next, cut along the line.",
+            "ja": "つぎに、せんに そって きって。",
+            "core": true
+          },
+          {
+            "en": "First, draw a line with a ruler.",
+            "ja": "まず、じょうぎで せんを ひいて。"
+          },
+          {
+            "en": "Then, glue the two parts together.",
+            "ja": "それから、2つの パーツを のりで くっつけて。"
+          }
+        ],
+        "testPoints": [
+          "Next, ～. で つぎの ステップを いえる",
+          "道具の -er（eraser・stapler・cutter・scanner）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a line with a ruler.",
+          "ja": "じょうぎで せんを ひいて。",
+          "action": "まっすぐ せんを ひく まね",
+          "emoji": "📏"
+        },
+        {
+          "en": "Cut along the line.",
+          "ja": "せんに そって きって。",
+          "action": "はさみで ゆっくり きる まね",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Glue the parts together.",
+          "ja": "パーツを のりで くっつけて。",
+          "action": "てのひらを あわせて おさえる",
+          "emoji": "🧴"
+        },
+        {
+          "en": "Wait ten seconds.",
+          "ja": "10びょう まって。",
+          "action": "ゆびで 10 かぞえる",
+          "emoji": "⏱️"
+        }
+      ],
+      "phonics": {
+        "rule": "er-or",
+        "focus": [
+          "-er"
+        ],
+        "sounds": [
+          "/ər/"
+        ],
+        "words": [
+          "eraser",
+          "stapler",
+          "cutter",
+          "scanner"
+        ],
+        "tipJa": "erase（けす）は e で おわるので r だけ: eraser。staple → stapler。cut は t を 重ねて cutter、scan は n を 重ねて scanner。"
+      },
+      "vocab": [
+        {
+          "en": "line",
+          "ja": "せん",
+          "emoji": "📏",
+          "core": true
+        },
+        {
+          "en": "part",
+          "ja": "パーツ",
+          "emoji": "🧩"
+        },
+        {
+          "en": "stapler",
+          "ja": "ホッチキス",
+          "emoji": "📎"
+        },
+        {
+          "en": "eraser",
+          "ja": "けしゴム",
+          "emoji": "🧽"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we are making a paper robot. Let's follow the steps. First, draw a line with a ruler. Next, cut along the line. Say it with me. Next, cut along the line. Super! Then, glue the two parts together. First, next, then. These words make your steps easy to follow. Next は「つぎに」。First、Next、Then の じゅんばんで いうよ。 Remember, use scissors slowly and carefully. Let's practice. How do you make a sandwich? First, get two pieces of bread. Next, put cheese on one piece. Then, put the other piece on top. Now, phonics. Eraser. Stapler. Cutter. Scanner. Erase, eraser. Staple, stapler. Cut, cutter. Scan, scanner. Look at the spelling changes. Then, staple the papers with a stapler. Glue sticks are easy to use. Now, tell me how you get ready for school. First, next, then!",
+      "conversation": {
+        "scene": "Making a paper robot craft",
+        "sceneJa": "ペーパークラフトの ロボットを つくる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's make a paper robot! First, draw a line with a ruler.",
+            "ja": "ペーパーロボットを つくろう！まず、じょうぎで せんを ひいて。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Done! What's next?",
+            "ja": "できた！つぎは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Next, cut along the line.",
+            "ja": "つぎに、せんに そって きって。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oops! I cut too fast. It's not straight.",
+            "ja": "おっと！はやく きりすぎた。まっすぐ じゃない。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's okay. Cut slowly. Here's another piece.",
+            "ja": "だいじょうぶ。ゆっくり きってね。はい、もう 1まい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Then, glue the two parts together.",
+            "ja": "それから、2つの パーツを のりで くっつけて。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! Our robot is standing up!",
+            "ja": "みて！ロボットが たったよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ペーパークラフトの つくりかたを First, ～. / Next, ～. / Then, ～. で せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's make a paper crown! I have paper, scissors and glue. What do we do first? And next?",
+          "targetExpressions": [
+            "First, ～.",
+            "Next, cut along the line.",
+            "Then, glue the parts together."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Next, cut along the line.",
+          "First, ～. / Next, ～. / Then, ～.",
+          "eraser・stapler・cutter・scanner"
+        ]
+      }
+    },
+    {
+      "lessonNo": 548,
+      "world": 19,
+      "title": "Finally, It Works!",
+      "titleJa": "ついに、うごいた！",
+      "school": {
+        "grade": "中2",
+        "topic": "Finally, it works!：さいごの ステップと かんせいを いう（Finally, ～. / It works!）",
+        "grammar": "Finally, ～. / It works!（さいごに・うごく）",
+        "expressions": [
+          {
+            "en": "Finally, it works!",
+            "ja": "ついに、うごいた！",
+            "core": true
+          },
+          {
+            "en": "Put the gears in.",
+            "ja": "はぐるまを いれて。"
+          },
+          {
+            "en": "Wind it up and let go.",
+            "ja": "ネジを まいて、てを はなして。"
+          }
+        ],
+        "testPoints": [
+          "Finally, ～. で さいごの ステップを いえる",
+          "道具の -or（elevator・calculator・projector・motor）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put the gears in.",
+          "ja": "はぐるまを いれて。",
+          "action": "ゆびで ちいさな ものを はめる",
+          "emoji": "⚙️"
+        },
+        {
+          "en": "Wind it up.",
+          "ja": "ネジを まいて。",
+          "action": "ゆびで ネジを まく まね",
+          "emoji": "🔁"
+        },
+        {
+          "en": "Let go!",
+          "ja": "てを はなして！",
+          "action": "ぱっと てを ひらく",
+          "emoji": "👐"
+        },
+        {
+          "en": "Bow like a doll.",
+          "ja": "にんぎょうの ように おじぎ。",
+          "action": "カクカク おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "er-or",
+        "focus": [
+          "-or"
+        ],
+        "sounds": [
+          "/ər/"
+        ],
+        "words": [
+          "elevator",
+          "calculator",
+          "projector",
+          "motor"
+        ],
+        "tipJa": "er と おなじ おとでも or で おわる ことばが ある。elevator・calculator（ate の ことばは ator）・projector・motor。つづりで おぼえよう。"
+      },
+      "vocab": [
+        {
+          "en": "doll",
+          "ja": "にんぎょう",
+          "emoji": "🪆",
+          "core": true
+        },
+        {
+          "en": "spring",
+          "ja": "ばね",
+          "emoji": "🌀"
+        },
+        {
+          "en": "tea",
+          "ja": "おちゃ",
+          "emoji": "🍵"
+        },
+        {
+          "en": "finally",
+          "ja": "ついに・さいごに",
+          "emoji": "🏁"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we are finishing a karakuri doll. It carries a cup of tea and bows. Here are the last steps. First, put the gears in. Next, put the spring in. Then, wind it up. Finally, let go. Look! It's walking! Finally, it works! Say it with me. Finally, it works! Wonderful! Finally means the last step. It also means, at last, after a long time. Finally は「さいごに」と「やっと」の きもち。 Let's practice. First, I studied hard. Next, I practiced. Finally, I passed the test! Now, phonics. Elevator. Calculator. Projector. Motor. These words end in o r, not e r. Elevate, elevator. Calculate, calculator. Same sound, different spelling. First, I mixed the flour. Then, I baked the bread. Finally, we ate it! Now, tell me about something you finished. Finally, what?",
+      "conversation": {
+        "scene": "Finishing a karakuri doll that serves tea",
+        "sceneJa": "からくり人形を かんせいさせる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Our karakuri doll is almost ready!",
+            "ja": "からくり人形、もうすぐ かんせい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "First, put the gears in. Next, put the spring in.",
+            "ja": "まず、はぐるまを いれて。つぎに、ばねを いれて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Then, wind it up...",
+            "ja": "それから、ネジを まいて…"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Finally, let go!",
+            "ja": "さいごに、てを はなして！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's walking! It's carrying the tea!",
+            "ja": "あるいてる！おちゃを はこんでる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Finally, it works!",
+            "ja": "ついに、うごいた！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "And look. It's bowing to us. Great teamwork, everyone!",
+            "ja": "それに みて。おじぎ してる。すばらしい チームワーク！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "からくり人形の しあげを First / Next / Then / Finally で せつめいして、うごいたら Finally, it works! と いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Our karakuri doll needs the last steps. Can you tell me the steps in order? What do we do finally?",
+          "targetExpressions": [
+            "First, put the gears in.",
+            "Then, wind it up.",
+            "Finally, it works!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Finally, it works!",
+          "First → Next → Then → Finally",
+          "elevator・calculator・projector・motor（or で おわる）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 549,
+      "world": 19,
+      "title": "Let's Try Again",
+      "titleJa": "もう いちど やってみよう",
+      "school": {
+        "grade": "中2",
+        "topic": "It didn't work. Let's remake it.：しっぱいして つくりなおす（It didn't work. / Let's remake it.）",
+        "grammar": "It didn't work. / What went wrong? / Let's ～ again.（しっぱいと やりなおし）",
+        "expressions": [
+          {
+            "en": "It didn't work. Let's remake it.",
+            "ja": "うまく いかなかった。つくりなおそう。",
+            "core": true
+          },
+          {
+            "en": "What went wrong?",
+            "ja": "なにが いけなかったのかな？"
+          },
+          {
+            "en": "Let's try again. Don't give up!",
+            "ja": "もう いちど やってみよう。あきらめないで！"
+          }
+        ],
+        "testPoints": [
+          "It didn't work. / Let's remake it. で しっぱいを つたえて やりなおせる",
+          "-er と -or（printer・timer・tractor・inventor）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Push the car.",
+          "ja": "くるまを おして。",
+          "action": "てで まえに おす",
+          "emoji": "🚗"
+        },
+        {
+          "en": "Oh no, it stopped!",
+          "ja": "あれっ、とまった！",
+          "action": "あたまを かかえる",
+          "emoji": "😮"
+        },
+        {
+          "en": "Check the wheels.",
+          "ja": "タイヤを しらべて。",
+          "action": "かがんで のぞきこむ",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Try again!",
+          "ja": "もう いちど！",
+          "action": "こぶしを にぎって がんばる ポーズ",
+          "emoji": "💪"
+        }
+      ],
+      "phonics": {
+        "rule": "er-or",
+        "focus": [
+          "-er",
+          "-or"
+        ],
+        "sounds": [
+          "/ər/"
+        ],
+        "words": [
+          "printer",
+          "timer",
+          "tractor",
+          "inventor"
+        ],
+        "tipJa": "print ＋ er = printer、time ＋ r = timer。tractor と inventor は or。どちらも おなじ おとなので、つづりを たしかめよう。"
+      },
+      "vocab": [
+        {
+          "en": "wheel",
+          "ja": "タイヤ・しゃりん",
+          "emoji": "🚲",
+          "core": true
+        },
+        {
+          "en": "wrong",
+          "ja": "まちがった",
+          "emoji": "❌"
+        },
+        {
+          "en": "again",
+          "ja": "もう いちど",
+          "emoji": "🔁"
+        },
+        {
+          "en": "inventor",
+          "ja": "はつめいか",
+          "emoji": "👩‍🔬"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We made a wind-up car yesterday. Let's try it. Wind it up and let go. Oh no! It didn't work. Let's remake it. Say it with me. It didn't work. Let's remake it. Good! When something goes wrong, we ask, what went wrong? Look. The wheels are too tight. Let's try again. Don't give up! しっぱいしても だいじょうぶ。Let's try again! で もう いちど。 Every inventor makes mistakes. That's how we learn. Let's practice. Your tower fell down. It didn't work. Let's build it again. Your drawing has a mistake. Let's redo it. Now, phonics. Printer. Timer. Tractor. Inventor. Printer and timer end in e r. Tractor and inventor end in o r. Mistakes help us. Now, tell me. When did something not work for you? What did you do?",
+      "conversation": {
+        "scene": "The wind-up car doesn't move, so they remake it",
+        "sceneJa": "しっぱいして、つくりなおす",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Ready? Wind it up and let go!",
+            "ja": "いい？ネジを まいて、てを はなす！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hmm... it's not moving.",
+            "ja": "うーん…うごかない。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It didn't work. What went wrong?",
+            "ja": "うまく いかなかった。なにが いけなかったのかな？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look. The wheels are too tight.",
+            "ja": "みて。タイヤが きつすぎる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh, no. I'm not good at this.",
+            "ja": "ああ。ぼく、これ にがてだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Every inventor makes mistakes. Let's try again. Don't give up!",
+            "ja": "はつめいかは みんな しっぱいするのよ。もう いちど やってみよう。あきらめないで！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let's remake it together, Haru.",
+            "ja": "いっしょに つくりなおそう、ハル。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "うまく いかなかった ことを It didn't work. で つたえて、What went wrong? / Let's try again. で もう いちど ちょうせんしよう",
+          "starterEn": "Hi! I'm Ms. Emma. Oh no, my paper boat sank in the water! It didn't work. What should I do?",
+          "targetExpressions": [
+            "It didn't work.",
+            "What went wrong?",
+            "Let's remake it.",
+            "Don't give up!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It didn't work. Let's remake it.",
+          "What went wrong? / Let's try again. Don't give up!",
+          "printer・timer（er）／ tractor・inventor（or）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 550,
+      "world": 19,
+      "title": "How-To Show",
+      "titleJa": "つくりかた はっぴょうかい",
+      "school": {
+        "grade": "中2",
+        "topic": "First, ～. Next, ～. Then, ～. Finally, ～.：つくりかたを 4つの ステップで はっぴょうする（まとめ）",
+        "grammar": "First / Next / Then / Finally（4つの ステップで せつめい）",
+        "expressions": [
+          {
+            "en": "First, cut. Next, fold. Then, glue. Finally, play!",
+            "ja": "まず きる。つぎに おる。それから はる。さいごに あそぶ！",
+            "core": true
+          },
+          {
+            "en": "Today, I'll show you how to make a pinwheel.",
+            "ja": "きょうは かざぐるまの つくりかたを みせます。"
+          },
+          {
+            "en": "Thank you for watching!",
+            "ja": "みてくれて ありがとう！"
+          }
+        ],
+        "testPoints": [
+          "First / Next / Then / Finally で 4つの ステップを はっぴょうできる",
+          "-er と -or の ふりかえり（opener・cutter・elevator・inventor）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Cut a square.",
+          "ja": "しかくに きって。",
+          "action": "はさみで きる まね",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Fold the corners to the center.",
+          "ja": "かどを まんなかに おって。",
+          "action": "ゆびを まんなかに あつめる",
+          "emoji": "🎯"
+        },
+        {
+          "en": "Put it on a stick.",
+          "ja": "ぼうに つけて。",
+          "action": "ぼうを もつ まね",
+          "emoji": "🥢"
+        },
+        {
+          "en": "Blow!",
+          "ja": "ふーっと ふいて！",
+          "action": "くちを とがらせて ふく",
+          "emoji": "🌬️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-er",
+          "-or"
+        ],
+        "sounds": [
+          "/ər/"
+        ],
+        "words": [
+          "opener",
+          "cutter",
+          "elevator",
+          "inventor"
+        ],
+        "tipJa": "-er と -or の ふりかえり: opener・cutter（er）、elevator・inventor（or）。cutter は t を 重ねる。"
+      },
+      "vocab": [
+        {
+          "en": "pinwheel",
+          "ja": "かざぐるま",
+          "emoji": "🎡",
+          "core": true
+        },
+        {
+          "en": "stick",
+          "ja": "ぼう",
+          "emoji": "🥢"
+        },
+        {
+          "en": "center",
+          "ja": "まんなか",
+          "emoji": "🎯"
+        },
+        {
+          "en": "show",
+          "ja": "はっぴょう・みせる",
+          "emoji": "🎤"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Welcome to the How-To Show! Today, I'll show you how to make a pinwheel. Listen to the four steps. First, cut. Next, fold. Then, glue. Finally, play! Say it with me. First, cut. Next, fold. Then, glue. Finally, play! Great! Now, the long version. First, cut a square. Next, cut the corners. Then, fold them to the center and glue them. Finally, put it on a stick and blow! 4つの ステップを じゅんばんの ことばで いえたら はっぴょう できるよ。 When you finish, say, thank you for watching! Now, phonics review. Opener. Cutter. Elevator. Inventor. E r, e r, o r, o r. Practice at home first. Then, show your family. Remember to speak slowly and show each step with your hands. Now, it's your turn. Choose something easy, like making a rice ball. Tell me the four steps!",
+      "conversation": {
+        "scene": "The How-To Show in the workshop",
+        "sceneJa": "工房で、つくりかたの はっぴょうかい",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the How-To Show! Who's first?",
+            "ja": "つくりかた はっぴょうかいへ ようこそ！だれから？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Me! Today, I'll show you how to make a pinwheel.",
+            "ja": "わたし！きょうは かざぐるまの つくりかたを みせます。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "First, cut a square. Next, cut the corners.",
+            "ja": "まず、しかくに きります。つぎに、かどに きりこみを いれます。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Then, fold them to the center. Finally, put it on a stick and blow!",
+            "ja": "それから、まんなかに おります。さいごに、ぼうに つけて ふきます！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's spinning! Can I try?",
+            "ja": "まわってる！やって いい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sure! Thank you for watching!",
+            "ja": "もちろん！みてくれて ありがとう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Great show, Riko! Next, it's my turn.",
+            "ja": "すごい はっぴょう、リコ！つぎは ぼくの ばん。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かんたんな ものの つくりかたを First / Next / Then / Finally の 4つの ステップで はっぴょうしよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the How-To Show! What will you show us today? Please tell us the steps.",
+          "targetExpressions": [
+            "Today, I'll show you how to make ～.",
+            "First, ～. Next, ～.",
+            "Then, ～. Finally, ～.",
+            "Thank you for watching!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, cut. Next, fold. Then, glue. Finally, play!",
+          "Today, I'll show you how to make ～. / Thank you for watching!",
+          "opener・cutter・elevator・inventor"
+        ]
+      }
+    },
+    {
+      "lessonNo": 551,
+      "world": 19,
+      "title": "You Have to Wear Goggles",
+      "titleJa": "ゴーグルを つけなければ ならない",
+      "school": {
+        "grade": "中2",
+        "topic": "You have to wear goggles.：しなければ ならない ことを いう（have to）",
+        "grammar": "You have to ～. / Do I have to ～?（have to）",
+        "expressions": [
+          {
+            "en": "You have to wear goggles.",
+            "ja": "ゴーグルを つけなければ ならないよ。",
+            "core": true
+          },
+          {
+            "en": "You have to tie back long hair.",
+            "ja": "ながい かみは むすばなければ ならないよ。"
+          },
+          {
+            "en": "Do I have to wear gloves? ― Yes, you do.",
+            "ja": "てぶくろも つけなければ ならない？ ― うん、そうだよ。"
+          }
+        ],
+        "testPoints": [
+          "You have to ～. で きまりを いえる",
+          "だまっている もじ wr・kn（wrench・wrist・knob・knot）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your goggles.",
+          "ja": "ゴーグルを つけて。",
+          "action": "めの まわりに わっかを つくる",
+          "emoji": "🥽"
+        },
+        {
+          "en": "Put on your gloves.",
+          "ja": "てぶくろを はめて。",
+          "action": "てぶくろを ひっぱる まね",
+          "emoji": "🧤"
+        },
+        {
+          "en": "Tie back your hair.",
+          "ja": "かみを むすんで。",
+          "action": "うしろで かみを まとめる まね",
+          "emoji": "🎀"
+        },
+        {
+          "en": "Give me a thumbs-up.",
+          "ja": "おやゆびを たてて。",
+          "action": "グッドの ポーズ",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "silent",
+        "focus": [
+          "wr",
+          "kn"
+        ],
+        "sounds": [
+          "/r/",
+          "/n/"
+        ],
+        "words": [
+          "wrench",
+          "wrist",
+          "knob",
+          "knot"
+        ],
+        "tipJa": "wr の w と kn の k は よまない（だまっている もじ）。wrench（レンチ）・wrist（てくび）・knob（つまみ）・knot（むすびめ）。"
+      },
+      "vocab": [
+        {
+          "en": "goggles",
+          "ja": "ゴーグル",
+          "emoji": "🥽",
+          "core": true
+        },
+        {
+          "en": "gloves",
+          "ja": "てぶくろ",
+          "emoji": "🧤"
+        },
+        {
+          "en": "safety",
+          "ja": "あんぜん",
+          "emoji": "🦺"
+        },
+        {
+          "en": "wrench",
+          "ja": "レンチ",
+          "emoji": "🔧"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Before we use the big machines, we have a safety class. Listen carefully. You have to wear goggles. Say it with me. You have to wear goggles. Great! Goggles keep your eyes safe. You have to wear gloves, too. You have to tie back long hair. Do I have to wear gloves? Yes, you do. have to は「〜しなければ ならない」。きまりを いう ときに つかうよ。 Remember, at home you have to ask an adult before you use tools. Let's practice. At the pool, you have to wear a swim cap. In the library, you have to be quiet. Now, phonics. Wrench. Wrist. Knob. Knot. The w in w r is silent. The k in k n is silent, too. Wrench, knob. Now, tell me. What do you have to do at school?",
+      "conversation": {
+        "scene": "A safety class in the workshop",
+        "sceneJa": "工房の あんぜん講習",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Today, I'm the workshop master. Welcome to the safety class!",
+            "ja": "きょうは わたしが 工房の おやかた。あんぜん講習へ ようこそ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Rule one. You have to wear goggles.",
+            "ja": "きまり 1。ゴーグルを つけなければ ならない。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Do I have to wear gloves, too?",
+            "ja": "てぶくろも つけなければ ならない？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, you do. And you have to tie back long hair.",
+            "ja": "うん、そうよ。それに ながい かみは むすばなければ ならないわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay! My hair is tied back now.",
+            "ja": "わかった！かみ むすんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Do I have to wear goggles? I don't have hair!",
+            "ja": "ぼくも ゴーグルを つけなきゃ だめ？かみ ないけど！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, Birimo. Everyone has to wear goggles.",
+            "ja": "ええ、ビリモ。みんな ゴーグルを つけなければ ならないの。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "工房の あんぜんの きまりを You have to ～. で つたえよう。Do I have to ～? と きかれたら Yes, you do. で こたえよう",
+          "starterEn": "Hi! I'm Ms. Emma. I'm new at this workshop. What do I have to do before I use the machines?",
+          "targetExpressions": [
+            "You have to wear goggles.",
+            "You have to wear gloves.",
+            "Do I have to ～?",
+            "Yes, you do."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You have to wear goggles.",
+          "Do I have to wear gloves? ― Yes, you do.",
+          "wrench・wrist（w を よまない）／ knob・knot（k を よまない）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 552,
+      "world": 19,
+      "title": "You Must Not Touch It",
+      "titleJa": "さわっては いけない",
+      "school": {
+        "grade": "中2",
+        "topic": "You must not touch it. It's hot.：してはいけない ことを いう（must not）",
+        "grammar": "You must ～. / You must not ～.（must・must not）",
+        "expressions": [
+          {
+            "en": "You must not touch it. It's hot.",
+            "ja": "さわっては いけないよ。あついから。",
+            "core": true
+          },
+          {
+            "en": "You must wait until it cools down.",
+            "ja": "さめるまで またなければ いけないよ。"
+          },
+          {
+            "en": "You must not run in the workshop.",
+            "ja": "工房の なかを はしっては いけないよ。"
+          }
+        ],
+        "testPoints": [
+          "You must not ～. で きけんを つたえられる",
+          "だまっている もじ mb（thumb・climb・comb・plumber）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stop! Don't touch!",
+          "ja": "ストップ！さわらないで！",
+          "action": "てのひらを まえに だす",
+          "emoji": "✋"
+        },
+        {
+          "en": "Step back.",
+          "ja": "うしろに さがって。",
+          "action": "いっぽ うしろに さがる",
+          "emoji": "🔙"
+        },
+        {
+          "en": "Point to the sign.",
+          "ja": "かんばんを ゆびさして。",
+          "action": "ゆびさす",
+          "emoji": "⚠️"
+        },
+        {
+          "en": "Wait and count to ten.",
+          "ja": "まって、10 かぞえて。",
+          "action": "ゆびを おって かぞえる",
+          "emoji": "🔟"
+        }
+      ],
+      "phonics": {
+        "rule": "silent",
+        "focus": [
+          "mb"
+        ],
+        "sounds": [
+          "/m/"
+        ],
+        "words": [
+          "thumb",
+          "climb",
+          "comb",
+          "plumber"
+        ],
+        "tipJa": "mb の b は よまない（だまっている もじ）。thumb（おやゆび）・climb（のぼる）・comb（くし）・plumber（すいどう やさん）。"
+      },
+      "vocab": [
+        {
+          "en": "hot",
+          "ja": "あつい",
+          "emoji": "🔥",
+          "core": true
+        },
+        {
+          "en": "sign",
+          "ja": "かんばん・ひょうしき",
+          "emoji": "⚠️"
+        },
+        {
+          "en": "oven",
+          "ja": "オーブン",
+          "emoji": "♨️"
+        },
+        {
+          "en": "dangerous",
+          "ja": "あぶない",
+          "emoji": "☠️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Look at this machine. It's a small oven for metal parts. It's very hot. You must not touch it. It's hot. Say it with me. You must not touch it. It's hot. Good! Must not is very strong. It means, no, never! You must wait until it cools down. You must not run in the workshop. must not は「ぜったいに しては いけない」と いう つよい いいかた。 Let's practice. Look at the sign. You must not swim here. You must not cross the road now. The light is red. You must wait. Now, phonics. Thumb. Climb. Comb. Plumber. The b in m b is silent. Thumb, not thum b. Show me your thumb! You must wash your hands. You must not climb on the table. Now, tell me. What must you not do in the kitchen?",
+      "conversation": {
+        "scene": "In front of a hot machine",
+        "sceneJa": "あつい きかいの まえで",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Ooh, what's this shiny box? Can I touch it?",
+            "ja": "わあ、この ぴかぴかの はこは なに？さわって いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Stop! You must not touch it. It's hot.",
+            "ja": "ストップ！さわっては いけない。あついのよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh! Sorry. Thank you.",
+            "ja": "あっ！ごめん。ありがとう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look at the sign. It says, danger, hot!",
+            "ja": "かんばんを みて。きけん、あつい！って かいてある。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "When can we use the parts?",
+            "ja": "パーツは いつ つかえるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You must wait until it cools down. About ten minutes.",
+            "ja": "さめるまで またなければ いけないわ。10ぷんくらいね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And we must not run in the workshop. Walk, Birimo!",
+            "ja": "それに 工房の なかを はしっては いけないよ。あるいてね、ビリモ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あぶない ものの まえで、You must not ～. / You must ～. で ともだちに ちゅういしよう",
+          "starterEn": "Hi! I'm Ms. Emma. Oh, look! There's a hot iron on the table. My little brother wants to touch it. What should I tell him?",
+          "targetExpressions": [
+            "You must not touch it.",
+            "It's hot.",
+            "You must wait."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You must not touch it. It's hot.",
+          "You must wait until it cools down.",
+          "thumb・climb・comb・plumber（b を よまない）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 553,
+      "world": 19,
+      "title": "You Don't Have to Hurry",
+      "titleJa": "いそがなくて いいよ",
+      "school": {
+        "grade": "中2",
+        "topic": "You don't have to hurry.：しなくて いい ことを いう（don't have to）",
+        "grammar": "You don't have to ～.（〜しなくて いい）",
+        "expressions": [
+          {
+            "en": "You don't have to hurry.",
+            "ja": "いそがなくて いいよ。",
+            "core": true
+          },
+          {
+            "en": "Take your time.",
+            "ja": "ゆっくりで いいよ。"
+          },
+          {
+            "en": "You don't have to be perfect.",
+            "ja": "かんぺきじゃ なくて いいよ。"
+          }
+        ],
+        "testPoints": [
+          "You don't have to ～. で あんしんさせられる",
+          "だまっている もじ gu（guitar・guess・guide・guard）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Paint slowly.",
+          "ja": "ゆっくり ぬって。",
+          "action": "ふでを ゆっくり うごかす",
+          "emoji": "🖌️"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "しんこきゅう して。",
+          "action": "おおきく いきを すって はく",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Relax your shoulders.",
+          "ja": "かたの ちからを ぬいて。",
+          "action": "かたを あげて すとんと おとす",
+          "emoji": "😌"
+        },
+        {
+          "en": "Smile!",
+          "ja": "にっこり！",
+          "action": "えがおを つくる",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "silent",
+        "focus": [
+          "gu"
+        ],
+        "sounds": [
+          "/g/"
+        ],
+        "words": [
+          "guitar",
+          "guess",
+          "guide",
+          "guard"
+        ],
+        "tipJa": "gu の u は よまない（だまっている もじ）。u は g を「グ」と かたく よむ しるし。guitar・guess・guide・guard。"
+      },
+      "vocab": [
+        {
+          "en": "hurry",
+          "ja": "いそぐ",
+          "emoji": "🏃",
+          "core": true
+        },
+        {
+          "en": "perfect",
+          "ja": "かんぺきな",
+          "emoji": "💯"
+        },
+        {
+          "en": "paint",
+          "ja": "ペンキ・ぬる",
+          "emoji": "🎨"
+        },
+        {
+          "en": "careful",
+          "ja": "ていねいな",
+          "emoji": "🤲"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Kiko is painting a toy guitar. She is very worried. Is it okay? I'm so slow! Let's tell her. You don't have to hurry. Say it with me. You don't have to hurry. Very kind! Take your time. You don't have to be perfect. Don't have to means, it's not necessary. It's okay not to do it. don't have to は「〜しなくて いい」。must not の「しては いけない」と ちがうよ。 Let's practice. It's Sunday. You don't have to get up early. It's a free event. You don't have to pay. Kind words help our friends feel better. Kind words are like magic. Now, phonics. Guitar. Guess. Guide. Guard. The u after g is silent. It tells us g says g, like go. Now, tell me. On weekends, what don't you have to do?",
+      "conversation": {
+        "scene": "Working slowly and carefully",
+        "sceneJa": "ゆっくり ていねいに さぎょうする",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Oh no, I'm so slow. Everyone is finished.",
+            "ja": "ああ、わたし おそいなあ。みんな もう おわってる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You don't have to hurry, Kiko.",
+            "ja": "いそがなくて いいよ、キコ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Take your time. Your guitar looks really nice.",
+            "ja": "ゆっくりで いいよ。キコの ギター、すごく すてき。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "But this line isn't straight.",
+            "ja": "でも この せん、まっすぐ じゃない。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You don't have to be perfect. Handmade things are special.",
+            "ja": "かんぺきじゃ なくて いいのよ。てづくりの ものは とくべつなの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thanks, everyone. I feel better now.",
+            "ja": "みんな ありがとう。きもちが らくに なった。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can I guess? Is it a guitar for me?",
+            "ja": "あてて いい？ぼくの ための ギター？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あせっている ともだちに You don't have to hurry. / Take your time. と やさしく こえを かけよう",
+          "starterEn": "Hi! I'm Ms. Emma. I'm making a birthday card, but it's taking so long! I'm worried. What do you think?",
+          "targetExpressions": [
+            "You don't have to hurry.",
+            "Take your time.",
+            "You don't have to be perfect."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You don't have to hurry.",
+          "Take your time. / You don't have to be perfect.",
+          "guitar・guess・guide・guard（u を よまない）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 554,
+      "world": 19,
+      "title": "May I Use This?",
+      "titleJa": "これ つかっても いいですか？",
+      "school": {
+        "grade": "中2",
+        "topic": "May I use this hammer? ― Sure.：ていねいに きょかを もらう（May I ～?）",
+        "grammar": "May I ～? / Sure. / Sorry, ～.（ていねいな おねがい）",
+        "expressions": [
+          {
+            "en": "May I use this hammer?",
+            "ja": "この かなづちを つかっても いいですか？",
+            "core": true
+          },
+          {
+            "en": "Sure. Here you are.",
+            "ja": "いいよ。はい、どうぞ。"
+          },
+          {
+            "en": "Sorry, I'm using it now. You can use it after me.",
+            "ja": "ごめんね、いま つかってるの。わたしの あとで つかって いいよ。"
+          }
+        ],
+        "testPoints": [
+          "May I ～? で ていねいに きょかを もらえる",
+          "だまっている もじ -stle（whistle・castle・bristle・rustle）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand and ask.",
+          "ja": "てを あげて きいて。",
+          "action": "てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Take the hammer with both hands.",
+          "ja": "りょうてで かなづちを うけとって。",
+          "action": "りょうてで うけとる まね",
+          "emoji": "🔨"
+        },
+        {
+          "en": "Say thank you with a bow.",
+          "ja": "おじぎして ありがとうと いって。",
+          "action": "かるく おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Blow the whistle!",
+          "ja": "ふえを ふいて！",
+          "action": "ふえを ふく まね",
+          "emoji": "📯"
+        }
+      ],
+      "phonics": {
+        "rule": "silent",
+        "focus": [
+          "-stle"
+        ],
+        "sounds": [
+          "/səl/"
+        ],
+        "words": [
+          "whistle",
+          "castle",
+          "bristle",
+          "rustle"
+        ],
+        "tipJa": "stle の t は よまない（だまっている もじ）。「スル」と よむ。whistle（ふえ）・castle（おしろ）・bristle（ブラシの け）・rustle（かさかさ なる）。"
+      },
+      "vocab": [
+        {
+          "en": "borrow",
+          "ja": "かりる",
+          "emoji": "🤝",
+          "core": true
+        },
+        {
+          "en": "whistle",
+          "ja": "ふえ",
+          "emoji": "📯"
+        },
+        {
+          "en": "nail",
+          "ja": "くぎ",
+          "emoji": "📌"
+        },
+        {
+          "en": "sure",
+          "ja": "いいよ・もちろん",
+          "emoji": "👌"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Haru needs a hammer, but the workshop master has it. How can he ask politely? May I use this hammer? Sure. Here you are. Say it with me. May I use this hammer? Sure. Here you are. Great! May I is very polite. We use it with teachers and adults. If the answer is no, you can hear, sorry, I'm using it now. You can use it after me. May I ～? は Can I ～? より ていねいな いいかた。 Let's practice. May I sit here? Sure. May I open the window? Of course. May I borrow your eraser? Sorry, I need it now. Always say thank you! Now, phonics. Whistle. Castle. Bristle. Rustle. The t in s t l e is silent. Whis-tle, not whis-t-le. Now, ask me politely. What do you want to borrow?",
+      "conversation": {
+        "scene": "Borrowing a tool from the workshop master",
+        "sceneJa": "工房の おやかたに どうぐを かりる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Excuse me. May I use this hammer?",
+            "ja": "すみません。この かなづちを つかっても いいですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Sure. Here you are. Be careful with your thumb!",
+            "ja": "いいわよ。はい、どうぞ。おやゆびに きを つけてね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you!",
+            "ja": "ありがとうございます！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Haru, may I use the hammer, too?",
+            "ja": "ハル、わたしも かなづちを つかって いい？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sorry, I'm using it now. You can use it after me.",
+            "ja": "ごめんね、いま つかってるんだ。ぼくの あとで つかって いいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay. Thanks!",
+            "ja": "わかった。ありがとう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "May I blow this whistle? Tweeeet!",
+            "ja": "この ふえを ふいても いい？ピーーッ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "工房の おやかたに May I use ～? と ていねいに きいて、どうぐを かりよう。かりたら Thank you! と いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Today I'm the workshop master. These are my special tools. Do you need anything?",
+          "targetExpressions": [
+            "May I use this ～?",
+            "Sure. Here you are.",
+            "Thank you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "May I use this hammer? ― Sure. Here you are.",
+          "Sorry, I'm using it now. You can use it after me.",
+          "whistle・castle・bristle・rustle（t を よまない）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 555,
+      "world": 19,
+      "title": "Workshop Rules Poster",
+      "titleJa": "工房の きまりポスター",
+      "school": {
+        "grade": "中2",
+        "topic": "We must clean up. We have to share tools.：きまりを 3つ かいて ポスターに する（まとめ）",
+        "grammar": "We must ～. / We have to ～. / We should ～.（きまりの ポスター）",
+        "expressions": [
+          {
+            "en": "We must clean up. We have to share tools.",
+            "ja": "かたづけを しなければ いけない。どうぐは みんなで つかわなければ ならない。",
+            "core": true
+          },
+          {
+            "en": "Rule number one: We must wear goggles.",
+            "ja": "きまり 1: ゴーグルを つけなければ ならない。"
+          },
+          {
+            "en": "We should help each other.",
+            "ja": "おたがいに たすけあった ほうが いい。"
+          }
+        ],
+        "testPoints": [
+          "must / have to で ルールを 3つ かける",
+          "だまっている もじの ふりかえり（wrench・knob・thumb・guitar・whistle）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write the title in big letters.",
+          "ja": "タイトルを おおきな じで かいて。",
+          "action": "おおきく かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Draw a picture.",
+          "ja": "えを かいて。",
+          "action": "クレヨンで かく まね",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "Put the poster on the wall.",
+          "ja": "ポスターを かべに はって。",
+          "action": "かべに はる まね",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Clean up the table.",
+          "ja": "つくえを かたづけて。",
+          "action": "ふく まね",
+          "emoji": "🧹"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "wr",
+          "kn",
+          "mb",
+          "gu",
+          "-stle"
+        ],
+        "sounds": [
+          "/r/",
+          "/n/",
+          "/m/",
+          "/g/",
+          "/səl/"
+        ],
+        "words": [
+          "wrench",
+          "knob",
+          "thumb",
+          "guitar",
+          "whistle"
+        ],
+        "tipJa": "だまっている もじの ふりかえり: wrench（w）・knob（k）・thumb（b）・guitar（u）・whistle（t）。かくれて いても おとは ださない。"
+      },
+      "vocab": [
+        {
+          "en": "rule",
+          "ja": "きまり",
+          "emoji": "📋",
+          "core": true
+        },
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "share",
+          "ja": "みんなで つかう・わける",
+          "emoji": "🤲"
+        },
+        {
+          "en": "clean up",
+          "ja": "かたづける",
+          "emoji": "🧹"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The workshop needs a rules poster. Let's write three rules together. What's important? We must clean up. We have to share tools. Say it with me. We must clean up. We have to share tools. Excellent! Rule number one: We must wear goggles. Rule number two: We have to share tools. Rule number three: We should help each other. Should is softer. It's good advice, not a strict rule. ルールは must や have to、アドバイスは should だよ。 Let's practice. Classroom rules. We must not run in the hallway. We have to raise our hands. We should say good morning. Now, phonics review. Wrench. Knob. Thumb. Guitar. Whistle. Silent letters are quiet, but we still write them. Three rules are easy to remember. Now, make a rule for your home. We must what?",
+      "conversation": {
+        "scene": "Making a workshop rules poster",
+        "sceneJa": "工房の きまりポスターを つくる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make a rules poster for the workshop. Any ideas?",
+            "ja": "工房の きまりポスターを つくりましょう。なにか アイデアは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Rule number one: We must wear goggles.",
+            "ja": "きまり 1: ゴーグルを つけなければ ならない。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Rule number two: We have to share tools.",
+            "ja": "きまり 2: どうぐは みんなで つかわなければ ならない。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Rule number three: We must clean up.",
+            "ja": "きまり 3: かたづけを しなければ いけない。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And we should help each other!",
+            "ja": "それと、おたがいに たすけあった ほうが いいね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful. Kiko, can you draw the pictures?",
+            "ja": "すばらしい。キコ、えを かいて くれる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Sure! I'll draw goggles and a big broom.",
+            "ja": "うん！ゴーグルと おおきな ほうきを かくね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "工房や きょうしつの きまりを We must ～. / We have to ～. / We should ～. で 3つ かんがえよう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's make a rules poster for our classroom. What's rule number one?",
+          "targetExpressions": [
+            "We must ～.",
+            "We have to ～.",
+            "We should ～.",
+            "Rule number one: ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We must clean up. We have to share tools.",
+          "Rule number one: We must wear goggles. / We should help each other.",
+          "wrench・knob・thumb・guitar・whistle"
+        ]
+      }
+    },
+    {
+      "lessonNo": 556,
+      "world": 19,
+      "title": "You Should Rest",
+      "titleJa": "やすんだ ほうが いいよ",
+      "school": {
+        "grade": "中2",
+        "topic": "You look tired. You should rest.：アドバイスを する（should / shouldn't）",
+        "grammar": "You should ～. / You shouldn't ～.（アドバイス）",
+        "expressions": [
+          {
+            "en": "You look tired. You should rest.",
+            "ja": "つかれてる みたい。やすんだ ほうが いいよ。",
+            "core": true
+          },
+          {
+            "en": "You should drink some water.",
+            "ja": "おみずを のんだ ほうが いいよ。"
+          },
+          {
+            "en": "You shouldn't work too late.",
+            "ja": "おそくまで さぎょう しない ほうが いいよ。"
+          }
+        ],
+        "testPoints": [
+          "You should ～. / You shouldn't ～. で アドバイスできる",
+          "qu（quick・quiet・quiz・queen）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sit down on the sofa.",
+          "ja": "ソファに すわって。",
+          "action": "ゆっくり すわる",
+          "emoji": "🛋️"
+        },
+        {
+          "en": "Drink some water.",
+          "ja": "おみずを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "🥤"
+        },
+        {
+          "en": "Close your eyes.",
+          "ja": "めを とじて。",
+          "action": "めを とじる",
+          "emoji": "😌"
+        },
+        {
+          "en": "Stretch your arms.",
+          "ja": "うでを のばして。",
+          "action": "りょううでを うえに のばす",
+          "emoji": "🙆"
+        }
+      ],
+      "phonics": {
+        "rule": "qu",
+        "focus": [
+          "qu"
+        ],
+        "sounds": [
+          "/kw/"
+        ],
+        "words": [
+          "quick",
+          "quiet",
+          "quiz",
+          "queen"
+        ],
+        "tipJa": "q の あとには いつも u。qu で「クw」の おと。quick（すばやい）・quiet（しずかな）・quiz（クイズ）・queen（じょおう）。"
+      },
+      "vocab": [
+        {
+          "en": "tired",
+          "ja": "つかれた",
+          "emoji": "😩",
+          "core": true
+        },
+        {
+          "en": "rest",
+          "ja": "やすむ",
+          "emoji": "🛌"
+        },
+        {
+          "en": "advice",
+          "ja": "アドバイス",
+          "emoji": "💬"
+        },
+        {
+          "en": "quiet",
+          "ja": "しずかな",
+          "emoji": "🤫"
+        }
+      ],
+      "teacherScript": "Hi, everyone! It's late in the workshop. Kiko is yawning. Let's give her some advice. You look tired. You should rest. Say it with me. You look tired. You should rest. Very kind! Should is for advice. It means, it's a good idea. You should drink some water. You shouldn't work too late. Shouldn't means, it's not a good idea. should は「〜した ほうが いい」。やさしい アドバイスの ことばだよ。 Let's practice. My friend has a cold. You should go to bed early. My friend is hungry. You should eat a snack. My friend plays games all night. You shouldn't do that! Now, phonics. Quick. Quiet. Quiz. Queen. Q and u are best friends. They always go together. My friend is cold. You should wear a jacket. Now, give me some advice. I'm sleepy. What should I do?",
+      "conversation": {
+        "scene": "After work, Kiko is tired",
+        "sceneJa": "さぎょうの あと、つかれた キコに",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Yaaawn... I'm so sleepy.",
+            "ja": "ふぁーあ…すごく ねむい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You look tired, Kiko. You should rest.",
+            "ja": "つかれてる みたい、キコ。やすんだ ほうが いいよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "But I want to finish my toy.",
+            "ja": "でも おもちゃを しあげたいの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You shouldn't work too late. You can finish it tomorrow.",
+            "ja": "おそくまで さぎょう しない ほうが いいよ。あした しあげれば いいよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "And you should drink some water.",
+            "ja": "それに おみずを のんだ ほうが いいわね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Okay. Thanks, everyone.",
+            "ja": "わかった。みんな ありがとう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Shh. Let's be quiet. Kiko is sleeping.",
+            "ja": "しーっ。しずかに しよう。キコが ねてる。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "つかれた ともだちや かぜを ひいた ともだちに You should ～. / You shouldn't ～. で アドバイスしよう",
+          "starterEn": "Hi! I'm Ms. Emma. I worked all day, and now my head feels heavy. I'm so tired. What should I do?",
+          "targetExpressions": [
+            "You look tired.",
+            "You should rest.",
+            "You should drink some water.",
+            "You shouldn't ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You look tired. You should rest.",
+          "You should drink some water. / You shouldn't work too late.",
+          "quick・quiet・quiz・queen（q の あとには u）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 557,
+      "world": 19,
+      "title": "Game Rules",
+      "titleJa": "ゲームの ルール",
+      "school": {
+        "grade": "中2",
+        "topic": "First, you have to roll the dice.：ボードゲームの ルールを せつめいする（have to / can / must not）",
+        "grammar": "First, you have to ～. / Then, you can ～. / You must not ～.（ルールの せつめい）",
+        "expressions": [
+          {
+            "en": "First, you have to roll the dice.",
+            "ja": "まず、サイコロを ふらなければ ならない。",
+            "core": true
+          },
+          {
+            "en": "Then, you can move your piece.",
+            "ja": "それから、コマを すすめて いいよ。"
+          },
+          {
+            "en": "You must not look at the cards.",
+            "ja": "カードを みては いけないよ。"
+          }
+        ],
+        "testPoints": [
+          "have to / can / must not で ゲームの ルールを せつめいできる",
+          "qu（question・quilt・quit・quack）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Roll the dice.",
+          "ja": "サイコロを ふって。",
+          "action": "てを ふって ころがす まね",
+          "emoji": "🎲"
+        },
+        {
+          "en": "Move your piece.",
+          "ja": "コマを すすめて。",
+          "action": "ゆびで コマを うごかす",
+          "emoji": "♟️"
+        },
+        {
+          "en": "Pick a card.",
+          "ja": "カードを 1まい ひいて。",
+          "action": "カードを ひく まね",
+          "emoji": "🃏"
+        },
+        {
+          "en": "Quack like a duck!",
+          "ja": "あひるの ように ガーガー！",
+          "action": "てで くちばしを つくる",
+          "emoji": "🦆"
+        }
+      ],
+      "phonics": {
+        "rule": "qu",
+        "focus": [
+          "qu"
+        ],
+        "sounds": [
+          "/kw/"
+        ],
+        "words": [
+          "question",
+          "quilt",
+          "quit",
+          "quack"
+        ],
+        "tipJa": "qu の ふくしゅう: question（しつもん）・quilt（キルト）・quit（やめる）・quack（ガーガー）。q だけでは かかない。かならず qu。"
+      },
+      "vocab": [
+        {
+          "en": "dice",
+          "ja": "サイコロ",
+          "emoji": "🎲",
+          "core": true
+        },
+        {
+          "en": "piece",
+          "ja": "コマ",
+          "emoji": "♟️"
+        },
+        {
+          "en": "card",
+          "ja": "カード",
+          "emoji": "🃏"
+        },
+        {
+          "en": "board game",
+          "ja": "ボードゲーム",
+          "emoji": "🎯"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We made a board game in the workshop. Now, let's explain the rules. First, you have to roll the dice. Say it with me. First, you have to roll the dice. Great! Then, you can move your piece. If you land on a duck, pick a question card. You must not look at the cards. Have to, can and must not are perfect for game rules. ルールの せつめいでは have to（しなければ ならない）、can（して いい）、must not（しては いけない）を つかうよ。 Let's practice rock, paper, scissors. First, you have to say the words together. Then, you can show your hand. You must not be late! Now, phonics. Question. Quilt. Quit. Quack. Q u, q u. Quack, quack! Quit? No way! Let's play! Now, tell me the rules of your favorite game. First, you have to what?",
+      "conversation": {
+        "scene": "Explaining the rules of the board game they made",
+        "sceneJa": "工房で つくった ボードゲームの ルールを せつめいする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Our board game is ready! Let me explain the rules.",
+            "ja": "ボードゲームが できた！ルールを せつめいするね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "First, you have to roll the dice.",
+            "ja": "まず、サイコロを ふらなければ ならない。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Then, you can move your piece.",
+            "ja": "それから、コマを すすめて いいんだね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's right. If you land on a duck, you have to answer a question card.",
+            "ja": "その とおり。あひるの マスに とまったら、しつもんカードに こたえなければ ならない。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "May I look at the cards first?",
+            "ja": "さきに カードを みても いい？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No! You must not look at the cards.",
+            "ja": "だめ！カードを みては いけないよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Quack, quack! I love this game already!",
+            "ja": "ガーガー！もう この ゲーム だいすき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな ゲームの ルールを First, you have to ～. / Then, you can ～. / You must not ～. で せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. I want to play your favorite game, but I don't know the rules. Can you teach me? What do I have to do first?",
+          "targetExpressions": [
+            "First, you have to ～.",
+            "Then, you can ～.",
+            "You must not ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, you have to roll the dice.",
+          "Then, you can move your piece. / You must not look at the cards.",
+          "question・quilt・quit・quack"
+        ]
+      }
+    },
+    {
+      "lessonNo": 558,
+      "world": 19,
+      "title": "It's Your Turn",
+      "titleJa": "きみの ばんだよ",
+      "school": {
+        "grade": "中2",
+        "topic": "It's your turn. You can move three spaces.：ゲームを しながら やりとりする（turn・spaces）",
+        "grammar": "It's your turn. / Whose turn is it? / You can move ～ spaces.（ゲームの ことば）",
+        "expressions": [
+          {
+            "en": "It's your turn. You can move three spaces.",
+            "ja": "きみの ばんだよ。3マス すすめるよ。",
+            "core": true
+          },
+          {
+            "en": "Whose turn is it?",
+            "ja": "だれの ばん？"
+          },
+          {
+            "en": "Oh no! Go back two spaces.",
+            "ja": "あーあ！2マス もどって。"
+          }
+        ],
+        "testPoints": [
+          "It's your turn. / Whose turn is it? で じゅんばんを つたえられる",
+          "squ（square・squeeze・squid・squash）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Roll the dice. Three!",
+          "ja": "サイコロを ふって。3！",
+          "action": "ころがして ゆびを 3ぼん たてる",
+          "emoji": "🎲"
+        },
+        {
+          "en": "Move three spaces.",
+          "ja": "3マス すすんで。",
+          "action": "その ばで 3ぽ すすむ",
+          "emoji": "👣"
+        },
+        {
+          "en": "Go back two spaces.",
+          "ja": "2マス もどって。",
+          "action": "うしろに 2ほ さがる",
+          "emoji": "🔙"
+        },
+        {
+          "en": "Squeeze your hands. Good luck!",
+          "ja": "てを ぎゅっと にぎって。がんばれ！",
+          "action": "りょうてを ぎゅっと にぎる",
+          "emoji": "🤞"
+        }
+      ],
+      "phonics": {
+        "rule": "qu",
+        "focus": [
+          "squ"
+        ],
+        "sounds": [
+          "/skw/"
+        ],
+        "words": [
+          "square",
+          "squeeze",
+          "squid",
+          "squash"
+        ],
+        "tipJa": "s ＋ qu で squ（スクw）。square（しかく）・squeeze（ぎゅっと にぎる）・squid（いか）・squash（つぶす）。"
+      },
+      "vocab": [
+        {
+          "en": "turn",
+          "ja": "ばん・じゅんばん",
+          "emoji": "🔄",
+          "core": true
+        },
+        {
+          "en": "space",
+          "ja": "マス",
+          "emoji": "⬜"
+        },
+        {
+          "en": "square",
+          "ja": "しかく",
+          "emoji": "🟥"
+        },
+        {
+          "en": "winner",
+          "ja": "かった ひと",
+          "emoji": "🏆"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Let's play our board game. Who goes first? Haru rolls the dice. Now, it's Riko's turn. It's your turn. You can move three spaces. Say it with me. It's your turn. You can move three spaces. Great! When you forget, ask, whose turn is it? Sometimes you land on a bad square. Oh no! Go back two spaces. turn は「ばん」、space は ゲームの「マス」だよ。 Let's practice. Whose turn is it? It's my turn! I rolled a five. I can move five spaces. You landed on a squid square. Go back one space! Good games are fun when everyone waits for their turn. Now, phonics. Square. Squeeze. Squid. Squash. S, q u. Squ, squ. Squeeze your hands and wish for a six! Now, let's play. I rolled a four. How many spaces can I move?",
+      "conversation": {
+        "scene": "Playing the board game",
+        "sceneJa": "ボードゲームで あそぶ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I rolled a two. One, two. Okay, whose turn is it?",
+            "ja": "2が でた。1、2。よし、つぎは だれの ばん？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's Riko's turn.",
+            "ja": "リコの ばんだよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Here I go... Three!",
+            "ja": "いくよ…3！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's your turn. You can move three spaces.",
+            "ja": "きみの ばんだよ。3マス すすめるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "One, two, three... Oh, it's a squid square!",
+            "ja": "1、2、3…あ、いかの マスだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh no! Go back two spaces.",
+            "ja": "あーあ！2マス もどって。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Aww. Okay. Birimo, it's your turn!",
+            "ja": "えー。わかった。ビリモ、きみの ばんだよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すごろくで あそびながら It's your turn. / Whose turn is it? / You can move ～ spaces. と いいあおう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's play a board game! I rolled a four. One, two, three, four. Now, whose turn is it?",
+          "targetExpressions": [
+            "It's your turn.",
+            "Whose turn is it?",
+            "You can move ～ spaces.",
+            "Go back ～ spaces."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's your turn. You can move three spaces.",
+          "Whose turn is it? / Oh no! Go back two spaces.",
+          "square・squeeze・squid・squash（s ＋ qu）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 559,
+      "world": 19,
+      "title": "That's Not Fair!",
+      "titleJa": "それは ずるいよ！",
+      "school": {
+        "grade": "中2",
+        "topic": "That's not fair! Let's check the rules.：ルールで もめたとき はなしあう",
+        "grammar": "That's not fair! / Let's check the rules. / You're right.（もめごとを はなしあいで）",
+        "expressions": [
+          {
+            "en": "That's not fair! Let's check the rules.",
+            "ja": "それは ずるいよ！ルールを たしかめよう。",
+            "core": true
+          },
+          {
+            "en": "You moved four spaces, not three.",
+            "ja": "3マス じゃなくて 4マス すすんだよ。"
+          },
+          {
+            "en": "Sorry. You're right. Let's play again.",
+            "ja": "ごめん。きみの いう とおり。もう いちど やろう。"
+          }
+        ],
+        "testPoints": [
+          "That's not fair! / Let's check the rules. で おだやかに はなしあえる",
+          "qu・squ（liquid・equal・squeak・squirrel）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Count the spaces again.",
+          "ja": "もう いちど マスを かぞえて。",
+          "action": "ゆびで かぞえる",
+          "emoji": "🔢"
+        },
+        {
+          "en": "Read the rules.",
+          "ja": "ルールを よんで。",
+          "action": "かみを もって よむ まね",
+          "emoji": "📜"
+        },
+        {
+          "en": "Shake hands.",
+          "ja": "あくしゅ して。",
+          "action": "あくしゅの まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Squeak like a mouse!",
+          "ja": "ねずみの ように チューチュー！",
+          "action": "ちいさく なって なく",
+          "emoji": "🐭"
+        }
+      ],
+      "phonics": {
+        "rule": "qu",
+        "focus": [
+          "qu",
+          "squ"
+        ],
+        "sounds": [
+          "/kw/",
+          "/skw/"
+        ],
+        "words": [
+          "liquid",
+          "equal",
+          "squeak",
+          "squirrel"
+        ],
+        "tipJa": "qu は ことばの まんなかにも ある: liquid（えきたい）・equal（おなじ）。squ: squeak（キーキー）・squirrel（りす）。"
+      },
+      "vocab": [
+        {
+          "en": "fair",
+          "ja": "こうへいな",
+          "emoji": "⚖️",
+          "core": true
+        },
+        {
+          "en": "check",
+          "ja": "たしかめる",
+          "emoji": "✅"
+        },
+        {
+          "en": "equal",
+          "ja": "おなじ・ひとしい",
+          "emoji": "🍪"
+        },
+        {
+          "en": "squirrel",
+          "ja": "りす",
+          "emoji": "🐿️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Uh-oh. There's a problem in our game. Birimo moved four spaces, but he rolled a three. Haru says, that's not fair! Let's check the rules. Say it with me. That's not fair! Let's check the rules. Good! It's okay to say it, but say it calmly. Then, explain. You moved four spaces, not three. Birimo can say, sorry. You're right. Let's play again. It's okay. It's just a game. ずるいと おもったら、おこらずに ルールを いっしょに たしかめよう。 Let's practice. Your friend took two cookies. That's not fair! We should get equal parts. Let's check. Now, phonics. Liquid. Equal. Squeak. Squirrel. Q u can be in the middle of a word, too. Liq-uid. Eq-ual. Good friends play fair. Talking is better than fighting. Now, tell me. What can you say when a game isn't fair?",
+      "conversation": {
+        "scene": "Arguing about the rules and talking it out",
+        "sceneJa": "ルールで もめて、はなしあう",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I rolled a three. One, two, three, four! I'm on the star!",
+            "ja": "3が でた。1、2、3、4！ほしの マスだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wait! That's not fair!",
+            "ja": "まって！それは ずるいよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You moved four spaces, not three.",
+            "ja": "3マス じゃなくて 4マス すすんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Huh? No, I didn't!",
+            "ja": "え？そんな こと してないよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's check the rules. ... You can move the number on the dice.",
+            "ja": "ルールを たしかめよう。…サイコロの かずだけ すすめる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh. Sorry. You're right. Let's play again.",
+            "ja": "あ。ごめん。きみの いう とおり。もう いちど やろう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's okay. It's just a game. Let's have fun!",
+            "ja": "いいよ。ただの ゲーム だもん。たのしもう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ゲームで ずるいと おもったとき、That's not fair! / Let's check the rules. と おだやかに はなしあおう。あやまられたら It's okay. と いおう",
+          "starterEn": "Hi! I'm Ms. Emma. Let's play cards. Oh, look, I took three cards, but the rule says two! Hehe. What do you say?",
+          "targetExpressions": [
+            "That's not fair!",
+            "Let's check the rules.",
+            "It's okay. It's just a game."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "That's not fair! Let's check the rules.",
+          "Sorry. You're right. Let's play again. ― It's okay.",
+          "liquid・equal（まんなかの qu）／ squeak・squirrel"
+        ]
+      }
+    },
+    {
+      "lessonNo": 560,
+      "world": 19,
+      "title": "Our Original Game",
+      "titleJa": "わたしたちの オリジナルゲーム",
+      "school": {
+        "grade": "中2",
+        "topic": "In our game, you have to collect stars.：4人で つくった ゲームを はっぴょうする（まとめ）",
+        "grammar": "In our game, you have to ～. / You don't have to ～. / The first player with ～ wins.（ゲームの はっぴょう）",
+        "expressions": [
+          {
+            "en": "In our game, you have to collect stars.",
+            "ja": "わたしたちの ゲームでは、ほしを あつめなければ ならない。",
+            "core": true
+          },
+          {
+            "en": "The first player with five stars wins.",
+            "ja": "さいしょに ほしを 5つ あつめた ひとの かち。"
+          },
+          {
+            "en": "You don't have to be fast. You have to be smart.",
+            "ja": "はやく なくて いい。かしこく ないと いけない。"
+          }
+        ],
+        "testPoints": [
+          "In our game, you have to ～. で ゲームを しょうかいできる",
+          "qu・squ の ふりかえり（quiz・question・square・squeeze）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up the game board.",
+          "ja": "ゲームばんを みせて。",
+          "action": "りょうてで たかく かかげる",
+          "emoji": "🎲"
+        },
+        {
+          "en": "Collect a star!",
+          "ja": "ほしを あつめて！",
+          "action": "ほしを つかむ まね",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Count your stars.",
+          "ja": "ほしを かぞえて。",
+          "action": "ゆびを おって かぞえる",
+          "emoji": "🔢"
+        },
+        {
+          "en": "Cheer for the winner!",
+          "ja": "かった ひとを おうえん！",
+          "action": "りょうてを あげて ばんざい",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "qu",
+          "squ"
+        ],
+        "sounds": [
+          "/kw/",
+          "/skw/"
+        ],
+        "words": [
+          "quiz",
+          "question",
+          "square",
+          "squeeze"
+        ],
+        "tipJa": "qu・squ の ふりかえり: quiz・question（qu）、square・squeeze（squ）。q の あとには いつも u。"
+      },
+      "vocab": [
+        {
+          "en": "original",
+          "ja": "オリジナルの",
+          "emoji": "✨",
+          "core": true
+        },
+        {
+          "en": "collect",
+          "ja": "あつめる",
+          "emoji": "🧺"
+        },
+        {
+          "en": "player",
+          "ja": "プレイヤー",
+          "emoji": "🧑"
+        },
+        {
+          "en": "win",
+          "ja": "かつ",
+          "emoji": "🏆"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today, our team will present our original game. It's called Star Quest. Listen. In our game, you have to collect stars. Say it with me. In our game, you have to collect stars. Wonderful! The first player with five stars wins. You have to answer quiz questions to get a star. You don't have to be fast. You have to be smart. ゲームの しょうかいは In our game, ～. で はじめると わかりやすいよ。 Let's practice. In our game, you have to find the squirrel. In our game, you can't talk. In our game, you don't have to run. Then, ask, any questions? Now, phonics review. Quiz. Question. Square. Squeeze. Q u, s q u. Speak loudly and smile at the audience. Now, imagine your own game. In your game, what do you have to do?",
+      "conversation": {
+        "scene": "Presenting the game the four friends made",
+        "sceneJa": "4人で つくった ゲームを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Next, the team with Haru, Riko, Kiko and Birimo!",
+            "ja": "つぎは、ハル、リコ、キコ、ビリモの チーム！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Our game is called Star Quest. In our game, you have to collect stars.",
+            "ja": "わたしたちの ゲームは スタークエスト。この ゲームでは、ほしを あつめなければ ならない。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You have to answer a quiz question to get a star.",
+            "ja": "ほしを もらうには クイズに こたえなければ ならない。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "You don't have to be fast. You have to be smart.",
+            "ja": "はやく なくて いい。かしこく ないと いけない。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The first player with five stars wins!",
+            "ja": "さいしょに ほしを 5つ あつめた ひとの かち！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Any questions?",
+            "ja": "しつもんは ありますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a fun game! Can I play it after the show?",
+            "ja": "たのしそうな ゲーム！はっぴょうの あとで あそんで いい？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんで かんがえた ゲームを In our game, you have to ～. / The first player ～ wins. で しょうかいしよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. I heard you made an original game! What's it called? What do players have to do?",
+          "targetExpressions": [
+            "In our game, you have to ～.",
+            "You don't have to ～.",
+            "The first player with ～ wins.",
+            "Any questions?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In our game, you have to collect stars.",
+          "The first player with five stars wins. / You don't have to be fast.",
+          "quiz・question・square・squeeze"
+        ]
+      }
+    },
+    {
+      "lessonNo": 561,
+      "world": 19,
+      "title": "Great Inventions",
+      "titleJa": "すごい はつめい",
+      "school": {
+        "grade": "中2",
+        "topic": "The telephone helps people talk.：はつめいの やくわりを いう（～ helps people ～.）",
+        "grammar": "～ helps people ～. / ～ makes ～ easier.（はつめいの やくわり）",
+        "expressions": [
+          {
+            "en": "The telephone helps people talk.",
+            "ja": "でんわは ひとが はなすのを たすける。",
+            "core": true
+          },
+          {
+            "en": "The light bulb lights up dark rooms.",
+            "ja": "でんきゅうは くらい へやを あかるく する。"
+          },
+          {
+            "en": "The wheel helps people carry heavy things.",
+            "ja": "しゃりんは ひとが おもい ものを はこぶのを たすける。"
+          }
+        ],
+        "testPoints": [
+          "～ helps people ～. で はつめいの やくわりを いえる",
+          "ou の いろいろな おと（house・cloud・touch・young）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk around the gallery.",
+          "ja": "ギャラリーを あるいて まわって。",
+          "action": "ゆっくり あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Look closely.",
+          "ja": "よく みて。",
+          "action": "かおを ちかづける",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Don't touch the old machines.",
+          "ja": "ふるい きかいに さわらないで。",
+          "action": "てを うしろに くむ",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Pretend to talk on the phone.",
+          "ja": "でんわで はなす まね。",
+          "action": "てを みみに あてる",
+          "emoji": "📞"
+        }
+      ],
+      "phonics": {
+        "rule": "ou",
+        "focus": [
+          "ou"
+        ],
+        "sounds": [
+          "/aʊ/",
+          "/ʌ/"
+        ],
+        "words": [
+          "house",
+          "cloud",
+          "touch",
+          "young"
+        ],
+        "tipJa": "ou は house・cloud では「アウ」、touch・young では「ア」。おなじ つづりでも おとが ちがう ことが あるよ。"
+      },
+      "vocab": [
+        {
+          "en": "invention",
+          "ja": "はつめい",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "telephone",
+          "ja": "でんわ",
+          "emoji": "☎️"
+        },
+        {
+          "en": "light bulb",
+          "ja": "でんきゅう",
+          "emoji": "💡"
+        },
+        {
+          "en": "gallery",
+          "ja": "ギャラリー",
+          "emoji": "🖼️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Look. This is the inventor's gallery. There are many great inventions here. This is an old telephone. The telephone helps people talk. Say it with me. The telephone helps people talk. Great! Helps people means it makes life better for people. The light bulb lights up dark rooms. The wheel helps people carry heavy things. helps people ～ で「ひとの やくに たつ」ことを いうよ。 Let's practice. The refrigerator keeps food cold. The bicycle helps people go far. The camera helps people remember special days. Please look with your eyes, not your hands. Now, phonics. House. Cloud. Touch. Young. In house and cloud, o u says ow. In touch and young, o u says uh. Same letters, different sounds! Now, tell me about a great invention. What does it help people do?",
+      "conversation": {
+        "scene": "In the workshop's invention gallery",
+        "sceneJa": "工房の はつめいひん ギャラリー",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look! This is a very old telephone.",
+            "ja": "みて！これ、すごく ふるい でんわ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "The telephone helps people talk. Even people in different countries.",
+            "ja": "でんわは ひとが はなすのを たすけるの。ちがう くにの ひととも。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And this? It's a light bulb!",
+            "ja": "これは？でんきゅう だ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The light bulb lights up dark rooms. I can read at night!",
+            "ja": "でんきゅうは くらい へやを あかるく する。よるも ほんが よめる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What about this round thing?",
+            "ja": "この まるい ものは？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a wheel. The wheel helps people carry heavy things.",
+            "ja": "しゃりんよ。しゃりんは ひとが おもい ものを はこぶのを たすけるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Inventions are amazing. I want to make one, too!",
+            "ja": "はつめいって すごい。ぼくも つくりたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな はつめいを えらんで、～ helps people ～. で なにに やくだつか せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. I think inventions are amazing. What's your favorite invention? How does it help people?",
+          "targetExpressions": [
+            "The ～ helps people ～.",
+            "It lights up ～.",
+            "It makes ～ easier."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The telephone helps people talk.",
+          "The light bulb lights up dark rooms. / The wheel helps people carry heavy things.",
+          "house・cloud（アウ）／ touch・young（ア）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 562,
+      "world": 19,
+      "title": "My Dream Machine",
+      "titleJa": "わたしの ゆめの きかい",
+      "school": {
+        "grade": "中2",
+        "topic": "My machine can clean my room.：ゆめの きかいを せつめいする（can・has）",
+        "grammar": "My machine can ～. / It has ～. / It can also ～.（きかいの せつめい）",
+        "expressions": [
+          {
+            "en": "My machine can clean my room.",
+            "ja": "わたしの きかいは へやを そうじ できる。",
+            "core": true
+          },
+          {
+            "en": "It has two long arms.",
+            "ja": "ながい うでが 2ほん ある。"
+          },
+          {
+            "en": "It can also fold my clothes.",
+            "ja": "ふくを たたむ ことも できる。"
+          }
+        ],
+        "testPoints": [
+          "My machine can ～. / It has ～. で ゆめの きかいを せつめいできる",
+          "ou の いろいろな おと（soup・group・country・double）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Close your eyes and imagine.",
+          "ja": "めを とじて そうぞうして。",
+          "action": "めを とじて かんがえる",
+          "emoji": "💭"
+        },
+        {
+          "en": "Draw your machine.",
+          "ja": "きかいの えを かいて。",
+          "action": "かみに かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Move like a robot.",
+          "ja": "ロボットの ように うごいて。",
+          "action": "カクカク うごく",
+          "emoji": "🤖"
+        },
+        {
+          "en": "Fold your clothes.",
+          "ja": "ふくを たたんで。",
+          "action": "ふくを たたむ まね",
+          "emoji": "👕"
+        }
+      ],
+      "phonics": {
+        "rule": "ou",
+        "focus": [
+          "ou"
+        ],
+        "sounds": [
+          "/uː/",
+          "/ʌ/"
+        ],
+        "words": [
+          "soup",
+          "group",
+          "country",
+          "double"
+        ],
+        "tipJa": "ou は soup・group では「ウー」、country・double では「ア」。ou には アウ・ア・ウー の 3つの おとが ある。"
+      },
+      "vocab": [
+        {
+          "en": "dream",
+          "ja": "ゆめ",
+          "emoji": "🌈",
+          "core": true
+        },
+        {
+          "en": "arm",
+          "ja": "うで",
+          "emoji": "💪"
+        },
+        {
+          "en": "clothes",
+          "ja": "ふく",
+          "emoji": "👕"
+        },
+        {
+          "en": "idea",
+          "ja": "アイデア",
+          "emoji": "💡"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today, let's imagine our dream machines. Riko's machine is amazing. My machine can clean my room. Say it with me. My machine can clean my room. Great! Next, describe it. It has two long arms. It can also fold my clothes. Use can for what it does. Use has for its parts. ゆめの きかいは can で できる こと、has で かたちを いうよ。 Let's practice. My machine can cook soup. It has a big spoon. It can also wash the dishes. My machine can fly. It has four wings. It can take a group of friends to school! Any idea is okay. Dream big! Now, phonics. Soup. Group. Country. Double. In soup and group, o u says oo. In country and double, o u says uh. Now, tell me about your dream machine. What can it do?",
+      "conversation": {
+        "scene": "Thinking about dream machines",
+        "sceneJa": "ゆめの きかいを かんがえる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's imagine our dream machines. Riko, what's yours?",
+            "ja": "ゆめの きかいを かんがえましょう。リコは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My machine can clean my room. It has two long arms.",
+            "ja": "わたしの きかいは へやを そうじ できる。ながい うでが 2ほん あるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It can also fold my clothes!",
+            "ja": "ふくを たたむ ことも できるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My machine can cook. It can make soup and curry.",
+            "ja": "ぼくの きかいは りょうりが できる。スープも カレーも つくれる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My machine has a big paintbrush. It can paint pictures in the sky.",
+            "ja": "わたしの きかいは おおきな ふでが ある。そらに えを かけるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My machine can fly around every country in one day!",
+            "ja": "ぼくの きかいは 1にちで ぜんぶの くにを とびまわれる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful ideas! Maybe we can put them all together.",
+            "ja": "すてきな アイデア！ぜんぶ あわせられるかもね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの ゆめの きかいを My machine can ～. / It has ～. / It can also ～. で せつめいしよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. If you could make any machine, what would it be? Tell me about your dream machine!",
+          "targetExpressions": [
+            "My machine can ～.",
+            "It has ～.",
+            "It can also ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My machine can clean my room.",
+          "It has two long arms. / It can also fold my clothes.",
+          "soup・group（ウー）／ country・double（ア）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 563,
+      "world": 19,
+      "title": "By Pushing This Button",
+      "titleJa": "この ボタンを おす ことで",
+      "school": {
+        "grade": "中2",
+        "topic": "You can start it by pushing this button.：つかいかたを by ～ing で せつめいする",
+        "grammar": "You can ～ by ～ing.（〜する ことで）",
+        "expressions": [
+          {
+            "en": "You can start it by pushing this button.",
+            "ja": "この ボタンを おす ことで うごかせるよ。",
+            "core": true
+          },
+          {
+            "en": "You can stop it by pulling this lever.",
+            "ja": "この レバーを ひく ことで とめられるよ。"
+          },
+          {
+            "en": "You can make it faster by turning this dial.",
+            "ja": "この ダイヤルを まわす ことで はやく できるよ。"
+          }
+        ],
+        "testPoints": [
+          "You can ～ by ～ing. で つかいかたを せつめいできる",
+          "ough（enough・rough・tough・through）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Push the green button.",
+          "ja": "みどりの ボタンを おして。",
+          "action": "ゆびで おす",
+          "emoji": "🟢"
+        },
+        {
+          "en": "Turn the dial slowly.",
+          "ja": "ダイヤルを ゆっくり まわして。",
+          "action": "ゆびで つまんで まわす",
+          "emoji": "🎛️"
+        },
+        {
+          "en": "Pull the lever.",
+          "ja": "レバーを ひいて。",
+          "action": "てで ひく まね",
+          "emoji": "🕹️"
+        },
+        {
+          "en": "Walk through the door.",
+          "ja": "ドアを とおりぬけて。",
+          "action": "まえに あるいて とおる",
+          "emoji": "🚪"
+        }
+      ],
+      "phonics": {
+        "rule": "ough",
+        "focus": [
+          "ough"
+        ],
+        "sounds": [
+          "/ʌf/",
+          "/uː/"
+        ],
+        "words": [
+          "enough",
+          "rough",
+          "tough",
+          "through"
+        ],
+        "tipJa": "ough は enough・rough・tough では「アフ」、through では「ウー」。おなじ つづりでも おとが ちがう ふしぎな つづり。"
+      },
+      "vocab": [
+        {
+          "en": "dial",
+          "ja": "ダイヤル",
+          "emoji": "🎛️",
+          "core": true
+        },
+        {
+          "en": "start",
+          "ja": "うごかす・はじめる",
+          "emoji": "▶️"
+        },
+        {
+          "en": "stop",
+          "ja": "とめる",
+          "emoji": "⏹️"
+        },
+        {
+          "en": "switch",
+          "ja": "スイッチ",
+          "emoji": "🔌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Haru made a model of his dream machine. It's a cooking robot. How do you use it? You can start it by pushing this button. Say it with me. You can start it by pushing this button. Great! By pushing means, how you do it. You can stop it by pulling this lever. You can make it faster by turning this dial. by の あとに ing の ことばで「〜する ことで」と やりかたを いうよ。 Let's practice. You can turn on the light by pressing the switch. You can open the box by sliding the lid. You can get stronger by eating well and sleeping enough. Now, phonics. Enough. Rough. Tough. Through. In enough, rough and tough, o u g h says uff. In through, it says oo. Tricky! Now, tell me. How can you turn on a TV?",
+      "conversation": {
+        "scene": "Explaining how to use the dream machine",
+        "sceneJa": "ゆめの きかいの つかいかたを せつめいする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "This is a model of my cooking robot.",
+            "ja": "これは ぼくの りょうりロボットの もけい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How do you use it?",
+            "ja": "どうやって つかうの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can start it by pushing this button.",
+            "ja": "この ボタンを おす ことで うごかせるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What's this dial for?",
+            "ja": "この ダイヤルは なんの ため？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can make it faster by turning this dial.",
+            "ja": "この ダイヤルを まわす ことで はやく できるんだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Faster, faster! Whoa, it's too fast! How do I stop it?",
+            "ja": "もっと はやく！うわっ、はやすぎる！どうやって とめるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can stop it by pulling this lever. Phew! That's enough.",
+            "ja": "この レバーを ひく ことで とめられるよ。ふう！もう じゅうぶん。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "きかいの つかいかたを You can ～ by ～ing. で せつめいしよう",
+          "starterEn": "Hi! I'm Ms. Emma. Wow, what a cool machine! I want to try it. How can I start it? How can I stop it?",
+          "targetExpressions": [
+            "You can start it by ～ing.",
+            "You can stop it by ～ing.",
+            "by pushing this button"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You can start it by pushing this button.",
+          "You can stop it by pulling this lever.",
+          "enough・rough・tough（アフ）／ through（ウー）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 564,
+      "world": 19,
+      "title": "Reuse and Remake",
+      "titleJa": "もう いちど つかおう、つくりなおそう",
+      "school": {
+        "grade": "中2",
+        "topic": "We can reuse these boxes.：リサイクルの アイデアを いう（reuse・remake into）",
+        "grammar": "We can reuse ～. / We can remake it into ～.（リサイクル）",
+        "expressions": [
+          {
+            "en": "We can reuse these boxes.",
+            "ja": "この はこは もう いちど つかえるよ。",
+            "core": true
+          },
+          {
+            "en": "Don't throw it away. We can remake it into a toy.",
+            "ja": "すてないで。おもちゃに つくりかえられるよ。"
+          },
+          {
+            "en": "These bottle caps can be wheels.",
+            "ja": "この ペットボトルの ふたは タイヤに なるよ。"
+          }
+        ],
+        "testPoints": [
+          "We can reuse ～. / We can remake it into ～. で リサイクルの アイデアを いえる",
+          "ough（though・dough・thought・brought）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up a box.",
+          "ja": "はこを ひろって。",
+          "action": "はこを もちあげる まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Don't throw it away!",
+          "ja": "すてないで！",
+          "action": "てを まえに だして とめる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Sort the trash.",
+          "ja": "ごみを わけて。",
+          "action": "みぎと ひだりに わける まね",
+          "emoji": "♻️"
+        },
+        {
+          "en": "Show your new toy.",
+          "ja": "あたらしい おもちゃを みせて。",
+          "action": "りょうてで かかげる",
+          "emoji": "🧸"
+        }
+      ],
+      "phonics": {
+        "rule": "ough",
+        "focus": [
+          "ough"
+        ],
+        "sounds": [
+          "/oʊ/",
+          "/ɔː/"
+        ],
+        "words": [
+          "though",
+          "dough",
+          "thought",
+          "brought"
+        ],
+        "tipJa": "ough は though・dough では「オウ」、thought・brought では「オー」。ough には ウー・アフ・オウ・オー が ある。"
+      },
+      "vocab": [
+        {
+          "en": "box",
+          "ja": "はこ",
+          "emoji": "📦",
+          "core": true
+        },
+        {
+          "en": "bottle cap",
+          "ja": "ペットボトルの ふた",
+          "emoji": "🧢"
+        },
+        {
+          "en": "trash",
+          "ja": "ごみ",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "recycle",
+          "ja": "リサイクルする",
+          "emoji": "♻️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! This is the workshop's recycling corner. There are boxes, bottle caps and old cans. Don't throw them away! We can reuse these boxes. Say it with me. We can reuse these boxes. Great! Reuse means use again. We can remake it into a toy. These bottle caps can be wheels. Remake into means make it into something new. すてる まえに、もう いちど つかえないか かんがえよう。 Let's practice. We can reuse this jar as a pencil case. We can remake old socks into puppets. This paper roll can be a telescope. The inventor thought about the Earth, too. Now, phonics. Though. Dough. Thought. Brought. In though and dough, o u g h says oh. In thought and brought, it says aw. Now, look around your house. What can you reuse? Tell me!",
+      "conversation": {
+        "scene": "At the workshop's recycling corner",
+        "sceneJa": "工房の リサイクル ざいりょう おきばで",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "This is a lot of trash. Let's throw it away.",
+            "ja": "ごみが いっぱい。すてちゃおう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wait! Don't throw it away. We can reuse these boxes.",
+            "ja": "まって！すてないで。この はこは もう いちど つかえるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "This box can be a robot's body.",
+            "ja": "この はこは ロボットの からだに なるね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And these bottle caps can be wheels!",
+            "ja": "それに この ふたは タイヤに なる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "The inventor brought these here for us. Let's remake them into something new.",
+            "ja": "はつめいかが わたしたちの ために ここに もってきて くれたのね。あたらしい ものに つくりかえましょう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I thought it was trash. But it's treasure!",
+            "ja": "ごみだと おもってた。でも たからものだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We can remake it into a toy car. Let's go!",
+            "ja": "おもちゃの くるまに つくりかえられるね。やろう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いえに ある ものを えらんで、We can reuse ～. / We can remake it into ～. で リサイクルの アイデアを いおう",
+          "starterEn": "Hi! I'm Ms. Emma. I have an empty milk carton and some old newspapers. I want to throw them away. Do you have a better idea?",
+          "targetExpressions": [
+            "We can reuse ～.",
+            "Don't throw it away.",
+            "We can remake it into ～.",
+            "～ can be ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We can reuse these boxes.",
+          "Don't throw it away. We can remake it into a toy.",
+          "though・dough（オウ）／ thought・brought（オー）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 565,
+      "world": 19,
+      "title": "Invention Fair",
+      "titleJa": "はつめい フェア",
+      "school": {
+        "grade": "中2",
+        "topic": "This is my invention. It's used for ～.：じぶんの はつめいを はっぴょうする（まとめ）",
+        "grammar": "This is my invention. / It's used for ～ing. / You can use it by ～ing.（はつめいの はっぴょう）",
+        "expressions": [
+          {
+            "en": "This is my invention. It's used for watering plants.",
+            "ja": "これは わたしの はつめいです。しょくぶつに みずを やる ために つかいます。",
+            "core": true
+          },
+          {
+            "en": "You can use it by pulling this string.",
+            "ja": "この ひもを ひいて つかいます。"
+          },
+          {
+            "en": "Any questions?",
+            "ja": "しつもんは ありますか？"
+          }
+        ],
+        "testPoints": [
+          "This is my invention. It's used for ～. で はつめいを しょうかいできる",
+          "ou・ough の ふりかえり（house・touch・soup・through・though）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand next to your invention.",
+          "ja": "はつめいの となりに たって。",
+          "action": "よこに たつ",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Show how it works.",
+          "ja": "どう うごくか みせて。",
+          "action": "ひもを ひく まね",
+          "emoji": "🪀"
+        },
+        {
+          "en": "Answer the question.",
+          "ja": "しつもんに こたえて。",
+          "action": "てを あげて こたえる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Clap for your friends.",
+          "ja": "ともだちに はくしゅ。",
+          "action": "はくしゅ する",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ou",
+          "ough"
+        ],
+        "sounds": [
+          "/aʊ/",
+          "/ʌ/",
+          "/uː/",
+          "/oʊ/"
+        ],
+        "words": [
+          "house",
+          "touch",
+          "soup",
+          "through",
+          "though"
+        ],
+        "tipJa": "ou・ough の ふりかえり: house（アウ）・touch（ア）・soup（ウー）・through（ウー）・though（オウ）。つづりが おなじでも おとは いろいろ。"
+      },
+      "vocab": [
+        {
+          "en": "fair",
+          "ja": "フェア・はっぴょうかい",
+          "emoji": "🎪",
+          "core": true
+        },
+        {
+          "en": "string",
+          "ja": "ひも",
+          "emoji": "🧵"
+        },
+        {
+          "en": "plant",
+          "ja": "しょくぶつ",
+          "emoji": "🪴"
+        },
+        {
+          "en": "useful",
+          "ja": "べんりな",
+          "emoji": "👍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the Invention Fair! Everyone made an invention from the recycling corner. Let's present them. This is my invention. It's used for watering plants. Say it with me. This is my invention. It's used for watering plants. Excellent! Then, explain how to use it. You can use it by pulling this string. At the end, ask, any questions? はっぴょうは This is my invention. から はじめて、つかいみちと つかいかたを いおう。 Let's practice. This is my invention. It's used for finding lost socks. You can use it by shaking it. Any questions? Yes! Is it heavy? No, it isn't. It's light. Now, phonics review. House. Touch. Soup. Through. Though. O u and o u g h have many sounds. Thank you for listening! Now, it's your turn. Tell me about your invention!",
+      "conversation": {
+        "scene": "Presenting inventions at the workshop's Invention Fair",
+        "sceneJa": "工房の はつめいフェアで はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Invention Fair! Kiko, you're first.",
+            "ja": "はつめいフェアへ ようこそ！キコから どうぞ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "This is my invention. It's used for watering plants.",
+            "ja": "これは わたしの はつめいです。しょくぶつに みずを やる ために つかいます。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "You can use it by pulling this string. Any questions?",
+            "ja": "この ひもを ひいて つかいます。しつもんは ありますか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Is it heavy?",
+            "ja": "おもいですか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "No, it isn't. It's made of an old bottle, so it's light.",
+            "ja": "いいえ。ふるい ボトルで できているので、かるいです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can it water flowers at my house, too?",
+            "ja": "ぼくの いえの はなにも みずを やれる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Of course! Thank you for listening.",
+            "ja": "もちろん！きいてくれて ありがとう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの はつめいを This is my invention. It's used for ～ing. / You can use it by ～ing. で はっぴょうし、しつもんに こたえよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the Invention Fair! What did you invent? Please tell me about it!",
+          "targetExpressions": [
+            "This is my invention.",
+            "It's used for ～ing.",
+            "You can use it by ～ing.",
+            "Any questions?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This is my invention. It's used for watering plants.",
+          "You can use it by pulling this string. / Any questions?",
+          "house・touch・soup・through・though"
+        ]
+      }
+    },
+    {
+      "lessonNo": 566,
+      "world": 19,
+      "title": "Squeeze, Turn, Pull",
+      "titleJa": "にぎって、まわして、ひっぱって",
+      "school": {
+        "grade": "中2",
+        "topic": "Squeeze it. Turn it. Pull it.：からくりの なぞときで てじゅんを ためす（命令文の ふりかえり）",
+        "grammar": "Squeeze it. / Turn it. / Pull it. / What should we do next?（てじゅんと そうだん）",
+        "expressions": [
+          {
+            "en": "Squeeze it. Turn it. Pull it.",
+            "ja": "にぎって。まわして。ひっぱって。",
+            "core": true
+          },
+          {
+            "en": "What should we do next?",
+            "ja": "つぎは どう したら いい？"
+          },
+          {
+            "en": "Read the hint again.",
+            "ja": "ヒントを もう いちど よもう。"
+          }
+        ],
+        "testPoints": [
+          "Squeeze it. / Turn it. / Pull it. で てじゅんを つたえられる",
+          "ふりかえり（squeeze・rewind・wrench・opener）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Squeeze it.",
+          "ja": "ぎゅっと にぎって。",
+          "action": "りょうてで ぎゅっと にぎる",
+          "emoji": "✊"
+        },
+        {
+          "en": "Turn it.",
+          "ja": "まわして。",
+          "action": "てくびを まわす",
+          "emoji": "🔄"
+        },
+        {
+          "en": "Pull it.",
+          "ja": "ひっぱって。",
+          "action": "てまえに ひっぱる",
+          "emoji": "💪"
+        },
+        {
+          "en": "Open the box!",
+          "ja": "はこを あけて！",
+          "action": "ふたを あける まね",
+          "emoji": "🎁"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "squ",
+          "re-",
+          "wr",
+          "-er"
+        ],
+        "sounds": [
+          "/skw/",
+          "/riː/",
+          "/r/",
+          "/ər/"
+        ],
+        "words": [
+          "squeeze",
+          "rewind",
+          "wrench",
+          "opener"
+        ],
+        "tipJa": "ふりかえり: squeeze（squ）・rewind（re ＝ もう いちど）・wrench（w を よまない）・opener（どうぐの er）。"
+      },
+      "vocab": [
+        {
+          "en": "puzzle",
+          "ja": "なぞとき・パズル",
+          "emoji": "🧩",
+          "core": true
+        },
+        {
+          "en": "hint",
+          "ja": "ヒント",
+          "emoji": "💡"
+        },
+        {
+          "en": "secret",
+          "ja": "ひみつ",
+          "emoji": "🤫"
+        },
+        {
+          "en": "blueprint",
+          "ja": "せっけいず",
+          "emoji": "📐"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Look. We found a karakuri box in the corner. It has no lid and no key. How do we open it? Here's the hint card. Squeeze it. Turn it. Pull it. Say it with me. Squeeze it. Turn it. Pull it. Great! Squeeze means hold it very tight. Let's try. Squeeze the sides. Turn the top. Pull the drawer. Hmm, it's not opening. What should we do next? Read the hint again. ヒントを よく よんで、じゅんばんどおりに ためそう。 Let's practice. Squeeze the lemon. Turn the key. Pull the rope. Rewind the music box and listen. Now, phonics review. Squeeze. Rewind. Wrench. Opener. Squ, re, silent w, e r. Squeeze the sides first. Turn the top next. Pull it gently, not too hard. Wow, the box opened! What's inside? Tell me what you think!",
+      "conversation": {
+        "scene": "Solving the karakuri puzzle box",
+        "sceneJa": "からくりの なぞとき",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! A wooden box. But there's no lid.",
+            "ja": "みて！木の はこ。でも ふたが ない。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Here's a hint card. Squeeze it. Turn it. Pull it.",
+            "ja": "ヒントカードが ある。にぎって。まわして。ひっぱって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay. I'll squeeze it... turn it... pull it! Hmm, nothing.",
+            "ja": "よし。にぎって…まわして…ひっぱる！うーん、なにも おきない。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What should we do next?",
+            "ja": "つぎは どう したら いい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Read the hint again. Look! It says, squeeze the sides first.",
+            "ja": "ヒントを もう いちど よみましょう。みて！まず よこを にぎって って かいてある。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Squeeze the sides. Turn the top. Pull... It's open!",
+            "ja": "よこを にぎって。うえを まわして。ひっぱって…あいた！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "There's a paper inside. It's a blueprint of a big machine!",
+            "ja": "なかに かみが ある。おおきな きかいの せっけいずだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "なぞときの はこを あける てじゅんを Squeeze it. / Turn it. / Pull it. で つたえ、こまったら What should we do next? と そうだんしよう",
+          "starterEn": "Hi! I'm Ms. Emma. I have a puzzle box, but I can't open it. Here's the hint: squeeze, turn, pull. Can you tell me what to do?",
+          "targetExpressions": [
+            "Squeeze it.",
+            "Turn it.",
+            "Pull it.",
+            "What should we do next?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Squeeze it. Turn it. Pull it.",
+          "What should we do next? ― Read the hint again.",
+          "squeeze・rewind・wrench・opener"
+        ]
+      }
+    },
+    {
+      "lessonNo": 567,
+      "world": 19,
+      "title": "It's Broken!",
+      "titleJa": "こわれてる！",
+      "school": {
+        "grade": "中2",
+        "topic": "It's broken. What should we do?：こわれた きかいを なおす そうだんを する（should / have to）",
+        "grammar": "It's broken. / What should we do? / We should ～. / We have to ～.（そうだんする）",
+        "expressions": [
+          {
+            "en": "It's broken. What should we do?",
+            "ja": "こわれてる。どう したら いい？",
+            "core": true
+          },
+          {
+            "en": "We should check the motor.",
+            "ja": "モーターを しらべた ほうが いいね。"
+          },
+          {
+            "en": "We have to find a new spring.",
+            "ja": "あたらしい ばねを みつけなければ ならない。"
+          }
+        ],
+        "testPoints": [
+          "What should we do? / We should ～. / We have to ～. で そうだんできる",
+          "ふりかえり（rebuild・motor・knob・enough）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the blueprint.",
+          "ja": "せっけいずを みて。",
+          "action": "かみを ひろげる まね",
+          "emoji": "📐"
+        },
+        {
+          "en": "Check the motor.",
+          "ja": "モーターを しらべて。",
+          "action": "かがんで のぞく",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Turn the knob.",
+          "ja": "つまみを まわして。",
+          "action": "ゆびで つまんで まわす",
+          "emoji": "🎛️"
+        },
+        {
+          "en": "Fix it together!",
+          "ja": "いっしょに なおそう！",
+          "action": "みんなで てを あわせる",
+          "emoji": "🛠️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "re-",
+          "-or",
+          "kn",
+          "ough"
+        ],
+        "sounds": [
+          "/riː/",
+          "/ər/",
+          "/n/",
+          "/ʌf/"
+        ],
+        "words": [
+          "rebuild",
+          "motor",
+          "knob",
+          "enough"
+        ],
+        "tipJa": "ふりかえり: rebuild（re ＝ もう いちど）・motor（or で おわる）・knob（k を よまない）・enough（ough ＝ アフ）。"
+      },
+      "vocab": [
+        {
+          "en": "broken",
+          "ja": "こわれた",
+          "emoji": "💔",
+          "core": true
+        },
+        {
+          "en": "motor",
+          "ja": "モーター",
+          "emoji": "⚙️"
+        },
+        {
+          "en": "fix",
+          "ja": "なおす",
+          "emoji": "🛠️"
+        },
+        {
+          "en": "plan",
+          "ja": "けいかく",
+          "emoji": "📝"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The blueprint shows the inventor's big machine. Here it is, under this cloth. It's called the Dream Machine. But look. It's not moving. It's broken. What should we do? Say it with me. It's broken. What should we do? Good! When we have a problem, we talk and make a plan. We should check the motor. We have to find a new spring. We should read the blueprint. こまった ときは What should we do? と きいて、みんなで そうだんしよう。 Let's practice. My bike tire is flat. What should I do? You should pump it up. My umbrella is broken. You should use a raincoat today. Now, phonics review. Rebuild. Motor. Knob. Enough. Re, o r, silent k, o u g h says uff. Now, tell me. Your toy is broken. What should you do?",
+      "conversation": {
+        "scene": "A meeting to fix the broken machine",
+        "sceneJa": "こわれた きかいを なおす さくせんかいぎ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "This is the Dream Machine from the blueprint!",
+            "ja": "これが せっけいずの ドリームマシンだ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'll turn the knob... Nothing. It's broken. What should we do?",
+            "ja": "つまみを まわして…なにも おきない。こわれてる。どう したら いい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We should check the motor first.",
+            "ja": "まず モーターを しらべた ほうが いいね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look. This spring is broken. We have to find a new spring.",
+            "ja": "みて。この ばねが こわれてる。あたらしい ばねを みつけなければ ならない。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "There are springs in the recycling corner.",
+            "ja": "リサイクル コーナーに ばねが あるわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's rebuild it together. And let's add our dream ideas!",
+            "ja": "いっしょに くみなおそう。それに ぼくたちの ゆめの アイデアも たそう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes! Is one day enough?",
+            "ja": "うん！1にちで たりるかな？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "こわれた ものを みて、What should we do? と きいたり、We should ～. / We have to ～. で アイデアを だしたり しよう",
+          "starterEn": "Hi! I'm Ms. Emma. Oh no, my old music box stopped working. It's broken. What should we do?",
+          "targetExpressions": [
+            "It's broken.",
+            "What should we do?",
+            "We should ～.",
+            "We have to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's broken. What should we do?",
+          "We should check the motor. / We have to find a new spring.",
+          "rebuild・motor・knob・enough"
+        ]
+      }
+    },
+    {
+      "lessonNo": 568,
+      "world": 19,
+      "title": "How-To Card",
+      "titleJa": "つくりかたカード",
+      "school": {
+        "grade": "中2",
+        "topic": "How to make a paper cup: First, ～.：つくりかたを 4ステップで かく（かく まとめ）",
+        "grammar": "How to make ～: First, ～. Next, ～. Then, ～. Finally, ～.（つくりかたカード）",
+        "expressions": [
+          {
+            "en": "How to make a paper cup: First, fold it in half.",
+            "ja": "かみコップの つくりかた: まず、はんぶんに おる。",
+            "core": true
+          },
+          {
+            "en": "Next, fold the right corner to the left side.",
+            "ja": "つぎに、みぎの かどを ひだりがわに おる。"
+          },
+          {
+            "en": "Finally, open the top and pour some water in.",
+            "ja": "さいごに、うえを ひらいて みずを いれる。"
+          }
+        ],
+        "testPoints": [
+          "How to make ～: で はじまる つくりかたカードを 4ステップで かける",
+          "ふりかえり（reuse・stapler・thumb・quick・touch）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take a square piece of paper.",
+          "ja": "しかくい かみを 1まい とって。",
+          "action": "かみを とる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Fold it into a triangle.",
+          "ja": "さんかくに おって。",
+          "action": "かみを ななめに おる まね",
+          "emoji": "🔺"
+        },
+        {
+          "en": "Press with your thumb.",
+          "ja": "おやゆびで おさえて。",
+          "action": "おやゆびで ぎゅっと おす",
+          "emoji": "👍"
+        },
+        {
+          "en": "Write step one.",
+          "ja": "ステップ 1 を かいて。",
+          "action": "かく まね",
+          "emoji": "✍️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "re-",
+          "-er",
+          "mb",
+          "qu",
+          "ou"
+        ],
+        "sounds": [
+          "/riː/",
+          "/ər/",
+          "/m/",
+          "/kw/",
+          "/ʌ/"
+        ],
+        "words": [
+          "reuse",
+          "stapler",
+          "thumb",
+          "quick",
+          "touch"
+        ],
+        "tipJa": "ふりかえり: reuse（re）・stapler（e で おわる → r）・thumb（b を よまない）・quick（qu）・touch（ou ＝ ア）。"
+      },
+      "vocab": [
+        {
+          "en": "paper cup",
+          "ja": "かみコップ",
+          "emoji": "🥤",
+          "core": true
+        },
+        {
+          "en": "triangle",
+          "ja": "さんかく",
+          "emoji": "🔺"
+        },
+        {
+          "en": "side",
+          "ja": "がわ・へん",
+          "emoji": "📐"
+        },
+        {
+          "en": "step",
+          "ja": "ステップ",
+          "emoji": "🪜"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Let's write a how-to card. Then, anyone can make it. Today, it's a paper cup. Start with the title. How to make a paper cup: First, fold it in half. Say it with me. How to make a paper cup: First, fold it in half. Great! Fold a square into a triangle. Next, fold the right corner to the left side. Then, fold the left corner to the right side. Fold the top flaps down. Finally, open the top and pour some water in. Wow, it holds water! カードは How to make ～: の タイトルと、4つの ステップで かくよ。 Let's check. Is each step short? Is the order right? Good writers check twice. Now, phonics review. Reuse. Stapler. Thumb. Quick. Touch. Now, choose something you can make. Tell me the title and step one!",
+      "conversation": {
+        "scene": "Writing a how-to card",
+        "sceneJa": "つくりかたカードを かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's write a how-to card for the paper cup.",
+            "ja": "かみコップの つくりかたカードを かこう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The title is, how to make a paper cup.",
+            "ja": "タイトルは「かみコップの つくりかた」。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "First, fold it in half. It makes a triangle.",
+            "ja": "まず、はんぶんに おる。さんかくに なるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Next, fold the right corner to the left side. Then, do the same on the other side.",
+            "ja": "つぎに、みぎの かどを ひだりがわに おる。それから はんたいがわも おなじように。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Finally, open the top and pour some water in.",
+            "ja": "さいごに、うえを ひらいて みずを いれる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let me try. ... It works! No leaks!",
+            "ja": "やってみる。…できた！もれない！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Your card is clear and easy to follow. Well done!",
+            "ja": "わかりやすくて、まねしやすい カードね。よく できました！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かんたんな ものの つくりかたを How to make ～: First, ～. Next, ～. Then, ～. Finally, ～. の カードに しよう",
+          "starterEn": "Hi! I'm Ms. Emma. I want to make something fun, but I need a how-to card. What can you teach me? What's the title?",
+          "targetExpressions": [
+            "How to make ～:",
+            "First, ～.",
+            "Next, ～.",
+            "Finally, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How to make a paper cup: First, fold it in half.",
+          "Next, ～. Then, ～. Finally, open the top and pour some water in.",
+          "reuse・stapler・thumb・quick・touch"
+        ]
+      }
+    },
+    {
+      "lessonNo": 569,
+      "world": 19,
+      "title": "Gadget Workshop Review",
+      "titleJa": "からくり工房の ふりかえり",
+      "school": {
+        "grade": "中2",
+        "topic": "have to / must / should / First, Next：工房の さよなら かたづけ（ふりかえり）",
+        "grammar": "have to / must / should / First, Next, Then, Finally（ワールド19 の ふりかえり）",
+        "expressions": [
+          {
+            "en": "First, we have to clean up. Next, we should say thank you.",
+            "ja": "まず、かたづけを しなければ ならない。つぎに、おれいを いった ほうが いい。",
+            "core": true
+          },
+          {
+            "en": "We must put the tools back.",
+            "ja": "どうぐを もとに もどさなければ いけない。"
+          },
+          {
+            "en": "You don't have to carry it alone. I'll help you.",
+            "ja": "ひとりで はこばなくて いいよ。てつだうよ。"
+          }
+        ],
+        "testPoints": [
+          "have to / must / should / don't have to を つかいわけられる",
+          "ふりかえり（replay・mixer・calculator・guide・square・through）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put the tools back.",
+          "ja": "どうぐを もとに もどして。",
+          "action": "たなに もどす まね",
+          "emoji": "🧰"
+        },
+        {
+          "en": "Sweep the floor.",
+          "ja": "ゆかを はいて。",
+          "action": "ほうきで はく まね",
+          "emoji": "🧹"
+        },
+        {
+          "en": "Carry the box together.",
+          "ja": "いっしょに はこを はこんで。",
+          "action": "ふたりで もちあげる まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Write a thank-you note.",
+          "ja": "おれいの メモを かいて。",
+          "action": "かく まね",
+          "emoji": "💌"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "re-",
+          "-er",
+          "-or",
+          "gu",
+          "squ",
+          "ough"
+        ],
+        "sounds": [
+          "/riː/",
+          "/ər/",
+          "/ər/",
+          "/g/",
+          "/skw/",
+          "/uː/"
+        ],
+        "words": [
+          "replay",
+          "mixer",
+          "calculator",
+          "guide",
+          "square",
+          "through"
+        ],
+        "tipJa": "ワールド19 の ふりかえり: replay（re）・mixer（er）・calculator（or）・guide（u を よまない）・square（squ）・through（ough ＝ ウー）。"
+      },
+      "vocab": [
+        {
+          "en": "note",
+          "ja": "メモ",
+          "emoji": "📝",
+          "core": true
+        },
+        {
+          "en": "broom",
+          "ja": "ほうき",
+          "emoji": "🧹"
+        },
+        {
+          "en": "shelf",
+          "ja": "たな",
+          "emoji": "🗄️"
+        },
+        {
+          "en": "thank-you",
+          "ja": "おれいの",
+          "emoji": "💌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Tomorrow is the big show, so today we clean up the workshop. Let's review everything. First, we have to clean up. Next, we should say thank you. Say it with me. First, we have to clean up. Next, we should say thank you. Great! We must put the tools back. You must not leave scissors on the floor. You don't have to carry it alone. I'll help you. Have to and must are rules. Should is advice. Don't have to means it's not necessary. ワールド19 で ならった ことばを ぜんぶ つかって かたづけよう。 Let's review steps, too. First, sweep the floor. Then, wipe the table. Finally, write a thank-you note to the inventor. Now, phonics review. Replay. Mixer. Calculator. Guide. Square. Through. Now, tell me. What do you have to do after school?",
+      "conversation": {
+        "scene": "Cleaning up the workshop before saying goodbye",
+        "sceneJa": "工房の さよなら かたづけ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's clean up the workshop. What should we do first?",
+            "ja": "工房を かたづけましょう。まず なにを する？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "First, we have to clean up. Next, we should say thank you.",
+            "ja": "まず、かたづけを しなければ ならない。つぎに、おれいを いった ほうが いい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We must put the tools back. The wrench goes here.",
+            "ja": "どうぐを もとに もどさなければ いけない。レンチは ここ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "This box is heavy...",
+            "ja": "この はこ、おもい…"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "You don't have to carry it alone. I'll help you!",
+            "ja": "ひとりで はこばなくて いいよ。てつだう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thanks, Birimo. Finally, let's write a thank-you note to the inventor.",
+            "ja": "ありがとう、ビリモ。さいごに、はつめいかに おれいの メモを かこう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Dear Inventor, thank you for your wonderful workshop!",
+            "ja": "はつめいかさんへ。すてきな 工房を ありがとう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かたづけの てじゅんを First / Next / Finally で いい、have to / must / should / don't have to を つかいわけよう",
+          "starterEn": "Hi! I'm Ms. Emma. Our room is so messy after the craft time! What do we have to do? What should we do first?",
+          "targetExpressions": [
+            "First, we have to ～.",
+            "We must ～.",
+            "We should ～.",
+            "You don't have to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, we have to clean up. Next, we should say thank you.",
+          "We must put the tools back. / You don't have to carry it alone.",
+          "replay・mixer・calculator・guide・square・through"
+        ]
+      }
+    },
+    {
+      "lessonNo": 570,
+      "world": 19,
+      "title": "World 19 Grand Review",
+      "titleJa": "ワールド19 グランドレビュー",
+      "school": {
+        "grade": "中2",
+        "topic": "We made a dream machine together!：工房の ひろばで はつめいショー（ワールド19 の まとめ）",
+        "grammar": "ワールド19 の まとめ（It's used for ～ing.・by ～ing・have to / must / should・First, Next, Then, Finally）",
+        "expressions": [
+          {
+            "en": "We made a dream machine together!",
+            "ja": "みんなで ゆめの きかいを つくったよ！",
+            "core": true
+          },
+          {
+            "en": "It's used for making people smile.",
+            "ja": "ひとを えがおに する ために つかうよ。"
+          },
+          {
+            "en": "You can start it by turning this handle.",
+            "ja": "この ハンドルを まわす ことで うごかせるよ。"
+          }
+        ],
+        "testPoints": [
+          "ワールド19 の いいかたで はつめいを はっぴょうできる",
+          "It's used for ～ing. / You can ～ by ～ing. で せつめいできる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Turn the big handle!",
+          "ja": "おおきな ハンドルを まわして！",
+          "action": "りょうてで ぐるぐる まわす",
+          "emoji": "⚙️"
+        },
+        {
+          "en": "Squeeze, turn, pull!",
+          "ja": "にぎって、まわして、ひっぱって！",
+          "action": "3つの うごきを じゅんばんに",
+          "emoji": "✊"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "re-",
+          "-or",
+          "-stle",
+          "qu",
+          "ou",
+          "ough"
+        ],
+        "sounds": [
+          "/riː/",
+          "/ər/",
+          "/səl/",
+          "/kw/",
+          "/ʌ/",
+          "/ɔː/"
+        ],
+        "words": [
+          "remake",
+          "inventor",
+          "whistle",
+          "question",
+          "young",
+          "thought"
+        ],
+        "tipJa": "ワールド19 の まとめ: remake（re）・inventor（or）・whistle（t を よまない）・question（qu）・young（ou ＝ ア）・thought（ough ＝ オー）。"
+      },
+      "vocab": [
+        {
+          "en": "together",
+          "ja": "いっしょに",
+          "emoji": "🤝",
+          "core": true
+        },
+        {
+          "en": "smile",
+          "ja": "えがお",
+          "emoji": "😊"
+        },
+        {
+          "en": "invent",
+          "ja": "はつめいする",
+          "emoji": "💡"
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome to the World 19 Invention Show in the workshop square! The Dream Machine is ready. Let's say our big sentence. We made a dream machine together! Say it with me. We made a dream machine together! Fantastic! In this world, we learned so much. It's used for cutting paper. First, next, then, finally. You have to wear goggles. You must not touch it. You should rest. May I use this? ワールド19 の まとめ。はつめいの ことばで はっぴょうしよう。 Now, present the machine. It's used for making people smile. You can start it by turning this handle. Phonics review. Remake. Inventor. Whistle. Question. Young. Thought. Thank you, everyone. You did an amazing job! You were great inventors, and great friends, too. Now, squeeze, turn, pull, and listen. The machine is playing festival music!",
+      "conversation": {
+        "scene": "The World 19 invention show in the workshop square",
+        "sceneJa": "工房の ひろばで、ワールド19 はつめいショー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the World 19 Invention Show!",
+            "ja": "ワールド19 はつめいショーへ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We made a dream machine together!",
+            "ja": "みんなで ゆめの きかいを つくったよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's used for making people smile. It has two long arms and a music box.",
+            "ja": "ひとを えがおに する ために つかうよ。ながい うで 2ほんと オルゴールが あるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "You can start it by turning this handle. First, turn it. Then, pull the lever.",
+            "ja": "この ハンドルを まわす ことで うごかせるよ。まず まわして。それから レバーを ひいて。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! It's painting a rainbow and playing music!",
+            "ja": "みて！にじを かいて、おんがくを ならしてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Listen to the music. It sounds like a festival.",
+            "ja": "おんがくを きいて。おまつりみたい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "There's a map coming out! An island with lanterns... Let's go!",
+            "ja": "ちずが でてきた！ちょうちんの ある しま…いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド19 で ならった いいかた（It's used for ～ing. / You can ～ by ～ing. / First, ～.）で、ゆめの きかいを はっぴょうしよう。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Hi! I'm Ms. Emma. Welcome to the invention show! Please tell me about your dream machine. What's it used for? How do you use it?",
+          "targetExpressions": [
+            "We made ～ together!",
+            "It's used for ～ing.",
+            "You can start it by ～ing.",
+            "First, ～. Then, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We made a dream machine together!",
+          "It's used for making people smile. / You can start it by turning this handle.",
+          "remake・inventor・whistle・question・young・thought"
+        ]
+      }
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { QU_CHOICES, QU_WHY, SILENT19_CHOICES, SILENT19_WHY, TOOL_CHOICES, TOOL_WHY, W19_OU_FOCUS, W19_QU_FOCUS, W19_RE_FOCUS, W19_SILENT_FOCUS, W19_START, W19_TOOL_FOCUS, ouSound, ouWhy, quBlank, reOf, reWhy, silentBlank19, toolEnding } from "./w19Phonics";
 import { COMPARE_WHY, LY_WHY, W18_COMPARE_FOCUS, W18_FUL_FOCUS, W18_LY_FOCUS, W18_START, W18_UN_FOCUS, compareSpelling, fulLessOf, fulLessWhy, lySpelling, stressChoices, stressWhy, unOf, unWhy } from "./w18Phonics";
 import { ENDING_WHY, OR_FOCUS_OF, OR_WHY, W17_CONTRACTION_FOCUS, W17_ENDING_FOCUS, W17_HOMOPHONE_RULE, W17_OR_FOCUS, W17_START, endingSpelling, homophoneOf, homophoneWhy, orSpelling, willContraction, willContractionWhy } from "./w17Phonics";
 import { ED_WHY, IRREGULAR_FOCUS_OF, IRREGULAR_WHY, W16_ED_FOCUS, W16_ED_SOUND_RULE, W16_IRREGULAR_FOCUS, W16_START, edSpelling, irregularPast } from "./w16Phonics";
@@ -569,6 +570,54 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
 }
 
 /**
+ * ワールド19（からくり工房・L541〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
+ * - "re-": 「『もう いちど』の いみの ことばは？」（make → ？（つくりなおす）→ remake / unmake / rimake）
+ * - "-er" "-or"（道具の ことば）: 「おわりの つづりは？」（elevat＿＿（エレベーター）→ or / er / ar）
+ * - "wr" "kn" "mb" "gu" "-stle": 「＿ に はいる つづりは？」（＿ench（レンチ）→ wr / r / rr / wh、whi＿（ふえ）→ stle / sle / ssle / sel）
+ * - "qu" "squ": 「＿ に はいる つづりは？」（＿iz（クイズ）→ qu / kw / cu / q、＿are → squ / skw / scu / sq）
+ * - "ou" "ough": 「この ことばの ou（ough）は どの おと？」（touch → アウ / ア / ウー、enough → ウー / アフ / オウ / オー）
+ * あてはまらなければ null。ワールド18 の 問題より 先に よぶ（opener を くらべる かたち、knob を ワールド14 の 問題で 問わない）。
+ */
+export function w19Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W19_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of lesson.phonics.focus) {
+    if (f === W19_RE_FOCUS) {
+      const r = reOf(w);
+      if (!r) continue;
+      return { promptJa: "「もう いちど」の いみの ことばは どれ？", display: `${r.base} → ？（${r.meaning}）`, choices: pick([r.answer, ...r.wrong]), answer: r.answer, explanationJa: reWhy(r) };
+    }
+    if ((W19_TOOL_FOCUS as readonly string[]).includes(f)) {
+      const t = toolEnding(w);
+      if (!t) continue;
+      return { promptJa: "おわりの つづりは どれ？", display: t.display, choices: pick(TOOL_CHOICES), answer: t.answer, explanationJa: TOOL_WHY[t.kind](t) };
+    }
+    if ((W19_SILENT_FOCUS as readonly string[]).includes(f)) {
+      const s = silentBlank19(w);
+      if (!s || s.family !== f) continue;
+      return { promptJa: "＿ に はいる つづりは どれ？", display: s.display, choices: pick(SILENT19_CHOICES[s.family]), answer: s.answer,
+        explanationJa: `${item.text} は「${s.answer}」。${SILENT19_WHY[s.family]}` };
+    }
+    if ((W19_QU_FOCUS as readonly string[]).includes(f)) {
+      const b = quBlank(w);
+      if (!b) continue;
+      return { promptJa: "＿ に はいる つづりは どれ？", display: b.display, choices: pick(QU_CHOICES[b.answer]), answer: b.answer,
+        explanationJa: `${item.text} は「${b.answer}」。${QU_WHY[b.answer]}` };
+    }
+    if ((W19_OU_FOCUS as readonly string[]).includes(f)) {
+      const o = ouSound(w);
+      if (!o) continue;
+      return { promptJa: `この ことばの ${o.team} は どの おと？`, display: `${item.text}（${o.meaning}）`, choices: o.choices.map((s) => ({ id: s, label: s })), answer: o.answer,
+        explanationJa: ouWhy(item.text, o) };
+    }
+  }
+  return null;
+}
+
+/**
  * ワールド18（こだまの谷・L511〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
  * - "-er" "-est": 「くらべる かたちの ただしい つづりは？」（big → ？（もっと）→ bigger / biger / biggar）
  * - "el-e-phant" の ような まとまり（rule が "stress" の 回と ふりかえり）: 「つよく よむ ところは どこ？」（EL-e-phant / el-E-phant / el-e-PHANT）
@@ -779,8 +828,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド15（-ing の つづり・複合語・短縮形・y の 3つの おと）は その 先（running を 語末の -ing、sunflower を はくの 数で 問わない）
       // ワールド16（-ed の つづり・ふきそくな 過去形・-ed の おと）は その 先（wrote を マジック e、stopped を ブレンドで 問わない）
       // ワールド17（-tion / -sion / -ture・'ll / won't・同音異義語・or ore oar our）は その 先（blew を ew の 過去形、won't を n't で 問わない）
-      // ワールド18（-er / -est・強勢・-ly・-ful / -less・un-）は いちばん 先（shorter を or の つづり、careful を まとまりで 問わない）
-      const dq = w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド18（-er / -est・強勢・-ly・-ful / -less・un-）は その 先（shorter を or の つづり、careful を まとまりで 問わない）
+      // ワールド19（re-・道具の -er / -or・だまっている もじ・qu / squ・ou / ough）は いちばん 先（opener を くらべる かたち、knob を ワールド14 で 問わない）
+      const dq = w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

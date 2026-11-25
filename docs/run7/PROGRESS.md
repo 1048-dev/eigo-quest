@@ -284,3 +284,40 @@
 - `npx vitest run`: 48 ファイル・1,303 テスト すべて成功
 - `npx next build`: 成功。First Load JS は /map 198 kB（195 → +3）、/lesson/[lessonNo] 201 kB（199 → +2）、/gacha 186 kB（184 → +2）、/test/[assessmentId] 185 kB（183 → +2）、/parent 159 kB（158 → +1）（増えたのは ワールド18 の 問題の コード・表と 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 26` / `--pack 27`: No.26（L501〜520・61 ページ）・No.27（L521〜540・62 ページ）を 作れることを 確認
+
+## WORLD — ワールド19「からくり工房」（L541〜570）（2026-11-25）
+
+### やったこと
+- `content/curriculum/worlds/world-19.json` を 新しく 作成（30 レッスン、ステージ2・A2、`school.grade` は「中2」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 570 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 127、会話の セリフ 210 行（1 回 7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 1 回 平均 約 128 語の 英語（最少 125 語）＋短い 日本語の たすけ（1 文）。
+- ブロック構成: 541〜545 どうぐと つかいかた（This machine makes toys.・It's used for cutting paper.・How do you use it? / Push this button. Then, turn it.・Like this? ― Yes, that's right! / Not quite.・どうぐ あてクイズ It's used for opening cans. ― A can opener!）→ 546〜550 てじゅん（First, fold the paper in half.・Next, cut along the line.・Finally, it works!・It didn't work. Let's remake it.・つくりかた はっぴょうかい First, cut. Next, fold. Then, glue. Finally, play!）→ 551〜555 あんぜんの きまり（You have to wear goggles.・You must not touch it. It's hot.・You don't have to hurry.・May I use this hammer? ― Sure. Here you are.・きまりポスター We must clean up. We have to share tools.）→ 556〜560 アドバイスと ゲームの ルール（You look tired. You should rest. / You shouldn't ～.・First, you have to roll the dice.・It's your turn. You can move three spaces.・That's not fair! Let's check the rules.・オリジナルゲームの 発表 In our game, you have to collect stars.）→ 561〜565 はつめい（The telephone helps people talk.・My machine can clean my room.・You can start it by pushing this button.・We can reuse these boxes.・はつめいフェア This is my invention. It's used for watering plants.）→ 566〜570 ふりかえり（Squeeze it. Turn it. Pull it.・It's broken. What should we do?・つくりかたカード How to make a paper cup: First, fold it in half.・さよなら かたづけ・はつめいショー We made a dream machine together!）。
+- 物語の 糸: ワールド18 の さいごの「カチン、カタン」を たどって 工房に 着く。はつめいかは 旅に でていて「どうぐを つかって すてきな ものを つくってね」と メモだけ のこっている（L541）。L566 の からくり箱から 大きな きかいの せっけいずが でて、L567 で その「ドリームマシン」が こわれていると わかる。みんなの ゆめの アイデア（L562）を たして くみなおし、L569 で はつめいかに おれいの メモ、L570 の ショーで きかいが おまつりの おんがくと ちょうちんの 島の ちずを だして、ワールド20 まつりの島へ。
+- フォニックスの 問題（`src/lib/curriculum/w19Phonics.ts`・`questions.ts` の `w19Question`。w18Question より 先に よぶ）:
+  - re- "re-": 「『もう いちど』の いみの ことばは？」（make → ？（つくりなおす）→ remake / unmake / rimake）。
+  - 道具の -er / -or "-er" "-or": 「おわりの つづりは？」（elevat＿＿（エレベーター）→ or / er / ar、cutt＿＿（カッター）→ er）。
+  - だまっている もじ "wr" "kn" "mb" "gu" "-stle": 「＿ に はいる つづりは？」（＿ench（レンチ）→ wr / r / rr / wh、＿itar → gu / g / gw / gh、whi＿（ふえ）→ stle / sle / ssle / sel）。
+  - qu・squ "qu" "squ": 「＿ に はいる つづりは？」（＿iz（クイズ）→ qu / kw / cu / q、li＿id → qu、＿are → squ / skw / scu / sq）。
+  - ou・ough "ou" "ough": 「この ことばの ou（ough）は どの おと？」（touch → アウ / ア / ウー、enough → ウー / アフ / オウ / オー）。
+- フォーカスの ボタン: re- は ワールド18 で 足した「はじめに つける」（re…）、-stle は「…stle」で そのまま 出る。`vowelTeams.ts` の 読み上げで re-・-or・-stle・gu・squ・ough と、アウ 以外の おとが ある 回の ou を その回の ことばで よむ（`w19Say`）。
+- テスト: `tests/curriculum.test.ts` に ワールド19 の 決まりごと（範囲・ステージ・タイトル・フォニックスの 順と 種類・ou 3つ／ough 4つの おとを ぜんぶ あつかう・文法と 会話の 型・先生の台本の 英語の 割合・会話の 行数・L570 スピード TPR・あんぜん・発表で なまえを いわなくて OK）を 追加。`tests/phonics-w19.test.ts`（13 テスト）を 追加。
+
+### 決めたこと（理由）
+- **新しい phonics.rule**: "re" "er-or" "silent" "qu"（squ も ふくむ）"ou" "ough"（ふりかえりは "review"）。-er / -or は 546 そのまま er・547 e で おわる／重ねる・548 or（ate → ator）・549 er と or を まぜる、の じゅんに した。
+- **まちがいの 選択肢**: re- は はんたいの un-（ワールド18 で ならった ばかりで まざりやすい）と おとの まま かいた ri-。道具の ことばは er / or / ar の 3つ（おとは どれも おなじなので つづりで おぼえる）。だまっている もじは ワールド14 と おなじ「だまっている もじを ぬいた もの・重ねた もの・にた つづり」。ou・ough は おとを えらぶ（つづりは おなじなので、おとの ちがいが 学ぶ ところ）。cough（オフ）は「オー」と まぎらわしいので 入れなかった。
+- **ワールド14・ワールド1 の よみかたは かえない**: kn / wr / mb（ワールド14）と qu（ワールド1）の 読み上げは これまでどおり。w19Say は ワールド19 にしか ない フォーカスと、アウ 以外の おとが ある ou の 回だけ あつかう（ワールド8 の ou は "ow" の まま）。問題も W19_START（541）より 前では でない。
+- **新しい 話し手は 増やさない**: 工房の「おやかた」は エマ先生が 役を する（L551・L554）。はつめいかは メモと せっけいずだけで 出る。
+- **文法の さきどり・ふくしゅう**: L541 の makes は 3単現の ふくしゅう。L557 の If you land on ～, ... は ゲームの きまり文句として 1回だけ。L564 の can be ～ も 決まり文句。have to / must / should の ちがい（きまり／つよい きんし／アドバイス）と don't have to（しなくて いい）と must not（しては いけない）の ちがいは 台本で くらべて 教えた。
+- **こころの くばり**: どうぐの 回（L542・L551）は「いえでは おとなに きいてから」、L552 は「あつい きかいに さわらない」、L547 は「はさみは ゆっくり」。L549 は「はつめいかは みんな しっぱいする」、L553 は「かんぺきで なくて いい」、L559 は ずるいと おもっても おだやかに いって、あやまられたら It's okay. It's just a game. と ゆるす。L550・L560・L562・L565・L570 の AI 会話は「ほんとうの なまえは いわなくて OK」。
+- 自分で 1 回 見なおして なおした ところ: 台本が 125 語に 足りない 回（L541〜543・546〜550・552・553・555〜560・565・566・570）に 練習の 文を 1〜2 文 足した。ふるい 端末で 出ない 絵文字（🪽 🛞 🫳 😮‍💨 🟰 🫴）を 🛩️ 🚲 🔓 🌬️ 🍪 💪 に かえた。L558 の rule を "squ" から "qu" に そろえた（squ は qu の なかま）。
+
+### 例（L552「You Must Not Touch It」）
+- 表現（core）: You must not touch it. It's hot. ／ You must wait until it cools down. ／ You must not run in the workshop.
+- 会話（あつい きかいの まえで）: Birimo「Ooh, what's this shiny box? Can I touch it?」 Ms. Emma「Stop! You must not touch it. It's hot.」 Kiko「Look at the sign. It says, danger, hot!」 Ms. Emma「You must wait until it cools down. About ten minutes.」 Riko「And we must not run in the workshop. Walk, Birimo!」
+- フォニックス: thumb / climb / comb / plumber（問題は「thu＿（おやゆび）」で mb / m / mm / mp）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 49 ファイル・1,352 テスト すべて成功
+- `npx next build`: 成功。First Load JS は /map 201 kB（198 → +3）、/lesson/[lessonNo] 204 kB（201 → +3）、/gacha 189 kB（186 → +3）、/test/[assessmentId] 188 kB（185 → +3）、/parent 159 kB（159 → ±0）（増えたのは ワールド19 の 問題の コード・表と 索引の 1 ワールドぶん。レッスン本文は あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 28`: No.28（L541〜560・61 ページ）を 作れることを 確認（No.29 は ワールド20 が できてから）

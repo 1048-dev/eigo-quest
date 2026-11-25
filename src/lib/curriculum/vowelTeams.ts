@@ -10,6 +10,7 @@ import { R_SAY } from "./rControlled";
 import { w10Say } from "./w10Phonics";
 import { w11Say } from "./w11Phonics";
 import { w12Say } from "./w12Phonics";
+import { w19Say } from "./w19Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -86,6 +87,9 @@ export function focusSay(focus: string, words: readonly string[] = []): string {
     const hit = words.find((w) => w.toLowerCase().startsWith("un"));
     if (hit) return hit;
   }
+  // ワールド19 の re-・-or・-stle・gu・squ・ough と、いろいろな おとの ou は その回の ことばで よむ
+  const w19 = w19Say(focus, words);
+  if (w19) return w19;
   const withF = words.filter((w) => w.toLowerCase().includes(focus));
   switch (focus) {
     case "ai": case "ay": return "ay";
