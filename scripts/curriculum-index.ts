@@ -103,7 +103,9 @@ try {
   const out = build();
   const targets: [string, string][] = [[path.join(DIR, "index.json"), out.index], [path.join(DIR, "titles.json"), out.titles], [BUNDLE_TS, out.bundle]];
   if (args.has("--check")) {
-    const stale = targets.filter(([p, s]) => !existsSync(p) || readFileSync(p, "utf8") !== s).map(([p]) => path.relative(ROOT, p));
+    // Windows の git（autocrlf）で CRLF に なっていても 同じとみなす
+    const lf = (t: string) => t.replace(/\r\n/g, "\n");
+    const stale = targets.filter(([p, s]) => !existsSync(p) || lf(readFileSync(p, "utf8")) !== s).map(([p]) => path.relative(ROOT, p));
     if (stale.length) { console.error(`✗ 索引が 古いです: ${stale.join(", ")}（npm run curriculum:index を 実行してください）`); process.exit(1); }
     console.log("✓ 索引は 最新です");
   } else {
