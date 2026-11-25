@@ -9,6 +9,7 @@ import { verifyParentPin } from "@/lib/services/parentService";
 /** POST /api/parent/verify-pin {pin} — 「おうちの方」エリアに入る（一定時間だけ開く） */
 export const POST = withAuthApi("verify-pin", async (req) => {
   const ctx = await requireParent();
+  if (!ctx.parent.pinHash) return authFail("さきに保護者用の暗証番号（4けた）を決めてください。", 403, "PIN_SETUP_REQUIRED");
   const parsed = await parseBody(req, VerifyPinRequestSchema);
   if (!parsed.success) return authFail("暗証番号は数字4けたで入力してください。", 400, "INVALID_INPUT");
 

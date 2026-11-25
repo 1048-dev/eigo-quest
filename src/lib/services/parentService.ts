@@ -47,8 +47,98 @@ export async function registerParent(input: { email: string; password: string; p
 /** メールとパスワードを照合。どちらが違っても null（どちらが違うかは教えない）。登録の有無で時間が変わらないようにする */
 export async function authenticateParent(email: string, password: string): Promise<{ id: string } | null> {
   const p = await prisma.parent.findUnique({ where: { email }, select: { id: true, passwordHash: true } });
+  // パスワードを持たない（LINE だけの）保護者でも、ダミーと照合して時間をそろえる
   const ok = await verifySecret(password, p?.passwordHash ?? (await dummyHash()));
-  return p && ok ? { id: p.id } : null;
+  return p?.passwordHash && ok ? { id: p.id } : null;
+}
+
+// ---------------------------------------------------------------------------
+// LINE ログイン
+// ---------------------------------------------------------------------------
+export interface LineParentState {
+  id: string;
+  hasPin: boolean;
+}
+
+export async function findParentByLineUserId(lineUserId: string): Promise<LineParentState | null> {
+  const p = await prisma.parent.findUnique({ where: { lineUserId }, select: { id: true, pinHash: true } });
+  return p ? { id: p.id, hasPin: !!p.pinHash } : null;
+}
+
+/**
+ * LINE で新しく登録する（メール・パスワード・暗証番号なし）。暗証番号はこのあと /setup-pin で決める。
+ * 同じ LINE アカウントが同時に登録された（ユニーク違反）ときは、先にできた保護者を返す。
+ */
+export async function createLineParent(identity: { lineUserId: string; displayName: string | null }, now = new Date()): Promise<LineParentState> {
+  try {
+    const p = await prisma.parent.create({
+      data: { email: null, passwordHash: null, pinHash: null, lineUserId: identity.lineUserId, lineDisplayName: identity.displayName, lineLinkedAt: now, settings: {} },
+      select: { id: true },
+    });
+    return { id: p.id, hasPin: false };
+  } catch (e) {
+    if (isUniqueViolation(e)) {
+      const existing = await findParentByLineUserId(identity.lineUserId);
+      if (existing) return existing;
+    }
+    throw e;
+  }
+}
+
+export type LinkLineResult = { ok: true } | { ok: false; reason: "ALREADY_LINKED_OTHER" | "HAS_OTHER_LINE" | "NOT_FOUND" };
+
+/** メールで登録した保護者に LINE を連携する。その LINE がほかの保護者に連携ずみなら できない */
+export async function linkLine(parentId: string, identity: { lineUserId: string; displayName: string | null }, now = new Date()): Promise<LinkLineResult> {
+  const [me, owner] = await Promise.all([
+    prisma.parent.findUnique({ where: { id: parentId }, select: { id: true, lineUserId: true } }),
+    prisma.parent.findUnique({ where: { lineUserId: identity.lineUserId }, select: { id: true } }),
+  ]);
+  if (!me) return { ok: false, reason: "NOT_FOUND" };
+  if (owner && owner.id !== parentId) return { ok: false, reason: "ALREADY_LINKED_OTHER" };
+  if (me.lineUserId && me.lineUserId !== identity.lineUserId) return { ok: false, reason: "HAS_OTHER_LINE" };
+  try {
+    await prisma.parent.update({
+      where: { id: parentId },
+      data: { lineUserId: identity.lineUserId, lineDisplayName: identity.displayName, ...(me.lineUserId ? {} : { lineLinkedAt: now }) },
+    });
+  } catch (e) {
+    // ほぼ同時に ほかの保護者が同じ LINE を連携した
+    if (isUniqueViolation(e)) return { ok: false, reason: "ALREADY_LINKED_OTHER" };
+    throw e;
+  }
+  return { ok: true };
+}
+
+export type UnlinkLineResult = { ok: true } | { ok: false; reason: "NOT_LINKED" | "NEEDS_PASSWORD" };
+
+/** LINE の連携を外す。メール + パスワードでログインできない保護者は外せない（ログインできなくなるため） */
+export async function unlinkLine(parentId: string): Promise<UnlinkLineResult> {
+  const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { email: true, passwordHash: true, lineUserId: true } });
+  if (!p?.lineUserId) return { ok: false, reason: "NOT_LINKED" };
+  if (!p.email || !p.passwordHash) return { ok: false, reason: "NEEDS_PASSWORD" };
+  await prisma.parent.update({ where: { id: parentId }, data: { lineUserId: null, lineDisplayName: null, lineLinkedAt: null } });
+  return { ok: true };
+}
+
+/** はじめての暗証番号（まだ決めていないときだけ。すでにあれば false） */
+export async function setInitialPin(parentId: string, pin: string): Promise<boolean> {
+  const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { pinHash: true } });
+  if (!p || p.pinHash) return false;
+  const pinHash = await hashSecret(pin);
+  const r = await prisma.parent.updateMany({ where: { id: parentId, pinHash: null }, data: { pinHash } });
+  return r.count === 1;
+}
+
+/**
+ * LINE で登録した直後に「やめる」: 暗証番号もパスワードも子どももない保護者だけ消せる。
+ * （メールで登録ずみの方が まちがえて LINE で新しく登録してしまったとき用）
+ */
+export async function cancelLineSignup(parentId: string): Promise<boolean> {
+  const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { pinHash: true, passwordHash: true, lineUserId: true } });
+  if (!p || p.pinHash || p.passwordHash || !p.lineUserId) return false;
+  if ((await prisma.user.count({ where: { parentId } })) > 0) return false;
+  await deleteParentAccount(parentId);
+  return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -204,7 +294,22 @@ export async function setDailyLessonLimit(parentId: string, childId: string, lim
 
 export async function verifyParentPassword(parentId: string, password: string): Promise<boolean> {
   const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { passwordHash: true } });
-  return verifySecret(password, p?.passwordHash ?? (await dummyHash())).then((ok) => ok && !!p);
+  return verifySecret(password, p?.passwordHash ?? (await dummyHash())).then((ok) => ok && !!p?.passwordHash);
+}
+
+/**
+ * 大事な操作（暗証番号の変更・退会）の前の本人確認。
+ * パスワードがある保護者はパスワード、LINE だけで登録した保護者（パスワードなし）は暗証番号で確かめる。
+ */
+export async function verifyParentReauth(parentId: string, secret: string): Promise<boolean> {
+  const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { passwordHash: true, pinHash: true } });
+  const stored = p?.passwordHash ?? p?.pinHash ?? null;
+  return verifySecret(secret, stored ?? (await dummyHash())).then((ok) => ok && !!stored);
+}
+
+export async function parentHasPassword(parentId: string): Promise<boolean> {
+  const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { passwordHash: true } });
+  return !!p?.passwordHash;
 }
 
 export async function verifyParentPin(parentId: string, pin: string): Promise<boolean> {

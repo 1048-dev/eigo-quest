@@ -39,3 +39,42 @@
 ### おうちの方（オーナー）への確認事項
 - 「いいえ」を選んだあとは、その端末では二度と聞かない仕様にしました（「1回だけ」の指示どおり）。あとから引き継ぎたくなった場合の手段（おうちの方ページのボタンなど）が必要なら追加します。
 - 引き継いだあと、その端末の おためしの記録（オフラインのマップの ✓ も）は消えます。ログアウトして おためしモードで遊ぶと Lesson 1 からになります。
+
+## Phase 2: LINE でログイン（保護者）（2026-11-25）
+
+### やったこと
+- **DB（マイグレーション `20261127090000_line_login`）**: `Parent.lineUserId`（ユニーク・任意）、`lineDisplayName`、`lineLinkedAt` を追加。
+  LINE だけで登録した保護者はメール・パスワードを持たないので `email`・`passwordHash` を null 可に、LINE で登録して暗証番号を決める前の状態のために `pinHash` も null 可にしました（既存のメールの保護者はすべて値があるので影響なし）。`prisma migrate diff`（DB なし）で作成。
+- **LINE ログイン本体（`src/lib/auth/line.ts`）**: 標準の LINE ログイン（OAuth 2.0 / OpenID Connect）。
+  - `GET /api/auth/line/start?mode=login|link`: state・nonce・PKCE（S256 の code_verifier）を作り、httpOnly・SameSite=Lax・Path=`/api/auth/line`・10分の cookie `eq_line_oauth` に入れて LINE の認可画面へ。`scope=profile openid`、`bot_prompt=aggressive`（公式アカウントの友だち追加をすすめる）。
+  - `GET /api/auth/line/callback`: cookie を読んだら必ず消す（同じ state は1回だけ）→ state を時間一定の比較で照合 → code をトークンに交換（client_secret・code_verifier）→ ID トークンを LINE の verify エンドポイントで検証（署名・iss・aud・exp・nonce）→ 返ってきた中身もこちらで iss・aud・exp・nonce・sub（`U` + 32桁の16進）を二重チェック → LINE のユーザーID を得る。
+  - 結果はすべて画面へ 303 で戻し（`?line=state|nonce|expired|error|canceled|offline|not_configured|already_linked|linked …`）、画面がていねいなメッセージを出します（`src/lib/auth/lineMessages.ts`）。戻り先は `LINE_LOGIN_CALLBACK_URL` のオリジン（プロキシの後ろでも正しい URL）。ログにはトークン・code を出さず、失敗の種類だけ。
+- **流れ**
+  - (a) はじめての LINE → 保護者を作ってログイン → 新しい画面 `/setup-pin` で暗証番号（4けた）を決める（`POST /api/auth/line/pin`）→ メール登録と同じく「おうちの方」ページでお子さまを追加。暗証番号を決めるまでは「おうちの方」系の API が `403 PIN_SETUP_REQUIRED`、`/who`・`/parent` は `/setup-pin` へ案内。
+  - (b) メールの保護者は `/parent` の新しい「LINE の連携」から連携（暗証番号の入力が必要）・解除（`DELETE /api/parent/line`）。
+  - (c) 連携ずみなら `/login`（・`/register`・`/welcome`）の「LINEでログイン」でログイン → `/who`。
+- **環境変数が無いとき**: `GET /api/auth/me` に `lineLoginAvailable` を追加し、false なら LINE のボタンを出しません。`/parent` の「LINE の連携」には「LINE ログインはまだ設定されていません」と小さく表示。start・callback も「未設定」で画面に戻すだけ（外へは何も送らない）。
+- `.env.example`・README に `LINE_LOGIN_CHANNEL_ID`・`LINE_LOGIN_CHANNEL_SECRET`・`LINE_LOGIN_CALLBACK_URL`（空）と、LINE Developers での設定のしかたを追記。キーはどこにも書いていません。
+- **テスト**: `tests/line-login.test.ts`（33件）。LINE のトークン・verify エンドポイントを fetch のモックにして、state の不一致（LINE に問い合わせず保護者も作られない）・cookie なし/期限切れ・同じ state の使い回し・nonce の不一致（中身の不一致と LINE の 400 の両方）・期限切れのトークン（exp と LINE の 400 の両方）・aud/iss/sub の不正・code 交換の失敗・キャンセル・ほかの保護者に連携ずみの LINE を連携しようとする・LINE で作った保護者の LINE を別の保護者に連携しようとする・LINE から戻る前に別の保護者に切りかわった・成功（新規登録 → 暗証番号 → おうちの方、再ログイン、メールの保護者への連携 → LINE でログイン、解除）・LINE だけの保護者の本人確認・環境変数なし、を確認。
+- **本物の DB での確認**: Docker の使い捨て PostgreSQL（ポート 5544）+ `next start` で新しいスクリプト `scripts/line-db-check.ts`（`npm run check:line-db -- --db <URL>`）を実行し 23項目すべて OK。とくに「ルートハンドラで cookies() に書いた state cookie・セッション cookie が、リダイレクトの応答に本当に付くこと」を本物のサーバーで確認しました（LINE のサーバーには接続していません。ダミーの環境変数のみ）。run3 の `scripts/auth-db-check.ts` もすべて OK。
+- `npx tsc --noEmit`・`npx vitest run`（32ファイル・842件）・`npx next build` すべて成功。
+
+### 決めたこと（理由）
+- **ID トークンの検証は LINE の verify エンドポイント + こちらでの中身の確認**にしました（JWT ライブラリを増やさずにすみ、署名方式の違い（HS256/ES256）も LINE 側が吸収するため）。nonce・期限・宛先は自分でも確かめるので、verify の応答だけを信じることはありません。
+- **PKCE も付けました**（指示には無いが LINE が対応しており、code が漏れても使えないようにするため）。
+- **「LINEでログイン」は、未連携の LINE ならそのまま新規登録**にしました（ボタンを分けると保護者が迷うため）。その代わり、メールで登録ずみの方がまちがえて押したとき用に、`/setup-pin` に「LINE での登録を取り消す」（`POST /api/auth/line/cancel`。暗証番号・パスワード・お子さまが無いアカウントだけ消せる）と案内文を置きました。
+- **LINE だけの保護者（パスワードなし）の本人確認は暗証番号**にしました（暗証番号の変更・退会）。パスワードの変更欄は出しません。メールとパスワードの後からの追加は今回はしていません（メールでのパスワード再設定と合わせて後日）。
+- **LINE だけの保護者は LINE の連携を解除できない**ようにしました（解除するとログインする方法がなくなるため）。
+- **連携は暗証番号を入れた状態でだけ**始められます（子どもが自分の LINE を勝手につながないように）。state cookie に始めた保護者の ID を入れ、戻ってきたときに同じ保護者がログイン中かを確かめます。すでに別の LINE と連携ずみなら、先に解除してもらいます（上書きしない）。
+- 新規登録の回数制限は、メール登録と同じ `registerLimiter`（同じ IP から1時間に10回）を共用。
+- LINE の表示名は「どの LINE と連携しているか」を設定画面で見せるためだけに保存（制御文字を取り除き100文字まで）。メールアドレスの取得（email スコープ）は申請が必要なので使っていません。
+- ボタンの色は LINE の緑（#06C755）。ロゴ画像は使わず、吹き出しの簡単なマークにしました（会社名は入れていません）。
+
+### やらなかったこと
+- 本物の LINE チャネルでの通し確認（オーナーがチャネルを作ってから）。キーを入れたら `/login` に「LINEでログイン」が出ます。
+- 画面のスクリーンショット確認（Phase 4 の全体チェックでまとめて行う予定）。
+- 公式アカウントの友だち状態の取得（webhook）と月ごとの PDF の送信は Phase 3。
+
+### おうちの方（オーナー）への確認事項
+- LINE Developers で「LINE ログイン」チャネルを作り、コールバック URL に `https://<本番のドメイン>/api/auth/line/callback` を登録して、チャネルID・チャネルシークレット・その URL を `.env` に入れてください。友だち追加をすすめる（`bot_prompt=aggressive`）には、そのチャネルに公式アカウント（Messaging API チャネル）をリンクする設定が必要です。
+- LINE だけで登録した方が、あとからメールアドレス・パスワードを追加できる機能が必要なら追加します。

@@ -1,10 +1,10 @@
 import { requireParentArea, rotateCurrentSession } from "@/lib/auth";
-import { authFail, authOk, CHILD_NOT_FOUND_JA, parseBody, tooManyAttempts, withAuthApi, WRONG_PASSWORD_JA } from "@/lib/auth/api";
+import { authFail, authOk, CHILD_NOT_FOUND_JA, parseBody, tooManyAttempts, withAuthApi, WRONG_PASSWORD_JA, WRONG_PIN_JA } from "@/lib/auth/api";
 import { reauthLimiter } from "@/lib/auth/rateLimit";
 import { destroyOtherSessions } from "@/lib/auth/session";
 import { PASSWORD_RULES_JA, ParentSettingsRequestSchema } from "@/lib/api/contracts";
 import {
-  changeParentPassword, changeParentPin, getParentSettings, setDailyLessonLimit, verifyParentPassword,
+  changeParentPassword, changeParentPin, getParentSettings, setDailyLessonLimit, verifyParentReauth,
 } from "@/lib/services/parentService";
 
 /** GET /api/parent/settings — いまの設定（子どもごとの1日のレッスン回数） */
@@ -17,6 +17,7 @@ export const GET = withAuthApi("parent-settings-get", async () => {
  * PATCH /api/parent/settings
  *  { dailyLessonLimit?: {childId, limit|null}, changePin?: {password, newPin}, changePassword?: {currentPassword, newPassword} }
  * PIN・パスワードの変更は今のパスワードの確認が先（どれか1つでも違えば何も変えない）。
+ * LINE だけで登録した保護者（パスワードなし）は、changePin.password に今の暗証番号を入れる。パスワードの変更はできない。
  * パスワードを変えたら、ほかの端末のログインはすべて終了し、この端末のトークンも入れ替える。
  */
 export const PATCH = withAuthApi("parent-settings", async (req) => {
@@ -30,13 +31,19 @@ export const PATCH = withAuthApi("parent-settings", async (req) => {
   }
   const { dailyLessonLimit, changePin, changePassword } = parsed.data;
 
+  const hasPassword = !!ctx.parent.passwordHash;
+  if (changePassword && !hasPassword) {
+    return authFail("LINE で登録したアカウントには パスワードがありません。", 400, "NO_PASSWORD");
+  }
   const passwords = [changePin?.password, changePassword?.currentPassword].filter((p): p is string => p !== undefined);
   if (passwords.length > 0) {
     const key = `pw:${ctx.parent.id}`;
     const limit = reauthLimiter.hit(key);
     if (!limit.ok) return tooManyAttempts(limit.retryAfterSec);
     for (const p of passwords) {
-      if (!(await verifyParentPassword(ctx.parent.id, p))) return authFail(WRONG_PASSWORD_JA, 401, "WRONG_PASSWORD");
+      if (!(await verifyParentReauth(ctx.parent.id, p))) {
+        return hasPassword ? authFail(WRONG_PASSWORD_JA, 401, "WRONG_PASSWORD") : authFail(WRONG_PIN_JA, 401, "WRONG_PIN");
+      }
     }
     reauthLimiter.reset(key);
   }

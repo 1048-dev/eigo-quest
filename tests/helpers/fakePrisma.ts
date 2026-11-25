@@ -8,7 +8,7 @@ type Row = Record<string, unknown>;
 type Where = Record<string, unknown>;
 
 const UNIQUE: Record<string, string[]> = {
-  parent: ["email"],
+  parent: ["email", "lineUserId"],
   session: ["tokenHash"],
   user: ["friendCode"],
   coinLedger: ["idempotencyKey"],

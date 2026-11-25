@@ -1,8 +1,12 @@
 "use client";
-/** 「おうちの方」ページ: お子さまの追加・暗証番号の変更・パスワードの変更・退会 */
+/**
+ * 「おうちの方」ページ: お子さまの追加・暗証番号の変更・パスワードの変更・LINE の連携・退会
+ * usePin = true: LINE だけで登録した保護者（パスワードなし）。本人確認に今の暗証番号を使う。
+ */
 import { useState, type FormEvent } from "react";
 import { AvatarPicker } from "@/components/account/AvatarPicker";
 import { FormMessage, PasswordField, PinField, TextField } from "@/components/account/Form";
+import { LineLoginButton } from "@/components/account/LineLoginButton";
 import { defaultAvatarForNewChild, type AvatarCharacter } from "@/lib/domain/avatars";
 import { AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, PASSWORD_RULES_JA, ParentSettingsResponseSchema } from "@/lib/api/contracts";
 import { passwordChecks, sendJson } from "@/lib/auth/client";
@@ -49,7 +53,7 @@ export function AddChildForm({ guard, onAdded, onCancel, siblings = [] }: { guar
   );
 }
 
-export function ChangePinForm({ guard }: { guard: Guard }) {
+export function ChangePinForm({ guard, usePin = false }: { guard: Guard; usePin?: boolean }) {
   const [password, setPassword] = useState("");
   const [pin, setPin] = useState("");
   const [pin2, setPin2] = useState("");
@@ -60,7 +64,7 @@ export function ChangePinForm({ guard }: { guard: Guard }) {
   const submit = async (ev: FormEvent) => {
     ev.preventDefault();
     setError(null); setOk(null);
-    if (!password) { setError("今のパスワードを入力してください。"); return; }
+    if (!password) { setError(usePin ? "今の暗証番号を入力してください。" : "今のパスワードを入力してください。"); return; }
     if (!/^\d{4}$/.test(pin)) { setError("新しい暗証番号は数字4けたで入力してください。"); return; }
     if (pin !== pin2) { setError("確認用の暗証番号が一致しません。"); return; }
     setBusy(true);
@@ -74,7 +78,9 @@ export function ChangePinForm({ guard }: { guard: Guard }) {
   return (
     <form onSubmit={submit} className="space-y-3" aria-label="暗証番号の変更">
       <FormMessage error={error} ok={ok} />
-      <PasswordField label="今のパスワード" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      {usePin
+        ? <PinField label="今の暗証番号" value={password} onChange={setPassword} />
+        : <PasswordField label="今のパスワード" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />}
       <div className="flex flex-wrap gap-4">
         <PinField label="新しい暗証番号" value={pin} onChange={setPin} />
         <PinField label="確認" value={pin2} onChange={setPin2} />
@@ -120,7 +126,7 @@ export function ChangePasswordForm({ guard }: { guard: Guard }) {
 }
 
 /** 退会（2段階の確認: 注意を読んでチェック → パスワードを入れて最終確認） */
-export function DeleteAccountPanel({ guard, onDeleted }: { guard: Guard; onDeleted: () => void }) {
+export function DeleteAccountPanel({ guard, onDeleted, usePin = false }: { guard: Guard; onDeleted: () => void; usePin?: boolean }) {
   const [step, setStep] = useState<0 | 1 | 2>(0);
   const [agree, setAgree] = useState(false);
   const [password, setPassword] = useState("");
@@ -131,7 +137,7 @@ export function DeleteAccountPanel({ guard, onDeleted }: { guard: Guard; onDelet
 
   const submit = async () => {
     setError(null);
-    if (!password) { setError("確認のため、パスワードを入力してください。"); return; }
+    if (!password) { setError(usePin ? "確認のため、暗証番号を入力してください。" : "確認のため、パスワードを入力してください。"); return; }
     setBusy(true);
     const r = await sendJson("DELETE", "/api/parent/account", AuthResultResponseSchema, { password });
     setBusy(false);
@@ -155,7 +161,7 @@ export function DeleteAccountPanel({ guard, onDeleted }: { guard: Guard; onDelet
         <>
           <p className="text-sm font-bold">退会すると、次のものがすべて削除され、元に戻すことはできません。</p>
           <ul className="list-disc space-y-0.5 pl-5 text-sm">
-            <li>保護者アカウント（メールアドレス・パスワード・暗証番号）</li>
+            <li>保護者アカウント（{usePin ? "LINE の連携・暗証番号" : "メールアドレス・パスワード・暗証番号・LINE の連携"}）</li>
             <li>すべてのお子さまの情報</li>
             <li>レッスンの記録・コイン・モンスター・テストの結果</li>
           </ul>
@@ -170,14 +176,69 @@ export function DeleteAccountPanel({ guard, onDeleted }: { guard: Guard; onDelet
         </>
       ) : (
         <>
-          <p className="text-sm font-black">最終確認です。パスワードを入力して「完全に削除する」を押してください。</p>
-          <PasswordField label="パスワード" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <p className="text-sm font-black">最終確認です。{usePin ? "暗証番号" : "パスワード"}を入力して「完全に削除する」を押してください。</p>
+          {usePin
+            ? <PinField label="暗証番号" value={password} onChange={setPassword} />
+            : <PasswordField label="パスワード" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />}
           <div className="flex gap-2">
             <button type="button" className="btn btn-berry flex-1 !py-2 text-sm" disabled={busy || !password} onClick={() => void submit()}>{busy ? "削除しています…" : "完全に削除する"}</button>
             <button type="button" className="btn btn-ghost flex-1 !py-2 text-sm" onClick={reset}>やめる</button>
           </div>
         </>
       )}
+    </div>
+  );
+}
+
+/**
+ * LINE の連携（ログインに使う・Phase 3 で月ごとのレポートを受け取る）。
+ *  - LINE が未設定（環境変数なし）: 小さな注意書きだけ
+ *  - 連携ずみ: 表示名と「連携を解除」（LINE だけで登録したアカウントは解除できない）
+ *  - 未連携: 「LINE と連携する」（LINE の画面へ移動）
+ */
+export function LinePanel({ guard, available, linked, displayName, canUnlink, onChanged }: {
+  guard: Guard; available: boolean; linked: boolean; displayName: string | null; canUnlink: boolean; onChanged: (msg: string) => void;
+}) {
+  const [confirm, setConfirm] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const unlink = async () => {
+    setError(null);
+    setBusy(true);
+    const r = await sendJson("DELETE", "/api/parent/line", AuthResultResponseSchema);
+    setBusy(false);
+    if (!guard(r)) return;
+    if (r.ok && r.data.ok) { setConfirm(false); onChanged(r.data.messageJa || "LINE の連携を解除しました。"); }
+    else setError(r.error ?? "解除できませんでした。");
+  };
+
+  if (linked) {
+    return (
+      <div className="space-y-3">
+        <FormMessage error={error} />
+        <p className="text-sm"><span className="mr-2 rounded-full bg-[#06C755] px-2 py-0.5 text-xs font-black text-white">連携ずみ</span>{displayName ? `${displayName} さんの LINE` : "LINE アカウント"}</p>
+        {!available && <p className="text-xs text-[var(--ink-2)]">LINE ログインは現在設定されていません（設定されるまで LINE ではログインできません）。</p>}
+        {!canUnlink ? (
+          <p className="text-xs text-[var(--ink-2)]">LINE で登録したアカウントのため、連携は解除できません。</p>
+        ) : confirm ? (
+          <div className="flex gap-2">
+            <button type="button" className="btn btn-berry flex-1 !py-2 text-sm" disabled={busy} onClick={() => void unlink()}>{busy ? "解除しています…" : "解除する"}</button>
+            <button type="button" className="btn btn-ghost flex-1 !py-2 text-sm" onClick={() => setConfirm(false)}>やめる</button>
+          </div>
+        ) : (
+          <button type="button" className="btn btn-ghost w-full !py-2 text-sm" onClick={() => setConfirm(true)}>LINE の連携を解除</button>
+        )}
+      </div>
+    );
+  }
+  if (!available) {
+    return <p className="text-xs text-[var(--ink-2)]">LINE ログインはまだ設定されていません（準備ができると、ここから LINE と連携できるようになります）。</p>;
+  }
+  return (
+    <div className="space-y-2">
+      <p className="text-xs text-[var(--ink-2)]">連携すると「LINEでログイン」でログインでき、月ごとの学習レポートを LINE で受け取れるようになります。</p>
+      <LineLoginButton mode="link" label="LINE と連携する" />
     </div>
   );
 }

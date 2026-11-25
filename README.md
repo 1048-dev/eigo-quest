@@ -180,7 +180,7 @@ eigo-quest/
 
 ## 保護者アカウント（src/lib/auth・/welcome・/who・/parent）
 
-支払う人＝保護者（メール＋パスワード）、学ぶ人＝子ども（ニックネーム・学年1〜6・生まれ年は任意。本名は不要）。月報（LINE）や月額課金の土台で、課金・LINE はまだありません。
+支払う人＝保護者（メール＋パスワード、または LINE）、学ぶ人＝子ども（ニックネーム・学年1〜6・生まれ年は任意。本名は不要）。月報（LINE）や月額課金の土台で、課金はまだありません。
 
 - **流れ**: `/welcome` → 登録（メール・パスワード・暗証番号4けた）→ お子さまを追加（6人まで）→ `/who`「だれが あそぶ？」で子どもを選ぶ → マップ。ゲームの画面の上のヘッダー（AccountBar）に いま遊んでいる子と「かわる」「おうちの方」が出ます。
 - **おうちの方ページ `/parent`**: 入るたびに暗証番号（入れてから10分有効）。お子さまごとのようす（進みぐあい・連続日数・総合習得率・今日の回数・最終学習日・伸ばしたい力）、1日のレッスン回数の上限（既定は制限なし、1〜10回）、お子さまの編集・削除、暗証番号・パスワードの変更、ログアウト、退会（保護者とすべての子どもの学習データを1つのトランザクションで完全に削除）。
@@ -190,8 +190,15 @@ eigo-quest/
 - **おためしの きろくの ひきつぎ**: この端末でおためしモード（未ログイン＝デモユーザー、または DB 停止）で遊んだ分は、ブラウザの localStorage に「おためしの きろく」として残します（`src/lib/offline/trialLog.ts`。クリアしたレッスン・合格したテスト・もらったコイン・遊んだ日・答えた項目）。保護者が登録・ログインして「だれが あそぶ？」で子どもを選ぶと、端末ごとに1回だけ「おためしで あそんだ きろくを ひきつぐ？」と聞きます。「はい」で `POST /api/children/:id/carry-over` がその子に たし合わせ（レッスン・テスト合格は まだ無い分だけ、コインは合計（おためしで ありえる上限まで）、連続日数は大きい方、記憶はまだ無い項目だけ）、端末の おためしの きろくを消します。「いいえ」でも もう聞きません。デモユーザーの DB の記録は読みも消しもしない（ほかの おためしの人と共有のため＝コピー）。同じ端末の きろくは CoinLedger の `trial-carry:<端末ID>` で1回だけ（2回目は `alreadyCarried: true`）。計算は `src/lib/domain/trialMerge.ts`。
 - **1日の回数制限**: 上限に届くと、新しいレッスンは「きょうの レッスンは ここまで！ また あした あそぼうね。」（403 + `code: "DAILY_LIMIT"`）。完了ずみのレッスンのおさらいはできます。
 - **DB 停止時**: アカウント API は 503 + `offline: true` + ていねいな案内（`GET /api/auth/me` だけは 200 + `loggedIn:false`）。画面はおためしモードへ進めます。
-- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`DELETE /api/parent/account`。
-- 環境変数: `ALLOWED_ORIGINS`（同じホスト以外から受け付けるオリジン。通常は空）、`SEED_DEMO_PARENT`（1 でデモ保護者を seed）。
+- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET /api/auth/line/start`・`callback`、`POST /api/auth/line/pin`・`cancel`、`DELETE /api/parent/line`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`DELETE /api/parent/account`。
+- **LINE ログイン（`src/lib/auth/line.ts`）**: 標準の LINE ログイン（OAuth 2.0 / OpenID Connect）。`GET /api/auth/line/start?mode=login|link` が state・nonce・PKCE（S256）を作って httpOnly cookie `eq_line_oauth`（path `/api/auth/line`・10分）に入れ、LINE の認可画面へ（`scope=profile openid`、`bot_prompt=aggressive` で公式アカウントの友だち追加もすすめる）。`GET /api/auth/line/callback` が state を照合 → code をトークンに交換 → ID トークンを LINE の verify エンドポイントで検証し、こちらでも iss・aud・exp・nonce・sub を確認して LINE のユーザーID（`Parent.lineUserId`、ユニーク）を得ます。
+  - (a) はじめての LINE → 保護者を作ってログイン → `/setup-pin` で暗証番号を決める（`POST /api/auth/line/pin`）→ お子さまを追加。まちがえて登録したときは `/setup-pin` の「登録を取り消す」（`POST /api/auth/line/cancel`。暗証番号・子どもがまだ無いときだけ）。
+  - (b) メールで登録した保護者は `/parent` の「LINE の連携」から連携（`start?mode=link`。暗証番号の入力が必要）・解除（`DELETE /api/parent/line`）。ほかの保護者に連携ずみの LINE は連携できません。LINE だけで登録したアカウントは解除できません（ログインできなくなるため）。
+  - (c) 連携ずみなら「LINEでログイン」でログイン。
+  - LINE だけで登録した保護者はメール・パスワードを持たないので、暗証番号の変更・退会の本人確認は暗証番号で行い、パスワードの変更は出しません。
+  - 環境変数がそろっていないときは LINE のボタンを出さず（`GET /api/auth/me` の `lineLoginAvailable: false`）、`/parent` に「LINE ログインはまだ設定されていません」と小さく表示します。
+  - LINE Developers でのチャネル設定: LINE ログインのチャネルを作り、コールバック URL に `LINE_LOGIN_CALLBACK_URL` と同じ値（例 `https://<ドメイン>/api/auth/line/callback`）を登録。友だち追加をすすめるには、そのチャネルに公式アカウント（Messaging API チャネル）をリンクします。
+- 環境変数: `ALLOWED_ORIGINS`（同じホスト以外から受け付けるオリジン。通常は空）、`SEED_DEMO_PARENT`（1 でデモ保護者を seed）、`LINE_LOGIN_CHANNEL_ID`・`LINE_LOGIN_CHANNEL_SECRET`・`LINE_LOGIN_CALLBACK_URL`（LINE ログイン。3つそろったときだけ有効。キーはコードに書かず環境変数だけ）。
 
 ## DBが止まっていても動く「おためしモード」
 

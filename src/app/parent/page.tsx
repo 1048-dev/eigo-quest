@@ -3,7 +3,8 @@
  * おうちの方のページ（保護者PINが必要）
  *  - お子さまごとのようす（進みぐあい・連続日数・習得率・最終学習日）と 6つの力のレーダーへのリンク
  *  - お子さまの追加・編集・削除、1日のレッスン回数
- *  - 暗証番号・パスワードの変更、ログアウト、退会（2段階の確認）
+ *  - 暗証番号・パスワードの変更、LINE の連携・解除、ログアウト、退会（2段階の確認）
+ *  - LINE だけで登録した保護者（パスワードなし）は、本人確認に暗証番号を使い、パスワードの変更は出さない
  * どの API でも PIN の期限切れ（PIN_REQUIRED）なら暗証番号パッドに戻り、ログイン切れならログイン画面へ。
  */
 import Link from "next/link";
@@ -12,13 +13,14 @@ import { Suspense, useCallback, useEffect, useState } from "react";
 import { AccountHeader, FormMessage } from "@/components/account/Form";
 import { PinPad } from "@/components/account/PinPad";
 import { ChildCard, type Guard } from "@/components/parent/ChildCard";
-import { AddChildForm, ChangePasswordForm, ChangePinForm, DeleteAccountPanel } from "@/components/parent/SettingsPanels";
+import { AddChildForm, ChangePasswordForm, ChangePinForm, DeleteAccountPanel, LinePanel } from "@/components/parent/SettingsPanels";
 import { apiGet } from "@/lib/api/client";
 import {
   AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, ParentOverviewResponseSchema,
   type AuthMeResponse, type ChildOverview,
 } from "@/lib/api/contracts";
 import { avatarFor, codeOf, fetchMe, isAccountOffline, notifyAccountChanged, sendJson } from "@/lib/auth/client";
+import { lineNotice } from "@/lib/auth/lineMessages";
 
 type Phase = "loading" | "locked" | "ready" | "offline" | "deleted";
 
@@ -37,14 +39,18 @@ function ParentPage() {
   const [me, setMe] = useState<AuthMeResponse | null>(null);
   const [children, setChildren] = useState<ChildOverview[]>([]);
   const [showAdd, setShowAdd] = useState(params.get("add") === "1");
-  const [notice, setNotice] = useState<string | null>(params.get("welcome") === "1" ? "ご登録ありがとうございます。まずはお子さまを追加してください。" : null);
-  const [error, setError] = useState<string | null>(null);
+  const lineMsg = lineNotice(params.get("line"));
+  const [notice, setNotice] = useState<string | null>(
+    params.get("welcome") === "1" ? "ご登録ありがとうございます。まずはお子さまを追加してください。" : lineMsg?.kind === "ok" ? lineMsg.text : null,
+  );
+  const [error, setError] = useState<string | null>(lineMsg?.kind === "error" ? lineMsg.text : null);
 
   /** API の結果を見て、PIN 切れ・ログイン切れ・DB 停止なら画面を切りかえる。続けてよければ true */
   const guard: Guard = useCallback((r) => {
     const code = codeOf(r);
     if (code === "NOT_LOGGED_IN") { router.replace("/login"); return false; }
     if (code === "PIN_REQUIRED") { setPhase("locked"); return false; }
+    if (code === "PIN_SETUP_REQUIRED") { router.replace("/setup-pin"); return false; }
     if (isAccountOffline(r)) { setPhase("offline"); return false; }
     return true;
   }, [router]);
@@ -58,6 +64,7 @@ function ParentPage() {
       return;
     }
     setMe(m.data);
+    if (m.data.parent?.needsPin) { router.replace("/setup-pin"); return; }
     if (!m.data.pinUnlocked) { setPhase("locked"); return; }
     const o = await apiGet("/api/parent/overview", ParentOverviewResponseSchema);
     if (!guard(o)) return;
@@ -127,10 +134,13 @@ function ParentPage() {
 
   const birthYears = new Map((me?.children ?? []).map((c) => [c.id, c.birthYear]));
   const canAdd = children.length < AUTH_LIMITS.maxChildren;
+  const hasPassword = me?.parent?.hasPassword ?? true;
+  const lineName = me?.parent?.lineDisplayName;
+  const loginAs = me?.parent?.email ? `${me.parent.email} でログイン中` : me?.parent?.lineLinked ? `LINE${lineName ? `（${lineName}）` : ""} でログイン中` : undefined;
 
   return (
     <div className="space-y-5 pb-6">
-      <AccountHeader title="おうちの方のページ" sub={me?.parent?.email ? `${me.parent.email} でログイン中` : undefined} back={{ href: "/who", label: "お子さまの画面へ" }} />
+      <AccountHeader title="おうちの方のページ" sub={loginAs} back={{ href: "/who", label: "お子さまの画面へ" }} />
 
       <FormMessage error={error} ok={notice} />
 
@@ -159,12 +169,22 @@ function ParentPage() {
       <section className="card p-4" aria-labelledby="pin-title">
         <h2 id="pin-title" className="rpg-title text-lg">暗証番号の変更</h2>
         <p className="mb-3 mt-1 text-xs text-[var(--ink-2)]">「おうちの方」のページに入るときの4けたの番号です。</p>
-        <ChangePinForm guard={guard} />
+        <ChangePinForm guard={guard} usePin={!hasPassword} />
       </section>
 
-      <section className="card p-4" aria-labelledby="pw-title">
-        <h2 id="pw-title" className="rpg-title text-lg">パスワードの変更</h2>
-        <div className="mt-3"><ChangePasswordForm guard={guard} /></div>
+      {hasPassword && (
+        <section className="card p-4" aria-labelledby="pw-title">
+          <h2 id="pw-title" className="rpg-title text-lg">パスワードの変更</h2>
+          <div className="mt-3"><ChangePasswordForm guard={guard} /></div>
+        </section>
+      )}
+
+      <section className="card p-4" aria-labelledby="line-title">
+        <h2 id="line-title" className="rpg-title text-lg">LINE の連携</h2>
+        <div className="mt-2">
+          <LinePanel guard={guard} available={me?.lineLoginAvailable ?? false} linked={me?.parent?.lineLinked ?? false}
+            displayName={lineName ?? null} canUnlink={hasPassword && !!me?.parent?.email} onChanged={refresh} />
+        </div>
       </section>
 
       <section className="card p-4" aria-labelledby="session-title">
@@ -175,7 +195,7 @@ function ParentPage() {
 
       <section className="card p-4" aria-labelledby="delete-title">
         <h2 id="delete-title" className="rpg-title text-lg">退会</h2>
-        <div className="mt-2"><DeleteAccountPanel guard={guard} onDeleted={() => { notifyAccountChanged(); setPhase("deleted"); }} /></div>
+        <div className="mt-2"><DeleteAccountPanel guard={guard} usePin={!hasPassword} onDeleted={() => { notifyAccountChanged(); setPhase("deleted"); }} /></div>
       </section>
 
       <div className="text-center">

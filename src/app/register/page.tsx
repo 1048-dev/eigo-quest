@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { AccountHeader, FormMessage, PasswordField, PinField, TextField } from "@/components/account/Form";
+import { LineLoginButton } from "@/components/account/LineLoginButton";
 import { AuthResultResponseSchema, PASSWORD_RULES_JA } from "@/lib/api/contracts";
-import { notifyAccountChanged, passwordChecks, sendJson } from "@/lib/auth/client";
+import { fetchMe, notifyAccountChanged, passwordChecks, sendJson } from "@/lib/auth/client";
 
 type Errors = Partial<Record<"email" | "password" | "password2" | "pin" | "pin2", string>>;
 
-/** 保護者の新規登録（メール・パスワード・暗証番号4けた） */
+/** 保護者の新規登録（メール・パスワード・暗証番号4けた ／ LINE が設定されていれば「LINEで登録」も） */
 export default function RegisterPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -19,6 +20,11 @@ export default function RegisterPage() {
   const [errors, setErrors] = useState<Errors>({});
   const [formError, setFormError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [lineAvailable, setLineAvailable] = useState(false);
+
+  useEffect(() => {
+    void fetchMe().then((r) => setLineAvailable(r.ok && r.data.lineLoginAvailable));
+  }, []);
 
   const checks = passwordChecks(password);
 
@@ -56,6 +62,13 @@ export default function RegisterPage() {
       <AccountHeader title="おうちの方の登録" sub="保護者の方が入力してください。お子さまの本名は必要ありません。" back={{ href: "/welcome", label: "スタート画面へ" }} />
       <form onSubmit={submit} noValidate className="card rpg-rivets space-y-4 p-5" aria-label="保護者の登録">
         <FormMessage error={formError} />
+        {lineAvailable && (
+          <div className="space-y-3">
+            <LineLoginButton label="LINEで登録" />
+            <p className="text-center text-xs text-[var(--ink-2)]">メールアドレス・パスワードなしで登録できます（このあと暗証番号を決めます）。月ごとの学習レポートも LINE で受け取れます。</p>
+            <div className="flex items-center gap-3 text-xs text-[var(--ink-2)]" aria-hidden><span className="h-px flex-1 bg-current opacity-40" />または メールアドレスで<span className="h-px flex-1 bg-current opacity-40" /></div>
+          </div>
+        )}
         <TextField label="メールアドレス" type="email" autoComplete="email" inputMode="email" required value={email}
           onChange={(e) => setEmail(e.target.value)} error={errors.email} placeholder="example@mail.com" />
 

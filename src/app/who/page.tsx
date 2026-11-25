@@ -26,10 +26,12 @@ export default function WhoPage() {
 
   const load = useCallback(() => {
     void fetchMe().then((r) => {
+      // LINE で登録して まだ暗証番号を決めていない保護者は、さきに暗証番号を決める
+      if (r.ok && r.data.parent?.needsPin) { router.replace("/setup-pin"); return; }
       setOffline(!r.ok || !!r.data.offline);
       setMe(r.data);
     });
-  }, []);
+  }, [router]);
   useEffect(load, [load]);
 
   const choose = async (id: string) => {

@@ -421,6 +421,9 @@ export type TrialCarryRequest = z.input<typeof TrialCarryRequestSchema>;
 
 export const VerifyPinRequestSchema = z.object({ pin: PinInput });
 
+/** POST /api/auth/line/pin — LINE で登録したあと、はじめての暗証番号を決める */
+export const SetupPinRequestSchema = z.object({ pin: PinInput });
+
 export const ParentSettingsRequestSchema = z.object({
   /** 子どもごとの1日のレッスン回数の上限。null で「制限なし」 */
   dailyLessonLimit: z.object({ childId: ChildIdInput, limit: z.number().int().min(1).max(AUTH_LIMITS.dailyLessonLimitMax).nullable() }).optional(),
@@ -460,11 +463,23 @@ export type AuthResultResponse = z.output<typeof AuthResultResponseSchema>;
 export const AuthMeResponseSchema = z.object({
   ...AUTH_META,
   loggedIn: bool(false),
-  parent: nullable(z.object({ email: str("") })),
+  parent: nullable(z.object({
+    /** LINE だけで登録した保護者は "" */
+    email: str(""),
+    /** LINE と連携ずみか・その表示名 */
+    lineLinked: bool(false),
+    lineDisplayName: z.string().nullable().catch(null),
+    /** メール + パスワードでもログインできるか（false = LINE だけ。暗証番号の変更・退会の確認は暗証番号で行う） */
+    hasPassword: bool(true),
+    /** LINE で登録して まだ暗証番号を決めていない → /setup-pin へ */
+    needsPin: bool(false),
+  })),
   children: safeArray(ChildSchema),
   selectedChildId: z.string().nullable().catch(null),
   /** 保護者PINを入れてから一定時間内（おうちの方エリアに入れる） */
   pinUnlocked: bool(false),
+  /** LINE ログインが使えるか（環境変数がそろっていて DB が動いている）。false なら LINE のボタンを出さない */
+  lineLoginAvailable: bool(false),
 });
 export type AuthMeResponse = z.output<typeof AuthMeResponseSchema>;
 

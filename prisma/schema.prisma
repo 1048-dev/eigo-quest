@@ -20,12 +20,15 @@ datasource db {
 // アカウント・月額課金
 // -----------------------------------------------------------------------------
 
-/// 保護者（支払い・管理する人）。メール + パスワードでログインし、4桁の保護者PINで「おうちの方」エリアを守る。
+/// 保護者（支払い・管理する人）。メール + パスワード または LINE でログインし、4桁の保護者PINで「おうちの方」エリアを守る。
 model Parent {
   id                 String             @id @default(cuid())
-  email              String             @unique /// 小文字に正規化して保存
-  passwordHash       String             /// scrypt（src/lib/auth/password.ts の形式）。平文は保存しない
-  pinHash            String             /// 4桁PINの scrypt ハッシュ
+  email              String?            @unique /// 小文字に正規化して保存。LINE だけで登録した保護者は null
+  passwordHash       String?            /// scrypt（src/lib/auth/password.ts の形式）。平文は保存しない。LINE だけで登録した保護者は null
+  pinHash            String?            /// 4桁PINの scrypt ハッシュ。LINE で登録して まだ暗証番号を決めていないときだけ null
+  lineUserId         String?            @unique /// LINE ログインの ユーザーID（ID トークンの sub）。連携していなければ null
+  lineDisplayName    String?            /// LINE の表示名（設定画面で「だれの LINE と連携しているか」を見せるだけ）
+  lineLinkedAt       DateTime?          /// LINE を連携した時刻
   settings           Json               @default("{}") /// { dailyLessonLimits: { [childId]: number } } など
   subscriptionStatus SubscriptionStatus @default(TRIALING)
   planId             String?

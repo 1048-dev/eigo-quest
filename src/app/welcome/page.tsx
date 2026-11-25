@@ -4,15 +4,20 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { PeekCharacter } from "@/components/scene/Peek";
+import { LineLoginButton } from "@/components/account/LineLoginButton";
 import { fetchMe, rememberTrial } from "@/lib/auth/client";
 
 /** スタート画面: おうちの方の とうろく・ログイン ／ おためしで あそぶ */
 export default function WelcomePage() {
   const router = useRouter();
   const [loggedIn, setLoggedIn] = useState(false);
+  const [lineAvailable, setLineAvailable] = useState(false);
 
   useEffect(() => {
-    void fetchMe().then((r) => setLoggedIn(r.ok && r.data.loggedIn));
+    void fetchMe().then((r) => {
+      setLoggedIn(r.ok && r.data.loggedIn);
+      setLineAvailable(r.ok && r.data.lineLoginAvailable);
+    });
   }, []);
 
   const trial = () => {
@@ -35,6 +40,7 @@ export default function WelcomePage() {
           保護者の方が登録すると、お子さまごとに学習の記録が残り、進みぐあいを確認できます（お子さまは6人まで登録できます）。
         </p>
         <div className="mt-4 grid gap-3">
+          {lineAvailable && <LineLoginButton label="LINEで ログイン・とうろく" />}
           <Link href="/register" className="btn btn-coin block text-center">おうちの方：とうろく</Link>
           <Link href="/login" className="btn btn-ghost block text-center">おうちの方：ログイン</Link>
         </div>

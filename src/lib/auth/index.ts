@@ -1,6 +1,6 @@
 /**
  * 認証の入口。
- *  - 保護者（メール + パスワード）がログイン → 「だれが あそぶ？」で子どもを選ぶ → その子どもとして学習する
+ *  - 保護者（メール + パスワード、または LINE）がログイン → 「だれが あそぶ？」で子どもを選ぶ → その子どもとして学習する
  *  - ログインしていない・DB が止まっている → これまでどおり「おためしモード」（デモユーザー）
  *
  * currentUserId(): 学習データを書きこむ相手（= 選ばれた子どもの User.id、無ければ DEMO_USER_ID）
@@ -16,9 +16,13 @@ export const DEMO_USER_ID = "demo-user";
 
 export interface ParentRecord {
   id: string;
-  email: string;
-  passwordHash: string;
-  pinHash: string;
+  /** LINE だけで登録した保護者は null */
+  email: string | null;
+  passwordHash: string | null;
+  /** LINE で登録して まだ暗証番号を決めていないときだけ null */
+  pinHash: string | null;
+  lineUserId: string | null;
+  lineDisplayName: string | null;
   settings: unknown;
 }
 
@@ -28,7 +32,7 @@ export interface AuthContext {
   token: string;
 }
 
-export type AuthErrorCode = "NOT_LOGGED_IN" | "PIN_REQUIRED" | "FORBIDDEN";
+export type AuthErrorCode = "NOT_LOGGED_IN" | "PIN_REQUIRED" | "PIN_SETUP_REQUIRED" | "FORBIDDEN";
 
 export class AuthError extends Error {
   constructor(public readonly status: number, public readonly code: AuthErrorCode, public readonly messageJa: string) {
@@ -46,7 +50,7 @@ export async function currentParent(now = new Date()): Promise<AuthContext | nul
     if (!session) return null;
     const parent = await prisma.parent.findUnique({
       where: { id: session.parentId },
-      select: { id: true, email: true, passwordHash: true, pinHash: true, settings: true },
+      select: { id: true, email: true, passwordHash: true, pinHash: true, lineUserId: true, lineDisplayName: true, settings: true },
     });
     return parent ? { parent, session, token } : null;
   } catch {
@@ -81,6 +85,10 @@ export async function requireParent(now = new Date()): Promise<AuthContext> {
 }
 
 export function requirePinUnlocked(ctx: AuthContext, now = new Date()): void {
+  if (!ctx.parent.pinHash) {
+    // LINE で登録して まだ暗証番号を決めていない → さきに暗証番号を決めてもらう
+    throw new AuthError(403, "PIN_SETUP_REQUIRED", "さきに保護者用の暗証番号（4けた）を決めてください。");
+  }
   if (!isPinUnlocked(ctx.session, now)) {
     throw new AuthError(403, "PIN_REQUIRED", "保護者用の暗証番号（4けた）を入力してください。");
   }
