@@ -7,6 +7,7 @@
  *   - 音:    その つづりが 入った おてほんの ことば（ai → rain、ir → bird、aw → saw）を 読む
  */
 import { w26Example } from "./w26Phonics";
+import { w27Example } from "./w27Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -54,6 +55,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   // ワールド26（セリフ・文・はやくちことば）は 記号を よまない ように、しるしの なまえ・キーワード・つよく いう ことばを よむ
   const w26 = w26Example(focus.trim(), ws);
   if (w26) return w26;
+  // ワールド27（k の おとの ch・だまって いる もじ・for / since・同音異義語）は その focus で 問う ことば・フレーズを よむ（ch を chip、l を lion で よまない）
+  const w27 = w27Example(focus.trim(), ws);
+  if (w27) return w27;
 
   // sun-set → sunset（はくに わけた ことばは ことば まるごと）
   if (isSyllables(f)) return f.replace(/-/g, "");

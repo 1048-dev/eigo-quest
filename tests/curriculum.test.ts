@@ -32,6 +32,7 @@ import { mentOf, sciPartOf, shiftOf, tionOf, yAdjOf } from "@/lib/curriculum/w23
 import { contrOf, imInOf, overUnderOf, placeOf, placeSyllables, ppOf } from "@/lib/curriculum/w24Phonics";
 import { compoundFocus, compoundOf, intonationOf, iveOf, nessOf, synOf } from "@/lib/curriculum/w25Phonics";
 import { edIngOf, punctOf, stressOf, twisterOf, voiceOf, w26FocusOf } from "@/lib/curriculum/w26Phonics";
+import { ableOf, chKOf, forSinceOf, homoOf, silentOf, w27FocusOf } from "@/lib/curriculum/w27Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -2760,5 +2761,144 @@ describe("カリキュラム: ワールド26 の決まりごと（ひびきの�
     expect(at(771)!.teacherScript + said(771)).toMatch(/Luma/);
     expect(said(774) + at(774)!.teacherScript).toMatch(/gate/);
     expect(at(779)!.teacherScript + said(779) + at(780)!.teacherScript + said(780)).toMatch(/Village of Springs/);
+  });
+});
+
+describe("カリキュラム: ワールド27 の決まりごと（いずみの里）", () => {
+  const w27 = LESSONS.filter((l) => l.world === 27);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en));
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+
+  it("ワールド27 は 781〜810 の 30 レッスン、ステージ3・A2+、学年の めやすは 中3", () => {
+    if (w27.length === 0) return; // 未作成ならスキップ
+    expect(w27.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 781 + i));
+    for (const l of w27) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中3");
+      expect(l.stage, `L${l.lessonNo}`).toBe(3);
+      expect(l.level, `L${l.lessonNo}`).toBe("A2+");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w27.length === 0) return;
+    const titles = ["The Village of Springs", "What's Wrong?", "My Stomach Hurts", "At the Clinic", "I Hope You Feel Better", "How Often Do You Exercise?", "I Go to Bed at Nine", "Healthy Habits", "Screen Time", "Habit Survey",
+      "I've Lived Here for Ten Years", "Since I Was Five", "How Long Have You Known Her?", "I've Been Here Since Monday", "My Long-Time Hobby", "You Should Drink Water", "You Shouldn't Skip Breakfast", "Why Don't You Take a Break?", "Advice Column", "Advice Show",
+      "When I'm Worried", "Deep Breaths", "It's OK to Feel Sad", "Kind Words", "My Calm-Down Plan", "A Healthy Week Plan", "Health Quiz", "A Letter of Advice", "Village of Springs Review", "World 27 Grand Review"];
+    expect(w27.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: ch / -ache → だまって いる もじ → for / since → -able → 同音異義語（各ブロックの 5回目と L806〜810 は ふりかえり）", () => {
+    if (w27.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(781, 784, "ch-k");
+    rule(786, 789, "silent");
+    rule(791, 794, "for-since");
+    rule(796, 799, "able");
+    rule(801, 804, "homophones");
+    for (const n of [785, 790, 795, 800, 805, 806, 807, 808, 809, 810]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド27 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w27) {
+      for (const w of l.phonics.words) {
+        const f = w27FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w27FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w27.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["stomach", "muscle", "knee", "wrist", "headache", "stomachache", "toothache", "comfortable", "enjoyable", "week", "weak", "here", "hear", "flour", "flower"]));
+    // ch / -ache は 2つの focus が そろう、だまって いる もじは 6しゅるい 以上
+    expect(new Set(range(781, 784).flatMap((l) => l.phonics.words.map((w) => chKOf(w)!.focus)))).toEqual(new Set(["ch", "-ache"]));
+    expect(new Set(range(786, 789).flatMap((l) => l.phonics.words.map((w) => silentOf(w)!.letter))).size).toBeGreaterThanOrEqual(6);
+    // for / since: L791 は for、L792 は since、L793・L794 は りょうほう
+    expect(at(791)!.phonics.words.every((w) => forSinceOf(w)!.focus === "for")).toBe(true);
+    expect(at(792)!.phonics.words.every((w) => forSinceOf(w)!.focus === "since")).toBe(true);
+    for (const n of [793, 794]) expect(new Set(at(n)!.phonics.words.map((w) => forSinceOf(w)!.focus)), `L${n}`).toEqual(new Set(["for", "since"]));
+    // -able: 5つの つづりの きまりが そろう
+    expect(new Set(range(796, 799).flatMap((l) => l.phonics.words.map((w) => ableOf(w)!.trap)))).toEqual(new Set(["plain", "drop-e", "y", "keep-e", "double"]));
+    // 同音異義語: どの 回も ペアで そろう
+    for (const l of range(801, 804)) for (const w of l.phonics.words) expect(l.phonics.words, `L${l.lessonNo} ${w}`).toContain(homoOf(w)!.same);
+    // ふりかえり L806〜810 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(806, 810)) {
+      const kinds = new Set(l.phonics.words.map((w) => (chKOf(w) ? "ch" : silentOf(w) ? "silent" : forSinceOf(w) ? "for-since" : ableOf(w) ? "able" : homoOf(w) ? "homo" : "?")));
+      expect(kinds, `L${l.lessonNo}`).toEqual(new Set(["ch", "silent", "for-since", "able", "homo"]));
+    }
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w27.length === 0) return;
+    const want: Record<number, string> = {
+      781: "The spring water here is warm.", 782: "What's wrong?", 783: "My stomach hurts. I ate too much.", 784: "How long have you had a fever?", 785: "I hope you feel better soon.",
+      786: "How often do you exercise?", 787: "I usually go to bed at nine.", 788: "Eating breakfast is good for your brain.", 789: "I play video games for one hour a day.", 790: "Five people eat breakfast every day.",
+      791: "I've lived here for ten years.", 792: "I've played the piano since I was five.", 793: "How long have you known Riko?", 794: "We've been here since Monday.", 795: "I've practiced karate for three years.",
+      796: "You should drink more water.", 797: "You shouldn't skip breakfast.", 798: "Why don't you take a break?", 799: "Dear Birimo, I can't sleep well. What should I do?",
+      800: "I think you should go to bed early because sleep is important.", 801: "When I'm worried, I talk to my mom.", 802: "Take a deep breath. Count to five.", 803: "It's OK to feel sad sometimes.",
+      804: "You did your best. I'm proud of you.", 805: "When I'm angry, I count to ten.", 806: "On Monday, I'm going to walk to school.", 807: "How many hours should children sleep?",
+      808: "Dear friend, you should try a morning walk.", 810: "Healthy body, happy mind!",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(ex(782, 782).join(" ")).toMatch(/I have a headache/);
+    expect(ex(784, 784).join(" ")).toMatch(/Since yesterday/);
+    expect(ex(786, 786).join(" ")).toMatch(/Three times a week/);
+    expect(ex(807, 807).join(" ")).toMatch(/Nine to twelve hours/);
+    expect(core(809)).toMatch(/\bWe've been here for /);
+    // 現在完了（継続）・When I'm ～ の 型
+    for (const n of [791, 792, 794, 795]) expect(core(n), `L${n}`).toMatch(/\b(I've|We've) \w+ .*\b(for|since)\b/);
+    for (const n of [801, 805]) expect(core(n), `L${n}`).toMatch(/^When I'm \w+, I /);
+  });
+
+  it("現在完了の for / since は L791 から（L784 の How long have you had a fever? だけ 先に チャンクで）、How often は L786 から、Why don't you は L798 から。関係代名詞は 出さない", () => {
+    if (w27.length === 0) return;
+    const perfect = /\b(have|has|'ve|haven't|hasn't) (lived|known|been|played|practiced|done|stayed|had|felt|studied|walked|waited)\b[^.?!]*\b(for|since)\b/i;
+    for (const l of range(781, 790)) if (l.lessonNo !== 784) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(perfect);
+    expect(allEn(at(784)!)).toMatch(perfect);
+    for (const l of range(781, 785)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\bhow often\b/i);
+    for (const l of range(781, 797)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\bwhy don't (you|we)\b/i);
+    for (const l of w27) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(people|person|someone|somebody|a friend|the man|the woman|the animal|an animal|the girl|the boy|a monkey|the monkey|a doctor|the doctor) (who|that)\b/i);
+  });
+
+  it("ステージ3: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・150 語 以上で 短い 読みものを ふくむ、会話シーンは 5〜7 行、L810 は スピード TPR", () => {
+    if (w27.length === 0) return;
+    for (const l of w27) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.03);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(150);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{40,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(5);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（fever・breathe）
+    expect(w27.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([784, 802]);
+    expect(at(810)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない・けんこうの 数字は ただしく・くすりの りょうは 出さない", () => {
+    if (w27.length === 0) return;
+    for (const l of w27) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+    // 小学生の すいみんは 9〜12 じかん
+    expect(allEn(at(807)!)).toMatch(/nine to twelve/i);
+    for (const l of w27) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(pills?|\d+ ?mg|dose|dosage)\b/i);
+  });
+
+  it("物語: L781 で いずみの里へ → L784 で しんりょうじょ → L790 で アンケート → L800 で 800 かい → L803 で トト → L809・L810 で にじの架け橋へ", () => {
+    if (w27.length === 0) return;
+    expect(at(781)!.teacherScript + said(781)).toMatch(/Village of Springs/);
+    expect(at(784)!.teacherScript + said(784)).toMatch(/Dr\. Fern/);
+    expect(at(790)!.teacherScript + said(790)).toMatch(/survey/i);
+    expect(at(800)!.teacherScript + said(800)).toMatch(/800|eight hundred/i);
+    expect(at(803)!.teacherScript + said(803)).toMatch(/Toto/);
+    expect(at(809)!.teacherScript + said(809) + at(810)!.teacherScript + said(810)).toMatch(/Rainbow Bridge/);
   });
 });
