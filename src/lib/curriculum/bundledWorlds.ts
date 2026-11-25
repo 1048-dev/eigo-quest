@@ -29,5 +29,6 @@ import w22 from "@content/curriculum/worlds/world-22.json";
 import w23 from "@content/curriculum/worlds/world-23.json";
 import w24 from "@content/curriculum/worlds/world-24.json";
 import w25 from "@content/curriculum/worlds/world-25.json";
+import w26 from "@content/curriculum/worlds/world-26.json";
 
-export const BUNDLED_WORLDS = [w01, w02, w03, w04, w05, w06, w07, w08, w09, w10, w11, w12, w13, w14, w15, w16, w17, w18, w19, w20, w21, w22, w23, w24, w25] as unknown as readonly WorldFile[];
+export const BUNDLED_WORLDS = [w01, w02, w03, w04, w05, w06, w07, w08, w09, w10, w11, w12, w13, w14, w15, w16, w17, w18, w19, w20, w21, w22, w23, w24, w25, w26] as unknown as readonly WorldFile[];

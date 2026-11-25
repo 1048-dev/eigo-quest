@@ -639,3 +639,43 @@
 - `npx vitest run`: 59 ファイル・1,768 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 214 → 218 kB、/lesson/[lessonNo] 219 → 223 kB、/gacha 202 → 206 kB、/test/[assessmentId] 202 → 206 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド25 の 問題の コードと 表と 索引の 1 ワールドぶん。ワールド24 より 少し 多い（表が 5つ・まちがいを 手で 書いた ぶん）。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 37`: No.37（L721〜740・63 ページ）を 作れることを 確認（No.38 は ワールド26 が できてから）
+
+## WORLD — ワールド26「ひびきの劇場」（L751〜780・ステージ3・A2+）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-26.json` を 新しく 作成（30 レッスン、ステージ3・A2+、`school.grade` は「中3」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 780 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 126、会話の セリフ 177 行（1 回 5〜7 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 187 語・最少 173 語・最大 207 語）で、まいかい「読みもの」（げきじょうの はりがみ・やくしゃの けいじばん・やくの リスト・オーディションの メモ・はいやくひょう・フートさんの メモと てがみ・だいほんの ページ・ト書き・プログラム・おきゃくさんの カード など 45〜80 語）を いっしょに 読む。日本語の ヒントは 2 回だけ（L757「excited（わくわく）」・L773「Break a leg!（がんばって）」）。
+- ブロック構成: 751〜755 げきじょうと やくぎめ（Welcome to the theater! The show starts soon.・I enjoy acting. How about you?・I want to be the dragon in the play.・I'm good at singing. Can I try?・Riko plays the princess. Birimo plays the dragon.）→ 756〜760 きもち（I'm nervous. / Don't worry. You'll be great.・The play is exciting. I'm excited!・This scene is boring. Let's make it better.・I feel proud of myself.・Are you surprised? / No, I'm confused!）→ 761〜765 ものがたりづくり（We decided to write our own play.・Suddenly, the lights went out.・Luckily, a little bird helped them.・They tried to escape, but the door was locked.・Our story has a beginning, a problem, a solution, and an ending.）→ 766〜770 けいこ（Say it with feeling.・Speak louder, please. The people at the back can't hear.・I didn't eat YOUR cake.・Walk to the center. Then, look up.・Who's there? / It's me, your friend!）→ 771〜775 ほんばん（We need a crown and a cape.・It's fun to act in costumes!・Break a leg!・The princess opened the gate.・You were amazing! I loved the ending.）→ 776〜780 ふりかえりと かく（The best part was ～. Next time, we should ～.・Narrator: One day, a fox found a magic hat.・Let's make a story one word at a time.・I enjoy singing on the stage. / I decided to try something new.・L780 Thank you for watching our play!）。
+- 物語の 糸: L750 の こだまに みちびかれて ふるい「ひびきの劇場」へ（L751）。劇場の かんとくは ふくろうの フートさん、うさぎの やくしゃ ルル、劇場の こえ エコー（台本と、ビリモや リコが やくを する セリフの なかだけ）。ながく げきが なくて こだまが よわって いる。「ほんとうの きもちが こもった げきで こだまは もどる」。フートさんの げき「おひめさまと ドラゴン」の オーディションで、ドラゴンを やりたかった ハルより ビリモの ほえごえが かつ（L754）→ はいやく リコ＝おひめさま・ビリモ＝ドラゴン・ハル＝きし・キコ＝ことり（L755）。L761 で だいほんの さいごの ページが なくなって いて、じぶんたちの げき「おひめさまと かぎの かかった とう」を かく ことに（オルゴールを とった ドラゴンは さびしかった だけ → ともだちに なる やさしい おわり）。けいこの たびに こだまが すこしずつ おおきく なり（L759・L766・L767・L770）、L771 で ワールド25 の ルマが クリスタルの おうかんを こどうぐに かして くれる（カラスの コーラが はこぶ）。L774 の ほんばんで こだまが もどり、L779 で フートさんが やまみちの さきの「いずみの里（Village of Springs）」を おしえ、L780 で ワールド27 へ。
+- フォニックス（ことばの リズム。`src/lib/curriculum/w26Phonics.ts`・`questions.ts` の `w26Question`。w25Question より 先に よぶ）:
+  - きもちの こえ（rule "voice"）: 「この きもちで いうと、どんな こえ？」（Really?!（びっくり！）→ ↗ たかく げんきに、Oh, really…（がっかり）→ ↘ ひくく しずかに、→ ずっと おなじ は きもちが つたわらない わな。選択肢は きまった 順）
+  - -ed / -ing（rule "ed-ing"）: 「＿＿ に あてはまる ことばは どれ？」（The play is ＿＿. → exciting / excited / exciteing。いみ（ひとの きもち か、そう させる もの か）と つづり（e を とる・そのまま・worry の y）を いっしょに 問う。-ed と -ing は かならず ペアで 出す）
+  - セリフの くとうてん（rule "punctuation"）: 「セリフの かきかたが ただしいのは どれ？」（"Help!" shouted the princess. / "Help"! shouted the princess. / "Help! shouted the princess."。まちがいは 記号の いちだけ ちがい、ことばは おなじ ことを テストで まもる）
+  - いみを かえる 強勢（rule "stress"）: 「この いみに なるのは、どこを つよく いう とき？」（（あなたの ケーキは たべて いない）→ I didn't eat YOUR cake / I didn't EAT your cake / I didn't eat your CAKE。大文字の ことばを つよく よむ）
+  - はやくちことば（rule "tongue-twister"・オリジナル 16 こ）: 「おなじ おとで はじまる ことばは どれ？」（Crazy crows carry ＿＿ crackers → crunchy / soft / big。cr・p・th・ch・r・l・b・v・f。r / l、b / v、f の くちの かたちを せつめい）
+- フォーカスの ボタン（`phonicsButtons.ts` の `focusExampleWord` から `w26Example` を よぶ）: くとうてんは しるしの なまえ（comma・exclamation mark・three dots・quotation marks）、きもちの こえは キーワード（Really）、強勢は つよく いう ことば（YOUR）、はやくちことばは その はやくちことば（, を とる）を よむ。`vowelTeams.ts` の `focusSay` には `w26Say`（その focus で 問う セリフ・文）。どちらも L750 までの どの 回でも はたらかない ことを テストで たしかめる。
+- テスト: `tests/curriculum.test.ts` に ワールド26 の 決まりごと（範囲・ステージ3・A2+・中3・タイトル 30・フォニックスの 順と 種類・ペアと わな・core の 表現・動名詞は L752 から・decided to は L761 から・tried to は L764 から・関係代名詞なし・先生の台本は 英語だけで 150 語 以上＋読みもの・会話 5〜7 行・話し手は 5 人だけ・AI の targetExpressions は 表現と おなじ・AI 会話で 個人情報を きかない・L780 スピード TPR・物語）を 追加。`tests/phonics-w26.test.ts`（12 テスト）を 追加。
+
+### 決めたこと（理由）
+- **フォニックスの ブロックの 順を 計画から 入れかえた**: 計画は B1 きもちの イントネーション → B2 強勢 → B3 -ed / -ing → B4 くとうてん → B5 はやくちことば だが、L757「Excited or Exciting?」・L758「Bored or Boring?」は 756〜759、L768「Which Word Is Important?」は 766〜769、ものがたりを かく 761〜764 は くとうてんと あうので、B2 を -ed / -ing（756〜759）、B3 を くとうてん（761〜764）、B4 を 強勢（766〜769）に した（ワールド25 と おなじ かんがえかた）。
+- **同じ id に なる ことばを ならべない**: 学習項目の id は 小文字に して 記号を とった 形なので、"Really?!" と "Really…"、"I didn't eat YOUR cake" と "I didn't EAT your cake" は おなじ id に なる。きもちの こえは "Really?!" と "Oh, really…" の ように ことばを かえ、強勢は 1回に 1つの 文を 1つの 強勢で 出して、ほかの 強勢は まちがいの 選択肢だけに した。
+- **focus の かきかた**: 強勢は つよく いう ことば（"YOUR"）、きもちの こえは キーワード、くとうてんは しるし そのもの、はやくちことばは はじめの おと。? は 正規表現で こわれるので focus に しない。フォーカスの ボタンで よむ おてほんは 英字と スペース だけ（アポストロフィは さいしょの ことばだけ）と いう 全体の きまりが あるので、"I can't" は "can't" に した。
+- **きもちの こえの 選択肢は 3つ**（↗ / ↘ / →）。ワールド25 の イントネーションと おなじく「→ ずっと おなじ」は かならず まちがいで、「たいらに いうと きもちが つたわらない」と せつめいする。
+- **core の 表現には ― ・ ～ を 入れない**: L756（I'm nervous.）・L760（Are you surprised?）・L770（Who's there?）・L773（Break a leg!）は 計画の 2文を core と 2つめの 表現に わけた。L765 の 計画「Beginning, problem, solution, ending」は 文に して「Our story has a beginning, a problem, a solution, and an ending.」、L766 は core「Say it with feeling.」と 2つめ「Try this line: "I'm free!"」、L776・L777・L779 は 計画の ～ を うめた 文に した。
+- **文法の じゅんばん**: 動名詞（enjoy / good at ～ing）は L752 から、decided to は L761 から、tried to は L764 から（テストで まもる）。関係代名詞（ステージ4）は 出さない。
+- **あんぜん・やさしさ**: ドラゴンは わるものに しない（さびしかった だけ → ともだちに）。Break a leg! は「あしを おる」では なく「がんばって」と ビリモの かんちがいで わらいに する。AI 会話は なまえ・すんで いる ところを きかない。
+- **新しい 話し手は 増やさない**: フートさん・ルル・エコーは 台本の なかか、ビリモ・リコが「I'm playing Mr. Hoot!」と やくを する。げきの なかみ（おひめさまと かぎの かかった とう・キツネと まほうの ぼうし）と はやくちことばは すべて オリジナル。会社名・商品名は 出さない。
+- **作りかた**: 30 レッスンを 3つの まとまり（751〜760・761〜770・771〜780）に わけて おなじ 下書きの きまり（物語・core・フォニックスの ことば）から 並行して 書き、まとめてから 自分で 1 回 見なおした。なおした ところ: フートさんの 日本語の よびかた（ミスター・フート / ホーさん → フートさん に そろえる）、L770 の ドラゴンが じぶんで ノックして いた セリフ（→「Someone is knocking. Who's there?」）。
+
+### 例（L768「Which Word Is Important?」）
+- 表現（core）: I didn't eat YOUR cake. ／ Which word is important? ― YOUR is important. ／ So whose cake did you eat? ― I ate MY cake!
+- 読みもの（台本より）: "Backstage Snack Table. Two cakes are here today. The big chocolate cake is for Ms. Emma. The small strawberry cake is for Birimo. Please eat only your own cake. And please share the cookies. There are six cookies for the whole team. Thank you! Mr. Hoot."
+- 会話: Haru「Birimo! There's cream on your face. Did you eat Ms. Emma's cake?」 Birimo「I didn't eat YOUR cake, Ms. Emma!」 … Birimo「I ate MY cake! The strawberry one. But… I ate the LAST cookie, too.」 Ms. Emma「Ha ha! Thank you for being honest. Next time, let's share.」
+- フォニックス: I didn't eat YOUR cake / I didn't say SHE took it / Birimo ate the LAST cookie / My BROTHER made this crown（問題は「この いみに なるのは、どこを つよく いう とき？」（ほかの ひとが とったと いったんだよ）→ I didn't say SHE took it / I didn't SAY she took it / I didn't say she TOOK it）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 60 ファイル・1,818 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 218 → 224 kB、/lesson/[lessonNo] 223 → 229 kB、/gacha 206 → 212 kB、/test/[assessmentId] 206 → 212 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド26 の 問題の コードと 表（セリフ・文の まちがいを 手で 書いた ぶん、ワールド25 より 少し 多い）と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 38`: No.38（L741〜760・62 ページ）を 作れることを 確認（… も ふつうに 出る）。`--pack 39`（L761〜780・62 ページ）も 作れて、セリフの くとうてんの " ! , も そのまま 出る ことを 確認

@@ -17,6 +17,7 @@ import { w22Say } from "./w22Phonics";
 import { w23Say } from "./w23Phonics";
 import { w24Say } from "./w24Phonics";
 import { w25Say } from "./w25Phonics";
+import { w26Say } from "./w26Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -78,6 +79,9 @@ export const shortVowelOf = (team: string) => team[0];
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
+  // ワールド26 は その回の セリフ・文・ことばで よむ（"…" や '"' や "-ed" を そのまま よまない）
+  const w26 = w26Say(focus, words);
+  if (w26) return w26;
   // ワールド25 の -ness・-ive は その回の ことばで よむ（ワールド21 の -ness より 先）
   const w25 = w25Say(focus, words);
   if (w25) return w25;

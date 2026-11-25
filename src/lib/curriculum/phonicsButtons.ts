@@ -6,6 +6,7 @@
  *   - 見た目: 子どもに わかる 書きかた（a_e → a…e「マジック e」、-st → …st「おわりの おと」、sun-set → sun・set）
  *   - 音:    その つづりが 入った おてほんの ことば（ai → rain、ir → bird、aw → saw）を 読む
  */
+import { w26Example } from "./w26Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -49,6 +50,10 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   if (!f) return words[0] ?? "";
   const ws = words.map((w) => w.trim()).filter(Boolean);
   const lower = (w: string) => w.toLowerCase();
+
+  // ワールド26（セリフ・文・はやくちことば）は 記号を よまない ように、しるしの なまえ・キーワード・つよく いう ことばを よむ
+  const w26 = w26Example(focus.trim(), ws);
+  if (w26) return w26;
 
   // sun-set → sunset（はくに わけた ことばは ことば まるごと）
   if (isSyllables(f)) return f.replace(/-/g, "");

@@ -1,0 +1,4572 @@
+{
+  "world": 26,
+  "stage": 3,
+  "level": "A2+",
+  "lessons": [
+    {
+      "lessonNo": 751,
+      "world": 26,
+      "title": "The Theater of Echoes",
+      "titleJa": "ひびきの げきじょう",
+      "school": {
+        "grade": "中3",
+        "topic": "Welcome to the theater! The show starts soon.：どうくつを でると、こだまが ひびく ふるい げきじょうが ある",
+        "grammar": "Welcome to ～! / The show starts soon. / What's that sound?",
+        "expressions": [
+          {
+            "en": "Welcome to the theater! The show starts soon.",
+            "ja": "げきじょうへ ようこそ！ もうすぐ ショーが はじまるよ。",
+            "core": true
+          },
+          {
+            "en": "Listen! Can you hear the echo?",
+            "ja": "きいて！ こだまが きこえる？"
+          },
+          {
+            "en": "Where do we sit? ― Sit in the front row.",
+            "ja": "どこに すわるの？ ― いちばん まえの れつに すわって。"
+          }
+        ],
+        "testPoints": [
+          "Welcome to the theater! / The show starts soon. で げきじょうの あいさつを して、Can you hear the echo? と きける",
+          "きもちの こえ（Really?! は たかく げんきに ↗、Oh, really… は ひくく しずかに ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the big theater doors.",
+          "ja": "げきじょうの おおきな ドアを あけて。",
+          "action": "りょうてで おもい ドアを おしあける まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Shout hello and listen to the echo.",
+          "ja": "ハローと さけんで、こだまを きいて。",
+          "action": "てを くちに あてて さけび、みみに てを あてる",
+          "emoji": "📣"
+        },
+        {
+          "en": "Tiptoe to your seat.",
+          "ja": "つまさきで せきまで あるいて。",
+          "action": "つまさきだちで そっと あるく",
+          "emoji": "🩰"
+        },
+        {
+          "en": "Sit down and look at the stage.",
+          "ja": "すわって ステージを みて。",
+          "action": "すわって まえを みる",
+          "emoji": "🎭"
+        }
+      ],
+      "phonics": {
+        "rule": "voice",
+        "focus": [
+          "Really",
+          "Okay"
+        ],
+        "sounds": [
+          "↗ / ↘",
+          "↗ / ↘"
+        ],
+        "words": [
+          "Really?!",
+          "Oh, really…",
+          "Okay!",
+          "Well, okay…"
+        ],
+        "tipJa": "おなじ ことばでも、こえで きもちが かわる。Really?!（びっくり）は こえを たかく げんきに ↗、Oh, really…（がっかり）は ひくく しずかに ↘。Okay!（やる気）↗ と Well, okay…（しぶしぶ）↘ も くらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "theater",
+          "ja": "げきじょう",
+          "emoji": "🎭",
+          "core": true
+        },
+        {
+          "en": "echo",
+          "ja": "こだま・はんきょう",
+          "emoji": "🔊"
+        },
+        {
+          "en": "stage",
+          "ja": "ステージ・ぶたい",
+          "emoji": "🎪"
+        },
+        {
+          "en": "seat",
+          "ja": "せき",
+          "emoji": "💺"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, The case is closed! Great detective work! Today, we walk out of the cave and follow the echoes. Look! There's an old theater in the hills. It's called the Theater of Echoes. An old owl stands at the door. His name is Mr. Hoot. He says, Welcome to the theater! The show starts soon. Say it with me. Welcome to the theater! The show starts soon. Great! Listen. Can you hear the echo? Soon, soon, soon. It's very quiet. Let's read the old sign on the theater door. \"Theater of Echoes. Shows every Saturday night. Actors and singers are welcome. Please speak with feeling. When a play is full of real feeling, our echoes will come back. From Mr. Hoot, the director.\" Who is the director? Mr. Hoot is. What brings the echoes back? Real feeling. Now, phonics. Today, we use our voice with feeling. Really?! High and excited. Oh, really… Low and quiet. Okay! High and happy. Well, okay… Low and slow. Your voice can show your feelings. Let's find our seats!",
+      "conversation": {
+        "scene": "The friends find an old theater full of echoes",
+        "sceneJa": "ふるい げきじょうで こだまを きく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! There's a big old building on the hill.",
+            "ja": "みて！ おかの うえに おおきくて ふるい たてものが あるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's a theater! Hello! … Did you hear that? The echo said hello, too.",
+            "ja": "げきじょうだ！ ハロー！ … きいた？ こだまも ハローって いったよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mr. Hoot! Welcome to the theater! The show starts soon.",
+            "ja": "ぼくが フートさんの やくね！ げきじょうへ ようこそ！ もうすぐ ショーが はじまるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really?! A show? Where do we sit?",
+            "ja": "ほんとうに？！ ショー？ どこに すわるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sit in the front row. But the echoes are very quiet these days.",
+            "ja": "いちばん まえの れつに すわって。でも さいきん こだまが とても しずかなんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's listen carefully. Maybe we can help the echoes.",
+            "ja": "よく きいて みましょう。こだまを たすけられるかも しれないわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の フートさんに あいさつして、Can you hear the echo? や Where do we sit? と きいて みよう",
+          "starterEn": "Hoo, hoo! Welcome to the theater! The show starts soon. Do you like plays?",
+          "targetExpressions": [
+            "Welcome to the theater! The show starts soon.",
+            "Listen! Can you hear the echo?",
+            "Where do we sit? ― Sit in the front row."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Welcome to the theater! The show starts soon.",
+          "Listen! Can you hear the echo? / Where do we sit? ― Sit in the front row.",
+          "Really?!・Oh, really…・Okay!・Well, okay…"
+        ]
+      }
+    },
+    {
+      "lessonNo": 752,
+      "world": 26,
+      "title": "I Enjoy Acting",
+      "titleJa": "えんじるのが すき",
+      "school": {
+        "grade": "中3",
+        "topic": "I enjoy acting. How about you?：げきじょうの なかまと であって、すきな ことを はなす",
+        "grammar": "I enjoy ～ing. / How about you? / Do you enjoy ～ing?",
+        "expressions": [
+          {
+            "en": "I enjoy acting. How about you?",
+            "ja": "わたしは えんじるのが すき。あなたは？",
+            "core": true
+          },
+          {
+            "en": "I enjoy dancing on the stage.",
+            "ja": "ステージで おどるのが すき。"
+          },
+          {
+            "en": "Do you enjoy singing? ― Yes, I do. I sing every day.",
+            "ja": "うたうのは すき？ ― うん、すき。まいにち うたって いるよ。"
+          }
+        ],
+        "testPoints": [
+          "I enjoy ～ing. で すきな ことを いって、How about you? / Do you enjoy ～ing? と きける",
+          "きもちの こえ（Yes! I got it! は たかく げんきに ↗、Yes… I think so. は ひくく しずかに ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "からだを まえに たおして おじぎする",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Dance like a rabbit.",
+          "ja": "うさぎの ように おどって。",
+          "action": "ぴょんぴょん はねながら おどる",
+          "emoji": "🐰"
+        },
+        {
+          "en": "Sing a long note. La, la, la!",
+          "ja": "ながく こえを だして うたって。ラ、ラ、ラ！",
+          "action": "むねを はって うたう まね",
+          "emoji": "🎵"
+        },
+        {
+          "en": "Shake hands with a new friend.",
+          "ja": "あたらしい ともだちと あくしゅして。",
+          "action": "てを だして あくしゅする",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "voice",
+        "focus": [
+          "Yes",
+          "Thank you"
+        ],
+        "sounds": [
+          "↗ / ↘",
+          "↗ / ↘"
+        ],
+        "words": [
+          "Yes! I got it!",
+          "Yes… I think so.",
+          "Thank you so much!",
+          "Thank you… goodbye."
+        ],
+        "tipJa": "Yes! I got it!（やった！）は たかく げんきに ↗、Yes… I think so.（じしんが ない）は ひくく ゆっくり ↘。Thank you so much! は うれしい こえ、Thank you… goodbye. は さびしい こえで。"
+      },
+      "vocab": [
+        {
+          "en": "acting",
+          "ja": "えんじる こと・えんぎ",
+          "emoji": "🎭",
+          "core": true
+        },
+        {
+          "en": "actor",
+          "ja": "やくしゃ",
+          "emoji": "🧑‍🎤"
+        },
+        {
+          "en": "dancing",
+          "ja": "おどる こと",
+          "emoji": "💃"
+        },
+        {
+          "en": "enjoy",
+          "ja": "たのしむ",
+          "emoji": "😊"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Welcome to the theater! The show starts soon. Today, we meet the actors at the theater. Mr. Hoot has a small group of actors. One of them is Lulu, a rabbit. She loves the stage. She says, I enjoy dancing. After enjoy, we use an ing word. I enjoy acting. I enjoy singing. Then, ask your friend, How about you? Say it with me. I enjoy acting. How about you? Wonderful! Let's read the actors' board in the hall. \"Meet our actors! Lulu the rabbit enjoys dancing and jumping. Mr. Hoot enjoys reading old plays. Echo, the voice of the theater, enjoys repeating your words. We need new actors for our next play. Do you enjoy acting? Come and join us!\" What does Lulu enjoy? Dancing and jumping. What does Echo enjoy? Repeating your words. Now, phonics. Let's use our voice again. Yes! I got it! High and happy. Yes… I think so. Low and quiet. Thank you so much! Bright and excited. Thank you… goodbye. Soft and a little sad. Great feelings! Now, tell me, what do you enjoy?",
+      "conversation": {
+        "scene": "The friends meet Lulu and talk about what they enjoy",
+        "sceneJa": "うさぎの ルルと であって、すきな ことを はなす",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm playing Lulu! Hi! I enjoy dancing. How about you?",
+            "ja": "わたしが ルルの やくね！ こんにちは！ わたしは おどるのが すき。あなたは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I enjoy acting. I like being a hero in a play.",
+            "ja": "ぼくは えんじるのが すき。げきで ヒーローに なるのが すきなんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I enjoy singing. Do you enjoy singing, Birimo?",
+            "ja": "わたしは うたうのが すき。ビリモは うたうの すき？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, I do! But I enjoy roaring more. Roar!",
+            "ja": "うん、すき！ でも ほえる ほうが もっと すき。ガオー！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ha ha! You're so loud! Mr. Hoot needs actors for his play.",
+            "ja": "あはは！ とても おおきな こえ！ フートさんは げきの やくしゃを さがして いるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Then let's join the theater! Everyone can enjoy acting.",
+            "ja": "それなら げきじょうに さんかしましょう！ だれでも えんじるのを たのしめるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の ルルに I enjoy ～ing. で すきな ことを いって、How about you? と きき かえそう",
+          "starterEn": "Hi! I'm Lulu the rabbit. I enjoy dancing on the stage. What do you enjoy?",
+          "targetExpressions": [
+            "I enjoy acting. How about you?",
+            "I enjoy dancing on the stage.",
+            "Do you enjoy singing? ― Yes, I do. I sing every day."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I enjoy acting. How about you?",
+          "I enjoy dancing on the stage. / Do you enjoy singing? ― Yes, I do. I sing every day.",
+          "Yes! I got it!・Yes… I think so.・Thank you so much!・Thank you… goodbye."
+        ]
+      }
+    },
+    {
+      "lessonNo": 753,
+      "world": 26,
+      "title": "I Want to Be the Dragon",
+      "titleJa": "ドラゴンの やくが やりたい",
+      "school": {
+        "grade": "中3",
+        "topic": "I want to be the dragon in the play.：げきの やくを きめる",
+        "grammar": "I want to be ～. / Which role do you want? / I'd like to try ～.",
+        "expressions": [
+          {
+            "en": "I want to be the dragon in the play.",
+            "ja": "げきで ドラゴンの やくを やりたい。",
+            "core": true
+          },
+          {
+            "en": "Which role do you want? ― I want to be the princess.",
+            "ja": "どの やくが やりたい？ ― おひめさまの やくが やりたい。"
+          },
+          {
+            "en": "Me too! Let's have an audition.",
+            "ja": "ぼくも！ オーディションを しよう。"
+          }
+        ],
+        "testPoints": [
+          "I want to be ～ in the play. で やりたい やくを いって、Which role do you want? と きける",
+          "きもちの こえ（Oh no! The dragon is coming! は たかく ↗、Oh no… I forgot my lines. は ひくく ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Roar like a dragon.",
+          "ja": "ドラゴンの ように ほえて。",
+          "action": "りょうてを つめの ように して ほえる",
+          "emoji": "🐉"
+        },
+        {
+          "en": "Walk like a princess.",
+          "ja": "おひめさまの ように あるいて。",
+          "action": "せすじを のばして ゆっくり あるく",
+          "emoji": "👸"
+        },
+        {
+          "en": "Hold up your sword like a knight.",
+          "ja": "きしの ように けんを かかげて。",
+          "action": "けんを たかく あげる まね",
+          "emoji": "⚔️"
+        },
+        {
+          "en": "Flap your wings like a little bird.",
+          "ja": "ことりの ように はねを ぱたぱた させて。",
+          "action": "りょううでを ぱたぱた うごかす",
+          "emoji": "🐦"
+        }
+      ],
+      "phonics": {
+        "rule": "voice",
+        "focus": [
+          "Oh no",
+          "I'm so"
+        ],
+        "sounds": [
+          "↗ / ↘",
+          "↗ / ↘"
+        ],
+        "words": [
+          "Oh no! The dragon is coming!",
+          "Oh no… I forgot my lines.",
+          "I'm so happy!",
+          "I'm so sleepy…"
+        ],
+        "tipJa": "Oh no! の あとが ! なら びっくりして たかい こえ ↗、… なら しょんぼり ひくい こえ ↘。I'm so happy! は ↗、I'm so sleepy… は ねむそうに ↘。"
+      },
+      "vocab": [
+        {
+          "en": "role",
+          "ja": "やく",
+          "emoji": "🎭",
+          "core": true
+        },
+        {
+          "en": "dragon",
+          "ja": "ドラゴン",
+          "emoji": "🐉"
+        },
+        {
+          "en": "princess",
+          "ja": "おひめさま",
+          "emoji": "👸"
+        },
+        {
+          "en": "knight",
+          "ja": "きし",
+          "emoji": "🛡️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I enjoy acting. How about you? Today, Mr. Hoot shows us his old play. It's called The Princess and the Dragon. The play needs actors. Which role do you want? Haru wants a big role. He says, I want to be the dragon in the play. Say it with me. I want to be the dragon in the play. Excellent! But Birimo wants to be the dragon, too. What can they do? Let's read the list of roles. \"The Princess and the Dragon. Roles: the princess, brave and kind. The dragon, big and loud. The knight, strong and helpful. The little bird, small and clever. Do you want a role? Come to the audition tomorrow at ten o'clock. From Mr. Hoot.\" How many roles are there? Four. When is the audition? Tomorrow at ten. Now, phonics. Oh no! The dragon is coming! High and surprised. Oh no… I forgot my lines. Low and sad. I'm so happy! High and bright. I'm so sleepy… Low and slow. Your voice tells the feeling. Which role do you want? Think about it!",
+      "conversation": {
+        "scene": "The friends choose the roles they want in the play",
+        "sceneJa": "げきで やりたい やくを えらぶ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "There are four roles in this play. Which role do you want?",
+            "ja": "この げきには やくが 4つ あるの。どの やくが やりたい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I want to be the princess. She's brave and kind.",
+            "ja": "わたしは おひめさまの やくが やりたい。ゆうかんで やさしいから。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I want to be the dragon in the play. Dragons are so cool!",
+            "ja": "ぼくは げきで ドラゴンの やくが やりたい。ドラゴンって かっこいい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh no! I want to be the dragon, too!",
+            "ja": "えっ！ ぼくも ドラゴンの やくが やりたい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'd like to try the little bird. It's small, but it's clever.",
+            "ja": "わたしは ことりの やくを やって みたい。ちいさいけど かしこいの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Birimo, me too? Then let's have an audition!",
+            "ja": "ビリモも なの？ じゃあ オーディションを しよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の フートさんに I want to be ～ in the play. で やりたい やくを いって、りゆうも いおう",
+          "starterEn": "Hoo, hoo! Our play has a princess, a dragon, a knight, and a little bird. Which role do you want?",
+          "targetExpressions": [
+            "I want to be the dragon in the play.",
+            "Which role do you want? ― I want to be the princess.",
+            "Me too! Let's have an audition."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I want to be the dragon in the play.",
+          "Which role do you want? ― I want to be the princess. / Me too! Let's have an audition.",
+          "Oh no! The dragon is coming!・Oh no… I forgot my lines.・I'm so happy!・I'm so sleepy…"
+        ]
+      }
+    },
+    {
+      "lessonNo": 754,
+      "world": 26,
+      "title": "Audition Day",
+      "titleJa": "オーディションの ひ",
+      "school": {
+        "grade": "中3",
+        "topic": "I'm good at singing. Can I try?：オーディションで とくいな ことを いって ためす",
+        "grammar": "I'm good at ～ing. / Can I try? / I'm not good at ～ing, but ～.",
+        "expressions": [
+          {
+            "en": "I'm good at singing. Can I try?",
+            "ja": "わたしは うたうのが とくい。やって みても いい？",
+            "core": true
+          },
+          {
+            "en": "I'm not good at dancing, but I'm good at roaring.",
+            "ja": "おどるのは とくいじゃ ないけど、ほえるのは とくいだよ。"
+          },
+          {
+            "en": "Next, please. ― Here I go!",
+            "ja": "つぎの ひと、どうぞ。 ― いきます！"
+          }
+        ],
+        "testPoints": [
+          "I'm good at ～ing. で とくいな ことを いって、Can I try? と きける",
+          "きもちの こえ（I did it! I can't wait! は たかく ↗、I can't do it… It's raining again… は ひくく ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk to the center of the stage.",
+          "ja": "ステージの まんなかへ あるいて。",
+          "action": "まえに すすんで まんなかで とまる",
+          "emoji": "🎯"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "ふかく いきを すって。",
+          "action": "むねを ひろげて いきを すう",
+          "emoji": "😮‍💨"
+        },
+        {
+          "en": "Roar as loud as you can!",
+          "ja": "できるだけ おおきく ほえて！",
+          "action": "おおきな くちを あけて ほえる",
+          "emoji": "🐲"
+        },
+        {
+          "en": "Wave to the judges.",
+          "ja": "しんさいんに てを ふって。",
+          "action": "まえに むかって てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "voice",
+        "focus": [
+          "I did it",
+          "can't",
+          "again"
+        ],
+        "sounds": [
+          "↗",
+          "↗ / ↘",
+          "↘"
+        ],
+        "words": [
+          "I did it!",
+          "I can't wait!",
+          "I can't do it…",
+          "It's raining again…"
+        ],
+        "tipJa": "! は げんきな しるし、… は きえて いく しるし。I did it!・I can't wait! は たかく ↗、I can't do it…・It's raining again… は ひくく ↘。"
+      },
+      "vocab": [
+        {
+          "en": "audition",
+          "ja": "オーディション",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "good at",
+          "ja": "〜が とくい",
+          "emoji": "👍"
+        },
+        {
+          "en": "roar",
+          "ja": "ほえる",
+          "emoji": "🦁"
+        },
+        {
+          "en": "judge",
+          "ja": "しんさいん",
+          "emoji": "🧑‍⚖️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I want to be the dragon in the play. Today is audition day! Everyone shows what they can do. Mr. Hoot and I sit at a long table. When it's your turn, say what you are good at. After good at, we use an ing word, just like after enjoy. I'm good at singing. Can I try? Say it with me. I'm good at singing. Can I try? Very good! Haru and Birimo both want to be the dragon. Haru roars. Birimo roars, too. Whose roar is bigger? Let's read Mr. Hoot's audition notes. \"Audition notes. Riko is good at speaking clearly. She can be the princess. Haru is good at sword fighting. Kiko is good at moving quickly, like a bird. Birimo is not good at dancing, but he is very good at roaring. What a roar!\" What is Riko good at? Speaking clearly. What is Birimo good at? Roaring. Now, phonics. I did it! High and proud. I can't wait! High and excited. I can't do it… Low and worried. It's raining again… Low and sad. Next, please. It's your turn!",
+      "conversation": {
+        "scene": "The friends try out for roles at the audition",
+        "sceneJa": "オーディションで やくに ちょうせんする",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the audition! Next, please.",
+            "ja": "オーディションへ ようこそ！ つぎの ひと、どうぞ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hi! I'm good at singing. Can I try?",
+            "ja": "こんにちは！ わたしは うたうのが とくいです。やって みても いいですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Of course. Wow, what a beautiful voice!",
+            "ja": "もちろん。わあ、なんて きれいな こえ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'm good at sword fighting. But I can roar, too. Roar!",
+            "ja": "ぼくは けんの たたかいが とくい。でも ほえる ことも できるよ。ガオー！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm not good at dancing, but I'm good at roaring. Here I go! ROAR!",
+            "ja": "ぼくは おどるのは とくいじゃ ないけど、ほえるのは とくい。いくよ！ ガオーーー！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wow! The whole theater is shaking! And I heard a little echo!",
+            "ja": "わあ！ げきじょうじゅうが ゆれてる！ それに ちいさな こだまが きこえた！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の しんさいんに I'm good at ～ing. Can I try? と いって、とくいな ことを みせよう",
+          "starterEn": "Hello! This is the audition for our play. What are you good at?",
+          "targetExpressions": [
+            "I'm good at singing. Can I try?",
+            "I'm not good at dancing, but I'm good at roaring.",
+            "Next, please. ― Here I go!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm good at singing. Can I try?",
+          "I'm not good at dancing, but I'm good at roaring. / Next, please. ― Here I go!",
+          "I did it!・I can't wait!・I can't do it…・It's raining again…"
+        ]
+      }
+    },
+    {
+      "lessonNo": 755,
+      "world": 26,
+      "title": "Who Plays Which Role?",
+      "titleJa": "だれが どの やく？",
+      "school": {
+        "grade": "中3",
+        "topic": "Riko plays the princess. Birimo plays the dragon.：はいやくひょうを はっぴょうする",
+        "grammar": "～ plays the ～. / Who plays the ～? / Congratulations!",
+        "expressions": [
+          {
+            "en": "Riko plays the princess. Birimo plays the dragon.",
+            "ja": "リコが おひめさまの やく。ビリモが ドラゴンの やく。",
+            "core": true
+          },
+          {
+            "en": "Who plays the knight? ― Haru does.",
+            "ja": "だれが きしの やく？ ― ハルだよ。"
+          },
+          {
+            "en": "Congratulations! You'll be a great little bird.",
+            "ja": "おめでとう！ すてきな ことりに なるよ。"
+          }
+        ],
+        "testPoints": [
+          "～ plays the ～. で やくを せつめいして、Who plays the ～? と きける（ふりかえり: I enjoy ～ing. / I'm good at ～ing.）",
+          "きもちの こえ の ふりかえり（Really?! I can't wait! は たかく ↗、Oh, really… Oh no… は ひくく ↘）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to your name on the list.",
+          "ja": "リストの じぶんの なまえを ゆびさして。",
+          "action": "かべの リストを ゆびさす まね",
+          "emoji": "📋"
+        },
+        {
+          "en": "Jump for joy!",
+          "ja": "よろこんで ジャンプ！",
+          "action": "りょうてを あげて ジャンプする",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Give your friend a high five.",
+          "ja": "ともだちと ハイタッチして。",
+          "action": "てを あげて ハイタッチする",
+          "emoji": "🖐️"
+        },
+        {
+          "en": "Clap for the new actors.",
+          "ja": "あたらしい やくしゃに はくしゅ。",
+          "action": "はくしゅする",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "Really",
+          "can't",
+          "Oh no"
+        ],
+        "sounds": [
+          "↗ / ↘",
+          "↗ / ↘",
+          "↗ / ↘"
+        ],
+        "words": [
+          "Really?!",
+          "Oh, really…",
+          "I can't wait!",
+          "Oh no… I forgot my lines."
+        ],
+        "tipJa": "きもちの こえの まとめ: Really?! ↗（びっくり）と Oh, really… ↘（がっかり）、I can't wait! ↗（わくわく）、Oh no… I forgot my lines. ↘（しょんぼり）。やくの きもちを こえで つたえよう。"
+      },
+      "vocab": [
+        {
+          "en": "cast list",
+          "ja": "はいやくひょう",
+          "emoji": "📋",
+          "core": true
+        },
+        {
+          "en": "play",
+          "ja": "（やくを）えんじる・げき",
+          "emoji": "🎭"
+        },
+        {
+          "en": "congratulations",
+          "ja": "おめでとう",
+          "emoji": "🎉"
+        },
+        {
+          "en": "little",
+          "ja": "ちいさな",
+          "emoji": "🐤"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I'm good at singing. Can I try? Today, Mr. Hoot puts the cast list on the wall. A cast list tells us who plays each role. To talk about it, we say, Riko plays the princess. Birimo plays the dragon. Say it with me. Riko plays the princess. Birimo plays the dragon. Perfect! Haru wanted to be the dragon. Is he sad? Let's read the cast list. \"The Princess and the Dragon. Cast list. The princess: Riko. The dragon: Birimo, for his amazing roar. The knight: Haru, for his brave sword fighting. The little bird: Kiko. Director: Mr. Hoot, with help from Ms. Emma. First practice: tomorrow morning. Congratulations, everyone!\" Who plays the knight? Haru does. Who helps Mr. Hoot? Ms. Emma does. Haru says, A knight is cool, too! Now, phonics. Let's review our feeling voices. Really?! High and surprised. Oh, really… Low and sad. I can't wait! High and excited. Oh no… I forgot my lines. Low and quiet. Great job! Congratulations to our new actors!",
+      "conversation": {
+        "scene": "Mr. Hoot's cast list goes up on the wall",
+        "sceneJa": "はいやくひょうが かべに はられる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! The cast list is on the wall!",
+            "ja": "みて！ はいやくひょうが かべに はって あるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really?! Riko plays the princess. That's me!",
+            "ja": "ほんとう？！ リコが おひめさまの やく。わたしだ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And Birimo plays the dragon! Roar! I can't wait!",
+            "ja": "それに ビリモが ドラゴンの やく！ ガオー！ まちきれない！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh, really… Who plays the knight? … Oh, I do!",
+            "ja": "そっか…。だれが きしの やく？ … あ、ぼくだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And I play the little bird. Congratulations, everyone!",
+            "ja": "それに わたしは ことりの やく。みんな、おめでとう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "A knight is a great role, Haru. The knight is brave and strong.",
+            "ja": "きしも すてきな やくよ、ハル。きしは ゆうかんで つよいの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You're right. I'll be the best knight ever!",
+            "ja": "そうだね。ぼく、さいこうの きしに なるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と はいやくひょうを みて、～ plays the ～. で やくを せつめいし、Who plays the ～? と きこう",
+          "starterEn": "Hoo, hoo! The cast list is ready. Can you tell me who plays the princess?",
+          "targetExpressions": [
+            "Riko plays the princess. Birimo plays the dragon.",
+            "Who plays the knight? ― Haru does.",
+            "Congratulations! You'll be a great little bird."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Riko plays the princess. Birimo plays the dragon.",
+          "Who plays the knight? ― Haru does. / Congratulations! You'll be a great little bird.",
+          "Really?!・Oh, really…・I can't wait!・Oh no… I forgot my lines."
+        ]
+      }
+    },
+    {
+      "lessonNo": 756,
+      "world": 26,
+      "title": "I'm Nervous",
+      "titleJa": "どきどき する",
+      "school": {
+        "grade": "中3",
+        "topic": "I'm nervous.：はじめての れんしゅうの ひ、しんぱいな きもちを いって はげましあう",
+        "grammar": "I'm nervous. / Don't worry. You'll be great. / I'm tired. / The practice was tiring.",
+        "expressions": [
+          {
+            "en": "I'm nervous.",
+            "ja": "どきどき する（きんちょう して いる）。",
+            "core": true
+          },
+          {
+            "en": "Don't worry. You'll be great.",
+            "ja": "しんぱい しないで。きっと うまく いくよ。"
+          },
+          {
+            "en": "I'm tired. ― Let's take a break.",
+            "ja": "つかれた。 ― ひとやすみ しよう。"
+          }
+        ],
+        "testPoints": [
+          "I'm nervous. と きもちを いって、Don't worry. You'll be great. と はげませる",
+          "-ed と -ing（tired は ひとが つかれて いる、tiring は つかれる ような こと。tire → tired / tiring、relax → relaxed / relaxing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shake your hands. Shake, shake, shake.",
+          "ja": "てを ぶらぶら させて。ぶらぶら。",
+          "action": "りょうてを ぶらぶら ふる",
+          "emoji": "🤲"
+        },
+        {
+          "en": "Breathe in. Breathe out.",
+          "ja": "いきを すって。はいて。",
+          "action": "ゆっくり しんこきゅうする",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Pat your friend on the back.",
+          "ja": "ともだちの せなかを ぽんと たたいて。",
+          "action": "やさしく せなかを たたく まね",
+          "emoji": "🤗"
+        },
+        {
+          "en": "Stretch your arms up high.",
+          "ja": "うでを たかく のばして。",
+          "action": "りょううでを うえに のばす",
+          "emoji": "🙆"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-ing",
+        "focus": [
+          "-ed",
+          "-ing"
+        ],
+        "sounds": [
+          "/d/ /t/ /ɪd/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "tired",
+          "tiring",
+          "relaxed",
+          "relaxing"
+        ],
+        "tipJa": "-ed は「ひとが そう かんじて いる」、-ing は「そう かんじさせる もの・こと」。I'm tired.（わたしは つかれて いる）・The practice was tiring.（れんしゅうが つかれる ものだった）。tire は e で おわるので tired・tiring。relax は そのまま relaxed・relaxing。"
+      },
+      "vocab": [
+        {
+          "en": "nervous",
+          "ja": "きんちょう して いる",
+          "emoji": "😰",
+          "core": true
+        },
+        {
+          "en": "practice",
+          "ja": "れんしゅう",
+          "emoji": "📖"
+        },
+        {
+          "en": "break",
+          "ja": "やすみ",
+          "emoji": "☕"
+        },
+        {
+          "en": "relaxed",
+          "ja": "ほっと して いる",
+          "emoji": "😌"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Riko plays the princess. Birimo plays the dragon. Today is our first practice. Riko holds the script. Her hands are shaking. She says, I'm nervous. Say it with me. I'm nervous. Good! When a friend is nervous, we can help. We say, Don't worry. You'll be great. Let's say that, too. Don't worry. You'll be great. Being nervous is normal. Even famous actors feel nervous. Let's read a note from Mr. Hoot. \"Tips for nervous actors. First, take a deep breath. Second, shake your hands and smile. Third, look at a friend in the audience. Remember, everyone makes mistakes at practice. Practice is the place for mistakes. Have fun and do your best!\" What is the first tip? Take a deep breath. Where can you make mistakes? At practice. Now, phonics. Today we have words with ed and ing. Tired. I feel tired. Tiring. The practice is tiring. Relaxed. I feel relaxed. Relaxing. A warm bath is relaxing. Ed is how you feel. Ing is what makes you feel it. Take a deep breath, and let's start!",
+      "conversation": {
+        "scene": "Riko feels nervous at the first practice",
+        "sceneJa": "はじめての れんしゅうで リコが きんちょう する",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "My hands are shaking. I'm nervous.",
+            "ja": "てが ふるえてる。どきどき する。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Don't worry. You'll be great. You have a beautiful voice.",
+            "ja": "しんぱい しないで。きっと うまく いくよ。きれいな こえだもん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Take a deep breath, Riko. Then, read your first line.",
+            "ja": "ふかく いきを すって、リコ。それから さいしょの セリフを よんでね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay. Who is that? Is it the dragon? … I did it!",
+            "ja": "わかった。あれは だれ？ ドラゴンなの？ … いえた！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Practice is tiring. I'm tired. Roaring is hard work!",
+            "ja": "れんしゅうって つかれるね。つかれたよ。ほえるのは たいへん！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's take a break. Then we'll practice again.",
+            "ja": "ひとやすみ しよう。それから また れんしゅう しよう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の ルルが きんちょう して いるよ。Don't worry. You'll be great. と はげまして、こつも おしえて あげよう",
+          "starterEn": "Oh, hi. The practice starts in five minutes, and I'm nervous. What should I do?",
+          "targetExpressions": [
+            "I'm nervous.",
+            "Don't worry. You'll be great.",
+            "I'm tired. ― Let's take a break."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm nervous.",
+          "Don't worry. You'll be great. / I'm tired. ― Let's take a break.",
+          "tired・tiring・relaxed・relaxing"
+        ]
+      }
+    },
+    {
+      "lessonNo": 757,
+      "world": 26,
+      "title": "Excited or Exciting?",
+      "titleJa": "わくわく する？ わくわく させる？",
+      "school": {
+        "grade": "中3",
+        "topic": "The play is exciting. I'm excited!：-ed と -ing の きもちの ことばを くらべる",
+        "grammar": "The ～ is exciting. / I'm excited. / I'm interested in ～.",
+        "expressions": [
+          {
+            "en": "The play is exciting. I'm excited!",
+            "ja": "げきは わくわくする。わたしは わくわく して いる！",
+            "core": true
+          },
+          {
+            "en": "This story is interesting. I'm interested in the dragon.",
+            "ja": "この ものがたりは おもしろい。ドラゴンに きょうみが あるよ。"
+          },
+          {
+            "en": "Are you excited? ― Yes! I can't wait!",
+            "ja": "わくわく してる？ ― うん！ まちきれない！"
+          }
+        ],
+        "testPoints": [
+          "The play is exciting.（ものごと）と I'm excited.（ひとの きもち）を つかいわけられる",
+          "-ed と -ing（excited は ひとの きもち、exciting は わくわくさせる もの。excite → excited / exciting、interest → interested / interesting）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jump up and down. You're excited!",
+          "ja": "ぴょんぴょん とんで。わくわく してるよ！",
+          "action": "その ばで なんども ジャンプする",
+          "emoji": "🤩"
+        },
+        {
+          "en": "Lean in and listen. It's interesting!",
+          "ja": "みを のりだして きいて。おもしろい！",
+          "action": "まえに からだを かたむけて きく",
+          "emoji": "👂"
+        },
+        {
+          "en": "Open the script.",
+          "ja": "だいほんを ひらいて。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Show me an excited face.",
+          "ja": "わくわくした かおを みせて。",
+          "action": "めを おおきく あけて にっこり する",
+          "emoji": "😆"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-ing",
+        "focus": [
+          "-ed",
+          "-ing"
+        ],
+        "sounds": [
+          "/d/ /t/ /ɪd/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "excited",
+          "exciting",
+          "interested",
+          "interesting"
+        ],
+        "tipJa": "I'm excited!（わたしは わくわく して いる）と The play is exciting.（げきが わくわくさせる）。excite の e を とって excited・exciting。interest は そのまま interested・interesting。"
+      },
+      "vocab": [
+        {
+          "en": "exciting",
+          "ja": "わくわくさせる",
+          "emoji": "🎢",
+          "core": true
+        },
+        {
+          "en": "excited",
+          "ja": "わくわく して いる",
+          "emoji": "🤩"
+        },
+        {
+          "en": "interesting",
+          "ja": "おもしろい・きょうみぶかい",
+          "emoji": "🧐"
+        },
+        {
+          "en": "script",
+          "ja": "だいほん",
+          "emoji": "📜"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I'm nervous. Today, we read the exciting part of the play. Listen to two words. Excited. Exciting. They look the same, but they are different. Excited（わくわく） is how a person feels. Exciting is about the thing. It makes you feel that way. The play is exciting. I'm excited! Say it with me. The play is exciting. I'm excited! Wonderful! We can't say, I'm exciting, when we mean our feeling. Let's read a page from Mr. Hoot's play. \"The princess walks into the dark forest. Suddenly, she hears a big roar. A dragon flies over the trees! The princess is surprised, but she is not afraid. The knight runs to her side. The little bird sings a warning song. Everyone in the audience holds their breath.\" Is this part exciting? Yes, it is! How does the audience feel? Excited! Now, phonics. Excited. I'm excited. Exciting. The play is exciting. Interested. I'm interested in dragons. Interesting. This story is interesting. Ed for people's feelings. Ing for things. Let's turn the page!",
+      "conversation": {
+        "scene": "The friends talk about the exciting part of the play",
+        "sceneJa": "げきの わくわくする ばめんに ついて はなす",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "The dragon scene is coming! The play is exciting. I'm excited!",
+            "ja": "ドラゴンの ばめんが くるよ！ げきって わくわくする。ぼく、わくわく してる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm exciting, too!",
+            "ja": "ぼくも わくわくさせる よ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! Birimo, you mean, I'm excited. Exciting is for the play.",
+            "ja": "あはは！ ビリモ、I'm excited って いいたいんでしょ。exciting は げきの ほうだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh! I'm excited, and my roar is exciting!",
+            "ja": "そっか！ ぼくは わくわく してて、ぼくの ほえごえは わくわくさせるんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "This story is interesting. I'm interested in the dragon. Why is he so angry?",
+            "ja": "この ものがたり、おもしろいね。ドラゴンに きょうみが あるよ。どうして あんなに おこって いるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good question, Riko! Let's read more and find out.",
+            "ja": "いい しつもんね、リコ！ もっと よんで たしかめましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と げきの はなしを しよう。The ～ is exciting. と I'm excited. を つかいわけて きもちを つたえよう",
+          "starterEn": "Hello! Tonight we're reading the dragon scene. What do you think of the play so far?",
+          "targetExpressions": [
+            "The play is exciting. I'm excited!",
+            "This story is interesting. I'm interested in the dragon.",
+            "Are you excited? ― Yes! I can't wait!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The play is exciting. I'm excited!",
+          "This story is interesting. I'm interested in the dragon. / Are you excited? ― Yes! I can't wait!",
+          "excited・exciting・interested・interesting"
+        ]
+      }
+    },
+    {
+      "lessonNo": 758,
+      "world": 26,
+      "title": "Bored or Boring?",
+      "titleJa": "たいくつ して いる？ たいくつな？",
+      "school": {
+        "grade": "中3",
+        "topic": "This scene is boring. Let's make it better.：たいくつな ばめんを くふうする はなしあい",
+        "grammar": "This scene is boring. / I'm bored. / Let's make it better. / How about ～ing?",
+        "expressions": [
+          {
+            "en": "This scene is boring. Let's make it better.",
+            "ja": "この ばめんは たいくつ。もっと よく しよう。",
+            "core": true
+          },
+          {
+            "en": "How about adding a song? ― That's a great idea!",
+            "ja": "うたを いれるのは どう？ ― それは いい かんがえ！"
+          },
+          {
+            "en": "The audience will be amazed.",
+            "ja": "おきゃくさんは びっくり かんしん するよ。"
+          }
+        ],
+        "testPoints": [
+          "This scene is boring. Let's make it better. How about ～ing? で ばめんを よく する ていあんが できる",
+          "-ed と -ing（bored は たいくつ して いる ひと、boring は たいくつな もの。bore → bored / boring、amaze → amazed / amazing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Yawn. You're bored.",
+          "ja": "あくびを して。たいくつ だよ。",
+          "action": "くちを おおきく あけて あくびする",
+          "emoji": "🥱"
+        },
+        {
+          "en": "Snap your fingers. I have an idea!",
+          "ja": "ゆびを ならして。いい かんがえが ある！",
+          "action": "ゆびを ぱちんと ならす",
+          "emoji": "💡"
+        },
+        {
+          "en": "Spin around and strike a pose.",
+          "ja": "くるっと まわって ポーズ。",
+          "action": "1かい まわって ポーズを きめる",
+          "emoji": "🌀"
+        },
+        {
+          "en": "Show me an amazed face.",
+          "ja": "びっくりした かおを みせて。",
+          "action": "くちを あけて めを まるく する",
+          "emoji": "😲"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-ing",
+        "focus": [
+          "-ed",
+          "-ing"
+        ],
+        "sounds": [
+          "/d/ /t/ /ɪd/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "bored",
+          "boring",
+          "amazed",
+          "amazing"
+        ],
+        "tipJa": "I'm bored.（たいくつ して いる）・This scene is boring.（この ばめんは たいくつ）。bore → bored・boring、amaze → amazed・amazing（e で おわる ことばは d だけ、ing は e を とる）。"
+      },
+      "vocab": [
+        {
+          "en": "boring",
+          "ja": "たいくつな",
+          "emoji": "😑",
+          "core": true
+        },
+        {
+          "en": "bored",
+          "ja": "たいくつ して いる",
+          "emoji": "🥱"
+        },
+        {
+          "en": "scene",
+          "ja": "ばめん",
+          "emoji": "🎬"
+        },
+        {
+          "en": "amazing",
+          "ja": "すばらしい",
+          "emoji": "🤩"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, The play is exciting. I'm excited! Today, we practice scene three. In this scene, the king talks for a long, long time. Birimo is yawning. Kiko is looking at the ceiling. Haru says, This scene is boring. Let's make it better. Say it with me. This scene is boring. Let's make it better. Great! Remember, boring is for the scene, and bored is for people. The scene is boring, so we are bored. How can we make it better? We can say, How about adding a song? Let's read the king's long speech. \"Hello, my people. Today I will talk about the weather. Yesterday it was sunny. The day before, it was sunny, too. Last week, it was cloudy on Monday and sunny on Tuesday. Now, let me tell you about the clouds.\" Is it exciting? No, it's boring! What can we add? A song, a dance, or a joke. Now, phonics. Bored. I'm bored. Boring. The speech is boring. Amazed. The audience is amazed. Amazing. Your idea is amazing. Let's make this scene amazing!",
+      "conversation": {
+        "scene": "The friends make a boring scene better",
+        "sceneJa": "たいくつな ばめんを みんなで くふうする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "The king talks and talks. I'm bored.",
+            "ja": "おうさまが ずっと しゃべって いる。たいくつだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Me too. This scene is boring. Let's make it better.",
+            "ja": "ぼくも。この ばめんは たいくつ。もっと よく しよう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How about adding a song? The little bird can sing it.",
+            "ja": "うたを いれるのは どう？ ことりが うたえるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "That's a great idea! And Lulu can dance in the background.",
+            "ja": "それは いい かんがえ！ それに ルルが うしろで おどれるね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "A song and a dance! The audience will be amazed.",
+            "ja": "うたと ダンス！ おきゃくさんは びっくり かんしん するわね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Now the scene is amazing, and I'm not bored at all!",
+            "ja": "これで ばめんは すばらしく なった。もう ぜんぜん たいくつ じゃ ないよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の フートさんと たいくつな ばめんを くふうしよう。How about ～ing? で アイデアを だそう",
+          "starterEn": "Hoo, hoo. The king's speech is very long. Some people say it's boring. How can we make it better?",
+          "targetExpressions": [
+            "This scene is boring. Let's make it better.",
+            "How about adding a song? ― That's a great idea!",
+            "The audience will be amazed."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This scene is boring. Let's make it better.",
+          "How about adding a song? ― That's a great idea! / The audience will be amazed.",
+          "bored・boring・amazed・amazing"
+        ]
+      }
+    },
+    {
+      "lessonNo": 759,
+      "world": 26,
+      "title": "How Do You Feel Now?",
+      "titleJa": "いま どんな きもち？",
+      "school": {
+        "grade": "中3",
+        "topic": "I feel proud of myself.：れんしゅうの あとで きもちを はなす",
+        "grammar": "How do you feel now? / I feel proud of myself. / I was worried, but ～.",
+        "expressions": [
+          {
+            "en": "I feel proud of myself.",
+            "ja": "じぶんを ほこらしく おもう。",
+            "core": true
+          },
+          {
+            "en": "How do you feel now? ― I feel relaxed.",
+            "ja": "いま どんな きもち？ ― ほっと して いる。"
+          },
+          {
+            "en": "I was worried, but I remembered all my lines.",
+            "ja": "しんぱい だったけど、セリフを ぜんぶ おぼえて いたよ。"
+          }
+        ],
+        "testPoints": [
+          "How do you feel now? と きいて、I feel proud of myself. / I was worried, but ～. で きもちの へんかを いえる",
+          "-ed と -ing（surprised / surprising、worry は y を i に かえて worried、ing は worrying）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put your hand on your heart.",
+          "ja": "むねに てを あてて。",
+          "action": "むねに てを あてる",
+          "emoji": "🫶"
+        },
+        {
+          "en": "Stand tall. You're proud!",
+          "ja": "むねを はって たって。ほこらしいね！",
+          "action": "せすじを のばして むねを はる",
+          "emoji": "🦸"
+        },
+        {
+          "en": "Wipe your forehead. Phew!",
+          "ja": "ひたいの あせを ふいて。ふう！",
+          "action": "ひたいを てで ぬぐう",
+          "emoji": "😅"
+        },
+        {
+          "en": "Give yourself a thumbs-up.",
+          "ja": "じぶんに グッドサイン。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "ed-ing",
+        "focus": [
+          "-ed",
+          "-ing"
+        ],
+        "sounds": [
+          "/d/ /t/ /ɪd/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "surprised",
+          "surprising",
+          "worried",
+          "worrying"
+        ],
+        "tipJa": "surprise → surprised・surprising（surprise の さいしょの r を わすれずに）。worry は ed の とき y を i に かえて worried、ing の ときは y の まま worrying。"
+      },
+      "vocab": [
+        {
+          "en": "proud",
+          "ja": "ほこらしい",
+          "emoji": "🏅",
+          "core": true
+        },
+        {
+          "en": "myself",
+          "ja": "じぶん じしん",
+          "emoji": "🙋"
+        },
+        {
+          "en": "worried",
+          "ja": "しんぱい して いる",
+          "emoji": "😟"
+        },
+        {
+          "en": "remember",
+          "ja": "おぼえて いる・おもいだす",
+          "emoji": "🧠"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, This scene is boring. Let's make it better. Today, we finished our first full practice! Now we sit in a circle and talk about our feelings. I ask, How do you feel now? Riko was nervous at first, but she remembered all her lines. She says, I feel proud of myself. Say it with me. I feel proud of myself. Beautiful! When you work hard, you can feel proud of yourself. Let's read Riko's practice diary. \"Today was our first full practice. In the morning, I was worried. My hands were shaking. But Kiko said, 'You'll be great.' I took a deep breath and said my lines. I didn't forget anything! Birimo's roar was surprising and funny. Now I feel proud of myself.\" How did Riko feel in the morning? Worried. How does she feel now? Proud. Now, phonics. Surprised. I was surprised. Surprising. The roar was surprising. Worried. Change y to i, and add ed. Worrying. Keep the y, and add ing. Remember, feelings change. How do you feel now?",
+      "conversation": {
+        "scene": "The friends share their feelings after practice",
+        "sceneJa": "れんしゅうの あとで きもちを はなしあう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great practice, everyone! How do you feel now?",
+            "ja": "みんな、いい れんしゅう だったわ！ いま どんな きもち？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I was worried, but I remembered all my lines. I feel proud of myself.",
+            "ja": "しんぱい だったけど、セリフを ぜんぶ おぼえて いたの。じぶんが ほこらしい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I feel relaxed. The sword fight was hard, but fun.",
+            "ja": "ぼくは ほっと してる。けんの たたかいは たいへん だったけど、たのしかった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I was surprised by Birimo's roar. It was so loud!",
+            "ja": "わたしは ビリモの ほえごえに びっくり したよ。とても おおきかった！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thank you! And did you hear that? The echo roared back a little!",
+            "ja": "ありがとう！ それに きいた？ こだまが すこし ほえかえしたよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really?! Maybe the echoes are coming back!",
+            "ja": "ほんとう？！ こだまが もどって きて いるのかも！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に How do you feel now? と きかれたら、I feel ～. / I was ～, but ～. で きもちの へんかを つたえよう",
+          "starterEn": "Hoo, hoo! You worked hard today. How do you feel now?",
+          "targetExpressions": [
+            "I feel proud of myself.",
+            "How do you feel now? ― I feel relaxed.",
+            "I was worried, but I remembered all my lines."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I feel proud of myself.",
+          "How do you feel now? ― I feel relaxed. / I was worried, but I remembered all my lines.",
+          "surprised・surprising・worried・worrying"
+        ]
+      }
+    },
+    {
+      "lessonNo": 760,
+      "world": 26,
+      "title": "Feelings Charades",
+      "titleJa": "きもちの ジェスチャーゲーム",
+      "school": {
+        "grade": "中3",
+        "topic": "Are you surprised?：きもちを ジェスチャーで あてる ゲーム（まとめ）",
+        "grammar": "Are you ～? / No, I'm ～! / You look ～.",
+        "expressions": [
+          {
+            "en": "Are you surprised?",
+            "ja": "びっくり してるの？",
+            "core": true
+          },
+          {
+            "en": "No, I'm confused!",
+            "ja": "ちがうよ、こんらん してるの（よく わからないの）！"
+          },
+          {
+            "en": "You look bored. ― That's right! Your turn.",
+            "ja": "たいくつ そうだね。 ― あたり！ つぎは きみの ばん。"
+          }
+        ],
+        "testPoints": [
+          "Are you ～? / You look ～. で あいての きもちを あてて、No, I'm ～! と こたえられる（ふりかえり: nervous・excited・bored・proud）",
+          "-ed と -ing の ふりかえり（confused / confusing、exciting）と きもちの こえ（I'm so happy! は たかく ↗）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Act surprised. Oh!",
+          "ja": "びっくりした ふりを して。おっ！",
+          "action": "りょうてを あげて めを まるく する",
+          "emoji": "😮"
+        },
+        {
+          "en": "Act confused. Scratch your head.",
+          "ja": "こまった ふりを して。あたまを かいて。",
+          "action": "くびを かしげて あたまを かく",
+          "emoji": "😕"
+        },
+        {
+          "en": "Act bored. Sigh.",
+          "ja": "たいくつな ふりを して。ためいき。",
+          "action": "ほおづえを ついて ためいきを つく",
+          "emoji": "😩"
+        },
+        {
+          "en": "Act proud. Hands on hips!",
+          "ja": "ほこらしい ふりを して。こしに て！",
+          "action": "こしに てを あてて むねを はる",
+          "emoji": "😤"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ed",
+          "-ing",
+          "I'm so"
+        ],
+        "sounds": [
+          "/d/ /t/ /ɪd/",
+          "/ɪŋ/",
+          "↗ / ↘"
+        ],
+        "words": [
+          "confused",
+          "confusing",
+          "exciting",
+          "I'm so happy!"
+        ],
+        "tipJa": "まとめ: I'm confused.（こんらん して いる）・This map is confusing.（わかりにくい）・The play is exciting.。I'm so happy! は たかく げんきに ↗。きもちの ことばを こえでも あらわそう。"
+      },
+      "vocab": [
+        {
+          "en": "surprised",
+          "ja": "びっくり して いる",
+          "emoji": "😮",
+          "core": true
+        },
+        {
+          "en": "confused",
+          "ja": "こんらん して いる",
+          "emoji": "😕"
+        },
+        {
+          "en": "charades",
+          "ja": "ジェスチャーゲーム",
+          "emoji": "🙆"
+        },
+        {
+          "en": "gesture",
+          "ja": "みぶり",
+          "emoji": "🤷"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I feel proud of myself. Today, we play a game called Feelings Charades. One actor shows a feeling with their face and body, but says nothing. The others guess. You can ask, Are you surprised? Say it with me. Are you surprised? Good! If the guess is wrong, the actor says, No, I'm confused! Let's say that, too. No, I'm confused! Actors use their faces and bodies to show feelings, so this game is great practice. Let's read the game rules from Mr. Hoot. \"Feelings Charades. One player picks a feeling card. Don't show it to anyone! Show the feeling with your face, hands, and body. No words, please. The other players ask questions, like 'Are you nervous?' The first correct guess wins a point. Then it's the next player's turn.\" Can you use words? No! What do the other players do? They ask questions. Now, phonics. Let's review. Confused. I'm confused. Confusing. This map is confusing. Exciting. The game is exciting. I'm so happy! High and bright. Okay, pick a card!",
+      "conversation": {
+        "scene": "The friends play a feelings gesture game",
+        "sceneJa": "きもちの ジェスチャーゲームを する",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "My turn! Look at my face. What am I feeling?",
+            "ja": "ぼくの ばん！ かおを みて。どんな きもち だと おもう？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Your eyes are big. Are you surprised?",
+            "ja": "めが おおきいね。びっくり してるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No, I'm confused! Look, I'm scratching my head.",
+            "ja": "ちがうよ、こんらん してるの！ ほら、あたまを かいてるでしょ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Now Birimo. Hmm… you look bored.",
+            "ja": "つぎは ビリモ。うーん… たいくつ そうだね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "That's right! Your turn, Riko.",
+            "ja": "あたり！ つぎは リコの ばんだよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful acting! Your faces tell the whole story.",
+            "ja": "すばらしい えんぎ！ かおだけで ぜんぶ つたわるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI が きもちを ことばで ヒントに するよ。Are you ～? と きいて きもちを あてよう",
+          "starterEn": "Let's play Feelings Charades! I'm frowning and scratching my head. Can you guess my feeling?",
+          "targetExpressions": [
+            "Are you surprised?",
+            "No, I'm confused!",
+            "You look bored. ― That's right! Your turn."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Are you surprised?",
+          "No, I'm confused! / You look bored. ― That's right! Your turn.",
+          "confused・confusing・exciting・I'm so happy!"
+        ]
+      }
+    },
+    {
+      "lessonNo": 761,
+      "world": 26,
+      "title": "I Decided to Write a Play",
+      "titleJa": "じぶんたちの げきを かく ことに した",
+      "school": {
+        "grade": "中3",
+        "topic": "We decided to write our own play.：ふるい だいほんの おわりが ない。じぶんたちで げきを つくる ことに きめる",
+        "grammar": "We decided to ～. / Let's ～. / What should we ～?",
+        "expressions": [
+          {
+            "en": "We decided to write our own play.",
+            "ja": "わたしたちは じぶんたちの げきを かく ことに したよ。",
+            "core": true
+          },
+          {
+            "en": "The last pages are missing.",
+            "ja": "さいごの ページが なくなって いるよ。"
+          },
+          {
+            "en": "What should our play be about? ― It should be about a brave princess.",
+            "ja": "わたしたちの げきは なんの はなしに する？ ― ゆうかんな おひめさまの はなしが いいな。"
+          }
+        ],
+        "testPoints": [
+          "We decided to ～. で きめた ことを いい、What should our play be about? で アイデアを きける",
+          "セリフの くとうてん（\"Let's write a play,\" said Riko. の ように、セリフの あとの , は “ ” の なかに 入れる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn the pages of the old script.",
+          "ja": "ふるい だいほんの ページを めくって。",
+          "action": "ページを めくる まね",
+          "emoji": "📜"
+        },
+        {
+          "en": "Look surprised. The pages are gone!",
+          "ja": "びっくり した かおを して。ページが ない！",
+          "action": "りょうてを ほおに あてて おどろく",
+          "emoji": "😲"
+        },
+        {
+          "en": "Pick up a pencil and think.",
+          "ja": "えんぴつを もって かんがえて。",
+          "action": "えんぴつを あごに あてて かんがえる",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Give your team a high five.",
+          "ja": "チームの なかまと ハイタッチ。",
+          "action": "となりの ひとと ハイタッチする",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "punctuation",
+        "focus": [
+          "\"",
+          ","
+        ],
+        "sounds": [
+          "quotation marks",
+          "comma"
+        ],
+        "words": [
+          "\"Let's write a play,\" said Riko.",
+          "\"I'll be the narrator,\" said Haru.",
+          "Kiko said, \"I have an idea.\"",
+          "\"Good idea,\" said Ms. Emma."
+        ],
+        "tipJa": "セリフは \" \" で はさむ。\"Let's write a play,\" said Riko. の ように、said の まえの , は \" の なかに 入れる。Kiko said, \"I have an idea.\" の ように said が まえの ときは , の あとに \" で はじめる。"
+      },
+      "vocab": [
+        {
+          "en": "decide",
+          "ja": "きめる",
+          "emoji": "✅",
+          "core": true
+        },
+        {
+          "en": "script",
+          "ja": "だいほん",
+          "emoji": "📜"
+        },
+        {
+          "en": "missing",
+          "ja": "なくなって いる",
+          "emoji": "❓"
+        },
+        {
+          "en": "narrator",
+          "ja": "ナレーター",
+          "emoji": "🎙️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we played a feelings game. Are you surprised? No, I'm confused! Today, we have a problem. Mr. Hoot opened the old script, and the last pages are missing. Nobody knows the ending! So, what did the friends do? They made a big choice. We say, We decided to write our own play. Say it with me. We decided to write our own play. Great! Decided to means we chose to do it. Let's read Mr. Hoot's note. \"Dear actors, I am so sorry. The last pages of The Princess and the Dragon are gone. Maybe the mice ate them. Please write a new story with your own ideas. A good story needs a hero, a problem, and a happy ending. I believe in you. Mr. Hoot.\" What does a good story need? A hero, a problem, and a happy ending. Who believes in the actors? Mr. Hoot does. Now, phonics. Today, we look at how we write lines. Let's write a play, said Riko. The comma goes inside the quotation marks. I'll be the narrator, said Haru. Kiko said, I have an idea. Good idea, said Ms. Emma. Now, let's write our own play!",
+      "conversation": {
+        "scene": "The friends find that the old script has no ending",
+        "sceneJa": "ふるい だいほんに おわりが ない ことが わかる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look! The last pages of the script are missing.",
+            "ja": "みて！ だいほんの さいごの ページが なくなって いる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing Mr. Hoot! Oh dear. Nobody knows the ending.",
+            "ja": "ぼくが フートさんの やくね！ こまったなあ。だれも おわりを しらないんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I have an idea. Let's write a new story!",
+            "ja": "いい かんがえが ある。あたらしい おはなしを かこうよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes! We decided to write our own play. I'll be the narrator, too.",
+            "ja": "うん！ じぶんたちの げきを かく ことに したよ。ぼく、ナレーターも やるね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What should our play be about? I want a brave princess.",
+            "ja": "わたしたちの げきは なんの はなしに する？ ゆうかんな おひめさまが いいな。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good idea! Let's call it The Princess and the Locked Tower.",
+            "ja": "いい かんがえね！ だいめいは「おひめさまと かぎの かかった とう」に しましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の フートさんと、あたらしい げきの アイデアを はなそう。We decided to ～. で きめた ことを つたえて、What should our play be about? と きいて みよう",
+          "starterEn": "Hoo, hoo! I'm Mr. Hoot, the theater director. The old script has no ending. What did you decide to do?",
+          "targetExpressions": [
+            "We decided to write our own play.",
+            "The last pages are missing.",
+            "What should our play be about? ― It should be about a brave princess."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We decided to write our own play.",
+          "The last pages are missing. / What should our play be about? ― It should be about a brave princess.",
+          "\"Let's write a play,\" said Riko.・\"I'll be the narrator,\" said Haru.・Kiko said, \"I have an idea.\"・\"Good idea,\" said Ms. Emma."
+        ]
+      }
+    },
+    {
+      "lessonNo": 762,
+      "world": 26,
+      "title": "Suddenly…",
+      "titleJa": "とつぜん…",
+      "school": {
+        "grade": "中3",
+        "topic": "Suddenly, the lights went out.：おはなしの「じけん」を かんがえる。Suddenly, ～. で とつぜん おきた ことを いう",
+        "grammar": "Suddenly, ～. / What happened next?",
+        "expressions": [
+          {
+            "en": "Suddenly, the lights went out.",
+            "ja": "とつぜん、あかりが きえた。",
+            "core": true
+          },
+          {
+            "en": "What happened next? ― They heard a strange sound.",
+            "ja": "つぎに なにが おきたの？ ― ふしぎな おとが きこえたの。"
+          },
+          {
+            "en": "The princess and the knight climbed the tall tower.",
+            "ja": "おひめさまと きしは たかい とうを のぼった。"
+          }
+        ],
+        "testPoints": [
+          "Suddenly, ～. で おはなしの とつぜんの できごとを いい、What happened next? で つづきを きける",
+          "セリフの くとうてん（\"Help!\" shouted the princess. の ように、! は “ ” の なかに 入れる）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Climb the tall tower. Step, step, step.",
+          "ja": "たかい とうを のぼって。いっぽ、いっぽ。",
+          "action": "かいだんを のぼる まね",
+          "emoji": "🗼"
+        },
+        {
+          "en": "The lights went out! Cover your eyes.",
+          "ja": "あかりが きえた！ めを かくして。",
+          "action": "りょうてで めを おおう",
+          "emoji": "🌑"
+        },
+        {
+          "en": "Listen. What's that sound?",
+          "ja": "きいて。あの おとは なに？",
+          "action": "てを みみに あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Shout, Help!",
+          "ja": "「たすけて！」と さけんで。",
+          "action": "りょうてを くちに あてて さけぶ まね",
+          "emoji": "📣"
+        }
+      ],
+      "phonics": {
+        "rule": "punctuation",
+        "focus": [
+          "\"",
+          "!"
+        ],
+        "sounds": [
+          "quotation marks",
+          "exclamation mark"
+        ],
+        "words": [
+          "\"Help!\" shouted the princess.",
+          "\"Run!\" cried the knight.",
+          "\"Who's there?\" asked the dragon.",
+          "\"Look out!\" yelled the little bird."
+        ],
+        "tipJa": "! や ? も \" の なかに 入れる。\"Help!\" shouted the princess.・\"Who's there?\" asked the dragon.。said の かわりに shouted（さけんだ）・cried・asked・yelled を つかうと、きもちが つたわるよ。"
+      },
+      "vocab": [
+        {
+          "en": "suddenly",
+          "ja": "とつぜん",
+          "emoji": "⚡",
+          "core": true
+        },
+        {
+          "en": "tower",
+          "ja": "とう",
+          "emoji": "🗼"
+        },
+        {
+          "en": "knight",
+          "ja": "きし",
+          "emoji": "🛡️"
+        },
+        {
+          "en": "music box",
+          "ja": "オルゴール",
+          "emoji": "🎶"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, We decided to write our own play. Today, we think about the problem in our story. Every good story has a surprise. Something happens, and nobody expects it. We start with one word. Suddenly. Say it with me. Suddenly, the lights went out. Great! Can you feel the surprise? Let's read the first page of our new script. \"The Princess and the Locked Tower. Long ago, a dragon took the town's music box. Now the town is quiet. Nobody sings, and nobody dances. The princess and the knight climb the tall tower to get it back. They walk up one hundred stairs. Suddenly, the lights go out. The tower is dark.\" Why is the town quiet? Because the dragon took the music box. Where do the princess and the knight go? They climb the tall tower. Now, phonics. Look at these lines. Help, shouted the princess. The exclamation mark goes inside the quotation marks. Run, cried the knight. Who's there, asked the dragon. The question mark goes inside, too. Look out, yelled the little bird. Now, what happened next? Let's think together!",
+      "conversation": {
+        "scene": "The friends think of the surprise in their story",
+        "sceneJa": "おはなしの とつぜんの できごとを かんがえる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "The princess and the knight climbed the tall tower. Then what?",
+            "ja": "おひめさまと きしは たかい とうを のぼった。それから？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Suddenly, the lights went out!",
+            "ja": "とつぜん、あかりが きえたの！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ooh, exciting! I'll shout, Help! in the dark.",
+            "ja": "わあ、どきどきする！ くらやみで「たすけて！」って さけぶね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And I'll ask, Who's there? in a big dragon voice.",
+            "ja": "それで ぼくは ドラゴンの おおきな こえで「だれだ？」って きくよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What happened next? Did they hear a sound?",
+            "ja": "つぎに なにが おきたの？ おとが きこえたの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great surprise! A good problem makes everyone want to know more.",
+            "ja": "すてきな びっくりね！ いい じけんが あると、みんな つづきを しりたく なるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いっしょに おはなしを つくろう。Suddenly, ～. で とつぜんの できごとを 1つ いって、What happened next? と きいて みよう",
+          "starterEn": "Hello, writer! I'm Lulu the rabbit. Our princess is in a tall tower. What happens suddenly?",
+          "targetExpressions": [
+            "Suddenly, the lights went out.",
+            "What happened next? ― They heard a strange sound.",
+            "The princess and the knight climbed the tall tower."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Suddenly, the lights went out.",
+          "What happened next? ― They heard a strange sound. / The princess and the knight climbed the tall tower.",
+          "\"Help!\" shouted the princess.・\"Run!\" cried the knight.・\"Who's there?\" asked the dragon.・\"Look out!\" yelled the little bird."
+        ]
+      }
+    },
+    {
+      "lessonNo": 763,
+      "world": 26,
+      "title": "Luckily…",
+      "titleJa": "よかった…",
+      "school": {
+        "grade": "中3",
+        "topic": "Luckily, a little bird helped them.：おはなしの「たすけ」を かんがえる。Luckily, ～. で うまく いった ことを いう",
+        "grammar": "Luckily, ～. / Who helped them? / How did it help?",
+        "expressions": [
+          {
+            "en": "Luckily, a little bird helped them.",
+            "ja": "よかった ことに、ちいさな ことりが ふたりを たすけた。",
+            "core": true
+          },
+          {
+            "en": "Who helped them? ― A little bird did.",
+            "ja": "だれが ふたりを たすけたの？ ― ちいさな ことりだよ。"
+          },
+          {
+            "en": "The bird found the key and brought a light.",
+            "ja": "ことりは かぎを みつけて、あかりを もって きた。"
+          }
+        ],
+        "testPoints": [
+          "Luckily, ～. で おはなしの たすけを いい、Who helped them? で だれが たすけたか きける",
+          "セリフの くとうてん（… は ことばが とぎれる・まを とる しるし。\"I'm… I'm scared,\" whispered the princess.）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Flap your wings like a little bird.",
+          "ja": "ことりの ように はねを ぱたぱた。",
+          "action": "りょううでを ぱたぱた うごかす",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Whisper, I'm scared.",
+          "ja": "「こわい」と ささやいて。",
+          "action": "ちいさな こえで ささやく",
+          "emoji": "🤫"
+        },
+        {
+          "en": "Find the key on the floor.",
+          "ja": "ゆかの かぎを みつけて。",
+          "action": "しゃがんで かぎを ひろう まね",
+          "emoji": "🔑"
+        },
+        {
+          "en": "Hold up the light. Now we can see!",
+          "ja": "あかりを たかく あげて。これで みえる！",
+          "action": "ランプを たかく かかげる まね",
+          "emoji": "🏮"
+        }
+      ],
+      "phonics": {
+        "rule": "punctuation",
+        "focus": [
+          "\"",
+          "…",
+          ","
+        ],
+        "sounds": [
+          "quotation marks",
+          "pause",
+          "comma"
+        ],
+        "words": [
+          "\"I'm… I'm scared,\" whispered the princess.",
+          "\"Wait… what's that sound?\" asked the knight.",
+          "\"The door is… locked!\" said the bird.",
+          "\"Luckily, I have a key,\" said the bird."
+        ],
+        "tipJa": "… は ことばが とぎれる・まを とる しるし。\"Wait… what's that sound?\" は … で すこし まって よむ。\"Luckily, I have a key,\" said the bird. の , も \" の なか。"
+      },
+      "vocab": [
+        {
+          "en": "luckily",
+          "ja": "よかった ことに・うんよく",
+          "emoji": "🍀",
+          "core": true
+        },
+        {
+          "en": "whisper",
+          "ja": "ささやく",
+          "emoji": "🤫"
+        },
+        {
+          "en": "key",
+          "ja": "かぎ",
+          "emoji": "🔑"
+        },
+        {
+          "en": "brought",
+          "ja": "もって きた（bring の すぎた かたち）",
+          "emoji": "🏮"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Suddenly, the lights went out. Oh no! The princess and the knight are in the dark tower. Now our story needs help. Something good happens. We start with another word. Luckily. Say it with me. Luckily, a little bird helped them. Wonderful! Suddenly brings a problem, and luckily brings help. Kiko plays the little bird. Let's read the next page of our script. \"The tower is dark and cold. The princess whispers, 'I'm... I'm scared.' Then they hear a soft sound. Tweet, tweet! Luckily, a little bird flies in through the window. It finds a shiny key on the floor and brings a small light. Now the princess and the knight can see the stairs.\" What did the bird find? A shiny key. What did it bring? A small light. Now, phonics. Look at the three dots. They show a pause. I'm, I'm scared, whispered the princess. Wait, what's that sound, asked the knight. The door is, locked, said the bird. Stop a little at the dots. Luckily, I have a key, said the bird. Let's read our lines with little pauses!",
+      "conversation": {
+        "scene": "The friends think of who helps in the story",
+        "sceneJa": "おはなしで だれが たすけて くれるか かんがえる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "The princess is in the dark. I'm… I'm scared!",
+            "ja": "おひめさまは くらやみの なか。わ、わたし… こわい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Luckily, a little bird helped them. That's me!",
+            "ja": "よかった ことに、ちいさな ことりが たすけたの。それが わたし！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How did the bird help them?",
+            "ja": "ことりは どうやって たすけたの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The bird found the key and brought a light.",
+            "ja": "ことりは かぎを みつけて、あかりを もって きたの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Wait… what's that sound? Tweet, tweet! It's the bird!",
+            "ja": "まって… あの おとは なに？ ピッ、ピッ！ ことりだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Lovely! First, a problem. Then, luckily, some help. That's a good story.",
+            "ja": "すてき！ まず じけん。それから うまい ぐあいに たすけ。いい おはなしね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と おはなしの たすけを かんがえよう。Luckily, ～. で だれが どう たすけたか いって、Who helped them? と きいて みよう",
+          "starterEn": "Tweet, tweet! I'm the little bird in your play. The princess is in the dark tower. How can I help?",
+          "targetExpressions": [
+            "Luckily, a little bird helped them.",
+            "Who helped them? ― A little bird did.",
+            "The bird found the key and brought a light."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Luckily, a little bird helped them.",
+          "Who helped them? ― A little bird did. / The bird found the key and brought a light.",
+          "\"I'm… I'm scared,\" whispered the princess.・\"Wait… what's that sound?\" asked the knight.・\"The door is… locked!\" said the bird.・\"Luckily, I have a key,\" said the bird."
+        ]
+      }
+    },
+    {
+      "lessonNo": 764,
+      "world": 26,
+      "title": "They Tried to Escape",
+      "titleJa": "にげようと した",
+      "school": {
+        "grade": "中3",
+        "topic": "They tried to escape, but the door was locked.：おはなしの「やまば」を かんがえる。tried to ～ で やって みた ことを いう",
+        "grammar": "They tried to ～, but ～. / The dragon said, \"～.\"",
+        "expressions": [
+          {
+            "en": "They tried to escape, but the door was locked.",
+            "ja": "ふたりは にげようと したけど、ドアに かぎが かかって いた。",
+            "core": true
+          },
+          {
+            "en": "I tried to open it, but it was too heavy.",
+            "ja": "あけようと したけど、おもすぎたよ。"
+          },
+          {
+            "en": "Why did the dragon take the music box? ― Because he was lonely.",
+            "ja": "どうして ドラゴンは オルゴールを とったの？ ― さびしかったからだよ。"
+          }
+        ],
+        "testPoints": [
+          "They tried to ～, but ～. で やって みたけど うまく いかなかった ことを いい、Why ～? ― Because ～. で りゆうを いえる",
+          "セリフの くとうてん（\"We're free!\" shouted the friends.・The dragon said, \"Please stay.\" の , と “ ” の いち）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Push the heavy door. Push!",
+          "ja": "おもい ドアを おして。えいっ！",
+          "action": "りょうてで ドアを おす まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Shake the door handle.",
+          "ja": "ドアの とってを がちゃがちゃ して。",
+          "action": "とってを まわす まね",
+          "emoji": "🔒"
+        },
+        {
+          "en": "Turn the key. Click!",
+          "ja": "かぎを まわして。カチッ！",
+          "action": "かぎを まわす まね",
+          "emoji": "🔑"
+        },
+        {
+          "en": "Jump and shout, We're free!",
+          "ja": "とびあがって「じゆうだ！」と さけんで。",
+          "action": "ばんざいして ジャンプする",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "punctuation",
+        "focus": [
+          "\"",
+          "!",
+          "…",
+          ","
+        ],
+        "sounds": [
+          "quotation marks",
+          "exclamation mark",
+          "pause",
+          "comma"
+        ],
+        "words": [
+          "\"We're free!\" shouted the friends.",
+          "\"Is anyone there?\" called the princess.",
+          "\"Oh… thank you,\" said the dragon.",
+          "The dragon said, \"Please stay.\""
+        ],
+        "tipJa": "まとめて つかおう: \"We're free!\"（! は \" の なか）・\"Is anyone there?\"（? も なか）・\"Oh… thank you,\"（… で まを とる）・The dragon said, \"Please stay.\"（said が まえなら , の あとに \"）。"
+      },
+      "vocab": [
+        {
+          "en": "escape",
+          "ja": "にげる",
+          "emoji": "🏃",
+          "core": true
+        },
+        {
+          "en": "locked",
+          "ja": "かぎが かかった",
+          "emoji": "🔒"
+        },
+        {
+          "en": "lonely",
+          "ja": "さびしい",
+          "emoji": "🥺"
+        },
+        {
+          "en": "gate",
+          "ja": "もん",
+          "emoji": "⛩️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Luckily, a little bird helped them. Today, we write the most exciting part of the story. The princess and the knight want to run away from the dark tower. They try, but there is a problem. We say, They tried to escape, but the door was locked. Say it with me. They tried to escape, but the door was locked. Excellent! Tried to means they did their best, but it didn't work. Let's read the big scene. \"The princess and the knight run down the stairs. They try to open the big gate, but it is locked. Then the little bird gives them the key. Click! The gate opens. 'We're free!' they shout. But the dragon flies down. 'Please stay,' he says in a small voice. 'I took the music box because I was lonely.'\" Why did the dragon take the music box? Because he was lonely. What did he say? Please stay. Now, phonics. We're free, shouted the friends. Is anyone there, called the princess. Oh, thank you, said the dragon, with a little pause after oh. The dragon said, Please stay. The comma comes before the quotation marks. What a scene!",
+      "conversation": {
+        "scene": "The friends write the most exciting scene",
+        "sceneJa": "おはなしの いちばん どきどきする ばめんを かく",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "They tried to escape, but the door was locked!",
+            "ja": "ふたりは にげようと したけど、ドアに かぎが かかって いた！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I tried to open it, but it was too heavy. Is anyone there?",
+            "ja": "あけようと したけど、おもすぎたの。だれか いますか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Luckily, the bird has the key. Click! The gate is open.",
+            "ja": "よかった、ことりが かぎを もって いるよ。カチッ！ もんが あいた。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm the dragon. Please stay. I took the music box because I was lonely.",
+            "ja": "ぼくは ドラゴン。いかないで。さびしかったから オルゴールを とったんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh… you were lonely? Then come with us!",
+            "ja": "あ… さびしかったの？ じゃあ いっしょに おいでよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a kind ending! The dragon isn't bad. He just needed friends.",
+            "ja": "なんて やさしい おわりかた！ ドラゴンは わるくないのね。ともだちが ほしかったのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の ドラゴンと はなそう。They tried to ～, but ～. で ばめんを せつめいして、Why did you take the music box? と りゆうを きいて みよう",
+          "starterEn": "Roar… I'm the dragon in your play. I'm in my tall tower. Why are you here?",
+          "targetExpressions": [
+            "They tried to escape, but the door was locked.",
+            "I tried to open it, but it was too heavy.",
+            "Why did the dragon take the music box? ― Because he was lonely."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "They tried to escape, but the door was locked.",
+          "I tried to open it, but it was too heavy. / Why did the dragon take the music box? ― Because he was lonely.",
+          "\"We're free!\" shouted the friends.・\"Is anyone there?\" called the princess.・\"Oh… thank you,\" said the dragon.・The dragon said, \"Please stay.\""
+        ]
+      }
+    },
+    {
+      "lessonNo": 765,
+      "world": 26,
+      "title": "Our Story Outline",
+      "titleJa": "おはなしの ながれ",
+      "school": {
+        "grade": "中3",
+        "topic": "Our story has a beginning, a problem, a solution, and an ending.：おはなしの ながれ（はじめ・じけん・かいけつ・おわり）を はっぴょうする（まとめ）",
+        "grammar": "Our story has ～. / At the beginning, ～. / Suddenly, ～. / Luckily, ～. / In the end, ～.",
+        "expressions": [
+          {
+            "en": "Our story has a beginning, a problem, a solution, and an ending.",
+            "ja": "わたしたちの おはなしには、はじめ、じけん、かいけつ、おわりが あるよ。",
+            "core": true
+          },
+          {
+            "en": "At the beginning, the dragon took the music box.",
+            "ja": "はじめに、ドラゴンが オルゴールを とった。"
+          },
+          {
+            "en": "In the end, they became friends.",
+            "ja": "さいごに、みんなは ともだちに なった。"
+          }
+        ],
+        "testPoints": [
+          "At the beginning / Suddenly / Luckily / In the end を つかって、おはなしの ながれを じゅんばんに せつめいできる",
+          "ふりかえり: セリフの くとうてん（! , … と “ ” の いち）・-ing の きもちの ことば（amazing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up one finger. The beginning!",
+          "ja": "ゆびを 1ぽん たてて。はじめ！",
+          "action": "ゆびを 1ぽん たてる",
+          "emoji": "1️⃣"
+        },
+        {
+          "en": "Hold up two fingers. The problem!",
+          "ja": "ゆびを 2ほん たてて。じけん！",
+          "action": "ゆびを 2ほん たてて こまった かお",
+          "emoji": "2️⃣"
+        },
+        {
+          "en": "Hold up three fingers. The solution!",
+          "ja": "ゆびを 3ぼん たてて。かいけつ！",
+          "action": "ゆびを 3ぼん たてて にっこり",
+          "emoji": "3️⃣"
+        },
+        {
+          "en": "Open your arms wide. The ending!",
+          "ja": "りょうてを ひろげて。おわり！",
+          "action": "りょううでを おおきく ひろげる",
+          "emoji": "🌈"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "!",
+          ",",
+          "…",
+          "-ing"
+        ],
+        "sounds": [
+          "exclamation mark",
+          "comma",
+          "pause",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "\"Help!\" shouted the princess.",
+          "\"Let's write a play,\" said Riko.",
+          "\"The door is… locked!\" said the bird.",
+          "amazing"
+        ],
+        "tipJa": "ふりかえり: \"Help!\" shouted the princess.（! は \" の なか）・\"Let's write a play,\" said Riko.（, も なか）・\"The door is… locked!\"（… で まを とる）・amazing（amaze の e を とって ing）。"
+      },
+      "vocab": [
+        {
+          "en": "beginning",
+          "ja": "はじめ",
+          "emoji": "🌅",
+          "core": true
+        },
+        {
+          "en": "problem",
+          "ja": "じけん・こまった こと",
+          "emoji": "⚠️"
+        },
+        {
+          "en": "solution",
+          "ja": "かいけつ",
+          "emoji": "💡"
+        },
+        {
+          "en": "ending",
+          "ja": "おわり",
+          "emoji": "🏁"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, They tried to escape, but the door was locked. Now our story is ready. Today, we show the whole story to Mr. Hoot. A good story has four parts. Say it with me. Our story has a beginning, a problem, a solution, and an ending. Great! Let's read our story outline on the big board. \"Beginning: A lonely dragon takes the town's music box. The princess and the knight climb the tower. Problem: Suddenly, the lights go out, and the gate is locked. Solution: Luckily, a little bird finds the key and brings a light. Ending: The dragon says sorry, and they all play music together.\" What is the problem? The lights go out, and the gate is locked. What is the solution? A little bird finds the key. And the ending? They play music together. Now, phonics. Let's look back. Help, shouted the princess. The exclamation mark goes inside. Let's write a play, said Riko. The comma goes inside, too. The door is, locked, said the bird. Pause at the dots. And amazing. Amaze, amazing. Mr. Hoot says our story is amazing!",
+      "conversation": {
+        "scene": "The friends present their story outline to Mr. Hoot",
+        "sceneJa": "フートさんに おはなしの ながれを はっぴょうする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Our story has a beginning, a problem, a solution, and an ending.",
+            "ja": "ぼくたちの おはなしには、はじめ、じけん、かいけつ、おわりが あるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "At the beginning, the dragon took the music box.",
+            "ja": "はじめに、ドラゴンが オルゴールを とったの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Suddenly, the lights went out. Luckily, the little bird helped them.",
+            "ja": "とつぜん、あかりが きえた。よかった ことに、ことりが たすけたの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "In the end, they became friends. That's my favorite part!",
+            "ja": "さいごに、みんなは ともだちに なった。そこが いちばん すき！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Mr. Hoot is smiling. He says, This story is amazing!",
+            "ja": "フートさんが にこにこ して いるわ。「この おはなしは すばらしい！」って。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の フートさんに、おはなしの ながれを はっぴょうしよう。At the beginning / Suddenly / Luckily / In the end を じゅんばんに つかってね",
+          "starterEn": "Hoo! I'm Mr. Hoot. I heard you wrote a new play. Can you tell me the story from the beginning?",
+          "targetExpressions": [
+            "Our story has a beginning, a problem, a solution, and an ending.",
+            "At the beginning, the dragon took the music box.",
+            "In the end, they became friends."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Our story has a beginning, a problem, a solution, and an ending.",
+          "At the beginning, the dragon took the music box. / In the end, they became friends.",
+          "\"Help!\" shouted the princess.・\"Let's write a play,\" said Riko.・\"The door is… locked!\" said the bird.・amazing"
+        ]
+      }
+    },
+    {
+      "lessonNo": 766,
+      "world": 26,
+      "title": "Say It with Feeling",
+      "titleJa": "きもちを こめて いおう",
+      "school": {
+        "grade": "中3",
+        "topic": "Say it with feeling.：セリフに きもちを こめる れんしゅう。うれしい・かなしい・びっくりの こえを つかいわける",
+        "grammar": "Say it with feeling. / Say it like you're ～. / How does she feel?",
+        "expressions": [
+          {
+            "en": "Say it with feeling.",
+            "ja": "きもちを こめて いって。",
+            "core": true
+          },
+          {
+            "en": "Try this line: \"I'm free!\"",
+            "ja": "この セリフを いって みて。「じゆうだ！」"
+          },
+          {
+            "en": "How does the princess feel here? ― She feels really happy.",
+            "ja": "ここで おひめさまは どんな きもち？ ― とても うれしいんだよ。"
+          }
+        ],
+        "testPoints": [
+          "Say it with feeling. / How does she feel here? で セリフの きもちを かんがえて、こえを かえて いえる",
+          "つよく いう ことばで いみが かわる（I want the RED cape は「あおでは なく あかい マント」）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Say, I'm free! Jump up high.",
+          "ja": "「じゆうだ！」と いって たかく ジャンプ。",
+          "action": "ばんざいして ジャンプする",
+          "emoji": "🕊️"
+        },
+        {
+          "en": "Say it again in a sad voice.",
+          "ja": "かなしい こえで もう いちど。",
+          "action": "かたを おとして ちいさな こえで いう",
+          "emoji": "😢"
+        },
+        {
+          "en": "Say it in a surprised voice.",
+          "ja": "びっくりした こえで いって。",
+          "action": "めを おおきく ひらいて いう",
+          "emoji": "😮"
+        },
+        {
+          "en": "Put your hand on your heart.",
+          "ja": "むねに てを あてて。",
+          "action": "むねに てを あてる",
+          "emoji": "💗"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "RED",
+          "SIX",
+          "OPEN",
+          "TWO"
+        ],
+        "sounds": [
+          "RED",
+          "SIX",
+          "OPEN",
+          "TWO"
+        ],
+        "words": [
+          "I want the RED cape",
+          "The show starts at SIX",
+          "Can you OPEN the door",
+          "We need TWO chairs"
+        ],
+        "tipJa": "おおもじの ことばを つよく いうと、そこが だいじだと つたわる。I want the RED cape.（あおでは なく あか）・The show starts at SIX.（6じ！）・Can you OPEN the door?（あけて）・We need TWO chairs.（2つ）。"
+      },
+      "vocab": [
+        {
+          "en": "feeling",
+          "ja": "きもち",
+          "emoji": "💗",
+          "core": true
+        },
+        {
+          "en": "free",
+          "ja": "じゆうな",
+          "emoji": "🕊️"
+        },
+        {
+          "en": "line",
+          "ja": "セリフ",
+          "emoji": "💬"
+        },
+        {
+          "en": "voice",
+          "ja": "こえ",
+          "emoji": "🗣️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Our story has a beginning, a problem, a solution, and an ending. Now it's time to practice our lines. Mr. Hoot says, Words are not enough. Say it with feeling. Say it with me. Say it with feeling. Great! When the gate opens, the princess says, I'm free! Is she happy or sad? She's very happy! So she says it with a big, bright voice. Let's read Mr. Hoot's acting tips. \"Acting Tips from Mr. Hoot. One: Think about the feeling first. Is your character happy, sad, angry, or surprised? Two: Use your face and your body, too. Three: Change your voice. Happy lines are high and bright. Sad lines are low and slow. Four: Listen to the echoes. They love real feelings!\" What should you think about first? The feeling. How are sad lines? Low and slow. Now, phonics. Which word is strong? I want the RED cape. Not the blue one! The show starts at SIX. Not five! Can you OPEN the door? Not close it! We need TWO chairs. Not three! Now, say your lines with feeling!",
+      "conversation": {
+        "scene": "The friends practice saying lines with feeling",
+        "sceneJa": "セリフに きもちを こめて れんしゅうする",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm free. Hmm, that sounds a little boring.",
+            "ja": "じゆうだ。うーん、ちょっと たいくつな かんじ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Say it with feeling. How does the princess feel here?",
+            "ja": "きもちを こめて いって。ここで おひめさまは どんな きもち？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "She feels really happy. She was in the dark tower for a long time!",
+            "ja": "とても うれしいんだよ。ずっと くらい とうに いたんだもん！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Okay. I'm free! I'm free!",
+            "ja": "わかった。じゆうだ！ じゆうだ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Listen! The echo said, Free… free… It's a little louder now!",
+            "ja": "きいて！ こだまが「じゆう… じゆう…」って。すこし おおきく なったよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow, Riko! I could feel it, too.",
+            "ja": "すごい、リコ！ ぼくにも きもちが つたわったよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の フートさんと セリフの れんしゅうを しよう。How does the princess feel here? と きもちを かんがえて、きもちを こめて セリフを いって みよう",
+          "starterEn": "Hoo! I'm Mr. Hoot. Let's practice the princess's line, I'm free! How should we say it?",
+          "targetExpressions": [
+            "Say it with feeling.",
+            "Try this line: \"I'm free!\"",
+            "How does the princess feel here? ― She feels really happy."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Say it with feeling.",
+          "Try this line: \"I'm free!\" / How does the princess feel here? ― She feels really happy.",
+          "I want the RED cape・The show starts at SIX・Can you OPEN the door・We need TWO chairs"
+        ]
+      }
+    },
+    {
+      "lessonNo": 767,
+      "world": 26,
+      "title": "Speak Louder, Please",
+      "titleJa": "もっと おおきな こえで",
+      "school": {
+        "grade": "中3",
+        "topic": "Speak louder, please. The people at the back can't hear.：こえの おおきさと はやさの れんしゅう",
+        "grammar": "Speak louder, please. / Speak more slowly. / Can you hear me?",
+        "expressions": [
+          {
+            "en": "Speak louder, please. The people at the back can't hear.",
+            "ja": "もっと おおきな こえで おねがい。うしろの ひとが きこえないよ。",
+            "core": true
+          },
+          {
+            "en": "You're speaking too fast. Speak more slowly.",
+            "ja": "はなすのが はやすぎるよ。もっと ゆっくり はなして。"
+          },
+          {
+            "en": "Can you hear me at the back? ― Yes, loud and clear!",
+            "ja": "うしろまで きこえる？ ― うん、はっきり きこえるよ！"
+          }
+        ],
+        "testPoints": [
+          "Speak louder, please. / Speak more slowly. で こえの アドバイスを して、Can you hear me? で たしかめられる",
+          "つよく いう ことばで いみが かわる（SHE plays the princess は「ほかの ひとでは なく かのじょが」）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand at the back of the theater.",
+          "ja": "げきじょうの いちばん うしろに たって。",
+          "action": "うしろに さがって たつ",
+          "emoji": "🏛️"
+        },
+        {
+          "en": "Cup your hand to your ear.",
+          "ja": "てを みみに あてて。",
+          "action": "てを まるめて みみに あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Say hello in a big voice.",
+          "ja": "おおきな こえで ハロー。",
+          "action": "おなかから おおきな こえを だす",
+          "emoji": "📢"
+        },
+        {
+          "en": "Now say it slowly. Hel… lo…",
+          "ja": "こんどは ゆっくり。ハ… ロー…",
+          "action": "ゆっくり くちを うごかして いう",
+          "emoji": "🐢"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "SHE",
+          "RIKO",
+          "MY",
+          "MONDAY"
+        ],
+        "sounds": [
+          "SHE",
+          "RIKO",
+          "MY",
+          "MONDAY"
+        ],
+        "words": [
+          "SHE plays the princess",
+          "RIKO sang this song",
+          "This is MY line",
+          "We practice on MONDAY"
+        ],
+        "tipJa": "SHE plays the princess.（ほかの ひとでは なく かのじょ）・RIKO sang this song.（リコが）・This is MY line.（わたしの セリフ）・We practice on MONDAY.（げつようび）。つよく いう ことばは たかく、ながく、はっきり。"
+      },
+      "vocab": [
+        {
+          "en": "louder",
+          "ja": "もっと おおきな こえで",
+          "emoji": "📢",
+          "core": true
+        },
+        {
+          "en": "back",
+          "ja": "うしろ",
+          "emoji": "🔙"
+        },
+        {
+          "en": "slowly",
+          "ja": "ゆっくり",
+          "emoji": "🐢"
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Say it with feeling. Today, Mr. Hoot sits at the very back of the theater. He listens to Riko's lines, but he can't hear her well. Her voice is too small. So, what does he say? Speak louder, please. The people at the back can't hear. Say it with me. Speak louder, please. The people at the back can't hear. Good job! And if someone talks too fast, we say, Speak more slowly. Let's read the sign next to the stage. \"Voice Practice. Stand up tall and breathe in deeply. Speak from your stomach, not your throat. Look at the people at the back and send your voice to them. Don't hurry. Slow and clear is better than fast and quiet. Big voice, big feelings!\" Where should you look? At the people at the back. Which is better, fast and quiet or slow and clear? Slow and clear. Now, phonics. SHE plays the princess. She, not someone else! RIKO sang this song. Riko, not Haru. This is MY line. Mine, not yours! We practice on MONDAY. Monday, not Tuesday. Now, big voices, everyone!",
+      "conversation": {
+        "scene": "The friends practice speaking loudly and clearly",
+        "sceneJa": "おおきな こえで はっきり はなす れんしゅう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Is anyone there? Is anyone there?",
+            "ja": "だれか いますか？ だれか いますか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Speak louder, please, Riko! The people at the back can't hear.",
+            "ja": "リコ、もっと おおきな こえで！ うしろの ひとが きこえないよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And I'm speaking too fast. Roar-roar-roar!",
+            "ja": "それに ぼくは はなすのが はやすぎる。ガオガオガオ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Speak more slowly, Birimo. Breathe in and say each word clearly.",
+            "ja": "ビリモ、もっと ゆっくり。いきを すって、ひとつずつ はっきり いってね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Can you hear me at the back?",
+            "ja": "うしろまで きこえる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, loud and clear! And the echoes are getting stronger!",
+            "ja": "うん、はっきり きこえる！ それに こだまも つよく なって きたよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の ルルと こえの れんしゅうを しよう。Speak louder, please. / Speak more slowly. で アドバイスして、Can you hear me? と きいて みよう",
+          "starterEn": "Hi, it's Lulu the rabbit! I'm on the stage, and you're at the back. Hello… can you hear me?",
+          "targetExpressions": [
+            "Speak louder, please. The people at the back can't hear.",
+            "You're speaking too fast. Speak more slowly.",
+            "Can you hear me at the back? ― Yes, loud and clear!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Speak louder, please. The people at the back can't hear.",
+          "You're speaking too fast. Speak more slowly. / Can you hear me at the back? ― Yes, loud and clear!",
+          "SHE plays the princess・RIKO sang this song・This is MY line・We practice on MONDAY"
+        ]
+      }
+    },
+    {
+      "lessonNo": 768,
+      "world": 26,
+      "title": "Which Word Is Important?",
+      "titleJa": "どの ことばが だいじ？",
+      "school": {
+        "grade": "中3",
+        "topic": "I didn't eat YOUR cake.：つよく いう ことばで いみが かわる。がくやで きえた ケーキの おはなし",
+        "grammar": "I didn't ～ YOUR ～. / Which word is important? / Say ～ strongly.",
+        "expressions": [
+          {
+            "en": "I didn't eat YOUR cake.",
+            "ja": "あなたの ケーキは たべて いないよ。",
+            "core": true
+          },
+          {
+            "en": "Which word is important? ― YOUR is important.",
+            "ja": "どの ことばが だいじ？ ― YOUR が だいじだよ。"
+          },
+          {
+            "en": "So whose cake did you eat? ― I ate MY cake!",
+            "ja": "じゃあ だれの ケーキを たべたの？ ― じぶんの ケーキを たべたんだ！"
+          }
+        ],
+        "testPoints": [
+          "Which word is important? で つよく いう ことばを かんがえ、つよく いう ところを かえて いみの ちがいを つたえられる",
+          "つよく いう ことばで いみが かわる（I didn't eat YOUR cake・I didn't say SHE took it）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the empty plate.",
+          "ja": "からっぽの おさらを みて。",
+          "action": "おさらを のぞきこむ",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "Shake your head. Not me!",
+          "ja": "くびを ふって。ぼくじゃ ない！",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Clap on the strong word.",
+          "ja": "つよい ことばで てを たたいて。",
+          "action": "だいじな ことばで 1かい てを たたく",
+          "emoji": "👏"
+        },
+        {
+          "en": "Wipe the cream off your face.",
+          "ja": "かおの クリームを ふいて。",
+          "action": "くちの まわりを ふく まね",
+          "emoji": "🍰"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "YOUR",
+          "SHE",
+          "LAST",
+          "BROTHER"
+        ],
+        "sounds": [
+          "YOUR",
+          "SHE",
+          "LAST",
+          "BROTHER"
+        ],
+        "words": [
+          "I didn't eat YOUR cake",
+          "I didn't say SHE took it",
+          "Birimo ate the LAST cookie",
+          "My BROTHER made this crown"
+        ],
+        "tipJa": "おなじ 文でも つよく いう ところで いみが かわる。I didn't eat YOUR cake.（あなたの ケーキは たべて いない）・I didn't say SHE took it.（ほかの ひとが とったと いった）。"
+      },
+      "vocab": [
+        {
+          "en": "important",
+          "ja": "だいじな",
+          "emoji": "❗",
+          "core": true
+        },
+        {
+          "en": "whose",
+          "ja": "だれの",
+          "emoji": "❓"
+        },
+        {
+          "en": "backstage",
+          "ja": "がくや・ぶたいうら",
+          "emoji": "🎭"
+        },
+        {
+          "en": "strongly",
+          "ja": "つよく",
+          "emoji": "💪"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Speak louder, please. The people at the back can't hear. Today, something funny happened backstage. Ms. Emma's cake was on the table. Now it's gone, and Birimo has cream on his face! Birimo says, I didn't eat YOUR cake. Listen. Your is strong. So what does he mean? He ate a different cake! Say it with me. I didn't eat YOUR cake. Great! One sentence can mean different things. It depends on the strong word. Let's read the note on the table. \"Backstage Snack Table. Two cakes are here today. The big chocolate cake is for Ms. Emma. The small strawberry cake is for Birimo. Please eat only your own cake. And please share the cookies. There are six cookies for the whole team. Thank you! Mr. Hoot.\" Whose cake is the strawberry one? Birimo's. How many cookies are there? Six. Now, phonics. I didn't eat YOUR cake. Strong on your. I didn't say SHE took it. Strong on she. Birimo ate the LAST cookie. The last one! My BROTHER made this crown. Brother, not sister. Which word is important? You decide!",
+      "conversation": {
+        "scene": "Birimo explains the missing cake backstage",
+        "sceneJa": "がくやで きえた ケーキに ついて ビリモが せつめいする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Birimo! There's cream on your face. Did you eat Ms. Emma's cake?",
+            "ja": "ビリモ！ かおに クリームが ついてるよ。エマ先生の ケーキを たべたの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I didn't eat YOUR cake, Ms. Emma!",
+            "ja": "エマ先生の ケーキは たべて いないよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Which word is important? YOUR is important.",
+            "ja": "どの ことばが だいじ？ YOUR が だいじだね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "So whose cake did you eat?",
+            "ja": "じゃあ だれの ケーキを たべたの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I ate MY cake! The strawberry one. But… I ate the LAST cookie, too.",
+            "ja": "じぶんの ケーキを たべたんだ！ いちごの ほう。でも… さいごの クッキーも たべちゃった。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Thank you for being honest. Next time, let's share.",
+            "ja": "あはは！ しょうじきに いって くれて ありがとう。つぎは わけっこ しようね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と つよく いう ことばの ゲームを しよう。AI の 文を きいて Which word is important? と きき、つよく いう ところを かえて いみの ちがいを はなそう",
+          "starterEn": "Hoo! I'm Mr. Hoot. Listen to this: I didn't eat YOUR cake. Which word is important?",
+          "targetExpressions": [
+            "I didn't eat YOUR cake.",
+            "Which word is important? ― YOUR is important.",
+            "So whose cake did you eat? ― I ate MY cake!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I didn't eat YOUR cake.",
+          "Which word is important? ― YOUR is important. / So whose cake did you eat? ― I ate MY cake!",
+          "I didn't eat YOUR cake・I didn't say SHE took it・Birimo ate the LAST cookie・My BROTHER made this crown"
+        ]
+      }
+    },
+    {
+      "lessonNo": 769,
+      "world": 26,
+      "title": "Stage Directions",
+      "titleJa": "ト書きを よもう",
+      "school": {
+        "grade": "中3",
+        "topic": "Walk to the center. Then, look up.：だいほんの ト書き（うごきの せつめい）を よんで うごく",
+        "grammar": "Walk to ～. Then, ～. / Enter from the left. / Exit to the right.",
+        "expressions": [
+          {
+            "en": "Walk to the center. Then, look up.",
+            "ja": "まんなかまで あるいて。それから、うえを みて。",
+            "core": true
+          },
+          {
+            "en": "Enter from the left, and exit to the right.",
+            "ja": "ひだりから でて きて、みぎへ さがって。"
+          },
+          {
+            "en": "What does it say here? ― It says, The princess cries quietly.",
+            "ja": "ここには なんて かいて ある？ ―「おひめさまは しずかに なく」って かいて あるよ。"
+          }
+        ],
+        "testPoints": [
+          "Walk to the center. Then, ～. / Enter from the left. の ような ト書きを よんで、そのとおりに うごける",
+          "つよく いう ことばで いみが かわる（The bird FOUND the key は「なくしたのでは なく みつけた」）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Enter from the left.",
+          "ja": "ひだりから でて きて。",
+          "action": "ひだりがわから あるいて でる",
+          "emoji": "⬅️"
+        },
+        {
+          "en": "Walk to the center. Then, look up.",
+          "ja": "まんなかまで あるいて。それから うえを みて。",
+          "action": "まんなかで とまって うえを みあげる",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "Kneel down slowly.",
+          "ja": "ゆっくり ひざを ついて。",
+          "action": "ゆっくり ひざまずく",
+          "emoji": "🧎"
+        },
+        {
+          "en": "Exit to the right.",
+          "ja": "みぎへ さがって。",
+          "action": "みぎがわへ あるいて さがる",
+          "emoji": "➡️"
+        }
+      ],
+      "phonics": {
+        "rule": "stress",
+        "focus": [
+          "FOUND",
+          "TOMORROW",
+          "KNIGHT",
+          "BLUE"
+        ],
+        "sounds": [
+          "FOUND",
+          "TOMORROW",
+          "KNIGHT",
+          "BLUE"
+        ],
+        "words": [
+          "The bird FOUND the key",
+          "I'll bring the props TOMORROW",
+          "Haru was the KNIGHT",
+          "I like your BLUE hat"
+        ],
+        "tipJa": "The bird FOUND the key.（なくしたのでは なく みつけた）・I'll bring the props TOMORROW.（あした）・Haru was the KNIGHT.（きしの やく）・I like your BLUE hat.（あおい ぼうし）。"
+      },
+      "vocab": [
+        {
+          "en": "center",
+          "ja": "まんなか",
+          "emoji": "🎯",
+          "core": true
+        },
+        {
+          "en": "enter",
+          "ja": "（ぶたいに）でる・はいる",
+          "emoji": "🚶"
+        },
+        {
+          "en": "exit",
+          "ja": "（ぶたいから）さがる・でる",
+          "emoji": "🚪"
+        },
+        {
+          "en": "stage directions",
+          "ja": "ト書き",
+          "emoji": "📋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I didn't eat YOUR cake. Today, we read something special in our script. Some words are not for saying. They tell actors how to move. We call them stage directions. Here is one. Walk to the center. Then, look up. Say it with me. Walk to the center. Then, look up. Good! We also say enter for coming onto the stage and exit for leaving. Let's read a page with stage directions. They are in brackets. \"Scene Three. The top of the tower. (The knight enters from the left. He walks to the center. Then, he looks up.) Knight: 'The dragon must be up there.' (The little bird flies in from the right. It drops a key.) Knight: 'Thank you, little bird!' (The knight picks up the key and exits to the right.)\" Where does the knight enter from? The left. What does the bird drop? A key. Now, phonics. The bird FOUND the key. Found, not lost! I'll bring the props TOMORROW. Tomorrow, not today. Haru was the KNIGHT. The knight, not the dragon. I like your BLUE hat. Blue, not red. Let's follow the stage directions!",
+      "conversation": {
+        "scene": "The friends read and act out stage directions",
+        "sceneJa": "だいほんの ト書きを よんで うごいて みる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "What does it say here?",
+            "ja": "ここには なんて かいて ある？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It says, The knight enters from the left. Walk to the center. Then, look up.",
+            "ja": "「きしは ひだりから でる。まんなかまで あるいて。それから うえを みる」って。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay. I'm walking to the center… and I'm looking up. The dragon must be up there!",
+            "ja": "わかった。まんなかまで あるいて… うえを みる。ドラゴンは きっと うえに いる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Next, the little bird flies in from the right and drops the key.",
+            "ja": "つぎは、ことりが みぎから とんで きて、かぎを おとすよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Kiko, you exit to the right. Not the left!",
+            "ja": "キコ、みぎへ さがるんだよ。ひだりじゃ ないよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Perfect! When you follow the stage directions, the scene looks great.",
+            "ja": "かんぺき！ ト書きの とおりに うごくと、ばめんが とても よく みえるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI の フートさんが ト書きを よみあげるよ。そのとおりに うごいて、What does it say here? と つぎの ト書きを きいて みよう",
+          "starterEn": "Hoo! I'm Mr. Hoot, the director. Let's practice stage directions. Are you ready? Enter from the left!",
+          "targetExpressions": [
+            "Walk to the center. Then, look up.",
+            "Enter from the left, and exit to the right.",
+            "What does it say here? ― It says, The princess cries quietly."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Walk to the center. Then, look up.",
+          "Enter from the left, and exit to the right. / What does it say here? ― It says, The princess cries quietly.",
+          "The bird FOUND the key・I'll bring the props TOMORROW・Haru was the KNIGHT・I like your BLUE hat"
+        ]
+      }
+    },
+    {
+      "lessonNo": 770,
+      "world": 26,
+      "title": "Scene Practice",
+      "titleJa": "ばめんの れんしゅう",
+      "school": {
+        "grade": "中3",
+        "topic": "Who's there?：ばめんごとに れんしゅうする（まとめ）。きもち・こえ・つよい ことば・ト書きを ぜんぶ つかう",
+        "grammar": "Who's there? ― It's me, ～! / Let's try that scene again. / From the top!",
+        "expressions": [
+          {
+            "en": "Who's there?",
+            "ja": "だれ？（だれか いるの？）",
+            "core": true
+          },
+          {
+            "en": "It's me, your friend!",
+            "ja": "ぼくだよ、きみの ともだちだよ！"
+          },
+          {
+            "en": "Let's try that scene again. ― From the top!",
+            "ja": "その ばめんを もう いちど やろう。― さいしょから！"
+          }
+        ],
+        "testPoints": [
+          "Who's there? ― It's me, your friend! の やりとりを きもちを こめて いい、Let's try that scene again. で れんしゅうを すすめられる",
+          "ふりかえり: つよく いう ことば（I didn't eat YOUR cake・The show starts at SIX）・セリフの くとうてん（? と … は “ ” の なか）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Knock on the door. Knock, knock.",
+          "ja": "ドアを ノックして。コン、コン。",
+          "action": "こぶしで ドアを たたく まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Ask, Who's there? in a deep voice.",
+          "ja": "ひくい こえで「だれだ？」と きいて。",
+          "action": "ひくい こえで きく",
+          "emoji": "🐉"
+        },
+        {
+          "en": "Smile and wave. It's me!",
+          "ja": "にっこり して てを ふって。ぼくだよ！",
+          "action": "えがおで てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Go back to your place. From the top!",
+          "ja": "もとの ばしょに もどって。さいしょから！",
+          "action": "はじめの いちに もどる",
+          "emoji": "🔁"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "YOUR",
+          "SIX",
+          "\"",
+          "…"
+        ],
+        "sounds": [
+          "YOUR",
+          "SIX",
+          "quotation marks",
+          "pause"
+        ],
+        "words": [
+          "I didn't eat YOUR cake",
+          "The show starts at SIX",
+          "\"Who's there?\" asked the dragon.",
+          "\"Oh… thank you,\" said the dragon."
+        ],
+        "tipJa": "ふりかえり: I didn't eat YOUR cake.・The show starts at SIX.（おおもじを つよく）、\"Who's there?\" asked the dragon.（? は \" の なか）、\"Oh… thank you,\"（… で まを とって）。"
+      },
+      "vocab": [
+        {
+          "en": "scene",
+          "ja": "ばめん",
+          "emoji": "🎬",
+          "core": true
+        },
+        {
+          "en": "again",
+          "ja": "もう いちど",
+          "emoji": "🔁"
+        },
+        {
+          "en": "from the top",
+          "ja": "さいしょから",
+          "emoji": "⏮️"
+        },
+        {
+          "en": "friend",
+          "ja": "ともだち",
+          "emoji": "🤝"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Walk to the center. Then, look up. Today, we practice our play scene by scene. We use everything. Feelings, big voices, strong words, and stage directions. Let's start with the last scene. The dragon is alone in the tower. Someone knocks on the door. The dragon asks, Who's there? Say it with me. Who's there? Good! Then the princess answers, It's me, your friend! When a scene doesn't go well, we say, Let's try that scene again. From the top! Let's read the last scene. \"Scene Five. (The dragon sits alone. Knock, knock.) Dragon: 'Who's there?' Princess: 'It's me, your friend! We brought the music box back. Let's play it together.' Dragon: 'Oh... thank you.' (Everyone sings. The town is happy again.)\" Who knocks on the door? The princess. What do they do together? They sing and play music. Now, phonics. I didn't eat YOUR cake. Strong on your. The show starts at SIX. Strong on six. Who's there, asked the dragon. The question mark goes inside. Oh, thank you, said the dragon. Pause after oh. Let's try that scene again. From the top!",
+      "conversation": {
+        "scene": "The friends practice the last scene of the play",
+        "sceneJa": "げきの さいごの ばめんを れんしゅうする",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Someone is knocking. Who's there?",
+            "ja": "だれかが ノックしてる。だれだ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's me, your friend! We brought the music box back.",
+            "ja": "わたしよ、あなたの ともだち！ オルゴールを もって きたの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh… thank you.",
+            "ja": "あ… ありがとう。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good, but Birimo, say it with more feeling. The dragon is very surprised.",
+            "ja": "いいわね。でも ビリモ、もっと きもちを こめて。ドラゴンは とても びっくり して いるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's try that scene again. From the top!",
+            "ja": "その ばめんを もう いちど やろう。さいしょから！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Listen! The echoes said, Friend… friend… They're getting louder!",
+            "ja": "きいて！ こだまが「ともだち… ともだち…」って。だんだん おおきく なって いるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と げきの ばめんを れんしゅうしよう。AI が ドラゴンの やくで Who's there? と きくので、It's me, your friend! と こたえて、Let's try that scene again. で もう いちど やって みよう",
+          "starterEn": "Knock, knock. I'm the dragon, alone in my tower. Hmm… who's there?",
+          "targetExpressions": [
+            "Who's there?",
+            "It's me, your friend!",
+            "Let's try that scene again. ― From the top!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Who's there?",
+          "It's me, your friend! / Let's try that scene again. ― From the top!",
+          "I didn't eat YOUR cake・The show starts at SIX・\"Who's there?\" asked the dragon.・\"Oh… thank you,\" said the dragon."
+        ]
+      }
+    },
+    {
+      "lessonNo": 771,
+      "world": 26,
+      "title": "Costumes and Props",
+      "titleJa": "いしょうと こどうぐ",
+      "school": {
+        "grade": "中3",
+        "topic": "We need a crown and a cape.：げきに ひつような いしょうや こどうぐを いって、つくる",
+        "grammar": "We need ～. / What else do we need? / I'll use ～.",
+        "expressions": [
+          {
+            "en": "We need a crown and a cape.",
+            "ja": "かんむりと マントが いるね。",
+            "core": true
+          },
+          {
+            "en": "What else do we need? ― We need a sword and a music box.",
+            "ja": "ほかに なにが いる？ ― けんと オルゴールが いるよ。"
+          },
+          {
+            "en": "Can you make the cape? ― Sure. I'll use red cloth.",
+            "ja": "マントを つくれる？ ― いいよ。あかい ぬのを つかうね。"
+          }
+        ],
+        "testPoints": [
+          "We need ～. / What else do we need? で ひつような ものを いったり きいたり できる",
+          "はやくちことば（cr・p の おとを はっきり）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on the crown.",
+          "ja": "かんむりを かぶって。",
+          "action": "あたまに かんむりを のせる まね",
+          "emoji": "👑"
+        },
+        {
+          "en": "Swing the cape around.",
+          "ja": "マントを ひらりと まわして。",
+          "action": "マントを ひるがえす まね",
+          "emoji": "🦸"
+        },
+        {
+          "en": "Cut the paper. Snip, snip.",
+          "ja": "かみを きって。ちょきちょき。",
+          "action": "はさみで きる まね",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Paint the sword silver.",
+          "ja": "けんを ぎんいろに ぬって。",
+          "action": "ふでで ぬる まね",
+          "emoji": "🖌️"
+        }
+      ],
+      "phonics": {
+        "rule": "tongue-twister",
+        "focus": [
+          "cr",
+          "p"
+        ],
+        "sounds": [
+          "/kr/",
+          "/p/"
+        ],
+        "words": [
+          "Crazy crows carry crunchy crackers",
+          "A creaky crown and a crumpled cape",
+          "Pink paper props pop on the purple stage",
+          "Pip packs puppets in purple paper"
+        ],
+        "tipJa": "はやくちことばで くちの じゅんび！ cr は c と r を くっつけて くちを まるく。p は くちびるを とじて ぱっと いきを だす。さいしょは ゆっくり、だんだん はやく。"
+      },
+      "vocab": [
+        {
+          "en": "costume",
+          "ja": "いしょう",
+          "emoji": "🎭",
+          "core": true
+        },
+        {
+          "en": "prop",
+          "ja": "こどうぐ",
+          "emoji": "🪄"
+        },
+        {
+          "en": "cape",
+          "ja": "マント",
+          "emoji": "🦸"
+        },
+        {
+          "en": "cloth",
+          "ja": "ぬの",
+          "emoji": "🧵"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Who's there? It's me, your friend! Today, we're making costumes and props for our play. A princess needs a crown. A knight needs a cape. So we say, We need a crown and a cape. Say it with me. We need a crown and a cape. Great! And guess what? A letter came from the Cave of Riddles. Cora the crow carried it here. Let's read it. \"Dear friends, I heard about your play. Please use my crystal crown on the stage. Cora is bringing it to you. She wants to say thank you and sorry again. Take good care of it, and have a wonderful show! Your friend, Luma.\" Who sent the crown? Luma did. Who is bringing it? Cora the crow is. How kind! We still need a cape, a sword and a music box. Kiko is good at sewing, so she'll make the cape. To ask for more ideas, say, What else do we need? Now, phonics. Tongue twisters help us speak clearly. Crazy crows carry crunchy crackers. Slowly first. Now faster! A creaky crown and a crumpled cape. Pink paper props pop on the purple stage. Pip packs puppets in purple paper. Lips together, pop! Let's get making!",
+      "conversation": {
+        "scene": "The friends make costumes and props for the play",
+        "sceneJa": "げきの いしょうと こどうぐを つくる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! Cora brought Luma's crystal crown!",
+            "ja": "みて！ コーラが ルマの クリスタルの かんむりを もって きたよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's beautiful! Now we need a cape for the knight.",
+            "ja": "きれい！ あとは きしの マントが いるね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And a sword. Can I make it out of cardboard?",
+            "ja": "それと けんも。だんボールで つくって いい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What about my dragon wings? I need big green wings!",
+            "ja": "ぼくの ドラゴンの はねは？ おおきな みどりの はねが いるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I can sew the cape. I'll use red cloth.",
+            "ja": "わたし、マントを ぬえるよ。あかい ぬのを つかうね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great teamwork! Let's write a list: a crown, a cape, a sword, wings and a music box.",
+            "ja": "すてきな チームワーク！ リストを かきましょう。かんむり、マント、けん、はね、それに オルゴール。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いっしょに げきに いる ものを きめよう。We need ～. で いって、What else do we need? と きいて みよう",
+          "starterEn": "Hello! I'm Lulu. I take care of the costume box. What do you need for your play?",
+          "targetExpressions": [
+            "We need a crown and a cape.",
+            "What else do we need? ― We need a sword and a music box.",
+            "Can you make the cape? ― Sure. I'll use red cloth."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We need a crown and a cape.",
+          "What else do we need? ― We need a sword and a music box. / Can you make the cape? ― Sure. I'll use red cloth.",
+          "Crazy crows carry crunchy crackers・A creaky crown and a crumpled cape・Pink paper props pop on the purple stage・Pip packs puppets in purple paper"
+        ]
+      }
+    },
+    {
+      "lessonNo": 772,
+      "world": 26,
+      "title": "Dress Rehearsal",
+      "titleJa": "とおしげいこ",
+      "school": {
+        "grade": "中3",
+        "topic": "It's fun to act in costumes!：いしょうを きて、ほんばんと おなじように さいごまで れんしゅうする",
+        "grammar": "It's fun to ～. / It's hard to ～. / Is everyone ready?",
+        "expressions": [
+          {
+            "en": "It's fun to act in costumes!",
+            "ja": "いしょうを きて えんじるのは たのしい！",
+            "core": true
+          },
+          {
+            "en": "It's hard to walk in this dress. ― Take small steps.",
+            "ja": "この ドレスで あるくのは むずかしい。 ― こまかく あるいてね。"
+          },
+          {
+            "en": "Is everyone ready? ― Yes, let's start from the top!",
+            "ja": "みんな じゅんび できた？ ― うん、はじめから やろう！"
+          }
+        ],
+        "testPoints": [
+          "It's fun to ～. / It's hard to ～. で、することに ついての きもちを いえる",
+          "はやくちことば（th・ch の おとを はっきり）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your costume.",
+          "ja": "いしょうを きて。",
+          "action": "ふくを きる まね",
+          "emoji": "👗"
+        },
+        {
+          "en": "Take small steps across the stage.",
+          "ja": "こまかい あしどりで ステージを あるいて。",
+          "action": "ちょこちょこ あるく",
+          "emoji": "👣"
+        },
+        {
+          "en": "Flap your wings like a bird.",
+          "ja": "とりの ように はねを ぱたぱた させて。",
+          "action": "うでを はねの ように うごかす",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Stand in your place. Freeze!",
+          "ja": "じぶんの いちに たって。ストップ！",
+          "action": "ぴたっと とまる",
+          "emoji": "🧍"
+        }
+      ],
+      "phonics": {
+        "rule": "tongue-twister",
+        "focus": [
+          "th",
+          "ch"
+        ],
+        "sounds": [
+          "/θ/",
+          "/tʃ/"
+        ],
+        "words": [
+          "Three thin thumbs and thirty thick threads",
+          "Think first, then thank the theater",
+          "Cheerful children choose cheese and cherries",
+          "A chubby chick chews chocolate chips"
+        ],
+        "tipJa": "th は したの さきを はの あいだに かるく はさんで いきを だす（s に ならない ように）。ch は くちを すこし つきだして「チ」。"
+      },
+      "vocab": [
+        {
+          "en": "rehearsal",
+          "ja": "リハーサル・けいこ",
+          "emoji": "🎬",
+          "core": true
+        },
+        {
+          "en": "wing",
+          "ja": "はね",
+          "emoji": "🪽"
+        },
+        {
+          "en": "mistake",
+          "ja": "まちがい",
+          "emoji": "❌"
+        },
+        {
+          "en": "place",
+          "ja": "いち・ばしょ",
+          "emoji": "📍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, We need a crown and a cape. Now we have them all. Today is the dress rehearsal. A dress rehearsal is the last practice before the show. We wear our costumes and act the whole play, from the beginning to the end. It feels different in costumes! So we say, It's fun to act in costumes! Say it with me. It's fun to act in costumes! Wonderful! Let's read Mr. Hoot's rehearsal plan. \"Dress rehearsal plan: Four o'clock, put on your costumes. Four fifteen, check the lights and the music. Four thirty, start from the top. Do not stop, even if you make a mistake. Keep going! After that, we will talk about the good points.\" What time do we start the play? At four thirty. What should you do after a mistake? Keep going! Birimo's dragon wings are very big, so it's hard to walk through the door. Take small steps, Birimo! Now, phonics. Three thin thumbs and thirty thick threads. Tongue between your teeth. Think first, then thank the theater. Cheerful children choose cheese and cherries. A chubby chick chews chocolate chips. Ch, ch, ch! Places, everyone!",
+      "conversation": {
+        "scene": "The dress rehearsal on the big stage",
+        "sceneJa": "おおきな ステージで とおしげいこ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Is everyone ready? Let's start from the top!",
+            "ja": "みんな じゅんび できた？ はじめから やりましょう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's fun to act in costumes! I really feel like a princess.",
+            "ja": "いしょうを きて えんじるのって たのしい！ ほんとうに おひめさまに なった みたい。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's hard to walk in these wings. Oops! I hit the door!",
+            "ja": "この はねで あるくのは むずかしいよ。おっと！ ドアに ぶつかった！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Take small steps, Birimo. And don't stop. Keep going!",
+            "ja": "ちいさく あるいて、ビリモ。それに とまらないで。つづけよう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My bird costume is light. I can fly across the stage!",
+            "ja": "わたしの とりの いしょうは かるいよ。ステージを とびまわれる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job, everyone! The lights were perfect. Tomorrow is the real show.",
+            "ja": "みんな、よく できました！ ライトも ばっちり。あしたは いよいよ ほんばんよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に It's fun to ～. で いしょうを きた きもちを つたえよう。こまった ことも It's hard to ～. で いって みよう",
+          "starterEn": "Hello! I'm Mr. Hoot. The dress rehearsal starts soon. How do you feel in your costume?",
+          "targetExpressions": [
+            "It's fun to act in costumes!",
+            "It's hard to walk in this dress. ― Take small steps.",
+            "Is everyone ready? ― Yes, let's start from the top!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's fun to act in costumes!",
+          "It's hard to walk in this dress. ― Take small steps. / Is everyone ready? ― Yes, let's start from the top!",
+          "Three thin thumbs and thirty thick threads・Think first, then thank the theater・Cheerful children choose cheese and cherries・A chubby chick chews chocolate chips"
+        ]
+      }
+    },
+    {
+      "lessonNo": 773,
+      "world": 26,
+      "title": "Break a Leg!",
+      "titleJa": "がんばってね！",
+      "school": {
+        "grade": "中3",
+        "topic": "Break a leg!：ほんばんの まえに、なかまを はげます",
+        "grammar": "Break a leg! / Thanks! I'll do my best. / Take a deep breath.",
+        "expressions": [
+          {
+            "en": "Break a leg!",
+            "ja": "がんばってね！（ぶたいの まえの おまじない）",
+            "core": true
+          },
+          {
+            "en": "Thanks! I'll do my best.",
+            "ja": "ありがとう！ がんばるね。"
+          },
+          {
+            "en": "My hands are shaking. ― Take a deep breath. You can do it!",
+            "ja": "てが ふるえてる。 ― しんこきゅう して。きみなら できるよ！"
+          }
+        ],
+        "testPoints": [
+          "Break a leg! / Take a deep breath. You can do it! で なかまを はげまし、Thanks! I'll do my best. で こたえられる",
+          "はやくちことば（r と l の おとを くべつして はっきり）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take a deep breath. In and out.",
+          "ja": "しんこきゅう して。すって、はいて。",
+          "action": "おおきく いきを すって はく",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Shake your hands. Shake, shake.",
+          "ja": "てを ぶらぶら ふって。ふりふり。",
+          "action": "りょうてを ぶらぶら ふる",
+          "emoji": "👐"
+        },
+        {
+          "en": "Give your friend a high five.",
+          "ja": "ともだちと ハイタッチ して。",
+          "action": "ハイタッチ する",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Give a thumbs-up. Break a leg!",
+          "ja": "おやゆびを たてて。がんばってね！",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "tongue-twister",
+        "focus": [
+          "r",
+          "l"
+        ],
+        "sounds": [
+          "/r/",
+          "/l/"
+        ],
+        "words": [
+          "Riko rolls a round red rug",
+          "Lucky Lulu lights little lamps",
+          "Real rabbits run around the rocks",
+          "Lily's lion loves lemon lollipops"
+        ],
+        "tipJa": "r は したの さきを どこにも つけずに うしろに まるめる。l は したの さきを うえの はの うらに つける。red と led、right と light の ちがいを はっきり。"
+      },
+      "vocab": [
+        {
+          "en": "luck",
+          "ja": "うん",
+          "emoji": "🍀",
+          "core": true
+        },
+        {
+          "en": "breath",
+          "ja": "いき",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "curtain",
+          "ja": "まく（カーテン）",
+          "emoji": "🎭"
+        },
+        {
+          "en": "shake",
+          "ja": "ふるえる・ふる",
+          "emoji": "🫨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, It's fun to act in costumes! Today is the big day. The show starts in ten minutes. Everyone is a little nervous. Before a show, actors say a funny thing to each other. Break a leg!（がんばって） It doesn't mean, Hurt your leg. It means, Good luck! Have a great show! Say it with me. Break a leg! And the answer is, Thanks! I'll do my best. Let's read a card from Mr. Hoot. \"To my brave new actors. Your hearts may be beating fast. That's OK. It means you care about the show. Take a deep breath. Look at your friends and smile. Remember, the echoes are waiting for your voices. Break a leg, everyone! Mr. Hoot.\" Why are your hearts beating fast? Because you care about the show. What should you do? Take a deep breath. If a friend's hands are shaking, say, You can do it! Now, phonics. Let's warm up our tongues. Riko rolls a round red rug. Tongue back, no touching. Lucky Lulu lights little lamps. Tongue up behind your teeth. Real rabbits run around the rocks. Lily's lion loves lemon lollipops. R and L, great! Now, break a leg!",
+      "conversation": {
+        "scene": "Backstage, ten minutes before the show",
+        "sceneJa": "ほんばん 10ぷんまえの ぶたいうら",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "My hands are shaking. I'm so nervous.",
+            "ja": "てが ふるえてる。すごく きんちょう する。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Take a deep breath. You can do it, Riko!",
+            "ja": "しんこきゅう して。リコなら できるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Break a leg, everyone!",
+            "ja": "みんな、がんばって！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Break a leg? Oh no! I don't want to break my leg!",
+            "ja": "あしを おる？ たいへん！ ぼく、あしを おりたく ないよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Don't worry, Birimo. It means good luck.",
+            "ja": "しんぱい しないで、ビリモ。「がんばってね」って いう いみよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh! Then thanks! I'll do my best. Break a leg, too!",
+            "ja": "そっか！ じゃあ ありがとう！ がんばるよ。みんなも がんばって！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "きんちょう して いる AI を Break a leg! や Take a deep breath. で はげまそう",
+          "starterEn": "Hi! I'm Lulu. I'm going on stage in five minutes, and I'm so nervous!",
+          "targetExpressions": [
+            "Break a leg!",
+            "Thanks! I'll do my best.",
+            "My hands are shaking. ― Take a deep breath. You can do it!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Break a leg!",
+          "Thanks! I'll do my best. / My hands are shaking. ― Take a deep breath. You can do it!",
+          "Riko rolls a round red rug・Lucky Lulu lights little lamps・Real rabbits run around the rocks・Lily's lion loves lemon lollipops"
+        ]
+      }
+    },
+    {
+      "lessonNo": 774,
+      "world": 26,
+      "title": "Showtime!",
+      "titleJa": "ほんばんだ！",
+      "school": {
+        "grade": "中3",
+        "topic": "The princess opened the gate.：げきの ほんばん。おはなしを すぎた ことの いいかたで つたえる",
+        "grammar": "The princess opened the gate. / What happened next? / In the end, ～.",
+        "expressions": [
+          {
+            "en": "The princess opened the gate.",
+            "ja": "おひめさまは もんを あけました。",
+            "core": true
+          },
+          {
+            "en": "What happened next? ― The lights went out!",
+            "ja": "つぎに どう なったの？ ― あかりが きえたんだ！"
+          },
+          {
+            "en": "In the end, they played music together.",
+            "ja": "さいごに、みんなで いっしょに おんがくを ならしました。"
+          }
+        ],
+        "testPoints": [
+          "The princess opened the gate. / In the end, ～. の ように、すぎた ことの いいかたで おはなしを つたえられる",
+          "はやくちことば（b・v・f の おとを はっきり）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the gate. Push!",
+          "ja": "もんを あけて。おして！",
+          "action": "りょうてで もんを おす まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Raise your arms and shout, I'm free!",
+          "ja": "りょうてを あげて、じゆうだ！ と さけんで。",
+          "action": "ばんざいを する",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Roar like a lonely dragon.",
+          "ja": "さびしい ドラゴンの ように ほえて。",
+          "action": "しょんぼり ほえる まね",
+          "emoji": "🐉"
+        },
+        {
+          "en": "Bow to the audience.",
+          "ja": "おきゃくさんに おじぎ して。",
+          "action": "ふかく おじぎ する",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "tongue-twister",
+        "focus": [
+          "b",
+          "v",
+          "f"
+        ],
+        "sounds": [
+          "/b/",
+          "/v/",
+          "/f/"
+        ],
+        "words": [
+          "Brave Birimo bakes big blue buns",
+          "Very vivid violets in a velvet vase",
+          "Five funny frogs find a flute",
+          "Fresh fruit for four friends"
+        ],
+        "tipJa": "b は くちびるを とじて ぱっと。v は うえの はで したの くちびるに ふれて こえを だす。f は おなじ くちで いきだけ。b と v を まぜない ように！"
+      },
+      "vocab": [
+        {
+          "en": "gate",
+          "ja": "もん",
+          "emoji": "🚪",
+          "core": true
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく・おきゃくさん",
+          "emoji": "👥"
+        },
+        {
+          "en": "lonely",
+          "ja": "さびしい",
+          "emoji": "🥺"
+        },
+        {
+          "en": "music box",
+          "ja": "オルゴール",
+          "emoji": "🎶"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Break a leg! Thanks! I'll do my best. And now, it's showtime! The curtain is going up. Today, we tell the story of our play, so we use the past. The princess opened the gate. Say it with me. The princess opened the gate. Great! Let's read the story page from the program. \"The Princess and the Locked Tower. One day, a princess and a knight climbed a tall tower. They wanted to get back the town's music box. Suddenly, the lights went out. The door was locked! Luckily, a little bird found the key. The princess opened the gate. The lonely dragon said, 'Please stay.' In the end, they all played music together.\" Who found the key? The little bird did. Why did the dragon take the music box? Because he was lonely. And listen! When Riko shouted, I'm free, the theater answered, free, free, free! The echoes are coming back! Now, phonics. Brave Birimo bakes big blue buns. Lips together for b. Very vivid violets in a velvet vase. Teeth on your lip for v. Five funny frogs find a flute. Fresh fruit for four friends. Quiet air for f. What a show!",
+      "conversation": {
+        "scene": "The play on the stage of the Theater of Echoes",
+        "sceneJa": "ひびきの げきじょうの ステージで げきの ほんばん",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "One day, a princess and a knight climbed a tall tower.",
+            "ja": "ある ひ、おひめさまと きしが たかい とうに のぼりました。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The door is locked! Is anyone there?",
+            "ja": "ドアが しまってる！ だれか いますか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm playing the little bird! Look! I found the key!",
+            "ja": "わたしは ことりの やく！ みて！ かぎを みつけたよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The princess opened the gate. I'm free!",
+            "ja": "おひめさまは もんを あけました。じゆうだ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm playing the dragon. Oh… please stay. I was so lonely.",
+            "ja": "ぼくは ドラゴンの やく。ああ… いかないで。ずっと さびしかったんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Listen, everyone! The theater is echoing. The echoes are back!",
+            "ja": "みんな、きいて！ げきじょうが ひびいてる。こだまが もどって きたわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "げきの まんなかを みのがした AI に、おはなしを すぎた ことの いいかたで つたえよう（The princess opened the gate. など）",
+          "starterEn": "Welcome to the show! I'm Mr. Hoot. I missed the middle of the play. What happened?",
+          "targetExpressions": [
+            "The princess opened the gate.",
+            "What happened next? ― The lights went out!",
+            "In the end, they played music together."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The princess opened the gate.",
+          "What happened next? ― The lights went out! / In the end, they played music together.",
+          "Brave Birimo bakes big blue buns・Very vivid violets in a velvet vase・Five funny frogs find a flute・Fresh fruit for four friends"
+        ]
+      }
+    },
+    {
+      "lessonNo": 775,
+      "world": 26,
+      "title": "You Were Amazing!",
+      "titleJa": "すごかったよ！",
+      "school": {
+        "grade": "中3",
+        "topic": "You were amazing! I loved the ending.：ほんばんの あとで、おたがいの よかった ところを ほめあう",
+        "grammar": "You were amazing! / I loved ～. / My favorite part was ～.",
+        "expressions": [
+          {
+            "en": "You were amazing! I loved the ending.",
+            "ja": "すごかったよ！ さいごの ところが だいすき。",
+            "core": true
+          },
+          {
+            "en": "Your song was beautiful. ― Thank you! You were great, too.",
+            "ja": "きみの うた、きれい だった。 ― ありがとう！ きみも すてき だったよ。"
+          },
+          {
+            "en": "My favorite part was the dark scene.",
+            "ja": "いちばん すきな ところは くらやみの ばめん。"
+          }
+        ],
+        "testPoints": [
+          "You were amazing! / I loved ～. / My favorite part was ～. で ぐたいてきに ほめて、Thank you! You were great, too. で こたえられる",
+          "ふりかえり: はやくちことば（cr・f）と つよく いう ことばで いみが かわる（I didn't say SHE took it）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Clap for your friends.",
+          "ja": "ともだちに はくしゅ。",
+          "action": "はくしゅ する",
+          "emoji": "👏"
+        },
+        {
+          "en": "Hold hands and bow together. One, two, three!",
+          "ja": "てを つないで いっしょに おじぎ。いち、に、さん！",
+          "action": "てを つないで おじぎ する",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Give a big smile.",
+          "ja": "にっこり わらって。",
+          "action": "おおきな えがお",
+          "emoji": "😄"
+        },
+        {
+          "en": "Wave to the audience.",
+          "ja": "おきゃくさんに てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "cr",
+          "f",
+          "SHE",
+          "TWO"
+        ],
+        "sounds": [
+          "/kr/",
+          "/f/",
+          "SHE",
+          "TWO"
+        ],
+        "words": [
+          "Crazy crows carry crunchy crackers",
+          "Five funny frogs find a flute",
+          "I didn't say SHE took it",
+          "We need TWO chairs"
+        ],
+        "tipJa": "ふりかえり: はやくちことば（cr・f の おとを はっきり）と、つよく いう ことば（I didn't say SHE took it.・We need TWO chairs.）。はっきり、きもちを こめて いえたら めいはいゆう！"
+      },
+      "vocab": [
+        {
+          "en": "amazing",
+          "ja": "すばらしい",
+          "emoji": "🤩",
+          "core": true
+        },
+        {
+          "en": "ending",
+          "ja": "おわり・けつまつ",
+          "emoji": "🏁"
+        },
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "💖"
+        },
+        {
+          "en": "scene",
+          "ja": "ばめん",
+          "emoji": "🎬"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, The princess opened the gate. The show is over, and the audience is clapping. Now it's time to say nice things to each other. You were amazing! I loved the ending. Say it with me. You were amazing! I loved the ending. Wonderful! When a friend says something nice to you, say, Thank you! You were great, too. Let's read the notes from the audience. \"Thank you for the wonderful play! The dark scene was exciting. The little bird was so brave. I laughed when the dragon cried, 'Please stay.' The music at the end was beautiful. I loved the ending! From Lulu, Mr. Hoot and the echoes.\" Which scene was exciting? The dark scene. How was the music at the end? Beautiful. Here's a tip. Be specific. Don't only say, Good job. Say what you liked. My favorite part was the dark scene. Now, phonics. Let's review. Crazy crows carry crunchy crackers. Five funny frogs find a flute. I didn't say SHE took it. Strong on she. We need TWO chairs. Strong on two. You were all amazing!",
+      "conversation": {
+        "scene": "After the show, the friends praise each other",
+        "sceneJa": "ほんばんの あと、みんなで ほめあう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Riko, you were amazing! I loved the ending.",
+            "ja": "リコ、すごかったよ！ さいごの ところが だいすき。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you! You were great, too. Your bird song was beautiful.",
+            "ja": "ありがとう！ キコも すてき だったよ。ことりの うたが きれい だった。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Birimo, your roar was so loud! My favorite part was the dark scene.",
+            "ja": "ビリモ、ほえる こえが すごく おおきかった！ いちばん すきなのは くらやみの ばめん。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Really?! Thank you so much! I was a little scared.",
+            "ja": "ほんとう？！ ありがとう！ ちょっと こわかったんだ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You were all wonderful. And did you hear the echoes? They're loud and clear again!",
+            "ja": "みんな すばらしかったわ。それに こだまが きこえた？ また おおきく はっきり ひびいてる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と げきの よかった ところを ほめあおう。You were amazing! / My favorite part was ～. を つかおう",
+          "starterEn": "Hello! I'm Lulu. I just watched your play. I have to say, I loved it!",
+          "targetExpressions": [
+            "You were amazing! I loved the ending.",
+            "Your song was beautiful. ― Thank you! You were great, too.",
+            "My favorite part was the dark scene."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You were amazing! I loved the ending.",
+          "Your song was beautiful. ― Thank you! You were great, too. / My favorite part was the dark scene.",
+          "Crazy crows carry crunchy crackers・Five funny frogs find a flute・I didn't say SHE took it・We need TWO chairs"
+        ]
+      }
+    },
+    {
+      "lessonNo": 776,
+      "world": 26,
+      "title": "Review the Play",
+      "titleJa": "げきを ふりかえろう",
+      "school": {
+        "grade": "中3",
+        "topic": "The best part was the dragon's song.：げきの よかった ところと、つぎに がんばる ことを はなしあう",
+        "grammar": "The best part was ～. / Next time, we should ～. / What was difficult?",
+        "expressions": [
+          {
+            "en": "The best part was the dragon's song.",
+            "ja": "いちばん よかったのは ドラゴンの うた。",
+            "core": true
+          },
+          {
+            "en": "Next time, we should speak more slowly.",
+            "ja": "つぎは もっと ゆっくり はなした ほうが いいね。"
+          },
+          {
+            "en": "What was difficult? ― Remembering my lines was difficult.",
+            "ja": "なにが むずかしかった？ ― セリフを おぼえるのが むずかしかった。"
+          }
+        ],
+        "testPoints": [
+          "The best part was ～. / Next time, we should ～. で よかった ところと つぎの めあてを いえる",
+          "ふりかえり: きもちの こえ（Really?!）・-ed（excited）・セリフの くとうてん・つよく いう ことば・はやくちことば（r）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Think. Hmm.",
+          "ja": "かんがえて。うーん。",
+          "action": "あごに てを あてて かんがえる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Give a thumbs-up for the best part.",
+          "ja": "いちばん よかった ところに グッド。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        },
+        {
+          "en": "Write a note in your notebook.",
+          "ja": "ノートに メモを かいて。",
+          "action": "ノートに かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Speak slowly. Nice and clear.",
+          "ja": "ゆっくり はなして。はっきりと。",
+          "action": "くちを おおきく うごかして ゆっくり いう",
+          "emoji": "🗣️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "Really",
+          "-ed",
+          "!",
+          "OPEN",
+          "r"
+        ],
+        "sounds": [
+          "↗ / ↘",
+          "/d/ /t/ /ɪd/",
+          "exclamation mark",
+          "OPEN",
+          "/r/"
+        ],
+        "words": [
+          "Really?!",
+          "excited",
+          "\"Help!\" shouted the princess.",
+          "Can you OPEN the door",
+          "Riko rolls a round red rug"
+        ],
+        "tipJa": "ふりかえり: Really?! ↗（たかく げんきに）・excited（ひとの きもちは -ed）・\"Help!\" shouted the princess.（! は \" の なか）・Can you OPEN the door?（OPEN を つよく）・Riko rolls a round red rug（r の おと）。"
+      },
+      "vocab": [
+        {
+          "en": "best",
+          "ja": "いちばん よい",
+          "emoji": "🥇",
+          "core": true
+        },
+        {
+          "en": "difficult",
+          "ja": "むずかしい",
+          "emoji": "😣"
+        },
+        {
+          "en": "slowly",
+          "ja": "ゆっくり",
+          "emoji": "🐢"
+        },
+        {
+          "en": "next time",
+          "ja": "つぎは",
+          "emoji": "⏭️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, You were amazing! I loved the ending. Today, we look back on our play. Good actors think about two things. What was good? And what can we do better next time? The best part was the dragon's song. Say it with me. The best part was the dragon's song. Next time, we should speak more slowly. Great! Let's read Mr. Hoot's notes. \"Notes on the play: The best part was the dragon's song. Everyone was quiet and listened. The lights and the music were perfect. But some lines were too fast. Next time, we should speak more slowly and look at the audience. I am proud of you all!\" What was the best part? The dragon's song. What should we do next time? Speak more slowly and look at the audience. Now, phonics. Let's review everything. Really?! High and excited. Excited. A person feels excited. Help, shouted the princess. The exclamation mark goes inside the quotation marks. Can you OPEN the door. Strong on open. Riko rolls a round red rug. Clear r sounds! So, what was your best part?",
+      "conversation": {
+        "scene": "The friends look back on their play",
+        "sceneJa": "みんなで げきを ふりかえる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's look back on our play. What was the best part?",
+            "ja": "げきを ふりかえりましょう。いちばん よかったのは どこ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The best part was the dragon's song. Everyone was so quiet.",
+            "ja": "いちばん よかったのは ドラゴンの うた。みんな しーんと してた。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thank you! What was difficult for you, Riko?",
+            "ja": "ありがとう！ リコは なにが むずかしかった？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Remembering my lines was difficult. I forgot one line!",
+            "ja": "セリフを おぼえるのが むずかしかった。1つ わすれちゃった！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Next time, we should speak more slowly. Some lines were too fast.",
+            "ja": "つぎは もっと ゆっくり はなした ほうが いいね。はやすぎる セリフも あったよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good ideas. When we look back, we can do even better.",
+            "ja": "いい かんがえね。ふりかえると、もっと よく できるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と げきを ふりかえろう。The best part was ～. と Next time, we should ～. で いって みよう",
+          "starterEn": "Hello, I'm Mr. Hoot. Your play was wonderful. Let's talk about it. What was the best part?",
+          "targetExpressions": [
+            "The best part was the dragon's song.",
+            "Next time, we should speak more slowly.",
+            "What was difficult? ― Remembering my lines was difficult."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The best part was the dragon's song.",
+          "Next time, we should speak more slowly. / What was difficult? ― Remembering my lines was difficult.",
+          "Really?!・excited・\"Help!\" shouted the princess.・Can you OPEN the door・Riko rolls a round red rug"
+        ]
+      }
+    },
+    {
+      "lessonNo": 777,
+      "world": 26,
+      "title": "My Short Script",
+      "titleJa": "みじかい だいほんを かこう",
+      "school": {
+        "grade": "中3",
+        "topic": "Narrator: One day, a fox found a magic hat.：ナレーターと とうじょうじんぶつの セリフで、みじかい だいほんを かく",
+        "grammar": "Narrator: One day, ～. / Fox: \"～!\" / Who are the characters?",
+        "expressions": [
+          {
+            "en": "Narrator: One day, a fox found a magic hat.",
+            "ja": "ナレーター：ある ひ、キツネが まほうの ぼうしを みつけました。",
+            "core": true
+          },
+          {
+            "en": "Fox: \"Look at my new hat!\"",
+            "ja": "キツネ：「みて、ぼくの あたらしい ぼうし！」"
+          },
+          {
+            "en": "Who are the characters? ― A fox and a rabbit.",
+            "ja": "とうじょうじんぶつは だれ？ ― キツネと ウサギ。"
+          }
+        ],
+        "testPoints": [
+          "Narrator: ～. / なまえ: \"～!\" の かたちで、8〜10 ぎょうの みじかい だいほんを かける",
+          "ふりかえり: セリフの くとうてん（Kiko said, \"～.\"）・-ing（interesting）・きもちの こえ（I can't wait!）・つよく いう ことば（MY）・はやくちことば（p）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up your pencil.",
+          "ja": "えんぴつを もって。",
+          "action": "えんぴつを もつ まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Write the narrator's line.",
+          "ja": "ナレーターの セリフを かいて。",
+          "action": "かみに かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Read your line like a fox.",
+          "ja": "キツネの ように セリフを よんで。",
+          "action": "キツネの みみを つくって よむ",
+          "emoji": "🦊"
+        },
+        {
+          "en": "Show your script to a friend.",
+          "ja": "だいほんを ともだちに みせて。",
+          "action": "かみを ともだちに みせる",
+          "emoji": "📜"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "\"",
+          "-ing",
+          "can't",
+          "MY",
+          "p"
+        ],
+        "sounds": [
+          "quotation marks",
+          "/ɪŋ/",
+          "↗ / ↘",
+          "MY",
+          "/p/"
+        ],
+        "words": [
+          "Kiko said, \"I have an idea.\"",
+          "interesting",
+          "I can't wait!",
+          "This is MY line",
+          "Pink paper props pop on the purple stage"
+        ],
+        "tipJa": "ふりかえり: Kiko said, \"I have an idea.\"（said が まえなら , の あとに \"）・interesting（おもしろい もの は -ing）・I can't wait! ↗・This is MY line.（MY を つよく）・p の はやくちことば。"
+      },
+      "vocab": [
+        {
+          "en": "script",
+          "ja": "だいほん",
+          "emoji": "📜",
+          "core": true
+        },
+        {
+          "en": "narrator",
+          "ja": "ナレーター",
+          "emoji": "🎙️"
+        },
+        {
+          "en": "character",
+          "ja": "とうじょうじんぶつ",
+          "emoji": "🦊"
+        },
+        {
+          "en": "magic",
+          "ja": "まほうの",
+          "emoji": "🪄"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, The best part was the dragon's song. Next time, we should speak more slowly. Today, you're the writer! We'll write a short script. In a script, the narrator tells the story, and the characters say their lines. Narrator: One day, a fox found a magic hat. Say it with me. Narrator: One day, a fox found a magic hat. Good! Let's read Kiko's short script. \"Narrator: One day, a fox found a magic hat. Fox: 'Look at my new hat!' Narrator: Suddenly, the hat began to sing. Rabbit: 'Wow! A singing hat!' Fox: 'Let's sing together!' Narrator: In the end, they sang all night under the moon.\" What did the fox find? A magic hat. What happened suddenly? The hat began to sing. In a script, write the name, then a colon, then the line. Eight to ten lines is perfect. Now, phonics. Kiko said, I have an idea. The comma comes before the quotation marks. Interesting. Something interesting. I can't wait! High and excited. This is MY line. Strong on my. Pink paper props pop on the purple stage. Pop your lips! Now, write your own script!",
+      "conversation": {
+        "scene": "The friends write their own short scripts",
+        "sceneJa": "みんなで みじかい だいほんを かく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "I wrote a short script. Narrator: One day, a fox found a magic hat.",
+            "ja": "みじかい だいほんを かいたよ。ナレーター：ある ひ、キツネが まほうの ぼうしを みつけました。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's interesting! Who are the characters?",
+            "ja": "おもしろそう！ とうじょうじんぶつは だれ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "A fox and a rabbit. The fox says, 'Look at my new hat!'",
+            "ja": "キツネと ウサギ。キツネは「みて、ぼくの あたらしい ぼうし！」って いうの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I can't wait! Can I read the fox's lines?",
+            "ja": "まちきれない！ ぼくが キツネの セリフを よんで いい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'll write a script, too. My characters are a bear and a cloud.",
+            "ja": "わたしも だいほんを かく。とうじょうじんぶつは クマと くもに する。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! Write the name, then the line. Try eight to ten lines.",
+            "ja": "すてき！ なまえを かいて、それから セリフ。8〜10 ぎょう かいて みてね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と いっしょに みじかい だいほんを つくろう。Narrator: One day, ～. と とうじょうじんぶつの セリフを かこう",
+          "starterEn": "Hi, writer! I'm Lulu. I want to act in your script. Who are the characters?",
+          "targetExpressions": [
+            "Narrator: One day, a fox found a magic hat.",
+            "Fox: \"Look at my new hat!\"",
+            "Who are the characters? ― A fox and a rabbit."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Narrator: One day, a fox found a magic hat.",
+          "Fox: \"Look at my new hat!\" / Who are the characters? ― A fox and a rabbit.",
+          "Kiko said, \"I have an idea.\"・interesting・I can't wait!・This is MY line・Pink paper props pop on the purple stage"
+        ]
+      }
+    },
+    {
+      "lessonNo": 778,
+      "world": 26,
+      "title": "Story Circle",
+      "titleJa": "おはなしの わ",
+      "school": {
+        "grade": "中3",
+        "topic": "Let's make a story one word at a time.：4にんで ことばを 1つずつ つないで おはなしを つくる",
+        "grammar": "Let's make a story one word at a time. / It's your turn!",
+        "expressions": [
+          {
+            "en": "Let's make a story one word at a time.",
+            "ja": "ことばを 1つずつ つないで おはなしを つくろう。",
+            "core": true
+          },
+          {
+            "en": "Once… upon… a… time…",
+            "ja": "むかし… むかし… ある… ところに…"
+          },
+          {
+            "en": "It's your turn! ― OK. Dragon!",
+            "ja": "きみの ばんだよ！ ― よし。ドラゴン！"
+          }
+        ],
+        "testPoints": [
+          "Let's make a story one word at a time. / It's your turn! で ことばを つなぐ ゲームが できる",
+          "ふりかえり: きもちの こえ（Well, okay…）・-ed（bored）・… は まを とる しるし・つよく いう ことば（FOUND）・はやくちことば（th）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sit in a circle.",
+          "ja": "わに なって すわって。",
+          "action": "まるく すわる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Point to the next friend.",
+          "ja": "となりの ともだちを ゆびさして。",
+          "action": "となりを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Say one word, loud and clear.",
+          "ja": "ことばを 1つ、おおきく はっきり いって。",
+          "action": "おおきな こえで 1ご いう",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Laugh and keep going!",
+          "ja": "わらって、つづけよう！",
+          "action": "わらって てを まわす",
+          "emoji": "😂"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "Okay",
+          "-ed",
+          "…",
+          "FOUND",
+          "th"
+        ],
+        "sounds": [
+          "↗ / ↘",
+          "/d/ /t/ /ɪd/",
+          "pause",
+          "FOUND",
+          "/θ/"
+        ],
+        "words": [
+          "Well, okay…",
+          "bored",
+          "\"Wait… what's that sound?\" asked the knight.",
+          "The bird FOUND the key",
+          "Three thin thumbs and thirty thick threads"
+        ],
+        "tipJa": "ふりかえり: Well, okay… ↘（しぶしぶ）・bored（たいくつ して いる ひと は -ed）・\"Wait… what's that sound?\"（… で まを とる）・The bird FOUND the key.・th の はやくちことば。"
+      },
+      "vocab": [
+        {
+          "en": "circle",
+          "ja": "わ・えん",
+          "emoji": "⭕",
+          "core": true
+        },
+        {
+          "en": "turn",
+          "ja": "じゅんばん",
+          "emoji": "🔄"
+        },
+        {
+          "en": "silly",
+          "ja": "へんてこな・おかしな",
+          "emoji": "🤪"
+        },
+        {
+          "en": "whole",
+          "ja": "ぜんぶの",
+          "emoji": "🧩"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Narrator: One day, a fox found a magic hat. Today, we'll play Story Circle. We sit in a circle. Each person says only one word. Together, we make a story. Let's make a story one word at a time. Say it with me. Let's make a story one word at a time. Great! Here are the rules. Let's read them. \"Story Circle rules: Sit in a circle with three friends. Say one word, then point to the next person. Listen carefully to every word. Don't stop the story. If the story gets silly, that's OK. Laugh and keep going! At the end, say the whole story together.\" How many words do you say? Only one. What if the story gets silly? Laugh and keep going! Let's start. Once. Upon. A. Time. When it's your friend's turn, say, It's your turn! Now, phonics. Well, okay… Low and quiet. Bored. A person feels bored. Wait, what's that sound, asked the knight. The three dots mean a little pause. The bird FOUND the key. Strong on found. Three thin thumbs and thirty thick threads. Tongue between your teeth. Your turn!",
+      "conversation": {
+        "scene": "Four friends make a story one word at a time",
+        "sceneJa": "4にんで ことばを 1つずつ つないで おはなしを つくる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make a story one word at a time. I'll start. Once…",
+            "ja": "ことばを 1つずつ つないで おはなしを つくりましょう。せんせいから。むかし…"
+          },
+          {
+            "speaker": "Haru",
+            "en": "upon…",
+            "ja": "むかし…"
+          },
+          {
+            "speaker": "Riko",
+            "en": "a…",
+            "ja": "ある…"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "time… It's your turn, Birimo!",
+            "ja": "ところに… ビリモの ばんだよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "OK. Dragon! A dragon ate a… banana!",
+            "ja": "よし。ドラゴン！ ドラゴンが たべたのは… バナナ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's silly! But it's a fun story. Let's keep going!",
+            "ja": "へんなの！ でも たのしい おはなし だね。つづけよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI と ことばを 1つずつ つなげて おはなしを つくろう。じぶんの ばんでは ことばを 1つ いおう",
+          "starterEn": "Hello! I'm Echo. I love stories. Let's make one together, one word at a time. Once…",
+          "targetExpressions": [
+            "Let's make a story one word at a time.",
+            "Once… upon… a… time…",
+            "It's your turn! ― OK. Dragon!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let's make a story one word at a time.",
+          "Once… upon… a… time… / It's your turn! ― OK. Dragon!",
+          "Well, okay…・bored・\"Wait… what's that sound?\" asked the knight.・The bird FOUND the key・Three thin thumbs and thirty thick threads"
+        ]
+      }
+    },
+    {
+      "lessonNo": 779,
+      "world": 26,
+      "title": "Theater of Echoes Review",
+      "titleJa": "ひびきの げきじょうの ふりかえり",
+      "school": {
+        "grade": "中3",
+        "topic": "I enjoy singing on the stage.：ひびきの げきじょうの さよなら こうえん。たのしかった ことや きめた ことを はなす",
+        "grammar": "I enjoy ～ing. / I decided to ～. / What did you enjoy?",
+        "expressions": [
+          {
+            "en": "I enjoy singing on the stage.",
+            "ja": "ステージで うたうのが たのしい。",
+            "core": true
+          },
+          {
+            "en": "I decided to try something new.",
+            "ja": "なにか あたらしい ことに チャレンジ する ことに したんだ。"
+          },
+          {
+            "en": "What did you enjoy? ― I enjoyed acting with my friends.",
+            "ja": "なにが たのしかった？ ― ともだちと えんじるのが たのしかった。"
+          }
+        ],
+        "testPoints": [
+          "I enjoy ～ing. / I decided to ～. / What did you enjoy? で げきじょうの おもいでを はなせる",
+          "ふりかえり: きもちの こえ（Thank you so much!）・-ing（amazing）・! は \" の なか・つよく いう ことば（KNIGHT）・はやくちことば（l）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sing a line from the play.",
+          "ja": "げきの うたを ひとふし うたって。",
+          "action": "むねに てを あてて うたう",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Roar like the dragon one more time.",
+          "ja": "もう いちど ドラゴンの ように ほえて。",
+          "action": "りょうてを あげて ほえる",
+          "emoji": "🐉"
+        },
+        {
+          "en": "Tiptoe across the stage.",
+          "ja": "つまさきで ステージを あるいて。",
+          "action": "つまさきだちで そっと あるく",
+          "emoji": "🩰"
+        },
+        {
+          "en": "Wave goodbye to the theater.",
+          "ja": "げきじょうに さよならの てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "Thank you",
+          "-ing",
+          "!",
+          "KNIGHT",
+          "l"
+        ],
+        "sounds": [
+          "↗ / ↘",
+          "/ɪŋ/",
+          "exclamation mark",
+          "KNIGHT",
+          "/l/"
+        ],
+        "words": [
+          "Thank you so much!",
+          "amazing",
+          "\"We're free!\" shouted the friends.",
+          "Haru was the KNIGHT",
+          "Lucky Lulu lights little lamps"
+        ],
+        "tipJa": "ふりかえり: Thank you so much! ↗・amazing（すばらしい もの は -ing）・\"We're free!\" shouted the friends.・Haru was the KNIGHT.（KNIGHT を つよく）・l の はやくちことば。"
+      },
+      "vocab": [
+        {
+          "en": "enjoy",
+          "ja": "たのしむ",
+          "emoji": "😊",
+          "core": true
+        },
+        {
+          "en": "decide",
+          "ja": "きめる",
+          "emoji": "✅"
+        },
+        {
+          "en": "voice",
+          "ja": "こえ",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "spring",
+          "ja": "いずみ・わきみず",
+          "emoji": "♨️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, Let's make a story one word at a time. Today is our goodbye show at the Theater of Echoes. Let's remember everything. First, we talked about what we enjoy. I enjoy singing on the stage. Say it with me. I enjoy singing on the stage. We also talked about our choices. I decided to try something new. Great! Let's read Mr. Hoot's goodbye letter. \"Dear friends, thank you for bringing the echoes back. My theater is full of voices again. Tomorrow, take the mountain road to the east. You will find the Village of Springs. The spring water there is warm. Rest your tired feet. Please come back and act again someday! Mr. Hoot.\" Where does the mountain road go? To the Village of Springs. How is the water there? Warm. Now, phonics. Thank you so much! High and happy. Amazing. Something amazing. We're free, shouted the friends. The exclamation mark goes inside the quotation marks. Haru was the KNIGHT. Strong on knight. Lucky Lulu lights little lamps. Tongue up for l. Let's start our goodbye show!",
+      "conversation": {
+        "scene": "The goodbye show at the Theater of Echoes",
+        "sceneJa": "ひびきの げきじょうの さよなら こうえん",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I enjoy singing on the stage. What did you enjoy, Haru?",
+            "ja": "わたしは ステージで うたうのが たのしい。ハルは なにが たのしかった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I enjoyed acting with my friends. Being the knight was fun.",
+            "ja": "ともだちと えんじるのが たのしかった。きしの やくは おもしろかったよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I decided to try something new. I was a dragon for the first time!",
+            "ja": "ぼくは あたらしい ことに チャレンジ する ことに したんだ。はじめて ドラゴンに なったよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Mr. Hoot says there's a Village of Springs over the mountain.",
+            "ja": "フートさんが、やまの むこうに いずみの さとが あるって いってたよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. Tomorrow, we'll go there. But first, our goodbye show!",
+            "ja": "そうね。あした そこへ いきましょう。でも まずは さよなら こうえんよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に I enjoy ～ing. と I decided to ～. で げきじょうの おもいでを はなそう",
+          "starterEn": "Hello, I'm Mr. Hoot. Thank you for bringing the echoes back. What did you enjoy at my theater?",
+          "targetExpressions": [
+            "I enjoy singing on the stage.",
+            "I decided to try something new.",
+            "What did you enjoy? ― I enjoyed acting with my friends."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I enjoy singing on the stage.",
+          "I decided to try something new. / What did you enjoy? ― I enjoyed acting with my friends.",
+          "Thank you so much!・amazing・\"We're free!\" shouted the friends.・Haru was the KNIGHT・Lucky Lulu lights little lamps"
+        ]
+      }
+    },
+    {
+      "lessonNo": 780,
+      "world": 26,
+      "title": "World 26 Grand Review",
+      "titleJa": "ワールド26 だいこうえん",
+      "school": {
+        "grade": "中3",
+        "topic": "Thank you for watching our play!：おおきな ステージで ワールド26 の こうえん。おきゃくさんに おれいを いう",
+        "grammar": "Thank you for ～ing. / We hope you enjoyed it. / Did you have fun?",
+        "expressions": [
+          {
+            "en": "Thank you for watching our play!",
+            "ja": "わたしたちの げきを みて くれて ありがとう！",
+            "core": true
+          },
+          {
+            "en": "We hope you enjoyed it.",
+            "ja": "たのしんで もらえたら うれしいです。"
+          },
+          {
+            "en": "Did you have fun? ― Yes! It was the best show ever!",
+            "ja": "たのしかった？ ― うん！ いままでで いちばんの ショー だった！"
+          }
+        ],
+        "testPoints": [
+          "Thank you for ～ing. / We hope you enjoyed it. で おきゃくさんに あいさつし、げきの かんそうを はなせる",
+          "ワールド26 の まとめ: きもちの こえ・-ed と -ing・セリフの くとうてん・つよく いう ことば・はやくちことば"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！ とまって！ こっちへ きて！ いって！",
+          "action": "スピード TPR：ことばに あわせて すばやく うごく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Bow to the audience.",
+          "ja": "おきゃくさんに おじぎ して。",
+          "action": "ふかく おじぎ する",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Cup your ears and listen to the echoes.",
+          "ja": "みみに てを あてて、こだまを きいて。",
+          "action": "みみに てを あてる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Clap for everyone.",
+          "ja": "みんなに はくしゅ。",
+          "action": "はくしゅ する",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "I did it",
+          "-ing",
+          "-ed",
+          ",",
+          "YOUR",
+          "b"
+        ],
+        "sounds": [
+          "↗",
+          "/ɪŋ/",
+          "/d/ /t/ /ɪd/",
+          "comma",
+          "YOUR",
+          "/b/"
+        ],
+        "words": [
+          "I did it!",
+          "exciting",
+          "surprised",
+          "\"Good idea,\" said Ms. Emma.",
+          "I didn't eat YOUR cake",
+          "Brave Birimo bakes big blue buns"
+        ],
+        "tipJa": "ワールド26 の まとめ: I did it! ↗・exciting と surprised（-ing と -ed）・\"Good idea,\" said Ms. Emma.（, は \" の なか）・I didn't eat YOUR cake.・b の はやくちことば。こえと ことばの リズムで、げきが できた！"
+      },
+      "vocab": [
+        {
+          "en": "watch",
+          "ja": "みる",
+          "emoji": "👀",
+          "core": true
+        },
+        {
+          "en": "bow",
+          "ja": "おじぎ（する）",
+          "emoji": "🙇"
+        },
+        {
+          "en": "echo",
+          "ja": "こだま",
+          "emoji": "🔊"
+        },
+        {
+          "en": "special",
+          "ja": "とくべつな",
+          "emoji": "🌟"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Last time, we said, I enjoy singing on the stage. Today is the World 26 grand show on the big stage. Everyone is here. Mr. Hoot, Lulu, Luma and Cora are in the audience. First, we act our play. Then, Kiko reads her fox script. At the end, we bow and say, Thank you for watching our play! Say it with me. Thank you for watching our play! Fantastic! Let's read the program. \"The Theater of Echoes presents a special show! Part one: The Princess and the Locked Tower. Part two: The Fox and the Magic Hat. Part three: Story Circle with the audience. Please clap, laugh and sing along. The echoes will sing with you!\" How many parts are there? Three. Who will sing with you? The echoes. After the show, we'll take the mountain road to the Village of Springs. Now, phonics. I did it! High and proud. Exciting. Something exciting. Surprised. A person feels surprised. Good idea, said Ms. Emma. The comma goes inside the quotation marks. I didn't eat YOUR cake. Strong on your. Brave Birimo bakes big blue buns. Curtain up!",
+      "conversation": {
+        "scene": "The World 26 grand show on the big stage",
+        "sceneJa": "おおきな ステージで ワールド26 の だいこうえん",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Thank you for watching our play!",
+            "ja": "ぼくたちの げきを みて くれて ありがとう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We hope you enjoyed it!",
+            "ja": "たのしんで もらえたら うれしいです！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Listen! The theater is saying it, too. Play… play… play!",
+            "ja": "きいて！ げきじょうも いってる。げき… げき… げき！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "The echoes are loud and clear! I did it! We did it!",
+            "ja": "こだまが おおきく はっきり ひびいてる！ やった！ みんなで やったね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What an exciting show! Tomorrow, we'll leave for the Village of Springs.",
+            "ja": "なんて わくわくする ショー！ あしたは いずみの さとへ しゅっぱつよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "AI に Thank you for watching our play! と あいさつして、ショーの かんそうを はなそう",
+          "starterEn": "Bravo! I'm Lulu. That was a wonderful show! Did you have fun?",
+          "targetExpressions": [
+            "Thank you for watching our play!",
+            "We hope you enjoyed it.",
+            "Did you have fun? ― Yes! It was the best show ever!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Thank you for watching our play!",
+          "We hope you enjoyed it. / Did you have fun? ― Yes! It was the best show ever!",
+          "I did it!・exciting・surprised・\"Good idea,\" said Ms. Emma.・I didn't eat YOUR cake・Brave Birimo bakes big blue buns"
+        ]
+      }
+    }
+  ]
+}
