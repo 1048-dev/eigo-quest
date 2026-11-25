@@ -223,9 +223,9 @@ describe("ワークブック（置き場所にあるものを使う。Python は
   it("置き場所にあれば そのキーと大きさ、無ければ null（警告だけ）", async () => {
     const { ensureWorksheetBundle, worksheetKey } = await import("@/lib/report/storage");
     const { getStorage } = await import("@/lib/storage");
-    expect(worksheetKey(3)).toBe("worksheets/monthly/world-03.pdf");
+    expect(worksheetKey(3)).toBe("worksheets/monthly/month-03.pdf");
     await getStorage().put(worksheetKey(3), enc("%PDF-ws3"));
-    expect(await ensureWorksheetBundle(3)).toEqual({ key: "worksheets/monthly/world-03.pdf", bytes: 8 });
+    expect(await ensureWorksheetBundle(3)).toEqual({ key: "worksheets/monthly/month-03.pdf", bytes: 8 });
     const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
     try {
       expect(await ensureWorksheetBundle(99)).toBeNull(); // worksheets/out/monthly にも無い

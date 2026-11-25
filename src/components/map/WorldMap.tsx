@@ -6,7 +6,7 @@
  * 道の両側には古代樹・レリーフの壁・シダと、ひそむモンスター。現在地にはスポットライトの中にパーティが立つ。
  * ノードの状態は domain/progression.ts が決め、API（/api/map）の契約どおりに受け取る。
  */
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { MapResponse } from "@/lib/api/contracts";
 import { Standing } from "@/components/characters/StandingArt";
@@ -30,7 +30,47 @@ const WORLD_THEMES: Record<number, { top: string; bottom: string; fog: string; m
   10: { top: "#06303a", bottom: "#021418", fog: "#b8fff0", monsters: ["mon-031", "mon-080", "mon-070"], glyphs: [["ce"], ["ge"], ["-y"], ["-le"], ["aw"]] },
   11: { top: "#2a1640", bottom: "#120820", fog: "#ffd6f5", monsters: ["mon-091", "mon-037", "mon-055"], glyphs: [["-ed"], ["was"], ["-er"], ["-est"], ["said"]] },
   12: { top: "#3a2a08", bottom: "#181004", fog: "#ffeaa0", monsters: ["mon-044", "mon-055", "mon-091", "mon-037"], glyphs: [["who"], ["why"], ["how"], ["bas-ket"], ["360"]] },
+  // run7: ワールド13〜40（docs/curriculum-6year.md §4）。見た目（古代樹・レリーフ・霧・モンスター）は そのまま使い回し、色の組み合わせと 文字だけ かえる
+  13: { top: "#3a1f12", bottom: "#170b06", fog: "#ffd9b8", monsters: ["mon-037", "mon-089", "mon-056"], glyphs: [["-s"], ["-es"], ["does"], ["tch"], ["dge"]] },
+  14: { top: "#3a1630", bottom: "#170812", fog: "#ffc8e6", monsters: ["mon-031", "mon-080", "mon-091"], glyphs: [["some"], ["any"], ["-ies"], ["how"], ["much"]] },
+  15: { top: "#1f3414", bottom: "#0b1606", fog: "#e2ffb8", monsters: ["mon-028", "mon-055", "mon-019"], glyphs: [["-ing"], ["kn"], ["wr"], ["is"], ["are"]] },
+  16: { top: "#2c2a26", bottom: "#12110f", fog: "#e8dcc4", monsters: ["mon-070", "mon-037", "mon-044"], glyphs: [["-ed"], ["-ied"], ["was"], ["went"], ["mb"]] },
+  17: { top: "#101a44", bottom: "#05081e", fog: "#d6dcff", monsters: ["mon-056", "mon-091", "mon-089"], glyphs: [["will"], ["ph"], ["gh"], ["going"], ["to"]] },
+  18: { top: "#0f2e2a", bottom: "#051411", fog: "#c4fff2", monsters: ["mon-019", "mon-031", "mon-055"], glyphs: [["-er"], ["-est"], ["more"], ["most"], ["as"]] },
+  19: { top: "#33240c", bottom: "#151004", fog: "#ffe0a0", monsters: ["mon-080", "mon-070", "mon-028"], glyphs: [["must"], ["un-"], ["re-"], ["-ful"], ["-less"]] },
+  20: { top: "#3d0f22", bottom: "#18050d", fog: "#ffd0dc", monsters: ["mon-044", "mon-091", "mon-037", "mon-056"], glyphs: [["shall"], ["-ly"], ["to"], ["two"], ["too"]] },
+  21: { top: "#1a1f3a", bottom: "#090c1a", fog: "#cfe0ff", monsters: ["mon-089", "mon-055", "mon-031"], glyphs: [["tele"], ["phone"], ["was"], ["-ing"], ["@"]] },
+  22: { top: "#3a2608", bottom: "#181004", fog: "#ffd98a", monsters: ["mon-037", "mon-080", "mon-091"], glyphs: [["dis-"], ["mis-"], ["-ment"], ["-ness"], ["story"]] },
+  23: { top: "#0d3320", bottom: "#04160c", fog: "#b8ffd2", monsters: ["mon-028", "mon-056", "mon-070"], glyphs: [["if"], ["-able"], ["-ous"], ["graph"], ["photo"]] },
+  24: { top: "#26304a", bottom: "#0e1322", fog: "#e4ecff", monsters: ["mon-091", "mon-019", "mon-089"], glyphs: [["have"], ["ever"], ["been"], ["pre-"], ["port"]] },
+  25: { top: "#1c1430", bottom: "#0a0714", fog: "#d4c4ff", monsters: ["mon-070", "mon-055", "mon-037"], glyphs: [["might"], ["must"], ["-al"], ["-er"], ["-or"]] },
+  26: { top: "#3a0c18", bottom: "#170409", fog: "#ffc0c8", monsters: ["mon-031", "mon-044", "mon-080"], glyphs: [["to"], ["-ing"], ["-ist"], ["act"], ["actor"]] },
+  27: { top: "#0c2c34", bottom: "#041318", fog: "#c0f4ff", monsters: ["mon-056", "mon-028", "mon-019"], glyphs: [["since"], ["for"], ["over-"], ["under-"], ["im-"]] },
+  28: { top: "#2a1a3c", bottom: "#100a18", fog: "#ffe6b0", monsters: ["mon-044", "mon-091", "mon-055", "mon-037"], glyphs: [["I"], ["think"], ["in-"], ["-y"], ["840"]] },
+  29: { top: "#0e2236", bottom: "#050e18", fog: "#fff4c0", monsters: ["mon-089", "mon-031", "mon-070"], glyphs: [["because"], ["dict"], ["ject"], ["spect"], ["agree"]] },
+  30: { top: "#132a3a", bottom: "#061118", fog: "#b8f0ff", monsters: ["mon-080", "mon-056", "mon-091"], glyphs: [["that"], ["who"], ["struct"], ["auto"], ["bio"]] },
+  31: { top: "#2e2416", bottom: "#130f08", fog: "#f0dcb4", monsters: ["mon-037", "mon-070", "mon-044"], glyphs: [["was"], ["built"], ["had"], ["rupt"], ["geo"]] },
+  32: { top: "#40280a", bottom: "#1a0f03", fog: "#ffe2a0", monsters: ["mon-019", "mon-080", "mon-028"], glyphs: [["-tion"], ["-sion"], ["-cian"], ["%"], ["graph"]] },
+  33: { top: "#3a1006", bottom: "#170502", fog: "#ffc49a", monsters: ["mon-070", "mon-089", "mon-031"], glyphs: [["if"], ["when"], ["-ible"], ["safe"], ["geo"]] },
+  34: { top: "#183048", bottom: "#08131e", fog: "#dcefff", monsters: ["mon-091", "mon-056", "mon-055"], glyphs: [["could"], ["would"], ["mind"], ["where"], ["gate"]] },
+  35: { top: "#2c2410", bottom: "#120e05", fog: "#fff0b8", monsters: ["mon-044", "mon-055", "mon-037", "mon-091"], glyphs: [["why"], ["don't"], ["we"], ["vote"], ["1050"]] },
+  36: { top: "#04263e", bottom: "#010d18", fog: "#a8eaff", monsters: ["mon-031", "mon-080", "mon-056"], glyphs: [["in"], ["short"], ["research"], ["result"], ["Q&A"]] },
+  37: { top: "#261040", bottom: "#0e051a", fog: "#f0c8ff", monsters: ["mon-055", "mon-070", "mon-091"], glyphs: [["if"], ["I"], ["were"], ["wish"], ["tale"]] },
+  38: { top: "#183a2a", bottom: "#081a10", fog: "#d8ffe4", monsters: ["mon-019", "mon-028", "mon-037"], glyphs: [["feel"], ["must"], ["be"], ["hard"], ["heart"]] },
+  39: { top: "#30200e", bottom: "#140d05", fog: "#ffe4c0", monsters: ["mon-089", "mon-044", "mon-080"], glyphs: [["however"], ["on"], ["the"], ["other"], ["hand"]] },
+  40: { top: "#14123a", bottom: "#060518", fog: "#fff2c8", monsters: ["mon-044", "mon-055", "mon-091", "mon-037", "mon-056"], glyphs: [["dream"], ["future"], ["grow"], ["shine"], ["1200"]] },
 };
+
+/** いまの ワールドの まえ・あとに いくつ 見せるか（1,200 レッスン ≒ 2,700 ノードを 一度に 描かない。ボタンで ふやせる） */
+const WORLD_WINDOW = 1;
+const WORLD_STEP = 2;
+
+/** ワールドの 色・モンスター・文字（知らない番号は 1〜12 を くりかえす） */
+export function themeOfWorld(w: number) {
+  return WORLD_THEMES[w] ?? WORLD_THEMES[((Math.max(1, w) - 1) % 12) + 1];
+}
+
+export const THEMED_WORLDS = Object.keys(WORLD_THEMES).map(Number);
 
 const W = 360;
 const STEP = 96;
@@ -99,15 +139,57 @@ function Node({ n }: { n: StageNode }) {
   }
 }
 
+/** 現在地 = domain/progression.ts の pickCurrent と同じ優先順（受けられる復習クエスト → 次のレッスン/ゲート） */
+function currentIndex(list: readonly StageNode[]): number {
+  const firstIdx = (f: (n: StageNode) => boolean) => list.findIndex(f);
+  return [
+    firstIdx((n) => n.type === "CHECK" && n.status === "AVAILABLE"),
+    firstIdx((n) => n.type !== "CHECK" && n.status === "AVAILABLE"),
+    firstIdx((n) => n.status === "WAIT_TOMORROW"),
+  ].find((i) => i >= 0) ?? -1;
+}
+
+/** 見せる ワールドの はんい（いまの ワールド ± WORLD_WINDOW。ボタンで まえ・あとに ふやす） */
+export function visibleWorldRange(nodes: readonly StageNode[], extra: { before: number; after: number } = { before: 0, after: 0 }): { from: number; to: number; first: number; last: number } {
+  if (nodes.length === 0) return { from: 1, to: 1, first: 1, last: 1 };
+  const first = nodes[0].world;
+  const last = nodes[nodes.length - 1].world;
+  const cur = nodes[currentIndex(nodes)]?.world ?? (nodes.every((n) => n.status === "CLEARED") ? last : first);
+  return { from: Math.max(first, cur - WORLD_WINDOW - extra.before), to: Math.min(last, cur + WORLD_WINDOW + extra.after), first, last };
+}
+
 export function WorldMap({ nodes }: { nodes: StageNode[] }) {
+  const allNodes = useMemo(() => nodes ?? [], [nodes]);
+  const [extra, setExtra] = useState({ before: 0, after: 0 });
+  const range = visibleWorldRange(allNodes, extra);
+  const shown = useMemo(() => allNodes.filter((n) => n.world >= range.from && n.world <= range.to), [allNodes, range.from, range.to]);
+  const more = "block w-full bg-black/60 py-2 text-sm font-black text-[var(--volt)]";
+  return (
+    <div>
+      {range.from > range.first && (
+        <button type="button" className={more} onClick={() => setExtra((e) => ({ ...e, before: e.before + WORLD_STEP }))}>
+          ▲ まえの ワールドも みる（ワールド{Math.max(range.first, range.from - WORLD_STEP)}〜）
+        </button>
+      )}
+      <MapSvg nodes={shown} scrollKey={allNodes} />
+      {range.to < range.last && (
+        <button type="button" className={more} onClick={() => setExtra((e) => ({ ...e, after: e.after + WORLD_STEP }))}>
+          ▼ さきの ワールドを のぞく（〜ワールド{Math.min(range.last, range.to + WORLD_STEP)}）
+        </button>
+      )}
+    </div>
+  );
+}
+
+function MapSvg({ nodes: safeNodes, scrollKey }: { nodes: StageNode[]; scrollKey: unknown }) {
   const router = useRouter();
   const currentRef = useRef<SVGGElement>(null);
-  const safeNodes = nodes ?? [];
   const height = TOP + 90 + safeNodes.length * STEP;
 
+  // 現在地へ スクロールするのは マップの データが かわったときだけ（「まえの ワールドも みる」で もどされないように）
   useEffect(() => {
     currentRef.current?.scrollIntoView({ block: "center", behavior: "smooth" });
-  }, [safeNodes]);
+  }, [scrollKey]);
 
   const pts = safeNodes.map((_, i) => pos(i));
   const path = pts.map((p, i) => (i === 0 ? `M${p.x},${p.y}` : `Q${(pts[i - 1].x + p.x) / 2 + (i % 2 ? 30 : -30)},${(pts[i - 1].y + p.y) / 2} ${p.x},${p.y}`)).join(" ");
@@ -119,13 +201,7 @@ export function WorldMap({ nodes }: { nodes: StageNode[] }) {
     if (n.assessmentId) router.push(`/test/${encodeURIComponent(n.assessmentId)}`);
   };
 
-  // 現在地 = domain/progression.ts の pickCurrent と同じ優先順（受けられる復習クエスト → 次のレッスン/ゲート）
-  const firstIdx = (f: (n: StageNode) => boolean) => safeNodes.findIndex(f);
-  const curIdx = [
-    firstIdx((n) => n.type === "CHECK" && n.status === "AVAILABLE"),
-    firstIdx((n) => n.type !== "CHECK" && n.status === "AVAILABLE"),
-    firstIdx((n) => n.status === "WAIT_TOMORROW"),
-  ].find((i) => i >= 0) ?? -1;
+  const curIdx = currentIndex(safeNodes);
 
   return (
     <svg viewBox={`0 0 ${W} ${height}`} className="w-full" role="list" aria-label="ぼうけんマップ">
@@ -135,7 +211,7 @@ export function WorldMap({ nodes }: { nodes: StageNode[] }) {
         if (idx.length === 0) return null;
         const y0 = pos(idx[0]).y - 110;
         const y1 = pos(idx[idx.length - 1]).y + 80;
-        const t = WORLD_THEMES[w] ?? WORLD_THEMES[1];
+        const t = themeOfWorld(w);
         return (
           <g key={w}>
             <linearGradient id={`world-${w}`} x1="0" y1="0" x2="0" y2="1">
@@ -175,7 +251,7 @@ export function WorldMap({ nodes }: { nodes: StageNode[] }) {
       <g filter="url(#f-rim)">
         {safeNodes.map((n, i) => {
           if (i % 3 !== 1) return null;
-          const t = WORLD_THEMES[n.world] ?? WORLD_THEMES[1];
+          const t = themeOfWorld(n.world);
           const p = pos(i);
           const side = p.x > W / 2 ? -1 : 1;
           const x = Math.max(40, Math.min(W - 40, W / 2 + side * (86 + ((i * 37) % 40))));

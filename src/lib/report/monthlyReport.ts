@@ -7,9 +7,11 @@
  *  - 6つの力の習得率（送信時点）と総合
  *  - にがて（習得率の低い力・忘れかけの項目）
  *  - 来月の予定（次に進むレッスンからの 単元・フォニックス）
- *  - 同封するワークシート: いま いる（これから始める）ワールドの 1か月ワークブック
+ *  - 同封するワークシート: これから進む 20 レッスンの 1か月ワークブック（run7: ワールドごと → 20レッスンごと）
+ *  - run7: いまの ステージ・レベル、学校の英語「○○ まで修了」、覚えた ことばの数
  */
-import { getItem, getLesson, TOTAL_LESSONS } from "@/lib/curriculum";
+import { countWordsLearned, getItem, getLesson, TOTAL_LESSONS } from "@/lib/curriculum";
+import { levelOfLesson, monthPackOfLesson, schoolGradeCompleted, stageDef, stageOfLesson, type MonthPack } from "@/lib/curriculum/stages";
 import { CURRICULUM_RULES } from "@/lib/domain/config";
 import { localDate } from "@/lib/domain/dates";
 import { SKILL_LABELS_JA, type MasteryResult } from "@/lib/domain/mastery";
@@ -100,9 +102,30 @@ export interface ReportSummary {
   totalLessons: number;
   world: number;
   worldNameJa: string;
+  // run7（古い 記録には 無い）
+  /** いまの ステージ（1〜5）と その名前・レベル（CEFR の めやす） */
+  stage?: number;
+  stageNameJa?: string;
+  level?: string;
+  /** 学校の英語「小6 の内容まで修了」など */
+  schoolLineJa?: string;
+  /** 覚えた ことば（完了した レッスンの 単語の数） */
+  wordsLearned?: number;
+  /** 同封する 1か月ワークブックの 番号と 範囲 */
+  pack?: number;
+  packStart?: number;
+  packEnd?: number;
 }
 
 export interface MonthlyReport extends ReportSummary {
+  stage: number;
+  stageNameJa: string;
+  level: string;
+  schoolLineJa: string;
+  wordsLearned: number;
+  pack: number;
+  packStart: number;
+  packEnd: number;
   generatedOn: string;
   mastery: { skill: Skill; labelJa: string; score: number }[];
   weakSkills: { skill: Skill; labelJa: string; score: number }[];
@@ -156,7 +179,12 @@ export function buildMonthlyReport(input: ReportInput): MonthlyReport {
   }
 
   const world = currentWorld(completedLessons);
-  const summary: ReportSummary = {
+  // いまの いる レッスン（つぎに進む レッスン。全部おわっていれば さいご）→ ステージ・レベル・ワークブック
+  const here = Math.max(1, Math.min(next ?? TOTAL_LESSONS, TOTAL_LESSONS));
+  const stage = stageOfLesson(here);
+  const pack: MonthPack = monthPackOfLesson(here);
+  const cleared = next == null ? TOTAL_LESSONS : next - 1;
+  const summary: ReportSummary & Pick<MonthlyReport, "stage" | "stageNameJa" | "level" | "schoolLineJa" | "wordsLearned" | "pack" | "packStart" | "packEnd"> = {
     childName: child.nickname,
     month,
     monthLabelJa: monthLabelJa(month),
@@ -170,6 +198,14 @@ export function buildMonthlyReport(input: ReportInput): MonthlyReport {
     totalLessons: TOTAL_LESSONS,
     world,
     worldNameJa: worldName(world),
+    stage,
+    stageNameJa: stageDef(stage).nameJa,
+    level: levelOfLesson(here),
+    schoolLineJa: schoolGradeCompleted(cleared).lineJa,
+    wordsLearned: countWordsLearned(completedLessons.keys()),
+    pack: pack.pack,
+    packStart: pack.start,
+    packEnd: Math.min(pack.end, TOTAL_LESSONS),
   };
 
   return {
@@ -207,5 +243,7 @@ export function summaryLinesJa(s: ReportSummary): string[] {
     `連続: ${s.streakDays}日（最長 ${s.longestStreak}日）`,
     `総合習得率: ${Math.round(s.overall)}%`,
     `いまのワールド: ${s.world}「${s.worldNameJa}」`,
+    ...(s.stage ? [`ステージ${s.stage}${s.level ? `（${s.level}）` : ""}・覚えた ことば ${s.wordsLearned ?? 0}語`] : []),
+    ...(s.schoolLineJa ? [s.schoolLineJa] : []),
   ];
 }

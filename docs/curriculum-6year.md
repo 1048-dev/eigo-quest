@@ -232,6 +232,7 @@
 - 各レッスンの必須項目は既存と同じ（`docs/curriculum-plan.md` §7 のルール）。追加で任意の `stage`（1〜5）と `level`（"Pre-A1" / "A1" / "A2" / "A2+" / "B1" / "B1+"）を持てる。
 - `school.grade` はステージ2 以降、§6 の表に合わせて「中1」「中2」「中3」「高校初級」「高校」とする（保護者向けの目安）。
 - `conversation.lines[].speaker` は既存の 5 人。`aiTask` では個人情報（本名・年齢・住所・学校名など）を聞かない。
+- **P2 で実装ずみ**: 新しいワールドは `content/curriculum/worlds/world-NN.json`（`{ "world", "stage", "level", "lessons": [...] }`）に書き、`npm run curriculum:index` で 索引（`index.json`・`titles.json`・`src/lib/curriculum/bundledWorlds.ts`）を作りなおす。ずれていると `tests/curriculum.test.ts` が失敗する。ブラウザは 必要なワールドの JSON だけを あとから読む（`ensureLessonsLoaded`）。
 - `phonics.rule` はステージ2 以降に新しい値（"spelling" / "morphology" / "prosody" など）を使ってよい。そのときはクイズの出し方（questions.ts）を P2〜WORLD 作業で追加し、テストで確認する。
 
 ---

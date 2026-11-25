@@ -1,0 +1,4231 @@
+{
+  "world": 10,
+  "stage": 1,
+  "level": "A1",
+  "lessons": [
+    {
+      "lessonNo": 271,
+      "world": 10,
+      "title": "Where Do Sea Turtles Live?",
+      "titleJa": "ウミガメは どこに すんでいる？",
+      "school": {
+        "grade": "小6",
+        "topic": "いきものと地球：すんでいる ところ",
+        "grammar": "Where do ～ live? ― They live in ～.",
+        "expressions": [
+          {
+            "en": "Where do sea turtles live?",
+            "ja": "ウミガメは どこに すんでいますか。",
+            "core": true
+          },
+          {
+            "en": "They live in the sea.",
+            "ja": "うみに すんでいます。"
+          },
+          {
+            "en": "Sea turtles eat jellyfish.",
+            "ja": "ウミガメは クラゲを たべます。"
+          }
+        ],
+        "testPoints": [
+          "Where do ～ live? で いきものの すみかを たずねられる",
+          "c（ス）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Swim like a sea turtle.",
+          "ja": "ウミガメみたいに およいで。",
+          "action": "りょうてを ゆっくり うごかして およぐ まね",
+          "emoji": "🐢"
+        },
+        {
+          "en": "Point to the sea.",
+          "ja": "うみを ゆびさして。",
+          "action": "うみの えを ゆびさす",
+          "emoji": "🌊"
+        },
+        {
+          "en": "Hold some ice.",
+          "ja": "こおりを もって。",
+          "action": "つめたそうに こおりを もつ まね",
+          "emoji": "🧊"
+        },
+        {
+          "en": "Pick up a pencil.",
+          "ja": "えんぴつを もって。",
+          "action": "えんぴつを もつ まね",
+          "emoji": "✏️"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-c",
+        "focus": [
+          "c"
+        ],
+        "sounds": [
+          "/s/"
+        ],
+        "words": [
+          "ice",
+          "city",
+          "rice",
+          "pencil"
+        ],
+        "tipJa": "c の あとに e・i・y が くると、c は「ス」の おと。ice、city、rice、pencil。cat の「ク」と ちがうよ。"
+      },
+      "vocab": [
+        {
+          "en": "sea turtle",
+          "ja": "ウミガメ",
+          "emoji": "🐢",
+          "core": true
+        },
+        {
+          "en": "ocean",
+          "ja": "うみ（おおきな うみ）",
+          "emoji": "🌊"
+        },
+        {
+          "en": "jellyfish",
+          "ja": "クラゲ",
+          "emoji": "🪼"
+        },
+        {
+          "en": "earth",
+          "ja": "ちきゅう",
+          "emoji": "🌏"
+        }
+      ],
+      "teacherScript": "ワールド10 いのちの海へ ようこそ！「Where do sea turtles live?」で すんでいる ところを きこう。c は e・i・y の まえで「ス」！",
+      "conversation": {
+        "scene": "The first day at the Ocean of Life aquarium",
+        "sceneJa": "いのちの海の すいぞくかんの はじめての 日",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Ocean of Life! Look at this sea turtle.",
+            "ja": "いのちの海へ ようこそ！この ウミガメを みて。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Where do sea turtles live?",
+            "ja": "ウミガメは どこに すんでいるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "They live in the sea. They swim very far!",
+            "ja": "うみに すんでいるよ。とても とおくまで およぐんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sea turtles eat jellyfish. I read it in a book.",
+            "ja": "ウミガメは クラゲを たべるの。ほんで よんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I live in the sky. Where do you live, little fish?",
+            "ja": "ぼくは そらに すんでいるよ。ちいさい さかなさんは どこ？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Where do ～ live? と They live in ～. で いきものの すみかを はなそう",
+          "starterEn": "Hi! I like sea turtles. Where do sea turtles live?",
+          "targetExpressions": [
+            "Where do ～ live?",
+            "They live in ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where do sea turtles live? が いえたね",
+          "They live in the sea. で こたえられる",
+          "ice、city、rice、pencil！ c は「ス」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 272,
+      "world": 10,
+      "title": "Animals and Their Homes",
+      "titleJa": "いきものの すみか",
+      "school": {
+        "grade": "小6",
+        "topic": "いきものと地球：いろいろな すみか",
+        "grammar": "～ live in ～.",
+        "expressions": [
+          {
+            "en": "Penguins live in cold places.",
+            "ja": "ペンギンは さむい ところに すんでいます。",
+            "core": true
+          },
+          {
+            "en": "Koalas live in trees.",
+            "ja": "コアラは きに すんでいます。"
+          },
+          {
+            "en": "Camels live in the desert.",
+            "ja": "ラクダは さばくに すんでいます。"
+          }
+        ],
+        "testPoints": [
+          "～ live in ～. で いきものの すみかを いえる",
+          "c（ス）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk like a penguin.",
+          "ja": "ペンギンみたいに あるいて。",
+          "action": "よちよち あるく",
+          "emoji": "🐧"
+        },
+        {
+          "en": "Climb a tree.",
+          "ja": "きに のぼって。",
+          "action": "きに のぼる まね",
+          "emoji": "🌳"
+        },
+        {
+          "en": "Wash your face.",
+          "ja": "かおを あらって。",
+          "action": "かおを あらう まね",
+          "emoji": "🧼"
+        },
+        {
+          "en": "Dance in place.",
+          "ja": "その ばで おどって。",
+          "action": "その ばで おどる",
+          "emoji": "💃"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-c",
+        "focus": [
+          "c"
+        ],
+        "sounds": [
+          "/s/"
+        ],
+        "words": [
+          "face",
+          "dance",
+          "juice",
+          "place"
+        ],
+        "tipJa": "おわりの ce は「ス」。face、dance、juice、place。さいごの e は よまないよ。"
+      },
+      "vocab": [
+        {
+          "en": "penguin",
+          "ja": "ペンギン",
+          "emoji": "🐧",
+          "core": true
+        },
+        {
+          "en": "koala",
+          "ja": "コアラ",
+          "emoji": "🐨"
+        },
+        {
+          "en": "camel",
+          "ja": "ラクダ",
+          "emoji": "🐪"
+        },
+        {
+          "en": "desert",
+          "ja": "さばく",
+          "emoji": "🏜️"
+        }
+      ],
+      "teacherScript": "「Penguins live in cold places.」 いきものは いろいろな ところに すんでいるね。face、dance の ce は「ス」！",
+      "conversation": {
+        "scene": "Making a map of animal homes in the aquarium",
+        "sceneJa": "すいぞくかんで いきものの すみかマップづくり",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Penguins live in cold places. Let's put them here.",
+            "ja": "ペンギンは さむい ところに すんでいるよ。ここに はろう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Koalas live in trees. They sleep a lot!",
+            "ja": "コアラは きに すんでいるよ。よく ねるんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Where do camels live?",
+            "ja": "ラクダは どこに すんでいるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Camels live in the desert. It's very hot there.",
+            "ja": "ラクダは さばくに すんでいるの。とても あついのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "～ live in ～. で すきな いきものの すみかを つたえよう",
+          "starterEn": "Penguins live in cold places. What animal do you like? Where do they live?",
+          "targetExpressions": [
+            "～ live in ～.",
+            "Where do ～ live?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Penguins live in cold places. が いえたね",
+          "コアラは trees、ラクダは desert",
+          "face、dance、juice、place！ ce は「ス」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 273,
+      "world": 10,
+      "title": "What Do Whales Eat?",
+      "titleJa": "クジラは なにを たべる？",
+      "school": {
+        "grade": "小6",
+        "topic": "いきものと地球：たべもの",
+        "grammar": "What do ～ eat? ― They eat ～.",
+        "expressions": [
+          {
+            "en": "Whales eat small fish.",
+            "ja": "クジラは ちいさい さかなを たべます。",
+            "core": true
+          },
+          {
+            "en": "What do pandas eat?",
+            "ja": "パンダは なにを たべますか。"
+          },
+          {
+            "en": "They eat bamboo.",
+            "ja": "ささを たべます。"
+          }
+        ],
+        "testPoints": [
+          "What do ～ eat? で いきものの たべものを たずねられる",
+          "c（ス）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your mouth wide.",
+          "ja": "くちを おおきく あけて。",
+          "action": "クジラみたいに くちを あける",
+          "emoji": "🐋"
+        },
+        {
+          "en": "Eat some bamboo.",
+          "ja": "ささを たべて。",
+          "action": "ささを たべる まね",
+          "emoji": "🎋"
+        },
+        {
+          "en": "Slice the bread.",
+          "ja": "パンを きって。",
+          "action": "パンを きる まね",
+          "emoji": "🍞"
+        },
+        {
+          "en": "Look up at space.",
+          "ja": "うちゅうを みあげて。",
+          "action": "うえを みあげる",
+          "emoji": "🚀"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-c",
+        "focus": [
+          "c"
+        ],
+        "sounds": [
+          "/s/"
+        ],
+        "words": [
+          "mice",
+          "space",
+          "slice",
+          "race"
+        ],
+        "tipJa": "ice・ace の c は「ス」。mice、space、slice、race。"
+      },
+      "vocab": [
+        {
+          "en": "whale",
+          "ja": "クジラ",
+          "emoji": "🐋",
+          "core": true
+        },
+        {
+          "en": "panda",
+          "ja": "パンダ",
+          "emoji": "🐼"
+        },
+        {
+          "en": "bamboo",
+          "ja": "ささ（たけ）",
+          "emoji": "🎋"
+        },
+        {
+          "en": "shark",
+          "ja": "サメ",
+          "emoji": "🦈"
+        }
+      ],
+      "teacherScript": "「Whales eat small fish.」 たべものを きくときは What do ～ eat? だよ。mice、space の c は「ス」！",
+      "conversation": {
+        "scene": "Feeding time at the aquarium",
+        "sceneJa": "すいぞくかんの えさの じかん",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look! That whale is so big. What do whales eat?",
+            "ja": "みて！あの クジラ すごく おおきい。クジラは なにを たべるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Whales eat small fish. Some whales eat tiny shrimp.",
+            "ja": "クジラは ちいさい さかなを たべるの。とても ちいさい エビを たべる クジラも いるわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What do pandas eat?",
+            "ja": "パンダは なにを たべるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "They eat bamboo. They eat all day!",
+            "ja": "ささを たべるよ。1日じゅう たべているの！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I eat rice balls!",
+            "ja": "ぼくは おにぎりを たべるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What do ～ eat? で いきものの たべものを たずねよう",
+          "starterEn": "Look at the whale! Whales eat small fish. What do pandas eat?",
+          "targetExpressions": [
+            "What do ～ eat?",
+            "They eat ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Whales eat small fish. が いえたね",
+          "What do pandas eat? ― They eat bamboo.",
+          "mice、space、slice、race！ c は「ス」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 274,
+      "world": 10,
+      "title": "Animals in Danger",
+      "titleJa": "あぶない めに あっている いきもの",
+      "school": {
+        "grade": "小6",
+        "topic": "いきものと地球：いきものを まもる",
+        "grammar": "～ are in danger. / ～ are bad for ～.",
+        "expressions": [
+          {
+            "en": "Sea turtles are in danger.",
+            "ja": "ウミガメは きけんな めに あっています。",
+            "core": true
+          },
+          {
+            "en": "Plastic bags are bad for sea animals.",
+            "ja": "ビニールぶくろは うみの いきものに よくないです。"
+          },
+          {
+            "en": "We need clean seas.",
+            "ja": "きれいな うみが ひつようです。"
+          }
+        ],
+        "testPoints": [
+          "～ are in danger. で いきものの ききを いえる",
+          "c（ス）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a sad face.",
+          "ja": "かなしい かおを して。",
+          "action": "かなしい かおを する",
+          "emoji": "😢"
+        },
+        {
+          "en": "Pick up the plastic bag.",
+          "ja": "ビニールぶくろを ひろって。",
+          "action": "ふくろを ひろう まね",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "Put it in the trash can.",
+          "ja": "ゴミばこに いれて。",
+          "action": "ゴミばこに いれる まね",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "Give me a thumbs up.",
+          "ja": "おやゆびを たてて。",
+          "action": "グッドの ポーズ",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-c",
+        "focus": [
+          "c"
+        ],
+        "sounds": [
+          "/s/"
+        ],
+        "words": [
+          "fancy",
+          "cent",
+          "cell",
+          "prince"
+        ],
+        "tipJa": "c の あとに y や e が きても「ス」。fancy、cent、cell、prince。"
+      },
+      "vocab": [
+        {
+          "en": "danger",
+          "ja": "きけん",
+          "emoji": "⚠️",
+          "core": true
+        },
+        {
+          "en": "plastic",
+          "ja": "プラスチック",
+          "emoji": "🧴"
+        },
+        {
+          "en": "clean",
+          "ja": "きれいな",
+          "emoji": "✨"
+        },
+        {
+          "en": "animal",
+          "ja": "どうぶつ",
+          "emoji": "🐾"
+        }
+      ],
+      "teacherScript": "「Sea turtles are in danger.」 プラスチックの ゴミは うみの いきものに よくないね。fancy、cent の c も「ス」！",
+      "conversation": {
+        "scene": "Looking at a poster about sea animals in danger",
+        "sceneJa": "あぶない めに あっている うみの いきものの ポスターを みる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look at this poster. Sea turtles are in danger.",
+            "ja": "この ポスターを みて。ウミガメが あぶないんだって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Why? What happened?",
+            "ja": "どうして？なにが あったの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Plastic bags are bad for sea animals. Turtles think the bags are jellyfish.",
+            "ja": "ビニールぶくろは うみの いきものに よくないの。カメは ふくろを クラゲだと おもって しまうのよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh no! We need clean seas.",
+            "ja": "たいへん！きれいな うみが ひつようだね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "～ are in danger. で しっている いきものの ききを つたえよう",
+          "starterEn": "Sea turtles are in danger. Plastic bags are bad for them. What do you think?",
+          "targetExpressions": [
+            "～ are in danger.",
+            "～ are bad for ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Sea turtles are in danger. が いえたね",
+          "Plastic bags are bad for sea animals.",
+          "fancy、cent、cell、prince！ c は「ス」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 275,
+      "world": 10,
+      "title": "Sea Creature Quiz",
+      "titleJa": "うみの いきもの クイズ",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：うみの いきもの クイズ",
+        "grammar": "Where do ～ live? / What do ～ eat?",
+        "expressions": [
+          {
+            "en": "They live in the sea. They eat fish.",
+            "ja": "うみに すんでいます。さかなを たべます。",
+            "core": true
+          },
+          {
+            "en": "What animal is it?",
+            "ja": "なんの どうぶつですか。"
+          },
+          {
+            "en": "It's a dolphin!",
+            "ja": "イルカです！"
+          }
+        ],
+        "testPoints": [
+          "Where do ～ live? / What do ～ eat? を つかって クイズが できる",
+          "c の「ス」と「ク」を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jump like a dolphin.",
+          "ja": "イルカみたいに ジャンプして。",
+          "action": "りょうてを あげて ジャンプ",
+          "emoji": "🐬"
+        },
+        {
+          "en": "Swim like a fish.",
+          "ja": "さかなみたいに およいで。",
+          "action": "てを ひらひら させる",
+          "emoji": "🐟"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Cover your eyes.",
+          "ja": "めを かくして。",
+          "action": "りょうてで めを かくす",
+          "emoji": "🙈"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "c"
+        ],
+        "sounds": [
+          "/s/",
+          "/k/"
+        ],
+        "words": [
+          "city",
+          "cat",
+          "ice",
+          "cup"
+        ],
+        "tipJa": "c の ふりかえり。city と ice は「ス」、cat と cup は「ク」。c の あとの もじを みてね（e・i・y なら「ス」）。"
+      },
+      "vocab": [
+        {
+          "en": "dolphin",
+          "ja": "イルカ",
+          "emoji": "🐬",
+          "core": true
+        },
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "❓"
+        },
+        {
+          "en": "octopus",
+          "ja": "タコ",
+          "emoji": "🐙"
+        },
+        {
+          "en": "crab",
+          "ja": "カニ",
+          "emoji": "🦀"
+        }
+      ],
+      "teacherScript": "きょうは うみの いきもの クイズ！「They live in the sea. They eat fish.」 ヒントを だしあおう。c の「ス」と「ク」も くらべるよ。",
+      "conversation": {
+        "scene": "A sea creature quiz at the aquarium stage",
+        "sceneJa": "すいぞくかんの ステージで うみの いきもの クイズ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Quiz time! They live in the sea. They eat fish. They can jump.",
+            "ja": "クイズの じかん！うみに すんでいます。さかなを たべます。ジャンプが できます。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What animal is it? Hmm...",
+            "ja": "なんの どうぶつかな？うーん…"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's a dolphin!",
+            "ja": "イルカだ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right! Next, Riko.",
+            "ja": "せいかい！つぎは リコ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "They live in the sea. They have eight legs.",
+            "ja": "うみに すんでいます。あしが 8ぽん あります。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's an octopus!",
+            "ja": "タコだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Where do ～ live? と What do ～ eat? で うみの いきもの クイズを しよう",
+          "starterEn": "Let's do a quiz! They live in the sea. They eat fish. They can jump. What animal is it?",
+          "targetExpressions": [
+            "They live in ～.",
+            "They eat ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "They live in the sea. They eat fish. で クイズが できたね",
+          "dolphin、octopus、crab を おぼえたね",
+          "city・ice は「ス」、cat・cup は「ク」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 276,
+      "world": 10,
+      "title": "Where Is This Banana From?",
+      "titleJa": "この バナナは どこから？",
+      "school": {
+        "grade": "小6",
+        "topic": "食べもののつながり：どこから きたか",
+        "grammar": "Where is ～ from? ― It's from ～.",
+        "expressions": [
+          {
+            "en": "Where is this banana from?",
+            "ja": "この バナナは どこから きましたか。",
+            "core": true
+          },
+          {
+            "en": "It's from the Philippines.",
+            "ja": "フィリピンから きました。"
+          },
+          {
+            "en": "This chocolate is from Ghana.",
+            "ja": "この チョコレートは ガーナから きました。"
+          }
+        ],
+        "testPoints": [
+          "Where is ～ from? で たべものが どこから きたか たずねられる",
+          "g（ジ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Peel a banana.",
+          "ja": "バナナの かわを むいて。",
+          "action": "バナナの かわを むく まね",
+          "emoji": "🍌"
+        },
+        {
+          "en": "Turn the page.",
+          "ja": "ページを めくって。",
+          "action": "ページを めくる まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Walk like a giant.",
+          "ja": "きょじんみたいに あるいて。",
+          "action": "おおきく ドシドシ あるく",
+          "emoji": "👣"
+        },
+        {
+          "en": "Open the cage.",
+          "ja": "かごを あけて。",
+          "action": "かごの とびらを あける まね",
+          "emoji": "🔓"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-g",
+        "focus": [
+          "g"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "giant",
+          "page",
+          "gem",
+          "cage"
+        ],
+        "tipJa": "g の あとに e・i・y が くると、g は「ジ」の おと。giant、page、gem、cage。go の「グ」と ちがうよ。"
+      },
+      "vocab": [
+        {
+          "en": "banana",
+          "ja": "バナナ",
+          "emoji": "🍌",
+          "core": true
+        },
+        {
+          "en": "chocolate",
+          "ja": "チョコレート",
+          "emoji": "🍫"
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "ship",
+          "ja": "ふね",
+          "emoji": "🚢"
+        }
+      ],
+      "teacherScript": "「Where is this banana from?」 たべものは いろいろな くにから くるね。g は e・i・y の まえで「ジ」！",
+      "conversation": {
+        "scene": "Looking at food labels at the harbor market",
+        "sceneJa": "みなとの いちばで たべものの ラベルを みる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Where is this banana from?",
+            "ja": "この バナナは どこから きたの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's from the Philippines. It came by ship.",
+            "ja": "フィリピンからだよ。ふねで きたの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This chocolate is from Ghana. Ghana is in Africa.",
+            "ja": "この チョコレートは ガーナから。ガーナは アフリカに あるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's find the countries on the map.",
+            "ja": "ちずで くにを さがしてみよう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Where is ～ from? と It's from ～. で たべものが どこから きたか はなそう",
+          "starterEn": "I have a banana. Where is this banana from? Let's look at the sticker!",
+          "targetExpressions": [
+            "Where is ～ from?",
+            "It's from ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where is this banana from? が いえたね",
+          "It's from the Philippines. で こたえられる",
+          "giant、page、gem、cage！ g は「ジ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 277,
+      "world": 10,
+      "title": "It's from Hokkaido",
+      "titleJa": "ほっかいどうから きたよ",
+      "school": {
+        "grade": "小6",
+        "topic": "食べもののつながり：にほんの さんち",
+        "grammar": "～ is from ～.",
+        "expressions": [
+          {
+            "en": "This milk is from Hokkaido.",
+            "ja": "この ぎゅうにゅうは ほっかいどうから きました。",
+            "core": true
+          },
+          {
+            "en": "These apples are from Aomori.",
+            "ja": "この りんごは あおもりから きました。"
+          },
+          {
+            "en": "Where are these oranges from?",
+            "ja": "この オレンジは どこから きましたか。"
+          }
+        ],
+        "testPoints": [
+          "～ is from ～. で にほんの さんちを いえる",
+          "g（ジ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Drink some milk.",
+          "ja": "ぎゅうにゅうを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "🥛"
+        },
+        {
+          "en": "Make a huge circle.",
+          "ja": "おおきな まるを つくって。",
+          "action": "りょうてで おおきな まる",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Stand on the stage.",
+          "ja": "ステージに たって。",
+          "action": "むねを はって たつ",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Peel an orange.",
+          "ja": "オレンジの かわを むいて。",
+          "action": "かわを むく まね",
+          "emoji": "🍊"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-g",
+        "focus": [
+          "g"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "huge",
+          "large",
+          "stage",
+          "orange"
+        ],
+        "tipJa": "おわりの ge は「ジ」。huge、large、stage、orange。さいごの e は よまないよ。"
+      },
+      "vocab": [
+        {
+          "en": "milk",
+          "ja": "ぎゅうにゅう",
+          "emoji": "🥛",
+          "core": true
+        },
+        {
+          "en": "orange",
+          "ja": "オレンジ",
+          "emoji": "🍊"
+        },
+        {
+          "en": "potato",
+          "ja": "じゃがいも",
+          "emoji": "🥔"
+        },
+        {
+          "en": "farmer",
+          "ja": "のうかの ひと",
+          "emoji": "🧑‍🌾"
+        }
+      ],
+      "teacherScript": "「This milk is from Hokkaido.」 にほんの たべものの さんちも いえるね。huge、orange の ge は「ジ」！",
+      "conversation": {
+        "scene": "A food map of Japan at the harbor market",
+        "sceneJa": "みなとの いちばで にほんの たべものマップ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "This milk is from Hokkaido. It's my favorite!",
+            "ja": "この ぎゅうにゅうは ほっかいどうから。だいすき！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "These apples are from Aomori. They are huge!",
+            "ja": "この りんごは あおもりから。すごく おおきい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Where are these oranges from?",
+            "ja": "この オレンジは どこから きたの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "They are from Ehime. Many oranges grow there.",
+            "ja": "えひめからよ。オレンジが たくさん そだつの。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "～ is from ～. で すきな たべものの さんちを つたえよう",
+          "starterEn": "This milk is from Hokkaido. Do you know where your food is from?",
+          "targetExpressions": [
+            "～ is from ～.",
+            "Where is ～ from?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This milk is from Hokkaido. が いえたね",
+          "Where are these oranges from? も いえる",
+          "huge、large、stage、orange！ ge は「ジ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 278,
+      "world": 10,
+      "title": "What's in Our School Lunch?",
+      "titleJa": "きゅうしょくの ざいりょう",
+      "school": {
+        "grade": "小6",
+        "topic": "食べもののつながり：きゅうしょくの ざいりょう",
+        "grammar": "What's in ～? / The ～ is from ～.",
+        "expressions": [
+          {
+            "en": "The rice is from Niigata.",
+            "ja": "おこめは にいがたから きました。",
+            "core": true
+          },
+          {
+            "en": "What's in the curry?",
+            "ja": "カレーには なにが はいっていますか。"
+          },
+          {
+            "en": "Carrots, onions and potatoes.",
+            "ja": "にんじん、たまねぎ、じゃがいもです。"
+          }
+        ],
+        "testPoints": [
+          "What's in ～? で なにが はいっているか たずねられる",
+          "g（ジ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jog in place in the gym.",
+          "ja": "たいいくかんで その ばで かけあし。",
+          "action": "その ばで かけあし",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Do a magic trick.",
+          "ja": "てじなを して。",
+          "action": "てを くるっと まわす",
+          "emoji": "🪄"
+        },
+        {
+          "en": "Stretch like a giraffe.",
+          "ja": "キリンみたいに のびて。",
+          "action": "せのびを する",
+          "emoji": "🦒"
+        },
+        {
+          "en": "Stir the curry.",
+          "ja": "カレーを まぜて。",
+          "action": "おなべを まぜる まね",
+          "emoji": "🍛"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-g",
+        "focus": [
+          "g"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "gym",
+          "magic",
+          "giraffe",
+          "energy"
+        ],
+        "tipJa": "gi・gy の g も「ジ」。gym、magic、giraffe、energy。"
+      },
+      "vocab": [
+        {
+          "en": "school lunch",
+          "ja": "きゅうしょく",
+          "emoji": "🍱",
+          "core": true
+        },
+        {
+          "en": "carrot",
+          "ja": "にんじん",
+          "emoji": "🥕"
+        },
+        {
+          "en": "onion",
+          "ja": "たまねぎ",
+          "emoji": "🧅"
+        },
+        {
+          "en": "energy",
+          "ja": "げんき（エネルギー）",
+          "emoji": "⚡"
+        }
+      ],
+      "teacherScript": "「The rice is from Niigata.」 きゅうしょくの ざいりょうを さがそう。gym、magic の g も「ジ」！",
+      "conversation": {
+        "scene": "Finding where school lunch food comes from",
+        "sceneJa": "きゅうしょくの ざいりょう さがし",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Today's lunch is curry and rice! What's in the curry?",
+            "ja": "きょうの きゅうしょくは カレーライス！カレーには なにが はいってるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Carrots, onions and potatoes. The potatoes are from Hokkaido.",
+            "ja": "にんじん、たまねぎ、じゃがいも。じゃがいもは ほっかいどうからだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The rice is from Niigata. It's on the lunch menu.",
+            "ja": "おこめは にいがたから。こんだてひょうに かいてあるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Curry gives me energy!",
+            "ja": "カレーで げんき いっぱい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What's in ～? と ～ is from ～. で きゅうしょくの ざいりょうを はなそう",
+          "starterEn": "Today's lunch is curry and rice. What's in the curry?",
+          "targetExpressions": [
+            "What's in ～?",
+            "～ is from ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The rice is from Niigata. が いえたね",
+          "What's in the curry? で ざいりょうを きける",
+          "gym、magic、giraffe、energy！ g は「ジ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 279,
+      "world": 10,
+      "title": "The Food Chain",
+      "titleJa": "たべものの つながり",
+      "school": {
+        "grade": "小6",
+        "topic": "食べもののつながり：しょくもつれんさ",
+        "grammar": "～ eat ～. / ～ is food for ～.",
+        "expressions": [
+          {
+            "en": "Rabbits eat grass.",
+            "ja": "ウサギは くさを たべます。",
+            "core": true
+          },
+          {
+            "en": "Foxes eat rabbits.",
+            "ja": "キツネは ウサギを たべます。"
+          },
+          {
+            "en": "Grass is food for rabbits.",
+            "ja": "くさは ウサギの たべものです。"
+          }
+        ],
+        "testPoints": [
+          "～ eat ～. で たべものの つながりを いえる",
+          "g（ジ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hop like a rabbit.",
+          "ja": "ウサギみたいに はねて。",
+          "action": "りょうあしで ぴょんぴょん",
+          "emoji": "🐰"
+        },
+        {
+          "en": "Be gentle.",
+          "ja": "やさしくね。",
+          "action": "ぬいぐるみを やさしく なでる まね",
+          "emoji": "🤲"
+        },
+        {
+          "en": "Cross the bridge.",
+          "ja": "はしを わたって。",
+          "action": "そっと あるく",
+          "emoji": "🌉"
+        },
+        {
+          "en": "Wash your hands.",
+          "ja": "てを あらって。",
+          "action": "てを あらう まね",
+          "emoji": "🧼"
+        }
+      ],
+      "phonics": {
+        "rule": "soft-g",
+        "focus": [
+          "g"
+        ],
+        "sounds": [
+          "/dʒ/"
+        ],
+        "words": [
+          "gentle",
+          "germ",
+          "ginger",
+          "bridge"
+        ],
+        "tipJa": "ge・gi の g は「ジ」。gentle、germ、ginger、bridge（dge も「ジ」）。"
+      },
+      "vocab": [
+        {
+          "en": "food chain",
+          "ja": "たべものの つながり",
+          "emoji": "🔗",
+          "core": true
+        },
+        {
+          "en": "rabbit",
+          "ja": "ウサギ",
+          "emoji": "🐰"
+        },
+        {
+          "en": "fox",
+          "ja": "キツネ",
+          "emoji": "🦊"
+        },
+        {
+          "en": "grass",
+          "ja": "くさ",
+          "emoji": "🌿"
+        }
+      ],
+      "teacherScript": "「Rabbits eat grass.」 いきものは たべもので つながっているね。gentle、bridge の g も「ジ」！",
+      "conversation": {
+        "scene": "Drawing a food chain on the beach",
+        "sceneJa": "すなはまに たべものの つながりを かく",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's draw a food chain. Rabbits eat grass.",
+            "ja": "たべものの つながりを かこう。ウサギは くさを たべるわね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Foxes eat rabbits!",
+            "ja": "キツネは ウサギを たべる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Grass is food for rabbits. Rabbits are food for foxes.",
+            "ja": "くさは ウサギの たべもの。ウサギは キツネの たべものだね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In the sea, small fish eat tiny plants. Big fish eat small fish.",
+            "ja": "うみでは ちいさい さかなが ちいさな しょくぶつを たべて、おおきい さかなが ちいさい さかなを たべるよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "～ eat ～. で たべものの つながりを つたえよう",
+          "starterEn": "Let's make a food chain! Rabbits eat grass. Who eats rabbits?",
+          "targetExpressions": [
+            "～ eat ～.",
+            "～ is food for ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Rabbits eat grass. が いえたね",
+          "Grass is food for rabbits. で つながりが いえる",
+          "gentle、germ、ginger、bridge！ g は「ジ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 280,
+      "world": 10,
+      "title": "School Lunch Detectives",
+      "titleJa": "きゅうしょく たんていだん",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：きゅうしょくの ざいりょう さがし",
+        "grammar": "Where is ～ from? / ～ is from ～.",
+        "expressions": [
+          {
+            "en": "The beef is from Australia.",
+            "ja": "ぎゅうにくは オーストラリアから きました。",
+            "core": true
+          },
+          {
+            "en": "Where is the fish from?",
+            "ja": "さかなは どこから きましたか。"
+          },
+          {
+            "en": "It's from the sea near Shizuoka.",
+            "ja": "しずおかの ちかくの うみから きました。"
+          }
+        ],
+        "testPoints": [
+          "Where is ～ from? / ～ is from ～. で ざいりょうの さんちを はっぴょうできる",
+          "g の「ジ」と「グ」を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look with a magnifying glass.",
+          "ja": "むしめがねで みて。",
+          "action": "むしめがねを のぞく まね",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Write it down.",
+          "ja": "かきとって。",
+          "action": "メモを かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Give me five!",
+          "ja": "ハイタッチ！",
+          "action": "てを あげて ハイタッチ",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Hold up your bag.",
+          "ja": "かばんを もちあげて。",
+          "action": "かばんを もちあげる まね",
+          "emoji": "👜"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "g"
+        ],
+        "sounds": [
+          "/dʒ/",
+          "/g/"
+        ],
+        "words": [
+          "giant",
+          "goat",
+          "page",
+          "bag"
+        ],
+        "tipJa": "g の ふりかえり。giant と page は「ジ」、goat と bag は「グ」。g の あとの もじを みてね（e・i・y なら「ジ」）。"
+      },
+      "vocab": [
+        {
+          "en": "detective",
+          "ja": "たんてい",
+          "emoji": "🕵️",
+          "core": true
+        },
+        {
+          "en": "beef",
+          "ja": "ぎゅうにく",
+          "emoji": "🥩"
+        },
+        {
+          "en": "fish",
+          "ja": "さかな",
+          "emoji": "🐟"
+        },
+        {
+          "en": "menu",
+          "ja": "こんだて",
+          "emoji": "📋"
+        }
+      ],
+      "teacherScript": "きゅうしょく たんていだん しゅつどう！「The beef is from Australia.」 ざいりょうの ふるさとを はっぴょうしよう。g の「ジ」と「グ」も くらべるよ。",
+      "conversation": {
+        "scene": "School lunch detectives report",
+        "sceneJa": "きゅうしょく たんていだんの はっぴょう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "We are school lunch detectives! The beef is from Australia.",
+            "ja": "ぼくたちは きゅうしょく たんていだん！ぎゅうにくは オーストラリアから。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Where is the fish from?",
+            "ja": "さかなは どこから きたの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's from the sea near Shizuoka.",
+            "ja": "しずおかの ちかくの うみからだよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job, detectives! Our lunch comes from many places.",
+            "ja": "よく できました、たんていさん！きゅうしょくは いろいろな ところから くるのね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thank you, farmers and fishers!",
+            "ja": "のうかさん、りょうしさん、ありがとう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Where is ～ from? で きゅうしょくの ざいりょうの ふるさとを はなそう（がっこうの なまえは いわなくて OK）",
+          "starterEn": "I'm a school lunch detective! The beef is from Australia. Where is the fish from?",
+          "targetExpressions": [
+            "Where is ～ from?",
+            "～ is from ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The beef is from Australia. が いえたね",
+          "ざいりょうの ふるさとを はっぴょうできた",
+          "giant・page は「ジ」、goat・bag は「グ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 281,
+      "world": 10,
+      "title": "Life Around the World",
+      "titleJa": "せかいの くらし",
+      "school": {
+        "grade": "小6",
+        "topic": "世界のくらし：たべもの",
+        "grammar": "In ～, people ～.",
+        "expressions": [
+          {
+            "en": "In India, people eat curry.",
+            "ja": "インドでは、ひとびとは カレーを たべます。",
+            "core": true
+          },
+          {
+            "en": "In Italy, people eat pasta.",
+            "ja": "イタリアでは、パスタを たべます。"
+          },
+          {
+            "en": "In Mexico, people eat tacos.",
+            "ja": "メキシコでは、タコスを たべます。"
+          }
+        ],
+        "testPoints": [
+          "In ～, people ～. で せかいの くらしを いえる",
+          "おわりの y（イー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a happy face.",
+          "ja": "うれしい かおを して。",
+          "action": "にっこり わらう",
+          "emoji": "😊"
+        },
+        {
+          "en": "Rock the baby.",
+          "ja": "あかちゃんを あやして。",
+          "action": "だっこして ゆらす まね",
+          "emoji": "👶"
+        },
+        {
+          "en": "Eat some pasta.",
+          "ja": "パスタを たべて。",
+          "action": "フォークで くるくる まく まね",
+          "emoji": "🍝"
+        },
+        {
+          "en": "Spin the globe.",
+          "ja": "ちきゅうぎを まわして。",
+          "action": "ちきゅうぎを まわす まね",
+          "emoji": "🌐"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-y",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "happy",
+          "baby",
+          "candy",
+          "funny"
+        ],
+        "tipJa": "ことばの おわりの y は「イー」に なることが おおいよ。happy、baby、candy、funny。"
+      },
+      "vocab": [
+        {
+          "en": "people",
+          "ja": "ひとびと",
+          "emoji": "👫",
+          "core": true
+        },
+        {
+          "en": "pasta",
+          "ja": "パスタ",
+          "emoji": "🍝"
+        },
+        {
+          "en": "tacos",
+          "ja": "タコス",
+          "emoji": "🌮"
+        },
+        {
+          "en": "world",
+          "ja": "せかい",
+          "emoji": "🌍"
+        }
+      ],
+      "teacherScript": "「In India, people eat curry.」 せかいの くにの くらしを くらべよう。happy、baby の おわりの y は「イー」！",
+      "conversation": {
+        "scene": "A world food fair on the Ocean of Life island",
+        "sceneJa": "いのちの海の しまで せかいの たべもの まつり",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the world food fair!",
+            "ja": "せかいの たべもの まつりへ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In India, people eat curry. I love curry!",
+            "ja": "インドでは カレーを たべるんだって。カレー だいすき！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In Italy, people eat pasta. Look at this pasta!",
+            "ja": "イタリアでは パスタを たべるの。この パスタ みて！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "In Mexico, people eat tacos. They look funny and yummy!",
+            "ja": "メキシコでは タコスを たべるよ。おもしろい かたちで おいしそう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "In ～, people ～. で しっている くにの くらしを つたえよう",
+          "starterEn": "In India, people eat curry. Do you know other countries?",
+          "targetExpressions": [
+            "In ～, people ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In India, people eat curry. が いえたね",
+          "イタリアは pasta、メキシコは tacos",
+          "happy、baby、candy、funny！ おわりの y は「イー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 282,
+      "world": 10,
+      "title": "Christmas in Summer?",
+      "titleJa": "なつの クリスマス？",
+      "school": {
+        "grade": "小6",
+        "topic": "世界のくらし：きせつと ぎょうじ",
+        "grammar": "In ～, ～ is in ～.",
+        "expressions": [
+          {
+            "en": "In Australia, Christmas is in summer.",
+            "ja": "オーストラリアでは、クリスマスは なつです。",
+            "core": true
+          },
+          {
+            "en": "People go to the beach.",
+            "ja": "ひとびとは ビーチへ いきます。"
+          },
+          {
+            "en": "It's sunny and hot.",
+            "ja": "はれていて あついです。"
+          }
+        ],
+        "testPoints": [
+          "In ～, ～ is in ～. で くにの きせつの ちがいを いえる",
+          "おわりの y（イー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wear sunglasses.",
+          "ja": "サングラスを かけて。",
+          "action": "サングラスを かける まね",
+          "emoji": "🕶️"
+        },
+        {
+          "en": "Pet the puppy.",
+          "ja": "こいぬを なでて。",
+          "action": "こいぬを なでる まね",
+          "emoji": "🐶"
+        },
+        {
+          "en": "Read a story.",
+          "ja": "おはなしを よんで。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📕"
+        },
+        {
+          "en": "Shake your body.",
+          "ja": "からだを ゆらして。",
+          "action": "からだを ぶるぶる ゆらす",
+          "emoji": "🕺"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-y",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "sunny",
+          "puppy",
+          "story",
+          "body"
+        ],
+        "tipJa": "おわりの y は「イー」。sunny、puppy、story、body。"
+      },
+      "vocab": [
+        {
+          "en": "Christmas",
+          "ja": "クリスマス",
+          "emoji": "🎄",
+          "core": true
+        },
+        {
+          "en": "summer",
+          "ja": "なつ",
+          "emoji": "☀️"
+        },
+        {
+          "en": "winter",
+          "ja": "ふゆ",
+          "emoji": "⛄"
+        },
+        {
+          "en": "beach",
+          "ja": "ビーチ",
+          "emoji": "🏖️"
+        }
+      ],
+      "teacherScript": "「In Australia, Christmas is in summer.」 みなみの くにでは きせつが ぎゃくなんだ。sunny、puppy の y も「イー」！",
+      "conversation": {
+        "scene": "A video call with Ms. Emma's niece Lily in Australia",
+        "sceneJa": "エマ先生の めいっこ リリー（オーストラリア）と オンラインで はなす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is my niece Lily. She's in Australia. Christmas is in summer there!",
+            "ja": "わたしの めいっこの リリーよ。オーストラリアに いるの。あちらでは クリスマスは なつなのよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Christmas in summer? Really?",
+            "ja": "なつに クリスマス？ほんとう？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes! In Australia, Christmas is in summer. People go to the beach.",
+            "ja": "そうよ！オーストラリアでは クリスマスは なつ。みんな ビーチへ いくのよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's sunny and hot. Santa in shorts!",
+            "ja": "はれていて あつい。はんズボンの サンタさんだね！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "In Japan, Christmas is in winter.",
+            "ja": "にほんでは クリスマスは ふゆだね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "In ～, ～ is in ～. で くにの きせつの ちがいを はなそう",
+          "starterEn": "In Australia, Christmas is in summer! When is Christmas in Japan?",
+          "targetExpressions": [
+            "In ～, ～ is in ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Australia, Christmas is in summer. が いえたね",
+          "にほんの クリスマスは winter",
+          "sunny、puppy、story、body！ おわりの y は「イー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 283,
+      "world": 10,
+      "title": "Bow or Shake Hands?",
+      "titleJa": "おじぎ？ あくしゅ？",
+      "school": {
+        "grade": "小6",
+        "topic": "世界のくらし：あいさつ",
+        "grammar": "In ～, people ～.",
+        "expressions": [
+          {
+            "en": "In Japan, people bow.",
+            "ja": "にほんでは、ひとびとは おじぎを します。",
+            "core": true
+          },
+          {
+            "en": "In America, people shake hands.",
+            "ja": "アメリカでは、あくしゅを します。"
+          },
+          {
+            "en": "In France, people kiss on the cheek.",
+            "ja": "フランスでは、ほおに キスを します。"
+          }
+        ],
+        "testPoints": [
+          "In ～, people ～. で せかいの あいさつを いえる",
+          "おわりの y（アイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Bow.",
+          "ja": "おじぎを して。",
+          "action": "ゆっくり おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Shake hands.",
+          "ja": "あくしゅを して。",
+          "action": "あくしゅの まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Fly like a bird.",
+          "ja": "とりみたいに とんで。",
+          "action": "りょうてを ぱたぱた",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Try again.",
+          "ja": "もう いちど やってみて。",
+          "action": "ガッツポーズ",
+          "emoji": "💪"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-y",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/aɪ/"
+        ],
+        "words": [
+          "fly",
+          "sky",
+          "cry",
+          "try"
+        ],
+        "tipJa": "ほかに ぼいんの ない みじかい ことばの おわりの y は「アイ」。fly、sky、cry、try。"
+      },
+      "vocab": [
+        {
+          "en": "bow",
+          "ja": "おじぎ",
+          "emoji": "🙇",
+          "core": true
+        },
+        {
+          "en": "hand",
+          "ja": "て",
+          "emoji": "✋"
+        },
+        {
+          "en": "greeting",
+          "ja": "あいさつ",
+          "emoji": "👋"
+        },
+        {
+          "en": "cheek",
+          "ja": "ほお",
+          "emoji": "😊"
+        }
+      ],
+      "teacherScript": "「In Japan, people bow.」 あいさつは くにで ちがうね。fly、sky の おわりの y は「アイ」！",
+      "conversation": {
+        "scene": "Practicing greetings for visitors at the harbor",
+        "sceneJa": "みなとで せかいからの おきゃくさんへの あいさつれんしゅう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Visitors from many countries are coming. In Japan, people bow.",
+            "ja": "いろいろな くにから おきゃくさんが くるよ。にほんでは おじぎを するね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In America, people shake hands. Let's try!",
+            "ja": "アメリカでは あくしゅを するよ。やってみよう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "In France, people kiss on the cheek. I'm shy!",
+            "ja": "フランスでは ほおに キスを するんだって。はずかしい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I fly in the sky and wave my wings!",
+            "ja": "ぼくは そらを とんで つばさを ふるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "In ～, people ～. で せかいの あいさつを つたえよう",
+          "starterEn": "In Japan, people bow. Do you know other greetings?",
+          "targetExpressions": [
+            "In ～, people ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Japan, people bow. が いえたね",
+          "In America, people shake hands.",
+          "fly、sky、cry、try！ おわりの y は「アイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 284,
+      "world": 10,
+      "title": "Homes Around the World",
+      "titleJa": "せかいの いえ",
+      "school": {
+        "grade": "小6",
+        "topic": "世界のくらし：いえと のりもの",
+        "grammar": "In ～, people ～.",
+        "expressions": [
+          {
+            "en": "In Venice, people go by boat.",
+            "ja": "ベネチアでは、ひとびとは ボートで いどうします。",
+            "core": true
+          },
+          {
+            "en": "In Mongolia, some people live in round tents.",
+            "ja": "モンゴルでは、まるい テントに すむ ひとも います。"
+          },
+          {
+            "en": "In Norway, many houses are red.",
+            "ja": "ノルウェーでは、あかい いえが たくさん あります。"
+          }
+        ],
+        "testPoints": [
+          "In ～, people ～. で せかいの いえや のりものを いえる",
+          "おわりの y の「イー」と「アイ」を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Row a boat.",
+          "ja": "ボートを こいで。",
+          "action": "オールを こぐ まね",
+          "emoji": "🚣"
+        },
+        {
+          "en": "Ride a pony.",
+          "ja": "ポニーに のって。",
+          "action": "うまに のる まね",
+          "emoji": "🐴"
+        },
+        {
+          "en": "Dry your hair.",
+          "ja": "かみを かわかして。",
+          "action": "タオルで ふく まね",
+          "emoji": "💨"
+        },
+        {
+          "en": "Draw a round tent.",
+          "ja": "まるい テントを かいて。",
+          "action": "ゆびで まるい テントを かく",
+          "emoji": "⛺"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-y",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/aɪ/",
+          "/i/"
+        ],
+        "words": [
+          "dry",
+          "shy",
+          "lady",
+          "pony"
+        ],
+        "tipJa": "dry と shy は「アイ」、lady と pony は「イー」。ほかに ぼいんが あるかを みてね。"
+      },
+      "vocab": [
+        {
+          "en": "house",
+          "ja": "いえ",
+          "emoji": "🏠",
+          "core": true
+        },
+        {
+          "en": "boat",
+          "ja": "ボート",
+          "emoji": "🛶"
+        },
+        {
+          "en": "tent",
+          "ja": "テント",
+          "emoji": "⛺"
+        },
+        {
+          "en": "river",
+          "ja": "かわ",
+          "emoji": "🏞️"
+        }
+      ],
+      "teacherScript": "「In Venice, people go by boat.」 せかいには いろいろな いえや のりものが あるね。dry は「アイ」、pony は「イー」！",
+      "conversation": {
+        "scene": "Looking at photos of homes around the world",
+        "sceneJa": "せかいの いえの しゃしんを みる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look at these photos. In Venice, people go by boat.",
+            "ja": "この しゃしんを みて。ベネチアでは ボートで いどうするの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wow! The streets are rivers!",
+            "ja": "わあ！みちが かわに なってる！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In Mongolia, some people live in round tents. They can ride a pony, too.",
+            "ja": "モンゴルでは まるい テントに すむ ひとも いるよ。ポニーにも のれるんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In Norway, many houses are red. So cute!",
+            "ja": "ノルウェーでは あかい いえが たくさん。かわいい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "In ～, people ～. で せかいの いえや のりものを はなそう",
+          "starterEn": "In Venice, people go by boat. What do you think is interesting?",
+          "targetExpressions": [
+            "In ～, people ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Venice, people go by boat. が いえたね",
+          "まるい テントや あかい いえも あったね",
+          "dry・shy は「アイ」、lady・pony は「イー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 285,
+      "world": 10,
+      "title": "A Day Around the World",
+      "titleJa": "せかいの こどもの 1日",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：せかいの こどもの 1日",
+        "grammar": "In ～, children ～.",
+        "expressions": [
+          {
+            "en": "In Finland, children start school at seven.",
+            "ja": "フィンランドでは、こどもは 7さいで がっこうに はいります。",
+            "core": true
+          },
+          {
+            "en": "In Japan, children clean the classroom.",
+            "ja": "にほんでは、こどもが きょうしつを そうじします。"
+          },
+          {
+            "en": "In Australia, children wear hats at school.",
+            "ja": "オーストラリアでは、がっこうで ぼうしを かぶります。"
+          }
+        ],
+        "testPoints": [
+          "In ～, children ～. で せかいの こどもの くらしを はっぴょうできる",
+          "おわりの y の「イー」と「アイ」を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your hat.",
+          "ja": "ぼうしを かぶって。",
+          "action": "ぼうしを かぶる まね",
+          "emoji": "👒"
+        },
+        {
+          "en": "Clean the desk.",
+          "ja": "つくえを ふいて。",
+          "action": "ぞうきんで ふく まね",
+          "emoji": "🧽"
+        },
+        {
+          "en": "Say goodbye.",
+          "ja": "さようならを いって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Look at the sky.",
+          "ja": "そらを みて。",
+          "action": "うえを みあげる",
+          "emoji": "☁️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-y"
+        ],
+        "sounds": [
+          "/i/",
+          "/aɪ/"
+        ],
+        "words": [
+          "happy",
+          "fly",
+          "baby",
+          "sky"
+        ],
+        "tipJa": "おわりの y の ふりかえり。happy と baby は「イー」、fly と sky は「アイ」。"
+      },
+      "vocab": [
+        {
+          "en": "children",
+          "ja": "こどもたち",
+          "emoji": "🧒",
+          "core": true
+        },
+        {
+          "en": "classroom",
+          "ja": "きょうしつ",
+          "emoji": "🏫"
+        },
+        {
+          "en": "hat",
+          "ja": "ぼうし",
+          "emoji": "👒"
+        },
+        {
+          "en": "seven",
+          "ja": "7（なな）",
+          "emoji": "7️⃣"
+        }
+      ],
+      "teacherScript": "せかいの こどもの 1日を はっぴょうしよう！「In Finland, children start school at seven.」 おわりの y の「イー」と「アイ」も ふりかえるよ。",
+      "conversation": {
+        "scene": "A presentation about children's days around the world",
+        "sceneJa": "せかいの こどもの 1日 はっぴょうかい",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "In Finland, children start school at seven.",
+            "ja": "フィンランドでは 7さいで がっこうに はいるんだって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In Japan, children clean the classroom. We do it every day!",
+            "ja": "にほんでは こどもが きょうしつを そうじするよ。まいにち してるね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "In Australia, children wear hats at school. The sun is strong.",
+            "ja": "オーストラリアでは がっこうで ぼうしを かぶるの。ひざしが つよいから。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Children around the world are different, but we all like to play.",
+            "ja": "せかいの こどもは ちがう ところも あるけど、みんな あそぶのが すきね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "In ～, children ～. で せかいの こどもの くらしを はっぴょうしよう",
+          "starterEn": "In Japan, children clean the classroom. What do children do in other countries?",
+          "targetExpressions": [
+            "In ～, children ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Finland, children start school at seven. が いえたね",
+          "せかいの こどもの くらしを くらべたね",
+          "happy・baby は「イー」、fly・sky は「アイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 286,
+      "world": 10,
+      "title": "I Recommend This Book",
+      "titleJa": "この ほんが おすすめ",
+      "school": {
+        "grade": "小6",
+        "topic": "おすすめ：ほん",
+        "grammar": "I recommend ～. It's ～.",
+        "expressions": [
+          {
+            "en": "I recommend this book.",
+            "ja": "わたしは この ほんを おすすめします。",
+            "core": true
+          },
+          {
+            "en": "It's exciting.",
+            "ja": "わくわくします。"
+          },
+          {
+            "en": "What do you recommend?",
+            "ja": "あなたの おすすめは なんですか。"
+          }
+        ],
+        "testPoints": [
+          "I recommend ～. で おすすめを いえる",
+          "おわりの -le（ル）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the book.",
+          "ja": "ほんを ひらいて。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Blow a bubble.",
+          "ja": "シャボンだまを ふいて。",
+          "action": "ふーっと ふく まね",
+          "emoji": "🫧"
+        },
+        {
+          "en": "Touch the table.",
+          "ja": "テーブルに さわって。",
+          "action": "テーブルに てを おく",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Make yourself little.",
+          "ja": "ちいさく なって。",
+          "action": "しゃがんで ちいさく なる",
+          "emoji": "🤏"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-le",
+        "focus": [
+          "-le"
+        ],
+        "sounds": [
+          "/əl/"
+        ],
+        "words": [
+          "apple",
+          "little",
+          "table",
+          "bubble"
+        ],
+        "tipJa": "おわりの le は「ル」。さいごの e は よまないよ。apple、little、table、bubble。"
+      },
+      "vocab": [
+        {
+          "en": "recommend",
+          "ja": "おすすめする",
+          "emoji": "👍",
+          "core": true
+        },
+        {
+          "en": "book",
+          "ja": "ほん",
+          "emoji": "📚"
+        },
+        {
+          "en": "exciting",
+          "ja": "わくわくする",
+          "emoji": "🤩"
+        },
+        {
+          "en": "library",
+          "ja": "としょかん",
+          "emoji": "🏛️"
+        }
+      ],
+      "teacherScript": "「I recommend this book. It's exciting.」 おすすめを つたえよう。apple、little の おわりの le は「ル」！",
+      "conversation": {
+        "scene": "Recommending books in the island library",
+        "sceneJa": "しまの としょかんで ほんを すすめあう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I recommend this book. It's exciting!",
+            "ja": "この ほん おすすめ。わくわくするよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What is it about?",
+            "ja": "どんな おはなし？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's about a little turtle and its trip around the world.",
+            "ja": "ちいさな カメが せかいを たびする おはなし。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What do you recommend, Ms. Emma?",
+            "ja": "エマ先生の おすすめは なに？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I recommend this picture book. It's beautiful.",
+            "ja": "わたしは この えほんが おすすめ。きれいなのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I recommend ～. It's ～. で すきな ほんを すすめよう",
+          "starterEn": "I recommend this book. It's exciting. What do you recommend?",
+          "targetExpressions": [
+            "I recommend ～.",
+            "It's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I recommend this book. が いえたね",
+          "It's exciting. で りゆうも いえる",
+          "apple、little、table、bubble！ おわりの le は「ル」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 287,
+      "world": 10,
+      "title": "My Recommended Food",
+      "titleJa": "おすすめの たべもの",
+      "school": {
+        "grade": "小6",
+        "topic": "おすすめ：たべもの",
+        "grammar": "I recommend ～. It's ～.",
+        "expressions": [
+          {
+            "en": "I recommend apple pie. It's sweet.",
+            "ja": "アップルパイが おすすめです。あまいです。",
+            "core": true
+          },
+          {
+            "en": "I recommend this ramen. It's delicious.",
+            "ja": "この ラーメンが おすすめです。おいしいです。"
+          },
+          {
+            "en": "Try it!",
+            "ja": "ためしてみて！"
+          }
+        ],
+        "testPoints": [
+          "I recommend ～. It's ～. で おすすめの たべものと そのりゆうを いえる",
+          "おわりの -le（ル）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Light a candle.",
+          "ja": "ろうそくに ひを つけて。",
+          "action": "そっと ひを つける まね",
+          "emoji": "🕯️"
+        },
+        {
+          "en": "Do a puzzle.",
+          "ja": "パズルを して。",
+          "action": "ピースを はめる まね",
+          "emoji": "🧩"
+        },
+        {
+          "en": "Open the bottle.",
+          "ja": "ボトルを あけて。",
+          "action": "ふたを あける まね",
+          "emoji": "🍼"
+        },
+        {
+          "en": "Taste it.",
+          "ja": "あじみして。",
+          "action": "スプーンで なめる まね",
+          "emoji": "😋"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-le",
+        "focus": [
+          "-le"
+        ],
+        "sounds": [
+          "/əl/"
+        ],
+        "words": [
+          "candle",
+          "puzzle",
+          "bottle",
+          "simple"
+        ],
+        "tipJa": "おわりの le は「ル」。candle、puzzle、bottle、simple。"
+      },
+      "vocab": [
+        {
+          "en": "apple pie",
+          "ja": "アップルパイ",
+          "emoji": "🥧",
+          "core": true
+        },
+        {
+          "en": "sweet",
+          "ja": "あまい",
+          "emoji": "🍬"
+        },
+        {
+          "en": "delicious",
+          "ja": "とても おいしい",
+          "emoji": "😋"
+        },
+        {
+          "en": "spicy",
+          "ja": "からい",
+          "emoji": "🌶️"
+        }
+      ],
+      "teacherScript": "「I recommend apple pie. It's sweet.」 あじも いっしょに つたえよう。candle、puzzle の le も「ル」！",
+      "conversation": {
+        "scene": "Making a recommended menu at the island cafe",
+        "sceneJa": "しまの カフェで おすすめメニューづくり",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I recommend this ramen. It's delicious!",
+            "ja": "この ラーメンが おすすめ。とても おいしいよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I recommend apple pie. It's sweet.",
+            "ja": "わたしは アップルパイが おすすめ。あまいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I recommend curry. It's a little spicy.",
+            "ja": "わたしは カレー。ちょっと からいの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I recommend this cookie. Try it!",
+            "ja": "ぼくは この クッキーが おすすめ。たべてみて！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I recommend ～. It's ～. で おすすめの たべものを つたえよう",
+          "starterEn": "I recommend apple pie. It's sweet. What food do you recommend?",
+          "targetExpressions": [
+            "I recommend ～.",
+            "It's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I recommend apple pie. It's sweet. が いえたね",
+          "sweet、delicious、spicy で あじを いえる",
+          "candle、puzzle、bottle、simple！ おわりの le は「ル」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 288,
+      "world": 10,
+      "title": "A Great Place in Our Town",
+      "titleJa": "まちの おすすめの ばしょ",
+      "school": {
+        "grade": "小6",
+        "topic": "おすすめ：まちの ばしょ",
+        "grammar": "I recommend ～. You can ～.",
+        "expressions": [
+          {
+            "en": "I recommend the park. It's beautiful.",
+            "ja": "こうえんが おすすめです。きれいです。",
+            "core": true
+          },
+          {
+            "en": "You can see many flowers.",
+            "ja": "たくさんの はなが みられます。"
+          },
+          {
+            "en": "I recommend the museum, too.",
+            "ja": "はくぶつかんも おすすめです。"
+          }
+        ],
+        "testPoints": [
+          "I recommend ～. You can ～. で まちの おすすめの ばしょを いえる",
+          "おわりの -le（ル）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk like a turtle.",
+          "ja": "カメみたいに あるいて。",
+          "action": "ゆっくり あるく",
+          "emoji": "🐢"
+        },
+        {
+          "en": "Point to something purple.",
+          "ja": "むらさきの ものを ゆびさして。",
+          "action": "むらさきの ものを さがして ゆびさす",
+          "emoji": "🟣"
+        },
+        {
+          "en": "Fly like an eagle.",
+          "ja": "ワシみたいに とんで。",
+          "action": "りょうてを おおきく ひろげる",
+          "emoji": "🦅"
+        },
+        {
+          "en": "Smell the flowers.",
+          "ja": "はなの においを かいで。",
+          "action": "はなを かぐ まね",
+          "emoji": "🌸"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-le",
+        "focus": [
+          "-le"
+        ],
+        "sounds": [
+          "/əl/"
+        ],
+        "words": [
+          "turtle",
+          "purple",
+          "jungle",
+          "eagle"
+        ],
+        "tipJa": "おわりの le は「ル」。turtle、purple、jungle、eagle。"
+      },
+      "vocab": [
+        {
+          "en": "park",
+          "ja": "こうえん",
+          "emoji": "🏞️",
+          "core": true
+        },
+        {
+          "en": "museum",
+          "ja": "はくぶつかん",
+          "emoji": "🏛️"
+        },
+        {
+          "en": "flower",
+          "ja": "はな",
+          "emoji": "🌸"
+        },
+        {
+          "en": "beautiful",
+          "ja": "きれいな",
+          "emoji": "💐"
+        }
+      ],
+      "teacherScript": "「I recommend the park. It's beautiful.」 You can ～. で できる ことも つたえよう。turtle、purple の le も「ル」！",
+      "conversation": {
+        "scene": "Making a town guide for visitors",
+        "sceneJa": "おきゃくさんむけの まちの ガイドづくり",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "I recommend the park. It's beautiful.",
+            "ja": "こうえんが おすすめ。きれいだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can see many flowers there. And you can play soccer.",
+            "ja": "はなが たくさん みられるよ。サッカーも できる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I recommend the museum, too. You can see dinosaurs!",
+            "ja": "はくぶつかんも おすすめ。きょうりゅうが みられるよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great town guide! Visitors can enjoy our town.",
+            "ja": "すてきな ガイドね！おきゃくさんが まちを たのしめるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I recommend ～. You can ～. で まちの おすすめの ばしょを つたえよう（ほんとうの まちの なまえや ばしょの なまえは いわなくて OK）",
+          "starterEn": "I recommend the park. It's beautiful. What place do you recommend?",
+          "targetExpressions": [
+            "I recommend ～.",
+            "You can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I recommend the park. It's beautiful. が いえたね",
+          "You can see many flowers. で できる ことも いえる",
+          "turtle、purple、jungle、eagle！ おわりの le は「ル」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 289,
+      "world": 10,
+      "title": "Why Do You Recommend It?",
+      "titleJa": "どうして おすすめ？",
+      "school": {
+        "grade": "小6",
+        "topic": "おすすめ：りゆうを つたえる",
+        "grammar": "I recommend ～. You can ～. It's ～.",
+        "expressions": [
+          {
+            "en": "I recommend the zoo. You can see pandas.",
+            "ja": "どうぶつえんが おすすめです。パンダが みられます。",
+            "core": true
+          },
+          {
+            "en": "Why do you recommend it?",
+            "ja": "どうして おすすめなのですか。"
+          },
+          {
+            "en": "It's fun for children.",
+            "ja": "こどもに たのしいです。"
+          }
+        ],
+        "testPoints": [
+          "Why do you recommend it? に りゆうを つけて こたえられる",
+          "おわりの -le（ル）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Find the needle in the picture.",
+          "ja": "えの なかの はりを みつけて。",
+          "action": "えの なかの はりを ゆびさす",
+          "emoji": "🪡"
+        },
+        {
+          "en": "Giggle.",
+          "ja": "くすくす わらって。",
+          "action": "くすくす わらう",
+          "emoji": "🤭"
+        },
+        {
+          "en": "Tickle your tummy.",
+          "ja": "おなかを くすぐって。",
+          "action": "じぶんの おなかを こちょこちょ",
+          "emoji": "🤗"
+        },
+        {
+          "en": "Wave to your uncle.",
+          "ja": "おじさんに てを ふって。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "ending-le",
+        "focus": [
+          "-le"
+        ],
+        "sounds": [
+          "/əl/"
+        ],
+        "words": [
+          "uncle",
+          "tickle",
+          "giggle",
+          "needle"
+        ],
+        "tipJa": "おわりの le は「ル」。uncle、tickle、giggle、needle。"
+      },
+      "vocab": [
+        {
+          "en": "zoo",
+          "ja": "どうぶつえん",
+          "emoji": "🦁",
+          "core": true
+        },
+        {
+          "en": "reason",
+          "ja": "りゆう",
+          "emoji": "💡"
+        },
+        {
+          "en": "fun",
+          "ja": "たのしい",
+          "emoji": "🎉"
+        },
+        {
+          "en": "uncle",
+          "ja": "おじさん",
+          "emoji": "👨"
+        }
+      ],
+      "teacherScript": "「I recommend the zoo. You can see pandas.」 おすすめには りゆうを つけよう。uncle、giggle の le も「ル」！",
+      "conversation": {
+        "scene": "Talking about weekend places with Ms. Emma",
+        "sceneJa": "エマ先生と しゅうまつの おでかけの はなし",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I recommend the zoo. You can see pandas.",
+            "ja": "どうぶつえんが おすすめ。パンダが みられるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Why do you recommend it?",
+            "ja": "どうして おすすめなの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's fun for children. My uncle took me there!",
+            "ja": "こどもに たのしいから。おじさんが つれていって くれたんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I recommend the aquarium. You can see sea turtles.",
+            "ja": "わたしは すいぞくかんが おすすめ。ウミガメが みられるよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I recommend ～. と You can ～. で おすすめと りゆうを つたえよう（ばしょの なまえは いわなくて OK）",
+          "starterEn": "I recommend the zoo. You can see pandas. What do you recommend? Why?",
+          "targetExpressions": [
+            "I recommend ～.",
+            "You can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I recommend the zoo. You can see pandas. が いえたね",
+          "Why do you recommend it? に りゆうで こたえた",
+          "uncle、tickle、giggle、needle！ おわりの le は「ル」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 290,
+      "world": 10,
+      "title": "Our Recommendation Book",
+      "titleJa": "おすすめ ずかんづくり",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：おすすめ ずかんづくり",
+        "grammar": "I recommend ～. It's ～. You can ～.",
+        "expressions": [
+          {
+            "en": "I recommend sea turtles. They are cute.",
+            "ja": "ウミガメが おすすめです。かわいいです。",
+            "core": true
+          },
+          {
+            "en": "You can see them in the aquarium.",
+            "ja": "すいぞくかんで みられます。"
+          },
+          {
+            "en": "Please read our book.",
+            "ja": "わたしたちの ずかんを よんでください。"
+          }
+        ],
+        "testPoints": [
+          "I recommend ～. で おすすめずかんの ページを はっぴょうできる",
+          "おわりの -y と -le を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a little turtle.",
+          "ja": "ちいさな カメを かいて。",
+          "action": "ゆびで カメを かく",
+          "emoji": "🐢"
+        },
+        {
+          "en": "Color it purple.",
+          "ja": "むらさきに ぬって。",
+          "action": "いろを ぬる まね",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "Show your page.",
+          "ja": "ページを みせて。",
+          "action": "かみを みせる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Clap for your friends.",
+          "ja": "ともだちに はくしゅ。",
+          "action": "はくしゅを する",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-y",
+          "-le"
+        ],
+        "sounds": [
+          "/i/",
+          "/aɪ/",
+          "/əl/"
+        ],
+        "words": [
+          "candy",
+          "sky",
+          "little",
+          "purple"
+        ],
+        "tipJa": "ふりかえり。candy の y は「イー」、sky の y は「アイ」、little と purple の le は「ル」。"
+      },
+      "vocab": [
+        {
+          "en": "picture book",
+          "ja": "ずかん（えほん）",
+          "emoji": "📘",
+          "core": true
+        },
+        {
+          "en": "cute",
+          "ja": "かわいい",
+          "emoji": "🥰"
+        },
+        {
+          "en": "cover",
+          "ja": "ひょうし",
+          "emoji": "📕"
+        },
+        {
+          "en": "page",
+          "ja": "ページ",
+          "emoji": "📄"
+        }
+      ],
+      "teacherScript": "おすすめ ずかんを つくろう！「I recommend sea turtles. They are cute.」 -y と -le も ふりかえるよ。",
+      "conversation": {
+        "scene": "Making a class recommendation picture book",
+        "sceneJa": "みんなで おすすめ ずかんづくり",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's make our recommendation book!",
+            "ja": "おすすめ ずかんを つくろう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I recommend sea turtles. They are cute. You can see them in the aquarium.",
+            "ja": "ウミガメが おすすめ。かわいいよ。すいぞくかんで みられるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I recommend apple pie. It's sweet.",
+            "ja": "ぼくは アップルパイ。あまいよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I recommend the sky. It's big and blue!",
+            "ja": "ぼくは そら。ひろくて あおいよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a wonderful book! Please read our book, everyone.",
+            "ja": "すてきな ずかんね！みんな よんでね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I recommend ～. It's ～. You can ～. で おすすめずかんの 1ページを はっぴょうしよう",
+          "starterEn": "Let's make a recommendation book! I recommend sea turtles. They are cute. What do you recommend?",
+          "targetExpressions": [
+            "I recommend ～.",
+            "It's ～.",
+            "You can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I recommend sea turtles. They are cute. が いえたね",
+          "おすすめずかんの ページが できた",
+          "candy・sky の y と little・purple の le を ふりかえったね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 291,
+      "world": 10,
+      "title": "We Can Save the Sea",
+      "titleJa": "うみを まもれるよ",
+      "school": {
+        "grade": "小6",
+        "topic": "わたしたちにできること：うみを まもる",
+        "grammar": "We can ～. / Let's ～.",
+        "expressions": [
+          {
+            "en": "We can pick up trash.",
+            "ja": "わたしたちは ゴミを ひろうことが できます。",
+            "core": true
+          },
+          {
+            "en": "Let's clean the beach.",
+            "ja": "ビーチを そうじしましょう。"
+          },
+          {
+            "en": "We can use paper straws.",
+            "ja": "かみの ストローを つかえます。"
+          }
+        ],
+        "testPoints": [
+          "We can ～. / Let's ～. で できる ことを ていあんできる",
+          "aw（オー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up trash.",
+          "ja": "ゴミを ひろって。",
+          "action": "しゃがんで ひろう まね",
+          "emoji": "🚮"
+        },
+        {
+          "en": "Draw a fish.",
+          "ja": "さかなを かいて。",
+          "action": "ゆびで さかなを かく",
+          "emoji": "🐠"
+        },
+        {
+          "en": "Drink with a straw.",
+          "ja": "ストローで のんで。",
+          "action": "ストローで のむ まね",
+          "emoji": "🥤"
+        },
+        {
+          "en": "Show me your paws.",
+          "ja": "どうぶつの てを みせて。",
+          "action": "りょうてを ねこの てに する",
+          "emoji": "🐾"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "aw"
+        ],
+        "sounds": [
+          "/ɔː/"
+        ],
+        "words": [
+          "saw",
+          "draw",
+          "paw",
+          "straw"
+        ],
+        "tipJa": "a と w で「オー」。saw、draw、paw、straw。くちを たてに おおきく あけるよ。"
+      },
+      "vocab": [
+        {
+          "en": "trash",
+          "ja": "ゴミ",
+          "emoji": "🗑️",
+          "core": true
+        },
+        {
+          "en": "straw",
+          "ja": "ストロー",
+          "emoji": "🥤"
+        },
+        {
+          "en": "beach",
+          "ja": "すなはま",
+          "emoji": "🏖️"
+        },
+        {
+          "en": "bag",
+          "ja": "ふくろ",
+          "emoji": "🛍️"
+        }
+      ],
+      "teacherScript": "「We can pick up trash.」 わたしたちに できる ことを かんがえよう。Let's ～. で さそえるよ。aw は「オー」！",
+      "conversation": {
+        "scene": "A beach clean-up on the Ocean of Life island",
+        "sceneJa": "いのちの海の しまで ビーチそうじ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look at the beach. There is a lot of trash.",
+            "ja": "すなはまを みて。ゴミが たくさん あるわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We can pick up trash!",
+            "ja": "ぼくたち、ゴミを ひろえるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's clean the beach together.",
+            "ja": "みんなで ビーチを そうじしよう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I saw a plastic straw. We can use paper straws.",
+            "ja": "プラスチックの ストローを みつけたよ。かみの ストローを つかえるね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We can ～. と Let's ～. で うみを まもる アイデアを つたえよう",
+          "starterEn": "The beach is dirty. We can pick up trash. What can we do?",
+          "targetExpressions": [
+            "We can ～.",
+            "Let's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We can pick up trash. が いえたね",
+          "Let's clean the beach. で さそえる",
+          "saw、draw、paw、straw！ aw は「オー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 292,
+      "world": 10,
+      "title": "Let's Save Water",
+      "titleJa": "みずを たいせつに",
+      "school": {
+        "grade": "小6",
+        "topic": "わたしたちにできること：みずを まもる",
+        "grammar": "We can ～. / Let's ～.",
+        "expressions": [
+          {
+            "en": "We can turn off the water.",
+            "ja": "みずを とめることが できます。",
+            "core": true
+          },
+          {
+            "en": "Let's save water.",
+            "ja": "みずを たいせつに しましょう。"
+          },
+          {
+            "en": "Don't leave the water on.",
+            "ja": "みずを だしっぱなしに しないで。"
+          }
+        ],
+        "testPoints": [
+          "We can ～. / Let's ～. で みずを まもる ことを いえる",
+          "au（オー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn off the water.",
+          "ja": "みずを とめて。",
+          "action": "じゃぐちを しめる まね",
+          "emoji": "🚰"
+        },
+        {
+          "en": "Brush your teeth.",
+          "ja": "はを みがいて。",
+          "action": "はを みがく まね",
+          "emoji": "🪥"
+        },
+        {
+          "en": "Pause.",
+          "ja": "とまって。",
+          "action": "ぴたっと とまる",
+          "emoji": "⏸️"
+        },
+        {
+          "en": "Pour some sauce.",
+          "ja": "ソースを かけて。",
+          "action": "ソースを かける まね",
+          "emoji": "🥫"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "au"
+        ],
+        "sounds": [
+          "/ɔː/"
+        ],
+        "words": [
+          "sauce",
+          "autumn",
+          "launch",
+          "pause"
+        ],
+        "tipJa": "a と u でも「オー」。aw と おなじ おとだよ。sauce、autumn、launch、pause。"
+      },
+      "vocab": [
+        {
+          "en": "water",
+          "ja": "みず",
+          "emoji": "💧",
+          "core": true
+        },
+        {
+          "en": "teeth",
+          "ja": "は",
+          "emoji": "🦷"
+        },
+        {
+          "en": "shower",
+          "ja": "シャワー",
+          "emoji": "🚿"
+        },
+        {
+          "en": "save",
+          "ja": "たいせつに つかう",
+          "emoji": "💙"
+        }
+      ],
+      "teacherScript": "「We can turn off the water.」 はを みがく とき みずを とめようね。au も「オー」！aw と おなじ おと。",
+      "conversation": {
+        "scene": "Thinking about water at the island school",
+        "sceneJa": "しまの がっこうで みずの つかいかたを かんがえる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Haru, don't leave the water on!",
+            "ja": "ハル、みずを だしっぱなしに しないで！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oops! We can turn off the water when we brush our teeth.",
+            "ja": "あっ！はを みがく ときは みずを とめられるね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's save water. We can take short showers, too.",
+            "ja": "みずを たいせつに しよう。シャワーを みじかく することも できるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good ideas! Water is important for all living things.",
+            "ja": "いい アイデア！みずは すべての いきものに だいじなのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We can ～. と Let's ～. で みずを まもる アイデアを つたえよう",
+          "starterEn": "Let's save water! We can turn off the water. What else can we do?",
+          "targetExpressions": [
+            "We can ～.",
+            "Let's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We can turn off the water. が いえたね",
+          "Let's save water. で よびかけられる",
+          "sauce、autumn、launch、pause！ au も「オー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 293,
+      "world": 10,
+      "title": "Reduce, Reuse, Recycle",
+      "titleJa": "へらす・くりかえし つかう・リサイクル",
+      "school": {
+        "grade": "小6",
+        "topic": "わたしたちにできること：3つの R",
+        "grammar": "We can ～. / Let's ～.",
+        "expressions": [
+          {
+            "en": "We can use our own bags.",
+            "ja": "じぶんの ふくろを つかうことが できます。",
+            "core": true
+          },
+          {
+            "en": "Let's recycle cans and bottles.",
+            "ja": "かんや びんを リサイクルしましょう。"
+          },
+          {
+            "en": "We can reuse paper.",
+            "ja": "かみを もう いちど つかえます。"
+          }
+        ],
+        "testPoints": [
+          "We can ～. / Let's ～. で 3つの R の アイデアを いえる",
+          "ew（ウー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fold the paper.",
+          "ja": "かみを おって。",
+          "action": "かみを おる まね",
+          "emoji": "📄"
+        },
+        {
+          "en": "Crush the can.",
+          "ja": "かんを つぶして。",
+          "action": "りょうてで かんを つぶす まね",
+          "emoji": "🥫"
+        },
+        {
+          "en": "Chew slowly.",
+          "ja": "ゆっくり かんで。",
+          "action": "もぐもぐ かむ",
+          "emoji": "😋"
+        },
+        {
+          "en": "Fly like a plane.",
+          "ja": "ひこうきみたいに とんで。",
+          "action": "りょうてを ひろげて その ばで ゆらゆら",
+          "emoji": "✈️"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ew"
+        ],
+        "sounds": [
+          "/uː/"
+        ],
+        "words": [
+          "new",
+          "grew",
+          "flew",
+          "chew"
+        ],
+        "tipJa": "e と w で「ウー」。moon の oo と おなじ おと。new、grew、flew、chew。"
+      },
+      "vocab": [
+        {
+          "en": "recycle",
+          "ja": "リサイクルする",
+          "emoji": "♻️",
+          "core": true
+        },
+        {
+          "en": "can",
+          "ja": "かん",
+          "emoji": "🥫"
+        },
+        {
+          "en": "paper",
+          "ja": "かみ",
+          "emoji": "📄"
+        },
+        {
+          "en": "eco bag",
+          "ja": "エコバッグ",
+          "emoji": "👜"
+        }
+      ],
+      "teacherScript": "「We can use our own bags.」 へらす・くりかえし つかう・リサイクル。3つの R だよ。ew は「ウー」！",
+      "conversation": {
+        "scene": "Sorting trash at the island recycling center",
+        "sceneJa": "しまの リサイクルセンターで ゴミを わける",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Reduce, reuse, recycle! What can we do?",
+            "ja": "へらす・くりかえし つかう・リサイクル！なにが できる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We can use our own bags. I have an eco bag.",
+            "ja": "じぶんの ふくろを つかえるよ。わたし エコバッグを もってる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's recycle cans and bottles. They can become new things!",
+            "ja": "かんや びんを リサイクルしよう。あたらしい ものに なれるんだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We can reuse paper. I draw on the back.",
+            "ja": "かみを もう いちど つかえるよ。うらに えを かくの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I flew here with an old box. Now it's a new house!",
+            "ja": "ふるい はこを もって とんできたよ。いまは あたらしい いえ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We can ～. と Let's ～. で 3つの R の アイデアを つたえよう",
+          "starterEn": "Reduce, reuse, recycle! We can use our own bags. What can you do?",
+          "targetExpressions": [
+            "We can ～.",
+            "Let's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We can use our own bags. が いえたね",
+          "Let's recycle cans and bottles.",
+          "new、grew、flew、chew！ ew は「ウー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 294,
+      "world": 10,
+      "title": "Save Energy",
+      "titleJa": "エネルギーを たいせつに",
+      "school": {
+        "grade": "小6",
+        "topic": "わたしたちにできること：でんきと のりもの",
+        "grammar": "We can ～. / Let's ～.",
+        "expressions": [
+          {
+            "en": "We can walk or ride a bike.",
+            "ja": "あるいたり じてんしゃに のったり できます。",
+            "core": true
+          },
+          {
+            "en": "Let's turn off the lights.",
+            "ja": "でんきを けしましょう。"
+          },
+          {
+            "en": "We can wear a sweater in winter.",
+            "ja": "ふゆは セーターを きることが できます。"
+          }
+        ],
+        "testPoints": [
+          "We can ～. / Let's ～. で エネルギーを たいせつにする ことを いえる",
+          "aw・au・ew を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn off the lights.",
+          "ja": "でんきを けして。",
+          "action": "スイッチを おす まね",
+          "emoji": "💡"
+        },
+        {
+          "en": "Ride a bike.",
+          "ja": "じてんしゃに のって。",
+          "action": "ペダルを こぐ まね",
+          "emoji": "🚲"
+        },
+        {
+          "en": "Yawn.",
+          "ja": "あくびを して。",
+          "action": "おおきく あくび",
+          "emoji": "🥱"
+        },
+        {
+          "en": "Float like an astronaut.",
+          "ja": "うちゅうひこうしみたいに うかんで。",
+          "action": "ふわふわ うごく",
+          "emoji": "🧑‍🚀"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "aw",
+          "au",
+          "ew"
+        ],
+        "sounds": [
+          "/ɔː/",
+          "/ɔː/",
+          "/uː/"
+        ],
+        "words": [
+          "claw",
+          "astronaut",
+          "drew",
+          "stew"
+        ],
+        "tipJa": "aw と au は「オー」、ew は「ウー」。claw、astronaut、drew、stew。"
+      },
+      "vocab": [
+        {
+          "en": "light",
+          "ja": "でんき（あかり）",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "bike",
+          "ja": "じてんしゃ",
+          "emoji": "🚲"
+        },
+        {
+          "en": "sweater",
+          "ja": "セーター",
+          "emoji": "🧶"
+        },
+        {
+          "en": "car",
+          "ja": "くるま",
+          "emoji": "🚗"
+        }
+      ],
+      "teacherScript": "「We can walk or ride a bike.」 でんきや ガソリンを たいせつに しよう。aw・au は「オー」、ew は「ウー」！",
+      "conversation": {
+        "scene": "An energy check at the island school",
+        "sceneJa": "しまの がっこうで エネルギー チェック",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Nobody is in this room. Let's turn off the lights.",
+            "ja": "この へや だれも いないよ。でんきを けそう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We can walk or ride a bike. Cars use a lot of energy.",
+            "ja": "あるいたり じてんしゃに のったり できるね。くるまは エネルギーを たくさん つかうの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We can wear a sweater in winter.",
+            "ja": "ふゆは セーターを きれば いいね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! Small things can help the earth.",
+            "ja": "すばらしい！ちいさな ことが ちきゅうを たすけるのよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We can ～. と Let's ～. で エネルギーを たいせつにする アイデアを つたえよう",
+          "starterEn": "Let's save energy! We can turn off the lights. What can you do?",
+          "targetExpressions": [
+            "We can ～.",
+            "Let's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We can walk or ride a bike. が いえたね",
+          "Let's turn off the lights. で よびかけられる",
+          "claw・astronaut は「オー」、drew・stew は「ウー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 295,
+      "world": 10,
+      "title": "Save the Earth Idea Meeting",
+      "titleJa": "ちきゅうを まもる アイデア かいぎ",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：ちきゅうを まもる アイデア かいぎ",
+        "grammar": "We can ～. / Let's ～.",
+        "expressions": [
+          {
+            "en": "Let's use our own bottles.",
+            "ja": "じぶんの すいとうを つかいましょう。",
+            "core": true
+          },
+          {
+            "en": "We can save energy.",
+            "ja": "エネルギーを たいせつに できます。"
+          },
+          {
+            "en": "That's a good idea!",
+            "ja": "それは いい アイデアですね！"
+          }
+        ],
+        "testPoints": [
+          "We can ～. / Let's ～. で アイデアを だしあえる",
+          "aw・au・ew を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Nod.",
+          "ja": "うなずいて。",
+          "action": "こくっと うなずく",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Write your idea.",
+          "ja": "アイデアを かいて。",
+          "action": "かみに かく まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Give a big clap.",
+          "ja": "おおきな はくしゅ。",
+          "action": "おおきく はくしゅ",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "aw",
+          "au",
+          "ew"
+        ],
+        "sounds": [
+          "/ɔː/",
+          "/ɔː/",
+          "/uː/"
+        ],
+        "words": [
+          "hawk",
+          "sauce",
+          "blew",
+          "yawn"
+        ],
+        "tipJa": "ふりかえり。hawk と yawn の aw、sauce の au は「オー」、blew の ew は「ウー」。"
+      },
+      "vocab": [
+        {
+          "en": "idea",
+          "ja": "アイデア",
+          "emoji": "💡",
+          "core": true
+        },
+        {
+          "en": "meeting",
+          "ja": "かいぎ",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "bottle",
+          "ja": "すいとう（ボトル）",
+          "emoji": "🧴"
+        },
+        {
+          "en": "earth",
+          "ja": "ちきゅう",
+          "emoji": "🌏"
+        }
+      ],
+      "teacherScript": "ちきゅうを まもる アイデア かいぎ！「Let's use our own bottles.」 みんなで アイデアを だそう。aw・au・ew も ふりかえるよ。",
+      "conversation": {
+        "scene": "The save-the-earth idea meeting",
+        "sceneJa": "ちきゅうを まもる アイデア かいぎ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to our idea meeting. How can we save the earth?",
+            "ja": "アイデア かいぎへ ようこそ。どうやって ちきゅうを まもれるかしら？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's use our own bottles. We don't need plastic bottles.",
+            "ja": "じぶんの すいとうを つかおう。ペットボトルは いらないよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That's a good idea! We can save energy, too.",
+            "ja": "いい アイデア！エネルギーも たいせつに できるね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We can pick up trash at the beach every month.",
+            "ja": "まいつき ビーチで ゴミひろいが できるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's do it all together!",
+            "ja": "みんなで ぜんぶ やろう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We can ～. と Let's ～. で ちきゅうを まもる アイデアを だそう",
+          "starterEn": "Let's have an idea meeting! Let's use our own bottles. What's your idea?",
+          "targetExpressions": [
+            "We can ～.",
+            "Let's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let's use our own bottles. が いえたね",
+          "That's a good idea! で ともだちの アイデアを ほめられる",
+          "hawk・sauce・yawn は「オー」、blew は「ウー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 296,
+      "world": 10,
+      "title": "My Proposal Speech",
+      "titleJa": "ていあん スピーチづくり",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：ていあん スピーチづくり",
+        "grammar": "Sea turtles are in danger. We can ～. Let's ～.",
+        "expressions": [
+          {
+            "en": "Let's save the sea turtles.",
+            "ja": "ウミガメを まもりましょう。",
+            "core": true
+          },
+          {
+            "en": "Sea turtles are in danger.",
+            "ja": "ウミガメは きけんな めに あっています。"
+          },
+          {
+            "en": "We can use eco bags.",
+            "ja": "エコバッグを つかえます。"
+          }
+        ],
+        "testPoints": [
+          "もんだい → できる こと → よびかけ の じゅんで スピーチを つくれる",
+          "soft c と soft g を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your poster.",
+          "ja": "ポスターを かかげて。",
+          "action": "りょうてで かかげる",
+          "emoji": "🪧"
+        },
+        {
+          "en": "Look at the audience.",
+          "ja": "みている ひとを みて。",
+          "action": "まえを みる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Smile.",
+          "ja": "にっこり して。",
+          "action": "にっこり わらう",
+          "emoji": "😊"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "しんこきゅうして。",
+          "action": "おおきく いきを すう",
+          "emoji": "😮‍💨"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "c",
+          "g"
+        ],
+        "sounds": [
+          "/s/",
+          "/dʒ/"
+        ],
+        "words": [
+          "ice",
+          "giant",
+          "juice",
+          "huge"
+        ],
+        "tipJa": "soft c と soft g の ふりかえり。ice と juice の c は「ス」、giant と huge の g は「ジ」。"
+      },
+      "vocab": [
+        {
+          "en": "speech",
+          "ja": "スピーチ",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "🪧"
+        },
+        {
+          "en": "problem",
+          "ja": "もんだい",
+          "emoji": "❗"
+        },
+        {
+          "en": "save",
+          "ja": "まもる",
+          "emoji": "🛟"
+        }
+      ],
+      "teacherScript": "ていあん スピーチを つくろう！もんだい（Sea turtles are in danger.）→ できる こと（We can ～.）→ よびかけ（Let's save the sea turtles.）の じゅんだよ。",
+      "conversation": {
+        "scene": "Writing proposal speeches in the island library",
+        "sceneJa": "しまの としょかんで ていあん スピーチづくり",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's write proposal speeches. First, the problem.",
+            "ja": "ていあん スピーチを かこう。まずは もんだいから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Sea turtles are in danger. Plastic bags are bad for them.",
+            "ja": "ウミガメが あぶないの。ビニールぶくろが よくないんだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Next, what can we do? We can use eco bags.",
+            "ja": "つぎは なにが できるか。エコバッグを つかえるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Last, ask everyone to help. Let's save the sea turtles!",
+            "ja": "さいごに みんなに よびかける。ウミガメを まもろう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "もんだい → We can ～. → Let's ～. の じゅんで みじかい ていあんを つたえよう",
+          "starterEn": "Let's make a speech! Sea turtles are in danger. We can use eco bags. What's your idea?",
+          "targetExpressions": [
+            "We can ～.",
+            "Let's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let's save the sea turtles. が いえたね",
+          "もんだい → できる こと → よびかけ の じゅん",
+          "ice・juice は「ス」、giant・huge は「ジ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 297,
+      "world": 10,
+      "title": "Earth Quiz Show",
+      "titleJa": "ちきゅう クイズショー",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：いきもの・たべもの・せかいの クイズ",
+        "grammar": "Where do ～ live? / Where is ～ from? / In ～, people ～.",
+        "expressions": [
+          {
+            "en": "Sea turtles live in warm seas.",
+            "ja": "ウミガメは あたたかい うみに すんでいます。",
+            "core": true
+          },
+          {
+            "en": "Where is this chocolate from?",
+            "ja": "この チョコレートは どこから きましたか。"
+          },
+          {
+            "en": "In Japan, people bow.",
+            "ja": "にほんでは おじぎを します。"
+          }
+        ],
+        "testPoints": [
+          "ワールド10の ひょうげんで クイズを だしたり こたえたり できる",
+          "おわりの -y と -le を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Press the buzzer.",
+          "ja": "ボタンを おして。",
+          "action": "はやおしボタンを おす まね",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "うでを くんで かんがえる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Shout \"Hooray!\"",
+          "ja": "「やったー！」と さけんで。",
+          "action": "りょうてを あげて よろこぶ",
+          "emoji": "🎉"
+        },
+        {
+          "en": "Do a little dance.",
+          "ja": "ちょっと おどって。",
+          "action": "かるく おどる",
+          "emoji": "💃"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-y",
+          "-le"
+        ],
+        "sounds": [
+          "/i/",
+          "/aɪ/",
+          "/əl/"
+        ],
+        "words": [
+          "sunny",
+          "cry",
+          "puzzle",
+          "eagle"
+        ],
+        "tipJa": "ふりかえり。sunny の y は「イー」、cry の y は「アイ」、puzzle と eagle の le は「ル」。"
+      },
+      "vocab": [
+        {
+          "en": "quiz show",
+          "ja": "クイズショー",
+          "emoji": "🎙️",
+          "core": true
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "✅"
+        },
+        {
+          "en": "question",
+          "ja": "しつもん",
+          "emoji": "❓"
+        },
+        {
+          "en": "point",
+          "ja": "てんすう",
+          "emoji": "💯"
+        }
+      ],
+      "teacherScript": "ちきゅう クイズショー！いきもの・たべもの・せかいの くらしの クイズを だしあおう。-y と -le も ふりかえるよ。",
+      "conversation": {
+        "scene": "The Earth Quiz Show on the island stage",
+        "sceneJa": "しまの ステージで ちきゅう クイズショー",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Welcome to the Earth Quiz Show! Question one. Where do sea turtles live?",
+            "ja": "ちきゅう クイズショーへ ようこそ！だい1もん。ウミガメは どこに すんでいる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Sea turtles live in warm seas!",
+            "ja": "ウミガメは あたたかい うみに すんでいる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Correct! Question two. Where is this chocolate from?",
+            "ja": "せいかい！だい2もん。この チョコレートは どこから きた？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's from Ghana!",
+            "ja": "ガーナから！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My question. In Japan, people do this. What is it?",
+            "ja": "わたしの もんだい。にほんでは これを するよ。なーんだ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "In Japan, people bow! Ten points for everyone.",
+            "ja": "にほんでは おじぎを するね！みんなに 10てん。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド10の ひょうげんで クイズを だそう・こたえよう",
+          "starterEn": "Welcome to the quiz show! Where do sea turtles live?",
+          "targetExpressions": [
+            "Where do ～ live?",
+            "Where is ～ from?",
+            "In ～, people ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Sea turtles live in warm seas. が いえたね",
+          "いきもの・たべもの・せかいの クイズが できた",
+          "sunny・cry の y と puzzle・eagle の le を ふりかえったね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 298,
+      "world": 10,
+      "title": "Proposal Speech Rehearsal",
+      "titleJa": "ていあん スピーチの リハーサル",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：ていあん スピーチの れんしゅう",
+        "grammar": "Look at this picture. / Thank you for listening.",
+        "expressions": [
+          {
+            "en": "Thank you for listening.",
+            "ja": "きいてくれて ありがとうございました。",
+            "core": true
+          },
+          {
+            "en": "Look at this picture.",
+            "ja": "この えを みてください。"
+          },
+          {
+            "en": "Please help the earth.",
+            "ja": "ちきゅうを たすけてください。"
+          }
+        ],
+        "testPoints": [
+          "スピーチの はじめと おわりの ことばが いえる",
+          "aw・au・ew を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Speak loudly.",
+          "ja": "おおきな こえで はなして。",
+          "action": "むねを はって おおきな こえ",
+          "emoji": "📢"
+        },
+        {
+          "en": "Point to the picture.",
+          "ja": "えを ゆびさして。",
+          "action": "ポスターを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Draw a smile.",
+          "ja": "にこにこマークを かいて。",
+          "action": "ゆびで にこにこマークを かく",
+          "emoji": "🙂"
+        },
+        {
+          "en": "Bow and say thank you.",
+          "ja": "おじぎして ありがとうと いって。",
+          "action": "おじぎを する",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "aw",
+          "au",
+          "ew"
+        ],
+        "sounds": [
+          "/ɔː/",
+          "/ɔː/",
+          "/uː/"
+        ],
+        "words": [
+          "draw",
+          "autumn",
+          "flew",
+          "lawn"
+        ],
+        "tipJa": "ふりかえり。draw と lawn の aw、autumn の au は「オー」、flew の ew は「ウー」。"
+      },
+      "vocab": [
+        {
+          "en": "picture",
+          "ja": "え（しゃしん）",
+          "emoji": "🖼️",
+          "core": true
+        },
+        {
+          "en": "listen",
+          "ja": "きく",
+          "emoji": "👂"
+        },
+        {
+          "en": "voice",
+          "ja": "こえ",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "practice",
+          "ja": "れんしゅう",
+          "emoji": "🔁"
+        }
+      ],
+      "teacherScript": "スピーチの れんしゅう！はじめは「Look at this picture.」、おわりは「Thank you for listening.」 おおきな こえで いおう。",
+      "conversation": {
+        "scene": "Speech rehearsal on the beach stage",
+        "sceneJa": "すなはまの ステージで スピーチの リハーサル",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Look at this picture. This is a sea turtle.",
+            "ja": "この えを みてください。これは ウミガメです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sea turtles are in danger. We can pick up trash. Let's clean the beach! Please help the earth.",
+            "ja": "ウミガメは あぶない めに あっています。ゴミを ひろえます。ビーチを そうじしましょう！ちきゅうを たすけてください。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you for listening.",
+            "ja": "きいてくれて ありがとうございました。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great speech, Riko! Your voice was clear.",
+            "ja": "すばらしい スピーチ、リコ！こえが はっきりしていたわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My turn! Look at this picture...",
+            "ja": "ぼくの ばん！この えを みてください…"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Look at this picture. ではじめて、Thank you for listening. で おわる みじかい スピーチを しよう",
+          "starterEn": "Let's practice! Look at this picture. Thank you for listening. Now you try!",
+          "targetExpressions": [
+            "Look at this picture.",
+            "Thank you for listening."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Thank you for listening. が いえたね",
+          "Look at this picture. で スピーチを はじめられる",
+          "draw・autumn・lawn は「オー」、flew は「ウー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 299,
+      "world": 10,
+      "title": "Ocean of Life Review",
+      "titleJa": "いのちの海 ふりかえり",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：いきもの・せかい・おすすめ",
+        "grammar": "In ～, people ～. / I recommend ～. / We can ～.",
+        "expressions": [
+          {
+            "en": "In Japan, people eat fish. Let's keep the sea clean.",
+            "ja": "にほんでは さかなを たべます。うみを きれいに しましょう。",
+            "core": true
+          },
+          {
+            "en": "I recommend the aquarium.",
+            "ja": "すいぞくかんが おすすめです。"
+          },
+          {
+            "en": "We can save water.",
+            "ja": "みずを たいせつに できます。"
+          }
+        ],
+        "testPoints": [
+          "ワールド10の ひょうげんを つなげて はなせる",
+          "soft c・soft g・-y・-le を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Swim like a whale.",
+          "ja": "クジラみたいに およいで。",
+          "action": "おおきく およぐ まね",
+          "emoji": "🐋"
+        },
+        {
+          "en": "Bow the Japanese way.",
+          "ja": "にほんふうに おじぎして。",
+          "action": "ていねいに おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Blow bubbles.",
+          "ja": "シャボンだまを ふいて。",
+          "action": "ふーっと ふく まね",
+          "emoji": "🫧"
+        },
+        {
+          "en": "Pick up a can.",
+          "ja": "かんを ひろって。",
+          "action": "かんを ひろう まね",
+          "emoji": "🥫"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "c",
+          "g",
+          "-y",
+          "-le"
+        ],
+        "sounds": [
+          "/s/",
+          "/dʒ/",
+          "/i/",
+          "/əl/"
+        ],
+        "words": [
+          "rice",
+          "gem",
+          "baby",
+          "bubble"
+        ],
+        "tipJa": "ふりかえり。rice の c は「ス」、gem の g は「ジ」、baby の y は「イー」、bubble の le は「ル」。"
+      },
+      "vocab": [
+        {
+          "en": "review",
+          "ja": "ふりかえり",
+          "emoji": "🔁",
+          "core": true
+        },
+        {
+          "en": "sea",
+          "ja": "うみ",
+          "emoji": "🌊"
+        },
+        {
+          "en": "aquarium",
+          "ja": "すいぞくかん",
+          "emoji": "🐠"
+        },
+        {
+          "en": "island",
+          "ja": "しま",
+          "emoji": "🏝️"
+        }
+      ],
+      "teacherScript": "いのちの海 ふりかえり さんぽ！いきもの・せかいの くらし・おすすめ・できる ことを つなげよう。「In Japan, people eat fish. Let's keep the sea clean.」",
+      "conversation": {
+        "scene": "A review walk around the Ocean of Life island",
+        "sceneJa": "いのちの海の しま ふりかえり さんぽ",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "In Japan, people eat fish. Let's keep the sea clean.",
+            "ja": "にほんでは さかなを たべるね。うみを きれいに しよう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I recommend the aquarium. You can see sea turtles and whales.",
+            "ja": "すいぞくかんが おすすめ。ウミガメや クジラが みられるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We can save water. We can use eco bags, too.",
+            "ja": "みずを たいせつに できるね。エコバッグも つかえる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "This island is my favorite place!",
+            "ja": "この しまは ぼくの おきにいりの ばしょ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド10の ひょうげん（In ～, people ～. / I recommend ～. / We can ～.）を つなげて はなそう",
+          "starterEn": "Let's look back! In Japan, people eat fish. What do you recommend?",
+          "targetExpressions": [
+            "In ～, people ～.",
+            "I recommend ～.",
+            "We can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Japan, people eat fish. Let's keep the sea clean. が いえたね",
+          "おすすめと できる ことを つなげたね",
+          "rice・gem・baby・bubble！ ワールド10の おとを ふりかえったよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 300,
+      "world": 10,
+      "title": "World 10 Grand Review",
+      "titleJa": "ワールド10 そうふくしゅう",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：小6中盤 はっぴょうかい（ワールド10 ぜんぶ）",
+        "grammar": "Where do ～ live? / ～ is from ～. / In ～, people ～. / I recommend ～. / We can ～. Let's ～.",
+        "expressions": [
+          {
+            "en": "We can save the sea. Let's start today!",
+            "ja": "わたしたちは うみを まもれます。きょうから はじめましょう！",
+            "core": true
+          },
+          {
+            "en": "Sea turtles live in the sea.",
+            "ja": "ウミガメは うみに すんでいます。"
+          },
+          {
+            "en": "I recommend this book. It's exciting.",
+            "ja": "この ほんが おすすめです。わくわくします。"
+          }
+        ],
+        "testPoints": [
+          "いきもの・たべもの・せかい・おすすめ・できる ことを つなげて ていあんスピーチが できる",
+          "soft c・soft g・-y・-le・aw・au・ew を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Swim! Hop! Fly!",
+          "ja": "およいで！はねて！とんで！",
+          "action": "いきものの うごきを はやく",
+          "emoji": "🐬"
+        },
+        {
+          "en": "Pick up trash! Turn off the lights!",
+          "ja": "ゴミを ひろって！でんきを けして！",
+          "action": "ちきゅうを まもる うごきを はやく",
+          "emoji": "🌏"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "c",
+          "g",
+          "-y",
+          "-le",
+          "aw",
+          "au",
+          "ew"
+        ],
+        "sounds": [
+          "/s/",
+          "/dʒ/",
+          "/i/",
+          "/əl/",
+          "/ɔː/",
+          "/ɔː/",
+          "/uː/"
+        ],
+        "words": [
+          "ice",
+          "giant",
+          "happy",
+          "apple",
+          "draw",
+          "sauce",
+          "new"
+        ],
+        "tipJa": "ワールド10の そうまとめ。c「ス」、g「ジ」、おわりの y「イー」「アイ」、le「ル」、aw・au「オー」、ew「ウー」！"
+      },
+      "vocab": [
+        {
+          "en": "life",
+          "ja": "いのち",
+          "emoji": "💗",
+          "core": true
+        },
+        {
+          "en": "future",
+          "ja": "みらい",
+          "emoji": "🌈"
+        },
+        {
+          "en": "proposal",
+          "ja": "ていあん",
+          "emoji": "📣"
+        },
+        {
+          "en": "together",
+          "ja": "いっしょに",
+          "emoji": "🤝"
+        }
+      ],
+      "teacherScript": "Congratulations! ワールド10 さいごの レッスン！まずは スピード TPR。そのあと 小6中盤 はっぴょうかい。いきもの・たべもの・せかい・おすすめ・できる こと、ぜんぶ つかおう！あしたは ボスせんだよ。",
+      "conversation": {
+        "scene": "The Grade 6 mid-year show on the Ocean of Life stage",
+        "sceneJa": "いのちの海の ステージで 小6中盤 はっぴょうかい",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Grade 6 mid-year show!",
+            "ja": "小6中盤 はっぴょうかいへ ようこそ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Sea turtles live in the sea. They are in danger.",
+            "ja": "ウミガメは うみに すんでいます。あぶない めに あっています。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This milk is from Hokkaido. In India, people eat curry.",
+            "ja": "この ぎゅうにゅうは ほっかいどうから。インドでは カレーを たべます。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I recommend this book. It's exciting. We can save the sea. Let's start today!",
+            "ja": "この ほんが おすすめ。わくわくするよ。うみを まもれます。きょうから はじめよう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great job, everyone! Let's go to World 11!",
+            "ja": "みんな よく できました！ワールド11へ いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド10の ことばで ていあんスピーチを しよう（いきもの・せかい・おすすめ・できる こと。ほんとうの なまえや ばしょの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the show! We can save the sea. Let's start today! Tell me your idea!",
+          "targetExpressions": [
+            "We can ～.",
+            "Let's ～.",
+            "I recommend ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "スピード TPR で ワールド10の うごきを ふくしゅう",
+          "いきもの・せかい・おすすめ・できる ことを つなげて ていあんしたね",
+          "soft c・soft g・-y・-le・aw au ew を よみわけられたよ。ワールド11では -ed や サイトワードを ならうよ！"
+        ]
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 /**
  * 月ごとの学習レポート（PDF）を LINE で届けるサービス層。
  *
- *  1. お子さまごとに「学習レポート（1ページ）」と「いまのワールドの 1か月ワークブック」を用意する
+ *  1. お子さまごとに「学習レポート（1ページ）」と「これから進む 20 レッスンの 1か月ワークブック」を用意する
  *     （置き場所は STORAGE_DRIVER=local|s3。src/lib/storage。ワークブックは あらかじめアップロードしたもの）
  *  2. ダウンロード用のランダムなトークンを作り、DB（ReportDelivery）には SHA-256 だけを入れる（30日で期限切れ）
  *  3. 保護者の LINE（Parent.lineUserId）に Flex メッセージ（名前・要約・「PDFをひらく」）を push する
@@ -95,17 +95,17 @@ async function preparePackage(
   ];
   let ws: { key: string; bytes: number } | null = null;
   try {
-    ws = await (deps.worksheets ?? ensureWorksheetBundle)(report.world);
+    ws = await (deps.worksheets ?? ensureWorksheetBundle)(report.pack);
   } catch (e) {
     // ワークブックが用意できなくても レポートだけは届ける
-    console.warn(`[report] ワールド${report.world} のワークブックを確認できませんでした（${(e as Error)?.name ?? "Error"}）`);
+    console.warn(`[report] 1か月ワークブック No.${report.pack} を確認できませんでした（${(e as Error)?.name ?? "Error"}）`);
   }
   if (ws && isValidKey(ws.key)) {
     files.push({
       id: "worksheets",
-      labelJa: `ワールド${report.world}「${report.worldNameJa}」 1か月ワークブック`,
+      labelJa: `1か月ワークブック No.${report.pack}（Lesson ${report.packStart}〜${report.packEnd}）`,
       path: ws.key,
-      filename: `eigo-quest-world-${String(report.world).padStart(2, "0")}-workbook.pdf`,
+      filename: `eigo-quest-month-${String(report.pack).padStart(2, "0")}-workbook.pdf`,
       bytes: ws.bytes,
     });
   }
@@ -114,6 +114,8 @@ async function preparePackage(
     lessonsThisMonth: report.lessonsThisMonth, studyDaysThisMonth: report.studyDaysThisMonth, testsPassedThisMonth: report.testsPassedThisMonth,
     streakDays: report.streakDays, longestStreak: report.longestStreak, overall: report.overall,
     lessonsDone: report.lessonsDone, totalLessons: report.totalLessons, world: report.world, worldNameJa: report.worldNameJa,
+    stage: report.stage, stageNameJa: report.stageNameJa, level: report.level, schoolLineJa: report.schoolLineJa, wordsLearned: report.wordsLearned,
+    pack: report.pack, packStart: report.packStart, packEnd: report.packEnd,
   };
   const token = newToken();
   const row = await prisma.reportDelivery.create({

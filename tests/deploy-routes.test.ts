@@ -140,7 +140,7 @@ describe("cron の認証", () => {
 describe("/api/cron/line-monthly", () => {
   it("送る → LINE のリンクの /d/<token>/<file> が S3 の置き場所から流れてくる（レポート・ワークブック）", async () => {
     await seedFamily();
-    objects.set("worksheets/monthly/world-01.pdf", new TextEncoder().encode("%PDF-1.4 world-01 workbook"));
+    objects.set("worksheets/monthly/month-01.pdf", new TextEncoder().encode("%PDF-1.4 month-01 workbook")); // run7: 20レッスンごとの 1か月ワークブック No.1
     const res = await cronMonthly.GET(authed("/api/cron/line-monthly?month=2026-11"));
     expect(res.status).toBe(200);
     const body = await res.json();
@@ -154,7 +154,7 @@ describe("/api/cron/line-monthly", () => {
     const uri = /"uri":"([^"]+\/d\/[^"]+)"/.exec(JSON.stringify(pushes[0]!.body))![1]!;
     expect(uri.startsWith(`${BASE}/d/`)).toBe(true);
     const token = uri.split("/d/")[1]!;
-    for (const [file, expected] of [["report", "%PDF-"], ["worksheets", "%PDF-1.4 world-01 workbook"]] as const) {
+    for (const [file, expected] of [["report", "%PDF-"], ["worksheets", "%PDF-1.4 month-01 workbook"]] as const) {
       const r = await download.GET(new Request(`http://localhost/d/${token}/${file}`), { params: Promise.resolve({ token, file }) });
       expect(r.status).toBe(200);
       expect(r.headers.get("content-type")).toBe("application/pdf");

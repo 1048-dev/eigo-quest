@@ -6,7 +6,7 @@
  * 中身はすべて契約（lib/api/contracts.ts）どおりの形で、offline: true の目印が付く。
  */
 import announcementsRaw from "@content/announcements.json";
-import { ASSESSMENTS, TOTAL_LESSONS, gateTestAfterLesson, getLesson, itemsOfLesson, reviewQuestFor, TEACHER } from "@/lib/curriculum";
+import { ASSESSMENTS, TOTAL_LESSONS, ensureLessonsLoaded, gateTestAfterLesson, getLesson, itemsOfLesson, reviewQuestFor, TEACHER } from "@/lib/curriculum";
 import { toProgressMaps, type LocalProgress } from "./localProgress";
 import { buildLessonFlow } from "@/lib/curriculum/questions";
 import { CURRICULUM_RULES } from "@/lib/domain/config";
@@ -85,7 +85,16 @@ export function offlineGacha(useRareTicket: boolean, rng: () => number = Math.ra
   };
 }
 
-/** レッスン: カリキュラムだけで組み立てられるので、DBなしでも全部遊べる */
+/**
+ * ブラウザ用: そのレッスン（と スピードリスニングで使う 直前の4レッスン）の ワールドを 読みこんでから 組み立てる。
+ * run7: カリキュラム全体は ブラウザに のせず、ワールドごとの JSON を あとから 読む
+ */
+export async function loadOfflineLesson(lessonNo: number): Promise<LessonResponse> {
+  if (Number.isInteger(lessonNo) && lessonNo >= 1 && lessonNo <= TOTAL_LESSONS) await ensureLessonsLoaded(Math.max(1, lessonNo - 4), lessonNo);
+  return offlineLesson(lessonNo);
+}
+
+/** レッスン: カリキュラムだけで組み立てられるので、DBなしでも全部遊べる（サーバー、または loadOfflineLesson の あと） */
 export function offlineLesson(lessonNo: number): LessonResponse {
   const lesson = getLesson(lessonNo);
   if (!lesson) return { ...OFF, lesson: null, teacher: TEACHER, items: [], steps: [] };

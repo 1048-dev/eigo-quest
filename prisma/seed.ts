@@ -112,7 +112,7 @@ function validate(): string[] {
   for (const a of ANNOUNCEMENTS) {
     if (!a.title || !a.body || Number.isNaN(Date.parse(a.date))) problems.push(`announcement ${a.id}: title / body / date が不正です`);
   }
-  if (LESSONS.length === 0) problems.push("lessons が 0 件です（content/curriculum/lessons.json を確認）");
+  if (LESSONS.length === 0) problems.push("lessons が 0 件です（content/curriculum/worlds/ と npm run curriculum:index を確認）");
   if (MONSTERS.length !== 100) problems.push(`monsters が ${MONSTERS.length} 体です（100体のはず）`);
   return problems;
 }

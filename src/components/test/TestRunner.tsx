@@ -11,7 +11,7 @@ import { Portrait } from "@/components/characters/CharacterArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { apiPost, isUnreachable } from "@/lib/api/client";
-import { offlineTestStart, offlineTestSubmit } from "@/lib/offline/tests";
+import { loadOfflineTestStart, loadOfflineTestSubmit } from "@/lib/offline/tests";
 import { recordLocalTestPass } from "@/lib/offline/localProgress";
 import { recordTrialTest } from "@/lib/offline/trialLog";
 import { TOTAL_LESSONS } from "@/lib/curriculum";
@@ -35,9 +35,9 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
 
   const start = useCallback(() => {
     setResult(null); setIdx(0); setAnswers([]); setError(null);
-    apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/start`, TestStartResponseSchema, { arenaMode, reviewAlertId }).then((res) => {
-      // サーバーに届かない → 同じ問題をブラウザで作って、そのまま挑戦できる
-      const r = isUnreachable(res) ? { ...res, ok: true, error: null, data: offlineTestStart(assessmentId, { arenaMode: mode }) } : res;
+    apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/start`, TestStartResponseSchema, { arenaMode, reviewAlertId }).then(async (res) => {
+      // サーバーに届かない → 同じ問題をブラウザで作って、そのまま挑戦できる（範囲の ワールドの JSON を あとから 読む）
+      const r = isUnreachable(res) ? { ...res, ok: true, error: null, data: await loadOfflineTestStart(assessmentId, { arenaMode: mode }) } : res;
       const a = r.data.assessment;
       if (!r.ok || !a || r.data.questions.length === 0) return setError(r.error ?? "このテストは まだ ひらいていないよ。");
       setOffline(!!r.data.offline);
@@ -56,9 +56,9 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
     if (idx + 1 < session.questions.length) return setIdx(idx + 1);
     setSubmitting(true);
     apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/submit`, TestSubmitResponseSchema, { seed: session.seed, arenaMode, reviewAlertId, answers: next })
-      .then((res) => {
+      .then(async (res) => {
         // 届かないときはブラウザで採点（記録はされない）
-        const r = isUnreachable(res) ? { ...res, ok: true, data: offlineTestSubmit(assessmentId, { seed: session.seed, arenaMode: mode, answers: next }) } : res;
+        const r = isUnreachable(res) ? { ...res, ok: true, data: await loadOfflineTestSubmit(assessmentId, { seed: session.seed, arenaMode: mode, answers: next }) } : res;
         if (r.data.offline) {
           setOffline(true);
           // おためしモードで 合格 → この ブラウザの マップに だけ 反映（アリーナ・お宝は マップに 出ないので のぞく）

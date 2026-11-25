@@ -93,6 +93,15 @@ export function ChildCard({ child, index, birthYear: initialBirthYear, guard, on
         </div>
       </div>
 
+      {/* run7: いまの ステージ・レベル と 学校の英語（保護者向けの めやす） */}
+      <div className="mt-3 rounded-xl border border-[var(--gold)]/50 bg-black/25 p-2 text-sm">
+        <p className="font-black">
+          ステージ{child.stage}{child.stageNameJa ? `「${child.stageNameJa}」` : ""}
+          {child.level && <span className="ml-1 rounded bg-[var(--sky)]/20 px-1.5 py-0.5 text-xs text-[var(--sky)]">{child.level}</span>}
+        </p>
+        <p className="mt-0.5 text-xs text-[var(--ink-2)]">{child.schoolLineJa}・覚えた ことば {child.wordsLearned}語</p>
+      </div>
+
       <div className="mt-3">
         <Gauge label="レッスンの進みぐあい" value={child.lessonsDone} max={child.totalLessons} color="linear-gradient(90deg,#5fe39a,#e8b63a)" right={`${child.lessonsDone} / ${child.totalLessons}（${pct}%）`} />
       </div>

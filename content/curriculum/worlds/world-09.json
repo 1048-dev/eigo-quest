@@ -1,0 +1,4216 @@
+{
+  "world": 9,
+  "stage": 1,
+  "level": "A1",
+  "lessons": [
+    {
+      "lessonNo": 241,
+      "world": 9,
+      "title": "This Is Me!",
+      "titleJa": "これが わたし！",
+      "school": {
+        "grade": "小6",
+        "topic": "This is me：とくいな こと",
+        "grammar": "I'm good at ～. / What are you good at?",
+        "expressions": [
+          {
+            "en": "I'm good at drawing.",
+            "ja": "わたしは えを かくのが とくいです。",
+            "core": true
+          },
+          {
+            "en": "I'm good at running, too.",
+            "ja": "はしるのも とくいです。"
+          },
+          {
+            "en": "What are you good at?",
+            "ja": "あなたは なにが とくいですか。"
+          }
+        ],
+        "testPoints": [
+          "I'm good at ～. で とくいな ことを いえる",
+          "ar（アー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a star.",
+          "ja": "ほしを かいて。",
+          "action": "ゆびで そらに ほしを かく",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Point to the car.",
+          "ja": "くるまを ゆびさして。",
+          "action": "くるまの えを ゆびさす",
+          "emoji": "🚗"
+        },
+        {
+          "en": "Run in place.",
+          "ja": "その ばで はしって。",
+          "action": "その ばで かけあし",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Show me your card.",
+          "ja": "カードを みせて。",
+          "action": "カードを みせる まね",
+          "emoji": "🪪"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ar"
+        ],
+        "sounds": [
+          "/ɑːr/"
+        ],
+        "words": [
+          "car",
+          "star",
+          "park",
+          "farm"
+        ],
+        "tipJa": "a と r で「アー」。くちを おおきく あけて、さいごに したを まるめるよ。car、star、park、farm。"
+      },
+      "vocab": [
+        {
+          "en": "drawing",
+          "ja": "えを かくこと",
+          "emoji": "🎨",
+          "core": true
+        },
+        {
+          "en": "running",
+          "ja": "はしること",
+          "emoji": "🏃"
+        },
+        {
+          "en": "card",
+          "ja": "カード",
+          "emoji": "🪪"
+        },
+        {
+          "en": "continent",
+          "ja": "たいりく",
+          "emoji": "🗺️"
+        }
+      ],
+      "teacherScript": "ワールド9 そらの大陸へ ようこそ！きょうから 小6。「I'm good at drawing.」で とくいな ことを いおう。ar は くちを おおきく「アー」！",
+      "conversation": {
+        "scene": "The first day on the Sky Continent: making This Is Me cards",
+        "sceneJa": "そらの大陸の はじめての 日。じこしょうかいカードづくり",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Sky Continent! Let's make This Is Me cards.",
+            "ja": "そらの大陸へ ようこそ！「これが わたし」カードを つくろう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'm good at running. I can run very fast!",
+            "ja": "ぼくは はしるのが とくい。とても はやく はしれるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm good at drawing. I can draw a star on my card.",
+            "ja": "わたしは えを かくのが とくい。カードに ほしを かくね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What are you good at, Birimo?",
+            "ja": "ビリモは なにが とくい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm good at flying! Look at me!",
+            "ja": "ぼくは とぶのが とくい！みてて！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I'm good at ～. で じぶんの とくいな ことを つたえよう（なまえは ニックネームで OK）",
+          "starterEn": "Hi! I'm Haru. I'm good at running. What are you good at?",
+          "targetExpressions": [
+            "I'm good at ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm good at drawing. が いえたね",
+          "What are you good at? で ともだちに きける",
+          "car、star、park、farm！ ar は「アー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 242,
+      "world": 9,
+      "title": "My Favorite Things",
+      "titleJa": "わたしの おきにいり",
+      "school": {
+        "grade": "小6",
+        "topic": "This is me：おきにいり",
+        "grammar": "My favorite ～ is ～.",
+        "expressions": [
+          {
+            "en": "My favorite food is curry.",
+            "ja": "わたしの いちばん すきな たべものは カレーです。",
+            "core": true
+          },
+          {
+            "en": "My favorite color is green.",
+            "ja": "いちばん すきな いろは みどりです。"
+          },
+          {
+            "en": "My favorite sport is soccer.",
+            "ja": "いちばん すきな スポーツは サッカーです。"
+          }
+        ],
+        "testPoints": [
+          "My favorite ～ is ～. で いちばん すきな ものを いえる",
+          "ar（アー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Throw a dart.",
+          "ja": "ダーツを なげて。",
+          "action": "ダーツを なげる まね",
+          "emoji": "🎯"
+        },
+        {
+          "en": "Hold a jar.",
+          "ja": "びんを もって。",
+          "action": "りょうてで びんを もつ まね",
+          "emoji": "🫙"
+        },
+        {
+          "en": "Eat curry.",
+          "ja": "カレーを たべて。",
+          "action": "スプーンで たべる まね",
+          "emoji": "🍛"
+        },
+        {
+          "en": "Clap three times.",
+          "ja": "3かい てを たたいて。",
+          "action": "てを 3かい たたく",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ar"
+        ],
+        "sounds": [
+          "/ɑːr/"
+        ],
+        "words": [
+          "art",
+          "card",
+          "jar",
+          "yard"
+        ],
+        "tipJa": "ar は「アー」。art、card、jar、yard。cat の みじかい「ア」と ちがって、ながく のばして したを まるめるよ。"
+      },
+      "vocab": [
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "💖",
+          "core": true
+        },
+        {
+          "en": "curry",
+          "ja": "カレー",
+          "emoji": "🍛"
+        },
+        {
+          "en": "color",
+          "ja": "いろ",
+          "emoji": "🌈"
+        },
+        {
+          "en": "sport",
+          "ja": "スポーツ",
+          "emoji": "⚽"
+        }
+      ],
+      "teacherScript": "「My favorite food is curry.」 favorite は いちばん すきな。いろや スポーツでも いえるよ。ar の「アー」を もういちど！",
+      "conversation": {
+        "scene": "Sharing favorite things in the sky garden",
+        "sceneJa": "そらの にわで おきにいりを はなす",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "My favorite food is curry. What's yours, Haru?",
+            "ja": "わたしの いちばん すきな たべものは カレー。ハルは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My favorite food is ramen! My favorite sport is soccer.",
+            "ja": "ぼくは ラーメン！いちばん すきな スポーツは サッカー。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My favorite color is green. Like the grass in this yard!",
+            "ja": "わたしの すきな いろは みどり。この にわの くさみたい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My favorite thing is the stars at night!",
+            "ja": "ぼくの おきにいりは よるの ほし！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "My favorite ～ is ～. で じぶんの おきにいりを つたえよう",
+          "starterEn": "My favorite food is curry. What's your favorite food?",
+          "targetExpressions": [
+            "My favorite ～ is ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My favorite food is curry. が いえたね",
+          "favorite は「いちばん すきな」",
+          "art、card、jar、yard！ ar は「アー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 243,
+      "world": 9,
+      "title": "Please Call Me Haru",
+      "titleJa": "ニックネームで よんでね",
+      "school": {
+        "grade": "小6",
+        "topic": "This is me：よびかたと たんじょうび",
+        "grammar": "Please call me ～. / I'm from ～.",
+        "expressions": [
+          {
+            "en": "Please call me Haru.",
+            "ja": "ハルと よんでください。",
+            "core": true
+          },
+          {
+            "en": "My birthday is May 5th.",
+            "ja": "たんじょうびは 5がつ 5にち です。"
+          },
+          {
+            "en": "I'm from Japan.",
+            "ja": "にほん しゅっしんです。"
+          }
+        ],
+        "testPoints": [
+          "Please call me ～. で よんでほしい なまえを いえる",
+          "ar（アー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Call your friend.",
+          "ja": "ともだちを よんで。",
+          "action": "てを くちに あてて よぶ",
+          "emoji": "📣"
+        },
+        {
+          "en": "Start the race.",
+          "ja": "レースを スタートして。",
+          "action": "スタートの ポーズ",
+          "emoji": "🏁"
+        },
+        {
+          "en": "Swim like a shark.",
+          "ja": "サメみたいに およいで。",
+          "action": "りょうてで およぐ まね",
+          "emoji": "🦈"
+        },
+        {
+          "en": "Wave to the class.",
+          "ja": "クラスに てを ふって。",
+          "action": "みんなに てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ar"
+        ],
+        "sounds": [
+          "/ɑːr/"
+        ],
+        "words": [
+          "shark",
+          "smart",
+          "start",
+          "dark"
+        ],
+        "tipJa": "shark の sh に まどわされないで！まんなかは ar の「アー」。smart、start、dark も「アー」。"
+      },
+      "vocab": [
+        {
+          "en": "nickname",
+          "ja": "ニックネーム",
+          "emoji": "🏷️",
+          "core": true
+        },
+        {
+          "en": "call",
+          "ja": "よぶ",
+          "emoji": "📣"
+        },
+        {
+          "en": "Japan",
+          "ja": "にほん",
+          "emoji": "🗾"
+        },
+        {
+          "en": "birthday",
+          "ja": "たんじょうび",
+          "emoji": "🎂"
+        }
+      ],
+      "teacherScript": "「Please call me Haru.」で よんでほしい なまえを つたえよう。ほんとうの なまえじゃ なくて ニックネームで OK。shark の ar も「アー」！",
+      "conversation": {
+        "scene": "Making name tags at the cloud harbor",
+        "sceneJa": "くもの みなとで なふだを つくる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Hi! My name is Kiko. Please call me Kiki.",
+            "ja": "こんにちは！キコだよ。キキって よんでね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Nice to meet you, Kiki! Please call me Haru.",
+            "ja": "よろしく、キキ！ぼくは ハルって よんでね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My birthday is June 2nd. I'm from Japan.",
+            "ja": "わたしの たんじょうびは 6がつ 2にち。にほん しゅっしんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Please call me Bibi! My birthday is February 29th!",
+            "ja": "ぼくは ビビって よんで！たんじょうびは 2がつ 29にち！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Please call me ～. で よんでほしい なまえを つたえよう（ほんとうの なまえや たんじょうびは いわなくて OK。ニックネームで OK）",
+          "starterEn": "Hi! I'm Kiko. Please call me Kiki. What can I call you?",
+          "targetExpressions": [
+            "Please call me ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Please call me ～. で よびかたを つたえたね",
+          "nickname は「ニックネーム」",
+          "shark、smart、start、dark！ sh が あっても ar は「アー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 244,
+      "world": 9,
+      "title": "What's Your Favorite Animal?",
+      "titleJa": "すきな どうぶつは なに？",
+      "school": {
+        "grade": "小6",
+        "topic": "This is me：おきにいりを たずねる",
+        "grammar": "What's your favorite ～? ― My favorite ～ is ～.",
+        "expressions": [
+          {
+            "en": "What's your favorite animal?",
+            "ja": "いちばん すきな どうぶつは なんですか。",
+            "core": true
+          },
+          {
+            "en": "My favorite animal is the panda.",
+            "ja": "いちばん すきな どうぶつは パンダです。"
+          },
+          {
+            "en": "Me, too!",
+            "ja": "わたしも！"
+          }
+        ],
+        "testPoints": [
+          "What's your favorite ～? で おきにいりを たずねられる",
+          "ar（アー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Plant a seed in the garden.",
+          "ja": "にわに たねを うえて。",
+          "action": "しゃがんで たねを うえる まね",
+          "emoji": "🌱"
+        },
+        {
+          "en": "Shop at the market.",
+          "ja": "いちばで かいものして。",
+          "action": "かごを もって あるく まね",
+          "emoji": "🧺"
+        },
+        {
+          "en": "Dance at the party.",
+          "ja": "パーティーで おどって。",
+          "action": "たのしく おどる",
+          "emoji": "🎉"
+        },
+        {
+          "en": "Roll out the carpet.",
+          "ja": "じゅうたんを ひろげて。",
+          "action": "りょうてで まえに ころがす まね",
+          "emoji": "🟥"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ar"
+        ],
+        "sounds": [
+          "/ɑːr/"
+        ],
+        "words": [
+          "garden",
+          "market",
+          "party",
+          "carpet"
+        ],
+        "tipJa": "2つに わけて よもう。gar-den、mar-ket、par-ty、car-pet。まえの ほうに ar の「アー」！"
+      },
+      "vocab": [
+        {
+          "en": "animal",
+          "ja": "どうぶつ",
+          "emoji": "🐾",
+          "core": true
+        },
+        {
+          "en": "panda",
+          "ja": "パンダ",
+          "emoji": "🐼"
+        },
+        {
+          "en": "season",
+          "ja": "きせつ",
+          "emoji": "🍂"
+        },
+        {
+          "en": "too",
+          "ja": "〜も",
+          "emoji": "➕"
+        }
+      ],
+      "teacherScript": "「What's your favorite animal?」で ともだちの おきにいりを きこう。おなじなら「Me, too!」。garden や market は 2つに わけて よもう！",
+      "conversation": {
+        "scene": "A favorites quiz at the sky market",
+        "sceneJa": "そらの いちばで おきにいり クイズ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Riko, what's your favorite animal?",
+            "ja": "リコ、いちばん すきな どうぶつは なに？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My favorite animal is the panda. What's your favorite animal?",
+            "ja": "パンダ。ハルは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like pandas, too! But my favorite animal is the shark.",
+            "ja": "パンダも すき！でも いちばんは サメ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My favorite season is spring. The flowers in the garden are pretty.",
+            "ja": "わたしの すきな きせつは はる。にわの はなが きれいなの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Me, too!",
+            "ja": "ぼくも！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What's your favorite ～? で ともだちの おきにいりを きいて、こたえよう",
+          "starterEn": "My favorite season is spring. What's your favorite animal?",
+          "targetExpressions": [
+            "What's your favorite ～?",
+            "My favorite ～ is ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What's your favorite animal? で きけたね",
+          "おなじ ときは Me, too!",
+          "garden、market、party、carpet！ 2つに わけて よもう"
+        ]
+      }
+    },
+    {
+      "lessonNo": 245,
+      "world": 9,
+      "title": "This Is Me Cards",
+      "titleJa": "じこしょうかいカード こうかん",
+      "school": {
+        "grade": "小6",
+        "topic": "This is me：じこしょうかいカード（まとめ）",
+        "grammar": "Please call me ～. / I'm good at ～. / My favorite ～ is ～.",
+        "expressions": [
+          {
+            "en": "Please call me Riko. I'm good at swimming.",
+            "ja": "リコと よんでください。およぐのが とくいです。",
+            "core": true
+          },
+          {
+            "en": "My favorite food is pizza.",
+            "ja": "いちばん すきな たべものは ピザです。"
+          },
+          {
+            "en": "Here is my card.",
+            "ja": "わたしの カードを どうぞ。"
+          }
+        ],
+        "testPoints": [
+          "よびかた・とくいな こと・おきにいりを つなげて じこしょうかいできる",
+          "ar を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your arm.",
+          "ja": "うでを あげて。",
+          "action": "かたほうの うでを たかく あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Bark like a dog.",
+          "ja": "いぬみたいに ほえて。",
+          "action": "「ワン！」と ほえる まね",
+          "emoji": "🐶"
+        },
+        {
+          "en": "Push hard.",
+          "ja": "つよく おして。",
+          "action": "かべを おす まね",
+          "emoji": "💪"
+        },
+        {
+          "en": "Put on your scarf.",
+          "ja": "マフラーを まいて。",
+          "action": "くびに まく まね",
+          "emoji": "🧣"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ar"
+        ],
+        "sounds": [
+          "/ɑːr/"
+        ],
+        "words": [
+          "arm",
+          "bark",
+          "hard",
+          "scarf"
+        ],
+        "tipJa": "ar の ふりかえり。arm、bark、hard、scarf。ぜんぶ くちを おおきく「アー」！"
+      },
+      "vocab": [
+        {
+          "en": "swimming",
+          "ja": "およぐこと",
+          "emoji": "🏊",
+          "core": true
+        },
+        {
+          "en": "pizza",
+          "ja": "ピザ",
+          "emoji": "🍕"
+        },
+        {
+          "en": "exchange",
+          "ja": "こうかん",
+          "emoji": "🔄"
+        },
+        {
+          "en": "friend",
+          "ja": "ともだち",
+          "emoji": "🧑‍🤝‍🧑"
+        }
+      ],
+      "teacherScript": "きょうは じこしょうかいカード こうかん！よびかた・とくいな こと・おきにいりを つなげて いおう。ar の ふりかえりも するよ。",
+      "conversation": {
+        "scene": "Exchanging This Is Me cards on the cloud bridge",
+        "sceneJa": "くもの はしで じこしょうかいカード こうかん",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Hi! Please call me Riko. I'm good at swimming.",
+            "ja": "こんにちは！リコって よんでね。およぐのが とくい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Please call me Haru. I'm good at running. My favorite food is ramen.",
+            "ja": "ハルって よんで。はしるのが とくい。すきな たべものは ラーメン。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My favorite food is pizza. Here is my card!",
+            "ja": "わたしの すきな たべものは ピザ。カードを どうぞ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What wonderful cards, everyone!",
+            "ja": "みんな すてきな カードね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "よびかた・とくいな こと・おきにいりを つなげて じこしょうかいしよう（なまえは ニックネームで OK）",
+          "starterEn": "Hi! I'm Haru. I'm good at running. My favorite food is ramen. Tell me about you!",
+          "targetExpressions": [
+            "Please call me ～.",
+            "I'm good at ～.",
+            "My favorite ～ is ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "よびかた・とくいな こと・おきにいりを つなげたね",
+          "Here is my card. で カードを わたせる",
+          "arm、bark、hard、scarf！ ar の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 246,
+      "world": 9,
+      "title": "What Time Do You Get Up?",
+      "titleJa": "なんじに おきる？",
+      "school": {
+        "grade": "小6",
+        "topic": "学校生活と1日：おきる じかん・ねる じかん",
+        "grammar": "What time do you get up? ― I get up at ～.",
+        "expressions": [
+          {
+            "en": "What time do you get up?",
+            "ja": "なんじに おきますか。",
+            "core": true
+          },
+          {
+            "en": "I get up at six thirty.",
+            "ja": "6じ30ぷんに おきます。"
+          },
+          {
+            "en": "I go to bed at nine.",
+            "ja": "9じに ねます。"
+          }
+        ],
+        "testPoints": [
+          "What time do you get up? ― I get up at ～. で じかんを たずねて こたえられる",
+          "or（オー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Get up.",
+          "ja": "おきて。",
+          "action": "のびを しながら おきる",
+          "emoji": "🌅"
+        },
+        {
+          "en": "Eat corn.",
+          "ja": "とうもろこしを たべて。",
+          "action": "とうもろこしを かじる まね",
+          "emoji": "🌽"
+        },
+        {
+          "en": "Ride a horse.",
+          "ja": "うまに のって。",
+          "action": "うまに のる まね",
+          "emoji": "🐴"
+        },
+        {
+          "en": "Use a fork.",
+          "ja": "フォークを つかって。",
+          "action": "フォークで たべる まね",
+          "emoji": "🍴"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "or"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "fork",
+          "corn",
+          "horse",
+          "short"
+        ],
+        "tipJa": "o と r で「オー」。くちを まるく して、さいごに したを まるめる。fork、corn、horse、short。"
+      },
+      "vocab": [
+        {
+          "en": "get up",
+          "ja": "おきる",
+          "emoji": "⏰",
+          "core": true
+        },
+        {
+          "en": "go to bed",
+          "ja": "ねる",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "thirty",
+          "ja": "30（さんじゅう）",
+          "emoji": "🕧"
+        },
+        {
+          "en": "morning",
+          "ja": "あさ",
+          "emoji": "🌄"
+        }
+      ],
+      "teacherScript": "「What time do you get up?」 なんじに おきる？ こたえは「I get up at six thirty.」。or は くちを まるく「オー」！",
+      "conversation": {
+        "scene": "Comparing morning times at the sky school",
+        "sceneJa": "そらの がっこうで あさの じかんくらべ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "What time do you get up, Haru?",
+            "ja": "ハル、なんじに おきる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I get up at six thirty. I go to bed at nine.",
+            "ja": "6じ30ぷんに おきるよ。9じに ねる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I get up at seven. I'm sleepy in the morning!",
+            "ja": "わたしは 7じ。あさは ねむいの！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I get up at five. I like the morning sky!",
+            "ja": "ぼくは 5じ。あさの そらが すき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What time do you get up? ― I get up at ～. で おきる じかんを つたえよう（ほんとうの じかんで なくても OK）",
+          "starterEn": "I get up at five. I like the morning sky! What time do you get up?",
+          "targetExpressions": [
+            "I get up at ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What time do you get up? が いえたね",
+          "I get up at ～. で じかんを こたえる",
+          "fork、corn、horse、short！ or は「オー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 247,
+      "world": 9,
+      "title": "I Usually Walk to School",
+      "titleJa": "たいてい あるいて いくよ",
+      "school": {
+        "grade": "小6",
+        "topic": "学校生活と1日：いつもの こと",
+        "grammar": "I usually ～. / How do you go to school?",
+        "expressions": [
+          {
+            "en": "I usually walk to school.",
+            "ja": "わたしは たいてい あるいて がっこうへ いきます。",
+            "core": true
+          },
+          {
+            "en": "I usually eat rice for breakfast.",
+            "ja": "あさごはんは たいてい ごはんです。"
+          },
+          {
+            "en": "How do you go to school?",
+            "ja": "どうやって がっこうへ いきますか。"
+          }
+        ],
+        "testPoints": [
+          "I usually ～. で いつも する ことを いえる",
+          "or（オー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk to school.",
+          "ja": "あるいて がっこうへ いって。",
+          "action": "その ばで あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Play a sport.",
+          "ja": "スポーツを して。",
+          "action": "ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Hide from the storm.",
+          "ja": "あらしから かくれて。",
+          "action": "あたまを かかえて しゃがむ",
+          "emoji": "⛈️"
+        },
+        {
+          "en": "Point north.",
+          "ja": "きたを ゆびさして。",
+          "action": "うえの ほうを ゆびさす",
+          "emoji": "🧭"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "or"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "sport",
+          "north",
+          "storm",
+          "born"
+        ],
+        "tipJa": "or は「オー」。sport、north、storm、born。sp や st の あとも or を わすれずに！"
+      },
+      "vocab": [
+        {
+          "en": "usually",
+          "ja": "たいてい",
+          "emoji": "🔁",
+          "core": true
+        },
+        {
+          "en": "walk",
+          "ja": "あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "bus",
+          "ja": "バス",
+          "emoji": "🚌"
+        },
+        {
+          "en": "breakfast",
+          "ja": "あさごはん",
+          "emoji": "🍚"
+        }
+      ],
+      "teacherScript": "「I usually walk to school.」 usually は たいてい・いつもは。or の「オー」を つづけて れんしゅう！",
+      "conversation": {
+        "scene": "Talking about the way to school on the sky road",
+        "sceneJa": "そらの みちで がっこうへの いきかた トーク",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "How do you go to school, Kiko?",
+            "ja": "キコは どうやって がっこうへ いくの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I usually walk to school with my brother.",
+            "ja": "たいてい おにいちゃんと あるいて いくよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I usually go by bus. On rainy days, my dad drives me.",
+            "ja": "ぼくは たいてい バス。あめの ひは おとうさんが くるまで おくってくれる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I usually fly to school! But not in a storm.",
+            "ja": "ぼくは たいてい とんで いく！でも あらしの ひは とばないよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I usually ～. で いつもの ことを つたえよう",
+          "starterEn": "I usually walk to school. How do you go to school?",
+          "targetExpressions": [
+            "I usually ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I usually walk to school. が いえたね",
+          "usually は「たいてい」",
+          "sport、north、storm、born！ or は「オー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 248,
+      "world": 9,
+      "title": "A Day at Sky School",
+      "titleJa": "そらの がっこうの 1日",
+      "school": {
+        "grade": "小6",
+        "topic": "学校生活と1日：いつも・ときどき",
+        "grammar": "I always ～. / I sometimes ～.",
+        "expressions": [
+          {
+            "en": "I always eat lunch with my friends.",
+            "ja": "いつも ともだちと きゅうしょくを たべます。",
+            "core": true
+          },
+          {
+            "en": "I sometimes read books in the library.",
+            "ja": "ときどき としょかんで ほんを よみます。"
+          },
+          {
+            "en": "I never forget my homework.",
+            "ja": "しゅくだいは ぜったいに わすれません。"
+          }
+        ],
+        "testPoints": [
+          "always・sometimes を つかって がっこうの 1日を いえる",
+          "or（オー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pop the popcorn.",
+          "ja": "ポップコーンを はじけさせて。",
+          "action": "てを パッと ひらく",
+          "emoji": "🍿"
+        },
+        {
+          "en": "Say good morning.",
+          "ja": "おはようと いって。",
+          "action": "えがおで「Good morning!」",
+          "emoji": "🌞"
+        },
+        {
+          "en": "Hold up a torch.",
+          "ja": "たいまつを たかく あげて。",
+          "action": "かたてを たかく あげる",
+          "emoji": "🔥"
+        },
+        {
+          "en": "Line up at the fort.",
+          "ja": "とりでの まえに ならんで。",
+          "action": "まっすぐ ならぶ",
+          "emoji": "🏰"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "or"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "morning",
+          "popcorn",
+          "torch",
+          "fort"
+        ],
+        "tipJa": "or は「オー」。mor-ning、pop-corn は 2つに わけて。torch、fort も「オー」。"
+      },
+      "vocab": [
+        {
+          "en": "always",
+          "ja": "いつも",
+          "emoji": "💯",
+          "core": true
+        },
+        {
+          "en": "sometimes",
+          "ja": "ときどき",
+          "emoji": "🔀"
+        },
+        {
+          "en": "lunch",
+          "ja": "きゅうしょく・ひるごはん",
+          "emoji": "🍱"
+        },
+        {
+          "en": "homework",
+          "ja": "しゅくだい",
+          "emoji": "📝"
+        }
+      ],
+      "teacherScript": "「I always eat lunch with my friends.」 always は いつも、sometimes は ときどき。or の 2音節語にも チャレンジ！",
+      "conversation": {
+        "scene": "Showing a school day video on the Sky Continent",
+        "sceneJa": "そらの がっこうの 1日を ビデオで しょうかい",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Good morning! This is my school day.",
+            "ja": "おはよう！ぼくの がっこうの 1日だよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I always eat lunch with my friends. Today we have curry!",
+            "ja": "いつも ともだちと きゅうしょくを たべるの。きょうは カレー！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I sometimes read books in the library after lunch.",
+            "ja": "ひるやすみに ときどき としょかんで ほんを よむよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "And you never forget your homework, right?",
+            "ja": "しゅくだいは ぜったい わすれないわよね？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ha ha! I sometimes forget it!",
+            "ja": "あはは！ぼくは ときどき わすれる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I always ～. / I sometimes ～. で がっこうの 1日を つたえよう（がっこうの なまえは いわなくて OK）",
+          "starterEn": "I always eat lunch with my friends. What do you do at lunch time?",
+          "targetExpressions": [
+            "I always ～.",
+            "I sometimes ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "always（いつも）と sometimes（ときどき）を つかえたね",
+          "I always eat lunch with my friends.",
+          "morning、popcorn、torch、fort！ or は「オー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 249,
+      "world": 9,
+      "title": "What Do You Do After School?",
+      "titleJa": "ほうかごは なにを する？",
+      "school": {
+        "grade": "小6",
+        "topic": "学校生活と1日：ほうかご",
+        "grammar": "What do you do after school? ― I usually ～.",
+        "expressions": [
+          {
+            "en": "What do you do after school?",
+            "ja": "ほうかごは なにを しますか。",
+            "core": true
+          },
+          {
+            "en": "I usually practice the piano.",
+            "ja": "たいてい ピアノの れんしゅうを します。"
+          },
+          {
+            "en": "I sometimes play with my dog.",
+            "ja": "ときどき いぬと あそびます。"
+          }
+        ],
+        "testPoints": [
+          "What do you do after school? で ほうかごの ことを たずねられる",
+          "or（オー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Watch out for the thorn.",
+          "ja": "とげに きを つけて。",
+          "action": "そっと てを ひっこめる",
+          "emoji": "🌹"
+        },
+        {
+          "en": "Snort like a pig.",
+          "ja": "ぶたみたいに はなを ならして。",
+          "action": "「ブー」と いう まね",
+          "emoji": "🐷"
+        },
+        {
+          "en": "Pull the cord.",
+          "ja": "ひもを ひっぱって。",
+          "action": "ひもを ひく まね",
+          "emoji": "🪢"
+        },
+        {
+          "en": "Stand like a stork.",
+          "ja": "コウノトリみたいに かたあしで たって。",
+          "action": "かたあしで たつ",
+          "emoji": "🦩"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "or"
+        ],
+        "sounds": [
+          "/ɔːr/"
+        ],
+        "words": [
+          "thorn",
+          "pork",
+          "cord",
+          "stork"
+        ],
+        "tipJa": "or は「オー」。thorn は th から はじまるけど、まんなかは or。pork、cord、stork も「オー」。"
+      },
+      "vocab": [
+        {
+          "en": "after school",
+          "ja": "ほうかご",
+          "emoji": "🏫",
+          "core": true
+        },
+        {
+          "en": "practice",
+          "ja": "れんしゅうする",
+          "emoji": "🔁"
+        },
+        {
+          "en": "piano",
+          "ja": "ピアノ",
+          "emoji": "🎹"
+        },
+        {
+          "en": "club",
+          "ja": "クラブ",
+          "emoji": "🏸"
+        }
+      ],
+      "teacherScript": "「What do you do after school?」 ほうかごの ことを きこう。usually や sometimes も つかってね。or の さいごの れんしゅう！",
+      "conversation": {
+        "scene": "After-school plans at the sky school gate",
+        "sceneJa": "そらの がっこうの もんで ほうかごの はなし",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "What do you do after school, Riko?",
+            "ja": "リコは ほうかご なにを するの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I usually practice the piano. Sometimes I go to the park.",
+            "ja": "たいてい ピアノの れんしゅう。ときどき こうえんに いく。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I usually play soccer. Then I do my homework.",
+            "ja": "ぼくは たいてい サッカー。それから しゅくだい。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I sometimes play with the clouds!",
+            "ja": "ぼくは ときどき くもと あそぶよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What do you do after school? ― I usually ～. で ほうかごの ことを つたえよう",
+          "starterEn": "I usually play soccer after school. What do you do after school?",
+          "targetExpressions": [
+            "What do you do after school?",
+            "I usually ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What do you do after school? が いえたね",
+          "usually・sometimes で くわしく いえる",
+          "thorn、pork、cord、stork！ or は「オー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 250,
+      "world": 9,
+      "title": "Schools Around the World",
+      "titleJa": "せかいの がっこう くらべ",
+      "school": {
+        "grade": "小6",
+        "topic": "学校生活と1日：せかいの がっこう くらべ（まとめ）",
+        "grammar": "In ～, students ～. / In Japan, we ～.",
+        "expressions": [
+          {
+            "en": "In Japan, we clean our classroom.",
+            "ja": "にほんでは じぶんたちで きょうしつを そうじします。",
+            "core": true
+          },
+          {
+            "en": "In Australia, students wear hats at school.",
+            "ja": "オーストラリアでは がっこうで ぼうしを かぶります。"
+          },
+          {
+            "en": "What time does school start?",
+            "ja": "がっこうは なんじに はじまりますか。"
+          }
+        ],
+        "testPoints": [
+          "せかいの がっこうと くらべて、じぶんの がっこうの ことを いえる",
+          "ar or を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wear a hat.",
+          "ja": "ぼうしを かぶって。",
+          "action": "ぼうしを かぶる まね",
+          "emoji": "👒"
+        },
+        {
+          "en": "Drive a car.",
+          "ja": "くるまを うんてんして。",
+          "action": "ハンドルを まわす まね",
+          "emoji": "🚗"
+        },
+        {
+          "en": "Pick up a fork.",
+          "ja": "フォークを とって。",
+          "action": "フォークを つまむ まね",
+          "emoji": "🍴"
+        },
+        {
+          "en": "Clean the classroom.",
+          "ja": "きょうしつを そうじして。",
+          "action": "ぞうきんがけの まね",
+          "emoji": "🧹"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ar",
+          "or"
+        ],
+        "sounds": [
+          "/ɑːr/",
+          "/ɔːr/"
+        ],
+        "words": [
+          "car",
+          "corn",
+          "park",
+          "sport"
+        ],
+        "tipJa": "ar は くちを おおきく「アー」、or は くちを まるく「オー」。car と corn、park と sport を くらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "clean",
+          "ja": "そうじする",
+          "emoji": "🧹",
+          "core": true
+        },
+        {
+          "en": "students",
+          "ja": "せいと",
+          "emoji": "🧑‍🎓"
+        },
+        {
+          "en": "world",
+          "ja": "せかい",
+          "emoji": "🌍"
+        },
+        {
+          "en": "hat",
+          "ja": "ぼうし",
+          "emoji": "👒"
+        }
+      ],
+      "teacherScript": "せかいの がっこうと くらべてみよう！「In Japan, we clean our classroom.」 ar と or の ききわけも するよ。",
+      "conversation": {
+        "scene": "Comparing schools around the world on the sky map",
+        "sceneJa": "そらの ちずで せかいの がっこう くらべ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "In Australia, students wear hats at school. The sun is very strong.",
+            "ja": "オーストラリアでは がっこうで ぼうしを かぶるの。ひざしが とても つよいからね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In Japan, we eat lunch in our classroom.",
+            "ja": "にほんでは きょうしつで きゅうしょくを たべるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "And we clean our classroom, too!",
+            "ja": "それに じぶんたちで きょうしつを そうじするよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What time does school start in Australia?",
+            "ja": "オーストラリアでは がっこうは なんじに はじまるの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Usually around nine.",
+            "ja": "たいてい 9じごろよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "In Japan, we ～. / I usually ～. で じぶんの がっこうの ことを しょうかいしよう（がっこうの なまえは いわなくて OK）",
+          "starterEn": "In Australia, students wear hats at school. What do you do at your school?",
+          "targetExpressions": [
+            "In Japan, we ～.",
+            "I usually ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "せかいの がっこうと くらべたね",
+          "In Japan, we clean our classroom.",
+          "car と corn、park と sport！ ar と or を くらべたね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 251,
+      "world": 9,
+      "title": "Where Do You Want to Go?",
+      "titleJa": "どこへ いきたい？",
+      "school": {
+        "grade": "小6",
+        "topic": "行きたい国：いきたい くに",
+        "grammar": "Where do you want to go? ― I want to go to ～.",
+        "expressions": [
+          {
+            "en": "Where do you want to go?",
+            "ja": "どこへ いきたいですか。",
+            "core": true
+          },
+          {
+            "en": "I want to go to Italy.",
+            "ja": "イタリアへ いきたいです。"
+          },
+          {
+            "en": "I want to go to Egypt, too.",
+            "ja": "エジプトにも いきたいです。"
+          }
+        ],
+        "testPoints": [
+          "Where do you want to go? ― I want to go to ～. で いきたい くにを いえる",
+          "er（ア～）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pack your bag.",
+          "ja": "かばんに にもつを つめて。",
+          "action": "にもつを つめる まね",
+          "emoji": "🧳"
+        },
+        {
+          "en": "Get on the plane.",
+          "ja": "ひこうきに のって。",
+          "action": "かいだんを のぼる まね",
+          "emoji": "✈️"
+        },
+        {
+          "en": "Water the fern.",
+          "ja": "シダに みずを やって。",
+          "action": "じょうろで みずを やる まね",
+          "emoji": "🌿"
+        },
+        {
+          "en": "Spin the globe.",
+          "ja": "ちきゅうぎを まわして。",
+          "action": "ちきゅうぎを まわす まね",
+          "emoji": "🌐"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "er"
+        ],
+        "sounds": [
+          "/ɜːr/"
+        ],
+        "words": [
+          "her",
+          "fern",
+          "herd",
+          "perch"
+        ],
+        "tipJa": "e と r で「ア～」。くちを ちいさく して、したを まるめる。ar の「アー」より こもった おと。her、fern、herd、perch。"
+      },
+      "vocab": [
+        {
+          "en": "country",
+          "ja": "くに",
+          "emoji": "🗺️",
+          "core": true
+        },
+        {
+          "en": "Italy",
+          "ja": "イタリア",
+          "emoji": "🇮🇹"
+        },
+        {
+          "en": "Egypt",
+          "ja": "エジプト",
+          "emoji": "🇪🇬"
+        },
+        {
+          "en": "travel",
+          "ja": "りょこう",
+          "emoji": "🧳"
+        }
+      ],
+      "teacherScript": "「Where do you want to go?」 どこへ いきたい？「I want to go to Italy.」 er は くちを ちいさく「ア～」！",
+      "conversation": {
+        "scene": "Looking at a world map at the sky airport",
+        "sceneJa": "そらの くうこうで せかいちずを みる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at this big map! Where do you want to go, Riko?",
+            "ja": "おおきな ちず！リコは どこへ いきたい？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I want to go to Italy. Where do you want to go?",
+            "ja": "イタリアへ いきたい。ハルは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I want to go to Egypt!",
+            "ja": "ぼくは エジプト！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want to go to Australia. I want to see koalas.",
+            "ja": "わたしは オーストラリア。コアラが みたいの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I want to go everywhere!",
+            "ja": "ぼくは どこへでも いきたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Where do you want to go? ― I want to go to ～. で いきたい くにを つたえよう",
+          "starterEn": "I want to go to Australia. I want to see koalas. Where do you want to go?",
+          "targetExpressions": [
+            "I want to go to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where do you want to go? が いえたね",
+          "I want to go to Italy. で こたえる",
+          "her、fern、herd、perch！ er は「ア～」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 252,
+      "world": 9,
+      "title": "I Want to See the Pyramids",
+      "titleJa": "ピラミッドが みたい",
+      "school": {
+        "grade": "小6",
+        "topic": "行きたい国：その くにで したい こと",
+        "grammar": "Why? ― I want to see ～. / I want to eat ～.",
+        "expressions": [
+          {
+            "en": "I want to see the pyramids.",
+            "ja": "ピラミッドが みたいです。",
+            "core": true
+          },
+          {
+            "en": "Why do you want to go to Egypt?",
+            "ja": "どうして エジプトへ いきたいのですか。"
+          },
+          {
+            "en": "I want to eat pizza in Italy.",
+            "ja": "イタリアで ピザを たべたいです。"
+          }
+        ],
+        "testPoints": [
+          "I want to see ～. / I want to eat ～. で その くにで したい ことを いえる",
+          "ir（ア～）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fly like a bird.",
+          "ja": "とりみたいに とんで。",
+          "action": "りょうてを はばたかせる",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Stir the soup.",
+          "ja": "スープを まぜて。",
+          "action": "おなべを まぜる まね",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Put on your shirt.",
+          "ja": "シャツを きて。",
+          "action": "シャツを きる まね",
+          "emoji": "👕"
+        },
+        {
+          "en": "Come in first.",
+          "ja": "1ばんで ゴールして。",
+          "action": "ゴールで ばんざい",
+          "emoji": "🥇"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ir"
+        ],
+        "sounds": [
+          "/ɜːr/"
+        ],
+        "words": [
+          "bird",
+          "girl",
+          "shirt",
+          "first"
+        ],
+        "tipJa": "i と r でも「ア～」。er と おなじ おとだよ。bird、girl、shirt、first。shirt の sh に まどわされないで！"
+      },
+      "vocab": [
+        {
+          "en": "see",
+          "ja": "みる",
+          "emoji": "👀",
+          "core": true
+        },
+        {
+          "en": "pyramid",
+          "ja": "ピラミッド",
+          "emoji": "🔺"
+        },
+        {
+          "en": "why",
+          "ja": "どうして",
+          "emoji": "❓"
+        },
+        {
+          "en": "pizza",
+          "ja": "ピザ",
+          "emoji": "🍕"
+        }
+      ],
+      "teacherScript": "「I want to see the pyramids.」 その くにで したい ことを いおう。ir も er と おなじ「ア～」！",
+      "conversation": {
+        "scene": "Talking about dream trips at the airport cafe",
+        "sceneJa": "くうこうの カフェで ゆめの たびの はなし",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Why do you want to go to Egypt, Haru?",
+            "ja": "ハル、どうして エジプトへ いきたいの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I want to see the pyramids! They are very big.",
+            "ja": "ピラミッドが みたい！すごく おおきいんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I want to eat pizza in Italy. And I want to see old buildings.",
+            "ja": "わたしは イタリアで ピザを たべたい。ふるい たてものも みたいな。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want to see birds in Australia. They are colorful!",
+            "ja": "わたしは オーストラリアの とりが みたい。カラフルなの！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I want to see ～. / I want to eat ～. で その くにで したい ことを つたえよう",
+          "starterEn": "I want to see colorful birds in Australia. What do you want to see?",
+          "targetExpressions": [
+            "I want to see ～.",
+            "I want to eat ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I want to see the pyramids. が いえたね",
+          "Why? で わけを きける",
+          "bird、girl、shirt、first！ ir も「ア～」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 253,
+      "world": 9,
+      "title": "You Can Eat Pizza in Italy",
+      "titleJa": "イタリアでは ピザが たべられる",
+      "school": {
+        "grade": "小6",
+        "topic": "行きたい国：その くにで できる こと",
+        "grammar": "You can ～ in ～.",
+        "expressions": [
+          {
+            "en": "You can eat pizza in Italy.",
+            "ja": "イタリアでは ピザが たべられます。",
+            "core": true
+          },
+          {
+            "en": "You can see kangaroos in Australia.",
+            "ja": "オーストラリアでは カンガルーが みられます。"
+          },
+          {
+            "en": "You can visit old castles in Germany.",
+            "ja": "ドイツでは ふるい おしろを たずねられます。"
+          }
+        ],
+        "testPoints": [
+          "You can ～ in ～. で その くにで できる ことを しょうかいできる",
+          "ur（ア～）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Turn around.",
+          "ja": "くるっと まわって。",
+          "action": "その ばで 1かい まわる",
+          "emoji": "🔄"
+        },
+        {
+          "en": "Help the nurse.",
+          "ja": "かんごしさんを てつだって。",
+          "action": "にもつを わたす まね",
+          "emoji": "🧑‍⚕️"
+        },
+        {
+          "en": "Touch something purple.",
+          "ja": "むらさきの ものに さわって。",
+          "action": "むらさきの ものを さがして さわる",
+          "emoji": "🟣"
+        },
+        {
+          "en": "Hop like a kangaroo.",
+          "ja": "カンガルーみたいに はねて。",
+          "action": "りょうあしで ぴょんぴょん",
+          "emoji": "🦘"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ur"
+        ],
+        "sounds": [
+          "/ɜːr/"
+        ],
+        "words": [
+          "turn",
+          "nurse",
+          "purple",
+          "hurt"
+        ],
+        "tipJa": "u と r も「ア～」。er・ir と おなじ おと！turn、nurse、pur-ple、hurt。"
+      },
+      "vocab": [
+        {
+          "en": "visit",
+          "ja": "たずねる",
+          "emoji": "🧭",
+          "core": true
+        },
+        {
+          "en": "castle",
+          "ja": "おしろ",
+          "emoji": "🏰"
+        },
+        {
+          "en": "Australia",
+          "ja": "オーストラリア",
+          "emoji": "🇦🇺"
+        },
+        {
+          "en": "Germany",
+          "ja": "ドイツ",
+          "emoji": "🇩🇪"
+        }
+      ],
+      "teacherScript": "「You can eat pizza in Italy.」 その くにで できる ことを しょうかいしよう。ur も「ア～」。er・ir・ur は 3つとも おなじ おと！",
+      "conversation": {
+        "scene": "Making travel posters in the sky library",
+        "sceneJa": "そらの としょかんで りょこうポスターづくり",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "You can see kangaroos in Australia!",
+            "ja": "オーストラリアでは カンガルーが みられるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You can eat pizza in Italy. It's delicious.",
+            "ja": "イタリアでは ピザが たべられる。おいしいよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can visit old castles in Germany. They are so cool!",
+            "ja": "ドイツでは ふるい おしろに いけるよ。かっこいい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Turn around! Look at our posters!",
+            "ja": "くるっと まわって！ぼくたちの ポスターを みて！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "You can ～ in ～. で その くにで できる ことを しょうかいしよう",
+          "starterEn": "You can visit old castles in Germany. What can you do in your favorite country?",
+          "targetExpressions": [
+            "You can ～ in ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You can eat pizza in Italy. が いえたね",
+          "visit は「たずねる」",
+          "turn、nurse、purple、hurt！ ur も「ア～」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 254,
+      "world": 9,
+      "title": "It's a Beautiful Country",
+      "titleJa": "うつくしい くに",
+      "school": {
+        "grade": "小6",
+        "topic": "行きたい国：くにの ようす",
+        "grammar": "It's a beautiful country. / ～ is famous for ～.",
+        "expressions": [
+          {
+            "en": "It's a beautiful country.",
+            "ja": "うつくしい くにです。",
+            "core": true
+          },
+          {
+            "en": "Canada is famous for maple syrup.",
+            "ja": "カナダは メープルシロップで ゆうめいです。"
+          },
+          {
+            "en": "It's exciting!",
+            "ja": "わくわくしますね！"
+          }
+        ],
+        "testPoints": [
+          "beautiful・famous などで くにの ようすを いえる",
+          "er・ir・ur（ア～）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Brush the cat's fur.",
+          "ja": "ねこの けを ブラシで とかして。",
+          "action": "やさしく ブラシを かける まね",
+          "emoji": "🐈"
+        },
+        {
+          "en": "Pour the syrup.",
+          "ja": "シロップを かけて。",
+          "action": "ゆっくり かける まね",
+          "emoji": "🍯"
+        },
+        {
+          "en": "Climb the mountain.",
+          "ja": "やまを のぼって。",
+          "action": "その ばで のぼる まね",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "Take a picture.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえる まね",
+          "emoji": "📷"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "er",
+          "ir",
+          "ur"
+        ],
+        "sounds": [
+          "/ɜːr/",
+          "/ɜːr/",
+          "/ɜːr/"
+        ],
+        "words": [
+          "her",
+          "sir",
+          "fur",
+          "burst"
+        ],
+        "tipJa": "er・ir・ur は つづりが ちがっても おなじ「ア～」。her、sir、fur は おとが そっくり！burst も「ア～」。"
+      },
+      "vocab": [
+        {
+          "en": "beautiful",
+          "ja": "うつくしい",
+          "emoji": "🌸",
+          "core": true
+        },
+        {
+          "en": "famous",
+          "ja": "ゆうめいな",
+          "emoji": "🌟"
+        },
+        {
+          "en": "Canada",
+          "ja": "カナダ",
+          "emoji": "🇨🇦"
+        },
+        {
+          "en": "exciting",
+          "ja": "わくわくする",
+          "emoji": "🤩"
+        }
+      ],
+      "teacherScript": "「It's a beautiful country.」 くにの ようすを いおう。famous は ゆうめいな。er・ir・ur の おなじ おとを ききくらべ！",
+      "conversation": {
+        "scene": "A travel quiz on the Sky Continent",
+        "sceneJa": "そらの大陸の りょこう クイズ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Quiz time! This country is famous for maple syrup.",
+            "ja": "クイズよ！この くには メープルシロップで ゆうめい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Canada! It's a beautiful country.",
+            "ja": "カナダ！うつくしい くにだね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can see big mountains there. It's exciting!",
+            "ja": "おおきな やまも みられるよ。わくわく！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I want to go to Canada, too!",
+            "ja": "ぼくも カナダに いきたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "It's a beautiful country. / ～ is famous for ～. で いきたい くにの ようすを つたえよう",
+          "starterEn": "Canada is a beautiful country. It's famous for maple syrup. Tell me about your favorite country!",
+          "targetExpressions": [
+            "It's a beautiful country.",
+            "～ is famous for ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's a beautiful country. が いえたね",
+          "famous は「ゆうめいな」",
+          "her、sir、fur！ er・ir・ur は おなじ「ア～」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 255,
+      "world": 9,
+      "title": "Travel Agency Role-Play",
+      "titleJa": "りょこうがいしゃごっこ",
+      "school": {
+        "grade": "小6",
+        "topic": "行きたい国：りょこうがいしゃごっこ（まとめ）",
+        "grammar": "Where do you want to go? / Let's go to ～. You can ～.",
+        "expressions": [
+          {
+            "en": "Let's go to Italy. You can eat pizza.",
+            "ja": "イタリアへ いきましょう。ピザが たべられますよ。",
+            "core": true
+          },
+          {
+            "en": "How about Canada?",
+            "ja": "カナダは どうですか。"
+          },
+          {
+            "en": "That sounds fun!",
+            "ja": "たのしそう！"
+          }
+        ],
+        "testPoints": [
+          "Let's go to ～. You can ～. で くにを すすめられる",
+          "er ir ur を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Show the map.",
+          "ja": "ちずを みせて。",
+          "action": "ちずを ひろげる まね",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Buy a ticket.",
+          "ja": "チケットを かって。",
+          "action": "チケットを うけとる まね",
+          "emoji": "🎫"
+        },
+        {
+          "en": "Sit by the window.",
+          "ja": "まどがわに すわって。",
+          "action": "すわって そとを みる",
+          "emoji": "🪟"
+        },
+        {
+          "en": "Have a nice trip!",
+          "ja": "いってらっしゃい！",
+          "action": "てを ふって みおくる",
+          "emoji": "🛫"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "er",
+          "ir",
+          "ur"
+        ],
+        "sounds": [
+          "/ɜːr/",
+          "/ɜːr/",
+          "/ɜːr/"
+        ],
+        "words": [
+          "fern",
+          "girl",
+          "turn",
+          "birthday"
+        ],
+        "tipJa": "er・ir・ur の ふりかえり。fern、girl、turn、birth-day。ぜんぶ くちを ちいさく「ア～」！"
+      },
+      "vocab": [
+        {
+          "en": "trip",
+          "ja": "たび",
+          "emoji": "🧳",
+          "core": true
+        },
+        {
+          "en": "ticket",
+          "ja": "チケット",
+          "emoji": "🎫"
+        },
+        {
+          "en": "passport",
+          "ja": "パスポート",
+          "emoji": "🛂"
+        },
+        {
+          "en": "plane",
+          "ja": "ひこうき",
+          "emoji": "✈️"
+        }
+      ],
+      "teacherScript": "きょうは りょこうがいしゃごっこ！おきゃくさんに「Let's go to Italy. You can eat pizza.」と すすめよう。er・ir・ur の ふりかえりも！",
+      "conversation": {
+        "scene": "Travel agency role-play at the sky airport",
+        "sceneJa": "そらの くうこうで りょこうがいしゃごっこ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Hello! Where do you want to go?",
+            "ja": "いらっしゃいませ！どこへ いきたいですか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want to see big mountains.",
+            "ja": "おおきな やまが みたいです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How about Canada? You can see beautiful mountains.",
+            "ja": "カナダは どうですか？きれいな やまが みられますよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That sounds fun! One ticket, please.",
+            "ja": "たのしそう！チケット 1まい ください。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Have a nice trip!",
+            "ja": "いってらっしゃい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "りょこうがいしゃの てんいんに なって、Let's go to ～. You can ～. で くにを すすめよう",
+          "starterEn": "Hello! I want to go on a trip. Where can I go?",
+          "targetExpressions": [
+            "Let's go to ～.",
+            "You can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let's go to ～. You can ～. で くにを すすめたね",
+          "That sounds fun! で きもちを いえる",
+          "fern、girl、turn、birthday！ er・ir・ur の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 256,
+      "world": 9,
+      "title": "I Went to the Sea",
+      "titleJa": "うみへ いったよ",
+      "school": {
+        "grade": "小6",
+        "topic": "夏休みの思い出：いった ところ",
+        "grammar": "I went to ～.",
+        "expressions": [
+          {
+            "en": "I went to the sea.",
+            "ja": "うみへ いきました。",
+            "core": true
+          },
+          {
+            "en": "I went to my grandma's house.",
+            "ja": "おばあちゃんの いえに いきました。"
+          },
+          {
+            "en": "I went camping with my family.",
+            "ja": "かぞくと キャンプに いきました。"
+          }
+        ],
+        "testPoints": [
+          "I went to ～. で なつやすみに いった ところを いえる",
+          "went は go の「いった」（すぎた こと）",
+          "air（エア）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Brush your hair.",
+          "ja": "かみを とかして。",
+          "action": "くしで かみを とかす まね",
+          "emoji": "💇"
+        },
+        {
+          "en": "Sit on a chair.",
+          "ja": "いすに すわって。",
+          "action": "いすに すわる まね",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Swim in the sea.",
+          "ja": "うみで およいで。",
+          "action": "クロールの まね",
+          "emoji": "🌊"
+        },
+        {
+          "en": "Make a pair.",
+          "ja": "ペアを つくって。",
+          "action": "となりの ひとと てを つなぐ",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "air"
+        ],
+        "sounds": [
+          "/eər/"
+        ],
+        "words": [
+          "hair",
+          "chair",
+          "fair",
+          "pair"
+        ],
+        "tipJa": "a・i・r の 3もじで「エア」。hair、chair、fair、pair。chair の ch の あとも「エア」！"
+      },
+      "vocab": [
+        {
+          "en": "went",
+          "ja": "いった",
+          "emoji": "🚶",
+          "core": true
+        },
+        {
+          "en": "sea",
+          "ja": "うみ",
+          "emoji": "🌊"
+        },
+        {
+          "en": "summer vacation",
+          "ja": "なつやすみ",
+          "emoji": "🏖️"
+        },
+        {
+          "en": "grandma",
+          "ja": "おばあちゃん",
+          "emoji": "👵"
+        }
+      ],
+      "teacherScript": "なつやすみの おもいでを はなそう。「I went to the sea.」 went は「いった」。すぎた ことを いう ことばだよ。air は 3もじで「エア」！",
+      "conversation": {
+        "scene": "Back from summer vacation on the sky beach",
+        "sceneJa": "なつやすみ あけ、そらの はまべで おもいで トーク",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I went to the sea. I played on the beach!",
+            "ja": "うみへ いったよ。すなはまで あそんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I went to my grandma's house. She has a big garden.",
+            "ja": "おばあちゃんの いえに いったの。おおきな にわが あるんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I went camping with my family. We saw many stars.",
+            "ja": "かぞくと キャンプに いったよ。ほしが たくさん みえたの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I went to a summer fair!",
+            "ja": "ぼくは なつまつりに いったよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I went to ～. で なつやすみに いった ところを つたえよう（ほんとうの ばしょの なまえは いわなくて OK）",
+          "starterEn": "I went to a summer fair. Where did you go in summer?",
+          "targetExpressions": [
+            "I went to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I went to the sea. が いえたね",
+          "went は「いった」（すぎた こと）",
+          "hair、chair、fair、pair！ air は「エア」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 257,
+      "world": 9,
+      "title": "It Was Fun",
+      "titleJa": "たのしかった",
+      "school": {
+        "grade": "小6",
+        "topic": "夏休みの思い出：かんそう",
+        "grammar": "It was ～.",
+        "expressions": [
+          {
+            "en": "It was fun.",
+            "ja": "たのしかったです。",
+            "core": true
+          },
+          {
+            "en": "It was hot, but it was exciting.",
+            "ja": "あつかったけど、わくわくしました。"
+          },
+          {
+            "en": "The fireworks were beautiful.",
+            "ja": "はなびが きれいでした。"
+          }
+        ],
+        "testPoints": [
+          "It was ～. で なつやすみの かんそうを いえる",
+          "air（エア）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Go up the stairs.",
+          "ja": "かいだんを のぼって。",
+          "action": "その ばで かいだんを のぼる まね",
+          "emoji": "🪜"
+        },
+        {
+          "en": "Wave at the airport.",
+          "ja": "くうこうで てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "🛫"
+        },
+        {
+          "en": "Fly like a fairy.",
+          "ja": "ようせいみたいに とんで。",
+          "action": "つまさきで ふわふわ",
+          "emoji": "🧚"
+        },
+        {
+          "en": "Get a haircut.",
+          "ja": "かみを きって。",
+          "action": "はさみで きる まね",
+          "emoji": "✂️"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "air"
+        ],
+        "sounds": [
+          "/eər/"
+        ],
+        "words": [
+          "stairs",
+          "airport",
+          "fairy",
+          "haircut"
+        ],
+        "tipJa": "air は「エア」。stairs、air-port、fair-y、hair-cut。airport の port には or の「オー」も はいってるよ。"
+      },
+      "vocab": [
+        {
+          "en": "fun",
+          "ja": "たのしい",
+          "emoji": "😆",
+          "core": true
+        },
+        {
+          "en": "hot",
+          "ja": "あつい",
+          "emoji": "🥵"
+        },
+        {
+          "en": "fireworks",
+          "ja": "はなび",
+          "emoji": "🎆"
+        },
+        {
+          "en": "was",
+          "ja": "〜だった",
+          "emoji": "⏪"
+        }
+      ],
+      "teacherScript": "「It was fun.」 たのしかった。was は「だった」。おもいでの きもちを いおう。air の 2音節語も よもう！",
+      "conversation": {
+        "scene": "Showing summer photos at the sky airport",
+        "sceneJa": "そらの くうこうで なつやすみの しゃしんを みせあう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! I went to the summer festival. It was fun.",
+            "ja": "みて！なつまつりに いったの。たのしかった。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The fireworks were beautiful!",
+            "ja": "はなびが きれいだったね！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I went to the mountains. It was hot, but it was exciting.",
+            "ja": "わたしは やまへ いったよ。あつかったけど わくわくした。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful! You all had a great summer.",
+            "ja": "すてき！みんな いい なつやすみ だったのね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "It was fun. / It was ～. で なつやすみの かんそうを つたえよう",
+          "starterEn": "I went to the sea. It was fun! What was your summer like?",
+          "targetExpressions": [
+            "It was ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It was fun. が いえたね",
+          "was は「だった」",
+          "stairs、airport、fairy、haircut！ air は「エア」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 258,
+      "world": 9,
+      "title": "How Was Your Summer?",
+      "titleJa": "なつやすみは どうだった？",
+      "school": {
+        "grade": "小6",
+        "topic": "夏休みの思い出：たずねる・こたえる",
+        "grammar": "How was your summer? ― It was ～.",
+        "expressions": [
+          {
+            "en": "How was your summer?",
+            "ja": "なつやすみは どうでしたか。",
+            "core": true
+          },
+          {
+            "en": "It was great!",
+            "ja": "さいこうでした！"
+          },
+          {
+            "en": "Did you go anywhere?",
+            "ja": "どこかへ いきましたか。"
+          }
+        ],
+        "testPoints": [
+          "How was your summer? ― It was ～. で なつやすみの ことを ききあえる",
+          "ear（イア）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Touch your ear.",
+          "ja": "みみを さわって。",
+          "action": "みみを さわる",
+          "emoji": "👂"
+        },
+        {
+          "en": "Come near me.",
+          "ja": "ちかくに きて。",
+          "action": "いっぽ まえに でる",
+          "emoji": "🫴"
+        },
+        {
+          "en": "Listen. Can you hear it?",
+          "ja": "きいて。きこえる？",
+          "action": "みみに てを あてる",
+          "emoji": "🎧"
+        },
+        {
+          "en": "Cheer for your friend.",
+          "ja": "ともだちを おうえんして。",
+          "action": "「がんばれー！」と てを ふる",
+          "emoji": "📣"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ear"
+        ],
+        "sounds": [
+          "/ɪər/"
+        ],
+        "words": [
+          "ear",
+          "hear",
+          "near",
+          "year"
+        ],
+        "tipJa": "e・a・r で「イア」。ear、hear、near、year。ear は みみ！"
+      },
+      "vocab": [
+        {
+          "en": "summer",
+          "ja": "なつ",
+          "emoji": "🌻",
+          "core": true
+        },
+        {
+          "en": "great",
+          "ja": "さいこうの",
+          "emoji": "👍"
+        },
+        {
+          "en": "anywhere",
+          "ja": "どこかへ",
+          "emoji": "📍"
+        },
+        {
+          "en": "ear",
+          "ja": "みみ",
+          "emoji": "👂"
+        }
+      ],
+      "teacherScript": "「How was your summer?」 なつやすみは どうだった？ こたえは「It was great!」。ear は「イア」！",
+      "conversation": {
+        "scene": "The first day of the second term on the Sky Continent",
+        "sceneJa": "そらの大陸で 2がっきの はじまり",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome back! How was your summer, Riko?",
+            "ja": "おかえり！リコ、なつやすみは どうだった？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It was great! I went to the mountains.",
+            "ja": "さいこう！やまに いったよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Did you go anywhere, Kiko?",
+            "ja": "キコは どこかへ いった？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes! I went to the zoo near my house. It was fun.",
+            "ja": "うん！いえの ちかくの どうぶつえん。たのしかった。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I want to hear more summer stories!",
+            "ja": "なつの はなし、もっと ききたい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "How was your summer? ― It was ～. で なつやすみの ことを ききあおう",
+          "starterEn": "Welcome back! How was your summer?",
+          "targetExpressions": [
+            "How was your summer?",
+            "It was ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How was your summer? が いえたね",
+          "It was great! で こたえる",
+          "ear、hear、near、year！ ear は「イア」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 259,
+      "world": 9,
+      "title": "I Went There with My Family",
+      "titleJa": "かぞくと いったよ",
+      "school": {
+        "grade": "小6",
+        "topic": "夏休みの思い出：だれと・なにで いったか",
+        "grammar": "I went to ～ with ～. / I went there by ～.",
+        "expressions": [
+          {
+            "en": "I went to Okinawa with my family.",
+            "ja": "かぞくと おきなわへ いきました。",
+            "core": true
+          },
+          {
+            "en": "I went there by plane.",
+            "ja": "ひこうきで いきました。"
+          },
+          {
+            "en": "The sea was clear and blue.",
+            "ja": "うみは すきとおって あおかったです。"
+          }
+        ],
+        "testPoints": [
+          "I went to ～ with ～. で だれと いったかを いえる",
+          "ear（イア）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the clear sky.",
+          "ja": "はれた そらを みて。",
+          "action": "てを かざして そらを みる",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Touch your beard.",
+          "ja": "ひげを さわって。",
+          "action": "あごを なでる まね",
+          "emoji": "🧔"
+        },
+        {
+          "en": "Change gear.",
+          "ja": "ギアを かえて。",
+          "action": "レバーを うごかす まね",
+          "emoji": "⚙️"
+        },
+        {
+          "en": "Hold hands with your family.",
+          "ja": "かぞくと てを つないで。",
+          "action": "となりの ひとと てを つなぐ まね",
+          "emoji": "👨‍👩‍👧"
+        }
+      ],
+      "phonics": {
+        "rule": "r-controlled",
+        "focus": [
+          "ear"
+        ],
+        "sounds": [
+          "/ɪər/"
+        ],
+        "words": [
+          "clear",
+          "dear",
+          "beard",
+          "gear"
+        ],
+        "tipJa": "ear は「イア」。clear、dear、beard、gear。（bear や earth は べつの おとに なるので、まずは この 4つ！）"
+      },
+      "vocab": [
+        {
+          "en": "family",
+          "ja": "かぞく",
+          "emoji": "👨‍👩‍👧",
+          "core": true
+        },
+        {
+          "en": "there",
+          "ja": "そこへ",
+          "emoji": "👉"
+        },
+        {
+          "en": "plane",
+          "ja": "ひこうき",
+          "emoji": "✈️"
+        },
+        {
+          "en": "clear",
+          "ja": "すきとおった",
+          "emoji": "💎"
+        }
+      ],
+      "teacherScript": "「I went to Okinawa with my family.」 with は「〜と いっしょに」。by plane は「ひこうきで」。ear の「イア」を もういちど！",
+      "conversation": {
+        "scene": "Summer stories on the sky train",
+        "sceneJa": "そらの でんしゃで なつやすみの はなし",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I went to Okinawa with my family. I went there by plane.",
+            "ja": "かぞくと おきなわへ いったよ。ひこうきで！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Wow! How was the sea?",
+            "ja": "わあ！うみは どうだった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The sea was clear and blue. It was beautiful.",
+            "ja": "すきとおって あおかった。きれいだったよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I went to the river with my grandpa. It was cool.",
+            "ja": "わたしは おじいちゃんと かわへ いったの。すずしかった。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I went to ～ with ～. で だれと どこへ いったかを つたえよう（ほんとうの ばしょで なくても OK）",
+          "starterEn": "I went camping with my family. Where did you go in summer? Who did you go with?",
+          "targetExpressions": [
+            "I went to ～ with ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I went to Okinawa with my family. が いえたね",
+          "with は「〜と いっしょに」、by plane は「ひこうきで」",
+          "clear、dear、beard、gear！ ear は「イア」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 260,
+      "world": 9,
+      "title": "Summer Talk",
+      "titleJa": "なつやすみ トーク",
+      "school": {
+        "grade": "小6",
+        "topic": "夏休みの思い出：なつやすみ トーク（まとめ）",
+        "grammar": "How was your summer vacation? ― I went to ～. It was ～.",
+        "expressions": [
+          {
+            "en": "I went to the sea. It was fun.",
+            "ja": "うみへ いきました。たのしかったです。",
+            "core": true
+          },
+          {
+            "en": "How was your summer vacation?",
+            "ja": "なつやすみは どうでしたか。"
+          },
+          {
+            "en": "That's nice!",
+            "ja": "いいね！"
+          }
+        ],
+        "testPoints": [
+          "I went to ～. It was ～. を つなげて なつやすみの ことを はなせる",
+          "air ear を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sit on the chair near the window.",
+          "ja": "まどの ちかくの いすに すわって。",
+          "action": "いすに すわる まね",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Fix your hair.",
+          "ja": "かみを なおして。",
+          "action": "かみを ととのえる",
+          "emoji": "💁"
+        },
+        {
+          "en": "Cover your ears.",
+          "ja": "みみを ふさいで。",
+          "action": "りょうてで みみを ふさぐ",
+          "emoji": "🙉"
+        },
+        {
+          "en": "Show your summer photo.",
+          "ja": "なつの しゃしんを みせて。",
+          "action": "しゃしんを みせる まね",
+          "emoji": "🖼️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "air",
+          "ear"
+        ],
+        "sounds": [
+          "/eər/",
+          "/ɪər/"
+        ],
+        "words": [
+          "hair",
+          "ear",
+          "chair",
+          "year"
+        ],
+        "tipJa": "air は「エア」、ear は「イア」。hair と ear、chair と year を くらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "vacation",
+          "ja": "やすみ",
+          "emoji": "🏝️",
+          "core": true
+        },
+        {
+          "en": "photo",
+          "ja": "しゃしん",
+          "emoji": "📷"
+        },
+        {
+          "en": "memory",
+          "ja": "おもいで",
+          "emoji": "💭"
+        },
+        {
+          "en": "nice",
+          "ja": "いい・すてき",
+          "emoji": "😊"
+        }
+      ],
+      "teacherScript": "なつやすみ トークの まとめ！ I went to ～. It was ～. を つなげよう。air と ear の ききわけも！",
+      "conversation": {
+        "scene": "A summer talk show on the sky stage",
+        "sceneJa": "そらの ステージで なつやすみ トークショー",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Welcome to the summer talk show! How was your summer vacation, Haru?",
+            "ja": "なつやすみ トークショーへ ようこそ！ハル、なつやすみは どうだった？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I went to the sea. It was fun.",
+            "ja": "うみへ いったよ。たのしかった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's nice! I went to a summer fair. It was exciting.",
+            "ja": "いいね！わたしは なつまつり。わくわくした。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I went to the mountains with my family. The air was clear.",
+            "ja": "かぞくと やまへ いったの。くうきが すんでいたよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I went to ～. It was ～. で なつやすみの おもいでを はなそう（ほんとうの ばしょの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the summer talk show! How was your summer vacation?",
+          "targetExpressions": [
+            "I went to ～.",
+            "It was ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I went to ～. It was ～. を つなげたね",
+          "That's nice! で あいづち",
+          "hair と ear、chair と year！ air と ear を くらべたね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 261,
+      "world": 9,
+      "title": "I Saw a Rainbow",
+      "titleJa": "にじを みたよ",
+      "school": {
+        "grade": "小6",
+        "topic": "過去のできごと：みた もの",
+        "grammar": "I saw ～. / What did you see?",
+        "expressions": [
+          {
+            "en": "I saw a rainbow.",
+            "ja": "にじを みました。",
+            "core": true
+          },
+          {
+            "en": "I saw a big fish at the aquarium.",
+            "ja": "すいぞくかんで おおきな さかなを みました。"
+          },
+          {
+            "en": "What did you see?",
+            "ja": "なにを みましたか。"
+          }
+        ],
+        "testPoints": [
+          "I saw ～. で みた ものを いえる（saw は see の「みた」）",
+          "ar or を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a rainbow.",
+          "ja": "にじを かいて。",
+          "action": "おおきく にじを かく",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Blow a horn.",
+          "ja": "つのぶえを ふいて。",
+          "action": "ラッパを ふく まね",
+          "emoji": "📯"
+        },
+        {
+          "en": "Play the harp.",
+          "ja": "ハープを ひいて。",
+          "action": "ゆびで げんを はじく まね",
+          "emoji": "🎵"
+        },
+        {
+          "en": "Feed the fish.",
+          "ja": "さかなに えさを あげて。",
+          "action": "えさを まく まね",
+          "emoji": "🐟"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ar",
+          "or"
+        ],
+        "sounds": [
+          "/ɑːr/",
+          "/ɔːr/"
+        ],
+        "words": [
+          "farm",
+          "horn",
+          "harp",
+          "cork"
+        ],
+        "tipJa": "ar と or の ふりかえり。farm、harp は「アー」、horn、cork は「オー」。くちの かたちを かえてね。"
+      },
+      "vocab": [
+        {
+          "en": "saw",
+          "ja": "みた",
+          "emoji": "👀",
+          "core": true
+        },
+        {
+          "en": "rainbow",
+          "ja": "にじ",
+          "emoji": "🌈"
+        },
+        {
+          "en": "aquarium",
+          "ja": "すいぞくかん",
+          "emoji": "🐠"
+        },
+        {
+          "en": "diary",
+          "ja": "にっき",
+          "emoji": "📔"
+        }
+      ],
+      "teacherScript": "えにっきの はっぴょうに むけて じゅんび！「I saw a rainbow.」 saw は see の「みた」。ar と or の ふりかえりも するよ。",
+      "conversation": {
+        "scene": "Writing picture diaries in the sky classroom",
+        "sceneJa": "そらの きょうしつで えにっきを かく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at my picture diary. I saw a rainbow!",
+            "ja": "わたしの えにっき みて。にじを みたの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Cool! I saw a big fish at the aquarium.",
+            "ja": "いいね！ぼくは すいぞくかんで おおきな さかなを みたよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What did you see, Birimo?",
+            "ja": "ビリモは なにを みた？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I saw a shooting star over the farm!",
+            "ja": "ぼくは のうじょうの うえで ながれぼしを みた！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I saw ～. で みた ものを つたえよう",
+          "starterEn": "I saw a big fish at the aquarium. What did you see?",
+          "targetExpressions": [
+            "I saw ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I saw a rainbow. が いえたね",
+          "saw は「みた」",
+          "farm、harp と horn、cork！ ar と or の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 262,
+      "world": 9,
+      "title": "I Ate Shaved Ice",
+      "titleJa": "かきごおりを たべたよ",
+      "school": {
+        "grade": "小6",
+        "topic": "過去のできごと：たべた もの",
+        "grammar": "I ate ～. / What did you eat?",
+        "expressions": [
+          {
+            "en": "I ate shaved ice.",
+            "ja": "かきごおりを たべました。",
+            "core": true
+          },
+          {
+            "en": "It was cold and sweet.",
+            "ja": "つめたくて あまかったです。"
+          },
+          {
+            "en": "What did you eat?",
+            "ja": "なにを たべましたか。"
+          }
+        ],
+        "testPoints": [
+          "I ate ～. で たべた ものを いえる（ate は eat の「たべた」）",
+          "er ir ur を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Eat shaved ice.",
+          "ja": "かきごおりを たべて。",
+          "action": "スプーンで たべる まね",
+          "emoji": "🍧"
+        },
+        {
+          "en": "Curl up like a cat.",
+          "ja": "ねこみたいに まるく なって。",
+          "action": "からだを まるめる",
+          "emoji": "🐈"
+        },
+        {
+          "en": "Hold up three fingers.",
+          "ja": "ゆびを 3ぼん たてて。",
+          "action": "ゆびを 3ぼん みせる",
+          "emoji": "🤟"
+        },
+        {
+          "en": "Ring the church bell.",
+          "ja": "きょうかいの かねを ならして。",
+          "action": "ひもを ひいて かねを ならす まね",
+          "emoji": "🔔"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "er",
+          "ir",
+          "ur"
+        ],
+        "sounds": [
+          "/ɜːr/",
+          "/ɜːr/",
+          "/ɜːr/"
+        ],
+        "words": [
+          "herd",
+          "third",
+          "church",
+          "curl"
+        ],
+        "tipJa": "er・ir・ur の ふりかえり。herd、third、church、curl。3つの つづり、おとは ぜんぶ「ア～」！"
+      },
+      "vocab": [
+        {
+          "en": "ate",
+          "ja": "たべた",
+          "emoji": "🍽️",
+          "core": true
+        },
+        {
+          "en": "shaved ice",
+          "ja": "かきごおり",
+          "emoji": "🍧"
+        },
+        {
+          "en": "sweet",
+          "ja": "あまい",
+          "emoji": "🍬"
+        },
+        {
+          "en": "cold",
+          "ja": "つめたい",
+          "emoji": "🧊"
+        }
+      ],
+      "teacherScript": "「I ate shaved ice.」 ate は eat の「たべた」。たべた ものと あじを いおう。er・ir・ur の ふりかえり！",
+      "conversation": {
+        "scene": "Sharing summer food memories at a sky festival stall",
+        "sceneJa": "そらの やたいで なつの たべもの おもいで",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "What did you eat in summer, Haru?",
+            "ja": "ハル、なつに なにを たべた？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I ate shaved ice. It was cold and sweet.",
+            "ja": "かきごおり。つめたくて あまかった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I ate watermelon at the beach. It was juicy!",
+            "ja": "わたしは はまべで すいか。みずみずしかった！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I ate three hot dogs!",
+            "ja": "ぼくは ホットドッグを 3ぼん たべた！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I ate ～. It was ～. で たべた ものと あじを つたえよう",
+          "starterEn": "I ate corn at a summer festival. It was hot and sweet. What did you eat?",
+          "targetExpressions": [
+            "I ate ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I ate shaved ice. が いえたね",
+          "ate は「たべた」",
+          "herd、third、church、curl！ er・ir・ur の ふりかえり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 263,
+      "world": 9,
+      "title": "I Enjoyed Swimming",
+      "titleJa": "およぐのを たのしんだよ",
+      "school": {
+        "grade": "小6",
+        "topic": "過去のできごと：たのしんだ こと",
+        "grammar": "I enjoyed ～.",
+        "expressions": [
+          {
+            "en": "I enjoyed swimming.",
+            "ja": "およぐのを たのしみました。",
+            "core": true
+          },
+          {
+            "en": "I enjoyed the fireworks.",
+            "ja": "はなびを たのしみました。"
+          },
+          {
+            "en": "We enjoyed a barbecue.",
+            "ja": "わたしたちは バーベキューを たのしみました。"
+          }
+        ],
+        "testPoints": [
+          "I enjoyed ～. で たのしんだ ことを いえる",
+          "air ear を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Swim fast.",
+          "ja": "はやく およいで。",
+          "action": "クロールを はやく",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Grill the corn.",
+          "ja": "とうもろこしを やいて。",
+          "action": "トングで ひっくりかえす まね",
+          "emoji": "🌽"
+        },
+        {
+          "en": "Watch the fireworks.",
+          "ja": "はなびを みて。",
+          "action": "そらを みあげて「わあ！」",
+          "emoji": "🎆"
+        },
+        {
+          "en": "Don't be afraid!",
+          "ja": "こわがらないで！",
+          "action": "むねを はる",
+          "emoji": "💪"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "air",
+          "ear"
+        ],
+        "sounds": [
+          "/eər/",
+          "/ɪər/"
+        ],
+        "words": [
+          "fair",
+          "near",
+          "stair",
+          "fear"
+        ],
+        "tipJa": "air の「エア」と ear の「イア」。fair と near、stair と fear を くらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "enjoyed",
+          "ja": "たのしんだ",
+          "emoji": "😄",
+          "core": true
+        },
+        {
+          "en": "barbecue",
+          "ja": "バーベキュー",
+          "emoji": "🍖"
+        },
+        {
+          "en": "festival",
+          "ja": "おまつり",
+          "emoji": "🏮"
+        },
+        {
+          "en": "swimming",
+          "ja": "およぐこと",
+          "emoji": "🏊"
+        }
+      ],
+      "teacherScript": "「I enjoyed swimming.」 enjoyed は「たのしんだ」。enjoy に ed が つくと すぎた ことに なるよ。air と ear の ふりかえりも！",
+      "conversation": {
+        "scene": "Picture diary practice in pairs",
+        "sceneJa": "ペアで えにっきの れんしゅう",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I enjoyed swimming in the sea. It was so fun.",
+            "ja": "うみで およぐのを たのしんだよ。すごく たのしかった。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We enjoyed a barbecue in the mountains.",
+            "ja": "わたしたちは やまで バーベキューを たのしんだの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I enjoyed the fireworks at the festival. They were big and loud!",
+            "ja": "おまつりで はなびを たのしんだ。おおきくて おとが すごかった！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great! You can use these in your picture diary.",
+            "ja": "いいわね！えにっきに つかえるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I enjoyed ～. で たのしんだ ことを つたえよう",
+          "starterEn": "I enjoyed the fireworks at the festival. What did you enjoy?",
+          "targetExpressions": [
+            "I enjoyed ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I enjoyed swimming. が いえたね",
+          "enjoyed は「たのしんだ」",
+          "fair と near、stair と fear！ air と ear を くらべたね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 264,
+      "world": 9,
+      "title": "What Did You Do on Sunday?",
+      "titleJa": "にちようびは なにを した？",
+      "school": {
+        "grade": "小6",
+        "topic": "過去のできごと：しゅうまつの できごと",
+        "grammar": "What did you do on Sunday? ― I played ～. / I watched ～.",
+        "expressions": [
+          {
+            "en": "What did you do on Sunday?",
+            "ja": "にちようびは なにを しましたか。",
+            "core": true
+          },
+          {
+            "en": "I played soccer in the park.",
+            "ja": "こうえんで サッカーを しました。"
+          },
+          {
+            "en": "I watched a movie at home.",
+            "ja": "いえで えいがを みました。"
+          }
+        ],
+        "testPoints": [
+          "What did you do on Sunday? で しゅうまつの ことを たずねて、played・watched で こたえられる",
+          "ar ur を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Kick the ball far.",
+          "ja": "ボールを とおくへ けって。",
+          "action": "おおきく ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Pet the dog's fur.",
+          "ja": "いぬの けを なでて。",
+          "action": "やさしく なでる",
+          "emoji": "🐕"
+        },
+        {
+          "en": "Watch TV.",
+          "ja": "テレビを みて。",
+          "action": "すわって まえを みる",
+          "emoji": "📺"
+        },
+        {
+          "en": "Feed the cows in the barn.",
+          "ja": "なやで うしに えさを あげて。",
+          "action": "えさを あげる まね",
+          "emoji": "🐄"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ar",
+          "ur"
+        ],
+        "sounds": [
+          "/ɑːr/",
+          "/ɜːr/"
+        ],
+        "words": [
+          "far",
+          "fur",
+          "barn",
+          "burn"
+        ],
+        "tipJa": "far と fur、barn と burn。ar は くちを おおきく「アー」、ur は くちを ちいさく「ア～」。ききくらべよう！"
+      },
+      "vocab": [
+        {
+          "en": "Sunday",
+          "ja": "にちようび",
+          "emoji": "📅",
+          "core": true
+        },
+        {
+          "en": "played",
+          "ja": "した・あそんだ",
+          "emoji": "⚽"
+        },
+        {
+          "en": "watched",
+          "ja": "みた",
+          "emoji": "📺"
+        },
+        {
+          "en": "movie",
+          "ja": "えいが",
+          "emoji": "🎬"
+        }
+      ],
+      "teacherScript": "「What did you do on Sunday?」 にちようびは なにを した？ played・watched の ed は すぎた こと！ far と fur を ききくらべよう。",
+      "conversation": {
+        "scene": "Monday morning chat on the Sky Continent",
+        "sceneJa": "そらの大陸の げつようびの あさの おしゃべり",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "What did you do on Sunday, Riko?",
+            "ja": "リコ、にちようびは なにを した？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I watched a movie at home. It was funny.",
+            "ja": "いえで えいがを みたよ。おもしろかった。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I played soccer in the park. I kicked the ball very far!",
+            "ja": "ぼくは こうえんで サッカー。ボールを すごく とおくまで けったよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I played with the cows on the farm!",
+            "ja": "ぼくは のうじょうで うしと あそんだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What did you do on Sunday? ― I played ～. / I watched ～. で しゅうまつの ことを ききあおう",
+          "starterEn": "I played with the cows on the farm on Sunday. What did you do on Sunday?",
+          "targetExpressions": [
+            "What did you do on Sunday?",
+            "I played ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What did you do on Sunday? が いえたね",
+          "played・watched は すぎた こと",
+          "far と fur、barn と burn！ ar と ur を くらべたね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 265,
+      "world": 9,
+      "title": "My Picture Diary",
+      "titleJa": "えにっきの はっぴょう",
+      "school": {
+        "grade": "小6",
+        "topic": "過去のできごと：えにっきの はっぴょう（まとめ）",
+        "grammar": "I went to ～. I saw ～. I ate ～. I enjoyed ～.",
+        "expressions": [
+          {
+            "en": "I went to the zoo. I saw a baby panda.",
+            "ja": "どうぶつえんへ いきました。パンダの あかちゃんを みました。",
+            "core": true
+          },
+          {
+            "en": "I ate ice cream. It was delicious.",
+            "ja": "アイスクリームを たべました。おいしかったです。"
+          },
+          {
+            "en": "I enjoyed the day.",
+            "ja": "たのしい 1日でした。"
+          }
+        ],
+        "testPoints": [
+          "went・saw・ate・enjoyed を つなげて えにっきを はっぴょうできる",
+          "or ar を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your diary.",
+          "ja": "にっきを ひらいて。",
+          "action": "ノートを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Hold up your picture.",
+          "ja": "えを みせて。",
+          "action": "えを たかく あげる",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Read it aloud.",
+          "ja": "こえに だして よんで。",
+          "action": "おおきな こえで よむ まね",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Bow to your friends.",
+          "ja": "ともだちに おじぎして。",
+          "action": "ぺこりと おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "or",
+          "ar"
+        ],
+        "sounds": [
+          "/ɔːr/",
+          "/ɑːr/"
+        ],
+        "words": [
+          "cord",
+          "card",
+          "form",
+          "farm"
+        ],
+        "tipJa": "cord と card、form と farm。or は「オー」、ar は「アー」。くちの かたちで ききわけよう！"
+      },
+      "vocab": [
+        {
+          "en": "zoo",
+          "ja": "どうぶつえん",
+          "emoji": "🦁",
+          "core": true
+        },
+        {
+          "en": "baby",
+          "ja": "あかちゃん",
+          "emoji": "👶"
+        },
+        {
+          "en": "picture",
+          "ja": "え",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "day",
+          "ja": "1日",
+          "emoji": "☀️"
+        }
+      ],
+      "teacherScript": "えにっきの はっぴょう！ went・saw・ate・enjoyed を つかって、1日の おもいでを はなそう。or と ar の ききわけも！",
+      "conversation": {
+        "scene": "Picture diary presentations in the sky classroom",
+        "sceneJa": "そらの きょうしつで えにっきの はっぴょう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "This is my picture diary. I went to the zoo. I saw a baby panda.",
+            "ja": "わたしの えにっき。どうぶつえんへ いって、パンダの あかちゃんを みたの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I went to the park. I ate ice cream. It was delicious.",
+            "ja": "ぼくは こうえん。アイスを たべた。おいしかった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I enjoyed the day with my grandma.",
+            "ja": "おばあちゃんと たのしい 1日を すごしたよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What lovely diaries!",
+            "ja": "すてきな えにっきね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I went to ～. I saw ～. I ate ～. を つなげて えにっきを はっぴょうしよう",
+          "starterEn": "This is my picture diary. I went to the park. I ate ice cream. It was delicious. Tell me about your day!",
+          "targetExpressions": [
+            "I went to ～.",
+            "I saw ～.",
+            "I ate ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "went・saw・ate を つなげて はっぴょうしたね",
+          "I enjoyed the day. で しめくくれる",
+          "cord と card、form と farm！ or と ar を くらべたね"
+        ]
+      }
+    },
+    {
+      "lessonNo": 266,
+      "world": 9,
+      "title": "My Memory Speech",
+      "titleJa": "おもいで スピーチを つくる",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：おもいで スピーチづくり",
+        "grammar": "Let me tell you about ～. / First, ～. Then, ～.",
+        "expressions": [
+          {
+            "en": "Let me tell you about my summer.",
+            "ja": "わたしの なつやすみに ついて はなします。",
+            "core": true
+          },
+          {
+            "en": "First, I went to the sea.",
+            "ja": "まず、うみへ いきました。"
+          },
+          {
+            "en": "It was a wonderful summer.",
+            "ja": "すばらしい なつでした。"
+          }
+        ],
+        "testPoints": [
+          "Let me tell you about ～. で スピーチを はじめて、First / Then で つなげられる",
+          "ar or ur ir を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write your speech.",
+          "ja": "スピーチを かいて。",
+          "action": "えんぴつで かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Stretch like a starfish.",
+          "ja": "ヒトデみたいに てあしを ひろげて。",
+          "action": "てと あしを おおきく ひろげる",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Take a shortcut.",
+          "ja": "ちかみちを して。",
+          "action": "よこに すばやく うごく",
+          "emoji": "↪️"
+        },
+        {
+          "en": "Drink some water.",
+          "ja": "みずを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "🥤"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ar",
+          "or",
+          "ur",
+          "ir"
+        ],
+        "sounds": [
+          "/ɑːr/",
+          "/ɔːr/",
+          "/ɜːr/",
+          "/ɜːr/"
+        ],
+        "words": [
+          "starfish",
+          "shortcut",
+          "sunburn",
+          "thirsty"
+        ],
+        "tipJa": "2つに わけて よもう。star-fish、short-cut、sun-burn、thirs-ty。r の つく母音を さがしてね！"
+      },
+      "vocab": [
+        {
+          "en": "speech",
+          "ja": "スピーチ",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "wonderful",
+          "ja": "すばらしい",
+          "emoji": "✨"
+        },
+        {
+          "en": "first",
+          "ja": "まず・さいしょに",
+          "emoji": "1️⃣"
+        },
+        {
+          "en": "then",
+          "ja": "それから",
+          "emoji": "➡️"
+        }
+      ],
+      "teacherScript": "おもいで スピーチを つくろう！「Let me tell you about my summer.」で はじめて、First・Then で つなげよう。r の つく母音の 2音節語も よむよ。",
+      "conversation": {
+        "scene": "Writing memory speeches in the sky library",
+        "sceneJa": "そらの としょかんで おもいで スピーチづくり",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make memory speeches. Start with: Let me tell you about my summer.",
+            "ja": "おもいで スピーチを つくりましょう。「Let me tell you about my summer.」で はじめてね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let me tell you about my summer. First, I went to the sea.",
+            "ja": "ぼくの なつやすみに ついて はなします。まず、うみへ いきました。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Nice! What did you do then?",
+            "ja": "いいね！それから なにを したの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Then, I saw a starfish. It was a wonderful summer!",
+            "ja": "それから ヒトデを みました。すばらしい なつでした！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Let me tell you about my summer. First, ～. で おもいで スピーチの はじめを つくろう",
+          "starterEn": "Let me tell you about my summer. First, I went to the mountains. What did you do first?",
+          "targetExpressions": [
+            "Let me tell you about my summer.",
+            "First, I went to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let me tell you about my summer. で はじめられたね",
+          "First・Then で じゅんばんに はなせる",
+          "starfish、shortcut、sunburn、thirsty！ 2音節語"
+        ]
+      }
+    },
+    {
+      "lessonNo": 267,
+      "world": 9,
+      "title": "Sky Memory Quiz Show",
+      "titleJa": "おもいで クイズショー",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：ともだちの おもいで クイズ",
+        "grammar": "Who went to ～? ― ～ did. / ～ went to ～.",
+        "expressions": [
+          {
+            "en": "Haru went to Okinawa.",
+            "ja": "ハルは おきなわへ いきました。",
+            "core": true
+          },
+          {
+            "en": "Who went to the zoo?",
+            "ja": "どうぶつえんへ いったのは だれですか。"
+          },
+          {
+            "en": "Riko did!",
+            "ja": "リコです！"
+          }
+        ],
+        "testPoints": [
+          "～ went to ～. で ともだちの おもいでを つたえられる",
+          "er air ear を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Press the buzzer.",
+          "ja": "ボタンを おして。",
+          "action": "ボタンを おす まね",
+          "emoji": "🔴"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "てを まっすぐ あげる",
+          "emoji": "✋"
+        },
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "うでを くんで かんがえる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Give a big cheer.",
+          "ja": "おおきな こえで よろこんで。",
+          "action": "「やったー！」と ばんざい",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "er",
+          "air",
+          "ear"
+        ],
+        "sounds": [
+          "/ɜːr/",
+          "/eər/",
+          "/ɪər/"
+        ],
+        "words": [
+          "summer",
+          "hairbrush",
+          "nearby",
+          "sister"
+        ],
+        "tipJa": "er・air・ear の ふりかえり。sum-mer、sis-ter の er、hair-brush の air、near-by の ear。"
+      },
+      "vocab": [
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "who",
+          "ja": "だれ",
+          "emoji": "🧑"
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "💡"
+        },
+        {
+          "en": "point",
+          "ja": "てんすう",
+          "emoji": "💯"
+        }
+      ],
+      "teacherScript": "クイズショー！「Haru went to Okinawa.」 ともだちの おもいでを クイズに しよう。「Who went to the zoo?」で きくよ。",
+      "conversation": {
+        "scene": "A memory quiz show on the Sky Continent",
+        "sceneJa": "そらの大陸の おもいで クイズショー",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Quiz time! Who went to the zoo?",
+            "ja": "クイズの じかん！どうぶつえんへ いったのは だれ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Riko did! She saw a baby panda.",
+            "ja": "リコ！パンダの あかちゃんを みたんだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Correct! Next question. Who went to Okinawa?",
+            "ja": "せいかい！つぎの もんだい。おきなわへ いったのは だれ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Haru went to Okinawa. He went there by plane.",
+            "ja": "ハルが おきなわへ いったよ。ひこうきで いったの。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "～ went to ～. で ともだちの おもいでを クイズに しよう",
+          "starterEn": "Quiz time! Haru went to Okinawa. Where did you go?",
+          "targetExpressions": [
+            "～ went to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Haru went to Okinawa. で ともだちの おもいでを いえたね",
+          "Who went to ～? で きける",
+          "summer、hairbrush、nearby、sister！ er・air・ear"
+        ]
+      }
+    },
+    {
+      "lessonNo": 268,
+      "world": 9,
+      "title": "Speech Practice",
+      "titleJa": "スピーチの れんしゅう",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：はっぴょうの れんしゅう",
+        "grammar": "Speak loudly and slowly. / Good job!",
+        "expressions": [
+          {
+            "en": "Speak loudly and slowly.",
+            "ja": "おおきな こえで ゆっくり はなしましょう。",
+            "core": true
+          },
+          {
+            "en": "Look at your friends.",
+            "ja": "ともだちを みて はなしましょう。"
+          },
+          {
+            "en": "Good job!",
+            "ja": "よく できました！"
+          }
+        ],
+        "testPoints": [
+          "はっぴょうの こつ（おおきな こえ・ゆっくり・あいてを みる）を えいごで いえる",
+          "ar or er ir ur を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Speak loudly.",
+          "ja": "おおきな こえで はなして。",
+          "action": "くちを おおきく あけて はなす",
+          "emoji": "📢"
+        },
+        {
+          "en": "Speak slowly.",
+          "ja": "ゆっくり はなして。",
+          "action": "ゆっくり くちを うごかす",
+          "emoji": "🐢"
+        },
+        {
+          "en": "Look at the audience.",
+          "ja": "みている ひとを みて。",
+          "action": "まえを みわたす",
+          "emoji": "👀"
+        },
+        {
+          "en": "Smile!",
+          "ja": "にっこり！",
+          "action": "えがおに なる",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ar",
+          "or",
+          "er",
+          "ir",
+          "ur"
+        ],
+        "sounds": [
+          "/ɑːr/",
+          "/ɔːr/",
+          "/ɜːr/",
+          "/ɜːr/",
+          "/ɜːr/"
+        ],
+        "words": [
+          "car",
+          "fork",
+          "her",
+          "bird",
+          "nurse"
+        ],
+        "tipJa": "r の つく母音 5つ。car は「アー」、fork は「オー」、her・bird・nurse は「ア～」。"
+      },
+      "vocab": [
+        {
+          "en": "loudly",
+          "ja": "おおきな こえで",
+          "emoji": "📢",
+          "core": true
+        },
+        {
+          "en": "slowly",
+          "ja": "ゆっくり",
+          "emoji": "🐢"
+        },
+        {
+          "en": "audience",
+          "ja": "みている ひと",
+          "emoji": "👥"
+        },
+        {
+          "en": "voice",
+          "ja": "こえ",
+          "emoji": "🗣️"
+        }
+      ],
+      "teacherScript": "スピーチの れんしゅう！「Speak loudly and slowly.」 おおきな こえで ゆっくり。ar・or・er・ir・ur を ぜんぶ よもう。",
+      "conversation": {
+        "scene": "Speech rehearsal on the sky stage",
+        "sceneJa": "そらの ステージで スピーチの リハーサル",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Speak loudly and slowly. Look at your friends.",
+            "ja": "おおきな こえで ゆっくり。ともだちを みてね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let me tell you about my summer. I went camping. I saw many stars.",
+            "ja": "わたしの なつやすみに ついて はなします。キャンプに いって、ほしを たくさん みました。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Good job, Kiko! Your voice was clear.",
+            "ja": "キコ、よく できたね！こえが はっきり きこえたよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My turn! Let me tell you about my summer!",
+            "ja": "ぼくの ばん！ぼくの なつやすみを はなすよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Let me tell you about my summer. から はじめて、おおきな こえで おもいでを はなそう",
+          "starterEn": "Let me tell you about my summer. I went to a summer fair. What about you?",
+          "targetExpressions": [
+            "Let me tell you about my summer.",
+            "I went to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Speak loudly and slowly. で はっぴょうの こつ",
+          "Good job! で ともだちを ほめられる",
+          "car、fork、her、bird、nurse！ r の つく母音 5つ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 269,
+      "world": 9,
+      "title": "Sky Continent Review",
+      "titleJa": "そらの大陸 ふりかえり",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：じこしょうかいと いきたい くに",
+        "grammar": "I'm good at ～. / I usually ～. / I want to go to ～. You can ～.",
+        "expressions": [
+          {
+            "en": "I'm good at drawing. I want to go to France.",
+            "ja": "えを かくのが とくいです。フランスへ いきたいです。",
+            "core": true
+          },
+          {
+            "en": "You can see famous paintings in France.",
+            "ja": "フランスでは ゆうめいな えが みられます。"
+          },
+          {
+            "en": "I usually get up at seven.",
+            "ja": "たいてい 7じに おきます。"
+          }
+        ],
+        "testPoints": [
+          "とくいな こと・1日・いきたい くにを つなげて はなせる",
+          "air ear ar or を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sit on your chair.",
+          "ja": "じぶんの いすに すわって。",
+          "action": "すっと すわる",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Gallop like a horse.",
+          "ja": "うまみたいに かけて。",
+          "action": "その ばで パカパカ",
+          "emoji": "🐎"
+        },
+        {
+          "en": "Paint a picture.",
+          "ja": "えを かいて。",
+          "action": "ふでで かく まね",
+          "emoji": "🎨"
+        },
+        {
+          "en": "Walk in the park.",
+          "ja": "こうえんを あるいて。",
+          "action": "ゆっくり あるく",
+          "emoji": "🌳"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "air",
+          "ear",
+          "ar",
+          "or"
+        ],
+        "sounds": [
+          "/eər/",
+          "/ɪər/",
+          "/ɑːr/",
+          "/ɔːr/"
+        ],
+        "words": [
+          "chair",
+          "year",
+          "park",
+          "horse"
+        ],
+        "tipJa": "air「エア」・ear「イア」・ar「アー」・or「オー」。chair、year、park、horse で ききわけよう。"
+      },
+      "vocab": [
+        {
+          "en": "France",
+          "ja": "フランス",
+          "emoji": "🇫🇷",
+          "core": true
+        },
+        {
+          "en": "museum",
+          "ja": "びじゅつかん",
+          "emoji": "🏛️"
+        },
+        {
+          "en": "painting",
+          "ja": "え（かいが）",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "ready",
+          "ja": "じゅんびが できた",
+          "emoji": "👌"
+        }
+      ],
+      "teacherScript": "ワールド9の ふりかえり！じこしょうかい・1日・いきたい くにを つなげよう。air・ear・ar・or の ききわけも！",
+      "conversation": {
+        "scene": "A review walk around the Sky Continent",
+        "sceneJa": "そらの大陸 ふりかえり さんぽ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm good at drawing. I want to go to France.",
+            "ja": "わたしは えを かくのが とくい。フランスへ いきたいな。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Why do you want to go to France?",
+            "ja": "どうして フランス？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You can see famous paintings in the museum.",
+            "ja": "びじゅつかんで ゆうめいな えが みられるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I usually get up at seven. I want to go to Canada!",
+            "ja": "わたしは たいてい 7じに おきるよ。カナダへ いきたい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Everyone is ready for the Grade 6 show!",
+            "ja": "みんな 小6の はっぴょうかいの じゅんび ばっちり！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I'm good at ～. I want to go to ～. で じこしょうかいと いきたい くにを つなげよう",
+          "starterEn": "I'm good at running. I want to go to Egypt. What are you good at?",
+          "targetExpressions": [
+            "I'm good at ～.",
+            "I want to go to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "とくいな ことと いきたい くにを つなげたね",
+          "You can see famous paintings in France.",
+          "chair、year、park、horse！ air・ear・ar・or"
+        ]
+      }
+    },
+    {
+      "lessonNo": 270,
+      "world": 9,
+      "title": "World 9 Grand Review",
+      "titleJa": "ワールド9 そうふくしゅう",
+      "school": {
+        "grade": "小6",
+        "topic": "まとめ：小6前半 はっぴょうかい（ワールド9 ぜんぶ）",
+        "grammar": "I'm good at ～. / I usually ～. / I want to go to ～. / I went to ～. It was ～.",
+        "expressions": [
+          {
+            "en": "I went to the sea with my family. It was fun.",
+            "ja": "かぞくと うみへ いきました。たのしかったです。",
+            "core": true
+          },
+          {
+            "en": "Please call me Kiki. I'm good at drawing.",
+            "ja": "キキと よんでください。えを かくのが とくいです。"
+          },
+          {
+            "en": "I want to go to Australia. You can see koalas.",
+            "ja": "オーストラリアへ いきたいです。コアラが みられます。"
+          }
+        ],
+        "testPoints": [
+          "じこしょうかい・1日・いきたい くに・なつやすみの おもいでを つなげて はっぴょうできる",
+          "r の つく母音（ar or er ir ur air ear）を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Get up! Walk! Run!",
+          "ja": "おきて！あるいて！はしって！",
+          "action": "1日の うごきを はやく",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Swim! Eat! Watch the fireworks!",
+          "ja": "およいで！たべて！はなびを みて！",
+          "action": "なつやすみの うごきを はやく",
+          "emoji": "🎆"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ar",
+          "or",
+          "er",
+          "ir",
+          "ur",
+          "air",
+          "ear"
+        ],
+        "sounds": [
+          "/ɑːr/",
+          "/ɔːr/",
+          "/ɜːr/",
+          "/ɜːr/",
+          "/ɜːr/",
+          "/eər/",
+          "/ɪər/"
+        ],
+        "words": [
+          "star",
+          "corn",
+          "fern",
+          "girl",
+          "turn",
+          "hair",
+          "ear"
+        ],
+        "tipJa": "ワールド9の そうまとめ。ar「アー」、or「オー」、er・ir・ur「ア～」、air「エア」、ear「イア」！"
+      },
+      "vocab": [
+        {
+          "en": "sky",
+          "ja": "そら",
+          "emoji": "☁️",
+          "core": true
+        },
+        {
+          "en": "show",
+          "ja": "はっぴょうかい",
+          "emoji": "🎤"
+        },
+        {
+          "en": "memory",
+          "ja": "おもいで",
+          "emoji": "💭"
+        },
+        {
+          "en": "grade",
+          "ja": "がくねん",
+          "emoji": "🎓"
+        }
+      ],
+      "teacherScript": "Congratulations! ワールド9 さいごの レッスン！まずは スピード TPR。そのあと 小6前半 はっぴょうかい。じこしょうかい・1日・いきたい くに・なつの おもいで、ぜんぶ つかおう！あしたは ボスせんだよ。",
+      "conversation": {
+        "scene": "The Grade 6 first-half show at the top of the Sky Continent",
+        "sceneJa": "そらの大陸の てっぺんで 小6前半 はっぴょうかい",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Grade 6 show!",
+            "ja": "小6 はっぴょうかいへ ようこそ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Please call me Kiki. I'm good at drawing. I want to go to Australia. You can see koalas.",
+            "ja": "キキって よんでね。えを かくのが とくい。オーストラリアへ いきたいな。コアラが みられるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I went to the sea with my family. It was fun. I saw a starfish!",
+            "ja": "かぞくと うみへ いったよ。たのしかった。ヒトデを みたよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I usually get up at six thirty. I always eat lunch with my friends.",
+            "ja": "わたしは たいてい 6じ30ぷんに おきるの。いつも ともだちと きゅうしょくを たべるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great job, everyone! Let's go to World 10!",
+            "ja": "みんな よく できました！ワールド10へ いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド9の ことばで はっぴょうしよう（じこしょうかい・いきたい くに・なつの おもいで。ほんとうの なまえや ばしょの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the Grade 6 show! I went to the mountains with my family. It was fun. Tell me about you!",
+          "targetExpressions": [
+            "I'm good at ～.",
+            "I want to go to ～.",
+            "I went to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "スピード TPR で ワールド9の うごきを ふくしゅう",
+          "じこしょうかい・いきたい くに・なつの おもいでを つなげたね",
+          "r の つく母音 7つを よみわけられたよ。ワールド10では soft c・soft g などを ならうよ！"
+        ]
+      }
+    }
+  ]
+}

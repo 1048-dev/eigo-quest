@@ -32,6 +32,17 @@ const nextConfig: NextConfig = {
     "/api/parent/line-monthly": REPORT_FONT_FILES,
     "/api/cron/line-monthly": REPORT_FONT_FILES,
   },
+  // run7 Phase 2: カリキュラム全体（全ワールドの JSON）を ブラウザに 送らない。
+  // ブラウザの ビルドでだけ src/lib/curriculum/bundledWorlds.ts を 空の bundledWorlds.browser.ts に 差しかえる
+  // （ブラウザは ensureLessonsLoaded で 必要な ワールドだけ あとから 読む）。サーバーは そのまま 全部 読む。
+  webpack(config, { isServer, webpack }) {
+    if (!isServer) {
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/[\\/]bundledWorlds$/, (resource: { request: string }) => {
+        resource.request = resource.request.replace(/bundledWorlds$/, "bundledWorlds.browser");
+      }));
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

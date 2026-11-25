@@ -12,7 +12,7 @@ import { ConversationStep } from "@/components/lesson/ConversationStep";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { apiGet, apiPost, isUnreachable } from "@/lib/api/client";
-import { offlineLesson, offlineLessonComplete } from "@/lib/offline";
+import { loadOfflineLesson, offlineLessonComplete } from "@/lib/offline";
 import { recordLocalLesson } from "@/lib/offline/localProgress";
 import { recordTrialLesson } from "@/lib/offline/trialLog";
 import { TOTAL_LESSONS } from "@/lib/curriculum";
@@ -38,13 +38,14 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
 
   useEffect(() => {
     let alive = true;
-    apiGet(`/api/lessons/${encodeURIComponent(lessonNo)}`, LessonResponseSchema).then((r) => {
+    apiGet(`/api/lessons/${encodeURIComponent(lessonNo)}`, LessonResponseSchema).then(async (r) => {
       if (!alive) return;
       if (r.ok && r.data.lesson && r.data.steps.length > 0) { setData(r.data); setOffline(!!r.data.offline); return; }
-      // サーバーに届かない → 内蔵の教材でそのままレッスンできる
+      // サーバーに届かない → 内蔵の教材でそのままレッスンできる（そのワールドの JSON だけを あとから 読む）
       if (isUnreachable(r) || (r.ok && !r.data.lesson)) {
-        const o = offlineLesson(Number(lessonNo));
-        if (o.lesson && o.steps.length > 0) { setData(o); setOffline(true); return; }
+        const o = await loadOfflineLesson(Number(lessonNo)).catch(() => null);
+        if (!alive) return;
+        if (o?.lesson && o.steps.length > 0) { setData(o); setOffline(true); return; }
       }
       // ここに来るのは「まだひらいていない」などゲーム上の理由だけ
       setError(r.error ?? "このレッスンは まだ ひらいていないよ。");
@@ -128,7 +129,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
       <OfflineNote show={offline} />
       {s.kind === "teacher_video" && <HeroScene title={`Lesson ${lesson.lessonNo}`} subtitle={`${lesson.title}｜${lesson.titleJa}`} variant="lesson" />}
       <header className="rpg-wood p-3">
-        <p className="font-title text-xs text-[var(--volt)]">Lesson {lesson.lessonNo} ・ {worldName(lesson.world)} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
+        <p className="font-title text-xs text-[var(--volt)]">Lesson {lesson.lessonNo} ・ {worldName(lesson.world)}{lesson.stage ? ` ・ ステージ${lesson.stage}${lesson.level ? `（${lesson.level}）` : ""}` : ""} ・ {lesson.school.grade}「{lesson.school.topic}」</p>
         <h1 className="text-xl font-black">{lesson.title} <span className="text-base text-[var(--on-dark-2)]">{lesson.titleJa}</span></h1>
         <ol className="mt-3 flex gap-1" aria-label="レッスンの進み具合">
           {steps.map((x, i) => (

@@ -6,7 +6,7 @@
  *
  * 置くもの（キー）:
  *  reports/<保護者ID>/<YYYY-MM>/<ランダム>.pdf   … お子さまごとの学習レポート（その家だけのもの）
- *  worksheets/monthly/world-NN.pdf                … ワールドごとの 1か月ワークブック（どの家も同じ。npm run worksheets:upload で置く）
+ *  worksheets/monthly/month-NN.pdf                … 20レッスンごとの 1か月ワークブック（どの家も同じ。npm run worksheets:upload で置く）
  */
 import path from "node:path";
 import { LocalStorage } from "./local";

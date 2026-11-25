@@ -1,0 +1,4325 @@
+{
+  "world": 5,
+  "stage": 1,
+  "level": "Pre-A1",
+  "lessons": [
+    {
+      "lessonNo": 121,
+      "world": 5,
+      "title": "Good Morning, World!",
+      "titleJa": "せかいの おはよう",
+      "school": {
+        "grade": "小4",
+        "topic": "じかんに あわせた あいさつ",
+        "grammar": "Good morning. / Good afternoon. / Good night.",
+        "expressions": [
+          {
+            "en": "Good morning.",
+            "ja": "おはよう。",
+            "core": true
+          },
+          {
+            "en": "Good afternoon.",
+            "ja": "こんにちは（ごごの あいさつ）。"
+          },
+          {
+            "en": "Good night.",
+            "ja": "おやすみなさい。"
+          }
+        ],
+        "testPoints": [
+          "じかんに あわせて Good morning. / Good afternoon. / Good night. を つかいわけられる",
+          "あいさつに あいさつで こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stretch your arms.",
+          "ja": "のびを して。",
+          "action": "りょううでを うえに のばす",
+          "emoji": "🙆"
+        },
+        {
+          "en": "Rub your eyes.",
+          "ja": "めを こすって。",
+          "action": "ねむそうに めを こする",
+          "emoji": "😪"
+        },
+        {
+          "en": "Open the window.",
+          "ja": "まどを あけて。",
+          "action": "まどを あける まね",
+          "emoji": "🪟"
+        },
+        {
+          "en": "Wave good morning.",
+          "ja": "おはようと てを ふって。",
+          "action": "げんきに てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-st"
+        ],
+        "sounds": [],
+        "words": [
+          "nest",
+          "best",
+          "fast",
+          "list"
+        ],
+        "tipJa": "ことばの おわりの s と t を くっつけて「st」。ne-st、be-st。「ネスト」の「ト」の あとに「オ」を いれないで、いきだけで おわろう！"
+      },
+      "vocab": [
+        {
+          "en": "morning",
+          "ja": "あさ",
+          "emoji": "🌅",
+          "core": true
+        },
+        {
+          "en": "afternoon",
+          "ja": "ごご",
+          "emoji": "🌞"
+        },
+        {
+          "en": "night",
+          "ja": "よる",
+          "emoji": "🌙"
+        },
+        {
+          "en": "world",
+          "ja": "せかい",
+          "emoji": "🌍"
+        }
+      ],
+      "teacherScript": "ワールド5「じかんの塔」へ ようこそ！きょうは じかんの あいさつ。あさは Good morning.、ごごは Good afternoon.、ねる まえは Good night.。とうの 大きな とけいと いっしょに いってみよう。",
+      "conversation": {
+        "scene": "Morning at the foot of the Tower of Time",
+        "sceneJa": "じかんの塔の まえの あさ",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Good morning, everyone! Welcome to the Tower of Time!",
+            "ja": "みんな、おはよう！じかんの塔へ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Good morning, Birimo! Wow, a big clock!",
+            "ja": "おはよう、ビリモ！わあ、大きな とけい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Good morning! I'm sleepy...",
+            "ja": "おはよう！ねむい…"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "In the morning, we say Good morning. In the afternoon, we say Good afternoon.",
+            "ja": "あさは Good morning.、ごごは Good afternoon. と いうよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And at night, Good night!",
+            "ja": "よるは Good night.！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great! You are the best!",
+            "ja": "すごい！みんな さいこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あさ・ごご・よるの あいさつを つかいわけよう（Good morning. / Good afternoon. / Good night.）",
+          "starterEn": "Good morning! It's morning at the Tower of Time.",
+          "targetExpressions": [
+            "Good morning.",
+            "Good afternoon.",
+            "Good night."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "あさ・ごご・よるの あいさつを ならったね",
+          "Good morning. で げんきに あいさつ できたよ",
+          "ことばの おわりの st（nest, best）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 122,
+      "world": 5,
+      "title": "Hello Around the World",
+      "titleJa": "せかいの こんにちは",
+      "school": {
+        "grade": "小4",
+        "topic": "せかいの いろいろな こんにちは",
+        "grammar": "Hello, world! / How are you? ― I'm good.",
+        "expressions": [
+          {
+            "en": "Hello, world!",
+            "ja": "こんにちは、せかい！",
+            "core": true
+          },
+          {
+            "en": "Jambo! It's hello in Kenya.",
+            "ja": "ジャンボ！ケニアの こんにちはだよ。"
+          },
+          {
+            "en": "How are you? ― I'm good.",
+            "ja": "げんき？ ― げんきだよ。"
+          }
+        ],
+        "testPoints": [
+          "Hello, world! など いろいろな あいさつを いえる",
+          "せかいには いろいろな ことばの あいさつが あると しる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spin the globe.",
+          "ja": "ちきゅうぎを まわして。",
+          "action": "ちきゅうぎを くるっと まわす まね",
+          "emoji": "🌍"
+        },
+        {
+          "en": "Point to Africa.",
+          "ja": "アフリカを ゆびさして。",
+          "action": "ちずの アフリカを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Shake hands with a friend.",
+          "ja": "ともだちと あくしゅして。",
+          "action": "となりの 人と あくしゅ",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Give me a high five.",
+          "ja": "ハイタッチ しよう。",
+          "action": "てのひらを パチン",
+          "emoji": "✋"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-nd"
+        ],
+        "sounds": [],
+        "words": [
+          "hand",
+          "sand",
+          "pond",
+          "bend"
+        ],
+        "tipJa": "おわりの n と d を くっつけて「nd」。ha-nd、sa-nd。「ハンド」の「ド」は ちいさく みじかく！"
+      },
+      "vocab": [
+        {
+          "en": "hello",
+          "ja": "こんにちは",
+          "emoji": "👋",
+          "core": true
+        },
+        {
+          "en": "globe",
+          "ja": "ちきゅうぎ",
+          "emoji": "🌍"
+        },
+        {
+          "en": "country",
+          "ja": "くに",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "friend",
+          "ja": "ともだち",
+          "emoji": "🧑‍🤝‍🧑"
+        }
+      ],
+      "teacherScript": "せかいには いろいろな こんにちは が あるよ。ケニアでは Jambo、イタリアでは Ciao。きょうは みんなで「Hello, world!」と せかいに あいさつしよう。",
+      "conversation": {
+        "scene": "Birimo spins a giant globe inside the tower",
+        "sceneJa": "とうの なかで ビリモが 大きな ちきゅうぎを まわす",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Let's spin the globe! Stop! Kenya!",
+            "ja": "ちきゅうぎを まわそう！ストップ！ケニア！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "In Kenya, people say Jambo. It's hello!",
+            "ja": "ケニアでは ジャンボと いうよ。こんにちは の ことだよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Jambo, Haru! How are you?",
+            "ja": "ジャンボ、ハル！げんき？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Jambo! I'm good.",
+            "ja": "ジャンボ！げんきだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Spin again! Italy! Ciao!",
+            "ja": "もういちど！イタリア！チャオ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ciao! Let's say hello to the world. Hello, world!",
+            "ja": "チャオ！せかいに あいさつしよう。こんにちは、せかい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Hello, world! や せかいの あいさつで げんきに あいさつしよう。How are you? にも こたえてみよう",
+          "starterEn": "Jambo! Hello! How are you?",
+          "targetExpressions": [
+            "Hello.",
+            "I'm good.",
+            "How are you?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "せかいの いろいろな こんにちは を しったね",
+          "Hello, world! と げんきに いえたよ",
+          "おわりの nd（hand, sand）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 123,
+      "world": 5,
+      "title": "What's for Breakfast?",
+      "titleJa": "せかいの あさごはん",
+      "school": {
+        "grade": "小4",
+        "topic": "せかいの あさごはん",
+        "grammar": "What's for breakfast? / I like ～. / ～, please.",
+        "expressions": [
+          {
+            "en": "I like toast.",
+            "ja": "トーストが すき。",
+            "core": true
+          },
+          {
+            "en": "What's for breakfast?",
+            "ja": "あさごはん なに？"
+          },
+          {
+            "en": "It's yummy!",
+            "ja": "おいしい！"
+          }
+        ],
+        "testPoints": [
+          "What's for breakfast? と きける",
+          "I like ～. で すきな あさごはんを いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pour the milk.",
+          "ja": "ミルクを そそいで。",
+          "action": "コップに ミルクを そそぐ まね",
+          "emoji": "🥛"
+        },
+        {
+          "en": "Butter the toast.",
+          "ja": "トーストに バターを ぬって。",
+          "action": "ナイフで バターを ぬる まね",
+          "emoji": "🧈"
+        },
+        {
+          "en": "Crack an egg.",
+          "ja": "たまごを わって。",
+          "action": "たまごを コンと わる まね",
+          "emoji": "🥚"
+        },
+        {
+          "en": "Put your hands together.",
+          "ja": "てを あわせて。",
+          "action": "いただきますの ポーズ",
+          "emoji": "🙏"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-mp"
+        ],
+        "sounds": [],
+        "words": [
+          "camp",
+          "jump",
+          "lamp",
+          "bump"
+        ],
+        "tipJa": "おわりの m と p。くちを とじて m、そのまま ぱっと p！ ca-mp、ju-mp。"
+      },
+      "vocab": [
+        {
+          "en": "breakfast",
+          "ja": "あさごはん",
+          "emoji": "🍳",
+          "core": true
+        },
+        {
+          "en": "toast",
+          "ja": "トースト",
+          "emoji": "🍞"
+        },
+        {
+          "en": "rice",
+          "ja": "ごはん",
+          "emoji": "🍚"
+        },
+        {
+          "en": "egg",
+          "ja": "たまご",
+          "emoji": "🥚"
+        }
+      ],
+      "teacherScript": "せかいの あさごはんを のぞいて みよう。イギリスは トースト、日本は ごはんと みそしる、メキシコは トルティーヤ。「What's for breakfast?」「I like toast.」と いってみよう。",
+      "conversation": {
+        "scene": "A world breakfast table in the tower kitchen",
+        "sceneJa": "とうの キッチンで せかいの あさごはん",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Good morning! I'm hungry. What's for breakfast?",
+            "ja": "おはよう！おなか すいた。あさごはん なに？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look! Toast from England, rice from Japan, and tortillas from Mexico.",
+            "ja": "みて！イギリスの トースト、日本の ごはん、メキシコの トルティーヤ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I like rice. Rice, please.",
+            "ja": "ごはんが すき。ごはん ください。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I like toast. Toast and jam, please.",
+            "ja": "トーストが すき。トーストと ジャム ください。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Tortillas? Yummy! I like tortillas.",
+            "ja": "トルティーヤ？おいしい！トルティーヤが すき。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's eat! Thank you for the food!",
+            "ja": "たべよう！いただきます！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな あさごはんを I like ～. で つたえよう（パン・ごはん・たまご など）",
+          "starterEn": "Good morning! What's for breakfast? I like toast.",
+          "targetExpressions": [
+            "I like ～.",
+            "～, please."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "せかいの あさごはんを くらべたね",
+          "What's for breakfast? ― I like toast. と いえたよ",
+          "おわりの mp（camp, jump）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 124,
+      "world": 5,
+      "title": "See You Later!",
+      "titleJa": "またね！せかいの さようなら",
+      "school": {
+        "grade": "小4",
+        "topic": "せかいの さようなら",
+        "grammar": "See you later. / Have a nice day! / Goodbye.",
+        "expressions": [
+          {
+            "en": "See you later.",
+            "ja": "またあとでね。",
+            "core": true
+          },
+          {
+            "en": "Have a nice day!",
+            "ja": "いい 1日を！"
+          },
+          {
+            "en": "Adios! It's goodbye in Spain.",
+            "ja": "アディオス！スペインの さようならだよ。"
+          }
+        ],
+        "testPoints": [
+          "See you later. / Have a nice day! で わかれの あいさつが できる",
+          "あいさつに あわせて てを ふれる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wave goodbye.",
+          "ja": "てを ふって さようなら。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Put on your backpack.",
+          "ja": "リュックを せおって。",
+          "action": "リュックを せおう まね",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Open the door.",
+          "ja": "ドアを あけて。",
+          "action": "ドアノブを まわす まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Bow and say goodbye.",
+          "ja": "おじぎを して さようなら。",
+          "action": "ぺこりと おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-st",
+          "-nd",
+          "-mp"
+        ],
+        "sounds": [],
+        "words": [
+          "must",
+          "land",
+          "pump",
+          "vest"
+        ],
+        "tipJa": "st・nd・mp、おわりの 2つの おとを ききくらべよう。mu-st、la-nd、pu-mp、ve-st！"
+      },
+      "vocab": [
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋",
+          "core": true
+        },
+        {
+          "en": "later",
+          "ja": "あとで",
+          "emoji": "⏰"
+        },
+        {
+          "en": "door",
+          "ja": "ドア",
+          "emoji": "🚪"
+        },
+        {
+          "en": "day",
+          "ja": "ひ・1日",
+          "emoji": "📅"
+        }
+      ],
+      "teacherScript": "わかれの あいさつも せかいで ちがうよ。スペインでは Adios、イタリアでは Ciao。英語では See you later. や Have a nice day!。きょうは とうの もんで みんなを みおくろう。",
+      "conversation": {
+        "scene": "Saying goodbye to Birimo's friends at the tower gate",
+        "sceneJa": "とうの もんで ビリモの ともだちを みおくる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Bye, my friends! It's time to go home.",
+            "ja": "ともだち、バイバイ！もう かえる じかんだね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Goodbye! Have a nice day!",
+            "ja": "さようなら！いい 1日を！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "In Spain, people say Adios.",
+            "ja": "スペインでは アディオスと いうよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Adios! See you later!",
+            "ja": "アディオス！またあとでね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "See you later! Come back soon!",
+            "ja": "またね！また きてね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "わかれの あいさつ See you later. / Have a nice day! / Goodbye. を つかおう",
+          "starterEn": "It's time to go home. Goodbye!",
+          "targetExpressions": [
+            "See you later.",
+            "Have a nice day!",
+            "Goodbye."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "せかいの さようならを しったね",
+          "See you later. / Have a nice day! で みおくれたよ",
+          "st・nd・mp を ききくらべられたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 125,
+      "world": 5,
+      "title": "World Breakfast Party",
+      "titleJa": "せかいの あさごはん パーティー",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：せかいの あさごはんと あいさつ",
+        "grammar": "Good morning. / Hello, world! / I like ～. / See you later.",
+        "expressions": [
+          {
+            "en": "Good morning. I'm Riko.",
+            "ja": "おはよう。リコです。",
+            "core": true
+          },
+          {
+            "en": "What's for breakfast? ― I like rice.",
+            "ja": "あさごはん なに？ ― ごはんが すき。"
+          },
+          {
+            "en": "See you later!",
+            "ja": "またあとでね！"
+          }
+        ],
+        "testPoints": [
+          "あいさつ → じこしょうかい → すきな あさごはん → わかれの あいさつ を つなげて いえる",
+          "語末ブレンド st nd mp を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Set the table.",
+          "ja": "テーブルの じゅんびを して。",
+          "action": "おさらを ならべる まね",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "Pass the bread.",
+          "ja": "パンを まわして。",
+          "action": "となりの 人に パンを わたす まね",
+          "emoji": "🍞"
+        },
+        {
+          "en": "Clap for the chef.",
+          "ja": "シェフに はくしゅ。",
+          "action": "パチパチ はくしゅ",
+          "emoji": "👏"
+        },
+        {
+          "en": "Wave to the world.",
+          "ja": "せかいに てを ふって。",
+          "action": "りょうてを おおきく ふる",
+          "emoji": "🌍"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-st",
+          "-nd",
+          "-mp"
+        ],
+        "sounds": [],
+        "words": [
+          "rest",
+          "band",
+          "stamp",
+          "dust"
+        ],
+        "tipJa": "ふりかえり！ おわりの st・nd・mp。re-st、ba-nd、sta-mp、du-st。stamp は はじめも おわりも ブレンドだね！"
+      },
+      "vocab": [
+        {
+          "en": "party",
+          "ja": "パーティー",
+          "emoji": "🎉",
+          "core": true
+        },
+        {
+          "en": "chef",
+          "ja": "シェフ",
+          "emoji": "🧑‍🍳"
+        },
+        {
+          "en": "jam",
+          "ja": "ジャム",
+          "emoji": "🍓"
+        },
+        {
+          "en": "table",
+          "ja": "テーブル",
+          "emoji": "🍽️"
+        }
+      ],
+      "teacherScript": "きょうは まとめ。とうの てっぺんで せかいの あさごはん パーティー！Good morning. で あいさつ、なまえを いって、すきな あさごはんを いおう。かえる ときは See you later!",
+      "conversation": {
+        "scene": "A breakfast party at the top of the tower",
+        "sceneJa": "とうの てっぺんで あさごはん パーティー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good morning, everyone! Welcome to the breakfast party!",
+            "ja": "みなさん おはよう！あさごはん パーティーへ ようこそ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Good morning. I'm Riko. I like toast and jam.",
+            "ja": "おはよう。リコです。トーストと ジャムが すき。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Hello, world! I'm Haru. I like rice and eggs.",
+            "ja": "こんにちは、せかい！ハルです。ごはんと たまごが すき。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What's for breakfast, Birimo?",
+            "ja": "ビリモ、あさごはん なに？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Everything! Yummy! Thank you, chef!",
+            "ja": "ぜんぶ！おいしい！シェフ、ありがとう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "See you later! Have a nice day!",
+            "ja": "またね！いい 1日を！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "パーティーで あいさつ・なまえ（ニックネームでも OK）・すきな あさごはんを いって、さいごに See you later! で しめよう",
+          "starterEn": "Good morning! Welcome to the breakfast party! I'm Riko. What's for breakfast?",
+          "targetExpressions": [
+            "Good morning.",
+            "I'm ～.",
+            "I like ～.",
+            "See you later."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "あいさつ・なまえ・すきな あさごはんを つなげて いえたね",
+          "パーティーの さいごに See you later! と いえたよ",
+          "おわりの st nd mp の ふりかえり、ばっちり！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 126,
+      "world": 5,
+      "title": "How's the Weather Today?",
+      "titleJa": "きょうの てんき",
+      "school": {
+        "grade": "小4",
+        "topic": "てんき",
+        "grammar": "How's the weather? ― It's sunny / rainy / cloudy / snowy / windy.",
+        "expressions": [
+          {
+            "en": "How's the weather?",
+            "ja": "てんきは どう？",
+            "core": true
+          },
+          {
+            "en": "It's rainy.",
+            "ja": "あめだよ。"
+          },
+          {
+            "en": "It's windy today.",
+            "ja": "きょうは かぜが つよいね。"
+          }
+        ],
+        "testPoints": [
+          "How's the weather? と きける",
+          "It's sunny. / It's rainy. などで こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your umbrella.",
+          "ja": "かさを ひらいて。",
+          "action": "かさを ぱっと ひらく まね",
+          "emoji": "☂️"
+        },
+        {
+          "en": "Look at the sky.",
+          "ja": "そらを みて。",
+          "action": "うえを みあげる",
+          "emoji": "🌤️"
+        },
+        {
+          "en": "Shiver! It's cold.",
+          "ja": "さむくて ぶるぶる。",
+          "action": "からだを ぶるぶる ふるわせる",
+          "emoji": "🥶"
+        },
+        {
+          "en": "Fan your face. It's hot.",
+          "ja": "あつくて かおを あおいで。",
+          "action": "てで かおを パタパタ あおぐ",
+          "emoji": "🥵"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-nt"
+        ],
+        "sounds": [],
+        "words": [
+          "tent",
+          "hunt",
+          "plant",
+          "mint"
+        ],
+        "tipJa": "おわりの n と t。te-nt、hu-nt。plant は はじめの pl も おわりの nt も ブレンド！"
+      },
+      "vocab": [
+        {
+          "en": "weather",
+          "ja": "てんき",
+          "emoji": "🌤️",
+          "core": true
+        },
+        {
+          "en": "rainy",
+          "ja": "あめの",
+          "emoji": "🌧️"
+        },
+        {
+          "en": "cloudy",
+          "ja": "くもりの",
+          "emoji": "☁️"
+        },
+        {
+          "en": "windy",
+          "ja": "かぜが つよい",
+          "emoji": "🌬️"
+        }
+      ],
+      "teacherScript": "とうの まどから そとを みてみよう。「How's the weather?」と きかれたら「It's sunny.」「It's rainy.」と こたえるよ。きょうの てんきは どうかな？",
+      "conversation": {
+        "scene": "Looking out of the tower window in the morning",
+        "sceneJa": "あさ、とうの まどから そとを みる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Good morning! How's the weather?",
+            "ja": "おはよう！てんきは どう？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's look. Hmm... it's cloudy.",
+            "ja": "みてみよう。うーん…くもり。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh! It's rainy now!",
+            "ja": "あっ！あめが ふってきた！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And it's windy! My tent is flying!",
+            "ja": "それに かぜも つよい！ぼくの テントが とんでる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Open your umbrella, Birimo!",
+            "ja": "ビリモ、かさを ひらいて！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "How's the weather? と きいたり、It's sunny. / It's rainy. などで こたえたり しよう",
+          "starterEn": "Good morning! How's the weather today?",
+          "targetExpressions": [
+            "How's the weather?",
+            "It's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "てんきの ことば rainy・cloudy・windy を ならったね",
+          "How's the weather? ― It's rainy. と いえたよ",
+          "おわりの nt（tent, plant）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 127,
+      "world": 5,
+      "title": "Let's Play Tag!",
+      "titleJa": "おにごっこ しよう！",
+      "school": {
+        "grade": "小4",
+        "topic": "そとの あそび",
+        "grammar": "Let's play ～. ― Yes, let's!",
+        "expressions": [
+          {
+            "en": "Let's play tag.",
+            "ja": "おにごっこ しよう。",
+            "core": true
+          },
+          {
+            "en": "Yes, let's!",
+            "ja": "うん、しよう！"
+          },
+          {
+            "en": "Let's play dodgeball. ― OK!",
+            "ja": "ドッジボール しよう。― いいよ！"
+          }
+        ],
+        "testPoints": [
+          "Let's play ～. で あそびに さそえる",
+          "Yes, let's! で こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Tag a friend.",
+          "ja": "ともだちに タッチ。",
+          "action": "ともだちの かたに そっと タッチ",
+          "emoji": "👋"
+        },
+        {
+          "en": "Hide behind a tree.",
+          "ja": "きの うしろに かくれて。",
+          "action": "しゃがんで かくれる",
+          "emoji": "🌳"
+        },
+        {
+          "en": "Freeze!",
+          "ja": "こおって！（とまって）",
+          "action": "ぴたっと とまる",
+          "emoji": "🧊"
+        },
+        {
+          "en": "Jump rope.",
+          "ja": "なわとびを して。",
+          "action": "なわとびの まねで ぴょんぴょん",
+          "emoji": "🪢"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-lk"
+        ],
+        "sounds": [],
+        "words": [
+          "milk",
+          "silk",
+          "bulk",
+          "elk"
+        ],
+        "tipJa": "おわりの l と k。l は したを うえの はの うらに つけて、そのまま k！ mi-lk、si-lk。"
+      },
+      "vocab": [
+        {
+          "en": "tag",
+          "ja": "おにごっこ",
+          "emoji": "🏃",
+          "core": true
+        },
+        {
+          "en": "dodgeball",
+          "ja": "ドッジボール",
+          "emoji": "🔴"
+        },
+        {
+          "en": "jump rope",
+          "ja": "なわとび",
+          "emoji": "🪢"
+        },
+        {
+          "en": "hide-and-seek",
+          "ja": "かくれんぼ",
+          "emoji": "🙈"
+        }
+      ],
+      "teacherScript": "はれたら そとで あそぼう！ あそびに さそう ときは「Let's play tag.」、さそわれたら「Yes, let's!」。おにごっこ、ドッジボール、なわとび、なにが すき？",
+      "conversation": {
+        "scene": "A sunny playground beside the tower",
+        "sceneJa": "はれた ひ、とうの よこの こうえん",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "It's sunny! Let's play tag.",
+            "ja": "はれだ！おにごっこ しよう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, let's! You're it, Haru!",
+            "ja": "うん、しよう！ハルが おにね！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Run, run! Ha ha!",
+            "ja": "にげろ にげろ！あはは！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Tag! Kiko, you're it!",
+            "ja": "タッチ！キコが おに！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm tired. Let's drink milk!",
+            "ja": "つかれた。ミルクを のもう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Then let's play dodgeball!",
+            "ja": "そのあと ドッジボール しよう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Let's play ～. で あそびに さそったり、Yes, let's! で こたえたり しよう",
+          "starterEn": "It's sunny today! Let's play tag.",
+          "targetExpressions": [
+            "Let's play ～.",
+            "Yes, let's!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "そとの あそびの ことばを ならったね",
+          "Let's play tag. ― Yes, let's! と いえたよ",
+          "おわりの lk（milk, silk）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 128,
+      "world": 5,
+      "title": "Rainy Day Games",
+      "titleJa": "あめの ひの あそび",
+      "school": {
+        "grade": "小4",
+        "topic": "へやの なかの あそび",
+        "grammar": "It's rainy. Let's play inside. / Let's play ～. / Your turn.",
+        "expressions": [
+          {
+            "en": "Let's play cards.",
+            "ja": "トランプを しよう。",
+            "core": true
+          },
+          {
+            "en": "It's rainy. Let's play inside.",
+            "ja": "あめだね。なかで あそぼう。"
+          },
+          {
+            "en": "Your turn.",
+            "ja": "きみの ばんだよ。"
+          }
+        ],
+        "testPoints": [
+          "てんきに あわせて Let's play ～. で あそびを えらべる",
+          "Your turn. / My turn. を つかえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shuffle the cards.",
+          "ja": "カードを まぜて。",
+          "action": "カードを シャッフルする まね",
+          "emoji": "🃏"
+        },
+        {
+          "en": "Stack the blocks.",
+          "ja": "つみきを つんで。",
+          "action": "てで つみきを つみあげる まね",
+          "emoji": "🧱"
+        },
+        {
+          "en": "Roll the dice.",
+          "ja": "サイコロを ふって。",
+          "action": "サイコロを ころがす まね",
+          "emoji": "🎲"
+        },
+        {
+          "en": "Do a puzzle.",
+          "ja": "パズルを して。",
+          "action": "ピースを はめる まね",
+          "emoji": "🧩"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-ft"
+        ],
+        "sounds": [],
+        "words": [
+          "gift",
+          "lift",
+          "raft",
+          "soft"
+        ],
+        "tipJa": "おわりの f と t。したくちびるに うえの はを あてて f、そして t。gi-ft、li-ft、so-ft！"
+      },
+      "vocab": [
+        {
+          "en": "cards",
+          "ja": "トランプ",
+          "emoji": "🃏",
+          "core": true
+        },
+        {
+          "en": "blocks",
+          "ja": "つみき",
+          "emoji": "🧱"
+        },
+        {
+          "en": "puzzle",
+          "ja": "パズル",
+          "emoji": "🧩"
+        },
+        {
+          "en": "inside",
+          "ja": "なかで",
+          "emoji": "🏠"
+        }
+      ],
+      "teacherScript": "あめの ひは へやの なかで あそぼう。「It's rainy. Let's play inside.」「Let's play cards.」。トランプ、つみき、パズル。じゅんばんを まもって「Your turn.」も いえるかな？",
+      "conversation": {
+        "scene": "A rainy afternoon in the tower play room",
+        "sceneJa": "あめの ごご、とうの あそびべや",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Oh no, it's rainy. No tag today.",
+            "ja": "あーあ、あめだ。きょうは おにごっこ できない。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's rainy. Let's play inside!",
+            "ja": "あめだね。なかで あそぼう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's play cards!",
+            "ja": "トランプを しよう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Shuffle, shuffle! Your turn, Kiko.",
+            "ja": "まぜまぜ！キコの ばんだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yay! I win! Let's do a puzzle next.",
+            "ja": "やった！かった！つぎは パズルを しよう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あめの ひに なかで する あそびを Let's play ～. で さそおう",
+          "starterEn": "It's rainy today. Let's play inside! I have cards.",
+          "targetExpressions": [
+            "Let's play ～.",
+            "Your turn."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "あめの ひの あそびの ことばを ならったね",
+          "Let's play cards. と さそえたよ",
+          "おわりの ft（gift, soft）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 129,
+      "world": 5,
+      "title": "Hot Day, Cold Day",
+      "titleJa": "あつい ひ・さむい ひ",
+      "school": {
+        "grade": "小4",
+        "topic": "てんきと あそび（きせつ）",
+        "grammar": "It's hot. Let's ～. / It's cold. Let's ～.",
+        "expressions": [
+          {
+            "en": "It's hot. Let's swim.",
+            "ja": "あついね。およごう。",
+            "core": true
+          },
+          {
+            "en": "It's cold. Let's make a snowman.",
+            "ja": "さむいね。ゆきだるまを つくろう。"
+          },
+          {
+            "en": "It's snowy!",
+            "ja": "ゆきだ！"
+          }
+        ],
+        "testPoints": [
+          "It's hot. / It's cold. の あとに Let's ～. で あそびを いえる",
+          "snowy / sunny などの てんきの ことばを いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Swim like a fish.",
+          "ja": "さかなみたいに およいで。",
+          "action": "うでで クロールの まね",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Roll a snowball.",
+          "ja": "ゆきだまを ころがして。",
+          "action": "しゃがんで ゆきだまを ころがす まね",
+          "emoji": "⛄"
+        },
+        {
+          "en": "Wipe your face.",
+          "ja": "かおの あせを ふいて。",
+          "action": "てで おでこを ふく",
+          "emoji": "😅"
+        },
+        {
+          "en": "Rub your hands.",
+          "ja": "てを こすって あたためて。",
+          "action": "りょうてを すりすり",
+          "emoji": "🧤"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-nt",
+          "-lk",
+          "-ft"
+        ],
+        "sounds": [],
+        "words": [
+          "went",
+          "print",
+          "left",
+          "milk"
+        ],
+        "tipJa": "nt・lk・ft を ききくらべよう。we-nt、pri-nt、le-ft、mi-lk。おわりの 2つの おとを はっきり！"
+      },
+      "vocab": [
+        {
+          "en": "hot",
+          "ja": "あつい",
+          "emoji": "🥵",
+          "core": true
+        },
+        {
+          "en": "cold",
+          "ja": "さむい",
+          "emoji": "🥶"
+        },
+        {
+          "en": "snowy",
+          "ja": "ゆきの",
+          "emoji": "🌨️"
+        },
+        {
+          "en": "snowman",
+          "ja": "ゆきだるま",
+          "emoji": "⛄"
+        }
+      ],
+      "teacherScript": "あつい ひと さむい ひ、どんな あそびを する？「It's hot. Let's swim.」「It's cold. Let's make a snowman.」。てんきと あそびを つなげて いってみよう。",
+      "conversation": {
+        "scene": "Birimo's magic weather clock changes the season",
+        "sceneJa": "ビリモの まほうの てんき どけいで きせつが かわる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Turn the weather clock! Click!",
+            "ja": "てんき どけいを まわすよ！カチッ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Whoa, it's sunny! It's hot. Let's swim!",
+            "ja": "わあ、はれだ！あついね。およごう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Click again!",
+            "ja": "もう いっかい カチッ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Brr! It's snowy! It's cold.",
+            "ja": "ぶるる！ゆきだ！さむいね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's cold. Let's make a snowman!",
+            "ja": "さむいね。ゆきだるまを つくろう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great! Hot day, swim. Cold day, snowman!",
+            "ja": "いいね！あつい ひは およぐ。さむい ひは ゆきだるま！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あつい ひ・さむい ひに する あそびを It's hot. Let's ～. の かたちで いおう",
+          "starterEn": "Click! Oh, it's hot today! Let's swim!",
+          "targetExpressions": [
+            "It's hot.",
+            "It's cold.",
+            "Let's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "あつい・さむい・ゆきの ことばを ならったね",
+          "It's hot. Let's swim. と つなげて いえたよ",
+          "nt・lk・ft を ききくらべられたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 130,
+      "world": 5,
+      "title": "Rainy Day Plans",
+      "titleJa": "あめの ひの あそび そうだん",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：てんきと あそびの そうだん",
+        "grammar": "How's the weather? ― It's ～. / Let's play ～. ― Yes, let's!",
+        "expressions": [
+          {
+            "en": "It's rainy. Let's play cards.",
+            "ja": "あめだね。トランプを しよう。",
+            "core": true
+          },
+          {
+            "en": "How's the weather? ― It's sunny.",
+            "ja": "てんきは どう？ ― はれだよ。"
+          },
+          {
+            "en": "Let's play tag. ― Yes, let's!",
+            "ja": "おにごっこ しよう。― うん、しよう！"
+          }
+        ],
+        "testPoints": [
+          "てんきを きいて、てんきに あう あそびに さそえる",
+          "語末ブレンド nt lk ft を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look out the window.",
+          "ja": "まどの そとを みて。",
+          "action": "てを おでこに あてて そとを みる",
+          "emoji": "🪟"
+        },
+        {
+          "en": "Put on your raincoat.",
+          "ja": "レインコートを きて。",
+          "action": "コートを はおる まね",
+          "emoji": "🧥"
+        },
+        {
+          "en": "Throw the ball.",
+          "ja": "ボールを なげて。",
+          "action": "ボールを なげる まね",
+          "emoji": "⚾"
+        },
+        {
+          "en": "High five!",
+          "ja": "ハイタッチ！",
+          "action": "てのひらを パチン",
+          "emoji": "✋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-nt",
+          "-lk",
+          "-ft"
+        ],
+        "sounds": [],
+        "words": [
+          "sent",
+          "milk",
+          "soft",
+          "plant"
+        ],
+        "tipJa": "ふりかえり！ おわりの nt・lk・ft。se-nt、mi-lk、so-ft、pla-nt。"
+      },
+      "vocab": [
+        {
+          "en": "plan",
+          "ja": "よてい",
+          "emoji": "📝",
+          "core": true
+        },
+        {
+          "en": "raincoat",
+          "ja": "レインコート",
+          "emoji": "🧥"
+        },
+        {
+          "en": "umbrella",
+          "ja": "かさ",
+          "emoji": "☂️"
+        },
+        {
+          "en": "outside",
+          "ja": "そとで",
+          "emoji": "🌳"
+        }
+      ],
+      "teacherScript": "きょうは まとめ。てんきを きいて、あそびを そうだんしよう。はれなら そとで、あめなら なかで。「How's the weather?」「It's rainy. Let's play cards.」",
+      "conversation": {
+        "scene": "Planning the day's games in the tower lobby",
+        "sceneJa": "とうの ロビーで きょうの あそびを そうだん",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make a plan for today. How's the weather?",
+            "ja": "きょうの よていを きめよう。てんきは どう？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's sunny now. Let's play tag outside!",
+            "ja": "いまは はれ。そとで おにごっこ しよう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look! It's cloudy... and now it's rainy.",
+            "ja": "みて！くもって…あめに なった。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's rainy. Let's play cards inside.",
+            "ja": "あめだね。なかで トランプを しよう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, let's! And a puzzle, too!",
+            "ja": "うん、しよう！パズルも！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "てんきを きいて、それに あう あそびを Let's play ～. で ていあんしよう",
+          "starterEn": "Let's make a plan! How's the weather today?",
+          "targetExpressions": [
+            "How's the weather?",
+            "It's ～.",
+            "Let's play ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "てんきを きいて あそびを そうだん できたね",
+          "It's rainy. Let's play cards. と いえたよ",
+          "nt・lk・ft の ふりかえり、ばっちり！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 131,
+      "world": 5,
+      "title": "What Day Is It?",
+      "titleJa": "なんようび？",
+      "school": {
+        "grade": "小4",
+        "topic": "ようび（げつ〜もく）",
+        "grammar": "What day is it? ― It's Monday.",
+        "expressions": [
+          {
+            "en": "What day is it?",
+            "ja": "なんようび？",
+            "core": true
+          },
+          {
+            "en": "It's Monday.",
+            "ja": "げつようびだよ。"
+          },
+          {
+            "en": "Today is Tuesday.",
+            "ja": "きょうは かようび。"
+          }
+        ],
+        "testPoints": [
+          "What day is it? と きける",
+          "It's Monday. などで ようびを こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the calendar.",
+          "ja": "カレンダーを ゆびさして。",
+          "action": "かべの カレンダーを ゆびさす",
+          "emoji": "📅"
+        },
+        {
+          "en": "Turn the page.",
+          "ja": "ページを めくって。",
+          "action": "ページを めくる まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Count the days.",
+          "ja": "ひにちを かぞえて。",
+          "action": "ゆびを おって かぞえる",
+          "emoji": "🔢"
+        },
+        {
+          "en": "Circle today.",
+          "ja": "きょうに まるを つけて。",
+          "action": "ゆびで くうちゅうに まるを かく",
+          "emoji": "⭕"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-sk"
+        ],
+        "sounds": [],
+        "words": [
+          "desk",
+          "mask",
+          "task",
+          "dusk"
+        ],
+        "tipJa": "おわりの s と k。いきの s から、のどの おくで k！ de-sk、ma-sk。"
+      },
+      "vocab": [
+        {
+          "en": "Monday",
+          "ja": "げつようび",
+          "emoji": "📅",
+          "core": true
+        },
+        {
+          "en": "Tuesday",
+          "ja": "かようび",
+          "emoji": "📅"
+        },
+        {
+          "en": "Wednesday",
+          "ja": "すいようび",
+          "emoji": "📅"
+        },
+        {
+          "en": "Thursday",
+          "ja": "もくようび",
+          "emoji": "📅"
+        }
+      ],
+      "teacherScript": "じかんの塔には 7つの へやが あるよ。1つずつ ようびの へや！ きょうは Monday、Tuesday、Wednesday、Thursday。「What day is it?」「It's Monday.」",
+      "conversation": {
+        "scene": "The seven day rooms of the Tower of Time",
+        "sceneJa": "じかんの塔の 7つの ようびの へや",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Look! Seven rooms. One for each day!",
+            "ja": "みて！へやが 7つ。ようびごとに 1つ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What day is it?",
+            "ja": "なんようび？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's Monday. Let's open the Monday room.",
+            "ja": "げつようび。げつようびの へやを あけよう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Next is the Tuesday room!",
+            "ja": "つぎは かようびの へや！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Then Wednesday and Thursday!",
+            "ja": "そのつぎは すいようびと もくようび！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What day is it? と きいたり、It's Monday. などで こたえたり しよう",
+          "starterEn": "Good morning! What day is it today?",
+          "targetExpressions": [
+            "What day is it?",
+            "It's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Monday〜Thursday の ようびを ならったね",
+          "What day is it? ― It's Monday. と いえたよ",
+          "おわりの sk（desk, mask）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 132,
+      "world": 5,
+      "title": "Friday, Saturday, Sunday",
+      "titleJa": "きん・ど・にちようび",
+      "school": {
+        "grade": "小4",
+        "topic": "ようび（きん〜にち）・1しゅうかん",
+        "grammar": "It's Sunday. / Seven days in a week.",
+        "expressions": [
+          {
+            "en": "It's Sunday.",
+            "ja": "にちようびだよ。",
+            "core": true
+          },
+          {
+            "en": "Seven days in a week.",
+            "ja": "1しゅうかんは 7にち。"
+          },
+          {
+            "en": "Yay! It's Friday!",
+            "ja": "やった！きんようびだ！"
+          }
+        ],
+        "testPoints": [
+          "7つの ようびを じゅんばんに いえる",
+          "It's Sunday. で こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Sing the days song.",
+          "ja": "ようびの うたを うたって。",
+          "action": "てを ふりながら うたう",
+          "emoji": "🎵"
+        },
+        {
+          "en": "Hold up seven fingers.",
+          "ja": "ゆびで 7を だして。",
+          "action": "りょうてで 7を つくる",
+          "emoji": "✋"
+        },
+        {
+          "en": "Help a friend.",
+          "ja": "ともだちを てつだって。",
+          "action": "となりの 人の にもつを もつ まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Sleep in. It's Sunday!",
+          "ja": "にちようびは ゆっくり ねて。",
+          "action": "てを ほっぺに あてて ねる まね",
+          "emoji": "😴"
+        }
+      ],
+      "phonics": {
+        "rule": "final-blend",
+        "focus": [
+          "-lp"
+        ],
+        "sounds": [],
+        "words": [
+          "help",
+          "gulp",
+          "yelp",
+          "kelp"
+        ],
+        "tipJa": "おわりの l と p。したを うえの はの うらに つけて l、くちびるで p！ he-lp、gu-lp。"
+      },
+      "vocab": [
+        {
+          "en": "Friday",
+          "ja": "きんようび",
+          "emoji": "📅"
+        },
+        {
+          "en": "Saturday",
+          "ja": "どようび",
+          "emoji": "📅"
+        },
+        {
+          "en": "Sunday",
+          "ja": "にちようび",
+          "emoji": "📅",
+          "core": true
+        },
+        {
+          "en": "week",
+          "ja": "しゅう（1しゅうかん）",
+          "emoji": "🗓️"
+        }
+      ],
+      "teacherScript": "のこりの ようびは Friday、Saturday、Sunday。1しゅうかんは 7にち。ようびの うたで じゅんばんに いえるかな？「What day is it?」「It's Sunday.」",
+      "conversation": {
+        "scene": "Singing the days song in the Sunday room",
+        "sceneJa": "にちようびの へやで ようびの うた",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Let's sing the days song!",
+            "ja": "ようびの うたを うたおう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Monday, Tuesday, Wednesday, Thursday...",
+            "ja": "げつ、か、すい、もく…"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Friday, Saturday, Sunday!",
+            "ja": "きん、ど、にち！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Seven days in a week. Great! What day is it today?",
+            "ja": "1しゅうかんは 7にち。すごい！きょうは なんようび？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's Sunday! Sleep in! Zzz...",
+            "ja": "にちようび！ゆっくり ねよう！ぐーぐー…"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Help! Birimo is sleeping!",
+            "ja": "たすけて！ビリモが ねちゃった！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "7つの ようびを いって、What day is it? に It's ～. で こたえよう",
+          "starterEn": "Monday, Tuesday, Wednesday... What's next?",
+          "targetExpressions": [
+            "It's ～.",
+            "What day is it?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Friday・Saturday・Sunday を ならったね",
+          "1しゅうかん 7つの ようびを いえたよ",
+          "おわりの lp（help, gulp）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 133,
+      "world": 5,
+      "title": "I Like Mondays!",
+      "titleJa": "げつようびが すき！",
+      "school": {
+        "grade": "小4",
+        "topic": "すきな ようび",
+        "grammar": "I like Mondays. / Do you like ～? ― Yes, I do. / No, I don't.",
+        "expressions": [
+          {
+            "en": "I like Mondays.",
+            "ja": "げつようびが すき。",
+            "core": true
+          },
+          {
+            "en": "Do you like Fridays? ― Yes, I do.",
+            "ja": "きんようびは すき？ ― うん、すき。"
+          },
+          {
+            "en": "I play soccer on Mondays.",
+            "ja": "げつようびに サッカーを するよ。"
+          }
+        ],
+        "testPoints": [
+          "I like Mondays. のように ようびに s を つけて すきな ようびを いえる",
+          "Do you like ～? ― Yes, I do. / No, I don't. で こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Kick a ball.",
+          "ja": "ボールを けって。",
+          "action": "ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Play the piano.",
+          "ja": "ピアノを ひいて。",
+          "action": "ゆびで ピアノを ひく まね",
+          "emoji": "🎹"
+        },
+        {
+          "en": "Give a thumbs up.",
+          "ja": "いいね！の ポーズを して。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        },
+        {
+          "en": "Shake your head.",
+          "ja": "くびを よこに ふって。",
+          "action": "くびを よこに ふる",
+          "emoji": "🙅"
+        }
+      ],
+      "phonics": {
+        "rule": "plural",
+        "focus": [
+          "-s"
+        ],
+        "sounds": [],
+        "words": [
+          "cats",
+          "dogs",
+          "pens",
+          "bugs"
+        ],
+        "tipJa": "ふたつ いじょうの ときは おわりに s。cat → cats、dog → dogs。Mondays の s も おなじ！ cats は「ス」、dogs は「ズ」に ちかい おと。"
+      },
+      "vocab": [
+        {
+          "en": "piano",
+          "ja": "ピアノ",
+          "emoji": "🎹",
+          "core": true
+        },
+        {
+          "en": "soccer",
+          "ja": "サッカー",
+          "emoji": "⚽"
+        },
+        {
+          "en": "swimming",
+          "ja": "すいえい",
+          "emoji": "🏊"
+        },
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "⭐"
+        }
+      ],
+      "teacherScript": "すきな ようびは ある？ サッカーの ある げつようび？ ピアノの ある きんようび？ すきな ようびを いう ときは s を つけて「I like Mondays.」と いうよ。",
+      "conversation": {
+        "scene": "Talking about favorite days in the tower garden",
+        "sceneJa": "とうの にわで すきな ようびの はなし",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "I like Mondays. I play soccer on Mondays.",
+            "ja": "げつようびが すき。げつようびに サッカーを するんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Do you like Fridays, Riko?",
+            "ja": "リコ、きんようびは すき？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I do! I play the piano on Fridays. Do you like Mondays, Birimo?",
+            "ja": "うん、すき！きんようびに ピアノを ひくの。ビリモ、げつようびは すき？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, I don't. I like Sundays. Sleep, sleep, sleep!",
+            "ja": "ううん、すきじゃない。にちようびが すき。ねて、ねて、ねる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! I like Saturdays.",
+            "ja": "あはは！先生は どようびが すき。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな ようびを I like Mondays. の かたちで いおう（ようびの おわりに s）。Do you like ～? にも こたえてみよう",
+          "starterEn": "I like Mondays. I play soccer on Mondays. Do you like Mondays?",
+          "targetExpressions": [
+            "I like ～.",
+            "Yes, I do.",
+            "No, I don't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "すきな ようびを I like Mondays. と いえたね",
+          "Do you like Fridays? ― Yes, I do. で こたえられたよ",
+          "ふたつ いじょうの s（cats, dogs）を ならったよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 134,
+      "world": 5,
+      "title": "Let's Play on Saturday!",
+      "titleJa": "どようびに あそぼう！",
+      "school": {
+        "grade": "小4",
+        "topic": "ようびと よてい",
+        "grammar": "Let's play on ～. / Sorry. I have ～ on ～.",
+        "expressions": [
+          {
+            "en": "Let's play on Saturday.",
+            "ja": "どようびに あそぼう。",
+            "core": true
+          },
+          {
+            "en": "Sorry. I have swimming on Saturday.",
+            "ja": "ごめんね。どようびは すいえいが あるの。"
+          },
+          {
+            "en": "OK. Let's play on Sunday!",
+            "ja": "いいよ。にちようびに あそぼう！"
+          }
+        ],
+        "testPoints": [
+          "Let's play on ようび. で よていを きめられる",
+          "ことわる ときに Sorry. と いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write on the calendar.",
+          "ja": "カレンダーに かいて。",
+          "action": "ペンで かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Pack your bag.",
+          "ja": "かばんに つめて。",
+          "action": "かばんに ものを いれる まね",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Turn on the lamps.",
+          "ja": "ランプを つけて。",
+          "action": "スイッチを おす まね",
+          "emoji": "💡"
+        },
+        {
+          "en": "Wrap the gifts.",
+          "ja": "プレゼントを つつんで。",
+          "action": "はこを つつむ まね",
+          "emoji": "🎁"
+        }
+      ],
+      "phonics": {
+        "rule": "plural",
+        "focus": [
+          "-s"
+        ],
+        "sounds": [],
+        "words": [
+          "nests",
+          "hands",
+          "lamps",
+          "gifts"
+        ],
+        "tipJa": "ブレンドの ことばにも s。nest → nests、lamp → lamps。おわりが 3つの おとに なるよ。ゆっくり ne-st-s！"
+      },
+      "vocab": [
+        {
+          "en": "calendar",
+          "ja": "カレンダー",
+          "emoji": "📅",
+          "core": true
+        },
+        {
+          "en": "weekend",
+          "ja": "しゅうまつ",
+          "emoji": "🎈"
+        },
+        {
+          "en": "today",
+          "ja": "きょう",
+          "emoji": "👉"
+        },
+        {
+          "en": "tomorrow",
+          "ja": "あした",
+          "emoji": "➡️"
+        }
+      ],
+      "teacherScript": "ともだちと いつ あそぶ？ ようびで よていを きめよう。「Let's play on Saturday.」 だめな ときは「Sorry.」と いって、ちがう ようびを いおう。",
+      "conversation": {
+        "scene": "Making a weekend plan on the tower calendar",
+        "sceneJa": "とうの カレンダーで しゅうまつの よていを きめる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Let's play on Saturday!",
+            "ja": "どようびに あそぼう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sorry. I have swimming on Saturday.",
+            "ja": "ごめんね。どようびは すいえいが あるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "OK. Let's play on Sunday!",
+            "ja": "いいよ。にちようびに あそぼう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, let's! Sunday is good.",
+            "ja": "うん、そうしよう！にちようびなら だいじょうぶ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's write it on the calendar. Sunday, play!",
+            "ja": "カレンダーに かこう。にちようび、あそぶ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ようびを えらんで Let's play on ～. で あそぶ よていを きめよう",
+          "starterEn": "Let's play this week! Let's play on Saturday!",
+          "targetExpressions": [
+            "Let's play on ～.",
+            "Yes, let's!",
+            "Sorry."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ようびで あそぶ よていを きめたね",
+          "Let's play on Saturday. と さそえたよ",
+          "nests・lamps！ ブレンドの ことばにも s が つけられたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 135,
+      "world": 5,
+      "title": "Our Weekly Schedule",
+      "titleJa": "1しゅうかんの よていひょう",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：1しゅうかんの よていひょう",
+        "grammar": "What day is it? / I like Mondays. / Let's ～ on ～.",
+        "expressions": [
+          {
+            "en": "It's Monday. I like Mondays.",
+            "ja": "げつようび。げつようびが すき。",
+            "core": true
+          },
+          {
+            "en": "What day is it? ― It's Wednesday.",
+            "ja": "なんようび？ ― すいようびだよ。"
+          },
+          {
+            "en": "Let's play soccer on Friday.",
+            "ja": "きんようびに サッカーを しよう。"
+          }
+        ],
+        "testPoints": [
+          "ようび・すきな ようび・よていを つなげて いえる",
+          "sk lp と ふたつ いじょうの s を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put a sticker on Monday.",
+          "ja": "げつようびに シールを はって。",
+          "action": "シールを はる まね",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Draw a ball on Friday.",
+          "ja": "きんようびに ボールの えを かいて。",
+          "action": "ゆびで まるを かく",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Read the days.",
+          "ja": "ようびを よんで。",
+          "action": "ゆびで なぞりながら よむ",
+          "emoji": "📖"
+        },
+        {
+          "en": "Help clean up.",
+          "ja": "かたづけを てつだって。",
+          "action": "ものを はこぶ まね",
+          "emoji": "🧹"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-sk",
+          "-lp",
+          "-s"
+        ],
+        "sounds": [],
+        "words": [
+          "desk",
+          "help",
+          "masks",
+          "cups"
+        ],
+        "tipJa": "ふりかえり！ de-sk、he-lp、そして s が つくと masks、cups。おわりの おとを よく きこう。"
+      },
+      "vocab": [
+        {
+          "en": "schedule",
+          "ja": "よていひょう",
+          "emoji": "🗓️",
+          "core": true
+        },
+        {
+          "en": "sticker",
+          "ja": "シール",
+          "emoji": "⭐"
+        },
+        {
+          "en": "class",
+          "ja": "クラス・じゅぎょう",
+          "emoji": "🏫"
+        },
+        {
+          "en": "club",
+          "ja": "クラブ",
+          "emoji": "🏅"
+        }
+      ],
+      "teacherScript": "きょうは まとめ。みんなで 1しゅうかんの よていひょうを つくろう。ようびを いって、すきな ようびと する ことを いおう。",
+      "conversation": {
+        "scene": "Making a weekly schedule on the tower wall",
+        "sceneJa": "とうの かべに 1しゅうかんの よていひょうを つくる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make our weekly schedule! What day is it today?",
+            "ja": "1しゅうかんの よていひょうを つくろう！きょうは なんようび？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's Monday. I like Mondays. Soccer day!",
+            "ja": "げつようび。げつようびが すき。サッカーの ひ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wednesday is piano day... no, Friday!",
+            "ja": "すいようびは ピアノの ひ…ちがう、きんようび！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Let's play cards on Sunday!",
+            "ja": "にちようびに トランプしよう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "A sticker on Sunday! Our schedule is done!",
+            "ja": "にちようびに シール！よていひょう かんせい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな ようびと その ひに する ことを いって、いっしょに よていひょうを つくろう",
+          "starterEn": "Let's make a schedule! I like Mondays. What day do you like?",
+          "targetExpressions": [
+            "I like ～.",
+            "It's ～.",
+            "Let's ～ on ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "1しゅうかんの よていひょうを つくれたね",
+          "ようび・すきな ようび・よていを つなげて いえたよ",
+          "sk・lp と s の ふりかえり、ばっちり！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 136,
+      "world": 5,
+      "title": "What Time Is It?",
+      "titleJa": "いま なんじ？",
+      "school": {
+        "grade": "小4",
+        "topic": "じこく（○じ）",
+        "grammar": "What time is it? ― It's ～ o'clock.",
+        "expressions": [
+          {
+            "en": "What time is it?",
+            "ja": "いま なんじ？",
+            "core": true
+          },
+          {
+            "en": "It's seven o'clock.",
+            "ja": "7じだよ。"
+          },
+          {
+            "en": "It's ten o'clock.",
+            "ja": "10じだよ。"
+          }
+        ],
+        "testPoints": [
+          "What time is it? と きける",
+          "It's ～ o'clock. で ○じ を こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a clock with your arms.",
+          "ja": "うでで とけいの はりを つくって。",
+          "action": "りょううでを とけいの はりに する",
+          "emoji": "🕐"
+        },
+        {
+          "en": "Tick tock, swing your arms.",
+          "ja": "チクタク うでを ふって。",
+          "action": "うでを ふりこのように ふる",
+          "emoji": "⏰"
+        },
+        {
+          "en": "Ring the bell.",
+          "ja": "ベルを ならして。",
+          "action": "ベルを ふる まね",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Point to seven.",
+          "ja": "7を ゆびさして。",
+          "action": "とけいの 7を ゆびさす",
+          "emoji": "7️⃣"
+        }
+      ],
+      "phonics": {
+        "rule": "ing",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "jumping",
+          "singing",
+          "resting",
+          "helping"
+        ],
+        "tipJa": "おわりに ing を つけると「〜している」。jump → jumping、sing → singing。ing は「イング」と つよく いわずに、はなに ぬける かるい おと！"
+      },
+      "vocab": [
+        {
+          "en": "clock",
+          "ja": "とけい",
+          "emoji": "🕰️",
+          "core": true
+        },
+        {
+          "en": "o'clock",
+          "ja": "〜じ（ちょうど）",
+          "emoji": "🕐"
+        },
+        {
+          "en": "time",
+          "ja": "じかん",
+          "emoji": "⏰"
+        },
+        {
+          "en": "bell",
+          "ja": "ベル",
+          "emoji": "🔔"
+        }
+      ],
+      "teacherScript": "じかんの塔の てっぺんには 大きな とけい。「What time is it?」「It's seven o'clock.」 ○じ ちょうどは o'clock と いうよ。とけいを みて こたえよう。",
+      "conversation": {
+        "scene": "The great clock at the top of the tower",
+        "sceneJa": "とうの てっぺんの 大きな とけい",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Wow, a big clock! What time is it?",
+            "ja": "わあ、大きな とけい！いま なんじ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's seven o'clock.",
+            "ja": "7じだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ding, dong! Ding, dong!",
+            "ja": "ディン ドン！ディン ドン！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look! The clock is jumping and singing!",
+            "ja": "みて！とけいが ジャンプして うたってる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's a magic clock. Now it's ten o'clock!",
+            "ja": "まほうの とけいね。もう 10じ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What time is it? と きいたり、It's ～ o'clock. で こたえたり しよう",
+          "starterEn": "Look at the big clock! What time is it?",
+          "targetExpressions": [
+            "What time is it?",
+            "It's ～ o'clock."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "とけいの ことば clock・o'clock を ならったね",
+          "What time is it? ― It's seven o'clock. と いえたよ",
+          "ing の ことば（jumping, singing）を よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 137,
+      "world": 5,
+      "title": "It's Breakfast Time!",
+      "titleJa": "あさごはんの じかん！",
+      "school": {
+        "grade": "小4",
+        "topic": "せいかつの じかん",
+        "grammar": "It's ～ time. (breakfast / lunch / dinner / bath)",
+        "expressions": [
+          {
+            "en": "It's breakfast time.",
+            "ja": "あさごはんの じかんだよ。",
+            "core": true
+          },
+          {
+            "en": "It's lunch time.",
+            "ja": "おひるごはんの じかん。"
+          },
+          {
+            "en": "It's bath time.",
+            "ja": "おふろの じかん。"
+          }
+        ],
+        "testPoints": [
+          "It's ～ time. で せいかつの じかんを いえる",
+          "breakfast / lunch / dinner を いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Eat your breakfast.",
+          "ja": "あさごはんを たべて。",
+          "action": "スプーンで たべる まね",
+          "emoji": "🍳"
+        },
+        {
+          "en": "Wash your hands.",
+          "ja": "てを あらって。",
+          "action": "てを ごしごし あらう まね",
+          "emoji": "🧼"
+        },
+        {
+          "en": "Get in the bath.",
+          "ja": "おふろに はいって。",
+          "action": "かたまで おゆに つかる まね",
+          "emoji": "🛁"
+        },
+        {
+          "en": "Sit at the table.",
+          "ja": "テーブルに すわって。",
+          "action": "いすに すわる まね",
+          "emoji": "🪑"
+        }
+      ],
+      "phonics": {
+        "rule": "ing",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "running",
+          "sitting",
+          "swimming",
+          "hopping"
+        ],
+        "tipJa": "run → running、sit → sitting。みじかい ことばは おわりの もじを もう1つ ふやして ing！ swi-mm-ing。"
+      },
+      "vocab": [
+        {
+          "en": "breakfast",
+          "ja": "あさごはん",
+          "emoji": "🍳",
+          "core": true
+        },
+        {
+          "en": "lunch",
+          "ja": "おひるごはん",
+          "emoji": "🍱"
+        },
+        {
+          "en": "dinner",
+          "ja": "ばんごはん",
+          "emoji": "🍛"
+        },
+        {
+          "en": "bath",
+          "ja": "おふろ",
+          "emoji": "🛁"
+        }
+      ],
+      "teacherScript": "1日には いろいろな じかんが あるね。あさごはん、おひるごはん、ばんごはん、おふろ。「It's breakfast time.」のように いうよ。",
+      "conversation": {
+        "scene": "The tower clock rings for each part of the day",
+        "sceneJa": "とうの とけいが じかんごとに なる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Ding! It's seven o'clock!",
+            "ja": "ディン！7じだよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's breakfast time. I'm running to the table!",
+            "ja": "あさごはんの じかん。テーブルへ はしってく！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Ding! It's twelve o'clock. It's lunch time.",
+            "ja": "ディン！12じ。おひるごはんの じかん。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Ding! It's six o'clock. It's dinner time.",
+            "ja": "ディン！6じ。ばんごはんの じかん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "And then it's bath time. Splash!",
+            "ja": "そして おふろの じかん。ばしゃーん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "とけいの じかんを きいて It's breakfast time. のように なんの じかんか いおう",
+          "starterEn": "Ding! It's seven o'clock in the morning!",
+          "targetExpressions": [
+            "It's ～ time.",
+            "It's ～ o'clock."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "breakfast・lunch・dinner・bath を ならったね",
+          "It's breakfast time. と いえたよ",
+          "running・swimming！ もじを ふやして ing を つけたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 138,
+      "world": 5,
+      "title": "Wake Up! It's Seven O'Clock!",
+      "titleJa": "おきて！7じだよ！",
+      "school": {
+        "grade": "小4",
+        "topic": "1日の はじまりと おわり",
+        "grammar": "It's ～ o'clock. Wake up! / It's bedtime. Good night.",
+        "expressions": [
+          {
+            "en": "It's seven o'clock.",
+            "ja": "7じだよ。",
+            "core": true
+          },
+          {
+            "en": "Wake up!",
+            "ja": "おきて！"
+          },
+          {
+            "en": "It's bedtime. Good night.",
+            "ja": "ねる じかん。おやすみ。"
+          }
+        ],
+        "testPoints": [
+          "It's ～ o'clock. を かいたり いったり できる",
+          "Wake up! / It's bedtime. を いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wake up and stretch.",
+          "ja": "おきて のびを して。",
+          "action": "ねた ところから おきて のび",
+          "emoji": "🙆"
+        },
+        {
+          "en": "Brush your teeth.",
+          "ja": "はを みがいて。",
+          "action": "はブラシで みがく まね",
+          "emoji": "🪥"
+        },
+        {
+          "en": "Put on your pajamas.",
+          "ja": "パジャマを きて。",
+          "action": "ふくを きる まね",
+          "emoji": "👕"
+        },
+        {
+          "en": "Turn off the light.",
+          "ja": "でんきを けして。",
+          "action": "スイッチを パチン",
+          "emoji": "💡"
+        }
+      ],
+      "phonics": {
+        "rule": "ing",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "camping",
+          "fishing",
+          "drinking",
+          "standing"
+        ],
+        "tipJa": "おわりが ブレンドや ダイグラフの ことばにも ing。camp → camping、fish → fishing、drink → drinking。そのまま ing を くっつけよう！"
+      },
+      "vocab": [
+        {
+          "en": "bedtime",
+          "ja": "ねる じかん",
+          "emoji": "🛏️",
+          "core": true
+        },
+        {
+          "en": "alarm clock",
+          "ja": "めざましどけい",
+          "emoji": "⏰"
+        },
+        {
+          "en": "pajamas",
+          "ja": "パジャマ",
+          "emoji": "👕"
+        },
+        {
+          "en": "toothbrush",
+          "ja": "はブラシ",
+          "emoji": "🪥"
+        }
+      ],
+      "teacherScript": "あさ 7じ、めざましが なったら「Wake up! It's seven o'clock.」。よるに なったら「It's bedtime. Good night.」。1日の はじまりと おわりの ことばだよ。",
+      "conversation": {
+        "scene": "Morning and night in the tower bedroom",
+        "sceneJa": "とうの しんしつの あさと よる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Ring, ring! Wake up! It's seven o'clock!",
+            "ja": "リンリン！おきて！7じだよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Five more minutes...",
+            "ja": "あと 5ふん…"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Good morning, Haru! Wake up! It's breakfast time!",
+            "ja": "ハル、おはよう！おきて！あさごはんの じかんだよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Now it's nine o'clock at night. It's bedtime.",
+            "ja": "いまは よるの 9じ。ねる じかん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Brush your teeth. Good night, everyone.",
+            "ja": "はを みがいてね。みんな、おやすみ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Wake up! / It's ～ o'clock. / It's bedtime. を つかって あさと よるの やりとりを しよう",
+          "starterEn": "Ring, ring! Wake up! It's seven o'clock!",
+          "targetExpressions": [
+            "It's ～ o'clock.",
+            "Good morning.",
+            "Good night."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "あさの Wake up! と よるの It's bedtime. を ならったね",
+          "It's seven o'clock. と いえたよ",
+          "camping・fishing など ing の ことばを よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 139,
+      "world": 5,
+      "title": "What Time Is It in London?",
+      "titleJa": "せかいは いま なんじ？",
+      "school": {
+        "grade": "小4",
+        "topic": "せかいの じこく",
+        "grammar": "What time is it in ～? ― It's ～ o'clock. / It's morning in ～.",
+        "expressions": [
+          {
+            "en": "It's morning in Tokyo.",
+            "ja": "とうきょうは あさだよ。",
+            "core": true
+          },
+          {
+            "en": "What time is it in London?",
+            "ja": "ロンドンは いま なんじ？"
+          },
+          {
+            "en": "It's night in London.",
+            "ja": "ロンドンは よるだよ。"
+          }
+        ],
+        "testPoints": [
+          "What time is it in ～? と きける",
+          "じこくと あさ・よるを こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spin around the world.",
+          "ja": "せかいを ぐるっと まわって。",
+          "action": "その ばで 1かい まわる",
+          "emoji": "🌍"
+        },
+        {
+          "en": "Say good morning to Tokyo.",
+          "ja": "とうきょうに おはよう。",
+          "action": "げんきに てを ふる",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Say good night to London.",
+          "ja": "ロンドンに おやすみ。",
+          "action": "てを あわせて ほっぺに",
+          "emoji": "🌙"
+        },
+        {
+          "en": "Yawn.",
+          "ja": "あくびを して。",
+          "action": "くちを おおきく あけて あくび",
+          "emoji": "🥱"
+        }
+      ],
+      "phonics": {
+        "rule": "ing",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "getting",
+          "digging",
+          "shopping",
+          "spinning"
+        ],
+        "tipJa": "get → getting、dig → digging、shop → shopping。みじかい ことばは もじを ふやして ing。shopping の さいしょの sh も わすれずに！"
+      },
+      "vocab": [
+        {
+          "en": "Tokyo",
+          "ja": "とうきょう",
+          "emoji": "🗼",
+          "core": true
+        },
+        {
+          "en": "London",
+          "ja": "ロンドン",
+          "emoji": "🇬🇧"
+        },
+        {
+          "en": "New York",
+          "ja": "ニューヨーク",
+          "emoji": "🗽"
+        },
+        {
+          "en": "Sydney",
+          "ja": "シドニー",
+          "emoji": "🦘"
+        }
+      ],
+      "teacherScript": "せかいは ひろい！ とうきょうが あさ 8じの とき、ロンドンは よるの 11じ。せかいの とけいを みて「What time is it in London?」と きいてみよう。",
+      "conversation": {
+        "scene": "The world clocks room in the tower",
+        "sceneJa": "とうの せかいの とけいの へや",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look at the world clocks. It's eight o'clock in Tokyo. It's morning in Tokyo.",
+            "ja": "せかいの とけいを みて。とうきょうは 8じ。とうきょうは あさ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What time is it in London?",
+            "ja": "ロンドンは いま なんじ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's eleven o'clock. It's night in London!",
+            "ja": "11じ。ロンドンは よる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What time is it in New York?",
+            "ja": "ニューヨークは いま なんじ？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's six o'clock. It's dinner time in New York!",
+            "ja": "6じ。ニューヨークは ばんごはんの じかん！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And Sydney? It's ten o'clock. Good morning, Sydney!",
+            "ja": "シドニーは？10じ。おはよう、シドニー！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "せかいの とけいを みて What time is it in ～? と きいたり こたえたり しよう",
+          "starterEn": "It's eight o'clock in Tokyo. It's morning! What time is it in London?",
+          "targetExpressions": [
+            "What time is it?",
+            "It's ～ o'clock."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "せかいでは じかんが ちがうと しったね",
+          "It's morning in Tokyo. / It's night in London. と いえたよ",
+          "getting・shopping など ing の ことばを よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 140,
+      "world": 5,
+      "title": "World Clock Quiz",
+      "titleJa": "せかいの とけい クイズ",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：じこくと せいかつ",
+        "grammar": "What time is it? ― It's ～ o'clock. / It's ～ time.",
+        "expressions": [
+          {
+            "en": "It's snack time!",
+            "ja": "おやつの じかん！",
+            "core": true
+          },
+          {
+            "en": "What time is it? ― It's three o'clock.",
+            "ja": "なんじ？ ― 3じだよ。"
+          },
+          {
+            "en": "It's lunch time in Tokyo.",
+            "ja": "とうきょうは おひるごはんの じかん。"
+          }
+        ],
+        "testPoints": [
+          "What time is it? と じこくの やりとりが できる",
+          "It's ～ time. で せいかつの じかんを いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Show three o'clock with your arms.",
+          "ja": "うでで 3じを つくって。",
+          "action": "かたうでを うえ、かたうでを よこ",
+          "emoji": "🕒"
+        },
+        {
+          "en": "Kick the ball.",
+          "ja": "ボールを けって。",
+          "action": "ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Eat a snack.",
+          "ja": "おやつを たべて。",
+          "action": "クッキーを たべる まね",
+          "emoji": "🍪"
+        },
+        {
+          "en": "Sit down.",
+          "ja": "すわって。",
+          "action": "その ばに すわる",
+          "emoji": "🪑"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "kicking",
+          "running",
+          "swimming",
+          "singing"
+        ],
+        "tipJa": "ふりかえり！ kick → kicking、run → running、swim → swimming、sing → singing。もじを ふやすのは どれかな？"
+      },
+      "vocab": [
+        {
+          "en": "snack",
+          "ja": "おやつ",
+          "emoji": "🍪",
+          "core": true
+        },
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "❓"
+        },
+        {
+          "en": "minute",
+          "ja": "ふん",
+          "emoji": "⏱️"
+        },
+        {
+          "en": "now",
+          "ja": "いま",
+          "emoji": "👉"
+        }
+      ],
+      "teacherScript": "きょうは まとめ。せかいの とけい クイズ！ とけいを みて なんじか こたえて、なんの じかんか いおう。3じは…おやつの じかん！",
+      "conversation": {
+        "scene": "The world clock quiz show in the tower",
+        "sceneJa": "とうの せかいの とけい クイズショー",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Quiz time! Look at the clock. What time is it?",
+            "ja": "クイズ タイム！とけいを みて。なんじ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's three o'clock! It's snack time!",
+            "ja": "3じ！おやつの じかん！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Right! Next! It's twelve o'clock in Tokyo.",
+            "ja": "せいかい！つぎ！とうきょうは 12じ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's lunch time in Tokyo!",
+            "ja": "とうきょうは おひるごはんの じかん！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And in London, it's three o'clock at night. It's bedtime!",
+            "ja": "ロンドンは よなかの 3じ。ねる じかん！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job! Let's have a snack.",
+            "ja": "よく できました！おやつに しよう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "とけいクイズに It's ～ o'clock. で こたえて、It's ～ time. で なんの じかんか いおう",
+          "starterEn": "Quiz time! Look at the clock. What time is it?",
+          "targetExpressions": [
+            "It's ～ o'clock.",
+            "It's ～ time."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "せかいの とけい クイズに こたえられたね",
+          "It's three o'clock. It's snack time! と いえたよ",
+          "ing の ことばの ふりかえり、ばっちり！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 141,
+      "world": 5,
+      "title": "Do You Have a Pen?",
+      "titleJa": "ペン もってる？",
+      "school": {
+        "grade": "小4",
+        "topic": "ぶんぼうぐ",
+        "grammar": "Do you have ～? ― Yes, I do. / No, I don't.",
+        "expressions": [
+          {
+            "en": "Do you have a pen?",
+            "ja": "ペン もってる？",
+            "core": true
+          },
+          {
+            "en": "Yes, I do.",
+            "ja": "うん、もってるよ。"
+          },
+          {
+            "en": "No, I don't.",
+            "ja": "ううん、もってない。"
+          }
+        ],
+        "testPoints": [
+          "Do you have ～? と きける",
+          "Yes, I do. / No, I don't. で こたえられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your pen.",
+          "ja": "ペンを もちあげて。",
+          "action": "ペンを たかく あげる",
+          "emoji": "🖊️"
+        },
+        {
+          "en": "Open your pencil case.",
+          "ja": "ふでばこを あけて。",
+          "action": "ふでばこを あける まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Put your eraser on the desk.",
+          "ja": "けしゴムを つくえに おいて。",
+          "action": "つくえに そっと おく",
+          "emoji": "⬜"
+        },
+        {
+          "en": "Draw a line with your ruler.",
+          "ja": "じょうぎで せんを ひいて。",
+          "action": "じょうぎを あてて まっすぐ ひく まね",
+          "emoji": "📏"
+        }
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": [
+          "pic-nic",
+          "rab-bit",
+          "nap-kin",
+          "kit-ten"
+        ],
+        "sounds": [],
+        "words": [
+          "picnic",
+          "rabbit",
+          "napkin",
+          "kitten"
+        ],
+        "tipJa": "ながい ことばは 2つに わけて よもう。pic と nic、rab と bit。rabbit の b は 2つ でも おとは 1つ！"
+      },
+      "vocab": [
+        {
+          "en": "pen",
+          "ja": "ペン",
+          "emoji": "🖊️",
+          "core": true
+        },
+        {
+          "en": "pencil",
+          "ja": "えんぴつ",
+          "emoji": "✏️"
+        },
+        {
+          "en": "eraser",
+          "ja": "けしゴム",
+          "emoji": "⬜"
+        },
+        {
+          "en": "ruler",
+          "ja": "じょうぎ",
+          "emoji": "📏"
+        }
+      ],
+      "teacherScript": "ワールド5の つぎの テーマは ぶんぼうぐ。ペン、えんぴつ、けしゴム、じょうぎ。「Do you have a pen?」と きかれたら「Yes, I do.」か「No, I don't.」で こたえよう。",
+      "conversation": {
+        "scene": "Drawing time in the tower art room",
+        "sceneJa": "とうの ずこうしつで おえかきの じかん",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "I want to draw a rabbit. Do you have a pen?",
+            "ja": "うさぎを かきたいな。ペン もってる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, I do. Here you are.",
+            "ja": "うん、もってるよ。はい どうぞ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thank you! Do you have an eraser?",
+            "ja": "ありがとう！けしゴム もってる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No, I don't. Sorry.",
+            "ja": "ううん、もってない。ごめんね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I have an eraser. Here you are!",
+            "ja": "わたし もってるよ。はい どうぞ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What a cute rabbit!",
+            "ja": "かわいい うさぎ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Do you have ～? で ぶんぼうぐを かりたり、Yes, I do. / No, I don't. で こたえたり しよう",
+          "starterEn": "I want to draw a picture. Do you have a pen?",
+          "targetExpressions": [
+            "Do you have ～?",
+            "Yes, I do.",
+            "No, I don't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ぶんぼうぐの ことばを ならったね",
+          "Do you have a pen? ― Yes, I do. と いえたよ",
+          "pic-nic、rab-bit！ 2つに わけて よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 142,
+      "world": 5,
+      "title": "I Have a Ruler.",
+      "titleJa": "じょうぎ もってるよ",
+      "school": {
+        "grade": "小4",
+        "topic": "もっている ぶんぼうぐ",
+        "grammar": "I have ～. / I don't have ～.",
+        "expressions": [
+          {
+            "en": "I have a ruler.",
+            "ja": "じょうぎを もってるよ。",
+            "core": true
+          },
+          {
+            "en": "I don't have scissors.",
+            "ja": "はさみは もってない。"
+          },
+          {
+            "en": "Do you have a glue stick? ― Yes, I do.",
+            "ja": "のり もってる？ ― うん、もってる。"
+          }
+        ],
+        "testPoints": [
+          "I have ～. で もっている ものを いえる",
+          "I don't have ～. で もっていない ものを いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Cut the paper.",
+          "ja": "かみを きって。",
+          "action": "ゆびで はさみの まね",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Glue the star.",
+          "ja": "ほしを のりで はって。",
+          "action": "のりを ぬって はる まね",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Color with a marker.",
+          "ja": "マーカーで ぬって。",
+          "action": "ぐるぐる ぬる まね",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "Close your notebook.",
+          "ja": "ノートを とじて。",
+          "action": "りょうてで パタンと とじる",
+          "emoji": "📓"
+        }
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": [
+          "mag-net",
+          "bas-ket",
+          "pup-pet",
+          "muf-fin"
+        ],
+        "sounds": [],
+        "words": [
+          "magnet",
+          "basket",
+          "puppet",
+          "muffin"
+        ],
+        "tipJa": "mag-net、bas-ket、pup-pet、muf-fin。2つに わけると かんたん！ どれも みじかい 母音が 2つ。"
+      },
+      "vocab": [
+        {
+          "en": "scissors",
+          "ja": "はさみ",
+          "emoji": "✂️",
+          "core": true
+        },
+        {
+          "en": "glue stick",
+          "ja": "スティックのり",
+          "emoji": "🧴"
+        },
+        {
+          "en": "marker",
+          "ja": "マーカー",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "notebook",
+          "ja": "ノート",
+          "emoji": "📓"
+        }
+      ],
+      "teacherScript": "きょうは もっている ものを いう れんしゅう。「I have a ruler.」 もっていない ときは「I don't have scissors.」。ずこうの じゅんびを しよう！",
+      "conversation": {
+        "scene": "Getting ready to make puppets",
+        "sceneJa": "パペットづくりの じゅんび",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make puppets! Do you have scissors?",
+            "ja": "パペットを つくろう！はさみ もってる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I do. I have scissors and a glue stick.",
+            "ja": "うん。はさみと のりを もってる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I have a ruler. I don't have scissors.",
+            "ja": "じょうぎは もってる。はさみは もってない。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's use my scissors together.",
+            "ja": "わたしの はさみを いっしょに つかおう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I have a marker! Let's draw a face.",
+            "ja": "ぼく マーカー もってる！かおを かこう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My puppet is a rabbit!",
+            "ja": "わたしの パペットは うさぎ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I have ～. / I don't have ～. で もっている ぶんぼうぐを つたえよう",
+          "starterEn": "Let's make puppets! I have scissors. Do you have a glue stick?",
+          "targetExpressions": [
+            "I have ～.",
+            "I don't have ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "はさみ・のり・マーカー・ノートを ならったね",
+          "I have a ruler. / I don't have scissors. と いえたよ",
+          "mag-net、bas-ket！ 2つに わけて よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 143,
+      "world": 5,
+      "title": "My Pencil Case",
+      "titleJa": "わたしの ふでばこ",
+      "school": {
+        "grade": "小4",
+        "topic": "ふでばこの なか",
+        "grammar": "This is my pencil case. / I have ～. / What's in your ～?",
+        "expressions": [
+          {
+            "en": "This is my pencil case.",
+            "ja": "これが わたしの ふでばこ。",
+            "core": true
+          },
+          {
+            "en": "I have a pencil and an eraser.",
+            "ja": "えんぴつと けしゴムを もってる。"
+          },
+          {
+            "en": "What's in your pencil case?",
+            "ja": "ふでばこに なにが はいってる？"
+          }
+        ],
+        "testPoints": [
+          "This is my ～. で じぶんの ものを しょうかいできる",
+          "I have ～. で なかみを いえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Zip up your pencil case.",
+          "ja": "ふでばこの チャックを しめて。",
+          "action": "チャックを しめる まね",
+          "emoji": "👝"
+        },
+        {
+          "en": "Sharpen your pencil.",
+          "ja": "えんぴつを けずって。",
+          "action": "えんぴつけずりを まわす まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Show me your pencil case.",
+          "ja": "ふでばこを みせて。",
+          "action": "りょうてで まえに だす",
+          "emoji": "👀"
+        },
+        {
+          "en": "Put it in your bag.",
+          "ja": "かばんに いれて。",
+          "action": "かばんに しまう まね",
+          "emoji": "🎒"
+        }
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": [
+          "den-tist",
+          "in-sect",
+          "cac-tus",
+          "gob-lin"
+        ],
+        "sounds": [],
+        "words": [
+          "dentist",
+          "insect",
+          "cactus",
+          "goblin"
+        ],
+        "tipJa": "den-tist、in-sect、cac-tus、gob-lin。dentist の おわりには ならった st が かくれてるね！"
+      },
+      "vocab": [
+        {
+          "en": "pencil case",
+          "ja": "ふでばこ",
+          "emoji": "👝",
+          "core": true
+        },
+        {
+          "en": "pencil sharpener",
+          "ja": "えんぴつけずり",
+          "emoji": "✏️"
+        },
+        {
+          "en": "crayon",
+          "ja": "クレヨン",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "stapler",
+          "ja": "ホッチキス",
+          "emoji": "📎"
+        }
+      ],
+      "teacherScript": "きょうは ふでばこの しょうかい。「This is my pencil case.」「I have a pencil and an eraser.」 ともだちには「What's in your pencil case?」と きいてみよう。",
+      "conversation": {
+        "scene": "Showing pencil cases in class",
+        "sceneJa": "きょうしつで ふでばこを みせあう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "This is my pencil case. It's a cactus!",
+            "ja": "これが わたしの ふでばこ。サボテンなの！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "So cute! What's in your pencil case?",
+            "ja": "かわいい！なにが はいってる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I have a pencil and an eraser.",
+            "ja": "えんぴつと けしゴム。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This is my pencil case. It's an insect! A beetle!",
+            "ja": "これが ぼくの ふでばこ。むし！カブトムシ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Wow! I have crayons in my pencil case.",
+            "ja": "わあ！ぼくの ふでばこには クレヨンが はいってる。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの ふでばこ（えでも OK）を This is my pencil case. I have ～. で しょうかいしよう",
+          "starterEn": "This is my pencil case. I have a pencil and an eraser. What's in your pencil case?",
+          "targetExpressions": [
+            "This is my ～.",
+            "I have ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ふでばこの なかの ことばを ならったね",
+          "This is my pencil case. I have ～. と しょうかい できたよ",
+          "den-tist、cac-tus！ 2つに わけて よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 144,
+      "world": 5,
+      "title": "How Many Pencils?",
+      "titleJa": "えんぴつ なんぼん？",
+      "school": {
+        "grade": "小4",
+        "topic": "ぶんぼうぐと かず",
+        "grammar": "How many ～? ― I have three pencils.",
+        "expressions": [
+          {
+            "en": "I have three pencils.",
+            "ja": "えんぴつを 3ぼん もってる。",
+            "core": true
+          },
+          {
+            "en": "How many crayons? ― Twelve!",
+            "ja": "クレヨン なんぼん？ ― 12ほん！"
+          },
+          {
+            "en": "Do you have markers? ― Yes, I do.",
+            "ja": "マーカー もってる？ ― うん。"
+          }
+        ],
+        "testPoints": [
+          "I have three pencils. のように かずと ふたつ いじょうの s で いえる",
+          "How many ～? と きける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Count your pencils.",
+          "ja": "えんぴつを かぞえて。",
+          "action": "ゆびで 1ぽんずつ かぞえる",
+          "emoji": "🔢"
+        },
+        {
+          "en": "Line up the crayons.",
+          "ja": "クレヨンを ならべて。",
+          "action": "よこに ならべる まね",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "Put a pencil in your pocket.",
+          "ja": "ポケットに えんぴつを いれて。",
+          "action": "ポケットに いれる まね",
+          "emoji": "👖"
+        },
+        {
+          "en": "Hold up three fingers.",
+          "ja": "ゆびで 3を だして。",
+          "action": "ゆびを 3ぼん たてる",
+          "emoji": "🤟"
+        }
+      ],
+      "phonics": {
+        "rule": "syllable",
+        "focus": [
+          "pump-kin",
+          "plas-tic",
+          "pock-et",
+          "hel-met"
+        ],
+        "sounds": [],
+        "words": [
+          "pumpkin",
+          "plastic",
+          "pocket",
+          "helmet"
+        ],
+        "tipJa": "pump-kin、plas-tic、pock-et、hel-met。pump の mp、plas の pl、pock の ck。ならった つづりが いっぱい！"
+      },
+      "vocab": [
+        {
+          "en": "pencils",
+          "ja": "えんぴつ（2ほん いじょう）",
+          "emoji": "✏️",
+          "core": true
+        },
+        {
+          "en": "crayons",
+          "ja": "クレヨン（たくさん）",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "pocket",
+          "ja": "ポケット",
+          "emoji": "👖"
+        },
+        {
+          "en": "pumpkin",
+          "ja": "かぼちゃ",
+          "emoji": "🎃"
+        }
+      ],
+      "teacherScript": "ぶんぼうぐを かぞえよう。「How many pencils?」「I have three pencils.」 ふたつ いじょうの ときは ことばの おわりに s を わすれずに！",
+      "conversation": {
+        "scene": "Counting supplies for the class pumpkin pictures",
+        "sceneJa": "クラスの かぼちゃの えの じゅんびで ぶんぼうぐを かぞえる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's draw pumpkins! How many pencils do you have?",
+            "ja": "かぼちゃを かこう！えんぴつ なんぼん もってる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I have three pencils.",
+            "ja": "3ぼん もってる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "How many crayons, Riko?",
+            "ja": "リコ、クレヨンは なんぼん？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Twelve! Orange, yellow, green...",
+            "ja": "12ほん！オレンジ、きいろ、みどり…"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I have one pencil... in my pocket!",
+            "ja": "ぼくは 1ぽん…ポケットの なかに！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "How many ～? と きいたり、I have ～. で かずと いっしょに こたえたり しよう（ふたつ いじょうは s を つける）",
+          "starterEn": "Let's draw pumpkins! I have three pencils. How many pencils do you have?",
+          "targetExpressions": [
+            "I have ～.",
+            "How many ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ぶんぼうぐを かずと いっしょに いえたね",
+          "I have three pencils. の s を わすれなかったよ",
+          "pump-kin、hel-met！ 2つに わけて よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 145,
+      "world": 5,
+      "title": "Stationery Swap",
+      "titleJa": "ぶんぼうぐの かしかり",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：ぶんぼうぐの かしかり",
+        "grammar": "Do you have ～? ― Yes, I do. Here you are. / No, I don't. Sorry.",
+        "expressions": [
+          {
+            "en": "Do you have a red pen?",
+            "ja": "あかい ペン もってる？",
+            "core": true
+          },
+          {
+            "en": "Yes, I do. Here you are.",
+            "ja": "うん、もってる。はい どうぞ。"
+          },
+          {
+            "en": "No, I don't. Sorry.",
+            "ja": "ううん、もってない。ごめんね。"
+          }
+        ],
+        "testPoints": [
+          "Do you have ～? で かしかりの やりとりが できる",
+          "いろ＋ぶんぼうぐで いえる（a red pen）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pass the scissors carefully.",
+          "ja": "はさみを ていねいに わたして。",
+          "action": "もちてを あいてに むけて わたす",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Say thank you and bow.",
+          "ja": "ありがとうと いって おじぎ。",
+          "action": "ぺこりと おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Give it back.",
+          "ja": "かえして。",
+          "action": "りょうてで かえす まね",
+          "emoji": "🔁"
+        },
+        {
+          "en": "Draw a rabbit.",
+          "ja": "うさぎを かいて。",
+          "action": "ゆびで くうちゅうに うさぎを かく",
+          "emoji": "🐰"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "pic-nic",
+          "rab-bit",
+          "mag-net",
+          "pump-kin"
+        ],
+        "sounds": [],
+        "words": [
+          "picnic",
+          "rabbit",
+          "magnet",
+          "pumpkin"
+        ],
+        "tipJa": "ふりかえり！ pic-nic、rab-bit、mag-net、pump-kin。ながい ことばも 2つに わければ こわくない！"
+      },
+      "vocab": [
+        {
+          "en": "red pen",
+          "ja": "あかい ペン",
+          "emoji": "🖊️",
+          "core": true
+        },
+        {
+          "en": "blue pencil",
+          "ja": "あおい えんぴつ",
+          "emoji": "✏️"
+        },
+        {
+          "en": "yellow marker",
+          "ja": "きいろの マーカー",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "magnet",
+          "ja": "じしゃく",
+          "emoji": "🧲"
+        }
+      ],
+      "teacherScript": "きょうは まとめ。ぶんぼうぐの かしかりを しよう。「Do you have a red pen?」 もっていたら「Yes, I do. Here you are.」 かりたら「Thank you!」、かえす ときも わすれずに！",
+      "conversation": {
+        "scene": "Making a picnic poster together and sharing supplies",
+        "sceneJa": "みんなで ピクニックの ポスターを つくって ぶんぼうぐを かしかり",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's make a picnic poster!",
+            "ja": "ピクニックの ポスターを つくろう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Do you have a red pen, Riko?",
+            "ja": "リコ、あかい ペン もってる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I do. Here you are.",
+            "ja": "うん、もってる。はい どうぞ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you!",
+            "ja": "ありがとう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Do you have a yellow marker, Birimo?",
+            "ja": "ビリモ、きいろの マーカー もってる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, I don't. Sorry. But I have a magnet!",
+            "ja": "ううん、もってない。ごめんね。でも じしゃくは あるよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Do you have a red pen? のように いろと ぶんぼうぐで かしかりの やりとりを しよう",
+          "starterEn": "Let's make a poster! Do you have a red pen?",
+          "targetExpressions": [
+            "Do you have ～?",
+            "Yes, I do.",
+            "No, I don't.",
+            "Here you are."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ぶんぼうぐの かしかりが できたね",
+          "Do you have a red pen? ― Yes, I do. Here you are. と いえたよ",
+          "2つに わけて よむ ことばの ふりかえり、ばっちり！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 146,
+      "world": 5,
+      "title": "My Morning",
+      "titleJa": "わたしの あさ",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：1日の くらし（あさ）",
+        "grammar": "Good morning. / It's ～ o'clock. / It's breakfast time. / How's the weather?",
+        "expressions": [
+          {
+            "en": "Good morning. It's breakfast time.",
+            "ja": "おはよう。あさごはんの じかん。",
+            "core": true
+          },
+          {
+            "en": "It's seven o'clock. Wake up!",
+            "ja": "7じだよ。おきて！"
+          },
+          {
+            "en": "How's the weather? ― It's sunny.",
+            "ja": "てんきは どう？ ― はれ。"
+          }
+        ],
+        "testPoints": [
+          "あさの ようすを じこく・あいさつ・てんきで しょうかいできる",
+          "はじめと おわりに ブレンドの ある ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the curtains.",
+          "ja": "カーテンを あけて。",
+          "action": "りょうてで カーテンを ひらく",
+          "emoji": "🪟"
+        },
+        {
+          "en": "Make your bed.",
+          "ja": "ベッドを ととのえて。",
+          "action": "ふとんを なおす まね",
+          "emoji": "🛏️"
+        },
+        {
+          "en": "Stamp your feet.",
+          "ja": "あしを ドンドン ならして。",
+          "action": "その ばで あしぶみ",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Stand up straight.",
+          "ja": "まっすぐ たって。",
+          "action": "せすじを のばして たつ",
+          "emoji": "🧍"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-st",
+          "-nd",
+          "-mp"
+        ],
+        "sounds": [],
+        "words": [
+          "stamp",
+          "blend",
+          "crust",
+          "stand"
+        ],
+        "tipJa": "はじめも おわりも ブレンド！ st-a-mp、bl-e-nd、cr-u-st、st-a-nd。まんなかの みじかい 母音を はさんで よもう。"
+      },
+      "vocab": [
+        {
+          "en": "bed",
+          "ja": "ベッド",
+          "emoji": "🛏️",
+          "core": true
+        },
+        {
+          "en": "curtain",
+          "ja": "カーテン",
+          "emoji": "🪟"
+        },
+        {
+          "en": "juice",
+          "ja": "ジュース",
+          "emoji": "🧃"
+        },
+        {
+          "en": "sunshine",
+          "ja": "ひざし",
+          "emoji": "☀️"
+        }
+      ],
+      "teacherScript": "ここからは ワールド5の まとめ。きょうは「わたしの あさ」を しょうかいしよう。じこく、あいさつ、てんき、あさごはん。ぜんぶ つなげられるかな？",
+      "conversation": {
+        "scene": "Haru's morning video diary",
+        "sceneJa": "ハルの あさの ビデオにっき",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Good morning! It's seven o'clock. Wake up, Birimo!",
+            "ja": "おはよう！7じだよ。ビリモ、おきて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Good morning... How's the weather?",
+            "ja": "おはよう…てんきは どう？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's sunny! Open the curtains!",
+            "ja": "はれ！カーテンを あけて！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Good morning! It's breakfast time. I like toast and juice.",
+            "ja": "おはよう！あさごはんの じかん。トーストと ジュースが すき。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a nice morning video!",
+            "ja": "すてきな あさの ビデオね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの あさを じこく・あいさつ・てんき・すきな あさごはんで しょうかいしよう",
+          "starterEn": "Good morning! It's seven o'clock. It's breakfast time! How's the weather?",
+          "targetExpressions": [
+            "Good morning.",
+            "It's ～ o'clock.",
+            "It's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "あさの ようすを つなげて しょうかい できたね",
+          "Good morning. It's breakfast time. と いえたよ",
+          "はじめも おわりも ブレンドの ことばを よめたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 147,
+      "world": 5,
+      "title": "My Afternoon",
+      "titleJa": "わたしの ごご",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：1日の くらし（ごご）",
+        "grammar": "Good afternoon. / It's three o'clock. It's snack time. / Let's play ～.",
+        "expressions": [
+          {
+            "en": "Good afternoon. Let's play soccer.",
+            "ja": "こんにちは。サッカーを しよう。",
+            "core": true
+          },
+          {
+            "en": "It's three o'clock. It's snack time.",
+            "ja": "3じ。おやつの じかん。"
+          },
+          {
+            "en": "Do you have a ball? ― Yes, I do.",
+            "ja": "ボール もってる？ ― うん。"
+          }
+        ],
+        "testPoints": [
+          "ごごの ようすを じこく・あそび・もちもので しょうかいできる",
+          "語末ブレンド nt ft sk を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Dribble the ball.",
+          "ja": "ボールを ドリブルして。",
+          "action": "あしで ちょんちょん ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Plant a flower.",
+          "ja": "はなを うえて。",
+          "action": "しゃがんで つちを かける まね",
+          "emoji": "🌱"
+        },
+        {
+          "en": "Drink some water.",
+          "ja": "みずを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "🚰"
+        },
+        {
+          "en": "Take a rest.",
+          "ja": "ひとやすみ して。",
+          "action": "すわって ふうっと いきを はく",
+          "emoji": "😌"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-nt",
+          "-ft",
+          "-sk"
+        ],
+        "sounds": [],
+        "words": [
+          "print",
+          "drift",
+          "flask",
+          "plant"
+        ],
+        "tipJa": "ふりかえり！ pr-i-nt、dr-i-ft、fl-a-sk、pl-a-nt。はじめの ブレンドと おわりの ブレンド、どっちも きこえるかな？"
+      },
+      "vocab": [
+        {
+          "en": "ball",
+          "ja": "ボール",
+          "emoji": "⚽",
+          "core": true
+        },
+        {
+          "en": "park",
+          "ja": "こうえん",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "flower",
+          "ja": "はな",
+          "emoji": "🌷"
+        },
+        {
+          "en": "water",
+          "ja": "みず",
+          "emoji": "💧"
+        }
+      ],
+      "teacherScript": "きょうは「わたしの ごご」。がっこうの あと、なにを する？ 3じは おやつ、そのあと あそぶ。「Good afternoon. Let's play soccer.」",
+      "conversation": {
+        "scene": "Riko's afternoon at the park",
+        "sceneJa": "リコの ごご、こうえんで",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Good afternoon! It's three o'clock. It's snack time.",
+            "ja": "こんにちは！3じ。おやつの じかん。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yummy cookies! Now let's play!",
+            "ja": "おいしい クッキー！さあ あそぼう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's play soccer. Do you have a ball?",
+            "ja": "サッカーしよう。ボール もってる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I do. Here you are!",
+            "ja": "うん、もってる。はい どうぞ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm tired. Let's take a rest and drink water.",
+            "ja": "つかれた。ひとやすみして みずを のもう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ごごに する ことを Good afternoon. / It's ～ o'clock. / Let's play ～. で しょうかいしよう",
+          "starterEn": "Good afternoon! It's three o'clock. It's snack time! Let's play after snack.",
+          "targetExpressions": [
+            "Good afternoon.",
+            "It's ～ o'clock.",
+            "Let's play ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ごごの ようすを つなげて しょうかい できたね",
+          "Good afternoon. Let's play soccer. と いえたよ",
+          "nt・ft・sk の ふりかえりも できたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 148,
+      "world": 5,
+      "title": "My Week",
+      "titleJa": "わたしの 1しゅうかん",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：わたしの 1しゅうかん",
+        "grammar": "I like Saturdays. / I play ～ on ～. / What day is it?",
+        "expressions": [
+          {
+            "en": "I like Saturdays.",
+            "ja": "どようびが すき。",
+            "core": true
+          },
+          {
+            "en": "I play tennis on Saturdays.",
+            "ja": "どようびに テニスを するよ。"
+          },
+          {
+            "en": "What day is it? ― It's Thursday.",
+            "ja": "なんようび？ ― もくようびだよ。"
+          }
+        ],
+        "testPoints": [
+          "すきな ようびと その ひに する ことを いえる",
+          "ふたつ いじょうの s と ing の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Swing the racket.",
+          "ja": "ラケットを ふって。",
+          "action": "テニスの ラケットを ふる まね",
+          "emoji": "🎾"
+        },
+        {
+          "en": "Jump three times.",
+          "ja": "3かい ジャンプ して。",
+          "action": "ぴょん ぴょん ぴょん",
+          "emoji": "🦘"
+        },
+        {
+          "en": "Dance to the music.",
+          "ja": "おんがくに あわせて おどって。",
+          "action": "じゆうに おどる",
+          "emoji": "💃"
+        },
+        {
+          "en": "Count to seven.",
+          "ja": "7まで かぞえて。",
+          "action": "ゆびを おって 7まで",
+          "emoji": "7️⃣"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-s",
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "stamps",
+          "gifts",
+          "jumping",
+          "swimming"
+        ],
+        "tipJa": "ふりかえり！ おわりに s で「ふたつ いじょう」、ing で「〜している」。stamps、gifts、jumping、swimming。"
+      },
+      "vocab": [
+        {
+          "en": "tennis",
+          "ja": "テニス",
+          "emoji": "🎾",
+          "core": true
+        },
+        {
+          "en": "dance",
+          "ja": "ダンス",
+          "emoji": "💃"
+        },
+        {
+          "en": "art",
+          "ja": "ずこう",
+          "emoji": "🎨"
+        },
+        {
+          "en": "music",
+          "ja": "おんがく",
+          "emoji": "🎵"
+        }
+      ],
+      "teacherScript": "きょうは「わたしの 1しゅうかん」。すきな ようびは？ その ひに なにを する？「I like Saturdays. I play tennis on Saturdays.」",
+      "conversation": {
+        "scene": "Kiko's weekly calendar presentation",
+        "sceneJa": "キコの 1しゅうかん カレンダー はっぴょう",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "This is my week. I like Saturdays.",
+            "ja": "これが わたしの 1しゅうかん。どようびが すき。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "What do you do on Saturdays?",
+            "ja": "どようびは なにを するの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I play tennis on Saturdays. And I like Wednesdays. Dance class!",
+            "ja": "どようびに テニスを するの。すいようびも すき。ダンスの ひ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I like Fridays. I have art on Fridays.",
+            "ja": "わたしは きんようびが すき。きんようびは ずこうが あるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I like every day!",
+            "ja": "ぼくは まいにち すき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな ようびと その ひに する ことを I like ～. / I play ～ on ～. で つたえよう",
+          "starterEn": "This is my week. I like Saturdays. I play tennis on Saturdays. What day do you like?",
+          "targetExpressions": [
+            "I like ～.",
+            "I play ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "わたしの 1しゅうかんを しょうかい できたね",
+          "I like Saturdays. I play tennis on Saturdays. と いえたよ",
+          "s と ing の ふりかえりも ばっちり！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 149,
+      "world": 5,
+      "title": "Ready for School!",
+      "titleJa": "がっこうの じゅんび",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：がっこうの じゅんび（ようび・じこく・もちもの）",
+        "grammar": "What day is it? / Do you have ～? / I have ～. / It's ～ o'clock.",
+        "expressions": [
+          {
+            "en": "I have a pencil and a ruler.",
+            "ja": "えんぴつと じょうぎを もってる。",
+            "core": true
+          },
+          {
+            "en": "It's Monday. Do you have your homework?",
+            "ja": "げつようびだよ。しゅくだい もった？"
+          },
+          {
+            "en": "It's eight o'clock. Let's go!",
+            "ja": "8じだ。いこう！"
+          }
+        ],
+        "testPoints": [
+          "ようび・じこく・もちものを つなげて がっこうの じゅんびが できる",
+          "nd lk lp と ing の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pack your pencil case.",
+          "ja": "ふでばこを かばんに いれて。",
+          "action": "かばんに しまう まね",
+          "emoji": "👝"
+        },
+        {
+          "en": "Check your bag.",
+          "ja": "かばんの なかを たしかめて。",
+          "action": "かばんの なかを のぞく",
+          "emoji": "🎒"
+        },
+        {
+          "en": "Put on your shoes.",
+          "ja": "くつを はいて。",
+          "action": "くつを はく まね",
+          "emoji": "👟"
+        },
+        {
+          "en": "Wave to your family.",
+          "ja": "かぞくに てを ふって。",
+          "action": "うしろを むいて てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-nd",
+          "-lk",
+          "-lp",
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "spend",
+          "milk",
+          "help",
+          "standing"
+        ],
+        "tipJa": "ふりかえり！ sp-e-nd、mi-lk、he-lp、そして stand に ing で standing。"
+      },
+      "vocab": [
+        {
+          "en": "school bag",
+          "ja": "ランドセル・がっこうの かばん",
+          "emoji": "🎒",
+          "core": true
+        },
+        {
+          "en": "shoes",
+          "ja": "くつ",
+          "emoji": "👟"
+        },
+        {
+          "en": "textbook",
+          "ja": "きょうかしょ",
+          "emoji": "📘"
+        },
+        {
+          "en": "homework",
+          "ja": "しゅくだい",
+          "emoji": "📝"
+        }
+      ],
+      "teacherScript": "きょうは がっこうの じゅんび。なんようび？ なんじ？ もちものは そろった？「I have a pencil and a ruler.」 じゅんびが できたら「Let's go!」",
+      "conversation": {
+        "scene": "Getting ready for school on Monday morning",
+        "sceneJa": "げつようびの あさ、がっこうの じゅんび",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "What day is it today?",
+            "ja": "きょうは なんようび？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's Monday! Do you have your homework, Kiko?",
+            "ja": "げつようび！キコ、しゅくだい もった？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, I do. I have a pencil and a ruler, too.",
+            "ja": "うん、もった。えんぴつと じょうぎも もってる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh no! I don't have my textbook!",
+            "ja": "たいへん！きょうかしょが ない！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Here it is! It's eight o'clock. Let's go!",
+            "ja": "ここに あったよ！8じだ。いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ようびと じこくを いって、Do you have ～? / I have ～. で もちものを たしかめよう",
+          "starterEn": "Good morning! It's Monday. Do you have your pencil case?",
+          "targetExpressions": [
+            "Do you have ～?",
+            "I have ～.",
+            "Yes, I do."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ようび・じこく・もちものを つなげて じゅんび できたね",
+          "I have a pencil and a ruler. と いえたよ",
+          "nd・lk・lp と ing の ふりかえりも できたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 150,
+      "world": 5,
+      "title": "World 5 Grand Review",
+      "titleJa": "ワールド5 そうふくしゅう",
+      "school": {
+        "grade": "小4",
+        "topic": "まとめ：わたしの 1しゅうかん はっぴょうかい（ワールド5 ぜんぶ）",
+        "grammar": "Good morning. / How's the weather? / What day is it? / What time is it? / Do you have ～?",
+        "expressions": [
+          {
+            "en": "It's Sunday. Let's play tag!",
+            "ja": "にちようびだ。おにごっこ しよう！",
+            "core": true
+          },
+          {
+            "en": "What time is it? ― It's ten o'clock.",
+            "ja": "なんじ？ ― 10じだよ。"
+          },
+          {
+            "en": "Do you have a pen? ― Yes, I do.",
+            "ja": "ペン もってる？ ― うん。"
+          }
+        ],
+        "testPoints": [
+          "あいさつ・てんき・ようび・じこく・もちものを つなげて はっぴょうできる",
+          "語末ブレンド・s・ing・2つに わけて よむ ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Make ten o'clock with your arms.",
+          "ja": "うでで 10じを つくって。",
+          "action": "かたうでを うえ、かたうでを ななめに",
+          "emoji": "🕙"
+        },
+        {
+          "en": "It's rainy! Open your umbrella!",
+          "ja": "あめだ！かさを ひらいて！",
+          "action": "すばやく かさを ひらく まね",
+          "emoji": "☂️"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "st",
+          "-nd",
+          "-mp",
+          "-s",
+          "-ing",
+          "pic-nic"
+        ],
+        "sounds": [],
+        "words": [
+          "stop",
+          "hand",
+          "jump",
+          "cats",
+          "running",
+          "picnic"
+        ],
+        "tipJa": "ワールド5の そうまとめ。st-o-p、ha-nd、ju-mp、cats、running、pic-nic！ ことばの はじめも おわりも、ながい ことばも よめるね。"
+      },
+      "vocab": [
+        {
+          "en": "tower",
+          "ja": "とう",
+          "emoji": "🗼",
+          "core": true
+        },
+        {
+          "en": "every day",
+          "ja": "まいにち",
+          "emoji": "📆"
+        },
+        {
+          "en": "diary",
+          "ja": "にっき",
+          "emoji": "📔"
+        },
+        {
+          "en": "life",
+          "ja": "くらし",
+          "emoji": "🏡"
+        }
+      ],
+      "teacherScript": "Congratulations! ワールド5 さいごの レッスン！まずは スピード TPR。そのあと「わたしの 1しゅうかん」はっぴょうかい。あいさつ、てんき、ようび、じこく、もちもの、ぜんぶ つかおう！あしたは ボスせんだよ。",
+      "conversation": {
+        "scene": "The 'My Week' presentation at the top of the Tower of Time",
+        "sceneJa": "じかんの塔の てっぺんで「わたしの 1しゅうかん」はっぴょうかい",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good morning, everyone! It's presentation day!",
+            "ja": "みなさん おはよう！きょうは はっぴょうかい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Good morning. I'm Riko. I like Fridays. I have art on Fridays.",
+            "ja": "おはよう。リコです。きんようびが すき。きんようびは ずこうが あるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's ten o'clock. It's sunny. It's Sunday. Let's play tag!",
+            "ja": "10じ。はれ。にちようびだ。おにごっこ しよう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Do you have a pen? Let's write our week!",
+            "ja": "ペン もってる？1しゅうかんを かこう！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Ding, dong! Great job, everyone! Let's go to World 6!",
+            "ja": "ディン ドン！みんな よく できました！ワールド6へ いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド5の ことばで「わたしの 1しゅうかん」を はっぴょうしよう（あいさつ・すきな ようび・てんき・じこく。なまえは ニックネームでも OK）",
+          "starterEn": "Good morning! It's presentation day! I'm Riko. I like Fridays. Your turn!",
+          "targetExpressions": [
+            "Good morning.",
+            "I like ～.",
+            "It's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "スピード TPR で ワールド5の めいれいを ふくしゅう",
+          "あいさつ・てんき・ようび・じこく・もちものを ぜんぶ つかえたね",
+          "おわりの ブレンド・s・ing・pic-nic を よめたよ。ワールド6では マジック e を ならうよ！"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "version": "0.3.0",
+    "teacher": {
+      "name": "Ms. Emma",
+      "nameJa": "エマ先生"
+    },
+    "lessonsPerWorld": 30,
+    "miniTestEvery": 5,
+    "note": "6年カリキュラム（docs/curriculum-6year.md）。ワールド1〜12（L1〜360）= ステージ1、13〜40 = ステージ2〜5。レッスンは worlds/world-NN.json に ワールドごとに 分けて置く。教科書の本文・イラストは転載せず、テーマと表現の型だけを合わせたオリジナル文。"
+  },
+  "totalLessons": 360,
+  "worlds": [
+    {
+      "world": 1,
+      "file": "world-01.json",
+      "stage": 1,
+      "level": "Pre-A1",
+      "firstLesson": 1,
+      "lastLesson": 30,
+      "lessonCount": 30
+    },
+    {
+      "world": 2,
+      "file": "world-02.json",
+      "stage": 1,
+      "level": "Pre-A1",
+      "firstLesson": 31,
+      "lastLesson": 60,
+      "lessonCount": 30
+    },
+    {
+      "world": 3,
+      "file": "world-03.json",
+      "stage": 1,
+      "level": "Pre-A1",
+      "firstLesson": 61,
+      "lastLesson": 90,
+      "lessonCount": 30
+    },
+    {
+      "world": 4,
+      "file": "world-04.json",
+      "stage": 1,
+      "level": "Pre-A1",
+      "firstLesson": 91,
+      "lastLesson": 120,
+      "lessonCount": 30
+    },
+    {
+      "world": 5,
+      "file": "world-05.json",
+      "stage": 1,
+      "level": "Pre-A1",
+      "firstLesson": 121,
+      "lastLesson": 150,
+      "lessonCount": 30
+    },
+    {
+      "world": 6,
+      "file": "world-06.json",
+      "stage": 1,
+      "level": "Pre-A1",
+      "firstLesson": 151,
+      "lastLesson": 180,
+      "lessonCount": 30
+    },
+    {
+      "world": 7,
+      "file": "world-07.json",
+      "stage": 1,
+      "level": "A1",
+      "firstLesson": 181,
+      "lastLesson": 210,
+      "lessonCount": 30
+    },
+    {
+      "world": 8,
+      "file": "world-08.json",
+      "stage": 1,
+      "level": "A1",
+      "firstLesson": 211,
+      "lastLesson": 240,
+      "lessonCount": 30
+    },
+    {
+      "world": 9,
+      "file": "world-09.json",
+      "stage": 1,
+      "level": "A1",
+      "firstLesson": 241,
+      "lastLesson": 270,
+      "lessonCount": 30
+    },
+    {
+      "world": 10,
+      "file": "world-10.json",
+      "stage": 1,
+      "level": "A1",
+      "firstLesson": 271,
+      "lastLesson": 300,
+      "lessonCount": 30
+    },
+    {
+      "world": 11,
+      "file": "world-11.json",
+      "stage": 1,
+      "level": "A1",
+      "firstLesson": 301,
+      "lastLesson": 330,
+      "lessonCount": 30
+    },
+    {
+      "world": 12,
+      "file": "world-12.json",
+      "stage": 1,
+      "level": "A1",
+      "firstLesson": 331,
+      "lastLesson": 360,
+      "lessonCount": 30
+    }
+  ]
+}

@@ -1,11 +1,12 @@
 /**
- * ワールドごとの 1か月ワークブック（どの家も同じ内容）を ファイルの置き場所へ アップロードする（run5 Phase 3）。
+ * 1か月ワークブック（20レッスンごと・どの家も同じ内容）を ファイルの置き場所へ アップロードする（run5 Phase 3。run7 で ワールドごと → 20レッスンごと）。
  * サーバー（Vercel など）では Python を動かさないので、このパソコンで1回だけ作って 置いておく。
  *
- *   npm run worksheets:month -- --all     # 1) 12ワールド分を worksheets/out/monthly に作る（Python + reportlab）
+ *   npm run worksheets:month -- --all     # 1) 全レッスン分（No.1〜）を worksheets/out/monthly/month-NN.pdf に作る（Python + reportlab）
  *   npm run worksheets:upload             # 2) 置き場所（STORAGE_DRIVER / S3_* / REPORT_STORAGE_DIR）へ アップロード
  *
- *   npm run worksheets:upload -- --world 3          # 1つだけ
+ *   npm run worksheets:upload -- --pack 3           # 1冊だけ（No.3 = Lesson 41〜60）
+ *   npm run worksheets:upload -- --world 13         # その ワールドに かかる 冊だけ
  *   npm run worksheets:upload -- --force            # すでにあっても 上書き（中身を作りなおしたとき）
  *   npm run worksheets:upload -- --dry-run          # 何をするかだけ表示
  *   npm run worksheets:upload -- --dir path/to/pdfs # 読むフォルダ（既定 worksheets/out/monthly）
@@ -25,7 +26,7 @@ const arg = (name: string) => {
 };
 
 if (has("help") || has("h")) {
-  console.log("使い方: npm run worksheets:upload [-- --world N] [-- --force] [-- --dry-run] [-- --dir <フォルダ>] [-- --timeout 600]");
+  console.log("使い方: npm run worksheets:upload [-- --pack N | --world N] [-- --force] [-- --dry-run] [-- --dir <フォルダ>] [-- --timeout 600]");
   process.exit(0);
 }
 
@@ -54,19 +55,31 @@ async function main(): Promise<number> {
   }, (timeoutSec + 30) * 1000);
   killer.unref();
 
-  const { WORLD_COUNT } = await import("@/lib/game/worlds");
+  const { CURRICULUM_WORLDS, TOTAL_LESSONS } = await import("@/lib/curriculum");
+  const { monthPackCount, monthPackOfLesson } = await import("@/lib/curriculum/stages");
   const { getStorage, storageConfig } = await import("@/lib/storage");
   const { prebuiltWorksheetDir, worksheetKey } = await import("@/lib/report/storage");
 
+  const maxPack = monthPackCount(TOTAL_LESSONS);
+  let worlds = Array.from({ length: maxPack }, (_, i) => i + 1); // 1か月ワークブックの 番号
+  const packArg = arg("pack");
   const worldArg = arg("world");
-  let worlds = Array.from({ length: WORLD_COUNT }, (_, i) => i + 1);
-  if (worldArg !== undefined) {
-    const w = Number(worldArg);
-    if (!Number.isInteger(w) || w < 1 || w > WORLD_COUNT) {
-      console.error(`--world は 1〜${WORLD_COUNT} の整数で指定してください: ${worldArg}`);
+  if (packArg !== undefined) {
+    const n = Number(packArg);
+    if (!Number.isInteger(n) || n < 1 || n > maxPack) {
+      console.error(`--pack は 1〜${maxPack} の整数で指定してください: ${packArg}`);
       return 2;
     }
-    worlds = [w];
+    worlds = [n];
+  } else if (worldArg !== undefined) {
+    const w = CURRICULUM_WORLDS.find((x) => String(x.world) === worldArg);
+    if (!w) {
+      console.error(`--world は 1〜${CURRICULUM_WORLDS.length} の整数で指定してください: ${worldArg}`);
+      return 2;
+    }
+    const a = monthPackOfLesson(w.firstLesson).pack;
+    const b = monthPackOfLesson(w.lastLesson).pack;
+    worlds = Array.from({ length: b - a + 1 }, (_, i) => a + i);
   }
   const dir = path.resolve(arg("dir") ?? prebuiltWorksheetDir());
   const cfg = storageConfig();
@@ -118,7 +131,7 @@ async function main(): Promise<number> {
   }
   console.log(`== おわり: アップロード ${uploaded} / とばした ${skipped} / ファイルなし ${missing.length}`);
   if (missing.length) {
-    console.log(`   ファイルが無いワールド: ${missing.join(", ")} → さきに npm run worksheets:month -- --all を実行してください`);
+    console.log(`   ファイルが無い ワークブック: No.${missing.join(", No.")} → さきに npm run worksheets:month -- --all を実行してください`);
     return 1;
   }
   return 0;

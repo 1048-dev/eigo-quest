@@ -6,7 +6,9 @@
 import { randomInt } from "node:crypto";
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
-import { TOTAL_LESSONS } from "@/lib/curriculum";
+import { countWordsLearned, TOTAL_LESSONS } from "@/lib/curriculum";
+import { levelOfLesson, schoolGradeCompleted, stageDef, stageOfLesson } from "@/lib/curriculum/stages";
+import { nextLessonNo } from "@/lib/report/monthlyReport";
 import { localDate } from "@/lib/domain/dates";
 import { SKILL_LABELS_JA } from "@/lib/domain/mastery";
 import { SKILLS } from "@/lib/domain/types";
@@ -279,8 +281,29 @@ export async function getParentOverview(parentId: string, now = new Date()): Pro
       lastStudyDate: c.lastStudyDate,
       weakestSkills,
       dailyLessonLimit: dailyLimitFor(settings, c.id),
+      ...curriculumStatus(completedLessons),
     };
   }));
+}
+
+/**
+ * run7: 保護者向けの「いま どこ？」（ステージ・レベル・学校の英語・覚えた ことば）。
+ * 進み方は 1 から順番なので「つぎの レッスン − 1」を クリアした数として 学校の英語の めやすに使う。
+ */
+export function curriculumStatus(completedLessons: ReadonlyMap<number, string>) {
+  const next = nextLessonNo(completedLessons);
+  const here = Math.max(1, Math.min(next ?? TOTAL_LESSONS, TOTAL_LESSONS));
+  const cleared = next == null ? TOTAL_LESSONS : next - 1;
+  const stage = stageOfLesson(here);
+  const school = schoolGradeCompleted(cleared);
+  return {
+    stage,
+    stageNameJa: stageDef(stage).nameJa,
+    level: levelOfLesson(here),
+    schoolCompletedJa: school.completedJa,
+    schoolLineJa: school.lineJa,
+    wordsLearned: countWordsLearned(completedLessons.keys()),
+  };
 }
 
 // ---------------------------------------------------------------------------

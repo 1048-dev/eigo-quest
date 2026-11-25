@@ -8,7 +8,7 @@
 - 各レッスンの最後に **AIキャラ（ハル・リコ・キコ・ビリモがレッスンごとに交代）との英語の会話**（最後まで話すと +5コイン）、終わったあとに任意の **2〜3分「きょうのまとめ動画」**（レッスンデータから自動生成）があります。
 
 ```
-content/curriculum/lessons.json   ← カリキュラムの元データはここだけ
+content/curriculum/worlds/world-NN.json   ← カリキュラムの元データはここだけ（ワールドごと。索引 index.json・titles.json は npm run curriculum:index で作る）
         │
         ├─→ src/lib/curriculum   学習項目・テスト定義・問題をルールで展開
         │        ├─→ prisma/seed.ts   DBに投入
@@ -80,9 +80,10 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `npm run worksheets` | 全レッスン＋全テストのPDFを `worksheets/out/` に出力 |
 | `python3 worksheets/generate_worksheets.py --lesson 1` | Lesson 1 の教材だけ出力 |
 | `python3 worksheets/generate_worksheets.py --test boss --range 1-30` | ボス戦テスト（1〜30）を出力 |
-| `npm run worksheets:month -- --world 1` | ワールド1の月間まとめ（30レッスン＝約1か月を1冊）を `worksheets/out/monthly/` に出力 |
-| `npm run worksheets:month -- --all` | 12ワールド分の月間まとめを出力 |
-| `npm run worksheets:upload [-- --dry-run] [-- --world 1] [-- --force]` | `worksheets/out/monthly/` のワークブックを置き場所（`STORAGE_DRIVER`）へアップロード。すでにあれば とばす。進みぐあいを表示・`--timeout`（既定600秒） |
+| `npm run worksheets:month -- --pack 1` | 1か月ワークブック No.1（20レッスン＝平日ペースで約1か月を1冊。No.2 = L21〜40 …）を `worksheets/out/monthly/month-NN.pdf` に出力（`-- --world 13` で そのワールドに かかる冊） |
+| `npm run worksheets:month -- --all` | 全レッスン分の 1か月ワークブックを出力（360レッスンで 18冊、1,200レッスンで 60冊） |
+| `npm run curriculum:index` / `npm run curriculum:check` | `content/curriculum/worlds/` から 索引（index.json・titles.json・src/lib/curriculum/bundledWorlds.ts）を作る / 最新か確かめる（run7） |
+| `npm run worksheets:upload [-- --dry-run] [-- --pack 1 \| --world 1] [-- --force]` | `worksheets/out/monthly/month-NN.pdf` の 1か月ワークブックを置き場所（`STORAGE_DRIVER`）へアップロード。すでにあれば とばす。進みぐあいを表示・`--timeout`（既定600秒） |
 | `npm run db:deploy` | `prisma migrate deploy`（本番の DB にマイグレーションを当てる。`DIRECT_URL` を使う） |
 | `npm run vercel-build` | Vercel のビルド（`prisma generate` → 本番デプロイのときだけ `migrate deploy` → `next build`）。`vercel.json` から呼ばれる |
 | `npx tsx scripts/prepare-report-font.ts` | 同梱のレポート用フォント（Noto Sans JP）を作り直す（fontkit の不具合よけに グリフを4バイト単位に うめる）。ふだんは不要 |
@@ -94,7 +95,9 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 ```
 eigo-quest/
 ├── content/curriculum/
-│   ├── lessons.json          カリキュラム（Lesson 1〜360・12ワールド）。学校単元・表現・テストのポイント・TPR・フォニックス・単語・教師の台本・会話シーン・まとめ。年間計画は docs/curriculum-plan.md
+│   ├── worlds/world-NN.json  カリキュラム（ワールドごと 30レッスン。いまは Lesson 1〜360・12ワールド）。学校単元・表現・テストのポイント・TPR・フォニックス・単語・教師の台本・会話シーン・まとめ。年間計画は docs/curriculum-plan.md、6年計画は docs/curriculum-6year.md
+│   ├── index.json            小さな索引（先生・レッスン数・ワールドごとの ステージ／レベル／範囲）。ブラウザにも のる
+│   ├── titles.json           レッスンの タイトルの 索引（サーバー・ツール用）
 │   └── monsters.json         モンスター図鑑・アバターショップ
 ├── prisma/
 │   ├── schema.prisma         データベース設計（下記）
@@ -402,7 +405,7 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 LINE の Messaging API は PDF ファイルそのものを送れないため、**ダウンロードページへのリンク**を Flex メッセージ（お子さまの名前・要約・「PDFをひらく」ボタン。きょうだいはカルーセル）で送ります。
 
 - **レポートの中身**: 今月のレッスン数・学習した日数・合格したテスト、連続日数・最長連続、6つの力の習得率（送信時点）、にがて（低い力・忘れかけの ことば）、来月の予定（次のレッスンからの単元・フォニックス）、おうちの方への ひとこと。PDF は **Node だけ**で作ります（run5: `pdf-lib` + 日本語フォント Noto Sans JP を使った文字だけ埋め込み。`src/lib/report/pdf.ts`。フォントは `assets/fonts/`・SIL Open Font License）。サーバーで Python は使いません。フォントが読めないときは依存なしの かんたんな PDF で代わりに作ります。
-- **ワークブック**: お子さまが いま いる（これから始める）ワールドの 1か月ワークブック（`worksheets:month` と同じもの。どの家も同じ内容）。**あらかじめ作って置き場所にアップロード**しておきます（`npm run worksheets:month -- --all` → `npm run worksheets:upload`）。置き場所に無いワールドは レポートだけ送ります（開発中は `worksheets/out/monthly/` にあれば 自動でアップロード）。
+- **ワークブック**: お子さまが これから進む 20 レッスンの 1か月ワークブック（No.N = Lesson 20N−19〜20N。run7 で ワールドごと → 20レッスンごと。`worksheets:month` と同じもの。どの家も同じ内容）。**あらかじめ作って置き場所にアップロード**しておきます（`npm run worksheets:month -- --all` → `npm run worksheets:upload`）。置き場所に無い冊は レポートだけ送ります（開発中は `worksheets/out/monthly/` にあれば 自動でアップロード）。
 - **置き場所（run5）**: `STORAGE_DRIVER=local`（`REPORT_STORAGE_DIR`、既定 `.data/reports/`）か `s3`（S3 互換: AWS S3・Cloudflare R2・Supabase Storage の S3 API。`S3_BUCKET`・`S3_ENDPOINT`・`S3_REGION`・`S3_ACCESS_KEY_ID`・`S3_SECRET_ACCESS_KEY`）。`src/lib/storage/`。SDK なしで fetch + 署名（AWS Signature V4）だけで話します。Vercel などのサーバーレスでは ファイルが残らないので `s3` にします（[docs/run5/DEPLOY.md](docs/run5/DEPLOY.md)）。
 - **ダウンロードページ `/d/<token>`**: トークンは 256 ビットのランダム値で、DB（`ReportDelivery.tokenHash`）には SHA-256 だけを保存。30日で期限切れ。その配信のファイル（`/d/<token>/report`・`/d/<token>/worksheets`）だけを返し、レポートはその家のフォルダ（`reports/<保護者ID>/`）にあるものだけ。ログイン不要（LINE のアプリ内ブラウザで開くため）、検索エンジンに載せない・リファラーを送らない・キャッシュしない。期限切れの配信と PDF は次の一斉配信のときに消えます。お子さまの削除・退会でも消えます。LINE の連携を解除すると、それまでに送ったリンクもすぐ使えなくなります。
 - **送信**: `Parent.lineUserId` に push（`X-Line-Retry-Key` 付きで二重送信なし）。毎月の配信は「LINE と連携ずみ・配信オン（`Parent.lineMonthlyEnabled`）・ブロックされていない」保護者だけ。同じ月の送信ずみのお子さまには送りません（`--force` を除く）。

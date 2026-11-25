@@ -10,6 +10,10 @@ export type AttemptSource = "NORMAL" | "ARENA" | "TREASURE_ALERT";
 export interface LessonDef {
   lessonNo: number;
   world: number;
+  /** run7: ステージ（1〜5。省略時は ワールドから決まる。src/lib/curriculum/stages.ts） */
+  stage?: number;
+  /** run7: CEFR の めやす（"Pre-A1" / "A1" / "A1+" / "A2" / "A2+" / "B1" / "B1+"。省略時は ワールドから決まる） */
+  level?: string;
   title: string;
   titleJa: string;
   school: {

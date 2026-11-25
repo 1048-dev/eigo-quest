@@ -205,6 +205,8 @@ const LessonStepSchema = z.discriminatedUnion("kind", [
 ]);
 const LessonSchema = z.object({
   lessonNo: z.number(), world: num(1), title: str(), titleJa: str(),
+  // run7: ステージ（1〜5）と レベル（CEFR の めやす）。古いデータには 無い
+  stage: z.number().int().optional().catch(undefined), level: z.string().optional().catch(undefined),
   school: z.object({ grade: str(), topic: str(), grammar: str(), expressions: safeArray(z.object({ en: str(), ja: str(), core: z.boolean().optional() })), testPoints: safeArray(z.string()) }),
   tpr: safeArray(z.object({ en: str(), ja: str(), action: str(), emoji: str() })),
   phonics: z.object({ rule: str(), focus: safeArray(z.string()), sounds: safeArray(z.string()), words: safeArray(z.string()), tipJa: str() }),
@@ -538,6 +540,14 @@ export const ChildOverviewSchema = z.object({
   /** 習得率の低い能力（低い順・最大3つ。まだ学習していなければ空） */
   weakestSkills: safeArray(z.object({ skill: SKILL, labelJa: str(""), score: num(0) })),
   dailyLessonLimit: z.number().int().nullable().catch(null),
+  // run7（6年カリキュラム）: いまの ステージ・レベル、学校の英語「○○ まで修了」、覚えた ことばの数
+  stage: num(1),
+  stageNameJa: str(""),
+  level: str(""),
+  /** 修了した 学校の英語（「小6」「中2」など。まだなら null） */
+  schoolCompletedJa: z.string().nullable().catch(null),
+  schoolLineJa: str(""),
+  wordsLearned: num(0),
 });
 export type ChildOverview = z.output<typeof ChildOverviewSchema>;
 

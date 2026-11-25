@@ -15,7 +15,7 @@ import { buildLessonFlow } from "@/lib/curriculum/questions";
 import { focusExampleWord, focusLabel } from "@/lib/curriculum/phonicsButtons";
 import { offlineLessonComplete, offlineMap } from "@/lib/offline";
 import { parseLocalProgress, toProgressMaps } from "@/lib/offline/localProgress";
-import { WORLD_NAMES, worldName } from "@/lib/game/worlds";
+import { WORLD_NAMES, worldName, worldNameEn } from "@/lib/game/worlds";
 import { readFileSync } from "node:fs";
 
 describe("ごほうび", () => {
@@ -140,10 +140,13 @@ describe("おためしモードの きろく（この ブラウザだけ）", ()
 });
 
 describe("ワールド名", () => {
-  it("12ワールドに 1つずつ 名前があり、計画書の 表と おなじ", () => {
-    expect(Object.keys(WORLD_NAMES)).toHaveLength(12);
+  it("40ワールドに 1つずつ 名前があり、計画書の 表と おなじ（1〜12: curriculum-plan.md、13〜40: curriculum-6year.md §4）", () => {
+    expect(Object.keys(WORLD_NAMES)).toHaveLength(40);
     const plan = readFileSync("docs/curriculum-plan.md", "utf8");
     for (let w = 1; w <= 12; w++) expect(plan, worldName(w)).toContain(`| ${w} ${worldName(w)} |`);
+    const plan6 = readFileSync("docs/curriculum-6year.md", "utf8");
+    for (let w = 13; w <= 40; w++) expect(plan6, worldName(w)).toMatch(new RegExp(`\\| ${w} \\| [0-9〜]+ \\| [2-5] \\| ${worldName(w)} \\| ${worldNameEn(w)} \\|`));
+    expect(new Set(Object.values(WORLD_NAMES)).size).toBe(40);
     expect(worldName(99)).toBe("ワールド99");
   });
 });

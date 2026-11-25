@@ -4,7 +4,7 @@
  *   npx next build
  *   npx tsx scripts/run5-flow-check.ts --db postgresql://eigo:eigo@localhost:5544/eigo_check?schema=public [--port 3485] [--timeout 900]
  *
- *  0. prisma migrate deploy → seed → ワークブック（ワールド1）を STORAGE_DRIVER=local の置き場所へ アップロード（npm run worksheets:upload と同じスクリプト）
+ *  0. prisma migrate deploy → seed → 1か月ワークブック No.1（run7 まで ワールド1）を STORAGE_DRIVER=local の置き場所へ アップロード（npm run worksheets:upload と同じスクリプト）
  *     → next start（MAIL_PROVIDER=outbox・LINE のキーなし = dry-run・CRON_SECRET あり）
  *  1. 2つの ブラウザ（cookie も localStorage も べつ）で おためしで あそぶ → きろく・コインが べつべつ
  *  2. ブラウザA: 新規登録 → お子さまを追加 →「だれが あそぶ？」の「ひきつぐ？」に「いいえ」
@@ -371,7 +371,7 @@ async function flow() {
     if (wsHref) {
       const r = await A.page.request.get(wsHref);
       const body = await r.body();
-      const expected = statSync(path.join(process.cwd(), "worksheets", "out", "monthly", "world-01.pdf")).size;
+      const expected = statSync(path.join(process.cwd(), "worksheets", "out", "monthly", "month-01.pdf")).size;
       check(`ワークブックの PDF: 200・アップロードしたものと 同じ大きさ（${body.length} bytes）`, r.status() === 200 && body.subarray(0, 5).toString() === "%PDF-" && body.length === expected, { status: r.status(), bytes: body.length, expected });
     }
     const files = readdirSync(path.join(WORK, "storage", "reports", parent!.id, month));
@@ -416,7 +416,7 @@ async function main() {
   run("npx", ["prisma", "migrate", "deploy"], env);
   await clearRateLimits(db);
   run("npx", ["tsx", "prisma/seed.ts"], env, 300_000);
-  run("npx", ["tsx", "scripts/upload-worksheets.ts", "--world", "1", "--timeout", "120"], env);
+  run("npx", ["tsx", "scripts/upload-worksheets.ts", "--pack", "1", "--timeout", "120"], env); // run7: 20レッスンごとの No.1（まだ はじめていない子に 同封される）
   server = startServer(PORT, env);
   try {
     await waitForServer(server, BASE);

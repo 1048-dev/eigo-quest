@@ -12,6 +12,8 @@
     "test": "vitest run",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
+    "curriculum:index": "tsx scripts/curriculum-index.ts",
+    "curriculum:check": "tsx scripts/curriculum-index.ts --check",
     "worksheets": "python3 worksheets/generate_worksheets.py --all",
     "worksheets:month": "python3 worksheets/generate_worksheets.py --month",
     "worksheets:upload": "tsx scripts/upload-worksheets.ts",

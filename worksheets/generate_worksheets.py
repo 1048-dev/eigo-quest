@@ -2,7 +2,7 @@
 """
 A4ワークシート（PDF）自動生成スクリプト。
 
-アプリと同じ content/curriculum/lessons.json を読み、レッスン・テスト範囲に完全連動した教材を作る。
+アプリと同じ content/curriculum/worlds/world-NN.json（索引 index.json）を読み、レッスン・テスト範囲に完全連動した教材を作る。
   - レッスン教材: 切り取りフラッシュカード（TPR命令＋単語）/ 英語4線のなぞり書き / フォニックス /
                  学校テスト対策の書き取り / おうちの人が読むリスニング / 解答と保護者メモ
   - まとめテスト（5回ごと）・ボス戦テスト（30回ごと）: 範囲から出題 + 解答ページ
@@ -12,9 +12,11 @@ A4ワークシート（PDF）自動生成スクリプト。
   python3 worksheets/generate_worksheets.py --test mini --range 1-5
   python3 worksheets/generate_worksheets.py --test boss --range 1-30
   python3 worksheets/generate_worksheets.py --all            # 全レッスン＋全テスト
-  python3 worksheets/generate_worksheets.py --month --world 1  # 月間まとめ（1ワールド＝約1か月、表紙・よていひょう・こたえつき）
-  python3 worksheets/generate_worksheets.py --month --all      # 12ワールド分の 月間まとめ
-  （npm run worksheets:month -- --world 1 ／ npm run worksheets:month -- --all）
+  python3 worksheets/generate_worksheets.py --month --pack 1   # 1か月ワークブック（20レッスン＝平日ペースで約1か月。表紙・よていひょう・こたえつき）
+  python3 worksheets/generate_worksheets.py --month --world 13 # そのワールドに かかる 1か月ワークブック（ワールド13 なら No.19〜20）
+  python3 worksheets/generate_worksheets.py --month --all      # 全レッスン分の 1か月ワークブック（360 レッスンなら 18 冊）
+  （npm run worksheets:month -- --pack 1 ／ npm run worksheets:month -- --all）
+  run7: 1か月ワークブックは 30レッスン（ワールド）ごと → 20レッスンごと（monthly/month-NN.pdf）に かわった。
 
 日本語フォントは IPAexゴシック等の TTF を自動検出して埋め込む（EIGO_JA_FONT で指定可）。
 見つからない場合は ReportLab 内蔵 CID フォントにフォールバック（日本語フォントのある環境でのみ表示）。
@@ -40,7 +42,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen.canvas import Canvas
 
 ROOT = Path(__file__).resolve().parent.parent
-CURRICULUM = ROOT / "content" / "curriculum" / "lessons.json"
+CURRICULUM_DIR = ROOT / "content" / "curriculum"
 OUT_DIR = Path(__file__).resolve().parent / "out"
 
 # 日本語フォント: 埋め込み可能な TTF を優先（どの環境のビューアでも表示できる）。
@@ -88,6 +90,8 @@ MINI_EVERY = 5
 BOSS_EVERY = 30
 MINI_QUESTIONS = 15
 BOSS_QUESTIONS = 30
+# 1か月ワークブックの レッスン数（src/lib/curriculum/stages.ts の LESSONS_PER_MONTH_PACK と同じ）
+LESSONS_PER_PACK = 20
 
 
 # ---------------------------------------------------------------------------
@@ -103,7 +107,14 @@ class Item:
 
 
 def load_curriculum() -> dict:
-    return json.loads(CURRICULUM.read_text(encoding="utf-8"))
+    """索引（index.json）に のっている ワールドの ファイルを 順に 読んで 1つに まとめる（run7: ワールドごとの ファイル）"""
+    index = json.loads((CURRICULUM_DIR / "index.json").read_text(encoding="utf-8"))
+    lessons: list[dict] = []
+    for w in index["worlds"]:
+        data = json.loads((CURRICULUM_DIR / "worlds" / w["file"]).read_text(encoding="utf-8"))
+        lessons.extend(data["lessons"])
+    lessons.sort(key=lambda l: l["lessonNo"])
+    return {"meta": index["meta"], "lessons": lessons}
 
 
 def items_of(lesson: dict) -> list[Item]:
@@ -596,7 +607,7 @@ def test_answer_block(s: Sheet, kind: str, start: int, end: int, answers: list[s
 
 
 # ---------------------------------------------------------------------------
-# 月間まとめ（1ワールド＝30レッスン＝約1か月を 1冊の PDF に）
+# 1か月ワークブック（20レッスン＝平日ペースで 約1か月を 1冊の PDF に。run7 で 30 → 20）
 # ---------------------------------------------------------------------------
 @dataclass
 class BundleLayout:
@@ -622,8 +633,22 @@ def pages_label(r: tuple[int, int] | None) -> str:
     return f"p.{r[0]}" if r[0] == r[1] else f"p.{r[0]}〜{r[1]}"
 
 
-def bundle_cover(s: Sheet, world: int, name: str, wl: list[dict], layout: BundleLayout | None):
+def pack_range(pack: int) -> tuple[int, int]:
+    return (pack - 1) * LESSONS_PER_PACK + 1, pack * LESSONS_PER_PACK
+
+
+def worlds_label(wl: list[dict], names: dict[int, str]) -> str:
+    ws: list[int] = []
+    for l in wl:
+        if l["world"] not in ws:
+            ws.append(l["world"])
+    return "・".join(f"ワールド{w}「{names.get(w, f'ワールド{w}')}」" for w in ws)
+
+
+def bundle_cover(s: Sheet, pack: int, names: dict[int, str], wl: list[dict], layout: BundleLayout | None):
     a, b = wl[0]["lessonNo"], wl[-1]["lessonNo"]
+    days = len(wl)
+    has_boss = any(l["lessonNo"] % BOSS_EVERY == 0 for l in wl)
     lp = layout.lesson_pages if layout else {}
     tp = layout.test_pages if layout else {}
     ans = f"p.{layout.answers_from}〜{layout.total}" if layout else "p.??〜??"
@@ -631,12 +656,13 @@ def bundle_cover(s: Sheet, world: int, name: str, wl: list[dict], layout: Bundle
 
     # ---- 表紙1: おうちの方へ ----
     s.new_page()
-    s.header(f"ワールド{world}「{name}」 1か月ワークブック",
-             f"Lesson {a}〜{b}（30回）／ 1日1レッスンで 約1か月 ／ おうちの方へ", with_name=False)
+    s.header(f"1か月ワークブック No.{pack}（Lesson {a}〜{b}）",
+             f"{worlds_label(wl, names)} ／ {days}回・平日1レッスンで 約1か月 ／ おうちの方へ", with_name=False)
     x = MARGIN + 6 * mm
     s.section("このワークブックについて")
     s.wrapped(x, "アプリ「Eigo Quest」の Lesson " f"{a}〜{b} と まったく同じ ことば・表現で作った 紙の教材です。"
-              "1回分は「フラッシュカード 1まい＋ワーク 1まい」。5回ごとに まとめテスト、30回目に ボス戦テストが入っています。"
+              "1回分は「フラッシュカード 1まい＋ワーク 1まい」。5回ごとに まとめテスト"
+              + ("、ワールドの さいごの回に ボス戦テスト" if has_boss else "") + "が入っています。"
               "こたえ と よみあげ文は さいごに まとめてあります。", 10)
     grades = sorted({l["school"]["grade"] for l in wl})
     topics: list[str] = []
@@ -665,22 +691,22 @@ def bundle_cover(s: Sheet, world: int, name: str, wl: list[dict], layout: Bundle
         "ワークの ページ: なぞり書き → フォニックス → 学校テスト → リスニング。"
         "フォニックスと リスニングは、おうちの人が こたえページの「よみあげ文」を ゆっくり2回 読みます。",
         "こたえ合わせを して、できたら ○ や シールを。まちがいは 責めずに もういちど いっしょに。",
-        "5回ごとの まとめテスト（ごうかく 80%）、30回目の ボス戦テスト（ごうかく 75%）は アプリの テストと 同じ範囲です。",
+        "5回ごとの まとめテスト（ごうかく 80%）、ワールドの さいご（30の倍数の回）の ボス戦テスト（ごうかく 75%）は アプリの テストと 同じ範囲です。",
     ]):
         s.wrapped(x, f"{i + 1}. {t}", 10)
     s.y -= 3 * mm
 
     s.section("ページの みかた")
     for t in [
-        "p.1〜2: この あんない と 30日の よていひょう",
+        f"p.1〜2: この あんない と {days}日の よていひょう",
         f"{lesson_range}: 子どもが つかう ページ（レッスン と テスト）",
         f"{ans}: こたえ・よみあげ文・学校テストの ねらいめ・TPR あそび（おうちの方用）",
     ]:
         s.wrapped(x, "・" + t, 10)
 
-    # ---- 表紙2: 30日の よていひょう ----
+    # ---- 表紙2: 20日の よていひょう ----
     s.new_page()
-    s.header(f"30日の よていひょう（ワールド{world}「{name}」）",
+    s.header(f"{days}日の よていひょう（No.{pack}・Lesson {a}〜{b}）",
              "おわった日に □ に ✓ を。1日1回が めやすですが、ペースは おうちに あわせて だいじょうぶ。", with_name=False)
     cols = [("", 8), ("日め", 12), ("Lesson", 16), ("ないよう", 78), ("ページ", 26), ("テスト", 40)]
     xs = [MARGIN]
@@ -721,18 +747,18 @@ def bundle_cover(s: Sheet, world: int, name: str, wl: list[dict], layout: Bundle
     s.text(MARGIN, s.y, f"こたえ・よみあげ文: {ans}（おうちの方用）", 9, JA, INK2)
 
 
-def bundle_worksheet(world: int, name: str, lessons: list[dict], out: Path) -> int:
-    """ワールド1つ分の月間まとめ PDF を作る。ページ番号を表紙に書くため、下書き→本番の2回描く。返り値は総ページ数。"""
-    wl = [l for l in lessons if l["world"] == world]
+def bundle_worksheet(pack: int, names: dict[int, str], lessons: list[dict], out: Path) -> int:
+    """1か月ワークブック No.pack（20レッスン）の PDF を作る。ページ番号を表紙に書くため、下書き→本番の2回描く。返り値は総ページ数。"""
+    a, b = pack_range(pack)
+    wl = sorted((l for l in lessons if a <= l["lessonNo"] <= b), key=lambda l: l["lessonNo"])
     if not wl:
-        raise SystemExit(f"ワールド{world} の レッスンが ありません")
-    wl.sort(key=lambda l: l["lessonNo"])
-    title = f"Eigo Quest ワールド{world}「{name}」 1か月ワークブック"
+        raise SystemExit(f"No.{pack}（Lesson {a}〜{b}）の レッスンが ありません")
+    title = f"Eigo Quest 1か月ワークブック No.{pack}（Lesson {wl[0]['lessonNo']}〜{wl[-1]['lessonNo']}）"
 
     def render(target, layout: BundleLayout | None) -> BundleLayout:
-        s = Sheet(target, title, footer_label=f"Eigo Quest  ワールド{world}「{name}」",
+        s = Sheet(target, title, footer_label=f"Eigo Quest  1か月ワークブック No.{pack}",
                   total_pages=layout.total if layout else None)
-        bundle_cover(s, world, name, wl, layout)
+        bundle_cover(s, pack, names, wl, layout)
         lesson_pages: dict[int, tuple[int, int]] = {}
         test_pages: dict[int, tuple[int, int]] = {}
         keys: dict[int, LessonKey] = {}
@@ -750,8 +776,8 @@ def bundle_worksheet(world: int, name: str, lessons: list[dict], out: Path) -> i
         # ---- こたえ（おうちの方用）----
         s.new_page()
         answers_from = s.page_no
-        s.cont_header = f"こたえ・よみあげ文（ワールド{world} つづき）"
-        s.header(f"こたえ・よみあげ文（ワールド{world}「{name}」）",
+        s.cont_header = f"こたえ・よみあげ文（No.{pack} つづき）"
+        s.header(f"こたえ・よみあげ文（No.{pack}・Lesson {wl[0]['lessonNo']}〜{wl[-1]['lessonNo']}）",
                  "おうちの方用。フォニックス・リスニングは ここの よみあげ文を ゆっくり2回ずつ 読んでください。", with_name=False)
         for l in wl:
             n = l["lessonNo"]
@@ -766,7 +792,7 @@ def bundle_worksheet(world: int, name: str, lessons: list[dict], out: Path) -> i
     draft = render(BytesIO(), None)
     final = render(out, draft)
     if final.total != draft.total or final.lesson_pages != draft.lesson_pages:
-        raise SystemExit(f"ワールド{world}: 下書きと本番で ページ数が ちがいます（{draft.total} → {final.total}）")
+        raise SystemExit(f"No.{pack}: 下書きと本番で ページ数が ちがいます（{draft.total} → {final.total}）")
     return final.total
 
 
@@ -846,7 +872,7 @@ def progress_report(data: dict, out: Path):
     # --- ひとこと ---
     s.section("おうちの方へ")
     s.wrapped(MARGIN + 4 * mm, str(data.get("commentJa", "")), 10)
-    s.wrapped(MARGIN + 4 * mm, "同封の「1か月ワークブック」は、いまのワールドのレッスンと連動しています。1日1枚を目安に、アプリのあとで取り組んでください。", 8.5, color=INK2)
+    s.wrapped(MARGIN + 4 * mm, "同封の「1か月ワークブック」は、これから進む 20 レッスンと連動しています。1日1枚を目安に、アプリのあとで取り組んでください。", 8.5, color=INK2)
     if s.page_no != 1:
         raise SystemExit("レポートが1ページに収まりません")
     s.save()
@@ -870,9 +896,10 @@ def main():
     ap.add_argument("--lesson", type=int, help="レッスン番号（Session）")
     ap.add_argument("--test", choices=["mini", "boss"], help="テスト種別")
     ap.add_argument("--range", help="テスト範囲 例: 1-5, 1-30")
-    ap.add_argument("--all", action="store_true", help="全レッスン＋全テストを生成（--month と いっしょなら 12ワールド分の 月間まとめ）")
-    ap.add_argument("--month", action="store_true", help="月間まとめ（1ワールド＝30レッスン）モード。--world N か --all と いっしょに")
-    ap.add_argument("--world", type=int, help="月間まとめを作る ワールド番号（1〜12）")
+    ap.add_argument("--all", action="store_true", help="全レッスン＋全テストを生成（--month と いっしょなら 全レッスン分の 1か月ワークブック）")
+    ap.add_argument("--month", action="store_true", help="1か月ワークブック（20レッスン）モード。--pack N / --world N / --all と いっしょに")
+    ap.add_argument("--pack", type=int, help="1か月ワークブックの 番号（1 = Lesson 1〜20、2 = Lesson 21〜40 …）")
+    ap.add_argument("--world", type=int, help="その ワールドに かかる 1か月ワークブックを 作る（1〜40）")
     ap.add_argument("--out", type=Path, default=OUT_DIR)
     ap.add_argument("--report-json", type=Path, help="保護者向け月間レポートの JSON（アプリが作る）。--report-out と いっしょに")
     ap.add_argument("--report-out", type=Path, help="月間レポート PDF の出力先ファイル")
@@ -900,17 +927,27 @@ def main():
         test_worksheet(kind, a, b, lessons, p)
         made.append(p)
 
-    if args.month or args.world:
+    if args.month or args.world or args.pack:
         names = load_world_names()
-        worlds = sorted({l["world"] for l in lessons}) if args.all else [args.world] if args.world else []
-        if not worlds:
-            ap.error("--month には --world N か --all を つけてください")
-        for w in worlds:
-            if w not in names:
-                ap.error(f"ワールド{w} は ありません（1〜{max(names)}）")
-            p = args.out / "monthly" / f"world-{w:02d}.pdf"
-            pages = bundle_worksheet(w, names[w], lessons, p)
-            print(f"{show_path(p)}  ({pages} ページ)", flush=True)
+        last = max(by_no)
+        max_pack = (last + LESSONS_PER_PACK - 1) // LESSONS_PER_PACK
+        if args.all:
+            packs = list(range(1, max_pack + 1))
+        elif args.pack:
+            if not 1 <= args.pack <= max_pack:
+                ap.error(f"No.{args.pack} は ありません（1〜{max_pack}）")
+            packs = [args.pack]
+        elif args.world:
+            wl = [l["lessonNo"] for l in lessons if l["world"] == args.world]
+            if not wl:
+                ap.error(f"ワールド{args.world} の レッスンは まだ ありません")
+            packs = list(range((min(wl) - 1) // LESSONS_PER_PACK + 1, (max(wl) - 1) // LESSONS_PER_PACK + 2))
+        else:
+            ap.error("--month には --pack N / --world N / --all の どれかを つけてください")
+        for i, n in enumerate(packs, start=1):
+            p = args.out / "monthly" / f"month-{n:02d}.pdf"
+            pages = bundle_worksheet(n, names, lessons, p)
+            print(f"[{i}/{len(packs)}] {show_path(p)}  ({pages} ページ)", flush=True)
         return
 
     if args.all:

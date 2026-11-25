@@ -99,6 +99,8 @@ function layoutReport(c: Canvas, r: MonthlyReport): void {
   });
   y -= 70;
   para(`これまでに ${r.lessonsDone} / ${r.totalLessons} レッスン ・ 合格したテスト（今月） ${r.testsPassedThisMonth} ・ いまのワールド ${r.world}「${r.worldNameJa}」`, 9.5);
+  // run7: いまの ステージ・レベル、学校の英語、覚えた ことば
+  para(`ステージ${r.stage}「${r.stageNameJa}」（${r.level}） ・ ${r.schoolLineJa} ・ 覚えた ことば ${r.wordsLearned}語`, 9.5);
 
   heading(`6つの力の 習得率（送信時点・総合 ${Math.round(r.overall)}%）`);
   const barX = MARGIN + 120;
@@ -123,7 +125,7 @@ function layoutReport(c: Canvas, r: MonthlyReport): void {
 
   heading("おうちの方へ");
   para(r.commentJa, 10, 10);
-  para("同封の「1か月ワークブック」は、いまのワールドのレッスンと連動しています。1日1枚を目安に、アプリのあとで取り組んでください。", 8.5, 10, GREY);
+  para("同封の「1か月ワークブック」は、これから進む 20 レッスンと連動しています。1日1枚を目安に、アプリのあとで取り組んでください。", 8.5, 10, GREY);
   const footer = "Eigo Quest 学習レポート";
   c.text(A4_W / 2 - c.width(footer, 8) / 2, 24, footer, 8, GREY);
 }

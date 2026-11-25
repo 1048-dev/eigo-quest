@@ -2,7 +2,7 @@
  * テストのオフライン処理（DBなし）。出題は本物と同じ seed から作り、採点はルール採点（localGrader）で行う。
  * 記録・コインは保存されない（offline: true）。
  */
-import { getAssessment } from "@/lib/curriculum";
+import { ensureLessonsLoaded, getAssessment } from "@/lib/curriculum";
 import { buildTestQuestions, hashSeed, toPublic, type Question } from "@/lib/curriculum/questions";
 import { CURRICULUM_RULES } from "@/lib/domain/config";
 import { rewardForTest } from "@/lib/domain/coins";
@@ -18,6 +18,22 @@ function assessmentOf(id: string): AssessmentDef | undefined {
   if (!m) return undefined;
   const n = Number(m[1]);
   return { id, kind: "TREASURE", rangeStart: n, rangeEnd: n, questionCount: CURRICULUM_RULES.treasureQuestions, passRate: CURRICULUM_RULES.treasurePassRate, unlocksLesson: null };
+}
+
+/**
+ * ブラウザ用: テストの 範囲の ワールドを 読みこんでから 作る / 採点する（run7: カリキュラムは ワールドごとに あとから 読む）。
+ * サーバーでは 全ワールドが あるので 同期版と 同じ。
+ */
+export async function loadOfflineTestStart(id: string, opts: { arenaMode?: ArenaMode }): Promise<TestStartResponse> {
+  const a = assessmentOf(id);
+  if (a) await ensureLessonsLoaded(a.rangeStart, a.rangeEnd);
+  return offlineTestStart(id, opts);
+}
+
+export async function loadOfflineTestSubmit(id: string, body: { seed?: unknown; arenaMode?: ArenaMode; answers?: unknown }): Promise<TestSubmitResponse> {
+  const a = assessmentOf(id);
+  if (a) await ensureLessonsLoaded(a.rangeStart, a.rangeEnd);
+  return offlineTestSubmit(id, body);
 }
 
 export function offlineTestStart(id: string, opts: { arenaMode?: ArenaMode }): TestStartResponse {

@@ -1,11 +1,18 @@
 /**
- * カリキュラム全体の検証（content/curriculum/lessons.json）。
- * 新しいワールドを追加したら、このテストが通ることを確認する。
+ * カリキュラム全体の検証（content/curriculum/worlds/world-NN.json と 索引 index.json・titles.json）。
+ * 新しいワールドを追加したら（npm run curriculum:index のあと）、このテストが通ることを確認する。
+ * ワールドの数に よらず 動く（run7: 40 ワールド・1,200 レッスンまで）。
  */
+import { readFileSync, readdirSync } from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { z } from "zod";
-import raw from "@content/curriculum/lessons.json";
-import { ALL_ITEMS, ASSESSMENTS, LESSONS, TEACHER, itemsOfLesson } from "@/lib/curriculum";
+import indexRaw from "@content/curriculum/index.json";
+import titlesRaw from "@content/curriculum/titles.json";
+import { ALL_ITEMS, ASSESSMENTS, CURRICULUM_WORLDS, LESSONS, TEACHER, TOTAL_LESSONS, itemsOfLesson } from "@/lib/curriculum";
+import { BUNDLED_WORLDS } from "@/lib/curriculum/bundledWorlds";
+import { CEFR_LEVELS, levelOfWorld, stageOfWorld } from "@/lib/curriculum/stages";
+import { WORLD_COUNT, WORLD_NAMES } from "@/lib/game/worlds";
 import { buildLessonFlow } from "@/lib/curriculum/questions";
 import { teamSound } from "@/lib/curriculum/vowelTeams";
 import { findRSpellings } from "@/lib/curriculum/rControlled";
@@ -24,8 +31,11 @@ const LessonSchema = z.object({
   world: z.number().int().positive(),
   title: en,
   titleJa: ja,
+  stage: z.number().int().min(1).max(5).optional(),
+  level: z.enum(CEFR_LEVELS).optional(),
   school: z.object({
-    grade: z.string().regex(/^小[1-6]/),
+    // ステージ1 は 小1〜小6、ステージ2 以降は「中1」「中2」「中3」「高校初級」「高校」（docs/curriculum-6year.md §9）
+    grade: z.string().regex(/^(小[1-6]|中[1-3]|高校)/),
     topic: ja,
     grammar: ne,
     expressions: z.array(z.object({ en, ja, core: z.boolean().optional() })).min(1),
@@ -44,24 +54,72 @@ const LessonSchema = z.object({
   recap: z.object({ highlightsJa: z.array(ne).min(1) }).optional(),
 });
 
-/** ワールド → 学年（docs/curriculum-plan.md） */
-const gradeOfWorld = (w: number) => (w <= 2 ? `小${w}` : w <= 4 ? "小3" : w <= 6 ? "小4" : w <= 8 ? "小5" : "小6");
+/** ワールド → 学年（docs/curriculum-plan.md。ステージ2 以降は 中学・高校の めやす） */
+const gradeOfWorld = (w: number) => (w <= 2 ? `小${w}` : w <= 4 ? "小3" : w <= 6 ? "小4" : w <= 8 ? "小5" : w <= 12 ? "小6" : /^(中[1-3]|高校)/);
 
 /** フォーカス（"a_e" のような magic e、"sun-set" のような 2つに わける語も）を正規表現に */
 const focusRe = (f: string) => new RegExp(f.toLowerCase().replace(/-/g, "").replace(/_/g, "[a-z]"));
 
-const data = raw as { meta: { lessonsPerWorld: number; miniTestEvery: number; teacher: { name: string } }; lessons: unknown[] };
+const WORLDS_DIR = path.join(__dirname, "..", "content", "curriculum", "worlds");
+const worldFiles = readdirSync(WORLDS_DIR).filter((f) => f.endsWith(".json")).sort();
+const rawWorlds = worldFiles.map((f) => ({ f, data: JSON.parse(readFileSync(path.join(WORLDS_DIR, f), "utf8")) as { world: number; stage: number; level: string; lessons: unknown[] } }));
+const rawLessons = rawWorlds.flatMap((w) => w.data.lessons);
+const index = indexRaw as { meta: { lessonsPerWorld: number; miniTestEvery: number; teacher: { name: string } }; totalLessons: number; worlds: { world: number; file: string; stage: number; level: string; firstLesson: number; lastLesson: number; lessonCount: number }[] };
 
 describe("カリキュラム: スキーマ", () => {
   it("meta がある", () => {
-    expect(data.meta.lessonsPerWorld).toBe(30);
-    expect(data.meta.miniTestEvery).toBe(5);
+    expect(index.meta.lessonsPerWorld).toBe(30);
+    expect(index.meta.miniTestEvery).toBe(5);
     expect(TEACHER.name).toBe("Ms. Emma");
   });
 
-  it.each(data.lessons.map((l, i) => [(l as { lessonNo?: number }).lessonNo ?? `index ${i}`, l]))("レッスン %s がスキーマどおり", (_n, l) => {
+  it.each(rawLessons.map((l, i) => [(l as { lessonNo?: number }).lessonNo ?? `index ${i}`, l]))("レッスン %s がスキーマどおり", (_n, l) => {
     const r = LessonSchema.safeParse(l);
     expect(r.success ? "ok" : JSON.stringify(r.error.issues.slice(0, 5), null, 1)).toBe("ok");
+  });
+});
+
+describe("カリキュラム: ワールドの ファイルと 索引（run7）", () => {
+  it("ファイル名は world-NN.json、中身の world と そろう。ステージ・レベルは 計画どおり", () => {
+    expect(worldFiles.length).toBeGreaterThan(0);
+    expect(worldFiles.length).toBeLessThanOrEqual(WORLD_COUNT);
+    for (const { f, data } of rawWorlds) {
+      expect(f).toBe(`world-${String(data.world).padStart(2, "0")}.json`);
+      expect(data.stage, f).toBe(stageOfWorld(data.world));
+      expect(data.level, f).toBe(levelOfWorld(data.world));
+      expect(data.lessons.length, f).toBe(30);
+      expect(WORLD_NAMES[data.world], f).toBeTruthy();
+    }
+  });
+
+  it("ワールドは 1 から 抜けなく つづく（とちゅうの ワールドが 無いと レッスン番号が つながらない）", () => {
+    expect(rawWorlds.map((w) => w.data.world)).toEqual(rawWorlds.map((_, i) => i + 1));
+  });
+
+  it("index.json は ワールドの ファイルと 一致（ずれていたら npm run curriculum:index）", () => {
+    expect(index.totalLessons).toBe(rawLessons.length);
+    expect(TOTAL_LESSONS).toBe(LESSONS.length);
+    expect(index.worlds).toEqual(rawWorlds.map(({ f, data }) => {
+      const ls = data.lessons as { lessonNo: number }[];
+      return { world: data.world, file: f, stage: data.stage, level: data.level, firstLesson: ls[0].lessonNo, lastLesson: ls[ls.length - 1].lessonNo, lessonCount: ls.length };
+    }));
+    expect(CURRICULUM_WORLDS).toEqual(index.worlds);
+  });
+
+  it("titles.json は 全レッスンの タイトルと 一致", () => {
+    const t = (titlesRaw as { lessons: { lessonNo: number; world: number; stage: number; title: string; titleJa: string }[] }).lessons;
+    expect(t).toEqual(LESSONS.map((l) => ({ lessonNo: l.lessonNo, world: l.world, stage: l.stage, title: l.title, titleJa: l.titleJa })));
+  });
+
+  it("サーバー用の bundledWorlds.ts は 全ワールドを 読みこむ", () => {
+    expect(BUNDLED_WORLDS.map((w) => w.world)).toEqual(index.worlds.map((w) => w.world));
+  });
+
+  it("どのレッスンにも stage と level が入る（ファイルに 無ければ ワールドの 値）", () => {
+    for (const l of LESSONS) {
+      expect(l.stage, `L${l.lessonNo}`).toBe(stageOfWorld(l.world));
+      expect(CEFR_LEVELS as readonly string[], `L${l.lessonNo}`).toContain(l.level);
+    }
   });
 });
 
@@ -75,7 +133,10 @@ describe("カリキュラム: 全体の整合性", () => {
   });
 
   it("学年はワールドの計画どおり", () => {
-    for (const l of LESSONS) expect(l.school.grade.startsWith(gradeOfWorld(l.world)), `L${l.lessonNo}: ${l.school.grade}`).toBe(true);
+    for (const l of LESSONS) {
+      const g = gradeOfWorld(l.world);
+      expect(typeof g === "string" ? l.school.grade.startsWith(g) : g.test(l.school.grade), `L${l.lessonNo}: ${l.school.grade}`).toBe(true);
+    }
   });
 
   it("学習項目 ID とテスト ID がすべてユニーク", () => {

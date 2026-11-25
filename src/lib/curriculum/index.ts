@@ -1,20 +1,79 @@
 /**
  * カリキュラム読み込み層。
- * content/curriculum/lessons.json（唯一の正）→ 学習項目（LearningItem）とテスト定義（Assessment）を
+ * content/curriculum/worlds/world-NN.json（ワールドごとの レッスン。唯一の正）→ 学習項目（LearningItem）とテスト定義（Assessment）を
  * ルールで展開する。DB seed・API・Python PDF生成スクリプトの三者が同じルールを使う。
+ *
+ * run7 Phase 2（1,200 レッスンでも速く）:
+ *  - 小さな 索引 content/curriculum/index.json（先生・レッスン数・ワールドの範囲）だけを いつも 読む。
+ *    TOTAL_LESSONS・テスト定義（ASSESSMENTS）は 索引だけで 決まる。
+ *  - サーバー（Node）では bundledWorlds.ts が 全ワールドを 読みこむので、getLesson などは そのまま 同期で使える。
+ *  - ブラウザでは bundledWorlds が 空に 差しかわる（next.config.ts）。おためし・オフラインで レッスンや テストを 作る前に
+ *    ensureLessonsLoaded(start, end) で 必要な ワールドの JSON だけを あとから 読みこむ（ワールドごとの チャンク）。
  */
-import raw from "@content/curriculum/lessons.json";
+import indexRaw from "@content/curriculum/index.json";
 import type { AssessmentDef, ItemKind, LearningItemDef, LessonDef, Skill } from "@/lib/domain/types";
 import { CURRICULUM_RULES } from "@/lib/domain/config";
+import { BUNDLED_WORLDS } from "./bundledWorlds";
+import { levelOfWorld, stageOfWorld } from "./stages";
+import type { CurriculumIndex, WorldFile, WorldIndexEntry } from "./types";
 
-const data = raw as { meta: { teacher: { name: string; nameJa: string } }; lessons: LessonDef[] };
+const INDEX = indexRaw as CurriculumIndex;
 
-export const TEACHER = data.meta.teacher;
-export const LESSONS: readonly LessonDef[] = data.lessons;
-export const TOTAL_LESSONS = LESSONS.length;
+export const TEACHER = INDEX.meta.teacher;
+/** あそべる レッスンの数（索引から。ワールドの JSON を 足して npm run curriculum:index すると ふえる） */
+export const TOTAL_LESSONS = INDEX.totalLessons;
+/** ワールドの 一覧（ステージ・レベル・レッスンの範囲・ファイル名） */
+export const CURRICULUM_WORLDS: readonly WorldIndexEntry[] = INDEX.worlds;
+
+const lessonMap = new Map<number, LessonDef>();
+const loadedWorlds = new Set<number>();
+const itemCache = new Map<number, LearningItemDef[]>();
+
+/** ワールドの ファイルを 登録する（stage / level が 無い レッスンには ワールドの 値を 入れる） */
+export function registerWorld(file: WorldFile): void {
+  if (loadedWorlds.has(file.world)) return;
+  const stage = file.stage ?? stageOfWorld(file.world);
+  const level = file.level ?? levelOfWorld(file.world);
+  for (const l of file.lessons) lessonMap.set(l.lessonNo, { ...l, stage: l.stage ?? stage, level: l.level ?? level });
+  loadedWorlds.add(file.world);
+}
+for (const w of BUNDLED_WORLDS) registerWorld(w);
+
+/**
+ * 読みこまれている 全レッスン（番号順）。サーバー（Node）では 全部。ブラウザでは モジュールを 読んだ ときには 空なので使わない
+ * （ブラウザで 使うのは getLesson / itemsInRange / getItem と ensureLessonsLoaded）。
+ */
+export const LESSONS: readonly LessonDef[] = [...lessonMap.values()].sort((a, b) => a.lessonNo - b.lessonNo);
 
 export function getLesson(lessonNo: number): LessonDef | undefined {
-  return LESSONS.find((l) => l.lessonNo === lessonNo);
+  return lessonMap.get(lessonNo);
+}
+
+/** start〜end の レッスンを ふくむ ワールド（索引から） */
+export function worldsInRange(start: number, end: number): WorldIndexEntry[] {
+  return CURRICULUM_WORLDS.filter((w) => w.lastLesson >= start && w.firstLesson <= end);
+}
+
+export const isWorldLoaded = (world: number) => loadedWorlds.has(world);
+
+const pending = new Map<number, Promise<void>>();
+/**
+ * start〜end の レッスンが 使えるように する（まだ 読んでいない ワールドの JSON だけ 読みこむ）。
+ * サーバーでは すでに 全部 あるので すぐ おわる。ブラウザでは ワールドごとの チャンクを 取りに行く。
+ */
+export async function ensureLessonsLoaded(start: number, end = start): Promise<void> {
+  const need = worldsInRange(start, end).filter((w) => !loadedWorlds.has(w.world));
+  await Promise.all(need.map((w) => {
+    let p = pending.get(w.world);
+    if (!p) {
+      const no = String(w.world).padStart(2, "0");
+      p = import(`../../../content/curriculum/worlds/world-${no}.json`)
+        .then((m: { default?: WorldFile } & Partial<WorldFile>) => registerWorld((m.default ?? m) as WorldFile))
+        .finally(() => pending.delete(w.world));
+      pending.set(w.world, p);
+    }
+    return p;
+  }));
 }
 
 const pad = (n: number) => String(n).padStart(3, "0");
@@ -59,14 +118,40 @@ export function itemsOfLesson(lesson: LessonDef): LearningItemDef[] {
   return items;
 }
 
-export const ALL_ITEMS: readonly LearningItemDef[] = LESSONS.flatMap(itemsOfLesson);
-
-export function itemsInRange(start: number, end: number): LearningItemDef[] {
-  return ALL_ITEMS.filter((i) => i.lessonNo >= start && i.lessonNo <= end);
+/** レッスン n の 学習項目（キャッシュ。読みこまれていなければ 空。中身は 書きかえないこと） */
+function cachedItems(lessonNo: number): readonly LearningItemDef[] {
+  let items = itemCache.get(lessonNo);
+  if (!items) {
+    const lesson = lessonMap.get(lessonNo);
+    if (!lesson) return [];
+    items = itemsOfLesson(lesson);
+    itemCache.set(lessonNo, items);
+  }
+  return items;
 }
 
+/** 全学習項目（サーバー用。LESSONS と同じく ブラウザでは 空） */
+export const ALL_ITEMS: readonly LearningItemDef[] = LESSONS.flatMap((l) => cachedItems(l.lessonNo));
+
+export function itemsInRange(start: number, end: number): LearningItemDef[] {
+  const out: LearningItemDef[] = [];
+  const last = Math.min(end, TOTAL_LESSONS);
+  for (let n = Math.max(1, start); n <= last; n++) out.push(...cachedItems(n));
+  return out;
+}
+
+/** 覚えた ことばの数（完了した レッスンの 単語＝vocab を、大文字小文字を そろえて 重ならないように 数える） */
+export function countWordsLearned(lessonNos: Iterable<number>): number {
+  const words = new Set<string>();
+  for (const n of lessonNos) for (const v of lessonMap.get(n)?.vocab ?? []) words.add(v.en.trim().toLowerCase());
+  return words.size;
+}
+
+/** 項目 ID（L001-W-hello）の 先頭の レッスン番号から さがす */
 export function getItem(id: string): LearningItemDef | undefined {
-  return ALL_ITEMS.find((i) => i.id === id);
+  const m = /^L(\d+)-/.exec(id);
+  if (!m) return undefined;
+  return cachedItems(Number(m[1])).find((i) => i.id === id);
 }
 
 /**
@@ -97,16 +182,21 @@ export function buildAssessments(totalLessons = TOTAL_LESSONS): AssessmentDef[] 
 
 export const ASSESSMENTS: readonly AssessmentDef[] = buildAssessments();
 
+// 1,200 レッスンでは テストが 約1,500 こ。マップ（全ノード）を作るたびに find しないよう 引ける表にしておく
+const assessmentById = new Map(ASSESSMENTS.map((a) => [a.id, a]));
+const gateByEnd = new Map(ASSESSMENTS.filter((a) => a.kind === "MINI" || a.kind === "BOSS").map((a) => [a.rangeEnd, a]));
+const checkByEnd = new Map(ASSESSMENTS.filter((a) => a.kind === "DAILY_CHECK").map((a) => [a.rangeEnd, a]));
+
 export function getAssessment(id: string): AssessmentDef | undefined {
-  return ASSESSMENTS.find((a) => a.id === id);
+  return assessmentById.get(id);
 }
 
 /** レッスン n の後にある「ゲート」（まとめ / ボス）。合格すると次のレッスンが開く。無ければ undefined */
 export function gateTestAfterLesson(n: number): AssessmentDef | undefined {
-  return ASSESSMENTS.find((a) => (a.kind === "MINI" || a.kind === "BOSS") && a.rangeEnd === n);
+  return gateByEnd.get(n);
 }
 
 /** レッスン n の復習クエスト（完了の翌日から。進行はブロックしない） */
 export function reviewQuestFor(n: number): AssessmentDef | undefined {
-  return ASSESSMENTS.find((a) => a.kind === "DAILY_CHECK" && a.rangeEnd === n);
+  return checkByEnd.get(n);
 }

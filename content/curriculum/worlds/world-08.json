@@ -1,0 +1,4190 @@
+{
+  "world": 8,
+  "stage": 1,
+  "level": "A1",
+  "lessons": [
+    {
+      "lessonNo": 211,
+      "world": 8,
+      "title": "Where Is the Station?",
+      "titleJa": "えきは どこ？",
+      "school": {
+        "grade": "小5",
+        "topic": "みちあんない：ばしょを たずねる",
+        "grammar": "Where is the ～?",
+        "expressions": [
+          {
+            "en": "Where is the station?",
+            "ja": "えきは どこですか？",
+            "core": true
+          },
+          {
+            "en": "Where is the park? ― It's over there.",
+            "ja": "こうえんは どこ？ ― あそこだよ。"
+          },
+          {
+            "en": "Excuse me. I'm lost.",
+            "ja": "すみません。みちに まよいました。"
+          }
+        ],
+        "testPoints": [
+          "Where is the ～? で ばしょを たずねられる",
+          "oo（ウー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the station.",
+          "ja": "えきを ゆびさして。",
+          "action": "えきの ほうを ゆびさす",
+          "emoji": "🚉"
+        },
+        {
+          "en": "Look at the map.",
+          "ja": "ちずを みて。",
+          "action": "りょうてで ちずを ひろげる まね",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Walk slowly.",
+          "ja": "ゆっくり あるいて。",
+          "action": "その ばで ゆっくり あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Stop at the corner.",
+          "ja": "かどで とまって。",
+          "action": "ぴたっと とまる",
+          "emoji": "🛑"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oo"
+        ],
+        "sounds": [
+          "/uː/"
+        ],
+        "words": [
+          "moon",
+          "zoo",
+          "food",
+          "pool"
+        ],
+        "tipJa": "o が 2つで「ウー」。moon、zoo、food、pool。くちを まるく とがらせて ながく！"
+      },
+      "vocab": [
+        {
+          "en": "station",
+          "ja": "えき",
+          "emoji": "🚉",
+          "core": true
+        },
+        {
+          "en": "park",
+          "ja": "こうえん",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "zoo",
+          "ja": "どうぶつえん",
+          "emoji": "🦁"
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        }
+      ],
+      "teacherScript": "ワールド8 スタート！たびだちの道で みちあんないを しよう。「Where is the station?」で ばしょを たずねるよ。こまったら Excuse me. から はじめよう。",
+      "conversation": {
+        "scene": "A traveler is lost on the Road of Journeys",
+        "sceneJa": "たびだちの道で みちに まよった たびびと（エマ先生が たびびと やく）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Excuse me. I'm lost. Where is the station?",
+            "ja": "すみません。みちに まよいました。えきは どこですか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "The station? It's over there!",
+            "ja": "えき？ あそこだよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thank you! And where is the zoo?",
+            "ja": "ありがとう！それと、どうぶつえんは どこ？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The zoo is near the station. Let's go together!",
+            "ja": "どうぶつえんは えきの ちかくだよ。いっしょに いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Where is the ～? で ばしょを たずねたり、It's over there. で こたえたり しよう",
+          "starterEn": "Excuse me. I'm a traveler. Where is the station?",
+          "targetExpressions": [
+            "Where is the ～?",
+            "It's over there."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Where is the station? が いえたね",
+          "Excuse me. I'm lost. で こまった ときも だいじょうぶ",
+          "moon、zoo、food、pool！ oo は「ウー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 212,
+      "world": 8,
+      "title": "At the Crossroads",
+      "titleJa": "こうさてんで みちあんない",
+      "school": {
+        "grade": "小5",
+        "topic": "みちあんない：すすむ ほうこう",
+        "grammar": "Go straight. / Turn right. / Turn left.",
+        "expressions": [
+          {
+            "en": "Go straight.",
+            "ja": "まっすぐ いって。",
+            "core": true
+          },
+          {
+            "en": "Turn right at the corner.",
+            "ja": "かどを みぎに まがって。"
+          },
+          {
+            "en": "Turn left at the bank.",
+            "ja": "ぎんこうを ひだりに まがって。"
+          }
+        ],
+        "testPoints": [
+          "Go straight. / Turn right. / Turn left. で みちを あんないできる",
+          "oo（ウー）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk straight.",
+          "ja": "まっすぐ あるいて。",
+          "action": "まえに 3ぽ あるく",
+          "emoji": "⬆️"
+        },
+        {
+          "en": "Turn right.",
+          "ja": "みぎに まがって。",
+          "action": "みぎを むく",
+          "emoji": "➡️"
+        },
+        {
+          "en": "Turn left.",
+          "ja": "ひだりに まがって。",
+          "action": "ひだりを むく",
+          "emoji": "⬅️"
+        },
+        {
+          "en": "Turn around.",
+          "ja": "うしろを むいて。",
+          "action": "くるっと うしろを むく",
+          "emoji": "🔄"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oo"
+        ],
+        "sounds": [
+          "/uː/"
+        ],
+        "words": [
+          "spoon",
+          "room",
+          "boot",
+          "cool"
+        ],
+        "tipJa": "oo の「ウー」 その2。spoon、room、boot、cool。s と p を くっつけて sp-oo-n！"
+      },
+      "vocab": [
+        {
+          "en": "straight",
+          "ja": "まっすぐ",
+          "emoji": "⬆️",
+          "core": true
+        },
+        {
+          "en": "right",
+          "ja": "みぎ",
+          "emoji": "➡️"
+        },
+        {
+          "en": "left",
+          "ja": "ひだり",
+          "emoji": "⬅️"
+        },
+        {
+          "en": "corner",
+          "ja": "かど",
+          "emoji": "📍"
+        }
+      ],
+      "teacherScript": "きょうは すすむ ほうこう。Go straight. Turn right. Turn left. からだを うごかしながら おぼえよう！",
+      "conversation": {
+        "scene": "Giving directions at a crossroads",
+        "sceneJa": "たびだちの道の こうさてんで みちあんない",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Where is the hospital?",
+            "ja": "びょういんは どこですか？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Go straight. Turn right at the corner.",
+            "ja": "まっすぐ いって、かどを みぎに まがってください。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Go straight, turn right. OK!",
+            "ja": "まっすぐ、みぎ。わかりました！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Wait! That's left! This is right!",
+            "ja": "まって！そっちは ひだり！こっちが みぎだよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Go straight. / Turn right. / Turn left. で みちを あんないしよう",
+          "starterEn": "Hello! Where is the library? Can you help me?",
+          "targetExpressions": [
+            "Go straight.",
+            "Turn right.",
+            "Turn left."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Go straight. Turn right. Turn left. が いえたね",
+          "みぎ（right）と ひだり（left）を からだで おぼえたよ",
+          "spoon、room、boot、cool！ oo は「ウー」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 213,
+      "world": 8,
+      "title": "It's on Your Right",
+      "titleJa": "みぎがわに あるよ",
+      "school": {
+        "grade": "小5",
+        "topic": "みちあんない：ばしょを つたえる",
+        "grammar": "It's on your right. / It's on your left.",
+        "expressions": [
+          {
+            "en": "It's on your right.",
+            "ja": "みぎがわに あります。",
+            "core": true
+          },
+          {
+            "en": "It's on your left.",
+            "ja": "ひだりがわに あります。"
+          },
+          {
+            "en": "You can see it on your right.",
+            "ja": "みぎがわに みえますよ。"
+          }
+        ],
+        "testPoints": [
+          "It's on your right / left. で ばしょを つたえられる",
+          "oo（ウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look to the right.",
+          "ja": "みぎを みて。",
+          "action": "かおを みぎに むける",
+          "emoji": "👉"
+        },
+        {
+          "en": "Look to the left.",
+          "ja": "ひだりを みて。",
+          "action": "かおを ひだりに むける",
+          "emoji": "👈"
+        },
+        {
+          "en": "Open the book.",
+          "ja": "ほんを ひらいて。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Raise your right hand.",
+          "ja": "みぎてを あげて。",
+          "action": "みぎてを あげる",
+          "emoji": "✋"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oo"
+        ],
+        "sounds": [
+          "/ʊ/"
+        ],
+        "words": [
+          "book",
+          "look",
+          "cook",
+          "good"
+        ],
+        "tipJa": "oo には もう1つ よみかたが あるよ。book、look、cook、good は みじかい「ウ」。moon の「ウー」と くらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "bookstore",
+          "ja": "ほんや",
+          "emoji": "📚",
+          "core": true
+        },
+        {
+          "en": "post office",
+          "ja": "ゆうびんきょく",
+          "emoji": "🏤"
+        },
+        {
+          "en": "bank",
+          "ja": "ぎんこう",
+          "emoji": "🏦"
+        },
+        {
+          "en": "flower shop",
+          "ja": "はなや",
+          "emoji": "💐"
+        }
+      ],
+      "teacherScript": "ばしょを つたえよう。「It's on your right.」 みぎがわ だよ。left なら ひだりがわ。oo の あたらしい おと「ウ」も ならうよ。",
+      "conversation": {
+        "scene": "Looking for a bookstore in town",
+        "sceneJa": "たびだちの道の まちで ほんやを さがす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Where is the bookstore?",
+            "ja": "ほんやは どこですか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Go straight. It's on your right.",
+            "ja": "まっすぐ いってください。みぎがわに あります。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Oh, I see it! Thank you!",
+            "ja": "あ、みえた！ありがとう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look! A cookbook! It looks good!",
+            "ja": "みて！りょうりの ほん！おいしそう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "It's on your right. / It's on your left. で ばしょを つたえよう",
+          "starterEn": "Excuse me. Where is the post office?",
+          "targetExpressions": [
+            "It's on your right.",
+            "It's on your left."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's on your right. が いえたね",
+          "right は みぎがわ、left は ひだりがわ",
+          "book、look、cook、good！ この oo は みじかい「ウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 214,
+      "world": 8,
+      "title": "Next to the Park",
+      "titleJa": "こうえんの となり",
+      "school": {
+        "grade": "小5",
+        "topic": "みちあんない：となり・あいだ・まえ",
+        "grammar": "It's next to ～. / It's between ～ and ～. / It's in front of ～.",
+        "expressions": [
+          {
+            "en": "It's next to the park.",
+            "ja": "こうえんの となりに あります。",
+            "core": true
+          },
+          {
+            "en": "It's between the bank and the bookstore.",
+            "ja": "ぎんこうと ほんやの あいだ です。"
+          },
+          {
+            "en": "It's in front of the station.",
+            "ja": "えきの まえに あります。"
+          }
+        ],
+        "testPoints": [
+          "It's next to ～. で となりの ばしょを つたえられる",
+          "oo（ウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand next to me.",
+          "ja": "わたしの となりに たって。",
+          "action": "となりに ならぶ",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Stand in front of the desk.",
+          "ja": "つくえの まえに たって。",
+          "action": "つくえの まえに たつ",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Put your foot forward.",
+          "ja": "あしを まえに だして。",
+          "action": "かたあしを まえに だす",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Hook your fingers.",
+          "ja": "ゆびを ひっかけて。",
+          "action": "りょうての ゆびを ひっかける",
+          "emoji": "🤞"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oo"
+        ],
+        "sounds": [
+          "/ʊ/"
+        ],
+        "words": [
+          "foot",
+          "wood",
+          "hook",
+          "wool"
+        ],
+        "tipJa": "みじかい「ウ」の oo その2。foot、wood、hook、wool。のどの おくで かるく「ウ」。"
+      },
+      "vocab": [
+        {
+          "en": "next to",
+          "ja": "となり",
+          "emoji": "↔️",
+          "core": true
+        },
+        {
+          "en": "between",
+          "ja": "あいだ",
+          "emoji": "🔀"
+        },
+        {
+          "en": "in front of",
+          "ja": "まえ",
+          "emoji": "🎯"
+        },
+        {
+          "en": "supermarket",
+          "ja": "スーパー",
+          "emoji": "🛒"
+        }
+      ],
+      "teacherScript": "きょうは「となり」と「あいだ」。It's next to the park. の next to は となり、between A and B は A と B の あいだ だよ。",
+      "conversation": {
+        "scene": "Finding a cafe next to the park",
+        "sceneJa": "こうえんの となりの カフェを さがす",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Where is the cafe?",
+            "ja": "カフェは どこですか？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's next to the park.",
+            "ja": "こうえんの となりです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's between the park and the bookstore!",
+            "ja": "こうえんと ほんやの あいだ だよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Next to the park, between the park and the bookstore. Got it!",
+            "ja": "こうえんの となり、ほんやとの あいだ。わかった！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "It's next to ～. / It's between ～ and ～. で ばしょを せつめいしよう",
+          "starterEn": "I'm looking for the supermarket. Where is it?",
+          "targetExpressions": [
+            "It's next to ～.",
+            "It's between ～ and ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's next to the park. が いえたね",
+          "between A and B は A と B の あいだ",
+          "foot、wood、hook、wool！ みじかい「ウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 215,
+      "world": 8,
+      "title": "Help the Traveler",
+      "titleJa": "たびびとを たすけよう",
+      "school": {
+        "grade": "小5",
+        "topic": "みちあんない：たびびとを たすけよう（まとめ）",
+        "grammar": "Where is ～? / Go straight. / Turn ～. / It's on your ～.",
+        "expressions": [
+          {
+            "en": "Go straight and turn left.",
+            "ja": "まっすぐ いって、ひだりに まがって。",
+            "core": true
+          },
+          {
+            "en": "Where is the zoo? ― Go straight. It's on your right.",
+            "ja": "どうぶつえんは どこ？ ― まっすぐ いって。みぎがわです。"
+          },
+          {
+            "en": "You're welcome. Have a nice trip!",
+            "ja": "どういたしまして。よい たびを！"
+          }
+        ],
+        "testPoints": [
+          "Where is ～? に、ほうこうと ばしょを つなげて こたえられる",
+          "oo の 2つの おと（ウー・ウ）を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Go straight! Turn right! Turn left!",
+          "ja": "まっすぐ！みぎ！ひだり！",
+          "action": "ほうこうの うごきを つづけて",
+          "emoji": "🧭"
+        },
+        {
+          "en": "Point to the map.",
+          "ja": "ちずを ゆびさして。",
+          "action": "ちずを ゆびさす",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "Wave goodbye.",
+          "ja": "てを ふって さようなら。",
+          "action": "てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Take a photo.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえる まね",
+          "emoji": "📷"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "oo"
+        ],
+        "sounds": [
+          "/uː/",
+          "/ʊ/"
+        ],
+        "words": [
+          "moon",
+          "book",
+          "food",
+          "foot"
+        ],
+        "tipJa": "oo は 2つの おと。moon・food は ながい「ウー」、book・foot は みじかい「ウ」。きいて くらべよう！"
+      },
+      "vocab": [
+        {
+          "en": "traveler",
+          "ja": "たびびと",
+          "emoji": "🧳",
+          "core": true
+        },
+        {
+          "en": "trip",
+          "ja": "たび",
+          "emoji": "✈️"
+        },
+        {
+          "en": "way",
+          "ja": "みち",
+          "emoji": "🛣️"
+        },
+        {
+          "en": "help",
+          "ja": "たすける",
+          "emoji": "🙋"
+        }
+      ],
+      "teacherScript": "まとめの 日！たびびとを たすけよう。Where is ～? に Go straight. Turn left. It's on your right. を つなげて こたえるよ。",
+      "conversation": {
+        "scene": "Helping a traveler find the zoo",
+        "sceneJa": "たびびとを どうぶつえんまで あんない",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Excuse me. Where is the zoo?",
+            "ja": "すみません。どうぶつえんは どこですか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Go straight and turn left.",
+            "ja": "まっすぐ いって、ひだりに まがってください。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's on your right. It's next to the pool.",
+            "ja": "みぎがわです。プールの となりですよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Thank you so much!",
+            "ja": "ほんとうに ありがとう！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You're welcome. Have a nice trip!",
+            "ja": "どういたしまして。よい たびを！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "たびびとに みちを あんないしよう（Go straight. / Turn right. / It's on your left. など）",
+          "starterEn": "Hello! I'm a traveler. Where is the zoo?",
+          "targetExpressions": [
+            "Go straight.",
+            "Turn left.",
+            "It's on your right."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Go straight and turn left. で あんないできたね",
+          "It's on your right. / next to ～ で ばしょも つたえられた",
+          "oo は moon の「ウー」と book の「ウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 216,
+      "world": 8,
+      "title": "What Would You Like?",
+      "titleJa": "なにに しますか？",
+      "school": {
+        "grade": "小5",
+        "topic": "ちゅうもん：ていねいに たずねる",
+        "grammar": "What would you like? ― I'd like ～.",
+        "expressions": [
+          {
+            "en": "What would you like?",
+            "ja": "なにに なさいますか？",
+            "core": true
+          },
+          {
+            "en": "I'd like a hamburger, please.",
+            "ja": "ハンバーガーを おねがいします。"
+          },
+          {
+            "en": "Here's the menu.",
+            "ja": "メニューです。"
+          }
+        ],
+        "testPoints": [
+          "What would you like? で ちゅうもんを たずねられる",
+          "ou（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the menu.",
+          "ja": "メニューを ひらいて。",
+          "action": "メニューを ひらく まね",
+          "emoji": "📋"
+        },
+        {
+          "en": "Sit down, please.",
+          "ja": "すわってください。",
+          "action": "いすに すわる まね",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Point to the picture.",
+          "ja": "えを ゆびさして。",
+          "action": "メニューの えを ゆびさす",
+          "emoji": "👆"
+        },
+        {
+          "en": "Go out the door.",
+          "ja": "ドアから でて。",
+          "action": "ドアを あけて でる まね",
+          "emoji": "🚪"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ou"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "out",
+          "house",
+          "mouse",
+          "cloud"
+        ],
+        "tipJa": "o と u で「アウ」。out、house、mouse、cloud。いたい ときの「アウ！」の おと。"
+      },
+      "vocab": [
+        {
+          "en": "menu",
+          "ja": "メニュー",
+          "emoji": "📋",
+          "core": true
+        },
+        {
+          "en": "hamburger",
+          "ja": "ハンバーガー",
+          "emoji": "🍔"
+        },
+        {
+          "en": "salad",
+          "ja": "サラダ",
+          "emoji": "🥗"
+        },
+        {
+          "en": "restaurant",
+          "ja": "レストラン",
+          "emoji": "🍽️"
+        }
+      ],
+      "teacherScript": "レストランに いこう！てんいんさんは「What would you like?」と ていねいに きくよ。こたえは「I'd like ～, please.」 I'd は I would の みじかい かたち。",
+      "conversation": {
+        "scene": "The first order at the Road Cafe",
+        "sceneJa": "たびだちの道の レストランで はじめての ちゅうもん",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Welcome! Here's the menu. What would you like?",
+            "ja": "いらっしゃいませ！メニューです。なにに なさいますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'd like a hamburger, please!",
+            "ja": "ハンバーガーを おねがいします！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And you, Ms. Emma?",
+            "ja": "エマ先生は？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'd like a salad, please.",
+            "ja": "サラダを おねがいします。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What would you like? に I'd like ～, please. で こたえよう",
+          "starterEn": "Welcome to the Road Cafe! Here's the menu. What would you like?",
+          "targetExpressions": [
+            "I'd like ～, please."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What would you like? が いえたね",
+          "I'd like ～, please. で ていねいに ちゅうもん",
+          "out、house、mouse、cloud！ ou は「アウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 217,
+      "world": 8,
+      "title": "I'd Like Spaghetti",
+      "titleJa": "スパゲッティを ください",
+      "school": {
+        "grade": "小5",
+        "topic": "ちゅうもん：たべものと のみもの",
+        "grammar": "I'd like ～. / What would you like to drink?",
+        "expressions": [
+          {
+            "en": "I'd like spaghetti, please.",
+            "ja": "スパゲッティを おねがいします。",
+            "core": true
+          },
+          {
+            "en": "What would you like to drink? ― I'd like orange juice.",
+            "ja": "のみものは なにに しますか？ ― オレンジジュース。"
+          },
+          {
+            "en": "Anything else? ― No, thank you.",
+            "ja": "ほかには？ ― いいえ、だいじょうぶです。"
+          }
+        ],
+        "testPoints": [
+          "I'd like ～, please. で たべもの・のみものを ちゅうもんできる",
+          "ou（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your mouth.",
+          "ja": "くちを あけて。",
+          "action": "おおきく くちを あける",
+          "emoji": "👄"
+        },
+        {
+          "en": "Drink some juice.",
+          "ja": "ジュースを のんで。",
+          "action": "コップで のむ まね",
+          "emoji": "🧃"
+        },
+        {
+          "en": "Eat slowly.",
+          "ja": "ゆっくり たべて。",
+          "action": "もぐもぐ ゆっくり",
+          "emoji": "🍝"
+        },
+        {
+          "en": "Wipe the table.",
+          "ja": "テーブルを ふいて。",
+          "action": "テーブルを ふく まね",
+          "emoji": "🧽"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ou"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "mouth",
+          "round",
+          "found",
+          "sound"
+        ],
+        "tipJa": "ou の「アウ」 その2。mouth、round、found、sound。おわりの nd も わすれずに！"
+      },
+      "vocab": [
+        {
+          "en": "spaghetti",
+          "ja": "スパゲッティ",
+          "emoji": "🍝",
+          "core": true
+        },
+        {
+          "en": "orange juice",
+          "ja": "オレンジジュース",
+          "emoji": "🧃"
+        },
+        {
+          "en": "drink",
+          "ja": "のみもの",
+          "emoji": "🥤"
+        },
+        {
+          "en": "dessert",
+          "ja": "デザート",
+          "emoji": "🍨"
+        }
+      ],
+      "teacherScript": "たべものと のみものを ちゅうもんしよう。「I'd like spaghetti, please.」 のみものは What would you like to drink? と きかれるよ。",
+      "conversation": {
+        "scene": "Ordering lunch and drinks at the Road Cafe",
+        "sceneJa": "レストランで ランチと のみものを ちゅうもん",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "What would you like?",
+            "ja": "なにに なさいますか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'd like spaghetti, please.",
+            "ja": "スパゲッティを おねがいします。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What would you like to drink?",
+            "ja": "のみものは なにに しますか？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I'd like orange juice. That's all.",
+            "ja": "オレンジジュース。いじょうです。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I'd like ～, please. で たべものと のみものを ちゅうもんしよう",
+          "starterEn": "Hello! What would you like? We have spaghetti, pizza and curry.",
+          "targetExpressions": [
+            "I'd like ～, please.",
+            "What would you like to drink?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'd like spaghetti, please. が いえたね",
+          "のみものは What would you like to drink?",
+          "mouth、round、found、sound！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 218,
+      "world": 8,
+      "title": "How Much Is It?",
+      "titleJa": "いくらですか？",
+      "school": {
+        "grade": "小5",
+        "topic": "ねだん：いくら？",
+        "grammar": "How much is it? ― It's ～ yen.",
+        "expressions": [
+          {
+            "en": "How much is it?",
+            "ja": "いくらですか？",
+            "core": true
+          },
+          {
+            "en": "It's 500 yen.",
+            "ja": "500えんです。"
+          },
+          {
+            "en": "The pizza is 800 yen.",
+            "ja": "ピザは 800えんです。"
+          }
+        ],
+        "testPoints": [
+          "How much is it? で ねだんを たずね、It's ～ yen. で こたえられる",
+          "ou（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Count the coins.",
+          "ja": "コインを かぞえて。",
+          "action": "ゆびで コインを かぞえる まね",
+          "emoji": "🪙"
+        },
+        {
+          "en": "Say it out loud.",
+          "ja": "おおきな こえで いって。",
+          "action": "てを くちに あてて おおきな こえ",
+          "emoji": "📣"
+        },
+        {
+          "en": "Pay at the counter.",
+          "ja": "レジで はらって。",
+          "action": "おかねを わたす まね",
+          "emoji": "💴"
+        },
+        {
+          "en": "Show me five fingers.",
+          "ja": "ゆびを 5ほん みせて。",
+          "action": "てを ひらく",
+          "emoji": "🖐️"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ou"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "count",
+          "loud",
+          "shout",
+          "south"
+        ],
+        "tipJa": "ou の「アウ」 その3。count、loud、shout、south。count は おかねを かぞえる ときにも つかうね。"
+      },
+      "vocab": [
+        {
+          "en": "yen",
+          "ja": "えん",
+          "emoji": "💴",
+          "core": true
+        },
+        {
+          "en": "hundred",
+          "ja": "ひゃく（100）",
+          "emoji": "💯"
+        },
+        {
+          "en": "price",
+          "ja": "ねだん",
+          "emoji": "🏷️"
+        },
+        {
+          "en": "ice cream",
+          "ja": "アイスクリーム",
+          "emoji": "🍦"
+        }
+      ],
+      "teacherScript": "ねだんを きこう。「How much is it?」 こたえは It's 500 yen. 100 は one hundred、500 は five hundred だよ。",
+      "conversation": {
+        "scene": "Checking prices at a food stand",
+        "sceneJa": "たびだちの道の やたいで ねだんを たずねる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "How much is the pizza?",
+            "ja": "ピザは いくら？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's 800 yen.",
+            "ja": "800えんです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "How much is the ice cream?",
+            "ja": "アイスクリームは いくら？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's 300 yen.",
+            "ja": "300えんです。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'd like ice cream, please!",
+            "ja": "アイスクリームを ください！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "How much is it? で ねだんを たずねよう（It's ～ yen. で こたえても OK）",
+          "starterEn": "Welcome to my food stand! We have pizza and ice cream. What would you like?",
+          "targetExpressions": [
+            "How much is it?",
+            "It's ～ yen."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How much is it? が いえたね",
+          "500 は five hundred yen",
+          "count、loud、shout、south！ ou は「アウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 219,
+      "world": 8,
+      "title": "Here You Are",
+      "titleJa": "はい、どうぞ",
+      "school": {
+        "grade": "小5",
+        "topic": "ちゅうもん：わたす・うけとる",
+        "grammar": "Here you are. / That's all, thank you.",
+        "expressions": [
+          {
+            "en": "Here you are.",
+            "ja": "はい、どうぞ。",
+            "core": true
+          },
+          {
+            "en": "That's all, thank you.",
+            "ja": "いじょうです、ありがとう。"
+          },
+          {
+            "en": "Your total is 1,000 yen.",
+            "ja": "ごうけいで 1000えんです。"
+          }
+        ],
+        "testPoints": [
+          "Here you are. / That's all. で ものや おかねの やりとりが できる",
+          "ou（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hand me the menu.",
+          "ja": "メニューを わたして。",
+          "action": "メニューを わたす まね",
+          "emoji": "🤲"
+        },
+        {
+          "en": "Bow and say thank you.",
+          "ja": "おじぎして ありがとう。",
+          "action": "ぺこっと おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Take the bag.",
+          "ja": "ふくろを うけとって。",
+          "action": "ふくろを うけとる まね",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "Put the money in your wallet.",
+          "ja": "おかねを さいふに いれて。",
+          "action": "さいふに しまう まね",
+          "emoji": "👛"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ou"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "ground",
+          "proud",
+          "couch",
+          "pouch"
+        ],
+        "tipJa": "ou の「アウ」 その4。ground、proud、couch、pouch。ch で おわる ことばも あるよ。"
+      },
+      "vocab": [
+        {
+          "en": "total",
+          "ja": "ごうけい",
+          "emoji": "🧾",
+          "core": true
+        },
+        {
+          "en": "change",
+          "ja": "おつり",
+          "emoji": "💱"
+        },
+        {
+          "en": "bag",
+          "ja": "ふくろ",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "wallet",
+          "ja": "さいふ",
+          "emoji": "👛"
+        }
+      ],
+      "teacherScript": "おみせで ものや おかねを わたすときは「Here you are.」 ちゅうもんが おわったら That's all. と いうよ。",
+      "conversation": {
+        "scene": "Paying at the cafe counter",
+        "sceneJa": "レストランの レジで おかいけい",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Anything else?",
+            "ja": "ほかに ございますか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's all, thank you.",
+            "ja": "いじょうです、ありがとう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Your total is 1,000 yen.",
+            "ja": "ごうけいで 1000えんです。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Here you are.",
+            "ja": "はい、どうぞ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thank you. Here's your bag.",
+            "ja": "ありがとうございます。ふくろです。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Here you are. / That's all. で おみせの やりとりを しよう",
+          "starterEn": "Here's your sandwich. Anything else?",
+          "targetExpressions": [
+            "Here you are.",
+            "That's all, thank you."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Here you are. が いえたね",
+          "ちゅうもんの おわりは That's all.",
+          "ground、proud、couch、pouch！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 220,
+      "world": 8,
+      "title": "Restaurant Role-Play",
+      "titleJa": "レストランごっこ",
+      "school": {
+        "grade": "小5",
+        "topic": "ちゅうもんと ねだん：レストランごっこ（まとめ）",
+        "grammar": "What would you like? / I'd like ～. / How much is it?",
+        "expressions": [
+          {
+            "en": "I'd like curry and rice, please.",
+            "ja": "カレーライスを おねがいします。",
+            "core": true
+          },
+          {
+            "en": "How much is it? ― It's 700 yen.",
+            "ja": "いくらですか？ ― 700えんです。"
+          },
+          {
+            "en": "Enjoy your meal!",
+            "ja": "ごゆっくり どうぞ！"
+          }
+        ],
+        "testPoints": [
+          "ちゅうもん・ねだん・しはらいを つなげて やりとりできる",
+          "ou と oo の おとを よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Bring the menu.",
+          "ja": "メニューを もってきて。",
+          "action": "メニューを はこぶ まね",
+          "emoji": "📋"
+        },
+        {
+          "en": "Pour the water.",
+          "ja": "みずを そそいで。",
+          "action": "コップに そそぐ まね",
+          "emoji": "💧"
+        },
+        {
+          "en": "Eat with a spoon.",
+          "ja": "スプーンで たべて。",
+          "action": "スプーンで すくう まね",
+          "emoji": "🥄"
+        },
+        {
+          "en": "Say thank you with a smile.",
+          "ja": "えがおで ありがとう。",
+          "action": "にっこり わらう",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ou",
+          "oo"
+        ],
+        "sounds": [
+          "/aʊ/",
+          "/uː/",
+          "/ʊ/"
+        ],
+        "words": [
+          "house",
+          "cloud",
+          "moon",
+          "book"
+        ],
+        "tipJa": "ou は「アウ」、oo は「ウー」か「ウ」。house・cloud と moon・book を よみくらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "curry and rice",
+          "ja": "カレーライス",
+          "emoji": "🍛",
+          "core": true
+        },
+        {
+          "en": "water",
+          "ja": "みず",
+          "emoji": "💧"
+        },
+        {
+          "en": "meal",
+          "ja": "しょくじ",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "waiter",
+          "ja": "てんいんさん",
+          "emoji": "🧑‍🍳"
+        }
+      ],
+      "teacherScript": "レストランごっこの 日！てんいんさんと おきゃくさんに わかれて、ちゅうもん → ねだん → しはらい まで やってみよう。",
+      "conversation": {
+        "scene": "Restaurant role-play at the Road Cafe",
+        "sceneJa": "レストランごっこ（てんいんさんと おきゃくさん）",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Welcome! What would you like?",
+            "ja": "いらっしゃいませ！なにに なさいますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'd like curry and rice, please. How much is it?",
+            "ja": "カレーライスを おねがいします。いくらですか？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's 700 yen.",
+            "ja": "700えんです。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here you are.",
+            "ja": "はい、どうぞ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you. Enjoy your meal!",
+            "ja": "ありがとうございます。ごゆっくり どうぞ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "レストランで ちゅうもんして ねだんを きこう（I'd like ～, please. / How much is it?）",
+          "starterEn": "Welcome to the Road Cafe! What would you like today?",
+          "targetExpressions": [
+            "I'd like ～, please.",
+            "How much is it?",
+            "Here you are."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ちゅうもん → ねだん → しはらい が できたね",
+          "Enjoy your meal! は ごゆっくり どうぞ",
+          "ou は「アウ」、oo は「ウー」と「ウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 221,
+      "world": 8,
+      "title": "In Japan, We Have Sushi",
+      "titleJa": "にほんには すしが ある",
+      "school": {
+        "grade": "小5",
+        "topic": "にほんの すてき：にほんに ある もの",
+        "grammar": "In Japan, we have ～.",
+        "expressions": [
+          {
+            "en": "In Japan, we have sushi.",
+            "ja": "にほんには すしが あります。",
+            "core": true
+          },
+          {
+            "en": "In Japan, we have beautiful mountains.",
+            "ja": "にほんには きれいな やまが あります。"
+          },
+          {
+            "en": "We have many hot springs.",
+            "ja": "おんせんが たくさん あります。"
+          }
+        ],
+        "testPoints": [
+          "In Japan, we have ～. で にほんの すてきな ものを しょうかいできる",
+          "ow（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a mountain with your arms.",
+          "ja": "うでで やまを つくって。",
+          "action": "あたまの うえで さんかく",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "Bow like this.",
+          "ja": "こう おじぎして。",
+          "action": "ていねいに おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Sit down slowly.",
+          "ja": "ゆっくり すわって。",
+          "action": "ゆっくり すわる",
+          "emoji": "🧘"
+        },
+        {
+          "en": "Open your arms wide.",
+          "ja": "りょうてを ひろげて。",
+          "action": "りょうてを おおきく ひろげる",
+          "emoji": "🤩"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ow"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "cow",
+          "now",
+          "how",
+          "wow"
+        ],
+        "tipJa": "ow には もう1つの おと「アウ」が あるよ。cow、now、how、wow。snow の「オウ」と くらべよう。"
+      },
+      "vocab": [
+        {
+          "en": "Japan",
+          "ja": "にほん",
+          "emoji": "🗾",
+          "core": true
+        },
+        {
+          "en": "sushi",
+          "ja": "すし",
+          "emoji": "🍣"
+        },
+        {
+          "en": "mountain",
+          "ja": "やま",
+          "emoji": "⛰️"
+        },
+        {
+          "en": "hot spring",
+          "ja": "おんせん",
+          "emoji": "♨️"
+        }
+      ],
+      "teacherScript": "かいがいの ともだちに にほんを しょうかいしよう。「In Japan, we have sushi.」 we は わたしたち。ow の あたらしい おと「アウ」も ならうよ。",
+      "conversation": {
+        "scene": "A video call with Ms. Emma's niece abroad",
+        "sceneJa": "エマ先生の めいっこ（かいがいの ともだち）と オンラインで にほん しょうかい",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "My niece Lily wants to know about Japan.",
+            "ja": "めいっこの リリーが にほんの ことを しりたいって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In Japan, we have sushi. It's delicious!",
+            "ja": "にほんには すしが あるよ。おいしいよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We have beautiful mountains, too.",
+            "ja": "きれいな やまも あるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wow! Lily says, \"How nice!\"",
+            "ja": "ワオ！リリーが「すてき！」だって。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "In Japan, we have ～. で にほんの すてきな ものを しょうかいしよう",
+          "starterEn": "Let's role-play! I'm a friend from far away. What do you have in Japan?",
+          "targetExpressions": [
+            "In Japan, we have ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Japan, we have sushi. が いえたね",
+          "we は「わたしたち」",
+          "cow、now、how、wow！ この ow は「アウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 222,
+      "world": 8,
+      "title": "You Can See Mount Fuji",
+      "titleJa": "ふじさんが みられるよ",
+      "school": {
+        "grade": "小5",
+        "topic": "にほんの すてき：できる こと",
+        "grammar": "You can ～.",
+        "expressions": [
+          {
+            "en": "You can see Mount Fuji.",
+            "ja": "ふじさんが みられます。",
+            "core": true
+          },
+          {
+            "en": "You can visit old temples.",
+            "ja": "ふるい おてらを たずねられます。"
+          },
+          {
+            "en": "You can eat ramen in Japan.",
+            "ja": "にほんでは ラーメンが たべられます。"
+          }
+        ],
+        "testPoints": [
+          "You can ～. で にほんで できる ことを しょうかいできる",
+          "ow（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look up at the mountain.",
+          "ja": "やまを みあげて。",
+          "action": "うえを みあげる",
+          "emoji": "🗻"
+        },
+        {
+          "en": "Walk up the hill.",
+          "ja": "さかを のぼって。",
+          "action": "ひざを あげて あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Put your hands together.",
+          "ja": "てを あわせて。",
+          "action": "むねの まえで てを あわせる",
+          "emoji": "🙏"
+        },
+        {
+          "en": "Eat noodles with chopsticks.",
+          "ja": "はしで めんを たべて。",
+          "action": "はしで めんを すする まね",
+          "emoji": "🍜"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ow"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "town",
+          "down",
+          "brown",
+          "crown"
+        ],
+        "tipJa": "ow の「アウ」 その2。town、down、brown、crown。n で おわる ことばが おおいね。"
+      },
+      "vocab": [
+        {
+          "en": "Mount Fuji",
+          "ja": "ふじさん",
+          "emoji": "🗻",
+          "core": true
+        },
+        {
+          "en": "temple",
+          "ja": "おてら",
+          "emoji": "🛕"
+        },
+        {
+          "en": "ramen",
+          "ja": "ラーメン",
+          "emoji": "🍜"
+        },
+        {
+          "en": "visit",
+          "ja": "たずねる",
+          "emoji": "🧳"
+        }
+      ],
+      "teacherScript": "「You can see Mount Fuji.」 You can ～. は「～できますよ」と おすすめする いいかた。にほんで できる ことを つたえよう。",
+      "conversation": {
+        "scene": "Making a travel poster about Japan",
+        "sceneJa": "にほんの りょこうポスターづくり",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "You can see Mount Fuji!",
+            "ja": "ふじさんが みられるよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "You can eat ramen in a small town!",
+            "ja": "ちいさな まちで ラーメンが たべられるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can visit old temples, too.",
+            "ja": "ふるい おてらも たずねられるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wow, what a great poster!",
+            "ja": "わあ、すてきな ポスター！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "You can ～. で にほんで できる ことを おすすめしよう",
+          "starterEn": "I want to visit Japan. What can I do there?",
+          "targetExpressions": [
+            "You can see ～.",
+            "You can eat ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You can see Mount Fuji. が いえたね",
+          "You can ～. で おすすめ できる",
+          "town、down、brown、crown！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 223,
+      "world": 8,
+      "title": "Festivals in Japan",
+      "titleJa": "にほんの おまつり",
+      "school": {
+        "grade": "小5",
+        "topic": "にほんの すてき：ぎょうじと まつり",
+        "grammar": "We have ～ in (つき). / You can enjoy ～.",
+        "expressions": [
+          {
+            "en": "You can enjoy fireworks.",
+            "ja": "はなびが たのしめます。",
+            "core": true
+          },
+          {
+            "en": "We have Tanabata in July.",
+            "ja": "7がつに たなばたが あります。"
+          },
+          {
+            "en": "We have a snow festival in February.",
+            "ja": "2がつに ゆきまつりが あります。"
+          }
+        ],
+        "testPoints": [
+          "We have ～ in ～. で ぎょうじと つきを つたえられる",
+          "ow（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the fireworks.",
+          "ja": "はなびを みて。",
+          "action": "そらを みあげる",
+          "emoji": "🎆"
+        },
+        {
+          "en": "Dance at the festival.",
+          "ja": "おまつりで おどって。",
+          "action": "ぼんおどりの ように おどる",
+          "emoji": "💃"
+        },
+        {
+          "en": "Write a wish.",
+          "ja": "ねがいごとを かいて。",
+          "action": "たんざくに かく まね",
+          "emoji": "🎋"
+        },
+        {
+          "en": "Wave a fan.",
+          "ja": "うちわで あおいで。",
+          "action": "うちわを ふる まね",
+          "emoji": "🎐"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ow"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "owl",
+          "clown",
+          "flower",
+          "tower"
+        ],
+        "tipJa": "ow の「アウ」 その3。owl、clown、flower、tower。flower と tower は おわりに er が つくよ。"
+      },
+      "vocab": [
+        {
+          "en": "festival",
+          "ja": "おまつり",
+          "emoji": "🏮",
+          "core": true
+        },
+        {
+          "en": "fireworks",
+          "ja": "はなび",
+          "emoji": "🎆"
+        },
+        {
+          "en": "Tanabata",
+          "ja": "たなばた",
+          "emoji": "🎋"
+        },
+        {
+          "en": "July",
+          "ja": "7がつ",
+          "emoji": "📅"
+        }
+      ],
+      "teacherScript": "にほんの おまつりを しょうかいしよう。「We have Tanabata in July.」「You can enjoy fireworks.」 enjoy は たのしむ。",
+      "conversation": {
+        "scene": "Telling Lily about Japanese festivals",
+        "sceneJa": "かいがいの ともだちに にほんの おまつりを しょうかい",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "We have Tanabata in July. You can write a wish.",
+            "ja": "7がつに たなばたが あるよ。ねがいごとが かけるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In summer, you can enjoy fireworks!",
+            "ja": "なつは はなびが たのしめるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We have a snow festival in February, too.",
+            "ja": "2がつには ゆきまつりも あるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Lily wants to see the fireworks!",
+            "ja": "リリーは はなびが みたいって！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We have ～ in ～. / You can enjoy ～. で にほんの おまつりを しょうかいしよう",
+          "starterEn": "Do you have festivals in Japan? Tell me about them!",
+          "targetExpressions": [
+            "We have ～ in ～.",
+            "You can enjoy ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "You can enjoy fireworks. が いえたね",
+          "We have Tanabata in July. で ぎょうじと つきを つたえた",
+          "owl、clown、flower、tower！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 224,
+      "world": 8,
+      "title": "It's Delicious",
+      "titleJa": "おいしいよ",
+      "school": {
+        "grade": "小5",
+        "topic": "にほんの すてき：たべものの ようす",
+        "grammar": "It's delicious. / It's ～ and ～.",
+        "expressions": [
+          {
+            "en": "It's delicious.",
+            "ja": "おいしいです。",
+            "core": true
+          },
+          {
+            "en": "Takoyaki is hot and soft.",
+            "ja": "たこやきは あつくて やわらかい。"
+          },
+          {
+            "en": "Mochi is sweet and chewy.",
+            "ja": "もちは あまくて もちもち。"
+          }
+        ],
+        "testPoints": [
+          "It's delicious. など ようすの ことばで たべものを しょうかいできる",
+          "ow（アウ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Take a bite.",
+          "ja": "ひとくち たべて。",
+          "action": "ぱくっと たべる まね",
+          "emoji": "😋"
+        },
+        {
+          "en": "Blow on it. It's hot!",
+          "ja": "ふーふー して。あついよ！",
+          "action": "ふーふーと いきを ふく",
+          "emoji": "🔥"
+        },
+        {
+          "en": "Rub your tummy.",
+          "ja": "おなかを さすって。",
+          "action": "おなかを まるく さする",
+          "emoji": "🤤"
+        },
+        {
+          "en": "Give a thumbs-up.",
+          "ja": "グッドの ポーズを して。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ow"
+        ],
+        "sounds": [
+          "/aʊ/"
+        ],
+        "words": [
+          "crowd",
+          "growl",
+          "howl",
+          "power"
+        ],
+        "tipJa": "ow の「アウ」 その4。crowd、growl、howl、power。おなかが growl（グー）って なるね！"
+      },
+      "vocab": [
+        {
+          "en": "delicious",
+          "ja": "おいしい",
+          "emoji": "😋",
+          "core": true
+        },
+        {
+          "en": "takoyaki",
+          "ja": "たこやき",
+          "emoji": "🐙"
+        },
+        {
+          "en": "mochi",
+          "ja": "もち",
+          "emoji": "🍡"
+        },
+        {
+          "en": "chewy",
+          "ja": "もちもちした",
+          "emoji": "🤤"
+        }
+      ],
+      "teacherScript": "たべものの ようすを つたえよう。「It's delicious.」 hot（あつい）、sweet（あまい）、soft（やわらかい）も つかえるよ。",
+      "conversation": {
+        "scene": "A Japanese food fair in the town square",
+        "sceneJa": "まちの ひろばの にほんの たべもの フェア",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "My tummy is growling!",
+            "ja": "おなかが グーグー なってる！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Try takoyaki. It's hot and soft.",
+            "ja": "たこやきを たべてみて。あつくて やわらかいよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Mmm! It's delicious!",
+            "ja": "んー！おいしい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look at the crowd! Everyone loves Japanese food.",
+            "ja": "みて、ひとが いっぱい！みんな にほんの たべものが だいすき。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "It's delicious. / It's sweet. など ようすの ことばで にほんの たべものを しょうかいしよう",
+          "starterEn": "What Japanese food do you like? Is it sweet?",
+          "targetExpressions": [
+            "It's delicious.",
+            "It's sweet."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's delicious. が いえたね",
+          "hot・sweet・soft で ようすを つたえた",
+          "crowd、growl、howl、power！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 225,
+      "world": 8,
+      "title": "Welcome to Japan!",
+      "titleJa": "にほんへ ようこそ！",
+      "school": {
+        "grade": "小5",
+        "topic": "にほんの すてき：にほん しょうかいガイド（まとめ）",
+        "grammar": "In Japan, we have ～. / You can ～. / It's ～.",
+        "expressions": [
+          {
+            "en": "Welcome to Japan! You can eat sushi.",
+            "ja": "にほんへ ようこそ！すしが たべられます。",
+            "core": true
+          },
+          {
+            "en": "In Japan, we have Tanabata. It's beautiful.",
+            "ja": "にほんには たなばたが あります。きれいです。"
+          },
+          {
+            "en": "Please come to Japan!",
+            "ja": "にほんに きてね！"
+          }
+        ],
+        "testPoints": [
+          "にほんの もの・できる こと・ようすを つなげて しょうかいできる",
+          "ou と ow（アウ）を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spread your arms. Welcome!",
+          "ja": "りょうてを ひろげて。ようこそ！",
+          "action": "りょうてを ひろげる",
+          "emoji": "🤗"
+        },
+        {
+          "en": "Point to Japan on the map.",
+          "ja": "ちずで にほんを ゆびさして。",
+          "action": "ちずの にほんを ゆびさす",
+          "emoji": "🗾"
+        },
+        {
+          "en": "Bow and smile.",
+          "ja": "おじぎして にっこり。",
+          "action": "おじぎして えがお",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Wave to your friend.",
+          "ja": "ともだちに てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ou",
+          "ow"
+        ],
+        "sounds": [
+          "/aʊ/",
+          "/aʊ/"
+        ],
+        "words": [
+          "out",
+          "owl",
+          "house",
+          "town"
+        ],
+        "tipJa": "ou と ow は おなじ「アウ」。out・house は ou、owl・town は ow。つづりを よく みよう！"
+      },
+      "vocab": [
+        {
+          "en": "welcome",
+          "ja": "ようこそ",
+          "emoji": "🤗",
+          "core": true
+        },
+        {
+          "en": "guide",
+          "ja": "ガイド",
+          "emoji": "🧭"
+        },
+        {
+          "en": "culture",
+          "ja": "ぶんか",
+          "emoji": "🎎"
+        },
+        {
+          "en": "abroad",
+          "ja": "かいがい",
+          "emoji": "🌏"
+        }
+      ],
+      "teacherScript": "まとめの 日！にほん しょうかいガイドに なろう。In Japan, we have ～. You can ～. It's ～. を つなげて はなすよ。",
+      "conversation": {
+        "scene": "A video tour of Japan for friends abroad",
+        "sceneJa": "かいがいの ともだちに オンラインで にほん ツアー",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Welcome to Japan! You can eat sushi.",
+            "ja": "にほんへ ようこそ！すしが たべられるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "In Japan, we have Tanabata. It's beautiful.",
+            "ja": "にほんには たなばたが あるよ。きれいだよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You can see Mount Fuji, too!",
+            "ja": "ふじさんも みられるよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Lily says, \"Thank you! I want to go to Japan!\"",
+            "ja": "リリーが「ありがとう！にほんに いきたい！」だって。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "にほん しょうかいガイドに なろう（In Japan, we have ～. / You can ～. / It's ～.）",
+          "starterEn": "Let's role-play! I'm a visitor from abroad. What's fun in Japan?",
+          "targetExpressions": [
+            "In Japan, we have ～.",
+            "You can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "にほんへ ようこそ！ で ガイドが できたね",
+          "もの・できる こと・ようすを つなげた",
+          "ou と ow は おなじ「アウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 226,
+      "world": 8,
+      "title": "Who Is Your Hero?",
+      "titleJa": "あなたの ヒーローは だれ？",
+      "school": {
+        "grade": "小5",
+        "topic": "あこがれの ひと：ヒーローを たずねる",
+        "grammar": "Who is your hero? ― My hero is ～.",
+        "expressions": [
+          {
+            "en": "Who is your hero?",
+            "ja": "あなたの ヒーローは だれ？",
+            "core": true
+          },
+          {
+            "en": "My hero is my coach.",
+            "ja": "わたしの ヒーローは コーチです。"
+          },
+          {
+            "en": "Why? ― He is very kind.",
+            "ja": "どうして？ ― とても やさしいから。"
+          }
+        ],
+        "testPoints": [
+          "Who is your hero? で あこがれの ひとを たずねられる",
+          "oi（オイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Make a hero pose.",
+          "ja": "ヒーローの ポーズを して。",
+          "action": "こしに てを あてて むねを はる",
+          "emoji": "🦸"
+        },
+        {
+          "en": "Fly like a hero.",
+          "ja": "ヒーローの ように とんで。",
+          "action": "うでを まえに のばす",
+          "emoji": "🦸‍♂️"
+        },
+        {
+          "en": "Clap for your hero.",
+          "ja": "ヒーローに はくしゅ。",
+          "action": "はくしゅ する",
+          "emoji": "👏"
+        },
+        {
+          "en": "Shake hands.",
+          "ja": "あくしゅ して。",
+          "action": "あくしゅ する",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oi"
+        ],
+        "sounds": [
+          "/ɔɪ/"
+        ],
+        "words": [
+          "coin",
+          "oil",
+          "boil",
+          "point"
+        ],
+        "tipJa": "o と i で「オイ」。coin、oil、boil、point。「おーい！」の オイ だよ。"
+      },
+      "vocab": [
+        {
+          "en": "hero",
+          "ja": "ヒーロー",
+          "emoji": "🦸",
+          "core": true
+        },
+        {
+          "en": "coach",
+          "ja": "コーチ",
+          "emoji": "🧑‍🏫"
+        },
+        {
+          "en": "kind",
+          "ja": "やさしい",
+          "emoji": "💗"
+        },
+        {
+          "en": "why",
+          "ja": "どうして",
+          "emoji": "❓"
+        }
+      ],
+      "teacherScript": "あこがれの ひとを しょうかいしよう。「Who is your hero?」 こたえは My hero is ～. かぞくでも、まんがの キャラでも いいよ。",
+      "conversation": {
+        "scene": "Hero talk at a camp on the road",
+        "sceneJa": "たびだちの道の キャンプで ヒーロー トーク",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Who is your hero, Haru?",
+            "ja": "ハルの ヒーローは だれ？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My hero is my soccer coach. He is very kind.",
+            "ja": "ぼくの ヒーローは サッカーの コーチ。とても やさしいんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Cool! My hero is my grandmother. She is strong.",
+            "ja": "かっこいい！わたしの ヒーローは おばあちゃん。つよいの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My hero is ... me!",
+            "ja": "ぼくの ヒーローは……ぼく！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Who is your hero? に My hero is ～. で こたえよう（かぞく・まんがの キャラ・どうぶつ でも OK。ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Hi! My hero is my grandmother. She is strong. Who is your hero?",
+          "targetExpressions": [
+            "My hero is ～.",
+            "Who is your hero?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Who is your hero? が いえたね",
+          "My hero is ～. で ヒーローを つたえた",
+          "coin、oil、boil、point！ oi は「オイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 227,
+      "world": 8,
+      "title": "She Is Brave",
+      "titleJa": "かのじょは ゆうかん",
+      "school": {
+        "grade": "小5",
+        "topic": "あこがれの ひと：しごとと せいかく",
+        "grammar": "My hero is ～. / He / She is ～.",
+        "expressions": [
+          {
+            "en": "She is brave.",
+            "ja": "かのじょは ゆうかん です。",
+            "core": true
+          },
+          {
+            "en": "My hero is a firefighter.",
+            "ja": "わたしの ヒーローは しょうぼうしです。"
+          },
+          {
+            "en": "He is strong and kind.",
+            "ja": "かれは つよくて やさしい。"
+          }
+        ],
+        "testPoints": [
+          "He / She is ～. で ヒーローの せいかくを つたえられる",
+          "oi（オイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Show your muscles.",
+          "ja": "ちからこぶを みせて。",
+          "action": "うでを まげて ちからこぶ",
+          "emoji": "💪"
+        },
+        {
+          "en": "Spray the water.",
+          "ja": "みずを かけて。",
+          "action": "ホースで みずを かける まね",
+          "emoji": "🚒"
+        },
+        {
+          "en": "Stand tall.",
+          "ja": "せすじを のばして たって。",
+          "action": "まっすぐ たつ",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Cheer loudly.",
+          "ja": "おおきな こえで おうえんして。",
+          "action": "こえを だして おうえん",
+          "emoji": "📣"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oi"
+        ],
+        "sounds": [
+          "/ɔɪ/"
+        ],
+        "words": [
+          "soil",
+          "join",
+          "noise",
+          "voice"
+        ],
+        "tipJa": "oi の「オイ」 その2。soil、join、noise、voice。voice の c は「ス」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "brave",
+          "ja": "ゆうかん",
+          "emoji": "🦁",
+          "core": true
+        },
+        {
+          "en": "strong",
+          "ja": "つよい",
+          "emoji": "💪"
+        },
+        {
+          "en": "firefighter",
+          "ja": "しょうぼうし",
+          "emoji": "🧑‍🚒"
+        },
+        {
+          "en": "cool",
+          "ja": "かっこいい",
+          "emoji": "😎"
+        }
+      ],
+      "teacherScript": "ヒーローの せいかくを つたえよう。「She is brave.」 brave は ゆうかん。strong、kind、cool も つかえるよ。",
+      "conversation": {
+        "scene": "Drawing hero posters",
+        "sceneJa": "ヒーローの ポスターを かく",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "My hero is a firefighter. She is brave.",
+            "ja": "わたしの ヒーローは しょうぼうし。ゆうかんなの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! She is strong, too.",
+            "ja": "すごい！つよいんだね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes! And she has a big voice.",
+            "ja": "そう！こえも おおきいの。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Join us, Birimo! Who is your hero?",
+            "ja": "ビリモも おいで！あなたの ヒーローは？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "He / She is brave. など せいかくの ことばで ヒーローを しょうかいしよう",
+          "starterEn": "My hero is a firefighter. She is brave. Tell me about your hero!",
+          "targetExpressions": [
+            "He is ～.",
+            "She is ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "She is brave. が いえたね",
+          "brave・strong・kind・cool で せいかくを つたえた",
+          "soil、join、noise、voice！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 228,
+      "world": 8,
+      "title": "He Is Good at Soccer",
+      "titleJa": "かれは サッカーが とくい",
+      "school": {
+        "grade": "小5",
+        "topic": "あこがれの ひと：できる ことと とくいな こと",
+        "grammar": "He / She is good at ～. / He / She can ～.",
+        "expressions": [
+          {
+            "en": "He is good at soccer.",
+            "ja": "かれは サッカーが とくい です。",
+            "core": true
+          },
+          {
+            "en": "She can sing very well.",
+            "ja": "かのじょは うたが とても じょうず。"
+          },
+          {
+            "en": "He can cook delicious food.",
+            "ja": "かれは おいしい りょうりが つくれる。"
+          }
+        ],
+        "testPoints": [
+          "He / She is good at ～. で ヒーローの とくいな ことを つたえられる",
+          "oy（オイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Kick the ball.",
+          "ja": "ボールを けって。",
+          "action": "ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Sing a song.",
+          "ja": "うたを うたって。",
+          "action": "マイクを もって うたう まね",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Throw the ball.",
+          "ja": "ボールを なげて。",
+          "action": "ボールを なげる まね",
+          "emoji": "🥎"
+        },
+        {
+          "en": "Cook in the kitchen.",
+          "ja": "キッチンで りょうりして。",
+          "action": "フライパンを ふる まね",
+          "emoji": "🍳"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oy"
+        ],
+        "sounds": [
+          "/ɔɪ/"
+        ],
+        "words": [
+          "boy",
+          "toy",
+          "joy",
+          "enjoy"
+        ],
+        "tipJa": "oy も「オイ」。boy、toy、joy、enjoy。ことばの おわりは oy、なかは oi が おおいよ。"
+      },
+      "vocab": [
+        {
+          "en": "good at",
+          "ja": "とくい",
+          "emoji": "🌟",
+          "core": true
+        },
+        {
+          "en": "soccer player",
+          "ja": "サッカーせんしゅ",
+          "emoji": "⚽"
+        },
+        {
+          "en": "singer",
+          "ja": "かしゅ",
+          "emoji": "🎤"
+        },
+        {
+          "en": "well",
+          "ja": "じょうずに",
+          "emoji": "👍"
+        }
+      ],
+      "teacherScript": "ヒーローの とくいな ことを つたえよう。「He is good at soccer.」 He can ～. も つかえるね。",
+      "conversation": {
+        "scene": "Talking about heroes at the sports field",
+        "sceneJa": "グラウンドで ヒーローの とくいな こと トーク",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "My hero is my coach. He is good at soccer.",
+            "ja": "ぼくの ヒーローは コーチ。サッカーが とくいなんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "He can kick very well!",
+            "ja": "けるのが すごく じょうず！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I like this singer. She can sing very well.",
+            "ja": "わたしは この かしゅが すき。うたが とても じょうずなの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I enjoy her songs, too!",
+            "ja": "ぼくも かのじょの うたが すき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "He / She is good at ～. / He / She can ～. で ヒーローの とくいな ことを つたえよう",
+          "starterEn": "My hero is a soccer player. He is good at running. What is your hero good at?",
+          "targetExpressions": [
+            "He is good at ～.",
+            "She can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "He is good at soccer. が いえたね",
+          "She can sing very well. で できる ことも つたえた",
+          "boy、toy、joy、enjoy！ oy も「オイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 229,
+      "world": 8,
+      "title": "He Helps People",
+      "titleJa": "かれは ひとを たすける",
+      "school": {
+        "grade": "小5",
+        "topic": "あこがれの ひと：ヒーローの わけ",
+        "grammar": "He / She helps ～.",
+        "expressions": [
+          {
+            "en": "He helps people.",
+            "ja": "かれは ひとを たすけます。",
+            "core": true
+          },
+          {
+            "en": "Why is she your hero? ― She is kind to everyone.",
+            "ja": "どうして かのじょが ヒーローなの？ ― みんなに やさしいから。"
+          },
+          {
+            "en": "She helps sick animals.",
+            "ja": "かのじょは びょうきの どうぶつを たすけます。"
+          }
+        ],
+        "testPoints": [
+          "He / She helps ～. で ヒーローの わけを つたえられる",
+          "oy（オイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Help your friend stand up.",
+          "ja": "ともだちを たすけおこして。",
+          "action": "てを さしのべる まね",
+          "emoji": "🤝"
+        },
+        {
+          "en": "Carry the box.",
+          "ja": "はこを はこんで。",
+          "action": "おもい はこを もつ まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Pat the dog.",
+          "ja": "いぬを なでて。",
+          "action": "やさしく なでる まね",
+          "emoji": "🐶"
+        },
+        {
+          "en": "Smile at everyone.",
+          "ja": "みんなに にっこり。",
+          "action": "まわりに にっこり",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "oy"
+        ],
+        "sounds": [
+          "/ɔɪ/"
+        ],
+        "words": [
+          "soy",
+          "oyster",
+          "cowboy",
+          "annoy"
+        ],
+        "tipJa": "oy の「オイ」 その2。soy、oyster、cowboy、annoy。cowboy は cow（アウ）と boy（オイ）が くっついた ことば！"
+      },
+      "vocab": [
+        {
+          "en": "people",
+          "ja": "ひとびと",
+          "emoji": "🧑‍🤝‍🧑",
+          "core": true
+        },
+        {
+          "en": "sick",
+          "ja": "びょうきの",
+          "emoji": "🤒"
+        },
+        {
+          "en": "everyone",
+          "ja": "みんな",
+          "emoji": "🙌"
+        },
+        {
+          "en": "vet",
+          "ja": "じゅうい",
+          "emoji": "🐾"
+        }
+      ],
+      "teacherScript": "ヒーローの わけを いおう。「He helps people.」 he と she の ときは help に s が ついて helps に なるよ（works と おなじ）。",
+      "conversation": {
+        "scene": "Why are they our heroes?",
+        "sceneJa": "どうして ヒーローなのか はなしあう",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Why is the firefighter your hero, Kiko?",
+            "ja": "キコ、どうして しょうぼうしが ヒーローなの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "She helps people. She is brave.",
+            "ja": "ひとを たすけるから。ゆうかんだから。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My hero is my grandmother. She is a doctor. She helps sick people.",
+            "ja": "わたしの ヒーローは おばあちゃん。おいしゃさんで、びょうきの ひとを たすけるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Heroes help everyone!",
+            "ja": "ヒーローは みんなを たすけるんだね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "He / She helps ～. で ヒーローの わけを つたえよう",
+          "starterEn": "My hero is my coach. He helps everyone on the team. Why is your hero cool?",
+          "targetExpressions": [
+            "He helps ～.",
+            "She helps ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "He helps people. が いえたね",
+          "he / she の ときは helps",
+          "soy、oyster、cowboy、annoy！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 230,
+      "world": 8,
+      "title": "This Is My Hero",
+      "titleJa": "これが わたしの ヒーロー",
+      "school": {
+        "grade": "小5",
+        "topic": "あこがれの ひと：ヒーロー しょうかい（まとめ）",
+        "grammar": "This is my hero. / He / She is ～. / He / She can ～.",
+        "expressions": [
+          {
+            "en": "This is my hero.",
+            "ja": "これが わたしの ヒーローです。",
+            "core": true
+          },
+          {
+            "en": "She is a doctor. She helps sick people.",
+            "ja": "かのじょは いしゃ。びょうきの ひとを たすけます。"
+          },
+          {
+            "en": "He is kind. He is good at cooking.",
+            "ja": "かれは やさしい。りょうりが とくい。"
+          }
+        ],
+        "testPoints": [
+          "しごと・せいかく・とくいな こと・わけを つなげて ヒーローを しょうかいできる",
+          "oi と oy（オイ）を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your poster.",
+          "ja": "ポスターを みせて。",
+          "action": "ポスターを たかく あげる",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Bow to the audience.",
+          "ja": "みんなに おじぎ。",
+          "action": "おきゃくさんに おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Give a big hand.",
+          "ja": "おおきな はくしゅを。",
+          "action": "おおきく はくしゅ",
+          "emoji": "👏"
+        },
+        {
+          "en": "Make a hero pose.",
+          "ja": "ヒーローの ポーズ。",
+          "action": "むねを はって こしに て",
+          "emoji": "🦸"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "oi",
+          "oy"
+        ],
+        "sounds": [
+          "/ɔɪ/",
+          "/ɔɪ/"
+        ],
+        "words": [
+          "coin",
+          "boy",
+          "point",
+          "toy"
+        ],
+        "tipJa": "oi と oy は おなじ「オイ」。ことばの なかは oi（coin・point）、おわりは oy（boy・toy）が おおいよ。"
+      },
+      "vocab": [
+        {
+          "en": "poster",
+          "ja": "ポスター",
+          "emoji": "🖼️",
+          "core": true
+        },
+        {
+          "en": "speech",
+          "ja": "スピーチ",
+          "emoji": "🎤"
+        },
+        {
+          "en": "doctor",
+          "ja": "いしゃ",
+          "emoji": "🩺"
+        },
+        {
+          "en": "audience",
+          "ja": "おきゃくさん",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "まとめの 日！ヒーロー しょうかいポスターを つくって はっぴょうしよう。This is my hero. から はじめるよ。",
+      "conversation": {
+        "scene": "Hero poster show",
+        "sceneJa": "ヒーロー しょうかい ポスターの はっぴょう",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "This is my hero, my grandmother. She is a doctor. She helps sick people.",
+            "ja": "これが わたしの ヒーロー、おばあちゃん。おいしゃさんで、びょうきの ひとを たすけるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Cool! Why is she your hero?",
+            "ja": "かっこいい！どうして ヒーローなの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "She is kind and brave.",
+            "ja": "やさしくて ゆうかんだから。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great speech, Riko! Next is Birimo.",
+            "ja": "リコ、すてきな スピーチ！つぎは ビリモ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ヒーローを しょうかいしよう（This is my hero. / He / She is ～. / He / She can ～.）。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Show me your hero! Is your hero kind? What can your hero do?",
+          "targetExpressions": [
+            "This is my hero.",
+            "He is ～.",
+            "She can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "This is my hero. で しょうかいできたね",
+          "しごと・せいかく・わけを つなげた",
+          "oi と oy は おなじ「オイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 231,
+      "world": 8,
+      "title": "Our Town",
+      "titleJa": "わたしたちの まち",
+      "school": {
+        "grade": "小5",
+        "topic": "わたしたちの まち：まちに ある もの",
+        "grammar": "We have a ～ in our town.",
+        "expressions": [
+          {
+            "en": "We have a park in our town.",
+            "ja": "わたしたちの まちには こうえんが あります。",
+            "core": true
+          },
+          {
+            "en": "We have a big library.",
+            "ja": "おおきな としょかんが あります。"
+          },
+          {
+            "en": "We have a nice beach, too.",
+            "ja": "すてきな はまべも あります。"
+          }
+        ],
+        "testPoints": [
+          "We have a ～ in our town. で まちに ある ものを つたえられる",
+          "igh（アイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Reach up to the sky.",
+          "ja": "そらに てを のばして。",
+          "action": "せのびして てを のばす",
+          "emoji": "🙆"
+        },
+        {
+          "en": "Draw a map of the town.",
+          "ja": "まちの ちずを かいて。",
+          "action": "ゆびで ちずを かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Ride a bike.",
+          "ja": "じてんしゃに のって。",
+          "action": "ペダルを こぐ まね",
+          "emoji": "🚲"
+        },
+        {
+          "en": "Walk to the park.",
+          "ja": "こうえんまで あるいて。",
+          "action": "その ばで あるく",
+          "emoji": "🏞️"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "igh"
+        ],
+        "sounds": [
+          "/aɪ/"
+        ],
+        "words": [
+          "high",
+          "night",
+          "light",
+          "right"
+        ],
+        "tipJa": "i・g・h の 3もじで「アイ」。gh は おとを ださない！high、night、light、right。"
+      },
+      "vocab": [
+        {
+          "en": "town",
+          "ja": "まち",
+          "emoji": "🏘️",
+          "core": true
+        },
+        {
+          "en": "library",
+          "ja": "としょかん",
+          "emoji": "📚"
+        },
+        {
+          "en": "beach",
+          "ja": "はまべ",
+          "emoji": "🏖️"
+        },
+        {
+          "en": "our",
+          "ja": "わたしたちの",
+          "emoji": "👫"
+        }
+      ],
+      "teacherScript": "わたしたちの まちを しょうかいしよう。「We have a park in our town.」 our は わたしたちの。igh は 3もじで「アイ」！",
+      "conversation": {
+        "scene": "Making a guidebook for a town on the road",
+        "sceneJa": "たびだちの道の まちの ガイドブックづくり",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Let's make a guidebook! We have a park in our town.",
+            "ja": "ガイドブックを つくろう！まちには こうえんが あるね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We have a big library, too.",
+            "ja": "おおきな としょかんも あるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And we have a nice beach. It's beautiful at night.",
+            "ja": "すてきな はまべも。よるが きれいなの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Right! Let's write it down!",
+            "ja": "そうだね！かいておこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We have a ～ in our town. で まちに ある ものを つたえよう（ほんとうの まちの なまえは いわなくて OK）",
+          "starterEn": "Hi! We have a big park in our town. What do you have in your town?",
+          "targetExpressions": [
+            "We have a ～ in our town."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We have a park in our town. が いえたね",
+          "our は「わたしたちの」",
+          "high、night、light、right！ igh は「アイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 232,
+      "world": 8,
+      "title": "We Don't Have a Zoo",
+      "titleJa": "どうぶつえんは ない",
+      "school": {
+        "grade": "小5",
+        "topic": "わたしたちの まち：ない もの",
+        "grammar": "We don't have a ～. / We have ～, but we don't have ～.",
+        "expressions": [
+          {
+            "en": "We don't have a zoo.",
+            "ja": "どうぶつえんは ありません。",
+            "core": true
+          },
+          {
+            "en": "We don't have an aquarium in our town.",
+            "ja": "わたしたちの まちには すいぞくかんが ありません。"
+          },
+          {
+            "en": "We have a station, but we don't have an airport.",
+            "ja": "えきは あるけど、くうこうは ありません。"
+          }
+        ],
+        "testPoints": [
+          "We don't have a ～. で まちに ない ものを つたえられる",
+          "igh（アイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Shake your head.",
+          "ja": "くびを よこに ふって。",
+          "action": "いいえの ように くびを ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Fly like an airplane.",
+          "ja": "ひこうきの ように とんで。",
+          "action": "りょうてを ひろげて とぶ",
+          "emoji": "✈️"
+        },
+        {
+          "en": "Swim like a fish.",
+          "ja": "さかなの ように およいで。",
+          "action": "てで およぐ まね",
+          "emoji": "🐟"
+        },
+        {
+          "en": "Twinkle like a star.",
+          "ja": "ほしの ように きらきら して。",
+          "action": "てを ひらいたり とじたり",
+          "emoji": "⭐"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "igh"
+        ],
+        "sounds": [
+          "/aɪ/"
+        ],
+        "words": [
+          "bright",
+          "flight",
+          "sight",
+          "tight"
+        ],
+        "tipJa": "igh の「アイ」 その2。bright、flight、sight、tight。br・fl の ブレンドも わすれずに！"
+      },
+      "vocab": [
+        {
+          "en": "aquarium",
+          "ja": "すいぞくかん",
+          "emoji": "🐠",
+          "core": true
+        },
+        {
+          "en": "airport",
+          "ja": "くうこう",
+          "emoji": "🛫"
+        },
+        {
+          "en": "stadium",
+          "ja": "スタジアム",
+          "emoji": "🏟️"
+        },
+        {
+          "en": "amusement park",
+          "ja": "ゆうえんち",
+          "emoji": "🎡"
+        }
+      ],
+      "teacherScript": "まちに ない ものも いえるよ。「We don't have a zoo.」 don't have は「ない」。but で「あるけど ない」も つなげよう。",
+      "conversation": {
+        "scene": "Counting what the town doesn't have",
+        "sceneJa": "まちに ない ものを かぞえる",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "We don't have a zoo.",
+            "ja": "どうぶつえんが ないね。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We don't have an aquarium, either.",
+            "ja": "すいぞくかんも ないよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "We have a station, but we don't have an airport.",
+            "ja": "えきは あるけど、くうこうは ないね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "We don't have a candy shop! That's sad!",
+            "ja": "おかしやさんも ない！かなしい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "We don't have a ～. で まちに ない ものを つたえよう（ほんとうの まちの なまえは いわなくて OK）",
+          "starterEn": "We have a station in our town, but we don't have an airport. Do you have an aquarium in your town?",
+          "targetExpressions": [
+            "We don't have a ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We don't have a zoo. が いえたね",
+          "but で「あるけど ない」も いえた",
+          "bright、flight、sight、tight！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 233,
+      "world": 8,
+      "title": "I Want a Pool in Our Town",
+      "titleJa": "まちに プールが ほしい",
+      "school": {
+        "grade": "小5",
+        "topic": "わたしたちの まち：ほしい もの",
+        "grammar": "I want a ～ in our town.",
+        "expressions": [
+          {
+            "en": "I want a pool in our town.",
+            "ja": "わたしたちの まちに プールが ほしい。",
+            "core": true
+          },
+          {
+            "en": "I want a big stadium.",
+            "ja": "おおきな スタジアムが ほしい。"
+          },
+          {
+            "en": "Why? ― I like swimming.",
+            "ja": "どうして？ ― およぐのが すきだから。"
+          }
+        ],
+        "testPoints": [
+          "I want a ～ in our town. で まちに ほしい ものを つたえられる",
+          "ie（アイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Dive into the pool.",
+          "ja": "プールに とびこんで。",
+          "action": "りょうてを あわせて とびこむ まね",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Build a tower.",
+          "ja": "タワーを つくって。",
+          "action": "つみきを つむ まね",
+          "emoji": "🏗️"
+        },
+        {
+          "en": "Cut the ribbon.",
+          "ja": "テープを きって。",
+          "action": "はさみで テープを きる まね",
+          "emoji": "✂️"
+        },
+        {
+          "en": "Make a wish.",
+          "ja": "ねがいごとを して。",
+          "action": "てを あわせて めを とじる",
+          "emoji": "🌠"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ie"
+        ],
+        "sounds": [
+          "/aɪ/"
+        ],
+        "words": [
+          "pie",
+          "tie",
+          "lie",
+          "fries"
+        ],
+        "tipJa": "i と e で「アイ」。pie、tie、lie、fries。igh と おなじ おとだね。"
+      },
+      "vocab": [
+        {
+          "en": "pool",
+          "ja": "プール",
+          "emoji": "🏊",
+          "core": true
+        },
+        {
+          "en": "want",
+          "ja": "ほしい",
+          "emoji": "🙏"
+        },
+        {
+          "en": "candy shop",
+          "ja": "おかしやさん",
+          "emoji": "🍬"
+        },
+        {
+          "en": "idea",
+          "ja": "アイデア",
+          "emoji": "💡"
+        }
+      ],
+      "teacherScript": "まちに ほしい ものを いおう。「I want a pool in our town.」 わけは Why? ― I like ～. で いえるよ。",
+      "conversation": {
+        "scene": "Ideas for a dream town",
+        "sceneJa": "ゆめの まちの アイデア かいぎ",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I want a pool in our town. I like swimming.",
+            "ja": "まちに プールが ほしいな。およぐのが すきだから。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I want a pie shop! I like apple pie.",
+            "ja": "パイやさんが ほしい！アップルパイが すき。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I want a shop with French fries!",
+            "ja": "フライドポテトの おみせが ほしい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great ideas! Let's put them on our map.",
+            "ja": "いい アイデア！ちずに かきこもう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "I want a ～ in our town. で まちに ほしい ものと わけを つたえよう",
+          "starterEn": "I want a pie shop in our town. I like apple pie. What do you want in your town?",
+          "targetExpressions": [
+            "I want a ～ in our town."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I want a pool in our town. が いえたね",
+          "Why? ― I like ～. で わけも いえた",
+          "pie、tie、lie、fries！ ie も「アイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 234,
+      "world": 8,
+      "title": "Our Town Is Nice",
+      "titleJa": "わたしたちの まちは すてき",
+      "school": {
+        "grade": "小5",
+        "topic": "わたしたちの まち：まちの よさ",
+        "grammar": "Our town is ～. / You can ～.",
+        "expressions": [
+          {
+            "en": "Our town is nice.",
+            "ja": "わたしたちの まちは すてき です。",
+            "core": true
+          },
+          {
+            "en": "You can see stars at night.",
+            "ja": "よるは ほしが みられます。"
+          },
+          {
+            "en": "You can enjoy shopping at the market.",
+            "ja": "いちばで かいものが たのしめます。"
+          }
+        ],
+        "testPoints": [
+          "Our town is ～. / You can ～. で まちの よさを つたえられる",
+          "ie（アイ）の ことばを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the stars.",
+          "ja": "ほしを みて。",
+          "action": "そらを みあげる",
+          "emoji": "✨"
+        },
+        {
+          "en": "Carry a shopping bag.",
+          "ja": "かいものぶくろを もって。",
+          "action": "ふくろを さげる まね",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "Fly a kite.",
+          "ja": "たこを あげて。",
+          "action": "たこいとを ひく まね",
+          "emoji": "🪁"
+        },
+        {
+          "en": "Point to the sky.",
+          "ja": "そらを ゆびさして。",
+          "action": "そらを ゆびさす",
+          "emoji": "☁️"
+        }
+      ],
+      "phonics": {
+        "rule": "vowel-team",
+        "focus": [
+          "ie"
+        ],
+        "sounds": [
+          "/aɪ/"
+        ],
+        "words": [
+          "skies",
+          "flies",
+          "spies",
+          "cries"
+        ],
+        "tipJa": "ie の「アイ」 その2。skies、flies、spies、cries。y で おわる ことばに s が つくと ie に かわるよ（sky → skies）。"
+      },
+      "vocab": [
+        {
+          "en": "nice",
+          "ja": "すてき",
+          "emoji": "✨",
+          "core": true
+        },
+        {
+          "en": "quiet",
+          "ja": "しずか",
+          "emoji": "🤫"
+        },
+        {
+          "en": "market",
+          "ja": "いちば",
+          "emoji": "🏪"
+        },
+        {
+          "en": "star",
+          "ja": "ほし",
+          "emoji": "⭐"
+        }
+      ],
+      "teacherScript": "まちの よさを つたえよう。「Our town is nice.」 You can ～. で できる ことも くわえよう。",
+      "conversation": {
+        "scene": "Writing the good points of the town",
+        "sceneJa": "まちの いいところを ガイドブックに かく",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Our town is nice. It's quiet.",
+            "ja": "わたしたちの まちは すてき。しずかだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You can see stars at night. The skies are clear.",
+            "ja": "よるは ほしが みえる。そらが すんでいるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "You can enjoy shopping at the market.",
+            "ja": "いちばで かいものも たのしめるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Our town is the best!",
+            "ja": "ぼくたちの まちが いちばん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "Our town is ～. / You can ～. で まちの よさを つたえよう（ほんとうの まちの なまえは いわなくて OK）",
+          "starterEn": "Our town is quiet. You can see stars at night. What is your town like?",
+          "targetExpressions": [
+            "Our town is ～.",
+            "You can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Our town is nice. が いえたね",
+          "You can see stars at night. で よさを つたえた",
+          "skies、flies、spies、cries！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 235,
+      "world": 8,
+      "title": "Town Guidebook",
+      "titleJa": "まちの ガイドブック",
+      "school": {
+        "grade": "小5",
+        "topic": "わたしたちの まち：まちの ガイドブック（まとめ）",
+        "grammar": "We have ～. / We don't have ～. / You can ～.",
+        "expressions": [
+          {
+            "en": "We have a big park. You can play soccer there.",
+            "ja": "おおきな こうえんが あります。そこで サッカーが できます。",
+            "core": true
+          },
+          {
+            "en": "We don't have a zoo, but we have a farm.",
+            "ja": "どうぶつえんは ないけど、ぼくじょうが あります。"
+          },
+          {
+            "en": "Please visit our town!",
+            "ja": "わたしたちの まちに きてね！"
+          }
+        ],
+        "testPoints": [
+          "ある もの・ない もの・できる ことを つなげて まちを しょうかいできる",
+          "igh と ie（アイ）を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the guidebook.",
+          "ja": "ガイドブックを ひらいて。",
+          "action": "ほんを ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Take a picture.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえる まね",
+          "emoji": "📷"
+        },
+        {
+          "en": "Kick a ball in the park.",
+          "ja": "こうえんで ボールを けって。",
+          "action": "ボールを ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Wave to the visitors.",
+          "ja": "おきゃくさんに てを ふって。",
+          "action": "おおきく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "igh",
+          "ie"
+        ],
+        "sounds": [
+          "/aɪ/",
+          "/aɪ/"
+        ],
+        "words": [
+          "night",
+          "pie",
+          "light",
+          "tie"
+        ],
+        "tipJa": "igh と ie は おなじ「アイ」。night・light は igh、pie・tie は ie。つづりを よく みよう！"
+      },
+      "vocab": [
+        {
+          "en": "guidebook",
+          "ja": "ガイドブック",
+          "emoji": "📖",
+          "core": true
+        },
+        {
+          "en": "farm",
+          "ja": "ぼくじょう",
+          "emoji": "🐄"
+        },
+        {
+          "en": "visitor",
+          "ja": "おきゃくさん",
+          "emoji": "🧳"
+        },
+        {
+          "en": "there",
+          "ja": "そこで",
+          "emoji": "👉"
+        }
+      ],
+      "teacherScript": "まとめの 日！まちの ガイドブックを かんせい させよう。ある もの・ない もの・できる ことを つなげるよ。",
+      "conversation": {
+        "scene": "Finishing the town guidebook",
+        "sceneJa": "まちの ガイドブックを かんせい させる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "We have a big park. You can play soccer there.",
+            "ja": "おおきな こうえんが あるよ。そこで サッカーが できる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We don't have a zoo, but we have a farm.",
+            "ja": "どうぶつえんは ないけど、ぼくじょうが あるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "You can see stars at night, too.",
+            "ja": "よるは ほしも みえるよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "What a nice guidebook! Please visit our town!",
+            "ja": "すてきな ガイドブック！わたしたちの まちに きてね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "まちの ガイドに なろう（We have ～. / We don't have ～. / You can ～.）。ほんとうの まちの なまえは いわなくて OK",
+          "starterEn": "Hello! I'm a visitor. What do you have in your town?",
+          "targetExpressions": [
+            "We have a ～.",
+            "You can ～ there."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ある もの・ない もの・できる ことを つなげたね",
+          "Please visit our town! で しめくくった",
+          "igh と ie は おなじ「アイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 236,
+      "world": 8,
+      "title": "My Hero Speech",
+      "titleJa": "ヒーロー スピーチ",
+      "school": {
+        "grade": "小5",
+        "topic": "まとめ：ヒーロー しょうかい スピーチを つくる",
+        "grammar": "My hero is ～. / He / She is ～. / He / She can ～. / He / She helps ～.",
+        "expressions": [
+          {
+            "en": "My hero is Ms. Emma. She is kind.",
+            "ja": "わたしの ヒーローは エマ先生。やさしいです。",
+            "core": true
+          },
+          {
+            "en": "She can speak three languages.",
+            "ja": "3つの ことばを はなせます。"
+          },
+          {
+            "en": "She helps us every day.",
+            "ja": "まいにち わたしたちを たすけてくれます。"
+          }
+        ],
+        "testPoints": [
+          "ヒーロー しょうかい スピーチを 4つの 文で つくれる",
+          "oo と ou の おとを よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the microphone.",
+          "ja": "マイクを もって。",
+          "action": "マイクを もつ まね",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Look at the audience.",
+          "ja": "おきゃくさんを みて。",
+          "action": "まえを みる",
+          "emoji": "👀"
+        },
+        {
+          "en": "Speak loudly.",
+          "ja": "おおきな こえで はなして。",
+          "action": "てを くちに あてて",
+          "emoji": "📣"
+        },
+        {
+          "en": "Take a deep breath.",
+          "ja": "しんこきゅう して。",
+          "action": "ゆっくり いきを すう",
+          "emoji": "🌬️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "oo",
+          "ou"
+        ],
+        "sounds": [
+          "/uː/",
+          "/ʊ/",
+          "/aʊ/"
+        ],
+        "words": [
+          "spoon",
+          "foot",
+          "mouth",
+          "round"
+        ],
+        "tipJa": "ふりかえり その1。spoon は「ウー」、foot は「ウ」、mouth・round は「アウ」。"
+      },
+      "vocab": [
+        {
+          "en": "speech",
+          "ja": "スピーチ",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "language",
+          "ja": "げんご（ことば）",
+          "emoji": "🌐"
+        },
+        {
+          "en": "every day",
+          "ja": "まいにち",
+          "emoji": "📅"
+        },
+        {
+          "en": "microphone",
+          "ja": "マイク",
+          "emoji": "🎙️"
+        }
+      ],
+      "teacherScript": "スピーチを つくろう。① My hero is ～. ② せいかく ③ できる こと ④ ヒーローの わけ。4つの 文で OK！",
+      "conversation": {
+        "scene": "Writing hero speeches in class",
+        "sceneJa": "きょうしつで ヒーロー スピーチづくり",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "My hero is Ms. Emma. She is kind.",
+            "ja": "ぼくの ヒーローは エマ先生。やさしいんだ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Good! What can she do?",
+            "ja": "いいね！なにが できるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "She can speak three languages. She helps us every day.",
+            "ja": "3つの ことばが はなせるんだ。まいにち たすけてくれる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Oh, thank you, Birimo! That's a lovely speech.",
+            "ja": "まあ、ありがとう ビリモ！すてきな スピーチね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ヒーロー スピーチを つくろう（My hero is ～. / He / She is ～. / He / She can ～.）。ほんとうの なまえは いわなくて OK",
+          "starterEn": "Let's make a hero speech! My hero is Ms. Emma. She is kind. Who is your hero?",
+          "targetExpressions": [
+            "My hero is ～.",
+            "He / She is ～.",
+            "He / She can ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "ヒーロー スピーチを 4つの 文で つくれたね",
+          "She helps us every day. で わけも いえた",
+          "spoon、foot、mouth、round を よみわけたよ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 237,
+      "world": 8,
+      "title": "Treasure Hunt",
+      "titleJa": "たからさがし ゲーム",
+      "school": {
+        "grade": "小5",
+        "topic": "まとめ：みちあんない ゲーム",
+        "grammar": "Where is ～? / Turn right at the second corner. / It's next to ～.",
+        "expressions": [
+          {
+            "en": "Turn right at the second corner.",
+            "ja": "2つめの かどを みぎに まがって。",
+            "core": true
+          },
+          {
+            "en": "Where is the aquarium? ― It's next to the bank.",
+            "ja": "すいぞくかんは どこ？ ― ぎんこうの となり。"
+          },
+          {
+            "en": "You can see it on your left.",
+            "ja": "ひだりがわに みえます。"
+          }
+        ],
+        "testPoints": [
+          "first / second と みちあんないを つなげて あんないできる",
+          "ow・oi・oy の おとを よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Go straight! Turn right! Stop!",
+          "ja": "まっすぐ！みぎ！とまれ！",
+          "action": "いわれた とおりに うごく",
+          "emoji": "🧭"
+        },
+        {
+          "en": "Count the corners.",
+          "ja": "かどを かぞえて。",
+          "action": "ゆびで 1つ、2つ",
+          "emoji": "☝️"
+        },
+        {
+          "en": "Point to your left.",
+          "ja": "ひだりを ゆびさして。",
+          "action": "ひだりを ゆびさす",
+          "emoji": "👈"
+        },
+        {
+          "en": "Find the treasure.",
+          "ja": "たからものを みつけて。",
+          "action": "きょろきょろ さがす",
+          "emoji": "💎"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ow",
+          "oi",
+          "oy"
+        ],
+        "sounds": [
+          "/aʊ/",
+          "/ɔɪ/",
+          "/ɔɪ/"
+        ],
+        "words": [
+          "brown",
+          "join",
+          "toy",
+          "crowd"
+        ],
+        "tipJa": "ふりかえり その2。brown・crowd の ow は「アウ」、join の oi と toy の oy は「オイ」。"
+      },
+      "vocab": [
+        {
+          "en": "second",
+          "ja": "2ばんめ",
+          "emoji": "2️⃣",
+          "core": true
+        },
+        {
+          "en": "treasure",
+          "ja": "たからもの",
+          "emoji": "💎"
+        },
+        {
+          "en": "block",
+          "ja": "くかく（ブロック）",
+          "emoji": "🧱"
+        },
+        {
+          "en": "goal",
+          "ja": "ゴール",
+          "emoji": "🏁"
+        }
+      ],
+      "teacherScript": "みちあんない ゲーム！ first、second を つかって「Turn right at the second corner.」 ゴールの たからものまで あんないしよう。",
+      "conversation": {
+        "scene": "A treasure hunt with directions",
+        "sceneJa": "みちあんないで たからさがし ゲーム",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Where is the treasure?",
+            "ja": "たからものは どこ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Go straight. Turn right at the second corner.",
+            "ja": "まっすぐ いって、2つめの かどを みぎに まがって。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's next to the bank. You can see it on your left.",
+            "ja": "ぎんこうの となり。ひだりがわに みえるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I found it! A golden coin!",
+            "ja": "みつけた！きんの コインだ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "たからものの ばしょを あんないしよう（Go straight. / Turn right at the second corner. / It's next to ～.）",
+          "starterEn": "Where is the treasure? Please tell me the way!",
+          "targetExpressions": [
+            "Go straight.",
+            "Turn right at the ～ corner.",
+            "It's next to ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Turn right at the second corner. が いえたね",
+          "first・second と みちあんないを つなげた",
+          "brown・crowd は「アウ」、join・toy は「オイ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 238,
+      "world": 8,
+      "title": "Road Cafe Quiz Show",
+      "titleJa": "カフェで クイズショー",
+      "school": {
+        "grade": "小5",
+        "topic": "まとめ：ちゅうもんと にほん しょうかい クイズショー",
+        "grammar": "I'd like ～. / How much is it? / In Japan, we have ～.",
+        "expressions": [
+          {
+            "en": "In Japan, we have ramen. It's delicious.",
+            "ja": "にほんには ラーメンが あります。おいしいです。",
+            "core": true
+          },
+          {
+            "en": "I'd like two rice balls, please.",
+            "ja": "おにぎりを 2つ おねがいします。"
+          },
+          {
+            "en": "How much is it? ― It's 400 yen.",
+            "ja": "いくら？ ― 400えん。"
+          }
+        ],
+        "testPoints": [
+          "ちゅうもん・ねだん・にほんの しょうかいを クイズで つかえる",
+          "igh・ie・oo の おとを よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Press the buzzer.",
+          "ja": "ボタンを おして。",
+          "action": "ピンポンと ボタンを おす まね",
+          "emoji": "🔔"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "✋"
+        },
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "うでを くんで かんがえる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Jump for joy!",
+          "ja": "よろこんで ジャンプ！",
+          "action": "ばんざい ジャンプ",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "igh",
+          "ie",
+          "oo"
+        ],
+        "sounds": [
+          "/aɪ/",
+          "/aɪ/",
+          "/uː/",
+          "/ʊ/"
+        ],
+        "words": [
+          "bright",
+          "fries",
+          "school",
+          "wood"
+        ],
+        "tipJa": "ふりかえり その3。bright の igh と fries の ie は「アイ」。school は「ウー」、wood は「ウ」。"
+      },
+      "vocab": [
+        {
+          "en": "quiz",
+          "ja": "クイズ",
+          "emoji": "🧠",
+          "core": true
+        },
+        {
+          "en": "rice ball",
+          "ja": "おにぎり",
+          "emoji": "🍙"
+        },
+        {
+          "en": "buzzer",
+          "ja": "はやおし ボタン",
+          "emoji": "🔔"
+        },
+        {
+          "en": "answer",
+          "ja": "こたえ",
+          "emoji": "💡"
+        }
+      ],
+      "teacherScript": "クイズショーの 日！ちゅうもん・ねだん・にほん しょうかいの もんだいが でるよ。わかったら ボタンを おしてね。",
+      "conversation": {
+        "scene": "A quiz show at the Road Cafe",
+        "sceneJa": "たびだちの道の カフェで クイズショー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Question one! What do we have in Japan?",
+            "ja": "だい1もん！にほんには なにが ある？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In Japan, we have ramen. It's delicious!",
+            "ja": "にほんには ラーメンが ある。おいしいよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Right! Question two! One rice ball is 200 yen. How much are two?",
+            "ja": "せいかい！だい2もん！おにぎり 1こ 200えん。2こで いくら？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's 400 yen!",
+            "ja": "400えん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "クイズに こたえよう（I'd like ～. / How much is it? / In Japan, we have ～.）",
+          "starterEn": "Quiz time! What do we have in Japan? Tell me one thing!",
+          "targetExpressions": [
+            "In Japan, we have ～.",
+            "I'd like ～, please.",
+            "It's ～ yen."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Japan, we have ramen. It's delicious. が いえたね",
+          "ちゅうもんと ねだんの クイズも せいかい",
+          "bright・fries は「アイ」、school は「ウー」、wood は「ウ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 239,
+      "world": 8,
+      "title": "Hero Speech Rehearsal",
+      "titleJa": "ヒーロー スピーチの リハーサル",
+      "school": {
+        "grade": "小5",
+        "topic": "まとめ：小5 はっぴょうかいの リハーサル",
+        "grammar": "Please listen to my speech. / Thank you for listening.",
+        "expressions": [
+          {
+            "en": "Please listen to my speech.",
+            "ja": "わたしの スピーチを きいてください。",
+            "core": true
+          },
+          {
+            "en": "Thank you for listening.",
+            "ja": "きいてくれて ありがとう。"
+          },
+          {
+            "en": "Speak slowly and smile.",
+            "ja": "ゆっくり えがおで はなそう。"
+          }
+        ],
+        "testPoints": [
+          "スピーチの はじめと おわりの ことばを いえる",
+          "2おんせつの ことばで 母音チームを みつけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Walk to the stage.",
+          "ja": "ステージまで あるいて。",
+          "action": "まえに あるいて いく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Stand still.",
+          "ja": "じっと たって。",
+          "action": "うごかずに たつ",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Bow to everyone.",
+          "ja": "みんなに おじぎ。",
+          "action": "ゆっくり おじぎ",
+          "emoji": "🙇"
+        },
+        {
+          "en": "Practice once more.",
+          "ja": "もう いちど れんしゅう。",
+          "action": "ゆびで 1を つくる",
+          "emoji": "🔁"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "oo",
+          "ou",
+          "ow",
+          "oy",
+          "igh"
+        ],
+        "sounds": [
+          "/uː/",
+          "/aʊ/",
+          "/aʊ/",
+          "/ɔɪ/",
+          "/aɪ/"
+        ],
+        "words": [
+          "moonlight",
+          "playground",
+          "cowboy",
+          "football"
+        ],
+        "tipJa": "ふりかえり その4。2つに わけて よもう。moon-light、play-ground、cow-boy、foot-ball。ぼいんの チームを みつけよう！"
+      },
+      "vocab": [
+        {
+          "en": "rehearsal",
+          "ja": "リハーサル",
+          "emoji": "🎬",
+          "core": true
+        },
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎭"
+        },
+        {
+          "en": "listen",
+          "ja": "きく",
+          "emoji": "👂"
+        },
+        {
+          "en": "practice",
+          "ja": "れんしゅう",
+          "emoji": "🔁"
+        }
+      ],
+      "teacherScript": "あしたの はっぴょうかいの リハーサル！はじめは Please listen to my speech.、おわりは Thank you for listening. ゆっくり、えがおで！",
+      "conversation": {
+        "scene": "Rehearsal on the outdoor stage",
+        "sceneJa": "やがいステージで はっぴょうかいの リハーサル",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Let's practice. Haru, you're first.",
+            "ja": "れんしゅうしよう。ハル、さいしょは あなた。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Please listen to my speech. My hero is my coach. He is strong and kind. Thank you for listening.",
+            "ja": "ぼくの スピーチを きいてください。ぼくの ヒーローは コーチ。つよくて やさしい。きいてくれて ありがとう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Great! Speak a little more slowly.",
+            "ja": "いいね！もう すこし ゆっくり はなそう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And smile! Like me!",
+            "ja": "それと えがお！ぼくみたいに！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "スピーチの はじめと おわりの ことばを つかって、みじかい スピーチを しよう",
+          "starterEn": "It's rehearsal time! Please start with \"Please listen to my speech.\"",
+          "targetExpressions": [
+            "Please listen to my speech.",
+            "Thank you for listening."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Please listen to my speech. が いえたね",
+          "おわりは Thank you for listening.",
+          "moonlight・playground・cowboy・football を 2つに わけて よめた"
+        ]
+      }
+    },
+    {
+      "lessonNo": 240,
+      "world": 8,
+      "title": "World 8 Grand Review",
+      "titleJa": "ワールド8 そうふくしゅう",
+      "school": {
+        "grade": "小5",
+        "topic": "まとめ：小5 はっぴょうかい（ワールド8 ぜんぶ）",
+        "grammar": "Where is ～? / I'd like ～. / In Japan, we have ～. / My hero is ～. / We have ～ in our town.",
+        "expressions": [
+          {
+            "en": "This is my hero. He is brave and kind.",
+            "ja": "これが ぼくの ヒーロー。ゆうかんで やさしい。",
+            "core": true
+          },
+          {
+            "en": "In Japan, we have beautiful festivals.",
+            "ja": "にほんには きれいな おまつりが あります。"
+          },
+          {
+            "en": "We have a big park in our town. It's next to the station.",
+            "ja": "まちには おおきな こうえんが あります。えきの となりです。"
+          }
+        ],
+        "testPoints": [
+          "みちあんない・ちゅうもん・にほん しょうかい・ヒーロー・まちの ことばを つなげて はっぴょうできる",
+          "母音チーム（oo ou ow oi oy igh ie）を よみわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Go straight! Turn right! Turn left!",
+          "ja": "まっすぐ！みぎ！ひだり！",
+          "action": "みちあんないの うごきを はやく",
+          "emoji": "🧭"
+        },
+        {
+          "en": "Hero pose! Wave! Bow!",
+          "ja": "ヒーローの ポーズ！てを ふって！おじぎ！",
+          "action": "ヒーローの うごきを はやく",
+          "emoji": "🦸"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "oo",
+          "ou",
+          "ow",
+          "oi",
+          "oy",
+          "igh",
+          "ie"
+        ],
+        "sounds": [
+          "/uː/",
+          "/aʊ/",
+          "/aʊ/",
+          "/ɔɪ/",
+          "/ɔɪ/",
+          "/aɪ/",
+          "/aɪ/"
+        ],
+        "words": [
+          "moon",
+          "house",
+          "cow",
+          "coin",
+          "boy",
+          "night",
+          "pie"
+        ],
+        "tipJa": "ワールド8の そうまとめ。oo は「ウー」（と「ウ」）、ou・ow は「アウ」、oi・oy は「オイ」、igh・ie は「アイ」！"
+      },
+      "vocab": [
+        {
+          "en": "road",
+          "ja": "みち",
+          "emoji": "🛤️",
+          "core": true
+        },
+        {
+          "en": "journey",
+          "ja": "たびだち",
+          "emoji": "🌅"
+        },
+        {
+          "en": "dream",
+          "ja": "ゆめ",
+          "emoji": "🌈"
+        },
+        {
+          "en": "flag",
+          "ja": "はた",
+          "emoji": "🚩"
+        }
+      ],
+      "teacherScript": "Congratulations! ワールド8 さいごの レッスン！まずは スピード TPR。そのあと 小5 はっぴょうかい。みちあんない・にほん しょうかい・ヒーロー・まち、ぜんぶ つかおう！あしたは ボスせんだよ。",
+      "conversation": {
+        "scene": "The Grade 5 show at the end of the Road of Journeys",
+        "sceneJa": "たびだちの道の ゴールで 小5 はっぴょうかい",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Grade 5 show!",
+            "ja": "小5 はっぴょうかいへ ようこそ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This is my hero. He is my coach. He is brave and kind. He helps everyone.",
+            "ja": "これが ぼくの ヒーロー。コーチだよ。ゆうかんで やさしい。みんなを たすけるんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In Japan, we have beautiful festivals. You can enjoy fireworks in summer.",
+            "ja": "にほんには きれいな おまつりが あるよ。なつは はなびが たのしめるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "We have a big park in our town. It's next to the station.",
+            "ja": "まちには おおきな こうえんが あるよ。えきの となりだよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Great job, everyone! Let's go to World 9!",
+            "ja": "みんな よく できました！ワールド9へ いこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ワールド8の ことばで はっぴょうしよう（ヒーロー・にほん しょうかい・まち。ほんとうの なまえや まちの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the Grade 5 show! My hero is Ms. Emma. She is kind. Who is your hero?",
+          "targetExpressions": [
+            "My hero is ～.",
+            "In Japan, we have ～.",
+            "We have a ～ in our town."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "スピード TPR で ワールド8の うごきを ふくしゅう",
+          "みちあんない・ちゅうもん・にほん しょうかい・ヒーロー・まちを つなげたね",
+          "母音チーム 7つを よみわけられたよ。ワールド9では ar or er ir ur を ならうよ！"
+        ]
+      }
+    }
+  ]
+}
