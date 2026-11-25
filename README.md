@@ -54,13 +54,14 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・33ファイル・875件） |
+| `npm test` | 単体テスト（vitest・33ファイル・881件） |
 | `npm run typecheck` | 型チェック |
-| `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
+| `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent・/setup-pin・/d/<token>）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build` |
 | `npm run check:auth-db -- --db <テスト用URL> [--port 3457]` | 本物の DB で migrate deploy → seed → `next start` → 登録・子ども2人・切りかえ・回数制限・持ち主チェック・CSRF・退会後に何も残らないこと まで 41項目を HTTP で確認。**使い捨ての DB を指定すること**（中身を書きかえます） |
 | `npm run line:monthly [-- --dry-run] [-- --parent <id>]` | 月間レポート（PDF）を LINE で届ける。キーが無ければ dry-run（下の「LINE で月間レポート」） |
 | `npm run check:line-monthly-db -- --db <テスト用URL> [--port 3463]` | 本物の DB + `next start` で webhook の署名・`line:monthly --dry-run`・ダウンロードページ・おうちの方 API・期限切れ・退会 まで 32項目を確認（LINE には接続しない）。**使い捨ての DB を指定すること** |
+| `npm run check:run4-flow -- --db <テスト用URL> [--port 3475]` | 本物の DB + `next start` + ブラウザで、おためしで遊ぶ → 新規登録 → お子さまを追加（キャラクター）→ おためしの きろくを ひきつぐ → おうちの方ページに反映 → `line:monthly --dry-run` のリンクを開いて PDF まで を通しで確認（スクリーンショット `docs/run4/screens/p4-flow/`）。**使い捨ての DB を指定すること** |
 | `npm run screens:auth -- --db <テスト用URL>` | 本物の DB と DB 停止の両方で、保護者アカウントの画面を Playwright で操作してスクリーンショット（`docs/run3/screens/`） |
 | `npx tsx scripts/e2e-smoke.ts http://localhost:3000` | 実サーバーとDBを使い、30日分のプレイ（ボス戦・アリーナ・お宝アラートまで）を早送りで実行 |
 | `pip install -r worksheets/requirements.txt` | PDF生成に必要な reportlab をインストール |
@@ -199,7 +200,8 @@ eigo-quest/
   - (c) 連携ずみなら「LINEでログイン」でログイン。
   - LINE だけで登録した保護者はメール・パスワードを持たないので、暗証番号の変更・退会の本人確認は暗証番号で行い、パスワードの変更は出しません。
   - 環境変数がそろっていないときは LINE のボタンを出さず（`GET /api/auth/me` の `lineLoginAvailable: false`）、`/parent` に「LINE ログインはまだ設定されていません」と小さく表示します。
-  - LINE Developers でのチャネル設定: LINE ログインのチャネルを作り、コールバック URL に `LINE_LOGIN_CALLBACK_URL` と同じ値（例 `https://<ドメイン>/api/auth/line/callback`）を登録。友だち追加をすすめるには、そのチャネルに公式アカウント（Messaging API チャネル）をリンクします。
+  - 安全のため: state cookie は `LINE_LOGIN_CHANNEL_SECRET` で HMAC 署名し（書きかえると受け付けない）、ほかのサイトからのリンク・自動の移動（`Sec-Fetch-Site: cross-site / same-site`）では LINE ログインを始めません。
+  - LINE Developers でのチャネル設定: LINE ログインのチャネルを作り、コールバック URL に `LINE_LOGIN_CALLBACK_URL` と同じ値（例 `https://<ドメイン>/api/auth/line/callback`）を登録。友だち追加をすすめるには、そのチャネルに公式アカウント（Messaging API チャネル）をリンクします。手順は [docs/run4/LINE-SETUP.md](docs/run4/LINE-SETUP.md)。
 - 環境変数: `ALLOWED_ORIGINS`（同じホスト以外から受け付けるオリジン。通常は空）、`SEED_DEMO_PARENT`（1 でデモ保護者を seed）、`LINE_LOGIN_CHANNEL_ID`・`LINE_LOGIN_CHANNEL_SECRET`・`LINE_LOGIN_CALLBACK_URL`（LINE ログイン。3つそろったときだけ有効。キーはコードに書かず環境変数だけ）。
 
 ## DBが止まっていても動く「おためしモード」
@@ -362,9 +364,9 @@ LINE の Messaging API は PDF ファイルそのものを送れないため、*
 
 - **レポートの中身**: 今月のレッスン数・学習した日数・合格したテスト、連続日数・最長連続、6つの力の習得率（送信時点）、にがて（低い力・忘れかけの ことば）、来月の予定（次のレッスンからの単元・フォニックス）、おうちの方への ひとこと。PDF は `worksheets/generate_worksheets.py --report-json`（ReportLab・日本語フォント埋め込み）で作り、Python が使えないときは依存なしの かんたんな PDF で代わりに作ります（日本語は表示する側のフォント頼み）。
 - **ワークブック**: お子さまが いま いる（これから始める）ワールドの 1か月ワークブック（`worksheets:month` と同じもの）。ワールドごとに1回だけ作り、`REPORT_STORAGE_DIR/worksheets/` で使い回します（`worksheets/out/monthly/` にあれば それをコピー）。
-- **ダウンロードページ `/d/<token>`**: トークンは 256 ビットのランダム値で、DB（`ReportDelivery.tokenHash`）には SHA-256 だけを保存。30日で期限切れ。その配信のファイル（`/d/<token>/report`・`/d/<token>/worksheets`）だけを返し、レポートはその家のフォルダ（`reports/<保護者ID>/`）にあるものだけ。ログイン不要（LINE のアプリ内ブラウザで開くため）、検索エンジンに載せない・リファラーを送らない・キャッシュしない。期限切れの配信と PDF は次の一斉配信のときに消えます。お子さまの削除・退会でも消えます。
+- **ダウンロードページ `/d/<token>`**: トークンは 256 ビットのランダム値で、DB（`ReportDelivery.tokenHash`）には SHA-256 だけを保存。30日で期限切れ。その配信のファイル（`/d/<token>/report`・`/d/<token>/worksheets`）だけを返し、レポートはその家のフォルダ（`reports/<保護者ID>/`）にあるものだけ。ログイン不要（LINE のアプリ内ブラウザで開くため）、検索エンジンに載せない・リファラーを送らない・キャッシュしない。期限切れの配信と PDF は次の一斉配信のときに消えます。お子さまの削除・退会でも消えます。LINE の連携を解除すると、それまでに送ったリンクもすぐ使えなくなります。
 - **送信**: `Parent.lineUserId` に push（`X-Line-Retry-Key` 付きで二重送信なし）。毎月の配信は「LINE と連携ずみ・配信オン（`Parent.lineMonthlyEnabled`）・ブロックされていない」保護者だけ。同じ月の送信ずみのお子さまには送りません（`--force` を除く）。
-- **webhook `POST /api/line/webhook`**: `X-Line-Signature` を `LINE_MESSAGING_CHANNEL_SECRET` で確かめ（違えば 401）、follow / unfollow で `Parent.lineFriend` を更新します（ブロック中の保護者には送らない）。LINE Developers の「Webhook URL」に `https://<ドメイン>/api/line/webhook` を登録し、「Webhook の利用」をオンにします。
+- **webhook `POST /api/line/webhook`**: `X-Line-Signature` を `LINE_MESSAGING_CHANNEL_SECRET` で受け取ったバイト列のまま確かめ（違えば 401。1MB を超える本文は読み切らずに 413）、follow / unfollow で `Parent.lineFriend` を更新します（ブロック中の保護者には送らない）。LINE Developers の「Webhook URL」に `https://<ドメイン>/api/line/webhook` を登録し、「Webhook の利用」をオンにします。
 - **おうちの方ページ**: 「LINE で学習レポート」で毎月の配信のオン/オフと「今月のPDFを今すぐ送る」（今月のここまでの分。前回から10分・24時間に3回まで。DB で数えるので再起動しても効く）。送信が未設定のときは「準備中」と表示し、押すと dry-run でダウンロードページへのリンクを出します。
 - **キーが無いとき（dry-run）**: `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN` と `APP_BASE_URL` がそろっていなければ、LINE には何も送らず、`LINE_OUTBOX_DIR`（既定 `.data/line-outbox/`）に送るはずだった `message.json`（push のリクエストそのもの）と PDF のコピーを書きます。
 
@@ -375,7 +377,7 @@ npm run line:monthly -- --parent <保護者ID>   # 1人だけ（dry-run なら L
 npm run line:monthly -- --month 2026-11 --force
 ```
 
-- **LINE Developers での準備**: LINE ログインのチャネルと**同じプロバイダー**に Messaging API チャネル（公式アカウント）を作ります（プロバイダーがちがうと LINE のユーザーID が一致せず届きません）。長期のチャネルアクセストークンを `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`、チャネルシークレットを `LINE_MESSAGING_CHANNEL_SECRET`、公開 URL を `APP_BASE_URL` に入れます。LINE ログインのチャネルにこの公式アカウントをリンクすると、ログインのときに友だち追加をすすめられます。
+- **LINE Developers での準備**（くわしい手順: [docs/run4/LINE-SETUP.md](docs/run4/LINE-SETUP.md)）: LINE ログインのチャネルと**同じプロバイダー**に Messaging API チャネル（公式アカウント）を作ります（プロバイダーがちがうと LINE のユーザーID が一致せず届きません）。長期のチャネルアクセストークンを `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`、チャネルシークレットを `LINE_MESSAGING_CHANNEL_SECRET`、公開 URL を `APP_BASE_URL` に入れます。LINE ログインのチャネルにこの公式アカウントをリンクすると、ログインのときに友だち追加をすすめられます。
 - 環境変数: `LINE_MESSAGING_CHANNEL_ACCESS_TOKEN`・`LINE_MESSAGING_CHANNEL_SECRET`・`APP_BASE_URL`・`REPORT_STORAGE_DIR`（既定 `.data/reports/`）・`LINE_OUTBOX_DIR`・`PYTHON`（既定は python3 → python。reportlab が必要）。
 
 ## 骨組みとして残している部分（本番に向けて差し替える）

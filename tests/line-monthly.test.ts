@@ -418,6 +418,11 @@ describe("ダウンロード用トークン", () => {
       expect((await getFile(tA, "report")).status).toBe(404);
       rowA.files = [{ id: "report", path: "reports/pA/../../../outside.pdf", labelJa: "", filename: "x.pdf", bytes: 0 }];
       expect((await getFile(tA, "report")).status).toBe(404);
+      // 「reports/pA/」で始まっていても、.. で ほかの家のフォルダへ抜けるものは出さない（run4 Phase 4）
+      rowA.files = [{ ...fileB, path: fileB.path.replace(/^reports\/pB\//, "reports/pA/../pB/") }];
+      expect((await getFile(tA, "report")).status).toBe(404);
+      rowA.files = [{ id: "worksheets", path: `worksheets/../${fileB.path}`, labelJa: "", filename: "x.pdf", bytes: 0 }];
+      expect((await getFile(tA, "worksheets")).status).toBe(404);
     } finally {
       vi.useRealTimers();
     }
@@ -502,6 +507,52 @@ describe("webhook（友だち追加・ブロック）", () => {
     await seedParent("pA", { lineUserId: LINE_A, lineFriend: true, lineFriendChangedAt: new Date() });
     expect((await unlinkLine("pA")).ok).toBe(true);
     expect(parentA().lineFriend).toBeNull();
+  });
+
+  it("LINE の連携を解除したら、その LINE に送ったダウンロードのリンクも使えなくなる（ほかの家のリンクはそのまま）", async () => {
+    const { unlinkLine } = await import("@/lib/services/parentService");
+    await seedParent("pA", { lineUserId: LINE_A });
+    await seedChild("kA", "pA", "はる");
+    await seedParent("pB", { lineUserId: LINE_B });
+    await seedChild("kB", "pB", "りこ");
+    const now = new Date();
+    const tA = tokenFromUrl((await S.deliverToParent("pA", { month: "2026-11", trigger: "MANUAL", now })).children[0]!.url);
+    const tB = tokenFromUrl((await S.deliverToParent("pB", { month: "2026-11", trigger: "MANUAL", now })).children[0]!.url);
+    expect(await S.findDeliveryByToken(tA)).not.toBeNull();
+    expect((await unlinkLine("pA")).ok).toBe(true);
+    expect(await S.findDeliveryByToken(tA)).toBeNull();
+    expect(await S.findDeliveryByToken(tB)).not.toBeNull();
+  });
+
+  it("大きすぎる本文は署名を確かめる前に 413（Content-Length が無くても、流れてきた量で断る）", async () => {
+    const big = JSON.stringify({ events: [], pad: "x".repeat(1_100_000) });
+    const sig = M.lineSignature(SECRET, big);
+    const declared = await webhook.POST(new Request("http://localhost/api/line/webhook", { method: "POST", body: big, headers: { "x-line-signature": sig, "content-length": String(big.length) } }));
+    expect(declared.status).toBe(413);
+    const bytes = new TextEncoder().encode(big);
+    const stream = new ReadableStream<Uint8Array>({
+      start(c) {
+        for (let i = 0; i < bytes.length; i += 64_000) c.enqueue(bytes.subarray(i, i + 64_000));
+        c.close();
+      },
+    });
+    const streamed = await webhook.POST(new Request("http://localhost/api/line/webhook", { method: "POST", body: stream, headers: { "x-line-signature": sig }, duplex: "half" } as RequestInit));
+    expect(streamed.status).toBe(413);
+  });
+
+  it("イベントの時刻がおかしい・未来すぎるときは「いま」として扱う（DB の更新が失敗しない・あとの正しいイベントを無視しない）", async () => {
+    const now = 1_800_000_000_000;
+    expect(M.sanitizeTimestamp(1e300, now)).toBe(now);
+    expect(M.sanitizeTimestamp(-5, now)).toBe(now);
+    expect(M.sanitizeTimestamp("123", now)).toBe(now);
+    expect(M.sanitizeTimestamp(now + 365 * 86_400_000, now)).toBe(now + 60_000);
+    expect(M.sanitizeTimestamp(now - 1000, now)).toBe(now - 1000);
+    await seedParent("pA", { lineUserId: LINE_A });
+    expect((await post({ events: [event("follow", LINE_A, 1e300)] })).status).toBe(200);
+    expect(parentA().lineFriend).toBe(true);
+    // 1回に 100 件まで
+    const many = Array.from({ length: 150 }, () => event("follow"));
+    expect(M.parseFriendEvents({ events: many })).toHaveLength(100);
   });
 });
 

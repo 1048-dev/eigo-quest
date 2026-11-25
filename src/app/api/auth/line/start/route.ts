@@ -17,6 +17,10 @@ export async function GET(req: Request) {
   const mode: LineMode = new URL(req.url).searchParams.get("mode") === "link" ? "link" : "login";
   const back = mode === "link" ? "/parent" : "/login";
   if (!cfg) return lineRedirect(null, `${back}?line=not_configured`, req);
+  // ほかのサイトからのリンク・自動の移動では始めない（LINE アプリ内では同意画面なしでログインが終わることがあり、
+  // 知らないうちに別のアカウントに切りかわる・アカウントが作られるのを防ぐ）。こちらの画面のボタンは same-origin
+  const site = req.headers.get("sec-fetch-site");
+  if (site === "cross-site" || site === "same-site") return lineRedirect(cfg, back, req);
   try {
     if (!(await isDbUp())) return lineRedirect(cfg, `${back}?line=offline`, req);
     let parentId: string | null = null;

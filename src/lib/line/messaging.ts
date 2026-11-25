@@ -176,15 +176,27 @@ export interface FriendEvent {
 const LINE_USER_ID_RE = /^U[0-9a-f]{32}$/;
 
 /** webhook の本文から follow / unfollow（ユーザーから）だけを取り出す。おかしな形は無視 */
-export function parseFriendEvents(body: unknown): FriendEvent[] {
+export function parseFriendEvents(body: unknown, now = Date.now()): FriendEvent[] {
   const events = (body as { events?: unknown } | null)?.events;
   if (!Array.isArray(events)) return [];
   const out: FriendEvent[] = [];
-  for (const e of events) {
+  // 1回の webhook のイベント数には上限を設ける（LINE がまとめて送るのは多くても数十件）
+  for (const e of events.slice(0, MAX_EVENTS)) {
     const ev = e as { type?: unknown; source?: { type?: unknown; userId?: unknown }; timestamp?: unknown };
     if (ev?.type !== "follow" && ev?.type !== "unfollow") continue;
     if (ev.source?.type !== "user" || typeof ev.source.userId !== "string" || !LINE_USER_ID_RE.test(ev.source.userId)) continue;
-    out.push({ type: ev.type, userId: ev.source.userId, timestamp: typeof ev.timestamp === "number" ? ev.timestamp : Date.now() });
+    out.push({ type: ev.type, userId: ev.source.userId, timestamp: sanitizeTimestamp(ev.timestamp, now) });
   }
   return out;
+}
+
+const MAX_EVENTS = 100;
+
+/**
+ * イベントの時刻（ミリ秒）。数字でない・ありえない値は「いま」、未来すぎる値も「いま」にする
+ * （日付にできない値で DB の更新が失敗したり、未来の時刻で その後の正しいイベントが無視されたりしないように）
+ */
+export function sanitizeTimestamp(ts: unknown, now = Date.now()): number {
+  if (typeof ts !== "number" || !Number.isSafeInteger(ts) || ts <= 0) return now;
+  return Math.min(ts, now + 60_000);
 }

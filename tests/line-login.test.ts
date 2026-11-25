@@ -524,4 +524,53 @@ describe("state cookie の形", () => {
     expect(L.safeEqual("abc", "abc")).toBe(true);
     expect(L.safeEqual(undefined, "abc")).toBe(false);
   });
+
+  it("署名つき: 書きかえた cookie・ほかの鍵で作った cookie・鍵が無いときは受け付けない（run4 Phase 4）", () => {
+    const s = L.newOAuthState("login", null);
+    const raw = L.encodeOAuthState(s);
+    expect(raw.split(".")).toHaveLength(7);
+    // mode を link にして、ほかの保護者の ID を入れる
+    const parts = raw.split(".");
+    parts[0] = "link";
+    parts[4] = "victim_parent";
+    expect(L.decodeOAuthState(parts.join("."))).toBeNull();
+    // 署名を外した（前の形式）
+    expect(L.decodeOAuthState(raw.split(".").slice(0, 6).join("."))).toBeNull();
+    expect(L.decodeOAuthState(L.encodeOAuthState(s, "other-key"))).toBeNull();
+    expect(L.decodeOAuthState(raw, null)).toBeNull();
+    expect(() => L.encodeOAuthState(s, null)).toThrow();
+  });
+});
+
+describe("ほかのサイトから始めさせない（run4 Phase 4）", () => {
+  it("Sec-Fetch-Site が cross-site / same-site なら LINE へ行かず、cookie も作らない。same-origin・直接入力は通る", async () => {
+    for (const site of ["cross-site", "same-site"]) {
+      jar.clear();
+      const res = await start.GET(new Request("http://localhost:3000/api/auth/line/start?mode=login", { headers: { "sec-fetch-site": site } }));
+      expect(res.status).toBe(303);
+      expect(path(res.headers.get("location")!)).toBe("/login");
+      expect(jar.get(L.LINE_OAUTH_COOKIE)).toBeUndefined();
+    }
+    for (const site of ["same-origin", "none"]) {
+      jar.clear();
+      const res = await start.GET(new Request("http://localhost:3000/api/auth/line/start?mode=login", { headers: { "sec-fetch-site": site } }));
+      expect(res.status).toBe(302);
+      expect(oauthCookie()).not.toBeNull();
+    }
+  });
+
+  it("書きかえた cookie（mode=link・自分の ID）では、暗証番号なしで連携できない", async () => {
+    await registerEmail();
+    const me = db.table("parent")[0];
+    db.table("session")[0].pinVerifiedAt = null; // 暗証番号は入れていない（子どもが操作している）
+    await get(start.GET, "http://localhost:3000/api/auth/line/start?mode=login");
+    const raw = jar.get(L.LINE_OAUTH_COOKIE)!.value.split(".");
+    raw[0] = "link";
+    raw[4] = String(me.id);
+    jar.set(L.LINE_OAUTH_COOKIE, raw.join("."));
+    const cb = await get(callback.GET, `${ENV.LINE_LOGIN_CALLBACK_URL}?code=c&state=${raw[1]}`);
+    expect(path(cb.location)).toBe("/login?line=state");
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(db.table("parent")[0].lineUserId ?? null).toBeNull();
+  });
 });

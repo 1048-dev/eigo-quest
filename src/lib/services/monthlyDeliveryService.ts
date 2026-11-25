@@ -379,11 +379,14 @@ export async function findDeliveryByToken(token: unknown, now = new Date()): Pro
 export function deliveryFileFor(view: DeliveryView, fileId: string, env: Record<string, string | undefined> = process.env): { file: DeliveryFile; abs: string } | null {
   const file = view.files.find((f) => f.id === fileId);
   if (!file) return null;
-  // お子さまのレポートは、その家のフォルダの中にあるものだけ
-  if (file.id === "report" && !file.path.startsWith(`reports/${view.parentId}/`)) return null;
-  if (file.id === "worksheets" && !file.path.startsWith("worksheets/")) return null;
-  const abs = resolveStored(file.path, reportStorageDir(env));
-  return abs ? { file, abs } : null;
+  const root = reportStorageDir(env);
+  const abs = resolveStored(file.path, root);
+  if (!abs) return null;
+  // お子さまのレポートは、その家のフォルダの中にあるものだけ。ワークシートは共有のフォルダの中だけ。
+  // 「reports/<家>/../<ほかの家>/…」のような書き方でも抜けられないよう、正規化したあとの絶対パスで確かめる
+  const allowed = file.id === "report" ? path.join(root, "reports", view.parentId) : file.id === "worksheets" ? path.join(root, "worksheets") : null;
+  if (!allowed || !abs.startsWith(allowed + path.sep)) return null;
+  return { file, abs };
 }
 
 /** 期限切れの配信を消す（その家のレポート PDF も消す。ワークシートは共有なので残す） */

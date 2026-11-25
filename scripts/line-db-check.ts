@@ -133,6 +133,12 @@ async function flow() {
   const linkState = (email.cookies.get("eq_line_oauth") ?? "").split(".");
   const parent = await db.parent.findUnique({ where: { email: "line-check@example.com" } });
   check("link の start: 302 + cookie に保護者 ID", link.status === 302 && linkState[0] === "link" && linkState[4] === parent?.id, { status: link.status, linkState });
+  // run4 Phase 4: state cookie は署名つき。書きかえる（ほかの保護者の ID）と 受け付けない（LINE にも問い合わせない）
+  const tampered = [...linkState];
+  tampered[4] = "someone_else_parent_id";
+  email.cookies.set("eq_line_oauth", tampered.join("."));
+  const tcb = await email.req("GET", `/api/auth/line/callback?code=dummy&state=${linkState[1]}`);
+  check("書きかえた state cookie → 303 /login?line=state", tcb.status === 303 && pathOf(tcb.location) === "/login?line=state", tcb);
   const unl = await email.req("DELETE", "/api/parent/line");
   check("未連携で解除 → 404 NOT_LINKED", unl.status === 404 && unl.body.code === "NOT_LINKED", unl.body);
 

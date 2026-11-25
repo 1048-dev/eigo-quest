@@ -11,7 +11,7 @@
  *   LINE_LOGIN_CHANNEL_ID, LINE_LOGIN_CHANNEL_SECRET, LINE_LOGIN_CALLBACK_URL
  * キーはコードに書かない。ログにトークン・コード・シークレットを出さない。
  */
-import { createHash, randomBytes, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
 export const LINE_AUTHORIZE_URL = "https://access.line.me/oauth2/v2.1/authorize";
@@ -76,15 +76,31 @@ export function newOAuthState(mode: LineMode, parentId: string | null, now = Dat
   return { mode, state: rand(), nonce: rand(), codeVerifier: rand(48), parentId: mode === "link" ? parentId : null, expiresAt: now + LINE_OAUTH_TTL_MS };
 }
 
-/** cookie の値（すべて base64url なので "." でつなぐ） */
-export function encodeOAuthState(s: LineOAuthState): string {
-  return [s.mode, s.state, s.nonce, s.codeVerifier, s.parentId ?? "-", String(s.expiresAt)].join(".");
+/** cookie の署名に使う鍵（LINE ログインのチャネルシークレット）。未設定なら署名できない = cookie を受け付けない */
+function cookieKey(): string | null {
+  return lineLoginConfig()?.channelSecret ?? null;
 }
 
-export function decodeOAuthState(raw: string | undefined | null): LineOAuthState | null {
-  if (!raw) return null;
+function sign(body: string, key: string): string {
+  return createHmac("sha256", key).update(`eq-line-oauth:${body}`).digest("base64url");
+}
+
+/**
+ * cookie の値（すべて base64url なので "." でつなぐ）+ HMAC 署名。
+ * 署名があるので、ブラウザで cookie を書きかえても（mode=link・parentId など）受け付けない。
+ */
+export function encodeOAuthState(s: LineOAuthState, key: string | null = cookieKey()): string {
+  if (!key) throw new Error("LINE login is not configured");
+  const body = [s.mode, s.state, s.nonce, s.codeVerifier, s.parentId ?? "-", String(s.expiresAt)].join(".");
+  return `${body}.${sign(body, key)}`;
+}
+
+export function decodeOAuthState(raw: string | undefined | null, key: string | null = cookieKey()): LineOAuthState | null {
+  if (!raw || !key || raw.length > 1024) return null;
   const parts = raw.split(".");
-  if (parts.length !== 6) return null;
+  if (parts.length !== 7) return null;
+  const mac = parts.pop()!;
+  if (!safeEqual(mac, sign(parts.join("."), key))) return null;
   const [mode, state, nonce, codeVerifier, parentId, exp] = parts;
   if (mode !== "login" && mode !== "link") return null;
   if (![state, nonce, codeVerifier].every((x) => TOKEN_RE.test(x))) return null;

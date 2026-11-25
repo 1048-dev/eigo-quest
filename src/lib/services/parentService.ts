@@ -117,7 +117,13 @@ export async function unlinkLine(parentId: string): Promise<UnlinkLineResult> {
   const p = await prisma.parent.findUnique({ where: { id: parentId }, select: { email: true, passwordHash: true, lineUserId: true } });
   if (!p?.lineUserId) return { ok: false, reason: "NOT_LINKED" };
   if (!p.email || !p.passwordHash) return { ok: false, reason: "NEEDS_PASSWORD" };
-  await prisma.parent.update({ where: { id: parentId }, data: { lineUserId: null, lineDisplayName: null, lineLinkedAt: null, lineFriend: null, lineFriendChangedAt: null } });
+  const now = new Date();
+  await prisma.$transaction([
+    prisma.parent.update({ where: { id: parentId }, data: { lineUserId: null, lineDisplayName: null, lineLinkedAt: null, lineFriend: null, lineFriendChangedAt: null } }),
+    // これまで その LINE に送った ダウンロードのリンクも使えなくする（LINE のアカウントを手放した・人にゆずった場合に備えて）。
+    // 行とレポート PDF は、次の line:monthly の掃除で消える
+    prisma.reportDelivery.updateMany({ where: { parentId, expiresAt: { gt: now } }, data: { expiresAt: now } }),
+  ]);
   return { ok: true };
 }
 

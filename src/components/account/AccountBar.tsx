@@ -17,7 +17,9 @@ import { ChildAvatar } from "./ChildAvatar";
 import { PinDialog } from "./PinPad";
 
 /** アカウント画面そのもの（ここではバーを出さない） */
-export const ACCOUNT_PATHS = ["/welcome", "/register", "/login", "/who", "/parent"];
+// /setup-pin（LINE で登録した直後の暗証番号）と /d（LINE で届いた PDF のダウンロード）も保護者向けの画面なので、
+// ゲームのバー・下のメニューを出さない
+export const ACCOUNT_PATHS = ["/welcome", "/register", "/login", "/who", "/parent", "/setup-pin", "/d"];
 export const isAccountPath = (path: string) => ACCOUNT_PATHS.some((p) => path === p || path.startsWith(`${p}/`));
 
 export function AccountBar() {

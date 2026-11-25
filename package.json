@@ -19,6 +19,7 @@
     "check:line-db": "tsx scripts/line-db-check.ts",
     "line:monthly": "tsx scripts/line-monthly.ts",
     "check:line-monthly-db": "tsx scripts/line-monthly-db-check.ts",
+    "check:run4-flow": "tsx scripts/run4-flow-check.ts",
     "screens:auth": "tsx scripts/auth-ui-screens.ts"
   },
   "dependencies": {

@@ -44,6 +44,10 @@ const PAGES: { name: string; url: string }[] = [
   { name: "test-check-1", url: "/test/check-1" },
   { name: "test-mini-1-5", url: "/test/mini-1-5" },
   { name: "recap-1", url: "/recap/1" },
+  // run4: LINE で登録した保護者の暗証番号の画面・LINE から戻ったときの案内・PDF のダウンロードページ（DB 停止中）
+  { name: "setup-pin", url: "/setup-pin" },
+  { name: "login-line-notice", url: "/login?line=not_configured" },
+  { name: "download-page", url: `/d/${"x".repeat(43)}` },
   ...WORLD_LESSONS.map((n) => ({ name: `lesson-${n}`, url: `/lesson/${n}` })),
 ];
 
@@ -199,6 +203,43 @@ async function accountOfflineFlow(browser: Browser) {
     if (r.status !== 503 || r.json.offline !== true || r.json.success !== false || typeof r.json.messageJa !== "string") fail(`api ${url}`, "api", `${r.status} ${JSON.stringify(r.json)}`);
     else console.log(`  ✓ ${label} → 503 offline（ていねいな 案内）`);
   }
+  // run4: アバター・おためしの引き継ぎ・LINE の連携/毎月のレポート（DB 停止中は 503 + offline のていねいな案内）
+  const run4Offline: [string, "GET" | "POST" | "PATCH" | "DELETE", string, unknown?][] = [
+    ["アバター変更", "PATCH", "/api/children/child_x/avatar", { avatarCharacter: "riko" }],
+    ["おためしの引き継ぎ", "POST", "/api/children/child_x/carry-over", { trialId: "t".repeat(32), lessons: {}, tests: {}, coins: 0, days: [], items: {} }],
+    ["LINE の連携解除", "DELETE", "/api/parent/line"],
+    ["LINE レポートの設定", "GET", "/api/parent/line-monthly"],
+    ["LINE レポートを今すぐ送る", "POST", "/api/parent/line-monthly"],
+    ["暗証番号を決める（LINE）", "POST", "/api/auth/line/pin", { pin: "1234" }],
+  ];
+  for (const [label, method, url, body] of run4Offline) {
+    const r = await api(method, url, body);
+    if (r.status !== 503 || r.json.offline !== true || r.json.success !== false || typeof r.json.messageJa !== "string") fail(`api ${url}`, "api", `${r.status} ${JSON.stringify(r.json)}`);
+    else console.log(`  ✓ ${label} → 503 offline（ていねいな 案内）`);
+  }
+  // LINE ログインは キーが無い（このスモークは .env に LINE の値を入れない前提）→「準備中」で ログイン画面へ戻す
+  for (const mode of ["login", "link"]) {
+    const r = await fetch(`${BASE}/api/auth/line/start?mode=${mode}`, { redirect: "manual" });
+    const loc = r.headers.get("location") ?? "";
+    const want = mode === "link" ? "/parent?line=not_configured" : "/login?line=not_configured";
+    if (r.status !== 303 || !loc.endsWith(want) || r.headers.get("set-cookie")?.includes("eq_line_oauth=")) fail(`api line/start ${mode}`, "api", `${r.status} ${loc}`);
+    else console.log(`  ✓ LINE ログイン（${mode}）未設定 → 303 ${want}`);
+  }
+  const cb = await fetch(`${BASE}/api/auth/line/callback?code=x&state=y`, { redirect: "manual" });
+  if (cb.status !== 303 || !(cb.headers.get("location") ?? "").endsWith("/login?line=not_configured")) fail("api line/callback", "api", `${cb.status} ${cb.headers.get("location")}`);
+  else console.log("  ✓ LINE コールバック 未設定 → 303 /login?line=not_configured");
+  // webhook はシークレットが無ければ 受け付けない（署名を確かめられないため）
+  const wh = await fetch(`${BASE}/api/line/webhook`, { method: "POST", headers: { "content-type": "application/json", "x-line-signature": "AAAA" }, body: JSON.stringify({ events: [] }) });
+  if (wh.status !== 503) fail("api line/webhook", "api", `${wh.status}`);
+  else console.log("  ✓ LINE webhook シークレットなし → 503");
+  // PDF のダウンロード（DB 停止）は 503 の文章。知らない形のトークンでも 500 に しない
+  for (const p of [`/d/${"x".repeat(43)}/report`, "/d/short/worksheets"]) {
+    const r = await fetch(BASE + p);
+    const ok = (r.status === 503 || r.status === 404) && /no-store/.test(r.headers.get("cache-control") ?? "") && /noindex/.test(r.headers.get("x-robots-tag") ?? "");
+    if (!ok) fail(`download ${p}`, "http", `${r.status} ${r.headers.get("cache-control")}`);
+    else console.log(`  ✓ ダウンロード ${p} → ${r.status}（no-store・noindex）`);
+  }
+
   const out = await api("POST", "/api/auth/logout");
   if (out.status !== 200 || out.json.ok !== true) fail("api auth/logout", "api", JSON.stringify(out.json));
   else console.log("  ✓ ログアウト → 200");
