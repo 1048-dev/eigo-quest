@@ -4,6 +4,8 @@
  * 本番はネイティブ収録音声 or 事前生成TTS（/media/audio/{itemId}.mp3）を <audio playbackRate> で再生し、
  * 0.8 / 1.0 / 1.2 倍速のスピードリスニングでもピッチが変わらないようにする（preservesPitch）。
  */
+import { estimateWordDurations, wordIndexAt, wordRanges } from "@/lib/library/words";
+
 export function speak(text: string, rate = 1.0, lang: "en-US" | "ja-JP" = "en-US"): Promise<void> {
   return new Promise((resolve) => {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return resolve();
@@ -17,6 +19,68 @@ export function speak(text: string, rate = 1.0, lang: "en-US" | "ja-JP" = "en-US
     u.onerror = () => resolve();
     window.speechSynthesis.speak(u);
   });
+}
+
+export interface TrackedSpeech {
+  done: Promise<void>;
+  cancel: () => void;
+}
+
+/**
+ * 読みながら「いま 読んでいる ことば」を しらせる（としょかんの 読み聞かせの ハイライト）。
+ *  - ブラウザが boundary イベント（word）を 出せば その 位置を 使う
+ *  - 出さない（声による）・speechSynthesis が ない ときは、ことばの 長さから 時間を 見つもって すすめる（音が なくても ハイライトは 動く）
+ * onWord(-1) で おわり。
+ */
+export function speakTracked(text: string, rate: number, onWord: (index: number) => void): TrackedSpeech {
+  const ranges = wordRanges(text);
+  const durations = estimateWordDurations(text, rate * 0.9);
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  let gotBoundary = false;
+  let finished = false;
+  let resolveDone: () => void = () => {};
+  const done = new Promise<void>((r) => { resolveDone = r; });
+  const finish = () => {
+    if (finished) return;
+    finished = true;
+    if (timer) clearTimeout(timer);
+    onWord(-1);
+    resolveDone();
+  };
+  // 見つもりで すすめる（boundary が 来たら やめる）
+  const step = (i: number, endWhenDone: boolean) => {
+    if (finished || gotBoundary) return;
+    if (i >= ranges.length) { if (endWhenDone) finish(); return; }
+    onWord(i);
+    timer = setTimeout(() => step(i + 1, endWhenDone), durations[i] ?? 300);
+  };
+
+  const synth = typeof window !== "undefined" && "speechSynthesis" in window ? window.speechSynthesis : null;
+  if (!synth || ranges.length === 0) {
+    step(0, true);
+    if (ranges.length === 0) finish();
+    return { done, cancel: finish };
+  }
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "en-US";
+  u.rate = rate * 0.9;
+  const voices = synth.getVoices();
+  u.voice = voices.find((v) => v.lang.startsWith("en") && /female|samantha|jenny|aria|zira/i.test(v.name)) ?? voices.find((v) => v.lang.startsWith("en")) ?? null;
+  u.onstart = () => step(0, false);
+  u.onboundary = (e) => {
+    if (e.name && e.name !== "word") return;
+    gotBoundary = true;
+    if (timer) clearTimeout(timer);
+    onWord(wordIndexAt(ranges, e.charIndex));
+  };
+  u.onend = finish;
+  u.onerror = finish;
+  synth.speak(u);
+  // onstart も onend も 来ない（声が ない・ブロックされた）ときの 保険
+  const total = durations.reduce((a, b) => a + b, 0);
+  setTimeout(() => { if (!finished && !gotBoundary && !timer) step(0, true); }, 1200);
+  setTimeout(finish, total * 2 + 4000);
+  return { done, cancel: () => { synth.cancel(); finish(); } };
 }
 
 const RECORDED_AUDIO = process.env.NEXT_PUBLIC_RECORDED_AUDIO === "1";

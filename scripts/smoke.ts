@@ -53,6 +53,11 @@ const PAGES: { name: string; url: string }[] = [
   { name: "reset-password", url: `/reset-password?token=${"x".repeat(43)}` },
   { name: "verify-email", url: `/verify-email?token=${"x".repeat(43)}` },
   { name: "forgot-pin", url: "/forgot-pin" },
+  // run7 P-library: えいごの としょかん（おためしモードでも 一覧・おはなし・チャンツ・フリートークの 案内）
+  { name: "library", url: "/library" },
+  { name: "library-story-s1-01", url: "/library/story/s1-01" },
+  { name: "library-chant-c-01", url: "/library/chant/c-01" },
+  { name: "library-talk-t-food", url: "/library/talk/t-food" },
   ...WORLD_LESSONS.map((n) => ({ name: `lesson-${n}`, url: `/lesson/${n}` })),
 ];
 

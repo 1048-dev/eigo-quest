@@ -1,0 +1,578 @@
+{
+  "note": "えいごの としょかん：ステージ1（Pre-A1 → A1）の 段階別の おはなし。すべて オリジナル。索引は npm run library:index で つくりなおす",
+  "stage": 1,
+  "stories": [
+    {
+      "id": "s1-01",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 0,
+      "emoji": "👋",
+      "title": "Hello, Birimo!",
+      "titleJa": "こんにちは、ビリモ！",
+      "lines": [
+        { "en": "Haru sees a little yellow friend.", "ja": "ハルは ちいさな きいろい ともだちを みつけます。" },
+        { "en": "\"Hello! I'm Haru.\"", "ja": "「こんにちは！ ぼくは ハル。」" },
+        { "en": "\"Hello! I'm Birimo.\"", "ja": "「こんにちは！ ぼくは ビリモ。」" },
+        { "en": "\"How are you, Birimo?\"", "ja": "「げんき、ビリモ？」" },
+        { "en": "\"I'm hungry!\"", "ja": "「おなかが すいた！」" },
+        { "en": "Haru gives Birimo a banana.", "ja": "ハルは ビリモに バナナを あげます。" },
+        { "en": "\"Thank you! Now I'm happy!\"", "ja": "「ありがとう！ これで ハッピー！」" }
+      ],
+      "words": [
+        { "en": "hungry", "ja": "おなかが すいた" },
+        { "en": "happy", "ja": "うれしい" }
+      ],
+      "questions": [
+        { "q": "Who is the yellow friend?", "qJa": "きいろい ともだちは だれ？", "choices": ["Birimo", "Riko", "Kiko"], "answer": 0 },
+        { "q": "How is Birimo first?", "qJa": "さいしょ ビリモは どんな きもち？", "choices": ["sleepy", "hungry", "sad"], "answer": 1 },
+        { "q": "What does Haru give Birimo?", "qJa": "ハルは ビリモに なにを あげた？", "choices": ["an apple", "a cake", "a banana"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-02",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 5,
+      "emoji": "🎈",
+      "title": "Red, Blue, Yellow",
+      "titleJa": "あか、あお、きいろ",
+      "lines": [
+        { "en": "Look! Balloons!", "ja": "みて！ ふうせんだ！" },
+        { "en": "A red balloon. A blue balloon. A yellow balloon.", "ja": "あかい ふうせん。あおい ふうせん。きいろい ふうせん。" },
+        { "en": "\"I like red,\" says Riko.", "ja": "「わたしは あかが すき」と リコ。" },
+        { "en": "\"I like blue,\" says Haru.", "ja": "「ぼくは あおが すき」と ハル。" },
+        { "en": "\"I like yellow!\" says Birimo.", "ja": "「ぼくは きいろが すき！」と ビリモ。" },
+        { "en": "Oh no! The wind!", "ja": "あっ！ かぜだ！" },
+        { "en": "The yellow balloon goes up, up, up.", "ja": "きいろい ふうせんが うえへ、うえへ、うえへ。" },
+        { "en": "\"Bye-bye, balloon!\"", "ja": "「バイバイ、ふうせん！」" }
+      ],
+      "words": [
+        { "en": "balloon", "ja": "ふうせん" },
+        { "en": "wind", "ja": "かぜ" }
+      ],
+      "questions": [
+        { "q": "What color does Riko like?", "qJa": "リコの すきな いろは？", "choices": ["blue", "red", "yellow"], "answer": 1 },
+        { "q": "What color does Haru like?", "qJa": "ハルの すきな いろは？", "choices": ["blue", "green", "pink"], "answer": 0 },
+        { "q": "Which balloon goes up?", "qJa": "とんでいった ふうせんは どれ？", "choices": ["the red one", "the blue one", "the yellow one"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-03",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 10,
+      "emoji": "🐱",
+      "title": "How Many Cats?",
+      "titleJa": "ねこは なんびき？",
+      "lines": [
+        { "en": "Kiko has one cat.", "ja": "キコは ねこを 1ぴき かっています。" },
+        { "en": "One cat sits on a box.", "ja": "1ぴきの ねこが はこの うえに すわっています。" },
+        { "en": "Two cats come. Now there are three cats.", "ja": "2ひきの ねこが きました。これで 3びき。" },
+        { "en": "Three cats eat fish.", "ja": "3びきの ねこが さかなを たべます。" },
+        { "en": "Two more cats come!", "ja": "もう 2ひき きた！" },
+        { "en": "\"How many cats?\" asks Kiko.", "ja": "「ねこは なんびき？」と キコが ききます。" },
+        { "en": "\"One, two, three, four, five! Five cats!\"", "ja": "「1、2、3、4、5！ 5ひき！」" },
+        { "en": "Five cats say, \"Meow!\"", "ja": "5ひきの ねこが「ニャー！」" }
+      ],
+      "words": [
+        { "en": "box", "ja": "はこ" },
+        { "en": "more", "ja": "もっと" }
+      ],
+      "questions": [
+        { "q": "Where does the first cat sit?", "qJa": "さいしょの ねこは どこに すわっている？", "choices": ["on a box", "on a bed", "on a car"], "answer": 0 },
+        { "q": "What do the cats eat?", "qJa": "ねこたちは なにを たべる？", "choices": ["cake", "fish", "rice"], "answer": 1 },
+        { "q": "How many cats are there at the end?", "qJa": "さいごに ねこは なんびき？", "choices": ["three", "four", "five"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-04",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 15,
+      "emoji": "👃",
+      "title": "Touch Your Nose!",
+      "titleJa": "はなを さわって！",
+      "lines": [
+        { "en": "Ms. Emma says, \"Let's play a game!\"", "ja": "エマ先生が「ゲームを しよう！」と いいます。" },
+        { "en": "\"Touch your nose!\"", "ja": "「はなを さわって！」" },
+        { "en": "Haru touches his nose.", "ja": "ハルは はなを さわります。" },
+        { "en": "\"Touch your ears!\"", "ja": "「みみを さわって！」" },
+        { "en": "Riko touches her ears.", "ja": "リコは みみを さわります。" },
+        { "en": "\"Touch your head!\"", "ja": "「あたまを さわって！」" },
+        { "en": "Birimo touches his tail.", "ja": "ビリモは しっぽを さわります。" },
+        { "en": "\"Birimo, that's your tail!\"", "ja": "「ビリモ、それは しっぽだよ！」" },
+        { "en": "Everyone laughs. Ha, ha, ha!", "ja": "みんな わらいます。ハハハ！" }
+      ],
+      "words": [
+        { "en": "touch", "ja": "さわる" },
+        { "en": "tail", "ja": "しっぽ" }
+      ],
+      "questions": [
+        { "q": "What does Haru touch?", "qJa": "ハルは どこを さわった？", "choices": ["his ears", "his nose", "his head"], "answer": 1 },
+        { "q": "What does Riko touch?", "qJa": "リコは どこを さわった？", "choices": ["her ears", "her hands", "her eyes"], "answer": 0 },
+        { "q": "What does Birimo touch?", "qJa": "ビリモは どこを さわった？", "choices": ["his head", "his nose", "his tail"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-05",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 20,
+      "emoji": "🧺",
+      "title": "Picnic Day",
+      "titleJa": "ピクニックの ひ",
+      "lines": [
+        { "en": "It's sunny. Let's have a picnic!", "ja": "はれだね。ピクニックを しよう！" },
+        { "en": "Riko has apples.", "ja": "リコは りんごを もっています。" },
+        { "en": "Haru has bread.", "ja": "ハルは パンを もっています。" },
+        { "en": "Kiko has milk.", "ja": "キコは ぎゅうにゅうを もっています。" },
+        { "en": "Birimo has... nothing!", "ja": "ビリモは……なにも もっていません！" },
+        { "en": "\"I'm sorry,\" says Birimo.", "ja": "「ごめんね」と ビリモ。" },
+        { "en": "\"That's okay! Let's share!\" says Riko.", "ja": "「だいじょうぶ！ わけっこ しよう！」と リコ。" },
+        { "en": "They eat together. Yummy!", "ja": "みんなで いっしょに たべます。おいしい！" }
+      ],
+      "words": [
+        { "en": "picnic", "ja": "ピクニック" },
+        { "en": "share", "ja": "わけあう" }
+      ],
+      "questions": [
+        { "q": "What is the weather?", "qJa": "てんきは？", "choices": ["rainy", "snowy", "sunny"], "answer": 2 },
+        { "q": "What does Kiko have?", "qJa": "キコは なにを もってきた？", "choices": ["milk", "apples", "bread"], "answer": 0 },
+        { "q": "What do they do with the food?", "qJa": "みんなは たべものを どうした？", "choices": ["They sell it.", "They share it.", "They lose it."], "answer": 1 }
+      ]
+    },
+    {
+      "id": "s1-06",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 30,
+      "emoji": "☔",
+      "title": "Rain, Rain!",
+      "titleJa": "あめ、あめ！",
+      "lines": [
+        { "en": "It's rainy today.", "ja": "きょうは あめです。" },
+        { "en": "Haru puts on his blue raincoat.", "ja": "ハルは あおい レインコートを きます。" },
+        { "en": "Riko puts on her red boots.", "ja": "リコは あかい ながぐつを はきます。" },
+        { "en": "Birimo has no raincoat.", "ja": "ビリモは レインコートが ありません。" },
+        { "en": "\"I'm wet! I'm cold!\"", "ja": "「ぬれちゃった！ さむい！」" },
+        { "en": "Kiko opens a big umbrella.", "ja": "キコは おおきな かさを ひらきます。" },
+        { "en": "\"Come in, Birimo!\"", "ja": "「はいって、ビリモ！」" },
+        { "en": "Splash, splash! They jump in the puddles.", "ja": "ピチャ、ピチャ！ みんなで みずたまりを ジャンプ。" }
+      ],
+      "words": [
+        { "en": "umbrella", "ja": "かさ" },
+        { "en": "wet", "ja": "ぬれた" },
+        { "en": "puddle", "ja": "みずたまり" }
+      ],
+      "questions": [
+        { "q": "What color is Haru's raincoat?", "qJa": "ハルの レインコートは なにいろ？", "choices": ["red", "blue", "yellow"], "answer": 1 },
+        { "q": "How does Birimo feel?", "qJa": "ビリモは どんな かんじ？", "choices": ["wet and cold", "hot and sleepy", "happy and full"], "answer": 0 },
+        { "q": "What does Kiko open?", "qJa": "キコは なにを ひらいた？", "choices": ["a door", "a book", "an umbrella"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-07",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 40,
+      "emoji": "🐷",
+      "title": "The Big Pig",
+      "titleJa": "おおきな ぶた",
+      "lines": [
+        { "en": "A big pig sits in the mud.", "ja": "おおきな ぶたが どろの なかに すわっています。" },
+        { "en": "The pig is sad.", "ja": "ぶたは かなしそう。" },
+        { "en": "\"What do you want, pig?\" asks Kiko.", "ja": "「なにが ほしいの、ぶたさん？」と キコ。" },
+        { "en": "\"I want a hat. The sun is hot.\"", "ja": "「ぼうしが ほしいの。おひさまが あついから。」" },
+        { "en": "Kiko has a red cap.", "ja": "キコは あかい キャップを もっています。" },
+        { "en": "She puts the cap on the pig.", "ja": "キコは ぶたに キャップを かぶせます。" },
+        { "en": "The big pig is not sad now.", "ja": "おおきな ぶたは もう かなしくありません。" },
+        { "en": "\"Thank you! I am a cool pig!\"", "ja": "「ありがとう！ ぼく、かっこいい ぶただね！」" }
+      ],
+      "words": [
+        { "en": "mud", "ja": "どろ" },
+        { "en": "cap", "ja": "ぼうし（キャップ）" }
+      ],
+      "questions": [
+        { "q": "Where is the pig?", "qJa": "ぶたは どこに いる？", "choices": ["in the mud", "in a bus", "in a bed"], "answer": 0 },
+        { "q": "What does the pig want?", "qJa": "ぶたは なにが ほしい？", "choices": ["a cake", "a hat", "a bag"], "answer": 1 },
+        { "q": "Why does the pig want it?", "qJa": "どうして ほしいの？", "choices": ["It is cold.", "It is rainy.", "The sun is hot."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-08",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 48,
+      "emoji": "🎩",
+      "title": "Where Is My Hat?",
+      "titleJa": "ぼうしは どこ？",
+      "lines": [
+        { "en": "\"Where is my hat?\" asks Kiko.", "ja": "「わたしの ぼうしは どこ？」と キコ。" },
+        { "en": "Is it on the bed? No, it isn't.", "ja": "ベッドの うえ？ ううん、ちがう。" },
+        { "en": "Is it in the box? No, it isn't.", "ja": "はこの なか？ ううん、ちがう。" },
+        { "en": "Is it under the desk? No, it isn't.", "ja": "つくえの した？ ううん、ちがう。" },
+        { "en": "Haru laughs. \"Kiko, look!\"", "ja": "ハルが わらいます。「キコ、みて！」" },
+        { "en": "Kiko looks in the mirror.", "ja": "キコは かがみを みます。" },
+        { "en": "The hat is on her head!", "ja": "ぼうしは キコの あたまの うえ！" },
+        { "en": "\"Oh! Here it is!\"", "ja": "「あっ！ ここに あった！」" }
+      ],
+      "words": [
+        { "en": "under", "ja": "〜の した" },
+        { "en": "mirror", "ja": "かがみ" }
+      ],
+      "questions": [
+        { "q": "What is Kiko looking for?", "qJa": "キコは なにを さがしている？", "choices": ["her bag", "her hat", "her cat"], "answer": 1 },
+        { "q": "Is the hat in the box?", "qJa": "ぼうしは はこの なかに あった？", "choices": ["Yes, it is.", "No, it isn't.", "It's a cat."], "answer": 1 },
+        { "q": "Where is the hat?", "qJa": "ぼうしは どこに あった？", "choices": ["on her head", "under the bed", "in the mirror"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "s1-09",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 55,
+      "emoji": "🚌",
+      "title": "The Bus to the Sea",
+      "titleJa": "うみへ いく バス",
+      "lines": [
+        { "en": "\"Let's go to the sea!\" says Haru.", "ja": "「うみへ いこう！」と ハル。" },
+        { "en": "\"By bus!\" says Riko.", "ja": "「バスで！」と リコ。" },
+        { "en": "The bus is big and green.", "ja": "バスは おおきくて みどりいろ。" },
+        { "en": "The bus goes up a hill.", "ja": "バスは さかを のぼります。" },
+        { "en": "The bus goes down a hill.", "ja": "バスは さかを くだります。" },
+        { "en": "Birimo looks out the window.", "ja": "ビリモは まどの そとを みます。" },
+        { "en": "\"I see the sea! It's so blue!\"", "ja": "「うみが みえる！ とっても あおい！」" },
+        { "en": "They swim and play in the sun.", "ja": "みんなは おひさまの したで およいで あそびます。" }
+      ],
+      "words": [
+        { "en": "hill", "ja": "おか・さか" },
+        { "en": "window", "ja": "まど" }
+      ],
+      "questions": [
+        { "q": "Where do they go?", "qJa": "みんなは どこへ いく？", "choices": ["to the zoo", "to the park", "to the sea"], "answer": 2 },
+        { "q": "What color is the bus?", "qJa": "バスは なにいろ？", "choices": ["green", "red", "white"], "answer": 0 },
+        { "q": "Who looks out the window?", "qJa": "まどの そとを みたのは だれ？", "choices": ["Riko", "Birimo", "Haru"], "answer": 1 }
+      ]
+    },
+    {
+      "id": "s1-10",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 65,
+      "emoji": "🌏",
+      "title": "Hello from the World",
+      "titleJa": "せかいから こんにちは",
+      "lines": [
+        { "en": "Ms. Emma shows a big map.", "ja": "エマ先生が おおきな ちずを みせます。" },
+        { "en": "\"Children all over the world say hello.\"", "ja": "「せかいじゅうの こどもが あいさつを するのよ。」" },
+        { "en": "\"In France, they say 'Bonjour!'\"", "ja": "「フランスでは『ボンジュール！』と いうの。」" },
+        { "en": "\"In China, they say 'Ni hao!'\"", "ja": "「ちゅうごくでは『ニーハオ！』と いうの。」" },
+        { "en": "\"In Kenya, they say 'Jambo!'\"", "ja": "「ケニアでは『ジャンボ！』と いうの。」" },
+        { "en": "Riko waves her hand. \"Hello! Nice to meet you!\"", "ja": "リコが てを ふります。「こんにちは！ はじめまして！」" },
+        { "en": "Birimo shouts, \"Biri-biri!\"", "ja": "ビリモが さけびます。「ビリビリ！」" },
+        { "en": "\"That's Birimo's hello!\" Everyone smiles.", "ja": "「それが ビリモの あいさつだね！」 みんな にっこり。" }
+      ],
+      "words": [
+        { "en": "map", "ja": "ちず" },
+        { "en": "world", "ja": "せかい" },
+        { "en": "wave", "ja": "てを ふる" }
+      ],
+      "questions": [
+        { "q": "What does Ms. Emma show?", "qJa": "エマ先生は なにを みせた？", "choices": ["a book", "a map", "a photo"], "answer": 1 },
+        { "q": "How do people say hello in Kenya?", "qJa": "ケニアの あいさつは？", "choices": ["Jambo!", "Bonjour!", "Ni hao!"], "answer": 0 },
+        { "q": "What is Birimo's hello?", "qJa": "ビリモの あいさつは？", "choices": ["Hello!", "Meow!", "Biri-biri!"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-11",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 90,
+      "emoji": "❓",
+      "title": "What Is This?",
+      "titleJa": "これ なあに？",
+      "lines": [
+        { "en": "Birimo has a quiz box.", "ja": "ビリモは クイズの はこを もっています。" },
+        { "en": "\"What's this? Here is a hint.\"", "ja": "「これ なあに？ ヒントを どうぞ。」" },
+        { "en": "\"It's long. It's orange.\"", "ja": "「ながいよ。オレンジいろだよ。」" },
+        { "en": "\"Rabbits like it.\"", "ja": "「うさぎが すきだよ。」" },
+        { "en": "Haru thinks. \"Is it a pencil?\"", "ja": "ハルは かんがえます。「えんぴつ？」" },
+        { "en": "\"No. One more hint. You can eat it.\"", "ja": "「ちがうよ。もう ひとつ ヒント。たべられるよ。」" },
+        { "en": "\"I know! It's a carrot!\" says Riko.", "ja": "「わかった！ にんじんだ！」と リコ。" },
+        { "en": "\"That's right!\" Birimo gives Riko a sticker.", "ja": "「せいかい！」 ビリモは リコに シールを あげます。" }
+      ],
+      "words": [
+        { "en": "hint", "ja": "ヒント" },
+        { "en": "carrot", "ja": "にんじん" },
+        { "en": "sticker", "ja": "シール" }
+      ],
+      "questions": [
+        { "q": "What color is the thing in the box?", "qJa": "はこの なかの ものは なにいろ？", "choices": ["green", "orange", "white"], "answer": 1 },
+        { "q": "What does Haru say first?", "qJa": "ハルは さいしょに なんと いった？", "choices": ["Is it a pencil?", "Is it a banana?", "Is it a rabbit?"], "answer": 0 },
+        { "q": "What is the answer?", "qJa": "こたえは なに？", "choices": ["a pencil", "a sticker", "a carrot"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-12",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 110,
+      "emoji": "🦉",
+      "title": "Who Are You?",
+      "titleJa": "あなたは だあれ？",
+      "lines": [
+        { "en": "It's night in the forest.", "ja": "もりの よるです。" },
+        { "en": "Kiko hears a sound. \"Who are you?\"", "ja": "キコに おとが きこえます。「あなたは だあれ？」" },
+        { "en": "\"Are you a cat?\" \"No, I'm not.\"", "ja": "「ねこ？」「ちがうよ。」" },
+        { "en": "\"Are you a dog?\" \"No, I'm not.\"", "ja": "「いぬ？」「ちがうよ。」" },
+        { "en": "\"I have big eyes. I can fly. I can see at night.\"", "ja": "「ぼくは おおきな めが あるよ。とべるよ。よるでも みえるよ。」" },
+        { "en": "\"Are you an owl?\"", "ja": "「ふくろう？」" },
+        { "en": "\"Yes, I am! Hoo, hoo!\"", "ja": "「そうだよ！ ホー、ホー！」" },
+        { "en": "The owl flies to the moon. \"Good night, Kiko!\"", "ja": "ふくろうは つきの ほうへ とんでいきます。「おやすみ、キコ！」" }
+      ],
+      "words": [
+        { "en": "forest", "ja": "もり" },
+        { "en": "owl", "ja": "ふくろう" },
+        { "en": "night", "ja": "よる" }
+      ],
+      "questions": [
+        { "q": "Where is Kiko?", "qJa": "キコは どこに いる？", "choices": ["in the forest", "at school", "at the sea"], "answer": 0 },
+        { "q": "What can the animal do?", "qJa": "その どうぶつは なにが できる？", "choices": ["It can swim.", "It can fly.", "It can cook."], "answer": 1 },
+        { "q": "Who is it?", "qJa": "その どうぶつは なに？", "choices": ["a cat", "a dog", "an owl"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-13",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 130,
+      "emoji": "📅",
+      "title": "Birimo's Week",
+      "titleJa": "ビリモの 1しゅうかん",
+      "lines": [
+        { "en": "On Monday, Birimo plays soccer.", "ja": "げつようびに、ビリモは サッカーを します。" },
+        { "en": "On Tuesday, he reads a book.", "ja": "かようびに、ほんを よみます。" },
+        { "en": "On Wednesday, he swims in the pool.", "ja": "すいようびに、プールで およぎます。" },
+        { "en": "On Thursday, he draws a picture.", "ja": "もくようびに、えを かきます。" },
+        { "en": "On Friday, he sings with Riko.", "ja": "きんようびに、リコと うたいます。" },
+        { "en": "On Saturday, he makes a cake.", "ja": "どようびに、ケーキを つくります。" },
+        { "en": "On Sunday, he sleeps and sleeps.", "ja": "にちようびは、ねて ねて ねます。" },
+        { "en": "\"What day is it today?\" \"It's Sunday. Zzz...\"", "ja": "「きょうは なんようび？」「にちようび。グーグー……」" }
+      ],
+      "words": [
+        { "en": "draw", "ja": "（えを）かく" },
+        { "en": "pool", "ja": "プール" }
+      ],
+      "questions": [
+        { "q": "What does Birimo do on Monday?", "qJa": "げつようびに ビリモは なにを する？", "choices": ["He plays soccer.", "He makes a cake.", "He sleeps."], "answer": 0 },
+        { "q": "When does he swim?", "qJa": "およぐのは なんようび？", "choices": ["on Friday", "on Wednesday", "on Saturday"], "answer": 1 },
+        { "q": "What does he do on Sunday?", "qJa": "にちようびは なにを する？", "choices": ["He reads.", "He sings.", "He sleeps."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-14",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 140,
+      "emoji": "⏰",
+      "title": "What Time Is It?",
+      "titleJa": "いま なんじ？",
+      "lines": [
+        { "en": "It's seven o'clock. Haru wakes up.", "ja": "7じです。ハルが おきます。" },
+        { "en": "It's eight o'clock. He goes to school.", "ja": "8じです。がっこうへ いきます。" },
+        { "en": "It's twelve o'clock. It's lunch time!", "ja": "12じです。おひるごはんの じかん！" },
+        { "en": "It's three o'clock. He plays with his friends.", "ja": "3じです。ともだちと あそびます。" },
+        { "en": "It's six o'clock. He eats dinner with his family.", "ja": "6じです。かぞくと ばんごはんを たべます。" },
+        { "en": "It's nine o'clock. \"It's time for bed, Haru.\"", "ja": "9じです。「ねる じかんよ、ハル。」" },
+        { "en": "\"One more page, please!\"", "ja": "「あと 1ページ だけ、おねがい！」" },
+        { "en": "Haru reads one page. Then he sleeps.", "ja": "ハルは 1ページ よんで、ねむります。" }
+      ],
+      "words": [
+        { "en": "wake up", "ja": "めを さます" },
+        { "en": "dinner", "ja": "ばんごはん" },
+        { "en": "page", "ja": "ページ" }
+      ],
+      "questions": [
+        { "q": "What time does Haru wake up?", "qJa": "ハルは なんじに おきる？", "choices": ["at six", "at seven", "at eight"], "answer": 1 },
+        { "q": "What does he do at twelve?", "qJa": "12じに なにを する？", "choices": ["He eats lunch.", "He goes to bed.", "He wakes up."], "answer": 0 },
+        { "q": "What does Haru want at nine?", "qJa": "9じに ハルは なにを したい？", "choices": ["more dinner", "a new game", "one more page"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-15",
+      "stage": 1,
+      "level": "Pre-A1",
+      "unlockLesson": 165,
+      "emoji": "🍨",
+      "title": "The Parfait Shop",
+      "titleJa": "パフェやさん",
+      "lines": [
+        { "en": "Riko and Kiko open a parfait shop.", "ja": "リコと キコが パフェやさんを ひらきます。" },
+        { "en": "Haru comes in. \"Hello!\"", "ja": "ハルが きました。「こんにちは！」" },
+        { "en": "\"What do you want?\" asks Riko.", "ja": "「なにが ほしいですか？」と リコ。" },
+        { "en": "\"I want strawberries and cream, please.\"", "ja": "「いちごと クリームを ください。」" },
+        { "en": "Then Birimo comes in. \"I want everything!\"", "ja": "つぎに ビリモが きました。「ぜんぶ ほしい！」" },
+        { "en": "Kiko makes a very tall parfait.", "ja": "キコは とても たかい パフェを つくります。" },
+        { "en": "Bananas, grapes, chocolate, cookies, and ice cream!", "ja": "バナナ、ぶどう、チョコレート、クッキー、それに アイスクリーム！" },
+        { "en": "Oh no! The parfait falls down. \"Let's share it!\"", "ja": "あっ！ パフェが たおれた。「みんなで わけよう！」" }
+      ],
+      "words": [
+        { "en": "cream", "ja": "クリーム" },
+        { "en": "everything", "ja": "ぜんぶ" },
+        { "en": "tall", "ja": "たかい" }
+      ],
+      "questions": [
+        { "q": "Who opens the shop?", "qJa": "おみせを ひらいたのは だれ？", "choices": ["Haru and Birimo", "Riko and Kiko", "Ms. Emma"], "answer": 1 },
+        { "q": "What does Haru want?", "qJa": "ハルは なにが ほしい？", "choices": ["strawberries and cream", "grapes and cookies", "everything"], "answer": 0 },
+        { "q": "What happens to the tall parfait?", "qJa": "たかい パフェは どうなった？", "choices": ["Birimo eats it alone.", "It goes in a box.", "It falls down."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-16",
+      "stage": 1,
+      "level": "A1",
+      "unlockLesson": 195,
+      "emoji": "🎂",
+      "title": "A Birthday Present",
+      "titleJa": "たんじょうびの プレゼント",
+      "lines": [
+        { "en": "Riko's birthday is in July.", "ja": "リコの たんじょうびは 7がつです。" },
+        { "en": "Haru wants to give her a present.", "ja": "ハルは リコに プレゼントを あげたいと おもっています。" },
+        { "en": "\"What can Riko do?\" he thinks.", "ja": "「リコは なにが できるかな？」と かんがえます。" },
+        { "en": "\"She can swim well. She can play the piano. She can draw cute animals.\"", "ja": "「およぐのが じょうず。ピアノが ひける。かわいい どうぶつの えが かける。」" },
+        { "en": "Haru buys colored pencils.", "ja": "ハルは いろえんぴつを かいます。" },
+        { "en": "\"Happy birthday, Riko! This is for you.\"", "ja": "「おたんじょうび おめでとう、リコ！ これ、どうぞ。」" },
+        { "en": "\"Wow, thank you! I love it!\"", "ja": "「わあ、ありがとう！ すごく うれしい！」" },
+        { "en": "Riko draws a picture of Haru with the new pencils.", "ja": "リコは あたらしい えんぴつで ハルの えを かきます。" }
+      ],
+      "words": [
+        { "en": "present", "ja": "プレゼント" },
+        { "en": "colored pencils", "ja": "いろえんぴつ" },
+        { "en": "well", "ja": "じょうずに" }
+      ],
+      "questions": [
+        { "q": "When is Riko's birthday?", "qJa": "リコの たんじょうびは いつ？", "choices": ["in June", "in July", "in August"], "answer": 1 },
+        { "q": "What does Haru buy?", "qJa": "ハルは なにを かった？", "choices": ["colored pencils", "a piano", "a swimsuit"], "answer": 0 },
+        { "q": "What does Riko draw?", "qJa": "リコは なにを かいた？", "choices": ["a cute cat", "a cake", "a picture of Haru"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-17",
+      "stage": 1,
+      "level": "A1",
+      "unlockLesson": 220,
+      "emoji": "🗺️",
+      "title": "Excuse Me, Where Is the Station?",
+      "titleJa": "すみません、えきは どこですか？",
+      "lines": [
+        { "en": "A traveler has a big bag and a map.", "ja": "りょこうしゃが おおきな かばんと ちずを もっています。" },
+        { "en": "\"Excuse me. Where is the station?\"", "ja": "「すみません。えきは どこですか？」" },
+        { "en": "Kiko smiles. \"Go straight. Turn left at the bakery.\"", "ja": "キコは にっこり。「まっすぐ いって。パンやさんで ひだりに まがってね。」" },
+        { "en": "\"The station is on your right.\"", "ja": "「えきは みぎがわに あるよ。」" },
+        { "en": "\"Thank you very much!\"", "ja": "「どうも ありがとう！」" },
+        { "en": "But the traveler turns right at the bakery.", "ja": "でも りょこうしゃは パンやさんで みぎに まがって しまいました。" },
+        { "en": "\"Wait! Left, not right!\" Kiko runs after him.", "ja": "「まって！ みぎじゃなくて ひだり！」 キコが おいかけます。" },
+        { "en": "They walk to the station together. \"You are very kind.\"", "ja": "ふたりは いっしょに えきまで あるきます。「きみは とても やさしいね。」" }
+      ],
+      "words": [
+        { "en": "traveler", "ja": "りょこうしゃ" },
+        { "en": "straight", "ja": "まっすぐ" },
+        { "en": "turn left", "ja": "ひだりに まがる" }
+      ],
+      "questions": [
+        { "q": "Where does the traveler want to go?", "qJa": "りょこうしゃは どこへ いきたい？", "choices": ["the bakery", "the park", "the station"], "answer": 2 },
+        { "q": "Where should he turn left?", "qJa": "どこで ひだりに まがる？", "choices": ["at the bakery", "at the school", "at the station"], "answer": 0 },
+        { "q": "What does Kiko do at the end?", "qJa": "さいごに キコは なにを した？", "choices": ["She goes home.", "She walks with him.", "She buys bread."], "answer": 1 }
+      ]
+    },
+    {
+      "id": "s1-18",
+      "stage": 1,
+      "level": "A1",
+      "unlockLesson": 255,
+      "emoji": "🏖️",
+      "title": "My Summer Vacation",
+      "titleJa": "わたしの なつやすみ",
+      "lines": [
+        { "en": "This is Riko's summer story.", "ja": "これは リコの なつの おはなしです。" },
+        { "en": "\"I went to my grandma's house by the sea.\"", "ja": "「うみの ちかくの おばあちゃんの いえに いったよ。」" },
+        { "en": "\"I swam in the sea every morning.\"", "ja": "「まいあさ うみで およいだよ。」" },
+        { "en": "\"I saw a big crab on the beach.\"", "ja": "「はまべで おおきな かにを みたよ。」" },
+        { "en": "\"I ate watermelon with my cousins.\"", "ja": "「いとこたちと すいかを たべたよ。」" },
+        { "en": "\"At night, we watched fireworks. They were beautiful.\"", "ja": "「よるは はなびを みたよ。きれいだった。」" },
+        { "en": "\"It was a lot of fun.\"", "ja": "「すごく たのしかった。」" },
+        { "en": "\"How was your summer?\"", "ja": "「あなたの なつは どうだった？」" }
+      ],
+      "words": [
+        { "en": "went", "ja": "いった（go の かこ）" },
+        { "en": "crab", "ja": "かに" },
+        { "en": "fireworks", "ja": "はなび" }
+      ],
+      "questions": [
+        { "q": "Where did Riko go?", "qJa": "リコは どこへ いった？", "choices": ["to the mountains", "to her grandma's house", "to a big city"], "answer": 1 },
+        { "q": "What did she see on the beach?", "qJa": "はまべで なにを みた？", "choices": ["a big crab", "a dolphin", "a turtle"], "answer": 0 },
+        { "q": "What did they watch at night?", "qJa": "よるに なにを みた？", "choices": ["a movie", "the stars", "fireworks"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-19",
+      "stage": 1,
+      "level": "A1",
+      "unlockLesson": 285,
+      "emoji": "🐢",
+      "title": "Save the Sea Turtle",
+      "titleJa": "ウミガメを たすけよう",
+      "lines": [
+        { "en": "Haru and Kiko walk on the beach.", "ja": "ハルと キコが はまべを あるいています。" },
+        { "en": "They find a sea turtle. It can't move.", "ja": "ウミガメを みつけました。うごけません。" },
+        { "en": "There is a plastic bag around its leg.", "ja": "あしに ビニールぶくろが からまっています。" },
+        { "en": "Kiko takes the bag off slowly.", "ja": "キコは そっと ふくろを はずします。" },
+        { "en": "The turtle walks back to the sea.", "ja": "ウミガメは うみへ あるいて もどっていきます。" },
+        { "en": "\"Sea turtles eat jellyfish. Plastic bags look like jellyfish,\" says Haru.", "ja": "「ウミガメは クラゲを たべるんだ。ビニールぶくろは クラゲに にてるんだよ」と ハル。" },
+        { "en": "\"What can we do?\" asks Kiko.", "ja": "「わたしたちに なにが できる？」と キコ。" },
+        { "en": "\"We can pick up trash. We can use our own bags.\"", "ja": "「ごみを ひろえる。じぶんの バッグを つかえる。」" },
+        { "en": "That day, they picked up trash on the beach.", "ja": "その日、ふたりは はまべの ごみを ひろいました。" }
+      ],
+      "words": [
+        { "en": "turtle", "ja": "カメ" },
+        { "en": "plastic bag", "ja": "ビニールぶくろ" },
+        { "en": "trash", "ja": "ごみ" }
+      ],
+      "questions": [
+        { "q": "What was around the turtle's leg?", "qJa": "ウミガメの あしに なにが からまっていた？", "choices": ["a rope", "a plastic bag", "a net"], "answer": 1 },
+        { "q": "What do sea turtles eat?", "qJa": "ウミガメは なにを たべる？", "choices": ["jellyfish", "rice", "bananas"], "answer": 0 },
+        { "q": "What did Haru and Kiko do that day?", "qJa": "その日 ふたりは なにを した？", "choices": ["They swam.", "They went fishing.", "They picked up trash."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s1-20",
+      "stage": 1,
+      "level": "A1",
+      "unlockLesson": 325,
+      "emoji": "🌟",
+      "title": "My Dream",
+      "titleJa": "わたしの ゆめ",
+      "lines": [
+        { "en": "Ms. Emma asks, \"What do you want to be?\"", "ja": "エマ先生が ききます。「しょうらい なにに なりたい？」" },
+        { "en": "Haru says, \"I want to be a pilot. I want to fly around the world.\"", "ja": "ハル「パイロットに なりたい。せかいじゅうを とびたいんだ。」" },
+        { "en": "Riko says, \"I want to be a vet, because I love animals.\"", "ja": "リコ「じゅういに なりたい。どうぶつが だいすきだから。」" },
+        { "en": "Kiko says, \"I want to be a writer. I like making stories.\"", "ja": "キコ「さっかに なりたい。おはなしを つくるのが すきなの。」" },
+        { "en": "Birimo thinks and thinks.", "ja": "ビリモは かんがえて かんがえます。" },
+        { "en": "\"I want to be... a teacher like Ms. Emma!\"", "ja": "「ぼくは……エマ先生みたいな せんせいに なりたい！」" },
+        { "en": "Ms. Emma smiles. \"Why?\"", "ja": "エマ先生は にっこり。「どうして？」" },
+        { "en": "\"Because English is fun, and I want to share it!\"", "ja": "「えいごは たのしいから、みんなに つたえたいんだ！」" }
+      ],
+      "words": [
+        { "en": "pilot", "ja": "パイロット" },
+        { "en": "vet", "ja": "じゅうい" },
+        { "en": "because", "ja": "〜だから" }
+      ],
+      "questions": [
+        { "q": "What does Haru want to be?", "qJa": "ハルは なにに なりたい？", "choices": ["a vet", "a pilot", "a writer"], "answer": 1 },
+        { "q": "Why does Riko want to be a vet?", "qJa": "リコは どうして じゅういに なりたい？", "choices": ["She loves animals.", "She likes flying.", "She likes stories."], "answer": 0 },
+        { "q": "What does Birimo want to be?", "qJa": "ビリモは なにに なりたい？", "choices": ["a pilot", "a writer", "a teacher"], "answer": 2 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+{
+  "note": "えいごの としょかん：ステージ2（A1+ → A2）の 段階別の おはなし。すべて オリジナル。索引は npm run library:index で つくりなおす",
+  "stage": 2,
+  "stories": [
+    {
+      "id": "s2-01",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 360,
+      "emoji": "🗼",
+      "title": "The Lighthouse Keeper",
+      "titleJa": "とうだいもり",
+      "lines": [
+        { "en": "Mr. Mori lives in a lighthouse by the port.", "ja": "モリさんは みなとの そばの とうだいに すんでいます。" },
+        { "en": "He gets up at five every morning.", "ja": "まいあさ 5じに おきます。" },
+        { "en": "He cleans the big light and checks the weather.", "ja": "おおきな ライトを みがいて、てんきを しらべます。" },
+        { "en": "In the afternoon, he usually fishes from the rocks.", "ja": "ごごは たいてい いわの うえから つりを します。" },
+        { "en": "At night, he always turns on the light.", "ja": "よるは かならず ライトを つけます。" },
+        { "en": "The light helps the ships, so they don't hit the rocks.", "ja": "ライトの おかげで、ふねは いわに ぶつかりません。" },
+        { "en": "One stormy night, a small boat comes close to the rocks.", "ja": "ある あらしの よる、ちいさな ボートが いわに ちかづいて きます。" },
+        { "en": "Mr. Mori waves a lamp and shouts, \"This way!\"", "ja": "モリさんは ランプを ふって さけびます。「こっちだ！」" },
+        { "en": "The boat turns and arrives at the port safely.", "ja": "ボートは むきを かえて、ぶじに みなとに つきます。" },
+        { "en": "Mr. Mori smiles and makes a cup of hot tea.", "ja": "モリさんは にっこりして、あつい おちゃを いれます。" }
+      ],
+      "words": [
+        { "en": "lighthouse", "ja": "とうだい" },
+        { "en": "usually", "ja": "たいてい" },
+        { "en": "safely", "ja": "ぶじに" }
+      ],
+      "questions": [
+        { "q": "What time does Mr. Mori get up?", "qJa": "モリさんは なんじに おきる？", "choices": ["at five", "at seven", "at nine"], "answer": 0 },
+        { "q": "What does he usually do in the afternoon?", "qJa": "ごごは たいてい なにを する？", "choices": ["He sleeps.", "He fishes.", "He cooks."], "answer": 1 },
+        { "q": "Why is the light important?", "qJa": "ライトは どうして たいせつ？", "choices": ["It makes the town pretty.", "It helps him read.", "Ships don't hit the rocks."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-02",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 370,
+      "emoji": "🐟",
+      "title": "Does Birimo Like Fish?",
+      "titleJa": "ビリモは さかなが すき？",
+      "lines": [
+        { "en": "Riko is cooking dinner for Birimo.", "ja": "リコは ビリモの ために ばんごはんを つくっています。" },
+        { "en": "\"Does Birimo like fish?\" she asks Haru.", "ja": "「ビリモは さかなが すき？」と ハルに ききます。" },
+        { "en": "\"No, he doesn't. He doesn't like fish bones.\"", "ja": "「ううん、すきじゃないよ。さかなの ほねが にがてなんだ。」" },
+        { "en": "\"Does he like carrots?\"", "ja": "「にんじんは すき？」" },
+        { "en": "\"Yes, he does! He eats carrots every day.\"", "ja": "「うん、すきだよ！ まいにち にんじんを たべるよ。」" },
+        { "en": "\"Does he like spicy food?\"", "ja": "「からい たべものは すき？」" },
+        { "en": "\"I don't know. Let's ask him.\"", "ja": "「わからないな。きいてみよう。」" },
+        { "en": "Birimo tastes the curry. His face turns red.", "ja": "ビリモが カレーを あじみします。かおが まっかに なります。" },
+        { "en": "\"Biri-biri! It's hot! But it's good!\"", "ja": "「ビリビリ！ からい！ でも おいしい！」" },
+        { "en": "Now they know. Birimo likes spicy curry with carrots.", "ja": "これで わかりました。ビリモは にんじん入りの からい カレーが すきなのです。" }
+      ],
+      "words": [
+        { "en": "bone", "ja": "ほね" },
+        { "en": "spicy", "ja": "からい" },
+        { "en": "taste", "ja": "あじみする" }
+      ],
+      "questions": [
+        { "q": "Why doesn't Birimo like fish?", "qJa": "ビリモは どうして さかなが すきじゃない？", "choices": ["It smells.", "He doesn't like the bones.", "It is too big."], "answer": 1 },
+        { "q": "How often does he eat carrots?", "qJa": "にんじんを どのくらい たべる？", "choices": ["every day", "on Sundays", "never"], "answer": 0 },
+        { "q": "What does Birimo think of the curry?", "qJa": "ビリモは カレーを どう おもった？", "choices": ["It's too cold.", "It's bad.", "It's hot but good."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-03",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 382,
+      "emoji": "👩‍🍳",
+      "title": "Job Day",
+      "titleJa": "おしごと たいけんの ひ",
+      "lines": [
+        { "en": "Today is Job Day at the port town.", "ja": "きょうは みなとまちの おしごと たいけんの ひ です。" },
+        { "en": "Kiko helps a baker. The baker makes bread before sunrise.", "ja": "キコは パンやさんを てつだいます。パンやさんは ひので まえに パンを つくります。" },
+        { "en": "Haru helps a bus driver. She drives the same road ten times a day.", "ja": "ハルは バスの うんてんしゅを てつだいます。うんてんしゅは 1日に 10かい おなじ みちを はしります。" },
+        { "en": "Riko helps a nurse. He checks sick children and gives them medicine.", "ja": "リコは かんごしを てつだいます。かんごしは びょうきの こどもを みて、くすりを わたします。" },
+        { "en": "Birimo helps a fisherman. But Birimo falls into the water!", "ja": "ビリモは りょうしを てつだいます。でも ビリモは みずに おちて しまいます！" },
+        { "en": "In the evening, they talk about their day.", "ja": "ゆうがた、みんなで その日の ことを はなします。" },
+        { "en": "\"Every job is hard work,\" says Kiko.", "ja": "「どの しごとも たいへんだね」と キコ。" },
+        { "en": "\"And every job helps people,\" says Riko.", "ja": "「それに、どの しごとも ひとの やくに たってるね」と リコ。" },
+        { "en": "Birimo sneezes. \"Achoo! I need a nurse now!\"", "ja": "ビリモが くしゃみ。「ハクション！ いま かんごしさんが ひつよう！」" }
+      ],
+      "words": [
+        { "en": "baker", "ja": "パンやさん" },
+        { "en": "nurse", "ja": "かんごし" },
+        { "en": "medicine", "ja": "くすり" }
+      ],
+      "questions": [
+        { "q": "When does the baker make bread?", "qJa": "パンやさんは いつ パンを つくる？", "choices": ["before sunrise", "at noon", "at night"], "answer": 0 },
+        { "q": "Who does Riko help?", "qJa": "リコは だれを てつだう？", "choices": ["a bus driver", "a nurse", "a baker"], "answer": 1 },
+        { "q": "What happens to Birimo?", "qJa": "ビリモは どうなった？", "choices": ["He drives a bus.", "He makes bread.", "He falls into the water."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-04",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 392,
+      "emoji": "🍲",
+      "title": "Stone Soup at the Market",
+      "titleJa": "いちばの いしの スープ",
+      "lines": [
+        { "en": "Birimo puts a big pot in the middle of the market.", "ja": "ビリモは いちばの まんなかに おおきな なべを おきます。" },
+        { "en": "He puts a clean stone in the water.", "ja": "きれいな いしを みずに いれます。" },
+        { "en": "\"What are you making?\" asks a farmer.", "ja": "「なにを つくっているの？」と のうかの ひと。" },
+        { "en": "\"Stone soup! But I don't have any vegetables.\"", "ja": "「いしの スープ！ でも やさいが ぜんぜん ないんだ。」" },
+        { "en": "\"I have some onions. Here you are.\"", "ja": "「たまねぎなら すこし あるよ。はい、どうぞ。」" },
+        { "en": "A fish seller says, \"Can I add some fish?\"", "ja": "さかなやさんが「さかなを すこし いれても いい？」" },
+        { "en": "Riko brings some potatoes, and Haru brings some salt.", "ja": "リコは じゃがいもを すこし、ハルは しおを もってきます。" },
+        { "en": "Soon the soup smells wonderful.", "ja": "すぐに スープは すばらしい においに なります。" },
+        { "en": "\"Can I have a bowl, please?\" everyone asks.", "ja": "「ひとつ もらえますか？」と みんなが ききます。" },
+        { "en": "Birimo takes out the stone and laughs. \"The secret is sharing!\"", "ja": "ビリモは いしを とりだして わらいます。「ひみつは わけあう ことなんだ！」" }
+      ],
+      "words": [
+        { "en": "pot", "ja": "なべ" },
+        { "en": "some / any", "ja": "いくつか / ひとつも（ない）" },
+        { "en": "secret", "ja": "ひみつ" }
+      ],
+      "questions": [
+        { "q": "What does Birimo put in the water first?", "qJa": "ビリモが さいしょに みずに いれたのは？", "choices": ["a stone", "an onion", "a fish"], "answer": 0 },
+        { "q": "What does Riko bring?", "qJa": "リコは なにを もってきた？", "choices": ["salt", "potatoes", "onions"], "answer": 1 },
+        { "q": "What is the secret of the soup?", "qJa": "スープの ひみつは？", "choices": ["the stone", "the big pot", "sharing"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-05",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 405,
+      "emoji": "🥮",
+      "title": "How Much Is It?",
+      "titleJa": "いくらですか？",
+      "lines": [
+        { "en": "Kiko wants to buy a present for Ms. Emma.", "ja": "キコは エマ先生に プレゼントを かいたいと おもっています。" },
+        { "en": "She has five hundred yen.", "ja": "500えん もっています。" },
+        { "en": "\"How much is this scarf?\" \"It's one thousand two hundred yen.\"", "ja": "「この マフラーは いくらですか？」「1200えんです。」" },
+        { "en": "\"Oh, that's too much for me.\"", "ja": "「わあ、わたしには たかすぎます。」" },
+        { "en": "\"How much are these flowers?\" \"They're six hundred yen.\"", "ja": "「この おはなは いくらですか？」「600えんです。」" },
+        { "en": "Kiko counts her coins again. It's still five hundred yen.", "ja": "キコは もういちど おかねを かぞえます。やっぱり 500えん。" },
+        { "en": "The flower seller smiles. \"How many flowers do you need?\"", "ja": "おはなやさんが にっこり。「おはなは なんぼん いるの？」" },
+        { "en": "\"Just one, please. It's for my teacher.\"", "ja": "「1ぽんだけ ください。せんせいへの プレゼントなんです。」" },
+        { "en": "\"One flower is one hundred yen. And this ribbon is free!\"", "ja": "「1ぽん 100えんよ。それに この リボンは ただよ！」" },
+        { "en": "Ms. Emma loves her flower. She keeps it on her desk.", "ja": "エマ先生は その おはなが とても きにいって、つくえに かざります。" }
+      ],
+      "words": [
+        { "en": "thousand", "ja": "1000（せん）" },
+        { "en": "too much", "ja": "たかすぎる" },
+        { "en": "free", "ja": "ただ・むりょう" }
+      ],
+      "questions": [
+        { "q": "How much money does Kiko have?", "qJa": "キコは いくら もっている？", "choices": ["100 yen", "500 yen", "1,200 yen"], "answer": 1 },
+        { "q": "How much is the scarf?", "qJa": "マフラーは いくら？", "choices": ["1,200 yen", "600 yen", "100 yen"], "answer": 0 },
+        { "q": "What does Kiko buy?", "qJa": "キコは なにを かった？", "choices": ["a scarf", "a ribbon only", "one flower"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-06",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 418,
+      "emoji": "🪁",
+      "title": "Look! It's Flying!",
+      "titleJa": "みて！ とんでいるよ！",
+      "lines": [
+        { "en": "It's a windy day on the meadow.", "ja": "そうげんは かぜの つよい ひ です。" },
+        { "en": "Haru is holding a big kite.", "ja": "ハルは おおきな たこを もっています。" },
+        { "en": "Riko is running with the string.", "ja": "リコは いとを もって はしっています。" },
+        { "en": "\"Look! It's flying!\" shouts Kiko.", "ja": "「みて！ とんでいるよ！」と キコが さけびます。" },
+        { "en": "The kite is dancing in the sky.", "ja": "たこは そらで おどっています。" },
+        { "en": "Some birds are flying next to it.", "ja": "とりが なんわか となりを とんでいます。" },
+        { "en": "Wait. What is Birimo doing?", "ja": "まって。ビリモは なにを しているの？" },
+        { "en": "He is holding the tail of the kite. He is going up, too!", "ja": "たこの しっぽに つかまっています。ビリモも あがっていきます！" },
+        { "en": "\"Help! I'm flying!\" \"Hold on, Birimo!\"", "ja": "「たすけて！ とんでる！」「しっかり つかまって、ビリモ！」" },
+        { "en": "Slowly, the wind stops, and Birimo lands on the soft grass.", "ja": "ゆっくりと かぜが やんで、ビリモは やわらかい くさの うえに おります。" },
+        { "en": "\"That was scary... but can I do it again?\"", "ja": "「こわかった……でも もう いっかい やっても いい？」" }
+      ],
+      "words": [
+        { "en": "kite", "ja": "たこ" },
+        { "en": "string", "ja": "いと" },
+        { "en": "land", "ja": "ちゃくちする" }
+      ],
+      "questions": [
+        { "q": "Who is running with the string?", "qJa": "いとを もって はしっているのは だれ？", "choices": ["Haru", "Kiko", "Riko"], "answer": 2 },
+        { "q": "What is Birimo holding?", "qJa": "ビリモは なにに つかまっている？", "choices": ["the tail of the kite", "a bird", "Haru's hand"], "answer": 0 },
+        { "q": "How does Birimo feel at the end?", "qJa": "さいごに ビリモは どう おもっている？", "choices": ["He never wants to fly again.", "It was scary, but he wants to do it again.", "He is angry."], "answer": 1 }
+      ]
+    },
+    {
+      "id": "s2-07",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 430,
+      "emoji": "🙈",
+      "title": "Hide-and-Seek",
+      "titleJa": "かくれんぼ",
+      "lines": [
+        { "en": "Kiko is counting. \"...eight, nine, ten! Ready or not, here I come!\"", "ja": "キコが かぞえています。「……8、9、10！ もう いいかい、さがしに いくよ！」" },
+        { "en": "Riko is hiding behind a big tree.", "ja": "リコは おおきな きの うしろに かくれています。" },
+        { "en": "Haru is lying between two rocks.", "ja": "ハルは ふたつの いわの あいだに ねそべっています。" },
+        { "en": "Birimo is hiding in a flower bed. But his yellow ears are standing up.", "ja": "ビリモは かだんの なかに かくれています。でも きいろい みみが たっています。" },
+        { "en": "\"I see two yellow ears next to the red flowers!\"", "ja": "「あかい おはなの となりに きいろい みみが ふたつ みえる！」" },
+        { "en": "\"Found you, Birimo!\"", "ja": "「みーつけた、ビリモ！」" },
+        { "en": "Then Kiko hears a sneeze from behind the tree.", "ja": "つぎに キコは きの うしろから くしゃみを ききます。" },
+        { "en": "\"Found you, Riko!\"", "ja": "「みーつけた、リコ！」" },
+        { "en": "But where is Haru? They look and look.", "ja": "でも ハルは どこ？ みんなで さがして さがします。" },
+        { "en": "Haru is sleeping between the rocks. He is snoring!", "ja": "ハルは いわの あいだで ねむっていました。いびきを かいています！" }
+      ],
+      "words": [
+        { "en": "behind", "ja": "〜の うしろに" },
+        { "en": "between", "ja": "〜の あいだに" },
+        { "en": "snore", "ja": "いびきを かく" }
+      ],
+      "questions": [
+        { "q": "Where is Riko hiding?", "qJa": "リコは どこに かくれている？", "choices": ["between two rocks", "behind a big tree", "in a flower bed"], "answer": 1 },
+        { "q": "How does Kiko find Birimo?", "qJa": "キコは どうやって ビリモを みつけた？", "choices": ["She sees his yellow ears.", "She hears a sneeze.", "He calls her."], "answer": 0 },
+        { "q": "What is Haru doing at the end?", "qJa": "さいごに ハルは なにを している？", "choices": ["He is counting.", "He is running.", "He is sleeping."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-08",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 450,
+      "emoji": "🧭",
+      "title": "The Lost Map",
+      "titleJa": "なくした ちず",
+      "lines": [
+        { "en": "\"Where is our map?\" Haru looked in his bag. It wasn't there.", "ja": "「ぼくたちの ちずは どこ？」 ハルは かばんを みました。ありませんでした。" },
+        { "en": "\"Did you have it at the ruins?\" asked Riko.", "ja": "「いせきでは もってた？」と リコが ききました。" },
+        { "en": "\"Yes, I did. I opened it by the old gate.\"", "ja": "「うん、もってたよ。ふるい もんの そばで ひらいたんだ。」" },
+        { "en": "\"What did you do after that?\"", "ja": "「その あと なにを したの？」" },
+        { "en": "\"I ate lunch on a big stone. Then I washed my hands at the spring.\"", "ja": "「おおきな いしの うえで おひるを たべた。それから いずみで てを あらったよ。」" },
+        { "en": "They went back to the old gate. The map wasn't there.", "ja": "みんなで ふるい もんに もどりました。ちずは ありませんでした。" },
+        { "en": "They went to the big stone. It wasn't there, either.", "ja": "おおきな いしに いきました。そこにも ありませんでした。" },
+        { "en": "At the spring, Kiko found a paper boat in the water.", "ja": "いずみで、キコは みずに うかぶ かみの ふねを みつけました。" },
+        { "en": "\"Birimo, did you make this boat?\" \"Yes, I did. It was a nice paper!\"", "ja": "「ビリモ、この ふね つくった？」「うん、つくったよ。いい かみ だったから！」" },
+        { "en": "They opened the wet boat carefully. It was their map!", "ja": "ぬれた ふねを そっと ひらきました。それは ぼくたちの ちずでした！" }
+      ],
+      "words": [
+        { "en": "ruins", "ja": "いせき" },
+        { "en": "spring", "ja": "いずみ" },
+        { "en": "either", "ja": "（〜も）ない" }
+      ],
+      "questions": [
+        { "q": "Where did Haru open the map?", "qJa": "ハルは どこで ちずを ひらいた？", "choices": ["by the old gate", "on the bus", "at home"], "answer": 0 },
+        { "q": "Where did Haru eat lunch?", "qJa": "ハルは どこで おひるを たべた？", "choices": ["at the spring", "on a big stone", "under a tree"], "answer": 1 },
+        { "q": "What did Birimo make with the map?", "qJa": "ビリモは ちずで なにを つくった？", "choices": ["a hat", "a plane", "a paper boat"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-09",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 460,
+      "emoji": "🦊",
+      "title": "The Stone Fox",
+      "titleJa": "いしの きつね",
+      "lines": [
+        { "en": "Once upon a time, there was a stone fox in front of an old temple.", "ja": "むかしむかし、ふるい おてらの まえに いしの きつねが いました。" },
+        { "en": "Every day, children walked past it. Nobody looked at it.", "ja": "まいにち こどもたちが そばを とおりました。だれも みませんでした。" },
+        { "en": "The fox was very lonely.", "ja": "きつねは とても さびしかったのです。" },
+        { "en": "One snowy day, a little girl stopped.", "ja": "ある ゆきの ひ、ちいさな おんなのこが たちどまりました。" },
+        { "en": "First, she brushed the snow off the fox's head.", "ja": "まず、きつねの あたまの ゆきを はらいました。" },
+        { "en": "Then, she put her red scarf around its neck.", "ja": "つぎに、あかい マフラーを くびに まきました。" },
+        { "en": "After that, she said, \"Now you're warm.\"", "ja": "それから「これで あったかいね」と いいました。" },
+        { "en": "That night, the girl's family lost their way in the snow.", "ja": "その よる、おんなのこの かぞくは ゆきの なかで みちに まよいました。" },
+        { "en": "Suddenly, they saw a red light. It was the scarf! The fox was walking in front of them.", "ja": "とつぜん、あかい ひかりが みえました。あの マフラーです！ きつねが まえを あるいていました。" },
+        { "en": "Finally, they arrived home safely. The next morning, the stone fox was smiling.", "ja": "さいごに、かぞくは ぶじに いえに つきました。つぎの あさ、いしの きつねは ほほえんでいました。" }
+      ],
+      "words": [
+        { "en": "once upon a time", "ja": "むかしむかし" },
+        { "en": "lonely", "ja": "さびしい" },
+        { "en": "suddenly", "ja": "とつぜん" }
+      ],
+      "questions": [
+        { "q": "How did the fox feel at first?", "qJa": "さいしょ、きつねは どんな きもち だった？", "choices": ["lonely", "angry", "sleepy"], "answer": 0 },
+        { "q": "What did the girl put around the fox's neck?", "qJa": "おんなのこは きつねの くびに なにを まいた？", "choices": ["a ribbon", "her red scarf", "a flower"], "answer": 1 },
+        { "q": "How did the fox help the family?", "qJa": "きつねは どうやって かぞくを たすけた？", "choices": ["It brought food.", "It made a fire.", "It walked in front of them with the red scarf."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-10",
+      "stage": 2,
+      "level": "A1+",
+      "unlockLesson": 472,
+      "emoji": "📔",
+      "title": "Riko's Diary",
+      "titleJa": "リコの にっき",
+      "lines": [
+        { "en": "Saturday, October 12th. Cloudy, then sunny.", "ja": "10がつ 12にち どようび。くもり のち はれ。" },
+        { "en": "Today we had a sports day at the ruins.", "ja": "きょうは いせきで うんどうかいが ありました。" },
+        { "en": "In the morning, I was nervous. My hands were cold.", "ja": "あさは きんちょうしていました。てが つめたかったです。" },
+        { "en": "I ran in the relay with Haru, Kiko, and Birimo.", "ja": "ハル、キコ、ビリモと リレーを はしりました。" },
+        { "en": "Birimo was very fast, but he ran the wrong way!", "ja": "ビリモは とても はやかったけど、ぎゃくの ほうへ はしって しまいました！" },
+        { "en": "We were in last place. Birimo looked sad.", "ja": "わたしたちは ビリでした。ビリモは かなしそうでした。" },
+        { "en": "I said, \"Don't worry. We had fun together.\"", "ja": "わたしは「きにしないで。みんなで たのしかったよ」と いいました。" },
+        { "en": "Then we all laughed, and Birimo laughed the loudest.", "ja": "それから みんなで わらいました。ビリモが いちばん おおきな こえで わらいました。" },
+        { "en": "I was tired, but I was happy. It was a great day.", "ja": "つかれたけど、しあわせでした。すてきな 1日でした。" }
+      ],
+      "words": [
+        { "en": "diary", "ja": "にっき" },
+        { "en": "nervous", "ja": "きんちょうした" },
+        { "en": "relay", "ja": "リレー" }
+      ],
+      "questions": [
+        { "q": "How did Riko feel in the morning?", "qJa": "あさ、リコは どんな きもち だった？", "choices": ["nervous", "sleepy", "angry"], "answer": 0 },
+        { "q": "What did Birimo do in the relay?", "qJa": "ビリモは リレーで なにを した？", "choices": ["He fell down.", "He ran the wrong way.", "He didn't run."], "answer": 1 },
+        { "q": "How was the day for Riko?", "qJa": "リコに とって どんな 1日 だった？", "choices": ["boring", "terrible", "great"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-11",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 482,
+      "emoji": "🌠",
+      "title": "The Shooting Star Night",
+      "titleJa": "ながれぼしの よる",
+      "lines": [
+        { "en": "\"There's going to be a meteor shower tonight,\" says Ms. Emma.", "ja": "「こんや りゅうせいぐんが あるのよ」と エマ先生。" },
+        { "en": "\"What are you going to do?\" Haru asks his friends.", "ja": "「みんなは どうするの？」と ハルが ききます。" },
+        { "en": "\"I'm going to take pictures,\" says Riko.", "ja": "「わたしは しゃしんを とるつもり」と リコ。" },
+        { "en": "\"I'm going to count the stars,\" says Kiko.", "ja": "「わたしは ほしを かぞえるつもり」と キコ。" },
+        { "en": "\"I'm going to make a wish,\" says Birimo.", "ja": "「ぼくは ねがいごとを するんだ」と ビリモ。" },
+        { "en": "At ten o'clock, they lie on blankets on the roof of the observatory.", "ja": "10じ、みんなは てんもんだいの やねで もうふの うえに ねころびます。" },
+        { "en": "The first star falls. Then another and another!", "ja": "ひとつめの ほしが ながれます。また ひとつ、また ひとつ！" },
+        { "en": "Kiko counts thirty-two stars. Riko takes fifty pictures.", "ja": "キコは 32こ かぞえます。リコは しゃしんを 50まい とります。" },
+        { "en": "\"What is your wish, Birimo?\"", "ja": "「ビリモの ねがいごとは なに？」" },
+        { "en": "\"I'm not going to tell you. It's a secret!\" But he looks at his friends and smiles.", "ja": "「いわないよ。ひみつ！」 でも ビリモは ともだちを みて にっこりします。" }
+      ],
+      "words": [
+        { "en": "meteor shower", "ja": "りゅうせいぐん" },
+        { "en": "wish", "ja": "ねがいごと" },
+        { "en": "observatory", "ja": "てんもんだい" }
+      ],
+      "questions": [
+        { "q": "What is Riko going to do?", "qJa": "リコは なにを するつもり？", "choices": ["count the stars", "take pictures", "make a wish"], "answer": 1 },
+        { "q": "How many stars does Kiko count?", "qJa": "キコは ほしを いくつ かぞえた？", "choices": ["thirty-two", "fifty", "twelve"], "answer": 0 },
+        { "q": "Does Birimo tell his wish?", "qJa": "ビリモは ねがいごとを おしえた？", "choices": ["Yes. He wants a cake.", "Yes. He wants to fly.", "No. It's a secret."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-12",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 492,
+      "emoji": "🌦️",
+      "title": "Will It Rain Tomorrow?",
+      "titleJa": "あしたは あめ かな？",
+      "lines": [
+        { "en": "Tomorrow is the class picnic. Everyone is worried about the weather.", "ja": "あしたは クラスの ピクニック。みんな てんきが しんぱいです。" },
+        { "en": "\"Will it rain tomorrow?\" asks Kiko.", "ja": "「あした あめが ふるかな？」と キコ。" },
+        { "en": "Haru looks at the sky. \"The clouds are dark. I think it will rain.\"", "ja": "ハルは そらを みます。「くもが くらいね。ふると おもう。」" },
+        { "en": "Riko checks the weather app. \"It says it will be cloudy in the morning and sunny in the afternoon.\"", "ja": "リコは てんきの アプリを みます。「ごぜんは くもり、ごごは はれ だって。」" },
+        { "en": "Birimo makes a paper doll for good weather and hangs it by the window.", "ja": "ビリモは はれを ねがう かみの にんぎょうを つくって、まどに つるします。" },
+        { "en": "\"Don't worry. I'll bring umbrellas for everyone, just in case,\" says Ms. Emma.", "ja": "「しんぱい しないで。ねんの ため、みんなの かさを もっていくわね」と エマ先生。" },
+        { "en": "The next morning, it is cloudy and a little cold.", "ja": "つぎの あさ、くもりで すこし さむいです。" },
+        { "en": "At noon, the sun comes out!", "ja": "おひるに、おひさまが でてきます！" },
+        { "en": "\"It won't rain today!\" Birimo dances. \"My doll worked!\"", "ja": "「きょうは あめ ふらないね！」 ビリモが おどります。「ぼくの にんぎょうの おかげだ！」" },
+        { "en": "Riko smiles. \"Maybe the app was right, too.\"", "ja": "リコは にっこり。「アプリも あたってたかもね。」" }
+      ],
+      "words": [
+        { "en": "worried", "ja": "しんぱいして" },
+        { "en": "just in case", "ja": "ねんの ため" },
+        { "en": "won't", "ja": "〜しないだろう（will not）" }
+      ],
+      "questions": [
+        { "q": "What does Haru think about tomorrow?", "qJa": "ハルは あしたの てんきを どう おもう？", "choices": ["It will rain.", "It will snow.", "It will be hot."], "answer": 0 },
+        { "q": "What will Ms. Emma bring?", "qJa": "エマ先生は なにを もっていく？", "choices": ["lunch", "umbrellas", "blankets"], "answer": 1 },
+        { "q": "What happens at noon?", "qJa": "おひるに なにが おきた？", "choices": ["It starts to rain.", "It snows.", "The sun comes out."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-13",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 505,
+      "emoji": "✉️",
+      "title": "A Letter to the Future",
+      "titleJa": "みらいへの てがみ",
+      "lines": [
+        { "en": "Dear Kiko of the future,", "ja": "みらいの キコへ" },
+        { "en": "Hello! How are you? I'm nine years old now. I'm writing this at the observatory.", "ja": "こんにちは！ げんき？ わたしは いま 9さい。てんもんだいで この てがみを かいています。" },
+        { "en": "Today I learned that the moon goes around the Earth.", "ja": "きょう、つきは ちきゅうの まわりを まわっていると ならいました。" },
+        { "en": "Someday, I will write a book about the stars.", "ja": "いつか、ほしの ほんを かくつもりです。" },
+        { "en": "Will you still like reading? I think you will.", "ja": "まだ どくしょが すき？ きっと すきだと おもう。" },
+        { "en": "Will you still be friends with Riko, Haru, and Birimo? I hope so.", "ja": "まだ リコや ハルや ビリモと ともだち？ そうだと いいな。" },
+        { "en": "I will practice English every day, so you can talk with people all over the world.", "ja": "まいにち えいごを れんしゅうするね。そうすれば あなたは せかいじゅうの ひとと はなせるから。" },
+        { "en": "Please don't forget this night. The sky was full of stars.", "ja": "この よるを わすれないでね。そらは ほしで いっぱい でした。" },
+        { "en": "From, Kiko of today", "ja": "きょうの キコより" }
+      ],
+      "words": [
+        { "en": "future", "ja": "みらい" },
+        { "en": "someday", "ja": "いつか" },
+        { "en": "practice", "ja": "れんしゅうする" }
+      ],
+      "questions": [
+        { "q": "Who is the letter for?", "qJa": "だれへの てがみ？", "choices": ["Kiko of the future", "Ms. Emma", "Riko"], "answer": 0 },
+        { "q": "What will Kiko write someday?", "qJa": "キコは いつか なにを かく？", "choices": ["a song", "a book about the stars", "a letter to the moon"], "answer": 1 },
+        { "q": "Why will Kiko practice English every day?", "qJa": "どうして まいにち えいごを れんしゅうする？", "choices": ["to read the app", "to win a game", "to talk with people all over the world"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-14",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 512,
+      "emoji": "🌲",
+      "title": "The Tallest Tree in the Valley",
+      "titleJa": "たにで いちばん たかい き",
+      "lines": [
+        { "en": "In Echo Valley, there are three old trees.", "ja": "こだまの たにには、ふるい きが 3ぼん あります。" },
+        { "en": "The pine tree is taller than the oak tree.", "ja": "まつの きは かしの きより たかいです。" },
+        { "en": "The cedar tree is the tallest of the three.", "ja": "すぎの きは 3ぼんの なかで いちばん たかいです。" },
+        { "en": "Every day, the cedar says, \"I'm the biggest and the best!\"", "ja": "まいにち すぎは いいます。「わたしが いちばん おおきくて いちばん すごい！」" },
+        { "en": "One day, a strong wind blows through the valley.", "ja": "ある日、つよい かぜが たにを ふきぬけます。" },
+        { "en": "The cedar shakes. It is too tall, and its branches start to break.", "ja": "すぎは ゆれます。たかすぎて、えだが おれはじめます。" },
+        { "en": "The little oak is shorter, but its roots are deeper and stronger.", "ja": "ちいさな かしは ひくいけど、ねっこは もっと ふかくて つよいのです。" },
+        { "en": "The oak holds the cedar's roots with its own roots.", "ja": "かしは じぶんの ねっこで すぎの ねっこを ささえます。" },
+        { "en": "After the storm, the cedar says quietly, \"Thank you. You are the strongest friend.\"", "ja": "あらしの あと、すぎは しずかに いいます。「ありがとう。きみは いちばん つよい ともだちだ。」" },
+        { "en": "Now the three trees say, \"We are better together.\"", "ja": "いまでは 3ぼんの きは いいます。「みんな いっしょなら もっと いい。」" }
+      ],
+      "words": [
+        { "en": "taller / tallest", "ja": "もっと たかい / いちばん たかい" },
+        { "en": "branch", "ja": "えだ" },
+        { "en": "root", "ja": "ね（ねっこ）" }
+      ],
+      "questions": [
+        { "q": "Which tree is the tallest?", "qJa": "いちばん たかい きは どれ？", "choices": ["the pine", "the oak", "the cedar"], "answer": 2 },
+        { "q": "What is special about the oak?", "qJa": "かしの きの すごい ところは？", "choices": ["Its roots are deeper and stronger.", "It is the tallest.", "It has red leaves."], "answer": 0 },
+        { "q": "What do the trees say at the end?", "qJa": "さいごに きたちは なんと いう？", "choices": ["I'm the best!", "We are better together.", "The wind is strong."], "answer": 1 }
+      ]
+    },
+    {
+      "id": "s2-15",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 526,
+      "emoji": "🏔️",
+      "title": "Mountains or the Sea?",
+      "titleJa": "やま？ それとも うみ？",
+      "lines": [
+        { "en": "The class is choosing a place for the school trip.", "ja": "クラスで えんそくの ばしょを えらんでいます。" },
+        { "en": "\"Which do you like better, the mountains or the sea?\" asks Ms. Emma.", "ja": "「やまと うみ、どちらが すき？」と エマ先生。" },
+        { "en": "Haru says, \"I like the mountains better, because the air is cooler.\"", "ja": "ハル「やまの ほうが すき。くうきが すずしいから。」" },
+        { "en": "Riko says, \"I like the sea better. Swimming is more exciting than hiking.\"", "ja": "リコ「うみの ほうが すき。ハイキングより およぐほうが わくわくする。」" },
+        { "en": "Kiko says, \"I think the mountains are as beautiful as the sea. But the bus ride to the sea is shorter.\"", "ja": "キコ「やまも うみと おなじくらい きれいだと おもう。でも うみまでの バスの ほうが みじかいよ。」" },
+        { "en": "\"That's a good point,\" says Haru.", "ja": "「それは いい ポイントだね」と ハル。" },
+        { "en": "Birimo raises his hand. \"Why don't we go to a mountain by the sea?\"", "ja": "ビリモが てを あげます。「うみの そばの やまに いったら どう？」" },
+        { "en": "Everyone is quiet. Then they all start talking at once.", "ja": "みんな しずかに なります。それから いっせいに はなしはじめます。" },
+        { "en": "\"That's the best idea!\" In the end, they choose a small mountain with a beach.", "ja": "「それが いちばんの アイデアだ！」 けっきょく、はまべの ある ちいさな やまに きまりました。" }
+      ],
+      "words": [
+        { "en": "better", "ja": "〜の ほうが（よい）" },
+        { "en": "exciting", "ja": "わくわくする" },
+        { "en": "point", "ja": "ポイント・いいたい こと" }
+      ],
+      "questions": [
+        { "q": "Why does Haru like the mountains better?", "qJa": "ハルは どうして やまの ほうが すき？", "choices": ["The air is cooler.", "The bus ride is shorter.", "He likes swimming."], "answer": 0 },
+        { "q": "What does Kiko say about the bus ride to the sea?", "qJa": "キコは うみまでの バスに ついて なんと いった？", "choices": ["It's longer.", "It's shorter.", "It's more exciting."], "answer": 1 },
+        { "q": "Where are they going in the end?", "qJa": "けっきょく どこに いく？", "choices": ["a big city", "only the sea", "a small mountain with a beach"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-16",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 542,
+      "emoji": "⚙️",
+      "title": "The Toy Machine",
+      "titleJa": "おもちゃの きかい",
+      "lines": [
+        { "en": "In the workshop, there is an old machine. It makes wooden toys.", "ja": "こうぼうには ふるい きかいが あります。きの おもちゃを つくる きかいです。" },
+        { "en": "\"How do you use it?\" asks Riko.", "ja": "「どうやって つかうの？」と リコ。" },
+        { "en": "Haru reads the card. \"First, put a block of wood in the top.\"", "ja": "ハルが カードを よみます。「まず、きの ブロックを うえに いれる。」" },
+        { "en": "\"Next, choose an animal and push the green button.\"", "ja": "「つぎに、どうぶつを えらんで、みどりの ボタンを おす。」" },
+        { "en": "\"Then, turn the big handle three times.\"", "ja": "「それから、おおきな ハンドルを 3かい まわす。」" },
+        { "en": "\"Finally, open the door and take out your toy.\"", "ja": "「さいごに、とびらを あけて、おもちゃを とりだす。」" },
+        { "en": "Birimo chooses a rabbit. But he turns the handle ten times!", "ja": "ビリモは うさぎを えらびます。でも ハンドルを 10かいも まわして しまいます！" },
+        { "en": "The machine shakes and beeps. Out comes a rabbit with very, very long ears.", "ja": "きかいが ゆれて、ピーピー なります。でてきたのは、とっても ながい みみの うさぎ。" },
+        { "en": "\"It didn't work,\" says Birimo sadly.", "ja": "「うまく いかなかった」と ビリモは がっかり。" },
+        { "en": "\"No, it's wonderful! It looks like you!\" says Kiko. Birimo laughs and keeps the toy.", "ja": "「ううん、すてきだよ！ ビリモに にてる！」と キコ。ビリモは わらって その おもちゃを たいせつに します。" }
+      ],
+      "words": [
+        { "en": "workshop", "ja": "こうぼう" },
+        { "en": "handle", "ja": "ハンドル・とって" },
+        { "en": "finally", "ja": "さいごに" }
+      ],
+      "questions": [
+        { "q": "What do you do first?", "qJa": "まず なにを する？", "choices": ["Push the green button.", "Put a block of wood in the top.", "Open the door."], "answer": 1 },
+        { "q": "How many times did Birimo turn the handle?", "qJa": "ビリモは ハンドルを なんかい まわした？", "choices": ["three times", "five times", "ten times"], "answer": 2 },
+        { "q": "What came out of the machine?", "qJa": "きかいから なにが でてきた？", "choices": ["a rabbit with very long ears", "a broken block", "a small dog"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "s2-17",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 550,
+      "emoji": "🎲",
+      "title": "You Have to Wait Your Turn",
+      "titleJa": "じゅんばんを まとう",
+      "lines": [
+        { "en": "The friends are playing a new board game.", "ja": "ともだちは あたらしい ボードゲームを しています。" },
+        { "en": "Kiko reads the rules. \"You have to roll the dice. You must not look at the cards.\"", "ja": "キコが ルールを よみます。「サイコロを ふらないと いけない。カードを みては いけない。」" },
+        { "en": "\"It's your turn, Haru.\" Haru rolls a six.", "ja": "「ハルの ばんだよ。」 ハルは 6を だします。" },
+        { "en": "Birimo grabs the dice. \"My turn! My turn!\"", "ja": "ビリモが サイコロを つかみます。「ぼくの ばん！ ぼくの ばん！」" },
+        { "en": "\"Wait, Birimo. It's Riko's turn. You have to wait.\"", "ja": "「まって、ビリモ。リコの ばんだよ。またないと。」" },
+        { "en": "Birimo waits, but he looks at a card.", "ja": "ビリモは まちますが、カードを みて しまいます。" },
+        { "en": "\"That's not fair! Let's check the rules,\" says Riko.", "ja": "「それは ずるいよ！ ルールを たしかめよう」と リコ。" },
+        { "en": "Birimo's ears go down. \"I'm sorry. I should follow the rules.\"", "ja": "ビリモの みみが さがります。「ごめんね。ルールを まもるべきだね。」" },
+        { "en": "\"It's okay. You don't have to be sad. Let's start again.\"", "ja": "「いいよ。かなしまなくて いいよ。もう いちど はじめよう。」" },
+        { "en": "This time, Birimo waits for his turn, and he wins the game!", "ja": "こんどは、ビリモは じゅんばんを まって、ゲームに かちます！" }
+      ],
+      "words": [
+        { "en": "have to", "ja": "〜しなければ ならない" },
+        { "en": "must not", "ja": "〜しては いけない" },
+        { "en": "fair", "ja": "こうへいな" }
+      ],
+      "questions": [
+        { "q": "What must you not do in the game?", "qJa": "ゲームで しては いけない ことは？", "choices": ["look at the cards", "roll the dice", "wait your turn"], "answer": 0 },
+        { "q": "Whose turn is it after Haru?", "qJa": "ハルの つぎは だれの ばん？", "choices": ["Birimo's", "Riko's", "Kiko's"], "answer": 1 },
+        { "q": "What happens at the end?", "qJa": "さいごに どうなった？", "choices": ["Birimo goes home.", "They stop playing.", "Birimo waits and wins."], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-18",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 560,
+      "emoji": "🤖",
+      "title": "The Helping Robot",
+      "titleJa": "おてつだい ロボット",
+      "lines": [
+        { "en": "Haru wants to make a robot for the invention fair.", "ja": "ハルは はつめいフェアの ために ロボットを つくりたいと おもっています。" },
+        { "en": "\"What will your robot do?\" asks Ms. Emma.", "ja": "「あなたの ロボットは なにを するの？」と エマ先生。" },
+        { "en": "\"It will help people. My grandpa can't carry heavy bags.\"", "ja": "「ひとを たすけるんだ。おじいちゃんは おもい かばんが もてないから。」" },
+        { "en": "He makes the robot by using old boxes, wheels, and a small motor.", "ja": "ふるい はこと タイヤと ちいさな モーターを つかって ロボットを つくります。" },
+        { "en": "He reuses the wheels from an old toy car.", "ja": "ふるい おもちゃの くるまの タイヤを さいりようします。" },
+        { "en": "At first, the robot only goes around in circles.", "ja": "さいしょ、ロボットは ぐるぐる まわる だけ でした。" },
+        { "en": "Haru doesn't give up. He fixes the motor and tries again.", "ja": "ハルは あきらめません。モーターを なおして もう いちど ためします。" },
+        { "en": "At the fair, the robot carries a bag of apples across the room.", "ja": "フェアで、ロボットは りんごの ふくろを へやの むこうまで はこびます。" },
+        { "en": "People clap. Grandpa says, \"This robot helps people like me. Thank you, Haru.\"", "ja": "みんなが はくしゅ。おじいちゃんが いいます。「この ロボットは わしのような ひとを たすけてくれる。ありがとう、ハル。」" }
+      ],
+      "words": [
+        { "en": "invention", "ja": "はつめい" },
+        { "en": "reuse", "ja": "さいりようする" },
+        { "en": "give up", "ja": "あきらめる" }
+      ],
+      "questions": [
+        { "q": "Why does Haru make the robot?", "qJa": "ハルは どうして ロボットを つくる？", "choices": ["to help his grandpa carry bags", "to play soccer", "to clean his room"], "answer": 0 },
+        { "q": "What does the robot do at first?", "qJa": "さいしょ ロボットは どう うごいた？", "choices": ["It carries apples.", "It goes around in circles.", "It talks."], "answer": 1 },
+        { "q": "What does the robot carry at the fair?", "qJa": "フェアで ロボットは なにを はこんだ？", "choices": ["a box of toys", "Grandpa", "a bag of apples"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-19",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 574,
+      "emoji": "💌",
+      "title": "Would You Like to Come?",
+      "titleJa": "きませんか？",
+      "lines": [
+        { "en": "There will be a lantern festival on Festival Island on Saturday.", "ja": "どようびに まつりの しまで ちょうちんまつりが あります。" },
+        { "en": "Riko writes invitation cards for her friends.", "ja": "リコは ともだちに しょうたいじょうを かきます。" },
+        { "en": "\"Would you like to come to the festival, Kiko?\" \"Yes, I'd love to!\"", "ja": "「キコ、おまつりに こない？」「うん、ぜひ いきたい！」" },
+        { "en": "\"Would you like to come, Haru?\"", "ja": "「ハルも こない？」" },
+        { "en": "\"I'd love to, but I have to help my mom at her shop on Saturday.\"", "ja": "「いきたいけど、どようびは おかあさんの おみせを てつだわないと いけないんだ。」" },
+        { "en": "\"That's okay. Maybe next time!\"", "ja": "「だいじょうぶ。また こんどね！」" },
+        { "en": "On Saturday evening, the festival is bright and noisy.", "ja": "どようびの ゆうがた、おまつりは あかるくて にぎやかです。" },
+        { "en": "Riko and Kiko find a little food stand. The owner is... Haru's mom!", "ja": "リコと キコは ちいさな やたいを みつけます。おみせの ひとは……ハルの おかあさん！" },
+        { "en": "Haru is selling rice balls. \"Welcome! Would you like some tea?\"", "ja": "ハルが おにぎりを うっています。「いらっしゃい！ おちゃは いかが？」" },
+        { "en": "\"Yes, please!\" In the end, they all enjoy the festival together.", "ja": "「はい、おねがい！」 けっきょく、みんなで いっしょに おまつりを たのしみました。" }
+      ],
+      "words": [
+        { "en": "invitation", "ja": "しょうたい" },
+        { "en": "I'd love to", "ja": "ぜひ そうしたい" },
+        { "en": "stand", "ja": "やたい" }
+      ],
+      "questions": [
+        { "q": "When is the festival?", "qJa": "おまつりは いつ？", "choices": ["on Friday", "on Saturday", "on Sunday"], "answer": 1 },
+        { "q": "Why can't Haru come at first?", "qJa": "ハルは どうして いけないと いった？", "choices": ["He has to help his mom.", "He is sick.", "He doesn't like festivals."], "answer": 0 },
+        { "q": "Where do Riko and Kiko find Haru?", "qJa": "リコと キコは どこで ハルを みつけた？", "choices": ["at the beach", "at school", "at a food stand"], "answer": 2 }
+      ]
+    },
+    {
+      "id": "s2-20",
+      "stage": 2,
+      "level": "A2",
+      "unlockLesson": 586,
+      "emoji": "🏮",
+      "title": "If It Rains",
+      "titleJa": "もし あめが ふったら",
+      "lines": [
+        { "en": "Tomorrow is the Grand Festival. The friends are making a plan.", "ja": "あしたは グランドフェスティバル。ともだちは けいかくを たてています。" },
+        { "en": "\"If it's sunny, we will dance on the beach,\" says Riko.", "ja": "「はれたら、はまべで おどろう」と リコ。" },
+        { "en": "\"If it rains, we will dance in the town hall,\" says Kiko.", "ja": "「あめが ふったら、こうみんかんで おどろう」と キコ。" },
+        { "en": "Haru remembers something. \"When I was little, I was scared of big drums.\"", "ja": "ハルが おもいだします。「ちいさい ころ、おおきな たいこが こわかったんだ。」" },
+        { "en": "\"Are you scared now?\" asks Birimo.", "ja": "「いまも こわい？」と ビリモ。" },
+        { "en": "\"Not anymore. This year, I'm going to play the drum!\"", "ja": "「もう こわくないよ。ことしは ぼくが たいこを たたくんだ！」" },
+        { "en": "The next day, it rains in the morning. They move to the town hall.", "ja": "つぎの ひ、あさは あめ。みんなは こうみんかんへ いどうします。" },
+        { "en": "Boom, boom! Haru plays the big drum. Everyone dances.", "ja": "ドン、ドン！ ハルが おおきな たいこを たたきます。みんな おどります。" },
+        { "en": "In the evening, the rain stops, and a rainbow appears over the sea.", "ja": "ゆうがた、あめが やんで、うみの うえに にじが でます。" },
+        { "en": "Ms. Emma says, \"You have grown so much this year. I'm proud of you all.\"", "ja": "エマ先生が いいます。「ことし、みんな とても せいちょう したわね。みんなを ほこりに おもうわ。」" }
+      ],
+      "words": [
+        { "en": "if", "ja": "もし〜なら" },
+        { "en": "not anymore", "ja": "もう〜ない" },
+        { "en": "proud", "ja": "ほこりに おもう" }
+      ],
+      "questions": [
+        { "q": "What will they do if it rains?", "qJa": "あめが ふったら どうする？", "choices": ["dance on the beach", "dance in the town hall", "stay home"], "answer": 1 },
+        { "q": "What was Haru scared of when he was little?", "qJa": "ちいさい ころ ハルは なにが こわかった？", "choices": ["big drums", "the sea", "dancing"], "answer": 0 },
+        { "q": "What appears in the evening?", "qJa": "ゆうがた なにが でた？", "choices": ["the moon", "fireworks", "a rainbow"], "answer": 2 }
+      ]
+    }
+  ]
+}

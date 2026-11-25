@@ -15,7 +15,8 @@ export type CoinReason =
   | "ARENA_PLAY"
   | "STREAK_BONUS"
   | "RECAP_WATCHED"
-  | "CONVERSATION_FINISHED";
+  | "CONVERSATION_FINISHED"
+  | "LIBRARY_DAILY";
 
 export interface CoinAward {
   amount: number;
@@ -136,6 +137,12 @@ export function rewardForRecap(input: { alreadyRewardedToday: boolean }): Reward
 export function rewardForConversation(input: { finished: boolean; alreadyRewarded: boolean }): Reward {
   if (!input.finished || input.alreadyRewarded) return finalize([]);
   return finalize([award(C.conversationFinished, "CONVERSATION_FINISHED", "かいわ クリア！")]);
+}
+
+/** えいごの としょかんで おはなしを よめた・チャンツを さいごまで・フリートークを した。1日1回だけ（alreadyRewardedToday なら 0） */
+export function rewardForLibrary(input: { completed: boolean; alreadyRewardedToday: boolean }): Reward {
+  if (!input.completed || input.alreadyRewardedToday) return finalize([]);
+  return finalize([award(C.libraryDaily, "LIBRARY_DAILY", "としょかんで えいごに ふれた！")]);
 }
 
 /** 2つの ごほうびを 1つに まとめる（表示用） */

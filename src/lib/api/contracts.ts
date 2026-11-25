@@ -332,6 +332,52 @@ export const ConversationResponseSchema = z.object({
 });
 export type ConversationResponse = z.output<typeof ConversationResponseSchema>;
 
+// ---------------------------------------------------------------------------
+// えいごの としょかん（run7 P-library）
+// GET  /api/library            … 到達レッスン（解放の 判定）・きょうの ごほうびを もらったか
+// POST /api/library/reward     … おはなし（クイズ）・チャンツ・フリートークを やりきった → 1日1回 5コイン
+// POST /api/library/talk       … AI フリートーク（1ターン分の 返事）
+// ---------------------------------------------------------------------------
+export const LibraryStatusResponseSchema = z.object({
+  ...META,
+  /** クリアした いちばん先の レッスン（0 = まだ なし） */
+  reachedLesson: num(0),
+  rewardedToday: bool(false),
+  coins: num(0),
+  /** 1日1回の ごほうびの コイン数（表示用） */
+  dailyCoins: num(5),
+});
+export type LibraryStatusResponse = z.output<typeof LibraryStatusResponseSchema>;
+
+export const LibraryRewardRequestSchema = z.object({
+  kind: z.enum(["story", "chant", "talk"]).catch("story"),
+  id: z.string().max(40).catch(""),
+  answers: z.array(z.number().int().min(-1).max(9)).max(10).catch([]),
+  finished: z.boolean().catch(false),
+  turns: z.coerce.number().int().min(0).max(50).catch(0),
+});
+export type LibraryRewardRequest = z.input<typeof LibraryRewardRequestSchema>;
+
+export const LibraryRewardResponseSchema = z.object({
+  ...META,
+  ok: bool(true),
+  coinsAwarded: num(0),
+  alreadyToday: bool(false),
+  /** やりきった（スタンプ・ごほうびの 対象） */
+  completed: bool(false),
+  /** コインを 記録できたか（DB が 止まっていると false） */
+  saved: bool(false),
+  messageJa: str(""),
+});
+export type LibraryRewardResponse = z.output<typeof LibraryRewardResponseSchema>;
+
+export const LibraryTalkRequestSchema = z.object({
+  themeId: z.string().max(40).catch(""),
+  history: safeArray(ConversationTurnSchema).transform((h) => h.slice(-12)),
+  childText: z.string().catch("").transform((s) => s.slice(0, 200)),
+});
+export type LibraryTalkRequest = z.input<typeof LibraryTalkRequestSchema>;
+
 /** すべてのエラーレスポンスの形（ok=false + error） */
 export const ErrorBodySchema = z.object({ error: str("") });
 

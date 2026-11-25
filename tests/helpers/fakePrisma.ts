@@ -145,8 +145,8 @@ export class FakeDb {
         if (!r) throw new Error("not found");
         return { ...r };
       },
-      findFirst: async ({ where, select }: { where?: Where; select?: Record<string, unknown> }) => {
-        const r = rows().find((x) => matches(x, where));
+      findFirst: async ({ where, select, orderBy }: { where?: Where; select?: Record<string, unknown>; orderBy?: Record<string, "asc" | "desc"> }) => {
+        const r = sort(rows().filter((x) => matches(x, where)), orderBy)[0];
         return r ? this.project(model, r, select) : null;
       },
       findMany: async ({ where, select, orderBy, take }: { where?: Where; select?: Record<string, unknown>; orderBy?: Record<string, "asc" | "desc">; take?: number } = {}) => {

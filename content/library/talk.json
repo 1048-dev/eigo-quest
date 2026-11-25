@@ -1,0 +1,181 @@
+{
+  "note": "えいごの としょかん：AI フリートークの テーマ（オリジナル）。lines は AI が つかえない ときの 台本（質問と 答えの 例）。個人情報は きかない",
+  "themes": [
+    {
+      "id": "t-food", "stage": 1, "unlockLesson": 90, "emoji": "🍙", "character": "birimo",
+      "titleJa": "すきな たべもの", "scene": "Talking about food", "sceneJa": "たべものの はなし",
+      "starterEn": "Hi! I'm hungry! What food do you like?",
+      "goalJa": "すきな たべものを いって、ビリモにも きいてみよう",
+      "targetExpressions": ["I like ～.", "What do you like?", "It's yummy!"],
+      "lines": [
+        { "speaker": "Birimo", "en": "What food do you like?", "ja": "どんな たべものが すき？" },
+        { "speaker": "Haru", "en": "I like curry.", "ja": "カレーが すき。" },
+        { "speaker": "Birimo", "en": "Curry! It's yummy! Do you like sweets?", "ja": "カレー！ おいしいよね！ あまい ものは すき？" },
+        { "speaker": "Haru", "en": "Yes, I do. I like chocolate.", "ja": "うん。チョコレートが すき。" },
+        { "speaker": "Birimo", "en": "Me too! I like carrots, too. What do you like for breakfast?", "ja": "ぼくも！ にんじんも すき。あさごはんは なにが すき？" },
+        { "speaker": "Haru", "en": "I like toast and milk.", "ja": "トーストと ぎゅうにゅうが すき。" },
+        { "speaker": "Birimo", "en": "Sounds good! What do you like?", "ja": "いいね！ あなたは なにが すき？" }
+      ]
+    },
+    {
+      "id": "t-animals", "stage": 1, "unlockLesson": 90, "emoji": "🐼", "character": "riko",
+      "titleJa": "どうぶつ", "scene": "Talking about animals", "sceneJa": "どうぶつの はなし",
+      "starterEn": "Hi! I love animals. What animal do you like?",
+      "goalJa": "すきな どうぶつと、その どうぶつが できる ことを いおう",
+      "targetExpressions": ["I like ～.", "It can ～.", "It's cute!"],
+      "lines": [
+        { "speaker": "Riko", "en": "What animal do you like?", "ja": "どんな どうぶつが すき？" },
+        { "speaker": "Kiko", "en": "I like pandas.", "ja": "パンダが すき。" },
+        { "speaker": "Riko", "en": "Pandas are cute! What can pandas do?", "ja": "パンダ かわいいね！ パンダは なにが できる？" },
+        { "speaker": "Kiko", "en": "It can climb trees.", "ja": "きに のぼれるよ。" },
+        { "speaker": "Riko", "en": "Wow! I like dolphins. They can swim fast. Do you like dolphins?", "ja": "すごい！ わたしは イルカが すき。はやく およげるの。イルカは すき？" },
+        { "speaker": "Kiko", "en": "Yes! It's cute!", "ja": "うん！ かわいい！" },
+        { "speaker": "Riko", "en": "What color is your favorite animal?", "ja": "あなたの すきな どうぶつは なにいろ？" }
+      ]
+    },
+    {
+      "id": "t-weather", "stage": 1, "unlockLesson": 120, "emoji": "⛅", "character": "haru",
+      "titleJa": "てんきと きせつ", "scene": "Talking about weather and seasons", "sceneJa": "てんきと きせつの はなし",
+      "starterEn": "Hello! How is the weather today?",
+      "goalJa": "きょうの てんきと、すきな きせつを いおう",
+      "targetExpressions": ["It's ～.", "I like ～.", "Let's ～."],
+      "lines": [
+        { "speaker": "Haru", "en": "How is the weather today?", "ja": "きょうの てんきは？" },
+        { "speaker": "Riko", "en": "It's sunny.", "ja": "はれだよ。" },
+        { "speaker": "Haru", "en": "Nice! Let's play outside! What season do you like?", "ja": "いいね！ そとで あそぼう！ どの きせつが すき？" },
+        { "speaker": "Riko", "en": "I like summer.", "ja": "なつが すき。" },
+        { "speaker": "Haru", "en": "Me too! I can swim in summer. What do you do in winter?", "ja": "ぼくも！ なつは およげるね。ふゆは なにを する？" },
+        { "speaker": "Riko", "en": "I make a snowman.", "ja": "ゆきだるまを つくるよ。" },
+        { "speaker": "Haru", "en": "Fun! Is it hot or cold today?", "ja": "たのしそう！ きょうは あつい？ さむい？" }
+      ]
+    },
+    {
+      "id": "t-day", "stage": 1, "unlockLesson": 150, "emoji": "🏠", "character": "kiko",
+      "titleJa": "わたしの 1日", "scene": "Talking about a day", "sceneJa": "1日の はなし",
+      "starterEn": "Hi! I wake up at seven. What time do you wake up?",
+      "goalJa": "おきる じかんや、ほうかごに する ことを いおう",
+      "targetExpressions": ["I wake up at ～.", "I usually ～.", "What time ～?"],
+      "lines": [
+        { "speaker": "Kiko", "en": "What time do you wake up?", "ja": "なんじに おきる？" },
+        { "speaker": "Haru", "en": "I wake up at six thirty.", "ja": "6じはんに おきるよ。" },
+        { "speaker": "Kiko", "en": "Early! What do you do after school?", "ja": "はやいね！ ほうかごは なにを する？" },
+        { "speaker": "Haru", "en": "I usually play soccer.", "ja": "たいてい サッカーを するよ。" },
+        { "speaker": "Kiko", "en": "Cool! I usually read books. What time do you go to bed?", "ja": "かっこいい！ わたしは たいてい ほんを よむの。なんじに ねる？" },
+        { "speaker": "Haru", "en": "I go to bed at nine.", "ja": "9じに ねるよ。" },
+        { "speaker": "Kiko", "en": "Me too. What is your favorite time of the day?", "ja": "わたしも。1日で いちばん すきな じかんは？" }
+      ]
+    },
+    {
+      "id": "t-hobby", "stage": 1, "unlockLesson": 200, "emoji": "⚽", "character": "haru",
+      "titleJa": "すきな こと・できる こと", "scene": "Talking about hobbies", "sceneJa": "しゅみの はなし",
+      "starterEn": "Hi! I can play soccer. What can you do?",
+      "goalJa": "できる ことや すきな あそびを いって、あいてにも きこう",
+      "targetExpressions": ["I can ～.", "I'm good at ～.", "Can you ～?"],
+      "lines": [
+        { "speaker": "Haru", "en": "What can you do?", "ja": "なにが できる？" },
+        { "speaker": "Riko", "en": "I can play the piano.", "ja": "ピアノが ひけるよ。" },
+        { "speaker": "Haru", "en": "Great! I'm good at running. Can you swim?", "ja": "すごい！ ぼくは はしるのが とくい。およげる？" },
+        { "speaker": "Riko", "en": "Yes, I can. I'm good at swimming.", "ja": "うん、およげる。すいえいが とくいなの。" },
+        { "speaker": "Haru", "en": "Cool! What do you do on weekends?", "ja": "かっこいい！ しゅうまつは なにを する？" },
+        { "speaker": "Riko", "en": "I draw pictures.", "ja": "えを かくよ。" },
+        { "speaker": "Haru", "en": "Nice! What do you want to try next?", "ja": "いいね！ つぎは なにを やってみたい？" }
+      ]
+    },
+    {
+      "id": "t-trip", "stage": 1, "unlockLesson": 250, "emoji": "✈️", "character": "riko",
+      "titleJa": "ゆめの りょこう", "scene": "Talking about a dream trip", "sceneJa": "いってみたい ばしょの はなし",
+      "starterEn": "Hello! I want to go to Italy. Where do you want to go?",
+      "goalJa": "いきたい くにと、そこで したい ことを いおう",
+      "targetExpressions": ["I want to go to ～.", "I want to ～.", "Why?"],
+      "lines": [
+        { "speaker": "Riko", "en": "Where do you want to go?", "ja": "どこに いきたい？" },
+        { "speaker": "Haru", "en": "I want to go to Egypt.", "ja": "エジプトに いきたい。" },
+        { "speaker": "Riko", "en": "Why?", "ja": "どうして？" },
+        { "speaker": "Haru", "en": "I want to see the pyramids.", "ja": "ピラミッドが みたいから。" },
+        { "speaker": "Riko", "en": "Wow! I want to go to Italy. I want to eat pizza there. What food do you want to eat?", "ja": "わあ！ わたしは イタリアに いきたい。そこで ピザが たべたいの。あなたは なにが たべたい？" },
+        { "speaker": "Haru", "en": "I want to eat local food.", "ja": "その くにの たべものが たべたい。" },
+        { "speaker": "Riko", "en": "Sounds fun! Who do you want to go with?", "ja": "たのしそう！ だれと いきたい？" }
+      ]
+    },
+    {
+      "id": "t-dream", "stage": 1, "unlockLesson": 320, "emoji": "🌟", "character": "kiko",
+      "titleJa": "しょうらいの ゆめ", "scene": "Talking about future dreams", "sceneJa": "しょうらいの ゆめの はなし",
+      "starterEn": "Hi! I want to be a writer. What do you want to be?",
+      "goalJa": "なりたい ものと、その りゆうを because で いおう",
+      "targetExpressions": ["I want to be ～.", "Because ～.", "What do you want to be?"],
+      "lines": [
+        { "speaker": "Kiko", "en": "What do you want to be?", "ja": "なにに なりたい？" },
+        { "speaker": "Riko", "en": "I want to be a doctor.", "ja": "いしゃに なりたい。" },
+        { "speaker": "Kiko", "en": "Why do you want to be a doctor?", "ja": "どうして いしゃに なりたいの？" },
+        { "speaker": "Riko", "en": "Because I want to help people.", "ja": "ひとを たすけたいから。" },
+        { "speaker": "Kiko", "en": "That's wonderful! I want to be a writer because I love stories. What are you good at?", "ja": "すてき！ わたしは おはなしが すきだから さっかに なりたいの。あなたは なにが とくい？" },
+        { "speaker": "Riko", "en": "I'm good at science.", "ja": "りかが とくい。" },
+        { "speaker": "Kiko", "en": "Great! What do you want to study?", "ja": "すごい！ なにを べんきょう したい？" }
+      ]
+    },
+    {
+      "id": "t-weekend", "stage": 2, "unlockLesson": 450, "emoji": "🎒", "character": "haru",
+      "titleJa": "しゅうまつの できごと", "scene": "Talking about last weekend", "sceneJa": "せんしゅうまつの はなし",
+      "starterEn": "Hi! I went to the river last weekend. What did you do last weekend?",
+      "goalJa": "せんしゅうまつに した ことを かこけいで いって、ついかの しつもんも しよう",
+      "targetExpressions": ["I went to ～.", "It was ～.", "Did you ～?", "Sounds fun!"],
+      "lines": [
+        { "speaker": "Haru", "en": "What did you do last weekend?", "ja": "せんしゅうまつ なにを した？" },
+        { "speaker": "Riko", "en": "I went to the zoo with my family.", "ja": "かぞくと どうぶつえんに いったよ。" },
+        { "speaker": "Haru", "en": "Sounds fun! What did you see?", "ja": "たのしそう！ なにを みた？" },
+        { "speaker": "Riko", "en": "I saw a baby elephant. It was so cute.", "ja": "あかちゃんの ゾウを みたよ。とっても かわいかった。" },
+        { "speaker": "Haru", "en": "Wow! I went to the river and caught a fish. Did you eat anything good?", "ja": "わあ！ ぼくは かわに いって さかなを つったよ。なにか おいしい もの たべた？" },
+        { "speaker": "Riko", "en": "Yes, I did. I ate ice cream.", "ja": "うん。アイスを たべたよ。" },
+        { "speaker": "Haru", "en": "Nice! How did you feel at the end of the day?", "ja": "いいね！ その日の おわりは どんな きもち だった？" }
+      ]
+    },
+    {
+      "id": "t-future", "stage": 2, "unlockLesson": 485, "emoji": "🔭", "character": "kiko",
+      "titleJa": "これからの よてい", "scene": "Talking about plans", "sceneJa": "よていの はなし",
+      "starterEn": "Hi! I'm going to visit the library this weekend. What are you going to do?",
+      "goalJa": "be going to で よていを いって、あいてにも きこう",
+      "targetExpressions": ["I'm going to ～.", "What are you going to do?", "I think ～ will ～."],
+      "lines": [
+        { "speaker": "Kiko", "en": "What are you going to do this weekend?", "ja": "こんしゅうまつ なにを する よてい？" },
+        { "speaker": "Haru", "en": "I'm going to play soccer with my friends.", "ja": "ともだちと サッカーを する よていだよ。" },
+        { "speaker": "Kiko", "en": "Fun! Will it be sunny?", "ja": "たのしそう！ はれるかな？" },
+        { "speaker": "Haru", "en": "I think it will be sunny.", "ja": "はれると おもう。" },
+        { "speaker": "Kiko", "en": "Good! I'm going to read a book about space. Are you going to watch the stars, too?", "ja": "よかった！ わたしは うちゅうの ほんを よむ よてい。あなたも ほしを みる？" },
+        { "speaker": "Haru", "en": "Yes, I'm going to look at the moon.", "ja": "うん、つきを みる つもり。" },
+        { "speaker": "Kiko", "en": "Great! What are you going to do next summer?", "ja": "いいね！ つぎの なつは なにを する よてい？" }
+      ]
+    },
+    {
+      "id": "t-compare", "stage": 2, "unlockLesson": 520, "emoji": "⚖️", "character": "riko",
+      "titleJa": "どっちが すき？", "scene": "Comparing things and giving reasons", "sceneJa": "くらべて りゆうを いう",
+      "starterEn": "Hi! Which do you like better, cats or dogs?",
+      "goalJa": "どちらが すきかを くらべて、because で りゆうを いおう",
+      "targetExpressions": ["I like ～ better.", "Because ～.", "I think ～."],
+      "lines": [
+        { "speaker": "Riko", "en": "Which do you like better, cats or dogs?", "ja": "ねこと いぬ、どっちが すき？" },
+        { "speaker": "Haru", "en": "I like dogs better.", "ja": "いぬの ほうが すき。" },
+        { "speaker": "Riko", "en": "Why?", "ja": "どうして？" },
+        { "speaker": "Haru", "en": "Because dogs are more friendly.", "ja": "いぬの ほうが ひとなつっこいから。" },
+        { "speaker": "Riko", "en": "Good reason! I like cats better because they are quieter. Which is more fun, summer or winter?", "ja": "いい りゆう！ わたしは しずかだから ねこの ほうが すき。なつと ふゆ、どっちが たのしい？" },
+        { "speaker": "Haru", "en": "I think summer is more fun.", "ja": "なつの ほうが たのしいと おもう。" },
+        { "speaker": "Riko", "en": "I see! What is the best food in the world?", "ja": "なるほど！ せかいで いちばん おいしい たべものは？" }
+      ]
+    },
+    {
+      "id": "t-anything", "stage": 2, "unlockLesson": 560, "emoji": "💬", "character": "birimo",
+      "titleJa": "なんでも トーク", "scene": "Free chat about anything safe", "sceneJa": "すきな ことを なんでも",
+      "starterEn": "Hi! Let's talk about anything! What's new with you?",
+      "goalJa": "すきな わだいを えらんで、しつもんを したり りゆうを いったり しよう",
+      "targetExpressions": ["I think ～.", "Because ～.", "How about you?", "Really?"],
+      "lines": [
+        { "speaker": "Birimo", "en": "What's new with you?", "ja": "さいきん なにか あった？" },
+        { "speaker": "Kiko", "en": "I started a new book.", "ja": "あたらしい ほんを よみはじめたよ。" },
+        { "speaker": "Birimo", "en": "Really? What is it about?", "ja": "ほんと？ どんな おはなし？" },
+        { "speaker": "Kiko", "en": "It's about a dragon and a girl.", "ja": "ドラゴンと おんなのこの おはなし。" },
+        { "speaker": "Birimo", "en": "Sounds exciting! Do you like it? Why?", "ja": "わくわくするね！ すき？ どうして？" },
+        { "speaker": "Kiko", "en": "Yes, because the dragon is funny.", "ja": "うん、ドラゴンが おもしろいから。" },
+        { "speaker": "Birimo", "en": "Ha ha! How about you? What makes you happy these days?", "ja": "ハハ！ あなたは？ さいきん なにが たのしい？" }
+      ]
+    }
+  ]
+}

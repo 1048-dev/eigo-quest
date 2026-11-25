@@ -397,6 +397,7 @@ enum CoinReason {
   STREAK_BONUS
   RECAP_WATCHED /// きょうのまとめ動画（1日1回）
   CONVERSATION_FINISHED /// AIキャラとの かいわを さいごまで（レッスンごとに1回）
+  LIBRARY_DAILY /// えいごの としょかん（おはなし・チャンツ・フリートーク。1日1回）
   TRIAL_CARRY_OVER /// おためしモードの きろくを ひきついだ（端末ごとに1回。idempotencyKey = trial-carry:<端末のおためしID>）
   GACHA_SPEND
   SHOP_SPEND

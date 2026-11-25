@@ -36,17 +36,32 @@ export function conversationLogs(childTexts: string[], targets: string[], items:
   return [...out.values()];
 }
 
-export function ConversationStep({ lessonNo, conversation, character = "haru", maxTurns = 6, items, onDone }: {
+/** レッスン以外（としょかんの フリートーク）で つかう ときの 文言と 送り先 */
+export interface ConversationVariant {
+  /** 返事を もらう API と、毎回 いっしょに 送る 値（既定: /api/conversation に lessonNo と character） */
+  endpoint?: { url: string; body: Record<string, unknown> };
+  /** はじめる 画面の ごほうびの 一言（null で 出さない） */
+  coinNote?: string | null;
+  /** おわった ときの 文 と ボタン */
+  doneText?: string;
+  doneLabel?: string;
+  skipLabel?: string;
+}
+
+export function ConversationStep({ lessonNo, conversation, character = "haru", maxTurns = 6, items, onDone, variant = {} }: {
   lessonNo: number;
   conversation: LessonConversation | null | undefined;
   character?: ConversationCharacter;
   maxTurns?: number;
   items: LearningItemDef[];
-  /** finished = さいごまで おはなし できた（レッスンごとに1回 コイン+5） */
-  onDone: (logs: AnswerLog[], finished: boolean) => void;
+  /** finished = さいごまで おはなし できた（レッスンごとに1回 コイン+5）。turns = 子どもが 話した 回数 */
+  onDone: (logs: AnswerLog[], finished: boolean, turns: number) => void;
+  variant?: ConversationVariant;
 }) {
   const conv = conversation ?? GENERIC_CONVERSATION;
   const name = CHARACTER_NAME[character];
+  const endpoint = variant.endpoint ?? { url: "/api/conversation", body: { lessonNo, character } };
+  const coinNote = variant.coinNote === undefined ? `さいごまで おはなし すると 🪙+${COIN_RULES.conversationFinished}` : variant.coinNote;
   const [started, setStarted] = useState(false);
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -89,7 +104,7 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
     setHeardNothing(false);
     const history: ConversationTurn[] = bubbles.map(({ role, text: t }) => ({ role, text: t }));
     setBubbles((b) => [...b, { role: "child", text: said }]);
-    const r = await apiPost("/api/conversation", ConversationResponseSchema, { lessonNo, character, history, childText: said });
+    const r = await apiPost(endpoint.url, ConversationResponseSchema, { ...endpoint.body, history, childText: said });
     const reply: ConversationResponse = r.ok
       ? r.data
       : { success: true, ...scriptedReply({ conversation: conv, history, childText: said, maxTurns }) };
@@ -119,7 +134,7 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
   const finish = () => {
     window.speechSynthesis?.cancel();
     const childTexts = bubbles.filter((b) => b.role === "child").map((b) => b.text);
-    onDone(conversationLogs(childTexts, conv.aiTask.targetExpressions, items), done);
+    onDone(conversationLogs(childTexts, conv.aiTask.targetExpressions, items), done, childTexts.length);
   };
 
   if (!started) {
@@ -130,9 +145,9 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
         <p className="text-sm text-[var(--ink-2)]">ばめん：{conv.sceneJa}</p>
         <p className="mt-2 rounded-lg bg-[var(--surface)] p-3 font-bold">🎯 {conv.aiTask.goalJa}</p>
         <p className="mt-2 text-xs text-[var(--ink-2)]">{micOk ? "🎤 で えいごを はなしてね。ことばを タップしても いいよ。" : "ことばを タップするか、キーボードで いれてね。"}</p>
-        <p className="mt-2 text-sm font-black text-[var(--coin)]">さいごまで おはなし すると 🪙+{COIN_RULES.conversationFinished}</p>
+        {coinNote && <p className="mt-2 text-sm font-black text-[var(--coin)]">{coinNote}</p>}
         <button className="btn btn-coin mt-4 w-full" onClick={start}>▶ はじめる</button>
-        <button className="mt-3 text-sm text-[var(--ink-2)] underline" onClick={() => onDone([], false)}>きょうは とばす</button>
+        <button className="mt-3 text-sm text-[var(--ink-2)] underline" onClick={() => onDone([], false, 0)}>{variant.skipLabel ?? "きょうは とばす"}</button>
       </div>
     );
   }
@@ -149,9 +164,9 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
           {bubbles.map((b, i) => (
             <li key={i} className={b.role === "ai" ? "self-start max-w-[90%]" : "self-end max-w-[90%]"}>
               {b.role === "ai" ? (
-                <button className="rounded-2xl rounded-tl-sm border-2 border-[#7a4e0c]/50 bg-white p-2 text-left" onClick={() => void say(b.text)} aria-label={`${name}: ${b.text}（もういちど きく）`}>
+                <button className="rounded-2xl rounded-tl-sm border-2 border-[#7a4e0c]/50 bg-white p-2 text-left text-[#2a1a03]" onClick={() => void say(b.text)} aria-label={`${name}: ${b.text}（もういちど きく）`}>
                   <span className="block text-lg font-black">{b.text} <span aria-hidden className="text-sm">🔊</span></span>
-                  {b.ja && <span className="block text-xs text-[var(--ink-2)]">{b.ja}</span>}
+                  {b.ja && <span className="block text-xs text-[#6b5a3a]">{b.ja}</span>}
                 </button>
               ) : (
                 <p className="rounded-2xl rounded-tr-sm bg-[#2fd08a] p-2 text-lg font-black text-white">{b.text}</p>
@@ -166,8 +181,8 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
       {done ? (
         <div className="mt-4 text-center">
           <p className="text-4xl">🎉</p>
-          <p className="font-black">かいわ クリア！ 🪙+{COIN_RULES.conversationFinished} {stars > 0 ? `つかえた ひょうげん ⭐×${stars}` : "さいごまで おはなし できたね！"}</p>
-          <button className="btn btn-coin mt-3 w-full" onClick={finish}>レッスン クリア！ ▶</button>
+          <p className="font-black">{variant.doneText ?? `かいわ クリア！ 🪙+${COIN_RULES.conversationFinished}`} {stars > 0 ? `つかえた ひょうげん ⭐×${stars}` : "さいごまで おはなし できたね！"}</p>
+          <button className="btn btn-coin mt-3 w-full" onClick={finish}>{variant.doneLabel ?? "レッスン クリア！ ▶"}</button>
         </div>
       ) : (
         <div className="mt-4 space-y-3">
@@ -189,7 +204,7 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
           )}
           <form className="flex gap-2" onSubmit={(e) => { e.preventDefault(); void send(text); }}>
             <input
-              className="min-w-0 flex-1 rounded-lg border-2 border-[#7a4e0c]/50 bg-white px-3 py-2 text-lg"
+              className="min-w-0 flex-1 rounded-lg border-2 border-[#7a4e0c]/50 bg-white px-3 py-2 text-lg text-[#2a1a03] placeholder:text-[#8a7a5a]"
               value={text} onChange={(e) => setText(e.target.value.slice(0, 200))}
               placeholder="えいごで かいてね" aria-label="えいごで かく" autoComplete="off" autoCapitalize="off" spellCheck={false} lang="en"
             />

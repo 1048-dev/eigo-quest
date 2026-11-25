@@ -15,6 +15,7 @@ import { offlineMap } from "@/lib/offline";
 import { readLocalProgress } from "@/lib/offline/localProgress";
 import { DEFAULT_USER, MapResponseSchema, TreasureAlertResponseSchema, type MapResponse, type TreasureAlertResponse } from "@/lib/api/contracts";
 import { companionLine, OFFLINE_LINE } from "@/lib/game/companion";
+import { COIN_RULES } from "@/lib/domain/config";
 
 type NodeType = MapResponse["nodes"][number]["type"];
 
@@ -107,6 +108,17 @@ export default function MapPage() {
           <span className="btn btn-primary shrink-0 px-3 py-2 text-sm">▶</span>
         </Link>
       )}
+
+      <Link href="/library" className="card rpg-rivets flex items-center justify-between gap-3 p-3">
+        <span className="flex items-center gap-3">
+          <Portrait id="kiko" size={44} />
+          <span>
+            <span className="block text-base font-black">📚 えいごの としょかん</span>
+            <span className="block text-xs text-[var(--ink-2)]">おはなし・うた・フリートーク（1日1かい 🪙+{COIN_RULES.libraryDaily}）</span>
+          </span>
+        </span>
+        <span className="btn btn-primary shrink-0 px-3 py-2 text-sm">▶</span>
+      </Link>
 
       <div className="overflow-hidden rounded-[24px] border-4 border-[var(--gold)] shadow-[0_6px_0_var(--gold-deep),0_14px_28px_rgba(0,0,0,.45)]">
         <WorldMap nodes={nodes.length > 0 ? nodes : offlineMap(new Date(), readLocalProgress()).nodes} />

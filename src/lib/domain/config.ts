@@ -61,6 +61,20 @@ export const COIN_RULES = {
   recapWatched: 5,
   /** レッスンさいごの AIキャラとの かいわを さいごまで やった（レッスンごとに1回だけ） */
   conversationFinished: 5,
+  /** えいごの としょかん（おはなし・チャンツ・フリートーク）。1日1回だけ（何を いくつ やっても 同じ） */
+  libraryDaily: 5,
+} as const;
+
+/**
+ * えいごの としょかん（run7 P-library）。
+ *  - おはなし: 3問の うち storyPassCorrect 問 以上 正解で「よめた！」（ごほうびの 対象）
+ *  - チャンツ: さいごまで きいた（まねした）ら 対象
+ *  - フリートーク: talkMinTurns 回 以上 話したら 対象。ひらくのは ステージ1 の ワールド4 から（Lesson 90 クリア）
+ */
+export const LIBRARY_RULES = {
+  storyPassCorrect: 2,
+  talkMinTurns: 3,
+  freeTalkUnlockLesson: 90,
 } as const;
 
 export const GACHA_RULES = {
