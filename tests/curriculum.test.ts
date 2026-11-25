@@ -37,6 +37,7 @@ import { katakanaOf, linkOf as link28Of, loanOf, partsOf, rhythmOf, w28FocusOf }
 import { dictOf, emphasisOf, ibleOf, spectOf, w29FocusOf, weakOf } from "@/lib/curriculum/w29Phonics";
 import { abbrOf, autoOf, casualOf, icOf, transOf, w30FocusOf } from "@/lib/curriculum/w30Phonics";
 import { familyOf as familyOf31, personOf as personOf31, portOf, structOf, w31FocusOf, yearOf } from "@/lib/curriculum/w31Phonics";
+import { alOf, dataOf, directionOf, geoOf, numberOf, w32FocusOf } from "@/lib/curriculum/w32Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -3430,5 +3431,143 @@ describe("カリキュラム: ワールド31 の決まりごと（ときの回�
     expect(at(916)!.teacherScript + said(916)).toMatch(/Professor Nib/);
     for (const n of [905, 910, 915, 920, 925, 930]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/gear/i);
     expect(at(930)!.teacherScript + said(930)).toMatch(/Desert of the Sun/);
+  });
+});
+
+describe("カリキュラム: ワールド32 の決まりごと（たいようの砂漠）", () => {
+  const w32 = LESSONS.filter((l) => l.world === 32);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (geoOf(w) ? "geo" : alOf(w) ? "al" : directionOf(w) ? "direction" : numberOf(w) ? "number" : dataOf(w) ? "data" : "?");
+
+  it("ワールド32 は 931〜960 の 30 レッスン、ステージ4・B1、学年の めやすは 高校初級", () => {
+    if (w32.length === 0) return; // 未作成ならスキップ
+    expect(w32.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 931 + i));
+    for (const l of w32) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校初級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(4);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w32.length === 0) return;
+    const titles = ["The Desert of the Sun", "Hot Days, Cold Nights", "Sand, Rocks and Oases", "Climates Around the World", "Climate Report", "Camels Are Amazing", "So That They Can Survive", "Cactus Secrets", "Animals in Cold Places", "Adaptation Fair",
+      "North, South, East, West", "It's Located in the North", "Continents and Oceans", "Where in the World?", "Map Guide", "The Graph Shows…", "It Increased", "Twice as Many", "Half, a Quarter, Thirty Percent", "Graph Presentation",
+      "Water Is Precious", "Because of the Heat", "As a Result", "How Much Water Do We Use?", "Save Water Campaign", "A Desert Story", "Geography Quiz Rally", "My Graph Report", "Desert of the Sun Review", "World 32 Grand Review"];
+    expect(w32.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: geo → -al → 方角 → 数の 読みかた → データの つづり（各ブロックの 5回目と L956〜960 は ふりかえり）", () => {
+    if (w32.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(931, 934, "root-geo");
+    rule(936, 939, "suffix-al");
+    rule(941, 944, "direction-words");
+    rule(946, 949, "number-reading");
+    rule(951, 954, "data-spelling");
+    for (const n of [935, 940, 945, 950, 955, 956, 957, 958, 959, 960]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド32 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w32) {
+      for (const w of l.phonics.words) {
+        const f = w32FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w32FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w32.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["geography", "geology", "tropical", "natural", "national", "northern", "southeast", "1/2", "1/4", "30%", "increase", "decrease", "average"]));
+    // 方角は -ern・-east・-west・-ward、数は 6 しゅるい、つづりは -age・-ure・-ease・-ount が そろう
+    expect(new Set(range(941, 944).flatMap((l) => l.phonics.focus))).toEqual(new Set(["-ern", "-east", "-west", "-ward"]));
+    expect(new Set(all.map((w) => numberOf(w)?.kind).filter(Boolean))).toEqual(new Set(["hundred", "thousand", "million", "fraction", "percent", "decimal"]));
+    expect(new Set(range(951, 954).flatMap((l) => l.phonics.focus))).toEqual(new Set(["-age", "-ure", "-ease", "-ount"]));
+    // ふりかえり L956〜960 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(956, 960)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["geo", "al", "direction", "number", "data"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w32.length === 0) return;
+    const want: Record<number, string> = {
+      931: "It hardly ever rains here.", 932: "It's very hot during the day, but cold at night.", 933: "An oasis is a place where water comes out.", 934: "Some places are rainy all year.",
+      936: "Camels can go many days without water.", 937: "Desert foxes have big ears so that they can stay cool.", 938: "A cactus stores water in its thick stem.", 939: "Penguins have thick feathers to keep warm.",
+      941: "The oasis is to the east of the camp.", 942: "The mountains are located in the north.", 943: "There are seven continents.", 944: "It's a country in South America.", 945: "Go north for two kilometers. You'll see the well.",
+      946: "The graph shows the temperature in July.", 947: "The number of visitors increased.", 948: "There are twice as many camels as horses.", 949: "About thirty percent of the land is desert.",
+      951: "Water is precious in the desert.", 952: "Because of the heat, the lake became smaller.", 954: "We use about 200 liters of water a day.",
+      956: "Read the story of a girl who found water.", 957: "Which is the largest desert?", 960: "Every place on Earth has its own amazing story.",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(935)).toMatch(/located in .*\. It's hot and dry\.$/);
+    expect(core(940)).toMatch(/^This animal has .* so that it can /);
+    expect(core(950)).toMatch(/^This graph shows .*\. As you can see, /);
+    expect(core(953)).toMatch(/^People planted trees\. As a result, /);
+    expect(core(955)).toMatch(/^We can save water by [a-z]+ing /);
+    expect(core(958)).toMatch(/^The graph shows .*\. It increased from \d+ to \d+\.$/);
+    expect(core(959)).toMatch(/so that .*The graph shows /);
+  });
+
+  it("文法の じゅんばん: hardly ever は L931、located は L935、so that は L937、in order to は L939、The graph shows は L946、increased は L947、twice as は L948、percent は L949、because of は L952、As a result は L953 から", () => {
+    if (w32.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bhardly ever\b/i, 931],
+      [/\blocated\b/i, 935],
+      [/\bso that\b/i, 937],
+      [/\bin order to\b/i, 939],
+      [/\bthe (graph|chart) shows\b/i, 946],
+      [/\b(increased|decreased)\b/i, 947],
+      [/\btwice as\b/i, 948],
+      [/\bpercent\b/i, 949],
+      [/\bbecause of\b/i, 952],
+      [/\bas a result\b/i, 953],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(931, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ4: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・200 語 以上で 読みものを ふくむ、会話シーンは 6〜7 行（L950・L960 は 8 行まで）、L960 は スピード TPR", () => {
+    if (w32.length === 0) return;
+    for (const l of w32) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(200);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{200,}"/);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(6);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual([950, 960].includes(l.lessonNo) ? 8 : 7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（hardly ever・so that）
+    expect(w32.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([931, 937]);
+    expect(at(960)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。国あて・水の つかいかた・グラフの 回は ほんとうの なまえや すんで いる ところを いわなくて よいと goalJa に 明記", () => {
+    if (w32.length === 0) return;
+    for (const l of w32) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+    for (const n of [944, 954, 958]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+  });
+
+  it("物語: L931 で たいようの砂漠・フェンと サン・コンパス → L936 で ハンフリー → L946 で ミラ博士 → 6つの クリスタル → L956 は つくった おはなし → L960 で ほのおの火山島へ", () => {
+    if (w32.length === 0) return;
+    expect(at(931)!.teacherScript + said(931)).toMatch(/Desert of the Sun/);
+    expect(at(931)!.teacherScript + said(931)).toMatch(/Sun Compass/);
+    expect(at(931)!.teacherScript + said(931)).toMatch(/\bFen\b/);
+    expect(at(936)!.teacherScript + said(936)).toMatch(/Humphrey/);
+    expect(at(946)!.teacherScript + said(946)).toMatch(/Dr\. Mira/);
+    expect(at(956)!.teacherScript).toMatch(/made[ -]up/i);
+    for (const n of [935, 940, 945, 950, 955, 960]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/crystal/i);
+    expect(at(960)!.teacherScript + said(960)).toMatch(/Island of Fire/);
   });
 });

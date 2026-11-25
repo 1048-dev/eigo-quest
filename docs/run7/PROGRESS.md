@@ -877,3 +877,40 @@
 - `npx vitest run`: 65 ファイル・2,068 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 241 → 246 kB、/lesson/[lessonNo] 247 → 252 kB、/gacha 230 → 235 kB、/test/[assessmentId] 229 → 234 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド31 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 46`: No.46（L901〜920・63 ページ）、`--pack 47`（L921〜940）は ワールド31 の 10 レッスンぶん（32 ページ）まで 作れる ことを 確認
+
+## WORLD — ワールド32「たいようの砂漠」（L931〜960・ステージ4・B1）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-32.json` を 新しく 作成（30 レッスン、ステージ4・`level` は B1、`school.grade` は「高校初級」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 960 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 118、会話の セリフ 209 行（1 回 6〜7 行、L950 と L960 は 8 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 318 語・最少 277 語・最大 333 語）で、まいかい「読みもの」（サン・コンパスの メモ・キャンプの 日記・オアシスの 看板・気候の 地図・気候レポート・ハンフリーの キャラバン・フェネックの 自己紹介・サボテン園の カード・寒い 土地の ポスター・フェアの ポスター・地図・地球儀・国あてカード・宝の地図・ミラ博士の グラフと 円グラフ・パーム村の 井戸・ミラー湖・グリーンバレー・水の 日記・キャンペーンの ポスター・リナの おはなし・クイズカード・グラフ レポートの お手本（69 語）など 68〜105 語）を 読む。日本語の ヒントは 2 回だけ（L931「hardly ever（ほとんど ～ない）」・L937「so that（～できるように）」）。
+- ブロック構成: 931〜935 砂漠と 気候（It hardly ever rains here. は L931 から・during the day / at night・a place where ～・all year・is located in ～ は L935 から）→ 936〜940 生きものの 工夫（can go many days without ～・so that は L937 から・to ～（目的）・in order to は L939 から・adaptations）→ 941〜945 地図と 方角（to the east of ～・located in the north・There are seven continents.・It's a country in ～.・Go north for two kilometers. You'll see ～.）→ 946〜950 グラフと 表（The graph shows ～. は L946 から・increased / decreased / stayed the same は L947 から・twice as many ～ as は L948 から・half / one quarter / percent は L949 から・As you can see, ～.）→ 951〜955 水（precious・because of ～ は L952 から・As a result, ～ は L953 から・about 200 liters a day・We can save water by ～ing.）→ 956〜960 まとめ（砂漠の 物語を よむ・地理クイズラリー・グラフの 説明文・さよならキャラバン・L960 地球フェスティバル）。
+- 物語の 糸: L930 の さいごの とびらの 先は まぶしい「たいようの砂漠」（L931）。案内役は 耳の 大きな フェネックの フェン（Fen）で、6 つの あなが ある「サン・コンパス（Sun Compass）」を くれる。ブロックの まとめごとに たいようの クリスタルが 1 つずつ はまる（935・940・945・950・955・960）。L936 から ラクダの キャラバンの ハンフリー（Humphrey）、L946 から 砂漠の 気象学者 ミラ・サンズ博士（Dr. Mira Sands）。パーム村の 井戸（L951）・小さく なった ミラー湖（L952）・木を うえて 緑が もどった グリーンバレー（L953）は 架空。L956 の リナ（Lina）の 話は「つくった おはなし」と ことわる。L960 で クリスタルが ぜんぶ ひかり、はりが 海を さし、遠くに 火山の けむり ―「ほのおの火山島（Island of Fire）」への つなぎ。
+- フォニックス（`src/lib/curriculum/w32Phonics.ts`・`questions.ts` の `w32Question`。w31Question より 先に よぶ）:
+  - 語根 geo（rule "root-geo"。focus "geo"）: 「geo（ちきゅう・とち）の ことば。パーツと いみに あう ことばは どれ？」（geo（ちきゅう）＋ logy（〜の 学問）→ ＿＿「ちしつがく」→ geology / geography / geologist）。12 語（geography・geology・geometry・geographer・geologist・geoscientist・geothermal・geopark・geoglyph・geographic・geometric・geode）。
+  - -al（rule "suffix-al"。focus "-al"）: 「-al を つけて ようすの ことばに。ただしい つづりは どれ？」（nature ＋ al → natural / natureal / naturel）。e が きえる・center → central・nation → national の 音の かわりかたを せつめい。12 語。
+  - 方角の ことば（rule "direction-words"。focus "-ern" "-east" "-west" "-ward"）: 「ほうがくの ことば。あう ことばは どれ？」（north → ＿＿「きたの」→ northern / northen / northal、＿＿「北東」→ northeast / eastnorth / northest、up → upward / upword / upwerd）。16 語。
+  - 数・分数・割合の 読みかた（rule "number-reading"。focus は その ことば）: 「英語で なんと よむ？」（1/2 → one half / one two / two ones）。hundred（350）・thousand（4,000・12,000・60,000・250,000）・million（1,000,000 など）・分数（1/2・1/4・3/4・1/3）・percent（30%・75%）・小数（2.5・0.5）の 6 しゅるい 16 こ。問題の 音は 答えの よみ（`audioText`）で よむ（1/2 を 日づけと よまない ように）。
+  - データの ことばの つづり（rule "data-spelling"。focus "-age" "-ure" "-ease" "-ount"）: 「ただしい つづりは どれ？」（へいきん：The ＿＿ temperature in July is 35 degrees. → average / averege / avrage）。14 語。
+- フォーカスの ボタン（`phonicsButtons.ts` の `w32Example`）と 読み上げ（`vowelTeams.ts` の `w32Say`）は その focus で 問う ことばを よむ。数は 英語の よみで よむ（英字と スペース だけ: 75% → "seventy five percent"）。L930 までの どの 回でも はたらかない ことを テストで たしかめる。
+- テスト: `tests/curriculum.test.ts` に ワールド32 の 決まりごと（範囲・ステージ4・B1・高校初級・タイトル 30・フォニックスの 順と 種類・方角の 4 つの focus・数の 6 しゅるい・つづりの 4 つの focus・ふりかえり L956〜960 は 5 つの きまりを ぜんぶ・core の 表現・文法の じゅんばん（hardly ever / located / so that / in order to / The graph shows / increased / twice as / percent / because of / As a result）・台本は 英語だけで 200 語 以上＋読みもの・日本語の ヒントは L931 と L937 だけ・AI 会話で 個人情報を きかない・L944・L954・L958 は goalJa に「ほんとうの なまえや すんで いる ところは いわなくて いい」・物語）を 追加。`tests/phonics-w32.test.ts`（13 テスト）を 追加。
+
+### 決めたこと（理由）
+- **フォニックスの ブロックの 順を テーマに あわせた**: 計画の B3（数の 読みかた）と B4（方角）を 入れかえ、方角を 地図の ブロック（941〜944）、数を グラフの ブロック（946〜949）に した。データの つづり（B5）は 水の ブロック（951〜954・average・amount・increase）で つかう。
+- **問いの 角度は ワールド31 と かさならない ように**: geo は パーツと いみ → ことば、-al は つづり（e が きえる など）、方角は ことばの かたち、数は よみかた、データは 文の なかの ただしい つづり。-al・方角・つづりの まちがいの 選択肢は どれも ない ことば（personnel・foreword・northwards・litre の ような 本当に ある ことばは さけた）。数の まちがいも「a half」「one fourth」「point five」「fifteen hundred」の ような 正しい よみは 出さない。
+- **数の 問題の 音**: TTS が "1/2" を 日づけと よむ おそれが あるので、数の 問題だけ 音を 答えの よみに した（ワールド31 の 年号と おなじく、よみを 聞いて 選ぶ 問題）。
+- **事実は たしかな ものだけ**: 砂漠は 年に 約 250 mm より 少ない 雨・いちばん 大きい 砂漠は 南極、暑い 砂漠では サハラ（アメリカと ほぼ おなじ 大きさ・大部分は 岩と 小石）・アタカマ・ゴビ・ラクダの こぶは 脂肪・フェネックは いちばん 小さい キツネ・サボテンの とげは 葉・サワロ・ペンギンの ハドル・7 大陸 5 大洋・地表の 約 70%が 水・淡水は 約 3%・陸の 約 3 分の 1 が 砂漠・日本の 家庭の 水は 1 人 1 日 約 200 L・シャワー 1 分 約 12 L・アフリカの「緑の 長城」。グラフの 数字（ミラ博士の まちの 雨・公園の 来場者・オアシスの 動物・グリーンバレーの 木）は 架空で「わたしたちの まち」などと ことわる。
+- **新しい 話し手は 増やさない**: フェン・ハンフリー・ミラ博士は 台本の なかか、ビリモが「I'm playing ～!」と やくを する。
+- **作りかた**: 下書きの きまり（物語・core・フォニックスの ことば・文法の じゅんばん・つかって よい 事実）と チェックの スクリプトを 書き、30 レッスンを 3 つの まとまり（931〜940・941〜950・951〜960）で 並行して 書き、まとめてから 自分で 1 回 見なおした。なおした ところ: L949 の 雨の 数字（6 月に 0.5 mm）が L950 の グラフ（6〜8 月は 雨 なし）と くいちがって いたので L949 を 5 月に。
+
+### 例（L937「So That They Can Survive」）
+- 表現（core）: Desert foxes have big ears so that they can stay cool. ／ Why do fennec foxes have furry feet? ― So that they can walk on hot sand. ／ They sleep in burrows during the day and hunt at night.
+- 読みもの（台本より）: "How Desert Animals Survive. I'm a fennec fox, the smallest fox in the world. My huge ears let heat out of my body so that I can stay cool. They also help me hear insects under the sand. My feet are covered with fur so that I can walk on hot sand. During the day, I sleep in a cool burrow under the ground. At night, when the air is cooler, I go out to hunt. My friend Humphrey has long eyelashes so that sand can't get into his eyes."
+- 会話: Riko「Fen, your ears are so big. Why?」 Birimo「I'm playing Fen! Desert foxes have big ears so that they can stay cool.」 … Ms. Emma「Excellent! Every part of Fen's body helps him survive in the desert.」
+- フォニックス: coastal / seasonal / central（問題は「-al を つけて ようすの ことばに。ただしい つづりは どれ？」center（まんなか）＋ al → ＿＿（まんなかの・中央の）→ central / centeral / centrel）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 66 ファイル・2,119 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 246 → 250 kB、/lesson/[lessonNo] 252 → 256 kB、/gacha 235 → 239 kB、/test/[assessmentId] 234 → 238 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド32 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 47`（L921〜940）・`--pack 48`（L941〜960）: どちらも 63 ページで 作れる ことを 確認

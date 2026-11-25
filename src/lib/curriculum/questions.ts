@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W32_START, alDisplay, alOf, alWhy, dataDisplay, dataOf, dataWhy, directionDisplay, directionOf, directionWhy, geoDisplay, geoOf, geoWhy, numberDisplay, numberOf, numberWhy } from "./w32Phonics";
 import { W31_START, familyDisplay as family31Display, familyOf as family31Of, familyWhy as family31Why, personDisplay as person31Display, personOf as person31Of, personWhy as person31Why, portDisplay, portOf, portWhy, structDisplay, structOf, structWhy, yearDisplay, yearOf, yearWhy } from "./w31Phonics";
 import { W30_START, abbrDisplay, abbrOf, abbrWhy, autoDisplay, autoOf, autoWhy, casualDisplay, casualOf, casualPrompt, casualWhy, icDisplay, icOf, icWhy, transDisplay, transOf, transWhy } from "./w30Phonics";
 import { W29_START, dictOf, dictWhy, emphasisDisplay, emphasisOf, emphasisWhy, ibleOf, ibleWhy, spectDisplay, spectOf, spectWhy, weakDisplay, weakOf, weakPrompt, weakWhy } from "./w29Phonics";
@@ -578,6 +579,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド32（たいようの砂漠・L931〜）の フォニックス（語根 geo・-al・方角の ことば・数と 分数と 割合の 読みかた・データの ことばの つづり）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - geo（"geology"）: 「geo（ちきゅう・とち）の ことば。パーツと いみに あう ことばは どれ？」（パーツと いみ → ことば）
+ * - -al（"natural"）: 「-al を つけて ようすの ことばに。ただしい つづりは どれ？」（natural / natureal / naturel）
+ * - 方角（"northern" "northeast" "upward"）: 「ほうがくの ことば。あう ことばは どれ？」（northern / northen / northal）
+ * - 数（"1/2" "30%" "2.5"）: 「英語で なんと よむ？」（one half / one two / two ones）。音は 答えの よみで よむ（1/2 を 日づけと よまない ように）
+ * - データの ことば（"average"）: 「ただしい つづりは どれ？」（average / averege / avrage）
+ * あてはまらなければ null。ワールド31 の 問題より 先に よぶ（-al の ことばを ワールド31 の 家族、geologist を -ist で 問わない）。
+ */
+export function w32Question(item: LearningItemDef, rng: () => number): (Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> & { audioText?: string }) | null {
+  if (item.lessonNo < W32_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const g = geoOf(item.text);
+  if (g && focus.includes("geo")) return { promptJa: "geo（ちきゅう・とち）の ことば。パーツと いみに あう ことばは どれ？", display: geoDisplay(g), choices: pick([g.answer, ...g.wrong]), answer: g.answer, explanationJa: geoWhy(g) };
+  const a = alOf(item.text);
+  if (a && focus.includes("-al")) return { promptJa: "-al を つけて ようすの ことばに。ただしい つづりは どれ？", display: alDisplay(a), choices: pick([a.answer, ...a.wrong]), answer: a.answer, explanationJa: alWhy(a) };
+  const d = directionOf(item.text);
+  if (d && focus.includes(d.focus)) return { promptJa: "ほうがくの ことば。あう ことばは どれ？", display: directionDisplay(d), choices: pick([d.answer, ...d.wrong]), answer: d.answer, explanationJa: directionWhy(d) };
+  const n = numberOf(item.text);
+  if (n && focus.includes(n.word)) return { promptJa: "英語で なんと よむ？", display: numberDisplay(n), choices: pick([n.answer, ...n.wrong]), answer: n.answer, explanationJa: numberWhy(n), audioText: n.answer };
+  const t = dataOf(item.text);
+  if (t && focus.includes(t.focus)) return { promptJa: "ただしい つづりは どれ？", display: dataDisplay(t), choices: pick([t.answer, ...t.wrong]), answer: t.answer, explanationJa: dataWhy(t) };
   return null;
 }
 
@@ -1290,8 +1320,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド28（カタカナ語・英語に なった 日本語・リズム・音の つながり・ことばの パーツ）は その 先（video を ワールド12 の はく、unhappiness を ワールド21 の -ness で 問わない）
       // ワールド29（spect・dict・意見の 強勢・弱形・-ible / -able）は その 先（prediction を ワールド23 の -tion、respectable を ワールド27 の -able で 問わない）
       // ワールド30（auto-・trans-・-ic の 強勢・略語・話しことば）は その 先（automatic を ワールド12 の はく、translation を ワールド23 の -tion で 問わない）
-      // ワールド31（動詞と 名詞の 家族・年号・struct・-ian / -ist・port）は いちばん 先（invention を ワールド23 の -tion、magician を ワールド30 で 問わない）
-      const dq = w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド31（動詞と 名詞の 家族・年号・struct・-ian / -ist・port）は その 先（invention を ワールド23 の -tion、magician を ワールド30 で 問わない）
+      // ワールド32（geo・-al・方角・数の 読みかた・データの つづり）は いちばん 先（natural を ワールド31 の 家族、geologist を -ist で 問わない）
+      const dq = w32Question(item, rng) ?? w31Question(item, rng) ?? w30Question(item, rng) ?? w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

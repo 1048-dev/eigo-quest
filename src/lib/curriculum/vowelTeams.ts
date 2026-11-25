@@ -23,6 +23,7 @@ import { w28Say } from "./w28Phonics";
 import { w29Say } from "./w29Phonics";
 import { w30Say } from "./w30Phonics";
 import { w31Say } from "./w31Phonics";
+import { w32Say } from "./w32Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -84,6 +85,9 @@ export const shortVowelOf = (team: string) => team[0];
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
+  // ワールド32 は その回の ことばで よむ（"geo" "-al" だけで よまない。数は 1/2 → one half）
+  const w32 = w32Say(focus, words);
+  if (w32) return w32;
   // ワールド31 は その回の ことばで よむ（"-tion" "struct" だけで よまない。年号は 1868 → eighteen sixty-eight）
   const w31 = w31Say(focus, words);
   if (w31) return w31;
