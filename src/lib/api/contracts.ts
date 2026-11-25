@@ -584,3 +584,42 @@ export const LineMonthlyResponseSchema = z.object({
 export type LineMonthlyResponse = z.output<typeof LineMonthlyResponseSchema>;
 
 export const LineMonthlyRequestSchema = z.object({ enabled: z.boolean() });
+
+// ===========================================================================
+// パスワードの再設定・暗証番号を忘れた・メールアドレスの追加（run5）
+// ===========================================================================
+/** メールのリンクの トークン（形の くわしい確認は サーバーの isWellFormedToken） */
+const MailTokenInput = z.string().min(1).max(128);
+
+/** POST /api/auth/password-reset/request — 登録の有無に かかわらず 同じ答え */
+export const ForgotPasswordRequestSchema = z.object({ email: EmailInput });
+/** POST /api/auth/password-reset/check・/api/auth/email/check・/api/auth/email/confirm */
+export const MailTokenRequestSchema = z.object({ token: MailTokenInput });
+/** POST /api/auth/password-reset/complete */
+export const ResetPasswordRequestSchema = z.object({ token: MailTokenInput, newPassword: PasswordInput });
+/** POST /api/parent/email — LINE だけで登録した保護者が メールアドレス + パスワードを追加する（確認メールを送る） */
+export const AddEmailRequestSchema = z.object({ email: EmailInput, password: PasswordInput });
+/**
+ * POST /api/parent/reset-pin — 暗証番号を忘れた。
+ * password があれば パスワードで本人確認。無ければ この端末で さきに LINE の本人確認をしていること。
+ */
+export const ResetPinRequestSchema = z.object({ password: z.string().min(1).max(AUTH_LIMITS.passwordMax).optional(), newPin: PinInput });
+
+/** check の答え: リンクが まだ使えるか と、どのメールアドレスあてか（一部を伏せる） */
+export const MailTokenStatusResponseSchema = z.object({
+  ...AUTH_META,
+  valid: bool(false),
+  maskedEmail: z.string().nullable().catch(null),
+});
+export type MailTokenStatusResponse = z.output<typeof MailTokenStatusResponseSchema>;
+
+/** GET /api/parent/reset-pin — 「暗証番号を忘れた」画面で どの本人確認が使えるか */
+export const ResetPinStatusResponseSchema = z.object({
+  ...AUTH_META,
+  hasPassword: bool(false),
+  lineLinked: bool(false),
+  /** この端末で LINE の本人確認をすませて、まだ時間内 */
+  lineVerified: bool(false),
+  lineLoginAvailable: bool(false),
+});
+export type ResetPinStatusResponse = z.output<typeof ResetPinStatusResponseSchema>;

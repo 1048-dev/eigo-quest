@@ -25,6 +25,8 @@ export interface SessionRecord {
   tokenHash: string;
   selectedChildId: string | null;
   pinVerifiedAt: Date | null;
+  /** 「暗証番号を忘れた」で LINE の本人確認をした時刻（古い行・テストでは無いことがある） */
+  lineReauthAt?: Date | null;
   expiresAt: Date;
   createdAt: Date;
 }
@@ -101,6 +103,7 @@ export async function rotateSession(
         tokenHash: hashToken(next),
         selectedChildId: old.selectedChildId,
         pinVerifiedAt: old.pinVerifiedAt,
+        lineReauthAt: old.lineReauthAt ?? null,
         expiresAt: new Date(now.getTime() + SESSION_TTL_MS),
         createdAt: now,
       },
@@ -126,6 +129,14 @@ export async function purgeExpiredSessions(parentId: string, now = new Date()): 
 
 export function needsRotation(session: Pick<SessionRecord, "createdAt">, now = new Date()): boolean {
   return now.getTime() - session.createdAt.getTime() >= SESSION_ROTATE_AFTER_MS;
+}
+
+/** 「暗証番号を忘れた」→ LINE で本人確認してから 暗証番号を決めなおせる時間 */
+export const LINE_REAUTH_MS = 10 * 60_000;
+
+export function isLineReauthFresh(session: Pick<SessionRecord, "lineReauthAt">, now = new Date()): boolean {
+  const t = session.lineReauthAt?.getTime();
+  return t != null && now.getTime() - t >= 0 && now.getTime() - t < LINE_REAUTH_MS;
 }
 
 export function isPinUnlocked(session: Pick<SessionRecord, "pinVerifiedAt">, now = new Date()): boolean {

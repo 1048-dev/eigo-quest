@@ -32,3 +32,45 @@
 ### 確認
 - `npx tsc --noEmit`（本体・scripts）OK、`npx vitest run` 34ファイル 904件 OK、`npx next build` OK。
 - 本物の DB（Docker の PostgreSQL・ポート 5544）での確認は **できませんでした**: Docker Desktop が起動しておらず、この実行では起動の許可が得られなかったため。マイグレーションは `prisma migrate diff` で生成し、メモリ内 Prisma のテストで確認しています。Phase 4 で Docker が使えれば `carry-db-check.ts` / `run4-flow-check.ts` で通し確認します。
+
+## Phase 2: パスワードの再設定・暗証番号を忘れた・メールアドレスの追加（完了）
+
+### やったこと
+- **メール送信のしくみ**（`src/lib/mail/`）: `MAIL_PROVIDER=resend|smtp|outbox` で えらぶ。
+  - `resend`: Resend の HTTP API（`RESEND_API_KEY`・`MAIL_FROM`。15秒でタイムアウト）
+  - `smtp`: nodemailer（`SMTP_URL`・`MAIL_FROM`。接続・あいさつ・通信それぞれ15秒でタイムアウト）。依存に `nodemailer` を追加
+  - `outbox`（キーが無いときの既定）: 送らずに `.data/mail-outbox/`（`MAIL_OUTBOX_DIR`）へ JSON と HTML を書き、ログにファイルの場所だけを出す
+  - MAIL_PROVIDER が空なら RESEND_API_KEY → SMTP_URL → outbox の順。えらんだ送り方に必要な値が足りなければ outbox にして警告。ログには あて先・本文（トークン）を出さない
+  - 文面（`templates.ts`）: 再設定のご案内・再設定しました のお知らせ・メールアドレスの確認・「すでに登録があります」のお知らせ。ていねい語、テキスト + かんたんな HTML、アプリ名「英語クエスト」だけ（会社名なし）、HTML はエスケープ、http(s) 以外のリンクは うけつけない
+- **トークン**: 新しい表 `AuthToken`（`PASSWORD_RESET` / `EMAIL_VERIFY`）。32バイトの乱数を DB には SHA-256 だけ保存。再設定は **30分**、メール確認は **24時間**。**1回だけ**（`usedAt` を「まだ null で期限内のときだけ」書く `updateMany` = 同時に2回送られても1回しか通らない）。新しく発行すると 同じ保護者・同じ種類の まだ使っていないトークンは消す。期限切れから7日たった行は ついでに掃除。`Session.lineReauthAt` も追加（マイグレーション `20261130090000_password_reset` は `prisma migrate diff` で DB なしに作成）。
+- **パスワードを忘れた**: `/login` に「パスワードを忘れた方」→ `/forgot-password`。`POST /api/auth/password-reset/request` は **登録の有無に かかわらず同じ答え**。DB を調べて送るのは **応答のあと**（`after()`。`src/lib/mail/background.ts`）なので、時間でも わからない。登録が無ければ メールもトークンも作らない。
+  - `/reset-password?token=...`: 画面は `?token=` をすぐ URL から消し（Referrer-Policy: no-referrer・検索よけ）、`check`（使わない）→ 新しいパスワード2回 → `complete`。成功すると **その保護者のすべてのセッションを消し**（すべての端末でログアウト）、この端末の cookie も消して `/login?reset=1` へ。「再設定しました」のお知らせメールも送る。
+  - 送ったあとで メールアドレスが変わっていたら そのリンクは使えない。設定画面でパスワードを変えたときも 未使用の再設定リンクを無効に。退会でトークンも消す。
+  - レート制限: 同じ IP から1時間に10回（こえたら 429）、同じメールへは1時間に3通（こえても同じ答えで だまって送らない＝登録の有無を教えない・メール爆撃よけ）、リンクの確認・使用は同じ IP から15分に20回。
+- **暗証番号を忘れた**: 暗証番号パッド（おうちの方ページ・ヘッダーの「おうちの方」ダイアログ）の下に「暗証番号を忘れた」→ `/forgot-pin`。
+  - パスワードがある保護者: アカウントのパスワード + 新しい暗証番号（`POST /api/parent/reset-pin`。15分に8回まで）
+  - LINE と連携ずみ: 「LINEで本人確認する」（`/api/auth/line/start?mode=reauth`）→ コールバックで「始めた保護者が まだログイン中」かつ「戻ってきた LINE が その保護者の LINE と同じ」ことを確認 → セッションに `lineReauthAt` → **10分以内・1回だけ** 新しい暗証番号を決められる。ちがう LINE なら `reauth_mismatch`。
+  - 決めると その端末は暗証番号を入力ずみ → そのまま おうちの方ページへ。
+- **LINE だけの保護者のメールアドレス + パスワード追加**: `/parent` に「メールアドレスでのログインを追加」（パスワードが無い保護者だけ表示）。`POST /api/parent/email`（暗証番号が必要・1時間に5回）→ 確認メール → `/verify-email?token=...` で「確定する」を押すと `Parent.email`・`passwordHash` に入る（`email: null` のときだけ書く・ユニーク違反は `EMAIL_TAKEN`）。そのアドレスが ほかのアカウントで使われていても画面の答えは同じで、そのアドレスに「すでに登録があります（パスワードの再設定はこちら）」のお知らせが届く（確認リンクは作らない）。
+- **画面**: `/forgot-password`・`/reset-password`・`/verify-email`・`/forgot-pin` を追加（ゲームのバー・下のメニューは出さない）。DB 停止中は「ただいまアカウント機能を利用できません」と表示（ページを開いたときの API は 200 + `offline: true` で返す）。
+- **テスト**: `tests/password-reset.test.ts`（40件: 送る・登録の有無で同じ答え・メールなしの LINE 保護者・レート制限・古いリンクの無効化・check は使わない・成功・すべてのセッションが消える・1回だけ・同時に2回・30分の期限・でたらめ／ほかの種類のトークン・弱いパスワード・メールアドレスの変更・設定画面のパスワード変更で無効・ほかの保護者に影響しない・退会・APP_BASE_URL・暗証番号を忘れた（パスワード／LINE／10分／ちがう LINE／未連携／とちゅうで保護者が切りかわる）・メールアドレスの追加（確定・使用中のアドレス・競合・24時間・409/403/400・回数・再設定には使えない））、`tests/mailer.test.ts`（8件: 送り方の えらび方・Resend の HTTP・失敗・outbox・文面とエスケープ）。メモリ内 Prisma に `authToken` と `updateMany` のユニーク確認を追加。合計 36ファイル 952件 すべて OK。
+- 本物の DB 用の確認スクリプト `scripts/reset-db-check.ts`（`npm run check:reset-db`。進みぐあいを表示・`--timeout` 秒で終了）。スモークに新しい4画面を追加。
+- `.env.example` と README に `MAIL_PROVIDER`・`MAIL_FROM`・`RESEND_API_KEY`・`SMTP_URL`・`MAIL_OUTBOX_DIR`（すべて空）と `APP_BASE_URL` の新しい使いみちを記載。
+
+### 決めたこと（理由）
+- 再設定のあとは 自動ではログインさせず、ログイン画面へ（すべてのセッションを消す指示と そろえる。新しいパスワードを ブラウザに覚えてもらいやすい）。
+- 再設定リンクを新しく送ると古いものは無効（さいごのメールだけ有効）。期限切れの案内に「新しいメールが送られています」も入れた。
+- 同じメールへの回数制限は 429 にせず だまって送らない（429 にすると 送った／送らないの差は出ないが、ふつうの答えと同じにしておく方が安全・メール爆撃も防げる）。IP の制限だけ 429。
+- メールのリンクは `APP_BASE_URL` から作る。開発中だけ リクエストの URL を使い、**本番で未設定なら送らない**（Host ヘッダーを書きかえて 他人の再設定リンクを攻撃者のサイトへ向けさせる攻撃を防ぐ）。
+- メールアドレスの確認は「リンクを開く」だけでは確定せず「確定する」ボタン（メールの安全チェックが自動でリンクを開いても 勝手に確定しない）。再設定の画面も 開いただけでは使わない。
+- 追加するパスワードは 申し込みのときに ハッシュにして トークンの行に入れ、確定したときに写す（確認前のアカウントは変えない）。
+- 「暗証番号を忘れた」の LINE 本人確認は、連携ずみの LINE と同じ人か だけを見る（LINE アプリにログインしたままの端末を お子さまが使うと通ってしまう点は、LINE だけの保護者には ほかに確かめる手段が無いため 受け入れた。メールアドレスを追加すればパスワードでも確かめられる）。
+- LINE の本人確認の しるしは 1日ごとのセッション入れ替えでも引きつぐ（10分の間に入れ替わっても失敗しないように）。
+- メールアドレスの「変更」は今回の範囲外（追加だけ。すでにメールがある保護者は 409）。
+- メールの送信は 応答のあと（`after()`）。Vercel などでも 応答のあとに処理を続けられる。テストでは `flushBackgroundTasks()` で待つ。
+- Vercel ではファイルが残らないため outbox は開発用。本番は resend か smtp を設定する（README に記載）。
+
+### 確認
+- `npx tsc --noEmit`（本体・scripts）OK、`npx vitest run` 36ファイル 952件 OK、`npx next build` OK。
+- `npm run smoke:offline`（DB 停止 + next start + Playwright）: 新しい4画面を含めて ぜんぶ OK。
+- 本物の DB（Docker の PostgreSQL・ポート 5544）での確認は **できませんでした**: Docker Desktop が起動していないため（Phase 1 と同じ）。`scripts/reset-db-check.ts` を用意したので、Phase 4 で Docker が使えれば `npm run check:reset-db -- --db postgresql://eigo:eigo@localhost:5544/eigo_quest?schema=public` で通し確認します。

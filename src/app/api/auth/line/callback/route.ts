@@ -1,11 +1,11 @@
 import { beginSession, currentParent } from "@/lib/auth";
 import {
-  completeLineLogin, LINE_REASON_QUERY, LineAuthError, lineLoginConfig, lineRedirect, takeOAuthCookie,
+  completeLineLogin, LINE_REASON_QUERY, LineAuthError, lineLoginConfig, lineModeBackPath, lineRedirect, takeOAuthCookie,
   type LineConfig, type LineIdentity, type LineOAuthState,
 } from "@/lib/auth/line";
 import { clientIp, registerLimiter } from "@/lib/auth/rateLimit";
 import { isDbConnectionError } from "@/lib/api/server";
-import { isDbUp, markDbDown } from "@/lib/db";
+import { isDbUp, markDbDown, prisma } from "@/lib/db";
 import { createLineParent, findParentByLineUserId, linkLine } from "@/lib/services/parentService";
 
 export const dynamic = "force-dynamic";
@@ -21,7 +21,7 @@ export const dynamic = "force-dynamic";
 export async function GET(req: Request) {
   const cfg = lineLoginConfig();
   const saved = await takeOAuthCookie();
-  const back = saved?.mode === "link" ? "/parent" : "/login";
+  const back = lineModeBackPath(saved?.mode);
   if (!cfg) return lineRedirect(null, `${back}?line=not_configured`, req);
 
   const q = new URL(req.url).searchParams;
@@ -31,7 +31,9 @@ export async function GET(req: Request) {
   try {
     if (!(await isDbUp())) return lineRedirect(cfg, `${back}?line=offline`, req);
     const { oauth, identity } = await completeLineLogin(cfg, saved, { code: q.get("code"), state: q.get("state") });
-    return oauth.mode === "link" ? await finishLink(cfg, req, oauth, identity) : await finishLogin(cfg, req, identity);
+    if (oauth.mode === "link") return await finishLink(cfg, req, oauth, identity);
+    if (oauth.mode === "reauth") return await finishReauth(cfg, req, oauth, identity);
+    return await finishLogin(cfg, req, identity);
   } catch (e) {
     if (e instanceof LineAuthError) {
       console.warn(`[auth:line-callback] ${e.reason}`);
@@ -59,6 +61,18 @@ async function finishLogin(cfg: LineConfig, req: Request, identity: LineIdentity
   const created = await createLineParent(identity);
   await beginSession(created.id);
   return lineRedirect(cfg, created.hasPin ? "/who" : "/setup-pin", req);
+}
+
+/**
+ * 「暗証番号を忘れた」の本人確認: 始めた保護者が まだログイン中で、戻ってきた LINE が その保護者に連携ずみの LINE と同じなら、
+ * この端末のセッションに しるし（lineReauthAt）を付ける → 10分以内なら 新しい暗証番号を決められる。
+ */
+async function finishReauth(cfg: LineConfig, req: Request, oauth: LineOAuthState, identity: LineIdentity): Promise<Response> {
+  const ctx = await currentParent();
+  if (!ctx || !oauth.parentId || ctx.parent.id !== oauth.parentId) return lineRedirect(cfg, "/login?line=not_logged_in", req);
+  if (!ctx.parent.lineUserId || ctx.parent.lineUserId !== identity.lineUserId) return lineRedirect(cfg, "/forgot-pin?line=reauth_mismatch", req);
+  await prisma.session.update({ where: { id: ctx.session.id }, data: { lineReauthAt: new Date() } });
+  return lineRedirect(cfg, "/forgot-pin?line=reauth_ok", req);
 }
 
 async function finishLink(cfg: LineConfig, req: Request, oauth: LineOAuthState, identity: LineIdentity): Promise<Response> {

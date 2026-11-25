@@ -4,6 +4,8 @@
  *  - お子さまごとのようす（進みぐあい・連続日数・習得率・最終学習日）と 6つの力のレーダーへのリンク
  *  - お子さまの追加・編集・削除、1日のレッスン回数
  *  - 暗証番号・パスワードの変更、LINE の連携・解除、ログアウト、退会（2段階の確認）
+ *  - LINE だけで登録した保護者は メールアドレス + パスワードを追加できる（確認メール。run5）
+ *  - 暗証番号パッドの下に「暗証番号を忘れた」（/forgot-pin。run5）
  *  - LINE だけで登録した保護者（パスワードなし）は、本人確認に暗証番号を使い、パスワードの変更は出さない
  * どの API でも PIN の期限切れ（PIN_REQUIRED）なら暗証番号パッドに戻り、ログイン切れならログイン画面へ。
  */
@@ -14,7 +16,7 @@ import { AccountHeader, FormMessage } from "@/components/account/Form";
 import { PinPad } from "@/components/account/PinPad";
 import { ChildCard, type Guard } from "@/components/parent/ChildCard";
 import { TrialCarryPanel } from "@/components/parent/TrialCarryPanel";
-import { AddChildForm, ChangePasswordForm, ChangePinForm, DeleteAccountPanel, LineMonthlyPanel, LinePanel } from "@/components/parent/SettingsPanels";
+import { AddChildForm, AddEmailForm, ChangePasswordForm, ChangePinForm, DeleteAccountPanel, LineMonthlyPanel, LinePanel } from "@/components/parent/SettingsPanels";
 import { apiGet } from "@/lib/api/client";
 import {
   AUTH_LIMITS, AuthResultResponseSchema, ChildResponseSchema, ParentOverviewResponseSchema,
@@ -180,6 +182,17 @@ function ParentPage() {
         <section className="card p-4" aria-labelledby="pw-title">
           <h2 id="pw-title" className="rpg-title text-lg">パスワードの変更</h2>
           <div className="mt-3"><ChangePasswordForm guard={guard} /></div>
+        </section>
+      )}
+
+      {!hasPassword && !me?.parent?.email && (
+        <section className="card p-4" aria-labelledby="add-email-title">
+          <h2 id="add-email-title" className="rpg-title text-lg">メールアドレスでのログインを追加</h2>
+          <p className="mb-3 mt-1 text-xs text-[var(--ink-2)]">
+            LINE が使えないときも、メールアドレスとパスワードでログインできるようになります。パスワードを忘れたときや、暗証番号を忘れたときの本人確認にも使えます。
+            お送りする確認メールのリンクを開くと追加されます。
+          </p>
+          <AddEmailForm guard={guard} />
         </section>
       )}
 

@@ -38,6 +38,7 @@ model Parent {
   currentPeriodEnd    DateTime?
   children            User[]
   sessions            Session[]
+  authTokens          AuthToken[]
   reportDeliveries    ReportDelivery[]
   createdAt           DateTime           @default(now())
 }
@@ -89,10 +90,38 @@ model Session {
   tokenHash       String    @unique
   selectedChildId String? /// 「だれが あそぶ？」で選ばれた子ども（User.id）
   pinVerifiedAt   DateTime? /// 保護者PINを入れた時刻（しばらくの間「おうちの方」エリアを開ける）
+  lineReauthAt    DateTime? /// 「暗証番号を忘れた」で LINE の本人確認をした時刻（しばらくの間だけ 暗証番号を決めなおせる）
   expiresAt       DateTime
   createdAt       DateTime  @default(now())
 
   @@index([parentId])
+}
+
+/**
+ * メールで送る 1回かぎりのリンク（run5）。トークンはランダム。DB には SHA-256 だけを保存する。
+ *  - PASSWORD_RESET: パスワードの再設定（30分。使ったら usedAt。再設定したら その保護者の ほかのトークンと セッションを すべて消す）
+ *  - EMAIL_VERIFY : LINE だけで登録した保護者が メールアドレス + パスワードを追加する確認（24時間）。
+ *                   email・passwordHash に 追加したい内容を入れておき、リンクを開いて確定したときに Parent へ写す
+ */
+model AuthToken {
+  id           String           @id @default(cuid())
+  parentId     String
+  parent       Parent           @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  purpose      AuthTokenPurpose
+  tokenHash    String           @unique
+  email        String /// PASSWORD_RESET: 送ったときの メールアドレス（変わっていたら使えない）。EMAIL_VERIFY: 追加する メールアドレス
+  passwordHash String? /// EMAIL_VERIFY だけ: 追加する パスワードの scrypt ハッシュ
+  expiresAt    DateTime
+  usedAt       DateTime?
+  createdAt    DateTime         @default(now())
+
+  @@index([parentId, purpose])
+  @@index([expiresAt])
+}
+
+enum AuthTokenPurpose {
+  PASSWORD_RESET
+  EMAIL_VERIFY
 }
 
 enum SubscriptionStatus {

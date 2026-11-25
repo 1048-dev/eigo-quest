@@ -25,7 +25,17 @@ export const LINE_OAUTH_TTL_MS = 10 * 60_000;
 const COOKIE_PATH = "/api/auth/line";
 const FETCH_TIMEOUT_MS = 10_000;
 
-export type LineMode = "login" | "link";
+/**
+ * login : LINE でログイン（初めての LINE なら登録）
+ * link  : ログイン中の保護者に LINE を連携
+ * reauth: 「暗証番号を忘れた」— ログイン中の保護者が、連携ずみの LINE で本人確認する（run5）
+ */
+export type LineMode = "login" | "link" | "reauth";
+
+/** LINE から戻ったときの 元の画面 */
+export function lineModeBackPath(mode: LineMode | undefined | null): string {
+  return mode === "link" ? "/parent" : mode === "reauth" ? "/forgot-pin" : "/login";
+}
 
 export interface LineConfig {
   channelId: string;
@@ -60,7 +70,7 @@ export interface LineOAuthState {
   state: string;
   nonce: string;
   codeVerifier: string;
-  /** link のときだけ: 連携を始めた保護者（戻ってきたときに同じ保護者か確かめる） */
+  /** link・reauth のときだけ: 始めた保護者（戻ってきたときに同じ保護者か確かめる） */
   parentId: string | null;
   expiresAt: number;
 }
@@ -73,7 +83,7 @@ function rand(bytes = 32): string {
 }
 
 export function newOAuthState(mode: LineMode, parentId: string | null, now = Date.now()): LineOAuthState {
-  return { mode, state: rand(), nonce: rand(), codeVerifier: rand(48), parentId: mode === "link" ? parentId : null, expiresAt: now + LINE_OAUTH_TTL_MS };
+  return { mode, state: rand(), nonce: rand(), codeVerifier: rand(48), parentId: mode === "login" ? null : parentId, expiresAt: now + LINE_OAUTH_TTL_MS };
 }
 
 /** cookie の署名に使う鍵（LINE ログインのチャネルシークレット）。未設定なら署名できない = cookie を受け付けない */
@@ -102,7 +112,7 @@ export function decodeOAuthState(raw: string | undefined | null, key: string | n
   const mac = parts.pop()!;
   if (!safeEqual(mac, sign(parts.join("."), key))) return null;
   const [mode, state, nonce, codeVerifier, parentId, exp] = parts;
-  if (mode !== "login" && mode !== "link") return null;
+  if (mode !== "login" && mode !== "link" && mode !== "reauth") return null;
   if (![state, nonce, codeVerifier].every((x) => TOKEN_RE.test(x))) return null;
   if (parentId !== "-" && !ID_RE.test(parentId)) return null;
   const expiresAt = Number(exp);

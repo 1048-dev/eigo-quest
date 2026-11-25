@@ -13,6 +13,7 @@ const UNIQUE: Record<string, string[]> = {
   user: ["friendCode"],
   coinLedger: ["idempotencyKey"],
   reportDelivery: ["tokenHash"],
+  authToken: ["tokenHash"],
 };
 
 const DEFAULTS: Record<string, () => Row> = {
@@ -21,7 +22,8 @@ const DEFAULTS: Record<string, () => Row> = {
     lineUserId: null, lineDisplayName: null, lineLinkedAt: null, lineFriend: null, lineFriendChangedAt: null, lineMonthlyEnabled: true,
   }),
   reportDelivery: () => ({ status: "PENDING", error: null, sentAt: null }),
-  session: () => ({ selectedChildId: null, pinVerifiedAt: null }),
+  session: () => ({ selectedChildId: null, pinVerifiedAt: null, lineReauthAt: null }),
+  authToken: () => ({ passwordHash: null, usedAt: null }),
   user: () => ({ parentId: null, birthYear: null, schoolGrade: null, avatar: {}, avatarCharacter: "haru", coins: 0, totalCoinsEarned: 0, streakDays: 0, longestStreak: 0, lastStudyDate: null }),
   lessonProgress: () => ({ status: "IN_PROGRESS", completedAt: null, completedOn: null, quizScore: null }),
 };
@@ -165,7 +167,12 @@ export class FakeDb {
       updateMany: async ({ where, data }: { where?: Where; data: Row }) => {
         log("updateMany", { where, data });
         const list = rows().filter((x) => matches(x, where));
-        for (const r of list) applyData(r, data);
+        for (const r of list) {
+          const next = { ...r };
+          applyData(next, data);
+          this.checkUnique(model, next, r);
+          Object.assign(r, next);
+        }
         return { count: list.length };
       },
       upsert: async ({ where, create, update }: { where: Where; create: Row; update: Row }) => {

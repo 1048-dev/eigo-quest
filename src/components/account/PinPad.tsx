@@ -1,16 +1,17 @@
 "use client";
 /**
  * 保護者用の暗証番号（4けた）パッド。4つ目を押すと自動で確認する。
- * キーボードの数字・Backspace でも入力できる。
+ * キーボードの数字・Backspace でも入力できる。下に「暗証番号を忘れた」（/forgot-pin）。
  * PinDialog: 子どもの画面から「おうちの方」エリアに入るときのモーダル。
  */
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { VerifyPinResponseSchema } from "@/lib/api/contracts";
 import { codeOf, isAccountOffline, sendJson } from "@/lib/auth/client";
 
 const KEYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-export function PinPad({ onUnlocked, onNotLoggedIn }: { onUnlocked: () => void; onNotLoggedIn?: () => void }) {
+export function PinPad({ onUnlocked, onNotLoggedIn, showForgot = true }: { onUnlocked: () => void; onNotLoggedIn?: () => void; showForgot?: boolean }) {
   const [pin, setPin] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -79,6 +80,11 @@ export function PinPad({ onUnlocked, onNotLoggedIn }: { onUnlocked: () => void; 
         <button type="button" className="btn btn-ghost !px-0 !py-3 text-xl" onClick={() => press("0")} disabled={busy} aria-label="数字 0">0</button>
         <button type="button" className="btn btn-ghost !px-0 !py-3 text-sm" onClick={back} disabled={busy || pin.length === 0} aria-label="1文字けす">けす</button>
       </div>
+      {showForgot && (
+        <p className="mt-3 text-center">
+          <Link href="/forgot-pin" className="text-xs font-bold text-[var(--on-dark-2)] underline underline-offset-4 hover:text-[var(--volt)]">暗証番号を忘れた</Link>
+        </p>
+      )}
     </div>
   );
 }

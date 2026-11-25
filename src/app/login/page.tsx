@@ -7,6 +7,7 @@ import { LineLoginButton } from "@/components/account/LineLoginButton";
 import { AuthResultResponseSchema } from "@/lib/api/contracts";
 import { fetchMe, notifyAccountChanged, rememberTrial, sendJson, isAccountOffline } from "@/lib/auth/client";
 import { readLineNoticeFromUrl } from "@/lib/auth/lineMessages";
+import { PASSWORD_RESET_DONE_JA } from "@/lib/auth/recoveryMessages";
 
 /** 保護者のログイン（メール + パスワード ／ LINE が設定されていれば「LINEでログイン」も） */
 export default function LoginPage() {
@@ -17,11 +18,14 @@ export default function LoginPage() {
   const [offline, setOffline] = useState(false);
   const [busy, setBusy] = useState(false);
   const [lineAvailable, setLineAvailable] = useState(false);
+  const [notice, setNotice] = useState<string | null>(null);
 
   useEffect(() => {
     // LINE から戻ってきたときのメッセージ（?line=...）
     const n = readLineNoticeFromUrl();
     if (n) setError(n.text);
+    // パスワードを再設定したあと（/reset-password から）
+    if (new URLSearchParams(window.location.search).get("reset") === "1") setNotice(PASSWORD_RESET_DONE_JA);
     void fetchMe().then((r) => setLineAvailable(r.ok && r.data.lineLoginAvailable));
   }, []);
 
@@ -45,7 +49,7 @@ export default function LoginPage() {
     <div className="pb-6">
       <AccountHeader title="おうちの方のログイン" back={{ href: "/welcome", label: "スタート画面へ" }} />
       <form onSubmit={submit} noValidate className="card rpg-rivets space-y-4 p-5" aria-label="保護者のログイン">
-        <FormMessage error={error} />
+        <FormMessage error={error} ok={notice} />
         {lineAvailable && (
           <div className="space-y-3">
             <LineLoginButton />
@@ -56,6 +60,9 @@ export default function LoginPage() {
         <TextField label="メールアドレス" type="email" autoComplete="email" inputMode="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
         <PasswordField label="パスワード" autoComplete="current-password" required value={password} onChange={(e) => setPassword(e.target.value)} />
         <button type="submit" className="btn btn-coin block w-full text-lg" disabled={busy}>{busy ? "確認しています…" : "ログイン"}</button>
+        <p className="text-center text-sm">
+          <Link href="/forgot-password" className="font-bold text-[var(--on-dark-2)] underline underline-offset-4 hover:text-[var(--volt)]">パスワードを忘れた方</Link>
+        </p>
         {offline && (
           <button type="button" className="btn btn-primary block w-full" onClick={() => { rememberTrial(); router.push("/map"); }}>おためしで あそぶ</button>
         )}

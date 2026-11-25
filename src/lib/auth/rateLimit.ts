@@ -56,6 +56,17 @@ export const registerLimiter = new RateLimiter(10, 60 * MIN);
 export const pinLimiter = new RateLimiter(5, 15 * MIN);
 /** パスワードの再入力（暗証番号・パスワードの変更、退会）: 同じ保護者で 15分に 8回まで */
 export const reauthLimiter = new RateLimiter(8, 15 * MIN);
+/**
+ * パスワードを忘れた（run5）:
+ *  - 同じ IP から 1時間に 10回まで（こえたら 429。登録の有無とは関係ないので 何も教えない）
+ *  - 同じメールアドレスへは 1時間に 3通まで（こえても 答えは同じ。だまって 送らない = 登録の有無を教えない・メール爆撃を防ぐ）
+ */
+export const forgotIpLimiter = new RateLimiter(10, 60 * MIN);
+export const forgotEmailLimiter = new RateLimiter(3, 60 * MIN);
+/** 再設定リンク・確認リンクの 確認と 使用: 同じ IP から 15分に 20回まで（トークンの総当たり対策。トークン自体も 256bit） */
+export const tokenIpLimiter = new RateLimiter(20, 15 * MIN);
+/** メールアドレスの追加（確認メール）: 同じ保護者で 1時間に 5回まで */
+export const emailAddLimiter = new RateLimiter(5, 60 * MIN);
 
 /**
  * レート制限のキーにする IP。x-forwarded-for の先頭 → x-real-ip → "unknown"。
@@ -69,5 +80,5 @@ export function clientIp(req: Request): string {
 }
 
 export function resetAllLimiters() {
-  for (const l of [loginLimiter, loginIpLimiter, loginEmailLimiter, registerLimiter, pinLimiter, reauthLimiter]) l.clear();
+  for (const l of [loginLimiter, loginIpLimiter, loginEmailLimiter, registerLimiter, pinLimiter, reauthLimiter, forgotIpLimiter, forgotEmailLimiter, tokenIpLimiter, emailAddLimiter]) l.clear();
 }

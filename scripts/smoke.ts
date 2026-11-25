@@ -48,6 +48,11 @@ const PAGES: { name: string; url: string }[] = [
   { name: "setup-pin", url: "/setup-pin" },
   { name: "login-line-notice", url: "/login?line=not_configured" },
   { name: "download-page", url: `/d/${"x".repeat(43)}` },
+  // run5: パスワードを忘れた・再設定（でたらめなリンク）・メールアドレスの確認・暗証番号を忘れた（DB 停止中）
+  { name: "forgot-password", url: "/forgot-password" },
+  { name: "reset-password", url: `/reset-password?token=${"x".repeat(43)}` },
+  { name: "verify-email", url: `/verify-email?token=${"x".repeat(43)}` },
+  { name: "forgot-pin", url: "/forgot-pin" },
   ...WORLD_LESSONS.map((n) => ({ name: `lesson-${n}`, url: `/lesson/${n}` })),
 ];
 

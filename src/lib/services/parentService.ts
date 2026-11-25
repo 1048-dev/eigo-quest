@@ -330,7 +330,24 @@ export async function changeParentPin(parentId: string, newPin: string): Promise
 }
 
 export async function changeParentPassword(parentId: string, newPassword: string): Promise<void> {
-  await prisma.parent.update({ where: { id: parentId }, data: { passwordHash: await hashSecret(newPassword) } });
+  const passwordHash = await hashSecret(newPassword);
+  await prisma.$transaction([
+    prisma.parent.update({ where: { id: parentId }, data: { passwordHash } }),
+    // まだ使われていない「パスワードの再設定」リンクは 使えなくする
+    prisma.authToken.deleteMany({ where: { parentId, purpose: "PASSWORD_RESET" } }),
+  ]);
+}
+
+/**
+ * 「暗証番号を忘れた」: 本人確認（パスワード または LINE）のあとで 新しい暗証番号を決める。
+ * この端末の セッションは「暗証番号を入力ずみ」にして、LINE の本人確認の しるしは 消す（1回だけ）。
+ */
+export async function resetParentPin(parentId: string, sessionId: string, newPin: string, now = new Date()): Promise<void> {
+  const pinHash = await hashSecret(newPin);
+  await prisma.$transaction([
+    prisma.parent.update({ where: { id: parentId }, data: { pinHash } }),
+    prisma.session.update({ where: { id: sessionId }, data: { pinVerifiedAt: now, lineReauthAt: null } }),
+  ]);
 }
 
 /** 退会: 保護者・セッション・子どもと子どもの学習データをすべて消す */
@@ -339,6 +356,7 @@ export async function deleteParentAccount(parentId: string): Promise<void> {
     const children = await tx.user.findMany({ where: { parentId }, select: { id: true } });
     await deleteUsersData(tx, children.map((c) => c.id));
     await tx.session.deleteMany({ where: { parentId } });
+    await tx.authToken.deleteMany({ where: { parentId } });
     await tx.parent.delete({ where: { id: parentId } });
   });
 }

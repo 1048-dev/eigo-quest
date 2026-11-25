@@ -19,6 +19,9 @@ const MESSAGES: Record<string, LineNotice> = {
   pin_required: { kind: "error", text: "LINE と連携するには、先に暗証番号を入力してください。" },
   already_linked: { kind: "error", text: "この LINE アカウントは、すでに別のアカウントと連携しています。連携できる LINE アカウントは1つのアカウントにつき1つです。" },
   has_other_line: { kind: "error", text: "すでに別の LINE アカウントと連携しています。先に連携を解除してください。" },
+  reauth_ok: { kind: "ok", text: "LINE で本人確認ができました。10分以内に新しい暗証番号を決めてください。" },
+  reauth_mismatch: { kind: "error", text: "このアカウントと連携している LINE アカウントと違うため、本人確認ができませんでした。連携している LINE アカウントでお試しください。" },
+  reauth_not_linked: { kind: "error", text: "このアカウントは LINE と連携していません。アカウントのパスワードで本人確認してください。" },
   rate_limited: { kind: "error", text: "登録の回数が多すぎます。しばらく待ってからもう一度お試しください。" },
 };
 
@@ -35,3 +38,4 @@ export function readLineNoticeFromUrl(): LineNotice | null {
 
 export const LINE_LOGIN_HREF = "/api/auth/line/start?mode=login";
 export const LINE_LINK_HREF = "/api/auth/line/start?mode=link";
+export const LINE_REAUTH_HREF = "/api/auth/line/start?mode=reauth";

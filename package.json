@@ -21,12 +21,14 @@
     "trial:cleanup": "tsx scripts/cleanup-trial.ts",
     "check:line-monthly-db": "tsx scripts/line-monthly-db-check.ts",
     "check:run4-flow": "tsx scripts/run4-flow-check.ts",
+    "check:reset-db": "tsx scripts/reset-db-check.ts",
     "screens:auth": "tsx scripts/auth-ui-screens.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",
     "@prisma/client": "^6.6.0",
     "next": "15.3.2",
+    "nodemailer": "^6.10.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "zod": "^3.24.0"
@@ -34,6 +36,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.10.0",
+    "@types/nodemailer": "^6.4.24",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "playwright": "^1.65.1",

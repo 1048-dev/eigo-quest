@@ -2,11 +2,11 @@
  * 「LINEでログイン」ボタン。API（/api/auth/line/start）へのふつうのリンク（LINE の画面へページ移動する）。
  * LINE ログインが未設定のときは、呼ぶ側でこのボタンを出さない（me.lineLoginAvailable）。
  */
-import { LINE_LINK_HREF, LINE_LOGIN_HREF } from "@/lib/auth/lineMessages";
+import { LINE_LINK_HREF, LINE_LOGIN_HREF, LINE_REAUTH_HREF } from "@/lib/auth/lineMessages";
 
-export function LineLoginButton({ label = "LINEでログイン", mode = "login", className = "" }: { label?: string; mode?: "login" | "link"; className?: string }) {
+export function LineLoginButton({ label = "LINEでログイン", mode = "login", className = "" }: { label?: string; mode?: "login" | "link" | "reauth"; className?: string }) {
   return (
-    <a href={mode === "link" ? LINE_LINK_HREF : LINE_LOGIN_HREF}
+    <a href={mode === "link" ? LINE_LINK_HREF : mode === "reauth" ? LINE_REAUTH_HREF : LINE_LOGIN_HREF}
       className={`flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 font-black text-white shadow-[0_3px_0_#04913f] transition hover:brightness-105 active:translate-y-0.5 active:shadow-none focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[var(--volt)] ${className}`}
       style={{ background: "#06C755" }}>
       <LineMark />

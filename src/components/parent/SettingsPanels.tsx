@@ -128,6 +128,45 @@ export function ChangePasswordForm({ guard }: { guard: Guard }) {
   );
 }
 
+/**
+ * LINE だけで登録した保護者が、メールアドレス + パスワードでのログインを追加する（確認メールのリンクで確定）。
+ * パスワードがあれば「パスワードを忘れた」も使える。
+ */
+export function AddEmailForm({ guard }: { guard: Guard }) {
+  const [email, setEmail] = useState("");
+  const [pw, setPw] = useState("");
+  const [pw2, setPw2] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [ok, setOk] = useState<string | null>(null);
+  const checks = passwordChecks(pw);
+
+  const submit = async (ev: FormEvent) => {
+    ev.preventDefault();
+    setError(null); setOk(null);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) { setError("メールアドレスを正しく入力してください。"); return; }
+    if (!checks.every((c) => c.ok)) { setError(`パスワードは${PASSWORD_RULES_JA}`); return; }
+    if (pw !== pw2) { setError("確認用のパスワードが一致しません。"); return; }
+    setBusy(true);
+    const r = await sendJson("POST", "/api/parent/email", AuthResultResponseSchema, { email: email.trim(), password: pw });
+    setBusy(false);
+    if (!guard(r)) return;
+    if (r.ok && r.data.ok) { setOk(r.data.messageJa || "確認メールをお送りしました。"); setPw(""); setPw2(""); }
+    else setError(r.error ?? "送信できませんでした。時間をおいてもう一度お試しください。");
+  };
+
+  return (
+    <form onSubmit={submit} noValidate className="space-y-3" aria-label="メールアドレスとパスワードの追加">
+      <FormMessage error={error} ok={ok} />
+      <TextField label="メールアドレス" type="email" autoComplete="email" inputMode="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <PasswordField label="パスワード（新しく決める）" autoComplete="new-password" value={pw} onChange={(e) => setPw(e.target.value)}
+        hint={<span>{PASSWORD_RULES_JA} {checks.every((c) => c.ok) && <span className="font-bold text-[var(--ok)]">✔ OK</span>}</span>} />
+      <PasswordField label="パスワード（確認）" autoComplete="new-password" value={pw2} onChange={(e) => setPw2(e.target.value)} />
+      <button type="submit" className="btn btn-coin w-full" disabled={busy}>{busy ? "送信しています…" : "確認メールを送る"}</button>
+    </form>
+  );
+}
+
 /** 退会（2段階の確認: 注意を読んでチェック → パスワードを入れて最終確認） */
 export function DeleteAccountPanel({ guard, onDeleted, usePin = false }: { guard: Guard; onDeleted: () => void; usePin?: boolean }) {
   const [step, setStep] = useState<0 | 1 | 2>(0);

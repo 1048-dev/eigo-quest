@@ -56,13 +56,14 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・33ファイル・881件） |
+| `npm test` | 単体テスト（vitest・36ファイル・952件） |
 | `npm run typecheck` | 型チェック |
-| `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent・/setup-pin・/d/<token>）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
+| `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent・/setup-pin・/d/<token>・/forgot-password・/reset-password・/verify-email・/forgot-pin）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build` |
 | `npm run check:auth-db -- --db <テスト用URL> [--port 3457]` | 本物の DB で migrate deploy → seed → `next start` → 登録・子ども2人・切りかえ・回数制限・持ち主チェック・CSRF・退会後に何も残らないこと まで 41項目を HTTP で確認。**使い捨ての DB を指定すること**（中身を書きかえます） |
 | `npx tsx scripts/carry-db-check.ts --db <テスト用URL> [--port 3458]` | 本物の DB + `next start` で、おためしの きろくの ひきつぎ（1回だけ・持ち主チェック）とアバターの選択・変更 を 18項目確認。**使い捨ての DB を指定すること** |
 | `npm run check:line-db -- --db <テスト用URL> [--port 3461]` | 本物の DB + `next start` で LINE ログイン（state cookie・署名・コールバック・新規登録 → 暗証番号・連携/解除）を確認（LINE のサーバーには接続しない。ダミーの値で動かす）。**使い捨ての DB を指定すること** |
+| `npm run check:reset-db -- --db <テスト用URL> [--port 3459] [--timeout 300]` | 本物の DB + `next start`（メールは outbox）で、パスワードを忘れた（登録の有無で同じ答え）→ メールのリンク → 再設定 → すべての端末でログアウト・リンクの2回目は だめ → 暗証番号を忘れた → 退会でトークンも消える を確認。**使い捨ての DB を指定すること** |
 | `npm run trial:cleanup [-- --dry-run] [-- --days 60]` | 60日 遊ばれていない おためし学習者（と その学習記録）を消す。1日1回 cron で実行する想定（下の「端末ごとの おためし学習者」） |
 | `npm run line:monthly [-- --dry-run] [-- --parent <id>]` | 月間レポート（PDF）を LINE で届ける。キーが無ければ dry-run（下の「LINE で月間レポート」） |
 | `npm run check:line-monthly-db -- --db <テスト用URL> [--port 3463]` | 本物の DB + `next start` で webhook の署名・`line:monthly --dry-run`・ダウンロードページ・おうちの方 API・期限切れ・退会 まで 32項目を確認（LINE には接続しない）。**使い捨ての DB を指定すること** |
@@ -208,7 +209,7 @@ eigo-quest/
 - **おためしの きろくの ひきつぎ**: おためしの きろくは ①この端末の おためし学習者（DB）と ②DB 停止中に遊んだ分（ブラウザの localStorage の「おためしの きろく」）の2つ。②は（`src/lib/offline/trialLog.ts`。クリアしたレッスン・合格したテスト・もらったコイン・遊んだ日・答えた項目）。保護者が登録・ログインして「だれが あそぶ？」で子どもを選ぶと、どちらかに きろくがあれば「おためしで あそんだ きろくを ひきつぐ？」と聞きます（DB 側は `GET /api/trial` で確認。作らない・書かない）。「はい」で `POST /api/children/:id/carry-over` が両方をその子に たし合わせます（レッスン・テスト合格は まだ無い分だけ、コインは合計（ブラウザの分は おためしで ありえる上限まで・DB の分はそのまま）、連続日数は大きい方、記憶はまだ無い項目だけ、モンスターは数を たす）。そのあとブラウザの きろくと `eq_trial_learner` cookie を消します（おためし学習者の行はコピー元として残り、60日後のそうじで消えます）。「いいえ」は その きろくについてだけ覚えます。**「おうちの方」ページの「おためしの きろくを ひきつぐ」ボタン**（お子さまを選んで確認）なら、「いいえ」のあとでも この端末に きろくが残っていれば引き継げます。それぞれ CoinLedger の `trial-carry:<ブラウザのID>` / `trial-carry-db:<おためし学習者のID>` で1回だけ（2回目は `alreadyCarried: true`）。ほかの家の子どもには引き継げません。計算は `src/lib/domain/trialMerge.ts`（`planDeviceTrialMerge`）。
 - **1日の回数制限**: 上限に届くと、新しいレッスンは「きょうの レッスンは ここまで！ また あした あそぼうね。」（403 + `code: "DAILY_LIMIT"`）。完了ずみのレッスンのおさらいはできます。
 - **DB 停止時**: アカウント API は 503 + `offline: true` + ていねいな案内（`GET /api/auth/me` だけは 200 + `loggedIn:false`）。画面はおためしモードへ進めます。
-- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET /api/auth/line/start`・`callback`、`POST /api/auth/line/pin`・`cancel`、`DELETE /api/parent/line`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`GET/PATCH/POST /api/parent/line-monthly`、`DELETE /api/parent/account`、`POST /api/line/webhook`。
+- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET /api/auth/line/start`・`callback`、`POST /api/auth/line/pin`・`cancel`、`DELETE /api/parent/line`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET/POST /api/parent/reset-pin`、`POST /api/parent/email`、`POST /api/auth/password-reset/request`・`check`・`complete`、`POST /api/auth/email/check`・`confirm`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`GET/PATCH/POST /api/parent/line-monthly`、`DELETE /api/parent/account`、`POST /api/line/webhook`。
 - **LINE ログイン（`src/lib/auth/line.ts`）**: 標準の LINE ログイン（OAuth 2.0 / OpenID Connect）。`GET /api/auth/line/start?mode=login|link` が state・nonce・PKCE（S256）を作って httpOnly cookie `eq_line_oauth`（path `/api/auth/line`・10分）に入れ、LINE の認可画面へ（`scope=profile openid`、`bot_prompt=aggressive` で公式アカウントの友だち追加もすすめる）。`GET /api/auth/line/callback` が state を照合 → code をトークンに交換 → ID トークンを LINE の verify エンドポイントで検証し、こちらでも iss・aud・exp・nonce・sub を確認して LINE のユーザーID（`Parent.lineUserId`、ユニーク）を得ます。
   - (a) はじめての LINE → 保護者を作ってログイン → `/setup-pin` で暗証番号を決める（`POST /api/auth/line/pin`）→ お子さまを追加。まちがえて登録したときは `/setup-pin` の「登録を取り消す」（`POST /api/auth/line/cancel`。暗証番号・子どもがまだ無いときだけ）。
   - (b) メールで登録した保護者は `/parent` の「LINE の連携」から連携（`start?mode=link`。暗証番号の入力が必要）・解除（`DELETE /api/parent/line`）。ほかの保護者に連携ずみの LINE は連携できません。LINE だけで登録したアカウントは解除できません（ログインできなくなるため）。
@@ -217,7 +218,11 @@ eigo-quest/
   - 環境変数がそろっていないときは LINE のボタンを出さず（`GET /api/auth/me` の `lineLoginAvailable: false`）、`/parent` に「LINE ログインはまだ設定されていません」と小さく表示します。
   - 安全のため: state cookie は `LINE_LOGIN_CHANNEL_SECRET` で HMAC 署名し（書きかえると受け付けない）、ほかのサイトからのリンク・自動の移動（`Sec-Fetch-Site: cross-site / same-site`）では LINE ログインを始めません。
   - LINE Developers でのチャネル設定: LINE ログインのチャネルを作り、コールバック URL に `LINE_LOGIN_CALLBACK_URL` と同じ値（例 `https://<ドメイン>/api/auth/line/callback`）を登録。友だち追加をすすめるには、そのチャネルに公式アカウント（Messaging API チャネル）をリンクします。手順は [docs/run4/LINE-SETUP.md](docs/run4/LINE-SETUP.md)。
-- 環境変数: `ALLOWED_ORIGINS`（同じホスト以外から受け付けるオリジン。通常は空）、`SEED_DEMO_PARENT`（1 でデモ保護者を seed）、`LINE_LOGIN_CHANNEL_ID`・`LINE_LOGIN_CHANNEL_SECRET`・`LINE_LOGIN_CALLBACK_URL`（LINE ログイン。3つそろったときだけ有効。キーはコードに書かず環境変数だけ）。
+- **パスワードを忘れた（run5・`src/lib/services/accountRecoveryService.ts`）**: `/login` の「パスワードを忘れた方」→ `/forgot-password` でメールアドレスを入れると、`POST /api/auth/password-reset/request` が **登録の有無に かかわらず同じ答え** を返し、DB を調べて メールを送るのは応答のあと（`after()`。時間でも登録の有無が わからないように）。登録があれば `/reset-password?token=...` のリンクを送ります。トークンは32バイトの乱数で、DB（`AuthToken`）には SHA-256 だけ。**30分**で期限切れ・**1回だけ**（`usedAt` を「まだ null のときだけ」書く）・新しく送ると古いリンクは使えません。再設定の画面は `?token=` をすぐ URL から消し（Referrer-Policy: no-referrer）、`POST /api/auth/password-reset/check`（使わずに確認）→ `complete`（新しいパスワード）。成功すると **その保護者のすべてのセッションを消して**（すべての端末でログアウト）ログイン画面へ。「パスワードを再設定しました」のお知らせメールも送ります。設定画面でパスワードを変えたときも、まだ使っていない再設定リンクは無効にします。レート制限: 同じ IP から1時間に10回（こえたら 429）、同じメールへは1時間に3通（こえても同じ答えで だまって送らない）、リンクの確認・使用は同じ IP から15分に20回。
+- **暗証番号を忘れた（`/forgot-pin`）**: 暗証番号パッド（おうちの方ページ・ヘッダーの「おうちの方」）の下の「暗証番号を忘れた」から。パスワードがある保護者は **アカウントのパスワード** で本人確認して新しい暗証番号を決めます（`POST /api/parent/reset-pin {password, newPin}`）。LINE と連携ずみなら **LINE で本人確認** もできます（`GET /api/auth/line/start?mode=reauth` → コールバックで「ログイン中の保護者に連携している LINE と同じ人か」を確認 → セッションの `lineReauthAt` に しるし → 10分以内・1回だけ `newPin` だけで決められる）。決めると その端末は暗証番号を入力ずみになり、そのまま おうちの方ページへ。
+- **LINE だけの保護者のメールアドレス追加**: `/parent` の「メールアドレスでのログインを追加」でメールアドレスと新しいパスワードを入れると（`POST /api/parent/email`。暗証番号の入力が必要・1時間に5回まで）、確認メール（`/verify-email?token=...`・**24時間**・1回だけ）を送ります。リンクの画面で「確定する」を押すと（`POST /api/auth/email/confirm`。リンクを開いただけでは確定しない＝メールの安全チェックが自動で開いても大丈夫）、メールアドレス + パスワードでもログインでき、「パスワードを忘れた」も使えるようになります。そのアドレスが ほかのアカウントで使われているときも画面の答えは同じで、そのアドレスには「すでに登録があります」のお知らせが届きます。
+- **メール送信（`src/lib/mail`）**: `MAIL_PROVIDER=resend|smtp|outbox`。`resend` は Resend の HTTP API（`RESEND_API_KEY`・`MAIL_FROM`）、`smtp` は nodemailer（`SMTP_URL`・`MAIL_FROM`）、`outbox`（キーが無いときの既定）は送らずに `MAIL_OUTBOX_DIR`（既定 `.data/mail-outbox/`）へ JSON と HTML を書き、ログにファイルの場所を出します（開発中は ここからリンクを開く）。特定のサービスに しばらないので、ほかの送信サービスも SMTP で使えます。メールのリンクは `APP_BASE_URL`（公開 URL）から作り、開発中だけは開いているサイトの URL を使います。**本番（`NODE_ENV=production`）で `APP_BASE_URL` が無いとメールを送りません**（Host ヘッダーの書きかえで 他人のリンクを よそへ向けさせないため）。Vercel などでは `outbox` は使えない（ファイルが残らない）ので、`resend` か `smtp` を設定してください。文面は `src/lib/mail/templates.ts`（ていねい語・テキスト + かんたんな HTML・会社名なし）。
+- 環境変数: `ALLOWED_ORIGINS`（同じホスト以外から受け付けるオリジン。通常は空）、`SEED_DEMO_PARENT`（1 でデモ保護者を seed）、`LINE_LOGIN_CHANNEL_ID`・`LINE_LOGIN_CHANNEL_SECRET`・`LINE_LOGIN_CALLBACK_URL`（LINE ログイン。3つそろったときだけ有効。キーはコードに書かず環境変数だけ）、`APP_BASE_URL`（メールのリンクのもと）・`MAIL_PROVIDER`・`MAIL_FROM`・`RESEND_API_KEY`・`SMTP_URL`・`MAIL_OUTBOX_DIR`（メール送信）。
 
 ## DBが止まっていても動く「おためしモード」
 
@@ -400,7 +405,7 @@ npm run line:monthly -- --month 2026-11 --force
 
 | 項目 | 今の実装 | 本番での想定 |
 |---|---|---|
-| 認証 | 保護者アカウント（メール＋パスワード・暗証番号・子どもを選ぶ）は実装済み。パスワードを忘れたときの再設定・メールアドレスの確認は未実装。レート制限はメモリ内 | メール送信を用意して再設定と確認を追加。サーバーを複数台にするならレート制限を DB / Redis へ。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
+| 認証 | 保護者アカウント（メール＋パスワード・LINE・暗証番号・子どもを選ぶ）、パスワードの再設定・暗証番号を忘れた・メールアドレスの確認（run5）は実装済み。レート制限はメモリ内 | 送信サービス（Resend か SMTP）のキーと `MAIL_FROM`・`APP_BASE_URL` を設定。サーバーを複数台にするならレート制限を DB / Redis へ。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
 | AI教師の動画 | SVGアバター（口とジェスチャーのアニメーション）＋ブラウザの音声合成 | 事前に生成したアバター動画を `Lesson.videoUrl` に入れる（UIはすでに対応済み） |
 | 音声 | ブラウザの音声合成（`NEXT_PUBLIC_RECORDED_AUDIO=1` のときだけ `/media/audio/{audioKey}.mp3` を優先） | ネイティブの収録音声か、事前に生成したTTS |
 | 発音判定 | Web Speech API で単語の一致率 × 確信度 | 音素単位で評価できるAPIを `PronunciationScorer` の実装として差し替える |
