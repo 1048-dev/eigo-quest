@@ -45,6 +45,7 @@ import { academicOf, bioOf, ologyOf, pauseOf, unitOf, w36FocusOf } from "@/lib/c
 import { adverbOf, simileOf, soundWordOf, storyVerbOf, suspenseOf, w37FocusOf } from "@/lib/curriculum/w37Phonics";
 import { characterOf, feelingSpellOf, idiomOf, phrasalOf, toneOf, w38FocusOf } from "@/lib/curriculum/w38Phonics";
 import { bigNumberOf, debateOf, ecoWordOf, hedgeOf, markerOf, w39FocusOf } from "@/lib/curriculum/w39Phonics";
+import { partsReviewOf, pauseReviewOf, rootReviewOf, soundCheckOf, spellReviewOf, w40FocusOf } from "@/lib/curriculum/w40Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -4600,5 +4601,153 @@ describe("カリキュラム: ワールド39 の決まりごと（せかいの�
     const lanterns: Record<number, string> = { 1145: "Lantern of Knowing", 1150: "Lantern of Many Views", 1155: "Lantern of Debate", 1160: "Lantern of Action", 1165: "Lantern of Agreement", 1170: "Lantern of Hope" };
     for (const [n, name] of Object.entries(lanterns)) expect(story(Number(n)), `L${n}`).toContain(name);
     expect(story(1170)).toMatch(/\bstar\b/i);
+  });
+});
+
+describe("カリキュラム: ワールド40 の決まりごと（はじまりの星・6 年間の グランドフィナーレ）", () => {
+  const w40 = LESSONS.filter((l) => l.world === 40);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (spellReviewOf(w) ? "spell" : partsReviewOf(w) ? "parts" : rootReviewOf(w) ? "root" : pauseReviewOf(w) ? "pause" : soundCheckOf(w) ? "sound" : "?");
+
+  it("ワールド40 は 1171〜1200 の 30 レッスン、ステージ5・B1+、学年の めやすは 高校上級。カリキュラムは ちょうど 1,200 レッスン", () => {
+    if (w40.length === 0) return; // 未作成ならスキップ
+    expect(w40.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 1171 + i));
+    expect(LESSONS).toHaveLength(1200);
+    for (const l of w40) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校上級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(5);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1+");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w40.length === 0) return;
+    const titles = ["The Star of Beginnings", "Back to the Forest", "I've Learned So Much", "My Favorite World", "Journey Timeline",
+      "My Best Work", "Me Then, Me Now", "What Was the Hardest Part?", "Advice for New Learners", "Portfolio Presentation",
+      "Interview Practice 1", "Interview Practice 2", "Interview Practice 3", "Interview Practice 4", "Mock Interview",
+      "I Hope to…", "By the Time I'm Twenty", "English and My Future", "A Letter to Future Me", "Future Dreams Fair",
+      "Thank You, Everyone", "Thank You, Ms. Emma", "Writing My Graduation Speech", "Final Speech Rehearsal", "Birimo's Secret",
+      "Grand Review: Talk About Anything", "Grand Review: Tell a Story", "Grand Review: Share Your Opinion", "Graduation Eve", "World 40 Grand Finale"];
+    expect(w40.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: つづり（ステージ1〜2）→ ことばの パーツ（ステージ3）→ 語根（ステージ4）→ スピーチの 間 → 苦手な 音（各ブロックの 5回目と L1196〜1200 は ふりかえり）", () => {
+    if (w40.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(1171, 1174, "spelling-review");
+    rule(1176, 1179, "word-parts-review");
+    rule(1181, 1184, "roots-review");
+    rule(1186, 1189, "speech-pauses");
+    rule(1191, 1194, "tricky-sounds");
+    for (const n of [1175, 1180, 1185, 1190, 1195, 1196, 1197, 1198, 1199, 1200]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    for (const l of w40) {
+      for (const w of l.phonics.words) {
+        const f = w40FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w40FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // ふりかえり L1196〜1200 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(1196, 1200)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["spell", "parts", "root", "pause", "sound"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w40.length === 0) return;
+    const want: Record<number, string> = {
+      1171: "This star shows where every journey began.", 1173: "I've learned so much since I started.", 1176: "This is the story I wrote in World 37.",
+      1180: "Let me show you my portfolio.", 1181: "Please tell me about yourself.", 1182: "Look at the picture. What is the boy doing?",
+      1184: "Could you say that again, please?", 1185: "Thank you. That's the end of the test.", 1186: "I hope to visit many countries someday.",
+      1191: "I couldn't have done it without you.", 1192: "Thank you for always believing in us.", 1193: "Six years ago, I didn't know any English.",
+      1194: "Pause here. Smile. Look at the audience.", 1195: "Birimo had been watching over us all along.", 1196: "Let's talk about anything you like!",
+      1198: "I believe that learning languages connects people.", 1199: "Tomorrow, a new journey begins.", 1200: "This is not the end. It's a new beginning!",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(1172)).toMatch(/^Do you remember our first lesson\? .*Hello! I'm Haru\.$/);
+    expect(core(1174)).toMatch(/^My favorite world was .* because /);
+    expect(core(1175)).toMatch(/^In the first year, .*By the third year, /);
+    expect(core(1177)).toMatch(/^At first, I could only say hello\. Now, I can /);
+    expect(core(1178)).toMatch(/^The hardest part was .*, but I kept going\.$/);
+    expect(core(1179)).toMatch(/^My advice is /);
+    expect(core(1183)).toMatch(/^Do you think .*\? Why\?$/);
+    expect(core(1187)).toMatch(/^By the time I'm twenty, I'd like to /);
+    expect(core(1188)).toMatch(/^I want to use English to /);
+    expect(core(1189)).toMatch(/^Dear me in ten years, /);
+    expect(core(1190)).toMatch(/^In the future, I'd like to .* because /);
+    expect(core(1197)).toMatch(/^Once upon a time, four friends found a map/);
+  });
+
+  it("文法の じゅんばん: since I started は L1173、My advice is は L1179、I hope to は L1186、By the time I'm は L1187、couldn't have done it without は L1191、had been watching は L1195 から", () => {
+    if (w40.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bsince I started\b/i, 1173],
+      [/\bmy advice is\b/i, 1179],
+      [/\bI hope to\b/i, 1186],
+      [/\bby the time I'm\b/i, 1187],
+      [/\bcouldn't have done it without\b/i, 1191],
+      [/\bhad been watching\b/i, 1195],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(1171, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ5: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・330 語 以上で 100 語 以上の 読みものを ふくむ、会話シーンは 7〜9 行（ブロックの まとめは 10 行まで）、AI 会話は 6 かい いじょう、L1200 は スピード TPR", () => {
+    if (w40.length === 0) return;
+    const ends = [1175, 1180, 1185, 1190, 1195, 1200];
+    for (const l of w40) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z0-9']/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(330);
+      const reading = (s.match(/"([^"]+)"/) ?? ["", ""])[1];
+      expect(reading.split(/\s+/).filter(Boolean).length, `L${l.lessonNo} の 読みもの`).toBeGreaterThanOrEqual(100);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(7);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(ends.includes(l.lessonNo) ? 10 : 9);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+      expect(l.conversation!.aiTask.goalJa, `L${l.lessonNo}`).toMatch(/6 ?かい/);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（portfolio・mock interview）
+    expect(w40.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([1176, 1185]);
+    expect(at(1200)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。こわい ことば・ほんとうの 試験や 団体の なまえを つかわない。面接・手紙・スピーチ・フリートークの 回は ほんとうの なまえを いわなくて よいと goalJa に 明記", () => {
+    if (w40.length === 0) return;
+    for (const l of w40) {
+      expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (real |full )?(name|address|school|age|birthday|phone|email|passport number)|where do you live|how old are you|when were you born/i);
+      expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(kill|killed|blood|dead|die|died|dying|death|gun|knife|hate|hated|stupid|idiot|dumb|ugly|loser|shut up|war|wars|bomb|starve|starving|disaster)\b/i);
+      expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(Eiken|TOEIC|TOEFL|IELTS|UN|UNICEF)\b/);
+    }
+    for (const n of [1181, 1185, 1189, 1193, 1196]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+  });
+
+  it("物語: L1171 で 星の 番人 セレストと 6 つの 光 → 6 つの まとめで 光が ともる → L1195 ビリモの ひみつ → L1200 卒業式で 新しい はじまり", () => {
+    if (w40.length === 0) return;
+    const story = (n: number) => at(n)!.teacherScript + " " + said(n);
+    expect(story(1171)).toMatch(/\bCeleste\b/);
+    expect(story(1171)).toMatch(/\brays?\b/i);
+    expect(story(1172)).toMatch(/Forest of Beginnings/);
+    expect(story(1176)).toMatch(/\bportfolio\b/i);
+    expect(story(1185)).toMatch(/\bmock interview\b/i);
+    expect(story(1195)).toMatch(/\bBirimo\b/);
+    for (const l of range(1171, 1194)) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\bBirimo's secret\b/i);
+    const rays: Record<number, string> = { 1175: "Ray of Memories", 1180: "Ray of Growth", 1185: "Ray of Courage", 1190: "Ray of Dreams", 1195: "Ray of Thanks", 1200: "Ray of Beginnings" };
+    for (const [n, name] of Object.entries(rays)) {
+      expect(story(Number(n)), `L${n}`).toContain(name);
+      for (const l of range(1171, Number(n) - 1)) expect(story(l.lessonNo), `L${l.lessonNo} ${name}`).not.toContain(name);
+    }
+    expect(story(1200)).toMatch(/\bgraduat/i);
   });
 });

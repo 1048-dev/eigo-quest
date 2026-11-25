@@ -20,6 +20,7 @@ import { w36Example } from "./w36Phonics";
 import { w37Example } from "./w37Phonics";
 import { w38Example } from "./w38Phonics";
 import { w39Example } from "./w39Phonics";
+import { w40Example } from "./w40Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -64,6 +65,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   const ws = words.map((w) => w.trim()).filter(Boolean);
   const lower = (w: string) => w.toLowerCase();
 
+  // ワールド40（つづり・ことばの パーツ・語根・スピーチの 間・苦手な 音の 総まとめ）は その focus の ことば・フレーズを よむ
+  const w40 = w40Example(focus.trim(), ws);
+  if (w40) return w40;
   // ワールド39（環境の ことばの パーツ・大きな 数と 割合・ディベートの プロソディ・つなぎの ことば・ヘッジ）は その focus の ことば・数・文の はじめを よむ
   const w39 = w39Example(focus.trim(), ws);
   if (w39) return w39;
