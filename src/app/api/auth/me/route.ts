@@ -19,7 +19,7 @@ export const GET = withAuthApi("me", async () => {
     if (await readSessionToken()) await clearSessionToken();
     return authOk(LOGGED_OUT);
   }
-  const session = needsRotation(ctx.session, now) ? (await rotateCurrentSession(ctx, now)) ?? ctx.session : ctx.session;
+  const session = needsRotation(ctx.session, now) ? (await rotateCurrentSession(ctx, now, { routine: true })) ?? ctx.session : ctx.session;
   const children = await listChildren(ctx.parent.id);
   const selectedChildId = children.some((c) => c.id === session.selectedChildId) ? session.selectedChildId : null;
   return authOk({

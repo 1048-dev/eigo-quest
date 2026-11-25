@@ -41,14 +41,27 @@ export class RateLimiter {
 }
 
 const MIN = 60_000;
-/** ログイン: 同じ IP + メールで 15分に 8回、同じ IP から 15分に 30回まで */
+/**
+ * ログイン: 同じ IP + メールで 15分に 8回、同じ IP から 15分に 30回、
+ * さらに IP に関係なく同じメールに 15分に 20回まで。
+ * （x-forwarded-for はプロキシの無い環境では送り手が自由に書けるので、IP だけの制限はすりぬけられる。
+ *   メールごとの制限があれば、IP を変えながら 1つのアカウントを総当たりすることはできない）
+ */
 export const loginLimiter = new RateLimiter(8, 15 * MIN);
 export const loginIpLimiter = new RateLimiter(30, 15 * MIN);
+export const loginEmailLimiter = new RateLimiter(20, 15 * MIN);
 /** 登録: 同じ IP から 1時間に 10回まで */
 export const registerLimiter = new RateLimiter(10, 60 * MIN);
-/** 保護者PIN・パスワード再入力（設定変更・退会）: 同じ保護者で 15分に 8回まで */
-export const pinLimiter = new RateLimiter(8, 15 * MIN);
+/** 保護者PIN（4けた = 1万通り）: 同じ保護者で 15分に 5回まで（子どもが当てずっぽうで開けられないように） */
+export const pinLimiter = new RateLimiter(5, 15 * MIN);
+/** パスワードの再入力（暗証番号・パスワードの変更、退会）: 同じ保護者で 15分に 8回まで */
+export const reauthLimiter = new RateLimiter(8, 15 * MIN);
 
+/**
+ * レート制限のキーにする IP。x-forwarded-for の先頭 → x-real-ip → "unknown"。
+ * 本番でプロキシ（Vercel など）の後ろに置く前提。プロキシが無いと書きかえられるので、
+ * 総当たり対策の本命はメールごと・保護者ごとの制限（上）。
+ */
 export function clientIp(req: Request): string {
   const fwd = req.headers.get("x-forwarded-for");
   if (fwd) return fwd.split(",")[0]!.trim() || "unknown";
@@ -56,5 +69,5 @@ export function clientIp(req: Request): string {
 }
 
 export function resetAllLimiters() {
-  for (const l of [loginLimiter, loginIpLimiter, registerLimiter, pinLimiter]) l.clear();
+  for (const l of [loginLimiter, loginIpLimiter, loginEmailLimiter, registerLimiter, pinLimiter, reauthLimiter]) l.clear();
 }

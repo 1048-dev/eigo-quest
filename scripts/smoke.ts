@@ -9,13 +9,18 @@
  *   npx tsx scripts/smoke.ts http://localhost:3100
  *   npx tsx scripts/smoke.ts http://localhost:3100 docs/night2/screens/final
  *
+ * 保護者アカウントの 画面（/welcome・/register・/login・/who・/parent）も ひらき、DB 停止中の アカウントの 流れも 確かめる:
+ *   API: me は loggedIn:false、登録・ログイン・子ども・ようすは 503 + offline:true、ログアウトは 200
+ *   画面: スタート →「おためしで あそぶ」→ マップ、次からは / → マップ、ログイン・登録の ていねいな 案内 → おためしへ、
+ *         /who・/parent の DB 停止の 案内、古い ログイン cookie が 残っていても おためしで 遊べる
+ *
  * さいごに おためしモードの 流れも 確かめる:
  *   API（DB なし）: レッスン完了・かいわ・まとめ視聴 が success / ok で 返る
  *   画面: この ブラウザで Lesson 1 を クリアした きろくが あれば、マップに「きょうのまとめ」リンクが 出る
  */
 import { mkdirSync } from "node:fs";
 import path from "node:path";
-import { chromium, type Browser, type Page } from "playwright";
+import { chromium, type Browser, type BrowserContext, type Page } from "playwright";
 
 const BASE = (process.argv[2] ?? process.env.SMOKE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 /** 保存先（2つめの 引数 か SMOKE_OUT で かえられる。さいごの 確認は docs/night2/screens/final） */
@@ -26,6 +31,11 @@ const WORLD_LESSONS = Array.from({ length: 12 }, (_, i) => i * 30 + 1);
 
 const PAGES: { name: string; url: string }[] = [
   { name: "home", url: "/" },
+  { name: "welcome", url: "/welcome" },
+  { name: "register", url: "/register" },
+  { name: "login", url: "/login" },
+  { name: "who", url: "/who" },
+  { name: "parent", url: "/parent" },
   { name: "map", url: "/map" },
   { name: "dashboard", url: "/dashboard" },
   { name: "gacha", url: "/gacha" },
@@ -44,13 +54,16 @@ const ERROR_TEXT = [
   /通信がうまくいかなかった/, /サーバーで問題が起きた/, /エラー/, /見つからないよ/, /まだ ひらいていない/,
 ];
 /** 「よみこみ中」の 文言（これが 残っていたら 止まっている） */
-const LOADING_TEXT = /よみこみちゅう|じゅんびちゅう|きろくしています/;
+const LOADING_TEXT = /よみこみちゅう|じゅんびちゅう|きろくしています|読み込み中/;
 
 interface Problem { page: string; kind: string; detail: string }
 const problems: Problem[] = [];
 const fail = (page: string, kind: string, detail: string) => problems.push({ page, kind, detail: detail.slice(0, 300) });
 
-function watch(page: Page, name: string) {
+/** DB 停止中の アカウント API は 503 + offline:true を 返す（ていねいな 案内を 出すための 正しい 応答） */
+const ACCOUNT_API = /\/api\/(auth|children|parent)\//;
+
+function watch(page: Page, name: string, opts: { allowAccount503?: boolean } = {}) {
   page.on("pageerror", (e) => fail(name, "pageerror", e.message));
   page.on("console", (m) => {
     if (m.type() !== "error") return;
@@ -62,6 +75,7 @@ function watch(page: Page, name: string) {
   page.on("response", (r) => {
     const s = r.status();
     const url = r.url();
+    if (s === 503 && opts.allowAccount503 && ACCOUNT_API.test(url)) return;
     if (s >= 500) fail(name, "http", `${s} ${r.request().method()} ${url}`);
     // API の 4xx は ゲーム上の おしらせ（ロック中など）。ファイルの 404 は こわれた リンク
     else if (s === 404 && !url.includes("/api/") && !/favicon\.ico/.test(url)) fail(name, "http", `404 ${url}`);
@@ -120,8 +134,8 @@ async function visit(browser: Browser, p: { name: string; url: string }, prepare
   return page;
 }
 
-async function api(method: "GET" | "POST", url: string, body?: unknown) {
-  const r = await fetch(BASE + url, { method, headers: { "content-type": "application/json" }, body: body === undefined ? undefined : JSON.stringify(body) });
+async function api(method: "GET" | "POST" | "PATCH" | "DELETE", url: string, body?: unknown) {
+  const r = await fetch(BASE + url, { method, headers: { "content-type": "application/json", origin: BASE }, body: body === undefined ? undefined : JSON.stringify(body) });
   const text = await r.text();
   let json: Record<string, unknown> = {};
   try { json = JSON.parse(text) as Record<string, unknown>; } catch { fail(`api ${url}`, "json", text.slice(0, 120)); }
@@ -165,6 +179,114 @@ async function offlineFlow(browser: Browser) {
   await ctx.close();
 }
 
+/** DB 停止中の 保護者アカウント（おためしモードで 動きつづける こと） */
+async function accountOfflineFlow(browser: Browser) {
+  console.log("DB 停止中の アカウント（API）");
+  const me = await api("GET", "/api/auth/me");
+  if (me.status !== 200 || me.json.loggedIn !== false) fail("api auth/me", "api", JSON.stringify(me.json));
+  else console.log(`  ✓ me → loggedIn:false offline=${me.json.offline}`);
+  const offlineCalls: [string, "GET" | "POST" | "PATCH" | "DELETE", string, unknown?][] = [
+    ["登録", "POST", "/api/auth/register", { email: "smoke@example.com", password: "passw0rd1", pin: "1234" }],
+    ["ログイン", "POST", "/api/auth/login", { email: "smoke@example.com", password: "passw0rd1" }],
+    ["子ども一覧", "GET", "/api/children"],
+    ["子ども追加", "POST", "/api/children", { nickname: "テスト", schoolGrade: 2 }],
+    ["暗証番号", "POST", "/api/parent/verify-pin", { pin: "1234" }],
+    ["ようす", "GET", "/api/parent/overview"],
+    ["設定", "GET", "/api/parent/settings"],
+  ];
+  for (const [label, method, url, body] of offlineCalls) {
+    const r = await api(method, url, body);
+    if (r.status !== 503 || r.json.offline !== true || r.json.success !== false || typeof r.json.messageJa !== "string") fail(`api ${url}`, "api", `${r.status} ${JSON.stringify(r.json)}`);
+    else console.log(`  ✓ ${label} → 503 offline（ていねいな 案内）`);
+  }
+  const out = await api("POST", "/api/auth/logout");
+  if (out.status !== 200 || out.json.ok !== true) fail("api auth/logout", "api", JSON.stringify(out.json));
+  else console.log("  ✓ ログアウト → 200");
+
+  console.log("DB 停止中の アカウント（画面）");
+  const step = async (name: string, fn: (page: Page) => Promise<void>, prepare?: (ctx: BrowserContext) => Promise<void>) => {
+    const ctx = await browser.newContext({ viewport: { width: 420, height: 900 }, locale: "ja-JP" });
+    const page = await ctx.newPage();
+    watch(page, name, { allowAccount503: true });
+    try {
+      if (prepare) await prepare(ctx);
+      await fn(page);
+      await checkText(page, name);
+      await shot(page, name);
+      console.log(`  ✓ ${name}`);
+    } catch (e) {
+      fail(name, "exception", (e as Error).message);
+      console.log(`  ✗ ${name}`);
+    } finally {
+      await ctx.close();
+    }
+  };
+
+  // はじめて → スタート画面 →「おためしで あそぶ」→ マップ。次からは / で マップへ
+  await step("trial-from-welcome", async (page) => {
+    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    await page.waitForURL(/\/welcome$/, { timeout: 20_000 });
+    await settle(page, "trial-from-welcome");
+    await page.getByRole("button", { name: "おためしで あそぶ" }).click();
+    await page.waitForURL(/\/map$/, { timeout: 20_000 });
+    await settle(page, "trial-from-welcome");
+    if ((await page.getByText("おためしモード").count()) === 0) fail("trial-from-welcome", "trial", "マップの ヘッダーに「おためしモード」が 出ない");
+    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    await page.waitForURL(/\/map$/, { timeout: 20_000 }).catch(() => fail("trial-from-welcome", "redirect", `2回目の / が マップに 行かない（${page.url()}）`));
+    await settle(page, "trial-from-welcome");
+  });
+
+  // ログインしようとしても DB が 止まっている → ていねいな 案内 →「おためしで あそぶ」
+  await step("login-offline", async (page) => {
+    await page.goto(BASE + "/login", { waitUntil: "domcontentloaded" });
+    await settle(page, "login-offline");
+    await page.getByLabel("メールアドレス").fill("smoke@example.com");
+    await page.getByLabel("パスワード", { exact: true }).fill("passw0rd1");
+    await page.getByRole("button", { name: "ログイン", exact: true }).click();
+    await page.getByText("ただいまアカウント機能を利用できません").first().waitFor({ timeout: 20_000 });
+    await shot(page, "login-offline-message");
+    await page.getByRole("button", { name: "おためしで あそぶ" }).click();
+    await page.waitForURL(/\/map$/, { timeout: 20_000 });
+    await settle(page, "login-offline");
+  });
+
+  // 登録しようとしても DB が 止まっている → ていねいな 案内（エラー画面に しない）
+  await step("register-offline", async (page) => {
+    await page.goto(BASE + "/register", { waitUntil: "domcontentloaded" });
+    await settle(page, "register-offline");
+    await page.getByLabel("メールアドレス").fill("smoke@example.com");
+    await page.getByLabel("パスワード", { exact: true }).fill("passw0rd1");
+    await page.getByLabel("パスワード（確認）", { exact: true }).fill("passw0rd1");
+    await page.getByLabel("暗証番号", { exact: true }).fill("1234");
+    await page.getByLabel("暗証番号（確認）", { exact: true }).fill("1234");
+    await page.locator('form button[type="submit"]').click();
+    await page.getByText("ただいまアカウント機能を利用できません").first().waitFor({ timeout: 20_000 });
+  });
+
+  // 古い ログイン cookie が 残っていても（DB 停止）、/ → /who の 案内 → おためしで マップ
+  const stale = async (ctx: BrowserContext) => {
+    await ctx.addCookies([{ name: "eq_session", value: "s".repeat(43), url: BASE, httpOnly: true, sameSite: "Lax" }]);
+  };
+  await step("stale-cookie-offline", async (page) => {
+    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    await page.waitForURL(/\/who$/, { timeout: 20_000 });
+    await settle(page, "stale-cookie-offline");
+    await page.getByText("いまは アカウントに つながらないよ").first().waitFor({ timeout: 20_000 });
+    await shot(page, "who-offline");
+    await page.getByRole("button", { name: "おためしで あそぶ" }).click();
+    await page.waitForURL(/\/map$/, { timeout: 20_000 });
+    await settle(page, "stale-cookie-offline");
+    if (!page.url().endsWith("/map")) fail("stale-cookie-offline", "redirect", `マップに いられない（${page.url()}）`);
+  }, stale);
+
+  // おうちの方ページ（DB 停止）は ていねいな 案内
+  await step("parent-offline", async (page) => {
+    await page.goto(BASE + "/parent", { waitUntil: "domcontentloaded" });
+    await settle(page, "parent-offline");
+    await page.getByText("ただいまアカウント機能を利用できません").first().waitFor({ timeout: 20_000 });
+  }, stale);
+}
+
 async function main() {
   mkdirSync(OUT, { recursive: true });
   console.log(`スモークテスト: ${BASE}`);
@@ -172,6 +294,7 @@ async function main() {
   try {
     for (const p of PAGES) await visit(browser, p);
     await offlineFlow(browser);
+    await accountOfflineFlow(browser);
   } finally {
     await browser.close();
   }

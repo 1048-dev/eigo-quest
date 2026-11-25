@@ -14,6 +14,7 @@
     "worksheets": "python3 worksheets/generate_worksheets.py --all",
     "worksheets:month": "python3 worksheets/generate_worksheets.py --month",
     "smoke": "tsx scripts/smoke.ts",
+    "smoke:offline": "tsx scripts/smoke-offline.ts",
     "check:auth-db": "tsx scripts/auth-db-check.ts",
     "screens:auth": "tsx scripts/auth-ui-screens.ts"
   },

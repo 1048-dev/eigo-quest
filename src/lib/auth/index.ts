@@ -10,7 +10,7 @@
  */
 import { prisma, isDbUp } from "@/lib/db";
 import { clearSessionToken, readSessionToken, writeSessionToken } from "./cookies";
-import { createSession, destroySession, isPinUnlocked, purgeExpiredSessions, readSession, rotateSession, type SessionRecord } from "./session";
+import { createSession, destroySession, isPinUnlocked, purgeExpiredSessions, readSession, ROTATE_GRACE_MS, rotateSession, type SessionRecord } from "./session";
 
 export const DEMO_USER_ID = "demo-user";
 
@@ -99,9 +99,13 @@ export async function beginSession(parentId: string, opts: { pinVerified?: boole
   return session;
 }
 
-/** セッションを新しいトークンに入れ替えて cookie も書きかえる */
-export async function rotateCurrentSession(ctx: AuthContext, now = new Date()): Promise<SessionRecord | null> {
-  const next = await rotateSession(ctx.token, now);
+/**
+ * セッションを新しいトークンに入れ替えて cookie も書きかえる。
+ * routine = true（1日ごとの入れ替え）のときは、古いトークンを ROTATE_GRACE_MS だけ使えるようにする。
+ * パスワード変更など安全のための入れ替えは routine = false（古いトークンはすぐ無効）。
+ */
+export async function rotateCurrentSession(ctx: AuthContext, now = new Date(), opts: { routine?: boolean } = {}): Promise<SessionRecord | null> {
+  const next = await rotateSession(ctx.token, now, { graceMs: opts.routine ? ROTATE_GRACE_MS : 0 });
   if (!next) return null;
   await writeSessionToken(next.token, next.session.expiresAt);
   return next.session;

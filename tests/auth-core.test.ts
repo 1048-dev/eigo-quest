@@ -104,6 +104,21 @@ describe("セッション", () => {
     expect(db.table("session")).toHaveLength(1);
   });
 
+  it("ふだんの入れ替え（猶予つき）: 古いトークンは猶予のあいだだけ使え、そこから2つめのセッションは作れない", async () => {
+    const { token } = await S.createSession("p1", { selectedChildId: "c1" }, t0);
+    const later = new Date(t0.getTime() + S.SESSION_ROTATE_AFTER_MS);
+    const r = await S.rotateSession(token, later, { graceMs: S.ROTATE_GRACE_MS });
+    expect(r).not.toBeNull();
+    // 同時に出ていたリクエストは古いトークンのままでも同じ子どもとして扱われる
+    expect(await S.readSession(token, new Date(later.getTime() + S.ROTATE_GRACE_MS - 1))).toMatchObject({ selectedChildId: "c1" });
+    // 猶予中の古いトークンからは入れ替えられない（セッションを増やさない）
+    expect(await S.rotateSession(token, new Date(later.getTime() + 1000), { graceMs: S.ROTATE_GRACE_MS })).toBeNull();
+    expect(db.table("session")).toHaveLength(2);
+    // 猶予が切れたら使えない
+    expect(await S.readSession(token, new Date(later.getTime() + S.ROTATE_GRACE_MS))).toBeNull();
+    expect(await S.readSession(r!.token, new Date(later.getTime() + S.ROTATE_GRACE_MS))).not.toBeNull();
+  });
+
   it("期限切れのセッションは入れ替えられない", async () => {
     const { token } = await S.createSession("p1", {}, t0);
     expect(await S.rotateSession(token, new Date(t0.getTime() + S.SESSION_TTL_MS + 1))).toBeNull();

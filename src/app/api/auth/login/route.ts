@@ -1,6 +1,6 @@
 import { beginSession } from "@/lib/auth";
 import { authFail, authOk, LOGIN_FAILED_JA, parseBody, tooManyAttempts, withAuthApi } from "@/lib/auth/api";
-import { clientIp, loginIpLimiter, loginLimiter } from "@/lib/auth/rateLimit";
+import { clientIp, loginEmailLimiter, loginIpLimiter, loginLimiter } from "@/lib/auth/rateLimit";
 import { LoginRequestSchema } from "@/lib/api/contracts";
 import { authenticateParent } from "@/lib/services/parentService";
 
@@ -18,11 +18,14 @@ export const POST = withAuthApi("login", async (req) => {
   if (!byIp.ok) return tooManyAttempts(byIp.retryAfterSec);
   const byKey = loginLimiter.hit(key);
   if (!byKey.ok) return tooManyAttempts(byKey.retryAfterSec);
+  const byEmail = loginEmailLimiter.hit(parsed.data.email);
+  if (!byEmail.ok) return tooManyAttempts(byEmail.retryAfterSec);
 
   const parent = await authenticateParent(parsed.data.email, parsed.data.password);
   if (!parent) return authFail(LOGIN_FAILED_JA, 401, "LOGIN_FAILED");
 
   loginLimiter.reset(key);
+  loginEmailLimiter.reset(parsed.data.email);
   await beginSession(parent.id);
   return authOk({ messageJa: "ログインしました。" });
 });

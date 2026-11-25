@@ -144,6 +144,27 @@ describe("POST /api/auth/login・logout", () => {
     expect((await call(login.POST, "POST", { email: A.email, password: A.password })).status).toBe(429);
   });
 
+  it("IP（x-forwarded-for）を変えながらでも、同じメールへの総当たりは 429", async () => {
+    await registerAs(A);
+    jar.clear();
+    const statuses: number[] = [];
+    for (let i = 0; i < 21; i++) {
+      statuses.push((await call(login.POST, "POST", { email: A.email, password: `bad-pass${i}` }, {}, { "x-forwarded-for": `10.0.0.${i}` })).status);
+    }
+    expect(statuses.slice(0, 20).every((s) => s === 401)).toBe(true);
+    expect(statuses[20]).toBe(429);
+  });
+
+  it("ログイン前に仕込まれた cookie（セッション固定）は、ログインで必ず別のトークンになる", async () => {
+    await registerAs(A);
+    await call(logout.POST, "POST");
+    const planted = "p".repeat(43);
+    useToken(planted);
+    await call(login.POST, "POST", { email: A.email, password: A.password });
+    expect(token()).not.toBe(planted);
+    expect(db.table("session").some((s) => s.tokenHash === hashToken(planted))).toBe(false);
+  });
+
   it("ログアウト → cookie とセッションが消え、おためしモードに戻る", async () => {
     const t = await registerAs(A);
     const r = await call(logout.POST, "POST");
@@ -175,14 +196,24 @@ describe("GET /api/auth/me", () => {
     expect(token()).toBeUndefined();
   });
 
-  it("1日たったセッションはトークンを入れ替える", async () => {
+  it("1日たったセッションはトークンを入れ替える（古いトークンは少しのあいだだけ使える）", async () => {
     const t = await registerAs(A);
     db.table("session")[0].createdAt = new Date(Date.now() - SESSION_ROTATE_AFTER_MS - 1000);
     const r = await call(me.GET, "GET");
     expect(r.body.loggedIn).toBe(true);
-    expect(token()).not.toBe(t);
+    const fresh = token();
+    expect(fresh).not.toBe(t);
+    // 同時に出ていたリクエスト（古い cookie）は猶予のあいだはログイン中のまま。新しいセッションは増えない
     useToken(t);
+    expect((await call(me.GET, "GET")).body.loggedIn).toBe(true);
+    expect(token()).toBe(t);
+    expect(db.table("session")).toHaveLength(2);
+    // 猶予が切れたら古いトークンは使えない
+    const old = db.table("session").find((s) => s.tokenHash === hashToken(t))!;
+    old.expiresAt = new Date(Date.now() - 1);
     expect((await call(me.GET, "GET")).body.loggedIn).toBe(false);
+    useToken(fresh);
+    expect((await call(me.GET, "GET")).body.loggedIn).toBe(true);
   });
 });
 
@@ -211,11 +242,13 @@ describe("子ども（追加・選ぶ・変更・削除）と PIN", () => {
     expect((await call(children.POST, "POST", { nickname: "タロウ", schoolGrade: 2 })).status).toBe(201);
   });
 
-  it("PIN のまちがいが続くと 429", async () => {
+  it("PIN のまちがいが 5回続くと 429（正しい PIN でも制限中は開かない）", async () => {
     await registerAs(A);
     const statuses: number[] = [];
-    for (let i = 0; i < 9; i++) statuses.push((await call(verifyPin.POST, "POST", { pin: "0000" })).status);
-    expect(statuses[8]).toBe(429);
+    for (let i = 0; i < 6; i++) statuses.push((await call(verifyPin.POST, "POST", { pin: "0000" })).status);
+    expect(statuses.slice(0, 5).every((s) => s === 401)).toBe(true);
+    expect(statuses[5]).toBe(429);
+    expect((await call(verifyPin.POST, "POST", { pin: A.pin })).status).toBe(429);
   });
 
   it("追加の入力チェック・人数の上限", async () => {
@@ -371,6 +404,9 @@ describe("PATCH /api/parent/settings", () => {
     expect(t2).not.toBe(t1);
     expect((await call(me.GET, "GET")).body.loggedIn).toBe(true);
     useToken(other);
+    expect((await call(me.GET, "GET")).body.loggedIn).toBe(false);
+    // 安全のための入れ替えなので、この端末の古いトークンも猶予なしで使えない
+    useToken(t1);
     expect((await call(me.GET, "GET")).body.loggedIn).toBe(false);
     jar.clear();
     expect((await call(login.POST, "POST", { email: A.email, password: A.password })).status).toBe(401);

@@ -11,6 +11,13 @@ import { prisma } from "@/lib/db";
 export const SESSION_TTL_MS = 30 * 86_400_000; // 30日
 export const SESSION_ROTATE_AFTER_MS = 86_400_000; // 1日たったら入れ替える
 export const PIN_UNLOCK_MS = 10 * 60_000; // 保護者PINを入れてから10分は「おうちの方」エリアを開けたまま
+/**
+ * ふだんの入れ替え（1日ごと）では、古いトークンをすぐ消さずにこの時間だけ使えるようにする。
+ * 同じ画面から同時に出ているリクエスト（例: me で入れ替え中にレッスン完了）が古い cookie のままでも、
+ * 未ログイン扱い（= おためしモードのデモユーザーに記録）にならないようにするため。
+ * パスワード変更などの「安全のための入れ替え」では猶予なし（すぐ消す）。
+ */
+export const ROTATE_GRACE_MS = 60_000;
 
 export interface SessionRecord {
   id: string;
@@ -67,13 +74,27 @@ export async function readSession(token: string | null | undefined, now = new Da
   return session;
 }
 
-/** 新しいトークンに入れ替える（選んだ子ども・PIN の状態は引きつぐ）。古いトークンは使えなくなる */
-export async function rotateSession(token: string | null | undefined, now = new Date()): Promise<{ token: string; session: SessionRecord } | null> {
+/**
+ * 新しいトークンに入れ替える（選んだ子ども・PIN の状態は引きつぐ）。
+ *  - graceMs = 0（既定）: 古いトークンはすぐ使えなくなる
+ *  - graceMs > 0: 古いトークンは graceMs のあいだだけ使える（その間に もう一度 入れ替えることはできない）
+ */
+export async function rotateSession(
+  token: string | null | undefined,
+  now = new Date(),
+  opts: { graceMs?: number } = {},
+): Promise<{ token: string; session: SessionRecord } | null> {
   const old = await readSession(token, now);
   if (!old) return null;
+  const graceMs = Math.max(0, opts.graceMs ?? 0);
+  // 猶予中の（すでに入れ替えた）古いトークンからは、新しいセッションを増やさない
+  if (graceMs > 0 && old.expiresAt.getTime() - now.getTime() <= graceMs) return null;
   const next = newToken();
+  const retireOld = graceMs > 0
+    ? prisma.session.updateMany({ where: { id: old.id }, data: { expiresAt: new Date(now.getTime() + graceMs) } })
+    : prisma.session.deleteMany({ where: { id: old.id } });
   const [, session] = await prisma.$transaction([
-    prisma.session.deleteMany({ where: { id: old.id } }),
+    retireOld,
     prisma.session.create({
       data: {
         parentId: old.parentId,

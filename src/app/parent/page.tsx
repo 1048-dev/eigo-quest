@@ -50,13 +50,16 @@ function ParentPage() {
   }, [router]);
 
   const loadData = useCallback(async () => {
-    const [m, o] = await Promise.all([fetchMe(), apiGet("/api/parent/overview", ParentOverviewResponseSchema)]);
+    // ログインを確かめてから ようすを読む（未ログイン・DB 停止のときに むだな 401/503 を出さない）
+    const m = await fetchMe();
     if (!m.ok || !m.data.loggedIn) {
       if (isAccountOffline(m) || m.data.offline) { setPhase("offline"); return; }
       router.replace("/login");
       return;
     }
     setMe(m.data);
+    if (!m.data.pinUnlocked) { setPhase("locked"); return; }
+    const o = await apiGet("/api/parent/overview", ParentOverviewResponseSchema);
     if (!guard(o)) return;
     if (!o.ok) { setError(o.error ?? "情報を読み込めませんでした。"); setPhase("ready"); return; }
     setChildren(o.data.children);
