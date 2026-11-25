@@ -1,0 +1,4534 @@
+{
+  "world": 14,
+  "stage": 2,
+  "level": "A1+",
+  "lessons": [
+    {
+      "lessonNo": 391,
+      "world": 14,
+      "title": "Welcome to the Market!",
+      "titleJa": "いちばへ ようこそ！",
+      "school": {
+        "grade": "中1",
+        "topic": "There is / There are（ふりかえり）：市場の ようすを いう",
+        "grammar": "There is a ～. / There are many ～. （ひとつ・ふたつ いじょう）",
+        "expressions": [
+          {
+            "en": "There are many shops.",
+            "ja": "おみせが たくさん あります。",
+            "core": true
+          },
+          {
+            "en": "There is a big fountain in the middle.",
+            "ja": "まんなかに おおきな ふんすいが あります。"
+          },
+          {
+            "en": "There are boxes of apples everywhere.",
+            "ja": "どこにも りんごの はこが あります。"
+          }
+        ],
+        "testPoints": [
+          "ひとつは There is、ふたつ いじょうは There are と いいわけられる",
+          "s・x で おわる ことばの 複数形 -es（boxes, buses）が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look around.",
+          "ja": "まわりを みて。",
+          "action": "くるりと まわりを みまわす",
+          "emoji": "👀"
+        },
+        {
+          "en": "Pick up a basket.",
+          "ja": "かごを もって。",
+          "action": "かごを もちあげる まね",
+          "emoji": "🧺"
+        },
+        {
+          "en": "Walk slowly.",
+          "ja": "ゆっくり あるいて。",
+          "action": "ひとごみの なかを ゆっくり あるく",
+          "emoji": "🚶"
+        },
+        {
+          "en": "Point to the fruit shop.",
+          "ja": "くだものやさんを ゆびさして。",
+          "action": "ゆびで さす",
+          "emoji": "👉"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-es",
+        "focus": [
+          "es"
+        ],
+        "sounds": [
+          "/ɪz/"
+        ],
+        "words": [
+          "boxes",
+          "foxes",
+          "buses",
+          "glasses"
+        ],
+        "tipJa": "x や s で おわる ことばを ふたつ いじょうに する ときは es を つけるよ。box → boxes、bus → buses。おわりは「イズ」と きこえるね。"
+      },
+      "vocab": [
+        {
+          "en": "market",
+          "ja": "いちば",
+          "emoji": "🏪",
+          "core": true
+        },
+        {
+          "en": "shop",
+          "ja": "おみせ",
+          "emoji": "🏬"
+        },
+        {
+          "en": "basket",
+          "ja": "かご",
+          "emoji": "🧺"
+        },
+        {
+          "en": "crowd",
+          "ja": "ひとごみ・おおぜいの ひと",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We left Sunrise Harbor, and now we're in a new town. Listen. Can you hear it? It's so noisy! Welcome to the Bustling Market! There are fruit shops, fish shops and bread shops. Today's sentence is: There are many shops. Say it with me. There are many shops. Great! For one thing, say there is. There is a big fountain. For two or more, say there are. There are many shops. ひとつなら there is、ふたつ いじょうなら there are だよ。 Now, phonics. Look at these words. Boxes. Foxes. Buses. Glasses. When a word ends in x or s, we add e-s for two or more. Box, boxes. Bus, buses. Listen to the end. Iz, iz. x や s で おわる ことばは、es を つけて「イズ」と よむよ。 Here's a market tip. When you see something amazing, say, Wow, look at that! Let's say it. Wow, look at that! Okay, grab a basket and stay together. Let's go shopping!",
+      "conversation": {
+        "scene": "The entrance of a busy market full of shops and people",
+        "sceneJa": "市場の 入り口で、お店の 多さに おどろく",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Wow, look at that! There are many shops!",
+            "ja": "わあ、みて！おみせが いっぱい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "There is a big fountain in the middle. Let's meet there later.",
+            "ja": "まんなかに おおきな ふんすいが ある。あとで あそこに あつまろう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "There are boxes of apples everywhere. And I can smell fish!",
+            "ja": "どこにも りんごの はこ。それに さかなの においも する！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "This is the Bustling Market. The map says, find the golden apple here!",
+            "ja": "ここが にぎわいの市場。ちずには「ここで きんの りんごを さがせ」って かいてある！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Okay, everyone. Take a basket and stay together. It's very crowded.",
+            "ja": "さあ みんな。かごを もって、はなれないでね。とても こんでるから。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "市場で 見える ものを There is ～. / There are ～. で 3つ いってみよう",
+          "starterEn": "Hi! I'm Riko. This market is so big! What can you see? There are many shops!",
+          "targetExpressions": [
+            "There is a ～.",
+            "There are many ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "There are many shops. ふたつ いじょうは there are",
+          "boxes・foxes・buses・glasses は es で「イズ」",
+          "ビリモの ちず：きんの りんごを さがせ！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 392,
+      "world": 14,
+      "title": "Do You Have Any Peaches?",
+      "titleJa": "ももは ありますか？",
+      "school": {
+        "grade": "中1",
+        "topic": "some / any：お店で ほしいものを さがす",
+        "grammar": "Do you have any ～? ― Yes, we have some. / Sorry, we don't have any.",
+        "expressions": [
+          {
+            "en": "Do you have any peaches?",
+            "ja": "ももは ありますか？",
+            "core": true
+          },
+          {
+            "en": "Yes, we have some. They're very sweet.",
+            "ja": "はい、ありますよ。とても あまいですよ。"
+          },
+          {
+            "en": "Sorry, we don't have any cherries today.",
+            "ja": "ごめんなさい、きょうは さくらんぼが ありません。"
+          }
+        ],
+        "testPoints": [
+          "しつもんと「ない」ときは any、「ある」ときは some を つかえる",
+          "ch で おわる ことばの 複数形 -es（peaches, lunches）が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Smell the peach.",
+          "ja": "ももの においを かいで。",
+          "action": "くんくん においを かぐ",
+          "emoji": "🍑"
+        },
+        {
+          "en": "Squeeze it gently.",
+          "ja": "やさしく にぎって。",
+          "action": "そっと にぎる まね",
+          "emoji": "🤏"
+        },
+        {
+          "en": "Put it in the basket.",
+          "ja": "かごに いれて。",
+          "action": "かごに いれる まね",
+          "emoji": "🧺"
+        },
+        {
+          "en": "Shake your head.",
+          "ja": "くびを よこに ふって。",
+          "action": "いいえ と くびを ふる",
+          "emoji": "🙅"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-es",
+        "focus": [
+          "es"
+        ],
+        "sounds": [
+          "/ɪz/"
+        ],
+        "words": [
+          "peaches",
+          "lunches",
+          "sandwiches",
+          "benches"
+        ],
+        "tipJa": "ch で おわる ことばも es を つけるよ。peach → peaches、lunch → lunches。ch の あとの es も「イズ」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "peach",
+          "ja": "もも",
+          "emoji": "🍑",
+          "core": true
+        },
+        {
+          "en": "cherry",
+          "ja": "さくらんぼ",
+          "emoji": "🍒"
+        },
+        {
+          "en": "pear",
+          "ja": "なし",
+          "emoji": "🍐"
+        },
+        {
+          "en": "fruit shop",
+          "ja": "くだものやさん",
+          "emoji": "🍎"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at a fruit shop. Look at all the fruit! Kiko wants peaches. How can she ask? Today's sentence is: Do you have any peaches? Say it with me. Do you have any peaches? Great! When you ask a question, use any. Do you have any cherries? The answer can be, Yes, we have some. Or, Sorry, we don't have any. しつもんと「ない」ときは any、「ある」ときは some だよ。 Let's practice. Do you have any pears? Yes, we have some! Now, phonics. Peach. Peaches. Lunch. Lunches. Sandwich. Sandwiches. Bench. Benches. Words that end in c-h also get e-s. And the end sounds like iz. ch で おわる ことばも es を つけて「イズ」。 Here's a shopping tip. When the shopkeeper says hello, say hello back and smile. It makes shopping more fun. Okay, let's find some fruit!",
+      "conversation": {
+        "scene": "A fruit shop in the market, with the fruit seller played by Ms. Emma",
+        "sceneJa": "くだもの屋さんで、ほしいものを 探す（お店の人は エマ先生）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the fruit seller today. Hello! Fresh fruit here!",
+            "ja": "きょうは わたしが くだものやさんよ。いらっしゃい！しんせんな くだものが ありますよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Hello! Do you have any peaches?",
+            "ja": "こんにちは！ももは ありますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, we have some. They're very sweet.",
+            "ja": "はい、ありますよ。とても あまいですよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Do you have any cherries, too?",
+            "ja": "さくらんぼも ありますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Sorry, we don't have any cherries today. How about some pears?",
+            "ja": "ごめんなさい、きょうは さくらんぼは ないの。なしは どう？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Pears! Yes, please. They look great.",
+            "ja": "なし！はい、おねがいします。おいしそう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "くだもの屋さんで Do you have any ～? と きいてみよう。あれば some、なければ any で こたえが くるよ",
+          "starterEn": "Hello! Welcome to my fruit shop. I'm Kiko. What are you looking for?",
+          "targetExpressions": [
+            "Do you have any ～?",
+            "Yes, we have some.",
+            "Sorry, we don't have any."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Do you have any peaches? しつもんは any",
+          "Yes, we have some. / Sorry, we don't have any.",
+          "peaches・lunches・sandwiches・benches は ch + es"
+        ]
+      }
+    },
+    {
+      "lessonNo": 393,
+      "world": 14,
+      "title": "Some Bread, Please",
+      "titleJa": "パンを ください",
+      "school": {
+        "grade": "中1",
+        "topic": "Can I have some ～?：かぞえない もの（bread, water, rice）を たのむ",
+        "grammar": "Can I have some ～? ― Sure. Here you go. （bread は a を つけない）",
+        "expressions": [
+          {
+            "en": "Can I have some bread?",
+            "ja": "パンを もらえますか？",
+            "core": true
+          },
+          {
+            "en": "Sure. Here you go.",
+            "ja": "いいですよ。はい、どうぞ。"
+          },
+          {
+            "en": "I'd like two rolls, please.",
+            "ja": "ロールパンを ふたつ ください。"
+          }
+        ],
+        "testPoints": [
+          "Can I have some ～? で ほしいものを たのめる。bread には a を つけない",
+          "sh で おわる ことばの 複数形 -es（dishes, brushes）が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the door.",
+          "ja": "ドアを あけて。",
+          "action": "おみせの ドアを あける まね",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Smell the bread.",
+          "ja": "パンの においを かいで。",
+          "action": "くんくん においを かぐ",
+          "emoji": "🍞"
+        },
+        {
+          "en": "Hold out your hands.",
+          "ja": "てを だして。",
+          "action": "りょうてを まえに だす",
+          "emoji": "🤲"
+        },
+        {
+          "en": "Say thank you.",
+          "ja": "ありがとうと いって。",
+          "action": "えがおで ぺこりと おじぎ",
+          "emoji": "🙏"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-es",
+        "focus": [
+          "es"
+        ],
+        "sounds": [
+          "/ɪz/"
+        ],
+        "words": [
+          "dishes",
+          "brushes",
+          "radishes",
+          "bushes"
+        ],
+        "tipJa": "sh で おわる ことばも es。dish → dishes、brush → brushes。radish（ラディッシュ）は 市場の やさい だね。"
+      },
+      "vocab": [
+        {
+          "en": "bread",
+          "ja": "パン",
+          "emoji": "🍞",
+          "core": true
+        },
+        {
+          "en": "roll",
+          "ja": "ロールパン",
+          "emoji": "🥐"
+        },
+        {
+          "en": "baker",
+          "ja": "パンやさん（ひと）",
+          "emoji": "🧑‍🍳"
+        },
+        {
+          "en": "butter",
+          "ja": "バター",
+          "emoji": "🧈"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! Mmm, can you smell that? It's the market bakery! Birimo is very hungry and wants some bread. Today's sentence is: Can I have some bread? Say it with me. Can I have some bread? Nice! Bread is special. We don't say one bread, two breads. We say some bread. パンや みず、ごはんは ひとつ ふたつと かぞえないよ。だから a ではなく some を つけるよ。 Water, rice, bread. Some water. Some rice. When the baker gives you the bread, she says, Here you go. Here you go means, this is for you. Now, phonics. Dish. Dishes. Brush. Brushes. Radish. Radishes. Bush. Bushes. Words that end in s-h get e-s, too. Iz, iz. Can you hear it? Great job! One more tip. Rolls are small pieces of bread, and we can count them. One roll, two rolls. Now, let's buy some bread for breakfast!",
+      "conversation": {
+        "scene": "The market bakery, where Birimo buys bread from the baker, played by Ms. Emma",
+        "sceneJa": "パン屋さんで、ビリモが パンを 買う（パン屋さんは エマ先生）",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Mmm, it smells so good in here!",
+            "ja": "うーん、ここ すごく いい におい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the baker. Good morning! What would you like?",
+            "ja": "わたしが パンやさんよ。おはよう！なにに しますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Can I have some bread, please?",
+            "ja": "パンを もらえますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Sure. Here you go. Do you want some butter?",
+            "ja": "はい、どうぞ。バターも いる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, please! And I'd like two rolls for my friends.",
+            "ja": "はい！それから ともだちに ロールパンを ふたつ ください。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thanks, Birimo! You're the best!",
+            "ja": "ありがとう、ビリモ！さいこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "パン屋さんで Can I have some ～? と たのんでみよう。わたされたら Thank you! と いってね",
+          "starterEn": "Good morning! Welcome to the market bakery. I'm Birimo, and I'm the baker today! What would you like?",
+          "targetExpressions": [
+            "Can I have some ～?",
+            "Here you go.",
+            "Thank you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Can I have some bread? bread は a を つけないで some",
+          "Here you go. は「はい、どうぞ」",
+          "dishes・brushes・radishes・bushes は sh + es"
+        ]
+      }
+    },
+    {
+      "lessonNo": 394,
+      "world": 14,
+      "title": "A Glass of Juice",
+      "titleJa": "ジュースを 1ぱい",
+      "school": {
+        "grade": "中1",
+        "topic": "a glass of / a cup of / a piece of：かぞえない ものの かず",
+        "grammar": "a glass of ～ / a cup of ～ / a piece of ～ / two glasses of ～",
+        "expressions": [
+          {
+            "en": "A glass of orange juice, please.",
+            "ja": "オレンジジュースを 1ぱい ください。",
+            "core": true
+          },
+          {
+            "en": "Can I have a cup of tea?",
+            "ja": "おちゃを 1ぱい もらえますか？"
+          },
+          {
+            "en": "Two glasses of milk, please.",
+            "ja": "ぎゅうにゅうを 2はい ください。"
+          }
+        ],
+        "testPoints": [
+          "a glass of ～ / a cup of ～ / a piece of ～ で かぞえない ものの かずを いえる",
+          "子音＋o で おわる ことばの 複数形 -es（tomatoes, potatoes）が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pour the juice.",
+          "ja": "ジュースを そそいで。",
+          "action": "コップに そそぐ まね",
+          "emoji": "🧃"
+        },
+        {
+          "en": "Hold the glass with two hands.",
+          "ja": "りょうてで コップを もって。",
+          "action": "りょうてで そっと もつ",
+          "emoji": "🥛"
+        },
+        {
+          "en": "Drink slowly.",
+          "ja": "ゆっくり のんで。",
+          "action": "ごくごく ゆっくり のむ まね",
+          "emoji": "😋"
+        },
+        {
+          "en": "Wipe your mouth.",
+          "ja": "くちを ふいて。",
+          "action": "くちを ふく まね",
+          "emoji": "🧻"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-es",
+        "focus": [
+          "es"
+        ],
+        "sounds": [
+          "/z/"
+        ],
+        "words": [
+          "tomatoes",
+          "potatoes",
+          "heroes",
+          "echoes"
+        ],
+        "tipJa": "子音＋o で おわる ことばは es を つける ことが あるよ。tomato → tomatoes、potato → potatoes。ここの es は「ズ」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "glass",
+          "ja": "コップ（グラス）",
+          "emoji": "🥛",
+          "core": true
+        },
+        {
+          "en": "juice",
+          "ja": "ジュース",
+          "emoji": "🧃"
+        },
+        {
+          "en": "cup",
+          "ja": "カップ",
+          "emoji": "☕"
+        },
+        {
+          "en": "tomato",
+          "ja": "トマト",
+          "emoji": "🍅"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's hot today. Let's get something to drink. Look, there's a juice stand! Today's sentence is: A glass of orange juice, please. Say it with me. A glass of orange juice, please. Good! We can't count juice. One juice, two juices? No. We count the glasses. A glass of juice. Two glasses of juice. のみものは コップの かずで かぞえるよ。 Tea is hot, so we use a cup. A cup of tea. And for cake, we say a piece of cake. ケーキ ひときれ は a piece of cake。 Now, phonics. Tomato. Tomatoes. Potato. Potatoes. Hero. Heroes. When a word ends in o, sometimes we add e-s. And here, the end sounds like z. Tomatoes. Potatoes. Super! Here's a tip for drinks. If you want two, just say, two glasses, please. Easy! Now, which juice do you want? Orange, apple or tomato?",
+      "conversation": {
+        "scene": "A juice stand in the market, with Birimo playing the juice seller",
+        "sceneJa": "市場の ジューススタンド（店員さんは ビリモ）",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm the juice seller! Fresh juice! Orange, apple and tomato!",
+            "ja": "ジュースやさんだよ！しぼりたて！オレンジ、りんご、トマト！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Tomato juice? Interesting. A glass of orange juice, please.",
+            "ja": "トマトジュース？おもしろい。オレンジジュースを 1ぱい ください。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Two glasses of apple juice, please. One for me and one for Haru.",
+            "ja": "りんごジュースを 2はい ください。わたしと ハルの ぶん。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Can I have a cup of tea?",
+            "ja": "おちゃを 1ぱい もらえる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sure! Here you go. Wait, Haru, where's your glass?",
+            "ja": "どうぞ！あれ、ハル、きみの コップは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oops! I drank it already. Delicious!",
+            "ja": "あっ！もう のんじゃった。おいしい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ジューススタンドで A glass of ～, please. / A cup of ～, please. と たのもう。2はいなら two glasses of ～",
+          "starterEn": "Hi! I'm Birimo, the juice seller. We have orange, apple and tomato juice. What would you like?",
+          "targetExpressions": [
+            "A glass of ～, please.",
+            "A cup of ～, please.",
+            "Two glasses of ～, please."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "A glass of orange juice, please. のみものは glass や cup で かぞえる",
+          "2はいなら two glasses of ～、ケーキは a piece of cake",
+          "tomatoes・potatoes は o + es"
+        ]
+      }
+    },
+    {
+      "lessonNo": 395,
+      "world": 14,
+      "title": "Shopping List Game",
+      "titleJa": "かいものリスト ゲーム",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：かいものリストを もって 市場を 回る（We need ～.）",
+        "grammar": "We need some ～ and two ～. / Do we have any ～? ― No, we don't.",
+        "expressions": [
+          {
+            "en": "We need some eggs and two apples.",
+            "ja": "たまごと りんご ふたつが ひつようです。",
+            "core": true
+          },
+          {
+            "en": "Do we have any milk? No, we don't.",
+            "ja": "ぎゅうにゅうは ある？ ううん、ない。"
+          },
+          {
+            "en": "Let's check our shopping list.",
+            "ja": "かいものリストを たしかめよう。"
+          }
+        ],
+        "testPoints": [
+          "かいものリストを よんで We need some ～. と いえる",
+          "-es の 複数形（boxes, peaches, dishes, tomatoes）を よめる・かける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Read the list.",
+          "ja": "リストを よんで。",
+          "action": "かみを ひろげて よむ まね",
+          "emoji": "📝"
+        },
+        {
+          "en": "Check it off.",
+          "ja": "チェックして。",
+          "action": "ペンで ✓ を かく まね",
+          "emoji": "✅"
+        },
+        {
+          "en": "Run to the next shop.",
+          "ja": "つぎの おみせへ はしって。",
+          "action": "その場で かけあし",
+          "emoji": "🏃"
+        },
+        {
+          "en": "High five!",
+          "ja": "ハイタッチ！",
+          "action": "ともだちと ハイタッチ",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "es"
+        ],
+        "sounds": [
+          "/ɪz/",
+          "/z/"
+        ],
+        "words": [
+          "boxes",
+          "peaches",
+          "dishes",
+          "tomatoes",
+          "glasses"
+        ],
+        "tipJa": "ブロック1 の まとめ。s・x・ch・sh で おわる ことばは es で「イズ」、tomato は es で「ズ」。リストに かく ときも わすれずに！"
+      },
+      "vocab": [
+        {
+          "en": "shopping list",
+          "ja": "かいものリスト",
+          "emoji": "📝",
+          "core": true
+        },
+        {
+          "en": "egg",
+          "ja": "たまご",
+          "emoji": "🥚"
+        },
+        {
+          "en": "milk",
+          "ja": "ぎゅうにゅう",
+          "emoji": "🥛"
+        },
+        {
+          "en": "need",
+          "ja": "ひつようと する（いる）",
+          "emoji": "❗"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is game day! The inn kitchen gave us a shopping list. We have two teams. Which team can finish first? Today's sentence is: We need some eggs and two apples. Say it with me. We need some eggs and two apples. Great! Need means we must have it. We can count eggs and apples, so we say two apples, three eggs. But milk and bread? Some milk. Some bread. かぞえられる ものは かずを、かぞえられない ものは some を つけるよ。 To ask, say, Do we have any milk? No, we don't. Now, let's review our phonics. Boxes. Peaches. Dishes. Tomatoes. Glasses. You can read them all! And when you write your list, don't forget the e-s. Here's a team tip. Read the list out loud together. Then nobody forgets anything. Ready, set, go! Let's go shopping, team!",
+      "conversation": {
+        "scene": "Going around the market with a shopping list from the inn kitchen",
+        "sceneJa": "宿の 台所の 買いものリストを もって、市場を 回る",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here's the shopping list from the inn. Let's play a game. Which team finishes first?",
+            "ja": "宿の かいものリストよ。ゲームを しましょう。どっちの チームが さきに おわるかな？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's check our list. We need some eggs and two apples.",
+            "ja": "リストを たしかめよう。たまごと りんご ふたつが いる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Do we have any milk?",
+            "ja": "ぎゅうにゅうは ある？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "No, we don't. We need some milk, too.",
+            "ja": "ないよ。ぎゅうにゅうも いるね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Our team needs three tomatoes and some bread. Go, Birimo!",
+            "ja": "わたしたちの チームは トマト みっつと パン。いけ、ビリモ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Tomatoes, check! Bread, check! We win!",
+            "ja": "トマト、よし！パン、よし！かった！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かいものリストを いっしょに つくろう。We need some ～. / Do we have any ～? で きいたり こたえたり しよう",
+          "starterEn": "Hi! I'm Riko. We're making a shopping list for dinner. Do we have any eggs?",
+          "targetExpressions": [
+            "We need some ～.",
+            "Do we have any ～?",
+            "No, we don't."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We need some eggs and two apples. リストを よんで かいもの",
+          "Do we have any milk? No, we don't.",
+          "ブロック1 まとめ：boxes・peaches・dishes・tomatoes"
+        ]
+      }
+    },
+    {
+      "lessonNo": 396,
+      "world": 14,
+      "title": "What Does It Cost?",
+      "titleJa": "いくらですか？",
+      "school": {
+        "grade": "中1",
+        "topic": "How much is ～? / How much are ～?：ねだんを きく",
+        "grammar": "How much is ～? ― It's ～ yen. / How much are ～? ― They're ～ yen.",
+        "expressions": [
+          {
+            "en": "How much is this hat?",
+            "ja": "この ぼうしは いくらですか？",
+            "core": true
+          },
+          {
+            "en": "It's five hundred yen.",
+            "ja": "500えんです。"
+          },
+          {
+            "en": "How much are these socks?",
+            "ja": "この くつしたは いくらですか？"
+          }
+        ],
+        "testPoints": [
+          "How much is ～? で ねだんを きいて、It's ～ yen. で こたえられる",
+          "子音＋y の 複数形 -ies（berries, cherries）が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Try on the hat.",
+          "ja": "ぼうしを かぶってみて。",
+          "action": "ぼうしを かぶる まね",
+          "emoji": "👒"
+        },
+        {
+          "en": "Look in the mirror.",
+          "ja": "かがみを みて。",
+          "action": "かがみを のぞく まね",
+          "emoji": "🪞"
+        },
+        {
+          "en": "Turn around.",
+          "ja": "くるっと まわって。",
+          "action": "その場で 1かい まわる",
+          "emoji": "🔄"
+        },
+        {
+          "en": "Take it off.",
+          "ja": "ぬいで。",
+          "action": "ぼうしを とる まね",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-ies-ves",
+        "focus": [
+          "ies"
+        ],
+        "sounds": [
+          "/iz/"
+        ],
+        "words": [
+          "berries",
+          "cherries",
+          "candies",
+          "families"
+        ],
+        "tipJa": "子音＋y で おわる ことばは y を i に かえて es。berry → berries、cherry → cherries、candy → candies、family → families。"
+      },
+      "vocab": [
+        {
+          "en": "price",
+          "ja": "ねだん",
+          "emoji": "🏷️",
+          "core": true
+        },
+        {
+          "en": "hat",
+          "ja": "ぼうし",
+          "emoji": "👒"
+        },
+        {
+          "en": "yen",
+          "ja": "えん",
+          "emoji": "💴"
+        },
+        {
+          "en": "socks",
+          "ja": "くつした",
+          "emoji": "🧦"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at a shop with hats, socks and bags. Kiko loves a hat with cherries on it. But how much is it? Today's sentence is: How much is this hat? Say it with me. How much is this hat? Good! How much asks about the price. The answer is, It's five hundred yen. For two or more things, say, How much are these socks? They're two hundred yen. ひとつなら is、ふたつ いじょう（socks など）なら are だよ。 Let's practice. How much is this bag? It's eight hundred yen. Now, phonics. Berry. Berries. Cherry. Cherries. Candy. Candies. When a word ends in a consonant and y, change the y to i, and add e-s. y を i に かえて es だよ。 Great! Here's a shopping tip. Start with, Excuse me. It's polite. Excuse me, how much is this hat? Let's go shopping!",
+      "conversation": {
+        "scene": "A general store full of hats and socks, with the clerk played by Ms. Emma",
+        "sceneJa": "雑貨屋さんで、値段を 聞く（店員さんは エマ先生）",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look at this hat! It has cherries on it!",
+            "ja": "この ぼうし みて！さくらんぼが ついてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the clerk. That's a popular hat. Try it on!",
+            "ja": "わたしが てんいんよ。それは にんきの ぼうしなの。かぶってみて！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Excuse me. How much is this hat?",
+            "ja": "すみません。この ぼうしは いくらですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's five hundred yen.",
+            "ja": "500えんです。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "How much are these socks?",
+            "ja": "この くつしたは いくらですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "They're two hundred yen. They're soft and warm.",
+            "ja": "200えんです。やわらかくて あったかいわよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "雑貨屋さんで How much is ～? / How much are ～? と ねだんを きこう",
+          "starterEn": "Hello! I'm Kiko, and I work at this shop today. We have hats, socks and bags. What do you like?",
+          "targetExpressions": [
+            "How much is ～?",
+            "How much are ～?",
+            "It's ～ yen."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How much is this hat? It's five hundred yen.",
+          "ふたつ いじょうなら How much are these socks?",
+          "berries・cherries・candies・families は y → ies"
+        ]
+      }
+    },
+    {
+      "lessonNo": 397,
+      "world": 14,
+      "title": "Fifty, Sixty, a Hundred",
+      "titleJa": "50、60、そして 100",
+      "school": {
+        "grade": "中1",
+        "topic": "大きな 数（fifty〜a thousand）と How many ～ are there?",
+        "grammar": "It's a hundred yen. / How many ～ are there? ― There are about a thousand.",
+        "expressions": [
+          {
+            "en": "It's a hundred yen.",
+            "ja": "100えんです。",
+            "core": true
+          },
+          {
+            "en": "How many books are there?",
+            "ja": "本は なんさつ ありますか？"
+          },
+          {
+            "en": "There are about a thousand books here!",
+            "ja": "ここには やく 1000さつの 本が あります！"
+          }
+        ],
+        "testPoints": [
+          "fifty・sixty・a hundred・a thousand など 大きな 数が いえる",
+          "f で おわる ことばの 複数形 -ves（leaves, loaves）が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Count to ten fast.",
+          "ja": "10まで はやく かぞえて。",
+          "action": "ゆびを おって はやく かぞえる",
+          "emoji": "🔟"
+        },
+        {
+          "en": "Count by tens.",
+          "ja": "10ずつ かぞえて。",
+          "action": "10, 20, 30… と てを たたく",
+          "emoji": "👏"
+        },
+        {
+          "en": "Open a book.",
+          "ja": "本を ひらいて。",
+          "action": "本を ひらく まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Shh! Read quietly.",
+          "ja": "しーっ！しずかに よんで。",
+          "action": "くちに ゆびを あてる",
+          "emoji": "🤫"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-ies-ves",
+        "focus": [
+          "ves"
+        ],
+        "sounds": [
+          "/vz/"
+        ],
+        "words": [
+          "leaves",
+          "loaves",
+          "halves",
+          "shelves"
+        ],
+        "tipJa": "f で おわる ことばは、ふたつ いじょうに すると f が v に かわって es。leaf → leaves、loaf → loaves、half → halves、shelf → shelves。"
+      },
+      "vocab": [
+        {
+          "en": "hundred",
+          "ja": "100（ひゃく）",
+          "emoji": "💯",
+          "core": true
+        },
+        {
+          "en": "thousand",
+          "ja": "1000（せん）",
+          "emoji": "🔢"
+        },
+        {
+          "en": "bookstore",
+          "ja": "ほんや",
+          "emoji": "📚"
+        },
+        {
+          "en": "shelf",
+          "ja": "たな",
+          "emoji": "🗄️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're visiting an old bookstore. Look at the tall shelves! There are so many books. Let's count by tens. Ten, twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, one hundred! Great job! Today's sentence is: It's a hundred yen. Say it with me. It's a hundred yen. Good! A hundred, or one hundred, is one, zero, zero. And ten hundreds is a thousand. 100 は a hundred、1000 は a thousand だよ。 To ask about a number, say, How many books are there? There are about a thousand! Now, phonics. Leaf. Leaves. Loaf. Loaves. Half. Halves. Shelf. Shelves. When a word ends in f, the f changes to v, and we add e-s. f が v に かわるよ。 Wonderful! One tip. Fifteen and fifty sound similar. Fifteen is long at the end. Fif-teen. Fifty is short. Fif-ty. Listen carefully when people say prices!",
+      "conversation": {
+        "scene": "An old bookstore in the market with tall shelves, run by Birimo in a role-play",
+        "sceneJa": "古本屋さんで、大きな 数を 数える（店主は ビリモ）",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm the owner of this old bookstore. Welcome!",
+            "ja": "ぼくが この ふるほんやの てんしゅだよ。いらっしゃい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wow! How many books are there?",
+            "ja": "わあ！本は なんさつ あるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "There are about a thousand books here!",
+            "ja": "ここには やく 1000さつ あるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's count this shelf. Ten, twenty, thirty, forty, fifty, sixty!",
+            "ja": "この たなを かぞえよう。10、20、30、40、50、60！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How much is this picture book?",
+            "ja": "この えほんは いくらですか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's a hundred yen. It's old, but the story is great.",
+            "ja": "100えんだよ。ふるいけど、おはなしは さいこう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ふるほんやさんで 本の 数や ねだんを きこう。How many ～? / How much is ～? 大きな 数で こたえてね",
+          "starterEn": "Welcome to my old bookstore! I'm Riko. There are so many books here. Can you guess how many?",
+          "targetExpressions": [
+            "How many ～ are there?",
+            "It's a hundred yen.",
+            "fifty / sixty / a thousand"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's a hundred yen. 100 は a hundred、1000 は a thousand",
+          "10ずつ：ten, twenty, thirty, forty, fifty, sixty…",
+          "leaves・loaves・halves・shelves は f → ves"
+        ]
+      }
+    },
+    {
+      "lessonNo": 398,
+      "world": 14,
+      "title": "That's Too Expensive!",
+      "titleJa": "たかすぎる！",
+      "school": {
+        "grade": "中1",
+        "topic": "That's too expensive. / Do you have a cheaper one?：ねだんの やりとり",
+        "grammar": "That's too ～. / Do you have a cheaper one? / I'll take it!",
+        "expressions": [
+          {
+            "en": "That's too expensive.",
+            "ja": "それは たかすぎます。",
+            "core": true
+          },
+          {
+            "en": "Do you have a cheaper one?",
+            "ja": "もっと やすいのは ありますか？"
+          },
+          {
+            "en": "This one is only three hundred yen. I'll take it!",
+            "ja": "これは たった 300えん。これに します！"
+          }
+        ],
+        "testPoints": [
+          "That's too expensive. / Do you have a cheaper one? で ねだんの やりとりが できる",
+          "f / fe で おわる ことばの 複数形 -ves（knives, wolves）が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look surprised!",
+          "ja": "びっくりして！",
+          "action": "目を まるくする",
+          "emoji": "😲"
+        },
+        {
+          "en": "Put it back.",
+          "ja": "もとに もどして。",
+          "action": "たなに もどす まね",
+          "emoji": "↩️"
+        },
+        {
+          "en": "Choose one.",
+          "ja": "ひとつ えらんで。",
+          "action": "ゆびで ひとつ えらぶ",
+          "emoji": "☝️"
+        },
+        {
+          "en": "Pay at the counter.",
+          "ja": "レジで はらって。",
+          "action": "おかねを わたす まね",
+          "emoji": "💰"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-ies-ves",
+        "focus": [
+          "ves"
+        ],
+        "sounds": [
+          "/vz/"
+        ],
+        "words": [
+          "knives",
+          "wolves",
+          "scarves",
+          "calves"
+        ],
+        "tipJa": "fe で おわる knife も v に かわって knives。wolf → wolves、scarf → scarves、calf（こうし）→ calves。"
+      },
+      "vocab": [
+        {
+          "en": "expensive",
+          "ja": "（ねだんが）たかい",
+          "emoji": "💸",
+          "core": true
+        },
+        {
+          "en": "cheap",
+          "ja": "やすい",
+          "emoji": "🪙"
+        },
+        {
+          "en": "toy store",
+          "ja": "おもちゃやさん",
+          "emoji": "🧸"
+        },
+        {
+          "en": "robot",
+          "ja": "ロボット",
+          "emoji": "🤖"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at a toy store. Haru finds a dancing robot. He loves it! But it's five thousand yen. Oh no! Today's sentence is: That's too expensive. Say it with me. That's too expensive. Good! Expensive means the price is high. Too expensive means it's more than you want to pay. たかすぎる、と いう ときは too expensive だよ。 Then you can ask, Do you have a cheaper one? Cheaper means it costs less. もっと やすいの、だよ。 Now, phonics. Knife. Knives. Wolf. Wolves. Scarf. Scarves. Calf. Calves. The f changes to v again. Knife ends in f-e, but it also becomes knives. Great! Here's a tip. When you find something good, say, I'll take it! That means, I want to buy this. Let's say it together. I'll take it! Now, let's look for a cheaper toy.",
+      "conversation": {
+        "scene": "A toy store, where Haru finds a robot that costs too much",
+        "sceneJa": "おもちゃ屋さんで、高すぎる ものを 見つける（店員さんは エマ先生）",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at this robot! It can dance! How much is it?",
+            "ja": "この ロボット みて！おどれるんだ！いくら？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the toy seller. It's five thousand yen.",
+            "ja": "おもちゃやさんよ。5000えんです。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Five thousand? That's too expensive. Do you have a cheaper one?",
+            "ja": "5000？たかすぎる。もっと やすいのは ありますか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "How about this little robot? It's only three hundred yen.",
+            "ja": "この ちいさい ロボットは どう？たった 300えんよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's cute! I'll take it!",
+            "ja": "かわいい！これに します！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Hey, that little robot dances just like me!",
+            "ja": "ねえ、その ちいさい ロボット、ぼくと おなじ おどりかた！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おもちゃ屋さんで That's too expensive. / Do you have a cheaper one? と いって、やすい ものを さがそう",
+          "starterEn": "Welcome to the toy store! I'm Birimo. This big teddy bear is only ten thousand yen!",
+          "targetExpressions": [
+            "That's too expensive.",
+            "Do you have a cheaper one?",
+            "I'll take it!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "That's too expensive. たかすぎる！",
+          "Do you have a cheaper one? もっと やすいのは？ → I'll take it!",
+          "knives・wolves・scarves・calves も f → ves"
+        ]
+      }
+    },
+    {
+      "lessonNo": 399,
+      "world": 14,
+      "title": "Here's Your Change",
+      "titleJa": "おつりです",
+      "school": {
+        "grade": "中1",
+        "topic": "お店の 人の ことば：That's ～ yen. / Here's your change.",
+        "grammar": "That's ～ yen, please. / Here's your change. / Have a nice day!",
+        "expressions": [
+          {
+            "en": "Here's your change. Thank you!",
+            "ja": "おつりです。ありがとうございました！",
+            "core": true
+          },
+          {
+            "en": "That's three hundred and fifty yen, please.",
+            "ja": "350えんに なります。"
+          },
+          {
+            "en": "Have a nice day!",
+            "ja": "よい いちにちを！"
+          }
+        ],
+        "testPoints": [
+          "おみせの ひとの ことば（That's ～ yen. / Here's your change.）が いえる",
+          "-ies・-ys・-ves の 複数形を くらべて よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on your apron.",
+          "ja": "エプロンを つけて。",
+          "action": "エプロンを つける まね",
+          "emoji": "🎽"
+        },
+        {
+          "en": "Count the coins.",
+          "ja": "コインを かぞえて。",
+          "action": "1まいずつ かぞえる まね",
+          "emoji": "🪙"
+        },
+        {
+          "en": "Give the change.",
+          "ja": "おつりを わたして。",
+          "action": "りょうてで わたす まね",
+          "emoji": "🤲"
+        },
+        {
+          "en": "Bow to the customer.",
+          "ja": "おきゃくさんに おじぎして。",
+          "action": "ぺこりと おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "plural-ies-ves",
+        "focus": [
+          "ies",
+          "ys",
+          "ves"
+        ],
+        "sounds": [
+          "/iz/",
+          "/z/",
+          "/vz/"
+        ],
+        "words": [
+          "strawberries",
+          "toys",
+          "keys",
+          "loaves"
+        ],
+        "tipJa": "y の まえが 子音なら ies（strawberries）、母音なら そのまま s（toys, keys）。f は v に かえて es（loaves）。"
+      },
+      "vocab": [
+        {
+          "en": "change",
+          "ja": "おつり",
+          "emoji": "🪙",
+          "core": true
+        },
+        {
+          "en": "coin",
+          "ja": "コイン",
+          "emoji": "💰"
+        },
+        {
+          "en": "customer",
+          "ja": "おきゃくさん",
+          "emoji": "🧍"
+        },
+        {
+          "en": "cash register",
+          "ja": "レジ",
+          "emoji": "🧾"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is a special day at the market. It's Market Day! On Market Day, kids take care of the shops. Today, you are the shopkeeper! When a customer buys something, say the price. That's three hundred and fifty yen, please. Then the customer gives you money. Five hundred yen. Now you give back the change. Today's sentence is: Here's your change. Thank you! Say it with me. Here's your change. Thank you! Excellent! Change is the money you give back. おつりの ことを change と いうよ。 At the end, say, Have a nice day! Now, phonics. Strawberries. Toys. Keys. Loaves. Strawberry has r before the y, so it's i-e-s. Toy and key have a vowel before the y, so just add s. y の まえが 母音なら s だけ だよ。 Wonderful! Okay, shopkeepers. Put on your aprons and smile!",
+      "conversation": {
+        "scene": "Market Day, when children take care of the shops and Riko is the cashier",
+        "sceneJa": "子どもが お店番を する マーケットデー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Today is Market Day. Kids can take care of the shops!",
+            "ja": "きょうは マーケットデー。子どもが おみせばんを できるのよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm the cashier! Hello! What would you like?",
+            "ja": "わたしが レジがかり！いらっしゃいませ！なにに しますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'd like some strawberries and this toy, please.",
+            "ja": "いちごと この おもちゃを ください。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "That's three hundred and fifty yen, please.",
+            "ja": "350えんに なります。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Here's five hundred yen.",
+            "ja": "はい、500えん。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Here's your change. A hundred and fifty yen. Thank you! Have a nice day!",
+            "ja": "おつりです。150えん。ありがとうございました！よい いちにちを！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "おみせばんを してみよう。ねだんを いって、おつりを わたすよ。Here's your change. Thank you!",
+          "starterEn": "Hi! I'm Birimo, and I want to buy this pencil. How much is it?",
+          "targetExpressions": [
+            "That's ～ yen, please.",
+            "Here's your change.",
+            "Have a nice day!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Here's your change. Thank you! おつりを わたす ことば",
+          "That's ～ yen, please. / Have a nice day!",
+          "strawberries・toys・keys・loaves の つづりを くらべた"
+        ]
+      }
+    },
+    {
+      "lessonNo": 400,
+      "world": 14,
+      "title": "Market Day Shop",
+      "titleJa": "マーケットデーの おみせ",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：4人の おみせで うり手と かい手（400回記念）",
+        "grammar": "Welcome! What would you like? / Can I have ～? / How much ～? / That's ～ yen. Here you go!",
+        "expressions": [
+          {
+            "en": "Welcome! What would you like?",
+            "ja": "いらっしゃいませ！なにに しますか？",
+            "core": true
+          },
+          {
+            "en": "Can I have two peaches, please?",
+            "ja": "ももを ふたつ もらえますか？"
+          },
+          {
+            "en": "That's two hundred yen. Here you go!",
+            "ja": "200えんです。はい、どうぞ！"
+          }
+        ],
+        "testPoints": [
+          "うり手（Welcome! What would you like?）と かい手（Can I have ～? / How much ～?）の りょうほうが できる",
+          "ブロック2 の つづり（-ies・-ys・-ves・-es）を よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the shop!",
+          "ja": "おみせを あけて！",
+          "action": "シャッターを あげる まね",
+          "emoji": "🏪"
+        },
+        {
+          "en": "Call the customers.",
+          "ja": "おきゃくさんを よんで。",
+          "action": "てを くちに あてて よぶ",
+          "emoji": "📣"
+        },
+        {
+          "en": "Wrap it up.",
+          "ja": "つつんで。",
+          "action": "プレゼントを つつむ まね",
+          "emoji": "🎁"
+        },
+        {
+          "en": "Celebrate! Four hundred!",
+          "ja": "おいわい！400かい！",
+          "action": "りょうてを あげて ばんざい",
+          "emoji": "🎉"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "ies",
+          "ys",
+          "ves",
+          "es"
+        ],
+        "sounds": [
+          "/iz/",
+          "/z/",
+          "/vz/",
+          "/ɪz/"
+        ],
+        "words": [
+          "berries",
+          "keys",
+          "knives",
+          "boxes",
+          "cherries"
+        ],
+        "tipJa": "ブロック2 の まとめ。berries と cherries は ies、keys は s だけ、knives は ves、boxes は es。ふたつ いじょうの つくりかたは 4つ！"
+      },
+      "vocab": [
+        {
+          "en": "seller",
+          "ja": "うりて（おみせの ひと）",
+          "emoji": "🙋",
+          "core": true
+        },
+        {
+          "en": "buyer",
+          "ja": "かいて",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "sign",
+          "ja": "かんばん",
+          "emoji": "🪧"
+        },
+        {
+          "en": "celebration",
+          "ja": "おいわい",
+          "emoji": "🎉"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! Today is lesson four hundred! 400かい、ほんとうに すごい！ To celebrate, we're opening our own shop at the market. You can be the seller or the buyer. The seller says, Welcome! What would you like? Today's sentence is: Welcome! What would you like? Say it with me. Welcome! What would you like? Great! The buyer says, Can I have two peaches, please? How much are they? And the seller says, That's two hundred yen. Here you go! Let's review our phonics. Berries. Keys. Knives. Boxes. Cherries. Four different ways to make two or more! Fantastic. Here's a tip for sellers. Talk in a big, friendly voice. Customers love a happy shop. Let's make a sign for our shop, too. Ready? Let's open the shop!",
+      "conversation": {
+        "scene": "The four friends open their own shop at the market to celebrate lesson 400",
+        "sceneJa": "4人が お店を 開いて、売り手と 買い手を する（400回記念）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Congratulations! This is lesson four hundred! Let's open our own shop.",
+            "ja": "おめでとう！これで レッスン 400かい！じぶんたちの おみせを ひらきましょう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Welcome! What would you like? We have fresh fruit and cookies!",
+            "ja": "いらっしゃいませ！なにに しますか？しんせんな くだものと クッキーが あります！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Can I have two peaches, please? How much are they?",
+            "ja": "もも ふたつ もらえますか？いくらですか？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's two hundred yen. Here you go!",
+            "ja": "200えんです。はい、どうぞ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Now I'm the seller! Try our cherries. They're the best in the market!",
+            "ja": "こんどは ぼくが うりて！さくらんぼ どうぞ。市場で いちばん だよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Our shop is so busy! Four hundred lessons, hooray!",
+            "ja": "おみせ だいにぎわい！400かい、ばんざい！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "400かい きねん！おみせやさんごっこ。うりて なら Welcome! What would you like?、かいて なら Can I have ～? / How much ～? を つかおう",
+          "starterEn": "Congratulations on four hundred lessons! I'm Kiko. Welcome to our shop! What would you like?",
+          "targetExpressions": [
+            "Welcome! What would you like?",
+            "Can I have ～?",
+            "How much is ～?",
+            "Here you go!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "400かい おめでとう！じぶんたちの おみせを ひらいたね",
+          "Welcome! What would you like? ⇔ Can I have ～?",
+          "ブロック2 まとめ：berries・keys・knives・boxes"
+        ]
+      }
+    },
+    {
+      "lessonNo": 401,
+      "world": 14,
+      "title": "What's in the Soup?",
+      "titleJa": "スープに なにが はいってる？",
+      "school": {
+        "grade": "中1",
+        "topic": "What's in ～? ― There are ～. / There is some ～.：中身を いう",
+        "grammar": "What's in ～? ― There are ～. / There is some ～. / There isn't any ～.",
+        "expressions": [
+          {
+            "en": "What's in the soup?",
+            "ja": "スープに なにが はいっていますか？",
+            "core": true
+          },
+          {
+            "en": "There are carrots and onions.",
+            "ja": "にんじんと たまねぎが はいっています。"
+          },
+          {
+            "en": "There is some cheese, too.",
+            "ja": "チーズも すこし はいっています。"
+          }
+        ],
+        "testPoints": [
+          "What's in ～? と きいて、There are ～. / There is some ～. で こたえられる",
+          "kn の k は よまない（knife, knee）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stir the soup.",
+          "ja": "スープを かきまぜて。",
+          "action": "おたまで ぐるぐる まぜる",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Blow on it.",
+          "ja": "ふーふーして。",
+          "action": "ふーっと いきを かける",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Taste it.",
+          "ja": "あじみして。",
+          "action": "スプーンで ひとくち",
+          "emoji": "🥄"
+        },
+        {
+          "en": "Knock on the table.",
+          "ja": "テーブルを ノックして。",
+          "action": "こんこんと たたく",
+          "emoji": "✊"
+        }
+      ],
+      "phonics": {
+        "rule": "silent-letters",
+        "focus": [
+          "kn"
+        ],
+        "sounds": [
+          "/n/"
+        ],
+        "words": [
+          "knife",
+          "knee",
+          "knock",
+          "know"
+        ],
+        "tipJa": "kn の k は だまっている もじ。よまないで「ン」の おとから はじめるよ。knife（ナイフ）、knee（ニー）、knock（ノック）、know（ノウ）。"
+      },
+      "vocab": [
+        {
+          "en": "soup",
+          "ja": "スープ",
+          "emoji": "🍲",
+          "core": true
+        },
+        {
+          "en": "carrot",
+          "ja": "にんじん",
+          "emoji": "🥕"
+        },
+        {
+          "en": "onion",
+          "ja": "たまねぎ",
+          "emoji": "🧅"
+        },
+        {
+          "en": "bowl",
+          "ja": "おわん（ボウル）",
+          "emoji": "🥣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at the dining hall in the market. Mmm, the soup smells so good! But what's in it? Today's sentence is: What's in the soup? Say it with me. What's in the soup? Good! To answer, say, There are carrots. There are onions. For things we can't count, like cheese, say, There is some cheese. かぞえられない ものは There is some だよ。 And if there's no fish, say, There isn't any fish. Now, a new kind of phonics! Look at this word. Knife. There's a k, but we don't say it. Knife. Knee. Knock. Know. The k is silent. It's a quiet letter. k は だまっている もじ。よまないよ。 Let's knock on the table. Knock, knock! Great! Here's a tip. If you're not sure, say, Maybe there are potatoes. Guessing is fun. Let's guess what's in the soup!",
+      "conversation": {
+        "scene": "The market dining hall, guessing what's in today's special soup",
+        "sceneJa": "市場の 食堂で、スープの 中身を 当てる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here's today's special soup. Can you guess? What's in the soup?",
+            "ja": "きょうの とくべつスープよ。わかるかな？スープに なにが はいってる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "There are carrots! I can see orange.",
+            "ja": "にんじんが はいってる！オレンジいろが みえる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "There are onions, too. And there is some cheese.",
+            "ja": "たまねぎも。それに チーズも すこし。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I know! There is some fish!",
+            "ja": "わかった！おさかなも はいってる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "No, Kiko. There isn't any fish. But there are potatoes.",
+            "ja": "ちがうわ、キコ。おさかなは はいってないの。でも じゃがいもが はいってるわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh no! Fish soup next time, please!",
+            "ja": "えー！つぎは おさかなスープに してね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "スープや カレーに なにが はいってるか、What's in ～? / There are ～. で はなそう",
+          "starterEn": "Hi! I'm Kiko. I made some soup! Guess what's in the soup!",
+          "targetExpressions": [
+            "What's in the soup?",
+            "There are ～.",
+            "There is some ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What's in the soup? There are carrots.",
+          "かぞえない ものは There is some cheese.",
+          "knife・knee・knock・know の k は よまない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 402,
+      "world": 14,
+      "title": "Cut the Carrots",
+      "titleJa": "にんじんを きって",
+      "school": {
+        "grade": "中1",
+        "topic": "命令文で てじゅん：First, ～. Next, ～.",
+        "grammar": "First, cut ～. Next, wash ～. / Be careful with ～.",
+        "expressions": [
+          {
+            "en": "First, cut the carrots.",
+            "ja": "さいしょに、にんじんを きります。",
+            "core": true
+          },
+          {
+            "en": "Next, wash the potatoes.",
+            "ja": "つぎに、じゃがいもを あらいます。"
+          },
+          {
+            "en": "Be careful with the knife.",
+            "ja": "ナイフに きを つけて。"
+          }
+        ],
+        "testPoints": [
+          "First, ～. Next, ～. で てじゅんを いえる",
+          "kn の k は よまない（knot, kneel, knit）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wash your hands.",
+          "ja": "てを あらって。",
+          "action": "てを ごしごし あらう まね",
+          "emoji": "🧼"
+        },
+        {
+          "en": "Cut the carrots.",
+          "ja": "にんじんを きって。",
+          "action": "とん とん きる まね",
+          "emoji": "🥕"
+        },
+        {
+          "en": "Be careful!",
+          "ja": "きを つけて！",
+          "action": "さっと てを ひっこめる",
+          "emoji": "⚠️"
+        },
+        {
+          "en": "Kneel down.",
+          "ja": "ひざを ついて。",
+          "action": "ゆっくり ひざを つく",
+          "emoji": "🧎"
+        }
+      ],
+      "phonics": {
+        "rule": "silent-letters",
+        "focus": [
+          "kn"
+        ],
+        "sounds": [
+          "/n/"
+        ],
+        "words": [
+          "knot",
+          "kneel",
+          "knit",
+          "knuckle"
+        ],
+        "tipJa": "kn は ことばの はじめに よく でるよ。knot（むすびめ）、kneel（ひざを つく）、knit（あむ）、knuckle（ゆびの ふし）。k は いつも だまっている！"
+      },
+      "vocab": [
+        {
+          "en": "cooking class",
+          "ja": "りょうりきょうしつ",
+          "emoji": "🧑‍🍳",
+          "core": true
+        },
+        {
+          "en": "cutting board",
+          "ja": "まないた",
+          "emoji": "🪵"
+        },
+        {
+          "en": "knife",
+          "ja": "ナイフ・ほうちょう",
+          "emoji": "🔪"
+        },
+        {
+          "en": "wash",
+          "ja": "あらう",
+          "emoji": "🧼"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're in a cooking class. Put on your apron and wash your hands. Today we're making vegetable soup. Today's sentence is: First, cut the carrots. Say it with me. First, cut the carrots. Great! When we tell someone what to do, we start with an action word. Cut. Wash. Mix. Add. ひとに なにかを してもらう ときは、うごきの ことばから はじめるよ。 To show the order, say first, then next. First, cut the carrots. Next, wash the potatoes. And always, be careful with the knife! Now, phonics. Knot. Kneel. Knit. Knuckle. Remember, the k is silent. Kneel down. Knit a scarf. Tie a knot. Good job! Here's a cooking tip. Say the steps out loud, like a real chef. First, wash. Next, cut. It helps you remember them. Okay, chefs. Let's start cooking!",
+      "conversation": {
+        "scene": "A cooking class in the market, where Ms. Emma teaches everyone to cut vegetables",
+        "sceneJa": "料理教室で、野菜を 切る",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to cooking class! First, wash your hands.",
+            "ja": "りょうりきょうしつへ ようこそ！まず、てを あらいましょう。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Done! What's next?",
+            "ja": "できた！つぎは？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "First, cut the carrots. Be careful with the knife.",
+            "ja": "さいしょに、にんじんを きります。ナイフに きを つけて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Like this? Slowly, slowly.",
+            "ja": "こう？ゆっくり、ゆっくり。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Perfect, Haru. Next, wash the potatoes, Kiko.",
+            "ja": "かんぺき、ハル。つぎは じゃがいもを あらって、キコ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Okay! Scrub, scrub, scrub!",
+            "ja": "はーい！ごしごし ごしごし！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "りょうりの せんせいに なって、First, ～. Next, ～. で てじゅんを いってみよう",
+          "starterEn": "Hi! I'm Riko. I want to make vegetable soup. What do I do first?",
+          "targetExpressions": [
+            "First, ～.",
+            "Next, ～.",
+            "Be careful!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "First, cut the carrots. てじゅんは うごきの ことばから",
+          "Next, wash the potatoes. / Be careful with the knife.",
+          "knot・kneel・knit・knuckle の k も よまない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 403,
+      "world": 14,
+      "title": "Mix It Well",
+      "titleJa": "よく まぜて",
+      "school": {
+        "grade": "中1",
+        "topic": "命令文で つくりかた：Mix ～. Then add ～.",
+        "grammar": "Put in ～. / Mix it well. / Then add ～. / Don't stop! Keep mixing.",
+        "expressions": [
+          {
+            "en": "Mix it well. Then add some salt.",
+            "ja": "よく まぜて。それから しおを すこし いれて。",
+            "core": true
+          },
+          {
+            "en": "Put in two eggs and a cup of milk.",
+            "ja": "たまご 2こと ぎゅうにゅう 1カップを いれます。"
+          },
+          {
+            "en": "Don't stop! Keep mixing.",
+            "ja": "とめないで！まぜつづけて。"
+          }
+        ],
+        "testPoints": [
+          "Put in ～. / Mix ～. / Then add ～. で つくりかたを せつめい できる",
+          "wr の w は よまない（write, wrap）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Crack the egg.",
+          "ja": "たまごを わって。",
+          "action": "こんこん ぱかっと わる まね",
+          "emoji": "🥚"
+        },
+        {
+          "en": "Mix it well.",
+          "ja": "よく まぜて。",
+          "action": "ボウルで ぐるぐる まぜる",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Add some sugar.",
+          "ja": "さとうを いれて。",
+          "action": "ぱらぱら いれる まね",
+          "emoji": "🍬"
+        },
+        {
+          "en": "Flip the pancake!",
+          "ja": "パンケーキを ひっくりかえして！",
+          "action": "フライパンを ふる まね",
+          "emoji": "🥞"
+        }
+      ],
+      "phonics": {
+        "rule": "silent-letters",
+        "focus": [
+          "wr"
+        ],
+        "sounds": [
+          "/r/"
+        ],
+        "words": [
+          "write",
+          "wrap",
+          "wrong",
+          "wrist"
+        ],
+        "tipJa": "wr の w は だまっている もじ。r の おとから はじめるよ。write（かく）、wrap（つつむ）、wrong（まちがった）、wrist（てくび）。"
+      },
+      "vocab": [
+        {
+          "en": "pancake",
+          "ja": "パンケーキ",
+          "emoji": "🥞",
+          "core": true
+        },
+        {
+          "en": "flour",
+          "ja": "こむぎこ",
+          "emoji": "🌾"
+        },
+        {
+          "en": "sugar",
+          "ja": "さとう",
+          "emoji": "🍬"
+        },
+        {
+          "en": "salt",
+          "ja": "しお",
+          "emoji": "🧂"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Welcome back to cooking class. Today we're making pancakes! Yum! First, put in two eggs and a cup of milk. Then add the flour. Today's sentence is: Mix it well. Then add some salt. Say it with me. Mix it well. Then add some salt. Good! Then means after that. It connects the steps. Then は「それから」。じゅんばんを つなぐ ことば だよ。 Mix. Add. Put in. These are cooking words. Now, phonics. Write. Wrap. Wrong. Wrist. Look at the first letter, w. But we don't say it! We start with the r sound. Write. Wrap. w は だまっている もじ だよ。 Shake your wrist. Mix, mix, mix! Great job! Here's a tip from Riko. Write the steps in your notebook, one step on each line. Then you can make pancakes at home with your family, too!",
+      "conversation": {
+        "scene": "The cooking class again, mixing pancake batter",
+        "sceneJa": "料理教室で、パンケーキの 生地を まぜる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Today we're making pancakes! Put in two eggs and a cup of milk.",
+            "ja": "きょうは パンケーキよ！たまご 2こと ぎゅうにゅう 1カップを いれて。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Now add the flour, right?",
+            "ja": "つぎは こむぎこ だよね？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes. Mix it well. Then add some salt. Just a little.",
+            "ja": "そう。よく まぜて。それから しおを すこし。ほんの ちょっとね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Salt? In pancakes? Oh, I see. It makes them taste better!",
+            "ja": "しお？パンケーキに？なるほど。おいしく なるんだ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My arm is tired!",
+            "ja": "うでが つかれた！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Don't stop! Keep mixing. I'll write the steps in my notebook.",
+            "ja": "とめないで！まぜつづけて。わたしは ノートに てじゅんを かいておくね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "パンケーキの つくりかたを、Put in ～. / Mix it well. / Then add ～. で じゅんばんに いおう",
+          "starterEn": "Hi! I'm Haru. I want to make pancakes, but I don't know how. Can you help me? What do I put in first?",
+          "targetExpressions": [
+            "Put in ～.",
+            "Mix it well.",
+            "Then add ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Mix it well. Then add some salt. Then で てじゅんを つなぐ",
+          "Put in two eggs and a cup of milk.",
+          "write・wrap・wrong・wrist の w は よまない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 404,
+      "world": 14,
+      "title": "It Smells Good!",
+      "titleJa": "いい におい！",
+      "school": {
+        "grade": "中1",
+        "topic": "smells / tastes / looks ＋ ようすの ことば：あじみの かんそう",
+        "grammar": "It smells ～. / It tastes ～. / It looks ～. / Does it taste ～?",
+        "expressions": [
+          {
+            "en": "It smells good! It tastes sweet.",
+            "ja": "いい においが する！あまい あじが する。",
+            "core": true
+          },
+          {
+            "en": "It looks delicious.",
+            "ja": "おいしそうに みえます。"
+          },
+          {
+            "en": "Does it taste salty? No, it doesn't.",
+            "ja": "しょっぱいですか？ いいえ。"
+          }
+        ],
+        "testPoints": [
+          "smells / tastes / looks ＋ ようすの ことばで かんそうを いえる",
+          "wr の w は よまない（wrote, wrapper, wrinkle）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Smell the pancake.",
+          "ja": "パンケーキの においを かいで。",
+          "action": "くんくん においを かぐ",
+          "emoji": "👃"
+        },
+        {
+          "en": "Take a bite.",
+          "ja": "ひとくち たべて。",
+          "action": "ぱくっと かじる まね",
+          "emoji": "😋"
+        },
+        {
+          "en": "Rub your tummy.",
+          "ja": "おなかを さすって。",
+          "action": "おなかを まるく なでる",
+          "emoji": "🤤"
+        },
+        {
+          "en": "Lick your lips.",
+          "ja": "くちびるを なめて。",
+          "action": "ぺろりと する",
+          "emoji": "👅"
+        }
+      ],
+      "phonics": {
+        "rule": "silent-letters",
+        "focus": [
+          "wr"
+        ],
+        "sounds": [
+          "/r/"
+        ],
+        "words": [
+          "wrote",
+          "wrapper",
+          "wrinkle",
+          "wreck"
+        ],
+        "tipJa": "wr は ことばの はじめに くるよ。wrote（かいた）、wrapper（つつみがみ）、wrinkle（しわ）、wreck（こわれた もの）。w は よまない！"
+      },
+      "vocab": [
+        {
+          "en": "smell",
+          "ja": "においが する",
+          "emoji": "👃",
+          "core": true
+        },
+        {
+          "en": "taste",
+          "ja": "あじが する",
+          "emoji": "👅"
+        },
+        {
+          "en": "sweet",
+          "ja": "あまい",
+          "emoji": "🍯"
+        },
+        {
+          "en": "delicious",
+          "ja": "とても おいしい",
+          "emoji": "😋"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Our pancakes are ready! Look! They're golden and fluffy. Let's use our senses. Use your nose. It smells good! Use your mouth. It tastes sweet. Use your eyes. It looks delicious! Today's sentence is: It smells good! It tastes sweet. Say it with me. It smells good! It tastes sweet. Wonderful! Smells, tastes and looks have an s because it is one thing. it の ときは s が つくよ（ワールド13 と おなじ）。 Other words: sweet, salty, sour, spicy, delicious. Now, phonics. Wrote. Wrapper. Wrinkle. Wreck. Again, the w is quiet. Wrote. Wrapper. Super! Here's a tip. When someone cooks for you, tell them how it tastes. It tastes great! Thank you! They'll be very happy. Let's practice once more. How does it smell? It smells good! How does it taste? It tastes sweet! Now, let's taste our pancakes!",
+      "conversation": {
+        "scene": "The cooking class, tasting the pancakes everyone made",
+        "sceneJa": "料理教室で、味見を する",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "The pancakes are ready! It smells good!",
+            "ja": "パンケーキが できた！いい におい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It looks delicious, too. Let's try it.",
+            "ja": "おいしそう。たべてみよう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Mmm! It tastes sweet. I love it!",
+            "ja": "うーん！あまい。だいすき！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Does it taste salty? You put in some salt.",
+            "ja": "しょっぱい？しお いれたよね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "No, it doesn't. It tastes sweet and soft.",
+            "ja": "ううん。あまくて ふわふわ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Great job, everyone! You're real cooks now.",
+            "ja": "みんな、よく できました！もう りっぱな コックさんね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "たべものの かんそうを It smells ～. / It tastes ～. / It looks ～. で いおう",
+          "starterEn": "Hi! I'm Kiko. I made cookies! Here, try one. How does it taste?",
+          "targetExpressions": [
+            "It smells good!",
+            "It tastes ～.",
+            "It looks delicious."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It smells good! It tastes sweet. はな・くちで かんそう",
+          "It looks delicious. みためも いえる",
+          "wrote・wrapper・wrinkle・wreck の w は よまない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 405,
+      "world": 14,
+      "title": "Our Market Recipe",
+      "titleJa": "ぼくたちの 市場レシピ",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：市場の 食材で レシピを 発表する（First / Next / Then / Finally）",
+        "grammar": "Let's make ～. First, ～. Next, ～. Then ～. Finally, ～.",
+        "expressions": [
+          {
+            "en": "Let's make fruit salad.",
+            "ja": "フルーツサラダを つくりましょう。",
+            "core": true
+          },
+          {
+            "en": "First, wash the fruit. Next, cut it into small pieces.",
+            "ja": "まず、くだものを あらいます。つぎに、ちいさく きります。"
+          },
+          {
+            "en": "Then mix it with yogurt. Finally, enjoy!",
+            "ja": "それから ヨーグルトと まぜます。さいごに、めしあがれ！"
+          }
+        ],
+        "testPoints": [
+          "First / Next / Then / Finally で レシピを 4つの てじゅんで はっぴょう できる",
+          "kn・wr の だまっている もじを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wash the fruit.",
+          "ja": "くだものを あらって。",
+          "action": "みずで あらう まね",
+          "emoji": "🍎"
+        },
+        {
+          "en": "Cut it into small pieces.",
+          "ja": "ちいさく きって。",
+          "action": "とん とん とん",
+          "emoji": "🔪"
+        },
+        {
+          "en": "Show your bowl.",
+          "ja": "ボウルを みせて。",
+          "action": "ボウルを たかく あげる",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎして。",
+          "action": "ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "kn",
+          "wr"
+        ],
+        "sounds": [
+          "/n/",
+          "/r/"
+        ],
+        "words": [
+          "knife",
+          "know",
+          "write",
+          "wrap",
+          "knee"
+        ],
+        "tipJa": "ブロック3 の まとめ。kn の k、wr の w は よまない。knife・know・knee・write・wrap を すらすら よもう！"
+      },
+      "vocab": [
+        {
+          "en": "recipe",
+          "ja": "レシピ",
+          "emoji": "📜",
+          "core": true
+        },
+        {
+          "en": "fruit salad",
+          "ja": "フルーツサラダ",
+          "emoji": "🥗"
+        },
+        {
+          "en": "yogurt",
+          "ja": "ヨーグルト",
+          "emoji": "🫙"
+        },
+        {
+          "en": "finally",
+          "ja": "さいごに",
+          "emoji": "🏁"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is a special day. It's recipe presentation day! You bought food at the market and learned cooking words. Now, let's make a recipe together. Today's sentence is: Let's make fruit salad. Say it with me. Let's make fruit salad. Great! A good recipe has steps in order. First, wash the fruit. Next, cut it into small pieces. Then mix it with yogurt. Finally, enjoy! Finally means the last step. Finally は「さいごに」。 First, next, then, finally. Four steps! Now, let's review our phonics. Knife. Know. Knee. Write. Wrap. Remember the quiet letters. Excellent! Here's a presentation tip. Use your hands when you explain. Cut, cut. Mix, mix. People can understand you better. Now, it's your turn. What recipe will you share?",
+      "conversation": {
+        "scene": "The four friends present a recipe made with food from the market",
+        "sceneJa": "4人で、市場の 食材を 使った レシピを 発表する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's recipe time! Each team, please show us your recipe.",
+            "ja": "レシピの はっぴょうよ！チームごとに レシピを みせてね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Let's make fruit salad. First, wash the fruit.",
+            "ja": "フルーツサラダを つくりましょう。まず、くだものを あらいます。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Next, cut it into small pieces. Be careful with the knife!",
+            "ja": "つぎに、ちいさく きります。ナイフに きを つけて！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Then mix it with yogurt.",
+            "ja": "それから ヨーグルトと まぜます。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Finally, enjoy! Do you want to try some?",
+            "ja": "さいごに、めしあがれ！たべてみる？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, please! It tastes fresh and sweet. Great recipe!",
+            "ja": "ええ、いただきます！さわやかで あまい。すてきな レシピね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな たべものの レシピを First / Next / Then / Finally で はっぴょうしよう",
+          "starterEn": "Hi! I'm Riko. I'm making a recipe book. What's your favorite easy food? How do you make it?",
+          "targetExpressions": [
+            "Let's make ～.",
+            "First, ～.",
+            "Next, ～.",
+            "Then ～.",
+            "Finally, ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Let's make fruit salad. レシピを はっぴょう",
+          "First → Next → Then → Finally の じゅんばん",
+          "ブロック3 まとめ：knife・know・write・wrap"
+        ]
+      }
+    },
+    {
+      "lessonNo": 406,
+      "world": 14,
+      "title": "Try This!",
+      "titleJa": "これ たべてみて！",
+      "school": {
+        "grade": "中1",
+        "topic": "すすめる：Try this! / Do you want to try some?",
+        "grammar": "Try this! It's ～. / Do you want to try some? ― Sure! Thanks.",
+        "expressions": [
+          {
+            "en": "Try this! It's delicious.",
+            "ja": "これ たべてみて！とても おいしいよ。",
+            "core": true
+          },
+          {
+            "en": "Do you want to try some?",
+            "ja": "すこし たべてみる？"
+          },
+          {
+            "en": "Sure! Thanks. Mmm, it's yummy!",
+            "ja": "うん！ありがとう。うーん、おいしい！"
+          }
+        ],
+        "testPoints": [
+          "Try this! / Do you want to try some? で たべものを すすめられる",
+          "mb の b は よまない（lamb, thumb）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pick up a toothpick.",
+          "ja": "ようじを とって。",
+          "action": "ようじを つまむ まね",
+          "emoji": "🍢"
+        },
+        {
+          "en": "Try a sample.",
+          "ja": "ししょくして。",
+          "action": "ぱくっと たべる まね",
+          "emoji": "😋"
+        },
+        {
+          "en": "Give a thumbs up.",
+          "ja": "おやゆびを たてて。",
+          "action": "グッドの サイン",
+          "emoji": "👍"
+        },
+        {
+          "en": "Pass it to your friend.",
+          "ja": "ともだちに まわして。",
+          "action": "となりの ひとに わたす",
+          "emoji": "🤝"
+        }
+      ],
+      "phonics": {
+        "rule": "silent-letters",
+        "focus": [
+          "mb"
+        ],
+        "sounds": [
+          "/m/"
+        ],
+        "words": [
+          "lamb",
+          "crumb",
+          "thumb",
+          "comb"
+        ],
+        "tipJa": "ことばの おわりの mb の b は だまっている もじ。lamb（こひつじ）、crumb（パンくず）、thumb（おやゆび）、comb（くし）。「ム」で おわるよ。"
+      },
+      "vocab": [
+        {
+          "en": "sample",
+          "ja": "ししょく（みほん）",
+          "emoji": "🍢",
+          "core": true
+        },
+        {
+          "en": "cheese",
+          "ja": "チーズ",
+          "emoji": "🧀"
+        },
+        {
+          "en": "yummy",
+          "ja": "おいしい",
+          "emoji": "😋"
+        },
+        {
+          "en": "honey",
+          "ja": "はちみつ",
+          "emoji": "🍯"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at the sample corner. There are free samples of cheese, bread and fruit. When you find something tasty, share it with a friend! Today's sentence is: Try this! It's delicious. Say it with me. Try this! It's delicious. Great! You can also ask, Do you want to try some? The answer is, Sure! Thanks. すすめられて たべたい ときは Sure! Thanks. と いおう。 Let's practice. Try this! It's delicious. Sure! Thanks. Mmm, it's yummy! Now, phonics. Lamb. Crumb. Thumb. Comb. Look at the end, m-b. The b is quiet. We say mmm. ことばの おわりの mb の b は よまないよ。 Show me your thumb. Thumbs up! Great job! Here's a tip. When you recommend food, say why. It's sweet. It's soft. It's crunchy. Then your friend will want to try it, too. Let's go try some samples!",
+      "conversation": {
+        "scene": "A food sample corner in the market, where the friends recommend foods to each other",
+        "sceneJa": "試食コーナーで、すすめ合う",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look! Free samples! Riko, try this! It's delicious.",
+            "ja": "みて！ししょくだ！リコ、これ たべてみて！おいしいよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "What is it?",
+            "ja": "なあに？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "It's cheese with honey. Do you want to try some?",
+            "ja": "はちみつ チーズ。すこし たべてみる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Sure! Thanks. Mmm, it's yummy!",
+            "ja": "うん！ありがとう。うーん、おいしい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Birimo, try this bread. It's soft and warm.",
+            "ja": "ビリモ、この パン たべてみて。やわらかくて あったかいよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thanks! Oops, I have crumbs on my face.",
+            "ja": "ありがとう！あっ、かおに パンくずが ついちゃった。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ししょくの コーナーで、Try this! / Do you want to try some? で たべものを すすめよう。すすめられたら Sure! Thanks.",
+          "starterEn": "Hi! I'm Haru. Look at all these samples! What food do you want to try?",
+          "targetExpressions": [
+            "Try this! It's delicious.",
+            "Do you want to try some?",
+            "Sure! Thanks."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Try this! It's delicious. おいしい ものを すすめる",
+          "Do you want to try some? ⇒ Sure! Thanks.",
+          "lamb・crumb・thumb・comb の b は よまない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 407,
+      "world": 14,
+      "title": "No, Thank You. I'm Full.",
+      "titleJa": "いいえ、けっこうです。おなかいっぱい。",
+      "school": {
+        "grade": "中1",
+        "topic": "ていねいに ことわる：No, thank you. I'm full.",
+        "grammar": "Would you like ～? ― No, thank you. I'm full. / Yes, please. Just a little.",
+        "expressions": [
+          {
+            "en": "No, thank you. I'm full.",
+            "ja": "いいえ、けっこうです。おなかが いっぱいです。",
+            "core": true
+          },
+          {
+            "en": "Would you like some dessert?",
+            "ja": "デザートは いかがですか？"
+          },
+          {
+            "en": "Yes, please. Just a little.",
+            "ja": "はい、おねがいします。すこしだけ。"
+          }
+        ],
+        "testPoints": [
+          "No, thank you. I'm full. で ていねいに ことわれる",
+          "mb の b は よまない（climb, plumber）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pat your tummy.",
+          "ja": "おなかを ぽんぽんして。",
+          "action": "おなかを かるく たたく",
+          "emoji": "😌"
+        },
+        {
+          "en": "Shake your head politely.",
+          "ja": "ていねいに くびを ふって。",
+          "action": "やさしく いいえ と くびを ふる",
+          "emoji": "🙅"
+        },
+        {
+          "en": "Show a little with your fingers.",
+          "ja": "ゆびで「すこし」を みせて。",
+          "action": "おやゆびと ひとさしゆびで すこし",
+          "emoji": "🤏"
+        },
+        {
+          "en": "Climb the stairs.",
+          "ja": "かいだんを のぼって。",
+          "action": "その場で あしを たかく あげる",
+          "emoji": "🪜"
+        }
+      ],
+      "phonics": {
+        "rule": "silent-letters",
+        "focus": [
+          "mb"
+        ],
+        "sounds": [
+          "/m/"
+        ],
+        "words": [
+          "climb",
+          "climber",
+          "plumber",
+          "thumbs"
+        ],
+        "tipJa": "mb は ことばの なかでも b を よまないよ。climb（のぼる）、climber（のぼる ひと）、plumber（すいどうやさん）、thumbs（おやゆび たち）。"
+      },
+      "vocab": [
+        {
+          "en": "full",
+          "ja": "おなかが いっぱい",
+          "emoji": "😌",
+          "core": true
+        },
+        {
+          "en": "dessert",
+          "ja": "デザート",
+          "emoji": "🍮"
+        },
+        {
+          "en": "food stall",
+          "ja": "やたい",
+          "emoji": "🏮"
+        },
+        {
+          "en": "noodles",
+          "ja": "めん",
+          "emoji": "🍜"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! The food stalls are open tonight. There are lanterns everywhere. It's beautiful! Ms. Emma is the noodle cook. The noodles are delicious, but oh, my tummy is full! How can we say no nicely? Today's sentence is: No, thank you. I'm full. Say it with me. No, thank you. I'm full. Great! Saying no is okay. Just say thank you, too. ことわる ときも thank you を つければ ていねいだよ。 If you want a small amount, say, Yes, please. Just a little. Then add, It was delicious! The cook will smile. Now, phonics. Climb. Climber. Plumber. Thumbs. The b is quiet again. We say climb, not climb-buh. Good job! Here's a tip. When you say, Just a little, show it with your fingers. Like this. A little! Let's visit the food stalls!",
+      "conversation": {
+        "scene": "The evening food stalls, where everyone practices saying no politely",
+        "sceneJa": "夕ごはんの 屋台で、ことわり方を 練習する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the noodle cook tonight. Would you like some more noodles, Haru?",
+            "ja": "こんやは わたしが めんの コックよ。ハル、めんの おかわりは いかが？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "No, thank you. I'm full. It was delicious!",
+            "ja": "いいえ、けっこうです。おなかいっぱい。おいしかった！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Would you like some dessert, Kiko?",
+            "ja": "キコ、デザートは いかが？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, please. Just a little.",
+            "ja": "はい、おねがいします。すこしだけ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm not full! Can I have some more, please?",
+            "ja": "ぼくは まだ たべられる！おかわり ください！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Birimo! That's your fourth bowl!",
+            "ja": "ビリモ！それ 4はいめ だよ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "やたいで すすめられたら、No, thank you. I'm full. か Yes, please. Just a little. で こたえよう",
+          "starterEn": "Welcome to my food stall! I'm Kiko. Here are some noodles. Would you like some more?",
+          "targetExpressions": [
+            "No, thank you. I'm full.",
+            "Yes, please. Just a little.",
+            "It was delicious!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "No, thank you. I'm full. ていねいに ことわる",
+          "Yes, please. Just a little. すこしだけ もらう",
+          "climb・climber・plumber・thumbs の b も よまない"
+        ]
+      }
+    },
+    {
+      "lessonNo": 408,
+      "world": 14,
+      "title": "I Can't Eat Eggs",
+      "titleJa": "たまごが たべられません",
+      "school": {
+        "grade": "中1",
+        "topic": "たべられない ものを つたえる：I can't eat ～. / Does it have ～ in it?",
+        "grammar": "I can't eat ～. / Does this ～ have ～ in it? ― Yes, it does. / No, it doesn't.",
+        "expressions": [
+          {
+            "en": "I can't eat eggs.",
+            "ja": "わたしは たまごが たべられません。",
+            "core": true
+          },
+          {
+            "en": "Does this cake have eggs in it?",
+            "ja": "この ケーキには たまごが はいっていますか？"
+          },
+          {
+            "en": "No, it doesn't. You can eat it.",
+            "ja": "いいえ、はいっていません。たべられますよ。"
+          }
+        ],
+        "testPoints": [
+          "I can't eat ～. で たべられない ものを つたえられる",
+          "ph は f と おなじ おと（phone, photo）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Read the menu.",
+          "ja": "メニューを よんで。",
+          "action": "メニューを ひらく まね",
+          "emoji": "📋"
+        },
+        {
+          "en": "Raise your hand.",
+          "ja": "てを あげて。",
+          "action": "まっすぐ てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Ask the waiter.",
+          "ja": "おみせの ひとに きいて。",
+          "action": "てを あげて よぶ まね",
+          "emoji": "🗣️"
+        },
+        {
+          "en": "Take a photo.",
+          "ja": "しゃしんを とって。",
+          "action": "カメラを かまえる まね",
+          "emoji": "📷"
+        }
+      ],
+      "phonics": {
+        "rule": "ph",
+        "focus": [
+          "ph"
+        ],
+        "sounds": [
+          "/f/"
+        ],
+        "words": [
+          "phone",
+          "photo",
+          "phonics",
+          "graph"
+        ],
+        "tipJa": "ph は 2もじで f と おなじ「フ」。phone（でんわ）、photo（しゃしん）、phonics（フォニックス）、graph（グラフ）。"
+      },
+      "vocab": [
+        {
+          "en": "menu",
+          "ja": "メニュー",
+          "emoji": "📋",
+          "core": true
+        },
+        {
+          "en": "allergy",
+          "ja": "アレルギー",
+          "emoji": "⚠️"
+        },
+        {
+          "en": "waiter",
+          "ja": "ウェイター（おみせの ひと）",
+          "emoji": "🧑‍🍳"
+        },
+        {
+          "en": "restaurant",
+          "ja": "レストラン",
+          "emoji": "🍽️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're at a restaurant in the market. Riko can't eat eggs. Eggs make her sick, so she must be careful. Today's sentence is: I can't eat eggs. Say it with me. I can't eat eggs. Good! Some people can't eat eggs, milk or nuts. It's important to tell the waiter. たべられない ものは、おみせの ひとに はっきり つたえようね。 Then ask, Does this cake have eggs in it? The waiter checks. Yes, it does. Or, No, it doesn't. You can eat it. Now, new phonics! Phone. Photo. Phonics. Graph. P-h together makes the f sound. ph は f と おなじ おと だよ。 Phonics! That's what we're studying! Great job! Here's a tip. If you have a friend who can't eat something, remember it. Being kind to friends is important. Let's order some food!",
+      "conversation": {
+        "scene": "A restaurant in the market, where Riko tells the waiter, played by Birimo, that she can't eat eggs",
+        "sceneJa": "レストランで、食べられない ものを 伝える（店員さんは ビリモ）",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "I'm your waiter today. Here's the menu.",
+            "ja": "きょうの ウェイターは ぼくです。メニューを どうぞ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Thank you. Excuse me, I can't eat eggs. Does this cake have eggs in it?",
+            "ja": "ありがとう。すみません、わたし たまごが たべられないんです。この ケーキには たまごが はいっていますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let me check. Yes, it does. Sorry.",
+            "ja": "しらべます。はい、はいっています。ごめんなさい。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How about the fruit jelly?",
+            "ja": "フルーツゼリーは？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, it doesn't have eggs. You can eat it.",
+            "ja": "たまごは はいっていません。たべられますよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Great! A fruit jelly, please.",
+            "ja": "よかった！フルーツゼリーを ください。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It looks so pretty, Riko. Let me take a photo!",
+            "ja": "すごく きれい、リコ。しゃしん とらせて！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "レストランで たべられない もの（ほんとうでも ごっこでも OK）を I can't eat ～. で つたえて、Does it have ～ in it? と きこう",
+          "starterEn": "Hello! I'm Haru, your waiter today. Here's the menu. What would you like?",
+          "targetExpressions": [
+            "I can't eat ～.",
+            "Does it have ～ in it?",
+            "～, please."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I can't eat eggs. たべられない ものを つたえる",
+          "Does this cake have eggs in it? No, it doesn't.",
+          "phone・photo・phonics・graph の ph は「フ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 409,
+      "world": 14,
+      "title": "Spicy, Sour, Salty",
+      "titleJa": "からい、すっぱい、しょっぱい",
+      "school": {
+        "grade": "中1",
+        "topic": "あじを きく：Is it spicy? ― A little. / Yes, very. / No, not at all.",
+        "grammar": "Is it spicy / sour / salty? ― A little. / Yes, very. / No, not at all.",
+        "expressions": [
+          {
+            "en": "Is it spicy?",
+            "ja": "からいですか？",
+            "core": true
+          },
+          {
+            "en": "A little. But it's really good.",
+            "ja": "すこし。でも とても おいしいよ。"
+          },
+          {
+            "en": "This lemon drink is very sour!",
+            "ja": "この レモンの のみものは とても すっぱい！"
+          }
+        ],
+        "testPoints": [
+          "Is it spicy / sour / salty? と あじを きいて、A little. / Yes, very. / No, not at all. で こたえられる",
+          "ph は f の おと（elephant, dolphin, alphabet）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fan your mouth!",
+          "ja": "くちを あおいで！",
+          "action": "てで くちを ぱたぱた あおぐ",
+          "emoji": "🔥"
+        },
+        {
+          "en": "Make a sour face.",
+          "ja": "すっぱい かおを して。",
+          "action": "かおを くしゃっと する",
+          "emoji": "🍋"
+        },
+        {
+          "en": "Drink some water.",
+          "ja": "みずを のんで。",
+          "action": "ごくごく のむ まね",
+          "emoji": "💧"
+        },
+        {
+          "en": "Say, Ahh!",
+          "ja": "「あー」と いって。",
+          "action": "すっきり した かおで",
+          "emoji": "😌"
+        }
+      ],
+      "phonics": {
+        "rule": "ph",
+        "focus": [
+          "ph"
+        ],
+        "sounds": [
+          "/f/"
+        ],
+        "words": [
+          "elephant",
+          "dolphin",
+          "alphabet",
+          "trophy"
+        ],
+        "tipJa": "ph は ことばの なかや おわりにも でるよ。elephant（ぞう）、dolphin（イルカ）、alphabet（アルファベット）、trophy（トロフィー）。ぜんぶ「フ」の おと！"
+      },
+      "vocab": [
+        {
+          "en": "spicy",
+          "ja": "からい",
+          "emoji": "🌶️",
+          "core": true
+        },
+        {
+          "en": "sour",
+          "ja": "すっぱい",
+          "emoji": "🍋"
+        },
+        {
+          "en": "salty",
+          "ja": "しょっぱい",
+          "emoji": "🧂"
+        },
+        {
+          "en": "bitter",
+          "ja": "にがい",
+          "emoji": "☕"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're walking down the world food street. There are food stalls from many countries. But be careful. Some food is very spicy! Today's sentence is: Is it spicy? Say it with me. Is it spicy? Great! You can answer in three ways. A little. Yes, very. No, not at all. すこし、とても、ぜんぜん の 3つで こたえられるよ。 Let's learn taste words. Spicy, like chili. Sour, like lemons. Salty, like chips. Bitter, like dark chocolate. Make a sour face! Ha ha, great! Now, phonics. Elephant. Dolphin. Alphabet. Trophy. The p-h is in the middle or at the end, but it still sounds like f. Elephant. Wonderful! Here's a tip. Before you eat something new, ask, Is it spicy? Then you won't get a big surprise. Let's go!",
+      "conversation": {
+        "scene": "A walk down the world food street, asking about tastes at each stall",
+        "sceneJa": "世界の 屋台めぐりで、味を 聞く",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "This curry looks good. Is it spicy?",
+            "ja": "この カレー おいしそう。からい？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "A little. But it's really good.",
+            "ja": "すこし。でも とても おいしいわよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! Hot, hot! Water, please!",
+            "ja": "わあ！からい からい！みず ください！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "This lemon drink is very sour!",
+            "ja": "この レモンの のみもの、すごく すっぱい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Is this soup salty?",
+            "ja": "この スープ、しょっぱい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, not at all. It's sweet corn soup.",
+            "ja": "ううん、ぜんぜん。あまい コーンスープだよ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "せかいの やたいで Is it spicy / sour / salty? と あじを きいて、こたえよう",
+          "starterEn": "Welcome to the world food street! I'm Birimo. This is my famous chili soup. Do you want to try it?",
+          "targetExpressions": [
+            "Is it spicy?",
+            "A little.",
+            "Yes, very.",
+            "No, not at all."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Is it spicy? A little. / Yes, very. / No, not at all.",
+          "spicy・sour・salty・bitter で あじを いえる",
+          "elephant・dolphin・alphabet・trophy の ph も「フ」"
+        ]
+      }
+    },
+    {
+      "lessonNo": 410,
+      "world": 14,
+      "title": "Food Stand Talk",
+      "titleJa": "やたいで おもてなし",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：屋台で お客さんを もてなす（Would you like some more?）",
+        "grammar": "Would you like some more? / Try this! / Is it ～? / Here's some ～.",
+        "expressions": [
+          {
+            "en": "Would you like some more?",
+            "ja": "もう すこし いかがですか？",
+            "core": true
+          },
+          {
+            "en": "Yes, please! It's so good.",
+            "ja": "はい、おねがいします！とても おいしい。"
+          },
+          {
+            "en": "Here's some water. It's a little spicy.",
+            "ja": "おみずを どうぞ。すこし からいので。"
+          }
+        ],
+        "testPoints": [
+          "おきゃくさんを もてなす（Would you like some more? / Try this!）が できる",
+          "mb・ph の つづりを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hand out the plates.",
+          "ja": "おさらを くばって。",
+          "action": "1まいずつ くばる まね",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "Serve the soup.",
+          "ja": "スープを よそって。",
+          "action": "おたまで よそう まね",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Wave to the customers.",
+          "ja": "おきゃくさんに てを ふって。",
+          "action": "えがおで てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Clean the table.",
+          "ja": "テーブルを ふいて。",
+          "action": "ふきんで ふく まね",
+          "emoji": "🧽"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "mb",
+          "ph"
+        ],
+        "sounds": [
+          "/m/",
+          "/f/"
+        ],
+        "words": [
+          "lamb",
+          "thumb",
+          "phone",
+          "photo",
+          "dolphin"
+        ],
+        "tipJa": "ブロック4 の まとめ。mb の b は よまない、ph は「フ」。lamb・thumb・phone・photo・dolphin。"
+      },
+      "vocab": [
+        {
+          "en": "guest",
+          "ja": "おきゃくさん（まねかれた ひと）",
+          "emoji": "🙋",
+          "core": true
+        },
+        {
+          "en": "plate",
+          "ja": "おさら",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "napkin",
+          "ja": "ナプキン",
+          "emoji": "🧻"
+        },
+        {
+          "en": "serve",
+          "ja": "（たべものを）だす",
+          "emoji": "🥣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today our team has a food stand. We're cooking fish and rice. The guests are coming! Let's take care of them. Today's sentence is: Would you like some more? Say it with me. Would you like some more? Great! Would you like is a polite way to ask. Do you want よりも ていねいな いいかた だよ。 Let's review. Try this! It's delicious. Is it spicy? A little. Here's some water. Would you like some more? Yes, please! Or, No, thank you. I'm full. You know so many food words now! Now, phonics review. Lamb. Thumb. Phone. Photo. Dolphin. A quiet b, and p-h says f. Wonderful! Here's a tip for a good food stand. Smile, look at your guests, and say thank you. Okay, everyone. Let's open our food stand!",
+      "conversation": {
+        "scene": "The friends run a food stand and welcome a guest, played by Ms. Emma",
+        "sceneJa": "屋台で お客さんを もてなす",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Welcome to our food stand! Try this! It's fish and rice.",
+            "ja": "わたしたちの やたいへ ようこそ！これ どうぞ！さかなと ごはんだよ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm a guest today. Thank you! Is it spicy?",
+            "ja": "きょうは わたしが おきゃくさん。ありがとう！からいの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A little. Here's some water.",
+            "ja": "すこし。おみずを どうぞ。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Mmm, it's wonderful!",
+            "ja": "うーん、すばらしい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Would you like some more?",
+            "ja": "もう すこし いかがですか？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, please! It's so good.",
+            "ja": "ええ、おねがい！とても おいしいわ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And here's dessert. Lamb-shaped cookies!",
+            "ja": "それから デザート。こひつじの かたちの クッキー！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "やたいの おみせの ひとに なって、おきゃくさんを もてなそう。Try this! / Would you like some more? を つかってね",
+          "starterEn": "Hello! I'm Riko, and I'm hungry. What do you have at your food stand?",
+          "targetExpressions": [
+            "Try this!",
+            "Would you like some more?",
+            "Here's some water.",
+            "Is it spicy?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Would you like some more? おかわりを すすめる",
+          "Try this! / Is it spicy? / No, thank you. I'm full. の まとめ",
+          "ブロック4 まとめ：lamb・thumb・phone・photo・dolphin"
+        ]
+      }
+    },
+    {
+      "lessonNo": 411,
+      "world": 14,
+      "title": "Foods Around the World",
+      "titleJa": "せかいの たべもの",
+      "school": {
+        "grade": "中1",
+        "topic": "People in ～ eat a lot of ～.：国の たべものを しょうかいする",
+        "grammar": "People in ～ eat a lot of ～. / People in ～ often eat ～.",
+        "expressions": [
+          {
+            "en": "People in Italy eat a lot of pasta.",
+            "ja": "イタリアの ひとは パスタを たくさん たべます。",
+            "core": true
+          },
+          {
+            "en": "People in Mexico eat a lot of tacos.",
+            "ja": "メキシコの ひとは タコスを たくさん たべます。"
+          },
+          {
+            "en": "People in India often eat curry.",
+            "ja": "インドの ひとは よく カレーを たべます。"
+          }
+        ],
+        "testPoints": [
+          "People in ～ eat a lot of ～. で 国の たべものを しょうかい できる",
+          "-ty の 数（twenty, thirty, forty, fifty）を ただしく かける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spin the globe.",
+          "ja": "ちきゅうぎを まわして。",
+          "action": "くるくる まわす まね",
+          "emoji": "🌍"
+        },
+        {
+          "en": "Point to Italy.",
+          "ja": "イタリアを ゆびさして。",
+          "action": "ちずを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Twirl the pasta.",
+          "ja": "パスタを くるくる まいて。",
+          "action": "フォークを まわす まね",
+          "emoji": "🍝"
+        },
+        {
+          "en": "Fly to the next country!",
+          "ja": "つぎの くにへ とんで！",
+          "action": "りょうてを ひろげて とぶ",
+          "emoji": "✈️"
+        }
+      ],
+      "phonics": {
+        "rule": "number-spelling",
+        "focus": [
+          "-ty"
+        ],
+        "sounds": [
+          "/ti/"
+        ],
+        "words": [
+          "twenty",
+          "thirty",
+          "forty",
+          "fifty"
+        ],
+        "tipJa": "10の なかまは -ty で おわるよ。twenty（20）、thirty（30）、forty（40）、fifty（50）。forty は four なのに u が ない！"
+      },
+      "vocab": [
+        {
+          "en": "country",
+          "ja": "くに",
+          "emoji": "🗺️",
+          "core": true
+        },
+        {
+          "en": "pasta",
+          "ja": "パスタ",
+          "emoji": "🍝"
+        },
+        {
+          "en": "taco",
+          "ja": "タコス",
+          "emoji": "🌮"
+        },
+        {
+          "en": "world",
+          "ja": "せかい",
+          "emoji": "🌍"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're visiting the world food corner. There's food from many countries here! Look. Pasta from Italy. Tacos from Mexico. Curry from India. Today's sentence is: People in Italy eat a lot of pasta. Say it with me. People in Italy eat a lot of pasta. Great! A lot of means many or much. たくさんの、は a lot of だよ。 People means more than one person, so we say eat, not eats. people は おおぜいなので eat に s は つけないよ。 Now, phonics. Twenty. Thirty. Forty. Fifty. The tens end in t-y. Be careful with forty. Four has a u, but forty doesn't! F-o-r-t-y. Good job! Here's a tip. When you talk about other countries, be curious and kind. Ask, What do people eat in your country? Let's travel around the world with food!",
+      "conversation": {
+        "scene": "The world food corner of the market",
+        "sceneJa": "市場の 世界食品コーナーで",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "This corner has food from around the world!",
+            "ja": "この コーナーには せかいじゅうの たべものが ある！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look at this pasta. People in Italy eat a lot of pasta.",
+            "ja": "この パスタを みて。イタリアの ひとは パスタを たくさん たべるの。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "People in Mexico eat a lot of tacos, right?",
+            "ja": "メキシコの ひとは タコスを たくさん たべるんだよね？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's right. And people in India often eat curry.",
+            "ja": "そのとおり。それから インドの ひとは よく カレーを たべるわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What about fish? Who eats a lot of fish?",
+            "ja": "おさかなは？だれが おさかなを たくさん たべるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "People in Japan! And Kiko!",
+            "ja": "にほんの ひと！それと キコ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "せかいの たべものに ついて People in ～ eat a lot of ～. で はなそう。しっている 国を 1つ えらんでね",
+          "starterEn": "Hi! I'm Riko. I love learning about food from other countries. Do you know any food from Italy?",
+          "targetExpressions": [
+            "People in ～ eat a lot of ～.",
+            "a lot of ～"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "People in Italy eat a lot of pasta. 国の たべもの",
+          "a lot of ＝ たくさんの。people の あとは eat（s なし）",
+          "twenty・thirty・forty・fifty は -ty（forty に u は ない）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 412,
+      "world": 14,
+      "title": "Breakfast Here and There",
+      "titleJa": "あちこちの あさごはん",
+      "school": {
+        "grade": "中1",
+        "topic": "あさごはんを くらべる：In Japan, many people eat ～ for breakfast.",
+        "grammar": "In ～, many people eat ～ for breakfast. / What do you usually eat for breakfast?",
+        "expressions": [
+          {
+            "en": "In Japan, many people eat rice for breakfast.",
+            "ja": "にほんでは、おおくの ひとが あさごはんに ごはんを たべます。",
+            "core": true
+          },
+          {
+            "en": "What do you usually eat for breakfast?",
+            "ja": "あさごはんに ふだん なにを たべますか？"
+          },
+          {
+            "en": "I usually have toast and a glass of milk.",
+            "ja": "わたしは たいてい トーストと ぎゅうにゅう 1ぱいです。"
+          }
+        ],
+        "testPoints": [
+          "In ～, many people eat ～ for breakfast. で くらべて いえる",
+          "-ty の 数（sixty〜ninety）を ただしく かける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wake up and stretch.",
+          "ja": "おきて のびを して。",
+          "action": "うーんと のびる",
+          "emoji": "🙆"
+        },
+        {
+          "en": "Pour some cereal.",
+          "ja": "シリアルを いれて。",
+          "action": "ざーっと いれる まね",
+          "emoji": "🥣"
+        },
+        {
+          "en": "Eat with chopsticks.",
+          "ja": "はしで たべて。",
+          "action": "はしを つかう まね",
+          "emoji": "🥢"
+        },
+        {
+          "en": "Spread the jam.",
+          "ja": "ジャムを ぬって。",
+          "action": "パンに ぬる まね",
+          "emoji": "🍓"
+        }
+      ],
+      "phonics": {
+        "rule": "number-spelling",
+        "focus": [
+          "-ty"
+        ],
+        "sounds": [
+          "/ti/"
+        ],
+        "words": [
+          "sixty",
+          "seventy",
+          "eighty",
+          "ninety"
+        ],
+        "tipJa": "sixty（60）・seventy（70）は そのまま ty。eighty（80）は t が ひとつ、ninety（90）は nine の e を のこすよ。"
+      },
+      "vocab": [
+        {
+          "en": "breakfast",
+          "ja": "あさごはん",
+          "emoji": "🍳",
+          "core": true
+        },
+        {
+          "en": "rice",
+          "ja": "ごはん（おこめ）",
+          "emoji": "🍚"
+        },
+        {
+          "en": "toast",
+          "ja": "トースト",
+          "emoji": "🍞"
+        },
+        {
+          "en": "traveler",
+          "ja": "りょこうしゃ",
+          "emoji": "🧳"
+        }
+      ],
+      "teacherScript": "Good morning, everyone! What did you eat for breakfast today? Today we met a traveler at the market. In her country, many people eat bread and cheese for breakfast. In Japan, many people eat rice and miso soup. Today's sentence is: In Japan, many people eat rice for breakfast. Say it with me. In Japan, many people eat rice for breakfast. Great! Many people means a lot of people, but not everyone. おおくの ひと、ぜんいん では ないよ。 Then ask a friend, What do you usually eat for breakfast? I usually have toast and a glass of milk. Now, phonics. Sixty. Seventy. Eighty. Ninety. Eighty has only one t. Ninety keeps the e from nine. Let's spell ninety. N-i-n-e-t-y. Excellent! Here's a tip. When a friend answers, ask one more question. Oh, rice? What do you eat with it? Let's talk about breakfast!",
+      "conversation": {
+        "scene": "Comparing breakfasts with a traveler met at the market, played by Ms. Emma",
+        "sceneJa": "市場で 出会った 旅行者と 朝ごはんを くらべる",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm a traveler from far away. In my country, many people eat bread and cheese for breakfast.",
+            "ja": "わたしは とおくから きた りょこうしゃよ。わたしの くにでは、おおくの ひとが あさごはんに パンと チーズを たべるの。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In Japan, many people eat rice for breakfast. With miso soup!",
+            "ja": "にほんでは、おおくの ひとが あさごはんに ごはんを たべます。おみそしると いっしょに！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Interesting! What do you usually eat for breakfast, Haru?",
+            "ja": "おもしろい！ハル、あさごはんに ふだん なにを たべる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I usually have toast and a glass of milk.",
+            "ja": "ぼくは たいてい トーストと ぎゅうにゅう 1ぱい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I eat fish every morning. Of course!",
+            "ja": "わたしは まいあさ おさかな。もちろん！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I eat anything. Rice, bread, cheese, fish. Breakfast is the best!",
+            "ja": "ぼくは なんでも。ごはん、パン、チーズ、さかな。あさごはん さいこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あさごはんに ついて What do you usually eat for breakfast? と きいたり こたえたり しよう",
+          "starterEn": "Good morning! I'm Kiko. I always eat fish for breakfast. What do you usually eat for breakfast?",
+          "targetExpressions": [
+            "What do you usually eat for breakfast?",
+            "I usually have ～.",
+            "In Japan, many people eat ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In Japan, many people eat rice for breakfast. くにで くらべる",
+          "What do you usually eat for breakfast? I usually have ～.",
+          "sixty・seventy・eighty・ninety の つづり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 413,
+      "world": 14,
+      "title": "Where Does It Come From?",
+      "titleJa": "どこから きたの？",
+      "school": {
+        "grade": "中1",
+        "topic": "Where does ～ come from? ― It comes from ～.：たべものの ふるさと",
+        "grammar": "Where does ～ come from? ― It comes from ～. / ～ come from ～.",
+        "expressions": [
+          {
+            "en": "Bananas come from warm places.",
+            "ja": "バナナは あたたかい ところから きます。",
+            "core": true
+          },
+          {
+            "en": "Where does this cheese come from?",
+            "ja": "この チーズは どこから きたのですか？"
+          },
+          {
+            "en": "It comes from a farm in the mountains.",
+            "ja": "やまの ぼくじょうから きました。"
+          }
+        ],
+        "testPoints": [
+          "Where does ～ come from? / It comes from ～. で たべものの ふるさとを いえる",
+          "-teen と -ty（thirteen / thirty）を ききわけて かける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Carry the box.",
+          "ja": "はこを はこんで。",
+          "action": "おもい はこを もつ まね",
+          "emoji": "📦"
+        },
+        {
+          "en": "Load the truck.",
+          "ja": "トラックに つんで。",
+          "action": "もちあげて のせる まね",
+          "emoji": "🚚"
+        },
+        {
+          "en": "Read the label.",
+          "ja": "ラベルを よんで。",
+          "action": "はこの じを よむ まね",
+          "emoji": "🏷️"
+        },
+        {
+          "en": "Wipe your forehead.",
+          "ja": "ひたいの あせを ふいて。",
+          "action": "ふーっと あせを ふく",
+          "emoji": "😅"
+        }
+      ],
+      "phonics": {
+        "rule": "number-spelling",
+        "focus": [
+          "-teen",
+          "-ty"
+        ],
+        "sounds": [
+          "/tiːn/",
+          "/ti/"
+        ],
+        "words": [
+          "thirteen",
+          "thirty",
+          "fourteen",
+          "forty"
+        ],
+        "tipJa": "-teen（13〜19）は「ティーン」と のばして つよく、-ty（20, 30…）は みじかく。thirteen と thirty、fourteen と forty を ききわけよう。fourteen には u が あるよ！"
+      },
+      "vocab": [
+        {
+          "en": "farm",
+          "ja": "のうじょう・ぼくじょう",
+          "emoji": "🚜",
+          "core": true
+        },
+        {
+          "en": "warehouse",
+          "ja": "そうこ",
+          "emoji": "🏭"
+        },
+        {
+          "en": "banana",
+          "ja": "バナナ",
+          "emoji": "🍌"
+        },
+        {
+          "en": "warm",
+          "ja": "あたたかい",
+          "emoji": "☀️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're in the market warehouse. There are boxes everywhere! Every food comes from somewhere. Today's sentence is: Bananas come from warm places. Say it with me. Bananas come from warm places. Great! Bananas means more than one, so we say come. For one thing, we say comes. This cheese comes from a farm. ひとつなら comes、ふたつ いじょうなら come だよ。 To ask, say, Where does this cheese come from? It comes from a farm in the mountains. Now, phonics. Listen carefully. Thirteen. Thirty. Fourteen. Forty. Teen is long and strong. Thir-teen! Ty is short. Thir-ty. Can you hear the difference? -teen は のばして、-ty は みじかく。 Great job! Here's a tip. If you're not sure about a number, ask, Thirteen or thirty? Then the other person can say it again slowly. Let's count the boxes!",
+      "conversation": {
+        "scene": "The market warehouse, finding out where foods come from",
+        "sceneJa": "市場の 倉庫で、食べものの 来た道を 調べる",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Look at all these boxes! Where does this cheese come from?",
+            "ja": "はこが いっぱい！この チーズは どこから きたの？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the warehouse worker. It comes from a farm in the mountains.",
+            "ja": "わたしが そうこの ひとよ。やまの ぼくじょうから きたの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Where do these bananas come from?",
+            "ja": "この バナナは どこから？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Bananas come from warm places. These came by ship.",
+            "ja": "バナナは あたたかい ところから くるの。これは ふねで きたのよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How many boxes are there? Thirteen? Thirty?",
+            "ja": "はこは いくつ？13？30？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Thirty! I counted them all. Thirteen boxes of bananas and seventeen boxes of cheese!",
+            "ja": "30！ぜんぶ かぞえたよ。バナナが 13はこ、チーズが 17はこ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "たべものの ふるさとを Where does ～ come from? / It comes from ～. で きいたり こたえたり しよう",
+          "starterEn": "Hi! I'm Haru. I'm checking the boxes in the warehouse. Look, oranges! Where do you think they come from?",
+          "targetExpressions": [
+            "Where does ～ come from?",
+            "It comes from ～.",
+            "～ come from warm places."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Bananas come from warm places. たべものの ふるさと",
+          "Where does this cheese come from? It comes from a farm.",
+          "thirteen と thirty、fourteen と forty を ききわけた"
+        ]
+      }
+    },
+    {
+      "lessonNo": 414,
+      "world": 14,
+      "title": "Healthy Lunch Box",
+      "titleJa": "けんこうな おべんとう",
+      "school": {
+        "grade": "中1",
+        "topic": "からだに よい たべもの：～ are good for you. / ～ gives you energy.",
+        "grammar": "～ are good for you. / ～ gives you energy. / Don't eat too many ～.",
+        "expressions": [
+          {
+            "en": "Vegetables are good for you.",
+            "ja": "やさいは からだに いいです。",
+            "core": true
+          },
+          {
+            "en": "Rice gives you energy.",
+            "ja": "ごはんは げんきの もとに なります。"
+          },
+          {
+            "en": "Don't eat too many sweets.",
+            "ja": "あまい ものを たべすぎないでね。"
+          }
+        ],
+        "testPoints": [
+          "～ are good for you. で からだに よい ものを せつめい できる",
+          "hundred・thousand と -teen / -ty の つづりが かける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your lunch box.",
+          "ja": "おべんとうばこを あけて。",
+          "action": "ふたを ぱかっと あける",
+          "emoji": "🍱"
+        },
+        {
+          "en": "Pick up some broccoli.",
+          "ja": "ブロッコリーを つまんで。",
+          "action": "はしで つまむ まね",
+          "emoji": "🥦"
+        },
+        {
+          "en": "Chew well.",
+          "ja": "よく かんで。",
+          "action": "もぐもぐ かむ",
+          "emoji": "😋"
+        },
+        {
+          "en": "Flex your muscles!",
+          "ja": "ちからこぶを つくって！",
+          "action": "うでを まげて ちからこぶ",
+          "emoji": "💪"
+        }
+      ],
+      "phonics": {
+        "rule": "number-spelling",
+        "focus": [
+          "hundred",
+          "thousand",
+          "-teen",
+          "-ty"
+        ],
+        "sounds": [
+          "/ˈhʌndrəd/",
+          "/ˈθaʊzənd/",
+          "/tiːn/",
+          "/ti/"
+        ],
+        "words": [
+          "hundred",
+          "thousand",
+          "fifteen",
+          "fifty"
+        ],
+        "tipJa": "100 は hundred（さいごは d・r・e・d）、1000 は thousand（th で はじまる）。fifteen と fifty は five では なく fif だよ。"
+      },
+      "vocab": [
+        {
+          "en": "lunch box",
+          "ja": "おべんとう（ばこ）",
+          "emoji": "🍱",
+          "core": true
+        },
+        {
+          "en": "vegetable",
+          "ja": "やさい",
+          "emoji": "🥦"
+        },
+        {
+          "en": "healthy",
+          "ja": "けんこうに よい",
+          "emoji": "💪"
+        },
+        {
+          "en": "energy",
+          "ja": "エネルギー・げんき",
+          "emoji": "⚡"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Tomorrow there's a lunch box contest at the market. Let's make a healthy lunch box! Healthy food helps your body grow. Today's sentence is: Vegetables are good for you. Say it with me. Vegetables are good for you. Great! Good for you means it helps your body. からだに いい、は good for you だよ。 Rice gives you energy. Fish makes you strong. Sweets are yummy, but don't eat too many sweets. Now, phonics. Hundred. Thousand. Fifteen. Fifty. Hundred is h-u-n-d-r-e-d. Thousand starts with t-h. Let's spell hundred together. H-u-n-d-r-e-d. Super! Here's a tip. A colorful lunch box is a healthy lunch box. Red tomatoes, green broccoli, yellow eggs. いろが たくさん だと えいようも たくさん。 What colors will you put in your lunch box? Let's plan our lunch boxes together!",
+      "conversation": {
+        "scene": "Getting ready for the market's lunch box contest",
+        "sceneJa": "お弁当コンテストの じゅんび",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Tomorrow is the lunch box contest! Let's think about healthy food.",
+            "ja": "あしたは おべんとうコンテスト！けんこうに よい たべものを かんがえましょう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I want fried chicken and cake!",
+            "ja": "からあげと ケーキが いい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Haru, vegetables are good for you. Let's put in some broccoli.",
+            "ja": "ハル、やさいは からだに いいよ。ブロッコリーを いれよう。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Rice gives you energy. And fish makes you strong!",
+            "ja": "ごはんは げんきの もと。それに おさかなで つよく なる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good ideas. You can have a little cake. Don't eat too many sweets.",
+            "ja": "いい かんがえね。ケーキは すこしなら いいわ。あまい ものを たべすぎないでね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "One piece of cake, please! Just one!",
+            "ja": "ケーキ ひときれ ください！ひとつだけ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "けんこうな おべんとうを かんがえよう。～ are good for you. / ～ gives you energy. で りゆうも いってね",
+          "starterEn": "Hi! I'm Riko. I'm making a healthy lunch box for the contest. What should I put in it?",
+          "targetExpressions": [
+            "～ are good for you.",
+            "～ gives you energy.",
+            "Let's put in some ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Vegetables are good for you. からだに いい！",
+          "Rice gives you energy. / Don't eat too many sweets.",
+          "hundred・thousand・fifteen・fifty の つづり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 415,
+      "world": 14,
+      "title": "Lunch Box Contest",
+      "titleJa": "おべんとう コンテスト",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：お弁当コンテストで 自分の お弁当を 説明する",
+        "grammar": "My lunch box has ～, ～ and ～. / The ～ are red, and the ～ are green. / It's colorful and healthy.",
+        "expressions": [
+          {
+            "en": "My lunch box has rice, eggs and broccoli.",
+            "ja": "わたしの おべんとうには、ごはん、たまご、ブロッコリーが はいっています。",
+            "core": true
+          },
+          {
+            "en": "The tomatoes are red, and the cucumbers are green.",
+            "ja": "トマトは あかくて、きゅうりは みどりです。"
+          },
+          {
+            "en": "It's colorful and healthy. Please try it!",
+            "ja": "カラフルで けんこうに いいです。たべてみてください！"
+          }
+        ],
+        "testPoints": [
+          "じぶんの おべんとうを 3〜4文で せつめい できる",
+          "大きな 数の つづり（-ty・-teen・hundred・thousand）を よめる・かける"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your lunch box.",
+          "ja": "おべんとうを たかく あげて。",
+          "action": "りょうてで もちあげる",
+          "emoji": "🍱"
+        },
+        {
+          "en": "Point to the eggs.",
+          "ja": "たまごを ゆびさして。",
+          "action": "ゆびで さす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Clap for your friends.",
+          "ja": "ともだちに はくしゅ。",
+          "action": "ぱちぱち はくしゅ",
+          "emoji": "👏"
+        },
+        {
+          "en": "Make a winner pose!",
+          "ja": "ゆうしょうの ポーズ！",
+          "action": "ガッツポーズ",
+          "emoji": "🏆"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ty",
+          "-teen",
+          "hundred",
+          "thousand"
+        ],
+        "sounds": [
+          "/ti/",
+          "/tiːn/",
+          "/ˈhʌndrəd/",
+          "/ˈθaʊzənd/"
+        ],
+        "words": [
+          "forty",
+          "ninety",
+          "fifteen",
+          "hundred",
+          "thousand"
+        ],
+        "tipJa": "ブロック5 の まとめ。forty（u なし）、ninety（e あり）、fifteen（fif）、hundred、thousand。ぜんぶ かけたら かずの たつじん！"
+      },
+      "vocab": [
+        {
+          "en": "contest",
+          "ja": "コンテスト",
+          "emoji": "🏆",
+          "core": true
+        },
+        {
+          "en": "judge",
+          "ja": "しんさいん",
+          "emoji": "🧑‍⚖️"
+        },
+        {
+          "en": "colorful",
+          "ja": "カラフルな",
+          "emoji": "🌈"
+        },
+        {
+          "en": "cucumber",
+          "ja": "きゅうり",
+          "emoji": "🥒"
+        }
+      ],
+      "teacherScript": "Hello, everyone! It's the lunch box contest! Everyone made a lunch box. Now, let's show them to the judge. Today's sentence is: My lunch box has rice, eggs and broccoli. Say it with me. My lunch box has rice, eggs and broccoli. Great! When you list three things, put and before the last one. Rice, eggs and broccoli. 3つ ならべる ときは、さいごの まえに and。 Then talk about colors. The tomatoes are red, and the cucumbers are green. Finally, say, It's colorful and healthy. Please try it! Now, let's review the number spellings. Forty. Ninety. Fifteen. Hundred. Thousand. Can you spell forty? F-o-r-t-y. No u! Fantastic! Here's a presentation tip. Look at the judge and speak slowly. Show your lunch box with a big smile. Good luck, everyone!",
+      "conversation": {
+        "scene": "The lunch box contest, where each friend explains their lunch box to the judge",
+        "sceneJa": "お弁当コンテストで、自分の お弁当を 説明する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the judge today. Please tell me about your lunch box.",
+            "ja": "きょうは わたしが しんさいんよ。おべんとうに ついて おしえてね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My lunch box has rice, eggs and broccoli. It's colorful and healthy.",
+            "ja": "わたしの おべんとうには、ごはん、たまご、ブロッコリーが はいっています。カラフルで けんこうに いいです。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My lunch box has rice balls, tomatoes and cucumbers. The tomatoes are red, and the cucumbers are green.",
+            "ja": "ぼくの おべんとうは おにぎり、トマト、きゅうり。トマトは あかくて、きゅうりは みどり。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "My lunch box has fish, fish and fish! And a little rice.",
+            "ja": "わたしの おべんとうは さかな、さかな、さかな！それと ごはん すこし。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Mine has one sandwich and fifteen cookies. Please try it!",
+            "ja": "ぼくのは サンドイッチ ひとつと クッキー 15まい。たべてみて！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! Everyone did a great job. The winner is... all of you!",
+            "ja": "あはは！みんな よく がんばったわ。ゆうしょうは… みんな！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの おべんとう（ゆめの おべんとうでも OK）を My lunch box has ～. で 3文 いじょう せつめいしよう",
+          "starterEn": "Welcome to the lunch box contest! I'm Birimo, the judge. Please tell me about your lunch box!",
+          "targetExpressions": [
+            "My lunch box has ～.",
+            "It's colorful and healthy.",
+            "Please try it!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "My lunch box has rice, eggs and broccoli. おべんとうを せつめい",
+          "It's colorful and healthy. いろと けんこう",
+          "ブロック5 まとめ：forty・ninety・fifteen・hundred・thousand"
+        ]
+      }
+    },
+    {
+      "lessonNo": 416,
+      "world": 14,
+      "title": "Market Riddles",
+      "titleJa": "市場の なぞなぞ",
+      "school": {
+        "grade": "中1",
+        "topic": "なぞなぞ：いろ・かたち・いつ たべるかで せつめいする",
+        "grammar": "It's ～ and ～. You eat it ～. What is it? ― Is it a ～?",
+        "expressions": [
+          {
+            "en": "It's red and round. You eat it in summer.",
+            "ja": "あかくて まるい。なつに たべます。",
+            "core": true
+          },
+          {
+            "en": "What is it? Is it a tomato?",
+            "ja": "なんでしょう？ トマトですか？"
+          },
+          {
+            "en": "It's long and yellow. Monkeys love it.",
+            "ja": "ながくて きいろい。サルが だいすき。"
+          }
+        ],
+        "testPoints": [
+          "いろ・かたち・いつ たべるかを つかって なぞなぞを だせる",
+          "複数形の つづり（-es・-ies・-ves）を ふりかえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Think hard.",
+          "ja": "よく かんがえて。",
+          "action": "あたまに ゆびを あてる",
+          "emoji": "🤔"
+        },
+        {
+          "en": "Raise your hand if you know.",
+          "ja": "わかったら てを あげて。",
+          "action": "さっと てを あげる",
+          "emoji": "🙋"
+        },
+        {
+          "en": "Whisper the answer.",
+          "ja": "こたえを こっそり いって。",
+          "action": "てを くちに あてて ささやく",
+          "emoji": "🤫"
+        },
+        {
+          "en": "Ring the bell!",
+          "ja": "ベルを ならして！",
+          "action": "ちりんちりんと ならす まね",
+          "emoji": "🔔"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "es",
+          "ies",
+          "ves"
+        ],
+        "sounds": [
+          "/ɪz/",
+          "/iz/",
+          "/vz/"
+        ],
+        "words": [
+          "peaches",
+          "cherries",
+          "loaves",
+          "buses"
+        ],
+        "tipJa": "ブロック1・2 の ふりかえり。peaches（ch + es）、cherries（y → ies）、loaves（f → ves）、buses（s + es）。"
+      },
+      "vocab": [
+        {
+          "en": "riddle",
+          "ja": "なぞなぞ",
+          "emoji": "❓",
+          "core": true
+        },
+        {
+          "en": "round",
+          "ja": "まるい",
+          "emoji": "⚪"
+        },
+        {
+          "en": "long",
+          "ja": "ながい",
+          "emoji": "📏"
+        },
+        {
+          "en": "hint",
+          "ja": "ヒント",
+          "emoji": "💡"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today is the market riddle contest! Let's make riddles about food. A good riddle has clues. A color, a shape, and when you eat it. Today's sentence is: It's red and round. You eat it in summer. Say it with me. It's red and round. You eat it in summer. Good! What is it? A tomato! Now you try. It's long and yellow. Monkeys love it. What is it? A banana! Great! いろ・かたち・いつ たべるか の 3つの ヒントで なぞなぞが つくれるよ。 Now, let's review phonics from the start of this world. Peaches. Cherries. Loaves. Buses. Peach plus e-s. Cherry, y to i-e-s. Loaf, f to v-e-s. Perfect! Here's a tip. If your friend can't guess, give one more hint. Here's a hint. It's in salads. Let's start the riddle contest!",
+      "conversation": {
+        "scene": "The riddle contest at the market",
+        "sceneJa": "市場の なぞなぞ大会",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the market riddle contest! Riko, you go first.",
+            "ja": "市場の なぞなぞたいかいへ ようこそ！リコ、さいしょに どうぞ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "It's red and round. You eat it in summer. What is it?",
+            "ja": "あかくて まるい。なつに たべる。なんでしょう？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Is it a watermelon?",
+            "ja": "すいか？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "No. A watermelon is green outside. Here's a hint. It's in salads.",
+            "ja": "ちがうよ。すいかは そとが みどり。ヒント。サラダに はいってる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I know! It's a tomato!",
+            "ja": "わかった！トマト！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My turn. It's long and yellow. Monkeys love it.",
+            "ja": "ぼくの ばん。ながくて きいろい。サルが だいすき。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "A banana! That's easy!",
+            "ja": "バナナ！かんたん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "たべものの なぞなぞを だしあおう。いろ・かたち・いつ たべるかを ヒントに してね",
+          "starterEn": "Hi! I'm Kiko. Let's do riddles! Here's mine. It's orange and long. Rabbits love it. What is it?",
+          "targetExpressions": [
+            "It's ～ and ～.",
+            "You eat it ～.",
+            "What is it?",
+            "Is it a ～?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's red and round. You eat it in summer. なぞなぞを だした",
+          "ヒントは いろ・かたち・いつ たべるか",
+          "peaches・cherries・loaves・buses の つづり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 417,
+      "world": 14,
+      "title": "My Favorite Food Story",
+      "titleJa": "すきな たべものの おはなし",
+      "school": {
+        "grade": "中1",
+        "topic": "すきな たべものの はなし（だれが・いつ・どんな あじ）",
+        "grammar": "I love ～. My ～ makes it on ～. / He puts in ～. / It's a little ～, but I love it.",
+        "expressions": [
+          {
+            "en": "I love curry. My dad makes it on Sundays.",
+            "ja": "ぼくは カレーが だいすきです。にちようびに おとうさんが つくります。",
+            "core": true
+          },
+          {
+            "en": "He puts in lots of vegetables.",
+            "ja": "やさいを たくさん いれます。"
+          },
+          {
+            "en": "It's a little spicy, but I love it.",
+            "ja": "すこし からいけど、だいすきです。"
+          }
+        ],
+        "testPoints": [
+          "すきな たべものの はなしを 3〜4文で できる（だれが・いつ・どんな あじ）",
+          "kn・wr の だまっている もじを ふりかえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Knock on the door.",
+          "ja": "ドアを ノックして。",
+          "action": "こんこんと ノック",
+          "emoji": "🚪"
+        },
+        {
+          "en": "Write a big C in the air.",
+          "ja": "そらに おおきく C を かいて。",
+          "action": "ゆびで おおきく かく",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Wrap yourself in a blanket.",
+          "ja": "もうふに くるまって。",
+          "action": "からだを ぎゅっと だく",
+          "emoji": "🛌"
+        },
+        {
+          "en": "Sit down for dinner.",
+          "ja": "ゆうごはんの せきに すわって。",
+          "action": "いすに すわる まね",
+          "emoji": "🍽️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "kn",
+          "wr"
+        ],
+        "sounds": [
+          "/n/",
+          "/r/"
+        ],
+        "words": [
+          "knock",
+          "knit",
+          "wrist",
+          "wrong"
+        ],
+        "tipJa": "ブロック3 の ふりかえり。knock・knit の k、wrist・wrong の w は だまっている もじ。"
+      },
+      "vocab": [
+        {
+          "en": "favorite",
+          "ja": "いちばん すきな",
+          "emoji": "⭐",
+          "core": true
+        },
+        {
+          "en": "curry",
+          "ja": "カレー",
+          "emoji": "🍛"
+        },
+        {
+          "en": "Sunday",
+          "ja": "にちようび",
+          "emoji": "📅"
+        },
+        {
+          "en": "story",
+          "ja": "おはなし",
+          "emoji": "📖"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! It's dinner time at the inn. Tonight, everyone tells a food story. A food story is about your favorite food and the people who make it. Today's sentence is: I love curry. My dad makes it on Sundays. Say it with me. I love curry. My dad makes it on Sundays. Great! My dad makes, with an s. Remember World 13? ワールド13 で ならった s が ここでも でるよ。 Add more. He puts in lots of vegetables. It's a little spicy, but I love it. But connects two different ideas. When your friend tells a story, use your conversation skills. Really? What kind? That's cool! Now, phonics review. Knock. Knit. Wrist. Wrong. Quiet k, quiet w. Good job! Here's a tip. Food stories are warm and happy. Share a memory with your food. Let's tell our stories!",
+      "conversation": {
+        "scene": "Dinner at the inn, where everyone tells a story about a favorite food",
+        "sceneJa": "宿の 夕ごはんで、好きな 食べものの 話を する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Tonight, let's share food stories. What's your favorite food, Haru?",
+            "ja": "こんやは たべものの おはなしを しましょう。ハル、いちばん すきな たべものは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I love curry. My dad makes it on Sundays.",
+            "ja": "カレーが だいすき。にちようびに おとうさんが つくるんだ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Really? What kind of curry?",
+            "ja": "ほんとう？どんな カレー？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "He puts in lots of vegetables. It's a little spicy, but I love it.",
+            "ja": "やさいを たくさん いれるの。すこし からいけど、だいすき。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's cool! My grandma makes fish soup. It smells so good!",
+            "ja": "いいね！わたしの おばあちゃんは さかなの スープを つくるの。すごく いい におい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I miss home cooking. Let's write our food stories in Riko's notebook!",
+            "ja": "おうちの ごはんが なつかしいな。リコの ノートに たべものの おはなしを かこう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな たべものの おはなしを しよう。だれが つくる？ いつ？ どんな あじ？（かぞくの なまえは いわなくて OK）",
+          "starterEn": "Hi! I'm Haru. My favorite food is curry. My dad makes it on Sundays. What's your favorite food?",
+          "targetExpressions": [
+            "I love ～.",
+            "My ～ makes it on ～.",
+            "It's a little ～, but I love it."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I love curry. My dad makes it on Sundays. たべものの おはなし",
+          "Really? What kind? あいづちと しつもんで はなしが ひろがる",
+          "knock・knit・wrist・wrong の だまっている もじ"
+        ]
+      }
+    },
+    {
+      "lessonNo": 418,
+      "world": 14,
+      "title": "A Recipe Card",
+      "titleJa": "レシピカード",
+      "school": {
+        "grade": "中1",
+        "topic": "レシピカードを 書く：ざいりょう（You need ～.）と てじゅん（命令文）",
+        "grammar": "You need ～. / Wash ～. Cut them in half. Put them on ～.",
+        "expressions": [
+          {
+            "en": "Wash the strawberries. Cut them in half.",
+            "ja": "いちごを あらいます。はんぶんに きります。",
+            "core": true
+          },
+          {
+            "en": "Put them on a plate with some cream.",
+            "ja": "クリームと いっしょに おさらに のせます。"
+          },
+          {
+            "en": "You need ten strawberries and some cream.",
+            "ja": "いちご 10こと クリームが いります。"
+          }
+        ],
+        "testPoints": [
+          "レシピカードに ざいりょうと てじゅん（命令文 3つ）を かける",
+          "mb・ph の つづりを ふりかえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wash the strawberries.",
+          "ja": "いちごを あらって。",
+          "action": "みずで あらう まね",
+          "emoji": "🍓"
+        },
+        {
+          "en": "Cut them in half.",
+          "ja": "はんぶんに きって。",
+          "action": "すぱっと きる まね",
+          "emoji": "🔪"
+        },
+        {
+          "en": "Write the title.",
+          "ja": "タイトルを かいて。",
+          "action": "ペンで かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Show your card.",
+          "ja": "カードを みせて。",
+          "action": "カードを たかく あげる",
+          "emoji": "🪪"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "mb",
+          "ph"
+        ],
+        "sounds": [
+          "/m/",
+          "/f/"
+        ],
+        "words": [
+          "comb",
+          "climb",
+          "photo",
+          "elephant"
+        ],
+        "tipJa": "ブロック4 の ふりかえり。comb・climb の b は よまない、photo・elephant の ph は「フ」。"
+      },
+      "vocab": [
+        {
+          "en": "card",
+          "ja": "カード",
+          "emoji": "🪪",
+          "core": true
+        },
+        {
+          "en": "strawberry",
+          "ja": "いちご",
+          "emoji": "🍓"
+        },
+        {
+          "en": "cream",
+          "ja": "クリーム",
+          "emoji": "🍦"
+        },
+        {
+          "en": "half",
+          "ja": "はんぶん",
+          "emoji": "🌗"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're writing recipe cards. With a recipe card, you can cook the same food again and again. A recipe card has two parts. First, what you need. You need ten strawberries and some cream. Second, the steps. Today's sentence is: Wash the strawberries. Cut them in half. Say it with me. Wash the strawberries. Cut them in half. Great! Them means the strawberries. In half means into two pieces. them は「それら」、in half は「はんぶんに」。 Then, put them on a plate with some cream. Three steps! Now, phonics review. Comb. Climb. Photo. Elephant. The b is quiet, and p-h says f. Super! Here's a writing tip. Start each step with an action word, and write a number for each step. One, two, three. Let's write our recipe cards!",
+      "conversation": {
+        "scene": "The cooking class, writing recipe cards to take home",
+        "sceneJa": "料理教室で、レシピカードを 書く",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Today, let's write recipe cards. Then you can cook at home.",
+            "ja": "きょうは レシピカードを かきましょう。そうすれば おうちでも つくれるわ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "My recipe is strawberries and cream. You need ten strawberries and some cream.",
+            "ja": "わたしの レシピは いちごクリーム。いちご 10こと クリームが いるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What's the first step?",
+            "ja": "さいしょの てじゅんは？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Wash the strawberries. Cut them in half. Put them on a plate with some cream.",
+            "ja": "いちごを あらう。はんぶんに きる。クリームと いっしょに おさらに のせる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Easy! Can I take a photo of your card?",
+            "ja": "かんたん！カードの しゃしん とっても いい？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's make it now! I have my spoon ready!",
+            "ja": "いま つくろう！スプーンの じゅんび できてる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かんたんな レシピカードを いっしょに つくろう。いる もの（You need ～.）と てじゅん（Wash ～. Cut ～. Put ～.）を いってね",
+          "starterEn": "Hi! I'm Riko. I'm writing a recipe card for a sandwich. What do we need?",
+          "targetExpressions": [
+            "You need ～.",
+            "Wash ～.",
+            "Cut them in half.",
+            "Put them on ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Wash the strawberries. Cut them in half. てじゅんを かいた",
+          "You need ～. で ざいりょうを かく",
+          "comb・climb・photo・elephant の つづり"
+        ]
+      }
+    },
+    {
+      "lessonNo": 419,
+      "world": 14,
+      "title": "Bustling Market Review",
+      "titleJa": "にぎわいの市場 ふりかえり",
+      "school": {
+        "grade": "中1",
+        "topic": "ふりかえり：市場の さよなら買いもの（How much ～? / Can I have ～?）",
+        "grammar": "How much are these ～? ― They're ～ yen each. / Can I have ～? / That's ～ yen. Here you go!",
+        "expressions": [
+          {
+            "en": "How much are these apples?",
+            "ja": "この りんごは いくらですか？",
+            "core": true
+          },
+          {
+            "en": "They're eighty yen each. Can I have five, please?",
+            "ja": "1こ 80えんです。5こ もらえますか？"
+          },
+          {
+            "en": "Sure. That's four hundred yen. Here you go!",
+            "ja": "はい。400えんです。どうぞ！"
+          }
+        ],
+        "testPoints": [
+          "かいものの ことば（How much ～? / Can I have ～? / That's too expensive.）を つかって かいものが できる",
+          "大きな 数の つづりを ふりかえる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Wave to the shopkeepers.",
+          "ja": "おみせの ひとに てを ふって。",
+          "action": "えがおで てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Carry your bags.",
+          "ja": "ふくろを もって。",
+          "action": "りょうてに ふくろを さげる まね",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "Count your money.",
+          "ja": "おかねを かぞえて。",
+          "action": "コインを かぞえる まね",
+          "emoji": "🪙"
+        },
+        {
+          "en": "Look at the map.",
+          "ja": "ちずを みて。",
+          "action": "ちずを ひろげる まね",
+          "emoji": "🗺️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ty",
+          "-teen",
+          "hundred",
+          "thousand"
+        ],
+        "sounds": [
+          "/ti/",
+          "/tiːn/",
+          "/ˈhʌndrəd/",
+          "/ˈθaʊzənd/"
+        ],
+        "words": [
+          "eighty",
+          "nineteen",
+          "hundred",
+          "thousand"
+        ],
+        "tipJa": "ブロック5 の ふりかえり。eighty（t は ひとつ）、nineteen（nine の e を のこす）、hundred、thousand。"
+      },
+      "vocab": [
+        {
+          "en": "souvenir",
+          "ja": "おみやげ",
+          "emoji": "🎁",
+          "core": true
+        },
+        {
+          "en": "bag",
+          "ja": "ふくろ",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "each",
+          "ja": "ひとつ ずつ・1こ あたり",
+          "emoji": "1️⃣"
+        },
+        {
+          "en": "golden",
+          "ja": "きんいろの",
+          "emoji": "✨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This is our last day at the Bustling Market. Let's buy some souvenirs for our friends. Today we'll use all our shopping words. Today's sentence is: How much are these apples? Say it with me. How much are these apples? Great! They're eighty yen each. Each means for one. 1こ あたり、は each だよ。 Can I have five, please? Sure. That's four hundred yen. Here you go! If it's too expensive, say, That's too expensive. Do you have a cheaper one? And if you're full, No, thank you. I'm full. Now, phonics review. Eighty. Nineteen. Hundred. Thousand. Eighty has one t. Nineteen keeps the e. Wonderful! Oh, look! Something is shining behind the apple stand. Is it the golden apple from Birimo's map? Let's go and see!",
+      "conversation": {
+        "scene": "A goodbye shopping trip at the market, where the friends finally find something golden",
+        "sceneJa": "市場の さよなら買いもの",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is our last day at the market. Let's buy some souvenirs!",
+            "ja": "市場は きょうが さいご。おみやげを かいましょう！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Excuse me. How much are these apples?",
+            "ja": "すみません。この りんごは いくらですか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm the apple seller! They're eighty yen each.",
+            "ja": "ぼくが りんごやさん！1こ 80えんだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Can I have five, please?",
+            "ja": "5こ もらえますか？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Sure. That's four hundred yen. Here you go!",
+            "ja": "どうぞ。400えん です。はい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wait! What's that behind the stand? A golden apple!",
+            "ja": "まって！おみせの うしろに ある あれ なに？きんの りんご！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The map was right! The golden apple is here!",
+            "ja": "ちずは ただしかった！きんの りんごは ここに あった！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "市場で さいごの かいもの。How much ～? / Can I have ～? / That's too expensive. を つかって おみやげを かおう",
+          "starterEn": "Hello! I'm Kiko, and this is my souvenir shop. We have cookies, cups and key chains. What would you like?",
+          "targetExpressions": [
+            "How much are these ～?",
+            "Can I have ～, please?",
+            "That's too expensive.",
+            "Thank you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "How much are these apples? Can I have five, please? かいものの まとめ",
+          "80えん × 5こ ＝ four hundred yen！",
+          "ついに きんの りんごを みつけた！"
+        ]
+      }
+    },
+    {
+      "lessonNo": 420,
+      "world": 14,
+      "title": "World 14 Grand Review",
+      "titleJa": "ワールド14 グランドレビュー",
+      "school": {
+        "grade": "中1",
+        "topic": "まとめ：ワールド14 マーケットショー（じぶんの おみせを しょうかいする）",
+        "grammar": "Welcome to our shop! Try our ～! / First, ～. Then ～. / It tastes ～. / It's only ～ yen!",
+        "expressions": [
+          {
+            "en": "Welcome to our shop! Try our fruit salad!",
+            "ja": "わたしたちの おみせへ ようこそ！フルーツサラダを どうぞ！",
+            "core": true
+          },
+          {
+            "en": "First, we cut the fruit. Then we mix it with honey.",
+            "ja": "まず くだものを きって、それから はちみつと まぜます。"
+          },
+          {
+            "en": "Would you like some more? It's only a hundred yen!",
+            "ja": "もう すこし いかがですか？たった 100えんです！"
+          }
+        ],
+        "testPoints": [
+          "おみせの しょうかい・すすめる・つくりかた・ねだんを 4文 いじょうで はっぴょう できる",
+          "複数形・だまっている もじ・ph・大きな 数の つづりを よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Cut! Mix! Taste!",
+          "ja": "きって！まぜて！あじみ！",
+          "action": "ワールド14 の りょうりの うごきを はやく",
+          "emoji": "🥗"
+        },
+        {
+          "en": "Stand on the stage.",
+          "ja": "ステージに たって。",
+          "action": "むねを はって まえに でる",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "es",
+          "ies",
+          "kn",
+          "wr",
+          "ph",
+          "-ty"
+        ],
+        "sounds": [
+          "/ɪz/",
+          "/iz/",
+          "/n/",
+          "/r/",
+          "/f/",
+          "/ti/"
+        ],
+        "words": [
+          "boxes",
+          "berries",
+          "knife",
+          "write",
+          "phone",
+          "fifty"
+        ],
+        "tipJa": "ワールド14 の そうまとめ！boxes（es）、berries（ies）、knife と write の だまっている もじ、phone の ph、fifty の -ty。ぜんぶ よめたら つづりの はかせ！"
+      },
+      "vocab": [
+        {
+          "en": "show",
+          "ja": "ショー",
+          "emoji": "🎪",
+          "core": true
+        },
+        {
+          "en": "presentation",
+          "ja": "はっぴょう",
+          "emoji": "📣"
+        },
+        {
+          "en": "map",
+          "ja": "ちず",
+          "emoji": "🗺️"
+        },
+        {
+          "en": "plains",
+          "ja": "そうげん（ひろい のはら）",
+          "emoji": "🌾"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! This is the last lesson of World 14. ワールド14 さいごの レッスンだよ。 First, speed TPR! Look! Stop! Come here! Go! Cut! Mix! Taste! Great! Now, it's the World 14 market show in the market square. Every team opens a shop and presents it. Today's sentences are: Welcome to our shop! Try our fruit salad! Say them with me. Welcome to our shop! Try our fruit salad! Wonderful! A good shop presentation has four parts. Welcome the customers. Recommend your food. Try our fruit salad! Explain how you make it. First, we cut the fruit. Then we mix it with honey. And tell the price. It's only a hundred yen! Now, the last phonics review. Boxes. Berries. Knife. Write. Phone. Fifty. Amazing! And look, the golden apple is opening. There's a new map inside! But first, your shop presentation. Smile big and speak loudly. You can do it!",
+      "conversation": {
+        "scene": "The World 14 market show in the market square, where each team presents a shop",
+        "sceneJa": "市場の 広場で、ワールド14 マーケットショー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the World 14 market show! Kiko and Riko, please start.",
+            "ja": "ワールド14 マーケットショーへ ようこそ！キコと リコ、はじめてね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Welcome to our shop! Try our fruit salad! It tastes sweet and fresh.",
+            "ja": "わたしたちの おみせへ ようこそ！フルーツサラダを どうぞ！あまくて さわやか。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "First, we cut the fruit. Then we mix it with honey. It's only a hundred yen!",
+            "ja": "まず くだものを きって、それから はちみつと まぜます。たった 100えん！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Can I have two, please? Mmm! It's delicious!",
+            "ja": "ふたつ ください！うーん！おいしい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Everyone, look! The golden apple is opening! There's a new map inside!",
+            "ja": "みんな、みて！きんの りんごが ひらいた！なかに あたらしい ちず！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It shows wide green plains. I can feel the wind already.",
+            "ja": "ひろい みどりの そうげんが かいてあるわ。もう かぜを かんじる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's go! Goodbye, Bustling Market!",
+            "ja": "いこう！さようなら、にぎわいの市場！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの おみせを ひらいて しょうかいしよう。Welcome! / Try ～! / First, ～. Then ～. / ねだん の 4文で（おみせの なまえは じぶんで つくって OK。ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the World 14 market show! I'm Haru. Please tell us about your shop. What do you sell?",
+          "targetExpressions": [
+            "Welcome to our shop!",
+            "Try our ～!",
+            "First, ～. Then ～.",
+            "It's only ～ yen!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "スピード TPR から マーケットショーまで、さいこう！",
+          "Welcome to our shop! Try our fruit salad! おみせを 4文で しょうかい",
+          "きんの りんごから あたらしい ちず。かぜの 草原へ しゅっぱつ！"
+        ]
+      }
+    }
+  ]
+}

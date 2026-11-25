@@ -12,6 +12,7 @@ import { CG_CHOICES, CG_KANA, CG_LETTER, W10_INTRO as W10_INTRO_MAP, W10_TEAMS, 
 import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP, W11_SIGHT_WORDS, edSound } from "./w11Phonics";
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
+import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -478,6 +479,46 @@ export function w13Question(item: LearningItemDef, rng: () => number): Pick<Ques
   return null;
 }
 
+/** ワールド14（複数形の -es / -ies / -ves・だまっている もじ kn wr mb・ph・大きな数の つづり）。表は ./w14Phonics.ts */
+export { W14_START } from "./w14Phonics";
+
+/**
+ * ワールド14 の 回（L391〜）で、フォーカスに ワールド14 の つづりが あれば、フォーカスの 順に ことばに あうもので 問う。
+ * - "es" / "ies" / "ys" / "ves": 「ふたつ いじょうの ときの ただしい つづりは どれ？」（box → boxes / boxs / boxis、knife → knives / knifes / knifs）
+ * - "kn" / "wr" / "mb" / "ph": 「＿ に はいる つづりは どれ？」（＿ife → kn、la＿ → mb、＿one → ph）
+ * - "-ty" / "-teen" / "hundred" / "thousand": 「きこえた 数の ただしい つづりは どれ？」（forty / fourty。-teen と -ty の 回は thirteen / thirty の ききわけ）
+ * あてはまらなければ null。ワールド13 の 問題より 先に よぶ（ふりかえり回の ワールド13 の focus は w13Question へ）。
+ */
+export function w14Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W14_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of focus) {
+    if ((W14_PLURAL_FOCUS as readonly string[]).includes(f)) {
+      const p = pluralSpelling(w);
+      if (!p) continue;
+      return { promptJa: "ふたつ いじょうの ときの ただしい つづりは どれ？", display: `${p.base} → ？`, choices: pick([p.answer, ...p.wrong]), answer: p.answer,
+        explanationJa: `${p.base} → ${p.answer}。${PLURAL_WHY[p.kind](p.base)}` };
+    }
+    if ((W14_SILENT_FOCUS as readonly string[]).includes(f)) {
+      const b = silentBlank(w, f);
+      if (!b) continue;
+      return { promptJa: "＿ に はいる つづりは どれ？", display: b.display, choices: pick(SILENT_CHOICES[b.answer]), answer: b.answer,
+        explanationJa: `${item.text} は「${b.answer}」。${SILENT_WHY[b.answer]}` };
+    }
+    if ((W14_NUMBER_FOCUS as readonly string[]).includes(f)) {
+      const n = numberSpelling(w, focus);
+      if (!n) continue;
+      return { promptJa: "きこえた 数の ただしい つづりは どれ？", choices: pick([n.answer, ...n.wrong]), answer: n.answer,
+        explanationJa: `ただしい つづりは「${n.answer}」。${n.tip}` };
+    }
+  }
+  return null;
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -553,7 +594,8 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // （shopping は sh ではなく ing の回、shape は sh ではなく a_e の回、sheep は sh ではなく ee の回、shark は sh ではなく ar の回、
       //   shy は sh ではなく -y の回、chew は ch ではなく ew の回、what は wh ではなく サイトワードの 回の問題にする）
       // ワールド13（3 単現の -s・-tch / -dge）は いちばん 先（likes を 複数形の -s、catch を ダイグラフの ch で 問わない）
-      const dq = w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド14（複数形・だまっている もじ・数の つづり）は さらに その 先（boxes を ワールド13 の -s の おと、knife を さいしょの おとで 問わない）
+      const dq = w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

@@ -19,6 +19,7 @@ import { findRSpellings } from "@/lib/curriculum/rControlled";
 import { G_HARD_WORDS, cgSounds, ySound } from "@/lib/curriculum/w10Phonics";
 import { ER_MORE_WORDS, edSound } from "@/lib/curriculum/w11Phonics";
 import { chBlank, heSpelling, sSound } from "@/lib/curriculum/w13Phonics";
+import { numberSpelling, pluralSpelling } from "@/lib/curriculum/w14Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -1137,5 +1138,100 @@ describe("カリキュラム: ワールド13 の決まりごと（ステージ2 
     if (w13.length === 0) return;
     for (const n of [365, 366, 370, 385, 387, 390]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえ(は|や)[^。]*いわなくて OK/);
     for (const n of [375, 381, 388]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/いわなくて OK/);
+  });
+});
+
+describe("カリキュラム: ワールド14 の決まりごと（にぎわいの市場）", () => {
+  const w14 = LESSONS.filter((l) => l.world === 14);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en)).join(" ");
+  const NUMBER_FOCUS = ["-ty", "-teen", "hundred", "thousand"];
+
+  it("ワールド14 は 391〜420 の 30 レッスン、ステージ2・A1+、学年の めやすは 中1", () => {
+    if (w14.length === 0) return; // 未作成ならスキップ
+    expect(w14.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 391 + i));
+    for (const l of w14) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("中1");
+      expect(l.stage, `L${l.lessonNo}`).toBe(2);
+      expect(l.level, `L${l.lessonNo}`).toBe("A1+");
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w14.length === 0) return;
+    expect(at(391)!.title).toBe("Welcome to the Market!");
+    expect(at(396)!.title).toBe("What Does It Cost?");
+    expect(at(400)!.title).toBe("Market Day Shop");
+    expect(at(407)!.title).toBe("No, Thank You. I'm Full.");
+    expect(at(420)!.title).toBe("World 14 Grand Review");
+  });
+
+  it("フォニックス: -es → -ies / -ves → kn・wr → mb・ph → 大きな 数（各ブロックの 5回目と L416〜420 は ふりかえり）", () => {
+    if (w14.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(391, 394, "plural-es");
+    rule(396, 399, "plural-ies-ves");
+    rule(401, 404, "silent-letters");
+    rule(406, 407, "silent-letters");
+    rule(408, 409, "ph");
+    rule(411, 414, "number-spelling");
+    for (const n of [395, 400, 405, 410, 415, 416, 417, 418, 419, 420]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    for (const l of range(391, 394)) for (const w of l.phonics.words) expect(pluralSpelling(w)?.kind, `L${l.lessonNo} ${w}`).toMatch(/^o?es$/);
+    for (const w of at(396)!.phonics.words) expect(pluralSpelling(w)?.kind, w).toBe("ies");
+    for (const n of [397, 398]) for (const w of at(n)!.phonics.words) expect(pluralSpelling(w)?.kind, `L${n} ${w}`).toBe("ves");
+    expect([401, 402, 403, 404, 406, 407, 408, 409].map((n) => at(n)!.phonics.focus)).toEqual([["kn"], ["kn"], ["wr"], ["wr"], ["mb"], ["mb"], ["ph"], ["ph"]]);
+    for (const l of [...range(411, 415), at(419)!]) {
+      expect(l.phonics.focus.every((f) => NUMBER_FOCUS.includes(f)), `L${l.lessonNo}`).toBe(true);
+      for (const w of l.phonics.words) expect(numberSpelling(w), `L${l.lessonNo} ${w}`).not.toBeNull();
+    }
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている", () => {
+    if (w14.length === 0) return;
+    expect(ex(391, 395)).toContain("There are many shops.");
+    expect(ex(391, 395)).toContain("Do you have any peaches?");
+    expect(ex(391, 395)).toContain("we have some");
+    expect(ex(391, 395)).toContain("don't have any");
+    expect(ex(391, 395)).toContain("Can I have some bread?");
+    expect(ex(391, 395)).toContain("Here you go.");
+    expect(ex(391, 395)).toMatch(/a glass of/i);
+    expect(ex(391, 395)).toContain("a cup of");
+    expect(ex(391, 395)).toContain("I'd like");
+    expect(ex(396, 400)).toContain("How much is this hat?");
+    expect(ex(396, 400)).toContain("How many");
+    expect(ex(396, 400)).toContain("a hundred");
+    expect(ex(396, 400)).toContain("That's too expensive.");
+    expect(ex(396, 400)).toContain("Here's your change.");
+    expect(ex(401, 405)).toContain("First, cut the carrots.");
+    expect(ex(401, 405)).toContain("Mix it well. Then add some salt.");
+    expect(ex(401, 405)).toContain("It smells good!");
+    expect(ex(406, 410)).toContain("Try this!");
+    expect(ex(406, 410)).toContain("No, thank you. I'm full.");
+    expect(ex(406, 410)).toContain("Would you like some more?");
+    expect(ex(411, 415)).toContain("People in Italy eat a lot of pasta.");
+    expect(ex(411, 415)).toContain("come from");
+    expect(ex(416, 420)).toContain("Welcome to our shop! Try our fruit salad!");
+  });
+
+  it("ステージ2: 先生の 台本は ほぼ 英語（日本語の たすけは みじかく）、会話シーンは 4〜7 行、L400 は 400 回 記念、L420 は スピード TPR", () => {
+    if (w14.length === 0) return;
+    for (const l of w14) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.25);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(120);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(4);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(7);
+    }
+    expect(at(400)!.teacherScript).toContain("lesson four hundred");
+    expect(at(420)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("ねだんは 円（ドル・セントを 出さない）。AI 会話の しょうかいの 回は「なまえは いわなくて OK」", () => {
+    if (w14.length === 0) return;
+    const texts = w14.flatMap((l) => [...l.school.expressions.map((e) => e.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn]);
+    expect(texts.filter((t) => /\b(dollars?|cents?)\b/i.test(t))).toEqual([]);
+    for (const n of [417, 420]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえは いわなくて OK/);
   });
 });
