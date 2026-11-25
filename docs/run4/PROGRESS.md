@@ -166,3 +166,13 @@ LINE ログイン・ダウンロード用トークン・webhook を読み直し�
 ### おうちの方（オーナー）への確認事項
 - 気づいたこと（今回は変えていません）: おためしモードは全員で1人のデモユーザーを共有しているため、だれかが先にクリアしたレッスンを別の端末でクリアすると、その端末ではコインが +0 になります（引き継ぐコインも 0）。おためし用のユーザーを端末ごとに分けるかどうか、必要なら相談させてください。
 - LINE の設定は `docs/run4/LINE-SETUP.md` の順に進めてください。値を `.env` に入れてサーバーを起動しなおせば、そのまま使えます。
+
+## まとめ: README と MORNING.md（2026-11-25）
+
+### やったこと
+- **README.md を更新**: run4 のマイグレーション（アバター・LINE ログイン・LINE の月間レポート）と LINE-SETUP.md への案内、コマンド表に `carry-db-check`・`check:line-db` を追加、ディレクトリ構成に `src/lib/line`・`src/lib/report`・`src/lib/offline/trialLog.ts`・`auth/line.ts`・`/setup-pin`・`/d/[token]`・run4 のスクリプト・`docs/run4/` を追加、データベース設計に `Parent` の LINE の列・`User.avatarCharacter`・`ReportDelivery` を追加、API 一覧に `/api/parent/line-monthly`・`/api/line/webhook` を追加。
+- **`docs/run4/MORNING.md`（オーナー向け）**: かわったこと・ためしかた（DB なし / DB あり）・LINE のために用意するもの（LINE-SETUP.md へ）・のこっている問題・決めてほしいこと。
+- `npx tsc --noEmit`・`npx vitest run`（33ファイル・881件）・`npx next build` すべて成功。
+
+### 決めたこと（理由）
+- コードは変えず、文書だけの更新にしました（Phase 4 までで機能・チェックは完了しているため）。

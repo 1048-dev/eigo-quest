@@ -48,7 +48,9 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 開発用のデモ保護者が欲しいときは、seed のときに `SEED_DEMO_PARENT=1` を付けます（`demo-parent@example.com` / `demo-pass-1234` / 暗証番号 `1234`、子ども「リコ」）。
 
-> マイグレーション（`prisma/migrations/`）には、保護者アカウント用の `20261125130000_parent_auth`（`Parent` のパスワード・暗証番号・設定、`Session` テーブル）が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください。
+> マイグレーション（`prisma/migrations/`）には、保護者アカウント用の `20261125130000_parent_auth`（`Parent` のパスワード・暗証番号・設定、`Session` テーブル）、アバターとおためしの引き継ぎ用の `20261126090000_avatar_trial_carry`（`User.avatarCharacter`。既存の子どもには登録順の顔を入れる）、LINE ログイン用の `20261127090000_line_login`（`Parent.lineUserId` など。メール・パスワード・暗証番号を null 可に）、LINE の月間レポート用の `20261128090000_line_monthly`（`Parent.lineFriend`・`lineMonthlyEnabled`、`ReportDelivery` テーブル）が含まれます。既存のDBでも `npm run db:migrate` → `npm run db:seed` をもう一度実行してください。
+>
+> LINE（ログイン・月間レポート）を本番で使うときは [docs/run4/LINE-SETUP.md](docs/run4/LINE-SETUP.md) の手順で `.env` に値を入れます。入れていない間は LINE のボタンが出ず、レポートは送らずに `.data/line-outbox/` に書くだけ（dry-run）です。
 >
 > **DBが動いていないとき**: Docker・DB なしで `npm run dev` だけでも、エラー画面を出さずに「おためしモード」で遊べます（下の「DBが止まっていても動く『おためしモード』」）。クリアしたレッスンはそのブラウザにだけ記録され、マップに ✓ が付きます（コイン・習得率は保存されません）。登録・ログインの画面は「ただいまアカウント機能を利用できません」と案内し、「おためしで あそぶ」へ進めます。キャラクターの絵は `docs/night/screens/characters-preview.html` をブラウザで開くと確認できます。
 
@@ -59,6 +61,8 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent・/setup-pin・/d/<token>）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build` |
 | `npm run check:auth-db -- --db <テスト用URL> [--port 3457]` | 本物の DB で migrate deploy → seed → `next start` → 登録・子ども2人・切りかえ・回数制限・持ち主チェック・CSRF・退会後に何も残らないこと まで 41項目を HTTP で確認。**使い捨ての DB を指定すること**（中身を書きかえます） |
+| `npx tsx scripts/carry-db-check.ts --db <テスト用URL> [--port 3458]` | 本物の DB + `next start` で、おためしの きろくの ひきつぎ（1回だけ・持ち主チェック）とアバターの選択・変更 を 18項目確認。**使い捨ての DB を指定すること** |
+| `npm run check:line-db -- --db <テスト用URL> [--port 3461]` | 本物の DB + `next start` で LINE ログイン（state cookie・署名・コールバック・新規登録 → 暗証番号・連携/解除）を確認（LINE のサーバーには接続しない。ダミーの値で動かす）。**使い捨ての DB を指定すること** |
 | `npm run line:monthly [-- --dry-run] [-- --parent <id>]` | 月間レポート（PDF）を LINE で届ける。キーが無ければ dry-run（下の「LINE で月間レポート」） |
 | `npm run check:line-monthly-db -- --db <テスト用URL> [--port 3463]` | 本物の DB + `next start` で webhook の署名・`line:monthly --dry-run`・ダウンロードページ・おうちの方 API・期限切れ・退会 まで 32項目を確認（LINE には接続しない）。**使い捨ての DB を指定すること** |
 | `npm run check:run4-flow -- --db <テスト用URL> [--port 3475]` | 本物の DB + `next start` + ブラウザで、おためしで遊ぶ → 新規登録 → お子さまを追加（キャラクター）→ おためしの きろくを ひきつぐ → おうちの方ページに反映 → `line:monthly --dry-run` のリンクを開いて PDF まで を通しで確認（スクリーンショット `docs/run4/screens/p4-flow/`）。**使い捨ての DB を指定すること** |
@@ -114,13 +118,19 @@ eigo-quest/
 │   │   ├── progressService.ts   ドメインロジックとDBをつなぐ層（トランザクション・台帳・記憶の更新）
 │   │   ├── parentService.ts     保護者・子ども・ようす・設定・退会（子どもの処理はすべて parentId で絞る）
 │   │   └── dailyLimit.ts        1日のレッスン回数の上限
-│   ├── auth/                 保護者アカウント（scrypt・セッション・cookie・Origin 確認・レート制限・currentUserId()）
+│   │   ├── monthlyDeliveryService.ts  LINE の月間レポートの作成・送信・dry-run・期限切れの掃除
+│   ├── auth/                 保護者アカウント（scrypt・セッション・cookie・Origin 確認・レート制限・currentUserId()）。line.ts は LINE ログイン（OAuth / OIDC・PKCE・署名つき state cookie）
+│   ├── line/messaging.ts     LINE Messaging API（push・Flex メッセージ・webhook の署名確認）
+│   ├── report/               月間レポートの中身（monthlyReport.ts・純粋関数）と PDF の作成（pdf.ts）
+│   ├── offline/              おためしモードの内蔵データ・端末の記録（localProgress.ts）・おためしの きろく（trialLog.ts）
 │   ├── db.ts                 Prismaクライアント
 ├── src/middleware.ts         /api の POST/PUT/PATCH/DELETE の Origin を確認（CSRF 対策）
 ├── src/app/
 │   ├── page.tsx              入口（cookie だけで /who・/map・/welcome にふりわけ）
 │   ├── welcome/ register/ login/   スタート・保護者の登録・ログイン
-│   ├── who/                  「だれが あそぶ？」（子どもを選ぶ）
+│   ├── setup-pin/            LINE で登録した保護者が暗証番号を決める
+│   ├── d/[token]/            LINE で届いたレポート・ワークブックのダウンロードページ（ログイン不要・トークンつき）
+│   ├── who/                  「だれが あそぶ？」（子どもを選ぶ・おためしの きろくの ひきつぎ）
 │   ├── parent/               おうちの方ページ（暗証番号で保護。ようす・回数制限・子どもの編集・暗証番号/パスワード変更・退会）
 │   ├── map/                  RPG風ステージマップ（12ワールド）＋お宝アラートのポップアップ
 │   ├── lesson/[lessonNo]/    1日のレッスン（9ステップ・さいごは AI会話）
@@ -135,8 +145,10 @@ eigo-quest/
 ├── scripts/smoke.ts          Playwright の全画面スモークテスト（DB なしでも可）。smoke-offline.ts は DB 停止での起動〜スモークを1コマンドで
 ├── scripts/auth-db-check.ts / auth-ui-screens.ts   本物の DB での保護者アカウントの通し確認 / 画面の確認
 ├── scripts/carry-db-check.ts 本物の DB での「おためしの きろくの ひきつぎ」とアバターの通し確認
+├── scripts/line-db-check.ts / line-monthly-db-check.ts / run4-flow-check.ts   本物の DB での LINE ログイン / 月間レポート / run4 の通し（ブラウザ）確認
+├── scripts/line-monthly.ts   月間レポートを LINE で届けるコマンド（npm run line:monthly）
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
-├── docs/night/ docs/night2/ docs/run3/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）
+├── docs/night/ docs/night2/ docs/run3/ docs/run4/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
 ```
 
@@ -193,7 +205,7 @@ eigo-quest/
 - **おためしの きろくの ひきつぎ**: この端末でおためしモード（未ログイン＝デモユーザー、または DB 停止）で遊んだ分は、ブラウザの localStorage に「おためしの きろく」として残します（`src/lib/offline/trialLog.ts`。クリアしたレッスン・合格したテスト・もらったコイン・遊んだ日・答えた項目）。保護者が登録・ログインして「だれが あそぶ？」で子どもを選ぶと、端末ごとに1回だけ「おためしで あそんだ きろくを ひきつぐ？」と聞きます。「はい」で `POST /api/children/:id/carry-over` がその子に たし合わせ（レッスン・テスト合格は まだ無い分だけ、コインは合計（おためしで ありえる上限まで）、連続日数は大きい方、記憶はまだ無い項目だけ）、端末の おためしの きろくを消します。「いいえ」でも もう聞きません。デモユーザーの DB の記録は読みも消しもしない（ほかの おためしの人と共有のため＝コピー）。同じ端末の きろくは CoinLedger の `trial-carry:<端末ID>` で1回だけ（2回目は `alreadyCarried: true`）。計算は `src/lib/domain/trialMerge.ts`。
 - **1日の回数制限**: 上限に届くと、新しいレッスンは「きょうの レッスンは ここまで！ また あした あそぼうね。」（403 + `code: "DAILY_LIMIT"`）。完了ずみのレッスンのおさらいはできます。
 - **DB 停止時**: アカウント API は 503 + `offline: true` + ていねいな案内（`GET /api/auth/me` だけは 200 + `loggedIn:false`）。画面はおためしモードへ進めます。
-- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET /api/auth/line/start`・`callback`、`POST /api/auth/line/pin`・`cancel`、`DELETE /api/parent/line`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`DELETE /api/parent/account`。
+- API: `POST /api/auth/register`・`login`・`logout`、`GET /api/auth/me`、`GET /api/auth/line/start`・`callback`、`POST /api/auth/line/pin`・`cancel`、`DELETE /api/parent/line`、`GET/POST /api/children`、`PATCH/DELETE /api/children/:id`、`POST /api/children/:id/select`、`PATCH /api/children/:id/avatar`、`POST /api/children/:id/carry-over`、`POST /api/parent/verify-pin`、`GET /api/parent/overview`、`GET/PATCH /api/parent/settings`、`GET/PATCH/POST /api/parent/line-monthly`、`DELETE /api/parent/account`、`POST /api/line/webhook`。
 - **LINE ログイン（`src/lib/auth/line.ts`）**: 標準の LINE ログイン（OAuth 2.0 / OpenID Connect）。`GET /api/auth/line/start?mode=login|link` が state・nonce・PKCE（S256）を作って httpOnly cookie `eq_line_oauth`（path `/api/auth/line`・10分）に入れ、LINE の認可画面へ（`scope=profile openid`、`bot_prompt=aggressive` で公式アカウントの友だち追加もすすめる）。`GET /api/auth/line/callback` が state を照合 → code をトークンに交換 → ID トークンを LINE の verify エンドポイントで検証し、こちらでも iss・aud・exp・nonce・sub を確認して LINE のユーザーID（`Parent.lineUserId`、ユニーク）を得ます。
   - (a) はじめての LINE → 保護者を作ってログイン → `/setup-pin` で暗証番号を決める（`POST /api/auth/line/pin`）→ お子さまを追加。まちがえて登録したときは `/setup-pin` の「登録を取り消す」（`POST /api/auth/line/cancel`。暗証番号・子どもがまだ無いときだけ）。
   - (b) メールで登録した保護者は `/parent` の「LINE の連携」から連携（`start?mode=link`。暗証番号の入力が必要）・解除（`DELETE /api/parent/line`）。ほかの保護者に連携ずみの LINE は連携できません。LINE だけで登録したアカウントは解除できません（ログインできなくなるため）。
@@ -280,7 +292,8 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 
 | 区分 | モデル | 役割 |
 |---|---|---|
-| アカウント | `Parent` / `Session` / `User` / `Friendship` | 保護者（メール・パスワードと暗証番号のハッシュ・設定）が月額課金し、子ども（`User`）が学習者。連続日数とコイン（台帳の合計を保存したもの）を持つ。`Session` はトークンのハッシュ・選んだ子ども・暗証番号の入力時刻・期限 |
+| アカウント | `Parent` / `Session` / `User` / `Friendship` | 保護者（メール・パスワードと暗証番号のハッシュ・設定。LINE ログインの `lineUserId`・表示名、公式アカウントの友だち状態 `lineFriend`、毎月の配信のオン/オフ `lineMonthlyEnabled`）が月額課金し、子ども（`User`）が学習者。連続日数とコイン（台帳の合計を保存したもの）とアバター（`avatarCharacter`）を持つ。`Session` はトークンのハッシュ・選んだ子ども・暗証番号の入力時刻・期限 |
+| LINE 配信 | `ReportDelivery` | 月間レポートの送信1回・お子さま1人ごとの記録（月・きっかけ・ダウンロード用トークンの SHA-256・期限・ファイル・状態 SENT / DRY_RUN / FAILED） |
 | カリキュラム | `Lesson` / `LearningItem` / `Assessment` | JSONから投入。`LearningItem.skills` で、その項目がどの能力軸に入るかを決める |
 | 進捗 | `LessonProgress` / `TestAttempt` | `completedOn` / `takenOn` は APP_TIMEZONE の日付。復習クエストの翌日オープン・1日のレッスン回数・一発合格の判定に使う |
 | 学習ログ | `ItemResponse` | 1問ごとの正誤・反応時間・再生速度・発音スコア。習得率の元データ |
