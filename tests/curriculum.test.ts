@@ -41,6 +41,7 @@ import { alOf, dataOf, directionOf, geoOf, numberOf, w32FocusOf } from "@/lib/cu
 import { jectOf, listOf, nounEndOf, proofOf, ruptOf, w33FocusOf } from "@/lib/curriculum/w33Phonics";
 import { doubleOf, izeOf, travelNumberOf, ukUsOf, visOf, w34FocusOf } from "@/lib/curriculum/w34Phonics";
 import { contrastOf, formalOf, interCoOf, ityOf, rootOf, w35FocusOf } from "@/lib/curriculum/w35Phonics";
+import { academicOf, bioOf, ologyOf, pauseOf, unitOf, w36FocusOf } from "@/lib/curriculum/w36Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -3996,5 +3997,153 @@ describe("カリキュラム: ワールド35 の決まりごと（ちえの議�
     expect(story(1049)).toMatch(/\bmap\b/i);
     expect(story(1049)).toMatch(/\bsea\b/i);
     expect(story(1050)).toMatch(/\bsea\b/i);
+  });
+});
+
+describe("カリキュラム: ワールド36 の決まりごと（しんかいの都）", () => {
+  const w36 = LESSONS.filter((l) => l.world === 36);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (bioOf(w) ? "bio" : academicOf(w) ? "stress" : pauseOf(w) ? "pause" : ologyOf(w) ? "ology" : unitOf(w) ? "unit" : "?");
+
+  it("ワールド36 は 1051〜1080 の 30 レッスン、ステージ5・B1、学年の めやすは 高校中級", () => {
+    if (w36.length === 0) return; // 未作成ならスキップ
+    expect(w36.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 1051 + i));
+    for (const l of w36) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校中級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(5);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w36.length === 0) return;
+    const titles = ["Down to Deep Sea City", "Creatures That Glow", "The Reason Why It's Dark", "Life Under Pressure", "Deep Sea Wonder Talk",
+      "My Research Question", "Where Can We Find Information?", "According to the Book", "Is This Website Reliable?", "Research Plan",
+      "In Short", "The Main Point Is…", "Summarize in Three Sentences", "Notes, Not Sentences", "Summary Challenge",
+      "Today, I'd Like to Talk About…", "First, Second, Finally", "Look at This Picture", "In Conclusion", "Practice Presentation",
+      "That's a Great Question", "I'm Not Sure, But…", "Asking Good Questions", "I'll Look It Up", "Q&A Session",
+      "Reading Three Sources", "Protecting the Deep Sea", "My Presentation Script", "Deep Sea City Review", "World 36 Grand Review"];
+    expect(w36.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: bio → 学習語彙の 強勢 → 発表の 区切り → -ology と -ologist → 数と たんい（各ブロックの 5回目と L1076〜1080 は ふりかえり）", () => {
+    if (w36.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(1051, 1054, "root-bio");
+    rule(1056, 1059, "academic-stress");
+    rule(1061, 1064, "presentation-pause");
+    rule(1066, 1069, "suffix-ology");
+    rule(1071, 1074, "numbers-units");
+    for (const n of [1055, 1060, 1065, 1070, 1075, 1076, 1077, 1078, 1079, 1080]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド36 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w36) {
+      for (const w of l.phonics.words) {
+        const f = w36FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w36FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w36.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["biology", "biography", "research", "compare", "result", "biologist", "3,800 meters", "−2°C"]));
+    // -ology と -ologist は 両方
+    expect(new Set(range(1066, 1069).flatMap((l) => l.phonics.words).map((w) => ologyOf(w)!.kind))).toEqual(new Set(["-ology", "-ologist"]));
+    // ふりかえり L1076〜1080 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(1076, 1080)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["bio", "stress", "pause", "ology", "unit"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w36.length === 0) return;
+    const want: Record<number, string> = {
+      1051: "This is the place where light never reaches.", 1052: "Some deep-sea fish make their own light.", 1054: "Deep-sea animals have special bodies.",
+      1059: "Who wrote it? When was it written?", 1061: "In short, anglerfish use light to catch food.", 1062: "The main point is that the ocean needs protecting.",
+      1065: "Can you summarize it in 30 seconds?", 1066: "Today, I'd like to talk about the deep sea.", 1069: "In conclusion, the deep sea is full of surprises.",
+      1070: "Speak slowly. Pause after each point.", 1071: "That's a great question. Let me explain.", 1074: "I'll look it up and tell you later.",
+      1075: "Does anyone have any questions?", 1077: "We need to protect the places where these animals live.", 1080: "Thank you for listening. Are there any questions?",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(1053)).toMatch(/^The reason why .* is that /);
+    expect(core(1055)).toMatch(/^One amazing fact is that /);
+    expect(core(1056)).toMatch(/^My research question is/);
+    expect(core(1057)).toMatch(/books, websites and interviews/);
+    expect(core(1058)).toMatch(/^According to this book, /);
+    expect(core(1060)).toMatch(/^First, we'll .*\. Then, we'll /);
+    expect(core(1063)).toMatch(/^This article is about .*\. It says .*\. It shows /);
+    expect(core(1064)).toMatch(/^Take notes: /);
+    expect(core(1067)).toMatch(/^First, .*\. Second, .*\. Finally, /);
+    expect(core(1068)).toMatch(/^As you can see in this picture, /);
+    expect(core(1072)).toMatch(/^I'm not sure, but I think /);
+    expect(core(1073)).toMatch(/^I have a question about /);
+    expect(core(1076)).toMatch(/^Source A says .*, but source B says /);
+    expect(core(1078)).toMatch(/^Today, I'd like to talk about .*\. In conclusion, /);
+    expect(core(1079)).toMatch(/^In short, /);
+  });
+
+  it("文法の じゅんばん: the reason why は L1053、according to は L1058、in short は L1061、the main point is は L1062、in conclusion は L1069、let me explain と great question は L1071、look it up は L1074 から", () => {
+    if (w36.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bthe reason why\b/i, 1053],
+      [/\baccording to\b/i, 1058],
+      [/\bin short\b/i, 1061],
+      [/\bthe main point is\b/i, 1062],
+      [/\bin conclusion\b/i, 1069],
+      [/\blet me explain\b/i, 1071],
+      [/\bgreat question\b/i, 1071],
+      [/\blook (it|them|that) up\b/i, 1074],
+    ];
+    for (const [re, n] of from) {
+      for (const l of range(1051, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+      expect(allEn(at(n)!), `L${n} ${re}`).toMatch(re);
+    }
+  });
+
+  it("ステージ5: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・320 語 以上で 100 語 以上の 読みものを ふくむ、会話シーンは 7〜9 行（ブロックの まとめは 10 行まで）、AI 会話は 6 かい いじょう、L1080 は スピード TPR", () => {
+    if (w36.length === 0) return;
+    const ends = [1055, 1060, 1065, 1070, 1075, 1080];
+    for (const l of w36) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z0-9]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(320);
+      const reading = (s.match(/"([^"]+)"/) ?? ["", ""])[1];
+      expect(reading.split(/\s+/).filter(Boolean).length, `L${l.lessonNo} の 読みもの`).toBeGreaterThanOrEqual(95);
+      expect(s.split("Now, phonics.").length, `L${l.lessonNo}`).toBe(2);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(7);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(ends.includes(l.lessonNo) ? 10 : 9);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+      expect(l.conversation!.aiTask.goalJa, `L${l.lessonNo}`).toMatch(/6 ?かい/);
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（reliable・In short）
+    expect(w36.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([1059, 1061]);
+    expect(at(1080)!.tpr[0].en).toBe("Look! Stop! Come here! Go!");
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない。であい・インタビュー・発表原稿の 回は ほんとうの なまえや じゅうしょを いわなくて よいと goalJa に 明記", () => {
+    if (w36.length === 0) return;
+    for (const l of w36) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (real |full )?(name|address|school|age|birthday|phone|email|passport number)|where do you live|how old are you|when were you born/i);
+    for (const n of [1051, 1057, 1078]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/ほんとうの/);
+  });
+
+  it("物語: L1051 で ブルーベル号・ヴェイル博士・しんかいの都・ルミ → L1057 オズウィンさん → 6つの しんじゅ → L1079 古い 扉 → L1080 扉が ひらく", () => {
+    if (w36.length === 0) return;
+    const story = (n: number) => at(n)!.teacherScript + " " + said(n);
+    expect(story(1051)).toMatch(/Deep Sea City/);
+    expect(story(1051)).toMatch(/\bLumi\b/);
+    expect(story(1051)).toMatch(/Dr\. Vale/);
+    expect(story(1051)).toMatch(/Bluebell/);
+    expect(story(1057)).toMatch(/Oswin/);
+    for (const n of [1055, 1060, 1065, 1070, 1075, 1080]) expect(story(n), `L${n}`).toMatch(/\bpearl\b/i);
+    expect(story(1079)).toMatch(/\bdoor\b/i);
+    expect(story(1080)).toMatch(/\bdoor\b/i);
   });
 });

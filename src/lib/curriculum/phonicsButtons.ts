@@ -16,6 +16,7 @@ import { w32Example } from "./w32Phonics";
 import { w33Example } from "./w33Phonics";
 import { w34Example } from "./w34Phonics";
 import { w35Example } from "./w35Phonics";
+import { w36Example } from "./w36Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -60,6 +61,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   const ws = words.map((w) => w.trim()).filter(Boolean);
   const lower = (w: string) => w.toLowerCase();
 
+  // ワールド36（bio・学習語彙の 強勢・発表の 区切り・-ology・数と たんい）は その focus で 問う ことば・文・数の 読みかたを よむ
+  const w36 = w36Example(focus.trim(), ws);
+  if (w36) return w36;
   // ワールド35（-ity・inter- と co-・対比の 強勢・あらたまった ことば・語根の まとめ）は その focus で 問う ことば・文を よむ
   const w35 = w35Example(focus.trim(), ws);
   if (w35) return w35;
