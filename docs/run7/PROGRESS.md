@@ -758,3 +758,43 @@
 - `npx vitest run`: 62 ファイル・1,918 テスト すべて成功
 - `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 228 → 233 kB、/lesson/[lessonNo] 233 → 238 kB、/gacha 217 → 221 kB、/test/[assessmentId] 216 → 221 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド28 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
 - `python worksheets/generate_worksheets.py --month --pack 41`: No.41（L801〜820・62 ページ）、`--pack 42`（L821〜840・63 ページ）を 作れる ことを 確認（piñata の ñ も そのまま 出る）
+
+## WORLD — ワールド29「かんがえる灯台」（L841〜870・ステージ4 の はじまり・B1）（2026-11-26）
+
+### やったこと
+- `content/curriculum/worlds/world-29.json` を 新しく 作成（30 レッスン、ステージ4・`level` は B1（`stages.ts` の ワールド29 の 値）、`school.grade` は「高校初級」）。計画書 §10 の タイトル・中心の表現・会話シーンどおり。`npm run curriculum:index` で 索引（index.json・titles.json・bundledWorlds.ts）を 更新（ぜんぶで 870 レッスン）。
+- 件数: レッスン 30、表現 90（core 30）、TPR 120、単語 120（core 30）、フォニックスの ことば 120、会話の セリフ 203 行（1 回 6〜7 行、L860 の インタビューだけ 8 行）、AI 会話 30、まとめハイライト 90。先生の台本は 英語だけ（1 回 平均 約 305 語・最少 281 語・最大 325 語）で、まいかい「読みもの」（灯台の かんばん・ログ・本の ポスター・ガスと ゲイルの 2つの 意見・会議の きまり・投票の けっか・インタビューカード・灯台新聞の 記事・こうこく・事実チェックの レポート・60 語の 意見文の おてほん など 64〜93 語）を 読み、L861 から 毎回「Is this a fact or an opinion?」の 問いを 入れた。日本語の ヒントは 2 回だけ（L842「loyal（ちゅうじつ）」・L861「fact（じじつ）」）。
+- ブロック構成: 841〜845 意見＋理由＋例（This light shines when people share ideas.・I think dogs are great pets because they're loyal.・For example, ～.・One reason is ～. Another reason is ～.・まとめで レンズ 1）→ 846〜850 賛成と 反対（I agree with you.・I see your point, but ～.・I'm not sure about that.・I partly agree.・I disagree because ～.・レンズ 2）→ 851〜855 話し合いの 司会（What do you think, Kiko?・Let's hear from everyone.・Can I say something? / Sure, go ahead.・Let's vote.・クラス会議ごっこ・レンズ 3）→ 856〜860 たしかめる（What do you mean by "cool"?・So you mean ～?・Could you give me an example?・That's a good question. Let me think.・追加質問の インタビュー・レンズ 4）→ 861〜865 事実と 意見（"Cats sleep a lot" is a fact.・It's just my opinion, but ～.・Is that true? Where did you read that?・こうこくの ことば・Fact Check Team・レンズ 5）→ 866〜870 ミニ話し合いと まとめ（週末の しゅくだい・クラスの ペット・意見文 60 語・さよなら見学・L870 話し合いショーで レンズ 6）。
+- 物語の 糸: L840 で 見えた 灯台の ひかりを たどって、雲の 海の 岩の 島に たつ「かんがえる灯台」へ（L841）。灯台守は ペリカンの ペル船長（Captain Pell）と 年よりの いぬ アンカー（Anchor）。みんなが 言いあらそうか だまって しまって ひかりが よわく、小さな ふねが 帰れない。ランプの まわりの 6 つの レンズが ブロックの まとめごとに 1 つずつ ひかる。L847〜850 は いつも けんかする カモメの きょうだい ガスと ゲイル（山 か 海 か）が「I see your point, but ～.」で やさしく 話せる ように なる。851〜860 は 島の おまつりの じゅんび（ちょうちん・たべもの・かざり・ピクニックの 場所の 投票）と 霧の 前の 日、おまつりの 夜、インタビュー（ペル船長は 40 年 灯台守）。861〜865 は パフィンの 記者 ピップ（Pip）の「The Lighthouse News」の へやで 事実と 意見を わける（「灯台の 下に 大きな ケーキ」の うわさは じつは lake、こうこくの おもちゃ「The Spinning Star」、灯台の かいだんは 99 だん）。L870 で ペル船長への プレゼント（アンカーの え）を 投票で きめ、6 つの レンズが ぜんぶ ひかり、ひかりの 先に「みらい都市（City of Tomorrow）」が 見える。
+- フォニックス（`src/lib/curriculum/w29Phonics.ts`・`questions.ts` の `w29Question`。w28Question より 先に よぶ）:
+  - 語根 spect（rule "root-spect"。focus "spect"）: 「spect（みる）の ことば。いみは どれ？」（inspect（in ＋ spect）→ よく 見て しらべる / 大切に おもう・そんけいする / あやしいと おもう。答えも 選択肢も いみ。まちがいは 表に 手で 書いた ほかの spect の ことばの いみ）。respect・inspect・spectator・suspect・inspector・respectful・spectacular・perspective・inspection・disrespect・spectrum・spectacles・aspect・respectable の 14 語。
+  - 語根 dict（rule "root-dict"。focus "dict"）: 「ぶんに あう dict の ことばは どれ？」（Can you ＿＿ the weather for tomorrow? → predict / contradict / dictate）。predict・dictionary・contradict・prediction・dictation・verdict・predictable・unpredictable・dictate・contradiction・dictionaries・predicted の 12 語。
+  - 意見を 強める 強勢（rule "emphasis"。focus は つよく いう ことば "really" "do" など、sounds は その 大文字）: 「いけんを つよく つたえる とき、いちばん つよく いう ことばは どれ？」（I really think so → really / think / so）。16 文。
+  - 弱形（rule "weak-form"。focus "can" "to" "for" "and"）: 「ふつうの はやさで いうと、can は どう きこえる？」（クン / キャン / カーン。選択肢は きまった 順）。16 文。
+  - -ible・-able（rule "ible-able"。focus "-ible" "-able"）: 「ただしい つづりは どれ？」（🔊（ありうる・できる）→ possible / possable / posible）。ible 8 語・able 8 語（ワールド27 の -able の ことばとは べつ）。
+- フォーカスの ボタン（`phonicsButtons.ts` の `w29Example`）と 読み上げ（`vowelTeams.ts` の `w29Say`）は その focus で 問う ことば・文を よむ（"spect" "can" "-ible" だけで よまない）。L840 までの どの 回でも はたらかない ことを テストで たしかめる。
+- テスト: `tests/curriculum.test.ts` に ワールド29 の 決まりごと（範囲・ステージ4・B1・高校初級・タイトル 30・フォニックスの 順と 種類・強勢の sounds・弱形 4 つ・-ible / -able 2 つずつ・ふりかえり L866〜870 は 5 つの きまりを ぜんぶ・core の 表現・For example は L843 から〜Where did you read that は L863 から の 17 の じゅんばん・関係代名詞なし・台本は 英語だけで 200 語 以上＋読みもの・会話 6〜7 行（L860 は 8 行）・日本語の ヒントは L842 と L861 だけ・AI 会話で 個人情報を きかない・L870 スピード TPR・物語）を 追加。`tests/phonics-w29.test.ts`（12 テスト）を 追加。
+
+### 決めたこと（理由）
+- **学年の めやすは「高校初級」**: ワールド26〜28 は「中3」に したが、ステージ4 は 計画書 §9 で「高校初級」と して いて、§6 の「L1050 で 高校初級の 会話レベル」は ワールド27〜35 の 範囲の おわりを さす。ワールド29 からは 中身が 高校初級の 文法・話題に なるので「高校初級」に した。
+- **フォニックスの 問いは 5 しゅるいとも ちがう 角度に**: spect は いみ（語根の いみから ことばの いみを そうぞうする）、dict は 文に 入れる（つかいかた）、強勢と 弱形は 文、-ible / -able は つづり。ワールド28 の リズム（どの ことばが よわい？）と かさならない ように、弱形は「よわい ときに どう きこえるか」を 問う。
+- **spect の ことばは つづりに spect が ある ものだけ**: expect・expectation・unexpected は ex ＋ pect で つづりに spect が ない（全体の テスト「フォニックスの ことばは focus を ふくむ」に あわない）ので 入れなかった。dict も 12 語なので L846〜849 と L843〜844 は 1 回 3 語。
+- **can't は 入れない**: フォーカスの ボタンの おてほんは「' は さいしょの ことばだけ」と いう 全体の きまりが あるので、I can't ～ の 文は つかわず can の よわい おとだけに した。
+- **文法の じゅんばん**: 計画の 表現は その 回から（テストで まもる）。関係代名詞は ワールド30 から なので 出さない。One reason is that ～ の that（接続詞）は つかう。
+- **台本の ながさと 読みもの**: ステージ4 の「読む: 毎回 150〜300 語」は 1 回 15〜20 分の レッスンに 入りきらないので、台本 全体を 約 300 語（ステージ3 より 約 90 語 ふやした）、その なかの 読みものを 64〜93 語に した。長い 読みものは としょかんで おぎなう。
+- **話し合いは どちらかを ただしいと しない**: 山 か 海 か・しゅくだい・クラスの ペットは「Both ideas are good.」で まとめ、ペットの 回は「まいにちの せわ（休みの 日も）」と いう 事実を 出して かんがえる。こうこくの おもちゃは 架空（The Spinning Star、ねだんは かいがら）で、会社名・商品名は 出さない。
+- **新しい 話し手は 増やさない**: ペル船長・アンカー・ガス・ゲイル・ピップは 台本の なかか、ビリモが「I'm playing Captain Pell!」と やくを するか、「Gale says, ～」と つたえる。登場人物に ペットは いない（L843 の「my dog」は ペル船長の アンカー）。
+- **作りかた**: 下書きの きまり（物語・core・フォニックスの ことば・文法の じゅんばん）を 書いて、30 レッスンを 3 つの まとまり（841〜850・851〜860・861〜870）で 並行して 書き、まとめてから 自分で 1 回 見なおした。なおした ところ: L855 の AI の さいしょの ことば（Today's topic is your school trip → our school trip。your school は 個人情報の テストに かかる うえ、core と そろえる）、L857 の 会話の おわり（リコの「Not at five, right? So you mean ～?」が かみあわないので「So you mean we should get up at five?」→ ハル「Not quite. I mean we should finish before lunch.」に）。
+
+### 例（L847「I See Your Point, But…」）
+- 表現（core）: I see your point, but I think the beach is more fun. ／ I think the mountains are more fun because we can hike. ／ Let's listen to each other.
+- 読みもの（台本より）: "Gus: I think the mountains are more fun because we can hike and see beautiful views. The air is cool and fresh, too. Gale: I see your point, but I think the beach is more fun. We can swim, build sandcastles, and play in the waves. The sound of the sea is relaxing, and the sand feels warm under our feet. Captain Pell: Both ideas are good. Mountains and beaches are both special places. Thank you for writing kindly!"
+- 会話: Birimo「I'm playing Gus! The mountains are more fun! The mountains!」 Haru「Gus, please say a reason.」 … Kiko「Gale says, I see your point, but I think the beach is more fun.」 Riko「That's a kind way to answer. Nobody is shouting now.」 Ms. Emma「Let's listen to each other. Both ideas are good.」
+- フォニックス: prediction / dictation / verdict（問題は「ぶんに あう dict の ことばは どれ？」My ＿＿ was right. It rained! → prediction / dictation / contradiction）
+
+### 確認
+- `npm run curriculum:check`: 索引は 最新／`npm run library:check`: 最新
+- `npx tsc --noEmit`: エラーなし
+- `npx vitest run`: 63 ファイル・1,968 テスト すべて成功
+- `npx next build`: 成功。First Load JS（前回の 記録 → 後）: /map 233 → 237 kB、/lesson/[lessonNo] 238 → 242 kB、/gacha 221 → 225 kB、/test/[assessmentId] 221 → 225 kB、/parent 162 → 162 kB、共有 102 → 102 kB（増えたのは ワールド29 の 問題の コードと 表と 索引の 1 ワールドぶん。レッスン本文は これまでどおり あとから 読む チャンク）
+- `python worksheets/generate_worksheets.py --month --pack 43`: No.43（L841〜860・63 ページ）、`--pack 44`（L861〜880）は ワールド29 の 10 レッスンぶん（32 ページ）まで 作れる ことを 確認

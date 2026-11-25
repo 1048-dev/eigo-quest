@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { W29_START, dictOf, dictWhy, emphasisDisplay, emphasisOf, emphasisWhy, ibleOf, ibleWhy, spectDisplay, spectOf, spectWhy, weakDisplay, weakOf, weakPrompt, weakWhy } from "./w29Phonics";
 import { W28_START, katakanaDisplay, katakanaOf, katakanaWhy, linkOf as link28Of, linkWhy as link28Why, loanOf, loanWhy, partsDisplay, partsOf, partsWhy, rhythmDisplay, rhythmOf, rhythmWhy } from "./w28Phonics";
 import { FOR_SINCE_CHOICES, W27_START, ableDisplay, ableOf, ableWhy, chKOf, chKWhy, forSinceDisplay, forSinceOf, forSinceWhy, homoOf, homoWhy, silentOf, silentWhy } from "./w27Phonics";
 import { VOICE_CHOICES, W26_START, edIngDisplay, edIngOf, edIngWhy, punctOf, punctWhy, stressOf as meaningStressOf, stressWhy as meaningStressWhy, twisterDisplay, twisterOf, twisterWhy, voiceOf, voiceWhy } from "./w26Phonics";
@@ -575,6 +576,35 @@ export function w15Question(item: LearningItemDef, rng: () => number): Pick<Ques
         explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
     }
   }
+  return null;
+}
+
+/**
+ * ワールド29（かんがえる灯台・L841〜）の フォニックス（語根 spect・語根 dict・意見を 強める 強勢・弱形・-ible / -able）。
+ * ことばが どの 表に あるかで 問いを きめ、その 表の focus が レッスンの focus に ある ときだけ 問う。
+ * - spect（"inspect"）: 「spect（みる）の ことば。いみは どれ？」（答えも 選択肢も いみ）
+ * - dict（"predict"）: 「ぶんに あう dict の ことばは どれ？」（Can you ＿＿ the weather for tomorrow?）
+ * - 強勢（"I really think so"）: 「いけんを つよく つたえる とき、いちばん つよく いう ことばは どれ？」（really / think / so）
+ * - 弱形（"I can help you"）: 「ふつうの はやさで いうと、can は どう きこえる？」（クン / キャン / カーン。選択肢は きまった 順）
+ * - -ible / -able（"possible"）: 「ただしい つづりは どれ？」（possible / possable / posible）
+ * あてはまらなければ null。ワールド28 の 問題より 先に よぶ（prediction を ワールド23 の -tion、respectable を ワールド27 の -able で 問わない）。
+ */
+export function w29Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W29_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  const s = spectOf(item.text);
+  if (s && focus.includes("spect")) return { promptJa: "spect（みる）の ことば。いみは どれ？", display: spectDisplay(s), choices: pick([s.answer, ...s.wrong]), answer: s.answer, explanationJa: spectWhy(s) };
+  const d = dictOf(item.text);
+  if (d && focus.includes("dict")) return { promptJa: "ぶんに あう dict の ことばは どれ？", display: d.sentence, choices: pick([d.answer, ...d.wrong]), answer: d.answer, explanationJa: dictWhy(d) };
+  const e = emphasisOf(item.text);
+  if (e && focus.includes(e.strong.toLowerCase())) return { promptJa: "いけんを つよく つたえる とき、いちばん つよく いう ことばは どれ？", display: emphasisDisplay(e), choices: pick([e.answer, ...e.wrong]), answer: e.answer, explanationJa: emphasisWhy(e) };
+  const w = weakOf(item.text);
+  if (w && focus.includes(w.weak)) return { promptJa: weakPrompt(w), display: weakDisplay(w), choices: w.choices.map((x) => ({ id: x, label: x })), answer: w.answer, explanationJa: weakWhy(w) };
+  const b = ibleOf(item.text);
+  if (b && focus.includes(b.focus)) return { promptJa: "ただしい つづりは どれ？", display: `🔊（${b.meaning}）`, choices: pick([b.answer, ...b.wrong]), answer: b.answer, explanationJa: ibleWhy(b) };
   return null;
 }
 
@@ -1197,8 +1227,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // ワールド25（-ness・-ive・複合語・にた いみ・イントネーション）は その 先（kindness を ワールド21、active を ワールド22、something を ワールド15 で 問わない）
       // ワールド26（きもちの こえ・-ed / -ing・セリフの くとうてん・強勢・はやくちことば）は その 先（excited を ワールド11 の -ed の おとで 問わない）
       // ワールド27（ch / -ache・だまって いる もじ・for / since・-able・同音異義語 2）は その 先（knee を ワールド14 の kn、here を ワールド17 で 問わない）
-      // ワールド28（カタカナ語・英語に なった 日本語・リズム・音の つながり・ことばの パーツ）は いちばん 先（video を ワールド12 の はく、unhappiness を ワールド21 の -ness で 問わない）
-      const dq = w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド28（カタカナ語・英語に なった 日本語・リズム・音の つながり・ことばの パーツ）は その 先（video を ワールド12 の はく、unhappiness を ワールド21 の -ness で 問わない）
+      // ワールド29（spect・dict・意見の 強勢・弱形・-ible / -able）は いちばん 先（prediction を ワールド23 の -tion、respectable を ワールド27 の -able で 問わない）
+      const dq = w29Question(item, rng) ?? w28Question(item, rng) ?? w27Question(item, rng) ?? w26Question(item, rng) ?? w25Question(item, rng) ?? w24Question(item, rng) ?? w23Question(item, rng) ?? w22Question(item, rng) ?? w21Question(item, rng) ?? w20Question(item, rng) ?? w19Question(item, rng) ?? w18Question(item, rng) ?? w17Question(item, rng) ?? w16Question(item, rng) ?? w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

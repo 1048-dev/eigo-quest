@@ -20,6 +20,7 @@ import { w25Say } from "./w25Phonics";
 import { w26Say } from "./w26Phonics";
 import { w27Say } from "./w27Phonics";
 import { w28Say } from "./w28Phonics";
+import { w29Say } from "./w29Phonics";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -81,6 +82,9 @@ export const shortVowelOf = (team: string) => team[0];
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
+  // ワールド29 は その回の ことば・文で よむ（"spect" "can" "-ible" だけで よまない）
+  const w29 = w29Say(focus, words);
+  if (w29) return w29;
   // ワールド28 は その回の ことば・文・フレーズで よむ（"to" や "-ness" だけで よまない）
   const w28 = w28Say(focus, words);
   if (w28) return w28;

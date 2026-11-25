@@ -9,6 +9,7 @@
 import { w26Example } from "./w26Phonics";
 import { w27Example } from "./w27Phonics";
 import { w28Example } from "./w28Phonics";
+import { w29Example } from "./w29Phonics";
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -62,6 +63,9 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   // ワールド28（カタカナ語・日本語・リズム・音の つながり・パーツ）は その focus で 問う ことば・文・フレーズを よむ（"to" "dis-" だけで よまない）
   const w28 = w28Example(focus.trim(), ws);
   if (w28) return w28;
+  // ワールド29（spect・dict・意見の 強勢・弱形・-ible / -able）は その focus で 問う ことば・文を よむ（"spect" "can" "-ible" だけで よまない）
+  const w29 = w29Example(focus.trim(), ws);
+  if (w29) return w29;
 
   // sun-set → sunset（はくに わけた ことばは ことば まるごと）
   if (isSyllables(f)) return f.replace(/-/g, "");

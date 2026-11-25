@@ -34,6 +34,7 @@ import { compoundFocus, compoundOf, intonationOf, iveOf, nessOf, synOf } from "@
 import { edIngOf, punctOf, stressOf, twisterOf, voiceOf, w26FocusOf } from "@/lib/curriculum/w26Phonics";
 import { ableOf, chKOf, forSinceOf, homoOf, silentOf, w27FocusOf } from "@/lib/curriculum/w27Phonics";
 import { katakanaOf, linkOf as link28Of, loanOf, partsOf, rhythmOf, w28FocusOf } from "@/lib/curriculum/w28Phonics";
+import { dictOf, emphasisOf, ibleOf, spectOf, w29FocusOf, weakOf } from "@/lib/curriculum/w29Phonics";
 import { LessonResponseSchema } from "@/lib/api/contracts";
 
 const CAST = ["Haru", "Riko", "Kiko", "Birimo", "Ms. Emma"];
@@ -3031,5 +3032,137 @@ describe("カリキュラム: ワールド28 の決まりごと（にじの架�
     expect(at(839)!.teacherScript + said(839)).toMatch(/lighthouse/i);
     expect(at(840)!.teacherScript + said(840)).toMatch(/Lighthouse of Ideas/);
     expect(at(840)!.teacherScript + said(840)).toMatch(/Stage 3/);
+  });
+});
+
+describe("カリキュラム: ワールド29 の決まりごと（かんがえる灯台・ステージ4 の はじまり）", () => {
+  const w29 = LESSONS.filter((l) => l.world === 29);
+  const at = (n: number) => LESSONS.find((l) => l.lessonNo === n);
+  const range = (a: number, b: number) => LESSONS.filter((l) => l.lessonNo >= a && l.lessonNo <= b);
+  const ex = (a: number, b: number) => range(a, b).flatMap((l) => l.school.expressions.map((e) => e.en));
+  /** 表現・会話・台本・TPR・AI の さいしょの ことば（英語） */
+  const allEn = (l: (typeof LESSONS)[number]) => [l.teacherScript, ...l.school.expressions.map((e) => e.en), ...l.tpr.map((t) => t.en), ...l.conversation!.lines.map((x) => x.en), l.conversation!.aiTask.starterEn].join(" ");
+  const said = (n: number) => at(n)!.conversation!.lines.map((x) => x.en).join(" ");
+  const core = (n: number) => at(n)!.school.expressions.find((e) => e.core)!.en;
+  const kind = (w: string) => (spectOf(w) ? "spect" : dictOf(w) ? "dict" : emphasisOf(w) ? "emphasis" : weakOf(w) ? "weak" : ibleOf(w) ? "ible" : "?");
+
+  it("ワールド29 は 841〜870 の 30 レッスン、ステージ4・B1、学年の めやすは 高校初級", () => {
+    if (w29.length === 0) return; // 未作成ならスキップ
+    expect(w29.map((l) => l.lessonNo)).toEqual(Array.from({ length: 30 }, (_, i) => 841 + i));
+    for (const l of w29) {
+      expect(l.school.grade, `L${l.lessonNo}`).toBe("高校初級");
+      expect(l.stage, `L${l.lessonNo}`).toBe(4);
+      expect(l.level, `L${l.lessonNo}`).toBe("B1");
+      expect(l.school.expressions.filter((e) => e.core), `L${l.lessonNo}`).toHaveLength(1);
+      expect(l.school.expressions[0].core, `L${l.lessonNo}`).toBe(true);
+    }
+  });
+
+  it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
+    if (w29.length === 0) return;
+    const titles = ["The Lighthouse of Ideas", "I Think So Because…", "For Example", "Reasons Make It Strong", "The Light Gets Brighter", "I Agree with You", "I See Your Point, But…", "I'm Not Sure About That", "Partly Agree", "Agree or Disagree Game",
+      "What Do You Think?", "Let's Hear from Everyone", "Taking Turns", "Let's Decide", "Class Meeting Role-Play", "What Do You Mean?", "So You Mean…", "Could You Give an Example?", "Good Question!", "Interview with Follow-Ups",
+      "Fact or Opinion?", "It's Just My Opinion", "Is That True?", "Ads and Opinions", "Fact Check Team", "Mini Discussion: Homework", "Mini Discussion: Pets at School", "My Opinion Paragraph", "Lighthouse of Ideas Review", "World 29 Grand Review"];
+    expect(w29.map((l) => l.title)).toEqual(titles);
+  });
+
+  it("フォニックス: spect → dict → 意見の 強勢 → 弱形 → -ible / -able（各ブロックの 5回目と L866〜870 は ふりかえり）", () => {
+    if (w29.length === 0) return;
+    const rule = (a: number, b: number, r: string) => range(a, b).forEach((l) => expect(l.phonics.rule, `L${l.lessonNo}`).toBe(r));
+    rule(841, 844, "root-spect");
+    rule(846, 849, "root-dict");
+    rule(851, 854, "emphasis");
+    rule(856, 859, "weak-form");
+    rule(861, 864, "ible-able");
+    for (const n of [845, 850, 855, 860, 865, 866, 867, 868, 869, 870]) expect(at(n)!.phonics.rule, `L${n}`).toBe("review");
+    // どの ことばも ワールド29 の 表に あり、その focus が レッスンの focus に ある（focus には かならず ことばが ある）
+    for (const l of w29) {
+      for (const w of l.phonics.words) {
+        const f = w29FocusOf(w);
+        expect(f, `L${l.lessonNo} ${w}`).not.toBeNull();
+        expect(l.phonics.focus, `L${l.lessonNo} ${w}`).toContain(f);
+      }
+      expect(l.phonics.sounds.length, `L${l.lessonNo}`).toBe(l.phonics.focus.length);
+      for (const f of l.phonics.focus) expect(l.phonics.words.some((w) => w29FocusOf(w) === f), `L${l.lessonNo} ${f}`).toBe(true);
+    }
+    // 計画の ことば
+    const all = w29.flatMap((l) => l.phonics.words);
+    expect(all).toEqual(expect.arrayContaining(["respect", "inspect", "spectator", "predict", "dictionary", "contradict", "I really think so", "possible", "reasonable"]));
+    // 強勢の sounds は つよく いう ことばの 大文字
+    for (const l of range(851, 854)) l.phonics.words.forEach((w, i) => expect(l.phonics.sounds[i], `L${l.lessonNo} ${w}`).toBe(emphasisOf(w)!.strong.toUpperCase()));
+    // 弱形は can・to・for・and の 4つ
+    expect(range(856, 859).map((l) => l.phonics.focus)).toEqual([["can"], ["to"], ["for"], ["and"]]);
+    // -ible と -able は どの 回も 2つずつ
+    for (const l of range(861, 864)) expect(l.phonics.words.map((w) => ibleOf(w)!.kind).sort(), `L${l.lessonNo}`).toEqual(["able", "able", "ible", "ible"]);
+    // ふりかえり L866〜870 は 5つの きまりを ぜんぶ ふくむ
+    for (const l of range(866, 870)) expect(new Set(l.phonics.words.map(kind)), `L${l.lessonNo}`).toEqual(new Set(["spect", "dict", "emphasis", "weak", "ible"]));
+  });
+
+  it("文法・会話スキルの 型が 計画どおり入っている（core の 表現）", () => {
+    if (w29.length === 0) return;
+    const want: Record<number, string> = {
+      841: "This light shines when people share ideas.", 842: "I think dogs are great pets because they're loyal.", 843: "For example, my dog waits for me every day.", 846: "I agree with you. Reading is fun.", 847: "I see your point, but I think the beach is more fun.",
+      848: "I'm not sure about that.", 849: "I partly agree. Summer is fun, but it's too hot.", 851: "What do you think, Kiko?", 852: "Let's hear from everyone.", 853: "Can I say something?", 854: "Let's vote. Most people chose the park.",
+      856: 'What do you mean by "cool"?', 857: "So you mean we should start early?", 858: "Could you give me an example?", 859: "That's a good question. Let me think.", 860: "Why do you think so? Can you tell me more?",
+      861: '"Cats sleep a lot" is a fact.', 863: "Is that true? Where did you read that?", 864: '"This is the best toy ever!" Is it a fact?', 865: "That's a fact. We checked it in a book.",
+      866: "Should we have homework on weekends?", 867: "Should our school have a class pet?", 870: "Sharing ideas makes the light brighter!",
+    };
+    for (const [n, s] of Object.entries(want)) expect(core(Number(n)), `L${n}`).toBe(s);
+    expect(core(844)).toMatch(/^One reason is .*Another reason is /);
+    expect(core(845)).toMatch(/^I think .*One reason is .*For example, /);
+    expect(core(850)).toMatch(/^I disagree because /);
+    expect(core(855)).toMatch(/^Today's topic is .*What do you think\?$/);
+    expect(core(862)).toMatch(/^It's just my opinion, but /);
+    expect(core(868)).toMatch(/^I think .*First, .*Second, .*So, /);
+    expect(core(869)).toMatch(/^I see your point, but /);
+    expect(ex(853, 853).join(" ")).toMatch(/Sure, go ahead\./);
+    expect(ex(869, 869).join(" ")).toMatch(/So you mean /);
+  });
+
+  it("文法の じゅんばん: For example は L843 から、One reason is は L844 から、agree with は L846 から … 関係代名詞は 出さない", () => {
+    if (w29.length === 0) return;
+    const from: [RegExp, number][] = [
+      [/\bfor example\b/i, 843], [/\b(one|another) reason is\b/i, 844], [/\bagree with\b/i, 846], [/\bI see your point\b/i, 847], [/\bnot sure about that\b/i, 848],
+      [/\bpartly agree\b/i, 849], [/\bI disagree\b/i, 850], [/\blet's hear from\b/i, 852], [/\bgo ahead\b/i, 853], [/\blet's vote\b/i, 854], [/\bwhat do you mean\b/i, 856],
+      [/\bso you mean\b/i, 857], [/\bgive me an example\b/i, 858], [/\blet me think\b/i, 859], [/\b(that's a fact|is a fact|is an opinion|fact or opinion)\b/i, 861],
+      [/\bjust my opinion\b/i, 862], [/\bwhere did you read that\b/i, 863],
+    ];
+    for (const [re, n] of from) for (const l of range(841, n - 1)) expect(allEn(l), `L${l.lessonNo} ${re}`).not.toMatch(re);
+    for (const l of w29) expect(allEn(l), `L${l.lessonNo}`).not.toMatch(/\b(people|person|someone|somebody|a friend|friends|children|animals|the man|the woman|the girl|the boy|a girl|a boy|something|the thing|a place|the place|the book|a book) (who|that|which) (is|are|was|were|has|have|lives?|likes?|loves?|makes?|helps?)\b/i);
+  });
+
+  it("ステージ4: 先生の 台本は 英語だけ（日本語は ごく小さな ヒントだけ）・200 語 以上で 読みものを ふくむ、会話シーンは 6〜7 行（L860 の インタビューは 8 行まで）、L870 は スピード TPR", () => {
+    if (w29.length === 0) return;
+    for (const l of w29) {
+      const s = l.teacherScript;
+      const jaChars = (s.match(/[぀-ヿ一-鿿]/g) ?? []).length;
+      expect(jaChars / s.length, `L${l.lessonNo}`).toBeLessThan(0.02);
+      expect(s.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(200);
+      expect(s, `L${l.lessonNo} の 読みもの`).toMatch(/"[^"]{200,}"/);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeGreaterThanOrEqual(6);
+      expect(l.conversation!.lines.length, `L${l.lessonNo}`).toBeLessThanOrEqual(l.lessonNo === 860 ? 8 : 7);
+      for (const x of l.conversation!.lines) expect(CAST, `L${l.lessonNo}`).toContain(x.speaker);
+      expect(l.conversation!.aiTask.targetExpressions, `L${l.lessonNo}`).toEqual(l.school.expressions.map((e) => e.en));
+    }
+    // 日本語の ヒントが ある 回は 2回だけ（loyal・fact）
+    expect(w29.filter((l) => /[぀-ヿ一-鿿]/.test(l.teacherScript)).map((l) => l.lessonNo)).toEqual([842, 861]);
+    expect(at(870)!.tpr.some((t) => t.en.includes("Look! Stop! Come here! Go!"))).toBe(true);
+  });
+
+  it("あんぜん: AI 会話で 個人情報を きかない", () => {
+    if (w29.length === 0) return;
+    for (const l of w29) expect(l.conversation!.aiTask.starterEn, `L${l.lessonNo}`).not.toMatch(/your (name|address|school|age)|where do you live|how old are you/i);
+  });
+
+  it("物語: L841 で 灯台と ペル船長 → L847 で カモメの ガスと ゲイル → L861 で パフィンの ピップの 新聞 → 6つの レンズ → L870 で みらい都市へ", () => {
+    if (w29.length === 0) return;
+    expect(at(841)!.teacherScript + said(841)).toMatch(/Lighthouse of Ideas/);
+    expect(at(841)!.teacherScript + said(841)).toMatch(/Captain Pell/);
+    expect(at(843)!.teacherScript + said(843)).toMatch(/Anchor/);
+    expect(at(847)!.teacherScript + said(847)).toMatch(/Gus/);
+    expect(at(847)!.teacherScript + said(847)).toMatch(/Gale/);
+    expect(at(861)!.teacherScript + said(861)).toMatch(/Pip/);
+    for (const n of [845, 850, 855, 860, 865, 870]) expect(at(n)!.teacherScript + said(n), `L${n}`).toMatch(/lens/i);
+    expect(at(870)!.teacherScript + said(870)).toMatch(/City of Tomorrow/);
   });
 });
