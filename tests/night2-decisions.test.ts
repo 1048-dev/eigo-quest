@@ -94,6 +94,8 @@ describe("フォニックスの ボタン", () => {
     expect(focusLabel("-st")).toEqual({ main: "…st", hintJa: "おわりの おと" });
     expect(focusLabel("sun-set").main).toBe("sun・set");
     expect(focusLabel("sh")).toEqual({ main: "sh", hintJa: "" });
+    expect(focusLabel("n't")).toEqual({ main: "…n't", hintJa: "みじかい かたち" });
+    expect(focusLabel("'re").main).toBe("…'re");
   });
 
   it("おしたら おてほんの ことばを 読む（rain, bird, saw）", () => {
@@ -111,7 +113,8 @@ describe("フォニックスの ボタン", () => {
   it("全レッスンの ボタンが ことば（英字だけ）を 読み、記号を 見せない", () => {
     for (const l of LESSONS) {
       for (const f of l.phonics.focus) {
-        expect(focusExampleWord(f, l.phonics.words), `L${l.lessonNo} ${f}`).toMatch(/^[A-Za-z]+$/);
+        // ワールド15 の 短縮形（I'm, isn't）は ことばの なかの ' だけ OK（読み上げは ふつうに よめる）
+        expect(focusExampleWord(f, l.phonics.words), `L${l.lessonNo} ${f}`).toMatch(/^[A-Za-z]+('[A-Za-z]+)?$/);
         expect(focusLabel(f).main, `L${l.lessonNo} ${f}`).not.toMatch(/[_]|^-/);
       }
     }

@@ -13,6 +13,7 @@ import { ED_KANA, ED_LABEL, ER_MORE_WORDS, SIGHT_TIP, W11_INTRO as W11_INTRO_MAP
 import { W12_INTRO as W12_INTRO_MAP, W12_SIGHT_TIP, W12_SIGHT_WORDS, W12_START, W12_SYLLABLE_START, syllablesOf } from "./w12Phonics";
 import { CH_CHOICES, S_KANA, S_LABEL, W13_CH_FOCUS, W13_HE_FOCUS, W13_IZ_START, W13_START, W13_S_FOCUS, chBlank, heSpelling, sSound, type SSound } from "./w13Phonics";
 import { PLURAL_WHY, SILENT_CHOICES, SILENT_WHY, W14_NUMBER_FOCUS, W14_PLURAL_FOCUS, W14_SILENT_FOCUS, W14_START, numberSpelling, pluralSpelling, silentBlank } from "./w14Phonics";
+import { ING_WHY, W15_CONTRACTION_FOCUS, W15_ING_FOCUS, W15_START, W15_Y_FOCUS, Y3_LABEL, Y3_SOUNDS, Y3_WHY, compoundChoices, compoundSplit, compoundWhy, contractionOf, contractionWhy, ingSpelling, y3Sound } from "./w15Phonics";
 
 export type QuestionType =
   | "listen_choose" // 音声を聞いて絵を選ぶ（リスニング）
@@ -519,6 +520,51 @@ export function w14Question(item: LearningItemDef, rng: () => number): Pick<Ques
   return null;
 }
 
+/**
+ * ワールド15（かぜの草原・L421〜）の フォニックス。フォーカスの 順に ことばに あうもので 問う。
+ * - "-ing": 「ing を つけた ただしい つづりは？」（make → making / makeing / makking、run → running / runing）
+ * - "sun-flower"（複合語）: 「2つの ことばに わけると？」（sun + flower / su + nflower / sunf + lower）
+ * - "'m" "'s" "'re" "n't": 「みじかい かたちは？」（she is → she's / shes / she'is）
+ * - "y": 「この ことばの y は どの おと？」（イェ / イー / アイ）
+ * あてはまらなければ null。ワールド14 の 問題より 先に よぶ（running を 語末の -ing、sunflower を はくの 数で 問わない）。
+ */
+export function w15Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+  if (item.lessonNo < W15_START) return null;
+  const lesson = getLesson(item.lessonNo);
+  if (!lesson) return null;
+  const focus = lesson.phonics.focus;
+  const w = item.text.toLowerCase();
+  const pick = (xs: readonly string[]) => shuffle(xs, rng).map((x) => ({ id: x, label: x }));
+  for (const f of focus) {
+    if ((W15_ING_FOCUS as readonly string[]).includes(f)) {
+      const g = ingSpelling(w);
+      if (!g) continue;
+      return { promptJa: "ing を つけた ただしい つづりは どれ？", display: `${g.base} → ？`, choices: pick([g.answer, ...g.wrong]), answer: g.answer,
+        explanationJa: `${g.base} → ${g.answer}。${ING_WHY[g.kind](g.base)}` };
+    }
+    if (f.includes("-")) {
+      const parts = compoundSplit(w, [f]);
+      if (!parts) continue;
+      const c = compoundChoices(parts[0], parts[1]);
+      return { promptJa: "2つの ことばに わけると どれ？", display: item.text, choices: pick([c.answer, ...c.wrong]), answer: c.answer,
+        explanationJa: compoundWhy(item.text, parts[0], parts[1]) };
+    }
+    if ((W15_CONTRACTION_FOCUS as readonly string[]).includes(f)) {
+      const c = contractionOf(item.text);
+      if (!c || !w.includes(f)) continue;
+      return { promptJa: "みじかい かたちは どれ？", display: `${c.full} → ？`, choices: pick([c.answer, ...c.wrong]), answer: c.answer,
+        explanationJa: contractionWhy(c.full, c.answer) };
+    }
+    if ((W15_Y_FOCUS as readonly string[]).includes(f)) {
+      const y = y3Sound(w);
+      if (!y) continue;
+      return { promptJa: "この ことばの y は どの おと？", display: item.text, choices: Y3_SOUNDS.map((s) => ({ id: s, label: Y3_LABEL[s] })), answer: y,
+        explanationJa: `${item.text} の y は「${y}」。${Y3_WHY[y]}` };
+    }
+  }
+  return null;
+}
+
 function shuffle<T>(arr: readonly T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -595,7 +641,8 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       //   shy は sh ではなく -y の回、chew は ch ではなく ew の回、what は wh ではなく サイトワードの 回の問題にする）
       // ワールド13（3 単現の -s・-tch / -dge）は いちばん 先（likes を 複数形の -s、catch を ダイグラフの ch で 問わない）
       // ワールド14（複数形・だまっている もじ・数の つづり）は さらに その 先（boxes を ワールド13 の -s の おと、knife を さいしょの おとで 問わない）
-      const dq = w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
+      // ワールド15（-ing の つづり・複合語・短縮形・y の 3つの おと）は いちばん 先（running を 語末の -ing、sunflower を はくの 数で 問わない）
+      const dq = w15Question(item, rng) ?? w14Question(item, rng) ?? w13Question(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
       if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
       const first = item.text[0];

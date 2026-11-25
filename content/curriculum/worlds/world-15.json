@@ -1,0 +1,4495 @@
+{
+  "world": 15,
+  "stage": 2,
+  "level": "A1+",
+  "lessons": [
+    {
+      "lessonNo": 421,
+      "world": 15,
+      "title": "The Wind Is Blowing!",
+      "titleJa": "かぜが ふいている！",
+      "school": {
+        "grade": "中1",
+        "topic": "The wind is blowing.：いま おきている こと（現在進行形の はじまり）",
+        "grammar": "be動詞＋～ing（The wind is blowing. / The grass is moving.）",
+        "expressions": [
+          {
+            "en": "The wind is blowing.",
+            "ja": "かぜが ふいています。",
+            "core": true
+          },
+          {
+            "en": "The grass is moving.",
+            "ja": "くさが ゆれています。"
+          },
+          {
+            "en": "My hat is flying away!",
+            "ja": "わたしの ぼうしが とんでいく！"
+          }
+        ],
+        "testPoints": [
+          "The wind is blowing. の ように「is＋～ing」で いま おきている ことが いえる",
+          "e で おわる ことばは e を とって ing（make → making）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold your hat.",
+          "ja": "ぼうしを おさえて。",
+          "action": "りょうてで あたまを おさえる",
+          "emoji": "🎩"
+        },
+        {
+          "en": "Lean into the wind.",
+          "ja": "かぜに むかって からだを たおして。",
+          "action": "まえに からだを かたむける",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Wave your arms.",
+          "ja": "うでを ふって。",
+          "action": "りょううでを 大きく ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Smile at the sky.",
+          "ja": "そらに むかって にっこり。",
+          "action": "うえを みて わらう",
+          "emoji": "😊"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-drop-e",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "making",
+          "waving",
+          "smiling",
+          "shining"
+        ],
+        "tipJa": "e で おわる ことばに ing を つけるときは、e を とるよ。make → making、wave → waving、smile → smiling、shine → shining。"
+      },
+      "vocab": [
+        {
+          "en": "wind",
+          "ja": "かぜ",
+          "emoji": "🌬️",
+          "core": true
+        },
+        {
+          "en": "plains",
+          "ja": "そうげん",
+          "emoji": "🌾"
+        },
+        {
+          "en": "grass",
+          "ja": "くさ",
+          "emoji": "🌱"
+        },
+        {
+          "en": "hill",
+          "ja": "おか",
+          "emoji": "⛰️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We left the Bustling Market, and now we're on wide green plains. Whoosh! Can you feel it? The wind is very strong here. Welcome to the Windy Plains! Today's sentence is: The wind is blowing. Say it with me. The wind is blowing. Great! When something is happening right now, we say is and then a word with i-n-g. The wind is blowing. The grass is moving. いま おきている ことは、is と ～ing で いうよ。 Now, phonics. Make, making. Wave, waving. Smile, smiling. Shine, shining. These words end with a quiet e. Take away the e, and add i-n-g. e で おわる ことばは、e を とって ing。 Good job! Here's a tip for windy days. If your hat flies away, shout, My hat is flying away! Let's say it together. My hat is flying away! Okay, hold on to your hats, everyone. Let's walk up the hill and look around!",
+      "conversation": {
+        "scene": "The edge of the Windy Plains, where a strong wind welcomes the team",
+        "sceneJa": "草原に ついて、つよい かぜに ふかれる",
+        "lines": [
+          {
+            "speaker": "Birimo",
+            "en": "Here we are! The map says, Windy Plains. Wow, look at all the grass!",
+            "ja": "ついた！ちずに『かぜの草原』って かいてある。わあ、くさが いっぱい！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "The wind is blowing so hard! The grass is moving like the sea.",
+            "ja": "かぜが すごく ふいてる！くさが うみみたいに ゆれてる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh no! My hat is flying away!",
+            "ja": "あっ！ぼくの ぼうしが とんでいく！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I've got it! Here you go, Haru.",
+            "ja": "つかまえた！はい、ハル。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thanks, Kiko! You're so fast!",
+            "ja": "ありがとう、キコ！はやいね！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look at the map, everyone. It says, Find the wind feather on the plains.",
+            "ja": "みんな、ちずを みて。『草原で かぜの はねを さがせ』と かいてあるわ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "A wind feather? Let's find it!",
+            "ja": "かぜの はね？さがそう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "草原で いま おきている ことを The wind is blowing. の ように「is＋～ing」で いってみよう",
+          "starterEn": "Hi! I'm Riko. We're on the Windy Plains! The wind is blowing. What else can you see?",
+          "targetExpressions": [
+            "The wind is blowing.",
+            "The grass is moving.",
+            "My hat is flying away!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The wind is blowing. かぜが ふいている（is＋～ing で いま おきている こと）",
+          "The grass is moving. / My hat is flying away!",
+          "making・waving・smiling・shining（e を とって ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 422,
+      "world": 15,
+      "title": "What Are You Doing?",
+      "titleJa": "なにを しているの？",
+      "school": {
+        "grade": "中1",
+        "topic": "What are you doing? ― I'm ～ing.：いま している ことを きく・こたえる",
+        "grammar": "What are you doing? ― I'm ～ing.",
+        "expressions": [
+          {
+            "en": "What are you doing?",
+            "ja": "なにを しているの？",
+            "core": true
+          },
+          {
+            "en": "I'm flying a kite.",
+            "ja": "たこを あげているよ。"
+          },
+          {
+            "en": "I'm making a kite, too!",
+            "ja": "わたしも たこを つくっているよ！"
+          }
+        ],
+        "testPoints": [
+          "What are you doing? と きいて、I'm ～ing. で こたえられる",
+          "ride → riding、write → writing（e を とって ing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Fly a kite.",
+          "ja": "たこを あげて。",
+          "action": "いとを ひっぱる まね",
+          "emoji": "🪁"
+        },
+        {
+          "en": "Pull the string.",
+          "ja": "いとを ひいて。",
+          "action": "りょうてで ぐいっと ひく",
+          "emoji": "🧵"
+        },
+        {
+          "en": "Run with the wind.",
+          "ja": "かぜと いっしょに はしって。",
+          "action": "その場で はしる",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Look up high.",
+          "ja": "たかい ところを みて。",
+          "action": "そらを みあげる",
+          "emoji": "👀"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-drop-e",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "riding",
+          "hiding",
+          "sliding",
+          "writing"
+        ],
+        "tipJa": "ride → riding、hide → hiding、slide → sliding、write → writing。さいごの e を とって ing だよ。"
+      },
+      "vocab": [
+        {
+          "en": "kite",
+          "ja": "たこ",
+          "emoji": "🪁",
+          "core": true
+        },
+        {
+          "en": "string",
+          "ja": "いと",
+          "emoji": "🧵"
+        },
+        {
+          "en": "tail",
+          "ja": "しっぽ",
+          "emoji": "🎏"
+        },
+        {
+          "en": "high",
+          "ja": "たかく",
+          "emoji": "⬆️"
+        }
+      ],
+      "teacherScript": "Hi, everyone! It's a perfect day for kites. The wind is strong, and the sky is blue. Riko is on the hill. Haru wants to know what she's doing. Today's sentence is: What are you doing? Say it with me. What are you doing? Good! And Riko answers, I'm flying a kite. Say it. I'm flying a kite. I'm is I am. I'm flying means I am flying right now. 「なにを しているの？」は What are you doing?。こたえは I'm ～ing. だよ。 Now, phonics. Ride, riding. Hide, hiding. Slide, sliding. Write, writing. Do you remember? When a word ends with e, take the e away and add i-n-g. Excellent! Here's a talking tip. When your friend tells you what they're doing, you can say, That looks fun! Let's say it. That looks fun! Now, let's grab our kites and run up the hill. Ready? Let's fly!",
+      "conversation": {
+        "scene": "A grassy hill where the team flies kites",
+        "sceneJa": "草原の 丘で、たこあげ",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Hey, Riko! What are you doing?",
+            "ja": "ねえ、リコ！なにを してるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm flying a kite. Look! It's so high!",
+            "ja": "たこを あげてるの。みて！すごく たかい！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "That looks fun! Kiko, what are you doing?",
+            "ja": "たのしそう！キコ、なにを してるの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "I'm making a kite, too. I'm drawing a fish on it.",
+            "ja": "わたしも たこを つくってるの。さかなの えを かいてるよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "What am I doing? I'm holding the string!",
+            "ja": "ぼくは なにを してるでしょう？いとを もってるんだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Birimo, be careful! You're flying, too!",
+            "ja": "ビリモ、きを つけて！あなたも とんでる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "What are you doing? と きいたり、I'm ～ing. で いま している ことを こたえたり しよう",
+          "starterEn": "Hi! I'm Haru. I'm on the hill with my friends. I'm flying a kite! What are you doing?",
+          "targetExpressions": [
+            "What are you doing?",
+            "I'm ～ing.",
+            "That looks fun!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What are you doing? なにを しているの？",
+          "I'm flying a kite. いま ～している は I'm ～ing.",
+          "riding・hiding・sliding・writing（e を とって ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 423,
+      "world": 15,
+      "title": "Look! She's Running!",
+      "titleJa": "みて！かのじょが はしってる！",
+      "school": {
+        "grade": "中1",
+        "topic": "Look! She's ～ing.：ほかの 人が いま している ことを 実況する",
+        "grammar": "Look! He's / She's ～ing.（He is / She is ～ing.）",
+        "expressions": [
+          {
+            "en": "Look! She's running fast.",
+            "ja": "みて！かのじょ、はやく はしってる。",
+            "core": true
+          },
+          {
+            "en": "He's running, too!",
+            "ja": "かれも はしってる！"
+          },
+          {
+            "en": "Go, go, go! You can do it!",
+            "ja": "いけ、いけ、いけ！できるよ！"
+          }
+        ],
+        "testPoints": [
+          "Look! She's running fast. の ように、ほかの 人の いまの うごきを 実況できる",
+          "dance → dancing、race → racing（e を とって ing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Get ready.",
+          "ja": "よーい。",
+          "action": "かまえる",
+          "emoji": "🙌"
+        },
+        {
+          "en": "Run fast!",
+          "ja": "はやく はしって！",
+          "action": "その場で すばやく はしる",
+          "emoji": "💨"
+        },
+        {
+          "en": "Cheer for your friend.",
+          "ja": "ともだちを おうえんして。",
+          "action": "てを ふって こえを だす",
+          "emoji": "📣"
+        },
+        {
+          "en": "Cross the finish line.",
+          "ja": "ゴールして。",
+          "action": "りょうてを あげて まえへ",
+          "emoji": "🏁"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-drop-e",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "dancing",
+          "racing",
+          "chasing",
+          "bouncing"
+        ],
+        "tipJa": "dance → dancing、race → racing、chase → chasing、bounce → bouncing。ce・se で おわる ことばも e を とるよ。"
+      },
+      "vocab": [
+        {
+          "en": "race",
+          "ja": "かけっこ",
+          "emoji": "🏃",
+          "core": true
+        },
+        {
+          "en": "fast",
+          "ja": "はやく",
+          "emoji": "💨"
+        },
+        {
+          "en": "finish line",
+          "ja": "ゴールライン",
+          "emoji": "🏁"
+        },
+        {
+          "en": "cheer",
+          "ja": "おうえんする",
+          "emoji": "📣"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today there's a race on the plains. Ready, set, go! Kiko is very fast. Haru is fast, too. When we talk about another person, we say he's or she's. Today's sentence is: Look! She's running fast. Say it with me. Look! She's running fast. Great! She's means she is. He's means he is. ほかの 人が いま している ことは、He's ～ing. / She's ～ing. で いうよ。 Start with Look! Then everyone looks at the same thing. This is how sports reporters talk. They're telling us what's happening now. Now, phonics. Dance, dancing. Race, racing. Chase, chasing. Bounce, bouncing. These words end with c-e or s-e. Take away the e and add i-n-g. Here's a cheering tip. When your friend is running, shout, Go, go, go! You can do it! Let's cheer together. Go, go, go! You can do it! Okay, reporters, get your voices ready. The race is starting!",
+      "conversation": {
+        "scene": "A running race across the plains",
+        "sceneJa": "草原の かけっこ",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "On your mark, get set, go!",
+            "ja": "いちに ついて、よーい、どん！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Look! She's running fast! Kiko is in front!",
+            "ja": "みて！かのじょ、はやく はしってる！キコが せんとうだ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And look at Haru! He's running, too!",
+            "ja": "それに ハルを みて！かれも はしってる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Go, go, go! You can do it!",
+            "ja": "いけ、いけ、いけ！できるよ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Oh! A rabbit is chasing them!",
+            "ja": "あっ！うさぎが ふたりを おいかけてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Kiko wins! Haru is second, and the rabbit is third.",
+            "ja": "キコの かち！ハルが 2ばん、うさぎが 3ばんね。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "かけっこを みながら Look! He's / She's ～ing. で 実況しよう",
+          "starterEn": "Hi! I'm Birimo. The race is starting! Look! Kiko is running fast! What is Haru doing?",
+          "targetExpressions": [
+            "Look! She's running fast.",
+            "He's running, too!",
+            "Go, go, go! You can do it!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Look! She's running fast. ほかの 人の いまの うごきを 実況",
+          "She's = She is、He's = He is",
+          "dancing・racing・chasing・bouncing（e を とって ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 424,
+      "world": 15,
+      "title": "Are You Having Fun?",
+      "titleJa": "たのしんでる？",
+      "school": {
+        "grade": "中1",
+        "topic": "Are you ～ing? ― Yes, I am. / No, I'm not.：いま している か きく",
+        "grammar": "Are you ～ing? ― Yes, I am. / No, I'm not.",
+        "expressions": [
+          {
+            "en": "Are you having fun?",
+            "ja": "たのしんでいる？",
+            "core": true
+          },
+          {
+            "en": "Yes, I am!",
+            "ja": "うん、たのしんでいるよ！"
+          },
+          {
+            "en": "Are you eating my sandwich? ― No, I'm not!",
+            "ja": "ぼくの サンドイッチ たべてる？ ― たべてないよ！"
+          }
+        ],
+        "testPoints": [
+          "Are you ～ing? と きいて、Yes, I am. / No, I'm not. で こたえられる",
+          "have → having、come → coming（e を とって ing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Spread the blanket.",
+          "ja": "シートを ひろげて。",
+          "action": "りょうてで ひろげる まね",
+          "emoji": "🧺"
+        },
+        {
+          "en": "Sit down on the blanket.",
+          "ja": "シートに すわって。",
+          "action": "その場で すわる",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Pass the plate.",
+          "ja": "おさらを まわして。",
+          "action": "となりに わたす まね",
+          "emoji": "🍽️"
+        },
+        {
+          "en": "Take a big bite.",
+          "ja": "大きく ひとくち たべて。",
+          "action": "ぱくっと たべる まね",
+          "emoji": "🥪"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-drop-e",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "having",
+          "coming",
+          "giving",
+          "sharing"
+        ],
+        "tipJa": "have → having、come → coming、give → giving、share → sharing。よく つかう ことばも e を とって ing。"
+      },
+      "vocab": [
+        {
+          "en": "picnic",
+          "ja": "ピクニック",
+          "emoji": "🧺",
+          "core": true
+        },
+        {
+          "en": "blanket",
+          "ja": "シート・もうふ",
+          "emoji": "🟥"
+        },
+        {
+          "en": "sandwich",
+          "ja": "サンドイッチ",
+          "emoji": "🥪"
+        },
+        {
+          "en": "fun",
+          "ja": "たのしい こと",
+          "emoji": "🎉"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we're having a picnic on the plains. The sun is shining, and the wind is soft today. Ms. Emma wants to know if everyone is happy. Today's sentence is: Are you having fun? Say it with me. Are you having fun? Wonderful! To make a question, put are at the front. You are having fun. Are you having fun? The answer is, Yes, I am! or No, I'm not. Are you ～ing? と きかれたら、Yes, I am. か No, I'm not. で こたえよう。 Now, phonics. Have, having. Come, coming. Give, giving. Share, sharing. Even these short words drop the e. Have becomes having. Here's a picnic tip. When you want to share your food, say, Do you want some? Let's say it. Do you want some? Now, let's spread the blanket and open our lunch boxes. Are you hungry? Yes, I am!",
+      "conversation": {
+        "scene": "A picnic on the soft grass of the plains",
+        "sceneJa": "草原の ピクニック",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Are you having fun, everyone?",
+            "ja": "みんな、たのしんでる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, I am! This sandwich is so good.",
+            "ja": "うん！この サンドイッチ、すごく おいしい。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wait. Birimo, are you eating my sandwich?",
+            "ja": "まって。ビリモ、ぼくの サンドイッチ たべてる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No, I'm not! I'm just smelling it.",
+            "ja": "たべてないよ！においを かいでる だけ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Here, Birimo. I'm sharing my rice ball with you. Do you want some?",
+            "ja": "はい、ビリモ。わたしの おにぎり わけて あげる。たべる？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Yes, please! Thank you, Kiko!",
+            "ja": "うん、ちょうだい！ありがとう、キコ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ピクニックで Are you ～ing? と きいたり、Yes, I am. / No, I'm not. で こたえたり しよう",
+          "starterEn": "Hi! I'm Kiko. We're having a picnic on the plains! I'm eating a rice ball. Are you having fun?",
+          "targetExpressions": [
+            "Are you having fun?",
+            "Yes, I am!",
+            "No, I'm not.",
+            "Do you want some?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Are you having fun? たのしんでる？",
+          "Yes, I am! / No, I'm not.",
+          "having・coming・giving・sharing（e を とって ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 425,
+      "world": 15,
+      "title": "Windy Day Video Call",
+      "titleJa": "かぜの日の ビデオ通話",
+      "school": {
+        "grade": "中1",
+        "topic": "I'm ～ing. で いまの ようすを つたえる（ビデオ通話）",
+        "grammar": "I'm ～ing. / We're ～ing. / What are you doing now?",
+        "expressions": [
+          {
+            "en": "I'm sitting on a hill.",
+            "ja": "おかの うえに すわっているよ。",
+            "core": true
+          },
+          {
+            "en": "We're watching the clouds.",
+            "ja": "わたしたちは くもを みているよ。"
+          },
+          {
+            "en": "What are you doing now?",
+            "ja": "いま なにを しているの？"
+          }
+        ],
+        "testPoints": [
+          "I'm sitting on a hill. の ように、ビデオ通話で いまの ようすを つたえられる",
+          "e を とる ing と、そのまま つける ing（skating / playing）を くらべられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up your tablet.",
+          "ja": "タブレットを もちあげて。",
+          "action": "りょうてで まえに もつ",
+          "emoji": "📱"
+        },
+        {
+          "en": "Wave to the camera.",
+          "ja": "カメラに てを ふって。",
+          "action": "まえに むかって てを ふる",
+          "emoji": "👋"
+        },
+        {
+          "en": "Turn around and show the view.",
+          "ja": "ふりかえって けしきを みせて。",
+          "action": "くるっと うしろを むく",
+          "emoji": "🔄"
+        },
+        {
+          "en": "Say goodbye.",
+          "ja": "さようならを いって。",
+          "action": "てを ふって おじぎ",
+          "emoji": "🙋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "skating",
+          "diving",
+          "jumping",
+          "playing"
+        ],
+        "tipJa": "skate → skating、dive → diving は e を とる。jump → jumping、play → playing は そのまま ing。さいごの もじを みよう。"
+      },
+      "vocab": [
+        {
+          "en": "video call",
+          "ja": "ビデオ通話",
+          "emoji": "📱",
+          "core": true
+        },
+        {
+          "en": "cloud",
+          "ja": "くも",
+          "emoji": "☁️"
+        },
+        {
+          "en": "view",
+          "ja": "けしき",
+          "emoji": "🏞️"
+        },
+        {
+          "en": "screen",
+          "ja": "がめん",
+          "emoji": "🖥️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today Ms. Emma is in the town, and you're on the plains. Let's call her on a video call. On a video call, your friend can't see everything. So tell them what you're doing. Today's sentence is: I'm sitting on a hill. Say it with me. I'm sitting on a hill. Great! You can also say we. We're watching the clouds. We're means we are. And ask back, What are you doing now? ビデオ通話では、I'm ～ing. で いまの ようすを つたえよう。 Now, phonics review. Skate, skating. Dive, diving. These drop the e. Jump, jumping. Play, playing. These just add i-n-g. Look at the last letter! Here's an important tip for video calls. You can talk about what you're doing, but don't say your address or your school's name. じゅうしょや がっこうの なまえは いわないでね。 Okay, hold up your tablets. Let's call Ms. Emma!",
+      "conversation": {
+        "scene": "A video call from the top of a windy hill to Ms. Emma in town",
+        "sceneJa": "草原から、エマ先生と ビデオ通話（いま 何してる？）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Hello! Can you hear me? What are you doing now?",
+            "ja": "もしもし！きこえる？いま なにを してるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Hi, Ms. Emma! I'm sitting on a hill. Look at the view!",
+            "ja": "エマ先生、こんにちは！おかの うえに すわってるの。けしきを みて！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We're watching the clouds. That one looks like a horse!",
+            "ja": "ぼくたち、くもを みてるんだ。あの くも、うまみたい！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And I'm rolling down the hill! Wheee!",
+            "ja": "ぼくは おかを ころがってる！わーい！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! I'm drinking tea in a cafe. The wind is blowing here, too.",
+            "ja": "あはは！わたしは カフェで おちゃを のんでるの。こっちも かぜが ふいてるわ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Bye, Ms. Emma! See you tonight!",
+            "ja": "エマ先生、バイバイ！こんやね！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ビデオ通話で I'm ～ing. と いまの ようすを つたえて、What are you doing now? と きき返そう（ほんとうの なまえ・じゅうしょは いわなくて OK）",
+          "starterEn": "Hi! I'm Riko. Can you see me? I'm sitting on a hill. What are you doing now?",
+          "targetExpressions": [
+            "I'm sitting on a hill.",
+            "We're watching ～.",
+            "What are you doing now?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I'm sitting on a hill. ビデオ通話で いまの ようす",
+          "What are you doing now? と きき返そう（じゅうしょは いわない）",
+          "skating・diving（e を とる）と jumping・playing（そのまま）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 426,
+      "world": 15,
+      "title": "Horses Are Eating Grass",
+      "titleJa": "うまが くさを たべている",
+      "school": {
+        "grade": "中1",
+        "topic": "They're / The horses are ～ing.：ふたつ いじょうの ものが いま している こと",
+        "grammar": "The horses are ～ing. / They're ～ing.",
+        "expressions": [
+          {
+            "en": "The horses are eating grass.",
+            "ja": "うまたちが くさを たべています。",
+            "core": true
+          },
+          {
+            "en": "They're trotting slowly.",
+            "ja": "うまたちは ゆっくり あるいています。"
+          },
+          {
+            "en": "The baby horse is sitting in the sun.",
+            "ja": "こうまは ひなたで すわっています。"
+          }
+        ],
+        "testPoints": [
+          "The horses are eating grass. の ように、ふたつ いじょうは are＋～ing で いえる",
+          "みじかい 母音＋子音 1つの ことばは 子音を 重ねて ing（sit → sitting）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Trot like a horse.",
+          "ja": "うまのように パカパカ あるいて。",
+          "action": "ひざを あげて あるく",
+          "emoji": "🐴"
+        },
+        {
+          "en": "Eat grass like a sheep.",
+          "ja": "ひつじのように くさを たべて。",
+          "action": "かがんで もぐもぐ",
+          "emoji": "🐑"
+        },
+        {
+          "en": "Hop like a bunny.",
+          "ja": "うさぎのように はねて。",
+          "action": "りょうあしで ぴょん",
+          "emoji": "🐰"
+        },
+        {
+          "en": "Take a nap.",
+          "ja": "ひるねして。",
+          "action": "てを まくらに して ねる まね",
+          "emoji": "😴"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-double",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "trotting",
+          "hopping",
+          "sitting",
+          "napping"
+        ],
+        "tipJa": "trot → trotting、hop → hopping、sit → sitting、nap → napping。みじかい 母音＋子音 1つで おわるときは、さいごの 子音を 2つに して ing。"
+      },
+      "vocab": [
+        {
+          "en": "horse",
+          "ja": "うま",
+          "emoji": "🐴",
+          "core": true
+        },
+        {
+          "en": "farm",
+          "ja": "ぼくじょう",
+          "emoji": "🏡"
+        },
+        {
+          "en": "sheep",
+          "ja": "ひつじ",
+          "emoji": "🐑"
+        },
+        {
+          "en": "baby horse",
+          "ja": "こうま",
+          "emoji": "🐎"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today we're visiting a farm on the plains. There are horses, sheep and cows. Let's watch the animals quietly. When two or more animals are doing something, we use are. Today's sentence is: The horses are eating grass. Say it with me. The horses are eating grass. Good! You can also say they. They're trotting slowly. They're means they are. ふたつ いじょうなら are、または they're を つかうよ。 Now, new phonics! Trot, trotting. Hop, hopping. Sit, sitting. Nap, napping. These words are short. They have one short vowel and one last consonant. So we double the last letter. Sit becomes s-i-t-t-i-n-g. みじかい 母音と 子音 ひとつで おわる ことばは、さいごの もじを ふたつに するよ。 Here's a tip for animal watching. When you see something cute, whisper, Aww, so cute! Let's whisper. Aww, so cute! Now, let's walk to the fence slowly. Don't run, or the horses will be scared.",
+      "conversation": {
+        "scene": "A farm on the plains, where the team watches the animals",
+        "sceneJa": "牧場で、動物を 観察する",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look over there! The horses are eating grass.",
+            "ja": "あそこ みて！うまたちが くさを たべてる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Now they're trotting slowly. Clip-clop, clip-clop.",
+            "ja": "こんどは ゆっくり あるいてる。パカパカ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Aww, so cute! The baby horse is sitting in the sun.",
+            "ja": "わあ、かわいい！こうまが ひなたで すわってる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "And the sheep are napping under the tree.",
+            "ja": "それに ひつじたちは 木の したで ひるねしてる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "I'm the farmer here today. Would you like to feed the horses?",
+            "ja": "きょうは わたしが ぼくじょうの 人よ。うまに えさを あげたい？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Yes, please! Here you are, horses!",
+            "ja": "うん、あげたい！はい どうぞ、うまさん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ぼくじょうの どうぶつを みて、The horses are ～ing. / They're ～ing. で いってみよう",
+          "starterEn": "Hi! I'm Kiko. We're at the farm! The horses are eating grass. What are the sheep doing?",
+          "targetExpressions": [
+            "The horses are eating grass.",
+            "They're ～ing.",
+            "Aww, so cute!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The horses are eating grass. ふたつ いじょうは are＋～ing",
+          "They're = They are",
+          "trotting・hopping・sitting・napping（子音を 重ねて ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 427,
+      "world": 15,
+      "title": "The Rabbit Is Behind the Rock",
+      "titleJa": "うさぎは いわの うしろに いる",
+      "school": {
+        "grade": "中1",
+        "topic": "behind / in front of / next to：どうぶつの いる ばしょ",
+        "grammar": "The ～ is behind / in front of / next to the ～.",
+        "expressions": [
+          {
+            "en": "The rabbit is behind the rock.",
+            "ja": "うさぎは いわの うしろに います。",
+            "core": true
+          },
+          {
+            "en": "Now it's in front of the rock!",
+            "ja": "こんどは いわの まえに いる！"
+          },
+          {
+            "en": "A fox is next to the tree.",
+            "ja": "きつねが 木の となりに います。"
+          }
+        ],
+        "testPoints": [
+          "behind（うしろ）・in front of（まえ）・next to（となり）で ばしょが いえる",
+          "run → running、stop → stopping（子音を 重ねて ing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand behind your chair.",
+          "ja": "いすの うしろに たって。",
+          "action": "いすの うしろへ まわる",
+          "emoji": "🪑"
+        },
+        {
+          "en": "Stand in front of your chair.",
+          "ja": "いすの まえに たって。",
+          "action": "いすの まえへ でる",
+          "emoji": "⬇️"
+        },
+        {
+          "en": "Stand next to your friend.",
+          "ja": "ともだちの となりに たって。",
+          "action": "よこに ならぶ",
+          "emoji": "👫"
+        },
+        {
+          "en": "Peek out.",
+          "ja": "そっと のぞいて。",
+          "action": "かおを はんぶん だす",
+          "emoji": "👀"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-double",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "running",
+          "stopping",
+          "dropping",
+          "skipping"
+        ],
+        "tipJa": "run → running、stop → stopping、drop → dropping、skip → skipping。st・dr・sk で はじまっても、おわりが 母音＋子音 1つなら 重ねるよ。"
+      },
+      "vocab": [
+        {
+          "en": "rabbit",
+          "ja": "うさぎ",
+          "emoji": "🐰",
+          "core": true
+        },
+        {
+          "en": "rock",
+          "ja": "いわ",
+          "emoji": "🪨"
+        },
+        {
+          "en": "fox",
+          "ja": "きつね",
+          "emoji": "🦊"
+        },
+        {
+          "en": "hide-and-seek",
+          "ja": "かくれんぼ",
+          "emoji": "🙈"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The animals on the plains are playing hide-and-seek. Can you find them? Look carefully. Today's sentence is: The rabbit is behind the rock. Say it with me. The rabbit is behind the rock. Great! Behind means at the back. In front of means at the front. Now it's in front of the rock! And next to means right beside. A fox is next to the tree. behind は うしろ、in front of は まえ、next to は となり だよ。 Use your hands to show the places. Behind. In front of. Next to. Now, phonics. Run, running. Stop, stopping. Drop, dropping. Skip, skipping. One short vowel, one last consonant. Double it! Then add i-n-g. Here's a game tip. When you find someone, say, I found you! Let's say it. I found you! Okay, let's be quiet like hunters and look for the animals. Shh!",
+      "conversation": {
+        "scene": "The plains, where animals play hide-and-seek among the rocks and trees",
+        "sceneJa": "草原で、動物の かくれんぼを 見つける",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Where is the rabbit? I can't see it.",
+            "ja": "うさぎは どこ？みえない。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Shh! The rabbit is behind the rock. I can see its ears.",
+            "ja": "しーっ！うさぎは いわの うしろ。みみが みえるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Oh, now it's running! It's in front of the rock!",
+            "ja": "あ、はしりだした！いわの まえに いる！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! A fox is next to the tree. It's watching the rabbit.",
+            "ja": "みて！きつねが 木の となりに いる。うさぎを みてるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Run, rabbit, run! Oh, good. It's hiding in a hole now.",
+            "ja": "にげて、うさぎさん！よかった。こんどは あなに かくれてる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I found you, Mr. Fox! Ha ha!",
+            "ja": "みつけたよ、きつねさん！あはは！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつの いる ばしょを behind / in front of / next to で いってみよう",
+          "starterEn": "Hi! I'm Birimo. Let's play hide-and-seek with the animals! The rabbit is behind the rock. Where is the fox?",
+          "targetExpressions": [
+            "The rabbit is behind the rock.",
+            "in front of ～",
+            "next to ～",
+            "I found you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "behind うしろ・in front of まえ・next to となり",
+          "The rabbit is behind the rock.",
+          "running・stopping・dropping・skipping（子音を 重ねて ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 428,
+      "world": 15,
+      "title": "Between the Trees",
+      "titleJa": "木と 木の あいだ",
+      "school": {
+        "grade": "中1",
+        "topic": "between A and B：あいだに いる。ばしょの ことばの まとめ",
+        "grammar": "The ～ is between the ～. / between A and B",
+        "expressions": [
+          {
+            "en": "The bird is between the trees.",
+            "ja": "とりは 木と 木の あいだに います。",
+            "core": true
+          },
+          {
+            "en": "It's sitting between the big tree and the small tree.",
+            "ja": "大きい 木と 小さい 木の あいだに とまっています。"
+          },
+          {
+            "en": "Where is the bird now?",
+            "ja": "とりは いま どこ？"
+          }
+        ],
+        "testPoints": [
+          "between the trees / between A and B で「あいだ」が いえる",
+          "flap → flapping、spin → spinning（子音を 重ねて ing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand between two friends.",
+          "ja": "ふたりの あいだに たって。",
+          "action": "ふたりの まんなかに はいる",
+          "emoji": "🧍"
+        },
+        {
+          "en": "Flap your wings.",
+          "ja": "はねを ぱたぱた して。",
+          "action": "うでを はねのように うごかす",
+          "emoji": "🐦"
+        },
+        {
+          "en": "Spin around.",
+          "ja": "くるっと まわって。",
+          "action": "その場で 1かい まわる",
+          "emoji": "🌀"
+        },
+        {
+          "en": "Look through your binoculars.",
+          "ja": "そうがんきょうで みて。",
+          "action": "りょうてで わっかを つくって のぞく",
+          "emoji": "🔭"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-double",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "flapping",
+          "spinning",
+          "getting",
+          "stepping"
+        ],
+        "tipJa": "flap → flapping、spin → spinning、get → getting、step → stepping。母音＋子音 1つ なら、さいごの もじを 重ねて ing。"
+      },
+      "vocab": [
+        {
+          "en": "bird",
+          "ja": "とり",
+          "emoji": "🐦",
+          "core": true
+        },
+        {
+          "en": "forest",
+          "ja": "もり",
+          "emoji": "🌲"
+        },
+        {
+          "en": "nest",
+          "ja": "す",
+          "emoji": "🪺"
+        },
+        {
+          "en": "binoculars",
+          "ja": "そうがんきょう",
+          "emoji": "🔭"
+        }
+      ],
+      "teacherScript": "Hi, everyone! We're at the edge of a forest. Listen. Tweet, tweet! A bird is singing. But where is it? Today's sentence is: The bird is between the trees. Say it with me. The bird is between the trees. Good! Between means in the middle of two things. You can say, between the big tree and the small tree. Between A and B. between は ふたつの ものの あいだ だよ。 Let's review the place words. Behind. In front of. Next to. Between. Show me with your hands! Now, phonics. Flap, flapping. Spin, spinning. Get, getting. Step, stepping. Short vowel, one consonant. Double the last letter, and add i-n-g. Here's a tip for bird watching. If you can't find it, ask, Where is the bird now? Let's ask. Where is the bird now? Okay, get your binoculars. Step quietly, and let's find that bird!",
+      "conversation": {
+        "scene": "The edge of a forest, where the team looks for a singing bird",
+        "sceneJa": "森の 入り口で、鳥を さがす",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Tweet, tweet! I can hear a bird. Where is it?",
+            "ja": "ピーピー！とりの こえが する。どこかな？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "I see it! The bird is between the trees.",
+            "ja": "みえた！とりは 木と 木の あいだに いる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Which trees? There are so many.",
+            "ja": "どの 木？いっぱい あるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's sitting between the big tree and the small tree.",
+            "ja": "大きい 木と 小さい 木の あいだに とまってる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh! Now it's flapping its wings. Where is the bird now?",
+            "ja": "あっ！はねを ぱたぱた してる。とりは いま どこ？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's in its nest, next to the red flowers. Look, there are three eggs!",
+            "ja": "赤い 花の となりの すの なかよ。みて、たまごが 3つ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "とりや どうぶつの ばしょを between / behind / in front of / next to で いってみよう",
+          "starterEn": "Hi! I'm Haru. I'm looking for a bird with my binoculars. Is it between the trees? Can you help me?",
+          "targetExpressions": [
+            "The bird is between the trees.",
+            "between ～ and ～",
+            "Where is the bird now?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "between the trees 木と 木の あいだ（between A and B）",
+          "behind・in front of・next to・between の まとめ",
+          "flapping・spinning・getting・stepping（子音を 重ねて ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 429,
+      "world": 15,
+      "title": "What Is the Dog Doing?",
+      "titleJa": "その いぬは なにを しているの？",
+      "school": {
+        "grade": "中1",
+        "topic": "What is ～ doing? ― It's ～ing.：どうぶつの うごきを きく・こたえる",
+        "grammar": "What is the dog doing? ― It's ～ing. / Is it ～ing?",
+        "expressions": [
+          {
+            "en": "What is the dog doing?",
+            "ja": "その いぬは なにを していますか？",
+            "core": true
+          },
+          {
+            "en": "It's digging.",
+            "ja": "あなを ほっています。"
+          },
+          {
+            "en": "Is it wagging its tail? ― Yes, it is.",
+            "ja": "しっぽを ふっている？ ― うん、ふっているよ。"
+          }
+        ],
+        "testPoints": [
+          "What is the dog doing? と きいて、It's ～ing. で こたえられる",
+          "dig → digging、wag → wagging（子音を 重ねて ing）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Dig a hole.",
+          "ja": "あなを ほって。",
+          "action": "りょうてで じめんを かく まね",
+          "emoji": "🕳️"
+        },
+        {
+          "en": "Wag your tail.",
+          "ja": "しっぽを ふって。",
+          "action": "おしりを ふりふり",
+          "emoji": "🐕"
+        },
+        {
+          "en": "Throw the ball.",
+          "ja": "ボールを なげて。",
+          "action": "うでを ふって なげる まね",
+          "emoji": "⚾"
+        },
+        {
+          "en": "Grab the stick.",
+          "ja": "ぼうを つかんで。",
+          "action": "さっと つかむ まね",
+          "emoji": "🦯"
+        }
+      ],
+      "phonics": {
+        "rule": "ing-double",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "digging",
+          "wagging",
+          "jogging",
+          "grabbing"
+        ],
+        "tipJa": "dig → digging、wag → wagging、jog → jogging、grab → grabbing。g や b で おわっても、ルールは おなじ。"
+      },
+      "vocab": [
+        {
+          "en": "dog",
+          "ja": "いぬ",
+          "emoji": "🐕",
+          "core": true
+        },
+        {
+          "en": "hole",
+          "ja": "あな",
+          "emoji": "🕳️"
+        },
+        {
+          "en": "bone",
+          "ja": "ほね",
+          "emoji": "🦴"
+        },
+        {
+          "en": "stick",
+          "ja": "ぼう",
+          "emoji": "🦯"
+        }
+      ],
+      "teacherScript": "Hello, everyone! There's a big friendly dog on the farm. Its name is Pochi. Pochi is very busy today. Let's watch. To ask about an animal, say, What is the dog doing? Say it with me. What is the dog doing? Good! The answer starts with It's. It's digging. It's means it is. For animals, we often say it. どうぶつの ことは It's ～ing. で こたえるよ。 You can also ask a yes or no question. Is it wagging its tail? Yes, it is. Or, No, it isn't. Now, phonics. Dig, digging. Wag, wagging. Jog, jogging. Grab, grabbing. Can you see the double letters? g-g, g-g, g-g, b-b. Great job! Here's a tip. When a dog comes to you, ask the owner first. Can I pet your dog? Let's say it. Can I pet your dog? Okay, let's watch Pochi and ask questions!",
+      "conversation": {
+        "scene": "A farm, where the team watches a busy farm dog",
+        "sceneJa": "牧場の 犬を 観察する",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "What is the dog doing?",
+            "ja": "あの いぬ、なにを してるの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "It's digging. Look at the dirt!",
+            "ja": "あなを ほってる。つちを みて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Is it looking for a bone?",
+            "ja": "ほねを さがしてるのかな？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Yes, it is. Pochi always hides bones here.",
+            "ja": "そうよ。ポチは いつも ここに ほねを かくすの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh, now it's grabbing a stick. Is it wagging its tail?",
+            "ja": "あ、こんどは ぼうを くわえてる。しっぽ ふってる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, it is! It wants to play. Can I pet your dog?",
+            "ja": "うん、ふってる！あそびたいんだね。いぬを なでても いい？"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつを みて What is ～ doing? と きいたり、It's ～ing. で こたえたり しよう",
+          "starterEn": "Hi! I'm Riko. Look at that dog! It's very busy. What is the dog doing?",
+          "targetExpressions": [
+            "What is the dog doing?",
+            "It's ～ing.",
+            "Is it ～ing?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What is the dog doing? ― It's digging.",
+          "Is it wagging its tail? ― Yes, it is.",
+          "digging・wagging・jogging・grabbing（子音を 重ねて ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 430,
+      "world": 15,
+      "title": "Animal Watching Report",
+      "titleJa": "どうぶつ ウォッチング報告",
+      "school": {
+        "grade": "中1",
+        "topic": "観察ノートを もとに、どうぶつの ようすを 3文で 報告する",
+        "grammar": "The ～ are ～ing. / The ～ is ～ing. / ばしょの ことば",
+        "expressions": [
+          {
+            "en": "The cows are sleeping. The lambs are jumping.",
+            "ja": "うしたちは ねています。こひつじたちは はねています。",
+            "core": true
+          },
+          {
+            "en": "A bird is sitting between the trees.",
+            "ja": "とりが 1わ 木と 木の あいだに とまっています。"
+          },
+          {
+            "en": "This is my animal watching report.",
+            "ja": "これが わたしの どうぶつ ウォッチング報告です。"
+          }
+        ],
+        "testPoints": [
+          "どうぶつの ようすを is / are＋～ing と ばしょの ことばで 3文で 報告できる",
+          "e を とる・子音を 重ねる・そのまま の 3つの ing が わかる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open your notebook.",
+          "ja": "ノートを ひらいて。",
+          "action": "ノートを ひらく まね",
+          "emoji": "📓"
+        },
+        {
+          "en": "Draw a cow.",
+          "ja": "うしを かいて。",
+          "action": "えを かく まね",
+          "emoji": "🐄"
+        },
+        {
+          "en": "Show your picture.",
+          "ja": "えを みせて。",
+          "action": "まえに むけて もつ",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Clap for your friend.",
+          "ja": "ともだちに はくしゅ。",
+          "action": "てを たたく",
+          "emoji": "👏"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "swimming",
+          "clapping",
+          "hiding",
+          "eating"
+        ],
+        "tipJa": "swim → swimming、clap → clapping（重ねる）、hide → hiding（e を とる）、eat → eating（そのまま）。3つの ルールを みわけよう。"
+      },
+      "vocab": [
+        {
+          "en": "report",
+          "ja": "報告",
+          "emoji": "📝",
+          "core": true
+        },
+        {
+          "en": "cow",
+          "ja": "うし",
+          "emoji": "🐄"
+        },
+        {
+          "en": "lamb",
+          "ja": "こひつじ",
+          "emoji": "🐑"
+        },
+        {
+          "en": "notebook",
+          "ja": "ノート",
+          "emoji": "📓"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! We watched so many animals this week. Now, let's give an animal watching report. A good report has three sentences. Tell us what the animals are doing, and where they are. Today's sentences are: The cows are sleeping. The lambs are jumping. Say them with me. The cows are sleeping. The lambs are jumping. Excellent! Add a place, too. A bird is sitting between the trees. 3つの 文で、どうぶつが なにを していて、どこに いるか を いおう。 Now, phonics review. Swim, swimming. Clap, clapping. Double the letter. Hide, hiding. Drop the e. Eat, eating. Just add i-n-g. Three rules! Here's a tip for reports. Start with, This is my animal watching report. And finish with, Thank you for listening. Let's say both. This is my animal watching report. Thank you for listening. Okay, open your notebooks. Who wants to go first?",
+      "conversation": {
+        "scene": "The farm's picnic table, where each child reads an animal watching report",
+        "sceneJa": "観察ノートを もとに、動物ウォッチング 報告",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's report time! Who wants to go first?",
+            "ja": "報告の じかんよ！だれから はじめる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Me! This is my animal watching report. The cows are sleeping. The lambs are jumping.",
+            "ja": "わたし！これが わたしの どうぶつ ウォッチング報告です。うしたちは ねています。こひつじたちは はねています。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And a bird is sitting between the trees. Thank you for listening.",
+            "ja": "それと、とりが 木と 木の あいだに とまっています。きいて くれて ありがとう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "My turn! The ducks are swimming in the pond. A frog is hiding behind a rock.",
+            "ja": "ぼくの ばん！アヒルたちが いけで およいでいます。かえるが いわの うしろに かくれています。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "My report is short. Birimo is eating a cookie. The end!",
+            "ja": "ぼくの 報告は みじかいよ。ビリモが クッキーを たべています。おわり！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Birimo! That's not an animal! Ha ha!",
+            "ja": "ビリモ！それ、どうぶつじゃないでしょ！あはは！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "どうぶつ ウォッチング報告を しよう。どうぶつが なにを しているか、どこに いるか を 3文で（みた どうぶつは じぶんで きめて OK）",
+          "starterEn": "Hi! I'm Kiko. It's report time! I saw cows and lambs. What animals did you watch? Tell me about them!",
+          "targetExpressions": [
+            "This is my animal watching report.",
+            "The ～ are ～ing.",
+            "～ is ～ing behind / next to / between ～.",
+            "Thank you for listening."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The cows are sleeping. The lambs are jumping. 3文で 報告",
+          "This is my report. → Thank you for listening.",
+          "swimming・clapping・hiding・eating（3つの ing の ルール）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 431,
+      "world": 15,
+      "title": "Every Day or Now?",
+      "titleJa": "いつも？それとも いま？",
+      "school": {
+        "grade": "中1",
+        "topic": "I play soccer every day. / I'm playing soccer now.：いつも する ことと いま している こと",
+        "grammar": "現在形（every day）と 現在進行形（now）の くらべ",
+        "expressions": [
+          {
+            "en": "I play soccer every day.",
+            "ja": "わたしは まいにち サッカーを します。",
+            "core": true
+          },
+          {
+            "en": "I'm playing soccer now.",
+            "ja": "わたしは いま サッカーを しています。"
+          },
+          {
+            "en": "Do you play every day? ― Yes, I do. I love it!",
+            "ja": "まいにち するの？ ― うん。だいすき！"
+          }
+        ],
+        "testPoints": [
+          "every day（いつも）は I play、now（いま）は I'm playing と つかいわけられる",
+          "foot + ball → football の ような 複合語が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Kick the ball.",
+          "ja": "ボールを けって。",
+          "action": "あしで ける まね",
+          "emoji": "⚽"
+        },
+        {
+          "en": "Run to the goal.",
+          "ja": "ゴールまで はしって。",
+          "action": "まえへ はしる",
+          "emoji": "🥅"
+        },
+        {
+          "en": "Stop the ball with your foot.",
+          "ja": "あしで ボールを とめて。",
+          "action": "あしを まえに だして とめる",
+          "emoji": "🦶"
+        },
+        {
+          "en": "High five!",
+          "ja": "ハイタッチ！",
+          "action": "ともだちと てを あわせる",
+          "emoji": "🙌"
+        }
+      ],
+      "phonics": {
+        "rule": "compound-words",
+        "focus": [
+          "foot-ball",
+          "play-ground",
+          "home-work",
+          "week-end"
+        ],
+        "sounds": [
+          "/ˈfʊt.bɔːl/"
+        ],
+        "words": [
+          "football",
+          "playground",
+          "homework",
+          "weekend"
+        ],
+        "tipJa": "2つの ことばが くっついて 1つの ことばに なるよ。foot（あし）+ ball → football、play + ground → playground。わけて よむと かんたん！"
+      },
+      "vocab": [
+        {
+          "en": "soccer",
+          "ja": "サッカー",
+          "emoji": "⚽",
+          "core": true
+        },
+        {
+          "en": "every day",
+          "ja": "まいにち",
+          "emoji": "📅"
+        },
+        {
+          "en": "now",
+          "ja": "いま",
+          "emoji": "⏰"
+        },
+        {
+          "en": "team",
+          "ja": "チーム",
+          "emoji": "👕"
+        }
+      ],
+      "teacherScript": "Hello, everyone! The children on the plains are playing soccer. They ask us to join them. Let's play! Today we're learning two kinds of sentences. Listen. I play soccer every day. That's a habit. いつも する こと だよ. I'm playing soccer now. That's happening right now. いま している こと だよ。 Say them with me. I play soccer every day. I'm playing soccer now. Great! Every day, usually and on Sundays go with I play. Now and look go with I'm playing. Can you hear the difference? Now, new phonics. Football. Foot and ball. Playground. Play and ground. Homework. Home and work. Weekend. Week and end. Two words become one word. 2つの ことばが くっついて いるよ。 Here's a team tip. When your friend wants to play, say, Come and join us! Let's say it. Come and join us! Okay, lace up your shoes. Let's play some soccer!",
+      "conversation": {
+        "scene": "A soccer game on the plains, comparing habits and right now",
+        "sceneJa": "草原の サッカーで、いつもと 今を くらべる",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Wow, you're good at soccer, Haru!",
+            "ja": "わあ、ハルは サッカーが じょうずだね！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Thanks! I play soccer every day after school.",
+            "ja": "ありがとう！まいにち ほうかごに サッカーを するんだ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Every day? Do you play on weekends, too?",
+            "ja": "まいにち？しゅうまつも するの？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, I do. I love it! And look, I'm playing soccer now!",
+            "ja": "うん、するよ。だいすき！それに、みて、いまも サッカーを してる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I don't play soccer every day. But I'm playing now! Pass it to me!",
+            "ja": "ぼくは まいにちは しないけど、いまは してるよ！パスして！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Come and join us, Ms. Emma!",
+            "ja": "エマ先生も いっしょに やろう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "いつも する ことは I play ～ every day.、いま している ことは I'm ～ing now. と つかいわけよう",
+          "starterEn": "Hi! I'm Haru. I play soccer every day. And look, I'm playing soccer now! What do you do every day?",
+          "targetExpressions": [
+            "I play ～ every day.",
+            "I'm ～ing now.",
+            "Come and join us!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "I play soccer every day.（いつも）と I'm playing soccer now.（いま）",
+          "every day は I play、now は I'm playing",
+          "football・playground・homework・weekend（複合語）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 432,
+      "world": 15,
+      "title": "Pass the Ball!",
+      "titleJa": "パスして！",
+      "school": {
+        "grade": "中1",
+        "topic": "Pass the ball! / Nice try!：チームで プレーしながら こえを かけあう",
+        "grammar": "命令文（Pass the ball! / Kick it!）と はげましの ことば",
+        "expressions": [
+          {
+            "en": "Pass the ball! Nice try!",
+            "ja": "パスして！おしい！",
+            "core": true
+          },
+          {
+            "en": "I'm open! Over here!",
+            "ja": "フリーだよ！こっち！"
+          },
+          {
+            "en": "Good pass! Kick it!",
+            "ja": "いい パス！けって！"
+          }
+        ],
+        "testPoints": [
+          "Pass the ball! / I'm open! / Nice try! で チームで こえを かけあえる",
+          "goal + keeper → goalkeeper の ような 複合語が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Pass the ball to the right.",
+          "ja": "みぎに パスして。",
+          "action": "みぎへ ける まね",
+          "emoji": "➡️"
+        },
+        {
+          "en": "Catch the ball.",
+          "ja": "ボールを とって。",
+          "action": "りょうてで キャッチ",
+          "emoji": "🧤"
+        },
+        {
+          "en": "Raise your hand and say, I'm open!",
+          "ja": "てを あげて「フリー！」と いって。",
+          "action": "てを たかく あげる",
+          "emoji": "✋"
+        },
+        {
+          "en": "Give a thumbs-up.",
+          "ja": "グッドの サインを して。",
+          "action": "おやゆびを たてる",
+          "emoji": "👍"
+        }
+      ],
+      "phonics": {
+        "rule": "compound-words",
+        "focus": [
+          "goal-keeper",
+          "team-mate",
+          "base-ball",
+          "basket-ball"
+        ],
+        "sounds": [
+          "/ˈɡoʊlˌkiː.pɚ/"
+        ],
+        "words": [
+          "goalkeeper",
+          "teammate",
+          "baseball",
+          "basketball"
+        ],
+        "tipJa": "goal + keeper → goalkeeper（ゴールを まもる 人）、team + mate → teammate（チームの なかま）。スポーツには 複合語が いっぱい！"
+      },
+      "vocab": [
+        {
+          "en": "pass",
+          "ja": "パスする",
+          "emoji": "➡️",
+          "core": true
+        },
+        {
+          "en": "goal",
+          "ja": "ゴール",
+          "emoji": "🥅"
+        },
+        {
+          "en": "goalkeeper",
+          "ja": "ゴールキーパー",
+          "emoji": "🧤"
+        },
+        {
+          "en": "teammate",
+          "ja": "チームメイト",
+          "emoji": "🤝"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Today is a mini soccer game. Our team plays against the Plains team. In a game, players talk a lot. Today's sentences are: Pass the ball! Nice try! Say them with me. Pass the ball! Nice try! Great! Pass the ball means kick it to me. Nice try means you didn't make it, but it was a good try. おしい！は Nice try! だよ。 When nobody is near you, shout, I'm open! Over here! When your friend makes a good pass, say, Good pass! Now, phonics. Goalkeeper. Goal and keeper. Teammate. Team and mate. Baseball. Base and ball. Basketball. Basket and ball. Long words are easy if you split them. Here's an important tip. Good teammates always say kind words, even when they lose. Say, Nice try! and Good game! Let's say them. Nice try! Good game! Okay, team. Let's go!",
+      "conversation": {
+        "scene": "A mini soccer game against the Plains team",
+        "sceneJa": "草原チームと ミニサッカー",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Haru, I'm open! Over here! Pass the ball!",
+            "ja": "ハル、フリーだよ！こっち！パスして！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Here you go, Kiko!",
+            "ja": "いくよ、キコ！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Good pass! Kick it, Kiko!",
+            "ja": "いい パス！けって、キコ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Oh no! The goalkeeper caught it.",
+            "ja": "あーあ！キーパーに とられた。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Nice try, Kiko! You're a great teammate!",
+            "ja": "おしい、キコ！きみは さいこうの チームメイトだよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Good game, everyone! Let's shake hands.",
+            "ja": "みんな、いい しあいだったわ！あくしゅしましょう。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "サッカーの しあいで Pass the ball! / I'm open! / Nice try! と こえを かけあおう",
+          "starterEn": "Hi! I'm Kiko. We're playing soccer! I have the ball. Are you open? What do you say?",
+          "targetExpressions": [
+            "Pass the ball!",
+            "I'm open!",
+            "Nice try!",
+            "Good game!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Pass the ball! / I'm open! Over here!",
+          "Nice try! おしい！ Good game! いい しあい！",
+          "goalkeeper・teammate・baseball・basketball（複合語）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 433,
+      "world": 15,
+      "title": "Keep Going!",
+      "titleJa": "そのまま がんばって！",
+      "school": {
+        "grade": "中1",
+        "topic": "Keep going! / You can do it!：がんばっている 人を はげます",
+        "grammar": "Keep ～ing! / You can do it! / Don't give up!",
+        "expressions": [
+          {
+            "en": "Keep going! You can do it!",
+            "ja": "そのまま がんばって！できるよ！",
+            "core": true
+          },
+          {
+            "en": "Don't give up!",
+            "ja": "あきらめないで！"
+          },
+          {
+            "en": "You're almost there!",
+            "ja": "もう すこしで ゴールだよ！"
+          }
+        ],
+        "testPoints": [
+          "Keep going! / You can do it! / Don't give up! で はげませる",
+          "sun + glasses → sunglasses の ような 複合語が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jog in place.",
+          "ja": "その場で ジョギング。",
+          "action": "その場で かるく はしる",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Wipe your face.",
+          "ja": "かおを ふいて。",
+          "action": "タオルで ふく まね",
+          "emoji": "🧻"
+        },
+        {
+          "en": "Drink some water.",
+          "ja": "みずを のんで。",
+          "action": "ボトルで のむ まね",
+          "emoji": "💧"
+        },
+        {
+          "en": "Pump your fist.",
+          "ja": "ガッツポーズ。",
+          "action": "こぶしを ぐっと にぎる",
+          "emoji": "✊"
+        }
+      ],
+      "phonics": {
+        "rule": "compound-words",
+        "focus": [
+          "sun-glasses",
+          "down-hill",
+          "rain-coat",
+          "grass-hopper"
+        ],
+        "sounds": [
+          "/ˈɡræsˌhɑː.pɚ/"
+        ],
+        "words": [
+          "sunglasses",
+          "downhill",
+          "raincoat",
+          "grasshopper"
+        ],
+        "tipJa": "sun + glasses → sunglasses、down + hill → downhill（さかを くだる）、rain + coat → raincoat、grass + hopper → grasshopper（バッタ）。"
+      },
+      "vocab": [
+        {
+          "en": "marathon",
+          "ja": "マラソン",
+          "emoji": "🏃",
+          "core": true
+        },
+        {
+          "en": "runner",
+          "ja": "ランナー",
+          "emoji": "🏃‍♀️"
+        },
+        {
+          "en": "water bottle",
+          "ja": "すいとう",
+          "emoji": "🧴"
+        },
+        {
+          "en": "tired",
+          "ja": "つかれた",
+          "emoji": "😓"
+        }
+      ],
+      "teacherScript": "Hello, everyone! There's a marathon on the plains today. Riko is running in it. It's a long race, and she's getting tired. Let's cheer for her. Today's sentence is: Keep going! You can do it! Say it with me. Keep going! You can do it! Wonderful! Keep going means don't stop, continue. そのまま つづけて、という いみ だよ。 You can also say, Don't give up! And near the end, You're almost there! Cheering words give people power. Use a big voice and a big smile. Now, phonics. Sunglasses. Sun and glasses. Downhill. Down and hill. Raincoat. Rain and coat. Grasshopper. Grass and hopper. A grasshopper is an insect that hops in the grass! Here's a tip. After the race, tell the runner, You did it! I'm proud of you! Let's say it. You did it! Okay, find a good spot by the road. The runners are coming!",
+      "conversation": {
+        "scene": "A marathon on the plains, where the team cheers for Riko",
+        "sceneJa": "マラソン大会で おうえんする",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Here comes Riko! She's running up the hill.",
+            "ja": "リコが きた！おかを はしって のぼってる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm so tired. My legs hurt.",
+            "ja": "すごく つかれた。あしが いたい。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Keep going, Riko! You can do it!",
+            "ja": "リコ、そのまま がんばって！できるよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Don't give up! Look, it's downhill now!",
+            "ja": "あきらめないで！ほら、ここから くだりざかだよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "You're almost there! I can see the finish line!",
+            "ja": "もう すこし！ゴールが みえる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "She did it! Riko, you did it! We're proud of you!",
+            "ja": "やったわ！リコ、よく がんばったね！みんな ほこりに おもうわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "がんばっている ともだちを Keep going! / You can do it! / Don't give up! で はげまそう",
+          "starterEn": "Hi! I'm Riko. I'm running in the marathon. I'm so tired! Can you cheer for me?",
+          "targetExpressions": [
+            "Keep going!",
+            "You can do it!",
+            "Don't give up!",
+            "You're almost there!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Keep going! You can do it! そのまま がんばって！できるよ！",
+          "Don't give up! / You're almost there! / You did it!",
+          "sunglasses・downhill・raincoat・grasshopper（複合語）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 434,
+      "world": 15,
+      "title": "Who's Winning?",
+      "titleJa": "どっちが かってる？",
+      "school": {
+        "grade": "中1",
+        "topic": "Who's winning? ― The red team is.：しあいの ようすを きく・こたえる",
+        "grammar": "Who's ～ing? ― The ～ is. / Which team is ～ing?",
+        "expressions": [
+          {
+            "en": "Who's winning?",
+            "ja": "どっちが かっているの？",
+            "core": true
+          },
+          {
+            "en": "The red team is.",
+            "ja": "赤チームだよ。"
+          },
+          {
+            "en": "Everyone is pulling hard!",
+            "ja": "みんな いっしょうけんめい ひっぱってる！"
+          }
+        ],
+        "testPoints": [
+          "Who's winning? と きいて、The red team is. で こたえられる",
+          "every + one → everyone の ような 複合語が よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold the rope.",
+          "ja": "つなを もって。",
+          "action": "りょうてで つなを にぎる",
+          "emoji": "🪢"
+        },
+        {
+          "en": "Pull hard!",
+          "ja": "つよく ひいて！",
+          "action": "うしろに からだを たおして ひく",
+          "emoji": "💪"
+        },
+        {
+          "en": "Dig in your heels.",
+          "ja": "かかとで ふんばって。",
+          "action": "あしを ひらいて ふんばる",
+          "emoji": "🦶"
+        },
+        {
+          "en": "Fall down softly.",
+          "ja": "やさしく たおれて。",
+          "action": "ゆっくり しりもち",
+          "emoji": "🤸"
+        }
+      ],
+      "phonics": {
+        "rule": "compound-words",
+        "focus": [
+          "every-one",
+          "some-thing",
+          "out-side",
+          "sun-flower"
+        ],
+        "sounds": [
+          "/ˈev.ri.wʌn/"
+        ],
+        "words": [
+          "everyone",
+          "something",
+          "outside",
+          "sunflower"
+        ],
+        "tipJa": "every + one → everyone（みんな）、some + thing → something（なにか）、out + side → outside（そと）、sun + flower → sunflower（ひまわり）。"
+      },
+      "vocab": [
+        {
+          "en": "tug-of-war",
+          "ja": "つなひき",
+          "emoji": "🪢",
+          "core": true
+        },
+        {
+          "en": "rope",
+          "ja": "つな",
+          "emoji": "🪢"
+        },
+        {
+          "en": "win",
+          "ja": "かつ",
+          "emoji": "🏆"
+        },
+        {
+          "en": "red team",
+          "ja": "赤チーム",
+          "emoji": "🟥"
+        }
+      ],
+      "teacherScript": "Hi, everyone! It's the tug-of-war contest on the plains. The red team and the blue team are pulling a long rope. Pull! Pull! Today's sentence is: Who's winning? Say it with me. Who's winning? Good! Who's means who is. Who is winning? The answer is short. The red team is. You don't need to say winning again. どっちが かってる？ と きかれたら、The red team is. と みじかく こたえよう。 You can also cheer, Everyone is pulling hard! Everyone is one word, and it uses is. Now, phonics. Everyone. Every and one. Something. Some and thing. Outside. Out and side. Sunflower. Sun and flower. Split them, and read them. Here's a tip for contests. When the other team wins, say, Congratulations! Let's say it. Congratulations! Okay, choose a team. Red or blue? Hold the rope tightly with both hands. Let's pull!",
+      "conversation": {
+        "scene": "A tug-of-war contest on the plains between the red team and the blue team",
+        "sceneJa": "草原の つなひき大会",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ready? Pull!",
+            "ja": "よーい、ひいて！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Wow! Everyone is pulling hard! Who's winning?",
+            "ja": "わあ！みんな いっしょうけんめい ひっぱってる！どっちが かってる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The red team is! Haru and Riko are on the red team.",
+            "ja": "赤チーム！ハルと リコは 赤チームだよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Pull, Riko! We can win!",
+            "ja": "ひいて、リコ！かてるよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh! Now the blue team is winning! Who's winning now?",
+            "ja": "あっ！こんどは 青チームが かってる！いまは どっち？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The red team won! Congratulations, red team!",
+            "ja": "赤チームの かち！赤チーム、おめでとう！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "しあいを みながら Who's winning? と きいたり、The ～ team is. と こたえたり しよう",
+          "starterEn": "Hi! I'm Birimo. The tug-of-war is starting! Everyone is pulling hard! Who's winning?",
+          "targetExpressions": [
+            "Who's winning?",
+            "The ～ team is.",
+            "Everyone is pulling hard!",
+            "Congratulations!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Who's winning? ― The red team is.（みじかく こたえる）",
+          "Everyone is pulling hard! / Congratulations!",
+          "everyone・something・outside・sunflower（複合語）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 435,
+      "world": 15,
+      "title": "Sports Day on the Plains",
+      "titleJa": "草原の 運動会",
+      "school": {
+        "grade": "中1",
+        "topic": "運動会を 実況する：Haru is running. Riko is cheering.",
+        "grammar": "～ is ～ing. / ～ are ～ing. / Look! / Who's ～ing?",
+        "expressions": [
+          {
+            "en": "Haru is running. Riko is cheering.",
+            "ja": "ハルが はしっています。リコが おうえんしています。",
+            "core": true
+          },
+          {
+            "en": "Look! Kiko and Birimo are jumping rope.",
+            "ja": "みて！キコと ビリモが なわとびを しています。"
+          },
+          {
+            "en": "What a race! Everyone is having fun.",
+            "ja": "すごい レース！みんな たのしんでいます。"
+          }
+        ],
+        "testPoints": [
+          "運動会の ようすを is / are＋～ing で 実況できる",
+          "butter + fly → butterfly などの 複合語を 2つに わけて よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Jump rope.",
+          "ja": "なわとびを して。",
+          "action": "その場で ぴょんぴょん",
+          "emoji": "🪢"
+        },
+        {
+          "en": "Throw a beanbag.",
+          "ja": "おてだまを なげて。",
+          "action": "したから なげる まね",
+          "emoji": "🎯"
+        },
+        {
+          "en": "Run in a relay.",
+          "ja": "リレーで はしって。",
+          "action": "バトンを わたす まね",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Hold the microphone.",
+          "ja": "マイクを もって。",
+          "action": "くちの まえで マイクを もつ",
+          "emoji": "🎤"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "rain-bow",
+          "butter-fly",
+          "lady-bug",
+          "fire-fly"
+        ],
+        "sounds": [
+          "/ˈbʌt.ɚ.flaɪ/"
+        ],
+        "words": [
+          "rainbow",
+          "butterfly",
+          "ladybug",
+          "firefly"
+        ],
+        "tipJa": "rain + bow → rainbow、butter + fly → butterfly、lady + bug → ladybug、fire + fly → firefly（ほたる）。草原の いきものの 複合語！"
+      },
+      "vocab": [
+        {
+          "en": "sports day",
+          "ja": "運動会",
+          "emoji": "🏅",
+          "core": true
+        },
+        {
+          "en": "relay",
+          "ja": "リレー",
+          "emoji": "🏃"
+        },
+        {
+          "en": "jump rope",
+          "ja": "なわとび",
+          "emoji": "🪢"
+        },
+        {
+          "en": "reporter",
+          "ja": "リポーター",
+          "emoji": "🎤"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! Today is Sports Day on the Plains, and you are the sports reporters. Here's your microphone! A reporter tells everyone what's happening now. Today's sentences are: Haru is running. Riko is cheering. Say them with me. Haru is running. Riko is cheering. Excellent! For two people, use are. Kiko and Birimo are jumping rope. Start with Look! to get attention. And add your feelings. What a race! リポーターに なって、いま おきている ことを みんなに つたえよう。 Now, phonics review. Rainbow. Rain and bow. Butterfly. Butter and fly. Ladybug. Lady and bug. Firefly. Fire and fly. A firefly glows at night! Here's a reporter tip. Speak loudly, speak clearly, and smile. At the end, say, Back to you! That means, now it's your turn. Let's say it. Back to you! Okay, reporters. The relay is starting!",
+      "conversation": {
+        "scene": "Sports Day on the plains, with the children taking turns as live reporters",
+        "sceneJa": "草原の 運動会を 実況する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to Sports Day on the Plains! Our reporter today is Kiko.",
+            "ja": "草原の 運動会へ ようこそ！きょうの リポーターは キコよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Thank you! Look! Haru is running. Riko is cheering.",
+            "ja": "ありがとう！みて！ハルが はしっています。リコが おうえんしています。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Go, Haru! Keep going!",
+            "ja": "がんばれ、ハル！そのまま！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Now Haru is passing the baton to Birimo. Birimo is running fast!",
+            "ja": "いま ハルが ビリモに バトンを わたしています。ビリモが はやく はしっています！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Whoosh! I'm flying like a butterfly!",
+            "ja": "ビューン！ちょうちょみたいに とんでるよ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "What a race! Everyone is having fun. Back to you, Ms. Emma!",
+            "ja": "すごい レース！みんな たのしんでいます。エマ先生、おかえしします！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "運動会の リポーターに なって、～ is ～ing. / ～ are ～ing. で 3文 いじょう 実況しよう（でてくる 人は じぶんで きめて OK）",
+          "starterEn": "Hi! I'm Kiko, and I'm a reporter today! Look! Haru is running. What are the other kids doing?",
+          "targetExpressions": [
+            "～ is ～ing.",
+            "～ and ～ are ～ing.",
+            "What a race!",
+            "Back to you!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Haru is running. Riko is cheering. 運動会を 実況",
+          "ふたり いじょうは are ～ing。さいごは Back to you!",
+          "rainbow・butterfly・ladybug・firefly（複合語の ふりかえり）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 436,
+      "world": 15,
+      "title": "In the Picture",
+      "titleJa": "えの なかでは",
+      "school": {
+        "grade": "中1",
+        "topic": "In the picture, ～.：えを みて 説明する はじめの いっぽ",
+        "grammar": "In the picture, a boy is reading. / There is / are ～.",
+        "expressions": [
+          {
+            "en": "In the picture, a boy is reading.",
+            "ja": "えの なかで、おとこのこが ほんを よんでいます。",
+            "core": true
+          },
+          {
+            "en": "There's a dog next to him.",
+            "ja": "かれの となりに いぬが います。"
+          },
+          {
+            "en": "She's smiling. I think she's happy.",
+            "ja": "かのじょは わらっています。うれしいんだと おもいます。"
+          }
+        ],
+        "testPoints": [
+          "In the picture, ～. で えの なかの ようすを 説明できる",
+          "I'm・he's・she's・it's の 短縮形が わかる（I am → I'm）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look at the picture.",
+          "ja": "えを みて。",
+          "action": "まえの えを じっと みる",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Point to the boy.",
+          "ja": "おとこのこを ゆびさして。",
+          "action": "えの なかを ゆびさす",
+          "emoji": "👉"
+        },
+        {
+          "en": "Hold a paintbrush.",
+          "ja": "ふでを もって。",
+          "action": "ふでを もつ まね",
+          "emoji": "🖌️"
+        },
+        {
+          "en": "Paint a big circle.",
+          "ja": "大きな まるを かいて。",
+          "action": "うでを 大きく まわす",
+          "emoji": "⭕"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions",
+        "focus": [
+          "'m",
+          "'s"
+        ],
+        "sounds": [],
+        "words": [
+          "I'm",
+          "he's",
+          "she's",
+          "it's"
+        ],
+        "tipJa": "I am → I'm、he is → he's、she is → she's、it is → it's。' （アポストロフィ）は きえた もじの しるし だよ。"
+      },
+      "vocab": [
+        {
+          "en": "picture",
+          "ja": "え",
+          "emoji": "🖼️",
+          "core": true
+        },
+        {
+          "en": "painter",
+          "ja": "がか",
+          "emoji": "👩‍🎨"
+        },
+        {
+          "en": "studio",
+          "ja": "アトリエ",
+          "emoji": "🏠"
+        },
+        {
+          "en": "paintbrush",
+          "ja": "ふで",
+          "emoji": "🖌️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're visiting a painter's studio on the plains. There are so many paintings on the walls! Ms. Emma is pretending to be the painter. Let's talk about the pictures. Today's sentence is: In the picture, a boy is reading. Say it with me. In the picture, a boy is reading. Great! Start with In the picture. Then say who is doing what. You can add There's. There's a dog next to him. え を せつめい するときは、In the picture, からはじめよう。 Now, new phonics. I am becomes I'm. He is becomes he's. She is becomes she's. It is becomes it's. The little mark is called an apostrophe. It shows that a letter is missing. Here's a tip for talking about pictures. You can say what you think, too. I think she's happy. Let's say it. I think she's happy. Okay, let's look at the first painting together!",
+      "conversation": {
+        "scene": "A painter's studio on the plains, where the team looks at paintings",
+        "sceneJa": "草原の 画家の アトリエで、絵を 見る（画家は エマ先生）",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to my studio! I'm the painter here. Please look at this picture.",
+            "ja": "わたしの アトリエへ ようこそ！ここの がかです。この えを みてね。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "In the picture, a boy is reading under a tree.",
+            "ja": "えの なかで、おとこのこが 木の したで ほんを よんでいます。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "There's a dog next to him. It's sleeping.",
+            "ja": "かれの となりに いぬが いる。ねてるよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "And a girl is flying a kite. She's smiling. I think she's happy.",
+            "ja": "それに おんなのこが たこを あげてる。わらってる。うれしいんだと おもう。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm in the picture, too! Look, that cloud is me!",
+            "ja": "ぼくも えの なかに いるよ！ほら、あの くもが ぼく！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Ha ha! You're right, Birimo. It looks just like you!",
+            "ja": "あはは！そうね、ビリモ。そっくりだわ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "えを みて In the picture, ～ is ～ing. で 説明しよう（おもった ことは I think ～. で）",
+          "starterEn": "Hi! I'm Riko. I'm at the painter's studio. Look at this picture! In the picture, a boy is reading. What else can you see?",
+          "targetExpressions": [
+            "In the picture, ～ is ～ing.",
+            "There's ～ next to ～.",
+            "I think ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In the picture, a boy is reading. えの 説明の はじめかた",
+          "There's ～. / I think she's happy.",
+          "I'm・he's・she's・it's（' は きえた もじ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 437,
+      "world": 15,
+      "title": "On the Left, On the Right",
+      "titleJa": "ひだりに、みぎに",
+      "school": {
+        "grade": "中1",
+        "topic": "On the left / On the right / In the middle：大きな えの ばしょを 説明する",
+        "grammar": "On the left, ～ are ～ing. / In the middle, ～. / On the right, ～.",
+        "expressions": [
+          {
+            "en": "On the left, two girls are dancing.",
+            "ja": "ひだりでは、ふたりの おんなのこが おどっています。",
+            "core": true
+          },
+          {
+            "en": "On the right, they're eating lunch.",
+            "ja": "みぎでは、みんなが おひるを たべています。"
+          },
+          {
+            "en": "In the middle, there's a big tree.",
+            "ja": "まんなかには、大きな 木が あります。"
+          }
+        ],
+        "testPoints": [
+          "on the left / on the right / in the middle で えの ばしょを 説明できる",
+          "they're・we're・you're の 短縮形が わかる（they are → they're）"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Raise your left hand.",
+          "ja": "ひだりてを あげて。",
+          "action": "ひだりてを たかく",
+          "emoji": "🤚"
+        },
+        {
+          "en": "Raise your right hand.",
+          "ja": "みぎてを あげて。",
+          "action": "みぎてを たかく",
+          "emoji": "✋"
+        },
+        {
+          "en": "Jump to the middle.",
+          "ja": "まんなかに とんで。",
+          "action": "まんなかへ ジャンプ",
+          "emoji": "⬇️"
+        },
+        {
+          "en": "Step to the left.",
+          "ja": "ひだりに 1ぽ。",
+          "action": "ひだりへ 1ぽ うごく",
+          "emoji": "⬅️"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions",
+        "focus": [
+          "'re",
+          "'s"
+        ],
+        "sounds": [],
+        "words": [
+          "they're",
+          "we're",
+          "you're",
+          "she's"
+        ],
+        "tipJa": "they are → they're、we are → we're、you are → you're。are の a が きえて ' に なるよ。she's も ふくしゅう！"
+      },
+      "vocab": [
+        {
+          "en": "left",
+          "ja": "ひだり",
+          "emoji": "⬅️",
+          "core": true
+        },
+        {
+          "en": "right",
+          "ja": "みぎ",
+          "emoji": "➡️"
+        },
+        {
+          "en": "middle",
+          "ja": "まんなか",
+          "emoji": "⏺️"
+        },
+        {
+          "en": "festival",
+          "ja": "おまつり",
+          "emoji": "🎪"
+        }
+      ],
+      "teacherScript": "Hi, everyone! The painter has a very big picture today. It shows a festival on the plains. There are so many people in it! When a picture is big, tell us where to look. Today's sentence is: On the left, two girls are dancing. Say it with me. On the left, two girls are dancing. Great! Then, On the right, they're eating lunch. And In the middle, there's a big tree. ひだりは on the left、みぎは on the right、まんなかは in the middle だよ。 Left, middle, right. Talk about the picture in that order. It's easy for listeners. Now, phonics. They are, they're. We are, we're. You are, you're. The a in are is missing. And let's review. She is, she's. Be careful! They're sounds like there, but the spelling is different. Here's a tip. If your friend is lost, help them. It's on the left, next to the tree. Let's look at the big picture now!",
+      "conversation": {
+        "scene": "The studio, where a huge festival painting is explained from left to right",
+        "sceneJa": "アトリエで、大きな 絵の 左と 右を 説明する",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "This is my biggest picture. Can you tell me about it?",
+            "ja": "これが いちばん 大きな え。せつめい できる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "On the left, two girls are dancing. They're wearing flower crowns.",
+            "ja": "ひだりでは、ふたりの おんなのこが おどってる。はなの かんむりを かぶってるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In the middle, there's a big tree. A boy is climbing it!",
+            "ja": "まんなかには 大きな 木。おとこのこが のぼってる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "On the right, they're eating lunch. We're hungry, too!",
+            "ja": "みぎでは、みんなが おひるを たべてる。わたしたちも おなかが すいた！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Where am I? I'm not in the picture!",
+            "ja": "ぼくは どこ？ぼく、えの なかに いない！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Don't worry, Birimo. You're next! I'm painting you now.",
+            "ja": "しんぱいしないで、ビリモ。つぎは あなたよ！いま かいてるわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "大きな えを On the left, ～. / In the middle, ～. / On the right, ～. の じゅんに 説明しよう",
+          "starterEn": "Hi! I'm Kiko. Look at this big festival picture! On the left, two girls are dancing. What's on the right?",
+          "targetExpressions": [
+            "On the left, ～.",
+            "In the middle, ～.",
+            "On the right, ～.",
+            "They're ～ing."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "On the left / In the middle / On the right の じゅんに 説明",
+          "On the right, they're eating lunch.",
+          "they're・we're・you're（are の a が きえる）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 438,
+      "world": 15,
+      "title": "What's Happening?",
+      "titleJa": "なにが おきているの？",
+      "school": {
+        "grade": "中1",
+        "topic": "What's happening in this picture?：しゃしんを みて、おきている ことを 話しあう",
+        "grammar": "What's happening? / ～ is ～ing because ～.（かんたんな 理由）",
+        "expressions": [
+          {
+            "en": "What's happening in this picture?",
+            "ja": "この しゃしんでは なにが おきていますか？",
+            "core": true
+          },
+          {
+            "en": "Some people are cleaning the park.",
+            "ja": "人たちが こうえんを そうじしています。"
+          },
+          {
+            "en": "That's a good idea!",
+            "ja": "それは いい アイデアだね！"
+          }
+        ],
+        "testPoints": [
+          "What's happening in this picture? と きいて、～ are ～ing. で こたえられる",
+          "what's・that's・there's・where's の 短縮形が わかる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Hold up the newspaper.",
+          "ja": "しんぶんを もちあげて。",
+          "action": "りょうてで ひろげる",
+          "emoji": "📰"
+        },
+        {
+          "en": "Pick up the trash.",
+          "ja": "ごみを ひろって。",
+          "action": "かがんで ひろう まね",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "Put it in the bag.",
+          "ja": "ふくろに いれて。",
+          "action": "ふくろに いれる まね",
+          "emoji": "🛍️"
+        },
+        {
+          "en": "Nod your head.",
+          "ja": "うなずいて。",
+          "action": "くびを たてに ふる",
+          "emoji": "🙂"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions",
+        "focus": [
+          "'s"
+        ],
+        "sounds": [],
+        "words": [
+          "what's",
+          "that's",
+          "there's",
+          "where's"
+        ],
+        "tipJa": "what is → what's、that is → that's、there is → there's、where is → where's。きく ときも こたえる ときも よく つかうよ。"
+      },
+      "vocab": [
+        {
+          "en": "newspaper",
+          "ja": "しんぶん",
+          "emoji": "📰",
+          "core": true
+        },
+        {
+          "en": "photo",
+          "ja": "しゃしん",
+          "emoji": "📷"
+        },
+        {
+          "en": "trash",
+          "ja": "ごみ",
+          "emoji": "🗑️"
+        },
+        {
+          "en": "park",
+          "ja": "こうえん",
+          "emoji": "🏞️"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today we're reading the Plains Newspaper. There's a big photo on the front page. Let's talk about it. Today's sentence is: What's happening in this picture? Say it with me. What's happening in this picture? Good! What's means what is. To answer, say who is doing what. Some people are cleaning the park. しゃしんで なにが おきているか、～ing で こたえよう。 You can tell a reason, too. They're cleaning because the wind blew the trash everywhere. Because tells us why. Now, phonics. What is, what's. That is, that's. There is, there's. Where is, where's. The i in is is missing, so we write an apostrophe. Here's a talking tip. When you hear a nice idea, say, That's a good idea! Let's say it. That's a good idea! Okay, open the newspaper. What's happening today?",
+      "conversation": {
+        "scene": "The camp table, where the team reads a newspaper photo together",
+        "sceneJa": "新聞の 写真を 見て 話す",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look at this photo in the newspaper. What's happening in this picture?",
+            "ja": "しんぶんの この しゃしんを みて。なにが おきている？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Some people are cleaning the park. They're picking up trash.",
+            "ja": "人たちが こうえんを そうじしてる。ごみを ひろってるよ。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Why are they cleaning?",
+            "ja": "どうして そうじ してるの？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "The wind was very strong last night. There's trash everywhere.",
+            "ja": "きのうの よる、かぜが すごく つよかったの。そこらじゅうに ごみが あるんだ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Let's help them tomorrow!",
+            "ja": "あした てつだいに いこうよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's a good idea, Birimo!",
+            "ja": "それは いい アイデアね、ビリモ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "しゃしんを みて What's happening? と きいたり、～ are ～ing. で こたえたり しよう",
+          "starterEn": "Hi! I'm Haru. I'm reading the newspaper. There's a big photo! What's happening in this picture? I think people are running.",
+          "targetExpressions": [
+            "What's happening in this picture?",
+            "～ are ～ing.",
+            "That's a good idea!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What's happening in this picture? なにが おきている？",
+          "Some people are cleaning the park.（because で 理由も）",
+          "what's・that's・there's・where's（is の i が きえる）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 439,
+      "world": 15,
+      "title": "Spot the Difference",
+      "titleJa": "まちがいさがし",
+      "school": {
+        "grade": "中1",
+        "topic": "In my picture, ～. / isn't ～ing：2まいの えの ちがいを いう",
+        "grammar": "In my picture, the cat is sleeping. / In your picture, it isn't sleeping.",
+        "expressions": [
+          {
+            "en": "In my picture, the cat is sleeping.",
+            "ja": "わたしの えでは、ねこが ねています。",
+            "core": true
+          },
+          {
+            "en": "In your picture, it isn't sleeping. It's eating.",
+            "ja": "あなたの えでは、ねていない。たべているよ。"
+          },
+          {
+            "en": "Found one! The boys aren't running.",
+            "ja": "1つ みつけた！おとこのこたちが はしっていない。"
+          }
+        ],
+        "testPoints": [
+          "In my picture, ～. / In your picture, ～ isn't ～ing. で ちがいを いえる",
+          "isn't・aren't・don't・doesn't の 短縮形が わかる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look closely.",
+          "ja": "よく みて。",
+          "action": "かおを ちかづけて みる",
+          "emoji": "🔍"
+        },
+        {
+          "en": "Circle the difference.",
+          "ja": "ちがいに まるを つけて。",
+          "action": "ゆびで まるを かく",
+          "emoji": "⭕"
+        },
+        {
+          "en": "Count to three.",
+          "ja": "3まで かぞえて。",
+          "action": "ゆびで 1・2・3",
+          "emoji": "3️⃣"
+        },
+        {
+          "en": "Say, Found one!",
+          "ja": "「みつけた！」と いって。",
+          "action": "てを あげて いう",
+          "emoji": "🙋"
+        }
+      ],
+      "phonics": {
+        "rule": "contractions",
+        "focus": [
+          "n't"
+        ],
+        "sounds": [],
+        "words": [
+          "isn't",
+          "aren't",
+          "don't",
+          "doesn't"
+        ],
+        "tipJa": "is not → isn't、are not → aren't、do not → don't、does not → doesn't。not の o が きえて n't に なるよ。"
+      },
+      "vocab": [
+        {
+          "en": "difference",
+          "ja": "ちがい",
+          "emoji": "🔍",
+          "core": true
+        },
+        {
+          "en": "same",
+          "ja": "おなじ",
+          "emoji": "🟰"
+        },
+        {
+          "en": "different",
+          "ja": "ちがう",
+          "emoji": "↔️"
+        },
+        {
+          "en": "cat",
+          "ja": "ねこ",
+          "emoji": "🐈"
+        }
+      ],
+      "teacherScript": "Hi, everyone! Let's play Spot the Difference. Kiko has one picture, and Haru has another. They look the same, but there are five differences. Today's sentence is: In my picture, the cat is sleeping. Say it with me. In my picture, the cat is sleeping. Great! To tell a difference, say, In your picture, it isn't sleeping. It's eating. Isn't means is not. 「わたしの えでは」は In my picture、「あなたの えでは」は In your picture だよ。 For two or more, use aren't. The boys aren't running. Now, phonics. Is not, isn't. Are not, aren't. Do not, don't. Does not, doesn't. The o in not is missing. That's why we write n-apostrophe-t. Here's a game tip. When you find a difference, shout, Found one! Let's shout. Found one! Okay, look closely. Ready, go!",
+      "conversation": {
+        "scene": "A spot-the-difference game with two almost identical pictures",
+        "sceneJa": "まちがいさがし ゲーム",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "In my picture, the cat is sleeping.",
+            "ja": "わたしの えでは、ねこが ねてる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In my picture, it isn't sleeping. It's eating fish!",
+            "ja": "ぼくの えでは、ねてないよ。さかなを たべてる！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Found one! That's one difference.",
+            "ja": "1つ みつけた！ちがい 1つめ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In my picture, two boys are running.",
+            "ja": "ぼくの えでは、おとこのこが ふたり はしってる。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "In my picture, they aren't running. They're sitting on a bench.",
+            "ja": "わたしの えでは、はしってない。ベンチに すわってる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Found two! Three more differences. Keep going!",
+            "ja": "2つめ！あと 3つ。その ちょうし！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "2まいの えを くらべて、In my picture, ～. / In your picture, ～ isn't ～ing. で ちがいを いおう",
+          "starterEn": "Hi! I'm Kiko. Let's play Spot the Difference! In my picture, the cat is sleeping. What is the cat doing in your picture?",
+          "targetExpressions": [
+            "In my picture, ～.",
+            "In your picture, ～ isn't ～ing.",
+            "Found one!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In my picture, the cat is sleeping. ちがいを いう",
+          "In your picture, it isn't sleeping. / They aren't running.",
+          "isn't・aren't・don't・doesn't（not の o が きえる）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 440,
+      "world": 15,
+      "title": "Picture Talk Show",
+      "titleJa": "えの 説明 はっぴょうかい",
+      "school": {
+        "grade": "中1",
+        "topic": "えを 3文で 説明する 発表：In the picture, ～. / People are ～ing.",
+        "grammar": "In the picture, it's raining. / People are running. / I think ～.",
+        "expressions": [
+          {
+            "en": "In the picture, it's raining. People are running.",
+            "ja": "えの なかでは、あめが ふっています。人たちが はしっています。",
+            "core": true
+          },
+          {
+            "en": "A girl is holding an umbrella. I think she's kind.",
+            "ja": "おんなのこが かさを もっています。やさしいんだと おもいます。"
+          },
+          {
+            "en": "Let's look at my picture.",
+            "ja": "わたしの えを みてみましょう。"
+          }
+        ],
+        "testPoints": [
+          "えを In the picture, ～. から 3文で 説明して、I think ～. で おもった ことも いえる",
+          "I'm・they're・isn't・let's の 短縮形を もとの 形に もどせる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Stand next to your picture.",
+          "ja": "えの となりに たって。",
+          "action": "えの よこに たつ",
+          "emoji": "🖼️"
+        },
+        {
+          "en": "Point to the left.",
+          "ja": "ひだりを ゆびさして。",
+          "action": "ひだりを さす",
+          "emoji": "⬅️"
+        },
+        {
+          "en": "Point to the right.",
+          "ja": "みぎを ゆびさして。",
+          "action": "みぎを さす",
+          "emoji": "➡️"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "'m",
+          "'re",
+          "n't",
+          "'s"
+        ],
+        "sounds": [],
+        "words": [
+          "I'm",
+          "they're",
+          "isn't",
+          "let's"
+        ],
+        "tipJa": "I am → I'm、they are → they're、is not → isn't、let us → let's。' の ところに どの もじが あったか かんがえよう。"
+      },
+      "vocab": [
+        {
+          "en": "umbrella",
+          "ja": "かさ",
+          "emoji": "☂️",
+          "core": true
+        },
+        {
+          "en": "rain",
+          "ja": "あめ",
+          "emoji": "🌧️"
+        },
+        {
+          "en": "kind",
+          "ja": "やさしい",
+          "emoji": "💗"
+        },
+        {
+          "en": "show",
+          "ja": "はっぴょうかい・ショー",
+          "emoji": "🎤"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! It's the Picture Talk Show at the studio. Each of you will talk about one picture. A good picture talk has three parts. First, In the picture, and what's happening. Next, people and what they're doing. Last, what you think. Today's sentences are: In the picture, it's raining. People are running. Say them with me. In the picture, it's raining. People are running. Excellent! Then add one more. A girl is holding an umbrella. I think she's kind. 3つの 文と、さいごに I think ～. で じぶんの かんがえ だよ。 Now, phonics review. I am, I'm. They are, they're. Is not, isn't. Let us, let's. Where did the letters go? The apostrophe tells you! Here's a tip for presenting. Point to the picture when you talk. Then everyone can follow you. Start with, Let's look at my picture. Okay, presenters, are you ready? Let's start the show!",
+      "conversation": {
+        "scene": "The Picture Talk Show at the studio, where each child presents a painting",
+        "sceneJa": "アトリエで、絵の 説明 発表会",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the Picture Talk Show! Haru, please start.",
+            "ja": "えの 説明 はっぴょうかいへ ようこそ！ハル、はじめて。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's look at my picture. In the picture, it's raining. People are running.",
+            "ja": "ぼくの えを みてください。えの なかでは、あめが ふっています。人たちが はしっています。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "A girl is holding an umbrella for a dog. I think she's kind.",
+            "ja": "おんなのこが いぬに かさを さしています。やさしいんだと おもいます。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Great job, Haru! My picture is sunny. Kids are playing in the park.",
+            "ja": "すごい、ハル！わたしの えは はれ。こどもたちが こうえんで あそんでいるの。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "In my picture, I'm sleeping. That's all. It isn't very exciting.",
+            "ja": "ぼくの えでは、ぼくが ねてる。それだけ。あんまり わくわく しないね。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Ha ha! But it's very peaceful, Birimo.",
+            "ja": "あはは！でも すごく のんびりしてて いいよ、ビリモ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "すきな えを えらんで、In the picture, ～. から 3文 ＋ I think ～. で 説明しよう（どんな えでも OK）",
+          "starterEn": "Hi! I'm Riko. Welcome to the Picture Talk Show! Please tell me about your picture. What's happening in it?",
+          "targetExpressions": [
+            "In the picture, ～.",
+            "～ is / are ～ing.",
+            "I think ～.",
+            "Let's look at my picture."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In the picture, it's raining. People are running. ＋ I think ～.",
+          "Let's look at my picture. で はじめて、ゆびさしながら 話す",
+          "I'm・they're・isn't・let's（短縮形の ふりかえり）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 441,
+      "world": 15,
+      "title": "A Rainy Afternoon",
+      "titleJa": "あめの ごご",
+      "school": {
+        "grade": "中1",
+        "topic": "It's raining. We're staying inside.：てんきと いま している こと",
+        "grammar": "It's raining. / We're ～ing. / What are we doing now?",
+        "expressions": [
+          {
+            "en": "It's raining. We're staying inside.",
+            "ja": "あめが ふっています。わたしたちは なかに います。",
+            "core": true
+          },
+          {
+            "en": "We're playing cards in the tent.",
+            "ja": "わたしたちは テントの なかで トランプを しています。"
+          },
+          {
+            "en": "Listen! The rain is getting stronger.",
+            "ja": "きいて！あめが つよく なってきた。"
+          }
+        ],
+        "testPoints": [
+          "It's raining. We're staying inside. で てんきと いまの ようすが いえる",
+          "rainy・cloudy・windy の おわりの y は「イー」と よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Open the tent.",
+          "ja": "テントを あけて。",
+          "action": "まくを ひらく まね",
+          "emoji": "⛺"
+        },
+        {
+          "en": "Close the tent.",
+          "ja": "テントを しめて。",
+          "action": "まくを とじる まね",
+          "emoji": "🔒"
+        },
+        {
+          "en": "Shuffle the cards.",
+          "ja": "トランプを きって。",
+          "action": "カードを まぜる まね",
+          "emoji": "🃏"
+        },
+        {
+          "en": "Listen to the rain.",
+          "ja": "あめの おとを きいて。",
+          "action": "みみに てを あてる",
+          "emoji": "🌧️"
+        }
+      ],
+      "phonics": {
+        "rule": "y-sounds",
+        "focus": [
+          "y"
+        ],
+        "sounds": [
+          "/i/"
+        ],
+        "words": [
+          "rainy",
+          "cloudy",
+          "windy",
+          "sunny"
+        ],
+        "tipJa": "rainy・cloudy・windy・sunny の おわりの y は「イー」。2はく いじょうの ことばの おわりの y は「イー」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "tent",
+          "ja": "テント",
+          "emoji": "⛺",
+          "core": true
+        },
+        {
+          "en": "cards",
+          "ja": "トランプ",
+          "emoji": "🃏"
+        },
+        {
+          "en": "inside",
+          "ja": "なかで",
+          "emoji": "🏠"
+        },
+        {
+          "en": "afternoon",
+          "ja": "ごご",
+          "emoji": "🕑"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Oh no, look outside. Drip, drop, drip, drop. It's raining on the plains. We can't play outside today. Today's sentence is: It's raining. We're staying inside. Say it with me. It's raining. We're staying inside. Great! For weather, say It's and an i-n-g word. It's raining. It's snowing. てんきは It's raining. の ように いうよ。 We're means we are. We're playing cards in the tent. A rainy afternoon can be fun, too! Now, new phonics. Rainy. Cloudy. Windy. Sunny. Listen to the end. Ee, ee, ee, ee. When y is at the end of a long word, it says ee. ながい ことばの おわりの y は「イー」だよ。 Here's a rainy day tip. When you hear the rain getting louder, say, Listen! The rain is getting stronger. Let's say it. Okay, everyone, let's get cozy in the tent and play a game!",
+      "conversation": {
+        "scene": "Inside the tent on a rainy afternoon",
+        "sceneJa": "雨の 日、テントの 中で",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Oh no. It's raining. We can't fly kites today.",
+            "ja": "あーあ、あめだ。きょうは たこあげ できないね。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "That's okay. We're staying inside. Let's play a game!",
+            "ja": "だいじょうぶ。なかに いましょう。ゲームを しよう！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Good idea! We're playing cards. Kiko, it's your turn.",
+            "ja": "いいね！トランプを しよう。キコ、きみの ばんだよ。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Listen! The rain is getting stronger.",
+            "ja": "きいて！あめが つよく なってきた。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Achoo! I'm getting wet. There's a hole in the tent!",
+            "ja": "ハクション！ぬれてきた。テントに あなが あいてる！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Here, Birimo. Sit next to me. It's dry here.",
+            "ja": "ほら、ビリモ。わたしの となりに すわって。ここは ぬれてないわ。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あめの 日に It's raining. We're ～ing. と いまの ようすを いってみよう",
+          "starterEn": "Hi! I'm Riko. It's raining outside. We're staying inside the tent. What are you doing on this rainy afternoon?",
+          "targetExpressions": [
+            "It's raining.",
+            "We're staying inside.",
+            "We're ～ing."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "It's raining. We're staying inside. てんきと いまの ようす",
+          "Listen! The rain is getting stronger.",
+          "rainy・cloudy・windy・sunny（おわりの y は「イー」）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 442,
+      "world": 15,
+      "title": "Rainbow Over the Plains",
+      "titleJa": "草原の にじ",
+      "school": {
+        "grade": "中1",
+        "topic": "Look! A rainbow is coming out.：いま かわっていく ようすを つたえる",
+        "grammar": "Look! ～ is coming out. / ～ is getting ～.",
+        "expressions": [
+          {
+            "en": "Look! A rainbow is coming out.",
+            "ja": "みて！にじが でてきた。",
+            "core": true
+          },
+          {
+            "en": "The sky is getting brighter.",
+            "ja": "そらが あかるく なってきた。"
+          },
+          {
+            "en": "Why is the sky so pretty? Because the sun is shining!",
+            "ja": "どうして そらが こんなに きれいなの？ たいようが てっているからだよ！"
+          }
+        ],
+        "testPoints": [
+          "Look! A rainbow is coming out. で いま かわっていく ようすが いえる",
+          "sky・fly・dry・why の おわりの y は「アイ」と よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Point to the rainbow.",
+          "ja": "にじを ゆびさして。",
+          "action": "そらを ゆびさす",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Draw a rainbow in the air.",
+          "ja": "くうきに にじを かいて。",
+          "action": "うでで 大きな アーチ",
+          "emoji": "🌈"
+        },
+        {
+          "en": "Shake off the rain.",
+          "ja": "あめを はらって。",
+          "action": "からだを ぶるぶる",
+          "emoji": "💦"
+        },
+        {
+          "en": "Jump over the puddle.",
+          "ja": "みずたまりを とびこえて。",
+          "action": "まえへ ジャンプ",
+          "emoji": "💧"
+        }
+      ],
+      "phonics": {
+        "rule": "y-sounds",
+        "focus": [
+          "y"
+        ],
+        "sounds": [
+          "/aɪ/"
+        ],
+        "words": [
+          "sky",
+          "fly",
+          "dry",
+          "why"
+        ],
+        "tipJa": "sky・fly・dry・why の おわりの y は「アイ」。1はくの みじかい ことばの おわりの y は「アイ」と よむよ。"
+      },
+      "vocab": [
+        {
+          "en": "rainbow",
+          "ja": "にじ",
+          "emoji": "🌈",
+          "core": true
+        },
+        {
+          "en": "sky",
+          "ja": "そら",
+          "emoji": "🌤️"
+        },
+        {
+          "en": "puddle",
+          "ja": "みずたまり",
+          "emoji": "💧"
+        },
+        {
+          "en": "bright",
+          "ja": "あかるい",
+          "emoji": "✨"
+        }
+      ],
+      "teacherScript": "Hi, everyone! The rain stopped. Let's go outside. Everything is wet and shiny. Look up! What can you see? Today's sentence is: Look! A rainbow is coming out. Say it with me. Look! A rainbow is coming out. Wonderful! Coming out means appearing. We can also say, The sky is getting brighter. Getting means it's changing little by little. だんだん かわっていく ようすは getting で いうよ。 Can you name the colors of the rainbow? Red, orange, yellow, green, blue and purple. Now, phonics. Sky. Fly. Dry. Why. Listen to the end. Eye, eye, eye, eye. In short words with one beat, y at the end says eye. Yesterday we learned rainy. Rainy says ee. Sky says eye. みじかい ことばの おわりの y は「アイ」だよ。 Here's a tip. When you see something beautiful, say, How beautiful! Let's say it. How beautiful! Okay, put on your boots. Let's walk to the rainbow!",
+      "conversation": {
+        "scene": "The wet plains after the rain, where a rainbow appears",
+        "sceneJa": "雨あがりの 草原",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "The rain stopped! Let's go outside.",
+            "ja": "あめが やんだ！そとに でよう。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Look! A rainbow is coming out.",
+            "ja": "みて！にじが でてきた。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "How beautiful! The sky is getting brighter, too.",
+            "ja": "きれい！そらも あかるく なってきたね。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Why is there a rainbow? Is it magic?",
+            "ja": "どうして にじが あるの？まほう？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "It's not magic. The sun is shining on the little raindrops in the sky.",
+            "ja": "まほうじゃ ないわ。たいようが そらの ちいさな あめつぶを てらしているの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! The birds are flying under the rainbow!",
+            "ja": "みて！とりたちが にじの したを とんでる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "あめあがりの そらを みて、Look! A rainbow is coming out. / The sky is getting ～. と いってみよう",
+          "starterEn": "Hi! I'm Haru. The rain stopped! Look! A rainbow is coming out. What colors can you see?",
+          "targetExpressions": [
+            "Look! A rainbow is coming out.",
+            "The sky is getting brighter.",
+            "How beautiful!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Look! A rainbow is coming out. にじが でてきた",
+          "The sky is getting brighter.（だんだん かわる getting）",
+          "sky・fly・dry・why（おわりの y は「アイ」）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 443,
+      "world": 15,
+      "title": "Sunflower Field",
+      "titleJa": "ひまわり畑",
+      "school": {
+        "grade": "中1",
+        "topic": "The sunflowers are growing tall.：しぜんの ようすを ～ing で つたえる",
+        "grammar": "The ～ are growing / ～ is visiting ～. / taller than ～（かんたんな くらべ）",
+        "expressions": [
+          {
+            "en": "The sunflowers are growing tall.",
+            "ja": "ひまわりが 大きく そだっています。",
+            "core": true
+          },
+          {
+            "en": "They're taller than me!",
+            "ja": "わたしより せが たかい！"
+          },
+          {
+            "en": "A bee is visiting the flowers.",
+            "ja": "ハチが 花に きています。"
+          }
+        ],
+        "testPoints": [
+          "The sunflowers are growing tall. で しぜんの ようすが いえる",
+          "yes・yellow・yard の はじめの y は「イェ」と よめる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Grow like a sunflower.",
+          "ja": "ひまわりのように のびて。",
+          "action": "しゃがんで から ゆっくり のびる",
+          "emoji": "🌻"
+        },
+        {
+          "en": "Face the sun.",
+          "ja": "たいようの ほうを むいて。",
+          "action": "かおを うえに むける",
+          "emoji": "☀️"
+        },
+        {
+          "en": "Buzz like a bee.",
+          "ja": "ハチのように ブンブン。",
+          "action": "うでを ふるわせて ブーン",
+          "emoji": "🐝"
+        },
+        {
+          "en": "Stand on your tiptoes.",
+          "ja": "つまさきで たって。",
+          "action": "せのびを する",
+          "emoji": "🦶"
+        }
+      ],
+      "phonics": {
+        "rule": "y-sounds",
+        "focus": [
+          "y"
+        ],
+        "sounds": [
+          "/j/"
+        ],
+        "words": [
+          "yellow",
+          "yes",
+          "yard",
+          "yawn"
+        ],
+        "tipJa": "yellow・yes・yard・yawn の はじめの y は「イェ」。ことばの はじめの y は 子音の おとだよ。"
+      },
+      "vocab": [
+        {
+          "en": "sunflower",
+          "ja": "ひまわり",
+          "emoji": "🌻",
+          "core": true
+        },
+        {
+          "en": "field",
+          "ja": "はたけ",
+          "emoji": "🌾"
+        },
+        {
+          "en": "bee",
+          "ja": "ハチ",
+          "emoji": "🐝"
+        },
+        {
+          "en": "tall",
+          "ja": "せが たかい",
+          "emoji": "📏"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Wow, look at this field. It's full of yellow sunflowers! They're so big. Let's walk through the field. Today's sentence is: The sunflowers are growing tall. Say it with me. The sunflowers are growing tall. Great! Growing means getting bigger. You can compare, too. They're taller than me! And look closely. A bee is visiting the flowers. いきものや しょくぶつの ようすも ～ing で いえるよ。 Sunflowers always face the sun. That's why they're called sunflowers. Sun and flower! Now, phonics. Yellow. Yes. Yard. Yawn. Listen to the beginning. Yeh, yeh, yeh. At the start of a word, y says yeh. ことばの はじめの y は「イェ」。 So y has different sounds. Sunny says ee. Sky says eye. Yellow says yeh. Here's a tip. When something is bigger than you, say, Wow, it's taller than me! Let's say it. Okay, let's find the tallest sunflower in the field!",
+      "conversation": {
+        "scene": "A huge sunflower field on the plains",
+        "sceneJa": "ひまわり畑で",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "Wow! The sunflowers are growing tall.",
+            "ja": "わあ！ひまわりが 大きく そだってる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "They're taller than me! They're taller than Ms. Emma, too!",
+            "ja": "ぼくより せが たかい！エマ先生よりも たかい！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! A bee is visiting the flowers. Buzz, buzz.",
+            "ja": "みて！ハチが 花に きてる。ブンブン。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Is it coming to me? I'm yellow, too!",
+            "ja": "ぼくの ほうに くる？ぼくも きいろだよ！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Stay still, Birimo. It's just looking for flowers.",
+            "ja": "じっと していて、ビリモ。花を さがしている だけよ。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Phew! It's flying away. Bye-bye, bee!",
+            "ja": "ふう！とんでいった。バイバイ、ハチさん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ひまわり畑の ようすを The sunflowers are growing tall. / A bee is ～ing. の ように いってみよう",
+          "starterEn": "Hi! I'm Riko. I'm in the sunflower field! The sunflowers are growing tall. They're taller than me! What else can you see?",
+          "targetExpressions": [
+            "The sunflowers are growing tall.",
+            "They're taller than me!",
+            "A bee is ～ing."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The sunflowers are growing tall. ひまわりが 大きく そだっている",
+          "They're taller than me! / A bee is visiting the flowers.",
+          "yellow・yes・yard・yawn（はじめの y は「イェ」）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 444,
+      "world": 15,
+      "title": "Night on the Plains",
+      "titleJa": "草原の よる",
+      "school": {
+        "grade": "中1",
+        "topic": "The stars are shining.：よるの ようすを しずかに つたえる",
+        "grammar": "The ～ are ～ing. / Can you see ～? / I'm getting sleepy.",
+        "expressions": [
+          {
+            "en": "The stars are shining.",
+            "ja": "ほしが かがやいています。",
+            "core": true
+          },
+          {
+            "en": "The moon is rising over the hill.",
+            "ja": "つきが おかの うえに のぼってきます。"
+          },
+          {
+            "en": "I'm getting sleepy. Good night!",
+            "ja": "ねむく なってきた。おやすみなさい！"
+          }
+        ],
+        "testPoints": [
+          "The stars are shining. で よるの ようすが いえる",
+          "sleepy（イー）・shy（アイ）・young（イェ）の y の 3つの おとを ききわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Lie down on your back.",
+          "ja": "あおむけに ねころんで。",
+          "action": "せなかを したに して ねる まね",
+          "emoji": "🛌"
+        },
+        {
+          "en": "Look at the stars.",
+          "ja": "ほしを みて。",
+          "action": "そらを みあげる",
+          "emoji": "⭐"
+        },
+        {
+          "en": "Make a wish.",
+          "ja": "ねがいごとを して。",
+          "action": "てを あわせて めを とじる",
+          "emoji": "🙏"
+        },
+        {
+          "en": "Whisper, Good night.",
+          "ja": "「おやすみ」と ささやいて。",
+          "action": "ちいさな こえで いう",
+          "emoji": "🌙"
+        }
+      ],
+      "phonics": {
+        "rule": "y-sounds",
+        "focus": [
+          "y"
+        ],
+        "sounds": [
+          "/i/",
+          "/aɪ/",
+          "/j/"
+        ],
+        "words": [
+          "sleepy",
+          "starry",
+          "shy",
+          "young"
+        ],
+        "tipJa": "sleepy・starry は「イー」、shy は「アイ」、young は「イェ」。y の いちと ことばの ながさで おとが かわるよ。"
+      },
+      "vocab": [
+        {
+          "en": "star",
+          "ja": "ほし",
+          "emoji": "⭐",
+          "core": true
+        },
+        {
+          "en": "moon",
+          "ja": "つき",
+          "emoji": "🌙"
+        },
+        {
+          "en": "campfire",
+          "ja": "キャンプファイア",
+          "emoji": "🔥"
+        },
+        {
+          "en": "sleepy",
+          "ja": "ねむい",
+          "emoji": "😪"
+        }
+      ],
+      "teacherScript": "Good evening, everyone! It's night on the plains. The campfire is warm, and the sky is very dark. Shh, let's talk quietly. Look up. Today's sentence is: The stars are shining. Say it softly with me. The stars are shining. Beautiful! The moon is rising over the hill. Rising means going up. よるの ようすも ～ing で しずかに いえるよ。 The plains have no city lights, so we can see thousands of stars. Can you find a shooting star? Now, phonics. Sleepy. Starry. These say ee. Shy says eye. Young says yeh. Three sounds of y! Where is the y? At the start, it says yeh. At the end of a long word, ee. At the end of a short word, eye. Here's a tip for bedtime. When you're tired, say, I'm getting sleepy. Good night! Let's whisper it. I'm getting sleepy. Good night! Okay, let's lie down on the blanket and count the stars.",
+      "conversation": {
+        "scene": "A campfire night on the plains under a starry sky",
+        "sceneJa": "草原の キャンプの 夜",
+        "lines": [
+          {
+            "speaker": "Kiko",
+            "en": "Look up, everyone. The stars are shining.",
+            "ja": "みんな、うえを みて。ほしが かがやいてる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Wow! There are so many! The moon is rising over the hill.",
+            "ja": "わあ！いっぱい ある！つきが おかの うえに のぼってくる。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Look! A shooting star! Make a wish!",
+            "ja": "みて！ながれぼし！ねがいごとを して！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I wish for a big cake. Is that okay?",
+            "ja": "おおきな ケーキが ほしいです。…それで いいかな？"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Of course, Birimo. Now, it's late. Is anyone getting sleepy?",
+            "ja": "もちろんよ、ビリモ。さあ、おそく なったわ。ねむく なってきた 人は いる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm getting sleepy. Good night, everyone!",
+            "ja": "ねむく なってきた。みんな、おやすみ！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "よるの そらを みて The stars are shining. / The moon is rising. と しずかに 話してみよう",
+          "starterEn": "Hi! I'm Kiko. It's night on the plains. The stars are shining! What can you see in the sky?",
+          "targetExpressions": [
+            "The stars are shining.",
+            "The moon is rising.",
+            "I'm getting sleepy. Good night!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "The stars are shining. ほしが かがやいている",
+          "The moon is rising over the hill. / I'm getting sleepy.",
+          "sleepy・starry（イー）、shy（アイ）、young（イェ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 445,
+      "world": 15,
+      "title": "Plains Diary",
+      "titleJa": "草原日記",
+      "school": {
+        "grade": "中1",
+        "topic": "Today, I'm writing my diary.：いまの ようすを 日記に かいて 読みあう",
+        "grammar": "Today, I'm ～ing. / It's ～. / My friends are ～ing.",
+        "expressions": [
+          {
+            "en": "Today, I'm writing my diary in the tent.",
+            "ja": "きょう、わたしは テントで 日記を かいています。",
+            "core": true
+          },
+          {
+            "en": "It's windy outside. My friends are sleeping.",
+            "ja": "そとは かぜが つよいです。ともだちは ねています。"
+          },
+          {
+            "en": "I'm happy because I saw a rainbow.",
+            "ja": "にじを みたので、うれしいです。"
+          }
+        ],
+        "testPoints": [
+          "Today, I'm ～ing. から はじめて、いまの ようすを 3文で かける",
+          "happy・fly・yes・windy の y の おとを みわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Write your diary.",
+          "ja": "日記を かいて。",
+          "action": "えんぴつで かく まね",
+          "emoji": "✏️"
+        },
+        {
+          "en": "Read it to your friend.",
+          "ja": "ともだちに よんで あげて。",
+          "action": "ノートを もって よむ まね",
+          "emoji": "📖"
+        },
+        {
+          "en": "Close your notebook.",
+          "ja": "ノートを とじて。",
+          "action": "ぱたんと とじる",
+          "emoji": "📕"
+        },
+        {
+          "en": "Turn off the light.",
+          "ja": "あかりを けして。",
+          "action": "スイッチを おす まね",
+          "emoji": "💡"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "y"
+        ],
+        "sounds": [
+          "/j/",
+          "/i/",
+          "/aɪ/"
+        ],
+        "words": [
+          "happy",
+          "fly",
+          "yes",
+          "windy"
+        ],
+        "tipJa": "yes は「イェ」、happy・windy は「イー」、fly は「アイ」。y の 3つの おとの ふりかえり！"
+      },
+      "vocab": [
+        {
+          "en": "diary",
+          "ja": "日記",
+          "emoji": "📔",
+          "core": true
+        },
+        {
+          "en": "pencil",
+          "ja": "えんぴつ",
+          "emoji": "✏️"
+        },
+        {
+          "en": "light",
+          "ja": "あかり",
+          "emoji": "💡"
+        },
+        {
+          "en": "page",
+          "ja": "ページ",
+          "emoji": "📄"
+        }
+      ],
+      "teacherScript": "Hello, everyone! We've had many adventures on the plains. Tonight, let's write a Plains Diary in the tent, and read it to each other. A diary starts with Today. Today's sentence is: Today, I'm writing my diary in the tent. Say it with me. Today, I'm writing my diary in the tent. Great! Then write two more sentences. It's windy outside. My friends are sleeping. And add your feelings with because. I'm happy because I saw a rainbow. 日記は Today, から はじめて、いまの ようすと きもちを かこう。 Now, phonics review. Yes. Yeh. Happy. Windy. Ee. Fly. Eye. Can you hear all three sounds of y? Fantastic! Here's a tip. When your friend reads their diary, listen and say something nice. That's lovely! Let's say it. That's lovely! And remember, in a diary for sharing, you don't need to write your real name or address. Okay, take out your pencils!",
+      "conversation": {
+        "scene": "The tent at night, where everyone reads their Plains Diary aloud",
+        "sceneJa": "テントで、草原日記を 読み合う",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Is everyone finished? Who wants to read first?",
+            "ja": "みんな かけた？だれから よむ？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Me! Today, I'm writing my diary in the tent. It's windy outside.",
+            "ja": "わたし！きょう、わたしは テントで 日記を かいています。そとは かぜが つよいです。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm happy because I saw a rainbow.",
+            "ja": "にじを みたので、うれしいです。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's lovely, Riko! Haru, what about you?",
+            "ja": "すてき、リコ！ハルは？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Today, I'm sitting next to Birimo. He's eating cookies again. I'm hungry because he isn't sharing!",
+            "ja": "きょう、ぼくは ビリモの となりに すわっています。かれは また クッキーを たべています。わけて くれないので、おなかが すいています！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Okay, okay! Here's one for you, Haru.",
+            "ja": "わかった、わかった！はい、ハルに 1まい。"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "草原日記を Today, I'm ～ing. から 3文で かいて よんでみよう（ほんとうの なまえ・じゅうしょは かかなくて OK）",
+          "starterEn": "Hi! I'm Riko. I'm writing my Plains Diary. Today, I'm sitting in the tent. What are you doing today? Tell me your diary!",
+          "targetExpressions": [
+            "Today, I'm ～ing.",
+            "It's ～ outside.",
+            "I'm happy because ～.",
+            "That's lovely!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Today, I'm writing my diary in the tent. 日記の はじめかた",
+          "It's windy outside. ＋ I'm happy because ～.（きもちと 理由）",
+          "yes（イェ）・happy・windy（イー）・fly（アイ）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 446,
+      "world": 15,
+      "title": "Gesture Game",
+      "titleJa": "ジェスチャー あてゲーム",
+      "school": {
+        "grade": "中1",
+        "topic": "Are you ～ing? ― No! I'm ～ing!：ジェスチャーを みて あてる",
+        "grammar": "Are you ～ing? ― Yes, I am. / No, I'm not. I'm ～ing.",
+        "expressions": [
+          {
+            "en": "Are you swimming?",
+            "ja": "およいでいるの？",
+            "core": true
+          },
+          {
+            "en": "No! I'm flying!",
+            "ja": "ちがう！とんでいるの！"
+          },
+          {
+            "en": "Is he dancing? ― Yes, he is!",
+            "ja": "かれは おどっているの？ ― うん、そうだよ！"
+          }
+        ],
+        "testPoints": [
+          "Are you ～ing? / Is he ～ing? で あてたり、No! I'm ～ing! で こたえたり できる",
+          "-ing の 3つの つづり（flying・dancing・swimming）を みわけられる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Act like you're swimming.",
+          "ja": "およいでいる まねを して。",
+          "action": "うでで クロール",
+          "emoji": "🏊"
+        },
+        {
+          "en": "Act like you're flying.",
+          "ja": "とんでいる まねを して。",
+          "action": "りょううでを ひろげる",
+          "emoji": "🦅"
+        },
+        {
+          "en": "Act like you're dancing.",
+          "ja": "おどっている まねを して。",
+          "action": "からだを ゆらす",
+          "emoji": "💃"
+        },
+        {
+          "en": "Freeze!",
+          "ja": "とまれ！",
+          "action": "ぴたっと とまる",
+          "emoji": "🧊"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ing"
+        ],
+        "sounds": [
+          "/ɪŋ/"
+        ],
+        "words": [
+          "swimming",
+          "flying",
+          "dancing",
+          "hopping"
+        ],
+        "tipJa": "swim → swimming・hop → hopping（重ねる）、dance → dancing（e を とる）、fly → flying（そのまま）。ing の ルールの ふりかえり！"
+      },
+      "vocab": [
+        {
+          "en": "gesture",
+          "ja": "ジェスチャー",
+          "emoji": "🙆",
+          "core": true
+        },
+        {
+          "en": "guess",
+          "ja": "あてる",
+          "emoji": "❓"
+        },
+        {
+          "en": "act",
+          "ja": "まねを する",
+          "emoji": "🎭"
+        },
+        {
+          "en": "point",
+          "ja": "てんすう",
+          "emoji": "💯"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Let's play the Gesture Game. One person acts something out without words. Everyone else guesses what they're doing. To guess, ask a question. Today's sentences are: Are you swimming? No! I'm flying! Say them with me. Are you swimming? No! I'm flying! Great! If the guess is right, say, Yes, I am! If it's wrong, say, No, I'm not. I'm flying! はずれのときは No! I'm ～ing! で こたえよう。 You can ask about another person, too. Is he dancing? Yes, he is! Is she sleeping? No, she isn't! Now, phonics review. Swimming and hopping. Double the letter. Dancing. Drop the e. Flying. Just add i-n-g. Three rules again! Here's a game tip. When someone guesses right, say, You got it! Let's say it. You got it! Okay, who wants to act first? No talking, only gestures!",
+      "conversation": {
+        "scene": "A gesture guessing game in the tent",
+        "sceneJa": "ジェスチャー あてゲーム",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Birimo, you go first. No words, only gestures!",
+            "ja": "ビリモから。ことばは なし、ジェスチャーだけ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Are you swimming?",
+            "ja": "およいでるの？"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "No! I'm flying!",
+            "ja": "ちがう！とんでるの！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Okay, my turn. Guess what I'm doing!",
+            "ja": "じゃあ ぼくの ばん。なにを してるか あてて！"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Are you dancing? Kiko, is he dancing?",
+            "ja": "おどってるの？キコ、かれ おどってる？"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Yes, I am! You got it, Riko! One point!",
+            "ja": "そうだよ！あたり、リコ！1てん！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ジェスチャーを みて Are you ～ing? と あてたり、No! I'm ～ing! と こたえたり しよう",
+          "starterEn": "Hi! I'm Kiko. Let's play the Gesture Game! I'm moving my arms like this. Guess what I'm doing!",
+          "targetExpressions": [
+            "Are you ～ing?",
+            "Yes, I am! / No, I'm not.",
+            "I'm ～ing!",
+            "You got it!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "Are you swimming? ― No! I'm flying!",
+          "Is he dancing? ― Yes, he is! / You got it!",
+          "swimming・hopping・dancing・flying（ing の つづりの ふりかえり）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 447,
+      "world": 15,
+      "title": "Who Is It?",
+      "titleJa": "だれでしょう？",
+      "school": {
+        "grade": "中1",
+        "topic": "She's wearing ～. She's holding ～.：ふくと うごきで 人を 説明する",
+        "grammar": "He's / She's wearing ～. / He's / She's holding ～. / Who is it?",
+        "expressions": [
+          {
+            "en": "She's wearing a red hat. She's holding a kite.",
+            "ja": "かのじょは 赤い ぼうしを かぶっています。たこを もっています。",
+            "core": true
+          },
+          {
+            "en": "Who is it?",
+            "ja": "だれでしょう？"
+          },
+          {
+            "en": "He isn't wearing a hat. He's wearing glasses.",
+            "ja": "かれは ぼうしを かぶっていません。めがねを かけています。"
+          }
+        ],
+        "testPoints": [
+          "She's wearing ～. / She's holding ～. で ふくと もっている もので 人を 説明できる",
+          "she's・isn't（短縮形）と wearing・smiling（ing）の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Put on a hat.",
+          "ja": "ぼうしを かぶって。",
+          "action": "あたまに のせる まね",
+          "emoji": "🧢"
+        },
+        {
+          "en": "Hold a balloon.",
+          "ja": "ふうせんを もって。",
+          "action": "いとを もつ まね",
+          "emoji": "🎈"
+        },
+        {
+          "en": "Put on your glasses.",
+          "ja": "めがねを かけて。",
+          "action": "ゆびで わっかを めに",
+          "emoji": "👓"
+        },
+        {
+          "en": "Turn around slowly.",
+          "ja": "ゆっくり まわって。",
+          "action": "ゆっくり 1かい まわる",
+          "emoji": "🔄"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "'s",
+          "n't",
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "she's",
+          "isn't",
+          "wearing",
+          "smiling"
+        ],
+        "tipJa": "she is → she's、is not → isn't（短縮形）。wear → wearing（そのまま）、smile → smiling（e を とる）。"
+      },
+      "vocab": [
+        {
+          "en": "hat",
+          "ja": "ぼうし",
+          "emoji": "🎩",
+          "core": true
+        },
+        {
+          "en": "glasses",
+          "ja": "めがね",
+          "emoji": "👓"
+        },
+        {
+          "en": "balloon",
+          "ja": "ふうせん",
+          "emoji": "🎈"
+        },
+        {
+          "en": "crowd",
+          "ja": "人ごみ",
+          "emoji": "👥"
+        }
+      ],
+      "teacherScript": "Hi, everyone! There's a big kite festival on the plains today. There are so many people! Let's play Who Is It? Describe one person, and your friends find them. Today's sentences are: She's wearing a red hat. She's holding a kite. Say them with me. She's wearing a red hat. She's holding a kite. Wonderful! Wearing is for clothes, hats and glasses. Holding is for things in your hands. wearing は みに つけている もの、holding は てに もっている もの だよ。 You can also say what they're not wearing. He isn't wearing a hat. He's wearing glasses. Then ask, Who is it? Now, phonics review. She is, she's. Is not, isn't. Wear, wearing. Smile, smiling. Contractions and i-n-g words together! Here's a tip. Describe clothes and actions, but be kind. Don't say mean things about people. Okay, look at the crowd. Who is it?",
+      "conversation": {
+        "scene": "A crowded kite festival, where the team plays a guessing game about people",
+        "sceneJa": "人さがし ゲーム（服と 動作で 説明）",
+        "lines": [
+          {
+            "speaker": "Riko",
+            "en": "I'm thinking of a person. She's wearing a red hat. She's holding a kite.",
+            "ja": "ある人を おもいうかべてるよ。赤い ぼうしを かぶってて、たこを もってる。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Who is it? Is she smiling?",
+            "ja": "だれだろう？わらってる？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "Yes, she is. She's smiling and waving.",
+            "ja": "うん。わらって てを ふってるよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Found her! It's Kiko!",
+            "ja": "みつけた！キコだ！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "That's me! Now, he isn't wearing a hat. He's holding a big balloon.",
+            "ja": "わたし！じゃあ つぎ。かれは ぼうしを かぶってない。大きな ふうせんを もってる。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "Oh, is it me? Whoa! The balloon is pulling me up!",
+            "ja": "あれ、ぼく？うわあ！ふうせんに ひっぱられる！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ふくと うごきで 人を 説明しよう。She's wearing ～. / He's holding ～. と いって Who is it? と きいてみよう（えの 人や キャラでも OK）",
+          "starterEn": "Hi! I'm Riko. Let's play Who Is It? He's wearing glasses. He's holding a kite. Who is it? Now, you describe someone!",
+          "targetExpressions": [
+            "She's wearing ～.",
+            "He's holding ～.",
+            "He isn't wearing ～.",
+            "Who is it?"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "She's wearing a red hat. She's holding a kite.（wearing と holding）",
+          "He isn't wearing a hat. → Who is it?",
+          "she's・isn't・wearing・smiling（短縮形と ing）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 448,
+      "world": 15,
+      "title": "My Picture Sentences",
+      "titleJa": "わたしの えと 文",
+      "school": {
+        "grade": "中1",
+        "topic": "えを かいて、3文で 説明を かく：In my picture, ～.",
+        "grammar": "In my picture, ～ is ～ing. / There's ～. / It's ～.",
+        "expressions": [
+          {
+            "en": "In my picture, Birimo is eating a sandwich.",
+            "ja": "わたしの えでは、ビリモが サンドイッチを たべています。",
+            "core": true
+          },
+          {
+            "en": "He's sitting under a sunflower.",
+            "ja": "かれは ひまわりの したに すわっています。"
+          },
+          {
+            "en": "There's a rainbow in the sky.",
+            "ja": "そらに にじが あります。"
+          }
+        ],
+        "testPoints": [
+          "じぶんの えを In my picture, ～. から 3文で かける",
+          "sunflower・rainbow（複合語）、it's（短縮形）、sitting（ing）の ふりかえり"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Draw a sunflower.",
+          "ja": "ひまわりを かいて。",
+          "action": "えを かく まね",
+          "emoji": "🌻"
+        },
+        {
+          "en": "Color the sky blue.",
+          "ja": "そらを あおく ぬって。",
+          "action": "クレヨンで ぬる まね",
+          "emoji": "🖍️"
+        },
+        {
+          "en": "Write three sentences.",
+          "ja": "3つの 文を かいて。",
+          "action": "ゆびを 3ぼん たてて かく まね",
+          "emoji": "✍️"
+        },
+        {
+          "en": "Show your work.",
+          "ja": "さくひんを みせて。",
+          "action": "まえに むけて もちあげる",
+          "emoji": "🖼️"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "sun-flower",
+          "rain-bow",
+          "'s",
+          "-ing"
+        ],
+        "sounds": [],
+        "words": [
+          "sunflower",
+          "rainbow",
+          "it's",
+          "sitting"
+        ],
+        "tipJa": "sun + flower、rain + bow（複合語）、it is → it's（短縮形）、sit → sitting（重ねる）。この ワールドの つづりを ぜんぶ つかおう！"
+      },
+      "vocab": [
+        {
+          "en": "crayon",
+          "ja": "クレヨン",
+          "emoji": "🖍️",
+          "core": true
+        },
+        {
+          "en": "sentence",
+          "ja": "文",
+          "emoji": "✍️"
+        },
+        {
+          "en": "drawing",
+          "ja": "え（かいた もの）",
+          "emoji": "🎨"
+        },
+        {
+          "en": "color",
+          "ja": "いろを ぬる",
+          "emoji": "🎨"
+        }
+      ],
+      "teacherScript": "Hello, everyone! Today you're the artist. Draw a picture of the plains, and write three sentences about it. Today's sentence is: In my picture, Birimo is eating a sandwich. Say it with me. In my picture, Birimo is eating a sandwich. Great! Then add two more sentences. He's sitting under a sunflower. There's a rainbow in the sky. えを かいたら、In my picture, から 3つの 文を かこう。 Remember the rules for writing. Start with a capital letter. End with a period. Leave a space between words. Now, phonics review. Sunflower. Rainbow. Two words in one. It is, it's. Sit, sitting. We can use everything from this world! Here's a tip. Check your sentences with a friend. Ask, Can you read my sentences? Let's say it. Can you read my sentences? Okay, take out your crayons. Let's draw and write!",
+      "conversation": {
+        "scene": "The studio, where the children draw pictures and write three sentences",
+        "sceneJa": "絵を かいて、3 文で 説明を 書く",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Is everyone finished? Kiko, can you read your sentences?",
+            "ja": "みんな できた？キコ、文を よんでくれる？"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Sure! In my picture, Birimo is eating a sandwich. He's sitting under a sunflower.",
+            "ja": "いいよ！わたしの えでは、ビリモが サンドイッチを たべています。ひまわりの したに すわっています。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "There's a rainbow in the sky.",
+            "ja": "そらに にじが あります。"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "That's me! But I'm eating three sandwiches, not one!",
+            "ja": "それ ぼくだ！でも 1つじゃ なくて 3つ たべてるよ！"
+          },
+          {
+            "speaker": "Haru",
+            "en": "In my picture, it's windy. Horses are running on the hill.",
+            "ja": "ぼくの えでは、かぜが つよい。うまたちが おかを はしってる。"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Wonderful sentences! Capital letters, periods and spaces. Perfect!",
+            "ja": "すばらしい 文ね！大文字、ピリオド、スペース。かんぺき！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "じぶんの えを かいて、In my picture, ～. から 3文で 説明しよう（どんな えでも OK）",
+          "starterEn": "Hi! I'm Haru. I drew a picture of the plains. In my picture, horses are running. What's in your picture?",
+          "targetExpressions": [
+            "In my picture, ～ is ～ing.",
+            "There's ～.",
+            "It's ～."
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "In my picture, Birimo is eating a sandwich. ＋ 2文",
+          "大文字で はじめて、ピリオドで おわる。ことばの あいだは スペース",
+          "sunflower・rainbow・it's・sitting（この ワールドの つづり）"
+        ]
+      }
+    },
+    {
+      "lessonNo": 449,
+      "world": 15,
+      "title": "Windy Plains Review",
+      "titleJa": "かぜの草原 ふりかえり",
+      "school": {
+        "grade": "中1",
+        "topic": "What are you doing? / Look! ～ is ～ing. の ふりかえり（さよならピクニック）",
+        "grammar": "What are you doing? / Look! ～ is ～ing. / I play ～ every day.",
+        "expressions": [
+          {
+            "en": "What are you doing?",
+            "ja": "なにを しているの？",
+            "core": true
+          },
+          {
+            "en": "Look! A feather is falling from the sky.",
+            "ja": "みて！はねが そらから おちてくる。"
+          },
+          {
+            "en": "We're having a goodbye picnic.",
+            "ja": "わたしたちは さよならピクニックを しています。"
+          }
+        ],
+        "testPoints": [
+          "What are you doing? / Look! ～ is ～ing. / 現在形と 進行形の くらべを つかえる",
+          "windy・sky・yellow の y の おとと、running の ing が わかる"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Catch the feather.",
+          "ja": "はねを つかまえて。",
+          "action": "りょうてで そっと つかむ",
+          "emoji": "🪶"
+        },
+        {
+          "en": "Blow it up high.",
+          "ja": "ふーっと たかく ふいて。",
+          "action": "うえに むかって いきを ふく",
+          "emoji": "🌬️"
+        },
+        {
+          "en": "Run with the kite.",
+          "ja": "たこを もって はしって。",
+          "action": "その場で はしる",
+          "emoji": "🪁"
+        },
+        {
+          "en": "Wave goodbye to the plains.",
+          "ja": "草原に さようならの てを ふって。",
+          "action": "大きく てを ふる",
+          "emoji": "👋"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "y",
+          "-ing"
+        ],
+        "sounds": [
+          "/i/",
+          "/aɪ/",
+          "/j/",
+          "/ɪŋ/"
+        ],
+        "words": [
+          "windy",
+          "sky",
+          "yellow",
+          "running"
+        ],
+        "tipJa": "windy（イー）・sky（アイ）・yellow（イェ）、run → running（重ねる）。ワールド15 の つづりの ふりかえり！"
+      },
+      "vocab": [
+        {
+          "en": "feather",
+          "ja": "はね",
+          "emoji": "🪶",
+          "core": true
+        },
+        {
+          "en": "goodbye",
+          "ja": "さようなら",
+          "emoji": "👋"
+        },
+        {
+          "en": "memory",
+          "ja": "おもいで",
+          "emoji": "💭"
+        },
+        {
+          "en": "treasure",
+          "ja": "たからもの",
+          "emoji": "💎"
+        }
+      ],
+      "teacherScript": "Hello, everyone! This is our last day on the Windy Plains. Let's have a goodbye picnic on the hill, and review everything. First, ask your friends, What are you doing? Then answer, I'm eating. I'm flying a kite. Say it with me. What are you doing? Great! Next, report something exciting. Look! A feather is falling from the sky. Remember, every day is for habits, and now is for right now. この ワールドでは、いま している ことを ～ing で いう れんしゅうを したね。 We learned place words, picture talk and cheering words, too. Behind. Between. In the picture. Keep going! Now, phonics review. Windy. Ee. Sky. Eye. Yellow. Yeh. Running. Double the n! Excellent! Here's a tip. At the end of a trip, tell your friends, This was so much fun! Let's say it. This was so much fun! Okay, let's spread the blanket. Wait, what's that in the sky?",
+      "conversation": {
+        "scene": "A goodbye picnic on the hill, where the wind feather finally appears",
+        "sceneJa": "草原の さよならピクニック",
+        "lines": [
+          {
+            "speaker": "Haru",
+            "en": "Riko, what are you doing?",
+            "ja": "リコ、なにを してるの？"
+          },
+          {
+            "speaker": "Riko",
+            "en": "I'm making a flower crown for Ms. Emma.",
+            "ja": "エマ先生に はなの かんむりを つくってるの。"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Look! A feather is falling from the sky. It's shining!",
+            "ja": "みて！はねが そらから おちてくる。ひかってる！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "It's the wind feather! I'm catching it! Got it!",
+            "ja": "かぜの はねだ！つかまえるよ！とった！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "You found it, everyone. Look, the feather is pointing at the map.",
+            "ja": "みんな、みつけたわね。みて、はねが ちずを さしているわ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "This was so much fun! Thank you, Windy Plains!",
+            "ja": "すごく たのしかった！ありがとう、かぜの草原！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "さよならピクニックで What are you doing? と きいたり、Look! ～ is ～ing. と 実況したり しよう",
+          "starterEn": "Hi! I'm Kiko. We're having a goodbye picnic on the plains! I'm eating a sandwich. What are you doing?",
+          "targetExpressions": [
+            "What are you doing?",
+            "I'm ～ing.",
+            "Look! ～ is ～ing.",
+            "This was so much fun!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "What are you doing? / Look! A feather is falling from the sky.",
+          "every day（いつも）と now（いま）、ばしょと えの 説明の ことば",
+          "windy・sky・yellow（y の 3つの おと）・running"
+        ]
+      }
+    },
+    {
+      "lessonNo": 450,
+      "world": 15,
+      "title": "World 15 Grand Review",
+      "titleJa": "ワールド15 グランドレビュー",
+      "school": {
+        "grade": "中1",
+        "topic": "We're having a great time on the plains!：草原の ステージで 実況ショー",
+        "grammar": "現在進行形の まとめ（I'm / He's / They're ～ing.・Look!・In the picture, ～.）",
+        "expressions": [
+          {
+            "en": "We're having a great time on the plains!",
+            "ja": "わたしたちは 草原で すばらしい じかんを すごしています！",
+            "core": true
+          },
+          {
+            "en": "Look! Haru is flying a kite. Riko and Kiko are dancing.",
+            "ja": "みて！ハルが たこを あげています。リコと キコが おどっています。"
+          },
+          {
+            "en": "Keep going, everyone!",
+            "ja": "みんな、そのまま がんばって！"
+          }
+        ],
+        "testPoints": [
+          "いまの ようすを I'm / He's / They're ～ing. で 実況して、はげましの ことばも いえる",
+          "ing の つづり・複合語・短縮形・y の おとの まとめ"
+        ]
+      },
+      "tpr": [
+        {
+          "en": "Look! Stop! Come here! Go!",
+          "ja": "みて！とまって！きて！いって！",
+          "action": "ワールド1の 4つの めいれいを はやく",
+          "emoji": "⚡"
+        },
+        {
+          "en": "Run! Hop! Swim! Fly!",
+          "ja": "はしって！はねて！およいで！とんで！",
+          "action": "ワールド15 の うごきを はやく",
+          "emoji": "🏃"
+        },
+        {
+          "en": "Stand on the stage.",
+          "ja": "ステージに たって。",
+          "action": "むねを はって まえに でる",
+          "emoji": "🎤"
+        },
+        {
+          "en": "Take a bow.",
+          "ja": "おじぎを して。",
+          "action": "さいごに ゆっくり おじぎ",
+          "emoji": "🙇"
+        }
+      ],
+      "phonics": {
+        "rule": "review",
+        "focus": [
+          "-ing",
+          "grass-hopper",
+          "'re",
+          "y"
+        ],
+        "sounds": [
+          "/ɪŋ/",
+          "/i/"
+        ],
+        "words": [
+          "making",
+          "running",
+          "grasshopper",
+          "they're",
+          "happy"
+        ],
+        "tipJa": "make → making（e を とる）、run → running（重ねる）、grass + hopper（複合語）、they are → they're（短縮形）、happy（イー）。"
+      },
+      "vocab": [
+        {
+          "en": "stage",
+          "ja": "ステージ",
+          "emoji": "🎤",
+          "core": true
+        },
+        {
+          "en": "audience",
+          "ja": "かんきゃく",
+          "emoji": "👏"
+        },
+        {
+          "en": "live",
+          "ja": "なまの・ライブの",
+          "emoji": "📺"
+        },
+        {
+          "en": "great time",
+          "ja": "すばらしい じかん",
+          "emoji": "🎉"
+        }
+      ],
+      "teacherScript": "Congratulations, everyone! This is the last lesson of World 15. ワールド15 さいごの レッスンだよ。 First, speed TPR! Look! Stop! Come here! Go! Run! Hop! Swim! Fly! Great! Now, it's the World 15 live show on the plains stage. You are the reporters. Tell the audience what's happening right now. Today's sentence is: We're having a great time on the plains! Say it with me. We're having a great time on the plains! Wonderful! A good live report has three parts. Start with Look! Then say who is doing what. Look! Haru is flying a kite. Riko and Kiko are dancing. Then cheer. Keep going, everyone! Now, the last phonics review. Making. Running. Grasshopper. They're. Happy. Amazing! And look, the wind feather is glowing. It's showing us old stone ruins on the map. Where are we going next? But first, your live show. Speak loudly and smile. You can do it!",
+      "conversation": {
+        "scene": "The World 15 live show on the plains stage, where everyone reports what is happening",
+        "sceneJa": "草原の ステージで、ワールド15 実況ショー",
+        "lines": [
+          {
+            "speaker": "Ms. Emma",
+            "en": "Welcome to the World 15 live show! Our reporter is Haru.",
+            "ja": "ワールド15 実況ショーへ ようこそ！リポーターは ハルよ。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "We're having a great time on the plains! Look! Riko and Kiko are dancing.",
+            "ja": "ぼくたちは 草原で さいこうの じかんを すごしています！みて！リコと キコが おどっています。"
+          },
+          {
+            "speaker": "Riko",
+            "en": "And Birimo is flying a kite. Oh no, the kite is flying away with him!",
+            "ja": "それに ビリモが たこを あげています。あっ、たこが ビリモごと とんでいく！"
+          },
+          {
+            "speaker": "Kiko",
+            "en": "Keep going, Birimo! Hold the string! You can do it!",
+            "ja": "がんばって、ビリモ！いとを はなさないで！できるよ！"
+          },
+          {
+            "speaker": "Birimo",
+            "en": "I'm okay! I'm landing next to the sunflowers. Phew!",
+            "ja": "だいじょうぶ！ひまわりの となりに おりるよ。ふう！"
+          },
+          {
+            "speaker": "Ms. Emma",
+            "en": "Look at the wind feather. It's glowing. The map shows old stone ruins.",
+            "ja": "かぜの はねを みて。ひかっているわ。ちずに ふるい いしの いせきが うつっている。"
+          },
+          {
+            "speaker": "Haru",
+            "en": "Let's go! Goodbye, Windy Plains!",
+            "ja": "いこう！さようなら、かぜの草原！"
+          }
+        ],
+        "aiTask": {
+          "goalJa": "ステージで 実況しよう。Look! ～ is ～ing. / ～ are ～ing. / Keep going! で 3〜4文（でてくる 人は じぶんで きめて OK。ほんとうの なまえは いわなくて OK）",
+          "starterEn": "Welcome to the World 15 live show! I'm Haru. We're having a great time on the plains! What are people doing on the stage?",
+          "targetExpressions": [
+            "We're having a great time!",
+            "Look! ～ is ～ing.",
+            "～ and ～ are ～ing.",
+            "Keep going!"
+          ]
+        }
+      },
+      "recap": {
+        "highlightsJa": [
+          "We're having a great time on the plains! 実況ショー",
+          "Look! → だれが なにを している → Keep going! の 3つで 実況",
+          "making・running・grasshopper・they're・happy（ワールド15 の まとめ）"
+        ]
+      }
+    }
+  ]
+}

@@ -17,12 +17,15 @@ export interface FocusLabel {
 const isMagicE = (f: string) => /^[a-z]_e$/.test(f);
 const isEnding = (f: string) => /^-[a-z]+$/.test(f);
 const isSyllables = (f: string) => /^[a-z]+(-[a-z]+)+$/.test(f);
+/** 短縮形の おわり（ワールド15: 'm 's 're n't） */
+const isContraction = (f: string) => /^(n't|'[a-z]+)$/.test(f);
 
 export function focusLabel(focus: string): FocusLabel {
   const f = focus.trim();
   if (isMagicE(f)) return { main: `${f[0]}…e`, hintJa: "マジック e" };
   if (isEnding(f)) return { main: `…${f.slice(1)}`, hintJa: "おわりの おと" };
   if (isSyllables(f)) return { main: f.split("-").join("・"), hintJa: "はくで よもう" };
+  if (isContraction(f)) return { main: `…${f}`, hintJa: "みじかい かたち" };
   return { main: f, hintJa: "" };
 }
 
