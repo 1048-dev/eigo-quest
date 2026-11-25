@@ -5,6 +5,7 @@ import { AvatarPicker } from "@/components/account/AvatarPicker";
 import { ChildAvatar } from "@/components/account/ChildAvatar";
 import { FormMessage, inputClass, TextField } from "@/components/account/Form";
 import { Gauge } from "@/components/game/StatusBoard";
+import { YearlyResultCard } from "@/components/yearly/YearlyResultCard";
 import { AUTH_LIMITS, ChildResponseSchema, ParentSettingsResponseSchema, AuthResultResponseSchema, type ChildOverview } from "@/lib/api/contracts";
 import { avatarFor, sendJson } from "@/lib/auth/client";
 import type { AvatarCharacter } from "@/lib/domain/avatars";
@@ -126,6 +127,28 @@ export function ChildCard({ child, index, birthYear: initialBirthYear, guard, on
           {child.weakestSkills.map((w) => `${w.labelJa}（${w.score}%）`).join("、")}
         </p>
       )}
+
+      {/* run7 P-yearly: 年に1回の 力だめし */}
+      <div className="mt-3">
+        {child.yearly ? (
+          <details>
+            <summary className="cursor-pointer rounded-xl border border-[var(--gold)]/50 bg-black/25 p-2 text-sm font-black">
+              🏆 力だめし：{child.yearly.latest.band}（{child.yearly.latest.total}点）
+              {child.yearly.growth && child.yearly.growth.delta.total !== 0 && (
+                <span className={`ml-1 text-xs ${child.yearly.growth.delta.total > 0 ? "text-[var(--ok)]" : "text-[var(--ink-2)]"}`}>
+                  前回から {child.yearly.growth.delta.total > 0 ? "+" : ""}{child.yearly.growth.delta.total}
+                </span>
+              )}
+              <span className="ml-1 text-xs font-bold text-[var(--sky)]">くわしく見る</span>
+            </summary>
+            <div className="mt-2"><YearlyResultCard result={child.yearly.latest} growth={child.yearly.growth} nextOn={child.yearly.nextOn} /></div>
+          </details>
+        ) : (
+          <p className="rounded-xl border border-[var(--gold)]/30 bg-black/20 p-2 text-xs text-[var(--ink-2)]">
+            🏆 年に1回の 力だめし（聞く・読む・話す・書く）は まだ 受けていません。お子さまの マップの「力だめし」から 受けられます（年度末が おすすめ）。
+          </p>
+        )}
+      </div>
 
       <button type="button" onClick={() => onShowRadar(child.id)} className="mt-3 w-full rounded-xl border border-[var(--sky)]/60 bg-[var(--sky)]/10 py-2 text-sm font-black text-[var(--sky)] hover:bg-[var(--sky)]/20">
         6つの力のレーダーを見る →

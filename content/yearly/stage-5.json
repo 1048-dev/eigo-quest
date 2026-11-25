@@ -1,0 +1,1138 @@
+{
+  "stage": 5,
+  "levelJa": "B1 → B1+",
+  "minutes": 35,
+  "titleJa": "ステージ5 の 力だめし",
+  "character": "kiko",
+  "listening": [
+    {
+      "id": "y5-l01",
+      "skill": "listening",
+      "format": "response",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Riko, I heard your group's presentation on coral reefs was chosen for the science fair."
+        },
+        {
+          "speaker": "B",
+          "en": "Yes! But I'm a little nervous about the question time after it."
+        }
+      ],
+      "choices": [
+        "Don't worry. If you're not sure, just say \"Great question\" and take a moment to think.",
+        "I'm sorry, but the science fair was last month.",
+        "Coral reefs are usually found in warm, shallow water.",
+        "You should have asked me for some paint."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-l02",
+      "skill": "listening",
+      "format": "response",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "I wish I could join the beach cleanup on Saturday, but I have a swimming competition."
+        },
+        {
+          "speaker": "B",
+          "en": "That's too bad. Is there anything else you could do to help?"
+        }
+      ],
+      "choices": [
+        "Yes, it was very sunny last Saturday.",
+        "Maybe I could make posters to tell more people about it.",
+        "I've been swimming since I was five.",
+        "The beach is about twenty minutes away by bus."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-l03",
+      "skill": "listening",
+      "format": "response",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Excuse me, I'm doing an interview for our school newspaper. Do you have a few minutes?"
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What's it about?"
+        }
+      ],
+      "choices": [
+        "It's printed on recycled paper.",
+        "I usually read it on Friday mornings.",
+        "It's about how students in our town spend their free time.",
+        "Sorry, I've already finished my homework."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-l04",
+      "skill": "listening",
+      "format": "response",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Kiko, you look upset. What happened?"
+        },
+        {
+          "speaker": "B",
+          "en": "I said something unkind to Haru by mistake, and now he won't talk to me."
+        }
+      ],
+      "choices": [
+        "He talks a lot during lunch, doesn't he?",
+        "You should have brought an umbrella.",
+        "That must be a lot of fun for both of you.",
+        "Why don't you tell him you didn't mean to hurt his feelings?"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-l05",
+      "skill": "listening",
+      "format": "response",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Our class is going to debate whether homework should be stopped."
+        },
+        {
+          "speaker": "B",
+          "en": "Which side are you on?"
+        },
+        {
+          "speaker": "A",
+          "en": "I'm on the side that wants to keep it, but honestly, I agree with the other team."
+        }
+      ],
+      "choices": [
+        "Well, it's good practice to argue for an opinion that isn't yours.",
+        "The debate will be held in the gym.",
+        "I think homework was invented a long time ago.",
+        "Yes, I finished all of mine last night."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-l06",
+      "skill": "listening",
+      "format": "response",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "If you could live anywhere in the world, where would you live?"
+        },
+        {
+          "speaker": "B",
+          "en": "Hmm, maybe somewhere near the ocean. What about you?"
+        }
+      ],
+      "choices": [
+        "I lived near a big river when I was little.",
+        "I'd choose a quiet village in the mountains, I think.",
+        "The ocean covers most of the Earth's surface.",
+        "I would like a sandwich, please."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-l07",
+      "skill": "listening",
+      "format": "response",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Mom, can I stay up a little later tonight? I need to finish my report on renewable energy."
+        },
+        {
+          "speaker": "B",
+          "en": "Didn't you say it was due next week?"
+        }
+      ],
+      "choices": [
+        "Yes, it's about solar and wind power.",
+        "No, I wrote it on the computer.",
+        "It is, but I want to finish early so I can check it again.",
+        "I'll go to bed at nine every night."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-l08",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Emma, how's your research on deep-sea animals going?"
+        },
+        {
+          "speaker": "B",
+          "en": "Slowly. I found lots of websites, but some of them say different things."
+        },
+        {
+          "speaker": "A",
+          "en": "That happens. Have you checked any books from the library?"
+        },
+        {
+          "speaker": "B",
+          "en": "Not yet. I'll go there after school and compare the information."
+        }
+      ],
+      "prompt": "What will Emma do after school?",
+      "choices": [
+        "Make her own website about sea animals.",
+        "Ask her teacher to choose a new topic.",
+        "Watch a documentary about the ocean.",
+        "Visit the library to check her facts."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-l09",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Did you hear? The town is planning to cut down the old trees in Green Park."
+        },
+        {
+          "speaker": "B",
+          "en": "Really? Why?"
+        },
+        {
+          "speaker": "A",
+          "en": "They want to build a bigger parking lot."
+        },
+        {
+          "speaker": "B",
+          "en": "But lots of birds live in those trees. Maybe our class could write a letter to the mayor."
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. Let's suggest it to Ms. Clark tomorrow."
+        }
+      ],
+      "prompt": "What do the speakers decide to do?",
+      "choices": [
+        "Plant some new trees in the park.",
+        "Talk to their teacher about writing a letter.",
+        "Count the birds that live in the park.",
+        "Find another place to build a parking lot."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-l10",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Haru, you were amazing in the speech contest!"
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks, but I forgot one part in the middle."
+        },
+        {
+          "speaker": "A",
+          "en": "Really? Nobody noticed. You kept going so naturally."
+        },
+        {
+          "speaker": "B",
+          "en": "That's a relief. I practiced in front of my family every night for two weeks."
+        }
+      ],
+      "prompt": "How did Haru prepare for the contest?",
+      "choices": [
+        "He recorded himself on video.",
+        "He asked a friend to help him write the speech.",
+        "He rehearsed with his family every evening.",
+        "He gave the speech to his class first."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-l11",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Excuse me, is this where the robotics workshop is?"
+        },
+        {
+          "speaker": "B",
+          "en": "It was supposed to be, but it's been moved to Room 204 because the projector in here is broken."
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, thanks. Has it started yet?"
+        },
+        {
+          "speaker": "B",
+          "en": "Not yet. It begins at two thirty, so you have about ten minutes."
+        }
+      ],
+      "prompt": "Why was the workshop moved?",
+      "choices": [
+        "Too many students signed up for it.",
+        "The room was being cleaned.",
+        "The teacher arrived late.",
+        "Some equipment wasn't working."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-l12",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Sophie, what are you making?"
+        },
+        {
+          "speaker": "B",
+          "en": "A bird feeder from an old milk carton, Dad. We're learning about reusing things in class."
+        },
+        {
+          "speaker": "A",
+          "en": "Nice. Do you think birds will really come to it?"
+        },
+        {
+          "speaker": "B",
+          "en": "I hope so. My teacher said to hang it somewhere quiet, away from cats."
+        },
+        {
+          "speaker": "A",
+          "en": "Then how about the tree by the kitchen window? We could watch them while we eat breakfast."
+        }
+      ],
+      "prompt": "What does Sophie's father suggest?",
+      "choices": [
+        "Putting the feeder where they can see it from the kitchen.",
+        "Buying a stronger feeder from a shop.",
+        "Keeping their cat inside the house.",
+        "Making a second feeder for the garden."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-l13",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Mark, I'm thinking of joining the school council. What do you think?"
+        },
+        {
+          "speaker": "B",
+          "en": "You'd be great! You're really good at listening to people."
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. But I'm worried it will take too much time away from soccer."
+        },
+        {
+          "speaker": "B",
+          "en": "I think the meetings are only once every two weeks. Why don't you ask Lily? She was on the council last year."
+        }
+      ],
+      "prompt": "What is Mark's friend worried about?",
+      "choices": [
+        "Speaking in front of many people.",
+        "Having less time for a sport.",
+        "Not being chosen by the other students.",
+        "Disagreeing with Lily."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-l14",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Grandpa, what was school like when you were my age?"
+        },
+        {
+          "speaker": "B",
+          "en": "Well, we didn't have computers. We wrote everything by hand."
+        },
+        {
+          "speaker": "A",
+          "en": "Wow, that sounds tiring."
+        },
+        {
+          "speaker": "B",
+          "en": "It was, but I think it helped me remember things better. Maybe you should try writing your notes by hand sometimes."
+        }
+      ],
+      "prompt": "What does the grandfather believe?",
+      "choices": [
+        "Computers are bad for children.",
+        "School was more fun in the past.",
+        "Writing by hand can make it easier to remember things.",
+        "Children today have too much homework."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-l15",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Welcome to the science museum. How can I help you?"
+        },
+        {
+          "speaker": "B",
+          "en": "Hi. Are there any seats left for the eleven o'clock planetarium show?"
+        },
+        {
+          "speaker": "A",
+          "en": "I'm afraid it's full. But there's another show at one, and the special exhibit on Mars opens at noon."
+        },
+        {
+          "speaker": "B",
+          "en": "Great. Then we'll see the exhibit first and the show after that. Two tickets for one o'clock, please."
+        }
+      ],
+      "prompt": "What will the visitor do first?",
+      "choices": [
+        "Watch the planetarium show at eleven.",
+        "Have lunch at the museum café.",
+        "Buy tickets for another day.",
+        "Look around the exhibit about Mars."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-l16",
+      "skill": "listening",
+      "format": "dialog",
+      "audio": [
+        {
+          "speaker": "A",
+          "en": "Nina, you seem quiet today. Is everything okay?"
+        },
+        {
+          "speaker": "B",
+          "en": "My best friend is moving to Canada next month."
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, that must be hard. You two are always together."
+        },
+        {
+          "speaker": "B",
+          "en": "Yeah. But we've already planned to video chat every Sunday, and maybe I can visit her during summer vacation."
+        }
+      ],
+      "prompt": "How does Nina plan to keep in touch with her friend?",
+      "choices": [
+        "By talking with her online once a week.",
+        "By writing her a letter every month.",
+        "By moving to Canada with her family.",
+        "By sending her photos every day."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-l17",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Good morning, everyone. This is a reminder about next week's Clean Ocean Week."
+        },
+        {
+          "speaker": "N",
+          "en": "On Monday, a marine scientist will give a talk in the gym about plastic in the sea."
+        },
+        {
+          "speaker": "N",
+          "en": "On Wednesday, each class will collect litter around the school. Please bring a pair of gloves if you have them."
+        },
+        {
+          "speaker": "N",
+          "en": "The class that collects the most recyclable items will win a special trophy."
+        },
+        {
+          "speaker": "N",
+          "en": "Let's work together to protect our oceans."
+        }
+      ],
+      "prompt": "What are students asked to bring on Wednesday?",
+      "choices": [
+        "An empty plastic bottle.",
+        "Gloves, if they have some.",
+        "A report about the sea.",
+        "A packed lunch."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-l18",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Octopuses are among the smartest animals in the ocean."
+        },
+        {
+          "speaker": "N",
+          "en": "They can open jars, solve simple puzzles, and even escape from their tanks."
+        },
+        {
+          "speaker": "N",
+          "en": "One reason they are so clever may be their unusual bodies."
+        },
+        {
+          "speaker": "N",
+          "en": "Most of an octopus's brain cells are not in its head but in its eight arms."
+        },
+        {
+          "speaker": "N",
+          "en": "This means each arm can touch, taste, and make simple decisions on its own."
+        },
+        {
+          "speaker": "N",
+          "en": "Scientists are still trying to understand exactly how this works."
+        }
+      ],
+      "prompt": "What is special about an octopus's arms?",
+      "choices": [
+        "They grow back very quickly.",
+        "They are longer than the rest of its body.",
+        "They contain many of its brain cells.",
+        "They change color when it is angry."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-l19",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Daniel wanted to start a reading club at his local library, but at first nobody came."
+        },
+        {
+          "speaker": "N",
+          "en": "Instead of giving up, he asked the librarian for advice."
+        },
+        {
+          "speaker": "N",
+          "en": "She suggested choosing books that had been made into movies."
+        },
+        {
+          "speaker": "N",
+          "en": "Daniel liked the idea and made some colorful posters."
+        },
+        {
+          "speaker": "N",
+          "en": "The next month, twelve children joined, and now they meet every Saturday morning."
+        }
+      ],
+      "prompt": "Why did more children join the club?",
+      "choices": [
+        "The library gave away free books.",
+        "Daniel's teacher told the students to join.",
+        "The meetings were moved to the afternoon.",
+        "Daniel took the librarian's suggestion."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-l20",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "And now for today's weather."
+        },
+        {
+          "speaker": "N",
+          "en": "It will be cloudy this morning, with rain starting around lunchtime in most areas."
+        },
+        {
+          "speaker": "N",
+          "en": "The rain should stop by early evening, but strong winds will continue into the night."
+        },
+        {
+          "speaker": "N",
+          "en": "Tomorrow will be sunny and warmer, which is perfect for the city marathon."
+        },
+        {
+          "speaker": "N",
+          "en": "If you're running, don't forget to drink plenty of water."
+        }
+      ],
+      "prompt": "What will the weather be like tomorrow?",
+      "choices": [
+        "Bright and warm.",
+        "Rainy in the afternoon.",
+        "Very windy at night.",
+        "Cloudy and cool."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-l21",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Have you ever wondered why the sky is blue?"
+        },
+        {
+          "speaker": "N",
+          "en": "Sunlight looks white, but it is actually made of many colors."
+        },
+        {
+          "speaker": "N",
+          "en": "When sunlight enters the air around the Earth, blue light is scattered in all directions much more than the other colors."
+        },
+        {
+          "speaker": "N",
+          "en": "So when we look up, we see blue everywhere."
+        },
+        {
+          "speaker": "N",
+          "en": "At sunset, the light has to travel a longer way through the air, so we see more red and orange instead."
+        }
+      ],
+      "prompt": "According to the talk, why do we see red and orange at sunset?",
+      "choices": [
+        "The sun becomes cooler in the evening.",
+        "Sunlight passes through more air.",
+        "Clouds reflect the color of the sea.",
+        "The stars begin to shine."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-l22",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Attention, visitors. The museum will close in thirty minutes."
+        },
+        {
+          "speaker": "N",
+          "en": "The gift shop on the first floor will remain open until six o'clock."
+        },
+        {
+          "speaker": "N",
+          "en": "Visitors in the dinosaur hall are asked to move toward the main exit, as the hall will close early today for cleaning."
+        },
+        {
+          "speaker": "N",
+          "en": "Thank you for visiting, and we hope to see you again soon."
+        }
+      ],
+      "prompt": "What is true about the dinosaur hall?",
+      "choices": [
+        "It is on the first floor.",
+        "It will stay open until six o'clock.",
+        "It will close earlier than the rest of the museum today.",
+        "It has a new exhibit this week."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-l23",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Long ago, people in many cultures told stories to explain the world around them."
+        },
+        {
+          "speaker": "N",
+          "en": "In one old tale, the moon was a shy girl who only came out at night because she did not want people to see her."
+        },
+        {
+          "speaker": "N",
+          "en": "The stars were her friends, and they traveled with her so that she would not feel lonely."
+        },
+        {
+          "speaker": "N",
+          "en": "Stories like this helped people remember the movements of the moon and stars long before there were telescopes."
+        }
+      ],
+      "prompt": "What is one purpose of stories like this?",
+      "choices": [
+        "To make children go to bed early.",
+        "To teach people how to build telescopes.",
+        "To show that the moon is bigger than the stars.",
+        "To help people remember how the night sky changes."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-l24",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Last month, our town held its first Children's Council."
+        },
+        {
+          "speaker": "N",
+          "en": "Thirty students from five schools discussed ideas to make the town a better place."
+        },
+        {
+          "speaker": "N",
+          "en": "The most popular idea was to put more benches and shade trees along the roads to school, because many children get tired on hot days."
+        },
+        {
+          "speaker": "N",
+          "en": "The mayor promised to start the project next spring."
+        },
+        {
+          "speaker": "N",
+          "en": "Several students said they were surprised that adults really listened to them."
+        }
+      ],
+      "prompt": "Why did the children want more benches and trees?",
+      "choices": [
+        "To make walking to school easier in hot weather.",
+        "To give older people a place to rest in the park.",
+        "To make the town look more beautiful for visitors.",
+        "To give the council a place to hold meetings."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-l25",
+      "skill": "listening",
+      "format": "passage",
+      "audio": [
+        {
+          "speaker": "N",
+          "en": "Many young athletes think that practicing longer is always better."
+        },
+        {
+          "speaker": "N",
+          "en": "However, sports scientists say that rest is just as important as training."
+        },
+        {
+          "speaker": "N",
+          "en": "While we sleep, our muscles repair themselves and grow stronger."
+        },
+        {
+          "speaker": "N",
+          "en": "Our brains also review the new movements we learned during the day."
+        },
+        {
+          "speaker": "N",
+          "en": "So if you want to improve, try to get enough sleep, especially the night before a big game."
+        }
+      ],
+      "prompt": "What is the main point of the talk?",
+      "choices": [
+        "Young athletes should train for longer every day.",
+        "Getting enough rest helps people improve at sports.",
+        "Big games should be held in the morning.",
+        "Muscles only grow stronger during exercise."
+      ],
+      "answer": 1
+    }
+  ],
+  "passages": [
+    {
+      "id": "y5-p1",
+      "kind": "article",
+      "title": "Can Seaweed Help Our Planet?",
+      "lines": [
+        "When people think about ways to fight climate change, they often imagine solar panels or electric cars.",
+        "However, some scientists believe that one of the most useful tools may be growing quietly in the sea: seaweed.",
+        "Like trees on land, seaweed takes in carbon dioxide as it grows.",
+        "Some types grow extremely fast, up to half a meter in a single day.",
+        "Because of this, large seaweed farms could remove a lot of carbon dioxide in a short time.",
+        "Seaweed also gives food and shelter to many small fish and other sea creatures.",
+        "In some coastal areas, farmers have started growing seaweed together with shellfish such as oysters.",
+        "The shellfish help clean the water, and the seaweed helps keep the water healthy for the shellfish.",
+        "As a result, both grow better than they would on their own.",
+        "Seaweed can be used in many ways, too.",
+        "It is eaten in soups and salads, and it can be turned into animal food, fertilizer, and even packaging that breaks down naturally.",
+        "On the other hand, experts warn that seaweed farming is not a perfect solution.",
+        "If farms become too large, they may block sunlight and harm other ocean life.",
+        "Also, when seaweed dies and sinks, scientists are not yet sure how long the carbon stays at the bottom of the sea.",
+        "For now, most researchers agree that seaweed can be part of the answer, but not the whole answer.",
+        "Reducing the amount of carbon dioxide we produce is still the most important step."
+      ]
+    },
+    {
+      "id": "y5-p2",
+      "kind": "notice",
+      "title": "Young Inventors Challenge at Riverside Science Museum",
+      "lines": [
+        "Do you have an idea that could make life a little easier? Join the Young Inventors Challenge!",
+        "Who can enter: Students in grades 4 to 8, alone or in teams of up to three.",
+        "Theme: An invention that solves a small problem in everyday life.",
+        "How to enter: Send a drawing of your invention and a short explanation (no more than 200 words) by March 10.",
+        "Entries can be sent by post or handed in at the museum's front desk.",
+        "Rule 1: Inventions must be your own idea. Adults may help you find materials, but they must not build any part of the invention for you.",
+        "Rule 2: Inventions may use up to three batteries. No fire or sharp tools may be used during the final show.",
+        "Final show: Ten finalists will be invited to show their inventions at the museum on April 5.",
+        "Prizes: The winner will receive a one-year family pass to the museum. All finalists will receive a certificate.",
+        "Special prize: Visitors to the final show will vote for the \"People's Choice\" award.",
+        "Questions? Please ask at the front desk."
+      ]
+    },
+    {
+      "id": "y5-p3",
+      "kind": "story",
+      "title": "The Lighthouse Interview",
+      "lines": [
+        "For her class project on \"jobs of the past,\" Mia decided to interview Mr. Hughes, who had been a lighthouse keeper for thirty years.",
+        "She prepared ten questions the night before and practiced asking them in front of the mirror.",
+        "When she arrived at his small house by the harbor, however, she was so nervous that she forgot to take out her notebook.",
+        "Mr. Hughes smiled and offered her a cup of warm tea.",
+        "\"Let's just chat first,\" he said. \"The questions can wait.\"",
+        "He told her about windy nights when he climbed the 120 steps to the top of the lighthouse again and again to keep the light shining.",
+        "He also described the calm mornings when dolphins swam past the rocks below.",
+        "Mia became so interested that she stopped worrying and began asking questions that were not on her list.",
+        "\"Did you ever feel lonely?\" she asked.",
+        "\"Sometimes,\" he answered. \"But I knew that ships far away were counting on me. That made me feel connected to people I would never meet.\"",
+        "When she got home, Mia realized she had used only two of her ten prepared questions.",
+        "At first she was worried, but when her report came back, her teacher had written, \"The best interviews feel like real conversations. This report is full of life!\"",
+        "Mia decided to send Mr. Hughes a copy of her report along with a thank-you letter."
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "y5-r01",
+      "skill": "reading",
+      "format": "vocab",
+      "prompt": "Before giving her presentation, Yui did a lot of ( ) on how plastic affects sea turtles. She read books and articles, and she even interviewed a scientist.",
+      "choices": [
+        "research",
+        "permission",
+        "attention",
+        "direction"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-r02",
+      "skill": "reading",
+      "format": "vocab",
+      "prompt": "Our class wanted to ( ) the amount of food thrown away in the cafeteria, so we started a \"clean plate\" campaign.",
+      "choices": [
+        "increase",
+        "repeat",
+        "reduce",
+        "receive"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-r03",
+      "skill": "reading",
+      "format": "vocab",
+      "prompt": "Leo couldn't think of a topic for his story, but after a long walk in the forest, he ( ) with a great idea about a talking owl.",
+      "choices": [
+        "looked up",
+        "gave up",
+        "ran out",
+        "came up"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-r04",
+      "skill": "reading",
+      "format": "vocab",
+      "prompt": "People in the town were very ( ) to the volunteers who cleaned the river, so they held a small party to thank them.",
+      "choices": [
+        "careless",
+        "grateful",
+        "similar",
+        "nervous"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-r05",
+      "skill": "reading",
+      "format": "grammar",
+      "prompt": "If I ( ) a scientist, I would study how to keep the oceans clean.",
+      "choices": [
+        "am",
+        "will be",
+        "were",
+        "have been"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-r06",
+      "skill": "reading",
+      "format": "grammar",
+      "prompt": "This is the museum ( ) my grandfather used to work as a guide.",
+      "choices": [
+        "which",
+        "where",
+        "who",
+        "what"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-r07",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p1",
+      "prompt": "Why do some farmers grow seaweed and shellfish together?",
+      "choices": [
+        "The shellfish eat the seaweed and grow faster.",
+        "It is cheaper than growing them in different places.",
+        "The seaweed protects the shellfish from fishing boats.",
+        "Each one helps the other to grow well."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-r08",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p1",
+      "prompt": "What is one concern that experts have about seaweed farming?",
+      "choices": [
+        "Very large farms could stop light from reaching other sea life.",
+        "Seaweed grows too slowly to make a real difference.",
+        "Most people do not enjoy the taste of seaweed.",
+        "Packaging made from seaweed is hard to break down."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-r09",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p1",
+      "prompt": "What is the main message of the article?",
+      "choices": [
+        "Seaweed farms should replace solar panels.",
+        "Seaweed farming is too risky to try.",
+        "Seaweed is helpful, but producing less carbon dioxide matters most.",
+        "Electric cars are the best way to fight climate change."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-r10",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p2",
+      "prompt": "What must students do to enter the challenge?",
+      "choices": [
+        "Bring their finished invention to the museum by March 10.",
+        "Send in a picture and a description of their idea.",
+        "Form a team with exactly three students.",
+        "Write an explanation of at least 200 words."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "y5-r11",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p2",
+      "prompt": "Which of the following is NOT allowed?",
+      "choices": [
+        "Asking an adult to help find materials.",
+        "Entering the challenge alone.",
+        "Using two batteries in an invention.",
+        "Having a parent build part of the invention."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-r12",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p2",
+      "prompt": "How will the \"People's Choice\" award be decided?",
+      "choices": [
+        "Guests at the final show will choose the winner.",
+        "The museum staff will hold a vote.",
+        "It will go to the team with the most members.",
+        "It will be given to the youngest finalist."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "y5-r13",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p3",
+      "prompt": "Why did Mr. Hughes most likely offer Mia some tea?",
+      "choices": [
+        "She had asked him for something to drink.",
+        "It was a cold and windy day.",
+        "He wanted to help her relax.",
+        "He did not want to answer her questions."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "y5-r14",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p3",
+      "prompt": "What did Mr. Hughes say about feeling lonely?",
+      "choices": [
+        "He never felt lonely because the dolphins kept him company.",
+        "He only felt lonely on windy nights.",
+        "He was lonely because nobody visited the lighthouse.",
+        "Knowing that ships depended on him made him feel close to others."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "y5-r15",
+      "skill": "reading",
+      "format": "text",
+      "passageId": "y5-p3",
+      "prompt": "What did Mia's teacher think of her report?",
+      "choices": [
+        "It was lively because the interview was like a natural conversation.",
+        "It should have included more of her prepared questions.",
+        "It was too short to receive a good grade.",
+        "It needed a thank-you letter at the end."
+      ],
+      "answer": 0
+    }
+  ],
+  "speaking": {
+    "introEn": "Hello! I'm Kiko. Today we'll talk about a few different topics. Take your time, and try to give reasons and examples. Let's begin!",
+    "introJa": "こんにちは！ キコだよ。いくつかの テーマで 話そう。あわてなくて いいから、理由や 例も つけて 話してみてね。",
+    "prompts": [
+      {
+        "id": "y5-s1",
+        "kind": "readAloud",
+        "askEn": "First, please read this passage aloud. Speak clearly, and pause at the commas and periods.",
+        "askJa": "まず、この 文章を 声に 出して 読んでね。はっきり、くぎりで ひと息 いれよう。",
+        "readText": "Long before maps on phones, sailors crossed wide oceans by reading the sky. They watched the sun by day and the stars by night to guess where they were. Some also studied the color of the water and the birds above it. Today, these old skills remind us how carefully people once observed the natural world.",
+        "keywords": [],
+        "minWords": 35,
+        "sample": "Long before maps on phones, sailors crossed wide oceans by reading the sky. They watched the sun by day and the stars by night to guess where they were. Some also studied the color of the water and the birds above it. Today, these old skills remind us how carefully people once observed the natural world."
+      },
+      {
+        "id": "y5-s2",
+        "kind": "picture",
+        "askEn": "Now, please look at the picture. Describe what the children are doing, and tell me what you think might happen next.",
+        "askJa": "つぎは 絵を みてね。子どもたちが なにを しているか 説明して、このあと なにが おこりそうか 話してね。",
+        "picture": {
+          "emoji": "🏖️🧒🧹👧🛍️♻️🐢🌊",
+          "descriptionEn": "Some children are picking up trash on a beach and putting it into recycling bags. A sea turtle is coming out of the waves near them."
+        },
+        "keywords": [
+          "beach",
+          "trash",
+          "picking",
+          "bags",
+          "turtle",
+          "recycle"
+        ],
+        "minWords": 25,
+        "sample": "Some children are cleaning a beach. They are picking up trash and putting it into recycling bags. A sea turtle is coming out of the sea near them. I think the children will notice the turtle and give it some space. Maybe they will feel proud because the beach is safer for the turtle now."
+      },
+      {
+        "id": "y5-s3",
+        "kind": "opinion",
+        "askEn": "Some people say students should spend one day a month learning outside the classroom, for example at farms, museums, or local shops. Do you agree? Why or why not?",
+        "askJa": "「月に 1日は 教室の 外（農場・博物館・町の お店など）で 学ぶ べきだ」という 意見が あるよ。きみは 賛成？ 反対？ 理由も 教えてね。",
+        "keywords": [
+          "agree",
+          "because",
+          "learn",
+          "outside",
+          "experience",
+          "classroom"
+        ],
+        "minWords": 30,
+        "sample": "I agree with this idea. I think students can learn a lot by seeing things with their own eyes. Also, it is a good chance to talk with people in our town. Because the experience is real, we will probably remember it much longer than a lesson in the classroom."
+      },
+      {
+        "id": "y5-s4",
+        "kind": "followUp",
+        "askEn": "That's interesting. Can you give me an example of something students could learn on one of those days?",
+        "askJa": "おもしろいね。そういう 日に どんな ことを 学べそうか、例を ひとつ 教えて。",
+        "keywords": [
+          "example",
+          "learn",
+          "could",
+          "farm",
+          "museum",
+          "how"
+        ],
+        "minWords": 25,
+        "sample": "For example, at a farm, students could learn how vegetables are grown and how much work farmers do every day. After that, we might waste less food at lunch, because we would understand how hard it is to grow it."
+      },
+      {
+        "id": "y5-s5",
+        "kind": "followUp",
+        "askEn": "What would people who disagree with you say? And how would you answer them?",
+        "askJa": "反対の 人は どんな ことを 言うと 思う？ そして きみなら どう こたえる？",
+        "keywords": [
+          "disagree",
+          "say",
+          "however",
+          "time",
+          "because",
+          "think"
+        ],
+        "minWords": 30,
+        "sample": "People who disagree might say that one day a month takes too much time away from important subjects like math. However, I think students can practice those subjects outside too. For example, at a shop, we can use math to count money, so it is still useful learning."
+      }
+    ]
+  },
+  "writing": {
+    "kind": "opinion",
+    "promptEn": "QUESTION: Should every town have a children's council that can suggest ideas to the mayor? Write your opinion with two reasons in 80-100 words.",
+    "promptJa": "しつもん: どの 町にも、市長に アイデアを 提案できる「こども会議」が あるべきだと 思いますか？ 意見と 理由を 2つ、80〜100 語の 英語で 書きましょう。",
+    "minWords": 80,
+    "maxWords": 100,
+    "keywords": [
+      "council",
+      "children",
+      "town",
+      "ideas",
+      "think",
+      "because",
+      "example",
+      "first",
+      "second",
+      "however"
+    ],
+    "sample": "I think every town should have a children's council. First, children notice problems that adults often miss. For example, many children walk to school, so they know which roads are dangerous. If they can tell the mayor, the town can become safer for everyone. Second, a council teaches children how to discuss ideas and respect different opinions. These skills will be useful in the future. Some people may say children are too young to make decisions. However, they only need to suggest ideas, not decide everything. For these reasons, children's councils are a good idea."
+  }
+}

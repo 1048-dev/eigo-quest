@@ -120,6 +120,17 @@ export default function MapPage() {
         <span className="btn btn-primary shrink-0 px-3 py-2 text-sm">▶</span>
       </Link>
 
+      <Link href="/yearly" className="card flex items-center justify-between gap-3 p-3">
+        <span className="flex items-center gap-3">
+          <span className="text-3xl" aria-hidden>🏆</span>
+          <span>
+            <span className="block text-base font-black">年に1回の 力だめし</span>
+            <span className="block text-xs text-[var(--ink-2)]">聞く・読む・話す・書く で 1年の のびを たしかめよう</span>
+          </span>
+        </span>
+        <span className="btn btn-ghost shrink-0 px-3 py-2 text-sm">▶</span>
+      </Link>
+
       <div className="overflow-hidden rounded-[24px] border-4 border-[var(--gold)] shadow-[0_6px_0_var(--gold-deep),0_14px_28px_rgba(0,0,0,.45)]">
         <WorldMap nodes={nodes.length > 0 ? nodes : offlineMap(new Date(), readLocalProgress()).nodes} />
       </div>

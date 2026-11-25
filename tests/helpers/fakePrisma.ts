@@ -12,6 +12,8 @@ const UNIQUE: Record<string, string[]> = {
   session: ["tokenHash"],
   user: ["friendCode"],
   coinLedger: ["idempotencyKey"],
+  // 複合ユニークは "a+b"
+  yearlyTestResult: ["userId+takenOn"],
   reportDelivery: ["tokenHash"],
   authToken: ["tokenHash"],
 };
@@ -108,7 +110,8 @@ export class FakeDb {
 
   private checkUnique(model: string, row: Row, self?: Row) {
     for (const f of UNIQUE[model] ?? []) {
-      if (this.table(model).some((r) => r !== self && row[f] != null && eq(r[f], row[f]))) {
+      const keys = f.split("+");
+      if (this.table(model).some((r) => r !== self && keys.every((k) => row[k] != null && eq(r[k], row[k])))) {
         throw Object.assign(new Error(`Unique constraint failed on ${f}`), { code: "P2002", name: "PrismaClientKnownRequestError" });
       }
     }

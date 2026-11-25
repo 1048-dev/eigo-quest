@@ -58,6 +58,8 @@ const PAGES: { name: string; url: string }[] = [
   { name: "library-story-s1-01", url: "/library/story/s1-01" },
   { name: "library-chant-c-01", url: "/library/chant/c-01" },
   { name: "library-talk-t-food", url: "/library/talk/t-food" },
+  // run7 P-yearly: 年に1回の 力だめし
+  { name: "yearly", url: "/yearly" },
   ...WORLD_LESSONS.map((n) => ({ name: `lesson-${n}`, url: `/lesson/${n}` })),
 ];
 

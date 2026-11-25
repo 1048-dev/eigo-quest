@@ -77,6 +77,29 @@ export const LIBRARY_RULES = {
   freeTalkUnlockLesson: 90,
 } as const;
 
+/**
+ * 年に1回の 力だめし（run7 P-yearly・docs/curriculum-6year.md §8）。
+ *  - 合計は 4 技能の 重みつき平均。会話の 力を いちばん だいじに するので スピーキングを 重く する
+ *  - どの ステージの 問題を 受けるか: そのステージに 入って stageEntryMargin レッスン（2 ワールド）すすんだら その ステージ
+ *  - ちから スコア: ステージを こえて のびを くらべる 目もり。(ステージ − 1) × scaledStageOffset ＋ 点数(0〜100) × scaledPerPercent
+ *    （となりの ステージと 50 点ぶん かさなる: ステージ1 の 満点 200 ＝ ステージ2 の 25 点）
+ *  - バンドの スピーキングの 条件: そのステージの いちばん上の バンドは スピーキング speakingTopBandMin 点 以上。
+ *    スピーキングが speakingLowDrop 点 未満なら 1 段 さげる
+ *  - 受けられるのは 1 年に 1 回（前回の 日から 1 年後の 同じ日から）。おためしは 1 回だけ
+ */
+export const YEARLY_RULES = {
+  weights: { listening: 0.25, reading: 0.25, speaking: 0.3, writing: 0.2 },
+  stageEntryMargin: 60,
+  scaledStageOffset: 150,
+  scaledPerPercent: 2,
+  speakingTopBandMin: 60,
+  speakingLowDrop: 25,
+  /** listening の 1問を きける 回数 */
+  playsPerItem: 2,
+  /** 子どもの こたえを 保存・AI に 送る ときの 長さの 上限 */
+  answerMaxChars: 1200,
+} as const;
+
 export const GACHA_RULES = {
   normalCost: 100,
   /** 通常ガチャの排出率 */

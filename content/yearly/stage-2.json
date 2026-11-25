@@ -1,0 +1,351 @@
+{
+  "stage": 2,
+  "levelJa": "A1 → A2",
+  "minutes": 20,
+  "titleJa": "ステージ2 の 力だめし",
+  "character": "riko",
+  "listening": [
+    {
+      "id": "y2-l01", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "The girl is riding a bike." }],
+      "promptJa": "きいて あう 絵を えらぼう",
+      "choices": ["👧🚲", "👧🏊", "👦🚲"],
+      "alt": ["a girl riding a bike", "a girl swimming", "a boy riding a bike"],
+      "answer": 0
+    },
+    {
+      "id": "y2-l02", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "It was snowy yesterday, so we made a snowman." }],
+      "promptJa": "きのうは どんな 日？",
+      "choices": ["🏖️☀️", "⛄❄️", "🌧️☂️"],
+      "alt": ["a sunny beach", "a snowman in the snow", "an umbrella in the rain"],
+      "answer": 1
+    },
+    {
+      "id": "y2-l03", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "My dad is cooking dinner in the kitchen." }],
+      "promptJa": "おとうさんは なにを している？",
+      "choices": ["👨📖", "👨🧹", "👨‍🍳🍲"],
+      "alt": ["reading a book", "cleaning the floor", "cooking soup"],
+      "answer": 2
+    },
+    {
+      "id": "y2-l04", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "Ken is going to go fishing with his uncle this weekend." }],
+      "promptJa": "ケンの しゅうまつの よていは？",
+      "choices": ["⛺", "⚾", "🎣"],
+      "alt": ["camping", "baseball", "fishing"],
+      "answer": 2
+    },
+    {
+      "id": "y2-l05", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Are you free on Saturday?" },
+        { "speaker": "B", "en": "Yes, I am. Why?" }
+      ],
+      "promptJa": "つぎの ことばを えらぼう",
+      "choices": ["Would you like to come to my party?", "I'm free, too.", "No, I didn't."],
+      "answer": 0
+    },
+    {
+      "id": "y2-l06", "skill": "listening", "format": "response",
+      "audio": [{ "speaker": "A", "en": "What did you do last night?" }],
+      "promptJa": "こたえを えらぼう",
+      "choices": ["I'm going to the movies.", "I watched a movie with my family.", "I like movies a lot."],
+      "answer": 1
+    },
+    {
+      "id": "y2-l07", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Shall we play tennis after school?" },
+        { "speaker": "B", "en": "Sorry, I can't. I have to go to the dentist." }
+      ],
+      "promptJa": "つぎの ことばを えらぼう",
+      "choices": ["Yes, let's!", "Good job!", "That's okay. Maybe next time."],
+      "answer": 2
+    },
+    {
+      "id": "y2-l08", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Look, there's an umbrella by the door." },
+        { "speaker": "B", "en": "Oh, whose umbrella is it?" }
+      ],
+      "promptJa": "つぎの ことばを えらぼう",
+      "choices": ["It's raining.", "I think it's Mia's.", "Yes, it is."],
+      "answer": 1
+    },
+    {
+      "id": "y2-l09", "skill": "listening", "format": "response",
+      "audio": [{ "speaker": "A", "en": "Which is bigger, a lion or a cat?" }],
+      "promptJa": "こたえを えらぼう",
+      "choices": ["A lion is.", "I like cats.", "Yes, it's bigger."],
+      "answer": 0
+    },
+    {
+      "id": "y2-l10", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Mia, what will you do on Sunday?" },
+        { "speaker": "B", "en": "I'm going to visit my grandma. We'll bake cookies together." },
+        { "speaker": "A", "en": "That sounds fun!" }
+      ],
+      "prompt": "What will Mia do on Sunday?",
+      "promptJa": "ミアの 日よう日の よていは？",
+      "choices": ["Go swimming.", "Clean her room.", "Bake cookies with her grandma.", "Buy cookies at a shop."],
+      "answer": 2
+    },
+    {
+      "id": "y2-l11", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Sam, you look tired." },
+        { "speaker": "B", "en": "I went to bed late. I was reading a long book." },
+        { "speaker": "A", "en": "Was it good?" },
+        { "speaker": "B", "en": "Yes! It was about a dragon and a little girl." }
+      ],
+      "prompt": "Why is Sam tired?",
+      "promptJa": "サムが つかれている わけは？",
+      "choices": ["He played soccer.", "He went to bed late.", "He was sick.", "He got up early."],
+      "answer": 1
+    },
+    {
+      "id": "y2-l12", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Excuse me. How do I get to the station?" },
+        { "speaker": "B", "en": "Go straight and turn right at the hospital. The station is next to the bank." },
+        { "speaker": "A", "en": "Thank you very much." }
+      ],
+      "prompt": "Where is the station?",
+      "promptJa": "えきは どこ？",
+      "choices": ["Next to the bank.", "Next to the hospital.", "Next to the park.", "Next to the school."],
+      "answer": 0
+    },
+    {
+      "id": "y2-l13", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Yuna, do you have to practice the piano today?" },
+        { "speaker": "B", "en": "Yes. I have to practice for one hour before dinner." },
+        { "speaker": "A", "en": "Okay. Let's play after that." }
+      ],
+      "prompt": "When does Yuna have to practice the piano?",
+      "promptJa": "ユナが ピアノを れんしゅうする のは いつ？",
+      "choices": ["After dinner.", "Before school.", "In the morning.", "Before dinner."],
+      "answer": 3
+    },
+    {
+      "id": "y2-l14", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Leo, which season do you like the best?" },
+        { "speaker": "B", "en": "I like fall the best because I can eat sweet potatoes." },
+        { "speaker": "A", "en": "Me too! They're so good." }
+      ],
+      "prompt": "Why does Leo like fall the best?",
+      "promptJa": "レオが あきを すきな わけは？",
+      "choices": ["He can swim in the sea.", "He can play in the snow.", "He can see cherry blossoms.", "He can eat sweet potatoes."],
+      "answer": 3
+    },
+    {
+      "id": "y2-l15", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Haru, it's raining. Did you bring an umbrella?" },
+        { "speaker": "B", "en": "No, I forgot it at home." },
+        { "speaker": "A", "en": "Then let's share mine." },
+        { "speaker": "B", "en": "Thanks, Riko!" }
+      ],
+      "prompt": "What will Riko and Haru do?",
+      "promptJa": "リコと ハルは どうする？",
+      "choices": ["Buy a new umbrella.", "Wait at school.", "Run home in the rain.", "Share Riko's umbrella."],
+      "answer": 3
+    }
+  ],
+  "passages": [
+    {
+      "id": "y2-p1",
+      "kind": "notice",
+      "title": "Green Hill Elementary School Festival",
+      "lines": [
+        "Come and enjoy our school festival!",
+        "Date: Saturday, October 18",
+        "Time: 10:00 a.m. to 3:00 p.m.",
+        "Place: the school gym and the playground",
+        "The third-grade students will sing songs in the gym at 11:00 a.m.",
+        "You can buy curry and rice and fruit juice in the cafeteria.",
+        "At the cookie corner, you can make your own cookies. Please bring a bag to take them home.",
+        "If it rains, the games on the playground will move to the gym."
+      ]
+    },
+    {
+      "id": "y2-p2",
+      "kind": "story",
+      "title": "Kiko's Diary",
+      "lines": [
+        "Sunday, May 5",
+        "Today I went to the zoo with my cousin Hana.",
+        "We went there by bus.",
+        "First, we saw the pandas. They were eating bamboo.",
+        "Next, we watched the penguins. They were swimming very fast.",
+        "Hana liked the giraffes the best because they were so tall.",
+        "For lunch, we ate rice balls under a big tree.",
+        "I was tired, but I was very happy.",
+        "Next time, I'm going to draw the animals in my notebook."
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "y2-r01", "skill": "reading", "format": "vocab",
+      "prompt": "Riko brushes her ( ) after every meal.",
+      "promptJa": "ごはんの あとに みがく もの",
+      "choices": ["teeth", "books", "windows", "lunch"],
+      "answer": 0
+    },
+    {
+      "id": "y2-r02", "skill": "reading", "format": "vocab",
+      "prompt": "It's very hot today. Let's go to the ( ) and swim in the sea.",
+      "promptJa": "うみで およげる ところ",
+      "choices": ["library", "beach", "post office", "bookstore"],
+      "answer": 1
+    },
+    {
+      "id": "y2-r03", "skill": "reading", "format": "vocab",
+      "prompt": "My grandfather grows rice and vegetables. He is a ( ).",
+      "promptJa": "しごとを えらぼう",
+      "choices": ["pilot", "dentist", "farmer", "singer"],
+      "answer": 2
+    },
+    {
+      "id": "y2-r04", "skill": "reading", "format": "vocab",
+      "prompt": "The museum is ( ) on Mondays, so we can't go in.",
+      "promptJa": "はいれない のは なぜ？",
+      "choices": ["closed", "open", "sunny", "quiet"],
+      "answer": 0
+    },
+    {
+      "id": "y2-r05", "skill": "reading", "format": "grammar",
+      "prompt": "Look! Birimo ( ) on the sofa now.",
+      "promptJa": "「いま」 している こと",
+      "choices": ["sleep", "sleeps", "slept", "is sleeping"],
+      "answer": 3
+    },
+    {
+      "id": "y2-r06", "skill": "reading", "format": "grammar",
+      "prompt": "This box is ( ) than that one.",
+      "promptJa": "ふたつを くらべる かたち",
+      "choices": ["heavy", "heavier", "heaviest", "more heavy"],
+      "answer": 1
+    },
+    {
+      "id": "y2-r07", "skill": "reading", "format": "grammar",
+      "prompt": "We ( ) to the aquarium last Sunday.",
+      "promptJa": "last Sunday に 気を つけよう",
+      "choices": ["go", "are going", "went", "will go"],
+      "answer": 2
+    },
+    {
+      "id": "y2-r08", "skill": "reading", "format": "conversation",
+      "prompt": "A: Would you like some more soup?  B: ( ) It's delicious.",
+      "promptJa": "すすめられた ときの へんじ",
+      "choices": ["Yes, please.", "No, I'm not.", "Here you are.", "You're welcome."],
+      "answer": 0
+    },
+    {
+      "id": "y2-r09", "skill": "reading", "format": "conversation",
+      "prompt": "A: What are you going to do this weekend?  B: ( )",
+      "promptJa": "これからの よてい",
+      "choices": ["I played soccer.", "It was fun.", "I'm going to go camping.", "I like weekends."],
+      "answer": 2
+    },
+    {
+      "id": "y2-r10", "skill": "reading", "format": "conversation",
+      "prompt": "A: Can I borrow your eraser?  B: ( )",
+      "promptJa": "かして あげる ときは？",
+      "choices": ["No, it isn't.", "I'm sorry to hear that.", "Nice to meet you.", "Sure. Here you are."],
+      "answer": 3
+    },
+    {
+      "id": "y2-r11", "skill": "reading", "format": "text", "passageId": "y2-p1",
+      "prompt": "What time does the festival start?",
+      "promptJa": "おまつりの はじまる じかん",
+      "choices": ["At 9:00 a.m.", "At 10:00 a.m.", "At 11:00 a.m.", "At 3:00 p.m."],
+      "answer": 1
+    },
+    {
+      "id": "y2-r12", "skill": "reading", "format": "text", "passageId": "y2-p1",
+      "prompt": "What should people bring to the cookie corner?",
+      "promptJa": "もって いく もの",
+      "choices": ["A bag.", "A cup.", "Some juice.", "Some fruit."],
+      "answer": 0
+    },
+    {
+      "id": "y2-r13", "skill": "reading", "format": "text", "passageId": "y2-p1",
+      "prompt": "What will happen if it rains?",
+      "promptJa": "あめの ときは どうなる？",
+      "choices": ["The festival will stop.", "The songs will start late.", "The games will move to the gym.", "The cafeteria will close."],
+      "answer": 2
+    },
+    {
+      "id": "y2-r14", "skill": "reading", "format": "text", "passageId": "y2-p2",
+      "prompt": "How did Kiko and Hana go to the zoo?",
+      "promptJa": "どうやって いった？",
+      "choices": ["By car.", "By train.", "On foot.", "By bus."],
+      "answer": 3
+    },
+    {
+      "id": "y2-r15", "skill": "reading", "format": "text", "passageId": "y2-p2",
+      "prompt": "Why did Hana like the giraffes the best?",
+      "promptJa": "ハナが キリンを すきな わけ",
+      "choices": ["They were eating bamboo.", "They were very tall.", "They were swimming fast.", "They were sleeping."],
+      "answer": 1
+    }
+  ],
+  "speaking": {
+    "introEn": "Hi! I'm Riko. Let's have a little talk in English. Take your time!",
+    "introJa": "こんにちは！ リコだよ。えいごで すこし おはなし しよう。ゆっくりで だいじょうぶ！",
+    "prompts": [
+      {
+        "id": "y2-s1", "kind": "picture",
+        "askEn": "Look at the picture. What are the people doing?",
+        "askJa": "絵を みてね。ひとたちは なにを しているかな？",
+        "picture": {
+          "emoji": "🏞️👦⚽👧🚲🐕",
+          "descriptionEn": "In a park, a boy is playing soccer, a girl is riding a bike, and a dog is running."
+        },
+        "keywords": ["boy", "girl", "playing", "soccer", "riding", "bike", "dog", "running"],
+        "minWords": 8,
+        "sample": "A boy is playing soccer in the park. A girl is riding a bike. The dog is running."
+      },
+      {
+        "id": "y2-s2", "kind": "question",
+        "askEn": "What did you do last weekend?",
+        "askJa": "せんしゅうの しゅうまつは なにを した？",
+        "keywords": ["i", "went", "played", "watched", "ate", "was"],
+        "minWords": 5,
+        "sample": "I went to the park with my brother. We played catch. It was fun."
+      },
+      {
+        "id": "y2-s3", "kind": "question",
+        "askEn": "What are you going to do this summer?",
+        "askJa": "この なつは なにを する よてい？",
+        "keywords": ["going", "to", "summer", "will"],
+        "minWords": 6,
+        "sample": "I'm going to swim in the sea. I'm going to eat a lot of watermelon, too."
+      },
+      {
+        "id": "y2-s4", "kind": "question",
+        "askEn": "Which do you like better, summer or winter? Why?",
+        "askJa": "なつと ふゆ、どっちが すき？ どうして？",
+        "keywords": ["like", "better", "because", "summer", "winter"],
+        "minWords": 7,
+        "sample": "I like winter better because I can make a snowman. I like hot soup, too."
+      }
+    ]
+  },
+  "writing": {
+    "kind": "sentences",
+    "promptEn": "Write three sentences about your favorite day of the week.",
+    "promptJa": "いちばん すきな ようびに ついて、えいごで 3つの 文を 書こう。",
+    "targetSentences": 3,
+    "minWords": 12,
+    "maxWords": 40,
+    "keywords": ["like", "because", "day", "saturday", "sunday", "friday"],
+    "sample": "I like Saturday the best. I play soccer with my friends in the morning. In the evening, I watch a movie with my family."
+  }
+}

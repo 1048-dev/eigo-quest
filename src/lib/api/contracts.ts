@@ -378,6 +378,86 @@ export const LibraryTalkRequestSchema = z.object({
 });
 export type LibraryTalkRequest = z.input<typeof LibraryTalkRequestSchema>;
 
+// ---------------------------------------------------------------------------
+// 年に1回の 力だめし（run7 P-yearly）
+// ---------------------------------------------------------------------------
+const SkillScoresSchema = z.object({ listening: num(0), reading: num(0), speaking: num(0), writing: num(0) });
+const ScaledScoresSchema = SkillScoresSchema.extend({ total: num(0) });
+
+export const YearlySummarySchema = z.object({
+  id: str(""),
+  stage: num(1),
+  takenOn: str(""),
+  scores: SkillScoresSchema.catch({ listening: 0, reading: 0, speaking: 0, writing: 0 }),
+  total: num(0),
+  band: str(""),
+  scaled: ScaledScoresSchema.catch({ listening: 0, reading: 0, speaking: 0, writing: 0, total: 0 }),
+  gradedBy: str("rule"),
+});
+export type YearlySummaryDto = z.output<typeof YearlySummarySchema>;
+
+export const YearlyGrowthSchema = z.object({
+  previousTakenOn: str(""),
+  previousStage: num(1),
+  previousBand: str(""),
+  delta: ScaledScoresSchema.catch({ listening: 0, reading: 0, speaking: 0, writing: 0, total: 0 }),
+  bandSteps: num(0),
+});
+
+const AvailabilitySchema = z.union([
+  z.object({ available: z.literal(true) }),
+  z.object({ available: z.literal(false), reason: z.literal("WAIT"), nextOn: z.string() }),
+  z.object({ available: z.literal(false), reason: z.literal("TRIAL_USED") }),
+]).catch({ available: true });
+
+export const YearlyStatusResponseSchema = z.object({
+  ...META,
+  stage: num(1),
+  reachedLesson: num(0),
+  isTrial: bool(false),
+  availability: AvailabilitySchema,
+  history: safeArray(YearlySummarySchema),
+});
+export type YearlyStatusResponse = z.output<typeof YearlyStatusResponseSchema>;
+
+export const YearlySubmitRequestSchema = z.object({
+  stage: z.coerce.number().int().min(1).max(5).catch(1),
+  answers: z.object({
+    choices: z.record(z.string().max(20), z.number().int().min(0).max(9)).catch({}),
+    speaking: z.record(z.string().max(20), z.string().transform((s) => s.slice(0, 400))).catch({}),
+    writingText: z.string().transform((s) => s.slice(0, 1200)).optional().catch(undefined),
+    writingWords: z.array(z.string().transform((s) => s.slice(0, 30))).max(5).optional().catch(undefined),
+  }).catch({ choices: {}, speaking: {} }),
+});
+export type YearlySubmitRequest = z.input<typeof YearlySubmitRequestSchema>;
+
+const RubricSchema = z.object({ score: num(0), max: num(4), commentJa: str(""), text: str("") });
+export const YearlyResultSchema = z.object({
+  stage: num(1),
+  takenOn: str(""),
+  scores: SkillScoresSchema,
+  total: num(0),
+  band: str(""),
+  scaled: ScaledScoresSchema,
+  gradedBy: z.enum(["rule", "ai"]).catch("rule"),
+  detail: z.object({
+    choices: z.record(z.string(), z.boolean()).catch({}),
+    speaking: z.record(z.string(), RubricSchema).catch({}),
+    writing: RubricSchema.catch({ score: 0, max: 8, commentJa: "", text: "" }),
+  }),
+});
+
+export const YearlySubmitResponseSchema = z.object({
+  ...META,
+  ok: bool(false),
+  /** DB に 保存できたか（できなかったら この ブラウザに のこす） */
+  saved: bool(false),
+  result: nullable(YearlyResultSchema),
+  growth: nullable(YearlyGrowthSchema),
+  messageJa: str(""),
+});
+export type YearlySubmitResponse = z.output<typeof YearlySubmitResponseSchema>;
+
 /** すべてのエラーレスポンスの形（ok=false + error） */
 export const ErrorBodySchema = z.object({ error: str("") });
 
@@ -594,6 +674,13 @@ export const ChildOverviewSchema = z.object({
   schoolCompletedJa: z.string().nullable().catch(null),
   schoolLineJa: str(""),
   wordsLearned: num(0),
+  /** run7 P-yearly: 力だめしの さいしんの 結果と 前回からの のび（まだ 受けていなければ null） */
+  yearly: nullable(z.object({
+    latest: YearlySummarySchema,
+    growth: nullable(YearlyGrowthSchema),
+    nextOn: z.string().nullable().catch(null),
+    count: num(1),
+  })),
 });
 export type ChildOverview = z.output<typeof ChildOverviewSchema>;
 

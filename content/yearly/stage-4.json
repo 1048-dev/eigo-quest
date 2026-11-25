@@ -1,0 +1,402 @@
+{
+  "stage": 4,
+  "levelJa": "A2+ → B1",
+  "minutes": 30,
+  "titleJa": "ステージ4 の 力だめし",
+  "character": "riko",
+  "listening": [
+    {
+      "id": "y4-l01", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "I think our class should plant flowers along the school gate." },
+        { "speaker": "B", "en": "That's a nice idea, but who will water them during summer vacation?" }
+      ],
+      "choices": ["I watered them yesterday.", "The gate opens at eight.", "Good point. Maybe we could take turns.", "They're my favorite color."],
+      "answer": 2
+    },
+    {
+      "id": "y4-l02", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Excuse me, I think I left my bag on the train. It's a small green backpack." },
+        { "speaker": "B", "en": "I see. Do you remember which car you were in?" }
+      ],
+      "choices": ["I think it was the third car from the front.", "I bought it at a shop near the station.", "No, I usually ride my bike.", "Yes, I'll take the next one."],
+      "answer": 0
+    },
+    {
+      "id": "y4-l03", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Do you know what time the museum closes today?" },
+        { "speaker": "B", "en": "I'm not sure. Why don't you check the museum's website?" }
+      ],
+      "choices": ["Yes, it closed last year.", "No, I've never been to a museum.", "Because I don't like museums.", "Good idea. I'll look it up now."],
+      "answer": 3
+    },
+    {
+      "id": "y4-l04", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Our team lost the final match by just one point." },
+        { "speaker": "B", "en": "Oh, that's too bad. You must be disappointed." }
+      ],
+      "choices": ["Yes, we won the trophy.", "A little, but we learned a lot from it.", "No, the match starts at three.", "I'll be there in five minutes."],
+      "answer": 1
+    },
+    {
+      "id": "y4-l05", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Mr. Brown, could you explain this graph again? I didn't understand the last part." },
+        { "speaker": "B", "en": "Of course. Which part was difficult for you?" }
+      ],
+      "choices": ["I drew it with a ruler.", "It's twelve o'clock.", "The part about the rainfall in June.", "Yes, I explained it to her."],
+      "answer": 2
+    },
+    {
+      "id": "y4-l06", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Hana, have you decided on your topic for the science fair?" },
+        { "speaker": "B", "en": "Yes. I'm going to research how plants grow under different colors of light." },
+        { "speaker": "A", "en": "Sounds interesting. How will you do it?" },
+        { "speaker": "B", "en": "I'll grow beans under red, blue, and white lights and measure them every day." },
+        { "speaker": "A", "en": "Let me know the results!" }
+      ],
+      "prompt": "What will Hana do for the science fair?",
+      "choices": ["Compare the colors of different flowers.", "Grow beans under different lights.", "Make a lamp that saves energy.", "Check the weather every day."],
+      "answer": 1
+    },
+    {
+      "id": "y4-l07", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Excuse me. I booked a room for two nights, but you have no record of it." },
+        { "speaker": "B", "en": "I'm sorry to hear that. May I see your confirmation?" },
+        { "speaker": "A", "en": "Sure. Here it is." },
+        { "speaker": "B", "en": "I see the problem. You booked a room at our other hotel across the river. I'll call them for you." },
+        { "speaker": "A", "en": "Thank you so much." }
+      ],
+      "prompt": "What was the problem?",
+      "choices": ["The room was too small.", "The traveler lost a passport.", "Every room was full.", "The booking was at a different hotel."],
+      "answer": 3
+    },
+    {
+      "id": "y4-l08", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Ken, do you think we should have school uniforms?" },
+        { "speaker": "B", "en": "Yes, I do. We don't have to think about what to wear every morning." },
+        { "speaker": "A", "en": "I understand, but uniforms are expensive for some families." },
+        { "speaker": "B", "en": "That's true. Maybe the school could collect used uniforms and share them." }
+      ],
+      "prompt": "What does Ken suggest at the end?",
+      "choices": ["Sharing used uniforms.", "Stopping school uniforms.", "Buying new uniforms every year.", "Wearing uniforms only on Mondays."],
+      "answer": 0
+    },
+    {
+      "id": "y4-l09", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Mom, the radio says a big typhoon is coming tonight." },
+        { "speaker": "B", "en": "Then let's get ready. Can you check the flashlights?" },
+        { "speaker": "A", "en": "Sure. One of them doesn't work. I think it needs new batteries." },
+        { "speaker": "B", "en": "There are some in the kitchen drawer. I'll fill some bottles with water." }
+      ],
+      "prompt": "What will the child probably do next?",
+      "choices": ["Fill bottles with water.", "Turn on the radio.", "Get batteries from the kitchen.", "Go to the store."],
+      "answer": 2
+    },
+    {
+      "id": "y4-l10", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Mia, how was your trip to Kyoto?" },
+        { "speaker": "B", "en": "It was great, but we had a little trouble on the first day." },
+        { "speaker": "A", "en": "What happened?" },
+        { "speaker": "B", "en": "Our train was delayed for two hours because of heavy snow. We arrived at the hotel very late." },
+        { "speaker": "A", "en": "That sounds tiring. I'm glad you enjoyed the rest of the trip." }
+      ],
+      "prompt": "Why did Mia arrive at the hotel late?",
+      "choices": ["She took the wrong train.", "She lost her ticket.", "The hotel was hard to find.", "The train was delayed by snow."],
+      "answer": 3
+    },
+    {
+      "id": "y4-l11", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Excuse me, do you know where the history section is?" },
+        { "speaker": "B", "en": "It's on the third floor, next to the maps." },
+        { "speaker": "A", "en": "Thank you. Can I borrow books about castles there?" },
+        { "speaker": "B", "en": "Yes, but books with a red sticker must stay in the library." }
+      ],
+      "prompt": "What is true about books with a red sticker?",
+      "choices": ["They can't be taken out of the library.", "They are all about castles.", "They are on the first floor.", "They arrived this month."],
+      "answer": 0
+    },
+    {
+      "id": "y4-l12", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Leo, I heard you started volunteering at the animal shelter." },
+        { "speaker": "B", "en": "Yes, I go there every Saturday morning. I walk the dogs and clean their cages." },
+        { "speaker": "A", "en": "That sounds like hard work." },
+        { "speaker": "B", "en": "It is, but I love it. Last week, one of the dogs I walked found a new family." }
+      ],
+      "prompt": "What does Leo do at the animal shelter?",
+      "choices": ["He trains cats.", "He walks dogs and cleans cages.", "He gives medicine to animals.", "He finds homes for birds."],
+      "answer": 1
+    },
+    {
+      "id": "y4-l13", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Yuna, which do you prefer, studying in the morning or at night?" },
+        { "speaker": "B", "en": "In the morning. My mind is clearer after I sleep." },
+        { "speaker": "A", "en": "Really? I can't concentrate early in the morning." },
+        { "speaker": "B", "en": "Then studying at night might be better for you. Everyone is different." }
+      ],
+      "prompt": "Why does Yuna prefer studying in the morning?",
+      "choices": ["Her house is quiet in the morning.", "She has club practice at night.", "Her mind is clearer after sleeping.", "Her teacher told her to."],
+      "answer": 2
+    },
+    {
+      "id": "y4-l14", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Good afternoon, students. This Friday, we will have an earthquake drill during third period. When you hear the alarm, get under your desk and protect your head. After the shaking stops, follow your teacher to the playground. Please do not run or talk during the drill." }
+      ],
+      "prompt": "What should students do first when they hear the alarm?",
+      "choices": ["Run to the playground.", "Call their parents.", "Open the windows.", "Get under their desks."],
+      "answer": 3
+    },
+    {
+      "id": "y4-l15", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Penguins are birds, but they cannot fly. Instead, they are excellent swimmers. Their wings work like flippers, and some penguins can swim faster than most people can run. Some kinds can even stay underwater for more than twenty minutes while they look for fish." }
+      ],
+      "prompt": "What is one thing we learn about penguins?",
+      "choices": ["They use their wings to swim.", "They can fly short distances.", "They eat only plants.", "They cannot stay underwater."],
+      "answer": 0
+    },
+    {
+      "id": "y4-l16", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Welcome to the Riverside Summer Festival. The dance show will begin at six o'clock on the main stage. Food stands are open until nine. The fireworks will start at eight thirty, so please find a good spot by the river early. Lost children can be picked up at the information tent." }
+      ],
+      "prompt": "What time will the fireworks start?",
+      "choices": ["At six o'clock.", "At seven thirty.", "At eight thirty.", "At nine o'clock."],
+      "answer": 2
+    },
+    {
+      "id": "y4-l17", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Long ago, people did not have clocks. They told the time by looking at the sun and shadows. Later, people in many countries made water clocks, which measured time with dripping water. Mechanical clocks were invented much later, and today most of us check the time on small screens." }
+      ],
+      "prompt": "How did water clocks measure time?",
+      "choices": ["By using shadows.", "With dripping water.", "With moving sand.", "By ringing bells."],
+      "answer": 1
+    },
+    {
+      "id": "y4-l18", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Kiko recently did a survey about breakfast in her class. She found that twenty students usually eat rice and ten usually eat bread. Only three students said they often skip breakfast. Kiko made a graph and presented it to the class. Now she wants to start a campaign to help everyone eat a good breakfast." }
+      ],
+      "prompt": "How many students often skip breakfast?",
+      "choices": ["Three.", "Ten.", "Thirteen.", "Twenty."],
+      "answer": 0
+    },
+    {
+      "id": "y4-l19", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Attention, passengers. Because of strong winds, this afternoon's ferry to Green Island has been cancelled. The next ferry will leave tomorrow at nine a.m. Passengers with tickets for today can use them tomorrow or get their money back at the ticket office. We are sorry for the trouble." }
+      ],
+      "prompt": "What can passengers with today's tickets do?",
+      "choices": ["Take a bus to the island.", "Leave on a ferry tonight.", "Change them for cheaper tickets.", "Use them tomorrow."],
+      "answer": 3
+    },
+    {
+      "id": "y4-l20", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Sam's town had a problem with trash on the beach. Last spring, his school started a cleanup project. Every month, students and their families pick up plastic and cans. They also made posters asking visitors to take their trash home. Now the beach is much cleaner, and more sea turtles have come back." }
+      ],
+      "prompt": "What did the students do besides picking up trash?",
+      "choices": ["They built a new beach.", "They made posters for visitors.", "They sold plastic bottles.", "They caught sea turtles."],
+      "answer": 1
+    }
+  ],
+  "passages": [
+    {
+      "id": "y4-p1",
+      "kind": "article",
+      "title": "How Bees Help Our Food Grow",
+      "lines": [
+        "Many people are afraid of bees, but these small insects are very important to us.",
+        "When a bee visits a flower, it drinks a sweet liquid called nectar.",
+        "At the same time, a yellow powder called pollen sticks to the bee's body.",
+        "When the bee flies to the next flower, some of the pollen falls off.",
+        "This helps the flower make seeds and grow fruit.",
+        "This process is called pollination.",
+        "Apples, strawberries, and pumpkins are some of the foods that need bees.",
+        "Scientists say that about one third of the food we eat depends on insects like bees.",
+        "However, the number of bees has been going down in many parts of the world.",
+        "One reason is that there are fewer wild flowers in cities and on farms.",
+        "Some chemicals that people use to kill pests can also hurt bees.",
+        "To help bees, some towns have started planting flowers along roads and in parks.",
+        "Even a few flower pots on a balcony can give bees a place to eat.",
+        "When we protect bees, we also protect the food on our tables."
+      ]
+    },
+    {
+      "id": "y4-p2",
+      "kind": "notice",
+      "title": "Join the Nature Photo Club!",
+      "lines": [
+        "Do you like taking pictures of animals, plants, or the sky?",
+        "The Nature Photo Club is looking for new members this spring.",
+        "Meetings: every Tuesday and Thursday, 3:30 to 4:30 p.m., in the art room.",
+        "On the first Saturday of each month, we go on a photo walk in Maple Park.",
+        "You don't need your own camera. The club has five cameras that members can borrow.",
+        "In October, our best photos will be shown at the town culture festival.",
+        "Want to try it first? Come to our open meeting on April 12 in the art room.",
+        "To join, please give the sign-up form to Ms. Tanaka by April 19."
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "y4-r01", "skill": "reading", "format": "vocab",
+      "prompt": "Our class wanted to ( ) the amount of plastic we use, so we started bringing our own bottles.",
+      "choices": ["reduce", "repeat", "receive", "respect"],
+      "answer": 0
+    },
+    {
+      "id": "y4-r02", "skill": "reading", "format": "vocab",
+      "prompt": "The scientist did many ( ) to find out why the plant was dying.",
+      "choices": ["accidents", "messages", "experiments", "festivals"],
+      "answer": 2
+    },
+    {
+      "id": "y4-r03", "skill": "reading", "format": "vocab",
+      "prompt": "Mia was so ( ) in the documentary about space that she watched it twice.",
+      "choices": ["afraid", "similar", "careful", "interested"],
+      "answer": 3
+    },
+    {
+      "id": "y4-r04", "skill": "reading", "format": "vocab",
+      "prompt": "If you have a question, don't ( ) to ask your teacher.",
+      "choices": ["refuse", "hesitate", "decide", "promise"],
+      "answer": 1
+    },
+    {
+      "id": "y4-r05", "skill": "reading", "format": "vocab",
+      "prompt": "Heavy rain can cause rivers to ( ), so people who live near them should move to higher ground.",
+      "choices": ["freeze", "shine", "flood", "melt"],
+      "answer": 2
+    },
+    {
+      "id": "y4-r06", "skill": "reading", "format": "grammar",
+      "prompt": "The boy ( ) is talking to Ms. Sato is my cousin.",
+      "choices": ["which", "whose", "what", "who"],
+      "answer": 3
+    },
+    {
+      "id": "y4-r07", "skill": "reading", "format": "grammar",
+      "prompt": "Do you know ( ) the next bus leaves?",
+      "choices": ["when", "what does", "when does", "that"],
+      "answer": 0
+    },
+    {
+      "id": "y4-r08", "skill": "reading", "format": "conversation",
+      "prompt": "A: I think we should go to the aquarium on our class trip.\nB: ( ) The zoo has more animals, and it's closer to our school.\nA: That's true, but the aquarium has a new dolphin show.",
+      "choices": ["I totally agree with you.", "I see your point, but I'd prefer the zoo.", "Let's go to the aquarium, then.", "I've already seen the dolphin show."],
+      "answer": 1
+    },
+    {
+      "id": "y4-r09", "skill": "reading", "format": "text", "passageId": "y4-p1",
+      "prompt": "What happens when pollen falls from a bee onto another flower?",
+      "choices": ["The bee gets more nectar.", "The flower stops growing.", "The flower can make seeds and fruit.", "The pollen turns into honey."],
+      "answer": 2
+    },
+    {
+      "id": "y4-r10", "skill": "reading", "format": "text", "passageId": "y4-p1",
+      "prompt": "According to the article, about how much of our food depends on insects like bees?",
+      "choices": ["Almost all of it.", "About half of it.", "Very little of it.", "About one third of it."],
+      "answer": 3
+    },
+    {
+      "id": "y4-r11", "skill": "reading", "format": "text", "passageId": "y4-p1",
+      "prompt": "What is one reason the number of bees is going down?",
+      "choices": ["There are fewer wild flowers.", "Bees are drinking too much nectar.", "Cities have too many parks.", "Farmers are growing more pumpkins."],
+      "answer": 0
+    },
+    {
+      "id": "y4-r12", "skill": "reading", "format": "text", "passageId": "y4-p1",
+      "prompt": "What is the main idea of the article?",
+      "choices": ["Bees are dangerous, so we should stay away from them.", "Bees help our food grow, so we should protect them.", "Apples and strawberries are healthy foods.", "Balconies are the best places to keep bees."],
+      "answer": 1
+    },
+    {
+      "id": "y4-r13", "skill": "reading", "format": "text", "passageId": "y4-p2",
+      "prompt": "Where does the club usually meet?",
+      "choices": ["In Maple Park.", "In the library.", "In the gym.", "In the art room."],
+      "answer": 3
+    },
+    {
+      "id": "y4-r14", "skill": "reading", "format": "text", "passageId": "y4-p2",
+      "prompt": "What is true about the club?",
+      "choices": ["Members can borrow cameras from the club.", "Members must buy a new camera.", "The club meets every day after school.", "The club goes on photo walks every Sunday."],
+      "answer": 0
+    },
+    {
+      "id": "y4-r15", "skill": "reading", "format": "text", "passageId": "y4-p2",
+      "prompt": "What should students do if they want to join?",
+      "choices": ["Go to Maple Park on April 12.", "Show their photos at the festival.", "Give a form to Ms. Tanaka by April 19.", "Bring their own camera to a meeting."],
+      "answer": 2
+    }
+  ],
+  "speaking": {
+    "introEn": "Hello, I'm Riko. Today, I'd like to hear your ideas. When you answer, please give reasons.",
+    "introJa": "こんにちは、リコです。きょうは あなたの 考えを ききたいな。こたえる ときは 理由も いってね。",
+    "prompts": [
+      {
+        "id": "y4-s1",
+        "kind": "readAloud",
+        "askEn": "Please read this aloud.",
+        "askJa": "この 文を 声に 出して 読んでね。",
+        "readText": "Every year, many birds fly thousands of kilometers to find warmer places in winter. They use the sun, the stars, and even the shape of the land to find their way. Scientists are still learning how these small birds travel so far.",
+        "keywords": [],
+        "minWords": 25,
+        "sample": "Every year, many birds fly thousands of kilometers to find warmer places in winter. They use the sun, the stars, and even the shape of the land to find their way. Scientists are still learning how these small birds travel so far."
+      },
+      {
+        "id": "y4-s2",
+        "kind": "picture",
+        "askEn": "Look at the picture. What are the students doing?",
+        "askJa": "絵を みてね。生徒たちは なにを しているかな？",
+        "picture": {
+          "emoji": "🏫🧤👧🗑️👦🌱",
+          "descriptionEn": "Students are cleaning around their school. A girl wearing gloves is picking up trash, and a boy is planting a small tree."
+        },
+        "keywords": ["cleaning", "picking", "trash", "planting", "tree"],
+        "minWords": 15,
+        "sample": "The students are cleaning around their school. A girl is picking up trash, and a boy is planting a small tree. They are wearing gloves."
+      },
+      {
+        "id": "y4-s3",
+        "kind": "opinion",
+        "askEn": "Some people say children should have homework every day. What do you think? Please give a reason.",
+        "askJa": "「子どもは 毎日 宿題を した ほうが いい」と いう 人が いるよ。あなたは どう 思う？ 理由も いってね。",
+        "keywords": ["think", "because", "homework", "every", "day"],
+        "minWords": 20,
+        "sample": "I think children should have a little homework every day because it helps us remember what we learned at school. But it shouldn't take too much time."
+      },
+      {
+        "id": "y4-s4",
+        "kind": "followUp",
+        "askEn": "Thank you. Can you tell me one more reason or an example?",
+        "askJa": "ありがとう。もう 1 つ 理由か 例を おしえて くれる？",
+        "keywords": ["also", "example", "because", "time"],
+        "minWords": 15,
+        "sample": "Also, homework helps us build a good habit. For example, I study for twenty minutes after dinner, so I don't forget new English words."
+      }
+    ]
+  },
+  "writing": {
+    "kind": "opinion",
+    "promptEn": "QUESTION: Is it better to read books on paper or on a tablet? Write your opinion and two reasons in 50-60 words.",
+    "promptJa": "しつもん: 本は 紙で 読む ほうが いい？ それとも タブレットで 読む ほうが いい？ じぶんの 意見と 理由を 2 つ、50〜60 語で 書こう。",
+    "minWords": 50,
+    "maxWords": 70,
+    "keywords": ["think", "because", "first", "second", "paper", "tablet", "books"],
+    "sample": "I think it is better to read books on paper. First, I can read for a long time without getting tired because paper is easier on my eyes. Second, I enjoy turning the pages, and I can see how much I have read. For these reasons, I prefer paper books to tablets."
+  }
+}

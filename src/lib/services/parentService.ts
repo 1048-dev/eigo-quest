@@ -18,6 +18,7 @@ import { dummyHash, hashSecret, verifySecret } from "@/lib/auth/password";
 import { computeUserMastery } from "@/lib/services/progressService";
 import { dailyLimitFor, parseParentSettings, withDailyLimit } from "@/lib/services/dailyLimit";
 import { deleteDeliveriesForChildren } from "@/lib/services/monthlyDeliveryService";
+import { getChildYearly } from "@/lib/services/yearlyService";
 
 type Tx = Prisma.TransactionClient;
 
@@ -219,6 +220,7 @@ export async function deleteUsersData(tx: Tx, userIds: string[]): Promise<void> 
   await tx.gachaTicket.deleteMany({ where: mine });
   await tx.userShopItem.deleteMany({ where: mine });
   await tx.testAttempt.deleteMany({ where: mine });
+  await tx.yearlyTestResult.deleteMany({ where: mine });
   await tx.lessonProgress.deleteMany({ where: mine });
   await tx.user.deleteMany({ where: { id: { in: userIds } } });
 }
@@ -259,7 +261,11 @@ export async function getParentOverview(parentId: string, now = new Date()): Pro
   const settings = parseParentSettings(parent?.settings);
   const today = localDate(now);
   return Promise.all(children.map(async (c) => {
-    const { result, completedLessons } = await computeUserMastery(c.id, now);
+    const [{ result, completedLessons }, yearly] = await Promise.all([
+      computeUserMastery(c.id, now),
+      // 力だめしは おまけの 表示。読めなくても ようすの 一覧は 出す
+      getChildYearly(c.id, now).catch((e) => { console.error("[parent-overview] yearly", e); return null; }),
+    ]);
     const lessonsDone = completedLessons.size;
     const lessonsToday = [...completedLessons.values()].filter((d) => d === today).length;
     const weakestSkills = lessonsDone === 0 ? [] : [...SKILLS]
@@ -282,6 +288,7 @@ export async function getParentOverview(parentId: string, now = new Date()): Pro
       weakestSkills,
       dailyLessonLimit: dailyLimitFor(settings, c.id),
       ...curriculumStatus(completedLessons),
+      yearly,
     };
   }));
 }

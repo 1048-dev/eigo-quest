@@ -16,6 +16,7 @@
     "curriculum:check": "tsx scripts/curriculum-index.ts --check",
     "library:index": "tsx scripts/library-index.ts",
     "library:check": "tsx scripts/library-index.ts --check",
+    "yearly:check": "tsx scripts/yearly-check.ts",
     "worksheets": "python3 worksheets/generate_worksheets.py --all",
     "worksheets:month": "python3 worksheets/generate_worksheets.py --month",
     "worksheets:upload": "tsx scripts/upload-worksheets.ts",

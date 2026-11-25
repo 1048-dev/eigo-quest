@@ -1,0 +1,411 @@
+{
+  "stage": 3,
+  "levelJa": "A2 → A2+",
+  "minutes": 25,
+  "titleJa": "ステージ3 の 力だめし",
+  "character": "haru",
+  "listening": [
+    {
+      "id": "y3-l01", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Hi, Grandma! Can you see me on the screen?" },
+        { "speaker": "B", "en": "Yes, I can see you, Ken. But your voice is very quiet." }
+      ],
+      "choices": ["Oh, sorry. Is this better?", "I'll see you at the station.", "It was sunny yesterday."],
+      "answer": 0
+    },
+    {
+      "id": "y3-l02", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Have you ever been to Okinawa, Mia?" },
+        { "speaker": "B", "en": "No, I haven't. Have you?" }
+      ],
+      "choices": ["Yes, I'm going by bus.", "Yes, I went there last summer with my family.", "No, it isn't mine."],
+      "answer": 1
+    },
+    {
+      "id": "y3-l03", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Excuse me. Does this train go to the airport?" },
+        { "speaker": "B", "en": "No, it doesn't. You need to change trains at the next station." }
+      ],
+      "choices": ["I'll take two, please.", "It leaves every day.", "Thank you. I'll do that."],
+      "answer": 2
+    },
+    {
+      "id": "y3-l04", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "What were you doing when I called you last night?" },
+        { "speaker": "B", "en": "I was taking a bath. Sorry I missed your call." }
+      ],
+      "choices": ["That's okay. I wanted to ask about the homework.", "Yes, I'm taking it now.", "I've never been there."],
+      "answer": 0
+    },
+    {
+      "id": "y3-l05", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Leo, I finished reading the book you lent me." },
+        { "speaker": "B", "en": "Really? How did you like it?" }
+      ],
+      "choices": ["I bought it last week.", "It's on the second floor.", "I loved it. The ending was a big surprise."],
+      "answer": 2
+    },
+    {
+      "id": "y3-l06", "skill": "listening", "format": "response",
+      "audio": [
+        { "speaker": "A", "en": "Hello, this is Yuna. May I speak to Hana, please?" },
+        { "speaker": "B", "en": "I'm sorry, she's out right now. Can I take a message?" }
+      ],
+      "choices": ["Yes, she is my sister.", "Yes, please. Could you ask her to call me back?", "No, I can't speak English."],
+      "answer": 1
+    },
+    {
+      "id": "y3-l07", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Sam, are you ready for the school trip tomorrow?" },
+        { "speaker": "B", "en": "Almost. I've packed my lunch box and a raincoat." },
+        { "speaker": "A", "en": "Don't forget your water bottle. It's going to be hot." },
+        { "speaker": "B", "en": "Oh, right! Thanks, Mom." }
+      ],
+      "prompt": "What does Sam's mother tell him to bring?",
+      "choices": ["A lunch box.", "A raincoat.", "A hat.", "A water bottle."],
+      "answer": 3
+    },
+    {
+      "id": "y3-l08", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Emma, you look tired. Are you okay?" },
+        { "speaker": "B", "en": "I stayed up late last night. I was writing a story for a contest." },
+        { "speaker": "A", "en": "Wow! When is the deadline?" },
+        { "speaker": "B", "en": "This Friday, so I still have three days." }
+      ],
+      "prompt": "Why is Emma tired?",
+      "choices": ["She was writing a story late at night.", "She ran in a race yesterday.", "She got up early for a contest.", "She studied for a test until Friday."],
+      "answer": 0
+    },
+    {
+      "id": "y3-l09", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Taro, how long have you played the piano?" },
+        { "speaker": "B", "en": "For four years. My aunt taught me at first." },
+        { "speaker": "A", "en": "That's great. Do you practice every day?" },
+        { "speaker": "B", "en": "Not every day. I practice on Monday, Wednesday, and Saturday." }
+      ],
+      "prompt": "How long has Taro played the piano?",
+      "choices": ["For two years.", "For three years.", "For four years.", "For five years."],
+      "answer": 2
+    },
+    {
+      "id": "y3-l10", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Excuse me. I'd like to go to the science museum. Which bus should I take?" },
+        { "speaker": "B", "en": "Take bus number 12. It stops right in front of the museum." },
+        { "speaker": "A", "en": "How long does it take?" },
+        { "speaker": "B", "en": "About twenty minutes." }
+      ],
+      "prompt": "Which bus goes to the science museum?",
+      "choices": ["Bus number 2.", "Bus number 12.", "Bus number 20.", "Bus number 22."],
+      "answer": 1
+    },
+    {
+      "id": "y3-l11", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Riko, your English is so good! Did you live abroad?" },
+        { "speaker": "B", "en": "No, I didn't. But I've talked with a pen pal in Canada every week for two years." },
+        { "speaker": "A", "en": "By video call?" },
+        { "speaker": "B", "en": "Yes. We also send emails to each other." }
+      ],
+      "prompt": "How has Riko improved her English?",
+      "choices": ["By living in Canada.", "By watching movies every day.", "By going to a language school.", "By talking with a pen pal."],
+      "answer": 3
+    },
+    {
+      "id": "y3-l12", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Mia, what happened to your arm?" },
+        { "speaker": "B", "en": "I fell while I was riding my bike in the park." },
+        { "speaker": "A", "en": "Oh, no! Does it hurt?" },
+        { "speaker": "B", "en": "A little. But the doctor said it will be fine in a week." }
+      ],
+      "prompt": "What was Mia doing when she fell?",
+      "choices": ["Playing soccer.", "Walking her dog.", "Riding her bike.", "Running in the park."],
+      "answer": 2
+    },
+    {
+      "id": "y3-l13", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Dad, can we go to the beach this weekend?" },
+        { "speaker": "B", "en": "The weather report says it will rain on Saturday." },
+        { "speaker": "A", "en": "What about Sunday?" },
+        { "speaker": "B", "en": "Sunday will be sunny. Let's go then." }
+      ],
+      "prompt": "When will they go to the beach?",
+      "choices": ["On Sunday.", "On Saturday.", "This Friday.", "Next weekend."],
+      "answer": 0
+    },
+    {
+      "id": "y3-l14", "skill": "listening", "format": "dialog",
+      "audio": [
+        { "speaker": "A", "en": "Hello, Ken. It's Leo. Are you free this afternoon?" },
+        { "speaker": "B", "en": "Sorry, I have to clean my room first. My mom told me to." },
+        { "speaker": "A", "en": "How about after that? We could play basketball at the park." },
+        { "speaker": "B", "en": "Sure. I'll meet you there at four." }
+      ],
+      "prompt": "What will Ken do first?",
+      "choices": ["Play basketball.", "Clean his room.", "Go to the park.", "Call his mother."],
+      "answer": 1
+    },
+    {
+      "id": "y3-l15", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Good morning, everyone. Today our class will visit the city zoo. The bus will leave the school at nine o'clock. Please bring your lunch and a notebook. We will come back to school at two thirty." }
+      ],
+      "prompt": "What time will the bus leave the school?",
+      "choices": ["At eight thirty.", "At two thirty.", "At nine o'clock.", "At ten o'clock."],
+      "answer": 2
+    },
+    {
+      "id": "y3-l16", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Last year, Hana's family got a puppy named Mocha. At first, Mocha was very shy and hid under the table. Hana played with him every day after school. Now Mocha follows Hana everywhere and sleeps next to her bed." }
+      ],
+      "prompt": "What did Hana do to help Mocha?",
+      "choices": ["She bought him a new bed.", "She took him to a doctor.", "She put a table in her room.", "She played with him every day."],
+      "answer": 3
+    },
+    {
+      "id": "y3-l17", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Attention, please. The city library will be closed next Monday for cleaning. On Tuesday, the library will open at ten, one hour later than usual. Books that are due on Monday can be returned on Tuesday. Thank you." }
+      ],
+      "prompt": "Why will the library be closed next Monday?",
+      "choices": ["Because it will be cleaned.", "Because it is a holiday.", "Because there will be a book sale.", "Because the staff will have a meeting."],
+      "answer": 0
+    },
+    {
+      "id": "y3-l18", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Yuna has been to many places, but her favorite trip was to Hokkaido. She went there in winter with her grandparents. They saw a snow festival and ate hot soup. Yuna wants to go back in summer to see the flower fields." }
+      ],
+      "prompt": "Who did Yuna go to Hokkaido with?",
+      "choices": ["Her parents.", "Her grandparents.", "Her classmates.", "Her best friend."],
+      "answer": 1
+    },
+    {
+      "id": "y3-l19", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Welcome to Green Hill Park. This park was built fifty years ago. Many kinds of birds live near the pond. Please do not give food to the birds or the fish. Enjoy your walk, and please take your trash home." }
+      ],
+      "prompt": "What are visitors asked not to do?",
+      "choices": ["Walk near the pond.", "Take pictures of birds.", "Bring their lunch.", "Feed the birds or the fish."],
+      "answer": 3
+    },
+    {
+      "id": "y3-l20", "skill": "listening", "format": "passage",
+      "audio": [
+        { "speaker": "N", "en": "Sam joined the drama club this spring. He was nervous because he had never acted before. In his first show, he played a talking tree. Everyone laughed and clapped, and now Sam wants a bigger role next time." }
+      ],
+      "prompt": "How did Sam feel when he joined the drama club?",
+      "choices": ["Bored.", "Angry.", "Nervous.", "Sleepy."],
+      "answer": 2
+    }
+  ],
+  "passages": [
+    {
+      "id": "y3-p1",
+      "kind": "email",
+      "title": "My ski trip",
+      "lines": [
+        "From: Riko",
+        "To: Haru",
+        "Subject: My ski trip",
+        "Hi Haru,",
+        "I'm writing to you from my uncle's house in Nagano. My family arrived here on Saturday morning.",
+        "On the first day, I tried skiing for the first time. I fell down so many times that my legs hurt!",
+        "My cousin Taro is a great skier, so he taught me how to stop and turn.",
+        "By the second day, I could ski down the small hill without falling.",
+        "Yesterday it snowed a lot, so we stayed inside and made hot chocolate.",
+        "Tomorrow we're going to visit a snow monkey park, and then we'll go home on Wednesday.",
+        "I'll show you my photos at school next week.",
+        "See you soon, Riko"
+      ]
+    },
+    {
+      "id": "y3-p2",
+      "kind": "story",
+      "title": "Leo and the Old Bench",
+      "lines": [
+        "Leo's grandfather lives in a small town by the sea.",
+        "Every summer, Leo stays with him for two weeks.",
+        "This year, his grandfather asked him for help. \"The old bench in the park is broken,\" he said. \"Let's fix it together.\"",
+        "Leo had never used a hammer before, so he was a little worried.",
+        "His grandfather showed him how to use the tools carefully.",
+        "They worked on the bench for three mornings.",
+        "On the fourth day, they painted it bright blue.",
+        "While they were painting, an old woman stopped to watch them.",
+        "\"I sat on that bench with my husband many years ago,\" she said with a smile.",
+        "\"Thank you for making it beautiful again.\"",
+        "Leo felt very proud.",
+        "Before he went home, he took a picture of the bench to show his friends.",
+        "Now he wants to learn how to make a bookshelf for his room."
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "y3-r01", "skill": "reading", "format": "vocab",
+      "prompt": "Ken was very ( ) when he found his lost cap under the sofa.",
+      "choices": ["lonely", "glad", "angry", "sick"],
+      "answer": 1
+    },
+    {
+      "id": "y3-r02", "skill": "reading", "format": "vocab",
+      "prompt": "The museum is very popular, so we had to wait in a long ( ) to buy tickets.",
+      "choices": ["road", "street", "space", "line"],
+      "answer": 3
+    },
+    {
+      "id": "y3-r03", "skill": "reading", "format": "vocab",
+      "prompt": "Please ( ) your shoes before you come into the house.",
+      "choices": ["take off", "put on", "get up", "turn on"],
+      "answer": 0
+    },
+    {
+      "id": "y3-r04", "skill": "reading", "format": "vocab",
+      "prompt": "Our teacher ( ) us a funny story about her trip to London.",
+      "choices": ["spoke", "said", "told", "talked"],
+      "answer": 2
+    },
+    {
+      "id": "y3-r05", "skill": "reading", "format": "vocab",
+      "prompt": "Don't swim here. The water is very ( ), and it's dangerous.",
+      "choices": ["quiet", "short", "early", "deep"],
+      "answer": 3
+    },
+    {
+      "id": "y3-r06", "skill": "reading", "format": "grammar",
+      "prompt": "I have ( ) seen such a beautiful sunset before.",
+      "choices": ["never", "ever", "yet", "already"],
+      "answer": 0
+    },
+    {
+      "id": "y3-r07", "skill": "reading", "format": "grammar",
+      "prompt": "This bridge was ( ) about one hundred years ago.",
+      "choices": ["build", "building", "built", "builds"],
+      "answer": 2
+    },
+    {
+      "id": "y3-r08", "skill": "reading", "format": "conversation",
+      "prompt": "A: Would you like some more cake?\nB: ( ) I'm already full.",
+      "choices": ["Yes, I'd love to.", "Here you are.", "That's a good idea.", "No, thank you."],
+      "answer": 3
+    },
+    {
+      "id": "y3-r09", "skill": "reading", "format": "conversation",
+      "prompt": "A: I'm going to visit Australia next month.\nB: That's exciting! ( )\nA: For ten days.",
+      "choices": ["When will you leave?", "How long will you stay there?", "Who will you go with?", "How will you get there?"],
+      "answer": 1
+    },
+    {
+      "id": "y3-r10", "skill": "reading", "format": "text", "passageId": "y3-p1",
+      "prompt": "Who taught Riko how to ski?",
+      "choices": ["Her uncle.", "Haru.", "Her cousin.", "A ski teacher."],
+      "answer": 2
+    },
+    {
+      "id": "y3-r11", "skill": "reading", "format": "text", "passageId": "y3-p1",
+      "prompt": "What did Riko's family do yesterday?",
+      "choices": ["They stayed inside because of the snow.", "They visited a snow monkey park.", "They skied down a small hill.", "They went back home."],
+      "answer": 0
+    },
+    {
+      "id": "y3-r12", "skill": "reading", "format": "text", "passageId": "y3-p1",
+      "prompt": "When will Riko go home?",
+      "choices": ["On Saturday.", "On Monday.", "On Tuesday.", "On Wednesday."],
+      "answer": 3
+    },
+    {
+      "id": "y3-r13", "skill": "reading", "format": "text", "passageId": "y3-p2",
+      "prompt": "Why was Leo worried at first?",
+      "choices": ["He didn't like his grandfather's town.", "He had never used a hammer.", "The bench was too heavy.", "He couldn't swim in the sea."],
+      "answer": 1
+    },
+    {
+      "id": "y3-r14", "skill": "reading", "format": "text", "passageId": "y3-p2",
+      "prompt": "What did Leo and his grandfather do on the fourth day?",
+      "choices": ["They bought new tools.", "They broke the old bench.", "They painted the bench blue.", "They went to the beach."],
+      "answer": 2
+    },
+    {
+      "id": "y3-r15", "skill": "reading", "format": "text", "passageId": "y3-p2",
+      "prompt": "What does Leo want to do next?",
+      "choices": ["Make a bookshelf.", "Paint his room blue.", "Buy a new bench.", "Take pictures of the sea."],
+      "answer": 0
+    }
+  ],
+  "speaking": {
+    "introEn": "Hi! I'm Haru. Let's talk in English. Take your time, and try to answer in full sentences.",
+    "introJa": "こんにちは！ ハルだよ。英語で お話ししよう。あわてなくて いいから、文で こたえてみてね。",
+    "prompts": [
+      {
+        "id": "y3-s1",
+        "kind": "readAloud",
+        "askEn": "Please read this aloud.",
+        "askJa": "この 文を 声に 出して 読んでね。",
+        "readText": "Last weekend, my class went to a farm near the mountains. We picked strawberries and fed the goats. It was the best school trip I have ever had.",
+        "keywords": [],
+        "minWords": 25,
+        "sample": "Last weekend, my class went to a farm near the mountains. We picked strawberries and fed the goats. It was the best school trip I have ever had."
+      },
+      {
+        "id": "y3-s2",
+        "kind": "picture",
+        "askEn": "Look at the picture. What are the people doing?",
+        "askJa": "絵を みてね。人たちは なにを しているかな？",
+        "picture": {
+          "emoji": "🏞️🌳👦🎣👧📖🐕",
+          "descriptionEn": "At a lake, a boy is fishing, a girl is reading a book under a tree, and a dog is running."
+        },
+        "keywords": ["fishing", "reading", "book", "dog", "lake"],
+        "minWords": 10,
+        "sample": "A boy is fishing in the lake. A girl is reading a book under a tree. A dog is running near them."
+      },
+      {
+        "id": "y3-s3",
+        "kind": "question",
+        "askEn": "Have you ever been to the sea or a river? Tell me about it.",
+        "askJa": "海や 川に 行った ことは ある？ その ことを おしえてね。",
+        "keywords": ["have", "been", "went", "sea", "river", "swam"],
+        "minWords": 12,
+        "sample": "Yes, I have. I went to the sea with my family last summer. We swam and built a big sandcastle."
+      },
+      {
+        "id": "y3-s4",
+        "kind": "question",
+        "askEn": "What do you usually do after school? Please tell me two things.",
+        "askJa": "学校の あと、ふだん なにを しているかな？ 2 つ おしえてね。",
+        "keywords": ["usually", "after", "school", "play", "homework"],
+        "minWords": 12,
+        "sample": "I usually do my homework first. Then I play soccer with my friends in the park."
+      }
+    ]
+  },
+  "writing": {
+    "kind": "email",
+    "promptEn": "Read the email from your friend Emma. Write a reply with about five sentences. Answer her two questions.",
+    "promptJa": "ともだちの エマから メールが きたよ。5 文ぐらいで 返事を 書こう。エマの 2 つの しつもんに こたえてね。",
+    "email": [
+      "Hi!",
+      "How are you? I just joined the cooking club at my school.",
+      "Last week, we made pancakes, and they were delicious.",
+      "Next month, we are going to cook food from different countries.",
+      "What kind of food do you like to cook or eat?",
+      "And what club or activity do you want to try this year?",
+      "Your friend, Emma"
+    ],
+    "minWords": 25,
+    "maxWords": 60,
+    "keywords": ["food", "like", "club", "want", "try"],
+    "sample": "Hi Emma, Thanks for your email. I like curry and rice, and I sometimes cook it with my dad. This year, I want to try the science club because I love experiments. Cooking food from different countries sounds fun. Please tell me about it next time!"
+  }
+}

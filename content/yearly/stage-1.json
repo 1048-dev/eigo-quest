@@ -1,0 +1,199 @@
+{
+  "stage": 1,
+  "levelJa": "Pre-A1 → A1",
+  "minutes": 15,
+  "titleJa": "ステージ1 の 力だめし",
+  "character": "birimo",
+  "listening": [
+    {
+      "id": "y1-l01", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "The cat is on the bed." }],
+      "promptJa": "きいて あう 絵を えらぼう",
+      "choices": ["🐶🛏️", "🐱🛏️", "🐱📦"],
+      "alt": ["a dog on a bed", "a cat on a bed", "a cat in a box"],
+      "answer": 1
+    },
+    {
+      "id": "y1-l02", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "I can swim." }],
+      "promptJa": "きいて あう 絵を えらぼう",
+      "choices": ["🏊", "🚴", "🎹"],
+      "alt": ["swim", "ride a bike", "play the piano"],
+      "answer": 0
+    },
+    {
+      "id": "y1-l03", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "It's three o'clock." }],
+      "promptJa": "なんじかな？",
+      "choices": ["🕘", "🕐", "🕒"],
+      "alt": ["nine o'clock", "one o'clock", "three o'clock"],
+      "answer": 2
+    },
+    {
+      "id": "y1-l04", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "I have two apples." }],
+      "promptJa": "いくつ あるかな？",
+      "choices": ["🍎", "🍎🍎", "🍌🍌"],
+      "alt": ["one apple", "two apples", "two bananas"],
+      "answer": 1
+    },
+    {
+      "id": "y1-l05", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "It's rainy today." }],
+      "promptJa": "きょうの てんきは？",
+      "choices": ["☀️", "⛄", "🌧️"],
+      "alt": ["sunny", "snowy", "rainy"],
+      "answer": 2
+    },
+    {
+      "id": "y1-l06", "skill": "listening", "format": "picture",
+      "audio": [{ "speaker": "N", "en": "I eat bread for breakfast." }],
+      "promptJa": "あさごはんは どれかな？",
+      "choices": ["🍞", "🍚", "🍜"],
+      "alt": ["bread", "rice", "noodles"],
+      "answer": 0
+    },
+    {
+      "id": "y1-l07", "skill": "listening", "format": "response",
+      "audio": [{ "speaker": "A", "en": "What color do you like?" }],
+      "promptJa": "こたえを えらぼう",
+      "choices": ["I like blue.", "I'm fine.", "Yes, I do."],
+      "answer": 0
+    },
+    {
+      "id": "y1-l08", "skill": "listening", "format": "response",
+      "audio": [{ "speaker": "A", "en": "How many pencils do you have?" }],
+      "promptJa": "こたえを えらぼう",
+      "choices": ["It's on the desk.", "I have five.", "Yes, I can."],
+      "answer": 1
+    },
+    {
+      "id": "y1-l09", "skill": "listening", "format": "response",
+      "audio": [{ "speaker": "A", "en": "Where is the library?" }],
+      "promptJa": "こたえを えらぼう",
+      "choices": ["It's sunny.", "It's Monday.", "Go straight. It's on your left."],
+      "answer": 2
+    },
+    {
+      "id": "y1-l10", "skill": "listening", "format": "response",
+      "audio": [{ "speaker": "A", "en": "Can you play soccer?" }],
+      "promptJa": "こたえを えらぼう",
+      "choices": ["Yes, I do.", "Yes, I can.", "Yes, I am."],
+      "answer": 1
+    }
+  ],
+  "passages": [],
+  "reading": [
+    {
+      "id": "y1-r01", "skill": "reading", "format": "vocab",
+      "prompt": "I like ( ). They are sweet.",
+      "promptJa": "あまい ものは どれかな？",
+      "choices": ["onions", "potatoes", "strawberries"],
+      "answer": 2
+    },
+    {
+      "id": "y1-r02", "skill": "reading", "format": "vocab",
+      "prompt": "( ) have long noses. They are big and gray.",
+      "promptJa": "どうぶつを えらぼう",
+      "choices": ["Elephants", "Rabbits", "Frogs"],
+      "answer": 0
+    },
+    {
+      "id": "y1-r03", "skill": "reading", "format": "vocab",
+      "prompt": "There are seven days in a ( ).",
+      "promptJa": "なのか で ひとつ",
+      "choices": ["month", "week", "year"],
+      "answer": 1
+    },
+    {
+      "id": "y1-r04", "skill": "reading", "format": "vocab",
+      "prompt": "It's cold outside. Please wear your ( ).",
+      "promptJa": "さむい ひに きる もの",
+      "choices": ["coat", "shorts", "sandals"],
+      "answer": 0
+    },
+    {
+      "id": "y1-r05", "skill": "reading", "format": "grammar",
+      "prompt": "( ) you like dogs?",
+      "promptJa": "しつもんの はじめの ことば",
+      "choices": ["Are", "Is", "Do"],
+      "answer": 2
+    },
+    {
+      "id": "y1-r06", "skill": "reading", "format": "grammar",
+      "prompt": "My sister ( ) tennis every Sunday.",
+      "promptJa": "「わたしの いもうと」が する こと",
+      "choices": ["play", "plays", "playing"],
+      "answer": 1
+    },
+    {
+      "id": "y1-r07", "skill": "reading", "format": "grammar",
+      "prompt": "I ( ) to the zoo yesterday.",
+      "promptJa": "yesterday に 気を つけよう",
+      "choices": ["go", "went", "goes"],
+      "answer": 1
+    },
+    {
+      "id": "y1-r08", "skill": "reading", "format": "conversation",
+      "prompt": "A: How are you?  B: ( )",
+      "promptJa": "あいさつの へんじ",
+      "choices": ["I'm great, thank you.", "I'm a student.", "It's blue."],
+      "answer": 0
+    },
+    {
+      "id": "y1-r09", "skill": "reading", "format": "conversation",
+      "prompt": "A: What time do you get up?  B: ( )",
+      "promptJa": "なんじに おきるかな？",
+      "choices": ["On Monday.", "In the park.", "At seven."],
+      "answer": 2
+    },
+    {
+      "id": "y1-r10", "skill": "reading", "format": "conversation",
+      "prompt": "A: Can I have some orange juice, please?  B: ( )",
+      "promptJa": "おみせの かいわ",
+      "choices": ["Here you are.", "Me too.", "See you."],
+      "answer": 0
+    }
+  ],
+  "speaking": {
+    "introEn": "Hi! I'm Birimo. Let's talk in English. Are you ready?",
+    "introJa": "やあ！ ビリモだよ。えいごで おはなし しよう。じゅんびは いい？",
+    "prompts": [
+      {
+        "id": "y1-s1", "kind": "intro",
+        "askEn": "Hello! Please tell me about you. What do you like?",
+        "askJa": "こんにちは！ きみの ことを おしえて。なにが すき？",
+        "keywords": ["i", "like"],
+        "minWords": 3,
+        "sample": "Hello! I like cats. I like soccer, too."
+      },
+      {
+        "id": "y1-s2", "kind": "question",
+        "askEn": "What food do you like?",
+        "askJa": "どんな たべものが すき？",
+        "keywords": ["i", "like"],
+        "minWords": 3,
+        "sample": "I like curry and rice."
+      },
+      {
+        "id": "y1-s3", "kind": "question",
+        "askEn": "What can you do?",
+        "askJa": "きみは なにが できる？",
+        "keywords": ["i", "can"],
+        "minWords": 3,
+        "sample": "I can swim. I can play the piano, too."
+      }
+    ]
+  },
+  "writing": {
+    "kind": "words",
+    "promptEn": "Look at the picture. Write the word.",
+    "promptJa": "絵を みて、えいごの ことばを 書こう。",
+    "items": [
+      { "emoji": "🐱", "answer": "cat", "hintJa": "どうぶつ（3もじ）" },
+      { "emoji": "☀️", "answer": "sun", "hintJa": "そらに ある もの（3もじ）" },
+      { "emoji": "🚌", "answer": "bus", "hintJa": "のりもの（3もじ）" }
+    ],
+    "sample": "cat / sun / bus"
+  }
+}

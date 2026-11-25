@@ -175,6 +175,7 @@ model User {
   gachaTickets   GachaTicket[]
   items          UserShopItem[]
   snapshots      MasterySnapshot[]
+  yearlyResults  YearlyTestResult[]
   friendsFrom    Friendship[]      @relation("FriendFrom")
   friendsTo      Friendship[]      @relation("FriendTo")
 
@@ -501,4 +502,30 @@ model AiGradingCache {
   feedbackJa String
   model      String
   createdAt  DateTime @default(now())
+}
+
+// -----------------------------------------------------------------------------
+// 年に1回の 力だめし（run7 P-yearly）
+// -----------------------------------------------------------------------------
+
+/// 力だめしの 結果（子どもごと・1 年に 1 回。おためしは 1 回だけ）。点数は 技能ごと 0〜100
+model YearlyTestResult {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  stage     Int /// 受けた ステージ（1〜5）
+  takenOn   String /// "YYYY-MM-DD"（APP_TIMEZONE基準）
+  listening Int
+  reading   Int
+  speaking  Int
+  writing   Int
+  total     Int /// 重みつきの 合計（YEARLY_RULES.weights）
+  band      String /// 推定 CEFR バンド "Pre-A1" 〜 "B2"
+  scaled    Int /// ちから スコア（ステージを こえて くらべる 合計）
+  gradedBy  String /// "rule" | "ai"
+  detail    Json /// 技能ごとの ちから スコア・1問ずつの 正誤・スピーキング/ライティングの 評価と こたえ（個人情報は ふせいだ もの）
+  createdAt DateTime @default(now())
+
+  @@unique([userId, takenOn])
+  @@index([userId, createdAt])
 }
