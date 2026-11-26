@@ -191,3 +191,30 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 120 本 problems 0
+
+## 台本ブロック: L331〜390（ワールド12・13）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L331〜390 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド12「えいごの王国」（L331〜360・ステージ1 さいご）: 30 レッスン・630 セグメント・205〜229 秒・英語 89〜91%（めやす 65〜92%、ja セグメント なし）。be どうし・he／she／they・ぶかつ・いちにちの じかん・がっこうの ばしょ・went／saw／ate／was の おもいで・who／what／when／where／why／how・パーティー・1 年の おもいで。
+  - ワールド13「あさひの港町」（L361〜390・ステージ2 はじまり）: 30 レッスン・620 セグメント・209〜226 秒・英語 97〜98%（めやす 88〜100%）。3 たんげんの s／es・doesn't・Does she ～?・always／usually／sometimes／never・みなとの しごと・Really? Me too! などの 会話の コツ。
+  - 合計 1,250 セグメント・約 221 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+  - L360 は ステージ1 の フィナーレ: 1 年を ほめて「Thank you for a wonderful year!」、さいごに「ビリモが まだ 地図に ない せかいの 地図を みつけた。あたらしい ぼうけんが はじまる！」（L361「A New Map」に つながる。ワールド名は いわない）。L390 は さいごに「Next is World 14, Bustling Market!」の 予告。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜330 → L1〜390 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 390 本・自動 810 本、合計 約 3,393 分＝56.5 時間、1 本ずつ 切り上げで 3,994 分）。
+
+### 例（みじかく）
+- L348 I Ate Curry and Rice.（W12・からだで）: 「Let's move! Set the table. Plate, cup, spoon! Now, Eat with a spoon. Scoop, scoop! じゅんびして、スプーンで たべて！」→「Speed challenge! Eat with a spoon! Fly like a bird! Set the table! Rub your tummy! Whew, I'm full!」
+- L368 He Doesn't Like Spiders（W13・クイズ）: 「Quiz time! A, He doesn't likes spiders. Or B, He doesn't like spiders. Careful! Think!」→「It's B! After doesn't, no S. You didn't fall into the spider trap. Amazing!」
+
+### きめたこと（判断の 記録）
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L331-340.json〜L381-390.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 まとめて とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W12-13.md を 新しく 作った。
+- **W13 は ステージ2 の はじまり**なので 話しかたを かえた: 英語の ねらい 94〜98%（下限 91%）、日本語は ことばの いみ 1〜2 語（「fisher は りょうし」）や 文法の ちいさな ヒント（「he・she なら s」「doesn't の あとは s なし」）と、wrap の 会話の あいての なまえ だけ。1 レッスン 2〜4 個の mix セグメント（W13 ぜんぶで 87／620）、のこりは en。黒板の 見出しは 英語（Goal / Words / Talk / Sounds / Let's move! / Say it! / Quiz / Answer / Today's wrap-up。日本語の 見出しは 0 を 機械で たしかめた）。
+- W12 は ステージ1 の さいご なので めやすの 上の ほう（88〜91%、上限 91.5%）に した。下書きで L338 が 91.6% に なった ので 日本語の たすけを 1 つ たした。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-331-390.json）。tmp-teacher/audit.ts に この 一覧も よませて、60 本の wrap の キャラ名と お金の ことばを 機械で しらべた（ずれ 0・お金の ことば 0）。
+- おもいで・りょこう（L346〜350・358）は「ほんとうの ことで なくても いいよ」、かぞくの 回（L366・367・370・387）は「かぞくでも ともだちでも、つくった ひとでも いいよ」と して、だれでも 参加 できる ように した。しごとは きめつけない いいかた。
+- 「がっこうの なまえは いわなくて いい」の ような 文は テストの 正規表現に ひっかかるので、手引きで さいしょから 禁止した（今回は ひっかかり 0）。
+- goal を 60 本 ぜんぶ 読みなおした。なおす ほど ぎこちない 英語は なかった。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0

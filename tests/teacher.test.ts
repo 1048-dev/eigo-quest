@@ -19,7 +19,7 @@ import {
 
 const ORDER: TeacherSegmentKind[] = ["greet", "goal", "words", "expressions", "phonics", "tpr", "repeat", "check", "wrap"];
 /** この run で 台本が そろって いるべき 範囲（フェーズが すすんだら のばす） */
-const REQUIRED_RANGE: [number, number] = [1, 330];
+const REQUIRED_RANGE: [number, number] = [1, 390];
 
 const withTeacher = LESSONS.filter((l) => l.teacher);
 
