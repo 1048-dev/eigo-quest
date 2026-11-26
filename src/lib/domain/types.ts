@@ -31,6 +31,34 @@ export interface LessonDef {
   conversation?: LessonConversation;
   /** 「きょうのまとめ」動画用のハイライト（省略可） */
   recap?: { highlightsJa: string[] };
+  /** run8: 3〜4 分の 授業の 台本（バーチャル先生 / 将来の アバター動画）。docs/teacher-plan.md。旧データには 無いので 省略可 */
+  teacher?: TeacherScript;
+}
+
+export type TeacherSegmentKind = "greet" | "goal" | "words" | "expressions" | "phonics" | "tpr" | "repeat" | "check" | "wrap";
+export type TeacherGesture = "wave" | "point" | "nod" | "clap" | "think" | "open_hands" | "mime";
+
+export interface TeacherSegment {
+  kind: TeacherSegmentKind;
+  /** say の 言語（mix = 日本語と 英語が まざる。プレイヤーは 言語ごとに 声を きりかえる） */
+  lang: "en" | "ja" | "mix";
+  /** Ms. Emma が 話す ことば（TTS の テキスト） */
+  say: string;
+  /** 日本語字幕（かならず つける） */
+  subtitleJa?: string;
+  /** 英語字幕（英語が 入る セグメントに つける） */
+  subtitleEn?: string;
+  /** 黒板（スライド）。items は レッスンの ことば・表現・フォニックスから えらぶ */
+  slide?: { title: string; items: string[]; emoji?: string };
+  gesture?: TeacherGesture;
+  /** 話した あとの「まち時間」（子どもが まねして いう / からだを うごかす）ミリ秒 */
+  pauseMs?: number;
+}
+
+export interface TeacherScript {
+  /** 予定の 長さ（分。3〜4） */
+  minutes: number;
+  segments: TeacherSegment[];
 }
 
 export interface ConversationLine {

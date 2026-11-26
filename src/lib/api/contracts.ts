@@ -203,6 +203,18 @@ const LessonStepSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.literal("speed_listening"), minutes: num(3), rounds: safeArray(z.object({ rate: num(1), questions: safeArray(QuestionSchema) })) }),
   z.object({ kind: z.literal("conversation"), minutes: num(3), character: z.enum(["haru", "riko", "kiko", "birimo"]).catch("haru"), maxTurns: num(6) }),
 ]);
+// run8: 3〜4 分の 先生の 台本（docs/teacher-plan.md）。こわれた セグメントは すてる
+const TeacherSegmentSchema = z.object({
+  kind: z.enum(["greet", "goal", "words", "expressions", "phonics", "tpr", "repeat", "check", "wrap"]),
+  lang: z.enum(["en", "ja", "mix"]).catch("mix"),
+  say: z.string().min(1),
+  subtitleJa: z.string().optional().catch(undefined),
+  subtitleEn: z.string().optional().catch(undefined),
+  slide: z.object({ title: str(), items: safeArray(z.string()), emoji: z.string().optional().catch(undefined) }).optional().catch(undefined),
+  gesture: z.enum(["wave", "point", "nod", "clap", "think", "open_hands", "mime"]).optional().catch(undefined),
+  pauseMs: z.number().finite().nonnegative().optional().catch(undefined),
+});
+export const TeacherScriptSchema = z.object({ minutes: num(3), segments: safeArray(TeacherSegmentSchema) });
 const LessonSchema = z.object({
   lessonNo: z.number(), world: num(1), title: str(), titleJa: str(),
   // run7: ステージ（1〜5）と レベル（CEFR の めやす）。古いデータには 無い
@@ -220,6 +232,7 @@ const LessonSchema = z.object({
       .catch({ goalJa: "", starterEn: "", targetExpressions: [] }),
   })).optional(),
   recap: nullable(z.object({ highlightsJa: safeArray(z.string()) })).optional(),
+  teacher: nullable(TeacherScriptSchema).optional(),
 });
 export const LessonResponseSchema = z.object({
   ...META,
