@@ -83,3 +83,27 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `npx tsx scripts/teacher-export.ts` 1,200 レッスン 約 8 秒 / `teacher-link.ts` の link・link-range・不正 URL・list・check を --dry で 確認
+
+## 台本ブロック: L31〜90（ワールド2・3）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L31〜90 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。L1〜30 と 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、そのレッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド2（L31〜60）: 30 レッスン・564 セグメント・195〜224 秒・英語 33〜44%（めやす 15〜50%）。日本語で 説明し、英語は お手本・合図・まねする 文。W1 より「Listen.」「Your turn!」「Great job!」など 教室の 英語を ふやした。
+  - ワールド3（L61〜90）: 30 レッスン・604 セグメント・191〜210 秒・英語 52〜64%（めやす 40〜70%）。まず やさしい 英語で いって、すぐ みじかい 日本語で たすける。英語だけの セグメントも ふえた。
+  - 合計 1,168 セグメント・約 203 分。まとめの 回（L35・40・45・50・55・60・65・70・75・80・85・90）は ユニットの 文型を おなじ ながれで ふりかえる。
+  - さいごは かならず その レッスンの 会話の あいて（pickConversationPartner と 同じ キャラ）へ「このあと ～と おはなし してみてね」と つなぐ。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜30 → L1〜90 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 90 本・自動 1,110 本、合計 約 2,990 分）。
+
+### 例（みじかく）
+- L41 Can It Fly?（W2・会話）: 「おにわで キコちゃんが なにかを みつけたよ。きいてね。Look! A butterfly! Can it fly? Yes, it can. Look at its wings! Wow! It can fly high!」
+- L78 Mixing Colors（W3・まねして）: 「Repeat after me. まねしてね。It's orange!」→「Red and yellow make orange.」→「Your turn. あなたなら、なにいろと なにいろを まぜて みたい？ Let's mix の あとに、すきな 2つの いろを いれてね。」
+
+### きめたこと（判断の 記録）
+- 60 本を 10 本ずつ 6 つに わけて 下書き（tmp-teacher/L031-040.json など。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で とりこんだ（1 つでも NG なら 書かない。すでに 台本が ある レッスンは とばすので やりなおしても 安全）。結果は 60 本 ぜんぶ OK。
+- 会話の あいては pickConversationPartner で レッスンごとに 計算して 下書きに わたした（会話ステップの キャラと 台本の さいごの ことばを そろえる）。
+- とりこんだ あと goal を ぜんぶ 読みなおし、英語が ぎこちない 2 本を なおした（L69「And share with, Here's my jacket.」→「And be kind. Say, here's my jacket.」、L78「Listen to, red and yellow…」→「Mix colors and say, it's orange! Red and yellow make orange.」）。
+- 長さは どれも 190 秒 前後〜225 秒に おさめた。195 秒 未満の 回は minutes を 3、それ以外は 3.5 に した（0.5 きざみで 近い 値）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
