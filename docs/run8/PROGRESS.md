@@ -107,3 +107,29 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L91〜150（ワールド4・5）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L91〜150 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）で、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド4（L91〜120）: 30 レッスン・620 セグメント・190〜213 秒・英語 53〜63%（めやす 40〜70%）。ABC・カード・クイズ・なりきり・ようすの ことば・はっぴょう。
+  - ワールド5（L121〜150）: 30 レッスン・631 セグメント・191〜221 秒・英語 54〜64%。あいさつ・てんき・ようび・じこく・ぶんぼうぐ・いちにちの ようす。
+  - 合計 1,251 セグメント・約 204 分。まとめの 回（L95・100・105・110・115・120・125・130・135・140・145〜150）は ユニットの 文型を おなじ ながれで ふりかえる。L120・L150 は ワールド全体の まとめで、さいごに つぎの ワールドの 予告を ひとこと 入れた。
+  - W3 と 同じ「まず やさしい 英語 → すぐ みじかい 日本語の たすけ」。合図・お手本・ほめる・まねする 文は 英語だけの セグメントを ふやした。
+  - じぶんの なまえを いう 練習（L116・118・120・125 など）には「ニックネームでも いいよ」を 入れた。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜90 → L1〜150 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 150 本・自動 1,050 本、合計 約 3,067 分＝51.1 時間、1 本ずつ 切り上げで 3,754 分）。
+
+### 例（みじかく）
+- L99 A Card for You!（W4・会話）: 「On the snowy slope, Kiko says, Birimo! This is for you. Birimo says, Wow! A sled card! Thank you. I like it! キコちゃんが そりの カードを プレゼント したよ。」→「わたす ときは This is for you、もらったら Thank you、おれいを いわれたら You're welcome。」
+- L129 Hot Day, Cold Day（W5・からだで）: 「It's hot! Swim like a fish. Wipe your face. うでを まわして すいすい およいで。」→「Speed challenge! Click! It's hot! Swim like a fish! Click! It's cold! Rub your hands! …」
+
+### きめたこと（判断の 記録）
+- L31〜90 と 同じく、10 本ずつ 6 つの 下書き（tmp-teacher/L091-100.json など。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で とりこんだ。60 本 ぜんぶ OK（problems 0）。下書きの 手引き tmp-teacher/WRITER-BRIEF.md を W4・5 むけに なおした（見本は W3 の 台本、英語の ねらいは 52〜64%。W5 は W4 より すこし 英語を 多めに）。
+- 会話の あいては pickConversationPartner で 計算した（tmp-teacher/partners-91-150.json）。とりこむ まえに 全 60 本の wrap の キャラ名を 機械で しらべ、1 本（L138 が ハルくんに なっていた → リコちゃん）を なおした。
+- 下書きの 段階で 英語が 73〜77% に なって めやす（70%）を こえた ブロックが 3 つ あった → 日本語の たすけを ふやして 53〜64% に した（66% の 手前で とめる）。
+- goal を 60 本 ぜんぶ 読みなおした。ぎこちない 英語は なかったので そのまま。
+- minutes は 195 秒 未満の 回（L92・96・97・98・113・123・126）を 3、それ以外を 3.5 に した。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
