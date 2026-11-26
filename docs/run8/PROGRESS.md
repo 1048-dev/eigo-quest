@@ -248,3 +248,29 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 120 本 problems 0
+
+## 台本ブロック: L511〜570（ワールド18・19）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L511〜570 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド18「こだまの谷」（L511〜540）: 30 レッスン・611 セグメント・204〜224 秒・英語 97〜98%（ステージ2 めやす 88〜100%）。比較級・最上級（taller／the tallest）・more／most・better／best・as ～ as／not as ～ as・Which do you like better?・I like A better because ～・I think so, too。こだまの せいを 元気に する おはなし（L526・536・537）は こだまを つかった くりかえし練習に。
+  - ワールド19「からくり工房」（L541〜570）: 30 レッスン・629 セグメント・206〜226 秒・英語 97〜98%。It's used for ～ing・First／Next／Then／Finally・Like this?・have to／don't have to・must／must not・should・May I ～?・It's your turn・That's not fair!・by ～ing・reuse。
+  - 合計 1,240 セグメント・約 218 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。L540 は さいごに「Next is World 19, Gadget Workshop!」、L570 は「Next is World 20, Festival Island!」の 予告を ひとこと。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜510 → L1〜570 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 570 本・自動 630 本、合計 約 3,629 分＝60.5 時間、1 本ずつ 切り上げで 4,174 分）。
+
+### 例（みじかく）
+- L522 Not as Fast as a Horse（W18・からだで）: 「Let's move! Get ready, set, go! Now, Run in place. Knees up, up, up! … Walk slowly like a turtle. Slow... slower!」→ クイズ「The horse wins the race. A, I'm as fast as a horse. B, I'm not as fast as a horse.」→「It's B! … But you never give up. Super job!」（じぶんを うまと くらべて わらえる 形に し、子どもどうしは くらべない）
+- L552 You Must Not Touch It（W19・会話）: 「Birimo says, Ooh, what's this shiny box? Can I touch it? I say, Stop! You must not touch it. It's hot.」→「Must not is a strong no. … Hot or sharp things? Always ask a grown-up.」→ クイズ「The oven is hot. A, You must touch it. B, You must not touch it.」
+
+### きめたこと（判断の 記録）
+- 前回まで（L1〜510）の 台本が そろって いる ことを たしかめ、world-18・19 は 台本 0 本 だったので 60 本 ぜんぶ 新しく 書いた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L511-520.json〜L561-570.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 まとめて とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W18-19.md を 新しく 作った（ステージ2: 英語 94〜98%、下限 91%、英語の 見出し、日本語は「くらべる ときは er」「しなきゃ は have to」「だめ は must not」の ような ちいさな ヒントと wrap の なまえ だけ）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-511-570.json）。tmp-teacher/audit.ts に この 一覧を たして、60 本の wrap の キャラ名と お金の ことばを 機械で しらべた（ずれ 0・お金の ことば 0）。日本語の 見出し・paw・cent も 機械で しらべて 0。
+- W18 は 子どもの からだや のうりょくを 人と くらべて きずつける 文を 禁止（くらべるのは どうぶつ・木・川・かばん・絵）。すきな ものは どれを えらんでも OK（Dogs or cats? Both are great!）。どうぶつの 事実は かんたんで ただしい ものだけ（チーター・キリン・シロナガスクジラ）。
+- W19 は 安全を だいじに: はさみ・かなづち・あつい きかいは「Ask a grown-up」（おとなと いっしょに）を かならず いれ、さわらせない。しっぱいは「Let's try again!」で まえむきに。発明は 一般の もの（telephone など）で 会社名・人名は なし。
+- L550 の レッスンデータに「center」が あるが「cent」を ふくむ ので、話す ときは「middle」に して スライドにも 出さなかった。L543・L570 の「ハンドル」は「とって」に した。
+- L523 は 204 秒（めやす 205〜225 秒より 1 秒 みじかい が 許容 180〜240 秒の なか）なので そのまま。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
