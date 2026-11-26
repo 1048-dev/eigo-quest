@@ -434,3 +434,32 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L991〜1050（ワールド34・35）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L991〜1050 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。どちらも ステージ4 で 英語だけ（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。
+  - ワールド34「つばさの空港」（L991〜1020）: 30 レッスン・609 セグメント・205〜225 秒・英語 100%。チェックイン・Window or Aisle?・Flight 205 is now boarding at gate 23B・Do you know where gate 23B is?・機内・入国審査（What's the purpose of your visit? ― Sightseeing.）・乗りつぎ・両替・ホテル（I have a reservation / Would you mind ～ing? / Could you recommend ～?）・トラブル（My suitcase didn't arrive / I'm afraid ～ is broken / Could you ～ instead? / I lost my passport）・まち歩き・レストラン・lift と elevator・美術館の チケット・ホテルへの メール・パンフレット・旅行記・ふりかえり。L1000 は「Lesson one thousand! You did it!」と 1,000 回目を おいわい。L1020 は「Next is World thirty-five, the Hall of Wisdom!」の 予告。
+  - ワールド35「ちえの議事堂」（L1021〜1050）: 30 レッスン・630 セグメント・207〜227 秒・英語 100%。こども議会・Should students wear uniforms?・On the one hand, ～. On the other hand, ～.・It's not fair if ～ / Everyone should have a chance to try・Stop it. That's not kind.・Do you want to join us?・Children have the right to ～ / We are responsible for ～・I suggest that we ～ / How about ～ing? / Let's find a compromise・投票と 報告・提案・野生動物と ペット・プラスチックを へらす・ステージ4 の ふりかえり（意見・説明・ていねいな おねがい）・2 つの 立場の 文章・Dear Mayor の 手紙・討論の 練習。L1050 は「You finished Stage 4! Amazing!」と おいわいし「Next is World thirty-six, the Deep Sea City!」の 予告。
+  - 合計 1,239 セグメント・約 220 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+- tests/teacher.test.ts に EXTRA_RANGES（[991, 1050]）と「L991〜1050 にも 台本が ある」テストを たした（REQUIRED_RANGE の 行は さわらず L1〜930 の まま。docs/teacher-plan.md にも 一言）。
+- exports/teacher/summary.csv を 作りなおした（台本 990 本・自動 210 本、合計 約 4,127 分＝68.8 時間、1 本ずつ 切り上げで 4,592 分）。
+
+### 例（みじかく）
+- L1000 Lesson 1000 Welcome!（W34）: 「Bump! We land at six oh five. Haru shouts, We've arrived! This is our one thousandth lesson!」→ フォニックス「Binocular hands. Vis means see. Visit. Go to see a place. Visa. … Flight eleven twenty. Two numbers at a time.」→ からだで「Jump and cheer! One thousand!」→ さいご「Lesson one thousand! You did it!」
+- L1028 Standing Up for a Friend（W35）: 「Kiko says calmly, Stop it. That's not kind. Riko stands next to Tom. Are you OK? I'll stay with you.」→「Calm words, a kind friend, and a grown-up you trust. Never fight.」→ フォニックス「Inter means between. Hands meet in the middle. … Co means together. Hold hands.」→ クイズ「A, shout and fight. B, say Stop it calmly and tell a teacher.」
+
+### きめたこと（判断の 記録）
+- たのまれた 範囲は L991〜1050。L931〜990（ワールド32・33）は まだ 台本 0 本で、作業ちゅうらしい 下書き（tmp-teacher/L931-940.json など）が あった ので、べつの 作業と かさならない ように 手を つけなかった。そのため テストは REQUIRED_RANGE（L1〜930）を のばさず、べつに EXTRA_RANGES を たした（L931〜990 が そろったら REQUIRED_RANGE を L1〜1050 に して EXTRA_RANGES は けして よい）。コミットも じぶんの ファイルだけ 名前を 指定して 入れた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L991-1000.json〜L1041-1050.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W34-35.md を 新しく 作った。会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-991-1050.json、audit.ts にも たした）。60 本で wrap の あいての ずれ 0。
+- フォニックスは docs/curriculum-6year.md の 予定ではなく、レッスンの データ（phonics.tipJa）に あわせた（W34: 便名・時刻・座席・ゲートの よみかた → vis → 2 つ ならぶ 文字 → -ize → イギリス英語と アメリカ英語 → まとめ。W35: -ity → inter・co → 対比の 強勢 → ていねいな ことば → 語根の まとめ → まとめ）。数は say では ことばで（Flight two oh five・gate twenty-three B・six oh five）、スライドは データの かたち。
+- L999 両替: データには dollars が あるが、テストで dollar・cent が きんし なので say・字幕・スライドに 入れず、「yen」「bills and coins」「Ten, twenty, thirty!」と した。お金は おとなと いっしょに かぞえる。
+- address（L1001・L1016・L1047）: 英語の 単語 address は つづりの れいとして つかうが、字幕の「じゅうしょ」は テストの きんし語 なので「アドレス」に した。子どもに じゅうしょを きく 文は なし。名前の 練習は つくった 名前（Captain Pancake・Sora など）。
+- パスポート・スーツケースの トラブル（L1006・L1009）は いつも「おとなと いっしょに・スタッフに きく・おちついて」。いじわるを 見た とき（L1028）は「Stop it. That's not kind.」「友だちの そばに いる」「おとなに いう」「けんかは しない」で、こわく しない。イギリス英語と アメリカ英語は「Both are correct English!」で どちらが よい とは いわない。
+- データに 性別の ない キャラ（Leo など）は he / she を つかわず 名前で。Amara・Olive・Mayor Hart は データどおり she。
+- tmp-teacher/audit.ts の「お金の ことば」は L1013 の 字幕「アクセント」の「セント」に 反応した だけ（テストの きんしは 英語の dollar・cent だけ なので 問題なし）。
+- L1029・L1038〜1040 などは 226〜227 秒で めやす 205〜225 秒を すこし こえるが、上限 230 秒・許容 180〜240 秒の なか なので そのまま。
+- 各 下書きの 書き手が テストの ルールを じぶんで 確認し（L1031〜1040 の 書き手は さいごに 自作チェックが うごかせなかったが、merge の --strict と vitest で 確認ずみ）、ぜんぶ vitest でも とおった。L999・L1000・L1028・L1050 は 要所を、L1013 は 全文を 読んだ。ほかは ぬきとりで（全 60 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,577 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0

@@ -21,6 +21,9 @@ const ORDER: TeacherSegmentKind[] = ["greet", "goal", "words", "expressions", "p
 /** この run で 台本が そろって いるべき 範囲（フェーズが すすんだら のばす） */
 const REQUIRED_RANGE: [number, number] = [1, 930];
 
+/** REQUIRED_RANGE の そとで 先に 台本を 書いた ブロック（REQUIRED_RANGE が おいついたら けしてよい） */
+const EXTRA_RANGES: [number, number][] = [[991, 1050]];
+
 const withTeacher = LESSONS.filter((l) => l.teacher);
 
 describe("timing helpers", () => {
@@ -39,6 +42,11 @@ describe("timing helpers", () => {
 describe("lesson.teacher（授業台本）", () => {
   it(`L${REQUIRED_RANGE[0]}〜${REQUIRED_RANGE[1]} に 台本が ある`, () => {
     const missing = LESSONS.filter((l) => l.lessonNo >= REQUIRED_RANGE[0] && l.lessonNo <= REQUIRED_RANGE[1] && !l.teacher).map((l) => l.lessonNo);
+    expect(missing).toEqual([]);
+  });
+
+  it.each(EXTRA_RANGES)("L%i〜%i にも 台本が ある", (from, to) => {
+    const missing = LESSONS.filter((l) => l.lessonNo >= from && l.lessonNo <= to && !l.teacher).map((l) => l.lessonNo);
     expect(missing).toEqual([]);
   });
 
