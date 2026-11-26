@@ -133,3 +133,30 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L151〜210（ワールド6・7）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L151〜210 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）で、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド6（L151〜180）: 30 レッスン・630 セグメント・190〜222 秒・英語 60〜66%（めやす 40〜70%）。こもじ・まちの かんばん・カフェと パフェの ちゅうもん・がっこうの へやと みちあんない・いちにちの ようす・First／Then の おはなし。
+  - ワールド7（L181〜210）: 30 レッスン・628 セグメント・192〜225 秒・英語 80〜84%（めやす 65〜92%）。ja だけの セグメントは 0（すべて en か mix）。じこしょうかい・つづり・すきな もの・つき と たんじょうび・きょうか と じかんわり・can／he／she・しごと。
+  - 合計 1,258 セグメント・約 209 分。まとめの 回（L155・160・165・170・175・180・185・190・195・200・205〜210）は ユニットの 文型を おなじ ながれで ふりかえる。L180・L210 は ワールド全体の まとめで、さいごに つぎの ワールドの 予告を ひとこと 入れた。
+  - W7 は「やさしい 英語が 中心、日本語は みじかい たすけ（subject は きょうか だよ など）」に きりかえた。字幕（subtitleJa）は すべての セグメントに ある。
+  - なまえ・つづり・たんじょうびを いう 練習には「ニックネームでも いいよ」「ほんとうの 日で なくても いいよ」を 入れた。できない ことを いう 回（L196〜200）は「No, I can't. But I can ～.」の ように かならず できる ことを そえ、だれも せめない。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜150 → L1〜210 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 210 本・自動 990 本、合計 約 3,144 分＝52.4 時間、1 本ずつ 切り上げで 3,814 分）。
+
+### 例（みじかく）
+- L163 Go Straight!（W6・からだで）: 「Stand up! Let's walk to the art room. Go straight. まえに 3ぽ。Turn right. みぎを むいて。」→「Speed challenge! ひっかけに ちゅうい！ Turn left! Turn right! Go straight! Turn right! Go up the stairs! Stop!」
+- L198 She Can Play the Piano（W7・会話）: 「Kiko says, This is Riko. She can play the piano. Haru asks, Cool! Can she dance? Kiko says, Yes, she can. And she can cook! リコちゃん、すごいね！」→「Here's the point. For a girl, use she. … he と she を つかいわけよう。」
+
+### きめたこと（判断の 記録）
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L151-160.json など。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で とりこんだ。60 本 ぜんぶ OK（problems 0）。下書きの 手引き tmp-teacher/WRITER-BRIEF.md を W6・7 むけに なおした（見本は W5 の 台本、英語の ねらいは W6 58〜66%・W7 75〜85%、W7 は ja セグメント 禁止）。
+- 会話の あいては pickConversationPartner で 計算した（tmp-teacher/partners.ts を 範囲を 引数で わたせる ように して tmp-teacher/partners-151-210.json）。とりこんだ あと tmp-teacher/audit.ts で 全 60 本の wrap に 正しい キャラ名が あるかを 機械で しらべた（ずれ 0）。
+- テストの「ほんとうの なまえを たずねない」チェックに、L176・L177 の「がっこうの なまえは いわなくて OK／いいよ」（いわなくて よい と いう 安全な 文）が ひっかかった → 「へやの なまえで OK。」「じぶんの する ことで いってね。」に いいかえた（テストは ゆるめない）。
+- お金の ことばの チェックで L201 の「ハンドル」が「ドル」に ひっかかったが、まちがいの 検出なので そのまま（テストの 正規表現は 英語の dollar／cent だけ）。
+- goal を 60 本 ぜんぶ 読みなおした。なおす ほど ぎこちない 英語は なかった。
+- minutes は 195 秒 未満の 回（L156・157・158・186）を 3、それ以外を 3.5 に した。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
