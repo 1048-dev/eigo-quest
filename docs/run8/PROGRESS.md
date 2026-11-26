@@ -353,3 +353,29 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L751〜810（ワールド26・27）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L751〜810 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。どちらも ステージ3 なので 英語だけ（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。
+  - ワールド26「こだまの げきじょう」（L751〜780）: 30 レッスン・620 セグメント・205〜226 秒・英語 100%。Welcome to ～!・I enjoy ～ing・I want to be ～ / Which role do you want?・オーディション（I'm good at ～ing / I'm not good at ～ing, but ～）・はいやく（～ plays the ～ / Congratulations!）・-ed と -ing の きもち（nervous・tired / tiring・excited / exciting・bored / boring・I feel proud of myself）・ジェスチャーゲーム（You look ～）・げきづくり（We decided to ～ / Suddenly / Luckily / They tried to ～, but ～ / あらすじ）・こえの だしかた（Say it with feeling / Speak louder / だいじな ことばを つよく / Enter from the left）・衣装と 小道具・リハーサル・Break a leg!・Showtime!・You were amazing!・ふりかえり・みじかい 台本・ストーリーサークル・ふりかえり（L779・L780）。L780 は「Next is World 27, the Village of Springs!」の 予告。
+  - ワールド27「いずみの 村」（L781〜810）: 30 レッスン・630 セグメント・208〜225 秒・英語 100%。What's wrong? / I have a ～・My stomach hurts・クリニック（How long have you had ～? / Since ～）・Get well soon!・How often do you ～?・生活リズム・Healthy habits・スクリーンタイム・アンケート（Most people ～）・現在完了の 継続（for / since：I've lived here for ～ / since I was five / How long have you known her?）・should / shouldn't・Why don't you ～?・おなやみ相談・きもちと おちつく 方法（When I'm worried / Take a deep breath / It's OK to feel sad / Kind words）・おちつく プラン・けんこう 1しゅうかん プラン・けんこう クイズ・アドバイスの 手紙・ふりかえり（L809・L810）。L800 は「Lesson 800!」の おいわい。L810 は「Next is World 28, the Rainbow Bridge!」の 予告。
+  - 合計 1,250 セグメント・約 217 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜750 → L1〜810 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 810 本・自動 390 本、合計 約 3,927 分＝65.5 時間、1 本ずつ 切り上げで 4,414 分）。
+
+### 例（みじかく）
+- L757 Excited or Exciting?（W26）: 「Haru says, The play is exciting. I'm excited! And Birimo says, I'm exciting, too! … Kiko helps him. Birimo, you mean, I'm excited.」→「Ed is how I feel. Ing is the thing that makes me feel it.」→ からだで「Jump up and down. You're excited! … Lean in and listen. It's interesting!」→ クイズ「Birimo is ready for the show. What does he say? A, I'm exciting! B, I'm excited!」
+- L793 How Long Have You Known Her?（W27）: 「Kiko asks, Haru, how long have you known Riko? Haru says, I've known her since kindergarten. Riko says, We've been friends for five years.」→「Since plus the start. For plus how long.」→ からだで「Put your feet in the warm water. Ooh! Now, wiggle your toes.」→ クイズ「A, We've been friends for five years. B, We've been friends since five years.」
+
+### きめたこと（判断の 記録）
+- 前回まで（L1〜750）の 台本が そろって いる ことを たしかめ、world-26・27 は 台本 0 本 だったので 60 本 ぜんぶ 新しく 書いた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L751-760.json〜L801-810.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W26-27.md を 新しく 作った（どちらも ステージ3: 英語だけ）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-751-810.json）。tmp-teacher/audit.ts に この 一覧を たした。60 本で wrap の あいての ずれ 0、お金の ことば 0。
+- W26: フォニックスは 文字ではなく「こえ」が テーマ（Really?! ↗ / Oh, really… ↘ を 手の やじるし、" , … ! で 間を とる、おおもじの ことばを つよく いって 手を たたく）。記号の focus（" や … ）は データの まま スライドに のせた。-ed / -ing は「Ed is how I feel. Ing is the thing that makes me feel it.」で 統一。にがてな ことが あっても いい・みんなに やくが ある・だれも わらわれない。ドラゴンは やさしい／おもしろい ドラゴン。Break a leg! は「げきじょうの Good luck! で、だれも けがは しない」と 説明。L754 の データの 文「Walk to the center of the stage.」は スライドに そのまま（テストは cent/cents だけ きんし）、口では middle と いう。
+- W27: ぐあいが わるい ときは おとな（おうちの ひと・先生・おいしゃさん）に いう。くすりの 名前や 量は 書かない。ダイエット・体重・からだの 見た目の 話は しない（たべものは「ゆっくり たべて、おなかいっぱいで やめる」）。スクリーンタイムは せめずに「たのしい。でも 休けいは 目と からだに いい」。どんな きもちも OK、しんぱいな ときは 深呼吸・しんらい できる ひとに はなす。家族の かたちは きめつけない（L801 は おばあちゃん・先生・ともだちも 例に）。Dr. Fern・Toto は データに 性別が ないので he / she を つかわない。for は よわく みじかく（/fər/）、silent letter は「the letter is sleeping, shh!」。
+- L761〜770 は 223〜226 秒で めやす 205〜225 秒を すこし こえるものが あるが、上限 230 秒・許容 180〜240 秒の なか なので そのまま。
+- 各 下書きの 書き手が テストの ルールを じぶんで 確認し、ぜんぶ vitest でも とおった。会話・フォニックス・TPR・クイズは いくつか ぬきとりで 読んだ（全 60 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
