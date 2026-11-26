@@ -379,3 +379,29 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L811〜870（ワールド28・29）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L811〜870 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。W28 は ステージ3 の さいご、W29 は ステージ4 の はじまり。どちらも 英語だけ（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。
+  - ワールド28「にじの架け橋」（L811〜840）: 30 レッスン・628 セグメント・210〜226 秒・英語 100%。This bridge connects many countries・In Japan, we ～. How about in your country?・That's interesting! We do it differently.・In both countries, people ～・It's a kind of ～ / It's used for ～ / You can see it in spring・Let me tell you about ～・日本紹介ビデオ・I think ～ because ～ / In my opinion / Do you agree? / First, Second・ペンパルと ビデオ通話（It's nice to finally see you! / Could you say that again?）・おくりもの・ステージ3 の ふりかえり（物語と推理・経験・説明と アドバイス）・できるように なった こと・友情スピーチと リハーサル・友情フェスティバル・手紙・世界への 質問・日本の 紹介文・ふりかえり（L839・L840）。L840 は「You finished Stage 3! Amazing!」と おいわいし「Next is World 29, the Lighthouse of Ideas!」の 予告。
+  - ワールド29「かんがえる灯台」（L841〜870）: 30 レッスン・628 セグメント・212〜228 秒・英語 100%。This light shines when people share ideas・I think ～ because ～ / For example / One reason is ～. Another reason is ～・I agree with you / I see your point, but ～ / I'm not sure about that / I partly agree / I disagree because ～・What do you think? / Let's hear from everyone / Can I say something? ― Sure, go ahead / Let's vote・クラス会議・What do you mean by ～? / So you mean ～? / Could you give me an example? / That's a good question. Let me think・フォローアップ質問の インタビュー・Fact or Opinion? / It's just my opinion, but ～ / Is that true? / 広告の ことば・事実チェック隊・ミニ討論（しゅくだい・学校の ペット）・意見文・ふりかえり（L869・L870）。L870 は「Next is World 30!」だけ（つぎの ワールドの なまえは つくらない）。
+  - 合計 1,256 セグメント・約 222 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜810 → L1〜870 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 870 本・自動 330 本、合計 約 3,998 分＝66.6 時間、1 本ずつ 切り上げで 4,474 分）。
+
+### 例（みじかく）
+- L816 It's a Kind of Rice Ball（W28）: 「Birimo plays Mateo. What's that? Kiko says, Onigiri is a kind of rice ball. … Haru says, It's salty and delicious. Try one!」→ フォニックス「English speakers make one part strong. SU-shi. TO-fu. BEN-to. … tem-PU-ra.」→ からだで「Make a rice ball with your hands. Squeeze, turn, squeeze. Now wrap it in seaweed.」→ クイズ「A, Onigiri is a kind of rice ball. B, Onigiri is a kind of fish.」
+- L847 I See Your Point, But…（W29）: 「Two seagulls, Gus and Gale, are arguing. Let's help them talk kindly.」→「First, I see your point. Then, but I think. Different ideas are OK!」→ フォニックス「Dict means say. Hand from your mouth! Prediction. Dictation. Verdict.」→ クイズ「Which one is kinder? A, No! You're wrong! B, I see your point, but I think the beach is more fun.」
+
+### きめたこと（判断の 記録）
+- 前回まで（L1〜810）の 台本が そろって いる ことを たしかめ、world-28・29 は 台本 0 本 だったので 60 本 ぜんぶ 新しく 書いた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L811-820.json〜L861-870.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W28-29.md を 新しく 作った（ステージ3 の さいご ＋ ステージ4 の はじめ。どちらも 英語だけ）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-811-870.json）。tmp-teacher/audit.ts に この 一覧を たした。60 本で wrap の あいての ずれ 0、お金の ことば 0。
+- W28: phonics.sounds が カタカナ なので、英語だけの スライドには のせず focus / words だけ。カタカナ語との ちがいは「In English, one part is strong」（EN-er-gy・ka-ra-O-ke・tsu-NA-mi）と 手を たたいて。sushi・origami・onigiri など 英語に なった 日本語は say に ローマ字で 入れて よい ことに した（かな・漢字は 0）。文化くらべは「ちがいは おもしろい」で、どちらが よい とは いわない。国・たべもの・習慣は データの ものだけ（ステレオタイプは つくらない）。tsunami は「大きな なみの ことば・おとなと たかい ところへ」で こわく しない。データの「じゅうしょは いわない」系の セリフ（L819・L836）は テストの きんし語に あたる ので つかわず、「すきな まちで いい、つくった まちでも いい」と した。つながる 音は ローマ字風に（meechu・coodju・kee-pin-touch）。
+- W29: どんな 意見も OK、反対する ときは やさしく（I see your point, but…）、きく ことも 話す ことと 同じくらい だいじ。広告は データの つくった おもちゃ・おかしだけ（ブランドは なし）。L864 の データの ねだん「five hundred shells」は 円では ない ので say には 入れなかった。事実は「本で しらべる・おとなに きく」で たしかめられる もの。データに 性別が ない キャラ（Captain Pell・カモメの Gus と Gale）は he / she を つかわない。弱形（can・to・for・and）は ローマ字風（kun・tuh・fer）で、スライドは データの 発音記号。
+- L819・L826・L827・L866・L867・L869・L870 は 226〜228 秒で めやす 205〜225 秒を すこし こえるが、上限 230 秒・許容 180〜240 秒の なか なので そのまま。
+- 各 下書きの 書き手が テストの ルールを じぶんで 確認し、ぜんぶ vitest でも とおった。L816・L847 は 全文を 読み、ほかは ぬきとりで 読んだ（全 60 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
