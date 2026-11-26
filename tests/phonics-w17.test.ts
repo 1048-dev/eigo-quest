@@ -8,7 +8,8 @@
  */
 import { describe, expect, it } from "vitest";
 import { getLesson, itemsOfLesson } from "@/lib/curriculum";
-import { makeQuestion, seededRng, w17Question } from "@/lib/curriculum/questions";
+import { makeQuestion, seededRng } from "@/lib/curriculum/questions";
+import { w17Question } from "@/lib/curriculum/phonicsQ/w17";
 import { endingSpelling, homophoneOf, orSpelling, willContraction } from "@/lib/curriculum/w17Phonics";
 import type { LearningItemDef } from "@/lib/domain/types";
 

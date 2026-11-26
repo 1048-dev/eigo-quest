@@ -196,7 +196,7 @@ const LessonStepSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.literal("teacher_video"), minutes: num(3), script: str(), videoUrl: z.string().optional() }),
   z.object({ kind: z.literal("flashcards"), minutes: num(4), itemIds: safeArray(z.string()) }),
   z.object({ kind: z.literal("tpr"), minutes: num(4), itemIds: safeArray(z.string()) }),
-  z.object({ kind: z.literal("phonics"), minutes: num(5), focus: safeArray(z.string()), words: safeArray(z.string()), tipJa: str() }),
+  z.object({ kind: z.literal("phonics"), minutes: num(5), focus: safeArray(z.string()), words: safeArray(z.string()), tipJa: str(), examples: z.array(z.string()).optional() }),
   z.object({ kind: z.literal("school_expressions"), minutes: num(4), itemIds: safeArray(z.string()), testPoints: safeArray(z.string()) }),
   z.object({ kind: z.literal("pronunciation"), minutes: num(3), itemIds: safeArray(z.string()) }),
   z.object({ kind: z.literal("quiz"), minutes: num(4), questions: safeArray(QuestionSchema) }),

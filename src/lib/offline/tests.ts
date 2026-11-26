@@ -4,6 +4,7 @@
  */
 import { ensureLessonsLoaded, getAssessment } from "@/lib/curriculum";
 import { buildTestQuestions, hashSeed, toPublic, type Question } from "@/lib/curriculum/questions";
+import { ensurePhonicsLoaded } from "@/lib/curriculum/phonicsWorlds";
 import { CURRICULUM_RULES } from "@/lib/domain/config";
 import { rewardForTest } from "@/lib/domain/coins";
 import type { AssessmentDef } from "@/lib/domain/types";
@@ -26,14 +27,19 @@ function assessmentOf(id: string): AssessmentDef | undefined {
  */
 export async function loadOfflineTestStart(id: string, opts: { arenaMode?: ArenaMode }): Promise<TestStartResponse> {
   const a = assessmentOf(id);
-  if (a) await ensureLessonsLoaded(a.rangeStart, a.rangeEnd);
+  if (a) await loadRange(a);
   return offlineTestStart(id, opts);
 }
 
 export async function loadOfflineTestSubmit(id: string, body: { seed?: unknown; arenaMode?: ArenaMode; answers?: unknown }): Promise<TestSubmitResponse> {
   const a = assessmentOf(id);
-  if (a) await ensureLessonsLoaded(a.rangeStart, a.rangeEnd);
+  if (a) await loadRange(a);
   return offlineTestSubmit(id, body);
+}
+
+/** テストの 範囲の レッスンと、その 範囲の フォニックス問題（ワールド13〜範囲の さいごの ワールド。run8）を 読む */
+function loadRange(a: AssessmentDef): Promise<unknown> {
+  return Promise.all([ensureLessonsLoaded(a.rangeStart, a.rangeEnd), ensurePhonicsLoaded(a.rangeEnd)]);
 }
 
 export function offlineTestStart(id: string, opts: { arenaMode?: ArenaMode }): TestStartResponse {

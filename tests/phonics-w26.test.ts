@@ -10,7 +10,8 @@
 import { describe, expect, it } from "vitest";
 import { LESSONS, getLesson, itemsOfLesson } from "@/lib/curriculum";
 import { focusExampleWord, focusLabel } from "@/lib/curriculum/phonicsButtons";
-import { makeQuestion, seededRng, w26Question } from "@/lib/curriculum/questions";
+import { makeQuestion, seededRng } from "@/lib/curriculum/questions";
+import { w26Question } from "@/lib/curriculum/phonicsQ/w26";
 import { focusSay } from "@/lib/curriculum/vowelTeams";
 import { VOICE_CHOICES, edIngOf, punctOf, stressOf, twisterDisplay, twisterOf, voiceOf, w26Example, w26FocusOf, w26Say } from "@/lib/curriculum/w26Phonics";
 import type { LearningItemDef } from "@/lib/domain/types";

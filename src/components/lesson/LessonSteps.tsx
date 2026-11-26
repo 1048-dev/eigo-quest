@@ -10,7 +10,7 @@ import type { AnswerLog } from "@/lib/services/progressService";
 import { playItemAudio, speak } from "@/lib/speech/tts";
 import { QuestionView, SpeakButton, type AnswerEvent } from "@/components/test/QuestionView";
 import { apiPost } from "@/lib/api/client";
-import { TeacherVideoPlayer, VirtualClassroom } from "@/components/teacher/VirtualClassroom";
+import dynamic from "next/dynamic";
 import type { TimelineLesson } from "@/lib/teacher/timeline";
 import { GradeResponseSchema } from "@/lib/api/contracts";
 
@@ -23,6 +23,14 @@ const NextBtn = ({ onClick, label = "つぎへ ▶" }: { onClick: () => void; la
 // 1. AI女性教師の授業（run8 P8）: videoUrl が あれば 本物の 動画、なければ バーチャル教室
 //    （うごく エマ先生 ＋ 黒板 ＋ 字幕。台本 lesson.teacher が なければ レッスンの ことばから つくる）
 // ---------------------------------------------------------------------------
+// run8: バーチャル教室（先生の 絵・黒板・字幕・タイムライン）は 別の チャンク。最初の 読みこみを かるく するため。
+// ページの スクリプトが うごいた ときに すぐ 読みはじめる（レッスンの データを とる あいだに おわる ので まちが ふえない）
+const loadClassroom = () => import("@/components/teacher/VirtualClassroom");
+if (typeof window !== "undefined") void loadClassroom().catch(() => undefined);
+const ClassroomLoading = () => <div className="card p-6 text-center text-sm font-bold text-[var(--ink-2)]">👩‍🏫 せんせいを よんでいるよ…</div>;
+const VirtualClassroom = dynamic(() => loadClassroom().then((m) => m.VirtualClassroom), { ssr: false, loading: ClassroomLoading });
+const TeacherVideoPlayer = dynamic(() => loadClassroom().then((m) => m.TeacherVideoPlayer), { ssr: false, loading: ClassroomLoading });
+
 export function TeacherVideo({ lesson, partner, videoUrl, teacherName, onDone }: { lesson: TimelineLesson; partner?: string; videoUrl?: string; teacherName: string; onDone: Done }) {
   if (videoUrl) return <TeacherVideoPlayer videoUrl={videoUrl} teacherName={teacherName} onDone={() => onDone()} />;
   return <VirtualClassroom lesson={lesson} partner={partner} teacherName={teacherName} onDone={() => onDone()} />;
@@ -73,7 +81,8 @@ export function TprDrill({ items, actions, onDone }: { items: LearningItemDef[];
 // ---------------------------------------------------------------------------
 // 4. フォニックス（文字と音・ブレンディング）
 // ---------------------------------------------------------------------------
-export function Phonics({ focus, words, tipJa, onDone }: { focus: string[]; words: string[]; tipJa: string; onDone: Done }) {
+/** examples: サーバー（または おためしで ワールドを 読んだ あと）が 作った おてほん。なければ ブラウザの 基本の きまりで さがす */
+export function Phonics({ focus, words, tipJa, examples, onDone }: { focus: string[]; words: string[]; tipJa: string; examples?: string[]; onDone: Done }) {
   const [lit, setLit] = useState<{ word: string; n: number } | null>(null);
   // 文字の なまえ（シー・エー・ティー）は 読まない。もじを じゅんばんに 光らせてから、ことばを ゆっくり → ふつうの はやさで
   const blend = async (w: string) => {
@@ -89,9 +98,9 @@ export function Phonics({ focus, words, tipJa, onDone }: { focus: string[]; word
     <div className="card p-6">
       <p className="rounded-xl bg-[var(--bg)] p-3 text-sm">💡 {tipJa}</p>
       <div className="mt-4 flex flex-wrap justify-center gap-3">
-        {focus.map((f) => {
+        {focus.map((f, i) => {
           const label = focusLabel(f);
-          const example = focusExampleWord(f, words);
+          const example = examples?.[i] || focusExampleWord(f, words);
           return (
             <button key={f} className="card flex min-w-24 flex-col items-center px-5 py-3" onClick={() => speak(example, 0.75)} aria-label={`${label.main}（${example} を きく）`}>
               <span className="text-4xl font-black text-[var(--accent)]">{label.main}</span>

@@ -10,28 +10,8 @@ import { R_SAY } from "./rControlled";
 import { w10Say } from "./w10Phonics";
 import { w11Say } from "./w11Phonics";
 import { w12Say } from "./w12Phonics";
-import { w19Say } from "./w19Phonics";
-import { w20Say } from "./w20Phonics";
-import { w21Say } from "./w21Phonics";
-import { w22Say } from "./w22Phonics";
-import { w23Say } from "./w23Phonics";
-import { w24Say } from "./w24Phonics";
-import { w25Say } from "./w25Phonics";
-import { w26Say } from "./w26Phonics";
-import { w27Say } from "./w27Phonics";
-import { w28Say } from "./w28Phonics";
-import { w29Say } from "./w29Phonics";
-import { w30Say } from "./w30Phonics";
-import { w31Say } from "./w31Phonics";
-import { w32Say } from "./w32Phonics";
-import { w33Say } from "./w33Phonics";
-import { w34Say } from "./w34Phonics";
-import { w35Say } from "./w35Phonics";
-import { w36Say } from "./w36Phonics";
-import { w37Say } from "./w37Phonics";
-import { w38Say } from "./w38Phonics";
-import { w39Say } from "./w39Phonics";
-import { w40Say } from "./w40Phonics";
+// run8: ワールド19〜40 の 読み上げは ./phonicsWorlds.ts の 登録から（サーバーは ぜんぶ、ブラウザは 読みこんだ ワールドだけ）
+import { worldPhonics } from "./phonicsWorlds";
 
 /** 母音チームの つづりと、はじめて ならう レッスン（それより前の 回の 問題の 選択肢には 出さない） */
 export const VOWEL_TEAM_INTRO: Record<string, number> = {
@@ -92,61 +72,62 @@ export const shortVowelOf = (team: string) => team[0];
  * ow と oo は その回の ことばで おとを きめる（cow の回は "ow"、snow の回は "oh"。book だけの回は ことばを そのまま よむ）。
  */
 export function focusSay(focus: string, words: readonly string[] = []): string {
+  const say = (world: number) => worldPhonics(world)?.say?.(focus, words) ?? null;
   // ワールド40 は その回の ことば・スピーチの はじめの フレーズで よむ
-  const w40 = w40Say(focus, words);
+  const w40 = say(40);
   if (w40) return w40;
   // ワールド39 は その回の ことば・数・ディベートの 文の はじめ・つなぎの ことばで よむ
-  const w39 = w39Say(focus, words);
+  const w39 = say(39);
   if (w39) return w39;
   // ワールド38 は その回の ことば・句動詞・返事・慣用句で よむ（"-ful" "moon" だけで よまない）
-  const w38 = w38Say(focus, words);
+  const w38 = say(38);
   if (w38) return w38;
   // ワールド37 は その回の ことば・文・たとえで よむ（"-ly" "as" だけで よまない。語りの 間は 文を よむ）
-  const w37 = w37Say(focus, words);
+  const w37 = say(37);
   if (w37) return w37;
   // ワールド36 は その回の ことば・文で よむ（"bio" "-ology" だけで よまない。区切りは 文、数は 英語の 読みかた: -2°C → minus two degrees）
-  const w36 = w36Say(focus, words);
+  const w36 = say(36);
   if (w36) return w36;
   // ワールド35 は その回の ことば・文で よむ（"-ity" "inter" "spect" だけで よまない。対比の 強勢は 文を よむ）
-  const w35 = w35Say(focus, words);
+  const w35 = say(35);
   if (w35) return w35;
   // ワールド34 は その回の ことばで よむ（"vis" "mm" "-ize" だけで よまない。数字は 英語の 読みかた: Flight 205 → Flight two oh five）
-  const w34 = w34Say(focus, words);
+  const w34 = say(34);
   if (w34) return w34;
   // ワールド33 は その回の ことば・文で よむ（"rupt" "-ance" "and" "or" だけで よまない。英字と スペース だけ）。
   // リストの "or" を ワールド9 の r の つく母音（or）で よまない ように、R_SAY より 先に みる（ワールド33 の 回の ことば だけで はたらく）
-  const w33 = w33Say(focus, words);
+  const w33 = say(33);
   if (w33) return w33;
   if (R_SAY[focus]) return R_SAY[focus]; // r の つく母音（ワールド9）
   // ワールド32 は その回の ことばで よむ（"geo" "-al" だけで よまない。数は 1/2 → one half）
-  const w32 = w32Say(focus, words);
+  const w32 = say(32);
   if (w32) return w32;
   // ワールド31 は その回の ことばで よむ（"-tion" "struct" だけで よまない。年号は 1868 → eighteen sixty-eight）
-  const w31 = w31Say(focus, words);
+  const w31 = say(31);
   if (w31) return w31;
   // ワールド30 は その回の ことば・文で よむ（"auto-" "-ic" だけで よまない。略語は km → kilometers）
-  const w30 = w30Say(focus, words);
+  const w30 = say(30);
   if (w30) return w30;
   // ワールド29 は その回の ことば・文で よむ（"spect" "can" "-ible" だけで よまない）
-  const w29 = w29Say(focus, words);
+  const w29 = say(29);
   if (w29) return w29;
   // ワールド28 は その回の ことば・文・フレーズで よむ（"to" や "-ness" だけで よまない）
-  const w28 = w28Say(focus, words);
+  const w28 = say(28);
   if (w28) return w28;
   // ワールド27 は その回の ことば・フレーズで よむ（"ch" を「チ」、"-able" を「エイブル」だけで よまない）
-  const w27 = w27Say(focus, words);
+  const w27 = say(27);
   if (w27) return w27;
   // ワールド26 は その回の セリフ・文・ことばで よむ（"…" や '"' や "-ed" を そのまま よまない）
-  const w26 = w26Say(focus, words);
+  const w26 = say(26);
   if (w26) return w26;
   // ワールド25 の -ness・-ive は その回の ことばで よむ（ワールド21 の -ness より 先）
-  const w25 = w25Say(focus, words);
+  const w25 = say(25);
   if (w25) return w25;
   // ワールド24 の 過去分詞の おわり・I've / haven't / she's・over- / under-・im- / in- は その回の ことばで よむ
-  const w24 = w24Say(focus, words);
+  const w24 = say(24);
   if (w24) return w24;
   // ワールド23 の micro-・-scope・-meter・thermo-・-ment・-y・-tion は その回の ことばで よむ（ワールド10 の -y より 先）
-  const w23 = w23Say(focus, words);
+  const w23 = say(23);
   if (w23) return w23;
   const w10 = w10Say(focus, words); // soft c / g・-y・-le・aw au ew（ワールド10）
   if (w10) return w10;
@@ -164,16 +145,16 @@ export function focusSay(focus: string, words: readonly string[] = []): string {
     if (hit) return hit;
   }
   // ワールド22 の -ist・-ous・-al は その回の ことばで、おわりの しるしの 回は フレーズで よむ
-  const w22 = w22Say(focus, words);
+  const w22 = say(22);
   if (w22) return w22;
   // ワールド21 の dis-・mis-・pre-・tele-・phone・graph・photo-・-ment・-ness は その回の ことばで、音の つながりは フレーズで よむ
-  const w21 = w21Say(focus, words);
+  const w21 = say(21);
   if (w21) return w21;
   // ワールド20 の -ure・eer は その回の ことばで よむ
-  const w20 = w20Say(focus, words);
+  const w20 = say(20);
   if (w20) return w20;
   // ワールド19 の re-・-or・-stle・gu・squ・ough と、いろいろな おとの ou は その回の ことばで よむ
-  const w19 = w19Say(focus, words);
+  const w19 = say(19);
   if (w19) return w19;
   const withF = words.filter((w) => w.toLowerCase().includes(focus));
   switch (focus) {

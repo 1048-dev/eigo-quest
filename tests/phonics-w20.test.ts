@@ -9,7 +9,8 @@
 import { describe, expect, it } from "vitest";
 import { getLesson, itemsOfLesson } from "@/lib/curriculum";
 import { focusExampleWord, focusLabel } from "@/lib/curriculum/phonicsButtons";
-import { makeQuestion, seededRng, w20Question } from "@/lib/curriculum/questions";
+import { makeQuestion, seededRng } from "@/lib/curriculum/questions";
+import { w20Question } from "@/lib/curriculum/phonicsQ/w20";
 import { focusSay } from "@/lib/curriculum/vowelTeams";
 import { earOf, schwaBlank, ureSound } from "@/lib/curriculum/w20Phonics";
 import type { LearningItemDef } from "@/lib/domain/types";

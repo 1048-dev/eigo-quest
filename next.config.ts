@@ -35,10 +35,12 @@ const nextConfig: NextConfig = {
   // run7 Phase 2: カリキュラム全体（全ワールドの JSON）を ブラウザに 送らない。
   // ブラウザの ビルドでだけ src/lib/curriculum/bundledWorlds.ts を 空の bundledWorlds.browser.ts に 差しかえる
   // （ブラウザは ensureLessonsLoaded で 必要な ワールドだけ あとから 読む）。サーバーは そのまま 全部 読む。
+  // run8: ワールド13〜40 の フォニックス問題（bundledPhonics.ts）も おなじように 空の bundledPhonics.browser.ts に 差しかえる
+  // （ブラウザは ensurePhonicsLoaded で その回の ワールドまで あとから 読む）
   webpack(config, { isServer, webpack }) {
     if (!isServer) {
-      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/[\\/]bundledWorlds$/, (resource: { request: string }) => {
-        resource.request = resource.request.replace(/bundledWorlds$/, "bundledWorlds.browser");
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/[\\/](bundledWorlds|bundledPhonics)$/, (resource: { request: string }) => {
+        resource.request = resource.request.replace(/(bundledWorlds|bundledPhonics)$/, "$1.browser");
       }));
     }
     return config;

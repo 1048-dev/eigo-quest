@@ -9,6 +9,7 @@ import announcementsRaw from "@content/announcements.json";
 import { ASSESSMENTS, TOTAL_LESSONS, ensureLessonsLoaded, gateTestAfterLesson, getLesson, itemsOfLesson, reviewQuestFor, TEACHER } from "@/lib/curriculum";
 import { toProgressMaps, type LocalProgress } from "./localProgress";
 import { buildLessonFlow } from "@/lib/curriculum/questions";
+import { ensurePhonicsLoaded } from "@/lib/curriculum/phonicsWorlds";
 import { CURRICULUM_RULES } from "@/lib/domain/config";
 import { localDate } from "@/lib/domain/dates";
 import { buildStageMap } from "@/lib/domain/progression";
@@ -90,7 +91,10 @@ export function offlineGacha(useRareTicket: boolean, rng: () => number = Math.ra
  * run7: カリキュラム全体は ブラウザに のせず、ワールドごとの JSON を あとから 読む
  */
 export async function loadOfflineLesson(lessonNo: number): Promise<LessonResponse> {
-  if (Number.isInteger(lessonNo) && lessonNo >= 1 && lessonNo <= TOTAL_LESSONS) await ensureLessonsLoaded(Math.max(1, lessonNo - 4), lessonNo);
+  // run8: ワールド13〜40 の フォニックス問題も その回の ワールドまで あとから 読む（最初の 読みこみに 入れない）
+  if (Number.isInteger(lessonNo) && lessonNo >= 1 && lessonNo <= TOTAL_LESSONS) {
+    await Promise.all([ensureLessonsLoaded(Math.max(1, lessonNo - 4), lessonNo), ensurePhonicsLoaded(lessonNo)]);
+  }
   return offlineLesson(lessonNo);
 }
 

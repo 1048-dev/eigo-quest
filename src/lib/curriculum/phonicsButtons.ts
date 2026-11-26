@@ -6,21 +6,12 @@
  *   - 見た目: 子どもに わかる 書きかた（a_e → a…e「マジック e」、-st → …st「おわりの おと」、sun-set → sun・set）
  *   - 音:    その つづりが 入った おてほんの ことば（ai → rain、ir → bird、aw → saw）を 読む
  */
-import { w26Example } from "./w26Phonics";
-import { w27Example } from "./w27Phonics";
-import { w28Example } from "./w28Phonics";
-import { w29Example } from "./w29Phonics";
-import { w30Example } from "./w30Phonics";
-import { w31Example } from "./w31Phonics";
-import { w32Example } from "./w32Phonics";
-import { w33Example } from "./w33Phonics";
-import { w34Example } from "./w34Phonics";
-import { w35Example } from "./w35Phonics";
-import { w36Example } from "./w36Phonics";
-import { w37Example } from "./w37Phonics";
-import { w38Example } from "./w38Phonics";
-import { w39Example } from "./w39Phonics";
-import { w40Example } from "./w40Phonics";
+// run8: ワールド26〜40 の おてほんは ./phonicsWorlds.ts の 登録から（サーバーは ぜんぶ、ブラウザは 読みこんだ ワールドだけ）。
+// ブラウザの レッスン画面は buildLessonFlow が 作った step.examples を つかうので、ここで 読みこんで いなくても よい
+import { worldPhonics } from "./phonicsWorlds";
+
+/** ワールドの おてほんを よぶ 順（40 → 30、そのあと 26 → 29。今までの 順の まま） */
+const EXAMPLE_ORDER = [40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 26, 27, 28, 29] as const;
 
 export interface FocusLabel {
   /** 大きく 見せる つづり */
@@ -65,51 +56,12 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   const ws = words.map((w) => w.trim()).filter(Boolean);
   const lower = (w: string) => w.toLowerCase();
 
-  // ワールド40（つづり・ことばの パーツ・語根・スピーチの 間・苦手な 音の 総まとめ）は その focus の ことば・フレーズを よむ
-  const w40 = w40Example(focus.trim(), ws);
-  if (w40) return w40;
-  // ワールド39（環境の ことばの パーツ・大きな 数と 割合・ディベートの プロソディ・つなぎの ことば・ヘッジ）は その focus の ことば・数・文の はじめを よむ
-  const w39 = w39Example(focus.trim(), ws);
-  if (w39) return w39;
-  // ワールド38（気持ちの つづり・句動詞・共感の イントネーション・慣用句・性格の ことば）は その focus で 問う ことば・句動詞・返事・慣用句を よむ
-  const w38 = w38Example(focus.trim(), ws);
-  if (w38) return w38;
-  // ワールド37（物語の 動詞・音の ことば・語りの 間・-ly・たとえ）は その focus で 問う ことば・文・たとえを よむ
-  const w37 = w37Example(focus.trim(), ws);
-  if (w37) return w37;
-  // ワールド36（bio・学習語彙の 強勢・発表の 区切り・-ology・数と たんい）は その focus で 問う ことば・文・数の 読みかたを よむ
-  const w36 = w36Example(focus.trim(), ws);
-  if (w36) return w36;
-  // ワールド35（-ity・inter- と co-・対比の 強勢・あらたまった ことば・語根の まとめ）は その focus で 問う ことば・文を よむ
-  const w35 = w35Example(focus.trim(), ws);
-  if (w35) return w35;
-  // ワールド34（空港の 数字・vis・2つ ならぶ 文字・-ize・イギリスと アメリカの 英語）は その focus で 問う ことばを よむ（数字は 英語の 読みかた）
-  const w34 = w34Example(focus.trim(), ws);
-  if (w34) return w34;
-  // ワールド33（rupt・名詞の おわり・-proof・リスト・ject）は その focus で 問う ことば・文を よむ（リストの 文は おわりに . か ?）
-  const w33 = w33Example(focus.trim(), ws);
-  if (w33) return w33;
-  // ワールド32（geo・-al・方角・数・データの つづり）は その focus で 問う ことばを よむ（数は 英語の よみかたで: 1/2 → one half）
-  const w32 = w32Example(focus.trim(), ws);
-  if (w32) return w32;
-  // ワールド31（家族・年号・struct・-ian / -ist・port）は その focus で 問う ことばを よむ（年号は 英語の よみかたで: 1868 → eighteen sixty-eight）
-  const w31 = w31Example(focus.trim(), ws);
-  if (w31) return w31;
-  // ワールド30（auto-・trans-・-ic・略語・話しことば）は その focus で 問う ことば・文を よむ（略語は 読みかたで: km → kilometers）
-  const w30 = w30Example(focus.trim(), ws);
-  if (w30) return w30;
-  // ワールド26（セリフ・文・はやくちことば）は 記号を よまない ように、しるしの なまえ・キーワード・つよく いう ことばを よむ
-  const w26 = w26Example(focus.trim(), ws);
-  if (w26) return w26;
-  // ワールド27（k の おとの ch・だまって いる もじ・for / since・同音異義語）は その focus で 問う ことば・フレーズを よむ（ch を chip、l を lion で よまない）
-  const w27 = w27Example(focus.trim(), ws);
-  if (w27) return w27;
-  // ワールド28（カタカナ語・日本語・リズム・音の つながり・パーツ）は その focus で 問う ことば・文・フレーズを よむ（"to" "dis-" だけで よまない）
-  const w28 = w28Example(focus.trim(), ws);
-  if (w28) return w28;
-  // ワールド29（spect・dict・意見の 強勢・弱形・-ible / -able）は その focus で 問う ことば・文を よむ（"spect" "can" "-ible" だけで よまない）
-  const w29 = w29Example(focus.trim(), ws);
-  if (w29) return w29;
+  // ワールド26〜40（記号・数・句動詞・語根 など）は その ワールドの 表で、その focus で 問う ことば・文・数の 読みかたを よむ
+  // （セリフの しるしは なまえ、数は 英語の 読みかた: 1/2 → one half、ch を chip で よまない など。くわしくは 各 wNNPhonics.ts の wNNExample）
+  for (const n of EXAMPLE_ORDER) {
+    const hit = worldPhonics(n)?.example?.(focus.trim(), ws);
+    if (hit) return hit;
+  }
 
   // sun-set → sunset（はくに わけた ことばは ことば まるごと）
   if (isSyllables(f)) return f.replace(/-/g, "");

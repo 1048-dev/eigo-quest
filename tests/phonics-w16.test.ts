@@ -7,7 +7,8 @@
  */
 import { describe, expect, it } from "vitest";
 import { getLesson, itemsOfLesson } from "@/lib/curriculum";
-import { makeQuestion, seededRng, w16Question } from "@/lib/curriculum/questions";
+import { makeQuestion, seededRng } from "@/lib/curriculum/questions";
+import { w16Question } from "@/lib/curriculum/phonicsQ/w16";
 import { edSpelling, irregularPast, regularEd } from "@/lib/curriculum/w16Phonics";
 import type { LearningItemDef } from "@/lib/domain/types";
 

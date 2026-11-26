@@ -512,3 +512,42 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,577 件 OK / `npx next build` OK / `teacher-merge --strict` 180 本 problems 0 / スモーク（DB 停止・せんせいステップ 10 レッスン）ぜんぶ OK
+
+## バンドル: ワールド13〜40 の フォニックス問題を ワールドごとに あとから 読む（/map・/lesson を 約 190 kB に もどす）
+### なぜ
+- run7 の のこりの 課題（docs/run7/MORNING.md）。ワールド13〜40 の フォニックス問題の コードと 表が ぜんぶ ブラウザの 最初の 読みこみに 入って いて、/map 287 kB・/lesson 304 kB に なって いた（分割した 直後は 187 kB・191 kB）。
+
+### やったこと
+- **ワールドごとの ファイルに わけた**: questions.ts に あった w13Question〜w40Question を `src/lib/curriculum/phonicsQ/wNN.ts`（28 ファイル）に うつした（関数の 中身は 1 文字も かえて いない。.tmp/split-phonics.mjs で 機械的に うつした。.tmp/ は git に 入れない 作業用）。questions.ts は 1,722 行 → 約 700 行。shuffle は `shuffle.ts` に だした（どちらからも つかう）。
+- **登録の しくみ** `src/lib/curriculum/phonicsWorlds.ts`: `ensurePhonicsLoaded(lessonNo)`（ブラウザで その回の ワールドまで `import()` で 読む）・`worldPhonics(n)`・`assertPhonicsLoaded`。makeQuestion は 40 → 13 の 順に 登録を よぶ（今までと おなじ 順）。wNN の 問題は WNN_START より まえの 回では かならず さいしょに null を かえす（乱数を つかわない）ので、その回より あとの ワールドを 読まなくても 結果は おなじ。
+- **サーバーは 今までどおり 同期**: `bundledPhonics.ts` が 28 ワールドを ぜんぶ 登録。next.config.ts の 差しかえ（run7 の bundledWorlds と おなじ しくみ）を ひろげて、ブラウザの ビルドでだけ 空の `bundledPhonics.browser.ts` に する。API・テスト・seed は なにも かわらない。
+- **読みわすれ たら エラー**: ワールド13 より あとの 回で 読みこんで いない ワールドが あると makeQuestion が throw する（だまって ちがう 問題に しない。サーバーと ちがう 問題に なると 採点が ずれる ため）。
+- **ブラウザで よぶ ところ**: loadOfflineLesson（レッスン）と loadOfflineTestStart / Submit（テスト。範囲の さいごの 回まで）で ensureLessonsLoaded と いっしょに ensurePhonicsLoaded。
+- **フォニックスの ボタンの おてほん**: phonicsButtons.focusExampleWord と vowelTeams.focusSay も ワールド19〜40 の 表を 直接 import して いた（これも 最初の 読みこみに 入る 原因）。登録から よぶ ように した（よぶ 順は 今までの まま）。レッスン画面は buildLessonFlow が 作る `step.examples`（focus と おなじ 順。contracts に optional で 追加）を つかう ので、ブラウザに 表が なくても サーバーと おなじ おてほんに なる。
+- **せんせいの 画面も 別チャンク**: フォニックスだけだと /lesson は 208 kB（run8 で 足した バーチャル教室の ぶん）。LessonSteps の VirtualClassroom / TeacherVideoPlayer を next/dynamic に して、ページの スクリプトが うごいた ときに すぐ 読みはじめる（レッスンの データを とる あいだに おわる ので まちは ふえない。まだ なら「せんせいを よんでいるよ…」）。
+- テスト `tests/phonics-lazy.test.ts`（6 件）: bundledPhonics を 空に して ブラウザと おなじ じょうたいで「読む まえは エラー」「読んだ あとは サーバーと まったく おなじ レッスン（L361・450・751・905・1111・1200）と テスト」「L450 では ワールド16 より あとを 読まない」「WNN_START＝(N−1)×30＋1」「step.examples」。tests/phonics-w13〜w40 の import 先を phonicsQ/wNN に かえた。
+
+### はかった 結果（`npx next build` の First Load JS。前 → 後）
+| 画面 | 前 | フォニックスを わけた あと | ＋せんせいの 画面も わけた あと（最終） |
+| --- | --- | --- | --- |
+| /map | 287 kB | 193 kB | **193 kB** |
+| /lesson/[lessonNo] | 304 kB | 208 kB | **195 kB** |
+| /gacha | 276 kB | 181 kB | 181 kB |
+| /test/[assessmentId] | 275 kB | 181 kB | 181 kB |
+| /arena | 277 kB | 182 kB | 182 kB |
+| /dashboard | 278 kB | 184 kB | 184 kB |
+| /recap/[lessonNo] | 209 kB | 146 kB | 146 kB |
+| /parent | 163 kB | 163 kB | 163 kB |
+| 共有 | 102 kB | 102 kB | 102 kB |
+- 最初の 読みこみの チャンクに ワールド13〜40 の 問題の 文（「he / she の ときの ただしい つづりは」「quotation marks」など）が 入って いない ことを .next/static/chunks を さがして たしかめた（あとから 読む チャンクにだけ ある）。
+- API に とどかない ブラウザ（playwright で /api を ぜんぶ 止める。.tmp/lazy-check.ts）で: /lesson/1200 は あとから 30 チャンク（フォニックス 28＋ワールドの JSON など）、/lesson/400 は 4、/lesson/100 は 2 を 読んで 先生の 画面まで 出た。/test/boss-1-1200 も ブラウザだけで 問題を 作れた（エラー なし）。
+
+### きめたこと（判断の 記録）
+- ワールド10〜12 の 問題（w10Phonics など、あわせて 数 kB）は そのまま 最初の 読みこみに のこした。ワールド13 より まえの 回でも つかう うえ、ちいさい ため。
+- 「その回の ワールドまで ぜんぶ 読む」に した（L1200 は 28 チャンク）。ふりかえり回で まえの ワールドの つづりを 問う ので、その回の ワールドだけでは たりない。チャンクは 1 つ 数 kB で、ワールドの JSON と 同時に 読む。
+- せんせいの 画面を わけたのは フォニックスでは ない が、目標（約 190 kB）に とどかなかった ため。最初の ステップ なので、先に 読みはじめる ように して まちが ふえない ように した。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 78 ファイル 2,583 件 OK / `npx next build` OK
+- `npx tsx scripts/smoke-offline.ts docs/run8/screens/smoke`（DB 停止）: 全画面・おためしの 流れ・せんせいステップ 10 レッスン（別チャンクに した バーチャル教室で）・DB 停止の アカウント ぜんぶ OK
+- API を 止めた ブラウザでの あとから 読み（.tmp/lazy-check.ts）: /lesson/1200・400・100、/test/boss-1-1200 OK（/test/mini-1196-1200 は「まだ ひらいていない」の 正しい 表示）
