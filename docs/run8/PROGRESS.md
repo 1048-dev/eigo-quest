@@ -218,3 +218,33 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L451〜510（ワールド16・17）の 授業台本（docs/run8/SCRIPTS.md）＋ L391〜450 の のこり
+
+### はじめに 見つけた こと
+- まえの 回（L391〜450）は 下書き（tmp-teacher/L391-400.json〜L441-450.json）を 書いた ところで とまっていた（auto-save で teacher-plan.md だけ「L1〜450」に なっていて、テストは L1〜390 の まま。world-14・15 には 台本 0 本）。
+- 下書きを しらべると 52 本は OK、L409・L410・L430・L438・L439・L440・L449・L450 の 8 本が ない → この 回で 8 本を 書いて（tmp-teacher/L391-450-rest.json）、あわせて とりこんだ。
+
+### やったこと
+- L451〜510 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド16「きおくの いせき」（L451〜480）: 30 レッスン・626 セグメント・208〜229 秒・英語 97〜99%（めやす 88〜100%）。-ed の 過去形・Did you ～?・wasn't／weren't・ふきそくな 過去形（sang・wrote・knew・went・bought・thought・taught・felt）・Once upon a time／First／Then／After that／Finally の おはなし・How did he feel?・How was ～?・はんのうの ことば・日記。
+  - ワールド17「ほしふる 天文台」（L481〜510）: 30 レッスン・625 セグメント・205〜227 秒・英語 97〜98%。be going to の よてい・will の 天気よほう・I'll ～（もうしで・やくそく）・月と 地球・わくせい・うちゅうステーション・ながれぼし・Someday I will ～・I think robots will ～・because・せいざ・みらいの じぶんへの 手紙。
+  - L391〜450 も あわせて 120 本を とりこんだ（W14: 628 セグメント・205〜228 秒・英語 97〜99%、W15: 629 セグメント・216〜228 秒・英語 97〜99%）。
+  - minutes は ぜんぶ 3.5（すべて 195 秒 以上）。L450・L480・L510 は さいごに つぎの ワールドの 予告（Ruins of Memory／Starfall Observatory／Echo Valley）を ひとこと。L500「Star Party」は 500 レッスン 達成を「Congratulations! We studied together for five hundred lessons.」と あたたかく いわう。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜390 → L1〜510 に のばした（docs/teacher-plan.md も L1〜510 に）。
+- exports/teacher/summary.csv を 作りなおした（台本 510 本・自動 690 本、合計 約 3,554 分＝59.2 時間、1 本ずつ 切り上げで 4,114 分）。
+
+### 例（みじかく）
+- L462 I Thought It Was a Ghost!（W16・会話）: 「Something white is moving over there! … Ha ha! It's just a sheet. Phew! I thought it was a ghost! Were you scared, Kiko? Yes, I was!」→ クイズ「A, Yes, I was. Or B, Yes, I were.」→「It's A! You weren't fooled by the ghost or the quiz.」（こわく しない: おばけは かわかしている シーツ）
+- L500 Lesson 500 Star Party（W17・からだで）: 「Hold up five fingers. Five for five hundred! … Make a circle with your arms. A big round cake! Jump for joy! Hooray!」→「おめでとう には Thank you!」
+
+### きめたこと（判断の 記録）
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L451-460.json〜L501-510.json。git には 入れない）と のこり用の 1 つを 同時に 書き、`scripts/teacher-merge.ts --strict` で 13 ファイル・120 本を まとめて とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W16-17.md を 新しく 作った（ステージ2: 英語 94〜98%、下限 91%、英語の 見出し、日本語は「go の むかしは went」「よていは going to」の ような ちいさな ヒントと wrap の なまえ だけ）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-451-510.json）。tmp-teacher/audit.ts に この 一覧を たして、120 本の wrap の キャラ名を 機械で しらべた（ずれ 0）。お金チェックの ひっかかりは L498 の「ハンドル」（「ドル」を ふくむ）だけで、まちがいの 検出なので そのまま。
+- vitest で L470 の フォニックスの スライドが 8 こ（上限 7）で おちた。teacher-merge は この 上限を みないので すりぬけた → "ew" を けして 7 こに した（say は かえない）。
+- L500 で「Kiko raises her paw」と なっていた（キコは にんげんの 女の子）→「raises her hand」に なおした（字幕の 日本語は もともと「てを あげる」）。
+- いせきは こわく しない（おばけは シーツや トカゲ だった）。週末・りょこう・日記は「ほんとうの ことで なくても いいよ」、おばあちゃんの 回などは「かぞくでも ともだちでも だれでも OK」、ゆめは どんな ゆめでも OK、ながれぼしの ねがいは ひみつでも OK。うちゅうの 事実は かんたんに「about」を つけて（月は 地球の まわりを やく 1 か月で まわる など）。L503・L504・L508 の 手紙では じゅうしょや なまえに ふれず「From the children of Earth」「From me」に した。
+- goal は いくつか ぬきとりで 読んだ（全 120 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 120 本 problems 0
