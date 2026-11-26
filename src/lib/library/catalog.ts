@@ -11,12 +11,15 @@ import type { Chant, LibraryIndex, LibraryKind, Story, TalkTheme } from "./types
 export const LIBRARY_INDEX = indexRaw as LibraryIndex;
 
 /** おはなしが ある ステージ（ふやしたら ここと loadStoryStage と scripts/library-index.ts に 足す） */
-export const STORY_STAGES = [1, 2] as const;
+export const STORY_STAGES = [1, 2, 3, 4, 5] as const;
 
 export async function loadStoryStage(stage: number): Promise<Story[]> {
   switch (stage) {
     case 1: return (await import("@content/library/stories-1.json")).default.stories as Story[];
     case 2: return (await import("@content/library/stories-2.json")).default.stories as Story[];
+    case 3: return (await import("@content/library/stories-3.json")).default.stories as Story[];
+    case 4: return (await import("@content/library/stories-4.json")).default.stories as Story[];
+    case 5: return (await import("@content/library/stories-5.json")).default.stories as Story[];
     default: return [];
   }
 }

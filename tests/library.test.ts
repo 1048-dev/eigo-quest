@@ -5,6 +5,9 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { FakeDb } from "./helpers/fakePrisma";
 import stories1 from "@content/library/stories-1.json";
 import stories2 from "@content/library/stories-2.json";
+import stories3 from "@content/library/stories-3.json";
+import stories4 from "@content/library/stories-4.json";
+import stories5 from "@content/library/stories-5.json";
 import chantsRaw from "@content/library/chants.json";
 import talkRaw from "@content/library/talk.json";
 import indexRaw from "@content/library/index.json";
@@ -28,7 +31,7 @@ const talkRoute = await import("@/app/api/library/talk/route");
 const { buildSystemPrompt, levelGuide } = await import("@/lib/conversation/aiConversation");
 const { themeConversation } = await import("@/lib/library/talk");
 
-const STORIES = [...(stories1.stories as Story[]), ...(stories2.stories as Story[])];
+const STORIES = [stories1, stories2, stories3, stories4, stories5].flatMap((f) => f.stories as Story[]);
 const CHANTS = chantsRaw.chants as Chant[];
 const TALKS = talkRaw.themes as TalkTheme[];
 
@@ -41,10 +44,21 @@ function completeLessonsUpTo(uid: string, n: number) {
 }
 
 describe("としょかんの データ", () => {
-  it("おはなしは ステージ1 と ステージ2 で 40話（20話ずつ）", () => {
-    expect(STORIES).toHaveLength(40);
-    expect(STORIES.filter((s) => s.stage === 1)).toHaveLength(20);
-    expect(STORIES.filter((s) => s.stage === 2)).toHaveLength(20);
+  it("おはなしは ステージ1〜5 で 100話（20話ずつ）", () => {
+    expect(STORIES).toHaveLength(100);
+    for (const stage of [1, 2, 3, 4, 5]) expect(STORIES.filter((s) => s.stage === stage)).toHaveLength(20);
+    // ファイルの stage と 中身の stage が あう（loadStoryStage が 正しい チャンクを ひらく）
+    for (const [i, f] of [stories1, stories2, stories3, stories4, stories5].entries()) expect(f.stories.every((s) => s.stage === i + 1)).toBe(true);
+  });
+
+  it("チャンツは ステージ3〜5 にも 4曲ずつ（ぜんぶで 28曲）", () => {
+    expect(CHANTS).toHaveLength(28);
+    for (const stage of [3, 4, 5]) expect(CHANTS.filter((c) => c.stage === stage)).toHaveLength(4);
+  });
+
+  it("ステージ3〜5 の おはなしの レベル（CEFR）は ワールドの レベルと あう", () => {
+    const allowed: Record<number, string[]> = { 3: ["A2", "A2+"], 4: ["A2+", "B1"], 5: ["B1", "B1+"] };
+    for (const s of STORIES.filter((x) => x.stage >= 3)) expect(allowed[s.stage]).toContain(s.level);
   });
 
   it("どの おはなしも チェックに 通る（3問・3択・正解の 位置・英語と 日本語・解放レッスンの 範囲）", () => {
@@ -71,7 +85,7 @@ describe("としょかんの データ", () => {
   });
 
   it("ステージの 中では レベルが すすむほど 本文が ながくなる（さいしょの 5話 < さいごの 5話）", () => {
-    for (const stage of [1, 2]) {
+    for (const stage of [1, 2, 3, 4, 5]) {
       const list = STORIES.filter((s) => s.stage === stage).sort((a, b) => a.unlockLesson - b.unlockLesson);
       const avg = (xs: Story[]) => xs.reduce((n, s) => n + rules.storyWordCount(s), 0) / xs.length;
       expect(avg(list.slice(0, 5))).toBeLessThan(avg(list.slice(-5)));
@@ -84,7 +98,7 @@ describe("としょかんの データ", () => {
 
   it("索引は 小さく、本文を ふくまない（ブラウザに カリキュラムを まとめて 送らない）", () => {
     const text = JSON.stringify(indexRaw);
-    expect(text.length).toBeLessThan(20_000);
+    expect(text.length).toBeLessThan(50_000);
     expect(text).not.toContain("\"lines\"");
     expect(text).not.toContain("\"questions\"");
   });
@@ -92,6 +106,7 @@ describe("としょかんの データ", () => {
   it("本文は あとから 読める（ステージごとの チャンク）", async () => {
     expect((await loadStory("s1-01"))?.title).toBe("Hello, Birimo!");
     expect((await loadStory("s2-20"))?.stage).toBe(2);
+    for (const id of ["s3-01", "s4-10", "s5-20"]) expect((await loadStory(id))?.questions).toHaveLength(3);
     expect(await loadStory("nope")).toBeNull();
     expect((await loadChant("c-01"))?.lines.length).toBeGreaterThan(0);
     expect((await loadTalkTheme("t-food"))?.character).toBe("birimo");
@@ -118,10 +133,24 @@ describe("解放（到達レッスン）", () => {
     expect(LIBRARY_INDEX.chants.filter((c) => rules.isUnlocked(c, 0)).length).toBeGreaterThanOrEqual(1);
   });
 
-  it("ステージ1 を おえる（L360）と ステージ2 の さいしょの おはなしが ひらく。L600 で ぜんぶ", () => {
+  it("ステージ1 を おえる（L360）と ステージ2 の さいしょの おはなしが ひらく。L600 で ステージ2 まで ぜんぶ", () => {
     expect(LIBRARY_INDEX.stories.filter((s) => rules.isUnlocked(s, 359)).every((s) => s.stage === 1)).toBe(true);
     expect(rules.isUnlocked(LIBRARY_INDEX.stories.find((s) => s.id === "s2-01")!, 360)).toBe(true);
-    expect(LIBRARY_INDEX.stories.every((s) => rules.isUnlocked(s, 600))).toBe(true);
+    expect(LIBRARY_INDEX.stories.filter((s) => s.stage <= 2).every((s) => rules.isUnlocked(s, 600))).toBe(true);
+  });
+
+  it("ステージ3〜5 は レベルで ひらく（L599 では まだ、L600・L840・L1050 で それぞれの さいしょ、L1200 で ぜんぶ）", () => {
+    const meta = (id: string) => LIBRARY_INDEX.stories.find((s) => s.id === id)!;
+    expect(LIBRARY_INDEX.stories.filter((s) => rules.isUnlocked(s, 599)).every((s) => s.stage <= 2)).toBe(true);
+    expect(rules.isUnlocked(meta("s3-01"), 600)).toBe(true);
+    expect(rules.isUnlocked(meta("s3-02"), 600)).toBe(false);
+    expect(LIBRARY_INDEX.stories.filter((s) => rules.isUnlocked(s, 839)).every((s) => s.stage <= 3)).toBe(true);
+    expect(rules.isUnlocked(meta("s4-01"), 840)).toBe(true);
+    expect(LIBRARY_INDEX.stories.filter((s) => rules.isUnlocked(s, 1049)).every((s) => s.stage <= 4)).toBe(true);
+    expect(rules.isUnlocked(meta("s5-01"), 1050)).toBe(true);
+    expect(LIBRARY_INDEX.stories.every((s) => rules.isUnlocked(s, 1200))).toBe(true);
+    expect(LIBRARY_INDEX.chants.every((c) => rules.isUnlocked(c, 1200))).toBe(true);
+    expect(rules.recommendedStory(LIBRARY_INDEX.stories, 1000)?.stage).toBe(4);
   });
 
   it("フリートークは Lesson 90（ステージ1 の ワールド4）から", () => {
@@ -135,7 +164,8 @@ describe("解放（到達レッスン）", () => {
 
   it("つぎに ひらく もの・おすすめ（まだ よんでいない いちばん あたらしい おはなし）", () => {
     expect(rules.nextToUnlock(LIBRARY_INDEX.stories, 0)?.id).toBe("s1-02");
-    expect(rules.nextToUnlock(LIBRARY_INDEX.stories, 1000)).toBeNull();
+    expect(rules.nextToUnlock(LIBRARY_INDEX.stories, 1000)?.id).toBe("s4-17");
+    expect(rules.nextToUnlock(LIBRARY_INDEX.stories, 1200)).toBeNull();
     expect(rules.recommendedStory(LIBRARY_INDEX.stories, 12)?.id).toBe("s1-03");
     expect(rules.recommendedStory(LIBRARY_INDEX.stories, 12, new Set(["s1-03"]))?.id).toBe("s1-02");
     // ぜんぶ よんでいたら いちばん あたらしい ものを もう一回

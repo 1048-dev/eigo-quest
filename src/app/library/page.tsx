@@ -70,7 +70,10 @@ export default function LibraryPage() {
   const pick = recommendedStory(stories, reached, readIds);
   const nextStory = nextToUnlock(stories, reached);
   const openCount = stories.filter((s) => isUnlocked(s, reached)).length;
-  const stages = [...new Set(stories.map((s) => s.stage))].sort();
+  const stages = [...new Set(stories.map((s) => s.stage))].sort((a, b) => a - b);
+  // いまの ステージと つぎの ステージだけ 一覧に だす（その さきは 1行に まとめる。はじめての子に 100話の 🔒 を 見せない）
+  const openStage = Math.max(1, ...stories.filter((s) => isUnlocked(s, reached)).map((s) => s.stage));
+  const laterStages = stages.filter((st) => st > openStage + 1);
   const talkOpen = reached >= LIBRARY_RULES.freeTalkUnlockLesson;
 
   return (
@@ -101,7 +104,7 @@ export default function LibraryPage() {
         ))}
       </div>
 
-      {tab === "story" && stages.map((st) => (
+      {tab === "story" && stages.filter((st) => st <= openStage + 1).map((st) => (
         <section key={st} className="space-y-2">
           <h2 className="rpg-title text-lg">ステージ{st}「{stageDef(st).nameJa}」</h2>
           {stories.filter((s) => s.stage === st).map((s) => (
@@ -109,6 +112,14 @@ export default function LibraryPage() {
           ))}
         </section>
       ))}
+      {tab === "story" && laterStages.length > 0 && (
+        <div className="card p-3 text-sm opacity-70" aria-disabled>
+          {laterStages.map((st) => {
+            const list = stories.filter((s) => s.stage === st);
+            return <p key={st}>🔒 ステージ{st}「{stageDef(st).nameJa}」の おはなし {list.length}こ（Lesson {Math.min(...list.map((s) => s.unlockLesson))} から）</p>;
+          })}
+        </div>
+      )}
 
       {tab === "chant" && (
         <section className="space-y-2">

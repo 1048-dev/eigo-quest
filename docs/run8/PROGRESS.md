@@ -551,3 +551,12 @@
 - `npx tsc --noEmit` OK / `npx vitest run` 78 ファイル 2,583 件 OK / `npx next build` OK
 - `npx tsx scripts/smoke-offline.ts docs/run8/screens/smoke`（DB 停止）: 全画面・おためしの 流れ・せんせいステップ 10 レッスン（別チャンクに した バーチャル教室で）・DB 停止の アカウント ぜんぶ OK
 - API を 止めた ブラウザでの あとから 読み（.tmp/lazy-check.ts）: /lesson/1200・400・100、/test/boss-1-1200 OK（/test/mini-1196-1200 は「まだ ひらいていない」の 正しい 表示）
+
+## としょかん: ステージ3〜5 の おはなし 60話 ＋ チャンツ 12曲（2026-11-26）
+- あたらしい おはなし: `content/library/stories-3.json`（s3-01〜20・L600〜828・A2/A2+）、`stories-4.json`（s4-01〜20・L840〜1042・B1）、`stories-5.json`（s5-01〜20・L1050〜1192・B1/B1+）。ぜんぶ オリジナルで、ワールド21〜40 の テーマ（ことづて・なぞとき・みらい都市・火山島・しんかい・こころの高原・はじまりの星 など）に あわせた。どれも 3問・3択の クイズつきで、正解の 位置は ステージごとに 0/1/2 が 20問ずつ。ステージの 中で あとの おはなしほど ながい（ステージ3 は 約100語 → 約255語、ステージ5 は 約190語 → 約360語）。
+- さいごの s5-20「A Letter to Me in Ten Years」は 6年の たびの しめくくり。L1195「ビリモの ひみつ」の ネタばれは しない ように した。
+- チャンツ c-17〜c-28（ステージ3〜5 に 4曲ずつ）: said that・If 〜 will・Have you ever・-ing/-ed・I see your point・うけみ・unless/until・Do you know where・First/Next/Finally・If I were・should have・used to。
+- 解放は いままでどおり「到達レッスン >= unlockLesson」。`catalog.ts` の loadStoryStage に ステージ3〜5 を 足した（本文は ステージごとの 別チャンクで、ひらいたときに 読む）。索引 index.json は 34 KB（本文なし）。
+- としょかんの 一覧には「いま ひらいている ステージ と つぎの ステージ」だけ ならべ、その さきは 🔒 1行に まとめた（はじめての子に 100話ぶんの カギを 見せない）。
+- テスト（tests/library.test.ts）: 100話・ステージごと 20話・チャンツ 28曲・ステージ3〜5 の CEFR・L599/600/839/840/1049/1050/1200 での 解放・あとから 読める・索引 50 KB 未満（20 KB から ひきあげ）を 追加／更新した。
+- チェック: `npx tsc --noEmit` OK / `npx vitest run` 78 ファイル 2,586 件 OK / `npx next build` OK（/library の First Load JS 173 kB）
