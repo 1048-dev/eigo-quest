@@ -160,3 +160,34 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L271〜330（ワールド10・11）の 授業台本（docs/run8/SCRIPTS.md）＋ L211〜270 の のこり
+
+### はじめに 見つけた こと
+- まえの 回（L211〜270）は 下書き（tmp-teacher/L211-220.json〜L261-270.json）を 書いた ところで とまっていた。テストの 必須範囲だけ L1〜270 に なっていて（auto-save）、world-08・09 には 台本が 1 本も 入っていなかった（＝ vitest が おちる 状態）。
+- 下書きを しらべると 54 本は OK、L239・L240・L247〜250 の 6 本が ない、L230 が 246 秒で ながすぎ（NG）だった。→ この 回で のこりも かたづけた（6 本を あたらしく 書き、L230 を 220 秒に みじかく）。
+
+### やったこと
+- L271〜330 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド10「いのちの海」（L271〜300）: 30 レッスン・626 セグメント・209〜226 秒・英語 86〜89%（めやす 65〜92%、ja セグメント なし）。うみの いきもの・たべものの さんち・たべものの つながり・せかいの くらし・おすすめ・ちきゅうを まもる ていあん。
+  - ワールド11「ゆめの都」（L301〜330）: 30 レッスン・629 セグメント・205〜227 秒・英語 88〜90%。いちばんの おもいで・うんどうかい（was／were・There was／were）・しょうらいの ゆめ・ぶかつ・ありがとうの メッセージ・ゆめの スピーチ。
+  - L211〜270 も あわせて 120 本を とりこんだ（W8: 630 セグメント・201〜225 秒・英語 83〜86%、W9: 629 セグメント・205〜229 秒・英語 84〜88%）。
+  - L300 は さいごに「Next is World 11, City of Dreams!」の 予告を ひとこと。L330 は つぎの ワールド名を 台本では いわず「あたらしい ぼうけんが まってるよ」に した。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜270 → L1〜330 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 330 本・自動 870 本、合計 約 3,310 分＝55.2 時間、1 本ずつ 切り上げで 3,934 分）。
+
+### 例（みじかく）
+- L283 Bow or Shake Hands?（W10・からだで）: 「Let's move! A visitor from Japan. Bow. Slowly! Now, a visitor from America. Shake hands. Nice and firm! じょうずに あいさつ！」→「Speed challenge! Shake hands! Bow! Fly like a bird! …」。表現では「Every greeting is kind. どの あいさつも すてき。」と どの 国の あいさつも みとめる。
+- L307 The Races Were Exciting（W11・クイズ）: 「Quiz time! The races, blank, exciting. A, was. Or B, were. Which one?」→「It's B, were! Races means more than one, so we say were. High five! たくさんなら were だね。」
+
+### きめたこと（判断の 記録）
+- これまでと 同じく 10 本ずつの 下書き 6 つ（tmp-teacher/L271-280.json〜L321-330.json）と、のこり用の 2 つ（L239-240.json・L247-250.json）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 14 ファイル・120 本を まとめて とりこんだ（problems 0）。手引きは W10・11 むけに tmp-teacher/WRITER-BRIEF-W10-11.md を 新しく 作った（英語の ねらい W10 85〜89%・W11 86〜90%、上限 91%）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-271-330.json）。tmp-teacher/audit.ts を 2 つの 一覧を よむ ように して、120 本の wrap の キャラ名を 機械で しらべた（ずれ 0）。
+- W10 は こわがらせない（あぶない いきもの → かならず「But we can help!」）、文化は「some people／in many homes」で きめつけない。W11 の おもいで・りょこうは「本当の ことで なくても いいよ」、ゆめは どんな ゆめでも OK、なまえは ニックネームで。
+- 「cent」を ふくむ ことばを さけた（L293 recycling center → recycling station、L313 sports center → sports hall、L274 の フォニックスの 例 cent は 台本で つかわない）。
+- テストの「ほんとうの なまえを たずねない」チェックに、L248・L310 の「がっこうの なまえは いわなくて いいよ」が ひっかかった（L176 と 同じ）→「じぶんの する ことで いってね。」「つくりばなしでも いいよ。」に いいかえた（テストは ゆるめない）。
+- L315 の「ニックネームで でても いいよ」が わかりにくいので「ラジオには ニックネームで でて いいよ。」に なおした。お金チェックの「ハンドル」（L250・294・312）は まちがいの 検出なので そのまま。
+- goal を 120 本 ぜんぶ 読みなおした。なおす ほど ぎこちない 英語は なかった。minutes は ぜんぶ 195 秒 以上なので 3.5。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 120 本 problems 0
