@@ -79,7 +79,8 @@ describe("teacher export: 1 レッスン", () => {
   });
 
   it("台本が ない レッスンは 自動の 授業（auto）を 書きだす", () => {
-    const l = LESSONS.find((x) => !x.teacher)!;
+    // run8: 1,200 レッスン ぜんぶに 台本が ある ので、台本を はずした コピーで ためす
+    const l = { ...LESSONS[0], teacher: undefined };
     const x = buildTeacherExport(l, { partner: "riko" });
     expect(x.source).toBe("auto");
     expect(x.segments[0].kind).toBe("greet");

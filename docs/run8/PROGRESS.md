@@ -489,3 +489,26 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,578 件 OK / `npx next build` OK / `teacher-merge --strict` 30 本 problems 0
+
+## 仕上げ: 1,200 レッスン ぜんぶの 台本チェック・のこり 180 本・せんせいステップ つきの スモーク（DB 停止）
+### やったこと
+- ぜんぶの レッスンを しらべた（tmp-teacher/missing.ts）。台本が ない のは 180 本（L931〜990＝ワールド32・33、L1051〜1170＝ワールド36〜39）。台本が ある 1,020 本は 長さ・英語の わりあい・スライドの ことば・セグメント数が ぜんぶ OK だった ので さわらなかった。
+- 180 本の うち 129 本は 前の 作業の 下書き（tmp-teacher/L931-940.json〜L1161-1170.json）が あった。うち 3 本（L1056 240 秒・L1058 245 秒・L1128 253 秒）は 長すぎた ので、文を みじかくし・スピード チャレンジや くりかえしを 1 つ へらして 223〜227 秒に した（tmp-teacher/fix-long.js → fix-long.json）。
+- 下書きが なかった 51 本（L939・940・947〜950・958〜960・977〜980・989・990・1079・1080・1086〜1090・1096〜1100・1107〜1110・1117〜1120・1129・1130・1136〜1140・1146〜1150・1167〜1170）は 6 人の 書き手に わけて 新しく 書いた（ワールドごとの tmp-teacher/WRITER-BRIEF-W32-33.md／W36-37.md／W38-39.md に したがう。下書き tmp-teacher/*-rest.json）。ぜんぶ 英語だけ 100%・211〜227 秒。ワールドの さいごの L960・L990・L1080・L1110・L1140・L1170 には つぎの ワールドの 予告、L1100 は「Lesson eleven hundred! What a story!」の おいわい。
+- `teacher-merge --strict` で 180 本 とりこみ（problems 0）。これで **1,200 本 ぜんぶに 台本**（自動の 授業は 0 本）。wrap の 会話の あいては partners-*.json の ある 1,170 本で ずれ 0（tmp-teacher/partner-check.ts）。
+- tests/teacher.test.ts: 必須範囲を L1〜1200 に し、EXTRA_RANGES を けして「1,200 本 ぜんぶに 台本」の テストに した。tests/teacher-export.test.ts の「台本が ない レッスンは auto」は 台本の ない レッスンが なくなった ので、台本を はずした コピーで ためすように なおした（これを なおさないと vitest が おちた）。docs/teacher-plan.md も 更新。
+- exports/teacher/summary.csv を 作りなおした（台本 1,200 本・自動 0 本、合計 約 4,355 分＝72.6 時間、1 本ずつ 切り上げで 4,800 分、平均 218 秒）。
+- scripts/smoke.ts に せんせいステップの チェック（teacherFlow）を 追加。L1・31・300・660・945・1056・1100・1128・1170・1200（SMOKE_TEACHER_LESSONS で かえられる）で、台本が つかわれる（data-source=script）・8 パート以上・はじめる → 日本語字幕（W21〜 は 英語字幕も）・さいしょが あいさつ・とばす で 2 パート目へ・「いってみよう」の カウントダウン・「まとめ」に ジャンプ・つぎへ で 先生の 画面が おわる・エラー表示 なし、を たしかめる。
+- `npx next build` → `npx tsx scripts/smoke-offline.ts docs/run8/screens/smoke`（DB 停止）で 全画面・おためしの 流れ・DB 停止の アカウント・せんせいステップ 10 レッスン ぜんぶ OK。1 回目は L1100・L1170 が まだ とりこむ まえで「auto」と なり 新しい チェックが ちゃんと NG を 出した（とりこんだ あとの 2 回目で OK）。スクショ（約 40 MB）は .gitignore に 入れた。
+
+### 例（みじかく）
+- L947 It Increased: 「Up? Increased. Down? Decreased. No change? Stayed the same.」→ フォニックス「One million, a one and six zeros. See two commas? Think million! … No s on million!」→ TPR「The number increased! Raise your arms higher and higher.」
+- L1100 Story Party: 「Lesson eleven hundred! What a story!」「Birimo says, Let's cut the cake! Can I have the chocolate mouse? Riko says, No, Birimo, that's for Nib!」→ クイズ「A friend shares a story idea. What do we do next? A, ask a friendly question. B, eat the chocolate mouse.」
+
+### きめたこと（判断の 記録）
+- 前の 作業の 下書きは「もう 書いて ある ぶんは やりなおさない」ルールに したがって そのまま つかい、長すぎた 3 本だけ けずった（新しい 文は L1128 の「Let's ask Mr. Bram, the village leader!」だけ。けした ことばの セグメントの かわり）。
+- 書き手の 51 本は merge の --strict・vitest・会話の あいての チェックで とおした。L947・L1100 は 全文を 読んだ。ほかは ぬきとり。
+- ポート 3100〜3103 は この 作業の まえから べつの プロセスが つかって いた（smoke-offline は あいている 3104 を つかい、おわったら ちゃんと とめる ことを たしかめた）。だれの プロセスか わからない ので とめて いない。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,577 件 OK / `npx next build` OK / `teacher-merge --strict` 180 本 problems 0 / スモーク（DB 停止・せんせいステップ 10 レッスン）ぜんぶ OK

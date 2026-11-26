@@ -19,10 +19,7 @@ import {
 
 const ORDER: TeacherSegmentKind[] = ["greet", "goal", "words", "expressions", "phonics", "tpr", "repeat", "check", "wrap"];
 /** この run で 台本が そろって いるべき 範囲（フェーズが すすんだら のばす） */
-const REQUIRED_RANGE: [number, number] = [1, 930];
-
-/** REQUIRED_RANGE の そとで 先に 台本を 書いた ブロック（REQUIRED_RANGE が おいついたら けしてよい） */
-const EXTRA_RANGES: [number, number][] = [[991, 1050], [1171, 1200]];
+const REQUIRED_RANGE: [number, number] = [1, 1200];
 
 const withTeacher = LESSONS.filter((l) => l.teacher);
 
@@ -45,9 +42,9 @@ describe("lesson.teacher（授業台本）", () => {
     expect(missing).toEqual([]);
   });
 
-  it.each(EXTRA_RANGES)("L%i〜%i にも 台本が ある", (from, to) => {
-    const missing = LESSONS.filter((l) => l.lessonNo >= from && l.lessonNo <= to && !l.teacher).map((l) => l.lessonNo);
-    expect(missing).toEqual([]);
+  it("1,200 レッスン ぜんぶに 台本が ある（自動の 授業に たよらない）", () => {
+    expect(LESSONS.length).toBe(1200);
+    expect(withTeacher.length).toBe(1200);
   });
 
   it("むかしの teacherScript（みじかい 要約）も のこっている", () => {

@@ -197,6 +197,65 @@ async function offlineFlow(browser: Browser) {
   await ctx.close();
 }
 
+/**
+ * run8: せんせいステップ（バーチャル先生）。いくつかの レッスンで
+ *   台本（source=script）が つかわれる・はじめる → 字幕（英語・日本語）が 出る・とばす で すすむ・
+ *   「いってみよう」の カウントダウン・「まとめ」に ジャンプ・つぎへ で 先生の 画面が おわる
+ * を たしかめる。DB 停止中（おためしモード）でも うごく こと。
+ */
+const TEACHER_LESSONS = (process.env.SMOKE_TEACHER_LESSONS ?? "1,31,300,660,945,1056,1100,1128,1170,1200").split(",").map(Number).filter((n) => n > 0);
+async function teacherFlow(browser: Browser) {
+  console.log("せんせいステップ（バーチャル先生）");
+  for (const n of TEACHER_LESSONS) {
+    const name = `teacher-${n}`;
+    const ctx = await browser.newContext({ viewport: { width: 420, height: 900 }, locale: "ja-JP" });
+    const page = await ctx.newPage();
+    watch(page, name);
+    const classroom = page.locator("[data-testid=virtual-classroom]");
+    const subEn = classroom.locator('p[lang="en"]');
+    const subJa = classroom.locator('p[lang="ja"]');
+    const status = () => page.locator("[data-testid=virtual-classroom] p.text-center.text-xs.font-bold").last().innerText();
+    try {
+      await page.goto(`${BASE}/lesson/${n}`, { waitUntil: "domcontentloaded", timeout: 60_000 });
+      await classroom.waitFor({ timeout: 45_000 });
+      const source = await classroom.getAttribute("data-source");
+      if (source !== "script") fail(name, "teacher", `台本が つかわれていない（data-source=${source}）`);
+      const parts = Number(/(\d+) パート/.exec(await status())?.[1] ?? 0);
+      if (parts < 8) fail(name, "teacher", `パートが ${parts} こ（8 こ以上 のはず）`);
+      await page.click("[data-testid=teacher-start]");
+      await subJa.first().waitFor({ timeout: 10_000 });
+      const ja1 = (await subJa.first().innerText()).trim();
+      const en1 = (await subEn.count()) ? (await subEn.first().innerText()).trim() : "";
+      if (!ja1) fail(name, "teacher", "日本語の 字幕が からっぽ");
+      if (n > 600 && !en1) fail(name, "teacher", "英語だけの ワールドなのに 英語の 字幕が ない");
+      if (!/^1 \/ \d+\s+あいさつ/.test(await status())) fail(name, "teacher", `さいしょが あいさつ でない（${await status()}）`);
+      await page.click("[data-testid=teacher-skip]");
+      await page.waitForFunction(() => /^2 \//.test([...document.querySelectorAll("[data-testid=virtual-classroom] p.text-center.text-xs.font-bold")].pop()?.textContent ?? ""), undefined, { timeout: 5_000 })
+        .catch(() => fail(name, "teacher", "とばす で つぎの パートに すすまない"));
+      await page.locator('button[aria-label$=": いってみよう"]').first().click();
+      const ring = await page.waitForSelector("[data-testid=virtual-classroom] [role=status]", { timeout: 25_000 }).then(() => true).catch(() => false);
+      if (!ring) fail(name, "teacher", "「いってみよう」で カウントダウンが 出ない");
+      await shot(page, `${name}-repeat`);
+      await page.locator('button[aria-label$=": まとめ"]').last().click();
+      await page.waitForFunction(() => /まとめ$/.test(([...document.querySelectorAll("[data-testid=virtual-classroom] p.text-center.text-xs.font-bold")].pop()?.textContent ?? "").trim()), undefined, { timeout: 5_000 })
+        .catch(() => fail(name, "teacher", "「まとめ」に ジャンプ できない"));
+      const wrapJa = (await subJa.first().innerText().catch(() => "")).trim();
+      if (!wrapJa) fail(name, "teacher", "まとめの 字幕が ない");
+      await checkText(page, name);
+      await page.click("[data-testid=teacher-next]");
+      await classroom.waitFor({ state: "detached", timeout: 10_000 }).catch(() => fail(name, "teacher", "つぎへ で 先生の 画面が おわらない"));
+      await settle(page, name);
+      await checkText(page, name);
+      console.log(`  ✓ L${n} ${parts} パート「${(en1 || ja1).slice(0, 40)}…」`);
+    } catch (e) {
+      fail(name, "exception", (e as Error).message);
+      console.log(`  ✗ L${n}`);
+    } finally {
+      await ctx.close();
+    }
+  }
+}
+
 /** DB 停止中の 保護者アカウント（おためしモードで 動きつづける こと） */
 async function accountOfflineFlow(browser: Browser) {
   console.log("DB 停止中の アカウント（API）");
@@ -408,6 +467,7 @@ async function main() {
   try {
     for (const p of PAGES) await visit(browser, p);
     await offlineFlow(browser);
+    await teacherFlow(browser);
     await accountOfflineFlow(browser);
   } finally {
     await browser.close();
