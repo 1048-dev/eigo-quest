@@ -22,7 +22,7 @@ const ORDER: TeacherSegmentKind[] = ["greet", "goal", "words", "expressions", "p
 const REQUIRED_RANGE: [number, number] = [1, 930];
 
 /** REQUIRED_RANGE の そとで 先に 台本を 書いた ブロック（REQUIRED_RANGE が おいついたら けしてよい） */
-const EXTRA_RANGES: [number, number][] = [[991, 1050], [1051, 1110]];
+const EXTRA_RANGES: [number, number][] = [[991, 1050], [1171, 1200]];
 
 const withTeacher = LESSONS.filter((l) => l.teacher);
 

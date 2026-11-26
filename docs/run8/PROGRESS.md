@@ -463,3 +463,29 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,577 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L1171〜1200（ワールド40）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L1171〜1200 の 30 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。ステージ5 で 英語だけ（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。
+  - ワールド40「はじまりの星」（L1171〜1200）: 30 レッスン・639 セグメント・212〜229 秒・英語 100%・合計 約 112 分。minutes は ぜんぶ 3.5。星の 番人 Celeste（she・「Shine on!」）と 6 本の 光の すじ。B1 ふりかえり（はじまりの 森・I've learned so much since I started・My favorite world was ～ because ～・年表）→ B2 ポートフォリオ（My best work・At first, I could only say "Hello." Now, I can ～・The hardest part was ～, but I kept going・アドバイス・発表）→ B3 面接の 練習（Please tell me about yourself・絵の 描写・Do you think ～? Why?・Could you say that again, please?・模擬面接）→ B4 みらい（I hope to ～・By the time I'm twenty・未来の じぶんへの 手紙・夢フェア）→ B5 感謝と 卒業スピーチ（I couldn't have done it without you・エマ先生への サプライズ・リハーサル・ビリモの ひみつ）→ B6 総まとめ（フリートーク・旅の 物語・意見スピーチ・卒業前夜・L1200 グランドフィナーレ）。
+  - L1200 は「Lesson twelve hundred! It's graduation day!」で 6 本の すじが ぜんぶ ひかり、まっしろな あたらしい ちず（まなびつづけると ばしょが あらわれる）、「This is not the end. It's a new beginning!」「Keep reading, singing and talking every day.」で おわる。つぎの ワールドは ないので 予告は なし。
+- tests/teacher.test.ts の EXTRA_RANGES に [1171, 1200] を たした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 1,020 本・自動 180 本、合計 約 4,159 分＝69.3 時間、1 本ずつ 切り上げで 4,622 分）。
+
+### 例（みじかく）
+- L1183 Interview Practice 3: 「Do you think more people will ride bikes in the future? Riko says, I think so, for two reasons. First, … Second, …」「Haru says, Can I give a different opinion? I don't think so, because riding in the rain is hard. Kiko says, That's a good point.」→ フォニックス「Visible. Vis means see. … Describe. Scrib means write, like scribble. Audience. Aud means hear.」→ クイズ「Which answer is stronger? A, I think so. B, I think so, because bikes keep the air fresh.」
+- L1195 Birimo's Secret: 「Long ago, a tiny light saw shy children in the Forest. It floated down and became a small, playful creature.」「Birimo had been watching over us all along.」「my home is wherever my friends are! … The fifth ray, the Ray of Thanks, lights up!」→ フォニックス「Very. Top teeth on your lower lip. Think. Tongue between your teeth. World. Say er, then L.」「Thanks to YOU, pause, I had the best six years.」
+
+### きめたこと（判断の 記録）
+- たのまれた 範囲は L1171〜1200。world-40 は 台本 0 本 だったので 30 本 ぜんぶ 新しく 書いた。ワールド38・39（L1111〜1170）は べつの 作業の 下書き（tmp-teacher/L1111-1120.json など）が 書きかけ だったので さわらなかった。コミットも じぶんの ファイルだけ 名前を 指定して 入れた。
+- 10 本ずつ 3 つの 下書き（tmp-teacher/L1171-1180.json・L1181-1190.json・L1191-1200.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 30 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W40.md を 新しく 作った。書き手が とちゅうで とまったので、つづきを たのんで さいごまで 書いて もらった。会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-1171-1200.json、audit.ts にも たした）。30 本で wrap の あいての ずれ 0。
+- テストの EXTRA_RANGES に あった [1051, 1110] を はずした。直前の 自動保存コミット（s1051）が テストに この 範囲を 入れたが、world-36・37 には まだ 台本が 0 本で（下書き tmp-teacher/L1051-1060.json〜L1101-1110.json は ある が とりこまれて いない）、vitest が おちて いた ため。ほかの 作業の 下書きは とりこまずに のこした。L1051〜1110 を とりこんだら EXTRA_RANGES に もどす こと。
+- フォニックスは データの tipJa どおり（6 年間の まとめ: ai/ay/ea などの つづり → ことばの パーツ → 語根 → スピーチの つよさと ひと休み → 日本人に むずかしい 音 → 総まとめ）。つよく いう ところは say で 大文字（six years aGO・toGETHer）、ひと休みは「, pause」。‖ の 記号は スライドだけ（データの まま）。
+- データでは Birimo に he / his が ある が、これまでの ワールドに あわせて say では 名前で よんだ（スライドは データの 文の まま なので 一部に his が のこる）。Celeste は データどおり she。物語に 出てくる エマ先生は「I / me」で 話す。
+- 面接の 練習（L1181〜1185）では 子どもは「おはなしの なかの じぶん（ニックネームで よい）」で こたえる。ほんとうの なまえ・年れい・学校は きかない。
+- L1175・L1176・L1177・L1194〜L1198・L1200 などは 226〜229 秒で めやす 205〜225 秒を すこし こえるが、上限 230 秒・許容 180〜240 秒の なか なので そのまま。
+- 書き手が テストの ルールを じぶんで 確認し、merge の --strict と vitest でも とおった。L1200 は 全文を、L1183・L1195 は 要所を 読んだ。ほかは ぬきとりで（全 30 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,578 件 OK / `npx next build` OK / `teacher-merge --strict` 30 本 problems 0
