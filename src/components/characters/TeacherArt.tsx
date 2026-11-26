@@ -17,7 +17,7 @@ const EMMA: FaceGeo = { cx: 100, top: 52, chin: 128, hw: 30, jaw: 10, cheek: 100
 const K = 1.35; // 子どもの顔パーツに対する大きさ
 
 /** 遺跡の 石の アーチと、その 中に うかぶ 光る 英字 */
-function Arch() {
+export function Arch() {
   const outer = "M22 200 L22 74 A78 64 0 0 1 178 74 L178 200 Z";
   const inner = "M38 200 L38 78 A62 50 0 0 1 162 78 L162 200 Z";
   return (
@@ -60,7 +60,7 @@ function Arch() {
 }
 
 /** 話すときに 上げる 手（てのひらを こちらに 向けた 説明の しぐさ）。手首が 原点で、指先は −y 方向 */
-function OpenHand() {
+export function OpenHand() {
   const parts = [
     "M-6.8 0 C-7.8 -5 -7.9 -10.5 -6.6 -14.6 Q0 -16.4 6.6 -14.6 C7.9 -10.5 7.8 -5 6.8 0 Q0 2.6 -6.8 0 Z",
     capsule([-4.6, -13.6], [-5.6, -25.4], 1.85, 1.6),
@@ -81,14 +81,14 @@ function OpenHand() {
   );
 }
 
-export function TeacherArt({ talking = false }: { talking?: boolean }) {
-  const body = "M10 200 C12 178 20 164 38 158 C54 153 70 150 84 146 L116 146 C130 150 146 153 162 158 C180 164 188 178 190 200 Z";
-  const lapelL = "M84 146 L100 182 L94 200 L78 200 L68 166 L77 155 Z";
-  const lapelR = "M116 146 L100 182 L106 200 L122 200 L132 166 L123 155 Z";
+const BODY = "M10 200 C12 178 20 164 38 158 C54 153 70 150 84 146 L116 146 C130 150 146 153 162 158 C180 164 188 178 190 200 Z";
+const LAPEL_L = "M84 146 L100 182 L94 200 L78 200 L68 166 L77 155 Z";
+const LAPEL_R = "M116 146 L100 182 L106 200 L122 200 L132 166 L123 155 Z";
+
+/** 後ろ髪（頭と いっしょに うごく） */
+export function EmmaBackHair() {
   return (
-    <g clipPath="url(#emma-frame)">
-      <clipPath id="emma-frame"><rect width={200} height={200} /></clipPath>
-      <Arch />
+    <>
       {/* 後ろ髪（左わけの セミロング。毛先は 肩で 外に はねる） */}
       <Hair
         d="M62 100 C54 64 70 36 100 35 C130 36 146 64 138 100 C140 116 145 128 151 139 C155 147 150 155 142 154 C136 153 131 147 125 145 L75 145 C69 147 64 153 58 154 C50 155 45 147 49 139 C55 128 60 116 62 100 Z"
@@ -97,6 +97,17 @@ export function TeacherArt({ talking = false }: { talking?: boolean }) {
         light={["M60 124 C58 134 55 142 52 148", "M141 124 C144 134 147 142 149 148"]}
         darkColor="#2a0e04" lightColor="#f2b27a"
       />
+    </>
+  );
+}
+
+/** 首・ジャケット・ブラウス・ブローチ */
+export function EmmaTorso() {
+  const body = BODY;
+  const lapelL = LAPEL_L;
+  const lapelR = LAPEL_R;
+  return (
+    <>
       {/* 首と体（ティールの ジャケット＋白い ブラウス＋金の ブローチ） */}
       {/* 首（細めで、つけねに 向かって ゆるく 広がる。円柱に 見せない） */}
       <path d="M90 116 L110 116 C110 128 111 138 115 147 Q100 152 85 147 C89 138 90 128 90 116 Z" fill="url(#g-skin)" />
@@ -125,6 +136,15 @@ export function TeacherArt({ talking = false }: { talking?: boolean }) {
         <circle cx={127} cy={172} r={3.5} fill="url(#gem-topaz)" />
         <circle cx={125.9} cy={170.9} r={1} fill="#fff" opacity={0.9} />
       </g>
+    </>
+  );
+}
+
+/** 顔・イヤリング・前髪・まゆ・目・鼻（口は のぞく）。blinkClass を わたすと 目に まばたきの クラスを つける */
+export function EmmaFace({ blinkClass }: { blinkClass?: string }) {
+  const eyeStyle = blinkClass ? { transformBox: "fill-box" as const, transformOrigin: "center" } : undefined;
+  return (
+    <>
       {/* 顔（大人の骨格：ほお骨のつや） */}
       <Face g={EMMA} blush={0.55} k={K} />
       <ellipse cx={79} cy={99} rx={6} ry={3.4} fill="#fff" opacity={0.13} />
@@ -163,12 +183,16 @@ export function TeacherArt({ talking = false }: { talking?: boolean }) {
       <ellipse cx={86.5} cy={83.6} rx={7.4} ry={3} fill="#a0587a" opacity={0.2} filter="url(#f-soft)" />
       <ellipse cx={113.5} cy={83.6} rx={7.4} ry={3} fill="#a0587a" opacity={0.2} filter="url(#f-soft)" />
       {/* まつげは 目じりの 1本だけ（大人の 落ちついた 目もと。くもの足のような とげを 出さない） */}
-      <Eye x={86.5} y={88} side={-1} iris="hazel" size={1.25} lashes={0} />
-      <Eye x={113.5} y={88} side={1} iris="hazel" size={1.25} lashes={0} />
+      <g className={blinkClass} style={eyeStyle}><Eye x={86.5} y={88} side={-1} iris="hazel" size={1.25} lashes={0} /></g>
+      <g className={blinkClass} style={eyeStyle}><Eye x={113.5} y={88} side={1} iris="hazel" size={1.25} lashes={0} /></g>
       <Nose x={100} y={104} s={1.3} />
-      {talking ? (
-        <Mouth x={100} y={114.5} kind="talk" s={1.35} className="mouth-talk" style={{ transformBox: "fill-box", transformOrigin: "center" }} />
-      ) : (
+    </>
+  );
+}
+
+/** とじた 口の やさしい ほほえみ */
+export function EmmaSmile() {
+  return (
         <g>
           {/* やさしい ほほえみ（口角を 少し 上げる） */}
           <path d="M89 113.4 Q94.5 111.6 100 112.9 Q105.5 111.6 111 113.4 Q100 116 89 113.4 Z" fill="#b8464f" />
@@ -177,6 +201,21 @@ export function TeacherArt({ talking = false }: { talking?: boolean }) {
           <path d="M96 118 Q100 119 104 118" stroke="#ffd0c8" strokeOpacity={0.6} strokeWidth={0.9} fill="none" strokeLinecap="round" />
           <path d="M88.2 112.4 q-0.7 0.8 -0.3 1.8 M111.8 112.4 q0.7 0.8 0.3 1.8" stroke="#a65a44" strokeOpacity={0.45} strokeWidth={0.65} fill="none" strokeLinecap="round" />
         </g>
+  );
+}
+
+export function TeacherArt({ talking = false }: { talking?: boolean }) {
+  return (
+    <g clipPath="url(#emma-frame)">
+      <clipPath id="emma-frame"><rect width={200} height={200} /></clipPath>
+      <Arch />
+      <EmmaBackHair />
+      <EmmaTorso />
+      <EmmaFace />
+      {talking ? (
+        <Mouth x={100} y={114.5} kind="talk" s={1.35} className="mouth-talk" style={{ transformBox: "fill-box", transformOrigin: "center" }} />
+      ) : (
+        <EmmaSmile />
       )}
       {/* 手（話している間は 向かって 右の 手を ひじで 曲げて 上げる。枠の 外には 出さない） */}
       {talking && (

@@ -138,7 +138,7 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
         </ol>
       </header>
 
-      {s.kind === "teacher_video" && <TeacherVideo script={s.script} videoUrl={s.videoUrl} teacherName={teacher.nameJa} onDone={next} />}
+      {s.kind === "teacher_video" && <TeacherVideo lesson={lesson} partner={steps.find((x) => x.kind === "conversation")?.character} videoUrl={s.videoUrl} teacherName={teacher.nameJa} onDone={next} />}
       {s.kind === "flashcards" && <Flashcards items={byIds(s.itemIds)} onDone={next} />}
       {s.kind === "tpr" && <TprDrill items={byIds(s.itemIds)} actions={Object.fromEntries(lesson.tpr.map((t) => [t.en, t.action]))} onDone={next} />}
       {s.kind === "phonics" && <Phonics focus={s.focus} words={s.words} tipJa={s.tipJa} onDone={next} />}

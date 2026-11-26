@@ -7,10 +7,11 @@ import type { LearningItemDef } from "@/lib/domain/types";
 import { audioKeyOf, toPublic, type Question } from "@/lib/curriculum/questions";
 import { focusExampleWord, focusLabel } from "@/lib/curriculum/phonicsButtons";
 import type { AnswerLog } from "@/lib/services/progressService";
-import { playItemAudio, speak, speakMixed } from "@/lib/speech/tts";
+import { playItemAudio, speak } from "@/lib/speech/tts";
 import { QuestionView, SpeakButton, type AnswerEvent } from "@/components/test/QuestionView";
 import { apiPost } from "@/lib/api/client";
-import { TeacherArt } from "@/components/characters/TeacherArt";
+import { TeacherVideoPlayer, VirtualClassroom } from "@/components/teacher/VirtualClassroom";
+import type { TimelineLesson } from "@/lib/teacher/timeline";
 import { GradeResponseSchema } from "@/lib/api/contracts";
 
 export type Done = (logs?: AnswerLog[]) => void;
@@ -19,36 +20,12 @@ const NextBtn = ({ onClick, label = "つぎへ ▶" }: { onClick: () => void; la
 );
 
 // ---------------------------------------------------------------------------
-// 1. AI女性教師の動画（無ければアバターアニメーション＋音声合成）
+// 1. AI女性教師の授業（run8 P8）: videoUrl が あれば 本物の 動画、なければ バーチャル教室
+//    （うごく エマ先生 ＋ 黒板 ＋ 字幕。台本 lesson.teacher が なければ レッスンの ことばから つくる）
 // ---------------------------------------------------------------------------
-export function TeacherVideo({ script, videoUrl, teacherName, onDone }: { script: string; videoUrl?: string; teacherName: string; onDone: Done }) {
-  const [subtitle, setSubtitle] = useState("");
-  const [talking, setTalking] = useState(false);
-  const play = async () => {
-    setTalking(true);
-    await speakMixed(script, setSubtitle);
-    setTalking(false);
-  };
-  return (
-    <div className="card overflow-hidden">
-      {videoUrl ? (
-        // 本番: 口の動き・ジェスチャー付きのAIアバター動画（事前生成して CDN 配信）
-        <video src={videoUrl} controls playsInline className="aspect-video w-full bg-black" onEnded={() => onDone()} />
-      ) : (
-        <div className="relative grid aspect-video place-items-center bg-[radial-gradient(120%_90%_at_50%_10%,#f2c46a_0%,#1d4a52_55%,#0b1f2e_100%)]">
-          <svg viewBox="0 0 200 200" className={`h-52 ${talking ? "bob" : ""}`} role="img" aria-label={teacherName} overflow="visible">
-            <g filter="url(#f-rim)"><TeacherArt talking={talking} /></g>
-          </svg>
-          {subtitle && <p className="absolute inset-x-4 bottom-3 rounded-lg border border-[#b8862a]/60 bg-black/70 p-2 text-center text-white backdrop-blur">{subtitle}</p>}
-        </div>
-      )}
-      <div className="p-4">
-        <p className="font-black">👩‍🏫 {teacherName}</p>
-        {!videoUrl && <button className="btn btn-coin mt-3 w-full" onClick={play} disabled={talking}>{talking ? "おはなしちゅう…" : "▶ せんせいの おはなしを きく"}</button>}
-        <NextBtn onClick={() => { window.speechSynthesis?.cancel(); onDone(); }} />
-      </div>
-    </div>
-  );
+export function TeacherVideo({ lesson, partner, videoUrl, teacherName, onDone }: { lesson: TimelineLesson; partner?: string; videoUrl?: string; teacherName: string; onDone: Done }) {
+  if (videoUrl) return <TeacherVideoPlayer videoUrl={videoUrl} teacherName={teacherName} onDone={() => onDone()} />;
+  return <VirtualClassroom lesson={lesson} partner={partner} teacherName={teacherName} onDone={() => onDone()} />;
 }
 
 // ---------------------------------------------------------------------------

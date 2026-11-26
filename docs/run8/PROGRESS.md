@@ -26,3 +26,32 @@
 ### 例（L1 から）
 - words: 「hello. hello は「こんにちは」。てを ふりながら いうよ。Hello! さあ、てを ふって、いっしょに。」（gesture: wave、pauseMs 2,500）
 - tpr: 「こんどは はやく いくよ。よーく きいてね。Look! Stop! Come here! Go!」（gesture: mime、pauseMs 5,000）
+
+## フェーズ8: バーチャル先生プレイヤー（うごく エマ先生の 教室）
+
+### やったこと
+- **せんせいステップを 作りなおし**（src/components/teacher/VirtualClassroom.tsx）: videoUrl が ない ときは「バーチャル教室」。スマホは 上に エマ先生・下に 黒板、タブレット（640px〜）は 左に エマ先生・右に 黒板。その下に 字幕（英語＋日本語）、すすみぐあいの バー（パートごとの 色・タップで ジャンプ）、コントロール。
+- **うごく エマ先生**（src/components/teacher/EmmaAnimated.tsx）: TeacherArt を 部品（Arch / EmmaBackHair / EmmaTorso / EmmaFace / EmmaSmile / OpenHand）に わけて、同じ キャラの まま 組みなおした（TeacherArt の 見た目は かわらない）。
+  - いき（からだが ゆっくり ふくらむ）・まばたき（CSS）。
+  - 口の 形 7 つ（rest / a / e / o / u / m / f）。speechSynthesis の boundary（ことばの 位置）が 来れば それに あわせ、来ない 声では 文を 時間で ループ。口だけ 自分の requestAnimationFrame で 再描画（ほかの 部品は memo）。
+  - ジェスチャー: wave・point（黒板を さす 人さし指）・nod・clap・think（あごに 指＋首を かしげる）・open_hands・mime（りょうてを 上げて はずむ）・talk・rest。うでは「ひじ」が 原点の リグ（前腕＋上腕＋手）で、ポーズの あいだは CSS transition で なめらかに うごく。wave・clap・nod・open_hands は さいしょの 3.5 秒だけ して、話す ときの 手に もどる。まち時間は tpr → mime、check → think、それ以外 → open_hands（あなたの ばん）。prefers-reduced-motion では 動きを とめる。
+- **声**（src/components/teacher/useTeacherPlayer.ts）: 英語は en-US の 女性の 声、日本語は ja-JP の 女性の 声。mix の 文は 言語ごとに わけて 声を きりかえる。0.8 / 1.0 倍、一時停止（再開すると その 文から）、もどる、もういちど（セグメント）、とばす、音あり／なし、字幕（りょうほう／にほんご／えいご／なし）。
+- **いってみよう！**: pauseMs の あいだ 黒板に「いってみよう！」（tpr は「からだで やってみよう！」、check は「かんがえてみよう！」）と カウントダウンの 輪。🎤 を おすと マイクの 音量メーター（任意。ことわられても「マイクは つかわなくても だいじょうぶ！」と 出して そのまま すすむ）。
+- **音なしでも うごく**: speechSynthesis が ない・声が ない・ミュートの ときは、タイムラインの 見つもり時間で 字幕・口・カウントダウンが すすむ。DB なしでも レッスンの データだけで うごく。
+- **本物の 動画**: videoUrl が ある ときは `<video>` を 再生し、となりに 同じ 名前の .vtt が あれば 日本語字幕の track を つける（src/lib/teacher/media.ts の vttUrlFor。HEAD で ある か しらべる）。
+- **タイムライン**（src/lib/teacher/timeline.ts。ブラウザに 依存しない）: buildTeacherTimeline（台本 → セグメント・声の 単位・時刻）、splitByLanguage、speakable（～ や ― を 間に）、segmentDurationMs / segmentAt / segmentStartMs（速さ こみ）、visemeOf / visemeAt。
+- **台本が まだ ない レッスン**（いまは L31〜1200）は、その レッスンの ことば・会話・フォニックス・TPR・表現から、同じ 9 つの ながれの 授業を その場で つくる（autoScript。W1〜6 は 日本語の 説明つき、W7〜12 は やさしい 英語＋日本語、W13〜 は 英語だけ＋日本語字幕。さいごは 会話の あいてへ つなぐ）。
+- **テスト** tests/teacher-timeline.test.ts（23 件）: 言語の 切りわけ・L1 の 台本が そのまま つかわれて 時刻が すきまなく つながる・合計が scriptMs と 5% 以内・0.8 倍・時刻 ↔ セグメント・自動の 授業の 順番と 黒板の ことば（1,200 レッスン ぜんぶ）・W13〜 は 英語・W21〜 の 英語の わりあい・会話の あいて・口の 形・.vtt の URL・声の えらびかた。
+- **スクリーンショット** scripts/teacher-screens.ts（`npm run teacher:screens`。つながらない DB で next start → Playwright）: L1・300・700・1100 × スマホ 375px／タブレット 820px × 「はじめる まえ／話している ところ／いってみよう！」の 24 まいと、ジェスチャー 4 まい（wave・mime・think・clap）を docs/run8/screens/ に 保存。横の はみ出し なし・コンソールの エラー なし・カウントダウンが 出る ことも チェック（ぜんぶ OK）。
+
+### きめたこと（判断の 記録）
+- 自動で 鳴らさない（iOS などは タップが ないと 声が 出ない）。さいしょに「▶ じゅぎょうを はじめる」。
+- 声の 一覧が からの ブラウザ（ヘッドレスなど）は「声なし」と みなして 時間で すすめる。声が 出ない ときは「こえが でない ときは じまくで すすむよ」と 出す。
+- speechSynthesis.pause() は Android などで あてに ならないので、一時停止は 声を とめて、再開したら その 文から もういちど 読む。
+- ながい 読み上げが とちゅうで 止まる ブラウザが あるので、1〜2 文ずつ 読む。onend が 来ない ときの 保険（見つもり × 2.2 ＋ 3 秒）。
+- 自動の 授業は 約 2〜3 分と みじかめ（台本が とどくまでの つなぎ）。台本の セグメントが 3 つ 未満の こわれた データも、自動の 授業に する。
+- スクショで 見て なおした こと: 「a」の 口が 大人の 顔には 大きすぎた → 小さく した（scale 1.35 → 1.25）。think の 手が あごより 下だった → ひじを 上げた。黒板の 見出しと 同じ ラベルの チップは 出さない。下の ナビに かくれない よう、スクショは 教室まで スクロールした 画面で とる。
+- 「つぎへ」は いつでも おせる（まえと 同じ）。ステップを はなれると 声は かならず とまる。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 76 ファイル 2,562 件 OK / `npx next build` OK / `npx tsx scripts/teacher-screens.ts` ぜんぶ OK
