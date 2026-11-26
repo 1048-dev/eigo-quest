@@ -405,3 +405,32 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L871〜930（ワールド30・31）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L871〜930 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。どちらも ステージ4 で 英語だけ（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。
+  - ワールド30「みらい都市」（L871〜900）: 30 レッスン・636 セグメント・209〜227 秒・英語 100%。a robot that cleans the streets / a bus that drives itself / the building which makes its own energy・ツアーガイド・a person who designs games / people who help others / the girl who invented ～・しごと あてクイズ・未来の しごと・The problem is that ～ / My idea is a bag that follows you / It uses sensors to ～ / It didn't work well, so we changed the design・発明プレゼン・One good point is that ～. One problem is that ～・画面と 休けい・Think before you post・AI can help us, but we should check the answers・テクノロジーの 話しあい・In 2050, people will probably ～ / might / will have / If we use clean energy, ～・未来都市の 計画・gonna と wanna・記事を 読む・発明の 企画書・ふりかえり（L899・L900）。L900 は「Lesson nine hundred! Amazing!」と おいわいし「Next is World thirty-one, the Corridor of Time!」の 予告。
+  - ワールド31「ときの回廊」（L901〜930）: 30 レッスン・633 セグメント・212〜227 秒・英語 100%。Each door opens to a different time・People used to ～ / There were no phones, so ～ / むかしと いまの おもちゃ / Then and Now・It was built in 1600 / was improved by many inventors / was found under the sea / was made by people long ago・歴史博物館の ガイド・She was born in ～ / When she was ten / She became a scientist / She never gave up・5 文で 一生を しょうかい・年表・When we arrived, the show had already started・Before the train was built・What if there were no electricity?・まちの 年表・People who changed the world / I respect her because ～ / Everyday heroes / 偉人インタビューごっこ / ヒーロー発表・伝記を 読む・歴史クイズ・My hero report・ふりかえり（L929・L930）。L930 は「Next is World thirty-two, the Desert of the Sun!」の 予告。
+  - 合計 1,269 セグメント・約 223 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜870 → L1〜930 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 930 本・自動 270 本、合計 約 4,067 分＝67.8 時間、1 本ずつ 切り上げで 4,534 分）。
+
+### 例（みじかく）
+- L887 Screens Everywhere（W30）: 「Birimo says, I love screens! I can watch videos all day! But soon, Birimo rubs both eyes. … Haru says, Screens are useful, but we need breaks.」→ フォニックス「Units! Don't read the letters. Say the whole word. This one is kilometers. This one is centimeters.」→ からだで「Look far away for twenty seconds. Find a cloud or a mountain.」→ クイズ「Your eyes feel tired. What's a good break? A, look far away. B, look closer at the screen.」
+- L917 It Had Already Started（W31）: 「Haru whispers, Oh no! It's so quiet inside. When we arrived, the show had already started.」→「Two things in the past. First, the show started. Later, we arrived. The first one gets had.」→ フォニックス「Science, scientist. A person who does science. … Piano, pianist. Cycle, cyclist.」→ からだで「Run to the theater door. Now tiptoe to your seat. Shh!」→ クイズ「Which happened first? A, the show started. B, we arrived.」
+
+### きめたこと（判断の 記録）
+- 前回まで（L1〜870）の 台本が そろって いる ことを たしかめ、world-30・31 は 台本 0 本 だったので 60 本 ぜんぶ 新しく 書いた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L871-880.json〜L921-930.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W30-31.md を 新しく 作った。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-871-930.json）。tmp-teacher/audit.ts に この 一覧を たした。60 本で wrap の あいての ずれ 0。audit の「お金の ことば」は L873 の 字幕「ハンドル」の「ドル」に 反応した だけ（テストの きんしは 英語の dollar・cent だけ なので 問題なし）。
+- 年号・数は say では ことばで 書く（sixteen hundred・nineteen oh three・the nineteen nineties・the twenty-first century）。声が ただしく 読める ように するため。スライドは データの かたち（1600・the 1990s）。say に 数字は 0。
+- りゃくご（W30 B4）は データの tipJa どおり: AI・USB・GPS などは 1 もじずつ、3D は three D、km・cm・kg・mm は ことば まるごと（kilometers など。say には km と 書かない）。
+- L888 の データの セリフ「Don't share your address or school name online.」は テストの きんし語に あたるので say・字幕・スライドに つかわず、「Keep your personal information private」「Don't share where you live」「tell a grown-up」に した。
+- データに 性別の ない キャラ（ロボットの Nova・時計の Old Tock・Professor Nib・Sprocket など）は he / she を つかわず 名前で よんだ（データの teacherScript に she が ある 場合も 名前に そろえた）。Stella Moss は つくった 天文学者で、データどおり she。じっさいの 人物（Marie Curie・電話の Bell・Helen Keller と Anne Sullivan など）は データに ある 事実だけ。
+- L900・L930 の 予告は docs/curriculum-6year.md に ある つぎの ワールドの なまえ（Corridor of Time・Desert of the Sun）を つかった（つくった なまえでは ない）。
+- L875・L876・L878・L889・L908・L915・L920・L924・L929 などは 226〜227 秒で めやす 205〜225 秒を すこし こえるが、上限 230 秒・許容 180〜240 秒の なか なので そのまま。
+- 各 下書きの 書き手が テストの ルールを じぶんで 確認し、ぜんぶ vitest でも とおった。L887・L917 は 要所を 読み、L873 は 全文を 読んだ。ほかは ぬきとりで（全 60 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
