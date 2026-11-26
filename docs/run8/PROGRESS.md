@@ -274,3 +274,29 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L571〜630（ワールド20・21）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L571〜630 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。
+  - ワールド20「おまつりの 島」（L571〜600・ステージ2 の さいご）: 30 レッスン・632 セグメント・201〜228 秒・英語 97〜99%（ステージ2 めやす 88〜100%）。Would you like to ～?・I'd love to, but ～（ことわっても OK）・Shall we ～?・しょうたいじょう・People ～（せかいの おまつり）・ホームステイの ことば・When I was little ～・be going to／will・If it rains ～・have to・Why don't we ～?・ステージ2 の ふりかえり（L591〜595）・おもいでアルバム・5 文スピーチ・リハーサル。L600 は ステージ2 の おいわいと「Next is Stage 3. World 21, the Tower of Messages! From now on, English only.」の 予告。
+  - ワールド21「ことづての とう」（L601〜630・ステージ3 の はじまり）: 30 レッスン・631 セグメント・205〜226 秒・英語 100%（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。でんわ（May I speak to ～? / Hold on, please / wrong number）・ビデオ通話（You're on mute / The screen froze）・じさ・でんごん（Can I take a message? / Could you tell her ～?）・He said he was ～・過去進行形（I was ～ing when ～ / While ～）・メール（Dear ～, / Best wishes,）・ネットの あんぜん・絵文字・とりの てがみ。L601 は「From now on, I'll speak only English. Don't worry. Listen, look and guess!」で はじめ、L630 は「Next is World 22!」だけ（つぎの ワールドの なまえは つくらない）。
+  - 合計 1,263 セグメント・約 219 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜570 → L1〜630 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 630 本・自動 570 本、合計 約 3,704 分＝61.7 時間、1 本ずつ 切り上げで 4,234 分）。
+
+### 例（みじかく）
+- L574 Shall We Dance?（W20・会話）: 「But Riko says, Um... I'm a little shy. I don't know the steps. I tell her, That's okay. Watch first. … Shall we join the circle? Kiko cheers, Yes, let's!」→「Shall we means, let's do it together. … Feeling shy? It's okay to watch first.」→ クイズ「You want to dance with your friend. What do you say? A, Shall we dance? B, Turn around.」
+- L607 You're on Mute!（W21・英語だけ）: 「Birimo talks and talks, but there's no sound! Kiko says, Birimo, you're on mute. Click the microphone.」→ からだで「Mute means quiet. Put your finger on your lips. Shh. Now, click the button. Click!」→ クイズ「You can hear your friend, but you only see ears. A, Can you turn on your camera? B, You're on mute.」
+
+### きめたこと（判断の 記録）
+- 前回まで（L1〜570）の 台本が そろって いる ことを たしかめ、world-20・21 は 台本 0 本 だったので 60 本 ぜんぶ 新しく 書いた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L571-580.json〜L621-630.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W20-21.md を 新しく 作った（W20 は ステージ2: 英語 94〜98%・ちいさな 日本語ヒント、W21 は ステージ3: 英語だけ、いみは やさしい 英語・ジェスチャー・はんたいの ことばで 説明）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-571-630.json）。tmp-teacher/audit.ts に この 一覧を たし、W21 は wrap に 英語の なまえ（Riko など）が あるかを しらべる ように した。60 本で ずれ 0・お金の ことば 0。
+- W20: ことわるのも ていねいなら OK、たべものは「No, thank you」で いい、ろうそく・はなび・ちょうちんは おとなと いっしょに あんぜんな ところから。L577・L580 の データに ある 国の なまえ（In India …）は スライドに 出さず「In some countries」と ぼかした（ステレオタイプを さける）。L600 の 予告は 2 つめの wrap セグメント（スライド見出し「Next」）に した。
+- W21: ほんとうの でんわ番号・メール・パスワード・じゅうしょ・がっこうは 聞かない。L624 の データの 文「Don't share your address online.」は テストの きんし語（your address）に あたる ので、say と 字幕では「your home address」「おうちの ばしょ」と いいかえ、スライドには データの 文を そのまま のせた（スライドは きんし語チェックの 外）。L625 の「じゅうしょや がっこうの なまえは かかないで」に あたる セリフは 入れなかった。L611・L629 の「Message Center」は つかわず（L615 は タイトルなので そのまま）。L616〜620 の パイの なぞは だれも しからない おはなしで、はんにんは おなかを すかせた ひなどりたち、さいごに あやまって みんなで パイを やきなおす。
+- L594 は 201 秒（めやす 205〜225 秒より みじかい が 許容 180〜240 秒の なか）なので そのまま。
+- goal・会話は いくつか ぬきとりで 読んだ（全 60 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
