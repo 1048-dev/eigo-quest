@@ -5,7 +5,8 @@
 **学校テスト対策（教科書の単元・表現・筆記）× フォニックス × TPR（体で反応する反射神経）× 日常会話のインプットとアウトプット** を、1つのカリキュラムJSONにまとめています。アプリのレッスン・テスト・まとめ動画・AI会話・PDF教材は、すべてこのJSONから作られます。
 
 - **全1,200レッスン（40ワールド×30・5ステージ）** が完成しています（run7: 小1〜小6 の 6 年間 使う 設計。週5レッスン×年40週 ≒ 6年）。ステージ1（W1〜12・L1〜360）は小1〜小6・中学準備のテーマで Pre-A1〜A1、ステージ2〜5（W13〜40）は A1+ → A2 → A2+ → B1 → B1+ へ進みます。フォニックスは文字の音26音から始まり、つづりのパターン・ことばのパーツ（接頭辞・接尾辞）・語根まで積み上げます。保護者には「学校の英語: 小N まで修了」も表示します。
-- レッスン以外の毎日のインプットとして **えいごの としょかん**（/library: おはなし・チャンツ・フリートーク）と、年に1回の **力だめし**（/yearly）があります。
+- 各レッスンの最初は **エマ先生の 3〜4 分の 授業**（run8）。1,200 レッスン ぜんぶに 台本があり、アプリの中の **バーチャル教室**（うごくエマ先生＋黒板＋字幕＋ブラウザの読み上げ）で教えます。あとで AI アバター動画にするための書きだし（`npm run teacher:export`）と、できた動画をつなぐ口（`npm run teacher:link`）もあります（下の「エマ先生の授業」）。
+- レッスン以外の毎日のインプットとして **えいごの としょかん**（/library: おはなし 100話・チャンツ 28曲・フリートーク）と、年に1回の **力だめし**（/yearly）があります。
 - 各レッスンの最後に **AIキャラ（ハル・リコ・キコ・ビリモがレッスンごとに交代）との英語の会話**（最後まで話すと +5コイン）、終わったあとに任意の **2〜3分「きょうのまとめ動画」**（レッスンデータから自動生成）があります。
 
 ```
@@ -14,6 +15,8 @@ content/curriculum/worlds/world-NN.json   ← カリキュラムの元データ�
         ├─→ src/lib/curriculum   学習項目・テスト定義・問題をルールで展開
         │        ├─→ prisma/seed.ts   DBに投入
         │        └─→ API / 画面        レッスン・テスト・アリーナ・お宝アラート
+        ├─→ src/lib/teacher      エマ先生の授業（台本 → タイムライン → バーチャル教室）
+        ├─→ src/lib/teacherVideo 授業動画の書きだし（exports/teacher/）と 動画のつなぎ先（content/teacher-videos.json）
         ├─→ src/lib/recap        きょうのまとめ動画の台本（時間つきセグメント）
         ├─→ src/lib/conversation AIキャラとの会話（Claude ＋ 台本フォールバック）
         └─→ worksheets/generate_worksheets.py   A4ワークシートPDF（同じ範囲ルール）
@@ -61,7 +64,7 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・41ファイル・1010件） |
+| `npm test` | 単体テスト（vitest・78ファイル・約2,590件） |
 | `npm run typecheck` | 型チェック |
 | `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent・/setup-pin・/d/<token>・/forgot-password・/reset-password・/verify-email・/forgot-pin）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build`。ポートが使用中（古いサーバーの消し忘れ）なら次の空きポートを使う。40 ワールドで約 70 画面・20 分ほど |
@@ -84,6 +87,8 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `npm run worksheets:month -- --pack 1` | 1か月ワークブック No.1（20レッスン＝平日ペースで約1か月を1冊。No.2 = L21〜40 …）を `worksheets/out/monthly/month-NN.pdf` に出力（`-- --world 13` で そのワールドに かかる冊） |
 | `npm run worksheets:month -- --all` | 全レッスン分の 1か月ワークブックを出力（360レッスンで 18冊、1,200レッスンで 60冊） |
 | `npm run curriculum:index` / `npm run curriculum:check` | `content/curriculum/worlds/` から 索引（index.json・titles.json・src/lib/curriculum/bundledWorlds.ts）を作る / 最新か確かめる（run7） |
+| `npm run teacher:merge -- <下書き.json> [--dry] [--strict]` | 先生の 台本の 下書きを カリキュラムに とりこむ（長さ・英語の わりあい・黒板の ことばを チェック。すでに 台本が ある レッスンは とばす）（run8） |
+| `npm run teacher:screens` | バーチャル教室の スクリーンショット（L1・300・700・1100 × スマホ／タブレット）を `docs/run8/screens/` に。先に `npx next build`（run8） |
 | `npm run teacher:export [-- --from 1 --to 30] [-- --only-script]` | 先生の 台本を AI アバター動画サービス用に 書きだす（`exports/teacher/<0001>/` に script.txt・script.json・subtitles.vtt・slides.json、`exports/teacher/summary.csv` に 分数の 合計）。docs/run8/VIDEO-VENDORS.md（run8） |
 | `npm run teacher:link -- link 12 <URL>` / `list` / `check [--head]` | できあがった 先生の 動画を レッスンに つなぐ（`content/teacher-videos.json`）。つないだ レッスンは バーチャル先生の かわりに 動画を 再生（run8） |
 | `npm run worksheets:upload [-- --dry-run] [-- --pack 1 \| --world 1] [-- --force]` | `worksheets/out/monthly/month-NN.pdf` の 1か月ワークブックを置き場所（`STORAGE_DRIVER`）へアップロード。すでにあれば とばす。進みぐあいを表示・`--timeout`（既定600秒） |
@@ -122,6 +127,8 @@ eigo-quest/
 │   │   ├── vowelTeams.ts     母音チームの音の表（oo の ウー／ウ、ow の オウ／アウ）とフォーカスボタンの読み上げ（focusSay）
 │   │   ├── rControlled.ts    r のつく母音（ar or er ir ur air ear）
 │   │   └── w10Phonics.ts / w11Phonics.ts / w12Phonics.ts   ワールド10〜12 の音の表（soft c/g・-y・-le・-ed・サイトワード・多音節語）
+│   ├── teacher/              エマ先生の授業: timing.ts（長さ・英語の わりあい）・timeline.ts（台本 → 声の単位・時刻・口の形）・media.ts（動画の となりの .vtt）
+│   ├── teacherVideo/         授業動画: export.ts（script.txt / script.json / VTT / slides / summary.csv）・manifest.ts（content/teacher-videos.json）・index.ts（TeacherVideoProvider。いまは manual だけ）
 │   ├── recap/script.ts       きょうのまとめ動画の台本ビルダー（純粋関数・2〜3分に調整）
 │   ├── conversation/
 │   │   ├── engine.ts         台本フォールバックの会話エンジン（サーバーとクライアントの両方で使う）
@@ -160,7 +167,9 @@ eigo-quest/
 │   ├── dashboard/            習得率ダッシュボード（レーダーチャート・推移・苦手）
 │   ├── arena/ gacha/ ranking/
 │   └── api/                  ルートハンドラ
-├── src/components/           WorldMap / QuestionView / TestRunner / LessonSteps / ConversationStep / RecapPlayer / MasteryRadar / account（AccountBar・PinPad）/ parent ...
+├── src/components/           WorldMap / QuestionView / TestRunner / LessonSteps / ConversationStep / RecapPlayer / MasteryRadar / account（AccountBar・PinPad）/ parent / teacher（VirtualClassroom・EmmaAnimated・useTeacherPlayer）...
+├── content/teacher-videos.json  授業動画の つなぎ先（レッスン番号 → 動画 URL。npm run teacher:link で書く）
+├── exports/teacher/summary.csv  授業動画の 分数の一覧（ほかの書きだしファイルは git に入れない）
 ├── worksheets/generate_worksheets.py   A4 PDF生成
 ├── scripts/e2e-smoke.ts      30日分の通しプレイを早送りで実行（DB が必要）
 ├── scripts/smoke.ts          Playwright の全画面スモークテスト（DB なしでも可）。smoke-offline.ts は DB 停止での起動〜スモークを1コマンドで
@@ -174,7 +183,7 @@ eigo-quest/
 ├── assets/fonts/             レポート PDF 用の Noto Sans JP（SIL Open Font License・OFL.txt）
 ├── vercel.json               Vercel の設定（ビルドコマンド・東京リージョン・Cron Jobs）
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
-├── docs/night/ docs/night2/ docs/run3/ docs/run4/ docs/run5/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md、公開の手順は docs/run5/DEPLOY.md
+├── docs/night/ docs/night2/ docs/run3/ 〜 docs/run8/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md、公開の手順は docs/run5/DEPLOY.md
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
 ```
 
@@ -315,6 +324,13 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 - 学年は「テーマの対応先」で、子どもの実際の学年ではありません（全員 Lesson 1 から）。教科書の文・イラストは使わず、単元のテーマと目標表現だけを合わせ、英文はすべてオリジナルです。
 - 各レッスンには会話シーン（`conversation`：場面・セリフ・AI会話のゴールと目標表現）と、まとめのポイント（`recap.highlightsJa`）があります。どちらも省略可能なフィールドで、worksheets のスクリプトには影響しません。
 - `tests/curriculum.test.ts` が、連番・ワールドと学年の対応・空欄・英語欄に日本語がないこと・フォニックスの順番・まだ習っていない文法（3人称・過去形など）を先に出していないこと・AI会話で個人情報を聞かないこと などを自動で確認します。
+
+## エマ先生の授業（run8・src/lib/teacher・src/components/teacher）
+
+- **台本**: 1,200 レッスン ぜんぶの `lesson.teacher`（`content/curriculum/worlds/world-NN.json`。省略可。むかしの短い `teacherScript` も残しています）。1本 3〜4 分（189〜239 秒）で、あいさつ → めあて → ことば（ジェスチャー）→ 表現 → フォニックス → TPR → まねして言う（まち時間 `pauseMs`）→ クイズ → まとめ の順。最後はその回の AI 会話の相手へつなぎます。英語のわりあいは W1〜2 約 30〜45% → W7〜12 約 80〜90% → ステージ2 ほぼ英語 → ステージ3〜5 英語だけ（日本語は字幕）。設計は docs/teacher-plan.md、記録は docs/run8/PROGRESS.md。
+- **バーチャル教室**（`videoUrl` が無いとき）: うごくエマ先生（いき・まばたき・口の形 7 種・ジェスチャー）＋黒板＋字幕（英語・日本語）＋パートごとの進みぐあいバー。英語は en-US、日本語は ja-JP の声で読み上げ（日英まじりの文は言語ごとに分ける）。0.8 / 1.0 倍・一時停止・もどる・もういちど・とばす・字幕の切りかえ。「いってみよう！」のカウントダウンと任意のマイク音量メーター。音声が使えない・DB 停止・スマホでも、字幕と時間で進みます。最初に「▶ じゅぎょうを はじめる」をタップ（自動では鳴らしません）。
+- **見かた**: `npm run dev` → `/lesson/1`（DB なしの おためしモードでも OK）→ 最初のステップ「せんせい」。
+- **動画にする**: `npm run teacher:export` → `exports/teacher/<0001>/`（script.txt・script.json・subtitles.vtt・slides.json）と `exports/teacher/summary.csv`（1,200 本で 合計 約 4,355 分＝72.6 時間、1本ずつ切り上げ 4,800 分）。できた動画は `npm run teacher:link -- link <N> <URL>` で `content/teacher-videos.json` に書くと、その回だけ動画（となりの .vtt で字幕）に切りかわります。サービスの選びかた・見つもりは [docs/run8/VIDEO-VENDORS.md](docs/run8/VIDEO-VENDORS.md)。特定のサービスの API はまだ実装していません。
 
 ## きょうのまとめ動画（src/lib/recap・/recap/[lessonNo]）
 
@@ -457,7 +473,7 @@ npm run line:monthly -- --month 2026-11 --force
 | 項目 | 今の実装 | 本番での想定 |
 |---|---|---|
 | 認証 | 保護者アカウント（メール＋パスワード・LINE・暗証番号・子どもを選ぶ）、パスワードの再設定・暗証番号を忘れた・メールアドレスの確認（run5）は実装済み。レート制限は DB（run5。DB 停止中はメモリ） | 送信サービス（Resend か SMTP）のキーと `MAIL_FROM`・`APP_BASE_URL` を設定。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
-| AI教師の動画 | SVGアバター（口とジェスチャーのアニメーション）＋ブラウザの音声合成 | 事前に生成したアバター動画を `Lesson.videoUrl` に入れる（UIはすでに対応済み） |
+| AI教師の動画 | 1,200 本の台本 ＋ バーチャル教室（SVG のエマ先生・口とジェスチャー・黒板・字幕）＋ブラウザの音声合成。動画用の書きだしと つなぎ先（`content/teacher-videos.json`）は実装済み（run8） | AI アバター動画サービスで作った動画を `npm run teacher:link` でつなぐ（docs/run8/VIDEO-VENDORS.md）。台本のネイティブ確認 |
 | 音声 | ブラウザの音声合成（`NEXT_PUBLIC_RECORDED_AUDIO=1` のときだけ `/media/audio/{audioKey}.mp3` を優先） | ネイティブの収録音声か、事前に生成したTTS |
 | 発音判定 | Web Speech API で単語の一致率 × 確信度 | 音素単位で評価できるAPIを `PronunciationScorer` の実装として差し替える |
 | アリーナの採点 | seed と現在の記憶状態から問題を作り直す | 出題した内容を TestSession テーブルに保存して採点する |
