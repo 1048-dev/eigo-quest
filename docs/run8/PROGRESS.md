@@ -300,3 +300,29 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L631〜690（ワールド22・23）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L631〜690 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。どちらも ステージ3 なので 英語だけ（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。
+  - ワールド22「こはくの としょかん」（L631〜660）: 30 レッスン・629 セグメント・205〜225 秒・英語 100%。Where can I find ～?・What's it about?・Who wrote it?・You should read it.・とうじょうじんぶつ（The main character is ～ / brave and kind / hero と villain）・Which character do you like? ― because ～・おはなしの ながれ（At the beginning / One day / Suddenly / At the end）・What happened next?・あらすじ（First, Then, At the end）・きもちと りゆう（because と so の ちがい・When ～, ～・If ～, we can ～・Feelings Map）・セリフ（"Help!" shouted the boy / said・asked・cried・whispered）・きもちを こめて よむ・えほん よみ・ストーリーシアター・ひらかない ほん・じぶんの エンディング・おすすめカード・ふりかえり（L659・L660）。L660 は「Next is World 23, the Green Laboratory!」の 予告。
+  - ワールド23「みどりの けんきゅうじょ」（L661〜690）: 30 レッスン・633 セグメント・207〜227 秒・英語 100%。かがくしゃ・じっけんの あんぜん（goggles / Don't touch the hot plate / Always ask an adult first）・けんびきょう（It looks like ～）・はかる（degrees / centimeters）・じっけんノート・predict / observe / result / why（うく・しずむ、しおみずと たまご）・If you heat ice, it melts・When water freezes ～・いろを まぜる・じしゃく（Does a magnet stick to ～? ― Yes, it does.）・made of と made from・grown in・Where is it made?・たねと みず・しょくぶつの そだちかた・ちょうの へんしん・ひかり・せいちょう日記・サイエンスフェア（けいかく・じっけん・レポート「We can't be sure yet. We need to try again.」）・ふりかえり（L689・L690）。L690 は「Next is World 24!」だけ（つぎの ワールドの なまえは つくらない）。
+  - 合計 1,262 セグメント・約 220 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜630 → L1〜690 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 690 本・自動 510 本、合計 約 3,778 分＝63.0 時間、1 本ずつ 切り上げで 4,294 分）。
+
+### 例（みじかく）
+- L653 Read It with Feeling（W22）: 「His robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! … Now Birimo, read it in surprise. Oh no! A dragon is at the door!」→「See sadly? Read it slow and low. See in surprise? Read it fast and high.」→ からだで「Drop your shoulders. Say Oh no, sadly. Now open your eyes wide! Say Oh no, in surprise!」→ クイズ「Riko says, Hooray! We fixed the robot! How does she feel? A, sad. B, happy.」
+- L674 Magnets Stick to Iron（W23）: 「Kiko says, The paper clip sticks! Click! Haru says, The paper cup doesn't. Magnets stick to iron, but not to paper.」→ からだで「Stick to the door like a magnet. Click! … Then flip the magnet. Push away!」→ クイズ「Does a magnet stick to a paper cup? A, Yes, it does. B, No, it doesn't.」
+
+### きめたこと（判断の 記録）
+- 前回まで（L1〜630）の 台本が そろって いる ことを たしかめ、world-22・23 は 台本 0 本 だったので 60 本 ぜんぶ 新しく 書いた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L631-640.json〜L681-690.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W22-23.md を 新しく 作った（どちらも ステージ3: 英語だけ。参考は W21 の 台本）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-631-690.json）。tmp-teacher/audit.ts に この 一覧を たした。60 本で ずれ 0・お金の ことば 0。
+- W22: おはなしは データに ある オリジナルの キャラ（Lulu・Ember・Lord Grim など）だけ。じっさいの 本や 有名な キャラは つかわない。villain は こわくなく、ちょっと おかしい キャラに。L651 の vocab「wave」は うみの なみなので「Not a hello wave!」と ことわった。L655 の TPR「Walk to the center of the stage.」は「center」を さけるため つかわなかった（ほかの 3 つは つかった）。
+- W23: じっけんは いつも おとなと いっしょ、ラボでは なにも なめない・あついものに さわらない。L671 は おとなが なべを あたため こどもは はなれて みる。L672 は「ガラスびんを れいとうこに いれない」を つたえ、TPR は プラスチックの ボトルに した。「centimeters」は テストの きんし語（cent / cents の 単語）に あたらない ので そのまま つかった。L679 は「made（こうじょうで つくる）と grown（はたけで そだてる）」の ちがいを せつめい。場所は データの まま（ステレオタイプは つくらない）。
+- L662（226 秒）・L676（227 秒）・L690（227 秒）は めやす 205〜225 秒を すこし こえるが、上限 230 秒・許容 180〜240 秒の なか なので そのまま。
+- 各 下書きの 書き手が テストの ルール（ながれの じゅんばん・ポーズ・字幕・スライドの 数・きんし語・wrap の あいて）を じぶんで 確認し、ぜんぶ vitest でも とおった。会話・TPR・クイズは いくつか ぬきとりで 読んだ（全 60 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
