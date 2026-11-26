@@ -18,7 +18,7 @@
  *   API（DB なし）: レッスン完了・かいわ・まとめ視聴 が success / ok で 返る
  *   画面: この ブラウザで Lesson 1 を クリアした きろくが あれば、マップに「きょうのまとめ」リンクが 出る
  */
-import { mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { chromium, type Browser, type BrowserContext, type Page } from "playwright";
 
@@ -26,8 +26,10 @@ const BASE = (process.argv[2] ?? process.env.SMOKE_URL ?? "http://localhost:3000
 /** 保存先（2つめの 引数 か SMOKE_OUT で かえられる。さいごの 確認は docs/night2/screens/final） */
 const OUT = path.resolve(process.argv[3] ?? process.env.SMOKE_OUT ?? path.resolve(__dirname, "../docs/night2/screens"));
 
-/** 各ワールドの さいしょの レッスン（1, 31, 61, … 331） */
-const WORLD_LESSONS = Array.from({ length: 12 }, (_, i) => i * 30 + 1);
+/** 各ワールドの さいしょの レッスン（1, 31, 61, … 1171）。ワールドの 数は 索引から（run7 で 40 ワールド） */
+const CURRICULUM_INDEX = JSON.parse(readFileSync(path.resolve(__dirname, "../content/curriculum/index.json"), "utf8")) as { worlds: unknown[]; meta?: { lessonsPerWorld?: number } };
+const PER_WORLD = CURRICULUM_INDEX.meta?.lessonsPerWorld ?? 30;
+const WORLD_LESSONS = Array.from({ length: CURRICULUM_INDEX.worlds.length }, (_, i) => i * PER_WORLD + 1);
 
 const PAGES: { name: string; url: string }[] = [
   { name: "home", url: "/" },
@@ -391,8 +393,8 @@ async function accountOfflineFlow(browser: Browser) {
   }, stale);
 }
 
-/** スモーク ぜんたいの 時間制限（SMOKE_TIMEOUT_SEC。既定 15分）。こえたら 失敗で 終わる */
-const TOTAL_TIMEOUT_MS = Math.max(60, Number(process.env.SMOKE_TIMEOUT_SEC) || 900) * 1000;
+/** スモーク ぜんたいの 時間制限（SMOKE_TIMEOUT_SEC。既定 25分。40 ワールドで 画面が 約 70）。こえたら 失敗で 終わる */
+const TOTAL_TIMEOUT_MS = Math.max(60, Number(process.env.SMOKE_TIMEOUT_SEC) || 1500) * 1000;
 setTimeout(() => {
   console.error(`\n✗ 時間切れ（${TOTAL_TIMEOUT_MS / 1000}秒）。とちゅうまでの 問題: ${problems.length} こ`);
   for (const p of problems) console.error(`  [${p.page}] ${p.kind}: ${p.detail}`);

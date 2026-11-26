@@ -25,7 +25,7 @@ describe("まとめ台本ビルダー（buildRecapScript）", () => {
       expect(s.totalMs, `Lesson ${l.lessonNo}`).toBeGreaterThanOrEqual(RECAP_TIMING.minTotalMs);
       expect(s.totalMs, `Lesson ${l.lessonNo}`).toBeLessThanOrEqual(RECAP_TIMING.maxTotalMs);
     }
-  });
+  }, 30_000);
 
   it("セクションは はじまり→ことば→ひょうげん→フォニックス→うごこう→かいわ→…→おわり の順", () => {
     const s = buildRecapScript(lesson1);
@@ -59,14 +59,17 @@ describe("まとめ台本ビルダー（buildRecapScript）", () => {
     for (const x of s.segments.filter((y) => !y.repeat)) expect(x.pauseMs).toBe(RECAP_TIMING.gapMs);
   });
 
+  // 1,200 レッスン × 約 60 セグメントで expect を よぶと 重い（いそがしい マシンで 5 秒を こえた）ので、まとめて 1 回で たしかめる
   it("ホストは ハル と ビリモ だけ。日本語のセリフはいつもある", () => {
+    const bad: string[] = [];
     for (const l of LESSONS) {
       for (const seg of buildRecapScript(l).segments) {
-        expect(["haru", "birimo"]).toContain(seg.host);
-        expect(seg.sayJa.trim().length).toBeGreaterThan(0);
+        if (seg.host !== "haru" && seg.host !== "birimo") bad.push(`L${l.lessonNo} ${seg.id} host=${seg.host}`);
+        if (!seg.sayJa.trim()) bad.push(`L${l.lessonNo} ${seg.id} sayJa が からっぽ`);
       }
     }
-  });
+    expect(bad).toEqual([]);
+  }, 30_000);
 
   it("レッスンの中身が入っている（ことば・表現・フォニックス・TPR・会話）", () => {
     const s = buildRecapScript(lesson1);
