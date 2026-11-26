@@ -55,3 +55,31 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 76 ファイル 2,562 件 OK / `npx next build` OK / `npx tsx scripts/teacher-screens.ts` ぜんぶ OK
+
+## フェーズ9: 本物の AI アバター動画への 書きだし（あとで つかう）
+
+### やったこと
+- **書きだし** scripts/teacher-export.ts（`npm run teacher:export`。`--from/--to`・`--only-script`・`--summary-only`・`--out`。時間制限 5 分・100 レッスンごとに 進みぐあいを 表示）。中身の 計算は ブラウザに 依存しない src/lib/teacherVideo/export.ts。
+  - `exports/teacher/<0001>/script.txt`: 人が 読める 台本。`#` 行は メモ（パート・ジェスチャー・黒板・時刻）、`[PAUSE 2.5s]` は 子どもが まねする まち時間（tpr は「からだを うごかす」、check は「かんがえる」の メモつき）。
+  - `script.json`: セグメントごとの データ（say・言語ごとの かたまり parts・字幕・gesture・slide・見つもりの 時刻 start/speak/pause/end）と レッスンの 合計・英語の わりあい・語数。
+  - `subtitles.vtt`（日本語＋英語の 2 行）と `subtitles.ja.vtt`・`subtitles.en.vtt`: 7 秒を こえる 話は 文ごとに 字幕を わける。まち時間には「（いってみよう！）/(Your turn!)」の 字幕。
+  - `slides.json`: 黒板の 中身と 出す 時刻。
+  - `exports/teacher/summary.csv`: レッスンごとの 話す 秒・まち時間・合計 秒・分・切り上げ分・英語％・語数と、さいごに TOTAL 行（UTF-8 BOM つき で Excel で ひらける）。
+- **プロバイダー** src/lib/teacherVideo/index.ts: `TeacherVideoProvider.generate(lesson)` → `ready`（動画 URL＋となりの .vtt）/ `pending`（つぎに すること 4 つ）。実装は `manual` だけ（本物の サービスの API は 書いていない）。
+- **動画の つなぎ先** content/teacher-videos.json（マニフェスト）＋ src/lib/teacherVideo/manifest.ts。`buildLessonFlow` が ここを 見て、動画が あれば せんせいステップに `videoUrl` を 入れる（P8 の プレイヤーが 動画＋字幕を 再生。なければ バーチャル先生）。
+- **つなぐ スクリプト** scripts/teacher-link.ts（`npm run teacher:link`）: `link N URL`・`link-range --from --to --pattern ".../lesson-{nnnn}.mp4"`・`unlink`・`list`・`check [--head]`（HEAD で 動画と 字幕が あるか。1 本 10 秒まで）・`--dry`・`--note`。
+- **手引き** docs/run8/VIDEO-VENDORS.md: ながれ・ファイルの 説明・えらぶ ときに 見る ところ（日本語＋英語の 声・まぜた 文での 声の きりかえ・リップシンク・ジェスチャー・商用ライセンス・オリジナル アバターの 権利・ダウンロード配信の 可否・解約後・1 分 単価と 切り上げ・API／一括）・ためしかた（L1・W10・W24 の 3 本）・summary.csv からの 費用の 見つもりかた・つなぎかた。値段や サービス名は 書かず「最新の 公式ページで たしかめる」と した。
+- README の コマンド表に teacher:export / teacher:link を 追加。
+- **テスト** tests/teacher-export.test.ts（14 件）: L1 の 書きだしが 台本どおり・長さが プレイヤーと 同じ、script.txt の PAUSE と 読む 行の 数、VTT の 形・時刻が ふえていく・日本語／英語だけの VTT、slides、auto の レッスン、1,200 レッスン ぜんぶ 書きだせる、summary.csv の 行数・TOTAL・合計、マニフェストの チェック・URL の 制限・link/unlink/pattern、手動プロバイダーの ready/pending、レッスンの ながれの videoUrl。
+
+### きめたこと（判断の 記録）
+- **動画の URL は DB では なく JSON マニフェスト**（content/teacher-videos.json）。DB が ねていても おためし・オフラインで 同じ 動画が 出る・git で 変更が のこる・1,200 本でも 約 100KB で ブラウザに のっても よい。手で 書いても よいが、teacher-link なら URL を チェックする。
+- URL は `https://` か `/`（public/）だけ（javascript: など を ふせぐ。http は localhost だけ）。
+- 字幕は P8 の プレイヤーに あわせて「動画と 同じ 名前の .vtt を となりに」。マニフェストには 字幕の URL を もたない。
+- 台本が まだ ない レッスン（いまは L31〜1200）も、バーチャル先生と 同じ 自動の 授業を 書きだす（source=auto）。見つもりの 目安に なるが、本番の 動画は `--only-script` で 台本の ある レッスンだけ つくる よう 手引きに 書いた。
+- exports/teacher/ は 約 7,200 ファイル なので .gitignore（作りなおせる）。summary.csv だけ コミット。
+- 字幕の 時刻は 読む はやさからの 見つもり。日本語と 英語の 文の 数が 同じ ときは 同じ 文どうしを 同じ 字幕に、ちがう ときは 文字数で わける（すこし ずれる ことが ある → 動画が できたら 時刻を あわせる と 手引きに 書いた）。
+- いまの 見つもり: 1,200 本 合計 約 2,906 分（48.4 時間）、1 本ずつ 切り上げで 3,596 分（台本 30 本＋自動 1,170 本）。台本が そろうと 約 60〜80 時間の 見こみ。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `npx tsx scripts/teacher-export.ts` 1,200 レッスン 約 8 秒 / `teacher-link.ts` の link・link-range・不正 URL・list・check を --dry で 確認

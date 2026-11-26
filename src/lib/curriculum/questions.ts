@@ -5,6 +5,7 @@
 import type { AssessmentDef, LearningItemDef, LessonDef, MemoryState, Skill } from "@/lib/domain/types";
 import { pickArenaItems, type ArenaMode } from "@/lib/domain/arena";
 import { MAX_CONVERSATION_TURNS, pickConversationPartner } from "@/lib/conversation/engine";
+import { teacherVideoUrl } from "@/lib/teacherVideo/manifest";
 import { getLesson, itemsInRange, itemsOfLesson } from "./index";
 import { VOWEL_TEAMS, VOWEL_TEAM_INTRO, possibleSounds, shortVowelOf, teamSound } from "./vowelTeams";
 import { R_MOUTH, R_VOWELS, R_VOWEL_INTRO, findRSpellings, rSound, shortVowelOfR } from "./rControlled";
@@ -1677,6 +1678,11 @@ export type LessonStep =
 
 export const SPEED_ROUNDS = [0.8, 1.0, 1.2] as const;
 
+function withTeacherVideo(lessonNo: number): { videoUrl?: string } {
+  const url = teacherVideoUrl(lessonNo);
+  return url ? { videoUrl: url } : {};
+}
+
 export function buildLessonFlow(lesson: LessonDef, seed = lesson.lessonNo): LessonStep[] {
   const rng = seededRng(seed);
   const items = itemsOfLesson(lesson);
@@ -1687,7 +1693,8 @@ export function buildLessonFlow(lesson: LessonDef, seed = lesson.lessonNo): Less
 
   const quizItems = shuffle(items, rng).slice(0, 8);
   return [
-    { kind: "teacher_video", minutes: 3, script: lesson.teacherScript },
+    // run8 P9: content/teacher-videos.json に 動画が つないで あれば その URL（なければ バーチャル先生）
+    { kind: "teacher_video", minutes: 3, script: lesson.teacherScript, ...withTeacherVideo(lesson.lessonNo) },
     { kind: "flashcards", minutes: 4, itemIds: [...ids("COMMAND"), ...ids("WORD")] },
     { kind: "tpr", minutes: 4, itemIds: ids("COMMAND") },
     { kind: "phonics", minutes: 5, focus: lesson.phonics.focus, words: lesson.phonics.words, tipJa: lesson.phonics.tipJa },

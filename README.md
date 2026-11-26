@@ -84,6 +84,8 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `npm run worksheets:month -- --pack 1` | 1か月ワークブック No.1（20レッスン＝平日ペースで約1か月を1冊。No.2 = L21〜40 …）を `worksheets/out/monthly/month-NN.pdf` に出力（`-- --world 13` で そのワールドに かかる冊） |
 | `npm run worksheets:month -- --all` | 全レッスン分の 1か月ワークブックを出力（360レッスンで 18冊、1,200レッスンで 60冊） |
 | `npm run curriculum:index` / `npm run curriculum:check` | `content/curriculum/worlds/` から 索引（index.json・titles.json・src/lib/curriculum/bundledWorlds.ts）を作る / 最新か確かめる（run7） |
+| `npm run teacher:export [-- --from 1 --to 30] [-- --only-script]` | 先生の 台本を AI アバター動画サービス用に 書きだす（`exports/teacher/<0001>/` に script.txt・script.json・subtitles.vtt・slides.json、`exports/teacher/summary.csv` に 分数の 合計）。docs/run8/VIDEO-VENDORS.md（run8） |
+| `npm run teacher:link -- link 12 <URL>` / `list` / `check [--head]` | できあがった 先生の 動画を レッスンに つなぐ（`content/teacher-videos.json`）。つないだ レッスンは バーチャル先生の かわりに 動画を 再生（run8） |
 | `npm run worksheets:upload [-- --dry-run] [-- --pack 1 \| --world 1] [-- --force]` | `worksheets/out/monthly/month-NN.pdf` の 1か月ワークブックを置き場所（`STORAGE_DRIVER`）へアップロード。すでにあれば とばす。進みぐあいを表示・`--timeout`（既定600秒） |
 | `npm run db:deploy` | `prisma migrate deploy`（本番の DB にマイグレーションを当てる。`DIRECT_URL` を使う） |
 | `npm run vercel-build` | Vercel のビルド（`prisma generate` → 本番デプロイのときだけ `migrate deploy` → `next build`）。`vercel.json` から呼ばれる |
