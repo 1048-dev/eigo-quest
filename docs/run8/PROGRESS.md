@@ -326,3 +326,30 @@
 
 ### チェック
 - `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
+
+## 台本ブロック: L691〜750（ワールド24・25）の 授業台本（docs/run8/SCRIPTS.md）
+
+### やったこと
+- L691〜750 の 60 レッスンに lesson.teacher（エマ先生の 3〜4 分の 授業台本）を 書いた。むかしの teacherScript は そのまま。これまでと 同じ 9 つの ながれ（greet → goal → words → expressions → phonics → tpr → repeat → check → wrap）、その レッスンの ことば・表現・フォニックス・TPR・会話の キャラと 場面だけを つかった オリジナルの 文。どちらも ステージ3 なので 英語だけ（すべての セグメントが lang "en"、say に 日本語 0。日本語は 字幕だけ）。
+  - ワールド24「くもの上の鉄道」（L691〜720）: 30 レッスン・629 セグメント・211〜229 秒・英語 100%。A ticket to ～, please・One way or round trip?・Which platform?・時刻表・現在完了の 経験（Have you ever ～? / I've been to ～ / I've never ～ / once・twice）・I'm lost. Could you help me?・I missed the train!・わすれもの（What does it look like?）・Don't worry. I'll help you.・What a view!・Is this seat taken?・食堂車（I'll have ～, please）・How long does it take?・寝台列車・地下鉄の のりかえ・It's impossible to ～・旅の 計画発表・旅ブログ・おみやげ・Have you ever been abroad?・ふりかえり（L719・L720）。L700 は「Lesson 700!」の おいわい。L720 は「Next is World 25, the Cave of Riddles!」の 予告。
+  - ワールド25「なぞときの 洞くつ」（L721〜750）: 30 レッスン・629 セグメント・207〜227 秒・英語 100%。There is / are の 描写・位置（at the back of / in the top left corner）・描写して 描くゲーム・洞くつの 地図・推量（might / must / can't を 手の「たしかさメーター」で、maybe / probably / definitely）・足あとと 手がかり・きえた 王冠・Where were you at ～?・Do you know who ～?・手がかりボード・なぞなぞ（It has four legs, but it can't walk / The more you take ～）・huge / tiny / giant・なぞなぞづくりと 大会・20 の 質問・Yes or No Detective・It can't be Haru. He was with me.・はんにんは カラス・Mystery Solved・ミニ ミステリー・まちがい絵・じぶんの ミステリー・ふりかえり（L749・L750）。L750 は「Next is World 26, the Theater of Echoes!」の 予告。
+  - 合計 1,258 セグメント・約 221 分。minutes は ぜんぶ 3.5（すべて 195 秒 以上）。
+- tests/teacher.test.ts の「台本が そろって いるべき 範囲」を L1〜690 → L1〜750 に のばした（docs/teacher-plan.md も）。
+- exports/teacher/summary.csv を 作りなおした（台本 750 本・自動 450 本、合計 約 3,854 分＝64.2 時間、1 本ずつ 切り上げで 4,354 分）。
+
+### 例（みじかく）
+- L697 I've Been to Hokkaido（W24）: 「Riko asks, Have you ever been to Hokkaido, Haru? Haru says, No, I haven't. Have you? Riko says, Yes! I've been to Hokkaido. I went there last winter.」→「I've been to means, some time in my life. I went there tells the time, like last winter.」→ からだで「Shiver! Brrr, it's cold! … Walk carefully on the ice. Don't slip!」→ クイズ「How was it? A, It was hot and sunny. B, It was really cold, but fun.」
+- L728 It Can't Be a Ghost（W25）: 「Birimo says, Whoooo! What's that? I'm scared! Is it a ghost? Kiko says, Don't worry, Birimo. It can't be a ghost. Ghosts aren't real!」→「Might, middle. Must, high. Can't, no way.」→ からだで「Shake like you're scared. Brrr! Now, take a deep breath. In, and out.」→ クイズ「Ghosts aren't real. So what do you say? A, It must be a ghost. B, It can't be a ghost.」
+
+### きめたこと（判断の 記録）
+- 前回まで（L1〜690）の 台本が そろって いる ことを たしかめ、world-24・25 は 台本 0 本 だったので 60 本 ぜんぶ 新しく 書いた。
+- これまでと 同じく 10 本ずつ 6 つの 下書き（tmp-teacher/L691-700.json〜L741-750.json。git には 入れない）を 同時に 書き、`scripts/teacher-merge.ts --strict` で 60 本 とりこんだ（problems 0）。手引きは tmp-teacher/WRITER-BRIEF-W24-25.md を 新しく 作った（どちらも ステージ3: 英語だけ）。
+- 会話の あいては pickConversationPartner で 計算（tmp-teacher/partners-691-750.json）。tmp-teacher/audit.ts に この 一覧を たした。60 本で wrap の あいての ずれ 0。お金の ことばは L709 が 1 件 ひっかかったが「ヌードル」の「ドル」で、まちがい（お金では ない）なので そのまま。
+- W24: L692 の ねだんは データの とおり ゲームの「coins」（ドル・セントは つかわない）。旅行に いった ことが なくても「No, I haven't. That's okay! Maybe someday!」で たのしい こたえに した。まいごの ときは おちついて 駅の ひとや おとなに きく・しらない ひとに ついていかない。はじめての たべものは「No, thank you」で いい。国や ばしょの なまえは データの まま（ステレオタイプは つくらない）。
+- W25: こわく しない。コウモリは かわいく、おばけは「Ghosts aren't real. It's only the wind.」、はんにんの カラスは 王冠を かえして あやまり、だれも しかられない。ともだちを うたがう ときは りゆうを いい、やさしく（Are you sure? Let's check the clues.）。L741〜750 の しつもんの イントネーションは「Yes/No は 上がる・Wh は 下がる」を 手の やじるしで。
+- L716 の データの 文「Don't put your face or your school's name online.」（ネットの あんぜん）は そのまま つかった。字幕の「がっこうの なまえ」は テストの きんし語に あたる ので「がっこうめい」と した（なまえを きく 文では なく、まもる ための 注意）。
+- L711〜720 は 225〜229 秒で めやす 205〜225 秒を すこし こえるものが おおいが、上限 230 秒・許容 180〜240 秒の なか なので そのまま。
+- 各 下書きの 書き手が テストの ルールを じぶんで 確認し、ぜんぶ vitest でも とおった。会話・TPR・クイズは いくつか ぬきとりで 読んだ（全 60 本は 読みなおして いない）。
+
+### チェック
+- `npx tsc --noEmit` OK / `npx vitest run` 77 ファイル 2,576 件 OK / `npx next build` OK / `teacher-merge --strict` 60 本 problems 0
