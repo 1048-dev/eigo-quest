@@ -65,9 +65,11 @@ export function pickVoice(voices: SpeechSynthesisVoice[], lang: "en" | "ja"): Sp
   return exact[0] ?? loose[0] ?? null;
 }
 
-export function useTeacherPlayer(timeline: TeacherTimeline) {
+/** initial: はじめの 状態（npm run check:render が とちゅうの 画面を サーバーで 描くため。ふだんは わたさない） */
+export function useTeacherPlayer(timeline: TeacherTimeline, initial?: Partial<PlayerState>) {
   const [state, setState] = useState<PlayerState>({
     index: 0, unit: 0, phase: "ready", paused: false, rate: 1, muted: false, silentMode: false, pauseLeft: 0, pauseTotal: 0, segElapsed: 0,
+    ...initial,
   });
   const st = useRef(state);
   st.current = state;

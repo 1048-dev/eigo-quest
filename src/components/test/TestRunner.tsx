@@ -19,18 +19,27 @@ import type { ArenaMode } from "@/lib/domain/arena";
 import { OfflineNote } from "@/components/common/OfflineNote";
 import { TestStartResponseSchema, TestSubmitResponseSchema, type TestStartResponse, type TestSubmitResponse } from "@/lib/api/contracts";
 
-type Session = Omit<TestStartResponse, "assessment"> & { assessment: NonNullable<TestStartResponse["assessment"]> };
+export type Session = Omit<TestStartResponse, "assessment"> & { assessment: NonNullable<TestStartResponse["assessment"]> };
 
 const TITLES: Record<string, string> = { DAILY_CHECK: "復習クエスト", MINI: "まとめテスト", BOSS: "ボス戦", ARENA: "復習アリーナ", TREASURE: "お宝クエスト" };
 
-export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessmentId: string; arenaMode?: string; reviewAlertId?: string }) {
-  const [session, setSession] = useState<Session | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [idx, setIdx] = useState(0);
+/** はじめの 状態（npm run check:render が とちゅう・結果の 画面を サーバーで 描くため。ふだんは わたさない。わたすと 問題を とりに いかない） */
+export interface TestRunnerInitial {
+  session: Session;
+  idx?: number;
+  result?: TestSubmitResponse;
+  submitting?: boolean;
+  error?: string;
+}
+
+export function TestRunner({ assessmentId, arenaMode, reviewAlertId, initial }: { assessmentId: string; arenaMode?: string; reviewAlertId?: string; initial?: TestRunnerInitial }) {
+  const [session, setSession] = useState<Session | null>(initial?.session ?? null);
+  const [error, setError] = useState<string | null>(initial?.error ?? null);
+  const [idx, setIdx] = useState(initial?.idx ?? 0);
   const [answers, setAnswers] = useState<{ questionId: string; value: string; responseMs: number }[]>([]);
-  const [result, setResult] = useState<TestSubmitResponse | null>(null);
-  const [submitting, setSubmitting] = useState(false);
-  const [offline, setOffline] = useState(false);
+  const [result, setResult] = useState<TestSubmitResponse | null>(initial?.result ?? null);
+  const [submitting, setSubmitting] = useState(initial?.submitting ?? false);
+  const [offline, setOffline] = useState(!!initial?.session.offline);
   const mode = arenaMode as ArenaMode | undefined;
 
   const start = useCallback(() => {
@@ -45,7 +54,8 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId }: { assessm
     });
   }, [assessmentId, arenaMode, reviewAlertId, mode]);
 
-  useEffect(start, [start]);
+  const preset = !!initial;
+  useEffect(() => { if (!preset) start(); }, [start, preset]);
 
   const onAnswer = useCallback((a: AnswerEvent) => {
     if (!session) return;

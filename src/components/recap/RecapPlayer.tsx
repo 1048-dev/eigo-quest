@@ -17,7 +17,19 @@ import { focusLabel } from "@/lib/curriculum/phonicsButtons";
 import { recapProgress, RECAP_TIMING, type RecapScript, type RecapSegment } from "@/lib/recap/script";
 import { speak } from "@/lib/speech/tts";
 
-type Phase = "speak" | "repeat" | "gap";
+export type RecapPhase = "speak" | "repeat" | "gap";
+type Phase = RecapPhase;
+
+/** はじめの 状態（npm run check:render が とちゅう・おわりの 画面を サーバーで 描くため。ふだんは わたさない） */
+export interface RecapInitial {
+  index?: number;
+  phase?: RecapPhase;
+  playing?: boolean;
+  finished?: boolean;
+  muted?: boolean;
+  soundSupported?: boolean;
+  reward?: RecapWatchedResponse;
+}
 
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, Math.max(0, ms)));
 /** onend が来ないブラウザがあるので、読み上げには上限時間をつける */
@@ -37,17 +49,17 @@ function haruPose(s: RecapSegment): Pose {
   return s.en ? "point" : "idle";
 }
 
-export function RecapPlayer({ script, offline = false }: { script: RecapScript; offline?: boolean }) {
+export function RecapPlayer({ script, offline = false, initial }: { script: RecapScript; offline?: boolean; initial?: RecapInitial }) {
   const segs = script.segments;
-  const [index, setIndex] = useState(0);
-  const [phase, setPhase] = useState<Phase>("speak");
-  const [playing, setPlaying] = useState(false);
-  const [finished, setFinished] = useState(false);
+  const [index, setIndex] = useState(initial?.index ?? 0);
+  const [phase, setPhase] = useState<Phase>(initial?.phase ?? "speak");
+  const [playing, setPlaying] = useState(initial?.playing ?? false);
+  const [finished, setFinished] = useState(initial?.finished ?? false);
   const [elapsed, setElapsed] = useState(0);
   const [phaseElapsed, setPhaseElapsed] = useState(0);
-  const [soundSupported, setSoundSupported] = useState(true);
-  const [muted, setMuted] = useState(false);
-  const [reward, setReward] = useState<RecapWatchedResponse | null>(null);
+  const [soundSupported, setSoundSupported] = useState(initial?.soundSupported ?? true);
+  const [muted, setMuted] = useState(initial?.muted ?? false);
+  const [reward, setReward] = useState<RecapWatchedResponse | null>(initial?.reward ?? null);
 
   const runRef = useRef(0);
   const indexRef = useRef(0);

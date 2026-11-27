@@ -15,6 +15,10 @@ import type { TimelineLesson } from "@/lib/teacher/timeline";
 import { GradeResponseSchema } from "@/lib/api/contracts";
 
 export type Done = (logs?: AnswerLog[]) => void;
+/**
+ * initial: はじめの 状態（run10 P3 の 描画の 確認 npm run check:render が、とちゅうの 画面を サーバーで 描くために つかう）。
+ * ふだんの 画面では わたさない（わたさなければ 今までと おなじ）。
+ */
 const NextBtn = ({ onClick, label = "つぎへ ▶" }: { onClick: () => void; label?: string }) => (
   <button className="btn btn-primary mt-6 w-full" onClick={onClick}>{label}</button>
 );
@@ -39,9 +43,9 @@ export function TeacherVideo({ lesson, partner, videoUrl, teacherName, onDone }:
 // ---------------------------------------------------------------------------
 // 2. フラッシュカード（Session 1: Look / Stop / Come here / Go ＋ あいさつ単語）
 // ---------------------------------------------------------------------------
-export function Flashcards({ items, onDone }: { items: LearningItemDef[]; onDone: Done }) {
-  const [i, setI] = useState(0);
-  const [flipped, setFlipped] = useState(false);
+export function Flashcards({ items, onDone, initial }: { items: LearningItemDef[]; onDone: Done; initial?: { index?: number; flipped?: boolean } }) {
+  const [i, setI] = useState(initial?.index ?? 0);
+  const [flipped, setFlipped] = useState(initial?.flipped ?? false);
   const it = items[i];
   const next = () => (i + 1 < items.length ? (setI(i + 1), setFlipped(false)) : onDone());
   return (
@@ -59,8 +63,8 @@ export function Flashcards({ items, onDone }: { items: LearningItemDef[]; onDone
 // ---------------------------------------------------------------------------
 // 3. TPR（体を動かす命令）: 聞く → 動く → 自己申告。サイモンセッズ方式で反射を鍛える
 // ---------------------------------------------------------------------------
-export function TprDrill({ items, actions, onDone }: { items: LearningItemDef[]; actions: Record<string, string>; onDone: Done }) {
-  const [round, setRound] = useState(0);
+export function TprDrill({ items, actions, onDone, initial }: { items: LearningItemDef[]; actions: Record<string, string>; onDone: Done; initial?: { round?: number } }) {
+  const [round, setRound] = useState(initial?.round ?? 0);
   const order = [...items, ...items].slice(0, Math.max(4, items.length * 2));
   const it = order[round];
   if (!it) return <div className="card p-6 text-center"><p className="text-5xl">🙌</p><p className="mt-2 font-black">からだで おぼえたね！</p><NextBtn onClick={() => onDone()} /></div>;
@@ -82,8 +86,8 @@ export function TprDrill({ items, actions, onDone }: { items: LearningItemDef[];
 // 4. フォニックス（文字と音・ブレンディング）
 // ---------------------------------------------------------------------------
 /** examples: サーバー（または おためしで ワールドを 読んだ あと）が 作った おてほん。なければ ブラウザの 基本の きまりで さがす */
-export function Phonics({ focus, words, tipJa, examples, spoken, onDone }: { focus: string[]; words: string[]; tipJa: string; examples?: string[]; spoken?: string[]; onDone: Done }) {
-  const [lit, setLit] = useState<{ word: string; n: number } | null>(null);
+export function Phonics({ focus, words, tipJa, examples, spoken, onDone, initial }: { focus: string[]; words: string[]; tipJa: string; examples?: string[]; spoken?: string[]; onDone: Done; initial?: { lit?: { word: string; n: number } } }) {
+  const [lit, setLit] = useState<{ word: string; n: number } | null>(initial?.lit ?? null);
   // 文字の なまえ（シー・エー・ティー）は 読まない。もじを じゅんばんに 光らせてから、ことばを ゆっくり → ふつうの はやさで
   // run10: 数・年号は spoken（英語の 読みかた。1600 → sixteen hundred）で 読む
   const blend = async (w: string, say: string) => {
@@ -127,11 +131,14 @@ export function Phonics({ focus, words, tipJa, examples, spoken, onDone }: { foc
 // ---------------------------------------------------------------------------
 // 5. 学校テスト対策（教科書表現 ＋ テストに出るポイント ＋ 書き取り＝AI採点）
 // ---------------------------------------------------------------------------
-export function SchoolExpressions({ items, testPoints, onDone }: { items: LearningItemDef[]; testPoints: string[]; onDone: Done }) {
+export function SchoolExpressions({ items, testPoints, onDone, initial }: {
+  items: LearningItemDef[]; testPoints: string[]; onDone: Done;
+  initial?: { index?: number; text?: string; res?: { verdict: string; feedbackJa: string } };
+}) {
   const core = items.filter((i) => i.schoolCore);
-  const [k, setK] = useState(0);
-  const [text, setText] = useState("");
-  const [res, setRes] = useState<{ verdict: string; feedbackJa: string } | null>(null);
+  const [k, setK] = useState(initial?.index ?? 0);
+  const [text, setText] = useState(initial?.text ?? "");
+  const [res, setRes] = useState<{ verdict: string; feedbackJa: string } | null>(initial?.res ?? null);
   const [logs, setLogs] = useState<AnswerLog[]>([]);
   const target = core[k];
 
@@ -171,9 +178,9 @@ export function SchoolExpressions({ items, testPoints, onDone }: { items: Learni
 // ---------------------------------------------------------------------------
 // 6. 発音チェック（マイク → 音声認識 → リアルタイム採点）
 // ---------------------------------------------------------------------------
-export function Pronunciation({ items, onDone }: { items: LearningItemDef[]; onDone: Done }) {
+export function Pronunciation({ items, onDone, initial }: { items: LearningItemDef[]; onDone: Done; initial?: { index?: number } }) {
   const [logs, setLogs] = useState<AnswerLog[]>([]);
-  const [i, setI] = useState(0);
+  const [i, setI] = useState(initial?.index ?? 0);
   const it = items[i];
   if (!it) return <div className="card p-6 text-center"><p className="text-5xl">🎤✨</p><NextBtn onClick={() => onDone(logs)} /></div>;
   return (
@@ -189,10 +196,11 @@ export function Pronunciation({ items, onDone }: { items: LearningItemDef[]; onD
 // ---------------------------------------------------------------------------
 // 7. 確認クイズ / 8. スピードリスニング（0.8 → 1.0 → 1.2 倍速）
 // ---------------------------------------------------------------------------
-export function QuizRun({ questions, title, onDone }: { questions: Question[]; title?: string; onDone: (logs: AnswerLog[], score: number) => void }) {
-  const [i, setI] = useState(0);
+export interface QuizRunInitial { index?: number; flash?: { ok: boolean; explain: string } }
+export function QuizRun({ questions, title, onDone, initial }: { questions: Question[]; title?: string; onDone: (logs: AnswerLog[], score: number) => void; initial?: QuizRunInitial }) {
+  const [i, setI] = useState(initial?.index ?? 0);
   const [logs, setLogs] = useState<AnswerLog[]>([]);
-  const [flash, setFlash] = useState<{ ok: boolean; explain: string } | null>(null);
+  const [flash, setFlash] = useState<{ ok: boolean; explain: string } | null>(initial?.flash ?? null);
   const q = questions[i];
 
   const answer = (a: AnswerEvent) => {
@@ -217,8 +225,8 @@ export function QuizRun({ questions, title, onDone }: { questions: Question[]; t
   );
 }
 
-export function SpeedListening({ rounds, onDone }: { rounds: { rate: number; questions: Question[] }[]; onDone: (logs: AnswerLog[], best: number) => void }) {
-  const [r, setR] = useState(0);
+export function SpeedListening({ rounds, onDone, initial }: { rounds: { rate: number; questions: Question[] }[]; onDone: (logs: AnswerLog[], best: number) => void; initial?: { round?: number; quiz?: QuizRunInitial } }) {
+  const [r, setR] = useState(initial?.round ?? 0);
   const [all, setAll] = useState<AnswerLog[]>([]);
   const [best, setBest] = useState(0);
   const round = rounds[r];
@@ -227,6 +235,7 @@ export function SpeedListening({ rounds, onDone }: { rounds: { rate: number; que
       key={r}
       title={`⚡ スピードリスニング ラウンド${r + 1}：${round.rate}ばいそく`}
       questions={round.questions}
+      initial={r === (initial?.round ?? 0) ? initial?.quiz : undefined}
       onDone={(logs, score) => {
         const merged = [...all, ...logs];
         // そのラウンドで75%以上なら「到達速度」を更新

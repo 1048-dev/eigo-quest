@@ -20,7 +20,7 @@ import { isSpeechRecognitionSupported, listenOnce, type Listening } from "@/lib/
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { COIN_RULES } from "@/lib/domain/config";
 
-interface Bubble extends ConversationTurn { ja?: string }
+export interface Bubble extends ConversationTurn { ja?: string }
 
 /** 子どもの ことばに 入っていた目標表現 → レッスンの EXPRESSION 項目（SPEAKING のログ用） */
 export function conversationLogs(childTexts: string[], targets: string[], items: LearningItemDef[]): AnswerLog[] {
@@ -48,7 +48,20 @@ export interface ConversationVariant {
   skipLabel?: string;
 }
 
-export function ConversationStep({ lessonNo, conversation, character = "haru", maxTurns = 6, items, onDone, variant = {} }: {
+/** はじめの 状態（npm run check:render が とちゅう・おわりの 画面を サーバーで 描くため。ふだんは わたさない） */
+export interface ConversationInitial {
+  started?: boolean;
+  bubbles?: Bubble[];
+  suggestions?: string[];
+  done?: boolean;
+  stars?: number;
+  busy?: boolean;
+  listening?: boolean;
+  micOk?: boolean;
+  heardNothing?: boolean;
+}
+
+export function ConversationStep({ lessonNo, conversation, character = "haru", maxTurns = 6, items, onDone, variant = {}, initial }: {
   lessonNo: number;
   conversation: LessonConversation | null | undefined;
   character?: ConversationCharacter;
@@ -57,22 +70,23 @@ export function ConversationStep({ lessonNo, conversation, character = "haru", m
   /** finished = さいごまで おはなし できた（レッスンごとに1回 コイン+5）。turns = 子どもが 話した 回数 */
   onDone: (logs: AnswerLog[], finished: boolean, turns: number) => void;
   variant?: ConversationVariant;
+  initial?: ConversationInitial;
 }) {
   const conv = conversation ?? GENERIC_CONVERSATION;
   const name = CHARACTER_NAME[character];
   const endpoint = variant.endpoint ?? { url: "/api/conversation", body: { lessonNo, character } };
   const coinNote = variant.coinNote === undefined ? `さいごまで おはなし すると 🪙+${COIN_RULES.conversationFinished}` : variant.coinNote;
-  const [started, setStarted] = useState(false);
-  const [bubbles, setBubbles] = useState<Bubble[]>([]);
-  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [started, setStarted] = useState(initial?.started ?? false);
+  const [bubbles, setBubbles] = useState<Bubble[]>(initial?.bubbles ?? []);
+  const [suggestions, setSuggestions] = useState<string[]>(initial?.suggestions ?? []);
   const [text, setText] = useState("");
-  const [busy, setBusy] = useState(false);
+  const [busy, setBusy] = useState(initial?.busy ?? false);
   const [talking, setTalking] = useState(false);
-  const [listening, setListening] = useState(false);
-  const [done, setDone] = useState(false);
-  const [stars, setStars] = useState(0);
-  const [micOk, setMicOk] = useState(false);
-  const [heardNothing, setHeardNothing] = useState(false);
+  const [listening, setListening] = useState(initial?.listening ?? false);
+  const [done, setDone] = useState(initial?.done ?? false);
+  const [stars, setStars] = useState(initial?.stars ?? 0);
+  const [micOk, setMicOk] = useState(initial?.micOk ?? false);
+  const [heardNothing, setHeardNothing] = useState(initial?.heardNothing ?? false);
   const listenRef = useRef<Listening | null>(null);
   const endRef = useRef<HTMLDivElement | null>(null);
 

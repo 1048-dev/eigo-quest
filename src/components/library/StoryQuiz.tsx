@@ -6,9 +6,10 @@ import { useState } from "react";
 import { speak } from "@/lib/speech/tts";
 import type { StoryQuestion } from "@/lib/library/types";
 
-export function StoryQuiz({ questions, onDone }: { questions: StoryQuestion[]; onDone: (answers: number[]) => void }) {
-  const [idx, setIdx] = useState(0);
-  const [answers, setAnswers] = useState<number[]>([]);
+/** initial: はじめの 状態（npm run check:render が とちゅうの 画面を サーバーで 描くため。ふだんは わたさない） */
+export function StoryQuiz({ questions, onDone, initial }: { questions: StoryQuestion[]; onDone: (answers: number[]) => void; initial?: { idx?: number; answers?: number[] } }) {
+  const [idx, setIdx] = useState(initial?.idx ?? 0);
+  const [answers, setAnswers] = useState<number[]>(initial?.answers ?? []);
   const picked = answers[idx];
   const q = questions[idx];
   if (!q) return null;

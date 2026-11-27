@@ -18,7 +18,7 @@ const KIND_COLOR: Record<TeacherSegmentKind, string> = {
   tpr: "#2fd08a", repeat: "#ff6b9a", check: "#ffd23a", wrap: "#f2c14e",
 };
 
-type SubMode = "both" | "ja" | "en" | "off";
+export type SubMode = "both" | "ja" | "en" | "off";
 const SUB_LABEL: Record<SubMode, string> = { both: "りょうほう", ja: "にほんご", en: "えいご", off: "なし" };
 const SUB_NEXT: Record<SubMode, SubMode> = { both: "ja", ja: "en", en: "off", off: "both" };
 
@@ -187,10 +187,14 @@ function Timeline({ tl, state, rate, onJump }: { tl: TeacherTimeline; state: Pla
   );
 }
 
-export function VirtualClassroom({ lesson, partner, teacherName, onDone }: { lesson: TimelineLesson; partner?: string; teacherName: string; onDone: () => void }) {
+/** initial: はじめの 状態（npm run check:render が とちゅうの 画面を サーバーで 描くため。ふだんは わたさない） */
+export function VirtualClassroom({ lesson, partner, teacherName, onDone, initial }: {
+  lesson: TimelineLesson; partner?: string; teacherName: string; onDone: () => void;
+  initial?: Partial<PlayerState> & { sub?: SubMode };
+}) {
   const timeline = useMemo(() => buildTeacherTimeline(lesson, { partner }), [lesson, partner]);
-  const { state, controls, getViseme } = useTeacherPlayer(timeline);
-  const [sub, setSub] = useState<SubMode>("both");
+  const { state, controls, getViseme } = useTeacherPlayer(timeline, initial);
+  const [sub, setSub] = useState<SubMode>(initial?.sub ?? "both");
   const mic = useMicMeter();
   const seg = timeline.segments[state.index];
   const gesture = gestureFor(seg, state);

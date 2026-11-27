@@ -85,9 +85,13 @@ export function QuestionView({ q, onAnswer, disabled }: { q: PublicQuestion; onA
   );
 }
 
-export function SpeakButton({ target, itemId, onDone, disabled }: { target: string; itemId: string; onDone: (r: PronunciationResult) => void; disabled?: boolean }) {
-  const [state, setState] = useState<"idle" | "listening" | "unsupported">("idle");
-  const [last, setLast] = useState<PronunciationResult | null>(null);
+/** initial: はじめの 状態（npm run check:render が 結果の 画面を サーバーで 描くため。ふだんは わたさない） */
+export function SpeakButton({ target, itemId, onDone, disabled, initial }: {
+  target: string; itemId: string; onDone: (r: PronunciationResult) => void; disabled?: boolean;
+  initial?: { state?: "idle" | "listening" | "unsupported"; last?: PronunciationResult };
+}) {
+  const [state, setState] = useState<"idle" | "listening" | "unsupported">(initial?.state ?? "idle");
+  const [last, setLast] = useState<PronunciationResult | null>(initial?.last ?? null);
 
   const start = async () => {
     if (!BrowserPronunciationScorer.isSupported()) return setState("unsupported");
@@ -112,7 +116,8 @@ export function SpeakButton({ target, itemId, onDone, disabled }: { target: stri
         <div className="text-center">
           <p className="text-3xl">{"⭐".repeat(last.stars)}{"☆".repeat(3 - last.stars)}</p>
           <p className="text-sm">
-            {last.wordResults.map((w) => <span key={w.word} className={`mx-1 font-bold ${w.ok ? "text-[var(--ok)]" : "text-[var(--ng)] underline"}`}>{w.word}</span>)}
+            {/* run10 P3: おなじ ことばが 2回 ある 文（Bye, bye.・I'm …, I'm …）が あるので key は 順番で */}
+            {last.wordResults.map((w, i) => <span key={i} className={`mx-1 font-bold ${w.ok ? "text-[var(--ok)]" : "text-[var(--ng)] underline"}`}>{w.word}</span>)}
           </p>
           <p className="text-xs text-[var(--ink-2)]">きこえたことば: “{last.transcript || "…"}”</p>
         </div>
