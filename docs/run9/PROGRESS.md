@@ -164,3 +164,34 @@
 - npx tsc --noEmit: OK
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
+
+## REVIEW: ワールド11・12（レッスン 301〜360）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・testPoints を 60 レッスン ぜんぶ 見なおした
+- さきに 機械的な なおし（2重の 文末記号・クイズの 2択）と ブロックの きめごと（L349 autumn → fall / August・thumbs-up・イギリスふうの ほめことば・Ding-dong・「Now, / Then, / Next,」の あとの 小文字・「やあ、みんな！」・「つぎは」）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た もの（ゴールや まとめが「with Thank you for.」の ように ことばの とちゅうで おわる 文。L321・L322・L342）を そろえた
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、before が いまの 値と あう ときだけ あてた（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあいも たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W11-12.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 301 --to 360`）: **まえ error 0 / warn 38 / info 14 → あと error 0 / warn 18 / info 13**（まえの warn は autumn 16・文が ながい 21・thumbs up の ゆれ 1。のこりの warn 18 は 小6 の 会話・aiTask の 9〜11 語の 文〈when・because・in junior high school を つなぐ ことが ねらい〉なので のこす。info は 文型の ふくしゅうの「I am」「What is」）
+- なおした 欄 **609**（パッチ 633 件: 機械的な なおし 44・ブロックの きめごと 285・レビュアー 298・あとの そろえ 6。重なり あり）、なおした レッスン **60 / 60**
+- 学習項目 ID が かわった もの 5つ: L319 ことば「senior student」→「older student」、L325 表現「We could do our best because you helped us.」→「We did our best because you helped us.」、L334 TPR「Give a thumbs up.」→「Give a thumbs-up.」、L349 表現「We had a big stage show in autumn.」→「We had a stage show in the fall.」・フォニックス「autumn」→「August」（この 5項目だけ 記録が あたらしく なる）
+
+### before → after の 例
+1. L314 クイズ（A・B）: 「Riko is even more tall.」「Taller means more tall.」→「Riko is tall, tall, tall!」「Riko is taller than Haru.」（more tall は こどもが よく する まちがいで、それを 先生が 見本に して いた）
+2. L319 ことば（A・B）: 「senior student」→「older student」（せんぱい の 直訳。アメリカでは senior は 高校3年生。説明も「A big kid in your club.」に して、スライド・会話・字幕も あわせた）
+3. L308 サイトワード（B・C）: 「A I, but not ay. Just a short e. Said. Say is say, but said is said!」→「It looks like say. But it has a short e sound. Said. Say, said. Hear the difference?」（TTS が「A I」を「AI」と よみ、「Say is say, but said is said!」は ぐるぐるで ちがいを 教えて いなかった）
+
+### きめた こと
+- 「Now, Walk slowly.」の 小文字の きまりを「Then, / Next, / First,」にも あてた（ワールド13 いこうにも ある。それぞれの ブロックで おなじ きまりで なおす）
+- autumn は 会話では fall、フォニックスでは おなじ au の August（phonicsButtons.ts と おなじ）。音読の 文も 8がつに あう 文に した
+- のこした こと: 小6 の ながい 会話文、「Grade 6 show」、ねらいの 文型の「I could ～」、日本の 学校の ことば（sports day・music festival・teachers' room・message board・lunch room）、フォニックスの 音の わけかたを TTS が よむ おそれ、L346・L350 の「the sea」。どれも 全体で 決める（くわしくは W11-12.md）
+- ほかの ワールドで みつけた もの: world-30「more fast」、world-14・16「Give a thumbs up.」（それぞれの ブロックで なおす）
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新
