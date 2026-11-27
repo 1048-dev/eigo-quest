@@ -164,7 +164,7 @@ export function debateWhy(q: DebateQuestion): string {
 
 /** つなぎの ことば → ＿＿ の 文・いみ・よみかた・まちがい 2つ（どれも この 表の ことば） */
 const MARKERS: Record<string, { blank: string; ja: string; say: string; wrong: [string, string] }> = {
-  However: { blank: "Plastic is useful. ＿＿, it can harm the sea.", ja: "でも・しかし（はんたいの ことを いう）", say: "HOWever,", wrong: ["For example", "In addition"] },
+  However: { blank: "Plastic is useful. ＿＿, it can harm the sea.", ja: "でも・しかし（はんたいの ことを いう）", say: "howEVer,", wrong: ["For example", "In addition"] },
   Therefore: { blank: "A dripping tap wastes a lot of water. ＿＿, we should fix it.", ja: "だから・したがって", say: "THEREfore,", wrong: ["However", "Instead"] },
   "For example": { blank: "We can save energy at home. ＿＿, we can turn off the lights.", ja: "たとえば", say: "for exAMple,", wrong: ["However", "In conclusion"] },
   Moreover: { blank: "School gardens teach us about food. ＿＿, they make the school beautiful.", ja: "さらに（もっと 点を くわえる）", say: "moreOver,", wrong: ["However", "Instead"] },
@@ -201,7 +201,7 @@ export function markerDisplay(q: MarkerQuestion): string {
 }
 
 export function markerWhy(q: MarkerQuestion): string {
-  return `${q.marker}（${q.ja}）。よむ ときは ${q.say} と はじめを つよく いって、コンマの あとに ちょっと 間を あけると、きいて いる 人に 話の 道すじが つたわるよ。`;
+  return `${q.marker}（${q.ja}）。よむ ときは ${q.say} と 大文字の ところを つよく いって、コンマの あとに ちょっと 間を あけると、きいて いる 人に 話の 道すじが つたわるよ。`;
 }
 
 // ---------------------------------------------------------------------------

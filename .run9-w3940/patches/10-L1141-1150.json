@@ -1,0 +1,290 @@
+[
+  {
+    "lesson": 1142,
+    "path": "teacher.segments[6].say",
+    "before": "Birimo brings a mountain of food. Oh no, I can't eat another bite. Riko says, Birimo, that's way too much! What will happen to the leftovers?",
+    "after": "Birimo brings a mountain of food and says, Oh no, I can't eat another bite. Riko says, Birimo, that's way too much! What will happen to the leftovers?",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1142,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Birimo brings a mountain of food. Oh no, I can't eat another bite. Riko says, Birimo, that's way too much! What will happen to the leftovers?",
+    "after": "Birimo brings a mountain of food and says, Oh no, I can't eat another bite. Riko says, Birimo, that's way too much! What will happen to the leftovers?",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1142,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Pollute means make dirty. Drop the e, add ion. Pollution. Re means again, and cycle means circle. Recycle!",
+    "after": "Sound time! Pollute means make dirty. Drop the e, add i, o, n. Pollution. Re means again, and cycle means circle. Recycle!",
+    "reviewers": "B+C",
+    "reason": "bare 'ion' is read by TTS as the word ion (eye-on), not the -ion ending; spell the letters as in L901 (W31 precedent 'add i, o, n')"
+  },
+  {
+    "lesson": 1142,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Pollute means make dirty. Drop the e, add ion. Pollution. Re means again, and cycle means circle. Recycle!",
+    "after": "Sound time! Pollute means make dirty. Drop the e, add i, o, n. Pollution. Re means again, and cycle means circle. Recycle!",
+    "reviewers": "B+C",
+    "reason": "bare 'ion' is read by TTS as the word ion (eye-on), not the -ion ending; spell the letters as in L901 (W31 precedent 'add i, o, n')"
+  },
+  {
+    "lesson": 1142,
+    "path": "teacher.segments[10].say",
+    "before": "Conserve means take good care of. Drop the e, add ation. Conservation. Your turn! Pollution. Recycle. Conservation.",
+    "after": "Conserve means take good care of. Drop the e, add a, t, i, o, n. Conservation. Your turn! Pollution. Recycle. Conservation.",
+    "reviewers": "B+C",
+    "reason": "bare 'ation' is not a word and TTS misreads it; spell the letters as in L902 ('add a, t, i, o, n')"
+  },
+  {
+    "lesson": 1142,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Conserve means take good care of. Drop the e, add ation. Conservation. Your turn! Pollution. Recycle. Conservation.",
+    "after": "Conserve means take good care of. Drop the e, add a, t, i, o, n. Conservation. Your turn! Pollution. Recycle. Conservation.",
+    "reviewers": "B+C",
+    "reason": "bare 'ation' is not a word and TTS misreads it; spell the letters as in L902 ('add a, t, i, o, n')"
+  },
+  {
+    "lesson": 1142,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Children from every continent sit at this table. Today, it's lunchtime at the Hall of the Round Table. There is a long buffet with rice, bread, noodles, soup, salad and fruit from every continent. Birimo grabs the biggest plate he can find. He takes three rolls, two bowls of noodles, a mountain of rice and five pancakes. The mountain is taller than his head! He eats and eats, and then he leans back and holds his tummy. I can't eat another bite! Sam looks at all the leftovers and smiles kindly. He says, In my town, we learned something surprising. About one third of food is wasted. Say it with me. About one third of food is wasted. Well done! Birimo's face turns pink. Oops. Sorry, food! Orbit spins over to us and shows us a fact card. Let's read it. \"Food Facts from the Round Table. Around the world, about one third of all the food we grow is never eaten. Some food goes bad on farms, some is thrown away at shops, and some is left on plates at home and at school. When food is wasted, the water, land and hard work that went into it are wasted, too. But here is the good news. People everywhere are finding ways to help. Many schools now let children take smaller servings and come back for more. Some families plan their meals and turn leftovers into new dishes, like fried rice or soup. Every bite we eat instead of throwing away makes a difference.\" How much food is wasted around the world? About one third. What can families do with leftovers? They can make new dishes, like fried rice or soup. Birimo takes a small plate this time and wraps up his extra rolls to share later. Now, phonics. More environment words are built from parts. Pollution comes from pollute. Drop the e and add ion. Recycle is re, which means again, plus cycle, which means circle. Conservation comes from conserve. Drop the e and add ation. Next time, Amina will tell us about clean water.",
+    "after": "Hello, everyone! Last time, we said, Children from every continent sit at this table. Today, it's lunchtime at the Hall of the Round Table. There is a long buffet with rice, bread, noodles, soup, salad and fruit from every continent. Birimo grabs the biggest plate he can find. He takes three rolls, two bowls of noodles, a mountain of rice and five pancakes. The mountain is taller than his head! He eats and eats, and then he leans back and holds his tummy. I can't eat another bite! Sam looks at all the leftovers and smiles kindly. He says, In my town, we learned something surprising. About one third of food is wasted. Say it with me. About one third of food is wasted. Well done! Birimo's face turns pink. Oops. Sorry, food! Orbit spins over to us and shows us a fact card. Let's read it. \"Food Facts from the Round Table. Around the world, about one third of all the food we grow is never eaten. Some food goes bad on farms, some is thrown away at shops, and some is left on plates at home and at school. When food is wasted, the water, land and hard work that went into it are wasted, too. But here is the good news. People everywhere are finding ways to help. Many schools now let children take smaller servings and come back for more. Some families plan their meals and turn leftovers into new dishes, like fried rice or soup. Every bite we eat instead of throwing away makes a difference.\" How much food is wasted around the world? About one third. What can families do with leftovers? They can make new dishes, like fried rice or soup. Birimo takes a small plate this time and wraps up his extra rolls to share later. Now, phonics. More environment words are built from parts. Pollution comes from pollute. Drop the e and add i, o, n. Recycle is re, which means again, plus cycle, which means circle. Conservation comes from conserve. Drop the e and add a, t, i, o, n. Next time, Amina will tell us about clean water.",
+    "reviewers": "B+C",
+    "reason": "bare 'ion' is read by TTS as the word ion (eye-on), not the -ion ending; spell the letters as in L901 (W31 precedent 'add i, o, n'); bare 'ation' is not a word and TTS misreads it; spell the letters as in L902 ('add a, t, i, o, n')"
+  },
+  {
+    "lesson": 1143,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Eco means home, or nature. Eco, plus system. Ecosystem. De means take away. De, forest, ation. Deforestation. Fewer trees.",
+    "after": "Sound time! Eco means home, or nature. Eco, plus system. Ecosystem. De means take away. De, forest, a, t, i, o, n. Deforestation. Fewer trees.",
+    "reviewers": "B+C",
+    "reason": "bare 'ation' is not a word and TTS misreads it; spell the letters as in L902 ('add a, t, i, o, n')"
+  },
+  {
+    "lesson": 1143,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Eco means home, or nature. Eco, plus system. Ecosystem. De means take away. De, forest, ation. Deforestation. Fewer trees.",
+    "after": "Sound time! Eco means home, or nature. Eco, plus system. Ecosystem. De means take away. De, forest, a, t, i, o, n. Deforestation. Fewer trees.",
+    "reviewers": "B+C",
+    "reason": "bare 'ation' is not a word and TTS misreads it; spell the letters as in L902 ('add a, t, i, o, n')"
+  },
+  {
+    "lesson": 1143,
+    "path": "teacher.segments[10].say",
+    "before": "Globe, drop the e, add al. Global. About the whole earth. Your turn! Ecosystem. Deforestation. Global.",
+    "after": "Globe, drop the e, add a, l. Global. About the whole earth. Your turn! Ecosystem. Deforestation. Global.",
+    "reviewers": "B+C",
+    "reason": "bare 'al' is read as the name Al; spell the letters as in L950 ('plus a, l')"
+  },
+  {
+    "lesson": 1143,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Globe, drop the e, add al. Global. About the whole earth. Your turn! Ecosystem. Deforestation. Global.",
+    "after": "Globe, drop the e, add a, l. Global. About the whole earth. Your turn! Ecosystem. Deforestation. Global.",
+    "reviewers": "B+C",
+    "reason": "bare 'al' is read as the name Al; spell the letters as in L950 ('plus a, l')"
+  },
+  {
+    "lesson": 1143,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, About one third of food is wasted. Today, Amina from Africa shares a story with the whole table. She holds up a photo of her town. It is sunny and dry, with red earth and tall, shady trees. Amina says, When my mother was a girl, she walked a long way every morning to get water. She carried a heavy bucket home on her head. In some places, many girls and boys still do that today, so they have less time for school and play. Then Amina smiles. But last year, my town built a new well with a pump. Now the water is close to our homes. Orbit spins slowly and says, Around the world, millions of people don't have clean water nearby. Say it with me. Millions of people don't have clean water nearby. Very good! Amina passes around a letter she wrote for the table. Let's read Amina's letter. \"Dear friends at the Round Table, I want to tell you about our new well. Before, the closest clean water was far away, near the next village. Girls and boys spent hours walking there and back. Last year, grown-ups from our town worked together with builders to dig a deep well. Now there is a strong pump right next to the market. You push the handle up and down, and clean, cool water comes out. My little brother says it is the best thing in town. Now girls and boys have more time for school, homework and soccer. Water is precious, so we use it carefully. From your friend, Amina.\" Where is the new pump? Right next to the market. What do girls and boys have more time for now? School, homework and soccer. I say, These are big problems, and you don't have to fix the whole world. Small actions count. If world news ever makes you feel worried, talk to a grown-up you trust, like a family member or a teacher. Now, phonics. Ecosystem is eco, which means home or nature, plus system. Deforestation is de, which means take away, plus forest plus ation. Global comes from globe. Drop the e and add al. Next time, Priya will tell us about a very special bus.",
+    "after": "Hello, everyone! Last time, we said, About one third of food is wasted. Today, Amina from Africa shares a story with the whole table. She holds up a photo of her town. It is sunny and dry, with red earth and tall, shady trees. Amina says, When my mother was a girl, she walked a long way every morning to get water. She carried a heavy bucket home on her head. In some places, many girls and boys still do that today, so they have less time for school and play. Then Amina smiles. But last year, my town built a new well with a pump. Now the water is close to our homes. Orbit spins slowly and says, Around the world, millions of people don't have clean water nearby. Say it with me. Millions of people don't have clean water nearby. Very good! Amina passes around a letter she wrote for the table. Let's read Amina's letter. \"Dear friends at the Round Table, I want to tell you about our new well. Before, the closest clean water was far away, near the next village. Girls and boys spent hours walking there and back. Last year, grown-ups from our town worked together with builders to dig a deep well. Now there is a strong pump right next to the market. You push the handle up and down, and clean, cool water comes out. My little brother says it is the best thing in town. Now girls and boys have more time for school, homework and soccer. Water is precious, so we use it carefully. From your friend, Amina.\" Where is the new pump? Right next to the market. What do girls and boys have more time for now? School, homework and soccer. I say, These are big problems, and you don't have to fix the whole world. Small actions count. If world news ever makes you feel worried, talk to a grown-up you trust, like a family member or a teacher. Now, phonics. Ecosystem is eco, which means home or nature, plus system. Deforestation is de, which means take away, plus forest plus a, t, i, o, n. Global comes from globe. Drop the e and add a, l. Next time, Priya will tell us about a very special bus.",
+    "reviewers": "B+C",
+    "reason": "bare 'ation' is not a word and TTS misreads it; spell the letters as in L902 ('add a, t, i, o, n'); bare 'al' is read as the name Al; spell the letters as in L950 ('plus a, l')"
+  },
+  {
+    "lesson": 1144,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! En, danger, ed. Endangered. In danger, like some animals. Sol means sun. Sol, plus ar. Solar!",
+    "after": "Sound time! En, danger, e, d. Endangered. In danger, like some animals. Sol means sun. Sol, plus a, r. Solar!",
+    "reviewers": "B+C",
+    "reason": "bare 'ed' is read as the name Ed, but in endangered it is only a d sound; spell the letters; bare 'ar' is read as 'are' or the letter R; spell the letters (W31 precedent)"
+  },
+  {
+    "lesson": 1144,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! En, danger, ed. Endangered. In danger, like some animals. Sol means sun. Sol, plus ar. Solar!",
+    "after": "Sound time! En, danger, e, d. Endangered. In danger, like some animals. Sol means sun. Sol, plus a, r. Solar!",
+    "reviewers": "B+C",
+    "reason": "bare 'ed' is read as the name Ed, but in endangered it is only a d sound; spell the letters; bare 'ar' is read as 'are' or the letter R; spell the letters (W31 precedent)"
+  },
+  {
+    "lesson": 1144,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Millions of people don't have clean water nearby. Today, it's Priya's turn. Priya is from Asia, and her town is surrounded by green hills and rice fields. In the villages around her town, there aren't many schools or libraries. So every Saturday, a big, bright library bus drives from village to village. It is painted with elephants, stars and flowers, and it is full of books. Children run to meet it when they hear its happy horn. Orbit says that around the world, millions of children can't go to school. Some live too far away, and some have to help at home. Riko thinks for a moment and says, Every child should be able to go to school. Say it with me. Every child should be able to go to school. Wonderful! Priya shows us her blog post on a big screen. Let's read it. \"Hi! This is the story of our library bus. Every Saturday morning, the bus leaves my town at eight o'clock. Our teachers and volunteers drive it along the hill roads to five villages. At each stop, they open the side doors, and shelves full of picture books, comics and science books appear. Children can borrow two books for one week. Some children are learning to read for the first time, so volunteers read stories aloud under a big tree. Last month, a girl told me she wants to be a doctor. Then she borrowed a book about the human body. Books open doors. I hope every child can have a chance to learn.\" How many books can children borrow? Two books for one week. What does the girl want to be? A doctor. Birimo jumps up and says, I'm playing the library bus! Beep beep! Books for everyone! Now, phonics. Endangered is en plus danger plus ed, which means in danger. Solar comes from sol, which means sun, plus ar. For the moon, we say lunar. Reusable is re plus use plus able, but drop the e in use. Next time, we'll make a world map of challenges together.",
+    "after": "Hello, everyone! Last time, we said, Millions of people don't have clean water nearby. Today, it's Priya's turn. Priya is from Asia, and her town is surrounded by green hills and rice fields. In the villages around her town, there aren't many schools or libraries. So every Saturday, a big, bright library bus drives from village to village. It is painted with elephants, stars and flowers, and it is full of books. Children run to meet it when they hear its happy horn. Orbit says that around the world, millions of children can't go to school. Some live too far away, and some have to help at home. Riko thinks for a moment and says, Every child should be able to go to school. Say it with me. Every child should be able to go to school. Wonderful! Priya shows us her blog post on a big screen. Let's read it. \"Hi! This is the story of our library bus. Every Saturday morning, the bus leaves my town at eight o'clock. Our teachers and volunteers drive it along the hill roads to five villages. At each stop, they open the side doors, and shelves full of picture books, comics and science books appear. Children can borrow two books for one week. Some children are learning to read for the first time, so volunteers read stories aloud under a big tree. Last month, a girl told me she wants to be a doctor. Then she borrowed a book about the human body. Books open doors. I hope every child can have a chance to learn.\" How many books can children borrow? Two books for one week. What does the girl want to be? A doctor. Birimo jumps up and says, I'm playing the library bus! Beep beep! Books for everyone! Now, phonics. Endangered is en plus danger plus e, d, which means in danger. Solar comes from sol, which means sun, plus a, r. For the moon, we say lunar. Reusable is re plus use plus able, but drop the e in use. Next time, we'll make a world map of challenges together.",
+    "reviewers": "B+C",
+    "reason": "bare 'ed' is read as the name Ed, but in endangered it is only a d sound; spell the letters; bare 'ar' is read as 'are' or the letter R; spell the letters (W31 precedent)"
+  },
+  {
+    "lesson": 1145,
+    "path": "teacher.segments[7].say",
+    "before": "Haru stares at the green pins. They're everywhere. This challenge affects many countries. A friend asks, What do the blue pins show? They show clean water.",
+    "after": "Haru stares at the green pins and says, They're everywhere. This challenge affects many countries. A friend asks, What do the blue pins show? They show clean water.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1145,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Haru stares at the green pins. They're everywhere. This challenge affects many countries. A friend asks, What do the blue pins show? They show clean water.",
+    "after": "Haru stares at the green pins and says, They're everywhere. This challenge affects many countries. A friend asks, What do the blue pins show? They show clean water.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1145,
+    "path": "teacher.segments[10].say",
+    "before": "Sol means sun. Sol, plus ar. Solar. Your turn! Environment. Recycle. Solar.",
+    "after": "Sol means sun. Sol, plus a, r. Solar. Your turn! Environment. Recycle. Solar.",
+    "reviewers": "B+C",
+    "reason": "bare 'ar' is read as 'are' or the letter R; spell the letters (W31 precedent)"
+  },
+  {
+    "lesson": 1145,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Sol means sun. Sol, plus ar. Solar. Your turn! Environment. Recycle. Solar.",
+    "after": "Sol means sun. Sol, plus a, r. Solar. Your turn! Environment. Recycle. Solar.",
+    "reviewers": "B+C",
+    "reason": "bare 'ar' is read as 'are' or the letter R; spell the letters (W31 precedent)"
+  },
+  {
+    "lesson": 1146,
+    "path": "teacher.segments[6].say",
+    "before": "Birimo shouts, Look! That carrot has two legs. Can carrots dance? Riko laughs. Ha ha! And that one is shaped like a heart.",
+    "after": "Birimo shouts, Look! That carrot has two legs. Can carrots dance? Riko laughs and says, Ha ha! And that one is shaped like a heart.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1146,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Birimo shouts, Look! That carrot has two legs. Can carrots dance? Riko laughs. Ha ha! And that one is shaped like a heart.",
+    "after": "Birimo shouts, Look! That carrot has two legs. Can carrots dance? Riko laughs and says, Ha ha! And that one is shaped like a heart.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1147,
+    "path": "teacher.segments[7].say",
+    "before": "Riko nods. Shops throw away food because customers want perfect fruit. Birimo says, But I love spotty apples! Spots are like freckles.",
+    "after": "Riko nods and says, Shops throw away food because customers want perfect fruit. Birimo says, But I love spotty apples! Spots are like freckles.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1147,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Riko nods. Shops throw away food because customers want perfect fruit. Birimo says, But I love spotty apples! Spots are like freckles.",
+    "after": "Riko nods and says, Shops throw away food because customers want perfect fruit. Birimo says, But I love spotty apples! Spots are like freckles.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1147,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, From the farmer's point of view, every carrot is precious. Today, we look at food from a shop's point of view. Sam from North America tells us about his aunt. She runs a small grocery shop on a busy street, with baskets of apples, bananas and tomatoes out front. Every morning, she opens the doors at seven, and her neighbors stop by for fresh bread and fruit. Birimo asks, Why would a shop throw away good food? Sam explains that many customers pick only the shiniest, roundest apples. The ones with little spots stay on the shelf. Also, every package has a date label, and some people won't buy anything when the date is close. Riko nods and says, Shops throw away food because customers want perfect fruit. Say it with me. Shops throw away food because customers want perfect fruit. Nice job! But Sam's aunt had an idea. Let's read the notice in her shop window. \"Hello, shoppers! Meet our new Wonky Veggie Boxes! Inside each box, you'll find carrots with two legs, bumpy potatoes, tiny apples and tomatoes in funny shapes. They look a little different, but they taste just as delicious. Each box costs less than regular vegetables, so you save money, too. And please remember, a best-before date tells you when food is at its best. Food is often still good after that date, so look, smell and ask a grown-up. Every box you buy helps farmers and keeps good food from being thrown away. Ask us about this week's box. Thank you for shopping with us!\" What's inside a Wonky Veggie Box? Carrots with two legs, bumpy potatoes, tiny apples and funny-shaped tomatoes. What does a best-before date tell you? When food is at its best. Sam says the boxes sell out every Friday, and his aunt throws away much less food now! Now, phonics. Here are even bigger numbers. One billion has nine zeros. About eight billion people live on Earth, so eight billion is a very big number. Two point five million means two and a half million. Next time, Liam will tell us about plastic and the sea.",
+    "after": "Hello, everyone! Last time, we said, From the farmer's point of view, every carrot is precious. Today, we look at food from a shop's point of view. Sam from North America tells us about his aunt. She runs a small grocery shop on a busy street, with baskets of apples, bananas and tomatoes out front. Every morning, she opens the doors at seven, and her neighbors stop by for fresh bread and fruit. Birimo asks, Why would a shop throw away good food? Sam explains that many customers pick only the shiniest, roundest apples. The ones with little spots stay on the shelf. Also, every package has a date label, and some people won't buy anything when the date is close. Riko nods and says, Shops throw away food because customers want perfect fruit. Say it with me. Shops throw away food because customers want perfect fruit. Nice job! But Sam's aunt had an idea. Let's read the notice in her shop window. \"Hello, shoppers! Meet our new Wonky Veggie Boxes! Inside each box, you'll find carrots with two legs, bumpy potatoes, tiny apples and tomatoes in funny shapes. They look a little different, but they taste just as delicious. Each box costs less than regular vegetables, so you save money, too. And please remember, a best-by date tells you when food is at its best. Food is often still good after that date, so look, smell and ask a grown-up. Every box you buy helps farmers and keeps good food from being thrown away. Ask us about this week's box. Thank you for shopping with us!\" What's inside a Wonky Veggie Box? Carrots with two legs, bumpy potatoes, tiny apples and funny-shaped tomatoes. What does a best-by date tell you? When food is at its best. Sam says the boxes sell out every Friday, and his aunt throws away much less food now! Now, phonics. Here are even bigger numbers. One billion has nine zeros. About eight billion people live on Earth, so eight billion is a very big number. Two point five million means two and a half million. Next time, Liam will tell us about plastic and the sea.",
+    "reviewers": "objective (US policy)",
+    "reason": "'best-before date' is British; US labels say 'best by' (Best if used by); same as the notice text"
+  },
+  {
+    "lesson": 1147,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "かずの じかん！ もっと 大きいよ！ one billion は 1 の あとに 0 が 9 こ。地球には やく eight billion、80 おくにんの 人が すんで いるよ。わあ！",
+    "after": "かずの じかん！ もっと 大きいよ！ one billion は 1 の あとに 0 が 9 こ。地球には やく eight billion、80 おく人が すんで いるよ。わあ！",
+    "reviewers": "objective (JA)",
+    "reason": "'80 おくにんの 人' doubles 人 (eight billion people people); 80 おく人 is natural"
+  },
+  {
+    "lesson": 1148,
+    "path": "teacher.segments[6].say",
+    "before": "Birimo says, I can balance it on my nose. Ta-da! Riko laughs. Plastic is handy. It's light and cheap, and it keeps food fresh.",
+    "after": "Birimo says, I can balance it on my nose. Ta-da! Riko laughs and says, Plastic is handy. It's light and cheap, and it keeps food fresh.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1148,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Birimo says, I can balance it on my nose. Ta-da! Riko laughs. Plastic is handy. It's light and cheap, and it keeps food fresh.",
+    "after": "Birimo says, I can balance it on my nose. Ta-da! Riko laughs and says, Plastic is handy. It's light and cheap, and it keeps food fresh.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1149,
+    "path": "teacher.segments[7].say",
+    "before": "Haru shouts, Thirty out of forty. Everyone recycles! Riko says, Hmm, not everyone. Ten people said no. So Haru tries again. It seems that more people are recycling.",
+    "after": "Haru shouts, Thirty out of forty. Everyone recycles! Riko says, Hmm, not everyone. Ten people said no. So Haru tries again and says, It seems that more people are recycling.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1149,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Haru shouts, Thirty out of forty. Everyone recycles! Riko says, Hmm, not everyone. Ten people said no. So Haru tries again. It seems that more people are recycling.",
+    "after": "Haru shouts, Thirty out of forty. Everyone recycles! Riko says, Hmm, not everyone. Ten people said no. So Haru tries again and says, It seems that more people are recycling.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1149,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Plastic is useful. However, it can harm the sea. Today, Orbit asks us to do a survey. We ask the children and teachers at the hall the same three questions about recycling, water and food. Riko and Kiko hold clipboards, Haru counts the answers, and Birimo makes a very tall tally chart. In the end, we ask forty people. Nadia and Mateo even help us count the last answers, and everyone is very kind and patient. Haru looks at the results and shouts, Everyone recycles! But I smile. Careful! Not everyone answered yes. Haru laughs. Oops! You're right. When we aren't completely sure, we can say it seems that. Riko tries it. It seems that more people are recycling. Say it with me. It seems that more people are recycling. Great! We can also say, This might mean that something is true. Let's read our survey results. \"Round Table Survey Results. We asked forty children and teachers at the hall three questions. First, do you recycle more now than two years ago? Thirty people said yes. It seems that more people are recycling. Second, do you turn off the water while you brush your teeth? Twenty people said yes. That is half of the group. This might mean that many of us can still save more water. Third, do you always take only the food you can finish? Ten people said yes. That is a quarter. This might mean that many of us are still learning. We did not ask everyone in the world, so these results are only about our group.\" How many people said they recycle more? Thirty people. Why can't we say everyone? Because we only asked our group, and not everyone said yes. Now, phonics. A quarter means one of four equal parts. Fifty percent is the same as half. Seventy percent means seventy out of one hundred. Don't add an s to percent. About seventy percent of the Earth's surface is water. Next time, we'll put many points of view together in one big presentation.",
+    "after": "Hello, everyone! Last time, we said, Plastic is useful. However, it can harm the sea. Today, Orbit asks us to do a survey. We ask the children and teachers at the hall the same three questions about recycling, water and food. Riko and Kiko hold clipboards, Haru counts the answers, and Birimo makes a very tall tally chart. In the end, we ask forty people. Nadia and Mateo even help us count the last answers, and everyone is very kind and patient. Haru looks at the results and shouts, Everyone recycles! But I smile. Careful! Not everyone answered yes. Haru laughs. Oops! You're right. When we aren't completely sure, we can say it seems that. Haru tries again. It seems that more people are recycling. Say it with me. It seems that more people are recycling. Great! We can also say, This might mean that something is true. Let's read our survey results. \"Round Table Survey Results. We asked forty children and teachers at the hall three questions. First, do you recycle more now than two years ago? Thirty people said yes. It seems that more people are recycling. Second, do you turn off the water while you brush your teeth? Twenty people said yes. That is half of the group. This might mean that many of us can still save more water. Third, do you always take only the food you can finish? Ten people said yes. That is a quarter. This might mean that many of us are still learning. We did not ask everyone in the world, so these results are only about our group.\" How many people said they recycle more? Thirty people. Why can't we say everyone? Because we only asked our group, and not everyone said yes. Now, phonics. A quarter means one of four equal parts. Fifty percent is the same as half. Seventy percent means seventy out of one hundred. Don't add an s to percent. About seventy percent of the Earth's surface is water. Next time, we'll put many points of view together in one big presentation.",
+    "reviewers": "objective",
+    "reason": "story: in the conversation (lines 2-5) and seg7, Haru says 'Everyone recycles!' and then corrects himself with the target; the teacherScript gave the target to Riko"
+  },
+  {
+    "lesson": 1150,
+    "path": "teacher.segments[6].say",
+    "before": "Haru holds the farmer poster. From the farmer's point of view, every carrot is precious. Riko holds the shop poster. It's hard to sell food that doesn't look perfect.",
+    "after": "Haru holds the farmer poster and says, From the farmer's point of view, every carrot is precious. Riko holds the shop poster and says, It's hard to sell food that doesn't look perfect.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1150,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Haru holds the farmer poster. From the farmer's point of view, every carrot is precious. Riko holds the shop poster. It's hard to sell food that doesn't look perfect.",
+    "after": "Haru holds the farmer poster and says, From the farmer's point of view, every carrot is precious. Riko holds the shop poster and says, It's hard to sell food that doesn't look perfect.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1150,
+    "path": "teacher.segments[7].say",
+    "before": "Birimo says, I'm the family poster! Leftover noodles can become noodle pancakes. Yum! Kiko giggles. And from the sea's point of view, less plastic means happier turtles.",
+    "after": "Birimo says, I'm the family poster! Leftover noodles can become noodle pancakes. Yum! Kiko giggles and says, And from the sea's point of view, less plastic means happier turtles.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1150,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Birimo says, I'm the family poster! Leftover noodles can become noodle pancakes. Yum! Kiko giggles. And from the sea's point of view, less plastic means happier turtles.",
+    "after": "Birimo says, I'm the family poster! Leftover noodles can become noodle pancakes. Yum! Kiko giggles and says, And from the sea's point of view, less plastic means happier turtles.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1150,
+    "path": "teacher.segments[8].say",
+    "before": "Kiko finishes. Sharing extra food helps people. Moreover, it saves money. Therefore, we should share extra food. Who can share extra food? Shops and families can share it.",
+    "after": "Kiko finishes and says, Sharing extra food helps people. Moreover, it saves money. Therefore, we should share extra food. Who can share extra food? Shops and families can share it.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  },
+  {
+    "lesson": 1150,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Kiko finishes. Sharing extra food helps people. Moreover, it saves money. Therefore, we should share extra food. Who can share extra food? Shops and families can share it.",
+    "after": "Kiko finishes and says, Sharing extra food helps people. Moreover, it saves money. Therefore, we should share extra food. Who can share extra food? Shops and families can share it.",
+    "reviewers": "A+C",
+    "reason": "the quote has no 'says', so the voice reads the character's words as my own"
+  }
+]
