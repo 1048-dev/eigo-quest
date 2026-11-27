@@ -654,3 +654,35 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: レッスン いがいの 英語（P-other）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、としょかんの おはなし 100 話・うた / チャンツ 28 曲・AI フリートークの テーマ 11（AI が つかえない ときの 台本 lines も）・力だめし ステージ1〜5（リスニング・リーディング・ライティング・スピーキング）・AI かいわの フォールバック台本と システムプロンプト・まとめ動画の テンプレート・エマ先生の 自動台本・英語の UI 文字列・メール / LINE の テンプレートを 見なおした
+- lint の あと、6 グループ（おはなし 1・2 / 3 / 4 / 5、チャンツ＋トーク、力だめし）で 3人の レビュアー（A=アメリカの 先生 / B=こどもの ESL の 専門家 / C=読みあげる 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした。src は まとめ役が おなじ やりかたで 見た
+- おはなし・チャンツ・トーク・力だめしに `"reviewed": "run9"` を つけ、`npm run library:index` で 索引を つくりなおした。変更一覧と レビュアーの メモ: **docs/run9/changes/other.md**
+
+### 数
+- lint（`npm run english:lint -- --library --yearly`）: **まえ error 2 / warn 90 / info 32 → あと error 0 / warn 2 / info 19**（のこりの warn は わざと: s2-13 の 手紙の むすび「From, Kiko of today」、t-dream の お手本「I want to be a writer because I love stories.」〈10 語〉）
+- なおした 欄 **240**（おはなし 157〈1・2: 47 / 3: 42 / 4: 40 / 5: 28〉、チャンツ＋トーク 42、力だめし 36、src 5）
+- 学習項目（words・targetExpressions・こたえの ばんごう・keywords・minWords・音読の 文）は かえて いない。問題文・えらぶ 文の ことばづかいと y4-s3 の お手本は かえた（こたえは どれも 1つ・keywords は ぜんぶ のこる）。src の あいさつ台本の 目標表現 I'm fine. → I'm good.
+
+### before → after の 例
+1. c-01（stiff・A+B+C）: 「I'm fine, I'm fine, and you?」→「I'm good, I'm good! How about you?」（教科書の きまり文句。リズムは そのまま）
+2. c-05（objective・フォニックス）: 「A, a, a, a cat on a mat.」→「Short a, short a! A cat on a mat.」（読みあげは I・O・U を 字の 名前で 読むので、みじかい 音の チャンツが 長い 音を おしえて いた）
+3. s3-03（objective・物語の くいちがい）: キコが「Grandma said she couldn't hear me」と いうが、場面では マイクが きれて いたのは おばあちゃんの ほう → おばあちゃんが マイクの ボタンを みつけられなかった 話に
+4. s5-14（grammar）: 「three melon breads」→「three pieces of melon bread」、y4-l19「cancelled」→「canceled」
+5. src/lib/conversation/engine.ts（A+C）: さいごの ターン「That was fun! Bye-bye! See you!」→「That was fun! See you next time!」
+
+### きめた こと
+- **アメリカ英語**: sports day → field day、on holidays → during vacations、fill in → fill out、Shall we ～? → Do you want to ～?、swimming competition → swim meet、school council → student council、by post → by mail、Okay → OK、October 12th → October 12
+- **ながい 文**: ステージの 上限を こえる 文は、ほとんど 自然な 切れめで 2つに わけた（おはなし 1・2 で 17、3〜5 で 20 いじょう、力だめし 15）
+- **AI の システムプロンプト**: レッスンの かいわ・フリートークの 両方に NATURAL_ENGLISH の きまり（アメリカ英語・短縮形・「I'm fine, thank you. And you?」「Let's enjoy!」「Please repeat.」を さける）を 1 行 たした。テストが 見る 文は そのまま
+- **メール・LINE・レポート・おしらせ**: 英語は 製品名だけで なおす ところ なし。UI の 英語（BOSS・No.・スライドの 見出し）と ワールド・モンスターの 英語名（レッスンと テストで つかわれる ファンタジーの 名前）も のこした
+- のこした こと: 台本エンジンの「Say, "～"」（テストで きまって いる）、「Great job! See you tomorrow!」、s3-14「and I am bored?」（bored / boring の くらべ）、y4-r01 と y5-r02 の にた 問題（こたえが どちらも reduce。あとで いれかえを 考える）、力だめしの こどもの「Emma」（エマ先生とは べつの 子）。くわしくは other.md
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run library:check（索引は 最新）・npm run yearly:check（ステージ1〜5 OK）・npm run curriculum:check（索引は 最新）

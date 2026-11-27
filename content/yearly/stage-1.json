@@ -1,5 +1,6 @@
 {
   "stage": 1,
+  "reviewed": "run9",
   "levelJa": "Pre-A1 → A1",
   "minutes": 15,
   "titleJa": "ステージ1 の 力だめし",
@@ -135,21 +136,21 @@
     },
     {
       "id": "y1-r08", "skill": "reading", "format": "conversation",
-      "prompt": "A: How are you?  B: ( )",
+      "prompt": "A: How are you? B: ( )",
       "promptJa": "あいさつの へんじ",
       "choices": ["I'm great, thank you.", "I'm a student.", "It's blue."],
       "answer": 0
     },
     {
       "id": "y1-r09", "skill": "reading", "format": "conversation",
-      "prompt": "A: What time do you get up?  B: ( )",
+      "prompt": "A: What time do you get up? B: ( )",
       "promptJa": "なんじに おきるかな？",
       "choices": ["On Monday.", "In the park.", "At seven."],
       "answer": 2
     },
     {
       "id": "y1-r10", "skill": "reading", "format": "conversation",
-      "prompt": "A: Can I have some orange juice, please?  B: ( )",
+      "prompt": "A: Can I have some orange juice, please? B: ( )",
       "promptJa": "おみせの かいわ",
       "choices": ["Here you are.", "Me too.", "See you."],
       "answer": 0
@@ -161,7 +162,7 @@
     "prompts": [
       {
         "id": "y1-s1", "kind": "intro",
-        "askEn": "Hello! Please tell me about you. What do you like?",
+        "askEn": "Hello! Tell me about yourself. What do you like?",
         "askJa": "こんにちは！ きみの ことを おしえて。なにが すき？",
         "keywords": ["i", "like"],
         "minWords": 3,

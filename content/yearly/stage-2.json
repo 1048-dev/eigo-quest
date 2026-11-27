@@ -1,5 +1,6 @@
 {
   "stage": 2,
+  "reviewed": "run9",
   "levelJa": "A1 → A2",
   "minutes": 20,
   "titleJa": "ステージ2 の 力だめし",
@@ -57,11 +58,11 @@
     {
       "id": "y2-l07", "skill": "listening", "format": "response",
       "audio": [
-        { "speaker": "A", "en": "Shall we play tennis after school?" },
+        { "speaker": "A", "en": "Do you want to play tennis after school?" },
         { "speaker": "B", "en": "Sorry, I can't. I have to go to the dentist." }
       ],
       "promptJa": "つぎの ことばを えらぼう",
-      "choices": ["Yes, let's!", "Good job!", "That's okay. Maybe next time."],
+      "choices": ["Yes, let's!", "Good job!", "That's OK. Maybe next time."],
       "answer": 2
     },
     {
@@ -123,7 +124,7 @@
       "audio": [
         { "speaker": "A", "en": "Yuna, do you have to practice the piano today?" },
         { "speaker": "B", "en": "Yes. I have to practice for one hour before dinner." },
-        { "speaker": "A", "en": "Okay. Let's play after that." }
+        { "speaker": "A", "en": "OK. Let's play after that." }
       ],
       "prompt": "When does Yuna have to practice the piano?",
       "promptJa": "ユナが ピアノを れんしゅうする のは いつ？",
@@ -166,10 +167,10 @@
         "Date: Saturday, October 18",
         "Time: 10:00 a.m. to 3:00 p.m.",
         "Place: the school gym and the playground",
-        "The third-grade students will sing songs in the gym at 11:00 a.m.",
+        "Third graders will sing in the gym at 11:00 a.m.",
         "You can buy curry and rice and fruit juice in the cafeteria.",
         "At the cookie corner, you can make your own cookies. Please bring a bag to take them home.",
-        "If it rains, the games on the playground will move to the gym."
+        "If it rains, the playground games will move to the gym."
       ]
     },
     {
@@ -241,21 +242,21 @@
     },
     {
       "id": "y2-r08", "skill": "reading", "format": "conversation",
-      "prompt": "A: Would you like some more soup?  B: ( ) It's delicious.",
+      "prompt": "A: Would you like some more soup? B: ( ) It's delicious.",
       "promptJa": "すすめられた ときの へんじ",
       "choices": ["Yes, please.", "No, I'm not.", "Here you are.", "You're welcome."],
       "answer": 0
     },
     {
       "id": "y2-r09", "skill": "reading", "format": "conversation",
-      "prompt": "A: What are you going to do this weekend?  B: ( )",
+      "prompt": "A: What are you going to do this weekend? B: ( )",
       "promptJa": "これからの よてい",
       "choices": ["I played soccer.", "It was fun.", "I'm going to go camping.", "I like weekends."],
       "answer": 2
     },
     {
       "id": "y2-r10", "skill": "reading", "format": "conversation",
-      "prompt": "A: Can I borrow your eraser?  B: ( )",
+      "prompt": "A: Can I borrow your eraser? B: ( )",
       "promptJa": "かして あげる ときは？",
       "choices": ["No, it isn't.", "I'm sorry to hear that.", "Nice to meet you.", "Sure. Here you are."],
       "answer": 3
@@ -306,7 +307,7 @@
         "askJa": "絵を みてね。ひとたちは なにを しているかな？",
         "picture": {
           "emoji": "🏞️👦⚽👧🚲🐕",
-          "descriptionEn": "In a park, a boy is playing soccer, a girl is riding a bike, and a dog is running."
+          "descriptionEn": "This is a park. A boy is playing soccer. A girl is riding a bike. A dog is running."
         },
         "keywords": ["boy", "girl", "playing", "soccer", "riding", "bike", "dog", "running"],
         "minWords": 8,

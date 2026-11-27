@@ -158,7 +158,7 @@ export function buildSuggestions(conv: LessonConversation, history: Conversation
 // ---------------------------------------------------------------------------
 const PRAISE = ["Great!", "Nice!", "Good job!", "Wonderful!", "Cool!"];
 const PRAISE_JA: Record<string, string> = { "Great!": "すごい！", "Nice!": "いいね！", "Good job!": "よくできたね！", "Wonderful!": "すばらしい！", "Cool!": "かっこいい！" };
-const CLOSING = { en: "That was fun! Bye-bye! See you!", ja: "たのしかった！ バイバイ！ またね！" };
+const CLOSING = { en: "That was fun! See you next time!", ja: "たのしかった！ また こんどね！" };
 const ENCOURAGE = { en: "Let's try together!", ja: "いっしょに いってみよう！" };
 
 export interface ScriptedInput {
@@ -257,8 +257,8 @@ export const GENERIC_CONVERSATION: LessonConversation = {
     { speaker: "Haru", en: "Hello!", ja: "こんにちは！" },
     { speaker: "Riko", en: "Hi!", ja: "やあ！" },
     { speaker: "Haru", en: "How are you?", ja: "げんき？" },
-    { speaker: "Riko", en: "I'm fine, thanks.", ja: "げんきだよ、ありがとう。" },
-    { speaker: "Haru", en: "Goodbye!", ja: "さようなら！" },
+    { speaker: "Riko", en: "I'm good, thanks!", ja: "げんきだよ、ありがとう！" },
+    { speaker: "Haru", en: "Bye! See you!", ja: "バイバイ！ またね！" },
   ],
-  aiTask: { goalJa: "Hello! と あいさつしよう", starterEn: "Hello! How are you?", targetExpressions: ["Hello!", "I'm fine."] },
+  aiTask: { goalJa: "Hello! と あいさつしよう", starterEn: "Hello! How are you?", targetExpressions: ["Hello!", "I'm good."] },
 };

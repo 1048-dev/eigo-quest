@@ -1,5 +1,6 @@
 {
   "stage": 4,
+  "reviewed": "run9",
   "levelJa": "A2+ → B1",
   "minutes": 30,
   "titleJa": "ステージ4 の 力だめし",
@@ -8,7 +9,7 @@
     {
       "id": "y4-l01", "skill": "listening", "format": "response",
       "audio": [
-        { "speaker": "A", "en": "I think our class should plant flowers along the school gate." },
+        { "speaker": "A", "en": "I think our class should plant flowers by the school gate." },
         { "speaker": "B", "en": "That's a nice idea, but who will water them during summer vacation?" }
       ],
       "choices": ["I watered them yesterday.", "The gate opens at eight.", "Good point. Maybe we could take turns.", "They're my favorite color."],
@@ -197,7 +198,7 @@
     {
       "id": "y4-l19", "skill": "listening", "format": "passage",
       "audio": [
-        { "speaker": "N", "en": "Attention, passengers. Because of strong winds, this afternoon's ferry to Green Island has been cancelled. The next ferry will leave tomorrow at nine a.m. Passengers with tickets for today can use them tomorrow or get their money back at the ticket office. We are sorry for the trouble." }
+        { "speaker": "N", "en": "Attention, passengers. Because of strong winds, this afternoon's ferry to Green Island has been canceled. The next ferry will leave tomorrow at nine a.m. Passengers with tickets for today can use them tomorrow or get their money back at the ticket office. We are sorry for the trouble." }
       ],
       "prompt": "What can passengers with today's tickets do?",
       "choices": ["Take a bus to the island.", "Leave on a ferry tonight.", "Change them for cheaper tickets.", "Use them tomorrow."],
@@ -377,7 +378,7 @@
         "askJa": "「子どもは 毎日 宿題を した ほうが いい」と いう 人が いるよ。あなたは どう 思う？ 理由も いってね。",
         "keywords": ["think", "because", "homework", "every", "day"],
         "minWords": 20,
-        "sample": "I think children should have a little homework every day because it helps us remember what we learned at school. But it shouldn't take too much time."
+        "sample": "I think a little homework every day is good because it helps us remember what we learned. But it shouldn't take too much time."
       },
       {
         "id": "y4-s4",

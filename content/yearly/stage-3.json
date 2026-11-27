@@ -1,5 +1,6 @@
 {
   "stage": 3,
+  "reviewed": "run9",
   "levelJa": "A2 → A2+",
   "minutes": 25,
   "titleJa": "ステージ3 の 力だめし",
@@ -38,7 +39,7 @@
         { "speaker": "A", "en": "What were you doing when I called you last night?" },
         { "speaker": "B", "en": "I was taking a bath. Sorry I missed your call." }
       ],
-      "choices": ["That's okay. I wanted to ask about the homework.", "Yes, I'm taking it now.", "I've never been there."],
+      "choices": ["That's OK. I wanted to ask about the homework.", "Yes, I'm taking it now.", "I've never been there."],
       "answer": 0
     },
     {
@@ -74,7 +75,7 @@
     {
       "id": "y3-l08", "skill": "listening", "format": "dialog",
       "audio": [
-        { "speaker": "A", "en": "Emma, you look tired. Are you okay?" },
+        { "speaker": "A", "en": "Emma, you look tired. Are you OK?" },
         { "speaker": "B", "en": "I stayed up late last night. I was writing a story for a contest." },
         { "speaker": "A", "en": "Wow! When is the deadline?" },
         { "speaker": "B", "en": "This Friday, so I still have three days." }
@@ -222,10 +223,10 @@
         "Hi Haru,",
         "I'm writing to you from my uncle's house in Nagano. My family arrived here on Saturday morning.",
         "On the first day, I tried skiing for the first time. I fell down so many times that my legs hurt!",
-        "My cousin Taro is a great skier, so he taught me how to stop and turn.",
+        "My cousin Taro is a great skier. He taught me how to stop and turn.",
         "By the second day, I could ski down the small hill without falling.",
         "Yesterday it snowed a lot, so we stayed inside and made hot chocolate.",
-        "Tomorrow we're going to visit a snow monkey park, and then we'll go home on Wednesday.",
+        "Tomorrow we're going to visit a snow monkey park. Then we'll go home on Wednesday.",
         "I'll show you my photos at school next week.",
         "See you soon, Riko"
       ]
@@ -243,7 +244,7 @@
         "They worked on the bench for three mornings.",
         "On the fourth day, they painted it bright blue.",
         "While they were painting, an old woman stopped to watch them.",
-        "\"I sat on that bench with my husband many years ago,\" she said with a smile.",
+        "\"I sat on that bench with my husband long ago,\" she said with a smile.",
         "\"Thank you for making it beautiful again.\"",
         "Leo felt very proud.",
         "Before he went home, he took a picture of the bench to show his friends.",
@@ -260,7 +261,7 @@
     },
     {
       "id": "y3-r02", "skill": "reading", "format": "vocab",
-      "prompt": "The museum is very popular, so we had to wait in a long ( ) to buy tickets.",
+      "prompt": "The museum is popular, so we had to wait in a long ( ) to buy tickets.",
       "choices": ["road", "street", "space", "line"],
       "answer": 3
     },
@@ -364,7 +365,7 @@
         "askJa": "絵を みてね。人たちは なにを しているかな？",
         "picture": {
           "emoji": "🏞️🌳👦🎣👧📖🐕",
-          "descriptionEn": "At a lake, a boy is fishing, a girl is reading a book under a tree, and a dog is running."
+          "descriptionEn": "This is a lake. A boy is fishing. A girl is reading a book under a tree. A dog is running."
         },
         "keywords": ["fishing", "reading", "book", "dog", "lake"],
         "minWords": 10,
@@ -382,7 +383,7 @@
       {
         "id": "y3-s4",
         "kind": "question",
-        "askEn": "What do you usually do after school? Please tell me two things.",
+        "askEn": "What do you usually do after school? Can you tell me two things?",
         "askJa": "学校の あと、ふだん なにを しているかな？ 2 つ おしえてね。",
         "keywords": ["usually", "after", "school", "play", "homework"],
         "minWords": 12,

@@ -31,6 +31,10 @@ const PERSONA: Record<ConversationCharacter, string> = {
   birimo: "Birimo, a small, friendly, electric mascot creature",
 };
 
+/** 英語の きまり（docs/english-style-guide.md）: アメリカ英語・こどもが ほんとうに いう 言いかた */
+export const NATURAL_ENGLISH =
+  'Speak natural, warm, everyday American English (US spelling and words), the way a friendly American kid really talks. Use contractions (I\'m, it\'s, don\'t). Avoid textbook phrases such as "I\'m fine, thank you. And you?", "Let\'s enjoy!" or "Please repeat."';
+
 /** レッスンの かいわ（lesson）か、としょかんの フリートーク（free）か。stage で 話す ことばの むずかしさを かえる */
 export interface ConversationMode {
   mode?: "lesson" | "free";
@@ -54,6 +58,7 @@ ${levelGuide(stage)}
 
 Rules:
 - Have a real, friendly conversation. React to what the child said ("Wow!", "Really?", "Me too!"), share a tiny bit about yourself as the character, and ask ONE easy follow-up question about what the child said.
+- ${NATURAL_ENGLISH}
 - The child may move to another safe, child-appropriate topic (hobbies, animals, food, school life in general, games, nature, science, stories, seasons). Follow them happily.
 - If the child makes a mistake, do not correct them directly; say it the right way in your reply (recast). Praise effort. Never scold. Japanese or mixed English is OK: understand it and answer in simple English.
 - NEVER ask for personal information (full name, address, school name, phone number, email, age, birthday, photos, passwords, where they live, meeting in person). A nickname is fine. If the child shares personal information, do not repeat it and gently change the topic.
@@ -77,6 +82,7 @@ ${conv.lines.map((l) => `- ${l.en}`).join("\n")}
 
 Rules:
 - replyEn: 1 or 2 very short, simple English sentences (at most about 12 words in total). Use easy words a 6-year-old beginner can follow.
+- ${NATURAL_ENGLISH}
 - Stay on today's topic and scene. If the child goes off-topic, kindly bring the talk back to the scene.
 - Gently model a target expression in your reply. If the child makes a mistake, do not correct them directly; just say it the right way in your reply (recast).
 - Praise effort. Never scold. Japanese, mixed or broken English from the child is OK: understand it and answer in simple English.
