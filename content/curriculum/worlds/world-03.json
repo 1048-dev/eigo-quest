@@ -6,6 +6,7 @@
     {
       "lessonNo": 61,
       "world": 3,
+      "reviewed": "run9",
       "title": "Hello, World!",
       "titleJa": "せかいの あいさつ",
       "school": {
@@ -484,12 +485,13 @@
     {
       "lessonNo": 62,
       "world": 3,
+      "reviewed": "run9",
       "title": "What's Your Name?",
       "titleJa": "なまえは なに？",
       "school": {
         "grade": "小3",
         "topic": "なまえの ききかた",
-        "grammar": "What's your name? ― I'm ～. And you?",
+        "grammar": "What's your name? ― I'm ～. How about you?",
         "expressions": [
           {
             "en": "What's your name?",
@@ -497,7 +499,7 @@
             "core": true
           },
           {
-            "en": "I'm Kiko. And you?",
+            "en": "I'm Kiko. How about you?",
             "ja": "キコだよ。あなたは？"
           },
           {
@@ -575,7 +577,7 @@
           "emoji": "⭕"
         }
       ],
-      "teacherScript": "Hi! きょうは なまえの ききかた。「What's your name?」って きかれたら「I'm ～.」で こたえよう。「And you?」で ききかえして、さいごに「Nice to meet you, too.」も いえたら かっこいいよ。",
+      "teacherScript": "Hi! きょうは なまえの ききかた。「What's your name?」って きかれたら「I'm ～.」で こたえよう。「How about you?」で ききかえして、さいごに「Nice to meet you, too.」も いえたら かっこいいよ。",
       "conversation": {
         "scene": "A name game in a circle",
         "sceneJa": "わに なって なまえゲーム",
@@ -592,7 +594,7 @@
           },
           {
             "speaker": "Kiko",
-            "en": "I'm Kiko. And you?",
+            "en": "I'm Kiko. How about you?",
             "ja": "キコだよ。あなたは？"
           },
           {
@@ -618,7 +620,7 @@
       "recap": {
         "highlightsJa": [
           "What's your name? で なまえを きけたね",
-          "I'm ～. And you? で ききかえせたよ",
+          "I'm ～. How about you? で ききかえせたよ",
           "おわりの sh！ fish, dish を よめたよ"
         ]
       },
@@ -643,14 +645,14 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Our goal today. Ask, What's your name? Answer, I'm Kiko. And you? なまえを きいて、こたえて、ききかえす。これが きょうの ゴール！ ききかえすと、かいわが ながく つづくよ。",
-            "subtitleJa": "きょうの ゴール：What's your name? で なまえを きく。I'm ～. And you? で こたえて ききかえす。",
-            "subtitleEn": "Our goal today. Ask, What's your name? Answer, I'm Kiko. And you?",
+            "say": "Our goal today. Ask, What's your name? Answer, I'm Kiko. How about you? なまえを きいて、こたえて、ききかえす。これが きょうの ゴール！ ききかえすと、かいわが ながく つづくよ。",
+            "subtitleJa": "きょうの ゴール：What's your name? で なまえを きく。I'm ～. How about you? で こたえて ききかえす。",
+            "subtitleEn": "Our goal today. Ask, What's your name? Answer, I'm Kiko. How about you?",
             "gesture": "point",
             "slide": {
               "title": "きょうの ゴール",
               "items": [
-                "What's your name? ― I'm ～. And you?"
+                "What's your name? ― I'm ～. How about you?"
               ],
               "emoji": "🎯"
             }
@@ -707,16 +709,16 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "Let's play the name game! Catch the ball and say your name. ハルくんが ボールを なげたよ。Here you go! What's your name? I'm Kiko. And you?",
+            "say": "Let's play the name game! Catch the ball and say your name. ハルくんが ボールを なげたよ。Here you go! What's your name? I'm Kiko. How about you?",
             "subtitleJa": "「なまえゲームを しよう！ボールを とったら なまえを いってね。」ハルが ボールを なげたよ。「はい！なまえは なに？」「キコだよ。あなたは？」",
-            "subtitleEn": "Let's play the name game! Catch the ball and say your name. / Here you go! What's your name? / I'm Kiko. And you?",
+            "subtitleEn": "Let's play the name game! Catch the ball and say your name. / Here you go! What's your name? / I'm Kiko. How about you?",
             "gesture": "open_hands",
             "slide": {
               "title": "なまえゲーム",
               "items": [
                 "Let's play the name game! Catch the ball and say your name.",
                 "Here you go! What's your name?",
-                "I'm Kiko. And you?"
+                "I'm Kiko. How about you?"
               ],
               "emoji": "🏐"
             }
@@ -740,14 +742,14 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "ポイントは ふたつ。And you? は「あなたは？」と ききかえす ことば。そして Nice to meet you. と いわれたら、さいごに too を つけて、Nice to meet you, too. こちらこそ、の いみ だよ。",
-            "subtitleJa": "ポイント：And you? は「あなたは？」。Nice to meet you. と いわれたら too を つけて「こちらこそ よろしく」。",
-            "subtitleEn": "I'm Kiko. And you? / Nice to meet you, too.",
+            "say": "ポイントは ふたつ。How about you? は「あなたは？」と ききかえす ことば。そして Nice to meet you. と いわれたら、さいごに too を つけて、Nice to meet you, too. こちらこそ、の いみ だよ。",
+            "subtitleJa": "ポイント：How about you? は「あなたは？」。Nice to meet you. と いわれたら too を つけて「こちらこそ よろしく」。",
+            "subtitleEn": "I'm Kiko. How about you? / Nice to meet you, too.",
             "gesture": "nod",
             "slide": {
               "title": "つかいかた",
               "items": [
-                "I'm Kiko. And you?",
+                "I'm Kiko. How about you?",
                 "Nice to meet you, too."
               ],
               "emoji": "💡"
@@ -861,14 +863,14 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "I'm Kiko. And you?",
+            "say": "I'm Kiko. How about you?",
             "subtitleJa": "「キコだよ。あなたは？」",
-            "subtitleEn": "I'm Kiko. And you?",
+            "subtitleEn": "I'm Kiko. How about you?",
             "gesture": "nod",
             "slide": {
               "title": "いってみよう",
               "items": [
-                "I'm Kiko. And you?"
+                "I'm Kiko. How about you?"
               ],
               "emoji": "🎤"
             },
@@ -893,15 +895,15 @@
           {
             "kind": "repeat",
             "lang": "mix",
-            "say": "Your turn! What's your name? I'm のあとに あなたの なまえ。ニックネームでも いいよ。Then ask, And you?",
-            "subtitleJa": "あなたの ばん！ What's your name? ときかれたら I'm ～. で こたえて、And you? と ききかえそう。ニックネームでも いいよ。",
-            "subtitleEn": "Your turn! What's your name? I'm ～. And you?",
+            "say": "Your turn! What's your name? I'm のあとに あなたの なまえ。ニックネームでも いいよ。Then ask, How about you?",
+            "subtitleJa": "あなたの ばん！ What's your name? ときかれたら I'm ～. で こたえて、How about you? と ききかえそう。ニックネームでも いいよ。",
+            "subtitleEn": "Your turn! What's your name? I'm ～. How about you?",
             "gesture": "open_hands",
             "slide": {
               "title": "いってみよう",
               "items": [
                 "I'm ～.",
-                "I'm Kiko. And you?"
+                "I'm Kiko. How about you?"
               ],
               "emoji": "🎤"
             },
@@ -912,7 +914,7 @@
             "lang": "mix",
             "say": "Quiz! Haru says, Nice to meet you! なんて こたえる？ Nice to meet you, too! それとも What's your name?",
             "subtitleJa": "クイズ！ ハルが「よろしくね！」。こたえは「こちらこそ よろしくね！」と「なまえは なに？」の どっち？",
-            "subtitleEn": "Quiz! Haru says, Nice to meet you! Nice to meet you, too! or What's your name?",
+            "subtitleEn": "Quiz! Haru says, Nice to meet you! Nice to meet you, too! / What's your name?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -942,7 +944,7 @@
           {
             "kind": "wrap",
             "lang": "mix",
-            "say": "Great job today! なまえを きいて、こたえて、And you? で ききかえせたね。おわりの sh も ばっちり。このあと ハルくんと おはなし してみてね。See you next time!",
+            "say": "Great job today! なまえを きいて、こたえて、How about you? で ききかえせたね。おわりの sh も ばっちり。このあと ハルくんと おはなし してみてね。See you next time!",
             "subtitleJa": "きょうは よく がんばったね！ なまえを きいて、こたえて、ききかえせたよ。おわりの sh も ばっちり。このあと ハルくんと おはなし してみてね。またね！",
             "subtitleEn": "Great job today! Chat with Haru next. See you next time!",
             "gesture": "clap",
@@ -950,7 +952,7 @@
               "title": "きょうの まとめ",
               "items": [
                 "What's your name?",
-                "I'm Kiko. And you?",
+                "I'm Kiko. How about you?",
                 "fish"
               ],
               "emoji": "🌟"
@@ -962,6 +964,7 @@
     {
       "lessonNo": 63,
       "world": 3,
+      "reviewed": "run9",
       "title": "My Name Card",
       "titleJa": "なまえカードを つくろう",
       "school": {
@@ -1285,9 +1288,9 @@
           {
             "kind": "tpr",
             "lang": "mix",
-            "say": "Let's make a card with our bodies! Cut the paper. はさみで チョキチョキ。Write your name. ゆびで くうちゅうに なまえを かこう。",
+            "say": "Let's pretend to make a card! Cut the paper. はさみで チョキチョキ。Write your name. ゆびで くうちゅうに なまえを かこう。",
             "subtitleJa": "からだで カードを つくろう！ Cut the paper.（かみを きって）。Write your name.（なまえを かいて）。",
-            "subtitleEn": "Let's make a card with our bodies! Cut the paper. Write your name.",
+            "subtitleEn": "Let's pretend to make a card! Cut the paper. Write your name.",
             "gesture": "mime",
             "slide": {
               "title": "からだで やってみよう",
@@ -1403,9 +1406,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! ともだちに カードを わたす とき、なんて いう？ Here you are. それとも Thank you.?",
+            "say": "Quiz! ともだちに カードを わたす とき、なんて いう？ Here you are. それとも Thank you.",
             "subtitleJa": "クイズ！ カードを わたす ときに いうのは「はい、どうぞ」と「ありがとう」の どっち？",
-            "subtitleEn": "Quiz! Here you are. or Thank you.?",
+            "subtitleEn": "Quiz! Here you are. / Thank you.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -1421,7 +1424,7 @@
             "kind": "check",
             "lang": "mix",
             "say": "The answer is Here you are! もらった ひとが Thank you. と いうんだね。You're a star!",
-            "subtitleJa": "こたえは Here you are.（はい、どうぞ）！ もらった ひとが Thank you.。すごい！",
+            "subtitleJa": "こたえは Here you are.（はい、どうぞ）！ もらった ひとが Thank you. すごい！",
             "subtitleEn": "The answer is Here you are! You're a star!",
             "gesture": "clap",
             "slide": {
@@ -1456,6 +1459,7 @@
     {
       "lessonNo": 64,
       "world": 3,
+      "reviewed": "run9",
       "title": "Greetings Around the World",
       "titleJa": "あいさつの ジェスチャー",
       "school": {
@@ -1600,9 +1604,9 @@
           {
             "kind": "greet",
             "lang": "mix",
-            "say": "Hello again, world travelers! Do you know how people say hello with their hands and bodies? まえに せかいの こんにちはを ならったね。きょうは あいさつの ジェスチャー。てや からだを つかう あいさつ だよ！",
+            "say": "Hello again, world travelers! Can you say hello with your body? まえに せかいの こんにちはを ならったね。きょうは あいさつの ジェスチャー。てや からだを つかう あいさつ だよ！",
             "subtitleJa": "また あったね、せかいの たびびとさん！ きょうは てや からだを つかう、せかいの あいさつの しかたを ためそう！",
-            "subtitleEn": "Hello again, world travelers! Do you know how people say hello with their hands and bodies?",
+            "subtitleEn": "Hello again, world travelers! Can you say hello with your body?",
             "gesture": "wave",
             "slide": {
               "title": "あいさつの ジェスチャー",
@@ -1897,9 +1901,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! てを むねの まえで あわせて いう あいさつは どっち？ Namaste! それとも Let's bow.?",
+            "say": "Quiz! てを むねの まえで あわせて いう あいさつは どっち？ Namaste! それとも Let's bow.",
             "subtitleJa": "クイズ！ てを むねの まえで あわせて いう あいさつは「ナマステ！」と「おじぎ しよう」の どっち？",
-            "subtitleEn": "Quiz! Namaste! or Let's bow.?",
+            "subtitleEn": "Quiz! Namaste! / Let's bow.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -1950,6 +1954,7 @@
     {
       "lessonNo": 65,
       "world": 3,
+      "reviewed": "run9",
       "title": "Online Hello Party (Review)",
       "titleJa": "まとめ：オンラインで せかいに あいさつ",
       "school": {
@@ -2241,9 +2246,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Front sh. ship, shop, shell. Back sh. fish, dish. Now all together! ship, fish, shop, dish, shell!",
+            "say": "sh at the start: ship, shop, shell. sh at the end: fish, dish. Now all together! ship, fish, shop, dish, shell!",
             "subtitleJa": "まえの sh：ship（ふね）、shop（おみせ）、shell（かいがら）。うしろの sh：fish（さかな）、dish（おさら）。ぜんぶ いってみよう！",
-            "subtitleEn": "Front sh: ship, shop, shell. Back sh: fish, dish. Now all together!",
+            "subtitleEn": "sh at the start: ship, shop, shell. sh at the end: fish, dish. Now all together!",
             "gesture": "point",
             "slide": {
               "title": "おと",
@@ -2379,9 +2384,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! パーティーが おわって、さようなら。なんて いう？ See you! それとも Nice to meet you.?",
+            "say": "Quiz! パーティーが おわって、さようなら。なんて いう？ See you! それとも Nice to meet you.",
             "subtitleJa": "クイズ！ パーティーの おわりに いうのは「またね！」と「はじめまして」の どっち？",
-            "subtitleEn": "Quiz! See you! or Nice to meet you.?",
+            "subtitleEn": "Quiz! See you! / Nice to meet you.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -2432,6 +2437,7 @@
     {
       "lessonNo": 66,
       "world": 3,
+      "reviewed": "run9",
       "title": "How Are You Today?",
       "titleJa": "きょうの ちょうしは？",
       "school": {
@@ -2925,6 +2931,7 @@
     {
       "lessonNo": 67,
       "world": 3,
+      "reviewed": "run9",
       "title": "I'm Tired.",
       "titleJa": "つかれた！",
       "school": {
@@ -3044,7 +3051,7 @@
           {
             "speaker": "Haru",
             "en": "Thank you, Birimo! I'm happy now.",
-            "ja": "ありがとう、ビリモ！これで うれしい！"
+            "ja": "ありがとう、ビリモ！うれしく なったよ！"
           }
         ],
         "aiTask": {
@@ -3084,9 +3091,9 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Tell your feelings. I'm tired. I'm sleepy. I'm sad. いまの きもちを I'm で つたえよう。ともだちを ひとやすみに さそう ことばも ならうよ。",
+            "say": "Today's goal. Say how you feel. I'm tired. I'm sleepy. I'm sad. いまの きもちを I'm で つたえよう。ともだちを ひとやすみに さそう ことばも ならうよ。",
             "subtitleJa": "きょうの ゴール：I'm tired. / I'm sleepy. / I'm sad. で いまの きもちを つたえる。ひとやすみに さそう。",
-            "subtitleEn": "Today's goal. Tell your feelings. I'm tired. I'm sleepy. I'm sad.",
+            "subtitleEn": "Today's goal. Say how you feel. I'm tired. I'm sleepy. I'm sad.",
             "gesture": "point",
             "slide": {
               "title": "きょうの ゴール",
@@ -3181,7 +3188,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "そこへ ビリモが きたよ。Here! Have some water. Thank you, Birimo! I'm happy now. おみずで げんきに なったね。",
-            "subtitleJa": "ビリモ「はい！おみずを どうぞ。」ハル「ありがとう、ビリモ！これで うれしい！」",
+            "subtitleJa": "ビリモ「はい！おみずを どうぞ。」ハル「ありがとう、ビリモ！うれしく なったよ！」",
             "subtitleEn": "Here! Have some water. / Thank you, Birimo! I'm happy now.",
             "gesture": "open_hands",
             "slide": {
@@ -3365,9 +3372,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! Riko is yawning. Ahhh. リコちゃんが あくびを してるよ。なんて いう かな？ I'm sleepy. それとも I'm sad.?",
+            "say": "Quiz! Riko is yawning. Ahhh. リコちゃんが あくびを してるよ。なんて いう かな？ I'm sleepy. それとも I'm sad.",
             "subtitleJa": "クイズ！ リコが あくびを してるよ。いうのは「ねむい」と「かなしい」の どっち？",
-            "subtitleEn": "Quiz! Riko is yawning. Ahhh. I'm sleepy. or I'm sad.?",
+            "subtitleEn": "Quiz! Riko is yawning. Ahhh. I'm sleepy. / I'm sad.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -3417,6 +3424,7 @@
     {
       "lessonNo": 68,
       "world": 3,
+      "reviewed": "run9",
       "title": "Are You Happy?",
       "titleJa": "うれしい？",
       "school": {
@@ -3582,9 +3590,9 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Ask, Are you happy? Answer, Yes, I am. Or, No, I'm not. きもちを たずねて、「うん」か「ううん」で こたえよう。",
+            "say": "Today's goal. Ask, Are you happy? Answer, Yes, I am. Or no, I'm not. きもちを たずねて、「うん」か「ううん」で こたえよう。",
             "subtitleJa": "きょうの ゴール：Are you happy? で きもちを きく。Yes, I am. / No, I'm not. で こたえる。",
-            "subtitleEn": "Today's goal. Ask, Are you happy? Answer, Yes, I am. Or, No, I'm not.",
+            "subtitleEn": "Today's goal. Ask, Are you happy? Answer, Yes, I am. Or no, I'm not.",
             "gesture": "point",
             "slide": {
               "title": "きょうの ゴール",
@@ -3696,7 +3704,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "ポイント！ Are you のあとに きもちの ことばを いれると、「～なの？」と きく ぶんに なるよ。こたえは、そうなら Yes, I am. ちがったら No, I'm not.",
-            "subtitleJa": "ポイント：Are you ＋ きもち？ で「～なの？」。そうなら Yes, I am.、ちがったら No, I'm not.",
+            "subtitleJa": "ポイント：Are you ＋ きもち？ で「～なの？」。そうなら Yes, I am. ちがったら No, I'm not.",
             "subtitleEn": "Are you ～? / Yes, I am. / No, I'm not.",
             "gesture": "nod",
             "slide": {
@@ -3866,9 +3874,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! Birimo asks, Are you happy now? クッキーを もらった キコちゃんは にこにこ。なんて こたえる？ Yes, I am. それとも No, I'm not.?",
+            "say": "Quiz! Birimo asks, Are you happy now? クッキーを もらった キコちゃんは にこにこ。なんて こたえる？ Yes, I am. それとも No, I'm not.",
             "subtitleJa": "クイズ！ ビリモ「これで うれしい？」。クッキーを もらって にこにこの キコは、Yes, I am. と No, I'm not. の どっち？",
-            "subtitleEn": "Quiz! Birimo asks, Are you happy now? Yes, I am. or No, I'm not.?",
+            "subtitleEn": "Quiz! Birimo asks, Are you happy now? Yes, I am. / No, I'm not.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -3919,6 +3927,7 @@
     {
       "lessonNo": 69,
       "world": 3,
+      "reviewed": "run9",
       "title": "I'm Hot! I'm Cold!",
       "titleJa": "あつい！さむい！",
       "school": {
@@ -4078,9 +4087,9 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Say, I'm hot. I'm cold. And be kind. Say, here's my jacket. からだの かんじを つたえて、ともだちに やさしく ものを かして あげよう。",
+            "say": "Today's goal. Say, I'm hot. I'm cold. And be kind. Say, Here's my jacket. からだの かんじを つたえて、ともだちに やさしく ものを かして あげよう。",
             "subtitleJa": "きょうの ゴール：I'm hot. / I'm cold. で からだの かんじを いう。Here's my ～. で ものを かして あげる。",
-            "subtitleEn": "Today's goal. Say, I'm hot. I'm cold. And be kind. Say, here's my jacket.",
+            "subtitleEn": "Today's goal. Say, I'm hot. I'm cold. And be kind. Say, Here's my jacket.",
             "gesture": "point",
             "slide": {
               "title": "きょうの ゴール",
@@ -4343,9 +4352,9 @@
           {
             "kind": "repeat",
             "lang": "mix",
-            "say": "Your turn! いまの あなたは どう？ I'm hot. それとも I'm cold.? からだの かんじで こたえてね。",
+            "say": "Your turn! いまの あなたは どう？ I'm hot. それとも I'm cold. からだの かんじで こたえてね。",
             "subtitleJa": "あなたの ばん！ いまの からだの かんじを I'm hot. か I'm cold. で いってね。",
-            "subtitleEn": "Your turn! I'm hot. or I'm cold.?",
+            "subtitleEn": "Your turn! I'm hot. / I'm cold.",
             "gesture": "open_hands",
             "slide": {
               "title": "いってみよう",
@@ -4360,9 +4369,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! ゆきの ひに そとへ でたよ。ブルブル。なんて いう？ I'm hot. それとも I'm cold.?",
+            "say": "Quiz! ゆきの ひに そとへ でたよ。ブルブル。なんて いう？ I'm hot. それとも I'm cold.",
             "subtitleJa": "クイズ！ ゆきの ひ、そとに でて ブルブル。いうのは「あつい」と「さむい」の どっち？",
-            "subtitleEn": "Quiz! I'm hot. or I'm cold.?",
+            "subtitleEn": "Quiz! I'm hot. / I'm cold.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -4413,6 +4422,7 @@
     {
       "lessonNo": 70,
       "world": 3,
+      "reviewed": "run9",
       "title": "At the Nurse's Office (Review)",
       "titleJa": "まとめ：ほけんしつで だいじょうぶ？",
       "school": {
@@ -4565,9 +4575,9 @@
           {
             "kind": "greet",
             "lang": "mix",
-            "say": "Hello, my friends. Shh, quietly, please. ここは ほけんしつ。きょうは ハルくんが ちょっと げんきが ない みたい。みんなで しんぱい して あげよう。",
+            "say": "Hello, my friends. Shh. Quiet voices, please. ここは ほけんしつ。きょうは ハルくんが ちょっと げんきが ない みたい。みんなで しんぱい して あげよう。",
             "subtitleJa": "こんにちは、みんな。しーっ、しずかにね。ここは ほけんしつ。ハルが ちょっと げんきが ない みたい。みんなで しんぱい しよう。",
-            "subtitleEn": "Hello, my friends. Shh, quietly, please.",
+            "subtitleEn": "Hello, my friends. Shh. Quiet voices, please.",
             "gesture": "wave",
             "slide": {
               "title": "ほけんしつで",
@@ -4711,9 +4721,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Front ch. chip, chick, chop. Back ch. much, lunch. All together now! chip, much, chick, lunch, chop!",
+            "say": "ch at the start: chip, chick, chop. ch at the end: much, lunch. All together now! chip, much, chick, lunch, chop!",
             "subtitleJa": "まえの ch：chip（チップ）、chick（ひよこ）、chop（きざむ）。うしろの ch：much（たくさん）、lunch（おひるごはん）。ぜんぶ いってみよう！",
-            "subtitleEn": "Front ch: chip, chick, chop. Back ch: much, lunch. All together now!",
+            "subtitleEn": "ch at the start: chip, chick, chop. ch at the end: much, lunch. All together now!",
             "gesture": "point",
             "slide": {
               "title": "おと",
@@ -4731,9 +4741,9 @@
           {
             "kind": "tpr",
             "lang": "mix",
-            "say": "Let's move, slowly. Lie down. ゆっくり よこに なって。Close your eyes. そっと めを とじて。",
+            "say": "Let's move slowly. Lie down. ゆっくり よこに なって。Close your eyes. そっと めを とじて。",
             "subtitleJa": "ゆっくり やってみよう。Lie down.（よこに なって）。Close your eyes.（めを とじて）。",
-            "subtitleEn": "Let's move, slowly. Lie down. Close your eyes.",
+            "subtitleEn": "Let's move slowly. Lie down. Close your eyes.",
             "gesture": "mime",
             "slide": {
               "title": "からだで やってみよう",
@@ -4851,7 +4861,7 @@
             "lang": "mix",
             "say": "Quiz! ともだちが おうちに かえる とき、「おだいじにね」と いいたい。どっち？ Take care. それとも Are you OK?",
             "subtitleJa": "クイズ！ かえる ともだちに「おだいじに」と いうのは、Take care. と Are you OK? の どっち？",
-            "subtitleEn": "Quiz! Take care. or Are you OK?",
+            "subtitleEn": "Quiz! Take care. / Are you OK?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -4866,9 +4876,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Take care! おだいじに、だね。Are you OK? は「だいじょうぶ？」と きく とき。Brilliant!",
+            "say": "Take care! おだいじに、だね。Are you OK? は「だいじょうぶ？」と きく とき。Awesome!",
             "subtitleJa": "こたえは Take care.（おだいじに）！ Are you OK? は「だいじょうぶ？」と きく とき。すばらしい！",
-            "subtitleEn": "Take care! Brilliant!",
+            "subtitleEn": "Take care! Awesome!",
             "gesture": "clap",
             "slide": {
               "title": "こたえ",
@@ -4902,6 +4912,7 @@
     {
       "lessonNo": 71,
       "world": 3,
+      "reviewed": "run9",
       "title": "Numbers 11 to 15",
       "titleJa": "かず 11〜15",
       "school": {
@@ -5383,6 +5394,7 @@
     {
       "lessonNo": 72,
       "world": 3,
+      "reviewed": "run9",
       "title": "Numbers 16 to 20",
       "titleJa": "かず 16〜20",
       "school": {
@@ -5479,7 +5491,7 @@
           "core": true
         }
       ],
-      "teacherScript": "Hi! きょうは 16から 20。sixteen, seventeen, eighteen, nineteen… そして twenty！ -teen の おとを はっきり のばして いおう。",
+      "teacherScript": "Hi! きょうは 16から 20。sixteen, seventeen, eighteen, nineteen... そして twenty！ -teen の おとを はっきり のばして いおう。",
       "conversation": {
         "scene": "Counting stickers on a sticker sheet",
         "sceneJa": "シールちょうの シールを かぞえる",
@@ -5532,7 +5544,7 @@
           {
             "kind": "greet",
             "lang": "mix",
-            "say": "Hi, friends! Look, look! Kiko has a sticker sheet. キコちゃんの シールちょう、シールが いっぱい！ きょうは 16から 20まで かぞえるよ。きのうの 15の つづきだね。",
+            "say": "Hi, friends! Look, look! Kiko has a sticker sheet. キコちゃんの シールちょう、シールが いっぱい！ きょうは 16から 20まで かぞえるよ。まえの レッスンで ならった 15の つづきだね。",
             "subtitleJa": "みんな、やあ！ みて みて！ キコちゃんの シールちょうに シールが いっぱい。きょうは 16〜20 を かぞえるよ。",
             "subtitleEn": "Hi, friends! Look, look! Kiko has a sticker sheet.",
             "gesture": "wave",
@@ -5612,7 +5624,7 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Listen to the friends. Look at my stickers! Wow, so many! How many stickers? Let's count. Eighteen, nineteen, twenty! Twenty stickers! Cool!",
+            "say": "Listen to our friends. Look at my stickers! Wow, so many! How many stickers? Let's count. Eighteen, nineteen, twenty! Twenty stickers! Cool!",
             "subtitleJa": "「わたしの シールを みて！」「わあ、たくさん！ なんまい？」「かぞえよう。18、19、20！」「シール 20まい！ すごい！」",
             "subtitleEn": "Look at my stickers! / Wow, so many! How many stickers? / Let's count. Eighteen, nineteen, twenty! / Twenty stickers! Cool!",
             "gesture": "open_hands",
@@ -5850,6 +5862,7 @@
     {
       "lessonNo": 73,
       "world": 3,
+      "reviewed": "run9",
       "title": "How Many Balls?",
       "titleJa": "ボールは いくつ？",
       "school": {
@@ -6073,7 +6086,7 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "Now listen. I ask Haru. How many balls in the basket? Let's count! One, two, three... thirteen balls. We need twenty balls. せんせいが きいて、ハルくんが かぞえたよ。13こ。でも 20こ ほしいんだ。",
+            "say": "Now listen. I'm asking Haru. How many balls in the basket? Let's count! One, two, three... thirteen balls. We need twenty balls. せんせいが きいて、ハルくんが かぞえたよ。13こ。でも 20こ ほしいんだ。",
             "subtitleJa": "「かごに ボールは いくつ？」「かぞえよう！ 1、2、3…13こ。」「20こ そろえたいの。」13こ。あと 7こ いるね。",
             "subtitleEn": "How many balls in the basket? / Let's count! One, two, three... thirteen balls. / We need twenty balls.",
             "gesture": "open_hands",
@@ -6261,9 +6274,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! あいてに ボールの かずを ききたい。なんて いう？ How many balls? Or, one more?",
+            "say": "Quiz time! あいてに ボールの かずを ききたい。なんて いう？ How many balls? Or one more?",
             "subtitleJa": "クイズ！ ボールの かずを きく ときは どっち？「ボールは いくつ？」「もう 1こ！」",
-            "subtitleEn": "Quiz time! How many balls? Or, one more?",
+            "subtitleEn": "Quiz time! How many balls? Or one more?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -6278,9 +6291,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "How many balls! That's right! Awesome! One more は「もう 1こ」の ときに つかうよ。",
-            "subtitleJa": "こたえは How many balls?！ せいかい！ One more! は「もう 1こ」の とき。",
-            "subtitleEn": "How many balls! That's right! Awesome!",
+            "say": "How many balls? That's right! Awesome! One more は「もう 1こ」の ときに つかうよ。",
+            "subtitleJa": "こたえは How many balls? せいかい！ One more! は「もう 1こ」の とき。",
+            "subtitleEn": "How many balls? That's right! Awesome!",
             "gesture": "clap",
             "slide": {
               "title": "こたえ",
@@ -6293,9 +6306,9 @@
           {
             "kind": "wrap",
             "lang": "mix",
-            "say": "Great work in the gym! You asked, how many balls? and counted to twenty. bath や math の おわりの th も よめたね。このあと ハルくんと おはなし してみてね。See you next time!",
+            "say": "Great work in the gym! You asked \"How many balls?\" and counted to twenty. bath や math の おわりの th も よめたね。このあと ハルくんと おはなし してみてね。See you next time!",
             "subtitleJa": "How many balls? と きいて、20 まで かぞえられたね。bath、math の おわりの th も よめたよ。このあと ハルくんと おはなし してみてね。またね！",
-            "subtitleEn": "Great work in the gym! You asked, how many balls? and counted to twenty. See you next time!",
+            "subtitleEn": "Great work in the gym! You asked \"How many balls?\" and counted to twenty. See you next time!",
             "gesture": "clap",
             "slide": {
               "title": "きょうの まとめ",
@@ -6314,6 +6327,7 @@
     {
       "lessonNo": 74,
       "world": 3,
+      "reviewed": "run9",
       "title": "Rock, Paper, Scissors!",
       "titleJa": "じゃんけん ぽん！",
       "school": {
@@ -6438,7 +6452,7 @@
           }
         ],
         "aiTask": {
-          "goalJa": "えいごで じゃんけんを しよう。かったら I win!、まけたら You win! と いおう",
+          "goalJa": "えいごで じゃんけんを しよう。かったら I win! まけたら You win! と いおう",
           "starterEn": "Let's play rock, paper, scissors! Rock, paper, scissors, one, two, three!",
           "targetExpressions": [
             "I win!",
@@ -6460,9 +6474,9 @@
           {
             "kind": "greet",
             "lang": "mix",
-            "say": "Hi, everyone! Are you strong at janken? じゃんけん、とくい？ きょうは きょうしつで じゃんけん たいかい！ えいごで じゃんけん するよ。",
+            "say": "Hi, everyone! Are you good at rock, paper, scissors? じゃんけん、とくい？ きょうは きょうしつで じゃんけん たいかい！ えいごで じゃんけん するよ。",
             "subtitleJa": "みんな、やあ！ じゃんけん、とくい？ きょうは きょうしつで じゃんけん たいかい。えいごで やるよ！",
-            "subtitleEn": "Hi, everyone! Are you strong at janken?",
+            "subtitleEn": "Hi, everyone! Are you good at rock, paper, scissors?",
             "gesture": "wave",
             "slide": {
               "title": "じゃんけん ぽん！",
@@ -6475,8 +6489,8 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Play rock, paper, scissors in English. Then say, I win! or You win! かったら I win!、まけたら You win!。かった かずも かぞえよう。",
-            "subtitleJa": "きょうの ゴール：えいごで じゃんけん。かったら I win!、まけたら You win!",
+            "say": "Today's goal. Play rock, paper, scissors in English. Then say, I win! or You win! かったら I win! まけたら You win! かった かずも かぞえよう。",
+            "subtitleJa": "きょうの ゴール：えいごで じゃんけん。かったら I win! まけたら You win!",
             "subtitleEn": "Today's goal. Play rock, paper, scissors in English. Then say, I win! or You win!",
             "gesture": "point",
             "slide": {
@@ -6725,7 +6739,7 @@
             "kind": "repeat",
             "lang": "mix",
             "say": "Your turn. おうちの ひとや ともだちと えいごで じゃんけん してみよう。かったら？ まけたら？ じぶんで えらんで いってね。",
-            "subtitleJa": "あなたの ばん。じゃんけん して、かったら I win!、まけたら You win! と いおう。",
+            "subtitleJa": "あなたの ばん。じゃんけん して、かったら I win! まけたら You win! と いおう。",
             "subtitleEn": "Your turn. I win! / You win!",
             "gesture": "open_hands",
             "slide": {
@@ -6742,8 +6756,8 @@
             "kind": "check",
             "lang": "mix",
             "say": "Quiz time! あなたが グーで、ともだちが チョキ。なんて いう？ I win! or You win!",
-            "subtitleJa": "クイズ！ あなたが グー、ともだちが チョキ。なんて いう？ I win!？ You win!？",
-            "subtitleEn": "Quiz time! I win! or You win!",
+            "subtitleJa": "クイズ！ あなたが グー、ともだちが チョキ。なんて いう？ I win! / You win!",
+            "subtitleEn": "Quiz time! I win! / You win!",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -6759,7 +6773,7 @@
             "kind": "check",
             "lang": "mix",
             "say": "I win! Rock beats scissors. グーは チョキに かつ から、I win! Excellent!",
-            "subtitleJa": "こたえは I win!。グーは チョキに かつね。すばらしい！",
+            "subtitleJa": "こたえは I win! グーは チョキに かつね。すばらしい！",
             "subtitleEn": "I win! Rock beats scissors. Excellent!",
             "gesture": "clap",
             "slide": {
@@ -6773,9 +6787,9 @@
           {
             "kind": "wrap",
             "lang": "mix",
-            "say": "You played janken in English! You said, I win! and You win! th の 2つの おとも くらべられたね。このあと リコちゃんと じゃんけんで おはなし してみてね。Bye-bye!",
+            "say": "You played rock, paper, scissors in English! You said \"I win!\" and \"You win!\" th の 2つの おとも くらべられたね。このあと リコちゃんと じゃんけんで おはなし してみてね。Bye-bye!",
             "subtitleJa": "えいごで じゃんけん できたね！ I win! と You win! も いえたよ。th の 2つの おとも くらべたね。このあと リコちゃんと おはなし してみてね。バイバイ！",
-            "subtitleEn": "You played janken in English! You said, I win! and You win! Bye-bye!",
+            "subtitleEn": "You played rock, paper, scissors in English! You said \"I win!\" and \"You win!\" Bye-bye!",
             "gesture": "clap",
             "slide": {
               "title": "きょうの まとめ",
@@ -6795,6 +6809,7 @@
     {
       "lessonNo": 75,
       "world": 3,
+      "reviewed": "run9",
       "title": "Bowling Tournament (Review)",
       "titleJa": "まとめ：ボウリング たいかい",
       "school": {
@@ -7039,7 +7054,7 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "My turn! Seven pins. Haru, twenty points! Kiko, seventeen points. Good job, everyone! かった ひとは Twenty points! I win!。そして さいごは みんなで Good job!。かっても まけても、ほめあうのが いちばん だいじ だよ。",
+            "say": "My turn! Seven pins. Haru, twenty points! Kiko, seventeen points. Good job, everyone! かった ひとは Twenty points! I win! そして さいごは みんなで Good job! かっても まけても、ほめあうのが いちばん だいじ だよ。",
             "subtitleJa": "「わたしの ばん！ 7ほん。」「ハル 20てん！ キコ 17てん。みんな よく がんばったね！」さいごは Good job! で ほめあおう。",
             "subtitleEn": "My turn! Seven pins. / Haru, twenty points! Kiko, seventeen points. Good job, everyone! / Twenty points! I win!",
             "gesture": "nod",
@@ -7210,9 +7225,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! ピンが ぜんぶ、10ぽん たおれた！ なんて いう？ Ten pins! Ten points! Or, seven pins?",
+            "say": "Quiz time! ピンが ぜんぶ、10ぽん たおれた！ なんて いう？ Ten pins! Ten points! Or seven pins?",
             "subtitleJa": "クイズ！ ピンが 10ぽん たおれた。なんて いう？「10ぽん！ 10てん！」「7ほん。」",
-            "subtitleEn": "Quiz time! Ten pins! Ten points! Or, seven pins?",
+            "subtitleEn": "Quiz time! Ten pins! Ten points! Or seven pins?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -7264,6 +7279,7 @@
     {
       "lessonNo": 76,
       "world": 3,
+      "reviewed": "run9",
       "title": "What Color Do You Like?",
       "titleJa": "なにいろが すき？",
       "school": {
@@ -7503,7 +7519,7 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "Me too! Blue is cool. What color do you like, Kiko? I like purple. Blue and purple! Nice flag! すきな いろを きく ときは What color do you like?。こたえは I like の あとに いろ。おなじ なら Me too! って いえるよ。",
+            "say": "Me too! Blue is cool. What color do you like, Kiko? I like purple. Blue and purple! Nice flag! すきな いろを きく ときは What color do you like? こたえは I like の あとに いろ。おなじ なら Me too! って いえるよ。",
             "subtitleJa": "「わたしも！ あおは かっこいい。キコは？」「むらさきが すき。」「すてきな はた！」こたえは I like ＋ いろ。おなじ なら Me too!",
             "subtitleEn": "Me too! Blue is cool. What color do you like, Kiko? / I like purple. / Blue and purple! Nice flag!",
             "gesture": "nod",
@@ -7669,9 +7685,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! ともだちに すきな いろを ききたい。なんて いう？ What color do you like? Or, I like blue?",
+            "say": "Quiz time! ともだちに すきな いろを ききたい。なんて いう？ What color do you like? Or I like blue?",
             "subtitleJa": "クイズ！ すきな いろを きく ときは どっち？「なにいろが すき？」「あおが すき。」",
-            "subtitleEn": "Quiz time! What color do you like? Or, I like blue?",
+            "subtitleEn": "Quiz time! What color do you like? Or I like blue?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -7686,9 +7702,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "What color do you like! Perfect! I like blue. は こたえる ときの ことば だね。",
-            "subtitleJa": "こたえは What color do you like?！ I like blue. は こたえる ときに つかうよ。",
-            "subtitleEn": "What color do you like! Perfect!",
+            "say": "What color do you like? Perfect! I like blue. は こたえる ときの ことば だね。",
+            "subtitleJa": "こたえは What color do you like? I like blue. は こたえる ときに つかうよ。",
+            "subtitleEn": "What color do you like? Perfect!",
             "gesture": "clap",
             "slide": {
               "title": "こたえ",
@@ -7723,6 +7739,7 @@
     {
       "lessonNo": 77,
       "world": 3,
+      "reviewed": "run9",
       "title": "Do You Like Red?",
       "titleJa": "あかは すき？",
       "school": {
@@ -7883,9 +7900,9 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Ask, do you like red? Answer, yes, I do. Or, no, I don't. ワールド1では くだもので やったね。きょうは いろで やってみよう。",
+            "say": "Today's goal. Ask, do you like red? Answer, yes, I do. Or no, I don't. ワールド1では くだもので やったね。きょうは いろで やってみよう。",
             "subtitleJa": "きょうの ゴール：Do you like red? と きいて、Yes, I do. か No, I don't. で こたえる。",
-            "subtitleEn": "Today's goal. Ask, do you like red? Answer, yes, I do. Or, no, I don't.",
+            "subtitleEn": "Today's goal. Ask, do you like red? Answer, yes, I do. Or no, I don't.",
             "gesture": "point",
             "slide": {
               "title": "きょうの ゴール",
@@ -7964,8 +7981,8 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "Thank you! Do you like red, Haru? Yes, I do. Red is my color! すきなら Yes, I do.、すきじゃ ないなら No, I don't.。そのあとに I like yellow. みたいに すきな いろを たすと、もっと やさしく きこえるよ。",
-            "subtitleJa": "「ありがとう！ ハルは あかが すき？」「うん、すき。あかは ぼくの いろ！」すきなら Yes, I do.、ちがうなら No, I don't. ＋ すきな いろ。",
+            "say": "Thank you! Do you like red, Haru? Yes, I do. Red is my color! すきなら Yes, I do. すきじゃ ないなら No, I don't. そのあとに I like yellow. みたいに すきな いろを たすと、もっと やさしく きこえるよ。",
+            "subtitleJa": "「ありがとう！ ハルは あかが すき？」「うん、すき。あかは ぼくの いろ！」すきなら Yes, I do. ちがうなら No, I don't. ＋ すきな いろ。",
             "subtitleEn": "Thank you! Do you like red, Haru? / Yes, I do. Red is my color!",
             "gesture": "nod",
             "slide": {
@@ -8034,9 +8051,9 @@
           {
             "kind": "tpr",
             "lang": "mix",
-            "say": "Now, yes or no with your body. Make a big circle. あたまの うえで おおきな まる、これが Yes。Cross your arms. うでで バツ、これが No。",
+            "say": "Now, show yes or no with your body. Make a big circle. あたまの うえで おおきな まる、これが Yes。Cross your arms. うでで バツ、これが No。",
             "subtitleJa": "からだで イエスと ノー。おおきな まるは Yes、うでで バツは No。",
-            "subtitleEn": "Now, yes or no with your body. Make a big circle. Cross your arms.",
+            "subtitleEn": "Now, show yes or no with your body. Make a big circle. Cross your arms.",
             "gesture": "mime",
             "slide": {
               "title": "からだで やってみよう",
@@ -8133,9 +8150,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! キコちゃんは きいろが すき。あかは すきじゃ ない。Do you like red, Kiko? なんて こたえる？ Yes, I do. Or, no, I don't?",
+            "say": "Quiz time! キコちゃんは きいろが すき。あかは すきじゃ ない。Do you like red, Kiko? なんて こたえる？ Yes, I do. Or no, I don't?",
             "subtitleJa": "クイズ！ キコちゃんは あかが すきじゃ ない。Do you like red? に なんて こたえる？",
-            "subtitleEn": "Quiz time! Do you like red, Kiko? Yes, I do. Or, no, I don't?",
+            "subtitleEn": "Quiz time! Do you like red, Kiko? Yes, I do. Or no, I don't?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -8151,7 +8168,7 @@
             "kind": "check",
             "lang": "mix",
             "say": "No, I don't! You're right! そして I like yellow. も いえたら かんぺき！",
-            "subtitleJa": "こたえは No, I don't.！ せいかい！ I like yellow. も つけたら かんぺき。",
+            "subtitleJa": "こたえは No, I don't. せいかい！ I like yellow. も つけたら かんぺき。",
             "subtitleEn": "No, I don't! You're right!",
             "gesture": "clap",
             "slide": {
@@ -8187,6 +8204,7 @@
     {
       "lessonNo": 78,
       "world": 3,
+      "reviewed": "run9",
       "title": "Mixing Colors",
       "titleJa": "いろを まぜよう",
       "school": {
@@ -8331,9 +8349,9 @@
           {
             "kind": "greet",
             "lang": "mix",
-            "say": "Hello, little scientists! Today is an experiment day! きょうは ずこうの じかんに、いろまぜ じっけん！ いろと いろを まぜると、なにが おきるかな？",
+            "say": "Hello, little scientists! Today is experiment day! きょうは ずこうの じかんに、いろまぜ じっけん！ いろと いろを まぜると、なにが おきるかな？",
             "subtitleJa": "こんにちは、ちいさな かがくしゃさん！ きょうは いろまぜ じっけん。いろを まぜると なにが おきるかな？",
-            "subtitleEn": "Hello, little scientists! Today is an experiment day!",
+            "subtitleEn": "Hello, little scientists! Today is experiment day!",
             "gesture": "wave",
             "slide": {
               "title": "いろを まぜよう",
@@ -8410,7 +8428,7 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "Let's start! Let's mix red and yellow. What color is it? It's orange! Let's mix blue and yellow. Wow! It's green! あかと きいろで オレンジ、あおと きいろで みどり。まほう みたい！",
+            "say": "Here we go! Let's mix red and yellow. What color is it? It's orange! Let's mix blue and yellow. Wow! It's green! あかと きいろで オレンジ、あおと きいろで みどり。まほう みたい！",
             "subtitleJa": "「あかと きいろを まぜよう。なにいろ？」「オレンジいろだ！」「あおと きいろを まぜよう。」「わあ！ みどりだ！」",
             "subtitleEn": "Let's mix red and yellow. What color is it? / It's orange! / Let's mix blue and yellow. / Wow! It's green!",
             "gesture": "open_hands",
@@ -8429,7 +8447,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "Red and white make pink! ビリモも みつけたね。まぜる ときは Let's mix、できた いろは It's orange! みたいに It's の あとに いろ。Red and yellow make orange. は「あかと きいろで オレンジに なる」って いみだよ。",
-            "subtitleJa": "「あかと しろで ピンク！」まぜる ときは Let's mix ～.、できた いろは It's ～.。Red and yellow make orange. は「あかと きいろで オレンジ」。",
+            "subtitleJa": "「あかと しろで ピンク！」まぜる ときは Let's mix ～. できた いろは It's ～. Red and yellow make orange. は「あかと きいろで オレンジ」。",
             "subtitleEn": "Red and white make pink! / Let's mix ～. / It's orange! / Red and yellow make orange.",
             "gesture": "nod",
             "slide": {
@@ -8598,9 +8616,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! Blue and yellow. あおと きいろを まぜると、なにいろ？ It's green! Or, it's orange?",
+            "say": "Quiz time! Blue and yellow. あおと きいろを まぜると、なにいろ？ It's green! Or it's orange?",
             "subtitleJa": "クイズ！ あおと きいろを まぜると なにいろ？ みどり？ オレンジ？",
-            "subtitleEn": "Quiz time! Blue and yellow. It's green! Or, it's orange?",
+            "subtitleEn": "Quiz time! Blue and yellow. It's green! Or it's orange?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -8652,6 +8670,7 @@
     {
       "lessonNo": 79,
       "world": 3,
+      "reviewed": "run9",
       "title": "Rainbow Colors",
       "titleJa": "にじの いろ",
       "school": {
@@ -8897,8 +8916,8 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "What color do you like, Riko? I like purple! I like all the colors! いろの かずを きく ときは How many colors?。こたえは Seven colors!。Look! は「みて！」。なにかを みつけて、ともだちに おしえたい ときに つかってね。",
-            "subtitleJa": "「リコは なにいろが すき？」「むらさき！」「ぼくは ぜんぶ すき！」How many colors? ― Seven colors!。Look! は「みて！」。",
+            "say": "What color do you like, Riko? I like purple! I like all the colors! いろの かずを きく ときは How many colors? こたえは Seven colors! Look! は「みて！」。なにかを みつけて、ともだちに おしえたい ときに つかってね。",
+            "subtitleJa": "「リコは なにいろが すき？」「むらさき！」「ぼくは ぜんぶ すき！」How many colors? ― Seven colors! Look! は「みて！」。",
             "subtitleEn": "What color do you like, Riko? / I like purple! / I like all the colors!",
             "gesture": "nod",
             "slide": {
@@ -9068,9 +9087,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! にじを みて、いろの かずを ききたい。なんて いう？ How many colors? Or, look! A rainbow?",
+            "say": "Quiz time! にじを みて、いろの かずを ききたい。なんて いう？ How many colors? それとも Look! A rainbow!",
             "subtitleJa": "クイズ！ いろの かずを きく ときは どっち？「いろは いくつ？」「みて！ にじ！」",
-            "subtitleEn": "Quiz time! How many colors? Or, look! A rainbow?",
+            "subtitleEn": "Quiz time! How many colors? / Look! A rainbow!",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -9085,9 +9104,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "How many colors! Brilliant! そして こたえは Seven colors! だね。",
-            "subtitleJa": "こたえは How many colors?！ すばらしい！ こたえは Seven colors! だね。",
-            "subtitleEn": "How many colors! Brilliant! Seven colors!",
+            "say": "How many colors? Perfect! そして こたえは Seven colors! だね。",
+            "subtitleJa": "こたえは How many colors? すばらしい！ こたえは Seven colors! だね。",
+            "subtitleEn": "How many colors? Perfect! Seven colors!",
             "gesture": "clap",
             "slide": {
               "title": "こたえ",
@@ -9122,6 +9141,7 @@
     {
       "lessonNo": 80,
       "world": 3,
+      "reviewed": "run9",
       "title": "T-shirt Shop (Review)",
       "titleJa": "まとめ：Tシャツづくり",
       "school": {
@@ -9350,8 +9370,8 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "A pink T-shirt with a heart, please! キコちゃんも ちゅうもん したね。ほしい ものを たのむ ときは、ものの あとに please。わたす ときは Here you are.。もらったら Thank you. を わすれずに。",
-            "subtitleJa": "「ハートの ついた ピンクの Tシャツを ください！」たのむ ときは ～, please.、わたす ときは Here you are.、もらったら Thank you.。",
+            "say": "A pink T-shirt with a heart, please! キコちゃんも ちゅうもん したね。ほしい ものを たのむ ときは、ものの あとに please。わたす ときは Here you are. もらったら Thank you. を わすれずに。",
+            "subtitleJa": "「ハートの ついた ピンクの Tシャツを ください！」たのむ ときは ～, please. わたす ときは Here you are. もらったら Thank you.",
             "subtitleEn": "A pink T-shirt with a heart, please! / ～, please. / Here you are.",
             "gesture": "nod",
             "slide": {
@@ -9523,9 +9543,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! おみせの ひとが Tシャツを わたす とき、なんて いう？ Here you are. Or, a blue T-shirt, please?",
+            "say": "Quiz time! おみせの ひとが Tシャツを わたす とき、なんて いう？ Here you are. Or a blue T-shirt, please?",
             "subtitleJa": "クイズ！ Tシャツを わたす とき なんて いう？「はい、どうぞ。」「あおい Tシャツを ください。」",
-            "subtitleEn": "Quiz time! Here you are. Or, a blue T-shirt, please?",
+            "subtitleEn": "Quiz time! Here you are. Or a blue T-shirt, please?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -9541,7 +9561,7 @@
             "kind": "check",
             "lang": "mix",
             "say": "Here you are! Great thinking! A blue T-shirt, please. は おきゃくさんが たのむ ときの ことば だね。",
-            "subtitleJa": "こたえは Here you are.！ よく かんがえたね。A blue T-shirt, please. は たのむ ときの ことば。",
+            "subtitleJa": "こたえは Here you are. よく かんがえたね。A blue T-shirt, please. は たのむ ときの ことば。",
             "subtitleEn": "Here you are! Great thinking!",
             "gesture": "clap",
             "slide": {
@@ -9578,6 +9598,7 @@
     {
       "lessonNo": 81,
       "world": 3,
+      "reviewed": "run9",
       "title": "What Sport Do You Like?",
       "titleJa": "なんの スポーツが すき？",
       "school": {
@@ -9856,7 +9877,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "Here's the point. きく ときは What sport do you like? こたえる ときは I like の あとに スポーツの なまえ。I like basketball. I like swimming. Easy!",
-            "subtitleJa": "ポイント：きく ときは What sport do you like?、こたえる ときは I like ～. で スポーツの なまえを いうよ。",
+            "subtitleJa": "ポイント：きく ときは What sport do you like? こたえる ときは I like ～. で スポーツの なまえを いうよ。",
             "subtitleEn": "What sport do you like? / I like basketball. I like swimming. Easy!",
             "gesture": "nod",
             "slide": {
@@ -10024,9 +10045,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz time! ハルくんは、リコちゃんの すきな スポーツを ききたい。なんて いう？ What sport do you like? それとも I like swimming?",
+            "say": "Quiz time! ハルくんは、リコちゃんの すきな スポーツを ききたい。なんて いう？ What sport do you like? それとも I like swimming!",
             "subtitleJa": "クイズ！ すきな スポーツを きく ときは どっち？「なんの スポーツが すき？」それとも「すいえいが すき！」？",
-            "subtitleEn": "Quiz time! What sport do you like? or I like swimming?",
+            "subtitleEn": "Quiz time! What sport do you like? / I like swimming!",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -10077,6 +10098,7 @@
     {
       "lessonNo": 82,
       "world": 3,
+      "reviewed": "run9",
       "title": "What Food Do You Like?",
       "titleJa": "なんの たべものが すき？",
       "school": {
@@ -10556,9 +10578,9 @@
           {
             "kind": "wrap",
             "lang": "mix",
-            "say": "Yummy job today! What food do you like? で きいて、I like sushi. のように こたえられたね。neck と rock の ck も ばっちり。このあと リコちゃんと おはなし してみてね。Bye-bye!",
+            "say": "Great job today! What food do you like? で きいて、I like sushi. のように こたえられたね。neck と rock の ck も ばっちり。このあと リコちゃんと おはなし してみてね。Bye-bye!",
             "subtitleJa": "きょうは すきな たべものを きいて こたえられたね。ck の ことばも ばっちり。このあと リコちゃんと おはなし してみてね。バイバイ！",
-            "subtitleEn": "Yummy job today! What food do you like? I like sushi. Neck, rock! Talk with Riko next. Bye-bye!",
+            "subtitleEn": "Great job today! What food do you like? I like sushi. Neck, rock! Talk with Riko next. Bye-bye!",
             "gesture": "clap",
             "slide": {
               "title": "きょうの まとめ",
@@ -10577,6 +10599,7 @@
     {
       "lessonNo": 83,
       "world": 3,
+      "reviewed": "run9",
       "title": "I Don't Like Onions!",
       "titleJa": "たまねぎは すきじゃない！",
       "school": {
@@ -11024,7 +11047,7 @@
             "lang": "mix",
             "say": "Quiz! たまねぎが にがてな キコちゃん。なんて いったかな？ I don't like onions. それとも Really? I like onions!",
             "subtitleJa": "クイズ！ キコちゃんが いったのは どっち？「たまねぎは すきじゃない」それとも「わたしは たまねぎ すき！」？",
-            "subtitleEn": "Quiz! I don't like onions. or Really? I like onions!",
+            "subtitleEn": "Quiz! I don't like onions. / Really? I like onions!",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -11075,6 +11098,7 @@
     {
       "lessonNo": 84,
       "world": 3,
+      "reviewed": "run9",
       "title": "I Play Tennis.",
       "titleJa": "テニスを するよ",
       "school": {
@@ -11333,7 +11357,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "Here's the point. Do you play と きかれたら、する ときは Yes, I do. しない ときは No, I don't. くびを たてに ふって Yes、よこに ふって No だよ。",
-            "subtitleJa": "ポイント：Do you play ～? と きかれたら、する ときは Yes, I do.、しない ときは No, I don't.。",
+            "subtitleJa": "ポイント：Do you play ～? と きかれたら、する ときは Yes, I do. しない ときは No, I don't.",
             "subtitleEn": "Here's the point. Yes, I do. / No, I don't.",
             "gesture": "nod",
             "slide": {
@@ -11501,9 +11525,9 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! Do you play tennis, Haru? ハルくんの こたえは どっちだった？ Yes, I do. それとも No, I don't.?",
+            "say": "Quiz! Do you play tennis, Haru? ハルくんの こたえは どっちだった？ Yes, I do. それとも No, I don't.",
             "subtitleJa": "クイズ！ ハルくんは テニスを する？ こたえは「うん、する」と「ううん、しない」の どっち？",
-            "subtitleEn": "Quiz! Do you play tennis, Haru? Yes, I do. or No, I don't.?",
+            "subtitleEn": "Quiz! Do you play tennis, Haru? Yes, I do. / No, I don't.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -11554,6 +11578,7 @@
     {
       "lessonNo": 85,
       "world": 3,
+      "reviewed": "run9",
       "title": "Class Survey (Review)",
       "titleJa": "まとめ：クラスの すきなもの しらべ",
       "school": {
@@ -11839,7 +11864,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "Here's the point. and を つかうと、すきな ものを ふたつ いっぺんに いえるよ。I like soccer and pizza. すきじゃない ものは、I don't like.",
-            "subtitleJa": "ポイント：and で ふたつ つなげて いえる。すきじゃない ものは I don't like ～.。",
+            "subtitleJa": "ポイント：and で ふたつ つなげて いえる。すきじゃない ものは I don't like ～.",
             "subtitleEn": "Here's the point. I like soccer and pizza. I don't like ～.",
             "gesture": "nod",
             "slide": {
@@ -12013,7 +12038,7 @@
             "lang": "mix",
             "say": "Quiz! すきな たべものを きく ときは どっち？ What sport do you like? それとも What food do you like?",
             "subtitleJa": "クイズ！ すきな たべものを きく ときは どっち？",
-            "subtitleEn": "Quiz! What sport do you like? or What food do you like?",
+            "subtitleEn": "Quiz! What sport do you like? / What food do you like?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -12066,6 +12091,7 @@
     {
       "lessonNo": 86,
       "world": 3,
+      "reviewed": "run9",
       "title": "My Profile Card",
       "titleJa": "じこしょうかいカード",
       "school": {
@@ -12564,6 +12590,7 @@
     {
       "lessonNo": 87,
       "world": 3,
+      "reviewed": "run9",
       "title": "Feelings Dice",
       "titleJa": "きもち サイコロ",
       "school": {
@@ -12694,7 +12721,7 @@
         ],
         "aiTask": {
           "goalJa": "サイコロの かずを いって、その きもちを I'm ～. で いおう。あいてにも How are you? と きこう",
-          "starterEn": "Let's play! One is happy, three is sleepy, six is hungry. Roll the dice! How many?",
+          "starterEn": "Let's play! One is happy. Three is sleepy. Six is hungry. Roll the dice! How many?",
           "targetExpressions": [
             "I'm ～.",
             "How are you?"
@@ -12841,7 +12868,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "Here's the point. かずを きく ときは How many? きもちを きく ときは How are you? こたえは I'm と きもちの ことば。I'm happy. I'm sleepy.",
-            "subtitleJa": "ポイント：かずは How many?、きもちは How are you?。こたえは I'm ～.。",
+            "subtitleJa": "ポイント：かずは How many? きもちは How are you? こたえは I'm ～.",
             "subtitleEn": "Here's the point. How many? How are you? I'm happy. I'm sleepy.",
             "gesture": "nod",
             "slide": {
@@ -13013,7 +13040,7 @@
             "lang": "mix",
             "say": "Your turn! いまの あなたの きもちは？ I'm の あとに、happy や sleepy や hungry を いれてね。",
             "subtitleJa": "あなたの ばん！ いまの きもちを I'm ～. で いってね。",
-            "subtitleEn": "Your turn! I'm ～. happy, sleepy, hungry",
+            "subtitleEn": "Your turn! I'm ～. Happy, sleepy or hungry?",
             "gesture": "open_hands",
             "slide": {
               "title": "いってみよう",
@@ -13029,7 +13056,7 @@
             "lang": "mix",
             "say": "Quiz! サイコロで 6が でたよ。ビリモの ルールでは どっち？ Six! I'm hungry! それとも Three! I'm sleepy.",
             "subtitleJa": "クイズ！ 6が でたら なんて いう？「6！ おなかが すいた！」それとも「3！ ねむい」？",
-            "subtitleEn": "Quiz! Six! I'm hungry! or Three! I'm sleepy.",
+            "subtitleEn": "Quiz! Six! I'm hungry! / Three! I'm sleepy.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -13081,6 +13108,7 @@
     {
       "lessonNo": 88,
       "world": 3,
+      "reviewed": "run9",
       "title": "Favorites Quiz",
       "titleJa": "すきなもの クイズ",
       "school": {
@@ -13122,7 +13150,7 @@
           "emoji": "🎉"
         },
         {
-          "en": "Give a thumbs up.",
+          "en": "Give a thumbs-up.",
           "ja": "グッドして。",
           "action": "おやゆびを たてて グッド",
           "emoji": "👍"
@@ -13427,15 +13455,15 @@
           {
             "kind": "tpr",
             "lang": "mix",
-            "say": "Say bingo! りょうてを あげて、Bingo! Give a thumbs up. おやゆびを たてて、グッド！",
-            "subtitleJa": "Say bingo!（ビンゴって いって）。Give a thumbs up.（グッドして）。",
-            "subtitleEn": "Say bingo! Bingo! Give a thumbs up.",
+            "say": "Say bingo! りょうてを あげて、Bingo! Give a thumbs-up. おやゆびを たてて、グッド！",
+            "subtitleJa": "Say bingo!（ビンゴって いって）。Give a thumbs-up.（グッドして）。",
+            "subtitleEn": "Say bingo! Bingo! Give a thumbs-up.",
             "gesture": "mime",
             "slide": {
               "title": "からだで やってみよう",
               "items": [
                 "Say bingo!",
-                "Give a thumbs up."
+                "Give a thumbs-up."
               ],
               "emoji": "🎉"
             },
@@ -13444,9 +13472,9 @@
           {
             "kind": "tpr",
             "lang": "mix",
-            "say": "Turn to your friend. となりの ほうを むいて にっこり。Speed challenge! Think! Say bingo! Turn to your friend! Give a thumbs up!",
+            "say": "Turn to your friend. となりの ほうを むいて にっこり。Speed challenge! Think! Say bingo! Turn to your friend! Give a thumbs-up!",
             "subtitleJa": "Turn to your friend.（ともだちの ほうを むいて）。スピード チャレンジ！ かんがえて！ ビンゴ！ むいて！ グッド！",
-            "subtitleEn": "Turn to your friend. Speed challenge! Think! Say bingo! Turn to your friend! Give a thumbs up!",
+            "subtitleEn": "Turn to your friend. Speed challenge! Think! Say bingo! Turn to your friend! Give a thumbs-up!",
             "gesture": "mime",
             "slide": {
               "title": "スピード チャレンジ",
@@ -13454,7 +13482,7 @@
                 "Think.",
                 "Say bingo!",
                 "Turn to your friend.",
-                "Give a thumbs up."
+                "Give a thumbs-up."
               ],
               "emoji": "⚡"
             },
@@ -13529,7 +13557,7 @@
             "lang": "mix",
             "say": "Quiz! わたしが Yes, I do. と こたえた しつもんは どっち？ Do you like soccer? それとも Do you like tennis?",
             "subtitleJa": "クイズ！ エマ先生が「うん、すき」と こたえたのは どっちの しつもん？",
-            "subtitleEn": "Quiz! Do you like soccer? or Do you like tennis?",
+            "subtitleEn": "Quiz! Do you like soccer? / Do you like tennis?",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -13582,6 +13610,7 @@
     {
       "lessonNo": 89,
       "world": 3,
+      "reviewed": "run9",
       "title": "Birimo's World Trip",
       "titleJa": "ビリモの せかい りょこう",
       "school": {
@@ -14011,7 +14040,7 @@
             "lang": "mix",
             "say": "Quiz! りょこうの おわりに いう ことばは どっち？ Bonjour! How are you? それとも Thank you. See you!",
             "subtitleJa": "クイズ！ りょこうの おわりに いうのは「ボンジュール！ げんき？」と「ありがとう。またね！」の どっち？",
-            "subtitleEn": "Quiz! Bonjour! How are you? or Thank you. See you!",
+            "subtitleEn": "Quiz! Bonjour! How are you? / Thank you. See you!",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -14063,6 +14092,7 @@
     {
       "lessonNo": 90,
       "world": 3,
+      "reviewed": "run9",
       "title": "World 3 Grand Review",
       "titleJa": "ワールド3 そうふくしゅう",
       "school": {
@@ -14172,7 +14202,7 @@
       "teacherScript": "Congratulations! ワールド3 さいごの レッスン！まずは スピード TPR。どんどん はやく なるよ。そのあと すきなもの はっぴょうかいで、ワールド3の ことばを ぜんぶ つかおう！あしたは ボスせんだよ。",
       "conversation": {
         "scene": "The favorite things presentation at the World Port",
-        "sceneJa": "せかいの港の すきなもの はっぴょうかい",
+        "sceneJa": "せかいの みなとの すきなもの はっぴょうかい",
         "lines": [
           {
             "speaker": "Ms. Emma",
@@ -14508,7 +14538,7 @@
             "kind": "repeat",
             "lang": "mix",
             "say": "Your turn! あなたの はっぴょう だよ。I'm... で なまえ、ニックネームでも いいよ。I like... と I don't like... も いってみよう。",
-            "subtitleJa": "あなたの ばん！ I'm ～.（ニックネームでも いいよ）、I like ～.、I don't like ～. で はっぴょう しよう。",
+            "subtitleJa": "あなたの ばん！ I'm ～.（ニックネームでも いいよ）、I like ～. I don't like ～. で はっぴょう しよう。",
             "subtitleEn": "Your turn! I'm ～. I like ～. I don't like ～.",
             "gesture": "open_hands",
             "slide": {
@@ -14526,7 +14556,7 @@
             "lang": "mix",
             "say": "Final quiz! にがてな ものを いう ときは どっち？ I like? それとも I don't like?",
             "subtitleJa": "さいごの クイズ！ すきじゃない ものを いう ときは I like ～. と I don't like ～. の どっち？",
-            "subtitleEn": "Final quiz! I like? or I don't like?",
+            "subtitleEn": "Final quiz! I like ～. / I don't like ～.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
@@ -14542,8 +14572,8 @@
             "kind": "check",
             "lang": "mix",
             "say": "The answer is, I don't like! don't が はいると「すきじゃない」。You're a World 3 champion!",
-            "subtitleJa": "こたえは I don't like ～.！ don't で「すきじゃない」。ワールド3 チャンピオンだね！",
-            "subtitleEn": "The answer is, I don't like! You're a World 3 champion!",
+            "subtitleJa": "こたえは I don't like ～. don't で「すきじゃない」。ワールド3 チャンピオンだね！",
+            "subtitleEn": "The answer is, I don't like ～. You're a World 3 champion!",
             "gesture": "clap",
             "slide": {
               "title": "こたえ",

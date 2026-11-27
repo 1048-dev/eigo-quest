@@ -72,3 +72,33 @@
 - npx tsc --noEmit: OK
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
+
+## REVIEW: ワールド3・4（レッスン 61〜120）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）を 60 レッスン ぜんぶ 見なおした
+- さきに 機械的な なおし（クイズ字幕・2重の 文末記号）と ブロックの きめごと（L62・L87・L88）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、1つの グループだけが なおした 形（「? Or, X?」の コンマ、イギリスふうの ほめことば）を ブロック全体で おなじ きめかたに そろえた
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、before が いまの 値と あう ときだけ あてた（はずれ 0）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W03-04.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 61 --to 120`）: **まえ error 0 / warn 23 / info 9 → あと error 0 / warn 0 / info 9**（のこりの info は Let's の かず 3 レッスンと、よみきかせの「Very, very」6 か所。どちらも ガイドで OK）
+- なおした 欄 **294**（機械的な なおし 115・ブロックの きめごと 34・レビュアー 104・あとの そろえ 46。重なり あり）、なおした レッスン **53 / 60**
+- 学習項目 ID が かわった もの 2つ: L62「I'm Kiko. And you?」→「I'm Kiko. How about you?」、L88「Give a thumbs up.」→「Give a thumbs-up.」（この 2項目だけ 記録が あたらしく なる）
+
+### before → after の 例
+1. L62 表現・会話（A・C＋lint）: 「I'm Kiko. And you?」→「I'm Kiko. How about you?」（教科書の「And you?」を こどもが ほんとうに いう 形に。文型・スライド・字幕・teacherScript・まとめも あわせた）
+2. L74 あいさつ（objective・A・B）: 「Are you strong at janken?」→「Are you good at rock, paper, scissors?」（「とくい」の 直訳を なおし、レッスンで ならう 英語の よびかたに。さいごの ひとことも おなじに）
+3. L97 日本語の 説明（objective・B）: 「かどが 4つ、ぜんぶ おなじ ながさ だよ」→「かどが 4つ、へんの ながさも ぜんぶ おなじ だよ」（square の 説明で「かど」と「へん」が まちがって いた）
+
+### きめた こと
+- 日本語字幕の 2択「Thank you.？ What do you want?？」も 英語字幕と おなじ「A / B」に。話しことばの 2択は「A? Or B?」（Or の あとに コンマなし）
+- クイズの こたえで 質問を くりかえす ときは「!」ではなく「?」（「Are you a pig!」は からかって いる ように きこえる）
+- 「Brilliant!」「Lovely job!」は イギリスふうなので、W01-02 の L59 と おなじく アメリカの ほめことばに（ならびで おなじに ならない ように えらんだ）
+- のこした こと: L116 の「hotdog」（アメリカの ふつうの 書きかたは hot dog。合成語の フォニックスの ことばで ID なので のこした）。1人だけの 指摘（L99「Hold the card with two hands.」など）は のこした。ワールド5 いこうの「And you?」「thumbs up」は それぞれの ブロックで なおす
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
