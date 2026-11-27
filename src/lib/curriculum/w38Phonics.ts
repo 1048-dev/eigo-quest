@@ -77,7 +77,7 @@ const PHRASALS: Record<string, { sentence: string; answer: string; ja: string; w
   "let down": { sentence: "I promised to help, and I don't want to let my team ＿＿.", answer: "down", ja: "がっかり させる", wrong: ["up", "in"], sound: "let DOWN（down を つよく）" },
   "get over": { sentence: "It took her a few days to get ＿＿ losing the game.", answer: "over", ja: "（かなしい ことから）たちなおる", wrong: ["up", "off"], sound: "get‿over（ゲトウヴァー。over を つよく）" },
   "open up": { sentence: "After a while, Kiko opened ＿＿ and told us how she felt.", answer: "up", ja: "心を ひらいて 話す", wrong: ["down", "off"], sound: "open‿up（オウプナップ。up を つよく）" },
-  "count on": { sentence: "You can count ＿＿ me. I'll always help you.", answer: "on", ja: "たよる・あてに する", wrong: ["up", "off"], sound: "count‿on（カウントン。on を つよく）" },
+  "count on": { sentence: "You can count ＿＿ me. I'll always help you.", answer: "on", ja: "たよる・あてに する", wrong: ["up", "off"], sound: "count‿on（カウントン。count を つよく）" },
   "stand up for": { sentence: "It takes courage to stand ＿＿ a friend.", answer: "up for", ja: "（友だちの）みかたを する", wrong: ["down on", "out of"], sound: "stand‿up for（スタンダップ フォー。up を つよく）" },
   "put up with": { sentence: "I can't put ＿＿ this noise any longer!", answer: "up with", ja: "がまん する", wrong: ["down on", "out for"], sound: "put‿up with（プタップ ウィズ。up を つよく）" },
   "work out": { sentence: "Don't worry. I'm sure everything will work ＿＿.", answer: "out", ja: "うまく いく", wrong: ["up", "down"], sound: "work‿out（ワーカウト。out を つよく）" },

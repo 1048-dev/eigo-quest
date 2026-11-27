@@ -6,6 +6,7 @@
     {
       "lessonNo": 1081,
       "world": 37,
+      "reviewed": "run9",
       "title": "The Labyrinth of Tales",
       "titleJa": "おとぎの迷宮",
       "school": {
@@ -29,7 +30,7 @@
         ],
         "testPoints": [
           "Every path in this maze tells a story. で 物語の 迷宮の ようすを つたえ、Who are you? で あいてに たずねられる",
-          "物語の 動詞（whisper ＝ 小さな 声で ささやく。wh は /w/、glimmer ＝ ちらちら かすかに ひかる、tremble ＝ ぶるぶる ふるえる。-le は「ブル」の ような 音）"
+          "物語の 動詞（whisper ＝ 小さな 声で ささやく。wh は /w/、glimmer ＝ ちらちら かすかに ひかる、tremble ＝ ぶるぶる ふるえる。-ble は「ブル」の ような 音）"
         ]
       },
       "tpr": [
@@ -75,7 +76,7 @@
           "glimmer",
           "tremble"
         ],
-        "tipJa": "物語では「どう やって」が わかる 動詞を つかうよ。whisper（小さな 声で ささやく。wh は /w/ の 音）、glimmer（ちらちら かすかに ひかる。mm と 2 つ）、tremble（こわくて・さむくて ぶるぶる ふるえる。-le は「ブル」の ような 音）。"
+        "tipJa": "物語では「どう やって」が わかる 動詞を つかうよ。whisper（小さな 声で ささやく。wh は /w/ の 音）、glimmer（ちらちら かすかに ひかる。mm と 2 つ）、tremble（こわくて・さむくて ぶるぶる ふるえる。-ble は「ブル」の ような 音）。"
       },
       "vocab": [
         {
@@ -100,7 +101,7 @@
           "emoji": "🏮"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Thank you for listening. Are there any questions? Dr. Vale and Lumi wave goodbye at the door, and Ms. Emma leads the four of us along a path of glowing pages. Soon, we step into a huge maze. The walls are tall bookshelves and hedges with paper leaves. Warm lanterns glimmer everywhere, and signposts show story titles. Then a small gray mouse in a red cape runs up to us. He is carrying a feather pen and a heavy old book. He bows and says, Welcome to the Labyrinth of Tales! I'm Nib, your guide. Every path in this maze tells a story. Say it with me. Every path in this maze tells a story. Great! Nib opens his book. It's the Storybook of the Labyrinth, and its last six pages are completely blank. Let's read the note on the first page. \"Welcome, travelers! This is the Labyrinth of Tales. Its walls are made of bookshelves and hedges, and every path leads to a room where a story lives. In the middle of the maze is the Central Hall, where the Storytelling Festival will be held. This Storybook is very old, but it isn't finished yet. Its last six pages are still blank. They are waiting for friends who can learn the six secrets of stories. Each time you learn a secret, one blank page will fill with shining words. When all six pages are full, the Storybook will be complete. Please stay together, follow the lanterns, and listen carefully. And then what happened? That part is up to you!\" Where will the Storytelling Festival be held? In the Central Hall. How many pages are still blank? Six. Far away, an old voice is telling a story. Nib says, That's Granny Willa. She sits by the fire in the Hearth Room. You'll meet her one day. Then he asks his favorite question, And then what happened? That's his catchphrase! Now, phonics. Strong verbs show how something happens. Whisper means to speak very quietly, using your breath. Whisper begins with w-h, but it sounds like w. Glimmer means to shine with a weak light that comes and goes. Tremble means to shake a little because you are scared, cold or excited. Tremble ends in l-e, and it sounds like bull. Next time, we'll visit the first room and meet a very clever rabbit!",
+      "teacherScript": "Hello, everyone! Last time, we said, Thank you for listening. Are there any questions? Dr. Vale and Lumi wave goodbye at the door, and I lead everyone along a path of glowing pages. Soon, we step into a huge maze. The walls are tall bookshelves and hedges with paper leaves. Warm lanterns glimmer everywhere, and signposts show story titles. Then a small gray mouse in a red cape runs up to us. He is carrying a feather pen and a heavy old book. He bows and says, Welcome to the Labyrinth of Tales! I'm Nib, your guide. Every path in this maze tells a story. Say it with me. Every path in this maze tells a story. Great! Nib opens his book. It's the Storybook of the Labyrinth, and its last six pages are completely blank. Let's read the note on the first page. \"Welcome, travelers! This is the Labyrinth of Tales. Its walls are made of bookshelves and hedges, and every path leads to a room where a story lives. In the middle of the maze is the Central Hall, where the Storytelling Festival will be held. This Storybook is very old, but it isn't finished yet. Its last six pages are still blank. They are waiting for friends who can learn the six secrets of stories. Each time you learn a secret, one blank page will fill with shining words. When all six pages are full, the Storybook will be complete. Please stay together, follow the lanterns, and listen carefully. And then what happened? That part is up to you!\" Where will the Storytelling Festival be held? In the Central Hall. How many pages are still blank? Six. Far away, an old voice is telling a story. Nib says, That's Granny Willa. She sits by the fire in the Hearth Room. You'll meet her one day. Then he asks his favorite question, And then what happened? That's his catchphrase! Now, phonics. Strong verbs show how something happens. Whisper means to speak very quietly, using your breath. Whisper begins with w-h, but it sounds like w. Glimmer means to shine with a weak light that comes and goes. Tremble means to shake a little because you are scared, cold or excited. Tremble ends in b, l, e, and that part sounds like bull. Next time, we'll visit the first room and meet a very clever rabbit!",
       "conversation": {
         "scene": "Arriving in the Labyrinth of Tales and meeting Nib",
         "sceneJa": "物語の 迷宮に とうちゃくして ネズミの ニブに あう",
@@ -153,7 +154,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが 物語の 迷宮を 案内するよ。Every path in this maze tells a story. を つかって、どの みちに 行きたいか りゆうと いっしょに いおう。ニブが「And then what happened?」と きいたら つづきを 考えて 話そう。ほんとうの なまえや じゅうしょは いわなくて いいよ（ものがたりの なまえで いいよ）。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome to the Labyrinth of Tales! I'm Nib, your guide. Every path here leads to a room with a story. Look at the signposts: The Clever Rabbit, The Moon Room, The Hall of Many Lands. Which path would you like to try first, and why?",
+          "starterEn": "Let's pretend I'm Nib. Welcome to the Labyrinth of Tales! I'm your guide. Every path here leads to a room with a story. Look at the signposts: The Clever Rabbit, The Moon Room, The Hall of Many Lands. Which path would you like to try first, and why?",
           "targetExpressions": [
             "Every path in this maze tells a story.",
             "Who are you? ― I'm Nib, the guide of this maze.",
@@ -269,9 +270,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Look! A little gray mouse in a red cape runs up to us. Haru asks, Who are you? The mouse bows. I'm Nib, the guide of this maze. Every path in this maze tells a story.",
+            "say": "Look! A little gray mouse in a red cape runs up to us. Haru asks, Who are you? The mouse bows and says, I'm Nib, the guide of this maze. Every path in this maze tells a story.",
             "subtitleJa": "見て！ あかい マントの 小さな はいいろの ネズミが はしって きたよ。ハルくんが「きみは だれ？」 ネズミは おじぎを して「ぼくは ニブ。この めいろの あんないがかり。この めいろの どの みちも、ものがたりを かたって いるんだ。」",
-            "subtitleEn": "Look! A little gray mouse in a red cape runs up to us. Haru asks, Who are you? The mouse bows. I'm Nib, the guide of this maze. Every path in this maze tells a story.",
+            "subtitleEn": "Look! A little gray mouse in a red cape runs up to us. Haru asks, Who are you? The mouse bows and says, I'm Nib, the guide of this maze. Every path in this maze tells a story.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -318,9 +319,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Glimmer. A weak light that comes and goes. Two m's! Tremble. Shake a little, because you're cold or scared. It ends in l-e, like bull. Glimmer. Tremble.",
-            "subtitleJa": "glimmer。ちらちら かすかに ひかる こと。m が 2 つ！ tremble。さむくて、または こわくて、ぶるぶる ふるえる こと。さいごの l-e は「ブル」の ような おと。glimmer。tremble。",
-            "subtitleEn": "Glimmer. A weak light that comes and goes. Two m's! Tremble. Shake a little, because you're cold or scared. It ends in l-e, like bull. Glimmer. Tremble.",
+            "say": "Glimmer. A weak light that comes and goes. Two m's! Tremble. Shake a little, because you're cold or scared. The b, l, e at the end sounds like bull. Glimmer. Tremble.",
+            "subtitleJa": "glimmer。ちらちら かすかに ひかる こと。m が 2 つ！ tremble。さむくて、または こわくて、ぶるぶる ふるえる こと。さいごの b-l-e は「ブル」の ような おと。glimmer。tremble。",
+            "subtitleEn": "Glimmer. A weak light that comes and goes. Two m's! Tremble. Shake a little, because you're cold or scared. The b, l, e at the end sounds like bull. Glimmer. Tremble.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -485,6 +486,7 @@
     {
       "lessonNo": 1082,
       "world": 37,
+      "reviewed": "run9",
       "title": "The Clever Rabbit",
       "titleJa": "かしこい ウサギ",
       "school": {
@@ -554,7 +556,7 @@
           "stumble",
           "glance"
         ],
-        "tipJa": "gasp（おどろいて はっと 息を のむ）、stumble（つまずいて よろける。tremble と おなじ -le で「ブル」）、glance（ちらっと 見る。look より ずっと はやい）。ふつうの ことばより ようすが よく わかるね。"
+        "tipJa": "gasp（おどろいて はっと 息を のむ）、stumble（つまずいて よろける。tremble と おなじ -ble で「ブル」）、glance（ちらっと 見る。look より ずっと はやい）。ふつうの ことばより ようすが よく わかるね。"
       },
       "vocab": [
         {
@@ -579,7 +581,7 @@
           "emoji": "🧺"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Every path in this maze tells a story. Today, Ms. Emma and Nib lead us down a path with a signpost that says The Clever Rabbit. At the end, there is a cozy room with a round green door. Inside, the walls are painted with tall grass and a big orange sunset. Nib jumps onto a stool, opens the Storybook and says, Many countries have stories about clever animals. Here is one from the Labyrinth. Listen carefully! It's about a tiny rabbit and a big, hungry tiger. The tiger is much stronger, but the rabbit has something better: a plan. The rabbit tricked the tiger with a smart idea. Say it with me. The rabbit tricked the tiger with a smart idea. Great! Let's read the story page. \"Once upon a time, a little rabbit was hopping home with a basket of carrots. Suddenly, a big tiger stepped onto the path. He was hungry, and he was very grumpy. Give me those carrots, he growled. The rabbit's legs began to tremble, but she thought fast. Oh, these are magic carrots, she said. They only taste sweet if you close your eyes and count to one thousand. The tiger wanted the sweetest carrots in the world, so he closed his eyes. One, two, three... While the tiger was counting, the rabbit hopped quietly home. When the tiger reached one thousand, he opened his eyes. The rabbit was gone! At first, he was angry. Then he started to laugh. What a clever trick! he said. The next day, he knocked on the rabbit's door and asked nicely. So she shared her carrots with him.\" Why did the tiger close his eyes? Because he wanted the carrots to taste sweet. What did the tiger learn? He learned to ask nicely. Haru gasps and says, Count to one thousand? That would take forever! Birimo tries it and gives up at twelve. Nib smiles and asks, And then what happened? Now, phonics. Gasp means to breathe in quickly because you are surprised. Haru gasped when he heard the trick. Stumble means to almost fall while you are walking. Stumble ends in l-e, just like tremble. Glance means to look very quickly. When the tiger opened his eyes, he glanced around, but the rabbit was gone! Next time, we'll find out why the moon seems to change its shape.",
+      "teacherScript": "Hello, everyone! Last time, we said, Every path in this maze tells a story. Today, Nib and I lead everyone down a path with a signpost that says The Clever Rabbit. At the end, there is a cozy room with a round green door. Inside, the walls are painted with tall grass and a big orange sunset. Nib jumps onto a stool, opens the Storybook and says, Many countries have stories about clever animals. Here is one from the Labyrinth. Listen carefully! It's about a tiny rabbit and a big, hungry tiger. The tiger is much stronger, but the rabbit has something better: a plan. The rabbit tricked the tiger with a smart idea. Say it with me. The rabbit tricked the tiger with a smart idea. Great! Let's read the story page. \"Once upon a time, a little rabbit was hopping home with a basket of carrots. Suddenly, a big tiger stepped onto the path. He was hungry, and he was very grumpy. Give me those carrots, he growled. The rabbit's legs began to tremble, but she thought fast. Oh, these are magic carrots, she said. They only taste sweet if you close your eyes and count to one thousand. The tiger wanted the sweetest carrots in the world, so he closed his eyes. One, two, three... While the tiger was counting, the rabbit hopped quietly home. When the tiger reached one thousand, he opened his eyes. The rabbit was gone! At first, he was angry. Then he started to laugh. What a clever trick! he said. The next day, he knocked on the rabbit's door and asked nicely. So she shared her carrots with him.\" Why did the tiger close his eyes? Because he wanted the carrots to taste sweet. What did the tiger learn? He learned to ask nicely. Haru gasps and says, Count to one thousand? That would take forever! Birimo tries it and gives up at twelve. Nib smiles and asks, And then what happened? Now, phonics. Gasp means to breathe in quickly because you are surprised. Haru gasped when he heard the trick. Stumble means to almost fall while you are walking. Stumble ends in l-e, just like tremble. Glance means to look very quickly. When the tiger opened his eyes, he glanced around, but the rabbit was gone! Next time, we'll find out why the moon seems to change its shape.",
       "conversation": {
         "scene": "Talking about the story of the clever rabbit and the grumpy tiger",
         "sceneJa": "かしこい ウサギと きげんの わるい トラの お話に ついて 話す",
@@ -632,7 +634,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが かしこい ウサギの お話に ついて きくよ。The rabbit tricked the tiger with a smart idea. を つかって お話を せつめい しよう。ニブが「Why?」と きいたら I think ～ because ～. で りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Wasn't that a fun story? A tiny rabbit and a big, grumpy tiger! How did the rabbit get home safely? And do you think the rabbit was clever? Why?",
+          "starterEn": "Let's pretend I'm Nib. Wasn't that a fun story? A tiny rabbit and a big, grumpy tiger! How did the rabbit get home safely? And do you think the rabbit was clever? Why?",
           "targetExpressions": [
             "The rabbit tricked the tiger with a smart idea.",
             "Why did the tiger want the basket? ― Because he was hungry and grumpy.",
@@ -779,9 +781,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Gasp. Breathe in fast because you're surprised. Haaa! Gasp. Stumble. You almost fall while you walk. Whoa! It ends in l-e, just like tremble. Stumble.",
+            "say": "Sound time! Gasp. Breathe in fast because you're surprised. Oh! Gasp. Stumble. You almost fall while you walk. Whoa! It ends in l-e, just like tremble. Stumble.",
             "subtitleJa": "おとの じかん！ gasp。おどろいて はっと いきを すう こと。ハッ！ gasp。stumble。あるいて いて つまずいて よろける こと。おっとっと！ tremble と おなじ l-e で おわるよ。stumble。",
-            "subtitleEn": "Sound time! Gasp. Breathe in fast because you're surprised. Haaa! Gasp. Stumble. You almost fall while you walk. Whoa! It ends in l-e, just like tremble. Stumble.",
+            "subtitleEn": "Sound time! Gasp. Breathe in fast because you're surprised. Oh! Gasp. Stumble. You almost fall while you walk. Whoa! It ends in l-e, just like tremble. Stumble.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -927,9 +929,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! The rabbit used her brain, not her legs. You're as clever as that rabbit!",
+            "say": "It's B! The rabbit used her brain, not her legs. You're clever, just like that rabbit!",
             "subtitleJa": "こたえは B！ ウサギは あしじゃ なくて あたまを つかったんだ。みんなも あの ウサギみたいに かしこいね！",
-            "subtitleEn": "It's B! The rabbit used her brain, not her legs. You're as clever as that rabbit!",
+            "subtitleEn": "It's B! The rabbit used her brain, not her legs. You're clever, just like that rabbit!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -962,6 +964,7 @@
     {
       "lessonNo": 1083,
       "world": 37,
+      "reviewed": "run9",
       "title": "Why the Moon Changes",
       "titleJa": "なぜ 月は 形を かえるの？",
       "school": {
@@ -1031,7 +1034,7 @@
           "sparkle",
           "wander"
         ],
-        "tipJa": "shiver（さむくて ぶるぶる ふるえる。v の あとは -er）、sparkle（星の ように きらきら かがやく。-le は「クル」の ような 音）、wander（あてもなく ぶらぶら あるく。wonder「ふしぎに 思う」と ちがうよ）。"
+        "tipJa": "shiver（さむくて ぶるぶる ふるえる。v の あとは -er）、sparkle（星の ように きらきら かがやく。-kle は「クル」の ような 音）、wander（あてもなく ぶらぶら あるく。wonder「ふしぎに 思う」と ちがうよ）。"
       },
       "vocab": [
         {
@@ -1056,7 +1059,7 @@
           "emoji": "✨"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, The rabbit tricked the tiger with a smart idea. Today, Nib takes us to a dark blue room with a silver ceiling. Tiny stars sparkle above us, and a big, round moon lamp hangs in the middle. This is the Moon Room, Nib whispers. Long ago, people looked up at the night sky and wondered. Why is the moon round one week and thin the next? So they made up stories. Long ago, people told stories to explain the moon. Say it with me. Long ago, people told stories to explain the moon. Great! Let's read the old tale on the wall. \"Why the Moon Changes. Long ago, people said that the moon was the kindest light in the sky. Every night, it watched over the sleepy animals below. Some of them were afraid of the dark. The little rabbits would shiver in their holes, and the baby deer couldn't sleep. So the moon broke off a piece of its own light and gave it to them. The next night, it gave away another piece, and then another. Little by little, the moon became thinner, until it was only a thin silver smile. Then, slowly, its light grew back, night after night, until it was round and bright again. And every month, the kind moon gives its light away once more.\" Why did the moon give away its light? Because some animals were afraid of the dark. What happened to the moon after that? It became thinner, and then it grew back. Riko says, That's a beautiful story. But what's the real reason? Ms. Emma smiles and explains. The moon doesn't really change shape. The sun always lights half of it. As the moon travels around the Earth, we see different amounts of that bright half. Sometimes we see all of it, and we call it a full moon. Sometimes we see only a thin crescent. One cycle takes about a month, about 29 and a half days. Nib claps his tiny paws. A true reason and a kind story. I like both! Now, phonics. Shiver means to shake because you are cold. Sparkle means to shine with many tiny flashes of light. Sparkle ends in l-e. Wander means to walk slowly with no special place to go. Next time, we'll visit a great hall full of stories from many lands.",
+      "teacherScript": "Hello, everyone! Last time, we said, The rabbit tricked the tiger with a smart idea. Today, Nib takes us to a dark blue room with a silver ceiling. Tiny stars sparkle above us, and a big, round moon lamp hangs in the middle. This is the Moon Room, Nib whispers. Long ago, people looked up at the night sky and wondered. Why is the moon round one week and thin the next? So they made up stories. Long ago, people told stories to explain the moon. Say it with me. Long ago, people told stories to explain the moon. Great! Let's read the old tale on the wall. \"Why the Moon Changes. Long ago, people said that the moon was the kindest light in the sky. Every night, it watched over the sleepy animals below. Some of them were afraid of the dark. The little rabbits would shiver in their holes, and the baby deer couldn't sleep. So the moon broke off a piece of its own light and gave it to them. The next night, it gave away another piece, and then another. Little by little, the moon became thinner, until it was only a thin silver smile. Then, slowly, its light grew back, night after night, until it was round and bright again. And every month, the kind moon gives its light away once more.\" Why did the moon give away its light? Because some animals were afraid of the dark. What happened to the moon after that? It became thinner, and then it grew back. Riko says, That's a beautiful story. But what's the real reason? I smile and explain. The moon doesn't really change shape. The sun always lights half of it. As the moon travels around the Earth, we see different amounts of that bright half. Sometimes we see all of it, and we call it a full moon. Sometimes we see only a thin crescent. One cycle takes about a month, about 29 and a half days. Nib claps his tiny paws. A true reason and a kind story. I like both! Now, phonics. Shiver means to shake because you are cold. Sparkle means to shine with many tiny flashes of light. Sparkle ends in l-e. Wander means to walk slowly with no special place to go. Next time, we'll visit a great hall full of stories from many lands.",
       "conversation": {
         "scene": "In the Moon Room, comparing an old story with the real reason",
         "sceneJa": "月の 部屋で むかしの お話と ほんとうの りゆうを くらべる",
@@ -1073,7 +1076,7 @@
           },
           {
             "speaker": "Haru",
-            "en": "I like it too. But why does the moon change shape really?",
+            "en": "I like it too. But why does the moon change shape, really?",
             "ja": "ぼくも すき。でも ほんとうは どうして 月は 形が かわるの？"
           },
           {
@@ -1109,7 +1112,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが 月の 部屋で しつもんするよ。Long ago, people told stories to explain the moon. を つかって、むかしの お話と ほんとうの りゆうを くらべて 話そう。ニブが「Which do you like better? Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome to the Moon Room! Long ago, people made up stories about the moon. Some said it gave pieces of its light to sleepy animals. But why does the moon really seem to change shape? Can you explain it to me?",
+          "starterEn": "Let's pretend I'm Nib. Welcome to the Moon Room! Long ago, people made up stories about the moon. Some said it gave pieces of its light to sleepy animals. But why does the moon really seem to change shape? Can you explain it to me?",
           "targetExpressions": [
             "Long ago, people told stories to explain the moon.",
             "Why does the moon change shape? ― It doesn't really change. We see different amounts of the bright half.",
@@ -1240,9 +1243,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru asks, But why does the moon change shape really? Riko says, It doesn't really change. We see different amounts of the bright half. The sun always lights half of the moon. Kiko asks, How long does it take? About a month.",
+            "say": "Haru asks, But why does the moon change shape, really? Riko says, It doesn't really change. We see different amounts of the bright half. The sun always lights half of the moon. Kiko asks, How long does it take? About a month.",
             "subtitleJa": "ハルくん「でも ほんとうは どうして 月は かたちが かわるの？」 リコちゃん「ほんとうは かわらないの。あかるい はんぶんの 見える ぶぶんが かわるんだよ。」 たいようは いつも 月の はんぶんを てらして いるんだ。キコちゃん「どのくらい かかるの？」 およそ 1か月。",
-            "subtitleEn": "Haru asks, But why does the moon change shape really? Riko says, It doesn't really change. We see different amounts of the bright half. The sun always lights half of the moon. Kiko asks, How long does it take? About a month.",
+            "subtitleEn": "Haru asks, But why does the moon change shape, really? Riko says, It doesn't really change. We see different amounts of the bright half. The sun always lights half of the moon. Kiko asks, How long does it take? About a month.",
             "gesture": "nod",
             "slide": {
               "title": "Talk",
@@ -1256,9 +1259,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Shiver. Shake because you're cold. Brrr! After the v, we say er. Shiver. Sparkle. Shine with tiny flashes, like stars. It ends in l-e. Sparkle.",
+            "say": "Sound time! Shiver. Shake because you're cold. Brrr! After the v comes e, r. Shiver. Sparkle. Shine with tiny flashes, like stars. It ends in l-e. Sparkle.",
             "subtitleJa": "おとの じかん！ shiver。さむくて ぶるぶる ふるえる こと。ブルル！ v の あとは er。shiver。sparkle。星の ように 小さく きらきら ひかる こと。l-e で おわるよ。sparkle。",
-            "subtitleEn": "Sound time! Shiver. Shake because you're cold. Brrr! After the v, we say er. Shiver. Sparkle. Shine with tiny flashes, like stars. It ends in l-e. Sparkle.",
+            "subtitleEn": "Sound time! Shiver. Shake because you're cold. Brrr! After the v comes e, r. Shiver. Sparkle. Shine with tiny flashes, like stars. It ends in l-e. Sparkle.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -1439,6 +1442,7 @@
     {
       "lessonNo": 1084,
       "world": 37,
+      "reviewed": "run9",
       "title": "Tales from Many Lands",
       "titleJa": "せかいの 物語",
       "school": {
@@ -1586,7 +1590,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと せかいの 物語の「型」を くらべよう。Many countries have stories about ～. を つかって、すきな 型と りゆうを いおう。ニブが「Can you give me an example?」と きいたら みじかい れいを 考えよう。6 かい いじょう やりとり しよう",
-          "starterEn": "This is the Hall of Many Lands! Stories from far away often have the same patterns: brave children, three tries, clever animals and magic objects. Which pattern do you like best? Why?",
+          "starterEn": "Let's pretend I'm Nib. This is the Hall of Many Lands! Stories from far away often have the same patterns: brave children, three tries, clever animals and magic objects. Which pattern do you like best? Why?",
           "targetExpressions": [
             "Many countries have stories about brave children.",
             "Things often happen three times in stories. ― Yes! The third time is special.",
@@ -1702,9 +1706,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko looks at the shelves. Many countries have stories about brave children. Kiko says, And things often happen three times in stories. A girl knocks on three doors, and only the third one opens!",
+            "say": "Riko looks at the shelves and says, Many countries have stories about brave children. Kiko says, And things often happen three times in stories. A girl knocks on three doors, and only the third one opens!",
             "subtitleJa": "リコちゃんが たなを 見て「おおくの 国に、ゆうかんな 子どもの お話が あるね。」 キコちゃん「それに お話では よく 3 かい おなじ ことが おこるね。」 女の子が 3 つの とびらを ノック して、3 つめ だけが ひらくんだ！",
-            "subtitleEn": "Riko looks at the shelves. Many countries have stories about brave children. Kiko says, And things often happen three times in stories. A girl knocks on three doors, and only the third one opens!",
+            "subtitleEn": "Riko looks at the shelves and says, Many countries have stories about brave children. Kiko says, And things often happen three times in stories. A girl knocks on three doors, and only the third one opens!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -1918,6 +1922,7 @@
     {
       "lessonNo": 1085,
       "world": 37,
+      "reviewed": "run9",
       "title": "What's the Lesson?",
       "titleJa": "物語の 教えは なに？",
       "school": {
@@ -2070,7 +2075,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと 物語の 教えを 話し合おう。The lesson of this story is: ～. を つかって、すきな 教えと りゆうを いおう。ニブが「Why?」と きいたり はんたいの 意見を いったり したら、自分の 考えを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "We've heard some wonderful stories: Pip the little bird, the clever rabbit, and the girl at the third door. What's the lesson of one of them? I think Brains beat strength is the best lesson. Do you agree?",
+          "starterEn": "Let's pretend I'm Nib. We've heard some wonderful stories: Pip the little bird, the clever rabbit, and the girl at the third door. What's the lesson of one of them? I think Brains beat strength is the best lesson. Do you agree?",
           "targetExpressions": [
             "The lesson of this story is: Don't give up.",
             "What's the lesson of the rabbit story? ― Brains beat strength.",
@@ -2231,9 +2236,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Let's review. Whisper. Very, very quiet. W-h sounds like w. Gasp. Haaa! A quick breath, because you're surprised.",
+            "say": "Sound time! Let's review. Whisper. Very, very quiet. W-h sounds like w. Gasp. Oh! A quick breath, because you're surprised.",
             "subtitleJa": "おとの じかん！ ふりかえろう。whisper。とても とても しずかに。w-h は w の おと。gasp。ハッ！ おどろいて すばやく いきを すう こと。",
-            "subtitleEn": "Sound time! Let's review. Whisper. Very, very quiet. W-h sounds like w. Gasp. Haaa! A quick breath, because you're surprised.",
+            "subtitleEn": "Sound time! Let's review. Whisper. Very, very quiet. W-h sounds like w. Gasp. Oh! A quick breath, because you're surprised.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -2414,6 +2419,7 @@
     {
       "lessonNo": 1086,
       "world": 37,
+      "reviewed": "run9",
       "title": "Setting, Characters, Problem",
       "titleJa": "場所・登場人物・問題",
       "school": {
@@ -2561,7 +2567,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと こおりの 王国の お話を しらべよう。The story takes place in ～. を つかって、場所・登場人物・問題を いおう。ニブが「Which is the most important? Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome to my Story Workshop! Here's a drawer marked SETTING. Where does The Frozen Kingdom take place? And who is the main character?",
+          "starterEn": "Let's pretend I'm Nib. Welcome to my Story Workshop! Here's a drawer marked SETTING. Where does The Frozen Kingdom take place? And who is the main character?",
           "targetExpressions": [
             "The story takes place in a frozen kingdom.",
             "Who is the main character? ― A shepherd boy named Oren.",
@@ -2892,9 +2898,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B, the problem! Something goes wrong. That's the problem. Brilliant!",
+            "say": "It's B, the problem! Something goes wrong. That's the problem. Great job!",
             "subtitleJa": "こたえは B、問題！ なにかが うまく いかなく なる。それが 問題。すばらしい！",
-            "subtitleEn": "It's B, the problem! Something goes wrong. That's the problem. Brilliant!",
+            "subtitleEn": "It's B, the problem! Something goes wrong. That's the problem. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -2927,6 +2933,7 @@
     {
       "lessonNo": 1087,
       "world": 37,
+      "reviewed": "run9",
       "title": "Show, Don't Tell",
       "titleJa": "見せて つたえよう",
       "school": {
@@ -3074,7 +3081,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが「Oren was cold.」の ような「いう」文を 出すよ。Her hands were shaking. の ように 体の ようすで「見せる」文に かえよう。ニブが「How else can you show it?」と きいたら べつの 文を 考えよう。6 かい いじょう やりとり しよう",
-          "starterEn": "Here's a boring sentence: Oren was cold. Can you show it instead of telling it? What does his body do? What does he say?",
+          "starterEn": "Let's pretend I'm Nib. Here's a boring sentence: Oren was cold. Can you show it instead of telling it? What does his body do? What does he say?",
           "targetExpressions": [
             "Her hands were shaking.",
             "How do we know Oren is cold? ― His teeth are chattering.",
@@ -3127,9 +3134,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Show. Let someone see it. Look! I'm holding up my book. I show you. Show!",
-            "subtitleJa": "show。だれかに 見て もらう こと。見て！ 本を もちあげて いるよ。あなたに 見せる。見せる！",
-            "subtitleEn": "Show. Let someone see it. Look! I'm holding up my book. I show you. Show!",
+            "say": "Show. Let someone see it. Look! I'm holding up my book. I'm showing you. Show!",
+            "subtitleJa": "show。だれかに 見て もらう こと。見て！ 本を もちあげて いるよ。あなたに 見せて いるよ。見せる！",
+            "subtitleEn": "Show. Let someone see it. Look! I'm holding up my book. I'm showing you. Show!",
             "gesture": "open_hands",
             "slide": {
               "title": "Words",
@@ -3191,9 +3198,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma reads, Oren was scared. Haru says, It's OK, but it's a little boring. Show, don't tell! Kiko tries. Her hands were shaking. That's how I would show a scared girl.",
-            "subtitleJa": "エマ先生が 読むよ。「オレンは こわかった。」 ハルくん「わるくないけど、ちょっと つまらない。見せて つたえなきゃ！」 キコちゃんが やって みる。「かのじょの 手は ふるえて いた。こわがって いる 女の子なら、わたしは こう 見せるよ。」",
-            "subtitleEn": "Ms. Emma reads, Oren was scared. Haru says, It's OK, but it's a little boring. Show, don't tell! Kiko tries. Her hands were shaking. That's how I would show a scared girl.",
+            "say": "I say, Oren was scared. Haru says, It's OK, but it's a little boring. Show, don't tell! Kiko tries and says, Her hands were shaking. That's how I would show a scared girl.",
+            "subtitleJa": "わたし「オレンは こわかった。」 ハルくん「わるくないけど、ちょっと つまらない。見せて つたえなきゃ！」 キコちゃんが やって みる。「かのじょの 手は ふるえて いた。こわがって いる 女の子なら、わたしは こう 見せるよ。」",
+            "subtitleEn": "I say, Oren was scared. Haru says, It's OK, but it's a little boring. Show, don't tell! Kiko tries and says, Her hands were shaking. That's how I would show a scared girl.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -3374,9 +3381,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Show a feeling without saying it. I'm excited. My feet can't stop dancing!",
-            "subtitleJa": "あなたの ばん！ 気持ちを、その ことばを いわずに 見せて。わくわく してる。「足が おどるのを やめられない！」",
-            "subtitleEn": "Your turn! Show a feeling without saying it. I'm excited. My feet can't stop dancing!",
+            "say": "Your turn! Show a feeling without saying it. Excited? My feet can't stop dancing!",
+            "subtitleJa": "あなたの ばん！ 気持ちを、その ことばを いわずに 見せて。わくわく？「足が おどるのを やめられない！」",
+            "subtitleEn": "Your turn! Show a feeling without saying it. Excited? My feet can't stop dancing!",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -3441,6 +3448,7 @@
     {
       "lessonNo": 1088,
       "world": 37,
+      "reviewed": "run9",
       "title": "As Brave as a Lion",
       "titleJa": "ライオンの ように ゆうかん",
       "school": {
@@ -3535,7 +3543,7 @@
           "emoji": "🪟"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Her hands were shaking. Today, there's a loud clang in the Story Workshop. Birimo has knocked over a pile of metal cookie tins! Nib laughs and helps him pick them up. Then he opens a new drawer. Inside, there are cards with animals on them. Nib says, When we compare one thing to another, it's called a simile. A simile puts a picture in the reader's head. Oren is about to do something very brave. We could just say he was brave. But it's more fun to say this. He was as brave as a lion. Say it with me. He was as brave as a lion. Great! Let's read the next page of The Frozen Kingdom. \"Oren and his grandmother climbed higher and higher. The wind was as cold as ice. At the top of the mountain, they found an ice cave. Inside, the walls shone like glass, and there, in a pile of snow, lay the golden feathers. Suddenly, a huge white snake slid out and hissed. Oren's knees were shaking, but he didn't run. He was as brave as a lion. Excuse me, he said politely. We need those feathers to warm our kingdom. The snake blinked in surprise. Nobody has ever said excuse me to me, it said. Then it pushed the feathers toward him with its nose. Just at that moment, there was a whoosh, and a golden shape flew across the sky like a shooting star. It was the Sun Bird!\" How was Oren brave? He didn't run, and he spoke politely to the snake. How did the Sun Bird fly? Like a shooting star. Riko says, I love the snake. It wasn't mean. It just needed someone to be polite. Nib nods and asks, And then what happened? Now, phonics. More sound words! Hiss is the sound a snake makes, or the sound of steam. Whoosh is the sound of something rushing past very fast, like the Sun Bird. Clang is the sound of metal hitting metal, like Birimo's cookie tins. Next time, we'll walk down a very noisy corridor.",
+      "teacherScript": "Hello, everyone! Last time, we said, Her hands were shaking. Today, there's a loud clang in the Story Workshop. Birimo has knocked over a pile of metal cookie tins! Nib laughs and helps him pick them up. Then he opens a new drawer. Inside, there are cards with animals on them. Nib says, When we compare one thing to another using as or like, it's called a simile. A simile puts a picture in the reader's head. Oren is about to do something very brave. We could just say he was brave. But it's more fun to say this. He was as brave as a lion. Say it with me. He was as brave as a lion. Great! Let's read the next page of The Frozen Kingdom. \"Oren and his grandmother climbed higher and higher. The wind was as cold as ice. At the top of the mountain, they found an ice cave. Inside, the walls shone like glass, and there, in a pile of snow, lay the golden feathers. Suddenly, a huge white snake slid out and hissed. Oren's knees were shaking, but he didn't run. He was as brave as a lion. Excuse me, he said politely. We need those feathers to warm our kingdom. The snake blinked in surprise. Nobody has ever said excuse me to me, it said. Then it pushed the feathers toward him with its nose. Just at that moment, there was a whoosh, and a golden shape flew across the sky like a shooting star. It was the Sun Bird!\" How was Oren brave? He didn't run, and he spoke politely to the snake. How did the Sun Bird fly? Like a shooting star. Riko says, I love the snake. It wasn't mean. It just needed someone to be polite. Nib nods and asks, And then what happened? Now, phonics. More sound words! Hiss is the sound a snake makes, or the sound of steam. Whoosh is the sound of something rushing past very fast, like the Sun Bird. Clang is the sound of metal hitting metal, like Birimo's cookie tins. Next time, we'll walk down a very noisy corridor.",
       "conversation": {
         "scene": "Describing Oren and the Sun Bird with similes",
         "sceneJa": "たとえを つかって オレンと 太陽の 鳥を えがく",
@@ -3588,7 +3596,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと たとえ（as ～ as ～・like ～）を つくろう。He was as brave as a lion. の ように 登場人物や 場所を たとえで えがこう。ニブが「Why that animal?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Similes make pictures in our heads! Oren was as brave as a lion. Now you try. How cold was the cave? How fast was the Sun Bird? Use as ... as or like!",
+          "starterEn": "Let's pretend I'm Nib. Similes make pictures in our heads! Oren was as brave as a lion. Now you try. How cold was the cave? How fast was the Sun Bird? Use as ... as or like!",
           "targetExpressions": [
             "He was as brave as a lion.",
             "The Sun Bird flew like a shooting star.",
@@ -3736,9 +3744,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru asks, What can we compare the cave to? Riko says, The walls looked like glass. Here's the point. Use as and as, or like. As brave as a lion. Like glass.",
-            "subtitleJa": "ハルくん「その どうくつは なにに たとえられる？」 リコちゃん「かべが ガラスの ように 見えたよ。」 ポイント。as と as、または like を つかうよ。ライオンの ように ゆうかん。ガラスの ように。",
-            "subtitleEn": "Haru asks, What can we compare the cave to? Riko says, The walls looked like glass. Here's the point. Use as and as, or like. As brave as a lion. Like glass.",
+            "say": "Haru asks, What can we compare the cave to? Riko says, The walls looked like glass. Here's the point. Use as, a describing word, and as again. Or use like. As brave as a lion. Like glass.",
+            "subtitleJa": "ハルくん「その どうくつは なにに たとえられる？」 リコちゃん「かべが ガラスの ように 見えたよ。」 ポイント。as ～ as、または like を つかうよ。ライオンの ように ゆうかん。ガラスの ように。",
+            "subtitleEn": "Haru asks, What can we compare the cave to? Riko says, The walls looked like glass. Here's the point. Use as, a describing word, and as again. Or use like. As brave as a lion. Like glass.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -3954,6 +3962,7 @@
     {
       "lessonNo": 1089,
       "world": 37,
+      "reviewed": "run9",
       "title": "Crash! Splash! Creak!",
       "titleJa": "ガシャン！ バシャン！ ギィー！",
       "school": {
@@ -4048,7 +4057,7 @@
           "emoji": "📣"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, He was as brave as a lion. Today, Nib leads us down the Creaking Corridor. It's long and narrow, and candles flicker on the walls. Every floorboard creaks under our feet, and our footsteps echo. Kiko holds Ms. Emma's hand. At the end, there is a tall wooden door. Nib grins and pushes it. Creak! The old door slowly opened. Say it with me. Creak! The old door slowly opened. Great! Behind the door, there is no monster at all, just Nib's sleepy cat, Button, yawning in a basket. Everyone laughs. Nib says, Sound words make a scene come alive. Let's read the last page of The Frozen Kingdom. \"The Sun Bird landed on Oren's arm, and her feathers glowed. Together, Oren and his grandmother walked down the mountain, and the Sun Bird flew above them. When they reached the kingdom, she spread her golden wings. Crash! The thick ice on the river broke into pieces. Splash! The water began to run again, and the fish jumped for joy. Drip, drip, drip went the icicles on every roof. Then Oren knocked on the palace gate. Creak! The old door slowly opened, and the queen stepped out into the warm sunshine. Thank you, Oren, she said with a smile. From that day on, the Sun Bird kept her feathers safe, and every spring, the people held a festival of golden kites.\" What happened to the ice on the river? It broke into pieces. Who opened the palace door? The queen. Haru says, I liked the ending, because everyone was happy and the sheep were warm again. Riko asks, Did the snake come to the festival too? Nib laughs. That's a great question! And then what happened? You can decide! Now, phonics. Crash is the loud sound of something breaking or falling, like the ice on the river. Splash is the sound of something falling into water. Crash and splash both end in a-s-h. Creak is the sound of an old door or floor. Next time, it's the Story Lab, and each of you will read your own short paragraph!",
+      "teacherScript": "Hello, everyone! Last time, we said, He was as brave as a lion. Today, Nib leads us down the Creaking Corridor. It's long and narrow, and candles flicker on the walls. Every floorboard creaks under our feet, and our footsteps echo. Kiko holds my hand. At the end, there is a tall wooden door. Nib grins and pushes it. Creak! The old door slowly opened. Say it with me. Creak! The old door slowly opened. Great! Behind the door, there is no monster at all, just Nib's sleepy cat, Button, yawning in a basket. Everyone laughs. Nib says, Sound words make a scene come alive. Let's read the last page of The Frozen Kingdom. \"The Sun Bird landed on Oren's arm, and her feathers glowed. Together, Oren and his grandmother walked down the mountain, and the Sun Bird flew above them. When they reached the kingdom, she spread her golden wings. Crash! The thick ice on the river broke into pieces. Splash! The water began to run again, and the fish jumped for joy. Drip, drip, drip went the icicles on every roof. Then Oren knocked on the palace door. Creak! The old door slowly opened, and the queen stepped out into the warm sunshine. Thank you, Oren, she said with a smile. From that day on, the Sun Bird kept her feathers safe, and every spring, the people held a festival of golden kites.\" What happened to the ice on the river? It broke into pieces. Who opened the palace door? The queen. Haru says, I liked the ending, because everyone was happy and the sheep were warm again. Riko asks, Did the snake come to the festival too? Nib laughs. That's a great question! And then what happened? You can decide! Now, phonics. Crash is the loud sound of something breaking or falling, like the ice on the river. Splash is the sound of something falling into water. Crash and splash both end in a-s-h. Creak is the sound of an old door or floor. Next time, it's the Story Lab, and each of you will read your own short paragraph!",
       "conversation": {
         "scene": "Walking down the Creaking Corridor and making a scene with sound words",
         "sceneJa": "きしむ ろうかを あるき、音の ことばで 場面を つくる",
@@ -4095,13 +4104,13 @@
           },
           {
             "speaker": "Haru",
-            "en": "No way, that's perfect! The ice breaks, and then the fish jump.",
+            "en": "Wow, that's perfect! The ice breaks, and then the fish jump.",
             "ja": "えっ、それ かんぺき！ こおりが われて、それから 魚が はねるんだ。"
           }
         ],
         "aiTask": {
           "goalJa": "AI の ニブと きしむ ろうかで 音の ことばを つかった 場面を つくろう。Creak! The old door slowly opened. の ように 音の ことばから 文を はじめよう。ニブが「And then what happened?」と きいたら つづきを 話そう。6 かい いじょう やりとり しよう",
-          "starterEn": "Shh! Welcome to the Creaking Corridor. Listen. Creak! Something is behind that door. Can you start the next part of the scene with a sound word? And then what happened?",
+          "starterEn": "Let's pretend I'm Nib. Shh! Welcome to the Creaking Corridor. Listen. Creak! Something is behind that door. Can you start the next part of the scene with a sound word? And then what happened?",
           "targetExpressions": [
             "Creak! The old door slowly opened.",
             "What's that sound? ― It's the floor creaking under our feet.",
@@ -4218,9 +4227,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko whispers, This corridor is a little spooky. Every floorboard creaks! Haru asks, What's that sound? Ms. Emma says, It's the floor creaking under our feet. Don't worry, I'm right here.",
-            "subtitleJa": "キコちゃんが ささやく。「この ろうか、ちょっと こわいね。どの ゆかいたも ギシギシ いう！」 ハルくん「あの 音は なに？」 エマ先生「あしもとの ゆかが ギシギシ いって いるのよ。だいじょうぶ、先生が ここに いるからね。」",
-            "subtitleEn": "Kiko whispers, This corridor is a little spooky. Every floorboard creaks! Haru asks, What's that sound? Ms. Emma says, It's the floor creaking under our feet. Don't worry, I'm right here.",
+            "say": "Kiko whispers, This corridor is a little spooky. Every floorboard creaks! Haru asks, What's that sound? I say, It's the floor creaking under our feet. Don't worry, I'm right here.",
+            "subtitleJa": "キコちゃんが ささやく。「この ろうか、ちょっと こわいね。どの ゆかいたも ギシギシ いう！」 ハルくん「あの 音は なに？」 わたし「あしもとの ゆかが ギシギシ いって いるのよ。だいじょうぶ、わたしが ここに いるからね。」",
+            "subtitleEn": "Kiko whispers, This corridor is a little spooky. Every floorboard creaks! Haru asks, What's that sound? I say, It's the floor creaking under our feet. Don't worry, I'm right here.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4234,9 +4243,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "At the end, there's a tall door. Birimo pushes it. Creak! The old door slowly opened. Ta-da! It's just a sleepy cat! Button yawns in a basket.",
-            "subtitleJa": "おくには 高い 扉。ビリモが おすよ。「ギィー！ 古い 扉が ゆっくり ひらいた。じゃーん！ ねむそうな ネコ だけだ！」 ボタンが かごの なかで あくび。",
-            "subtitleEn": "At the end, there's a tall door. Birimo pushes it. Creak! The old door slowly opened. Ta-da! It's just a sleepy cat! Button yawns in a basket.",
+            "say": "At the end, there's a tall door. Nib pushes it. Birimo says, Creak! The old door slowly opened. Ta-da! It's just a sleepy cat! Button yawns in a basket.",
+            "subtitleJa": "おくには 高い 扉。ニブが おすよ。ビリモ「ギィー！ 古い 扉が ゆっくり ひらいた。じゃーん！ ねむそうな ネコ だけだ！」 ボタンが かごの なかで あくび。",
+            "subtitleEn": "At the end, there's a tall door. Nib pushes it. Birimo says, Creak! The old door slowly opened. Ta-da! It's just a sleepy cat! Button yawns in a basket.",
             "gesture": "mime",
             "slide": {
               "title": "Talk",
@@ -4469,6 +4478,7 @@
     {
       "lessonNo": 1090,
       "world": 37,
+      "reviewed": "run9",
       "title": "Story Lab",
       "titleJa": "ストーリー・ラボ",
       "school": {
@@ -4621,7 +4631,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが ストーリー・ラボで きみの 文を きくよ。The forest was so ～ that ～. を つかって 場面を えがこう。ニブが「What did you use?」と きいたら たとえや 音の ことばを せつめい しよう。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome to the Story Lab! Please describe a place for me in a few sentences. Try a so ... that sentence, a simile or a sound word. I can't wait to hear it!",
+          "starterEn": "Let's pretend I'm Nib. Welcome to the Story Lab! Please describe a place for me in a few sentences. Try a so ... that sentence, a simile or a sound word. I can't wait to hear it!",
           "targetExpressions": [
             "The forest was so quiet that she could hear her heartbeat.",
             "What did you use in your paragraph? ― I used a simile and a sound word.",
@@ -4738,9 +4748,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma says, Kiko, would you like to read first? Kiko reads about a snowy forest. The forest was so quiet that she could hear her heartbeat. Haru says, Wow! It shows the quiet!",
-            "subtitleJa": "エマ先生「キコ、さいしょに 読んで くれる？」 キコちゃんが 雪の 森の 文を 読むよ。「森は とても しずかで、かのじょは 自分の 心ぞうの 音が きこえた。」 ハルくん「わあ！ しずかさを 見せて いる！」",
-            "subtitleEn": "Ms. Emma says, Kiko, would you like to read first? Kiko reads about a snowy forest. The forest was so quiet that she could hear her heartbeat. Haru says, Wow! It shows the quiet!",
+            "say": "I say, Kiko, would you like to read first? Kiko reads about a snowy forest. The forest was so quiet that she could hear her heartbeat. Haru says, Wow! It shows the quiet!",
+            "subtitleJa": "わたし「キコ、さいしょに 読んで くれる？」 キコちゃんが 雪の 森の 文を 読むよ。「森は とても しずかで、かのじょは 自分の 心ぞうの 音が きこえた。」 ハルくん「わあ！ しずかさを 見せて いる！」",
+            "subtitleEn": "I say, Kiko, would you like to read first? Kiko reads about a snowy forest. The forest was so quiet that she could hear her heartbeat. Haru says, Wow! It shows the quiet!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4754,9 +4764,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko asks, What did you use in your paragraph? Kiko says, I used a simile and a sound word. Wait for the crash! Crash! It's just a tiny owl.",
-            "subtitleJa": "リコちゃん「きみの 文には なにを つかったの？」 キコちゃん「たとえと 音の ことばを つかったよ。ガシャーンを おたのしみに！」 ガシャーン！ 小さな フクロウ だけ だったよ。",
-            "subtitleEn": "Riko asks, What did you use in your paragraph? Kiko says, I used a simile and a sound word. Wait for the crash! Crash! It's just a tiny owl.",
+            "say": "Riko asks, What did you use in your paragraph? Kiko says, I used a simile and a sound word. Wait for the crash! Crash! It's only falling snow and a tiny owl.",
+            "subtitleJa": "リコちゃん「きみの 文には なにを つかったの？」 キコちゃん「たとえと 音の ことばを つかったよ。ガシャーンを おたのしみに！」 ガシャーン！ おちた 雪と 小さな フクロウ だけ だったよ。",
+            "subtitleEn": "Riko asks, What did you use in your paragraph? Kiko says, I used a simile and a sound word. Wait for the crash! Crash! It's only falling snow and a tiny owl.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4970,6 +4980,7 @@
     {
       "lessonNo": 1091,
       "world": 37,
+      "reviewed": "run9",
       "title": "If I Were a Dragon",
       "titleJa": "もしも ドラゴンだったら",
       "school": {
@@ -5067,7 +5078,7 @@
           "emoji": "🛋️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, The forest was so quiet that she could hear her heartbeat. Today, Nib takes us down a new path in the Labyrinth. Ms. Emma walks at the front with a lantern, and we all stay close together. At the end of the path, there is a round room full of soft golden light. In the middle, on a pile of old cushions, lies a huge dragon. Her scales are gold, and her eyes are kind and sleepy. This is Saffron, and she is very old. Saffron smiles and says, Welcome, little travelers. Now my wings are tired, so I stay here and tell riddles. Kiko looks at Saffron's tired wings and says softly, If I were a dragon, I would fly over the ocean. Say it with me. If I were a dragon, I would fly over the ocean. Great! We say If I were ～ when we imagine something that isn't true. Let's read the riddle card on Saffron's wall. \"Saffron's Riddle Room. Welcome, travelers! Long ago, I flew across the whole world. I saw seven seas, and I counted the stars over every one of them. Now my wings are old, but my mind is still young, so I love riddles. Here is today's riddle. I have pages, but I am not a tree. I have a spine, but I am not an animal. I can take you anywhere, but I have no legs. What am I? When you know the answer, tell me. Then tell me this: If you were a dragon, where would you fly? I will tell you a story about that place. Your friend, Saffron\" Why does Saffron stay in the Dragon Room now? Because her wings are old and tired. What is the answer to the riddle? A book! Haru shouts it first, and Saffron's tail thumps happily on the floor. Now, phonics. When we tell a story aloud, we lower our voice and pause just before the surprise. She opened the box, and inside was, pause, a tiny dragon! The footsteps came closer and closer, and then, pause, they stopped. He looked up, and there in the tree sat, pause, a giant owl. Behind the curtain stood, pause, a little gray mouse. But never pause in the middle of a group like a tiny dragon! Next time, Saffron will show us a secret well that listens to wishes.",
+      "teacherScript": "Hello, everyone! Last time, we said, The forest was so quiet that she could hear her heartbeat. Today, Nib takes us down a new path in the Labyrinth. I walk at the front with a lantern, and we all stay close together. At the end of the path, there is a round room full of soft golden light. In the middle, on a pile of old cushions, lies a huge dragon. Her scales are gold, and her eyes are kind and sleepy. This is Saffron, and she is very old. Saffron smiles and says, Welcome, little travelers. Now my wings are tired, so I stay here and tell riddles. Kiko looks at Saffron's tired wings and says softly, If I were a dragon, I would fly over the ocean. Say it with me. If I were a dragon, I would fly over the ocean. Great! We say If I were ～ when we imagine something that isn't true. Let's read the riddle card on Saffron's wall. \"Saffron's Riddle Room. Welcome, travelers! Long ago, I flew across the whole world. I saw seven seas, and I counted the stars over every one of them. Now my wings are old, but my mind is still young, so I love riddles. Here is today's riddle. I have pages, but I am not a tree. I have a spine, but I am not an animal. I can take you anywhere, but I have no legs. What am I? When you know the answer, tell me. Then tell me this: If you were a dragon, where would you fly? I will tell you a story about that place. Your friend, Saffron\" Why does Saffron stay in the Dragon Room now? Because her wings are old and tired. What is the answer to the riddle? A book! Haru shouts it first, and Saffron's tail thumps happily on the floor. Now, phonics. When we tell a story aloud, we lower our voice and pause just before the surprise. She opened the box, and inside was, pause, a tiny dragon! The footsteps came closer and closer, and then, pause, they stopped. He looked up, and there in the tree sat, pause, a giant owl. Behind the curtain stood, pause, a little gray mouse. But never pause in the middle of a group like a tiny dragon! Next time, Saffron will show us a secret well that listens to wishes.",
       "conversation": {
         "scene": "Saffron the old golden dragon welcomes the friends to the Dragon Room",
         "sceneJa": "年とった 金色の 竜 サフランが 竜の 部屋で みんなを むかえる",
@@ -5120,7 +5131,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の サフランが「If you were a dragon, where would you fly?」と きくよ。If I were a dragon, I would ～. で こたえよう。サフランが「Why?」と きいたら りゆうを いおう。なぞなぞにも こたえて みよう。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome, little traveler! My wings are old now, so I love to hear about other people's dreams. If you were a dragon, where would you fly? And why?",
+          "starterEn": "Let's pretend I'm Saffron, the old golden dragon. Welcome, little traveler! My wings are old now, so I love to hear about other people's dreams. If you were a dragon, where would you fly? And why?",
           "targetExpressions": [
             "If I were a dragon, I would fly over the ocean.",
             "If you were a dragon, where would you fly? ― To the highest mountain!",
@@ -5283,9 +5294,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Pause right before the surprise. Small and slow, then BIG! Inside was … a tiny dragon!",
+            "say": "Sound time! Pause right before the surprise. Small and slow, then big! Inside was … a tiny dragon!",
             "subtitleJa": "おとの じかん！ びっくりの すぐ まえで ひと休み。小さく ゆっくり、そして 大きく！ 「なかには … ちいさな ドラゴンが いた！」",
-            "subtitleEn": "Sound time! Pause right before the surprise. Small and slow, then BIG! Inside was … a tiny dragon!",
+            "subtitleEn": "Sound time! Pause right before the surprise. Small and slow, then big! Inside was … a tiny dragon!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -5420,9 +5431,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Change it to you. If I were a bird, I would fly to my grandma's house.",
+            "say": "Your turn! Make it about you. If I were a bird, I would fly to my grandma's house.",
             "subtitleJa": "あなたの ばん！ じぶんの ことに かえて いおう。「もし わたしが 鳥なら、おばあちゃんの 家まで とんで いくのに。」",
-            "subtitleEn": "Your turn! Change it to you. If I were a bird, I would fly to my grandma's house.",
+            "subtitleEn": "Your turn! Make it about you. If I were a bird, I would fly to my grandma's house.",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -5452,9 +5463,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! Kiko has hands, not wings. If I were means just imagine. Wonderful!",
+            "say": "It's B! Kiko has hands, not wings. If I were means we're just imagining. Wonderful!",
             "subtitleJa": "こたえは B！ キコちゃんには つばさじゃ なくて 手が あるよ。If I were は「そうぞう するだけ」。すばらしい！",
-            "subtitleEn": "It's B! Kiko has hands, not wings. If I were means just imagine. Wonderful!",
+            "subtitleEn": "It's B! Kiko has hands, not wings. If I were means we're just imagining. Wonderful!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -5487,6 +5498,7 @@
     {
       "lessonNo": 1092,
       "world": 37,
+      "reviewed": "run9",
       "title": "I Wish I Could…",
       "titleJa": "～ できたら いいのに",
       "school": {
@@ -5584,7 +5596,7 @@
           "emoji": "🗣️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, If I were a dragon, I would fly over the ocean. Today, Saffron shows us a small door behind her cushions. Ms. Emma goes first, and we follow her down some stone steps into a quiet garden. In the middle of the garden is an old stone well covered in moss. When Nib leans over the edge, the water bubbles, and a voice comes up. It sounds like a happy kettle! Blub, blub! Welcome to the Well of Wishes! The well doesn't want coins. It wants kind wishes, and you have to say them out loud. Birimo goes first. He says, I wish I could eat pancakes for breakfast forever! The water gives a little giggle. Then Kiko sees a bird on the edge of the well and says, I wish I could talk to animals. Say it with me. I wish I could talk to animals. Great! We say I wish I could ～ when we want to do something, but we can't do it now. Let's read the sign next to the well. \"The Well of Wishes. Hello, traveler! I am a very old well, and I have heard thousands of wishes. Some were big, and some were small. Here are my three rules. First, say your wish out loud and clearly. I am a little hard of hearing! Second, make it a kind wish. Unkind wishes turn into mud, and nobody likes mud. Third, a wish is not a magic trick. If you wish you could swim, the best way is to practice. I will cheer for you! When a kind wish touches my water, it sparkles. Come closer, and let's see what happens. Blub, blub!\" What does the well want instead of coins? Kind wishes, said out loud. What happens when a kind wish touches the water? It sparkles. When Kiko says her wish, the water sparkles like a thousand tiny stars, and the bird sings a little song. Now, phonics. Let's pause before the surprise again. The cave was dark and silent, until suddenly, pause, a voice said hello. At the bottom of the well, she found, pause, a golden key. The thing under the bed was not a monster, pause, but a puppy. When the clock struck twelve, the statue, pause, opened its eyes. Next time, Nib will teach us a question game with a magic key!",
+      "teacherScript": "Hello, everyone! Last time, we said, If I were a dragon, I would fly over the ocean. Today, Saffron shows us a small door behind her cushions. I go first, and everyone follows me down some stone steps into a quiet garden. In the middle of the garden is an old stone well covered in moss. When Nib leans over the edge, the water bubbles, and a voice comes up. It sounds like a happy kettle! Blub, blub! Welcome to the Well of Wishes! The well doesn't want coins. It wants kind wishes, and you have to say them out loud. Birimo goes first. He says, I wish I could eat pancakes for breakfast forever! The water gives a little giggle. Then Kiko sees a bird on the edge of the well and says, I wish I could talk to animals. Say it with me. I wish I could talk to animals. Great! We say I wish I could ～ when we want to do something, but we can't do it now. Let's read the sign next to the well. \"The Well of Wishes. Hello, traveler! I am a very old well, and I have heard thousands of wishes. Some were big, and some were small. Here are my three rules. First, say your wish out loud and clearly. I am a little hard of hearing! Second, make it a kind wish. Unkind wishes turn into mud, and nobody likes mud. Third, a wish is not a magic trick. If you wish you could swim, the best way is to practice. I will cheer for you! When a kind wish touches my water, it sparkles. Come closer, and let's see what happens. Blub, blub!\" What does the well want instead of coins? Kind wishes, said out loud. What happens when a kind wish touches the water? It sparkles. When Kiko says her wish, the water sparkles like a thousand tiny stars, and the bird sings a little song. Now, phonics. Let's pause before the surprise again. The cave was dark and silent, until suddenly, pause, a voice said hello. At the bottom of the well, she found, pause, a golden key. The thing under the bed was not a monster, pause, but a puppy. When the clock struck twelve, the statue, pause, opened its eyes. Next time, Nib will teach us a question game with a magic key!",
       "conversation": {
         "scene": "The friends say their wishes at the Well of Wishes",
         "sceneJa": "ねがいの 泉で みんなが ねがいを いう",
@@ -5637,7 +5649,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ねがいの 泉が「What do you wish you could do?」と きくよ。I wish I could ～. で やさしい ねがいを いおう。泉が「Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Blub, blub! Welcome, traveler! I don't want coins. I want a kind wish, said out loud. What do you wish you could do? Tell me why, too!",
+          "starterEn": "Let's pretend I'm the Well of Wishes. Blub, blub! Welcome, traveler! I don't want coins. I want a kind wish, said out loud. What do you wish you could do? Tell me why, too!",
           "targetExpressions": [
             "I wish I could talk to animals.",
             "What do you wish you could do? ― I wish I could fly like a bird.",
@@ -5801,9 +5813,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Pause before the surprise. Small and slow, then BIG! At the bottom of the well, she found … a golden key!",
+            "say": "Sound time! Pause before the surprise. Small and slow, then big! At the bottom of the well, she found … a golden key!",
             "subtitleJa": "おとの じかん！ びっくりの まえで ひと休み。小さく ゆっくり、そして 大きく！ 「いどの そこで 見つけたのは … 金の かぎ！」",
-            "subtitleEn": "Sound time! Pause before the surprise. Small and slow, then BIG! At the bottom of the well, she found … a golden key!",
+            "subtitleEn": "Sound time! Pause before the surprise. Small and slow, then big! At the bottom of the well, she found … a golden key!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -5970,9 +5982,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! Kind wishes sparkle like tiny stars. Lovely!",
+            "say": "It's A! Kind wishes sparkle like tiny stars. Nice job!",
             "subtitleJa": "こたえは A！ やさしい ねがいは 小さな 星みたいに きらきら。すてき！",
-            "subtitleEn": "It's A! Kind wishes sparkle like tiny stars. Lovely!",
+            "subtitleEn": "It's A! Kind wishes sparkle like tiny stars. Nice job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -6005,6 +6017,7 @@
     {
       "lessonNo": 1093,
       "world": 37,
+      "reviewed": "run9",
       "title": "What Would You Do?",
       "titleJa": "きみなら どうする？",
       "school": {
@@ -6155,7 +6168,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが「What would you do if ～?」の カードを 読むよ。If I found ～, I would ～. で こたえよう。ニブが「Why would you do that?」と きいたら りゆうを いおう。こんどは あなたも ニブに しつもん しよう。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome to my favorite game! Here's your first card. What would you do if you found a magic key? It can open any door, but only once. Which door, and why?",
+          "starterEn": "Let's pretend I'm Nib. Welcome to my favorite game! Here's your first card. What would you do if you found a magic key? It can open any door, but only once. Which door, and why?",
           "targetExpressions": [
             "What would you do if you found a magic key?",
             "If I found a magic key, I would open the door to a secret garden.",
@@ -6288,9 +6301,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru, what would you do if you had an invisible cape? I would taste the cake before the party! Haru! OK, OK. I would help people quietly. Kiko says, Like a secret hero!",
-            "subtitleJa": "「ハルくん、もし 見えない マントが あったら どうする？」 「パーティーの まえに ケーキを あじみ！」 「ハルくん！」 「わかった、わかった。こっそり みんなを たすけるよ。」 キコちゃん「ひみつの ヒーローみたい！」",
-            "subtitleEn": "Haru, what would you do if you had an invisible cape? I would taste the cake before the party! Haru! OK, OK. I would help people quietly. Kiko says, Like a secret hero!",
+            "say": "Birimo asks, Haru, what would you do if you had an invisible cape? Haru says, I would taste the cake before the party! I say, Haru! He says, OK, OK. I would help people quietly. Kiko says, Like a secret hero!",
+            "subtitleJa": "ビリモ「ハルくん、もし 見えない マントが あったら どうする？」 ハルくん「パーティーの まえに ケーキを あじみ！」 わたし「ハルくん！」 ハルくん「わかった、わかった。こっそり みんなを たすけるよ。」 キコちゃん「ひみつの ヒーローみたい！」",
+            "subtitleEn": "Birimo asks, Haru, what would you do if you had an invisible cape? Haru says, I would taste the cake before the party! I say, Haru! He says, OK, OK. I would help people quietly. Kiko says, Like a secret hero!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -6320,9 +6333,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Pause before the surprise. Small and slow, then BIG! She lifted the lid and saw … a pair of eyes!",
+            "say": "Sound time! Pause before the surprise. Small and slow, then big! She lifted the lid and saw … a pair of eyes!",
             "subtitleJa": "おとの じかん！ びっくりの まえで ひと休み。小さく ゆっくり、そして 大きく！ 「ふたを あけると 見えたのは … 二つの 目！」",
-            "subtitleEn": "Sound time! Pause before the surprise. Small and slow, then BIG! She lifted the lid and saw … a pair of eyes!",
+            "subtitleEn": "Sound time! Pause before the surprise. Small and slow, then big! She lifted the lid and saw … a pair of eyes!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -6524,6 +6537,7 @@
     {
       "lessonNo": 1094,
       "world": 37,
+      "reviewed": "run9",
       "title": "She Had Never Seen the Sea",
       "titleJa": "海を 見た ことが なかった 女の子",
       "school": {
@@ -6621,7 +6635,7 @@
           "emoji": "🛻"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, What would you do if you found a magic key? Today, Nib takes us to a small blue room. It smells like salt, and we can hear soft waves somewhere. On a shelf, there is a big pink seashell next to a pair of tiny hiking boots. Nib says, These belonged to Pell. Sit down, and I'll tell you her story. We sit around Ms. Emma on a soft rug. Pell lived in a village high in the mountains. She had seen snow, rivers and eagles, but she had never seen the sea before. Say it with me. She had never seen the sea before. Great! Had never seen（いちども 見た ことが なかった） means not even once, up until that time in the story. Let's read the page about Pell. \"Pell lived in a village so high in the mountains that clouds floated through the streets. Every evening, her grandmother held a pink seashell to Pell's ear. Listen, she said. That is the sound of the sea. Pell had never seen the sea, but she dreamed about it every night. One spring, a kind traveling baker offered to take Pell and her grandmother down the mountain in his wagon. They traveled for seven days. The air got warmer, and the trees changed. On the last morning, Pell smelled something salty. She climbed to the top of a sandy hill, and she gasped. She had never seen the sea before, and now it was right in front of her, wide and blue and shining. She held up the shell. It sang the same song.\" Who traveled with Pell? Her grandmother and a kind baker. What did Pell smell on the last morning? Something salty. Kiko says quietly, The shell and the sea sang the same song. That's my favorite part. Nib wipes a happy tear with his cape and says, And then what happened? Pell built a sandcastle, of course! Now, phonics. Let's pause just before the big moment. She had never seen the sea before, and now, pause, it was right in front of her. Little by little, the fog cleared, and they saw, pause, the castle. He reached into his pocket and pulled out, pause, a glowing stone. The voice in the dark whispered one word, pause, welcome. Next time, we'll talk about three wishes!",
+      "teacherScript": "Hello, everyone! Last time, we said, What would you do if you found a magic key? Today, Nib takes us to a small blue room. It smells like salt, and we can hear soft waves somewhere. On a shelf, there is a big pink seashell next to a pair of tiny hiking boots. Nib says, These belonged to Pell. Sit down, and I'll tell you her story. We all sit together on a soft rug. Pell lived in a village high in the mountains. She had seen snow, rivers and eagles, but she had never seen the sea before. Say it with me. She had never seen the sea before. Great! Had never seen（いちども 見た ことが なかった） means not even once, up until that time in the story. Let's read the page about Pell. \"Pell lived in a village so high in the mountains that clouds floated through the streets. Every evening, her grandmother held a pink seashell to Pell's ear. Listen, she said. That is the sound of the sea. Pell had never seen the sea, but she dreamed about it every night. One spring, a kind traveling baker offered to take Pell and her grandmother down the mountain in his wagon. They traveled for seven days. The air got warmer, and the trees changed. On the last morning, Pell smelled something salty. She climbed to the top of a sandy hill, and she gasped. She had never seen the sea before, and now it was right in front of her, wide and blue and shining. She held up the shell. It sang the same song.\" Who traveled with Pell? Her grandmother and a kind baker. What did Pell smell on the last morning? Something salty. Kiko says quietly, The shell and the sea sang the same song. That's my favorite part. Nib wipes a happy tear with his cape and says, And then what happened? Pell built a sandcastle, of course! Now, phonics. Let's pause just before the big moment. She had never seen the sea before, and now, pause, it was right in front of her. Little by little, the fog cleared, and they saw, pause, the castle. He reached into his pocket and pulled out, pause, a glowing stone. The voice in the dark whispered one word, pause, welcome. Next time, we'll talk about three wishes!",
       "conversation": {
         "scene": "The friends talk about Pell's story in the little blue room",
         "sceneJa": "小さな 青い 部屋で ペルの お話に ついて 話す",
@@ -6674,7 +6688,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ペルが はじめて 海を 見た 日の ことを 話すよ。She had never ～ before. を つかって お話を 説明しよう。ペルが「How do you think I felt? Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Hello! I'm Pell, from a village high in the mountains. Before my trip, I had never seen the sea. How do you think I felt on top of that sandy hill? Why?",
+          "starterEn": "Let's pretend I'm Pell. I live in a village high in the mountains. Before my trip, I had never seen the sea. How do you think I felt on top of that sandy hill? Why?",
           "targetExpressions": [
             "She had never seen the sea before.",
             "How did Pell feel? ― I think she felt excited because everything was new.",
@@ -6710,9 +6724,9 @@
           {
             "kind": "goal",
             "lang": "en",
-            "say": "Today's goal. Tell the time before in a story. She had never seen the sea before. Not even once!",
-            "subtitleJa": "きょうの ゴール。お話の「それより まえ」を いおう。「その子は それまで 海を 見た ことが なかった。」 いちども ないの！",
-            "subtitleEn": "Today's goal. Tell the time before in a story. She had never seen the sea before. Not even once!",
+            "say": "Today's goal. Talk about the time before the big day in a story. She had never seen the sea before. Not even once!",
+            "subtitleJa": "きょうの ゴール。お話の「大切な 日より まえ」を いおう。「その子は それまで 海を 見た ことが なかった。」 いちども ないの！",
+            "subtitleEn": "Today's goal. Talk about the time before the big day in a story. She had never seen the sea before. Not even once!",
             "gesture": "point",
             "slide": {
               "title": "Goal",
@@ -6837,9 +6851,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Pause before the big moment. Small and slow, then BIG! And now … it was right in front of her!",
+            "say": "Sound time! Pause before the big moment. Small and slow, then big! And now … it was right in front of her!",
             "subtitleJa": "おとの じかん！ 大切な ところの まえで ひと休み。小さく ゆっくり、そして 大きく！ 「そして いま … 海が 目の まえに あった！」",
-            "subtitleEn": "Sound time! Pause before the big moment. Small and slow, then BIG! And now … it was right in front of her!",
+            "subtitleEn": "Sound time! Pause before the big moment. Small and slow, then big! And now … it was right in front of her!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -6990,9 +7004,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "Quiz time! She had never seen the sea before. Did Pell see it before? A, yes, many times. B, no, never. Think!",
-            "subtitleJa": "クイズ！「ペルは それまで 海を 見た ことが なかった。」 まえに 見た ことは ある？ A、うん、なんども。B、ううん、いちども ない。かんがえて！",
-            "subtitleEn": "Quiz time! She had never seen the sea before. Did Pell see it before? A, yes, many times. B, no, never. Think!",
+            "say": "Quiz time! She had never seen the sea before. Had Pell seen it before? A, yes, many times. B, no, never. Think!",
+            "subtitleJa": "クイズ！「ペルは それまで 海を 見た ことが なかった。」 それまでに 見た ことは あった？ A、うん、なんども。B、ううん、いちども ない。かんがえて！",
+            "subtitleEn": "Quiz time! She had never seen the sea before. Had Pell seen it before? A, yes, many times. B, no, never. Think!",
             "gesture": "think",
             "slide": {
               "title": "Quiz",
@@ -7006,9 +7020,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! Not even once. So she gasped. Brilliant listening!",
+            "say": "It's B! Not even once. So she gasped. Great listening!",
             "subtitleJa": "こたえは B！ いちども ない。だから はっと したんだね。よく きけたね！",
-            "subtitleEn": "It's B! Not even once. So she gasped. Brilliant listening!",
+            "subtitleEn": "It's B! Not even once. So she gasped. Great listening!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -7041,6 +7055,7 @@
     {
       "lessonNo": 1095,
       "world": 37,
+      "reviewed": "run9",
       "title": "Three Wishes",
       "titleJa": "3 つの ねがい",
       "school": {
@@ -7135,7 +7150,7 @@
           "emoji": "🔭"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, She had never seen the sea before. Today, we go back to the Dragon Room, because Saffron has a surprise. The Well of Wishes has sent a little stream of bubbly water up into a stone bowl next to her cushions. Saffron says, In many old stories, someone gets three wishes. Let's play. Tell me your three wishes, but remember, at least one of them must help other people. Riko goes first. If I had three wishes, I would ask for a flying bike, a library in my room and a sunny day for everyone. Say it with me. If I had three wishes, I would ask for a flying bike, a library in my room and a sunny day for everyone. Great! Riko's third wish helps everyone. Let's read the wish list that Nib wrote with his feather pen. \"Our Three Wishes, by Nib. Riko wishes for a flying bike, a library in her room and a sunny day for everyone, so that nobody's picnic gets rained on. Haru wishes for a telescope that can see other planets, a robot that cleans his room and a big park for every town, where children and grandparents can play together. Kiko wishes she could talk to animals, of course! Her other wishes are a warm bed for every stray cat and a tree house in the clouds. Birimo wishes for pancakes forever, pancakes for his friends forever and, after a long think, a new pair of strong wings for Saffron. Saffron read the list twice and smiled. Then her golden eyes got a little wet.\" Which of Haru's wishes helps other people? A big park for every town. What was Birimo's last wish? New wings for Saffron. Saffron stretches her old wings and laughs softly. She says, That is the kindest wish I have heard in a hundred years. At that moment, the Storybook begins to glow. Nib opens it, and the third golden page appears, full of shining words. Nib reads it aloud. The third secret of stories: a wish is strongest when it is shared. Now, phonics. Let's review. She opened the box, and inside was, pause, a tiny dragon! Splash is the sound of something falling into water. Whisper starts with a w sound, and it means to speak very quietly, using your breath. Next time, we'll start planning our very own stories!",
+      "teacherScript": "Hello, everyone! Last time, we said, She had never seen the sea before. Today, we go back to the Dragon Room, because Saffron has a surprise. The Well of Wishes has sent a little stream of bubbly water up into a stone bowl next to her cushions. Saffron says, In many old stories, someone gets three wishes. Let's play. Tell me your three wishes, but remember, at least one of them must help other people. Riko goes first and says, If I had three wishes, I would ask for a flying bike, a library in my room and a sunny day for everyone. Say it with me. If I had three wishes, I would ask for a flying bike, a library in my room and a sunny day for everyone. Great! Riko's third wish helps everyone. Let's read the wish list that Nib wrote with his feather pen. \"Our Three Wishes, by Nib. Riko wishes for a flying bike, a library in her room and a sunny day for everyone, so that nobody's picnic gets rained on. Haru wishes for a telescope that can see other planets, a robot that cleans his room and a big park for every town, where children and grandparents can play together. Kiko wishes she could talk to animals, of course! Her other wishes are a warm bed for every stray cat and a tree house in the clouds. Birimo wishes for pancakes forever, pancakes for his friends forever and, after thinking hard, a new pair of strong wings for Saffron. Saffron read the list twice and smiled. Then her golden eyes got a little wet.\" Which of Haru's wishes helps other people? A big park for every town. What was Birimo's last wish? New wings for Saffron. Saffron stretches her old wings and laughs softly. She says, That is the kindest wish I have heard in a hundred years. At that moment, the Storybook begins to glow. Nib opens it, and the third golden page appears, full of shining words. Nib reads it aloud. The third secret of stories: a wish is strongest when it is shared. Now, phonics. Let's review. She opened the box, and inside was, pause, a tiny dragon! Splash is the sound of something falling into water. Whisper starts with a w sound, and it means to speak very quietly, using your breath. Next time, we'll start planning our very own stories!",
       "conversation": {
         "scene": "The friends tell Saffron their three wishes in the Dragon Room",
         "sceneJa": "竜の 部屋で サフランに 3 つの ねがいを 話す",
@@ -7193,7 +7208,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の サフランが「If you had three wishes, what would you ask for?」と きくよ。If I had three wishes, I would ask for ～. で こたえよう。1 つは ほかの 人を たすける ねがいに しよう。サフランが「Which wish helps others? Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Ah, little traveler, in many old stories, someone gets three wishes. If you had three wishes, what would you ask for? Remember, one wish must help others!",
+          "starterEn": "Let's pretend I'm Saffron, the old golden dragon. Ah, little traveler, in many old stories, someone gets three wishes. If you had three wishes, what would you ask for? Remember, one wish must help others!",
           "targetExpressions": [
             "If I had three wishes, I would ask for a flying bike, a library in my room and a sunny day for everyone.",
             "Which wish helps other people? ― The sunny day, because everyone can play outside.",
@@ -7358,9 +7373,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! The story pause. Small and slow, then BIG! Inside was … a tiny dragon!",
+            "say": "Sound review! The story pause. Small and slow, then big! Inside was … a tiny dragon!",
             "subtitleJa": "おとの ふりかえり！ お話の ひと休み。小さく ゆっくり、そして 大きく！ 「なかには … ちいさな ドラゴン！」",
-            "subtitleEn": "Sound review! The story pause. Small and slow, then BIG! Inside was … a tiny dragon!",
+            "subtitleEn": "Sound review! The story pause. Small and slow, then big! Inside was … a tiny dragon!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -7562,6 +7577,7 @@
     {
       "lessonNo": 1096,
       "world": 37,
+      "reviewed": "run9",
       "title": "Planning My Story",
       "titleJa": "自分の 物語を 計画しよう",
       "school": {
@@ -7652,7 +7668,7 @@
           "emoji": "🩹"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, If I had three wishes, I would ask for a flying bike, a library in my room and a sunny day for everyone. Today, Nib takes us back to his Story Workshop. On the big table, there are four blank story maps. Each map has three boxes: HERO, PLACE and PROBLEM. Nib says, You've heard lots of stories in the Labyrinth. Now it's time to plan your own! Haru writes The Boy and the Stone Giant. Riko writes The Lighthouse Cat. Birimo writes The Dragon Who Sneezed Glitter. Kiko smiles and writes in the HERO box. My hero is a girl who can talk to the wind. Say it with me. My hero is a girl who can talk to the wind. Great! A hero is the main character of a story. Let's read Kiko's story map. \"Story Map by Kiko. Title: The Girl Who Talked to the Wind. Hero: My hero is a girl named Aria who can talk to the wind. She is curious and kind, but sometimes she doesn't listen carefully. Place: Aria lives in a village above the clouds with her parents and her little brother. The wind visits her every evening and tells her about faraway lands. Problem: One night, a strange wind carries Aria far away from home. Now she is in a land she doesn't know, and she can't find the way back. Questions to think about: Who will help her? What will she learn? How will she get home? Nib's note: Great plan, Kiko! A hero with a small weakness is more interesting.\" What is Aria's weakness? Sometimes she doesn't listen carefully. What is her problem? A strange wind carries her far away, and she can't find the way back. Haru's hero is a boy named Leo who finds a sleepy stone giant on a mountain path. Riko's hero is a cat named Pepper who lives in an old lighthouse. Birimo's hero is a young dragon named Fizz who sneezes glitter instead of fire. Now, phonics. Words that end in -ly tell us how a character does something. Suddenly, the wind blew. She opened the door carefully. He walked bravely into the cave. To make these words, we usually just add -ly. Sudden becomes suddenly, careful becomes carefully, and brave becomes bravely. Next time, we'll learn how to write a first line that grabs the reader.",
+      "teacherScript": "Hello, everyone! Last time, we said, If I had three wishes, I would ask for a flying bike, a library in my room and a sunny day for everyone. Today, Nib takes us back to his Story Workshop. On the big table, there are four blank story maps. Each map has three boxes: HERO, PLACE and PROBLEM. Nib says, You've heard lots of stories in the Labyrinth. Now it's time to plan your own! Haru writes The Boy and the Stone Giant. Riko writes The Lighthouse Cat. Birimo writes The Dragon Who Sneezed Glitter. Kiko smiles and writes in the HERO box. My hero is a girl who can talk to the wind. Say it with me. My hero is a girl who can talk to the wind. Great! A hero is the main character of a story. Let's read Kiko's story map. \"Story Map by Kiko. Title: The Girl Who Talked to the Wind. Hero: My hero is a girl named Aria who can talk to the wind. She is curious and kind, but sometimes she doesn't listen carefully. Place: Aria lives in a village above the clouds with her parents and her little brother. The wind visits her every evening and tells her about faraway lands. Problem: One night, a strange wind carries Aria far away from home. Now she is in a land she doesn't know, and she can't find the way back. Questions to think about: Who will help her? What will she learn? How will she get home? Nib's note: Great plan, Kiko! A hero with a small weakness is more interesting.\" What is Aria's weakness? Sometimes she doesn't listen carefully. What is her problem? A strange wind carries her far away, and she can't find the way back. Haru's hero is a boy named Leo who finds a sleepy stone giant on a mountain path. Riko's hero is a cat named Pepper who lives in an old lighthouse. Birimo's hero is a young dragon named Fizz who sneezes glitter instead of fire. Now, phonics. Words that end in l y tell us how a character does something. Suddenly, the wind blew. She opened the door carefully. He walked bravely into the cave. To make these words, we usually just add l y. Sudden becomes suddenly, careful becomes carefully, and brave becomes bravely. Next time, we'll learn how to write a first line that grabs the reader.",
       "conversation": {
         "scene": "The friends share their story maps in Nib's Story Workshop",
         "sceneJa": "ニブの 物語工房で 物語の 計画図を 見せあう",
@@ -7705,7 +7721,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと 自分の 物語の 計画を たてよう。主人公（hero）・場所（place）・問題（problem）を きめて My hero is ～ who can ～. で しょうかい しよう。ニブが「What's the problem?」「Why?」と きいたら こたえよう。ほんとうの なまえや じゅうしょは いわなくて いいよ（ものがたりの なまえで いいよ）。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome back to my Story Workshop! Here's a blank story map with three boxes: hero, place and problem. Let's start with the hero. Who is your hero, and what can they do?",
+          "starterEn": "Let's pretend I'm Nib. Welcome back to my Story Workshop! Here's a blank story map with three boxes: hero, place and problem. First, the hero. Who is your hero, and what can they do?",
           "targetExpressions": [
             "My hero is a girl who can talk to the wind.",
             "Where does your story take place? ― It takes place in a village above the clouds.",
@@ -7822,9 +7838,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma asks, Kiko, who's your hero? Kiko says, My hero is a girl who can talk to the wind. Her name is Aria.",
-            "subtitleJa": "エマ先生「キコ、主人公は だれ？」 キコちゃん「わたしの 主人公は、風と 話せる 女の子。名前は アリア。」",
-            "subtitleEn": "Ms. Emma asks, Kiko, who's your hero? Kiko says, My hero is a girl who can talk to the wind. Her name is Aria.",
+            "say": "I ask, Kiko, who's your hero? Kiko says, My hero is a girl who can talk to the wind. Her name is Aria.",
+            "subtitleJa": "わたし「キコ、主人公は だれ？」 キコちゃん「わたしの 主人公は、風と 話せる 女の子。名前は アリア。」",
+            "subtitleEn": "I ask, Kiko, who's your hero? Kiko says, My hero is a girl who can talk to the wind. Her name is Aria.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -8073,6 +8089,7 @@
     {
       "lessonNo": 1097,
       "world": 37,
+      "reviewed": "run9",
       "title": "A Strong Beginning",
       "titleJa": "ひきこまれる 書き出し",
       "school": {
@@ -8163,7 +8180,7 @@
           "emoji": "✊"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, My hero is a girl who can talk to the wind. Today, Nib pulls open a drawer labeled BEGINNINGS. Inside, there are hundreds of tiny paper cards, and each card has the first line of a story. Nib says, The first line is like a door. If it opens in an exciting way, readers want to come in! Ms. Emma reads Kiko's first try out loud. Once there was a girl named Aria. She was nice. Kiko frowns. It's true, but it's a bit boring. Then she writes a new line. On the coldest night of the year, a strange wind knocked on her window. Say it with me. On the coldest night of the year, a strange wind knocked on her window. Great! Now we want to know who is knocking and why. Let's read Nib's workshop card. \"Nib's Workshop Card: Strong Beginnings. A strong beginning makes the reader ask a question. Here are two beginnings of the same story. Beginning A: Once there was a girl named Aria. She lived above the clouds. She was nice. Beginning B: On the coldest night of the year, a strange wind knocked on her window. Aria sat up in bed. The wind had never knocked before. Beginning A gives us facts, but nothing happens. Beginning B starts with a surprise, so we want to read more. Try these tricks. Start with a sound. Start with something strange. Start with a question, like Who would knock on a window at midnight? Then ask yourself: Would I turn the page?\" Why is Beginning B stronger? It starts with a surprise, so we want to read more. What is one trick for a strong beginning? Start with a sound, something strange or a question. Riko writes, On a stormy night, Pepper the lighthouse cat could not sleep. Birimo's first line is just one word. Achoo! Nib laughs and says, That's a sound, so it counts! Now, phonics. The cat crept silently down the stairs. Aria nervously opened the window. The wind gently touched her face. Silent becomes silently. Nervous becomes nervously. Gentle is a little different: we take away the e and add y, so it becomes gently. Next time, we'll find the moment in our stories where everything changes.",
+      "teacherScript": "Hello, everyone! Last time, we said, My hero is a girl who can talk to the wind. Today, Nib pulls open a drawer labeled BEGINNINGS. Inside, there are hundreds of tiny paper cards, and each card has the first line of a story. Nib says, The first line is like a door. If it opens in an exciting way, readers want to come in! I read Kiko's first try out loud. Once there was a girl named Aria. She was nice. Kiko frowns and says, It's true, but it's a bit boring. Then she writes a new line. On the coldest night of the year, a strange wind knocked on her window. Say it with me. On the coldest night of the year, a strange wind knocked on her window. Great! Now we want to know who is knocking and why. Let's read Nib's workshop card. \"Nib's Workshop Card: Strong Beginnings. A strong beginning makes the reader ask a question. Here are two beginnings of the same story. Beginning A: Once there was a girl named Aria. She lived above the clouds. She was nice. Beginning B: On the coldest night of the year, a strange wind knocked on her window. Aria sat up in bed. The wind had never knocked before. Beginning A gives us facts, but nothing happens. Beginning B starts with a surprise, so we want to read more. Try these tricks. Start with a sound. Start with something strange. Start with a question, like Who would knock on a window at midnight? Then ask yourself: Would I turn the page?\" Why is Beginning B stronger? It starts with a surprise, so we want to read more. What is one trick for a strong beginning? Start with a sound, something strange or a question. Riko writes, On a stormy night, Pepper the lighthouse cat could not sleep. Birimo's first line is just one word. Achoo! Nib laughs and says, That's a sound, so it counts! Now, phonics. The cat crept silently down the stairs. Aria nervously opened the window. The wind gently touched her face. Silent becomes silently. Nervous becomes nervously. Gentle is a little different: we take away the e and add y, so it becomes gently. Next time, we'll find the moment in our stories where everything changes.",
       "conversation": {
         "scene": "The friends compare first lines in Nib's Story Workshop",
         "sceneJa": "ニブの 物語工房で 書き出しを くらべる",
@@ -8216,7 +8233,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが 2 つの 書き出しを 見せるよ。どちらが いいか えらんで、because で りゆうを いおう。そのあと 自分の 物語の 書き出しを つくって みよう。ニブが「Why does it grab the reader?」と きいたら こたえよう。6 かい いじょう やりとり しよう",
-          "starterEn": "Here are two beginnings. A: Once there was a boy. He was nice. B: Late one night, something tapped on the boy's window, three times. Which beginning is better? Why?",
+          "starterEn": "Let's pretend I'm Nib. Here are two beginnings. A: Once there was a boy. He was nice. B: Late one night, something tapped on the boy's window, three times. Which beginning is better? Why?",
           "targetExpressions": [
             "On the coldest night of the year, a strange wind knocked on her window.",
             "Which beginning is better? ― The second one, because it makes me want to read more.",
@@ -8546,9 +8563,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Brilliant! You can write a strong first line, choose the better beginning, and say why. Next, go and talk with Haru! See you!",
+            "say": "Great job! You can write a strong first line, choose the better beginning, and say why. Next, go and talk with Haru! See you!",
             "subtitleJa": "すばらしい！ つよい さいしょの 1 行が 書けて、いい ほうの 書き出しを えらんで、その りゆうも いえるね。このあと ハルと おはなし してね！ またね！",
-            "subtitleEn": "Brilliant! You can write a strong first line, choose the better beginning, and say why. Next, go and talk with Haru! See you!",
+            "subtitleEn": "Great job! You can write a strong first line, choose the better beginning, and say why. Next, go and talk with Haru! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -8566,6 +8583,7 @@
     {
       "lessonNo": 1098,
       "world": 37,
+      "reviewed": "run9",
       "title": "The Turning Point",
       "titleJa": "物語の 山場",
       "school": {
@@ -8656,7 +8674,7 @@
           "emoji": "😳"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, On the coldest night of the year, a strange wind knocked on her window. Today, Nib draws a big hill on the blackboard in the Story Workshop. At the bottom of one side, he writes BEGINNING. At the top, he writes TURNING POINT. At the bottom of the other side, he writes ENDING. He says, A story is like climbing a hill. At the top, something happens that changes everything. That's the turning point! Ms. Emma asks, What's the turning point in Pell's story? Riko answers, When she sees the sea! Exactly. Now Kiko needs a turning point for Aria. The strange wind has carried Aria to a land of dry deserts and tall mountains, and she is lost and tired. Kiko writes, Just then, she heard a voice behind her. Say it with me. Just then, she heard a voice behind her. Great! Just then means at that exact moment. Let's read Kiko's middle page. \"Aria walked and walked across the dry sand. Everything was silent. She called the wind's name, but nobody answered. Her feet were tired, and she missed her little brother. She sat down on a rock and hugged her knees. Just then, she heard a voice behind her. It was quiet and a little shy. Excuse me, it said. Are you the girl who talks to the wind? Aria turned around slowly. There, floating in the air, was a tiny breeze, no bigger than a kitten. I'm the youngest wind, it said, and I'm the one who carried you here. I'm sorry. I got lost, and I needed a friend who could listen.\" How did Aria feel before the turning point? Tired, and she missed her little brother. Who was talking behind her? The youngest wind. Birimo shouts, No way! The wind was the problem and the friend! Nib grins and says, And then what happened? You'll find out in the next chapter! Haru's turning point is when the stone giant opens his eyes and says, Please don't go. Riko's is when the cat sees a little boat lost in the fog. Now, phonics. The stone giant stood up proudly. The cat eagerly ran up the stairs. Outside, the wind blew fiercely. Proud becomes proudly. Eager becomes eagerly. Fierce becomes fiercely: we keep the e and add -ly. Next time, we'll learn how to give our stories a happy, satisfying ending.",
+      "teacherScript": "Hello, everyone! Last time, we said, On the coldest night of the year, a strange wind knocked on her window. Today, Nib draws a big hill on the blackboard in the Story Workshop. At the bottom of one side, he writes BEGINNING. At the top, he writes TURNING POINT. At the bottom of the other side, he writes ENDING. He says, A story is like climbing a hill. At the top, something happens that changes everything. That's the turning point! I ask, What's the turning point in Pell's story? Riko answers, When she sees the sea! Exactly. Now Kiko needs a turning point for Aria. The strange wind has carried Aria to a land of dry deserts and tall mountains, and she is lost and tired. Kiko writes, Just then, she heard a voice behind her. Say it with me. Just then, she heard a voice behind her. Great! Just then means at that exact moment. Let's read Kiko's middle page. \"Aria walked and walked across the dry sand. Everything was silent. She called the wind's name, but nobody answered. Her feet were tired, and she missed her little brother. She sat down on a rock and hugged her knees. Just then, she heard a voice behind her. It was quiet and a little shy. Excuse me, it said. Are you the girl who talks to the wind? Aria turned around slowly. There, floating in the air, was a tiny breeze, no bigger than a kitten. I'm the youngest wind, it said, and I'm the one who carried you here. I'm sorry. I got lost, and I needed a friend who could listen.\" How did Aria feel before the turning point? Tired, and she missed her little brother. Who was talking behind her? The youngest wind. Birimo shouts, No way! The wind was the problem and the friend! Nib grins and says, And then what happened? You'll find out in the next chapter! Haru's turning point is when the stone giant opens his eyes and says, Please don't go. Riko's is when the cat sees a little boat lost in the fog. Now, phonics. The stone giant stood up proudly. The cat eagerly ran up the stairs. Outside, the wind blew fiercely. Proud becomes proudly. Eager becomes eagerly. Fierce becomes fiercely: we keep the e and add l y. Next time, we'll learn how to give our stories a happy, satisfying ending.",
       "conversation": {
         "scene": "The friends share the turning points of their stories",
         "sceneJa": "自分の 物語の 山場を 話しあう",
@@ -8709,7 +8727,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと 物語の 山場を つくろう。Just then, ～. で なにかが かわる 場面を いおう。ニブが「Wait, what happened next?」と きいたら つづきを 話そう。6 かい いじょう やりとり しよう",
-          "starterEn": "A boy is walking through a snowy forest, looking for his lost puppy. He's tired, and he wants to go home. Now you add the turning point! Start with Just then, ...",
+          "starterEn": "Let's pretend I'm Nib. A boy is walking through a snowy forest, looking for his lost puppy. He's tired, and he wants to go home. Now you add the turning point! Start with Just then, ...",
           "targetExpressions": [
             "Just then, she heard a voice behind her.",
             "What changes at the turning point? ― Aria finds out who carried her away.",
@@ -8730,9 +8748,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good day, everyone! Last time, we said, On the coldest night of the year, a strange wind knocked on her window. Today, Nib draws a big hill on the blackboard.",
+            "say": "Hi, everyone! Last time, we said, On the coldest night of the year, a strange wind knocked on her window. Today, Nib draws a big hill on the blackboard.",
             "subtitleJa": "みんな、こんにちは！ まえの かいは「1 年で いちばん さむい 夜、ふしぎな 風が その子の まどを ノック した」と いったね。きょうは ニブが 黒板に 大きな 山を かくよ。",
-            "subtitleEn": "Good day, everyone! Last time, we said, On the coldest night of the year, a strange wind knocked on her window. Today, Nib draws a big hill on the blackboard.",
+            "subtitleEn": "Hi, everyone! Last time, we said, On the coldest night of the year, a strange wind knocked on her window. Today, Nib draws a big hill on the blackboard.",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -9078,6 +9096,7 @@
     {
       "lessonNo": 1099,
       "world": 37,
+      "reviewed": "run9",
       "title": "A Satisfying Ending",
       "titleJa": "まんぞくの いく おわりかた",
       "school": {
@@ -9168,7 +9187,7 @@
           "emoji": "🌼"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Just then, she heard a voice behind her. Today, Nib points to the other side of the hill on his blackboard, the side that goes down to the ENDING. He says, A good ending does two things. It solves the problem, and it shows how the hero has changed. Ms. Emma adds, And it should feel just right, like the last piece of a puzzle. So what does Aria learn? At the beginning, she didn't always listen carefully. So in the ending, she listens. She hears that the little wind is lonely, and she becomes its friend. Then Kiko writes her last line. In the end, the wind carried her home. Say it with me. In the end, the wind carried her home. Great! In the end means finally, after everything that happened. Let's read Kiko's last page. \"Aria listened to the youngest wind for a long time. It told her about the places it had seen and how lonely it felt, because the big winds were always too busy to play. I can be your friend, Aria said, but my family will be worried. Can you take me home? The little wind thought for a moment. Then it blew softly, and Aria rose into the air, as light as a dandelion seed. They flew over deserts, rivers and sleeping towns, up to her village. In the end, the wind carried her home. Every evening after that, a small breeze tapped on her window, and Aria always opened it to listen.\" Why was the youngest wind lonely? Because the big winds were always too busy to play. How does Aria change? She learns to listen carefully. Riko says, That's such a satisfying ending. Haru's story ends with the stone giant waving to travelers on the mountain path. In Riko's story, the cat lights the lamp, and the little boat gets home safely. In Birimo's story, the king loves the glitter so much that he holds a Sparkle Festival every year. Nib says, And then what happened? Nothing! That's how you know it's the end! Now, phonics. The boat finally reached the harbor. The giant looked curiously at the boy. The dragon danced gracefully in the sky. Final becomes finally. Curious becomes curiously. Graceful becomes gracefully, just like careful and carefully. Next time is Lesson 1100, and Nib says there will be a party!",
+      "teacherScript": "Hello, everyone! Last time, we said, Just then, she heard a voice behind her. Today, Nib points to the other side of the hill on his blackboard, the side that goes down to the ENDING. He says, A good ending does two things. It solves the problem, and it shows how the hero has changed. I add, And it should feel just right, like the last piece of a puzzle. So what does Aria learn? At the beginning, she didn't always listen carefully. So in the ending, she listens. She hears that the little wind is lonely, and she becomes its friend. Then Kiko writes her last line. In the end, the wind carried her home. Say it with me. In the end, the wind carried her home. Great! In the end means finally, after everything that happened. Let's read Kiko's last page. \"Aria listened to the youngest wind for a long time. It told her about the places it had seen and how lonely it felt, because the big winds were always too busy to play. I can be your friend, Aria said, but my family will be worried. Can you take me home? The little wind thought for a moment. Then it blew softly, and Aria rose into the air, as light as a dandelion seed. They flew over deserts, rivers and sleeping towns, up to her village. In the end, the wind carried her home. Every evening after that, a small breeze tapped on her window, and Aria always opened it to listen.\" Why was the youngest wind lonely? Because the big winds were always too busy to play. How does Aria change? She learns to listen carefully. Riko says, That's such a satisfying ending. Haru's story ends with the stone giant waving to travelers on the mountain path. In Riko's story, the cat lights the lamp, and the little boat gets home safely. In Birimo's story, the king loves the glitter so much that he holds a Sparkle Festival every year. Nib says, And then what happened? Nothing! That's how you know it's the end! Now, phonics. The boat finally reached the harbor. The giant looked curiously at the boy. The dragon danced gracefully in the sky. Final becomes finally. Curious becomes curiously. Graceful becomes gracefully, just like careful and carefully. Next time is Lesson 1100, and Nib says there will be a party!",
       "conversation": {
         "scene": "The friends talk about how their stories end",
         "sceneJa": "自分の 物語の おわりかたを 話しあう",
@@ -9221,7 +9240,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが お話の はじめと 山場を 話すよ。In the end, ～. で おわりを つくろう。ニブが「How does the hero change?」と きいたら こたえよう。6 かい いじょう やりとり しよう",
-          "starterEn": "Here's a story. A little turtle was lost in a big park. Just then, a kind pigeon offered to show him the way to the pond. How should it end? Start with In the end, ...",
+          "starterEn": "Let's pretend I'm Nib. Here's a story. A little turtle was lost in a big park. Just then, a kind pigeon offered to show him the way to the pond. How should it end? Start with In the end, ...",
           "targetExpressions": [
             "In the end, the wind carried her home.",
             "How does the hero change? ― She learns to listen carefully.",
@@ -9370,9 +9389,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo's king loves the glitter so much that he has a Sparkle Festival every year! Ms. Emma says, The problem is solved, and someone learns something. Like the last puzzle piece!",
-            "subtitleJa": "ビリモの 王さまは キラキラが 大すきに なって、まいとし キラキラ・フェスティバルを ひらくんだって！ エマ先生「問題が かいけつ して、だれかが なにかを 学ぶ。パズルの さいごの ピースみたいにね！」",
-            "subtitleEn": "Birimo's king loves the glitter so much that he has a Sparkle Festival every year! Ms. Emma says, The problem is solved, and someone learns something. Like the last puzzle piece!",
+            "say": "Birimo's king loves the glitter so much that he has a Sparkle Festival every year! I say, The problem is solved, and someone learns something. Like the last puzzle piece!",
+            "subtitleJa": "ビリモの 王さまは キラキラが 大すきに なって、まいとし キラキラ・フェスティバルを ひらくんだって！ わたし「問題が かいけつ して、だれかが なにかを 学ぶ。パズルの さいごの ピースみたいにね！」",
+            "subtitleEn": "Birimo's king loves the glitter so much that he has a Sparkle Festival every year! I say, The problem is solved, and someone learns something. Like the last puzzle piece!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -9571,6 +9590,7 @@
     {
       "lessonNo": 1100,
       "world": 37,
+      "reviewed": "run9",
       "title": "Lesson 1100 Story Party",
       "titleJa": "1100 かい きねん 物語パーティー",
       "school": {
@@ -9668,7 +9688,7 @@
           "emoji": "🍋"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, In the end, the wind carried her home. Today is a very special day. It's our 1,100th lesson! When we walk into the Story Workshop, we all gasp. The room is full of paper lanterns, and each lantern is folded from a page of an old story. On the big table, there is a tall cake shaped like a stack of books, with a tiny chocolate mouse on top. Ms. Emma lights the candles. Saffron has sent a basket of warm cinnamon rolls from the Dragon Room, and the Well of Wishes has sent a big bottle of bubbly lemonade. Nib climbs onto a teacup and shouts, Let's share our story ideas! Say it with me. Let's share our story ideas! Great! Let's read the party program. \"The Story Idea Party! Program. One: Cake and lemonade. Nib asks you to save the chocolate mouse for him. Two: Story Idea Share. Each friend tells the title, the hero and the problem of their story in one minute. Kiko: The Girl Who Talked to the Wind. Riko: The Lighthouse Cat. Haru: The Boy and the Stone Giant. Birimo: The Dragon Who Sneezed Glitter. Three: Friendly Questions. After each idea, ask one question, like Who helps the hero? or What happens next? Four: Lantern Wishes. Write one kind wish for your story on a paper lantern. Please clap loudly and laugh kindly. Thank you for being such brave and creative storytellers!\" What does each friend tell in one minute? The title, the hero and the problem of their story. What do the friends write on the paper lanterns? One kind wish for their story. The friends share their ideas bravely, and everyone claps. When Birimo shouts Achoo, the whole room laughs. Then the Storybook begins to glow, and the fourth golden page appears! It says, The fourth secret of stories: every story begins with one small idea. Far away in the maze, we hear an old voice telling a story by a crackling fire. Now, phonics. Let's review. Bravely means in a brave way: brave plus -ly. At the bottom of the well, she found, pause, a golden key. Boom is the sound of fireworks or thunder. Glimmer means to shine with a weak light that comes and goes, just like our paper lanterns. Next time, we'll meet Granny Willa, the old storyteller in the Hearth Room!",
+      "teacherScript": "Hello, everyone! Last time, we said, In the end, the wind carried her home. Today is a very special day. It's our 1,100th lesson! When we walk into the Story Workshop, we all gasp. The room is full of paper lanterns, and each lantern is folded from a page of an old story. On the big table, there is a tall cake shaped like a stack of books, with a tiny chocolate mouse on top. I light the candles. Saffron has sent a basket of warm cinnamon rolls from the Dragon Room, and the Well of Wishes has sent a big bottle of bubbly lemonade. Nib climbs onto a teacup and shouts, Let's share our story ideas! Say it with me. Let's share our story ideas! Great! Let's read the party program. \"The Story Idea Party! Program. One: Cake and lemonade. Nib asks you to save the chocolate mouse for him. Two: Story Idea Share. Each friend tells the title, the hero and the problem of their story in one minute. Kiko: The Girl Who Talked to the Wind. Riko: The Lighthouse Cat. Haru: The Boy and the Stone Giant. Birimo: The Dragon Who Sneezed Glitter. Three: Friendly Questions. After each idea, ask one question, like Who helps the hero? or What happens next? Four: Lantern Wishes. Write one kind wish for your story on a paper lantern. Please clap loudly and laugh kindly. Thank you for being such brave and creative storytellers!\" What does each friend tell in one minute? The title, the hero and the problem of their story. What do the friends write on the paper lanterns? One kind wish for their story. The friends share their ideas bravely, and everyone claps. When Birimo shouts Achoo, the whole room laughs. Then the Storybook begins to glow, and the fourth golden page appears! It says, The fourth secret of stories: every story begins with one small idea. Far away in the maze, we hear an old voice telling a story by a crackling fire. Now, phonics. Let's review. Bravely means in a brave way: brave plus l y. At the bottom of the well, she found, pause, a golden key. Boom is the sound of fireworks or thunder. Glimmer means to shine with a weak light that comes and goes, just like our paper lanterns. Next time, we'll meet Granny Willa, the old storyteller in the Hearth Room!",
       "conversation": {
         "scene": "The Lesson 1100 Story Idea Party in Nib's Story Workshop",
         "sceneJa": "ニブの 物語工房で 1,100 回 記念の 物語アイデア・パーティー",
@@ -9726,7 +9746,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと 1,100 回 記念 パーティーで 物語の アイデアを 話そう。タイトル・主人公・問題を つたえよう。ニブが「Who helps the hero?」「And then what happened?」と きいたら つづきを 話そう。6 かい いじょう やりとり しよう",
-          "starterEn": "Happy 1,100th lesson! Have some cake and lemonade. Now, let's share our story ideas! What's your story called, and who is the hero?",
+          "starterEn": "Let's pretend I'm Nib. Happy 1,100th lesson! Have some cake and lemonade. Now, it's time to share our story ideas! What's your story called, and who is the hero?",
           "targetExpressions": [
             "Let's share our story ideas!",
             "Who helps the hero? ― A tiny breeze becomes her friend.",
@@ -9843,9 +9863,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma says, Happy eleven hundredth lesson, everyone! Birimo says, Let's cut the cake! Can I have the chocolate mouse? Riko says, No, Birimo, that's for Nib!",
-            "subtitleJa": "エマ先生「みんな、1,100 回 おめでとう！」 ビリモ「ケーキを きろう！ チョコの ネズミ、もらって いい？」 リコちゃん「だめよ、ビリモ。それは ニブの！」",
-            "subtitleEn": "Ms. Emma says, Happy eleven hundredth lesson, everyone! Birimo says, Let's cut the cake! Can I have the chocolate mouse? Riko says, No, Birimo, that's for Nib!",
+            "say": "I say, Happy eleven hundredth lesson, everyone! Birimo says, Let's cut the cake! Can I have the chocolate mouse? Riko says, No, Birimo, that's for Nib!",
+            "subtitleJa": "わたし「みんな、1,100 回 おめでとう！」 ビリモ「ケーキを きろう！ チョコの ネズミ、もらって いい？」 リコちゃん「だめよ、ビリモ。それは ニブの！」",
+            "subtitleEn": "I say, Happy eleven hundredth lesson, everyone! Birimo says, Let's cut the cake! Can I have the chocolate mouse? Riko says, No, Birimo, that's for Nib!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -9875,9 +9895,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko's hero? A tiny breeze becomes her friend. Then the Storybook glows. The fourth golden page! Every story begins with one small idea.",
-            "subtitleJa": "キコちゃんの 主人公は？ 小さな そよ風が 友だちに なるの。すると 物語の 本が ひかるよ。4まいめの 金の ページ！ どんな 物語も、ひとつの 小さな アイデアから はじまる。",
-            "subtitleEn": "Kiko's hero? A tiny breeze becomes her friend. Then the Storybook glows. The fourth golden page! Every story begins with one small idea.",
+            "say": "Who helps Kiko's hero? A tiny breeze becomes her friend. Then the Storybook glows. The fourth golden page! Every story begins with one small idea.",
+            "subtitleJa": "キコちゃんの 主人公を たすけるのは？ 小さな そよ風が 友だちに なるの。すると 物語の 本が ひかるよ。4まいめの 金の ページ！ どんな 物語も、ひとつの 小さな アイデアから はじまる。",
+            "subtitleEn": "Who helps Kiko's hero? A tiny breeze becomes her friend. Then the Storybook glows. The fourth golden page! Every story begins with one small idea.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -10075,6 +10095,7 @@
     {
       "lessonNo": 1101,
       "world": 37,
+      "reviewed": "run9",
       "title": "Telling a Story Aloud",
       "titleJa": "お話を 声に 出して 語ろう",
       "school": {
@@ -10218,7 +10239,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ウィラおばあさんが みじかい お話を 語るよ。Pause. Lower your voice. Then, BOO! の わざで 自分も びっくりの ある お話を 語って みよう。おばあさんが「Why did you stop there?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Come in, my dear, and sit by the fire. Let me show you a trick. The old box was very quiet, and then... it moved! Did you jump? Now it's your turn. Tell me a tiny story with a surprise at the end.",
+          "starterEn": "Let's pretend I'm Granny Willa. Come in, my dear, and sit by the fire. Let me show you a trick. The old box was very quiet, and then... it moved! Did you jump? Now it's your turn. Tell me a tiny story with a surprise at the end.",
           "targetExpressions": [
             "Pause. Lower your voice. Then, BOO!",
             "Why did you stop there? ― To make you wait!",
@@ -10519,9 +10540,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Make your own tiny surprise. The old box was very quiet, and then, pause, it moved! BOO!",
-            "subtitleJa": "あなたの ばん！ じぶんの 小さな びっくりを つくろう。ふるい はこは とても しずか だった。そして、ここで まを とって、うごいた！ ワッ！",
-            "subtitleEn": "Your turn! Make your own tiny surprise. The old box was very quiet, and then, pause, it moved! BOO!",
+            "say": "Your turn! Make your own tiny surprise. The old box was very quiet, and then… it moved! BOO!",
+            "subtitleJa": "あなたの ばん！ じぶんの 小さな びっくりを つくろう。ふるい はこは とても しずか だった。そして…（ここで まを とって）うごいた！ ワッ！",
+            "subtitleEn": "Your turn! Make your own tiny surprise. The old box was very quiet, and then… it moved! BOO!",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -10566,9 +10587,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Wonderful! You can pause, lower your voice, and surprise your listeners. And you know as brave as a lion! Next, go and talk with Haru! See you!",
+            "say": "Wonderful! You can pause, lower your voice, and surprise your listeners. And you know the simile as brave as a lion! Next, go and talk with Haru! See you!",
             "subtitleJa": "すばらしい！ まを とって、こえを 小さく して、きいて いる 人を びっくり させられるね。as brave as a lion も わかるね！ このあと ハルくんと おはなし してね！ またね！",
-            "subtitleEn": "Wonderful! You can pause, lower your voice, and surprise your listeners. And you know as brave as a lion! Next, go and talk with Haru! See you!",
+            "subtitleEn": "Wonderful! You can pause, lower your voice, and surprise your listeners. And you know the simile as brave as a lion! Next, go and talk with Haru! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -10586,6 +10607,7 @@
     {
       "lessonNo": 1102,
       "world": 37,
+      "reviewed": "run9",
       "title": "Talking to the Audience",
       "titleJa": "きいて いる 人に 話しかけよう",
       "school": {
@@ -10724,7 +10746,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ウィラおばあさんが お話を 語りながら、とちゅうで「Can you guess what happened next?」と きくよ。すいそくを いおう。おばあさんが「Why do you think so?」と きいたら りゆうを いおう。こんどは 自分が 語って、Can you guess what happened next? と きいて みよう。6 かい いじょう やりとり しよう",
-          "starterEn": "Once upon a time, a little fox found a tiny wooden door at the bottom of a tree. She knocked three times, and the door slowly opened. Can you guess what happened next?",
+          "starterEn": "Let's pretend I'm Granny Willa. Once upon a time, a little fox found a tiny wooden door at the bottom of a tree. She knocked three times, and the door slowly opened. Can you guess what happened next?",
           "targetExpressions": [
             "Can you guess what happened next?",
             "Who do you think climbed up the mountain? ― The bear!",
@@ -10941,9 +10963,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Crawl like a little snail! Slowly, slowly, up the mountain. Now blow a warm breath on the lantern. Haaa!",
+            "say": "Crawl like a little snail! Slowly, slowly, up the mountain. Now blow a warm breath on the lantern. Ahh!",
             "subtitleJa": "小さな カタツムリみたいに はって！ ゆっくり、ゆっくり、山の うえへ。こんどは ランタンに あたたかい いきを ふきかけて。はぁー！",
-            "subtitleEn": "Crawl like a little snail! Slowly, slowly, up the mountain. Now blow a warm breath on the lantern. Haaa!",
+            "subtitleEn": "Crawl like a little snail! Slowly, slowly, up the mountain. Now blow a warm breath on the lantern. Ahh!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -11092,6 +11114,7 @@
     {
       "lessonNo": 1103,
       "world": 37,
+      "reviewed": "run9",
       "title": "Feedback for Friends",
       "titleJa": "友だちの お話に 感想と アドバイス",
       "school": {
@@ -11184,7 +11207,7 @@
           "emoji": "✨"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Can you guess what happened next? Today, Birimo is so excited that he can't sit still. He stands in front of the fire, holds up his notebook and reads his story to all of us. When he finishes, Granny Willa puts down her knitting and says, Now, my dears, a storyteller grows when friends give kind feedback. Here is my rule. First, say something you liked, and be specific. Then, give one gentle idea, not ten. Use Maybe you could, so it sounds friendly. Haru goes first. He says, I loved the part where the dragon sneezed. Maybe you could tell us more about the castle. Say it with me. I loved the part where the dragon sneezed. Maybe you could tell us more about the castle. Great! Birimo grins from ear to ear. Let's read the story that Birimo read to us. \"The Dragon Who Sneezed Glitter, by Birimo. Fizz was a small green dragon who lived on a hill next to a big castle. Fizz had a problem. Whenever he smelled flowers, his nose began to tickle. Ah... ah... ACHOO! Instead of fire, a cloud of glitter came out! It flew across the sky like a shooting star and landed on everything. The queen's cat turned pink and sparkly. The guards' helmets turned gold and purple. Even the castle, which had been as white as snow, was now every color of the rainbow. Fizz felt terrible, so he hid behind a big rock. But the next morning, people came from far away to see the shining castle. The queen laughed and told Fizz, You're the best decorator in the kingdom!\" What came out when Fizz sneezed? A cloud of glitter. Why did people come from far away? To see the shining castle. Kiko says, I loved the part where the cat turned pink. Maybe you could add a sound word for the glitter. Birimo nods. Thanks! That's a great idea. Granny Willa smiles. You see? Kind words first, then one idea. Now, phonics. Here are three more similes. The castle was as white as snow. Saffron's old scales are as hard as a rock. A simile can use like, too. The glitter flew like a shooting star. Which word goes in as white as ... ? Snow! Next time, we'll use our friends' ideas to rewrite our stories.",
+      "teacherScript": "Hello, everyone! Last time, we said, Can you guess what happened next? Today, Birimo is so excited that he can't sit still. He stands in front of the fire, holds up his notebook and reads his story to all of us. When he finishes, Granny Willa puts down her knitting and says, Now, my dears, a storyteller grows when friends give kind feedback. Here is my rule. First, say something you liked, and be specific. Then, give one gentle idea, not ten. Use Maybe you could, so it sounds friendly. Haru goes first. He says, I loved the part where the dragon sneezed. Maybe you could tell us more about the castle. Say it with me. I loved the part where the dragon sneezed. Maybe you could tell us more about the castle. Great! Birimo grins from ear to ear. Let's read the story that Birimo read to us. \"The Dragon Who Sneezed Glitter, by Birimo. Fizz was a small green dragon who lived on a hill next to a big castle. Fizz had a problem. Whenever he smelled flowers, his nose began to tickle. Ah... ah... ACHOO! Instead of fire, a cloud of glitter came out! It flew across the sky like a shooting star and landed on everything. The queen's cat turned pink and sparkly. The guards' helmets turned gold and purple. Even the castle, which had been as white as snow, was now every color of the rainbow. Fizz felt terrible, so he hid behind a big rock. But the next morning, people came from far away to see the shining castle. The queen laughed and told Fizz, You're the best decorator in the kingdom!\" What came out when Fizz sneezed? A cloud of glitter. Why did people come from far away? To see the shining castle. Kiko says, I loved the part where the cat turned pink. Riko adds, Maybe you could add a sound word for the glitter. Birimo nods. Thanks! That's a great idea. Granny Willa smiles. You see? Kind words first, then one idea. Now, phonics. Here are three more similes. The castle was as white as snow. Saffron's old scales are as hard as a rock. A simile can use like, too. The glitter flew like a shooting star. Which word goes in as white as ... ? Snow! Next time, we'll use our friends' ideas to rewrite our stories.",
       "conversation": {
         "scene": "The friends give Birimo feedback on his story about the glitter dragon",
         "sceneJa": "みんなで ビリモの キラキラ竜の お話に 感想と アドバイスを いう",
@@ -11237,7 +11260,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが じぶんの みじかい お話を 読むよ。I loved the part where ～. で よかった ところを さきに いって、Maybe you could ～. で アドバイスを 1 つ いおう。ニブが「Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Here's my story! A tiny mouse found a giant cheese in the moonlight, but it was too heavy to carry, so he asked a friendly owl for help. The end! What did you like? And do you have one idea for me?",
+          "starterEn": "Let's pretend I'm Nib. Here's my story! A tiny mouse found a giant cheese in the moonlight. It was too heavy to carry, so he asked a friendly owl for help. The end! What did you like? And do you have one idea for me?",
           "targetExpressions": [
             "I loved the part where the dragon sneezed. Maybe you could tell us more about the castle.",
             "What was your favorite part? ― The part where the cat turned pink!",
@@ -11370,9 +11393,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko asks, What was your favorite part, Kiko? The part where the cat turned pink! Riko adds, Maybe you could add a sound word, like whoosh! Birimo says, Thanks! That's a great idea.",
-            "subtitleJa": "リコちゃん「キコは どこが いちばん すきだった？」 「ネコが ピンクに なった ところ！」 リコちゃんが つけたす。「音の ことばを いれても いいかも。ヒューッ！ みたいに。」 ビリモ「ありがとう！ いい アイデアだね。」",
-            "subtitleEn": "Riko asks, What was your favorite part, Kiko? The part where the cat turned pink! Riko adds, Maybe you could add a sound word, like whoosh! Birimo says, Thanks! That's a great idea.",
+            "say": "Riko asks, What was your favorite part, Kiko? Kiko says, The part where the cat turned pink! Riko adds, Maybe you could add a sound word, like whoosh! Birimo says, Thanks! That's a great idea.",
+            "subtitleJa": "リコちゃん「キコは どこが いちばん すきだった？」 キコちゃん「ネコが ピンクに なった ところ！」 リコちゃんが つけたす。「音の ことばを いれても いいかも。ヒューッ！ みたいに。」 ビリモ「ありがとう！ いい アイデアだね。」",
+            "subtitleEn": "Riko asks, What was your favorite part, Kiko? Kiko says, The part where the cat turned pink! Riko adds, Maybe you could add a sound word, like whoosh! Birimo says, Thanks! That's a great idea.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -11387,9 +11410,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. First, say what you liked, and be specific. Then give one idea, not ten. Maybe you could sounds friendly.",
+            "say": "Here's the point. First, say what you liked, and be specific. Then give one idea, not ten. Start with Maybe you could. It sounds friendly.",
             "subtitleJa": "ポイント。まず よかった ところを、くわしく いおう。それから アイデアは 10こ じゃなくて 1つ。Maybe you could と いうと やさしく きこえるよ。",
-            "subtitleEn": "Here's the point. First, say what you liked, and be specific. Then give one idea, not ten. Maybe you could sounds friendly.",
+            "subtitleEn": "Here's the point. First, say what you liked, and be specific. Then give one idea, not ten. Start with Maybe you could. It sounds friendly.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -11607,6 +11630,7 @@
     {
       "lessonNo": 1104,
       "world": 37,
+      "reviewed": "run9",
       "title": "Rewrite and Improve",
       "titleJa": "書きなおして よく しよう",
       "school": {
@@ -11697,7 +11721,7 @@
           "emoji": "🔁"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I loved the part where the dragon sneezed. Maybe you could tell us more about the castle. Today, Granny Willa gives each of us a fresh sheet of paper and a pencil. She says, The first draft is never the last draft, my dears. Even I rewrite my stories again and again. Then she shows us three tricks. One: change plain words into vivid words. Instead of said, try whispered, shouted or muttered. Two: add a simile, so the listener can see the picture. Three: cut extra words that don't help the story. Riko works on The Lighthouse Cat. When she finishes, she holds up her paper proudly and says, I changed 'said' to 'whispered.' Say it with me. I changed 'said' to 'whispered.' Great! She changed a lot of other things, too. Let's read the two versions of Riko's paragraph. \"Before: The cat was in the lighthouse. It was night. There was a storm. A boat was coming. The cat was scared. She said, I have to help. She went up the stairs. She turned on the light. The boat was safe. After: On a stormy night, Pepper the lighthouse cat could not sleep. Far out at sea, a little fishing boat was rocking on the waves, and the lighthouse lamp had gone out! Her tail was shaking, but she whispered, I have to help. She ran like the wind up two hundred stairs and pushed the big switch with both paws. Click! The light swept across the water, as bright as the moon. Slowly, the little boat turned toward the harbor. That night, Pepper slept like a log.\" How did Riko show that Pepper was scared? Her tail was shaking. What did Pepper do to help the boat? She ran up the stairs and turned on the light. Haru says, Your new version is much better! It feels like a movie. Riko smiles. Thanks for your ideas yesterday. They really helped. Now, phonics. These similes use like. After a long, busy day, we sleep like a log. A good swimmer can swim like a fish. And Pepper ran like the wind. Which word goes in sleep like a ... ? Log! Next time, we'll tell our stories by the fire on Storytelling Night.",
+      "teacherScript": "Hello, everyone! Last time, we said, I loved the part where the dragon sneezed. Maybe you could tell us more about the castle. Today, Granny Willa gives each of us a fresh sheet of paper and a pencil. She says, The first draft is never the last draft, my dears. Even I rewrite my stories again and again. Then she shows us three tricks. One: change plain words into vivid words. Instead of said, try whispered, shouted or muttered. Two: add a simile, so the listener can see the picture. Three: cut extra words that don't help the story. Riko works on The Lighthouse Cat. When she finishes, she holds up her paper proudly and says, I changed 'said' to 'whispered.' Say it with me. I changed 'said' to 'whispered.' Great! She changed a lot of other things, too. Let's read the two versions of Riko's paragraph. \"Before: The cat was in the lighthouse. It was night. There was a storm. A boat was coming. The cat was scared. She said, I have to help. She went up the stairs. She turned on the light. The boat was safe. After: On a stormy night, Pepper the lighthouse cat could not sleep. Far out at sea, a little fishing boat was rocking on the waves, and the lighthouse lamp had gone out! Her tail was shaking, but she whispered, I have to help. She ran like the wind up two hundred stairs and pushed the big switch with both paws. Click! The light swept across the water, as bright as the moon. Slowly, the little boat turned toward the harbor. That night, Pepper slept like a log.\" How did Riko show that Pepper was scared? Her tail was shaking. What did Pepper do to help the boat? She ran up the stairs and turned on the light. Haru says, Your new version is much better! It feels like a movie. Riko smiles. Thanks for your ideas. They really helped. Now, phonics. These similes use like. After a long, busy day, we sleep like a log. A good swimmer can swim like a fish. And Pepper ran like the wind. Which word goes in sleep like a ... ? Log! Next time, we'll tell our stories by the fire on Storytelling Night.",
       "conversation": {
         "scene": "Riko and her friends compare their first drafts and new versions",
         "sceneJa": "リコと 友だちが 下書きと 書きなおした ものを くらべる",
@@ -11745,7 +11769,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ウィラおばあさんが みじかくて ふつうの 文を 見せるよ。said を ほかの ことばに かえたり、たとえを たしたり して 書きなおそう。I changed ～ to ～. で せつめい して、おばあさんが「Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Here is a plain sentence, my dear: The boy said, There's a dragon. He went home. Hmm, it's a bit flat, isn't it? How would you rewrite it? Tell me what you changed.",
+          "starterEn": "Let's pretend I'm Granny Willa. Here are two plain sentences, my dear: The boy said, There's a dragon. He went home. Hmm, it's a bit flat, isn't it? How would you rewrite it? Tell me what you changed.",
           "targetExpressions": [
             "I changed 'said' to 'whispered.'",
             "What else did you change? ― I cut some extra words.",
@@ -12046,9 +12070,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! The boy said, There's a dragon. Change said. Shouted? Whispered? Tell me, I changed said to your word!",
+            "say": "Your turn! The boy said, There's a dragon. Change said. Shouted? Whispered? Then say, I changed said to, and your new word!",
             "subtitleJa": "あなたの ばん！「男の子は、りゅうが いる、と いった。」 said を もっと いい ことばに かえよう。shouted？ whispered？ それから「said を ～に かえたよ」と いってね！",
-            "subtitleEn": "Your turn! The boy said, There's a dragon. Change said. Shouted? Whispered? Tell me, I changed said to your word!",
+            "subtitleEn": "Your turn! The boy said, There's a dragon. Change said. Shouted? Whispered? Then say, I changed said to, and your new word!",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -12113,6 +12137,7 @@
     {
       "lessonNo": 1105,
       "world": 37,
+      "reviewed": "run9",
       "title": "Storytelling Night",
       "titleJa": "語りの 夜",
       "school": {
@@ -12210,7 +12235,7 @@
           "emoji": "☕"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I changed 'said' to 'whispered.' Tonight is Storytelling Night in the Hearth Room! Nib has put cushions and soft blankets all around the fire, and Granny Willa hands everyone a warm cup of cocoa. Ms. Emma sits with us in the firelight. Even Saffron, the old golden dragon, has come to listen. Each friend tells the beginning of a story. Riko tells The Lighthouse Cat, and Haru tells The Boy and the Stone Giant in a big, deep voice. Birimo tells The Dragon Who Sneezed Glitter, with a new sound word, whoosh! Then it's Kiko's turn. She takes a deep breath, pauses, and begins softly. Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Say it with me. Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Beautiful! Let's read the first page of Kiko's story. \"Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Her name was Aria. Every morning, the wind told her secrets: where the birds were flying, which flowers were opening, and when the rain was coming. Aria loved her village in the sky, with its cloud gardens and rainbow bridges. On the coldest night of the year, a strange wind knocked on her window. Its voice was soft and a little sad, and it was singing a song that Aria had never heard before. Come with me, it said. I'm lost, and I need a friend who can listen. Aria pulled on her warm coat and opened the window. The wind lifted her up, gently but quickly, over the edge of the clouds, toward a land she had never seen.\" Who is the hero of Kiko's story? A girl named Aria who can talk to the wind. Why did the strange wind come? Because it was lost and needed a friend. Everyone claps. Saffron's eyes shine. Then the Storybook starts to glow, and a fifth golden page appears! Nib reads it aloud. The fifth secret of stories: a story comes alive when you tell it aloud. Now, phonics. Let's review. He was as brave as a lion. After a long wait, finally, it was Kiko's turn. Out of the giant egg came, pause, a baby star. Leaves flutter in the wind. Next time, we'll read a longer tale about a grumpy king.",
+      "teacherScript": "Hello, everyone! Last time, we said, I changed 'said' to 'whispered.' Tonight is Storytelling Night in the Hearth Room! Nib has put cushions and soft blankets all around the fire, and Granny Willa hands everyone a warm cup of cocoa. I sit with everyone in the firelight. Even Saffron, the old golden dragon, has come to listen. Each friend tells the beginning of a story. Riko tells The Lighthouse Cat, and Haru tells The Boy and the Stone Giant in a big, deep voice. Birimo tells The Dragon Who Sneezed Glitter, with a new sound word, whoosh! Then it's Kiko's turn. She takes a deep breath, pauses, and begins softly. Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Say it with me. Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Beautiful! Let's read the first page of Kiko's story. \"Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Her name was Aria. Every morning, the wind told her secrets: where the birds were flying, which flowers were opening, and when the rain was coming. Aria loved her village in the sky, with its cloud gardens and rainbow bridges. On the coldest night of the year, a strange wind knocked on her window. Its voice was soft and a little sad, and it was singing a song that Aria had never heard before. Come with me, it said. I'm lost, and I need a friend who can listen. Aria pulled on her warm coat and opened the window. The wind lifted her up, gently but quickly, over the edge of the clouds, toward a land she had never seen.\" Who is the hero of Kiko's story? A girl named Aria who can talk to the wind. Why did the strange wind come? Because it was lost and needed a friend. Everyone claps. Saffron's eyes shine. Then the Storybook starts to glow, and a fifth golden page appears! Nib reads it aloud. The fifth secret of stories: a story comes alive when you tell it aloud. Now, phonics. Let's review. He was as brave as a lion. After a long wait, finally, it was Kiko's turn. Out of the giant egg came, pause, a baby star. Leaves flutter in the wind. Next time, we'll read a longer tale about a grumpy king.",
       "conversation": {
         "scene": "The friends tell stories by the fire on Storytelling Night",
         "sceneJa": "語りの 夜に だんろの そばで みんなが お話を 語る",
@@ -12268,7 +12293,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが 語りの 夜の 司会を するよ。Once, in a land beyond ～, there lived ～. で 自分の 物語の はじまりを 語ろう。ニブが「And then what happened?」と きいたら つづきを 話そう。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome to Storytelling Night! The fire is warm, and everyone is listening. It's your turn now. How does your story begin?",
+          "starterEn": "Let's pretend I'm Nib. Welcome to Storytelling Night! The fire is warm, and everyone is listening. It's your turn now. How does your story begin?",
           "targetExpressions": [
             "Once, in a land beyond the clouds, there lived a girl who could talk to the wind.",
             "Shh, the story is starting! ― I can't wait!",
@@ -12289,9 +12314,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good evening, everyone! Last time, we rewrote our stories. Tonight is Storytelling Night! Cozy blankets and warm cocoa for everyone.",
-            "subtitleJa": "みんな、こんばんは！ まえの かいは お話を 書きなおしたね。こんやは かたりの よる！ あったかい ブランケット、そして みんなに あたたかい ココア。",
-            "subtitleEn": "Good evening, everyone! Last time, we rewrote our stories. Tonight is Storytelling Night! Cozy blankets and warm cocoa for everyone.",
+            "say": "Hi, everyone! Last time, we rewrote our stories. Tonight is Storytelling Night! Cozy blankets and warm cocoa for everyone.",
+            "subtitleJa": "やあ、みんな！ まえの かいは お話を 書きなおしたね。こんやは かたりの よる！ あったかい ブランケット、そして みんなに あたたかい ココア。",
+            "subtitleEn": "Hi, everyone! Last time, we rewrote our stories. Tonight is Storytelling Night! Cozy blankets and warm cocoa for everyone.",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -12416,9 +12441,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Say once, a place, and who lived there. Listeners start to wonder. Then, look! A golden page! It's the fifth one!",
+            "say": "Here's the point. Start with Once, then a place, and who lived there. Listeners start to wonder. Then, look! A golden page! It's the fifth one!",
             "subtitleJa": "ポイント。once、ばしょ、そして だれが すんで いたかを いおう。きいて いる 人は わくわく しはじめるよ。そして、見て！ 金の ページ！ 5まいめだ！",
-            "subtitleEn": "Here's the point. Say once, a place, and who lived there. Listeners start to wonder. Then, look! A golden page! It's the fifth one!",
+            "subtitleEn": "Here's the point. Start with Once, then a place, and who lived there. Listeners start to wonder. Then, look! A golden page! It's the fifth one!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -12613,9 +12638,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "What a cozy night! You can begin a story, pause before a surprise, and say finally and flutter. Next, go and talk with Haru! Good night!",
-            "subtitleJa": "なんて あったかい よる！ お話を はじめる ことも、びっくりの まえで まを とる ことも、finally や flutter を いう ことも できるね。このあと ハルくんと おはなし してね！ おやすみ！",
-            "subtitleEn": "What a cozy night! You can begin a story, pause before a surprise, and say finally and flutter. Next, go and talk with Haru! Good night!",
+            "say": "What a cozy night! You can begin a story, pause before a surprise, and say finally and flutter. Next, go and talk with Haru! See you!",
+            "subtitleJa": "なんて あったかい よる！ お話を はじめる ことも、びっくりの まえで まを とる ことも、finally や flutter を いう ことも できるね。このあと ハルくんと おはなし してね！ またね！",
+            "subtitleEn": "What a cozy night! You can begin a story, pause before a surprise, and say finally and flutter. Next, go and talk with Haru! See you!",
             "gesture": "wave",
             "slide": {
               "title": "Today's wrap-up",
@@ -12633,6 +12658,7 @@
     {
       "lessonNo": 1106,
       "world": 37,
+      "reviewed": "run9",
       "title": "Reading a Longer Tale",
       "titleJa": "ながめの お話を 読もう",
       "school": {
@@ -12733,7 +12759,7 @@
           "emoji": "🕊️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Nib leads us to a quiet reading room full of soft chairs. On a tall stand, there is one thick book. Nib taps the cover with his feather pen and says, This tale is longer than the others, so read slowly. Ms. Emma asks one big question. Read the tale. Why did the king change his mind? Say it with me. Read the tale. Why did the king change his mind? Great! Let's read it together. \"The King Who Banned Singing. Long ago, in a busy little town, there lived a king who was always grumpy. Every day, the town was full of noise. Bakers sang as they baked, children sang on their way to the market, and the bells rang every hour. The noise gave the king terrible headaches. So one morning, he made a new rule: No more singing! The town became very quiet, and very sad. Then one stormy night, thunder rolled across the sky. In her family's barn near the castle, a baby goat was so frightened that it couldn't stop crying. A little girl named Tess sat down beside it with her lantern and gently hummed a soft song. Slowly, the baby goat closed its eyes. Up in his tower, the king heard the song through his window. For the first time in years, he felt peaceful. The next morning, he changed the rule. Soft songs were allowed again, and from then on, the town had a singing day every year.\" Why did the king ban singing? Because the noise gave him headaches. Why did he change his mind? Because Tess's soft song made him feel peaceful for the first time in years. Kiko says, I think the king wasn't really bad. He was just tired. Riko says, I see your point, but he made the whole town sad. Nib claps his tiny paws. Good readers can disagree, as long as they give reasons! Now, phonics. Let's review. Glance means look very quickly. Sizzle is the sound of food in a hot pan. She had never seen the sea before, and now, pause, it was right in front of her. Tess gently hummed a song. The stormy night was as cold as ice. Next time, we'll hear a story told by a wolf.",
+      "teacherScript": "Hello, everyone! Last time, we said, Once, in a land beyond the clouds, there lived a girl who could talk to the wind. Nib leads us to a quiet reading room full of soft chairs. On a tall stand, there is one thick book. Nib taps the cover with his feather pen and says, This tale is longer than the others, so read slowly. I ask one big question. Read the tale. Why did the king change his mind? Say it with me. Read the tale. Why did the king change his mind? Great! Let's read it together. \"The King Who Banned Singing. Long ago, in a busy little town, there lived a king who was always grumpy. Every day, the town was full of noise. Bakers sang as they baked, children sang on their way to the market, and the bells rang every hour. The noise gave the king terrible headaches. So one morning, he made a new rule: No more singing! The town became very quiet, and very sad. Then one stormy night, thunder rolled across the sky. In her family's barn near the castle, a baby goat was so frightened that it couldn't stop crying. A little girl named Tess sat down beside it with her lantern and gently hummed a soft song. Slowly, the baby goat closed its eyes. Up in his tower, the king heard the song through his window. For the first time in years, he felt peaceful. The next morning, he changed the rule. Soft songs were allowed again, and from then on, the town had a singing day every year.\" Why did the king ban singing? Because the noise gave him headaches. Why did he change his mind? Because Tess's soft song made him feel peaceful for the first time in years. Kiko says, I think the king wasn't really bad. He was just tired. Riko says, I see your point, but he made the whole town sad. Nib claps his tiny paws. Good readers can disagree, as long as they give reasons! Now, phonics. Let's review. Glance means look very quickly. Sizzle is the sound of food in a hot pan. She had never seen the sea before, and now, pause, it was right in front of her. Tess gently hummed a song. The stormy night was as cold as ice. Next time, we'll hear a story told by a wolf.",
       "conversation": {
         "scene": "The friends talk about why the king changed his mind",
         "sceneJa": "王さまが どうして 気が かわったのか 話し合う",
@@ -12781,7 +12807,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが「王さまは どうして 気が かわったの？」と きくよ。Because ～. で 理由を いおう。ニブが「I see your point, but ～.」と はんたいの 意見を いったら、自分の 考えと 理由を もう いちど いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "You've read the tale of the grumpy king. Now, the big question: why did the king change his mind? And here's a harder one: was he a bad king, or just a tired one?",
+          "starterEn": "Let's pretend I'm Nib. You've read the tale of the grumpy king. Now, the big question: why did the king change his mind? And here's a harder one: was he a bad king, or just a tired one?",
           "targetExpressions": [
             "Read the tale. Why did the king change his mind?",
             "Why did he change his mind? ― Because the song made him feel peaceful.",
@@ -12913,9 +12939,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "One stormy night, a girl named Tess gently hummed to a frightened baby goat. Why did he change his mind? Because the song made him feel peaceful.",
-            "subtitleJa": "ある あらしの よる、テスと いう 女の子が、こわがる 子ヤギに やさしく 歌を ハミング しました。王さまは どうして 気が かわったの？ 歌で 心が おだやかに なったからだよ。",
-            "subtitleEn": "One stormy night, a girl named Tess gently hummed to a frightened baby goat. Why did he change his mind? Because the song made him feel peaceful.",
+            "say": "One stormy night, a girl named Tess gently hummed to a frightened baby goat. Up in his tower, the king heard the song. Why did he change his mind? Because the song made him feel peaceful.",
+            "subtitleJa": "ある あらしの よる、テスと いう 女の子が、こわがる 子ヤギに やさしく 歌を ハミング しました。とうの うえで、王さまが その 歌を きいたの。王さまは どうして 気が かわったの？ 歌で 心が おだやかに なったからだよ。",
+            "subtitleEn": "One stormy night, a girl named Tess gently hummed to a frightened baby goat. Up in his tower, the king heard the song. Why did he change his mind? Because the song made him feel peaceful.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -12944,9 +12970,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Glance. Look very quickly. Sizzle. The sound of food in a hot pan. Sssizzle! Gentle becomes gently. L E changes to L Y.",
+            "say": "Review time! Glance. Look very quickly. Sizzle. The sound of food in a hot pan. Sizzle, sizzle! Gentle becomes gently. L E changes to L Y.",
             "subtitleJa": "ふくしゅうの じかん！ glance。ちらっと 見る こと。sizzle。あつい フライパンの 食べものの 音。ジュージュー！ gentle は gently に なるよ。le が ly に かわるの。",
-            "subtitleEn": "Review time! Glance. Look very quickly. Sizzle. The sound of food in a hot pan. Sssizzle! Gentle becomes gently. L E changes to L Y.",
+            "subtitleEn": "Review time! Glance. Look very quickly. Sizzle. The sound of food in a hot pan. Sizzle, sizzle! Gentle becomes gently. L E changes to L Y.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -13147,6 +13173,7 @@
     {
       "lessonNo": 1107,
       "world": 37,
+      "reviewed": "run9",
       "title": "Same Story, Different Hero",
       "titleJa": "おなじ お話、ちがう 主人公",
       "school": {
@@ -13295,7 +13322,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オオカミが「ぼくは わるものじゃ ない」と 自分の 目から お話を 語るよ。オオカミを しんじるか どうか、Yes, because ～. / No, because ～. で 理由を いおう。オオカミが「Why don't you believe me?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Hello there. I'm the wolf from The Lost Lamb. Everyone thinks I'm the bad guy, but I was only trying to help that little lamb. Do you believe me? Why or why not?",
+          "starterEn": "Let's pretend I'm the wolf from The Lost Lamb. Hello there. Everyone thinks I'm the bad guy, but I was only trying to help that little lamb. Do you believe me? Why or why not?",
           "targetExpressions": [
             "What if the story were told by the wolf?",
             "Do you believe the wolf? ― Yes, because the lamb thanked him.",
@@ -13661,6 +13688,7 @@
     {
       "lessonNo": 1108,
       "world": 37,
+      "reviewed": "run9",
       "title": "My Final Story",
       "titleJa": "わたしの 物語、かんせい",
       "school": {
@@ -13761,7 +13789,7 @@
           "emoji": "✅"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, What if the story were told by the wolf? Today is a big day. Nib takes us to a sunny writing room with long wooden desks, colored pencils and stacks of clean paper. On each desk, there is a blank book cover. Nib says, Today, you finish your stories and make your covers. A story isn't finished until it has a title! Ms. Emma walks around the room and helps everyone. Haru draws a huge stone giant with a gentle smile. Riko draws a cat on top of a lighthouse. Birimo decorates his cover with real glitter, and now his nose is sparkly, too. Kiko writes her title in curly blue letters, and then she reads it to us proudly. My story is called The Girl Who Talked to the Wind. Say it with me. My story is called The Girl Who Talked to the Wind. Wonderful! Let's read what Kiko wrote on the back cover of her book. \"The Girl Who Talked to the Wind, by Kiko. Aria lives in a village above the clouds, and she can talk to the wind. On the coldest night of the year, a strange wind knocks on her window and carries her far away, to a land of dry deserts and tall mountains. Aria is lost and lonely. Just then, she hears a voice behind her. It's the youngest wind, and it is lost and lonely, too! Aria listens to its story and helps it find its way, and the two become good friends. In the end, the wind carries her home, and every night after that, a warm breeze sings outside her window. A story about friendship, courage and listening. For readers who love adventure and the sky.\" Whose voice does Aria hear behind her? The youngest wind's. How does Aria get home? The wind carries her home. Riko says, I love the last line. It feels so cozy. Kiko smiles. I'm proud of my ending. It's warm and happy. Now, phonics. Let's review. Kiko gives a big grin when she finishes. Drip is the sound of water falling one drop at a time. He reached into his pocket and pulled out, pause, a glowing stone. Kiko read her title proudly. After all that writing, tonight we'll sleep like a log. Next time, we'll take a goodbye tour of the Labyrinth.",
+      "teacherScript": "Hello, everyone! Last time, we said, What if the story were told by the wolf? Today is a big day. Nib takes us to a sunny writing room with long wooden desks, colored pencils and stacks of clean paper. On each desk, there is a blank book cover. Nib says, Today, you finish your stories and make your covers. A story isn't finished until it has a title! I walk around the room and help everyone. Haru draws a huge stone giant with a gentle smile. Riko draws a cat on top of a lighthouse. Birimo decorates his cover with real glitter, and now his nose is sparkly, too. Kiko writes her title in curly blue letters, and then she reads it to us proudly. My story is called The Girl Who Talked to the Wind. Say it with me. My story is called The Girl Who Talked to the Wind. Wonderful! Let's read what Kiko wrote on the back cover of her book. \"The Girl Who Talked to the Wind, by Kiko. Aria lives in a village above the clouds, and she can talk to the wind. On the coldest night of the year, a strange wind knocks on her window and carries her far away, to a land of dry deserts and tall mountains. Aria is lost and lonely. Just then, she hears a voice behind her. It's the youngest wind, and it is lost and lonely, too! Aria listens to its story and helps it find its way, and the two become good friends. In the end, the wind carries her home, and every night after that, a warm breeze sings outside her window. A story about friendship, courage and listening. For readers who love adventure and the sky.\" Whose voice does Aria hear behind her? The youngest wind's. How does Aria get home? The wind carries her home. Riko says, I love the last line. It feels so cozy. Kiko smiles. I'm proud of my ending. It's warm and happy. Now, phonics. Let's review. Kiko gives a big grin when she finishes. Drip is the sound of water falling one drop at a time. He reached into his pocket and pulled out, pause, a glowing stone. Kiko read her title proudly. After all that writing, tonight we'll sleep like a log. Next time, we'll take a goodbye tour of the Labyrinth.",
       "conversation": {
         "scene": "The friends show each other their finished stories and covers",
         "sceneJa": "かんせいした 物語と 表紙を みんなで 見せあう",
@@ -13809,7 +13837,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが あなたの 物語に ついて きくよ。My story is called ～. で タイトルを、It's about ～. で テーマを いおう。ほんとうの なまえや じゅうしょは いわなくて いいよ（ものがたりの なまえで いいよ）。ニブが「Which part are you most proud of? Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Your story is finished! Congratulations! I'd love to hear about it. What is your story called, and what is it about?",
+          "starterEn": "Let's pretend I'm Nib. Your story is finished! Congratulations! I'd love to hear about it. What is your story called, and what is it about?",
           "targetExpressions": [
             "My story is called The Girl Who Talked to the Wind.",
             "What's your story about? ― It's about friendship and listening.",
@@ -13830,9 +13858,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, authors! Last time, the wolf told his side of the story. Today, Nib takes us to a sunny writing room. Let's finish our stories!",
-            "subtitleJa": "おはよう、作家の みんな！ まえの かいは オオカミが じぶんの がわから お話を 語ったね。きょうは ニブが ひあたりの いい 書く へやへ つれて いって くれるよ。物語を かんせい させよう！",
-            "subtitleEn": "Good morning, authors! Last time, the wolf told his side of the story. Today, Nib takes us to a sunny writing room. Let's finish our stories!",
+            "say": "Hi, authors! Last time, the wolf told his side of the story. Today, Nib takes us to a sunny writing room. Let's finish our stories!",
+            "subtitleJa": "やあ、作家の みんな！ まえの かいは オオカミが じぶんの がわから お話を 語ったね。きょうは ニブが ひあたりの いい 書く へやへ つれて いって くれるよ。物語を かんせい させよう！",
+            "subtitleEn": "Hi, authors! Last time, the wolf told his side of the story. Today, Nib takes us to a sunny writing room. Let's finish our stories!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -13956,9 +13984,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko asks, What's your story about? It's about friendship and listening. I'm proud of my ending. It's warm and happy. Title first, then the big idea!",
-            "subtitleJa": "リコちゃん「どんな お話なの？」「友だちに なる ことと、話を きく ことの お話だよ。おわりかたが じまんなの。あたたかくて しあわせな おわりだよ。」 まず タイトル、それから 大きな テーマ！",
-            "subtitleEn": "Riko asks, What's your story about? It's about friendship and listening. I'm proud of my ending. It's warm and happy. Title first, then the big idea!",
+            "say": "Riko asks, What's your story about? Kiko says, It's about friendship and listening. I'm proud of my ending. It's warm and happy. Title first, then the big idea!",
+            "subtitleJa": "リコちゃん「どんな お話なの？」 キコちゃん「友だちに なる ことと、話を きく ことの お話だよ。おわりかたが じまんなの。あたたかくて しあわせな おわりだよ。」 まず タイトル、それから 大きな テーマ！",
+            "subtitleEn": "Riko asks, What's your story about? Kiko says, It's about friendship and listening. I'm proud of my ending. It's warm and happy. Title first, then the big idea!",
             "gesture": "nod",
             "slide": {
               "title": "Talk",
@@ -14175,6 +14203,7 @@
     {
       "lessonNo": 1109,
       "world": 37,
+      "reviewed": "run9",
       "title": "Labyrinth of Tales Review",
       "titleJa": "おとぎの迷宮 ふりかえり",
       "school": {
@@ -14275,7 +14304,7 @@
           "emoji": "⭕"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, My story is called The Girl Who Talked to the Wind. Today, Nib takes us on a goodbye tour of the Labyrinth. He holds the Storybook under his arm, and we walk past every room we have visited. We wave to the clever rabbit's room and the Moon Room. Saffron lifts her golden head from her pile of old books and says, Here's one last riddle for you. What has a beginning, a middle and an end, and lives inside you? A story! In the Hearth Room, Granny Willa gives each of us a warm hug. Then Riko says, I've learned so much here. If I were a storyteller, I would tell stories as bright as the stars. Say it with me. If I were a storyteller, I would tell stories as bright as the stars. Lovely! Let's read Nib's map of our journey. \"Our Journey Through the Labyrinth of Tales. In the first rooms, we heard tales from many lands: a clever rabbit, a moon that shares its light, and brave children everywhere. In Nib's Story Workshop, we learned about setting, characters and problems. We learned to show, not tell, and to use similes and sound words. In the Dragon Room and at the Well of Wishes, we imagined what we would do with magic. Then we planned our own stories, with strong beginnings, exciting turning points and happy endings. In the Hearth Room, Granny Willa taught us to tell stories aloud and to give kind feedback. Now our stories are finished, and the Storytelling Festival is waiting in the Central Hall!\" Where did we learn about setting, characters and problems? In Nib's Story Workshop. Who taught us to tell stories aloud? Granny Willa. At the very end of the tour, we come to the exit of the maze. There is a round window in the wall. Through it, we can see rolling green hills under a soft sky, and the wind smells of flowers. Kiko asks, What's that place? Nib smiles. That's the Highlands of the Heart. Now, phonics. Let's review. Stumble means almost fall while walking. Whoosh is the sound of something rushing past. The thing under the bed was not a monster, pause, but a puppy. Haru waited nervously for his turn. In the library, we were as quiet as a mouse. Next time, it's the Storytelling Festival!",
+      "teacherScript": "Hello, everyone! Last time, we said, My story is called The Girl Who Talked to the Wind. Today, Nib takes us on a goodbye tour of the Labyrinth. He holds the Storybook under his arm, and we walk past every room we have visited. We wave to the clever rabbit's room and the Moon Room. Saffron lifts her golden head from her pile of old books and says, Here's one last riddle for you. What has a beginning, a middle and an end, and lives inside you? A story! In the Hearth Room, Granny Willa gives each of us a warm hug. Then Riko says, I've learned so much here. If I were a storyteller, I would tell stories as bright as the stars. Say it with me. If I were a storyteller, I would tell stories as bright as the stars. Wonderful! Let's read Nib's map of our journey. \"Our Journey Through the Labyrinth of Tales. In the first rooms, we heard tales from many lands: a clever rabbit, a moon that shares its light, and brave children everywhere. In Nib's Story Workshop, we learned about setting, characters and problems. We learned to show, not tell, and to use similes and sound words. In the Dragon Room and at the Well of Wishes, we imagined what we would do with magic. Then we planned our own stories, with strong beginnings, exciting turning points and happy endings. In the Hearth Room, Granny Willa taught us to tell stories aloud and to give kind feedback. Now our stories are finished, and the Storytelling Festival is waiting in the Central Hall!\" Where did we learn about setting, characters and problems? In Nib's Story Workshop. Who taught us to tell stories aloud? Granny Willa. At the very end of the tour, we come to the exit of the maze. There is a round window in the wall. Through it, we can see rolling green hills under a soft sky, and the wind smells of flowers. Haru asks, What's that place? Nib smiles. That's the Highlands of the Heart. Now, phonics. Let's review. Stumble means almost fall while walking. Whoosh is the sound of something rushing past. The thing under the bed was not a monster, pause, but a puppy. Haru waited nervously for his turn. In the library, we were as quiet as a mouse. Next time, it's the Storytelling Festival!",
       "conversation": {
         "scene": "The friends remember their favorite rooms and see green hills at the exit",
         "sceneJa": "すきだった 部屋を ふりかえり、出口の まどから みどりの 高原を 見る",
@@ -14328,7 +14357,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブと 迷宮の さよなら ツアーを するよ。What was your favorite room? に ～, because ～. で 理由を こたえよう。If I were ～, I would ～. で ゆめも 話そう。ニブが「Why?」と きいたら りゆうを いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "This is our goodbye tour! We've passed the Moon Room, the Story Workshop, the Dragon Room and the Hearth Room. Which room was your favorite, and why?",
+          "starterEn": "Let's pretend I'm Nib. This is our goodbye tour! We've passed the Moon Room, the Story Workshop, the Dragon Room and the Hearth Room. Which room was your favorite, and why?",
           "targetExpressions": [
             "If I were a storyteller, I would tell stories as bright as the stars.",
             "What was your favorite room? ― The Dragon Room, because Saffron told us riddles.",
@@ -14445,9 +14474,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "We walk past every room. Saffron gives us one last riddle. I ask Haru, What was your favorite room? The Dragon Room, because Saffron told us riddles.",
-            "subtitleJa": "みんなで ひとつ ひとつの 部屋の まえを とおるよ。サフランが さいごの なぞなぞを 出して くれた。わたしは ハルくんに きくの。「どの 部屋が いちばん すきだった？」「竜の 部屋。サフランが なぞなぞを 出して くれたから。」",
-            "subtitleEn": "We walk past every room. Saffron gives us one last riddle. I ask Haru, What was your favorite room? The Dragon Room, because Saffron told us riddles.",
+            "say": "We walk past every room. Saffron gives us one last riddle. I ask Haru, What was your favorite room? Haru says, The Dragon Room, because Saffron told us riddles.",
+            "subtitleJa": "みんなで ひとつ ひとつの 部屋の まえを とおるよ。サフランが さいごの なぞなぞを 出して くれた。わたしは ハルくんに きくの。「どの 部屋が いちばん すきだった？」 ハルくん「竜の 部屋。サフランが なぞなぞを 出して くれたから。」",
+            "subtitleEn": "We walk past every room. Saffron gives us one last riddle. I ask Haru, What was your favorite room? Haru says, The Dragon Room, because Saffron told us riddles.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -14475,9 +14504,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "At the exit, there are green hills outside the round window. Haru asks, What's that place? That's the Highlands of the Heart. Wow!",
-            "subtitleJa": "出口に つくと、まるい まどの 外に みどりの 丘が 見えるよ。ハルくん「あそこは どこ？」「あれは こころの高原だよ。」 わあ！",
-            "subtitleEn": "At the exit, there are green hills outside the round window. Haru asks, What's that place? That's the Highlands of the Heart. Wow!",
+            "say": "At the exit, there are green hills outside the round window. Haru asks, What's that place? Nib smiles. That's the Highlands of the Heart. Wow!",
+            "subtitleJa": "出口に つくと、まるい まどの 外に みどりの 丘が 見えるよ。ハルくん「あそこは どこ？」 ニブは にっこり。「あれは こころの高原だよ。」 わあ！",
+            "subtitleEn": "At the exit, there are green hills outside the round window. Haru asks, What's that place? Nib smiles. That's the Highlands of the Heart. Wow!",
             "gesture": "point",
             "slide": {
               "title": "Talk",
@@ -14693,6 +14722,7 @@
     {
       "lessonNo": 1110,
       "world": 37,
+      "reviewed": "run9",
       "title": "World 37 Grand Review",
       "titleJa": "ワールド37 グランドレビュー",
       "school": {
@@ -14793,7 +14823,7 @@
           "emoji": "✅"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, If I were a storyteller, I would tell stories as bright as the stars. Today is the Storytelling Festival! The Central Hall is at the very heart of the Labyrinth. It is round and tall, with shelves that go up and up, and thousands of tiny lanterns glimmer above us. Everyone is here. Granny Willa sits in the front row in her patchwork shawl. Saffron lies along the back wall, and the clever rabbit sits on her tail. Ms. Emma sits with us, and Nib stands on the stage in his red cape. Haru tells part of The Boy and the Stone Giant. Riko tells part of The Lighthouse Cat. Birimo tells The Dragon Who Sneezed Glitter, and everyone laughs. Kiko tells the end of her story, and the hall goes quiet. Then Nib says, Every one of us has a story to tell. Say it with me. Every one of us has a story to tell. Wonderful! Let's read the festival program. \"The Storytelling Festival of the Labyrinth of Tales. Welcome to the Central Hall! Today, four young storytellers will share the stories they wrote here. Haru: The Boy and the Stone Giant, a tale about a lonely giant who learns to laugh. Riko: The Lighthouse Cat, a tale about a small cat with a big heart. Birimo: The Dragon Who Sneezed Glitter, a very funny tale. Please don't sit too close! Kiko: The Girl Who Talked to the Wind, a tale about friendship and listening. Please listen quietly, and cheer at the end of each story. When the last story is told, keep your eyes on the Storybook.\" Who tells the funny tale? Birimo. What should the audience do at the end of each story? Cheer. The cheers are loud and happy. Then the sixth golden page appears: The sixth secret of stories: every one of us has a story to tell. The Storybook is complete! It glows like a little sun. As Nib closes it, a pressed purple flower falls out with a note. It says, Come to the Highlands of the Heart. We remember the green hills from the window. Our next adventure is waiting! Now, phonics. Let's review. Lanterns glimmer in the dark. Old doors creak. The voice in the dark whispered one word, pause, welcome. Kiko told her story bravely. The idea came to her like a shooting star. Goodbye, Nib! Thank you, Granny Willa! Thank you, Labyrinth of Tales!",
+      "teacherScript": "Hello, everyone! Last time, we said, If I were a storyteller, I would tell stories as bright as the stars. Today is the Storytelling Festival! The Central Hall is at the very heart of the Labyrinth. It is round and tall, with shelves that go up and up, and thousands of tiny lanterns glimmer above us. Everyone is here. Granny Willa sits in the front row in her patchwork shawl. Saffron lies along the back wall, and the clever rabbit sits on her tail. I sit with everyone, and Nib stands on the stage in his red cape. Haru tells part of The Boy and the Stone Giant. Riko tells part of The Lighthouse Cat. Birimo tells The Dragon Who Sneezed Glitter, and everyone laughs. Kiko tells the end of her story, and the hall goes quiet. Then Nib says, Every one of us has a story to tell. Say it with me. Every one of us has a story to tell. Wonderful! Let's read the festival program. \"The Storytelling Festival of the Labyrinth of Tales. Welcome to the Central Hall! Today, four young storytellers will share the stories they wrote here. Haru: The Boy and the Stone Giant, a tale about a lonely giant who learns to laugh. Riko: The Lighthouse Cat, a tale about a small cat with a big heart. Birimo: The Dragon Who Sneezed Glitter, a very funny tale. Please don't sit too close! Kiko: The Girl Who Talked to the Wind, a tale about friendship and listening. Please listen quietly, and cheer at the end of each story. When the last story is told, keep your eyes on the Storybook.\" Who tells the funny tale? Birimo. What should the audience do at the end of each story? Cheer. The cheers are loud and happy. Then the sixth golden page appears. The sixth secret of stories: every one of us has a story to tell. The Storybook is complete! It glows like a little sun. As Nib closes it, a pressed purple flower falls out with a note. It says, Come to the Highlands of the Heart. We remember the green hills from the window. Our next adventure is waiting! Now, phonics. Let's review. Lanterns glimmer in the dark. Old doors creak. The voice in the dark whispered one word, pause, welcome. Kiko told her story bravely. The idea came to her like a shooting star. Goodbye, Nib! Thank you, Granny Willa! Thank you, Labyrinth of Tales!",
       "conversation": {
         "scene": "The Storytelling Festival in the Central Hall",
         "sceneJa": "中心の 広間で 物語フェスティバル",
@@ -14851,7 +14881,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ニブが 物語フェスティバルの 司会を するよ。自分の 物語の 一部を 語って、Every one of us has a story to tell. で しめくくろう。ニブが「And then what happened?」と きいたら つづきを 話そう。ニブが「What was your favorite part of the Labyrinth? Why?」と きいたら りゆうも いおう。6 かい いじょう やりとり しよう",
-          "starterEn": "Welcome to the Storytelling Festival! The Central Hall is full, and everyone is waiting for your story. Please tell us how it begins. I'll be listening!",
+          "starterEn": "Let's pretend I'm Nib. Welcome to the Storytelling Festival! The Central Hall is full, and everyone is waiting for your story. Please tell us how it begins. I'll be listening!",
           "targetExpressions": [
             "Every one of us has a story to tell.",
             "And then what happened? ― The wind carried her home!",
@@ -15014,9 +15044,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "World review! Glimmer. A soft, shaky light. Short I before double M. Creak. An old door. Creeeak! Bravely. Brave plus L Y.",
+            "say": "World review! Glimmer. A soft, shaky light. Short I before double M. Creak. An old door. Creak, creak! Bravely. Brave plus L Y.",
             "subtitleJa": "ワールドの ふりかえり！ glimmer。よわく ちらちら する ひかり。mm の まえの i は みじかい。creak。古い とびらの 音。ギーッ！ bravely。brave に ly で、ゆうかんに。",
-            "subtitleEn": "World review! Glimmer. A soft, shaky light. Short I before double M. Creak. An old door. Creeeak! Bravely. Brave plus L Y.",
+            "subtitleEn": "World review! Glimmer. A soft, shaky light. Short I before double M. Creak. An old door. Creak, creak! Bravely. Brave plus L Y.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
