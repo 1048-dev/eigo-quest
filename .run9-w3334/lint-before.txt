@@ -1,0 +1,35 @@
+
+> eigo-quest@0.1.0 english:lint
+> tsx scripts/english-lint.ts --from 961 --to 1020
+
+english:lint L961-1020: 7709 strings in 60 units
+  error 71 / warn 49 / info 14
+  contraction        error 0  warn 0  info 5
+  inconsistent-form  error 0  warn 1  info 0
+  please-command     error 0  warn 0  info 1
+  punctuation        error 0  warn 8  info 0
+  spelling           error 1  warn 0  info 0
+  stiff-phrase       error 0  warn 0  info 5
+  uk-spelling        error 70  warn 0  info 0
+  uk-word            error 0  warn 40  info 3
+  ✗ L0977 teacherScript: unknown word "osahashimo"
+  ✗ L1014 school.expressions[2].en: "Centre" → "center" (US)
+  ✗ L1014 phonics.words[0]: "colour" → "color" (US)
+  ✗ L1014 phonics.words[1]: "centre" → "center" (US)
+  ✗ L1014 phonics.words[2]: "theatre" → "theater" (US)
+  ✗ L1014 phonics.words[3]: "favourite" → "favorite" (US)
+  ✗ L1014 teacherScript: "Colour" → "Color" (US)
+  ✗ L1014 teacherScript: "Centre" → "center" (US)
+  ✗ L1014 teacherScript: "Theatre" → "theater" (US)
+  ✗ L1014 teacherScript: "colour" → "color" (US)
+  ✗ L1014 teacherScript: "centre" → "center" (US)
+  ✗ L1014 teacherScript: "Favourite" → "Favorite" (US)
+  ✗ L1014 teacherScript: "favourite" → "favorite" (US)
+  ✗ L1014 conversation.lines[4].en: "Centre" → "center" (US)
+  ✗ L1014 conversation.aiTask.targetExpressions[2]: "Centre" → "center" (US)
+  ✗ L1014 teacher.segments[1].slide.items[1]: "Centre" → "center" (US)
+  ✗ L1014 teacher.segments[7].say: "Centre" → "center" (US)
+  ✗ L1014 teacher.segments[7].subtitleEn: "Centre" → "center" (US)
+  ✗ L1014 teacher.segments[7].slide.items[1]: "Centre" → "center" (US)
+  ✗ L1014 teacher.segments[8].say: "colour" → "color" (US)
+  → docs\run9\lint\L961-1020.md

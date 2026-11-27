@@ -1,0 +1,482 @@
+[
+ {
+  "lesson": 961,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to the Island of Fire! I'm Ember, the junior safety ranger. Can you see the big mountain behind the town? Ask me anything about it!",
+  "after": "Let's pretend I'm Ember, the junior safety ranger. Welcome to the Island of Fire! Can you see the big mountain behind the town? Ask me anything about it!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 962,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello! I'm Dr. Mori. Welcome to the Earth Science Museum. Look at this giant model of the earth. What do you see inside? Ask me about any layer!",
+  "after": "Let's pretend I'm Dr. Mori. Welcome to the Earth Science Museum! Look at this giant model of the earth. What do you see inside? Ask me about any layer!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 963,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to the science room! Today we'll make a model volcano with baking soda and vinegar. But first, can you tell me what happens when a real volcano erupts?",
+  "after": "Let's pretend I'm Dr. Mori. Welcome to the science room! Today we'll make a model volcano with baking soda and vinegar. But first, can you tell me what happens when a real volcano erupts?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 964,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Ahh, the hot spring feels great today! Did you know that our volcano gives us lots of gifts? Can you tell me one of them?",
+  "after": "Ahh! Let's pretend I'm Ember. The hot spring feels great today! Did you know that our volcano gives us lots of gifts? Can you tell me one of them?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 965,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to the Earth Science Show! I'm so excited to hear your presentation. What will you tell us about the earth today?",
+  "after": "Let's pretend I'm Dr. Mori. Welcome to the Earth Science Show! I'm so excited to hear your presentation. What will you tell us about the earth today?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 966,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to the earthquake corner! Try pushing these two wooden blocks together. What happens? Can you explain why earthquakes happen?",
+  "after": "Let's pretend I'm Dr. Mori. Welcome to the earthquake corner! Try pushing these two wooden blocks together. What happens? Can you explain why earthquakes happen?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 967,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Look at this big screen. Do you see that white swirl of clouds far out at sea? Do you know what it is?",
+  "after": "Let's pretend I'm Dr. Mori. Look at this big screen. Do you see that white swirl of clouds far out at sea? Do you know what it is?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 968,
+  "path": "conversation.aiTask.starterEn",
+  "before": "See this green sign with an arrow? It shows the way to high ground. Let's walk up to Hilltop Park together! Do you know why this path is important?",
+  "after": "Let's pretend I'm Ember. See this green sign with an arrow? It shows the way to high ground. We can walk up to Hilltop Park together! Do you know why this path is important?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 969,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Ding, dong! This is a drill. Listen carefully: a strong typhoon is coming tonight, so please stay inside and close your windows. Now, what did the announcement say?",
+  "after": "Let's pretend I'm Ember. Ding-dong! This is a drill. Listen carefully: a strong typhoon is coming tonight, so please stay inside and close your windows. Now, what did the announcement say?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 970,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to the Disaster Science Quiz! I'm the quiz master today. Are you ready? Here's the first question: what should you do during a typhoon?",
+  "after": "Let's pretend I'm Dr. Mori, the quiz master. Welcome to the Disaster Science Quiz! Are you ready? Here's the first question: What should you do during a typhoon?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 971,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Safety first, fun always! Here's an empty backpack. Let's make an emergency kit together. What should we put in it first?",
+  "after": "Safety first, fun always! Let's pretend I'm Ember. Here's an empty backpack. We can make an emergency kit together. What should we put in it first?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 972,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to the Safety House, detectives! Let's check this home together. What should we make sure of first? Look around and tell me!",
+  "after": "Let's pretend I'm Ember. Welcome to the Safety House, detectives! We can check this home together. What should we make sure of first? Look around and tell me!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 973,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Here we are at Hilltop Park! Let's make a pretend family plan. Where should our story family meet? Look around the park and choose a spot!",
+  "after": "Let's pretend I'm Ember. Here we are at Hilltop Park! Time to make a plan for a pretend family. Where should our story family meet? Look around the park and choose a spot!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 974,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to the museum shop! I have a waterproof bag, a fireproof box, and a big flashlight here. Which tool would you put in your emergency kit? Why?",
+  "after": "Let's pretend I'm Dr. Mori. Welcome to the museum shop! I have a waterproof bag, a fireproof box, and a big flashlight here. Which one would you put in your emergency kit? Why?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 975,
+  "path": "conversation.aiTask.starterEn",
+  "before": "It's Safety Plan Day! I can't wait to hear your plan. Tell me about a pretend family. If there's an earthquake, where will they go?",
+  "after": "Let's pretend I'm Ember. It's Safety Plan Day! I can't wait to hear your plan. Tell me about a pretend family. If there's an earthquake, where will they go?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 976,
+  "path": "conversation.aiTask.starterEn",
+  "before": "This is a drill! Pretend the ground is shaking right now. What do you do first? Tell me, step by step!",
+  "after": "Let's pretend I'm Ember. This is a drill! Imagine the ground is shaking right now. What do you do first? Tell me step by step!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 977,
+  "path": "conversation.aiTask.starterEn",
+  "before": "The shaking has stopped, and it's time to go outside. Oh, I want to run! What should I do? Can you help me remember the rules?",
+  "after": "Let's pretend I'm Ember. The shaking has stopped, and it's time to go outside. Oh, I want to run! What should I do? Can you help me remember the rules?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 978,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Oh no, my step cards are all mixed up! Can you help me put them in order? What do we do first when the ground shakes?",
+  "after": "Let's pretend I'm Ember. Oh no, my step cards are all mixed up! Can you help me put them in order? What do we do first when the ground shakes?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 979,
+  "path": "conversation.aiTask.starterEn",
+  "before": "The drill is over, and we're all on the playground. Oh! I left my helmet in the classroom. Can I run back and get it?",
+  "after": "Let's pretend I'm Ember. The drill is over, and we're all on the playground. Oh! I left my helmet in the classroom. Can I run back and get it?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 980,
+  "path": "conversation.aiTask.starterEn",
+  "before": "You are today's hosts! Here's the microphone. The drill starts in one minute. What will you say first? Let's practice!",
+  "after": "Let's pretend I'm Ember. You are today's hosts! Here's the microphone. The drill starts in one minute. What will you say first? Time to practice!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 981,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, dear! Welcome to the volunteer center. We have so many jobs today. There's water to carry and blankets to fold. Would you like to help?",
+  "after": "Let's pretend I'm Grandma Tomo. Hello, dear! Welcome to the volunteer center. We have so many jobs today. There's water to carry and blankets to fold. Would you like to help?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 982,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Oh, hello there! It was very windy last night. I'm fine, but my garden chairs fell over, and I have a heavy bag of oranges.",
+  "after": "Let's pretend I'm an old man who lives next door. Oh, hello there! It was very windy last night. I'm fine, but my garden chairs fell over, and I have a heavy bag of oranges.",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 983,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Excuse me! I just got off the ferry. I heard an announcement, but I don't understand Japanese. What's happening? Where should I go?",
+  "after": "Let's pretend I'm a traveler. Excuse me! I just got off the ferry. I heard an announcement, but I don't understand Japanese. What's happening? Where should I go?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 984,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Come and sit down, dear. Would you like to hear an old story about our island? It's a made-up story, but it's full of kind people. Ask me anything!",
+  "after": "Let's pretend I'm Grandma Tomo. Come and sit down, dear. Would you like to hear an old story about our island? It's a made-up story, but it's full of kind people. Ask me anything!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 985,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello! I'm sorry, I'm a little lost. I heard the drill announcement, but I don't know where the shelter is. Can you help me?",
+  "after": "Let's pretend I'm a traveler. Hello! I'm sorry, I'm a little lost. I heard the drill announcement, but I don't know where the shelter is. Can you help me?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 986,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hi, poster makers! Safety first, fun always! I'm making a poster for the festival, too. What should I write on it? What should I draw?",
+  "after": "Let's pretend I'm Ember. Hi, poster makers! Safety first, fun always! I'm making a poster for the festival, too. What should I write on it? What should I draw?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 987,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to our inn! Before you go to your room, please look at the safety card on the door. If the alarm rings, what should you do first?",
+  "after": "Let's pretend I work at this inn. Welcome! Before you go to your room, please look at the safety card on the door. If the alarm rings, what should you do first?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 988,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, dear! I'm writing my safety promise today. I promise to check my flashlight every month. What's your safety promise?",
+  "after": "Let's pretend I'm Grandma Tomo. Hello, dear! I'm writing my safety promise today. I promise to check my flashlight every month. What's your safety promise?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 989,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello again! Mount Cinder is calm today. Before you leave the island, please tell me: What did you learn here? What will you do when the ground shakes?",
+  "after": "Let's pretend I'm Dr. Mori. Hello again! Mount Cinder is calm today. Before you leave the island, please tell me: What did you learn here? What will you do when the ground shakes?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 990,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Safety first, fun always! Welcome to the Safety Festival! What was your favorite part of the Island of Fire? What did you learn here?",
+  "after": "Let's pretend I'm Ember. Safety first, fun always! Welcome to the Safety Festival! What was your favorite part of the Island of Fire? What did you learn here?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 991,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello! I'm Skye, the junior guide of the Airport of Wings. Every trip is a story! Look out of the big window. What can you see? Where would you like to fly someday?",
+  "after": "Let's pretend I'm Skye, the junior guide of the Airport of Wings. Every trip is a story! Look out the big window. What can you see? Where would you like to fly someday?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 992,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good morning, and welcome to the Airport of Wings! I'm your check-in clerk today. How can I help you?",
+  "after": "Let's pretend I'm your check-in clerk. Good morning, and welcome to the Airport of Wings! How can I help you?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 993,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Thank you for waiting! Now let's choose your seat. Would you like a window seat or an aisle seat?",
+  "after": "Let's pretend I'm your check-in clerk. Thank you for waiting! Now it's time to choose your seat. Would you like a window seat or an aisle seat?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 994,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good morning, passengers! Here is an announcement. Flight 205 is now boarding at gate 23B. Can you tell me which flight is boarding and where?",
+  "after": "Let's pretend I'm the airport announcer. Good morning, passengers! Flight 205 is now boarding at gate 23B. Can you tell me which flight is boarding and where?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 995,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello there! You look a little lost. Can I help you find something?",
+  "after": "Let's pretend I work at the airport. Hello there! You look a little lost. Can I help you find something?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 996,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello! Welcome aboard Flight 205. I'm one of your flight attendants. Is there anything I can get for you?",
+  "after": "Let's pretend I'm a flight attendant. Hello! Welcome aboard Flight 205. Is there anything I can get for you?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 997,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, and welcome to Skyport International Airport! I just have a few simple questions. What's the purpose of your visit?",
+  "after": "Let's pretend I'm an immigration officer. Hello, and welcome to Skyport International Airport! I just have a few simple questions. What's the purpose of your visit?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 998,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello! Welcome to the transfer desk at Skyport. You look like you have a connecting flight. How can I help you?",
+  "after": "Let's pretend I work at the transfer desk at Skyport. Hello! You look like you have a connecting flight. How can I help you?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 999,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, and welcome to the currency exchange counter! Today's rate is on the board above me. How can I help you?",
+  "after": "Let's pretend I work at the currency exchange counter. Hello! Today's rate is on the board above me. How can I help you?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1000,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Welcome to Brightwater! Congratulations on your 1,000th lesson! I flew all the way here to see you. How was your trip? What was the best part?",
+  "after": "Let's pretend I'm Skye. Welcome to Brightwater! Congratulations on your 1,000th lesson! I flew all the way here to see you. How was your trip? What was the best part?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1001,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good evening, and welcome to the Seagull Hotel! I'm Mr. Lee. Do you have a reservation with us tonight?",
+  "after": "Let's pretend I'm Mr. Lee at the front desk. Good evening, and welcome to the Seagull Hotel! Do you have a reservation with us tonight?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1002,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, this is the front desk. This is Mr. Lee speaking. How is your room? Is there anything I can do for you?",
+  "after": "Let's pretend I'm Mr. Lee. Hello, this is the front desk. How is your room? Is there anything I can do for you?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1003,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good morning! Did you enjoy your breakfast? Where would you like to go today? I'm happy to help you find the way.",
+  "after": "Let's pretend I'm Mr. Lee. Good morning! Did you enjoy your breakfast? Where would you like to go today? I'm happy to help you find the way.",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1004,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good evening! You look hungry after your day in the city. Are you looking for a place to eat? I know many good places in Brightwater.",
+  "after": "Let's pretend I'm Mr. Lee. Good evening! You look hungry after your day in the city. Are you looking for a place to eat? I know many good places in Brightwater.",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1005,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Oh dear, look at that rain! Welcome back to the front desk. Are you going out this afternoon? How can I help you?",
+  "after": "Let's pretend I'm Mr. Lee. Oh dear, look at that rain! Welcome back. Are you going out this afternoon? How can I help you?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1006,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, this is the Baggage Service desk. I'm sorry you had to come here. Is something wrong with your bag?",
+  "after": "Let's pretend I work at the Baggage Service desk. Hello! I'm sorry you had to come here. Is something wrong with your bag?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1007,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, front desk. This is Mr. Lee. Is everything all right with your room this afternoon?",
+  "after": "Let's pretend I'm Mr. Lee. Hello, this is the front desk. Is everything all right with your room this afternoon?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1008,
+  "path": "conversation.aiTask.starterEn",
+  "before": "I'm so sorry. Sam says the air conditioner in your room can't be fixed until tomorrow. What would you like us to do?",
+  "after": "Let's pretend I'm Mr. Lee. I'm so sorry. Sam says the air conditioner in your room can't be fixed until tomorrow. What would you like us to do?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1009,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good morning! You look a little worried. Is everything OK? Please tell me what happened, and we'll figure it out together.",
+  "after": "Let's pretend I'm Mr. Lee. Good morning! You look a little worried. Is everything OK? Please tell me what happened, and we'll figure it out together.",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1010,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello there! I heard you made something special in the lobby today. Is there anything you'd like to tell me?",
+  "after": "Let's pretend I'm Mr. Lee. Hello there! I heard you made something special in the lobby today. Is there anything you'd like to tell me?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1011,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello there! What a beautiful day by the Clock Tower. Do you need some help?",
+  "after": "Let's pretend I'm a tourist by the Clock Tower. Hello there! What a beautiful day. Do you need some help?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1012,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good afternoon, and welcome to the River Fish Restaurant! Here's some water for you. How can I help you today?",
+  "after": "Let's pretend I'm your waiter. Good afternoon, and welcome to the River Fish Restaurant! Here's some water for you. How can I help you today?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1013,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, dears! I'm Mrs. Brown, and I'm on holiday from the UK. Shall we take the lift together? Oh, what do you call it?",
+  "after": "Let's pretend I'm Mrs. Brown from the UK. Hello, dears! I'm on holiday here. Shall we take the lift together? Oh, what do you call it in the US?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1014,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good morning, and welcome to the City Museum! How many tickets would you like today?",
+  "after": "Let's pretend I work at the City Museum. Good morning, and welcome! How many tickets would you like today?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1015,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Every trip is a story! I flew over the city all day. What did you do in Brightwater today? Tell me in order!",
+  "after": "Let's pretend I'm Skye. Every trip is a story! I flew over the city all day. What did you do in Brightwater today? Tell me in order!",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1016,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello from the front desk of the Seagull Hotel! I just got your message. How can I help you?",
+  "after": "Let's pretend I'm Mr. Lee at the front desk of the Seagull Hotel. Hello! I just got your message. How can I help you?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1017,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, visitors! Here's our brochure with three afternoon tours. Which one sounds fun to you, and why?",
+  "after": "Let's pretend I'm a tour guide. Hello, visitors! Here's our brochure with three afternoon tours. Which one sounds fun to you, and why?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1018,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Every trip is a story! I love reading travel journals. What did you write on your first page?",
+  "after": "Let's pretend I'm Skye. Every trip is a story! I love reading travel journals. What did you write on your first page?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1019,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Good morning! Welcome to Brightwater Airport. It's a busy day today. Can I help you with something?",
+  "after": "Let's pretend I work at Brightwater Airport. Good morning, and welcome! It's a busy day today. Can I help you with something?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ },
+ {
+  "lesson": 1020,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Every trip is a story! Welcome home to the Airport of Wings! What was your favorite part of the trip? What did you learn?",
+  "after": "Let's pretend I'm Skye. Every trip is a story! Welcome home to the Airport of Wings! What was your favorite part of the trip? What did you learn?",
+  "reviewers": "A+B (block rule)",
+  "reason": "the app shows the partner child (its own face and name) saying the starter, so \"I'm Ember / I'm Dr. Mori / I'm Mr. Lee / I'm your check-in clerk\" reads as the wrong speaker. The goal casts the AI in that role, so keep it and make the pretend play explicit (W25-32 rule). In-story greetings of the role (Good morning at breakfast, Good evening at the hotel) stay; a second Let's -> We can / Time to; Ding, dong -> Ding-dong; Look out of -> Look out (US)"
+ }
+]

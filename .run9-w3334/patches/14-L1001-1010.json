@@ -1,0 +1,186 @@
+[
+  {
+    "lesson": 1001,
+    "path": "teacher.segments[0].say",
+    "before": "Hello, everyone! Last time, we landed in Brightwater. Lesson one thousand! Now we're at our hotel. Look! A big wooden seagull over the door!",
+    "after": "Hello, everyone! Last time, we landed in Brightwater. That was lesson one thousand! Now we're at our hotel. Look! A big wooden seagull over the door!",
+    "reviewers": "A+B",
+    "reason": "lesson 1000 was last time; 'Lesson one thousand!' right after 'Last time' sounds like today is lesson 1000 (this is L1001)"
+  },
+  {
+    "lesson": 1001,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hello, everyone! Last time, we landed in Brightwater. Lesson one thousand! Now we're at our hotel. Look! A big wooden seagull over the door!",
+    "after": "Hello, everyone! Last time, we landed in Brightwater. That was lesson one thousand! Now we're at our hotel. Look! A big wooden seagull over the door!",
+    "reviewers": "A+B",
+    "reason": "lesson 1000 was last time; 'Lesson one thousand!' right after 'Last time' sounds like today is lesson 1000 (this is L1001)"
+  },
+  {
+    "lesson": 1001,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "こんにちは、みんな！ まえの かいは、ブライトウォーターに ついたね。1000かいめの レッスン！ いまは ホテルに きたよ。見て！ ドアの うえに 大きな 木の カモメ！",
+    "after": "こんにちは、みんな！ まえの かいは、ブライトウォーターに ついたね。あれが 1000かいめの レッスン だったね！ いまは ホテルに きたよ。見て！ ドアの うえに 大きな 木の カモメ！",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1002,
+    "path": "teacher.segments[17].say",
+    "before": "Quiz time! Would you mind closing the curtains? You're happy to help. A, Yes, I mind. B, Not at all. Think!",
+    "after": "Quiz time! Would you mind closing the curtains? You're happy to help. A, Yes, I do. B, Not at all. Think!",
+    "reviewers": "A+B",
+    "reason": "'Yes, I mind.' is not something English speakers say; the natural trap answer to 'Would you mind ~?' is 'Yes, I do.' (= I don't want to)"
+  },
+  {
+    "lesson": 1002,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Quiz time! Would you mind closing the curtains? You're happy to help. A, Yes, I mind. B, Not at all. Think!",
+    "after": "Quiz time! Would you mind closing the curtains? You're happy to help. A, Yes, I do. B, Not at all. Think!",
+    "reviewers": "A+B",
+    "reason": "'Yes, I mind.' is not something English speakers say; the natural trap answer to 'Would you mind ~?' is 'Yes, I do.' (= I don't want to)"
+  },
+  {
+    "lesson": 1002,
+    "path": "teacher.segments[17].subtitleJa",
+    "before": "クイズ！「カーテンを しめて もらえる？」 よろこんで てつだいたい とき、なんて いう？ A、Yes, I mind. B、Not at all. かんがえて！",
+    "after": "クイズ！「カーテンを しめて もらえる？」 よろこんで てつだいたい とき、なんて いう？ A、Yes, I do. B、Not at all. かんがえて！",
+    "reviewers": "A+B",
+    "reason": "'Yes, I mind.' is not something English speakers say; the natural trap answer to 'Would you mind ~?' is 'Yes, I do.' (= I don't want to)"
+  },
+  {
+    "lesson": 1004,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Do you know where the nearest station is? We spent the day at the harbor with Ms. Emma, and now we are very hungry! Birimo's tummy rumbles like a little thunderstorm. Ms. Emma says, Let's ask Mr. Lee. He knows the city very well. When you want a good idea from someone who knows a place, you can say, Could you recommend a good restaurant? To recommend something means to say, This one is good. You should try it! Haru tries it. Excuse me. Could you recommend a good restaurant? Say it with me. Could you recommend a good restaurant? Great! Mr. Lee smiles and asks, What kind of food do you like? Riko says, We love fish! Mr. Lee says, Then how about the Little Anchor? It's a fish restaurant by the river. He gives us a page from the hotel's city guide. Let's read the guide. \"The Little Anchor. This small family restaurant sits right by the river, near the old stone bridge. The fish comes fresh from the harbor every morning. Try the grilled fish with lemon, or the famous fish soup. There is a children's menu with fish and chips and fruit juice. It is open from five to nine in the evening. Ask for a table by the window and watch the boats go by!\" Where is the restaurant? By the river. What time does it open? At five in the evening. Kiko says, Thank you for the great idea, Mr. Lee! Mr. Lee says, My pleasure. I'm sure you'll love it. We decide to go there another day. Now, phonics. Recommend has one c and two m's. Excellent has two l's. Suggest has two g's. S, u, g, g, e, s, t. To suggest means to give an idea, like, I suggest the fish soup! Next time, we will practice all our hotel English, and we will need umbrellas!",
+    "after": "Hello, everyone! Last time, we said, Do you know where the nearest station is? We spent the day at the harbor with Ms. Emma, and now we are very hungry! Birimo's tummy rumbles like a little thunderstorm. Ms. Emma says, Let's ask Mr. Lee. He knows the city very well. When you want a good idea from someone who knows a place, you can say, Could you recommend a good restaurant? To recommend something means to say, This one is good. You should try it! Haru tries it. Excuse me. Could you recommend a good restaurant? Say it with me. Could you recommend a good restaurant? Great! Mr. Lee smiles and asks, What kind of food do you like? Riko says, We love fish! Mr. Lee says, Then how about the River Fish Restaurant? It's right by the river. He gives us a page from the hotel's city guide. Let's read the guide. \"River Fish Restaurant. This small family restaurant sits right by the river, near the old stone bridge. The fish comes fresh from the harbor every morning. Try the grilled fish with lemon, or the famous fish soup. There is a children's menu with fish and chips and fruit juice. It is open from eleven in the morning to nine at night. Ask for a table by the window and watch the boats go by!\" Where is the restaurant? By the river. What time does it open? At eleven in the morning. Kiko says, Thank you for the great idea, Mr. Lee! Mr. Lee says, My pleasure. I'm sure you'll love it. We decide to go there another day. Now, phonics. Recommend has one c and two m's. Excellent has two l's. Suggest has two g's. S, u, g, g, e, s, t. To suggest means to give an idea, like, I suggest the fish soup! Next time, we will practice all our hotel English, and we will need umbrellas!",
+    "reviewers": "objective",
+    "reason": "story contradiction: L1012 visits the same place Mr. Lee recommended as the 'River Fish Restaurant' and eats lunch there; L1004 called it 'the Little Anchor', open only 5-9 pm; story contradiction: L1012 visits the same place Mr. Lee recommended as the 'River Fish Restaurant' and eats lunch there; L1004 called it 'the Little Anchor', open only 5-9 pm; story contradiction: L1012 visits the same place Mr. Lee recommended as the 'River Fish Restaurant' and eats lunch there; L1004 called it 'the Little Anchor', open only 5-9 pm; story contradiction: L1012 visits the same place Mr. Lee recommended as the 'River Fish Restaurant' and eats lunch there; L1004 called it 'the Little Anchor', open only 5-9 pm"
+  },
+  {
+    "lesson": 1004,
+    "path": "teacher.segments[10].say",
+    "before": "Suggest. Two g's. s u, g g, e s t. It means give an idea. Your turn! Recommend. Excellent. Suggest.",
+    "after": "Suggest. Two g's. s u, g g, e s t. It means to give an idea. Your turn! Recommend. Excellent. Suggest.",
+    "reviewers": "A+B",
+    "reason": "'It means give an idea' drops 'to' (the teacherScript says 'To suggest means to give an idea')"
+  },
+  {
+    "lesson": 1004,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Suggest. Two g's. s u, g g, e s t. It means give an idea. Your turn! Recommend. Excellent. Suggest.",
+    "after": "Suggest. Two g's. s u, g g, e s t. It means to give an idea. Your turn! Recommend. Excellent. Suggest.",
+    "reviewers": "A+B",
+    "reason": "'It means give an idea' drops 'to' (the teacherScript says 'To suggest means to give an idea')"
+  },
+  {
+    "lesson": 1004,
+    "path": "phonics.sounds[2]",
+    "before": "/ɡ/",
+    "after": "/ɡdʒ/",
+    "reviewers": "objective (fact)",
+    "reason": "in suggest the gg is not one /g/ sound: US /səɡˈdʒɛst/ (or /səˈdʒɛst/); the lesson only teaches the spelling, so the sound field should not claim /g/"
+  },
+  {
+    "lesson": 1005,
+    "path": "conversation.lines[4].en",
+    "before": "Here you are, a yellow one. Of course, please bring it back before you check out.",
+    "after": "Of course. Here you are, a yellow one. Please bring it back before you check out.",
+    "reviewers": "A+B",
+    "reason": "'Here you are, a yellow one. Of course, please bring it back' puts 'Of course' after the umbrella is handed over (the request was two lines before); move 'Of course.' to the front"
+  },
+  {
+    "lesson": 1005,
+    "path": "conversation.lines[4].ja",
+    "before": "はい どうぞ、きいろの かさです。チェックアウトの まえに かえして くださいね。",
+    "after": "もちろんです。はい どうぞ、きいろの かさです。チェックアウトの まえに かえして くださいね。",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1005,
+    "path": "teacher.segments[7].slide.items[2]",
+    "before": "Here you are, a yellow one. Of course, please bring it back before you check out.",
+    "after": "Of course. Here you are, a yellow one. Please bring it back before you check out.",
+    "reviewers": "A+B",
+    "reason": "slide shows the conversation line"
+  },
+  {
+    "lesson": 1005,
+    "path": "teacher.segments[10].say",
+    "before": "Gate forty-one C. Not fourteen! Forty is strong at the front. FOR, ty, one. Clap it! Your turn! Accommodation. Recommend. Visitor. Gate forty-one C.",
+    "after": "Gate forty-one C. Not fourteen! Forty is strong at the front. FOR-ty-one. Clap it! Your turn! Accommodation. Recommend. Visitor. Gate forty-one C.",
+    "reviewers": "B+C",
+    "reason": "capital syllable plus a bare letter group ('FOR, ty') can be spelled out by TTS; use the hyphen beat form"
+  },
+  {
+    "lesson": 1005,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Gate forty-one C. Not fourteen! Forty is strong at the front. FOR, ty, one. Clap it! Your turn! Accommodation. Recommend. Visitor. Gate forty-one C.",
+    "after": "Gate forty-one C. Not fourteen! Forty is strong at the front. FOR-ty-one. Clap it! Your turn! Accommodation. Recommend. Visitor. Gate forty-one C.",
+    "reviewers": "B+C",
+    "reason": "capital syllable plus a bare letter group ('FOR, ty') can be spelled out by TTS; use the hyphen beat form"
+  },
+  {
+    "lesson": 1005,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "ゲート 41C。fourteen じゃ ないよ！ forty は まえを つよく。FOR、ty、one。てを たたいて！ あなたの ばん！ accommodation。recommend。visitor。ゲート 41C。",
+    "after": "ゲート 41C。fourteen じゃ ないよ！ forty は まえを つよく。FOR-ty-one。てを たたいて！ あなたの ばん！ accommodation。recommend。visitor。ゲート 41C。",
+    "reviewers": "B+C",
+    "reason": "capital syllable plus a bare letter group ('FOR, ty') can be spelled out by TTS; use the hyphen beat form"
+  },
+  {
+    "lesson": 1007,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, My suitcase didn't arrive. Good news! Ms. Emma has her blue suitcase back. But today is the hottest day of our trip. After lunch, we come back to Room 512 to rest. Phew! It's like an oven in here! Riko presses the button on the remote control. The air conditioner makes a strange rattling noise, and only warm air comes out. Ms. Emma says, Let's call the front desk. Riko, would you like to try? I'll be right next to you. To explain a problem politely, start with I'm afraid. I'm afraid（ざんねんですが）makes your words soft and kind. Riko picks up the room phone and says, Hello, this is Room 512. I'm afraid the air conditioner is broken. Say it with me. I'm afraid the air conditioner is broken. Perfect! Riko adds, It's making a strange noise, and it's still hot. Mr. Lee says, I'm so sorry. We'll send someone right away. While we wait, Kiko finds a card next to the TV. Let's read the card. \"How to Use Your Air Conditioner. Press the red button to turn it on or off. Use the up and down arrows to make the room warmer or cooler. Keep the windows closed when it is on. If the air conditioner does not work, please do not try to fix it yourself. Call the front desk, and a member of our repair team will come to help you.\" What does the red button do? It turns the air conditioner on or off. What should you do if it doesn't work? Call the front desk. Soon, Sam the repair man arrives with his toolbox. Birimo says, I'm playing his helper! and holds the flashlight. Now, phonics. More ize verbs! Modern, add ize. Modernize means make something new. Energy, drop the y, add ize. Energize means give energy. Final, add ize. Finalize means finish the last details. Next time, Sam has some news, and we need a new plan!",
+    "after": "Hello, everyone! Last time, we said, My suitcase didn't arrive. Good news! Ms. Emma has her blue suitcase back. But today is the hottest day of our trip. After lunch, we come back to Room 512 to rest. Phew! It's like an oven in here! Riko presses the button on the remote control. The air conditioner makes a strange rattling noise, and only warm air comes out. Ms. Emma says, Let's call the front desk. Riko, would you like to try? I'll be right next to you. To explain a problem politely, start with I'm afraid. I'm afraid（ざんねんですが）makes your words soft and kind. Riko picks up the room phone and says, Hello, this is Room 512. I'm afraid the air conditioner is broken. Say it with me. I'm afraid the air conditioner is broken. Perfect! Riko adds, It's making a strange noise, and it's still hot. Mr. Lee says, I'm so sorry. We'll send someone right away. While we wait, Kiko finds a card next to the TV. Let's read the card. \"How to Use Your Air Conditioner. Press the red button to turn it on or off. Use the up and down arrows to make the room warmer or cooler. Keep the windows closed when it is on. If the air conditioner does not work, please do not try to fix it yourself. Call the front desk, and a member of our repair team will come to help you.\" What does the red button do? It turns the air conditioner on or off. What should you do if it doesn't work? Call the front desk. Soon, Sam the repair person arrives with his toolbox. Birimo says, I'm playing his helper! and holds the flashlight. Now, phonics. More ize verbs! Modern, add ize. Modernize means make something new. Energy, drop the y, add ize. Energize means give energy. Final, add ize. Finalize means finish the last details. Next time, Sam has some news, and we need a new plan!",
+    "reviewers": "objective",
+    "reason": "'repair man' is not a US spelling (repairman is one word); use L1007's vocab word 'repair person'"
+  },
+  {
+    "lesson": 1008,
+    "path": "conversation.lines[0].en",
+    "before": "I'm playing Sam, the repair man! I'm sorry, but we can't fix it until tomorrow.",
+    "after": "I'm playing Sam, the repair person! I'm sorry, but we can't fix it until tomorrow.",
+    "reviewers": "objective",
+    "reason": "'repair man' is not a US spelling (repairman is one word); use L1007's vocab word 'repair person'"
+  },
+  {
+    "lesson": 1008,
+    "path": "teacher.segments[0].say",
+    "before": "Hello, everyone! Last time, our air conditioner was broken. Sam, the repair man, looked and looked. Then he shook his head. Hmm. What can we do now?",
+    "after": "Hello, everyone! Last time, our air conditioner was broken. Sam, the repair person, looked and looked. Then he shook his head. Hmm. What can we do now?",
+    "reviewers": "objective",
+    "reason": "'repair man' is not a US spelling (repairman is one word); use L1007's vocab word 'repair person'"
+  },
+  {
+    "lesson": 1008,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hello, everyone! Last time, our air conditioner was broken. Sam, the repair man, looked and looked. Then he shook his head. Hmm. What can we do now?",
+    "after": "Hello, everyone! Last time, our air conditioner was broken. Sam, the repair person, looked and looked. Then he shook his head. Hmm. What can we do now?",
+    "reviewers": "objective",
+    "reason": "'repair man' is not a US spelling (repairman is one word); use L1007's vocab word 'repair person'"
+  },
+  {
+    "lesson": 1010,
+    "path": "teacher.segments[10].say",
+    "before": "And a time. Twelve thirty. Not twelve thirteen! Thirty is strong at the front. THIR, ty. Your turn! Luggage. Vision. Twelve thirty.",
+    "after": "And a time. Twelve thirty. Not twelve thirteen! Thirty is strong at the front. THIR-ty. Your turn! Luggage. Vision. Twelve thirty.",
+    "reviewers": "B+C",
+    "reason": "capital syllable plus a bare letter group ('FOR, ty') can be spelled out by TTS; use the hyphen beat form"
+  },
+  {
+    "lesson": 1010,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "And a time. Twelve thirty. Not twelve thirteen! Thirty is strong at the front. THIR, ty. Your turn! Luggage. Vision. Twelve thirty.",
+    "after": "And a time. Twelve thirty. Not twelve thirteen! Thirty is strong at the front. THIR-ty. Your turn! Luggage. Vision. Twelve thirty.",
+    "reviewers": "B+C",
+    "reason": "capital syllable plus a bare letter group ('FOR, ty') can be spelled out by TTS; use the hyphen beat form"
+  },
+  {
+    "lesson": 1010,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "それから じこく。12:30 は twelve thirty。twelve thirteen じゃ ないよ！ thirty は まえを つよく。THIR、ty。あなたの ばん！ luggage。vision。twelve thirty。",
+    "after": "それから じこく。12:30 は twelve thirty。twelve thirteen じゃ ないよ！ thirty は まえを つよく。THIR-ty。あなたの ばん！ luggage。vision。twelve thirty。",
+    "reviewers": "B+C",
+    "reason": "capital syllable plus a bare letter group ('FOR, ty') can be spelled out by TTS; use the hyphen beat form"
+  }
+]

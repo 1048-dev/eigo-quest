@@ -1,0 +1,234 @@
+[
+  {
+    "lesson": 982,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, How can we help? We can carry water. Today, Grandma Tomo takes us for a walk through Harbor Town. She says, On our island, neighbors look after each other. After strong wind or a big shake, we visit the older people and the families next door. We knock on the door and ask kind questions. Soon, we see an old man sitting on a bench with a big bag of oranges. Grandma Tomo bends down, smiles, and says, Good morning! Are you OK? Do you need anything? Say it with me. Are you OK? Do you need anything? Great! The man smiles back. I'm fine, but this bag is a little heavy. Kiko asks, Can I help you carry that? Thank you. That's very kind. Let's read Grandma Tomo's Kind Words Card. \"Kind Words for Neighbors. Smile and say hello first. Speak slowly and clearly so that older people can hear you. Ask, Are you OK? Do you need anything? Then listen carefully to the answer. Always go with an adult, and never go into a house alone. If someone needs help, tell an adult right away. Small, kind words can make a big difference. A neighbor who feels lonely may feel happy all day.\" Why should you speak slowly and clearly? So that older people can hear you. What should you do if someone needs help? Tell an adult right away. Kiko and Ms. Emma carry the oranges to the man's gate. He gives each of us an orange. Thank you, kind neighbors! Now, phonics. Ject means throw. Ob means toward. Object. An object is a thing in front of you, like an orange. Objection. If you have an objection, you say, I don't agree. Interject. Inter means between. When you interject, you put a few words in while someone is talking. Excuse me, may I interject? Next time, we will go to the harbor and help travelers who don't speak Japanese.",
+    "after": "Hello, everyone! Last time, we said, How can we help? We can carry water. Today, Grandma Tomo takes us for a walk through Harbor Town. She says, On our island, neighbors look after each other. After strong wind or a big shake, we visit the older people and the families next door. We knock on the door and ask kind questions. Soon, we see an old man sitting on a bench with a big bag of oranges. Grandma Tomo bends down, smiles, and says, Good morning! Are you OK? Do you need anything? Say it with me. Are you OK? Do you need anything? Great! The man smiles back. I'm fine, but this bag is a little heavy. Kiko asks, Can I help you carry that? Thank you. That's very kind. Let's read Grandma Tomo's Kind Words Card. \"Kind Words for Neighbors. Smile and say hello first. Speak slowly and clearly so that older people can hear you. Ask, Are you OK? Do you need anything? Then listen carefully to the answer. Always go with an adult, and never go into a house alone. If someone needs help, tell an adult right away. Small, kind words can make a big difference. A neighbor who feels lonely may feel happy all day.\" Why should you speak slowly and clearly? So that older people can hear you. What should you do if someone needs help? Tell an adult right away. Kiko and I carry the oranges to the man's gate. He gives each of us an orange. Thank you, kind neighbors! Now, phonics. Ject means throw. Ob means toward. Object. An object is a thing in front of you, like an orange. Objection. If you have an objection, you say, I don't agree. Interject. Inter means between. When you interject, you put a few words in while someone is talking. Excuse me, may I interject? Next time, we will go to the harbor and help travelers who don't speak Japanese.",
+    "reviewers": "objective",
+    "reason": "Ms. Emma narrates her own story (the next sentence says 'each of us'); first person like the block-wide fix"
+  },
+  {
+    "lesson": 982,
+    "path": "conversation.lines[6].en",
+    "before": "Lovely! Kind words help neighbors feel safe and happy.",
+    "after": "Nice job! Kind words help neighbors feel safe and happy.",
+    "reviewers": "objective (US policy)",
+    "reason": "British praise 'Lovely!' (block-wide swap missed this conversation line)"
+  },
+  {
+    "lesson": 982,
+    "path": "conversation.lines[6].ja",
+    "before": "すてき！ やさしい ことばで きんじょの 人も あんしんして うれしく なるわね。",
+    "after": "よく できたね！ やさしい ことばで きんじょの 人も あんしんして うれしく なるわね。",
+    "reviewers": "objective (US policy)",
+    "reason": "JA follows the new praise"
+  },
+  {
+    "lesson": 982,
+    "path": "teacher.segments[3].say",
+    "before": "Next door. The house right beside your house. Knock, knock! Hello, next door! Next door!",
+    "after": "Next door. The house right beside your house. Knock, knock! Hi! I live next door! Next door!",
+    "reviewers": "A+B",
+    "reason": "'next door' is not a form of address in US English; show the word in a real sentence"
+  },
+  {
+    "lesson": 982,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Next door. The house right beside your house. Knock, knock! Hello, next door! Next door!",
+    "after": "Next door. The house right beside your house. Knock, knock! Hi! I live next door! Next door!",
+    "reviewers": "A+B",
+    "reason": "'next door' is not a form of address in US English; show the word in a real sentence"
+  },
+  {
+    "lesson": 982,
+    "path": "teacher.segments[3].subtitleJa",
+    "before": "next door。あなたの いえの すぐ よこの いえ。コン、コン！ こんにちは、おとなりさん！ となりの いえ！",
+    "after": "next door。あなたの いえの すぐ よこの いえ。コン、コン！ こんにちは！ となりに すんで いる ものです！ となりの いえ！",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 983,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Ject means throw. Throw a ball! In means into. Inject, put something into. A doctor can inject medicine. Injection, a shot. A tiny pinch, and all done!",
+    "after": "Sound time! Ject means throw. Throw a ball! In means into. Inject, put something inside. A doctor can inject medicine. Injection, a shot. A tiny pinch, and all done!",
+    "reviewers": "A+C",
+    "reason": "'put something into' ends on a dangling preposition and sounds cut off aloud"
+  },
+  {
+    "lesson": 983,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Ject means throw. Throw a ball! In means into. Inject, put something into. A doctor can inject medicine. Injection, a shot. A tiny pinch, and all done!",
+    "after": "Sound time! Ject means throw. Throw a ball! In means into. Inject, put something inside. A doctor can inject medicine. Injection, a shot. A tiny pinch, and all done!",
+    "reviewers": "A+C",
+    "reason": "'put something into' ends on a dangling preposition and sounds cut off aloud"
+  },
+  {
+    "lesson": 984,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Ject means throw. Throw a ball! Re means back. Reject, throw it back. No, thank you! Rejection, a no answer.",
+    "after": "Sound time! Ject means throw. Throw a ball! Re means back. Reject, throw it back. No, thank you! Rejection, when someone says no.",
+    "reviewers": "A+C",
+    "reason": "'a no answer' is not natural English; the teacherScript says 'A rejection is when someone says no'"
+  },
+  {
+    "lesson": 984,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Ject means throw. Throw a ball! Re means back. Reject, throw it back. No, thank you! Rejection, a no answer.",
+    "after": "Sound time! Ject means throw. Throw a ball! Re means back. Reject, throw it back. No, thank you! Rejection, when someone says no.",
+    "reviewers": "A+C",
+    "reason": "'a no answer' is not natural English; the teacherScript says 'A rejection is when someone says no'"
+  },
+  {
+    "lesson": 986,
+    "path": "teacher.segments[2].say",
+    "before": "Poster. A big paper with words and pictures on a wall. Everyone can see it! Poster!",
+    "after": "Poster. A big sheet of paper with words and pictures on a wall. Everyone can see it! Poster!",
+    "reviewers": "A+B",
+    "reason": "'paper' is uncountable here ('a big paper' = a big essay/newspaper); 'a big sheet of paper'"
+  },
+  {
+    "lesson": 986,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Poster. A big paper with words and pictures on a wall. Everyone can see it! Poster!",
+    "after": "Poster. A big sheet of paper with words and pictures on a wall. Everyone can see it! Poster!",
+    "reviewers": "A+B",
+    "reason": "'paper' is uncountable here ('a big paper' = a big essay/newspaper); 'a big sheet of paper'"
+  },
+  {
+    "lesson": 986,
+    "path": "teacher.segments[9].say",
+    "before": "Sound review! Eruption. Rupt means burst, so a volcano bursts out. Safety. Safe plus t, y. Keep the e! Waterproof. Water plus proof, all in one word.",
+    "after": "Sound review! Eruption. Rupt means burst. An eruption is when a volcano bursts out. Safety. Safe plus t, y. Keep the e! Waterproof. Water plus proof, all in one word.",
+    "reviewers": "A+B",
+    "reason": "the say skipped what the word eruption means ('so a volcano bursts out' does not follow); matches the teacherScript"
+  },
+  {
+    "lesson": 986,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound review! Eruption. Rupt means burst, so a volcano bursts out. Safety. Safe plus t, y. Keep the e! Waterproof. Water plus proof, all in one word.",
+    "after": "Sound review! Eruption. Rupt means burst. An eruption is when a volcano bursts out. Safety. Safe plus t, y. Keep the e! Waterproof. Water plus proof, all in one word.",
+    "reviewers": "A+B",
+    "reason": "the say skipped what the word eruption means ('so a volcano bursts out' does not follow); matches the teacherScript"
+  },
+  {
+    "lesson": 986,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの ふりかえり！ eruption。rupt は「やぶれる」、かざんが ふきだす こと。safety。safe に t と y。e は のこしてね！ waterproof。water と proof で 1つの ことば。",
+    "after": "おとの ふりかえり！ eruption。rupt は「やぶれる」。eruption は かざんが ふきだす こと。safety。safe に t と y。e は のこしてね！ waterproof。water と proof で 1つの ことば。",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 987,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Be ready! Know your exits! Today, we're back at our little inn in Harbor Town. On the back of our room door, there's a card with a small map and some steps. Ember taps the card with his tail. When you stay in a new place, read this first! Ms. Emma nods and says, Read the instructions. What should you do first? Say it with me. Read the instructions. What should you do first? Great! Let's read the card together. \"Evacuation Instructions. Step one: When the alarm rings, stay calm and listen to the staff. Step two: Find the arrows on the floor plan. The nearest exit is at the end of the hall. Step three: Use the stairs. Never use the elevator during an evacuation. Step four: Walk, don't run, and don't push. Step five: Go to the meeting place in front of the inn and wait for guidance from the staff.\" What should you do first? Stay calm and listen to the staff. Do we use the stairs or the elevator? The stairs, always. Then Birimo asks, Is the shelter near or far? Ember points at the map. The Island School gym is just a short walk away. Haru opens the door and checks the hall. Look, the exit sign is right there! Now we know the way. Now, phonics. Let's review. Interrupted. Inter means between, and rupt means break. When someone breaks in while you are talking, you are interrupted. Guidance. Guide, take away the e, and add a, n, c, e. Childproof. A childproof cap is hard for small children to open. Is the shelter near or far? Near, up. Or far, down. Injection. In means into, and ject means throw. Next time, we will write our own safety promises.",
+    "after": "Hello, everyone! Last time, we said, Be ready! Know your exits! Today, we're back at our little inn in Harbor Town. On the back of our room door, there's a card with a small map and some steps. Ember taps the card with his tail. When you stay in a new place, read this first! I nod and say, Read the instructions. What should you do first? Say it with me. Read the instructions. What should you do first? Great! Let's read the card together. \"Evacuation Instructions. Step one: When the alarm rings, stay calm and listen to the staff. Step two: Find the arrows on the floor plan. The nearest exit is at the end of the hall. Step three: Use the stairs. Never use the elevator during an evacuation. Step four: Walk, don't run, and don't push. Step five: Go to the meeting place in front of the inn and wait for guidance from the staff.\" What should you do first? Stay calm and listen to the staff. Do we use the stairs or the elevator? The stairs, always. Then Birimo asks, Is the shelter near or far? Ember points at the map. The Island School gym is just a short walk away. Haru opens the door and checks the hall. Look, the exit sign is right there! Now we know the way. Now, phonics. Let's review. Interrupted. Inter means between, and rupt means break. When someone breaks in while you are talking, you are interrupted. Guidance. Guide, take away the e, and add a, n, c, e. Childproof. A childproof cap is hard for small children to open. Is the shelter near or far? Near, up. Or far, down. Injection. In means into, and ject means throw. Next time, we will write our own safety promises.",
+    "reviewers": "objective",
+    "reason": "Ms. Emma narrates herself in the first person (seg6 already says 'I tap the card')"
+  },
+  {
+    "lesson": 987,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. First tells the start. Then tells the next step. Let me check, right? helps you make sure you understand.",
+    "after": "Here's the point. First tells the start. Then tells the next step. Start with Let me check, and end with right? That helps you make sure you understand.",
+    "reviewers": "A+C",
+    "reason": "'Let me check, right? helps you ...' glues two cue words into a subject; unclear and hard to read aloud"
+  },
+  {
+    "lesson": 987,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. First tells the start. Then tells the next step. Let me check, right? helps you make sure you understand.",
+    "after": "Here's the point. First tells the start. Then tells the next step. Start with Let me check, and end with right? That helps you make sure you understand.",
+    "reviewers": "A+C",
+    "reason": "'Let me check, right? helps you ...' glues two cue words into a subject; unclear and hard to read aloud"
+  },
+  {
+    "lesson": 987,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。First は さいしょの こと。Then は つぎの ステップ。Let me check ～, right? で、ちゃんと わかって いるか たしかめられるよ。",
+    "after": "ポイント。First は さいしょの こと。Then は つぎの ステップ。Let me check で はじめて、さいごに right? を つけると、ちゃんと わかって いるか たしかめられるよ。",
+    "reviewers": "A+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 988,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Read the instructions. What should you do first? Today, Grandma Tomo gives each of us a small card shaped like a star. At the top, it says, My Safety Promise. Grandma Tomo says, A promise is something small that you can do again and again. Then it becomes a good habit. Haru thinks about his emergency kit. Then he writes, I promise to check my emergency kit every month. Say it with me. I promise to check my emergency kit every month. Great! Let's read Haru's promise card. \"My Safety Promise. I promise to check my emergency kit every month. On the first day of each month, I will check the water, the food, and the flashlight. I will put in new batteries if the old ones are weak. I will practice Drop, Cover, and Hold On with my family. I will remember our family meeting place. If my friends feel worried, I will say, Don't worry. We're OK. Being ready gives me confidence.\" When will Haru check his kit? On the first day of each month. What will Haru say if his friends feel worried? Don't worry. We're OK. Kiko promises to keep a whistle in her backpack. Riko promises to stay calm and help her little brother. Birimo promises to learn every exit at the festival! Grandma Tomo hangs our star cards on the wall. Now, phonics. Let's review. Erupt. E means out, and rupt means burst. Confidence. Confident, change the t to c, e. Fireproof. Fire plus proof, in one word. Bring a radio, batteries, and a whistle. A radio, up. Batteries, up. And a whistle, down. Object. Ob means toward, and ject means throw. A whistle is a small object, but it can be very helpful. Next time, we will go on a goodbye tour of the island.",
+    "after": "Hello, everyone! Last time, we said, Read the instructions. What should you do first? Today, Grandma Tomo gives each of us a small card shaped like a star. At the top, it says, My Safety Promise. Grandma Tomo says, A promise is something small that you can do again and again. Then it becomes a good habit. Haru thinks about his emergency kit. Then he writes, I promise to check my emergency kit every month. Say it with me. I promise to check my emergency kit every month. Great! Let's read Haru's promise card. \"My Safety Promise. I promise to check my emergency kit every month. On the first day of each month, I will check the water, the food, and the flashlight. I will put in new batteries if the old ones are weak. I will practice Drop, Cover, and Hold On with my family. I will remember our family meeting place. If my friends feel worried, I will say, Don't worry. We're OK. Being ready gives me confidence.\" When will Haru check his kit? On the first day of each month. What will Haru say if his friends feel worried? Don't worry. We're OK. Kiko promises to keep a whistle in her backpack. Riko promises to stay calm and help her little brother. Birimo promises to stay calm and help his friends! Grandma Tomo hangs our star cards on the wall. Now, phonics. Let's review. Erupt. E means out, and rupt means burst. Confidence. Confident, change the t to c, e. Fireproof. Fire plus proof, in one word. Bring a radio, batteries, and a whistle. A radio, up. Batteries, up. And a whistle, down. Object. Ob means toward, and ject means throw. A whistle is a small object, but it can be very helpful. Next time, we will go on a goodbye tour of the island.",
+    "reviewers": "objective",
+    "reason": "story contradiction: in the conversation and seg7 Birimo promises to stay calm and help his friends"
+  },
+  {
+    "lesson": 989,
+    "path": "teacher.segments[9].say",
+    "before": "Review time! Abruptly. Rupt means break. Stop abruptly, stop suddenly! Urgency. Urgent, then change the t to c, y. Dustproof keeps out dust and sand.",
+    "after": "Review time! Abruptly. Rupt means break. Stop abruptly, stop suddenly! Urgency. Urgent, then change the t to c, y. Dustproof means it keeps out dust and sand.",
+    "reviewers": "A+B",
+    "reason": "dustproof is an adjective and cannot be the subject of 'keeps out'; the teacherScript says 'A dustproof radio keeps out dust'"
+  },
+  {
+    "lesson": 989,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Review time! Abruptly. Rupt means break. Stop abruptly, stop suddenly! Urgency. Urgent, then change the t to c, y. Dustproof keeps out dust and sand.",
+    "after": "Review time! Abruptly. Rupt means break. Stop abruptly, stop suddenly! Urgency. Urgent, then change the t to c, y. Dustproof means it keeps out dust and sand.",
+    "reviewers": "A+B",
+    "reason": "dustproof is an adjective and cannot be the subject of 'keeps out'; the teacherScript says 'A dustproof radio keeps out dust'"
+  },
+  {
+    "lesson": 989,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "ふりかえりの じかん！ abruptly。rupt は「こわれる・きれる」。abruptly に とまる ＝ とつぜん とまる！ urgency。urgent の t を c、y に かえるよ。dustproof は ほこりや すなを 入れない。",
+    "after": "ふりかえりの じかん！ abruptly。rupt は「こわれる・きれる」。abruptly に とまる ＝ とつぜん とまる！ urgency。urgent の t を c、y に かえるよ。dustproof は ほこりや すなを 入れない と いう いみ。",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 989,
+    "path": "teacher.segments[10].say",
+    "before": "Is it a drill, up, or a real alarm, down? Eject. E means out, and ject means throw. Your turn! Eject!",
+    "after": "Is it a drill or a real alarm? A drill, up. Or a real alarm, down. Eject. E means out, and ject means throw. Your turn! Eject!",
+    "reviewers": "B+C",
+    "reason": "the up/down cues were inside the question, so the voice cannot perform the intonation; say the question first, then the cues (as in the teacherScript and other reviews)"
+  },
+  {
+    "lesson": 989,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Is it a drill, up, or a real alarm, down? Eject. E means out, and ject means throw. Your turn! Eject!",
+    "after": "Is it a drill or a real alarm? A drill, up. Or a real alarm, down. Eject. E means out, and ject means throw. Your turn! Eject!",
+    "reviewers": "B+C",
+    "reason": "the up/down cues were inside the question, so the voice cannot perform the intonation; say the question first, then the cues (as in the teacherScript and other reviews)"
+  },
+  {
+    "lesson": 989,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "くんれん（上げる）？ それとも ほんものの けいほう（下げる）？ eject。e は「そとへ」、ject は「なげる」。あなたの ばん！ eject！",
+    "after": "Is it a drill or a real alarm? a drill で 上げる。or a real alarm で 下げる。 eject。e は「そとへ」、ject は「なげる」。あなたの ばん！ eject！",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN (same style as L987 seg10)"
+  },
+  {
+    "lesson": 990,
+    "path": "teacher.segments[20].say",
+    "before": "What a world! You can say the big message, help visitors kindly, and stay calm and ready. Next, go and talk with Riko! Next is World thirty-four, the Airport of Wings! Bye-bye!",
+    "after": "What a world! You can say the big message, help visitors kindly, and stay calm and ready. Next, go and talk with Riko! After that, it's World thirty-four, the Airport of Wings! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'Next, go and talk with Riko! Next is World ...' repeats Next back to back"
+  },
+  {
+    "lesson": 990,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "What a world! You can say the big message, help visitors kindly, and stay calm and ready. Next, go and talk with Riko! Next is World thirty-four, the Airport of Wings! Bye-bye!",
+    "after": "What a world! You can say the big message, help visitors kindly, and stay calm and ready. Next, go and talk with Riko! After that, it's World thirty-four, the Airport of Wings! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'Next, go and talk with Riko! Next is World ...' repeats Next back to back"
+  },
+  {
+    "lesson": 990,
+    "path": "teacher.segments[20].subtitleJa",
+    "before": "すばらしい ワールドだったね！ 大きな メッセージが いえて、こまって いる 人を やさしく たすけて、おちついて そなえる ことが できるよ。このあと リコちゃんと おはなし してね！ つぎは ワールド34、つばさの空港！ バイバイ！",
+    "after": "すばらしい ワールドだったね！ 大きな メッセージが いえて、こまって いる 人を やさしく たすけて、おちついて そなえる ことが できるよ。このあと リコちゃんと おはなし してね！ その つぎは ワールド34、つばさの空港！ バイバイ！",
+    "reviewers": "A+C",
+    "reason": "JA follows the new EN"
+  }
+]

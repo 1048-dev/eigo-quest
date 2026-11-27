@@ -521,3 +521,36 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: ワールド33・34（レッスン 961〜1020）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・teacherScript・testPoints を 60 レッスン ぜんぶ 見なおした（ステージ4・B1。ぼうさい〈ほのおの火山島〉と りょこうの 英語〈つばさの空港〉）
+- さきに ブロックの きめごと（イギリスふうの ほめことば・エマ先生 じぶんの 語りを I say / I ask に・日本語の「ミス・エマ」→「エマ先生」・エマ先生の Good morning / Good evening → Hi / Hello・「Maybe,」・AI の さいしょの ひとこと 60 レッスンを「Let's pretend I'm ～.」に・イギリスと アメリカの きめごと）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがい（じじつ・あんぜん・物語の くいちがい・きまりの せつめい）だけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た ものを ブロック全体で そろえた（L1001〜1020 の teacherScript で エマ先生が じぶんを「Ms. Emma / she」と よんで いた 20 欄を I / my / me に。L991〜1000 は グループが なおした）。テストが 見ない teacher.segments も ふくめて 文法の じゅんばんを たしかめた（L976 の 早すぎる「stay calm」は グループが なおした）
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、HEAD から じゅんばんに あてなおした（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあい・かいわ あいても たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W33-34.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 961 --to 1020`）: **まえ error 71 / warn 49 / info 14 → あと error 60 / warn 47 / info 17**（のこりは ぜんぶ わざと: L1011〜1018 で ならう イギリスの ことば・つづり〈colour・centre・theatre・favourite・queue・timetable・pavement・biscuit・rubbish。フォニックスの 表と テストで きまって いて「In the UK」と くらべる ときだけ 出る〉、L1013 の イギリスから きた ブラウンさんの「on holiday」「biscuits」、テストで きまった タイトルの「…」と その スライド 8、L977「osahashimo」〈日本の 学校の ことばと して しょうかい〉。info は 会話の「What is」・「very, very」・ほうそうの「Please listen carefully.」・Let's 4回〈Let's pretend の ため〉）
+- なおした 欄 **456**（パッチ 480 件: ブロックの きめごと 116・AI の ひとこと 60・レビュアー 284・あとの そろえ 20）、なおした レッスン **60 / 60**
+- 学習項目が かわった もの: **3つ**（イギリスと アメリカの きめごとの ため。L1012 表現 bill → check、L1014 表現 Science Centre → Science Center、L1013 TPR lift → elevator。テスト・src には どれも 書かれて いない）と L1004 phonics.sounds の /ɡ/ → /ɡdʒ/（suggest）
+
+### before → after の 例
+1. L973 seg17（objective・あんぜん）: 「Our family meeting place is the beach.」→「Our family meeting place is the school.」（つなみの ある 島で はまべを あつまる ばしょの お手本に しない。L979 でも「We will not go to the beach.」。日本語 うみべ → がっこう）
+2. L967 teacherScript（objective・じじつ）: 「It is calm there.」→「It is calm there, but the storm comes back soon.」（たいふうの 目は しずかでも、すぐに また あらしが もどる。安心して そとに 出ない ように）
+3. L1012 表現（objective・アメリカ英語）: 「Could we have the bill, please?」→「Could we have the check, please?」（ブライトウォーターは ドルの まちで イギリスではない。おなじ レッスンの フォニックスで「In the UK, people say bill. In the US, people say check.」と ならうので、物語では アメリカの ことばを きいて から イギリスの ことばを くらべる かたちに）
+
+### きめた こと
+- **AI の さいしょの ひとこと**: こどもの キャラが エンバー・モリ博士・トモおばあちゃん・スカイ・リーさん・ブラウンさん・かかりの 人として 話して いた。goalJa の やくは のこし、60 レッスン ぜんぶ「Let's pretend I'm ～.」「Let's pretend I work at ～.」で ごっこあそびに した（W25-32 と おなじ）。やくの 人の 物語の なかの あいさつ（ホテルの Good evening・朝ごはんの あとの Good morning）は のこした
+- **イギリスと アメリカ**: アメリカ英語が きほん。イギリスの ことばは (a)「In the UK, ～」と くらべる とき、(b) フォニックスの ことばと その スライド・まとめ、(c) イギリスから きた ブラウンさんの ことば、だけ。ブライトウォーターの かんばん・メニュー・パンフレット・エマ先生と こどもたちの ことばは アメリカ英語に そろえた
+- **エマ先生の 語り**: say・字幕だけで なく teacherScript でも、エマ先生 じぶんの 語りは I / my / me。ほかの 人の カード（L1000・L1010）・スカイの ことば（L995）・メールの しょめい（L1016）・TPR「Stay right next to Ms. Emma!」は なまえの まま
+- じじつ・あんぜんは ぜんぶ たしかめた（ちきゅうの そう・プレート・マグマと よう岩・つなみは すぐ たかい ところへ・たいふうの 目・ゆれの あとは かいだん・おはしも、空港の ながれ・ほあんけんさの 水・びんの 時こく・りょうがえと ねだんの けいさん）。L996 は 10:45 しゅっぱつ なのに 機長が「Good afternoon」→「Hello」、L994 の 水とうは「empty」に、L1004 の レストランは L1011〜1012 と おなじ「River Fish Restaurant」に、L1013 の ホテルの ばめんは L1014〜1015 と あう ように「This afternoon」に
+- 声に 出す ための なおし: たんどくの 字の かたまり（ion・ly・ure・ance・ency・ty）を 字の 読みあげ（i, o, n）や ほんものの ことばに、強勢の「FOR, ty」→「FOR-ty」、「Ding, dong」→「Ding-dong」、「two numbers at a time」→「in two parts」（digits の いみ）
+- のこした こと: タイトルの「…」、L997 core（テストの 正規表現）、たんどくの 語根 rupt・ject・vis・ize（ならう 音そのもの）、L991 と w34Phonics.ts の「2けたずつ」（src の ため）。くわしくは W33-34.md
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新
