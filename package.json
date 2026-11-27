@@ -37,7 +37,11 @@
     "check:run5-flow": "tsx scripts/run5-flow-check.ts",
     "screens:auth": "tsx scripts/auth-ui-screens.ts",
     "english:lint": "tsx scripts/english-lint.ts",
-    "english:reports": "tsx scripts/english-reports.ts"
+    "english:reports": "tsx scripts/english-reports.ts",
+    "check:all": "tsx scripts/check-all.ts",
+    "check:a11y": "tsx scripts/a11y-check.ts",
+    "check:links": "tsx scripts/link-check.ts",
+    "check:bundle": "tsx scripts/bundle-budget.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",
@@ -51,13 +55,16 @@
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.1",
     "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.10.0",
     "@types/nodemailer": "^6.4.24",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
+    "axe-core": "^4.14.1",
     "cspell": "^10.5.2",
     "cspell-lib": "^10.5.2",
+    "embedded-postgres": "^16.16.0-beta.19",
     "playwright": "^1.65.1",
     "prisma": "^6.6.0",
     "tailwindcss": "^4.1.0",
