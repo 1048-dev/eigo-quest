@@ -392,7 +392,7 @@
 | 142 | I Have a Ruler. | もっている ぶんぼうぐ | I have a ruler. | mag-net, bas-ket, pup-pet, muf-fin | パペットづくりの じゅんび |
 | 143 | My Pencil Case | ふでばこの なか | This is my pencil case. | den-tist, in-sect, cac-tus, gob-lin | ふでばこを みせあう |
 | 144 | How Many Pencils? | ぶんぼうぐと かず | I have three pencils. | pump-kin, plas-tic, pock-et, hel-met | かぼちゃの えの じゅんび |
-| 145 | Stationery Swap | まとめ | Do you have a red pen? | 2音節 ふりかえり | ピクニックの ポスターで かしかり |
+| 145 | Sharing School Supplies | まとめ | Do you have a red pen? | 2音節 ふりかえり | ピクニックの ポスターで かしかり |
 | 146 | My Morning | まとめ（あさ） | Good morning. It's breakfast time. | 語頭＋語末ブレンド（stamp, blend, crust, stand） | ハルの あさの ビデオにっき |
 | 147 | My Afternoon | まとめ（ごご） | Good afternoon. Let's play soccer. | 語頭＋語末ブレンド（print, drift, flask, plant） | リコの ごご、こうえんで |
 | 148 | My Week | まとめ（1しゅうかん） | I like Saturdays. | -s と -ing（stamps, gifts, jumping, swimming） | キコの 1しゅうかん はっぴょう |

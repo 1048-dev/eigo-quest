@@ -102,3 +102,34 @@
 - npx tsc --noEmit: OK
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
+
+## REVIEW: ワールド5・6（レッスン 121〜180）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）を 60 レッスン ぜんぶ 見なおした
+- さきに 機械的な なおし（2重の 文末記号・クイズの 2択の 字幕と 話しことば）と ブロックの きめごと（L133 thumbs-up・イギリスふうの ほめことば・くりかえす 質問の「?」）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た もの（Ding-dong・showtime・「やあ、みんな！」）を ブロック全体で そろえた
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、before が いまの 値と あう ときだけ あてた（はずれ 0）。グループごとに スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあい（40〜70%）も たしかめた。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W05-06.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 121 --to 180`）: **まえ error 0 / warn 3 / info 10 → あと error 0 / warn 0 / info 9**（のこりの info は Let's の かず 9 レッスン。ねらいの 表現なので のこす）
+- なおした 欄 **434**（パッチ 445 件: 機械的な なおし 155・ブロックの きめごと 13・レビュアー 252・あとの そろえ 25。重なり あり）、なおした レッスン **59 / 60**（L130 だけ 変更なし）
+- 学習項目 ID が かわった もの 5つ: L133 TPR「Give a thumbs up.」→「Give a thumbs-up.」、L147 TPR「Take a rest.」→「Take a break.」、L149 TPR「Pack your pencil case.」→「Put your pencil case in your bag.」、L166 フォニックス「tube」→「huge」、L175 表現「Once upon a time, I'm a little cat.」→「Once upon a time... I'm a little cat.」（この 5項目だけ 記録が あたらしく なる）
+- L145 の タイトル「Stationery Swap」→「Sharing School Supplies」（titles.json・curriculum-plan.md も）
+
+### before → after の 例
+1. L168 会話（A・B・C）: 「I go to school by... flying! Bye!」→「Me? I fly to school! Bye!」（by の あとに 動詞の ing は こない。会話・スライド・字幕・クイズも あわせた）
+2. L166 フォニックス（objective・B）: 「tube」→「huge」（アメリカの 発音では tube は「トゥーブ」で、u_e の「ユー」の なかまに ならない）
+3. L148 先生の 日本語（objective・B）: 「ようびの あとには s」→「「どようびが すき」は おわりに s を つけて」（おなじ レッスンの It's Thursday. には s が つかないので、まちがった きまりを 教えて いた）
+
+### きめた こと
+- 話しことばの 2択「Yes, I do. or No, I don't.」は「Yes, I do. Or no, I don't.」、「A? Or, B?」は「A? Or b?」（Or の あとに コンマなし・文の なかで 大文字に しない。I・P.E.・名前は のぞく）。英語字幕の「A. or B.」は「A / B」
+- 「Ding, dong!」は「Ding-dong!」に そろえた（ワールド9 いこうにも ある。それぞれの ブロックで なおす）
+- L156「Lunch at the Café」は アメリカでも ふつうの つづりなので のこした（グループの 案を とりけし）
+- のこした こと: 「lunch time」（辞書は lunchtime。ID で ほかの ワールドにも ある）、L157「jelly」「pudding」、「small letter」、L164「teachers' room」、フォニックスの 音の わけかた（St, a, mp）、ワールド1・34 の /ɒ/。どれも 全体で 決める（くわしくは W05-06.md）
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
