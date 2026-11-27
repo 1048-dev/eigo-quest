@@ -73,9 +73,9 @@ describe("ワールド15の フォニックス問題", () => {
   });
 
   it.skipIf(!hasW15)("複合語・短縮形・y", () => {
-    const c = q(431, "football");
-    expect(c.answer).toBe("foot + ball");
-    expect(c.display).toBe("football");
+    const c = q(431, "classroom");
+    expect(c.answer).toBe("class + room");
+    expect(c.display).toBe("classroom");
     const d = q(436, "she's");
     expect(d.display).toBe("she is → ？");
     expect(ids(d).sort()).toEqual(["she'is", "she's", "shes"]);

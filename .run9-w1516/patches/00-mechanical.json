@@ -1,0 +1,386 @@
+[
+ {
+  "lesson": 422,
+  "path": "teacherScript",
+  "before": "Hi, everyone! It's a perfect day for kites. The wind is strong, and the sky is blue. Riko is on the hill. Haru wants to know what she's doing. Today's sentence is: What are you doing? Say it with me. What are you doing? Good! And Riko answers, I'm flying a kite. Say it. I'm flying a kite. I'm is I am. I'm flying means I am flying right now. 「なにを しているの？」は What are you doing?。こたえは I'm ～ing. だよ。 Now, phonics. Ride, riding. Hide, hiding. Slide, sliding. Write, writing. Do you remember? When a word ends with e, take the e away and add i-n-g. Excellent! Here's a talking tip. When your friend tells you what they're doing, you can say, That looks fun! Let's say it. That looks fun! Now, let's grab our kites and run up the hill. Ready? Let's fly!",
+  "after": "Hi, everyone! It's a perfect day for kites. The wind is strong, and the sky is blue. Riko is on the hill. Haru wants to know what she's doing. Today's sentence is: What are you doing? Say it with me. What are you doing? Good! And Riko answers, I'm flying a kite. Say it. I'm flying a kite. I'm is I am. I'm flying means I am flying right now. 「なにを しているの？」は What are you doing? こたえは I'm ～ing. だよ。 Now, phonics. Ride, riding. Hide, hiding. Slide, sliding. Write, writing. Do you remember? When a word ends with e, take the e away and add i-n-g. Excellent! Here's a talking tip. When your friend tells you what they're doing, you can say, That looks fun! Let's say it. That looks fun! Now, let's grab our kites and run up the hill. Ready? Let's fly!",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 422,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。しつもんは What are you doing?。こたえは I'm で はじめて、うごきに ing を つけるよ。I'm flying、I'm making、I'm holding。",
+  "after": "ポイント。しつもんは What are you doing? こたえは I'm で はじめて、うごきに ing を つけるよ。I'm flying、I'm making、I'm holding。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 424,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Ask, Are you having fun? And answer, Yes, I am! or No, I'm not. Put are at the front, and it becomes a question.",
+  "after": "Today's goal. Ask, Are you having fun? And answer, Yes, I am! Or no, I'm not. Put are at the front, and it becomes a question.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 424,
+  "path": "teacher.segments[1].subtitleEn",
+  "before": "Today's goal. Ask, Are you having fun? And answer, Yes, I am! or No, I'm not. Put are at the front, and it becomes a question.",
+  "after": "Today's goal. Ask, Are you having fun? And answer, Yes, I am! / No, I'm not. Put are at the front, and it becomes a question.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 424,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。You are having fun。いれかえて！ Are you having fun?。こたえは みじかく。Yes, I am。No, I'm not。こたえは みじかく！",
+  "after": "ポイント。You are having fun。いれかえて！ Are you having fun? こたえは みじかく。Yes, I am。No, I'm not。こたえは みじかく！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 424,
+  "path": "teacher.segments[17].say",
+  "before": "Your turn! Answer me with the truth. Are you having fun right now? Yes, I am! Or, No, I'm not. Both are OK!",
+  "after": "Your turn! Answer me with the truth. Are you having fun right now? Yes, I am! Or no, I'm not. Both are OK!",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 424,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Your turn! Answer me with the truth. Are you having fun right now? Yes, I am! Or, No, I'm not. Both are OK!",
+  "after": "Your turn! Answer me with the truth. Are you having fun right now? Yes, I am! / No, I'm not. Both are OK!",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 431,
+  "path": "conversation.aiTask.goalJa",
+  "before": "いつも する ことは I play ～ every day.、いま している ことは I'm ～ing now. と つかいわけよう",
+  "after": "いつも する ことは I play ～ every day. いま している ことは I'm ～ing now. と つかいわけよう",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 441,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。てんきと、いま している ことを いおう。It's raining. We're staying inside.。いま？ それなら am・is・are ＋ ing！",
+  "after": "きょうの ゴール。てんきと、いま している ことを いおう。It's raining. We're staying inside. いま？ それなら am・is・are ＋ ing！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 441,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Your turn! What are you doing right now? We're... or I'm... Maybe I'm listening, or I'm sitting. Say it your way!",
+  "after": "Your turn! What are you doing right now? We're... / I'm... Maybe I'm listening, or I'm sitting. Say it your way!",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 442,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。いま みえる「かわっていく ようす」を ともだちに つたえよう。Look! A rainbow is coming out. The sky is getting brighter.。また is ＋ ing だよ！",
+  "after": "きょうの ゴール。いま みえる「かわっていく ようす」を ともだちに つたえよう。Look! A rainbow is coming out. The sky is getting brighter. また is ＋ ing だよ！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 443,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。いまの しぜんの ようすを いおう。The sunflowers are growing tall.。はなが たくさん だから are ＋ ing。えいごも そだてよう！",
+  "after": "きょうの ゴール。いまの しぜんの ようすを いおう。The sunflowers are growing tall. はなが たくさん だから are ＋ ing。えいごも そだてよう！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 444,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。いまの よぞらの ようすを いおう。The stars are shining. The moon is rising over the hill.。ほしは are、つきは is。そして ing！",
+  "after": "きょうの ゴール。いまの よぞらの ようすを いおう。The stars are shining. The moon is rising over the hill. ほしは are、つきは is。そして ing！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 445,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。いまの ことを にっきに 3文 かこう。はじめは Today, I'm writing my diary.。つぎに てんき。さいごに きもち！",
+  "after": "きょうの ゴール。いまの ことを にっきに 3文 かこう。はじめは Today, I'm writing my diary. つぎに てんき。さいごに きもち！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 446,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ うごきを ひとつ えらんで、まねして みせて。それから いってね。I'm jumping! I'm eating!。じぶんの ことばで いってね！",
+  "after": "あなたの ばん！ うごきを ひとつ えらんで、まねして みせて。それから いってね。I'm jumping! I'm eating! じぶんの ことばで いってね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 447,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。ふくと うごきで ひとを せつめい しよう。She's wearing a red hat. She's holding a kite.。そして Who is it? と きこう。",
+  "after": "きょうの ゴール。ふくと うごきで ひとを せつめい しよう。She's wearing a red hat. She's holding a kite. そして Who is it? と きこう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 447,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ キャラクターや、えの なかの ひとを おもいうかべて。He's wearing… She's holding… Who is it?。じぶんの ことばで いってね！",
+  "after": "あなたの ばん！ キャラクターや、えの なかの ひとを おもいうかべて。He's wearing… She's holding… Who is it? じぶんの ことばで いってね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 448,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。じぶんの えを 3つの 文で せつめい しよう。In my picture, Birimo is eating a sandwich.。そして あと 2文！",
+  "after": "きょうの ゴール。じぶんの えを 3つの 文で せつめい しよう。In my picture, Birimo is eating a sandwich. そして あと 2文！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 454,
+  "path": "teacher.segments[17].say",
+  "before": "Your turn! Did you hear a noise today? Answer for you. Yes, I did. Or, No, I didn't.",
+  "after": "Your turn! Did you hear a noise today? Answer for you. Yes, I did. Or no, I didn't.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 454,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Your turn! Did you hear a noise today? Answer for you. Yes, I did. Or, No, I didn't.",
+  "after": "Your turn! Did you hear a noise today? Answer for you. Yes, I did. / No, I didn't.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 456,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。sing → sang、drink → drank。ed は なし！ i が a に かわるよ。でも しつもんでは did が さきに くるから Did you sing?。Did you sang じゃ ないよ。",
+  "after": "ポイント。sing → sang、drink → drank。ed は なし！ i が a に かわるよ。でも しつもんでは did が さきに くるから Did you sing? Did you sang じゃ ないよ。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 457,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。人に かいたら wrote a letter to。ことに ついて かいたら wrote about。きくときは Who did you write to?。おばあちゃん、おじいちゃん、ともだち。だれでも OK！",
+  "after": "ポイント。人に かいたら wrote a letter to。ことに ついて かいたら wrote about。きくときは Who did you write to? おばあちゃん、おじいちゃん、ともだち。だれでも OK！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 461,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。かった ものを いおう。I bought a map at the shop.。そして What did you buy? と きこう。buy の むかしは bought。buy、bought。",
+  "after": "きょうの ゴール。かった ものを いおう。I bought a map at the shop. そして What did you buy? と きこう。buy の むかしは bought。buy、bought。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 461,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。did が もう むかしの かたち。だから buy は そのまま。What did you buy?。did の あとは buy の まま！ こたえでは bought。I bought a postcard for my mom。",
+  "after": "ポイント。did が もう むかしの かたち。だから buy は そのまま。What did you buy? did の あとは buy の まま！ こたえでは bought。I bought a postcard for my mom。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 461,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ ここで なにを かった？ つくった おはなしで いいよ！ I bought a keychain for my friend.。",
+  "after": "あなたの ばん！ ここで なにを かった？ つくった おはなしで いいよ！ I bought a keychain for my friend.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 462,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。おもしろい かんちがいを はなそう。I thought it was a ghost! It was just a sheet.。think の むかしは thought。",
+  "after": "きょうの ゴール。おもしろい かんちがいを はなそう。I thought it was a ghost! It was just a sheet. think の むかしは thought。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 462,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。I thought it was… は「～だと おもったけど、ちがった」。おもしろい かんちがい！ そして was の しつもんは were で。Were you scared? Yes, I was. No, I wasn't.。",
+  "after": "ポイント。I thought it was… は「～だと おもったけど、ちがった」。おもしろい かんちがい！ そして was の しつもんは were で。Were you scared? Yes, I was. No, I wasn't.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 462,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ おもしろい かんちがいを つくってね。I thought it was a cat! It was just a hat.。",
+  "after": "あなたの ばん！ おもしろい かんちがいを つくってね。I thought it was a cat! It was just a hat.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 462,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ キコちゃんが きくよ。Were you scared?。A「Yes, I was.」 B「Yes, I were.」 どっち？ かんがえて！",
+  "after": "クイズ！ キコちゃんが きくよ。Were you scared? A「Yes, I was.」 B「Yes, I were.」 どっち？ かんがえて！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 463,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。だれに おそわったか きいて、こたえよう。Who taught you? My grandpa taught me.。みじかく My grandpa did. でも OK。teach の むかしは taught。",
+  "after": "きょうの ゴール。だれに おそわったか きいて、こたえよう。Who taught you? My grandpa taught me. みじかく My grandpa did. でも OK。teach の むかしは taught。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 463,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。Who made this pot? みじかい こたえは I did.。Who taught you? My grandpa did.。Who の こたえは did で みじかく！ ぜんぶ いわなくて いいよ。",
+  "after": "ポイント。Who made this pot? みじかい こたえは I did. Who taught you? My grandpa did. Who の こたえは did で みじかく！ ぜんぶ いわなくて いいよ。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 463,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ じぶんが できる ことを おもいうかべて。だれに おそわった？ かぞくでも ともだちでも、だれでも OK。My sister taught me.。",
+  "after": "あなたの ばん！ じぶんが できる ことを おもいうかべて。だれに おそわった？ かぞくでも ともだちでも、だれでも OK。My sister taught me.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 463,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ Who made this pot?。A「I did.」 B「I do.」 どっち？ かんがえて！",
+  "after": "クイズ！ Who made this pot? A「I did.」 B「I do.」 どっち？ かんがえて！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 464,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。がんばった むずかしい ことを はなそう。It wasn't easy, but I did it.。wasn't は was not。そして Were you tired? と きこう。",
+  "after": "きょうの ゴール。がんばった むずかしい ことを はなそう。It wasn't easy, but I did it. wasn't は was not。そして Were you tired? と きこう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 464,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。was not は wasn't。were not は weren't。The stairs weren't wide, so we were careful.。Were you tired? Yes, I was. No, I wasn't.。",
+  "after": "ポイント。was not は wasn't。were not は weren't。The stairs weren't wide, so we were careful. Were you tired? Yes, I was. No, I wasn't.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 464,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ The stairs ＿＿ wide.。A「wasn't」 B「weren't」。stairs は たくさんの だん だよ。かんがえて！",
+  "after": "クイズ！ The stairs ＿＿ wide. A「wasn't」 B「weren't」。stairs は たくさんの だん だよ。かんがえて！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 465,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。した ことを 3つ、ひとつの ぶんで いおう。We climbed, we found a key, and we laughed.。さいごの まえに and を いれてね！",
+  "after": "きょうの ゴール。した ことを 3つ、ひとつの ぶんで いおう。We climbed, we found a key, and we laughed. さいごの まえに and を いれてね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 465,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。むかしの こと 3つ。1つめ、てん。2つめ、てん。それから and と さいごの ひとつ。3つ めの まえに and！ In the morning, we explored the tower.。",
+  "after": "ポイント。むかしの こと 3つ。1つめ、てん。2つめ、てん。それから and と さいごの ひとつ。3つ めの まえに and！ In the morning, we explored the tower.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 466,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。おはなしの ひとみたいに はじめよう。Once upon a time, a king lived here.。Once upon a time は「むかしむかし」。",
+  "after": "きょうの ゴール。おはなしの ひとみたいに はじめよう。Once upon a time, a king lived here. Once upon a time は「むかしむかし」。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 466,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ じぶんの おはなしを はじめよう。Once upon a time, a cat lived in a castle.。だれが どこに すんでいた？ じゆうに きめてね！",
+  "after": "あなたの ばん！ じぶんの おはなしを はじめよう。Once upon a time, a cat lived in a castle. だれが どこに すんでいた？ じゆうに きめてね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 467,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。じゅんばんに おはなしを しよう。First, he opened the box. Then, he looked inside. After that, he planted a seed.。",
+  "after": "きょうの ゴール。じゅんばんに おはなしを しよう。First, he opened the box. Then, he looked inside. After that, he planted a seed.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 468,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。おはなしを おわらせよう。Finally, the king smiled.。かわった ことも いおう。He wasn't lonely anymore.。Finally は「さいごに」。",
+  "after": "きょうの ゴール。おはなしを おわらせよう。Finally, the king smiled. かわった ことも いおう。He wasn't lonely anymore. Finally は「さいごに」。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 468,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ しあわせな おわりを つくってね。Finally, the dog found its friend. The end!。どんな おわりでも OK！",
+  "after": "あなたの ばん！ しあわせな おわりを つくってね。Finally, the dog found its friend. The end! どんな おわりでも OK！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 469,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。おはなしの 人の きもちを きいて こたえよう。How did he feel? He felt sad.。feel の むかしは felt。because で りゆうも つけよう！",
+  "after": "きょうの ゴール。おはなしの 人の きもちを きいて こたえよう。How did he feel? He felt sad. feel の むかしは felt。because で りゆうも つけよう！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 469,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。did の あとは feel。How did he feel?。こたえは felt。He felt sad.。それから りゆう。He felt sad because he was lonely.。because は「なぜなら」。",
+  "after": "ポイント。did の あとは feel。How did he feel? こたえは felt。He felt sad. それから りゆう。He felt sad because he was lonely. because は「なぜなら」。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 473,
+  "path": "school.testPoints[0]",
+  "before": "たのしい はなしには Sounds fun!、こまった はなしには Oh no! What happened? で はんのう できる",
+  "after": "たのしい はなしには Sounds fun! こまった はなしには Oh no! What happened? で はんのう できる",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 473,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Good listeners react to stories. Today, let's learn two reactions. For a happy story, say, Sounds fun! Say it with me. Sounds fun! For a bad story, say, Oh no! What happened? Say it with me. Oh no! What happened? Great! たのしい はなしには Sounds fun!、こまった はなしには Oh no! だよ。 Then you can ask, Are you okay now? Yes, I'm fine. Let's practice. I lost my pencil case yesterday. Oh no! What happened? I went to the zoo with my class. Sounds fun! Wonderful reactions! Now, phonics. Listen to the ed sounds. Dropped, t. Cried, d. Shouted, id. Missed, t. Here's a tip. Everyone makes mistakes. When a friend shares a funny mistake, don't laugh at them. Laugh with them. Okay, let's tell our stories and react!",
+  "after": "Hello, everyone! Good listeners react to stories. Today, let's learn two reactions. For a happy story, say, Sounds fun! Say it with me. Sounds fun! For a bad story, say, Oh no! What happened? Say it with me. Oh no! What happened? Great! たのしい はなしには Sounds fun! こまった はなしには Oh no! だよ。 Then you can ask, Are you okay now? Yes, I'm fine. Let's practice. I lost my pencil case yesterday. Oh no! What happened? I went to the zoo with my class. Sounds fun! Wonderful reactions! Now, phonics. Listen to the ed sounds. Dropped, t. Cried, d. Shouted, id. Missed, t. Here's a tip. Everyone makes mistakes. When a friend shares a funny mistake, don't laugh at them. Laugh with them. Okay, let's tell our stories and react!",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 473,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "すごい！ たのしい はなしには Sounds fun!、こまった はなしには Oh no! What happened? と いえるね。このあと ハルくんと おはなし してね。おもしろい はなしが あるよ。またね！",
+  "after": "すごい！ たのしい はなしには Sounds fun! こまった はなしには Oh no! What happened? と いえるね。このあと ハルくんと おはなし してね。おもしろい はなしが あるよ。またね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ }
+]

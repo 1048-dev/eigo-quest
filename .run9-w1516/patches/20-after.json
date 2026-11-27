@@ -1,0 +1,266 @@
+[
+ {
+  "lesson": 443,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Wow, look at this field. It's full of yellow sunflowers! They're so big. Let's walk through the field. Today's sentence is: The sunflowers are growing tall. Say it with me. The sunflowers are growing tall. Great! Growing means getting bigger. You can compare, too. They're taller than me! And look closely. A bee is visiting the flowers. いきものや しょくぶつの ようすも ～ing で いえるよ。 Sunflowers love the sun. That's why they're called sunflowers. Sun and flower! Now, phonics. Yellow. Yes. Yard. Yawn. Listen to the beginning. Yeh, yeh, yeh. At the start of a word, y says yeh. ことばの はじめの y は「イェ」。 So y has different sounds. Sunny says ee. Sky says eye. Yellow says yeh. Here's a tip. When something is bigger than you, say, Wow, it's taller than me! Let's say it. Wow, it's taller than me! OK, let's find the tallest sunflower in the field!",
+  "after": "Hello, everyone! Wow, look at this field. It's full of yellow sunflowers! They're so big. Let's walk through the field. Today's sentence is: The sunflowers are growing tall. Say it with me. The sunflowers are growing tall. Great! Growing means getting bigger. You can compare, too. They're taller than me! And look closely. A bee is visiting the flowers. いきものや しょくぶつの ようすも ～ing で いえるよ。 Sunflowers love the sun. That's why they're called sunflowers. Sun and flower! Now, phonics. Yellow. Yes. Yard. Yawn. Listen to the beginning. Yeh, yuh, yuh. At the start of a word, y says yuh. ことばの はじめの y は「イェ」。 So y has different sounds. Sunny says ee. Sky says eye. Yellow says yuh. Here's a tip. When something is bigger than you, say, Wow, it's taller than me! Let's say it. Wow, it's taller than me! OK, let's find the tallest sunflower in the field!",
+  "reviewers": "B+C (coordinator; from the L441-450 group notes)",
+  "reason": "initial Y sound written \"yeh\" in some fields and \"yuh\" in others; TTS reads them differently. Unify to \"yuh\" (the segments of L443-445)"
+ },
+ {
+  "lesson": 444,
+  "path": "teacherScript",
+  "before": "Good evening, everyone! It's night on the plains. The campfire is warm, and the sky is very dark. Shh, let's talk quietly. Look up. Today's sentence is: The stars are shining. Say it softly with me. The stars are shining. Beautiful! The moon is rising over the hill. Rising means going up. よるの ようすも ～ing で しずかに いえるよ。 The plains have no city lights, so we can see thousands of stars. Can you find a shooting star? Now, phonics. Sleepy. Starry. These say ee. Shy says eye. Young says yeh. Three sounds of y! Where is the y? At the start, it says yeh. At the end of a long word, ee. At the end of a short word, eye. Here's a tip for bedtime. When you're tired, say, I'm getting sleepy. Good night! Let's whisper it. I'm getting sleepy. Good night! OK, let's lie down on the blanket and count the stars.",
+  "after": "Good evening, everyone! It's night on the plains. The campfire is warm, and the sky is very dark. Shh, let's talk quietly. Look up. Today's sentence is: The stars are shining. Say it softly with me. The stars are shining. Beautiful! The moon is rising over the hill. Rising means going up. よるの ようすも ～ing で しずかに いえるよ。 The plains have no city lights, so we can see thousands of stars. Can you find a shooting star? Now, phonics. Sleepy. Starry. These say ee. Shy says eye. Young says yuh. Three sounds of y! Where is the y? At the start, it says yuh. At the end of a long word, ee. At the end of a short word, eye. Here's a tip for bedtime. When you're tired, say, I'm getting sleepy. Good night! Let's whisper it. I'm getting sleepy. Good night! OK, let's lie down on the blanket and count the stars.",
+  "reviewers": "B+C (coordinator; from the L441-450 group notes)",
+  "reason": "initial Y sound written \"yeh\" in some fields and \"yuh\" in others; TTS reads them differently. Unify to \"yuh\" (the segments of L443-445)"
+ },
+ {
+  "lesson": 449,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Y has three sounds. Windy, ee. Sky, eye. Yellow, yeh. And run becomes running. Double the N!",
+  "after": "Sound review! Y has three sounds. Windy, ee. Sky, eye. Yellow, yuh. And run becomes running. Double the N!",
+  "reviewers": "B+C (coordinator; from the L441-450 group notes)",
+  "reason": "initial Y sound written \"yeh\" in some fields and \"yuh\" in others; TTS reads them differently. Unify to \"yuh\" (the segments of L443-445)"
+ },
+ {
+  "lesson": 449,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Y has three sounds. Windy, ee. Sky, eye. Yellow, yeh. And run becomes running. Double the N!",
+  "after": "Sound review! Y has three sounds. Windy, ee. Sky, eye. Yellow, yuh. And run becomes running. Double the N!",
+  "reviewers": "B+C (coordinator; from the L441-450 group notes)",
+  "reason": "initial Y sound written \"yeh\" in some fields and \"yuh\" in others; TTS reads them differently. Unify to \"yuh\" (the segments of L443-445)"
+ },
+ {
+  "lesson": 454,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。did の あとは ed なし。Did you see? Did you hear? みじかい こたえは かんたん。Yes, I did。No, I didn't。",
+  "after": "ポイント。did の あとは もとの かたち。Did you see? Did you hear? みじかい こたえは かんたん。Yes, I did。No, I didn't。",
+  "reviewers": "objective (coordinator; L451-460 / L471-480 group fixes)",
+  "reason": "'did の あとは ed なし' is wrong for irregular verbs (Did you see, not saw); say もとの かたち (same fix as the L454 seg1 / L472 group patches)"
+ },
+ {
+  "lesson": 456,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Use special past words with no E D. sing の むかしは sang! drink の むかしは drank! We sang a song by the campfire.",
+  "after": "Today's goal. Use special past words with no E D. sing の すぎた かたちは sang! drink の すぎた かたちは drank! We sang a song by the campfire.",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 456,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。ed を つけない とくべつな むかしの ことばを つかおう。sing の むかしは sang！ drink の むかしは drank！ We sang a song by the campfire。",
+  "after": "きょうの ゴール。ed を つけない とくべつな すぎた かたちを つかおう。sing の すぎた かたちは sang！ drink の すぎた かたちは drank！ We sang a song by the campfire。",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups); objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち; JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 456,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "ブラボー！ We sang や I drank が いえるね。swam や rang みたいな とくべつな むかしの ことばも わかるね。このあと リコちゃんと おはなし してね。また ひの そばで あおう！",
+  "after": "ブラボー！ We sang や I drank が いえるね。swam や rang みたいな とくべつな すぎた かたちも わかるね。このあと リコちゃんと おはなし してね。また ひの そばで あおう！",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 457,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Talk about a letter you wrote. I wrote a letter to my grandma. write の むかしは wrote! And begin becomes began.",
+  "after": "Today's goal. Talk about a letter you wrote. I wrote a letter to my grandma. write の すぎた かたちは wrote! And begin becomes began.",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 457,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。かいた てがみの ことを はなそう。I wrote a letter to my grandma。write の むかしは wrote！ begin は began に なるよ。",
+  "after": "きょうの ゴール。かいた てがみの ことを はなそう。I wrote a letter to my grandma。write の すぎた かたちは wrote！ begin は began に なるよ。",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 458,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Say I knew, or I didn't know. Birimo knew the answer! know の むかしは knew. The K is silent. Knew!",
+  "after": "Today's goal. Say I knew, or I didn't know. Birimo knew the answer! know の すぎた かたちは knew. The K is silent. Knew!",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 458,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。I knew や I didn't know を いおう。Birimo knew the answer！ know の むかしは knew。k は よまないよ。knew！",
+  "after": "きょうの ゴール。I knew や I didn't know を いおう。Birimo knew the answer！ know の すぎた かたちは knew。k は よまないよ。knew！",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 459,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Ask and answer about last weekend. Where did you go last weekend? I went to the beach. go の むかしは went!",
+  "after": "Today's goal. Ask and answer about last weekend. Where did you go last weekend? I went to the beach. go の すぎた かたちは went!",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 459,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。せんしゅうまつの ことを きいて こたえよう。Where did you go last weekend? I went to the beach。go の むかしは went！",
+  "after": "きょうの ゴール。せんしゅうまつの ことを きいて こたえよう。Where did you go last weekend? I went to the beach。go の すぎた かたちは went！",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 460,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Talk about your weekend in two or three sentences. I went to the river. I caught a fish. catch の むかしは caught!",
+  "after": "Today's goal. Talk about your weekend in two or three sentences. I went to the river. I caught a fish. catch の すぎた かたちは caught!",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 460,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。しゅうまつの ことを 2〜3ぶんで はなそう。I went to the river. I caught a fish。catch の むかしは caught！",
+  "after": "きょうの ゴール。しゅうまつの ことを 2〜3ぶんで はなそう。I went to the river. I caught a fish。catch の すぎた かたちは caught！",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 461,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Say what you bought. I bought a map at the shop. And ask, What did you buy? buy の むかしは bought. Buy, bought.",
+  "after": "Today's goal. Say what you bought. I bought a map at the shop. And ask, What did you buy? buy の すぎた かたちは bought. Buy, bought.",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 461,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。かった ものを いおう。I bought a map at the shop. そして What did you buy? と きこう。buy の むかしは bought。buy、bought。",
+  "after": "きょうの ゴール。かった ものを いおう。I bought a map at the shop. そして What did you buy? と きこう。buy の すぎた かたちは bought。buy、bought。",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 461,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。did が もう むかしの かたち。だから buy は そのまま。What did you buy? did の あとは buy の まま！ こたえでは bought。I bought a postcard for my mom。",
+  "after": "ポイント。did が もう すぎた かたち。だから buy は そのまま。What did you buy? did の あとは buy の まま！ こたえでは bought。I bought a postcard for my mom。",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 462,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Talk about a funny mistake. I thought it was a ghost! It was just a sheet. think の むかしは thought.",
+  "after": "Today's goal. Talk about a funny mistake. I thought it was a ghost! It was just a sheet. think の すぎた かたちは thought.",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 462,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。おもしろい かんちがいを はなそう。I thought it was a ghost! It was just a sheet. think の むかしは thought。",
+  "after": "きょうの ゴール。おもしろい かんちがいを はなそう。I thought it was a ghost! It was just a sheet. think の すぎた かたちは thought。",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 463,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Ask who taught someone, and answer. Who taught you? My grandpa taught me. Or say it short, My grandpa did. teach の むかしは taught.",
+  "after": "Today's goal. Ask who taught someone, and answer. Who taught you? My grandpa taught me. Or say it short, My grandpa did. teach の すぎた かたちは taught.",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 463,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。だれに おそわったか きいて、こたえよう。Who taught you? My grandpa taught me. みじかく My grandpa did. でも OK。teach の むかしは taught。",
+  "after": "きょうの ゴール。だれに おそわったか きいて、こたえよう。Who taught you? My grandpa taught me. みじかく My grandpa did. でも OK。teach の すぎた かたちは taught。",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 463,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは A！ made は むかしの かたち だから、こたえは I did。すごい！ つぼの めいじん だね！",
+  "after": "こたえは A！ made は すぎた かたち だから、こたえは I did。すごい！ つぼの めいじん だね！",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 469,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Ask and answer about feelings in a story. How did he feel? He felt sad. feel の むかしは felt. Add a reason with because!",
+  "after": "Today's goal. Ask and answer about feelings in a story. How did he feel? He felt sad. feel の すぎた かたちは felt. Add a reason with because!",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 469,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。おはなしの 人の きもちを きいて こたえよう。How did he feel? He felt sad. feel の むかしは felt。because で りゆうも つけよう！",
+  "after": "きょうの ゴール。おはなしの 人の きもちを きいて こたえよう。How did he feel? He felt sad. feel の すぎた かたちは felt。because で りゆうも つけよう！",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 469,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは B！ did の あとは むかしの かたちに しない。feel の まま。せんせい、とっても ほこらしい きもち！",
+  "after": "こたえは B！ did の あとは すぎた かたちに しない。feel の まま。せんせい、とっても ほこらしい きもち！",
+  "reviewers": "objective (coordinator; flagged independently by the L451-460 and L471-480 groups)",
+  "reason": "JA むかし means 'long ago', not 'past form'. world 16 already uses すぎた かたち (30x, and in W17-31); unify the name of the past form to すぎた かたち"
+ },
+ {
+  "lesson": 475,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。When did you は「いつ」を きくよ。いつ は when。How was it? は きもちを きくよ。それから did の あとは ed なし。learned じゃ なくて learn。",
+  "after": "ポイント。When did you は「いつ」を きくよ。いつ は when。How was it? は きもちを きくよ。それから did の あとは もとの かたち。learned じゃ なくて learn。",
+  "reviewers": "objective (coordinator; L451-460 / L471-480 group fixes)",
+  "reason": "'did の あとは ed なし' is wrong for irregular verbs (Did you see, not saw); say もとの かたち (same fix as the L454 seg1 / L472 group patches)"
+ },
+ {
+  "lesson": 475,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは B！ did の あとは ed なし。もう プロの インタビュアーだね！",
+  "after": "こたえは B！ did の あとは もとの かたち。もう プロの インタビュアーだね！",
+  "reviewers": "objective (coordinator; L451-460 / L471-480 group fixes)",
+  "reason": "'did の あとは ed なし' is wrong for irregular verbs (Did you see, not saw); say もとの かたち (same fix as the L454 seg1 / L472 group patches)"
+ },
+ {
+  "lesson": 477,
+  "path": "teacher.segments[20].say",
+  "before": "Super storytelling! You can tell a picture story with went, lost, and blew. You can use Yesterday, Then, and Finally. Next, talk with Birimo! ビリモ と おはなし してね. Bye-bye!",
+  "after": "Super storytelling! You can tell a picture story with went, lost, and blew. You can use yesterday, then, and finally. Next, talk with Birimo! ビリモ と おはなし してね. Bye-bye!",
+  "reviewers": "objective (coordinator; from the L461-470 / L471-480 group notes)",
+  "reason": "story words listed mid-sentence take lowercase (\"first, then, and finally\"), same as L467 seg20"
+ },
+ {
+  "lesson": 477,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Super storytelling! You can tell a picture story with went, lost, and blew. You can use Yesterday, Then, and Finally. Next, talk with Birimo! Bye-bye!",
+  "after": "Super storytelling! You can tell a picture story with went, lost, and blew. You can use yesterday, then, and finally. Next, talk with Birimo! Bye-bye!",
+  "reviewers": "objective (coordinator; from the L461-470 / L471-480 group notes)",
+  "reason": "story words listed mid-sentence take lowercase (\"first, then, and finally\"), same as L467 seg20"
+ },
+ {
+  "lesson": 480,
+  "path": "teacher.segments[20].say",
+  "before": "What a show! You can tell a story with Once upon a time, First, then, and Finally. Next, talk with Haru! ハルくん と おはなし してね. Next is World 17, Starfall Observatory! See you!",
+  "after": "What a show! You can tell a story with Once upon a time, first, then, and finally. Next, talk with Haru! ハルくん と おはなし してね. Next is World 17, Starfall Observatory! See you!",
+  "reviewers": "objective (coordinator; from the L461-470 / L471-480 group notes)",
+  "reason": "story words listed mid-sentence take lowercase (\"first, then, and finally\"), same as L467 seg20"
+ },
+ {
+  "lesson": 480,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "What a show! You can tell a story with Once upon a time, First, then, and Finally. Next, talk with Haru! Next is World 17, Starfall Observatory! See you!",
+  "after": "What a show! You can tell a story with Once upon a time, first, then, and finally. Next, talk with Haru! Next is World 17, Starfall Observatory! See you!",
+  "reviewers": "objective (coordinator; from the L461-470 / L471-480 group notes)",
+  "reason": "story words listed mid-sentence take lowercase (\"first, then, and finally\"), same as L467 seg20"
+ }
+]
