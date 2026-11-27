@@ -1,0 +1,74 @@
+[
+ {
+  "lesson": 252,
+  "path": "teacher.segments[17].say",
+  "before": "Your turn! What do you want to see or eat? I want to see... or I want to eat... ゆめの たびで いいよ。",
+  "after": "Your turn! What do you want to see or eat? I want to see... Or I want to eat... ゆめの たびで いいよ。",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 252,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Your turn! What do you want to see or eat? I want to see... or I want to eat...",
+  "after": "Your turn! What do you want to see or eat? I want to see... / I want to eat...",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 255,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。すすめる ときは Let's go to か How about?。そのあと You can で たのしい ことを たそう。つかった ことばを ぜんぶ つなげよう！",
+  "after": "ポイント。すすめる ときは Let's go to か How about? そのあと You can で たのしい ことを たそう。つかった ことばを ぜんぶ つなげよう！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 264,
+  "path": "teacher.segments[17].say",
+  "before": "Your turn! On Sunday, I played... or I watched... It doesn't have to be true. You can make it up! つくっても いいよ。",
+  "after": "Your turn! On Sunday, I played... Or I watched... It doesn't have to be true. You can make it up! つくっても いいよ。",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 264,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Your turn! On Sunday, I played... or I watched... It doesn't have to be true. You can make it up!",
+  "after": "Your turn! On Sunday, I played... / I watched... It doesn't have to be true. You can make it up!",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 297,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。いきものの すみかは Where do ～ live?。たべものの ふるさとは Where is ～ from?。くらしは In Japan, people bow. のように いうよ。くらしの クイズ だね。",
+  "after": "ポイント。いきものの すみかは Where do ～ live? たべものの ふるさとは Where is ～ from? くらしは In Japan, people bow. のように いうよ。くらしの クイズ だね。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 297,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ ともだちに クイズを だそう。いきものを ひとつ えらんで。Where do ～ live?。じぶんで もんだいを つくってね。",
+  "after": "あなたの ばん！ ともだちに クイズを だそう。いきものを ひとつ えらんで。Where do ～ live? じぶんで もんだいを つくってね。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 298,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ ミニ スピーチ。Look at this picture. We can…。Thank you for listening.。じぶんの ことばで いってね。",
+  "after": "あなたの ばん！ ミニ スピーチ。Look at this picture. We can…。Thank you for listening. じぶんの ことばで いってね。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 300,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ じぶんの ていあん。We can…。Let's start today!。じぶんの アイデアで いってね。",
+  "after": "あなたの ばん！ じぶんの ていあん。We can…。Let's start today! じぶんの アイデアで いってね。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ }
+]
