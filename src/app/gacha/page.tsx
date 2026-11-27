@@ -143,7 +143,8 @@ export default function GachaPage() {
             const count = ownedMap.get(m.id) ?? 0;
             return (
               <li key={m.id}>
-                <button className="block w-full text-left" onClick={() => setSelected(count > 0 ? m.id : null)} aria-label={count > 0 ? m.nameJa : `No.${m.no} まだ出会っていない`}>
+                <button className="block w-full text-left" onClick={() => setSelected(count > 0 ? m.id : null)}>
+                  {/* run10: 名前は カードの 文字から（No.・星・名前。まだの ときは「まだ出会っていない」）。aria-label は 見えている 文字と ずれるので つけない */}
                   <MonsterCard id={m.id} owned={count > 0} count={count} size="sm" />
                 </button>
               </li>

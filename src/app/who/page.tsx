@@ -108,13 +108,15 @@ export default function WhoPage() {
             const selected = c.id === me.selectedChildId;
             return (
               <li key={c.id}>
+                {/* run10: aria-label を つけない（見えている 文字と 読みあげの 名前を そろえる。axe label-content-name-mismatch）。
+                    名前は「そらさん 小1（いま えらばれているよ）」。「いま」の 札と アバターは 読まない */}
                 <button type="button" onClick={() => choose(c.id)} disabled={busyId !== null}
-                  aria-label={`${c.nickname}さん ${gradeLabel(c.schoolGrade)}${selected ? "（いま えらばれているよ）" : ""}`}
                   className={`card relative flex w-full flex-col items-center gap-2 px-2 pb-3 pt-4 transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline-3 focus-visible:outline-[var(--volt)] ${selected ? "shadow-[0_0_0_3px_var(--volt),0_0_24px_rgba(255,216,58,.5)]" : ""} ${busyId === c.id ? "animate-pulse" : ""}`}>
-                  {selected && <span className="absolute right-2 top-2 rounded-full bg-[var(--volt)] px-2 text-[10px] font-black text-[#2a1a03]">いま</span>}
+                  {selected && <span className="absolute right-2 top-2 rounded-full bg-[var(--volt)] px-2 text-[10px] font-black text-[#2a1a03]" aria-hidden>いま</span>}
                   <span className="bob" style={{ animationDelay: `${(c.id.charCodeAt(0) % 5) * 0.2}s` }}><ChildAvatar childId={c.id} index={i} avatar={c.avatarCharacter} size={76} /></span>
-                  <span className="w-full truncate text-center text-lg font-black" style={{ textShadow: `0 0 12px ${a.ring}` }}>{c.nickname}</span>
+                  <span className="w-full truncate text-center text-lg font-black" style={{ textShadow: `0 0 12px ${a.ring}` }}>{c.nickname}<span className="sr-only">さん</span></span>
                   {c.schoolGrade && <span className="rounded-full border border-[var(--gold)]/60 bg-black/30 px-2 text-xs font-bold text-[var(--on-dark-2)]">{gradeLabel(c.schoolGrade)}</span>}
+                  {selected && <span className="sr-only">（いま えらばれているよ）</span>}
                 </button>
               </li>
             );

@@ -42,7 +42,7 @@ export function MonsterCard({ id, owned = true, count = 0, size = "md", isNew = 
           <p className="mcard-name font-title">
             {parts.map((s, i) => <Fragment key={i}>{i > 0 && <>・<wbr /></>}{s}</Fragment>)}
           </p>
-          {size !== "sm" && <p className="mcard-title">{owned ? `「${m.titleJa}」` : "まだ出会っていない"}</p>}
+          {size !== "sm" ? <p className="mcard-title">{owned ? `「${m.titleJa}」` : "まだ出会っていない"}</p> : !owned && <span className="sr-only">まだ出会っていない</span>}
           {size === "lg" && owned && (
             <div className="mt-2 grid grid-cols-3 gap-1 text-[10px] font-black">
               <span className="mcard-chip">{el.ja}</span>

@@ -7,12 +7,13 @@ import { apiGet } from "@/lib/api/client";
 import { AnnouncementsResponseSchema, type Announcement } from "@/lib/api/contracts";
 import { offlineAnnouncements } from "@/lib/offline";
 
-const CATEGORY: Record<Announcement["category"], { label: string; color: string }> = {
-  update: { label: "アップデート", color: "#3fb6a8" },
-  event: { label: "イベント", color: "#ff8a3d" },
-  tips: { label: "コツ", color: "#9b6bff" },
-  parents: { label: "保護者の方へ", color: "#c9a227" },
-  maintenance: { label: "メンテナンス", color: "#8a8f98" },
+/** 札の 色（白い 文字との コントラスト 4.5 以上。run10 axe color-contrast。tests/a11y-contrast.test.ts） */
+export const CATEGORY: Record<Announcement["category"], { label: string; color: string }> = {
+  update: { label: "アップデート", color: "#1f7a70" },
+  event: { label: "イベント", color: "#b4500f" },
+  tips: { label: "コツ", color: "#7442d8" },
+  parents: { label: "保護者の方へ", color: "#866a0e" },
+  maintenance: { label: "メンテナンス", color: "#5f646c" },
 };
 
 export function AnnouncementsPanel({ limit = 3 }: { limit?: number }) {

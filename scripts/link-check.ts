@@ -51,7 +51,16 @@ export function allKnownRoutes(): string[] {
 
 interface Found { url: string; from: Set<string> }
 
-async function crawl(browser: Browser, base: string, found: Map<string, Found>) {
+/** ブラウザの 中で 実行する: <a href> と ファイル（img・link・script・source・audio・video）の URL */
+export const COLLECT_JS = `(() => {
+  const pick = (sel, attr) => Array.from(document.querySelectorAll(sel)).map((e) => e.getAttribute(attr) || "").filter(Boolean);
+  return {
+    a: pick("a[href]", "href"),
+    res: [].concat(pick("img[src]", "src"), pick("link[href]", "href"), pick("script[src]", "src"), pick("source[src]", "src"), pick("audio[src]", "src"), pick("video[src]", "src")),
+  };
+})()`;
+
+async function crawl(browser: Browser, base: string, found: Map<string, Found>, crawlErrors: string[]) {
   const origin = new URL(base).origin;
   const queue = ["/", ...A11Y_PAGES.map((p) => p.url), "/who", "/parent", "/setup-pin"].map((p) => new URL(p, base).href);
   const perPattern = new Map<string, number>();
@@ -73,13 +82,8 @@ async function crawl(browser: Browser, base: string, found: Map<string, Found>) 
       await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60_000 });
       await page.waitForLoadState("networkidle", { timeout: 15_000 }).catch(() => undefined);
       await page.waitForTimeout(400);
-      const links = await page.evaluate(() => {
-        const pick = (sel: string, attr: string) => [...document.querySelectorAll(sel)].map((e) => (e as HTMLElement).getAttribute(attr) ?? "").filter(Boolean);
-        return {
-          a: pick("a[href]", "href"),
-          res: [...pick("img[src]", "src"), ...pick("link[href]", "href"), ...pick("script[src]", "src"), ...pick("source[src]", "src"), ...pick("audio[src]", "src"), ...pick("video[src]", "src")],
-        };
-      });
+      // 文字列で わたす（tsx が 関数に __name() を 足すと ブラウザの 中で ReferenceError に なる）
+      const links = (await page.evaluate(COLLECT_JS)) as { a: string[]; res: string[] };
       const from = new URL(url).pathname;
       for (const [kind, list] of [["a", links.a], ["res", links.res]] as const) {
         for (const raw of list) {
@@ -97,9 +101,7 @@ async function crawl(browser: Browser, base: string, found: Map<string, Found>) 
       }
       console.log(`  [ブラウザ ${rendered}] ${from} → リンク ${links.a.length}・ファイル ${links.res.length}`);
     } catch (e) {
-      const f = found.get(url) ?? { url, from: new Set<string>() };
-      f.from.add("(ブラウザで ひらけない)");
-      found.set(url, f);
+      crawlErrors.push(`${new URL(url).pathname}: ${e instanceof Error ? e.message.split("\n")[0] : e}`);
       console.log(`  [ブラウザ ${rendered}] ✖ ${url}: ${e instanceof Error ? e.message.split("\n")[0] : e}`);
     }
   }
@@ -143,7 +145,8 @@ async function main() {
     browser = await chromium.launch();
     console.log(`links: ${srv.base}`);
     const found = new Map<string, Found>();
-    const rendered = await crawl(browser, srv.base, found);
+    const crawlErrors: string[] = [];
+    const rendered = await crawl(browser, srv.base, found, crawlErrors);
     for (const r of allKnownRoutes()) {
       const key = new URL(r, srv.base).href;
       if (!found.has(key)) found.set(key, { url: key, from: new Set(["(ルート ぜんぶ)"]) });
@@ -160,14 +163,16 @@ async function main() {
       "",
       `- 日時: ${new Date().toISOString()}・サーバー: ${srv.base}`,
       `- ブラウザで ひらいた 画面 ${rendered}（同じ かたちは ${PER_PATTERN} つまで）・画面から 見つけた URL ${discovered}・ルート ぜんぶを くわえて GET ${urls.length}`,
-      `- こわれた URL（4xx・5xx・つながらない）: **${bad.length}**`,
+      `- こわれた URL（4xx・5xx・つながらない）: **${bad.length}**・ブラウザで ひらけなかった 画面: **${crawlErrors.length}**`,
       "",
+      ...crawlErrors.map((e) => `- ブラウザで ひらけない: ${e}`),
+      ...(crawlErrors.length ? [""] : []),
       ...(bad.length ? ["| URL | 状態 | どこから |", "|---|---|---|", ...bad.map((u) => `| ${rel(u)} | ${status.get(u)} | ${[...found.get(u)!.from].slice(0, 5).join(", ")} |`), ""] : []),
     ].join("\n"));
     for (const u of bad.slice(0, 30)) console.log(`  ✖ ${rel(u)} → ${status.get(u)}（${[...found.get(u)!.from].slice(0, 3).join(", ")}）`);
     console.log(`→ ${path.relative(process.cwd(), OUT)}`);
-    console.log(`CHECK-SUMMARY: ${urls.length} URLs（画面 ${rendered}）・broken ${bad.length}`);
-    code = bad.length === 0 ? 0 : 1;
+    console.log(`CHECK-SUMMARY: ${urls.length} URLs（画面 ${rendered}）・broken ${bad.length}・crawl errors ${crawlErrors.length}`);
+    code = bad.length === 0 && crawlErrors.length === 0 ? 0 : 1;
   } finally {
     await browser?.close();
     await srv.stop();

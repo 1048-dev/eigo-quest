@@ -102,7 +102,8 @@ export function ReadAlongText({ lines, reader, showJa, big = false }: {
               role="button" tabIndex={0}
               onClick={() => void reader.play(i, { single: true })}
               onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); void reader.play(i, { single: true }); } }}
-              aria-label={`${l.en}（タップで よむ）`}
+              // run10: aria-label は つけない（日本語の 訳が 見えているとき 名前と ずれる。axe label-content-name-mismatch）。
+              // 名前は 英文（＋訳）＋「（タップで よむ）」
               className={`cursor-pointer rounded-xl px-3 py-2 transition ${active ? "bg-[#fff4c2] text-[#2a1a03] shadow-[inset_0_0_0_2px_#f2c14e] [&_p]:text-[#2a1a03]" : "hover:bg-black/5"}`}
             >
               <p lang="en" className={`${big ? "text-2xl" : "text-xl"} font-black leading-relaxed`}>
@@ -116,6 +117,7 @@ export function ReadAlongText({ lines, reader, showJa, big = false }: {
                 ))}
               </p>
               {showJa && <p className="text-sm text-[var(--ink-2)]">{l.ja}</p>}
+              <span className="sr-only">（タップで よむ）</span>
             </div>
           </li>
         );
