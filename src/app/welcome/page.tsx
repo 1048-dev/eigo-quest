@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { HeroScene } from "@/components/scene/HeroScene";
 import { PeekCharacter } from "@/components/scene/Peek";
 import { LineLoginButton } from "@/components/account/LineLoginButton";
+import { LegalConsentNote } from "@/components/legal/LegalLinks";
 import { fetchMe, rememberTrial } from "@/lib/auth/client";
 
 /** スタート画面: おうちの方の とうろく・ログイン ／ おためしで あそぶ */
@@ -41,6 +42,7 @@ export default function WelcomePage() {
         </p>
         <div className="mt-4 grid gap-3">
           {lineAvailable && <LineLoginButton label="LINEで ログイン・とうろく" />}
+          {lineAvailable && <LegalConsentNote action="LINEで ログイン・とうろく" />}
           <Link href="/register" className="btn btn-coin block text-center">おうちの方：とうろく</Link>
           <Link href="/login" className="btn btn-ghost block text-center">おうちの方：ログイン</Link>
         </div>

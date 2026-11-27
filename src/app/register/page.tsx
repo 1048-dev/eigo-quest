@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, type FormEvent } from "react";
 import { AccountHeader, FormMessage, PasswordField, PinField, TextField } from "@/components/account/Form";
 import { LineLoginButton } from "@/components/account/LineLoginButton";
+import { LegalConsentNote } from "@/components/legal/LegalLinks";
 import { AuthResultResponseSchema, PASSWORD_RULES_JA } from "@/lib/api/contracts";
 import { fetchMe, notifyAccountChanged, passwordChecks, sendJson } from "@/lib/auth/client";
 
@@ -66,6 +67,7 @@ export default function RegisterPage() {
           <div className="space-y-3">
             <LineLoginButton label="LINEで登録" />
             <p className="text-center text-xs text-[var(--ink-2)]">メールアドレス・パスワードなしで登録できます（このあと暗証番号を決めます）。月ごとの学習レポートも LINE で受け取れます。</p>
+            <LegalConsentNote action="LINEで登録" />
             <div className="flex items-center gap-3 text-xs text-[var(--ink-2)]" aria-hidden><span className="h-px flex-1 bg-current opacity-40" />または メールアドレスで<span className="h-px flex-1 bg-current opacity-40" /></div>
           </div>
         )}
@@ -93,6 +95,7 @@ export default function RegisterPage() {
           </div>
         </div>
 
+        <LegalConsentNote action="登録する" />
         <button type="submit" className="btn btn-coin block w-full text-lg" disabled={busy}>{busy ? "登録しています…" : "登録する"}</button>
         <p className="text-center text-sm text-[var(--ink-2)]">
           すでに登録済みの方は <Link href="/login" className="font-black text-[var(--volt)] underline underline-offset-4">ログイン</Link>

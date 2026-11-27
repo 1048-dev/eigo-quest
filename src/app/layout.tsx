@@ -5,6 +5,7 @@ import { FieldBackdrop } from "@/components/scene/FieldBackdrop";
 import { CharacterParade } from "@/components/scene/CharacterParade";
 import { ArtDefs } from "@/components/art/ArtDefs";
 import { AccountBar } from "@/components/account/AccountBar";
+import { LegalFooter } from "@/components/legal/LegalLinks";
 
 export const metadata: Metadata = { title: "英語クエスト", description: "ハルたちと毎日30分のえいご大冒険" };
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AccountBar />
           {children}
           <CharacterParade />
+          <LegalFooter />
         </main>
         <BottomNav />
       </body>

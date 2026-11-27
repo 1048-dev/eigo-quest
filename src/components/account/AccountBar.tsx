@@ -19,7 +19,9 @@ import { PinDialog } from "./PinPad";
 /** アカウント画面そのもの（ここではバーを出さない） */
 // /setup-pin（LINE で登録した直後の暗証番号）と /d（LINE で届いた PDF のダウンロード）も保護者向けの画面なので、
 // ゲームのバー・下のメニューを出さない。run5: パスワード・暗証番号を忘れたとき・メールアドレスの確認の画面も
-export const ACCOUNT_PATHS = ["/welcome", "/register", "/login", "/who", "/parent", "/setup-pin", "/d", "/forgot-password", "/reset-password", "/verify-email", "/forgot-pin"];
+export const ACCOUNT_PATHS = ["/welcome", "/register", "/login", "/who", "/parent", "/setup-pin", "/d", "/forgot-password", "/reset-password", "/verify-email", "/forgot-pin",
+  // run9: 利用規約・プライバシーポリシー・特定商取引法に基づく表記（保護者が 読む ページ）
+  "/terms", "/privacy", "/tokushoho"];
 export const isAccountPath = (path: string) => ACCOUNT_PATHS.some((p) => path === p || path.startsWith(`${p}/`));
 
 export function AccountBar() {
