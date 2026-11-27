@@ -1,0 +1,282 @@
+[
+  {
+    "lesson": 661,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Micro. My, like my bag. Then kro. Micro! Micro means small.",
+    "after": "Sound time! Micro. My, like my bag. Then crow, like the bird. Micro! Micro means small.",
+    "reviewers": "B+C",
+    "reason": "invented respelling 'kro' -> real word 'crow' (same sound)"
+  },
+  {
+    "lesson": 661,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Micro. My, like my bag. Then kro. Micro! Micro means small.",
+    "after": "Sound time! Micro. My, like my bag. Then crow, like the bird. Micro! Micro means small.",
+    "reviewers": "B+C",
+    "reason": "invented respelling 'kro' -> real word 'crow' (same sound)"
+  },
+  {
+    "lesson": 661,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ micro。my bag の my。つぎに kro。micro！ micro は「ちいさい」と いう いみ。",
+    "after": "おとの じかん！ micro。my bag の my。つぎに crow（カラス）の crow。micro！ micro は「ちいさい」と いう いみ。",
+    "reviewers": "B+C",
+    "reason": "match EN (crow)"
+  },
+  {
+    "lesson": 662,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. A rule starts with an action. Wear. For a no rule, say don't. Don't touch. Need to means you must. We need to wash our hands after the experiment.",
+    "after": "Here's the point. A rule starts with an action. Wear. To say no, use don't. Don't touch. Need to means you must. We need to wash our hands after the experiment.",
+    "reviewers": "A+B",
+    "reason": "'a no rule' is unnatural; clearer wording"
+  },
+  {
+    "lesson": 662,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. A rule starts with an action. Wear. For a no rule, say don't. Don't touch. Need to means you must. We need to wash our hands after the experiment.",
+    "after": "Here's the point. A rule starts with an action. Wear. To say no, use don't. Don't touch. Need to means you must. We need to wash our hands after the experiment.",
+    "reviewers": "A+B",
+    "reason": "'a no rule' is unnatural; clearer wording"
+  },
+  {
+    "lesson": 663,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Today, we will use a real microscope. Dr. Moss puts a tiny piece of a leaf on a glass slide. Now, look through the microscope. Turn the knob slowly. What can you see? I can see tiny circles! Say it with me. I can see tiny circles! Wonderful! To say more, use looks like. It looks like a green honeycomb. These tiny circles are the parts of the leaf. We call them cells. Every plant has many, many cells. Let's read Dr. Moss's note about the microscope. \"This microscope makes things look one hundred times bigger. A leaf looks flat and smooth to your eyes. But under the microscope, you can see many small green boxes and circles. Plants are full of tiny surprises!\" Isn't that amazing? Remember, use small sentences. I can see. It looks like. It's green. Now, phonics. Thermometer. Speedometer. Pedometer. Barometer. Meter means a tool for measuring. A thermometer measures how hot or cold something is. Next time, we will use one! Let's look closely like real scientists!",
+    "after": "Hello, everyone! Today, we will use a real microscope. Dr. Moss puts a tiny piece of a leaf on a glass slide. Now, look through the microscope. Turn the knob slowly. What can you see? I can see tiny circles! Say it with me. I can see tiny circles! Wonderful! To say more, use looks like. It looks like a green honeycomb. These tiny circles are the parts of the leaf. We call them cells. Every plant has many, many cells. Let's read Dr. Moss's note about the microscope. \"This microscope makes things look one hundred times bigger. A leaf looks flat and smooth to your eyes. But under the microscope, you can see many small green boxes and circles. Plants are full of tiny surprises!\" Isn't that amazing? Remember, use short sentences. I can see. It looks like. It's green. Now, phonics. Thermometer. Speedometer. Pedometer. Barometer. Meter means a tool for measuring. A thermometer measures how hot or cold something is. Next time, we will use one! Let's look closely like real scientists!",
+    "reviewers": "A+B",
+    "reason": "'short sentences' is the natural teacher phrase"
+  },
+  {
+    "lesson": 663,
+    "path": "conversation.lines[4].en",
+    "before": "I can see a big black circle. Is it a monster?",
+    "after": "I can see a big black line. Is it a monster?",
+    "reviewers": "A+B",
+    "reason": "an eyelash looks like a line, not a circle (joke logic)"
+  },
+  {
+    "lesson": 663,
+    "path": "conversation.lines[4].ja",
+    "before": "おおきな くろい まるが みえる。かいぶつかな？",
+    "after": "おおきな くろい せんが みえる。かいぶつかな？",
+    "reviewers": "A+B",
+    "reason": "match EN (line)"
+  },
+  {
+    "lesson": 663,
+    "path": "teacher.segments[7].say",
+    "before": "Kiko looks next. It looks like a green honeycomb! Then Birimo looks. I can see a big black circle. Is it a monster? Ha ha. No, Birimo. That's your eyelash!",
+    "after": "Kiko looks next. It looks like a green honeycomb! Then Birimo looks. I can see a big black line. Is it a monster? Ha ha. No, Birimo. That's your eyelash!",
+    "reviewers": "A+B",
+    "reason": "an eyelash looks like a line, not a circle (joke logic)"
+  },
+  {
+    "lesson": 663,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Kiko looks next. It looks like a green honeycomb! Then Birimo looks. I can see a big black circle. Is it a monster? Ha ha. No, Birimo. That's your eyelash!",
+    "after": "Kiko looks next. It looks like a green honeycomb! Then Birimo looks. I can see a big black line. Is it a monster? Ha ha. No, Birimo. That's your eyelash!",
+    "reviewers": "A+B",
+    "reason": "an eyelash looks like a line, not a circle (joke logic)"
+  },
+  {
+    "lesson": 663,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "つぎは キコちゃん。「みどりの ハチの すみたい！」 それから ビリモ。「おおきな くろい まるが みえる。かいぶつかな？」 ふふ。ちがうわ、ビリモ。それは あなたの まつげよ！",
+    "after": "つぎは キコちゃん。「みどりの ハチの すみたい！」 それから ビリモ。「おおきな くろい せんが みえる。かいぶつかな？」 ふふ。ちがうわ、ビリモ。それは あなたの まつげよ！",
+    "reviewers": "A+B",
+    "reason": "match EN (line)"
+  },
+  {
+    "lesson": 663,
+    "path": "teacher.segments[7].slide.items[1]",
+    "before": "I can see a big black circle. Is it a monster?",
+    "after": "I can see a big black line. Is it a monster?",
+    "reviewers": "A+B",
+    "reason": "slide matches conversation line"
+  },
+  {
+    "lesson": 664,
+    "path": "teacher.segments[10].say",
+    "before": "Micro is small, and scope is a looking tool. Microscope! Tele is far. Telescope! A thermostat keeps a room warm. Your turn. Microscope. Telescope. Thermometer. Thermostat.",
+    "after": "Micro is small, and scope is a looking tool. Microscope! Tele is far. Telescope! A thermostat keeps a room warm or cool. Your turn. Microscope. Telescope. Thermometer. Thermostat.",
+    "reviewers": "A+B",
+    "reason": "science: a thermostat keeps the temperature, warm or cool"
+  },
+  {
+    "lesson": 664,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Micro is small, and scope is a looking tool. Microscope! Tele is far. Telescope! A thermostat keeps a room warm. Your turn. Microscope. Telescope. Thermometer. Thermostat.",
+    "after": "Micro is small, and scope is a looking tool. Microscope! Tele is far. Telescope! A thermostat keeps a room warm or cool. Your turn. Microscope. Telescope. Thermometer. Thermostat.",
+    "reviewers": "A+B",
+    "reason": "science: a thermostat keeps the temperature, warm or cool"
+  },
+  {
+    "lesson": 664,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "micro は ちいさい、scope は みる どうぐ。microscope！ tele は とおく。telescope！ thermostat は へやを あたたかく たもつ。あなたの ばん。microscope、telescope、thermometer、thermostat。",
+    "after": "micro は ちいさい、scope は みる どうぐ。microscope！ tele は とおく。telescope！ thermostat は へやを あたたかく、すずしく たもつ。あなたの ばん。microscope、telescope、thermometer、thermostat。",
+    "reviewers": "A+B",
+    "reason": "match EN (warm or cool)"
+  },
+  {
+    "lesson": 665,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Every scientist has a lab notebook. Today, we will learn how to write one. Dr. Moss writes in his notebook every day. A good page has four parts. The date. What I did. What I saw. And a picture. Here's a new word. Observe. Observe means to look very carefully. Today, I observed a leaf. Say it with me. Today, I observed a leaf. Excellent! Let's read Haru's notebook page. \"Date: May 12. Today, I observed a leaf. I used a microscope and a ruler. The leaf was 15 centimeters long. Under the microscope, I saw tiny green circles. They looked like a honeycomb. Question: Why are leaves green?\" Wow, Haru even wrote a question. Scientists always have new questions. Use past tense in your notebook, because you write after the experiment. I used. I saw. It was. Now, phonics review. Microphone. Periscope. Pedometer. Thermometer. Small, look, measure, heat. Now, write your first notebook page. Write four or five sentences, and draw a picture. Let's be careful observers!",
+    "after": "Hello, everyone! Every scientist has a lab notebook. Today, we will learn how to write one. Dr. Moss writes in his notebook every day. A good page has four parts. The date. What I did. What I saw. And a picture. Here's a new word. Observe. Observe means to look very carefully. Today, I observed a leaf. Say it with me. Today, I observed a leaf. Excellent! Let's read Haru's notebook page. \"Date: May 12. Today, I observed a leaf. I used a microscope and a ruler. The leaf was 15 centimeters long. Under the microscope, I saw tiny green circles. They looked like a honeycomb. Question: Why are leaves green?\" Wow, Haru even wrote a question. Scientists always have new questions. Use the past tense in your notebook, because you write after the experiment. I used. I saw. It was. Now, phonics review. Microphone. Periscope. Pedometer. Thermometer. Small, look, measure, heat. Now, write your first notebook page. Write four or five sentences, and draw a picture. Let's be careful observers!",
+    "reviewers": "A+B",
+    "reason": "missing article"
+  },
+  {
+    "lesson": 665,
+    "path": "teacher.segments[5].say",
+    "before": "Record. Write it down, so you don't forget. Record!",
+    "after": "To record. Write it down, so you don't forget. Let's record it!",
+    "reviewers": "B+C",
+    "reason": "heteronym: bare 'Record' reads as the noun REcord; verb frame for TTS (vocab is the verb)"
+  },
+  {
+    "lesson": 665,
+    "path": "teacher.segments[5].subtitleEn",
+    "before": "Record. Write it down, so you don't forget. Record!",
+    "after": "To record. Write it down, so you don't forget. Let's record it!",
+    "reviewers": "B+C",
+    "reason": "heteronym: bare 'Record' reads as the noun REcord; verb frame for TTS (vocab is the verb)"
+  },
+  {
+    "lesson": 665,
+    "path": "teacher.segments[5].subtitleJa",
+    "before": "record。わすれない ように かいて おく こと。record！",
+    "after": "to record。わすれない ように かいて おく こと。きろくしよう！",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 666,
+    "path": "teacher.segments[10].say",
+    "before": "Clap the strong part. Ex, PER, i, ment. Experiment! Your turn. Experiment. Instrument. Document. Ornament.",
+    "after": "Clap on the strong part. Ex, per, i, ment. Per is strong! Experiment! Your turn. Experiment. Instrument. Document. Ornament.",
+    "reviewers": "A+C",
+    "reason": "capital PER may be spelled out by TTS; 'Clap on the strong part'"
+  },
+  {
+    "lesson": 666,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Clap the strong part. Ex, PER, i, ment. Experiment! Your turn. Experiment. Instrument. Document. Ornament.",
+    "after": "Clap on the strong part. Ex, per, i, ment. Per is strong! Experiment! Your turn. Experiment. Instrument. Document. Ornament.",
+    "reviewers": "A+C",
+    "reason": "capital PER may be spelled out by TTS; 'Clap on the strong part'"
+  },
+  {
+    "lesson": 666,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "つよい ところで てを たたこう。ex、PER、i、ment。experiment！ あなたの ばん。experiment、instrument、document、ornament。",
+    "after": "つよい ところで てを たたこう。ex、per、i、ment。per が つよいよ！ experiment！ あなたの ばん。experiment、instrument、document、ornament。",
+    "reviewers": "A+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 667,
+    "path": "conversation.lines[6].en",
+    "before": "Don't worry. That's Birimo's own soda from lunch.",
+    "after": "That's Birimo's own soda from lunch. But no drinks in the lab, Birimo!",
+    "reviewers": "A+B",
+    "reason": "safety: the teacher should not okay drinking in the lab"
+  },
+  {
+    "lesson": 667,
+    "path": "conversation.lines[6].ja",
+    "before": "だいじょうぶ。それは ビリモが おひるに もってきた じぶんの ジュースよ。",
+    "after": "それは ビリモが おひるに もってきた じぶんの ソーダね。でも けんきゅうじょでは のみものは だめよ、ビリモ！",
+    "reviewers": "A+B",
+    "reason": "match EN; soda, not juice (EN/JA mismatch)"
+  },
+  {
+    "lesson": 667,
+    "path": "teacher.segments[7].say",
+    "before": "Kiko claps. The raisins went up and down. They look like dancers! Birimo sips a drink. Riko shouts, Never taste anything in the lab! Don't worry. It's his own drink from lunch.",
+    "after": "Kiko claps. The raisins went up and down. They look like dancers! Birimo sips a drink. Riko shouts, Never taste anything in the lab! It's his own drink from lunch. But no drinks in the lab!",
+    "reviewers": "A+B",
+    "reason": "safety: the teacher should not okay drinking in the lab"
+  },
+  {
+    "lesson": 667,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Kiko claps. The raisins went up and down. They look like dancers! Birimo sips a drink. Riko shouts, Never taste anything in the lab! Don't worry. It's his own drink from lunch.",
+    "after": "Kiko claps. The raisins went up and down. They look like dancers! Birimo sips a drink. Riko shouts, Never taste anything in the lab! It's his own drink from lunch. But no drinks in the lab!",
+    "reviewers": "A+B",
+    "reason": "safety: the teacher should not okay drinking in the lab"
+  },
+  {
+    "lesson": 667,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "キコちゃんが てを たたく。「レーズンが あがったり さがったり したね。ダンサーみたい！」 ビリモが のみものを ひとくち。リコちゃん「けんきゅうじょでは なにも あじみしちゃ だめ！」 だいじょうぶ。おひるの じぶんの のみものよ。",
+    "after": "キコちゃんが てを たたく。「レーズンが あがったり さがったり したね。ダンサーみたい！」 ビリモが のみものを ひとくち。リコちゃん「けんきゅうじょでは なにも あじみしちゃ だめ！」 おひるの じぶんの のみものね。でも けんきゅうじょでは のみものは だめよ！",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 668,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Today's experiment is about an egg. Here's a glass of water. Put the egg in the water gently. What happened? It sank to the bottom. Now, let's add salt. One spoon. Stir. Two spoons. Stir. Three, four, five, six... Look! The egg is going up! The result was surprising. The egg floated! Say it with me. The result was surprising. The egg floated! Fantastic! The result is what happened in the end. Let's read the result part of Riko's report. \"At first, the egg sank to the bottom of the glass. We added salt, one spoon at a time. After six spoons, nothing happened. After we added salt again and again, the egg slowly floated up to the top. Our prediction was wrong, and that was the best part!\" I love that last sentence. When the result is different from the prediction, we learn something new. Now, phonics. Equipment. Development. Environment. Experiment. Equip and develop. Don't double the last letter. And don't forget the n in environment. Let's report our surprising results!",
+    "after": "Hello, everyone! Today's experiment is about an egg. Here's a glass of water. Put the egg in the water gently. What happened? It sank to the bottom. Now, let's add salt. One spoon. Stir. Two spoons. Stir. Three, four, five, six... Nothing yet. More salt! Look! The egg is going up! The result was surprising. The egg floated! Say it with me. The result was surprising. The egg floated! Fantastic! The result is what happened in the end. Let's read the result part of Riko's report. \"At first, the egg sank to the bottom of the glass. We added salt, one spoon at a time. After six spoons, nothing happened. After we added salt again and again, the egg slowly floated up to the top. Our prediction was wrong, and that was the best part!\" I love that last sentence. When the result is different from the prediction, we learn something new. Now, phonics. Equipment. Development. Environment. Experiment. Equip and develop. Don't double the last letter. And don't forget the n in environment. Let's report our surprising results!",
+    "reviewers": "A+B",
+    "reason": "story logic: the reading says nothing happened after six spoons (L670: twelve)"
+  },
+  {
+    "lesson": 669,
+    "path": "conversation.lines[5].en",
+    "before": "You need a lot of salt, Birimo! That's why people float in the Dead Sea.",
+    "after": "You need a lot of salt, Birimo! The Dead Sea is very salty, so people float there.",
+    "reviewers": "A+B",
+    "reason": "'That's why' had no clear reason before it"
+  },
+  {
+    "lesson": 669,
+    "path": "conversation.lines[5].ja",
+    "before": "すごく たくさんの しおが いるわよ、ビリモ！だから しかいでは ひとが うくのよ。",
+    "after": "すごく たくさんの しおが いるわよ、ビリモ！しかいは とても しおからいから、ひとが うくのよ。",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 669,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Ice floats in juice. Why did it happen? Ice is lighter. Say, It happened because...",
+    "after": "Your turn! The ice floated in my juice. Why did it happen? Ice is lighter. Say, It happened because...",
+    "reviewers": "A+B",
+    "reason": "tense: 'Why did it happen?' needs a past event"
+  },
+  {
+    "lesson": 669,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Ice floats in juice. Why did it happen? Ice is lighter. Say, It happened because...",
+    "after": "Your turn! The ice floated in my juice. Why did it happen? Ice is lighter. Say, It happened because...",
+    "reviewers": "A+B",
+    "reason": "tense: 'Why did it happen?' needs a past event"
+  },
+  {
+    "lesson": 669,
+    "path": "teacher.segments[17].subtitleJa",
+    "before": "あなたの ばん！ こおりが ジュースに うく。どうして？ こおりは かるいから。「It happened because…」と いって。",
+    "after": "あなたの ばん！ こおりが ジュースに ういた。どうして？ こおりは かるいから。「It happened because…」と いって。",
+    "reviewers": "A+B",
+    "reason": "match EN (past)"
+  },
+  {
+    "lesson": 670,
+    "path": "teacher.segments[3].say",
+    "before": "Poster. A big paper on the wall, with words and pictures. Poster!",
+    "after": "Poster. A big sheet of paper on the wall, with words and pictures. Poster!",
+    "reviewers": "A+B",
+    "reason": "'a big paper' is a calque; 'a big sheet of paper'"
+  },
+  {
+    "lesson": 670,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Poster. A big paper on the wall, with words and pictures. Poster!",
+    "after": "Poster. A big sheet of paper on the wall, with words and pictures. Poster!",
+    "reviewers": "A+B",
+    "reason": "'a big paper' is a calque; 'a big sheet of paper'"
+  }
+]

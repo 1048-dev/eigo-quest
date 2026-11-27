@@ -1,0 +1,194 @@
+[
+  {
+    "lesson": 692,
+    "path": "teacher.segments[5].say",
+    "before": "Half. Cut it into two same parts. One apple. Half for you, half for me! Half!",
+    "after": "Half. Cut it into two equal parts. One apple. Half for you, half for me! Half!",
+    "reviewers": "objective",
+    "reason": "\"two same parts\" is not grammatical English; \"two equal parts\" (JA おなじ おおきさ already matches)"
+  },
+  {
+    "lesson": 692,
+    "path": "teacher.segments[5].subtitleEn",
+    "before": "Half. Cut it into two same parts. One apple. Half for you, half for me! Half!",
+    "after": "Half. Cut it into two equal parts. One apple. Half for you, half for me! Half!",
+    "reviewers": "objective",
+    "reason": "same as say"
+  },
+  {
+    "lesson": 692,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "やあ、たびびとの みんな！ クラウド・ジャンクションに ついたよ。わあ、れっしゃが いっぱい！ ぎんいろの きっぷは さいしょの のりもの だけ。だから あたらしい きっぷが いるね！",
+    "after": "やあ、たびびとの みんな！ クラウド・ジャンクションに ついたよ。わあ、れっしゃが いっぱい！ ぎんいろの きっぷは さいしょの れっしゃ だけ。だから あたらしい きっぷが いるね！",
+    "reviewers": "objective (JA)",
+    "reason": "さいしょの のりもの (\"the first vehicle\") is unnatural for \"only for the first ride\""
+  },
+  {
+    "lesson": 693,
+    "path": "conversation.aiTask.starterEn",
+    "before": "Hello! A ticket to Rainbow Falls? Sure. One way or round trip?",
+    "after": "Hello! Next, please! Where are you going today? One way or round trip?",
+    "reviewers": "A+B",
+    "reason": "the starter answered a request the child never made (\"A ticket to Rainbow Falls? Sure.\"); let the child choose the place"
+  },
+  {
+    "lesson": 695,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Today, you are the station staff at Cloud Junction! Station staff help travelers. First, say hello. Welcome to Cloud Junction! How can I help you? Then, answer questions about trains. The next train leaves at 10:15 from platform 3. Say it with me. The next train leaves at 10:15 from platform 3. Perfect! Station staff also make announcements. Let's read this morning's announcement. \"Good morning, everyone. The next train to Star Station leaves at 10:15 from platform 3. The train to Rainbow Falls leaves at 10:30 from platform 5. Please don't run on the platform. Thank you for riding the Cloudtop Railway.\" Read it again with a clear, slow voice, like real staff. Great! Remember the words for tickets, too. A ticket to Star Station, please. One way or round trip? Which platform? Now, phonics review. Canada. Okinawa. Australia. Argentina. Hokkaido. CAN-a-da. o-ki-NA-wa. aus-TRA-li-a. ar-gen-TI-na. hok-KAI-do. Good station staff speak clearly and kindly. Look at the traveler, smile and use a polite voice. Let's open our station!",
+    "after": "Hello, everyone! Today, you are the station staff at Cloud Junction! Station staff help travelers. First, say hello. Welcome to Cloud Junction! How can I help you? Then, answer questions about trains. The next train leaves at 10:15 from platform 3. Say it with me. The next train leaves at 10:15 from platform 3. Perfect! Station staff also make announcements. Let's read this morning's announcement. \"Good morning, everyone. The next train to Star Station leaves at 10:15 from platform 3. The train to Rainbow Falls leaves at 10:30 from platform 5. Please don't run on the platform. Thank you for riding the Cloudtop Railway.\" Read it again in a clear, slow voice, like real staff. Great! Remember the words for tickets, too. A ticket to Star Station, please. One way or round trip? Which platform? Now, phonics review. Canada. Okinawa. Australia. Argentina. Hokkaido. CAN-a-da. o-ki-NA-wa. aus-TRA-li-a. ar-gen-TI-na. hok-KAI-do. Good station staff speak clearly and kindly. Look at the traveler, smile and use a polite voice. Let's open our station!",
+    "reviewers": "A+B",
+    "reason": "the collocation is \"in a ... voice\""
+  },
+  {
+    "lesson": 696,
+    "path": "phonics.tipJa",
+    "before": "have の あとは 3つめの かたち。see → saw → seen、be → was → been、do → did → done、go → went → gone。seen と been は「イーン」、done は「ダン」、gone は「ゴーン」と よむよ。",
+    "after": "have の あとは 3つめの かたち。see → saw → seen、be → was → been、do → did → done、go → went → gone。seen は「イーン」と ながく、been は アメリカでは「ビン」と みじかく、done は「ダン」、gone は「ゴーン」と よむよ。",
+    "reviewers": "objective",
+    "reason": "in American English \"been\" is /bɪn/ (like bin), not /biːn/; seen and been do not rhyme"
+  },
+  {
+    "lesson": 696,
+    "path": "phonics.sounds[0]",
+    "before": "/iːn/",
+    "after": "/iːn/ /ɪn/",
+    "reviewers": "objective",
+    "reason": "been is /bɪn/ in US English (same two-sound format as sounds[1])"
+  },
+  {
+    "lesson": 696,
+    "path": "teacher.segments[10].say",
+    "before": "Seen and been rhyme. Een! Done is short, like dun. Gone has a round mouth. Seen. Been. Done. Gone. Your turn!",
+    "after": "Seen has a long een. Been is short, like bin. Done is short, like dun. Gone has a round mouth. Seen. Been. Done. Gone. Your turn!",
+    "reviewers": "objective",
+    "reason": "US \"been\" is /bɪn/; \"Seen and been rhyme\" teaches a non-US sound"
+  },
+  {
+    "lesson": 696,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Seen and been rhyme. Een! Done is short, like dun. Gone has a round mouth. Seen. Been. Done. Gone. Your turn!",
+    "after": "Seen has a long een. Been is short, like bin. Done is short, like dun. Gone has a round mouth. Seen. Been. Done. Gone. Your turn!",
+    "reviewers": "objective",
+    "reason": "same as say"
+  },
+  {
+    "lesson": 696,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "seen と been は おなじ ひびき。イーン！ done は みじかく「ダン」。gone は くちを まるく。seen、been、done、gone。あなたの ばん！",
+    "after": "seen は ながく「イーン」。been は みじかく「ビン」。done は みじかく「ダン」。gone は くちを まるく。seen、been、done、gone。あなたの ばん！",
+    "reviewers": "objective",
+    "reason": "match the corrected English (been = bin)"
+  },
+  {
+    "lesson": 696,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. Have you ever means, at any time in your life? Answer, Yes, I have. Or no, I haven't. No is a great answer, too. Maybe someday!",
+    "after": "Here's the point. Have you ever means, at any time in your life. Answer, Yes, I have. Or no, I haven't. No is a great answer, too. Maybe someday!",
+    "reviewers": "B+C",
+    "reason": "the explanation is a statement; \"?\" makes TTS read it as a question (teacherScript already uses a period)"
+  },
+  {
+    "lesson": 696,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. Have you ever means, at any time in your life? Answer, Yes, I have. Or no, I haven't. No is a great answer, too. Maybe someday!",
+    "after": "Here's the point. Have you ever means, at any time in your life. Answer, Yes, I have. Or no, I haven't. No is a great answer, too. Maybe someday!",
+    "reviewers": "B+C",
+    "reason": "same as say"
+  },
+  {
+    "lesson": 698,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Listen. Snacks! Drinks! Here comes the snack cart. On a train, you can buy food from a cart. But what are these? I've never eaten them! When you have no experience, say, I've never. Say it with me. I've never eaten it. Is it good? Wonderful! Never means not even one time. Let's read the menu on the cart. \"Cloud Cart Snacks. Cloud bun: soft and sweet, like a real cloud. 2 coins. Thunder chips: spicy and crunchy! 1 coin. Moon milk: warm milk with honey. 2 coins. Rainbow jelly: seven flavors in one cup. 3 coins.\" Which snack is spicy? Thunder chips. Which snack is like a cloud? The cloud bun. Have you ever tried thunder chips? You can answer, No, never. Or, No, I've never tried them. Try means eat something new. Now, phonics. Written. Ridden. Forgotten. Hidden. Write, wrote, written. Ride, rode, ridden. The middle sound is short, so we double the letter. Let's try something new!",
+    "after": "Hello, everyone! Listen. Snacks! Drinks! Here comes the snack cart. On a train, you can buy food from a cart. But what are these? I've never eaten them! When you have no experience, say, I've never. Say it with me. I've never eaten it. Is it good? Wonderful! Never means not even one time. Let's read the menu on the cart. \"Cloud Cart Snacks. Cloud bun: soft and sweet, like a real cloud. 2 coins. Thunder chips: spicy and crunchy! 1 coin. Moon milk: warm milk with honey. 2 coins. Rainbow jelly: seven flavors in one cup. 3 coins.\" Which snack is spicy? Thunder chips. Which snack is like a cloud? The cloud bun. Have you ever tried thunder chips? You can answer, No, never. Or, No, I've never tried them. Here, try means eat something new. Now, phonics. Written. Ridden. Forgotten. Hidden. Write, wrote, written. Ride, rode, ridden. The middle sound is short, so we double the letter. Let's try something new!",
+    "reviewers": "A+B",
+    "reason": "seg3 defines try as \"do something new\"; mark this as the food meaning only"
+  },
+  {
+    "lesson": 698,
+    "path": "teacher.segments[4].say",
+    "before": "Snack. A small food between meals. Crunch, crunch! Snack!",
+    "after": "Snack. A little food between meals. Crunch, crunch! Snack!",
+    "reviewers": "A+B",
+    "reason": "\"a small food\" is odd (food is uncountable here); \"a little food\""
+  },
+  {
+    "lesson": 698,
+    "path": "teacher.segments[4].subtitleEn",
+    "before": "Snack. A small food between meals. Crunch, crunch! Snack!",
+    "after": "Snack. A little food between meals. Crunch, crunch! Snack!",
+    "reviewers": "A+B",
+    "reason": "same as say"
+  },
+  {
+    "lesson": 699,
+    "path": "conversation.aiTask.starterEn",
+    "before": "I've ridden this train twenty times! How many times have you ridden a train?",
+    "after": "I've been to the sea many times! How many times have you been to the sea?",
+    "reviewers": "A+B",
+    "reason": "the partner is Kiko, who is riding this train for the first time with the group; \"twenty times\" breaks the story (now uses the lesson's target question)"
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. Say, Yes, I have. Then add one more thing. When? Where? And No, I haven't is a happy answer, too!",
+    "after": "Here's the point. Say, Yes, I have. Then add one more thing. When? Where? And No, I haven't is a great answer, too!",
+    "reviewers": "A+B",
+    "reason": "\"a happy answer\" is not idiomatic; same wording as L696 (\"No is a great answer, too\")"
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. Say, Yes, I have. Then add one more thing. When? Where? And No, I haven't is a happy answer, too!",
+    "after": "Here's the point. Say, Yes, I have. Then add one more thing. When? Where? And No, I haven't is a great answer, too!",
+    "reviewers": "A+B",
+    "reason": "same as say"
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[9].say",
+    "before": "Sound review! Our special forms after have. Een, like seen. One, like gone. En, like eaten. W, n, like flown.",
+    "after": "Sound review! Our special forms after have. Een, like seen. O, n, like gone. En, like eaten. W, n, like flown.",
+    "reviewers": "B+C",
+    "reason": "TTS reads \"One\" as the number (wun), the wrong sound for gone; spell the letters like \"W, n\""
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound review! Our special forms after have. Een, like seen. One, like gone. En, like eaten. W, n, like flown.",
+    "after": "Sound review! Our special forms after have. Een, like seen. O, n, like gone. En, like eaten. W, n, like flown.",
+    "reviewers": "B+C",
+    "reason": "same as say"
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの ふくしゅう！ have の あとの とくべつな かたち。een は seen。one は gone。en は eaten。w、n は flown。",
+    "after": "おとの ふくしゅう！ have の あとの とくべつな かたち。een は seen。o、n は gone。en は eaten。w、n は flown。",
+    "reviewers": "B+C",
+    "reason": "match the English"
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[13].say",
+    "before": "Draw a big circle on your card. Round and round! Five in a row? Shout, Bingo!",
+    "after": "Speed challenge! Swim in the sea! Shout, Bingo! Gallop like a horse! Draw a big circle!",
+    "reviewers": "A+B+C",
+    "reason": "seg13 repeated seg12 word for word; make it the speed challenge its slide shows (all four TPR items), like every other lesson"
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[13].subtitleEn",
+    "before": "Draw a big circle on your card. Round and round! Five in a row? Shout, Bingo!",
+    "after": "Speed challenge! Swim in the sea! Shout, Bingo! Gallop like a horse! Draw a big circle!",
+    "reviewers": "A+B+C",
+    "reason": "same as say"
+  },
+  {
+    "lesson": 700,
+    "path": "teacher.segments[13].subtitleJa",
+    "before": "カードに おおきな まるを かいて。ぐる、ぐる！ 5つ ならんだ？「ビンゴ！」と さけんで！",
+    "after": "スピード チャレンジ！ うみで およいで！「ビンゴ！」と さけんで！ うまの ように はねて！ おおきな まるを かいて！",
+    "reviewers": "A+B+C",
+    "reason": "match the new speed challenge"
+  }
+]

@@ -1,0 +1,250 @@
+[
+  {
+    "lesson": 701,
+    "path": "teacher.segments[4].say",
+    "before": "Staff. People who work at the station. Cap and uniform! Staff!",
+    "after": "Staff. They work at the station. Cap and uniform! Staff!",
+    "reviewers": "objective",
+    "reason": "Relative clause with who is a Stage 4 item in this world; simple sentence instead"
+  },
+  {
+    "lesson": 701,
+    "path": "teacher.segments[4].subtitleEn",
+    "before": "Staff. People who work at the station. Cap and uniform! Staff!",
+    "after": "Staff. They work at the station. Cap and uniform! Staff!",
+    "reviewers": "objective",
+    "reason": "Same as say"
+  },
+  {
+    "lesson": 702,
+    "path": "teacherScript",
+    "before": "Hello, everyone! We're still at Sky Harbor. Haru went to buy snacks for everyone. But when he came back, the train doors closed! The train left without us. Oh no! We missed the train. Say it with me. I missed the train! When's the next one? Good! When's means when is. Don't worry. Let's look at the schedule. \"Rainbow Line Schedule. Sky Harbor to Rainbow Falls. 11:00, 11:20, 11:40, 12:00. Trains come every twenty minutes. The ride to Rainbow Falls is thirty minutes long.\" Which train did we miss? The 11:00 train. When's the next one? At 11:20. So, the next one comes in twenty minutes. In twenty minutes means twenty minutes from now. We haven't missed our trip. We just have to wait. Missing a train can happen to anyone, so stay calm. Let's wait on the bench. Now, phonics. Haven't. Hasn't. I've. They've. Have not becomes haven't. Has not becomes hasn't. The mark goes between n and t. Next time, let's stay together!",
+    "after": "Hello, everyone! We're still at Sky Harbor. Haru went to buy snacks for everyone. But when he came back, the train doors closed! The train left without us. Oh no! We missed the train. Say it with me. I missed the train! When's the next one? Good! When's means when is. Don't worry. Let's look at the schedule. \"Rainbow Line Schedule. Sky Harbor to Rainbow Falls. 11:00, 11:20, 11:40, 12:00. Trains come every twenty minutes. The ride to Rainbow Falls is thirty minutes long.\" Which train did we miss? The 11:00 train. When's the next one? At 11:20. So, the next one comes in twenty minutes. In twenty minutes means twenty minutes from now. We haven't lost much time. We just have to wait. Missing a train can happen to anyone, so stay calm. Let's wait on the bench. Now, phonics. Haven't. Hasn't. I've. They've. Have not becomes haven't. Has not becomes hasn't. The mark goes between n and t. Next time, let's stay together!",
+    "reviewers": "A+B",
+    "reason": "\"We haven't missed our trip\" is illogical right after missing the train; keeps the haven't model"
+  },
+  {
+    "lesson": 702,
+    "path": "teacher.segments[12].say",
+    "before": "Sit down on the bench. Now wait, wait, wait. So long! Yawn!",
+    "after": "Sit down on the bench. Now wait, wait, wait. This is taking forever! Yawn!",
+    "reviewers": "A+C",
+    "reason": "\"So long!\" is heard as the US goodbye; JA ながーい！ still matches"
+  },
+  {
+    "lesson": 702,
+    "path": "teacher.segments[12].subtitleEn",
+    "before": "Sit down on the bench. Now wait, wait, wait. So long! Yawn!",
+    "after": "Sit down on the bench. Now wait, wait, wait. This is taking forever! Yawn!",
+    "reviewers": "A+C",
+    "reason": "\"So long!\" is heard as the US goodbye; JA ながーい！ still matches"
+  },
+  {
+    "lesson": 704,
+    "path": "teacher.segments[10].say",
+    "before": "Careful! It's with a mark means it is or it has. Its with no mark means belongs to it. Now say, we've, hasn't, she's, it's!",
+    "after": "Careful! It's with a mark means it is or it has. Its with no mark means something belongs to it. Now say, we've, hasn't, she's, it's!",
+    "reviewers": "objective",
+    "reason": "Grammar: \"means belongs to it\" is missing a subject"
+  },
+  {
+    "lesson": 704,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Careful! It's with a mark means it is or it has. Its with no mark means belongs to it. Now say, we've, hasn't, she's, it's!",
+    "after": "Careful! It's with a mark means it is or it has. Its with no mark means something belongs to it. Now say, we've, hasn't, she's, it's!",
+    "reviewers": "objective",
+    "reason": "Grammar: \"means belongs to it\" is missing a subject"
+  },
+  {
+    "lesson": 705,
+    "path": "teacherScript",
+    "before": "Hello, everyone! On this trip, people helped us many times. Today, it's our turn to help other people. Let's read the Station Helper Card. \"Station Helper Card. If someone looks worried: 1. Say, Are you OK? 2. Listen carefully. 3. Say, Don't worry. I'll help you. 4. Find the station staff or your adult. Never go anywhere alone with a stranger.\" First, we ask, Are you OK? You look worried. Then, we listen. Then, we say, Don't worry. I'll help you. Say it with me. Don't worry. I'll help you. Wonderful! You are kind helpers. But remember, children help by finding an adult. Let's ask the station staff together. Today, Birimo will be a traveler with a problem. Can you help him? Use the words from this block. I'm lost. I missed the train. I left my bag on the train. It's a small blue bag. Now, phonics review. I've. Haven't. Who's. It's. Taken. Who's taken my ticket? Who has taken my ticket? Let's be station helpers!",
+    "after": "Hello, everyone! On this trip, people helped us many times. Today, it's our turn to help other people. Let's read the Station Helper Card. \"Station Helper Card. If someone looks worried: 1. Say, Are you OK? 2. Listen carefully. 3. Say, Don't worry. I'll help you. 4. Find the station staff or your grown-up. Never go anywhere alone with a stranger.\" First, we ask, Are you OK? You look worried. Then, we listen. Then, we say, Don't worry. I'll help you. Say it with me. Don't worry. I'll help you. Wonderful! You are kind helpers. But remember, children help by finding an adult. Let's ask the station staff together. Today, Birimo will be a traveler with a problem. Can you help him? Use the words from our trip. I'm lost. I missed the train. I left my bag on the train. It's a small blue bag. Now, phonics review. I've. Haven't. Who's. It's. Taken. Who's taken my ticket? Who has taken my ticket? Let's be station helpers!",
+    "reviewers": "A+B",
+    "reason": "\"your adult\" is school jargon (grown-up is the child-directed US word); \"this block\" is curriculum jargon for kids"
+  },
+  {
+    "lesson": 705,
+    "path": "teacher.segments[10].say",
+    "before": "Listen to taken. Tay, ken. The end is soft and short. I've taken the train. Your turn! I've. Haven't. Who's. It's. Taken.",
+    "after": "Listen to taken. Take, then a short, soft n. I've taken the train. Your turn! I've. Haven't. Who's. It's. Taken.",
+    "reviewers": "B+C",
+    "reason": "Invented respelling Tay, ken (ken = /ken/, wrong vowel); describe it with a real word instead"
+  },
+  {
+    "lesson": 705,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Listen to taken. Tay, ken. The end is soft and short. I've taken the train. Your turn! I've. Haven't. Who's. It's. Taken.",
+    "after": "Listen to taken. Take, then a short, soft n. I've taken the train. Your turn! I've. Haven't. Who's. It's. Taken.",
+    "reviewers": "B+C",
+    "reason": "Invented respelling Tay, ken (ken = /ken/, wrong vowel); describe it with a real word instead"
+  },
+  {
+    "lesson": 705,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "taken を きいてね。テイ、クン。おわりは やさしく みじかく。「れっしゃに のった ことが あるよ。」 あなたの ばん！ I've。haven't。who's。it's。taken。",
+    "after": "taken を きいてね。take の あとに、みじかく やさしい ン。「れっしゃに のった ことが あるよ。」 あなたの ばん！ I've。haven't。who's。it's。taken。",
+    "reviewers": "B+C",
+    "reason": "Match the new say"
+  },
+  {
+    "lesson": 706,
+    "path": "conversation.lines[4].en",
+    "before": "That's Mist Mountain. The station on the top overlooks the whole valley.",
+    "after": "That's Mist Mountain. The station at the top overlooks the whole valley.",
+    "reviewers": "A+C",
+    "reason": "\"at the top\" is the natural form (matches \"at the top of the Cloud Bridge\")"
+  },
+  {
+    "lesson": 706,
+    "path": "teacher.segments[19].say",
+    "before": "It's A! What a beautiful lake! A lake has water. Fantastic!",
+    "after": "It's A! What a beautiful lake! A lake has land all around it. Fantastic!",
+    "reviewers": "A+B",
+    "reason": "A valley can have water too; the quiz clue that decides it is land all around"
+  },
+  {
+    "lesson": 706,
+    "path": "teacher.segments[19].subtitleEn",
+    "before": "It's A! What a beautiful lake! A lake has water. Fantastic!",
+    "after": "It's A! What a beautiful lake! A lake has land all around it. Fantastic!",
+    "reviewers": "A+B",
+    "reason": "A valley can have water too; the quiz clue that decides it is land all around"
+  },
+  {
+    "lesson": 706,
+    "path": "teacher.segments[19].subtitleJa",
+    "before": "こたえは A！「なんて きれいな みずうみ！」 みずうみには みずが あるね。すばらしい！",
+    "after": "こたえは A！「なんて きれいな みずうみ！」 みずうみは まわりを りくに かこまれて いるね。すばらしい！",
+    "reviewers": "A+B",
+    "reason": "Match the new say"
+  },
+  {
+    "lesson": 707,
+    "path": "teacherScript",
+    "before": "Hello, everyone! The train is passing Rainbow Falls Valley. There's so much to see! Today, we'll describe the view, like a picture. First, say what you see. Look out the window! There's a castle. Say it with me. Look out the window! There's a castle. Great! Then, tell us where it is. On the left. On the right. On top of a hill. Next to the castle. Under the waterfall. In front of the castle. Riko bought a postcard of this view. Let's read the back of it. \"A postcard from Rainbow Falls. On the left, there's an old castle on top of a hill. On the right, there's a tall waterfall. Under the waterfall, there's a small rainbow. In front of the castle, sheep are eating grass.\" Where is the castle? On top of a hill. What's under the waterfall? A small rainbow. When you describe a picture, move your eyes from left to right. Now, phonics. Underwater. Underline. Undersea. Underpass. Under means below. Underline the place words in the postcard. Let's describe the view!",
+    "after": "Hello, everyone! The train is passing Rainbow Falls Valley. There's so much to see! Today, we'll describe the view, like a picture. First, say what you see. Look out the window! There's a castle. Say it with me. Look out the window! There's a castle. Great! Then, tell us where it is. On the left. On the right. On top of a hill. Next to the castle. Under the waterfall. In front of the castle. Riko bought a postcard of this view. Let's read the back of it. \"A postcard from Rainbow Falls. On the left, there's an old castle on top of a hill. On the right, there's a tall waterfall. Under the waterfall, there's a small rainbow. In front of the castle, sheep are eating grass.\" Where is the castle? On top of a hill. What's under the waterfall? A small rainbow. When you describe a picture, move your eyes from left to right. Now, phonics. Underwater. Underline. Undersea. Underpass. Under means below. Underline the place words on the postcard. Let's describe the view!",
+    "reviewers": "A+B",
+    "reason": "US: words on a postcard"
+  },
+  {
+    "lesson": 707,
+    "path": "teacher.segments[0].say",
+    "before": "Hi, everyone! We're still riding the Cloudtop Railway. Birimo is bouncing in the seat. Look out the window! What's out there?",
+    "after": "Hi, everyone! We're still riding the Cloudtop Railway. Birimo is bouncing in his seat. Look out the window! What's out there?",
+    "reviewers": "A+C",
+    "reason": "Natural: bouncing in his seat"
+  },
+  {
+    "lesson": 707,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hi, everyone! We're still riding the Cloudtop Railway. Birimo is bouncing in the seat. Look out the window! What's out there?",
+    "after": "Hi, everyone! We're still riding the Cloudtop Railway. Birimo is bouncing in his seat. Look out the window! What's out there?",
+    "reviewers": "A+C",
+    "reason": "Natural: bouncing in his seat"
+  },
+  {
+    "lesson": 707,
+    "path": "conversation.lines[5].en",
+    "before": "Wonderful describing! You told us where everything is.",
+    "after": "Great job describing! You told us where everything is.",
+    "reviewers": "A+C",
+    "reason": "\"Wonderful describing!\" is not natural teacher praise"
+  },
+  {
+    "lesson": 707,
+    "path": "teacher.segments[20].say",
+    "before": "Wonderful describing! You can say, There's a castle. You can say where things are. And you know under means below. Next, go and talk with Kiko! Bye-bye!",
+    "after": "Great job describing! You can say, There's a castle. You can say where things are. And you know under means below. Next, go and talk with Kiko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "Same as conversation.lines[5]"
+  },
+  {
+    "lesson": 707,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "Wonderful describing! You can say, There's a castle. You can say where things are. And you know under means below. Next, go and talk with Kiko! Bye-bye!",
+    "after": "Great job describing! You can say, There's a castle. You can say where things are. And you know under means below. Next, go and talk with Kiko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "Same as conversation.lines[5]"
+  },
+  {
+    "lesson": 709,
+    "path": "teacherScript",
+    "before": "Hello, everyone! It's lunchtime. Some trains have a dining car. It's like a restaurant on a train. Let's go and order lunch. To order, say, I'll have the sandwich set, please. Say it with me. I'll have the sandwich set, please. Delicious! The waiter will ask, Would you like something to drink? You can say, Orange juice, please. Let's read the menu first. \"Dining Car Menu. Sandwich set: two sandwiches, soup and fruit. 6 coins. Cloud curry: mild and creamy. 7 coins. Mountain noodles: hot noodles with vegetables. 6 coins. Drinks: orange juice, apple juice, milk or tea. 2 coins.\" What's in the sandwich set? Two sandwiches, soup and fruit. How much is the cloud curry? Seven coins. If you want more, ask politely. Can I have some water, please? When the food comes, say, Thank you. It looks delicious! Now, phonics. Overeat. Oversleep. Overnight. Underpass. Over can mean too much. Overeat means eat too much. Don't overeat, Haru! Let's order lunch!",
+    "after": "Hello, everyone! It's lunchtime. Some trains have a dining car. It's like a restaurant on a train. Let's go and order lunch. To order, say, I'll have the sandwich set, please. Say it with me. I'll have the sandwich set, please. Delicious! The waiter will ask, Would you like something to drink? You can say, Orange juice, please. Let's read the menu first. \"Dining Car Menu. Sandwich set: two sandwiches, soup and fruit. 6 coins. Cloud curry: mild and creamy. 7 coins. Mountain noodles: hot noodles with vegetables. 6 coins. Drinks: orange juice, apple juice, milk or tea. 2 coins.\" What's in the sandwich set? Two sandwiches, soup and fruit. How much is the cloud curry? Seven coins. If you need something else, ask politely. Can I have some water, please? When the food comes, say, Thank you. It looks delicious! Now, phonics. Overeat. Oversleep. Overnight. Underpass. Over can mean too much. Overeat means eat too much. Don't overeat, Haru! Let's order lunch!",
+    "reviewers": "A+B",
+    "reason": "Water is not \"more\" of the lunch; something else fits the example"
+  },
+  {
+    "lesson": 709,
+    "path": "teacher.segments[10].say",
+    "before": "Clap the parts with me. O, ver, eat. Overeat. Oversleep. Overnight. Underpass. Your turn!",
+    "after": "Clap the parts with me. O-ver-eat. Overeat. Oversleep. Overnight. Underpass. Your turn!",
+    "reviewers": "B+C",
+    "reason": "Use the hyphen beat form for syllables"
+  },
+  {
+    "lesson": 709,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Clap the parts with me. O, ver, eat. Overeat. Oversleep. Overnight. Underpass. Your turn!",
+    "after": "Clap the parts with me. O-ver-eat. Overeat. Oversleep. Overnight. Underpass. Your turn!",
+    "reviewers": "B+C",
+    "reason": "Use the hyphen beat form for syllables"
+  },
+  {
+    "lesson": 709,
+    "path": "teacher.segments[20].say",
+    "before": "Delicious work! You can order with I'll have, please. You can answer, Would you like something to drink? And remember, don't overeat! Next, go and talk with Haru! Bye-bye!",
+    "after": "Delicious work! You can order with I'll have the curry, please. You can answer, Would you like something to drink? And remember, don't overeat! Next, go and talk with Haru! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "\"I'll have, please\" reads as a broken sentence aloud; give a full model"
+  },
+  {
+    "lesson": 709,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "Delicious work! You can order with I'll have, please. You can answer, Would you like something to drink? And remember, don't overeat! Next, go and talk with Haru! Bye-bye!",
+    "after": "Delicious work! You can order with I'll have the curry, please. You can answer, Would you like something to drink? And remember, don't overeat! Next, go and talk with Haru! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "\"I'll have, please\" reads as a broken sentence aloud; give a full model"
+  },
+  {
+    "lesson": 710,
+    "path": "conversation.lines[0].en",
+    "before": "Hello! Nice day, isn't it? I'm a passenger with a fishing rod.",
+    "after": "Hello! Nice day, isn't it?",
+    "reviewers": "A+B",
+    "reason": "A passenger would not describe himself this way; the JA already treats it as a stage note"
+  },
+  {
+    "lesson": 710,
+    "path": "conversation.lines[0].ja",
+    "before": "こんにちは！いい てんきですね。（つりざおを もった じょうきゃくの やく）",
+    "after": "こんにちは！いい てんきですね。",
+    "reviewers": "A+B",
+    "reason": "Match the EN (scene and seg0 already say he has a fishing rod)"
+  },
+  {
+    "lesson": 710,
+    "path": "teacher.segments[6].slide.items[0]",
+    "before": "Hello! Nice day, isn't it? I'm a passenger with a fishing rod.",
+    "after": "Hello! Nice day, isn't it?",
+    "reviewers": "A+B",
+    "reason": "Slide shows conversation.lines[0]"
+  },
+  {
+    "lesson": 710,
+    "path": "conversation.aiTask.starterEn",
+    "before": "Hello! Is this your first time on the Cloudtop Railway? I'm going to the sea.",
+    "after": "Hello! Nice day, isn't it? Is this your first time on the Cloudtop Railway?",
+    "reviewers": "A+B",
+    "reason": "The starter gave away the destination, so the target question Where are you going? had no point"
+  },
+  {
+    "lesson": 710,
+    "path": "teacherScript",
+    "before": "Hello, everyone! On a long train ride, you can talk with other passengers. This is called small talk. Let's read some tips. \"Train Talk Tips. 1. Say hello and smile. 2. Ask an easy question: Where are you going? 3. Listen, and ask one more question: Have you ever been there? Why are you going there? 4. Say something nice at the end: That sounds fun! Have a nice trip!\" Let's practice the easy question. Where are you going? I'm going to the sea. Say it with me. Where are you going? I'm going to the sea. Great! The secret of good small talk is the one more question. If someone says, I love fishing, ask, Have you ever caught a big fish? Then, say something nice at the end. That sounds fun! Have a nice trip! And remember, talk with new people only when your family or teacher is with you. Now, phonics review. Overlook. Overtake. Underwater. Overhead. Undersea. Over is above. Under is below. Let's have some train talk!",
+    "after": "Hello, everyone! On a long train ride, you can talk with other passengers. This is called small talk. Let's read some tips. \"Train Talk Tips. 1. Say hello and smile. 2. Ask an easy question: Where are you going? 3. Listen, and ask one more question: Have you ever been there? Why are you going there? 4. Say something nice at the end: That sounds fun! Have a nice trip!\" Let's practice the easy question. Where are you going? I'm going to the sea. Say it with me. Where are you going? I'm going to the sea. Great! The secret of good small talk is asking one more question. If someone says, I love fishing, ask, Have you ever caught a big fish? Then, say something nice at the end. That sounds fun! Have a nice trip! And remember, talk with new people only when your family or teacher is with you. Now, phonics review. Overlook. Overtake. Underwater. Overhead. Undersea. Over is above. Under is below. Let's have some train talk!",
+    "reviewers": "A+C",
+    "reason": "\"is the one more question\" is awkward to say and read"
+  }
+]
