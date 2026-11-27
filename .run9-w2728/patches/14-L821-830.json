@@ -1,0 +1,330 @@
+[
+  {
+    "lesson": 821,
+    "path": "teacher.segments[8].say",
+    "before": "Sound time! English has a rhythm. Big words are strong. Small words like and, to, for, and can are short and soft. I like SUMMER and WINTER. And is tiny!",
+    "after": "Sound time! English has a rhythm. Big words are strong. Small words are short and soft. And, to, for, can. I like SUMMER and WINTER. And is tiny!",
+    "reviewers": "B+C",
+    "reason": "the list 'and, to, for, and can' uses 'and' both as a list word and as the connector; unclear when heard"
+  },
+  {
+    "lesson": 821,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Sound time! English has a rhythm. Big words are strong. Small words like and, to, for, and can are short and soft. I like SUMMER and WINTER. And is tiny!",
+    "after": "Sound time! English has a rhythm. Big words are strong. Small words are short and soft. And, to, for, can. I like SUMMER and WINTER. And is tiny!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 821,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "おとの じかん！ 英語には リズムが あるよ。おおきい ことばは つよく。and・to・for・can のような ちいさい ことばは みじかく やさしく。I like SUMMER and WINTER。and は とても ちいさいね！",
+    "after": "おとの じかん！ 英語には リズムが あるよ。おおきい ことばは つよく。ちいさい ことばは みじかく やさしく。and・to・for・can。I like SUMMER and WINTER。and は とても ちいさいね！",
+    "reviewers": "B+C",
+    "reason": "match EN order"
+  },
+  {
+    "lesson": 822,
+    "path": "teacher.segments[8].say",
+    "before": "Sound time! Big words are strong. Small words like of, at, or, and to are quick and soft. We have a BOWL of RICE. Of is so small, it sounds like uv.",
+    "after": "Sound time! Big words are strong. Small words are quick and soft. Of, at, or, to. We have a BOWL of RICE. Of is tiny. A BOWL of RICE.",
+    "reviewers": "B+C",
+    "reason": "invented respelling 'uv' (TTS may read 'U.V.'); model the phrase again instead; list without the extra 'and'"
+  },
+  {
+    "lesson": 822,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Sound time! Big words are strong. Small words like of, at, or, and to are quick and soft. We have a BOWL of RICE. Of is so small, it sounds like uv.",
+    "after": "Sound time! Big words are strong. Small words are quick and soft. Of, at, or, to. We have a BOWL of RICE. Of is tiny. A BOWL of RICE.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 822,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "おとの じかん！ おおきい ことばは つよく。of・at・or・to のような ちいさい ことばは はやく やさしく。We have a BOWL of RICE。of は とても ちいさくて「アヴ」みたいに きこえるよ。",
+    "after": "おとの じかん！ おおきい ことばは つよく。ちいさい ことばは はやく やさしく。of・at・or・to。We have a BOWL of RICE。of は とても ちいさいね。a BOWL of RICE。",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 823,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Haru says, The sea is better. Do you agree? Say, Yes, I agree, or, I see your point, but, and your idea.",
+    "after": "Your turn! Haru says, The sea is better. Do you agree? Say, Yes, I agree. Or say, I see your point, but, and your idea.",
+    "reviewers": "A+C",
+    "reason": "comma chain ', or, ... but, and' is hard to read aloud; split into two sentences"
+  },
+  {
+    "lesson": 823,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Haru says, The sea is better. Do you agree? Say, Yes, I agree, or, I see your point, but, and your idea.",
+    "after": "Your turn! Haru says, The sea is better. Do you agree? Say, Yes, I agree. Or say, I see your point, but, and your idea.",
+    "reviewers": "A+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 824,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! For, to, are, them. These small words are quick and soft. It's GOOD for our HEALTH. For sounds like fer.",
+    "after": "Sound time! For, to, are, them. These small words are quick and soft. It's GOOD for our HEALTH. For is tiny and quick.",
+    "reviewers": "B+C",
+    "reason": "invented respelling 'fer'; describe the weak sound instead"
+  },
+  {
+    "lesson": 824,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! For, to, are, them. These small words are quick and soft. It's GOOD for our HEALTH. For sounds like fer.",
+    "after": "Sound time! For, to, are, them. These small words are quick and soft. It's GOOD for our HEALTH. For is tiny and quick.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 824,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ for・to・are・them。この ちいさい ことばは はやく やさしく。It's GOOD for our HEALTH。for は「ファ」みたいに きこえるよ。",
+    "after": "おとの じかん！ for・to・are・them。この ちいさい ことばは はやく やさしく。It's GOOD for our HEALTH。for は ちいさく はやく いうよ。",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 825,
+    "path": "teacher.segments[19].say",
+    "before": "It's B! Two reasons should be different. Maybe, Second, we can share them with friends! Nice job!",
+    "after": "It's B! Two reasons should be different. How about this? Second, we can share them with friends! Nice job!",
+    "reviewers": "A+C",
+    "reason": "'Maybe, Second, ...' is an awkward stumble; introduce the better second reason with a question"
+  },
+  {
+    "lesson": 825,
+    "path": "teacher.segments[19].subtitleEn",
+    "before": "It's B! Two reasons should be different. Maybe, Second, we can share them with friends! Nice job!",
+    "after": "It's B! Two reasons should be different. How about this? Second, we can share them with friends! Nice job!",
+    "reviewers": "A+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 825,
+    "path": "teacher.segments[19].subtitleJa",
+    "before": "こたえは B！ 2つの りゆうは ちがう ほうが いいね。たとえば「2つめ、ともだちと わけられる！」 よく できたね！",
+    "after": "こたえは B！ 2つの りゆうは ちがう ほうが いいね。これは どう？「2つめ、ともだちと わけられる！」 よく できたね！",
+    "reviewers": "A+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 826,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. Finally means a long wait. Can't hear? Don't worry. Just ask again!",
+    "after": "Here's the point. Finally means after a long wait. Can't hear? Don't worry. Just ask again!",
+    "reviewers": "A+B",
+    "reason": "finally does not mean 'a long wait'; it means 'after a long wait' (as in seg5)"
+  },
+  {
+    "lesson": 826,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. Finally means a long wait. Can't hear? Don't worry. Just ask again!",
+    "after": "Here's the point. Finally means after a long wait. Can't hear? Don't worry. Just ask again!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 826,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。finally は ながく まった とき。きこえない？ だいじょうぶ。もう いちど きけば いいよ！",
+    "after": "ポイント。finally は ながく まった あとで。きこえない？ だいじょうぶ。もう いちど きけば いいよ！",
+    "reviewers": "A+B",
+    "reason": "match EN and seg5"
+  },
+  {
+    "lesson": 826,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Listen. Meet you. When t meets you, they join and sound like chu. Meechu. Nice to meechu!",
+    "after": "Sound time! Listen. Meet you. When t meets you, they join and sound like chu. Meet-chu. Nice to meet-chu!",
+    "reviewers": "B+C",
+    "reason": "invented respelling 'Meechu'; use the hyphen form from the teacherScript (Meet-chu)"
+  },
+  {
+    "lesson": 826,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Listen. Meet you. When t meets you, they join and sound like chu. Meechu. Nice to meechu!",
+    "after": "Sound time! Listen. Meet you. When t meets you, they join and sound like chu. Meet-chu. Nice to meet-chu!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 826,
+    "path": "teacher.segments[10].say",
+    "before": "When d meets you, it sounds like ju. Could you, coodju. Would you, woodju. Did you, didju. Your turn!",
+    "after": "When d meets you, it sounds like joo. Could you, could-joo. Would you, would-joo. Did you, did-joo. Your turn!",
+    "reviewers": "B+C",
+    "reason": "invented respellings 'coodju / woodju / didju' (TTS risk); use the hyphen forms from the teacherScript"
+  },
+  {
+    "lesson": 826,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "When d meets you, it sounds like ju. Could you, coodju. Would you, woodju. Did you, didju. Your turn!",
+    "after": "When d meets you, it sounds like joo. Could you, could-joo. Would you, would-joo. Did you, did-joo. Your turn!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 827,
+    "path": "teacher.segments[13].say",
+    "before": "Speed challenge! Fold! Flap! Give! Bow! Flap!",
+    "after": "Speed challenge! Fold! Flap! Give! Thank you! Flap!",
+    "reviewers": "B+C",
+    "reason": "bare 'Bow!' is a heteronym; TTS may read it as bow (ribbon); cue the TPR with its 'thank you' part"
+  },
+  {
+    "lesson": 827,
+    "path": "teacher.segments[13].subtitleEn",
+    "before": "Speed challenge! Fold! Flap! Give! Bow! Flap!",
+    "after": "Speed challenge! Fold! Flap! Give! Thank you! Flap!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 827,
+    "path": "teacher.segments[13].subtitleJa",
+    "before": "スピード チャレンジ！ おって！ はばたいて！ わたして！ おじぎ！ はばたいて！",
+    "after": "スピード チャレンジ！ おって！ はばたいて！ わたして！ ありがとう！ はばたいて！",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 827,
+    "path": "teacher.segments[20].say",
+    "before": "What a kind lesson! You can give a gift with I've made this for you. You can explain it with It's made of. Let's keep in touch with our friends! Next, go and talk with Kiko! See you!",
+    "after": "What a sweet story! You can give a gift with I've made this for you. You can explain it with It's made of. Let's keep in touch with our friends! Next, go and talk with Kiko! See you!",
+    "reviewers": "A+B",
+    "reason": "a lesson is not 'kind'; odd collocation in EN and JA"
+  },
+  {
+    "lesson": 827,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "What a kind lesson! You can give a gift with I've made this for you. You can explain it with It's made of. Let's keep in touch with our friends! Next, go and talk with Kiko! See you!",
+    "after": "What a sweet story! You can give a gift with I've made this for you. You can explain it with It's made of. Let's keep in touch with our friends! Next, go and talk with Kiko! See you!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 827,
+    "path": "teacher.segments[20].subtitleJa",
+    "before": "やさしい じゅぎょうだったね！ I've made this for you で おくりものが わたせるね。It's made of で せつめい できるね。ともだちと ずっと れんらくを とりあおうね！ このあと キコちゃんと おはなし してね！ またね！",
+    "after": "すてきな おはなしだったね！ I've made this for you で おくりものが わたせるね。It's made of で せつめい できるね。ともだちと ずっと れんらくを とりあおうね！ このあと キコちゃんと おはなし してね！ またね！",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 828,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! When the same sound comes two times, say it only once. Bus stop. Not bus, stop. Bustop! Take care. Taycare.",
+    "after": "Sound time! When the same sound comes two times, say it only once. Bus stop. Not bus, stop. Say one s. Take care. Say one k.",
+    "reviewers": "B+C",
+    "reason": "invented respellings 'Bustop / Taycare' (TTS risk); say the rule as in the teacherScript (one s, one k)"
+  },
+  {
+    "lesson": 828,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! When the same sound comes two times, say it only once. Bus stop. Not bus, stop. Bustop! Take care. Taycare.",
+    "after": "Sound time! When the same sound comes two times, say it only once. Bus stop. Not bus, stop. Say one s. Take care. Say one k.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 828,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ おなじ おとが 2かい つづいたら、1かいだけ いうよ。bus stop。バス、ストップ じゃ なくて、バスタップ！ take care は テイケア。",
+    "after": "おとの じかん！ おなじ おとが 2かい つづいたら、1かいだけ いうよ。bus stop。バス、ストップ じゃ なくて、s は 1かいだけ。バスタップ！ take care は k を 1かいだけ、テイケア。",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 828,
+    "path": "teacher.segments[10].say",
+    "before": "Good day. Gooday. Hot tea. Hotea. One sound, smooth and quick. Your turn!",
+    "after": "Good day. Say one d. Hot tea. Say one t. One sound, smooth and quick. Your turn!",
+    "reviewers": "B+C",
+    "reason": "invented respellings 'Gooday / Hotea' (TTS may read ho-TEE-uh); say the rule as in the teacherScript"
+  },
+  {
+    "lesson": 828,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Good day. Gooday. Hot tea. Hotea. One sound, smooth and quick. Your turn!",
+    "after": "Good day. Say one d. Hot tea. Say one t. One sound, smooth and quick. Your turn!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 828,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "good day は グッデイ。hot tea は ハッティー。おとは 1つ、なめらかに すばやく。あなたの ばん！",
+    "after": "good day は d を 1かいだけ、グッデイ。hot tea は t を 1かいだけ、ハッティー。おとは 1つ、なめらかに すばやく。あなたの ばん！",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 829,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Words join together. Don't you. Donchu. You like soccer, donchu? Take off. Tay-koff.",
+    "after": "Sound time! Words join together. Don't you. Don-chu. You like soccer, don-chu? Take off. Tay-koff.",
+    "reviewers": "B+C",
+    "reason": "invented solid respelling 'Donchu'; use the hyphen form from the teacherScript"
+  },
+  {
+    "lesson": 829,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Words join together. Don't you. Donchu. You like soccer, donchu? Take off. Tay-koff.",
+    "after": "Sound time! Words join together. Don't you. Don-chu. You like soccer, don-chu? Take off. Tay-koff.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 829,
+    "path": "teacher.segments[10].say",
+    "before": "All over. Aw-lover. This summer. The two s sounds become one. Thissummer. Your turn!",
+    "after": "All over. Aw-low-ver. This summer. The two s sounds become one. This summer! Your turn!",
+    "reviewers": "B+C",
+    "reason": "'Aw-lover' reads as 'lover' (wrong vowel; over = OH-ver); 'Thissummer' is an invented respelling"
+  },
+  {
+    "lesson": 829,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "All over. Aw-lover. This summer. The two s sounds become one. Thissummer. Your turn!",
+    "after": "All over. Aw-low-ver. This summer. The two s sounds become one. This summer! Your turn!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 829,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, First, we found a clue. Suddenly, we heard a noise. It must be a bird! Today, we talk about experiences. Do you remember the Cloudtop Railway? We asked, Have you ever seen a rainbow train? Now, Haru asks Mateo, Have you ever made sushi? Say it with me. Have you ever made sushi? Great! Mateo says, No, I haven't. But I've made tacos many times! Then Mateo says, I've played soccer since I was six. In the Village of Springs, we learned since. Do you remember? Amara says, I've never seen snow. Aino smiles and says, You should come to Finland! Let's read the bingo card on the plaza. \"Experience Bingo. Find a friend for each box. Have you ever seen snow? Have you ever ridden a train above the clouds? Have you ever made a paper crane? Have you ever been on a stage? Have you ever eaten tacos? Write your friend's name in the box. Get five in a row and shout, Bingo!\" How many in a row for bingo? Five. What do you write in the box? Your friend's name. Now, phonics. Don't you. Don-chu. The t and the y join. Take off. Tay-koff. All over. Aw-lover. This summer. Say the s sound only once. Have you ever played bingo in English?",
+    "after": "Hello, everyone! Last time, we said, First, we found a clue. Suddenly, we heard a noise. It must be a bird! Today, we talk about experiences. Do you remember the Cloudtop Railway? We asked, Have you ever seen a rainbow train? Now, Haru asks Mateo, Have you ever made sushi? Say it with me. Have you ever made sushi? Great! Mateo says, No, I haven't. But I've made tacos many times! Then Mateo says, I've played soccer since I was six. In the Village of Springs, we learned since. Do you remember? Amara says, I've never seen snow. Aino smiles and says, You should come to Finland! Let's read the bingo card on the plaza. \"Experience Bingo. Find a friend for each box. Have you ever seen snow? Have you ever ridden a train above the clouds? Have you ever made a paper crane? Have you ever been on a stage? Have you ever eaten tacos? Write your friend's name in the box. Get five in a row and shout, Bingo!\" How many in a row for bingo? Five. What do you write in the box? Your friend's name. Now, phonics. Don't you. Don-chu. The t and the y join. Take off. Tay-koff. All over. Aw-low-ver. This summer. Say the s sound only once. Have you ever played bingo in English?",
+    "reviewers": "B+C",
+    "reason": "'Aw-lover' reads as 'lover' (wrong vowel); match seg10"
+  },
+  {
+    "lesson": 830,
+    "path": "teacher.segments[10].say",
+    "before": "Origami is a Japanese word in English, too. Or-i-GA-mi. And video. VID-e-o. The first part is strong. Your turn! Origami. Video.",
+    "after": "Origami is a Japanese word in English, too. Or-i-GA-mi. And video. VID-e-o. In video, the first part is strong. Your turn! Origami. Video.",
+    "reviewers": "objective",
+    "reason": "after 'Or-i-GA-mi', 'The first part is strong' contradicts origami's stress (GA); say it is video"
+  },
+  {
+    "lesson": 830,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Origami is a Japanese word in English, too. Or-i-GA-mi. And video. VID-e-o. The first part is strong. Your turn! Origami. Video.",
+    "after": "Origami is a Japanese word in English, too. Or-i-GA-mi. And video. VID-e-o. In video, the first part is strong. Your turn! Origami. Video.",
+    "reviewers": "objective",
+    "reason": "match say"
+  },
+  {
+    "lesson": 830,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "origami は 英語でも つかう 日本の ことば。Or-i-GA-mi。そして video。VID-e-o。さいしょが つよいよ。あなたの ばん！ origami。video。",
+    "after": "origami は 英語でも つかう 日本の ことば。Or-i-GA-mi。そして video。VID-e-o。video は さいしょが つよいよ。あなたの ばん！ origami。video。",
+    "reviewers": "objective",
+    "reason": "match EN"
+  }
+]

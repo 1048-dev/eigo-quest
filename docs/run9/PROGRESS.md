@@ -425,3 +425,35 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: ワールド27・28（レッスン 781〜840）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・teacherScript・testPoints を 60 レッスン ぜんぶ 見なおした
+- さきに 機械的な なおし（「Say, A. Or, B.」→「Or b.」）と ブロックの きめごと（okay → OK・autumn → fall・football → soccer・pen friend → pen pal・イギリスふうの ほめことば〈Brilliant・Lovely〉・エマ先生 じぶんの 語りの「Ms. Emma says / asks」→「I say / I ask」・エマ先生の「Good morning / Good evening」→「Hi / Hello」・「A person who ～」の せつめいを ふつうの 文に・AI の さいしょの ひとことで ゲストとして 話す 56 レッスンを「Let's pretend I'm ～.」に）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た ものを ブロック全体で そろえた（ch = k の いいかた「The C H makes a k sound.」、karaoke の よみ「carry-OH-key」、つながる 音の ふりかえりの つづり meet-chu・could-joo・aw-low-ver）
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、HEAD から じゅんばんに あてなおした（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあい・かいわ あいても たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W27-28.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 781 --to 840`）: **まえ error 0 / warn 60 / info 8 → あと error 0 / warn 32 / info 8**（まえの warn は autumn・football 23・okay 4・「…」と おわりの 記号 32・「What's your hobby」1。のこりの warn 32 は ぜんぶ わざと: 会話・スライドの「…」と タイトル「I Think… Because…」〈テストで きまって いる〉、てがみの むすび「Your friend, Kiko」など、L795 しゅみの レッスンの「What's your hobby?」。とちゅうで 出た「ver」〈aw-low-ver〉の spelling error は scripts/english-words.txt の 音の つづりに たした）
+- なおした 欄 **446**（パッチ 472 件: 機械的な なおし 6・ブロックの きめごと 154・AI の ひとこと 56・レビュアー 228・あとの そろえ 28）、なおした レッスン **60 / 60**
+- 学習項目 ID が かわった もの 2つ: L808 ことば「pen friend」→「pen pal」、L818 表現「… I think autumn is the best. …」→「… I think fall is the best. …」。テスト・src の 変更は なし
+
+### before → after の 例
+1. L782 seg8（B・C）: 「Answer with I have a, and then say, That's too bad.」→「Answer, I have a headache. Then your friend says, That's too bad.」（1人の こどもが 両方を いう ように よめた。日本語は もともと「That's too bad」を きいた ともだちの ことばに して いた）
+2. L800 フォニックスの ヒント（A・B・まちがった きまり）: 「comfortable の -able は『～できる』」→「comfortable は COMF-ta-ble と みじかく いう」（comfortable は「～できる」の いみでは ない。台本の「Able means can be.」も なおした）
+3. L817 seg0（objective・おはなしの すじ）: 「Look what Riko brought.」→「Look what Kiko brought.」（ふろしきは ほかの ところでは ぜんぶ キコの もの。会話も「Kiko made a bag!」）
+
+### きめた こと
+- **AI の さいしょの ひとこと**: W25-26 と おなじく、goalJa が きめた やく（カピーおばあちゃん・ファーン先生・トト・イリス・アイノ・アマラ・マテオ・レオ・エマ先生・ペンパル・ねむい リスさん）は のこし、「Let's pretend I'm ～.」で ごっこあそびだと わかる ように した。名前を いわずに その人として 話して いた もの（「Welcome to the Spring Inn, dear.」「Moi!」だけ など）も ふくめた。L783・L785・L790 は だれでも いえる ひとことなので、goalJa の「AI の エマ先生」を ほんとうの あいてに した
+- エマ先生の じかんの あいさつ（Good morning / Good evening）は「Hi / Hello」に。ものがたりの なかの「tonight」「this morning」は のこした
+- テストで きまって いて のこした もの: L815「people celebrate New Year」（アメリカでは New Year's）、L827「I've made this for you.」（アメリカでは I made）、L792「What have you done for a long time?」、タイトルの「…」
+- のこした こと: L793「foot spring」（1グループだけの 指摘・学習項目）、L801 TPR「Hold your hands.」、L810「half past ten」、「VI-ta-min」などの 大文字の 音節、L811・L819 の たんどくの「Bow!」、ゲストの あいさつ「Moi! / Jambo! / Hola!」。くわしくは W27-28.md
+- ほかの ワールドで みつけた もの: 「Ms. Emma smiles / gives / takes / tells」など says / asks いがいの 3人称の 語り、名前を いわずに ゲストとして 話す AI の ひとこと、たんどくの「k」「ch」を 音として いう せつめい、2つの グループで ちがう つづりに なる 音の つづり（karaoke など）、「VI」「AN」「SU」の 大文字の 音節を TTS が 文字で よむ かの きいて みる チェック
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新

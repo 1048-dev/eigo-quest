@@ -6,6 +6,7 @@
     {
       "lessonNo": 781,
       "world": 27,
+      "reviewed": "run9",
       "title": "The Village of Springs",
       "titleJa": "いずみの里",
       "school": {
@@ -97,7 +98,7 @@
           "emoji": "🔥"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Thank you for watching our play! Today, we walk down the mountain path from the theater. It's a long walk. Look! There's white steam everywhere. This is the Village of Springs. An old capybara comes to meet us. Her name is Granny Capy. She smiles and says, Welcome to the Village of Springs! Kiko puts her hand in a little spring. Oh, it's warm! The spring water here is warm. Say it with me. The spring water here is warm. Wonderful! Let's read the sign by the stone path. \"Welcome to the Village of Springs! There are twelve warm springs in our village. The biggest one is the Heart Spring. It is in the middle of the village. You can put your hands and feet in the water. Please do not swim in the springs. Warm water, warm hearts! From the Spring Inn.\" How many springs are there? Twelve. What is the biggest spring? The Heart Spring. Now, phonics. Today, c h says k. Echo. Hello, hello, hello. School. A short k sound. Chorus. Let's sing together. Character. Birimo is a funny character. Let's go and find the Heart Spring!",
+      "teacherScript": "Hello, everyone! Last time, we said, Thank you for watching our play! Today, we walk down the mountain path from the theater. It's a long walk. Look! There's white steam everywhere. This is the Village of Springs. An old capybara comes to meet us. Her name is Granny Capy. She smiles and says, Welcome to the Village of Springs! Kiko puts her hand in a little spring. Oh, it's warm! The spring water here is warm. Say it with me. The spring water here is warm. Wonderful! Let's read the sign by the stone path. \"Welcome to the Village of Springs! There are twelve warm springs in our village. The biggest one is the Heart Spring. It is in the middle of the village. You can put your hands and feet in the water. Please do not swim in the springs. Warm water, warm hearts! From the Spring Inn.\" How many springs are there? Twelve. What is the biggest spring? The Heart Spring. Now, phonics. Today, c h makes a k sound. Echo. Hello, hello, hello. School. A short k sound. Chorus. Let's sing together. Character. Birimo is a funny character. Let's go and find the Heart Spring!",
       "conversation": {
         "scene": "The friends arrive at the Village of Springs",
         "sceneJa": "ゆげの たつ いずみの里に とうちゃく",
@@ -135,7 +136,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の カピーおばあちゃんに あいさつして、Can we put our hands in the water? と きき、おんせんの ようすを はなそう",
-          "starterEn": "Welcome to the Village of Springs! I'm Granny Capy. Would you like to touch the warm water?",
+          "starterEn": "Welcome to the Village of Springs! Let's pretend I'm Granny Capy. Would you like to touch the warm water?",
           "targetExpressions": [
             "The spring water here is warm.",
             "Welcome to the Village of Springs!",
@@ -300,9 +301,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! C H usually says ch, like cheese. But sometimes it says k! Echo. School. Hear the k?",
-            "subtitleJa": "おとの じかん！ c と h は ふつう「チ」、cheese みたいに。でも ときどき「ク」に なるよ！ echo。school。ク が きこえた？",
-            "subtitleEn": "Sound time! C H usually says ch, like cheese. But sometimes it says k! Echo. School. Hear the k?",
+            "say": "Sound time! C H usually sounds like the start of cheese. But sometimes it makes a k sound! Echo. School. Hear the k sound?",
+            "subtitleJa": "おとの じかん！ c と h は ふつう「チ」、cheese の はじめの おと。でも ときどき「ク」の おとに なるよ！ echo。school。ク が きこえた？",
+            "subtitleEn": "Sound time! C H usually sounds like the start of cheese. But sometimes it makes a k sound! Echo. School. Hear the k sound?",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -439,9 +440,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Think of a place you like. Say, The air here is fresh. Or, The sand here is warm.",
+            "say": "Your turn! Think of a place you like. Say, The air here is fresh. Or the sand here is warm.",
             "subtitleJa": "あなたの ばん！ すきな ばしょを おもいうかべて。「ここの くうきは きもちいい。」や「ここの すなは あたたかい。」と いって みよう。",
-            "subtitleEn": "Your turn! Think of a place you like. Say, The air here is fresh. Or, The sand here is warm.",
+            "subtitleEn": "Your turn! Think of a place you like. Say, The air here is fresh. Or the sand here is warm.",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -507,6 +508,7 @@
     {
       "lessonNo": 782,
       "world": 27,
+      "reviewed": "run9",
       "title": "What's Wrong?",
       "titleJa": "どう したの？",
       "school": {
@@ -638,7 +640,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の カピーおばあちゃんに What's wrong? と きかれたら、I have a headache. / I'm tired. と ぐあいを つたえよう",
-          "starterEn": "Good morning, dear. I'm Granny Capy. You look a little tired. What's wrong?",
+          "starterEn": "Hello, dear. Let's pretend I'm Granny Capy. You look a little tired. What's wrong?",
           "targetExpressions": [
             "What's wrong?",
             "I have a headache. ― That's too bad.",
@@ -659,9 +661,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, friends! It's our first morning at the Spring Inn. Haru, Riko and Birimo are ready to explore. But wait. Kiko is very quiet. Hmm.",
-            "subtitleJa": "おはよう、みんな！ いずみやどで はじめての あさ。ハルくん、リコちゃん、ビリモは たんけんの じゅんび ばっちり。でも まって。キコちゃんが とても しずか。うーん。",
-            "subtitleEn": "Good morning, friends! It's our first morning at the Spring Inn. Haru, Riko and Birimo are ready to explore. But wait. Kiko is very quiet. Hmm.",
+            "say": "Hi, friends! It's our first morning at the Spring Inn. Haru, Riko and Birimo are ready to explore. But wait. Kiko is very quiet. Hmm.",
+            "subtitleJa": "やあ、みんな！ いずみやどで はじめての あさ。ハルくん、リコちゃん、ビリモは たんけんの じゅんび ばっちり。でも まって。キコちゃんが とても しずか。うーん。",
+            "subtitleEn": "Hi, friends! It's our first morning at the Spring Inn. Haru, Riko and Birimo are ready to explore. But wait. Kiko is very quiet. Hmm.",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -674,9 +676,9 @@
           {
             "kind": "goal",
             "lang": "en",
-            "say": "Today's goal. When a friend looks sick or sad, ask, What's wrong? And when you feel bad, say, I have a headache. Or, I'm tired.",
+            "say": "Today's goal. When a friend looks sick or sad, ask, What's wrong? And when you feel bad, say, I have a headache. Or I'm tired.",
             "subtitleJa": "きょうの ゴール。ともだちが ぐあいが わるそう、かなしそうな とき「どう したの？」と きこう。じぶんの ぐあいが わるい ときは「あたまが いたいの。」や「つかれたよ。」と いおう。",
-            "subtitleEn": "Today's goal. When a friend looks sick or sad, ask, What's wrong? And when you feel bad, say, I have a headache. Or, I'm tired.",
+            "subtitleEn": "Today's goal. When a friend looks sick or sad, ask, What's wrong? And when you feel bad, say, I have a headache. Or I'm tired.",
             "gesture": "point",
             "slide": {
               "title": "Goal",
@@ -788,9 +790,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. What's wrong is a kind question. Answer with I have a, and then say, That's too bad. And if you feel sick, always tell a grown-up.",
-            "subtitleJa": "ポイント。What's wrong? は やさしい しつもん。I have a ～ で こたえて、きいた ひとは That's too bad. と いおう。それと、ぐあいが わるい ときは かならず おとなに つたえてね。",
-            "subtitleEn": "Here's the point. What's wrong is a kind question. Answer with I have a, and then say, That's too bad. And if you feel sick, always tell a grown-up.",
+            "say": "Here's the point. What's wrong is a kind question. Answer, I have a headache. Then your friend says, That's too bad. And if you feel sick, always tell a grown-up.",
+            "subtitleJa": "ポイント。What's wrong? は やさしい しつもん。I have a headache. と こたえたら、きいた ともだちは That's too bad. と いうよ。それと、ぐあいが わるい ときは かならず おとなに つたえてね。",
+            "subtitleEn": "Here's the point. What's wrong is a kind question. Answer, I have a headache. Then your friend says, That's too bad. And if you feel sick, always tell a grown-up.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -804,9 +806,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! A C H E says ache. The C H says k, and the E is quiet. Ache. Head plus ache. Headache!",
+            "say": "Sound time! A C H E says ache. The C H makes a k sound, and the E is quiet. Ache. Head plus ache. Headache!",
             "subtitleJa": "おとの じかん！ a・c・h・e で エイク。c と h は ク、さいごの e は よまない。ache。head と ache で headache！",
-            "subtitleEn": "Sound time! A C H E says ache. The C H says k, and the E is quiet. Ache. Head plus ache. Headache!",
+            "subtitleEn": "Sound time! A C H E says ache. The C H makes a k sound, and the E is quiet. Ache. Head plus ache. Headache!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1010,6 +1012,7 @@
     {
       "lessonNo": 783,
       "world": 27,
+      "reviewed": "run9",
       "title": "My Stomach Hurts",
       "titleJa": "おなかが いたい",
       "school": {
@@ -1103,7 +1106,7 @@
           "emoji": "🍽️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, What's wrong? Kiko had a good rest, and now she feels better. Tonight, there is a small fair in the village. There are food stalls with rice balls, soup and cakes. Birimo is so happy. He eats and eats. Later, he sits down on a bench and holds his tummy. Haru asks, Are you OK? Birimo says, Not really. My stomach hurts. I ate too much. Say it with me. My stomach hurts. I ate too much. Great! Ms. Emma tells Birimo to sit and rest. Let's read the menu at the soup stall. \"Village Fair Food Stalls. Open tonight from five to eight. Rice balls: salmon or plum. Hot vegetable soup. Sweet potato cakes. Fresh fruit cups. Our tip: eat slowly and stop when you feel full. Your stomach will thank you! Water is free at every stall. Please put your trash in the bins.\" What kind of soup is there? Hot vegetable soup. When should you stop eating? When you feel full. Now, phonics. Stomach. The c h says k. Stomachache. Stomach plus ache. Bellyache. Belly is another word for stomach. Orchestra. Here, c h says k, too. Eat slowly, everyone!",
+      "teacherScript": "Hello, everyone! Last time, we said, What's wrong? Kiko had a good rest, and now she feels better. Tonight, there is a small fair in the village. There are food stalls with rice balls, soup and cakes. Birimo is so happy. He eats and eats. Later, he sits down on a bench and holds his tummy. Haru asks, Are you OK? Birimo says, Not really. My stomach hurts. I ate too much. Say it with me. My stomach hurts. I ate too much. Great! I tell Birimo to sit and rest. Let's read the menu at the soup stall. \"Village Fair Food Stalls. Open tonight from five to eight. Rice balls: salmon or plum. Hot vegetable soup. Sweet potato cakes. Fresh fruit cups. Our tip: eat slowly and stop when you feel full. Your stomach will thank you! Water is free at every stall. Please put your trash in the bins.\" What kind of soup is there? Hot vegetable soup. When should you stop eating? When you feel full. Now, phonics. Stomach. The c h makes a k sound. Stomachache. Stomach plus ache. Bellyache. Belly is another word for stomach. Orchestra. Here, c h makes a k sound, too. Eat slowly, everyone!",
       "conversation": {
         "scene": "Birimo ate too much at the food stalls",
         "sceneJa": "やたいで ビリモが たべすぎて おなかが いたい",
@@ -1140,7 +1143,7 @@
           }
         ],
         "aiTask": {
-          "goalJa": "AI の エマ先生と やたいの はなしを しよう。たべすぎた やくに なって、My stomach hurts. I ate too much. と ぐあいを つたえよう",
+          "goalJa": "AI の キコと やたいの はなしを しよう。たべすぎた やくに なって、My stomach hurts. I ate too much. と ぐあいを つたえよう",
           "starterEn": "The food stalls were so much fun! Oh, you look a little sick. Are you OK?",
           "targetExpressions": [
             "My stomach hurts. I ate too much.",
@@ -1305,9 +1308,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Stomach. The C H says k. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
+            "say": "Sound time! Stomach. The C H makes a k sound. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
             "subtitleJa": "おとの じかん！ stomach。c と h は ク。stomach。ache を たすと stomachache！ belly も おなかの こと。belly と ache で bellyache！",
-            "subtitleEn": "Sound time! Stomach. The C H says k. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
+            "subtitleEn": "Sound time! Stomach. The C H makes a k sound. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1325,9 +1328,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Orchestra. Lots of music together. C H says k here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
+            "say": "Orchestra. Many musicians play together. C H makes a k sound here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
             "subtitleJa": "orchestra。たくさんの がっきで いっしょに えんそう。ここでも c と h は ク。あなたの ばん！ stomach、stomachache、bellyache、orchestra。",
-            "subtitleEn": "Orchestra. Lots of music together. C H says k here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
+            "subtitleEn": "Orchestra. Many musicians play together. C H makes a k sound here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -1512,6 +1515,7 @@
     {
       "lessonNo": 784,
       "world": 27,
+      "reviewed": "run9",
       "title": "At the Clinic",
       "titleJa": "しんりょうじょで",
       "school": {
@@ -1605,7 +1609,7 @@
           "emoji": "🏥"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, My stomach hurts. I ate too much. This morning, Haru doesn't feel well. His face is red, and he feels hot. He has a fever（ねつ）. Haru has had a fever since yesterday. Ms. Emma takes him to the little clinic. The village doctor is a kind deer named Dr. Fern. Dr. Fern asks, How long have you had a fever? Haru says, Since yesterday. I have a cough and a sore throat. Say it with me. How long have you had a fever? Since yesterday. Very good! Dr. Fern checks Haru carefully and writes a note. Let's read it. \"Dr. Fern's Note for Haru. You have a small cold. Don't worry. Drink lots of water. Rest in bed today and tomorrow. Sleep well at night. Cough into your elbow. Tell Ms. Emma if you feel worse. Then come back and see me. Get lots of rest!\" How many days should Haru rest in bed? Two days, today and tomorrow. What should he drink? Lots of water. Now, phonics. Backache. Back plus ache. Mechanic. The c h says k. Anchor. A big ship has an anchor. Christmas. Again, c h says k. Rest well, Haru!",
+      "teacherScript": "Hello, everyone! Last time, we said, My stomach hurts. I ate too much. This morning, Haru doesn't feel well. His face is red, and he feels hot. He has a fever（ねつ）. Haru has had a fever since yesterday. I take him to the little clinic. The village doctor is a kind deer named Dr. Fern. Dr. Fern asks, How long have you had a fever? Haru says, Since yesterday. I have a cough and a sore throat. Say it with me. How long have you had a fever? Since yesterday. Very good! Dr. Fern checks Haru carefully and writes a note. Let's read it. \"Dr. Fern's Note for Haru. You have a small cold. Don't worry. Drink lots of water. Rest in bed today and tomorrow. Sleep well at night. Cough into your elbow. Tell Ms. Emma if you feel worse. Then come back and see me. Get lots of rest!\" How many days should Haru rest in bed? Two days, today and tomorrow. What should he drink? Lots of water. Now, phonics. Backache. Back plus ache. Mechanic. The c h makes a k sound. Anchor. A big ship has an anchor. Christmas. Again, c h makes a k sound. Rest well, Haru!",
       "conversation": {
         "scene": "Haru visits Dr. Fern's little clinic",
         "sceneJa": "ハルが ファーン先生の しんりょうじょへ いく",
@@ -1637,13 +1641,13 @@
           },
           {
             "speaker": "Ms. Emma",
-            "en": "Thank you, doctor. Let's go back to the inn, Haru.",
+            "en": "Thank you, Dr. Fern. Let's go back to the inn, Haru.",
             "ja": "ありがとう ございます、先生。やどに もどりましょう、ハル。"
           }
         ],
         "aiTask": {
           "goalJa": "AI の ファーン先生に How long have you had a fever? と きかれたら、Since yesterday. などで こたえて ぐあいを つたえよう",
-          "starterEn": "Hello, I'm Dr. Fern. Come in and sit down. How long have you had a fever?",
+          "starterEn": "Hello. Let's pretend I'm Dr. Fern. Come in and sit down. How long have you had a fever?",
           "targetExpressions": [
             "How long have you had a fever?",
             "Since yesterday.",
@@ -1664,9 +1668,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's go with Ms. Emma to the little clinic.",
-            "subtitleJa": "こんにちは、みんな。あらら。けさ、ハルくんの ぐあいが よくないの。かおが あかくて、からだが あつい。エマ先生と いっしょに ちいさな しんりょうじょへ いこう。",
-            "subtitleEn": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's go with Ms. Emma to the little clinic.",
+            "say": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's take him to the little clinic.",
+            "subtitleJa": "こんにちは、みんな。あらら。けさ、ハルくんの ぐあいが よくないの。かおが あかくて、からだが あつい。ハルくんを ちいさな しんりょうじょへ つれて いこう。",
+            "subtitleEn": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's take him to the little clinic.",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -1808,9 +1812,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H says k!",
+            "say": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H makes a k sound!",
             "subtitleJa": "おとの じかん！ back と ache で backache。せなかが いたい。mechanic。くるまを なおす ひと。c と h は ク！",
-            "subtitleEn": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H says k!",
+            "subtitleEn": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H makes a k sound!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1828,9 +1832,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Anchor. A ship drops its anchor. Christmas. C H says k, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
+            "say": "Anchor. A ship drops its anchor. Christmas. C H makes a k sound, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
             "subtitleJa": "anchor。ふねが いかりを おろす。Christmas。c と h は ク、t は よまないよ。あなたの ばん！ backache、mechanic、anchor、Christmas。",
-            "subtitleEn": "Anchor. A ship drops its anchor. Christmas. C H says k, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
+            "subtitleEn": "Anchor. A ship drops its anchor. Christmas. C H makes a k sound, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -2015,6 +2019,7 @@
     {
       "lessonNo": 785,
       "world": 27,
+      "reviewed": "run9",
       "title": "I Hope You Feel Better",
       "titleJa": "はやく よく なってね",
       "school": {
@@ -2108,7 +2113,7 @@
           "emoji": "📝"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, How long have you had a fever? Since yesterday. Haru is resting in his room at the Spring Inn today. He can't come out and play. So, let's make him a get-well card! Riko draws a big sun. Kiko draws some flowers. Birimo draws a rice ball, of course. Then, we write a message. I hope you feel better soon. Say it with me. I hope you feel better soon. Lovely! We can also write, Get well soon! And, Take care of yourself. Let's read our card together. \"Dear Haru, We miss you! The village is quiet without you. Please drink lots of water and get lots of sleep. Granny Capy is making you warm soup. Birimo wants to play cards with you. Get well soon! Take care of yourself. I hope you feel better soon. Love, Riko, Kiko, Birimo and Ms. Emma\" Who is making soup? Granny Capy. What does Birimo want to do? Play cards with Haru. Now, phonics. Let's review. School. C h says k. Stomach. C h says k again. Headache. A c h e says ache. Stomachache. Stomach plus ache. Let's take the card to Haru!",
+      "teacherScript": "Hello, everyone! Last time, we said, How long have you had a fever? Since yesterday. Haru is resting in his room at the Spring Inn today. He can't come out and play. So, let's make him a get-well card! Riko draws a big sun. Kiko draws some flowers. Birimo draws a rice ball, of course. Then, we write a message. I hope you feel better soon. Say it with me. I hope you feel better soon. Great! We can also write, Get well soon! And, Take care of yourself. Let's read our card together. \"Dear Haru, We miss you! The village is quiet without you. Please drink lots of water and get lots of sleep. Granny Capy is making you warm soup. Birimo wants to play cards with you. Get well soon! Take care of yourself. I hope you feel better soon. Love, Riko, Kiko, Birimo and Ms. Emma\" Who is making soup? Granny Capy. What does Birimo want to do? Play cards with Haru. Now, phonics. Let's review. School. C h makes a k sound. Stomach. C h makes a k sound again. Headache. A c h e says ache. Stomachache. Stomach plus ache. Let's take the card to Haru!",
       "conversation": {
         "scene": "The friends make a get-well card for Haru",
         "sceneJa": "ハルに おみまいの カードを つくる",
@@ -2150,7 +2155,7 @@
           }
         ],
         "aiTask": {
-          "goalJa": "AI の エマ先生と いっしょに、ぐあいが わるい ともだちへの おみまいの ことばを かんがえて いって みよう",
+          "goalJa": "AI の キコと いっしょに、ぐあいが わるい ともだちへの おみまいの ことばを かんがえて いって みよう",
           "starterEn": "Haru is still in bed. Let's make him a card. What can we write?",
           "targetExpressions": [
             "I hope you feel better soon.",
@@ -2220,9 +2225,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Card. A folded paper with a picture and words. Card!",
+            "say": "Card. A folded piece of paper with a picture and words. Card!",
             "subtitleJa": "card。えと ことばが かいて ある おった かみ。card！",
-            "subtitleEn": "Card. A folded paper with a picture and words. Card!",
+            "subtitleEn": "Card. A folded piece of paper with a picture and words. Card!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -2317,9 +2322,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! C H can say k. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
+            "say": "Sound review! C H can make a k sound. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
             "subtitleJa": "おとの ふくしゅう！ c と h は ク に なる ことが ある。school。stomach。それから a・c・h・e は エイク。headache。stomachache。stomach と ache！",
-            "subtitleEn": "Sound review! C H can say k. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
+            "subtitleEn": "Sound review! C H can make a k sound. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -2336,9 +2341,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Clap the parts with me. Head, ache. Stom, ach, ache. Your turn! School. Stomach. Headache. Stomachache.",
-            "subtitleJa": "いっしょに てを たたいて わけよう。head、ache。stom、ach、ache。あなたの ばん！ school、stomach、headache、stomachache。",
-            "subtitleEn": "Clap the parts with me. Head, ache. Stom, ach, ache. Your turn! School. Stomach. Headache. Stomachache.",
+            "say": "Clap the parts with me. Head-ache. Stom-ach-ache. Your turn! School. Stomach. Headache. Stomachache.",
+            "subtitleJa": "いっしょに てを たたいて わけよう。head-ache。stom-ach-ache。あなたの ばん！ school、stomach、headache、stomachache。",
+            "subtitleEn": "Clap the parts with me. Head-ache. Stom-ach-ache. Your turn! School. Stomach. Headache. Stomachache.",
             "gesture": "clap",
             "slide": {
               "title": "Sounds",
@@ -2524,6 +2529,7 @@
     {
       "lessonNo": 786,
       "world": 27,
+      "reviewed": "run9",
       "title": "How Often Do You Exercise?",
       "titleJa": "どのくらい うんどう する？",
       "school": {
@@ -2621,7 +2627,7 @@
           "emoji": "🦵"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I hope you feel better soon. Good news! Haru feels much better today. Early in the morning, we hear music in the village square. A young snow monkey is jumping and stretching. His name is Toto. He waves and says, Come and join us! Toto does morning exercises with the village kids. Haru asks him, How often do you exercise? Toto says, Every day! I stretch every morning. Say it with me. How often do you exercise? Super! You can answer, Three times a week. Or, Every day. Let's read the poster in the square. \"Morning Exercise in the Village Square! Every day at seven o'clock. Ten minutes of stretching, then ten minutes of walking. Everyone is welcome, young and old. Wear comfortable shoes. Bring some water. Toto will lead the exercises today. Move your body and start your day with a smile!\" What time does it start? At seven o'clock. What should you bring? Some water. Now, phonics. Today, some letters are silent. Knee. Don't say the k. Wrist. Don't say the w. Thumb. Don't say the b. Muscle. Don't say the c. Let's stretch together!",
+      "teacherScript": "Hello, everyone! Last time, we said, I hope you feel better soon. Good news! Haru feels much better today. Early in the morning, we hear music in the village square. A young snow monkey is jumping and stretching. His name is Toto. He waves and says, Come and join us! Toto does morning exercises with the village kids. Haru asks him, How often do you exercise? Toto says, Every day! I stretch every morning. Say it with me. How often do you exercise? Super! You can answer, Three times a week. Or every day. Let's read the poster in the square. \"Morning Exercise in the Village Square! Every day at seven o'clock. Ten minutes of stretching, then ten minutes of walking. Everyone is welcome, young and old. Wear comfortable shoes. Bring some water. Toto will lead the exercises today. Move your body and start your day with a smile!\" What time does it start? At seven o'clock. What should you bring? Some water. Now, phonics. Today, some letters are silent. Knee. Don't say the k. Wrist. Don't say the w. Thumb. Don't say the b. Muscle. Don't say the c. Let's stretch together!",
       "conversation": {
         "scene": "Morning exercises with Toto in the village square",
         "sceneJa": "むらの ひろばで トトと あさの たいそう",
@@ -2664,7 +2670,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の トトに How often do you exercise? と きいて、じぶんの うんどうの かいすうも つたえよう",
-          "starterEn": "Good morning! I'm Toto. I exercise every morning. How often do you exercise?",
+          "starterEn": "Hi! Let's pretend I'm Toto. I exercise every morning. How often do you exercise?",
           "targetExpressions": [
             "How often do you exercise?",
             "Three times a week.",
@@ -2685,9 +2691,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, everyone! Haru feels much better now. Hooray! Listen. One, two, three, four! Someone is doing exercises in the village square. Let's go and see!",
-            "subtitleJa": "みんな、おはよう！ ハルくんは もう ずいぶん げんきに なったよ。やったね！ きいて。ワン、ツー、スリー、フォー！ むらの ひろばで だれかが たいそう して いるよ。みに いこう！",
-            "subtitleEn": "Good morning, everyone! Haru feels much better now. Hooray! Listen. One, two, three, four! Someone is doing exercises in the village square. Let's go and see!",
+            "say": "Hi, everyone! Haru feels much better now. Hooray! Listen. One, two, three, four! Someone is doing exercises in the village square. Let's go and see!",
+            "subtitleJa": "やあ、みんな！ ハルくんは もう ずいぶん げんきに なったよ。やったね！ きいて。ワン、ツー、スリー、フォー！ むらの ひろばで だれかが たいそう して いるよ。みに いこう！",
+            "subtitleEn": "Hi, everyone! Haru feels much better now. Hooray! Listen. One, two, three, four! Someone is doing exercises in the village square. Let's go and see!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -2700,9 +2706,9 @@
           {
             "kind": "goal",
             "lang": "en",
-            "say": "Today's goal. Ask, How often do you exercise? And answer, Three times a week. Or, I stretch every morning.",
+            "say": "Today's goal. Ask, How often do you exercise? And answer, Three times a week. Or I stretch every morning.",
             "subtitleJa": "きょうの ゴール。「どのくらい うんどう する？」と きこう。そして「しゅうに 3かい。」や「まいあさ ストレッチ するよ。」と こたえよう。",
-            "subtitleEn": "Today's goal. Ask, How often do you exercise? And answer, Three times a week. Or, I stretch every morning.",
+            "subtitleEn": "Today's goal. Ask, How often do you exercise? And answer, Three times a week. Or I stretch every morning.",
             "gesture": "point",
             "slide": {
               "title": "Goal",
@@ -3035,6 +3041,7 @@
     {
       "lessonNo": 787,
       "world": 27,
+      "reviewed": "run9",
       "title": "I Go to Bed at Nine",
       "titleJa": "9じに ねるよ",
       "school": {
@@ -3170,7 +3177,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の カピーおばあちゃんと ねる じかんの はなしを しよう。What time do you go to bed? や How many hours do you sleep? と きいて みよう",
-          "starterEn": "It's getting late, dear. Here's some warm milk. What time do you usually go to bed?",
+          "starterEn": "Let's pretend I'm Granny Capy. It's getting late, dear. Here's some warm milk. What time do you usually go to bed?",
           "targetExpressions": [
             "I usually go to bed at nine.",
             "What time do you go to bed? ― At half past nine.",
@@ -3191,9 +3198,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good evening, everyone! The stars are out over the Spring Inn. Everyone is in pajamas. Who goes to bed first tonight?",
-            "subtitleJa": "みんな、こんばんは！ いずみやどの うえに ほしが でて いるよ。みんな パジャマ すがた。こんや さいしょに ねるのは だれかな？",
-            "subtitleEn": "Good evening, everyone! The stars are out over the Spring Inn. Everyone is in pajamas. Who goes to bed first tonight?",
+            "say": "Hello, everyone! The stars are out over the Spring Inn. Everyone is in pajamas. Who goes to bed first tonight?",
+            "subtitleJa": "こんにちは、みんな！ いずみやどの うえに ほしが でて いるよ。みんな パジャマ すがた。こんや さいしょに ねるのは だれかな？",
+            "subtitleEn": "Hello, everyone! The stars are out over the Spring Inn. Everyone is in pajamas. Who goes to bed first tonight?",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -3304,9 +3311,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo asks, How many hours do you sleep? Haru says, About ten hours. I get up at seven. Ms. Emma says, Great! Kids need nine to twelve hours of sleep.",
-            "subtitleJa": "ビリモ「なんじかん ねるの？」 ハルくん「だいたい 10じかん。7じに おきるんだ。」 エマ先生「すばらしい！ こどもは 9〜12じかん ねむるのが だいじよ。」",
-            "subtitleEn": "Birimo asks, How many hours do you sleep? Haru says, About ten hours. I get up at seven. Ms. Emma says, Great! Kids need nine to twelve hours of sleep.",
+            "say": "Birimo asks, How many hours do you sleep? Haru says, About ten hours. I get up at seven. I say, Great! Kids need nine to twelve hours of sleep.",
+            "subtitleJa": "ビリモ「なんじかん ねるの？」 ハルくん「だいたい 10じかん。7じに おきるんだ。」 わたし「すばらしい！ こどもは 9〜12じかん ねむるのが だいじよ。」",
+            "subtitleEn": "Birimo asks, How many hours do you sleep? Haru says, About ten hours. I get up at seven. I say, Great! Kids need nine to twelve hours of sleep.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -3522,9 +3529,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! Good night, and see you!",
-            "subtitleJa": "すばらしい！ いつも なんじに ねるか いえるね。「なんじかん ねるの？」と きけるね。こんやは ぐっすり ねてね！ このあと キコちゃんと おはなし してね！ おやすみ、またね！",
-            "subtitleEn": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! Good night, and see you!",
+            "say": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! See you!",
+            "subtitleJa": "すばらしい！ いつも なんじに ねるか いえるね。「なんじかん ねるの？」と きけるね。こんやは ぐっすり ねてね！ このあと キコちゃんと おはなし してね！ またね！",
+            "subtitleEn": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! See you!",
             "gesture": "wave",
             "slide": {
               "title": "Today's wrap-up",
@@ -3542,6 +3549,7 @@
     {
       "lessonNo": 788,
       "world": 27,
+      "reviewed": "run9",
       "title": "Healthy Habits",
       "titleJa": "けんこうな しゅうかん",
       "school": {
@@ -3673,7 +3681,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ファーン先生の しつもんに、～ing is good for ～. / ～ing is important. の かたちで こたえよう",
-          "starterEn": "Hello, class! I'm Dr. Fern. Let's talk about healthy habits. Why is eating breakfast important?",
+          "starterEn": "Hello! Let's pretend I'm Dr. Fern. Let's talk about healthy habits. Why is eating breakfast important?",
           "targetExpressions": [
             "Eating breakfast is good for your brain.",
             "Washing your hands is important.",
@@ -3709,9 +3717,9 @@
           {
             "kind": "goal",
             "lang": "en",
-            "say": "Today's goal. Tell good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
+            "say": "Today's goal. Talk about good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
             "subtitleJa": "きょうの ゴール。ing の ことばで いい しゅうかんを つたえよう。「あさごはんを たべるのは のうに いいよ。」「てを あらうのは だいじだよ。」",
-            "subtitleEn": "Today's goal. Tell good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
+            "subtitleEn": "Today's goal. Talk about good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
             "gesture": "point",
             "slide": {
               "title": "Goal",
@@ -3805,9 +3813,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko says, Washing your hands is important. Kiko says, Walking is good for your body, too. Ms. Emma says, Great answers! Small habits make a big difference.",
-            "subtitleJa": "リコちゃん「てを あらうのは だいじだよ。」 キコちゃん「あるくのも からだに いいよ。」 エマ先生「すばらしい こたえ！ ちいさな しゅうかんが おおきな ちがいに なるのよ。」",
-            "subtitleEn": "Riko says, Washing your hands is important. Kiko says, Walking is good for your body, too. Ms. Emma says, Great answers! Small habits make a big difference.",
+            "say": "Riko says, Washing your hands is important. Kiko says, Walking is good for your body, too. I say, Great answers! Small habits make a big difference.",
+            "subtitleJa": "リコちゃん「てを あらうのは だいじだよ。」 キコちゃん「あるくのも からだに いいよ。」 わたし「すばらしい こたえ！ ちいさな しゅうかんが おおきな ちがいに なるのよ。」",
+            "subtitleEn": "Riko says, Washing your hands is important. Kiko says, Walking is good for your body, too. I say, Great answers! Small habits make a big difference.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4025,9 +4033,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Brilliant! You can say, Eating breakfast is good for your brain. You can talk about healthy habits. Small habits, big difference! Next, go and talk with Birimo! See you!",
+            "say": "Fantastic! You can say, Eating breakfast is good for your brain. You can talk about healthy habits. Small habits, big difference! Next, go and talk with Birimo! See you!",
             "subtitleJa": "すばらしい！「あさごはんを たべるのは のうに いいよ。」と いえるね。けんこうな しゅうかんに ついて はなせるね。ちいさな しゅうかん、おおきな ちがい！ このあと ビリモと おはなし してね！ またね！",
-            "subtitleEn": "Brilliant! You can say, Eating breakfast is good for your brain. You can talk about healthy habits. Small habits, big difference! Next, go and talk with Birimo! See you!",
+            "subtitleEn": "Fantastic! You can say, Eating breakfast is good for your brain. You can talk about healthy habits. Small habits, big difference! Next, go and talk with Birimo! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -4045,6 +4053,7 @@
     {
       "lessonNo": 789,
       "world": 27,
+      "reviewed": "run9",
       "title": "Screen Time",
       "titleJa": "スクリーン タイム",
       "school": {
@@ -4138,7 +4147,7 @@
           "emoji": "🌳"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Eating breakfast is good for your brain. Today, it's raining in the village. We stay inside the Spring Inn. Toto comes to visit with his tablet. He loves games and videos. Ms. Emma asks, How much screen time do you have? Haru says, I play video games for one hour a day. Toto says, After one hour, I take a break and go outside. Say it with me. I play video games for one hour a day. Good job! Games and videos are fun. The important thing is a good balance. Let's read a column in the Spring News. \"Screen Time Tips. Games and videos can be fun and useful. Here are some tips for a good balance. Talk with your family about a time limit. Rest your eyes every thirty minutes. Look far away for a moment. Turn off screens one hour before bed. Then go outside, play and move your body!\" When should you turn off screens? One hour before bed. How often should you rest your eyes? Every thirty minutes. Now, phonics. Talk. Don't say the l. Palm. Don't say the l. Honest. Don't say the h. An honest answer. Calf. The l is silent. Let's find a good balance!",
+      "teacherScript": "Hello, everyone! Last time, we said, Eating breakfast is good for your brain. Today, it's raining in the village. We stay inside the Spring Inn. Toto comes to visit with his tablet. He loves games and videos. I ask, How much screen time do you have? Haru says, I play video games for one hour a day. Toto says, After one hour, I take a break and go outside. Say it with me. I play video games for one hour a day. Good job! Games and videos are fun. The important thing is a good balance. Let's read a column in the Spring News. \"Screen Time Tips. Games and videos can be fun and useful. Here are some tips for a good balance. Talk with your family about a time limit. Rest your eyes every thirty minutes. Look far away for a moment. Turn off screens one hour before bed. Then go outside, play and move your body!\" When should you turn off screens? One hour before bed. How often should you rest your eyes? Every thirty minutes. Now, phonics. Talk. Don't say the l. Palm. Don't say the l. Honest. Don't say the h. An honest answer. Calf. The l is silent. Let's find a good balance!",
       "conversation": {
         "scene": "Talking about screen time on a rainy day",
         "sceneJa": "あめの ひに スクリーン タイムの はなしを する",
@@ -4176,7 +4185,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の トトと スクリーン タイムの はなしを しよう。How much screen time do you have? と きいて、じぶんの じかんと きゅうけいの とりかたを つたえよう",
-          "starterEn": "Hi! It's Toto. I like games, but I take breaks, too. How much screen time do you have?",
+          "starterEn": "Hi! Let's pretend I'm Toto. I like games, but I take breaks, too. How much screen time do you have?",
           "targetExpressions": [
             "I play video games for one hour a day.",
             "How much screen time do you have?",
@@ -4292,9 +4301,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma asks, How much screen time do you have, Haru? Haru says, I play video games for one hour a day. Kiko says, I watch videos for thirty minutes a day.",
-            "subtitleJa": "エマ先生「ハルは がめんを みる じかんは どのくらい？」 ハルくん「1にち 1じかん テレビゲームを するよ。」 キコちゃん「わたしは 1にち 30ぷん どうがを みるよ。」",
-            "subtitleEn": "Ms. Emma asks, How much screen time do you have, Haru? Haru says, I play video games for one hour a day. Kiko says, I watch videos for thirty minutes a day.",
+            "say": "I ask, How much screen time do you have, Haru? Haru says, I play video games for one hour a day. Kiko says, I watch videos for thirty minutes a day.",
+            "subtitleJa": "わたし「ハルは がめんを みる じかんは どのくらい？」 ハルくん「1にち 1じかん テレビゲームを するよ。」 キコちゃん「わたしは 1にち 30ぷん どうがを みるよ。」",
+            "subtitleEn": "I ask, How much screen time do you have, Haru? Haru says, I play video games for one hour a day. Kiko says, I watch videos for thirty minutes a day.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4309,9 +4318,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. Ms. Emma smiles. That's a good balance.",
-            "subtitleJa": "ビリモが トトの やく。「1じかん たったら、きゅうけいして そとに いくよ。」 リコちゃん「わたしも。それから なわとびを するの。」 エマ先生が にっこり。「いい バランスね。」",
-            "subtitleEn": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. Ms. Emma smiles. That's a good balance.",
+            "say": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. I say, That's a good balance.",
+            "subtitleJa": "ビリモが トトの やく。「1じかん たったら、きゅうけいして そとに いくよ。」 リコちゃん「わたしも。それから なわとびを するの。」 わたし「いい バランスね。」",
+            "subtitleEn": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. I say, That's a good balance.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4549,6 +4558,7 @@
     {
       "lessonNo": 790,
       "world": 27,
+      "reviewed": "run9",
       "title": "Habit Survey",
       "titleJa": "しゅうかん アンケート",
       "school": {
@@ -4683,7 +4693,7 @@
           }
         ],
         "aiTask": {
-          "goalJa": "AI の エマ先生に アンケートの けっかを はっぴょう しよう。～ people ～. / Most people ～. / Only ～. を つかおう",
+          "goalJa": "AI の リコに アンケートの けっかを はっぴょう しよう。～ people ～. / Most people ～. / Only ～. を つかおう",
           "starterEn": "Let's look at your survey results. How many people eat breakfast every day?",
           "targetExpressions": [
             "Five people eat breakfast every day.",
@@ -5058,6 +5068,7 @@
     {
       "lessonNo": 791,
       "world": 27,
+      "reviewed": "run9",
       "title": "I've Lived Here for Ten Years",
       "titleJa": "ここに 10ねん すんで いるの",
       "school": {
@@ -5187,7 +5198,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の カピーおばあちゃんに How long have you lived here? と きいて、むかしの はなしを きこう",
-          "starterEn": "Welcome to the Spring Inn, dear. Have some herbal tea. I've lived here for ten years. Before that, I lived by the sea. Do you like the sea?",
+          "starterEn": "Let's pretend I'm Granny Capy. Welcome to the Spring Inn, dear. Have some herbal tea. I've lived here for ten years. Before that, I lived by the sea. Do you like the sea?",
           "targetExpressions": [
             "I've lived here for ten years.",
             "Before that, I lived by the sea.",
@@ -5208,9 +5219,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good evening, everyone! It's so cozy by the fire at the Spring Inn. Granny Capy has a story for us tonight. Let's listen!",
-            "subtitleJa": "こんばんは、みんな！ いずみの やどの だんろの そばは とっても ぽかぽか。こんやは カピーおばあちゃんが おはなしを して くれるよ。きいて みよう！",
-            "subtitleEn": "Good evening, everyone! It's so cozy by the fire at the Spring Inn. Granny Capy has a story for us tonight. Let's listen!",
+            "say": "Hello, everyone! It's so cozy by the fire at the Spring Inn. Granny Capy has a story for us tonight. Let's listen!",
+            "subtitleJa": "こんにちは、みんな！ いずみの やどの だんろの そばは とっても ぽかぽか。こんやは カピーおばあちゃんが おはなしを して くれるよ。きいて みよう！",
+            "subtitleEn": "Hello, everyone! It's so cozy by the fire at the Spring Inn. Granny Capy has a story for us tonight. Let's listen!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -5239,9 +5250,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Live. Your home is in a place. I live in a little house. Live!",
-            "subtitleJa": "live。ある ばしょに いえが ある こと。わたしは ちいさな いえに すんで いるよ。live！",
-            "subtitleEn": "Live. Your home is in a place. I live in a little house. Live!",
+            "say": "I live, you live. Your home is in a place. I live in a little house. I live here!",
+            "subtitleJa": "わたしも あなたも live（すむ）。ある ばしょに いえが ある こと。わたしは ちいさな いえに すんで いるよ。ここに すんで いるの！",
+            "subtitleEn": "I live, you live. Your home is in a place. I live in a little house. I live here!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -5352,9 +5363,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! The little word for is short and soft. Fer. For TEN YEARS. Say TEN YEARS strongly.",
+            "say": "Sound time! The little word for is short and soft, like fur. For TEN YEARS. Say TEN YEARS strongly.",
             "subtitleJa": "おとの じかん！ ちいさな ことば for は みじかく やさしく「ファ」。for TEN YEARS。TEN YEARS を つよく いおう。",
-            "subtitleEn": "Sound time! The little word for is short and soft. Fer. For TEN YEARS. Say TEN YEARS strongly.",
+            "subtitleEn": "Sound time! The little word for is short and soft, like fur. For TEN YEARS. Say TEN YEARS strongly.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -5557,6 +5568,7 @@
     {
       "lessonNo": 792,
       "world": 27,
+      "reviewed": "run9",
       "title": "Since I Was Five",
       "titleJa": "5さいの ときから",
       "school": {
@@ -5648,7 +5660,7 @@
           "emoji": "🛋️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I've lived here for ten years. Granny Capy came to the village ten years ago. Today, it's raining, so we stay inside the Spring Inn. There's an old piano in the lobby. Riko sits down and plays a gentle song. Granny Capy claps her paws. Riko says, I've played the piano since I was five. Say it with me. I've played the piano since I was five. Beautiful! Since tells us the starting point. Riko started at five, and she still plays today. Haru says, I've done karate since I was seven. Kiko loves drawing, and Birimo loves cooking. Granny Capy puts a poster on the lobby wall. Let's read it. \"Rainy Day Show at the Spring Inn! This evening, our guests will share their favorite things. Riko will play the piano. Haru will show some karate moves. Kiko will draw pictures of the springs. Birimo will cook sweet potato soup for everyone. Come to the lobby at six o'clock. Everyone is welcome!\" What will Kiko do? She will draw pictures of the springs. What time does the show start? At six o'clock. Now, phonics. Since I was five. Since is short. Five is strong. Since April. Since kindergarten. Kin, der, gar, ten. Since Monday. Monday is strong. What have you done for a long time? Tell a friend!",
+      "teacherScript": "Hello, everyone! Last time, we said, I've lived here for ten years. Granny Capy came to the village ten years ago. Today, it's raining, so we stay inside the Spring Inn. There's an old piano in the lobby. Riko sits down and plays a gentle song. Granny Capy claps her paws. Riko says, I've played the piano since I was five. Say it with me. I've played the piano since I was five. Beautiful! Since tells us the starting point. Riko started at five, and she still plays today. Haru says, I've done karate since I was seven. Kiko loves drawing, and Birimo loves cooking. Granny Capy puts a poster on the lobby wall. Let's read it. \"Rainy Day Show at the Spring Inn! This evening, our guests will share their favorite things. Riko will play the piano. Haru will show some karate moves. Kiko will draw pictures of the springs. Birimo will cook sweet potato soup for everyone. Come to the lobby at six o'clock. Everyone is welcome!\" What will Kiko do? She will draw pictures of the springs. What time does the show start? At six o'clock. Now, phonics. Since I was five. Since is short. Five is strong. Since April. Since kindergarten. Kin-der-gar-ten. Since Monday. Monday is strong. What have you done for a long time? Tell a friend!",
       "conversation": {
         "scene": "A rainy afternoon in the lobby of the Spring Inn",
         "sceneJa": "あめの ひ、いずみの やどの ロビーで すきな ことを はなす",
@@ -5686,7 +5698,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の カピーおばあちゃんと、ずっと つづけて いる ことを はなそう。I've ～ since I was ～. を つかおう",
-          "starterEn": "Oh, what a lovely song! I've grown herbs since I came to this village. What have you done for a long time?",
+          "starterEn": "Let's pretend I'm Granny Capy. Oh, what a lovely song! I've grown herbs since I came to this village. What have you done for a long time?",
           "targetExpressions": [
             "I've played the piano since I was five.",
             "I've done karate since I was seven.",
@@ -5770,9 +5782,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Karate. Punch, kick, and bow. Hi-yah! Karate!",
-            "subtitleJa": "karate。つき、けり、そして おじぎ。ハイヤー！ karate！",
-            "subtitleEn": "Karate. Punch, kick, and bow. Hi-yah! Karate!",
+            "say": "Karate. Punch, kick, and bow to your teacher. Hi-yah! Karate!",
+            "subtitleJa": "karate。つき、けり、そして せんせいに おじぎ。ハイヤー！ karate！",
+            "subtitleEn": "Karate. Punch, kick, and bow to your teacher. Hi-yah! Karate!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -5802,9 +5814,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma says, Riko, that was lovely! What have you done for a long time? Riko says, I've played the piano since I was five.",
-            "subtitleJa": "エマ先生「リコちゃん、すてきだった！ ながい あいだ して いる ことは なに？」 リコちゃん「5さいの ときから ピアノを ひいて いるの。」",
-            "subtitleEn": "Ms. Emma says, Riko, that was lovely! What have you done for a long time? Riko says, I've played the piano since I was five.",
+            "say": "I say, Riko, that was lovely! What have you done for a long time? Riko says, I've played the piano since I was five.",
+            "subtitleJa": "わたし「リコちゃん、すてきだった！ ながい あいだ して いる ことは なに？」 リコちゃん「5さいの ときから ピアノを ひいて いるの。」",
+            "subtitleEn": "I say, Riko, that was lovely! What have you done for a long time? Riko says, I've played the piano since I was five.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -5850,9 +5862,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Since is short. Sins. Then say the start strongly. Since I was FIVE. Since APRIL.",
+            "say": "Sound time! Since is short. It rhymes with prince. Then say the start strongly. Since I was FIVE. Since APRIL.",
             "subtitleJa": "おとの じかん！ since は みじかく「スィンス」。そして はじまりの ときを つよく いおう。since I was FIVE。since APRIL。",
-            "subtitleEn": "Sound time! Since is short. Sins. Then say the start strongly. Since I was FIVE. Since APRIL.",
+            "subtitleEn": "Sound time! Since is short. It rhymes with prince. Then say the start strongly. Since I was FIVE. Since APRIL.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -6056,6 +6068,7 @@
     {
       "lessonNo": 793,
       "world": 27,
+      "reviewed": "run9",
       "title": "How Long Have You Known Her?",
       "titleJa": "いつから しってるの？",
       "school": {
@@ -6187,7 +6200,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の トトと、ともだちの はなしを しよう。How long have you known ～? と きいたり、since や for で こたえたり しよう",
-          "starterEn": "Hi! I'm Toto. You two look like good friends. How long have you known your best friend?",
+          "starterEn": "Hi! Let's pretend I'm Toto. You two look like good friends. How long have you known your best friend?",
           "targetExpressions": [
             "How long have you known Riko?",
             "I've known her since kindergarten.",
@@ -6558,6 +6571,7 @@
     {
       "lessonNo": 794,
       "world": 27,
+      "reviewed": "run9",
       "title": "I've Been Here Since Monday",
       "titleJa": "げつようびから ここに いるよ",
       "school": {
@@ -6651,7 +6665,7 @@
           "emoji": "🗓️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, How long have you known Riko? Today is Friday. We look at the big calendar in the lobby of the Spring Inn. Ms. Emma points to Monday and says, We've been here since Monday. Say it with me. We've been here since Monday. Very good! We came on Monday, and we are still here today. Kiko counts on her fingers. Monday, Tuesday, Wednesday, Thursday, Friday. We've stayed at the Spring Inn for five days! And Haru has felt much better since Wednesday. Granny Capy gives us the guest book. Kiko writes a message in it. Let's read Kiko's message. \"Dear Granny Capy, we've been here since Monday. On our first day, we put our hands in the warm springs. Then Haru got a fever, and Dr. Fern helped him. Now he's full of energy again! Every morning, we exercise with Toto in the square. Thank you for the yummy food and the cozy beds. From Kiko\" Who helped Haru? Dr. Fern did. Where do they exercise every morning? In the square. Now, phonics. For a week. A week is strong. Since yesterday. Since is short. For five minutes. Since lunch. Lunch is strong. Five days, and lots of happy memories. Let's make more!",
+      "teacherScript": "Hello, everyone! Last time, we said, How long have you known Riko? Today is Friday. We look at the big calendar in the lobby of the Spring Inn. I point to Monday and say, We've been here since Monday. Say it with me. We've been here since Monday. Very good! We came on Monday, and we are still here today. Kiko counts on her fingers. Monday, Tuesday, Wednesday, Thursday, Friday. We've stayed at the Spring Inn for five days! And Haru has felt much better since Wednesday. Granny Capy gives us the guest book. Kiko writes a message in it. Let's read Kiko's message. \"Dear Granny Capy, we've been here since Monday. On our first day, we put our hands in the warm springs. Then Haru got a fever, and Dr. Fern helped him. Now he's full of energy again! Every morning, we exercise with Toto in the square. Thank you for the yummy food and the cozy beds. From Kiko\" Who helped Haru? Dr. Fern did. Where do they exercise every morning? In the square. Now, phonics. For a week. A week is strong. Since yesterday. Since is short. For five minutes. Since lunch. Lunch is strong. Five days, and lots of happy memories. Let's make more!",
       "conversation": {
         "scene": "Looking back on the stay with the calendar at the Spring Inn",
         "sceneJa": "いずみの やどで カレンダーを みて、これまでの たびを ふりかえる",
@@ -6689,7 +6703,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の カピーおばあちゃんに、いずみの里での 1しゅうかんを はなそう。since Monday や for five days を つかおう",
-          "starterEn": "Hello, dear! You've been very busy this week. How long have you stayed at the Spring Inn?",
+          "starterEn": "Let's pretend I'm Granny Capy. Hello, dear! You've been very busy this week. How long have you stayed at the Spring Inn?",
           "targetExpressions": [
             "We've been here since Monday.",
             "We've stayed at the Spring Inn for five days.",
@@ -6710,9 +6724,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, everyone! It's Friday. Look at the big calendar in the lobby. So many fun days at the Spring Inn! Let's look back.",
-            "subtitleJa": "おはよう、みんな！ きょうは きんようび。ロビーの おおきな カレンダーを みて。いずみの やどで たのしい ひが たくさん あったね！ ふりかえって みよう。",
-            "subtitleEn": "Good morning, everyone! It's Friday. Look at the big calendar in the lobby. So many fun days at the Spring Inn! Let's look back.",
+            "say": "Hi, everyone! It's Friday. Look at the big calendar in the lobby. So many fun days at the Spring Inn! Let's look back.",
+            "subtitleJa": "やあ、みんな！ きょうは きんようび。ロビーの おおきな カレンダーを みて。いずみの やどで たのしい ひが たくさん あったね！ ふりかえって みよう。",
+            "subtitleEn": "Hi, everyone! It's Friday. Look at the big calendar in the lobby. So many fun days at the Spring Inn! Let's look back.",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -6805,9 +6819,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma points. Look at the calendar. We've been here since Monday. Kiko says, We've stayed at the Spring Inn for five days. Time goes so fast!",
-            "subtitleJa": "エマ先生が ゆびさす。「カレンダーを みて。げつようびから ここに いるのね。」 キコちゃん「いずみの やどに 5かかん とまって いるね。じかんが たつのは はやいなあ！」",
-            "subtitleEn": "Ms. Emma points. Look at the calendar. We've been here since Monday. Kiko says, We've stayed at the Spring Inn for five days. Time goes so fast!",
+            "say": "I point and say, Look at the calendar. We've been here since Monday. Kiko says, We've stayed at the Spring Inn for five days. Time goes so fast!",
+            "subtitleJa": "わたしが ゆびさして「カレンダーを みて。げつようびから ここに いるのね。」 キコちゃん「いずみの やどに 5かかん とまって いるね。じかんが たつのは はやいなあ！」",
+            "subtitleEn": "I point and say, Look at the calendar. We've been here since Monday. Kiko says, We've stayed at the Spring Inn for five days. Time goes so fast!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -7008,9 +7022,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "Quiz time! When did Haru start to feel better? A, Since Monday. B, Since Wednesday. Think!",
-            "subtitleJa": "クイズ！ ハルくんは いつから げんきに なった？ A、げつようびから。B、すいようびから。かんがえて！",
-            "subtitleEn": "Quiz time! When did Haru start to feel better? A, Since Monday. B, Since Wednesday. Think!",
+            "say": "Quiz time! When did Haru start to feel better? A, On Monday. B, On Wednesday. Think!",
+            "subtitleJa": "クイズ！ ハルくんは いつから げんきに なった？ A、げつようび。B、すいようび。かんがえて！",
+            "subtitleEn": "Quiz time! When did Haru start to feel better? A, On Monday. B, On Wednesday. Think!",
             "gesture": "think",
             "slide": {
               "title": "Quiz",
@@ -7059,6 +7073,7 @@
     {
       "lessonNo": 795,
       "world": 27,
+      "reviewed": "run9",
       "title": "My Long-Time Hobby",
       "titleJa": "ずっと つづけて いる しゅみ",
       "school": {
@@ -7156,7 +7171,7 @@
           "emoji": "🌠"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, We've been here since Monday. Tonight is Hobby Night at the Spring Inn. Granny Capy, Dr. Fern and Toto sit in the front row. Each of us talks about a long-time hobby. Haru goes first. He stands up and bows. He says, I've practiced karate for three years. Say it with me. I've practiced karate for three years. Excellent! Toto asks, Is it hard? Haru smiles and says, It's hard, but I love it. Here is Haru's speech card. Let's read it together. \"My Long-Time Hobby. My hobby is karate. I've practiced karate for three years. I go to my dojo every Tuesday and Saturday. It's hard, but I love it. My karate teacher always says, Be strong and be kind. Last year, I got a yellow belt. My dream is a black belt!\" When does Haru go to his dojo? Every Tuesday and Saturday. What is his dream? A black belt. Now, phonics. For ten years. For is soft, ten years is strong. Since I was five. Since is short. Thumb. We write b, but we don't say it. Thumb. Echo. The c h says k. Echo, echo. Now it's your turn. What is your long-time hobby? Tell us with a big smile!",
+      "teacherScript": "Hello, everyone! Last time, we said, We've been here since Monday. Tonight is Hobby Night at the Spring Inn. Granny Capy, Dr. Fern and Toto sit in the front row. Each of us talks about a long-time hobby. Haru goes first. He stands up and bows. He says, I've practiced karate for three years. Say it with me. I've practiced karate for three years. Excellent! Toto asks, Is it hard? Haru smiles and says, It's hard, but I love it. Here is Haru's speech card. Let's read it together. \"My Long-Time Hobby. My hobby is karate. I've practiced karate for three years. I go to my dojo every Tuesday and Saturday. It's hard, but I love it. My karate teacher always says, Be strong and be kind. Last year, I got a yellow belt. My dream is a black belt!\" When does Haru go to his dojo? Every Tuesday and Saturday. What is his dream? A black belt. Now, phonics. For ten years. For is soft, ten years is strong. Since I was five. Since is short. Thumb. We write b, but we don't say it. Thumb. Echo. The C H makes a k sound. Echo, echo. Now it's your turn. What is your long-time hobby? Tell us with a big smile!",
       "conversation": {
         "scene": "Hobby Night at the Spring Inn",
         "sceneJa": "いずみの やどの しゅみの よるで はっぴょう する",
@@ -7194,7 +7209,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の トトに、ずっと つづけて いる しゅみを はっぴょう しよう。I've practiced ～ for ～. と It's hard, but I love it. を つかおう",
-          "starterEn": "Hi, it's Toto! I've practiced morning exercises for two years. What's your hobby? How long have you practiced?",
+          "starterEn": "Hi! Let's pretend I'm Toto. I've practiced morning exercises for two years. What's your hobby? How long have you practiced?",
           "targetExpressions": [
             "I've practiced karate for three years.",
             "It's hard, but I love it.",
@@ -7310,9 +7325,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma says, Haru, please start. Haru bows. My hobby is karate. I've practiced karate for three years. Birimo says, I'm playing Toto! Wow! Is karate hard?",
-            "subtitleJa": "エマ先生「ハルくん、はじめて ください。」 ハルくんが おじぎ。「ぼくの しゅみは からてです。からてを 3ねん れんしゅう して います。」 ビリモ「ぼくは トトの やく！ わあ！ からては むずかしい？」",
-            "subtitleEn": "Ms. Emma says, Haru, please start. Haru bows. My hobby is karate. I've practiced karate for three years. Birimo says, I'm playing Toto! Wow! Is karate hard?",
+            "say": "I say, Haru, please start. Haru bows. My hobby is karate. I've practiced karate for three years. Birimo says, I'm playing Toto! Wow! Is karate hard?",
+            "subtitleJa": "わたし「ハルくん、はじめて ください。」 ハルくんが おじぎ。「ぼくの しゅみは からてです。からてを 3ねん れんしゅう して います。」 ビリモ「ぼくは トトの やく！ わあ！ からては むずかしい？」",
+            "subtitleEn": "I say, Haru, please start. Haru bows. My hobby is karate. I've practiced karate for three years. Birimo says, I'm playing Toto! Wow! Is karate hard?",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -7378,9 +7393,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Thumb. The b is sleeping. Shh! Echo. The c h says k. Your turn! Thumb. Echo.",
+            "say": "Thumb. The b is sleeping. Shh! Echo. The C H makes a k sound. Your turn! Thumb. Echo.",
             "subtitleJa": "thumb。b は ねて いるよ。しーっ！ echo。c h は k の おと。あなたの ばん！ thumb。echo。",
-            "subtitleEn": "Thumb. The b is sleeping. Shh! Echo. The c h says k. Your turn! Thumb. Echo.",
+            "subtitleEn": "Thumb. The b is sleeping. Shh! Echo. The C H makes a k sound. Your turn! Thumb. Echo.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -7568,6 +7583,7 @@
     {
       "lessonNo": 796,
       "world": 27,
+      "reviewed": "run9",
       "title": "You Should Drink Water",
       "titleJa": "おみずを のんだ ほうが いいよ",
       "school": {
@@ -7659,7 +7675,7 @@
           "emoji": "🥵"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I've practiced karate for three years. Today, we walk up the mountain path above the village. The sun is hot, and there are no clouds. Kiko stops and says, I'm so thirsty. Ms. Emma gives her a water bottle and says, You should drink more water. Say it with me. You should drink more water. Great! We use should for good advice. Birimo's face is red. Haru says, It's hot today. You should wear a hat. At the side of the path, there's a wooden sign. Let's read it together. \"Sunny Hill Path. Walking time: about one hour. Before you go, wear a hat and comfortable shoes. Bring a water bottle. The spring water at the top is drinkable, so you can fill your bottle there. Feeling tired? Take a short rest under the big tree. Please take your trash home.\" What should you wear? A hat and comfortable shoes. Where can you fill your bottle? At the top. Now, phonics. Comfortable. Say it short, comf, ta, ble. Drinkable. You can drink it. Washable. You can wash it. Valuable. Value, then able. Very important. Water is valuable on a hot day. Keep drinking, everyone!",
+      "teacherScript": "Hello, everyone! Last time, we said, I've practiced karate for three years. Today, we walk up the mountain path above the village. The sun is hot, and there are no clouds. Kiko stops and says, I'm so thirsty. I give her a water bottle and say, You should drink more water. Say it with me. You should drink more water. Great! We use should for good advice. Birimo's face is red. Haru says, It's hot today. You should wear a hat. At the side of the path, there's a wooden sign. Let's read it together. \"Sunny Hill Path. Walking time: about one hour. Before you go, wear a hat and comfortable shoes. Bring a water bottle. The spring water at the top is drinkable, so you can fill your bottle there. Feeling tired? Take a short rest under the big tree. Please take your trash home.\" What should you wear? A hat and comfortable shoes. Where can you fill your bottle? At the top. Now, phonics. Comfortable. Say it short, Comf-ta-ble. Drinkable. You can drink it. Washable. You can wash it. Valuable. Value, drop the e, able. Very important. Water is valuable on a hot day. Keep drinking, everyone!",
       "conversation": {
         "scene": "A hot walk on the mountain path above the village",
         "sceneJa": "さとの うえの やまみちを あつい なか あるく",
@@ -7697,7 +7713,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の エマ先生が あつくて つかれて いるよ。You should ～. で アドバイス しよう",
-          "starterEn": "Phew! This mountain path is long, and the sun is very hot. I feel tired and thirsty. What should I do?",
+          "starterEn": "Let's pretend I'm Ms. Emma. Phew! This mountain path is long, and the sun is very hot. I feel tired and thirsty. What should I do?",
           "targetExpressions": [
             "You should drink more water.",
             "It's hot today. You should wear a hat.",
@@ -7813,9 +7829,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko stops. Phew! The sun is so strong. I'm really thirsty. Ms. Emma says, You should drink more water, Kiko. Small sips are best.",
-            "subtitleJa": "キコちゃんが たちどまる。「ふう！ ひざしが つよいね。とっても のどが かわいた。」 エマ先生「キコちゃん、もっと みずを のんだ ほうが いいわ。すこしずつ のむのが いちばんよ。」",
-            "subtitleEn": "Kiko stops. Phew! The sun is so strong. I'm really thirsty. Ms. Emma says, You should drink more water, Kiko. Small sips are best.",
+            "say": "Kiko stops. Phew! The sun is so strong. I'm really thirsty. I say, You should drink more water, Kiko. Small sips are best.",
+            "subtitleJa": "キコちゃんが たちどまる。「ふう！ ひざしが つよいね。とっても のどが かわいた。」 わたし「キコちゃん、もっと みずを のんだ ほうが いいわ。すこしずつ のむのが いちばんよ。」",
+            "subtitleEn": "Kiko stops. Phew! The sun is so strong. I'm really thirsty. I say, You should drink more water, Kiko. Small sips are best.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -8067,6 +8083,7 @@
     {
       "lessonNo": 797,
       "world": 27,
+      "reviewed": "run9",
       "title": "You Shouldn't Skip Breakfast",
       "titleJa": "あさごはんを ぬいちゃ だめ",
       "school": {
@@ -8158,7 +8175,7 @@
           "emoji": "⚡"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, You should drink more water. This morning, we meet Toto in the square for morning exercises. But Haru can't jump, and he can't keep up. He says, I'm hungry and sleepy. Riko asks, Did you eat breakfast? No, he didn't. He got up late, so he skipped it. Kiko says, You shouldn't skip breakfast. Say it with me. You shouldn't skip breakfast. Good! Should not, shouldn't. It's gentle advice. Haru read comics until midnight. So Ms. Emma says, You shouldn't stay up late. Dr. Fern has a poster on the clinic door. Let's read it together. \"Dr. Fern's Morning Tips. Breakfast gives your body and brain energy for the day. Without breakfast, you can feel hungry, sleepy and grumpy. Try rice, eggs, fruit or a glass of milk. No time? Eat a banana and a piece of toast. And go to bed early, so you can wake up on time.\" What can you eat with no time? A banana and a piece of toast. How can you wake up on time? Go to bed early. Now, phonics. Enjoyable. Enjoy, able. Readable. Easy to read. Believable. Believe, drop the e, able. Reliable. Rely, change y to i, able. Breakfast first, then fun!",
+      "teacherScript": "Hello, everyone! Last time, we said, You should drink more water. This morning, we meet Toto in the square for morning exercises. But Haru can't jump, and he can't keep up. He says, I'm hungry and sleepy. Riko asks, Did you eat breakfast? No, he didn't. He got up late, so he skipped it. Kiko says, You shouldn't skip breakfast. Say it with me. You shouldn't skip breakfast. Good! Should not, shouldn't. It's gentle advice. Haru read comics until midnight. So I say, You shouldn't stay up late. Dr. Fern has a poster on the clinic door. Let's read it together. \"Dr. Fern's Morning Tips. Breakfast gives your body and brain energy for the day. Without breakfast, you can feel hungry, sleepy and grumpy. Try rice, eggs, fruit or a glass of milk. No time? Eat a banana and a piece of toast. And go to bed early, so you can wake up on time.\" What can you eat with no time? A banana and a piece of toast. How can you wake up on time? Go to bed early. Now, phonics. Enjoyable. Enjoy, able. Readable. Easy to read. Believable. Believe, drop the e, able. Reliable. Rely, change y to i, able. Breakfast first, then fun!",
       "conversation": {
         "scene": "Haru feels tired during morning exercises because he skipped breakfast",
         "sceneJa": "あさの たいそうで、あさごはんを ぬいた ハルが ぐったり して いる",
@@ -8190,7 +8207,7 @@
           },
           {
             "speaker": "Haru",
-            "en": "I read my comic book until midnight. Oops.",
+            "en": "I was reading my comic book until midnight. Oops.",
             "ja": "よる 12じまで まんがを よんで いたんだ。しまった。"
           },
           {
@@ -8201,7 +8218,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の トトが あさごはんを ぬいて ねむそうだよ。You shouldn't ～. / You should ～. で やさしく アドバイス しよう",
-          "starterEn": "Morning! I'm Toto. I'm hungry and sleepy today. I didn't eat breakfast, and I went to bed very late. What should I do?",
+          "starterEn": "Hi! Let's pretend I'm Toto. I'm hungry and sleepy today. I didn't eat breakfast, and I went to bed very late. What should I do?",
           "targetExpressions": [
             "You shouldn't skip breakfast.",
             "I'm hungry and sleepy. ― Did you eat breakfast?",
@@ -8222,9 +8239,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, everyone! Stretch up high! It's morning exercises with Toto in the square. Jump, jump! Oh? Haru can't keep up. What's wrong, Haru?",
-            "subtitleJa": "おはよう、みんな！ うえに のびて！ ひろばで トトと あさの たいそうだよ。ジャンプ、ジャンプ！ あれ？ ハルくんが ついて こられない。どうしたの、ハルくん？",
-            "subtitleEn": "Good morning, everyone! Stretch up high! It's morning exercises with Toto in the square. Jump, jump! Oh? Haru can't keep up. What's wrong, Haru?",
+            "say": "Hi, everyone! Stretch up high! It's morning exercises with Toto in the square. Jump, jump! Oh? Haru can't keep up. What's wrong, Haru?",
+            "subtitleJa": "やあ、みんな！ うえに のびて！ ひろばで トトと あさの たいそうだよ。ジャンプ、ジャンプ！ あれ？ ハルくんが ついて こられない。どうしたの、ハルくん？",
+            "subtitleEn": "Hi, everyone! Stretch up high! It's morning exercises with Toto in the square. Jump, jump! Oh? Haru can't keep up. What's wrong, Haru?",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -8334,15 +8351,15 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko says, You shouldn't skip breakfast. Your brain needs energy, too. Haru says, I read my comic book until midnight. Oops. Ms. Emma says, You shouldn't stay up late, Haru. Here, have a rice ball.",
-            "subtitleJa": "キコちゃん「あさごはんを ぬいちゃ だめだよ。のうみそにも エネルギーが いるんだよ。」 ハルくん「よなか まで まんがを よんで いたんだ。しまった。」 エマ先生「ハルくん、よふかし しない ほうが いいわ。はい、おにぎり どうぞ。」",
-            "subtitleEn": "Kiko says, You shouldn't skip breakfast. Your brain needs energy, too. Haru says, I read my comic book until midnight. Oops. Ms. Emma says, You shouldn't stay up late, Haru. Here, have a rice ball.",
+            "say": "Kiko says, You shouldn't skip breakfast. Your brain needs energy, too. Haru says, I was reading my comic book until midnight. Oops. I say, You shouldn't stay up late, Haru. Here, have a rice ball.",
+            "subtitleJa": "キコちゃん「あさごはんを ぬいちゃ だめだよ。のうみそにも エネルギーが いるんだよ。」 ハルくん「よなか まで まんがを よんで いたんだ。しまった。」 わたし「ハルくん、よふかし しない ほうが いいわ。はい、おにぎり どうぞ。」",
+            "subtitleEn": "Kiko says, You shouldn't skip breakfast. Your brain needs energy, too. Haru says, I was reading my comic book until midnight. Oops. I say, You shouldn't stay up late, Haru. Here, have a rice ball.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "You shouldn't skip breakfast. Your brain needs energy, too.",
-                "I read my comic book until midnight. Oops.",
+                "I was reading my comic book until midnight. Oops.",
                 "You shouldn't stay up late, Haru. Here, have a rice ball."
               ],
               "emoji": "🍙"
@@ -8537,9 +8554,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! You shouldn't stay up late. Sleep gives you energy. Brilliant!",
+            "say": "It's B! You shouldn't stay up late. Sleep gives you energy. Great job!",
             "subtitleJa": "こたえは B！「よふかし しない ほうが いいよ。」 ねむると エネルギーが たまるよ。すばらしい！",
-            "subtitleEn": "It's B! You shouldn't stay up late. Sleep gives you energy. Brilliant!",
+            "subtitleEn": "It's B! You shouldn't stay up late. Sleep gives you energy. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -8572,6 +8589,7 @@
     {
       "lessonNo": 798,
       "world": 27,
+      "reviewed": "run9",
       "title": "Why Don't You Take a Break?",
       "titleJa": "ひと やすみ したら？",
       "school": {
@@ -8663,7 +8681,7 @@
           "emoji": "🌬️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, You shouldn't skip breakfast. Today, Haru eats a big breakfast. He feels great! But where is Riko? She's in the study room at the Spring Inn. She wants to learn every health word for the festival quiz. Kiko looks at the clock. Riko, you've studied for three hours! Riko rubs her eyes. Haru says, Why don't you take a break? Say it with me. Why don't you take a break? Nice and kind! This is a soft way to give advice. Then Birimo says, Why don't we go for a walk? Riko smiles. That's a good idea. On the study room door, there's a note from Granny Capy. Let's read it together. \"Study Room Rules. One, open the window for fresh air. Two, drink some water. Three, after thirty minutes, stand up and stretch. Four, after one hour, take a ten-minute break and go outside. Your brain needs rest, too. Five, get a good sleep every night. Six, be kind to yourself.\" What should you do after one hour? Take a ten-minute break. What does your brain need? Rest. Now, phonics. Foldable. You can fold it. Bendable. You can bend it. Breakable. Be careful! Adorable. Adore, drop the e, able. So cute! Now, close your books. Let's go outside!",
+      "teacherScript": "Hello, everyone! Last time, we said, You shouldn't skip breakfast. Today, Haru eats a big breakfast. He feels great! But where is Riko? She's in the study room at the Spring Inn. She wants to learn every health word for the festival quiz. Kiko looks at the clock and says, Riko, you've studied for three hours! Riko rubs her eyes. Haru says, Why don't you take a break? Say it with me. Why don't you take a break? Nice and kind! This is a soft way to give advice. Then Birimo says, Why don't we go for a walk? Riko smiles. That's a good idea. On the study room door, there's a note from Granny Capy. Let's read it together. \"Study Room Rules. One, open the window for fresh air. Two, drink some water. Three, after thirty minutes, stand up and stretch. Four, after one hour, take a ten-minute break and go outside. Your brain needs rest, too. Five, sleep well every night. Six, be kind to yourself.\" What should you do after one hour? Take a ten-minute break. What does your brain need? Rest. Now, phonics. Foldable. You can fold it. Bendable. You can bend it. Breakable. Be careful! Adorable. Adore, drop the e, able. So cute! Now, close your books. Let's go outside!",
       "conversation": {
         "scene": "Riko studies too long in the study room at the Spring Inn",
         "sceneJa": "いずみの やどの べんきょうべやで、リコが ずっと べんきょう して いる",
@@ -8706,7 +8724,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の カピーおばあちゃんが はたらきすぎて つかれて いるよ。Why don't you ～? / Why don't we ～? で ていあん しよう",
-          "starterEn": "Oh dear, I've cleaned rooms all morning. My back is a little tired, but there's so much work.",
+          "starterEn": "Let's pretend I'm Granny Capy. Oh dear, I've cleaned rooms all morning. My back is a little tired, but there's so much work.",
           "targetExpressions": [
             "Why don't you take a break?",
             "You've studied for three hours!",
@@ -9077,6 +9095,7 @@
     {
       "lessonNo": 799,
       "world": 27,
+      "reviewed": "run9",
       "title": "Advice Column",
       "titleJa": "おなやみ そうだん コーナー",
       "school": {
@@ -9168,14 +9187,14 @@
           "emoji": "🐿️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Why don't you take a break? Riko took a break, and now she feels fresh. Today, there's big news. The Spring News has a new advice corner. Its name is Ask Birimo! Birimo is so excited. The first letter is here. It begins, Dear Birimo, I can't sleep well. What should I do? Say it with me. Dear Birimo, I can't sleep well. What should I do? Well done! What should I do? asks for advice. Let's read the whole letter together. \"Dear Birimo, I can't sleep well. What should I do? I go to bed at nine, but I'm still awake at eleven. I play games on my tablet in bed. In the morning, I'm always sleepy at school. My friends say I yawn all day. Please help me! From Sleepy Squirrel\" When does Sleepy Squirrel go to bed? At nine. What does Sleepy Squirrel do in bed? Plays games on a tablet. So, what's your advice? You should read a book before bed. Don't look at screens before bed. Now, phonics. Fixable. You can fix it. This problem is fixable! Changeable. Keep the e. Noticeable. Keep the e. Unforgettable. Double t. You can't forget it. Sleep well tonight, everyone!",
+      "teacherScript": "Hello, everyone! Last time, we said, Why don't you take a break? Riko took a break, and now she feels fresh. Today, there's big news. The Spring News has a new advice column. Its name is Ask Birimo! Birimo is so excited. The first letter is here. It begins, Dear Birimo, I can't sleep well. What should I do? Say it with me. Dear Birimo, I can't sleep well. What should I do? Well done! To ask for advice, say, What should I do? Let's read the whole letter together. \"Dear Birimo, I can't sleep well. What should I do? I go to bed at nine, but I'm still awake at eleven. I play games on my tablet in bed. In the morning, I'm always sleepy at school. My friends say I yawn all day. Please help me! From Sleepy Squirrel\" When does Sleepy Squirrel go to bed? At nine. What does Sleepy Squirrel do in bed? Plays games on a tablet. So, what's your advice? You should read a book before bed. Don't look at screens before bed. Now, phonics. Fixable. You can fix it. This problem is fixable! Changeable. Keep the e. Noticeable. Keep the e. Unforgettable. Double t. You can't forget it. Sleep well, everyone!",
       "conversation": {
-        "scene": "The first letter arrives for the Ask Birimo! corner of the Spring News",
+        "scene": "The first letter arrives for the Ask Birimo! column of the Spring News",
         "sceneJa": "いずみ しんぶんの「ビリモに きいて！」コーナーに はじめての てがみが とどく",
         "lines": [
           {
             "speaker": "Ms. Emma",
-            "en": "Birimo, the Spring News has a new corner. It's called Ask Birimo!",
+            "en": "Birimo, the Spring News has a new column. It's called Ask Birimo!",
             "ja": "ビリモ、いずみ しんぶんに あたらしい コーナーが できたの。「ビリモに きいて！」よ。"
           },
           {
@@ -9211,7 +9230,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ねむい リスさんの なやみを きいて、You should ～. / Don't ～. で アドバイス しよう",
-          "starterEn": "Hello, Ask Birimo team! I'm Sleepy Squirrel. Dear Birimo, I can't sleep well. What should I do?",
+          "starterEn": "Hello, Ask Birimo team! Let's pretend I'm Sleepy Squirrel. Dear Birimo, I can't sleep well. What should I do?",
           "targetExpressions": [
             "Dear Birimo, I can't sleep well. What should I do?",
             "You should read a book before bed.",
@@ -9232,9 +9251,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Hi there, everyone! Riko took a break, and now she feels fresh. And big news! The Spring News has a new corner. It's called Ask Birimo!",
+            "say": "Hi there, everyone! Riko took a break, and now she feels fresh. And big news! The Spring News has a new column. It's called Ask Birimo!",
             "subtitleJa": "やあ、みんな！ リコちゃんは ひとやすみ して、すっきり したよ。そして ビッグニュース！ いずみ しんぶんに あたらしい コーナーが できたよ。なまえは「ビリモに きいて！」",
-            "subtitleEn": "Hi there, everyone! Riko took a break, and now she feels fresh. And big news! The Spring News has a new corner. It's called Ask Birimo!",
+            "subtitleEn": "Hi there, everyone! Riko took a break, and now she feels fresh. And big news! The Spring News has a new column. It's called Ask Birimo!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -9582,6 +9601,7 @@
     {
       "lessonNo": 800,
       "world": 27,
+      "reviewed": "run9",
       "title": "Advice Show",
       "titleJa": "アドバイス ショー",
       "school": {
@@ -9654,7 +9674,7 @@
           "listen",
           "headache"
         ],
-        "tipJa": "comfortable の -able は「～できる」。since Monday は はじまりの とき。listen の t は かくけど いわない。headache は head＋ache で ch は /k/。"
+        "tipJa": "comfortable は COMF-ta-ble と みじかく いう。since Monday は はじまりの とき。listen の t は かくけど いわない。headache は head＋ache で ch は /k/。"
       },
       "vocab": [
         {
@@ -9722,7 +9742,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の トトの そうだんを きいて、I think you should ～ because ～. で りゆうも つけて アドバイス しよう",
-          "starterEn": "Happy 800 lessons! I'm Toto. I always feel sleepy in class. What should I do?",
+          "starterEn": "Happy 800 lessons! Let's pretend I'm Toto. I always feel sleepy in class. What should I do?",
           "targetExpressions": [
             "I think you should go to bed early because sleep is important.",
             "What should I do?",
@@ -9886,9 +9906,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Big sound review! Comfortable. Able means can be. Since Monday. Since tells the start.",
-            "subtitleJa": "おとの だい ふくしゅう！ comfortable。able は「～できる」。since Monday。since は はじまりを いうよ。",
-            "subtitleEn": "Big sound review! Comfortable. Able means can be. Since Monday. Since tells the start.",
+            "say": "Big sound review! Comfortable. Say it short, COMF-ta-ble. Since Monday. Since tells the start.",
+            "subtitleJa": "おとの だい ふくしゅう！ comfortable。みじかく COMF-ta-ble と いうよ。since Monday。since は はじまりを いうよ。",
+            "subtitleEn": "Big sound review! Comfortable. Say it short, COMF-ta-ble. Since Monday. Since tells the start.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -9905,9 +9925,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Listen. The t is sleeping. Shh! Headache. Head plus ache. The c h says k. Your turn! Comfortable. Since Monday. Listen. Headache.",
+            "say": "Listen. The t is sleeping. Shh! Headache. Head plus ache. The C H makes a k sound. Your turn! Comfortable. Since Monday. Listen. Headache.",
             "subtitleJa": "listen。t は ねて いるよ。しーっ！ headache。head と ache。c h は k の おと。あなたの ばん！ comfortable。since Monday。listen。headache。",
-            "subtitleEn": "Listen. The t is sleeping. Shh! Headache. Head plus ache. The c h says k. Your turn! Comfortable. Since Monday. Listen. Headache.",
+            "subtitleEn": "Listen. The t is sleeping. Shh! Headache. Head plus ache. The C H makes a k sound. Your turn! Comfortable. Since Monday. Listen. Headache.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -10094,6 +10114,7 @@
     {
       "lessonNo": 801,
       "world": 27,
+      "reviewed": "run9",
       "title": "When I'm Worried",
       "titleJa": "しんぱいな とき",
       "school": {
@@ -10229,7 +10250,7 @@
         ],
         "aiTask": {
           "goalJa": "カピーおばあちゃん（AI）と しんぱいな ときに する ことを はなそう。When I'm worried, I ～. で こたえて、AI にも きいて みよう",
-          "starterEn": "Hello, dear. I'm Granny Capy. You look a little worried. What do you do when you're worried?",
+          "starterEn": "Hello, dear. Let's pretend I'm Granny Capy. You look a little worried. What do you do when you're worried?",
           "targetExpressions": [
             "When I'm worried, I talk to my mom.",
             "What do you do when you're worried?",
@@ -10601,6 +10622,7 @@
     {
       "lessonNo": 802,
       "world": 27,
+      "reviewed": "run9",
       "title": "Deep Breaths",
       "titleJa": "しんこきゅう",
       "school": {
@@ -10698,7 +10720,7 @@
           "emoji": "🐢"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, When I'm worried, I talk to my mom. Today, we are sitting by the Heart Spring. The water is warm, and the steam is soft and white. Kiko practiced her speech this morning, and her heart was beating fast. So Ms. Emma teaches everyone a calm-down trick. Take a deep breath. Count to five. Say it with me. Take a deep breath. Count to five. Very good! Now breathe（いきを する）with me. Breathe in through your nose. One, two, three, four, five. Breathe out slowly. Kiko smiles and says, I feel calm now. There is a little wooden sign by the spring. Let's read it. \"Heart Spring Calm Corner. Sit down on the warm stones and close your eyes. Breathe in through your nose and count to five. Then breathe out slowly through your mouth. Do this three times. Listen to the sound of the water. Feel the warm steam on your face. Now you are ready for a calm and happy day.\" How many times do you do it? Three times. How do you breathe in? Through your nose. Now, phonics. Piece. A piece of cake. Peace. Quiet and calm. Nose. Touch your nose. Knows. Birimo knows the answer. The k is silent! Peace and quiet, everyone.",
+      "teacherScript": "Hello, everyone! Last time, we said, When I'm worried, I talk to my mom. Today, we are sitting by the Heart Spring. The water is warm, and the steam is soft and white. Kiko practiced her speech this morning, and her heart was beating fast. So I teach everyone a calm-down trick. Take a deep breath. Count to five. Say it with me. Take a deep breath. Count to five. Very good! Now breathe（いきを する）with me. Breathe in through your nose. One, two, three, four, five. Breathe out slowly. Kiko smiles and says, I feel calm now. There is a little wooden sign by the spring. Let's read it. \"Heart Spring Calm Corner. Sit down on the warm stones and close your eyes. Breathe in through your nose and count to five. Then breathe out slowly through your mouth. Do this three times. Listen to the sound of the water. Feel the warm steam on your face. Now you are ready for a calm and happy day.\" How many times do you do it? Three times. How do you breathe in? Through your nose. Now, phonics. Piece. A piece of cake. Peace. Quiet and calm. Nose. Touch your nose. Knows. Birimo knows the answer. The k is silent! Peace and quiet, everyone.",
       "conversation": {
         "scene": "Calming down by the Heart Spring",
         "sceneJa": "ハートの いずみの そばで こころを おちつける",
@@ -10736,7 +10758,7 @@
         ],
         "aiTask": {
           "goalJa": "エマ先生（AI）と いっしょに しんこきゅうを しよう。Take a deep breath. / Breathe in through your nose. / Breathe out slowly. を つかって、こんどは あなたが AI に おしえて みよう",
-          "starterEn": "Hi! It's Ms. Emma. Let's relax by the spring. Can you tell me how to take a deep breath?",
+          "starterEn": "Hi! Let's pretend I'm Ms. Emma. We can relax by the spring. Can you tell me how to take a deep breath?",
           "targetExpressions": [
             "Take a deep breath. Count to five.",
             "Breathe in through your nose.",
@@ -10837,9 +10859,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Slowly. Not fast. Like a turtle. I. Walk. Slowly. Slowly!",
-            "subtitleJa": "slowly。はやく ない。カメみたいに。わたしは。ゆっくり。あるく。slowly！",
-            "subtitleEn": "Slowly. Not fast. Like a turtle. I. Walk. Slowly. Slowly!",
+            "say": "Slowly. Not fast. Like a turtle. I... walk... slowly. Slowly!",
+            "subtitleJa": "slowly。はやく ない。カメみたいに。わたしは… ゆっくり… あるく。slowly！",
+            "subtitleEn": "Slowly. Not fast. Like a turtle. I... walk... slowly. Slowly!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -10853,9 +10875,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Listen. Kiko says, My heart is beating so fast. I'm nervous about my speech. Ms. Emma says, Take a deep breath. Count to five.",
-            "subtitleJa": "きいてね。キコちゃん「しんぞうが すごく どきどき してる。スピーチが きんちょうするの。」 エマ先生「ふかく いきを すって。5まで かぞえて。」",
-            "subtitleEn": "Listen. Kiko says, My heart is beating so fast. I'm nervous about my speech. Ms. Emma says, Take a deep breath. Count to five.",
+            "say": "Listen. Kiko says, My heart is beating so fast. I'm nervous about my speech. I say, Take a deep breath. Count to five.",
+            "subtitleJa": "きいてね。キコちゃん「しんぞうが すごく どきどき してる。スピーチが きんちょうするの。」 わたし「ふかく いきを すって。5まで かぞえて。」",
+            "subtitleEn": "Listen. Kiko says, My heart is beating so fast. I'm nervous about my speech. I say, Take a deep breath. Count to five.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -11057,9 +11079,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "Quiz time! You touch it on your face. Is it A, nose? Or B, knows, with a sleeping K? Think!",
+            "say": "Quiz time! It's on your face. You can touch it. Is it A, nose? Or B, knows, with a sleeping K? Think!",
             "subtitleJa": "クイズ！ かおに あって さわれる もの。A の nose？ それとも B、k が ねむって いる knows？ かんがえて！",
-            "subtitleEn": "Quiz time! You touch it on your face. Is it A, nose? Or B, knows, with a sleeping K? Think!",
+            "subtitleEn": "Quiz time! It's on your face. You can touch it. Is it A, nose? Or B, knows, with a sleeping K? Think!",
             "gesture": "think",
             "slide": {
               "title": "Quiz",
@@ -11074,9 +11096,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A, nose! Knows means you know something. Brilliant!",
+            "say": "It's A, nose! Knows means you know something. Great job!",
             "subtitleJa": "こたえは A、nose！ knows は なにかを しって いる こと。すばらしい！",
-            "subtitleEn": "It's A, nose! Knows means you know something. Brilliant!",
+            "subtitleEn": "It's A, nose! Knows means you know something. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -11109,6 +11131,7 @@
     {
       "lessonNo": 803,
       "world": 27,
+      "reviewed": "run9",
       "title": "It's OK to Feel Sad",
       "titleJa": "かなしくても いいんだよ",
       "school": {
@@ -11244,7 +11267,7 @@
         ],
         "aiTask": {
           "goalJa": "かなしい トト（AI）の はなしを きいて、It's OK to feel sad sometimes. / You can ～. で やさしく はげまそう",
-          "starterEn": "Hi… I'm Toto. My best friend Mimi moved away. I feel so sad today.",
+          "starterEn": "Let's pretend I'm Toto. My best friend Mimi moved away. I feel so sad today.",
           "targetExpressions": [
             "It's OK to feel sad sometimes.",
             "Toto looks sad. ― His friend moved away.",
@@ -11616,6 +11639,7 @@
     {
       "lessonNo": 804,
       "world": 27,
+      "reviewed": "run9",
       "title": "Kind Words",
       "titleJa": "やさしい ことば",
       "school": {
@@ -11713,7 +11737,7 @@
           "emoji": "❌"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, It's OK to feel sad sometimes. Today, Kiko practices her speech on the village stage. In the middle, she forgets a line. Her face turns red. Kiko says, Oh no! I made a mistake. Birimo shouts, Don't give up. You can do it! Kiko starts again and finishes the speech. Then Ms. Emma says, You did your best. I'm proud of you. Say it with me. You did your best. I'm proud of you. Lovely! Kiko answers, Thank you. That makes me happy. In the village square, there is a new board. Let's read it. \"The Kind Words Wall. Write a kind word on a card and put it here. Anyone can read it. You can say kind words to your friends and to yourself, too. Try it in the mirror every morning. I can do it! Mistakes help me learn. Kind words are like warm water. They warm your heart.\" Where do you put the card? On the wall. Can you say kind words to yourself? Yes, you can. Now, phonics. Right. Turn right. Write. Write a kind card. The w is silent. Pair. A pair of socks. Pear. A sweet, juicy pear. Same sound, different spelling! You all did your best today.",
+      "teacherScript": "Hello, everyone! Last time, we said, It's OK to feel sad sometimes. Today, Kiko practices her speech on the village stage. In the middle, she forgets a line. Her face turns red. Kiko says, Oh no! I made a mistake. Birimo shouts, Don't give up. You can do it! Kiko starts again and finishes the speech. Then I say, You did your best. I'm proud of you. Say it with me. You did your best. I'm proud of you. Wonderful! Kiko answers, Thank you. That makes me happy. In the village square, there is a new board. Let's read it. \"The Kind Words Wall. Write a kind word on a card and put it here. Anyone can read it. You can say kind words to your friends and to yourself, too. Try it in the mirror every morning. I can do it! Mistakes help me learn. Kind words are like warm water. They warm your heart.\" Where do you put the card? On the wall. Can you say kind words to yourself? Yes, you can. Now, phonics. Right. Turn right. Write. Write a kind card. The w is silent. Pair. A pair of socks. Pear. A sweet, juicy pear. Same sound, different spelling! You all did your best today.",
       "conversation": {
         "scene": "Kiko practices her speech on the village stage",
         "sceneJa": "キコが むらの ステージで スピーチの れんしゅうを する",
@@ -11751,7 +11775,7 @@
         ],
         "aiTask": {
           "goalJa": "しっぱいして おちこんで いる トト（AI）に You did your best. / Don't give up. などの やさしい ことばを かけよう",
-          "starterEn": "Hi, it's Toto. I fell down in the race today. I came last. I feel bad.",
+          "starterEn": "Let's pretend I'm Toto. I fell down in the race today. I came last. I feel bad.",
           "targetExpressions": [
             "You did your best. I'm proud of you.",
             "Don't give up. You can do it!",
@@ -11884,9 +11908,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma says, You did your best. I'm proud of you. Kiko smiles. Thank you. That makes me happy. Haru says, Let's write kind words on cards for the wall!",
-            "subtitleJa": "エマ先生「せいいっぱい がんばったわね。ほこりに おもうわ。」 キコちゃんが にっこり。「ありがとう。うれしい きもちに なるよ。」 ハルくん「かべに はる カードに やさしい ことばを かこう！」",
-            "subtitleEn": "Ms. Emma says, You did your best. I'm proud of you. Kiko smiles. Thank you. That makes me happy. Haru says, Let's write kind words on cards for the wall!",
+            "say": "I say, You did your best. I'm proud of you. Kiko smiles. Thank you. That makes me happy. Haru says, Let's write kind words on cards for the wall!",
+            "subtitleJa": "わたし「せいいっぱい がんばったわね。ほこりに おもうわ。」 キコちゃんが にっこり。「ありがとう。うれしい きもちに なるよ。」 ハルくん「かべに はる カードに やさしい ことばを かこう！」",
+            "subtitleEn": "I say, You did your best. I'm proud of you. Kiko smiles. Thank you. That makes me happy. Haru says, Let's write kind words on cards for the wall!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -12124,6 +12148,7 @@
     {
       "lessonNo": 805,
       "world": 27,
+      "reviewed": "run9",
       "title": "My Calm-Down Plan",
       "titleJa": "わたしの おちつく プラン",
       "school": {
@@ -12259,7 +12284,7 @@
         ],
         "aiTask": {
           "goalJa": "トト（AI）と おちつく プランを はなそう。When I'm angry / sad / nervous, I ～. で じぶんの プランを つたえよう",
-          "starterEn": "Hi! I'm Toto. I'm making a calm-down plan, too. What do you do when you're angry?",
+          "starterEn": "Hi! Let's pretend I'm Toto. I'm making a calm-down plan, too. What do you do when you're angry?",
           "targetExpressions": [
             "When I'm angry, I count to ten.",
             "When I'm sad, I hug my teddy bear.",
@@ -12280,9 +12305,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's find out together!",
-            "subtitleJa": "こんにちは、みんな！ もうすぐ おまつり。きょうは おちつく プランを つくるよ。いっしょに しらべよう！",
-            "subtitleEn": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's find out together!",
+            "say": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's make them together!",
+            "subtitleJa": "こんにちは、みんな！ もうすぐ おまつり。きょうは おちつく プランを つくるよ。いっしょに つくろう！",
+            "subtitleEn": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's make them together!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -12375,9 +12400,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Listen. Ms. Emma asks, Who wants to go first? Haru says, Me! When I'm angry, I count to ten. Riko says, When I'm sad, I hug my teddy bear.",
-            "subtitleJa": "きいてね。エマ先生「だれから いく？」 ハルくん「ぼく！ おこった ときは、10まで かぞえるよ。」 リコちゃん「かなしい ときは、くまの ぬいぐるみを だきしめるよ。」",
-            "subtitleEn": "Listen. Ms. Emma asks, Who wants to go first? Haru says, Me! When I'm angry, I count to ten. Riko says, When I'm sad, I hug my teddy bear.",
+            "say": "Listen. I ask, Who wants to go first? Haru says, Me! When I'm angry, I count to ten. Riko says, When I'm sad, I hug my teddy bear.",
+            "subtitleJa": "きいてね。わたし「だれから いく？」 ハルくん「ぼく！ おこった ときは、10まで かぞえるよ。」 リコちゃん「かなしい ときは、くまの ぬいぐるみを だきしめるよ。」",
+            "subtitleEn": "Listen. I ask, Who wants to go first? Haru says, Me! When I'm angry, I count to ten. Riko says, When I'm sad, I hug my teddy bear.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -12424,9 +12449,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. Say for short and soft. For a long time.",
+            "say": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. The word for is short and soft. For a long time.",
             "subtitleJa": "ふりかえりの じかん！ weak は week と おなじ おと。enjoy たす able で enjoyable。たのしめる！ for a long time。for は みじかく よわく。for a long time。",
-            "subtitleEn": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. Say for short and soft. For a long time.",
+            "subtitleEn": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. The word for is short and soft. For a long time.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -12631,6 +12656,7 @@
     {
       "lessonNo": 806,
       "world": 27,
+      "reviewed": "run9",
       "title": "A Healthy Week Plan",
       "titleJa": "けんこうな 1しゅうかんの プラン",
       "school": {
@@ -12731,7 +12757,7 @@
           "emoji": "🙆"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, When I'm angry, I count to ten. Today, we are at the Spring Inn. Granny Capy gives everyone a big piece of paper. Our trip will end soon. So let's make a healthy week plan for home. Haru writes first. He says, On Monday, I'm going to walk to school. Say it with me. On Monday, I'm going to walk to school. Super! Riko says, On Wednesday, I'm going to eat more vegetables. Kiko says, On Saturday, I'm going to play outside. Now let's read Haru's plan. \"Haru's Healthy Week Plan. Monday: walk to school with my friends. Tuesday: go to bed at nine. Wednesday: eat more vegetables. Thursday: drink water, not sweet drinks. Friday: stretch my arms and wrists for ten minutes. Saturday: play outside with my friends. Sunday: help cook a healthy dinner with Dad. Every day: wash my hands and smile!\" What is Haru going to do on Tuesday? Go to bed at nine. Who is he going to cook with? His dad. Now, phonics. Stomach. The ch sounds like k. Wrist. The w is silent. Since yesterday. Since tells us the starting time. Washable. You can wash it. Hear. Listen. It sounds like here. What a healthy week!",
+      "teacherScript": "Hello, everyone! Last time, we said, When I'm angry, I count to ten. Today, we are at the Spring Inn. Granny Capy gives everyone a big piece of paper. Our trip will end soon. So let's make a healthy week plan for home. Haru writes first. He says, On Monday, I'm going to walk to school. Say it with me. On Monday, I'm going to walk to school. Super! Riko says, On Wednesday, I'm going to eat more vegetables. Kiko says, On Saturday, I'm going to play outside. Now let's read Haru's plan. \"Haru's Healthy Week Plan. Monday: walk to school with my friends. Tuesday: go to bed at nine. Wednesday: eat more vegetables. Thursday: drink water, not sweet drinks. Friday: stretch my arms and wrists for ten minutes. Saturday: play outside with my friends. Sunday: help cook a healthy dinner with Dad. Every day: wash my hands and smile!\" What is Haru going to do on Tuesday? Go to bed at nine. Who is he going to cook with? His dad. Now, phonics. Stomach. The C H makes a k sound. Wrist. The w is silent. Since yesterday. Since tells us the starting time. Washable. You can wash it. Hear. Listen. It sounds like here. What a healthy week!",
       "conversation": {
         "scene": "Making healthy week plans at the Spring Inn",
         "sceneJa": "いずみの やどで けんこうな 1しゅうかんの プランを つくる",
@@ -12758,7 +12784,7 @@
           },
           {
             "speaker": "Birimo",
-            "en": "On Sunday, I'm going to cook a vegetable soup. A big one!",
+            "en": "On Sunday, I'm going to cook vegetable soup. A big pot!",
             "ja": "にちようびは、やさいの スープを つくる つもり。おおきな おなべで！"
           },
           {
@@ -12769,7 +12795,7 @@
         ],
         "aiTask": {
           "goalJa": "カピーおばあちゃん（AI）に けんこうな 1しゅうかんの プランを はなそう。On ～day, I'm going to ～. を つかって ようびごとに つたえよう",
-          "starterEn": "Hello, dear. I'm Granny Capy. You're going home soon. What are you going to do on Monday?",
+          "starterEn": "Hello, dear. Let's pretend I'm Granny Capy. You're going home soon. What are you going to do on Monday?",
           "targetExpressions": [
             "On Monday, I'm going to walk to school.",
             "On Wednesday, I'm going to eat more vegetables.",
@@ -12790,9 +12816,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, travelers! We're at the Spring Inn. Our trip is almost over. So let's make a healthy plan for next week!",
-            "subtitleJa": "おはよう、たびびとの みんな！ いずみの やどに いるよ。たびは もうすぐ おわり。だから らいしゅうの けんこうな プランを つくろう！",
-            "subtitleEn": "Good morning, travelers! We're at the Spring Inn. Our trip is almost over. So let's make a healthy plan for next week!",
+            "say": "Hi, travelers! We're at the Spring Inn. Our trip is almost over. So let's make a healthy plan for next week!",
+            "subtitleJa": "やあ、たびびとの みんな！ いずみの やどに いるよ。たびは もうすぐ おわり。だから らいしゅうの けんこうな プランを つくろう！",
+            "subtitleEn": "Hi, travelers! We're at the Spring Inn. Our trip is almost over. So let's make a healthy plan for next week!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -12885,9 +12911,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Listen. Ms. Emma asks, What are you going to do next week? Haru says, On Monday, I'm going to walk to school. Riko says, On Wednesday, I'm going to eat more vegetables.",
-            "subtitleJa": "きいてね。エマ先生「らいしゅうは なにを する つもり？」 ハルくん「げつようびは、がっこうまで あるいて いく つもりだよ。」 リコちゃん「すいようびは、やさいを もっと たべる つもりだよ。」",
-            "subtitleEn": "Listen. Ms. Emma asks, What are you going to do next week? Haru says, On Monday, I'm going to walk to school. Riko says, On Wednesday, I'm going to eat more vegetables.",
+            "say": "Listen. I ask, What are you going to do next week? Haru says, On Monday, I'm going to walk to school. Riko says, On Wednesday, I'm going to eat more vegetables.",
+            "subtitleJa": "きいてね。わたし「らいしゅうは なにを する つもり？」 ハルくん「げつようびは、がっこうまで あるいて いく つもりだよ。」 リコちゃん「すいようびは、やさいを もっと たべる つもりだよ。」",
+            "subtitleEn": "Listen. I ask, What are you going to do next week? Haru says, On Monday, I'm going to walk to school. Riko says, On Wednesday, I'm going to eat more vegetables.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -12902,15 +12928,15 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook a vegetable soup. A big one! Haru laughs. Can I have some?",
+            "say": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook vegetable soup. A big pot! Haru laughs. Can I have some?",
             "subtitleJa": "キコちゃん「どようびは、かぞくと そとで あそぶ つもり。」 ビリモ「にちようびは、やさいの スープを つくる つもり。おおきな おなべで！」 ハルくんが わらう。「ぼくにも くれる？」",
-            "subtitleEn": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook a vegetable soup. A big one! Haru laughs. Can I have some?",
+            "subtitleEn": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook vegetable soup. A big pot! Haru laughs. Can I have some?",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "On Saturday, I'm going to play outside with my family.",
-                "On Sunday, I'm going to cook a vegetable soup. A big one!",
+                "On Sunday, I'm going to cook vegetable soup. A big pot!",
                 "Can I have some, Birimo? I'm going to walk to your house!"
               ],
               "emoji": "🥕"
@@ -12935,9 +12961,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Stomach. The C H says k. Wrist. The W is sleeping. Shh! Since yesterday. Since tells the start.",
+            "say": "Review time! Stomach. The C H makes a k sound. Wrist. The W is sleeping. Shh! Since yesterday. Since tells the start.",
             "subtitleJa": "ふりかえりの じかん！ stomach。ch は k の おと。wrist。w は ねむって いるよ。しーっ！ since yesterday。since は はじまりの とき。",
-            "subtitleEn": "Review time! Stomach. The C H says k. Wrist. The W is sleeping. Shh! Since yesterday. Since tells the start.",
+            "subtitleEn": "Review time! Stomach. The C H makes a k sound. Wrist. The W is sleeping. Shh! Since yesterday. Since tells the start.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -13145,6 +13171,7 @@
     {
       "lessonNo": 807,
       "world": 27,
+      "reviewed": "run9",
       "title": "Health Quiz",
       "titleJa": "けんこう クイズ",
       "school": {
@@ -13245,7 +13272,7 @@
           "emoji": "🦠"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, On Monday, I'm going to walk to school. Today, we are getting ready for the health quiz. The festival is in two days! Riko is the quiz host. She holds a small bell. Her first question is, How many hours should children sleep? Say it with me. How many hours should children sleep? Great! Haru rings the bell and answers, Nine to twelve hours. Correct! Then Riko asks, Is it true or false? Kiko shouts, It's true! Dr. Fern wrote the quiz cards. Let's read one card together. \"Health Festival Quiz. Question one: How many hours should children sleep? A: five to six hours. B: nine to twelve hours. Question two: True or false? Washing your hands helps stop germs. Question three: True or false? When you feel sick, you should tell an adult. Good luck, everyone!\" What is the answer to question one? B, nine to twelve hours. Is question three true or false? It's true! Now, phonics. Earache. Ear plus ache. Ouch! Hour. The h is silent. We say an hour. For two hours. Say for softly. Readable. Easy to read. Peace. It sounds like piece. Quiz masters, you are ready!",
+      "teacherScript": "Hello, everyone! Last time, we said, On Monday, I'm going to walk to school. Today, we are getting ready for the health quiz. The festival is in two days! Riko is the quiz host. She holds a small bell. Her first question is, How many hours should children sleep? Say it with me. How many hours should children sleep? Great! Haru raises his hand and answers, Nine to twelve hours. Correct! Then Riko asks, Is it true or false? Kiko shouts, It's true! Dr. Fern wrote the quiz cards. Let's read one card together. \"Health Festival Quiz. Question one: How many hours should children sleep? A: five to six hours. B: nine to twelve hours. Question two: True or false? Washing your hands helps stop germs. Question three: True or false? When you feel sick, you should tell an adult. Good luck, everyone!\" What is the answer to question one? B, nine to twelve hours. Is question three true or false? It's true! Now, phonics. Earache. Ear plus ache. Ouch! Hour. The h is silent. We say an hour. For two hours. Say for softly. Readable. Easy to read. Peace. It sounds like piece. Quiz masters, you are ready!",
       "conversation": {
         "scene": "Practicing the health quiz for the festival",
         "sceneJa": "おまつりの けんこう クイズを れんしゅうする",
@@ -13283,7 +13310,7 @@
         ],
         "aiTask": {
           "goalJa": "ファーン先生（AI）の けんこう クイズに こたえよう。こんどは あなたが How many hours should ～? / Is it true or false? で クイズを だして みよう",
-          "starterEn": "Hello! I'm Dr. Fern. Let's play a health quiz. How many hours should children sleep?",
+          "starterEn": "Hello! Let's pretend I'm Dr. Fern. Let's do a health quiz. How many hours should children sleep?",
           "targetExpressions": [
             "How many hours should children sleep?",
             "Nine to twelve hours.",
@@ -13468,9 +13495,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "For two hours. Say for short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
+            "say": "For two hours. The word for is short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
             "subtitleJa": "for two hours。for は みじかく よわく。read たす able で readable。peace は piece と おなじ おと。あなたの ばん。earache、hour、for two hours、readable、peace。",
-            "subtitleEn": "For two hours. Say for short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
+            "subtitleEn": "For two hours. The word for is short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -13657,11 +13684,12 @@
     {
       "lessonNo": 808,
       "world": 27,
+      "reviewed": "run9",
       "title": "A Letter of Advice",
       "titleJa": "アドバイスの てがみ",
       "school": {
         "grade": "中3",
-        "topic": "Dear friend, you should ～.：ペンフレンドに アドバイスの てがみを かく",
+        "topic": "Dear friend, you should ～.：ペンパルに アドバイスの てがみを かく",
         "grammar": "Dear ～, / You should ～. / It's good for ～. / Your friend, ～",
         "expressions": [
           {
@@ -13752,20 +13780,20 @@
           "emoji": "🧠"
         },
         {
-          "en": "pen friend",
-          "ja": "ペンフレンド",
+          "en": "pen pal",
+          "ja": "ペンパル",
           "emoji": "🌏"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, How many hours should children sleep? Today, Kiko gets a letter from her pen friend back home. Her pen friend feels sleepy and grumpy every morning. Kiko wants to help. She walks with Toto every morning here, and she feels great. So she writes a letter of advice. She starts with, Dear friend, you should try a morning walk. Say it with me. Dear friend, you should try a morning walk. Perfect! Let's read Kiko's letter. \"Dear friend, How are you? You feel sleepy every morning. You should try a morning walk. It's good for your body and your mind. Walk for ten minutes before breakfast. Look at the sky and listen to the birds. Then eat a good breakfast. I walk with Toto every morning here. I feel great! Your friend, Kiko\" How long should her friend walk? For ten minutes. What should her friend eat after the walk? A good breakfast. Now, phonics. Character. The ch sounds like k. Salmon. The l is silent. Since April. Since tells us the starting time. Valuable. Very important. Drop the e and add able. Write. Write a letter. The w is silent. Your letters are valuable gifts!",
+      "teacherScript": "Hello, everyone! Last time, we said, How many hours should children sleep? Today, Kiko gets a letter from her pen pal back home. Her pen pal feels sleepy and grumpy every morning. Kiko wants to help. She walks with Toto every morning here, and she feels great. So she writes a letter of advice. She starts with, Dear friend, you should try a morning walk. Say it with me. Dear friend, you should try a morning walk. Perfect! Let's read Kiko's letter. \"Dear friend, How are you? You feel sleepy every morning. You should try a morning walk. It's good for your body and your mind. Walk for ten minutes before breakfast. Look at the sky and listen to the birds. Then eat a good breakfast. I walk with Toto every morning here. I feel great! Your friend, Kiko\" How long should her friend walk? For ten minutes. What should her friend eat after the walk? A good breakfast. Now, phonics. Character. The C H makes a k sound. Salmon. The l is silent. Since April. Since tells us the starting time. Valuable. Very important. Drop the e and add able. Write. Write a letter. The w is silent. Your letters are valuable gifts!",
       "conversation": {
-        "scene": "Kiko writes a letter of advice to her pen friend",
-        "sceneJa": "キコが ペンフレンドに アドバイスの てがみを かく",
+        "scene": "Kiko writes a letter of advice to her pen pal",
+        "sceneJa": "キコが ペンパルに アドバイスの てがみを かく",
         "lines": [
           {
             "speaker": "Kiko",
-            "en": "My pen friend feels sleepy every morning. What should I write?",
-            "ja": "ペンフレンドが まいあさ ねむいんだって。なんて かけば いいかな？"
+            "en": "My pen pal feels sleepy every morning. What should I write?",
+            "ja": "ペンパルが まいあさ ねむいんだって。なんて かけば いいかな？"
           },
           {
             "speaker": "Haru",
@@ -13794,8 +13822,8 @@
           }
         ],
         "aiTask": {
-          "goalJa": "ねむくて げんきが ない ペンフレンド（AI）に、Dear friend, you should ～. / It's good for ～. で アドバイスを つたえよう",
-          "starterEn": "Hi, I'm your pen friend. I feel tired and sleepy in the morning. What should I do?",
+          "goalJa": "ねむくて げんきが ない ペンパル（AI）に、Dear friend, you should ～. / It's good for ～. で アドバイスを つたえよう",
+          "starterEn": "Hi! Let's pretend I'm your pen pal. I feel tired and sleepy in the morning. What should I do?",
           "targetExpressions": [
             "Dear friend, you should try a morning walk.",
             "It's good for your body and your mind.",
@@ -13816,9 +13844,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Hello, letter writers! Kiko's pen friend sent her a letter. Her friend feels sleepy every morning. Let's help Kiko write back!",
-            "subtitleJa": "こんにちは、てがみを かく みんな！ キコの ペンフレンドから てがみが きたよ。まいあさ ねむいんだって。キコが へんじを かくのを てつだおう！",
-            "subtitleEn": "Hello, letter writers! Kiko's pen friend sent her a letter. Her friend feels sleepy every morning. Let's help Kiko write back!",
+            "say": "Hello, letter writers! Kiko's pen pal sent her a letter. Her friend feels sleepy every morning. Let's help Kiko write back!",
+            "subtitleJa": "こんにちは、てがみを かく みんな！ キコの ペンパルから てがみが きたよ。まいあさ ねむいんだって。キコが へんじを かくのを てつだおう！",
+            "subtitleEn": "Hello, letter writers! Kiko's pen pal sent her a letter. Her friend feels sleepy every morning. Let's help Kiko write back!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -13895,14 +13923,14 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Pen friend. A friend far away. You write letters to each other. Hello from my town! Pen friend!",
-            "subtitleJa": "pen friend。とおくに いる ともだち。おたがいに てがみを かく。「わたしの まちから こんにちは！」 pen friend！",
-            "subtitleEn": "Pen friend. A friend far away. You write letters to each other. Hello from my town! Pen friend!",
+            "say": "Pen pal. A friend far away. You write letters to each other. Hello from my town! Pen pal!",
+            "subtitleJa": "pen pal。とおくに いる ともだち。おたがいに てがみを かく。「わたしの まちから こんにちは！」 pen pal！",
+            "subtitleEn": "Pen pal. A friend far away. You write letters to each other. Hello from my town! Pen pal!",
             "gesture": "open_hands",
             "slide": {
               "title": "Words",
               "items": [
-                "pen friend"
+                "pen pal"
               ],
               "emoji": "🌏"
             },
@@ -13911,14 +13939,14 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Listen. Kiko says, My pen friend feels sleepy every morning. What should I write? Haru says, Write about our morning walks with Toto!",
-            "subtitleJa": "きいてね。キコちゃん「ペンフレンドが まいあさ ねむいんだって。なんて かけば いいかな？」 ハルくん「トトと いっしょの あさの さんぽの ことを かいたら！」",
-            "subtitleEn": "Listen. Kiko says, My pen friend feels sleepy every morning. What should I write? Haru says, Write about our morning walks with Toto!",
+            "say": "Listen. Kiko says, My pen pal feels sleepy every morning. What should I write? Haru says, Write about our morning walks with Toto!",
+            "subtitleJa": "きいてね。キコちゃん「ペンパルが まいあさ ねむいんだって。なんて かけば いいかな？」 ハルくん「トトと いっしょの あさの さんぽの ことを かいたら！」",
+            "subtitleEn": "Listen. Kiko says, My pen pal feels sleepy every morning. What should I write? Haru says, Write about our morning walks with Toto!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "My pen friend feels sleepy every morning. What should I write?",
+                "My pen pal feels sleepy every morning. What should I write?",
                 "Write about our morning walks with Toto!"
               ],
               "emoji": "🌅"
@@ -13961,9 +13989,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Character. The C H says k. Salmon. The L is sleeping. Shh! Since April. Since tells the start.",
+            "say": "Review time! Character. The C H makes a k sound. Salmon. The L is sleeping. Shh! Since April. Since tells the start.",
             "subtitleJa": "ふりかえりの じかん！ character。ch は k の おと。salmon。l は ねむって いるよ。しーっ！ since April。since は はじまりの とき。",
-            "subtitleEn": "Review time! Character. The C H says k. Salmon. The L is sleeping. Shh! Since April. Since tells the start.",
+            "subtitleEn": "Review time! Character. The C H makes a k sound. Salmon. The L is sleeping. Shh! Since April. Since tells the start.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -14171,6 +14199,7 @@
     {
       "lessonNo": 809,
       "world": 27,
+      "reviewed": "run9",
       "title": "Village of Springs Review",
       "titleJa": "いずみの里の ふりかえり",
       "school": {
@@ -14303,13 +14332,13 @@
           },
           {
             "speaker": "Ms. Emma",
-            "en": "Granny Capy says it's a bridge to faraway friends. Maybe it's the Rainbow Bridge!",
-            "ja": "カピーおばあちゃんは、とおくの ともだちへの はしだって。もしかしたら にじの はしかも！"
+            "en": "Granny Capy says it's a bridge to faraway friends. Maybe it leads to the Rainbow Bridge!",
+            "ja": "カピーおばあちゃんは、とおくの ともだちへの はしだって。もしかしたら にじの はしに つづいて いるのかも！"
           }
         ],
         "aiTask": {
           "goalJa": "カピーおばあちゃん（AI）に たびの ふりかえりを はなそう。We've been here for ～. / You should ～. を つかい、にじの ことも はなそう",
-          "starterEn": "Hello, dear. I'm Granny Capy. You're leaving soon. How do you feel after your stay?",
+          "starterEn": "Hello, dear. Let's pretend I'm Granny Capy. You're leaving soon. How do you feel after your stay?",
           "targetExpressions": [
             "We've been here for two weeks, and I feel great!",
             "What's wrong? ― I'm a little tired. You should rest.",
@@ -14458,9 +14487,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. For tells how long. For two weeks. What's wrong is a kind question. You should gives good advice.",
-            "subtitleJa": "ポイント。for は どのくらいの あいだか を いう。for two weeks。What's wrong? は やさしい しつもん。You should は いい アドバイス。",
-            "subtitleEn": "Here's the point. For tells how long. For two weeks. What's wrong is a kind question. You should gives good advice.",
+            "say": "Here's the point. For tells how long. For two weeks. What's wrong? That's a kind question. Use You should to give advice.",
+            "subtitleJa": "ポイント。for は どのくらいの あいだか を いう。for two weeks。What's wrong? は やさしい しつもん。You should で アドバイスを しよう。",
+            "subtitleEn": "Here's the point. For tells how long. For two weeks. What's wrong? That's a kind question. Use You should to give advice.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -14474,9 +14503,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. Say for short and soft.",
+            "say": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. The word for is short and soft.",
             "subtitleJa": "ふりかえりの じかん！ back たす ache で backache。climb。b は ねむって いるよ。しーっ！ for a week。for は みじかく よわく。",
-            "subtitleEn": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. Say for short and soft.",
+            "subtitleEn": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. The word for is short and soft.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -14682,6 +14711,7 @@
     {
       "lessonNo": 810,
       "world": 27,
+      "reviewed": "run9",
       "title": "World 27 Grand Review",
       "titleJa": "ワールド27 だいふりかえり",
       "school": {
@@ -14785,7 +14815,7 @@
           "emoji": "👣"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, We've been here for two weeks, and I feel great! Today is the Health Festival in the village square. Everyone is here. Granny Capy, Dr. Fern and Toto are in the front row. First, Toto leads the morning exercise. Then, Kiko gives her speech. She takes a deep breath, and she does it! At the end, everyone shouts, Healthy body, happy mind! Say it with me. Healthy body, happy mind! Fantastic! Let's read the festival program. \"Village of Springs Health Festival. At ten, morning exercise with Toto. At half past ten, habit survey results. At eleven, Kiko's speech. At half past eleven, health quiz with prizes. At twelve, healthy lunch at the Spring Inn. All day, the calm-down corner is open by the Heart Spring. Warm water, warm hearts!\" What time is Kiko's speech? At eleven. Where is the lunch? At the Spring Inn. After the festival, we say, Thank you for everything, Granny Capy! Then the rainbow appears again over the Heart Spring. Let's follow the rainbow to the Rainbow Bridge! Now, phonics. Echo. The ch sounds like k. Headache. Head plus ache. Knee. The k is silent. Since kindergarten. Since tells us the start. Unforgettable. We will never forget it. Week. Seven days. What an unforgettable stay!",
+      "teacherScript": "Hello, everyone! Last time, we said, We've been here for two weeks, and I feel great! Today is the Health Festival in the village square. Everyone is here. Granny Capy, Dr. Fern and Toto are in the front row. First, Toto leads the morning exercise. Then, Kiko gives her speech. She takes a deep breath, and she does it! At the end, everyone shouts, Healthy body, happy mind! Say it with me. Healthy body, happy mind! Fantastic! Let's read the festival program. \"Village of Springs Health Festival. At ten, morning exercise with Toto. At half past ten, habit survey results. At eleven, Kiko's speech. At half past eleven, health quiz with prizes. At twelve, healthy lunch at the Spring Inn. All day, the calm-down corner is open by the Heart Spring. Warm water, warm hearts!\" What time is Kiko's speech? At eleven. Where is the lunch? At the Spring Inn. After the festival, we say, Thank you for everything, Granny Capy! Then the rainbow appears again over the Heart Spring. Let's follow the rainbow to the Rainbow Bridge! Now, phonics. Echo. The C H makes a k sound. Headache. Head plus ache. Knee. The k is silent. Since kindergarten. Since tells us the start. Unforgettable. We will never forget it. Week. Seven days. What an unforgettable stay!",
       "conversation": {
         "scene": "The Health Festival in the village square",
         "sceneJa": "むらの ひろばで けんこう まつり",
@@ -14823,7 +14853,7 @@
         ],
         "aiTask": {
           "goalJa": "カピーおばあちゃん（AI）に けんこう まつりの かんそうと おれいを つたえよう。Healthy body, happy mind! / Thank you for everything. / Let's ～. を つかおう",
-          "starterEn": "Hello, dear. I'm Granny Capy. What a wonderful festival! Did you have fun today?",
+          "starterEn": "Hello, dear. Let's pretend I'm Granny Capy. What a wonderful festival! Did you have fun today?",
           "targetExpressions": [
             "Healthy body, happy mind!",
             "Thank you for everything, Granny Capy!",
@@ -14956,9 +14986,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko says, Thank you for everything, Granny Capy! Kiko points. Look! The rainbow is back. Ms. Emma says, Let's follow the rainbow!",
-            "subtitleJa": "リコちゃん「いろいろ ありがとう、カピーおばあちゃん！」 キコちゃんが ゆびさす。「みて！ にじが また でてる。」 エマ先生「にじを おいかけましょう！」",
-            "subtitleEn": "Riko says, Thank you for everything, Granny Capy! Kiko points. Look! The rainbow is back. Ms. Emma says, Let's follow the rainbow!",
+            "say": "Riko says, Thank you for everything, Granny Capy! Kiko points. Look! The rainbow is back. I say, Let's follow the rainbow!",
+            "subtitleJa": "リコちゃん「いろいろ ありがとう、カピーおばあちゃん！」 キコちゃんが ゆびさす。「みて！ にじが また でてる。」 わたし「にじを おいかけましょう！」",
+            "subtitleEn": "Riko says, Thank you for everything, Granny Capy! Kiko points. Look! The rainbow is back. I say, Let's follow the rainbow!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -14989,9 +15019,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Big sound review! Echo. The C H says k. Head plus ache. Headache. Knee. The K is sleeping. Shh!",
+            "say": "Big sound review! Echo. The C H makes a k sound. Head plus ache. Headache. Knee. The K is sleeping. Shh!",
             "subtitleJa": "おとの だい ふりかえり！ echo。ch は k の おと。head たす ache で headache。knee。k は ねむって いるよ。しーっ！",
-            "subtitleEn": "Big sound review! Echo. The C H says k. Head plus ache. Headache. Knee. The K is sleeping. Shh!",
+            "subtitleEn": "Big sound review! Echo. The C H makes a k sound. Head plus ache. Headache. Knee. The K is sleeping. Shh!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -15130,9 +15160,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Think of someone who helps you. Say thank you to them. Thank you for everything!",
+            "say": "Your turn! Think of a helper in your life. Say thank you to them. Thank you for everything!",
             "subtitleJa": "あなたの ばん！ あなたを たすけて くれる ひとを おもいうかべて。おれいを いおう。「いろいろ ありがとう！」",
-            "subtitleEn": "Your turn! Think of someone who helps you. Say thank you to them. Thank you for everything!",
+            "subtitleEn": "Your turn! Think of a helper in your life. Say thank you to them. Thank you for everything!",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -15178,9 +15208,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Amazing work in World 27! You can talk about health, feelings, and kind advice. Next, go and talk with Riko! Bye-bye! Next is World 28, the Rainbow Bridge!",
-            "subtitleJa": "ワールド27、ほんとうに よく がんばったね！ けんこう、きもち、やさしい アドバイスの ことが はなせるね。このあと リコちゃんと おはなし してね！ バイバイ！ つぎは ワールド28、にじの はしだよ！",
-            "subtitleEn": "Amazing work in World 27! You can talk about health, feelings, and kind advice. Next, go and talk with Riko! Bye-bye! Next is World 28, the Rainbow Bridge!",
+            "say": "Amazing work in World 27! You can talk about health, feelings, and kind advice. World 28, the Rainbow Bridge, is coming up! Next, go and talk with Riko! Bye-bye!",
+            "subtitleJa": "ワールド27、ほんとうに よく がんばったね！ けんこう、きもち、やさしい アドバイスの ことが はなせるね。もうすぐ ワールド28、にじの はしだよ！ このあと リコちゃんと おはなし してね！ バイバイ！",
+            "subtitleEn": "Amazing work in World 27! You can talk about health, feelings, and kind advice. World 28, the Rainbow Bridge, is coming up! Next, go and talk with Riko! Bye-bye!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",

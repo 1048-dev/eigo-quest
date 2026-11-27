@@ -1,0 +1,282 @@
+[
+  {
+    "lesson": 802,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, When I'm worried, I talk to my mom. Today, we are sitting by the Heart Spring. The water is warm, and the steam is soft and white. Kiko practiced her speech this morning, and her heart was beating fast. So Ms. Emma teaches everyone a calm-down trick. Take a deep breath. Count to five. Say it with me. Take a deep breath. Count to five. Very good! Now breathe（いきを する）with me. Breathe in through your nose. One, two, three, four, five. Breathe out slowly. Kiko smiles and says, I feel calm now. There is a little wooden sign by the spring. Let's read it. \"Heart Spring Calm Corner. Sit down on the warm stones and close your eyes. Breathe in through your nose and count to five. Then breathe out slowly through your mouth. Do this three times. Listen to the sound of the water. Feel the warm steam on your face. Now you are ready for a calm and happy day.\" How many times do you do it? Three times. How do you breathe in? Through your nose. Now, phonics. Piece. A piece of cake. Peace. Quiet and calm. Nose. Touch your nose. Knows. Birimo knows the answer. The k is silent! Peace and quiet, everyone.",
+    "after": "Hello, everyone! Last time, we said, When I'm worried, I talk to my mom. Today, we are sitting by the Heart Spring. The water is warm, and the steam is soft and white. Kiko practiced her speech this morning, and her heart was beating fast. So I teach everyone a calm-down trick. Take a deep breath. Count to five. Say it with me. Take a deep breath. Count to five. Very good! Now breathe（いきを する）with me. Breathe in through your nose. One, two, three, four, five. Breathe out slowly. Kiko smiles and says, I feel calm now. There is a little wooden sign by the spring. Let's read it. \"Heart Spring Calm Corner. Sit down on the warm stones and close your eyes. Breathe in through your nose and count to five. Then breathe out slowly through your mouth. Do this three times. Listen to the sound of the water. Feel the warm steam on your face. Now you are ready for a calm and happy day.\" How many times do you do it? Three times. How do you breathe in? Through your nose. Now, phonics. Piece. A piece of cake. Peace. Quiet and calm. Nose. Touch your nose. Knows. Birimo knows the answer. The k is silent! Peace and quiet, everyone.",
+    "reviewers": "A+C",
+    "reason": "Ms. Emma narrates about herself in the third person; block rule is 'I'"
+  },
+  {
+    "lesson": 802,
+    "path": "teacher.segments[5].say",
+    "before": "Slowly. Not fast. Like a turtle. I. Walk. Slowly. Slowly!",
+    "after": "Slowly. Not fast. Like a turtle. I... walk... slowly. Slowly!",
+    "reviewers": "A+C",
+    "reason": "'I.' alone may be read as a letter or Roman numeral; slow pauses with ..."
+  },
+  {
+    "lesson": 802,
+    "path": "teacher.segments[5].subtitleEn",
+    "before": "Slowly. Not fast. Like a turtle. I. Walk. Slowly. Slowly!",
+    "after": "Slowly. Not fast. Like a turtle. I... walk... slowly. Slowly!",
+    "reviewers": "A+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 802,
+    "path": "teacher.segments[5].subtitleJa",
+    "before": "slowly。はやく ない。カメみたいに。わたしは。ゆっくり。あるく。slowly！",
+    "after": "slowly。はやく ない。カメみたいに。わたしは… ゆっくり… あるく。slowly！",
+    "reviewers": "A+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 802,
+    "path": "teacher.segments[18].say",
+    "before": "Quiz time! You touch it on your face. Is it A, nose? Or B, knows, with a sleeping K? Think!",
+    "after": "Quiz time! It's on your face. You can touch it. Is it A, nose? Or B, knows, with a sleeping K? Think!",
+    "reviewers": "A+B",
+    "reason": "'You touch it on your face' is unnatural; JA already says かおに あって さわれる"
+  },
+  {
+    "lesson": 802,
+    "path": "teacher.segments[18].subtitleEn",
+    "before": "Quiz time! You touch it on your face. Is it A, nose? Or B, knows, with a sleeping K? Think!",
+    "after": "Quiz time! It's on your face. You can touch it. Is it A, nose? Or B, knows, with a sleeping K? Think!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 804,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, It's OK to feel sad sometimes. Today, Kiko practices her speech on the village stage. In the middle, she forgets a line. Her face turns red. Kiko says, Oh no! I made a mistake. Birimo shouts, Don't give up. You can do it! Kiko starts again and finishes the speech. Then I say, You did your best. I'm proud of you. Say it with me. You did your best. I'm proud of you. Lovely! Kiko answers, Thank you. That makes me happy. In the village square, there is a new board. Let's read it. \"The Kind Words Wall. Write a kind word on a card and put it here. Anyone can read it. You can say kind words to your friends and to yourself, too. Try it in the mirror every morning. I can do it! Mistakes help me learn. Kind words are like warm water. They warm your heart.\" Where do you put the card? On the wall. Can you say kind words to yourself? Yes, you can. Now, phonics. Right. Turn right. Write. Write a kind card. The w is silent. Pair. A pair of socks. Pear. A sweet, juicy pear. Same sound, different spelling! You all did your best today.",
+    "after": "Hello, everyone! Last time, we said, It's OK to feel sad sometimes. Today, Kiko practices her speech on the village stage. In the middle, she forgets a line. Her face turns red. Kiko says, Oh no! I made a mistake. Birimo shouts, Don't give up. You can do it! Kiko starts again and finishes the speech. Then I say, You did your best. I'm proud of you. Say it with me. You did your best. I'm proud of you. Wonderful! Kiko answers, Thank you. That makes me happy. In the village square, there is a new board. Let's read it. \"The Kind Words Wall. Write a kind word on a card and put it here. Anyone can read it. You can say kind words to your friends and to yourself, too. Try it in the mirror every morning. I can do it! Mistakes help me learn. Kind words are like warm water. They warm your heart.\" Where do you put the card? On the wall. Can you say kind words to yourself? Yes, you can. Now, phonics. Right. Turn right. Write. Write a kind card. The w is silent. Pair. A pair of socks. Pear. A sweet, juicy pear. Same sound, different spelling! You all did your best today.",
+    "reviewers": "A+B",
+    "reason": "British praise 'Lovely!' -> US (block rule)"
+  },
+  {
+    "lesson": 805,
+    "path": "teacher.segments[0].say",
+    "before": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's find out together!",
+    "after": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's make them together!",
+    "reviewers": "A+B",
+    "reason": "nothing to 'find out'; the lesson makes plans"
+  },
+  {
+    "lesson": 805,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's find out together!",
+    "after": "Hello, everyone! The festival is coming. Today, we're making calm-down plans. Let's make them together!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 805,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "こんにちは、みんな！ もうすぐ おまつり。きょうは おちつく プランを つくるよ。いっしょに しらべよう！",
+    "after": "こんにちは、みんな！ もうすぐ おまつり。きょうは おちつく プランを つくるよ。いっしょに つくろう！",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 805,
+    "path": "teacher.segments[9].say",
+    "before": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. Say for short and soft. For a long time.",
+    "after": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. The word for is short and soft. For a long time.",
+    "reviewers": "B+C",
+    "reason": "'Say for short' reads as the idiom 'for short'; matches teacherScript wording"
+  },
+  {
+    "lesson": 805,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. Say for short and soft. For a long time.",
+    "after": "Review time! Weak sounds just like week. Enjoy plus able. Enjoyable. Fun to do! For a long time. The word for is short and soft. For a long time.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 806,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, When I'm angry, I count to ten. Today, we are at the Spring Inn. Granny Capy gives everyone a big piece of paper. Our trip will end soon. So let's make a healthy week plan for home. Haru writes first. He says, On Monday, I'm going to walk to school. Say it with me. On Monday, I'm going to walk to school. Super! Riko says, On Wednesday, I'm going to eat more vegetables. Kiko says, On Saturday, I'm going to play outside. Now let's read Haru's plan. \"Haru's Healthy Week Plan. Monday: walk to school with my friends. Tuesday: go to bed at nine. Wednesday: eat more vegetables. Thursday: drink water, not sweet drinks. Friday: stretch my arms and wrists for ten minutes. Saturday: play outside with my friends. Sunday: help cook a healthy dinner with Dad. Every day: wash my hands and smile!\" What is Haru going to do on Tuesday? Go to bed at nine. Who is he going to cook with? His dad. Now, phonics. Stomach. The ch sounds like k. Wrist. The w is silent. Since yesterday. Since tells us the starting time. Washable. You can wash it. Hear. Listen. It sounds like here. What a healthy week!",
+    "after": "Hello, everyone! Last time, we said, When I'm angry, I count to ten. Today, we are at the Spring Inn. Granny Capy gives everyone a big piece of paper. Our trip will end soon. So let's make a healthy week plan for home. Haru writes first. He says, On Monday, I'm going to walk to school. Say it with me. On Monday, I'm going to walk to school. Super! Riko says, On Wednesday, I'm going to eat more vegetables. Kiko says, On Saturday, I'm going to play outside. Now let's read Haru's plan. \"Haru's Healthy Week Plan. Monday: walk to school with my friends. Tuesday: go to bed at nine. Wednesday: eat more vegetables. Thursday: drink water, not sweet drinks. Friday: stretch my arms and wrists for ten minutes. Saturday: play outside with my friends. Sunday: help cook a healthy dinner with Dad. Every day: wash my hands and smile!\" What is Haru going to do on Tuesday? Go to bed at nine. Who is he going to cook with? His dad. Now, phonics. Stomach. The C H sounds like k. Wrist. The w is silent. Since yesterday. Since tells us the starting time. Washable. You can wash it. Hear. Listen. It sounds like here. What a healthy week!",
+    "reviewers": "B+C",
+    "reason": "bare 'ch' may be misread by TTS; segments use 'C H'"
+  },
+  {
+    "lesson": 806,
+    "path": "conversation.lines[4].en",
+    "before": "On Sunday, I'm going to cook a vegetable soup. A big one!",
+    "after": "On Sunday, I'm going to cook vegetable soup. A big pot!",
+    "reviewers": "A+B",
+    "reason": "'a vegetable soup' is unnatural (uncountable here); 'A big pot!' matches JA おおきな おなべで"
+  },
+  {
+    "lesson": 806,
+    "path": "teacher.segments[7].say",
+    "before": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook a vegetable soup. A big one! Haru laughs. Can I have some?",
+    "after": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook vegetable soup. A big pot! Haru laughs. Can I have some?",
+    "reviewers": "A+B",
+    "reason": "same as conversation.lines[4]"
+  },
+  {
+    "lesson": 806,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook a vegetable soup. A big one! Haru laughs. Can I have some?",
+    "after": "Kiko says, On Saturday, I'm going to play outside with my family. Birimo says, On Sunday, I'm going to cook vegetable soup. A big pot! Haru laughs. Can I have some?",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 806,
+    "path": "teacher.segments[7].slide.items[1]",
+    "before": "On Sunday, I'm going to cook a vegetable soup. A big one!",
+    "after": "On Sunday, I'm going to cook vegetable soup. A big pot!",
+    "reviewers": "A+B",
+    "reason": "slide shows the changed line"
+  },
+  {
+    "lesson": 807,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, On Monday, I'm going to walk to school. Today, we are getting ready for the health quiz. The festival is in two days! Riko is the quiz host. She holds a small bell. Her first question is, How many hours should children sleep? Say it with me. How many hours should children sleep? Great! Haru rings the bell and answers, Nine to twelve hours. Correct! Then Riko asks, Is it true or false? Kiko shouts, It's true! Dr. Fern wrote the quiz cards. Let's read one card together. \"Health Festival Quiz. Question one: How many hours should children sleep? A: five to six hours. B: nine to twelve hours. Question two: True or false? Washing your hands helps stop germs. Question three: True or false? When you feel sick, you should tell an adult. Good luck, everyone!\" What is the answer to question one? B, nine to twelve hours. Is question three true or false? It's true! Now, phonics. Earache. Ear plus ache. Ouch! Hour. The h is silent. We say an hour. For two hours. Say for softly. Readable. Easy to read. Peace. It sounds like piece. Quiz masters, you are ready!",
+    "after": "Hello, everyone! Last time, we said, On Monday, I'm going to walk to school. Today, we are getting ready for the health quiz. The festival is in two days! Riko is the quiz host. She holds a small bell. Her first question is, How many hours should children sleep? Say it with me. How many hours should children sleep? Great! Haru raises his hand and answers, Nine to twelve hours. Correct! Then Riko asks, Is it true or false? Kiko shouts, It's true! Dr. Fern wrote the quiz cards. Let's read one card together. \"Health Festival Quiz. Question one: How many hours should children sleep? A: five to six hours. B: nine to twelve hours. Question two: True or false? Washing your hands helps stop germs. Question three: True or false? When you feel sick, you should tell an adult. Good luck, everyone!\" What is the answer to question one? B, nine to twelve hours. Is question three true or false? It's true! Now, phonics. Earache. Ear plus ache. Ouch! Hour. The h is silent. We say an hour. For two hours. Say for softly. Readable. Easy to read. Peace. It sounds like piece. Quiz masters, you are ready!",
+    "reviewers": "A+B",
+    "reason": "Riko (the host) holds the bell; Haru ringing it contradicts the scene"
+  },
+  {
+    "lesson": 807,
+    "path": "teacher.segments[10].say",
+    "before": "For two hours. Say for short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
+    "after": "For two hours. The word for is short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
+    "reviewers": "B+C",
+    "reason": "'Say for short' reads as the idiom 'for short'"
+  },
+  {
+    "lesson": 807,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "For two hours. Say for short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
+    "after": "For two hours. The word for is short and soft. Read plus able, readable. Peace sounds like piece. Your turn. Earache. Hour. For two hours. Readable. Peace.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 807,
+    "path": "conversation.aiTask.starterEn",
+    "before": "Hello! Let's pretend I'm Dr. Fern. Let's play a health quiz. How many hours should children sleep?",
+    "after": "Hello! Let's pretend I'm Dr. Fern. Let's do a health quiz. How many hours should children sleep?",
+    "reviewers": "A+B",
+    "reason": "'play a quiz' is Japanese-English (クイズを する); 'do a quiz' is natural"
+  },
+  {
+    "lesson": 808,
+    "path": "teacher.segments[5].say",
+    "before": "Pen friend. A friend far away. You write letters to each other. Hello from my town! Pen friend!",
+    "after": "Pen pal. A friend far away. You write letters to each other. Hello from my town! Pen pal!",
+    "reviewers": "objective",
+    "reason": "pen friend -> pen pal missed here (vocab, slide and JA already say pen pal)"
+  },
+  {
+    "lesson": 808,
+    "path": "teacher.segments[5].subtitleEn",
+    "before": "Pen friend. A friend far away. You write letters to each other. Hello from my town! Pen friend!",
+    "after": "Pen pal. A friend far away. You write letters to each other. Hello from my town! Pen pal!",
+    "reviewers": "objective",
+    "reason": "match say"
+  },
+  {
+    "lesson": 808,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, How many hours should children sleep? Today, Kiko gets a letter from her pen pal back home. Her pen pal feels sleepy and grumpy every morning. Kiko wants to help. She walks with Toto every morning here, and she feels great. So she writes a letter of advice. She starts with, Dear friend, you should try a morning walk. Say it with me. Dear friend, you should try a morning walk. Perfect! Let's read Kiko's letter. \"Dear friend, How are you? You feel sleepy every morning. You should try a morning walk. It's good for your body and your mind. Walk for ten minutes before breakfast. Look at the sky and listen to the birds. Then eat a good breakfast. I walk with Toto every morning here. I feel great! Your friend, Kiko\" How long should her friend walk? For ten minutes. What should her friend eat after the walk? A good breakfast. Now, phonics. Character. The ch sounds like k. Salmon. The l is silent. Since April. Since tells us the starting time. Valuable. Very important. Drop the e and add able. Write. Write a letter. The w is silent. Your letters are valuable gifts!",
+    "after": "Hello, everyone! Last time, we said, How many hours should children sleep? Today, Kiko gets a letter from her pen pal back home. Her pen pal feels sleepy and grumpy every morning. Kiko wants to help. She walks with Toto every morning here, and she feels great. So she writes a letter of advice. She starts with, Dear friend, you should try a morning walk. Say it with me. Dear friend, you should try a morning walk. Perfect! Let's read Kiko's letter. \"Dear friend, How are you? You feel sleepy every morning. You should try a morning walk. It's good for your body and your mind. Walk for ten minutes before breakfast. Look at the sky and listen to the birds. Then eat a good breakfast. I walk with Toto every morning here. I feel great! Your friend, Kiko\" How long should her friend walk? For ten minutes. What should her friend eat after the walk? A good breakfast. Now, phonics. Character. The C H sounds like k. Salmon. The l is silent. Since April. Since tells us the starting time. Valuable. Very important. Drop the e and add able. Write. Write a letter. The w is silent. Your letters are valuable gifts!",
+    "reviewers": "B+C",
+    "reason": "bare 'ch' may be misread by TTS; segments use 'C H'"
+  },
+  {
+    "lesson": 809,
+    "path": "conversation.lines[5].en",
+    "before": "Granny Capy says it's a bridge to faraway friends. Maybe it's the Rainbow Bridge!",
+    "after": "Granny Capy says it's a bridge to faraway friends. Maybe it leads to the Rainbow Bridge!",
+    "reviewers": "A+B",
+    "reason": "the rainbow leads to the Rainbow Bridge (teacherScript, story plan); it is not the bridge itself"
+  },
+  {
+    "lesson": 809,
+    "path": "conversation.lines[5].ja",
+    "before": "カピーおばあちゃんは、とおくの ともだちへの はしだって。もしかしたら にじの はしかも！",
+    "after": "カピーおばあちゃんは、とおくの ともだちへの はしだって。もしかしたら にじの はしに つづいて いるのかも！",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 809,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. For tells how long. For two weeks. What's wrong is a kind question. You should gives good advice.",
+    "after": "Here's the point. For tells how long. For two weeks. What's wrong? That's a kind question. Use You should to give advice.",
+    "reviewers": "A+C",
+    "reason": "'What's wrong is a kind question' reads as a sentence; 'You should gives' trips the reader"
+  },
+  {
+    "lesson": 809,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. For tells how long. For two weeks. What's wrong is a kind question. You should gives good advice.",
+    "after": "Here's the point. For tells how long. For two weeks. What's wrong? That's a kind question. Use You should to give advice.",
+    "reviewers": "A+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 809,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。for は どのくらいの あいだか を いう。for two weeks。What's wrong? は やさしい しつもん。You should は いい アドバイス。",
+    "after": "ポイント。for は どのくらいの あいだか を いう。for two weeks。What's wrong? は やさしい しつもん。You should で アドバイスを しよう。",
+    "reviewers": "A+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 809,
+    "path": "teacher.segments[9].say",
+    "before": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. Say for short and soft.",
+    "after": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. The word for is short and soft.",
+    "reviewers": "B+C",
+    "reason": "'Say for short' reads as the idiom 'for short'"
+  },
+  {
+    "lesson": 809,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. Say for short and soft.",
+    "after": "Review time! Back plus ache. Backache. Climb. The B is sleeping. Shh! For a week. The word for is short and soft.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 810,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, We've been here for two weeks, and I feel great! Today is the Health Festival in the village square. Everyone is here. Granny Capy, Dr. Fern and Toto are in the front row. First, Toto leads the morning exercise. Then, Kiko gives her speech. She takes a deep breath, and she does it! At the end, everyone shouts, Healthy body, happy mind! Say it with me. Healthy body, happy mind! Fantastic! Let's read the festival program. \"Village of Springs Health Festival. At ten, morning exercise with Toto. At half past ten, habit survey results. At eleven, Kiko's speech. At half past eleven, health quiz with prizes. At twelve, healthy lunch at the Spring Inn. All day, the calm-down corner is open by the Heart Spring. Warm water, warm hearts!\" What time is Kiko's speech? At eleven. Where is the lunch? At the Spring Inn. After the festival, we say, Thank you for everything, Granny Capy! Then the rainbow appears again over the Heart Spring. Let's follow the rainbow to the Rainbow Bridge! Now, phonics. Echo. The ch sounds like k. Headache. Head plus ache. Knee. The k is silent. Since kindergarten. Since tells us the start. Unforgettable. We will never forget it. Week. Seven days. What an unforgettable stay!",
+    "after": "Hello, everyone! Last time, we said, We've been here for two weeks, and I feel great! Today is the Health Festival in the village square. Everyone is here. Granny Capy, Dr. Fern and Toto are in the front row. First, Toto leads the morning exercise. Then, Kiko gives her speech. She takes a deep breath, and she does it! At the end, everyone shouts, Healthy body, happy mind! Say it with me. Healthy body, happy mind! Fantastic! Let's read the festival program. \"Village of Springs Health Festival. At ten, morning exercise with Toto. At half past ten, habit survey results. At eleven, Kiko's speech. At half past eleven, health quiz with prizes. At twelve, healthy lunch at the Spring Inn. All day, the calm-down corner is open by the Heart Spring. Warm water, warm hearts!\" What time is Kiko's speech? At eleven. Where is the lunch? At the Spring Inn. After the festival, we say, Thank you for everything, Granny Capy! Then the rainbow appears again over the Heart Spring. Let's follow the rainbow to the Rainbow Bridge! Now, phonics. Echo. The C H sounds like k. Headache. Head plus ache. Knee. The k is silent. Since kindergarten. Since tells us the start. Unforgettable. We will never forget it. Week. Seven days. What an unforgettable stay!",
+    "reviewers": "B+C",
+    "reason": "bare 'ch' may be misread by TTS; segments use 'C H'"
+  },
+  {
+    "lesson": 810,
+    "path": "teacher.segments[20].say",
+    "before": "Amazing work in World 27! You can talk about health, feelings, and kind advice. Next, go and talk with Riko! Bye-bye! Next is World 28, the Rainbow Bridge!",
+    "after": "Amazing work in World 27! You can talk about health, feelings, and kind advice. World 28, the Rainbow Bridge, is coming up! Next, go and talk with Riko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "speech went on after Bye-bye and stacked two 'Next'; goodbye moved to the end"
+  },
+  {
+    "lesson": 810,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "Amazing work in World 27! You can talk about health, feelings, and kind advice. Next, go and talk with Riko! Bye-bye! Next is World 28, the Rainbow Bridge!",
+    "after": "Amazing work in World 27! You can talk about health, feelings, and kind advice. World 28, the Rainbow Bridge, is coming up! Next, go and talk with Riko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 810,
+    "path": "teacher.segments[20].subtitleJa",
+    "before": "ワールド27、ほんとうに よく がんばったね！ けんこう、きもち、やさしい アドバイスの ことが はなせるね。このあと リコちゃんと おはなし してね！ バイバイ！ つぎは ワールド28、にじの はしだよ！",
+    "after": "ワールド27、ほんとうに よく がんばったね！ けんこう、きもち、やさしい アドバイスの ことが はなせるね。もうすぐ ワールド28、にじの はしだよ！ このあと リコちゃんと おはなし してね！ バイバイ！",
+    "reviewers": "A+C",
+    "reason": "match EN"
+  }
+]

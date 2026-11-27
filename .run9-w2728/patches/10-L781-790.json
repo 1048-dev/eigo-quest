@@ -1,0 +1,338 @@
+[
+  {
+    "lesson": 781,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Thank you for watching our play! Today, we walk down the mountain path from the theater. It's a long walk. Look! There's white steam everywhere. This is the Village of Springs. An old capybara comes to meet us. Her name is Granny Capy. She smiles and says, Welcome to the Village of Springs! Kiko puts her hand in a little spring. Oh, it's warm! The spring water here is warm. Say it with me. The spring water here is warm. Wonderful! Let's read the sign by the stone path. \"Welcome to the Village of Springs! There are twelve warm springs in our village. The biggest one is the Heart Spring. It is in the middle of the village. You can put your hands and feet in the water. Please do not swim in the springs. Warm water, warm hearts! From the Spring Inn.\" How many springs are there? Twelve. What is the biggest spring? The Heart Spring. Now, phonics. Today, c h says k. Echo. Hello, hello, hello. School. A short k sound. Chorus. Let's sing together. Character. Birimo is a funny character. Let's go and find the Heart Spring!",
+    "after": "Hello, everyone! Last time, we said, Thank you for watching our play! Today, we walk down the mountain path from the theater. It's a long walk. Look! There's white steam everywhere. This is the Village of Springs. An old capybara comes to meet us. Her name is Granny Capy. She smiles and says, Welcome to the Village of Springs! Kiko puts her hand in a little spring. Oh, it's warm! The spring water here is warm. Say it with me. The spring water here is warm. Wonderful! Let's read the sign by the stone path. \"Welcome to the Village of Springs! There are twelve warm springs in our village. The biggest one is the Heart Spring. It is in the middle of the village. You can put your hands and feet in the water. Please do not swim in the springs. Warm water, warm hearts! From the Spring Inn.\" How many springs are there? Twelve. What is the biggest spring? The Heart Spring. Now, phonics. Today, c h makes a k sound. Echo. Hello, hello, hello. School. A short k sound. Chorus. Let's sing together. Character. Birimo is a funny character. Let's go and find the Heart Spring!",
+    "reviewers": "B+C",
+    "reason": "TTS reads the bare letter k as 'kay'; 'a k sound' is how US teachers name the sound"
+  },
+  {
+    "lesson": 781,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! C H usually says ch, like cheese. But sometimes it says k! Echo. School. Hear the k?",
+    "after": "Sound time! C H usually sounds like the start of cheese. But sometimes it makes a k sound! Echo. School. Hear the k sound?",
+    "reviewers": "B+C",
+    "reason": "bare letter group 'ch' and bare 'k' are TTS risks; name the sound with a real word"
+  },
+  {
+    "lesson": 781,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! C H usually says ch, like cheese. But sometimes it says k! Echo. School. Hear the k?",
+    "after": "Sound time! C H usually sounds like the start of cheese. But sometimes it makes a k sound! Echo. School. Hear the k sound?",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 781,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ c と h は ふつう「チ」、cheese みたいに。でも ときどき「ク」に なるよ！ echo。school。ク が きこえた？",
+    "after": "おとの じかん！ c と h は ふつう「チ」、cheese の はじめの おと。でも ときどき「ク」の おとに なるよ！ echo。school。ク が きこえた？",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 782,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. What's wrong is a kind question. Answer with I have a, and then say, That's too bad. And if you feel sick, always tell a grown-up.",
+    "after": "Here's the point. What's wrong is a kind question. Answer, I have a headache. Then your friend says, That's too bad. And if you feel sick, always tell a grown-up.",
+    "reviewers": "B+C",
+    "reason": "EN made the same child say both lines (JA says the asker says That's too bad); bare 'I have a' is a TTS stumble"
+  },
+  {
+    "lesson": 782,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. What's wrong is a kind question. Answer with I have a, and then say, That's too bad. And if you feel sick, always tell a grown-up.",
+    "after": "Here's the point. What's wrong is a kind question. Answer, I have a headache. Then your friend says, That's too bad. And if you feel sick, always tell a grown-up.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 782,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。What's wrong? は やさしい しつもん。I have a ～ で こたえて、きいた ひとは That's too bad. と いおう。それと、ぐあいが わるい ときは かならず おとなに つたえてね。",
+    "after": "ポイント。What's wrong? は やさしい しつもん。I have a headache. と こたえたら、きいた ともだちは That's too bad. と いうよ。それと、ぐあいが わるい ときは かならず おとなに つたえてね。",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 782,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! A C H E says ache. The C H says k, and the E is quiet. Ache. Head plus ache. Headache!",
+    "after": "Sound time! A C H E says ache. The C H makes a k sound, and the E is quiet. Ache. Head plus ache. Headache!",
+    "reviewers": "B+C",
+    "reason": "TTS reads the bare letter k as 'kay'; 'a k sound' is how US teachers name the sound"
+  },
+  {
+    "lesson": 782,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! A C H E says ache. The C H says k, and the E is quiet. Ache. Head plus ache. Headache!",
+    "after": "Sound time! A C H E says ache. The C H makes a k sound, and the E is quiet. Ache. Head plus ache. Headache!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 783,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, What's wrong? Kiko had a good rest, and now she feels better. Tonight, there is a small fair in the village. There are food stalls with rice balls, soup and cakes. Birimo is so happy. He eats and eats. Later, he sits down on a bench and holds his tummy. Haru asks, Are you OK? Birimo says, Not really. My stomach hurts. I ate too much. Say it with me. My stomach hurts. I ate too much. Great! Ms. Emma tells Birimo to sit and rest. Let's read the menu at the soup stall. \"Village Fair Food Stalls. Open tonight from five to eight. Rice balls: salmon or plum. Hot vegetable soup. Sweet potato cakes. Fresh fruit cups. Our tip: eat slowly and stop when you feel full. Your stomach will thank you! Water is free at every stall. Please put your trash in the bins.\" What kind of soup is there? Hot vegetable soup. When should you stop eating? When you feel full. Now, phonics. Stomach. The c h says k. Stomachache. Stomach plus ache. Bellyache. Belly is another word for stomach. Orchestra. Here, c h says k, too. Eat slowly, everyone!",
+    "after": "Hello, everyone! Last time, we said, What's wrong? Kiko had a good rest, and now she feels better. Tonight, there is a small fair in the village. There are food stalls with rice balls, soup and cakes. Birimo is so happy. He eats and eats. Later, he sits down on a bench and holds his tummy. Haru asks, Are you OK? Birimo says, Not really. My stomach hurts. I ate too much. Say it with me. My stomach hurts. I ate too much. Great! I tell Birimo to sit and rest. Let's read the menu at the soup stall. \"Village Fair Food Stalls. Open tonight from five to eight. Rice balls: salmon or plum. Hot vegetable soup. Sweet potato cakes. Fresh fruit cups. Our tip: eat slowly and stop when you feel full. Your stomach will thank you! Water is free at every stall. Please put your trash in the bins.\" What kind of soup is there? Hot vegetable soup. When should you stop eating? When you feel full. Now, phonics. Stomach. The c h makes a k sound. Stomachache. Stomach plus ache. Bellyache. Belly is another word for stomach. Orchestra. Here, c h makes a k sound, too. Eat slowly, everyone!",
+    "reviewers": "A+B",
+    "reason": "Ms. Emma's own narration in the third person (block rule: I ...); bare 'k' TTS risk"
+  },
+  {
+    "lesson": 783,
+    "path": "conversation.aiTask.goalJa",
+    "before": "AI の エマ先生と やたいの はなしを しよう。たべすぎた やくに なって、My stomach hurts. I ate too much. と ぐあいを つたえよう",
+    "after": "AI の キコと やたいの はなしを しよう。たべすぎた やくに なって、My stomach hurts. I ate too much. と ぐあいを つたえよう",
+    "reviewers": "objective (JA)",
+    "reason": "the app never shows Ms. Emma as the AI partner; the partner is Kiko (wrap-up: talk with Kiko)"
+  },
+  {
+    "lesson": 783,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Stomach. The C H says k. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
+    "after": "Sound time! Stomach. The C H makes a k sound. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
+    "reviewers": "B+C",
+    "reason": "TTS reads the bare letter k as 'kay'; 'a k sound' is how US teachers name the sound"
+  },
+  {
+    "lesson": 783,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Stomach. The C H says k. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
+    "after": "Sound time! Stomach. The C H makes a k sound. Stomach. Add ache. Stomachache! Belly means stomach, too. Belly plus ache. Bellyache!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 783,
+    "path": "teacher.segments[10].say",
+    "before": "Orchestra. Lots of music together. C H says k here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
+    "after": "Orchestra. Many musicians play together. C H makes a k sound here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
+    "reviewers": "A+B",
+    "reason": "an orchestra is a group of musicians, not 'lots of music' (JA: たくさんの がっきで えんそう); bare 'k' TTS risk"
+  },
+  {
+    "lesson": 783,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Orchestra. Lots of music together. C H says k here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
+    "after": "Orchestra. Many musicians play together. C H makes a k sound here, too. Your turn! Stomach. Stomachache. Bellyache. Orchestra.",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 784,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, My stomach hurts. I ate too much. This morning, Haru doesn't feel well. His face is red, and he feels hot. He has a fever（ねつ）. Haru has had a fever since yesterday. Ms. Emma takes him to the little clinic. The village doctor is a kind deer named Dr. Fern. Dr. Fern asks, How long have you had a fever? Haru says, Since yesterday. I have a cough and a sore throat. Say it with me. How long have you had a fever? Since yesterday. Very good! Dr. Fern checks Haru carefully and writes a note. Let's read it. \"Dr. Fern's Note for Haru. You have a small cold. Don't worry. Drink lots of water. Rest in bed today and tomorrow. Sleep well at night. Cough into your elbow. Tell Ms. Emma if you feel worse. Then come back and see me. Get lots of rest!\" How many days should Haru rest in bed? Two days, today and tomorrow. What should he drink? Lots of water. Now, phonics. Backache. Back plus ache. Mechanic. The c h says k. Anchor. A big ship has an anchor. Christmas. Again, c h says k. Rest well, Haru!",
+    "after": "Hello, everyone! Last time, we said, My stomach hurts. I ate too much. This morning, Haru doesn't feel well. His face is red, and he feels hot. He has a fever（ねつ）. Haru has had a fever since yesterday. I take him to the little clinic. The village doctor is a kind deer named Dr. Fern. Dr. Fern asks, How long have you had a fever? Haru says, Since yesterday. I have a cough and a sore throat. Say it with me. How long have you had a fever? Since yesterday. Very good! Dr. Fern checks Haru carefully and writes a note. Let's read it. \"Dr. Fern's Note for Haru. You have a small cold. Don't worry. Drink lots of water. Rest in bed today and tomorrow. Sleep well at night. Cough into your elbow. Tell Ms. Emma if you feel worse. Then come back and see me. Get lots of rest!\" How many days should Haru rest in bed? Two days, today and tomorrow. What should he drink? Lots of water. Now, phonics. Backache. Back plus ache. Mechanic. The c h makes a k sound. Anchor. A big ship has an anchor. Christmas. Again, c h makes a k sound. Rest well, Haru!",
+    "reviewers": "A+B",
+    "reason": "Ms. Emma's own narration in the third person (block rule: I ...); bare 'k' TTS risk"
+  },
+  {
+    "lesson": 784,
+    "path": "teacher.segments[0].say",
+    "before": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's go with Ms. Emma to the little clinic.",
+    "after": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's take him to the little clinic.",
+    "reviewers": "A+B",
+    "reason": "Ms. Emma is the narrator; 'go with Ms. Emma' talks about herself in the third person"
+  },
+  {
+    "lesson": 784,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's go with Ms. Emma to the little clinic.",
+    "after": "Hello, friends. Oh no. This morning, Haru doesn't feel well. His face is red, and he feels hot. Let's take him to the little clinic.",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 784,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "こんにちは、みんな。あらら。けさ、ハルくんの ぐあいが よくないの。かおが あかくて、からだが あつい。エマ先生と いっしょに ちいさな しんりょうじょへ いこう。",
+    "after": "こんにちは、みんな。あらら。けさ、ハルくんの ぐあいが よくないの。かおが あかくて、からだが あつい。ハルくんを ちいさな しんりょうじょへ つれて いこう。",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 784,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H says k!",
+    "after": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H makes a k sound!",
+    "reviewers": "B+C",
+    "reason": "TTS reads the bare letter k as 'kay'; 'a k sound' is how US teachers name the sound"
+  },
+  {
+    "lesson": 784,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H says k!",
+    "after": "Sound time! Back plus ache. Backache. My back hurts. Mechanic. A mechanic fixes cars. The C H makes a k sound!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 784,
+    "path": "teacher.segments[10].say",
+    "before": "Anchor. A ship drops its anchor. Christmas. C H says k, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
+    "after": "Anchor. A ship drops its anchor. Christmas. C H makes a k sound, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
+    "reviewers": "B+C",
+    "reason": "TTS reads the bare letter k as 'kay'; 'a k sound' is how US teachers name the sound"
+  },
+  {
+    "lesson": 784,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Anchor. A ship drops its anchor. Christmas. C H says k, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
+    "after": "Anchor. A ship drops its anchor. Christmas. C H makes a k sound, and the T is quiet. Your turn! Backache. Mechanic. Anchor. Christmas.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 784,
+    "path": "conversation.lines[5].en",
+    "before": "Thank you, doctor. Let's go back to the inn, Haru.",
+    "after": "Thank you, Dr. Fern. Let's go back to the inn, Haru.",
+    "reviewers": "objective",
+    "reason": "lowercase 'doctor' in direct address; use the name"
+  },
+  {
+    "lesson": 785,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, How long have you had a fever? Since yesterday. Haru is resting in his room at the Spring Inn today. He can't come out and play. So, let's make him a get-well card! Riko draws a big sun. Kiko draws some flowers. Birimo draws a rice ball, of course. Then, we write a message. I hope you feel better soon. Say it with me. I hope you feel better soon. Lovely! We can also write, Get well soon! And, Take care of yourself. Let's read our card together. \"Dear Haru, We miss you! The village is quiet without you. Please drink lots of water and get lots of sleep. Granny Capy is making you warm soup. Birimo wants to play cards with you. Get well soon! Take care of yourself. I hope you feel better soon. Love, Riko, Kiko, Birimo and Ms. Emma\" Who is making soup? Granny Capy. What does Birimo want to do? Play cards with Haru. Now, phonics. Let's review. School. C h says k. Stomach. C h says k again. Headache. A c h e says ache. Stomachache. Stomach plus ache. Let's take the card to Haru!",
+    "after": "Hello, everyone! Last time, we said, How long have you had a fever? Since yesterday. Haru is resting in his room at the Spring Inn today. He can't come out and play. So, let's make him a get-well card! Riko draws a big sun. Kiko draws some flowers. Birimo draws a rice ball, of course. Then, we write a message. I hope you feel better soon. Say it with me. I hope you feel better soon. Great! We can also write, Get well soon! And, Take care of yourself. Let's read our card together. \"Dear Haru, We miss you! The village is quiet without you. Please drink lots of water and get lots of sleep. Granny Capy is making you warm soup. Birimo wants to play cards with you. Get well soon! Take care of yourself. I hope you feel better soon. Love, Riko, Kiko, Birimo and Ms. Emma\" Who is making soup? Granny Capy. What does Birimo want to do? Play cards with Haru. Now, phonics. Let's review. School. C h makes a k sound. Stomach. C h makes a k sound again. Headache. A c h e says ache. Stomachache. Stomach plus ache. Let's take the card to Haru!",
+    "reviewers": "A+B",
+    "reason": "British praise 'Lovely!' (block rule: US praise); bare 'k' TTS risk"
+  },
+  {
+    "lesson": 785,
+    "path": "conversation.aiTask.goalJa",
+    "before": "AI の エマ先生と いっしょに、ぐあいが わるい ともだちへの おみまいの ことばを かんがえて いって みよう",
+    "after": "AI の キコと いっしょに、ぐあいが わるい ともだちへの おみまいの ことばを かんがえて いって みよう",
+    "reviewers": "objective (JA)",
+    "reason": "the app never shows Ms. Emma as the AI partner; the partner is Kiko (wrap-up: talk with Kiko)"
+  },
+  {
+    "lesson": 785,
+    "path": "teacher.segments[3].say",
+    "before": "Card. A folded paper with a picture and words. Card!",
+    "after": "Card. A folded piece of paper with a picture and words. Card!",
+    "reviewers": "A+B",
+    "reason": "paper is uncountable here; 'a folded piece of paper'"
+  },
+  {
+    "lesson": 785,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Card. A folded paper with a picture and words. Card!",
+    "after": "Card. A folded piece of paper with a picture and words. Card!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 785,
+    "path": "teacher.segments[9].say",
+    "before": "Sound review! C H can say k. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
+    "after": "Sound review! C H can make a k sound. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
+    "reviewers": "B+C",
+    "reason": "TTS reads the bare letter k as 'kay'; 'a k sound' is how US teachers name the sound"
+  },
+  {
+    "lesson": 785,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound review! C H can say k. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
+    "after": "Sound review! C H can make a k sound. School. Stomach. And A C H E says ache. Headache. Stomachache. Stomach plus ache!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 785,
+    "path": "teacher.segments[10].say",
+    "before": "Clap the parts with me. Head, ache. Stom, ach, ache. Your turn! School. Stomach. Headache. Stomachache.",
+    "after": "Clap the parts with me. Head-ache. Stom-ach-ache. Your turn! School. Stomach. Headache. Stomachache.",
+    "reviewers": "B+C",
+    "reason": "comma-split syllables ('Stom, ach') read as separate words (ach like German); use the hyphen beat form"
+  },
+  {
+    "lesson": 785,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Clap the parts with me. Head, ache. Stom, ach, ache. Your turn! School. Stomach. Headache. Stomachache.",
+    "after": "Clap the parts with me. Head-ache. Stom-ach-ache. Your turn! School. Stomach. Headache. Stomachache.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 785,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "いっしょに てを たたいて わけよう。head、ache。stom、ach、ache。あなたの ばん！ school、stomach、headache、stomachache。",
+    "after": "いっしょに てを たたいて わけよう。head-ache。stom-ach-ache。あなたの ばん！ school、stomach、headache、stomachache。",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 787,
+    "path": "teacher.segments[20].say",
+    "before": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! Good night, and see you!",
+    "after": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! See you!",
+    "reviewers": "A+B",
+    "reason": "'Good night' as Ms. Emma's own goodbye assumes the child's time of day"
+  },
+  {
+    "lesson": 787,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! Good night, and see you!",
+    "after": "Fantastic! You can say when you usually go to bed. You can ask, How many hours do you sleep? Sleep well tonight! Next, go and talk with Kiko! See you!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 787,
+    "path": "teacher.segments[20].subtitleJa",
+    "before": "すばらしい！ いつも なんじに ねるか いえるね。「なんじかん ねるの？」と きけるね。こんやは ぐっすり ねてね！ このあと キコちゃんと おはなし してね！ おやすみ、またね！",
+    "after": "すばらしい！ いつも なんじに ねるか いえるね。「なんじかん ねるの？」と きけるね。こんやは ぐっすり ねてね！ このあと キコちゃんと おはなし してね！ またね！",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 788,
+    "path": "teacher.segments[1].say",
+    "before": "Today's goal. Tell good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
+    "after": "Today's goal. Talk about good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
+    "reviewers": "A+B",
+    "reason": "'tell good habits' is not natural English (tell needs a listener or 'about')"
+  },
+  {
+    "lesson": 788,
+    "path": "teacher.segments[1].subtitleEn",
+    "before": "Today's goal. Tell good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
+    "after": "Today's goal. Talk about good habits with ing words. Eating breakfast is good for your brain. Washing your hands is important.",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 789,
+    "path": "teacher.segments[7].say",
+    "before": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. Ms. Emma smiles. That's a good balance.",
+    "after": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. I say, That's a good balance.",
+    "reviewers": "A+B",
+    "reason": "Ms. Emma's own narration in the third person (block rule: I say)"
+  },
+  {
+    "lesson": 789,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. Ms. Emma smiles. That's a good balance.",
+    "after": "Birimo plays Toto. After one hour, I take a break and go outside. Riko says, Me too. Then I jump rope. I say, That's a good balance.",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 789,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "ビリモが トトの やく。「1じかん たったら、きゅうけいして そとに いくよ。」 リコちゃん「わたしも。それから なわとびを するの。」 エマ先生が にっこり。「いい バランスね。」",
+    "after": "ビリモが トトの やく。「1じかん たったら、きゅうけいして そとに いくよ。」 リコちゃん「わたしも。それから なわとびを するの。」 わたし「いい バランスね。」",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 790,
+    "path": "conversation.aiTask.goalJa",
+    "before": "AI の エマ先生に アンケートの けっかを はっぴょう しよう。～ people ～. / Most people ～. / Only ～. を つかおう",
+    "after": "AI の リコに アンケートの けっかを はっぴょう しよう。～ people ～. / Most people ～. / Only ～. を つかおう",
+    "reviewers": "objective (JA)",
+    "reason": "the app never shows Ms. Emma as the AI partner; the partner is Riko (wrap-up: talk with Riko)"
+  }
+]
