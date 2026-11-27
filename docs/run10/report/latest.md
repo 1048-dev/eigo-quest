@@ -1,30 +1,30 @@
 # check:all レポート（さいごの 実行）
 
-- 日時: 2026-11-27T12:02:37.229Z
-- コミット: 68ec4da run9: zz-summary (auto-save)（コミット前の 変更あり）
+- 日時: 2026-11-27T18:53:30.701Z
+- コミット: d025726 run10 Phase 5 フレーズブック: docs/phrasebook.md（npm run phrasebook:doc・データは sc（コミット前の 変更あり）
 - コマンド: `npm run check:all`
-- けっか: **PASS**（8 PASS / 0 FAIL / 3 SKIP）・ぜんぶで 20m03s
+- けっか: **PASS**（11 PASS / 0 FAIL / 0 SKIP）・ぜんぶで 48m02s
 
 | # | name | result | count | time | note |
 |---|---|---|---|---|---|
-| 1 | english:lint（ぜんぶ） | ✅ PASS | 154506 strings / 1344 units・error 0 warn 465 info 275 | 7s |  |
+| 1 | english:lint（ぜんぶ） | ✅ PASS | 161841 strings / 1635 units・error 0 warn 464 info 274 | 8s |  |
 | 2 | tsc | ✅ PASS | 0 errors | 8s |  |
-| 3 | vitest | ✅ PASS | 2656 passed / 2656 tests（84 files） | 53s |  |
-| 4 | next build | ✅ PASS | 81 routes | 1m20s |  |
-| 5 | データの 確認（Phase 2） | ⏭ SKIP | - | 0ms | npm run check:data が まだ ない（Phase 2 で つくる） |
-| 6 | 画面の 描画（Phase 3） | ⏭ SKIP | - | 0ms | npm run check:render が まだ ない（Phase 3 で つくる） |
-| 7 | DB 停止の スモーク | ✅ PASS | 125 OK / 0 NG | 6m57s |  |
-| 8 | E2E（本物の DB・Phase 4） | ⏭ SKIP | - | 1ms | npm run check:e2e が まだ ない（Phase 4 で つくる） |
-| 9 | アクセシビリティ（axe） | ✅ PASS | 26 pages・critical/serious 0・moderate/minor 0 | 4m14s |  |
-| 10 | 内部リンク | ✅ PASS | 4123 URLs（画面 27）・broken 0・crawl errors 0 | 6m21s |  |
-| 11 | JS の 大きさ（/map・/lesson ≤ 230 kB） | ✅ PASS | /map 193/230 kB・/lesson/[lessonNo] 197/230 kB | 1s |  |
+| 3 | vitest | ✅ PASS | 2735 passed / 2735 tests（88 files） | 1m15s |  |
+| 4 | next build | ✅ PASS | 81 routes | 1m31s |  |
+| 5 | データの 確認（Phase 2） | ✅ PASS | レッスン 1,200・テスト 2,719・問題 455,781・おはなし 100・力だめし 5・問題の ある データ 0 | 1m21s |  |
+| 6 | 画面の 描画（Phase 3） | ✅ PASS | レッスン 1,200・テスト 3,035・おはなし 100・力だめし 5・描画 333,549・問題 0 | 5m14s |  |
+| 7 | DB 停止の スモーク | ✅ PASS | 125 OK / 0 NG | 6m48s |  |
+| 8 | E2E（本物の DB・Phase 4） | ✅ PASS | worlds 40/40・checks 341 OK / 0 NG・1254s | 23m23s |  |
+| 9 | アクセシビリティ（axe） | ✅ PASS | 26 pages・critical/serious 0・moderate/minor 0 | 1m56s |  |
+| 10 | 内部リンク | ✅ PASS | 4123 URLs（画面 27）・broken 0・crawl errors 0 | 6m16s |  |
+| 11 | JS の 大きさ（/map・/lesson ≤ 230 kB） | ✅ PASS | /map 195/230 kB・/lesson/[lessonNo] 200/230 kB | 2s |  |
 
 ## JS の 大きさ（First Load JS）
 
 | ページ | First Load JS | 予算 |
 |---|---|---|
-| /map | 193 kB | 230 kB ✅ |
-| /lesson/[lessonNo] | 197 kB | 230 kB ✅ |
+| /map | 195 kB | 230 kB ✅ |
+| /lesson/[lessonNo] | 200 kB | 230 kB ✅ |
 
 ## くわしい レポート
 

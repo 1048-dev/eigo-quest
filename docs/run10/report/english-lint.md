@@ -1,7 +1,7 @@
 # English lint: all
 
 - 日付: 2026-11-27
-- はんい: レッスン 1〜1200 ＋ としょかん ＋ 力だめし ＋ アプリの 文字（src・worksheets。フレーズブックだけ）（`npm run english:lint -- --all --strict --out docs/run10/report/english-lint.md --quiet`）
+- はんい: レッスン 1〜1200 ＋ としょかん ＋ 力だめし ＋ アプリの 文字（src・worksheets。フレーズブックだけ）（`npm run english:lint -- --all --strict --out C:\Users\EMICLE\eigo-quest-night\docs\run10\report\english-lint.md`）
 - しらべた 文字列: 161841（1635 ユニット）
 - 結果: **error 0 / warn 464 / info 274**
 

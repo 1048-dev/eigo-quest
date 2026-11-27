@@ -244,3 +244,24 @@
 - run9 で「わざと」と きめた warn（stiff-phrase 13 など）は さわって いない。
 - vitest の とちゅうで「Timeout calling onTaskUpdate」（tests/data-check.test.ts の 1 つの テストが いそがしい とき 60 秒 イベントループを とめていた。ひとつで 19 秒・ぜんぶ いっしょだと 62 秒）→ runDataChecks の セクションの あいだで イベントループに もどす ように した（scripts/lib/dataCheck.ts）。その あと 2 回 とおった。1 回だけ Windows の 一時ファイルの エラー（UNKNOWN: open …\Temp\…\ssr\…・tests/phonics-w25）が 出たが、やりなおしで 出なかった（テストの 中身では ない）。
 - Phase 4 の メモ（TPR の ❌ 絵文字）は 英語の きまりでは ないので この フェーズでは かえていない。
+
+## Phase 5 の あと: check:all を ぜんぶ 通しで（2026-11-28）
+
+### けっか（npm run check:all・48 分 02 秒・終了コード 0）
+| ステップ | けっか | 数 | 時間 |
+|---|---|---|---|
+| english:lint（ぜんぶ） | PASS | 161,841 文字列 / 1,635 ユニット・error 0 warn 464 info 274 | 8s |
+| tsc | PASS | error 0 | 8s |
+| vitest | PASS | 2,735 passed / 2,735（88 files） | 1m15s |
+| next build | PASS | 81 routes | 1m31s |
+| データの 確認（Phase 2） | PASS | レッスン 1,200・テスト 2,719・問題 455,781・問題の ある データ 0 | 1m21s |
+| 画面の 描画（Phase 3） | PASS | 描画 333,549・問題 0 | 5m14s |
+| DB 停止の スモーク | PASS | 125 OK / 0 NG | 6m48s |
+| E2E（本物の DB・Phase 4） | PASS | ワールド 40/40・341 OK / 0 NG | 23m23s |
+| アクセシビリティ（axe） | PASS | 26 画面・critical/serious 0・moderate/minor 0 | 1m56s |
+| 内部リンク | PASS | 4,123 URL（画面 27）・broken 0 | 6m16s |
+| JS の 大きさ | PASS | /map 195・/lesson 200 kB（予算 230 kB） | 2s |
+
+- 失敗は 0 件。なおす ものが なかったので、コードと テストは かえていない（レポート docs/run10/report/*.md だけ 更新）。
+- 描画の 数が 333,550 → 333,549（先生の 授業 98,100 → 98,099）に へった わけを しらべた: Phase 5 の 前と 後で 1,200 レッスンの 先生の セグメントの「声の 区切り（units）」を くらべると、かわったのは L694・L769・L803・L1005 だけ。L769 の セグメント 5「Exit. Go off the stage. Bye-bye! Exit!」→「… Bye! Exit!」で 短い 文が 1 つの 区切りに まとまり、units が 2 → 1 に なったため「話す（さいごの 文）」の 画面が 1 つ へった。ことばの なおしに よる 正しい へりかたで、バグでは ない。
+- 本番の DB（ポート 5432）には さわっていない。
