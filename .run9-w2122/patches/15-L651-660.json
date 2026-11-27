@@ -1,0 +1,442 @@
+[
+ {
+  "lesson": 651,
+  "path": "teacher.segments[6].say",
+  "before": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy says softly, Thank you, whispered the boy.",
+  "after": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy is very quiet. Thank you, whispered the boy.",
+  "reviewers": "A+B+C",
+  "reason": "'the boy says softly, Thank you, whispered the boy' tells who spoke twice; the narration now sets up the quiet voice only"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[6].subtitleEn",
+  "before": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy says softly, Thank you, whispered the boy.",
+  "after": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy is very quiet. Thank you, whispered the boy.",
+  "reviewers": "A+B+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "キコちゃんの ほんを よもう。おおきな なみが きて、おとこの子が うみに おちる。「たすけて！」と おとこの子は さけんだ。クジラが およいで くる。「ここに いるよ」と クジラは いった。はまべで おとこの子は そっと いう。「ありがとう」と おとこの子は ささやいた。",
+  "after": "キコちゃんの ほんを よもう。おおきな なみが きて、おとこの子が うみに おちる。「たすけて！」と おとこの子は さけんだ。クジラが およいで くる。「ここに いるよ」と クジラは いった。はまべで おとこの子は とても しずか。「ありがとう」と おとこの子は ささやいた。",
+  "reviewers": "A+B+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[7].say",
+  "before": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it soft.",
+  "after": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it softly.",
+  "reviewers": "A+B",
+  "reason": "Adverb after read: softly"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[7].subtitleEn",
+  "before": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it soft.",
+  "after": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it softly.",
+  "reviewers": "A+B",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 651,
+  "path": "phonics.sounds[2]",
+  "before": "↗",
+  "after": "↘",
+  "reviewers": "objective",
+  "reason": "Who's there? is a wh-question; L652, L654 and L655 teach that who/where questions go down, and a knock-knock 'Who's there?' falls"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[8].say",
+  "before": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes up.",
+  "after": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes down.",
+  "reviewers": "objective",
+  "reason": "Follow phonics.sounds[2] (wh-question falls)"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes up.",
+  "after": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes down.",
+  "reviewers": "objective",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "おとの じかん！ セリフの おわりを みて。この しるしは つよい。Help! Watch out! いきを つよく だして！ こっちは しつもん。Who's there? こえが あがるよ。",
+  "after": "おとの じかん！ セリフの おわりを みて。この しるしは つよい。Help! Watch out! いきを つよく だして！ こっちは しつもん。Who's there? こえが さがるよ。",
+  "reviewers": "objective",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 651,
+  "path": "teacher.segments[8].slide.items[4]",
+  "before": "↗",
+  "after": "↘",
+  "reviewers": "objective",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 652,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Today, we will play a game called Who Said It? I'll read a line, and you guess who said it. There's another way to write lines. The person comes first. She said, Thank you for saving me. Say it with me. She said, Thank you for saving me. Excellent! Notice the comma after said. Then the line starts with a capital letter. For questions, use asked. He asked, Can I be your friend? To ask about a line, say, Who said, Watch out? Rusty did. Let's read some lines from our books. \"Line one: 'Where are you, Rusty?' Line two: 'Can I be your friend?' Line three: 'Thank you for saving me.' Line four: 'Wow! The stone is glowing!' Who said each line? Kai, Ember, Lulu, or Lord Grim?\" Hmm, let's think. Kai said, Where are you, Rusty? Ember asked, Can I be your friend? Lulu said, Thank you for saving me. Now, phonics and reading. Where are you, question mark. Wow, exclamation mark. Can you help me, question mark. Let's play Who Said It!",
+  "after": "Hello, everyone! Today, we will play a game called Who Said It? I'll read a line, and you guess who said it. There's another way to write lines. The person comes first. She said, Thank you for saving me. Say it with me. She said, Thank you for saving me. Excellent! Notice the comma after said. Then the line starts with a capital letter. For questions, use asked. He asked, Can I be your friend? To ask about a line, say, Who said, Watch out? Rusty did. Let's read some lines from our books. \"Line one: 'Where are you, Rusty?' Line two: 'Can I be your friend?' Line three: 'Thank you for saving me.' Line four: 'Wow! The stone is glowing!' Who said each line? Kai, Ember, Lulu, or Lord Grim?\" Hmm, let's think. Kai asked, Where are you, Rusty? Ember asked, Can I be your friend? Lulu said, Thank you for saving me. Now, phonics and reading. Where are you, question mark. Wow, exclamation mark. Can you help me, question mark. Let's play Who Said It!",
+  "reviewers": "objective",
+  "reason": "The script just taught 'For questions, use asked'; Kai's line is a question"
+ },
+ {
+  "lesson": 652,
+  "path": "phonics.sounds[0]",
+  "before": "↗",
+  "after": "↘",
+  "reviewers": "objective",
+  "reason": "Where are you? is a where-question; tipJa and seg9 both say the voice goes down"
+ },
+ {
+  "lesson": 653,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Today, we will read lines with feeling. The same words can sound very different. Listen. Oh no. That's sad. Oh no! That's surprised. Let's read it with feeling. Say it with me. Let's read it with feeling. Great! Books tell us how to read a line. Oh no! she cried sadly. Sadly means in a sad way. Oh no! he shouted in surprise. When you see sadly, read slowly and softly. When you see in surprise, read quickly and high. Let's read this short scene. \"Mira's new robot fell off the table. Crash! 'Oh no!' she cried sadly. She picked up the pieces. Then Bolt rolled into the room with a box of tools. 'What happened?' asked Bolt. Mira smiled. 'We can fix it!' Two hours later, the robot stood up and waved. 'Hooray!' they shouted happily.\" How did Mira feel at first? Sad. And at the end? Happy! Now, phonics and reading. Oh no, exclamation. What happened, question. Hooray, exclamation. Let's read with feeling!",
+  "after": "Hello, everyone! Today, we will read lines with feeling. The same words can sound very different. Listen. Oh no. That sounds sad. Oh no! That sounds surprised. Let's read it with feeling. Say it with me. Let's read it with feeling. Great! Books tell us how to read a line. Oh no! she cried sadly. Sadly means in a sad way. Oh no! he shouted in surprise. When you see sadly, read slowly and softly. When you see in surprise, read quickly and high. Let's read this short scene. \"Mira's new robot fell off the table. Crash! 'Oh no!' she cried sadly. She picked up the pieces. Then Bolt rolled into the room with a box of tools. 'What happened?' asked Bolt. Mira smiled. 'We can fix it!' Two hours later, the robot stood up and waved. 'Hooray!' they shouted happily.\" How did Mira feel at first? Sad. And at the end? Happy! Now, phonics and reading. Oh no, exclamation. What happened, question. Hooray, exclamation. Let's read with feeling!",
+  "reviewers": "objective",
+  "reason": "'That's surprised' is ungrammatical (a sound is not surprised); 'That sounds sad / surprised'"
+ },
+ {
+  "lesson": 653,
+  "path": "teacher.segments[4].say",
+  "before": "Surprise. Something happens, and you didn't know! Big eyes. Whoa! Surprise!",
+  "after": "Surprise. Something happens that you didn't expect! Big eyes. Whoa! Surprise!",
+  "reviewers": "A+B",
+  "reason": "Tense clash and unclear meaning; 'something you didn't expect' is the natural definition"
+ },
+ {
+  "lesson": 653,
+  "path": "teacher.segments[4].subtitleEn",
+  "before": "Surprise. Something happens, and you didn't know! Big eyes. Whoa! Surprise!",
+  "after": "Surprise. Something happens that you didn't expect! Big eyes. Whoa! Surprise!",
+  "reviewers": "A+B",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 653,
+  "path": "teacher.segments[4].subtitleJa",
+  "before": "surprise。しらなかった ことが おきる！ めを まるく。うわっ！ surprise！",
+  "after": "surprise。おもって いなかった ことが おきる！ めを まるく。うわっ！ surprise！",
+  "reviewers": "A+B",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 653,
+  "path": "teacher.segments[6].say",
+  "before": "Let's watch. His robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
+  "after": "Let's watch. Haru's robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
+  "reviewers": "A+B",
+  "reason": "'His' has no antecedent; Haru is named only later"
+ },
+ {
+  "lesson": 653,
+  "path": "teacher.segments[6].subtitleEn",
+  "before": "Let's watch. His robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
+  "after": "Let's watch. Haru's robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
+  "reviewers": "A+B",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 653,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "みてみよう。ロボットが つくえから おちた。ガシャン！ わたし「ハルくん、この セリフを かなしそうに よんで。Oh no!」 ハルくんは したを むく。「ああ… ぼくの ロボットが こわれちゃった。」 かわいそうな ハルくん！",
+  "after": "みてみよう。ハルくんの ロボットが つくえから おちた。ガシャン！ わたし「ハルくん、この セリフを かなしそうに よんで。Oh no!」 ハルくんは したを むく。「ああ… ぼくの ロボットが こわれちゃった。」 かわいそうな ハルくん！",
+  "reviewers": "A+B",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 653,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Let's read with feeling! Say \"I found it!\" in a happy way. Then I'll guess your feeling. Ready?",
+  "after": "Let's read with feeling! Pick a feeling and say \"I found it!\" Then I'll guess your feeling. Ready?",
+  "reviewers": "A+B",
+  "reason": "Haru tells the child which feeling to use and then says he will guess it; seg17 lets the child pick"
+ },
+ {
+  "lesson": 654,
+  "path": "teacher.segments[10].say",
+  "before": "Your turn. Be the moon. Who are you? Be the fox. Look out! Be kind. Are you OK?",
+  "after": "Your turn. Be the moon. Who are you? Look out! Now be the fox. Are you OK?",
+  "reviewers": "objective",
+  "reason": "In The Fox and the Moon the moon says 'Look out!' and the fox asks 'Are you OK?'"
+ },
+ {
+  "lesson": 654,
+  "path": "teacher.segments[10].subtitleEn",
+  "before": "Your turn. Be the moon. Who are you? Be the fox. Look out! Be kind. Are you OK?",
+  "after": "Your turn. Be the moon. Who are you? Look out! Now be the fox. Are you OK?",
+  "reviewers": "objective",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 654,
+  "path": "teacher.segments[10].subtitleJa",
+  "before": "あなたの ばん。つきに なって。Who are you? きつねに なって。Look out! やさしく。Are you OK?",
+  "after": "あなたの ばん。つきに なって。Who are you? Look out! こんどは きつねに なって。Are you OK?",
+  "reviewers": "objective",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 654,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hi! I'm a little bunny, and I love stories. Will you read me a story? Please start with \"Once upon a time\"!",
+  "after": "Let's pretend! I'm a little bunny, and I love stories. Will you read me a story? Please start with \"Once upon a time\"!",
+  "reviewers": "A+B",
+  "reason": "The partner is Riko; 'Hi! I'm a little bunny' needs a role-play cue to make sense from her"
+ },
+ {
+  "lesson": 655,
+  "path": "teacher.segments[0].say",
+  "before": "Welcome, welcome, to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
+  "after": "Welcome, welcome to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
+  "reviewers": "A+C",
+  "reason": "Stray comma before 'to' breaks the phrase"
+ },
+ {
+  "lesson": 655,
+  "path": "teacher.segments[0].subtitleEn",
+  "before": "Welcome, welcome, to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
+  "after": "Welcome, welcome to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
+  "reviewers": "A+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 655,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Welcome to Story Theater! Today, four of you will act out The Shy Dragon. First, choose your roles. I'll be the narrator. You're Lulu. I'm Ember. The narrator tells the story, and the characters say their lines. Here's an important line. Who are you? asked the dragon. Say it with me. Who are you? asked the dragon. Very good! Ember is shy, so say it softly. Let's read our script. \"Narrator: One snowy day, Lulu was lost on the mountain. Lulu: Help! Where are you, Mom? Narrator: A big dragon came out from behind a rock. Ember: Who are you? Lulu: I'm Lulu. I'm lost. Ember: Don't be scared. I'll take you home. Narrator: Ember flew Lulu home, and everyone cheered. Villagers: Hooray!\" Before we start, remember. Look at the audience. Speak loudly and clearly. Read with feeling! Now, phonics and reading review. Help, exclamation. Where are you, question. Hooray, exclamation. Who are you, question. Let's start from the beginning. Lights, please!",
+  "after": "Hello, everyone! Welcome to Story Theater! Today, four of you will act out The Shy Dragon. First, choose your roles. You can say, I'll be the narrator. You're Lulu. I'm Ember. The narrator tells the story, and the characters say their lines. Here's an important line. Who are you? asked the dragon. Say it with me. Who are you? asked the dragon. Very good! Ember is shy, so say it softly. Let's read our script. \"Narrator: One snowy day, Lulu was lost on the mountain. Lulu: Help! Where are you, Mom? Narrator: A big dragon came out from behind a rock. Ember: Who are you? Lulu: I'm Lulu. I'm lost. Ember: Don't be scared. I'll take you home. Narrator: Ember flew Lulu home, and everyone cheered. Villagers: Hooray!\" Before we start, remember. Look at the audience. Speak loudly and clearly. Read with feeling! Now, phonics and reading review. Help, exclamation. Where are you, question. Hooray, exclamation. Who are you, question. Let's start from the beginning. Lights, please!",
+  "reviewers": "A+B",
+  "reason": "After 'four of you will act', Ms. Emma saying 'I'll be the narrator. I'm Ember.' sounds like she is taking the roles; mark them as model lines"
+ },
+ {
+  "lesson": 656,
+  "path": "teacher.segments[2].say",
+  "before": "Riddle. A puzzle question. What has pages, but it's not a tree? Hmm! Riddle!",
+  "after": "Riddle. A puzzle question. What has pages but isn't a tree? Hmm! Riddle!",
+  "reviewers": "objective",
+  "reason": "Ungrammatical riddle question ('What has..., but it's not')"
+ },
+ {
+  "lesson": 656,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Riddle. A puzzle question. What has pages, but it's not a tree? Hmm! Riddle!",
+  "after": "Riddle. A puzzle question. What has pages but isn't a tree? Hmm! Riddle!",
+  "reviewers": "objective",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 656,
+  "path": "teacher.segments[17].say",
+  "before": "Your turn! What has pages, but it's not a tree? Answer with a reason. I think the answer is... because...",
+  "after": "Your turn! What has pages but isn't a tree? Answer with a reason. I think the answer is... because...",
+  "reviewers": "objective",
+  "reason": "Ungrammatical riddle question ('What has..., but it's not')"
+ },
+ {
+  "lesson": 656,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Your turn! What has pages, but it's not a tree? Answer with a reason. I think the answer is... because...",
+  "after": "Your turn! What has pages but isn't a tree? Answer with a reason. I think the answer is... because...",
+  "reviewers": "objective",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 656,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil, strong pen, soft cil. Famous, very well known!",
+  "after": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil. Pen-cil. Strong, then soft. Famous, very well known!",
+  "reviewers": "B+C",
+  "reason": "'cil' alone is a spelling fragment TTS may misread; hyphen beat form as the brief asks"
+ },
+ {
+  "lesson": 656,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil, strong pen, soft cil. Famous, very well known!",
+  "after": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil. Pen-cil. Strong, then soft. Famous, very well known!",
+  "reviewers": "B+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 657,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake, soft a, strong wake. Magic, magical!",
+  "after": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake. A-wake. Soft, then strong. Magic, magical!",
+  "reviewers": "B+C",
+  "reason": "'soft a' can be read as the letter name A; hyphen beat form"
+ },
+ {
+  "lesson": 657,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake, soft a, strong wake. Magic, magical!",
+  "after": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake. A-wake. Soft, then strong. Magic, magical!",
+  "reviewers": "B+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. A good card has three parts. The title. What it's about. And a reason to read it. Because it's funny. Because it's exciting!",
+  "after": "Here's the point. A good card has four parts. The title. What it's about. The main character. And a reason to read it. Because it's funny. Because it's exciting!",
+  "reviewers": "A+B",
+  "reason": "The teacherScript says a good card has four parts (title, about, main character, reason); seg8 said three"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. A good card has three parts. The title. What it's about. And a reason to read it. Because it's funny. Because it's exciting!",
+  "after": "Here's the point. A good card has four parts. The title. What it's about. The main character. And a reason to read it. Because it's funny. Because it's exciting!",
+  "reviewers": "A+B",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。いい カードには 3つの ぶぶんが ある。タイトル。なんの おはなしか。そして よむ りゆう。おもしろいから。わくわくするから！",
+  "after": "ポイント。いい カードには 4つの ぶぶんが ある。タイトル。なんの おはなしか。しゅじんこう。そして よむ りゆう。おもしろいから。わくわくするから！",
+  "reviewers": "A+B",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 658,
+  "path": "conversation.lines[4].en",
+  "before": "My favorite part is the storm. It's so adventurous!",
+  "after": "My favorite part is the storm. Kai is so adventurous!",
+  "reviewers": "A+B",
+  "reason": "adventurous describes a person who loves adventure, not a scene; Kai is the brave girl (phonics word kept)"
+ },
+ {
+  "lesson": 658,
+  "path": "conversation.lines[4].ja",
+  "before": "あらしの ところ。すごく ぼうけんって かんじ！",
+  "after": "あらしの ところ。カイが すごく ぼうけんずき なんだ！",
+  "reviewers": "A+B",
+  "reason": "Follow EN"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[7].say",
+  "before": "Haru asks, What's your favorite part? My favorite part is the storm. It's so adventurous! Riko asks, How many stars? Five stars, of course!",
+  "after": "Haru asks, What's your favorite part? Birimo says, My favorite part is the storm. Kai is so adventurous! Riko asks, How many stars? Birimo says, Five stars, of course!",
+  "reviewers": "A+C",
+  "reason": "Birimo's answers had no speaker tag (one TTS voice reads all); adventurous follows conversation.lines[4]"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[7].subtitleEn",
+  "before": "Haru asks, What's your favorite part? My favorite part is the storm. It's so adventurous! Riko asks, How many stars? Five stars, of course!",
+  "after": "Haru asks, What's your favorite part? Birimo says, My favorite part is the storm. Kai is so adventurous! Riko asks, How many stars? Birimo says, Five stars, of course!",
+  "reviewers": "A+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[7].subtitleJa",
+  "before": "ハルくん「すきな ところは どこ？」「あらしの ところ。すごく ぼうけんって かんじ！」 リコちゃん「ほしは いくつ？」「もちろん 5つ！」",
+  "after": "ハルくん「すきな ところは どこ？」 ビリモ「あらしの ところ。カイが すごく ぼうけんずき なんだ！」 リコちゃん「ほしは いくつ？」 ビリモ「もちろん 5つ！」",
+  "reviewers": "A+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[7].slide.items[1]",
+  "before": "My favorite part is the storm. It's so adventurous!",
+  "after": "My favorite part is the storm. Kai is so adventurous!",
+  "reviewers": "A+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Art, artist. Protect, protector. Second, strong sec, soft ond. Adventure, adventurous. And Hooray, strong and happy!",
+  "after": "Sound review! Art, artist. Protect, protector. Second. Sec-ond. Strong, then soft. Adventure, adventurous. And Hooray, strong and happy!",
+  "reviewers": "B+C",
+  "reason": "'sec' / 'ond' fragments; TTS may read 'ond' with a full vowel; hyphen beat form"
+ },
+ {
+  "lesson": 658,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Art, artist. Protect, protector. Second, strong sec, soft ond. Adventure, adventurous. And Hooray, strong and happy!",
+  "after": "Sound review! Art, artist. Protect, protector. Second. Sec-ond. Strong, then soft. Adventure, adventurous. And Hooray, strong and happy!",
+  "reviewers": "B+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 659,
+  "path": "teacher.segments[5].subtitleJa",
+  "before": "goodbye。でかける ときに いう ことば。てを ふって。goodbye！",
+  "after": "goodbye。わかれる ときに いう ことば。てを ふって。goodbye！",
+  "reviewers": "objective (JA)",
+  "reason": "でかける (go out) is いってきます, not goodbye; 'when we leave' here means parting"
+ },
+ {
+  "lesson": 659,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Read, reader. Direct, direction. Children, strong chil, soft dren. Nature, natural. And Who are you? Your voice goes down.",
+  "after": "Sound review! Read, reader. Direct, direction. Children. Chil-dren. Strong, then soft. Nature, natural. And Who are you? Your voice goes down.",
+  "reviewers": "B+C",
+  "reason": "Same syllable form as the other review lessons (hyphen beat form)"
+ },
+ {
+  "lesson": 659,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Read, reader. Direct, direction. Children, strong chil, soft dren. Nature, natural. And Who are you? Your voice goes down.",
+  "after": "Sound review! Read, reader. Direct, direction. Children. Chil-dren. Strong, then soft. Nature, natural. And Who are you? Your voice goes down.",
+  "reviewers": "B+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 660,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Welcome to the World 22 Grand Review! Today is the Book Festival in the big hall of the Amber Library. Everyone will present a favorite story. At the end of your talk, tell us the big idea of the story. That's the theme. This story is about friendship. I loved it! Say it with me. This story is about friendship. I loved it! Fantastic! Other themes are courage, family and kindness. In this world, you learned so much. What's it about? Who wrote it? You should read it. The main character is a shy dragon. She's brave and kind. At the beginning. In the middle. At the end. She was sad because she lost her friend. He was scared, so he ran away. When the bell rang, the door opened. If we find the key, we can open the book. Help! shouted the boy. Here is the festival program. Let's read it. \"Book Festival Program. Part one: Book talks. Part two: Story Theater, The Shy Dragon. Part three: Readers read their new story endings. Part four: A goodbye song from the little children.\" Now, phonics review. Writer. Narrator. Active. Giant. Mysterious. Help! You are wonderful readers. Let the festival begin!",
+  "after": "Hello, everyone! Welcome to the World 22 Grand Review! Today is the Book Festival in the big hall of the Amber Library. Everyone will present a favorite story. At the end of your talk, tell us the big idea of the story. That's the theme. This story is about friendship. I loved it! Say it with me. This story is about friendship. I loved it! Fantastic! Other themes are courage, family and kindness. In this world, you learned so much. What's it about? Who wrote it? You should read it. The main character is a shy dragon. He's big, but he's very gentle. At the beginning. In the middle. At the end. She was sad because she lost her friend. He was scared, so he ran away. When the bell rang, the door opened. If we find the key, we can open the book. Help! shouted the boy. Here is the festival program. Let's read it. \"Book Festival Program. Part one: Book talks. Part two: Story Theater, The Shy Dragon. Part three: Readers read their new story endings. Part four: A goodbye song from the little children.\" Now, phonics review. Writer. Narrator. Active. Giant. Mysterious. Help! You are wonderful readers. Let the festival begin!",
+  "reviewers": "A+B",
+  "reason": "The shy dragon is Ember (he); pairing it with 'She's brave and kind' (Kai's line) makes the dragon 'she'. Uses the L636 line instead"
+ },
+ {
+  "lesson": 660,
+  "path": "teacher.segments[9].say",
+  "before": "Grand sound review! Writer and narrator, people words. Act, active. Giant, strong gi, soft ant. Mysterious, full of secrets. And Help, strong!",
+  "after": "Grand sound review! Writer and narrator, people words. Act, active. Giant. Gi-ant. Strong, then soft. Mysterious, full of secrets. And Help, strong!",
+  "reviewers": "B+C",
+  "reason": "'gi' may be read 'ghee' and 'ant' as the insect /ænt/, but the sound is weak; hyphen beat form"
+ },
+ {
+  "lesson": 660,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Grand sound review! Writer and narrator, people words. Act, active. Giant, strong gi, soft ant. Mysterious, full of secrets. And Help, strong!",
+  "after": "Grand sound review! Writer and narrator, people words. Act, active. Giant. Gi-ant. Strong, then soft. Mysterious, full of secrets. And Help, strong!",
+  "reviewers": "B+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 660,
+  "path": "teacher.segments[20].say",
+  "before": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Next is World 23, the Green Laboratory! Bye-bye!",
+  "after": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Then it's on to World 23, the Green Laboratory! Bye-bye!",
+  "reviewers": "A+C",
+  "reason": "Two 'Next' lines in a row ('Next, go and talk... Next is World 23')"
+ },
+ {
+  "lesson": 660,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Next is World 23, the Green Laboratory! Bye-bye!",
+  "after": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Then it's on to World 23, the Green Laboratory! Bye-bye!",
+  "reviewers": "A+C",
+  "reason": "Follow say"
+ },
+ {
+  "lesson": 660,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "こはくの図書館を クリア！ ほんの はなし、キャラクター、おはなしの おわり、きもち、セリフ。さようなら、こはくの図書館！ このあと ビリモと おはなし してね！ つぎは ワールド23、みどりの研究所！ バイバイ！",
+  "after": "こはくの図書館を クリア！ ほんの はなし、キャラクター、おはなしの おわり、きもち、セリフ。さようなら、こはくの図書館！ このあと ビリモと おはなし してね！ そのあとは ワールド23、みどりの研究所！ バイバイ！",
+  "reviewers": "A+C",
+  "reason": "Follow say"
+ }
+]

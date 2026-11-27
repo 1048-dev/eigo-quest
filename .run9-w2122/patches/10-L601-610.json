@@ -1,0 +1,306 @@
+[
+  {
+    "lesson": 601,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Welcome to Stage 3! Look at this tall tower. It's the Tower of Messages. Messages fly from this tower every day. Say it with me. Messages fly from this tower every day. Great! Look at the birds. Birds carry letters to people far away. In this world, we will learn how to talk on the phone, how to make video calls, and how to write emails. We will connect with people who are far away. From now on, I will speak only English. （これからは えいごだけ。だいじょうぶ！） Don't worry. Listen carefully, look at the pictures, and guess. You can do it! Here is a note on the tower door. Let's read it together. \"Welcome, travelers! This is the Tower of Messages. Every morning, our birds carry letters to many towns. Please come in and look around. You can make phone calls on the second floor.\" Now, phonics. Today's word part is d i s. Like, dislike. Agree, disagree. Appear, disappear. Dis means not, or the opposite. Oh, look! The letter just disappeared! Where did it go? Ha ha, a bird took it. Let's go inside!",
+    "after": "Hello, everyone! Welcome to Stage 3! Look at this tall tower. It's the Tower of Messages. Messages fly from this tower every day. Say it with me. Messages fly from this tower every day. Great! Look at the birds. Birds carry letters to people far away. In this world, we will learn how to talk on the phone, how to make video calls, and how to write emails. We will connect with people who are far away. From now on, I will speak only English. （これからは えいごだけ。だいじょうぶ！） Don't worry. Listen carefully, look at the pictures, and guess. You can do it! Here is a note on the tower door. Let's read it together. \"Welcome, travelers! This is the Tower of Messages. Every morning, our birds carry letters to many towns. Please come in and look around. You can make phone calls on the second floor.\" Now, phonics. Today's word part is d i s. Agree, disagree. Appear, disappear. Like, dislike. Dis means not, or the opposite. Oh, look! The letter just disappeared! Where did it go? Ha ha, a bird took it. Let's go inside!",
+    "reviewers": "A+C",
+    "reason": "\"Like, dislike\" as the first pair reads as the filler \"like\" (for example); put it after the pattern is set"
+  },
+  {
+    "lesson": 601,
+    "path": "teacher.segments[10].say",
+    "before": "Now, sounds! Dis. Put dis in front of a word, and it means the opposite. Like, dislike. Agree, disagree. Appear, disappear.",
+    "after": "Now, sounds! Dis. Put dis in front of a word, and it means the opposite. Agree, disagree. Appear, disappear. Like, dislike.",
+    "reviewers": "A+C",
+    "reason": "\"...the opposite. Like, dislike.\" reads as filler \"like\"; reorder so like/dislike comes after the pattern"
+  },
+  {
+    "lesson": 601,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Now, sounds! Dis. Put dis in front of a word, and it means the opposite. Like, dislike. Agree, disagree. Appear, disappear.",
+    "after": "Now, sounds! Dis. Put dis in front of a word, and it means the opposite. Agree, disagree. Appear, disappear. Like, dislike.",
+    "reviewers": "A+C",
+    "reason": "\"...the opposite. Like, dislike.\" reads as filler \"like\"; reorder so like/dislike comes after the pattern"
+  },
+  {
+    "lesson": 601,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "つぎは おと！ dis。ことばの まえに dis を つけると、はんたいの いみ。like → dislike。agree → disagree。appear → disappear。",
+    "after": "つぎは おと！ dis。ことばの まえに dis を つけると、はんたいの いみ。agree → disagree。appear → disappear。like → dislike。",
+    "reviewers": "A+C",
+    "reason": "Follow the new order of the English"
+  },
+  {
+    "lesson": 601,
+    "path": "teacher.segments[18].say",
+    "before": "Your turn! How do you send messages? I usually... call? Draw a card? Then ask me, How about you?",
+    "after": "Your turn! How do you send messages? I usually... call? Write a letter? Then ask me, How about you?",
+    "reviewers": "A+B",
+    "reason": "\"Draw a card\" means picking a card; the world is about letters"
+  },
+  {
+    "lesson": 601,
+    "path": "teacher.segments[18].subtitleEn",
+    "before": "Your turn! How do you send messages? I usually... call? Draw a card? Then ask me, How about you?",
+    "after": "Your turn! How do you send messages? I usually... call? Write a letter? Then ask me, How about you?",
+    "reviewers": "A+B",
+    "reason": "\"Draw a card\" means picking a card; the world is about letters"
+  },
+  {
+    "lesson": 601,
+    "path": "teacher.segments[18].subtitleJa",
+    "before": "あなたの ばん！ どうやって メッセージを おくる？ I usually… でんわ？ カードを かく？ それから わたしに How about you? と きいてね。",
+    "after": "あなたの ばん！ どうやって メッセージを おくる？ I usually… でんわ？ てがみを かく？ それから わたしに How about you? と きいてね。",
+    "reviewers": "A+B",
+    "reason": "Follow the English (write a letter)"
+  },
+  {
+    "lesson": 601,
+    "path": "conversation.aiTask.goalJa",
+    "before": "とうに ついた ことを はなそう。ともだちに どうやって メッセージを おくるか こたえて、エマ先生にも しつもんしよう（なまえは いわなくて OK）",
+    "after": "とうに ついた ことを はなそう。ともだちに どうやって メッセージを おくるか こたえて、あいてにも しつもんしよう（なまえは いわなくて OK）",
+    "reviewers": "objective (JA)",
+    "reason": "The AI partner is Haru (wrap-up: talk with Haru), not Ms. Emma"
+  },
+  {
+    "lesson": 604,
+    "path": "conversation.lines[6].en",
+    "before": "Perfect. And never tell your address to a stranger on the phone.",
+    "after": "Perfect. And never give your address to a stranger on the phone.",
+    "reviewers": "A+B",
+    "reason": "\"tell your address\" is a calque of 住所を言う; US: give (out) your address"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[0].say",
+    "before": "Hi, everyone! Today is our first review day in Stage 3. The weekend is coming. Let's call a friend and make a plan!",
+    "after": "Hi, everyone! Today is our first review day in Stage 3. Let's call a friend and make a plan for the weekend!",
+    "reviewers": "A+B",
+    "reason": "Teacher narration should not assume the lesson day is near a weekend"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hi, everyone! Today is our first review day in Stage 3. The weekend is coming. Let's call a friend and make a plan!",
+    "after": "Hi, everyone! Today is our first review day in Stage 3. Let's call a friend and make a plan for the weekend!",
+    "reviewers": "A+B",
+    "reason": "Teacher narration should not assume the lesson day is near a weekend"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "みんな、やあ！ きょうは ステージ3 で はじめての ふくしゅうの ひ。もうすぐ しゅうまつ。ともだちに でんわして、よていを たてよう！",
+    "after": "みんな、やあ！ きょうは ステージ3 で はじめての ふくしゅうの ひ。ともだちに でんわして、しゅうまつの よていを たてよう！",
+    "reviewers": "A+B",
+    "reason": "Follow the English"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[19].say",
+    "before": "It's A! Hi, it's Kiko, is friendly. This is, is polite. Both are good. So smart!",
+    "after": "It's A! Hi, it's Kiko sounds friendly. This is Kiko sounds polite. Both are good. So smart!",
+    "reviewers": "A+C",
+    "reason": "\"This is, is polite\" stumbles when read aloud; use \"sounds\" and the full phrase"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[19].subtitleEn",
+    "before": "It's A! Hi, it's Kiko, is friendly. This is, is polite. Both are good. So smart!",
+    "after": "It's A! Hi, it's Kiko sounds friendly. This is Kiko sounds polite. Both are good. So smart!",
+    "reviewers": "A+C",
+    "reason": "\"This is, is polite\" stumbles when read aloud; use \"sounds\" and the full phrase"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[19].subtitleJa",
+    "before": "こたえは A！ Hi, it's Kiko は したしい いいかた。This is は ていねい。どちらも いいね。かしこい！",
+    "after": "こたえは A！ Hi, it's Kiko は したしい いいかた。This is Kiko は ていねい。どちらも いいね。かしこい！",
+    "reviewers": "A+C",
+    "reason": "Follow the English"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[20].say",
+    "before": "Fantastic review! You can call a friend, ask, Are you free on Saturday?, and make a plan. Next, go and talk with Kiko! See you on the weekend!",
+    "after": "Fantastic review! You can call a friend and ask, Are you free on Saturday? Then you can make a plan. Next, go and talk with Kiko! See you next time!",
+    "reviewers": "B+C",
+    "reason": "\"?,\" mid-sentence is hard to read and to say; split into two sentences; Pacing: the next lesson is not on the weekend"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "Fantastic review! You can call a friend, ask, Are you free on Saturday?, and make a plan. Next, go and talk with Kiko! See you on the weekend!",
+    "after": "Fantastic review! You can call a friend and ask, Are you free on Saturday? Then you can make a plan. Next, go and talk with Kiko! See you next time!",
+    "reviewers": "B+C",
+    "reason": "\"?,\" mid-sentence is hard to read and to say; split into two sentences; Pacing: the next lesson is not on the weekend"
+  },
+  {
+    "lesson": 605,
+    "path": "teacher.segments[20].subtitleJa",
+    "before": "すばらしい ふくしゅう！ ともだちに でんわして、Are you free on Saturday? と きいて、よていを たてられるね。このあと キコちゃんと おはなし してね！ しゅうまつに またね！",
+    "after": "すばらしい ふくしゅう！ ともだちに でんわして、Are you free on Saturday? と きいて、よていを たてられるね。このあと キコちゃんと おはなし してね！ またね！",
+    "reviewers": "A+B",
+    "reason": "Follow the English (See you next time)"
+  },
+  {
+    "lesson": 605,
+    "path": "conversation.aiTask.starterEn",
+    "before": "Hello? Oh, hi! It's me, Riko. What's up?",
+    "after": "Hello, this is Kiko. Oh, hi! What's up?",
+    "reviewers": "objective",
+    "reason": "The AI partner is Kiko (wrap-up: talk with Kiko), but the starter said Riko"
+  },
+  {
+    "lesson": 606,
+    "path": "conversation.aiTask.starterEn",
+    "before": "Hello! This is Ms. Emma on Festival Island. Can you hear me?",
+    "after": "Hi! It's Riko. I'm calling from the tower. Can you hear me?",
+    "reviewers": "objective",
+    "reason": "The AI partner is Riko (wrap-up: talk with Riko), but the starter introduced Ms. Emma"
+  },
+  {
+    "lesson": 607,
+    "path": "conversation.lines[5].en",
+    "before": "Can you turn on your camera, too? We can only see your ears!",
+    "after": "Can you turn on your camera, too? We can't see your face!",
+    "reviewers": "A+B",
+    "reason": "If we can see his ears, the camera is already on; with the camera off you see no face (matches L606 black screen)"
+  },
+  {
+    "lesson": 607,
+    "path": "conversation.lines[5].ja",
+    "before": "カメラも つけてくれる？みみしか みえないよ！",
+    "after": "カメラも つけてくれる？かおが みえないよ！",
+    "reviewers": "A+B",
+    "reason": "Follow the English"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[7].say",
+    "before": "Birimo says, Like this? Can you hear me now? Haru says, Yes! Now I can hear you! Riko giggles. Can you turn on your camera, too? We can only see your ears!",
+    "after": "Birimo says, Like this? Can you hear me now? Haru says, Yes! Now I can hear you! Riko giggles. Can you turn on your camera, too? We can't see your face!",
+    "reviewers": "A+B",
+    "reason": "Follow conversation.lines[5]"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Birimo says, Like this? Can you hear me now? Haru says, Yes! Now I can hear you! Riko giggles. Can you turn on your camera, too? We can only see your ears!",
+    "after": "Birimo says, Like this? Can you hear me now? Haru says, Yes! Now I can hear you! Riko giggles. Can you turn on your camera, too? We can't see your face!",
+    "reviewers": "A+B",
+    "reason": "Follow conversation.lines[5]"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "ビリモ「こう？ これで きこえる？」 ハルくん「うん！ これで きこえるよ！」 リコちゃんが くすくす。「カメラも つけてくれる？ みみしか みえないよ！」",
+    "after": "ビリモ「こう？ これで きこえる？」 ハルくん「うん！ これで きこえるよ！」 リコちゃんが くすくす。「カメラも つけてくれる？ かおが みえないよ！」",
+    "reviewers": "A+B",
+    "reason": "Follow the English"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[7].slide.items[2]",
+    "before": "Can you turn on your camera, too? We can only see your ears!",
+    "after": "Can you turn on your camera, too? We can't see your face!",
+    "reviewers": "A+B",
+    "reason": "Follow conversation.lines[5]"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[18].say",
+    "before": "Quiz time! You can hear your friend, but you only see ears. What do you say? A, Can you turn on your camera? B, You're on mute. Think!",
+    "after": "Quiz time! You can hear your friend, but the screen is black. What do you say? A, Can you turn on your camera? B, You're on mute. Think!",
+    "reviewers": "A+B",
+    "reason": "Seeing ears means the camera is on, so \"turn on your camera\" was not the logical answer"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[18].subtitleEn",
+    "before": "Quiz time! You can hear your friend, but you only see ears. What do you say? A, Can you turn on your camera? B, You're on mute. Think!",
+    "after": "Quiz time! You can hear your friend, but the screen is black. What do you say? A, Can you turn on your camera? B, You're on mute. Think!",
+    "reviewers": "A+B",
+    "reason": "Seeing ears means the camera is on, so \"turn on your camera\" was not the logical answer"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[18].subtitleJa",
+    "before": "クイズ！ ともだちの こえは きこえるけど、みみしか みえない。なんて いう？ A「Can you turn on your camera?」 B「You're on mute.」 かんがえて！",
+    "after": "クイズ！ ともだちの こえは きこえるけど、がめんが まっくろ。なんて いう？ A「Can you turn on your camera?」 B「You're on mute.」 かんがえて！",
+    "reviewers": "A+B",
+    "reason": "Follow the English"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[19].say",
+    "before": "It's A! Can you turn on your camera? Now we see a face, not just ears! Great job!",
+    "after": "It's A! Can you turn on your camera? Now we can see your face! Great job!",
+    "reviewers": "A+B",
+    "reason": "Follow the new quiz situation"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[19].subtitleEn",
+    "before": "It's A! Can you turn on your camera? Now we see a face, not just ears! Great job!",
+    "after": "It's A! Can you turn on your camera? Now we can see your face! Great job!",
+    "reviewers": "A+B",
+    "reason": "Follow the new quiz situation"
+  },
+  {
+    "lesson": 607,
+    "path": "teacher.segments[19].subtitleJa",
+    "before": "こたえは A！ Can you turn on your camera? これで みみだけじゃ なくて かおが みえる！ よく できました！",
+    "after": "こたえは A！ Can you turn on your camera? これで かおが みえる！ よく できました！",
+    "reviewers": "A+B",
+    "reason": "Follow the English"
+  },
+  {
+    "lesson": 608,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Today, the internet in the tower is slow because of the strong wind. Look at my face on the screen. It's not moving! The screen froze. Froze is the past of freeze. When the screen freezes, you miss some words. So you say, The screen froze. Can you say that again? Say it with me. The screen froze. Can you say that again? Super! Sometimes the voice comes and goes. Then say, Sorry, you're breaking up. If it doesn't get better, say, Let me call you back. Then hang up and call again. Let's read a chat during a video call. \"Riko: Ms. Emma, the screen froze. Can you say that again? Ms. Emma: Sure. I said, The festival was wonderful. Riko: Thanks! Now I can hear you clearly.\" Asking again is good. It's not rude. Good listeners ask again! Now, phonics. P r e means before. View, preview. School, preschool. Heat, preheat. Before a video call, you can preview your camera. Then you can check your face and your room. Let's practice!",
+    "after": "Hello, everyone! Today, the internet on the island is slow because of the strong wind. Look at my face on the screen. It's not moving! The screen froze. Froze is the past of freeze. When the screen freezes, you miss some words. So you say, The screen froze. Can you say that again? Say it with me. The screen froze. Can you say that again? Super! Sometimes the voice comes and goes. Then say, Sorry, you're breaking up. If it doesn't get better, say, Let me call you back. Then hang up and call again. Let's read a chat during a video call. \"Riko: Ms. Emma, the screen froze. Can you say that again? Ms. Emma: Sure. I said, The festival was wonderful. Riko: Thanks! Now I can hear you clearly.\" Asking again is good. It's not rude. Good listeners ask again! Now, phonics. P r e means before. View, preview. School, preschool. Heat, preheat. Before a video call, you can preview your camera. Then you can check your face and your room. Let's practice!",
+    "reviewers": "A+B",
+    "reason": "Ms. Emma is on the windy island (seg0, scene); the tower is not where the wind is"
+  },
+  {
+    "lesson": 608,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。froze は freeze の かこの かたち。breaking up は こえが きれたり きこえたり する こと。きこえない？ Can you say that again? と きけば いいよ。",
+    "after": "ポイント。froze は freeze の すぎた かたち。breaking up は こえが きれたり きこえたり する こと。きこえない？ Can you say that again? と きけば いいよ。",
+    "reviewers": "objective (JA)",
+    "reason": "House term for the past form is すぎた かたち"
+  },
+  {
+    "lesson": 608,
+    "path": "teacher.segments[10].say",
+    "before": "Before big school, little kids go to preschool. Before we bake bread, we preheat the oven. Your turn. Preview. Preschool. Preheat.",
+    "after": "Before elementary school, little kids go to preschool. Before we bake bread, we preheat the oven. Your turn. Preview. Preschool. Preheat.",
+    "reviewers": "A+B",
+    "reason": "\"big school\" is vague (UK: secondary school); the JA already says しょうがっこう"
+  },
+  {
+    "lesson": 608,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Before big school, little kids go to preschool. Before we bake bread, we preheat the oven. Your turn. Preview. Preschool. Preheat.",
+    "after": "Before elementary school, little kids go to preschool. Before we bake bread, we preheat the oven. Your turn. Preview. Preschool. Preheat.",
+    "reviewers": "A+B",
+    "reason": "\"big school\" is vague (UK: secondary school); the JA already says しょうがっこう"
+  },
+  {
+    "lesson": 609,
+    "path": "teacherScript",
+    "before": "Hello, everyone! I'm still on Festival Island, so let's have a video call again. Today, let's show our rooms on the video call. You can say, Let me show you my room. Say it with me. Let me show you my room. Great! Let me means I will do it for you. Then move your camera slowly and explain. On the left, there's a big bookshelf. On the right, there's a window. This is my favorite poster. Let's read what Haru said on his video call. \"Let me show you my room in the tower. On the left, there's a bed. Next to the bed, there's a small desk. On the desk, there's a lamp shaped like a bird. In the corner, there's a big map. This is my favorite thing. It's a map of all the worlds!\" Wonderful! One more tip. Before you show your room on a video call, check the camera. Don't show letters with your address, or family photos, to people you don't know. Now, phonics. Mistake. Misspell. Preview. Pretest. M i s means wrong. P r e means before. Let's show our rooms!",
+    "after": "Hello, everyone! I'm still on Festival Island, so let's have a video call again. Today, let's show our rooms on the video call. You can say, Let me show you my room. Say it with me. Let me show you my room. Great! Let me means I will do it for you. Then move your camera slowly and explain. On the left, there's a big bookshelf. On the right, there's a window. This is my favorite poster. Let's read what Haru said on his video call. \"Let me show you my room in the tower. On the left, there's a big bookshelf. On the right, there's my bed. Next to the bed, there's a small desk. On the desk, there's a lamp shaped like a bird. In the corner, there's a big map. This is my favorite thing. It's a map of all the worlds!\" Wonderful! One more tip. Before you show your room on a video call, check the camera. Don't show letters with your address, or family photos, to people you don't know. Now, phonics. Mistake. Misspell. Preview. Pretest. M i s means wrong. P r e means before. Let's show our rooms!",
+    "reviewers": "A+B",
+    "reason": "The reading put Haru's bed on the left, but the conversation and the quiz put it on the right"
+  },
+  {
+    "lesson": 610,
+    "path": "teacherScript",
+    "before": "Hello, everyone! The world is big. When it's morning in one country, it's night in another country. This is called the time difference. Today, Birimo will play a friend in a faraway country. When you call a friend far away, ask, What time is it there? Say it with me. What time is it there? Excellent! Your friend may say, It's nine at night. It's dark here. And you can say, Really? It's nine in the morning here. Let's read a message from a faraway friend. \"Hi! It's eight in the evening here. I just finished dinner. What time is it there? Is it morning? Let's have a video call this weekend. Saturday morning for you is Friday night for me!\" Isn't that interesting? Before you call someone far away, check the time. Don't call when your friend is sleeping! Now, phonics review. Dislike. Mishear. Prepay. Misunderstand. D i s, opposite. M i s, wrong. P r e, before. On a long-distance call, it's easy to mishear. So speak clearly. Great job this week!",
+    "after": "Hello, everyone! The world is big. When it's morning in one country, it's night in another country. This is called the time difference. Today, Birimo will play a friend in a faraway country. When you call a friend far away, ask, What time is it there? Say it with me. What time is it there? Excellent! Your friend may say, It's nine at night. It's dark here. And you can say, Really? It's nine in the morning here. Let's read a message from a faraway friend. \"Hi! It's eight in the evening here. I just finished dinner. What time is it there? Is it morning? Let's have a video call this weekend. Saturday morning for you is Friday night for me!\" Isn't that interesting? Before you call someone far away, check the time. Don't call when your friend is sleeping! Now, phonics review. Dislike. Mishear. Prepay. Misunderstand. D i s, opposite. M i s, wrong. P r e, before. On a long-distance call, it's easy to mishear. So speak clearly. Great job today!",
+    "reviewers": "A+B",
+    "reason": "Pacing: lessons do not follow a weekly schedule"
+  }
+]

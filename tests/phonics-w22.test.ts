@@ -69,7 +69,7 @@ describe("ワールド22の つづりの表", () => {
     expect(markOf("Help")?.answer).toBe("!");
     expect(markOf("Thank you")).toBeNull(); // 「.」も いえる
     expect(markWhy("Help", markOf("Help")!)).toContain("Help!");
-    for (const p of ["Help", "Watch out", "Who's there", "Where are you", "Wow", "Can you help me", "Oh no", "What happened", "Hooray", "Who are you", "Look out", "Are you okay"]) {
+    for (const p of ["Help", "Watch out", "Who's there", "Where are you", "Wow", "Can you help me", "Oh no", "What happened", "Hooray", "Who are you", "Look out", "Are you OK"]) {
       expect(markOf(p)!.meaning, p).not.toMatch(/[！？!?]/);
     }
   });

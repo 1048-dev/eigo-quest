@@ -263,7 +263,7 @@ const MARK: Record<string, { mark: EndMark; meaning: string }> = {
   "hooray": { mark: "!", meaning: "ばんざい" },
   "who are you": { mark: "?", meaning: "あなたは だれ" },
   "look out": { mark: "!", meaning: "きを つけて" },
-  "are you okay": { mark: "?", meaning: "だいじょうぶ" },
+  "are you ok": { mark: "?", meaning: "だいじょうぶ" },
 };
 
 /** 選択肢（この 順） */

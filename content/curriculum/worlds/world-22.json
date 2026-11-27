@@ -6,6 +6,7 @@
     {
       "lessonNo": 631,
       "world": 22,
+      "reviewed": "run9",
       "title": "A Library Made of Amber",
       "titleJa": "こはくで できた としょかん",
       "school": {
@@ -72,7 +73,7 @@
           "painter",
           "teacher"
         ],
-        "tipJa": "write → writer（さっか）、read → reader（よむ 人）、paint → painter（がか）、teach → teacher（せんせい）。うごきの ことばに er を つけると「〜する 人」。write は e を とって r だけ つけるよ。"
+        "tipJa": "write → writer（さっか）、read → reader（よむ 人）、paint → painter（がか）、teach → teacher（せんせい）。うごきの ことばに er を つけると「〜する 人」。write は e で おわって いるから、r だけ つけるよ。"
       },
       "vocab": [
         {
@@ -97,7 +98,7 @@
           "emoji": "🪜"
         }
       ],
-      "teacherScript": "Hello, everyone! Welcome to World 22! Do you remember the old book from the tower? Today, we will walk down the stairs under the Tower of Messages. Down, down, down. Look! The walls are golden yellow. They're made of amber. This is the Amber Library. This library has a million books. Say it with me. This library has a million books. Wonderful! A million is a very big number. One thousand, one thousand, one thousand, a thousand times! There are old books on every shelf. The librarian is a wise old owl. His name is Professor Quill. Here is a sign at the door. Let's read it together. \"Welcome to the Amber Library. We have a million books, and every book has a story inside. Please speak softly. You can borrow three books at a time. If you need help, ask Professor Quill.\" Now, phonics. When we add e r to an action word, it means a person. Write, writer. Read, reader. Paint, painter. Teach, teacher. A writer writes books, and a reader reads them. Today, you are all readers! Let's go inside.",
+      "teacherScript": "Hello, everyone! Welcome to World 22! Do you remember the old book from the tower? Today, we will walk down the stairs under the Tower of Messages. Down, down, down. Look! The walls are golden yellow. They're made of amber. This is the Amber Library. This library has a million books. Say it with me. This library has a million books. Wonderful! A million is a very big number. It's a thousand times a thousand! There are old books on every shelf. The librarian is a wise old owl. His name is Professor Quill. Here is a sign at the door. Let's read it together. \"Welcome to the Amber Library. We have a million books, and every book has a story inside. Please speak softly. You can borrow three books at a time. If you need help, ask Professor Quill.\" Now, phonics. When we add e r to an action word, it means a person. Write, writer. Read, reader. Paint, painter. Teach, teacher. A writer writes books, and a reader reads them. Today, you are all readers! Let's go inside.",
       "conversation": {
         "scene": "The friends find an amber library under the tower",
         "sceneJa": "とうの したで、こはくいろの としょかんを みつける",
@@ -115,7 +116,7 @@
           {
             "speaker": "Ms. Emma",
             "en": "Yes. This is the Amber Library. This library has a million books.",
-            "ja": "そう。ここが こはくの図書館よ。この としょかんには 100まんさつの ほんが あるの。"
+            "ja": "そう。ここが こはくの としょかんよ。この としょかんには 100まんさつの ほんが あるの。"
           },
           {
             "speaker": "Birimo",
@@ -140,7 +141,7 @@
         ],
         "aiTask": {
           "goalJa": "AI と としょかんの はなしを しよう。This library has ～. / Where can I find ～? で としょかんの ようすを いったり きいたり しよう（ちかくの としょかんの なまえは いわなくて OK）",
-          "starterEn": "Welcome to the Amber Library! This library has a million books. What kind of books do you like?",
+          "starterEn": "Wow, look! This library has a million books. What kind of books do you like?",
           "targetExpressions": [
             "This library has ～.",
             "Where can I find ～?",
@@ -477,9 +478,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! Professor Quill flaps a wing. Hoo! Over there! Great asking!",
+            "say": "It's B! Professor Quill flaps a wing. Hoo! Over there! Great question!",
             "subtitleJa": "こたえは B！ クイルはかせが つばさを パタパタ。「ホー！ あっちだよ！」 じょうずに きけたね！",
-            "subtitleEn": "It's B! Professor Quill flaps a wing. Hoo! Over there! Great asking!",
+            "subtitleEn": "It's B! Professor Quill flaps a wing. Hoo! Over there! Great question!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -512,6 +513,7 @@
     {
       "lessonNo": 632,
       "world": 22,
+      "reviewed": "run9",
       "title": "What's It About?",
       "titleJa": "なんの おはなし？",
       "school": {
@@ -578,7 +580,7 @@
           "narrator",
           "illustrator"
         ],
-        "tipJa": "act → actor（はいゆう）、edit → editor（へんしゅうしゃ）、narrate → narrator（かたりて）、illustrate → illustrator（さしえの がか）。t の おとで おわる ことばは or に なる ことが おおい。おとは er と おなじ「アー」。"
+        "tipJa": "act → actor（はいゆう）、edit → editor（へんしゅうしゃ）、narrate → narrator（かたりて）、illustrate → illustrator（さしえの がか）。or も「〜する 人」の おわり。おとは er と おなじ「アー」なので、つづりで おぼえよう。"
       },
       "vocab": [
         {
@@ -796,9 +798,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. What's it about, asks what happens. What kind of book, asks the type. A funny story? An adventure story? Kind means type.",
+            "say": "Here's the point. What's it about? That asks what happens. What kind of book? That asks the type. A funny story? An adventure story? Kind means type.",
             "subtitleJa": "ポイント。What's it about は「なにが おこるの？」と きく ことば。What kind of book は「どんな しゅるい？」と きく ことば。おもしろい おはなし？ ぼうけんの おはなし？ kind は「しゅるい」の いみ。",
-            "subtitleEn": "Here's the point. What's it about, asks what happens. What kind of book, asks the type. A funny story? An adventure story? Kind means type.",
+            "subtitleEn": "Here's the point. What's it about? That asks what happens. What kind of book? That asks the type. A funny story? An adventure story? Kind means type.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -812,9 +814,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! O R at the end says er, too. Another person ending! Act, actor. Edit, editor. A T sound at the end often takes O R.",
-            "subtitleJa": "おとの じかん！ おわりの o r も「アー」。これも「ひと」を あらわす おわり！ act → actor。edit → editor。t の おとで おわる ことばは o r に なる ことが おおいよ。",
-            "subtitleEn": "Sound time! O R at the end says er, too. Another person ending! Act, actor. Edit, editor. A T sound at the end often takes O R.",
+            "say": "Sound time! O R at the end says er, too. Another person ending! Act, actor. Edit, editor. O R and E R sound the same, so remember the spelling.",
+            "subtitleJa": "おとの じかん！ おわりの o r も「アー」。これも「ひと」を あらわす おわり！ act → actor。edit → editor。o r と e r は おなじ おと。つづりで おぼえようね。",
+            "subtitleEn": "Sound time! O R at the end says er, too. Another person ending! Act, actor. Edit, editor. O R and E R sound the same, so remember the spelling.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1019,6 +1021,7 @@
     {
       "lessonNo": 633,
       "world": 22,
+      "reviewed": "run9",
       "title": "Who Wrote It?",
       "titleJa": "だれが かいたの？",
       "school": {
@@ -1238,9 +1241,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Poster. A big paper on the wall. It tells you news. Poster!",
+            "say": "Poster. A big sheet of paper on the wall. It tells you news. Poster!",
             "subtitleJa": "poster。かべに はる おおきな かみ。おしらせを つたえるよ。poster！",
-            "subtitleEn": "Poster. A big paper on the wall. It tells you news. Poster!",
+            "subtitleEn": "Poster. A big sheet of paper on the wall. It tells you news. Poster!",
             "gesture": "point",
             "slide": {
               "title": "Words",
@@ -1305,7 +1308,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "Here's the point. Write, wrote. Draw, drew. These are past words. To answer, say the person, then did. Her brother did!",
-            "subtitleJa": "ポイント。write → wrote。draw → drew。むかしの ことを いう かたちだよ。こたえる ときは、ひと ＋ did。Her brother did！",
+            "subtitleJa": "ポイント。write → wrote。draw → drew。すぎた ことを いう かたちだよ。こたえる ときは、ひと ＋ did。Her brother did！",
             "subtitleEn": "Here's the point. Write, wrote. Draw, drew. These are past words. To answer, say the person, then did. Her brother did!",
             "gesture": "nod",
             "slide": {
@@ -1528,6 +1531,7 @@
     {
       "lessonNo": 634,
       "world": 22,
+      "reviewed": "run9",
       "title": "You Should Read It",
       "titleJa": "よんで みてね",
       "school": {
@@ -1623,7 +1627,7 @@
           "emoji": "⭐"
         }
       ],
-      "teacherScript": "Hello, everyone! Do you have a favorite book? When you love a book, you want your friends to read it, right? You can say, You should read it. It's really funny. Say it with me. You should read it. It's really funny. Excellent! You should means it's a good idea for you. You can change the last word. It's really exciting. It's really sad, but beautiful. It's really scary! Add one more good point. The pictures are beautiful, too. And your friend can say, Thanks. I'll borrow it today. Here is a note from Birimo to Haru. Let's read it. \"Haru, you should read Robot Chef. It's really funny. The robot tries to make a cake, but he uses salt, not sugar! The pictures are great, too. I put it on your desk. Birimo\" Ha ha. Salt, not sugar! Now, phonics. Let's mix our person words. Dance, dancer. Create, creator. Violin, violinist. Sing, singer. They all end with a sound like er, or ist. Let's recommend books to each other!",
+      "teacherScript": "Hello, everyone! Do you have a favorite book? When you love a book, you want your friends to read it, right? You can say, You should read it. It's really funny. Say it with me. You should read it. It's really funny. Excellent! You should means it's a good idea for you. You can change the last word. It's really exciting. It's really sad, but beautiful. It's really scary! Add one more good point. The pictures are beautiful, too. And your friend can say, Thanks. I'll borrow it today. Here is a note from Birimo to Haru. Let's read it. \"Haru, you should read Robot Chef. It's really funny. The robot tries to make a cake, but he uses salt, not sugar! The pictures are great, too. I put it on your desk. Birimo\" Ha ha. Salt, not sugar! Now, phonics. Let's mix our person words. Dance, dancer. Create, creator. Violin, violinist. Sing, singer. Three end with an er sound. Violinist ends with ist. Let's recommend books to each other!",
       "conversation": {
         "scene": "The friends recommend their favorite books",
         "sceneJa": "すきな ほんを すすめあう",
@@ -1814,9 +1818,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. First, You should read it. Then give a reason. It's really funny. It's really exciting. One more good thing? Add, too!",
+            "say": "Here's the point. First, You should read it. Then give a reason. It's really funny. It's really exciting. One more good thing? Add too at the end!",
             "subtitleJa": "ポイント。まず「よんで みてね。」 それから りゆう。「すごく おもしろいよ。」「すごく わくわくするよ。」 もう 1つ いい ところが ある？ さいごに too を つけよう！",
-            "subtitleEn": "Here's the point. First, You should read it. Then give a reason. It's really funny. It's really exciting. One more good thing? Add, too!",
+            "subtitleEn": "Here's the point. First, You should read it. Then give a reason. It's really funny. It's really exciting. One more good thing? Add too at the end!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -2005,9 +2009,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! Thanks. I'll borrow it today. Say thank you, then borrow it. Lovely manners!",
+            "say": "It's A! Thanks. I'll borrow it today. Say thank you, then borrow it. Great manners!",
             "subtitleJa": "こたえは A！「ありがとう。きょう かりるね。」 ありがとうを いって、かりようね。すてきな マナー！",
-            "subtitleEn": "It's A! Thanks. I'll borrow it today. Say thank you, then borrow it. Lovely manners!",
+            "subtitleEn": "It's A! Thanks. I'll borrow it today. Say thank you, then borrow it. Great manners!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -2040,6 +2044,7 @@
     {
       "lessonNo": 635,
       "world": 22,
+      "reviewed": "run9",
       "title": "Book Talk Corner",
       "titleJa": "ブックトークコーナー",
       "school": {
@@ -2110,7 +2115,7 @@
           "artist",
           "explorer"
         ],
-        "tipJa": "人を あらわす おわりの まとめ: writer（er）・actor（or）・artist（ist）・explorer（er）。er が いちばん おおい。t の おとの あとは or が おおい。もの・ぶんやの ことばには ist。"
+        "tipJa": "人を あらわす おわりの まとめ: writer（er）・actor（or）・artist（ist）・explorer（er）。er が いちばん おおい。or は er と おなじ おとなので、つづりで おぼえよう。もの・ぶんやの ことばには ist。"
       },
       "vocab": [
         {
@@ -2328,9 +2333,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. A book talk is everything we learned! What's it about? Why do you like it? Because! Then ask for questions. Don't tell the ending!",
+            "say": "Here's the point. A book talk is everything we learned! What's it about? Why do you like it? Use because! Then ask for questions. Don't tell the ending!",
             "subtitleJa": "ポイント。ブックトークは ならった こと ぜんぶ！ なんの おはなし？ どうして すき？ because で りゆう！ さいごに しつもんを きこう。おわりは ないしょに してね！",
-            "subtitleEn": "Here's the point. A book talk is everything we learned! What's it about? Why do you like it? Because! Then ask for questions. Don't tell the ending!",
+            "subtitleEn": "Here's the point. A book talk is everything we learned! What's it about? Why do you like it? Use because! Then ask for questions. Don't tell the ending!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -2521,9 +2526,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! Do you have any questions? The speaker asks this. The audience asks, Who wrote it? Brilliant!",
+            "say": "It's A! Do you have any questions? The speaker asks this. The audience asks, Who wrote it? Fantastic!",
             "subtitleJa": "こたえは A！「なにか しつもんは ありますか？」は はなす ひとが いうよ。「だれが かいたの？」は きく ひとが いうね。すばらしい！",
-            "subtitleEn": "It's A! Do you have any questions? The speaker asks this. The audience asks, Who wrote it? Brilliant!",
+            "subtitleEn": "It's A! Do you have any questions? The speaker asks this. The audience asks, Who wrote it? Fantastic!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -2556,6 +2561,7 @@
     {
       "lessonNo": 636,
       "world": 22,
+      "reviewed": "run9",
       "title": "The Main Character",
       "titleJa": "しゅじんこう",
       "school": {
@@ -2840,9 +2846,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Introduce a character in steps. Who? His name. Where he lives. What he's like. Big, but gentle. But shows a surprise!",
+            "say": "Here's the point. Introduce a character in steps. Who? His name. Where he lives. What he's like. Big, but gentle. The word but shows a surprise!",
             "subtitleJa": "ポイント。じゅんばんに しょうかい しよう。だれ？ なまえ。すんで いる ところ。どんな せいかく。おおきい、でも やさしい。but は「いがいな こと」を つたえるよ！",
-            "subtitleEn": "Here's the point. Introduce a character in steps. Who? His name. Where he lives. What he's like. Big, but gentle. But shows a surprise!",
+            "subtitleEn": "Here's the point. Introduce a character in steps. Who? His name. Where he lives. What he's like. Big, but gentle. The word but shows a surprise!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -3064,6 +3070,7 @@
     {
       "lessonNo": 637,
       "world": 22,
+      "reviewed": "run9",
       "title": "She's Brave and Kind",
       "titleJa": "ゆうかんで やさしい",
       "school": {
@@ -3347,9 +3354,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. What's she like? asks about her heart, not her face. And for a not so nice word, say a little. He's a little selfish. Softer!",
+            "say": "Here's the point. What's she like? asks about her heart, not her face. And for a not-so-nice word, say a little. He's a little selfish. Softer!",
             "subtitleJa": "ポイント。What's she like? は かおじゃ なくて、こころ（せいかく）を きく ことば。あまり よくない ことを いう ときは a little を つけよう。He's a little selfish. やわらかく なるね！",
-            "subtitleEn": "Here's the point. What's she like? asks about her heart, not her face. And for a not so nice word, say a little. He's a little selfish. Softer!",
+            "subtitleEn": "Here's the point. What's she like? asks about her heart, not her face. And for a not-so-nice word, say a little. He's a little selfish. Softer!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -3570,6 +3577,7 @@
     {
       "lessonNo": 638,
       "world": 22,
+      "reviewed": "run9",
       "title": "The Hero and the Villain",
       "titleJa": "ヒーローと わるもの",
       "school": {
@@ -3660,7 +3668,7 @@
           "emoji": "🫳"
         }
       ],
-      "teacherScript": "Hello, everyone! Adventure stories have a hero and a villain. The hero is the good main character. The villain (わるもの) is the bad character. Let's sort the characters in The Magic Stone. The hero is Kai. Rusty the fox helped her. And the villain? The villain wanted the magic stone. Say it with me. The villain wanted the magic stone. Great! Use wanted for what a character wished for. Use tried to for what a character did. Lord Grim tried to steal it. Let's read a page. \"The magic stone glowed blue in the old temple. It kept the village safe from storms. Lord Grim wanted the stone for himself. One dark night, he tried to steal it. But Kai and Rusty were waiting. 'Not tonight, Lord Grim!' said Kai.\" Who is the hero? Kai. Who is the villain? Lord Grim. Now, phonics. Protect is our family word. Protection. Protector. Protective. Kai protected the stone. She is the protector of the village. A mother bird is very protective of her babies. Let's sort some characters!",
+      "teacherScript": "Hello, everyone! Adventure stories have a hero and a villain. The hero is the good main character. The villain (わるもの) is the bad character. Let's sort the characters in The Magic Stone. The hero is Kai. Rusty the fox helped her. And the villain? The villain wanted the magic stone. Say it with me. The villain wanted the magic stone. Great! Use wanted for what a character wished for. Use tried to for what a character wanted to do, but could not. Lord Grim tried to steal it. Let's read a page. \"The magic stone glowed blue in the old temple. It kept the village safe from storms. Lord Grim wanted the stone for himself. One dark night, he tried to steal it. But Kai and Rusty were waiting. 'Not tonight, Lord Grim!' said Kai.\" Who is the hero? Kai. Who is the villain? Lord Grim. Now, phonics. Protect is our family word. Protection. Protector. Protective. Kai protected the stone. She is the protector of the village. A mother bird is very protective of her babies. Let's sort some characters!",
       "conversation": {
         "scene": "The friends sort the characters in an adventure book",
         "sceneJa": "ぼうけんの ほんの とうじょうじんぶつを せいりする",
@@ -3854,9 +3862,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Wanted, helped, tried. They end with E D. The story is over, so we use past words. He tried to steal it, but he didn't!",
-            "subtitleJa": "ポイント。wanted、helped、tried。おわりが e d だね。おはなしは もう おわった ことだから、むかしの かたちを つかうよ。ぬすもうと したけど、できなかった！",
-            "subtitleEn": "Here's the point. Wanted, helped, tried. They end with E D. The story is over, so we use past words. He tried to steal it, but he didn't!",
+            "say": "Here's the point. Wanted, helped, tried. They end with E D. The story is over, so we use past words. He tried to steal it, but he couldn't!",
+            "subtitleJa": "ポイント。wanted、helped、tried。おわりが e d だね。おはなしは もう おわった ことだから、すぎた かたちを つかうよ。ぬすもうと したけど、できなかった！",
+            "subtitleEn": "Here's the point. Wanted, helped, tried. They end with E D. The story is over, so we use past words. He tried to steal it, but he couldn't!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -3925,9 +3933,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Now you are Lord Grim. Make a scary villain face. Hee, hee, hee! Oops, he's caught! Run away on tiptoe!",
-            "subtitleJa": "こんどは グリムきょう。こわい わるものの かおを して。ひっひっひ！ おっと、みつかった！ つまさきで にげて！",
-            "subtitleEn": "Now you are Lord Grim. Make a scary villain face. Hee, hee, hee! Oops, he's caught! Run away on tiptoe!",
+            "say": "Now you are Lord Grim. Make a scary villain face. Hee, hee, hee! Oops, Kai sees you! Run away on tiptoe!",
+            "subtitleJa": "こんどは グリムきょう。こわい わるものの かおを して。ひっひっひ！ おっと、カイに みつかった！ つまさきで にげて！",
+            "subtitleEn": "Now you are Lord Grim. Make a scary villain face. Hee, hee, hee! Oops, Kai sees you! Run away on tiptoe!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -4077,6 +4085,7 @@
     {
       "lessonNo": 639,
       "world": 22,
+      "reviewed": "run9",
       "title": "Which Character Do You Like?",
       "titleJa": "どの とうじょうじんぶつが すき？",
       "school": {
@@ -4170,7 +4179,7 @@
           "emoji": "🎭"
         }
       ],
-      "teacherScript": "Hello, everyone! Today, let's talk about our favorite characters. Ask your friend, Which character do you like the best? Then answer with a reason. I like the fox because he's clever. Say it with me. I like the fox because he's clever. Perfect! Because tells the reason. I like Kai because she never gives up. I like Ember because he's gentle. When your friend answers, react! Me too! Really? I like the fox, too! Here's a short page about Rusty the fox. \"Rusty was a small red fox with a big smile. He was not strong, but he was clever. When Lord Grim's guards blocked the road, Rusty had an idea. He made a path of fallen leaves in a different direction. The guards followed it, and Kai got away!\" What a clever fox. Now, phonics. Direct is a family word. Direction. Director. Directly. A director tells actors what to do. Go directly home means go straight home. And remember active from the act family. Which character do you like?",
+      "teacherScript": "Hello, everyone! Today, let's talk about our favorite characters. Ask your friend, Which character do you like the best? Then answer with a reason. I like the fox because he's clever. Say it with me. I like the fox because he's clever. Perfect! Because tells the reason. I like Kai because she never gives up. I like Ember because he's gentle. When your friend answers, react! Same answer? Me too! Different answer? Really? I like Kai! Here's a short page about Rusty the fox. \"Rusty was a small red fox with a big smile. He was not strong, but he was clever. When Lord Grim's guards blocked the road, Rusty had an idea. He made a path of fallen leaves in a different direction. The guards followed it, and Kai got away!\" What a clever fox. Now, phonics. Direct is a family word. Direction. Director. Directly. A director tells actors what to do. Go directly home means go straight home. And remember active from the act family. Which character do you like?",
       "conversation": {
         "scene": "The friends talk about their favorite characters",
         "sceneJa": "すきな とうじょうじんぶつを りゆうつきで はなす",
@@ -4585,6 +4594,7 @@
     {
       "lessonNo": 640,
       "world": 22,
+      "reviewed": "run9",
       "title": "Character Cards",
       "titleJa": "とうじょうじんぶつカード",
       "school": {
@@ -4657,7 +4667,7 @@
           "protective",
           "director"
         ],
-        "tipJa": "語の家族の まとめ: actor（act の 人）・invention（invent の もの）・protective（protect の ようす）・director（direct の 人）。-or は 人、-ion は こと・もの、-ive は ようす。"
+        "tipJa": "ことばの かぞくの まとめ: actor（act の 人）・invention（invent の もの）・protective（protect の ようす）・director（direct の 人）。-or は 人、-ion は こと・もの、-ive は ようす。"
       },
       "vocab": [
         {
@@ -5104,6 +5114,7 @@
     {
       "lessonNo": 641,
       "world": 22,
+      "reviewed": "run9",
       "title": "At the Beginning",
       "titleJa": "はじめに",
       "school": {
@@ -5407,9 +5418,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! A-sleep. A-wake. A-round. A-cross. The first a is tiny and soft, like uh. The strong beat comes next.",
-            "subtitleJa": "おとの じかん！ a-sleep。a-wake。a-round。a-cross。はじめの a は ちいさく よわく「ア」。つよい はくは その あと。",
-            "subtitleEn": "Sound time! A-sleep. A-wake. A-round. A-cross. The first a is tiny and soft, like uh. The strong beat comes next.",
+            "say": "Sound time! Asleep. Awake. Around. Across. The first a is tiny and soft, like uh. The strong beat comes next.",
+            "subtitleJa": "おとの じかん！ asleep。awake。around。across。はじめの a は ちいさく よわく「ア」。つよい はくは その あと。",
+            "subtitleEn": "Sound time! Asleep. Awake. Around. Across. The first a is tiny and soft, like uh. The strong beat comes next.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -5427,9 +5438,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Don't say ay. Just a quick little uh. Your turn. Asleep. Awake. Around. Across.",
+            "say": "Don't say the letter A. Just a quick little uh. Your turn. Asleep. Awake. Around. Across.",
             "subtitleJa": "「エー」とは いわないでね。みじかく ちいさく「ア」。あなたの ばん。asleep、awake、around、across。",
-            "subtitleEn": "Don't say ay. Just a quick little uh. Your turn. Asleep. Awake. Around. Across.",
+            "subtitleEn": "Don't say the letter A. Just a quick little uh. Your turn. Asleep. Awake. Around. Across.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -5613,6 +5624,7 @@
     {
       "lessonNo": 642,
       "world": 22,
+      "reviewed": "run9",
       "title": "In the Middle",
       "titleJa": "まんなかで",
       "school": {
@@ -5707,7 +5719,7 @@
           "emoji": "⚡"
         }
       ],
-      "teacherScript": "Hello, everyone! Yesterday, we read the beginning of The Shy Dragon. Today, we will read the middle. The middle is where something happens. In the middle, he met a little girl. Say it with me. In the middle, he met a little girl. Very good! Storytellers use special words in the middle. One day. Suddenly. One day, a girl got lost in the snow. Suddenly, Ember heard a small voice. Suddenly makes the story exciting! Let's read. \"One day, a big snowstorm came. Suddenly, Ember heard a small voice. 'Help! Is anyone there?' It was a little girl named Lulu. She was lost, and she was very cold. Ember wanted to help, but he was shy. What if she runs away, too? He took a deep breath and walked out from behind the rock.\" Oh, what will Lulu do? Now, phonics. Listen to the strong part. PEN cil. SEC ond. DRAG on. BUT ton. The second part is weak. The i in pencil and the o in second sound like uh. Let's talk about the middle of the story!",
+      "teacherScript": "Hello, everyone! Last time, we read the beginning of The Shy Dragon. Today, we will read the middle. The middle is where something happens. In the middle, he met a little girl. Say it with me. In the middle, he met a little girl. Very good! Storytellers use special words in the middle. One day. Suddenly. One day, a girl got lost in the snow. Suddenly, Ember heard a small voice. Suddenly makes the story exciting! Let's read. \"One day, a big snowstorm came. Suddenly, Ember heard a small voice. 'Help! Is anyone there?' It was a little girl named Lulu. She was lost, and she was very cold. Ember wanted to help, but he was shy. What if she runs away, too? He took a deep breath and walked out from behind the rock.\" Oh, what will Lulu do? Now, phonics. Listen to the strong part. PEN cil. SEC ond. DRAG on. BUT ton. The second part is weak. The i in pencil and the o in second sound like uh. Let's talk about the middle of the story!",
       "conversation": {
         "scene": "The friends read the middle of The Shy Dragon",
         "sceneJa": "『はずかしがりの ドラゴン』の なかごろを よむ",
@@ -5750,7 +5762,7 @@
         ],
         "aiTask": {
           "goalJa": "AI と おはなしの なかごろに ついて はなそう。In the middle, ～. / One day, ～. / Suddenly, ～. を つかって、なにが おこったか せつめいしよう",
-          "starterEn": "I'm reading the middle of a story. Something exciting happened! Can you guess? What happens in the middle of your favorite story?",
+          "starterEn": "I'm reading the middle of a story. Something exciting happened! What happens in the middle of your favorite story?",
           "targetExpressions": [
             "In the middle, ～.",
             "One day, ～.",
@@ -5835,9 +5847,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Voice. The sound you make when you talk. A big voice. HELLO! A small voice. hello. Voice!",
+            "say": "Voice. The sound you make when you talk. A big voice. HELLO! A small voice... hello. Voice!",
             "subtitleJa": "voice。はなす ときの おと。おおきな こえ、ハロー！ ちいさな こえ、はろー。voice！",
-            "subtitleEn": "Voice. The sound you make when you talk. A big voice. HELLO! A small voice. hello. Voice!",
+            "subtitleEn": "Voice. The sound you make when you talk. A big voice. HELLO! A small voice... hello. Voice!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -5885,9 +5897,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko whispers, Then suddenly, Ember heard a small voice. Help! Haru asks, Did Ember help her? Hmm. Let's read more tomorrow!",
-            "subtitleJa": "キコちゃんが ひそひそ。「そして とつぜん、エンバーに ちいさな こえが きこえたの。たすけて！」 ハルくん「エンバーは その子を たすけたの？」 うーん。つづきは あした よもう！",
-            "subtitleEn": "Kiko whispers, Then suddenly, Ember heard a small voice. Help! Haru asks, Did Ember help her? Hmm. Let's read more tomorrow!",
+            "say": "Kiko whispers, Then suddenly, Ember heard a small voice. Help! Haru asks, Did Ember help her? Hmm. Let's read more next time!",
+            "subtitleJa": "キコちゃんが ひそひそ。「そして とつぜん、エンバーに ちいさな こえが きこえたの。たすけて！」 ハルくん「エンバーは その子を たすけたの？」 うーん。つづきは つぎの じかんに よもう！",
+            "subtitleEn": "Kiko whispers, Then suddenly, Ember heard a small voice. Help! Haru asks, Did Ember help her? Hmm. Let's read more next time!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -5918,9 +5930,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Clap two beats. PEN-cil. SEC-ond. DRAG-on. BUT-ton. The first beat is strong. The second beat is soft, like uh.",
-            "subtitleJa": "おとの じかん！ 2かい てを たたこう。PEN-cil。SEC-ond。DRAG-on。BUT-ton。まえの はくが つよい。うしろの はくは よわく「ア」みたい。",
-            "subtitleEn": "Sound time! Clap two beats. PEN-cil. SEC-ond. DRAG-on. BUT-ton. The first beat is strong. The second beat is soft, like uh.",
+            "say": "Sound time! Clap two beats. Pencil. Second. Dragon. Button. The first beat is strong. The second beat is soft, like uh.",
+            "subtitleJa": "おとの じかん！ 2かい てを たたこう。pencil。second。dragon。button。まえの はくが つよい。うしろの はくは よわく「ア」みたい。",
+            "subtitleEn": "Sound time! Clap two beats. Pencil. Second. Dragon. Button. The first beat is strong. The second beat is soft, like uh.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -6124,6 +6136,7 @@
     {
       "lessonNo": 643,
       "world": 22,
+      "reviewed": "run9",
       "title": "At the End",
       "titleJa": "おわりに",
       "school": {
@@ -6142,7 +6155,7 @@
           },
           {
             "en": "The ending was happy.",
-            "ja": "おわりかたは しあわせだったよ。"
+            "ja": "しあわせな おわりかただったよ。"
           }
         ],
         "testPoints": [
@@ -6428,9 +6441,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Clap two beats. PROB-lem. CHIL-dren. CIR-cus. HAP-pen. Strong, then soft. The soft beat sounds like uh.",
-            "subtitleJa": "おとの じかん！ 2かい てを たたこう。PROB-lem。CHIL-dren。CIR-cus。HAP-pen。つよく、それから よわく。よわい はくは「ア」みたいに きこえる。",
-            "subtitleEn": "Sound time! Clap two beats. PROB-lem. CHIL-dren. CIR-cus. HAP-pen. Strong, then soft. The soft beat sounds like uh.",
+            "say": "Sound time! Clap two beats. Problem. Children. Circus. Happen. Strong, then soft. The soft beat sounds like uh.",
+            "subtitleJa": "おとの じかん！ 2かい てを たたこう。problem。children。circus。happen。つよく、それから よわく。よわい はくは「ア」みたいに きこえる。",
+            "subtitleEn": "Sound time! Clap two beats. Problem. Children. Circus. Happen. Strong, then soft. The soft beat sounds like uh.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -6553,7 +6566,7 @@
             "kind": "repeat",
             "lang": "en",
             "say": "The ending was happy.",
-            "subtitleJa": "「おわりかたは しあわせだった。」",
+            "subtitleJa": "「しあわせな おわりかただった。」",
             "subtitleEn": "The ending was happy.",
             "gesture": "nod",
             "slide": {
@@ -6635,6 +6648,7 @@
     {
       "lessonNo": 644,
       "world": 22,
+      "reviewed": "run9",
       "title": "What Happened Next?",
       "titleJa": "それから どう なったの？",
       "school": {
@@ -6906,9 +6920,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko leans in. Can you tell me more? The door was very small, and the cat was waiting there. Haru asks, And then? He opened it very slowly. But that's all for today! Oh, no!",
-            "subtitleJa": "リコちゃんが のりだす。「もっと くわしく おしえて？」「ドアは とても ちいさくて、ねこが そこで まって いた。」 ハルくん「それで？」「とても ゆっくり あけた。でも きょうは ここまで！」 えー！",
-            "subtitleEn": "Riko leans in. Can you tell me more? The door was very small, and the cat was waiting there. Haru asks, And then? He opened it very slowly. But that's all for today! Oh, no!",
+            "say": "Riko leans in. Can you tell me more? Professor Quill says, The door was very small, and the cat was waiting there. Haru asks, And then? He opened it very slowly. But that's all for today! Oh, no!",
+            "subtitleJa": "リコちゃんが のりだす。「もっと くわしく おしえて？」 はかせ「ドアは とても ちいさくて、ねこが そこで まって いた。」 ハルくん「それで？」「とても ゆっくり あけた。でも きょうは ここまで！」 えー！",
+            "subtitleEn": "Riko leans in. Can you tell me more? Professor Quill says, The door was very small, and the cat was waiting there. Haru asks, And then? He opened it very slowly. But that's all for today! Oh, no!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -6941,9 +6955,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Story words. GI-ant. LI-on. PI-lot. WIZ-ard. A strong first beat. A soft second beat, like uh.",
-            "subtitleJa": "おとの じかん！ ものがたりの ことば。GI-ant。LI-on。PI-lot。WIZ-ard。まえの はくは つよく。うしろの はくは よわく「ア」。",
-            "subtitleEn": "Sound time! Story words. GI-ant. LI-on. PI-lot. WIZ-ard. A strong first beat. A soft second beat, like uh.",
+            "say": "Sound time! Story words. Giant. Lion. Pilot. Wizard. A strong first beat. A soft second beat, like uh.",
+            "subtitleJa": "おとの じかん！ ものがたりの ことば。giant。lion。pilot。wizard。まえの はくは つよく。うしろの はくは よわく「ア」。",
+            "subtitleEn": "Sound time! Story words. Giant. Lion. Pilot. Wizard. A strong first beat. A soft second beat, like uh.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -6961,9 +6975,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Be a giant. Stomp, stomp! GI-ant. Be a wizard. Wave your wand! WIZ-ard. Your turn. Giant. Lion. Pilot. Wizard.",
-            "subtitleJa": "きょじんに なって。ドシン、ドシン！ GI-ant。まほうつかいに なって。つえを ふって！ WIZ-ard。あなたの ばん。giant、lion、pilot、wizard。",
-            "subtitleEn": "Be a giant. Stomp, stomp! GI-ant. Be a wizard. Wave your wand! WIZ-ard. Your turn. Giant. Lion. Pilot. Wizard.",
+            "say": "Be a giant. Stomp, stomp! Giant! Be a wizard. Wave your wand! Wizard! Your turn. Giant. Lion. Pilot. Wizard.",
+            "subtitleJa": "きょじんに なって。ドシン、ドシン！ giant！まほうつかいに なって。つえを ふって！ wizard！あなたの ばん。giant、lion、pilot、wizard。",
+            "subtitleEn": "Be a giant. Stomp, stomp! Giant! Be a wizard. Wave your wand! Wizard! Your turn. Giant. Lion. Pilot. Wizard.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -7113,9 +7127,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! Can you tell me more? Then the storyteller gives you more. Brilliant!",
+            "say": "It's A! Can you tell me more? Then the storyteller gives you more. Fantastic!",
             "subtitleJa": "こたえは A！ Can you tell me more? と きくと、もっと はなして くれるよ。すばらしい！",
-            "subtitleEn": "It's A! Can you tell me more? Then the storyteller gives you more. Brilliant!",
+            "subtitleEn": "It's A! Can you tell me more? Then the storyteller gives you more. Fantastic!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -7148,6 +7162,7 @@
     {
       "lessonNo": 645,
       "world": 22,
+      "reviewed": "run9",
       "title": "Retell the Story",
       "titleJa": "あらすじを はなそう",
       "school": {
@@ -7333,9 +7348,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Retell. Tell a story again, in your own words. I read it. Now I retell it. Retell!",
-            "subtitleJa": "retell。おはなしを じぶんの ことばで もう いちど はなす。よんだら、こんどは はなしなおす。retell！",
-            "subtitleEn": "Retell. Tell a story again, in your own words. I read it. Now I retell it. Retell!",
+            "say": "Retell. Tell a story again, in your own words. First, I read it. Then, I retell it. Retell!",
+            "subtitleJa": "retell。おはなしを じぶんの ことばで もう いちど はなす。まず よむ。それから、はなしなおす。retell！",
+            "subtitleEn": "Retell. Tell a story again, in your own words. First, I read it. Then, I retell it. Retell!",
             "gesture": "open_hands",
             "slide": {
               "title": "Words",
@@ -7447,9 +7462,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Strong and soft beats. a-SLEEP. PEN-cil. CHIL-dren. GI-ant. The strong beat is loud and clear. The soft beat is a quick uh.",
-            "subtitleJa": "おとの ふくしゅう！ つよい はくと よわい はく。a-SLEEP。PEN-cil。CHIL-dren。GI-ant。つよい はくは おおきく はっきり。よわい はくは みじかく「ア」。",
-            "subtitleEn": "Sound review! Strong and soft beats. a-SLEEP. PEN-cil. CHIL-dren. GI-ant. The strong beat is loud and clear. The soft beat is a quick uh.",
+            "say": "Sound review! Strong and soft beats. Asleep. Pencil. Children. Giant. The strong beat is loud and clear. The soft beat is a quick uh.",
+            "subtitleJa": "おとの ふくしゅう！ つよい はくと よわい はく。asleep。pencil。children。giant。つよい はくは おおきく はっきり。よわい はくは みじかく「ア」。",
+            "subtitleEn": "Sound review! Strong and soft beats. Asleep. Pencil. Children. Giant. The strong beat is loud and clear. The soft beat is a quick uh.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -7655,6 +7670,7 @@
     {
       "lessonNo": 646,
       "world": 22,
+      "reviewed": "run9",
       "title": "Why Was She Sad?",
       "titleJa": "どうして かなしかったの？",
       "school": {
@@ -8161,6 +8177,7 @@
     {
       "lessonNo": 647,
       "world": 22,
+      "reviewed": "run9",
       "title": "So He Ran Away",
       "titleJa": "だから にげたんだ",
       "school": {
@@ -8195,8 +8212,8 @@
           "emoji": "😨"
         },
         {
-          "en": "Run away on the spot.",
-          "ja": "その ばで にげて。",
+          "en": "Pretend to run away.",
+          "ja": "にげる ふりを して。",
           "action": "その ばで あしぶみ ダッシュ",
           "emoji": "🏃"
         },
@@ -8252,7 +8269,7 @@
           "emoji": "🔥"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we used because to give a reason. Today, we will use so. So shows what happened next because of a feeling. He was scared, so he ran away. Say it with me. He was scared, so he ran away. Excellent! First the feeling, then so, then the action. Lulu was cold, so Ember made a fire. Now compare. He ran away because he was scared. He was scared, so he ran away. Same story, different order! Let's read a page from The Shy Dragon. \"A long time ago, a hunter came to Ember's mountain. He had a loud horn and a big net. Ember was scared, so he ran away and hid in a deep cave. He stayed there for many days. Since that day, Ember was afraid of people. That's why he was so shy.\" Now we know a mysterious secret about Ember! Now, phonics. Adventure, adventurous. Mystery, mysterious. Joy, joyous. Envy, envious. Mystery ends with y, so change y to i. Joy keeps its y. Let's connect feelings and actions with so!",
+      "teacherScript": "Hello, everyone! Last time, we used because to give a reason. Today, we will use so. So shows what happened next because of a feeling. He was scared, so he ran away. Say it with me. He was scared, so he ran away. Excellent! First the feeling, then so, then the action. Lulu was cold, so Ember made a fire. Now compare. He ran away because he was scared. He was scared, so he ran away. Same story, different order! Let's read a page from The Shy Dragon. \"A long time ago, a hunter came to Ember's mountain. He had a loud horn and a big net. Ember was scared, so he ran away and hid in a deep cave. He stayed there for many days. After that day, Ember was afraid of people. That's why he was so shy.\" Now we know a mysterious secret about Ember! Now, phonics. Adventure, adventurous. Mystery, mysterious. Joy, joyous. Envy, envious. Mystery ends with y, so change y to i. Joy keeps its y. Let's connect feelings and actions with so!",
       "conversation": {
         "scene": "The friends connect feelings and actions in The Shy Dragon",
         "sceneJa": "so で、きもちと こうどうを つなげて はなす",
@@ -8445,9 +8462,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Because gives the reason. So gives the result. Scared, so ran away. Ran away because scared. Same story, two ways!",
+            "say": "Here's the point. Because gives the reason. So gives the result. He was scared, so he ran away. He ran away because he was scared. Same story, two ways!",
             "subtitleJa": "ポイント。because は りゆう。so は その けっか。こわかった、だから にげた。にげた、こわかったから。おなじ おはなしを 2つの いいかたで！",
-            "subtitleEn": "Here's the point. Because gives the reason. So gives the result. Scared, so ran away. Ran away because scared. Same story, two ways!",
+            "subtitleEn": "Here's the point. Because gives the reason. So gives the result. He was scared, so he ran away. He ran away because he was scared. Same story, two ways!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -8501,15 +8518,15 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Someone is coming! Look scared. Eek! Now, run away on the spot. Run, run, run!",
-            "subtitleJa": "からだを うごかそう！ だれか くる！ こわがる かおを して。きゃっ！ さあ、その ばで にげて。はしって、はしって！",
-            "subtitleEn": "Let's move! Someone is coming! Look scared. Eek! Now, run away on the spot. Run, run, run!",
+            "say": "Let's move! Someone is coming! Look scared. Eek! Now, pretend to run away. Run, run, run!",
+            "subtitleJa": "からだを うごかそう！ だれか くる！ こわがる かおを して。きゃっ！ さあ、にげる ふりを して。はしって、はしって！",
+            "subtitleEn": "Let's move! Someone is coming! Look scared. Eek! Now, pretend to run away. Run, run, run!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
               "items": [
                 "Look scared.",
-                "Run away on the spot."
+                "Pretend to run away."
               ],
               "emoji": "🏃"
             },
@@ -8535,14 +8552,14 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Speed challenge! Run away on the spot! Warm your hands by the fire! Look scared! Rub your hands! Super!",
-            "subtitleJa": "スピード チャレンジ！ その ばで にげて！ たきびで てを あたためて！ こわがって！ てを こすって！ すごい！",
-            "subtitleEn": "Speed challenge! Run away on the spot! Warm your hands by the fire! Look scared! Rub your hands! Super!",
+            "say": "Speed challenge! Pretend to run away! Warm your hands by the fire! Look scared! Rub your hands! Super!",
+            "subtitleJa": "スピード チャレンジ！ にげる ふりを して！ たきびで てを あたためて！ こわがって！ てを こすって！ すごい！",
+            "subtitleEn": "Speed challenge! Pretend to run away! Warm your hands by the fire! Look scared! Rub your hands! Super!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
               "items": [
-                "Run away on the spot.",
+                "Pretend to run away.",
                 "Warm your hands by the fire.",
                 "Look scared.",
                 "Rub your hands. You're cold."
@@ -8649,9 +8666,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Brilliant work! You can join a feeling and an action with so. And you know because and so are different. Next, go and talk with Kiko! Bye-bye!",
+            "say": "Fantastic work! You can join a feeling and an action with so. And you know because and so are different. Next, go and talk with Kiko! Bye-bye!",
             "subtitleJa": "すばらしい！ so で きもちと こうどうを つなげられるね。because と so の ちがいも わかったね。このあと キコちゃんと おはなし してね！ バイバイ！",
-            "subtitleEn": "Brilliant work! You can join a feeling and an action with so. And you know because and so are different. Next, go and talk with Kiko! Bye-bye!",
+            "subtitleEn": "Fantastic work! You can join a feeling and an action with so. And you know because and so are different. Next, go and talk with Kiko! Bye-bye!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -8669,6 +8686,7 @@
     {
       "lessonNo": 648,
       "world": 22,
+      "reviewed": "run9",
       "title": "When the Bell Rang",
       "titleJa": "ベルが なった とき",
       "school": {
@@ -8759,7 +8777,7 @@
           "emoji": "🗝️"
         }
       ],
-      "teacherScript": "Hello, everyone! Do you remember The Secret Door? Tom opened the tiny green door. Today, let's read what happened. When the bell rang, the door opened. Say it with me. When the bell rang, the door opened. Wonderful! When joins two things that happened at the same time. When Tom stepped inside, the room was dark. You can put when in the middle, too. Everyone jumped when the clock struck twelve. Let's read. \"When Tom stepped inside, the room was dark. Then he heard music. It was soft and magical. Suddenly, a little bell rang. When the bell rang, a second door opened, and warm light came out. Inside, there was a library full of glowing books!\" Wait, everyone! Listen! Ding, ding. That's our library clock. Look! A door in the wall is opening! When the bell rang, the door opened, just like in the book! Now, phonics. Magic, magical. Music, musical. Nature, natural. A l makes a describing word. Let's look inside the secret room!",
+      "teacherScript": "Hello, everyone! Do you remember The Secret Door? Tom opened the tiny green door. Today, let's read what happened. When the bell rang, the door opened. Say it with me. When the bell rang, the door opened. Wonderful! When joins two events. When Tom stepped inside, the room was dark. You can put when in the middle, too. Everyone jumped when the clock struck twelve. Let's read. \"When Tom stepped inside, the room was dark. Then he heard music. It was soft and magical. Suddenly, a little bell rang. When the bell rang, a second door opened, and warm light came out. Inside, there was a library full of glowing books!\" Wait, everyone! Listen! Ding, ding. That's our library clock. Look! A door in the wall is opening! When the bell rang, the door opened, just like in the book! Now, phonics. Magic, magical. Music, musical. Nature, natural. A l makes a describing word. Let's look inside the secret room!",
       "conversation": {
         "scene": "A secret door opens in the Amber Library",
         "sceneJa": "ふしぎな ほんを よんで いると、としょかんの かべの ドアが ひらく",
@@ -8797,7 +8815,7 @@
         ],
         "aiTask": {
           "goalJa": "AI と when を つかって おはなしを つくろう。AI が「ふしぎな ばめん」を はなすから、When ～, ～. で つづきを たして いこう",
-          "starterEn": "Let's make a magical story together. When I opened my bedroom window, a bird flew in! What happened when you opened your door?",
+          "starterEn": "Let's make a magical story together. When I opened my bedroom window, a bird flew in! What happened when it landed? You decide!",
           "targetExpressions": [
             "When ～, ～.",
             "When the bell rang, ～.",
@@ -8818,9 +8836,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Hello, explorers! Listen. Ding, dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
+            "say": "Hello, explorers! Listen. Ding-dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
             "subtitleJa": "こんにちは、たんけんたい！ きいて。ディン、ドン。きこえる？ としょかんの ふるい とけいだよ。きょうは なにか ふしぎな ことが おこりそう！",
-            "subtitleEn": "Hello, explorers! Listen. Ding, dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
+            "subtitleEn": "Hello, explorers! Listen. Ding-dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -8849,9 +8867,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Bell. Ring, ring! Ding, dong! It makes a ringing sound. Bell!",
+            "say": "Bell. Ring, ring! Ding-dong! It makes a ringing sound. Bell!",
             "subtitleJa": "bell。リンリン！ ディン、ドン！ なる おとを だす もの。bell！",
-            "subtitleEn": "Bell. Ring, ring! Ding, dong! It makes a ringing sound. Bell!",
+            "subtitleEn": "Bell. Ring, ring! Ding-dong! It makes a ringing sound. Bell!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -8982,9 +9000,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "It sounds like ul, but we spell it a-l. Nature drops its e. Your turn. Magical. Musical. Natural.",
-            "subtitleJa": "おとは「アル」でも、つづりは a-l。nature は e を とるよ。あなたの ばん。magical、musical、natural。",
-            "subtitleEn": "It sounds like ul, but we spell it a-l. Nature drops its e. Your turn. Magical. Musical. Natural.",
+            "say": "The ending is soft and quick, but we spell it a-l. Nature drops its e. Your turn. Magical. Musical. Natural.",
+            "subtitleJa": "おとは よわい「アル」でも、つづりは a-l。nature は e を とるよ。あなたの ばん。magical、musical、natural。",
+            "subtitleEn": "The ending is soft and quick, but we spell it a-l. Nature drops its e. Your turn. Magical. Musical. Natural.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -9000,9 +9018,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Ring a bell. Ding, dong! The secret door is heavy. Push the heavy door. Push!",
+            "say": "Let's move! Ring a bell. Ding-dong! The secret door is heavy. Push the heavy door. Push!",
             "subtitleJa": "からだを うごかそう！ ベルを ならして。ディン、ドン！ ひみつの ドアは おもいよ。おもい ドアを おして。ぐーっ！",
-            "subtitleEn": "Let's move! Ring a bell. Ding, dong! The secret door is heavy. Push the heavy door. Push!",
+            "subtitleEn": "Let's move! Ring a bell. Ding-dong! The secret door is heavy. Push the heavy door. Push!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -9168,6 +9186,7 @@
     {
       "lessonNo": 649,
       "world": 22,
+      "reviewed": "run9",
       "title": "If I Find the Key",
       "titleJa": "もし かぎを みつけたら",
       "school": {
@@ -9304,7 +9323,7 @@
         ],
         "aiTask": {
           "goalJa": "AI と if を つかって はなそう。AI が ふしぎな ほんの はなしを するから、If ～, we can (will) ～. で アイデアを いおう",
-          "starterEn": "I found a strange box in the library. It's locked! What can we do? If we..., what will happen?",
+          "starterEn": "I found a strange box in the library. It's locked! What can we do? Start with If we...",
           "targetExpressions": [
             "If we find the key, we can ～.",
             "If ～, we will ～.",
@@ -9372,9 +9391,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Lock. It keeps things closed. No key, no open! Lock.",
+            "say": "Lock. It keeps things closed. No key? It won't open! Lock.",
             "subtitleJa": "lock。ものを しめた ままに する。かぎが ないと あかない！ lock。",
-            "subtitleEn": "Lock. It keeps things closed. No key, no open! Lock.",
+            "subtitleEn": "Lock. It keeps things closed. No key? It won't open! Lock.",
             "gesture": "point",
             "slide": {
               "title": "Words",
@@ -9492,9 +9511,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Ul and us. Soft and quick at the end. Your turn. Personal. Seasonal. Original. Famous.",
-            "subtitleJa": "「アル」と「アス」。おわりは よわく みじかく。あなたの ばん。personal、seasonal、original、famous。",
-            "subtitleEn": "Ul and us. Soft and quick at the end. Your turn. Personal. Seasonal. Original. Famous.",
+            "say": "Both endings are soft and quick. Your turn. Personal. Seasonal. Original. Famous.",
+            "subtitleJa": "どちらも おわりは よわく みじかく。「アル」と「アス」。あなたの ばん。personal、seasonal、original、famous。",
+            "subtitleEn": "Both endings are soft and quick. Your turn. Personal. Seasonal. Original. Famous.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -9679,6 +9698,7 @@
     {
       "lessonNo": 650,
       "world": 22,
+      "reviewed": "run9",
       "title": "Feelings Map",
       "titleJa": "きもちの ちず",
       "school": {
@@ -9772,7 +9792,7 @@
           "emoji": "🕰️"
         }
       ],
-      "teacherScript": "Hello, everyone! Today, we will make a Feelings Map. A Feelings Map shows how a character's feelings change from the beginning to the end. Let's make one for Lulu from The Shy Dragon. At first, she felt lonely. Later, she felt happy. Say it with me. At first, she felt lonely. Later, she felt happy. Very good! At first means at the beginning. Later means after some time. Then explain why. Her feelings changed because she found a friend. Let's read Kiko's Feelings Map. \"Lulu's Feelings Map. At first, she felt lonely, because she was lost in the snow. Then she felt scared, because she saw a big dragon. Later, she felt safe, because Ember was gentle. At the end, she felt happy, because she had a new friend.\" Wow. Lonely, scared, safe, happy. Wait! Look at the back of Kiko's map. There's something shiny. It's a key! A place full of feelings. It was the Feelings Map! Now, phonics review. Dangerous. Mysterious. Magical. Natural. Let's make our maps!",
+      "teacherScript": "Hello, everyone! Today, we will make a Feelings Map. A Feelings Map shows how a character's feelings change from the beginning to the end. Let's make one for Lulu from The Shy Dragon. At first, she felt lonely. Later, she felt happy. Say it with me. At first, she felt lonely. Later, she felt happy. Very good! At first means at the beginning. Later means after some time. Then explain why. Her feelings changed because she found a friend. Let's read Kiko's Feelings Map. \"Lulu's Feelings Map. At first, she felt lonely because she was lost in the snow. Then she felt scared because she saw a big dragon. Later, she felt safe because Ember was gentle. At the end, she felt happy because she had a new friend.\" Wow. Lonely, scared, safe, happy. Wait! Look at the back of Kiko's map. There's something shiny. It's a key! A place full of feelings. It was the Feelings Map! Now, phonics review. Dangerous. Mysterious. Magical. Natural. Let's make our maps!",
       "conversation": {
         "scene": "The friends make a Feelings Map and find the key",
         "sceneJa": "きもちの ちずを つくって、かぎを みつける",
@@ -9809,7 +9829,7 @@
           },
           {
             "speaker": "Ms. Emma",
-            "en": "Mysterious! Let's try it on the book.",
+            "en": "How mysterious! Let's try it on the book.",
             "ja": "ふしぎね！ほんに ためして みましょう。"
           }
         ],
@@ -9949,16 +9969,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko says, Kiko, what's that on the back of your map? It's shiny! Birimo shouts, A key! A place full of feelings... it's the Feelings Map! I say, Mysterious! Let's try it on the book.",
+            "say": "Riko says, Kiko, what's that on the back of your map? It's shiny! Birimo shouts, A key! A place full of feelings... it's the Feelings Map! I say, How mysterious! Let's try it on the book.",
             "subtitleJa": "リコちゃん「キコ、ちずの うらに ある それ なに？ ひかってる！」 ビリモが さけぶ。「かぎだ！ きもちで いっぱいの ばしょ… きもちの ちずの ことだったんだ！」 わたし「ふしぎね！ ほんに ためして みましょう。」",
-            "subtitleEn": "Riko says, Kiko, what's that on the back of your map? It's shiny! Birimo shouts, A key! A place full of feelings... it's the Feelings Map! I say, Mysterious! Let's try it on the book.",
+            "subtitleEn": "Riko says, Kiko, what's that on the back of your map? It's shiny! Birimo shouts, A key! A place full of feelings... it's the Feelings Map! I say, How mysterious! Let's try it on the book.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "Kiko, what's that on the back of your map? It's shiny!",
                 "A key! A place full of feelings... it's the Feelings Map!",
-                "Mysterious! Let's try it on the book."
+                "How mysterious! Let's try it on the book."
               ],
               "emoji": "🔑"
             }
@@ -10192,6 +10212,7 @@
     {
       "lessonNo": 651,
       "world": 22,
+      "reviewed": "run9",
       "title": "\"Help!\" Shouted the Boy",
       "titleJa": "「たすけて！」と おとこの子は さけんだ",
       "school": {
@@ -10254,7 +10275,7 @@
         "sounds": [
           "!",
           "!",
-          "↗"
+          "↘"
         ],
         "words": [
           "Help",
@@ -10440,9 +10461,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy says softly, Thank you, whispered the boy.",
-            "subtitleJa": "キコちゃんの ほんを よもう。おおきな なみが きて、おとこの子が うみに おちる。「たすけて！」と おとこの子は さけんだ。クジラが およいで くる。「ここに いるよ」と クジラは いった。はまべで おとこの子は そっと いう。「ありがとう」と おとこの子は ささやいた。",
-            "subtitleEn": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy says softly, Thank you, whispered the boy.",
+            "say": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy is very quiet. Thank you, whispered the boy.",
+            "subtitleJa": "キコちゃんの ほんを よもう。おおきな なみが きて、おとこの子が うみに おちる。「たすけて！」と おとこの子は さけんだ。クジラが およいで くる。「ここに いるよ」と クジラは いった。はまべで おとこの子は とても しずか。「ありがとう」と おとこの子は ささやいた。",
+            "subtitleEn": "Let's read Kiko's book. A big wave comes, and a boy falls into the sea. Help! shouted the boy. A whale swims up. I'm here, said the whale. At the beach, the boy is very quiet. Thank you, whispered the boy.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -10457,9 +10478,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it soft.",
+            "say": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it softly.",
             "subtitleJa": "ポイント。ちいさな しるしを さがそう。なかの ことばが セリフ。そのあと つぎの ことばを みて。shouted？ おおきな こえで。whispered？ ちいさな こえで。",
-            "subtitleEn": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it soft.",
+            "subtitleEn": "Here's the point. Find the little marks. The words inside are the line. Then look at the next word. Shouted? Read it loud. Whispered? Read it softly.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -10473,9 +10494,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes up.",
-            "subtitleJa": "おとの じかん！ セリフの おわりを みて。この しるしは つよい。Help! Watch out! いきを つよく だして！ こっちは しつもん。Who's there? こえが あがるよ。",
-            "subtitleEn": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes up.",
+            "say": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes down.",
+            "subtitleJa": "おとの じかん！ セリフの おわりを みて。この しるしは つよい。Help! Watch out! いきを つよく だして！ こっちは しつもん。Who's there? こえが さがるよ。",
+            "subtitleEn": "Sound time! Look at the end of a line. This mark is strong. Help! Watch out! Push out the air! This one is a question. Who's there? Your voice goes down.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -10484,7 +10505,7 @@
                 "Watch out",
                 "Who's there",
                 "!",
-                "↗"
+                "↘"
               ],
               "emoji": "🔤"
             },
@@ -10612,9 +10633,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! A cat is stuck in a tree. Make a line for the cat. Help! cried the cat. Or, I'm okay, said the cat.",
+            "say": "Your turn! A cat is stuck in a tree. Make a line for the cat. Help! cried the cat. Or I'm OK, said the cat.",
             "subtitleJa": "あなたの ばん！ ねこが きの うえから おりられない。ねこの セリフを つくって。「たすけて！」と ねこは さけんだ。それとも「だいじょうぶ」と ねこは いった。",
-            "subtitleEn": "Your turn! A cat is stuck in a tree. Make a line for the cat. Help! cried the cat. Or, I'm okay, said the cat.",
+            "subtitleEn": "Your turn! A cat is stuck in a tree. Make a line for the cat. Help! cried the cat. Or I'm OK, said the cat.",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -10680,6 +10701,7 @@
     {
       "lessonNo": 652,
       "world": 22,
+      "reviewed": "run9",
       "title": "She Said, \"Thank You.\"",
       "titleJa": "かのじょは「ありがとう」と いった",
       "school": {
@@ -10740,7 +10762,7 @@
           "Can you help me"
         ],
         "sounds": [
-          "↗",
+          "↘",
           "!",
           "↗"
         ],
@@ -10774,7 +10796,7 @@
           "emoji": "🎙️"
         }
       ],
-      "teacherScript": "Hello, everyone! Today, we will play a game called Who Said It? I'll read a line, and you guess who said it. There's another way to write lines. The person comes first. She said, Thank you for saving me. Say it with me. She said, Thank you for saving me. Excellent! Notice the comma after said. Then the line starts with a capital letter. For questions, use asked. He asked, Can I be your friend? To ask about a line, say, Who said, Watch out? Rusty did. Let's read some lines from our books. \"Line one: 'Where are you, Rusty?' Line two: 'Can I be your friend?' Line three: 'Thank you for saving me.' Line four: 'Wow! The stone is glowing!' Who said each line? Kai, Ember, Lulu, or Lord Grim?\" Hmm, let's think. Kai said, Where are you, Rusty? Ember asked, Can I be your friend? Lulu said, Thank you for saving me. Now, phonics and reading. Where are you, question mark. Wow, exclamation mark. Can you help me, question mark. Let's play Who Said It!",
+      "teacherScript": "Hello, everyone! Today, we will play a game called Who Said It? I'll read a line, and you guess who said it. There's another way to write lines. The person comes first. She said, Thank you for saving me. Say it with me. She said, Thank you for saving me. Excellent! Notice the comma after said. Then the line starts with a capital letter. For questions, use asked. He asked, Can I be your friend? To ask about a line, say, Who said, Watch out? Rusty did. Let's read some lines from our books. \"Line one: 'Where are you, Rusty?' Line two: 'Can I be your friend?' Line three: 'Thank you for saving me.' Line four: 'Wow! The stone is glowing!' Who said each line? Kai, Ember, Lulu, or Lord Grim?\" Hmm, let's think. Kai asked, Where are you, Rusty? Ember asked, Can I be your friend? Lulu said, Thank you for saving me. Now, phonics and reading. Where are you, question mark. Wow, exclamation mark. Can you help me, question mark. Let's play Who Said It!",
       "conversation": {
         "scene": "The friends play Who Said It?",
         "sceneJa": "「だれの セリフ？」ゲームを する",
@@ -10896,9 +10918,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Ask. Say a question. Hand up. Excuse me, where is the toilet? Ask!",
+            "say": "Ask. Say a question. Hand up. Excuse me, where is the bathroom? Ask!",
             "subtitleJa": "ask。しつもんを する こと。てを あげて。すみません、トイレは どこですか？ ask！",
-            "subtitleEn": "Ask. Say a question. Hand up. Excuse me, where is the toilet? Ask!",
+            "subtitleEn": "Ask. Say a question. Hand up. Excuse me, where is the bathroom? Ask!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -11184,6 +11206,7 @@
     {
       "lessonNo": 653,
       "world": 22,
+      "reviewed": "run9",
       "title": "Read It with Feeling",
       "titleJa": "きもちを こめて よもう",
       "school": {
@@ -11278,7 +11301,7 @@
           "emoji": "😄"
         }
       ],
-      "teacherScript": "Hello, everyone! Today, we will read lines with feeling. The same words can sound very different. Listen. Oh no. That's sad. Oh no! That's surprised. Let's read it with feeling. Say it with me. Let's read it with feeling. Great! Books tell us how to read a line. Oh no! she cried sadly. Sadly means in a sad way. Oh no! he shouted in surprise. When you see sadly, read slowly and softly. When you see in surprise, read quickly and high. Let's read this short scene. \"Mira's new robot fell off the table. Crash! 'Oh no!' she cried sadly. She picked up the pieces. Then Bolt rolled into the room with a box of tools. 'What happened?' asked Bolt. Mira smiled. 'We can fix it!' Two hours later, the robot stood up and waved. 'Hooray!' they shouted happily.\" How did Mira feel at first? Sad. And at the end? Happy! Now, phonics and reading. Oh no, exclamation. What happened, question. Hooray, exclamation. Let's read with feeling!",
+      "teacherScript": "Hello, everyone! Today, we will read lines with feeling. The same words can sound very different. Listen. Oh no. That sounds sad. Oh no! That sounds surprised. Let's read it with feeling. Say it with me. Let's read it with feeling. Great! Books tell us how to read a line. Oh no! she cried sadly. Sadly means in a sad way. Oh no! he shouted in surprise. When you see sadly, read slowly and softly. When you see in surprise, read quickly and high. Let's read this short scene. \"Mira's new robot fell off the table. Crash! 'Oh no!' she cried sadly. She picked up the pieces. Then Bolt rolled into the room with a box of tools. 'What happened?' asked Bolt. Mira smiled. 'We can fix it!' Two hours later, the robot stood up and waved. 'Hooray!' they shouted happily.\" How did Mira feel at first? Sad. And at the end? Happy! Now, phonics and reading. Oh no, exclamation. What happened, question. Hooray, exclamation. Let's read with feeling!",
       "conversation": {
         "scene": "The friends practice reading lines with feeling",
         "sceneJa": "きもちを こめて セリフを よむ れんしゅうを する",
@@ -11316,7 +11339,7 @@
         ],
         "aiTask": {
           "goalJa": "AI と きもちを こめて セリフを よむ ゲームを しよう。AI が「きもち」を いうから、その きもちで セリフを いって みよう。How does she feel? と AI に きいて みてもいいよ",
-          "starterEn": "Let's read with feeling! Say \"I found it!\" in a happy way. Then I'll guess your feeling. Ready?",
+          "starterEn": "Let's read with feeling! Pick a feeling and say \"I found it!\" Then I'll guess your feeling. Ready?",
           "targetExpressions": [
             "Let's read it with feeling.",
             "\"Oh no!\" she cried sadly.",
@@ -11400,9 +11423,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Surprise. Something happens, and you didn't know! Big eyes. Whoa! Surprise!",
-            "subtitleJa": "surprise。しらなかった ことが おきる！ めを まるく。うわっ！ surprise！",
-            "subtitleEn": "Surprise. Something happens, and you didn't know! Big eyes. Whoa! Surprise!",
+            "say": "Surprise. Something happens that you didn't expect! Big eyes. Whoa! Surprise!",
+            "subtitleJa": "surprise。おもって いなかった ことが おきる！ めを まるく。うわっ！ surprise！",
+            "subtitleEn": "Surprise. Something happens that you didn't expect! Big eyes. Whoa! Surprise!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -11432,9 +11455,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Let's watch. His robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
-            "subtitleJa": "みてみよう。ロボットが つくえから おちた。ガシャン！ わたし「ハルくん、この セリフを かなしそうに よんで。Oh no!」 ハルくんは したを むく。「ああ… ぼくの ロボットが こわれちゃった。」 かわいそうな ハルくん！",
-            "subtitleEn": "Let's watch. His robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
+            "say": "Let's watch. Haru's robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
+            "subtitleJa": "みてみよう。ハルくんの ロボットが つくえから おちた。ガシャン！ わたし「ハルくん、この セリフを かなしそうに よんで。Oh no!」 ハルくんは したを むく。「ああ… ぼくの ロボットが こわれちゃった。」 かわいそうな ハルくん！",
+            "subtitleEn": "Let's watch. Haru's robot fell off the table. Crash! I say, Haru, read this line sadly. Oh no! Haru looks down. Oh no... my robot is broken. Poor Haru!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -11688,6 +11711,7 @@
     {
       "lessonNo": 654,
       "world": 22,
+      "reviewed": "run9",
       "title": "Picture Book Reading",
       "titleJa": "えほんの よみきかせ",
       "school": {
@@ -11711,7 +11735,7 @@
         ],
         "testPoints": [
           "Once upon a time, ～. ではじまる おはなしを、セリフを くべつして よみきかせできる",
-          "おわりの しるし ! と ?（Who are you?・Look out!・Are you okay?）"
+          "おわりの しるし ! と ?（Who are you?・Look out!・Are you OK?）"
         ]
       },
       "tpr": [
@@ -11745,7 +11769,7 @@
         "focus": [
           "Who are you",
           "Look out",
-          "Are you okay"
+          "Are you OK"
         ],
         "sounds": [
           "↘",
@@ -11755,9 +11779,9 @@
         "words": [
           "Who are you",
           "Look out",
-          "Are you okay"
+          "Are you OK"
         ],
-        "tipJa": "Who are you?（だれ？）・Look out!（きを つけて！）・Are you okay?（だいじょうぶ？）。よみきかせでは ? で きく ように、! で つよく。こえを かえると、ちいさい 子も よろこぶよ。"
+        "tipJa": "Who are you?（だれ？）・Look out!（きを つけて！）・Are you OK?（だいじょうぶ？）。よみきかせでは ? で きく ように、! で つよく。こえを かえると、ちいさい 子も よろこぶよ。"
       },
       "vocab": [
         {
@@ -11782,7 +11806,7 @@
           "emoji": "📄"
         }
       ],
-      "teacherScript": "Hello, everyone! Today, some little children are coming to the library. You will read a picture book to them! Many stories start with four magic words. Once upon a time. Once upon a time, there was a little fox. Say it with me. Once upon a time, there was a little fox. Lovely! Remember to change your voice for the lines. Hello, said the fox. At the end, say, The end. Then ask, Did you like the story? Let's practice with The Fox and the Moon. \"Once upon a time, there was a little fox. Every night, he looked up at the moon. One night, the moon came down to the hill. 'Who are you?' asked the moon. 'Hello,' said the fox. 'I'm Fox. I'm your biggest fan!' The moon laughed. 'Look out! You're standing on my light!' Fox jumped. 'Are you okay?' The moon smiled. 'I'm fine. Let's be friends.' The end.\" Now, phonics and reading. Who are you, question mark. Look out, exclamation mark. Are you okay, question mark. Hold the book so everyone can see. Let's practice!",
+      "teacherScript": "Hello, everyone! Today, some little children are coming to the library. You will read a picture book to them! Many stories start with four magic words. Once upon a time. Once upon a time, there was a little fox. Say it with me. Once upon a time, there was a little fox. Great! Remember to change your voice for the lines. Hello, said the fox. At the end, say, The end. Then ask, Did you like the story? Let's practice with The Fox and the Moon. \"Once upon a time, there was a little fox. Every night, he looked up at the moon. One night, the moon came down to the hill. 'Who are you?' asked the moon. 'Hello,' said the fox. 'I'm Fox. I'm your biggest fan!' The moon laughed. 'Look out! You're standing on my light!' Fox jumped. 'Are you OK?' The moon smiled. 'I'm fine. Let's be friends.' The end.\" Now, phonics and reading. Who are you, question mark. Look out, exclamation mark. Are you OK, question mark. Hold the book so everyone can see. Let's practice!",
       "conversation": {
         "scene": "The friends practice reading to little children",
         "sceneJa": "ちいさい 子への よみきかせを れんしゅうする",
@@ -11825,7 +11849,7 @@
         ],
         "aiTask": {
           "goalJa": "AI に えほんを よみきかせよう。Once upon a time, there was ～. ではじめて、セリフを 1つ 入れて、The end. Did you like the story? で おわろう。じぶんで かんがえた おはなしでも OK",
-          "starterEn": "Hi! I'm a little bunny, and I love stories. Will you read me a story? Please start with \"Once upon a time\"!",
+          "starterEn": "Let's pretend! I'm a little bunny, and I love stories. Will you read me a story? Please start with \"Once upon a time\"!",
           "targetExpressions": [
             "Once upon a time, there was ～.",
             "\"Hello,\" said ～.",
@@ -11837,7 +11861,7 @@
         "highlightsJa": [
           "Once upon a time, there was a little fox.",
           "\"Hello,\" said the fox. / The end. Did you like the story?",
-          "Who are you?・Look out!・Are you okay?"
+          "Who are you?・Look out!・Are you OK?"
         ]
       },
       "teacher": {
@@ -11989,16 +12013,16 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Who are you? A who question. Your voice goes down. Look out! Strong and quick! Are you okay? A yes or no question. Your voice goes up.",
-            "subtitleJa": "おとの じかん！ Who are you? who の しつもん。こえは さがる。Look out! つよく はやく！ Are you okay? はい・いいえの しつもん。こえは あがる。",
-            "subtitleEn": "Sound time! Who are you? A who question. Your voice goes down. Look out! Strong and quick! Are you okay? A yes or no question. Your voice goes up.",
+            "say": "Sound time! Who are you? A who question. Your voice goes down. Look out! Strong and quick! Are you OK? A yes or no question. Your voice goes up.",
+            "subtitleJa": "おとの じかん！ Who are you? who の しつもん。こえは さがる。Look out! つよく はやく！ Are you OK? はい・いいえの しつもん。こえは あがる。",
+            "subtitleEn": "Sound time! Who are you? A who question. Your voice goes down. Look out! Strong and quick! Are you OK? A yes or no question. Your voice goes up.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
               "items": [
                 "Who are you",
                 "Look out",
-                "Are you okay",
+                "Are you OK",
                 "↘",
                 "!",
                 "↗"
@@ -12010,16 +12034,16 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Your turn. Be the moon. Who are you? Be the fox. Look out! Be kind. Are you okay?",
-            "subtitleJa": "あなたの ばん。つきに なって。Who are you? きつねに なって。Look out! やさしく。Are you okay?",
-            "subtitleEn": "Your turn. Be the moon. Who are you? Be the fox. Look out! Be kind. Are you okay?",
+            "say": "Your turn. Be the moon. Who are you? Look out! Now be the fox. Are you OK?",
+            "subtitleJa": "あなたの ばん。つきに なって。Who are you? Look out! こんどは きつねに なって。Are you OK?",
+            "subtitleEn": "Your turn. Be the moon. Who are you? Look out! Now be the fox. Are you OK?",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
               "items": [
                 "Who are you",
                 "Look out",
-                "Are you okay"
+                "Are you OK"
               ],
               "emoji": "🗣️"
             },
@@ -12161,9 +12185,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! Once upon a time. The end comes at the end, of course! Lovely!",
+            "say": "It's A! Once upon a time. The end comes at the end, of course! Great!",
             "subtitleJa": "こたえは A！ once upon a time。the end は もちろん さいごだよ！ すてき！",
-            "subtitleEn": "It's A! Once upon a time. The end comes at the end, of course! Lovely!",
+            "subtitleEn": "It's A! Once upon a time. The end comes at the end, of course! Great!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -12196,6 +12220,7 @@
     {
       "lessonNo": 655,
       "world": 22,
+      "reviewed": "run9",
       "title": "Story Theater",
       "titleJa": "おはなし げきじょう",
       "school": {
@@ -12293,7 +12318,7 @@
           "emoji": "🎟️"
         }
       ],
-      "teacherScript": "Hello, everyone! Welcome to Story Theater! Today, four of you will act out The Shy Dragon. First, choose your roles. I'll be the narrator. You're Lulu. I'm Ember. The narrator tells the story, and the characters say their lines. Here's an important line. Who are you? asked the dragon. Say it with me. Who are you? asked the dragon. Very good! Ember is shy, so say it softly. Let's read our script. \"Narrator: One snowy day, Lulu was lost on the mountain. Lulu: Help! Where are you, Mom? Narrator: A big dragon came out from behind a rock. Ember: Who are you? Lulu: I'm Lulu. I'm lost. Ember: Don't be scared. I'll take you home. Narrator: Ember flew Lulu home, and everyone cheered. Villagers: Hooray!\" Before we start, remember. Look at the audience. Speak loudly and clearly. Read with feeling! Now, phonics and reading review. Help, exclamation. Where are you, question. Hooray, exclamation. Who are you, question. Let's start from the beginning. Lights, please!",
+      "teacherScript": "Hello, everyone! Welcome to Story Theater! Today, four of you will act out The Shy Dragon. First, choose your roles. You can say, I'll be the narrator. You're Lulu. I'm Ember. The narrator tells the story, and the characters say their lines. Here's an important line. Who are you? asked the dragon. Say it with me. Who are you? asked the dragon. Very good! Ember is shy, so say it softly. Let's read our script. \"Narrator: One snowy day, Lulu was lost on the mountain. Lulu: Help! Where are you, Mom? Narrator: A big dragon came out from behind a rock. Ember: Who are you? Lulu: I'm Lulu. I'm lost. Ember: Don't be scared. I'll take you home. Narrator: Ember flew Lulu home, and everyone cheered. Villagers: Hooray!\" Before we start, remember. Look at the audience. Speak loudly and clearly. Read with feeling! Now, phonics and reading review. Help, exclamation. Where are you, question. Hooray, exclamation. Who are you, question. Let's start from the beginning. Lights, please!",
       "conversation": {
         "scene": "The friends perform The Shy Dragon as a play",
         "sceneJa": "4人で『はずかしがりの ドラゴン』を えんじる",
@@ -12357,9 +12382,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Welcome, welcome, to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
+            "say": "Welcome, welcome to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
             "subtitleJa": "ようこそ、おはなし げきじょうへ！ ライトが ついた。せきも じゅんび OK。きょうは みんなで『はずかしがりの ドラゴン』を えんじるよ。あなたも いっしょに！",
-            "subtitleEn": "Welcome, welcome, to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
+            "subtitleEn": "Welcome, welcome to Story Theater! The lights are on. The seats are ready. Today, our friends act out The Shy Dragon. And you can join!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -12709,6 +12734,7 @@
     {
       "lessonNo": 656,
       "world": 22,
+      "reviewed": "run9",
       "title": "The Book That Won't Open",
       "titleJa": "ひらかない ほん",
       "school": {
@@ -12806,7 +12832,7 @@
           "emoji": "💡"
         }
       ],
-      "teacherScript": "Hello, everyone! The big day is here. We have the key from the Feelings Map. Let's open the Book That Won't Open! Click. The golden lock opened. But wait. There's another lock inside with three empty lines. We need three words to open this book. Say it with me. We need three words to open this book. Great! There's a riddle under the lock. Let's read it. \"Three words open this book. The first word is what Ember found on the mountain. The second word is what Kai showed in the storm. The third word is what Mira uses every day to make new things. Say the three words together, and say them with feeling.\" Hmm. What did Ember find? A friend. So, friendship! Give a reason. I think the first word is friendship because Ember found a friend. What did Kai show? She was brave. Courage! And Mira? She has lots of ideas. Imagination! Now, phonics review. Writer. Action. Pencil. Famous. Okay, everyone. Let's say them together with feeling. Friendship! Courage! Imagination! Look! The book is opening!",
+      "teacherScript": "Hello, everyone! The big day is here. We have the key from the Feelings Map. Let's open the Book That Won't Open! Click. The golden lock opened. But wait. There's another lock inside with three empty lines. We need three words to open this book. Say it with me. We need three words to open this book. Great! There's a riddle under the lock. Let's read it. \"Three words open this book. The first word is what Ember found on the mountain. The second word is what Kai showed in the storm. The third word is what Mira uses every day to make new things. Say the three words together, and say them with feeling.\" Hmm. What did Ember find? A friend. So, friendship! Give a reason. I think the first word is friendship because Ember found a friend. What did Kai show? She was brave. Courage! And Mira? She has lots of ideas. Imagination! Now, phonics review. Writer. Action. Pencil. Famous. OK, everyone. Let's say them together with feeling. Friendship! Courage! Imagination! Look! The book is opening!",
       "conversation": {
         "scene": "The friends solve the riddle and open the book",
         "sceneJa": "なぞなぞを といて、ひらかない ほんを あける",
@@ -12901,9 +12927,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Riddle. A puzzle question. What has pages, but it's not a tree? Hmm! Riddle!",
+            "say": "Riddle. A puzzle question. What has pages but isn't a tree? Hmm! Riddle!",
             "subtitleJa": "riddle。なぞなぞ。ページが あるけど、きじゃ ない もの なーんだ？ うーん！ riddle！",
-            "subtitleEn": "Riddle. A puzzle question. What has pages, but it's not a tree? Hmm! Riddle!",
+            "subtitleEn": "Riddle. A puzzle question. What has pages but isn't a tree? Hmm! Riddle!",
             "gesture": "think",
             "slide": {
               "title": "Words",
@@ -13014,9 +13040,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil, strong pen, soft cil. Famous, very well known!",
+            "say": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil. Pen-cil. Strong, then soft. Famous, very well known!",
             "subtitleJa": "おとの ふくしゅう！ ことばの パーツは ヒント。write → writer、かく ひと。act → action。pencil は pen が つよく、cil は よわく。famous は とても ゆうめい！",
-            "subtitleEn": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil, strong pen, soft cil. Famous, very well known!",
+            "subtitleEn": "Sound review! Word parts are clues. Write, writer, a person who writes. Act, action. Pencil. Pen-cil. Strong, then soft. Famous, very well known!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -13153,9 +13179,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! What has pages, but it's not a tree? Answer with a reason. I think the answer is... because...",
+            "say": "Your turn! What has pages but isn't a tree? Answer with a reason. I think the answer is... because...",
             "subtitleJa": "あなたの ばん！ ページが あるけど きじゃ ない もの なーんだ？ りゆうも つけて こたえてね。こたえは … だと おもう、なぜなら …。",
-            "subtitleEn": "Your turn! What has pages, but it's not a tree? Answer with a reason. I think the answer is... because...",
+            "subtitleEn": "Your turn! What has pages but isn't a tree? Answer with a reason. I think the answer is... because...",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -13221,6 +13247,7 @@
     {
       "lessonNo": 657,
       "world": 22,
+      "reviewed": "run9",
       "title": "My Story Ending",
       "titleJa": "わたしの かんがえた おわりかた",
       "school": {
@@ -13511,9 +13538,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Not sure? Say maybe. Maybe his mother is waiting for him. Every ending is okay. There's no wrong answer!",
+            "say": "Here's the point. Not sure? Say maybe. Maybe his mother is waiting for him. Every ending is OK. There's no wrong answer!",
             "subtitleJa": "ポイント。はっきり わからない ときは maybe。たぶん おかあさんが まって いるんだ。どんな おわりかたでも OK。まちがいは ないよ！",
-            "subtitleEn": "Here's the point. Not sure? Say maybe. Maybe his mother is waiting for him. Every ending is okay. There's no wrong answer!",
+            "subtitleEn": "Here's the point. Not sure? Say maybe. Maybe his mother is waiting for him. Every ending is OK. There's no wrong answer!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -13527,9 +13554,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake, soft a, strong wake. Magic, magical!",
+            "say": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake. A-wake. Soft, then strong. Magic, magical!",
             "subtitleJa": "おとの ふくしゅう！ illustrator は えを かく ひと。invent → invention。awake は a が よわく、wake が つよい。magic → magical！",
-            "subtitleEn": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake, soft a, strong wake. Magic, magical!",
+            "subtitleEn": "Sound review! Illustrator, a person who draws the pictures. Invent, invention. Awake. A-wake. Soft, then strong. Magic, magical!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -13733,6 +13760,7 @@
     {
       "lessonNo": 658,
       "world": 22,
+      "reviewed": "run9",
       "title": "Book Recommendation Card",
       "titleJa": "ほんの しょうかいカード",
       "school": {
@@ -13860,8 +13888,8 @@
           },
           {
             "speaker": "Birimo",
-            "en": "My favorite part is the storm. It's so adventurous!",
-            "ja": "あらしの ところ。すごく ぼうけんって かんじ！"
+            "en": "My favorite part is the storm. Kai is so adventurous!",
+            "ja": "あらしの ところ。カイが すごく ぼうけんずき なんだ！"
           },
           {
             "speaker": "Riko",
@@ -13961,9 +13989,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Rating. How good is it? One star, okay. Five stars, wow! Rating.",
+            "say": "Rating. How good is it? One star, OK. Five stars, wow! Rating.",
             "subtitleJa": "rating。どれくらい いい？ ほし 1つは まあまあ。ほし 5つは すごい！ rating。",
-            "subtitleEn": "Rating. How good is it? One star, okay. Five stars, wow! Rating.",
+            "subtitleEn": "Rating. How good is it? One star, OK. Five stars, wow! Rating.",
             "gesture": "point",
             "slide": {
               "title": "Words",
@@ -14010,15 +14038,15 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru asks, What's your favorite part? My favorite part is the storm. It's so adventurous! Riko asks, How many stars? Five stars, of course!",
-            "subtitleJa": "ハルくん「すきな ところは どこ？」「あらしの ところ。すごく ぼうけんって かんじ！」 リコちゃん「ほしは いくつ？」「もちろん 5つ！」",
-            "subtitleEn": "Haru asks, What's your favorite part? My favorite part is the storm. It's so adventurous! Riko asks, How many stars? Five stars, of course!",
+            "say": "Haru asks, What's your favorite part? Birimo says, My favorite part is the storm. Kai is so adventurous! Riko asks, How many stars? Birimo says, Five stars, of course!",
+            "subtitleJa": "ハルくん「すきな ところは どこ？」 ビリモ「あらしの ところ。カイが すごく ぼうけんずき なんだ！」 リコちゃん「ほしは いくつ？」 ビリモ「もちろん 5つ！」",
+            "subtitleEn": "Haru asks, What's your favorite part? Birimo says, My favorite part is the storm. Kai is so adventurous! Riko asks, How many stars? Birimo says, Five stars, of course!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "What's your favorite part?",
-                "My favorite part is the storm. It's so adventurous!",
+                "My favorite part is the storm. Kai is so adventurous!",
                 "How many stars?",
                 "Five stars, of course! Hooray for Kai and Rusty!"
               ],
@@ -14028,9 +14056,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. A good card has three parts. The title. What it's about. And a reason to read it. Because it's funny. Because it's exciting!",
-            "subtitleJa": "ポイント。いい カードには 3つの ぶぶんが ある。タイトル。なんの おはなしか。そして よむ りゆう。おもしろいから。わくわくするから！",
-            "subtitleEn": "Here's the point. A good card has three parts. The title. What it's about. And a reason to read it. Because it's funny. Because it's exciting!",
+            "say": "Here's the point. A good card has four parts. The title. What it's about. The main character. And a reason to read it. Because it's funny. Because it's exciting!",
+            "subtitleJa": "ポイント。いい カードには 4つの ぶぶんが ある。タイトル。なんの おはなしか。しゅじんこう。そして よむ りゆう。おもしろいから。わくわくするから！",
+            "subtitleEn": "Here's the point. A good card has four parts. The title. What it's about. The main character. And a reason to read it. Because it's funny. Because it's exciting!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -14044,9 +14072,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Art, artist. Protect, protector. Second, strong sec, soft ond. Adventure, adventurous. And Hooray, strong and happy!",
+            "say": "Sound review! Art, artist. Protect, protector. Second. Sec-ond. Strong, then soft. Adventure, adventurous. And Hooray, strong and happy!",
             "subtitleJa": "おとの ふくしゅう！ art → artist。protect → protector。second は sec が つよく、ond は よわく。adventure → adventurous。それから Hooray は つよく うれしく！",
-            "subtitleEn": "Sound review! Art, artist. Protect, protector. Second, strong sec, soft ond. Adventure, adventurous. And Hooray, strong and happy!",
+            "subtitleEn": "Sound review! Art, artist. Protect, protector. Second. Sec-ond. Strong, then soft. Adventure, adventurous. And Hooray, strong and happy!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -14254,6 +14282,7 @@
     {
       "lessonNo": 659,
       "world": 22,
+      "reviewed": "run9",
       "title": "Amber Library Review",
       "titleJa": "こはくの図書館の ふりかえり",
       "school": {
@@ -14493,7 +14522,7 @@
             "kind": "words",
             "lang": "en",
             "say": "Goodbye. We say it when we leave. Wave your hand. Goodbye!",
-            "subtitleJa": "goodbye。でかける ときに いう ことば。てを ふって。goodbye！",
+            "subtitleJa": "goodbye。わかれる ときに いう ことば。てを ふって。goodbye！",
             "subtitleEn": "Goodbye. We say it when we leave. Wave your hand. Goodbye!",
             "gesture": "wave",
             "slide": {
@@ -14558,9 +14587,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Read, reader. Direct, direction. Children, strong chil, soft dren. Nature, natural. And Who are you? Your voice goes down.",
+            "say": "Sound review! Read, reader. Direct, direction. Children. Chil-dren. Strong, then soft. Nature, natural. And Who are you? Your voice goes down.",
             "subtitleJa": "おとの ふくしゅう！ read → reader。direct → direction。children は chil が つよく、dren は よわく。nature → natural。それから Who are you? こえは さがるよ。",
-            "subtitleEn": "Sound review! Read, reader. Direct, direction. Children, strong chil, soft dren. Nature, natural. And Who are you? Your voice goes down.",
+            "subtitleEn": "Sound review! Read, reader. Direct, direction. Children. Chil-dren. Strong, then soft. Nature, natural. And Who are you? Your voice goes down.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -14766,6 +14795,7 @@
     {
       "lessonNo": 660,
       "world": 22,
+      "reviewed": "run9",
       "title": "World 22 Grand Review",
       "titleJa": "ワールド22 グランドレビュー",
       "school": {
@@ -14870,7 +14900,7 @@
           "emoji": "📖"
         }
       ],
-      "teacherScript": "Hello, everyone! Welcome to the World 22 Grand Review! Today is the Book Festival in the big hall of the Amber Library. Everyone will present a favorite story. At the end of your talk, tell us the big idea of the story. That's the theme. This story is about friendship. I loved it! Say it with me. This story is about friendship. I loved it! Fantastic! Other themes are courage, family and kindness. In this world, you learned so much. What's it about? Who wrote it? You should read it. The main character is a shy dragon. She's brave and kind. At the beginning. In the middle. At the end. She was sad because she lost her friend. He was scared, so he ran away. When the bell rang, the door opened. If we find the key, we can open the book. Help! shouted the boy. Here is the festival program. Let's read it. \"Book Festival Program. Part one: Book talks. Part two: Story Theater, The Shy Dragon. Part three: Readers read their new story endings. Part four: A goodbye song from the little children.\" Now, phonics review. Writer. Narrator. Active. Giant. Mysterious. Help! You are wonderful readers. Let the festival begin!",
+      "teacherScript": "Hello, everyone! Welcome to the World 22 Grand Review! Today is the Book Festival in the big hall of the Amber Library. Everyone will present a favorite story. At the end of your talk, tell us the big idea of the story. That's the theme. This story is about friendship. I loved it! Say it with me. This story is about friendship. I loved it! Fantastic! Other themes are courage, family and kindness. In this world, you learned so much. What's it about? Who wrote it? You should read it. The main character is a shy dragon. He's big, but he's very gentle. At the beginning. In the middle. At the end. She was sad because she lost her friend. He was scared, so he ran away. When the bell rang, the door opened. If we find the key, we can open the book. Help! shouted the boy. Here is the festival program. Let's read it. \"Book Festival Program. Part one: Book talks. Part two: Story Theater, The Shy Dragon. Part three: Readers read their new story endings. Part four: A goodbye song from the little children.\" Now, phonics review. Writer. Narrator. Active. Giant. Mysterious. Help! You are wonderful readers. Let the festival begin!",
       "conversation": {
         "scene": "The World 22 Book Festival",
         "sceneJa": "としょかんの ホールで、ワールド22 ブックフェスティバル",
@@ -15079,9 +15109,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Grand sound review! Writer and narrator, people words. Act, active. Giant, strong gi, soft ant. Mysterious, full of secrets. And Help, strong!",
+            "say": "Grand sound review! Writer and narrator, people words. Act, active. Giant. Gi-ant. Strong, then soft. Mysterious, full of secrets. And Help, strong!",
             "subtitleJa": "おとの グランド ふくしゅう！ writer と narrator は ひとの ことば。act → active。giant は gi が つよく、ant は よわく。mysterious は ひみつで いっぱい。それから Help は つよく！",
-            "subtitleEn": "Grand sound review! Writer and narrator, people words. Act, active. Giant, strong gi, soft ant. Mysterious, full of secrets. And Help, strong!",
+            "subtitleEn": "Grand sound review! Writer and narrator, people words. Act, active. Giant. Gi-ant. Strong, then soft. Mysterious, full of secrets. And Help, strong!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -15268,9 +15298,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Next is World 23, the Green Laboratory! Bye-bye!",
-            "subtitleJa": "こはくの図書館を クリア！ ほんの はなし、キャラクター、おはなしの おわり、きもち、セリフ。さようなら、こはくの図書館！ このあと ビリモと おはなし してね！ つぎは ワールド23、みどりの研究所！ バイバイ！",
-            "subtitleEn": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Next is World 23, the Green Laboratory! Bye-bye!",
+            "say": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Then it's on to World 23, the Green Laboratory! Bye-bye!",
+            "subtitleJa": "こはくの図書館を クリア！ ほんの はなし、キャラクター、おはなしの おわり、きもち、セリフ。さようなら、こはくの図書館！ このあと ビリモと おはなし してね！ そのあとは ワールド23、みどりの研究所！ バイバイ！",
+            "subtitleEn": "You finished the Amber Library! Book talk, characters, story endings, feelings, and lines. Goodbye, Amber Library! Next, go and talk with Birimo! Then it's on to World 23, the Green Laboratory! Bye-bye!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",

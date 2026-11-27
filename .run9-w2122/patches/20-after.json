@@ -1,0 +1,234 @@
+[
+ {
+  "lesson": 605,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, this is Kiko. Oh, hi! What's up?",
+  "after": "Hello? Oh, hi! What's up?",
+  "reviewers": "objective (coordinator; partner check)",
+  "reason": "pickConversationPartner skips any child character NAMED in the starter unless it is \"I'm X\". The group fix \"This is X / It's X\" (X = the wrap-up partner) made the app pick someone else. Drop the name; the app now picks the wrap-up partner (checked with partner.ts)"
+ },
+ {
+  "lesson": 606,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hi! It's Riko. I'm calling from the tower. Can you hear me?",
+  "after": "Hi! I'm calling from the tower. Can you hear me?",
+  "reviewers": "objective (coordinator; partner check)",
+  "reason": "pickConversationPartner skips any child character NAMED in the starter unless it is \"I'm X\". The group fix \"This is X / It's X\" (X = the wrap-up partner) made the app pick someone else. Drop the name; the app now picks the wrap-up partner (checked with partner.ts)"
+ },
+ {
+  "lesson": 611,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello! This is Kiko. May I speak to Ms. Emma, please?",
+  "after": "Hello! May I speak to Ms. Emma, please?",
+  "reviewers": "objective (coordinator; partner check)",
+  "reason": "pickConversationPartner skips any child character NAMED in the starter unless it is \"I'm X\". The group fix \"This is X / It's X\" (X = the wrap-up partner) made the app pick someone else. Drop the name; the app now picks the wrap-up partner (checked with partner.ts)"
+ },
+ {
+  "lesson": 612,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hello, this is Birimo at the Message Center. Sorry, Kiko is out right now. Can I take a message?",
+  "after": "Hello, this is the Message Center. Sorry, Kiko is out right now. Can I take a message?",
+  "reviewers": "objective (coordinator; partner check)",
+  "reason": "pickConversationPartner skips any child character NAMED in the starter unless it is \"I'm X\". The group fix \"This is X / It's X\" (X = the wrap-up partner) made the app pick someone else. Drop the name; the app now picks the wrap-up partner (checked with partner.ts)"
+ },
+ {
+  "lesson": 629,
+  "path": "teacher.segments[11].say",
+  "before": "Let's move! Walk down the stairs. Step, step, step. Now, ring the bell. Ding, dong!",
+  "after": "Let's move! Walk down the stairs. Step, step, step. Now, ring the bell. Ding-dong!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 629,
+  "path": "teacher.segments[11].subtitleEn",
+  "before": "Let's move! Walk down the stairs. Step, step, step. Now, ring the bell. Ding, dong!",
+  "after": "Let's move! Walk down the stairs. Step, step, step. Now, ring the bell. Ding-dong!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 648,
+  "path": "teacher.segments[0].say",
+  "before": "Hello, explorers! Listen. Ding, dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
+  "after": "Hello, explorers! Listen. Ding-dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 648,
+  "path": "teacher.segments[0].subtitleEn",
+  "before": "Hello, explorers! Listen. Ding, dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
+  "after": "Hello, explorers! Listen. Ding-dong. Do you hear that? It's the old library clock. Something magical is going to happen today!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 648,
+  "path": "teacher.segments[2].say",
+  "before": "Bell. Ring, ring! Ding, dong! It makes a ringing sound. Bell!",
+  "after": "Bell. Ring, ring! Ding-dong! It makes a ringing sound. Bell!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 648,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Bell. Ring, ring! Ding, dong! It makes a ringing sound. Bell!",
+  "after": "Bell. Ring, ring! Ding-dong! It makes a ringing sound. Bell!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 648,
+  "path": "teacher.segments[11].say",
+  "before": "Let's move! Ring a bell. Ding, dong! The secret door is heavy. Push the heavy door. Push!",
+  "after": "Let's move! Ring a bell. Ding-dong! The secret door is heavy. Push the heavy door. Push!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 648,
+  "path": "teacher.segments[11].subtitleEn",
+  "before": "Let's move! Ring a bell. Ding, dong! The secret door is heavy. Push the heavy door. Push!",
+  "after": "Let's move! Ring a bell. Ding-dong! The secret door is heavy. Push the heavy door. Push!",
+  "reviewers": "objective (coordinator; L641-650 group report)",
+  "reason": "\"Ding-dong\" (one sound word) like W13-20. L612 \"Ding, dong, ding!\" is three xylophone notes and stays"
+ },
+ {
+  "lesson": 647,
+  "path": "tpr[1].en",
+  "before": "Run away on the spot.",
+  "after": "Pretend to run away.",
+  "reviewers": "A+B (coordinator; L641-650 group report)",
+  "reason": "\"on the spot\" is British (\"in place\" in the US), and \"run away in place\" contradicts itself. \"Pretend to run away.\" keeps the action (TPR item; ID changes, no test refers to it)"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[11].slide.items[1]",
+  "before": "Run away on the spot.",
+  "after": "Pretend to run away.",
+  "reviewers": "A+B (coordinator; L641-650 group report)",
+  "reason": "\"on the spot\" is British (\"in place\" in the US), and \"run away in place\" contradicts itself. \"Pretend to run away.\" keeps the action (TPR item; ID changes, no test refers to it)"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[13].say",
+  "before": "Speed challenge! Run away on the spot! Warm your hands by the fire! Look scared! Rub your hands! Super!",
+  "after": "Speed challenge! Pretend to run away! Warm your hands by the fire! Look scared! Rub your hands! Super!",
+  "reviewers": "A+B (coordinator; L641-650 group report)",
+  "reason": "\"on the spot\" is British (\"in place\" in the US), and \"run away in place\" contradicts itself. \"Pretend to run away.\" keeps the action (TPR item; ID changes, no test refers to it)"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[13].subtitleEn",
+  "before": "Speed challenge! Run away on the spot! Warm your hands by the fire! Look scared! Rub your hands! Super!",
+  "after": "Speed challenge! Pretend to run away! Warm your hands by the fire! Look scared! Rub your hands! Super!",
+  "reviewers": "A+B (coordinator; L641-650 group report)",
+  "reason": "\"on the spot\" is British (\"in place\" in the US), and \"run away in place\" contradicts itself. \"Pretend to run away.\" keeps the action (TPR item; ID changes, no test refers to it)"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[13].slide.items[0]",
+  "before": "Run away on the spot.",
+  "after": "Pretend to run away.",
+  "reviewers": "A+B (coordinator; L641-650 group report)",
+  "reason": "\"on the spot\" is British (\"in place\" in the US), and \"run away in place\" contradicts itself. \"Pretend to run away.\" keeps the action (TPR item; ID changes, no test refers to it)"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[11].say",
+  "before": "Let's move! Someone is coming! Look scared. Eek! Now, run away on the spot. Run, run, run!",
+  "after": "Let's move! Someone is coming! Look scared. Eek! Now, pretend to run away. Run, run, run!",
+  "reviewers": "A+B (coordinator; L641-650 group report)",
+  "reason": "\"on the spot\" is British (\"in place\" in the US), and \"run away in place\" contradicts itself. \"Pretend to run away.\" keeps the action (TPR item; ID changes, no test refers to it)"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[11].subtitleEn",
+  "before": "Let's move! Someone is coming! Look scared. Eek! Now, run away on the spot. Run, run, run!",
+  "after": "Let's move! Someone is coming! Look scared. Eek! Now, pretend to run away. Run, run, run!",
+  "reviewers": "A+B (coordinator; L641-650 group report)",
+  "reason": "\"on the spot\" is British (\"in place\" in the US), and \"run away in place\" contradicts itself. \"Pretend to run away.\" keeps the action (TPR item; ID changes, no test refers to it)"
+ },
+ {
+  "lesson": 647,
+  "path": "tpr[1].ja",
+  "before": "その ばで にげて。",
+  "after": "にげる ふりを して。",
+  "reviewers": "A+B (coordinator)",
+  "reason": "JA follows the EN fix"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[11].subtitleJa",
+  "before": "からだを うごかそう！ だれか くる！ こわがる かおを して。きゃっ！ さあ、その ばで にげて。はしって、はしって！",
+  "after": "からだを うごかそう！ だれか くる！ こわがる かおを して。きゃっ！ さあ、にげる ふりを して。はしって、はしって！",
+  "reviewers": "A+B (coordinator)",
+  "reason": "JA follows the EN fix"
+ },
+ {
+  "lesson": 647,
+  "path": "teacher.segments[13].subtitleJa",
+  "before": "スピード チャレンジ！ その ばで にげて！ たきびで てを あたためて！ こわがって！ てを こすって！ すごい！",
+  "after": "スピード チャレンジ！ にげる ふりを して！ たきびで てを あたためて！ こわがって！ てを こすって！ すごい！",
+  "reviewers": "A+B (coordinator)",
+  "reason": "JA follows the EN fix"
+ },
+ {
+  "lesson": 643,
+  "path": "teacher.segments[9].say",
+  "before": "Sound time! Clap two beats. PROB-lem. CHIL-dren. CIR-cus. HAP-pen. Strong, then soft. The soft beat sounds like uh.",
+  "after": "Sound time! Clap two beats. Problem. Children. Circus. Happen. Strong, then soft. The soft beat sounds like uh.",
+  "reviewers": "B+C (coordinator; L641-650 group report)",
+  "reason": "capital stress beats in say (\"PROB\", \"CHIL\", \"CIR\") may be read by TTS as letters or other words; say the real words like L642/L644 (the slide keeps the beat forms)"
+ },
+ {
+  "lesson": 643,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound time! Clap two beats. PROB-lem. CHIL-dren. CIR-cus. HAP-pen. Strong, then soft. The soft beat sounds like uh.",
+  "after": "Sound time! Clap two beats. Problem. Children. Circus. Happen. Strong, then soft. The soft beat sounds like uh.",
+  "reviewers": "B+C (coordinator; L641-650 group report)",
+  "reason": "capital stress beats in say (\"PROB\", \"CHIL\", \"CIR\") may be read by TTS as letters or other words; say the real words like L642/L644 (the slide keeps the beat forms)"
+ },
+ {
+  "lesson": 643,
+  "path": "teacher.segments[9].subtitleJa",
+  "before": "おとの じかん！ 2かい てを たたこう。PROB-lem。CHIL-dren。CIR-cus。HAP-pen。つよく、それから よわく。よわい はくは「ア」みたいに きこえる。",
+  "after": "おとの じかん！ 2かい てを たたこう。problem。children。circus。happen。つよく、それから よわく。よわい はくは「ア」みたいに きこえる。",
+  "reviewers": "B+C (coordinator)",
+  "reason": "JA follows the EN fix (same form as L642/L644)"
+ },
+ {
+  "lesson": 603,
+  "path": "tpr[0].en",
+  "before": "Hold up one finger and say, wait.",
+  "after": "Hold up one finger and say, Wait.",
+  "reviewers": "objective (coordinator; L601-610 group report)",
+  "reason": "quoted word after \"say,\" starts with a capital (house style for quotes without quotation marks). TPR item; ID changes, no test refers to it"
+ },
+ {
+  "lesson": 603,
+  "path": "teacher.segments[11].say",
+  "before": "Let's move! Ring, ring! Hold up one finger and say, wait. Wait! Now, run upstairs. Quick, quick!",
+  "after": "Let's move! Ring, ring! Hold up one finger and say, Wait. Wait! Now, run upstairs. Quick, quick!",
+  "reviewers": "objective (coordinator; L601-610 group report)",
+  "reason": "quoted word after \"say,\" starts with a capital (house style for quotes without quotation marks). TPR item; ID changes, no test refers to it"
+ },
+ {
+  "lesson": 603,
+  "path": "teacher.segments[11].subtitleEn",
+  "before": "Let's move! Ring, ring! Hold up one finger and say, wait. Wait! Now, run upstairs. Quick, quick!",
+  "after": "Let's move! Ring, ring! Hold up one finger and say, Wait. Wait! Now, run upstairs. Quick, quick!",
+  "reviewers": "objective (coordinator; L601-610 group report)",
+  "reason": "quoted word after \"say,\" starts with a capital (house style for quotes without quotation marks). TPR item; ID changes, no test refers to it"
+ },
+ {
+  "lesson": 603,
+  "path": "teacher.segments[11].slide.items[0]",
+  "before": "Hold up one finger and say, wait.",
+  "after": "Hold up one finger and say, Wait.",
+  "reviewers": "objective (coordinator; L601-610 group report)",
+  "reason": "quoted word after \"say,\" starts with a capital (house style for quotes without quotation marks). TPR item; ID changes, no test refers to it"
+ }
+]
