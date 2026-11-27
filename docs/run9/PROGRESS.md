@@ -457,3 +457,35 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: ワールド29・30（レッスン 841〜900）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・teacherScript・testPoints を 60 レッスン ぜんぶ 見なおした（ステージ4・B1 の はじまり）
+- さきに 機械的な なおし（L857「Or, Not quite.」→「Or not quite.」）と ブロックの きめごと（イギリスふうの ほめことば〈Brilliant・Lovely〉・エマ先生 じぶんの 語りの「Ms. Emma says / asks / explains」→「I say / I ask / I explain」・エマ先生の「Good morning / Good evening」→「Hi / Hello」・ノヴァ → ノバ・AI の さいしょの ひとこと 60 レッスンを「Let's pretend I'm ～.」に）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た ものを ブロック全体で そろえた（W30 の「Your turn! Maybe, ～」→「You could say, ～」38 欄、L882 energetic の 声の 音節 JET、L871「years from now」、L875「Enjoy both kinds of trees!」）
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、HEAD から じゅんばんに あてなおした（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあい・かいわ あいても たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W29-30.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 841 --to 900`）: **まえ error 0 / warn 15 / info 9 → あと error 0 / warn 14 / info 5**（のこりの warn 14 は ぜんぶ わざと: タイトル「I Think So Because…」「I See Your Point, But…」「So You Mean…」「In 2050…」と その スライド〈テストで きまって いる〉、会話の ためらいの「…」。なおした warn は L875 の「Please enjoy」。info は 会話の「What is」2 と「Let's」4回の レッスン 3）
+- なおした 欄 **436**（パッチ 453 件: 機械的な なおし 2・ブロックの きめごと 78・AI の ひとこと 60・レビュアー 268・あとの そろえ 45）、なおした レッスン **60 / 60**
+- 学習項目 ID が かわった もの: **なし**（テスト・src の 変更も なし）
+
+### before → after の 例
+1. L841 seg10（objective・まちがった いみ）: 「Suspect. Look secretly.」→「Suspect. You think someone did something wrong.」（suspect の いみが ちがって いて、teacherScript の せつめいとも あわなかった）
+2. L898 seg10（B・C・まちがった 音）: 「Energetic. En, er, GET, ic. Clap on get!」→「Energetic. En-er-JET-ic. Clap on jet!」（energetic の g は やわらかい 音。日本語の 字幕は もともと ジェット。L882 も あわせた）
+3. L858 seg3（B・C・ワールド29 の きまり）: 「Helper. Someone who helps.」→「Helper. A helper helps.」（関係代名詞は ワールド30 から。テストの 正規表現は segments を みないので のこって いた。L852・L853・L855・L856・L860・L863〜L867 と、W30 で ならう まえの L871・L873・L875 も おなじく なおした）
+
+### きめた こと
+- **AI の さいしょの ひとこと**: 60 レッスン ぜんぶで こどもの キャラが ペル船長・ガス・ゲイル・ピップ・ノバ・リンさん・テス・ロボット先生として なのって いた（「I'm Captain Pell.」「Ahoy!」「Beep!」）。goalJa の やくは のこし、「Let's pretend I'm ～.」で ごっこあそびに した（W25-28 と おなじ）
+- 関係代名詞（who / that / which）は ワールド30 の まなびの 中心なので、はじまりの レッスン（that L872・which L874・who L876）から あとは のこした。ワールド29 と L871〜L875 の ことばの せつめいだけ ふつうの 文に した
+- -ic の 強勢は コンマ区切り（e, LEC, tric）を やめて アプリの クイズと おなじ「e-LEC-tric」に。-ible の きまりは「ことが おおい / usually」に（flexible・sensible などの れいがいが ある）
+- のこした こと: たんどくの「ic」と 強勢の「SO」「DO」（TTS で きいて たしかめたい）、弱形の つづりの ゆれ（fur / fer）、L863 core の「read」、L867「holiday」、タイトルの「…」。くわしくは W29-30.md
+- ほかの ワールドで みつけた もの: テストの 正規表現が みない segments の ことばの せつめいに のこる 関係代名詞、「Your turn! Maybe, ～」の お手本、コンマで 区切った 強勢の 音節、つづりと 音が ちがう 強勢（en-er-GET-ic）、「X years later」を これからの ことに つかう もの、物語の なかの だれが いったかの くいちがい（L870・L885・L895）
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新

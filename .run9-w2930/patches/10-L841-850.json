@@ -1,0 +1,450 @@
+[
+  {
+    "lesson": 841,
+    "path": "teacher.segments[10].say",
+    "before": "Spectator. A person who watches a game. Suspect. Look secretly. Hmm, something's strange! Say spect clearly. Respect. Inspect. Spectator. Suspect.",
+    "after": "Spectator. A person watching a game. Suspect. You think someone did something wrong. Hmm, something's strange! Say spect clearly. Respect. Inspect. Spectator. Suspect.",
+    "reviewers": "A+B",
+    "reason": "suspect does not mean 'look secretly' (the teacherScript already gives the right meaning); also drops a W29 relative clause"
+  },
+  {
+    "lesson": 841,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Spectator. A person who watches a game. Suspect. Look secretly. Hmm, something's strange! Say spect clearly. Respect. Inspect. Spectator. Suspect.",
+    "after": "Spectator. A person watching a game. Suspect. You think someone did something wrong. Hmm, something's strange! Say spect clearly. Respect. Inspect. Spectator. Suspect.",
+    "reviewers": "A+B",
+    "reason": "suspect does not mean 'look secretly' (the teacherScript already gives the right meaning); also drops a W29 relative clause"
+  },
+  {
+    "lesson": 841,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "spectator。しあいを 見る ひと。suspect。こっそり 見る。うーん、なにか へんだぞ！ spect は はっきり いおう。respect。inspect。spectator。suspect。",
+    "after": "spectator。しあいを 見る ひと。suspect。だれかが わるい ことを したと おもう こと。うーん、なにか へんだぞ！ spect は はっきり いおう。respect。inspect。spectator。suspect。",
+    "reviewers": "A+B",
+    "reason": "JA follows the corrected meaning of suspect"
+  },
+  {
+    "lesson": 842,
+    "path": "teacher.segments[3].say",
+    "before": "Pet. An animal that lives with you at home, like a dog, a cat or a rabbit. Pet!",
+    "after": "Pet. A pet lives with you at home, like a dog, a cat or a rabbit. Pet!",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 842,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Pet. An animal that lives with you at home, like a dog, a cat or a rabbit. Pet!",
+    "after": "Pet. A pet lives with you at home, like a dog, a cat or a rabbit. Pet!",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 842,
+    "path": "teacher.segments[9].say",
+    "before": "Word parts again! Spect means look. Binocular hands! Inspector. A person who looks inside and checks things. Respectful. Full of respect. You treat others kindly.",
+    "after": "Word parts again! Spect means look. Binocular hands! Inspector. An inspector looks inside and checks things. Respectful. Full of respect. You treat others kindly.",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 842,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Word parts again! Spect means look. Binocular hands! Inspector. A person who looks inside and checks things. Respectful. Full of respect. You treat others kindly.",
+    "after": "Word parts again! Spect means look. Binocular hands! Inspector. An inspector looks inside and checks things. Respectful. Full of respect. You treat others kindly.",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 842,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Pick your favorite animal. Maybe, I think rabbits are great pets because they're gentle.",
+    "after": "Your turn! Pick your favorite animal. You could say, I think rabbits are great pets because they're gentle.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 842,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Pick your favorite animal. Maybe, I think rabbits are great pets because they're gentle.",
+    "after": "Your turn! Pick your favorite animal. You could say, I think rabbits are great pets because they're gentle.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[2].say",
+    "before": "Example. A real thing that shows what you mean. Fruit? For example, apples! Example!",
+    "after": "Example. It shows what you mean. Fruit? For example, apples! Example!",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Example. A real thing that shows what you mean. Fruit? For example, apples! Example!",
+    "after": "Example. It shows what you mean. Fruit? For example, apples! Example!",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[2].subtitleJa",
+    "before": "example。いいたい ことを しめす ほんとうの もの。くだもの？ たとえば、りんご！ example！",
+    "after": "example。いいたい ことを わかりやすく しめして くれるよ。くだもの？ たとえば、りんご！ example！",
+    "reviewers": "objective (JA)",
+    "reason": "JA follows the plain English sentence"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[9].say",
+    "before": "Spect means look. Binocular hands! Inspection. A careful look inside. The doctor does an inspection. Disrespect. Dis means not. Not kind, not caring.",
+    "after": "Spect means look. Binocular hands! Inspection. A careful look inside. The lighthouse gets an inspection every year. Disrespect. Dis means not. Not kind, not caring.",
+    "reviewers": "A+B",
+    "reason": "doctors do checkups, not inspections; the teacherScript already uses the lighthouse inspection"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Spect means look. Binocular hands! Inspection. A careful look inside. The doctor does an inspection. Disrespect. Dis means not. Not kind, not caring.",
+    "after": "Spect means look. Binocular hands! Inspection. A careful look inside. The lighthouse gets an inspection every year. Disrespect. Dis means not. Not kind, not caring.",
+    "reviewers": "A+B",
+    "reason": "doctors do checkups, not inspections; the teacherScript already uses the lighthouse inspection"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "spect は「見る」。てで そうがんきょう！ inspection。なかを よく 見る こと。おいしゃさんが けんさを するよ。disrespect。dis は「〜ない」。たいせつに しない こと。",
+    "after": "spect は「見る」。てで そうがんきょう！ inspection。なかを よく 見る こと。とうだいは まいとし けんさを うけるよ。disrespect。dis は「〜ない」。たいせつに しない こと。",
+    "reviewers": "A+B",
+    "reason": "JA follows the new example"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Give your own example. Maybe, I think birds are cool. For example, they can fly over the sea.",
+    "after": "Your turn! Give your own example. You could say, I think birds are cool. For example, they can fly over the sea.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Give your own example. Maybe, I think birds are cool. For example, they can fly over the sea.",
+    "after": "Your turn! Give your own example. You could say, I think birds are cool. For example, they can fly over the sea.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 843,
+    "path": "teacher.segments[17].subtitleJa",
+    "before": "あなたの ばん！ じぶんの れいを いって みよう。たとえば「とりは かっこいいと おもう。たとえば、うみの うえを とべるんだ。」",
+    "after": "あなたの ばん！ じぶんの れいを いって みよう。こんなふうに いえるよ。「とりは かっこいいと おもう。たとえば、うみの うえを とべるんだ。」",
+    "reviewers": "objective (JA)",
+    "reason": "JA had たとえば twice in a row (たとえば「… たとえば、…」)"
+  },
+  {
+    "lesson": 844,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Pick an animal and give two reasons. Maybe, One reason is that birds sing. Another reason is that they're pretty.",
+    "after": "Your turn! Pick an animal and give two reasons. You could say, One reason is that birds sing. Another reason is that they're pretty.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 844,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Pick an animal and give two reasons. Maybe, One reason is that birds sing. Another reason is that they're pretty.",
+    "after": "Your turn! Pick an animal and give two reasons. You could say, One reason is that birds sing. Another reason is that they're pretty.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 845,
+    "path": "teacher.segments[10].say",
+    "before": "Spectator. A person who watches. Inspect. Look inside and check. Your turn! Respect. Perspective. Spectator. Inspect.",
+    "after": "Spectator. A person watching. Inspect. Look inside and check. Your turn! Respect. Perspective. Spectator. Inspect.",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence (same wording as the teacherScript)"
+  },
+  {
+    "lesson": 845,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Spectator. A person who watches. Inspect. Look inside and check. Your turn! Respect. Perspective. Spectator. Inspect.",
+    "after": "Spectator. A person watching. Inspect. Look inside and check. Your turn! Respect. Perspective. Spectator. Inspect.",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence (same wording as the teacherScript)"
+  },
+  {
+    "lesson": 845,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Your opinion, a reason and an example. Maybe, I think singing is fun. One reason is that it makes me happy.",
+    "after": "Your turn! Your opinion, a reason and an example. You could say, I think singing is fun. One reason is that it makes me happy. For example, I sing with my family.",
+    "reviewers": "A+B+C",
+    "reason": "the task asks for opinion, reason and example but the model had no example; 'Maybe,' -> 'You could say,'"
+  },
+  {
+    "lesson": 845,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Your opinion, a reason and an example. Maybe, I think singing is fun. One reason is that it makes me happy.",
+    "after": "Your turn! Your opinion, a reason and an example. You could say, I think singing is fun. One reason is that it makes me happy. For example, I sing with my family.",
+    "reviewers": "A+B+C",
+    "reason": "the task asks for opinion, reason and example but the model had no example; 'Maybe,' -> 'You could say,'"
+  },
+  {
+    "lesson": 845,
+    "path": "teacher.segments[17].subtitleJa",
+    "before": "あなたの ばん！ じぶんの いけん、りゆう、れい。たとえば「うたうのは たのしいと おもう。りゆうの 1つは、しあわせな きもちに なれる こと。」",
+    "after": "あなたの ばん！ じぶんの いけん、りゆう、れい。こんなふうに いえるよ。「うたうのは たのしいと おもう。りゆうの 1つは、しあわせな きもちに なれる こと。たとえば、かぞくと いっしょに うたうよ。」",
+    "reviewers": "A+B+C",
+    "reason": "JA follows the added example"
+  },
+  {
+    "lesson": 846,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, I think reading is fun. One reason is that books take us to new places. For example, I visited a dragon island in a story. Today, Captain Pell opens a round wooden door. Wow! It's the lighthouse library! There are books about the sea, the stars, and faraway islands. Kiko says, Reading is fun! Haru says, I agree with you. Reading is fun. Say it with me. I agree with you. Reading is fun. Great! When you have the same idea as your friend, say, I agree with you. Riko asks, Do you agree with me? Books are better at night. Birimo says, Yes, I do. Books and snacks are better at night! Kiko finds a big blue book and says, Me too! I love stories about the sea. Captain Pell laughs. He says, When friends agree, they still listen. They say why. Let's read the poster on the library door. \"Book Talk Time in the Lighthouse Library. Every Friday evening, bring your favorite book. Tell your friends about it. Say why you like it. Listen when your friends talk. Say, I agree with you, when you have the same idea. Ask a question when you want to know more. You can borrow two books at a time. Please bring them back in one week. Snacks are OK, but please keep the books clean! From Captain Pell.\" When is Book Talk Time? Every Friday evening. Are snacks OK? Yes, but keep the books clean. Now, phonics. Today's new word part is dict. Dict means say. Predict. Pre means before. You say it before it happens. Dictionary. A book of words. Let's look it up in the dictionary! Contradict. Contra means against. You say the opposite. Let's find a good book together!",
+    "after": "Hello, everyone! Last time, we said, I think reading is fun. One reason is that books take us to new places. For example, I visited a dragon island in a story. Today, Captain Pell opens a round wooden door. Wow! It's the lighthouse library! There are books about the sea, the stars, and faraway islands. Kiko says, Reading is fun! Haru says, I agree with you. Reading is fun. Say it with me. I agree with you. Reading is fun. Great! When you have the same idea as your friend, say, I agree with you. Riko says, I think books are better at night. Do you agree with me? Birimo says, Yes, I do. Books and snacks are better at night! Kiko finds a big blue book and says, Me too! I love stories about the sea. Captain Pell laughs. He says, When friends agree, they still listen. They say why. Let's read the poster on the library door. \"Book Talk Time in the Lighthouse Library. Every Friday evening, bring your favorite book. Tell your friends about it. Say why you like it. Listen when your friends talk. Say, I agree with you, when you have the same idea. Ask a question when you want to know more. You can borrow two books at a time. Please bring them back in one week. Snacks are OK, but please keep the books clean! From Captain Pell.\" When is Book Talk Time? Every Friday evening. Are snacks OK? Yes, but keep the books clean. Now, phonics. Today's new word part is dict. Dict means say. Predict. Pre means before. You say it before it happens. Dictionary. A book of words. Let's look it up in the dictionary! Contradict. Contra means against. You say the opposite. Let's find a good book together!",
+    "reviewers": "A+B",
+    "reason": "Riko asked for agreement before giving her opinion; now matches the conversation line"
+  },
+  {
+    "lesson": 846,
+    "path": "teacher.segments[10].say",
+    "before": "Dictionary. A book that says what words mean. Contradict. Contra means against. Say the opposite. Your turn! Predict. Dictionary. Contradict.",
+    "after": "Dictionary. It tells you what words mean. Contradict. Contra means against. Say the opposite. Your turn! Predict. Dictionary. Contradict.",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 846,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Dictionary. A book that says what words mean. Contradict. Contra means against. Say the opposite. Your turn! Predict. Dictionary. Contradict.",
+    "after": "Dictionary. It tells you what words mean. Contradict. Contra means against. Say the opposite. Your turn! Predict. Dictionary. Contradict.",
+    "reviewers": "objective",
+    "reason": "W29 keeps relative clauses out (they start in W30); plain sentence"
+  },
+  {
+    "lesson": 846,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Agree and add your reason. Maybe, I agree with you. Drawing is fun because I can use lots of colors.",
+    "after": "Your turn! Agree and add your reason. You could say, I agree with you. Drawing is fun because I can use lots of colors.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 846,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Agree and add your reason. Maybe, I agree with you. Drawing is fun because I can use lots of colors.",
+    "after": "Your turn! Agree and add your reason. You could say, I agree with you. Drawing is fun because I can use lots of colors.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 847,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, I agree with you. Reading is fun. Today, we hear loud voices outside. Two seagull brothers are on the rocks. Their names are Gus and Gale. Gus shouts, The mountains are more fun! Gale shouts, No! The beach is more fun! They don't listen to each other. Oh no! The light gets weaker. Captain Pell sighs. I say, Let's try a kind way to answer. First, show you heard your friend. Then, give your own idea. Gus tries first. I think the mountains are more fun because we can hike. Gale takes a deep breath. He says, I see your point, but I think the beach is more fun. Say it with me. I see your point, but I think the beach is more fun. Wonderful! Gus is surprised. He says, Oh. Thank you for listening. Captain Pell smiles and says, Let's listen to each other. Let's read Gus and Gale's notes on the lighthouse board. \"Gus: I think the mountains are more fun because we can hike and see beautiful views. The air is cool and fresh, too. Gale: I see your point, but I think the beach is more fun. We can swim, build sandcastles, and play in the waves. The sound of the sea is relaxing, and the sand feels warm under our feet. Captain Pell: Both ideas are good. Mountains and beaches are both special places. Thank you for writing kindly!\" Why does Gus like the mountains? Because he can hike and see beautiful views. What can Gale do at the beach? Swim, build sandcastles, and play in the waves. Now, phonics. Dict means say. Prediction. A guess about the future. My prediction is rain tomorrow. Dictation. Your teacher says words, and you write them down. Verdict. The final decision. Let's listen first and speak kindly!",
+    "after": "Hello, everyone! Last time, we said, I agree with you. Reading is fun. Today, we hear loud voices outside. Two seagull brothers are on the rocks. Their names are Gus and Gale. Gus shouts, The mountains are more fun! Gale shouts, No! The beach is more fun! They don't listen to each other. Oh no! The light gets weaker. Captain Pell sighs. I say, Let's try a kind way to answer. First, show you heard your friend. Then, give your own idea. Gus tries first. He says, I think the mountains are more fun because we can hike. Gale takes a deep breath. He says, I see your point, but I think the beach is more fun. Say it with me. I see your point, but I think the beach is more fun. Wonderful! Gus is surprised. He says, Oh. Thank you for listening. Captain Pell smiles and says, Let's listen to each other. Let's read Gus and Gale's notes on the lighthouse board. \"Gus: I think the mountains are more fun because we can hike and see beautiful views. The air is cool and fresh, too. Gale: I see your point, but I think the beach is more fun. We can swim, build sandcastles, and play in the waves. The sound of the sea is relaxing, and the sand feels warm under our feet. Captain Pell: Both ideas are good. Mountains and beaches are both special places. Thank you for writing kindly!\" Why does Gus like the mountains? Because he can hike and see beautiful views. What can Gale do at the beach? Swim, build sandcastles, and play in the waves. Now, phonics. Dict means say. Prediction. A guess about the future. My prediction is rain tomorrow. Dictation. Your teacher says words, and you write them down. Verdict. The final decision. Let's listen first and speak kindly!",
+    "reviewers": "A+C",
+    "reason": "Gus's line had no speaker tag, so it read as narration"
+  },
+  {
+    "lesson": 847,
+    "path": "conversation.lines[1].en",
+    "before": "Gus, please say a reason.",
+    "after": "Gus, can you give us a reason?",
+    "reviewers": "A+B",
+    "reason": "'please say a reason' is textbook English; 'give a reason' is the natural verb"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[6].slide.items[1]",
+    "before": "Gus, please say a reason.",
+    "after": "Gus, can you give us a reason?",
+    "reviewers": "A+B",
+    "reason": "'please say a reason' is textbook English; 'give a reason' is the natural verb"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[6].say",
+    "before": "Listen. Birimo says, I'm playing Gus! The mountains are more fun! The mountains! Haru says, Gus, please say a reason.",
+    "after": "Listen. Birimo says, I'm playing Gus! The mountains are more fun! The mountains! Haru says, Gus, can you give us a reason?",
+    "reviewers": "A+B",
+    "reason": "follows the conversation line"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Listen. Birimo says, I'm playing Gus! The mountains are more fun! The mountains! Haru says, Gus, please say a reason.",
+    "after": "Listen. Birimo says, I'm playing Gus! The mountains are more fun! The mountains! Haru says, Gus, can you give us a reason?",
+    "reviewers": "A+B",
+    "reason": "follows the conversation line"
+  },
+  {
+    "lesson": 847,
+    "path": "conversation.lines[1].ja",
+    "before": "ガス、りゆうを いって みて。",
+    "after": "ガス、りゆうを おしえて くれる？",
+    "reviewers": "A+B",
+    "reason": "JA follows the question form"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[6].subtitleJa",
+    "before": "きいてね。ビリモ「ぼくが ガスの やく！ やまの ほうが たのしい！ やまだよ！」 ハルくん「ガス、りゆうを いって みて。」",
+    "after": "きいてね。ビリモ「ぼくが ガスの やく！ やまの ほうが たのしい！ やまだよ！」 ハルくん「ガス、りゆうを おしえて くれる？」",
+    "reviewers": "A+B",
+    "reason": "JA follows the question form"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[10].say",
+    "before": "Verdict. The final answer, like a judge says. Ver means true. Your turn! Prediction. Dictation. Verdict.",
+    "after": "Verdict. A judge's final answer. Ver means true. Your turn! Prediction. Dictation. Verdict.",
+    "reviewers": "A+B",
+    "reason": "'like a judge says' is ungrammatical"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Verdict. The final answer, like a judge says. Ver means true. Your turn! Prediction. Dictation. Verdict.",
+    "after": "Verdict. A judge's final answer. Ver means true. Your turn! Prediction. Dictation. Verdict.",
+    "reviewers": "A+B",
+    "reason": "'like a judge says' is ungrammatical"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "verdict。さいばんかんが いう ような、さいごの こたえ。ver は「ほんとう」。あなたの ばん！ prediction。dictation。verdict。",
+    "after": "verdict。さいばんかんの さいごの こたえ。ver は「ほんとう」。あなたの ばん！ prediction。dictation。verdict。",
+    "reviewers": "A+B",
+    "reason": "JA follows the English"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Try it kindly. Maybe, I see your point, but I think the park is more fun.",
+    "after": "Your turn! Try it kindly. You could say, I see your point, but I think the park is more fun.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Try it kindly. Maybe, I see your point, but I think the park is more fun.",
+    "after": "Your turn! Try it kindly. You could say, I see your point, but I think the park is more fun.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[20].say",
+    "before": "Wonderful! You can disagree kindly with I see your point, but, and say, Let's listen to each other. Next, go and talk with Kiko! Bye-bye!",
+    "after": "Wonderful! You can disagree kindly with I see your point, but I think. You can also say, Let's listen to each other. Next, go and talk with Kiko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'but, and say,' is a stumble aloud and hard to follow"
+  },
+  {
+    "lesson": 847,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "Wonderful! You can disagree kindly with I see your point, but, and say, Let's listen to each other. Next, go and talk with Kiko! Bye-bye!",
+    "after": "Wonderful! You can disagree kindly with I see your point, but I think. You can also say, Let's listen to each other. Next, go and talk with Kiko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'but, and say,' is a stumble aloud and hard to follow"
+  },
+  {
+    "lesson": 848,
+    "path": "teacher.segments[1].say",
+    "before": "Today's goal. Speak up when you can't decide. I'm not sure about that. It's hard to decide. Both are nice.",
+    "after": "Today's goal. Learn what to say when you can't decide. I'm not sure about that. It's hard to decide. Both are nice.",
+    "reviewers": "A+B",
+    "reason": "'speak up' means talk louder / voice an opinion; the goal is what to say when undecided (JA きめられない ときの いいかた)"
+  },
+  {
+    "lesson": 848,
+    "path": "teacher.segments[1].subtitleEn",
+    "before": "Today's goal. Speak up when you can't decide. I'm not sure about that. It's hard to decide. Both are nice.",
+    "after": "Today's goal. Learn what to say when you can't decide. I'm not sure about that. It's hard to decide. Both are nice.",
+    "reviewers": "A+B",
+    "reason": "'speak up' means talk louder / voice an opinion; the goal is what to say when undecided (JA きめられない ときの いいかた)"
+  },
+  {
+    "lesson": 848,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Think of two things you like. Maybe, Which is better, summer or winter? Hmm, it's hard to decide.",
+    "after": "Your turn! Think of two things you like. You could ask, Which is better, summer or winter? Then say, Hmm, it's hard to decide.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'; the question and the answer are now marked"
+  },
+  {
+    "lesson": 848,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Think of two things you like. Maybe, Which is better, summer or winter? Hmm, it's hard to decide.",
+    "after": "Your turn! Think of two things you like. You could ask, Which is better, summer or winter? Then say, Hmm, it's hard to decide.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'; the question and the answer are now marked"
+  },
+  {
+    "lesson": 848,
+    "path": "teacher.segments[17].subtitleJa",
+    "before": "あなたの ばん！ すきな もの 2つを おもいうかべて。たとえば「なつと ふゆ、どっちが いい？」「うーん、きめるのは むずかしいな。」",
+    "after": "あなたの ばん！ すきな もの 2つを おもいうかべて。たとえば「なつと ふゆ、どっちが いい？」と きいて、「うーん、きめるのは むずかしいな。」と こたえよう。",
+    "reviewers": "A+B+C",
+    "reason": "JA follows the ask / answer split"
+  },
+  {
+    "lesson": 849,
+    "path": "teacher.segments[9].say",
+    "before": "Dict means say. Hand from your mouth! Contradiction. Two things that say opposite things. Dictionaries. One dictionary, two dictionaries. Y changes to I, plus E S.",
+    "after": "Dict means say. Hand from your mouth! Contradiction. Two ideas say opposite things. Dictionaries. One dictionary, two dictionaries. Y changes to I, plus E S.",
+    "reviewers": "objective",
+    "reason": "W29 relative clause and 'things ... things'; same wording as the teacherScript"
+  },
+  {
+    "lesson": 849,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Dict means say. Hand from your mouth! Contradiction. Two things that say opposite things. Dictionaries. One dictionary, two dictionaries. Y changes to I, plus E S.",
+    "after": "Dict means say. Hand from your mouth! Contradiction. Two ideas say opposite things. Dictionaries. One dictionary, two dictionaries. Y changes to I, plus E S.",
+    "reviewers": "objective",
+    "reason": "W29 relative clause and 'things ... things'; same wording as the teacherScript"
+  },
+  {
+    "lesson": 849,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Pick a season. Maybe, I partly agree. Winter is fun, but it's too cold.",
+    "after": "Your turn! Pick a season. You could say, I partly agree. Winter is fun, but it's too cold.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 849,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Pick a season. Maybe, I partly agree. Winter is fun, but it's too cold.",
+    "after": "Your turn! Pick a season. You could say, I partly agree. Winter is fun, but it's too cold.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 850,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, I partly agree. Summer is fun, but it's too hot. Today, Captain Pell starts the Agree or Disagree Game! Everybody comes to the beach below the lighthouse. Gus and Gale come, too. Captain Pell reads a sentence. Summer is the best season. If you agree, stand on the left. If you disagree, stand on the right. Then give a reason. Haru stands on the left. He says, I agree because summer vacation is long. Riko stands on the right. She says, I disagree because winter is my favorite season. Say it with me. I disagree because winter is my favorite season. Great! Riko loves skating and hot soup. Gus says, I see your point, Riko. Gale says, Both ideas are good! Nobody shouts. Everyone listens. Then the brothers play too, and they take turns kindly. Suddenly, the second lens begins to shine! Now two lenses are lit! Let's read the game card. \"The Agree or Disagree Game. One: Listen to the sentence. Two: Choose a side. Stand on the left for agree. Stand on the right for disagree. Three: Say, I agree because, or, I disagree because, and give a reason. Four: Listen to the other side. Five: Clap for every idea. Six: Say thank you to the other team. Remember, there is no wrong side. Every reason is welcome. Kind words make the light shine!\" Where do you stand to disagree? On the right. What should you do for every idea? Clap for it. Now, phonics. Let's review dict and spect. Predict. Say before. Contradict. Say against. Respectful. You show respect. Perspective. Your way of seeing things. You're all wonderful players. See you next time!",
+    "after": "Hello, everyone! Last time, we said, I partly agree. Summer is fun, but it's too hot. Today, Captain Pell starts the Agree or Disagree Game! Everybody comes to the beach below the lighthouse. Gus and Gale come, too. Captain Pell reads a sentence. Summer is the best season. If you agree, stand on the left. If you disagree, stand on the right. Then give a reason. Haru stands on the left. He says, I agree because summer vacation is long. Riko stands on the right. She says, I disagree because winter is my favorite season. Say it with me. I disagree because winter is my favorite season. Great! Riko loves skating and hot soup. Gus says, I see your point, Riko. Gale says, Both ideas are good! Nobody shouts. Everyone listens. Then the brothers play too, and they take turns kindly. Suddenly, the second lens begins to shine! Now two lenses are lit! Let's read the game card. \"The Agree or Disagree Game. One: Listen to the sentence. Two: Choose a side. Stand on the left if you agree. Stand on the right if you disagree. Three: Say, I agree because, or, I disagree because, and give a reason. Four: Listen to the other side. Five: Clap for every idea. Six: Say thank you to the other team. Remember, there is no wrong side. Every reason is welcome. Kind words make the light shine!\" Where do you stand to disagree? On the right. What should you do for every idea? Clap for it. Now, phonics. Let's review dict and spect. Predict. Say before. Contradict. Say against. Respectful. You show respect. Perspective. Your way of seeing things. You're all wonderful players. See you next time!",
+    "reviewers": "A+B",
+    "reason": "'for agree' is ungrammatical; now matches the TPR commands"
+  },
+  {
+    "lesson": 850,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Spring is the best season. Agree or disagree? Maybe, I disagree because fall is my favorite season.",
+    "after": "Your turn! Spring is the best season. Agree or disagree? You could say, I disagree because fall is my favorite season.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  },
+  {
+    "lesson": 850,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Spring is the best season. Agree or disagree? Maybe, I disagree because fall is my favorite season.",
+    "after": "Your turn! Spring is the best season. Agree or disagree? You could say, I disagree because fall is my favorite season.",
+    "reviewers": "A+B+C",
+    "reason": "'Maybe, I think ...' sounds like hedging the model sentence; a US teacher says 'You could say, ...'"
+  }
+]

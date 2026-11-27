@@ -1,0 +1,370 @@
+[
+  {
+    "lesson": 852,
+    "path": "teacher.segments[2].say",
+    "before": "Chair. Not this kind! Ha ha. The chair is the person who leads the meeting. Chair!",
+    "after": "Chair. Not this kind! Ha ha. Here, a chair is a person. The chair leads the meeting. Chair!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 852,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Chair. Not this kind! Ha ha. The chair is the person who leads the meeting. Chair!",
+    "after": "Chair. Not this kind! Ha ha. Here, a chair is a person. The chair leads the meeting. Chair!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 852,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn, chair! Use two friends. You can make up names. Thank you, Kiko. Next, Haru, please.",
+    "after": "Your turn, chair! Use two friends' names. You can make them up, too. Thank you, Kiko. Next, Haru, please.",
+    "reviewers": "A+B",
+    "reason": "'Use two friends' is not natural; it means use their names (matches JA)"
+  },
+  {
+    "lesson": 852,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn, chair! Use two friends. You can make up names. Thank you, Kiko. Next, Haru, please.",
+    "after": "Your turn, chair! Use two friends' names. You can make them up, too. Thank you, Kiko. Next, Haru, please.",
+    "reviewers": "A+B",
+    "reason": "'Use two friends' is not natural; it means use their names (matches JA)"
+  },
+  {
+    "lesson": 853,
+    "path": "teacher.segments[0].say",
+    "before": "Hello, everyone! The meeting goes on. Today's topic is decorations for the festival. Kiko has an idea. How can she get in?",
+    "after": "Hello, everyone! The meeting goes on. Today's topic is decorations for the festival. Kiko has an idea. How can she join in?",
+    "reviewers": "A+B",
+    "reason": "'get in' sounds like entering a place; 'join in' matches seg1 and JA はなしに 入ろう"
+  },
+  {
+    "lesson": 853,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hello, everyone! The meeting goes on. Today's topic is decorations for the festival. Kiko has an idea. How can she get in?",
+    "after": "Hello, everyone! The meeting goes on. Today's topic is decorations for the festival. Kiko has an idea. How can she join in?",
+    "reviewers": "A+B",
+    "reason": "'get in' sounds like entering a place; 'join in' matches seg1 and JA はなしに 入ろう"
+  },
+  {
+    "lesson": 853,
+    "path": "teacher.segments[2].say",
+    "before": "Decoration. Pretty things that make a place look happy. Decoration!",
+    "after": "Decoration. Something pretty for a party or a festival. Decoration!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); 'things that make' -> plain phrase"
+  },
+  {
+    "lesson": 853,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Decoration. Pretty things that make a place look happy. Decoration!",
+    "after": "Decoration. Something pretty for a party or a festival. Decoration!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); 'things that make' -> plain phrase"
+  },
+  {
+    "lesson": 853,
+    "path": "teacher.segments[2].subtitleJa",
+    "before": "decoration。ばしょを たのしく 見せる きれいな もの。decoration！",
+    "after": "decoration。パーティーや おまつりを かざる きれいな もの。decoration！",
+    "reviewers": "objective (JA)",
+    "reason": "JA follows the new English"
+  },
+  {
+    "lesson": 854,
+    "path": "teacher.segments[1].say",
+    "before": "Today, we decide together. Say, Let's vote. Ask, Raise your hand if you like the beach. Most people chose the park. It's decided!",
+    "after": "Today, we decide together. Say, Let's vote. Then say, Raise your hand if you like the beach. Give the result. Most people chose the park. It's decided!",
+    "reviewers": "A+B",
+    "reason": "'Ask, Raise your hand' is not a question; the result line had no lead-in"
+  },
+  {
+    "lesson": 854,
+    "path": "teacher.segments[1].subtitleEn",
+    "before": "Today, we decide together. Say, Let's vote. Ask, Raise your hand if you like the beach. Most people chose the park. It's decided!",
+    "after": "Today, we decide together. Say, Let's vote. Then say, Raise your hand if you like the beach. Give the result. Most people chose the park. It's decided!",
+    "reviewers": "A+B",
+    "reason": "'Ask, Raise your hand' is not a question; the result line had no lead-in"
+  },
+  {
+    "lesson": 854,
+    "path": "teacher.segments[1].subtitleJa",
+    "before": "きょうは みんなで きめよう。「たすうけつで きめよう。」と いおう。「うみべが いい ひとは 手を あげて。」と きこう。けっかは「いちばん おおくの ひとが こうえんを えらんだよ。きまり！」",
+    "after": "きょうは みんなで きめよう。「たすうけつで きめよう。」と いおう。つぎに「うみべが いい ひとは 手を あげて。」と いおう。けっかを つたえよう。「いちばん おおくの ひとが こうえんを えらんだよ。きまり！」",
+    "reviewers": "A+B",
+    "reason": "JA follows the new English"
+  },
+  {
+    "lesson": 855,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Let's vote. Most people chose the park. Today, I have a plan. Back home, we will have a real class meeting soon. Let's practice here! Haru is the chair this time. He stands up and says, Today's topic is our school trip. What do you think? Say it with me. Today's topic is our school trip. What do you think? Excellent! Riko says, I'd like to go to the aquarium because I love sea animals. Haru says, Let's hear from Kiko. Kiko says, I think the science museum is better. We can try fun experiments. Then Birimo raises his hand. Can I say something? Haru says, Sure, go ahead. Birimo says, The farm! They have fresh ice cream! Everyone laughs. Then Haru says, Let's vote. Everyone votes, and Haru says, Most people chose the aquarium. Suddenly, the third lens begins to shine! Captain Pell says, Wonderful! You asked, you listened, and you decided together. Let's read Kiko's meeting notes. \"Class Meeting Notes. Topic: our school trip. Chair: Haru. Ideas: the aquarium, the science museum, and the farm. Riko likes the aquarium because she loves sea animals. Kiko likes the science museum because of the experiments. Birimo likes the farm because of the ice cream. Vote: the aquarium, five. The science museum, three. The farm, two. Decision: the aquarium. Everyone listened to each other, and nobody shouted. Birimo was a little sad about the ice cream, but he clapped for the aquarium. Next time, the science museum!\" Who was the chair? Haru. Why does Kiko like the science museum? Because of the experiments. Now, phonics. I really think so. I REALLY think so. I do agree with you. I DO agree with you. Listen, dictionary. Dict means say. Now, spectator. Spect means look. Three lenses are shining now. Great teamwork, everyone!",
+    "after": "Hello, everyone! Last time, we said, Let's vote. Most people chose the park. Today, I have a plan. At school, you may have class meetings, too. Let's practice here! Haru is the chair this time. He stands up and says, Today's topic is our school trip. What do you think? Say it with me. Today's topic is our school trip. What do you think? Excellent! Riko says, I'd like to go to the aquarium because I love sea animals. Haru says, Let's hear from Kiko. Kiko says, I think the science museum is better. We can try fun experiments. Then Birimo raises his hand. Can I say something? Haru says, Sure, go ahead. Birimo says, The farm! They have fresh ice cream! Everyone laughs. Then Haru says, Let's vote. Everyone votes, and Haru says, Most people chose the aquarium. Suddenly, the third lens begins to shine! Captain Pell says, Wonderful! You asked, you listened, and you decided together. Let's read Kiko's meeting notes. \"Class Meeting Notes. Topic: our school trip. Chair: Haru. Ideas: the aquarium, the science museum, and the farm. Riko likes the aquarium because she loves sea animals. Kiko likes the science museum because of the experiments. Birimo likes the farm because of the ice cream. Vote: the aquarium, five. The science museum, three. The farm, two. Decision: the aquarium. Everyone listened to each other, and nobody shouted. Birimo was a little sad about the ice cream, but he clapped for the aquarium. Next time, the science museum!\" Who was the chair? Haru. Why does Kiko like the science museum? Because of the experiments. Now, phonics. I really think so. I REALLY think so. I do agree with you. I DO agree with you. Listen, dictionary. Dict means say. Now, spectator. Spect means look. Three lenses are shining now. Great teamwork, everyone!",
+    "reviewers": "A+B",
+    "reason": "Ms. Emma should not assume the child's schedule ('soon'); 'Back home, we' is unclear"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[0].say",
+    "before": "Hello, everyone! I have a plan. Back home, you will have real class meetings. So let's practice here! Today, Haru is the chair.",
+    "after": "Hello, everyone! I have a plan. At school, you may have class meetings, too. So let's practice here! Today, Haru is the chair.",
+    "reviewers": "A+B",
+    "reason": "do not assume the child's school schedule; matches teacherScript"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hello, everyone! I have a plan. Back home, you will have real class meetings. So let's practice here! Today, Haru is the chair.",
+    "after": "Hello, everyone! I have a plan. At school, you may have class meetings, too. So let's practice here! Today, Haru is the chair.",
+    "reviewers": "A+B",
+    "reason": "do not assume the child's school schedule; matches teacherScript"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "みんな、こんにちは！ わたしに いい かんがえが あるの。おうちに かえったら、ほんとうの クラス かいぎが あるよね。だから ここで れんしゅう しよう！ きょうは ハルくんが しかいだよ。",
+    "after": "みんな、こんにちは！ わたしに いい かんがえが あるの。学校でも クラス かいぎが ある かもしれないね。だから ここで れんしゅう しよう！ きょうは ハルくんが しかいだよ。",
+    "reviewers": "objective (JA)",
+    "reason": "JA おうちに かえったら said the meeting is at home; class meetings are at school"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[2].say",
+    "before": "School trip. The whole class goes out to learn somewhere fun. School trip!",
+    "after": "School trip. The whole class goes somewhere fun to learn. School trip!",
+    "reviewers": "A+C",
+    "reason": "word order: 'learn somewhere fun' is awkward to read"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "School trip. The whole class goes out to learn somewhere fun. School trip!",
+    "after": "School trip. The whole class goes somewhere fun to learn. School trip!",
+    "reviewers": "A+C",
+    "reason": "word order: 'learn somewhere fun' is awkward to read"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[18].say",
+    "before": "Quiz time! Spect means look. Who is a spectator? A, A person who watches a game. B, A person who cooks dinner. Think!",
+    "after": "Quiz time! Spect means look. What does a spectator do? A, Watches a game. B, Cooks dinner. Think!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[18].subtitleEn",
+    "before": "Quiz time! Spect means look. Who is a spectator? A, A person who watches a game. B, A person who cooks dinner. Think!",
+    "after": "Quiz time! Spect means look. What does a spectator do? A, Watches a game. B, Cooks dinner. Think!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 855,
+    "path": "teacher.segments[18].subtitleJa",
+    "before": "クイズ！ spect は「見る」。spectator は だれ？ A、しあいを 見る ひと。B、ばんごはんを つくる ひと。かんがえて！",
+    "after": "クイズ！ spect は「見る」。spectator は なにを する？ A、しあいを 見る。B、ばんごはんを つくる。かんがえて！",
+    "reviewers": "objective (JA)",
+    "reason": "JA follows the new English"
+  },
+  {
+    "lesson": 856,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Today's topic is our school trip. What do you think? Three lenses are shining now! Today, we climb the stairs to the lamp room at the top. Gale looks at the new lens and says, Wow, it's so cool! Birimo touches it. Hmm, it isn't cold. It's warm! Kiko asks Gale, What do you mean by \"cool\"? Say it with me. What do you mean by \"cool\"? Nice! Gale laughs. Cool can mean a little cold. But here, it means great. Birimo says, Oh, it means great! Gale says, Right. Then Captain Pell says, Now, let's go down to the galley for some tea. Haru asks, What does galley mean? Captain Pell says, It means a kitchen on a ship. My lighthouse is like a big ship! When you don't know a word, just ask. It isn't rude. It helps everyone understand. Let's read the list on the galley wall. \"Captain Pell's Sailor Words. Galley means a kitchen on a ship. Deck means the floor of a ship. Ahoy means hello, and it is fun to shout! Aye aye means yes, I understand. Bow means the front of a ship, and stern means the back. Shipshape means neat and clean. Sailors use these words every day. Some of them sound strange, but they are easy to learn. Ask me about any word, any time. I love questions!\" What does deck mean? The floor of a ship. How do sailors say hello? Ahoy! Now, phonics. In fast speech, can is short and weak. It sounds like kun. I can help you. We can do it together. Can you say that again? You can sit here. When you hear a new word, ask, What do you mean? Have fun with new words!",
+    "after": "Hello, everyone! Last time, we said, Today's topic is our school trip. What do you think? Three lenses are shining now! Today, we climb the stairs to the lamp room at the top. Gale looks at the new lens and says, Wow, it's so cool! Birimo touches it. Hmm, it isn't cold. It's warm! Kiko asks Gale, What do you mean by \"cool\"? Say it with me. What do you mean by \"cool\"? Nice! Gale laughs. Cool can mean a little cold. But here, it means great. Birimo says, Oh, it means great! Gale says, Right. Then Captain Pell says, Now, let's go down to the galley for some tea. Haru asks, What does galley mean? Captain Pell says, It means a kitchen on a ship. My lighthouse is like a big ship! When you don't know a word, just ask. It isn't rude. It helps everyone understand. Let's read the list on the galley wall. \"Captain Pell's Sailor Words. Galley means a kitchen on a ship. Deck means the floor of a ship. Ahoy means hello, and it is fun to shout! Aye aye means yes, I understand. Stern means the back of a ship. Shipshape means neat and clean. Sailors use these words every day. Some of them sound strange, but they are easy to learn. Ask me about any word, any time. I love questions!\" What does deck mean? The floor of a ship. How do sailors say hello? Ahoy! Now, phonics. In fast speech, can is short and weak. It sounds like kun. I can help you. We can do it together. Can you say that again? You can sit here. When you hear a new word, ask, What do you mean? Have fun with new words!",
+    "reviewers": "B+C",
+    "reason": "heteronym bow (bau / boh, also ribbon and greeting); TTS and kids may misread it"
+  },
+  {
+    "lesson": 856,
+    "path": "teacher.segments[5].say",
+    "before": "Sailor. A person who works on a ship. Ahoy! Sailor!",
+    "after": "Sailor. Sailors work on ships. Ahoy! Sailor!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 856,
+    "path": "teacher.segments[5].subtitleEn",
+    "before": "Sailor. A person who works on a ship. Ahoy! Sailor!",
+    "after": "Sailor. Sailors work on ships. Ahoy! Sailor!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 857,
+    "path": "teacher.segments[6].say",
+    "before": "I say, Captain Pell says, Thick fog comes after lunch tomorrow. Haru thinks. So you mean we should start early? Yes, exactly. Haru says, Got it!",
+    "after": "I share Captain Pell's news. Thick fog comes after lunch tomorrow. Haru thinks. So you mean we should start early? I say, Yes, exactly. Haru says, Got it!",
+    "reviewers": "A+C",
+    "reason": "'I say, Captain Pell says,' stacks two speech frames; 'Yes, exactly' had no speaker"
+  },
+  {
+    "lesson": 857,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "I say, Captain Pell says, Thick fog comes after lunch tomorrow. Haru thinks. So you mean we should start early? Yes, exactly. Haru says, Got it!",
+    "after": "I share Captain Pell's news. Thick fog comes after lunch tomorrow. Haru thinks. So you mean we should start early? I say, Yes, exactly. Haru says, Got it!",
+    "reviewers": "A+C",
+    "reason": "'I say, Captain Pell says,' stacks two speech frames; 'Yes, exactly' had no speaker"
+  },
+  {
+    "lesson": 857,
+    "path": "teacher.segments[6].subtitleJa",
+    "before": "わたしが「ペルせんちょうが、あしたは おひるの あと こい きりが くるって。」 ハルくんは かんがえて「それって つまり、はやく はじめた ほうが いいって こと？」「うん、その とおり。」 ハルくん「わかった！」",
+    "after": "わたしが ペルせんちょうの おしらせを つたえるよ。「あしたは おひるの あと、こい きりが くるって。」 ハルくんは かんがえて「それって つまり、はやく はじめた ほうが いいって こと？」 わたし「うん、その とおり。」 ハルくん「わかった！」",
+    "reviewers": "A+C",
+    "reason": "JA follows the new English"
+  },
+  {
+    "lesson": 858,
+    "path": "teacher.segments[2].say",
+    "before": "Example. One thing that shows the idea. Fruit? For example, an apple! Example!",
+    "after": "Example. It shows your idea. Fruit? For example, an apple! Example!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); 'thing that shows' -> plain sentence"
+  },
+  {
+    "lesson": 858,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Example. One thing that shows the idea. Fruit? For example, an apple! Example!",
+    "after": "Example. It shows your idea. Fruit? For example, an apple! Example!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); 'thing that shows' -> plain sentence"
+  },
+  {
+    "lesson": 858,
+    "path": "teacher.segments[3].say",
+    "before": "Helper. Someone who helps. Can I help? I'm a helper! Helper!",
+    "after": "Helper. A helper helps. Can I help? I'm a helper! Helper!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); 'someone who helps' (the test regex pattern) -> plain sentence"
+  },
+  {
+    "lesson": 858,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Helper. Someone who helps. Can I help? I'm a helper! Helper!",
+    "after": "Helper. A helper helps. Can I help? I'm a helper! Helper!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); 'someone who helps' (the test regex pattern) -> plain sentence"
+  },
+  {
+    "lesson": 858,
+    "path": "teacher.segments[13].say",
+    "before": "Speed challenge! Fly! Basket! Lantern! Hand out! Fly!",
+    "after": "Speed challenge! Fly! Basket! Lantern! Hold out your hand! Fly!",
+    "reviewers": "A+B",
+    "reason": "'Hand out' is a phrasal verb (give out); cue the TPR 'Hold out your hand'"
+  },
+  {
+    "lesson": 858,
+    "path": "teacher.segments[13].subtitleEn",
+    "before": "Speed challenge! Fly! Basket! Lantern! Hand out! Fly!",
+    "after": "Speed challenge! Fly! Basket! Lantern! Hold out your hand! Fly!",
+    "reviewers": "A+B",
+    "reason": "'Hand out' is a phrasal verb (give out); cue the TPR 'Hold out your hand'"
+  },
+  {
+    "lesson": 859,
+    "path": "teacher.segments[0].say",
+    "before": "Hello, everyone! It's festival night. Look, lanterns are floating on the sea. So pretty! And here is the Question Box. Some questions are tricky!",
+    "after": "Hello, everyone! It's festival night. Look, lanterns are glowing on the boats. So pretty! And here is the Question Box. Some questions are tricky!",
+    "reviewers": "objective",
+    "reason": "story: the lanterns hang on the boats (L853, L857 plan, L859 teacherScript), they do not float"
+  },
+  {
+    "lesson": 859,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Hello, everyone! It's festival night. Look, lanterns are floating on the sea. So pretty! And here is the Question Box. Some questions are tricky!",
+    "after": "Hello, everyone! It's festival night. Look, lanterns are glowing on the boats. So pretty! And here is the Question Box. Some questions are tricky!",
+    "reviewers": "objective",
+    "reason": "story: the lanterns hang on the boats (L853, L857 plan, L859 teacherScript), they do not float"
+  },
+  {
+    "lesson": 859,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "こんにちは、みんな！ おまつりの よるだよ。見て、うみに ちょうちんが うかんで いるよ。とても きれい！ そして これが しつもんばこ。むずかしい しつもんも あるよ！",
+    "after": "こんにちは、みんな！ おまつりの よるだよ。見て、ふねの ちょうちんが ひかって いるよ。とても きれい！ そして これが しつもんばこ。むずかしい しつもんも あるよ！",
+    "reviewers": "objective",
+    "reason": "JA follows the story fix"
+  },
+  {
+    "lesson": 859,
+    "path": "teacher.segments[20].say",
+    "before": "Great work! You can take time to think. You can say, I'm not sure, but I think. And and is tiny now. Come-n-see! Next, go and talk with Kiko! Bye-bye!",
+    "after": "Great work! You can take time to think. You can say, I'm not sure, but I think. And the word and is tiny now. Come-n-see! Next, go and talk with Kiko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'And and' is confusing to read and hear"
+  },
+  {
+    "lesson": 859,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "Great work! You can take time to think. You can say, I'm not sure, but I think. And and is tiny now. Come-n-see! Next, go and talk with Kiko! Bye-bye!",
+    "after": "Great work! You can take time to think. You can say, I'm not sure, but I think. And the word and is tiny now. Come-n-see! Next, go and talk with Kiko! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'And and' is confusing to read and hear"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[4].say",
+    "before": "Keeper. A person who takes care of a place. Captain Pell is the lighthouse keeper. Keeper!",
+    "after": "Keeper. A keeper takes care of a place. Captain Pell is the lighthouse keeper. Keeper!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[4].subtitleEn",
+    "before": "Keeper. A person who takes care of a place. Captain Pell is the lighthouse keeper. Keeper!",
+    "after": "Keeper. A keeper takes care of a place. Captain Pell is the lighthouse keeper. Keeper!",
+    "reviewers": "objective",
+    "reason": "W29 has no relative clauses (brief); plain sentence instead of 'a person who ~'"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[7].say",
+    "before": "Because families wait for them. A lighthouse is a friend for boats. Then Anchor loves bones and cake. Kiko laughs. Cake? Birimo, that's you!",
+    "after": "Birimo says, Because families wait for them. A lighthouse is a friend for boats. Then he says, Anchor loves bones and cake. Kiko laughs. Cake? Birimo, that's you!",
+    "reviewers": "A+B",
+    "reason": "no speaker for the lines; 'Then Anchor loves bones and cake' read as narration"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Because families wait for them. A lighthouse is a friend for boats. Then Anchor loves bones and cake. Kiko laughs. Cake? Birimo, that's you!",
+    "after": "Birimo says, Because families wait for them. A lighthouse is a friend for boats. Then he says, Anchor loves bones and cake. Kiko laughs. Cake? Birimo, that's you!",
+    "reviewers": "A+B",
+    "reason": "no speaker for the lines; 'Then Anchor loves bones and cake' read as narration"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "「かぞくが まって いるからね。灯台は ふねの ともだちなんだ。」 それから「アンカーは ほねと ケーキが だいすき。」 キコちゃんが わらうよ。「ケーキ？ ビリモ、それは ビリモでしょ！」",
+    "after": "ビリモ「かぞくが まって いるからね。灯台は ふねの ともだちなんだ。」 それから「アンカーは ほねと ケーキが だいすき。」 キコちゃんが わらうよ。「ケーキ？ ビリモ、それは ビリモでしょ！」",
+    "reviewers": "A+B",
+    "reason": "JA follows the new English (speaker)"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[20].say",
+    "before": "You did it! You can interview someone. You can ask follow-up questions. And you know predict means say before. Next, go and talk with Birimo! See you!",
+    "after": "You did it! You can interview someone. You can ask follow-up questions. And you know predict. Pre means before, and dict means say! Next, go and talk with Birimo! See you!",
+    "reviewers": "A+B",
+    "reason": "'predict means say before' is ungrammatical and unclear"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[20].subtitleEn",
+    "before": "You did it! You can interview someone. You can ask follow-up questions. And you know predict means say before. Next, go and talk with Birimo! See you!",
+    "after": "You did it! You can interview someone. You can ask follow-up questions. And you know predict. Pre means before, and dict means say! Next, go and talk with Birimo! See you!",
+    "reviewers": "A+B",
+    "reason": "'predict means say before' is ungrammatical and unclear"
+  },
+  {
+    "lesson": 860,
+    "path": "teacher.segments[20].subtitleJa",
+    "before": "やったね！ インタビューが できるね。ついかの しつもんが できるね。そして predict は「まえに いう」だと わかったね。このあと ビリモと おはなし してね！ またね！",
+    "after": "やったね！ インタビューが できるね。ついかの しつもんが できるね。そして predict が わかったね。pre は「まえに」、dict は「いう」！このあと ビリモと おはなし してね！ またね！",
+    "reviewers": "A+B",
+    "reason": "JA follows the new English"
+  }
+]
