@@ -13,6 +13,6 @@ export function themeConversation(t: TalkTheme): LessonConversation {
     scene: t.scene,
     sceneJa: t.sceneJa,
     lines: t.lines.map((l) => ({ speaker: l.speaker, en: l.en, ja: l.ja })),
-    aiTask: { goalJa: t.goalJa, starterEn: t.starterEn, targetExpressions: t.targetExpressions },
+    aiTask: { goalJa: t.goalJa, starterEn: t.starterEn, targetExpressions: t.targetExpressions, ...(t.examples?.length ? { examples: t.examples } : {}) },
   };
 }

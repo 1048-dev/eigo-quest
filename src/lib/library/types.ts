@@ -60,6 +60,8 @@ export interface TalkTheme {
   starterEn: string;
   goalJa: string;
   targetExpressions: string[];
+  /** run10: ～ の ある 目標の お手本（台本に その 形の 文が ない とき。"I think ～." → "I think it's fun."） */
+  examples?: string[];
   lines: { speaker: string; en: string; ja: string }[];
 }
 

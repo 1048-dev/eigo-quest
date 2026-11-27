@@ -196,7 +196,7 @@ const LessonStepSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.literal("teacher_video"), minutes: num(3), script: str(), videoUrl: z.string().optional() }),
   z.object({ kind: z.literal("flashcards"), minutes: num(4), itemIds: safeArray(z.string()) }),
   z.object({ kind: z.literal("tpr"), minutes: num(4), itemIds: safeArray(z.string()) }),
-  z.object({ kind: z.literal("phonics"), minutes: num(5), focus: safeArray(z.string()), words: safeArray(z.string()), tipJa: str(), examples: z.array(z.string()).optional() }),
+  z.object({ kind: z.literal("phonics"), minutes: num(5), focus: safeArray(z.string()), words: safeArray(z.string()), tipJa: str(), examples: z.array(z.string()).optional(), spoken: z.array(z.string()).optional() }),
   z.object({ kind: z.literal("school_expressions"), minutes: num(4), itemIds: safeArray(z.string()), testPoints: safeArray(z.string()) }),
   z.object({ kind: z.literal("pronunciation"), minutes: num(3), itemIds: safeArray(z.string()) }),
   z.object({ kind: z.literal("quiz"), minutes: num(4), questions: safeArray(QuestionSchema) }),
@@ -228,7 +228,8 @@ const LessonSchema = z.object({
   conversation: nullable(z.object({
     scene: str(), sceneJa: str(),
     lines: safeArray(z.object({ speaker: str("Haru"), en: str(), ja: str() })),
-    aiTask: z.object({ goalJa: str(), starterEn: str(), targetExpressions: safeArray(z.string()) })
+    // run10: examples は ～ の ある 目標の お手本（サーバーが その回の 学校の 表現を 入れる）
+    aiTask: z.object({ goalJa: str(), starterEn: str(), targetExpressions: safeArray(z.string()), examples: z.array(z.string()).optional().catch(undefined) })
       .catch({ goalJa: "", starterEn: "", targetExpressions: [] }),
   })).optional(),
   recap: nullable(z.object({ highlightsJa: safeArray(z.string()) })).optional(),

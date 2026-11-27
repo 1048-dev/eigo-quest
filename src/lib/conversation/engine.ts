@@ -101,34 +101,135 @@ function containsSequence(words: string[], seq: string[]): boolean {
 
 /** 子どもの ことばに 目標表現のどれかが入っているか（大文字・記号は気にしない） */
 export function usedTargets(childText: string, targets: string[]): string[] {
-  const w = normalizeWords(childText);
+  // run10: 子どもの ことばは 個人情報を 伏せてから くる（"In 2050, …" → "In ***, …"）ので、目標の 表現も 同じように 伏せて くらべる
+  // （伏せないと 年号・数の 入った 目標「It was built in 1600.」を 言っても つかった ことに ならない）
+  const text = maskPersonalInfo(childText);
+  const w = normalizeWords(text).map(article);
   // "I am" は "I'm" と同じあつかい
-  const expanded = normalizeWords(childText.replace(/\b(i)\s+am\b/gi, "i'm").replace(/\bit\s+is\b/gi, "it's"));
-  return targets.filter((t) => {
-    const stem = targetStem(t);
-    return containsSequence(w, stem) || containsSequence(expanded, stem);
+  const expanded = normalizeWords(text.replace(/\b(i)\s+am\b/gi, "i'm").replace(/\bit\s+is\b/gi, "it's")).map(article);
+  const sentences = text.split(/\s*[―—]\s*/).flatMap((p) => p.match(/[^.!?]+[.!?]?/g) ?? [p]);
+  return targets.filter((t) => targetVariants(maskPersonalInfo(t)).some((v) => {
+    const stem = targetStem(v).map(article);
+    // ～ で はじまる 目標（"～ is ～ing."）は ～ の まえが ないので、形で くらべる（run10）
+    const head = normalizeWords(v.split(/[～~＿_]|\.\.\./)[0] ?? "");
+    if (head.length > 0 && (containsSequence(w, stem) || containsSequence(expanded, stem))) return true;
+    return /[～~＿_]|\.\.\./.test(v) && sentences.some((s) => fillTemplate(v, s) !== null);
+  }));
+}
+
+/** a と an は おなじ あつかい（"It's a ～." に "It's an apple." で あう） */
+const article = (w: string) => (w === "an" ? "a" : w);
+
+const TEMPLATE_SUBJECTS = new Set(["I", "He", "She", "They", "We"]);
+const NOT_A_SUBJECT = new Set([
+  "the", "this", "that", "these", "those", "a", "an", "my", "our", "your", "his", "her", "their", "its", "look", "then", "and", "but", "so", "now",
+  "first", "next", "finally", "after", "wow", "oh", "yes", "no", "it", "there", "here", "what", "who", "where", "when", "why", "how", "please",
+  "today", "tomorrow", "yesterday", "every", "some", "many", "all", "one",
+]);
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+/** 1語: さいしょの 文字の 大文字・小文字・a / an・うしろの , は 気にしない */
+const tokenRe = (t: string) => {
+  const core = t.replace(/,$/, "");
+  const body = core === "a" || core === "A" ? "[Aa]n?" : /^[A-Za-z]/.test(core) ? `[${core[0].toUpperCase()}${core[0].toLowerCase()}]${escapeRe(core.slice(1))}` : escapeRe(core);
+  return t.endsWith(",") ? `${body},?` : body;
+};
+
+/**
+ * run10: 目標の 形（"He has ～." "～ is ～ing." "I went to ～."）が 文に あうか。あえば その 文
+ * （主語が 名前など ちがう ときは 目標の 主語に かえる: "Birimo has a new map." → "He has a new map."）、あわなければ null。
+ * ～ は 1語 以上。疑問文の 目標には 疑問文、ふつうの 文には ふつうの 文だけ あわせる。
+ */
+export function fillTemplate(template: string, sentence: string, names?: ReadonlySet<string>): string | null {
+  const t = template.replace(/[～~＿_]+|\.\.\./g, "～").trim();
+  if (!t.includes("～")) return null;
+  const s = sentence.trim();
+  if (t.endsWith("?") !== s.endsWith("?")) return null;
+  const tt = t.replace(/\s*[.!?]+$/, "");
+  const first = /^([A-Za-z]+)\s/.exec(tt);
+  const subj = first && TEMPLATE_SUBJECTS.has(first[1]) ? first[1] : null;
+  const body = subj ? tt.slice(first![1].length) : tt;
+  const parts = body.split("～");
+  let re = subj ? "((?:Ms\\.\\s+|Mr\\.\\s+)?[A-Z][a-z]+|[Hh]e|[Ss]he|[Tt]hey|[Ww]e|I)" : "";
+  parts.forEach((p, i) => {
+    if (i > 0) re += i === parts.length - 1 && !p.trim() ? "([A-Za-z0-9*'’][A-Za-z0-9*'’, -]*)" : "([A-Za-z0-9*'’][A-Za-z0-9*'’ -]*?)";
+    const lead = /^\s/.test(p) ? "\\s+" : "";
+    const trail = /\s$/.test(p) && i < parts.length - 1 ? "\\s+" : "";
+    const words = p.trim() ? p.trim().split(/\s+/).map(tokenRe).join("\\s+") : "";
+    re += words ? `${lead}${words}${trail}` : lead || trail;
   });
+  const m = new RegExp(`(^|[^A-Za-z'])${re}(?=$|[^A-Za-z'])`).exec(s);
+  if (!m) return null;
+  if (!subj) return s;
+  const said = m[2];
+  // 主語に できるのは 名前と 代名詞だけ（"The people …" の The・"My grandma …" の My などは かえない）
+  if (NOT_A_SUBJECT.has(said.toLowerCase())) return null;
+  // お手本を 作る ときは、代名詞 以外は その回の 名前（話し手・文の とちゅうで 大文字の ことば）だけ かえる（"Long ago, …" の Long は かえない）
+  if (names && !/^(he|she|they|we|i)$/i.test(said) && !names.has(said.replace(/^(Ms|Mr)\.\s+/, ""))) return null;
+  if (said === subj || said.toLowerCase() === subj.toLowerCase()) return s;
+  const at = m.index + m[1].length;
+  const atStart = !/[A-Za-z]/.test(s.slice(0, at));
+  const who = subj === "I" || atStart ? subj : subj.toLowerCase();
+  return `${s.slice(0, at)}${who}${s.slice(at + said.length)}`;
 }
 
 /** 個人情報っぽいもの（3けた以上の数字・メール・URL）を伏せる。AI に送る前と記録の前に使う */
 export function redactPersonalInfo(s: string): string {
+  return maskPersonalInfo(s).slice(0, 200);
+}
+
+/** 伏せる だけ（長さは きらない。目標の 表現との くらべに つかう） */
+function maskPersonalInfo(s: string): string {
   return s
     .replace(/\S+@\S+/g, "***")
     .replace(/https?:\/\/\S+/gi, "***")
-    .replace(/\d[\d\- ]{2,}\d/g, "***")
-    .slice(0, 200);
+    .replace(/\d[\d\- ]{2,}\d/g, "***");
 }
 
-/** "I'm ～." のような目標表現を、台本の中の具体的な文に置きかえる（タップ候補・お手本用） */
+/**
+ * run10: "He / She is a ～." のような「どちらか」の 目標を ["He is a ～.", "She is a ～."] に わける（"/" が なければ そのまま 1つ）。
+ * 子どもは どちらか 一方しか 言わないので、目標を つかったかの 判定と お手本さがしは わけた 形で する
+ */
+export function targetVariants(expr: string): string[] {
+  // "A / B / C" の ならび 1つ: さいしょは "/" の まえの 1語、さいごは うしろの 1語、あいだは まるごと（"behind / next to / between"）
+  const segs = expr.split("/");
+  if (segs.length < 2) return [expr];
+  const head = /^(.*?)([A-Za-z']+)\s*$/s.exec(segs[0]);
+  const tail = /^\s*([A-Za-z']+)(.*)$/s.exec(segs[segs.length - 1]);
+  if (!head || !tail) return [expr];
+  const alts = [head[2], ...segs.slice(1, -1).map((s) => s.trim()), tail[1]].filter(Boolean);
+  return alts.map((a) => `${head[1]}${a}${tail[2]}`);
+}
+
+/**
+ * "I'm ～." のような目標表現を、台本の中の具体的な文に置きかえる（タップ候補・お手本用）。
+ * 台本に なければ その回の 学校の 表現（aiTask.examples）から さがす（run10: "It's in ...." と 出さない）
+ */
 export function concreteTarget(expr: string, conv: LessonConversation): string {
   if (!/[～~＿_]|\.\.\./.test(expr)) return expr;
-  const stem = targetStem(expr);
-  for (const l of conv.lines) {
-    if (containsSequence(normalizeWords(l.en), stem)) {
-      // 文が2つ以上なら、目標表現をふくむ文だけ取り出す
-      const sentences = l.en.match(/[^.!?]+[.!?]?/g) ?? [l.en];
-      const hit = sentences.find((s) => containsSequence(normalizeWords(s), stem));
-      return (hit ?? l.en).trim();
+  const sources = [...conv.lines.map((l) => l.en), ...(conv.aiTask.examples ?? [])];
+  const sentencesOf = (text: string) => text.split(/\s*[―—]\s*/).flatMap((p) => p.match(/[^.!?]+[.!?]?/g) ?? [p]).map((s) => s.trim()).filter(Boolean);
+  const variants = targetVariants(expr);
+  for (const v of variants) {
+    // ～ で はじまる 目標（"～ is ～ing."）は ～ の まえの ことばが ないので 形で さがす（下）
+    if (!normalizeWords(v.split(/[～~＿_]|\.\.\./)[0] ?? "").length) continue;
+    const stem = targetStem(v).map(article);
+    for (const text of sources) {
+      if (!containsSequence(normalizeWords(text).map(article), stem)) continue;
+      // 文が2つ以上なら（"Who is this? ― This is Ms. Emma." も）、目標表現をふくむ文だけ取り出す
+      const hit = sentencesOf(text).find((s) => containsSequence(normalizeWords(s).map(article), stem));
+      return (hit ?? text).trim();
+    }
+  }
+  // run10: 形で さがす（"He has ～." ← "Birimo has a new map." → "He has a new map."、"～ is ～ing." ← "Haru is running."）
+  // 名前 = 話し手 ＋ 文の とちゅうで 大文字で はじまる ことば（Riko, Birimo, Ember …）
+  const names = new Set<string>(conv.lines.map((l) => l.speaker.replace(/^(Ms|Mr)\.\s+/, "")));
+  for (const text of sources) for (const m of text.matchAll(/[a-z,]\s+([A-Z][a-z]+)/g)) names.add(m[1]);
+  for (const v of variants) {
+    for (const text of sources) {
+      for (const s of sentencesOf(text)) {
+        const hit = fillTemplate(v, s, names);
+        if (hit) return hit;
+      }
     }
   }
   return expr.replace(/[～~＿_]+/g, "...").trim();

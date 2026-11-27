@@ -9,6 +9,7 @@
  * 全体は 2〜3 分（RECAP_TIMING.minTotalMs〜maxTotalMs）におさまるように、項目数を調整する。
  */
 import type { LessonDef } from "@/lib/domain/types";
+import { spokenPhonicsWord } from "@/lib/curriculum/phonicsButtons";
 
 export type RecapSection = "intro" | "words" | "expressions" | "phonics" | "tpr" | "conversation" | "highlights" | "outro";
 export type RecapHost = "haru" | "birimo";
@@ -145,7 +146,8 @@ function draftSegments(lesson: LessonDef, lim: typeof LIMITS, extraRounds: numbe
     for (const w of words) {
       // "sun-set" のような 2つに わける フォーカスも sunset に、"a_e" のような マジック e も cake に一致させる
       const letters = focus.filter((f) => new RegExp(f.toLowerCase().replace(/-/g, "").replace(/_/g, "[a-z]")).test(w.toLowerCase()));
-      d.push(phrase("phonics", "haru", "おとを よく きいてね", w, { letters: letters.length > 0 ? letters : focus }));
+      // run10: 数・年号は 英語の 読みかたで 読む（1600 → sixteen hundred。大きく 見せる 文字は letters の 1600）
+      d.push(phrase("phonics", "haru", "おとを よく きいてね", spokenPhonicsWord(w, focus, lesson.phonics.words), { letters: letters.length > 0 ? letters : focus }));
     }
   }
 

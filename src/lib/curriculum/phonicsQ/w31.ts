@@ -19,7 +19,7 @@ import { w31Say, w31Example, W31_START, familyDisplay as family31Display, family
  * - port（"export"）: 「port の ことば。いみは どれ？」（ことば → いみ）
  * あてはまらなければ null。ワールド30 の 問題より 先に よぶ（invention を ワールド23 の -tion、magician を ワールド30 で 問わない）。
  */
-export function w31Question(item: LearningItemDef, rng: () => number): Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> | null {
+export function w31Question(item: LearningItemDef, rng: () => number): (Pick<Question, "promptJa" | "choices" | "answer" | "explanationJa" | "display"> & { audioText?: string }) | null {
   if (item.lessonNo < W31_START) return null;
   const lesson = getLesson(item.lessonNo);
   if (!lesson) return null;
@@ -28,7 +28,7 @@ export function w31Question(item: LearningItemDef, rng: () => number): Pick<Ques
   const f = family31Of(item.text);
   if (f && focus.includes(f.ending)) return { promptJa: "動詞を 名詞（もの・こと）に すると？", display: family31Display(f), choices: pick([f.answer, ...f.wrong]), answer: f.answer, explanationJa: family31Why(f) };
   const y = yearOf(item.text);
-  if (y && focus.includes(y.word)) return { promptJa: "英語で なんと よむ？", display: yearDisplay(y), choices: pick([y.answer, ...y.wrong]), answer: y.answer, explanationJa: yearWhy(y) };
+  if (y && focus.includes(y.word)) return { promptJa: "英語で なんと よむ？", display: yearDisplay(y), choices: pick([y.answer, ...y.wrong]), answer: y.answer, explanationJa: yearWhy(y), audioText: y.answer };
   const s = structOf(item.text);
   if (s && focus.includes("struct")) return { promptJa: "struct（たてる・くみたてる）の ことば。文に あう ことばは どれ？", display: structDisplay(s), choices: pick([s.answer, ...s.wrong]), answer: s.answer, explanationJa: structWhy(s) };
   const p = person31Of(item.text);

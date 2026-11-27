@@ -39,6 +39,7 @@
     "english:lint": "tsx scripts/english-lint.ts",
     "english:reports": "tsx scripts/english-reports.ts",
     "check:all": "tsx scripts/check-all.ts",
+    "check:data": "tsx scripts/data-check.ts",
     "check:a11y": "tsx scripts/a11y-check.ts",
     "check:links": "tsx scripts/link-check.ts",
     "check:bundle": "tsx scripts/bundle-budget.ts"

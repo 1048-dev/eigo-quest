@@ -117,6 +117,15 @@ def load_curriculum() -> dict:
     return {"meta": index["meta"], "lessons": lessons}
 
 
+FIRST_SOUND_WORD = re.compile(r"^[A-Za-z][A-Za-z' -]*$")
+
+
+def first_sound_words(words: list[str]) -> list[str]:
+    """「さいしょの 音に ○」「さいしょの 文字を かこう」に つかえる ことば（英字だけ。数・年号・"セリフ" は のぞく）。
+    こたえは w[0].lower()（June → j。大文字の J を 小文字の 選択肢に まぜない）。run10 Phase 2 の データの 確認と おなじ きまり"""
+    return [w for w in words if FIRST_SOUND_WORD.match(w)]
+
+
 def items_of(lesson: dict) -> list[Item]:
     n = lesson["lessonNo"]
     out = [Item(n, "WORD", v["en"], v["ja"], bool(v.get("core"))) for v in lesson["vocab"]]
@@ -376,10 +385,14 @@ def lesson_student_pages(s: Sheet, lesson: dict) -> LessonKey:
     s.section("2. フォニックス：さいしょの音に ○ をつけよう", "おうちの人が単語を読みます（こたえのページ参照）。" + lesson["phonics"]["tipJa"])
     rng = random.Random(n)
     pool = list("satpinmdgockeurhbfl")
-    phon = lesson["phonics"]["words"][:3]
+    phon = first_sound_words(lesson["phonics"]["words"])[:3]
+    if not phon:
+        s.text(MARGIN + 4 * mm, s.y, "（この回は 数や 文の 読みかたの 回。アプリの フォニックスで れんしゅうしよう）", 9, JA, INK2)
+        s.y -= 8 * mm
     for i, w in enumerate(phon):
         s.need(11 * mm)
-        opts = sorted({w[0], *rng.sample([p for p in pool if p != w[0]], 2)})
+        first = w[0].lower()
+        opts = sorted({first, *rng.sample([p for p in pool if p != first], 2)})
         rng.shuffle(opts)
         x = MARGIN + 4 * mm
         s.text(x, s.y, f"({i + 1})", 11, EN)
@@ -431,7 +444,7 @@ def lesson_answer_block(s: Sheet, lesson: dict, key: LessonKey, compact: bool):
         s.need(lh * 3)
         s.text(x, s.y, "こたえ", size, JA, INK2)
         s.y -= lh
-        ans = [f"2-({i + 1}) {w} → {w[0]}" for i, w in enumerate(phon)]
+        ans = [f"2-({i + 1}) {w} → {w[0].lower()}" for i, w in enumerate(phon)]
         ans += [f"3-({i + 1}) {e.text}" for i, e in enumerate(exprs)]
         s.wrapped(x + 4 * mm, "    ".join(ans), size, line_h=lh)
         s.need(lh * 2)
@@ -452,7 +465,7 @@ def lesson_answer_block(s: Sheet, lesson: dict, key: LessonKey, compact: bool):
 
     s.section("こたえ")
     for i, w in enumerate(phon):
-        s.text(x, s.y, f"2-({i + 1})  {w} → {w[0]}", size, JA)
+        s.text(x, s.y, f"2-({i + 1})  {w} → {w[0].lower()}", size, JA)
         s.y -= lh
     for i, e in enumerate(exprs):
         s.text(x, s.y, f"3-({i + 1})  {e.text}", size, EN)
@@ -500,7 +513,7 @@ def test_question_pages(s: Sheet, kind: str, start: int, end: int, lessons: list
 
     words = [i for i in pool if i.kind == "WORD"]
     exprs = [i for i in pool if i.kind == "EXPRESSION" and i.core]
-    phon = [i for i in pool if i.kind == "PHONICS"]
+    phon = [i for i in pool if i.kind == "PHONICS" and FIRST_SOUND_WORD.match(i.text)]
     cmds = [i for i in pool if i.kind == "COMMAND"]
 
     n_match = min(len(words), max(3, total // 4))
@@ -554,14 +567,15 @@ def test_question_pages(s: Sheet, kind: str, start: int, end: int, lessons: list
         s.y -= 2 * mm
 
     # D. フォニックス
-    s.section("D. 単語の さいしょの 文字を かこう（おうちの人が読みます）")
+    if n_phon:
+        s.section("D. 単語の さいしょの 文字を かこう（おうちの人が読みます）")
     for p in rng.sample(phon, n_phon):
         s.need(12 * mm)
         q += 1
         s.text(MARGIN + 4 * mm, s.y, f"{q}.", 11, EN)
         s.four_lines(MARGIN + 14 * mm, s.y + 6 * mm, 14 * mm)
         s.text(MARGIN + 32 * mm, s.y, "_" * (len(p.text) - 1), 16, EN)
-        answers.append(f"{q}. {p.text}（よみあげ）→ {p.text[0]}")
+        answers.append(f"{q}. {p.text}（よみあげ）→ {p.text[0].lower()}")
         s.y -= 12 * mm
 
     # E. TPR リスニング

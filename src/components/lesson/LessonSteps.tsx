@@ -82,16 +82,17 @@ export function TprDrill({ items, actions, onDone }: { items: LearningItemDef[];
 // 4. フォニックス（文字と音・ブレンディング）
 // ---------------------------------------------------------------------------
 /** examples: サーバー（または おためしで ワールドを 読んだ あと）が 作った おてほん。なければ ブラウザの 基本の きまりで さがす */
-export function Phonics({ focus, words, tipJa, examples, onDone }: { focus: string[]; words: string[]; tipJa: string; examples?: string[]; onDone: Done }) {
+export function Phonics({ focus, words, tipJa, examples, spoken, onDone }: { focus: string[]; words: string[]; tipJa: string; examples?: string[]; spoken?: string[]; onDone: Done }) {
   const [lit, setLit] = useState<{ word: string; n: number } | null>(null);
   // 文字の なまえ（シー・エー・ティー）は 読まない。もじを じゅんばんに 光らせてから、ことばを ゆっくり → ふつうの はやさで
-  const blend = async (w: string) => {
+  // run10: 数・年号は spoken（英語の 読みかた。1600 → sixteen hundred）で 読む
+  const blend = async (w: string, say: string) => {
     for (let n = 1; n <= w.length; n++) {
       setLit({ word: w, n });
       await new Promise((ok) => setTimeout(ok, 220));
     }
-    await speak(w, 0.6);
-    await speak(w, 0.9);
+    await speak(say, 0.6);
+    await speak(say, 0.9);
     setLit(null);
   };
   return (
@@ -112,8 +113,8 @@ export function Phonics({ focus, words, tipJa, examples, onDone }: { focus: stri
       </div>
       <p className="mt-6 text-center font-bold text-[var(--ink-2)]">おとを つなげて よもう（ブレンディング）</p>
       <div className="mt-3 grid grid-cols-2 gap-3">
-        {words.map((w) => (
-          <button key={w} className="card p-4 text-3xl font-black tracking-[.3em]" onClick={() => blend(w)}>
+        {words.map((w, i) => (
+          <button key={w} className="card p-4 text-3xl font-black tracking-[.3em]" onClick={() => blend(w, spoken?.[i] || w)}>
             {w.split("").map((ch, i) => <span key={i} className={lit?.word === w && i < lit.n ? "text-[var(--coin)]" : ""}>{ch}</span>)}
           </button>
         ))}

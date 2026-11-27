@@ -81,6 +81,12 @@ export interface LessonConversation {
     starterEn: string;
     /** 使ってほしい表現（"I'm ～." のように ～ はあき） */
     targetExpressions: string[];
+    /**
+     * run10: ～ の ある 表現の お手本に つかう 文（台本に その 形の 文が ない とき。"It's in ～." → "It's in the box."）。
+     * JSON には 台本にも 学校の 表現にも ない 形の お手本だけ 書く。レッスンを 読みこむ ときに その回の 学校の 表現（school.expressions）を
+     * うしろに 足す（curriculum/index.ts の withExamples）
+     */
+    examples?: string[];
   };
 }
 

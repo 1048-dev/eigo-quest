@@ -9,7 +9,7 @@ import { teacherVideoUrl } from "@/lib/teacherVideo/manifest";
 import { getLesson, itemsInRange, itemsOfLesson } from "./index";
 import { shuffle } from "./shuffle";
 import { FIRST_LAZY_PHONICS_WORLD, LAST_PHONICS_WORLD, assertPhonicsLoaded, worldPhonics, type WorldPhonicsQuestion } from "./phonicsWorlds";
-import { focusExampleWord } from "./phonicsButtons";
+import { focusExampleWord, spokenPhonicsWord } from "./phonicsButtons";
 import { VOWEL_TEAMS, VOWEL_TEAM_INTRO, possibleSounds, shortVowelOf, teamSound } from "./vowelTeams";
 import { R_MOUTH, R_VOWELS, R_VOWEL_INTRO, findRSpellings, rSound, shortVowelOfR } from "./rControlled";
 import { CG_CHOICES, CG_KANA, CG_LETTER, W10_INTRO as W10_INTRO_MAP, W10_TEAMS, Y_TEAM, cgSounds, w10TeamSound, ySound } from "./w10Phonics";
@@ -444,11 +444,11 @@ function lazyWorldQuestion(item: LearningItemDef, rng: () => number): WorldPhoni
   return null;
 }
 
-function distractors(target: LearningItemDef, pool: readonly LearningItemDef[], n: number, rng: () => number) {
+function distractors(target: LearningItemDef, pool: readonly LearningItemDef[], n: number, rng: () => number, taken: readonly LearningItemDef[] = []) {
   // おなじ ことば・おなじ 日本語の 項目が べつの 回にも あるので、選択肢が かさならないように 1つずつに する
   const norm = (s: string) => s.trim().toLowerCase();
-  const seenText = new Set([norm(target.text)]);
-  const seenJa = new Set([target.ja.trim()]);
+  const seenText = new Set([target, ...taken].map((t) => norm(t.text)));
+  const seenJa = new Set([target, ...taken].map((t) => t.ja.trim()));
   const out: LearningItemDef[] = [];
   for (const p of shuffle(pool, rng)) {
     if (out.length >= n) break;
@@ -471,7 +471,15 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
   let correctId = "";
   let optItems: LearningItemDef[] = [];
   const opts = (labelOf: (i: LearningItemDef) => string, n = 3) => {
-    optItems = shuffle([item, ...distractors(item, pool, n, rng)], rng);
+    const ds = distractors(item, pool, n, rng);
+    // run10: プールに おなじ 種類が たりない（その回の 表現が 2つ だけ など）ときは、まえの 30 レッスンの（もう ならった）項目で うめる。
+    // 2択だと あてずっぽうでも 半分 あたるので 4択に そろえる。プールで たりる ときは 乱数の 使いかたも 今までと おなじ
+    if (ds.length < n) {
+      const inPool = new Set(pool.map((p) => p.id));
+      const wider = itemsInRange(Math.max(1, item.lessonNo - 29), item.lessonNo).filter((p) => !inPool.has(p.id));
+      ds.push(...distractors(item, wider, n - ds.length, rng, ds));
+    }
+    optItems = shuffle([item, ...ds], rng);
     return optItems.map((i, k) => {
       if (i.id === item.id) correctId = LETTERS[k];
       return { id: LETTERS[k], label: labelOf(i) };
@@ -540,7 +548,9 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
       // run8: ワールド13〜40 は ./phonicsWorlds.ts の 登録から 40 → 13 の 順に よぶ（ブラウザは ensurePhonicsLoaded の あと）
       const dq = lazyWorldQuestion(item, rng) ?? blendQuestion(item, rng) ?? w12Question(item, rng) ?? w10Question(item, rng) ?? w11Question(item, rng) ?? endingQuestion(item, rng) ?? magicEQuestion(item, rng) ?? vowelTeamQuestion(item, rng)
         ?? rControlledQuestion(item, rng) ?? digraphQuestion(item, rng);
-      if (dq) return { ...base, type, skill: "PHONICS", audioText: item.text, display: "🔊", ...dq };
+      // run10: 数・年号は 英語の 読みかたで 読み上げる（1600 → sixteen hundred）。ワールドの 問題が audioText を もつ ときは そちら
+      const spoken = spokenPhonicsWord(item.text, getLesson(item.lessonNo)?.phonics.focus ?? [], getLesson(item.lessonNo)?.phonics.words ?? []);
+      if (dq) return { ...base, type, skill: "PHONICS", audioText: spoken, display: "🔊", ...dq };
       const first = item.text[0];
       // c と k は同じ /k/ の音なので、聞き分けられない組み合わせは出さない
       const sameSound = first === "c" ? "k" : first === "k" ? "c" : "";
@@ -559,8 +569,8 @@ export function makeQuestion(item: LearningItemDef, type: QuestionType, pool: re
   }
 }
 
-/** 項目の種類ごとに出題可能な形式 */
-function typesFor(item: LearningItemDef, allowSpeak: boolean): QuestionType[] {
+/** 項目の種類ごとに出題可能な形式（run10: データの 確認 scripts/lib/dataCheck.ts でも つかう） */
+export function typesFor(item: LearningItemDef, allowSpeak: boolean): QuestionType[] {
   const t: QuestionType[] = [];
   switch (item.kind) {
     case "WORD":
@@ -635,8 +645,8 @@ export type LessonStep =
   | { kind: "teacher_video"; minutes: number; script: string; videoUrl?: string }
   | { kind: "flashcards"; minutes: number; itemIds: string[] }
   | { kind: "tpr"; minutes: number; itemIds: string[] }
-  /** examples: フォーカスごとの ボタンの おてほん（focus と おなじ 順。run8: ブラウザに ワールドごとの 表を のせない ため ここで 作る） */
-  | { kind: "phonics"; minutes: number; focus: string[]; words: string[]; tipJa: string; examples?: string[] }
+  /** examples: フォーカスごとの ボタンの おてほん（focus と おなじ 順。run8: ブラウザに ワールドごとの 表を のせない ため ここで 作る）。spoken: words の 読み上げ（run10） */
+  | { kind: "phonics"; minutes: number; focus: string[]; words: string[]; tipJa: string; examples?: string[]; spoken?: string[] }
   | { kind: "school_expressions"; minutes: number; itemIds: string[]; testPoints: string[] }
   | { kind: "pronunciation"; minutes: number; itemIds: string[] }
   | { kind: "quiz"; minutes: number; questions: Question[] }
@@ -665,7 +675,9 @@ export function buildLessonFlow(lesson: LessonDef, seed = lesson.lessonNo): Less
     { kind: "flashcards", minutes: 4, itemIds: [...ids("COMMAND"), ...ids("WORD")] },
     { kind: "tpr", minutes: 4, itemIds: ids("COMMAND") },
     { kind: "phonics", minutes: 5, focus: lesson.phonics.focus, words: lesson.phonics.words, tipJa: lesson.phonics.tipJa,
-      examples: lesson.phonics.focus.map((f) => focusExampleWord(f, lesson.phonics.words)) },
+      examples: lesson.phonics.focus.map((f) => focusExampleWord(f, lesson.phonics.words)),
+      // run10: ことばの ボタンで 読み上げる 文字（数・年号は 英語の 読みかた。words と おなじ 順）
+      spoken: lesson.phonics.words.map((w) => spokenPhonicsWord(w, lesson.phonics.focus, lesson.phonics.words)) },
     { kind: "school_expressions", minutes: 4, itemIds: ids("EXPRESSION"), testPoints: lesson.school.testPoints },
     { kind: "pronunciation", minutes: 3, itemIds: [...ids("WORD").slice(0, 3), ...ids("EXPRESSION").slice(0, 1)] },
     { kind: "quiz", minutes: 4, questions: quizItems.map((it, i) => makeQuestion(it, typesFor(it, false)[0], items, rng, i)) },

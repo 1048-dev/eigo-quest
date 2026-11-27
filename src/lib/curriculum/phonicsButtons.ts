@@ -83,3 +83,16 @@ export function focusExampleWord(focus: string, words: readonly string[] = []): 
   if (hit) return hit;
   return DEFAULT_EXAMPLES[f] ?? ws[0] ?? f.replace(/[-_]/g, "");
 }
+
+/**
+ * run10: フォニックスの ことばを 読み上げる ときの 文字（数・年号・記号を 英語の 読みかたに）。
+ * "1600" を そのまま 読み上げると「one thousand six hundred」に なる 声が あるので、その ことばが その回の フォーカスなら
+ * ワールドの 表の 読みかた（sixteen hundred・one half・minus two degrees など）に する。ふつうの ことばは そのまま。
+ */
+export function spokenPhonicsWord(word: string, focus: readonly string[], words: readonly string[] = []): string {
+  if (!/[0-9%°/]/.test(word)) return word;
+  const f = focus.find((x) => x.trim().toLowerCase() === word.trim().toLowerCase());
+  if (!f) return word;
+  const say = focusExampleWord(f, words);
+  return /[A-Za-z]/.test(say) && !/[0-9]/.test(say) ? say : word;
+}

@@ -29,12 +29,24 @@ const lessonMap = new Map<number, LessonDef>();
 const loadedWorlds = new Set<number>();
 const itemCache = new Map<number, LearningItemDef[]>();
 
+/**
+ * run10: かいわの 目標「It's in ～.」の お手本（タップの 候補・「Say, …」）に つかう 文として、その回の 学校の 表現を つける。
+ * 台本に その 形の 文が ない ときに「It's in ....」と 出さない ため（conversation/engine.ts の concreteTarget）
+ */
+function withExamples(l: LessonDef): LessonDef["conversation"] {
+  const c = l.conversation;
+  if (!c) return c;
+  // JSON の aiTask.examples（台本にも 学校の 表現にも ない 形の お手本）を 先に、そのあと 学校の 表現
+  const examples = [...new Set([...(c.aiTask.examples ?? []), ...l.school.expressions.map((e) => e.en)].filter((s) => s.trim()))];
+  return { ...c, aiTask: { ...c.aiTask, examples } };
+}
+
 /** ワールドの ファイルを 登録する（stage / level が 無い レッスンには ワールドの 値を 入れる） */
 export function registerWorld(file: WorldFile): void {
   if (loadedWorlds.has(file.world)) return;
   const stage = file.stage ?? stageOfWorld(file.world);
   const level = file.level ?? levelOfWorld(file.world);
-  for (const l of file.lessons) lessonMap.set(l.lessonNo, { ...l, stage: l.stage ?? stage, level: l.level ?? level });
+  for (const l of file.lessons) lessonMap.set(l.lessonNo, { ...l, stage: l.stage ?? stage, level: l.level ?? level, conversation: withExamples(l) });
   loadedWorlds.add(file.world);
 }
 for (const w of BUNDLED_WORLDS) registerWorld(w);
