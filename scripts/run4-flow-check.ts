@@ -151,7 +151,7 @@ async function flow() {
     step("4. だれが あそぶ？ → ひきつぐ？ → はい");
     await page.goto(BASE + "/who", { waitUntil: "networkidle" });
     await shot(page, "03-who");
-    await page.getByRole("button", { name: /^そらさん/ }).click();
+    await page.getByRole("button", { name: /^そら\s*さん/ }).click();
     const dialog = page.getByRole("dialog");
     await dialog.getByText("おためしで あそんだ きろくを ひきつぐ？").waitFor({ timeout: 30_000 });
     const dialogText = await dialog.innerText();

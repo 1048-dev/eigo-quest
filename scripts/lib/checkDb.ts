@@ -67,6 +67,8 @@ async function startDocker(): Promise<CheckDb> {
   if (running) {
     console.log(`  前の ${CHECK_DB_CONTAINER} が のこっていたので 止めて つくりなおす`);
     sh("docker", ["rm", "-f", CHECK_DB_CONTAINER]);
+    // rm の あと、ポートが あくまで すこし かかる（とちゅうで 止めた 確認の あとなど）
+    for (let i = 0; i < 30 && (await portOpen(CHECK_DB_PORT)); i++) await new Promise((res) => setTimeout(res, 1000));
   }
   if (await portOpen(CHECK_DB_PORT)) throw new Error(`ポート ${CHECK_DB_PORT} を ほかの なにかが つかっている`);
   console.log(`$ docker run --rm -d --name ${CHECK_DB_CONTAINER} -p ${CHECK_DB_PORT}:5432 postgres:16`);

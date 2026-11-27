@@ -3,7 +3,18 @@ import type { NextConfig } from "next";
 /** 学習レポートの PDF に埋め込む日本語フォント（src/lib/report/pdf.ts が実行時に読む）。サーバーレスの関数に同梱する */
 const REPORT_FONT_FILES = ["./assets/fonts/**/*"];
 
+/**
+ * run10 Phase 4: クリックの ロボット（npm run check:e2e）用の ビルド。E2E=1 の ときだけ
+ *  - テストの しかけ（正解を data-e2e-* に 出す。src/lib/e2e.ts）を 入れる。process.env.E2E は ビルドの ときに "1" / "0" に 置きかわる
+ *  - 出力は .next-e2e（本番用の .next とは べつ。まちがえて 本番に 出さない）
+ * 本番（Vercel）で E2E=1 なら ビルドを とめる。
+ */
+const E2E_BUILD = process.env.E2E === "1";
+if (E2E_BUILD && (process.env.VERCEL || process.env.VERCEL_ENV)) throw new Error("E2E=1 は テスト用の ビルドです（本番では つかえません）");
+
 const nextConfig: NextConfig = {
+  distDir: E2E_BUILD ? ".next-e2e" : ".next",
+  env: { E2E: E2E_BUILD ? "1" : "0" },
   // マイク（発音判定）を使うため、Permissions-Policy で microphone を自ドメインに許可
   // run5 Phase 4（セキュリティの見直し）: ほかのサイトの枠（iframe）に入れさせない・ファイルの種類を ブラウザに推測させない・
   // 外のサイトへ URL の パスを送らない。メールのリンク（?token=）で開く画面は Referer を まったく送らない

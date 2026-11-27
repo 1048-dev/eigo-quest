@@ -9,7 +9,8 @@ import { focusExampleWord, focusLabel } from "@/lib/curriculum/phonicsButtons";
 import type { AnswerLog } from "@/lib/services/progressService";
 import { playItemAudio, speak } from "@/lib/speech/tts";
 import { QuestionView, SpeakButton, type AnswerEvent } from "@/components/test/QuestionView";
-import { apiPost } from "@/lib/api/client";
+import { apiPost, isUnreachable } from "@/lib/api/client";
+import { gradeLocally } from "@/lib/grading/localGrader";
 import dynamic from "next/dynamic";
 import type { TimelineLesson } from "@/lib/teacher/timeline";
 import { GradeResponseSchema } from "@/lib/api/contracts";
@@ -143,8 +144,11 @@ export function SchoolExpressions({ items, testPoints, onDone, initial }: {
   const target = core[k];
 
   const check = async () => {
-    const { data: r } = await apiPost("/api/grade/written", GradeResponseSchema, { itemId: target.id, answer: text });
-    setRes(r); // 失敗しても「うまく採点できなかったよ」というデフォルトの形で返る
+    const res = await apiPost("/api/grade/written", GradeResponseSchema, { itemId: target.id, answer: text });
+    // run10 P4: サーバーに とどかない（電波が ない など）ときは この 端末で ルール採点する
+    // （まえは いつも「うまく採点できなかったよ」＝ ざんねん に なっていた）
+    const r = isUnreachable(res) ? localGrade(target.text, text) : res.data;
+    setRes(r);
     setLogs((l) => [...l, { itemId: target.id, skill: "WRITING", questionType: "spell", correct: r.verdict === "PASS", answer: text }]);
   };
 
@@ -162,7 +166,8 @@ export function SchoolExpressions({ items, testPoints, onDone, initial }: {
       {target && (
         <div className="mt-6">
           <p className="font-bold">✏️ かいてみよう：「{target.ja}」</p>
-          <input value={text} onChange={(e) => { setText(e.target.value); setRes(null); }} className="mt-2 w-full rounded-xl border-y-4 border-double border-[var(--ink-2)]/40 bg-[var(--bg)] p-3 text-xl" autoCapitalize="off" spellCheck={false} />
+          <input value={text} onChange={(e) => { setText(e.target.value); setRes(null); }} className="mt-2 w-full rounded-xl border-y-4 border-double border-[var(--ink-2)]/40 bg-[var(--bg)] p-3 text-xl" autoCapitalize="off" spellCheck={false}
+            aria-label={`「${target.ja}」を えいごで かく`} {...(process.env.E2E === "1" ? { "data-e2e-answer": target.text } : {})} />
           {res && <p className={`mt-2 font-bold ${res.verdict === "PASS" ? "text-[var(--ok)]" : res.verdict === "RETRY" ? "text-[var(--coin)]" : "text-[var(--ng)]"}`}>{res.verdict === "PASS" ? "⭕ ごうかく" : res.verdict === "RETRY" ? "🟡 さいちょうせん" : "❌ ざんねん"}：{res.feedbackJa}</p>}
           <div className="mt-3 flex gap-2">
             <button className="btn btn-coin flex-1" onClick={check} disabled={!text.trim()}>さいてん</button>
@@ -173,6 +178,12 @@ export function SchoolExpressions({ items, testPoints, onDone, initial }: {
       <NextBtn onClick={() => onDone(logs)} />
     </div>
   );
+}
+
+/** サーバーに とどかない ときの 書きとりの 採点（/api/grade/written の オフラインと おなじ ルール採点） */
+export function localGrade(expected: string, answer: string): { verdict: "PASS" | "RETRY" | "WRONG"; feedbackJa: string } {
+  const g = gradeLocally(expected, answer, "lenient");
+  return { verdict: g.verdict, feedbackJa: g.feedbackJa };
 }
 
 // ---------------------------------------------------------------------------
@@ -219,7 +230,7 @@ export function QuizRun({ questions, title, onDone, initial }: { questions: Ques
   return (
     <div>
       {title && <p className="mb-2 text-center font-black">{title}</p>}
-      <QuestionView key={q.id} q={toPublic(q)} onAnswer={answer} disabled={!!flash} />
+      <QuestionView key={q.id} q={toPublic(q)} onAnswer={answer} disabled={!!flash} e2eAnswer={process.env.E2E === "1" ? q.answer : undefined} />
       {flash && <p className={`card mt-3 p-3 text-center font-bold ${flash.ok ? "text-[var(--ok)]" : "text-[var(--ng)]"}`}>{flash.ok ? "⭕ せいかい！" : `❌ ${flash.explain}`}</p>}
     </div>
   );

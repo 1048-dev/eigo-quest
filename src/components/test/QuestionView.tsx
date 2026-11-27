@@ -14,7 +14,8 @@ export interface AnswerEvent {
   pronunciation?: PronunciationResult;
 }
 
-export function QuestionView({ q, onAnswer, disabled }: { q: PublicQuestion; onAnswer: (a: AnswerEvent) => void; disabled?: boolean }) {
+/** e2eAnswer: 正解（E2E=1 の ビルドの ロボット用。ふつうの ビルドでは 画面に 出ない。src/lib/e2e.ts） */
+export function QuestionView({ q, onAnswer, disabled, e2eAnswer }: { q: PublicQuestion; onAnswer: (a: AnswerEvent) => void; disabled?: boolean; e2eAnswer?: string }) {
   const shownAt = useRef(performance.now());
   const [text, setText] = useState("");
   const [left, setLeft] = useState(q.timeLimitMs ?? 0);
@@ -43,8 +44,10 @@ export function QuestionView({ q, onAnswer, disabled }: { q: PublicQuestion; onA
     return () => clearInterval(id);
   }, [q, disabled, onAnswer]);
 
+  // E2E=1 の ビルドだけ（src/lib/e2e.ts）。ふつうの ビルドでは "0" === "1" に なって 属性ごと 消える
+  const robot = process.env.E2E === "1" && e2eAnswer !== undefined ? { "data-e2e-answer": e2eAnswer, "data-e2e-type": q.type } : undefined;
   return (
-    <div className="card p-5">
+    <div className="card p-5" {...robot}>
       <p className="text-center font-bold text-[var(--ink-2)]">{q.promptJa}</p>
       {q.playbackRate && <p className="mt-1 text-center text-xs font-black text-[var(--accent)]">⚡ {q.playbackRate}ばいそく</p>}
       {q.timeLimitMs ? (
@@ -63,7 +66,7 @@ export function QuestionView({ q, onAnswer, disabled }: { q: PublicQuestion; onA
       {q.choices && (
         <div className="mt-4 grid grid-cols-2 gap-3">
           {q.choices.map((c) => (
-            <button key={c.id} disabled={disabled} onClick={() => onAnswer({ value: c.id, responseMs: elapsed() })}
+            <button key={c.id} disabled={disabled} onClick={() => onAnswer({ value: c.id, responseMs: elapsed() })} {...(process.env.E2E === "1" && c.id === e2eAnswer ? { "data-e2e-correct": "1" } : {})}
               className="card min-h-20 border-2 border-transparent p-3 text-2xl font-black hover:border-[var(--accent)] disabled:opacity-60">
               {c.label}
             </button>
@@ -106,7 +109,7 @@ export function SpeakButton({ target, itemId, onDone, disabled, initial }: {
   };
 
   return (
-    <div className="mt-4 flex flex-col items-center gap-3">
+    <div className="mt-4 flex flex-col items-center gap-3" {...(process.env.E2E === "1" ? { "data-e2e-say": target } : {})}>
       <div className="flex gap-2">
         <button className="btn bg-[var(--surface)]" onClick={() => playItemAudio(itemId, target)}>🔊 おてほん</button>
         <button className="btn btn-primary" onClick={start} disabled={disabled || state === "listening"}>{state === "listening" ? "🎙️ きいてるよ…" : "🎤 いってみる"}</button>

@@ -270,6 +270,8 @@ export const TestStartResponseSchema = z.object({
   assessment: nullable(AssessmentSchema),
   seed: num(0),
   questions: safeArray(PublicQuestionSchema),
+  /** E2E=1 の ビルドだけ: 問題 id → 正解（クリックの ロボット用。src/lib/e2e.ts） */
+  e2eAnswers: z.record(z.string()).optional().catch(undefined),
 });
 export type TestStartResponse = z.output<typeof TestStartResponseSchema>;
 

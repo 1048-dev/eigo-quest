@@ -12,6 +12,15 @@ import type { ArenaMode } from "@/lib/domain/arena";
 import { gradeLocally } from "@/lib/grading/localGrader";
 import type { TestStartResponse, TestSubmitResponse } from "@/lib/api/contracts";
 
+/**
+ * E2E=1 の ビルドだけ: 問題 id → 正解（クリックの ロボット用）。ふつうの ビルドでは いつも {}（正解は 送らない）。
+ * サーバーの 出題（/api/tests/:id/start）と、つながらない ときの ブラウザの 出題の どちらも これを つかう。
+ */
+export function e2eAnswersOf(questions: readonly Question[]): { e2eAnswers?: Record<string, string> } {
+  if (process.env.E2E !== "1") return {}; // ふつうの ビルドでは "0" !== "1" → いつも ここで おわり（下は 消える）
+  return { e2eAnswers: Object.fromEntries(questions.map((q) => [q.id, q.answer])) };
+}
+
 function assessmentOf(id: string): AssessmentDef | undefined {
   const a = getAssessment(id);
   if (a) return a;
@@ -37,6 +46,17 @@ export async function loadOfflineTestSubmit(id: string, body: { seed?: unknown; 
   return offlineTestSubmit(id, body);
 }
 
+/**
+ * run10 P4: 出題が とどいた あとで、ブラウザの 採点に いる 範囲の データを 先に 読んでおく（とちゅうで 電波が なくなっても 採点できる）。
+ * 範囲が maxLessons（既定 60 = 2 ワールド）より 広い テスト（1〜n の ボス・アリーナ）は 大きいので 読まない。
+ */
+export async function prefetchOfflineTest(id: string, maxLessons = 60): Promise<boolean> {
+  const a = assessmentOf(id);
+  if (!a || a.rangeEnd - a.rangeStart + 1 > maxLessons) return false;
+  await loadRange(a);
+  return true;
+}
+
 /** テストの 範囲の レッスンと、その 範囲の フォニックス問題（ワールド13〜範囲の さいごの ワールド。run8）を 読む */
 function loadRange(a: AssessmentDef): Promise<unknown> {
   return Promise.all([ensureLessonsLoaded(a.rangeStart, a.rangeEnd), ensurePhonicsLoaded(a.rangeEnd)]);
@@ -47,7 +67,7 @@ export function offlineTestStart(id: string, opts: { arenaMode?: ArenaMode }): T
   if (!a) return { success: true, offline: true, assessment: null, seed: 0, questions: [] };
   const seed = hashSeed(`offline:${id}:${Date.now()}`);
   const questions = buildTestQuestions(a, { seed, arenaMode: opts.arenaMode });
-  return { success: true, offline: true, assessment: a, seed, questions: questions.map(toPublic) };
+  return { success: true, offline: true, assessment: a, seed, questions: questions.map(toPublic), ...e2eAnswersOf(questions) };
 }
 
 function grade(q: Question, value: string, strictness: "lenient" | "school") {

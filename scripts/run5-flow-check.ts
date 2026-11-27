@@ -212,7 +212,7 @@ async function flow() {
     check("お子さまを追加", kid?.nickname === "うみ", parent);
 
     await A.page.goto(BASE + "/who", { waitUntil: "networkidle" });
-    await A.page.getByRole("button", { name: /^うみさん/ }).click();
+    await A.page.getByRole("button", { name: /^うみ\s*さん/ }).click();
     const dialog = A.page.getByRole("dialog");
     await dialog.getByText("おためしで あそんだ きろくを ひきつぐ？").waitFor();
     await shot(A.page, "03-carry-ask");

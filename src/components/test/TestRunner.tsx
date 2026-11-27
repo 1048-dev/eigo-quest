@@ -11,7 +11,7 @@ import { Portrait } from "@/components/characters/CharacterArt";
 import { MonsterFigure } from "@/components/characters/MonsterArt";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { apiPost, isUnreachable } from "@/lib/api/client";
-import { loadOfflineTestStart, loadOfflineTestSubmit } from "@/lib/offline/tests";
+import { loadOfflineTestStart, loadOfflineTestSubmit, prefetchOfflineTest } from "@/lib/offline/tests";
 import { recordLocalTestPass } from "@/lib/offline/localProgress";
 import { recordTrialTest } from "@/lib/offline/trialLog";
 import { TOTAL_LESSONS } from "@/lib/curriculum";
@@ -30,6 +30,8 @@ export interface TestRunnerInitial {
   result?: TestSubmitResponse;
   submitting?: boolean;
   error?: string;
+  /** さいてんに 失敗（電波が なく、ブラウザでも 採点できなかった）→ こたえを のこして「もう一回 さいてん」 */
+  submitFailed?: boolean;
 }
 
 export function TestRunner({ assessmentId, arenaMode, reviewAlertId, initial }: { assessmentId: string; arenaMode?: string; reviewAlertId?: string; initial?: TestRunnerInitial }) {
@@ -40,10 +42,11 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId, initial }: 
   const [result, setResult] = useState<TestSubmitResponse | null>(initial?.result ?? null);
   const [submitting, setSubmitting] = useState(initial?.submitting ?? false);
   const [offline, setOffline] = useState(!!initial?.session.offline);
+  const [submitFailed, setSubmitFailed] = useState(!!initial?.submitFailed);
   const mode = arenaMode as ArenaMode | undefined;
 
   const start = useCallback(() => {
-    setResult(null); setIdx(0); setAnswers([]); setError(null);
+    setResult(null); setIdx(0); setAnswers([]); setError(null); setSubmitFailed(false);
     apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/start`, TestStartResponseSchema, { arenaMode, reviewAlertId }).then(async (res) => {
       // サーバーに届かない → 同じ問題をブラウザで作って、そのまま挑戦できる（範囲の ワールドの JSON を あとから 読む）
       const r = isUnreachable(res) ? { ...res, ok: true, error: null, data: await loadOfflineTestStart(assessmentId, { arenaMode: mode }) } : res;
@@ -51,20 +54,18 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId, initial }: 
       if (!r.ok || !a || r.data.questions.length === 0) return setError(r.error ?? "このテストは まだ ひらいていないよ。");
       setOffline(!!r.data.offline);
       setSession({ ...r.data, assessment: a });
+      // run10 P4: とちゅうで 電波が なくなっても ブラウザで 採点できるように、範囲の データを 先に 読んでおく
+      void prefetchOfflineTest(assessmentId).catch(() => undefined);
     });
   }, [assessmentId, arenaMode, reviewAlertId, mode]);
 
   const preset = !!initial;
   useEffect(() => { if (!preset) start(); }, [start, preset]);
 
-  const onAnswer = useCallback((a: AnswerEvent) => {
+  const submit = useCallback((next: { questionId: string; value: string; responseMs: number }[]) => {
     if (!session) return;
-    const q = session.questions[idx];
-    if (!q) return;
-    const next = [...answers, { questionId: q.id, value: a.value, responseMs: a.responseMs }];
-    setAnswers(next);
-    if (idx + 1 < session.questions.length) return setIdx(idx + 1);
     setSubmitting(true);
+    setSubmitFailed(false);
     apiPost(`/api/tests/${encodeURIComponent(assessmentId)}/submit`, TestSubmitResponseSchema, { seed: session.seed, arenaMode, reviewAlertId, answers: next })
       .then(async (res) => {
         // 届かないときはブラウザで採点（記録はされない）
@@ -79,14 +80,39 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId, initial }: 
         if (r.ok && r.data.ok) setResult(r.data);
         else setError(r.data.reasonJa || r.error || "もう一回ためしてね。");
       })
+      // run10 P4: 電波が なく、ブラウザの 採点に いる データも 読めなかった → こたえは のこして「もう一回 さいてん」
+      // （まえは さいごの 問題に もどるだけで、おしても なにも おきなかった）
+      .catch(() => setSubmitFailed(true))
       .finally(() => setSubmitting(false));
-  }, [session, idx, answers, assessmentId, arenaMode, reviewAlertId, mode]);
+  }, [session, assessmentId, arenaMode, reviewAlertId, mode]);
+
+  const onAnswer = useCallback((a: AnswerEvent) => {
+    if (!session) return;
+    const q = session.questions[idx];
+    if (!q) return;
+    const next = [...answers, { questionId: q.id, value: a.value, responseMs: a.responseMs }];
+    setAnswers(next);
+    if (idx + 1 < session.questions.length) return setIdx(idx + 1);
+    submit(next);
+  }, [session, idx, answers, submit]);
 
   if (error) return <div className="card p-6 text-center"><p className="text-lg font-bold">{error}</p><Link className="btn btn-primary mt-4 inline-block" href="/map">マップへ</Link></div>;
   if (!session) return <p className="p-8 text-center">じゅんびちゅう…</p>;
   const kind = session.assessment.kind;
 
   if (submitting) return <p className="p-8 text-center text-xl font-black">さいてんちゅう… ✏️</p>;
+
+  if (submitFailed) {
+    return (
+      <div className="card rpg-rivets p-6 text-center">
+        <div className="flex justify-center" aria-hidden><StandingFigure id="birimo" mood="worried" height={100} /></div>
+        <h2 className="font-title mt-2 text-xl text-[var(--gold-dark)]">でんぱが とどかないみたい</h2>
+        <p className="mt-2 text-[var(--ink-2)]">こたえは ぜんぶ のこっているよ。つながったら「もう一回 さいてん」を おしてね。</p>
+        <button className="btn btn-coin mt-4 w-full" onClick={() => submit(answers)}>もう一回 さいてん</button>
+        <Link className="btn btn-primary mt-3 block" href="/map">マップへ</Link>
+      </div>
+    );
+  }
 
   if (result) {
     const wrong = result.feedback.filter((f) => !f.correct);
@@ -147,7 +173,7 @@ export function TestRunner({ assessmentId, arenaMode, reviewAlertId, initial }: 
         <span className="rounded-full border-2 border-[var(--gold)] bg-black/30 px-3 py-0.5 font-title text-[var(--volt)]">{idx + 1} / {session.questions.length}</span>
       </div>
       {kind === "BOSS" && <BossHp total={session.questions.length} answered={idx} />}
-      <QuestionView key={q.id} q={q} onAnswer={onAnswer} />
+      <QuestionView key={q.id} q={q} onAnswer={onAnswer} e2eAnswer={session.e2eAnswers?.[q.id]} />
     </div>
   );
 }

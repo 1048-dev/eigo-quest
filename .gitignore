@@ -1,5 +1,7 @@
 node_modules
 .next
+# run10 P4: E2E=1 の テスト用 ビルド（npm run check:e2e が 作る）
+.next-e2e
 .env
 worksheets/out
 __pycache__
