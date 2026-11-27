@@ -257,7 +257,7 @@ export const GENERIC_CONVERSATION: LessonConversation = {
     { speaker: "Haru", en: "Hello!", ja: "こんにちは！" },
     { speaker: "Riko", en: "Hi!", ja: "やあ！" },
     { speaker: "Haru", en: "How are you?", ja: "げんき？" },
-    { speaker: "Riko", en: "I'm fine, thank you.", ja: "げんきだよ、ありがとう。" },
+    { speaker: "Riko", en: "I'm fine, thanks.", ja: "げんきだよ、ありがとう。" },
     { speaker: "Haru", en: "Goodbye!", ja: "さようなら！" },
   ],
   aiTask: { goalJa: "Hello! と あいさつしよう", starterEn: "Hello! How are you?", targetExpressions: ["Hello!", "I'm fine."] },

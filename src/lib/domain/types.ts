@@ -14,6 +14,8 @@ export interface LessonDef {
   stage?: number;
   /** run7: CEFR の めやす（"Pre-A1" / "A1" / "A1+" / "A2" / "A2+" / "B1" / "B1+"。省略時は ワールドから決まる） */
   level?: string;
+  /** run9: 英語レビューずみの しるし（"run9"。docs/run9/changes/）。あとの run は これが あれば とばして よい */
+  reviewed?: string;
   title: string;
   titleJa: string;
   school: {

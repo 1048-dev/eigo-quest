@@ -42,3 +42,33 @@
 - npx tsc --noEmit: OK
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
+
+## REVIEW: ワールド1・2（レッスン 1〜60）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）を 60 レッスン ぜんぶ 見なおした
+- 10 レッスンずつ 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ なおし、なおしかたは いちばん 小さく
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）に して、before が いまの 値と あう ときだけ あてた（はずれ 0）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W01-02.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた（LessonDef に reviewed?: string を 追加）
+
+### 数
+- lint（`npm run english:lint -- --from 1 --to 60`）: **まえ error 0 / warn 25 / info 5 → あと error 0 / warn 0 / info 5**（のこりの info は Let's の かず。レッスンの ねらいの 表現なので のこす）
+- なおした 欄 **128**（レビュアー 48・共通の 機械的な なおし 80）、なおした レッスン **53 / 60**
+- 学習項目 ID が かわった もの 2つ: L3「I'm fine, thank you.」→「I'm fine, thanks.」、L23「Hug.」→「Hug yourself.」（この 2項目だけ 記録が あたらしく なる。ほかの ことば・表現・TPR の 英語は かえて いない）
+
+### before → after の 例
+1. L3 会話（A・B・C）: 「I'm fine, thank you. How are you?」→「I'm fine, thanks. How are you?」（教科書の 決まり文句を 自然に。fine は のこす。スライド・字幕・まとめも あわせた）
+2. L46 さいごの 英語字幕（objective）: 「Welcome home! Talk with Riko next. Bye-bye!」→「This is my room. Talk with Riko next. Bye-bye!」（Welcome home は かえって きた 人に いう ことばで いみが ちがう）
+3. L1 などの クイズ字幕（objective・40 か所）: 「Nice to meet you. or Go!?」→「Nice to meet you. / Go!」（文末の 記号が 2つ ならんで いた）
+
+### きめた こと
+- 2択クイズの 英語字幕は「A / B」の 形に そろえた（ほかの 字幕と おなじ）
+- 日本語の なかの 英語: 「Yes, I do.！」の 2重の 文末記号は 英語がわだけ のこす。「windy.かぜ」の ように すきまの ない ところに スペース（TTS が つなげて よまない ように）
+- イギリスの ほめことば「Brilliant!」（L59）→「Awesome!」、「Great moving today!」（L11）→「You moved a lot today!」など、不自然な さいごの ひとことを なおした
+- 日本語の まちがい（L6 で 会話と ちがう 人の なまえ、L8「てを みて」→「かたてを みて」、L36 chocolate の カナ「チョクレット」など）も なおした
+- のこした こと: L27 の クイズの スライドに こたえが 見えている（選択肢の「Your turn.」が L27 の ことばに なく スライドの 検証に とおらない）。1人だけの 指摘（店員の「What do you want?」など）は のこした
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
