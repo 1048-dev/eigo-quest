@@ -1,0 +1,242 @@
+[
+ {
+  "lesson": 153,
+  "path": "teacher.segments[20].say",
+  "before": "Super! You can say Look at the sign. かんばんの ことばも、plane や snake の マジック e も ばっちり。このあと ハルくんと おはなし してみてね。See you!",
+  "after": "Super! You can say \"Look at the sign.\" かんばんの ことばも、plane や snake の マジック e も ばっちり。このあと ハルくんと おはなし してみてね。See you!",
+  "reviewers": "objective+C",
+  "reason": "Quoted phrase needs quotation marks (capital 'Look' mid-sentence); TTS reads it as one clear unit"
+ },
+ {
+  "lesson": 153,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Super! You can say Look at the sign. See you!",
+  "after": "Super! You can say \"Look at the sign.\" See you!",
+  "reviewers": "objective+C",
+  "reason": "Quoted phrase needs quotation marks (capital 'Look' mid-sentence)"
+ },
+ {
+  "lesson": 154,
+  "path": "conversation.lines[1].ja",
+  "before": "こもじの k が みえる。こうばんだ。KOBAN！",
+  "after": "こもじの k が みえる。こうばんだ。Koban！",
+  "reviewers": "objective+B",
+  "reason": "EN/JA mismatch: English has 'Koban!' and the line is about a small k; all-caps KOBAN contradicts it"
+ },
+ {
+  "lesson": 154,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "キコちゃん「ちずで もじを さがそう！」 ハルくん「こもじの k が みえる。こうばんだ。KOBAN！」",
+  "after": "キコちゃん「ちずで もじを さがそう！」 ハルくん「こもじの k が みえる。こうばんだ。Koban！」",
+  "reviewers": "objective+B",
+  "reason": "Match conversation line fix (small k, not KOBAN)"
+ },
+ {
+  "lesson": 154,
+  "path": "tpr[1].ja",
+  "before": "てで 大きな まどを つくって。",
+  "after": "てで おおきな まどを つくって。",
+  "reviewers": "objective+B",
+  "reason": "Style guide 10: hiragana for kids; the lesson's own subtitle already writes おおきな"
+ },
+ {
+  "lesson": 154,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. I see は みえるよ。みつけた もじを I see a small で いって、ばしょは It's the で いうんだね。",
+  "after": "Here's the point. I see は みえる。みつけた もじを I see a small で いって、ばしょは It's the で いうんだね。",
+  "reviewers": "B+C",
+  "reason": "'I see は みえるよ' sounds like 'I can see it!' rather than a gloss; use the same 'X は Y。' gloss form as want は ほしい / How many は いくつ"
+ },
+ {
+  "lesson": 155,
+  "path": "conversation.aiTask.goalJa",
+  "before": "Look at the sign. / I see a small ～. / It's a ～ shop. で まちの かんばん たんけんを しよう",
+  "after": "Look at the sign. / I see a small ～. / It's a ～. で まちの かんばん たんけんを しよう",
+  "reviewers": "objective+B",
+  "reason": "Goal says 'It's a ～ shop.' but the target expression is 'It's a ～.' and the starter uses 'It's a bookstore.'"
+ },
+ {
+  "lesson": 156,
+  "path": "teacher.segments[0].say",
+  "before": "Hi, everyone! Grrr... Oh, sorry! That's my tummy. I'm so hungry! Let's have lunch at the castle café! おなかが なっちゃった。おしろの カフェで、おひるごはんに しよう！",
+  "after": "Hi, everyone! Grrr... Oh, sorry! That's my tummy. I'm so hungry! Let's have lunch at the castle cafe! おなかが なっちゃった。おしろの カフェで、おひるごはんに しよう！",
+  "reviewers": "objective",
+  "reason": "Same word as conversation.scene and aiTask ('castle cafe')"
+ },
+ {
+  "lesson": 156,
+  "path": "teacher.segments[0].subtitleEn",
+  "before": "Hi, everyone! Grrr... Oh, sorry! That's my tummy. I'm so hungry! Let's have lunch at the castle café!",
+  "after": "Hi, everyone! Grrr... Oh, sorry! That's my tummy. I'm so hungry! Let's have lunch at the castle cafe!",
+  "reviewers": "objective",
+  "reason": "Same word as conversation.scene and aiTask ('castle cafe')"
+ },
+ {
+  "lesson": 156,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. I want... Me too! OK.",
+  "after": "Here's the point. I want... Me too!",
+  "reviewers": "A+B",
+  "reason": "Dangling 'OK.' reads as a separate word, not 'Me too! is OK'; drop it"
+ },
+ {
+  "lesson": 156,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! フォークで くるくる まく たべものは どっち？ Spaghetti? Or sandwich?",
+  "after": "Quiz time! フォークで くるくる まく たべものは どっち？ Spaghetti? Or a sandwich?",
+  "reviewers": "objective+B",
+  "reason": "Countable 'sandwich' needs 'a' (the lesson teaches 'I want a hamburger')"
+ },
+ {
+  "lesson": 156,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Spaghetti? Or sandwich?",
+  "after": "Quiz time! Spaghetti? Or a sandwich?",
+  "reviewers": "objective+B",
+  "reason": "Countable 'sandwich' needs 'a'"
+ },
+ {
+  "lesson": 157,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. パフェ は ひとつ だから a parfait。プリンは かぞえないから a は いらない。I want pudding で オッケー。",
+  "after": "Here's the point. パフェは ひとつ だから a parfait。プリンは かぞえないから a は いらない。I want pudding で オッケー。",
+  "reviewers": "objective",
+  "reason": "Japanese spacing typo: particle split from noun (パフェ は); subtitleJa has パフェは"
+ },
+ {
+  "lesson": 157,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. A parfait. Pudding. I want pudding. OK.",
+  "after": "Here's the point. A parfait. Pudding. I want pudding.",
+  "reviewers": "A+B",
+  "reason": "Dangling 'OK.' (same as L156)"
+ },
+ {
+  "lesson": 157,
+  "path": "teacher.segments[20].say",
+  "before": "Sweet job, everyone! You can say I want a parfait. hid に e で hide も よめたね。このあと ハルくんと おはなし してみてね。See you!",
+  "after": "Sweet job, everyone! You can say \"I want a parfait.\" hid に e で hide も よめたね。このあと ハルくんと おはなし してみてね。See you!",
+  "reviewers": "objective",
+  "reason": "Quote the phrase the child can say (same wrap fix as L153/L158/L159/L160)"
+ },
+ {
+  "lesson": 157,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Sweet job, everyone! You can say I want a parfait. See you!",
+  "after": "Sweet job, everyone! You can say \"I want a parfait.\" See you!",
+  "reviewers": "objective",
+  "reason": "Quote the phrase the child can say"
+ },
+ {
+  "lesson": 158,
+  "path": "teacher.segments[9].say",
+  "before": "i, e with blends! Slide. Smile. ふたつの おとの ブレンドや wh にも マジック e。sl、i、d、e で スライド。",
+  "after": "Magic e with blends! Slide. Smile. ふたつの おとの ブレンドや wh にも マジック e。sl、i、d、e で スライド。",
+  "reviewers": "A+C",
+  "reason": "'i, e with blends!' is not a phrase a teacher says and is choppy aloud; use the L153 line 'Magic e with blends!'"
+ },
+ {
+  "lesson": 158,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "i, e with blends! Slide. Smile.",
+  "after": "Magic e with blends! Slide. Smile.",
+  "reviewers": "A+C",
+  "reason": "Match say (same as L153)"
+ },
+ {
+  "lesson": 158,
+  "path": "teacher.segments[20].say",
+  "before": "Wow, what a parfait! You can say How many cherries? Three cherries, please. smile の アイ の おとも できたね。このあと ビリモと おはなし してみてね。Bye-bye!",
+  "after": "Wow, what a parfait! You can say \"How many cherries?\" Three cherries, please. smile の アイ の おとも できたね。このあと ビリモと おはなし してみてね。Bye-bye!",
+  "reviewers": "objective+C",
+  "reason": "Quoted question needs quotation marks (capital 'How' mid-sentence); the answer stays as a model line"
+ },
+ {
+  "lesson": 158,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Wow, what a parfait! You can say How many cherries? Three cherries, please. Bye-bye!",
+  "after": "Wow, what a parfait! You can say \"How many cherries?\" Three cherries, please. Bye-bye!",
+  "reviewers": "objective+C",
+  "reason": "Quoted question needs quotation marks"
+ },
+ {
+  "lesson": 159,
+  "path": "teacher.segments[9].say",
+  "before": "Do you remember I like? Like has magic e, too! Pin. Add an e. Pine! pin に e で pine。イ が アイ に なるね。",
+  "after": "Do you remember \"I like\"? \"Like\" has magic e, too! Pin. Add an e. Pine! pin に e で pine。イ が アイ に なるね。",
+  "reviewers": "objective+A+C",
+  "reason": "Unquoted 'Do you remember I like?' reads as a broken sentence; quote the mentioned words"
+ },
+ {
+  "lesson": 159,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Do you remember I like? Like has magic e, too! Pin. Add an e. Pine!",
+  "after": "Do you remember \"I like\"? \"Like\" has magic e, too! Pin. Add an e. Pine!",
+  "reviewers": "objective+A+C",
+  "reason": "Quote the mentioned words"
+ },
+ {
+  "lesson": 159,
+  "path": "teacher.segments[20].say",
+  "before": "What beautiful parfaits! You can say I want ice cream and bananas. like や pine の アイ も よめたね。このあと キコちゃんと おはなし してみてね。See you!",
+  "after": "What beautiful parfaits! You can say \"I want ice cream and bananas.\" like や pine の アイ も よめたね。このあと キコちゃんと おはなし してみてね。See you!",
+  "reviewers": "objective",
+  "reason": "Quote the phrase the child can say"
+ },
+ {
+  "lesson": 159,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "What beautiful parfaits! You can say I want ice cream and bananas. See you!",
+  "after": "What beautiful parfaits! You can say \"I want ice cream and bananas.\" See you!",
+  "reviewers": "objective",
+  "reason": "Quote the phrase the child can say"
+ },
+ {
+  "lesson": 160,
+  "path": "tpr[3].ja",
+  "before": "大きな スプーンで たべて。",
+  "after": "おおきな スプーンで たべて。",
+  "reviewers": "objective+B",
+  "reason": "Style guide 10: hiragana for kids; seg12/13 subtitles already write おおきな"
+ },
+ {
+  "lesson": 160,
+  "path": "tpr[3].action",
+  "before": "大きく すくって ぱくっ",
+  "after": "おおきく すくって ぱくっ",
+  "reviewers": "objective+B",
+  "reason": "Hiragana for kids (same as tpr ja)"
+ },
+ {
+  "lesson": 160,
+  "path": "teacher.segments[9].say",
+  "before": "i, e review! Bite. Mile. Side. Fine. おわりの e が、i を アイ に するんだったね。",
+  "after": "Magic e review! Bite. Mile. Side. Fine. おわりの e が、i を アイ に するんだったね。",
+  "reviewers": "A+C",
+  "reason": "'i, e review!' is choppy and not natural teacher talk; use the L155 line 'Magic e review!'"
+ },
+ {
+  "lesson": 160,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "i, e review! Bite. Mile. Side. Fine.",
+  "after": "Magic e review! Bite. Mile. Side. Fine.",
+  "reviewers": "A+C",
+  "reason": "Match say (same as L155)"
+ },
+ {
+  "lesson": 160,
+  "path": "teacher.segments[20].say",
+  "before": "The parfait shop was a big hit! You can order with I want and please. かずも つたえられたし、i_e の ふりかえりも ばっちり。このあと ビリモと おはなし してみてね。Bye-bye!",
+  "after": "The parfait shop was a big hit! You can order with \"I want\" and \"please.\" かずも つたえられたし、i_e の ふりかえりも ばっちり。このあと ビリモと おはなし してみてね。Bye-bye!",
+  "reviewers": "objective+A+C",
+  "reason": "Unquoted 'order with I want and please' is hard to parse and to read aloud; quote the mentioned words"
+ },
+ {
+  "lesson": 160,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "The parfait shop was a big hit! You can order with I want and please. Bye-bye!",
+  "after": "The parfait shop was a big hit! You can order with \"I want\" and \"please.\" Bye-bye!",
+  "reviewers": "objective+A+C",
+  "reason": "Quote the mentioned words"
+ }
+]

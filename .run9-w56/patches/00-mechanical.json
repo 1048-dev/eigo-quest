@@ -1,0 +1,1242 @@
+[
+ {
+  "lesson": 121,
+  "path": "teacherScript",
+  "before": "ワールド5「じかんの塔」へ ようこそ！きょうは じかんの あいさつ。あさは Good morning.、ごごは Good afternoon.、ねる まえは Good night.。とうの 大きな とけいと いっしょに いってみよう。",
+  "after": "ワールド5「じかんの塔」へ ようこそ！きょうは じかんの あいさつ。あさは Good morning. ごごは Good afternoon. ねる まえは Good night. とうの 大きな とけいと いっしょに いってみよう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 121,
+  "path": "conversation.lines[3].ja",
+  "before": "あさは Good morning.、ごごは Good afternoon. と いうよ。",
+  "after": "あさは Good morning. ごごは Good afternoon. と いうよ。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 121,
+  "path": "conversation.lines[4].ja",
+  "before": "よるは Good night.！",
+  "after": "よるは Good night.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 121,
+  "path": "teacher.segments[7].subtitleJa",
+  "before": "キコちゃん「おはよう！ ねむい…」 リコちゃん「よるは Good night.！」",
+  "after": "キコちゃん「おはよう！ ねむい…」 リコちゃん「よるは Good night.」",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 121,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：あさは Good morning.、ごごは Good afternoon.、よるは Good night.。Good night. は ねる まえや よるの わかれる とき。",
+  "after": "ポイント：あさは Good morning. ごごは Good afternoon. よるは Good night. Good night. は ねる まえや よるの わかれる とき。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 121,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ おつきさまが でて、もう ねる じかん。Good morning.？ Good night.？",
+  "after": "クイズ！ おつきさまが でて、もう ねる じかん。Good morning. / Good night.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 121,
+  "path": "teacher.segments[19].say",
+  "before": "Good night! Sweet dreams! ねる まえは Good night.。Perfect!",
+  "after": "Good night! Sweet dreams! ねる まえは Good night. Perfect!",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 121,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Good night.！ いい ゆめを！ ばっちり！",
+  "after": "こたえは Good night. いい ゆめを！ ばっちり！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 123,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Rice, please.！ please で ていねいな おねがい。よく できたね！",
+  "after": "こたえは Rice, please. please で ていねいな おねがい。よく できたね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 124,
+  "path": "teacherScript",
+  "before": "わかれの あいさつも せかいで ちがうよ。スペインでは Adios、イタリアでは Ciao。英語では See you later. や Have a nice day!。きょうは とうの もんで みんなを みおくろう。",
+  "after": "わかれの あいさつも せかいで ちがうよ。スペインでは Adios、イタリアでは Ciao。英語では See you later. や Have a nice day! きょうは とうの もんで みんなを みおくろう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 124,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！「いい 1日を！」と いいたい ときは どっち？ Have a nice day!？ See you later.？",
+  "after": "クイズ！「いい 1日を！」と いいたい ときは どっち？ Have a nice day! / See you later.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 124,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Have a nice day!。day は「1日」。See you later. は「またあとでね」。よく できたね！",
+  "after": "こたえは Have a nice day! day は「1日」。See you later. は「またあとでね」。よく できたね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 125,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "こたえは See you later.！ Have a nice day! も いえたら かんぺき。すごい！",
+  "after": "こたえは See you later. Have a nice day! も いえたら かんぺき。すごい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 126,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ そらが はいいろの くもで いっぱい。It's cloudy.？ It's windy.？",
+  "after": "クイズ！ そらが はいいろの くもで いっぱい。It's cloudy. / It's windy.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 126,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは It's cloudy.！ くもが いっぱいは cloudy。てんきよほうの ひと みたい！",
+  "after": "こたえは It's cloudy. くもが いっぱいは cloudy。てんきよほうの ひと みたい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 127,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Yes, let's!。You're it! は「きみが おに」。さいこう！",
+  "after": "こたえは Yes, let's! You're it! は「きみが おに」。さいこう！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 128,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：Your turn. は「きみの ばん」。じぶんの ばんは My turn.。",
+  "after": "ポイント：Your turn. は「きみの ばん」。じぶんの ばんは My turn.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 128,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ ともだちに じゅんばんを わたす ときは どっち？ Your turn.？ I win!？",
+  "after": "クイズ！ ともだちに じゅんばんを わたす ときは どっち？ Your turn. / I win!",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 128,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Your turn.！ I win! は かった とき。ナイス！",
+  "after": "こたえは Your turn. I win! は かった とき。ナイス！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 129,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Let's make a snowman.！ さむい ひに およいだら ぶるぶる。すばらしい！",
+  "after": "こたえは Let's make a snowman. さむい ひに およいだら ぶるぶる。すばらしい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 133,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Say, I like Mondays. Answer, Yes, I do. or No, I don't. すきな ようびを いって、きかれたら こたえよう。ようびの おわりに s が つくのが ポイント！",
+  "after": "Today's goal. Say, I like Mondays. Answer, Yes, I do. Or no, I don't. すきな ようびを いって、きかれたら こたえよう。ようびの おわりに s が つくのが ポイント！",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 133,
+  "path": "teacher.segments[1].subtitleEn",
+  "before": "Today's goal. Say, I like Mondays. Answer, Yes, I do. or No, I don't.",
+  "after": "Today's goal. Say, I like Mondays. Answer, Yes, I do. / No, I don't.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 133,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! Do you like Sundays? と きかれたよ。すきじゃない ときは どっち？ Yes, I do. or No, I don't.",
+  "after": "Quiz time! Do you like Sundays? と きかれたよ。すきじゃない ときは どっち？ Yes, I do. Or no, I don't.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 133,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ Do you like Sundays? すきじゃない ときは Yes, I do.？ No, I don't.？",
+  "after": "クイズ！ Do you like Sundays? すきじゃない ときは Yes, I do. / No, I don't.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 133,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Do you like Sundays? Yes, I do. or No, I don't.",
+  "after": "Quiz time! Do you like Sundays? Yes, I do. / No, I don't.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 133,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは No, I don't.！ くびを よこに ふりながら いうと つたわるね。",
+  "after": "こたえは No, I don't. くびを よこに ふりながら いうと つたわるね。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 134,
+  "path": "teacher.segments[17].say",
+  "before": "Quiz time! ことわる ときに さいしょに いう ことばは どっち？ Sorry. or Yes, let's!",
+  "after": "Quiz time! ことわる ときに さいしょに いう ことばは どっち？ Sorry. Or yes, let's!",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 134,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "クイズ！ ことわる ときに さいしょに いうのは どっち？ Sorry.？ Yes, let's!？",
+  "after": "クイズ！ ことわる ときに さいしょに いうのは どっち？ Sorry. / Yes, let's!",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 134,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Quiz time! Sorry. or Yes, let's!",
+  "after": "Quiz time! Sorry. / Yes, let's!",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 134,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "こたえは Sorry.！ ごめんね を つたえてから べつの ひを いえば ばっちり。よく できました！",
+  "after": "こたえは Sorry. ごめんね を つたえてから べつの ひを いえば ばっちり。よく できました！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 135,
+  "path": "teacher.segments[17].say",
+  "before": "Quiz time! すきな ようびを いう ときは どっち？ I like Monday. or I like Mondays.",
+  "after": "Quiz time! すきな ようびを いう ときは どっち？ I like Monday. Or I like Mondays.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 135,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Quiz time! I like Monday. or I like Mondays.",
+  "after": "Quiz time! I like Monday. / I like Mondays.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 135,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "こたえは I like Mondays.！ まいしゅうの げつようび だから s。よていひょうの めいじん！",
+  "after": "こたえは I like Mondays. まいしゅうの げつようび だから s。よていひょうの めいじん！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 136,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! とけいの はりが 10 を さして いるよ。どっち？ It's seven o'clock. or It's ten o'clock.",
+  "after": "Quiz time! とけいの はりが 10 を さして いるよ。どっち？ It's seven o'clock. Or it's ten o'clock.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 136,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ みじかい はりが 10。どっち？ It's seven o'clock.？ It's ten o'clock.？",
+  "after": "クイズ！ みじかい はりが 10。どっち？ It's seven o'clock. / It's ten o'clock.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 136,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! It's seven o'clock. or It's ten o'clock.",
+  "after": "Quiz time! It's seven o'clock. / It's ten o'clock.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 136,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは It's ten o'clock.！ ディン ドン！ せいかいの ベル。かんぺき！",
+  "after": "こたえは It's ten o'clock. ディン ドン！ せいかいの ベル。かんぺき！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 137,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! よるの 6じ。テーブルに カレーが あるよ。どっち？ It's breakfast time. or It's dinner time.",
+  "after": "Quiz time! よるの 6じ。テーブルに カレーが あるよ。どっち？ It's breakfast time. Or it's dinner time.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 137,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! It's breakfast time. or It's dinner time.",
+  "after": "Quiz time! It's breakfast time. / It's dinner time.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 137,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは It's dinner time.！ よるの ごはんは dinner、あさごはんは breakfast。おいしそう！",
+  "after": "こたえは It's dinner time. よるの ごはんは dinner、あさごはんは breakfast。おいしそう！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 138,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール：あさは Wake up! It's seven o'clock.、よるは It's bedtime. Good night. と いう。",
+  "after": "きょうの ゴール：あさは Wake up! It's seven o'clock. よるは It's bedtime. Good night. と いう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 138,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! よるの 9じ、ねる まえに いう ことばは どっち？ Wake up! or Good night.",
+  "after": "Quiz time! よるの 9じ、ねる まえに いう ことばは どっち？ Wake up! Or good night.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 138,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ よるの 9じ、ねる まえに いうのは どっち？ Wake up!？ Good night.？",
+  "after": "クイズ！ よるの 9じ、ねる まえに いうのは どっち？ Wake up! / Good night.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 138,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Wake up! or Good night.",
+  "after": "Quiz time! Wake up! / Good night.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 138,
+  "path": "teacher.segments[19].say",
+  "before": "Good night! ねる まえは Good night.、あさは Wake up!。You're so smart!",
+  "after": "Good night! ねる まえは Good night. あさは Wake up! You're so smart!",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 138,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Good night.！ ねる まえは Good night.、あさは Wake up!。すごい！",
+  "after": "こたえは Good night. ねる まえは Good night. あさは Wake up! すごい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 139,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ロンドンは 11じ。そとは まっくら。どっち？ It's morning in London. or It's night in London.",
+  "after": "Quiz time! ロンドンは 11じ。そとは まっくら。どっち？ It's morning in London. Or it's night in London.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 139,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! It's morning in London. or It's night in London.",
+  "after": "Quiz time! It's morning in London. / It's night in London.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 139,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは It's night in London.！ まっくらだから よる。すばらしい、せかいの たびびと！",
+  "after": "こたえは It's night in London. まっくらだから よる。すばらしい、せかいの たびびと！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 140,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. じこくは It's three o'clock.、なんの じかんかは It's snack time.。ふたつ つづけて いうと、きいている ひとに よく つたわるよ。I say, Great job! Let's have a snack.",
+  "after": "Here's the point. じこくは It's three o'clock. なんの じかんかは It's snack time. ふたつ つづけて いうと、きいている ひとに よく つたわるよ。I say, Great job! Let's have a snack.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 140,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：じこくは It's ～ o'clock.、なんの じかんかは It's ～ time.。つづけて いうと よく つたわる。エマ先生「よく できました！ おやつに しよう。」",
+  "after": "ポイント：じこくは It's ～ o'clock. なんの じかんかは It's ～ time. つづけて いうと よく つたわる。エマ先生「よく できました！ おやつに しよう。」",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 140,
+  "path": "teacher.segments[18].say",
+  "before": "Final quiz! とけいは 3じ。テーブルには クッキー。どっち？ It's snack time! or It's bedtime!",
+  "after": "Final quiz! とけいは 3じ。テーブルには クッキー。どっち？ It's snack time! Or it's bedtime!",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 140,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "さいごの クイズ！ 3じ、テーブルに クッキー。It's snack time!？ It's bedtime!？",
+  "after": "さいごの クイズ！ 3じ、テーブルに クッキー。It's snack time! / It's bedtime!",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 140,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Final quiz! It's snack time! or It's bedtime!",
+  "after": "Final quiz! It's snack time! / It's bedtime!",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 140,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは It's snack time!。クッキーが あったら おやつ！ クイズ チャンピオン！",
+  "after": "こたえは It's snack time! クッキーが あったら おやつ！ クイズ チャンピオン！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 141,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：Do you have ～? は「～ もってる？」。もってたら Yes, I do.、もってなかったら No, I don't.",
+  "after": "ポイント：Do you have ～? は「～ もってる？」。もってたら Yes, I do. もってなかったら No, I don't.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 141,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! Your friend asks, Do you have a pen? でも あなたは ペンを もってない。なんて こたえる？ Yes, I do? Or, No, I don't?",
+  "after": "Quiz time! Your friend asks, Do you have a pen? でも あなたは ペンを もってない。なんて こたえる？ Yes, I do? Or no, I don't?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 141,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Your friend asks, Do you have a pen? Yes, I do? Or, No, I don't?",
+  "after": "Quiz time! Your friend asks, Do you have a pen? Yes, I do? Or no, I don't?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 141,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは No, I don't.。ごめんね（Sorry）も つけると やさしいね。かんぺき！",
+  "after": "こたえは No, I don't. ごめんね（Sorry）も つけると やさしいね。かんぺき！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 142,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz! はさみを もってない とき、どっちかな？ I have scissors? Or, I don't have scissors?",
+  "after": "Quiz! はさみを もってない とき、どっちかな？ I have scissors? Or I don't have scissors?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 142,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz! I have scissors? Or, I don't have scissors?",
+  "after": "Quiz! I have scissors? Or I don't have scissors?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 142,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは I don't have scissors.。don't で「もってない」。よく できました！",
+  "after": "こたえは I don't have scissors. don't で「もってない」。よく できました！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 143,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz! ともだちの ふでばこの なかみを ききたい。どっち？ This is my pencil case? Or, What's in your pencil case?",
+  "after": "Quiz! ともだちの ふでばこの なかみを ききたい。どっち？ This is my pencil case? Or what's in your pencil case?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 143,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz! This is my pencil case? Or, What's in your pencil case?",
+  "after": "Quiz! This is my pencil case? Or what's in your pencil case?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 143,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは What's in your pencil case?。What で「なにが？」と きけるね。よく かんがえたね！",
+  "after": "こたえは What's in your pencil case? What で「なにが？」と きけるね。よく かんがえたね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 144,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：How many ～? は「いくつ？」。こたえは I have three pencils.。s を わすれずに！",
+  "after": "ポイント：How many ～? は「いくつ？」。こたえは I have three pencils. s を わすれずに！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 144,
+  "path": "teacher.segments[17].subtitleJa",
+  "before": "あなたの ばん！ えんぴつを かぞえて I have ～. と いおう。1ぽんなら I have one pencil.。",
+  "after": "あなたの ばん！ えんぴつを かぞえて I have ～. と いおう。1ぽんなら I have one pencil.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 144,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz! えんぴつが 5ほん。ただしいのは どっち？ I have five pencil? Or, I have five pencils?",
+  "after": "Quiz! えんぴつが 5ほん。ただしいのは どっち？ I have five pencil? Or I have five pencils?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 144,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz! I have five pencil? Or, I have five pencils?",
+  "after": "Quiz! I have five pencil? Or I have five pencils?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 144,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは I have five pencils.。2つ いじょう だから s が いるね。せいかい！",
+  "after": "こたえは I have five pencils. 2つ いじょう だから s が いるね。せいかい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 144,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "すばらしい！ How many ～? と I have three pencils.。かずと いっしょに いえたね。s も わすれなかったよ。pumpkin や helmet も よめたね。このあと ビリモと おはなし してみてね。バイバイ！",
+  "after": "すばらしい！ How many ～? と I have three pencils. かずと いっしょに いえたね。s も わすれなかったよ。pumpkin や helmet も よめたね。このあと ビリモと おはなし してみてね。バイバイ！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 145,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz! ともだちに あかい ペンを かして あげる。なんて いう？ Yes, I do. Here you are? Or, No, I don't. Sorry?",
+  "after": "Quiz! ともだちに あかい ペンを かして あげる。なんて いう？ Yes, I do. Here you are? Or no, I don't. Sorry?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 145,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz! Yes, I do. Here you are? Or, No, I don't. Sorry?",
+  "after": "Quiz! Yes, I do. Here you are? Or no, I don't. Sorry?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 145,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Yes, I do. Here you are.。Here you are は「はい どうぞ」。やさしいね！",
+  "after": "こたえは Yes, I do. Here you are. Here you are は「はい どうぞ」。やさしいね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 146,
+  "path": "teacher.segments[19].say",
+  "before": "Quiz! そとは はれ。てんきを いうのは どっち？ It's sunny? Or, It's seven o'clock?",
+  "after": "Quiz! そとは はれ。てんきを いうのは どっち？ It's sunny? Or it's seven o'clock?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 146,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "Quiz! It's sunny? Or, It's seven o'clock?",
+  "after": "Quiz! It's sunny? Or it's seven o'clock?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 146,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "こたえは It's sunny.。sunny は「はれ」、o'clock は じこく。すばらしい！",
+  "after": "こたえは It's sunny. sunny は「はれ」、o'clock は じこく。すばらしい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 147,
+  "path": "teacher.segments[9].subtitleJa",
+  "before": "ポイント：ごごは Good afternoon。じこくは It's ～ o'clock.。さそう ときは Let's play ～.。",
+  "after": "ポイント：ごごは Good afternoon。じこくは It's ～ o'clock. さそう ときは Let's play ～.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 147,
+  "path": "teacher.segments[19].say",
+  "before": "Quiz! ごご 3じに ともだちに あったよ。あいさつは どっち？ Good morning? Or, Good afternoon?",
+  "after": "Quiz! ごご 3じに ともだちに あったよ。あいさつは どっち？ Good morning? Or good afternoon?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 147,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "Quiz! Good morning? Or, Good afternoon?",
+  "after": "Quiz! Good morning? Or good afternoon?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 147,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "こたえは Good afternoon.。おひるを すぎたら この あいさつ。よく できました！",
+  "after": "こたえは Good afternoon. おひるを すぎたら この あいさつ。よく できました！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 148,
+  "path": "teacher.segments[9].subtitleJa",
+  "before": "ポイント：「どようびが すき」は I like Saturdays.。「どようびに」は on Saturdays。",
+  "after": "ポイント：「どようびが すき」は I like Saturdays. 「どようびに」は on Saturdays。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 148,
+  "path": "teacher.segments[19].say",
+  "before": "Quiz! 「どようびに テニスを する」は どっち？ I play tennis on Saturdays? Or, I like Saturdays?",
+  "after": "Quiz! 「どようびに テニスを する」は どっち？ I play tennis on Saturdays? Or I like Saturdays?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 148,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "Quiz! I play tennis on Saturdays? Or, I like Saturdays?",
+  "after": "Quiz! I play tennis on Saturdays? Or I like Saturdays?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 148,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "こたえは I play tennis on Saturdays.。play は「する」、on Saturdays は「どようびに」。さすが！",
+  "after": "こたえは I play tennis on Saturdays. play は「する」、on Saturdays は「どようびに」。さすが！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 149,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz! ともだちに「しゅくだい もった？」と ききたい。どっち？ Do you have your homework? Or, I have a pencil and a ruler?",
+  "after": "Quiz! ともだちに「しゅくだい もった？」と ききたい。どっち？ Do you have your homework? Or I have a pencil and a ruler?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 149,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz! Do you have your homework? Or, I have a pencil and a ruler?",
+  "after": "Quiz! Do you have your homework? Or I have a pencil and a ruler?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 149,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Do you have your homework?。Do you have で「もってる？」と きけるね。かんぺき！",
+  "after": "こたえは Do you have your homework? Do you have で「もってる？」と きけるね。かんぺき！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 150,
+  "path": "teacher.segments[19].say",
+  "before": "Final quiz! じかんを ききたい ときは どっち？ What time is it? Or, What day is it?",
+  "after": "Final quiz! じかんを ききたい ときは どっち？ What time is it? Or what day is it?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 150,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "Final quiz! What time is it? Or, What day is it?",
+  "after": "Final quiz! What time is it? Or what day is it?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 150,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "こたえは What time is it?。time は「じかん」、day は「ようび」。ワールド5 チャンピオン！",
+  "after": "こたえは What time is it? time は「じかん」、day は「ようび」。ワールド5 チャンピオン！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 151,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：きく ときは What's this letter?、こたえは It's a small ～. で もじの なまえを いう。",
+  "after": "ポイント：きく ときは What's this letter? こたえは It's a small ～. で もじの なまえを いう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 154,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：I see は「みえる」。みつけた もじは I see a small ～.、ばしょは It's the ～. で いう。",
+  "after": "ポイント：I see は「みえる」。みつけた もじは I see a small ～. ばしょは It's the ～. で いう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 155,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：みせる ときは Look at the sign.、もじは I see a small ～.、おみせは It's a ～.。つなげると あんないに なるよ。",
+  "after": "ポイント：みせる ときは Look at the sign. もじは I see a small ～. おみせは It's a ～. つなげると あんないに なるよ。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 158,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! かずを きく ときは どっち？ How many cherries? Or, What do you want?",
+  "after": "Quiz time! かずを きく ときは どっち？ How many cherries? Or what do you want?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 158,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! How many cherries? Or, What do you want?",
+  "after": "Quiz time! How many cherries? Or what do you want?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 158,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは How many cherries?。many で かずを きくよ。すばらしい！",
+  "after": "こたえは How many cherries? many で かずを きくよ。すばらしい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 159,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ふたつ つなげる ことばは どっち？ I want cookies and cream. Or, I want cookies or cream?",
+  "after": "Quiz time! ふたつ つなげる ことばは どっち？ I want cookies and cream. Or I want cookies or cream?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 159,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! I want cookies and cream. Or, I want cookies or cream?",
+  "after": "Quiz time! I want cookies and cream. / I want cookies or cream?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 160,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! How many? と きかれたよ。こたえは どっち？ Two, please. Or, Here you are.",
+  "after": "Quiz time! How many? と きかれたよ。こたえは どっち？ Two, please. Or here you are.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 160,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Two, please. Or, Here you are.",
+  "after": "Quiz time! Two, please. / Here you are.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 160,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Two, please.！ Here you are. は わたす ときの ことば。すてきな おきゃくさん！",
+  "after": "こたえは Two, please. Here you are. は わたす ときの ことば。すてきな おきゃくさん！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 161,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント。This is the ～. は「ここは ～ だよ」。What's this room? は「なんの へや？」。こたえは It's the ～.。ノックされたら Come in!（はいって！）",
+  "after": "ポイント。This is the ～. は「ここは ～ だよ」。What's this room? は「なんの へや？」。こたえは It's the ～. ノックされたら Come in!（はいって！）",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 162,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント！ まず This is my favorite place.、つぎに I like ～. で わけを たす。I like reading books.（ほんを よむのが すき）。ともだちには Where is your favorite place? と きこう。",
+  "after": "ポイント！ まず This is my favorite place. つぎに I like ～. で わけを たす。I like reading books.（ほんを よむのが すき）。ともだちには Where is your favorite place? と きこう。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 163,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ ピポを みぎへ まがらせたい。なんて いう？ Turn right.？ Turn left.？",
+  "after": "クイズ！ ピポを みぎへ まがらせたい。なんて いう？ Turn right. / Turn left.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 163,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Turn right.！ みぎは right。ビリモより じょうず！ すてきな ガイドさん！",
+  "after": "こたえは Turn right. みぎは right。ビリモより じょうず！ すてきな ガイドさん！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 164,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ばしょを きく ときは どっち？ Where is the nurse's office? or Here it is!",
+  "after": "Quiz time! ばしょを きく ときは どっち？ Where is the nurse's office? Or here it is!",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 164,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ ばしょを きく ときは どっち？ Where is the nurse's office?？ Here it is!？",
+  "after": "クイズ！ ばしょを きく ときは どっち？ Where is the nurse's office? / Here it is!",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 164,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Where is the nurse's office? or Here it is!",
+  "after": "Quiz time! Where is the nurse's office? / Here it is!",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 164,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Where is the nurse's office?！ Here it is! は ついた ときの ことば。すばらしい！",
+  "after": "こたえは Where is the nurse's office? Here it is! は ついた ときの ことば。すばらしい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 165,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ピポに「ようこそ」と いいたいな。どっちを いう？ Welcome to our school! or Follow me.",
+  "after": "Quiz time! ピポに「ようこそ」と いいたいな。どっちを いう？ Welcome to our school! Or follow me.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 165,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ ピポに「ようこそ」と いいたい。どっちを いう？ Welcome to our school!？ Follow me.？",
+  "after": "クイズ！ ピポに「ようこそ」と いいたい。どっちを いう？ Welcome to our school! / Follow me.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 165,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Welcome to our school! or Follow me.",
+  "after": "Quiz time! Welcome to our school! / Follow me.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 165,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Welcome to our school!！ Follow me. は「ついてきて」の ほう だね。かんぺきな ガイドさん！",
+  "after": "こたえは Welcome to our school! Follow me. は「ついてきて」の ほう だね。かんぺきな ガイドさん！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 166,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント！ じぶんの ことは I から はじめる。I wake up.。じかんは at を つけて I wake up at six.。at は「～じに」。",
+  "after": "ポイント！ じぶんの ことは I から はじめる。I wake up. じかんは at を つけて I wake up at six. at は「～じに」。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 166,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ハルくんは なんじに おきる？ I wake up at six. or I wake up at seven.",
+  "after": "Quiz time! ハルくんは なんじに おきる？ I wake up at six. Or I wake up at seven.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 166,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! I wake up at six. or I wake up at seven.",
+  "after": "Quiz time! I wake up at six. / I wake up at seven.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 167,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント！ たべる ものは I eat ～.、のむ ものは I drink ～.。ふたつ たべる ときは and で つなぐ。I eat rice and miso soup.",
+  "after": "ポイント！ たべる ものは I eat ～. のむ ものは I drink ～. ふたつ たべる ときは and で つなぐ。I eat rice and miso soup.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 168,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "そして ビリモは…「ぼくは がっこうへ… とんで いく！ じゃあね！」 そらを とんで いっちゃった！ ポイント：いきかたは I walk to school.、じかんは at を つけて I go to school at eight.",
+  "after": "そして ビリモは…「ぼくは がっこうへ… とんで いく！ じゃあね！」 そらを とんで いっちゃった！ ポイント：いきかたは I walk to school. じかんは at を つけて I go to school at eight.",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 168,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! あるいて がっこうへ いく。えいごで どっち？ I walk to school. or I go to school by... flying!",
+  "after": "Quiz time! あるいて がっこうへ いく。えいごで どっち？ I walk to school. Or I go to school by... flying!",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 168,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！「あるいて がっこうへ いく」は どっち？ I walk to school.？ それとも ビリモの「とんで いく」？",
+  "after": "クイズ！「あるいて がっこうへ いく」は どっち？ I walk to school. それとも ビリモの「とんで いく」？",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 168,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! I walk to school. or I go to school by... flying!",
+  "after": "Quiz time! I walk to school. / I go to school by... flying!",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 168,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは I walk to school.！ walk は「あるく」。とぶのは ビリモ だけ！ よく できました！",
+  "after": "こたえは I walk to school. walk は「あるく」。とぶのは ビリモ だけ！ よく できました！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 169,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ねる ときに いう ことばは どっち？ I go home. or I go to bed.",
+  "after": "Quiz time! ねる ときに いう ことばは どっち？ I go home. Or I go to bed.",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice: lowercase \"or\" right after an end mark (\"X. or Y\"); start the second choice with \"Or\" (TTS reads it as a new sentence anyway)"
+ },
+ {
+  "lesson": 169,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ ねる ときの ことばは どっち？ I go home.？ I go to bed.？",
+  "after": "クイズ！ ねる ときの ことばは どっち？ I go home. / I go to bed.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 169,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! I go home. or I go to bed.",
+  "after": "Quiz time! I go home. / I go to bed.",
+  "reviewers": "objective",
+  "reason": "quiz subtitle joins two choices with \"or\" after an end mark (\"X. or Y\"); show them as \"X / Y\" like the other quiz subtitles (W01-04 rule)"
+ },
+ {
+  "lesson": 169,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは I go to bed.！ I go home. は「いえに かえる」。すごい！",
+  "after": "こたえは I go to bed. I go home. は「いえに かえる」。すごい！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 170,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント！ みじかい ぶんを じゅんばんに ならべるだけ。I wake up at seven. I go to school.。じかんを たす ときは at。",
+  "after": "ポイント！ みじかい ぶんを じゅんばんに ならべるだけ。I wake up at seven. I go to school. じかんを たす ときは at。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 171,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! Birimo wants to eat right now. でも いちばん はじめに する ことは なに？ First, wash your hands? Or, First, eat the ham?",
+  "after": "Quiz time! Birimo wants to eat right now. でも いちばん はじめに する ことは なに？ First, wash your hands? Or first, eat the ham?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 171,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Birimo wants to eat right now. First, wash your hands? Or, First, eat the ham?",
+  "after": "Quiz time! Birimo wants to eat right now. First, wash your hands? Or first, eat the ham?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 173,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! パンケーキを フライパンで やくのは どっち？ Mix the eggs? Or, Cook it?",
+  "after": "Quiz time! パンケーキを フライパンで やくのは どっち？ Mix the eggs? Or cook it?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 173,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Mix the eggs? Or, Cook it?",
+  "after": "Quiz time! Mix the eggs? Or cook it?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 174,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! おはなしの さいごに いう ことばは どっち？ Once upon a time? Or, The end?",
+  "after": "Quiz time! おはなしの さいごに いう ことばは どっち？ Once upon a time? Or the end?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 174,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ おはなしの さいごに いう ことばは どっち？ Once upon a time.？ The end.？",
+  "after": "クイズ！ おはなしの さいごに いう ことばは どっち？ Once upon a time. / The end.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 174,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Once upon a time? Or, The end?",
+  "after": "Quiz time! Once upon a time? Or the end?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 174,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは The end.！ さいごは The end.、はじまりは Once upon a time.。おはなし じょうずだね！",
+  "after": "こたえは The end. さいごは The end. はじまりは Once upon a time. おはなし じょうずだね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 175,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ほんの なまえ、だいめいは 英語で どっち？ Title? Or, Page?",
+  "after": "Quiz time! ほんの なまえ、だいめいは 英語で どっち？ Title? Or page?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 175,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Title? Or, Page?",
+  "after": "Quiz time! Title? Or page?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 176,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! キコちゃんは ずこうしつが すき。なにが すきだから？ Singing? Or, Drawing?",
+  "after": "Quiz time! キコちゃんは ずこうしつが すき。なにが すきだから？ Singing? Or drawing?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 176,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Singing? Or, Drawing?",
+  "after": "Quiz time! Singing? Or drawing?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 177,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! たいいくの じかんは 英語で どっち？ Math? Or, P.E.?",
+  "after": "Quiz time! たいいくの じかんは 英語で どっち？ Math? Or P.E.?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 177,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ たいいくの じかんは 英語で どっち？ math？ P.E.？",
+  "after": "クイズ！ たいいくの じかんは 英語で どっち？ math / P.E.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 177,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! Math? Or, P.E.?",
+  "after": "Quiz time! Math? Or P.E.?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 177,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは P.E.！ はしって、とんで、のびて！ math は「さんすう」だね。がっこうの 1日 スター！",
+  "after": "こたえは P.E. はしって、とんで、のびて！ math は「さんすう」だね。がっこうの 1日 スター！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 178,
+  "path": "teacher.segments[18].say",
+  "before": "Final question! まるに しっぽが したに くるん。これは どっちの こもじ？ A small g? Or, a small y?",
+  "after": "Final question! まるに しっぽが したに くるん。これは どっちの こもじ？ A small g? Or a small y?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 178,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Final question! A small g? Or, a small y?",
+  "after": "Final question! A small g? Or a small y?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 179,
+  "path": "teacher.segments[18].say",
+  "before": "Quiz time! ともだちが どきどき している。おうえんの ことばは どっち？ You can do it! Or, I'm nervous...?",
+  "after": "Quiz time! ともだちが どきどき している。おうえんの ことばは どっち？ You can do it! Or I'm nervous...?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 179,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "クイズ！ ともだちが どきどき している。おうえんの ことばは どっち？ You can do it!？ I'm nervous...？",
+  "after": "クイズ！ ともだちが どきどき している。おうえんの ことばは どっち？ You can do it! / I'm nervous...",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 179,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Quiz time! You can do it! Or, I'm nervous...?",
+  "after": "Quiz time! You can do it! / I'm nervous...?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 179,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは You can do it!。I'm nervous... は「どきどきする」だったね。すてきな ともだちだね！",
+  "after": "こたえは You can do it! I'm nervous... は「どきどきする」だったね。すてきな ともだちだね！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 180,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ポイント：ばしょは Welcome to my favorite place!、みちは Go straight. と turn left、ほしい ものは I want ～.。First と Then で つなげば ながい はっぴょうも できる。",
+  "after": "ポイント：ばしょは Welcome to my favorite place! みちは Go straight. と turn left、ほしい ものは I want ～. First と Then で つなげば ながい はっぴょうも できる。",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ },
+ {
+  "lesson": 180,
+  "path": "teacher.segments[18].say",
+  "before": "Final quiz! としょしつへの みちを おしえたい。どっちを いう？ Go straight. Then, turn left. Or, I want a parfait?",
+  "after": "Final quiz! としょしつへの みちを おしえたい。どっちを いう？ Go straight. Then, turn left. Or I want a parfait?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 180,
+  "path": "teacher.segments[18].subtitleJa",
+  "before": "さいごの クイズ！ としょしつへの みちを おしえたい。どっちを いう？ Go straight. Then, turn left.？ I want a parfait.？",
+  "after": "さいごの クイズ！ としょしつへの みちを おしえたい。どっちを いう？ Go straight. Then, turn left. / I want a parfait.",
+  "reviewers": "objective",
+  "reason": "quiz choices: English end mark + full-width ？ (double end marks); show them as \"A / B\" like the English subtitle"
+ },
+ {
+  "lesson": 180,
+  "path": "teacher.segments[18].subtitleEn",
+  "before": "Final quiz! Go straight. Then, turn left. Or, I want a parfait?",
+  "after": "Final quiz! Go straight. Then, turn left. / I want a parfait?",
+  "reviewers": "objective",
+  "reason": "spoken 2-choice \"A? Or, B?\" -> \"A? Or B?\" (no comma after Or; W03-04 rule 3)"
+ },
+ {
+  "lesson": 180,
+  "path": "teacher.segments[19].subtitleJa",
+  "before": "こたえは Go straight. Then, turn left.！ みちあんないは Go straight と turn left。パフェは あとでね、ビリモ。ワールド6 チャンピオン！",
+  "after": "こたえは Go straight. Then, turn left. みちあんないは Go straight と turn left。パフェは あとでね、ビリモ。ワールド6 チャンピオン！",
+  "reviewers": "objective",
+  "reason": "spacing / double end mark after English inside Japanese"
+ }
+]
