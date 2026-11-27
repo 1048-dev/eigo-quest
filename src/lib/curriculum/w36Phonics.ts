@@ -28,7 +28,7 @@ const own = <T>(table: Record<string, T>, w: string): T | undefined => (Object.p
 const BIO: Record<string, { parts: string; ja: string; definition: string; wrong: [string, string] }> = {
   biology: { parts: "bio（いのち）＋ logy（学問）", ja: "せいぶつがく", definition: "the study of living things", wrong: ["biography", "biosphere"] },
   biography: { parts: "bio（いのち）＋ graphy（かいた もの）", ja: "でんき（ある 人の 一生を かいた 本）", definition: "a book about the life of a real person, written by someone else", wrong: ["biology", "biome"] },
-  biome: { parts: "bio（いのち）＋ ome（まとまり）", ja: "バイオーム（おなじ 気候と 生きものの 大きな まとまり）", definition: "a large area with its own climate, plants and animals, like a desert or the deep sea", wrong: ["biofuel", "biography"] },
+  biome: { parts: "bio（いのち）＋ ome（まとまり）", ja: "バイオーム（おなじ 気候と 生きものの 大きな まとまり）", definition: "a large area with its own climate and living things, like a desert or the deep sea", wrong: ["biofuel", "biography"] },
   bioluminescent: { parts: "bio（いのち）＋ luminescent（ひかる）", ja: "生きものが 自分で ひかる", definition: "able to make its own light, like a lanternfish", wrong: ["biodegradable", "antibiotic"] },
   biodiversity: { parts: "bio（いのち）＋ diversity（いろいろ）", ja: "生きものの 多様性（いろいろな 生きものが いる こと）", definition: "the many different kinds of living things in one place", wrong: ["biofuel", "biographer"] },
   biosphere: { parts: "bio（いのち）＋ sphere（きゅう）", ja: "生物圏（生きものが いる ちきゅうの ぶぶん）", definition: "all the parts of the Earth where living things can be found", wrong: ["antibiotic", "biomimicry"] },

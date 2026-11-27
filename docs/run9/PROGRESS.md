@@ -554,3 +554,37 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: ワールド35・36（レッスン 1021〜1080）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・teacherScript・testPoints を 60 レッスン ぜんぶ 見なおした（ステージ4 の さいご〈ちえの議事堂。意見・こうへい・けんりと せきにん・提案〉と ステージ5 の さいしょ〈しんかいの都。しらべる・まとめる・発表・しつもん〉）
+- さきに ブロックの きめごと（イギリスふうの ほめことば・エマ先生 じぶんの 語りを I say / I ask / me に〈teacherScript も〉・日本語の「ミス・エマ」→「エマ先生」・エマ先生の Good morning → Hi / Hello・「Or,」・okay → OK・in the holidays → during vacation・timetable → schedule・AI の さいしょの ひとこと 60 レッスンを「Let's pretend I'm ～.」に）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがい（じじつ・物語の くいちがい・文法・きまりの せつめい）だけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た ものを ブロック全体で そろえた（温度の さいしょの 1回を degrees Celsius に、日本語の「先生が きくよ / いうよ」→「わたしが ～」、L1055 の 早すぎる「great question」、しんかいの biome に「plants」と いって いた せつめい〈L1051・L1070 と src/lib/curriculum/w36Phonics.ts〉）
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、HEAD から じゅんばんに あてなおした（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあい・かいわ あいて・文法の じゅんばん（テストが 見ない teacher.segments も）を たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W35-36.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 1021 --to 1080`）: **まえ error 0 / warn 37 / info 27 → あと error 0 / warn 27 / info 27**（のこりの warn は ぜんぶ わざと: アマラの 犬の なまえ「Biscuit」9、テストで きまった タイトルの「…」と その スライド 10、L1078 ビリモの「very, very, very cute!」〈発表に むかない 文の 例〉6、L1056「A big white board」〈せつめい〉2。info は 会話の「What is / it is」・オズウィンさんの「very, very」・Let's 4回〈Let's pretend の ため〉）
+- なおした 欄 **507**（パッチ 536 件: ブロックの きめごと 125・AI の ひとこと 60・レビュアー 329・あとの そろえ 22）、なおした レッスン **60 / 60**
+- 学習項目が かわった もの: **5つ**（L1023 ことば timetable → schedule、L1042 TPR Shake your hand → Shake your head、L1048 表現 in the holidays → during vacation、L1053 表現 It reaches well only ～ → Bright sunlight reaches only ～、L1058 表現 in the day → during the day。テストには どれも 書かれて いない）と src の biome の せつめい 1つ
+
+### before → after の 例
+1. L1042（objective・物語の 数）: 「I counted thirty-one plastic bottles in the recycling bin yesterday! … Wow, in only one day!」→「… this week! … Wow, in only one week!」（L1044 の グラフでは 議会 ぜんたいで 1か月 120 本。1日で 31 本だと 数が あわない）
+2. L1053 表現（objective・文法と じじつ）: 「It reaches well only the top 200 meters.」→「Bright sunlight reaches only the top 200 meters.」（well の いちが まちがい。うすい ひかりは 1,000 m まで とどくので Bright を つけた。会話・スライド・読みものも そろえた）
+3. L1051・L1070 と w36Phonics.ts（objective・じじつ）: 「A biome is a big area with its own weather, plants and animals. The deep sea is a biome!」→「… its own special conditions and living things. …」（ひかりの ない しんかいに しょくぶつは いない。L1063 でも そう いって いる）
+
+### きめた こと
+- **AI の さいしょの ひとこと**: こどもの キャラが オリーブ・プリヤ・アマラ・レオ・ケン・ハート市長・司書・ルミ・ヴェイル博士・オズウィンさんとして 話して いた。goalJa の やくは のこし、60 レッスン ぜんぶ「Let's pretend I'm ～.」で ごっこあそびに した（W25-34 と おなじ）。オリーブの「Ding!」「Hoo-hoo!」、オズウィンさんの「Wel... come...」は のこした
+- **アメリカ英語**: holidays → vacation、timetable → schedule、Tick → Check、温度は さいしょに degrees Celsius。「Biscuit」は 犬の なまえなので のこした
+- **声に 出す ための なおし**: たんどくの 字の かたまり（ity・ble → bil・ous → os・tion・Re, c, ei, ve）は 字の 読みあげか「the ending」に、こま切れの 音節は ハイフンの 拍（Bi-OL-o-gist・Me-te-or-OL-o-gy）に。コントラストの 強勢の 練習で 2語 かわって いた 文（L1034）を 1語だけ かわる 文に
+- **話す 人の ない こたえ**: 「X asks, ～? Of course!」のように きいた 人が じぶんで こたえて いる ように きこえる 文が W35・W36 に たくさん あった。「Dr. Vale says,」「Birimo says,」などを つけた
+- 物語の くいちがい: L1028 えほんの なかの サムの ことばを キコ・リコが いって いた、L1039 とうひょうを かぞえた のが（その とき そとに いた）レオ → プリヤ、L1045 なふだを たのんだ のは キコ、L1080 発表の じゅんばん（ハルが さいしょ）、L1070 しんかいの「plants」
+- のこした こと: タイトルの「…」、たんどくの 語根 spect・dict・struct・port・rupt・ject・Inter・Co（ならう 音そのもの）、W36 の お手本の 文の なかの「pause here」（ブロック全体の かたち。あとで 考える）、文の あたまの Transport. / Project.（強勢が 名詞・動詞で かわる）。くわしくは W35-36.md
+- テストで わかった こと: tests/teacher.test.ts は 授業台本に「じゅうしょ」を ゆるさない ので、L1047 の「アドレス」は「すんで いる ところ」に した
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新

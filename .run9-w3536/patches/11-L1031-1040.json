@@ -1,0 +1,498 @@
+[
+  {
+    "lesson": 1031,
+    "path": "teacher.segments[5].say",
+    "before": "Voice. Your sound, and your idea. Hand up! I have an idea! Voice!",
+    "after": "Voice. The sound you make, and your idea. Hand up! I have an idea! Voice!",
+    "reviewers": "A+B",
+    "reason": "'Your sound' is not how a teacher defines voice; 'the sound you make' is clear and still matches こえ・いけん"
+  },
+  {
+    "lesson": 1031,
+    "path": "teacher.segments[5].subtitleEn",
+    "before": "Voice. Your sound, and your idea. Hand up! I have an idea! Voice!",
+    "after": "Voice. The sound you make, and your idea. Hand up! I have an idea! Voice!",
+    "reviewers": "A+B",
+    "reason": "'Your sound' is not how a teacher defines voice; 'the sound you make' is clear and still matches こえ・いけん"
+  },
+  {
+    "lesson": 1032,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. Who is responsible? Answer with a name: Amara is. Yes, with one more idea? I think so, but...",
+    "after": "Here's the point. Who is responsible? Answer with a name: Amara is. Agree, but want to add something? Say, I think so, but...",
+    "reviewers": "A+C",
+    "reason": "'Yes, with one more idea?' is cryptic and choppy to read; say when to use the frame"
+  },
+  {
+    "lesson": 1032,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. Who is responsible? Answer with a name: Amara is. Yes, with one more idea? I think so, but...",
+    "after": "Here's the point. Who is responsible? Answer with a name: Amara is. Agree, but want to add something? Say, I think so, but...",
+    "reviewers": "A+C",
+    "reason": "'Yes, with one more idea?' is cryptic and choppy to read; say when to use the frame"
+  },
+  {
+    "lesson": 1033,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ なおす ときは、あたらしい ことばを つよく。「おさらを あらうの？」「ううん、ふくの！」「おにいさんが りょうり するの？」「ううん、おねえさんが するの！」",
+    "after": "おとの じかん！ なおす ときは、あたらしい ことばを つよく。「おさらを あらうの？」「ううん、おさらを ふくの！」「おにいさんが りょうり するの？」「ううん、おねえさんが するの！」",
+    "reviewers": "objective (JA)",
+    "reason": "'ふくの' alone reads as 服 (clothes) in hiragana; EN is 'I DRY the dishes'"
+  },
+  {
+    "lesson": 1034,
+    "path": "teacher.segments[3].say",
+    "before": "Neighbor. A person who lives next to you. Wave hello! Neighbor!",
+    "after": "Neighbor. A person who lives near you. Wave hello! Neighbor!",
+    "reviewers": "objective",
+    "reason": "EN/JA mismatch (JA ちかくに); a neighbor lives near you, not only next door"
+  },
+  {
+    "lesson": 1034,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Neighbor. A person who lives next to you. Wave hello! Neighbor!",
+    "after": "Neighbor. A person who lives near you. Wave hello! Neighbor!",
+    "reviewers": "objective",
+    "reason": "EN/JA mismatch (JA ちかくに); a neighbor lives near you, not only next door"
+  },
+  {
+    "lesson": 1034,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. Why don't we... is a friendly idea. Answer, Good idea, but... to add a safe plan.",
+    "after": "Here's the point. Why don't we... is a friendly way to share an idea. Answer, Good idea, but... to add a safe plan.",
+    "reviewers": "A+C",
+    "reason": "the phrase is not 'an idea' itself; JA says やさしい さそいかた"
+  },
+  {
+    "lesson": 1034,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. Why don't we... is a friendly idea. Answer, Good idea, but... to add a safe plan.",
+    "after": "Here's the point. Why don't we... is a friendly way to share an idea. Answer, Good idea, but... to add a safe plan.",
+    "reviewers": "A+C",
+    "reason": "the phrase is not 'an idea' itself; JA says やさしい さそいかた"
+  },
+  {
+    "lesson": 1034,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! In the morning? No, it's on Saturday AFTERNOON!",
+    "after": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! Saturday morning? No, it's on Saturday AFTERNOON!",
+    "reviewers": "B+C",
+    "reason": "contrast stress works only when one word changes; 'In the morning?' makes Saturday new too (tip and teacherScript ask 'Saturday morning?')"
+  },
+  {
+    "lesson": 1034,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! In the morning? No, it's on Saturday AFTERNOON!",
+    "after": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! Saturday morning? No, it's on Saturday AFTERNOON!",
+    "reviewers": "B+C",
+    "reason": "contrast stress works only when one word changes; 'In the morning?' makes Saturday new too (tip and teacherScript ask 'Saturday morning?')"
+  },
+  {
+    "lesson": 1034,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ あたらしい ことばを つよく。「バラを うえたの？」「ううん、ひまわりを うえたの！」「あさ？」「ううん、土曜日の ごご だよ！」",
+    "after": "おとの じかん！ あたらしい ことばを つよく。「バラを うえたの？」「ううん、ひまわりを うえたの！」「土曜日の あさ？」「ううん、土曜日の ごご だよ！」",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1035,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, What can children do for our community? On Saturday afternoon, we cleaned Willowford Park with me and the other adults, and we said hello to so many neighbors. Today is a special day. Each group will give a short talk about rights and responsibilities. Priya interviews Leo about safety at school. Amara talks about her pets. Then it's our turn. Riko stands up and says, I'd like to talk about rights and responsibilities. Olive says, Go ahead. We're listening. Riko's big idea is this. We have the right to speak, and we should listen to others. Say it with me. We have the right to speak, and we should listen to others. Beautiful! Let's read Riko's speech. \"Hello, everyone. Children have many rights. We have the right to learn, so we should try our best at school. We have the right to play, so we should share the ball and take turns. We have the right to be safe, so we should help keep our town clean and safe. And we have the right to speak, and we should listen to others. Every voice matters, so every ear matters, too. Thank you!\" What should we do because we have the right to play? Share the ball and take turns. Why does every ear matter? Because every voice matters. The audience claps, and Olive rings her bell. Then the Tree of Voices begins to glow. A third golden leaf slowly grows on its branch! Now, phonics. Let's review. Do you like that one? No, I like THIS one. Interview. Inter means each other, so you see each other and talk. Coexist. Co means together, so coexist means live together. Security. Secure, drop the e, and add ity. Say it strongly, se-CU-ri-ty. Next time, a very special visitor from the town is coming to the Hall of Wisdom!",
+    "after": "Hello, everyone! Last time, we said, What can children do for our community? On Saturday afternoon, we cleaned Willowford Park together with the other adults, and we said hello to so many neighbors. Today is a special day. Each group will give a short talk about rights and responsibilities. Priya interviews Leo about safety at school. Amara talks about her pets. Then it's our turn. Riko stands up and says, I'd like to talk about rights and responsibilities. Olive says, Go ahead. We're listening. Riko's big idea is this. We have the right to speak, and we should listen to others. Say it with me. We have the right to speak, and we should listen to others. Beautiful! Let's read Riko's speech. \"Hello, everyone. Children have many rights. We have the right to learn, so we should try our best at school. We have the right to play, so we should share the ball and take turns. We have the right to be safe, so we should help keep our town clean and safe. And we have the right to speak, and we should listen to others. Every voice matters, so every ear matters, too. Thank you!\" What should we do because we have the right to play? Share the ball and take turns. Why does every ear matter? Because every voice matters. The audience claps, and Olive rings her bell. Then the Tree of Voices begins to glow. A third golden leaf slowly grows on its branch! Now, phonics. Let's review. Do you like that one? No, I like THIS one. Interview. Inter means each other, so you see each other and talk. Coexist. Co means together, so coexist means live together. Security. Secure, drop the e, and add i, t, y. Say the part before i, t, y strongly. se-CU-ri-ty. Next time, a very special visitor from the town is coming to the Hall of Wisdom!",
+    "reviewers": "A+C, B+C",
+    "reason": "'we ... with me' (left by the block-wide I swap) is self-contradictory and awkward to read; 'Say it strongly' stresses the whole word, not the beat before -ity (the rule taught in L1021-1024); bare 'ity' is misread by TTS"
+  },
+  {
+    "lesson": 1035,
+    "path": "teacher.segments[10].say",
+    "before": "Coexist. Co means together. Live together. Security. Make CU strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
+    "after": "Coexist. Co means together. Live together. Security. Make the second beat strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
+    "reviewers": "B+C",
+    "reason": "TTS may spell 'CU' as 'C U' (see you); say which beat is strong instead"
+  },
+  {
+    "lesson": 1035,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Coexist. Co means together. Live together. Security. Make CU strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
+    "after": "Coexist. Co means together. Live together. Security. Make the second beat strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
+    "reviewers": "B+C",
+    "reason": "TTS may spell 'CU' as 'C U' (see you); say which beat is strong instead"
+  },
+  {
+    "lesson": 1035,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "coexist。co は「いっしょに」。いっしょに くらす。security。CU を つよく。セ・キュ・リ・ティ。あなたの ばん！ interview。coexist。security。",
+    "after": "coexist。co は「いっしょに」。いっしょに くらす。security。2つめの キュを つよく。セ・キュ・リ・ティ。あなたの ばん！ interview。coexist。security。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1035,
+    "path": "teacher.segments[3].subtitleJa",
+    "before": "audience。きいて いる 人たち。見て、みんな あなたに にっこり して いるよ！ ちょうしゅう！",
+    "after": "audience。きいて いる 人たち。見て、みんな あなたに にっこり して いるよ！ きいて いる 人たち！",
+    "reviewers": "objective (JA)",
+    "reason": "'ちょうしゅう' (聴衆) in hiragana is opaque to kids; use the vocab gloss きいて いる 人たち"
+  },
+  {
+    "lesson": 1035,
+    "path": "teacher.segments[6].say",
+    "before": "Riko stands up. I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
+    "after": "Riko stands up. She says, I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
+    "reviewers": "A+C",
+    "reason": "no speaker tag, so the line sounds like Ms. Emma's own words"
+  },
+  {
+    "lesson": 1035,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Riko stands up. I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
+    "after": "Riko stands up. She says, I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
+    "reviewers": "A+C",
+    "reason": "no speaker tag, so the line sounds like Ms. Emma's own words"
+  },
+  {
+    "lesson": 1036,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "こんにちは、みんな！ まえの かいは、リコちゃんが すてきな 発表を して、3まいめの 金の 葉っぱが はえたね。きょうは とくべつな お客さんが くるよ。大きな えがおと あかい スカーフ！",
+    "after": "こんにちは、みんな！ まえの かいは、リコちゃんが すてきな 発表を して、3まいめの 金の 葉っぱが はえたね。きょうは とくべつな お客さんが くるよ。大きな えがおと あかい マフラー！",
+    "reviewers": "objective (JA)",
+    "reason": "L1040 (vocab red scarf, seg0, seg5 'So warm!') and L1050 call it マフラー; keep one word"
+  },
+  {
+    "lesson": 1036,
+    "path": "teacher.segments[5].say",
+    "before": "Ticket gate. At the station, you touch your card here. Beep! Ticket gate!",
+    "after": "Ticket gate. At the station, you tap your card here. Beep! Ticket gate!",
+    "reviewers": "A+B",
+    "reason": "US English 'tap your card' (touch = タッチ calque)"
+  },
+  {
+    "lesson": 1036,
+    "path": "teacher.segments[5].subtitleEn",
+    "before": "Ticket gate. At the station, you touch your card here. Beep! Ticket gate!",
+    "after": "Ticket gate. At the station, you tap your card here. Beep! Ticket gate!",
+    "reviewers": "A+B",
+    "reason": "US English 'tap your card' (touch = タッチ calque)"
+  },
+  {
+    "lesson": 1036,
+    "path": "teacher.segments[10].say",
+    "before": "Spell them in chunks. Re, c, ei, ve. Receive. Re, qu, est. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
+    "after": "Spell them. R, e, c, e, i, v, e. Receive. R, e, q, u, e, s, t. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
+    "reviewers": "B+C",
+    "reason": "bare chunks 're', 'ei', 've', 'qu', 'est' are misread by TTS; spell letters as the teacherScript does"
+  },
+  {
+    "lesson": 1036,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Spell them in chunks. Re, c, ei, ve. Receive. Re, qu, est. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
+    "after": "Spell them. R, e, c, e, i, v, e. Receive. R, e, q, u, e, s, t. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
+    "reviewers": "B+C",
+    "reason": "bare chunks 're', 'ei', 've', 'qu', 'est' are misread by TTS; spell letters as the teacherScript does"
+  },
+  {
+    "lesson": 1036,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "かたまりで つづろう。re、c、ei、ve。receive。re、qu、est。request。友だちとは kids や get で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ children。receive。request。",
+    "after": "つづって みよう。r、e、c、e、i、v、e。receive。r、e、q、u、e、s、t。request。友だちとは kids や get で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ children。receive。request。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[4].say",
+    "before": "Sticky note. A small paper that sticks. Write, peel, stick! Sticky note!",
+    "after": "Sticky note. A small piece of paper that sticks. Write, peel, stick! Sticky note!",
+    "reviewers": "objective",
+    "reason": "paper (the material) is uncountable: 'a small piece of paper'"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[4].subtitleEn",
+    "before": "Sticky note. A small paper that sticks. Write, peel, stick! Sticky note!",
+    "after": "Sticky note. A small piece of paper that sticks. Write, peel, stick! Sticky note!",
+    "reviewers": "objective",
+    "reason": "paper (the material) is uncountable: 'a small piece of paper'"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[9].say",
+    "before": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. Two s's. A, s-s, ist.",
+    "after": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. It has a double s. A, s, s, i, s, t.",
+    "reviewers": "B+C",
+    "reason": "'s-s' and bare 'ist' are misread by TTS; spell the letters as the teacherScript does"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. Two s's. A, s-s, ist.",
+    "after": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. It has a double s. A, s, s, i, s, t.",
+    "reviewers": "B+C",
+    "reason": "'s-s' and bare 'ist' are misread by TTS; spell the letters as the teacherScript does"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "ことばの じかん！ かんばんや お店で 見る かしこまった ことば。buy は purchase に。PUR を つよく。パー・チェス。help は assist に。s が 2つ。a、s-s、ist。",
+    "after": "ことばの じかん！ かんばんや お店で 見る かしこまった ことば。buy は purchase に。PUR を つよく。パー・チェス。help は assist に。s が 2つ。a、s、s、i、s、t。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[10].say",
+    "before": "Give becomes provide. Pro, vide. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
+    "after": "Give becomes provide. It rhymes with ride. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
+    "reviewers": "B+C",
+    "reason": "bare 'vide' is misread by TTS (veed); a rhyme word carries the sound"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Give becomes provide. Pro, vide. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
+    "after": "Give becomes provide. It rhymes with ride. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
+    "reviewers": "B+C",
+    "reason": "bare 'vide' is misread by TTS (veed); a rhyme word carries the sound"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "give は provide に。pro、vide。provide。友だちとは buy、help、give で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ purchase。assist。provide。",
+    "after": "give は provide に。ride と おなじ ひびき。provide。友だちとは buy、help、give で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ purchase。assist。provide。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Make a new idea for your town. How about making... What's your idea?",
+    "after": "Your turn! Think of a new idea for your town. How about making... What's your idea?",
+    "reviewers": "A+B",
+    "reason": "'make an idea' is a calque of アイデアを つくる; 'think of an idea' is natural"
+  },
+  {
+    "lesson": 1037,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Make a new idea for your town. How about making... What's your idea?",
+    "after": "Your turn! Think of a new idea for your town. How about making... What's your idea?",
+    "reviewers": "A+B",
+    "reason": "'make an idea' is a calque of アイデアを つくる; 'think of an idea' is natural"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[9].say",
+    "before": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. Re, qu, ire.",
+    "after": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. R, e, q, u, i, r, e.",
+    "reviewers": "B+C",
+    "reason": "bare 're', 'qu', 'ire' are misread by TTS; spell the letters as the teacherScript does"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. Re, qu, ire.",
+    "after": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. R, e, q, u, i, r, e.",
+    "reviewers": "B+C",
+    "reason": "bare 're', 'qu', 'ire' are misread by TTS; spell the letters as the teacherScript does"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "ことばの じかん！ かんばんや おしらせの かしこまった ことば。maybe は perhaps に。HAPS を つよく。パ・ハップス。need は require に。re、qu、ire。",
+    "after": "ことばの じかん！ かんばんや おしらせの かしこまった ことば。maybe は perhaps に。HAPS を つよく。パ・ハップス。need は require に。r、e、q、u、i、r、e。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[10].say",
+    "before": "Fix becomes repair. Re, pair. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
+    "after": "Fix becomes repair. re-PAIR. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
+    "reviewers": "B+C",
+    "reason": "bare 'Re' is misread (ree / ray); hyphen beat form shows the stress, like per-HAPS"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Fix becomes repair. Re, pair. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
+    "after": "Fix becomes repair. re-PAIR. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
+    "reviewers": "B+C",
+    "reason": "bare 'Re' is misread (ree / ray); hyphen beat form shows the stress, like per-HAPS"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "fix は repair に。re、pair。友だちとは maybe、need、fix で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ perhaps。require。repair。",
+    "after": "fix は repair に。re-PAIR。友だちとは maybe、need、fix で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ perhaps。require。repair。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Your friend wants soccer, and you want art. What if we...? Find a fair plan!",
+    "after": "Your turn! Your friend wants to play soccer, and you want to draw. What if we...? Find a fair plan!",
+    "reviewers": "A+C",
+    "reason": "'wants soccer / want art' is clipped and unnatural; JA already says おえかきが したい"
+  },
+  {
+    "lesson": 1038,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Your friend wants soccer, and you want art. What if we...? Find a fair plan!",
+    "after": "Your turn! Your friend wants to play soccer, and you want to draw. What if we...? Find a fair plan!",
+    "reviewers": "A+C",
+    "reason": "'wants soccer / want art' is clipped and unnatural; JA already says おえかきが したい"
+  },
+  {
+    "lesson": 1039,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Let's find a compromise. Leo and Amara were so happy with the garden and the small playground. Now, the council has many ideas, but Mayor Hart is coming back tomorrow, and we can present only one proposal. How can we choose fairly? Olive says, Let's vote! There are twenty children on the council. Each child writes one idea on a card and puts it in the ballot box. Then Riko and Leo count the votes, and Kiko writes the results on the board. Let's read the results. \"Children's Council Vote Results. Twenty children voted today. The visitor map got twelve votes. The flowers at the station got five votes. A new bench by the pond got three votes. Twelve out of twenty is more than half, so the majority voted for the visitor map. We will present the map idea to Mayor Hart tomorrow. Thank you, everyone, for sharing your ideas and voting kindly.\" How many votes did the bench get? Three. Did the majority vote for the map? Yes, because twelve out of twenty is more than half. Haru reports the result. Twelve people voted for the idea. Say it with me. Twelve people voted for the idea. Perfect! Kiko voted for the flowers. She says, I'm a little sad, but the map is a great idea, too. Olive says, Thank you, Kiko. Accepting the result is a big part of voting. And perhaps the flowers can be our next idea! Now, phonics. More formal words. Tell becomes inform. Bike becomes bicycle. Bi means two, and cycle means wheel, so a bicycle has two wheels. Photo becomes photograph. P, h makes the f sound. Next time, we will present our proposal to Mayor Hart in the great hall!",
+    "after": "Hello, everyone! Last time, we said, Let's find a compromise. Leo and Amara were so happy with the garden and the small playground. Now, the council has many ideas, but Mayor Hart is coming back tomorrow, and we can present only one proposal. How can we choose fairly? Olive says, Let's vote! There are twenty children on the council. Each child writes one idea on a card and puts it in the ballot box. Then Riko and Priya count the votes, and Kiko writes the results on the board. Let's read the results. \"Children's Council Vote Results. Twenty children voted today. The visitor map got twelve votes. The flowers at the station got five votes. A new bench by the pond got three votes. Twelve out of twenty is more than half, so the majority voted for the visitor map. We will present the map idea to Mayor Hart tomorrow. Thank you, everyone, for sharing your ideas and voting kindly.\" How many votes did the bench get? Three. Did the majority vote for the map? Yes, because twelve out of twenty is more than half. Haru reports the result. Twelve people voted for the idea. Say it with me. Twelve people voted for the idea. Perfect! Kiko voted for the flowers. She says, I'm a little sad, but the map is a great idea, too. Olive says, Thank you, Kiko. Accepting the result is a big part of voting. And perhaps the flowers can be our next idea! Now, phonics. More formal words. Tell becomes inform. Bike becomes bicycle. Bi means two, and cycle means wheel, so a bicycle has two wheels. Photo becomes photograph. P, h makes the f sound. Next time, we will present our proposal to Mayor Hart in the great hall!",
+    "reviewers": "objective",
+    "reason": "story contradiction: the AI Leo says 'I was outside, so I missed the vote'"
+  },
+  {
+    "lesson": 1039,
+    "path": "teacher.segments[2].say",
+    "before": "Vote. You choose one idea. Me! This one! Vote!",
+    "after": "Vote. You choose one idea. I pick this one! Vote!",
+    "reviewers": "A+C",
+    "reason": "'Me!' does not fit choosing an idea and reads choppy"
+  },
+  {
+    "lesson": 1039,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Vote. You choose one idea. Me! This one! Vote!",
+    "after": "Vote. You choose one idea. I pick this one! Vote!",
+    "reviewers": "A+C",
+    "reason": "'Me!' does not fit choosing an idea and reads choppy"
+  },
+  {
+    "lesson": 1039,
+    "path": "teacher.segments[2].subtitleJa",
+    "before": "vote。アイデアを ひとつ えらぶ こと。わたし！ これ！ とうひょう！",
+    "after": "vote。アイデアを ひとつ えらぶ こと。これに する！ とうひょう！",
+    "reviewers": "A+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1039,
+    "path": "teacher.segments[10].say",
+    "before": "Bicycle has two c's. Bi, c, y, c, le. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
+    "after": "Bicycle has two c's. B, i, c, y, c, l, e. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
+    "reviewers": "B+C",
+    "reason": "bare 'le' is misread by TTS; spell all letters"
+  },
+  {
+    "lesson": 1039,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Bicycle has two c's. Bi, c, y, c, le. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
+    "after": "Bicycle has two c's. B, i, c, y, c, l, e. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
+    "reviewers": "B+C",
+    "reason": "bare 'le' is misread by TTS; spell all letters"
+  },
+  {
+    "lesson": 1039,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "bicycle には c が 2つ。bi、c、y、c、le。photo は photograph に。ph は f の 音。どちらも ただしい 英語だよ！ あなたの ばん！ inform。bicycle。photograph。",
+    "after": "bicycle には c が 2つ。b、i、c、y、c、l、e。photo は photograph に。ph は f の 音。どちらも ただしい 英語だよ！ あなたの ばん！ inform。bicycle。photograph。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1040,
+    "path": "school.expressions[2].ja",
+    "before": "かわりに 電話を つかえば いいのでは？ ― 言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。",
+    "after": "かわりに スマホを つかえば いいのでは？ ― 言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。",
+    "reviewers": "objective (JA)",
+    "reason": "電話 to a Japanese child means a telephone, which makes no sense instead of a map; US 'phone' here = smartphone (スマホ)"
+  },
+  {
+    "lesson": 1040,
+    "path": "conversation.lines[3].ja",
+    "before": "なるほど。でも かわりに 電話を つかえば いいのでは？",
+    "after": "なるほど。でも かわりに スマホを つかえば いいのでは？",
+    "reviewers": "objective (JA)",
+    "reason": "電話 to a Japanese child means a telephone, which makes no sense instead of a map; US 'phone' here = smartphone (スマホ)"
+  },
+  {
+    "lesson": 1040,
+    "path": "conversation.lines[4].ja",
+    "before": "言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。",
+    "after": "言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。",
+    "reviewers": "objective (JA)",
+    "reason": "電話 to a Japanese child means a telephone, which makes no sense instead of a map; US 'phone' here = smartphone (スマホ)"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "ハート市長が きくよ。「かわりに 電話を つかえば いいのでは？」 キコちゃん「言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。」",
+    "after": "ハート市長が きくよ。「かわりに スマホを つかえば いいのでは？」 キコちゃん「言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。」",
+    "reviewers": "objective (JA)",
+    "reason": "電話 to a Japanese child means a telephone, which makes no sense instead of a map; US 'phone' here = smartphone (スマホ)"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[16].subtitleJa",
+    "before": "「言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。」",
+    "after": "「言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。」",
+    "reviewers": "objective (JA)",
+    "reason": "電話 to a Japanese child means a telephone, which makes no sense instead of a map; US 'phone' here = smartphone (スマホ)"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[18].subtitleJa",
+    "before": "クイズ！「電話を つかえば？」 やさしい こたえは どっち？ A、ちがう、まちがってる！ B、言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。かんがえて！",
+    "after": "クイズ！「スマホを つかえば？」 やさしい こたえは どっち？ A、ちがう、まちがってる！ B、言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。かんがえて！",
+    "reviewers": "objective (JA)",
+    "reason": "電話 to a Japanese child means a telephone, which makes no sense instead of a map; US 'phone' here = smartphone (スマホ)"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[3].say",
+    "before": "Podium. A stand where a speaker stands. Step up, and speak! Podium!",
+    "after": "Podium. The place where a speaker stands. Step up, and speak! Podium!",
+    "reviewers": "A+C",
+    "reason": "'a stand where ... stands' repeats stand and is clumsy to say"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Podium. A stand where a speaker stands. Step up, and speak! Podium!",
+    "after": "Podium. The place where a speaker stands. Step up, and speak! Podium!",
+    "reviewers": "A+C",
+    "reason": "'a stand where ... stands' repeats stand and is clumsy to say"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[9].say",
+    "before": "Sound review! Receive. After c, e comes before i. Re, c, ei, ve. Did you say Tuesday? No, I said THURSDAY!",
+    "after": "Sound review! Receive. After c, e comes before i. R, e, c, e, i, v, e. Did you say Tuesday? No, I said THURSDAY!",
+    "reviewers": "B+C",
+    "reason": "bare 're', 'ei', 've' are misread by TTS; spell the letters (as L1036 now does)"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound review! Receive. After c, e comes before i. Re, c, ei, ve. Did you say Tuesday? No, I said THURSDAY!",
+    "after": "Sound review! Receive. After c, e comes before i. R, e, c, e, i, v, e. Did you say Tuesday? No, I said THURSDAY!",
+    "reviewers": "B+C",
+    "reason": "bare 're', 'ei', 've' are misread by TTS; spell the letters (as L1036 now does)"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの ふりかえり！ receive。c の あとは e が さき、i が あと。re、c、ei、ve。「火曜日って いった？」「ううん、木曜日って いったの！」",
+    "after": "おとの ふりかえり！ receive。c の あとは e が さき、i が あと。r、e、c、e、i、v、e。「火曜日って いった？」「ううん、木曜日って いったの！」",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1040,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Twelve people voted for the idea. Today is the big day. Mayor Hart sits in the round meeting hall, with her big smile and her red scarf. The Children's Council is ready. We worked on the map all week. Amara drew the pictures, Leo checked the walking times, and Priya wrote the words. Haru, Riko, Kiko, and Birimo walk to the podium. Haru begins. Our proposal is to make a map for visitors. It will help people find their way. Say it with me. Our proposal is to make a map for visitors. It will help people find their way. Excellent! Let's read our proposal. \"The Children's Proposal for Willowford. Many visitors get lost when they arrive at Willowford Station. Our proposal is to make a free map for visitors. It will show the library, the park, the Hall of Wisdom, and the new garden. The map will have pictures, so even small children can read it. We also suggest that the town put a big map board outside the station. Thank you for listening.\" Why will the map have pictures? So even small children can read it. Where should the big map board go? Outside the station. Mayor Hart asks, Why not use a phone instead? Kiko answers, I see your point, but not everyone has a phone. Mayor Hart laughs and says, That's a very good answer. Yes! We will make your map! Everyone cheers, and the applause is very loud. Then the Tree of Voices glows, and a fourth golden leaf grows! Now, phonics. Let's review. Receive. After c, write e before i. Did you say Tuesday? No, I said THURSDAY. Interact. Inter means each other, so interact means act with each other. Reality. Real plus ity. Next time, Amara has a big question about animals!",
+    "after": "Hello, everyone! Last time, we said, Twelve people voted for the idea. Today is the big day. Mayor Hart sits in the round meeting hall, with her big smile and her red scarf. The Children's Council is ready. We worked on the map all week. Amara drew the pictures, Leo checked the walking times, and Priya wrote the words. Haru, Riko, Kiko, and Birimo walk to the podium. Haru begins. Our proposal is to make a map for visitors. It will help people find their way. Say it with me. Our proposal is to make a map for visitors. It will help people find their way. Excellent! Let's read our proposal. \"The Children's Proposal for Willowford. Many visitors get lost when they arrive at Willowford Station. Our proposal is to make a free map for visitors. It will show the library, the park, the Hall of Wisdom, and the new garden. The map will have pictures, so even small children can read it. We also suggest that the town put a big map board outside the station. Thank you for listening.\" Why will the map have pictures? So even small children can read it. Where should the big map board go? Outside the station. Mayor Hart asks, Why not use a phone instead? Kiko answers, I see your point, but not everyone has a phone. Mayor Hart laughs and says, That's a very good answer. Yes! We will make your map! Everyone cheers, and the applause is very loud. Then the Tree of Voices glows, and a fourth golden leaf grows! Now, phonics. Let's review. Receive. After c, write e before i. Did you say Tuesday? No, I said THURSDAY. Interact. Inter means each other, so interact means act with each other. Reality. Real plus i, t, y. Next time, Amara has a big question about animals!",
+    "reviewers": "B+C",
+    "reason": "bare 'ity' is misread by TTS; spell the letters"
+  }
+]

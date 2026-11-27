@@ -6,6 +6,7 @@
     {
       "lessonNo": 1021,
       "world": 35,
+      "reviewed": "run9",
       "title": "The Hall of Wisdom",
       "titleJa": "ちえの議事堂",
       "school": {
@@ -96,7 +97,7 @@
           "emoji": "🌳"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Traveling is the best way to learn! Skye flies with us part of the way, then waves goodbye. We walk with Ms. Emma into a town called Willowford. Look! There's a big old building with a round green roof and wide stone steps. It's the Hall of Wisdom! Inside, there is a round meeting hall with seats in a circle. A barn owl with round glasses flies down, holding a small wooden bell. Ding! She says, Welcome! I'm Olive, the chairperson of the Children's Council. Every voice matters! Birimo whispers, What is a council? Ms. Emma says, It's a group that meets to share ideas and decide things together. Olive says, Children from many places meet here to talk. Say it with me. Children from many places meet here to talk. Wonderful! In the center, an old tree grows indoors with six empty branches. Olive says, This is the Tree of Voices. When children share ideas kindly and listen well, a golden leaf grows. Let's read the sign by the door. \"Welcome to the Hall of Wisdom! Here, children from many places meet to talk about things that matter to them. At the Children's Council, everyone can speak, and everyone listens. You may agree, or you may disagree, but please be kind. Raise your hand when you want to speak, and wait for your turn. Remember, good listeners make good speakers. Every voice matters!\" When do you raise your hand? When you want to speak. Who makes a good speaker? A good listener. Then we meet three new friends. Leo is from a mountain town and loves soccer. Amara is from a seaside village and loves animals. Priya is from a big city and loves books. Now, phonics. Ity makes a noun. Equal becomes equality. Diverse, drop the e, becomes diversity. Curious changes ous to os: curiosity. Say the part before ity strongly. e-QUAL-i-ty, di-VER-si-ty, cu-ri-OS-i-ty. Next time, the council talks about school uniforms!",
+      "teacherScript": "Hello, everyone! Last time, we said, Traveling is the best way to learn! Skye flies with us part of the way, then waves goodbye. We walk into a town called Willowford. Look! There's a big old building with a round green roof and wide stone steps. It's the Hall of Wisdom! Inside, there is a round meeting hall with seats in a circle. A barn owl with round glasses flies down, holding a small wooden bell. Ding! She says, Welcome! I'm Olive, the chairperson of the Children's Council. Every voice matters! Birimo whispers, What is a council? I say, It's a group that meets to share ideas and decide things together. Olive says, Children from many places meet here to talk. Say it with me. Children from many places meet here to talk. Wonderful! In the center, an old tree grows indoors with six empty branches. Olive says, This is the Tree of Voices. When children share ideas kindly and listen well, a golden leaf grows. Let's read the sign by the door. \"Welcome to the Hall of Wisdom! Here, children from many places meet to talk about things that matter to them. At the Children's Council, everyone can speak, and everyone listens. You may agree, or you may disagree, but please be kind. Raise your hand when you want to speak, and wait for your turn. Remember, good listeners make good speakers. Every voice matters!\" When do you raise your hand? When you want to speak. Who makes a good speaker? A good listener. Then we meet three new friends. Leo is from a mountain town and loves soccer. Amara is from a seaside village and loves animals. Priya is from a big city and loves books. Now, phonics. Adding i, t, y makes a noun. Equal becomes equality. Diverse, drop the e, becomes diversity. Curious changes o, u, s to o, s: curiosity. Say the part before i, t, y strongly. e-QUAL-i-ty, di-VER-si-ty, cu-ri-OS-i-ty. Next time, the council talks about school uniforms!",
       "conversation": {
         "scene": "Arriving at the Hall of Wisdom and meeting Olive in the round meeting hall",
         "sceneJa": "ちえの議事堂に ついて、まるい かいぎの ホールで オリーブに あう",
@@ -139,7 +140,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブに ちえの議事堂の かんそうを つたえよう。オリーブが Why? と きくので、I think ～ because ～. で 理由も 言おう。ほんとうの なまえや じゅうしょは いわなくて いいよ（ものがたりの なまえで いいよ）",
-          "starterEn": "Ding! Welcome to the Hall of Wisdom! I'm Olive. Children from many places meet here to talk. What do you think of our round meeting hall? Why?",
+          "starterEn": "Let's pretend I'm Olive, the chairperson of the Children's Council. Ding! Welcome to the Hall of Wisdom! Children from many places meet here to talk. What do you think of our round meeting hall? Why?",
           "targetExpressions": [
             "Children from many places meet here to talk.",
             "Welcome to the Hall of Wisdom! ― Thank you for inviting us!",
@@ -303,9 +304,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Add ity to make a thing word. Equal, equality. Diverse, drop the e, diversity. Curious, curiosity.",
+            "say": "Sound time! Add i, t, y to make a thing word. Equal, equality. Diverse, drop the e, diversity. Curious, curiosity.",
             "subtitleJa": "おとの じかん！ ity を つけると「〜な こと」と いう ことばに なるよ。equal から equality。diverse は e を とって diversity。curious から curiosity。",
-            "subtitleEn": "Sound time! Add ity to make a thing word. Equal, equality. Diverse, drop the e, diversity. Curious, curiosity.",
+            "subtitleEn": "Sound time! Add i, t, y to make a thing word. Equal, equality. Diverse, drop the e, diversity. Curious, curiosity.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -322,9 +323,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Make the part before ity strong. Clap it! e-QUAL-i-ty. di-VER-si-ty. cu-ri-OS-i-ty. Your turn!",
+            "say": "Make the part before i, t, y strong. Clap it! e-QUAL-i-ty. di-VER-si-ty. cu-ri-OS-i-ty. Your turn!",
             "subtitleJa": "ity の すぐ まえを つよく いおう。手を たたいて！ e-QUAL-i-ty。di-VER-si-ty。cu-ri-OS-i-ty。あなたの ばん！",
-            "subtitleEn": "Make the part before ity strong. Clap it! e-QUAL-i-ty. di-VER-si-ty. cu-ri-OS-i-ty. Your turn!",
+            "subtitleEn": "Make the part before i, t, y strong. Clap it! e-QUAL-i-ty. di-VER-si-ty. cu-ri-OS-i-ty. Your turn!",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -510,6 +511,7 @@
     {
       "lessonNo": 1022,
       "world": 35,
+      "reviewed": "run9",
       "title": "Should Students Wear Uniforms?",
       "titleJa": "せいふくは ひつよう？",
       "school": {
@@ -600,7 +602,7 @@
           "emoji": "😌"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Children from many places meet here to talk. This morning, twenty council children sit in the big circle. We sit with Ms. Emma, and Birimo is so excited that he can't stop wiggling. Olive rings her little wooden bell. Ding! She says, Good morning, everyone! Here is our first question. Should students wear uniforms? Say it with me. Should students wear uniforms? Great! Olive says, There is no wrong answer. Let's listen to both sides. Leo raises his hand first. Then Priya raises her hand. Let's read what they said. \"Leo says: At my school, we all wear uniforms. I think uniforms are good because everyone looks the same, so nobody feels bad about their clothes. Getting ready in the morning is quick, too. Priya says: My school doesn't have uniforms. I think choosing our own clothes is better because it shows our personality and creativity. Also, uniforms can cost a lot, and they are not always comfortable.\" Why does Leo like uniforms? Because nobody feels bad about their clothes, and the mornings are quick. What can our clothes show, according to Priya? Our personality. Now, here is a fun question. Leo's school has uniforms. Is that a fact or an opinion? It's a fact, because we can check it. Uniforms are better than our own clothes. Is that a fact or an opinion? It's an opinion, because people think differently. Amara says, I see your point, Leo, but I like choosing my own clothes. Leo smiles and says, That's fine! We can think differently and still be friends. Olive says, Thank you both. You disagreed so politely! Now, phonics. Today's words end in ity, too. Personal becomes personality. Creative, drop the e, becomes creativity. Similar becomes similarity. Say the part before ity strongly. per-son-AL-i-ty, cre-a-TIV-i-ty, sim-i-LAR-i-ty. Next time, Amara asks the council a new question: should we have longer breaks?",
+      "teacherScript": "Hello, everyone! Last time, we said, Children from many places meet here to talk. This morning, twenty council children sit in the big circle. We sit together, and Birimo is so excited that he can't stop wiggling. Olive rings her little wooden bell. Ding! She says, Good morning, everyone! Here is our first question. Should students wear uniforms? Say it with me. Should students wear uniforms? Great! Olive says, There is no wrong answer. Let's listen to both sides. Leo raises his hand first. Then Priya raises her hand. Let's read what they said. \"Leo says: At my school, we all wear uniforms. I think uniforms are good because everyone looks the same, so nobody feels bad about their clothes. Getting ready in the morning is quick, too. Priya says: My school doesn't have uniforms. I think choosing our own clothes is better because it shows our personality and creativity. Also, uniforms can cost a lot, and they are not always comfortable.\" Why does Leo like uniforms? Because nobody feels bad about their clothes, and the mornings are quick. What can our clothes show, according to Priya? Our personality. Now, here is a fun question. Leo's school has uniforms. Is that a fact or an opinion? It's a fact, because we can check it. Uniforms are better than our own clothes. Is that a fact or an opinion? It's an opinion, because people think differently. Amara says, I see your point, Leo, but I like choosing my own clothes. Leo smiles and says, That's fine! We can think differently and still be friends. Olive says, Thank you both. You disagreed so politely! Now, phonics. Today's words end in i, t, y, too. Personal becomes personality. Creative, drop the e, becomes creativity. Similar becomes similarity. Say the part before i, t, y strongly. per-son-AL-i-ty, cre-a-TIV-i-ty, sim-i-LAR-i-ty. Next time, Amara asks the council a new question: should we have longer breaks?",
       "conversation": {
         "scene": "The council's first question about school uniforms",
         "sceneJa": "こども議会の さいしょの 話題。せいふくは ひつよう？",
@@ -643,7 +645,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の プリヤ（せいふくの ない 学校）と せいふくに ついて 話そう。プリヤが Why? や Can you give me an example? と きくので、I think ～ because ～. で 理由と れいを 言おう。ちがう 意見なら I see your point, but ～. で ていねいに",
-          "starterEn": "Hi, I'm Priya! At my school, we choose our own clothes. Should students wear uniforms? What do you think? Why?",
+          "starterEn": "Let's pretend I'm Priya. At my school, we choose our own clothes. Should students wear uniforms? What do you think? Why?",
           "targetExpressions": [
             "Should students wear uniforms?",
             "I think uniforms are good because we feel like one team.",
@@ -664,9 +666,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, everyone! Last time, we met Olive at the Hall of Wisdom. Today, twenty children sit in the big circle. Ding! Here comes the first council question!",
-            "subtitleJa": "みんな、おはよう！ まえの かいは ちえの ぎじどうで オリーブに あったね。きょうは 二十人の 子どもたちが 大きな わに なって すわって いるよ。チリン！ ぎかいの さいしょの しつもんだよ！",
-            "subtitleEn": "Good morning, everyone! Last time, we met Olive at the Hall of Wisdom. Today, twenty children sit in the big circle. Ding! Here comes the first council question!",
+            "say": "Hi, everyone! Last time, we met Olive at the Hall of Wisdom. Today, twenty children sit in the big circle. Ding! Here comes the first council question!",
+            "subtitleJa": "みんな、やあ！ まえの かいは ちえの ぎじどうで オリーブに あったね。きょうは 二十人の 子どもたちが 大きな わに なって すわって いるよ。チリン！ ぎかいの さいしょの しつもんだよ！",
+            "subtitleEn": "Hi, everyone! Last time, we met Olive at the Hall of Wisdom. Today, twenty children sit in the big circle. Ding! Here comes the first council question!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -807,9 +809,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! More ity words. Personal, personality. Creative, drop the e, creativity. Similar, similarity.",
+            "say": "Sound time! More words with i, t, y. Personal, personality. Creative, drop the e, creativity. Similar, similarity.",
             "subtitleJa": "おとの じかん！ ity の ことばを もっと。personal から personality。creative は e を とって creativity。similar から similarity。",
-            "subtitleEn": "Sound time! More ity words. Personal, personality. Creative, drop the e, creativity. Similar, similarity.",
+            "subtitleEn": "Sound time! More words with i, t, y. Personal, personality. Creative, drop the e, creativity. Similar, similarity.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -826,9 +828,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "The beat is strong right before ity. Clap it! per-son-AL-i-ty. cre-a-TIV-i-ty. sim-i-LAR-i-ty. Now you!",
+            "say": "The beat is strong right before i, t, y. Clap it! per-son-AL-i-ty. cre-a-TIV-i-ty. sim-i-LAR-i-ty. Now you!",
             "subtitleJa": "ity の すぐ まえが つよいよ。手を たたこう！ per-son-AL-i-ty。cre-a-TIV-i-ty。sim-i-LAR-i-ty。こんどは あなた！",
-            "subtitleEn": "The beat is strong right before ity. Clap it! per-son-AL-i-ty. cre-a-TIV-i-ty. sim-i-LAR-i-ty. Now you!",
+            "subtitleEn": "The beat is strong right before i, t, y. Clap it! per-son-AL-i-ty. cre-a-TIV-i-ty. sim-i-LAR-i-ty. Now you!",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -947,9 +949,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! What do you think? I think uniforms are good because mornings are quick. Or, I like my own clothes because they are comfortable.",
+            "say": "Your turn! What do you think? I think uniforms are good because mornings are quick. Or I like my own clothes because they are comfortable.",
             "subtitleJa": "あなたの ばん！ あなたは どう 思う？「せいふくは いいと 思う。だって あさが はやいから。」 それとも「じぶんの ふくが すき。だって きごこちが いいから。」",
-            "subtitleEn": "Your turn! What do you think? I think uniforms are good because mornings are quick. Or, I like my own clothes because they are comfortable.",
+            "subtitleEn": "Your turn! What do you think? I think uniforms are good because mornings are quick. Or I like my own clothes because they are comfortable.",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -981,9 +983,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's an opinion! Some people think so, and some don't. Both are OK. Brilliant!",
+            "say": "It's an opinion! Some people think so, and some don't. Both are OK. Great job!",
             "subtitleJa": "こたえは いけん！ そう 思う 人も いれば、思わない 人も いる。どちらも オーケー。すばらしい！",
-            "subtitleEn": "It's an opinion! Some people think so, and some don't. Both are OK. Brilliant!",
+            "subtitleEn": "It's an opinion! Some people think so, and some don't. Both are OK. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -1016,6 +1018,7 @@
     {
       "lessonNo": 1023,
       "world": 35,
+      "reviewed": "run9",
       "title": "Longer Breaks?",
       "titleJa": "休み時間を ながく する？",
       "school": {
@@ -1101,12 +1104,12 @@
           "emoji": "🎯"
         },
         {
-          "en": "timetable",
+          "en": "schedule",
           "ja": "じかんわり",
           "emoji": "🗓️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Should students wear uniforms? Today, Olive rings her bell, and Amara raises her hand. She says, At my school, break time is only ten minutes. That's not enough time to go outside and come back! Olive says, Thank you, Amara. Who has an opinion? Remember to give a reason. Haru raises his hand and says, I think we should have longer breaks because we need time to relax. Say it with me. I think we should have longer breaks because we need time to relax. Excellent! An opinion is stronger with a reason and an example. Haru adds, For example, we can play outside and talk with our friends. Then Priya says, I partly agree. But then school will finish later. Both ideas are fair. Olive gives everyone a short article from the Hall's newsletter. Let's read the article. \"Do children need longer breaks? Some people say yes. After a good break, many children can concentrate better in class. Break time is also an important activity, because children make friends, solve small problems, and move their bodies. Other people worry about longer breaks. If breaks are longer, the school day may finish later, or there may be less time for lessons. One possibility is to keep the same timetable but add one long break at lunchtime.\" Why can children concentrate better? Because they had a good break. What is one possibility? One long break at lunchtime. Leo says, I like that idea. Kiko says, Me, too, but let's ask the teachers what they think. Olive smiles and says, Good listeners make good speakers! Now, phonics. Active, drop the e, add ity. Activity. Able changes ble to bil. Ability. Possible changes ble to bil, too. Possibility. Say the part before ity strongly. ac-TIV-i-ty, a-BIL-i-ty, pos-si-BIL-i-ty. Next time, Priya brings the results of a survey about school rules!",
+      "teacherScript": "Hello, everyone! Last time, we said, Should students wear uniforms? Today, Olive rings her bell, and Amara raises her hand. She says, At my school, break time is only ten minutes. That's not enough time to go outside and come back! Olive says, Thank you, Amara. Who has an opinion? Remember to give a reason. Haru raises his hand and says, I think we should have longer breaks because we need time to relax. Say it with me. I think we should have longer breaks because we need time to relax. Excellent! An opinion is stronger with a reason and an example. Haru adds, For example, we can play outside and talk with our friends. Then Priya says, I partly agree. But then school will finish later. Both ideas are fair. Olive gives everyone a short article from the Hall's newsletter. Let's read the article. \"Do children need longer breaks? Some people say yes. After a good break, many children can concentrate better in class. Break time is also an important activity, because children make friends, solve small problems, and move their bodies. Other people worry about longer breaks. If breaks are longer, the school day may finish later, or there may be less time for lessons. One possibility is to keep the same schedule but add one long break at lunchtime.\" Why can children concentrate better? Because they had a good break. What is one possibility? One long break at lunchtime. Leo says, I like that idea. Kiko says, Me, too, but let's ask the teachers what they think. Olive smiles and says, Good listeners make good speakers! Now, phonics. Active, drop the e, add i, t, y. Activity. Able changes b, l, e to b, i, l. Ability. Possible changes b, l, e to b, i, l, too. Possibility. Say the part before i, t, y strongly. ac-TIV-i-ty, a-BIL-i-ty, pos-si-BIL-i-ty. Next time, Priya brings the results of a survey about school rules!",
       "conversation": {
         "scene": "Talking about longer breaks at the Children's Council",
         "sceneJa": "こども議会で 休み時間を ながく するか 話しあう",
@@ -1149,7 +1152,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の アマラと 休み時間に ついて 話そう。アマラが Why? や Can you give me an example? と きくので、I think we should ～ because ～. For example, ～. で こたえよう。べつの 見かたも I partly agree. But ～. で 言って みよう",
-          "starterEn": "Hi, I'm Amara! At my school, break time is only ten minutes. Do you think we should have longer breaks? Why?",
+          "starterEn": "Let's pretend I'm Amara. At my school, break time is only ten minutes. Do you think we should have longer breaks? Why?",
           "targetExpressions": [
             "I think we should have longer breaks because we need time to relax.",
             "For example, we can play outside and talk with our friends.",
@@ -1171,7 +1174,7 @@
             "kind": "greet",
             "lang": "en",
             "say": "Hi, everyone! Last time, we talked about uniforms. Today, Amara raises her hand. At my school, break time is only ten minutes! Hmm. Is that enough?",
-            "subtitleJa": "みんな、やあ！ まえの かいは せいふくに ついて 話したね。きょうは アマラが 手を あげるよ。「わたしの 学校の 休み時間は 十分だけ！」 うーん。それで たりるかな？",
+            "subtitleJa": "みんな、やあ！ まえの かいは せいふくに ついて 話したね。きょうは アマラが 手を あげるよ。「わたしの 学校の 休み時間は 10ぷんだけ！」 うーん。それで たりるかな？",
             "subtitleEn": "Hi, everyone! Last time, we talked about uniforms. Today, Amara raises her hand. At my school, break time is only ten minutes! Hmm. Is that enough?",
             "gesture": "wave",
             "slide": {
@@ -1249,14 +1252,14 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Timetable. It shows when each lesson starts. Math, then music, then lunch! Timetable!",
-            "subtitleJa": "timetable。どの じゅぎょうが いつ はじまるか わかる 表。さんすう、つぎは おんがく、それから おひるごはん！ じかんわり！",
-            "subtitleEn": "Timetable. It shows when each lesson starts. Math, then music, then lunch! Timetable!",
+            "say": "Schedule. It shows when each lesson starts. Math, then music, then lunch! Schedule!",
+            "subtitleJa": "schedule。どの じゅぎょうが いつ はじまるか わかる 表。さんすう、つぎは おんがく、それから おひるごはん！ じかんわり！",
+            "subtitleEn": "Schedule. It shows when each lesson starts. Math, then music, then lunch! Schedule!",
             "gesture": "point",
             "slide": {
               "title": "Words",
               "items": [
-                "timetable"
+                "schedule"
               ],
               "emoji": "🗓️"
             },
@@ -1313,9 +1316,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Active, drop the e, activity. Able, the ble changes to bil, ability. Possible, ble to bil again, possibility.",
+            "say": "Sound time! Active, drop the e, activity. Able, the b, l, e changes to b, i, l, ability. Possible, b, l, e to b, i, l again, possibility.",
             "subtitleJa": "おとの じかん！ active は e を とって activity。able は ble が bil に かわって ability。possible も ble が bil に なって possibility。",
-            "subtitleEn": "Sound time! Active, drop the e, activity. Able, the ble changes to bil, ability. Possible, ble to bil again, possibility.",
+            "subtitleEn": "Sound time! Active, drop the e, activity. Able, the b, l, e changes to b, i, l, ability. Possible, b, l, e to b, i, l again, possibility.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1332,9 +1335,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Strong right before ity. Clap! ac-TIV-i-ty. a-BIL-i-ty. pos-si-BIL-i-ty. Your turn!",
+            "say": "Strong right before i, t, y. Clap! ac-TIV-i-ty. a-BIL-i-ty. pos-si-BIL-i-ty. Your turn!",
             "subtitleJa": "ity の すぐ まえを つよく。手を たたいて！ ac-TIV-i-ty。a-BIL-i-ty。pos-si-BIL-i-ty。あなたの ばん！",
-            "subtitleEn": "Strong right before ity. Clap! ac-TIV-i-ty. a-BIL-i-ty. pos-si-BIL-i-ty. Your turn!",
+            "subtitleEn": "Strong right before i, t, y. Clap! ac-TIV-i-ty. a-BIL-i-ty. pos-si-BIL-i-ty. Your turn!",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -1370,7 +1373,7 @@
             "kind": "tpr",
             "lang": "en",
             "say": "Look at the clock. Ten minutes left! Now count your reasons on your fingers. One, two, three!",
-            "subtitleJa": "とけいを 見て。あと 十分！ こんどは りゆうを ゆびで かぞえて。いち、に、さん！",
+            "subtitleJa": "とけいを 見て。あと 10ぷん！ こんどは りゆうを ゆびで かぞえて。いち、に、さん！",
             "subtitleEn": "Look at the clock. Ten minutes left! Now count your reasons on your fingers. One, two, three!",
             "gesture": "mime",
             "slide": {
@@ -1453,9 +1456,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Make your own idea. I think we should have a longer lunch break because we need time to rest.",
+            "say": "Your turn! Share your own idea. I think we should have a longer lunch break because we need time to rest.",
             "subtitleJa": "あなたの ばん！ じぶんの アイデアを いって みよう。「おひるの 休みを もっと ながく する べきだと 思う。だって やすむ 時間が ひつようだから。」",
-            "subtitleEn": "Your turn! Make your own idea. I think we should have a longer lunch break because we need time to rest.",
+            "subtitleEn": "Your turn! Share your own idea. I think we should have a longer lunch break because we need time to rest.",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -1520,6 +1523,7 @@
     {
       "lessonNo": 1024,
       "world": 35,
+      "reviewed": "run9",
       "title": "School Rules Survey",
       "titleJa": "学校の ルールの アンケート",
       "school": {
@@ -1610,7 +1614,7 @@
           "emoji": "📜"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I think we should have longer breaks because we need time to relax. Today, Priya stands in the middle of the circle with a big sheet of paper. She did a survey! She asked all twenty council children five questions about school rules. Of course, the survey has no names, so nobody had to share private information. Priya says, Here are the results. Most students want to choose their own seats. Say it with me. Most students want to choose their own seats. Great! Most means more than half. When we talk about numbers, we can also say, Fifteen out of twenty. Let's read Priya's survey results. \"School Rules Survey. Twenty council children answered. Fifteen out of twenty want to choose their own seats in class. Twelve want longer breaks. Eight think students should wear uniforms, and twelve do not. Seventeen think phones should stay in our bags during lessons. Only a few students, just two, want more homework! Thank you for answering. Your answers help us understand each other.\" How many children want to choose their own seats? Fifteen out of twenty. How many want more homework? Only two. Leo laughs and says, I'm one of the two! I like homework because it helps me remember. Priya says, That's a fact I didn't know about you! Then Kiko raises her hand. She says, I partly agree with choosing seats, but some people might feel left out. Olive rings her bell gently. She says, That's an important point, Kiko. Rules should be fair for everyone. Now, phonics. Look at the word before ity. Major becomes majority. The majority means more than half. Popular becomes popularity. Responsible changes ble to bil and becomes responsibility. Say the part before ity strongly. ma-JOR-i-ty, pop-u-LAR-i-ty, re-spon-si-BIL-i-ty. Next time, we look at both sides of the uniform question again, and something golden may happen!",
+      "teacherScript": "Hello, everyone! Last time, we said, I think we should have longer breaks because we need time to relax. Today, Priya stands in the middle of the circle with a big sheet of paper. She did a survey! She asked all twenty council children five questions about school rules. Of course, the survey has no names, so nobody had to share private information. Priya says, Here are the results. Most students want to choose their own seats. Say it with me. Most students want to choose their own seats. Great! Most means more than half. When we talk about numbers, we can also say, Fifteen out of twenty. Let's read Priya's survey results. \"School Rules Survey. Twenty council children answered. Fifteen out of twenty want to choose their own seats in class. Twelve want longer breaks. Eight think students should wear uniforms, and twelve do not. Seventeen think phones should stay in our bags during lessons. Only a few students, just two, want more homework! Thank you for answering. Your answers help us understand each other.\" How many children want to choose their own seats? Fifteen out of twenty. How many want more homework? Only two. Leo laughs and says, I'm one of the two! I like homework because it helps me remember. Priya says, That's a fact I didn't know about you! Then Kiko raises her hand. She says, I partly agree with choosing seats, but some people might feel left out. Olive rings her bell gently. She says, That's an important point, Kiko. Rules should be fair for everyone. Now, phonics. Look at the word before i, t, y. Major becomes majority. The majority means more than half. Popular becomes popularity. Responsible changes b, l, e to b, i, l and becomes responsibility. Say the part before i, t, y strongly. ma-JOR-i-ty, pop-u-LAR-i-ty, re-spon-si-BIL-i-ty. Next time, we look at both sides of the uniform question again, and something golden may happen!",
       "conversation": {
         "scene": "Reading Priya's school rules survey results",
         "sceneJa": "プリヤの 学校の ルールの アンケートの 結果を 読む",
@@ -1653,7 +1657,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の プリヤと アンケートの 結果に ついて 話そう。Most students want to ～. / Twelve out of twenty. で 結果を つたえ、プリヤに Why? と きかれたら 理由を 言おう。ほんとうの なまえや じゅうしょは いわなくて いいよ（ものがたりの なまえで いいよ）",
-          "starterEn": "Hi! I'm Priya. Here are my survey results. Fifteen out of twenty children want to choose their own seats. Do you think that's a good rule? Why?",
+          "starterEn": "Let's pretend I'm Priya. Here are my survey results. Fifteen out of twenty children want to choose their own seats. Do you think that's a good rule? Why?",
           "targetExpressions": [
             "Most students want to choose their own seats.",
             "How many students want longer breaks? ― Twelve out of twenty.",
@@ -1817,9 +1821,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Find the word before ity. Major, majority. Popular, popularity. Responsible, ble becomes bil, responsibility.",
+            "say": "Sound time! Find the word before i, t, y. Major, majority. Popular, popularity. Responsible, b, l, e becomes b, i, l, responsibility.",
             "subtitleJa": "おとの じかん！ ity の まえの ことばを 見つけよう。major から majority。popular から popularity。responsible は ble が bil に なって responsibility。",
-            "subtitleEn": "Sound time! Find the word before ity. Major, majority. Popular, popularity. Responsible, ble becomes bil, responsibility.",
+            "subtitleEn": "Sound time! Find the word before i, t, y. Major, majority. Popular, popularity. Responsible, b, l, e becomes b, i, l, responsibility.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1836,9 +1840,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Strong right before ity. Clap! ma-JOR-i-ty. pop-u-LAR-i-ty. re-spon-si-BIL-i-ty. Now you!",
+            "say": "Strong right before i, t, y. Clap! ma-JOR-i-ty. pop-u-LAR-i-ty. re-spon-si-BIL-i-ty. Now you!",
             "subtitleJa": "ity の すぐ まえを つよく。手を たたいて！ ma-JOR-i-ty。pop-u-LAR-i-ty。re-spon-si-BIL-i-ty。こんどは あなた！",
-            "subtitleEn": "Strong right before ity. Clap! ma-JOR-i-ty. pop-u-LAR-i-ty. re-spon-si-BIL-i-ty. Now you!",
+            "subtitleEn": "Strong right before i, t, y. Clap! ma-JOR-i-ty. pop-u-LAR-i-ty. re-spon-si-BIL-i-ty. Now you!",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -2025,6 +2029,7 @@
     {
       "lessonNo": 1025,
       "world": 35,
+      "reviewed": "run9",
       "title": "School Rules Discussion",
       "titleJa": "学校の ルールの 話しあい",
       "school": {
@@ -2115,7 +2120,7 @@
           "emoji": "⚖️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Most students want to choose their own seats. Today is our big school rules discussion. Olive rings her bell and says, Let's think about uniforms one more time. This time, let's look at both sides together. Ms. Emma holds out her right hand and says, On the one hand（いっぽうでは）, uniforms save time. Then she holds out her left hand and says, On the other hand, students can't choose their clothes. Say it with me. On the one hand, uniforms save time. On the other hand, students can't choose their clothes. Fantastic! This is a great way to show two points of view. Every idea has advantages and disadvantages. Birimo asks, What do you mean by save time? Leo answers, I mean we don't have to choose clothes every morning. Then Priya writes a summary on the big board. Let's read the summary. \"Our School Rules Discussion. Uniforms: On the one hand, they save time, and everyone looks equal. On the other hand, students can't choose their clothes, and uniforms can cost a lot. Longer breaks: On the one hand, they help us relax and concentrate. On the other hand, school may finish later. Choosing seats: Most students like it, but nobody should feel left out. Thank you for listening to each other!\" What is one disadvantage of uniforms? They can cost a lot. What is one advantage of longer breaks? They help us relax. Olive looks around the circle. She says, You shared your ideas kindly, and you listened so well. Suddenly, the Tree of Voices begins to shine. On the first empty branch, a golden leaf grows! Everyone cheers. Now, phonics. Let's review ity words. Equal becomes equality. Responsible changes ble to bil and becomes responsibility. Major becomes majority. Say the part before ity strongly. e-QUAL-i-ty, re-spon-si-BIL-i-ty, ma-JOR-i-ty. Next time, Amara tells us about a problem at break time. Is it fair or not fair?",
+      "teacherScript": "Hello, everyone! Last time, we said, Most students want to choose their own seats. Today is our big school rules discussion. Olive rings her bell and says, Let's think about uniforms one more time. This time, let's look at both sides together. I hold out my right hand and say, On the one hand（いっぽうでは）, uniforms save time. Then I hold out my left hand and say, On the other hand, students can't choose their clothes. Say it with me. On the one hand, uniforms save time. On the other hand, students can't choose their clothes. Fantastic! This is a great way to show two points of view. Every idea has advantages and disadvantages. Birimo asks, What do you mean by save time? Leo answers, I mean we don't have to choose clothes every morning. Then Priya writes a summary on the big board. Let's read the summary. \"Our School Rules Discussion. Uniforms: On the one hand, they save time, and everyone looks equal. On the other hand, students can't choose their clothes, and uniforms can cost a lot. Longer breaks: On the one hand, they help us relax and concentrate. On the other hand, school may finish later. Choosing seats: Most students like it, but nobody should feel left out. Thank you for listening to each other!\" What is one disadvantage of uniforms? They can cost a lot. What is one advantage of longer breaks? They help us relax. Olive looks around the circle. She says, You shared your ideas kindly, and you listened so well. Suddenly, the Tree of Voices begins to shine. On the first empty branch, a golden leaf grows! Everyone cheers. Now, phonics. Let's review i, t, y words. Equal becomes equality. Responsible changes b, l, e to b, i, l and becomes responsibility. Major becomes majority. Say the part before i, t, y strongly. e-QUAL-i-ty, re-spon-si-BIL-i-ty, ma-JOR-i-ty. Next time, Amara tells us about a problem at break time. Is it fair or not fair?",
       "conversation": {
         "scene": "The school rules discussion and the first golden leaf",
         "sceneJa": "学校の ルールの 話しあいと 1まいめの 金の 葉っぱ",
@@ -2158,7 +2163,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブと 学校の ルール（せいふく・休み時間・せき）に ついて 話そう。On the one hand, ～. On the other hand, ～. で 両方の 見かたを 言い、オリーブに Why? と きかれたら じぶんの 意見と 理由を 言おう",
-          "starterEn": "Ding! Welcome to our school rules discussion! Pick one rule: uniforms, longer breaks, or choosing seats. Can you tell me both sides? Then tell me your own opinion and why.",
+          "starterEn": "Let's pretend I'm Olive. Ding! Welcome to our school rules discussion! Pick one rule: uniforms, longer breaks, or choosing seats. Can you tell me both sides? Then tell me your own opinion and why.",
           "targetExpressions": [
             "On the one hand, uniforms save time. On the other hand, students can't choose their clothes.",
             "On the one hand, longer breaks help us relax. On the other hand, school will finish later.",
@@ -2241,9 +2246,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Disadvantage. The opposite. A not so good point. Minus. Thumbs down. Disadvantage!",
+            "say": "Disadvantage. The opposite. A not-so-good point. Minus. Thumbs down. Disadvantage!",
             "subtitleJa": "disadvantage。その はんたい。あまり よくない ところ。マイナス。おやゆびを 下に。たんしょ！",
-            "subtitleEn": "Disadvantage. The opposite. A not so good point. Minus. Thumbs down. Disadvantage!",
+            "subtitleEn": "Disadvantage. The opposite. A not-so-good point. Minus. Thumbs down. Disadvantage!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -2322,9 +2327,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Let's review ity. Equal, equality. Responsible, ble to bil, responsibility. Major, majority.",
+            "say": "Sound time! Let's review i, t, y words. Equal, equality. Responsible, b, l, e to b, i, l, responsibility. Major, majority.",
             "subtitleJa": "おとの じかん！ ity の ふりかえり。equal から equality。responsible は ble が bil に なって responsibility。major から majority。",
-            "subtitleEn": "Sound time! Let's review ity. Equal, equality. Responsible, ble to bil, responsibility. Major, majority.",
+            "subtitleEn": "Sound time! Let's review i, t, y words. Equal, equality. Responsible, b, l, e to b, i, l, responsibility. Major, majority.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -2341,9 +2346,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Strong right before ity. Clap! e-QUAL-i-ty. re-spon-si-BIL-i-ty. ma-JOR-i-ty. Your turn!",
+            "say": "Strong right before i, t, y. Clap! e-QUAL-i-ty. re-spon-si-BIL-i-ty. ma-JOR-i-ty. Your turn!",
             "subtitleJa": "ity の すぐ まえを つよく。手を たたいて！ e-QUAL-i-ty。re-spon-si-BIL-i-ty。ma-JOR-i-ty。あなたの ばん！",
-            "subtitleEn": "Strong right before ity. Clap! e-QUAL-i-ty. re-spon-si-BIL-i-ty. ma-JOR-i-ty. Your turn!",
+            "subtitleEn": "Strong right before i, t, y. Clap! e-QUAL-i-ty. re-spon-si-BIL-i-ty. ma-JOR-i-ty. Your turn!",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -2530,6 +2535,7 @@
     {
       "lessonNo": 1026,
       "world": 35,
+      "reviewed": "run9",
       "title": "Fair or Not Fair?",
       "titleJa": "公平？ それとも 不公平？",
       "school": {
@@ -2665,7 +2671,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の アマラと 休み時間の ボールの もんだいに ついて 話そう。It's not fair if ～. で 意見を 言い、アマラが Why? と きいたら 理由を 言おう。上の 学年の 子たちの 気もちも Maybe they ～. で 考えて みよう",
-          "starterEn": "Hi, it's Amara. At my school, some older students take the only ball every day. Is that fair? Why or why not?",
+          "starterEn": "Let's pretend I'm Amara. At my school, some older students take the only ball every day. Is that fair? Why or why not?",
           "targetExpressions": [
             "It's not fair if only some people can play.",
             "Is that fair? ― No, I don't think so.",
@@ -2798,9 +2804,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru says, I see your point, but they got there first. Ms. Emma asks, Why do they keep the ball? Haru thinks. Maybe they don't know that other children want to play.",
-            "subtitleJa": "ハルくん「いいたい ことは わかるよ。でも その 子たちが さきに きたんだよね。」 エマ先生が きくよ。「どうして ボールを ずっと つかって いるのかしら？」 ハルくんが かんがえる。「もしかしたら ほかの 子も あそびたいって しらないのかも。」",
-            "subtitleEn": "Haru says, I see your point, but they got there first. Ms. Emma asks, Why do they keep the ball? Haru thinks. Maybe they don't know that other children want to play.",
+            "say": "Haru says, I see your point, but they got there first. I ask, Why do they keep the ball? Haru thinks. Maybe they don't know that other children want to play.",
+            "subtitleJa": "ハルくん「いいたい ことは わかるよ。でも その 子たちが さきに きたんだよね。」 わたしが きくよ。「どうして ボールを ずっと つかって いるのかしら？」 ハルくんが かんがえる。「もしかしたら ほかの 子も あそびたいって しらないのかも。」",
+            "subtitleEn": "Haru says, I see your point, but they got there first. I ask, Why do they keep the ball? Haru thinks. Maybe they don't know that other children want to play.",
             "gesture": "think",
             "slide": {
               "title": "Talk",
@@ -3036,6 +3042,7 @@
     {
       "lessonNo": 1027,
       "world": 35,
+      "reviewed": "run9",
       "title": "Everyone Should Have a Chance",
       "titleJa": "みんなに チャンスを",
       "school": {
@@ -3171,7 +3178,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の レオと 休み時間を 公平に する アイデアを 話しあおう。How about ～ing? / Why don't we ～? で ていあん して、レオに Why? と きかれたら Everyone should have a chance to ～. を つかって 理由を 言おう",
-          "starterEn": "Hi, I'm Leo! I love soccer, but some kids never get the ball. How can we make break time fair? Tell me your idea, and I'll ask you why!",
+          "starterEn": "Let's pretend I'm Leo. I love soccer, but some kids never get the ball. How can we make break time fair? Tell me your idea, and I'll ask you why!",
           "targetExpressions": [
             "Everyone should have a chance to try.",
             "How about taking turns? ― That's a good idea.",
@@ -3474,9 +3481,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Suggest your own idea. How about sharing the ball? Or, why don't we play together?",
+            "say": "Your turn! Suggest your own idea. How about sharing the ball? Or why don't we play together?",
             "subtitleJa": "あなたの ばん！ じぶんの アイデアを ていあん しよう。「ボールを わけあうのは どう？」 それとも「いっしょに あそばない？」",
-            "subtitleEn": "Your turn! Suggest your own idea. How about sharing the ball? Or, why don't we play together?",
+            "subtitleEn": "Your turn! Suggest your own idea. How about sharing the ball? Or why don't we play together?",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -3542,6 +3549,7 @@
     {
       "lessonNo": 1028,
       "world": 35,
+      "reviewed": "run9",
       "title": "Standing Up for a Friend",
       "titleJa": "友だちを まもる",
       "school": {
@@ -3634,7 +3642,7 @@
           "emoji": "🙇"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Everyone should have a chance to try. Today, Olive brings a picture book from the Hall's library. She says, Sometimes we see someone being unkind. What can we do? Let's think about it together. First, Ms. Emma tells us three important things. Never fight, and never laugh along. Stand up for your friend with calm, kind words. And always tell a teacher or another adult right away. You can say, Stop it. That's not kind. Say it with me. Stop it. That's not kind. Well done! Say it calmly, not angrily. Let's read the story. \"Tom loves drawing. One day, Mia picks up his picture and laughs. Your dog looks like a potato, she says, and she teases him in front of everyone. Tom looks down. His friend Sam stands up and says calmly, Stop it. That's not kind. Then Sam stands next to Tom and asks, Are you OK? I'll stay with you. Together, they tell their teacher right away. The next day, Mia comes to Tom and says, I'm sorry. I was wrong. Tom accepts her apology, and they draw a dog together.\" What does Sam say to Mia? Stop it. That's not kind. What does Mia do the next day? She says sorry. Priya says, I think telling a teacher is the most important part because adults can help. Amara says, I partly agree. Staying with Tom is important, too, because then he doesn't feel scared. Leo says, I like the ending. People can change. Olive nods and says, Different people can coexist when we are kind to each other. Now, phonics. Inter means between, or with each other. The internet is networks connected with each other. Co means together. A coworker works together with you. Coexist means live together. Next time, we will learn how to invite someone to join us at break time!",
+      "teacherScript": "Hello, everyone! Last time, we said, Everyone should have a chance to try. Today, Olive brings a picture book from the Hall's library. She says, Sometimes we see someone being unkind. What can we do? Let's think about it together. Then I say, Here are three important things. Never fight, and never laugh along. Stand up for your friend with calm, kind words. And always tell a teacher or another adult right away. You can say, Stop it. That's not kind. Say it with me. Stop it. That's not kind. Well done! Say it calmly, not angrily. Let's read the story. \"Tom loves drawing. One day, Mia picks up his picture and laughs. Your dog looks like a potato, she says, and she teases him in front of everyone. Tom looks down. His friend Sam stands up and says calmly, Stop it. That's not kind. Then Sam stands next to Tom and asks, Are you OK? I'll stay with you. Together, they tell their teacher right away. The next day, Mia comes to Tom and says, I'm sorry. I was wrong. Tom accepts her apology, and they draw a dog together.\" What does Sam say to Mia? Stop it. That's not kind. What does Mia do the next day? She says sorry. Priya says, I think telling a teacher is the most important part because adults can help. Amara says, I partly agree. Staying with Tom is important, too, because then he doesn't feel scared. Leo says, I like the ending. People can change. Olive nods and says, Different people can coexist when we are kind to each other. Now, phonics. Inter means between, or with each other. The internet connects computers with each other. Co means together. A coworker works together with you. Coexist means live together. Next time, we will learn how to invite someone to join us at break time!",
       "conversation": {
         "scene": "Talking about a picture book story and practicing safe actions",
         "sceneJa": "えほんの お話を もとに、いじわるを 見た ときの あんぜんな 行動を れんしゅう する",
@@ -3677,7 +3685,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブに「友だちが からかわれて いたら どう する？」と きかれるよ。Stop it. That's not kind. / Are you OK? I'll stay with you. / Let's tell a teacher right away. を つかって こたえよう。オリーブが Why? と きいたら 理由も 言おう",
-          "starterEn": "Ding! Let's think together. Imagine you see someone teasing your friend at break time. What can you say and do? Why?",
+          "starterEn": "Let's pretend I'm Olive. Ding! We can think about this together. Imagine you see someone teasing your friend at break time. What can you say and do? Why?",
           "targetExpressions": [
             "Stop it. That's not kind.",
             "Are you OK? I'll stay with you.",
@@ -3794,9 +3802,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "In the story, Mia teases Tom. Kiko says calmly, Stop it. That's not kind. Riko stands next to Tom. Are you OK? I'll stay with you.",
-            "subtitleJa": "お話の なかで、ミアが トムを からかうの。キコちゃんが おちついて「やめて。それは やさしく ないよ。」 リコちゃんは トムの となりに 立つよ。「だいじょうぶ？ そばに いるからね。」",
-            "subtitleEn": "In the story, Mia teases Tom. Kiko says calmly, Stop it. That's not kind. Riko stands next to Tom. Are you OK? I'll stay with you.",
+            "say": "In the story, Mia teases Tom. Kiko practices and says calmly, Stop it. That's not kind. Riko says, Then I'll stand next to my friend. Are you OK? I'll stay with you.",
+            "subtitleJa": "お話の なかで、ミアが トムを からかうの。キコちゃんが れんしゅう。おちついて「やめて。それは やさしく ないよ。」 リコちゃん「それから 友だちの となりに 立つよ。だいじょうぶ？ そばに いるからね。」",
+            "subtitleEn": "In the story, Mia teases Tom. Kiko practices and says calmly, Stop it. That's not kind. Riko says, Then I'll stand next to my friend. Are you OK? I'll stay with you.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4049,6 +4057,7 @@
     {
       "lessonNo": 1029,
       "world": 35,
+      "reviewed": "run9",
       "title": "Including Everyone",
       "titleJa": "みんなを なかまに",
       "school": {
@@ -4141,7 +4150,7 @@
           "emoji": "🤝"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Stop it. That's not kind. Today, there is a short break between council meetings. Olive calls it an intermission. We go out to the Hall's garden with Ms. Emma and play a ball game with Leo and Amara. Then Kiko sees a new council child named Ken. He is sitting by himself on a bench, looking at a book. Kiko walks over with a smile. She says, Hi, Ken. Do you want to join us? Say it with me. Do you want to join us? Lovely! Ken looks up and says, Sure! Thank you for asking. He kicks the ball, and everyone cheers. Later, Amara shows us a poster she made with Priya. Let's read the poster. \"How to Include Everyone. Look around at break time. Is anyone sitting by themselves? Walk over, smile, and say, Do you want to join us? Use their name if you know it. Some people may want quiet time, and that is OK, too. You can say, Maybe next time! Nobody should feel left out. A small question can make a big friend.\" What can you say to invite someone? Do you want to join us? What if someone wants quiet time? That's OK. Say, Maybe next time. Haru says, I think we should always invite people because nobody likes to feel left out. Riko says, I partly agree. But some people really like reading quietly, so we should ask first and listen to the answer. Ken laughs. He says, Today I wanted to play. But tomorrow, I might want to finish my book! Amara and Priya are the coauthors of the poster, because they wrote it together. Now, phonics. Inter means between. An intermission is a break between parts of a show. Co means together. A coauthor writes a book together with someone. A costar is a star of a movie together with another star. Next time, we will start a Kindness Campaign!",
+      "teacherScript": "Hello, everyone! Last time, we said, Stop it. That's not kind. Today, there is a short break between council meetings. Olive calls it an intermission. We go out to the Hall's garden and play a ball game with Leo and Amara. Then Kiko sees a new council child named Ken. He is sitting by himself on a bench, looking at a book. Kiko walks over with a smile. She says, Hi, Ken. Do you want to join us? Say it with me. Do you want to join us? Wonderful! Ken looks up and says, Sure! Thank you for asking. He kicks the ball, and everyone cheers. Later, Amara shows us a poster she made with Priya. Let's read the poster. \"How to Include Everyone. Look around at break time. Is anyone sitting by themselves? Walk over, smile, and say, Do you want to join us? Use their name if you know it. Some people may want quiet time, and that is OK, too. You can say, Maybe next time! Nobody should feel left out. A small question can start a big friendship.\" What can you say to invite someone? Do you want to join us? What if someone wants quiet time? That's OK. Say, Maybe next time. Haru says, I think we should always invite people because nobody likes to feel left out. Riko says, I partly agree. But some people really like reading quietly, so we should ask first and listen to the answer. Ken laughs. He says, Today I wanted to play. But tomorrow, I might want to finish my book! Amara and Priya are the coauthors of the poster, because they wrote it together. Now, phonics. Inter means between. An intermission is a break between parts of a show. Co means together. A coauthor writes a book together with someone. A costar acts in a movie together with another star. Next time, we will start a Kindness Campaign!",
       "conversation": {
         "scene": "Inviting Ken to play during the intermission in the Hall's garden",
         "sceneJa": "議事堂の にわで、ベンチに すわって いる ケンを あそびに さそう",
@@ -4184,7 +4193,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ケン（あたらしい こども議会の 子）を Do you want to join us? で あそびに さそおう。ケンが Why? と きいたら 理由を 言おう。ケンが まよって いたら It's OK if ～. Maybe next time! で 気もちを たいせつに しよう",
-          "starterEn": "Oh, hi. I'm Ken. I'm new here, so I don't know many people yet. What are you all doing?",
+          "starterEn": "Let's pretend I'm Ken, the new boy. Oh, hi. I'm new here, so I don't know many people yet. What are you all doing?",
           "targetExpressions": [
             "Do you want to join us?",
             "Sure! Thank you for asking.",
@@ -4518,9 +4527,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! We listen to Ken's feelings. That's what including everyone means. Lovely!",
+            "say": "It's B! We listen to Ken's feelings. That's what including everyone means. Nice job!",
             "subtitleJa": "こたえは B！ ケンの 気もちを たいせつに するんだね。それが みんなを なかまに 入れるって こと。すてき！",
-            "subtitleEn": "It's B! We listen to Ken's feelings. That's what including everyone means. Lovely!",
+            "subtitleEn": "It's B! We listen to Ken's feelings. That's what including everyone means. Nice job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -4533,9 +4542,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Brilliant! You can invite someone to join, say thank you for asking, and respect quiet time. Next, go and talk with Haru! See you!",
+            "say": "Great job! You can invite someone to join, say thank you for asking, and respect quiet time. Next, go and talk with Haru! See you!",
             "subtitleJa": "すばらしい！ だれかを なかまに さそえるし、さそって くれて ありがとうも いえるし、しずかに したい 気もちも たいせつに できるね。このあと ハルくんと おはなし してね！ またね！",
-            "subtitleEn": "Brilliant! You can invite someone to join, say thank you for asking, and respect quiet time. Next, go and talk with Haru! See you!",
+            "subtitleEn": "Great job! You can invite someone to join, say thank you for asking, and respect quiet time. Next, go and talk with Haru! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -4553,6 +4562,7 @@
     {
       "lessonNo": 1030,
       "world": 35,
+      "reviewed": "run9",
       "title": "Kindness Campaign",
       "titleJa": "やさしさキャンペーン",
       "school": {
@@ -4647,7 +4657,7 @@
           "emoji": "🎤"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Do you want to join us? Today is a special day. Olive rings her bell and says, This week, we talked about fairness and kindness. Now, let's share what we learned with the whole Hall. It's time for our Kindness Campaign! We work in groups with Leo, Amara, Priya, and Ken. We cooperate, and everyone uses their own ability. Amara draws pictures, Priya checks the spelling, and Leo thinks of the slogan. Haru stands up with the poster and says, Let's make our school a kind place. Say it with me. Let's make our school a kind place. Beautiful! Then the four friends give their presentation. Let's read the poster. \"Kindness Campaign. Let's make our school a kind place! First, say hello to everyone, even people you don't know yet. Second, take turns and share, so everyone has a fair chance. Finally, invite people to play, and listen if they want quiet time. If you see someone being unkind, say calmly, Stop it, and tell a teacher right away. Kind words make a happy school!\" What is the second idea? Take turns and share. What should you do if you see someone being unkind? Say, Stop it, and tell a teacher. At the end, Kiko says, Thank you for listening. Do you have any questions? Priya asks, Which idea is the most important? Kiko says, I think inviting people is the most important because nobody feels left out. Haru says, I partly agree, but saying hello is the easiest way to start. Olive says, You listened to each other so well. Then the Tree of Voices shines again, and a second golden leaf grows! Now, phonics. Let's review. International. Inter means between, so it means between nations. Cooperate. Co means together, so it means work together. Ability. Able changes ble to bil and adds ity. a-BIL-i-ty. Next time, Olive will tell us about something very important that many countries agreed on.",
+      "teacherScript": "Hello, everyone! Last time, we said, Do you want to join us? Today is a special day. Olive rings her bell and says, This week, we talked about fairness and kindness. Now, let's share what we learned with the whole Hall. It's time for our Kindness Campaign! We work in groups with Leo, Amara, Priya, and Ken. We cooperate, and everyone uses their own ability. Amara draws pictures, Priya checks the spelling, and Leo thinks of the slogan. Haru stands up with the poster and says, Let's make our school a kind place. Say it with me. Let's make our school a kind place. Beautiful! Then the four friends give their presentation. Let's read the poster. \"Kindness Campaign. Let's make our school a kind place! First, say hello to everyone, even people you don't know yet. Second, take turns and share, so everyone has a fair chance. Finally, invite people to play, and listen if they want quiet time. If you see someone being unkind, say calmly, Stop it, and tell a teacher right away. Kind words make a happy school!\" What is the second idea? Take turns and share. What should you do if you see someone being unkind? Say, Stop it, and tell a teacher. At the end, Kiko says, Thank you for listening. Do you have any questions? Priya asks, Which idea is the most important? Kiko says, I think inviting people is the most important because nobody feels left out. Haru says, I partly agree, but saying hello is the easiest way to start. Olive says, You listened to each other so well. Then the Tree of Voices shines again, and a second golden leaf grows! Now, phonics. Let's review. International. Inter means between, so it means between nations. Cooperate. Co means together, so it means work together. Ability. Able changes b, l, e to b, i, l and adds i, t, y. a-BIL-i-ty. Next time, Olive will tell us about something very important that many countries agreed on.",
       "conversation": {
         "scene": "The Kindness Campaign presentation and the second golden leaf",
         "sceneJa": "やさしさキャンペーンの 発表と 2まいめの 金の 葉っぱ",
@@ -4695,7 +4705,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブに やさしさキャンペーンの 発表を しよう。Let's make our school a kind place. / First, ～. Second, ～. Finally, ～. で アイデアを ならべ、オリーブが Why? や Can you give me an example? と きいたら こたえよう",
-          "starterEn": "Ding! I'm so excited to hear your Kindness Campaign. What are your ideas? Please tell me, and I'll ask you some questions afterward!",
+          "starterEn": "Let's pretend I'm Olive. Ding! I'm so excited to hear about your Kindness Campaign. What are your ideas? Please tell me, and I'll ask you some questions afterward!",
           "targetExpressions": [
             "Let's make our school a kind place.",
             "First, say hello to everyone. Second, take turns. Finally, invite people to play.",
@@ -4878,9 +4888,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "And ability. Able, ble becomes bil, plus ity. Clap the strong part! a-BIL-i-ty. Your turn! International. Cooperate. Ability.",
+            "say": "And ability. Able, b, l, e becomes b, i, l, plus i, t, y. Clap the strong part! a-BIL-i-ty. Your turn! International. Cooperate. Ability.",
             "subtitleJa": "それから ability。able の ble が bil に なって ity が つくよ。つよい ところで 手を たたいて！ a-BIL-i-ty。あなたの ばん！ international。cooperate。ability。",
-            "subtitleEn": "And ability. Able, ble becomes bil, plus ity. Clap the strong part! a-BIL-i-ty. Your turn! International. Cooperate. Ability.",
+            "subtitleEn": "And ability. Able, b, l, e becomes b, i, l, plus i, t, y. Clap the strong part! a-BIL-i-ty. Your turn! International. Cooperate. Ability.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -5067,6 +5077,7 @@
     {
       "lessonNo": 1031,
       "world": 35,
+      "reviewed": "run9",
       "title": "Children Have Rights",
       "titleJa": "子どもの けんり",
       "school": {
@@ -5207,7 +5218,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブに Children have the right to ～. で 子どもの けんりを つたえよう。いちばん たいせつな けんりを 1つ えらんで、Why? と きかれたら りゆうを 言おう",
-          "starterEn": "Ding! Welcome to the Children's Council. Which right do you think is the most important for children? Why?",
+          "starterEn": "Let's pretend I'm Olive. Ding! Welcome to the Children's Council. Which right do you think is the most important for children? Why?",
           "targetExpressions": [
             "Children have the right to learn and play.",
             "Which right is the most important to you? ― The right to be safe, because everyone needs to feel safe.",
@@ -5307,9 +5318,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Voice. Your sound, and your idea. Hand up! I have an idea! Voice!",
+            "say": "Voice. The sound you make, and your idea. Hand up! I have an idea! Voice!",
             "subtitleJa": "voice。あなたの 声、そして あなたの いけん。てを あげて！ アイデアが あります！ こえ！",
-            "subtitleEn": "Voice. Your sound, and your idea. Hand up! I have an idea! Voice!",
+            "subtitleEn": "Voice. The sound you make, and your idea. Hand up! I have an idea! Voice!",
             "gesture": "open_hands",
             "slide": {
               "title": "Words",
@@ -5324,7 +5335,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "Look at the poster. I ask, Which right is the most important to you? Kiko says, The right to play, because playing makes us happy.",
-            "subtitleJa": "ポスターを 見て。先生が きくよ。「あなたに とって いちばん たいせつな けんりは どれ？」 キコちゃん「あそぶ けんり。あそぶと げんきに なれるから。」",
+            "subtitleJa": "ポスターを 見て。わたしが きくよ。「あなたに とって いちばん たいせつな けんりは どれ？」 キコちゃん「あそぶ けんり。あそぶと げんきに なれるから。」",
             "subtitleEn": "Look at the poster. I ask, Which right is the most important to you? Kiko says, The right to play, because playing makes us happy.",
             "gesture": "open_hands",
             "slide": {
@@ -5574,6 +5585,7 @@
     {
       "lessonNo": 1032,
       "world": 35,
+      "reviewed": "run9",
       "title": "We Are Responsible For…",
       "titleJa": "わたしたちの やくわり",
       "school": {
@@ -5714,7 +5726,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の アマラに We are responsible for ～ing. を つかって ペットの せわで たいせつな ことを つたえよう。Why? や Can you give me an example? と きかれたら れいを 言おう",
-          "starterEn": "Hi! I'm Amara. I have a dog named Biscuit and a cat named Pepper. What should pet owners do every day? Can you give me an example?",
+          "starterEn": "Let's pretend I'm Amara. I have a dog named Biscuit and a cat named Pepper. What should pet owners do every day? Can you give me an example?",
           "targetExpressions": [
             "We are responsible for taking care of our pets.",
             "Who is responsible for feeding the cat? ― Amara is. She feeds her every evening.",
@@ -5861,9 +5873,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Who is responsible? Answer with a name: Amara is. Yes, with one more idea? I think so, but...",
+            "say": "Here's the point. Who is responsible? Answer with a name: Amara is. Agree, but want to add something? Say, I think so, but...",
             "subtitleJa": "ポイント。「だれの やくわり？」には なまえで こたえる。「アマラだよ。」 さんせいだけど もう ひとつ 考えが ある ときは「そう おもう。でも…」",
-            "subtitleEn": "Here's the point. Who is responsible? Answer with a name: Amara is. Yes, with one more idea? I think so, but...",
+            "subtitleEn": "Here's the point. Who is responsible? Answer with a name: Amara is. Agree, but want to add something? Say, I think so, but...",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -6080,6 +6092,7 @@
     {
       "lessonNo": 1033,
       "world": 35,
+      "reviewed": "run9",
       "title": "Helping at Home",
       "titleJa": "いえで おてつだい",
       "school": {
@@ -6220,7 +6233,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の プリヤに I'm responsible for ～ing. で いえでの じぶんの 係を つたえよう。Why? と きかれたら、その しごとが たいせつな りゆうも 言おう",
-          "starterEn": "Hi, I'm Priya! In my family, we have a chore chart. What chores do you do at home? Why are they important?",
+          "starterEn": "Let's pretend I'm Priya. In my family, we have a chore chart. What chores do you do at home? Why are they important?",
           "targetExpressions": [
             "I'm responsible for washing the dishes.",
             "What are you responsible for at home? ― I'm responsible for folding the laundry.",
@@ -6241,9 +6254,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, team! Last time, we took care of Biscuit and Pepper. Today, Olive asks a new question. What jobs do you do at home?",
-            "subtitleJa": "おはよう、チームの みんな！ まえの かいは、ビスケットと ペッパーの おせわを したね。きょうは オリーブが あたらしい しつもんを するよ。いえでは どんな しごとを して いる？",
-            "subtitleEn": "Good morning, team! Last time, we took care of Biscuit and Pepper. Today, Olive asks a new question. What jobs do you do at home?",
+            "say": "Hi, team! Last time, we took care of Biscuit and Pepper. Today, Olive asks a new question. What jobs do you do at home?",
+            "subtitleJa": "やあ、チームの みんな！ まえの かいは、ビスケットと ペッパーの おせわを したね。きょうは オリーブが あたらしい しつもんを するよ。いえでは どんな しごとを して いる？",
+            "subtitleEn": "Hi, team! Last time, we took care of Biscuit and Pepper. Today, Olive asks a new question. What jobs do you do at home?",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -6337,7 +6350,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "I ask, What are you responsible for at home, Kiko? Kiko says, I'm responsible for washing the dishes. Scrub, scrub! Sparkly plates!",
-            "subtitleJa": "先生が きくよ。「キコ、いえでは なんの 係？」 キコちゃん「わたしは おさらを あらう 係だよ。」 ごし、ごし！ ピカピカの おさら！",
+            "subtitleJa": "わたしが きくよ。「キコ、いえでは なんの 係？」 キコちゃん「わたしは おさらを あらう 係だよ。」 ごし、ごし！ ピカピカの おさら！",
             "subtitleEn": "I ask, What are you responsible for at home, Kiko? Kiko says, I'm responsible for washing the dishes. Scrub, scrub! Sparkly plates!",
             "gesture": "open_hands",
             "slide": {
@@ -6384,7 +6397,7 @@
             "kind": "phonics",
             "lang": "en",
             "say": "Sound time! Correct it, and the new word is strong. Do you wash the dishes? No, I DRY the dishes! Does your brother cook? No, my SISTER cooks!",
-            "subtitleJa": "おとの じかん！ なおす ときは、あたらしい ことばを つよく。「おさらを あらうの？」「ううん、ふくの！」「おにいさんが りょうり するの？」「ううん、おねえさんが するの！」",
+            "subtitleJa": "おとの じかん！ なおす ときは、あたらしい ことばを つよく。「おさらを あらうの？」「ううん、おさらを ふくの！」「おにいさんが りょうり するの？」「ううん、おねえさんが するの！」",
             "subtitleEn": "Sound time! Correct it, and the new word is strong. Do you wash the dishes? No, I DRY the dishes! Does your brother cook? No, my SISTER cooks!",
             "gesture": "point",
             "slide": {
@@ -6552,9 +6565,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! Washing, with ing. I'm responsible for washing the dishes. Brilliant!",
+            "say": "It's B! Washing, with ing. I'm responsible for washing the dishes. Great job!",
             "subtitleJa": "こたえは B！ ing を つけて washing。「わたしは おさらを あらう 係です。」 すばらしい！",
-            "subtitleEn": "It's B! Washing, with ing. I'm responsible for washing the dishes. Brilliant!",
+            "subtitleEn": "It's B! Washing, with ing. I'm responsible for washing the dishes. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -6587,6 +6600,7 @@
     {
       "lessonNo": 1034,
       "world": 35,
+      "reviewed": "run9",
       "title": "Our Community",
       "titleJa": "わたしたちの まち",
       "school": {
@@ -6684,7 +6698,7 @@
           "emoji": "👩‍🏫"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I'm responsible for washing the dishes. We help our families at home. But what about our town? Today, Olive takes us to the big window of the Hall of Wisdom. We can see all of Willowford: little red roofs, a library with a clock, and the green trees of Willowford Park. Olive says, This town is a community. A community is all the people who live and work in a place. What can children do for our community? Say it with me. What can children do for our community? Wonderful! Leo says, We can say hello to our neighbors. It's easy, and it makes people smile. Priya says, We can help at the library and put the books back on the shelves. Then Ms. Emma finds a notice on the board by the door. Let's read the notice. \"Willowford Park Clean-Up Day. Join us on Saturday afternoon from one to three! Bring a hat and a water bottle. We will give you gloves, tongs, and bags. Children must come with an adult. Last spring, our volunteers picked up forty bags of litter and planted sunflowers near the pond. Let's make our park clean and beautiful again. Thank you, Willowford!\" When is the clean-up? On Saturday afternoon, from one to three. What did the volunteers plant last spring? Sunflowers. Kiko says, Why don't we join the clean-up? Ms. Emma says, Good idea, but we'll all go together with the adults. Now, phonics. Listen to the strong new words. Did you plant roses? No, we planted SUNFLOWERS. Is the event on Saturday morning? No, it's on Saturday AFTERNOON. Do you want the big poster? No, I want the SMALL poster. Is the station near the school? No, it's near the LIBRARY. Next time, we will give a talk about rights and responsibilities!",
+      "teacherScript": "Hello, everyone! Last time, we said, I'm responsible for washing the dishes. We help our families at home. But what about our town? Today, Olive takes us to the big window of the Hall of Wisdom. We can see all of Willowford: little red roofs, a library with a clock, and the green trees of Willowford Park. Olive says, This town is a community. A community is all the people who live and work in a place. What can children do for our community? Say it with me. What can children do for our community? Wonderful! Leo says, We can say hello to our neighbors. It's easy, and it makes people smile. Priya says, We can help at the library and put the books back on the shelves. Then I find a notice on the board by the door. Let's read the notice. \"Willowford Park Clean-Up Day. Join us on Saturday afternoon from one to three! Bring a hat and a water bottle. We will give you gloves, tongs, and bags. Children must come with an adult. Last spring, our volunteers picked up forty bags of litter and planted sunflowers near the pond. Let's make our park clean and beautiful again. Thank you, Willowford!\" When is the clean-up? On Saturday afternoon, from one to three. What did the volunteers plant last spring? Sunflowers. Kiko says, Why don't we join the clean-up? I say, Good idea, but we'll all go together with the adults. Now, phonics. Listen to the strong new words. Did you plant roses? No, we planted SUNFLOWERS. Is the event on Saturday morning? No, it's on Saturday AFTERNOON. Do you want the big poster? No, I want the SMALL poster. Is the station near the school? No, it's near the LIBRARY. Next time, we will give a talk about rights and responsibilities!",
       "conversation": {
         "scene": "Looking at Willowford from the big window of the Hall",
         "sceneJa": "議事堂の 大きな まどから ウィローフォードの まちを 見ながら 話す",
@@ -6722,7 +6736,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の 図書館の 人（司書）に What can children do for our community? の こたえを つたえよう。Can you give me an example? と きかれたら れいを 1つ 言おう",
-          "starterEn": "Hello! Welcome to Willowford Library. I'm the librarian. What can children do to help our town? Can you give me an example?",
+          "starterEn": "Let's pretend I'm the librarian at Willowford Library. Hello, and welcome! What can children do to help our town? Can you give me an example?",
           "targetExpressions": [
             "What can children do for our community?",
             "We can say hello to our neighbors. ― That's easy, and it makes people smile.",
@@ -6790,9 +6804,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Neighbor. A person who lives next to you. Wave hello! Neighbor!",
+            "say": "Neighbor. A person who lives near you. Wave hello! Neighbor!",
             "subtitleJa": "neighbor。あなたの ちかくに すんで いる 人。てを ふって こんにちは！ ご近所さん！",
-            "subtitleEn": "Neighbor. A person who lives next to you. Wave hello! Neighbor!",
+            "subtitleEn": "Neighbor. A person who lives near you. Wave hello! Neighbor!",
             "gesture": "wave",
             "slide": {
               "title": "Words",
@@ -6839,7 +6853,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "I ask, What can children do for our community? Kiko says, We can say hello to our neighbors. It's easy, and it makes people smile.",
-            "subtitleJa": "先生が きくよ。「子どもは わたしたちの まちの ために なにが できる？」 キコちゃん「ご近所の 人に あいさつが できるよ。かんたんだし、みんなが にっこり するよ。」",
+            "subtitleJa": "わたしが きくよ。「子どもは わたしたちの まちの ために なにが できる？」 キコちゃん「ご近所の 人に あいさつが できるよ。かんたんだし、みんなが にっこり するよ。」",
             "subtitleEn": "I ask, What can children do for our community? Kiko says, We can say hello to our neighbors. It's easy, and it makes people smile.",
             "gesture": "open_hands",
             "slide": {
@@ -6870,9 +6884,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Why don't we... is a friendly idea. Answer, Good idea, but... to add a safe plan.",
+            "say": "Here's the point. Why don't we... is a friendly way to share an idea. Answer, Good idea, but... to add a safe plan.",
             "subtitleJa": "ポイント。「～ しない？」は やさしい さそいかた。「いいね。でも…」と こたえて、あんぜんな アイデアを たそう。",
-            "subtitleEn": "Here's the point. Why don't we... is a friendly idea. Answer, Good idea, but... to add a safe plan.",
+            "subtitleEn": "Here's the point. Why don't we... is a friendly way to share an idea. Answer, Good idea, but... to add a safe plan.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -6885,9 +6899,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! In the morning? No, it's on Saturday AFTERNOON!",
-            "subtitleJa": "おとの じかん！ あたらしい ことばを つよく。「バラを うえたの？」「ううん、ひまわりを うえたの！」「あさ？」「ううん、土曜日の ごご だよ！」",
-            "subtitleEn": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! In the morning? No, it's on Saturday AFTERNOON!",
+            "say": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! Saturday morning? No, it's on Saturday AFTERNOON!",
+            "subtitleJa": "おとの じかん！ あたらしい ことばを つよく。「バラを うえたの？」「ううん、ひまわりを うえたの！」「土曜日の あさ？」「ううん、土曜日の ごご だよ！」",
+            "subtitleEn": "Sound time! The new word is strong. Did you plant roses? No, we planted SUNFLOWERS! Saturday morning? No, it's on Saturday AFTERNOON!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -7089,6 +7103,7 @@
     {
       "lessonNo": 1035,
       "world": 35,
+      "reviewed": "run9",
       "title": "Rights and Responsibilities Talk",
       "titleJa": "けんりと やくわりの 発表",
       "school": {
@@ -7186,7 +7201,7 @@
           "emoji": "🔄"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, What can children do for our community? On Saturday afternoon, we cleaned Willowford Park with Ms. Emma and the other adults, and we said hello to so many neighbors. Today is a special day. Each group will give a short talk about rights and responsibilities. Priya interviews Leo about safety at school. Amara talks about her pets. Then it's our turn. Riko stands up and says, I'd like to talk about rights and responsibilities. Olive says, Go ahead. We're listening. Riko's big idea is this. We have the right to speak, and we should listen to others. Say it with me. We have the right to speak, and we should listen to others. Beautiful! Let's read Riko's speech. \"Hello, everyone. Children have many rights. We have the right to learn, so we should try our best at school. We have the right to play, so we should share the ball and take turns. We have the right to be safe, so we should help keep our town clean and safe. And we have the right to speak, and we should listen to others. Every voice matters, so every ear matters, too. Thank you!\" What should we do because we have the right to play? Share the ball and take turns. Why does every ear matter? Because every voice matters. The audience claps, and Olive rings her bell. Then the Tree of Voices begins to glow. A third golden leaf slowly grows on its branch! Now, phonics. Let's review. Do you like that one? No, I like THIS one. Interview. Inter means each other, so you see each other and talk. Coexist. Co means together, so coexist means live together. Security. Secure, drop the e, and add ity. Say it strongly, se-CU-ri-ty. Next time, a very special visitor from the town is coming to the Hall of Wisdom!",
+      "teacherScript": "Hello, everyone! Last time, we said, What can children do for our community? On Saturday afternoon, we cleaned Willowford Park together with the other adults, and we said hello to so many neighbors. Today is a special day. Each group will give a short talk about rights and responsibilities. Priya interviews Leo about safety at school. Amara talks about her pets. Then it's our turn. Riko stands up and says, I'd like to talk about rights and responsibilities. Olive says, Go ahead. We're listening. Riko's big idea is this. We have the right to speak, and we should listen to others. Say it with me. We have the right to speak, and we should listen to others. Beautiful! Let's read Riko's speech. \"Hello, everyone. Children have many rights. We have the right to learn, so we should try our best at school. We have the right to play, so we should share the ball and take turns. We have the right to be safe, so we should help keep our town clean and safe. And we have the right to speak, and we should listen to others. Every voice matters, so every ear matters, too. Thank you!\" What should we do because we have the right to play? Share the ball and take turns. Why does every ear matter? Because every voice matters. The audience claps, and Olive rings her bell. Then the Tree of Voices begins to glow. A third golden leaf slowly grows on its branch! Now, phonics. Let's review. Do you like that one? No, I like THIS one. Interview. Inter means each other, so you see each other and talk. Coexist. Co means together, so coexist means live together. Security. Secure, drop the e, and add i, t, y. Say the part before i, t, y strongly. se-CU-ri-ty. Next time, a very special visitor from the town is coming to the Hall of Wisdom!",
       "conversation": {
         "scene": "Riko gives her talk, and the third golden leaf grows",
         "sceneJa": "リコが 発表して、声の木に 3まいめの 金の 葉っぱが はえる",
@@ -7229,7 +7244,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブの まえで We have the right to ～, and we should ～. を つかって 短い 発表を しよう。Can you give me an example? と きかれたら れいを 言おう",
-          "starterEn": "Ding! Welcome to the stage. You have the right to speak, and we are all listening. What would you like to tell us about rights and responsibilities?",
+          "starterEn": "Let's pretend I'm Olive. Ding! Welcome to the stage. You have the right to speak, and we are all listening. What would you like to tell us about rights and responsibilities?",
           "targetExpressions": [
             "We have the right to speak, and we should listen to others.",
             "I'd like to talk about rights and responsibilities. ― Go ahead. We're listening.",
@@ -7297,7 +7312,7 @@
             "kind": "words",
             "lang": "en",
             "say": "Audience. The people who listen. Look, they're all smiling at you! Audience!",
-            "subtitleJa": "audience。きいて いる 人たち。見て、みんな あなたに にっこり して いるよ！ ちょうしゅう！",
+            "subtitleJa": "audience。きいて いる 人たち。見て、みんな あなたに にっこり して いるよ！ きいて いる 人たち！",
             "subtitleEn": "Audience. The people who listen. Look, they're all smiling at you! Audience!",
             "gesture": "open_hands",
             "slide": {
@@ -7344,9 +7359,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko stands up. I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
+            "say": "Riko stands up. She says, I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
             "subtitleJa": "リコちゃんが たちあがるよ。「けんりと やくわりに ついて 話したいと おもいます。」 オリーブの やくの ビリモが ベルを ならすよ。チリン！「どうぞ。きいて いるよ。」",
-            "subtitleEn": "Riko stands up. I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
+            "subtitleEn": "Riko stands up. She says, I'd like to talk about rights and responsibilities. Birimo, playing Olive, rings the bell. Ding! Go ahead. We're listening.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -7408,9 +7423,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Coexist. Co means together. Live together. Security. Make CU strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
-            "subtitleJa": "coexist。co は「いっしょに」。いっしょに くらす。security。CU を つよく。セ・キュ・リ・ティ。あなたの ばん！ interview。coexist。security。",
-            "subtitleEn": "Coexist. Co means together. Live together. Security. Make CU strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
+            "say": "Coexist. Co means together. Live together. Security. Make the second beat strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
+            "subtitleJa": "coexist。co は「いっしょに」。いっしょに くらす。security。2つめの キュを つよく。セ・キュ・リ・ティ。あなたの ばん！ interview。coexist。security。",
+            "subtitleEn": "Coexist. Co means together. Live together. Security. Make the second beat strong. se-CU-ri-ty. Your turn! Interview. Coexist. Security.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -7594,6 +7609,7 @@
     {
       "lessonNo": 1036,
       "world": 35,
+      "reviewed": "run9",
       "title": "I Suggest That We…",
       "titleJa": "～しては どうでしょう",
       "school": {
@@ -7688,7 +7704,7 @@
           "emoji": "🚉"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, We have the right to speak, and we should listen to others. And the third golden leaf is shining on the Tree of Voices! This morning, a special guest walks into the round meeting hall. She has a big smile and a red scarf. It's Mayor Hart, the mayor of Willowford! She shakes hands with everyone and gives Olive a letter. Let's read Mayor Hart's letter. \"Dear Children's Council, I am happy to inform you that the town of Willowford would like to receive your ideas. Children see things that adults sometimes miss. We request your help with one question: How can we make Willowford better? Please share your suggestions with me next week. Every good idea is welcome, big or small. With warm wishes, Mayor Hart.\" What does Mayor Hart want to know? How we can make Willowford better. When should the council share their ideas? Next week. Kiko thinks about the station. It's a little gray and plain. She raises her hand and says, I suggest that we plant flowers at the station. Say it with me. I suggest that we plant flowers at the station. Lovely! The words I suggest that we are polite and a little formal. After it, just put the verb: I suggest that we plant, I suggest that we clean. With friends, you can also say, How about planting flowers? or Why don't we plant flowers? Haru says, That's a good idea, but who will water them? Riko answers, Why don't we ask the station staff to help? Now, phonics. In letters and notices, we often use formal words. Kids becomes children. Get becomes receive. Remember, after c, write e before i: r, e, c, e, i, v, e. Ask for becomes request. Both kinds of words are correct English. Next time, we will share even more ideas for Willowford!",
+      "teacherScript": "Hello, everyone! Last time, we said, We have the right to speak, and we should listen to others. And the third golden leaf is shining on the Tree of Voices! This morning, a special guest walks into the round meeting hall. She has a big smile and a red scarf. It's Mayor Hart, the mayor of Willowford! She shakes hands with everyone and gives Olive a letter. Let's read Mayor Hart's letter. \"Dear Children's Council, I am happy to inform you that the town of Willowford would like to receive your ideas. Children see things that adults sometimes miss. We request your help with one question: How can we make Willowford better? Please share your suggestions with me next week. Every good idea is welcome, big or small. With warm wishes, Mayor Hart.\" What does Mayor Hart want to know? How we can make Willowford better. When should the council share their ideas? Next week. Kiko thinks about the station. It's a little gray and plain. She raises her hand and says, I suggest that we plant flowers at the station. Say it with me. I suggest that we plant flowers at the station. Wonderful! The words I suggest that we are polite and a little formal. After it, just put the verb: I suggest that we plant, I suggest that we clean. With friends, you can also say, How about planting flowers? or Why don't we plant flowers? Haru says, That's a good idea, but who will water them? Riko answers, Why don't we ask the station staff to help? Now, phonics. In letters and notices, we often use formal words. Kids becomes children. Get becomes receive. Remember, after c, write e before i: r, e, c, e, i, v, e. Ask for becomes request. Both kinds of words are correct English. Next time, we will share even more ideas for Willowford!",
       "conversation": {
         "scene": "Mayor Hart visits the Children's Council and asks for ideas",
         "sceneJa": "ハート市長が こども議会に きて アイデアを たのむ",
@@ -7726,7 +7742,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ハート市長に I suggest that we ～. で まちを よく する 提案を しよう。Why? と きかれたら りゆうを 言い、How about ～ing? / Why don't we ～? も つかって みよう",
-          "starterEn": "Hello! I'm Mayor Hart. I'd love to hear your ideas. How can we make Willowford better? Why do you think so?",
+          "starterEn": "Let's pretend I'm Mayor Hart. Hello! I'd love to hear your ideas. How can we make Willowford better? Why do you think so?",
           "targetExpressions": [
             "I suggest that we plant flowers at the station.",
             "How about putting flower pots by the ticket gate? ― That's a good idea, but who will water them?",
@@ -7748,7 +7764,7 @@
             "kind": "greet",
             "lang": "en",
             "say": "Hello, everyone! Last time, Riko gave a great talk, and a third golden leaf grew. Today, a special guest arrives. A big smile and a red scarf!",
-            "subtitleJa": "こんにちは、みんな！ まえの かいは、リコちゃんが すてきな 発表を して、3まいめの 金の 葉っぱが はえたね。きょうは とくべつな お客さんが くるよ。大きな えがおと あかい スカーフ！",
+            "subtitleJa": "こんにちは、みんな！ まえの かいは、リコちゃんが すてきな 発表を して、3まいめの 金の 葉っぱが はえたね。きょうは とくべつな お客さんが くるよ。大きな えがおと あかい マフラー！",
             "subtitleEn": "Hello, everyone! Last time, Riko gave a great talk, and a third golden leaf grew. Today, a special guest arrives. A big smile and a red scarf!",
             "gesture": "wave",
             "slide": {
@@ -7825,9 +7841,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Ticket gate. At the station, you touch your card here. Beep! Ticket gate!",
+            "say": "Ticket gate. At the station, you tap your card here. Beep! Ticket gate!",
             "subtitleJa": "ticket gate。駅で、ここに カードを タッチ するよ。ピッ！ かいさつ！",
-            "subtitleEn": "Ticket gate. At the station, you touch your card here. Beep! Ticket gate!",
+            "subtitleEn": "Ticket gate. At the station, you tap your card here. Beep! Ticket gate!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -7906,9 +7922,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Spell them in chunks. Re, c, ei, ve. Receive. Re, qu, est. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
-            "subtitleJa": "かたまりで つづろう。re、c、ei、ve。receive。re、qu、est。request。友だちとは kids や get で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ children。receive。request。",
-            "subtitleEn": "Spell them in chunks. Re, c, ei, ve. Receive. Re, qu, est. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
+            "say": "Spell them. R, e, c, e, i, v, e. Receive. R, e, q, u, e, s, t. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
+            "subtitleJa": "つづって みよう。r、e、c、e、i、v、e。receive。r、e、q、u、e、s、t。request。友だちとは kids や get で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ children。receive。request。",
+            "subtitleEn": "Spell them. R, e, c, e, i, v, e. Receive. R, e, q, u, e, s, t. Request. With friends, kids and get are fine. Both are correct English! Your turn! Children. Receive. Request.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -8072,9 +8088,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Brilliant! You can make polite suggestions, answer with but, and use formal words. Next, go and talk with Birimo! Bye-bye!",
+            "say": "Great job! You can make polite suggestions, answer with but, and use formal words. Next, go and talk with Birimo! Bye-bye!",
             "subtitleJa": "すばらしい！ ていねいに 提案が できるし、but で こたえられるし、かしこまった ことばも つかえるね。このあと ビリモと おはなし してね！ バイバイ！",
-            "subtitleEn": "Brilliant! You can make polite suggestions, answer with but, and use formal words. Next, go and talk with Birimo! Bye-bye!",
+            "subtitleEn": "Great job! You can make polite suggestions, answer with but, and use formal words. Next, go and talk with Birimo! Bye-bye!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -8092,6 +8108,7 @@
     {
       "lessonNo": 1037,
       "world": 35,
+      "reviewed": "run9",
       "title": "How About Making a Map?",
       "titleJa": "地図を つくるのは どう？",
       "school": {
@@ -8224,7 +8241,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の プリヤと アイデアを 出しあおう。How about ～ing? で 提案し、Why? と きかれたら りゆうを 言おう。地図に のせたい ばしょも 言おう",
-          "starterEn": "Hi, it's Priya! Let's brainstorm. What can we make for people who visit Willowford for the first time? Why is it a good idea?",
+          "starterEn": "Let's pretend I'm Priya. Time to brainstorm! What can we make for people who visit Willowford for the first time? Why is it a good idea?",
           "targetExpressions": [
             "How about making a map for visitors?",
             "What should we put on the map? ― Let's put the library and the park on it.",
@@ -8308,9 +8325,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Sticky note. A small paper that sticks. Write, peel, stick! Sticky note!",
+            "say": "Sticky note. A small piece of paper that sticks. Write, peel, stick! Sticky note!",
             "subtitleJa": "sticky note。くっつく 小さな かみ。かいて、はがして、はる！ ふせん！",
-            "subtitleEn": "Sticky note. A small paper that sticks. Write, peel, stick! Sticky note!",
+            "subtitleEn": "Sticky note. A small piece of paper that sticks. Write, peel, stick! Sticky note!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -8387,9 +8404,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. Two s's. A, s-s, ist.",
-            "subtitleJa": "ことばの じかん！ かんばんや お店で 見る かしこまった ことば。buy は purchase に。PUR を つよく。パー・チェス。help は assist に。s が 2つ。a、s-s、ist。",
-            "subtitleEn": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. Two s's. A, s-s, ist.",
+            "say": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. It has a double s. A, s, s, i, s, t.",
+            "subtitleJa": "ことばの じかん！ かんばんや お店で 見る かしこまった ことば。buy は purchase に。PUR を つよく。パー・チェス。help は assist に。s が 2つ。a、s、s、i、s、t。",
+            "subtitleEn": "Word time! Formal words for signs and shops. Buy becomes purchase. Make PUR strong. PUR-chase. Help becomes assist. It has a double s. A, s, s, i, s, t.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -8404,9 +8421,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Give becomes provide. Pro, vide. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
-            "subtitleJa": "give は provide に。pro、vide。provide。友だちとは buy、help、give で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ purchase。assist。provide。",
-            "subtitleEn": "Give becomes provide. Pro, vide. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
+            "say": "Give becomes provide. It rhymes with ride. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
+            "subtitleJa": "give は provide に。ride と おなじ ひびき。provide。友だちとは buy、help、give で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ purchase。assist。provide。",
+            "subtitleEn": "Give becomes provide. It rhymes with ride. Provide. With friends, buy, help, and give are fine. Both are correct English! Your turn! Purchase. Assist. Provide.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -8523,9 +8540,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Make a new idea for your town. How about making... What's your idea?",
+            "say": "Your turn! Think of a new idea for your town. How about making... What's your idea?",
             "subtitleJa": "あなたの ばん！ まちの ための あたらしい アイデアを 出して みて。「… を つくるのは どう？」 あなたの アイデアは？",
-            "subtitleEn": "Your turn! Make a new idea for your town. How about making... What's your idea?",
+            "subtitleEn": "Your turn! Think of a new idea for your town. How about making... What's your idea?",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -8590,6 +8607,7 @@
     {
       "lessonNo": 1038,
       "world": 35,
+      "reviewed": "run9",
       "title": "Let's Find a Compromise",
       "titleJa": "だきょうあんを 見つけよう",
       "school": {
@@ -8684,7 +8702,7 @@
           "emoji": "🌼"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, How about making a map for visitors? Today, Olive takes us outside, with Ms. Emma, to the empty lot next to the Hall of Wisdom. It's just dirt and a few old stones now, and the old fence needs to be repaired. Mayor Hart wants to know what the children would like here. Leo says, I think it should be a playground, because children need a place to run and play. Amara says, I see your point, but I think it should be a flower garden. Flowers make people happy, and bees need them, too. Leo and Amara are both right, so what can we do? Olive says, When two people want different things, we can look for a compromise（だきょうあん）. A compromise is an idea where both sides get some of what they want. Let's find a compromise. Say it with me. Let's find a compromise. Great job! Let's read Olive's notes on the board. \"The Empty Lot. Leo's idea: a playground. Good points: children can run, climb, and play together. Amara's idea: a flower garden. Good points: it is beautiful, quiet, and good for bees. Our compromise: perhaps we can use both halves of the lot. A flower garden on one side and a small playground on the other side. It will require some benches and a path in the middle, so families can enjoy both.\" What is good about a flower garden? It is beautiful, quiet, and good for bees. What will be in the middle? Some benches and a path. Kiko says, What if we make a flower garden with a small playground? Leo and Amara smile. That sounds fair! Now, phonics. Maybe becomes perhaps. Need becomes require. R, e, q, u, i, r, e. Fix becomes repair. These formal words are common on notices. Next time, the council will vote on which idea to present to Mayor Hart!",
+      "teacherScript": "Hello, everyone! Last time, we said, How about making a map for visitors? Today, Olive takes us outside to the empty lot next to the Hall of Wisdom. It's just dirt and a few old stones now, and the old fence needs to be repaired. Mayor Hart wants to know what the children would like here. Leo says, I think it should be a playground, because children need a place to run and play. Amara says, I see your point, but I think it should be a flower garden. Flowers make people happy, and bees need them, too. Leo and Amara are both right, so what can we do? Olive says, When two people want different things, we can look for a compromise（だきょうあん）. A compromise is an idea where both sides get some of what they want. Let's find a compromise. Say it with me. Let's find a compromise. Great job! Let's read Olive's notes on the board. \"The Empty Lot. Leo's idea: a playground. Good points: children can run, climb, and play together. Amara's idea: a flower garden. Good points: it is beautiful, quiet, and good for bees. Our compromise: perhaps we can use both halves of the lot. A flower garden on one side and a small playground on the other side. It will require some benches and a path in the middle, so families can enjoy both.\" What is good about a flower garden? It is beautiful, quiet, and good for bees. What will be in the middle? Some benches and a path. Kiko says, What if we make a flower garden with a small playground? Leo and Amara smile. That sounds fair! Now, phonics. Maybe becomes perhaps. Need becomes require. R, e, q, u, i, r, e. Fix becomes repair. These formal words are common on notices. Next time, the council will vote on which idea to present to Mayor Hart!",
       "conversation": {
         "scene": "Leo and Amara want different things for the empty lot",
         "sceneJa": "あき地を どう するかで レオと アマラの 意見が わかれる",
@@ -8727,7 +8745,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の レオと アマラの 意見が わかれて いるよ。両方の りゆうを きいて Let's find a compromise. / What if we ～? で だきょうあんを 出そう。Why? と きかれたら りゆうも 言おう",
-          "starterEn": "Hi, I'm Leo. I want a playground on the empty lot, but Amara wants a flower garden. We can't agree! What do you think we should do? Why?",
+          "starterEn": "Let's pretend I'm Leo. I want a playground on the empty lot, but Amara wants a flower garden. We can't agree! What do you think we should do? Why?",
           "targetExpressions": [
             "Let's find a compromise.",
             "What if we make a flower garden with a small playground? ― That sounds fair.",
@@ -8860,7 +8878,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "I say, You both have good reasons. Let's find a compromise. Kiko says, What if we make a flower garden with a small playground? Haru says, That sounds fair.",
-            "subtitleJa": "先生が いうよ。「ふたりとも いい りゆうが あるわね。だきょうあんを 見つけましょう。」 キコちゃん「花だんと 小さな あそび場を いっしょに つくったら どう？」 ハルくん「それなら こうへいだね。」",
+            "subtitleJa": "わたしが いうよ。「ふたりとも いい りゆうが あるわね。だきょうあんを 見つけましょう。」 キコちゃん「花だんと 小さな あそび場を いっしょに つくったら どう？」 ハルくん「それなら こうへいだね。」",
             "subtitleEn": "I say, You both have good reasons. Let's find a compromise. Kiko says, What if we make a flower garden with a small playground? Haru says, That sounds fair.",
             "gesture": "open_hands",
             "slide": {
@@ -8890,9 +8908,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. Re, qu, ire.",
-            "subtitleJa": "ことばの じかん！ かんばんや おしらせの かしこまった ことば。maybe は perhaps に。HAPS を つよく。パ・ハップス。need は require に。re、qu、ire。",
-            "subtitleEn": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. Re, qu, ire.",
+            "say": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. R, e, q, u, i, r, e.",
+            "subtitleJa": "ことばの じかん！ かんばんや おしらせの かしこまった ことば。maybe は perhaps に。HAPS を つよく。パ・ハップス。need は require に。r、e、q、u、i、r、e。",
+            "subtitleEn": "Word time! Formal words for signs and notices. Maybe becomes perhaps. Make HAPS strong. per-HAPS. Need becomes require. R, e, q, u, i, r, e.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -8907,9 +8925,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Fix becomes repair. Re, pair. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
-            "subtitleJa": "fix は repair に。re、pair。友だちとは maybe、need、fix で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ perhaps。require。repair。",
-            "subtitleEn": "Fix becomes repair. Re, pair. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
+            "say": "Fix becomes repair. re-PAIR. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
+            "subtitleJa": "fix は repair に。re-PAIR。友だちとは maybe、need、fix で だいじょうぶ。どちらも ただしい 英語だよ！ あなたの ばん！ perhaps。require。repair。",
+            "subtitleEn": "Fix becomes repair. re-PAIR. With friends, maybe, need, and fix are fine. Both are correct English! Your turn! Perhaps. Require. Repair.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -9026,9 +9044,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Your friend wants soccer, and you want art. What if we...? Find a fair plan!",
+            "say": "Your turn! Your friend wants to play soccer, and you want to draw. What if we...? Find a fair plan!",
             "subtitleJa": "あなたの ばん！ 友だちは サッカー、あなたは おえかきが したい。「～ したら どう？」 こうへいな けいかくを 見つけてね！",
-            "subtitleEn": "Your turn! Your friend wants soccer, and you want art. What if we...? Find a fair plan!",
+            "subtitleEn": "Your turn! Your friend wants to play soccer, and you want to draw. What if we...? Find a fair plan!",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -9093,6 +9111,7 @@
     {
       "lessonNo": 1039,
       "world": 35,
+      "reviewed": "run9",
       "title": "Vote and Report",
       "titleJa": "とうひょうして ほうこく",
       "school": {
@@ -9187,7 +9206,7 @@
           "emoji": "📝"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Let's find a compromise. Leo and Amara were so happy with the garden and the small playground. Now, the council has many ideas, but Mayor Hart is coming back tomorrow, and we can present only one proposal. How can we choose fairly? Olive says, Let's vote! There are twenty children on the council. Each child writes one idea on a card and puts it in the ballot box. Then Riko and Leo count the votes, and Kiko writes the results on the board. Let's read the results. \"Children's Council Vote Results. Twenty children voted today. The visitor map got twelve votes. The flowers at the station got five votes. A new bench by the pond got three votes. Twelve out of twenty is more than half, so the majority voted for the visitor map. We will present the map idea to Mayor Hart tomorrow. Thank you, everyone, for sharing your ideas and voting kindly.\" How many votes did the bench get? Three. Did the majority vote for the map? Yes, because twelve out of twenty is more than half. Haru reports the result. Twelve people voted for the idea. Say it with me. Twelve people voted for the idea. Perfect! Kiko voted for the flowers. She says, I'm a little sad, but the map is a great idea, too. Olive says, Thank you, Kiko. Accepting the result is a big part of voting. And perhaps the flowers can be our next idea! Now, phonics. More formal words. Tell becomes inform. Bike becomes bicycle. Bi means two, and cycle means wheel, so a bicycle has two wheels. Photo becomes photograph. P, h makes the f sound. Next time, we will present our proposal to Mayor Hart in the great hall!",
+      "teacherScript": "Hello, everyone! Last time, we said, Let's find a compromise. Leo and Amara were so happy with the garden and the small playground. Now, the council has many ideas, but Mayor Hart is coming back tomorrow, and we can present only one proposal. How can we choose fairly? Olive says, Let's vote! There are twenty children on the council. Each child writes one idea on a card and puts it in the ballot box. Then Riko and Priya count the votes, and Kiko writes the results on the board. Let's read the results. \"Children's Council Vote Results. Twenty children voted today. The visitor map got twelve votes. The flowers at the station got five votes. A new bench by the pond got three votes. Twelve out of twenty is more than half, so the majority voted for the visitor map. We will present the map idea to Mayor Hart tomorrow. Thank you, everyone, for sharing your ideas and voting kindly.\" How many votes did the bench get? Three. Did the majority vote for the map? Yes, because twelve out of twenty is more than half. Haru reports the result. Twelve people voted for the idea. Say it with me. Twelve people voted for the idea. Perfect! Kiko voted for the flowers. She says, I'm a little sad, but the map is a great idea, too. Olive says, Thank you, Kiko. Accepting the result is a big part of voting. And perhaps the flowers can be our next idea! Now, phonics. More formal words. Tell becomes inform. Bike becomes bicycle. Bi means two, and cycle means wheel, so a bicycle has two wheels. Photo becomes photograph. P, h makes the f sound. Next time, we will present our proposal to Mayor Hart in the great hall!",
       "conversation": {
         "scene": "The council counts the votes and reports the results",
         "sceneJa": "こども議会で 票を かぞえて 結果を ほうこく する",
@@ -9230,7 +9249,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の レオに とうひょうの 結果を ほうこく しよう。～ people voted for ～. / The majority ～. を つかい、Why? と きかれたら じぶんが えらんだ 案の りゆうも 言おう",
-          "starterEn": "Hi, it's Leo! I was outside, so I missed the vote. What were the results? Which idea did you vote for, and why?",
+          "starterEn": "Let's pretend I'm Leo. I was outside, so I missed the vote. What were the results? Which idea did you vote for, and why?",
           "targetExpressions": [
             "Twelve people voted for the idea.",
             "How many people voted for the station flowers? ― Five people did.",
@@ -9282,9 +9301,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Vote. You choose one idea. Me! This one! Vote!",
-            "subtitleJa": "vote。アイデアを ひとつ えらぶ こと。わたし！ これ！ とうひょう！",
-            "subtitleEn": "Vote. You choose one idea. Me! This one! Vote!",
+            "say": "Vote. You choose one idea. I pick this one! Vote!",
+            "subtitleJa": "vote。アイデアを ひとつ えらぶ こと。これに する！ とうひょう！",
+            "subtitleEn": "Vote. You choose one idea. I pick this one! Vote!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -9363,7 +9382,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "I say, So the majority voted for the map. That means more than half. Twelve out of twenty! Kiko says, I voted for the flowers, but the map is good, too.",
-            "subtitleJa": "先生が いうよ。「つまり 過半数が 地図に とうひょう したのね。半分より 多いって いう こと。20 人中 12 人！」 キコちゃん「わたしは 花に とうひょう したけど、地図も いいね。」",
+            "subtitleJa": "わたしが いうよ。「つまり 過半数が 地図に とうひょう したのね。半分より 多いって いう こと。20 人中 12 人！」 キコちゃん「わたしは 花に とうひょう したけど、地図も いいね。」",
             "subtitleEn": "I say, So the majority voted for the map. That means more than half. Twelve out of twenty! Kiko says, I voted for the flowers, but the map is good, too.",
             "gesture": "open_hands",
             "slide": {
@@ -9410,9 +9429,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Bicycle has two c's. Bi, c, y, c, le. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
-            "subtitleJa": "bicycle には c が 2つ。bi、c、y、c、le。photo は photograph に。ph は f の 音。どちらも ただしい 英語だよ！ あなたの ばん！ inform。bicycle。photograph。",
-            "subtitleEn": "Bicycle has two c's. Bi, c, y, c, le. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
+            "say": "Bicycle has two c's. B, i, c, y, c, l, e. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
+            "subtitleJa": "bicycle には c が 2つ。b、i、c、y、c、l、e。photo は photograph に。ph は f の 音。どちらも ただしい 英語だよ！ あなたの ばん！ inform。bicycle。photograph。",
+            "subtitleEn": "Bicycle has two c's. B, i, c, y, c, l, e. Photo becomes photograph. P h sounds like f. Both are correct English! Your turn! Inform. Bicycle. Photograph.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -9596,6 +9615,7 @@
     {
       "lessonNo": 1040,
       "world": 35,
+      "reviewed": "run9",
       "title": "Children's Proposal",
       "titleJa": "子どもたちの 提案",
       "school": {
@@ -9614,7 +9634,7 @@
           },
           {
             "en": "Why not use a phone instead? ― I see your point, but not everyone has a phone.",
-            "ja": "かわりに 電話を つかえば いいのでは？ ― 言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。"
+            "ja": "かわりに スマホを つかえば いいのでは？ ― 言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。"
           }
         ],
         "testPoints": [
@@ -9693,7 +9713,7 @@
           "emoji": "🧣"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Twelve people voted for the idea. Today is the big day. Mayor Hart sits in the round meeting hall, with her big smile and her red scarf. The Children's Council is ready. We worked on the map all week. Amara drew the pictures, Leo checked the walking times, and Priya wrote the words. Haru, Riko, Kiko, and Birimo walk to the podium. Haru begins. Our proposal is to make a map for visitors. It will help people find their way. Say it with me. Our proposal is to make a map for visitors. It will help people find their way. Excellent! Let's read our proposal. \"The Children's Proposal for Willowford. Many visitors get lost when they arrive at Willowford Station. Our proposal is to make a free map for visitors. It will show the library, the park, the Hall of Wisdom, and the new garden. The map will have pictures, so even small children can read it. We also suggest that the town put a big map board outside the station. Thank you for listening.\" Why will the map have pictures? So even small children can read it. Where should the big map board go? Outside the station. Mayor Hart asks, Why not use a phone instead? Kiko answers, I see your point, but not everyone has a phone. Mayor Hart laughs and says, That's a very good answer. Yes! We will make your map! Everyone cheers, and the applause is very loud. Then the Tree of Voices glows, and a fourth golden leaf grows! Now, phonics. Let's review. Receive. After c, write e before i. Did you say Tuesday? No, I said THURSDAY. Interact. Inter means each other, so interact means act with each other. Reality. Real plus ity. Next time, Amara has a big question about animals!",
+      "teacherScript": "Hello, everyone! Last time, we said, Twelve people voted for the idea. Today is the big day. Mayor Hart sits in the round meeting hall, with her big smile and her red scarf. The Children's Council is ready. We worked on the map all week. Amara drew the pictures, Leo checked the walking times, and Priya wrote the words. Haru, Riko, Kiko, and Birimo walk to the podium. Haru begins. Our proposal is to make a map for visitors. It will help people find their way. Say it with me. Our proposal is to make a map for visitors. It will help people find their way. Excellent! Let's read our proposal. \"The Children's Proposal for Willowford. Many visitors get lost when they arrive at Willowford Station. Our proposal is to make a free map for visitors. It will show the library, the park, the Hall of Wisdom, and the new garden. The map will have pictures, so even small children can read it. We also suggest that the town put a big map board outside the station. Thank you for listening.\" Why will the map have pictures? So even small children can read it. Where should the big map board go? Outside the station. Mayor Hart asks, Why not use a phone instead? Kiko answers, I see your point, but not everyone has a phone. Mayor Hart laughs and says, That's a very good answer. Yes! We will make your map! Everyone cheers, and the applause is very loud. Then the Tree of Voices glows, and a fourth golden leaf grows! Now, phonics. Let's review. Receive. After c, write e before i. Did you say Tuesday? No, I said THURSDAY. Interact. Inter means each other, so interact means act with each other. Reality. Real plus i, t, y. Next time, Amara has a big question about animals!",
       "conversation": {
         "scene": "The children present their proposal to Mayor Hart, and the fourth golden leaf grows",
         "sceneJa": "こども議会で ハート市長に 提案を 発表し、4まいめの 金の 葉っぱが はえる",
@@ -9716,12 +9736,12 @@
           {
             "speaker": "Birimo",
             "en": "I see. But why not use a phone instead?",
-            "ja": "なるほど。でも かわりに 電話を つかえば いいのでは？"
+            "ja": "なるほど。でも かわりに スマホを つかえば いいのでは？"
           },
           {
             "speaker": "Kiko",
             "en": "I see your point, but not everyone has a phone. A paper map is easy for everyone.",
-            "ja": "言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。"
+            "ja": "言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。"
           },
           {
             "speaker": "Birimo",
@@ -9741,7 +9761,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ハート市長に Our proposal is to ～. It will help ～. で 提案を 発表しよう。Why? や Can you give me an example? と きかれたら りゆうと れいで こたえよう",
-          "starterEn": "Hello again, Children's Council! I'm so excited to hear your proposal. What is your idea for Willowford, and why will it help?",
+          "starterEn": "Let's pretend I'm Mayor Hart. Hello again, Children's Council! I'm so excited to hear your proposal. What is your idea for Willowford, and why will it help?",
           "targetExpressions": [
             "Our proposal is to make a map for visitors. It will help people find their way.",
             "Why do you think visitors need a map? ― Because many people get lost at the station.",
@@ -9808,9 +9828,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Podium. A stand where a speaker stands. Step up, and speak! Podium!",
+            "say": "Podium. The place where a speaker stands. Step up, and speak! Podium!",
             "subtitleJa": "podium。話す 人が たつ 台。のぼって、話そう！ 発表台！",
-            "subtitleEn": "Podium. A stand where a speaker stands. Step up, and speak! Podium!",
+            "subtitleEn": "Podium. The place where a speaker stands. Step up, and speak! Podium!",
             "gesture": "point",
             "slide": {
               "title": "Words",
@@ -9873,7 +9893,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "Mayor Hart asks, Why not use a phone instead? Kiko says, I see your point, but not everyone has a phone. A paper map is easy for everyone.",
-            "subtitleJa": "ハート市長が きくよ。「かわりに 電話を つかえば いいのでは？」 キコちゃん「言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。」",
+            "subtitleJa": "ハート市長が きくよ。「かわりに スマホを つかえば いいのでは？」 キコちゃん「言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。紙の 地図なら だれでも かんたんです。」",
             "subtitleEn": "Mayor Hart asks, Why not use a phone instead? Kiko says, I see your point, but not everyone has a phone. A paper map is easy for everyone.",
             "gesture": "open_hands",
             "slide": {
@@ -9903,9 +9923,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Receive. After c, e comes before i. Re, c, ei, ve. Did you say Tuesday? No, I said THURSDAY!",
-            "subtitleJa": "おとの ふりかえり！ receive。c の あとは e が さき、i が あと。re、c、ei、ve。「火曜日って いった？」「ううん、木曜日って いったの！」",
-            "subtitleEn": "Sound review! Receive. After c, e comes before i. Re, c, ei, ve. Did you say Tuesday? No, I said THURSDAY!",
+            "say": "Sound review! Receive. After c, e comes before i. R, e, c, e, i, v, e. Did you say Tuesday? No, I said THURSDAY!",
+            "subtitleJa": "おとの ふりかえり！ receive。c の あとは e が さき、i が あと。r、e、c、e、i、v、e。「火曜日って いった？」「ううん、木曜日って いったの！」",
+            "subtitleEn": "Sound review! Receive. After c, e comes before i. R, e, c, e, i, v, e. Did you say Tuesday? No, I said THURSDAY!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -10025,7 +10045,7 @@
             "kind": "repeat",
             "lang": "en",
             "say": "I see your point, but not everyone has a phone.",
-            "subtitleJa": "「言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。」",
+            "subtitleJa": "「言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。」",
             "subtitleEn": "I see your point, but not everyone has a phone.",
             "gesture": "nod",
             "slide": {
@@ -10057,7 +10077,7 @@
             "kind": "check",
             "lang": "en",
             "say": "Quiz! Why not use a phone? Which answer is kind? A, No, you're wrong! B, I see your point, but not everyone has a phone. Think!",
-            "subtitleJa": "クイズ！「電話を つかえば？」 やさしい こたえは どっち？ A、ちがう、まちがってる！ B、言いたい ことは わかりますが、みんなが 電話を もって いる わけでは ありません。かんがえて！",
+            "subtitleJa": "クイズ！「スマホを つかえば？」 やさしい こたえは どっち？ A、ちがう、まちがってる！ B、言いたい ことは わかりますが、みんなが スマホを もって いる わけでは ありません。かんがえて！",
             "subtitleEn": "Quiz! Why not use a phone? Which answer is kind? A, No, you're wrong! B, I see your point, but not everyone has a phone. Think!",
             "gesture": "think",
             "slide": {
@@ -10107,6 +10127,7 @@
     {
       "lessonNo": 1041,
       "world": 35,
+      "reviewed": "run9",
       "title": "Animals and Us",
       "titleJa": "どうぶつと わたしたち",
       "school": {
@@ -10201,7 +10222,7 @@
           "emoji": "🧑‍🔬"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Our proposal is to make a map for visitors. It will help people find their way. Mayor Hart loved our map idea, and four golden leaves are shining on the Tree of Voices. Today's council topic is animals. Amara raises her hand. She says, I saw a baby fox in a video. It was so cute! I want one as a pet! Leo says, Hmm, but a fox is a wild animal. So Olive writes a big question on the board. Should people keep wild animals as pets? Say it with me. Should people keep wild animals as pets? Great! Olive says, Let's listen to both sides before we decide. Let's read the fact card from the Hall's library. \"Wild animals usually live in nature, like foxes, owls and monkeys. They need lots of space, special food, and other animals of their own kind. Many places have laws that protect wild animals. Keeping them at home can be bad for the animal and unsafe for people. Dogs, cats, rabbits and hamsters are animals that live well with people. Some wild animals are cared for by experts in zoos and sanctuaries.\" What do wild animals need? Lots of space, special food, and friends of their kind. Listen. A baby fox is the cutest animal in the world. Is that a fact or an opinion? It's an opinion! Amara thinks and says, I partly agree with Leo. Maybe I can draw foxes and visit them at a sanctuary with my family. Olive says, On the one hand, people love animals. On the other hand, wild animals need lots of space. Now, phonics.Spect means look. In plus spect is inspect. To inspect means to look inside carefully. Dict means say. Pre means before, so predict means to say what will happen before it happens. Struct means build. A structure is something built, like a bridge. Next time, we will talk about using less plastic!",
+      "teacherScript": "Hello, everyone! Last time, we said, Our proposal is to make a map for visitors. It will help people find their way. Mayor Hart loved our map idea, and four golden leaves are shining on the Tree of Voices. Today's council topic is animals. Amara raises her hand. She says, I saw a baby fox in a video. It was so cute! I want one as a pet! Leo says, Hmm, but a fox is a wild animal. So Olive writes a big question on the board. Should people keep wild animals as pets? Say it with me. Should people keep wild animals as pets? Great! Olive says, Let's listen to both sides before we decide. Let's read the fact card from the Hall's library. \"Wild animals usually live in nature, like foxes, owls and monkeys. They need lots of space, special food, and other animals of their own kind. Many places have laws that protect wild animals. Keeping them at home can be bad for the animal and unsafe for people. Dogs, cats, rabbits and hamsters are animals that live well with people. Some wild animals are cared for by experts in zoos and sanctuaries.\" What do wild animals need? Lots of space, special food, and friends of their kind. Listen. A baby fox is the cutest animal in the world. Is that a fact or an opinion? It's an opinion! Amara thinks and says, I partly agree with Leo. Maybe I can draw foxes and visit them at a sanctuary with my family. Olive says, On the one hand, people love animals. On the other hand, wild animals need lots of space. Now, phonics. Spect means look. In plus spect is inspect. To inspect means to look inside carefully. Dict means say. Pre means before, so predict means to say what will happen before it happens. Struct means build. A structure is something built, like a bridge. Next time, we will talk about using less plastic!",
       "conversation": {
         "scene": "The Children's Council talks about wild animals as pets",
         "sceneJa": "こども議会で 野生の どうぶつを ペットに するか 話しあう",
@@ -10213,7 +10234,7 @@
           },
           {
             "speaker": "Birimo",
-            "en": "I'm playing Amara! I think yes, because baby foxes are so cute!",
+            "en": "I'm playing Amara! I think they should, because baby foxes are so cute!",
             "ja": "ぼく、アマラの やく！ さんせい。だって 赤ちゃんの キツネって すごく かわいいもん！"
           },
           {
@@ -10244,7 +10265,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の アマラと「野生の どうぶつを ペットに する？」に ついて 話そう。アマラが Why? と きいたら 理由を 言おう。On the one hand, ～. On the other hand, ～. で りょうほうの 意見も みとめよう",
-          "starterEn": "Hi! I love animals so much. Sometimes I dream about having a baby fox as a pet. Should people keep wild animals as pets? What do you think? Why?",
+          "starterEn": "Let's pretend I'm Amara. I love animals so much. Sometimes I dream about having a baby fox as a pet. Should people keep wild animals as pets? What do you think? Why?",
           "targetExpressions": [
             "Should people keep wild animals as pets?",
             "On the one hand, people love animals. On the other hand, wild animals need lots of space.",
@@ -10360,14 +10381,14 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo is playing Amara. I think yes, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
+            "say": "Birimo is playing Amara. I think they should, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
             "subtitleJa": "ビリモは アマラの やく。「さんせい。だって あかちゃんの キツネって すごく かわいいもん！」 リコちゃん「いいたい ことは わかるけど、やせいの どうぶつには ひろい ばしょと とくべつな えさが ひつようだよ。」",
-            "subtitleEn": "Birimo is playing Amara. I think yes, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
+            "subtitleEn": "Birimo is playing Amara. I think they should, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "I'm playing Amara! I think yes, because baby foxes are so cute!",
+                "I'm playing Amara! I think they should, because baby foxes are so cute!",
                 "I see your point, but wild animals need lots of space and special food."
               ],
               "emoji": "🦊"
@@ -10391,9 +10412,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? It's a fact. You can check it in a book!",
-            "subtitleJa": "キコちゃんが きくよ。「おおくの ばしょに やせいの どうぶつを まもる きまりが あるよ。これは じじつ？ それとも いけん？」「じじつよ。本で たしかめられるわ！」",
-            "subtitleEn": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? It's a fact. You can check it in a book!",
+            "say": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? I answer, It's a fact. You can check it in a book!",
+            "subtitleJa": "キコちゃんが きくよ。「おおくの ばしょに やせいの どうぶつを まもる きまりが あるよ。これは じじつ？ それとも いけん？」わたし「じじつよ。本で たしかめられるわ！」",
+            "subtitleEn": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? I answer, It's a fact. You can check it in a book!",
             "gesture": "nod",
             "slide": {
               "title": "Talk",
@@ -10615,6 +10636,7 @@
     {
       "lessonNo": 1042,
       "world": 35,
+      "reviewed": "run9",
       "title": "Less Plastic",
       "titleJa": "プラスチックを へらそう",
       "school": {
@@ -10661,9 +10683,9 @@
           "emoji": "♻️"
         },
         {
-          "en": "Shake your hand and say, No straw, thank you!",
-          "ja": "手を ふって「ストローは けっこうです！」と 言って。",
-          "action": "手の ひらを よこに ふって にっこり ことわる",
+          "en": "Shake your head and say, No straw, thank you!",
+          "ja": "くびを よこに ふって「ストローは けっこうです！」と 言って。",
+          "action": "くびを よこに ふって にっこり ことわる",
           "emoji": "🙅"
         }
       ],
@@ -10709,15 +10731,15 @@
           "emoji": "♻️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Should people keep wild animals as pets? Amara decided to draw foxes instead. Today, at lunchtime, Priya comes into the round hall with a big blue box. It's the recycling bin from the Hall's kitchen. She says, Yesterday, I counted the plastic bottles in this bin. There were thirty-one! Haru says, Wow, in only one day! Olive rings her bell. Let's make a suggestion. Remember, we can say, I suggest that we, and then a verb. Riko raises her hand. I suggest that we bring our own bottles. Say it with me. I suggest that we bring our own bottles. Excellent! Kiko adds, How about using reusable bags, too? Priya made a poster about plastic. Let's read Priya's poster. \"Did you know? Plastic is strong and useful, but it can take hundreds of years to break down. A lot of plastic waste ends up in the sea, and it can hurt sea animals like turtles and seabirds. Here are three easy ideas. Bring your own bottle and fill it with water. Carry a reusable bag when you go shopping. Say no, thank you, to straws you don't need. Small steps can make a big difference!\" How long can plastic take to break down? Hundreds of years. Which animals can plastic hurt? Sea animals, like turtles and seabirds. Then Haru says, I partly agree. Reusable bottles are great, but sometimes I forget mine. Riko says, I see your point. Why don't we put a bottle sticker on the door to remind us? Now, phonics. More roots! Port means carry. Ex means out, so export means to carry things out to another country. Rupt means break. Inter means between, so interrupt means to break in when someone is talking. Ject means throw. Re means back, so reject means to throw something back, or to say no to it. Next time, we will review how we share opinions!",
+      "teacherScript": "Hello, everyone! Last time, we said, Should people keep wild animals as pets? Amara decided to draw foxes instead. Today, at lunchtime, Priya comes into the round hall with a big blue box. It's the recycling bin from the Hall's kitchen. She says, This week, I counted the plastic bottles in this bin. There were thirty-one! Haru says, Wow, in only one week! Olive rings her bell. Let's make a suggestion. Remember, we can say, I suggest that we, and then a verb. Riko raises her hand. I suggest that we bring our own bottles. Say it with me. I suggest that we bring our own bottles. Excellent! Kiko adds, How about using reusable bags, too? Priya made a poster about plastic. Let's read Priya's poster. \"Did you know? Plastic is strong and useful, but it can take hundreds of years to break down. A lot of plastic waste ends up in the sea, and it can hurt sea animals like turtles and seabirds. Here are three easy ideas. Bring your own bottle and fill it with water. Carry a reusable bag when you go shopping. Say no, thank you, to straws you don't need. Small steps can make a big difference!\" How long can plastic take to break down? Hundreds of years. Which animals can plastic hurt? Sea animals, like turtles and seabirds. Then Haru says, I partly agree. Reusable bottles are great, but sometimes I forget mine. Riko says, I see your point. Why don't we put a bottle sticker on the door to remind us? Now, phonics. More roots! Port means carry. Ex means out, so export means to carry things out to another country. Rupt means break. Inter means between, so interrupt means to break in when someone is talking. Ject means throw. Re means back, so reject means to throw something back, or to say no to it. Next time, we will review how we share opinions!",
       "conversation": {
         "scene": "Priya's recycling bin and ideas for using less plastic",
         "sceneJa": "プリヤの リサイクルばこを 見て プラスチックを へらす アイデアを 出しあう",
         "lines": [
           {
             "speaker": "Kiko",
-            "en": "Priya counted thirty-one plastic bottles in the bin yesterday!",
-            "ja": "きのう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！"
+            "en": "Priya counted thirty-one plastic bottles in the bin this week!",
+            "ja": "こんしゅう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！"
           },
           {
             "speaker": "Riko",
@@ -10752,7 +10774,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の プリヤに プラスチックを へらす アイデアを 提案しよう。I suggest that we ～. を つかい、プリヤが Why? と きいたら 理由を 言おう",
-          "starterEn": "I counted thirty-one plastic bottles in the recycling bin yesterday! What can the Children's Council do about it? Do you have a suggestion? Tell me why, too!",
+          "starterEn": "Let's pretend I'm Priya. I counted thirty-one plastic bottles in the recycling bin this week! What can the Children's Council do about it? Do you have a suggestion? Tell me why, too!",
           "targetExpressions": [
             "I suggest that we bring our own bottles.",
             "How about using reusable bags? ― That's a good idea, because they last a long time.",
@@ -10868,14 +10890,14 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko says, Priya counted thirty-one plastic bottles in the bin yesterday! Riko says, That's too many. I suggest that we bring our own bottles.",
-            "subtitleJa": "キコちゃん「きのう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！」 リコちゃん「おおすぎるね。じぶんの ボトルを もって くる ことを ていあん します。」",
-            "subtitleEn": "Kiko says, Priya counted thirty-one plastic bottles in the bin yesterday! Riko says, That's too many. I suggest that we bring our own bottles.",
+            "say": "Kiko says, Priya counted thirty-one plastic bottles in the bin this week! Riko says, That's too many. I suggest that we bring our own bottles.",
+            "subtitleJa": "キコちゃん「こんしゅう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！」 リコちゃん「おおすぎるね。じぶんの ボトルを もって くる ことを ていあん します。」",
+            "subtitleEn": "Kiko says, Priya counted thirty-one plastic bottles in the bin this week! Riko says, That's too many. I suggest that we bring our own bottles.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "Priya counted thirty-one plastic bottles in the bin yesterday!",
+                "Priya counted thirty-one plastic bottles in the bin this week!",
                 "That's too many. I suggest that we bring our own bottles."
               ],
               "emoji": "🧴"
@@ -10973,15 +10995,15 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Put the empty bottle in the recycling bin. Now shake your hand and say, No straw, thank you!",
-            "subtitleJa": "からの ボトルを リサイクルばこに いれて。こんどは 手を ふって「ストローは けっこうです！」と いって。",
-            "subtitleEn": "Put the empty bottle in the recycling bin. Now shake your hand and say, No straw, thank you!",
+            "say": "Put the empty bottle in the recycling bin. Now shake your head and say, No straw, thank you!",
+            "subtitleJa": "からの ボトルを リサイクルばこに いれて。こんどは くびを よこに ふって「ストローは けっこうです！」と いって。",
+            "subtitleEn": "Put the empty bottle in the recycling bin. Now shake your head and say, No straw, thank you!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
               "items": [
                 "Put the empty bottle in the recycling bin.",
-                "Shake your hand and say, No straw, thank you!"
+                "Shake your head and say, No straw, thank you!"
               ],
               "emoji": "♻️"
             },
@@ -11000,7 +11022,7 @@
                 "Hold up your water bottle!",
                 "Fill your bottle with water. Glug, glug!",
                 "Put the empty bottle in the recycling bin.",
-                "Shake your hand and say, No straw, thank you!"
+                "Shake your head and say, No straw, thank you!"
               ],
               "emoji": "⚡"
             },
@@ -11081,7 +11103,7 @@
               "title": "Quiz",
               "items": [
                 "I suggest that we bring our own bottles.",
-                "Priya counted thirty-one plastic bottles in the bin yesterday!"
+                "Priya counted thirty-one plastic bottles in the bin this week!"
               ],
               "emoji": "❓"
             },
@@ -11090,9 +11112,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! It shares an idea for everyone. B just tells us a number. Brilliant!",
+            "say": "It's A! It shares an idea for everyone. B just tells us a number. Great job!",
             "subtitleJa": "こたえは A！ みんなへの アイデアを つたえて いるね。B は かずを つたえて いるだけ。おみごと！",
-            "subtitleEn": "It's A! It shares an idea for everyone. B just tells us a number. Brilliant!",
+            "subtitleEn": "It's A! It shares an idea for everyone. B just tells us a number. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -11125,6 +11147,7 @@
     {
       "lessonNo": 1043,
       "world": 35,
+      "reviewed": "run9",
       "title": "Stage 4 Review: Opinions",
       "titleJa": "ステージ4 ふりかえり：いけん",
       "school": {
@@ -11219,7 +11242,7 @@
           "emoji": "🌳"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, I suggest that we bring our own bottles. This morning, almost everyone came with their own bottle! Ms. Emma says, Stage 4 is almost over. Let's look back at how we share opinions. In Stage 4, we learned to give an opinion with a reason and an example. We also learned to disagree politely. Olive says, Good listeners make good speakers. Then she starts Opinion Ping-Pong. One person shares an opinion, and the next answers kindly. Birimo jumps up and says, I'm playing a boy who wants a pet monkey! A monkey can live in my room! Kiko answers, I see your point, but I think wild animals should live in nature. Say it with me. I see your point, but I think wild animals should live in nature. Perfect! Birimo asks, What do you mean by nature? Kiko says, I mean forests, rivers and the sea. Haru adds, I think so, too. For example, a monkey needs tall trees and its family. Let's read Olive's card for good speakers. \"How to Share an Opinion. First, say your opinion with I think or In my opinion. Next, give a reason with because. Then, add an example with For example. When you disagree, be kind and say, I see your point, but. When you don't understand, ask, What do you mean by this word? Listen to the end and don't interrupt. Remember, we can disagree and still be good friends.\" Which word do we use to give a reason? Because. What should we do when we disagree? Be kind. Birimo laughs. OK, no monkey. Maybe a hamster! Now, phonics. Spect means look, and re means again. When you respect someone, you look at them with kind eyes. Dict means say, and contra means against. To contradict means to say the opposite. Struct means build, and con means together. To construct means to build. Next time, we will explain a graph about plastic!",
+      "teacherScript": "Hello, everyone! Last time, we said, I suggest that we bring our own bottles. This morning, almost everyone came with their own bottle! I say, Stage 4 is almost over. Let's look back at how we share opinions. In Stage 4, we learned to give an opinion with a reason and an example. We also learned to disagree politely. Olive says, Good listeners make good speakers. Then she starts Opinion Ping-Pong. One person shares an opinion, and the next answers kindly. Birimo jumps up and says, I'm playing a boy who wants a pet monkey! A monkey can live in my room! Kiko answers, I see your point, but I think wild animals should live in nature. Say it with me. I see your point, but I think wild animals should live in nature. Perfect! Birimo asks, What do you mean by nature? Kiko says, I mean forests, rivers and the sea. Haru adds, I think so, too. For example, a monkey needs tall trees and its family. Let's read Olive's card for good speakers. \"How to Share an Opinion. First, say your opinion with I think or In my opinion. Next, give a reason with because. Then, add an example with For example. When you disagree, be kind and say, I see your point, but. When you don't understand, ask, What do you mean by this word? Listen to the end and don't interrupt. Remember, we can disagree and still be good friends.\" Which word do we use to give a reason? Because. What should we do when we disagree? Be kind. Birimo laughs. OK, no monkey. Maybe a hamster! Now, phonics. Spect means look, and re means again. When you respect someone, you look at them with kind eyes. Dict means say, and contra means against. To contradict means to say the opposite. Struct means build, and con means together. To construct means to build. Next time, we will explain a graph about plastic!",
       "conversation": {
         "scene": "Opinion Ping-Pong in the round hall",
         "sceneJa": "まるい ホールで オピニオン・ピンポン",
@@ -11262,7 +11285,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の レオと オピニオン・ピンポンを しよう。I see your point, but ～. で ていねいに ちがう 意見を 言い、レオが Can you give me an example? と きいたら れいを 言おう",
-          "starterEn": "Let's play Opinion Ping-Pong! Here's my opinion. I think a pet penguin would be fun, because it can swim in my bathtub! What do you think? Can you give me an example?",
+          "starterEn": "Let's pretend I'm Leo. Time for Opinion Ping-Pong! Here's my opinion. I think a pet penguin would be fun, because it can swim in my bathtub! What do you think? Can you give me an example?",
           "targetExpressions": [
             "I see your point, but I think wild animals should live in nature.",
             "What do you mean by nature? ― I mean forests, rivers and the sea.",
@@ -11283,9 +11306,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, everyone! Last time, we suggested our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
-            "subtitleJa": "おはよう、みんな！ まえの かいは、じぶんの ボトルを もって くる ことを ていあん したね。見て！ きょうは ほとんど みんなが ボトルを もって きたよ！ さあ、オリーブが ゲームを はじめるよ。オピニオン・ピンポン！",
-            "subtitleEn": "Good morning, everyone! Last time, we suggested our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
+            "say": "Hello, everyone! Last time, we suggested bringing our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
+            "subtitleJa": "こんにちは、みんな！ まえの かいは、じぶんの ボトルを もって くる ことを ていあん したね。見て！ きょうは ほとんど みんなが ボトルを もって きたよ！ さあ、オリーブが ゲームを はじめるよ。オピニオン・ピンポン！",
+            "subtitleEn": "Hello, everyone! Last time, we suggested bringing our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -11633,6 +11656,7 @@
     {
       "lessonNo": 1044,
       "world": 35,
+      "reviewed": "run9",
       "title": "Stage 4 Review: Explaining",
       "titleJa": "ステージ4 ふりかえり：せつめい",
       "school": {
@@ -11770,7 +11794,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブに ぼうグラフを せつめいしよう。The graph shows that ～. や It went down from ～ to ～. を つかい、オリーブが Why? と きいたら 理由を 言おう",
-          "starterEn": "Hoo-hoo! What a lovely bar graph! Could you explain it to me? What does it show? Why do you think it changed?",
+          "starterEn": "Let's pretend I'm Olive. Hoo-hoo! What a great bar graph! Could you explain it to me? What does it show? Why do you think it changed?",
           "targetExpressions": [
             "The graph shows that our class used less plastic this month.",
             "It went down from one hundred twenty to forty. ― That's a big difference!",
@@ -11953,9 +11977,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Ject means throw. Project, throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
+            "say": "Ject means throw. To project is to throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
             "subtitleJa": "ject は「なげる」。project は えを まえへ なげて、スクリーンに うつす こと。あなたの ばん！ transport。erupt。project。",
-            "subtitleEn": "Ject means throw. Project, throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
+            "subtitleEn": "Ject means throw. To project is to throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -12142,6 +12166,7 @@
     {
       "lessonNo": 1045,
       "world": 35,
+      "reviewed": "run9",
       "title": "Stage 4 Review: Polite Requests",
       "titleJa": "ステージ4 ふりかえり：ていねいな おねがい",
       "school": {
@@ -12239,7 +12264,7 @@
           "emoji": "🎏"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, The graph shows that our class used less plastic this month. Soon, children from many places will come for the big council meeting. Olive says, We need forty folding chairs in a circle. Let's get ready together. Ms. Emma says, Let's review polite requests. Haru sees Leo and asks, Would you mind helping us set up the chairs? Say it with me. Would you mind helping us set up the chairs? Great! Leo says, Not at all! Remember, Not at all means, Sure, I'm happy to help. Then Riko asks Ms. Emma, Could you put a name card on each chair? Ms. Emma says, Sure, no problem. Let's read Olive's checklist. \"Big Council Meeting Checklist. Put forty folding chairs in a big circle. Place a name card on each chair. Fill the water jugs and put them on the side table. Hang the welcome banner over the main door with an adult. Keep the aisles clear so that everyone can walk safely. Take a break when you feel tired, and drink some water. When everything is ready, we will meet at four o'clock by the Tree of Voices.\" How many chairs do we need? Forty. When will we meet? At four o'clock. Then Birimo climbs onto a chair to hang the banner. Ms. Emma says, Birimo, would you mind not standing on the chair? Let's ask an adult with a ladder. Birimo says, Oh, sorry! Good idea. Kiko says, I think this was our best teamwork, because everyone helped. Riko says, I agree. Suddenly, a fifth golden leaf grows on the Tree of Voices! Now, phonics. Let's review. Export means to carry things out to other countries. Ject means throw, so reject means to throw back, or to say no. Purchase is the formal word for buy. It ends in a, s, e. Should we meet at three? No, let's meet at FOUR. Next time, we will read two opinions about homework!",
+      "teacherScript": "Hello, everyone! Last time, we said, The graph shows that our class used less plastic this month. Soon, children from many places will come for the big council meeting. Olive says, We need forty folding chairs in a circle. Let's get ready together. I say, Let's review polite requests. Haru sees Leo and asks, Would you mind helping us set up the chairs? Say it with me. Would you mind helping us set up the chairs? Great! Leo says, Not at all! Remember, Not at all means, Sure, I'm happy to help. Then Kiko asks me, Could you put a name card on each chair? I say, Sure, no problem. Let's read Olive's checklist. \"Big Council Meeting Checklist. Put forty folding chairs in a big circle. Place a name card on each chair. Fill the water jugs and put them on the side table. Hang the welcome banner over the main door with an adult. Keep the aisles clear so that everyone can walk safely. Take a break when you feel tired, and drink some water. When everything is ready, we will meet at four o'clock by the Tree of Voices.\" How many chairs do we need? Forty. When will we meet? At four o'clock. Then Birimo climbs onto a chair to hang the banner. I say, Birimo, would you mind not standing on the chair? Let's ask an adult with a ladder. Birimo says, Oh, sorry! Good idea. Kiko says, I think this was our best teamwork, because everyone helped. Riko says, I agree. Suddenly, a fifth golden leaf grows on the Tree of Voices! Now, phonics. Let's review. Export means to carry things out to other countries. Ject means throw, so reject means to throw back, or to say no. Purchase is the formal word for buy. It ends in a, s, e. Should we meet at three? No, let's meet at FOUR. Next time, we will read two opinions about homework!",
       "conversation": {
         "scene": "Setting up chairs for the big council meeting",
         "sceneJa": "大会議の ために 大ホールで いすを ならべる",
@@ -12267,7 +12292,7 @@
           {
             "speaker": "Kiko",
             "en": "I agree. In a circle, every voice matters. Ms. Emma, could you put a name card on each chair?",
-            "ja": "さんせい。わに なれば みんなの 声が 大切に される。ミス・エマ、それぞれの いすに なふだを おいて もらえますか？"
+            "ja": "さんせい。わに なれば みんなの 声が 大切に される。エマ先生、それぞれの いすに なふだを おいて もらえますか？"
           },
           {
             "speaker": "Ms. Emma",
@@ -12282,7 +12307,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブと 大会議の じゅんびを しよう。Would you mind ～ing? や Could you ～? で ていねいに おねがいしよう。オリーブが Why? と きいたら 理由も 言おう",
-          "starterEn": "Hoo-hoo! The big council meeting is coming soon, and there is so much to do! How can I help you get ready? Tell me why, too!",
+          "starterEn": "Let's pretend I'm Olive. Hoo-hoo! The big council meeting is coming soon, and there is so much to do! How can I help you get ready? Tell me why, too!",
           "targetExpressions": [
             "Would you mind helping us set up the chairs?",
             "Could you put a name card on each chair? ― Sure, no problem.",
@@ -12366,9 +12391,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Checklist. A list of jobs. Done? Tick! Checklist!",
+            "say": "Checklist. A list of jobs. Done? Check! Checklist!",
             "subtitleJa": "checklist。しごとの リスト。おわった？ チェック！ チェックリスト！",
-            "subtitleEn": "Checklist. A list of jobs. Done? Tick! Checklist!",
+            "subtitleEn": "Checklist. A list of jobs. Done? Check! Checklist!",
             "gesture": "point",
             "slide": {
               "title": "Words",
@@ -12398,9 +12423,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Not at all! Not at all means, Sure, I'm happy to help.",
-            "subtitleJa": "ビリモは レオの やく。「わあ、いすが 40こ！」 ハルくんが やさしく きくよ。「レオ、いすを ならべるのを てつだって もらえませんか？」「いいよ！」 Not at all は「もちろん、よろこんで」と いう いみ。",
-            "subtitleEn": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Not at all! Not at all means, Sure, I'm happy to help.",
+            "say": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Birimo says, Not at all! Not at all means, Sure, I'm happy to help.",
+            "subtitleJa": "ビリモは レオの やく。「わあ、いすが 40こ！」 ハルくんが やさしく きくよ。「レオ、いすを ならべるのを てつだって もらえませんか？」ビリモ「いいよ！」 Not at all は「もちろん、よろこんで」と いう いみ。",
+            "subtitleEn": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Birimo says, Not at all! Not at all means, Sure, I'm happy to help.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -12415,9 +12440,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? Sure, no problem.",
-            "subtitleJa": "リコちゃん「わの ほうが いいと おもう。みんなが おたがいの かおを 見られるから。」 キコちゃんが わたしに きくよ。「それぞれの いすに なふだを おいて もらえますか？」「いいわよ、まかせて。」",
-            "subtitleEn": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? Sure, no problem.",
+            "say": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? I say, Sure, no problem.",
+            "subtitleJa": "リコちゃん「わの ほうが いいと おもう。みんなが おたがいの かおを 見られるから。」 キコちゃんが わたしに きくよ。「それぞれの いすに なふだを おいて もらえますか？」わたし「いいわよ、まかせて。」",
+            "subtitleEn": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? I say, Sure, no problem.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -12651,6 +12676,7 @@
     {
       "lessonNo": 1046,
       "world": 35,
+      "reviewed": "run9",
       "title": "Two Sides of a Story",
       "titleJa": "2つの 立場を 読みくらべ",
       "school": {
@@ -12751,7 +12777,7 @@
           "emoji": "📰"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Would you mind helping us set up the chairs? The chairs are ready, and the fifth golden leaf is shining. Today, Olive gives us the Children's Council newsletter. Inside, there are two short opinion pieces about homework. One is by Leo, and one is by Priya. Ms. Emma says, Let's think like a judge and check the reasons. Read two opinions. Which do you agree with? Say it with me. Read two opinions. Which do you agree with? Nice! Let's read the two opinion pieces. \"Leo writes, I think we should have homework every day. When we practice a little every day, we remember more. For example, I learned my times tables with ten minutes of homework a day. Priya writes, I think some days without homework are a good idea. Children need time to read, play and rest. For example, on free evenings, I read science books and go to bed early.\" What does Leo think? We should have homework every day. What does Priya do on free evenings? She reads science books and goes to bed early. Leo learned his times tables with ten minutes of homework a day. Is that a fact or an opinion? It's a fact. It really happened. Some days without homework are a good idea. That one is an opinion. Haru says, I agree with Leo because practice helps us remember. Riko says, I see your point, but rest is important, too. Kiko says, Both writers give good reasons. Maybe the best answer is somewhere in the middle, like short homework on most days and some free days. Now, phonics. Let's review. Popularity is popular plus ity. The internet has inter, which means between, because computers connect with each other. Do you feed the cat? No, I feed the DOG. Require is the formal word for need. Respect has spect, which means look. Next time, we will write a proposal letter to Mayor Hart!",
+      "teacherScript": "Hello, everyone! Last time, we said, Would you mind helping us set up the chairs? The chairs are ready, and the fifth golden leaf is shining. Today, Olive gives us the Children's Council newsletter. Inside, there are two short opinion pieces about homework. One is by Leo, and one is by Priya. I say, Let's think like a judge and check the reasons. Read two opinions. Which do you agree with? Say it with me. Read two opinions. Which do you agree with? Nice! Let's read the two opinion pieces. \"Leo writes, I think we should have homework every day. When we practice a little every day, we remember more. For example, I learned my times tables with ten minutes of homework a day. Priya writes, I think some days without homework are a good idea. Children need time to read, play and rest. For example, on free evenings, I read science books and go to bed early.\" What does Leo think? We should have homework every day. What does Priya do on free evenings? She reads science books and goes to bed early. Leo learned his times tables with ten minutes of homework a day. Is that a fact or an opinion? It's a fact. It really happened. Some days without homework are a good idea. That one is an opinion. Haru says, I agree with Leo because practice helps us remember. Riko says, I see your point, but rest is important, too. Kiko says, Both writers give good reasons. Maybe the best answer is somewhere in the middle, like short homework on most days and some free days. Now, phonics. Let's review. Popularity is popular plus i, t, y. The internet has inter, which means between, because computers connect with each other. Do you feed the cat? No, I feed the DOG. Require is the formal word for need. Respect has spect, which means look. Next time, we will write a proposal letter to Mayor Hart!",
       "conversation": {
         "scene": "Reading two opinion pieces about homework in the council newsletter",
         "sceneJa": "かいほうで しゅくだいに ついての 2つの 意見文を 読みくらべる",
@@ -12794,7 +12820,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の レオと しゅくだいの 2つの 意見に ついて 話そう。どちらに さんせいか 理由を つけて 言おう。レオが Can you give me an example? と きいたら れいを 言おう",
-          "starterEn": "Hi! Did you read my opinion piece and Priya's? I think homework every day helps us remember. Which opinion do you agree with? Can you give me an example?",
+          "starterEn": "Let's pretend I'm Leo. Did you read my opinion piece and Priya's? I think homework every day helps us remember. Which opinion do you agree with? Can you give me an example?",
           "targetExpressions": [
             "Read two opinions. Which do you agree with?",
             "I agree with Leo because practice helps us remember. ― I see your point, but rest is important, too.",
@@ -12846,9 +12872,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Opinion piece. A short writing about what you think. Opinion piece!",
+            "say": "Opinion piece. A short piece of writing about what you think. Opinion piece!",
             "subtitleJa": "opinion piece。じぶんの かんがえを かいた みじかい ぶんしょう。いけんぶん！",
-            "subtitleEn": "Opinion piece. A short writing about what you think. Opinion piece!",
+            "subtitleEn": "Opinion piece. A short piece of writing about what you think. Opinion piece!",
             "gesture": "point",
             "slide": {
               "title": "Words",
@@ -12958,9 +12984,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Popularity. Make LAR strong. Popu-LAR-ity! Internet, inter means between. Computers connect with each other.",
+            "say": "Review time! Popularity. Make LAR strong. Pop-u-LAR-i-ty! Internet, inter means between. Computers connect with each other.",
             "subtitleJa": "ふりかえりの じかん！ popularity。LAR を つよく。ポピュ・ラー・リティ！ internet の inter は「あいだ」。コンピューターどうしが つながりあうよ。",
-            "subtitleEn": "Review time! Popularity. Make LAR strong. Popu-LAR-ity! Internet, inter means between. Computers connect with each other.",
+            "subtitleEn": "Review time! Popularity. Make LAR strong. Pop-u-LAR-i-ty! Internet, inter means between. Computers connect with each other.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -13165,6 +13191,7 @@
     {
       "lessonNo": 1047,
       "world": 35,
+      "reviewed": "run9",
       "title": "My Proposal Letter",
       "titleJa": "わたしの 提案の 手紙",
       "school": {
@@ -13265,7 +13292,7 @@
           "emoji": "✉️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Read two opinions. Which do you agree with? Mayor Hart sent us a note. It says, Thank you for the visitor map! Please send me more ideas in a letter. Leo says, Yesterday, our group walked through Willowford Park with the adults. Many grandparents and parents with babies wanted to sit down, but there were only two benches. So we write a proposal letter. It starts with Dear. Dear Mayor, I suggest that we put more benches in the park. Say it with me. Dear Mayor, I suggest that we put more benches in the park. Lovely! Kiko asks, Do I write my address? Ms. Emma says, No, you don't need to. Just sign it, The Children's Council. Before we write, Riko says, I think the benches should go near the playground, because parents watch their children there. Haru says, I partly agree, but under the trees is cooler in summer. So we choose both! Let's read our letter. \"Dear Mayor Hart, Thank you for listening to children. I suggest that we put more benches in Willowford Park. Right now, there are only two benches, so many visitors have to stand. Benches would help grandparents, parents with babies, and anyone who feels tired. We think four new benches would be enough, two near the playground and two under the big trees. I look forward to hearing from you. Best wishes, The Children's Council.\" How many benches are in the park now? Only two. Where should the new benches go? Two near the playground and two under the big trees. Now, phonics. Let's review. Activity is active, drop the e, plus ity. A coworker works together with you, because co means together. Does Haru feed the fish? No, KIKO feeds the fish. Request is the formal way to say ask for. Contradict has dict, which means say, so it means to say the opposite. Next time, we will practice for a friendly debate!",
+      "teacherScript": "Hello, everyone! Last time, we said, Read two opinions. Which do you agree with? Mayor Hart sent us a note. It says, Thank you for the visitor map! Please send me more ideas in a letter. Leo says, Yesterday, our group walked through Willowford Park with the adults. Many grandparents and parents with babies wanted to sit down, but there were only two benches. So we write a proposal letter. It starts with Dear. Dear Mayor, I suggest that we put more benches in the park. Say it with me. Dear Mayor, I suggest that we put more benches in the park. Wonderful! Kiko asks, Do I write my address? I say, No, you don't need to. Just sign it, The Children's Council. Before we write, Riko says, I think the benches should go near the playground, because parents watch their children there. Haru says, I partly agree, but under the trees is cooler in summer. So we choose both! Let's read our letter. \"Dear Mayor Hart, Thank you for listening to children. I suggest that we put more benches in Willowford Park. Right now, there are only two benches, so many visitors have to stand. Benches would help grandparents, parents with babies, and anyone who feels tired. We think four new benches would be enough, two near the playground and two under the big trees. I look forward to hearing from you. Best wishes, The Children's Council.\" How many benches are in the park now? Only two. Where should the new benches go? Two near the playground and two under the big trees. Now, phonics. Let's review. Activity is active, drop the e, plus i, t, y. A coworker works together with you, because co means together. Does Haru feed the fish? No, KIKO feeds the fish. Request is the formal way to say ask for. Contradict has dict, which means say, so it means to say the opposite. Next time, we will practice for a friendly debate!",
       "conversation": {
         "scene": "Writing a proposal letter to Mayor Hart about park benches",
         "sceneJa": "ハート市長に 公園の ベンチの 提案の 手紙を 書く",
@@ -13308,7 +13335,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ハート市長に 提案の 手紙を 読んで きかせよう。Dear Mayor, I suggest that ～. で はじめ、市長が Why? と きいたら 理由を 言おう。ほんとうの なまえや じゅうしょは いわなくて いいよ（ものがたりの なまえで いいよ）",
-          "starterEn": "Hello, Children's Council! I heard you wrote me a letter. I'd love to hear it! What do you suggest for Willowford, and why?",
+          "starterEn": "Let's pretend I'm Mayor Hart. Hello, Children's Council! I heard you wrote me a letter. I'd love to hear it! What do you suggest for Willowford, and why?",
           "targetExpressions": [
             "Dear Mayor, I suggest that we put more benches in the park.",
             "Do I write my address? ― No, you don't need to. Just sign it, The Children's Council.",
@@ -13392,9 +13419,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Signature. Special writing at the end of a letter. Swish! Signature!",
-            "subtitleJa": "signature。てがみの さいごに かく とくべつな もじ。シュッ！ サイン！",
-            "subtitleEn": "Signature. Special writing at the end of a letter. Swish! Signature!",
+            "say": "Signature. Your name, signed at the end of a letter. Swish! Signature!",
+            "subtitleJa": "signature。てがみの さいごに じぶんで かく なまえ。シュッ！ サイン！",
+            "subtitleEn": "Signature. Your name, signed at the end of a letter. Swish! Signature!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -13457,7 +13484,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "Kiko asks, Do I write my address? I say, No, you don't need to. Just sign it, The Children's Council. We end with, I look forward to hearing from you.",
-            "subtitleJa": "キコちゃんが きくよ。「じぶんの アドレスも かくの？」 わたし「ううん、かかなくて いいの。『こども ぎかい』と サインする だけで いいわ。」 さいごは「おへんじを たのしみに して います。」",
+            "subtitleJa": "キコちゃんが きくよ。「すんで いる ところも かくの？」 わたし「ううん、かかなくて いいの。『こども ぎかい』と サインする だけで いいわ。」 さいごは「おへんじを たのしみに して います。」",
             "subtitleEn": "Kiko asks, Do I write my address? I say, No, you don't need to. Just sign it, The Children's Council. We end with, I look forward to hearing from you.",
             "gesture": "nod",
             "slide": {
@@ -13472,9 +13499,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Activity. Active, drop the e, add ity. Coworker, co means together. A coworker works with you.",
-            "subtitleJa": "ふりかえりの じかん！ activity。active の e を とって ity を つける。coworker の co は「いっしょに」。coworker は いっしょに はたらく 人。",
-            "subtitleEn": "Review time! Activity. Active, drop the e, add ity. Coworker, co means together. A coworker works with you.",
+            "say": "Review time! Activity. Active, drop the e, add i, t, y. Coworker, co means together. A coworker works with you.",
+            "subtitleJa": "ふりかえりの じかん！ activity。active の e を とって i、t、y を つける。coworker の co は「いっしょに」。coworker は いっしょに はたらく 人。",
+            "subtitleEn": "Review time! Activity. Active, drop the e, add i, t, y. Coworker, co means together. A coworker works with you.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -13680,6 +13707,7 @@
     {
       "lessonNo": 1048,
       "world": 35,
+      "reviewed": "run9",
       "title": "Final Debate Practice",
       "titleJa": "さいごの ディベート練習",
       "school": {
@@ -13693,7 +13721,7 @@
             "core": true
           },
           {
-            "en": "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants in the holidays?",
+            "en": "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants during vacation?",
             "ja": "つぎに、学校の 畑の 花は ハチの やくに たちます。― たしかに。でも 休みの あいだ だれが 水を やるの？"
           },
           {
@@ -13780,7 +13808,7 @@
           "emoji": "⏱️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Dear Mayor, I suggest that we put more benches in the park. Today, we are practicing for the big council meeting, because there will be a friendly debate. The question is, Should every school have a school garden? In a debate, one team says yes, and the other team says no. Sometimes you speak for a side you don't agree with. That helps us understand others. Haru and Kiko are on the Yes team. Riko and Birimo are on the No team. Olive sets a timer for one minute. Haru stands up and begins. First, I'd like to say that school gardens teach us about nature. Say it with me. First, I'd like to say that school gardens teach us about nature. Excellent! Let's read the notes from both teams. \"Yes Team. School gardens teach us where our food comes from. Children can grow vegetables and flowers, and the flowers help bees. No Team. Gardens need a lot of time and water. Someone has to take care of the plants in the summer holidays. Some schools are very small and have no space, so a garden might be difficult. A plant box in each classroom could be another idea.\" What do the flowers in a school garden help? Bees. What is one problem in the holidays? Someone has to take care of the plants. Riko says, That's true, but who will water the plants in the holidays? Kiko answers, I see your point. Maybe families can take turns. At the end, Ms. Emma says, To sum up, both teams made good points. Everyone shakes hands. Now, phonics. Let's review. Ability comes from able. Ble changes to bil. An intersection is where roads cross, and inter means between. Do you wash the dishes? No, I DRY the dishes. Inform is the formal word for tell. Construct has struct, which means build. Next time, we will look back at our days at the Hall!",
+      "teacherScript": "Hello, everyone! Last time, we said, Dear Mayor, I suggest that we put more benches in the park. Today, we are practicing for the big council meeting, because there will be a friendly debate. The question is, Should every school have a school garden? In a debate, one team says yes, and the other team says no. Sometimes you speak for a side you don't agree with. That helps us understand others. Haru and Kiko are on the Yes team. Riko and Birimo are on the No team. Olive sets a timer for one minute. Haru stands up and begins. First, I'd like to say that school gardens teach us about nature. Say it with me. First, I'd like to say that school gardens teach us about nature. Excellent! Let's read the notes from both teams. \"Yes Team. School gardens teach us where our food comes from. Children can grow vegetables and flowers, and the flowers help bees. No Team. Gardens need a lot of time and water. Someone has to take care of the plants during summer vacation. Some schools are very small and have no space, so a garden might be difficult. A plant box in each classroom could be another idea.\" What do the flowers in a school garden help? Bees. What is one problem during vacation? Someone has to take care of the plants. Riko says, That's true, but who will water the plants during vacation? Kiko answers, I see your point. Maybe families can take turns. At the end, I say, To sum up, both teams made good points. Everyone shakes hands. Now, phonics. Let's review. Ability comes from able. B, l, e changes to b, i, l. An intersection is where roads cross, and inter means between. Do you wash the dishes? No, I DRY the dishes. Inform is the formal word for tell. Construct has struct, which means build. Next time, we will look back at our days at the Hall!",
       "conversation": {
         "scene": "Debate practice about school gardens with two teams",
         "sceneJa": "2つの チームに わかれて 学校の 畑に ついて ディベートの 練習",
@@ -13802,7 +13830,7 @@
           },
           {
             "speaker": "Riko",
-            "en": "That's true, but who will water the plants in the holidays?",
+            "en": "That's true, but who will water the plants during vacation?",
             "ja": "たしかに。でも 休みの あいだ だれが 水を やるの？"
           },
           {
@@ -13812,7 +13840,7 @@
           },
           {
             "speaker": "Kiko",
-            "en": "I see your point. Maybe families can take turns in the holidays.",
+            "en": "I see your point. Maybe families can take turns during vacation.",
             "ja": "言いたい ことは わかるよ。休みの あいだは かぞくで じゅんばんに せわを すれば いいかも。"
           },
           {
@@ -13823,10 +13851,10 @@
         ],
         "aiTask": {
           "goalJa": "AI の プリヤと ディベートの 練習を しよう。First, I'd like to say that ～. で 意見を はじめよう。プリヤが Why? や Can you give me an example? と きいたら こたえ、あいての 意見も みとめよう",
-          "starterEn": "Let's practice our debate! The question is, Should every school have a school garden? You can choose your team. Please start with your first point, and I'll ask you why.",
+          "starterEn": "Let's pretend I'm Priya. Time to practice our debate! The question is, Should every school have a school garden? You can choose your team. Please start with your first point, and I'll ask you why.",
           "targetExpressions": [
             "First, I'd like to say that school gardens teach us about nature.",
-            "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants in the holidays?",
+            "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants during vacation?",
             "To sum up, both teams made good points."
           ]
         }
@@ -13834,7 +13862,7 @@
       "recap": {
         "highlightsJa": [
           "First, I'd like to say that school gardens teach us about nature.",
-          "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants in the holidays? / To sum up, both teams made good points.",
+          "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants during vacation? / To sum up, both teams made good points.",
           "ability・intersection・I dry the dishes・inform・construct"
         ]
       },
@@ -13955,15 +13983,15 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko is on the No Team. That's true, but who will water the plants in the holidays? Kiko answers, I see your point. Maybe families can take turns in the holidays.",
+            "say": "Riko is on the No Team. That's true, but who will water the plants during vacation? Kiko answers, I see your point. Maybe families can take turns during vacation.",
             "subtitleJa": "リコちゃんは はんたいチーム。「たしかに。でも やすみの あいだ だれが みずを やるの？」 キコちゃんの こたえ。「いいたい ことは わかるよ。やすみの あいだは かぞくで じゅんばんに せわを すれば いいかも。」",
-            "subtitleEn": "Riko is on the No Team. That's true, but who will water the plants in the holidays? Kiko answers, I see your point. Maybe families can take turns in the holidays.",
+            "subtitleEn": "Riko is on the No Team. That's true, but who will water the plants during vacation? Kiko answers, I see your point. Maybe families can take turns during vacation.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "That's true, but who will water the plants in the holidays?",
-                "I see your point. Maybe families can take turns in the holidays."
+                "That's true, but who will water the plants during vacation?",
+                "I see your point. Maybe families can take turns during vacation."
               ],
               "emoji": "🌱"
             }
@@ -14094,14 +14122,14 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "That's true, but who will water the plants in the holidays?",
+            "say": "That's true, but who will water the plants during vacation?",
             "subtitleJa": "「たしかに。でも やすみの あいだ だれが みずを やるの？」",
-            "subtitleEn": "That's true, but who will water the plants in the holidays?",
+            "subtitleEn": "That's true, but who will water the plants during vacation?",
             "gesture": "nod",
             "slide": {
               "title": "Say it!",
               "items": [
-                "That's true, but who will water the plants in the holidays?"
+                "That's true, but who will water the plants during vacation?"
               ],
               "emoji": "🎤"
             },
@@ -14182,7 +14210,7 @@
               "title": "Today's wrap-up",
               "items": [
                 "First, I'd like to say that school gardens teach us about nature.",
-                "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants in the holidays?",
+                "Second, the flowers in a school garden help bees. ― That's true, but who will water the plants during vacation?",
                 "To sum up, both teams made good points."
               ],
               "emoji": "🌟"
@@ -14194,6 +14222,7 @@
     {
       "lessonNo": 1049,
       "world": 35,
+      "reviewed": "run9",
       "title": "Hall of Wisdom Review",
       "titleJa": "ちえの議事堂 ふりかえり",
       "school": {
@@ -14294,7 +14323,7 @@
           "emoji": "🫧"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, First, I'd like to say that school gardens teach us about nature. Tomorrow is the big council meeting, and then we will say goodbye to the Hall of Wisdom. Today, we sit under the Tree of Voices and look back at our time here. Kiko feels two things at once. She says, On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Say it with me. On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Beautiful! Let's read Olive's memory board. \"Our Days at the Hall of Wisdom. We talked about school rules and listened to both sides. We learned to be fair, to stand up for a friend, and to invite everyone to play. We learned about children's rights and our responsibilities. We made a visitor map for Willowford, wrote a letter to Mayor Hart, and used less plastic. Most of all, we learned that good listeners make good speakers.\" What did we make for Willowford? A visitor map. What did we learn most of all? Good listeners make good speakers. Then Birimo goes to return a book to the Hall's library with Ms. Emma. On the top bookshelf, he sees a very old map. Ms. Emma reaches up and takes it down for him. The map shows a path that goes down, down, down to the bottom of the sea. At the end, there is a tiny picture of shining domes and the words Deep Sea City. Birimo whispers, Wow! Now, phonics. Let's review. Curiosity comes from curious. Ous changes to os, then add ity. Birimo is full of curiosity! A costar is a star in a movie together with another star. Do you clean on Sunday? No, we clean on SATURDAY. Provide is the formal word for give. Transport means to carry across. Next time, it's our grand finale!",
+      "teacherScript": "Hello, everyone! Last time, we said, First, I'd like to say that school gardens teach us about nature. Tomorrow is the big council meeting, and then we will say goodbye to the Hall of Wisdom. Today, we sit under the Tree of Voices and look back at our time here. Kiko feels two things at once. She says, On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Say it with me. On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Beautiful! Let's read Olive's memory board. \"Our Days at the Hall of Wisdom. We talked about school rules and listened to both sides. We learned to be fair, to stand up for a friend, and to invite everyone to play. We learned about children's rights and our responsibilities. We made a visitor map for Willowford, wrote a letter to Mayor Hart, and used less plastic. Most of all, we learned that good listeners make good speakers.\" What did we make for Willowford? A visitor map. What did we learn most of all? Good listeners make good speakers. Then Birimo goes to return a book to the Hall's library with me. On the top bookshelf, he sees a very old map. I reach up and take it down for him. The map shows a path that goes down, down, down to the bottom of the sea. At the end, there is a tiny picture of shining domes and the words Deep Sea City. Birimo whispers, Wow! Now, phonics. Let's review. Curiosity comes from curious. O, u, s changes to o, s, then add i, t, y. Birimo is full of curiosity! A costar is a star in a movie together with another star. Do you clean on Sunday? No, we clean on SATURDAY. Provide is the formal word for give. Transport means to carry across. Next time, it's our grand finale!",
       "conversation": {
         "scene": "Looking back under the Tree of Voices and finding an old map in the library",
         "sceneJa": "声の木の 下で ふりかえり、図書室で 古い 地図を 見つける",
@@ -14337,7 +14366,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オリーブと 議事堂での おもいでを 話そう。On the one hand, ～. On the other hand, ～. で 2つの きもちを 言い、オリーブが Why? と きいたら 理由を 言おう",
-          "starterEn": "Hoo-hoo! Our time together is almost over. Which day at the Hall of Wisdom was your favorite? How do you feel now, and why?",
+          "starterEn": "Let's pretend I'm Olive. Hoo-hoo! Our time together is almost over. Which day at the Hall of Wisdom was your favorite? How do you feel now, and why?",
           "targetExpressions": [
             "On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure.",
             "We learned to listen to both sides. ― And we learned to find a compromise.",
@@ -14502,9 +14531,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Review time! Curiosity. Curious, then ous changes to os, plus ity. Birimo is full of curiosity! A costar is a star together with another star.",
+            "say": "Review time! Curiosity. Curious, then o, u, s changes to o, s, plus i, t, y. Birimo is full of curiosity! A costar is a star together with another star.",
             "subtitleJa": "ふりかえりの じかん！ curiosity。curious の ous が os に かわって、ity を つける。ビリモは こうきしんが いっぱい！ costar は ほかの スターと いっしょに しゅやくを する スター。",
-            "subtitleEn": "Review time! Curiosity. Curious, then ous changes to os, plus ity. Birimo is full of curiosity! A costar is a star together with another star.",
+            "subtitleEn": "Review time! Curiosity. Curious, then o, u, s changes to o, s, plus i, t, y. Birimo is full of curiosity! A costar is a star together with another star.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -14709,6 +14738,7 @@
     {
       "lessonNo": 1050,
       "world": 35,
+      "reviewed": "run9",
       "title": "World 35 Grand Review",
       "titleJa": "ワールド35 グランドレビュー",
       "school": {
@@ -14857,7 +14887,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ハート市長に ステージ4 で 学んだ ことを 話そう。Children's voices can change the world. を つかい、市長が Can you give me an example? と きいたら れいを 言おう",
-          "starterEn": "What a wonderful Children's Council! I'm so proud of you all. What is the most important thing you learned here? Can you give me an example?",
+          "starterEn": "Let's pretend I'm Mayor Hart. What a wonderful Children's Council! I'm so proud of you all. What is the most important thing you learned here? Can you give me an example?",
           "targetExpressions": [
             "Children's voices can change the world.",
             "Every voice matters, and good listeners make good speakers!",
@@ -15205,9 +15235,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! Next is World thirty-six, the Deep Sea City! See you!",
-            "subtitleJa": "ステージ4 クリア！ すごい！ アイデアを つたえて、りょうほうの いけんを きいて、だきょうあんも 見つけられるね。このあと リコちゃんと おはなし してね！ つぎは ワールド36、ディープシー・シティ！ またね！",
-            "subtitleEn": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! Next is World thirty-six, the Deep Sea City! See you!",
+            "say": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! After that, it's World thirty-six, Deep Sea City! See you!",
+            "subtitleJa": "ステージ4 クリア！ すごい！ アイデアを つたえて、りょうほうの いけんを きいて、だきょうあんも 見つけられるね。このあと リコちゃんと おはなし してね！ その あとは ワールド36、ディープシー・シティ！ またね！",
+            "subtitleEn": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! After that, it's World thirty-six, Deep Sea City! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",

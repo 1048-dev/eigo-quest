@@ -1,0 +1,498 @@
+[
+  {
+    "lesson": 1051,
+    "path": "teacher.segments[4].say",
+    "before": "Pilot. The person who drives it. Dr. Vale says, I'm the pilot, so you're safe with me. Pilot!",
+    "after": "Pilot. The person who drives the submarine. Dr. Vale says, I'm the pilot, so you're safe with me. Pilot!",
+    "reviewers": "A+B",
+    "reason": "'it' had nothing to point to (the segment before was about a porthole on a ship)"
+  },
+  {
+    "lesson": 1051,
+    "path": "teacher.segments[4].subtitleEn",
+    "before": "Pilot. The person who drives it. Dr. Vale says, I'm the pilot, so you're safe with me. Pilot!",
+    "after": "Pilot. The person who drives the submarine. Dr. Vale says, I'm the pilot, so you're safe with me. Pilot!",
+    "reviewers": "A+B",
+    "reason": "'it' had nothing to point to (the segment before was about a porthole on a ship)"
+  },
+  {
+    "lesson": 1051,
+    "path": "teacher.segments[4].subtitleJa",
+    "before": "pilot。のりものを うごかす 人。ヴェイルはかせ「わたしが パイロットよ。だから あんしん してね。」 パイロット！",
+    "after": "pilot。せんすいていを うごかす 人。ヴェイルはかせ「わたしが パイロットよ。だから あんしん してね。」 パイロット！",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1052,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. Why? To, plus an action word. Short and clear. Birimo blinks back at Lumi. Blink, blink! That means hello!",
+    "after": "Here's the point. Why? To, plus an action word. Short and clear. Birimo blinks his fingers at Lumi. Blink, blink! That means hello!",
+    "reviewers": "objective",
+    "reason": "story order: in the conversation Birimo blinks first and Lumi blinks back, so Birimo cannot blink 'back'"
+  },
+  {
+    "lesson": 1052,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. Why? To, plus an action word. Short and clear. Birimo blinks back at Lumi. Blink, blink! That means hello!",
+    "after": "Here's the point. Why? To, plus an action word. Short and clear. Birimo blinks his fingers at Lumi. Blink, blink! That means hello!",
+    "reviewers": "objective",
+    "reason": "story order: in the conversation Birimo blinks first and Lumi blinks back, so Birimo cannot blink 'back'"
+  },
+  {
+    "lesson": 1052,
+    "path": "teacher.segments[10].say",
+    "before": "Biodiversity. So many different kinds of living things. Biosphere. Every place on Earth where life lives. Your turn. Bioluminescent. Biodiversity. Biosphere.",
+    "after": "Biodiversity. So many different kinds of living things. Biosphere. Every place on Earth where there is life. Your turn. Bioluminescent. Biodiversity. Biosphere.",
+    "reviewers": "A+C",
+    "reason": "'where life lives' is an odd echo and not natural; the teacherScript says 'where life exists'"
+  },
+  {
+    "lesson": 1052,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Biodiversity. So many different kinds of living things. Biosphere. Every place on Earth where life lives. Your turn. Bioluminescent. Biodiversity. Biosphere.",
+    "after": "Biodiversity. So many different kinds of living things. Biosphere. Every place on Earth where there is life. Your turn. Bioluminescent. Biodiversity. Biosphere.",
+    "reviewers": "A+C",
+    "reason": "'where life lives' is an odd echo and not natural; the teacherScript says 'where life exists'"
+  },
+  {
+    "lesson": 1053,
+    "path": "school.grammar",
+    "before": "The reason why ～ is that ～. / How far does sunlight reach? ― It reaches well only ～. / What's it like below ～? ― It's ～ and ～.",
+    "after": "The reason why ～ is that ～. / How far does sunlight reach? ― Bright sunlight reaches only ～. / What's it like below ～? ― It's ～ and ～.",
+    "reviewers": "A+B",
+    "reason": "'reaches well only the top 200 meters' puts 'well' between the verb and its object, which is not English word order; 'Bright sunlight reaches only the top 200 meters' keeps the verb of the question and the fact (some dim light goes to 1,000 m)"
+  },
+  {
+    "lesson": 1053,
+    "path": "school.expressions[1].en",
+    "before": "How far does sunlight reach? ― It reaches well only the top 200 meters.",
+    "after": "How far does sunlight reach? ― Bright sunlight reaches only the top 200 meters.",
+    "reviewers": "A+B",
+    "reason": "'reaches well only the top 200 meters' puts 'well' between the verb and its object, which is not English word order; 'Bright sunlight reaches only the top 200 meters' keeps the verb of the question and the fact (some dim light goes to 1,000 m)"
+  },
+  {
+    "lesson": 1053,
+    "path": "school.expressions[1].ja",
+    "before": "日の光は どこまで とどくの？ ― よく とどくのは 上の 200 メートル だけだよ。",
+    "after": "日の光は どこまで とどくの？ ― 明るい 日の光が とどくのは 上の 200 メートル だけだよ。",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1053,
+    "path": "conversation.aiTask.targetExpressions[1]",
+    "before": "How far does sunlight reach? ― It reaches well only the top 200 meters.",
+    "after": "How far does sunlight reach? ― Bright sunlight reaches only the top 200 meters.",
+    "reviewers": "A+B",
+    "reason": "must equal school.expressions"
+  },
+  {
+    "lesson": 1053,
+    "path": "recap.highlightsJa[1]",
+    "before": "How far does sunlight reach? ― It reaches well only the top 200 meters. / What's it like below 1,000 meters? ― It's completely dark and very cold.",
+    "after": "How far does sunlight reach? ― Bright sunlight reaches only the top 200 meters. / What's it like below 1,000 meters? ― It's completely dark and very cold.",
+    "reviewers": "A+B",
+    "reason": "recap shows the expression"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[6].slide.items[1]",
+    "before": "How far does sunlight reach? ― It reaches well only the top 200 meters.",
+    "after": "How far does sunlight reach? ― Bright sunlight reaches only the top 200 meters.",
+    "reviewers": "A+B",
+    "reason": "slide shows the expression"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[15].slide.items[0]",
+    "before": "How far does sunlight reach? ― It reaches well only the top 200 meters.",
+    "after": "How far does sunlight reach? ― Bright sunlight reaches only the top 200 meters.",
+    "reviewers": "A+B",
+    "reason": "slide shows the expression"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[20].slide.items[1]",
+    "before": "How far does sunlight reach? ― It reaches well only the top 200 meters.",
+    "after": "How far does sunlight reach? ― Bright sunlight reaches only the top 200 meters.",
+    "reviewers": "A+B",
+    "reason": "slide shows the expression"
+  },
+  {
+    "lesson": 1053,
+    "path": "conversation.lines[3].en",
+    "before": "The depth chart says it reaches well only the top 200 meters.",
+    "after": "The depth chart says bright sunlight reaches only the top 200 meters.",
+    "reviewers": "A+B",
+    "reason": "'reaches well only the top 200 meters' puts 'well' between the verb and its object, which is not English word order; 'Bright sunlight reaches only the top 200 meters' keeps the verb of the question and the fact (some dim light goes to 1,000 m)"
+  },
+  {
+    "lesson": 1053,
+    "path": "conversation.lines[3].ja",
+    "before": "深さの 表に よると、よく とどくのは 上の 200 メートル だけだって。",
+    "after": "深さの 表に よると、明るい 日の光が とどくのは 上の 200 メートル だけだって。",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[6].say",
+    "before": "Haru laughs. No, Birimo. The reason why it's dark is that sunlight can't reach this deep. Birimo asks, How far does sunlight reach? Riko reads the chart. It reaches well only the top two hundred meters.",
+    "after": "Haru laughs. No, Birimo. The reason why it's dark is that sunlight can't reach this deep. Birimo asks, How far does sunlight reach? Riko reads the chart. Bright sunlight reaches only the top two hundred meters.",
+    "reviewers": "A+B",
+    "reason": "'reaches well only the top 200 meters' puts 'well' between the verb and its object, which is not English word order; 'Bright sunlight reaches only the top 200 meters' keeps the verb of the question and the fact (some dim light goes to 1,000 m)"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Haru laughs. No, Birimo. The reason why it's dark is that sunlight can't reach this deep. Birimo asks, How far does sunlight reach? Riko reads the chart. It reaches well only the top two hundred meters.",
+    "after": "Haru laughs. No, Birimo. The reason why it's dark is that sunlight can't reach this deep. Birimo asks, How far does sunlight reach? Riko reads the chart. Bright sunlight reaches only the top two hundred meters.",
+    "reviewers": "A+B",
+    "reason": "'reaches well only the top 200 meters' puts 'well' between the verb and its object, which is not English word order; 'Bright sunlight reaches only the top 200 meters' keeps the verb of the question and the fact (some dim light goes to 1,000 m)"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[6].subtitleJa",
+    "before": "ハルくんが わらうよ。「ちがうよ、ビリモ。くらい りゆうは、日の ひかりが こんなに ふかくまで とどかない から だよ。」 ビリモ「日の ひかりは どこまで とどくの？」 リコちゃんが ひょうを よむよ。「よく とどくのは 上の 200 メートル だけ。」",
+    "after": "ハルくんが わらうよ。「ちがうよ、ビリモ。くらい りゆうは、日の ひかりが こんなに ふかくまで とどかない から だよ。」 ビリモ「日の ひかりは どこまで とどくの？」 リコちゃんが ひょうを よむよ。「あかるい 日の ひかりが とどくのは 上の 200 メートル だけ。」",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Some deep-sea fish make their own light. Today, Dr. Vale takes us to the observation room in the Research Center. On the wall, there is a tall chart of the ocean, from the surface all the way down to the seafloor. At the top, it is bright blue. In the middle, it gets darker. At the bottom, it is black. Birimo looks out the window and asks, Why is it so dark out there? Did somebody turn off the sea? Everyone laughs. Haru guesses, Maybe the water is dirty? Dr. Vale shakes her head. Sunlight comes from above, and the water slowly takes it away. So the deeper you go, the less light there is. Then Haru says it clearly. The reason why it's dark is that sunlight can't reach this deep. Say it with me. The reason why it's dark is that sunlight can't reach this deep. Perfect! Let's read the depth chart. \"How Deep Does Light Go? From the surface to about 200 meters: Sunlight reaches well only this top part of the ocean. This is the bright part, where the water looks blue. From 200 meters to 1,000 meters: The water gets darker and darker as you go down. Below about 1,000 meters: It is completely dark. Scientists call this the midnight zone, because it is like night all the time. The water down here is very cold, about 2 to 4 degrees. The deepest known place in the ocean is in the Mariana Trench, about 11,000 meters deep. Much of the deep sea has never been explored, so there is still a lot to find out.\" How far does sunlight reach well? About 200 meters. How cold is the deep water? About 2 to 4 degrees. Kiko points to the bottom of the chart. And we are here, at 3,800 meters! Lumi says, That's why my blue spots are so useful! Now, phonics. Bio means life. A biographer is a person who writes biographies, books about someone's life. An antibiotic is a medicine that kills bacteria. Anti means against. Biodegradable means it can be broken down by tiny living things called bacteria. Banana peels are biodegradable. Next time, we'll learn about the strong push of the deep water.",
+    "after": "Hello, everyone! Last time, we said, Some deep-sea fish make their own light. Today, Dr. Vale takes us to the observation room in the Research Center. On the wall, there is a tall chart of the ocean, from the surface all the way down to the seafloor. At the top, it is bright blue. In the middle, it gets darker. At the bottom, it is black. Birimo looks out the window and asks, Why is it so dark out there? Did somebody turn off the sea? Everyone laughs. Haru guesses, Maybe the water is dirty? Dr. Vale shakes her head. Sunlight comes from above, and the water slowly takes it away. So the deeper you go, the less light there is. Then Haru says it clearly. The reason why it's dark is that sunlight can't reach this deep. Say it with me. The reason why it's dark is that sunlight can't reach this deep. Perfect! Let's read the depth chart. \"How Deep Does Light Go? From the surface to about 200 meters: Bright sunlight reaches only this top part of the ocean. This is the bright part, where the water looks blue. From 200 meters to 1,000 meters: The water gets darker and darker as you go down. Below about 1,000 meters: It is completely dark. Scientists call this the midnight zone, because it is like night all the time. The water down here is very cold, about 2 to 4 degrees. The deepest known place in the ocean is in the Mariana Trench, about 11,000 meters deep. Much of the deep sea has never been explored, so there is still a lot to find out.\" How far does bright sunlight reach? About 200 meters. How cold is the deep water? About 2 to 4 degrees. Kiko points to the bottom of the chart. And we are here, at 3,800 meters! Lumi says, That's why my blue spots are so useful! Now, phonics. Bio means life. A biographer is a person who writes biographies, books about someone's life. An antibiotic is a medicine that kills bacteria. Anti means against. Biodegradable means it can be broken down by tiny living things called bacteria. Banana peels are biodegradable. Next time, we'll learn about the strong push of the deep water.",
+    "reviewers": "A+B",
+    "reason": "'reaches well only the top 200 meters' puts 'well' between the verb and its object, which is not English word order; 'Bright sunlight reaches only the top 200 meters' keeps the verb of the question and the fact (some dim light goes to 1,000 m); same wording as the chart"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. The reason why, then what you see, then is that, then the reason. The reason why I'm cold is that the water is cold!",
+    "after": "Here's the point. The reason why, then what happens, then is that, then the reason. The reason why I'm cold is that the water is cold!",
+    "reviewers": "A+B",
+    "reason": "the slot after 'the reason why' is the fact being explained, not 'what you see' (the example is 'why I'm cold')"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. The reason why, then what you see, then is that, then the reason. The reason why I'm cold is that the water is cold!",
+    "after": "Here's the point. The reason why, then what happens, then is that, then the reason. The reason why I'm cold is that the water is cold!",
+    "reviewers": "A+B",
+    "reason": "the slot after 'the reason why' is the fact being explained, not 'what you see' (the example is 'why I'm cold')"
+  },
+  {
+    "lesson": 1053,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。The reason why、見て いる こと、is that、そして りゆう。「わたしが さむい りゆうは、水が つめたい から！」",
+    "after": "ポイント。The reason why、おきて いる こと、is that、そして りゆう。「わたしが さむい りゆうは、水が つめたい から！」",
+    "reviewers": "A+B",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1054,
+    "path": "teacher.segments[8].say",
+    "before": "Ha ha, no! Why don't they get crushed? Because many of them have soft bodies and no air sacs. Because, plus the reason. And some have big eyes to catch tiny bits of light.",
+    "after": "Kiko laughs. Ha ha, no! Why don't they get crushed? Because many of them have soft bodies and no air sacs. Because, plus the reason. And some have big eyes to catch tiny bits of light.",
+    "reviewers": "A+C",
+    "reason": "Kiko's answer to Birimo had no speaker, so it sounded like Ms. Emma laughing at Birimo"
+  },
+  {
+    "lesson": 1054,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Ha ha, no! Why don't they get crushed? Because many of them have soft bodies and no air sacs. Because, plus the reason. And some have big eyes to catch tiny bits of light.",
+    "after": "Kiko laughs. Ha ha, no! Why don't they get crushed? Because many of them have soft bodies and no air sacs. Because, plus the reason. And some have big eyes to catch tiny bits of light.",
+    "reviewers": "A+C",
+    "reason": "Kiko's answer to Birimo had no speaker, so it sounded like Ms. Emma laughing at Birimo"
+  },
+  {
+    "lesson": 1054,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "あはは、ちがうよ！ どうして つぶれないの？ おおくは やわらかい からだで、くうきの ふくろが ない から。Because ＋ りゆう だね。それに 小さな ひかりを とらえる 大きな 目を もつ ものも いるよ。",
+    "after": "キコちゃんが わらうよ。「あはは、ちがうよ！」 どうして つぶれないの？ おおくは やわらかい からだで、くうきの ふくろが ない から。Because ＋ りゆう だね。それに 小さな ひかりを とらえる 大きな 目を もつ ものも いるよ。",
+    "reviewers": "A+C",
+    "reason": "JA follows the speaker added in EN"
+  },
+  {
+    "lesson": 1056,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. A good question is short and clear. Start with How, Why, What, or Do.",
+    "after": "Here's the point. A good question is short and clear. Start with How, Why, What, or Do. If nobody knows yet, that's OK. That's why we do research!",
+    "reviewers": "objective (JA)",
+    "reason": "subtitleJa had 'まだ だれも しらなくても だいじょうぶ。だから けんきゅう するんだよ！' with no English; the slide shows Birimo's 'Nobody knows yet?' line; the sentences come from Dr. Vale's whiteboard"
+  },
+  {
+    "lesson": 1056,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. A good question is short and clear. Start with How, Why, What, or Do.",
+    "after": "Here's the point. A good question is short and clear. Start with How, Why, What, or Do. If nobody knows yet, that's OK. That's why we do research!",
+    "reviewers": "objective (JA)",
+    "reason": "subtitleJa had 'まだ だれも しらなくても だいじょうぶ。だから けんきゅう するんだよ！' with no English; the slide shows Birimo's 'Nobody knows yet?' line; the sentences come from Dr. Vale's whiteboard"
+  },
+  {
+    "lesson": 1056,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "ハルくん「ぼくは ダイオウイカが どのくらい 大きく なるか しらべたいんだ。」 ビリモ「ぼくの といは ねむたい といだよ。しんかいの 生きものは ねむるの？」 ヴェイルはかせが にっこり。「かがくしゃも まだ しらべて いる ところよ！」 ビリモ「まだ だれも しらないの？ じゃあ しらべて みよう！」",
+    "after": "ハルくん「ぼくは ダイオウイカが どのくらい 大きく なるか しらべたいんだ。」 ビリモ「ぼくの といは ねむたい といだよ。しんかいの 生きものは ねむるの？」 ヴェイルはかせが にっこり。「かがくしゃも まだ しらべて いる ところよ！」",
+    "reviewers": "objective (JA)",
+    "reason": "JA had an extra Birimo line that the English segment does not say"
+  },
+  {
+    "lesson": 1056,
+    "path": "teacher.segments[20].subtitleJa",
+    "before": "よく がんばったね、けんきゅうしゃの みなさん！「わたしの けんきゅうの といは ～」と いえるし、ともだちが なにを しらべたいか きける。つよい ところで 手も たたけるね。このあと ビリモと おはなし してね！ またね！",
+    "after": "よく がんばったね、けんきゅうしゃの みなさん！「わたしの けんきゅうの といは ～」と いえるし、ともだちが なにを しらべたいか きけるね。このあと ビリモと おはなし してね！ またね！",
+    "reviewers": "objective (JA)",
+    "reason": "JA had an extra sentence (clapping) that the English does not say"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[7].say",
+    "before": "Kiko says, I see your point, but anyone can make a website. Always ask who wrote it. Haru asks Dr. Vale, Can I interview you for my research? Of course! What would you like to know?",
+    "after": "Kiko says, I see your point, but anyone can make a website. Always ask who wrote it. Haru asks Dr. Vale, Can I interview you for my research? Dr. Vale says, Of course! What would you like to know?",
+    "reviewers": "A+C",
+    "reason": "the answer had no speaker, so it sounded like Haru answering himself"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Kiko says, I see your point, but anyone can make a website. Always ask who wrote it. Haru asks Dr. Vale, Can I interview you for my research? Of course! What would you like to know?",
+    "after": "Kiko says, I see your point, but anyone can make a website. Always ask who wrote it. Haru asks Dr. Vale, Can I interview you for my research? Dr. Vale says, Of course! What would you like to know?",
+    "reviewers": "A+C",
+    "reason": "the answer had no speaker, so it sounded like Haru answering himself"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "キコちゃん「いいたい ことは わかる けど、ウェブサイトは だれでも つくれるよ。だれが かいたか いつも たしかめよう。」 ハルくんが ヴェイルはかせに「けんきゅうの ために インタビュー しても いいですか？」「もちろん！ なにが しりたい？」",
+    "after": "キコちゃん「いいたい ことは わかる けど、ウェブサイトは だれでも つくれるよ。だれが かいたか いつも たしかめよう。」 ハルくんが ヴェイルはかせに「けんきゅうの ために インタビュー しても いいですか？」ヴェイルはかせ「もちろん！ なにが しりたい？」",
+    "reviewers": "A+C",
+    "reason": "JA follows the speaker added in EN"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[10].say",
+    "before": "Words that end in tion are strong just before tion. In-for-MA-tion. Your turn, with claps! Evidence. Discover. Explain. Information.",
+    "after": "Words that end in t, i, o, n are strong just before the ending. In-for-MA-tion. Your turn, with claps! Evidence. Discover. Explain. Information.",
+    "reviewers": "B+C",
+    "reason": "bare 'tion' is misread by TTS (tie-on); spell the letters"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Words that end in tion are strong just before tion. In-for-MA-tion. Your turn, with claps! Evidence. Discover. Explain. Information.",
+    "after": "Words that end in t, i, o, n are strong just before the ending. In-for-MA-tion. Your turn, with claps! Evidence. Discover. Explain. Information.",
+    "reviewers": "B+C",
+    "reason": "bare 'tion' is misread by TTS (tie-on); spell the letters"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "tion で おわる ことばは、tion の すぐ まえが つよいよ。in-for-MA-tion。あなたの ばん、手を たたいて！ evidence。discover。explain。information。",
+    "after": "t、i、o、n で おわる ことばは、その すぐ まえが つよいよ。in-for-MA-tion。あなたの ばん、手を たたいて！ evidence。discover。explain。information。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, My research question is: How do deep-sea fish find food? Now we all have our research questions. But where can we find information? Dr. Vale says, Let's ask the best helper in Deep Sea City. Lumi leads us through a long glass tunnel to the Coral Library. The shelves are made of pink and orange coral, and the books glow softly under blue lamps. Behind the desk sits Mr. Oswin, a very old sea turtle with tiny reading glasses. He speaks very slowly. Wel... come... young... researchers. Haru asks, Mr. Oswin, where can I find information about giant squid? Mr. Oswin smiles and points to a poster with his flipper. Riko reads the poster and says, We can use books, websites and interviews. Say it with me. We can use books, websites and interviews. Well done! Let's read Mr. Oswin's poster. \"Three Ways to Find Information. Books: Books in the Coral Library are written and checked carefully before they are printed. Use the table of contents and the index to find your topic quickly. Websites: Websites are fast, and many have pictures and videos. But anyone can make a website, so always ask who wrote it. Search online with a grown-up. Interviews: You can talk to a scientist or someone who knows a lot about your topic. Write your questions before the interview, listen carefully, and say thank you at the end. A good researcher uses more than one kind of source. And remember the most important rule in this library: Check your sources!\" Why should we ask who wrote a website? Because anyone can make a website. What should we do before an interview? Write our questions. Mr. Oswin taps the last line of the poster and says his favorite words. Check... your... sources! Birimo tries to say it as slowly as Mr. Oswin, and everyone giggles. Now, phonics. Remember, long study words have one strong part. Evidence. EV-i-dence. Discover. Dis-COV-er. Explain. Ex-PLAIN. Information. In-for-MA-tion. Words that end in -tion are strong just before -tion. Information! Next time, we'll learn how to tell people where we found our information.",
+    "after": "Hello, everyone! Last time, we said, My research question is: How do deep-sea fish find food? Now we all have our research questions. But where can we find information? Dr. Vale says, Let's ask the best helper in Deep Sea City. Lumi leads us through a long glass tunnel to the Coral Library. The shelves are made of pink and orange coral, and the books glow softly under blue lamps. Behind the desk sits Mr. Oswin, a very old sea turtle with tiny reading glasses. He speaks very slowly. Wel... come... young... researchers. Haru asks, Mr. Oswin, where can I find information about giant squid? Mr. Oswin smiles and points to a poster with his flipper. Riko reads the poster and says, We can use books, websites and interviews. Say it with me. We can use books, websites and interviews. Well done! Let's read Mr. Oswin's poster. \"Three Ways to Find Information. Books: Books in the Coral Library are written and checked carefully before they are printed. Use the table of contents and the index to find your topic quickly. Websites: Websites are fast, and many have pictures and videos. But anyone can make a website, so always ask who wrote it. Search online with a grown-up. Interviews: You can talk to a scientist or someone who knows a lot about your topic. Write your questions before the interview, listen carefully, and say thank you at the end. A good researcher uses more than one kind of source. And remember the most important rule in this library: Check your sources!\" Why should we ask who wrote a website? Because anyone can make a website. What should we do before an interview? Write our questions. Mr. Oswin taps the last line of the poster and says his favorite words. Check... your... sources! Birimo tries to say it as slowly as Mr. Oswin, and everyone giggles. Now, phonics. Remember, long study words have one strong part. Evidence. EV-i-dence. Discover. Dis-COV-er. Explain. Ex-PLAIN. Information. In-for-MA-tion. Words that end in t, i, o, n are strong just before the ending. Information! Next time, we'll learn how to tell people where we found our information.",
+    "reviewers": "B+C",
+    "reason": "bare '-tion' read aloud; same fix as the segment"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[19].say",
+    "before": "Wonderful! You can name three kinds of sources, ask for an interview, and stress information on MA. Next, go and talk with Haru! Bye-bye!",
+    "after": "Wonderful! You can name three kinds of sources, ask for an interview, and clap the strong beat in information. Next, go and talk with Haru! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'stress information on MA' is teacher jargon, and TTS may read the bare capitals MA as M, A"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[19].subtitleEn",
+    "before": "Wonderful! You can name three kinds of sources, ask for an interview, and stress information on MA. Next, go and talk with Haru! Bye-bye!",
+    "after": "Wonderful! You can name three kinds of sources, ask for an interview, and clap the strong beat in information. Next, go and talk with Haru! Bye-bye!",
+    "reviewers": "A+C",
+    "reason": "'stress information on MA' is teacher jargon, and TTS may read the bare capitals MA as M, A"
+  },
+  {
+    "lesson": 1057,
+    "path": "teacher.segments[19].subtitleJa",
+    "before": "すばらしい！ 3しゅるいの じょうほうげんを いえるし、インタビューを おねがい できるし、information は MA を つよく いえるね。このあと ハルくんと おはなし してね！ バイバイ！",
+    "after": "すばらしい！ 3しゅるいの じょうほうげんを いえるし、インタビューを おねがい できるし、information の つよい ところで 手を たたけるね。このあと ハルくんと おはなし してね！ バイバイ！",
+    "reviewers": "A+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1058,
+    "path": "school.expressions[2].en",
+    "before": "Do they stay up there? ― No. According to the book, they go back down in the day.",
+    "after": "Do they stay up there? ― No. According to the book, they go back down during the day.",
+    "reviewers": "A+B",
+    "reason": "'go back down in the day' is not natural US English; 'during the day' (the book page already says 'During the day')"
+  },
+  {
+    "lesson": 1058,
+    "path": "conversation.aiTask.targetExpressions[2]",
+    "before": "Do they stay up there? ― No. According to the book, they go back down in the day.",
+    "after": "Do they stay up there? ― No. According to the book, they go back down during the day.",
+    "reviewers": "A+B",
+    "reason": "must equal school.expressions"
+  },
+  {
+    "lesson": 1058,
+    "path": "recap.highlightsJa[1]",
+    "before": "Where did you find that? ― I found it in a book called Lights of the Deep. / Do they stay up there? ― No. According to the book, they go back down in the day.",
+    "after": "Where did you find that? ― I found it in a book called Lights of the Deep. / Do they stay up there? ― No. According to the book, they go back down during the day.",
+    "reviewers": "A+B",
+    "reason": "recap shows the expression"
+  },
+  {
+    "lesson": 1058,
+    "path": "conversation.lines[4].en",
+    "before": "No. According to the book, they go back down in the day.",
+    "after": "No. According to the book, they go back down during the day.",
+    "reviewers": "A+B",
+    "reason": "'go back down in the day' is not natural US English; 'during the day' (the book page already says 'During the day')"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[7].slide.items[0]",
+    "before": "Do they stay up there? ― No. According to the book, they go back down in the day.",
+    "after": "Do they stay up there? ― No. According to the book, they go back down during the day.",
+    "reviewers": "A+B",
+    "reason": "slide shows the expression"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[18].slide.items[2]",
+    "before": "Do they stay up there? ― No. According to the book, they go back down in the day.",
+    "after": "Do they stay up there? ― No. According to the book, they go back down during the day.",
+    "reviewers": "A+B",
+    "reason": "slide shows the expression"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[7].say",
+    "before": "Haru asks, Do they stay up there? Riko says, No. According to the book, they go back down in the day. Birimo pats a round tummy. According to my tummy, it's time for us to eat, too!",
+    "after": "Haru asks, Do they stay up there? Riko says, No. According to the book, they go back down during the day. Birimo pats his round tummy. According to my tummy, it's time for us to eat, too!",
+    "reviewers": "A+B, A+C",
+    "reason": "'go back down in the day' is not natural US English; 'during the day' (the book page already says 'During the day'); 'pats a round tummy' sounds like someone else's tummy"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Haru asks, Do they stay up there? Riko says, No. According to the book, they go back down in the day. Birimo pats a round tummy. According to my tummy, it's time for us to eat, too!",
+    "after": "Haru asks, Do they stay up there? Riko says, No. According to the book, they go back down during the day. Birimo pats his round tummy. According to my tummy, it's time for us to eat, too!",
+    "reviewers": "A+B, A+C",
+    "reason": "'go back down in the day' is not natural US English; 'during the day' (the book page already says 'During the day'); 'pats a round tummy' sounds like someone else's tummy"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[17].say",
+    "before": "It's A! At night, up. In the day, back down. Excellent!",
+    "after": "It's A! At night, up. During the day, back down. Excellent!",
+    "reviewers": "A+B",
+    "reason": "same as the expression"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "It's A! At night, up. In the day, back down. Excellent!",
+    "after": "It's A! At night, up. During the day, back down. Excellent!",
+    "reviewers": "A+B",
+    "reason": "same as the expression"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[10].say",
+    "before": "Sion is like tion. The beat just before it is strong. Con-CLU-sion. Clap it! Your turn. Experiment. Observe. Example. Conclusion.",
+    "after": "Conclusion ends like information. The beat just before the ending is strong. Con-CLU-sion. Clap it! Your turn. Experiment. Observe. Example. Conclusion.",
+    "reviewers": "B+C",
+    "reason": "bare 'sion' / 'tion' are misread by TTS; carry the ending with real words (information was taught in L1057)"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Sion is like tion. The beat just before it is strong. Con-CLU-sion. Clap it! Your turn. Experiment. Observe. Example. Conclusion.",
+    "after": "Conclusion ends like information. The beat just before the ending is strong. Con-CLU-sion. Clap it! Your turn. Experiment. Observe. Example. Conclusion.",
+    "reviewers": "B+C",
+    "reason": "bare 'sion' / 'tion' are misread by TTS; carry the ending with real words (information was taught in L1057)"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "sion も tion と おなじ。すぐ まえが つよいよ。con-CLU-sion。手を たたいて！ あなたの ばん。experiment。observe。example。conclusion。",
+    "after": "conclusion の おわりは information と おなじ。その すぐ まえが つよいよ。con-CLU-sion。手を たたいて！ あなたの ばん。experiment。observe。example。conclusion。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1058,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, We can use books, websites and interviews. Today, we are back in the Coral Library. Mr. Oswin slowly pulls a thick blue reference book from a coral shelf and gives it to Riko. It is called Lights of the Deep. Riko opens the table of contents and finds Chapter 3: Lanternfish. She reads quietly for a long time. Then she looks up with big eyes. Everyone, listen! Lanternfish swim up at night! Birimo asks, Really? How do you know? I say, That's a good thing to ask. When you share information, tell people where you found it. Then they can check it, too. Researchers often say, According to this book. Riko tries again. According to this book, lanternfish swim up at night to eat. Say it with me. According to this book, lanternfish swim up at night to eat. Excellent! Let's read the page from Riko's book. \"Lights of the Deep. Chapter 3: Lanternfish. Lanternfish are small fish with glowing spots on their bodies. They are not as famous as sharks or whales, but there are huge numbers of them in the ocean. During the day, many lanternfish stay deep down in the dark water. When night comes, they swim up toward the surface to eat. Then, when the sun comes up, they swim back down again. So every night and every morning, huge crowds of little fish travel up and down the ocean. Scientists are still finding out many things about lanternfish. Maybe one day, you will help them find out more!\" When do lanternfish swim up toward the surface? At night. What do they do when the sun comes up? They swim back down again. Lumi does a happy flip in her water tunnel. That's true! My cousins swim up every night! Mr. Oswin nods slowly. Good... Now you have a book and a lanternfish. Two sources! Now, phonics. Here are more study words with one strong part. Experiment. Ex-PER-i-ment. Conclusion. Con-CLU-sion. Words that end in -tion or -sion are strong just before the ending. Observe. Ob-SERVE. Example. Ex-AM-ple. Next time, Birimo finds a very surprising website.",
+    "after": "Hello, everyone! Last time, we said, We can use books, websites and interviews. Today, we are back in the Coral Library. Mr. Oswin slowly pulls a thick blue reference book from a coral shelf and gives it to Riko. It is called Lights of the Deep. Riko opens the table of contents and finds Chapter 3: Lanternfish. She reads quietly for a long time. Then she looks up with big eyes. Everyone, listen! Lanternfish swim up at night! Birimo asks, Really? How do you know? I say, That's a good thing to ask. When you share information, tell people where you found it. Then they can check it, too. Researchers often say, According to this book. Riko tries again. According to this book, lanternfish swim up at night to eat. Say it with me. According to this book, lanternfish swim up at night to eat. Excellent! Let's read the page from Riko's book. \"Lights of the Deep. Chapter 3: Lanternfish. Lanternfish are small fish with glowing spots on their bodies. They are not as famous as sharks or whales, but there are huge numbers of them in the ocean. During the day, many lanternfish stay deep down in the dark water. When night comes, they swim up toward the surface to eat. Then, when the sun comes up, they swim back down again. So every night and every morning, huge crowds of little fish travel up and down the ocean. Scientists are still finding out many things about lanternfish. Maybe one day, you will help them find out more!\" When do lanternfish swim up toward the surface? At night. What do they do when the sun comes up? They swim back down again. Lumi does a happy flip in her water tunnel. That's true! My cousins swim up every night! Mr. Oswin nods slowly. Good... Now you have a book and a lanternfish. Two sources! Now, phonics. Here are more study words with one strong part. Experiment. Ex-PER-i-ment. Conclusion. Con-CLU-sion. Words like information and conclusion are strong just before the ending. Observe. Ob-SERVE. Example. Ex-AM-ple. Next time, Birimo finds a very surprising website.",
+    "reviewers": "B+C",
+    "reason": "bare '-tion' / '-sion' read aloud; same fix as the segment"
+  },
+  {
+    "lesson": 1059,
+    "path": "teacher.segments[7].say",
+    "before": "Haru asks, Does it show its sources? No, it doesn't. Riko says, Then I don't think it's reliable, because it doesn't say who wrote it. Let's check a book, too.",
+    "after": "Haru asks, Does it show its sources? Birimo says, No, it doesn't. Riko says, Then I don't think it's reliable, because it doesn't say who wrote it. Let's check a book, too.",
+    "reviewers": "A+C",
+    "reason": "the answer had no speaker, so it sounded like Haru answering himself (the conversation gives it to Birimo)"
+  },
+  {
+    "lesson": 1059,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Haru asks, Does it show its sources? No, it doesn't. Riko says, Then I don't think it's reliable, because it doesn't say who wrote it. Let's check a book, too.",
+    "after": "Haru asks, Does it show its sources? Birimo says, No, it doesn't. Riko says, Then I don't think it's reliable, because it doesn't say who wrote it. Let's check a book, too.",
+    "reviewers": "A+C",
+    "reason": "the answer had no speaker, so it sounded like Haru answering himself (the conversation gives it to Birimo)"
+  },
+  {
+    "lesson": 1059,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "ハルくん「じょうほうげんは のって いる？」「ううん、のって ない。」 リコちゃん「じゃあ しんらい できないと 思う。だれが かいたか かいて ない から。本でも たしかめよう。」",
+    "after": "ハルくん「じょうほうげんは のって いる？」ビリモ「ううん、のって ない。」 リコちゃん「じゃあ しんらい できないと 思う。だれが かいたか かいて ない から。本でも たしかめよう。」",
+    "reviewers": "A+C",
+    "reason": "JA follows the speaker added in EN"
+  },
+  {
+    "lesson": 1059,
+    "path": "teacher.segments[10].say",
+    "before": "Presentation ends in tion, so the beat just before it is strong. Pres-en-TA-tion. Your turn! Presentation. Important. Topic. Conclude.",
+    "after": "Presentation ends in t, i, o, n, so the beat just before it is strong. Pres-en-TA-tion. Your turn! Presentation. Important. Topic. Conclude.",
+    "reviewers": "B+C",
+    "reason": "bare 'tion' is misread by TTS; spell the letters"
+  },
+  {
+    "lesson": 1059,
+    "path": "teacher.segments[10].subtitleEn",
+    "before": "Presentation ends in tion, so the beat just before it is strong. Pres-en-TA-tion. Your turn! Presentation. Important. Topic. Conclude.",
+    "after": "Presentation ends in t, i, o, n, so the beat just before it is strong. Pres-en-TA-tion. Your turn! Presentation. Important. Topic. Conclude.",
+    "reviewers": "B+C",
+    "reason": "bare 'tion' is misread by TTS; spell the letters"
+  },
+  {
+    "lesson": 1059,
+    "path": "teacher.segments[10].subtitleJa",
+    "before": "presentation は tion で おわるから、すぐ まえが つよい。pres-en-TA-tion。あなたの ばん！ presentation。important。topic。conclude。",
+    "after": "presentation は t、i、o、n で おわるから、すぐ まえが つよい。pres-en-TA-tion。あなたの ばん！ presentation。important。topic。conclude。",
+    "reviewers": "B+C",
+    "reason": "JA follows the new EN"
+  },
+  {
+    "lesson": 1059,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, According to this book, lanternfish swim up at night to eat. Today, Dr. Vale and I help everyone look for information online in the Research Center. Birimo is searching for anglerfish. Suddenly, he jumps up. Everyone, look! This website says anglerfish are as big as buses! Haru's mouth falls open. As big as buses? Riko frowns. Hmm. That sounds strange. I say, Good researchers ask questions about every website. Is it reliable（しんらい できる）? Reliable means we can trust it. To find out, we ask four questions. Who wrote it? When was it written? Does it show its sources? Can we find the same information in a book? Kiko says the first two questions out loud. Who wrote it? When was it written? Say it with me. Who wrote it? When was it written? Super! Let's read the web page Birimo found. \"Fishy Fun Facts Page! Welcome to the coolest fish page in the whole world! Did you know? Anglerfish are as big as buses! Their lights are brighter than the sun! Giant squid can fly over the waves like birds! Lanternfish sing songs every night! Top Fact of the Week: Octopuses can drive tiny cars on the seafloor! All of these facts are one hundred percent true, we promise! We know everything about the ocean, so you never need to read a book again! Click here for more crazy facts! Click here to win a free submarine! Author: not shown. Date: not shown. Sources: none. Share this page with all your friends!\" What does the web page say about anglerfish? They are as big as buses. Who wrote it? We don't know. There is no author and no date. I add, And never click on prizes like that free submarine. Then Lumi brings a message from Mr. Oswin. He looked in all of his books, and none of them say that anglerfish are as big as buses. Birimo sighs. I almost believed it! Lumi says, It's OK, Birimo. Now you know how to check. Let's find out the real facts! Now, phonics. Here are four more study words. Presentation. Pres-en-TA-tion. It ends in -tion, so the strong part is just before it. Important. Im-POR-tant. Topic. TOP-ic. Conclude. Con-CLUDE. Next time, we'll put everything together and make our research plan.",
+    "after": "Hello, everyone! Last time, we said, According to this book, lanternfish swim up at night to eat. Today, Dr. Vale and I help everyone look for information online in the Research Center. Birimo is searching for anglerfish. Suddenly, he jumps up. Everyone, look! This website says anglerfish are as big as buses! Haru's mouth falls open. As big as buses? Riko frowns. Hmm. That sounds strange. I say, Good researchers ask questions about every website. Is it reliable（しんらい できる）? Reliable means we can trust it. To find out, we ask four questions. Who wrote it? When was it written? Does it show its sources? Can we find the same information in a book? Kiko says the first two questions out loud. Who wrote it? When was it written? Say it with me. Who wrote it? When was it written? Super! Let's read the web page Birimo found. \"Fishy Fun Facts Page! Welcome to the coolest fish page in the whole world! Did you know? Anglerfish are as big as buses! Their lights are brighter than the sun! Giant squid can fly over the waves like birds! Lanternfish sing songs every night! Top Fact of the Week: Octopuses can drive tiny cars on the seafloor! All of these facts are one hundred percent true, we promise! We know everything about the ocean, so you never need to read a book again! Click here for more crazy facts! Click here to win a free submarine! Author: not shown. Date: not shown. Sources: none. Share this page with all your friends!\" What does the web page say about anglerfish? They are as big as buses. Who wrote it? We don't know. There is no author and no date. I add, And never click on prizes like that free submarine. Then Lumi brings a message from Mr. Oswin. He looked in all of his books, and none of them say that anglerfish are as big as buses. Birimo sighs. I almost believed it! Lumi says, It's OK, Birimo. Now you know how to check. Let's find out the real facts! Now, phonics. Here are four more study words. Presentation. Pres-en-TA-tion. It ends in t, i, o, n, so the strong part is just before the ending. Important. Im-POR-tant. Topic. TOP-ic. Conclude. Con-CLUDE. Next time, we'll put everything together and make our research plan.",
+    "reviewers": "B+C",
+    "reason": "bare '-tion' read aloud; same fix as the segment"
+  }
+]

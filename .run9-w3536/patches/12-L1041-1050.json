@@ -1,0 +1,466 @@
+[
+ {
+  "lesson": 1041,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, Our proposal is to make a map for visitors. It will help people find their way. Mayor Hart loved our map idea, and four golden leaves are shining on the Tree of Voices. Today's council topic is animals. Amara raises her hand. She says, I saw a baby fox in a video. It was so cute! I want one as a pet! Leo says, Hmm, but a fox is a wild animal. So Olive writes a big question on the board. Should people keep wild animals as pets? Say it with me. Should people keep wild animals as pets? Great! Olive says, Let's listen to both sides before we decide. Let's read the fact card from the Hall's library. \"Wild animals usually live in nature, like foxes, owls and monkeys. They need lots of space, special food, and other animals of their own kind. Many places have laws that protect wild animals. Keeping them at home can be bad for the animal and unsafe for people. Dogs, cats, rabbits and hamsters are animals that live well with people. Some wild animals are cared for by experts in zoos and sanctuaries.\" What do wild animals need? Lots of space, special food, and friends of their kind. Listen. A baby fox is the cutest animal in the world. Is that a fact or an opinion? It's an opinion! Amara thinks and says, I partly agree with Leo. Maybe I can draw foxes and visit them at a sanctuary with my family. Olive says, On the one hand, people love animals. On the other hand, wild animals need lots of space. Now, phonics.Spect means look. In plus spect is inspect. To inspect means to look inside carefully. Dict means say. Pre means before, so predict means to say what will happen before it happens. Struct means build. A structure is something built, like a bridge. Next time, we will talk about using less plastic!",
+  "after": "Hello, everyone! Last time, we said, Our proposal is to make a map for visitors. It will help people find their way. Mayor Hart loved our map idea, and four golden leaves are shining on the Tree of Voices. Today's council topic is animals. Amara raises her hand. She says, I saw a baby fox in a video. It was so cute! I want one as a pet! Leo says, Hmm, but a fox is a wild animal. So Olive writes a big question on the board. Should people keep wild animals as pets? Say it with me. Should people keep wild animals as pets? Great! Olive says, Let's listen to both sides before we decide. Let's read the fact card from the Hall's library. \"Wild animals usually live in nature, like foxes, owls and monkeys. They need lots of space, special food, and other animals of their own kind. Many places have laws that protect wild animals. Keeping them at home can be bad for the animal and unsafe for people. Dogs, cats, rabbits and hamsters are animals that live well with people. Some wild animals are cared for by experts in zoos and sanctuaries.\" What do wild animals need? Lots of space, special food, and friends of their kind. Listen. A baby fox is the cutest animal in the world. Is that a fact or an opinion? It's an opinion! Amara thinks and says, I partly agree with Leo. Maybe I can draw foxes and visit them at a sanctuary with my family. Olive says, On the one hand, people love animals. On the other hand, wild animals need lots of space. Now, phonics. Spect means look. In plus spect is inspect. To inspect means to look inside carefully. Dict means say. Pre means before, so predict means to say what will happen before it happens. Struct means build. A structure is something built, like a bridge. Next time, we will talk about using less plastic!",
+  "reviewers": "objective",
+  "reason": "missing space after the period (TTS runs 'phonics.Spect' together)"
+ },
+ {
+  "lesson": 1041,
+  "path": "conversation.lines[1].en",
+  "before": "I'm playing Amara! I think yes, because baby foxes are so cute!",
+  "after": "I'm playing Amara! I think they should, because baby foxes are so cute!",
+  "reviewers": "A+B",
+  "reason": "'I think yes' is not natural English for answering a should-question; 'I think they should' models should + base verb"
+ },
+ {
+  "lesson": 1041,
+  "path": "teacher.segments[6].say",
+  "before": "Birimo is playing Amara. I think yes, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
+  "after": "Birimo is playing Amara. I think they should, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
+  "reviewers": "A+B",
+  "reason": "'I think yes' is not natural English for answering a should-question; 'I think they should' models should + base verb"
+ },
+ {
+  "lesson": 1041,
+  "path": "teacher.segments[6].subtitleEn",
+  "before": "Birimo is playing Amara. I think yes, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
+  "after": "Birimo is playing Amara. I think they should, because baby foxes are so cute! Riko says, I see your point, but wild animals need lots of space and special food.",
+  "reviewers": "A+B",
+  "reason": "'I think yes' is not natural English for answering a should-question; 'I think they should' models should + base verb"
+ },
+ {
+  "lesson": 1041,
+  "path": "teacher.segments[6].slide.items[0]",
+  "before": "I'm playing Amara! I think yes, because baby foxes are so cute!",
+  "after": "I'm playing Amara! I think they should, because baby foxes are so cute!",
+  "reviewers": "A+B",
+  "reason": "slide shows the conversation line"
+ },
+ {
+  "lesson": 1041,
+  "path": "teacher.segments[8].say",
+  "before": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? It's a fact. You can check it in a book!",
+  "after": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? I answer, It's a fact. You can check it in a book!",
+  "reviewers": "A+C",
+  "reason": "the answer had no speaker after 'Kiko asks', so it sounded like Kiko answering herself (Ms. Emma answers in the conversation)"
+ },
+ {
+  "lesson": 1041,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? It's a fact. You can check it in a book!",
+  "after": "Kiko asks, Many places have laws that protect wild animals. Is that a fact or an opinion? I answer, It's a fact. You can check it in a book!",
+  "reviewers": "A+C",
+  "reason": "the answer had no speaker after 'Kiko asks', so it sounded like Kiko answering herself (Ms. Emma answers in the conversation)"
+ },
+ {
+  "lesson": 1041,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "キコちゃんが きくよ。「おおくの ばしょに やせいの どうぶつを まもる きまりが あるよ。これは じじつ？ それとも いけん？」「じじつよ。本で たしかめられるわ！」",
+  "after": "キコちゃんが きくよ。「おおくの ばしょに やせいの どうぶつを まもる きまりが あるよ。これは じじつ？ それとも いけん？」わたし「じじつよ。本で たしかめられるわ！」",
+  "reviewers": "A+C",
+  "reason": "JA follows the speaker added in EN"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, Should people keep wild animals as pets? Amara decided to draw foxes instead. Today, at lunchtime, Priya comes into the round hall with a big blue box. It's the recycling bin from the Hall's kitchen. She says, Yesterday, I counted the plastic bottles in this bin. There were thirty-one! Haru says, Wow, in only one day! Olive rings her bell. Let's make a suggestion. Remember, we can say, I suggest that we, and then a verb. Riko raises her hand. I suggest that we bring our own bottles. Say it with me. I suggest that we bring our own bottles. Excellent! Kiko adds, How about using reusable bags, too? Priya made a poster about plastic. Let's read Priya's poster. \"Did you know? Plastic is strong and useful, but it can take hundreds of years to break down. A lot of plastic waste ends up in the sea, and it can hurt sea animals like turtles and seabirds. Here are three easy ideas. Bring your own bottle and fill it with water. Carry a reusable bag when you go shopping. Say no, thank you, to straws you don't need. Small steps can make a big difference!\" How long can plastic take to break down? Hundreds of years. Which animals can plastic hurt? Sea animals, like turtles and seabirds. Then Haru says, I partly agree. Reusable bottles are great, but sometimes I forget mine. Riko says, I see your point. Why don't we put a bottle sticker on the door to remind us? Now, phonics. More roots! Port means carry. Ex means out, so export means to carry things out to another country. Rupt means break. Inter means between, so interrupt means to break in when someone is talking. Ject means throw. Re means back, so reject means to throw something back, or to say no to it. Next time, we will review how we share opinions!",
+  "after": "Hello, everyone! Last time, we said, Should people keep wild animals as pets? Amara decided to draw foxes instead. Today, at lunchtime, Priya comes into the round hall with a big blue box. It's the recycling bin from the Hall's kitchen. She says, This week, I counted the plastic bottles in this bin. There were thirty-one! Haru says, Wow, in only one week! Olive rings her bell. Let's make a suggestion. Remember, we can say, I suggest that we, and then a verb. Riko raises her hand. I suggest that we bring our own bottles. Say it with me. I suggest that we bring our own bottles. Excellent! Kiko adds, How about using reusable bags, too? Priya made a poster about plastic. Let's read Priya's poster. \"Did you know? Plastic is strong and useful, but it can take hundreds of years to break down. A lot of plastic waste ends up in the sea, and it can hurt sea animals like turtles and seabirds. Here are three easy ideas. Bring your own bottle and fill it with water. Carry a reusable bag when you go shopping. Say no, thank you, to straws you don't need. Small steps can make a big difference!\" How long can plastic take to break down? Hundreds of years. Which animals can plastic hurt? Sea animals, like turtles and seabirds. Then Haru says, I partly agree. Reusable bottles are great, but sometimes I forget mine. Riko says, I see your point. Why don't we put a bottle sticker on the door to remind us? Now, phonics. More roots! Port means carry. Ex means out, so export means to carry things out to another country. Rupt means break. Inter means between, so interrupt means to break in when someone is talking. Ject means throw. Re means back, so reject means to throw something back, or to say no to it. Next time, we will review how we share opinions!",
+  "reviewers": "objective",
+  "reason": "story numbers: 31 bottles in ONE day does not fit L1044 (120 bottles in a whole month); 31 in one week does (about 4 weeks = about 120)"
+ },
+ {
+  "lesson": 1042,
+  "path": "conversation.lines[0].en",
+  "before": "Priya counted thirty-one plastic bottles in the bin yesterday!",
+  "after": "Priya counted thirty-one plastic bottles in the bin this week!",
+  "reviewers": "objective",
+  "reason": "story numbers: 31 bottles in ONE day does not fit L1044 (120 bottles in a whole month); 31 in one week does (about 4 weeks = about 120)"
+ },
+ {
+  "lesson": 1042,
+  "path": "conversation.lines[0].ja",
+  "before": "きのう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！",
+  "after": "こんしゅう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！",
+  "reviewers": "objective",
+  "reason": "JA follows the EN"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[6].say",
+  "before": "Kiko says, Priya counted thirty-one plastic bottles in the bin yesterday! Riko says, That's too many. I suggest that we bring our own bottles.",
+  "after": "Kiko says, Priya counted thirty-one plastic bottles in the bin this week! Riko says, That's too many. I suggest that we bring our own bottles.",
+  "reviewers": "objective",
+  "reason": "story numbers: 31 bottles in ONE day does not fit L1044 (120 bottles in a whole month); 31 in one week does (about 4 weeks = about 120)"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[6].subtitleEn",
+  "before": "Kiko says, Priya counted thirty-one plastic bottles in the bin yesterday! Riko says, That's too many. I suggest that we bring our own bottles.",
+  "after": "Kiko says, Priya counted thirty-one plastic bottles in the bin this week! Riko says, That's too many. I suggest that we bring our own bottles.",
+  "reviewers": "objective",
+  "reason": "story numbers: 31 bottles in ONE day does not fit L1044 (120 bottles in a whole month); 31 in one week does (about 4 weeks = about 120)"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "キコちゃん「きのう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！」 リコちゃん「おおすぎるね。じぶんの ボトルを もって くる ことを ていあん します。」",
+  "after": "キコちゃん「こんしゅう プリヤが はこの なかの ペットボトルを かぞえたら 31本 あったんだって！」 リコちゃん「おおすぎるね。じぶんの ボトルを もって くる ことを ていあん します。」",
+  "reviewers": "objective",
+  "reason": "JA follows the EN"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[6].slide.items[0]",
+  "before": "Priya counted thirty-one plastic bottles in the bin yesterday!",
+  "after": "Priya counted thirty-one plastic bottles in the bin this week!",
+  "reviewers": "objective",
+  "reason": "slide shows the conversation line"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[18].slide.items[1]",
+  "before": "Priya counted thirty-one plastic bottles in the bin yesterday!",
+  "after": "Priya counted thirty-one plastic bottles in the bin this week!",
+  "reviewers": "objective",
+  "reason": "slide shows the conversation line"
+ },
+ {
+  "lesson": 1042,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Let's pretend I'm Priya. I counted thirty-one plastic bottles in the recycling bin yesterday! What can the Children's Council do about it? Do you have a suggestion? Tell me why, too!",
+  "after": "Let's pretend I'm Priya. I counted thirty-one plastic bottles in the recycling bin this week! What can the Children's Council do about it? Do you have a suggestion? Tell me why, too!",
+  "reviewers": "objective",
+  "reason": "story numbers: 31 bottles in ONE day does not fit L1044 (120 bottles in a whole month); 31 in one week does (about 4 weeks = about 120)"
+ },
+ {
+  "lesson": 1042,
+  "path": "tpr[3].en",
+  "before": "Shake your hand and say, No straw, thank you!",
+  "after": "Shake your head and say, No straw, thank you!",
+  "reviewers": "A+B",
+  "reason": "'Shake your hand' is not idiomatic English (it suggests a handshake); a US child refuses by shaking the head"
+ },
+ {
+  "lesson": 1042,
+  "path": "tpr[3].ja",
+  "before": "手を ふって「ストローは けっこうです！」と 言って。",
+  "after": "くびを よこに ふって「ストローは けっこうです！」と 言って。",
+  "reviewers": "A+B",
+  "reason": "JA follows the EN"
+ },
+ {
+  "lesson": 1042,
+  "path": "tpr[3].action",
+  "before": "手の ひらを よこに ふって にっこり ことわる",
+  "after": "くびを よこに ふって にっこり ことわる",
+  "reviewers": "A+B",
+  "reason": "action follows the EN"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[12].say",
+  "before": "Put the empty bottle in the recycling bin. Now shake your hand and say, No straw, thank you!",
+  "after": "Put the empty bottle in the recycling bin. Now shake your head and say, No straw, thank you!",
+  "reviewers": "A+B",
+  "reason": "'Shake your hand' is not idiomatic English (it suggests a handshake); a US child refuses by shaking the head"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[12].subtitleEn",
+  "before": "Put the empty bottle in the recycling bin. Now shake your hand and say, No straw, thank you!",
+  "after": "Put the empty bottle in the recycling bin. Now shake your head and say, No straw, thank you!",
+  "reviewers": "A+B",
+  "reason": "'Shake your hand' is not idiomatic English (it suggests a handshake); a US child refuses by shaking the head"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[12].subtitleJa",
+  "before": "からの ボトルを リサイクルばこに いれて。こんどは 手を ふって「ストローは けっこうです！」と いって。",
+  "after": "からの ボトルを リサイクルばこに いれて。こんどは くびを よこに ふって「ストローは けっこうです！」と いって。",
+  "reviewers": "A+B",
+  "reason": "JA follows the EN"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[12].slide.items[1]",
+  "before": "Shake your hand and say, No straw, thank you!",
+  "after": "Shake your head and say, No straw, thank you!",
+  "reviewers": "A+B",
+  "reason": "slide shows the TPR line"
+ },
+ {
+  "lesson": 1042,
+  "path": "teacher.segments[13].slide.items[3]",
+  "before": "Shake your hand and say, No straw, thank you!",
+  "after": "Shake your head and say, No straw, thank you!",
+  "reviewers": "A+B",
+  "reason": "slide shows the TPR line"
+ },
+ {
+  "lesson": 1043,
+  "path": "teacher.segments[0].say",
+  "before": "Hello, everyone! Last time, we suggested our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
+  "after": "Hello, everyone! Last time, we suggested bringing our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
+  "reviewers": "A+B",
+  "reason": "'suggested our own bottles' leaves out the action; suggest + -ing"
+ },
+ {
+  "lesson": 1043,
+  "path": "teacher.segments[0].subtitleEn",
+  "before": "Hello, everyone! Last time, we suggested our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
+  "after": "Hello, everyone! Last time, we suggested bringing our own bottles. And look! Almost everyone has a bottle today! Now, Olive starts a game. Opinion Ping-Pong!",
+  "reviewers": "A+B",
+  "reason": "'suggested our own bottles' leaves out the action; suggest + -ing"
+ },
+ {
+  "lesson": 1044,
+  "path": "teacher.segments[10].say",
+  "before": "Ject means throw. Project, throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
+  "after": "Ject means throw. To project is to throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
+  "reviewers": "B+C",
+  "reason": "heteronym: a bare 'Project' is read as the noun PROJ-ect; the lesson means the verb pro-JECT"
+ },
+ {
+  "lesson": 1044,
+  "path": "teacher.segments[10].subtitleEn",
+  "before": "Ject means throw. Project, throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
+  "after": "Ject means throw. To project is to throw a picture forward onto a screen. Your turn! Transport. Erupt. Project.",
+  "reviewers": "B+C",
+  "reason": "heteronym: a bare 'Project' is read as the noun PROJ-ect; the lesson means the verb pro-JECT"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, The graph shows that our class used less plastic this month. Soon, children from many places will come for the big council meeting. Olive says, We need forty folding chairs in a circle. Let's get ready together. I say, Let's review polite requests. Haru sees Leo and asks, Would you mind helping us set up the chairs? Say it with me. Would you mind helping us set up the chairs? Great! Leo says, Not at all! Remember, Not at all means, Sure, I'm happy to help. Then Riko asks me, Could you put a name card on each chair? I say, Sure, no problem. Let's read Olive's checklist. \"Big Council Meeting Checklist. Put forty folding chairs in a big circle. Place a name card on each chair. Fill the water jugs and put them on the side table. Hang the welcome banner over the main door with an adult. Keep the aisles clear so that everyone can walk safely. Take a break when you feel tired, and drink some water. When everything is ready, we will meet at four o'clock by the Tree of Voices.\" How many chairs do we need? Forty. When will we meet? At four o'clock. Then Birimo climbs onto a chair to hang the banner. I say, Birimo, would you mind not standing on the chair? Let's ask an adult with a ladder. Birimo says, Oh, sorry! Good idea. Kiko says, I think this was our best teamwork, because everyone helped. Riko says, I agree. Suddenly, a fifth golden leaf grows on the Tree of Voices! Now, phonics. Let's review. Export means to carry things out to other countries. Ject means throw, so reject means to throw back, or to say no. Purchase is the formal word for buy. It ends in a, s, e. Should we meet at three? No, let's meet at FOUR. Next time, we will read two opinions about homework!",
+  "after": "Hello, everyone! Last time, we said, The graph shows that our class used less plastic this month. Soon, children from many places will come for the big council meeting. Olive says, We need forty folding chairs in a circle. Let's get ready together. I say, Let's review polite requests. Haru sees Leo and asks, Would you mind helping us set up the chairs? Say it with me. Would you mind helping us set up the chairs? Great! Leo says, Not at all! Remember, Not at all means, Sure, I'm happy to help. Then Kiko asks me, Could you put a name card on each chair? I say, Sure, no problem. Let's read Olive's checklist. \"Big Council Meeting Checklist. Put forty folding chairs in a big circle. Place a name card on each chair. Fill the water jugs and put them on the side table. Hang the welcome banner over the main door with an adult. Keep the aisles clear so that everyone can walk safely. Take a break when you feel tired, and drink some water. When everything is ready, we will meet at four o'clock by the Tree of Voices.\" How many chairs do we need? Forty. When will we meet? At four o'clock. Then Birimo climbs onto a chair to hang the banner. I say, Birimo, would you mind not standing on the chair? Let's ask an adult with a ladder. Birimo says, Oh, sorry! Good idea. Kiko says, I think this was our best teamwork, because everyone helped. Riko says, I agree. Suddenly, a fifth golden leaf grows on the Tree of Voices! Now, phonics. Let's review. Export means to carry things out to other countries. Ject means throw, so reject means to throw back, or to say no. Purchase is the formal word for buy. It ends in a, s, e. Should we meet at three? No, let's meet at FOUR. Next time, we will read two opinions about homework!",
+  "reviewers": "objective",
+  "reason": "story: Kiko asks this in the conversation and in seg7"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[4].say",
+  "before": "Checklist. A list of jobs. Done? Tick! Checklist!",
+  "after": "Checklist. A list of jobs. Done? Check! Checklist!",
+  "reviewers": "objective (US policy)",
+  "reason": "'tick' is British; US English says check"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[4].subtitleEn",
+  "before": "Checklist. A list of jobs. Done? Tick! Checklist!",
+  "after": "Checklist. A list of jobs. Done? Check! Checklist!",
+  "reviewers": "objective (US policy)",
+  "reason": "'tick' is British; US English says check"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[6].say",
+  "before": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Not at all! Not at all means, Sure, I'm happy to help.",
+  "after": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Birimo says, Not at all! Not at all means, Sure, I'm happy to help.",
+  "reviewers": "A+C",
+  "reason": "the answer had no speaker, so it sounded like Haru answering himself"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[6].subtitleEn",
+  "before": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Not at all! Not at all means, Sure, I'm happy to help.",
+  "after": "Birimo is playing Leo. Wow, forty chairs! Haru asks softly, Would you mind helping us set up the chairs, Leo? Birimo says, Not at all! Not at all means, Sure, I'm happy to help.",
+  "reviewers": "A+C",
+  "reason": "the answer had no speaker, so it sounded like Haru answering himself"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "ビリモは レオの やく。「わあ、いすが 40こ！」 ハルくんが やさしく きくよ。「レオ、いすを ならべるのを てつだって もらえませんか？」「いいよ！」 Not at all は「もちろん、よろこんで」と いう いみ。",
+  "after": "ビリモは レオの やく。「わあ、いすが 40こ！」 ハルくんが やさしく きくよ。「レオ、いすを ならべるのを てつだって もらえませんか？」ビリモ「いいよ！」 Not at all は「もちろん、よろこんで」と いう いみ。",
+  "reviewers": "A+C",
+  "reason": "JA follows the speaker added in EN"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[7].say",
+  "before": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? Sure, no problem.",
+  "after": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? I say, Sure, no problem.",
+  "reviewers": "A+C",
+  "reason": "the answer had no speaker after 'Kiko asks me'"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[7].subtitleEn",
+  "before": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? Sure, no problem.",
+  "after": "Riko says, I think a circle is better, because everyone can see each other's faces. Kiko asks me, Could you put a name card on each chair? I say, Sure, no problem.",
+  "reviewers": "A+C",
+  "reason": "the answer had no speaker after 'Kiko asks me'"
+ },
+ {
+  "lesson": 1045,
+  "path": "teacher.segments[7].subtitleJa",
+  "before": "リコちゃん「わの ほうが いいと おもう。みんなが おたがいの かおを 見られるから。」 キコちゃんが わたしに きくよ。「それぞれの いすに なふだを おいて もらえますか？」「いいわよ、まかせて。」",
+  "after": "リコちゃん「わの ほうが いいと おもう。みんなが おたがいの かおを 見られるから。」 キコちゃんが わたしに きくよ。「それぞれの いすに なふだを おいて もらえますか？」わたし「いいわよ、まかせて。」",
+  "reviewers": "A+C",
+  "reason": "JA follows the speaker added in EN"
+ },
+ {
+  "lesson": 1046,
+  "path": "teacher.segments[2].say",
+  "before": "Opinion piece. A short writing about what you think. Opinion piece!",
+  "after": "Opinion piece. A short piece of writing about what you think. Opinion piece!",
+  "reviewers": "A+B",
+  "reason": "'a writing' is not natural; 'a piece of writing'"
+ },
+ {
+  "lesson": 1046,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Opinion piece. A short writing about what you think. Opinion piece!",
+  "after": "Opinion piece. A short piece of writing about what you think. Opinion piece!",
+  "reviewers": "A+B",
+  "reason": "'a writing' is not natural; 'a piece of writing'"
+ },
+ {
+  "lesson": 1046,
+  "path": "teacher.segments[9].say",
+  "before": "Review time! Popularity. Make LAR strong. Popu-LAR-ity! Internet, inter means between. Computers connect with each other.",
+  "after": "Review time! Popularity. Make LAR strong. Pop-u-LAR-i-ty! Internet, inter means between. Computers connect with each other.",
+  "reviewers": "B+C",
+  "reason": "brief: hyphen beat form for every syllable (like e-QUAL-i-ty in L1050)"
+ },
+ {
+  "lesson": 1046,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Review time! Popularity. Make LAR strong. Popu-LAR-ity! Internet, inter means between. Computers connect with each other.",
+  "after": "Review time! Popularity. Make LAR strong. Pop-u-LAR-i-ty! Internet, inter means between. Computers connect with each other.",
+  "reviewers": "B+C",
+  "reason": "brief: hyphen beat form for every syllable (like e-QUAL-i-ty in L1050)"
+ },
+ {
+  "lesson": 1046,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, Would you mind helping us set up the chairs? The chairs are ready, and the fifth golden leaf is shining. Today, Olive gives us the Children's Council newsletter. Inside, there are two short opinion pieces about homework. One is by Leo, and one is by Priya. I say, Let's think like a judge and check the reasons. Read two opinions. Which do you agree with? Say it with me. Read two opinions. Which do you agree with? Nice! Let's read the two opinion pieces. \"Leo writes, I think we should have homework every day. When we practice a little every day, we remember more. For example, I learned my times tables with ten minutes of homework a day. Priya writes, I think some days without homework are a good idea. Children need time to read, play and rest. For example, on free evenings, I read science books and go to bed early.\" What does Leo think? We should have homework every day. What does Priya do on free evenings? She reads science books and goes to bed early. Leo learned his times tables with ten minutes of homework a day. Is that a fact or an opinion? It's a fact. It really happened. Some days without homework are a good idea. That one is an opinion. Haru says, I agree with Leo because practice helps us remember. Riko says, I see your point, but rest is important, too. Kiko says, Both writers give good reasons. Maybe the best answer is somewhere in the middle, like short homework on most days and some free days. Now, phonics. Let's review. Popularity is popular plus ity. The internet has inter, which means between, because computers connect with each other. Do you feed the cat? No, I feed the DOG. Require is the formal word for need. Respect has spect, which means look. Next time, we will write a proposal letter to Mayor Hart!",
+  "after": "Hello, everyone! Last time, we said, Would you mind helping us set up the chairs? The chairs are ready, and the fifth golden leaf is shining. Today, Olive gives us the Children's Council newsletter. Inside, there are two short opinion pieces about homework. One is by Leo, and one is by Priya. I say, Let's think like a judge and check the reasons. Read two opinions. Which do you agree with? Say it with me. Read two opinions. Which do you agree with? Nice! Let's read the two opinion pieces. \"Leo writes, I think we should have homework every day. When we practice a little every day, we remember more. For example, I learned my times tables with ten minutes of homework a day. Priya writes, I think some days without homework are a good idea. Children need time to read, play and rest. For example, on free evenings, I read science books and go to bed early.\" What does Leo think? We should have homework every day. What does Priya do on free evenings? She reads science books and goes to bed early. Leo learned his times tables with ten minutes of homework a day. Is that a fact or an opinion? It's a fact. It really happened. Some days without homework are a good idea. That one is an opinion. Haru says, I agree with Leo because practice helps us remember. Riko says, I see your point, but rest is important, too. Kiko says, Both writers give good reasons. Maybe the best answer is somewhere in the middle, like short homework on most days and some free days. Now, phonics. Let's review. Popularity is popular plus i, t, y. The internet has inter, which means between, because computers connect with each other. Do you feed the cat? No, I feed the DOG. Require is the formal word for need. Respect has spect, which means look. Next time, we will write a proposal letter to Mayor Hart!",
+  "reviewers": "B+C",
+  "reason": "bare 'ity' is misread by TTS; spell the letters"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "キコちゃんが きくよ。「じぶんの アドレスも かくの？」 わたし「ううん、かかなくて いいの。『こども ぎかい』と サインする だけで いいわ。」 さいごは「おへんじを たのしみに して います。」",
+  "after": "キコちゃんが きくよ。「すんで いる ところも かくの？」 わたし「ううん、かかなくて いいの。『こども ぎかい』と サインする だけで いいわ。」 さいごは「おへんじを たのしみに して います。」",
+  "reviewers": "objective (JA)",
+  "reason": "アドレス means an email address to a Japanese child; the English is the home address -> すんで いる ところ (tests/teacher.test.ts bans the word じゅうしょ in teacher segments)"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacher.segments[9].say",
+  "before": "Review time! Activity. Active, drop the e, add ity. Coworker, co means together. A coworker works with you.",
+  "after": "Review time! Activity. Active, drop the e, add i, t, y. Coworker, co means together. A coworker works with you.",
+  "reviewers": "B+C",
+  "reason": "bare 'ity' is misread by TTS; spell the letters (like 'drop the e')"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Review time! Activity. Active, drop the e, add ity. Coworker, co means together. A coworker works with you.",
+  "after": "Review time! Activity. Active, drop the e, add i, t, y. Coworker, co means together. A coworker works with you.",
+  "reviewers": "B+C",
+  "reason": "bare 'ity' is misread by TTS; spell the letters (like 'drop the e')"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacher.segments[9].subtitleJa",
+  "before": "ふりかえりの じかん！ activity。active の e を とって ity を つける。coworker の co は「いっしょに」。coworker は いっしょに はたらく 人。",
+  "after": "ふりかえりの じかん！ activity。active の e を とって i、t、y を つける。coworker の co は「いっしょに」。coworker は いっしょに はたらく 人。",
+  "reviewers": "B+C",
+  "reason": "JA follows the new EN"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, Read two opinions. Which do you agree with? Mayor Hart sent us a note. It says, Thank you for the visitor map! Please send me more ideas in a letter. Leo says, Yesterday, our group walked through Willowford Park with the adults. Many grandparents and parents with babies wanted to sit down, but there were only two benches. So we write a proposal letter. It starts with Dear. Dear Mayor, I suggest that we put more benches in the park. Say it with me. Dear Mayor, I suggest that we put more benches in the park. Wonderful! Kiko asks, Do I write my address? I say, No, you don't need to. Just sign it, The Children's Council. Before we write, Riko says, I think the benches should go near the playground, because parents watch their children there. Haru says, I partly agree, but under the trees is cooler in summer. So we choose both! Let's read our letter. \"Dear Mayor Hart, Thank you for listening to children. I suggest that we put more benches in Willowford Park. Right now, there are only two benches, so many visitors have to stand. Benches would help grandparents, parents with babies, and anyone who feels tired. We think four new benches would be enough, two near the playground and two under the big trees. I look forward to hearing from you. Best wishes, The Children's Council.\" How many benches are in the park now? Only two. Where should the new benches go? Two near the playground and two under the big trees. Now, phonics. Let's review. Activity is active, drop the e, plus ity. A coworker works together with you, because co means together. Does Haru feed the fish? No, KIKO feeds the fish. Request is the formal way to say ask for. Contradict has dict, which means say, so it means to say the opposite. Next time, we will practice for a friendly debate!",
+  "after": "Hello, everyone! Last time, we said, Read two opinions. Which do you agree with? Mayor Hart sent us a note. It says, Thank you for the visitor map! Please send me more ideas in a letter. Leo says, Yesterday, our group walked through Willowford Park with the adults. Many grandparents and parents with babies wanted to sit down, but there were only two benches. So we write a proposal letter. It starts with Dear. Dear Mayor, I suggest that we put more benches in the park. Say it with me. Dear Mayor, I suggest that we put more benches in the park. Wonderful! Kiko asks, Do I write my address? I say, No, you don't need to. Just sign it, The Children's Council. Before we write, Riko says, I think the benches should go near the playground, because parents watch their children there. Haru says, I partly agree, but under the trees is cooler in summer. So we choose both! Let's read our letter. \"Dear Mayor Hart, Thank you for listening to children. I suggest that we put more benches in Willowford Park. Right now, there are only two benches, so many visitors have to stand. Benches would help grandparents, parents with babies, and anyone who feels tired. We think four new benches would be enough, two near the playground and two under the big trees. I look forward to hearing from you. Best wishes, The Children's Council.\" How many benches are in the park now? Only two. Where should the new benches go? Two near the playground and two under the big trees. Now, phonics. Let's review. Activity is active, drop the e, plus i, t, y. A coworker works together with you, because co means together. Does Haru feed the fish? No, KIKO feeds the fish. Request is the formal way to say ask for. Contradict has dict, which means say, so it means to say the opposite. Next time, we will practice for a friendly debate!",
+  "reviewers": "B+C",
+  "reason": "bare 'ity' is misread by TTS; spell the letters"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacher.segments[4].say",
+  "before": "Signature. Special writing at the end of a letter. Swish! Signature!",
+  "after": "Signature. Your name, signed at the end of a letter. Swish! Signature!",
+  "reviewers": "A+B",
+  "reason": "'special writing' does not say what a signature is"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacher.segments[4].subtitleEn",
+  "before": "Signature. Special writing at the end of a letter. Swish! Signature!",
+  "after": "Signature. Your name, signed at the end of a letter. Swish! Signature!",
+  "reviewers": "A+B",
+  "reason": "'special writing' does not say what a signature is"
+ },
+ {
+  "lesson": 1047,
+  "path": "teacher.segments[4].subtitleJa",
+  "before": "signature。てがみの さいごに かく とくべつな もじ。シュッ！ サイン！",
+  "after": "signature。てがみの さいごに じぶんで かく なまえ。シュッ！ サイン！",
+  "reviewers": "A+B",
+  "reason": "JA follows the new EN"
+ },
+ {
+  "lesson": 1048,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, Dear Mayor, I suggest that we put more benches in the park. Today, we are practicing for the big council meeting, because there will be a friendly debate. The question is, Should every school have a school garden? In a debate, one team says yes, and the other team says no. Sometimes you speak for a side you don't agree with. That helps us understand others. Haru and Kiko are on the Yes team. Riko and Birimo are on the No team. Olive sets a timer for one minute. Haru stands up and begins. First, I'd like to say that school gardens teach us about nature. Say it with me. First, I'd like to say that school gardens teach us about nature. Excellent! Let's read the notes from both teams. \"Yes Team. School gardens teach us where our food comes from. Children can grow vegetables and flowers, and the flowers help bees. No Team. Gardens need a lot of time and water. Someone has to take care of the plants during summer vacation. Some schools are very small and have no space, so a garden might be difficult. A plant box in each classroom could be another idea.\" What do the flowers in a school garden help? Bees. What is one problem during vacation? Someone has to take care of the plants. Riko says, That's true, but who will water the plants during vacation? Kiko answers, I see your point. Maybe families can take turns. At the end, I say, To sum up, both teams made good points. Everyone shakes hands. Now, phonics. Let's review. Ability comes from able. Ble changes to bil. An intersection is where roads cross, and inter means between. Do you wash the dishes? No, I DRY the dishes. Inform is the formal word for tell. Construct has struct, which means build. Next time, we will look back at our days at the Hall!",
+  "after": "Hello, everyone! Last time, we said, Dear Mayor, I suggest that we put more benches in the park. Today, we are practicing for the big council meeting, because there will be a friendly debate. The question is, Should every school have a school garden? In a debate, one team says yes, and the other team says no. Sometimes you speak for a side you don't agree with. That helps us understand others. Haru and Kiko are on the Yes team. Riko and Birimo are on the No team. Olive sets a timer for one minute. Haru stands up and begins. First, I'd like to say that school gardens teach us about nature. Say it with me. First, I'd like to say that school gardens teach us about nature. Excellent! Let's read the notes from both teams. \"Yes Team. School gardens teach us where our food comes from. Children can grow vegetables and flowers, and the flowers help bees. No Team. Gardens need a lot of time and water. Someone has to take care of the plants during summer vacation. Some schools are very small and have no space, so a garden might be difficult. A plant box in each classroom could be another idea.\" What do the flowers in a school garden help? Bees. What is one problem during vacation? Someone has to take care of the plants. Riko says, That's true, but who will water the plants during vacation? Kiko answers, I see your point. Maybe families can take turns. At the end, I say, To sum up, both teams made good points. Everyone shakes hands. Now, phonics. Let's review. Ability comes from able. B, l, e changes to b, i, l. An intersection is where roads cross, and inter means between. Do you wash the dishes? No, I DRY the dishes. Inform is the formal word for tell. Construct has struct, which means build. Next time, we will look back at our days at the Hall!",
+  "reviewers": "B+C",
+  "reason": "bare 'Ble' / 'bil' are misread by TTS; spell the letters as seg9 does"
+ },
+ {
+  "lesson": 1049,
+  "path": "teacher.segments[9].say",
+  "before": "Review time! Curiosity. Curious, then ous changes to os, plus ity. Birimo is full of curiosity! A costar is a star together with another star.",
+  "after": "Review time! Curiosity. Curious, then o, u, s changes to o, s, plus i, t, y. Birimo is full of curiosity! A costar is a star together with another star.",
+  "reviewers": "B+C",
+  "reason": "bare 'ous' / 'os' / 'ity' are misread by TTS; spell the letters"
+ },
+ {
+  "lesson": 1049,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Review time! Curiosity. Curious, then ous changes to os, plus ity. Birimo is full of curiosity! A costar is a star together with another star.",
+  "after": "Review time! Curiosity. Curious, then o, u, s changes to o, s, plus i, t, y. Birimo is full of curiosity! A costar is a star together with another star.",
+  "reviewers": "B+C",
+  "reason": "bare 'ous' / 'os' / 'ity' are misread by TTS; spell the letters"
+ },
+ {
+  "lesson": 1049,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, First, I'd like to say that school gardens teach us about nature. Tomorrow is the big council meeting, and then we will say goodbye to the Hall of Wisdom. Today, we sit under the Tree of Voices and look back at our time here. Kiko feels two things at once. She says, On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Say it with me. On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Beautiful! Let's read Olive's memory board. \"Our Days at the Hall of Wisdom. We talked about school rules and listened to both sides. We learned to be fair, to stand up for a friend, and to invite everyone to play. We learned about children's rights and our responsibilities. We made a visitor map for Willowford, wrote a letter to Mayor Hart, and used less plastic. Most of all, we learned that good listeners make good speakers.\" What did we make for Willowford? A visitor map. What did we learn most of all? Good listeners make good speakers. Then Birimo goes to return a book to the Hall's library with me. On the top bookshelf, he sees a very old map. I reach up and take it down for him. The map shows a path that goes down, down, down to the bottom of the sea. At the end, there is a tiny picture of shining domes and the words Deep Sea City. Birimo whispers, Wow! Now, phonics. Let's review. Curiosity comes from curious. Ous changes to os, then add ity. Birimo is full of curiosity! A costar is a star in a movie together with another star. Do you clean on Sunday? No, we clean on SATURDAY. Provide is the formal word for give. Transport means to carry across. Next time, it's our grand finale!",
+  "after": "Hello, everyone! Last time, we said, First, I'd like to say that school gardens teach us about nature. Tomorrow is the big council meeting, and then we will say goodbye to the Hall of Wisdom. Today, we sit under the Tree of Voices and look back at our time here. Kiko feels two things at once. She says, On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Say it with me. On the one hand, I'm sad to leave. On the other hand, I'm excited about our next adventure. Beautiful! Let's read Olive's memory board. \"Our Days at the Hall of Wisdom. We talked about school rules and listened to both sides. We learned to be fair, to stand up for a friend, and to invite everyone to play. We learned about children's rights and our responsibilities. We made a visitor map for Willowford, wrote a letter to Mayor Hart, and used less plastic. Most of all, we learned that good listeners make good speakers.\" What did we make for Willowford? A visitor map. What did we learn most of all? Good listeners make good speakers. Then Birimo goes to return a book to the Hall's library with me. On the top bookshelf, he sees a very old map. I reach up and take it down for him. The map shows a path that goes down, down, down to the bottom of the sea. At the end, there is a tiny picture of shining domes and the words Deep Sea City. Birimo whispers, Wow! Now, phonics. Let's review. Curiosity comes from curious. O, u, s changes to o, s, then add i, t, y. Birimo is full of curiosity! A costar is a star in a movie together with another star. Do you clean on Sunday? No, we clean on SATURDAY. Provide is the formal word for give. Transport means to carry across. Next time, it's our grand finale!",
+  "reviewers": "B+C",
+  "reason": "bare 'Ous' / 'os' / 'ity' are misread by TTS; spell the letters"
+ },
+ {
+  "lesson": 1050,
+  "path": "teacher.segments[20].say",
+  "before": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! Next is World thirty-six, the Deep Sea City! See you!",
+  "after": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! After that, it's World thirty-six, Deep Sea City! See you!",
+  "reviewers": "A+C",
+  "reason": "two 'Next' sentences in a row; the place name is Deep Sea City (no article) everywhere else"
+ },
+ {
+  "lesson": 1050,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! Next is World thirty-six, the Deep Sea City! See you!",
+  "after": "You finished Stage 4! Amazing! You can share ideas, listen to both sides, and find a compromise. Next, go and talk with Riko! After that, it's World thirty-six, Deep Sea City! See you!",
+  "reviewers": "A+C",
+  "reason": "two 'Next' sentences in a row; the place name is Deep Sea City (no article) everywhere else"
+ },
+ {
+  "lesson": 1050,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "ステージ4 クリア！ すごい！ アイデアを つたえて、りょうほうの いけんを きいて、だきょうあんも 見つけられるね。このあと リコちゃんと おはなし してね！ つぎは ワールド36、ディープシー・シティ！ またね！",
+  "after": "ステージ4 クリア！ すごい！ アイデアを つたえて、りょうほうの いけんを きいて、だきょうあんも 見つけられるね。このあと リコちゃんと おはなし してね！ その あとは ワールド36、ディープシー・シティ！ またね！",
+  "reviewers": "A+C",
+  "reason": "JA follows the new EN"
+ }
+]
