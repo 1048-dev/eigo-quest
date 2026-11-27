@@ -393,3 +393,35 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: ワールド25・26（レッスン 721〜780）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・teacherScript・testPoints を 60 レッスン ぜんぶ 見なおした
+- さきに 機械的な なおし（「Say, A. Or, B.」→「Or b.」・日本語の なかの 2重の 記号）と ブロックの きめごと（okay → OK〈W26 フォニックスの 表と テストも〉・イギリスふうの ほめことば〈Brilliant・Lovely〉・「A person who ～」の せつめいを ふつうの 文に・AI の さいしょの ひとことで べつの なまえで なのる 19 レッスンを「Let's pretend I'm Mr. Hoot.」に）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た ものを ブロック全体で たしかめて そろえた（たんどくの「ive」→「I, V, E」、エマ先生の「Good morning / Good evening」、L757 の AI の「Tonight」、「a thing that ～」の せつめい）
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、before が いまの 値と あう ときだけ あてた（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあい・かいわ あいても たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W25-26.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 721 --to 780`）: **まえ error 1 / warn 210 / info 18 → あと error 1 / warn 171 / info 18**（まえの warn は Okay・okay 37・「…」「?!」など 163・小文字 4・「I'm exciting」6。のこりは ぜんぶ わざと: ワールド26 は セリフの くとうてん「…」「?!」を ならう ので のこした〈タイトル「The Answer Is…」「Suddenly…」「Luckily…」と フォニックスの 表も テストで きまって いる〉、L778 ストーリーサークルの 1語ずつの 行、L757 の error 1・warn 6 は ビリモの「I'm exciting, too!」〈レッスンで なおす わざとの まちがい〉。info は「Very, very」「What is」など）
+- なおした 欄 **347**（パッチ 366 件: 機械的な なおし 27・ブロックの きめごと 76・AI の ひとこと 19・レビュアー 217・あとの そろえ 27）、なおした レッスン **57 / 60**（L747・L758・L759 は なし）
+- 学習項目 ID が かわった もの 3つ: L751 フォニックス「Okay!」→「OK!」・「Well, okay…」→「Well, OK…」、L778 フォニックス「Well, okay…」→「Well, OK…」（src/lib/curriculum/w26Phonics.ts の 表の キーと focus、tests/phonics-w26.test.ts の 1行も なおした）。表現・ことば・TPR・タイトルは かえて いない
+
+### before → after の 例
+1. L724 会話（objective・おはなしの すじ）: 「There's a box in the middle. There's a lamp next to the box.」→「There's a table in the middle. There's a box on it. There's a lamp next to the box.」（あとで リコが「テーブルの 下に かぎを かいて」と いうのに、えに テーブルが なかった。台本・スライドも あわせた）
+2. L768 teacherScript（A・B）: 「Ms. Emma's cake was on the table. Now it's gone, …」→「Two cakes were on the table. Now one is gone, …」（エマ先生が じぶんを 3人称で よんで いて、ビリモは じぶんの いちごケーキしか たべて いないので はなしが あわなかった）
+3. L736・L737（objective・おはなしの すじ）: なぞの とびらの てがみ「Answer three of my riddles, and I will open.」→「Answer my riddle, and I will open.」、L737「the Riddle Door has a more difficult riddle」→「the second Riddle Door …」（とびらは なぞなぞ 1つで ひらき、L737 は 2つめの とびら）
+
+### きめた こと
+- **AI の さいしょの ひとこと**: アプリは あいてを こどもの キャラから えらび、その かおで ひとことを 出すのに、「I'm Lulu the rabbit.」「I'm Mr. Hoot.」「I'm Echo.」「I'm Mr. Mole.」と べつの なまえで なのって いた（L733・L752・L761〜L780）。goalJa が「AI の ルル / フートさん」と やくを きめて いるので やくは のこし、「Let's pretend I'm ～.」で ごっこあそびだと わかる ように した（L756 も グループが おなじ かたちに）。.run9-w2526/partner.ts も この かたちを みる。アプリの しくみ（engine.ts）は かえない
+- 「…」と「?!」は ワールド25・26 では ぜんぶ のこした（ワールド26 の まなびの 中心で、テストと フォニックスの 表が この 文字を つかう。lint の punctuation warn 162 は わざと）
+- たんどくの「ive」は TTS が「I've」と よむ かも しれないので「I, V, E」と 文字で いう ように した（L726〜L730。ワールド26 の「I N G」と おなじ）。L731〜L734 の「FOOT, print」などは ほんとうの ことばの 大文字 なので のこした
+- のこした こと: ワールド26 の「Ing is the thing that makes me feel it.」（きまった せつめい・1グループだけ）、L764「door」と L774「gate」（どちらも テストが もとめる）、L767「at the back」、スピード TPR の「Bow!」、ものがたりの なかの「yesterday / Tonight」。くわしくは W25-26.md
+- ほかの ワールドで みつけた もの: goalJa が AI に やく（ルル など）を あたえて いるのに starterEn で ごっこあそびに なって いない もの、エマ先生の じかんの あいさつ（Good morning / Good evening / Tonight）、たんどくの 語尾（ive・iv）を TTS が よみまちがえる もの、「a thing / an animal that ～」の 関係代名詞（テストは who だけ みる）、ワールドの さいごの レッスンで「Tomorrow」が かさなって あわなく なる もの（L779・L780 で なおした）
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新

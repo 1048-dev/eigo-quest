@@ -1,0 +1,266 @@
+[
+  {
+    "lesson": 722,
+    "path": "teacher.segments[3].say",
+    "before": "In the middle. Not left, not right. Right here! In the middle!",
+    "after": "In the middle. Not left, not right. Here! In the middle!",
+    "reviewers": "B+C",
+    "reason": "'not right. Right here' puts direction 'right' and 'right here' side by side; confusing for learners and TTS"
+  },
+  {
+    "lesson": 722,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "In the middle. Not left, not right. Right here! In the middle!",
+    "after": "In the middle. Not left, not right. Here! In the middle!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 722,
+    "path": "teacher.segments[3].subtitleJa",
+    "before": "in the middle。ひだりでも みぎでも ない。ちょうど ここ！ in the middle！",
+    "after": "in the middle。ひだりでも みぎでも ない。ここ！ in the middle！",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 723,
+    "path": "teacher.segments[2].say",
+    "before": "Corner. Where two sides meet. A box has four corners. Corner!",
+    "after": "Corner. Where two sides meet. A square has four corners. Corner!",
+    "reviewers": "objective",
+    "reason": "a box (3-D) has eight corners; JA already says しかく (square)"
+  },
+  {
+    "lesson": 723,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Corner. Where two sides meet. A box has four corners. Corner!",
+    "after": "Corner. Where two sides meet. A square has four corners. Corner!",
+    "reviewers": "objective",
+    "reason": "match say"
+  },
+  {
+    "lesson": 724,
+    "path": "conversation.lines[2].en",
+    "before": "There's a box in the middle. There's a lamp next to the box.",
+    "after": "There's a table in the middle. There's a box on it. There's a lamp next to the box.",
+    "reviewers": "A+B",
+    "reason": "Riko later says 'draw a key under the table' but no table was in the picture; add the table"
+  },
+  {
+    "lesson": 724,
+    "path": "conversation.lines[2].ja",
+    "before": "まんなかに はこが あるの。はこの となりに ランプが あるよ。",
+    "after": "まんなかに テーブルが あるの。その うえに はこ。はこの となりに ランプが あるよ。",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 724,
+    "path": "teacher.segments[7].say",
+    "before": "Riko says, There's a box in the middle. There's a lamp next to the box. Birimo asks, Is the box big or small? Riko says, It's small. Now, draw a key under the table.",
+    "after": "Riko says, There's a table in the middle. There's a box on it. There's a lamp next to the box. Birimo asks, Is the box big or small? Riko says, It's small. Now, draw a key under the table.",
+    "reviewers": "A+B",
+    "reason": "same story fix as conversation.lines[2]"
+  },
+  {
+    "lesson": 724,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Riko says, There's a box in the middle. There's a lamp next to the box. Birimo asks, Is the box big or small? Riko says, It's small. Now, draw a key under the table.",
+    "after": "Riko says, There's a table in the middle. There's a box on it. There's a lamp next to the box. Birimo asks, Is the box big or small? Riko says, It's small. Now, draw a key under the table.",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 724,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "リコちゃん「まんなかに はこが あるの。はこの となりに ランプが あるよ。」 ビリモ「はこは おおきい？ ちいさい？」 リコちゃん「ちいさいよ。つぎは、テーブルの したに かぎを かいて。」",
+    "after": "リコちゃん「まんなかに テーブルが あるの。その うえに はこ。はこの となりに ランプが あるよ。」 ビリモ「はこは おおきい？ ちいさい？」 リコちゃん「ちいさいよ。つぎは、テーブルの したに かぎを かいて。」",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 724,
+    "path": "teacher.segments[7].slide.items[0]",
+    "before": "There's a box in the middle. There's a lamp next to the box.",
+    "after": "There's a table in the middle. There's a box on it. There's a lamp next to the box.",
+    "reviewers": "A+B",
+    "reason": "slide shows the changed line"
+  },
+  {
+    "lesson": 725,
+    "path": "teacher.segments[0].say",
+    "before": "Good morning, explorers! So many tunnels! It's easy to get lost. So today, let's make a cave map!",
+    "after": "Hi, explorers! So many tunnels! It's easy to get lost. So today, let's make a cave map!",
+    "reviewers": "A+B",
+    "reason": "'Good morning' assumes the time of day; the app can be used any time"
+  },
+  {
+    "lesson": 725,
+    "path": "teacher.segments[0].subtitleEn",
+    "before": "Good morning, explorers! So many tunnels! It's easy to get lost. So today, let's make a cave map!",
+    "after": "Hi, explorers! So many tunnels! It's easy to get lost. So today, let's make a cave map!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 725,
+    "path": "teacher.segments[0].subtitleJa",
+    "before": "おはよう、たんけんたい！ トンネルが いっぱい！ まよいそうだね。だから きょうは どうくつの ちずを つくろう！",
+    "after": "やあ、たんけんたい！ トンネルが いっぱい！ まよいそうだね。だから きょうは どうくつの ちずを つくろう！",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 725,
+    "path": "teacher.segments[2].say",
+    "before": "Tunnel. A long road under the ground. Whoosh, we go through it. Tunnel!",
+    "after": "Tunnel. A long path under the ground. Whoosh, we go through it. Tunnel!",
+    "reviewers": "A+B",
+    "reason": "a cave tunnel is not a road (cars); path matches みち"
+  },
+  {
+    "lesson": 725,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Tunnel. A long road under the ground. Whoosh, we go through it. Tunnel!",
+    "after": "Tunnel. A long path under the ground. Whoosh, we go through it. Tunnel!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 725,
+    "path": "teacher.segments[6].say",
+    "before": "Listen. Kiko asks, Let's make a map of the cave. Where's the entrance? Haru says, It's here, at the bottom. There are two tunnels near the entrance.",
+    "after": "Listen. Kiko says, Let's make a map of the cave. Where's the entrance? Haru says, It's here, at the bottom. There are two tunnels near the entrance.",
+    "reviewers": "A+C",
+    "reason": "the quote starts with a suggestion, not a question"
+  },
+  {
+    "lesson": 725,
+    "path": "teacher.segments[6].subtitleEn",
+    "before": "Listen. Kiko asks, Let's make a map of the cave. Where's the entrance? Haru says, It's here, at the bottom. There are two tunnels near the entrance.",
+    "after": "Listen. Kiko says, Let's make a map of the cave. Where's the entrance? Haru says, It's here, at the bottom. There are two tunnels near the entrance.",
+    "reviewers": "A+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 726,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, At the end of the tunnel, there's a lake. Today, we're walking in a dark passage. Shh! Listen. Flap, flap, flap. What's that sound? We don't know for sure. So we can say, It might be a bat. Say it with me. What's that sound? It might be a bat. Great! Might means maybe. Use it when you're not sure. It might be the wind. It might be water. Let's read a page from Luma's cave guide. \"Sounds in the Cave. Drip, drip: It might be water from the ceiling. Whoosh: It might be the wind in the tunnels. Flap, flap: It might be Bella the bat. She flies around at night, so don't worry. She's very friendly.\" What might drip, drip be? Water from the ceiling. Who is Bella? A friendly bat. Now, phonics. Active. Creative. Detective. Inventive. Act, active. Create, creative. These words end in v and e. Let's listen like careful detectives!",
+    "after": "Hello, everyone! Last time, we said, At the end of the tunnel, there's a lake. Today, we're walking in a dark passage. Shh! Listen. Flap, flap, flap. What's that sound? We don't know for sure. So we can say, It might be a bat. Say it with me. What's that sound? It might be a bat. Great! Might means maybe. Use it when you're not sure. It might be the wind. It might be water. Let's read a page from Luma's cave guide. \"Sounds in the Cave. Drip, drip: It might be water from the ceiling. Whoosh: It might be the wind in the tunnels. Flap, flap: It might be Bella the bat. She flies around at night. Don't worry. She's very friendly.\" What might drip, drip be? Water from the ceiling. Who is Bella? A friendly bat. Now, phonics. Active. Creative. Detective. Inventive. Act, active. Create, creative. These words end in v and e. Let's listen like careful detectives!",
+    "reviewers": "A+B",
+    "reason": "'flies at night, so don't worry' is not a reason; split into two sentences"
+  },
+  {
+    "lesson": 726,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! The ending ive. Say iv, short. Act, active. Detect, detective. That's us, detectives!",
+    "after": "Sound time! The ending ive. It sounds like give. Act, active. Detect, detective. That's us, detectives!",
+    "reviewers": "B+C",
+    "reason": "invented respelling 'iv' (TTS may read IV / I.V.) -> real word with the same sound"
+  },
+  {
+    "lesson": 726,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! The ending ive. Say iv, short. Act, active. Detect, detective. That's us, detectives!",
+    "after": "Sound time! The ending ive. It sounds like give. Act, active. Detect, detective. That's us, detectives!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 726,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ ive の おわり。みじかく「イヴ」。act、active。detect、detective。わたしたちの ことだね、たんてい！",
+    "after": "おとの じかん！ ive の おわり。give と おなじ おと。act、active。detect、detective。わたしたちの ことだね、たんてい！",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 727,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! More ive words. Impress, impressive. Attract, attractive. Just add ive. Iv, iv.",
+    "after": "Sound time! More ive words. Impress, impressive. Attract, attractive. Just add ive. It sounds like give.",
+    "reviewers": "B+C",
+    "reason": "invented respelling 'Iv, iv' -> real word with the same sound"
+  },
+  {
+    "lesson": 727,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! More ive words. Impress, impressive. Attract, attractive. Just add ive. Iv, iv.",
+    "after": "Sound time! More ive words. Impress, impressive. Attract, attractive. Just add ive. It sounds like give.",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 727,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ ive の ことばを もっと。impress、impressive。attract、attractive。ive を つけるだけ。イヴ、イヴ。",
+    "after": "おとの じかん！ ive の ことばを もっと。impress、impressive。attract、attractive。ive を つけるだけ。give と おなじ おと。",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 728,
+    "path": "teacher.segments[2].subtitleJa",
+    "before": "ghost。おはなしの なかの つくりものの もの。ばあ！ でも おばけは ただの そうぞうだよ。ghost！",
+    "after": "ghost。おはなしに でてくる つくりもの。ばあ！ でも おばけは ただの そうぞうだよ。ghost！",
+    "reviewers": "objective (JA)",
+    "reason": "'つくりものの もの' is clumsy Japanese"
+  },
+  {
+    "lesson": 728,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。たしかさ メーター。might は まんなか。must は たかい。can't は「ぜったい ちがう」。ともだちが こわがって いたら、やさしく「しんぱい しないで。ただの かぜだよ。」と いおう。",
+    "after": "ポイント。might は まんなか。must は たかい。can't は「ぜったい ちがう」。ともだちが こわがって いたら、やさしく「しんぱい しないで。ただの かぜだよ。」と いおう。",
+    "reviewers": "objective (JA)",
+    "reason": "JA adds 'certainty meter', which the EN does not say"
+  },
+  {
+    "lesson": 729,
+    "path": "teacher.segments[17].say",
+    "before": "Your turn! Tomorrow's weather. How sure are you? Say, It's probably sunny. Or maybe it's rainy. Show your hand!",
+    "after": "Your turn! Guess the weather outside. Don't look! Say, It's probably sunny. Or maybe it's rainy. Show your hand!",
+    "reviewers": "A+B",
+    "reason": "'It's probably sunny' does not fit tomorrow (needs will); guess today's weather instead"
+  },
+  {
+    "lesson": 729,
+    "path": "teacher.segments[17].subtitleEn",
+    "before": "Your turn! Tomorrow's weather. How sure are you? Say, It's probably sunny. Or maybe it's rainy. Show your hand!",
+    "after": "Your turn! Guess the weather outside. Don't look! Say, It's probably sunny. Or maybe it's rainy. Show your hand!",
+    "reviewers": "A+B",
+    "reason": "match say"
+  },
+  {
+    "lesson": 729,
+    "path": "teacher.segments[17].subtitleJa",
+    "before": "あなたの ばん！ あしたの てんき。どの くらい たしか？「たぶん はれ。」や「もしかしたら あめ かも。」と いってみて。てでも しめしてね！",
+    "after": "あなたの ばん！ そとの てんきを よそうして。みちゃ だめ！「たぶん はれ。」や「もしかしたら あめ かも。」と いってみて。てでも しめしてね！",
+    "reviewers": "A+B",
+    "reason": "match EN"
+  },
+  {
+    "lesson": 730,
+    "path": "teacher.segments[2].say",
+    "before": "Object. A thing you can touch. A cup, a pen, a ball. Object!",
+    "after": "An object. A thing you can touch. A cup, a pen, a ball. They're all objects!",
+    "reviewers": "B+C",
+    "reason": "bare 'Object.' is a heteronym (TTS may say obJECT); the article makes it the noun"
+  },
+  {
+    "lesson": 730,
+    "path": "teacher.segments[2].subtitleEn",
+    "before": "Object. A thing you can touch. A cup, a pen, a ball. Object!",
+    "after": "An object. A thing you can touch. A cup, a pen, a ball. They're all objects!",
+    "reviewers": "B+C",
+    "reason": "match say"
+  },
+  {
+    "lesson": 730,
+    "path": "teacher.segments[2].subtitleJa",
+    "before": "object。さわれる もの。コップ、ペン、ボール。object！",
+    "after": "object。さわれる もの。コップ、ペン、ボール。ぜんぶ object だよ！",
+    "reviewers": "B+C",
+    "reason": "match EN"
+  }
+]

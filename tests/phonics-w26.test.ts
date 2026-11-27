@@ -106,7 +106,7 @@ describe("ワールド26の つづりの表", () => {
     expect(focusSay("…", words)).toBe('"The door is… locked!" said the bird.');
     expect(focusSay("-ing", words)).toBe("amazing");
     expect(focusSay("-ed", ["tired", "tiring", "relaxed", "relaxing"])).toBe("tired");
-    expect(focusSay("Really", ["Really?!", "Oh, really…", "Okay!", "Well, okay…"])).toBe("Really?!");
+    expect(focusSay("Really", ["Really?!", "Oh, really…", "OK!", "Well, OK…"])).toBe("Really?!");
     expect(focusSay("cr", ["Crazy crows carry crunchy crackers", "Pip packs puppets in purple paper"])).toBe("Crazy crows carry crunchy crackers");
     expect(focusLabel("YOUR").main).toBe("YOUR");
     expect(w26FocusOf("I didn't eat YOUR cake")).toBe("YOUR");

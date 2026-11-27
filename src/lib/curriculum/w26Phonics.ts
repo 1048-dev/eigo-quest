@@ -34,8 +34,8 @@ export const VOICE_CHOICES = ["↗ たかく げんきに", "↘ ひくく し�
 const VOICE: Record<string, { focus: string; up: boolean; feeling: string }> = {
   "Really?!": { focus: "Really", up: true, feeling: "びっくり！ ほんとうに？" },
   "Oh, really…": { focus: "Really", up: false, feeling: "がっかり。ざんねん" },
-  "Okay!": { focus: "Okay", up: true, feeling: "やる気 いっぱい" },
-  "Well, okay…": { focus: "Okay", up: false, feeling: "しぶしぶ。ほんとうは いや" },
+  "OK!": { focus: "OK", up: true, feeling: "やる気 いっぱい" },
+  "Well, OK…": { focus: "OK", up: false, feeling: "しぶしぶ。ほんとうは いや" },
   "Yes! I got it!": { focus: "Yes", up: true, feeling: "やった！ うれしい" },
   "Yes… I think so.": { focus: "Yes", up: false, feeling: "じしんが ない" },
   "Thank you so much!": { focus: "Thank you", up: true, feeling: "とても うれしい" },

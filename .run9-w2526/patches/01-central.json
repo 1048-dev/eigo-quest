@@ -1,0 +1,610 @@
+[
+ {
+  "lesson": 724,
+  "path": "conversation.lines[1].en",
+  "before": "Okay! I have my pencil.",
+  "after": "OK! I have my pencil.",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 724,
+  "path": "teacher.segments[6].say",
+  "before": "Listen. Riko says, Let's play Describe and Draw. I'll describe, and you draw, Birimo. Birimo says, Okay! I have my pencil.",
+  "after": "Listen. Riko says, Let's play Describe and Draw. I'll describe, and you draw, Birimo. Birimo says, OK! I have my pencil.",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 724,
+  "path": "teacher.segments[6].subtitleEn",
+  "before": "Listen. Riko says, Let's play Describe and Draw. I'll describe, and you draw, Birimo. Birimo says, Okay! I have my pencil.",
+  "after": "Listen. Riko says, Let's play Describe and Draw. I'll describe, and you draw, Birimo. Birimo says, OK! I have my pencil.",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 724,
+  "path": "teacher.segments[6].slide.items[1]",
+  "before": "Okay! I have my pencil.",
+  "after": "OK! I have my pencil.",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 726,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. Not sure? Use might. It might be a bat. It might be the wind. Two guesses are okay!",
+  "after": "Here's the point. Not sure? Use might. It might be a bat. It might be the wind. Two guesses are OK!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 726,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. Not sure? Use might. It might be a bat. It might be the wind. Two guesses are okay!",
+  "after": "Here's the point. Not sure? Use might. It might be a bat. It might be the wind. Two guesses are OK!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 728,
+  "path": "teacher.segments[0].say",
+  "before": "Hello, brave friends! Listen. Whoooo! Hmm, Birimo is a little scared. That's okay. We're all here together. Let's help him and find out what it is!",
+  "after": "Hello, brave friends! Listen. Whoooo! Hmm, Birimo is a little scared. That's OK. We're all here together. Let's help him and find out what it is!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 728,
+  "path": "teacher.segments[0].subtitleEn",
+  "before": "Hello, brave friends! Listen. Whoooo! Hmm, Birimo is a little scared. That's okay. We're all here together. Let's help him and find out what it is!",
+  "after": "Hello, brave friends! Listen. Whoooo! Hmm, Birimo is a little scared. That's OK. We're all here together. Let's help him and find out what it is!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "phonics.focus[1]",
+  "before": "Okay",
+  "after": "OK",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "phonics.words[2]",
+  "before": "Okay!",
+  "after": "OK!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "phonics.words[3]",
+  "before": "Well, okay…",
+  "after": "Well, OK…",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "phonics.tipJa",
+  "before": "おなじ ことばでも、こえで きもちが かわる。Really?!（びっくり）は こえを たかく げんきに ↗、Oh, really…（がっかり）は ひくく しずかに ↘。Okay!（やる気）↗ と Well, okay…（しぶしぶ）↘ も くらべよう。",
+  "after": "おなじ ことばでも、こえで きもちが かわる。Really?!（びっくり）は こえを たかく げんきに ↗、Oh, really…（がっかり）は ひくく しずかに ↘。OK!（やる気）↗ と Well, OK…（しぶしぶ）↘ も くらべよう。",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, The case is closed! Great detective work! Today, we walk out of the cave and follow the echoes. Look! There's an old theater in the hills. It's called the Theater of Echoes. An old owl stands at the door. His name is Mr. Hoot. He says, Welcome to the theater! The show starts soon. Say it with me. Welcome to the theater! The show starts soon. Great! Listen. Can you hear the echo? Soon, soon, soon. It's very quiet. Let's read the old sign on the theater door. \"Theater of Echoes. Shows every Saturday night. Actors and singers are welcome. Please speak with feeling. When a play is full of real feeling, our echoes will come back. From Mr. Hoot, the director.\" Who is the director? Mr. Hoot is. What brings the echoes back? Real feeling. Now, phonics. Today, we use our voice with feeling. Really?! High and excited. Oh, really… Low and quiet. Okay! High and happy. Well, okay… Low and slow. Your voice can show your feelings. Let's find our seats!",
+  "after": "Hello, everyone! Last time, we said, The case is closed! Great detective work! Today, we walk out of the cave and follow the echoes. Look! There's an old theater in the hills. It's called the Theater of Echoes. An old owl stands at the door. His name is Mr. Hoot. He says, Welcome to the theater! The show starts soon. Say it with me. Welcome to the theater! The show starts soon. Great! Listen. Can you hear the echo? Soon, soon, soon. It's very quiet. Let's read the old sign on the theater door. \"Theater of Echoes. Shows every Saturday night. Actors and singers are welcome. Please speak with feeling. When a play is full of real feeling, our echoes will come back. From Mr. Hoot, the director.\" Who is the director? Mr. Hoot is. What brings the echoes back? Real feeling. Now, phonics. Today, we use our voice with feeling. Really?! High and excited. Oh, really… Low and quiet. OK! High and happy. Well, OK… Low and slow. Your voice can show your feelings. Let's find our seats!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "recap.highlightsJa[2]",
+  "before": "Really?!・Oh, really…・Okay!・Well, okay…",
+  "after": "Really?!・Oh, really…・OK!・Well, OK…",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "teacher.segments[10].say",
+  "before": "Okay! Up and happy. Well, okay... Down and slow. Draw the arrow with your hand. Your turn! Really?! Oh, really... Okay! Well, okay...",
+  "after": "OK! Up and happy. Well, OK... Down and slow. Draw the arrow with your hand. Your turn! Really?! Oh, really... OK! Well, OK...",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "teacher.segments[10].subtitleJa",
+  "before": "Okay! たかく げんきに。Well, okay… ひくく ゆっくり。てで やじるしを かいてね。あなたの ばん！ Really?!、Oh, really…、Okay! Well, okay…",
+  "after": "OK! たかく げんきに。Well, OK… ひくく ゆっくり。てで やじるしを かいてね。あなたの ばん！ Really?!、Oh, really…、OK! Well, OK…",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "teacher.segments[10].subtitleEn",
+  "before": "Okay! Up and happy. Well, okay... Down and slow. Draw the arrow with your hand. Your turn! Really?! Oh, really... Okay! Well, okay...",
+  "after": "OK! Up and happy. Well, OK... Down and slow. Draw the arrow with your hand. Your turn! Really?! Oh, really... OK! Well, OK...",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "teacher.segments[10].slide.items[0]",
+  "before": "Okay",
+  "after": "OK",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "teacher.segments[10].slide.items[1]",
+  "before": "Okay!",
+  "after": "OK!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 751,
+  "path": "teacher.segments[10].slide.items[2]",
+  "before": "Well, okay…",
+  "after": "Well, OK…",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 754,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. We all have things we're not good at. That's okay! Say, I'm not good at dancing, but I'll try!",
+  "after": "Here's the point. We all have things we're not good at. That's OK! Say, I'm not good at dancing, but I'll try!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 754,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. We all have things we're not good at. That's okay! Say, I'm not good at dancing, but I'll try!",
+  "after": "Here's the point. We all have things we're not good at. That's OK! Say, I'm not good at dancing, but I'll try!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 756,
+  "path": "conversation.lines[3].en",
+  "before": "Okay. Who is that? Is it the dragon? … I did it!",
+  "after": "OK. Who is that? Is it the dragon? … I did it!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 760,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, I feel proud of myself. Today, we play a game called Feelings Charades. One actor shows a feeling with their face and body, but says nothing. The others guess. You can ask, Are you surprised? Say it with me. Are you surprised? Good! If the guess is wrong, the actor says, No, I'm confused! Let's say that, too. No, I'm confused! Actors use their faces and bodies to show feelings, so this game is great practice. Let's read the game rules from Mr. Hoot. \"Feelings Charades. One player picks a feeling card. Don't show it to anyone! Show the feeling with your face, hands, and body. No words, please. The other players ask questions, like 'Are you nervous?' The first correct guess wins a point. Then it's the next player's turn.\" Can you use words? No! What do the other players do? They ask questions. Now, phonics. Let's review. Confused. I'm confused. Confusing. This map is confusing. Exciting. The game is exciting. I'm so happy! High and bright. Okay, pick a card!",
+  "after": "Hello, everyone! Last time, we said, I feel proud of myself. Today, we play a game called Feelings Charades. One actor shows a feeling with their face and body, but says nothing. The others guess. You can ask, Are you surprised? Say it with me. Are you surprised? Good! If the guess is wrong, the actor says, No, I'm confused! Let's say that, too. No, I'm confused! Actors use their faces and bodies to show feelings, so this game is great practice. Let's read the game rules from Mr. Hoot. \"Feelings Charades. One player picks a feeling card. Don't show it to anyone! Show the feeling with your face, hands, and body. No words, please. The other players ask questions, like 'Are you nervous?' The first correct guess wins a point. Then it's the next player's turn.\" Can you use words? No! What do the other players do? They ask questions. Now, phonics. Let's review. Confused. I'm confused. Confusing. This map is confusing. Exciting. The game is exciting. I'm so happy! High and bright. OK, pick a card!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 761,
+  "path": "teacher.segments[2].say",
+  "before": "Decide. Hmm, this one or that one? Okay, this one! Decide!",
+  "after": "Decide. Hmm, this one or that one? OK, this one! Decide!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 761,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Decide. Hmm, this one or that one? Okay, this one! Decide!",
+  "after": "Decide. Hmm, this one or that one? OK, this one! Decide!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 766,
+  "path": "conversation.lines[3].en",
+  "before": "Okay. I'm free! I'm free!",
+  "after": "OK. I'm free! I'm free!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 766,
+  "path": "teacher.segments[7].slide.items[1]",
+  "before": "Okay. I'm free! I'm free!",
+  "after": "OK. I'm free! I'm free!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 769,
+  "path": "conversation.lines[2].en",
+  "before": "Okay. I'm walking to the center… and I'm looking up. The dragon must be up there!",
+  "after": "OK. I'm walking to the center… and I'm looking up. The dragon must be up there!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 769,
+  "path": "teacher.segments[7].say",
+  "before": "Haru says, Okay. I'm walking to the center… and I'm looking up. The dragon must be up there! Birimo says, Kiko, you exit to the right. Not the left!",
+  "after": "Haru says, OK. I'm walking to the center… and I'm looking up. The dragon must be up there! Birimo says, Kiko, you exit to the right. Not the left!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 769,
+  "path": "teacher.segments[7].subtitleEn",
+  "before": "Haru says, Okay. I'm walking to the center… and I'm looking up. The dragon must be up there! Birimo says, Kiko, you exit to the right. Not the left!",
+  "after": "Haru says, OK. I'm walking to the center… and I'm looking up. The dragon must be up there! Birimo says, Kiko, you exit to the right. Not the left!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 769,
+  "path": "teacher.segments[7].slide.items[0]",
+  "before": "Okay. I'm walking to the center… and I'm looking up. The dragon must be up there!",
+  "after": "OK. I'm walking to the center… and I'm looking up. The dragon must be up there!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 772,
+  "path": "teacher.segments[4].say",
+  "before": "Mistake. Oops, something went wrong. That's okay! Everyone makes mistakes. Mistake!",
+  "after": "Mistake. Oops, something went wrong. That's OK! Everyone makes mistakes. Mistake!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 772,
+  "path": "teacher.segments[4].subtitleEn",
+  "before": "Mistake. Oops, something went wrong. That's okay! Everyone makes mistakes. Mistake!",
+  "after": "Mistake. Oops, something went wrong. That's OK! Everyone makes mistakes. Mistake!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 772,
+  "path": "teacher.segments[19].say",
+  "before": "Bravo! You can say, It's fun to, and, It's hard to. And mistakes are okay. Keep going! Next, go and talk with Birimo! See you!",
+  "after": "Bravo! You can say, It's fun to, and, It's hard to. And mistakes are OK. Keep going! Next, go and talk with Birimo! See you!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 772,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "Bravo! You can say, It's fun to, and, It's hard to. And mistakes are okay. Keep going! Next, go and talk with Birimo! See you!",
+  "after": "Bravo! You can say, It's fun to, and, It's hard to. And mistakes are OK. Keep going! Next, go and talk with Birimo! See you!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "school.testPoints[1]",
+  "before": "ふりかえり: きもちの こえ（Well, okay…）・-ed（bored）・… は まを とる しるし・つよく いう ことば（FOUND）・はやくちことば（th）",
+  "after": "ふりかえり: きもちの こえ（Well, OK…）・-ed（bored）・… は まを とる しるし・つよく いう ことば（FOUND）・はやくちことば（th）",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "phonics.focus[0]",
+  "before": "Okay",
+  "after": "OK",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "phonics.words[0]",
+  "before": "Well, okay…",
+  "after": "Well, OK…",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "phonics.tipJa",
+  "before": "ふりかえり: Well, okay… ↘（しぶしぶ）・bored（たいくつ して いる ひと は -ed）・\"Wait… what's that sound?\"（… で まを とる）・The bird FOUND the key.・th の はやくちことば。",
+  "after": "ふりかえり: Well, OK… ↘（しぶしぶ）・bored（たいくつ して いる ひと は -ed）・\"Wait… what's that sound?\"（… で まを とる）・The bird FOUND the key.・th の はやくちことば。",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, Narrator: One day, a fox found a magic hat. Today, we'll play Story Circle. We sit in a circle. Each person says only one word. Together, we make a story. Let's make a story one word at a time. Say it with me. Let's make a story one word at a time. Great! Here are the rules. Let's read them. \"Story Circle rules: Sit in a circle with three friends. Say one word, then point to the next person. Listen carefully to every word. Don't stop the story. If the story gets silly, that's OK. Laugh and keep going! At the end, say the whole story together.\" How many words do you say? Only one. What if the story gets silly? Laugh and keep going! Let's start. Once. Upon. A. Time. When it's your friend's turn, say, It's your turn! Now, phonics. Well, okay… Low and quiet. Bored. A person feels bored. Wait, what's that sound, asked the knight. The three dots mean a little pause. The bird FOUND the key. Strong on found. Three thin thumbs and thirty thick threads. Tongue between your teeth. Your turn!",
+  "after": "Hello, everyone! Last time, we said, Narrator: One day, a fox found a magic hat. Today, we'll play Story Circle. We sit in a circle. Each person says only one word. Together, we make a story. Let's make a story one word at a time. Say it with me. Let's make a story one word at a time. Great! Here are the rules. Let's read them. \"Story Circle rules: Sit in a circle with three friends. Say one word, then point to the next person. Listen carefully to every word. Don't stop the story. If the story gets silly, that's OK. Laugh and keep going! At the end, say the whole story together.\" How many words do you say? Only one. What if the story gets silly? Laugh and keep going! Let's start. Once. Upon. A. Time. When it's your friend's turn, say, It's your turn! Now, phonics. Well, OK… Low and quiet. Bored. A person feels bored. Wait, what's that sound, asked the knight. The three dots mean a little pause. The bird FOUND the key. Strong on found. Three thin thumbs and thirty thick threads. Tongue between your teeth. Your turn!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "recap.highlightsJa[2]",
+  "before": "Well, okay…・bored・\"Wait… what's that sound?\" asked the knight.・The bird FOUND the key・Three thin thumbs and thirty thick threads",
+  "after": "Well, OK…・bored・\"Wait… what's that sound?\" asked the knight.・The bird FOUND the key・Three thin thumbs and thirty thick threads",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "teacher.segments[8].say",
+  "before": "Sound review! Voice down means not so happy. Well, okay… Dots mean a long pause. Wait… what's that sound? asked the knight. Spooky!",
+  "after": "Sound review! Voice down means not so happy. Well, OK… Dots mean a long pause. Wait… what's that sound? asked the knight. Spooky!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "おとの ふりかえり！ こえを さげると あまり うれしく ない かんじ。Well, okay… てん てん てんは ながい ま。\"Wait… what's that sound?\" asked the knight。ドキドキ！",
+  "after": "おとの ふりかえり！ こえを さげると あまり うれしく ない かんじ。Well, OK… てん てん てんは ながい ま。\"Wait… what's that sound?\" asked the knight。ドキドキ！",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Sound review! Voice down means not so happy. Well, okay… Dots mean a long pause. Wait… what's that sound? asked the knight. Spooky!",
+  "after": "Sound review! Voice down means not so happy. Well, OK… Dots mean a long pause. Wait… what's that sound? asked the knight. Spooky!",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 778,
+  "path": "teacher.segments[8].slide.items[1]",
+  "before": "Well, okay…",
+  "after": "Well, OK…",
+  "reviewers": "objective+lint",
+  "reason": "canonical spelling \"OK\", not \"okay\" (style guide; lint canonical). L751/L778 phonics words \"Okay!\" / \"Well, okay…\" -> \"OK!\" / \"Well, OK…\" with src/lib/curriculum/w26Phonics.ts and tests/phonics-w26.test.ts (same as W21-22 L654)"
+ },
+ {
+  "lesson": 721,
+  "path": "teacher.segments[19].say",
+  "before": "It's A! Turn on your flashlight. Click! Now we can see. Brilliant!",
+  "after": "It's A! Turn on your flashlight. Click! Now we can see. Fantastic!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 721,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "It's A! Turn on your flashlight. Click! Now we can see. Brilliant!",
+  "after": "It's A! Turn on your flashlight. Click! Now we can see. Fantastic!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 744,
+  "path": "teacher.segments[19].say",
+  "before": "It's B! It starts with do, so it goes up. Do you know who took it? Brilliant!",
+  "after": "It's B! It starts with do, so it goes up. Do you know who took it? Fantastic!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 744,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "It's B! It starts with do, so it goes up. Do you know who took it? Brilliant!",
+  "after": "It's B! It starts with do, so it goes up. Do you know who took it? Fantastic!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 765,
+  "path": "teacher.segments[19].say",
+  "before": "A solution! The key fixes the problem. Brilliant!",
+  "after": "A solution! The key fixes the problem. Fantastic!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 765,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "A solution! The key fixes the problem. Brilliant!",
+  "after": "A solution! The key fixes the problem. Fantastic!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 727,
+  "path": "teacher.segments[20].say",
+  "before": "Brilliant thinking! You can say, It must be a key, and give a reason with because. Next, go and talk with Kiko! See you!",
+  "after": "Great thinking! You can say, It must be a key, and give a reason with because. Next, go and talk with Kiko! See you!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 727,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Brilliant thinking! You can say, It must be a key, and give a reason with because. Next, go and talk with Kiko! See you!",
+  "after": "Great thinking! You can say, It must be a key, and give a reason with because. Next, go and talk with Kiko! See you!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 732,
+  "path": "teacher.segments[19].say",
+  "before": "It's A! Empty! The box is empty, and the crown is gone. Brilliant, detectives!",
+  "after": "It's A! Empty! The box is empty, and the crown is gone. Great job, detectives!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 732,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "It's A! Empty! The box is empty, and the crown is gone. Brilliant, detectives!",
+  "after": "It's A! Empty! The box is empty, and the crown is gone. Great job, detectives!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 763,
+  "path": "teacher.segments[20].say",
+  "before": "Lovely work! You can tell the help in a story with Luckily. You can ask, Who helped them? And you can pause with three dots. Next, go and talk with Kiko! See you!",
+  "after": "Great work! You can tell the help in a story with Luckily. You can ask, Who helped them? And you can pause with three dots. Next, go and talk with Kiko! See you!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 763,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Lovely work! You can tell the help in a story with Luckily. You can ask, Who helped them? And you can pause with three dots. Next, go and talk with Kiko! See you!",
+  "after": "Great work! You can tell the help in a story with Luckily. You can ask, Who helped them? And you can pause with three dots. Next, go and talk with Kiko! See you!",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 763,
+  "path": "conversation.lines[5].en",
+  "before": "Lovely! First, a problem. Then, luckily, some help. That's a good story.",
+  "after": "Great! First, a problem. Then, luckily, some help. That's a good story.",
+  "reviewers": "A+C",
+  "reason": "British-leaning praise -> American (same rule as W01-24)"
+ },
+ {
+  "lesson": 737,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we answered riddle one. It has four legs, but it can't walk. A table! Today, the Riddle Door has a more difficult riddle. Let's read it. \"Riddle two: The more you take, the more you leave behind. You make me with your feet. You can see me in the snow, in the sand and in the mud. What am I?\" Say it with me. The more you take, the more you leave behind. Great! If you don't know the answer, you can say, Let me think. Or, Give me a hint, please. Here's a hint. Take one step. Now, look behind you. What did you leave? Take two more steps. You left more! So, what's the answer? Footsteps! Now, phonics. Similar words again. Begin and start. Finish and end. Quick and fast. Simple and easy. This riddle wasn't simple, but you were quick! Let's try the next riddle soon!",
+  "after": "Hello, everyone! Last time, we answered riddle one. It has four legs, but it can't walk. A table! Today, the Riddle Door has a more difficult riddle. Let's read it. \"Riddle two: The more you take, the more you leave behind. You make me with your feet. You can see me in the snow, in the sand and in the mud. What am I?\" Say it with me. The more you take, the more you leave behind. Great! If you don't know the answer, you can say, Let me think. Or give me a hint, please. Here's a hint. Take one step. Now, look behind you. What did you leave? Take two more steps. You left more! So, what's the answer? Footsteps! Now, phonics. Similar words again. Begin and start. Finish and end. Quick and fast. Simple and easy. This riddle wasn't simple, but you were quick! Let's try the next riddle soon!",
+  "reviewers": "objective",
+  "reason": "spoken \"A. Or, B.\" running example -> \"Or b.\" (W03-24 rule; teacherScript)"
+ },
+ {
+  "lesson": 734,
+  "path": "teacher.segments[2].say",
+  "before": "Witness. A person who saw something happen. My eyes saw it! I'm a witness. Witness!",
+  "after": "Witness. A witness sees something happen. My eyes saw it! I'm a witness. Witness!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 734,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Witness. A person who saw something happen. My eyes saw it! I'm a witness. Witness!",
+  "after": "Witness. A witness sees something happen. My eyes saw it! I'm a witness. Witness!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 742,
+  "path": "teacher.segments[2].say",
+  "before": "Thief. Someone who takes a thing, but it's not theirs. Sneaky, sneaky! Thief!",
+  "after": "Thief. A thief takes a thing, but it's not theirs. Sneaky, sneaky! Thief!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 742,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Thief. Someone who takes a thing, but it's not theirs. Sneaky, sneaky! Thief!",
+  "after": "Thief. A thief takes a thing, but it's not theirs. Sneaky, sneaky! Thief!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 748,
+  "path": "teacher.segments[4].say",
+  "before": "Guard. A person who watches and keeps things safe. Guard!",
+  "after": "Guard. A guard watches and keeps things safe. Guard!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 748,
+  "path": "teacher.segments[4].subtitleEn",
+  "before": "Guard. A person who watches and keeps things safe. Guard!",
+  "after": "Guard. A guard watches and keeps things safe. Guard!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 750,
+  "path": "teacher.segments[4].say",
+  "before": "Audience. The people who watch a show. Clap, clap, clap! Audience!",
+  "after": "Audience. The people watching a show. Clap, clap, clap! Audience!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 750,
+  "path": "teacher.segments[4].subtitleEn",
+  "before": "Audience. The people who watch a show. Clap, clap, clap! Audience!",
+  "after": "Audience. The people watching a show. Clap, clap, clap! Audience!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 752,
+  "path": "teacher.segments[3].say",
+  "before": "Actor. A person who acts in a play. You can be an actor! Actor!",
+  "after": "Actor. An actor acts in a play. You can be an actor! Actor!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 752,
+  "path": "teacher.segments[3].subtitleEn",
+  "before": "Actor. A person who acts in a play. You can be an actor! Actor!",
+  "after": "Actor. An actor acts in a play. You can be an actor! Actor!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 754,
+  "path": "teacher.segments[5].say",
+  "before": "Judge. The person who watches and chooses. Hmm, very good! Judge!",
+  "after": "Judge. The judge watches and chooses. Hmm, very good! Judge!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 754,
+  "path": "teacher.segments[5].subtitleEn",
+  "before": "Judge. The person who watches and chooses. Hmm, very good! Judge!",
+  "after": "Judge. The judge watches and chooses. Hmm, very good! Judge!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 761,
+  "path": "teacher.segments[5].say",
+  "before": "Narrator. The person who tells the story. Once upon a time… Narrator!",
+  "after": "Narrator. The narrator tells the story. Once upon a time… Narrator!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 761,
+  "path": "teacher.segments[5].subtitleEn",
+  "before": "Narrator. The person who tells the story. Once upon a time… Narrator!",
+  "after": "Narrator. The narrator tells the story. Once upon a time… Narrator!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 767,
+  "path": "teacher.segments[5].say",
+  "before": "Audience. The people who watch the show. They sit and clap. Audience!",
+  "after": "Audience. The people watching the show. They sit and clap. Audience!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ },
+ {
+  "lesson": 767,
+  "path": "teacher.segments[5].subtitleEn",
+  "before": "Audience. The people who watch the show. They sit and clap. Audience!",
+  "after": "Audience. The people watching the show. They sit and clap. Audience!",
+  "reviewers": "B+C (block rule)",
+  "reason": "relative clause with \"who\" is kept for Stage 4 (world 25/26 test rules forbid \"a person who\" in scripts; same fix as W23-24 L661/L670/L701). Use a plain sentence; JA unchanged"
+ }
+]
