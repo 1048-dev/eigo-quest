@@ -1811,7 +1811,7 @@ describe("カリキュラム: ワールド20 の決まりごと（まつりの�
   it("タイトルは 計画書（docs/curriculum-6year.md §10）どおり", () => {
     if (w20.length === 0) return;
     expect(at(571)!.title).toBe("Drums on the Island");
-    expect(at(573)!.title).toBe("I'd Love To, But…");
+    expect(at(573)!.title).toBe("I'd Love To, But...");
     expect(at(576)!.title).toBe("Lantern Festival");
     expect(at(581)!.title).toBe("Welcome to My House");
     expect(at(586)!.title).toBe("If It Rains");
@@ -1903,11 +1903,11 @@ describe("カリキュラム: ワールド20 の決まりごと（まつりの�
 
   it("こころの くばり: ことわっても OK・ひは おとな・きんちょうしても OK・まいごは その ばで まつ・ネットに じゅうしょを かかない、発表の AI 会話は「なまえは いわなくて OK」", () => {
     if (w20.length === 0) return;
-    expect(at(573)!.teacherScript).toMatch(/It's okay to say no/);
-    expect(at(573)!.school.expressions.map((e) => e.en)).toContain("That's okay. Maybe next time!");
+    expect(at(573)!.teacherScript).toMatch(/It's OK to say no/);
+    expect(at(573)!.school.expressions.map((e) => e.en)).toContain("That's OK. Maybe next time!");
     for (const n of [576, 585]) expect(at(n)!.teacherScript, `L${n}`).toMatch(/ask an adult/);
     expect(at(595)!.teacherScript).toMatch(/Stay in one place/);
-    expect(at(598)!.school.expressions.map((e) => e.en)).toContain("It's okay to be nervous.");
+    expect(at(598)!.school.expressions.map((e) => e.en)).toContain("It's OK to be nervous.");
     expect(at(575)!.teacherScript).toMatch(/Never write your home address on the internet/);
     for (const n of [575, 580, 590, 591, 596, 597, 600]) expect(at(n)!.conversation!.aiTask.goalJa, `L${n}`).toMatch(/なまえは いわなくて OK/);
   });

@@ -1,0 +1,226 @@
+[
+ {
+  "lesson": 592,
+  "path": "teacher.segments[19].say",
+  "before": "It's B! Yesterday, I ate five banana pancakes. Ate, not eated! You're a star!",
+  "after": "It's B! Yesterday, he ate five banana pancakes. Ate, not eated! You're a star!",
+  "reviewers": "A+C",
+  "reason": "Ms. Emma repeating Birimo's line as 'I ate' sounds like she ate the pancakes; say 'he ate'"
+ },
+ {
+  "lesson": 592,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "It's B! Yesterday, I ate five banana pancakes. Ate, not eated! You're a star!",
+  "after": "It's B! Yesterday, he ate five banana pancakes. Ate, not eated! You're a star!",
+  "reviewers": "A+C",
+  "reason": "Follow seg19 say"
+ },
+ {
+  "lesson": 593,
+  "path": "teacher.segments[11].subtitleJa",
+  "before": "からだを うごかそう！ みらいを のぞいて。うーん、なにが みえる？ つぎは きみたいに おおきく なって。うえへ、うえへ！",
+  "after": "からだを うごかそう！ みらいを のぞいて。うーん、なにが みえる？ つぎは きのように せを のばして。うえへ、うえへ！",
+  "reviewers": "objective (JA)",
+  "reason": "Hiragana 'きみたいに' reads as 'like you (kimi)'; use 'きのように' as in tpr[1].ja"
+ },
+ {
+  "lesson": 593,
+  "path": "teacher.segments[13].subtitleJa",
+  "before": "スピード チャレンジ！ ジャンプ！ きみたいに おおきく！ みらいを のぞいて！ ジャンプ！",
+  "after": "スピード チャレンジ！ ジャンプ！ きのように のびて！ みらいを のぞいて！ ジャンプ！",
+  "reviewers": "objective (JA)",
+  "reason": "Same 'きみたいに' ambiguity; match tpr[1].ja"
+ },
+ {
+  "lesson": 594,
+  "path": "teacher.segments[20].say",
+  "before": "Super job! You can compare with more, the est, and as as. Next, talk with Riko! リコちゃん と おはなし してね. Bye-bye!",
+  "after": "Super job! You can compare with more than, the biggest, and as fun as. Next, talk with Riko! リコちゃん と おはなし してね. Bye-bye!",
+  "reviewers": "B+C",
+  "reason": "'the est' and 'as as' are not words; TTS reads 'as as' as a stutter. Use real model phrases"
+ },
+ {
+  "lesson": 594,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Super job! You can compare with more, the est, and as as. Next, talk with Riko! Bye-bye!",
+  "after": "Super job! You can compare with more than, the biggest, and as fun as. Next, talk with Riko! Bye-bye!",
+  "reviewers": "B+C",
+  "reason": "Follow seg20 say"
+ },
+ {
+  "lesson": 596,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Our trip in Stage 2 is almost over. Let's make a memory album. Choose your favorite photo. My best memory of this trip is the lantern festival. Say it with me. My best memory of this trip is the lantern festival. Lovely! Then, say why. I'll never forget the river full of lights. This photo makes me smile. いちばんの おもいでと、その りゆうを かこう。 Let's practice. My best memory is the harbor. I'll never forget the market. This photo makes me laugh. My best memory is the workshop, because we made a dream machine together. I'll never forget the echo in the valley. Hello, hello, hello! Now, phonics review. Treasure. Cheer. Banana. Catch. Our memories are our treasure! Let's keep them forever. Now, show me your page. What's your best memory? Why?",
+  "after": "Hello, everyone! Our trip in Stage 2 is almost over. Let's make a memory album. Choose your favorite photo. My best memory of this trip is the lantern festival. Say it with me. My best memory of this trip is the lantern festival. Wonderful! Then, say why. I'll never forget the river full of lights. This photo makes me smile. いちばんの おもいでと、その りゆうを かこう。 Let's practice. My best memory is the harbor. I'll never forget the market. This photo makes me laugh. My best memory is the workshop, because we made a dream machine together. I'll never forget the echo in the valley. Hello, hello, hello! Now, phonics review. Treasure. Cheer. Banana. Catch. Our memories are our treasure! Let's keep them forever. Now, show me your page. What's your best memory? Why?",
+  "reviewers": "A+B",
+  "reason": "British-style praise 'Lovely!' -> American 'Wonderful!' (block convention)"
+ },
+ {
+  "lesson": 596,
+  "path": "teacher.segments[5].say",
+  "before": "Forget. You can't remember it anymore. Oh no, where's my hat? I forget! Forget!",
+  "after": "Forget. You can't remember it anymore. Oh no, where's my hat? I forgot! Forget!",
+  "reviewers": "A+B",
+  "reason": "After losing a hat a child says 'I forgot!'; JA わすれちゃった is past"
+ },
+ {
+  "lesson": 596,
+  "path": "teacher.segments[5].subtitleEn",
+  "before": "Forget. You can't remember it anymore. Oh no, where's my hat? I forget! Forget!",
+  "after": "Forget. You can't remember it anymore. Oh no, where's my hat? I forgot! Forget!",
+  "reviewers": "A+B",
+  "reason": "Follow seg5 say"
+ },
+ {
+  "lesson": 596,
+  "path": "teacher.segments[19].say",
+  "before": "It's B! I'll never forget the stars at the observatory. The bananas are Birimo's memory! Great memory!",
+  "after": "It's B! Haru says, I'll never forget the stars at the observatory. The bananas are Birimo's memory! Great memory!",
+  "reviewers": "A+C",
+  "reason": "Without 'Haru says', Ms. Emma seems to state her own memory right after a quiz about Haru"
+ },
+ {
+  "lesson": 596,
+  "path": "teacher.segments[19].subtitleEn",
+  "before": "It's B! I'll never forget the stars at the observatory. The bananas are Birimo's memory! Great memory!",
+  "after": "It's B! Haru says, I'll never forget the stars at the observatory. The bananas are Birimo's memory! Great memory!",
+  "reviewers": "A+C",
+  "reason": "Follow seg19 say"
+ },
+ {
+  "lesson": 597,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. Now, I like. The past, last year. The future, next year. A nickname is OK. ニックネーム で いいよ. End with, Thank you.",
+  "after": "Here's the point. For now, say I like. For the past, say last year. For the future, say next year. A nickname is OK. ニックネーム で いいよ. End with, Thank you.",
+  "reviewers": "A+C",
+  "reason": "'Now, I like.' is read as the transition word 'Now,'; spell out the present/past/future mapping"
+ },
+ {
+  "lesson": 597,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. Now, I like. The past, last year. The future, next year. A nickname is OK. End with, Thank you.",
+  "after": "Here's the point. For now, say I like. For the past, say last year. For the future, say next year. A nickname is OK. End with, Thank you.",
+  "reviewers": "A+C",
+  "reason": "Follow seg8 say"
+ },
+ {
+  "lesson": 597,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Future, ture says cher. Near, ear. Again, the first a is soft. Celebration, tion says shun. Danced, e d says t.",
+  "after": "Sound review! Future, ture says chur. Near, ear. Again, the first a is soft. Celebration, tion says shun. Danced, e d says t.",
+  "reviewers": "B+C",
+  "reason": "TTS reads 'cher' like the name Cher; segments elsewhere use 'chur' (L488/L489 fix)"
+ },
+ {
+  "lesson": 597,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Future, ture says cher. Near, ear. Again, the first a is soft. Celebration, tion says shun. Danced, e d says t.",
+  "after": "Sound review! Future, ture says chur. Near, ear. Again, the first a is soft. Celebration, tion says shun. Danced, e d says t.",
+  "reviewers": "B+C",
+  "reason": "Follow seg9 say"
+ },
+ {
+  "lesson": 599,
+  "path": "conversation.lines[4].en",
+  "before": "It's a new map! There's a tall tower on it, and many letters are flying around it.",
+  "after": "It's a new map! There's a tall tower on it. Many letters are flying around it.",
+  "reviewers": "objective",
+  "reason": "Sentence over the Stage 2 limit (13 words); natural split"
+ },
+ {
+  "lesson": 599,
+  "path": "teacher.segments[19].slide.items[0]",
+  "before": "It's a new map! There's a tall tower on it, and many letters are flying around it.",
+  "after": "It's a new map! There's a tall tower on it. Many letters are flying around it.",
+  "reviewers": "objective",
+  "reason": "Follow conversation.lines[4].en"
+ },
+ {
+  "lesson": 599,
+  "path": "teacherScript",
+  "before": "Good evening, everyone! It's the night before the festival. Tomorrow is the big day! Say it with me. Tomorrow is the big day! Great! How do you feel? I can't wait for the festival! I can't wait means, I'm so excited. I can't wait は「まちきれない」と いう いいかた。 Let's check. Are the costumes ready? Yes, they are. Are the lanterns ready? Yes! What are you going to do first tomorrow? I'm going to watch the parade. I'm going to dance in the circle. I'm going to eat festival food. I can't wait! Now, phonics review. Adventure. Volunteer. Parade. Knock. Carried. Oh, listen. Knock, knock. Birimo found something. It's a new map! There's a tall tower on it. Our next adventure! But first, the festival. Go to bed early. Good night!",
+  "after": "Good evening, everyone! It's the night before the festival. Tomorrow is the big day! Say it with me. Tomorrow is the big day! Great! How do you feel? I can't wait for the festival! I can't wait means I'm so excited. I can't wait は「まちきれない」と いう いいかた。 Let's check. Are the costumes ready? Yes, they are. Are the lanterns ready? Yes! What are you going to do first tomorrow? I'm going to watch the parade. I'm going to dance in the circle. I'm going to eat festival food. I can't wait! Now, phonics review. Adventure. Volunteer. Parade. Knock. Carried. Oh, listen. Knock, knock. Birimo found something. It's a new map! There's a tall tower on it. Our next adventure! But first, the festival. Go to bed early. Good night!",
+  "reviewers": "A+C",
+  "reason": "Stray comma breaks the phrase when read aloud"
+ },
+ {
+  "lesson": 599,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Adventure, ture says cher. Volunteer, eer says ear. Parade, the first a is soft. Knock, no k. Carried, y becomes i.",
+  "after": "Sound review! Adventure, ture says chur. Volunteer, eer says ear. Parade, the first a is soft. Knock, no k. Carried, y becomes i.",
+  "reviewers": "B+C",
+  "reason": "TTS reads 'cher' like the name Cher; use 'chur'"
+ },
+ {
+  "lesson": 599,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Adventure, ture says cher. Volunteer, eer says ear. Parade, the first a is soft. Knock, no k. Carried, y becomes i.",
+  "after": "Sound review! Adventure, ture says chur. Volunteer, eer says ear. Parade, the first a is soft. Knock, no k. Carried, y becomes i.",
+  "reviewers": "B+C",
+  "reason": "Follow seg9 say"
+ },
+ {
+  "lesson": 599,
+  "path": "teacher.segments[20].say",
+  "before": "Wonderful! You can say Tomorrow is the big day, and I can't wait for. Next, talk with Kiko! キコちゃん と おはなし してね. Good night!",
+  "after": "Wonderful! You can say Tomorrow is the big day, and I can't wait for the festival. Next, talk with Kiko! キコちゃん と おはなし してね. Good night!",
+  "reviewers": "A+C",
+  "reason": "Sentence ending on 'for.' is unnatural and TTS drops the pitch on a preposition; finish the model sentence"
+ },
+ {
+  "lesson": 599,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Wonderful! You can say Tomorrow is the big day, and I can't wait for. Next, talk with Kiko! Good night!",
+  "after": "Wonderful! You can say Tomorrow is the big day, and I can't wait for the festival. Next, talk with Kiko! Good night!",
+  "reviewers": "A+C",
+  "reason": "Follow seg20 say"
+ },
+ {
+  "lesson": 599,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hi! I'm Kiko. Tomorrow is a special day for me. I'm going to a concert! Do you have a special day soon? How do you feel?",
+  "after": "Hi! I'm Kiko. Tomorrow is the big day! I can't wait for the festival! Do you have a special day soon? How do you feel?",
+  "reviewers": "A+B",
+  "reason": "Kiko's festival is tomorrow in the story, so a concert tomorrow contradicts it; use the lesson's target lines"
+ },
+ {
+  "lesson": 600,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. Stage 2 is all here! The present, the past, the future, comparing, and inviting. A host says, First, then Next.",
+  "after": "Here's the point. Stage 2 is all here! The present, the past, the future, comparing, and inviting. A host uses First and Next.",
+  "reviewers": "B+C",
+  "reason": "'says, First, then Next.' reads as a list of commas; TTS cannot tell the quoted words"
+ },
+ {
+  "lesson": 600,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. Stage 2 is all here! The present, the past, the future, comparing, and inviting. A host says, First, then Next.",
+  "after": "Here's the point. Stage 2 is all here! The present, the past, the future, comparing, and inviting. A host uses First and Next.",
+  "reviewers": "B+C",
+  "reason": "Follow seg8 say"
+ },
+ {
+  "lesson": 600,
+  "path": "teacher.segments[9].say",
+  "before": "Last sound review! Picture, cher. Year and cheer, ear. FES-ti-val. Celebration, shun. Dancing, drop the e.",
+  "after": "Last sound review! Picture, chur. Year and cheer, ear. FES-ti-val. Celebration, shun. Dancing, drop the e.",
+  "reviewers": "B+C",
+  "reason": "TTS reads 'cher' like the name Cher; use 'chur'"
+ },
+ {
+  "lesson": 600,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Last sound review! Picture, cher. Year and cheer, ear. FES-ti-val. Celebration, shun. Dancing, drop the e.",
+  "after": "Last sound review! Picture, chur. Year and cheer, ear. FES-ti-val. Celebration, shun. Dancing, drop the e.",
+  "reviewers": "B+C",
+  "reason": "Follow seg9 say"
+ },
+ {
+  "lesson": 600,
+  "path": "teacher.segments[11].subtitleJa",
+  "before": "さいしょの うごき、おぼえてる？ みて！ とまって！ こっちへ！ いけ！ つぎは たいこを たたいて！ ドン、ドン！",
+  "after": "さいしょの うごき、おぼえてる？ みて！ とまって！ こっちへ！ いって！ つぎは たいこを たたいて！ ドン、ドン！",
+  "reviewers": "objective (JA)",
+  "reason": "'いけ！' is a rough command; tpr[0].ja uses 'いって！'"
+ }
+]

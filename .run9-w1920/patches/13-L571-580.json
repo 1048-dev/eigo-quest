@@ -1,0 +1,482 @@
+[
+ {
+  "lesson": 571,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Welcome to World 20, Festival Island! This is the last world of Stage 2. Listen. Boom, boom, boom! What's that sound? I can hear drums. There's a festival on the island! Say it with me. There's a festival on the island! Great! There's means something is here. There's a big tree. There's a small boat. ワールド20 は おまつりの しま。ステージ2 の さいごの ワールドだよ。 Let's practice. Look at the beach. There's a red flag. There are many lanterns. I can hear the waves. I can hear the birds. Now, phonics. Picture. Culture. Mixture. Gesture. The t u r e at the end says cher. Picture, not pic-ture-e. Let's make a gesture. Wave your hand! Now, tell me. Close your eyes. What can you hear? I can hear the drums. Let's go and see the festival!",
+  "after": "Hello, everyone! Welcome to World 20, Festival Island! This is the last world of Stage 2. Listen. Boom, boom, boom! What's that sound? I can hear drums. There's a festival on the island! Say it with me. There's a festival on the island! Great! There's means something is here. There's a big tree. There's a small boat. ワールド20 は おまつりの しま。ステージ2 の さいごの ワールドだよ。 Let's practice. Look at the beach. There's a red flag. There are many lanterns. I can hear the waves. I can hear the birds. Now, phonics. Picture. Culture. Mixture. Gesture. The t u r e at the end says chur. The E is quiet. Let's make a gesture. Wave your hand! Now, tell me. Close your eyes. What can you hear? I can hear the drums. Let's go and see the festival!",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489); 'Picture, not pic-ture-e.' is unreadable for TTS and unclear, say 'The E is quiet.' (A+C)"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[9].say",
+  "before": "Sound time! When T comes before U R E, it says cher. Push your lips out a little, like a tiny kiss. Picture. Culture.",
+  "after": "Sound time! When T comes before U R E, it says chur. Push your lips out a little, like a tiny kiss. Picture. Culture.",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound time! When T comes before U R E, it says cher. Push your lips out a little, like a tiny kiss. Picture. Culture.",
+  "after": "Sound time! When T comes before U R E, it says chur. Push your lips out a little, like a tiny kiss. Picture. Culture.",
+  "reviewers": "B+C",
+  "reason": "Follow seg9 say"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[10].say",
+  "before": "Mixture. Gesture. Your turn! Picture. Culture. Mixture. Gesture. Cher, cher, cher!",
+  "after": "Mixture. Gesture. Your turn! Picture. Culture. Mixture. Gesture. Chur, chur, chur!",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[10].subtitleEn",
+  "before": "Mixture. Gesture. Your turn! Picture. Culture. Mixture. Gesture. Cher, cher, cher!",
+  "after": "Mixture. Gesture. Your turn! Picture. Culture. Mixture. Gesture. Chur, chur, chur!",
+  "reviewers": "B+C",
+  "reason": "Follow seg10 say"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[12].say",
+  "before": "Shh. Put your hand to your ear and listen. Do you hear it? Boom, boom! OK, Play the drums!",
+  "after": "Shh. Put your hand to your ear and listen. Do you hear it? Boom, boom! OK, play the drums!",
+  "reviewers": "objective",
+  "reason": "Capital letter mid-sentence after 'OK,'"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[12].subtitleEn",
+  "before": "Shh. Put your hand to your ear and listen. Do you hear it? Boom, boom! OK, Play the drums!",
+  "after": "Shh. Put your hand to your ear and listen. Do you hear it? Boom, boom! OK, play the drums!",
+  "reviewers": "objective",
+  "reason": "Follow seg12 say"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[20].say",
+  "before": "Wonderful! Now you can say what's on the island, talk about sounds, and say cher in picture. Next, talk with Kiko! キコちゃん と おはなし してね. See you!",
+  "after": "Wonderful! Now you can say what's on the island, talk about sounds, and say chur in picture. Next, talk with Kiko! キコちゃん と おはなし してね. See you!",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 571,
+  "path": "teacher.segments[20].subtitleEn",
+  "before": "Wonderful! Now you can say what's on the island, talk about sounds, and say cher in picture. Next, talk with Kiko! See you!",
+  "after": "Wonderful! Now you can say what's on the island, talk about sounds, and say chur in picture. Next, talk with Kiko! See you!",
+  "reviewers": "B+C",
+  "reason": "Follow seg20 say"
+ },
+ {
+  "lesson": 571,
+  "path": "conversation.lines[4].ja",
+  "before": "ここは まつりの島。わたしの おばが すんでいるの。ここの ひとたちは おんがくと おどりが だいすきなのよ。",
+  "after": "ここは まつりの しま。わたしの おばが すんでいるの。ここの ひとたちは おんがくと おどりが だいすきなのよ。",
+  "reviewers": "objective (JA)",
+  "reason": "Kanji 島 here; the rest of the lesson (seg7 subtitleJa) writes まつりの しま"
+ },
+ {
+  "lesson": 571,
+  "path": "conversation.aiTask.starterEn",
+  "before": "Hi! I'm Kiko. We're on Festival Island! Close your eyes and listen. What can you hear? What can you see?",
+  "after": "Hi! I'm Kiko. We're on Festival Island! Close your eyes and listen. What can you hear? Now open your eyes. What can you see?",
+  "reviewers": "A+B",
+  "reason": "Kiko asks 'What can you see?' while the child's eyes are still closed; add 'Now open your eyes.'"
+ },
+ {
+  "lesson": 572,
+  "path": "teacherScript",
+  "before": "Hi, everyone! Yesterday, we arrived on Festival Island. Today, a boy on the beach gave Birimo a flyer. The festival is on Saturday! I want to ask you nicely. Would you like to come to the festival? Say it with me. Would you like to come to the festival? Nice! Would you like to is a polite way to invite someone. It's softer than Do you want to. Answer, Yes, I'd love to! Would you like to ～? は ていねいな さそいかた。 Let's practice. Would you like to play tag? Yes, I'd love to! Would you like to see the dance? Sure! Now, phonics. Treasure. Measure. Pleasure. The s u r e says zher. Treasure, not trea-cher. Nature has t u r e, so it says cher. Listen. Treasure, nature. Now, invite me! Would you like to come to my house?",
+  "after": "Hi, everyone! Last time, we arrived on Festival Island. Today, a boy on the beach gave Birimo a flyer. The festival is on Saturday! I want to ask you nicely. Would you like to come to the festival? Say it with me. Would you like to come to the festival? Nice! Would you like to is a polite way to invite someone. It's softer than Do you want to. Answer, Yes, I'd love to! Would you like to ～? は ていねいな さそいかた。 Let's practice. Would you like to play tag? Yes, I'd love to! Would you like to see the dance? Sure! Now, phonics. Treasure. Measure. Pleasure. The s u r e says zher. Treasure, not trea-chur. Nature has t u r e, so it says chur. Listen. Treasure, nature. Now, invite me! Would you like to come to my house?",
+  "reviewers": "A+B / B+C",
+  "reason": "'Yesterday' for the previous lesson -> 'Last time,' (W13-18 rule, seg0 already changed); 'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[0].subtitleJa",
+  "before": "みんな、やあ！ きのうは しまで たいこの おとを きいたね。きょうは はまべの おとこのこが ビリモに サプライズ。チラシだよ！",
+  "after": "みんな、やあ！ このまえは しまで たいこの おとを きいたね。きょうは はまべの おとこのこが ビリモに サプライズ。チラシだよ！",
+  "reviewers": "objective (JA)",
+  "reason": "EN now says 'Last time'; JA still said きのう"
+ },
+ {
+  "lesson": 572,
+  "path": "conversation.lines[0].en",
+  "before": "A boy on the beach gave me this flyer. He asked, would you like to come to the festival?",
+  "after": "A boy on the beach gave me this flyer. He asked, Would you like to come to the festival?",
+  "reviewers": "objective",
+  "reason": "Quoted question starts with a capital (product convention for quoted model sentences)"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[6].slide.items[0]",
+  "before": "A boy on the beach gave me this flyer. He asked, would you like to come to the festival?",
+  "after": "A boy on the beach gave me this flyer. He asked, Would you like to come to the festival?",
+  "reviewers": "objective",
+  "reason": "Follow conversation.lines[0]"
+ },
+ {
+  "lesson": 572,
+  "path": "conversation.lines[2].en",
+  "before": "It's on Saturday. It says, dance contest and fireworks!",
+  "after": "It's on Saturday. It says, Dance contest and fireworks!",
+  "reviewers": "objective",
+  "reason": "Quoted flyer text starts with a capital"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[6].say",
+  "before": "Let's listen. Birimo says, A boy on the beach gave me this flyer. Riko asks, Wow! When is it? Birimo answers, It's on Saturday. It says, dance contest and fireworks!",
+  "after": "Let's listen. Birimo says, A boy on the beach gave me this flyer. Riko asks, Wow! When is it? Birimo answers, It's on Saturday. It says, Dance contest and fireworks!",
+  "reviewers": "objective",
+  "reason": "Follow conversation.lines[2]"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[6].subtitleEn",
+  "before": "Let's listen. Birimo says, A boy on the beach gave me this flyer. Riko asks, Wow! When is it? Birimo answers, It's on Saturday. It says, dance contest and fireworks!",
+  "after": "Let's listen. Birimo says, A boy on the beach gave me this flyer. Riko asks, Wow! When is it? Birimo answers, It's on Saturday. It says, Dance contest and fireworks!",
+  "reviewers": "objective",
+  "reason": "Follow seg6 say"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[6].slide.items[2]",
+  "before": "It's on Saturday. It says, dance contest and fireworks!",
+  "after": "It's on Saturday. It says, Dance contest and fireworks!",
+  "reviewers": "objective",
+  "reason": "Follow conversation.lines[2]"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[2].say",
+  "before": "Come. Over here, please! Wave your hand to you. Come!",
+  "after": "Come. Over here, please! Wave your hand toward you, like this. Come!",
+  "reviewers": "A+B+C",
+  "reason": "'Wave your hand to you' is ungrammatical/unclear for beckoning (JA てまねき)"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Come. Over here, please! Wave your hand to you. Come!",
+  "after": "Come. Over here, please! Wave your hand toward you, like this. Come!",
+  "reviewers": "A+B+C",
+  "reason": "Follow seg2 say"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[10].say",
+  "before": "Pleasure. But nature has a T, so it says cher. Your turn! Treasure. Measure. Pleasure. Nature.",
+  "after": "Pleasure. But nature has a T, so it says chur. Your turn! Treasure. Measure. Pleasure. Nature.",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 572,
+  "path": "teacher.segments[10].subtitleEn",
+  "before": "Pleasure. But nature has a T, so it says cher. Your turn! Treasure. Measure. Pleasure. Nature.",
+  "after": "Pleasure. But nature has a T, so it says chur. Your turn! Treasure. Measure. Pleasure. Nature.",
+  "reviewers": "B+C",
+  "reason": "Follow seg10 say"
+ },
+ {
+  "lesson": 573,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Sometimes a friend invites us, but we can't go. That's OK. We can say no kindly. Listen. Would you like to play soccer? I'd love to, but I have to help my mom. Say it with me. I'd love to, but I have to help my mom. Great! First, say I'd love to. Then, give a reason. ことわる ときは「いきたいけど」と きもちを いってから りゆうを いおう。 And when your friend says no, don't be sad. Just say, That's OK. Maybe next time! It's OK to say no. Let's practice. Would you like to go swimming? I'd love to, but I have a cold. Sorry, I can't. I'm busy today. Now, phonics. Pure. Cure. Secure. The u r e after p or c says yoor. Pure, cure. Furniture has t u r e. Cher! Now, I'll invite you. Would you like to clean my room? Ha ha!",
+  "after": "Hello, everyone! Sometimes a friend invites us, but we can't go. That's OK. We can say no kindly. Listen. Would you like to play soccer? I'd love to, but I have to help my mom. Say it with me. I'd love to, but I have to help my mom. Great! First, say I'd love to. Then, give a reason. ことわる ときは「いきたいけど」と きもちを いってから りゆうを いおう。 And when your friend says no, don't be sad. Just say, That's OK. Maybe next time! It's OK to say no. Let's practice. Would you like to go swimming? I'd love to, but I have a cold. Sorry, I can't. I'm busy today. Now, phonics. Pure. Cure. Secure. The u r e after p or c says yoor. Pure, cure. Furniture has t u r e. Chur! Now, I'll invite you. Would you like to clean my room? Ha ha!",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 573,
+  "path": "teacher.segments[10].say",
+  "before": "But furniture has a T, so it's cher again. Your turn! Pure. Cure. Secure. Furniture.",
+  "after": "But furniture has a T, so it's chur again. Your turn! Pure. Cure. Secure. Furniture.",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 573,
+  "path": "teacher.segments[10].subtitleEn",
+  "before": "But furniture has a T, so it's cher again. Your turn! Pure. Cure. Secure. Furniture.",
+  "after": "But furniture has a T, so it's chur again. Your turn! Pure. Cure. Secure. Furniture.",
+  "reviewers": "B+C",
+  "reason": "Follow seg10 say"
+ },
+ {
+  "lesson": 573,
+  "path": "teacher.segments[18].slide.items[1]",
+  "before": "Ha ha! I'd love to, but I'm full. Maybe next time!",
+  "after": "I'd love to, but ～.",
+  "reviewers": "A+B",
+  "reason": "The slide for wrong choice B showed 'Ha ha! I'd love to, but I'm full. Maybe next time!', which contains the right answer 'Maybe next time!'; show the decline pattern instead"
+ },
+ {
+  "lesson": 574,
+  "path": "teacherScript",
+  "before": "Hi, everyone! Listen to the music. The island people are dancing in a big circle. Shall we dance? Say it with me. Shall we dance? Sure! Shall we means, let's do it together. It's like Let's, but it's a question. Shall we ～? は「いっしょに ～しようか？」と さそう いいかた。 Answer, Sure! or Yes, let's! Let's practice. Shall we join the circle? Yes, let's! Shall we sing? Sure! Shall we play the drums? Yes, let's! Shall we go to the beach? Sure! If you're shy, you can watch first and clap. That's OK, too. Now, dance with me. Step to the right. Clap two times. Turn around. Great! Phonics. Adventure, cher. Measure, zher. Pure, yoor. Creature, cher. Look at the letter before u r e. Now, invite your friend. Shall we play? Shall we sing?",
+  "after": "Hi, everyone! Listen to the music. The island people are dancing in a big circle. Shall we dance? Say it with me. Shall we dance? Sure! Shall we means let's do it together. It's like Let's, but it's a question. Shall we ～? は「いっしょに ～しようか？」と さそう いいかた。 Answer, Sure! Or, Yes, let's! Let's practice. Shall we join the circle? Yes, let's! Shall we sing? Sure! Shall we play the drums? Yes, let's! Shall we go to the beach? Sure! If you're shy, you can watch first and clap. That's OK, too. Now, dance with me. Step to the right. Clap two times. Turn around. Great! Phonics. Adventure, chur. Measure, zher. Pure, yoor. Creature, chur. Look at the letter before u r e. Now, invite your friend. Shall we play? Shall we sing?",
+  "reviewers": "A+C / B+C",
+  "reason": "Stray comma after 'means' (same fix as L488); sentence starting with lowercase 'or' after '!'; 'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 574,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. Shall we means, let's do it together. Answer, Sure! or, Yes, let's! Feeling shy? It's OK to watch first.",
+  "after": "Here's the point. Shall we means let's do it together. Answer, Sure! Or, Yes, let's! Feeling shy? It's OK to watch first.",
+  "reviewers": "A+C",
+  "reason": "Stray comma after 'means'; lowercase 'or' starting a sentence after '!'"
+ },
+ {
+  "lesson": 574,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. Shall we means, let's do it together. Answer, Sure! or, Yes, let's! Feeling shy? It's OK to watch first.",
+  "after": "Here's the point. Shall we means let's do it together. Answer, Sure! Or, Yes, let's! Feeling shy? It's OK to watch first.",
+  "reviewers": "A+C",
+  "reason": "Follow seg8 say"
+ },
+ {
+  "lesson": 574,
+  "path": "teacher.segments[9].say",
+  "before": "Sound time! Look at the letter before U R E. T makes cher, like adventure and creature. S makes zher, like measure.",
+  "after": "Sound time! Look at the letter before U R E. T makes chur, like adventure and creature. S makes zher, like measure.",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 574,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound time! Look at the letter before U R E. T makes cher, like adventure and creature. S makes zher, like measure.",
+  "after": "Sound time! Look at the letter before U R E. T makes chur, like adventure and creature. S makes zher, like measure.",
+  "reviewers": "B+C",
+  "reason": "Follow seg9 say"
+ },
+ {
+  "lesson": 574,
+  "path": "teacher.segments[12].say",
+  "before": "Now, clap two times. Clap, clap! And, Turn around. Wheee!",
+  "after": "Now, clap two times. Clap, clap! And turn around. Wheee!",
+  "reviewers": "objective",
+  "reason": "Capital letter mid-sentence and stray comma ('And, Turn around.')"
+ },
+ {
+  "lesson": 574,
+  "path": "teacher.segments[12].subtitleEn",
+  "before": "Now, clap two times. Clap, clap! And, Turn around. Wheee!",
+  "after": "Now, clap two times. Clap, clap! And turn around. Wheee!",
+  "reviewers": "objective",
+  "reason": "Follow seg12 say"
+ },
+ {
+  "lesson": 575,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Let's make invitation cards for our festival friends. An invitation tells three things. When? Where? What? Listen. Dear friends, please come to our festival on Saturday. It starts at five o'clock. We hope to see you there! Say it with me. Please come to our festival on Saturday. Wonderful! しょうたいじょうには「いつ・どこで・なにを」を かこう。 Let's practice. Please come to my party on Sunday. It starts at two o'clock. It's at the park. We hope to see you there! Now, phonics review. Picture, cher. Treasure, zher. Cure, yoor. Future, cher. Draw a picture of a lantern on your card! One more thing. Never write your home address on the internet. Paper cards for friends are fine. Now, read your invitation to me. When is it? What time does it start?",
+  "after": "Hello, everyone! Let's make invitation cards for our festival friends. An invitation tells three things. When? Where? What? Listen. Dear friends, please come to our festival on Saturday. It starts at five o'clock. We hope to see you there! Say it with me. Please come to our festival on Saturday. Wonderful! しょうたいじょうには「いつ・どこで・なにを」を かこう。 Let's practice. Please come to my party on Sunday. It starts at two o'clock. It's at the park. We hope to see you there! Now, phonics review. Picture, chur. Treasure, zher. Cure, yoor. Future, chur. Draw a picture of a lantern on your card! One more thing. Never write your home address on the internet. Paper cards for friends are fine. Now, read your invitation to me. When is it? What time does it start?",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 575,
+  "path": "teacher.segments[8].say",
+  "before": "Here's the point. A good invitation tells the day and the time. Please come to, on Saturday. It starts at. Then finish with, We hope to see you there!",
+  "after": "Here's the point. A good invitation tells the day and the time. Please come to our festival on Saturday. It starts at five o'clock. Then finish with, We hope to see you there!",
+  "reviewers": "A+C",
+  "reason": "'Please come to, on Saturday. It starts at.' are broken fragments that TTS reads with dead stops; say the full model sentences"
+ },
+ {
+  "lesson": 575,
+  "path": "teacher.segments[8].subtitleEn",
+  "before": "Here's the point. A good invitation tells the day and the time. Please come to, on Saturday. It starts at. Then finish with, We hope to see you there!",
+  "after": "Here's the point. A good invitation tells the day and the time. Please come to our festival on Saturday. It starts at five o'clock. Then finish with, We hope to see you there!",
+  "reviewers": "A+C",
+  "reason": "Follow seg8 say"
+ },
+ {
+  "lesson": 575,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! U R E has three sounds. Picture and future say cher. Treasure says zher. Cure says yoor.",
+  "after": "Sound review! U R E has three sounds. Picture and future say chur. Treasure says zher. Cure says yoor.",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 575,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! U R E has three sounds. Picture and future say cher. Treasure says zher. Cure says yoor.",
+  "after": "Sound review! U R E has three sounds. Picture and future say chur. Treasure says zher. Cure says yoor.",
+  "reviewers": "B+C",
+  "reason": "Follow seg9 say"
+ },
+ {
+  "lesson": 577,
+  "path": "teacher.segments[4].say",
+  "before": "Laugh. Ha ha ha! The G H says f. Laugh!",
+  "after": "Laugh. Ha ha ha! The G H makes an F sound. Laugh!",
+  "reviewers": "B+C",
+  "reason": "TTS reads 'says f' as the letter name 'eff'; 'makes an F sound' is how teachers say it"
+ },
+ {
+  "lesson": 577,
+  "path": "teacher.segments[4].subtitleEn",
+  "before": "Laugh. Ha ha ha! The G H says f. Laugh!",
+  "after": "Laugh. Ha ha ha! The G H makes an F sound. Laugh!",
+  "reviewers": "B+C",
+  "reason": "Follow seg4 say"
+ },
+ {
+  "lesson": 577,
+  "path": "teacher.segments[11].say",
+  "before": "Let's move! Grab some pretend powder. Throw the powder up high! Quick, Close your eyes and mouth!",
+  "after": "Let's move! Grab some pretend powder. Throw the powder up high! Quick, close your eyes and mouth!",
+  "reviewers": "objective",
+  "reason": "Capital letter mid-sentence after 'Quick,'"
+ },
+ {
+  "lesson": 577,
+  "path": "teacher.segments[11].subtitleEn",
+  "before": "Let's move! Grab some pretend powder. Throw the powder up high! Quick, Close your eyes and mouth!",
+  "after": "Let's move! Grab some pretend powder. Throw the powder up high! Quick, close your eyes and mouth!",
+  "reviewers": "objective",
+  "reason": "Follow seg11 say"
+ },
+ {
+  "lesson": 577,
+  "path": "teacher.segments[16].say",
+  "before": "It looks so fun.",
+  "after": "It looks so fun. Everyone is smiling and cheering.",
+  "reviewers": "A+B",
+  "reason": "The Say it! slide shows the whole line but Ms. Emma only said half; say the full line the slide shows"
+ },
+ {
+  "lesson": 577,
+  "path": "teacher.segments[16].subtitleEn",
+  "before": "It looks so fun.",
+  "after": "It looks so fun. Everyone is smiling and cheering.",
+  "reviewers": "A+B",
+  "reason": "Follow seg16 say"
+ },
+ {
+  "lesson": 577,
+  "path": "teacher.segments[16].subtitleJa",
+  "before": "「すごく たのしそう。」",
+  "after": "「すごく たのしそう。みんな わらって、さけんでる。」",
+  "reviewers": "A+B",
+  "reason": "Follow seg16 say (JA from conversation.lines[5])"
+ },
+ {
+  "lesson": 579,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Brr, imagine winter. In some cold countries, people have winter light festivals. Listen to the plan for this winter. There will be lights all over the town. Say it with me. There will be lights all over the town. Great! There will be means something will be there later. There is is for now. There will be is for the future. There will be は「これから ～が ある」と いう いいかた。 Let's practice. There will be a big tree in the square. There will be music. It will be cold, so wear a warm coat. Now, phonics. Bear. Wear. The e a r says air. Learn. Earth. The e a r says er. Near says eer. One spelling, three sounds! Now, tell me. What will there be at your winter festival?",
+  "after": "Hello, everyone! Brr, imagine winter. In some cold countries, people have winter light festivals. Listen to the plan for this winter. There will be lights all over the town. Say it with me. There will be lights all over the town. Great! There will be means something will be there later. Use There is for now. Use There will be for the future. There will be は「これから ～が ある」と いう いいかた。 Let's practice. There will be a big tree in the square. There will be music. It will be cold, so wear a warm coat. Now, phonics. Bear. Wear. The e a r says air. Learn. Earth. The e a r says er. Near says eer. One spelling, three sounds! Now, tell me. What will there be at your winter festival?",
+  "reviewers": "B+C",
+  "reason": "'There is is for now' stumbles aloud and is confusing to read; 'Use There is for now.'"
+ },
+ {
+  "lesson": 579,
+  "path": "conversation.lines[1].ja",
+  "before": "ゆきの まちの、ふゆの ひかりの おまつりよ。ことしも まちじゅうに あかりが ともるの。",
+  "after": "ゆきの まちの、ふゆの ひかりの おまつりよ。ことしは まちじゅうに あかりが ともるの。",
+  "reviewers": "objective (JA)",
+  "reason": "EN 'This year' has no 'also'; ことしも adds it"
+ },
+ {
+  "lesson": 579,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "きいてね。リコちゃん「エマ先生、この しゃしんは なに？」 わたし「ゆきの まちの、ふゆの ひかりの おまつりよ。ことしも まちじゅうに あかりが ともるの。」",
+  "after": "きいてね。リコちゃん「エマ先生、この しゃしんは なに？」 わたし「ゆきの まちの、ふゆの ひかりの おまつりよ。ことしは まちじゅうに あかりが ともるの。」",
+  "reviewers": "objective (JA)",
+  "reason": "Follow conversation.lines[1].ja"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Introduce a festival and say why you like it. In some countries, people float lanterns at the festival. My favorite festival is, because. because は なぜなら.",
+  "after": "Today's goal. Introduce a festival and say why you like it. In some countries, people float lanterns at the festival. Then give your reason with because. because は なぜなら.",
+  "reviewers": "A+C",
+  "reason": "'My favorite festival is, because.' is a broken fragment that TTS reads with dead stops"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[1].subtitleEn",
+  "before": "Today's goal. Introduce a festival and say why you like it. In some countries, people float lanterns at the festival. My favorite festival is, because.",
+  "after": "Today's goal. Introduce a festival and say why you like it. In some countries, people float lanterns at the festival. Then give your reason with because.",
+  "reviewers": "A+C",
+  "reason": "Follow seg1 say"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。おまつりを しょうかいして、すきな りゆうも いおう。In some countries, people float lanterns at the festival.（いくつかの くにでは、おまつりで ランタンを うかべます。） My favorite festival is ～ because ～。because は「なぜなら」。",
+  "after": "きょうの ゴール。おまつりを しょうかいして、すきな りゆうも いおう。In some countries, people float lanterns at the festival.（いくつかの くにでは、おまつりで ランタンを うかべます。） そして because で りゆうを いおう。because は「なぜなら」。",
+  "reviewers": "A+C",
+  "reason": "Follow seg1 say"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[2].say",
+  "before": "Country. A big land with its own people and flag. Country!",
+  "after": "Country. A big place with its own people and flag. Country!",
+  "reviewers": "A+B",
+  "reason": "'A big land' (land is uncountable here) is unnatural; 'a big place'"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[2].subtitleEn",
+  "before": "Country. A big land with its own people and flag. Country!",
+  "after": "Country. A big place with its own people and flag. Country!",
+  "reviewers": "A+B",
+  "reason": "Follow seg2 say"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[3].say",
+  "before": "Poster. A big paper with pictures and words. Hold it up! Poster!",
+  "after": "Poster. A big sheet of paper with pictures and words. Hold it up! Poster!",
+  "reviewers": "objective",
+  "reason": "'a big paper' (paper is uncountable here); same fix as L484"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[3].subtitleEn",
+  "before": "Poster. A big paper with pictures and words. Hold it up! Poster!",
+  "after": "Poster. A big sheet of paper with pictures and words. Hold it up! Poster!",
+  "reviewers": "objective",
+  "reason": "Follow seg3 say"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[9].say",
+  "before": "Sound review! Picture says cher. Near and cheer say eer. Bear says air. Early says er.",
+  "after": "Sound review! Picture says chur. Near and cheer say eer. Bear says air. Early says er.",
+  "reviewers": "B+C",
+  "reason": "'cher' is read like the name Cher (/ʃɛr/); use 'chur' for /tʃər/ (same as the W17 fix in L488/L489)"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[9].subtitleEn",
+  "before": "Sound review! Picture says cher. Near and cheer say eer. Bear says air. Early says er.",
+  "after": "Sound review! Picture says chur. Near and cheer say eer. Bear says air. Early says er.",
+  "reviewers": "B+C",
+  "reason": "Follow seg9 say"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[12].say",
+  "before": "Your friend finished! Clap for your friend. And at the end, Stand up and bow. Thank you, everyone!",
+  "after": "Your friend finished! Clap for your friend. And at the end, stand up and bow. Thank you, everyone!",
+  "reviewers": "objective",
+  "reason": "Capital letter mid-sentence"
+ },
+ {
+  "lesson": 580,
+  "path": "teacher.segments[12].subtitleEn",
+  "before": "Your friend finished! Clap for your friend. And at the end, Stand up and bow. Thank you, everyone!",
+  "after": "Your friend finished! Clap for your friend. And at the end, stand up and bow. Thank you, everyone!",
+  "reviewers": "objective",
+  "reason": "Follow seg12 say"
+ }
+]

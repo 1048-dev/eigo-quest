@@ -6,6 +6,7 @@
     {
       "lessonNo": 541,
       "world": 19,
+      "reviewed": "run9",
       "title": "Tick, Tock, Click!",
       "titleJa": "チク・タク・カチッ！",
       "school": {
@@ -53,7 +54,7 @@
         },
         {
           "en": "Turn the big wheel.",
-          "ja": "おおきな くるまを まわして。",
+          "ja": "おおきな ハンドルを まわして。",
           "action": "りょうてで ハンドルを まわす まね",
           "emoji": "⚙️"
         }
@@ -140,7 +141,7 @@
         ],
         "aiTask": {
           "goalJa": "工房の きかいを みて、This machine makes ～. / What does it do? で はたらきを いいあおう",
-          "starterEn": "Hi! I'm Ms. Emma. Look at this funny machine! What do you think it makes?",
+          "starterEn": "Hi! I'm Haru. Look at this funny machine! What do you think it makes?",
           "targetExpressions": [
             "This machine makes ～.",
             "What does it do?",
@@ -348,9 +349,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Open the big door slowly. Creeeak! Now, Listen. Tick, tock, click! Hand to your ear.",
+            "say": "Let's move! Open the big door slowly. Creeeak! Now, listen. Tick, tock, click! Hand to your ear.",
             "subtitleJa": "からだを うごかそう！ おおきな とびらを ゆっくり あけて。ギギーッ！ つぎは きいて。チク、タク、カチッ！ みみに てを あてて。",
-            "subtitleEn": "Let's move! Open the big door slowly. Creeeak! Now, Listen. Tick, tock, click! Hand to your ear.",
+            "subtitleEn": "Let's move! Open the big door slowly. Creeeak! Now, listen. Tick, tock, click! Hand to your ear.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -365,9 +366,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Point to the machine. That one! Now, Turn the big wheel. Use both hands. Round and round!",
-            "subtitleJa": "きかいを ゆびさして。あれ！ つぎは おおきな くるまを まわして。りょうてで。ぐるぐる！",
-            "subtitleEn": "Point to the machine. That one! Now, Turn the big wheel. Use both hands. Round and round!",
+            "say": "Point to the machine. That one! Now, turn the big wheel. Use both hands. Round and round!",
+            "subtitleJa": "きかいを ゆびさして。あれ！ つぎは おおきな ハンドルを まわして。りょうてで。ぐるぐる！",
+            "subtitleEn": "Point to the machine. That one! Now, turn the big wheel. Use both hands. Round and round!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -383,7 +384,7 @@
             "kind": "tpr",
             "lang": "en",
             "say": "Speed challenge! Turn the big wheel! Point to the machine! Open the big door slowly! Listen! Super inventors!",
-            "subtitleJa": "スピード チャレンジ！ くるまを まわして！ きかいを ゆびさして！ とびらを ゆっくり あけて！ きいて！ すごい はつめいかたち！",
+            "subtitleJa": "スピード チャレンジ！ ハンドルを まわして！ きかいを ゆびさして！ とびらを ゆっくり あけて！ きいて！ すごい はつめいかたち！",
             "subtitleEn": "Speed challenge! Turn the big wheel! Point to the machine! Open the big door slowly! Listen! Super inventors!",
             "gesture": "mime",
             "slide": {
@@ -516,6 +517,7 @@
     {
       "lessonNo": 542,
       "world": 19,
+      "reviewed": "run9",
       "title": "What's This Tool?",
       "titleJa": "これは なんの どうぐ？",
       "school": {
@@ -607,7 +609,7 @@
           "emoji": "🪛"
         }
       ],
-      "teacherScript": "Hi, everyone! Look at this tool shelf. There are so many tools! What's this tool? These are scissors. What are they used for? It's used for cutting paper. Say it with me. It's used for cutting paper. Nice! After used for, we say a word with i n g. Cutting, painting, opening. つかいみちは used for の あとに ing の ことばを つけるよ。 Let's practice. What's this tool? It's a hammer. It's used for hitting nails. What's this? It's a screwdriver. It's used for turning screws. Remember, tools can be dangerous. At home, always ask an adult before you use them. Now, phonics. Retell. Reread. Rewrite. Rebuild. Tell, retell. Read, reread. Write, rewrite. Build, rebuild. Re means again. What's this? It's tape. It's used for sticking things. Now, look around your room. Find a tool. What's it used for? Tell me!",
+      "teacherScript": "Hi, everyone! Look at this tool shelf. There are so many tools! What's this tool? This is a pair of scissors. What's it used for? It's used for cutting paper. Say it with me. It's used for cutting paper. Nice! After used for, we say a word with i n g. Cutting, painting, opening. つかいみちは used for の あとに ing の ことばを つけるよ。 Let's practice. What's this tool? It's a hammer. It's used for hitting nails. What's this? It's a screwdriver. It's used for turning screws. Remember, tools can be dangerous. At home, always ask an adult before you use them. Now, phonics. Retell. Reread. Rewrite. Rebuild. Tell, retell. Read, reread. Write, rewrite. Build, rebuild. Re means again. What's this? It's tape. It's used for sticking things together. Now, look around your room. Find a tool. What's it used for? Tell me!",
       "conversation": {
         "scene": "At the tool shelf in the workshop",
         "sceneJa": "工房の どうぐだなで",
@@ -650,7 +652,7 @@
         ],
         "aiTask": {
           "goalJa": "工房の どうぐを ゆびさして、What's this tool? / It's used for ～ing. で つかいみちを せつめいしよう",
-          "starterEn": "Hi! I'm Ms. Emma. Look at this tool shelf. Pick one tool and tell me what it's used for!",
+          "starterEn": "Hi! I'm Riko. Look at this tool shelf. Pick one tool and tell me what it's used for!",
           "targetExpressions": [
             "What's this tool?",
             "It's used for ～ing.",
@@ -857,9 +859,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Pick up the scissors carefully. Slowly, slowly. Now, Turn the screwdriver. Twist your wrist!",
+            "say": "Let's move! Pick up the scissors carefully. Slowly, slowly. Now, turn the screwdriver. Twist your wrist!",
             "subtitleJa": "からだを うごかそう！ はさみを ていねいに もって。ゆっくり、ゆっくり。つぎは ドライバーを まわして。てくびを くるっと！",
-            "subtitleEn": "Let's move! Pick up the scissors carefully. Slowly, slowly. Now, Turn the screwdriver. Twist your wrist!",
+            "subtitleEn": "Let's move! Pick up the scissors carefully. Slowly, slowly. Now, turn the screwdriver. Twist your wrist!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -874,9 +876,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Tap the nail with the hammer. Gently! Tap, tap. Now, Put the tools back on the shelf. Nice and tidy!",
+            "say": "Tap the nail with the hammer. Gently! Tap, tap. Now, put the tools back on the shelf. Nice and tidy!",
             "subtitleJa": "かなづちで くぎを トントン たたいて。やさしく！ トン、トン。つぎは どうぐを たなに もどして。きれいに ならべてね！",
-            "subtitleEn": "Tap the nail with the hammer. Gently! Tap, tap. Now, Put the tools back on the shelf. Nice and tidy!",
+            "subtitleEn": "Tap the nail with the hammer. Gently! Tap, tap. Now, put the tools back on the shelf. Nice and tidy!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -1026,6 +1028,7 @@
     {
       "lessonNo": 543,
       "world": 19,
+      "reviewed": "run9",
       "title": "How Do You Use It?",
       "titleJa": "どうやって つかうの？",
       "school": {
@@ -1139,7 +1142,7 @@
           },
           {
             "speaker": "Haru",
-            "en": "Okay. Push... then turn... Wow! A ball came out!",
+            "en": "OK. Push... then turn... Wow! A ball came out!",
             "ja": "よし。おして…まわして…わあ！ボールが でた！"
           },
           {
@@ -1160,7 +1163,7 @@
         ],
         "aiTask": {
           "goalJa": "きかいの つかいかたを きかれたら、Push ～. Then, ～. で 2つの ステップで こたえよう",
-          "starterEn": "Hi! I'm Ms. Emma. I have a new music box, but I don't know how to use it. Can you help me? How do you use it?",
+          "starterEn": "Hi! I'm Kiko. I have a new music box. But I don't know how to use it. Can you help me? How do you use it?",
           "targetExpressions": [
             "How do you use it?",
             "Push this button.",
@@ -1287,7 +1290,7 @@
                 "What's this machine? It has a button and a handle.",
                 "How do you use it?",
                 "Push this button. Then, turn it.",
-                "Okay. Push... then turn... Wow! A ball came out!"
+                "OK. Push... then turn... Wow! A ball came out!"
               ],
               "emoji": "⚾"
             }
@@ -1329,9 +1332,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Ree, again! Fill, refill. Open, reopen. Paint, repaint. Start, restart. Say the ree long and clear.",
+            "say": "Sound time! Ree means again! Fill, refill. Open, reopen. Paint, repaint. Start, restart. Say the ree long and clear.",
             "subtitleJa": "おとの じかん！ re は「もう いちど」！ fill → refill、open → reopen、paint → repaint、start → restart。re は ながく はっきり「リー」。",
-            "subtitleEn": "Sound time! Ree, again! Fill, refill. Open, reopen. Paint, repaint. Start, restart. Say the ree long and clear.",
+            "subtitleEn": "Sound time! Ree means again! Fill, refill. Open, reopen. Paint, repaint. Start, restart. Say the ree long and clear.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1369,9 +1372,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Push the red button. Boop! Now, Then, turn the handle. Round and round!",
-            "subtitleJa": "からだを うごかそう！ あかい ボタンを おして。ポチッ！ つぎは、それから とってを まわして。ぐるぐる！",
-            "subtitleEn": "Let's move! Push the red button. Boop! Now, Then, turn the handle. Round and round!",
+            "say": "Let's move! Push the red button. Boop! Then, turn the handle. Round and round!",
+            "subtitleJa": "からだを うごかそう！ あかい ボタンを おして。ポチッ！ それから とってを まわして。ぐるぐる！",
+            "subtitleEn": "Let's move! Push the red button. Boop! Then, turn the handle. Round and round!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -1503,9 +1506,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! Push first, then turn. Step by step. Boop, boop, brilliant!",
-            "subtitleJa": "こたえは A！ まず おして、それから まわす。ひとつずつ じゅんばんに。ポチッ、ポチッ、すばらしい！",
-            "subtitleEn": "It's A! Push first, then turn. Step by step. Boop, boop, brilliant!",
+            "say": "It's A! Push first, then turn. Step by step. Boop, boop, bingo!",
+            "subtitleJa": "こたえは A！ まず おして、それから まわす。ひとつずつ じゅんばんに。ポチッ、ポチッ、だいせいかい！",
+            "subtitleEn": "It's A! Push first, then turn. Step by step. Boop, boop, bingo!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -1538,6 +1541,7 @@
     {
       "lessonNo": 544,
       "world": 19,
+      "reviewed": "run9",
       "title": "Like This?",
       "titleJa": "こんな かんじ？",
       "school": {
@@ -1629,7 +1633,7 @@
           "emoji": "🔓"
         }
       ],
-      "teacherScript": "Hi, everyone! Today we are fixing a toy robot. Its arm is loose. We need to make this screw tight. Watch me. Turn it to the right. Now you try. Like this? Yes, that's right! Say it with me. Like this? Yes, that's right! Great! When you are not sure, ask. Like this? Is this right? If it's wrong, your friend can say, not quite. Turn it the other way. わからない ときは Like this? と きけば だいじょうぶ。 Let's practice. Fold the paper like this. Like this? Yes, that's right! Put the gear here. Is this right? Not quite. Put it a little higher. Now, phonics. Recheck. Retry. Refold. Rewind. Rewind the toy and let it go. It stopped? Retry! Re means again. Now, show me how to clap three times. Like this?",
+      "teacherScript": "Hi, everyone! Today we are fixing a toy robot. Its arm is loose. We need to make this screw tight. Watch me. Turn it to the right. Now you try. Like this? Yes, that's right! Say it with me. Like this? Yes, that's right! Great! When you are not sure, ask. Like this? Is this right? If it's wrong, your friend can say, Not quite. Turn it the other way. わからない ときは Like this? と きけば だいじょうぶ。 Let's practice. Fold the paper like this. Like this? Yes, that's right! Put the gear here. Is this right? Not quite. Put it a little higher. Now, phonics. Recheck. Retry. Refold. Rewind. Rewind the toy and let it go. It stopped? Retry! Re means again. Now, show me how to clap three times. Like this?",
       "conversation": {
         "scene": "Tightening a screw in the workshop",
         "sceneJa": "工房で、ネジを しめる",
@@ -1656,7 +1660,7 @@
           },
           {
             "speaker": "Haru",
-            "en": "Oh, okay. Like this? Is this right?",
+            "en": "Oh, OK. Like this? Is this right?",
             "ja": "あ、そうか。こんな かんじ？これで あってる？"
           },
           {
@@ -1672,7 +1676,7 @@
         ],
         "aiTask": {
           "goalJa": "ネジを しめる とき、Like this? / Is this right? と たしかめながら すすめよう",
-          "starterEn": "Hi! I'm Ms. Emma. Let's fix this toy car together. First, hold the screw. Show me. Can you do it?",
+          "starterEn": "Hi! I'm Riko. Let's fix this toy car together. First, hold the screw. Show me. Can you do it?",
           "targetExpressions": [
             "Like this?",
             "Is this right?",
@@ -1709,9 +1713,9 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Check how to do it. Like this? Yes, that's right! Or, Not quite. Like this? は こんな かんじ？",
+            "say": "Today's goal. Check how to do it. Like this? Yes, that's right! Or not quite. Like this? は こんな かんじ？",
             "subtitleJa": "きょうの ゴール。やりかたを たしかめよう。Like this? Yes, that's right! または Not quite。Like this? は「こんな かんじ？」。",
-            "subtitleEn": "Today's goal. Check how to do it. Like this? Yes, that's right! Or, Not quite.",
+            "subtitleEn": "Today's goal. Check how to do it. Like this? Yes, that's right! / Not quite.",
             "gesture": "point",
             "slide": {
               "title": "Goal",
@@ -1808,14 +1812,14 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru says, Oh, okay. Like this? Is this right? And I say, Yes, that's right! Good job. The arm is tight now. Riko says, Let's recheck the other arm, too.",
+            "say": "Haru says, Oh, OK. Like this? Is this right? And I say, Yes, that's right! Good job. The arm is tight now. Riko says, Let's recheck the other arm, too.",
             "subtitleJa": "ハルくん「あ、そうか。こんな かんじ？ これで あってる？」 わたし「うん、その とおり！ よく できました。」 うでが しっかり したよ。リコちゃん「もう かたほうの うでも たしかめよう。」",
-            "subtitleEn": "Haru says, Oh, okay. Like this? Is this right? And I say, Yes, that's right! Good job. The arm is tight now. Riko says, Let's recheck the other arm, too.",
+            "subtitleEn": "Haru says, Oh, OK. Like this? Is this right? And I say, Yes, that's right! Good job. The arm is tight now. Riko says, Let's recheck the other arm, too.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "Oh, okay. Like this? Is this right?",
+                "Oh, OK. Like this? Is this right?",
                 "Yes, that's right! Good job.",
                 "Let's recheck the other arm, too."
               ],
@@ -1825,9 +1829,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Not sure? Just ask! Like this? Is this right? Mistakes are okay. Your friend can say, Not quite, and help you. Asking is smart!",
+            "say": "Here's the point. Not sure? Just ask! Like this? Is this right? Mistakes are OK. Your friend can say, Not quite, and help you. Asking is smart!",
             "subtitleJa": "ポイント。わからない？ きいて みよう！ Like this? Is this right? まちがえても だいじょうぶ。ともだちが Not quite と いって たすけて くれるよ。きくのは かしこい こと！",
-            "subtitleEn": "Here's the point. Not sure? Just ask! Like this? Is this right? Mistakes are okay. Your friend can say, Not quite, and help you. Asking is smart!",
+            "subtitleEn": "Here's the point. Not sure? Just ask! Like this? Is this right? Mistakes are OK. Your friend can say, Not quite, and help you. Asking is smart!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -1843,9 +1847,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Ree, one more time. Check, recheck. Try, retry. Fold, refold. Wind, rewind. Rewind sounds like ree-wined.",
-            "subtitleJa": "おとの じかん！ re は「もう いちど」。check → recheck、try → retry、fold → refold、wind → rewind。rewind は「リーワインド」。",
-            "subtitleEn": "Sound time! Ree, one more time. Check, recheck. Try, retry. Fold, refold. Wind, rewind. Rewind sounds like ree-wined.",
+            "say": "Sound time! Ree means one more time. Check, recheck. Try, retry. Fold, refold. And rewind. It sounds like ree-wined.",
+            "subtitleJa": "おとの じかん！ re は「もう いちど」。check → recheck、try → retry、fold → refold。そして rewind。rewind は「リーワインド」。",
+            "subtitleEn": "Sound time! Ree means one more time. Check, recheck. Try, retry. Fold, refold. And rewind. It sounds like ree-wined.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1883,9 +1887,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Hold the screw. Pinch it with two fingers. Now, Turn it to the right. Twist, twist!",
+            "say": "Let's move! Hold the screw. Pinch it with two fingers. Now, turn it to the right. Twist, twist!",
             "subtitleJa": "からだを うごかそう！ ネジを もって。2ほんの ゆびで つまんで。つぎは みぎに まわして。くるっ、くるっ！",
-            "subtitleEn": "Let's move! Hold the screw. Pinch it with two fingers. Now, Turn it to the right. Twist, twist!",
+            "subtitleEn": "Let's move! Hold the screw. Pinch it with two fingers. Now, turn it to the right. Twist, twist!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -1900,9 +1904,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Oops! Turn it the other way. To the left. Now, Show me. Like this? Hold your hands out!",
+            "say": "Oops! Turn it the other way. To the left. Now, show me. Like this? Hold your hands out!",
             "subtitleJa": "おっと！ はんたいに まわして。ひだりへ。つぎは みせて。こんな かんじ？ てを まえに だして！",
-            "subtitleEn": "Oops! Turn it the other way. To the left. Now, Show me. Like this? Hold your hands out!",
+            "subtitleEn": "Oops! Turn it the other way. To the left. Now, show me. Like this? Hold your hands out!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -2053,6 +2057,7 @@
     {
       "lessonNo": 545,
       "world": 19,
+      "reviewed": "run9",
       "title": "Tool Quiz",
       "titleJa": "どうぐ あてクイズ",
       "school": {
@@ -2144,7 +2149,7 @@
           "emoji": "🖌️"
         }
       ],
-      "teacherScript": "Hello, everyone! It's quiz time! I have a mystery tool in this box. Listen to my hint. It's used for opening cans. What is it? A can opener! Say it with me. It's used for opening cans. A can opener! Wonderful! You can ask questions, too. Is it used for cutting? No, it isn't. Is it used for drawing lines? Yes, it is! It's a ruler. ヒントは used for、しつもんは Is it used for ～? だよ。 Next hint. It's used for sticking paper together. Glue! Next. It's used for painting pictures. A brush! Now, phonics review. Remake. Rewrite. Refill. Rewind. Make it again, remake. Write it again, rewrite. Remember, re means again. Now, it's your turn. Think of a tool and give me a hint. It's used for what?",
+      "teacherScript": "Hello, everyone! It's quiz time! I have a mystery tool in this box. Listen to my hint. It's used for opening cans. What is it? A can opener! Say it with me. It's used for opening cans. A can opener! Wonderful! You can ask questions, too. Is it used for cutting? No, it isn't. Is it used for drawing lines? Yes, it is! It's a ruler. ヒントは used for、しつもんは Is it used for ～? だよ。 Next hint. It's used for sticking paper together. Glue! Next. It's used for painting pictures. A brush! Now, phonics review. Remake. Rewrite. Refill. Rewind. Make it again, remake. Write it again, rewrite. Remember, re means again. Now, it's your turn. Think of a tool and give me a hint. It's used for... Tell me!",
       "conversation": {
         "scene": "A tool guessing quiz in the workshop",
         "sceneJa": "工房で、どうぐ あてクイズ",
@@ -2166,7 +2171,7 @@
           },
           {
             "speaker": "Riko",
-            "en": "Okay. My tool is used for drawing straight lines.",
+            "en": "OK. My tool is used for drawing straight lines.",
             "ja": "よし。わたしの どうぐは まっすぐな せんを ひく ために つかうよ。"
           },
           {
@@ -2187,7 +2192,7 @@
         ],
         "aiTask": {
           "goalJa": "どうぐ あてクイズ。It's used for ～ing. で ヒントを だしたり、Is it used for ～ing? と きいたり しよう",
-          "starterEn": "Hi! I'm Ms. Emma. Let's play a tool quiz! Here's my hint. It's used for cutting paper. What is it? Then you give me a quiz!",
+          "starterEn": "Hi! I'm Haru. Let's play a tool quiz! Here's my hint. It's used for cutting paper. What is it? Then you give me a quiz!",
           "targetExpressions": [
             "It's used for ～ing.",
             "Is it used for ～ing?",
@@ -2327,7 +2332,7 @@
             "slide": {
               "title": "Talk",
               "items": [
-                "Okay. My tool is used for drawing straight lines.",
+                "OK. My tool is used for drawing straight lines.",
                 "Is it used for cutting?",
                 "No, it isn't. Here's another hint. It's long and flat.",
                 "A ruler!"
@@ -2338,9 +2343,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. The hint is, It's used for, plus I N G. The question starts with Is it. Is it used for cutting? Yes, it is. Or, No, it isn't.",
-            "subtitleJa": "ポイント。ヒントは It's used for と ing。しつもんは Is it で はじめる。Is it used for cutting? こたえは Yes, it is. か No, it isn't.。",
-            "subtitleEn": "Here's the point. The hint is, It's used for, plus I N G. The question starts with Is it. Is it used for cutting? Yes, it is. Or, No, it isn't.",
+            "say": "Here's the point. The hint is, It's used for, plus I N G. The question starts with Is it. Is it used for cutting? Yes, it is. Or no, it isn't.",
+            "subtitleJa": "ポイント。ヒントは It's used for と ing。しつもんは Is it で はじめる。Is it used for cutting? こたえは Yes, it is. か No, it isn't.",
+            "subtitleEn": "Here's the point. The hint is, It's used for, plus I N G. The question starts with Is it. Is it used for cutting? Yes, it is. / No, it isn't.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -2354,9 +2359,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Ree means again. Make, remake. Write, rewrite. Fill, refill. Wind, rewind. We learned them all!",
-            "subtitleJa": "おとの ふりかえり！ re は「もう いちど」。make → remake、write → rewrite、fill → refill、wind → rewind。ぜんぶ ならったね！",
-            "subtitleEn": "Sound review! Ree means again. Make, remake. Write, rewrite. Fill, refill. Wind, rewind. We learned them all!",
+            "say": "Sound review! Ree means again. Make, remake. Write, rewrite. Fill, refill. And rewind. We learned them all!",
+            "subtitleJa": "おとの ふりかえり！ re は「もう いちど」。make → remake、write → rewrite、fill → refill、そして rewind。ぜんぶ ならったね！",
+            "subtitleEn": "Sound review! Ree means again. Make, remake. Write, rewrite. Fill, refill. And rewind. We learned them all!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -2394,9 +2399,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Close your eyes. No peeking! Now, Touch the mystery box. Hmm, it's long and flat.",
+            "say": "Let's move! Close your eyes. No peeking! Now, touch the mystery box. Hmm, it's long and flat.",
             "subtitleJa": "からだを うごかそう！ めを とじて。のぞいちゃ だめ！ つぎは ふしぎな はこを さわって。うーん、ながくて たいら。",
-            "subtitleEn": "Let's move! Close your eyes. No peeking! Now, Touch the mystery box. Hmm, it's long and flat.",
+            "subtitleEn": "Let's move! Close your eyes. No peeking! Now, touch the mystery box. Hmm, it's long and flat.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -2411,9 +2416,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "I know! Raise your hand. High, high! Now, Guess the tool! Is it a ruler? Ding, ding!",
+            "say": "I know! Raise your hand. High, high! Now, guess the tool! Is it a ruler? Ding, ding!",
             "subtitleJa": "わかった！ てを あげて。たかく、たかく！ つぎは どうぐを あてて！ じょうぎ かな？ ピンポン！",
-            "subtitleEn": "I know! Raise your hand. High, high! Now, Guess the tool! Is it a ruler? Ding, ding!",
+            "subtitleEn": "I know! Raise your hand. High, high! Now, guess the tool! Is it a ruler? Ding, ding!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -2563,6 +2568,7 @@
     {
       "lessonNo": 546,
       "world": 19,
+      "reviewed": "run9",
       "title": "Let's Make a Paper Plane",
       "titleJa": "かみひこうきを つくろう",
       "school": {
@@ -2654,7 +2660,7 @@
           "emoji": "🛩️"
         }
       ],
-      "teacherScript": "Hi, everyone! Let's make a paper plane today. I'll tell you the steps. First, fold the paper in half. Say it with me. First, fold the paper in half. Great! Then, fold the corners down. Then, fold the wings. Hold it here and throw it gently. Whoosh! さいしょの ステップは First、つぎは Then で いうよ。 Let's practice. How do you make toast? First, put the bread in the toaster. Then, wait. How do you make a smoothie? First, put fruit in the mixer. Then, push the button. Now, phonics. Opener. Mixer. Heater. Toaster. Open, opener. Mix, mixer. Heat, heater. Toast, toaster. Many tools and machines end in e r. First, turn on the heater. Then, wait. It gets warm! Now, tell me how to wash your hands. First, what? Then, what?",
+      "teacherScript": "Hi, everyone! Let's make a paper plane today. I'll tell you the steps. First, fold the paper in half. Say it with me. First, fold the paper in half. Great! Then, fold the corners down. Then, fold the wings. Hold it here and throw it gently. Whoosh! さいしょの ステップは First、つぎは Then で いうよ。 Let's practice. How do you make toast? First, put the bread in the toaster. Then, wait. How do you make a cake? First, put eggs and flour in the mixer. Then, push the button. Now, phonics. Opener. Mixer. Heater. Toaster. Open, opener. Mix, mixer. Heat, heater. Toast, toaster. Many tools and machines end in e r. First, turn on the heater. Then, wait. It gets warm! Now, tell me how to wash your hands. First, what? Then, what?",
       "conversation": {
         "scene": "Making paper planes at the workbench",
         "sceneJa": "工房の さぎょうだいで、かみひこうきを つくる",
@@ -2697,7 +2703,7 @@
         ],
         "aiTask": {
           "goalJa": "かみひこうきの つくりかたを First, ～. / Then, ～. で じゅんばんに せつめいしよう",
-          "starterEn": "Hi! I'm Ms. Emma. I want to make a paper plane, but I forgot how. Can you tell me the steps? What do I do first?",
+          "starterEn": "Hi! I'm Riko. I want to make a paper plane, but I forgot how. Can you tell me the steps? What do I do first?",
           "targetExpressions": [
             "First, fold the paper in half.",
             "Then, fold the corners down.",
@@ -2905,9 +2911,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Fold the paper in half. Press it flat. Now, Fold the corners down. Make a point!",
+            "say": "Let's move! Fold the paper in half. Press it flat. Now, fold the corners down. Make a point!",
             "subtitleJa": "からだを うごかそう！ かみを はんぶんに おって。ぎゅっと おさえて。つぎは かどを したに おって。とがらせて！",
-            "subtitleEn": "Let's move! Fold the paper in half. Press it flat. Now, Fold the corners down. Make a point!",
+            "subtitleEn": "Let's move! Fold the paper in half. Press it flat. Now, fold the corners down. Make a point!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -2922,9 +2928,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Hold it here. Pinch the middle. Now, Throw it gently. Not at a friend's face. Up to the sky!",
+            "say": "Hold it here. Pinch the middle. Now, throw it gently. Not at a friend's face. Up to the sky!",
             "subtitleJa": "ここを もって。まんなかを つまんで。つぎは そっと なげて。ともだちの かおには むけないでね。そらに むかって！",
-            "subtitleEn": "Hold it here. Pinch the middle. Now, Throw it gently. Not at a friend's face. Up to the sky!",
+            "subtitleEn": "Hold it here. Pinch the middle. Now, throw it gently. Not at a friend's face. Up to the sky!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -3040,9 +3046,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! First, fold the paper in half. You can't throw flat paper. Whoosh, well done!",
+            "say": "It's B! First, fold the paper in half. Flat paper can't fly. Whoosh, well done!",
             "subtitleJa": "こたえは B！ まず、かみを はんぶんに おる。たいらな かみは とばないもんね。ビューン、よく できました！",
-            "subtitleEn": "It's B! First, fold the paper in half. You can't throw flat paper. Whoosh, well done!",
+            "subtitleEn": "It's B! First, fold the paper in half. Flat paper can't fly. Whoosh, well done!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -3075,6 +3081,7 @@
     {
       "lessonNo": 547,
       "world": 19,
+      "reviewed": "run9",
       "title": "Next, Cut Along the Line",
       "titleJa": "つぎに、せんに そって きって",
       "school": {
@@ -3166,7 +3173,7 @@
           "emoji": "🧽"
         }
       ],
-      "teacherScript": "Hello, everyone! Today we are making a paper robot. Let's follow the steps. First, draw a line with a ruler. Next, cut along the line. Say it with me. Next, cut along the line. Super! Then, glue the two parts together. First, next, then. These words make your steps easy to follow. Next は「つぎに」。First、Next、Then の じゅんばんで いうよ。 Remember, use scissors slowly and carefully. Let's practice. How do you make a sandwich? First, get two pieces of bread. Next, put cheese on one piece. Then, put the other piece on top. Now, phonics. Eraser. Stapler. Cutter. Scanner. Erase, eraser. Staple, stapler. Cut, cutter. Scan, scanner. Look at the spelling changes. Then, staple the papers with a stapler. Glue sticks are easy to use. Now, tell me how you get ready for school. First, next, then!",
+      "teacherScript": "Hello, everyone! Today we are making a paper robot. Let's follow the steps. First, draw a line with a ruler. Next, cut along the line. Say it with me. Next, cut along the line. Super! Then, glue the two parts together. First, next, then. These words make your steps easy to follow. Next は「つぎに」。First、Next、Then の じゅんばんで いうよ。 Remember, use scissors slowly and carefully. Let's practice. How do you make a sandwich? First, get two pieces of bread. Next, put cheese on one piece. Then, put the other piece on top. Now, phonics. Eraser. Stapler. Cutter. Scanner. Erase, eraser. Staple, stapler. Cut, cutter. Scan, scanner. Look at the spelling changes. A mistake? Use an eraser. Lots of papers? Use a stapler. Now, tell me how you get ready for school. First, next, then!",
       "conversation": {
         "scene": "Making a paper robot craft",
         "sceneJa": "ペーパークラフトの ロボットを つくる",
@@ -3193,7 +3200,7 @@
           },
           {
             "speaker": "Ms. Emma",
-            "en": "That's okay. Cut slowly. Here's another piece.",
+            "en": "That's OK. Cut slowly. Here's another piece.",
             "ja": "だいじょうぶ。ゆっくり きってね。はい、もう 1まい。"
           },
           {
@@ -3209,7 +3216,7 @@
         ],
         "aiTask": {
           "goalJa": "ペーパークラフトの つくりかたを First, ～. / Next, ～. / Then, ～. で せつめいしよう",
-          "starterEn": "Hi! I'm Ms. Emma. Let's make a paper crown! I have paper, scissors and glue. What do we do first? And next?",
+          "starterEn": "Hi! I'm Kiko. Let's make a paper crown! I have paper, scissors and glue. What do we do first? And next?",
           "targetExpressions": [
             "First, ～.",
             "Next, cut along the line.",
@@ -3230,9 +3237,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Hello, makers! Riko has a big idea today. Paper, a ruler, scissors and glue. She wants to build a paper robot! Beep, boop. Shall we help?",
+            "say": "Hello, makers! Riko has a big idea today. Paper, a ruler, scissors and glue. She wants to build a paper robot! Beep, boop. Can we help her?",
             "subtitleJa": "こんにちは、つくる なかまたち！ きょうは リコちゃんに すごい アイデアが あるの。かみ、じょうぎ、はさみ、のり。ペーパーロボットを つくりたいんだって！ ピッ、ポッ。てつだおうか？",
-            "subtitleEn": "Hello, makers! Riko has a big idea today. Paper, a ruler, scissors and glue. She wants to build a paper robot! Beep, boop. Shall we help?",
+            "subtitleEn": "Hello, makers! Riko has a big idea today. Paper, a ruler, scissors and glue. She wants to build a paper robot! Beep, boop. Can we help her?",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -3262,9 +3269,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Line. Long and thin. Draw it from here, to there. Line!",
+            "say": "Line. Long and thin. Draw it from here to there. Line!",
             "subtitleJa": "line。ほそくて ながい。ここから、あそこまで ひくよ。line！",
-            "subtitleEn": "Line. Long and thin. Draw it from here, to there. Line!",
+            "subtitleEn": "Line. Long and thin. Draw it from here to there. Line!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -3343,15 +3350,15 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo says, Oops! I cut too fast. It's not straight. I say, That's okay. Cut slowly. Here's another piece. Riko says, Then, glue the two parts together. Kiko claps. Look! Our robot is standing up!",
+            "say": "Birimo says, Oops! I cut too fast. It's not straight. I say, That's OK. Cut slowly. Here's another piece. Riko says, Then, glue the two parts together. Kiko claps. Look! Our robot is standing up!",
             "subtitleJa": "ビリモ「おっと！ はやく きりすぎた。まっすぐ じゃない。」 わたし「だいじょうぶ。ゆっくり きってね。はい、もう 1まい。」 リコちゃん「それから、2つの パーツを のりで くっつけて。」 キコちゃんが はくしゅ。「みて！ ロボットが たったよ！」",
-            "subtitleEn": "Birimo says, Oops! I cut too fast. It's not straight. I say, That's okay. Cut slowly. Here's another piece. Riko says, Then, glue the two parts together. Kiko claps. Look! Our robot is standing up!",
+            "subtitleEn": "Birimo says, Oops! I cut too fast. It's not straight. I say, That's OK. Cut slowly. Here's another piece. Riko says, Then, glue the two parts together. Kiko claps. Look! Our robot is standing up!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "Oops! I cut too fast. It's not straight.",
-                "That's okay. Cut slowly. Here's another piece.",
+                "That's OK. Cut slowly. Here's another piece.",
                 "Then, glue the two parts together.",
                 "Look! Our robot is standing up!"
               ],
@@ -3378,9 +3385,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Er at the end means a tool. Erase, eraser. Staple, stapler. Cut, cutter, with two Ts. Scan, scanner, with two Ns.",
-            "subtitleJa": "おとの じかん！ おわりの er は どうぐの しるし。erase → eraser、staple → stapler。cut → cutter は t が 2つ。scan → scanner は n が 2つ。",
-            "subtitleEn": "Sound time! Er at the end means a tool. Erase, eraser. Staple, stapler. Cut, cutter, with two Ts. Scan, scanner, with two Ns.",
+            "say": "Sound time! Er at the end can mean a tool. Erase, eraser. Staple, stapler. Cut, cutter, with two Ts. Scan, scanner, with two Ns.",
+            "subtitleJa": "おとの じかん！ おわりの er は どうぐの しるしに なる ことが あるよ。erase → eraser、staple → stapler。cut → cutter は t が 2つ。scan → scanner は n が 2つ。",
+            "subtitleEn": "Sound time! Er at the end can mean a tool. Erase, eraser. Staple, stapler. Cut, cutter, with two Ts. Scan, scanner, with two Ns.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -3418,9 +3425,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Draw a line with a ruler. Nice and straight. Now, Cut along the line. Slowly, slowly. Snip!",
+            "say": "Let's move! Draw a line with a ruler. Nice and straight. Now, cut along the line. Slowly, slowly. Snip!",
             "subtitleJa": "からだを うごかそう！ じょうぎで せんを ひいて。まっすぐ きれいに。つぎは せんに そって きって。ゆっくり、ゆっくり。チョキン！",
-            "subtitleEn": "Let's move! Draw a line with a ruler. Nice and straight. Now, Cut along the line. Slowly, slowly. Snip!",
+            "subtitleEn": "Let's move! Draw a line with a ruler. Nice and straight. Now, cut along the line. Slowly, slowly. Snip!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -3435,9 +3442,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Glue the parts together. Press your hands. Now, Wait ten seconds. Count with me. One, two, three...",
+            "say": "Glue the parts together. Press your hands together. Now, wait ten seconds. Count with me. One, two, three...",
             "subtitleJa": "パーツを のりで くっつけて。てを ぎゅっと あわせて。つぎは 10びょう まって。いっしょに かぞえよう。1、2、3…",
-            "subtitleEn": "Glue the parts together. Press your hands. Now, Wait ten seconds. Count with me. One, two, three...",
+            "subtitleEn": "Glue the parts together. Press your hands together. Now, wait ten seconds. Count with me. One, two, three...",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -3587,6 +3594,7 @@
     {
       "lessonNo": 548,
       "world": 19,
+      "reviewed": "run9",
       "title": "Finally, It Works!",
       "titleJa": "ついに、うごいた！",
       "school": {
@@ -3721,7 +3729,7 @@
         ],
         "aiTask": {
           "goalJa": "からくり人形の しあげを First / Next / Then / Finally で せつめいして、うごいたら Finally, it works! と いおう",
-          "starterEn": "Hi! I'm Ms. Emma. Our karakuri doll needs the last steps. Can you tell me the steps in order? What do we do finally?",
+          "starterEn": "Hi! I'm Birimo. Our karakuri doll needs the last steps. Can you tell me the steps in order? What's the last step?",
           "targetExpressions": [
             "First, put the gears in.",
             "Then, wind it up.",
@@ -3790,9 +3798,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Spring. A curly metal coil. Push it down and, boing! Spring!",
+            "say": "Spring. A curly metal coil. Push it down, and boing! Spring!",
             "subtitleJa": "spring。くるくる まいた きんぞく。おして はなすと、ボヨーン！ spring！",
-            "subtitleEn": "Spring. A curly metal coil. Push it down and, boing! Spring!",
+            "subtitleEn": "Spring. A curly metal coil. Push it down, and boing! Spring!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -3912,9 +3920,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Your turn. Elevator. Calculator. Projector. Motor. Clap the beats. El, e, va, tor. Elevator!",
-            "subtitleJa": "あなたの ばん。elevator、calculator、projector、motor。てを たたいて。el、e、va、tor。elevator！",
-            "subtitleEn": "Your turn. Elevator. Calculator. Projector. Motor. Clap the beats. El, e, va, tor. Elevator!",
+            "say": "Your turn. Elevator. Calculator. Projector. Motor. Clap the beats. El-e-va-tor. Elevator!",
+            "subtitleJa": "あなたの ばん。elevator、calculator、projector、motor。てを たたいて。el-e-va-tor。elevator！",
+            "subtitleEn": "Your turn. Elevator. Calculator. Projector. Motor. Clap the beats. El-e-va-tor. Elevator!",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -3931,9 +3939,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Put the gears in. Click them in place. Now, Wind it up. Turn, turn, turn the little key!",
+            "say": "Let's move! Put the gears in. Click them in place. Now, wind it up. Turn, turn, turn the little key!",
             "subtitleJa": "からだを うごかそう！ はぐるまを いれて。カチッと はめて。つぎは ネジを まいて。ちいさな かぎを くるくる くるくる！",
-            "subtitleEn": "Let's move! Put the gears in. Click them in place. Now, Wind it up. Turn, turn, turn the little key!",
+            "subtitleEn": "Let's move! Put the gears in. Click them in place. Now, wind it up. Turn, turn, turn the little key!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -3948,9 +3956,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Three, two, one, Let go! Hands open! Now you are the doll. Bow like a doll. Stiff and slow. Click, click, click.",
+            "say": "Three, two, one, let go! Hands open! Now you are the doll. Bow like a doll. Stiff and slow. Click, click, click.",
             "subtitleJa": "3、2、1、てを はなして！ てを ぱっと ひらいて！ こんどは みんなが にんぎょう。にんぎょうの ように おじぎ。カクカク ゆっくり。カチ、カチ、カチ。",
-            "subtitleEn": "Three, two, one, Let go! Hands open! Now you are the doll. Bow like a doll. Stiff and slow. Click, click, click.",
+            "subtitleEn": "Three, two, one, let go! Hands open! Now you are the doll. Bow like a doll. Stiff and slow. Click, click, click.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -4032,9 +4040,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Think of something you finished after trying hard. A puzzle? A drawing? Say, Finally, it works! Or tell me your own last step.",
-            "subtitleJa": "あなたの ばん！ がんばって やりとげた ことを おもいだして。パズル？ え？ Finally, it works! と いおう。じぶんの さいごの ステップでも いいよ。",
-            "subtitleEn": "Your turn! Think of something you finished after trying hard. A puzzle? A drawing? Say, Finally, it works! Or tell me your own last step.",
+            "say": "Your turn! Think of something you made or fixed after trying hard. A kite? A toy car? Say, Finally, it works! Or tell me your own last step.",
+            "subtitleJa": "あなたの ばん！ がんばって つくったり なおしたり した ものを おもいだして。たこ？ おもちゃの くるま？ Finally, it works! と いおう。じぶんの さいごの ステップでも いいよ。",
+            "subtitleEn": "Your turn! Think of something you made or fixed after trying hard. A kite? A toy car? Say, Finally, it works! Or tell me your own last step.",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -4099,6 +4107,7 @@
     {
       "lessonNo": 549,
       "world": 19,
+      "reviewed": "run9",
       "title": "Let's Try Again",
       "titleJa": "もう いちど やってみよう",
       "school": {
@@ -4191,7 +4200,7 @@
           "emoji": "👩‍🔬"
         }
       ],
-      "teacherScript": "Hello, everyone! We made a wind-up car yesterday. Let's try it. Wind it up and let go. Oh no! It didn't work. Let's remake it. Say it with me. It didn't work. Let's remake it. Good! When something goes wrong, we ask, what went wrong? Look. The wheels are too tight. Let's try again. Don't give up! しっぱいしても だいじょうぶ。Let's try again! で もう いちど。 Every inventor makes mistakes. That's how we learn. Let's practice. Your tower fell down. It didn't work. Let's build it again. Your drawing has a mistake. Let's redo it. Now, phonics. Printer. Timer. Tractor. Inventor. Printer and timer end in e r. Tractor and inventor end in o r. Mistakes help us. Now, tell me. When did something not work for you? What did you do?",
+      "teacherScript": "Hello, everyone! We made a wind-up car yesterday. Let's try it. Wind it up and let go. Oh no! It didn't work. Let's remake it. Say it with me. It didn't work. Let's remake it. Good! When something goes wrong, we ask, What went wrong? Look. The wheels are too tight. Let's try again. Don't give up! しっぱいしても だいじょうぶ。Let's try again! で もう いちど。 Every inventor makes mistakes. That's how we learn. Let's practice. Your tower fell down. It didn't work. Let's build it again. Your drawing has a mistake. Let's redo it. Now, phonics. Printer. Timer. Tractor. Inventor. Printer and timer end in e r. Tractor and inventor end in o r. Mistakes help us. Now, tell me. When did something not work for you? What did you do?",
       "conversation": {
         "scene": "The wind-up car doesn't move, so they remake it",
         "sceneJa": "しっぱいして、つくりなおす",
@@ -4234,7 +4243,7 @@
         ],
         "aiTask": {
           "goalJa": "うまく いかなかった ことを It didn't work. で つたえて、What went wrong? / Let's try again. で もう いちど ちょうせんしよう",
-          "starterEn": "Hi! I'm Ms. Emma. Oh no, my paper boat sank in the water! It didn't work. What should I do?",
+          "starterEn": "Hi! I'm Haru. Oh no, my paper boat sank in the water! It didn't work. What should I do?",
           "targetExpressions": [
             "It didn't work.",
             "What went wrong?",
@@ -4461,9 +4470,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Check the wheels. Bend down and look closely. Found it! Now, Try again! Make a strong fist!",
+            "say": "Check the wheels. Bend down and look closely. Found it! Now, try again! Make a strong fist!",
             "subtitleJa": "タイヤを しらべて。かがんで よく みて。みつけた！ つぎは もう いちど！ ぎゅっと こぶしを にぎって！",
-            "subtitleEn": "Check the wheels. Bend down and look closely. Found it! Now, Try again! Make a strong fist!",
+            "subtitleEn": "Check the wheels. Bend down and look closely. Found it! Now, try again! Make a strong fist!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -4614,6 +4623,7 @@
     {
       "lessonNo": 550,
       "world": 19,
+      "reviewed": "run9",
       "title": "How-To Show",
       "titleJa": "つくりかた はっぴょうかい",
       "school": {
@@ -4706,7 +4716,7 @@
           "emoji": "🎤"
         }
       ],
-      "teacherScript": "Hi, everyone! Welcome to the How-To Show! Today, I'll show you how to make a pinwheel. Listen to the four steps. First, cut. Next, fold. Then, glue. Finally, play! Say it with me. First, cut. Next, fold. Then, glue. Finally, play! Great! Now, the long version. First, cut a square. Next, cut the corners. Then, fold them to the center and glue them. Finally, put it on a stick and blow! 4つの ステップを じゅんばんの ことばで いえたら はっぴょう できるよ。 When you finish, say, thank you for watching! Now, phonics review. Opener. Cutter. Elevator. Inventor. E r, e r, o r, o r. Practice at home first. Then, show your family. Remember to speak slowly and show each step with your hands. Now, it's your turn. Choose something easy, like making a rice ball. Tell me the four steps!",
+      "teacherScript": "Hi, everyone! Welcome to the How-To Show! Today, I'll show you how to make a pinwheel. Listen to the four steps. First, cut. Next, fold. Then, glue. Finally, play! Say it with me. First, cut. Next, fold. Then, glue. Finally, play! Great! Now, the long version. First, cut a square. Next, make a cut at each corner. Then, fold them to the center and glue them. Finally, put it on a stick and blow! 4つの ステップを じゅんばんの ことばで いえたら はっぴょう できるよ。 When you finish, say, Thank you for watching! Now, phonics review. Opener. Cutter. Elevator. Inventor. E r, e r, o r, o r. Practice at home first. Then, show your family. Remember to speak slowly and show each step with your hands. Now, it's your turn. Choose something easy, like making a rice ball. Tell me the four steps!",
       "conversation": {
         "scene": "The How-To Show in the workshop",
         "sceneJa": "工房で、つくりかたの はっぴょうかい",
@@ -4723,7 +4733,7 @@
           },
           {
             "speaker": "Riko",
-            "en": "First, cut a square. Next, cut the corners.",
+            "en": "First, cut a square. Next, make a cut at each corner.",
             "ja": "まず、しかくに きります。つぎに、かどに きりこみを いれます。"
           },
           {
@@ -4749,7 +4759,7 @@
         ],
         "aiTask": {
           "goalJa": "かんたんな ものの つくりかたを First / Next / Then / Finally の 4つの ステップで はっぴょうしよう。ほんとうの なまえは いわなくて OK",
-          "starterEn": "Hi! I'm Ms. Emma. Welcome to the How-To Show! What will you show us today? Please tell us the steps.",
+          "starterEn": "Hi! I'm Riko. Welcome to the How-To Show! What will you show us today? Please tell us the steps.",
           "targetExpressions": [
             "Today, I'll show you how to make ～.",
             "First, ～. Next, ～.",
@@ -4850,16 +4860,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Let's listen. I say, Welcome to the How-To Show! Who's first? Riko jumps up. Me! Today, I'll show you how to make a pinwheel. First, cut a square. Next, cut the corners.",
+            "say": "Let's listen. I say, Welcome to the How-To Show! Who's first? Riko jumps up. Me! Today, I'll show you how to make a pinwheel. First, cut a square. Next, make a cut at each corner.",
             "subtitleJa": "きいてね。わたし「つくりかた はっぴょうかいへ ようこそ！ だれから？」 リコちゃんが たちあがって「わたし！ きょうは かざぐるまの つくりかたを みせます。まず、しかくに きります。つぎに、かどに きりこみを いれます。」",
-            "subtitleEn": "Let's listen. I say, Welcome to the How-To Show! Who's first? Riko jumps up. Me! Today, I'll show you how to make a pinwheel. First, cut a square. Next, cut the corners.",
+            "subtitleEn": "Let's listen. I say, Welcome to the How-To Show! Who's first? Riko jumps up. Me! Today, I'll show you how to make a pinwheel. First, cut a square. Next, make a cut at each corner.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "Welcome to the How-To Show! Who's first?",
                 "Me! Today, I'll show you how to make a pinwheel.",
-                "First, cut a square. Next, cut the corners."
+                "First, cut a square. Next, make a cut at each corner."
               ],
               "emoji": "✂️"
             }
@@ -4867,9 +4877,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko says, Then, fold them to the middle. Finally, put it on a stick and blow! Birimo says, It's spinning! Can I try? Riko says, Sure! Thank you for watching! Everyone claps.",
+            "say": "Riko says, Then, fold them to the center. Finally, put it on a stick and blow! Birimo says, It's spinning! Can I try? Riko says, Sure! Thank you for watching! Everyone claps.",
             "subtitleJa": "リコちゃん「それから、まんなかに おります。さいごに、ぼうに つけて ふきます！」 ビリモ「まわってる！ やって いい？」 リコちゃん「もちろん！ みてくれて ありがとう！」 みんなで はくしゅ。",
-            "subtitleEn": "Riko says, Then, fold them to the middle. Finally, put it on a stick and blow! Birimo says, It's spinning! Can I try? Riko says, Sure! Thank you for watching! Everyone claps.",
+            "subtitleEn": "Riko says, Then, fold them to the center. Finally, put it on a stick and blow! Birimo says, It's spinning! Can I try? Riko says, Sure! Thank you for watching! Everyone claps.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -4942,9 +4952,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Make a pinwheel with your body. Cut a square. Snip, snip. Then, fold the corners to the middle. Bring your fingers together!",
+            "say": "Let's move! Make a pinwheel with your body. Cut a square. Snip, snip. Then, fold the corners to the center. Bring your fingers together!",
             "subtitleJa": "からだを うごかそう！ からだで かざぐるまを つくろう。しかくに きって。チョキ、チョキ。それから かどを まんなかに おって。ゆびを あつめて！",
-            "subtitleEn": "Let's move! Make a pinwheel with your body. Cut a square. Snip, snip. Then, fold the corners to the middle. Bring your fingers together!",
+            "subtitleEn": "Let's move! Make a pinwheel with your body. Cut a square. Snip, snip. Then, fold the corners to the center. Bring your fingers together!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -4958,9 +4968,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Put it on a stick. Hold it up high. Now, Blow! Whoooo! Look, it's spinning!",
+            "say": "Put it on a stick. Hold it up high. Now, blow! Whoooo! Look, it's spinning!",
             "subtitleJa": "ぼうに つけて。たかく もって。つぎは ふーっと ふいて！ フーー！ みて、まわってる！",
-            "subtitleEn": "Put it on a stick. Hold it up high. Now, Blow! Whoooo! Look, it's spinning!",
+            "subtitleEn": "Put it on a stick. Hold it up high. Now, blow! Whoooo! Look, it's spinning!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -5041,9 +5051,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! You're on the stage. Pick something easy, like a paper hat. Today, I'll show you how to make... First... Next... Then... Finally...",
+            "say": "Your turn! You're on stage. Pick something easy, like a paper hat. Today, I'll show you how to make... First... Next... Then... Finally...",
             "subtitleJa": "あなたの ばん！ ステージに たったよ。かみの ぼうし みたいな かんたんな ものを えらんで。Today, I'll show you how to make… First… Next… Then… Finally…",
-            "subtitleEn": "Your turn! You're on the stage. Pick something easy, like a paper hat. Today, I'll show you how to make... First... Next... Then... Finally...",
+            "subtitleEn": "Your turn! You're on stage. Pick something easy, like a paper hat. Today, I'll show you how to make... First... Next... Then... Finally...",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -5109,6 +5119,7 @@
     {
       "lessonNo": 551,
       "world": 19,
+      "reviewed": "run9",
       "title": "You Have to Wear Goggles",
       "titleJa": "ゴーグルを つけなければ ならない",
       "school": {
@@ -5229,7 +5240,7 @@
           },
           {
             "speaker": "Riko",
-            "en": "Okay! My hair is tied back now.",
+            "en": "OK! My hair is tied back now.",
             "ja": "わかった！かみ むすんだよ。"
           },
           {
@@ -5245,7 +5256,7 @@
         ],
         "aiTask": {
           "goalJa": "工房の あんぜんの きまりを You have to ～. で つたえよう。Do I have to ～? と きかれたら Yes, you do. で こたえよう",
-          "starterEn": "Hi! I'm Ms. Emma. I'm new at this workshop. What do I have to do before I use the machines?",
+          "starterEn": "Hi! I'm Riko. Let's pretend I'm new here. What do I have to do first?",
           "targetExpressions": [
             "You have to wear goggles.",
             "You have to wear gloves.",
@@ -5282,9 +5293,9 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Tell the workshop rules. You have to wear goggles. Do I have to wear gloves? Yes, you do. しなきゃ は have to.",
+            "say": "Today's goal. Tell your friends the workshop rules. You have to wear goggles. Do I have to wear gloves? Yes, you do. しなきゃ は have to.",
             "subtitleJa": "きょうの ゴール。こうぼうの きまりを つたえよう。You have to wear goggles。Do I have to wear gloves? Yes, you do。「しなきゃ」は have to。",
-            "subtitleEn": "Today's goal. Tell the workshop rules. You have to wear goggles. Do I have to wear gloves? Yes, you do.",
+            "subtitleEn": "Today's goal. Tell your friends the workshop rules. You have to wear goggles. Do I have to wear gloves? Yes, you do.",
             "gesture": "point",
             "slide": {
               "title": "Goal",
@@ -5362,9 +5373,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Let's listen. I say, Rule one. You have to wear goggles. Haru asks, Do I have to wear gloves, too? I say, Yes, you do. And you have to tie back long hair. Riko says, Okay! My hair is tied back now.",
+            "say": "Let's listen. I say, Rule one. You have to wear goggles. Haru asks, Do I have to wear gloves, too? I say, Yes, you do. And you have to tie back long hair. Riko says, OK! My hair is tied back now.",
             "subtitleJa": "きいてね。わたし「きまり 1。ゴーグルを つけなければ ならない。」 ハルくん「てぶくろも つけなければ ならない？」 わたし「うん、そうよ。それに ながい かみは むすばなければ ならないわ。」 リコちゃん「わかった！ かみ むすんだよ。」",
-            "subtitleEn": "Let's listen. I say, Rule one. You have to wear goggles. Haru asks, Do I have to wear gloves, too? I say, Yes, you do. And you have to tie back long hair. Riko says, Okay! My hair is tied back now.",
+            "subtitleEn": "Let's listen. I say, Rule one. You have to wear goggles. Haru asks, Do I have to wear gloves, too? I say, Yes, you do. And you have to tie back long hair. Riko says, OK! My hair is tied back now.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -5372,7 +5383,7 @@
                 "Rule one. You have to wear goggles.",
                 "Do I have to wear gloves, too?",
                 "Yes, you do. And you have to tie back long hair.",
-                "Okay! My hair is tied back now."
+                "OK! My hair is tied back now."
               ],
               "emoji": "🧑‍🏫"
             }
@@ -5453,9 +5464,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Put on your goggles. Make circles around your eyes. Now, Put on your gloves. Pull, pull!",
+            "say": "Let's move! Put on your goggles. Make circles around your eyes. Now, put on your gloves. Pull, pull!",
             "subtitleJa": "からだを うごかそう！ ゴーグルを つけて。めの まわりに わっか。つぎは てぶくろを はめて。ぐい、ぐい！",
-            "subtitleEn": "Let's move! Put on your goggles. Make circles around your eyes. Now, Put on your gloves. Pull, pull!",
+            "subtitleEn": "Let's move! Put on your goggles. Make circles around your eyes. Now, put on your gloves. Pull, pull!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -5602,9 +5613,9 @@
           {
             "kind": "wrap",
             "lang": "mix",
-            "say": "Great work, safety stars! You can tell rules with have to, and answer, Yes, you do. Next, talk with Riko! リコちゃん と おはなし してね. See you!",
+            "say": "Great work, safety stars! You can say rules with have to, and answer, Yes, you do. Next, talk with Riko! リコちゃん と おはなし してね. See you!",
             "subtitleJa": "よく できました、あんぜんの スターたち！ have to で きまりを つたえて、Yes, you do と こたえられるね。このあと リコちゃんと おはなし してね。またね！",
-            "subtitleEn": "Great work, safety stars! You can tell rules with have to, and answer, Yes, you do. Next, talk with Riko! See you!",
+            "subtitleEn": "Great work, safety stars! You can say rules with have to, and answer, Yes, you do. Next, talk with Riko! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -5621,6 +5632,7 @@
     {
       "lessonNo": 552,
       "world": 19,
+      "reviewed": "run9",
       "title": "You Must Not Touch It",
       "titleJa": "さわっては いけない",
       "school": {
@@ -5712,7 +5724,7 @@
           "emoji": "☠️"
         }
       ],
-      "teacherScript": "Hi, everyone! Look at this machine. It's a small oven for metal parts. It's very hot. You must not touch it. It's hot. Say it with me. You must not touch it. It's hot. Good! Must not is very strong. It means, no, never! You must wait until it cools down. You must not run in the workshop. must not は「ぜったいに しては いけない」と いう つよい いいかた。 Let's practice. Look at the sign. You must not swim here. You must not cross the road now. The light is red. You must wait. Now, phonics. Thumb. Climb. Comb. Plumber. The b in m b is silent. Thumb, not thum b. Show me your thumb! You must wash your hands. You must not climb on the table. Now, tell me. What must you not do in the kitchen?",
+      "teacherScript": "Hi, everyone! Look at this machine. It's a small oven for metal parts. It's very hot. You must not touch it. It's hot. Say it with me. You must not touch it. It's hot. Good! Must not is very strong. It means, no, never! You must wait until it cools down. You must not run in the workshop. must not は「ぜったいに しては いけない」と いう つよい いいかた。 Let's practice. Look at the sign. You must not swim here. You must not cross the road now. The light is red. You must wait. Now, phonics. Thumb. Climb. Comb. Plumber. The b in m b is silent. Thumb. Don't say the b. Show me your thumb! You must wash your hands. You must not climb on the table. Now, tell me. What must you not do in the kitchen?",
       "conversation": {
         "scene": "In front of a hot machine",
         "sceneJa": "あつい きかいの まえで",
@@ -5734,7 +5746,7 @@
           },
           {
             "speaker": "Kiko",
-            "en": "Look at the sign. It says, danger, hot!",
+            "en": "Look at the sign. It says, Danger! Hot!",
             "ja": "かんばんを みて。きけん、あつい！って かいてある。"
           },
           {
@@ -5755,7 +5767,7 @@
         ],
         "aiTask": {
           "goalJa": "あぶない ものの まえで、You must not ～. / You must ～. で ともだちに ちゅういしよう",
-          "starterEn": "Hi! I'm Ms. Emma. Oh, look! There's a hot iron on the table. My little brother wants to touch it. What should I tell him?",
+          "starterEn": "Hi! I'm Birimo. Oh, look! There's a hot iron on the table. A little boy wants to touch it. What should I tell him?",
           "targetExpressions": [
             "You must not touch it.",
             "It's hot.",
@@ -5960,9 +5972,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Here's the hot machine. Stop! Don't touch! Now, Step back. One big step.",
+            "say": "Let's move! Here's the hot machine. Stop! Don't touch! Now, step back. One big step.",
             "subtitleJa": "からだを うごかそう！ あつい きかいだ。ストップ！ さわらないで！ つぎは うしろに さがって。おおきく いっぽ。",
-            "subtitleEn": "Let's move! Here's the hot machine. Stop! Don't touch! Now, Step back. One big step.",
+            "subtitleEn": "Let's move! Here's the hot machine. Stop! Don't touch! Now, step back. One big step.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -5977,9 +5989,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Point to the sign. Then, Wait and count to ten. One, two, three...",
+            "say": "Point to the sign. Then, wait and count to ten. One, two, three...",
             "subtitleJa": "かんばんを ゆびさして。それから、まって 10 かぞえて。1、2、3…",
-            "subtitleEn": "Point to the sign. Then, Wait and count to ten. One, two, three...",
+            "subtitleEn": "Point to the sign. Then, wait and count to ten. One, two, three...",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -6128,6 +6140,7 @@
     {
       "lessonNo": 553,
       "world": 19,
+      "reviewed": "run9",
       "title": "You Don't Have to Hurry",
       "titleJa": "いそがなくて いいよ",
       "school": {
@@ -6219,7 +6232,7 @@
           "emoji": "🤲"
         }
       ],
-      "teacherScript": "Hello, everyone! Kiko is painting a toy guitar. She is very worried. Is it okay? I'm so slow! Let's tell her. You don't have to hurry. Say it with me. You don't have to hurry. Very kind! Take your time. You don't have to be perfect. Don't have to means, it's not necessary. It's okay not to do it. don't have to は「〜しなくて いい」。must not の「しては いけない」と ちがうよ。 Let's practice. It's Sunday. You don't have to get up early. It's a free event. You don't have to pay. Kind words help our friends feel better. Kind words are like magic. Now, phonics. Guitar. Guess. Guide. Guard. The u after g is silent. It tells us g says g, like go. Now, tell me. On weekends, what don't you have to do?",
+      "teacherScript": "Hello, everyone! Kiko is painting a toy guitar. She is very worried. She says, I'm so slow! Let's tell her. You don't have to hurry. Say it with me. You don't have to hurry. Very kind! Take your time. You don't have to be perfect. Don't have to means it's not necessary. It's OK not to do it. don't have to は「〜しなくて いい」。must not の「しては いけない」と ちがうよ。 Let's practice. It's Sunday. You don't have to get up early. It's a free event. You don't have to pay. Kind words help our friends feel better. Kind words are like magic. Now, phonics. Guitar. Guess. Guide. Guard. The u after g is silent. It tells us g says g, like go. Now, tell me. On weekends, what don't you have to do?",
       "conversation": {
         "scene": "Working slowly and carefully",
         "sceneJa": "ゆっくり ていねいに さぎょうする",
@@ -6262,7 +6275,7 @@
         ],
         "aiTask": {
           "goalJa": "あせっている ともだちに You don't have to hurry. / Take your time. と やさしく こえを かけよう",
-          "starterEn": "Hi! I'm Ms. Emma. I'm making a birthday card, but it's taking so long! I'm worried. What do you think?",
+          "starterEn": "Hi! I'm Haru. I'm making a birthday card, but it's taking so long! I'm worried. What do you think?",
           "targetExpressions": [
             "You don't have to hurry.",
             "Take your time.",
@@ -6412,9 +6425,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. You have to means you need to. You don't have to means it's okay not to. No worries. Kind words make friends smile.",
+            "say": "Here's the point. You have to means you need to. You don't have to means it's OK not to. No worries. Kind words make friends smile.",
             "subtitleJa": "ポイント。You have to は「しなきゃ」。You don't have to は「しなくて いい」。しんぱい いらないよ。やさしい ことばで ともだちが にっこり。",
-            "subtitleEn": "Here's the point. You have to means you need to. You don't have to means it's okay not to. No worries. Kind words make friends smile.",
+            "subtitleEn": "Here's the point. You have to means you need to. You don't have to means it's OK not to. No worries. Kind words make friends smile.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -6428,9 +6441,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! G U. The U is silent. It just makes the G strong, g, g. Guitar. Guess. Guide. Guard.",
+            "say": "Sound time! G U. The U is silent. It just makes the G hard, like in go. Guitar. Guess. Guide. Guard.",
             "subtitleJa": "おとの じかん！ gu。u は よまない。g を「グ」と かたく する しるし だよ。guitar、guess、guide、guard。",
-            "subtitleEn": "Sound time! G U. The U is silent. It just makes the G strong, g, g. Guitar. Guess. Guide. Guard.",
+            "subtitleEn": "Sound time! G U. The U is silent. It just makes the G hard, like in go. Guitar. Guess. Guide. Guard.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -6467,9 +6480,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Pick up your brush. Paint slowly. Up and down, nice and slow. Now, Take a deep breath. In... and out.",
+            "say": "Let's move! Pick up your brush. Paint slowly. Up and down, nice and slow. Now, take a deep breath. In... and out.",
             "subtitleJa": "からだを うごかそう！ ふでを もって。ゆっくり ぬって。うえ、した、ゆっくりと。つぎは しんこきゅう。すって… はいて。",
-            "subtitleEn": "Let's move! Pick up your brush. Paint slowly. Up and down, nice and slow. Now, Take a deep breath. In... and out.",
+            "subtitleEn": "Let's move! Pick up your brush. Paint slowly. Up and down, nice and slow. Now, take a deep breath. In... and out.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -6484,9 +6497,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Relax your shoulders. Up high, and drop them. Ahh. And now, Smile!",
+            "say": "Relax your shoulders. Up high, and drop them. Ahh. And now, smile!",
             "subtitleJa": "かたの ちからを ぬいて。たかく あげて、すとんと おとす。ふう。そして、にっこり！",
-            "subtitleEn": "Relax your shoulders. Up high, and drop them. Ahh. And now, Smile!",
+            "subtitleEn": "Relax your shoulders. Up high, and drop them. Ahh. And now, smile!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -6636,6 +6649,7 @@
     {
       "lessonNo": 554,
       "world": 19,
+      "reviewed": "run9",
       "title": "May I Use This?",
       "titleJa": "これ つかっても いいですか？",
       "school": {
@@ -6727,7 +6741,7 @@
           "emoji": "👌"
         }
       ],
-      "teacherScript": "Hi, everyone! Haru needs a hammer, but the workshop master has it. How can he ask politely? May I use this hammer? Sure. Here you are. Say it with me. May I use this hammer? Sure. Here you are. Great! May I is very polite. We use it with teachers and adults. If the answer is no, you can hear, sorry, I'm using it now. You can use it after me. May I ～? は Can I ～? より ていねいな いいかた。 Let's practice. May I sit here? Sure. May I open the window? Of course. May I borrow your eraser? Sorry, I need it now. Always say thank you! Now, phonics. Whistle. Castle. Bristle. Rustle. The t in s t l e is silent. Whis-tle, not whis-t-le. Now, ask me politely. What do you want to borrow?",
+      "teacherScript": "Hi, everyone! Haru needs a hammer, but the workshop master has it. How can he ask politely? May I use this hammer? Sure. Here you are. Say it with me. May I use this hammer? Sure. Here you are. Great! May I is very polite. We use it with teachers and adults. If the answer is no, you might hear, Sorry, I'm using it now. You can use it after me. May I ～? は Can I ～? より ていねいな いいかた。 Let's practice. May I sit here? Sure. May I open the window? Of course. May I borrow your eraser? Sorry, I need it now. Always say thank you! Now, phonics. Whistle. Castle. Bristle. Rustle. The t in s t l e is silent. Whis-tle, not whis-t-le. Now, ask me politely. What do you want to borrow?",
       "conversation": {
         "scene": "Borrowing a tool from the workshop master",
         "sceneJa": "工房の おやかたに どうぐを かりる",
@@ -6759,7 +6773,7 @@
           },
           {
             "speaker": "Riko",
-            "en": "Okay. Thanks!",
+            "en": "OK. Thanks!",
             "ja": "わかった。ありがとう！"
           },
           {
@@ -6770,7 +6784,7 @@
         ],
         "aiTask": {
           "goalJa": "工房の おやかたに May I use ～? と ていねいに きいて、どうぐを かりよう。かりたら Thank you! と いおう",
-          "starterEn": "Hi! I'm Ms. Emma. Today I'm the workshop master. These are my special tools. Do you need anything?",
+          "starterEn": "Hi! I'm Riko. Let's pretend I'm the workshop master. These are my tools. Do you need anything?",
           "targetExpressions": [
             "May I use this ～?",
             "Sure. Here you are.",
@@ -6903,16 +6917,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Then Riko asks, Haru, may I use the hammer, too? Haru says, Sorry, I'm using it now. You can use it after me. Riko says, Okay. Thanks! And Birimo? May I blow this whistle? Tweeeet!",
+            "say": "Then Riko asks, Haru, may I use the hammer, too? Haru says, Sorry, I'm using it now. You can use it after me. Riko says, OK. Thanks! And Birimo? May I blow this whistle? Tweeeet!",
             "subtitleJa": "つぎに リコちゃん「ハル、わたしも かなづちを つかって いい？」 ハルくん「ごめんね、いま つかってるんだ。ぼくの あとで つかって いいよ。」 リコちゃん「わかった。ありがとう！」 そして ビリモは？「この ふえを ふいても いい？ ピーーッ！」",
-            "subtitleEn": "Then Riko asks, Haru, may I use the hammer, too? Haru says, Sorry, I'm using it now. You can use it after me. Riko says, Okay. Thanks! And Birimo? May I blow this whistle? Tweeeet!",
+            "subtitleEn": "Then Riko asks, Haru, may I use the hammer, too? Haru says, Sorry, I'm using it now. You can use it after me. Riko says, OK. Thanks! And Birimo? May I blow this whistle? Tweeeet!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "Haru, may I use the hammer, too?",
                 "Sorry, I'm using it now. You can use it after me.",
-                "Okay. Thanks!",
+                "OK. Thanks!",
                 "May I blow this whistle? Tweeeet!"
               ],
               "emoji": "📯"
@@ -6977,9 +6991,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Raise your hand and ask. May I use this hammer? Then, Take the hammer with both hands. Gently!",
+            "say": "Let's move! Raise your hand and ask. May I use this hammer? Then, take the hammer with both hands. Gently!",
             "subtitleJa": "からだを うごかそう！ てを あげて きいて。May I use this hammer? それから、りょうてで かなづちを うけとって。そっとね！",
-            "subtitleEn": "Let's move! Raise your hand and ask. May I use this hammer? Then, Take the hammer with both hands. Gently!",
+            "subtitleEn": "Let's move! Raise your hand and ask. May I use this hammer? Then, take the hammer with both hands. Gently!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -6994,9 +7008,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Say thank you with a bow. Thank you! And now, Blow the whistle! Tweet!",
+            "say": "Say thank you with a bow. Thank you! And now, blow the whistle! Tweet!",
             "subtitleJa": "おじぎして ありがとうと いって。ありがとう！ そして、ふえを ふいて！ ピーッ！",
-            "subtitleEn": "Say thank you with a bow. Thank you! And now, Blow the whistle! Tweet!",
+            "subtitleEn": "Say thank you with a bow. Thank you! And now, blow the whistle! Tweet!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -7144,6 +7158,7 @@
     {
       "lessonNo": 555,
       "world": 19,
+      "reviewed": "run9",
       "title": "Workshop Rules Poster",
       "titleJa": "工房の きまりポスター",
       "school": {
@@ -7287,7 +7302,7 @@
         ],
         "aiTask": {
           "goalJa": "工房や きょうしつの きまりを We must ～. / We have to ～. / We should ～. で 3つ かんがえよう",
-          "starterEn": "Hi! I'm Ms. Emma. Let's make a rules poster for our classroom. What's rule number one?",
+          "starterEn": "Hi! I'm Kiko. Let's make a rules poster for our classroom. What's rule number one?",
           "targetExpressions": [
             "We must ～.",
             "We have to ～.",
@@ -7356,9 +7371,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Poster. A big paper on the wall, with big letters and pictures. Poster!",
+            "say": "Poster. A big sheet of paper on the wall, with big letters and pictures. Poster!",
             "subtitleJa": "poster。かべに はる おおきな かみ。おおきな じと え。poster！",
-            "subtitleEn": "Poster. A big paper on the wall, with big letters and pictures. Poster!",
+            "subtitleEn": "Poster. A big sheet of paper on the wall, with big letters and pictures. Poster!",
             "gesture": "open_hands",
             "slide": {
               "title": "Words",
@@ -7496,9 +7511,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Write the title in big letters. Rules! Now, Draw a picture.",
+            "say": "Let's move! Write the title in big letters. Rules! Now, draw a picture.",
             "subtitleJa": "からだを うごかそう！ タイトルを おおきな じで かいて。きまり！ つぎは えを かいて。",
-            "subtitleEn": "Let's move! Write the title in big letters. Rules! Now, Draw a picture.",
+            "subtitleEn": "Let's move! Write the title in big letters. Rules! Now, draw a picture.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -7513,9 +7528,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Put the poster on the wall. Press, press, press! Then, Clean up the table. Wipe, wipe!",
+            "say": "Put the poster on the wall. Press, press, press! Then, clean up the table. Wipe, wipe!",
             "subtitleJa": "ポスターを かべに はって。ぎゅっ、ぎゅっ、ぎゅっ！ それから、つくえを かたづけて。ふき、ふき！",
-            "subtitleEn": "Put the poster on the wall. Press, press, press! Then, Clean up the table. Wipe, wipe!",
+            "subtitleEn": "Put the poster on the wall. Press, press, press! Then, clean up the table. Wipe, wipe!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -7666,6 +7681,7 @@
     {
       "lessonNo": 556,
       "world": 19,
+      "reviewed": "run9",
       "title": "You Should Rest",
       "titleJa": "やすんだ ほうが いいよ",
       "school": {
@@ -7757,7 +7773,7 @@
           "emoji": "🤫"
         }
       ],
-      "teacherScript": "Hi, everyone! It's late in the workshop. Kiko is yawning. Let's give her some advice. You look tired. You should rest. Say it with me. You look tired. You should rest. Very kind! Should is for advice. It means, it's a good idea. You should drink some water. You shouldn't work too late. Shouldn't means, it's not a good idea. should は「〜した ほうが いい」。やさしい アドバイスの ことばだよ。 Let's practice. My friend has a cold. You should go to bed early. My friend is hungry. You should eat a snack. My friend plays games all night. You shouldn't do that! Now, phonics. Quick. Quiet. Quiz. Queen. Q and u are best friends. They always go together. My friend is cold. You should wear a jacket. Now, give me some advice. I'm sleepy. What should I do?",
+      "teacherScript": "Hi, everyone! It's late in the workshop. Kiko is yawning. Let's give her some advice. You look tired. You should rest. Say it with me. You look tired. You should rest. Very kind! Should is for advice. It means it's a good idea. You should drink some water. You shouldn't work too late. Shouldn't means it's not a good idea. should は「〜した ほうが いい」。やさしい アドバイスの ことばだよ。 Let's practice. My friend has a cold. You should go to bed early. My friend is hungry. You should eat a snack. My friend plays games all night. You shouldn't do that! Now, phonics. Quick. Quiet. Quiz. Queen. Q and u are best friends. They always go together. My friend is cold. You should wear a jacket. Now, give me some advice. I'm sleepy. What should I do?",
       "conversation": {
         "scene": "After work, Kiko is tired",
         "sceneJa": "さぎょうの あと、つかれた キコに",
@@ -7789,7 +7805,7 @@
           },
           {
             "speaker": "Kiko",
-            "en": "Okay. Thanks, everyone.",
+            "en": "OK. Thanks, everyone.",
             "ja": "わかった。みんな ありがとう。"
           },
           {
@@ -7800,7 +7816,7 @@
         ],
         "aiTask": {
           "goalJa": "つかれた ともだちや かぜを ひいた ともだちに You should ～. / You shouldn't ～. で アドバイスしよう",
-          "starterEn": "Hi! I'm Ms. Emma. I worked all day, and now my head feels heavy. I'm so tired. What should I do?",
+          "starterEn": "Hi! I'm Birimo. I worked all day, and now my head feels heavy. I'm so tired. What should I do?",
           "targetExpressions": [
             "You look tired.",
             "You should rest.",
@@ -7837,9 +7853,9 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Give advice. You look tired. You should rest. And, You shouldn't work too late. should は したほうが いい.",
+            "say": "Today's goal. Give advice. You look tired. You should rest. And you shouldn't work too late. should は したほうが いい.",
             "subtitleJa": "きょうの ゴール。アドバイスを しよう。You look tired. You should rest。そして You shouldn't work too late。should は「したほうが いい」。",
-            "subtitleEn": "Today's goal. Give advice. You look tired. You should rest. And, You shouldn't work too late.",
+            "subtitleEn": "Today's goal. Give advice. You look tired. You should rest. And you shouldn't work too late.",
             "gesture": "point",
             "slide": {
               "title": "Goal",
@@ -7934,16 +7950,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru says, You shouldn't work too late. You can finish it tomorrow. I say, And you should drink some water. Kiko says, Okay. Thanks, everyone. And Birimo whispers, Shh. Let's be quiet. Kiko is sleeping.",
+            "say": "Haru says, You shouldn't work too late. You can finish it tomorrow. I say, And you should drink some water. Kiko says, OK. Thanks, everyone. And Birimo whispers, Shh. Let's be quiet. Kiko is sleeping.",
             "subtitleJa": "ハルくん「おそくまで さぎょう しない ほうが いいよ。あした しあげれば いいよ。」 わたし「それに おみずを のんだ ほうが いいわね。」 キコちゃん「わかった。みんな ありがとう。」 そして ビリモが ひそひそ「しーっ。しずかに しよう。キコが ねてる。」",
-            "subtitleEn": "Haru says, You shouldn't work too late. You can finish it tomorrow. I say, And you should drink some water. Kiko says, Okay. Thanks, everyone. And Birimo whispers, Shh. Let's be quiet. Kiko is sleeping.",
+            "subtitleEn": "Haru says, You shouldn't work too late. You can finish it tomorrow. I say, And you should drink some water. Kiko says, OK. Thanks, everyone. And Birimo whispers, Shh. Let's be quiet. Kiko is sleeping.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "You shouldn't work too late. You can finish it tomorrow.",
                 "And you should drink some water.",
-                "Okay. Thanks, everyone.",
+                "OK. Thanks, everyone.",
                 "Shh. Let's be quiet. Kiko is sleeping."
               ],
               "emoji": "💤"
@@ -8007,9 +8023,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! It's rest time. Sit down on the sofa. Slowly. Ahh. Now, Drink some water. Glug, glug.",
+            "say": "Let's move! It's rest time. Sit down on the sofa. Slowly. Ahh. Now, drink some water. Glug, glug.",
             "subtitleJa": "からだを うごかそう！ やすみの じかん。ソファに すわって。ゆっくり。ふう。つぎは おみずを のんで。ごく、ごく。",
-            "subtitleEn": "Let's move! It's rest time. Sit down on the sofa. Slowly. Ahh. Now, Drink some water. Glug, glug.",
+            "subtitleEn": "Let's move! It's rest time. Sit down on the sofa. Slowly. Ahh. Now, drink some water. Glug, glug.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -8024,9 +8040,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Stretch your arms. Up, up, up to the sky! Then, Close your eyes. Rest for a moment.",
+            "say": "Stretch your arms. Up, up, up to the sky! Then, close your eyes. Rest for a moment.",
             "subtitleJa": "うでを のばして。うえ、うえ、そらまで！ それから、めを とじて。すこし やすもう。",
-            "subtitleEn": "Stretch your arms. Up, up, up to the sky! Then, Close your eyes. Rest for a moment.",
+            "subtitleEn": "Stretch your arms. Up, up, up to the sky! Then, close your eyes. Rest for a moment.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -8178,6 +8194,7 @@
     {
       "lessonNo": 557,
       "world": 19,
+      "reviewed": "run9",
       "title": "Game Rules",
       "titleJa": "ゲームの ルール",
       "school": {
@@ -8291,8 +8308,8 @@
           },
           {
             "speaker": "Haru",
-            "en": "That's right. If you land on a duck, you have to answer a question card.",
-            "ja": "その とおり。あひるの マスに とまったら、しつもんカードに こたえなければ ならない。"
+            "en": "That's right. On a duck space, you have to pick a question card.",
+            "ja": "その とおり。あひるの マスでは、しつもんカードを ひかなければ ならない。"
           },
           {
             "speaker": "Kiko",
@@ -8312,7 +8329,7 @@
         ],
         "aiTask": {
           "goalJa": "すきな ゲームの ルールを First, you have to ～. / Then, you can ～. / You must not ～. で せつめいしよう",
-          "starterEn": "Hi! I'm Ms. Emma. I want to play your favorite game, but I don't know the rules. Can you teach me? What do I have to do first?",
+          "starterEn": "Hi! I'm Haru. I want to play your favorite game. But I don't know the rules. Can you teach me? What do I have to do first?",
           "targetExpressions": [
             "First, you have to ～.",
             "Then, you can ～.",
@@ -8397,9 +8414,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Card. A small, flat paper with a picture or a question. Card!",
+            "say": "Card. A small, flat piece of paper with a picture or a question. Card!",
             "subtitleJa": "card。えや しつもんが かいてある ちいさな うすい かみ。card！",
-            "subtitleEn": "Card. A small, flat paper with a picture or a question. Card!",
+            "subtitleEn": "Card. A small, flat piece of paper with a picture or a question. Card!",
             "gesture": "mime",
             "slide": {
               "title": "Words",
@@ -8429,16 +8446,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Let's listen. Haru says, First, you have to roll the dice. Riko says, Then, you can move your piece. Haru says, That's right. If you land on a duck, you have to answer a question card.",
-            "subtitleJa": "きいてね。ハルくん「まず、サイコロを ふらなければ ならない。」 リコちゃん「それから、コマを すすめて いいんだね。」 ハルくん「その とおり。あひるの マスに とまったら、しつもんカードに こたえなければ ならない。」",
-            "subtitleEn": "Let's listen. Haru says, First, you have to roll the dice. Riko says, Then, you can move your piece. Haru says, That's right. If you land on a duck, you have to answer a question card.",
+            "say": "Let's listen. Haru says, First, you have to roll the dice. Riko says, Then, you can move your piece. Haru says, That's right. On a duck space, you have to pick a question card.",
+            "subtitleJa": "きいてね。ハルくん「まず、サイコロを ふらなければ ならない。」 リコちゃん「それから、コマを すすめて いいんだね。」 ハルくん「その とおり。あひるの マスでは、しつもんカードを ひかなければ ならない。」",
+            "subtitleEn": "Let's listen. Haru says, First, you have to roll the dice. Riko says, Then, you can move your piece. Haru says, That's right. On a duck space, you have to pick a question card.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "First, you have to roll the dice.",
                 "Then, you can move your piece.",
-                "That's right. If you land on a duck, you have to answer a question card."
+                "That's right. On a duck space, you have to pick a question card."
               ],
               "emoji": "🦆"
             }
@@ -8519,9 +8536,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's play! Roll the dice. Shake your hands and roll! Now, Move your piece. Hop, hop, hop!",
+            "say": "Let's play! Roll the dice. Shake your hands and roll! Now, move your piece. Hop, hop, hop!",
             "subtitleJa": "あそぼう！ サイコロを ふって。てを ふって、ころころ！ つぎは コマを すすめて。ぴょん、ぴょん、ぴょん！",
-            "subtitleEn": "Let's play! Roll the dice. Shake your hands and roll! Now, Move your piece. Hop, hop, hop!",
+            "subtitleEn": "Let's play! Roll the dice. Shake your hands and roll! Now, move your piece. Hop, hop, hop!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -8536,9 +8553,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Oh, a duck space! Pick a card. And now, Quack like a duck! Quack, quack!",
+            "say": "Oh, a duck space! Pick a card. And now, quack like a duck! Quack, quack!",
             "subtitleJa": "あ、あひるの マス！ カードを 1まい ひいて。そして、あひるの ように ガーガー！ ガーガー！",
-            "subtitleEn": "Oh, a duck space! Pick a card. And now, Quack like a duck! Quack, quack!",
+            "subtitleEn": "Oh, a duck space! Pick a card. And now, quack like a duck! Quack, quack!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -8636,9 +8653,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "Quiz time! Kiko wants to look at the cards first. Is that okay? A, Yes, you have to look. B, No, you must not look. Think!",
+            "say": "Quiz time! Kiko wants to look at the cards first. Is that OK? A, Yes, you have to look. B, No, you must not look. Think!",
             "subtitleJa": "クイズ！ キコちゃんが さきに カードを みたいって。いいかな？ A「Yes, you have to look.」 B「No, you must not look.」 かんがえて！",
-            "subtitleEn": "Quiz time! Kiko wants to look at the cards first. Is that okay? A, Yes, you have to look. B, No, you must not look. Think!",
+            "subtitleEn": "Quiz time! Kiko wants to look at the cards first. Is that OK? A, Yes, you have to look. B, No, you must not look. Think!",
             "gesture": "think",
             "slide": {
               "title": "Quiz",
@@ -8687,6 +8704,7 @@
     {
       "lessonNo": 558,
       "world": 19,
+      "reviewed": "run9",
       "title": "It's Your Turn",
       "titleJa": "きみの ばんだよ",
       "school": {
@@ -8778,14 +8796,14 @@
           "emoji": "🏆"
         }
       ],
-      "teacherScript": "Hi, everyone! Let's play our board game. Who goes first? Haru rolls the dice. Now, it's Riko's turn. It's your turn. You can move three spaces. Say it with me. It's your turn. You can move three spaces. Great! When you forget, ask, whose turn is it? Sometimes you land on a bad square. Oh no! Go back two spaces. turn は「ばん」、space は ゲームの「マス」だよ。 Let's practice. Whose turn is it? It's my turn! I rolled a five. I can move five spaces. You landed on a squid square. Go back one space! Good games are fun when everyone waits for their turn. Now, phonics. Square. Squeeze. Squid. Squash. S, q u. Squ, squ. Squeeze your hands and wish for a six! Now, let's play. I rolled a four. How many spaces can I move?",
+      "teacherScript": "Hi, everyone! Let's play our board game. Who goes first? Haru rolls the dice. Now, it's Riko's turn. It's your turn. You can move three spaces. Say it with me. It's your turn. You can move three spaces. Great! If you forget, ask, Whose turn is it? Sometimes you land on a bad square. Oh no! Go back two spaces. turn は「ばん」、space は ゲームの「マス」だよ。 Let's practice. Whose turn is it? It's my turn! I rolled a five. I can move five spaces. You landed on a squid square. Go back one space! Good games are fun when everyone waits for their turn. Now, phonics. Square. Squeeze. Squid. Squash. S, q u. Squ, squ. Squeeze your hands and wish for a six! Now, let's play. I rolled a four. How many spaces can I move?",
       "conversation": {
         "scene": "Playing the board game",
         "sceneJa": "ボードゲームで あそぶ",
         "lines": [
           {
             "speaker": "Haru",
-            "en": "I rolled a two. One, two. Okay, whose turn is it?",
+            "en": "I rolled a two. One, two. OK, whose turn is it?",
             "ja": "2が でた。1、2。よし、つぎは だれの ばん？"
           },
           {
@@ -8815,13 +8833,13 @@
           },
           {
             "speaker": "Riko",
-            "en": "Aww. Okay. Birimo, it's your turn!",
+            "en": "Aww. OK. Birimo, it's your turn!",
             "ja": "えー。わかった。ビリモ、きみの ばんだよ！"
           }
         ],
         "aiTask": {
           "goalJa": "すごろくで あそびながら It's your turn. / Whose turn is it? / You can move ～ spaces. と いいあおう",
-          "starterEn": "Hi! I'm Ms. Emma. Let's play a board game! I rolled a four. One, two, three, four. Now, whose turn is it?",
+          "starterEn": "Hi! I'm Riko. Let's play a board game! I rolled a four. One, two, three, four. Now, whose turn is it?",
           "targetExpressions": [
             "It's your turn.",
             "Whose turn is it?",
@@ -8938,14 +8956,14 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Let's listen. Haru says, I rolled a two. One, two. Okay, whose turn is it? Kiko says, It's Riko's turn. Riko says, Here I go... Three! Haru says, It's your turn. You can move three spaces.",
+            "say": "Let's listen. Haru says, I rolled a two. One, two. OK, whose turn is it? Kiko says, It's Riko's turn. Riko says, Here I go... Three! Haru says, It's your turn. You can move three spaces.",
             "subtitleJa": "きいてね。ハルくん「2が でた。1、2。よし、つぎは だれの ばん？」 キコちゃん「リコの ばんだよ。」 リコちゃん「いくよ… 3！」 ハルくん「きみの ばんだよ。3マス すすめるよ。」",
-            "subtitleEn": "Let's listen. Haru says, I rolled a two. One, two. Okay, whose turn is it? Kiko says, It's Riko's turn. Riko says, Here I go... Three! Haru says, It's your turn. You can move three spaces.",
+            "subtitleEn": "Let's listen. Haru says, I rolled a two. One, two. OK, whose turn is it? Kiko says, It's Riko's turn. Riko says, Here I go... Three! Haru says, It's your turn. You can move three spaces.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "I rolled a two. One, two. Okay, whose turn is it?",
+                "I rolled a two. One, two. OK, whose turn is it?",
                 "It's Riko's turn.",
                 "Here I go... Three!",
                 "It's your turn. You can move three spaces."
@@ -8956,16 +8974,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko counts. One, two, three... Oh, it's a squid square! Kiko says, Oh no! Go back two spaces. Riko says, Aww. Okay. Birimo, it's your turn!",
+            "say": "Riko counts. One, two, three... Oh, it's a squid square! Kiko says, Oh no! Go back two spaces. Riko says, Aww. OK. Birimo, it's your turn!",
             "subtitleJa": "リコちゃんが かぞえる。「1、2、3… あ、いかの マスだ！」 キコちゃん「あーあ！ 2マス もどって。」 リコちゃん「えー。わかった。ビリモ、きみの ばんだよ！」",
-            "subtitleEn": "Riko counts. One, two, three... Oh, it's a squid square! Kiko says, Oh no! Go back two spaces. Riko says, Aww. Okay. Birimo, it's your turn!",
+            "subtitleEn": "Riko counts. One, two, three... Oh, it's a squid square! Kiko says, Oh no! Go back two spaces. Riko says, Aww. OK. Birimo, it's your turn!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "One, two, three... Oh, it's a squid square!",
                 "Oh no! Go back two spaces.",
-                "Aww. Okay. Birimo, it's your turn!"
+                "Aww. OK. Birimo, it's your turn!"
               ],
               "emoji": "🦑"
             }
@@ -9030,9 +9048,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's play! Roll the dice. Three! Show me three fingers. Now, Move three spaces. One, two, three steps!",
+            "say": "Let's play! Roll the dice. Three! Show me three fingers. Now, move three spaces. One, two, three steps!",
             "subtitleJa": "あそぼう！ サイコロを ふって。3！ ゆびを 3ぼん みせて。つぎは 3マス すすんで。1、2、3ぽ！",
-            "subtitleEn": "Let's play! Roll the dice. Three! Show me three fingers. Now, Move three spaces. One, two, three steps!",
+            "subtitleEn": "Let's play! Roll the dice. Three! Show me three fingers. Now, move three spaces. One, two, three steps!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -9047,9 +9065,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Oh no, a squid square! Go back two spaces. Next, Squeeze your hands. Good luck!",
+            "say": "Oh no, a squid square! Go back two spaces. Next, squeeze your hands. Good luck!",
             "subtitleJa": "あーあ、いかの マス！ 2マス もどって。つぎは てを ぎゅっと にぎって。がんばれ！",
-            "subtitleEn": "Oh no, a squid square! Go back two spaces. Next, Squeeze your hands. Good luck!",
+            "subtitleEn": "Oh no, a squid square! Go back two spaces. Next, squeeze your hands. Good luck!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -9200,6 +9218,7 @@
     {
       "lessonNo": 559,
       "world": 19,
+      "reviewed": "run9",
       "title": "That's Not Fair!",
       "titleJa": "それは ずるいよ！",
       "school": {
@@ -9293,7 +9312,7 @@
           "emoji": "🐿️"
         }
       ],
-      "teacherScript": "Hello, everyone! Uh-oh. There's a problem in our game. Birimo moved four spaces, but he rolled a three. Haru says, that's not fair! Let's check the rules. Say it with me. That's not fair! Let's check the rules. Good! It's okay to say it, but say it calmly. Then, explain. You moved four spaces, not three. Birimo can say, sorry. You're right. Let's play again. It's okay. It's just a game. ずるいと おもったら、おこらずに ルールを いっしょに たしかめよう。 Let's practice. Your friend took two cookies. That's not fair! We should get equal parts. Let's check. Now, phonics. Liquid. Equal. Squeak. Squirrel. Q u can be in the middle of a word, too. Liq-uid. Eq-ual. Good friends play fair. Talking is better than fighting. Now, tell me. What can you say when a game isn't fair?",
+      "teacherScript": "Hello, everyone! Uh-oh. There's a problem in our game. Birimo moved four spaces, but he rolled a three. Haru says, That's not fair! Let's check the rules. Say it with me. That's not fair! Let's check the rules. Good! It's OK to say it, but say it calmly. Then, explain. You moved four spaces, not three. Birimo can say, Sorry. You're right. Let's play again. It's OK. It's just a game. ずるいと おもったら、おこらずに ルールを いっしょに たしかめよう。 Let's practice. Your friend took two cookies. That's not fair! We should get equal parts. Let's check. Now, phonics. Liquid. Equal. Squeak. Squirrel. Q u can be in the middle of a word, too. Li-quid. E-qual. Good friends play fair. Talking is better than fighting. Now, tell me. What can you say when a game isn't fair?",
       "conversation": {
         "scene": "Arguing about the rules and talking it out",
         "sceneJa": "ルールで もめて、はなしあう",
@@ -9320,7 +9339,7 @@
           },
           {
             "speaker": "Riko",
-            "en": "Let's check the rules. ... You can move the number on the dice.",
+            "en": "Let's check the rules. ... You move as many spaces as you roll.",
             "ja": "ルールを たしかめよう。…サイコロの かずだけ すすめる。"
           },
           {
@@ -9330,24 +9349,24 @@
           },
           {
             "speaker": "Haru",
-            "en": "It's okay. It's just a game. Let's have fun!",
+            "en": "It's OK. It's just a game. Let's have fun!",
             "ja": "いいよ。ただの ゲーム だもん。たのしもう！"
           }
         ],
         "aiTask": {
-          "goalJa": "ゲームで ずるいと おもったとき、That's not fair! / Let's check the rules. と おだやかに はなしあおう。あやまられたら It's okay. と いおう",
-          "starterEn": "Hi! I'm Ms. Emma. Let's play cards. Oh, look, I took three cards, but the rule says two! Hehe. What do you say?",
+          "goalJa": "ゲームで ずるいと おもったとき、That's not fair! / Let's check the rules. と おだやかに はなしあおう。あやまられたら It's OK. と いおう",
+          "starterEn": "Hi! I'm Haru. Let's play cards. Oh, look, I took three cards, but the rule says two! Hehe. What do you say?",
           "targetExpressions": [
             "That's not fair!",
             "Let's check the rules.",
-            "It's okay. It's just a game."
+            "It's OK. It's just a game."
           ]
         }
       },
       "recap": {
         "highlightsJa": [
           "That's not fair! Let's check the rules.",
-          "Sorry. You're right. Let's play again. ― It's okay.",
+          "Sorry. You're right. Let's play again. ― It's OK.",
           "liquid・equal（まんなかの qu）／ squeak・squirrel"
         ]
       },
@@ -9470,16 +9489,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko says, Let's check the rules. You can move the number on the dice. Birimo says, Oh. Sorry. You're right. Let's play again. Haru says, It's okay. It's just a game. Let's have fun!",
+            "say": "Riko says, Let's check the rules. You move as many spaces as you roll. Birimo says, Oh. Sorry. You're right. Let's play again. Haru says, It's OK. It's just a game. Let's have fun!",
             "subtitleJa": "リコちゃん「ルールを たしかめよう。サイコロの かずだけ すすめる。」 ビリモ「あ。ごめん。きみの いう とおり。もう いちど やろう。」 ハルくん「いいよ。ただの ゲーム だもん。たのしもう！」",
-            "subtitleEn": "Riko says, Let's check the rules. You can move the number on the dice. Birimo says, Oh. Sorry. You're right. Let's play again. Haru says, It's okay. It's just a game. Let's have fun!",
+            "subtitleEn": "Riko says, Let's check the rules. You move as many spaces as you roll. Birimo says, Oh. Sorry. You're right. Let's play again. Haru says, It's OK. It's just a game. Let's have fun!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "Let's check the rules. ... You can move the number on the dice.",
+                "Let's check the rules. ... You move as many spaces as you roll.",
                 "Oh. Sorry. You're right. Let's play again.",
-                "It's okay. It's just a game. Let's have fun!"
+                "It's OK. It's just a game. Let's have fun!"
               ],
               "emoji": "🤝"
             }
@@ -9487,16 +9506,16 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. No shouting. Say, That's not fair, in a calm voice. Then, Let's check the rules. If you were wrong, say sorry. If someone says sorry, say, It's okay.",
-            "subtitleJa": "ポイント。どならない。That's not fair と おちついた こえで いう。それから Let's check the rules。まちがえたら ごめんね。ごめんねと いわれたら It's okay。",
-            "subtitleEn": "Here's the point. No shouting. Say, That's not fair, in a calm voice. Then, Let's check the rules. If you were wrong, say sorry. If someone says sorry, say, It's okay.",
+            "say": "Here's the point. No shouting. Say, That's not fair, in a calm voice. Then, let's check the rules. If you were wrong, say sorry. If someone says sorry, say, It's OK.",
+            "subtitleJa": "ポイント。どならない。That's not fair と おちついた こえで いう。それから Let's check the rules。まちがえたら ごめんね。ごめんねと いわれたら It's OK。",
+            "subtitleEn": "Here's the point. No shouting. Say, That's not fair, in a calm voice. Then, let's check the rules. If you were wrong, say sorry. If someone says sorry, say, It's OK.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
               "items": [
                 "That's not fair!",
                 "Let's check the rules.",
-                "It's okay. It's just a game."
+                "It's OK. It's just a game."
               ],
               "emoji": "💡"
             }
@@ -9544,9 +9563,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Something's wrong. Count the spaces again. One, two, three. Now, Read the rules. Hold the paper and read.",
+            "say": "Let's move! Something's wrong. Count the spaces again. One, two, three. Now, read the rules. Hold the paper and read.",
             "subtitleJa": "からだを うごかそう！ なにか へんだね。もう いちど マスを かぞえて。1、2、3。つぎは ルールを よんで。かみを もって よもう。",
-            "subtitleEn": "Let's move! Something's wrong. Count the spaces again. One, two, three. Now, Read the rules. Hold the paper and read.",
+            "subtitleEn": "Let's move! Something's wrong. Count the spaces again. One, two, three. Now, read the rules. Hold the paper and read.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -9561,9 +9580,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Problem solved! Shake hands. Friends again! And now, Squeak like a mouse! Squeak, squeak!",
+            "say": "Problem solved! Shake hands. Friends again! And now, squeak like a mouse! Squeak, squeak!",
             "subtitleJa": "かいけつ！ あくしゅ して。また なかよし！ そして、ねずみの ように チューチュー！",
-            "subtitleEn": "Problem solved! Shake hands. Friends again! And now, Squeak like a mouse! Squeak, squeak!",
+            "subtitleEn": "Problem solved! Shake hands. Friends again! And now, squeak like a mouse! Squeak, squeak!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -9662,9 +9681,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "Quiz time! Your friend says, Sorry. You're right. What do you say? A, It's okay. It's just a game. B, That's not fair! Think!",
-            "subtitleJa": "クイズ！ ともだちが「ごめん。きみの いう とおり」と いった。なんて いう？ A「It's okay. It's just a game.」 B「That's not fair!」 かんがえて！",
-            "subtitleEn": "Quiz time! Your friend says, Sorry. You're right. What do you say? A, It's okay. It's just a game. B, That's not fair! Think!",
+            "say": "Quiz time! Your friend says, Sorry. You're right. What do you say? A, It's OK. It's just a game. B, That's not fair! Think!",
+            "subtitleJa": "クイズ！ ともだちが「ごめん。きみの いう とおり」と いった。なんて いう？ A「It's OK. It's just a game.」 B「That's not fair!」 かんがえて！",
+            "subtitleEn": "Quiz time! Your friend says, Sorry. You're right. What do you say? A, It's OK. It's just a game. B, That's not fair! Think!",
             "gesture": "think",
             "slide": {
               "title": "Quiz",
@@ -9678,14 +9697,14 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! It's okay. It's just a game. Let's have fun! You're a kind friend!",
-            "subtitleJa": "こたえは A！ It's okay. It's just a game. Let's have fun! やさしい ともだち だね！",
-            "subtitleEn": "It's A! It's okay. It's just a game. Let's have fun! You're a kind friend!",
+            "say": "It's A! It's OK. It's just a game. Let's have fun! You're a kind friend!",
+            "subtitleJa": "こたえは A！ It's OK. It's just a game. Let's have fun! やさしい ともだち だね！",
+            "subtitleEn": "It's A! It's OK. It's just a game. Let's have fun! You're a kind friend!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
               "items": [
-                "It's okay. It's just a game. Let's have fun!"
+                "It's OK. It's just a game. Let's have fun!"
               ],
               "emoji": "🎉"
             }
@@ -9702,7 +9721,7 @@
               "items": [
                 "That's not fair! Let's check the rules.",
                 "Sorry. You're right. Let's play again.",
-                "It's okay. It's just a game."
+                "It's OK. It's just a game."
               ],
               "emoji": "🌟"
             }
@@ -9713,6 +9732,7 @@
     {
       "lessonNo": 560,
       "world": 19,
+      "reviewed": "run9",
       "title": "Our Original Game",
       "titleJa": "わたしたちの オリジナルゲーム",
       "school": {
@@ -9806,7 +9826,7 @@
           "emoji": "🏆"
         }
       ],
-      "teacherScript": "Hi, everyone! Today, our team will present our original game. It's called Star Quest. Listen. In our game, you have to collect stars. Say it with me. In our game, you have to collect stars. Wonderful! The first player with five stars wins. You have to answer quiz questions to get a star. You don't have to be fast. You have to be smart. ゲームの しょうかいは In our game, ～. で はじめると わかりやすいよ。 Let's practice. In our game, you have to find the squirrel. In our game, you can't talk. In our game, you don't have to run. Then, ask, any questions? Now, phonics review. Quiz. Question. Square. Squeeze. Q u, s q u. Speak loudly and smile at the audience. Now, imagine your own game. In your game, what do you have to do?",
+      "teacherScript": "Hi, everyone! Today, our team will present our original game. It's called Star Quest. Listen. In our game, you have to collect stars. Say it with me. In our game, you have to collect stars. Wonderful! The first player with five stars wins. You have to answer quiz questions to get a star. You don't have to be fast. You have to be smart. ゲームの しょうかいは In our game, ～. で はじめると わかりやすいよ。 Let's practice. In our game, you have to find the squirrel. In our game, you can't talk. In our game, you don't have to run. Then, ask, Any questions? Now, phonics review. Quiz. Question. Square. Squeeze. Q u, s q u. Speak loudly and smile at the audience. Now, imagine your own game. In your game, what do you have to do?",
       "conversation": {
         "scene": "Presenting the game the four friends made",
         "sceneJa": "4人で つくった ゲームを はっぴょうする",
@@ -9849,7 +9869,7 @@
         ],
         "aiTask": {
           "goalJa": "じぶんで かんがえた ゲームを In our game, you have to ～. / The first player ～ wins. で しょうかいしよう。ほんとうの なまえは いわなくて OK",
-          "starterEn": "Hi! I'm Ms. Emma. I heard you made an original game! What's it called? What do players have to do?",
+          "starterEn": "Hi! I'm Birimo. I heard you made an original game! What's it called? What do players have to do?",
           "targetExpressions": [
             "In our game, you have to ～.",
             "You don't have to ～.",
@@ -10057,9 +10077,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Hold up the game board. Now, Collect a star! Grab it!",
+            "say": "Let's move! Hold up the game board. Now, collect a star! Grab it!",
             "subtitleJa": "からだを うごかそう！ ゲームばんを みせて。つぎは ほしを あつめて！ つかんで！",
-            "subtitleEn": "Let's move! Hold up the game board. Now, Collect a star! Grab it!",
+            "subtitleEn": "Let's move! Hold up the game board. Now, collect a star! Grab it!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -10074,9 +10094,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Count your stars. One, two, three, four, five! Five stars! Now, Cheer for the winner! Hooray!",
+            "say": "Count your stars. One, two, three, four, five! Five stars! Now, cheer for the winner! Hooray!",
             "subtitleJa": "ほしを かぞえて。1、2、3、4、5！ ほし 5つ！ つぎは かった ひとを おうえん！ ばんざい！",
-            "subtitleEn": "Count your stars. One, two, three, four, five! Five stars! Now, Cheer for the winner! Hooray!",
+            "subtitleEn": "Count your stars. One, two, three, four, five! Five stars! Now, cheer for the winner! Hooray!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -10226,6 +10246,7 @@
     {
       "lessonNo": 561,
       "world": 19,
+      "reviewed": "run9",
       "title": "Great Inventions",
       "titleJa": "すごい はつめい",
       "school": {
@@ -10318,7 +10339,7 @@
           "emoji": "🖼️"
         }
       ],
-      "teacherScript": "Hello, everyone! Look. This is the inventor's gallery. There are many great inventions here. This is an old telephone. The telephone helps people talk. Say it with me. The telephone helps people talk. Great! Helps people means it makes life better for people. The light bulb lights up dark rooms. The wheel helps people carry heavy things. helps people ～ で「ひとの やくに たつ」ことを いうよ。 Let's practice. The refrigerator keeps food cold. The bicycle helps people go far. The camera helps people remember special days. Please look with your eyes, not your hands. Now, phonics. House. Cloud. Touch. Young. In house and cloud, o u says ow. In touch and young, o u says uh. Same letters, different sounds! Now, tell me about a great invention. What does it help people do?",
+      "teacherScript": "Hello, everyone! Look. This is the inventor's gallery. There are many great inventions here. This is an old telephone. The telephone helps people talk. Say it with me. The telephone helps people talk. Great! Helps people means it makes life better for people. The light bulb lights up dark rooms. The wheel helps people carry heavy things. helps people ～ で「ひとの やくに たつ」ことを いうよ。 Let's practice. The refrigerator keeps food cold. The bicycle helps people go far. The camera helps people remember special days. Remember, look with your eyes, not your hands. Now, phonics. House. Cloud. Touch. Young. In house and cloud, o u says ow. In touch and young, o u says uh. Same letters, different sounds! Now, tell me about a great invention. What does it help people do?",
       "conversation": {
         "scene": "In the workshop's invention gallery",
         "sceneJa": "工房の はつめいひん ギャラリー",
@@ -10361,7 +10382,7 @@
         ],
         "aiTask": {
           "goalJa": "すきな はつめいを えらんで、～ helps people ～. で なにに やくだつか せつめいしよう",
-          "starterEn": "Hi! I'm Ms. Emma. I think inventions are amazing. What's your favorite invention? How does it help people?",
+          "starterEn": "Hi! I'm Haru. I think inventions are amazing. What's your favorite invention? How does it help people?",
           "targetExpressions": [
             "The ～ helps people ～.",
             "It lights up ～.",
@@ -10568,9 +10589,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Walk around the gallery. Slowly, slowly. Now, Look closely. Wow, so many tiny parts!",
+            "say": "Let's move! Walk around the gallery. Slowly, slowly. Now, look closely. Wow, so many tiny parts!",
             "subtitleJa": "からだを うごかそう！ ギャラリーを あるいて まわって。ゆっくり、ゆっくり。つぎは、よく みて。わあ、ちいさな ぶひんが いっぱい！",
-            "subtitleEn": "Let's move! Walk around the gallery. Slowly, slowly. Now, Look closely. Wow, so many tiny parts!",
+            "subtitleEn": "Let's move! Walk around the gallery. Slowly, slowly. Now, look closely. Wow, so many tiny parts!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -10585,9 +10606,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Careful! Don't touch the old machines. Hands behind your back. Now, Pretend to talk on the phone. Hello?",
+            "say": "Careful! Don't touch the old machines. Hands behind your back. Now, pretend to talk on the phone. Hello?",
             "subtitleJa": "きをつけて！ ふるい きかいに さわらないで。てを うしろに。つぎは、でんわで はなす まね。もしもし？",
-            "subtitleEn": "Careful! Don't touch the old machines. Hands behind your back. Now, Pretend to talk on the phone. Hello?",
+            "subtitleEn": "Careful! Don't touch the old machines. Hands behind your back. Now, pretend to talk on the phone. Hello?",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -10736,6 +10757,7 @@
     {
       "lessonNo": 562,
       "world": 19,
+      "reviewed": "run9",
       "title": "My Dream Machine",
       "titleJa": "わたしの ゆめの きかい",
       "school": {
@@ -10828,7 +10850,7 @@
           "emoji": "💡"
         }
       ],
-      "teacherScript": "Hi, everyone! Today, let's imagine our dream machines. Riko's machine is amazing. My machine can clean my room. Say it with me. My machine can clean my room. Great! Next, describe it. It has two long arms. It can also fold my clothes. Use can for what it does. Use has for its parts. ゆめの きかいは can で できる こと、has で かたちを いうよ。 Let's practice. My machine can cook soup. It has a big spoon. It can also wash the dishes. My machine can fly. It has four wings. It can take a group of friends to school! Any idea is okay. Dream big! Now, phonics. Soup. Group. Country. Double. In soup and group, o u says oo. In country and double, o u says uh. Now, tell me about your dream machine. What can it do?",
+      "teacherScript": "Hi, everyone! Today, let's imagine our dream machines. Riko's machine is amazing. My machine can clean my room. Say it with me. My machine can clean my room. Great! Next, describe it. It has two long arms. It can also fold my clothes. Use can for what it does. Use has for its parts. ゆめの きかいは can で できる こと、has で かたちを いうよ。 Let's practice. My machine can cook soup. It has a big spoon. It can also wash the dishes. My machine can fly. It has four wings. It can take a group of friends to school! Any idea is OK. Dream big! Now, phonics. Soup. Group. Country. Double. In soup and group, o u says oo. In country and double, o u says uh. Now, tell me about your dream machine. What can it do?",
       "conversation": {
         "scene": "Thinking about dream machines",
         "sceneJa": "ゆめの きかいを かんがえる",
@@ -10871,7 +10893,7 @@
         ],
         "aiTask": {
           "goalJa": "じぶんの ゆめの きかいを My machine can ～. / It has ～. / It can also ～. で せつめいしよう。ほんとうの なまえは いわなくて OK",
-          "starterEn": "Hi! I'm Ms. Emma. If you could make any machine, what would it be? Tell me about your dream machine!",
+          "starterEn": "Hi! I'm Riko. If you could make any machine, what would it be? Tell me about your dream machine!",
           "targetExpressions": [
             "My machine can ～.",
             "It has ～.",
@@ -10892,9 +10914,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, dreamers! Yesterday we saw great inventions. Today, it's your turn to dream one up. Ready to imagine?",
-            "subtitleJa": "おはよう、ゆめみる みんな！ きのうは すごい はつめいを みたね。きょうは あなたが ゆめの きかいを かんがえる ばん。そうぞうする じゅんび できた？",
-            "subtitleEn": "Good morning, dreamers! Yesterday we saw great inventions. Today, it's your turn to dream one up. Ready to imagine?",
+            "say": "Good morning, dreamers! Last time, we saw great inventions. Today, it's your turn to dream one up. Ready to imagine?",
+            "subtitleJa": "おはよう、ゆめみる みんな！ このまえは すごい はつめいを みたね。きょうは あなたが ゆめの きかいを かんがえる ばん。そうぞうする じゅんび できた？",
+            "subtitleEn": "Good morning, dreamers! Last time, we saw great inventions. Today, it's your turn to dream one up. Ready to imagine?",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -11022,9 +11044,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Use can for what it does. Use has for its parts. Add also for one more thing. And remember, any idea is okay!",
+            "say": "Here's the point. Use can for what it does. Use has for its parts. Add also for one more thing. And remember, any idea is OK!",
             "subtitleJa": "ポイント。できる ことは can、ぶひんや かたちは has。もう 1つ いう ときは also。どんな アイデアでも OK だよ！",
-            "subtitleEn": "Here's the point. Use can for what it does. Use has for its parts. Add also for one more thing. And remember, any idea is okay!",
+            "subtitleEn": "Here's the point. Use can for what it does. Use has for its parts. Add also for one more thing. And remember, any idea is OK!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -11078,9 +11100,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Close your eyes and imagine. What does your machine look like? Now, Draw your machine in the air. Big wheels? Tiny wings?",
+            "say": "Let's move! Close your eyes and imagine. What does your machine look like? Now, draw your machine in the air. Big wheels? Tiny wings?",
             "subtitleJa": "からだを うごかそう！ めを とじて そうぞうして。あなたの きかいは どんな かたち？ つぎは、くうちゅうに きかいの えを かいて。おおきな タイヤ？ ちいさな はね？",
-            "subtitleEn": "Let's move! Close your eyes and imagine. What does your machine look like? Now, Draw your machine in the air. Big wheels? Tiny wings?",
+            "subtitleEn": "Let's move! Close your eyes and imagine. What does your machine look like? Now, draw your machine in the air. Big wheels? Tiny wings?",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -11095,9 +11117,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Move like a robot. Beep, boop, beep! Now, Fold your clothes. Fold, fold, and stack!",
+            "say": "Move like a robot. Beep, boop, beep! Now, fold your clothes. Fold, fold, and stack!",
             "subtitleJa": "ロボットの ように うごいて。ピ、ポ、ピ！ つぎは、ふくを たたんで。たたんで、たたんで、かさねて！",
-            "subtitleEn": "Move like a robot. Beep, boop, beep! Now, Fold your clothes. Fold, fold, and stack!",
+            "subtitleEn": "Move like a robot. Beep, boop, beep! Now, fold your clothes. Fold, fold, and stack!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -11248,6 +11270,7 @@
     {
       "lessonNo": 563,
       "world": 19,
+      "reviewed": "run9",
       "title": "By Pushing This Button",
       "titleJa": "この ボタンを おす ことで",
       "school": {
@@ -11340,7 +11363,7 @@
           "emoji": "🔌"
         }
       ],
-      "teacherScript": "Hello, everyone! Haru made a model of his dream machine. It's a cooking robot. How do you use it? You can start it by pushing this button. Say it with me. You can start it by pushing this button. Great! By pushing means, how you do it. You can stop it by pulling this lever. You can make it faster by turning this dial. by の あとに ing の ことばで「〜する ことで」と やりかたを いうよ。 Let's practice. You can turn on the light by pressing the switch. You can open the box by sliding the lid. You can get stronger by eating well and sleeping enough. Now, phonics. Enough. Rough. Tough. Through. In enough, rough and tough, o u g h says uff. In through, it says oo. Tricky! Now, tell me. How can you turn on a TV?",
+      "teacherScript": "Hello, everyone! Haru made a model of his dream machine. It's a cooking robot. How do you use it? You can start it by pushing this button. Say it with me. You can start it by pushing this button. Great! By pushing tells how you do it. You can stop it by pulling this lever. You can make it faster by turning this dial. by の あとに ing の ことばで「〜する ことで」と やりかたを いうよ。 Let's practice. You can turn on the light by pressing the switch. You can open the box by sliding the lid. You can get stronger by eating well and sleeping enough. Now, phonics. Enough. Rough. Tough. Through. In enough, rough and tough, o u g h says uff. In through, it says oo. Tricky! Now, tell me. How can you turn on a TV?",
       "conversation": {
         "scene": "Explaining how to use the dream machine",
         "sceneJa": "ゆめの きかいの つかいかたを せつめいする",
@@ -11383,7 +11406,7 @@
         ],
         "aiTask": {
           "goalJa": "きかいの つかいかたを You can ～ by ～ing. で せつめいしよう",
-          "starterEn": "Hi! I'm Ms. Emma. Wow, what a cool machine! I want to try it. How can I start it? How can I stop it?",
+          "starterEn": "Hi! I'm Kiko. Wow, what a cool machine! I want to try it. How can I start it? How can I stop it?",
           "targetExpressions": [
             "You can start it by ～ing.",
             "You can stop it by ～ing.",
@@ -11589,9 +11612,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Push the green button. Beep! Now, Turn the dial slowly. Click, click, click.",
+            "say": "Let's move! Push the green button. Beep! Now, turn the dial slowly. Click, click, click.",
             "subtitleJa": "からだを うごかそう！ みどりの ボタンを おして。ピッ！ つぎは、ダイヤルを ゆっくり まわして。カチ、カチ、カチ。",
-            "subtitleEn": "Let's move! Push the green button. Beep! Now, Turn the dial slowly. Click, click, click.",
+            "subtitleEn": "Let's move! Push the green button. Beep! Now, turn the dial slowly. Click, click, click.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -11606,9 +11629,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Pull the lever. Clunk! The robot stops. Now, Walk through the door. Step, step, step!",
+            "say": "Pull the lever. Clunk! The robot stops. Now, walk through the door. Step, step, step!",
             "subtitleJa": "レバーを ひいて。ガチャン！ ロボットが とまった。つぎは、ドアを とおりぬけて。てく、てく、てく！",
-            "subtitleEn": "Pull the lever. Clunk! The robot stops. Now, Walk through the door. Step, step, step!",
+            "subtitleEn": "Pull the lever. Clunk! The robot stops. Now, walk through the door. Step, step, step!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -11757,6 +11780,7 @@
     {
       "lessonNo": 564,
       "world": 19,
+      "reviewed": "run9",
       "title": "Reuse and Remake",
       "titleJa": "もう いちど つかおう、つくりなおそう",
       "school": {
@@ -11849,7 +11873,7 @@
           "emoji": "♻️"
         }
       ],
-      "teacherScript": "Hi, everyone! This is the workshop's recycling corner. There are boxes, bottle caps and old cans. Don't throw them away! We can reuse these boxes. Say it with me. We can reuse these boxes. Great! Reuse means use again. We can remake it into a toy. These bottle caps can be wheels. Remake into means make it into something new. すてる まえに、もう いちど つかえないか かんがえよう。 Let's practice. We can reuse this jar as a pencil case. We can remake old socks into puppets. This paper roll can be a telescope. The inventor thought about the Earth, too. Now, phonics. Though. Dough. Thought. Brought. In though and dough, o u g h says oh. In thought and brought, it says aw. Now, look around your house. What can you reuse? Tell me!",
+      "teacherScript": "Hi, everyone! This is the workshop's recycling corner. There are boxes, bottle caps and old cans. Don't throw them away! We can reuse these boxes. Say it with me. We can reuse these boxes. Great! Reuse means use again. We can remake it into a toy. These bottle caps can be wheels. Remake into means make it into something new. すてる まえに、もう いちど つかえないか かんがえよう。 Let's practice. We can reuse this jar as a pencil case. We can remake old socks into puppets. This paper roll can be a telescope. Reusing things helps the Earth, too. Now, phonics. Though. Dough. Thought. Brought. In though and dough, o u g h says oh. In thought and brought, it says aw. Now, look around your house. What can you reuse? Tell me!",
       "conversation": {
         "scene": "At the workshop's recycling corner",
         "sceneJa": "工房の リサイクル ざいりょう おきばで",
@@ -11892,7 +11916,7 @@
         ],
         "aiTask": {
           "goalJa": "いえに ある ものを えらんで、We can reuse ～. / We can remake it into ～. で リサイクルの アイデアを いおう",
-          "starterEn": "Hi! I'm Ms. Emma. I have an empty milk carton and some old newspapers. I want to throw them away. Do you have a better idea?",
+          "starterEn": "Hi! I'm Birimo. I have an empty milk carton and some old newspapers. I want to throw them away. Do you have a better idea?",
           "targetExpressions": [
             "We can reuse ～.",
             "Don't throw it away.",
@@ -12116,9 +12140,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Sort the trash. Paper here, cans there. Now, Show your new toy. Hold it up high!",
+            "say": "Sort the trash. Paper here, cans there. Now, show your new toy. Hold it up high!",
             "subtitleJa": "ごみを わけて。かみは こっち、かんは あっち。つぎは、あたらしい おもちゃを みせて。たかく かかげて！",
-            "subtitleEn": "Sort the trash. Paper here, cans there. Now, Show your new toy. Hold it up high!",
+            "subtitleEn": "Sort the trash. Paper here, cans there. Now, show your new toy. Hold it up high!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -12268,6 +12292,7 @@
     {
       "lessonNo": 565,
       "world": 19,
+      "reviewed": "run9",
       "title": "Invention Fair",
       "titleJa": "はつめい フェア",
       "school": {
@@ -12364,7 +12389,7 @@
           "emoji": "👍"
         }
       ],
-      "teacherScript": "Hello, everyone! Welcome to the Invention Fair! Everyone made an invention from the recycling corner. Let's present them. This is my invention. It's used for watering plants. Say it with me. This is my invention. It's used for watering plants. Excellent! Then, explain how to use it. You can use it by pulling this string. At the end, ask, any questions? はっぴょうは This is my invention. から はじめて、つかいみちと つかいかたを いおう。 Let's practice. This is my invention. It's used for finding lost socks. You can use it by shaking it. Any questions? Yes! Is it heavy? No, it isn't. It's light. Now, phonics review. House. Touch. Soup. Through. Though. O u and o u g h have many sounds. Thank you for listening! Now, it's your turn. Tell me about your invention!",
+      "teacherScript": "Hello, everyone! Welcome to the Invention Fair! Everyone made an invention from the recycling corner. Let's present them. This is my invention. It's used for watering plants. Say it with me. This is my invention. It's used for watering plants. Excellent! Then, explain how to use it. You can use it by pulling this string. At the end, ask, Any questions? はっぴょうは This is my invention. から はじめて、つかいみちと つかいかたを いおう。 Let's practice. This is my invention. It's used for finding lost socks. You can use it by shaking it. Any questions? Yes! Is it heavy? No, it isn't. It's light. Now, phonics review. House. Touch. Soup. Through. Though. O u and o u g h have many sounds. Thank you for listening! Now, it's your turn. Tell me about your invention!",
       "conversation": {
         "scene": "Presenting inventions at the workshop's Invention Fair",
         "sceneJa": "工房の はつめいフェアで はっぴょうする",
@@ -12407,7 +12432,7 @@
         ],
         "aiTask": {
           "goalJa": "じぶんの はつめいを This is my invention. It's used for ～ing. / You can use it by ～ing. で はっぴょうし、しつもんに こたえよう。ほんとうの なまえは いわなくて OK",
-          "starterEn": "Hi! I'm Ms. Emma. Welcome to the Invention Fair! What did you invent? Please tell me about it!",
+          "starterEn": "Hi! I'm Haru. Welcome to the Invention Fair! What did you invent? Please tell me about it!",
           "targetExpressions": [
             "This is my invention.",
             "It's used for ～ing.",
@@ -12621,9 +12646,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Stand next to your invention. Stand tall and smile. Now, Show how it works. Pull the string!",
+            "say": "Let's move! Stand next to your invention. Stand tall and smile. Now, show how it works. Pull the string!",
             "subtitleJa": "からだを うごかそう！ はつめいの となりに たって。せすじを のばして にっこり。つぎは、どう うごくか みせて。ひもを ひいて！",
-            "subtitleEn": "Let's move! Stand next to your invention. Stand tall and smile. Now, Show how it works. Pull the string!",
+            "subtitleEn": "Let's move! Stand next to your invention. Stand tall and smile. Now, show how it works. Pull the string!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -12638,9 +12663,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Someone has a question. Answer the question. Hand up, nice and loud. Now, Clap for your friends. Great show!",
+            "say": "Someone has a question. Answer the question. Hand up, nice and loud. Now, clap for your friends. Great show!",
             "subtitleJa": "しつもんが きたよ。しつもんに こたえて。てを あげて、げんきに。つぎは、ともだちに はくしゅ。いい はっぴょう！",
-            "subtitleEn": "Someone has a question. Answer the question. Hand up, nice and loud. Now, Clap for your friends. Great show!",
+            "subtitleEn": "Someone has a question. Answer the question. Hand up, nice and loud. Now, clap for your friends. Great show!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -12655,9 +12680,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Speed challenge! Clap for your friends! Show how it works! Stand next to your invention! Answer the question! What a fair!",
+            "say": "Speed challenge! Clap for your friends! Show how it works! Stand next to your invention! Answer the question! What a great fair!",
             "subtitleJa": "スピード チャレンジ！ はくしゅ！ うごかしかたを みせて！ となりに たって！ しつもんに こたえて！ すてきな フェア！",
-            "subtitleEn": "Speed challenge! Clap for your friends! Show how it works! Stand next to your invention! Answer the question! What a fair!",
+            "subtitleEn": "Speed challenge! Clap for your friends! Show how it works! Stand next to your invention! Answer the question! What a great fair!",
             "gesture": "mime",
             "slide": {
               "title": "Speed challenge",
@@ -12756,9 +12781,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A, Any questions? The audience asks Is it heavy. You're a real presenter!",
-            "subtitleJa": "こたえは A、Any questions?。Is it heavy? は きく ひとの ことば。ほんものの はっぴょうしゃ だね！",
-            "subtitleEn": "It's A, Any questions? The audience asks Is it heavy. You're a real presenter!",
+            "say": "It's A, Any questions? The audience asks, Is it heavy? You're a real presenter!",
+            "subtitleJa": "こたえは A、Any questions? Is it heavy? は きく ひとの ことば。ほんものの はっぴょうしゃ だね！",
+            "subtitleEn": "It's A, Any questions? The audience asks, Is it heavy? You're a real presenter!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -12791,6 +12816,7 @@
     {
       "lessonNo": 566,
       "world": 19,
+      "reviewed": "run9",
       "title": "Squeeze, Turn, Pull",
       "titleJa": "にぎって、まわして、ひっぱって",
       "school": {
@@ -12905,7 +12931,7 @@
           },
           {
             "speaker": "Haru",
-            "en": "Okay. I'll squeeze it... turn it... pull it! Hmm, nothing.",
+            "en": "OK. I'll squeeze it... turn it... pull it! Hmm, nothing.",
             "ja": "よし。にぎって…まわして…ひっぱる！うーん、なにも おきない。"
           },
           {
@@ -12925,13 +12951,13 @@
           },
           {
             "speaker": "Riko",
-            "en": "There's a paper inside. It's a blueprint of a big machine!",
+            "en": "There's a piece of paper inside. It's a blueprint of a big machine!",
             "ja": "なかに かみが ある。おおきな きかいの せっけいずだ！"
           }
         ],
         "aiTask": {
           "goalJa": "なぞときの はこを あける てじゅんを Squeeze it. / Turn it. / Pull it. で つたえ、こまったら What should we do next? と そうだんしよう",
-          "starterEn": "Hi! I'm Ms. Emma. I have a puzzle box, but I can't open it. Here's the hint: squeeze, turn, pull. Can you tell me what to do?",
+          "starterEn": "Hi! I'm Riko. I have a puzzle box, but I can't open it. Here's the hint: squeeze, turn, pull. Can you tell me what to do?",
           "targetExpressions": [
             "Squeeze it.",
             "Turn it.",
@@ -12969,7 +12995,7 @@
             "kind": "goal",
             "lang": "mix",
             "say": "Today's goal. Give steps and ask for help. Squeeze it. Turn it. Pull it. What should we do next? should は したほうが いい.",
-            "subtitleJa": "きょうの ゴール。てじゅんを つたえて、そうだん しよう。Squeeze it。Turn it。Pull it。What should we do next?。should は「したほうが いい」。",
+            "subtitleJa": "きょうの ゴール。てじゅんを つたえて、そうだん しよう。Squeeze it。Turn it。Pull it。What should we do next? should は「したほうが いい」。",
             "subtitleEn": "Today's goal. Give steps and ask for help. Squeeze it. Turn it. Pull it. What should we do next?",
             "gesture": "point",
             "slide": {
@@ -13056,7 +13082,7 @@
               "title": "Talk",
               "items": [
                 "Here's a hint card. Squeeze it. Turn it. Pull it.",
-                "Okay. I'll squeeze it... turn it... pull it! Hmm, nothing.",
+                "OK. I'll squeeze it... turn it... pull it! Hmm, nothing.",
                 "What should we do next?"
               ],
               "emoji": "🃏"
@@ -13074,7 +13100,7 @@
               "items": [
                 "Read the hint again. Look! It says, squeeze the sides first.",
                 "Squeeze the sides. Turn the top. Pull... It's open!",
-                "There's a paper inside. It's a blueprint of a big machine!"
+                "There's a piece of paper inside. It's a blueprint of a big machine!"
               ],
               "emoji": "📐"
             }
@@ -13141,9 +13167,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Hold the box. Squeeze it. Tight, tight! Now, Turn it. Twist your wrists.",
+            "say": "Let's move! Hold the box. Squeeze it. Tight, tight! Now, turn it. Twist your wrists.",
             "subtitleJa": "からだを うごかそう！ はこを もって。ぎゅっと にぎって。ぎゅー！ つぎは、まわして。てくびを ひねって。",
-            "subtitleEn": "Let's move! Hold the box. Squeeze it. Tight, tight! Now, Turn it. Twist your wrists.",
+            "subtitleEn": "Let's move! Hold the box. Squeeze it. Tight, tight! Now, turn it. Twist your wrists.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -13158,9 +13184,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Pull it. Pull toward you. Click! Now, Open the box! What's inside?",
+            "say": "Pull it. Pull toward you. Click! Now, open the box! What's inside?",
             "subtitleJa": "ひっぱって。てまえに ひいて。カチッ！ つぎは、はこを あけて！ なかには なにが ある？",
-            "subtitleEn": "Pull it. Pull toward you. Click! Now, Open the box! What's inside?",
+            "subtitleEn": "Pull it. Pull toward you. Click! Now, open the box! What's inside?",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -13312,6 +13338,7 @@
     {
       "lessonNo": 567,
       "world": 19,
+      "reviewed": "run9",
       "title": "It's Broken!",
       "titleJa": "こわれてる！",
       "school": {
@@ -13452,7 +13479,7 @@
         ],
         "aiTask": {
           "goalJa": "こわれた ものを みて、What should we do? と きいたり、We should ～. / We have to ～. で アイデアを だしたり しよう",
-          "starterEn": "Hi! I'm Ms. Emma. Oh no, my old music box stopped working. It's broken. What should we do?",
+          "starterEn": "Hi! I'm Kiko. Oh no, my old music box stopped working. It's broken. What should we do?",
           "targetExpressions": [
             "It's broken.",
             "What should we do?",
@@ -13490,7 +13517,7 @@
             "kind": "goal",
             "lang": "mix",
             "say": "Today's goal. Talk about how to fix things. It's broken. What should we do? We have to find a new spring. have to は しなきゃ.",
-            "subtitleJa": "きょうの ゴール。なおしかたを そうだん しよう。It's broken。What should we do?。We have to find a new spring。have to は「しなきゃ」。",
+            "subtitleJa": "きょうの ゴール。なおしかたを そうだん しよう。It's broken。What should we do? We have to find a new spring。have to は「しなきゃ」。",
             "subtitleEn": "Today's goal. Talk about how to fix things. It's broken. What should we do? We have to find a new spring.",
             "gesture": "point",
             "slide": {
@@ -13662,9 +13689,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Look at the blueprint. Open it wide. Now, Check the motor. Bend down and peek inside.",
+            "say": "Let's move! Look at the blueprint. Open it wide. Now, check the motor. Bend down and peek inside.",
             "subtitleJa": "からだを うごかそう！ せっけいずを みて。おおきく ひろげて。つぎは、モーターを しらべて。かがんで なかを のぞいて。",
-            "subtitleEn": "Let's move! Look at the blueprint. Open it wide. Now, Check the motor. Bend down and peek inside.",
+            "subtitleEn": "Let's move! Look at the blueprint. Open it wide. Now, check the motor. Bend down and peek inside.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -13679,9 +13706,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Turn the knob. Click! Now, Fix it together! Everybody, hands in!",
+            "say": "Turn the knob. Click! Now, fix it together! Everybody, hands in!",
             "subtitleJa": "つまみを まわして。カチッ！ つぎは、いっしょに なおそう！ みんな、てを あわせて！",
-            "subtitleEn": "Turn the knob. Click! Now, Fix it together! Everybody, hands in!",
+            "subtitleEn": "Turn the knob. Click! Now, fix it together! Everybody, hands in!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -13832,6 +13859,7 @@
     {
       "lessonNo": 568,
       "world": 19,
+      "reviewed": "run9",
       "title": "How-To Card",
       "titleJa": "つくりかたカード",
       "school": {
@@ -13944,7 +13972,7 @@
           },
           {
             "speaker": "Kiko",
-            "en": "The title is, how to make a paper cup.",
+            "en": "The title is How to make a paper cup.",
             "ja": "タイトルは「かみコップの つくりかた」。"
           },
           {
@@ -13975,7 +14003,7 @@
         ],
         "aiTask": {
           "goalJa": "かんたんな ものの つくりかたを How to make ～: First, ～. Next, ～. Then, ～. Finally, ～. の カードに しよう",
-          "starterEn": "Hi! I'm Ms. Emma. I want to make something fun, but I need a how-to card. What can you teach me? What's the title?",
+          "starterEn": "Hi! I'm Birimo. I want to make something fun, but I need a how-to card. What can you teach me? What's the title?",
           "targetExpressions": [
             "How to make ～:",
             "First, ～.",
@@ -14094,14 +14122,14 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Let's listen. Kiko says, The title is, how to make a paper cup. Haru says, First, fold it in half. It makes a triangle. Riko says, Next, fold the right corner to the left side. Then, do the same on the other side.",
+            "say": "Let's listen. Kiko says, The title is How to make a paper cup. Haru says, First, fold it in half. It makes a triangle. Riko says, Next, fold the right corner to the left side. Then, do the same on the other side.",
             "subtitleJa": "きいてね。キコちゃん「タイトルは かみコップの つくりかた。」 ハルくん「まず、はんぶんに おる。さんかくに なるよ。」 リコちゃん「つぎに、みぎの かどを ひだりがわに おる。それから はんたいがわも おなじように。」",
-            "subtitleEn": "Let's listen. Kiko says, The title is, how to make a paper cup. Haru says, First, fold it in half. It makes a triangle. Riko says, Next, fold the right corner to the left side. Then, do the same on the other side.",
+            "subtitleEn": "Let's listen. Kiko says, The title is How to make a paper cup. Haru says, First, fold it in half. It makes a triangle. Riko says, Next, fold the right corner to the left side. Then, do the same on the other side.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "The title is, how to make a paper cup.",
+                "The title is How to make a paper cup.",
                 "First, fold it in half. It makes a triangle.",
                 "Next, fold the right corner to the left side. Then, do the same on the other side."
               ],
@@ -14189,9 +14217,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Take a square piece of paper. Now, Fold it into a triangle. Corner to corner!",
+            "say": "Let's move! Take a square piece of paper. Now, fold it into a triangle. Corner to corner!",
             "subtitleJa": "からだを うごかそう！ しかくい かみを 1まい とって。つぎは、さんかくに おって。かどと かどを あわせて！",
-            "subtitleEn": "Let's move! Take a square piece of paper. Now, Fold it into a triangle. Corner to corner!",
+            "subtitleEn": "Let's move! Take a square piece of paper. Now, fold it into a triangle. Corner to corner!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -14206,9 +14234,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Press with your thumb. Press, press, nice and flat. Now, Write step one. Neat letters!",
+            "say": "Press with your thumb. Press, press, nice and flat. Now, write step one. Neat letters!",
             "subtitleJa": "おやゆびで おさえて。ぎゅっ、ぎゅっ、たいらに。つぎは、ステップ 1 を かいて。きれいな じで！",
-            "subtitleEn": "Press with your thumb. Press, press, nice and flat. Now, Write step one. Neat letters!",
+            "subtitleEn": "Press with your thumb. Press, press, nice and flat. Now, write step one. Neat letters!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -14360,6 +14388,7 @@
     {
       "lessonNo": 569,
       "world": 19,
+      "reviewed": "run9",
       "title": "Gadget Workshop Review",
       "titleJa": "からくり工房の ふりかえり",
       "school": {
@@ -14470,8 +14499,8 @@
         "lines": [
           {
             "speaker": "Ms. Emma",
-            "en": "Let's clean up the workshop. What should we do first?",
-            "ja": "工房を かたづけましょう。まず なにを する？"
+            "en": "It's our last day here. What should we do first?",
+            "ja": "きょうで さいごね。まず なにを する？"
           },
           {
             "speaker": "Riko",
@@ -14506,7 +14535,7 @@
         ],
         "aiTask": {
           "goalJa": "かたづけの てじゅんを First / Next / Finally で いい、have to / must / should / don't have to を つかいわけよう",
-          "starterEn": "Hi! I'm Ms. Emma. Our room is so messy after the craft time! What do we have to do? What should we do first?",
+          "starterEn": "Hi! I'm Haru. Our room is so messy after craft time! What do we have to do? What should we do first?",
           "targetExpressions": [
             "First, we have to ～.",
             "We must ～.",
@@ -14632,7 +14661,7 @@
             "slide": {
               "title": "Talk",
               "items": [
-                "Let's clean up the workshop. What should we do first?",
+                "It's our last day here. What should we do first?",
                 "First, we have to clean up. Next, we should say thank you.",
                 "We must put the tools back. The wrench goes here."
               ],
@@ -14659,9 +14688,9 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "Here's the point. Must is a strong rule. Have to, you need to. Should, a good idea. Don't have to, it's okay not to. must は ぜったい.",
+            "say": "Here's the point. Must is a strong rule. Have to, you need to. Should, a good idea. Don't have to, it's OK not to. must は ぜったい.",
             "subtitleJa": "ポイント。must は つよい きまり。have to は「しなきゃ」。should は「いい かんがえ」。don't have to は「しなくても だいじょうぶ」。must は「ぜったい」。",
-            "subtitleEn": "Here's the point. Must is a strong rule. Have to, you need to. Should, a good idea. Don't have to, it's okay not to.",
+            "subtitleEn": "Here's the point. Must is a strong rule. Have to, you need to. Should, a good idea. Don't have to, it's OK not to.",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -14720,9 +14749,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Let's move! Put the tools back. On the shelf, one by one. Now, Sweep the floor. Swish, swish!",
+            "say": "Let's move! Put the tools back. On the shelf, one by one. Now, sweep the floor. Swish, swish!",
             "subtitleJa": "からだを うごかそう！ どうぐを もとに もどして。たなに 1つずつ。つぎは、ゆかを はいて。サッ、サッ！",
-            "subtitleEn": "Let's move! Put the tools back. On the shelf, one by one. Now, Sweep the floor. Swish, swish!",
+            "subtitleEn": "Let's move! Put the tools back. On the shelf, one by one. Now, sweep the floor. Swish, swish!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -14737,9 +14766,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Carry the box together. One, two, lift! Now, Write a thank-you note. Dear Inventor...",
+            "say": "Carry the box together. One, two, lift! Now, write a thank-you note. Dear Inventor...",
             "subtitleJa": "いっしょに はこを はこんで。いち、にの、よいしょ！ つぎは、おれいの メモを かいて。はつめいかさんへ…",
-            "subtitleEn": "Carry the box together. One, two, lift! Now, Write a thank-you note. Dear Inventor...",
+            "subtitleEn": "Carry the box together. One, two, lift! Now, write a thank-you note. Dear Inventor...",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -14855,9 +14884,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! And then, I'll help you. What a kind friend!",
-            "subtitleJa": "こたえは A！ それから「てつだうよ」。なんて やさしい ともだち！",
-            "subtitleEn": "It's A! And then, I'll help you. What a kind friend!",
+            "say": "It's A! And then say, I'll help you. What a kind friend!",
+            "subtitleJa": "こたえは A！ それから「てつだうよ」と いおう。なんて やさしい ともだち！",
+            "subtitleEn": "It's A! And then say, I'll help you. What a kind friend!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -14890,6 +14919,7 @@
     {
       "lessonNo": 570,
       "world": 19,
+      "reviewed": "run9",
       "title": "World 19 Grand Review",
       "titleJa": "ワールド19 グランドレビュー",
       "school": {
@@ -15036,7 +15066,7 @@
         ],
         "aiTask": {
           "goalJa": "ワールド19 で ならった いいかた（It's used for ～ing. / You can ～ by ～ing. / First, ～.）で、ゆめの きかいを はっぴょうしよう。ほんとうの なまえは いわなくて OK",
-          "starterEn": "Hi! I'm Ms. Emma. Welcome to the invention show! Please tell me about your dream machine. What's it used for? How do you use it?",
+          "starterEn": "Hi! I'm Riko. Welcome to the invention show! Please tell me about your dream machine. What's it used for? How do you use it?",
           "targetExpressions": [
             "We made ～ together!",
             "It's used for ～ing.",
@@ -15156,7 +15186,7 @@
             "kind": "expressions",
             "lang": "en",
             "say": "Let's listen. Haru says, We made a dream machine together! Riko says, It's used for making people smile. It has two long arms and a music box. Kiko says, You can start it by turning this handle. First, turn it. Then, pull the lever.",
-            "subtitleJa": "きいてね。ハルくん「みんなで ゆめの きかいを つくったよ！」 リコちゃん「ひとを えがおに する ために つかうよ。ながい うで 2ほんと オルゴールが あるの。」 キコちゃん「この とってを まわす ことで うごかせるよ。まず まわして。それから レバーを ひいて。」",
+            "subtitleJa": "きいてね。ハルくん「みんなで ゆめの きかいを つくったよ！」 リコちゃん「ひとを えがおに する ために つかうよ。ながい うで 2ほんと オルゴールが あるの。」 キコちゃん「この ハンドルを まわす ことで うごかせるよ。まず まわして。それから レバーを ひいて。」",
             "subtitleEn": "Let's listen. Haru says, We made a dream machine together! Riko says, It's used for making people smile. It has two long arms and a music box. Kiko says, You can start it by turning this handle. First, turn it. Then, pull the lever.",
             "gesture": "open_hands",
             "slide": {
@@ -15264,9 +15294,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Turn the big handle! Round and round. Now, Squeeze, turn, pull! Then, Take a bow. The audience loves you!",
-            "subtitleJa": "おおきな とってを まわして！ ぐるぐる。つぎは、にぎって、まわして、ひっぱって！ それから、おじぎを して。おきゃくさんは あなたが だいすき！",
-            "subtitleEn": "Turn the big handle! Round and round. Now, Squeeze, turn, pull! Then, Take a bow. The audience loves you!",
+            "say": "Turn the big handle! Round and round. Now, squeeze, turn, pull! Then, take a bow. The audience loves you!",
+            "subtitleJa": "おおきな ハンドルを まわして！ ぐるぐる。つぎは、にぎって、まわして、ひっぱって！ それから、おじぎを して。おきゃくさんは あなたが だいすき！",
+            "subtitleEn": "Turn the big handle! Round and round. Now, squeeze, turn, pull! Then, take a bow. The audience loves you!",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -15283,7 +15313,7 @@
             "kind": "tpr",
             "lang": "en",
             "say": "Speed challenge! Squeeze, turn, pull! Turn the big handle! Look! Stop! Come here! Go! Take a bow!",
-            "subtitleJa": "スピード チャレンジ！ にぎって、まわして、ひっぱって！ おおきな とってを まわして！ みて！ とまって！ きて！ いって！ おじぎ！",
+            "subtitleJa": "スピード チャレンジ！ にぎって、まわして、ひっぱって！ おおきな ハンドルを まわして！ みて！ とまって！ きて！ いって！ おじぎ！",
             "subtitleEn": "Speed challenge! Squeeze, turn, pull! Turn the big handle! Look! Stop! Come here! Go! Take a bow!",
             "gesture": "mime",
             "slide": {
@@ -15334,7 +15364,7 @@
             "kind": "repeat",
             "lang": "en",
             "say": "You can start it by turning this handle.",
-            "subtitleJa": "「この とってを まわす ことで うごかせるよ。」",
+            "subtitleJa": "「この ハンドルを まわす ことで うごかせるよ。」",
             "subtitleEn": "You can start it by turning this handle.",
             "gesture": "nod",
             "slide": {
@@ -15367,7 +15397,7 @@
             "kind": "check",
             "lang": "en",
             "say": "Quiz time! How do you start the dream machine? A, by turning this handle. B, by making people smile. Think!",
-            "subtitleJa": "クイズ！ ゆめの きかいは どうやって うごかす？ A「この とってを まわす ことで」 B「ひとを えがおに する ことで」 かんがえて！",
+            "subtitleJa": "クイズ！ ゆめの きかいは どうやって うごかす？ A「この ハンドルを まわす ことで」 B「ひとを えがおに する ことで」 かんがえて！",
             "subtitleEn": "Quiz time! How do you start the dream machine? A, by turning this handle. B, by making people smile. Think!",
             "gesture": "think",
             "slide": {
@@ -15384,7 +15414,7 @@
             "kind": "check",
             "lang": "en",
             "say": "It's A! Turn the handle to start it. Making people smile is what it's used for. Super inventors!",
-            "subtitleJa": "こたえは A！ とってを まわして うごかすよ。えがおに するのは つかいみち。スーパー はつめいか！",
+            "subtitleJa": "こたえは A！ ハンドルを まわして うごかすよ。えがおに するのは つかいみち。スーパー はつめいか！",
             "subtitleEn": "It's A! Turn the handle to start it. Making people smile is what it's used for. Super inventors!",
             "gesture": "clap",
             "slide": {
@@ -15398,9 +15428,9 @@
           {
             "kind": "wrap",
             "lang": "mix",
-            "say": "You did it! You can explain how things work, give steps, and talk about rules. Next, talk with Riko! リコちゃん と おはなし してね. Next is World 20, Festival Island! See you!",
-            "subtitleJa": "やったね！ しくみを せつめいして、てじゅんを つたえて、きまりの はなしも できるね。このあと リコちゃんと おはなし してね。つぎは ワールド20、おまつりの しま！ またね！",
-            "subtitleEn": "You did it! You can explain how things work, give steps, and talk about rules. Next, talk with Riko! Next is World 20, Festival Island! See you!",
+            "say": "You did it! You can explain how things work, give steps, and talk about rules. Next, talk with Riko! リコちゃん と おはなし してね. After that, it's World 20, Festival Island! See you!",
+            "subtitleJa": "やったね！ しくみを せつめいして、てじゅんを つたえて、きまりの はなしも できるね。このあと リコちゃんと おはなし してね。そのあとは ワールド20、おまつりの しま！ またね！",
+            "subtitleEn": "You did it! You can explain how things work, give steps, and talk about rules. Next, talk with Riko! After that, it's World 20, Festival Island! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
