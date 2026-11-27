@@ -740,5 +740,5 @@
 - npx tsc --noEmit: OK
 - npx vitest run: 82 ファイル・2,632 件 OK
 - npx next build: OK
-- npm run smoke:offline: SMOKE_RESULT
+- npm run smoke:offline（DB 停止）: **ぜんぶ OK**（約 70 画面・先生ステップ 10 レッスン・DB 停止中の アカウント API 40 項目と 画面 5）。とちゅうの ビルドで 1回、最後の ビルドで 2回 かけた。最後の ビルドの 1回目は lesson-1141 だけ JS の チャンクが text/html で かえって「よみこみちゅう」で 止まった。2回目は ぜんぶ OK だった。ポート 3100〜3103 に 古い サーバーが のこって いて（3104 で うごいた）、それが 原因の 一時的な ものと 考えて いる。コードの 変更は テキストだけ。古い サーバーは 止めて おく と よい
 - npm run curriculum:check: 索引は 最新
