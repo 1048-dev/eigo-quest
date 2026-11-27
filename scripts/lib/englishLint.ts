@@ -8,6 +8,7 @@ import {
   CANONICAL_FORMS, CONTRACTIONS, GRAMMAR_HABITS, MAX_WORDS_BY_STAGE, OUR_EXCEPTIONS, PHONICS_GRAPHEMES,
   STIFF_PHRASES, UK_SPELLINGS, UK_WORDS, WASEI_EIGO, type Level, type PhraseRule,
 } from "./englishRules";
+import { phrasebookHits } from "./phrasebook";
 
 /**
  * line    = 文（セリフ・おはなし・字幕・れい文）
@@ -294,6 +295,9 @@ export function lintEntry(e: TextEntry, words: WordChecker, isAllowedIn?: LintOp
     }
     for (const a of articleIssues(c)) add("grammar-habit", teaching ? "warn" : "error", a);
   }
+
+  // フレーズブック（run10 Phase 5・docs/phrasebook.md）: つかわない 形・ステージの そとの 形
+  for (const h of phrasebookHits(e.text, e.stage, e.unit)) add("phrasebook", "error", h.message);
 
   if (e.kind === "mixed") return out;
   const t = e.text;

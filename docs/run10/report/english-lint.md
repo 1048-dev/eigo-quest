@@ -1,9 +1,9 @@
 # English lint: all
 
 - 日付: 2026-11-27
-- はんい: レッスン 1〜1200 ＋ としょかん ＋ 力だめし（`npm run english:lint -- --all --strict --out C:\Users\EMICLE\eigo-quest-night\docs\run10\report\english-lint.md`）
-- しらべた 文字列: 154506（1344 ユニット）
-- 結果: **error 0 / warn 465 / info 275**
+- はんい: レッスン 1〜1200 ＋ としょかん ＋ 力だめし ＋ アプリの 文字（src・worksheets。フレーズブックだけ）（`npm run english:lint -- --all --strict --out docs/run10/report/english-lint.md --quiet`）
+- しらべた 文字列: 161841（1635 ユニット）
+- 結果: **error 0 / warn 464 / info 274**
 
 ルールの いみは docs/english-style-guide.md §11。
 
@@ -12,10 +12,10 @@
 | capitalization | 0 | 3 | 0 |
 | contraction | 0 | 0 | 85 |
 | grammar-habit | 0 | 4 | 0 |
-| inconsistent-form | 0 | 18 | 0 |
+| inconsistent-form | 0 | 17 | 0 |
 | lets-overuse | 0 | 0 | 38 |
 | near-duplicate | 0 | 0 | 3 |
-| please-command | 0 | 0 | 18 |
+| please-command | 0 | 0 | 17 |
 | punctuation | 0 | 293 | 0 |
 | sentence-length | 0 | 35 | 0 |
 | stiff-phrase | 0 | 13 | 109 |
@@ -68,10 +68,6 @@
   > We don't have a zoo, but we have a farm.
 - **warn** sentence-length `conversation.lines[1].en` — 10 words > 8 (stage 1): "We don't have a zoo, but we have a farm."  
   > We don't have a zoo, but we have a farm.
-
-### L0239 — Hero Speech Rehearsal
-- **info** please-command `conversation.lines[1].en` — "Please listen to my speech." → Can you ~? / Let's ~. / plain imperative  
-  > Please listen to my speech. My hero is my coach. He is strong and kind. Thank you for listening.
 
 ### L0248 — A Day at Sky School
 - **warn** sentence-length `conversation.lines[2].en` — 9 words > 8 (stage 1): "I sometimes read books in the library after lunch."  
@@ -1924,7 +1920,6 @@
 - **info** lets-overuse `(lesson)` — 4 "Let's" in one lesson (aim ≤ 3)
 
 ## 書きかたの ゆれ（はんい ぜんたい）
-- "me too" ×9 (L0004, L0005, L0007, …) vs "me, too" ×2 (L0183, L0244)
 - "thank you" ×12 (L0010, L0019, L0028, …) vs "thank-you" ×1 (L0569)
 - "beep, beep" ×1 (L0104) vs "beep beep" ×1 (L0498)
 - "say thank you and bow" ×4 (L0145, L0160, L0380, …) vs "say, "Thank you!" and bow" ×1 (L0633)

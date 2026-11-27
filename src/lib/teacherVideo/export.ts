@@ -232,7 +232,7 @@ export interface VttCue {
   en: string;
 }
 
-const PAUSE_EN: Record<string, string> = { tpr: "(Do it with your body!)", check: "(Think about it!)" };
+const PAUSE_EN: Record<string, string> = { tpr: "(Act it out!)", check: "(Think about it!)" };
 
 export function subtitleCues(x: TeacherExport): VttCue[] {
   const cues: VttCue[] = [];

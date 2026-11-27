@@ -6,6 +6,7 @@
  *   npm run english:lint -- --from 1 --to 30 --library   # ＋ としょかん（解放レッスンが はんいに ある もの）
  *   npm run english:lint -- --library            # としょかん だけ
  *   npm run english:lint -- --yearly             # 力だめし だけ
+ *   npm run english:lint -- --src                # アプリの 文字（UI・テンプレート）だけ。フレーズブックの ルールだけ あてる
  *   オプション: --out <file.md>（出力先）/ --strict（error が あれば 終了コード 1）/ --quiet
  *
  * つづり: cspell（en-US）＋ scripts/english-words.txt（名前・正しいと 確かめた ことば）。
@@ -13,17 +14,19 @@
  */
 import { readFileSync, readdirSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { lintEntries, renderMarkdown, summarize, walkEntries, type TextEntry } from "./lib/englishLint";
+import { lintEntries, renderMarkdown, summarize, walkEntries, type Issue, type TextEntry } from "./lib/englishLint";
+import { phrasebookHits } from "./lib/phrasebook";
+import { collectSourceStrings } from "./lib/sourceStrings";
 
 const ROOT = path.resolve(__dirname, "..");
 const WORLDS_DIR = path.join(ROOT, "content/curriculum/worlds");
 const LIB_DIR = path.join(ROOT, "content/library");
 const YEARLY_DIR = path.join(ROOT, "content/yearly");
 
-interface Args { from?: number; to?: number; library: boolean; yearly: boolean; out?: string; strict: boolean; quiet: boolean }
+interface Args { from?: number; to?: number; library: boolean; yearly: boolean; src: boolean; out?: string; strict: boolean; quiet: boolean }
 
 export function parseArgs(argv: string[]): Args {
-  const a: Args = { library: false, yearly: false, strict: false, quiet: false };
+  const a: Args = { library: false, yearly: false, src: false, strict: false, quiet: false };
   for (let i = 0; i < argv.length; i++) {
     const k = argv[i];
     const next = () => argv[++i];
@@ -31,13 +34,14 @@ export function parseArgs(argv: string[]): Args {
     else if (k === "--to") a.to = Number(next());
     else if (k === "--library") a.library = true;
     else if (k === "--yearly") a.yearly = true;
+    else if (k === "--src") a.src = true;
     else if (k === "--out") a.out = next();
     else if (k === "--strict") a.strict = true;
     else if (k === "--quiet") a.quiet = true;
-    else if (k === "--all") { a.from = 1; a.to = 1200; a.library = true; a.yearly = true; }
+    else if (k === "--all") { a.from = 1; a.to = 1200; a.library = true; a.yearly = true; a.src = true; }
   }
-  const noScope = a.from === undefined && a.to === undefined && !a.library && !a.yearly;
-  if (noScope) { a.from = 1; a.to = 1200; a.library = true; a.yearly = true; }
+  const noScope = a.from === undefined && a.to === undefined && !a.library && !a.yearly && !a.src;
+  if (noScope) { a.from = 1; a.to = 1200; a.library = true; a.yearly = true; a.src = true; }
   if (a.from !== undefined && a.to === undefined) a.to = a.from;
   if (a.to !== undefined && a.from === undefined) a.from = 1;
   return a;
@@ -108,13 +112,32 @@ export function collectYearly(): TextEntry[] {
   return out;
 }
 
+/**
+ * アプリの コード（UI の 文字・テンプレート・ワークブックの python）の 英語。フレーズブックの ルールだけ あてる。
+ * unit = "src:<file>"、path = "line <n>"。ステージは きめられないので null（どの ステージの 子も 見る）。
+ */
+export function lintSource(root = ROOT): { entries: TextEntry[]; issues: Issue[] } {
+  const entries: TextEntry[] = [];
+  const issues: Issue[] = [];
+  for (const s of collectSourceStrings(root)) {
+    const unit = `src:${s.file}`;
+    const where = `line ${s.line}`;
+    entries.push({ unit, stage: 0, path: where, text: s.text, kind: "mixed", strict: false, spoken: false });
+    for (const h of phrasebookHits(s.text, null, unit)) {
+      issues.push({ rule: "phrasebook", level: "error", unit, path: where, text: s.text.length > 140 ? `${s.text.slice(0, 139)}…` : s.text, message: h.message });
+    }
+  }
+  return { entries, issues };
+}
+
 export function rangeName(a: Args): string {
   const parts: string[] = [];
-  const full = a.from === 1 && a.to === 1200 && a.library && a.yearly;
+  const full = a.from === 1 && a.to === 1200 && a.library && a.yearly && a.src;
   if (full) return "all";
   if (a.from !== undefined && a.to !== undefined) parts.push(`L${a.from}-${a.to}`);
   if (a.library) parts.push("library");
   if (a.yearly) parts.push("yearly");
+  if (a.src) parts.push("src");
   return parts.join("+");
 }
 
@@ -144,12 +167,18 @@ async function main() {
     isTeachingForm: (w) => teaching.has(w),
     isAllowedIn: (unit, w) => wl.allow.get(unit)?.has(w) ?? false,
   });
+  if (a.src) {
+    const src = lintSource();
+    add(src.entries);
+    issues.push(...src.issues);
+  }
   const s = summarize(entries, issues);
   const name = rangeName(a);
   const scope = [
     hasLessons ? `レッスン ${a.from}〜${a.to}` : "",
     a.library ? "としょかん" : "",
     a.yearly ? "力だめし" : "",
+    a.src ? "アプリの 文字（src・worksheets。フレーズブックだけ）" : "",
   ].filter(Boolean).join(" ＋ ");
   const out = a.out ?? path.join(ROOT, "docs/run9/lint", `${name}.md`);
   mkdirSync(path.dirname(out), { recursive: true });

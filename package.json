@@ -44,7 +44,9 @@
     "check:a11y": "tsx scripts/a11y-check.ts",
     "check:links": "tsx scripts/link-check.ts",
     "check:bundle": "tsx scripts/bundle-budget.ts",
-    "check:e2e": "tsx scripts/e2e-check.ts"
+    "check:e2e": "tsx scripts/e2e-check.ts",
+    "phrasebook:doc": "tsx scripts/phrasebook-doc.ts",
+    "phrasebook:fix": "tsx scripts/phrasebook-fix.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",

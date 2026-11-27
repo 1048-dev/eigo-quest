@@ -205,3 +205,42 @@
 - ワークブック No.1 の PDF（git には 入れない）が なければ check:e2e が python で つくる（なければ メモに 書いて とばす）。
 - 本番の DB（ポート 5432）には さわっていない（ほかの プロジェクトの gamblex-db）。
 - 内容の メモ（なおしては いない）: TPR「Make an X」や「mistake」の 絵文字が ❌ なので、まちがいの おしらせ（❌）と ならぶと まぎらわしい かもしれない。英語・内容の 見なおし（Phase 5 など）で 🙅 などに するか きめて ほしい。
+
+## Phase 5 フレーズブック（おなじ はたらきの 英語は 1つの 言いかたに）
+
+### できた こと
+- **docs/phrasebook.md**（`npm run phrasebook:doc` で つくる。データは scripts/lib/phrasebook.ts。`--check` で 最新か しらべる）: **23 の はたらき**（あいさつ・げんき？・なまえ・はじめまして・さようなら・ありがとう・ごめんね・ほめる・はげます・教室の 指示・まねして いってね（先生）・ききかえす（こども）・じゅんばん・さんせい / はんたい・たのむ・はい どうぞ・さそう・すすめる・いけん / りゆう・きもち・ことばの しつもん・わかったか たしかめる・スピーチの はじめと おわり）ごとに
+  - **Canonical**（その ステージで いちばんに つかう 形。ステージ 1〜5 の どこにも かならず ある）
+  - **Allowed variants**（べつの 形と「わざと 入れる ステージ」。はじめて 出る レッスンと ステージごとの 回数は content/ を しらべて 自動で 書く）
+  - **Avoid**（つかわない 形と 理由: British・stiff・textbook-only・unnatural・babyish・rude・和製英語・文法・書きかたの 統一）
+- **english:lint に ルール `phrasebook`（error）**: avoid の 形は いつでも、variant は ステージの そと（from より 前＝まだ ならって いない／to より 後＝年れいに あわない）で error。`--strict` なので check:all の english:lint が 自動で 見はる。
+- **アプリの 文字も しらべる**（`npm run english:lint -- --src`。`--all` と 既定に 入る）: src/ と worksheets/ の 文字列（UI・テンプレート・ワークブックの python。コメントは のぞく）7,302 個・291 ファイル。どの ステージの 子も 見るので、avoid と「to が ある 形（Bye-bye）」を しらべる（つづりの ルールは コードの 名前で たくさん 出るので あてない）。
+- **`npm run phrasebook:fix`**: fix が ある 形を 自動で なおし、**docs/run10/changes/phrasebook.md** に 1 文字列ずつ（unit・path・まえ → あと）記録。JSON は 書きなおさず、かわった 文字列だけ 置きかえる（改行・ならびは そのまま。ならびが あわなければ 止まる）。日本語の 説明（ja・～Ja）の 中の 英語も おなじように なおす。2 回目は 0 件（かわらない）。
+
+### なおした もの（ぜんぶ で 639 文字列・258 ユニット）
+| もの | ステージ | 件数 | なおしかた・理由 |
+|---|---|---|---|
+| 先生の さいごの「Bye-bye!」 | 3〜5 | 507 | 「See you!」（テンプレートと おなじ 先生の しめ）。キャラクターの「Bye-bye, carrot!」などは「Bye, carrot!」。8 さい までは あたたかいが、それ より 上には こどもっぽい。ステージ 1〜2 は そのまま |
+| 「Me, too!」 | 1・4 | 58 | 「Me too!」（2 語の こたえは コンマなし。Nice to meet you, too. の ような 文の おわりの too は コンマあり と きめた） |
+| 「Please listen to my speech.」（L239） | 1 | 29 | 「Let me tell you about my hero.」（日本の 教科書の きまり文句。L328 で ならう 文型に）。aiTask の 1 文は 8 語に おさまる ように「Start your speech! "…"」 |
+| 「I'm so-so.」「So-so?」（L66） | 1 | 27 | 「I'm OK.」「Just OK?」（教科書の こたえ。ことばと しての so-so＝まあまあ・TPR「Show me so-so.」は のこした） |
+| 「Here you go」 | 1 | 12 | 「Here you are」（ステージ 1 は 1つの 形。Here you go は ステージ 2 から） |
+| 「Once more」 | 3・4 | 4 | 「One more time」 |
+| 「Bye, bye!」 | 1 | 2 | 「Bye-bye!」（書きかたを 1つに） |
+| 「No worries.」 | 2 | 2 | 「No problem.」（ステージ 1〜2 の くだけた こたえは 1つ） |
+| アプリ: 先生の 動画の 字幕「(Do it with your body!)」 | 全部 | 1 | 「(Act it out!)」（からだで やってみよう の 直訳） |
+
+- 意味と レベルは かえていない（日本語は そのまま。L66・L239 は 文の 長さ・ステージの 語数の きまりも まもる）。
+- しらべた けっか（english:lint --all --strict）: **phrasebook error 620 → 0**、ぜんたい error 0 / warn 464（まえ 465）/ info 274（まえ 275）。161,841 文字列・1,635 ユニット（アプリの 文字を ふくむ）。
+- いまは 0 件だが、きまりとして lint が 見はる 形: How do you do? / What is your name? / See you again! / Nice to meet you too / Brilliant! / Don't mind! / Do you understand? / In my opinion, I think / The reason is because / Pardon?（ステージ 5 から）/ I think（ステージ 2 から）/ In my opinion・I agree（3 から）/ Could I have・Would you mind（4 から）など。
+
+### しらべた こと（数）
+- tsc OK・**vitest 2,735 passed（88 files）**・next build OK（/lesson 200 kB・/map 195 kB）・`npm run check:data` 問題 0（問題 455,781）・curriculum:check / library:check 最新。
+- tests/phrasebook.test.ts **28 件**: データの 形（ステージ 1〜5 に canonical・fix には re）・見つける / 見のがす（so-so の ことば・Give me five! は OK）・Bye-bye は 1〜2 だけ・まだ ならって いない 形・アプリの 文字・allowUnits・lint の error・自動の なおし（2 回 かけても おなじ・なおした あとは 0）・JSON を くずさない（CRLF・\" ・id は かえない）・src の 文字列の ぬきだし（コメント・URL・行番号）・**ぜんぶの レッスン / としょかん / 力だめし / アプリで phrasebook 0**・lint が しらべない 形も ステージの そとで つかわれて いない・docs/phrasebook.md が データと おなじ。
+
+### 決めた こと・メモ
+- 学校の テストに 出る 形（Here you are. / I'm fine, thanks. / My name is ～. / May I ～? / Shall we ～? / I'd like ～. / Pardon?）は、アメリカでも ふつうに 通じるので のこし、「わざと 入れる ステージ」を きめた（Shall we は すこし かたいので Let's を 先に）。
+- 「Excuse me?」（ききかえし）・「Not at all.」（Thank you への こたえ）・「Good boy!」・「Cheer up!」・「Give me ～.」は 文脈で 正しい ことが ある（L1088 の おこった Excuse me? / L1002 の Would you mind ～? ― Not at all. / L869 の 犬 / L773 の かなしい ともだち / Give me five!）ので、ドキュメントだけ（lint は しない）。
+- run9 で「わざと」と きめた warn（stiff-phrase 13 など）は さわって いない。
+- vitest の とちゅうで「Timeout calling onTaskUpdate」（tests/data-check.test.ts の 1 つの テストが いそがしい とき 60 秒 イベントループを とめていた。ひとつで 19 秒・ぜんぶ いっしょだと 62 秒）→ runDataChecks の セクションの あいだで イベントループに もどす ように した（scripts/lib/dataCheck.ts）。その あと 2 回 とおった。1 回だけ Windows の 一時ファイルの エラー（UNKNOWN: open …\Temp\…\ssr\…・tests/phonics-w25）が 出たが、やりなおしで 出なかった（テストの 中身では ない）。
+- Phase 4 の メモ（TPR の ❌ 絵文字）は 英語の きまりでは ないので この フェーズでは かえていない。

@@ -589,7 +589,7 @@
           },
           {
             "speaker": "Haru",
-            "en": "Here you go! What's your name?",
+            "en": "Here you are! What's your name?",
             "ja": "はい！なまえは なに？"
           },
           {
@@ -709,15 +709,15 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "Let's play the name game! Catch the ball and say your name. ハルくんが ボールを なげたよ。Here you go! What's your name? I'm Kiko. How about you?",
+            "say": "Let's play the name game! Catch the ball and say your name. ハルくんが ボールを なげたよ。Here you are! What's your name? I'm Kiko. How about you?",
             "subtitleJa": "「なまえゲームを しよう！ボールを とったら なまえを いってね。」ハルが ボールを なげたよ。「はい！なまえは なに？」「キコだよ。あなたは？」",
-            "subtitleEn": "Let's play the name game! Catch the ball and say your name. / Here you go! What's your name? / I'm Kiko. How about you?",
+            "subtitleEn": "Let's play the name game! Catch the ball and say your name. / Here you are! What's your name? / I'm Kiko. How about you?",
             "gesture": "open_hands",
             "slide": {
               "title": "なまえゲーム",
               "items": [
                 "Let's play the name game! Catch the ball and say your name.",
-                "Here you go! What's your name?",
+                "Here you are! What's your name?",
                 "I'm Kiko. How about you?"
               ],
               "emoji": "🏐"
@@ -2443,7 +2443,7 @@
       "school": {
         "grade": "小3",
         "topic": "ちょうし・きもち",
-        "grammar": "How are you? ― I'm great. / I'm good. / I'm so-so.",
+        "grammar": "How are you? ― I'm great. / I'm good. / I'm OK.",
         "expressions": [
           {
             "en": "I'm great!",
@@ -2455,7 +2455,7 @@
             "ja": "きょうの ちょうしは どう？"
           },
           {
-            "en": "I'm so-so.",
+            "en": "I'm OK.",
             "ja": "まあまあ。"
           }
         ],
@@ -2551,17 +2551,17 @@
           },
           {
             "speaker": "Haru",
-            "en": "Hmm... I'm so-so.",
+            "en": "Hmm... I'm OK.",
             "ja": "うーん…まあまあ。"
           },
           {
             "speaker": "Ms. Emma",
-            "en": "So-so? Let's have a fun day!",
+            "en": "Just OK? Let's have a fun day!",
             "ja": "まあまあ？たのしい いちにちに しようね！"
           }
         ],
         "aiTask": {
-          "goalJa": "How are you? と きかれたら I'm great. / I'm good. / I'm so-so. で こたえて、あいてにも How are you? と ききかえそう",
+          "goalJa": "How are you? と きかれたら I'm great. / I'm good. / I'm OK. で こたえて、あいてにも How are you? と ききかえそう",
           "starterEn": "Good morning! I'm great today. How are you?",
           "targetExpressions": [
             "I'm ～.",
@@ -2572,7 +2572,7 @@
       "recap": {
         "highlightsJa": [
           "How are you today? で ちょうしを きけたね",
-          "I'm great. / I'm so-so. で こたえられたよ",
+          "I'm great. / I'm OK. で こたえられたよ",
           "c と h で ch！ chip, chop を よめたよ"
         ]
       },
@@ -2597,14 +2597,14 @@
           {
             "kind": "goal",
             "lang": "mix",
-            "say": "Today's goal. Ask, How are you? And answer, I'm great. I'm good. I'm so-so. きょうの ちょうしを きいて、こたえられるように なろうね。",
-            "subtitleJa": "きょうの ゴール：How are you? で ちょうしを きく。I'm great. / I'm good. / I'm so-so. で こたえる。",
-            "subtitleEn": "Today's goal. Ask, How are you? And answer, I'm great. I'm good. I'm so-so.",
+            "say": "Today's goal. Ask, How are you? And answer, I'm great. I'm good. I'm OK. きょうの ちょうしを きいて、こたえられるように なろうね。",
+            "subtitleJa": "きょうの ゴール：How are you? で ちょうしを きく。I'm great. / I'm good. / I'm OK. で こたえる。",
+            "subtitleEn": "Today's goal. Ask, How are you? And answer, I'm great. I'm good. I'm OK.",
             "gesture": "point",
             "slide": {
               "title": "きょうの ゴール",
               "items": [
-                "How are you? ― I'm great. / I'm good. / I'm so-so."
+                "How are you? ― I'm great. / I'm good. / I'm OK."
               ],
               "emoji": "🎯"
             }
@@ -2692,16 +2692,16 @@
           {
             "kind": "expressions",
             "lang": "mix",
-            "say": "つぎは ハルくん。なんだか ねむそう。Good morning, Haru. How are you? Hmm... I'm so-so. So-so? Let's have a fun day!",
+            "say": "つぎは ハルくん。なんだか ねむそう。Good morning, Haru. How are you? Hmm... I'm OK. Just OK? Let's have a fun day!",
             "subtitleJa": "エマ「おはよう、ハル。ちょうしは どう？」ハル「うーん…まあまあ。」エマ「まあまあ？たのしい いちにちに しようね！」",
-            "subtitleEn": "Good morning, Haru. How are you? / Hmm... I'm so-so. / So-so? Let's have a fun day!",
+            "subtitleEn": "Good morning, Haru. How are you? / Hmm... I'm OK. / Just OK? Let's have a fun day!",
             "gesture": "open_hands",
             "slide": {
               "title": "かいわ",
               "items": [
                 "Good morning, Haru. How are you?",
-                "Hmm... I'm so-so.",
-                "So-so? Let's have a fun day!"
+                "Hmm... I'm OK.",
+                "Just OK? Let's have a fun day!"
               ],
               "emoji": "🙂"
             }
@@ -2710,7 +2710,7 @@
             "kind": "expressions",
             "lang": "mix",
             "say": "ポイント！ How are you? は「げんき？ ちょうしは どう？」。こたえは I'm のあとに great, good, so-so。まあまあの ひも あるよね。しょうじきに こたえて だいじょうぶ。",
-            "subtitleJa": "ポイント：How are you? は「ちょうしは どう？」。I'm great. / I'm good. / I'm so-so. で こたえる。しょうじきで だいじょうぶ。",
+            "subtitleJa": "ポイント：How are you? は「ちょうしは どう？」。I'm great. / I'm good. / I'm OK. で こたえる。しょうじきで だいじょうぶ。",
             "subtitleEn": "How are you? / I'm ～.",
             "gesture": "nod",
             "slide": {
@@ -2846,14 +2846,14 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "I'm so-so.",
+            "say": "I'm OK.",
             "subtitleJa": "「まあまあ。」",
-            "subtitleEn": "I'm so-so.",
+            "subtitleEn": "I'm OK.",
             "gesture": "nod",
             "slide": {
               "title": "いってみよう",
               "items": [
-                "I'm so-so."
+                "I'm OK."
               ],
               "emoji": "🎤"
             },
@@ -2862,9 +2862,9 @@
           {
             "kind": "repeat",
             "lang": "mix",
-            "say": "Your turn! How are you today? きょうの あなたの ちょうしで こたえてね。I'm great? I'm good? I'm so-so? どれ かな？",
-            "subtitleJa": "あなたの ばん！ きょうの ちょうしは どう？ I'm great. / I'm good. / I'm so-so. の どれかで こたえてね。",
-            "subtitleEn": "Your turn! How are you today? I'm great? I'm good? I'm so-so?",
+            "say": "Your turn! How are you today? きょうの あなたの ちょうしで こたえてね。I'm great? I'm good? I'm OK? どれ かな？",
+            "subtitleJa": "あなたの ばん！ きょうの ちょうしは どう？ I'm great. / I'm good. / I'm OK. の どれかで こたえてね。",
+            "subtitleEn": "Your turn! How are you today? I'm great? I'm good? I'm OK?",
             "gesture": "open_hands",
             "slide": {
               "title": "いってみよう",
@@ -2879,15 +2879,15 @@
           {
             "kind": "check",
             "lang": "mix",
-            "say": "Quiz! Haru says, I'm so-so. ハルくんの ちょうしは どっち？ すごく げんき？ それとも まあまあ？",
-            "subtitleJa": "クイズ！ ハルが I'm so-so. と いったよ。ハルの ちょうしは「すごく げんき」と「まあまあ」の どっち？",
-            "subtitleEn": "Quiz! Haru says, I'm so-so.",
+            "say": "Quiz! Haru says, I'm OK. ハルくんの ちょうしは どっち？ すごく げんき？ それとも まあまあ？",
+            "subtitleJa": "クイズ！ ハルが I'm OK. と いったよ。ハルの ちょうしは「すごく げんき」と「まあまあ」の どっち？",
+            "subtitleEn": "Quiz! Haru says, I'm OK.",
             "gesture": "think",
             "slide": {
               "title": "クイズ",
               "items": [
                 "I'm great!",
-                "I'm so-so."
+                "I'm OK."
               ],
               "emoji": "❓"
             },
@@ -2903,7 +2903,7 @@
             "slide": {
               "title": "こたえ",
               "items": [
-                "I'm so-so."
+                "I'm OK."
               ],
               "emoji": "⭕"
             }
@@ -2911,7 +2911,7 @@
           {
             "kind": "wrap",
             "lang": "mix",
-            "say": "You did great today! How are you? で ちょうしを きいて、I'm great. や I'm so-so. で こたえられたね。あたらしい ch の おとも でたよ。このあと キコちゃんと おはなし してみてね。See you!",
+            "say": "You did great today! How are you? で ちょうしを きいて、I'm great. や I'm OK. で こたえられたね。あたらしい ch の おとも でたよ。このあと キコちゃんと おはなし してみてね。See you!",
             "subtitleJa": "きょうも よく できたね！ ちょうしを きいて、こたえられたよ。あたらしい ch の おとも ばっちり。このあと キコちゃんと おはなし してみてね。またね！",
             "subtitleEn": "You did great today! Chat with Kiko next. See you!",
             "gesture": "clap",

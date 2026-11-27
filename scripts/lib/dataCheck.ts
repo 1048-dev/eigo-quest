@@ -549,6 +549,8 @@ export async function runDataChecks(opts: DataCheckOptions = {}): Promise<Sectio
   const sections: Section[] = [];
   const section = async (name: string, fn: (s: Section) => void | Promise<void>) => {
     if (!want(name)) return;
+    // run10 P5: セクションの あいだで イベントループに もどす（vitest の ワーカーが 60 秒 とまると RPC が 時間切れに なる）
+    await new Promise<void>((r) => setImmediate(r));
     const s: Section = { name, title: SECTION_TITLES[name] ?? name, counts: {}, problems: [], ms: 0 };
     const t0 = Date.now();
     log(`▶ ${s.title}`);
