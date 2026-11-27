@@ -133,3 +133,34 @@
 - npx tsc --noEmit: OK
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
+
+## REVIEW: ワールド7・8（レッスン 181〜240）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・testPoints を 60 レッスン ぜんぶ 見なおした
+- さきに 機械的な なおし（2重の 文末記号・クイズの 2択）と ブロックの きめごと（timetable → schedule・L239 football → cookbook・thumbs-up・イギリスふうの ほめことば・showtime・「やあ、みんな！」）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た もの（文の なかの「Now, Point …」の 大文字・L188 の titleJa）を ブロック全体で そろえた
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、before が いまの 値と あう ときだけ あてた（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあいも たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W07-08.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 181 --to 240`）: **まえ error 0 / warn 70 / info 12 → あと error 0 / warn 5 / info 9**（まえの warn は timetable 63・文が ながい 6・thumbs up の ゆれ 1。のこりの warn 5 は L232・L235 の but の 文〈10 語〉。but で 2つを つなぐ ことが ねらいなので のこす）
+- なおした 欄 **501**（パッチ 526 件: 機械的な なおし 56・ブロックの きめごと 107・レビュアー 252・あとの そろえ 111。重なり あり）＋ L239 の `phonics.sounds` に「/ʊ/」を たした。なおした レッスン **58 / 60**（L201・L202 だけ 変更なし）
+- 学習項目 ID が かわった もの 9つ: L188 TPR「First, raise your hand.」など 3つ →「First in line, …」、L192 ことば「timetable」→「schedule」、L195 表現「This is my dream timetable.」・TPR「Show your timetable.」→ schedule、L200・L209 TPR「Give a thumbs up.」→「Give a thumbs-up.」、L239 フォニックス「football」→「cookbook」（この 9項目だけ 記録が あたらしく なる）
+- L195 の タイトル「My Dream Timetable」→「My Dream Schedule」、L188 の titleJa「1にち、2にち、3にち」→「ついたち、ふつか、みっか」（titles.json・curriculum-plan.md も）
+
+### before → after の 例
+1. L188 TPR（A・B）: 「First, raise your hand.」→「First in line, raise your hand.」（英語の「First, ～」は「まず ～」で、「1ばんめの ひと」の いみに ならない。スライド・字幕・スピード チャレンジも あわせた）
+2. L214 会話（A・B・C）: 「Next to the park, between the park and the bookstore. Got it!」→「Between the park and the bookstore. Got it!」（2つの こたえを くっつけた 10 語の 文。日本語も「こうえんと ほんやの あいだ。わかった！」に）
+3. L236・L238 フォニックス（objective）: 「Or a short u, like foot.」「Wood says a short u.」→「a short oo」（foot・wood の oo を「みじかい u」と 説明して いた（L211〜220 と おなじ よびかた。まちがった きまりを 教えて いた）
+
+### きめた こと
+- timetable は schedule に そろえた（ワールド15・24・28・34・35・39 にも ある。34 の イギリス英語・アメリカ英語の 回は わざと のこす もの。ほかは それぞれの ブロックで なおす）
+- 文の なかの「Now, Point to ～.」は「Now, point to ～.」（TPR の 項目と スライドは 大文字の まま）。ワールド9 いこうにも たくさん あるので それぞれの ブロックで おなじ きまりで なおす
+- L217「And you, Ms. Emma?」は レストランで 順番に きく ときの ふつうの 言いかたなので のこした
+- のこした こと: 「Grade 5 show」（アメリカでは fifth-grade show。ワールド4・7〜11 に 37 か所・ID）、クイズの「A, or B?」の コンマ、フォニックスの 音の わけかたを TTS が 文字で よむ おそれ。どれも 全体で 決める（くわしくは W07-08.md）
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK

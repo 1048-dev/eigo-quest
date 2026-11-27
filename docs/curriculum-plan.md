@@ -463,7 +463,7 @@
 | 192 | What Do You Have on Monday? | ようびと きょうか | What do you have on Monday? | ea（team, leaf, beach, clean） | 1しゅうかんの じかんわりを たしかめる |
 | 193 | I Have Math and Art | 1日の じかんわり | I have math and art on Wednesday. | ea（peach, dream, meat, seat） | オンラインの ともだちと じかんわり くらべ |
 | 194 | My Favorite Subject | すきな きょうかと わけ | My favorite subject is art. | ea（speak, teach, heat, bean） | きゅうしょくの じかんに すきな きょうか トーク |
-| 195 | My Dream Timetable | ゆめの じかんわりづくり | I have music and P.E. on Friday. | ee ea ふりかえり（see, sea, meet, meat） | ゆめの じかんわり はっぴょう |
+| 195 | My Dream Schedule | ゆめの じかんわりづくり | I have music and P.E. on Friday. | ee ea ふりかえり（see, sea, meet, meat） | ゆめの じかんわり はっぴょう |
 | 196 | Can You Swim? | Can you ～? | Can you swim? | oa（boat, coat, road, goat） | 島の みなとで ボートの 日 |
 | 197 | He Can Run Fast | He can ～.（ともだち しょうかい） | He can run fast. | oa（soap, toast, coach, float） | 島の グラウンドで ともだち しょうかい |
 | 198 | She Can Play the Piano | She can ～. | She can play the piano. | oa（goal, toad, roast, loaf） | 島の おんがくホールで リコを しょうかい |
@@ -482,7 +482,7 @@
 
 ## 6-8. ワールド8 のレッスン詳細（content/curriculum/lessons.json に実装済み）
 
-- フォニックス: 母音チーム後半を oo（moon の「ウー」L211〜212、book の「ウ」L213〜214）→ ou（L216〜219）→ ow（cow の「アウ」L221〜224）→ oi（L226〜227）→ oy（L228〜229）→ igh（L231〜232）→ ie（pie の「アイ」L233〜234）。5の倍数回と L236〜240 は ふりかえり（oo の 2つの おと、ou / ow・oi / oy・igh / ie の おなじ おとの ペア、moonlight / playground / cowboy / football の 2音節語）。ワールド8の ow は「アウ」だけ、ie は「アイ」だけ（piece の「イー」は 出さない）。`phonics.rule` は "vowel-team" / "review"。
+- フォニックス: 母音チーム後半を oo（moon の「ウー」L211〜212、book の「ウ」L213〜214）→ ou（L216〜219）→ ow（cow の「アウ」L221〜224）→ oi（L226〜227）→ oy（L228〜229）→ igh（L231〜232）→ ie（pie の「アイ」L233〜234）。5の倍数回と L236〜240 は ふりかえり（oo の 2つの おと、ou / ow・oi / oy・igh / ie の おなじ おとの ペア、moonlight / playground / cowboy / cookbook の 2音節語）。ワールド8の ow は「アウ」だけ、ie は「アイ」だけ（piece の「イー」は 出さない）。`phonics.rule` は "vowel-team" / "review"。
 - おとの表: `src/lib/curriculum/vowelTeams.ts`。oo と ow は つづりが おなじでも おとが ちがうので、ことばの 表（`OO_SHORT_WORDS` = book の「ウ」、`OW_AU_WORDS` = cow の「アウ」）で 見分ける。**新しい oo / ow の ことばを つかうときは この表に 足す**（足さないと moon の「ウー」・snow の「オウ」あつかい）。
 - フォニックス問題（`vowelTeamQuestion`）: 選択肢 = 正解 ＋ みじかい母音（つづりの 1もじめ。night ↔ i）＋ ほかの おとの つづり 2つ。おなじ おとに なりうる つづり（ou ↔ ow ↔ oa、oi ↔ oy、igh ↔ ie）や、ことばの 中で きこえる おとの つづり（playground の ay）は 出さない。まだ ならっていない つづり（`VOWEL_TEAM_INTRO`）も 出さない。
 - 表現の型: Where is the ～? / Go straight. / Turn right (left). / It's on your right. / It's next to ～. → What would you like? ― I'd like ～, please. / How much is it? ― It's ～ yen. / Here you are. → In Japan, we have ～. / You can ～. / It's delicious. → Who is your hero? ― My hero is ～. / He / She is brave. / He / She is good at ～. / He / She helps ～. → We have a ～ in our town. / We don't have a ～. / I want a ～ in our town. / Our town is ～. → ヒーロー しょうかい スピーチ・小5 はっぴょうかい。
@@ -519,7 +519,7 @@
 | 236 | My Hero Speech | ヒーロー しょうかい スピーチを つくる | My hero is Ms. Emma. She is kind. | oo ou ふりかえり（spoon, foot, mouth, round） | きょうしつで ヒーロー スピーチづくり |
 | 237 | Treasure Hunt | みちあんない ゲーム | Turn right at the second corner. | ow oi oy ふりかえり（brown, join, toy, crowd） | みちあんないで たからさがし ゲーム |
 | 238 | Road Cafe Quiz Show | ちゅうもんと にほん しょうかい クイズショー | In Japan, we have ramen. It's delicious. | igh ie oo ふりかえり（bright, fries, school, wood） | たびだちの道の カフェで クイズショー |
-| 239 | Hero Speech Rehearsal | 小5 はっぴょうかいの リハーサル | Please listen to my speech. | oo ou ow oy igh ふりかえり（moonlight, playground, cowboy, football） | やがいステージで はっぴょうかいの リハーサル |
+| 239 | Hero Speech Rehearsal | 小5 はっぴょうかいの リハーサル | Please listen to my speech. | oo ou ow oy igh ふりかえり（moonlight, playground, cowboy, cookbook） | やがいステージで はっぴょうかいの リハーサル |
 | 240 | World 8 Grand Review | 小5 はっぴょうかい（ワールド8 ぜんぶ） | This is my hero. He is brave and kind. | 母音チーム総まとめ（moon, house, cow, coin, boy, night, pie） | たびだちの道の ゴールで 小5 はっぴょうかい |
 
 ## 6-9. ワールド9 のレッスン詳細（content/curriculum/lessons.json に実装済み）
