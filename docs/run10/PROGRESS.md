@@ -286,3 +286,24 @@
 - 失敗は 0 件。なおす ものが なかったので コードと テストは かえていない（レポート docs/run10/report/*.md だけ 更新）。tsc・vitest・next build は この 通しの 中で PASS（コードは 前の コミット b86f8a8 と おなじ）。
 - 内部リンクが 4,123 → 4,125: ブラウザで 画面から 見つけた URL が 60 → 62 に ふえた ため（ルート ぜんぶの 数は おなじ）。画面に 出る リンクは 日づけや DB の 状態で かわる ので その ぶん と みている。こわれた URL は 0 の まま。
 - 本番の DB（ポート 5432）には さわっていない。
+
+## run10 さいごの 通し（3 回目）: check:all（2026-11-28）
+
+### けっか（npm run check:all・48 分 10 秒・終了コード 0）
+| ステップ | けっか | 数 | 時間 |
+|---|---|---|---|
+| english:lint（ぜんぶ） | PASS | 161,841 文字列 / 1,635 ユニット・error 0 warn 464 info 274 | 10s |
+| tsc | PASS | error 0 | 11s |
+| vitest | PASS | 2,735 passed / 2,735（88 files） | 1m15s |
+| next build | PASS | 81 routes | 1m30s |
+| データの 確認（Phase 2） | PASS | レッスン 1,200・テスト 2,719・問題 455,781・おはなし 100・力だめし 5・問題の ある データ 0 | 1m26s |
+| 画面の 描画（Phase 3） | PASS | 描画 333,549・問題 0 | 5m15s |
+| DB 停止の スモーク | PASS | 125 OK / 0 NG | 6m59s |
+| E2E（本物の DB・Phase 4） | PASS | ワールド 40/40・341 OK / 0 NG | 22m53s |
+| アクセシビリティ（axe） | PASS | 26 画面・critical/serious 0・moderate/minor 0 | 1m59s |
+| 内部リンク | PASS | 4,122 URL（画面 27）・broken 0・crawl errors 0 | 6m30s |
+| JS の 大きさ | PASS | /map 195・/lesson 200 kB（予算 230 kB） | 2s |
+
+- 失敗は 0 件。なおす ものが なかったので コードと テストは かえていない（レポート docs/run10/report/*.md だけ 更新）。tsc・vitest・next build は この 通しの 中で PASS。
+- 内部リンクが 4,125 → 4,122: 画面から 見つけた URL の 数が 日づけや DB の 状態（E2E の あとの データ）で かわる ため。こわれた URL は 0 の まま。
+- 本番の DB（ポート 5432）には さわっていない。
