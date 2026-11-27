@@ -6,6 +6,7 @@
     {
       "lessonNo": 931,
       "world": 32,
+      "reviewed": "run9",
       "title": "The Desert of the Sun",
       "titleJa": "たいようの 砂漠",
       "school": {
@@ -139,7 +140,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンに 砂漠の ことを きこう。How often does it rain here? と きいて、It hardly ever rains here. の ように hardly ever を つかって こたえて みよう",
-          "starterEn": "Hi there! I'm Fen, a fennec fox. Welcome to the Desert of the Sun! Look around. What do you see? What do you think the weather is like here?",
+          "starterEn": "Hi there! Let's pretend I'm Fen, a fennec fox. Welcome to the Desert of the Sun! Look around. What do you see? What do you think the weather is like here?",
           "targetExpressions": [
             "It hardly ever rains here.",
             "Where are we? ― We're in the Desert of the Sun.",
@@ -507,6 +508,7 @@
     {
       "lessonNo": 932,
       "world": 32,
+      "reviewed": "run9",
       "title": "Hot Days, Cold Nights",
       "titleJa": "あつい 日、さむい よる",
       "school": {
@@ -572,7 +574,7 @@
           "geologist",
           "geoscientist"
         ],
-        "tipJa": "geo（ちきゅう）の 人の ことば。geography＋er で geographer（ちりがくしゃ）、geology の y を とって ist で geologist（ちしつがくしゃ = いわを しらべる 人）、geo＋scientist で geoscientist（ちきゅうを まるごと しらべる かがくしゃ）。-er と -ist は「人」の しるしだよ。"
+        "tipJa": "geo（ちきゅう）の 人の ことば。geography の y を とって er で geographer（ちりがくしゃ）、geology の y を とって ist で geologist（ちしつがくしゃ = いわを しらべる 人）、geo＋scientist で geoscientist（ちきゅうを まるごと しらべる かがくしゃ）。-er と -ist は「人」の しるしだよ。"
       },
       "vocab": [
         {
@@ -597,7 +599,7 @@
           "emoji": "🛌"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, It hardly ever rains here. Today, Fen leads us to a little camp between two sand dunes. The afternoon sun is burning, and the sand is too hot to touch. Haru looks at the thermometer. Wow! It's forty-two degrees! We sit in the shade of the tent and drink lots of water. Then the sun goes down. The sky turns orange, pink, and purple. Soon, thousands of stars come out, but we start to shiver. Brr! Now we need jackets and blankets! Fen says, In the desert, it's very hot during the day, but cold at night. Say it with me. It's very hot during the day, but cold at night. Great! Riko asks, Why does it get so cold? Fen explains. The air here is very dry, and there are no clouds. Clouds and wet air work like a blanket. Without them, the heat of the day escapes into the sky. Before bed, Haru writes in his diary. Let's read it. \"Day One in the Desert. This afternoon, it was over forty degrees. My water bottle felt like hot tea! We stayed in the shade and didn't run around. At sunset, everything changed. The wind became cool, and the temperature dropped very fast. Fen says desert nights can get close to zero degrees. Now I'm wearing my jacket, two pairs of socks, and a hat. But the stars are amazing. I have never seen so many stars in my life!\" How hot was it in the afternoon? Over forty degrees. Why is Haru wearing two pairs of socks? Because the night is very cold. Now, phonics. Geo means the earth, and today we meet some geo people. Geographer. Add e, r to geography, and it means a person who studies geography. Geologist. A geologist studies rocks and the ground. Geoscientist. A geoscientist studies the whole Earth, its land, water, and air. Next time, we will find water in the middle of the desert!",
+      "teacherScript": "Hello, everyone! Last time, we said, It hardly ever rains here. Today, Fen leads us to a little camp between two sand dunes. The afternoon sun is burning, and the sand is too hot to touch. Haru looks at the thermometer. Wow! It's forty-two degrees! We sit in the shade of the tent and drink lots of water. Then the sun goes down. The sky turns orange, pink, and purple. Soon, thousands of stars come out, but we start to shiver. Brr! Now we need jackets and blankets! Fen says, In the desert, it's very hot during the day, but cold at night. Say it with me. It's very hot during the day, but cold at night. Great! Riko asks, Why does it get so cold? Fen explains. The air here is very dry, and there are no clouds. Clouds and wet air work like a blanket. Without them, the heat of the day escapes into the sky. Before bed, Haru writes in his diary. Let's read it. \"Day One in the Desert. This afternoon, it was over forty degrees. My water bottle felt like hot tea! We stayed in the shade and didn't run around. At sunset, everything changed. The wind became cool, and the temperature dropped very fast. Fen says desert nights can get close to zero degrees. Now I'm wearing my jacket, two pairs of socks, and a hat. But the stars are amazing. I have never seen so many stars in my life!\" How hot was it in the afternoon? Over forty degrees. Why is Haru wearing two pairs of socks? Because the night is very cold. Now, phonics. Geo means the earth, and today we meet some geo people. Geographer. Take the y off geography and add e, r. It means a person who studies geography. Geologist. A geologist studies rocks and the ground. Geoscientist. A geoscientist studies the whole Earth, its land, water, and air. Next time, we will find water in the middle of the desert!",
       "conversation": {
         "scene": "A desert camp, from a hot afternoon to a cold, starry night",
         "sceneJa": "砂漠の キャンプ。あつい ひるから、ほしが いっぱいの さむい よるへ",
@@ -640,7 +642,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと 砂漠の キャンプで はなそう。It's very hot during the day, but cold at night. を つかって、ひると よるの ちがいと その りゆうを つたえて みよう",
-          "starterEn": "Brr! The sun is gone, and the desert is getting cold. This afternoon was so hot! What was the day like for you? What is the night like?",
+          "starterEn": "Brr! Let's pretend I'm Fen. The sun is gone, and the desert is getting cold. This afternoon was so hot! What was the day like for you? What's the night like?",
           "targetExpressions": [
             "It's very hot during the day, but cold at night.",
             "How hot is it? ― It's over forty degrees!",
@@ -857,9 +859,9 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Night time. Shiver! Put on your jacket. Now lie down and count the stars.",
+            "say": "Nighttime. Shiver! Put on your jacket. Now lie down and count the stars.",
             "subtitleJa": "よるに なったよ。ブルブル ふるえて！ ジャケットを きて。こんどは ねころんで ほしを かぞえて。",
-            "subtitleEn": "Night time. Shiver! Put on your jacket. Now lie down and count the stars.",
+            "subtitleEn": "Nighttime. Shiver! Put on your jacket. Now lie down and count the stars.",
             "gesture": "mime",
             "slide": {
               "title": "Let's move!",
@@ -973,9 +975,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! No clouds, so the heat escapes into the sky. Brilliant!",
+            "say": "It's A! No clouds, so the heat escapes into the sky. Great job!",
             "subtitleJa": "こたえは A！ くもが ないから、あつさが そらへ にげて いくんだ。すばらしい！",
-            "subtitleEn": "It's A! No clouds, so the heat escapes into the sky. Brilliant!",
+            "subtitleEn": "It's A! No clouds, so the heat escapes into the sky. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -988,9 +990,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Great job! You can compare day and night and give a reason. Next, go and talk with Birimo! Good night, and see you!",
-            "subtitleJa": "よく できました！ ひると よるを くらべて、りゆうも いえるね。このあと ビリモと おはなし してね！ おやすみ、またね！",
-            "subtitleEn": "Great job! You can compare day and night and give a reason. Next, go and talk with Birimo! Good night, and see you!",
+            "say": "Great job! You can compare day and night and give a reason. Next, go and talk with Birimo! See you!",
+            "subtitleJa": "よく できました！ ひると よるを くらべて、りゆうも いえるね。このあと ビリモと おはなし してね！ またね！",
+            "subtitleEn": "Great job! You can compare day and night and give a reason. Next, go and talk with Birimo! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -1008,6 +1010,7 @@
     {
       "lessonNo": 933,
       "world": 32,
+      "reviewed": "run9",
       "title": "Sand, Rocks and Oases",
       "titleJa": "すなと いわと オアシス",
       "school": {
@@ -1141,7 +1144,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の オアシスの ガイドに しつもんしよう。Where does the water come from? と きいて、An oasis is a place where ～. の かたちで オアシスを せつめい して みよう",
-          "starterEn": "Welcome to the oasis, tired travelers! Sit under the palm trees and rest. Do you know what an oasis is? Can you explain it to me?",
+          "starterEn": "Let's pretend I'm the guide at the oasis. Welcome, tired travelers! Sit under the palm trees and rest. Do you know what an oasis is? Can you explain it to me?",
           "targetExpressions": [
             "An oasis is a place where water comes out.",
             "Is the desert all sand? ― No. Most of the Sahara is rock and gravel.",
@@ -1162,9 +1165,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, explorers! Last time, we said, It's very hot during the day, but cold at night. Today, we walk across the desert. Crunch, crunch!",
-            "subtitleJa": "おはよう、たんけんたいの みんな！ まえの かいは「ひるまは とても あついけど、よるは さむい」と いったね。きょうは 砂漠を あるくよ。ザクザク！",
-            "subtitleEn": "Good morning, explorers! Last time, we said, It's very hot during the day, but cold at night. Today, we walk across the desert. Crunch, crunch!",
+            "say": "Hi, explorers! Last time, we said, It's very hot during the day, but cold at night. Today, we walk across the desert. Crunch, crunch!",
+            "subtitleJa": "やあ、たんけんたいの みんな！ まえの かいは「ひるまは とても あついけど、よるは さむい」と いったね。きょうは 砂漠を あるくよ。ザクザク！",
+            "subtitleEn": "Hi, explorers! Last time, we said, It's very hot during the day, but cold at night. Today, we walk across the desert. Crunch, crunch!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -1304,9 +1307,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Geo means the earth. Jee oh. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
-            "subtitleJa": "おとの じかん！ geo は「ちきゅう」。ジオ。geothermal。thermal は「ねつ」。ちきゅうの なかの ねつ。geopark は ちきゅうの ことを まなべる こうえん。",
-            "subtitleEn": "Sound time! Geo means the earth. Jee oh. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
+            "say": "Sound time! Geo means the earth. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
+            "subtitleJa": "おとの じかん！ geo は「ちきゅう」。geothermal。thermal は「ねつ」。ちきゅうの なかの ねつ。geopark は ちきゅうの ことを まなべる こうえん。",
+            "subtitleEn": "Sound time! Geo means the earth. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -1509,6 +1512,7 @@
     {
       "lessonNo": 934,
       "world": 32,
+      "reviewed": "run9",
       "title": "Climates Around the World",
       "titleJa": "せかいの きこう",
       "school": {
@@ -1599,7 +1603,7 @@
           "emoji": "🧊"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, An oasis is a place where water comes out. Today, a strong wind is blowing sand everywhere, so we stay inside Fen's big tent. Fen rolls out a huge map of the world. It's covered in colors: yellow, green, white, and dark green. Fen says, This is my climate map. Climate means the usual weather in a place over many years. Haru points to the dark green part. What's the weather like here? Fen says, That's the rainforest. It's hot and rainy all year. Some places are rainy all year. Say it with me. Some places are rainy all year. Wonderful! Kiko finds Japan. It's light green. Fen says, Some places have four seasons, like Japan. Let's read the key on the map. \"Climate Map Key. Dark green: rainforest. It is hot and rainy all year, and tall trees grow very close together. The Amazon rainforest in South America is the largest one. Yellow: desert. It is dry all year. Some deserts, like the Sahara, are hot. Others, like the Gobi in Asia, have very cold winters. Light green: four seasons. Summers are warm, winters are cool or cold, and it rains in many months. White: polar. It is freezing all year, and the land is covered with ice and snow.\" What's the weather like in the rainforest? It's hot and rainy all year. Which desert has very cold winters? The Gobi. Is this a fact or an opinion? Japan has the best climate in the world. Riko thinks so, but it's an opinion! Now, phonics. Today, geo words get new endings. Geographic. Add i, c, and geography becomes a describing word. A geographic map shows mountains, rivers, and deserts. Geometric. Geometric shapes are circles, triangles, and squares. Look, Fen's tent has a geometric pattern! Geode. A geode is a round rock. It looks plain on the outside, but inside, it's full of sparkling crystals. Next time, we will give a climate report about deserts around the world!",
+      "teacherScript": "Hello, everyone! Last time, we said, An oasis is a place where water comes out. Today, a strong wind is blowing sand everywhere, so we stay inside Fen's big tent. Fen rolls out a huge map of the world. It's covered in colors: yellow, green, white, and dark green. Fen says, This is my climate map. Climate means the usual weather in a place over many years. Haru points to the dark green part. What's the weather like here? Fen says, That's the rainforest. It's hot and rainy all year. Some places are rainy all year. Say it with me. Some places are rainy all year. Wonderful! Kiko finds Japan. It's light green. Fen says, Some places have four seasons, like Japan. Let's read the key on the map. \"Climate Map Key. Dark green: rainforest. It is hot and rainy all year, and tall trees grow very close together. The Amazon rainforest in South America is the largest one. Yellow: desert. It is dry all year. Some deserts, like the Sahara, are hot. Others, like the Gobi in Asia, have very cold winters. Light green: four seasons. Summers are warm, winters are cool or cold, and it rains in many months. White: polar. It is freezing all year, and the land is covered with ice and snow.\" What's the weather like in the rainforest? It's hot and rainy all year. Which desert has very cold winters? The Gobi. Is this a fact or an opinion? Japan has the best climate in the world. Riko thinks so, but it's an opinion! Now, phonics. Today, geo words get new endings. Geographic. Take the y off geography and add i, c. Now it's a describing word. A geographic map shows mountains, rivers, and deserts. Geometric. Geometric shapes are circles, triangles, and squares. Look, Fen's tent has a geometric pattern! Geode. A geode is a round rock. It looks plain on the outside, but inside, it's full of sparkling crystals. Next time, we will give a climate report about deserts around the world!",
       "conversation": {
         "scene": "Fen's big world climate map in a tent",
         "sceneJa": "テントの なかで、フェンの 大きな せかいの きこう マップを 見る",
@@ -1642,7 +1646,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと きこう マップを 見よう。What's the weather like in ～? と きいたり、Some places are ～ all year. を つかって すきな きこうを えらんで みよう",
-          "starterEn": "Welcome to my tent! Look at my climate map. It has many colors. Which color do you want to know about? I can tell you what the weather is like there.",
+          "starterEn": "Let's pretend I'm Fen. Welcome to my tent! Look at my climate map. It has many colors. Which color do you want to know about? I can tell you what the weather is like there.",
           "targetExpressions": [
             "Some places are rainy all year.",
             "What's the weather like in the rainforest? ― It's hot and rainy all year.",
@@ -2009,6 +2013,7 @@
     {
       "lessonNo": 935,
       "world": 32,
+      "reviewed": "run9",
       "title": "Climate Report",
       "titleJa": "きこう レポート",
       "school": {
@@ -2138,7 +2143,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンに 砂漠の きこう レポートを しよう。～ is located in ～. It's ～ and ～. の かたちで、砂漠を 2つ しょうかい して みよう",
-          "starterEn": "My ears are ready! Please give me your climate report. Which desert do you want to talk about? Where is it, and what is the weather like?",
+          "starterEn": "Let's pretend I'm Fen. My ears are ready! Can you give me your climate report? Which desert do you want to talk about? Where is it, and what's the weather like?",
           "targetExpressions": [
             "The Sahara is located in North Africa. It's hot and dry.",
             "Antarctica is the largest desert. It's cold and dry.",
@@ -2206,9 +2211,9 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Africa. A very big continent. The Sahara is in the north of it. Africa!",
+            "say": "Africa. A very big continent. The Sahara is in North Africa. Africa!",
             "subtitleJa": "Africa。とても 大きな たいりく。サハラ砂漠は その きたの ほうに あるよ。アフリカ！",
-            "subtitleEn": "Africa. A very big continent. The Sahara is in the north of it. Africa!",
+            "subtitleEn": "Africa. A very big continent. The Sahara is in North Africa. Africa!",
             "gesture": "point",
             "slide": {
               "title": "Words",
@@ -2507,6 +2512,7 @@
     {
       "lessonNo": 936,
       "world": 32,
+      "reviewed": "run9",
       "title": "Camels Are Amazing",
       "titleJa": "ラクダって すごい",
       "school": {
@@ -2588,7 +2594,7 @@
         },
         {
           "en": "caravan",
-          "ja": "キャラバン（ラクダの たいしょう）",
+          "ja": "キャラバン（ラクダと いっしょに たびを する 人たちの れつ）",
           "emoji": "🐪"
         },
         {
@@ -2597,7 +2603,7 @@
           "emoji": "👁️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, The Sahara is located in North Africa. It's hot and dry. Today, we hear bells. Ding, ding, ding. A long line of camels is walking over the dunes. It's a caravan! At the front, there is a big old camel with a gentle smile. He kneels down slowly and says, Good morning, little travelers. I'm Humphrey. I lead this caravan. Hop on! We climb onto the camels. Whoa! They stand up back legs first, and we almost fall off! Later, Haru asks, Humphrey, aren't you thirsty? Humphrey smiles. Not yet. Camels can go many days without water. Say it with me. Camels can go many days without water. Great! Kiko asks, Is there water in your hump? Humphrey shakes his head. Our humps store fat, not water. Humphrey carries a fact card in his saddle bag. Let's read it. \"Camel Fact Card. Camels are amazing desert travelers. They can go about a week or more without water. When they finally find water, they can drink about one hundred liters at one time! Their humps store fat, not water. Long eyelashes protect their eyes, and they can close their noses to keep sand out. Their wide feet don't sink in soft sand. They also have tough mouths, so they can eat thorny desert plants. Some people call camels the ships of the desert.\" How much water can a camel drink at one time? About one hundred liters. What do camels' humps store? Fat. Is this a fact or an opinion? Camels are the best animals in the world. It's an opinion, but Humphrey likes it! Now, phonics. Today's ending is a, l. Al turns a word into a describing word. Nature, natural. Drop the e, and the sound changes from nay to na. Nation, national. Nay becomes na again. Tropic, tropical. Tropical places are hot and wet. Next time, we will watch desert animals, and Fen will tell us the secret of his big ears!",
+      "teacherScript": "Hello, everyone! Last time, we said, The Sahara is located in North Africa. It's hot and dry. Today, we hear bells. Ding, ding, ding. A long line of camels is walking over the dunes. It's a caravan! At the front, there is a big old camel with a gentle smile. He kneels down slowly and says, Good morning, little travelers. I'm Humphrey. I lead this caravan. Hop on! We climb onto the camels. Whoa! They stand up back legs first, and we almost fall off! Later, Haru asks, Humphrey, aren't you thirsty? Humphrey smiles. Not yet. Camels can go many days without water. Say it with me. Camels can go many days without water. Great! Kiko asks, Is there water in your hump? Humphrey shakes his head. Our humps store fat, not water. Humphrey carries a fact card in his saddle bag. Let's read it. \"Camel Fact Card. Camels are amazing desert travelers. They can go about a week or more without water. When they finally find water, they can drink about one hundred liters at one time! Their humps store fat, not water. Long eyelashes protect their eyes, and they can close their noses to keep sand out. Their wide feet don't sink in soft sand. They also have tough mouths, so they can eat thorny desert plants. Some people call camels the ships of the desert.\" How much water can a camel drink at one time? About one hundred liters. What do camels' humps store? Fat. Is this a fact or an opinion? Camels are the best animals in the world. It's an opinion, but Humphrey likes it! Now, phonics. Today's ending is a, l. Al turns a word into a describing word. Nature, natural. Drop the e, and nay becomes a short a, like in cat. Nation, national. The short a again. Tropic, tropical. Tropical places are hot and wet. Next time, we will watch desert animals, and Fen will tell us the secret of his big ears!",
       "conversation": {
         "scene": "Riding camels with Humphrey's caravan",
         "sceneJa": "ハンフリーの キャラバンで ラクダに のる",
@@ -2640,7 +2646,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ハンフリーに ラクダの ことを きこう。Camels can go many days without water. や Their humps store fat, not water. を つかって、ラクダの すごい ところを いって みよう",
-          "starterEn": "Good morning, little travelers! I'm Humphrey, the leader of this caravan. Hop on my back! Do you have any questions about camels?",
+          "starterEn": "Hello, little travelers! Let's pretend I'm Humphrey, the leader of this caravan. Hop on my back! Do you have any questions about camels?",
           "targetExpressions": [
             "Camels can go many days without water.",
             "Their humps store fat, not water.",
@@ -2772,9 +2778,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? No, no. Our humps store fat, not water.",
-            "subtitleJa": "ビリモ「ぼくが ハンフリーの やく！ まだ だいじょうぶ。ラクダは みずを のまずに なんにちも すごせるんだ。」 リコちゃん「それって、こぶの なかに みずが あるから？」「いやいや。こぶに ためて いるのは、みずじゃ なくて しぼうなんだ。」",
-            "subtitleEn": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? No, no. Our humps store fat, not water.",
+            "say": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? Birimo laughs. No, no. Our humps store fat, not water.",
+            "subtitleJa": "ビリモ「ぼくが ハンフリーの やく！ まだ だいじょうぶ。ラクダは みずを のまずに なんにちも すごせるんだ。」 リコちゃん「それって、こぶの なかに みずが あるから？」 ビリモが わらう。「いやいや。こぶに ためて いるのは、みずじゃ なくて しぼうなんだ。」",
+            "subtitleEn": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? Birimo laughs. No, no. Our humps store fat, not water.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -2804,9 +2810,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes na. Nation, national. Nay becomes na again!",
-            "subtitleJa": "おとの じかん！ おわりの al で ようすを あらわす ことばに なるよ。nature から natural。きいて。「ネイ」が「ナ」に なる。nation から national。また「ネイ」が「ナ」に！",
-            "subtitleEn": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes na. Nation, national. Nay becomes na again!",
+            "say": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes a short a, like in cat. Nation, national. The short a again!",
+            "subtitleJa": "おとの じかん！ おわりの al で ようすを あらわす ことばに なるよ。nature から natural。きいて。「ネイ」が cat の a のような みじかい「ア」に なる。nation から national。また みじかい「ア」！",
+            "subtitleEn": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes a short a, like in cat. Nation, national. The short a again!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -3010,6 +3016,7 @@
     {
       "lessonNo": 937,
       "world": 32,
+      "reviewed": "run9",
       "title": "So That They Can Survive",
       "titleJa": "いきのびる ために",
       "school": {
@@ -3100,7 +3107,7 @@
           "emoji": "🐞"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Camels can go many days without water. Today, Humphrey's caravan stops near some big rocks. Fen whispers, Shh. Let's watch the desert animals. A little lizard runs quickly across the hot sand. Then Riko looks at Fen. Fen, why are your ears so big? Fen laughs. My ears are my air conditioners! Heat leaves my body through them. Desert foxes have big ears so that they can stay cool. So that（～できるように） means for this reason, or to make something possible. Say it with me. Desert foxes have big ears so that they can stay cool. Perfect! Fen turns his ears this way and that way. They help me hear bugs moving under the sand, too. Dinner! Haru asks, Why are your feet so furry? Fen says, So that I can walk on hot sand. Let's read a page from Fen's animal notebook. \"How Desert Animals Survive. I'm a fennec fox, the smallest fox in the world. My huge ears let heat out of my body so that I can stay cool. They also help me hear insects under the sand. My feet are covered with fur so that I can walk on hot sand. During the day, I sleep in a cool burrow under the ground. At night, when the air is cooler, I go out to hunt. My friend Humphrey has long eyelashes so that sand can't get into his eyes.\" Why does Fen have furry feet? So that he can walk on hot sand. When does Fen hunt? At night. Now, phonics. Let's add a, l again. Coast, coastal. A coastal town is a town by the sea. Season, seasonal. Seasonal fruit comes only in one season, like watermelon in summer. Center, central. Drop the e from e, r, and add a, l. Central means in the middle. Fen's burrow has a central room, and it's cool inside! Next time, we will visit a garden of tall, spiky cactus plants!",
+      "teacherScript": "Hello, everyone! Last time, we said, Camels can go many days without water. Today, Humphrey's caravan stops near some big rocks. Fen whispers, Shh. Let's watch the desert animals. A little lizard runs quickly across the hot sand. Then Riko looks at Fen. Fen, why are your ears so big? Fen laughs. My ears are my air conditioners! Heat leaves my body through them. Desert foxes have big ears so that they can stay cool. So that（～できるように） tells us what something is for. Say it with me. Desert foxes have big ears so that they can stay cool. Perfect! Fen turns his ears this way and that way. They help me hear bugs moving under the sand, too. Dinner! Haru asks, Why are your feet so furry? Fen says, So that I can walk on hot sand. Let's read a page from Fen's animal notebook. \"How Desert Animals Survive. I'm a fennec fox, the smallest fox in the world. My huge ears let heat out of my body so that I can stay cool. They also help me hear insects under the sand. My feet are covered with fur so that I can walk on hot sand. During the day, I sleep in a cool burrow under the ground. At night, when the air is cooler, I go out to hunt. My friend Humphrey has long eyelashes so that sand can't get into his eyes.\" Why does Fen have furry feet? So that he can walk on hot sand. When does Fen hunt? At night. Now, phonics. Let's add a, l again. Coast, coastal. A coastal town is a town by the sea. Season, seasonal. Seasonal fruit comes only in one season, like watermelon in summer. Center, central. Drop the e from e, r, and add a, l. Central means in the middle. Fen's burrow has a central room, and it's cool inside! Next time, we will visit a garden of tall, spiky cactus plants!",
       "conversation": {
         "scene": "Watching desert animals from behind the rocks",
         "sceneJa": "いわかげから 砂漠の どうぶつを かんさつする",
@@ -3143,7 +3150,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンに からだの ひみつを きこう。Why do ～? と きいて、～ so that they can ～. で こたえて みよう",
-          "starterEn": "Shh! Look at that little lizard. Every desert animal has a secret for staying alive here. Do you want to know my secrets? Ask me about my ears or my feet!",
+          "starterEn": "Shh! Let's pretend I'm Fen. Look at that little lizard. Every desert animal has a secret for staying alive here. Do you want to know my secrets? Ask me about my ears or my feet!",
           "targetExpressions": [
             "Desert foxes have big ears so that they can stay cool.",
             "Why do fennec foxes have furry feet? ― So that they can walk on hot sand.",
@@ -3291,9 +3298,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells the reason. Big ears, so that they can stay cool!",
-            "subtitleJa": "ポイント。くみたてて みよう。大きな みみ。どうして？ すずしく いられるように。so that は「～できるように」と りゆうを おしえるよ。大きな みみ、すずしく いられるように！",
-            "subtitleEn": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells the reason. Big ears, so that they can stay cool!",
+            "say": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells us why. Big ears, so that they can stay cool!",
+            "subtitleJa": "ポイント。くみたてて みよう。大きな みみ。どうして？ すずしく いられるように。so that は「～できるように」と、なんの ためかを おしえるよ。大きな みみ、すずしく いられるように！",
+            "subtitleEn": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells us why. Big ears, so that they can stay cool!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -3444,9 +3451,9 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Your turn! Talk about you. I wear a hat so that I can stay cool. Say yours!",
+            "say": "Your turn! Talk about yourself. I wear a hat so that I can stay cool. Say yours!",
             "subtitleJa": "あなたの ばん！ じぶんの ことを いおう。「わたしは すずしく いられるように ぼうしを かぶる。」 あなたの ぶんを いって みて！",
-            "subtitleEn": "Your turn! Talk about you. I wear a hat so that I can stay cool. Say yours!",
+            "subtitleEn": "Your turn! Talk about yourself. I wear a hat so that I can stay cool. Say yours!",
             "gesture": "open_hands",
             "slide": {
               "title": "Say it!",
@@ -3511,6 +3518,7 @@
     {
       "lessonNo": 938,
       "world": 32,
+      "reviewed": "run9",
       "title": "Cactus Secrets",
       "titleJa": "サボテンの ひみつ",
       "school": {
@@ -3644,7 +3652,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の サボテンの にわの ガイドに しつもんしよう。A cactus stores water in its thick stem. を つかい、Why does a cactus have spines? の こたえを To ～. で いって みよう",
-          "starterEn": "Welcome to the cactus garden! Please don't touch the spines. Look at this giant saguaro. It's very old! What would you like to know about cactus plants?",
+          "starterEn": "Let's pretend I'm a guide in the cactus garden. Welcome! Please don't touch the spines. Look at this giant saguaro. It's very old! What would you like to know about cactus plants?",
           "targetExpressions": [
             "A cactus stores water in its thick stem.",
             "Its spines are special leaves.",
@@ -4013,6 +4021,7 @@
     {
       "lessonNo": 939,
       "world": 32,
+      "reviewed": "run9",
       "title": "Animals in Cold Places",
       "titleJa": "さむい ところの どうぶつ",
       "school": {
@@ -4146,7 +4155,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと さむい ところの どうぶつを くらべよう。～ have ～ to keep warm. や in order to ～ を つかって、ペンギンや ホッキョクグマの ひみつを いって みよう",
-          "starterEn": "Wow, look at the picture from the Sun Compass! It's so cold there. I live in the hot desert, so I want to learn. How do animals stay warm in icy places?",
+          "starterEn": "Let's pretend I'm Fen. Wow, look at the picture from the Sun Compass! It's so cold there. I live in the hot desert, so I want to learn. How do animals stay warm in icy places?",
           "targetExpressions": [
             "Penguins have thick feathers to keep warm.",
             "Emperor penguins huddle together in order to keep warm.",
@@ -4310,7 +4319,7 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say men strongly!",
+            "say": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say it strong in the middle: en-vi-ron-MEN-tal!",
             "subtitleJa": "おとの じかん！ al の ことばを もっと。environment から environmental。しぜんや まわりの せかいに ついての、と いう いみ。「メン」を つよく いおう！",
             "gesture": "point",
             "slide": {
@@ -4322,7 +4331,7 @@
               "emoji": "🌳"
             },
             "pauseMs": 2500,
-            "subtitleEn": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say men strongly!"
+            "subtitleEn": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say it strong in the middle: en-vi-ron-MEN-tal!"
           },
           {
             "kind": "phonics",
@@ -4514,6 +4523,7 @@
     {
       "lessonNo": 940,
       "world": 32,
+      "reviewed": "run9",
       "title": "Adaptation Fair",
       "titleJa": "どうぶつの くふう フェア",
       "school": {
@@ -4607,7 +4617,7 @@
           "emoji": "🤔"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Penguins have thick feathers to keep warm. Today is the Adaptation Fair at the oasis! Fen explains. Adaptation means the special body parts and habits that help an animal live in its home. Every table has a poster and a quiz. Riko's poster is about Fen and his big ears. Birimo's poster shows a giant cactus. Then Haru holds up his poster with a picture hidden under a cloth. He says, This animal has wide feet so that it can walk on soft sand. Say it with me. This animal has wide feet so that it can walk on soft sand. Wonderful! Kiko shouts, What animal is it? Is it a camel? Behind us, someone laughs. It's Humphrey! Yes, it's me! Let's read Haru's quiz poster. \"Guess the Animal! This animal lives in hot, dry deserts. It has wide feet so that it can walk on soft sand. Its long eyelashes keep sand out of its eyes, and it can close its nose in a sandstorm. It can go many days without water, and its hump stores fat, not water. Its tough mouth can even eat thorny plants. Some people call it the ship of the desert. Can you guess? Hint: he leads our caravan!\" What helps this animal walk on soft sand? Its wide feet. What does its hump store? Fat. Humphrey bows his long neck. What a wonderful fair! Fen's ears turn pink with joy. Then the Sun Compass glows again. Click! The second sun crystal drops into its slot. Now we have two crystals! Now, phonics. Let's review. Natural. Nature becomes natural with a, l. Seasonal. Season plus a, l. Global. Drop the e from globe and add a, l. And one geo word. Geopark, a park where we learn about the earth. Next time, we will learn north, south, east, and west, and read a map with a compass!",
+      "teacherScript": "Hello, everyone! Last time, we said, Penguins have thick feathers to keep warm. Today is the Adaptation Fair at the oasis! Fen explains. Adaptation means the special body parts and habits that help an animal live in its home. Every table has a poster and a quiz. Riko's poster is about Fen and his big ears. Birimo's poster shows a giant cactus. Then Haru holds up his poster with a picture hidden under a cloth. He says, This animal has wide feet so that it can walk on soft sand. Say it with me. This animal has wide feet so that it can walk on soft sand. Wonderful! Kiko shouts, What animal is it? Is it a camel? Behind us, someone laughs. It's Humphrey! He says, Yes, it's me! Let's read Haru's quiz poster. \"Guess the Animal! This animal lives in hot, dry deserts. It has wide feet so that it can walk on soft sand. Its long eyelashes keep sand out of its eyes, and it can close its nose in a sandstorm. It can go many days without water, and its hump stores fat, not water. Its tough mouth can even eat thorny plants. Some people call it the ship of the desert. Can you guess? Hint: he leads our caravan!\" What helps this animal walk on soft sand? Its wide feet. What does its hump store? Fat. Humphrey bows his long neck. What a wonderful fair! Fen's ears turn pink with joy. Then the Sun Compass glows again. Click! The second sun crystal drops into its slot. Now we have two crystals! Now, phonics. Let's review. Natural. Nature becomes natural with a, l. Seasonal. Season plus a, l. Global. Drop the e from globe and add a, l. And one geo word. Geopark, a park where we learn about the earth. Next time, we will learn north, south, east, and west, and read a map with a compass!",
       "conversation": {
         "scene": "The Adaptation Fair at the oasis",
         "sceneJa": "オアシスで ひらかれた どうぶつの てきおうフェア",
@@ -5018,6 +5028,7 @@
     {
       "lessonNo": 941,
       "world": 32,
+      "reviewed": "run9",
       "title": "North, South, East, West",
       "titleJa": "きた みなみ ひがし にし",
       "school": {
@@ -5147,7 +5158,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと いっしょに ちずを 見よう。The oasis is to the east of the camp. のように、～ is to the east / west / north / south of ～. で ばしょを 2つ いって みよう",
-          "starterEn": "Good morning, explorer! Here's my camp map. The needle on the Sun Compass points north. Can you tell me where the oasis is? And what is to the south of the camp?",
+          "starterEn": "Hi, explorer! Let's pretend I'm Fen. Here's my camp map. The needle on the Sun Compass points north. Can you tell me where the oasis is? And what's to the south of the camp?",
           "targetExpressions": [
             "The oasis is to the east of the camp.",
             "Which way is north? ― The needle points north.",
@@ -5168,9 +5179,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good morning, explorers! Last time, we met animals with wide feet for soft sand. Today, the sun is coming up over our camp. Fen has a big map!",
-            "subtitleJa": "おはよう、たんけんたいの みんな！ まえの かいは、やわらかい すなの ための ひろい あしの どうぶつに あったね。きょうは、キャンプに おひさまが のぼって くるよ。フェンが 大きな ちずを もって いるよ！",
-            "subtitleEn": "Good morning, explorers! Last time, we met animals with wide feet for soft sand. Today, the sun is coming up over our camp. Fen has a big map!",
+            "say": "Hi, explorers! Last time, we met animals with wide feet for soft sand. Today, the sun is coming up over our camp. Fen has a big map!",
+            "subtitleJa": "やあ、たんけんたいの みんな！ まえの かいは、やわらかい すなの ための ひろい あしの どうぶつに あったね。きょうは、キャンプに おひさまが のぼって くるよ。フェンが 大きな ちずを もって いるよ！",
+            "subtitleEn": "Hi, explorers! Last time, we met animals with wide feet for soft sand. Today, the sun is coming up over our camp. Fen has a big map!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -5332,9 +5343,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Tricky one! South, southern. Not south ern. Say suh thern! Your turn! Northern. Southern. Eastern. Western.",
+            "say": "Tricky one! South, southern. Not south-ern. Say SUH-thern! Your turn! Northern. Southern. Eastern. Western.",
             "subtitleJa": "むずかしいのが ひとつ！ south から southern。「サウザン」じゃ なくて「サザン」と いうよ！ あなたの ばん！ northern。southern。eastern。western。",
-            "subtitleEn": "Tricky one! South, southern. Not south ern. Say suh thern! Your turn! Northern. Southern. Eastern. Western.",
+            "subtitleEn": "Tricky one! South, southern. Not south-ern. Say SUH-thern! Your turn! Northern. Southern. Eastern. Western.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -5520,6 +5531,7 @@
     {
       "lessonNo": 942,
       "world": 32,
+      "reviewed": "run9",
       "title": "It's Located in the North",
       "titleJa": "きたに ある 山",
       "school": {
@@ -5656,7 +5668,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンに さばくの くにの ちずを せつめいしよう。～ are located in the north. や ～ are in the southwest. を つかって、山・川・すなの おかの ばしょを いおう",
-          "starterEn": "Hi, geographer! This is a map of my desert country. I can see mountains, a river, and lots of sand. Can you tell me where these places are located?",
+          "starterEn": "Hi, geographer! Let's pretend I'm Fen. This is a map of my desert country. I can see mountains, a river, and lots of sand. Can you tell me where these places are located?",
           "targetExpressions": [
             "The mountains are located in the north.",
             "Where is the river? ― It's located in the eastern part of the country.",
@@ -6029,6 +6041,7 @@
     {
       "lessonNo": 943,
       "world": 32,
+      "reviewed": "run9",
       "title": "Continents and Oceans",
       "titleJa": "たいりくと 大きな うみ",
       "school": {
@@ -6120,7 +6133,7 @@
           "emoji": "🏝️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, The mountains are located in the north. Today, Fen rolls a giant globe into the tent. It's as tall as Birimo! Fen gives it a push, and the whole world spins round and round. Blue, green, brown, white. Stop! Look at all this land. These huge pieces of land are called continents. Let's count them together. Asia, Africa, North America, South America, Antarctica, Europe, and Australia. There are seven continents. Say it with me. There are seven continents. Perfect! Asia is the largest continent. Haru finds Japan. It's a small island country to the east of Asia. Kiko asks, How many oceans are there? Fen says, There are five. The Pacific is the largest. Let's read the little guidebook that comes with the globe. \"Our Blue and Green Planet. There are seven continents and five oceans on Earth. The oceans are the Pacific, the Atlantic, the Indian, the Southern, and the Arctic. The Pacific Ocean is so big that all the continents could fit inside it. Africa is home to the Sahara, the largest hot desert in the world. Antarctica is covered with ice, but it's a desert, too, because very little snow or rain falls there. In fact, it's the largest desert on Earth!\" Which ocean is the largest? The Pacific. Why is Antarctica a desert? Because very little snow or rain falls there. Now, phonics. W, a, r, d means toward. It sounds like word, but we spell it w, a, r, d. Northward. Southward. Eastward. Westward. If you fly eastward from Japan, you cross the Pacific Ocean and reach North America. If you fly southward, you reach Australia. Next time, Fen has a quiz for us. Where in the world is it?",
+      "teacherScript": "Hello, everyone! Last time, we said, The mountains are located in the north. Today, Fen rolls a giant globe into the tent. It's as tall as Birimo! Fen gives it a push, and the whole world spins round and round. Blue, green, brown, white. Stop! Look at all this land. These huge pieces of land are called continents. Let's count them together. Asia, Africa, North America, South America, Antarctica, Europe, and Australia. There are seven continents. Say it with me. There are seven continents. Perfect! Asia is the largest continent. Haru finds Japan. It's a small island country in East Asia. Kiko asks, How many oceans are there? Fen says, There are five. The Pacific is the largest. Let's read the little guidebook that comes with the globe. \"Our Blue and Green Planet. There are seven continents and five oceans on Earth. The oceans are the Pacific, the Atlantic, the Indian, the Southern, and the Arctic. The Pacific Ocean is so big that all the continents could fit inside it. Africa is home to the Sahara, the largest hot desert in the world. Antarctica is covered with ice, but it's a desert, too, because very little snow or rain falls there. In fact, it's the largest desert on Earth!\" Which ocean is the largest? The Pacific. Why is Antarctica a desert? Because very little snow or rain falls there. Now, phonics. W, a, r, d means toward. It sounds like word, but we spell it w, a, r, d. Northward. Southward. Eastward. Westward. If you fly eastward from Japan, you cross the Pacific Ocean and reach North America. If you fly southward, you reach Australia. Next time, Fen has a quiz for us. Where in the world is it?",
       "conversation": {
         "scene": "Spinning Fen's giant globe",
         "sceneJa": "フェンの 大きな ちきゅうぎを まわす",
@@ -6142,8 +6155,8 @@
           },
           {
             "speaker": "Riko",
-            "en": "Asia is the largest continent. And Japan is right here, to the east of Asia.",
-            "ja": "アジアが いちばん 大きな たいりく。日本は ここ、アジアの ひがしに あるね。"
+            "en": "Asia is the largest continent. And Japan is right here, in East Asia.",
+            "ja": "アジアが いちばん 大きな たいりく。日本は ここ、アジアの ひがしの ほうに あるね。"
           },
           {
             "speaker": "Kiko",
@@ -6163,7 +6176,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと ちきゅうぎを まわそう。There are seven continents. や Asia is the largest continent. を つかって、たいりくと 大きな うみに ついて はなそう",
-          "starterEn": "Let's spin my giant globe! Whoosh! Can you name some continents? How many continents are there?",
+          "starterEn": "Let's pretend I'm Fen. Time to spin my giant globe! Whoosh! Can you name some continents? How many continents are there?",
           "targetExpressions": [
             "There are seven continents.",
             "Asia is the largest continent.",
@@ -6232,7 +6245,7 @@
             "kind": "words",
             "lang": "en",
             "say": "Ocean. A very, very big sea. Deep, blue, and wide. Ocean!",
-            "subtitleJa": "ocean。とても とても 大きな うみ。ふかくて、あおくて、ひろい。たいよう！",
+            "subtitleJa": "ocean。とても とても 大きな うみ。ふかくて、あおくて、ひろい。大きな うみ！",
             "subtitleEn": "Ocean. A very, very big sea. Deep, blue, and wide. Ocean!",
             "gesture": "mime",
             "slide": {
@@ -6296,14 +6309,14 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Riko says, Asia is the largest continent. And Japan is right here, to the east of Asia. Kiko asks, How many oceans are there? Ms. Emma says, There are five. The Pacific is the largest.",
-            "subtitleJa": "リコちゃん「アジアは いちばん 大きな たいりくだよ。それに にほんは ここ、アジアの ひがしだよ。」 キコちゃん「たいようは いくつ あるの？」 エマ先生「5つ。たいへいようが いちばん 大きいのよ。」",
-            "subtitleEn": "Riko says, Asia is the largest continent. And Japan is right here, to the east of Asia. Kiko asks, How many oceans are there? Ms. Emma says, There are five. The Pacific is the largest.",
+            "say": "Riko says, Asia is the largest continent. And Japan is right here, in East Asia. Kiko asks, How many oceans are there? I say, There are five. The Pacific is the largest.",
+            "subtitleJa": "リコちゃん「アジアは いちばん 大きな たいりくだよ。それに にほんは ここ、アジアの ひがしの ほうだよ。」 キコちゃん「大きな うみは いくつ あるの？」 わたし「5つ。たいへいようが いちばん 大きいのよ。」",
+            "subtitleEn": "Riko says, Asia is the largest continent. And Japan is right here, in East Asia. Kiko asks, How many oceans are there? I say, There are five. The Pacific is the largest.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
-                "Asia is the largest continent. And Japan is right here, to the east of Asia.",
+                "Asia is the largest continent. And Japan is right here, in East Asia.",
                 "How many oceans are there? ― There are five. The Pacific is the largest."
               ],
               "emoji": "🌊"
@@ -6327,9 +6340,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Ward means toward that way. North, northward. South, southward. It sounds like word, but we spell it w, a, r, d.",
+            "say": "Sound time! Ward means toward. North, northward. South, southward. It sounds like word, but we spell it w, a, r, d.",
             "subtitleJa": "おとの じかん！ ward は「～の ほうへ」。north から northward。south から southward。おとは word と おなじ だけど、つづりは w、a、r、d だよ。",
-            "subtitleEn": "Sound time! Ward means toward that way. North, northward. South, southward. It sounds like word, but we spell it w, a, r, d.",
+            "subtitleEn": "Sound time! Ward means toward. North, northward. South, southward. It sounds like word, but we spell it w, a, r, d.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -6452,7 +6465,7 @@
             "kind": "repeat",
             "lang": "en",
             "say": "How many oceans are there? There are five. The Pacific is the largest.",
-            "subtitleJa": "「たいようは いくつ ある？ ― 5つ。たいへいようが いちばん 大きいよ。」",
+            "subtitleJa": "「大きな うみは いくつ ある？ ― 5つ。たいへいようが いちばん 大きいよ。」",
             "subtitleEn": "How many oceans are there? There are five. The Pacific is the largest.",
             "gesture": "nod",
             "slide": {
@@ -6500,7 +6513,7 @@
             "kind": "check",
             "lang": "en",
             "say": "It's B, seven! There are seven continents and five oceans. Great counting!",
-            "subtitleJa": "こたえは B、7つ！ たいりくは 7つ、たいようは 5つ だね。かぞえるの じょうず！",
+            "subtitleJa": "こたえは B、7つ！ たいりくは 7つ、大きな うみは 5つ だね。かぞえるの じょうず！",
             "subtitleEn": "It's B, seven! There are seven continents and five oceans. Great counting!",
             "gesture": "clap",
             "slide": {
@@ -6515,7 +6528,7 @@
             "kind": "wrap",
             "lang": "en",
             "say": "Super job! You can count the continents and oceans, and say which one is the largest. Next, go and talk with Kiko! See you!",
-            "subtitleJa": "よく できました！ たいりくと たいようを かぞえられるし、どれが いちばん 大きいか いえるね。このあと キコちゃんと おはなし してね！ またね！",
+            "subtitleJa": "よく できました！ たいりくと 大きな うみを かぞえられるし、どれが いちばん 大きいか いえるね。このあと キコちゃんと おはなし してね！ またね！",
             "subtitleEn": "Super job! You can count the continents and oceans, and say which one is the largest. Next, go and talk with Kiko! See you!",
             "gesture": "clap",
             "slide": {
@@ -6534,6 +6547,7 @@
     {
       "lessonNo": 944,
       "world": 32,
+      "reviewed": "run9",
       "title": "Where in the World?",
       "titleJa": "せかいの どこ？",
       "school": {
@@ -6668,7 +6682,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと くにあて クイズを しよう。It's a country in South America. のように ヒントを だしたり、Is it ～? と きいたり しよう。ほんとうの なまえや すんで いる ところは いわなくて いい よ",
-          "starterEn": "Ding, ding! Welcome to Where in the World? Here's your first hint: It's a country in South America, and it has the Amazon rainforest. Can you guess the country?",
+          "starterEn": "Ding, ding! Let's pretend I'm Fen. Welcome to Where in the World? Here's your first hint: It's a country in South America, and it has the Amazon rainforest. Can you guess the country?",
           "targetExpressions": [
             "It's a country in South America.",
             "Is it Brazil? ― Yes! It has the Amazon rainforest.",
@@ -6801,9 +6815,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Haru asks, Is it Brazil? Fen says, Yes! It has the Amazon rainforest. Then Riko asks, Where is Egypt? Ms. Emma says, It's in Africa. The Nile flows through it.",
-            "subtitleJa": "ハルくん「ブラジル？」 フェン「せいかい！ アマゾンの ねったいうりんが あるよ。」 つぎに リコちゃん「エジプトは どこ？」 エマ先生「アフリカよ。ナイルがわが ながれて いるの。」",
-            "subtitleEn": "Haru asks, Is it Brazil? Fen says, Yes! It has the Amazon rainforest. Then Riko asks, Where is Egypt? Ms. Emma says, It's in Africa. The Nile flows through it.",
+            "say": "Haru asks, Is it Brazil? Fen says, Yes! It has the Amazon rainforest. Then Riko asks, Where is Egypt? I say, It's in Africa. The Nile flows through it.",
+            "subtitleJa": "ハルくん「ブラジル？」 フェン「せいかい！ アマゾンの ねったいうりんが あるよ。」 つぎに リコちゃん「エジプトは どこ？」 わたし「アフリカよ。ナイルがわが ながれて いるの。」",
+            "subtitleEn": "Haru asks, Is it Brazil? Fen says, Yes! It has the Amazon rainforest. Then Riko asks, Where is Egypt? I say, It's in Africa. The Nile flows through it.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -7040,6 +7054,7 @@
     {
       "lessonNo": 945,
       "world": 32,
+      "reviewed": "run9",
       "title": "Map Guide",
       "titleJa": "ちずで みちあんない",
       "school": {
@@ -7183,7 +7198,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンを ちずで あんないしよう。Go north for ～ kilometers. You'll see ～. や Turn north at ～. を つかって、ふるい いどまでの みちを つたえよう",
-          "starterEn": "I have the treasure map, but I'm a little lost! I'm standing at the three palm trees. How do I get to the old well? Please guide me!",
+          "starterEn": "Let's pretend I'm Fen. I have the treasure map, but I'm a little lost! I'm standing at the three palm trees. How do I get to the old well? Please guide me!",
           "targetExpressions": [
             "Go north for two kilometers. You'll see the well.",
             "Turn north at the big red rock.",
@@ -7347,9 +7362,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Southern. Remember, suh thern. Northeast. North comes first. Westward. Spelled w, a, r, d.",
+            "say": "Sound review! Southern. Remember, SUH-thern. Northeast. North comes first. Westward. Spelled w, a, r, d.",
             "subtitleJa": "おとの ふりかえり！ southern。「サザン」だったね。northeast。north が さき。westward。つづりは w、a、r、d。",
-            "subtitleEn": "Sound review! Southern. Remember, suh thern. Northeast. North comes first. Westward. Spelled w, a, r, d.",
+            "subtitleEn": "Sound review! Southern. Remember, SUH-thern. Northeast. North comes first. Westward. Spelled w, a, r, d.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -7391,7 +7406,7 @@
             "kind": "tpr",
             "lang": "en",
             "say": "Let's move! March north. One, two, one, two! Now turn north at the big red rock. Turn!",
-            "subtitleJa": "からだを うごかそう！ きたへ ゆうしん。いち、に、いち、に！ こんどは 大きな あかい いわで きたへ まがって。くるっ！",
+            "subtitleJa": "からだを うごかそう！ きたへ こうしん。いち、に、いち、に！ こんどは 大きな あかい いわで きたへ まがって。くるっ！",
             "subtitleEn": "Let's move! March north. One, two, one, two! Now turn north at the big red rock. Turn!",
             "gesture": "mime",
             "slide": {
@@ -7425,7 +7440,7 @@
             "kind": "tpr",
             "lang": "en",
             "say": "Speed challenge! March! Turn! Pull! Hold it up! March!",
-            "subtitleJa": "スピード チャレンジ！ ゆうしん！ まがって！ ひいて！ かかげて！ ゆうしん！",
+            "subtitleJa": "スピード チャレンジ！ こうしん！ まがって！ ひいて！ かかげて！ こうしん！",
             "subtitleEn": "Speed challenge! March! Turn! Pull! Hold it up! March!",
             "gesture": "mime",
             "slide": {
@@ -7558,6 +7573,7 @@
     {
       "lessonNo": 946,
       "world": 32,
+      "reviewed": "run9",
       "title": "The Graph Shows…",
       "titleJa": "グラフを よもう",
       "school": {
@@ -7655,7 +7671,7 @@
           "emoji": "👩‍🔬"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Go north for two kilometers. You'll see the well. Today, we walk to a little white building on a hill. There's a spinning wind cup on the roof and a big thermometer by the door. It's a weather station! A woman with sandy boots and a big smile opens the door. Welcome! I'm Dr. Mira Sands. I study desert weather, and I love graphs! Dr. Mira points to a poster on the wall. A red line goes up and down across it. The graph shows the temperature in July. Say it with me. The graph shows the temperature in July. Wonderful! Look at the red line. It goes up and down like sand dunes. What was the highest temperature? It was forty-six degrees! Let's read Dr. Mira's weather notes. \"July Weather Notes. The graph shows the highest temperature on each day in July. Every day was hotter than forty degrees. The hottest day was July twentieth. It was forty-six degrees, and even the lizards stayed in the shade! The coolest day was July third, when clouds covered the sky. It never rained this month. Tip: In July, drink lots of water and stay inside in the afternoon.\" What was the hottest day? July twentieth. Why was July third cooler? Because clouds covered the sky. Now, phonics. Let's read big numbers. Dr. Mira's station is three hundred fifty meters above the sea. Three, five, zero. Three hundred fifty. She has four thousand photos of clouds. Four, comma, zero, zero, zero. Four thousand. Her weather balloon flies higher than twelve thousand meters. One, two, comma, zero, zero, zero. Twelve thousand. And sixty thousand people read her weather report every month. Six, zero, comma, zero, zero, zero. Sixty thousand. Remember, no s on hundred or thousand! Next time, we will look at a graph of visitors to a desert park.",
+      "teacherScript": "Hello, everyone! Last time, we said, Go north for two kilometers. You'll see the well. Today, we walk to a little white building on a hill. There's a spinning wind cup on the roof and a big thermometer by the door. It's a weather station! A woman with sandy boots and a big smile opens the door. Welcome! I'm Dr. Mira Sands. I study desert weather, and I love graphs! Dr. Mira points to a poster on the wall. A red line goes up and down across it. The graph shows the temperature in July. Say it with me. The graph shows the temperature in July. Wonderful! Look at the red line. It goes up and down like sand dunes. What was the highest temperature? It was forty-six degrees! Let's read Dr. Mira's weather notes. \"July Weather Notes. The graph shows the highest temperature on each day in July. Every day was hotter than forty degrees. The hottest day was July twentieth. It was forty-six degrees, and even the lizards stayed in the shade! The coolest day was July third, when clouds covered the sky. It never rained this month. Tip: In July, drink lots of water and stay inside in the afternoon.\" What was the hottest day? July twentieth. Why was July third cooler? Because clouds covered the sky. Now, phonics. Let's read big numbers. Dr. Mira's station is three hundred fifty meters above sea level. Three, five, zero. Three hundred fifty. She has four thousand photos of clouds. Four, comma, zero, zero, zero. Four thousand. Her weather balloon flies higher than twelve thousand meters. One, two, comma, zero, zero, zero. Twelve thousand. And sixty thousand people read her weather report every month. Six, zero, comma, zero, zero, zero. Sixty thousand. Remember, no s on hundred or thousand! Next time, we will look at a graph of visitors to a desert park.",
       "conversation": {
         "scene": "Meeting Dr. Mira at the weather station",
         "sceneJa": "てんきの かんそくじょで ミラはかせに あう",
@@ -7698,7 +7714,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラはかせと きおんの グラフを 見よう。The graph shows ～. で グラフが なにを あらわして いるか いい、いちばん たかい きおんも きいて みよう",
-          "starterEn": "Welcome to my weather station! I'm Dr. Mira, and I love graphs. Here's my red line graph. What does the graph show? Can you find the hottest day?",
+          "starterEn": "Let's pretend I'm Dr. Mira. Welcome to my weather station! I love graphs. Here's my red line graph. What does the graph show? Can you find the hottest day?",
           "targetExpressions": [
             "The graph shows the temperature in July.",
             "What was the highest temperature? ― It was forty-six degrees.",
@@ -7814,9 +7830,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma says, Everyone, this is Dr. Mira Sands. She studies desert weather. Birimo says, I'm playing Dr. Mira! Welcome! I love graphs. Look at this one!",
-            "subtitleJa": "エマ先生「みんな、こちらは ミラ・サンズ はかせ。さばくの てんきを けんきゅう して いるのよ。」 ビリモ「ぼくが ミラ はかせの やく！ ようこそ！ グラフが だいすきなの。これを 見て！」",
-            "subtitleEn": "Ms. Emma says, Everyone, this is Dr. Mira Sands. She studies desert weather. Birimo says, I'm playing Dr. Mira! Welcome! I love graphs. Look at this one!",
+            "say": "I say, Everyone, this is Dr. Mira Sands. She studies desert weather. Birimo says, I'm playing Dr. Mira! Welcome! I love graphs. Look at this one!",
+            "subtitleJa": "わたし「みんな、こちらは ミラ・サンズ はかせ。さばくの てんきを けんきゅう して いるのよ。」 ビリモ「ぼくが ミラ はかせの やく！ ようこそ！ グラフが だいすきなの。これを 見て！」",
+            "subtitleEn": "I say, Everyone, this is Dr. Mira Sands. She studies desert weather. Birimo says, I'm playing Dr. Mira! Welcome! I love graphs. Look at this one!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -8049,9 +8065,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Brilliant! You can say what a graph shows, talk about the highest temperature, and read big numbers. Next, go and talk with Riko! Bye-bye!",
+            "say": "Fantastic! You can say what a graph shows, talk about the highest temperature, and read big numbers. Next, go and talk with Riko! Bye-bye!",
             "subtitleJa": "すばらしい！ グラフが なにを しめして いるか いえるし、いちばん たかい きおんも はなせるし、大きな かずも よめるね。このあと リコちゃんと おはなし してね！ バイバイ！",
-            "subtitleEn": "Brilliant! You can say what a graph shows, talk about the highest temperature, and read big numbers. Next, go and talk with Riko! Bye-bye!",
+            "subtitleEn": "Fantastic! You can say what a graph shows, talk about the highest temperature, and read big numbers. Next, go and talk with Riko! Bye-bye!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -8069,6 +8085,7 @@
     {
       "lessonNo": 947,
       "world": 32,
+      "reviewed": "run9",
       "title": "It Increased",
       "titleJa": "かずが ふえた",
       "school": {
@@ -8209,7 +8226,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラはかせと ぼうグラフを 見よう。The number of visitors increased. や It stayed the same. を つかって、かずが ふえたか へったかを せつめいしよう",
-          "starterEn": "Here's my bar graph of visitors to Sunrise Desert Park. Ten years ago, two hundred fifty thousand people came. Last year, one million came! What happened to the number of visitors?",
+          "starterEn": "Let's pretend I'm Dr. Mira. Here's my bar graph of visitors to Sunrise Desert Park. Ten years ago, two hundred fifty thousand people came. Last year, one million came! What happened to the number of visitors?",
           "targetExpressions": [
             "The number of visitors increased.",
             "The number of camels stayed the same.",
@@ -8577,6 +8594,7 @@
     {
       "lessonNo": 948,
       "world": 32,
+      "reviewed": "run9",
       "title": "Twice as Many",
       "titleJa": "2ばいの かず",
       "school": {
@@ -8717,7 +8735,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラはかせと どうぶつの ひょうを 見よう。There are twice as many ～ as ～. や Half of ～. を つかって、かずを くらべよう",
-          "starterEn": "Good morning! I counted the animals at the oasis today: sixty goats, forty camels, and twenty horses. Can you compare the numbers for me?",
+          "starterEn": "Hi! Let's pretend I'm Dr. Mira. I counted the animals at the oasis today: sixty goats, forty camels, and twenty horses. Can you compare the numbers for me?",
           "targetExpressions": [
             "There are twice as many camels as horses.",
             "Half of the animals are goats.",
@@ -8817,7 +8835,7 @@
           {
             "kind": "words",
             "lang": "en",
-            "say": "Half. Cut an apple into two same parts. One part is half. Half!",
+            "say": "Half. Cut an apple into two equal parts. One part is half. Half!",
             "subtitleJa": "half。りんごを おなじ 2つに きる。その 1つが はんぶん。はんぶん！",
             "gesture": "mime",
             "slide": {
@@ -8828,7 +8846,7 @@
               "emoji": "🌓"
             },
             "pauseMs": 2000,
-            "subtitleEn": "Half. Cut an apple into two same parts. One part is half. Half!"
+            "subtitleEn": "Half. Cut an apple into two equal parts. One part is half. Half!"
           },
           {
             "kind": "expressions",
@@ -9066,7 +9084,7 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's B! Forty is twice twenty, so camels come first. Brilliant!",
+            "say": "It's B! Forty is twice twenty, so camels come first. Great job!",
             "subtitleJa": "こたえは B！ 40は 20の 2ばい。だから ラクダを さきに いうんだ。すばらしい！",
             "gesture": "clap",
             "slide": {
@@ -9076,7 +9094,7 @@
               ],
               "emoji": "🎉"
             },
-            "subtitleEn": "It's B! Forty is twice twenty, so camels come first. Brilliant!"
+            "subtitleEn": "It's B! Forty is twice twenty, so camels come first. Great job!"
           },
           {
             "kind": "wrap",
@@ -9101,6 +9119,7 @@
     {
       "lessonNo": 949,
       "world": 32,
+      "reviewed": "run9",
       "title": "Half, a Quarter, Thirty Percent",
       "titleJa": "はんぶん、4ぶんの1、30パーセント",
       "school": {
@@ -9241,7 +9260,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラはかせと えんグラフを 見よう。About thirty percent of the land is desert. のように percent を つかって、わりあいを いって みよう",
-          "starterEn": "Look at my pie chart! The whole circle is all the land on Earth. The big yellow slice shows the deserts. How much of the land is desert?",
+          "starterEn": "Let's pretend I'm Dr. Mira. Look at my pie chart! The whole circle is all the land on Earth. The big yellow slice shows the deserts. How much of the land is desert?",
           "targetExpressions": [
             "About thirty percent of the land is desert.",
             "About seventy percent of Earth's surface is water.",
@@ -9437,7 +9456,7 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "The little dot is point. Two point five. Zero point five. Your turn! Thirty percent. Seventy-five percent. Two point five. Zero point five.",
+            "say": "We say point for the little dot. Two point five. Zero point five. Your turn! Thirty percent. Seventy-five percent. Two point five. Zero point five.",
             "subtitleJa": "ちいさな てんは point と よむよ。2.5 は two point five。0.5 は zero point five。あなたの ばん！ 30パーセント。75パーセント。2.5。0.5。",
             "gesture": "mime",
             "slide": {
@@ -9451,7 +9470,7 @@
               "emoji": "🔢"
             },
             "pauseMs": 4000,
-            "subtitleEn": "The little dot is point. Two point five. Zero point five. Your turn! Thirty percent. Seventy-five percent. Two point five. Zero point five."
+            "subtitleEn": "We say point for the little dot. Two point five. Zero point five. Your turn! Thirty percent. Seventy-five percent. Two point five. Zero point five."
           },
           {
             "kind": "tpr",
@@ -9624,6 +9643,7 @@
     {
       "lessonNo": 950,
       "world": 32,
+      "reviewed": "run9",
       "title": "Graph Presentation",
       "titleJa": "グラフの はっぴょう",
       "school": {
@@ -9772,7 +9792,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラはかせに グラフの はっぴょうを しよう。This graph shows ～. As you can see, ～. を つかって、さいごに Do you have any questions? と きいて みよう",
-          "starterEn": "It's Graph Presentation Day! I'm so excited. Please show me your graph. What does it show, and what can we see?",
+          "starterEn": "Let's pretend I'm Dr. Mira. It's Graph Presentation Day! I'm so excited. Can you show me your graph? What does it show, and what can we see?",
           "targetExpressions": [
             "This graph shows the rain in our desert town. As you can see, it hardly ever rains in summer.",
             "Each bar shows one month. ― The tallest bar is January.",
@@ -9967,8 +9987,8 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "West plus e r n. Western. Nation plus a l. National. Listen. Nation, national. The first sound changes! Your turn! Western. National.",
-            "subtitleJa": "west に ern で western。nation に al で national。きいてね。nation、national。さいしょの おとが かわるよ！ あなたの ばん！ western。national。",
+            "say": "West plus e, r, n. Western. Nation plus a, l. National. Listen. Nation, national. The first a sounds different! Your turn! Western. National.",
+            "subtitleJa": "west に ern で western。nation に al で national。きいてね。nation、national。さいしょの a の おとが かわるよ！ あなたの ばん！ western。national。",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -9981,7 +10001,7 @@
               "emoji": "🗺️"
             },
             "pauseMs": 4000,
-            "subtitleEn": "West plus e r n. Western. Nation plus a l. National. Listen. Nation, national. The first sound changes! Your turn! Western. National."
+            "subtitleEn": "West plus e, r, n. Western. Nation plus a, l. National. Listen. Nation, national. The first a sounds different! Your turn! Western. National."
           },
           {
             "kind": "tpr",
@@ -10154,6 +10174,7 @@
     {
       "lessonNo": 951,
       "world": 32,
+      "reviewed": "run9",
       "title": "Water Is Precious",
       "titleJa": "水は たからもの",
       "school": {
@@ -10245,7 +10266,7 @@
           "emoji": "🏺"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, This graph shows the rain in our desert town. As you can see, it hardly ever rains in summer. Today, Fen leads us across the hot sand to Palm Village. In the middle of the village, there is an old stone well. A long line of people waits beside it with buckets and clay jars. An old woman slowly pulls up the rope. Splash! Cool, clear water fills her bucket. Nobody spills a drop. Fen's big ears twitch. He whispers, Here, every drop counts. Water is precious in the desert. Say it with me. Water is precious in the desert. Wonderful! Precious means very important and hard to get, like treasure. Riko asks, Why is water so precious? Fen says, It hardly ever rains here. Let's read the sign next to the well. \"Welcome to the Palm Village Well. This well is very old and very deep. The water comes from under the ground, far below the sand. Our village gets less than 100 millimeters of rain a year, so this well is our life. Please take only what you need. Close the lid after you use the well, so that sand and animals stay out. Thank you for helping us. Water is precious, so let's not waste a single drop!\" Where does the water come from? From under the ground. Why should you close the lid? So that sand and animals stay out. Is this a fact or an opinion? Water is precious. It's an opinion, but in the desert, everyone shares it! Now, phonics. Today's ending is a, g, e. It sounds like idge, but we spell it a, g, e. Average. Percentage. Storage. Shortage. Storage is a place to keep things, like a big water tank. A shortage means there is not enough. When the rain doesn't come, the village has a water shortage. Next time, we visit a lake that is getting smaller.",
+      "teacherScript": "Hello, everyone! Last time, we said, This graph shows the rain in our desert town. As you can see, it hardly ever rains in summer. Today, Fen leads us across the hot sand to Palm Village. In the middle of the village, there is an old stone well. A long line of people waits beside it with buckets and clay jars. An old woman slowly pulls up the rope. Splash! Cool, clear water fills her bucket. Nobody spills a drop. Fen's big ears twitch. He whispers, Here, every drop counts. Water is precious in the desert. Say it with me. Water is precious in the desert. Wonderful! Precious means very important and hard to get, like treasure. Riko asks, Why is water so precious? Fen says, It hardly ever rains here. Let's read the sign next to the well. \"Welcome to the Palm Village Well. This well is very old and very deep. The water comes from under the ground, far below the sand. Our village gets less than 100 millimeters of rain a year, so this well is our life. Please take only what you need. Close the lid after you use the well, so that sand and animals stay out. Thank you for helping us. Water is precious, so let's not waste a single drop!\" Where does the water come from? From under the ground. Why should you close the lid? So that sand and animals stay out. Is this a fact or an opinion? Water is precious. It's an opinion, but in the desert, everyone shares it! Now, phonics. Today's ending is a, g, e. It sounds like the end of bridge, but we spell it a, g, e. Average. Percentage. Storage. Shortage. Storage is a place to keep things, like a big water tank. A shortage means there is not enough. When the rain doesn't come, the village has a water shortage. Next time, we visit a lake that is getting smaller.",
       "conversation": {
         "scene": "At the old stone well in Palm Village",
         "sceneJa": "パームむらの ふるい 石の いどの まえで",
@@ -10288,7 +10309,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと パームむらの いどを 見に いこう。Water is precious in the desert. と いって、Why is water so precious? と きかれたら りゆうを いおう",
-          "starterEn": "Hi, friend! This is the well in Palm Village. Look how carefully everyone carries the water. Why do you think they never waste a drop?",
+          "starterEn": "Hi, friend! Let's pretend I'm Fen. This is the well in Palm Village. Look how carefully everyone carries the water. Why do you think they never waste a drop?",
           "targetExpressions": [
             "Water is precious in the desert.",
             "Why is water so precious? ― It hardly ever rains here.",
@@ -10437,9 +10458,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. Let's not means, let's all stop, don't do it. Let's not waste water. Let's not spill!",
+            "say": "Here's the point. Let's not means, let's all choose not to do it. Let's not waste water. Let's not spill!",
             "subtitleJa": "ポイント。let's not は「みんなで 〜しないように しよう」と いう いみ。「水を むだに しないように しよう。」「こぼさないように しよう！」",
-            "subtitleEn": "Here's the point. Let's not means, let's all stop, don't do it. Let's not waste water. Let's not spill!",
+            "subtitleEn": "Here's the point. Let's not means, let's all choose not to do it. Let's not waste water. Let's not spill!",
             "gesture": "nod",
             "slide": {
               "title": "Point",
@@ -10452,9 +10473,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! The ending a, g, e doesn't say age. It says idge, short and soft. Average. Percentage.",
+            "say": "Sound time! The ending a, g, e doesn't say age. It sounds like the end of bridge, short and soft. Average. Percentage.",
             "subtitleJa": "おとの じかん！ おわりの a、g、e は「エイジ」とは いわないよ。「イッジ」と みじかく よわく いうの。average。percentage。",
-            "subtitleEn": "Sound time! The ending a, g, e doesn't say age. It says idge, short and soft. Average. Percentage.",
+            "subtitleEn": "Sound time! The ending a, g, e doesn't say age. It sounds like the end of bridge, short and soft. Average. Percentage.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -10659,6 +10680,7 @@
     {
       "lessonNo": 952,
       "world": 32,
+      "reviewed": "run9",
       "title": "Because of the Heat",
       "titleJa": "あつさの せいで",
       "school": {
@@ -10750,7 +10772,7 @@
           "emoji": "🌵"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Water is precious in the desert. Today, Dr. Mira Sands takes us to Mirror Lake. Long ago, the lake was so smooth and wide that it looked like a giant mirror. But now, we see a ring of white, cracked mud all around it. The water is far away from the old shore. Haru points to a big rock. Look! There's an old water line up here! Dr. Mira nods and shows us her temperature graph. Every summer this lake gets hotter and hotter. The hot sun turns the water into vapor, and it goes up into the air. Because of the heat, the lake became smaller. Say it with me. Because of the heat, the lake became smaller. Great! Because of comes before a thing, like the heat or the rain. Let's read Dr. Mira's notebook. \"Mirror Lake Notes. Ten years ago, Mirror Lake was about two kilometers wide. Now, it is less than one kilometer wide. Why? First, the summers here have become hotter. Because of the heat, a lot of water goes up into the air every day. Second, it hardly ever rained this year. Third, more and more farms take water from the lake. Because of the dry weather, many plants on the shore turned brown. The fish and birds have fewer places to live now. We must take care of this lake.\" How wide was the lake ten years ago? About two kilometers. Give one reason why the lake became smaller. The summers became hotter, it hardly ever rained, or farms took water. Now, phonics. Today's ending is u, r, e. Listen. Temperature. Measure. Pressure. Moisture. The ending sounds like cher, zher, or sher, but we spell it u, r, e. We measure the temperature with a thermometer. Moisture means a little water in the air or in the ground. Next time, we hear the story of a village that became green again.",
+      "teacherScript": "Hello, everyone! Last time, we said, Water is precious in the desert. Today, Dr. Mira Sands takes us to Mirror Lake. Long ago, the lake was so smooth and wide that it looked like a giant mirror. But now, we see a ring of white, cracked mud all around it. The water is far away from the old shore. Haru points to a big rock. Look! There's an old water line up here! Dr. Mira nods and shows us her temperature graph. Every summer this lake gets hotter and hotter. The hot sun turns the water into vapor, and it goes up into the air. Because of the heat, the lake became smaller. Say it with me. Because of the heat, the lake became smaller. Great! Because of comes before a thing, like the heat or the rain. Let's read Dr. Mira's notebook. \"Mirror Lake Notes. Ten years ago, Mirror Lake was about two kilometers wide. Now, it is less than one kilometer wide. Why? First, the summers here have become hotter. Because of the heat, a lot of water goes up into the air every day. Second, it hardly ever rained this year. Third, more and more farms take water from the lake. Because of the dry weather, many plants on the shore turned brown. The fish and birds have fewer places to live now. We must take care of this lake.\" How wide was the lake ten years ago? About two kilometers. Give one reason why the lake became smaller. The summers became hotter, it hardly ever rained, or farms took water. Now, phonics. Today's ending is u, r, e. Listen. Temperature. Measure. Pressure. Moisture. The ending sounds like the end of picture or treasure, but we always spell it u, r, e. We measure the temperature with a thermometer. Moisture means a little water in the air or in the ground. Next time, we hear the story of a village that became green again.",
       "conversation": {
         "scene": "Measuring Mirror Lake with Dr. Mira",
         "sceneJa": "ミラ・サンズ はかせと ミラーこを はかる",
@@ -10793,7 +10815,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラ はかせと ミラーこを しらべよう。Because of the heat, the lake became smaller. で りゆうを いい、Why? と きかれたら Because ～. で もう 1つ りゆうを いおう",
-          "starterEn": "Hello again, scientist! Look at Mirror Lake. Ten years ago, the water came up to that big rock. Why do you think the lake became smaller?",
+          "starterEn": "Hello again, scientist! Let's pretend I'm Dr. Mira. Look at Mirror Lake. Ten years ago, the water came up to that big rock. Why do you think the lake became smaller?",
           "targetExpressions": [
             "Because of the heat, the lake became smaller.",
             "Why did the lake get smaller? ― Because it hardly ever rained this year.",
@@ -10924,9 +10946,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Birimo says, I'm playing Dr. Mira! Look at my graph. Because of the heat, the lake became smaller. Riko asks, Why else did the lake get smaller? Because it hardly ever rained this year.",
-            "subtitleJa": "ビリモ「ぼくが ミラ はかせの やく！ グラフを 見て。あつさの せいで、みずうみは ちいさく なったのよ。」 リコちゃん「ほかには どうして ちいさく なったの？」「ことしは ほとんど 雨が ふらなかったからよ。」",
-            "subtitleEn": "Birimo says, I'm playing Dr. Mira! Look at my graph. Because of the heat, the lake became smaller. Riko asks, Why else did the lake get smaller? Because it hardly ever rained this year.",
+            "say": "Birimo says, I'm playing Dr. Mira! Look at my graph. Because of the heat, the lake became smaller. Riko asks, Why else did the lake get smaller? Birimo says, Because it hardly ever rained this year.",
+            "subtitleJa": "ビリモ「ぼくが ミラ はかせの やく！ グラフを 見て。あつさの せいで、みずうみは ちいさく なったのよ。」 リコちゃん「ほかには どうして ちいさく なったの？」 ビリモ「ことしは ほとんど 雨が ふらなかったからよ。」",
+            "subtitleEn": "Birimo says, I'm playing Dr. Mira! Look at my graph. Because of the heat, the lake became smaller. Riko asks, Why else did the lake get smaller? Birimo says, Because it hardly ever rained this year.",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -10956,9 +10978,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! The ending u, r, e joins the sound before it. Temperature, cher. Measure, zher. Pressure, sher.",
-            "subtitleJa": "おとの じかん！ おわりの u、r、e は まえの おとと くっつくよ。temperature は「チャー」。measure は「ジャー」。pressure は「シャー」。",
-            "subtitleEn": "Sound time! The ending u, r, e joins the sound before it. Temperature, cher. Measure, zher. Pressure, sher.",
+            "say": "Sound time! The ending u, r, e joins the sound before it. Temperature ends like picture. Measure ends like treasure. Pressure ends like washer.",
+            "subtitleJa": "おとの じかん！ おわりの u、r、e は まえの おとと くっつくよ。temperature は picture と おなじ「チャー」。measure は treasure と おなじ「ジャー」。pressure は washer と おなじ「シャー」。",
+            "subtitleEn": "Sound time! The ending u, r, e joins the sound before it. Temperature ends like picture. Measure ends like treasure. Pressure ends like washer.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -10976,9 +10998,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Moisture, cher. A little water in the air. Same spelling, u, r, e. Your turn! Temperature. Measure. Pressure. Moisture.",
-            "subtitleJa": "moisture は「チャー」。くうきの なかの すこしの 水。つづりは どれも u、r、e。あなたの ばん！ temperature。measure。pressure。moisture。",
-            "subtitleEn": "Moisture, cher. A little water in the air. Same spelling, u, r, e. Your turn! Temperature. Measure. Pressure. Moisture.",
+            "say": "Moisture ends like picture, too. A little water in the air. Same spelling, u, r, e. Your turn! Temperature. Measure. Pressure. Moisture.",
+            "subtitleJa": "moisture も picture と おなじ「チャー」。くうきの なかの すこしの 水。つづりは どれも u、r、e。あなたの ばん！ temperature。measure。pressure。moisture。",
+            "subtitleEn": "Moisture ends like picture, too. A little water in the air. Same spelling, u, r, e. Your turn! Temperature. Measure. Pressure. Moisture.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -11164,6 +11186,7 @@
     {
       "lessonNo": 953,
       "world": 32,
+      "reviewed": "run9",
       "title": "As a Result",
       "titleJa": "その けっか",
       "school": {
@@ -11229,7 +11252,7 @@
           "decrease",
           "release"
         ],
-        "tipJa": "-ease は e-a-s-e と かいて「イース」と よむよ。in（なかへ）＋crease で increase（ふえる）、de（下へ）＋crease で decrease（へる）、release（はなす・とき はなつ）。グラフの ことば increased / decreased の もとの かたちだね。"
+        "tipJa": "-ease は e-a-s-e と かいて「イース」と よむよ。in（なかへ）＋crease で increase（ふえる）、de（下へ）＋crease で decrease（へる）、release（はなす・ときはなつ）。グラフの ことば increased / decreased の もとの かたちだね。"
       },
       "vocab": [
         {
@@ -11254,7 +11277,7 @@
           "emoji": "🌾"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Because of the heat, the lake became smaller. Today, Fen takes us over a tall sand dune. At the top, we stop and stare. Below us, there is a green valley full of trees, fields, and flowers! Birds are singing everywhere. Fen says, Welcome to Green Valley. Forty years ago, this place was brown and dusty. Then the people had an idea. People planted trees. As a result, the village became green again. Say it with me. People planted trees. As a result, the village became green again. Perfect! As a result tells us what happened next because of something. Let's read the story board in the village square. \"The Story of Green Valley. Forty years ago, Green Valley was dry and brown. Strong winds blew sand into the fields, and the crops died. Many families had to leave. Then the villagers made a plan. They planted long rows of trees around the village. The trees stopped the wind and gave shade. Their roots held the soil in place. As a result, the fields stayed soft and wet, and the crops grew again. Then the birds came back, too. Today, Green Valley is green again!\" Why did the crops die? Because of strong winds that blew sand into the fields. What happened after the trees grew? The fields stayed soft and wet, and the crops grew again. Green Valley is a story village, but this happens in the real world, too. In Africa, many countries are planting a Great Green Wall of trees across the Sahel, south of the Sahara, to stop the desert from spreading. Now, phonics. Today's ending is e, a, s, e. It sounds like eess. Increase. Decrease. Release. When the number of trees increases, it goes up. When it decreases, it goes down. Release means let something go. Release the bird, and it flies free! Next time, we find out how much water we use in a day.",
+      "teacherScript": "Hello, everyone! Last time, we said, Because of the heat, the lake became smaller. Today, Fen takes us over a tall sand dune. At the top, we stop and stare. Below us, there is a green valley full of trees, fields, and flowers! Birds are singing everywhere. Fen says, Welcome to Green Valley. Forty years ago, this place was brown and dusty. Then the people had an idea. People planted trees. As a result, the village became green again. Say it with me. People planted trees. As a result, the village became green again. Perfect! As a result tells us what happened next because of something. Let's read the story board in the village square. \"The Story of Green Valley. Forty years ago, Green Valley was dry and brown. Strong winds blew sand into the fields, and the crops died. Many families had to leave. Then the villagers made a plan. They planted long rows of trees around the village. The trees stopped the wind and gave shade. Their roots held the soil in place. As a result, the fields stayed soft and wet, and the crops grew again. Then the birds came back, too. Today, Green Valley is green again!\" Why did the crops die? Because of strong winds that blew sand into the fields. What happened after the trees grew? The fields stayed soft and wet, and the crops grew again. Green Valley is a story village, but this happens in the real world, too. In Africa, many countries are planting a Great Green Wall of trees across the Sahel, south of the Sahara, to stop the desert from spreading. Now, phonics. Today's ending is e, a, s, e. It sounds like the end of geese. Increase. Decrease. Release. When the number of trees increases, it goes up. When it decreases, it goes down. Release means let something go. Release the bird, and it flies free! Next time, we find out how much water we use in a day.",
       "conversation": {
         "scene": "Looking down at Green Valley from a sand dune",
         "sceneJa": "すなの おかの 上から みどりの たにを 見おろす",
@@ -11297,7 +11320,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと みどりの たにの おはなしを しよう。People planted trees. As a result, ～. の ように「したこと」と「その けっか」を じゅんばんに いおう",
-          "starterEn": "Look down there! That's Green Valley. Forty years ago, it was brown and dusty. Can you guess what the people did? And what happened as a result?",
+          "starterEn": "Let's pretend I'm Fen. Look down there! That's Green Valley. Forty years ago, it was brown and dusty. Can you guess what the people did? And what happened as a result?",
           "targetExpressions": [
             "People planted trees. As a result, the village became green again.",
             "What happened next? ― As a result, the birds came back.",
@@ -11461,9 +11484,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! E, a, s, e says eess. A long E, then a snake sound, sss. Increase. It goes up!",
+            "say": "Sound time! E, a, s, e sounds like the end of geese. A long E, then a snake sound, sss. Increase. It goes up!",
             "subtitleJa": "おとの じかん！ e、a、s、e は「イース」。ながい「イー」の あとに へびの「スー」。increase。ふえる！",
-            "subtitleEn": "Sound time! E, a, s, e says eess. A long E, then a snake sound, sss. Increase. It goes up!",
+            "subtitleEn": "Sound time! E, a, s, e sounds like the end of geese. A long E, then a snake sound, sss. Increase. It goes up!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -11631,9 +11654,9 @@
           {
             "kind": "check",
             "lang": "en",
-            "say": "It's A! The village became green, and the birds came back, too. Brilliant!",
+            "say": "It's A! The village became green, and the birds came back, too. Great job!",
             "subtitleJa": "こたえは A！ むらは みどりに なって、とりたちも もどって きたよ。すばらしい！",
-            "subtitleEn": "It's A! The village became green, and the birds came back, too. Brilliant!",
+            "subtitleEn": "It's A! The village became green, and the birds came back, too. Great job!",
             "gesture": "clap",
             "slide": {
               "title": "Answer",
@@ -11666,6 +11689,7 @@
     {
       "lessonNo": 954,
       "world": 32,
+      "reviewed": "run9",
       "title": "How Much Water Do We Use?",
       "titleJa": "水を どれくらい つかうの？",
       "school": {
@@ -11799,7 +11823,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラ はかせと、あさ おきてから ねるまでに つかう 水を いっしょに かぞえよう。We use about ～ liters ～. で こたえよう（ほんとうの なまえや すんで いる ところは いわなくて いい）",
-          "starterEn": "Hello! Let's be water detectives today. Think about your morning. When do you use water? Let's count the liters together!",
+          "starterEn": "Hello! Let's pretend I'm Dr. Mira. Time to be water detectives! Think about your morning. When do you use water? We can count the liters together!",
           "targetExpressions": [
             "We use about 200 liters of water a day.",
             "How much water does a shower use? ― About 12 liters a minute.",
@@ -11932,9 +11956,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Kiko asks, How much water does a shower use? Ms. Emma says, About twelve liters a minute. Here's a tip. Say about when the number is close, but not exact. Haru says, I'll take shorter showers!",
-            "subtitleJa": "キコちゃん「シャワーは どれくらい 水を つかうの？」 エマ先生「1ぷんで やく 12リットルよ。」 ヒント。かずが ぴったり じゃなくて だいたい の ときは about を つけるよ。ハルくん「シャワーを みじかく しよう！」",
-            "subtitleEn": "Kiko asks, How much water does a shower use? Ms. Emma says, About twelve liters a minute. Here's a tip. Say about when the number is close, but not exact. Haru says, I'll take shorter showers!",
+            "say": "Kiko asks, How much water does a shower use? I say, About twelve liters a minute. Here's a tip. Use the word about when the number is close, but not exact. Haru says, I'll take shorter showers!",
+            "subtitleJa": "キコちゃん「シャワーは どれくらい 水を つかうの？」 わたし「1ぷんで やく 12リットルよ。」 ヒント。かずが ぴったり じゃなくて だいたい の ときは about を つけるよ。ハルくん「シャワーを みじかく しよう！」",
+            "subtitleEn": "Kiko asks, How much water does a shower use? I say, About twelve liters a minute. Here's a tip. Use the word about when the number is close, but not exact. Haru says, I'll take shorter showers!",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
@@ -12154,6 +12178,7 @@
     {
       "lessonNo": 955,
       "world": 32,
+      "reviewed": "run9",
       "title": "Save Water Campaign",
       "titleJa": "水を まもろう キャンペーン",
       "school": {
@@ -12254,7 +12279,7 @@
           "emoji": "🌧️"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, We use about 200 liters of water a day. Today is a big day. We are presenting our Save Water Campaign in the square of Palm Village. Fen, Dr. Mira, and many villagers sit on colorful rugs in the shade of the palm trees. Kiko holds up our poster. It has a big blue drop on it. Haru steps forward and says, We can save water by turning off the tap. Say it with me. We can save water by turning off the tap. Wonderful! By plus ing tells us how we do it. Riko asks, How else can we save water? Birimo says, We can take shorter showers. Let's read our campaign poster. \"Every Drop Counts! Join Our Save Water Campaign. One: Turn off the tap while you brush your teeth. You can save about 6 liters every 30 seconds. Two: Take shorter showers. One minute less saves about 12 liters. Three: Use the water from washing vegetables to water the plants. Four: Collect rainwater on rainy days. Five: If you see a leaky tap, tell an adult. Our goal is to cut our water use by one quarter. Small actions add up. Let's do it together!\" How much water can you save with a shower one minute shorter? About 12 liters. What should you do if you see a leaky tap? Tell an adult. The villagers clap and cheer. Fen's big ears stand straight up. Then the Sun Compass begins to glow. Click! The fifth sun crystal clicks into place! Only one slot is empty now. Now, phonics. Let's review. Average. The ending a, g, e sounds like idge. Temperature. The ending u, r, e sounds like cher. Increase. E, a, s, e sounds like eess. Amount. O, u, n, t. One quarter. One, slash, four. That means one of four equal parts. Next time, we read a desert story about a girl who found water.",
+      "teacherScript": "Hello, everyone! Last time, we said, We use about 200 liters of water a day. Today is a big day. We are presenting our Save Water Campaign in the square of Palm Village. Fen, Dr. Mira, and many villagers sit on colorful rugs in the shade of the palm trees. Kiko holds up our poster. It has a big blue drop on it. Haru steps forward and says, We can save water by turning off the tap. Say it with me. We can save water by turning off the tap. Wonderful! By plus ing tells us how we do it. Riko asks, How else can we save water? Birimo says, We can take shorter showers. Let's read our campaign poster. \"Every Drop Counts! Join Our Save Water Campaign. One: Turn off the tap while you brush your teeth. You can save about 6 liters every 30 seconds. Two: Take shorter showers. One minute less saves about 12 liters. Three: Use the water from washing vegetables to water the plants. Four: Collect rainwater on rainy days. Five: If you see a leaky tap, tell an adult. Our goal is to cut our water use by one quarter. Small actions add up. Let's do it together!\" How much water can you save if your shower is one minute shorter? About 12 liters. What should you do if you see a leaky tap? Tell an adult. The villagers clap and cheer. Fen's big ears stand straight up. Then the Sun Compass begins to glow. Click! The fifth sun crystal clicks into place! Only one slot is empty now. Now, phonics. Let's review. Average ends like bridge. Temperature ends like picture. Increase ends like geese. Amount ends like count. One quarter. One, slash, four. That means one of four equal parts. Next time, we read a desert story about a girl who found water.",
       "conversation": {
         "scene": "Presenting the Save Water Campaign in Palm Village",
         "sceneJa": "パームむらの ひろばで「水を まもろう キャンペーン」の はっぴょう",
@@ -12297,7 +12322,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンに「水を まもろう キャンペーン」を はっぴょうしよう。We can save water by ～ing. を 2つ いって、さいごに Every drop counts! で しめくくろう",
-          "starterEn": "Yip, yip! The whole village is here to listen. How can we save water? Tell us your best ideas!",
+          "starterEn": "Yip, yip! Let's pretend I'm Fen. The whole village is here to listen. How can we save water? Tell us your best ideas!",
           "targetExpressions": [
             "We can save water by turning off the tap.",
             "How else can we save water? ― We can take shorter showers.",
@@ -12318,9 +12343,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Hello, everyone! Last time, we counted our water. About two hundred liters a day! Today is a big day. We present our Save Water Campaign in the village square!",
+            "say": "Hello, everyone! Last time, we counted our water. About two hundred liters a day! Today is a big day. We're presenting our Save Water Campaign in the village square!",
             "subtitleJa": "こんにちは、みんな！ まえの かいは つかう 水を かぞえたね。1日に やく 200リットル！ きょうは とくべつな 日。むらの ひろばで「水を まもろう キャンペーン」を はっぴょう するよ！",
-            "subtitleEn": "Hello, everyone! Last time, we counted our water. About two hundred liters a day! Today is a big day. We present our Save Water Campaign in the village square!",
+            "subtitleEn": "Hello, everyone! Last time, we counted our water. About two hundred liters a day! Today is a big day. We're presenting our Save Water Campaign in the village square!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -12445,9 +12470,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Everyone cheers. Haru shouts, Look! The Sun Compass is glowing! Click! Ms. Emma says, The fifth sun crystal is in. Great job, everyone!",
-            "subtitleJa": "みんなが はくしゅ。ハルくん「見て！ たいようの コンパスが ひかって いる！」 カチッ！ エマ先生「5つめの たいようの クリスタルが はまったわ。みんな、よく できました！」",
-            "subtitleEn": "Everyone cheers. Haru shouts, Look! The Sun Compass is glowing! Click! Ms. Emma says, The fifth sun crystal is in. Great job, everyone!",
+            "say": "Everyone cheers. Haru shouts, Look! The Sun Compass is glowing! Click! I say, The fifth sun crystal is in. Great job, everyone!",
+            "subtitleJa": "みんなが はくしゅ。ハルくん「見て！ たいようの コンパスが ひかって いる！」 カチッ！ わたし「5つめの たいようの クリスタルが はまったわ。みんな、よく できました！」",
+            "subtitleEn": "Everyone cheers. Haru shouts, Look! The Sun Compass is glowing! Click! I say, The fifth sun crystal is in. Great job, everyone!",
             "gesture": "clap",
             "slide": {
               "title": "Talk",
@@ -12461,9 +12486,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Average, idge. Temperature, cher. Increase, eess. Amount, ount. Short endings, clear spelling!",
-            "subtitleJa": "おとの ふりかえり！ average は「イッジ」。temperature は「チャー」。increase は「イース」。amount は「アウント」。おわりの おとと つづりを しっかり！",
-            "subtitleEn": "Sound review! Average, idge. Temperature, cher. Increase, eess. Amount, ount. Short endings, clear spelling!",
+            "say": "Sound review! Average ends like bridge. Temperature ends like picture. Increase ends like geese. Amount ends like count. Short endings, clear spelling!",
+            "subtitleJa": "おとの ふりかえり！ average は bridge と おなじ「イッジ」。temperature は picture と おなじ「チャー」。increase は geese と おなじ「イース」。amount は count と おなじ「アウント」。おわりの おとと つづりを しっかり！",
+            "subtitleEn": "Sound review! Average ends like bridge. Temperature ends like picture. Increase ends like geese. Amount ends like count. Short endings, clear spelling!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -12671,6 +12696,7 @@
     {
       "lessonNo": 956,
       "world": 32,
+      "reviewed": "run9",
       "title": "A Desert Story",
       "titleJa": "さばくの おはなし",
       "school": {
@@ -12771,7 +12797,7 @@
           "emoji": "🧑‍🌾"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, We can save water by turning off the tap. Tonight, we sit around a campfire under the stars. Fen pulls a small, sandy book out of his bag. He says, Everyone in the desert knows this story. Remember, it's a made-up story. Lina is not a real girl, but her story is like many true stories from dry places. Ms. Emma opens the book and says, Read the story of a girl who found water. Say it with me. Read the story of a girl who found water. Very good! Let's read it together. \"Lina lived in a small village in the eastern part of a dry valley. It hardly ever rained there, and the old well was almost empty. Every morning, Lina walked for an hour to get water. One day at sunrise, she saw something strange at the dry riverbed. Green plants were growing there, and little birds were hopping around them. But there was no water anywhere. Lina thought, Plants need water. Maybe there is water under the ground! She ran back and told the villagers. They dug and dug. At last, cool water came up. Because of Lina's sharp eyes, the village had water again.\" Why did Lina think there was water? Because she saw green plants and birds. What did the villagers do? They dug, and they found water. What is the lesson of the story? Look carefully, and you can find answers. Now, phonics. Let's review. Geology. Geo means earth, and logy means study. Geologists study rocks and the ground. Original. Origin plus a, l. Eastern. East plus e, r, n. Lina's village was in the eastern part of the valley. One third. One, slash, three. One of three equal parts. Moisture. The plants found moisture under the sand. Next time, it's the Geography Quiz Rally around the oasis!",
+      "teacherScript": "Hello, everyone! Last time, we said, We can save water by turning off the tap. Tonight, we sit around a campfire under the stars. Fen pulls a small, sandy book out of his bag. He says, Everyone in the desert knows this story. Remember, it's a made-up story. Lina is not a real girl, but her story is like many true stories from dry places. Fen opens the book, and I say, Read the story of a girl who found water. Say it with me. Read the story of a girl who found water. Very good! Let's read it together. \"Lina lived in a small village in the eastern part of a dry valley. It hardly ever rained there, and the old well was almost empty. Every morning, Lina walked for an hour to get water. One day at sunrise, she saw something strange at the dry riverbed. Green plants were growing there, and little birds were hopping around them. But there was no water anywhere. Lina thought, Plants need water. Maybe there is water under the ground! She ran back and told the villagers. They dug and dug. At last, cool water came up. Because of Lina's sharp eyes, the village had water again.\" Why did Lina think there was water? Because she saw green plants and birds. What did the villagers do? They dug, and they found water. What is the lesson of the story? Look carefully, and you can find answers. Now, phonics. Let's review. Geology. Geo means earth, and logy means study. Geologists study rocks and the ground. Original. Origin plus a, l. Eastern. East plus e, r, n. Lina's village was in the eastern part of the valley. One third. One, slash, three. One of three equal parts. Moisture. The plants found moisture under the sand. Next time, it's the Geography Quiz Rally around the oasis!",
       "conversation": {
         "scene": "Reading Lina's story by the campfire",
         "sceneJa": "たき火の そばで リナの おはなしを よむ",
@@ -12814,7 +12840,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと リナの おはなしに ついて はなそう。Why did Lina think there was water? や What is the lesson of the story? に じぶんの ことばで こたえよう",
-          "starterEn": "Yip! Did you like Lina's story? Why do you think she was so sure there was water under the ground?",
+          "starterEn": "Yip! Let's pretend I'm Fen. Did you like Lina's story? Why do you think she was so sure there was water under the ground?",
           "targetExpressions": [
             "Read the story of a girl who found water.",
             "Why did Lina think there was water? ― Because she saw green plants and birds.",
@@ -12835,9 +12861,9 @@
           {
             "kind": "greet",
             "lang": "en",
-            "say": "Good evening, everyone! Last time, we ran our Save Water Campaign. Tonight, we sit around a campfire under the stars. Fen opens a small, sandy book. Story time!",
-            "subtitleJa": "こんばんは、みんな！ まえの かいは「水を まもろう キャンペーン」を したね。こんやは ほしの したで たき火を かこんで すわるよ。フェンが 小さな すなだらけの 本を ひらく。おはなしの じかん！",
-            "subtitleEn": "Good evening, everyone! Last time, we ran our Save Water Campaign. Tonight, we sit around a campfire under the stars. Fen opens a small, sandy book. Story time!",
+            "say": "Hello, everyone! Last time, we ran our Save Water Campaign. Tonight, we sit around a campfire under the stars. Fen opens a small, sandy book. Story time!",
+            "subtitleJa": "こんにちは、みんな！ まえの かいは「水を まもろう キャンペーン」を したね。こんやは ほしの したで たき火を かこんで すわるよ。フェンが 小さな すなだらけの 本を ひらく。おはなしの じかん！",
+            "subtitleEn": "Hello, everyone! Last time, we ran our Save Water Campaign. Tonight, we sit around a campfire under the stars. Fen opens a small, sandy book. Story time!",
             "gesture": "wave",
             "slide": {
               "title": "Welcome!",
@@ -12978,9 +13004,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Geology. Geo means earth, so geology studies rocks. Original, al. Eastern, ern. Lina's village was eastern.",
-            "subtitleJa": "おとの ふりかえり！ geology。geo は ちきゅう。だから geology は いわを しらべる こと。original は「アル」。eastern は「アン」。リナの むらは ひがしの ほう だったね。",
-            "subtitleEn": "Sound review! Geology. Geo means earth, so geology studies rocks. Original, al. Eastern, ern. Lina's village was eastern.",
+            "say": "Sound review! Geology. Geo means earth, so geology studies rocks. Original ends like animal. Eastern ends like pattern. Lina's village was in the eastern part of the valley.",
+            "subtitleJa": "おとの ふりかえり！ geology。geo は ちきゅう。だから geology は いわを しらべる こと。original は animal と おなじ「アル」。eastern は pattern と おなじ「アン」。リナの むらは たにの ひがしの ほうに あったね。",
+            "subtitleEn": "Sound review! Geology. Geo means earth, so geology studies rocks. Original ends like animal. Eastern ends like pattern. Lina's village was in the eastern part of the valley.",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -12999,9 +13025,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "One third. One of three equal parts. Moisture, cher. A little water hiding under the sand. Your turn! Geology. Original. Eastern. One third. Moisture.",
-            "subtitleJa": "one third。おなじ 大きさに 3つに わけた うちの 1つ。moisture は「チャー」。すなの したに かくれた すこしの 水。あなたの ばん！ geology。original。eastern。one third。moisture。",
-            "subtitleEn": "One third. One of three equal parts. Moisture, cher. A little water hiding under the sand. Your turn! Geology. Original. Eastern. One third. Moisture.",
+            "say": "One third. One of three equal parts. Moisture ends like picture. A little water hiding under the sand. Your turn! Geology. Original. Eastern. One third. Moisture.",
+            "subtitleJa": "one third。おなじ 大きさに 3つに わけた うちの 1つ。moisture は picture と おなじ「チャー」。すなの したに かくれた すこしの 水。あなたの ばん！ geology。original。eastern。one third。moisture。",
+            "subtitleEn": "One third. One of three equal parts. Moisture ends like picture. A little water hiding under the sand. Your turn! Geology. Original. Eastern. One third. Moisture.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -13168,9 +13194,9 @@
           {
             "kind": "wrap",
             "lang": "en",
-            "say": "Great reading! You can read a story, answer why, and tell the lesson. Next, go and talk with Birimo! Good night, and see you!",
-            "subtitleJa": "よく よめたね！ おはなしを よんで、「どうして？」に こたえて、おはなしから わかる ことが いえるね。このあと ビリモと おはなし してね！ おやすみ、またね！",
-            "subtitleEn": "Great reading! You can read a story, answer why, and tell the lesson. Next, go and talk with Birimo! Good night, and see you!",
+            "say": "Great reading! You can read a story, answer why, and tell the lesson. Next, go and talk with Birimo! See you!",
+            "subtitleJa": "よく よめたね！ おはなしを よんで、「どうして？」に こたえて、おはなしから わかる ことが いえるね。このあと ビリモと おはなし してね！ またね！",
+            "subtitleEn": "Great reading! You can read a story, answer why, and tell the lesson. Next, go and talk with Birimo! See you!",
             "gesture": "clap",
             "slide": {
               "title": "Today's wrap-up",
@@ -13188,6 +13214,7 @@
     {
       "lessonNo": 957,
       "world": 32,
+      "reviewed": "run9",
       "title": "Geography Quiz Rally",
       "titleJa": "ちりの クイズラリー",
       "school": {
@@ -13331,7 +13358,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンと ちりの クイズを だしあおう。Which is the largest ～? で クイズを だし、まちがえたら Is it ～? ― No, it's ～. の ように やりとり しよう",
-          "starterEn": "Yip, yip! Welcome to station one! Here's my quiz: which is the largest desert? Then it's your turn to give me a quiz!",
+          "starterEn": "Yip, yip! Let's pretend I'm Fen. Welcome to station one! Here's my quiz: Which is the largest desert? Then it's your turn to give me a quiz!",
           "targetExpressions": [
             "Which is the largest desert?",
             "Is it the Sahara? ― No, it's Antarctica. It's a cold desert.",
@@ -13480,9 +13507,9 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Ms. Emma says, Correct! And most of the Sahara is rock and gravel, not sand. Haru says, I didn't know that! Let's run to the next station!",
-            "subtitleJa": "エマ先生「せいかい！ それに サハラさばくの ほとんどは すなじゃ なくて、いわと じゃりなのよ。」 ハルくん「しらなかった！ つぎの チェックポイントへ はしろう！」",
-            "subtitleEn": "Ms. Emma says, Correct! And most of the Sahara is rock and gravel, not sand. Haru says, I didn't know that! Let's run to the next station!",
+            "say": "I say, Correct! And most of the Sahara is rock and gravel, not sand. Haru says, I didn't know that! Let's run to the next station!",
+            "subtitleJa": "わたし「せいかい！ それに サハラさばくの ほとんどは すなじゃ なくて、いわと じゃりなのよ。」 ハルくん「しらなかった！ つぎの チェックポイントへ はしろう！」",
+            "subtitleEn": "I say, Correct! And most of the Sahara is rock and gravel, not sand. Haru says, I didn't know that! Let's run to the next station!",
             "gesture": "nod",
             "slide": {
               "title": "Talk",
@@ -13496,9 +13523,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound review! Geoglyph. Geo means earth. A geoglyph is a giant picture drawn on the ground. Tropical, al. Southwest. South comes first!",
-            "subtitleJa": "おとの ふりかえり！ geoglyph。geo は だいち。geoglyph は じめんに かいた 大きな え。tropical は「アル」。southwest。south が さき！",
-            "subtitleEn": "Sound review! Geoglyph. Geo means earth. A geoglyph is a giant picture drawn on the ground. Tropical, al. Southwest. South comes first!",
+            "say": "Sound review! Geoglyph. Geo means earth. A geoglyph is a giant picture drawn on the ground. Tropical ends like animal. Southwest. South comes first!",
+            "subtitleJa": "おとの ふりかえり！ geoglyph。geo は だいち。geoglyph は じめんに かいた 大きな え。tropical は animal と おなじ「アル」。southwest。south が さき！",
+            "subtitleEn": "Sound review! Geoglyph. Geo means earth. A geoglyph is a giant picture drawn on the ground. Tropical ends like animal. Southwest. South comes first!",
             "gesture": "point",
             "slide": {
               "title": "Sounds",
@@ -13517,9 +13544,9 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Twelve thousand. No s on thousand! Shortage, idge. Not enough water. Your turn! Geoglyph. Tropical. Southwest. Twelve thousand. Shortage.",
-            "subtitleJa": "twelve thousand。thousand に s は つけない！ shortage は「イッジ」。水が たりない こと。あなたの ばん！ geoglyph。tropical。southwest。twelve thousand。shortage。",
-            "subtitleEn": "Twelve thousand. No s on thousand! Shortage, idge. Not enough water. Your turn! Geoglyph. Tropical. Southwest. Twelve thousand. Shortage.",
+            "say": "Twelve thousand. No s on thousand! Shortage ends like bridge. Not enough water. Your turn! Geoglyph. Tropical. Southwest. Twelve thousand. Shortage.",
+            "subtitleJa": "twelve thousand。thousand に s は つけない！ shortage は bridge と おなじ「イッジ」。水が たりない こと。あなたの ばん！ geoglyph。tropical。southwest。twelve thousand。shortage。",
+            "subtitleEn": "Twelve thousand. No s on thousand! Shortage ends like bridge. Not enough water. Your turn! Geoglyph. Tropical. Southwest. Twelve thousand. Shortage.",
             "gesture": "mime",
             "slide": {
               "title": "Sounds",
@@ -13706,6 +13733,7 @@
     {
       "lessonNo": 958,
       "world": 32,
+      "reviewed": "run9",
       "title": "My Graph Report",
       "titleJa": "グラフの レポートを かこう",
       "school": {
@@ -13849,7 +13877,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の ミラ はかせに じぶんで えらんだ グラフの レポートを よんで きかせよう。The graph shows ～. It increased from ～ to ～. で はじめて、りゆうと じぶんの いけんも いおう（ほんとうの なまえや すんで いる ところは いわなくて いい）",
-          "starterEn": "Hello, young scientist! I'm ready for your graph report. What does your graph show? How did the numbers change?",
+          "starterEn": "Hello, young scientist! Let's pretend I'm Dr. Mira. I'm ready for your graph report. What does your graph show? How did the numbers change?",
           "targetExpressions": [
             "The graph shows the number of trees in the village. It increased from 100 to 900.",
             "What does the graph show? ― It shows the number of trees in Green Valley.",
@@ -14027,7 +14055,7 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Let's review. Geoscientist. Geo means earth. Environmental. Environment plus a l. Forward. Spell it w a r d. Step forward!",
+            "say": "Sound time! Let's review. Geoscientist. Geo means earth. Environmental. Environment plus a, l. Forward. Spell it w, a, r, d. Step forward!",
             "subtitleJa": "おとの じかん！ ふりかえり。geoscientist。geo は ちきゅう。environmental は environment に al。forward は w a r d と かくよ。まえへ！",
             "gesture": "point",
             "slide": {
@@ -14043,12 +14071,12 @@
               "emoji": "🔬"
             },
             "pauseMs": 2500,
-            "subtitleEn": "Sound time! Let's review. Geoscientist. Geo means earth. Environmental. Environment plus a l. Forward. Spell it w a r d. Step forward!"
+            "subtitleEn": "Sound time! Let's review. Geoscientist. Geo means earth. Environmental. Environment plus a, l. Forward. Spell it w, a, r, d. Step forward!"
           },
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Seventy-five percent. The same as three quarters. Decrease. E a s e, ease. It goes down. Your turn! Environmental. Forward. Decrease.",
+            "say": "Seventy-five percent. The same as three quarters. Decrease. E, a, s, e, like the end of geese. It goes down. Your turn! Environmental. Forward. Decrease.",
             "subtitleJa": "75パーセント。4ぶんの 3 と おなじ。decrease。e a s e で「イース」。へる と いう いみ。あなたの ばん！ environmental。forward。decrease。",
             "gesture": "mime",
             "slide": {
@@ -14064,7 +14092,7 @@
               "emoji": "🔢"
             },
             "pauseMs": 4000,
-            "subtitleEn": "Seventy-five percent. The same as three quarters. Decrease. E a s e, ease. It goes down. Your turn! Environmental. Forward. Decrease."
+            "subtitleEn": "Seventy-five percent. The same as three quarters. Decrease. E, a, s, e, like the end of geese. It goes down. Your turn! Environmental. Forward. Decrease."
           },
           {
             "kind": "tpr",
@@ -14103,7 +14131,7 @@
           {
             "kind": "tpr",
             "lang": "en",
-            "say": "Speed challenge! Line up! Title! Step forward! Thumbs-up! Line up!",
+            "say": "Speed challenge! Up, up, up! Title! Step forward! Thumbs-up! Up, up, up!",
             "subtitleJa": "スピード チャレンジ！ せんを 上へ！ タイトル！ まえへ！ グッド！ せんを 上へ！",
             "gesture": "mime",
             "slide": {
@@ -14117,7 +14145,7 @@
               "emoji": "⚡"
             },
             "pauseMs": 3000,
-            "subtitleEn": "Speed challenge! Line up! Title! Step forward! Thumbs-up! Line up!"
+            "subtitleEn": "Speed challenge! Up, up, up! Title! Step forward! Thumbs-up! Up, up, up!"
           },
           {
             "kind": "repeat",
@@ -14237,16 +14265,17 @@
     {
       "lessonNo": 959,
       "world": 32,
+      "reviewed": "run9",
       "title": "Desert of the Sun Review",
       "titleJa": "たいようの砂漠 ふりかえり",
       "school": {
         "grade": "高校初級",
-        "topic": "Camels have humps so that they can live without food. The graph shows how hot it is.：ハンフリーの キャラバンで さばくを さよなら たび。オアシス、サボテンの にわ、てんきかんそくじょを もう いちど たずねる",
+        "topic": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.：ハンフリーの キャラバンで さばくを さよなら たび。オアシス、サボテンの にわ、てんきかんそくじょを もう いちど たずねる",
         "grammar": "～ have ～ so that they can ～. / The graph shows how ～. / Do camels ～? ― No, they ～.",
         "expressions": [
           {
-            "en": "Camels have humps so that they can live without food. The graph shows how hot it is.",
-            "ja": "ラクダは たべものが なくても いきられるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。",
+            "en": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+            "ja": "ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。",
             "core": true
           },
           {
@@ -14337,7 +14366,7 @@
           "emoji": "💎"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, The graph shows the number of trees in the village. It increased from 100 to 900. Today, Humphrey the old camel leads our farewell caravan. Bells jingle as we sway across the golden dunes. First, we pass our old camp, where the days were hot and the nights were cold. Humphrey turns his long neck and winks. Do camels store water in their humps? Birimo answers, No, you store fat! Haru says, Camels have humps so that they can live without food. Then we stop at Dr. Mira's weather station. Riko points to the thermometer graph. The graph shows how hot it is. Say it with me. Camels have humps so that they can live without food. The graph shows how hot it is. Wonderful! Let's read Kiko's desert journal. \"My Desert Journal. We came to the Desert of the Sun through the Corridor of Time. It hardly ever rains here, so water is precious. At the oasis, water comes up from under the ground, and date palms grow there. Fen has big ears so that he can stay cool. A cactus stores water in its thick stem. Mirror Lake became smaller because of the heat. In Green Valley, people planted trees. As a result, the village became green again. I will miss this place!\" Why does Fen have big ears? So that he can stay cool. What happened in Green Valley? People planted trees, and the village became green again. Fen gives each of us a round rock. Crack! Inside, it sparkles with crystals. It's a geode! Now, phonics. Let's review. Geode. Geo means earth. Coastal. Coast plus a, l. Northwest. North comes first. Two point five. Two, dot, five. We say point for the dot. Count. O, u, n, t. Let's count our sun crystals. One, two, three, four, five! Next time, it's the World 32 Earth Festival!",
+      "teacherScript": "Hello, everyone! Last time, we said, The graph shows the number of trees in the village. It increased from 100 to 900. Today, Humphrey the old camel leads our farewell caravan. Bells jingle as we sway across the golden dunes. First, we pass our old camp, where the days were hot and the nights were cold. Humphrey turns his long neck and winks. He asks, Do camels store water in their humps? Birimo answers, No, you store fat! Haru says, Camels have humps so that they can go a long time without food. Then we stop at Dr. Mira's weather station. Riko points to the thermometer graph. The graph shows how hot it is. Say it with me. Camels have humps so that they can go a long time without food. The graph shows how hot it is. Wonderful! Let's read Kiko's desert journal. \"My Desert Journal. We came to the Desert of the Sun through the Corridor of Time. It hardly ever rains here, so water is precious. At the oasis, water comes up from under the ground, and date palms grow there. Fen has big ears so that he can stay cool. A cactus stores water in its thick stem. Mirror Lake became smaller because of the heat. In Green Valley, people planted trees. As a result, the village became green again. I will miss this place!\" Why does Fen have big ears? So that he can stay cool. What happened in Green Valley? People planted trees, and the village became green again. Fen gives each of us a round rock. Crack! Inside, it sparkles with crystals. It's a geode! Now, phonics. Let's review. Geode. Geo means earth. Coastal. Coast plus a, l. Northwest. North comes first. Two point five. Two, dot, five. We say point for the dot. Count. O, u, n, t. Let's count our sun crystals. One, two, three, four, five! Next time, it's the World 32 Earth Festival!",
       "conversation": {
         "scene": "The farewell caravan through the desert with Humphrey",
         "sceneJa": "ハンフリーの キャラバンで さばくを さよなら たび",
@@ -14359,8 +14388,8 @@
           },
           {
             "speaker": "Riko",
-            "en": "Let's say our review sentences! Camels have humps so that they can live without food. The graph shows how hot it is.",
-            "ja": "ふりかえりの ぶんを いおう！ ラクダは たべものが なくても いきられるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。"
+            "en": "Let's say our review sentences! Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+            "ja": "ふりかえりの ぶんを いおう！ ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。"
           },
           {
             "speaker": "Haru",
@@ -14380,9 +14409,9 @@
         ],
         "aiTask": {
           "goalJa": "AI の ハンフリーと さばくを さよなら たび。so that ～ / The graph shows ～ / because of ～ / As a result, ～ を つかって、たいようの砂漠の おもいでを はなそう",
-          "starterEn": "Hello, little traveler! This is our last ride together. What do you remember best about the Desert of the Sun?",
+          "starterEn": "Hello, little traveler! Let's pretend I'm Humphrey. This is our last ride together. What do you remember best about the Desert of the Sun?",
           "targetExpressions": [
-            "Camels have humps so that they can live without food. The graph shows how hot it is.",
+            "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
             "Do camels store water in their humps? ― No, they store fat.",
             "Water is precious, so let's save every drop."
           ]
@@ -14390,7 +14419,7 @@
       },
       "recap": {
         "highlightsJa": [
-          "Camels have humps so that they can live without food. The graph shows how hot it is.",
+          "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
           "Do camels store water in their humps? ― No, they store fat. / Water is precious, so let's save every drop.",
           "geode・coastal・northwest・2.5・count"
         ]
@@ -14416,17 +14445,17 @@
           {
             "kind": "goal",
             "lang": "en",
-            "say": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can live without food. The graph shows how hot it is.",
-            "subtitleJa": "きょうの ゴール。さばくで まなんだ ことを はなそう。「ラクダは たべものが なくても いきられるように こぶが ある。グラフは どれくらい あついかを あらわして いる。」",
+            "say": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+            "subtitleJa": "きょうの ゴール。さばくで まなんだ ことを はなそう。「ラクダは たべものが なくても ながく すごせるように こぶが ある。グラフは どれくらい あついかを あらわして いる。」",
             "gesture": "point",
             "slide": {
               "title": "Goal",
               "items": [
-                "Camels have humps so that they can live without food. The graph shows how hot it is."
+                "Camels have humps so that they can go a long time without food. The graph shows how hot it is."
               ],
               "emoji": "🎯"
             },
-            "subtitleEn": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can live without food. The graph shows how hot it is."
+            "subtitleEn": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can go a long time without food. The graph shows how hot it is."
           },
           {
             "kind": "words",
@@ -14511,18 +14540,18 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can live without food. The graph shows how hot it is.",
-            "subtitleJa": "「見て、ミラ はかせの てんきかんそくじょと おんどけいの グラフだ！」 リコちゃん「ラクダは たべものが なくても いきられるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。」",
+            "say": "Kiko says, Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+            "subtitleJa": "キコちゃん「見て、ミラ はかせの てんきかんそくじょと おんどけいの グラフだ！」 リコちゃん「ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。」",
             "gesture": "open_hands",
             "slide": {
               "title": "Talk",
               "items": [
                 "Look, there's Dr. Mira's weather station and her thermometer graph!",
-                "Camels have humps so that they can live without food. The graph shows how hot it is."
+                "Camels have humps so that they can go a long time without food. The graph shows how hot it is."
               ],
               "emoji": "🌡️"
             },
-            "subtitleEn": "Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can live without food. The graph shows how hot it is."
+            "subtitleEn": "Kiko says, Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can go a long time without food. The graph shows how hot it is."
           },
           {
             "kind": "expressions",
@@ -14543,7 +14572,7 @@
           {
             "kind": "expressions",
             "lang": "en",
-            "say": "Here's the point. So that tells the purpose. How hot asks how much heat. Mix them to explain the desert!",
+            "say": "Here's the point. So that tells the purpose. How hot tells us the temperature. Mix them to explain the desert!",
             "subtitleJa": "ポイント。so that は「なんの ために」。how hot は「どれくらい あついか」。くみあわせて さばくを せつめい しよう！",
             "gesture": "nod",
             "slide": {
@@ -14553,12 +14582,12 @@
               ],
               "emoji": "💡"
             },
-            "subtitleEn": "Here's the point. So that tells the purpose. How hot asks how much heat. Mix them to explain the desert!"
+            "subtitleEn": "Here's the point. So that tells the purpose. How hot tells us the temperature. Mix them to explain the desert!"
           },
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! Let's review. Geode. Geo means earth. Coastal. Coast plus a l. Northwest. North comes first.",
+            "say": "Sound time! Let's review. Geode. Geo means earth. Coastal. Coast plus a, l. Northwest. North comes first.",
             "subtitleJa": "おとの じかん！ ふりかえり。geode。geo は ちきゅう。coastal は coast に al。northwest は north が さき だよ。",
             "gesture": "point",
             "slide": {
@@ -14574,12 +14603,12 @@
               "emoji": "🧭"
             },
             "pauseMs": 2500,
-            "subtitleEn": "Sound time! Let's review. Geode. Geo means earth. Coastal. Coast plus a l. Northwest. North comes first."
+            "subtitleEn": "Sound time! Let's review. Geode. Geo means earth. Coastal. Coast plus a, l. Northwest. North comes first."
           },
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Two point five. We say point for the dot. Count. O u n t. Your turn! Geode. Coastal. Northwest. Count.",
+            "say": "Two point five. We say point for the dot. Count. O, u, n, t. Your turn! Geode. Coastal. Northwest. Count.",
             "subtitleJa": "two point five。てんは point と よむよ。count。o u n t で「アウント」。あなたの ばん！ geode。coastal。northwest。count。",
             "gesture": "mime",
             "slide": {
@@ -14595,7 +14624,7 @@
               "emoji": "🔢"
             },
             "pauseMs": 4000,
-            "subtitleEn": "Two point five. We say point for the dot. Count. O u n t. Your turn! Geode. Coastal. Northwest. Count."
+            "subtitleEn": "Two point five. We say point for the dot. Count. O, u, n, t. Your turn! Geode. Coastal. Northwest. Count."
           },
           {
             "kind": "tpr",
@@ -14653,18 +14682,18 @@
           {
             "kind": "repeat",
             "lang": "en",
-            "say": "Repeat after me. Camels have humps so that they can live without food.",
-            "subtitleJa": "まねして いってね。「ラクダは たべものが なくても いきられるように こぶが あるんだ。」",
+            "say": "Repeat after me. Camels have humps so that they can go a long time without food.",
+            "subtitleJa": "まねして いってね。「ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。」",
             "gesture": "nod",
             "slide": {
               "title": "Say it!",
               "items": [
-                "Camels have humps so that they can live without food. The graph shows how hot it is."
+                "Camels have humps so that they can go a long time without food. The graph shows how hot it is."
               ],
               "emoji": "🎤"
             },
             "pauseMs": 3000,
-            "subtitleEn": "Repeat after me. Camels have humps so that they can live without food."
+            "subtitleEn": "Repeat after me. Camels have humps so that they can go a long time without food."
           },
           {
             "kind": "repeat",
@@ -14754,7 +14783,7 @@
             "slide": {
               "title": "Today's wrap-up",
               "items": [
-                "Camels have humps so that they can live without food. The graph shows how hot it is.",
+                "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
                 "Do camels store water in their humps? ― No, they store fat.",
                 "Water is precious, so let's save every drop."
               ],
@@ -14768,6 +14797,7 @@
     {
       "lessonNo": 960,
       "world": 32,
+      "reviewed": "run9",
       "title": "World 32 Grand Review",
       "titleJa": "ワールド32 グランドレビュー",
       "school": {
@@ -14868,7 +14898,7 @@
           "emoji": "🌋"
         }
       ],
-      "teacherScript": "Hello, everyone! Last time, we said, Camels have humps so that they can live without food. The graph shows how hot it is. Today is the World 32 Earth Festival at the oasis! Lanterns hang from the palm trees, and drums go boom, boom! Haru, Kiko, and Riko share their maps, posters, and reports. Fen, Humphrey, and Dr. Mira sit in the front row. Then Fen stands up and says, Hot deserts, cold deserts, rainforests, and icy lands. Every place is different. Every place on Earth has its own amazing story. Say it with me. Every place on Earth has its own amazing story. Wonderful! Let's read the festival poster. \"Welcome to the World 32 Earth Festival! Visit every stand around the oasis. At the climate stand, you can find out why it hardly ever rains in the desert. At the animal stand, you can learn why camels have wide feet. At the graph stand, you can read reports about water and trees. Don't miss the Save Water Corner! Learn how you can save water by turning off the tap. Thank you for exploring the Desert of the Sun with us!\" What can you learn at the animal stand? Why camels have wide feet. Is this a fact or an opinion? Every place on Earth has its own amazing story. It's an opinion, and a wonderful one! Suddenly, the Sun Compass shines like the sun itself. Click! The sixth sun crystal drops in. Congratulations! All six sun crystals are shining! The needle spins, then points to the sea. Far away, we see smoke rising from a volcano. It's the Island of Fire! Now, phonics. Let's review. Geography. Geo means earth. Global. Globe plus a, l. Northern. North plus e, r, n. Three million. Three, then two groups of zero zero zero. No s on million. Average. A, g, e sounds like idge. Goodbye, Fen! Goodbye, Humphrey and Dr. Mira! See you on the Island of Fire!",
+      "teacherScript": "Hello, everyone! Last time, we said, Camels have humps so that they can go a long time without food. The graph shows how hot it is. Today is the World 32 Earth Festival at the oasis! Lanterns hang from the palm trees, and drums go boom, boom! Haru, Kiko, and Riko share their maps, posters, and reports. Fen, Humphrey, and Dr. Mira sit in the front row. Then Fen stands up and says, Hot deserts, cold deserts, rainforests, and icy lands. Every place is different. Every place on Earth has its own amazing story. Say it with me. Every place on Earth has its own amazing story. Wonderful! Let's read the festival poster. \"Welcome to the World 32 Earth Festival! Visit every stand around the oasis. At the climate stand, you can find out why it hardly ever rains in the desert. At the animal stand, you can learn why camels have wide feet. At the graph stand, you can read reports about water and trees. Don't miss the Save Water Corner! Learn how you can save water by turning off the tap. Thank you for exploring the Desert of the Sun with us!\" What can you learn at the animal stand? Why camels have wide feet. Is this a fact or an opinion? Every place on Earth has its own amazing story. It's an opinion, and a wonderful one! Suddenly, the Sun Compass shines like the sun itself. Click! The sixth sun crystal drops in. Congratulations! All six sun crystals are shining! The needle spins, then points to the sea. Far away, we see smoke rising from a volcano. It's the Island of Fire! Now, phonics. Let's review. Geography. Geo means earth. Global. Globe plus a, l. Northern. North plus e, r, n. Three million. Three, then two groups of zero zero zero. No s on million. Average. A, g, e sounds like the end of bridge. Goodbye, Fen! Goodbye, Humphrey and Dr. Mira! See you on the Island of Fire!",
       "conversation": {
         "scene": "The World 32 Earth Festival at the oasis",
         "sceneJa": "オアシスで ワールド32 ちきゅう フェスティバル",
@@ -14916,7 +14946,7 @@
         ],
         "aiTask": {
           "goalJa": "AI の フェンに フェスティバルの かんそうを きかれたら Every place on Earth has its own amazing story. を つかって こたえよう。たいようの砂漠で いちばん すきだった ことも so that や because of で いおう",
-          "starterEn": "Yip, yip! Welcome to the Earth Festival! What was your favorite place in the Desert of the Sun? What did you learn there?",
+          "starterEn": "Yip, yip! Let's pretend I'm Fen. Welcome to the Earth Festival! What was your favorite place in the Desert of the Sun? What did you learn there?",
           "targetExpressions": [
             "Every place on Earth has its own amazing story.",
             "Congratulations! All six sun crystals are shining!",
@@ -15094,7 +15124,7 @@
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Sound time! A big review. Geography. Geo means earth. Global. Drop the e from globe and add a l. Northern. North plus e r n.",
+            "say": "Sound time! A big review. Geography. Geo means earth. Global. Drop the e from globe and add a, l. Northern. North plus e, r, n.",
             "subtitleJa": "おとの じかん！ 大きな ふりかえり。geography。geo は ちきゅう。global は globe の e を とって al。northern は north に ern。",
             "gesture": "point",
             "slide": {
@@ -15110,12 +15140,12 @@
               "emoji": "🌍"
             },
             "pauseMs": 2500,
-            "subtitleEn": "Sound time! A big review. Geography. Geo means earth. Global. Drop the e from globe and add a l. Northern. North plus e r n."
+            "subtitleEn": "Sound time! A big review. Geography. Geo means earth. Global. Drop the e from globe and add a, l. Northern. North plus e, r, n."
           },
           {
             "kind": "phonics",
             "lang": "en",
-            "say": "Three million. No s on million! Average. A g e sounds like idge. Your turn! Geography. Global. Northern. Three million. Average.",
+            "say": "Three million. No s on million! Average. A, g, e sounds like the end of bridge. Your turn! Geography. Global. Northern. Three million. Average.",
             "subtitleJa": "three million は 300まん。million に s は つけないよ！ average。a g e は「イッジ」の おと。あなたの ばん！ geography。global。northern。300まん。average。",
             "gesture": "mime",
             "slide": {
@@ -15131,7 +15161,7 @@
               "emoji": "🔢"
             },
             "pauseMs": 4000,
-            "subtitleEn": "Three million. No s on million! Average. A g e sounds like idge. Your turn! Geography. Global. Northern. Three million. Average."
+            "subtitleEn": "Three million. No s on million! Average. A, g, e sounds like the end of bridge. Your turn! Geography. Global. Northern. Three million. Average."
           },
           {
             "kind": "tpr",

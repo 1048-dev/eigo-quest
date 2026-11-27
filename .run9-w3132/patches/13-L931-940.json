@@ -1,0 +1,202 @@
+[
+  {
+    "lesson": 932,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, It hardly ever rains here. Today, Fen leads us to a little camp between two sand dunes. The afternoon sun is burning, and the sand is too hot to touch. Haru looks at the thermometer. Wow! It's forty-two degrees! We sit in the shade of the tent and drink lots of water. Then the sun goes down. The sky turns orange, pink, and purple. Soon, thousands of stars come out, but we start to shiver. Brr! Now we need jackets and blankets! Fen says, In the desert, it's very hot during the day, but cold at night. Say it with me. It's very hot during the day, but cold at night. Great! Riko asks, Why does it get so cold? Fen explains. The air here is very dry, and there are no clouds. Clouds and wet air work like a blanket. Without them, the heat of the day escapes into the sky. Before bed, Haru writes in his diary. Let's read it. \"Day One in the Desert. This afternoon, it was over forty degrees. My water bottle felt like hot tea! We stayed in the shade and didn't run around. At sunset, everything changed. The wind became cool, and the temperature dropped very fast. Fen says desert nights can get close to zero degrees. Now I'm wearing my jacket, two pairs of socks, and a hat. But the stars are amazing. I have never seen so many stars in my life!\" How hot was it in the afternoon? Over forty degrees. Why is Haru wearing two pairs of socks? Because the night is very cold. Now, phonics. Geo means the earth, and today we meet some geo people. Geographer. Add e, r to geography, and it means a person who studies geography. Geologist. A geologist studies rocks and the ground. Geoscientist. A geoscientist studies the whole Earth, its land, water, and air. Next time, we will find water in the middle of the desert!",
+    "after": "Hello, everyone! Last time, we said, It hardly ever rains here. Today, Fen leads us to a little camp between two sand dunes. The afternoon sun is burning, and the sand is too hot to touch. Haru looks at the thermometer. Wow! It's forty-two degrees! We sit in the shade of the tent and drink lots of water. Then the sun goes down. The sky turns orange, pink, and purple. Soon, thousands of stars come out, but we start to shiver. Brr! Now we need jackets and blankets! Fen says, In the desert, it's very hot during the day, but cold at night. Say it with me. It's very hot during the day, but cold at night. Great! Riko asks, Why does it get so cold? Fen explains. The air here is very dry, and there are no clouds. Clouds and wet air work like a blanket. Without them, the heat of the day escapes into the sky. Before bed, Haru writes in his diary. Let's read it. \"Day One in the Desert. This afternoon, it was over forty degrees. My water bottle felt like hot tea! We stayed in the shade and didn't run around. At sunset, everything changed. The wind became cool, and the temperature dropped very fast. Fen says desert nights can get close to zero degrees. Now I'm wearing my jacket, two pairs of socks, and a hat. But the stars are amazing. I have never seen so many stars in my life!\" How hot was it in the afternoon? Over forty degrees. Why is Haru wearing two pairs of socks? Because the night is very cold. Now, phonics. Geo means the earth, and today we meet some geo people. Geographer. Take the y off geography and add e, r. It means a person who studies geography. Geologist. A geologist studies rocks and the ground. Geoscientist. A geoscientist studies the whole Earth, its land, water, and air. Next time, we will find water in the middle of the desert!",
+    "reviewers": "objective",
+    "reason": "geography + er is not geographer; the y drops before e, r"
+  },
+  {
+    "lesson": 932,
+    "path": "phonics.tipJa",
+    "before": "geo（ちきゅう）の 人の ことば。geography＋er で geographer（ちりがくしゃ）、geology の y を とって ist で geologist（ちしつがくしゃ = いわを しらべる 人）、geo＋scientist で geoscientist（ちきゅうを まるごと しらべる かがくしゃ）。-er と -ist は「人」の しるしだよ。",
+    "after": "geo（ちきゅう）の 人の ことば。geography の y を とって er で geographer（ちりがくしゃ）、geology の y を とって ist で geologist（ちしつがくしゃ = いわを しらべる 人）、geo＋scientist で geoscientist（ちきゅうを まるごと しらべる かがくしゃ）。-er と -ist は「人」の しるしだよ。",
+    "reviewers": "objective",
+    "reason": "the y of geography drops before er (matches the geologist explanation)"
+  },
+  {
+    "lesson": 932,
+    "path": "teacher.segments[12].say",
+    "before": "Night time. Shiver! Put on your jacket. Now lie down and count the stars.",
+    "after": "Nighttime. Shiver! Put on your jacket. Now lie down and count the stars.",
+    "reviewers": "objective",
+    "reason": "US spelling: nighttime is one word"
+  },
+  {
+    "lesson": 932,
+    "path": "teacher.segments[12].subtitleEn",
+    "before": "Night time. Shiver! Put on your jacket. Now lie down and count the stars.",
+    "after": "Nighttime. Shiver! Put on your jacket. Now lie down and count the stars.",
+    "reviewers": "objective",
+    "reason": "US spelling: nighttime is one word"
+  },
+  {
+    "lesson": 933,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! Geo means the earth. Jee oh. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
+    "after": "Sound time! Geo means the earth. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
+    "reviewers": "A+C",
+    "reason": "'Jee oh' is an invented respelling TTS may misread; the words themselves model the sound"
+  },
+  {
+    "lesson": 933,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! Geo means the earth. Jee oh. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
+    "after": "Sound time! Geo means the earth. Geothermal. Thermal means heat, the heat inside the earth. Geopark, a park where we learn about the earth.",
+    "reviewers": "A+C",
+    "reason": "'Jee oh' is an invented respelling TTS may misread; the words themselves model the sound"
+  },
+  {
+    "lesson": 933,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ geo は「ちきゅう」。ジオ。geothermal。thermal は「ねつ」。ちきゅうの なかの ねつ。geopark は ちきゅうの ことを まなべる こうえん。",
+    "after": "おとの じかん！ geo は「ちきゅう」。geothermal。thermal は「ねつ」。ちきゅうの なかの ねつ。geopark は ちきゅうの ことを まなべる こうえん。",
+    "reviewers": "A+C",
+    "reason": "match the English (respelling removed)"
+  },
+  {
+    "lesson": 934,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, An oasis is a place where water comes out. Today, a strong wind is blowing sand everywhere, so we stay inside Fen's big tent. Fen rolls out a huge map of the world. It's covered in colors: yellow, green, white, and dark green. Fen says, This is my climate map. Climate means the usual weather in a place over many years. Haru points to the dark green part. What's the weather like here? Fen says, That's the rainforest. It's hot and rainy all year. Some places are rainy all year. Say it with me. Some places are rainy all year. Wonderful! Kiko finds Japan. It's light green. Fen says, Some places have four seasons, like Japan. Let's read the key on the map. \"Climate Map Key. Dark green: rainforest. It is hot and rainy all year, and tall trees grow very close together. The Amazon rainforest in South America is the largest one. Yellow: desert. It is dry all year. Some deserts, like the Sahara, are hot. Others, like the Gobi in Asia, have very cold winters. Light green: four seasons. Summers are warm, winters are cool or cold, and it rains in many months. White: polar. It is freezing all year, and the land is covered with ice and snow.\" What's the weather like in the rainforest? It's hot and rainy all year. Which desert has very cold winters? The Gobi. Is this a fact or an opinion? Japan has the best climate in the world. Riko thinks so, but it's an opinion! Now, phonics. Today, geo words get new endings. Geographic. Add i, c, and geography becomes a describing word. A geographic map shows mountains, rivers, and deserts. Geometric. Geometric shapes are circles, triangles, and squares. Look, Fen's tent has a geometric pattern! Geode. A geode is a round rock. It looks plain on the outside, but inside, it's full of sparkling crystals. Next time, we will give a climate report about deserts around the world!",
+    "after": "Hello, everyone! Last time, we said, An oasis is a place where water comes out. Today, a strong wind is blowing sand everywhere, so we stay inside Fen's big tent. Fen rolls out a huge map of the world. It's covered in colors: yellow, green, white, and dark green. Fen says, This is my climate map. Climate means the usual weather in a place over many years. Haru points to the dark green part. What's the weather like here? Fen says, That's the rainforest. It's hot and rainy all year. Some places are rainy all year. Say it with me. Some places are rainy all year. Wonderful! Kiko finds Japan. It's light green. Fen says, Some places have four seasons, like Japan. Let's read the key on the map. \"Climate Map Key. Dark green: rainforest. It is hot and rainy all year, and tall trees grow very close together. The Amazon rainforest in South America is the largest one. Yellow: desert. It is dry all year. Some deserts, like the Sahara, are hot. Others, like the Gobi in Asia, have very cold winters. Light green: four seasons. Summers are warm, winters are cool or cold, and it rains in many months. White: polar. It is freezing all year, and the land is covered with ice and snow.\" What's the weather like in the rainforest? It's hot and rainy all year. Which desert has very cold winters? The Gobi. Is this a fact or an opinion? Japan has the best climate in the world. Riko thinks so, but it's an opinion! Now, phonics. Today, geo words get new endings. Geographic. Take the y off geography and add i, c. Now it's a describing word. A geographic map shows mountains, rivers, and deserts. Geometric. Geometric shapes are circles, triangles, and squares. Look, Fen's tent has a geometric pattern! Geode. A geode is a round rock. It looks plain on the outside, but inside, it's full of sparkling crystals. Next time, we will give a climate report about deserts around the world!",
+    "reviewers": "objective",
+    "reason": "geography + ic is not geographic; the y drops"
+  },
+  {
+    "lesson": 935,
+    "path": "teacher.segments[3].say",
+    "before": "Africa. A very big continent. The Sahara is in the north of it. Africa!",
+    "after": "Africa. A very big continent. The Sahara is in North Africa. Africa!",
+    "reviewers": "A+C",
+    "reason": "'in the north of it' is awkward and ends on a weak 'it'"
+  },
+  {
+    "lesson": 935,
+    "path": "teacher.segments[3].subtitleEn",
+    "before": "Africa. A very big continent. The Sahara is in the north of it. Africa!",
+    "after": "Africa. A very big continent. The Sahara is in North Africa. Africa!",
+    "reviewers": "A+C",
+    "reason": "'in the north of it' is awkward and ends on a weak 'it'"
+  },
+  {
+    "lesson": 936,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, The Sahara is located in North Africa. It's hot and dry. Today, we hear bells. Ding, ding, ding. A long line of camels is walking over the dunes. It's a caravan! At the front, there is a big old camel with a gentle smile. He kneels down slowly and says, Good morning, little travelers. I'm Humphrey. I lead this caravan. Hop on! We climb onto the camels. Whoa! They stand up back legs first, and we almost fall off! Later, Haru asks, Humphrey, aren't you thirsty? Humphrey smiles. Not yet. Camels can go many days without water. Say it with me. Camels can go many days without water. Great! Kiko asks, Is there water in your hump? Humphrey shakes his head. Our humps store fat, not water. Humphrey carries a fact card in his saddle bag. Let's read it. \"Camel Fact Card. Camels are amazing desert travelers. They can go about a week or more without water. When they finally find water, they can drink about one hundred liters at one time! Their humps store fat, not water. Long eyelashes protect their eyes, and they can close their noses to keep sand out. Their wide feet don't sink in soft sand. They also have tough mouths, so they can eat thorny desert plants. Some people call camels the ships of the desert.\" How much water can a camel drink at one time? About one hundred liters. What do camels' humps store? Fat. Is this a fact or an opinion? Camels are the best animals in the world. It's an opinion, but Humphrey likes it! Now, phonics. Today's ending is a, l. Al turns a word into a describing word. Nature, natural. Drop the e, and the sound changes from nay to na. Nation, national. Nay becomes na again. Tropic, tropical. Tropical places are hot and wet. Next time, we will watch desert animals, and Fen will tell us the secret of his big ears!",
+    "after": "Hello, everyone! Last time, we said, The Sahara is located in North Africa. It's hot and dry. Today, we hear bells. Ding, ding, ding. A long line of camels is walking over the dunes. It's a caravan! At the front, there is a big old camel with a gentle smile. He kneels down slowly and says, Good morning, little travelers. I'm Humphrey. I lead this caravan. Hop on! We climb onto the camels. Whoa! They stand up back legs first, and we almost fall off! Later, Haru asks, Humphrey, aren't you thirsty? Humphrey smiles. Not yet. Camels can go many days without water. Say it with me. Camels can go many days without water. Great! Kiko asks, Is there water in your hump? Humphrey shakes his head. Our humps store fat, not water. Humphrey carries a fact card in his saddle bag. Let's read it. \"Camel Fact Card. Camels are amazing desert travelers. They can go about a week or more without water. When they finally find water, they can drink about one hundred liters at one time! Their humps store fat, not water. Long eyelashes protect their eyes, and they can close their noses to keep sand out. Their wide feet don't sink in soft sand. They also have tough mouths, so they can eat thorny desert plants. Some people call camels the ships of the desert.\" How much water can a camel drink at one time? About one hundred liters. What do camels' humps store? Fat. Is this a fact or an opinion? Camels are the best animals in the world. It's an opinion, but Humphrey likes it! Now, phonics. Today's ending is a, l. Al turns a word into a describing word. Nature, natural. Drop the e, and nay becomes a short a, like in cat. Nation, national. The short a again. Tropic, tropical. Tropical places are hot and wet. Next time, we will watch desert animals, and Fen will tell us the secret of his big ears!",
+    "reviewers": "B+C",
+    "reason": "'na' is an invented respelling TTS reads as 'nah' (wrong vowel); the vowel in natural / national is the short a of cat"
+  },
+  {
+    "lesson": 936,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes na. Nation, national. Nay becomes na again!",
+    "after": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes a short a, like in cat. Nation, national. The short a again!",
+    "reviewers": "B+C",
+    "reason": "'na' is an invented respelling TTS reads as 'nah'; the vowel is the short a of cat"
+  },
+  {
+    "lesson": 936,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes na. Nation, national. Nay becomes na again!",
+    "after": "Sound time! The ending a l makes a describing word. Nature, natural. Listen. Nay becomes a short a, like in cat. Nation, national. The short a again!",
+    "reviewers": "B+C",
+    "reason": "'na' is an invented respelling TTS reads as 'nah'; the vowel is the short a of cat"
+  },
+  {
+    "lesson": 936,
+    "path": "teacher.segments[9].subtitleJa",
+    "before": "おとの じかん！ おわりの al で ようすを あらわす ことばに なるよ。nature から natural。きいて。「ネイ」が「ナ」に なる。nation から national。また「ネイ」が「ナ」に！",
+    "after": "おとの じかん！ おわりの al で ようすを あらわす ことばに なるよ。nature から natural。きいて。「ネイ」が cat の a のような みじかい「ア」に なる。nation から national。また みじかい「ア」！",
+    "reviewers": "B+C",
+    "reason": "match the English (short a as in cat)"
+  },
+  {
+    "lesson": 936,
+    "path": "teacher.segments[7].say",
+    "before": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? No, no. Our humps store fat, not water.",
+    "after": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? Birimo laughs. No, no. Our humps store fat, not water.",
+    "reviewers": "A+C",
+    "reason": "'No, no.' had no speaker tag, so it ran into Riko's question"
+  },
+  {
+    "lesson": 936,
+    "path": "teacher.segments[7].subtitleEn",
+    "before": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? No, no. Our humps store fat, not water.",
+    "after": "Birimo says, I'm playing Humphrey! Not yet. Camels can go many days without water. Riko asks, Is that because there's water in your hump? Birimo laughs. No, no. Our humps store fat, not water.",
+    "reviewers": "A+C",
+    "reason": "'No, no.' had no speaker tag, so it ran into Riko's question"
+  },
+  {
+    "lesson": 936,
+    "path": "teacher.segments[7].subtitleJa",
+    "before": "ビリモ「ぼくが ハンフリーの やく！ まだ だいじょうぶ。ラクダは みずを のまずに なんにちも すごせるんだ。」 リコちゃん「それって、こぶの なかに みずが あるから？」「いやいや。こぶに ためて いるのは、みずじゃ なくて しぼうなんだ。」",
+    "after": "ビリモ「ぼくが ハンフリーの やく！ まだ だいじょうぶ。ラクダは みずを のまずに なんにちも すごせるんだ。」 リコちゃん「それって、こぶの なかに みずが あるから？」 ビリモが わらう。「いやいや。こぶに ためて いるのは、みずじゃ なくて しぼうなんだ。」",
+    "reviewers": "A+C",
+    "reason": "match the English (speaker tag)"
+  },
+  {
+    "lesson": 936,
+    "path": "vocab[2].ja",
+    "before": "キャラバン（ラクダの たいしょう）",
+    "after": "キャラバン（ラクダと いっしょに たびを する 人たちの れつ）",
+    "reviewers": "objective (JA)",
+    "reason": "たいしょう (隊商) in hiragana reads as 大将 / 対象 for a child; explain it plainly"
+  },
+  {
+    "lesson": 937,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Camels can go many days without water. Today, Humphrey's caravan stops near some big rocks. Fen whispers, Shh. Let's watch the desert animals. A little lizard runs quickly across the hot sand. Then Riko looks at Fen. Fen, why are your ears so big? Fen laughs. My ears are my air conditioners! Heat leaves my body through them. Desert foxes have big ears so that they can stay cool. So that（～できるように） means for this reason, or to make something possible. Say it with me. Desert foxes have big ears so that they can stay cool. Perfect! Fen turns his ears this way and that way. They help me hear bugs moving under the sand, too. Dinner! Haru asks, Why are your feet so furry? Fen says, So that I can walk on hot sand. Let's read a page from Fen's animal notebook. \"How Desert Animals Survive. I'm a fennec fox, the smallest fox in the world. My huge ears let heat out of my body so that I can stay cool. They also help me hear insects under the sand. My feet are covered with fur so that I can walk on hot sand. During the day, I sleep in a cool burrow under the ground. At night, when the air is cooler, I go out to hunt. My friend Humphrey has long eyelashes so that sand can't get into his eyes.\" Why does Fen have furry feet? So that he can walk on hot sand. When does Fen hunt? At night. Now, phonics. Let's add a, l again. Coast, coastal. A coastal town is a town by the sea. Season, seasonal. Seasonal fruit comes only in one season, like watermelon in summer. Center, central. Drop the e from e, r, and add a, l. Central means in the middle. Fen's burrow has a central room, and it's cool inside! Next time, we will visit a garden of tall, spiky cactus plants!",
+    "after": "Hello, everyone! Last time, we said, Camels can go many days without water. Today, Humphrey's caravan stops near some big rocks. Fen whispers, Shh. Let's watch the desert animals. A little lizard runs quickly across the hot sand. Then Riko looks at Fen. Fen, why are your ears so big? Fen laughs. My ears are my air conditioners! Heat leaves my body through them. Desert foxes have big ears so that they can stay cool. So that（～できるように） tells us what something is for. Say it with me. Desert foxes have big ears so that they can stay cool. Perfect! Fen turns his ears this way and that way. They help me hear bugs moving under the sand, too. Dinner! Haru asks, Why are your feet so furry? Fen says, So that I can walk on hot sand. Let's read a page from Fen's animal notebook. \"How Desert Animals Survive. I'm a fennec fox, the smallest fox in the world. My huge ears let heat out of my body so that I can stay cool. They also help me hear insects under the sand. My feet are covered with fur so that I can walk on hot sand. During the day, I sleep in a cool burrow under the ground. At night, when the air is cooler, I go out to hunt. My friend Humphrey has long eyelashes so that sand can't get into his eyes.\" Why does Fen have furry feet? So that he can walk on hot sand. When does Fen hunt? At night. Now, phonics. Let's add a, l again. Coast, coastal. A coastal town is a town by the sea. Season, seasonal. Seasonal fruit comes only in one season, like watermelon in summer. Center, central. Drop the e from e, r, and add a, l. Central means in the middle. Fen's burrow has a central room, and it's cool inside! Next time, we will visit a garden of tall, spiky cactus plants!",
+    "reviewers": "A+B",
+    "reason": "'for this reason' means 'therefore'; so that tells the purpose (what the ears are for)"
+  },
+  {
+    "lesson": 937,
+    "path": "teacher.segments[8].say",
+    "before": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells the reason. Big ears, so that they can stay cool!",
+    "after": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells us why. Big ears, so that they can stay cool!",
+    "reviewers": "A+B",
+    "reason": "so that gives the purpose, not a cause (same wording as L940 seg1); matches the L939-940 なんの ため wording"
+  },
+  {
+    "lesson": 937,
+    "path": "teacher.segments[8].subtitleEn",
+    "before": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells the reason. Big ears, so that they can stay cool!",
+    "after": "Here's the point. Let's build it. Big ears. Why? So that they can stay cool. So that tells us why. Big ears, so that they can stay cool!",
+    "reviewers": "A+B",
+    "reason": "so that gives the purpose, not a cause (same wording as L940 seg1); matches the L939-940 なんの ため wording"
+  },
+  {
+    "lesson": 937,
+    "path": "teacher.segments[8].subtitleJa",
+    "before": "ポイント。くみたてて みよう。大きな みみ。どうして？ すずしく いられるように。so that は「～できるように」と りゆうを おしえるよ。大きな みみ、すずしく いられるように！",
+    "after": "ポイント。くみたてて みよう。大きな みみ。どうして？ すずしく いられるように。so that は「～できるように」と、なんの ためかを おしえるよ。大きな みみ、すずしく いられるように！",
+    "reviewers": "A+B",
+    "reason": "match the English (purpose)"
+  },
+  {
+    "lesson": 939,
+    "path": "teacher.segments[9].say",
+    "before": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say men strongly!",
+    "after": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say it strong in the middle: en-vi-ron-MEN-tal!",
+    "reviewers": "B+C",
+    "reason": "'Say men strongly' reads as the word men; use the hyphen beat form for the stress"
+  },
+  {
+    "lesson": 939,
+    "path": "teacher.segments[9].subtitleEn",
+    "before": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say men strongly!",
+    "after": "Sound time! More a l words. Environment, environmental. About nature and the world around us. Say it strong in the middle: en-vi-ron-MEN-tal!",
+    "reviewers": "B+C",
+    "reason": "'Say men strongly' reads as the word men; use the hyphen beat form for the stress"
+  },
+  {
+    "lesson": 940,
+    "path": "teacherScript",
+    "before": "Hello, everyone! Last time, we said, Penguins have thick feathers to keep warm. Today is the Adaptation Fair at the oasis! Fen explains. Adaptation means the special body parts and habits that help an animal live in its home. Every table has a poster and a quiz. Riko's poster is about Fen and his big ears. Birimo's poster shows a giant cactus. Then Haru holds up his poster with a picture hidden under a cloth. He says, This animal has wide feet so that it can walk on soft sand. Say it with me. This animal has wide feet so that it can walk on soft sand. Wonderful! Kiko shouts, What animal is it? Is it a camel? Behind us, someone laughs. It's Humphrey! Yes, it's me! Let's read Haru's quiz poster. \"Guess the Animal! This animal lives in hot, dry deserts. It has wide feet so that it can walk on soft sand. Its long eyelashes keep sand out of its eyes, and it can close its nose in a sandstorm. It can go many days without water, and its hump stores fat, not water. Its tough mouth can even eat thorny plants. Some people call it the ship of the desert. Can you guess? Hint: he leads our caravan!\" What helps this animal walk on soft sand? Its wide feet. What does its hump store? Fat. Humphrey bows his long neck. What a wonderful fair! Fen's ears turn pink with joy. Then the Sun Compass glows again. Click! The second sun crystal drops into its slot. Now we have two crystals! Now, phonics. Let's review. Natural. Nature becomes natural with a, l. Seasonal. Season plus a, l. Global. Drop the e from globe and add a, l. And one geo word. Geopark, a park where we learn about the earth. Next time, we will learn north, south, east, and west, and read a map with a compass!",
+    "after": "Hello, everyone! Last time, we said, Penguins have thick feathers to keep warm. Today is the Adaptation Fair at the oasis! Fen explains. Adaptation means the special body parts and habits that help an animal live in its home. Every table has a poster and a quiz. Riko's poster is about Fen and his big ears. Birimo's poster shows a giant cactus. Then Haru holds up his poster with a picture hidden under a cloth. He says, This animal has wide feet so that it can walk on soft sand. Say it with me. This animal has wide feet so that it can walk on soft sand. Wonderful! Kiko shouts, What animal is it? Is it a camel? Behind us, someone laughs. It's Humphrey! He says, Yes, it's me! Let's read Haru's quiz poster. \"Guess the Animal! This animal lives in hot, dry deserts. It has wide feet so that it can walk on soft sand. Its long eyelashes keep sand out of its eyes, and it can close its nose in a sandstorm. It can go many days without water, and its hump stores fat, not water. Its tough mouth can even eat thorny plants. Some people call it the ship of the desert. Can you guess? Hint: he leads our caravan!\" What helps this animal walk on soft sand? Its wide feet. What does its hump store? Fat. Humphrey bows his long neck. What a wonderful fair! Fen's ears turn pink with joy. Then the Sun Compass glows again. Click! The second sun crystal drops into its slot. Now we have two crystals! Now, phonics. Let's review. Natural. Nature becomes natural with a, l. Seasonal. Season plus a, l. Global. Drop the e from globe and add a, l. And one geo word. Geopark, a park where we learn about the earth. Next time, we will learn north, south, east, and west, and read a map with a compass!",
+    "reviewers": "A+C",
+    "reason": "Humphrey's line had no speaker tag after the narrator's 'It's Humphrey!'"
+  }
+]

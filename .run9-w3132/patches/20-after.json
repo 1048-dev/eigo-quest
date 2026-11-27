@@ -1,0 +1,330 @@
+[
+ {
+  "lesson": 959,
+  "path": "school.topic",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.：ハンフリーの キャラバンで さばくを さよなら たび。オアシス、サボテンの にわ、てんきかんそくじょを もう いちど たずねる",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.：ハンフリーの キャラバンで さばくを さよなら たび。オアシス、サボテンの にわ、てんきかんそくじょを もう いちど たずねる",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "school.expressions[0].en",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, The graph shows the number of trees in the village. It increased from 100 to 900. Today, Humphrey the old camel leads our farewell caravan. Bells jingle as we sway across the golden dunes. First, we pass our old camp, where the days were hot and the nights were cold. Humphrey turns his long neck and winks. He asks, Do camels store water in their humps? Birimo answers, No, you store fat! Haru says, Camels have humps so that they can live without food. Then we stop at Dr. Mira's weather station. Riko points to the thermometer graph. The graph shows how hot it is. Say it with me. Camels have humps so that they can live without food. The graph shows how hot it is. Wonderful! Let's read Kiko's desert journal. \"My Desert Journal. We came to the Desert of the Sun through the Corridor of Time. It hardly ever rains here, so water is precious. At the oasis, water comes up from under the ground, and date palms grow there. Fen has big ears so that he can stay cool. A cactus stores water in its thick stem. Mirror Lake became smaller because of the heat. In Green Valley, people planted trees. As a result, the village became green again. I will miss this place!\" Why does Fen have big ears? So that he can stay cool. What happened in Green Valley? People planted trees, and the village became green again. Fen gives each of us a round rock. Crack! Inside, it sparkles with crystals. It's a geode! Now, phonics. Let's review. Geode. Geo means earth. Coastal. Coast plus a, l. Northwest. North comes first. Two point five. Two, dot, five. We say point for the dot. Count. O, u, n, t. Let's count our sun crystals. One, two, three, four, five! Next time, it's the World 32 Earth Festival!",
+  "after": "Hello, everyone! Last time, we said, The graph shows the number of trees in the village. It increased from 100 to 900. Today, Humphrey the old camel leads our farewell caravan. Bells jingle as we sway across the golden dunes. First, we pass our old camp, where the days were hot and the nights were cold. Humphrey turns his long neck and winks. He asks, Do camels store water in their humps? Birimo answers, No, you store fat! Haru says, Camels have humps so that they can go a long time without food. Then we stop at Dr. Mira's weather station. Riko points to the thermometer graph. The graph shows how hot it is. Say it with me. Camels have humps so that they can go a long time without food. The graph shows how hot it is. Wonderful! Let's read Kiko's desert journal. \"My Desert Journal. We came to the Desert of the Sun through the Corridor of Time. It hardly ever rains here, so water is precious. At the oasis, water comes up from under the ground, and date palms grow there. Fen has big ears so that he can stay cool. A cactus stores water in its thick stem. Mirror Lake became smaller because of the heat. In Green Valley, people planted trees. As a result, the village became green again. I will miss this place!\" Why does Fen have big ears? So that he can stay cool. What happened in Green Valley? People planted trees, and the village became green again. Fen gives each of us a round rock. Crack! Inside, it sparkles with crystals. It's a geode! Now, phonics. Let's review. Geode. Geo means earth. Coastal. Coast plus a, l. Northwest. North comes first. Two point five. Two, dot, five. We say point for the dot. Count. O, u, n, t. Let's count our sun crystals. One, two, three, four, five! Next time, it's the World 32 Earth Festival!",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "conversation.lines[3].en",
+  "before": "Let's say our review sentences! Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Let's say our review sentences! Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "conversation.aiTask.targetExpressions[0]",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "recap.highlightsJa[0]",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[1].say",
+  "before": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[1].slide.items[0]",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[1].subtitleEn",
+  "before": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Today's goal. Talk about what we learned in the desert. Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[7].say",
+  "before": "Kiko says, Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Kiko says, Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[7].slide.items[1]",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[7].subtitleEn",
+  "before": "Kiko says, Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Kiko says, Look, there's Dr. Mira's weather station and her thermometer graph! Riko says, Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[15].say",
+  "before": "Repeat after me. Camels have humps so that they can live without food.",
+  "after": "Repeat after me. Camels have humps so that they can go a long time without food.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[15].slide.items[0]",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[15].subtitleEn",
+  "before": "Repeat after me. Camels have humps so that they can live without food.",
+  "after": "Repeat after me. Camels have humps so that they can go a long time without food.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[21].slide.items[0]",
+  "before": "Camels have humps so that they can live without food. The graph shows how hot it is.",
+  "after": "Camels have humps so that they can go a long time without food. The graph shows how hot it is.",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 960,
+  "path": "teacherScript",
+  "before": "Hello, everyone! Last time, we said, Camels have humps so that they can live without food. The graph shows how hot it is. Today is the World 32 Earth Festival at the oasis! Lanterns hang from the palm trees, and drums go boom, boom! Haru, Kiko, and Riko share their maps, posters, and reports. Fen, Humphrey, and Dr. Mira sit in the front row. Then Fen stands up and says, Hot deserts, cold deserts, rainforests, and icy lands. Every place is different. Every place on Earth has its own amazing story. Say it with me. Every place on Earth has its own amazing story. Wonderful! Let's read the festival poster. \"Welcome to the World 32 Earth Festival! Visit every stand around the oasis. At the climate stand, you can find out why it hardly ever rains in the desert. At the animal stand, you can learn why camels have wide feet. At the graph stand, you can read reports about water and trees. Don't miss the Save Water Corner! Learn how you can save water by turning off the tap. Thank you for exploring the Desert of the Sun with us!\" What can you learn at the animal stand? Why camels have wide feet. Is this a fact or an opinion? Every place on Earth has its own amazing story. It's an opinion, and a wonderful one! Suddenly, the Sun Compass shines like the sun itself. Click! The sixth sun crystal drops in. Congratulations! All six sun crystals are shining! The needle spins, then points to the sea. Far away, we see smoke rising from a volcano. It's the Island of Fire! Now, phonics. Let's review. Geography. Geo means earth. Global. Globe plus a, l. Northern. North plus e, r, n. Three million. Three, then two groups of zero zero zero. No s on million. Average. A, g, e sounds like the end of bridge. Goodbye, Fen! Goodbye, Humphrey and Dr. Mira! See you on the Island of Fire!",
+  "after": "Hello, everyone! Last time, we said, Camels have humps so that they can go a long time without food. The graph shows how hot it is. Today is the World 32 Earth Festival at the oasis! Lanterns hang from the palm trees, and drums go boom, boom! Haru, Kiko, and Riko share their maps, posters, and reports. Fen, Humphrey, and Dr. Mira sit in the front row. Then Fen stands up and says, Hot deserts, cold deserts, rainforests, and icy lands. Every place is different. Every place on Earth has its own amazing story. Say it with me. Every place on Earth has its own amazing story. Wonderful! Let's read the festival poster. \"Welcome to the World 32 Earth Festival! Visit every stand around the oasis. At the climate stand, you can find out why it hardly ever rains in the desert. At the animal stand, you can learn why camels have wide feet. At the graph stand, you can read reports about water and trees. Don't miss the Save Water Corner! Learn how you can save water by turning off the tap. Thank you for exploring the Desert of the Sun with us!\" What can you learn at the animal stand? Why camels have wide feet. Is this a fact or an opinion? Every place on Earth has its own amazing story. It's an opinion, and a wonderful one! Suddenly, the Sun Compass shines like the sun itself. Click! The sixth sun crystal drops in. Congratulations! All six sun crystals are shining! The needle spins, then points to the sea. Far away, we see smoke rising from a volcano. It's the Island of Fire! Now, phonics. Let's review. Geography. Geo means earth. Global. Globe plus a, l. Northern. North plus e, r, n. Three million. Three, then two groups of zero zero zero. No s on million. Average. A, g, e sounds like the end of bridge. Goodbye, Fen! Goodbye, Humphrey and Dr. Mira! See you on the Island of Fire!",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "camels cannot \"live without food\"; the hump fat lets them go a long time without eating (L936 already says so). Core still matches the test regex /so that .*The graph shows /; all copies (expression, targets, recap, script, lines, slides, L960 recap line) changed together"
+ },
+ {
+  "lesson": 959,
+  "path": "school.expressions[0].ja",
+  "before": "ラクダは たべものが なくても いきられるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。",
+  "after": "ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "JA follows the corrected core (go a long time without food)"
+ },
+ {
+  "lesson": 959,
+  "path": "conversation.lines[3].ja",
+  "before": "ふりかえりの ぶんを いおう！ ラクダは たべものが なくても いきられるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。",
+  "after": "ふりかえりの ぶんを いおう！ ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "JA follows the corrected core (go a long time without food)"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[1].subtitleJa",
+  "before": "きょうの ゴール。さばくで まなんだ ことを はなそう。「ラクダは たべものが なくても いきられるように こぶが ある。グラフは どれくらい あついかを あらわして いる。」",
+  "after": "きょうの ゴール。さばくで まなんだ ことを はなそう。「ラクダは たべものが なくても ながく すごせるように こぶが ある。グラフは どれくらい あついかを あらわして いる。」",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "JA follows the corrected core (go a long time without food)"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[7].subtitleJa",
+  "before": "キコちゃん「見て、ミラ はかせの てんきかんそくじょと おんどけいの グラフだ！」 リコちゃん「ラクダは たべものが なくても いきられるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。」",
+  "after": "キコちゃん「見て、ミラ はかせの てんきかんそくじょと おんどけいの グラフだ！」 リコちゃん「ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。グラフは どれくらい あついかを あらわして いるよ。」",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "JA follows the corrected core (go a long time without food)"
+ },
+ {
+  "lesson": 959,
+  "path": "teacher.segments[15].subtitleJa",
+  "before": "まねして いってね。「ラクダは たべものが なくても いきられるように こぶが あるんだ。」",
+  "after": "まねして いってね。「ラクダは たべものが なくても ながく すごせるように こぶが あるんだ。」",
+  "reviewers": "objective (fact; group report L951-960)",
+  "reason": "JA follows the corrected core (go a long time without food)"
+ },
+ {
+  "lesson": 916,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "キコちゃん「見て！ めがねを かけた 小さな ねずみ！」 ビリモ「ぼく、ニブ はかせの やく！ チュー！ ぼくは れきしか。これは ウィロー・ヒルの ねんぴょう だよ。」",
+  "after": "キコちゃん「見て！ めがねを かけた 小さな ねずみ！」 ビリモ「ぼく、ニブ先生の やく！ チュー！ ぼくは れきしか。これは ウィロー・ヒルの ねんぴょう だよ。」",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "Professor Nib is ニブ先生 in goalJa, conversation and TPR (29 times) but ニブ はかせ in five subtitles; one name for kids"
+ },
+ {
+  "lesson": 916,
+  "path": "teacher.segments[11].subtitleJa",
+  "before": "からだを うごかそう！ ながい まきものを ひらいて。くるくる くるくる！ こんどは ニブ はかせに おじぎ して。ていねいに。",
+  "after": "からだを うごかそう！ ながい まきものを ひらいて。くるくる くるくる！ こんどは ニブ先生に おじぎ して。ていねいに。",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "Professor Nib is ニブ先生 in goalJa, conversation and TPR (29 times) but ニブ はかせ in five subtitles; one name for kids"
+ },
+ {
+  "lesson": 918,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "ビリモが さけぶよ。「シュッ、シュッ！ 見て！ ニブ はかせが きしゃの やねの うえに いる！」 キコちゃん「むかしの ひとは 2つの まちの あいだを どうやって いったの？」",
+  "after": "ビリモが さけぶよ。「シュッ、シュッ！ 見て！ ニブ先生が きしゃの やねの うえに いる！」 キコちゃん「むかしの ひとは 2つの まちの あいだを どうやって いったの？」",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "Professor Nib is ニブ先生 in goalJa, conversation and TPR (29 times) but ニブ はかせ in five subtitles; one name for kids"
+ },
+ {
+  "lesson": 919,
+  "path": "teacher.segments[6].subtitleJa",
+  "before": "キコちゃん「わあ！ ここ すごく くらい！」 ビリモ「ぼく、ニブ はかせの やく！ チュー！ そうぞう して みよう。もし でんきが なかったら？」",
+  "after": "キコちゃん「わあ！ ここ すごく くらい！」 ビリモ「ぼく、ニブ先生の やく！ チュー！ そうぞう して みよう。もし でんきが なかったら？」",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "Professor Nib is ニブ先生 in goalJa, conversation and TPR (29 times) but ニブ はかせ in five subtitles; one name for kids"
+ },
+ {
+  "lesson": 920,
+  "path": "teacher.segments[0].subtitleJa",
+  "before": "こんにちは、みんな！ まえの かいは でんきの ない せかいを そうぞう したね。きょうは ニブ はかせが ながくて まっしろな まきものを くれるよ。わたしたちの まちの ねんぴょうを つくろう！",
+  "after": "こんにちは、みんな！ まえの かいは でんきの ない せかいを そうぞう したね。きょうは ニブ先生が ながくて まっしろな まきものを くれるよ。わたしたちの まちの ねんぴょうを つくろう！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "Professor Nib is ニブ先生 in goalJa, conversation and TPR (29 times) but ニブ はかせ in five subtitles; one name for kids"
+ },
+ {
+  "lesson": 915,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "ビリモ「ぼく、ステラの やく！ ほしの がっこうへ ようこそ！」 すると、きいて。カチッ！ 3つめの きんの はぐるまが ひかって いる！ うまれた、なった、ゆうめい、ねん、そのあと。これで 一生が いえるね！",
+  "after": "ビリモ「ぼく、ステラの やく！ ほしの がっこうへ ようこそ！」 すると、きいて。カチッ！ 3つめの きんの ギアが ひかって いる！ うまれた、なった、ゆうめい、ねん、そのあと。これで 一生が いえるね！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the golden gears are ギア in every other W31 line (36 times); one name for kids"
+ },
+ {
+  "lesson": 915,
+  "path": "teacher.segments[12].subtitleJa",
+  "before": "ほしの がっこうの ベルを ならして。リン、リン！ こんどは きんの はぐるまを タイムマップに カチッと はめて。カチッ！",
+  "after": "ほしの がっこうの ベルを ならして。リン、リン！ こんどは きんの ギアを タイムマップに カチッと はめて。カチッ！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the golden gears are ギア in every other W31 line (36 times); one name for kids"
+ },
+ {
+  "lesson": 915,
+  "path": "teacher.segments[13].subtitleJa",
+  "before": "スピード チャレンジ！ 5！ すいせい！ ベル！ はぐるま！ すいせい！",
+  "after": "スピード チャレンジ！ 5！ すいせい！ ベル！ ギア！ すいせい！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the golden gears are ギア in every other W31 line (36 times); one name for kids"
+ },
+ {
+  "lesson": 915,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "やったね！ ねんも いれて、ある ひとの 一生を 5つの ぶんで いえたね。3つめの はぐるまを ゲット！ このあと キコちゃんと おはなし してね！ バイバイ！",
+  "after": "やったね！ ねんも いれて、ある ひとの 一生を 5つの ぶんで いえたね。3つめの ギアを ゲット！ このあと キコちゃんと おはなし してね！ バイバイ！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the golden gears are ギア in every other W31 line (36 times); one name for kids"
+ },
+ {
+  "lesson": 920,
+  "path": "teacher.segments[8].subtitleJa",
+  "before": "わたしは「すてきな ねんぴょう！ みんな もう ほんものの れきしか だね。」 すると キコちゃん「きいて！ カチッ！ 4つめの きんの はぐるまが ひかって いる！」",
+  "after": "わたしは「すてきな ねんぴょう！ みんな もう ほんものの れきしか だね。」 すると キコちゃん「きいて！ カチッ！ 4つめの きんの ギアが ひかって いる！」",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the golden gears are ギア in every other W31 line (36 times); one name for kids"
+ },
+ {
+  "lesson": 920,
+  "path": "teacher.segments[12].subtitleJa",
+  "before": "ならんで ほんを かりて。こんどは 4つめの きんの はぐるまを まわして。くるくる！",
+  "after": "ならんで ほんを かりて。こんどは 4つめの きんの ギアを まわして。くるくる！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the golden gears are ギア in every other W31 line (36 times); one name for kids"
+ },
+ {
+  "lesson": 920,
+  "path": "teacher.segments[20].subtitleJa",
+  "before": "やったね！ ねんを つかって まちの ねんぴょうが つくれたし、4つめの はぐるまも ゲット！ このあと ビリモと おはなし してね！ バイバイ！",
+  "after": "やったね！ ねんを つかって まちの ねんぴょうが つくれたし、4つめの ギアも ゲット！ このあと ビリモと おはなし してね！ バイバイ！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the golden gears are ギア in every other W31 line (36 times); one name for kids"
+ },
+ {
+  "lesson": 901,
+  "path": "conversation.lines[5].ja",
+  "before": "はぐるまの かたちだね。ぜんぶ うめたい！",
+  "after": "ギア（はぐるま）の かたちだね。ぜんぶ うめたい！",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "first mention: introduce the name ギア used from L905 on, with はぐるま as the gloss"
+ },
+ {
+  "lesson": 915,
+  "path": "tpr[3].ja",
+  "before": "きんの ギアを ときの ちずに はめて。",
+  "after": "きんの ギアを タイムマップに はめて。",
+  "reviewers": "objective (JA; group report L911-920)",
+  "reason": "the Time Map is タイムマップ in the same lesson (seg12) and in L925-930"
+ },
+ {
+  "lesson": 915,
+  "path": "teacher.segments[10].say",
+  "before": "And ation. Observe means watch carefully. Observe plus ation, observation. Obser-VA-tion! Your turn! Construction. Structure. Nineteen sixty-four. Observation.",
+  "after": "And a, t, i, o, n. Observe means watch carefully. Observe, observation. Ob-ser-VA-tion! Your turn! Construction. Structure. Nineteen sixty-four. Observation.",
+  "reviewers": "B+C (group reports L901-910, L921-930)",
+  "reason": "TTS reads a bare \"ation\" / \"plus ation\" as words; spell the letters (L902 form) and use the full hyphen beat form"
+ },
+ {
+  "lesson": 915,
+  "path": "teacher.segments[10].subtitleEn",
+  "before": "And ation. Observe means watch carefully. Observe plus ation, observation. Obser-VA-tion! Your turn! Construction. Structure. Nineteen sixty-four. Observation.",
+  "after": "And a, t, i, o, n. Observe means watch carefully. Observe, observation. Ob-ser-VA-tion! Your turn! Construction. Structure. Nineteen sixty-four. Observation.",
+  "reviewers": "B+C (group reports L901-910, L921-930)",
+  "reason": "TTS reads a bare \"ation\" / \"plus ation\" as words; spell the letters (L902 form) and use the full hyphen beat form"
+ },
+ {
+  "lesson": 915,
+  "path": "teacher.segments[10].subtitleJa",
+  "before": "それと ation。observe は「よく 見る」。observe に ation で observation。VA を つよく。obser-VA-tion！ あなたの ばん！ construction。structure。1964。observation。",
+  "after": "それと ation。observe は「よく 見る」。observe に ation で observation。VA を つよく。ob-ser-VA-tion！ あなたの ばん！ construction。structure。1964。observation。",
+  "reviewers": "B+C (group reports)",
+  "reason": "JA follows the English beat form"
+ },
+ {
+  "lesson": 937,
+  "path": "teacher.segments[17].say",
+  "before": "Your turn! Talk about you. I wear a hat so that I can stay cool. Say yours!",
+  "after": "Your turn! Talk about yourself. I wear a hat so that I can stay cool. Say yours!",
+  "reviewers": "objective (grammar; group report L911-920)",
+  "reason": "\"talk about you\" -> \"talk about yourself\" (same fix as L912, L914, L918)"
+ },
+ {
+  "lesson": 937,
+  "path": "teacher.segments[17].subtitleEn",
+  "before": "Your turn! Talk about you. I wear a hat so that I can stay cool. Say yours!",
+  "after": "Your turn! Talk about yourself. I wear a hat so that I can stay cool. Say yours!",
+  "reviewers": "objective (grammar; group report L911-920)",
+  "reason": "\"talk about you\" -> \"talk about yourself\" (same fix as L912, L914, L918)"
+ }
+]

@@ -489,3 +489,35 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: ワールド31・32（レッスン 901〜960）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・teacherScript・testPoints を 60 レッスン ぜんぶ 見なおした（ステージ4・B1。れきし〈ときの回廊〉と ちり・データ〈たいようの砂漠〉）
+- さきに ブロックの きめごと（イギリスふうの ほめことば〈Brilliant・Lovely〉・エマ先生 じぶんの 語りの「Ms. Emma says / asks」→「I say / I ask」・エマ先生の「Good morning / Good evening / Good night」→「Hi / Hello / See you」・お手本の「Or,」「Maybe,」・AI の さいしょの ひとこと 59 レッスンを「Let's pretend I'm ～.」に）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがい（とくに じじつ・数・きまりの せつめい）だけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た ものを ブロック全体で そろえた（L959 core の じじつ、ニブ先生・ギア・タイムマップの 日本語名、L915 の「plus ation」、L937「Talk about yourself」）
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、HEAD から じゅんばんに あてなおした（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあい・かいわ あいても たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W31-32.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+
+### 数
+- lint（`npm run english:lint -- --from 901 --to 960`）: **まえ error 0 / warn 7 / info 17 → あと error 0 / warn 7 / info 13**（のこりの warn 7 は ぜんぶ わざと: タイトル「It Was Invented by…」「I Respect Her Because…」「The Graph Shows…」と その スライド〈テストで きまって いる〉6、L938「After a rain」〈アメリカ英語で ふつう〉1。info は 会話の「What is」・L954「toilet」〈べんき〉・「very, very」・L929 の Let's 4回〈Let's pretend の ため〉）
+- なおした 欄 **405**（パッチ 417 件: ブロックの きめごと 67・AI の ひとこと 59・レビュアー 250・あとの そろえ 41）、なおした レッスン **60 / 60**
+- 学習項目が かわった もの: **L959 の core 表現 1つ**（下の 例 3。テスト・src の 変更は なし）と L936 caravan の 日本語の いみ
+
+### before → after の 例
+1. L901 phonics（objective・まちがった きまり）: 「Add t, i, o, n, and say shun.」→「These verbs end in t. Add i, o, n, and t, i, o, n says shun.」（invent・protect は もう t で おわるので、t, i, o, n を たすと inventtion に なって しまう。src の w31Phonics.ts も「invent ＋ ion」）
+2. L943（objective・じじつ）: 「It's a small island country to the east of Asia.」→「…in East Asia.」（日本が アジアの そとに ある ように きこえた。字幕の「たいよう（大洋）」も「大きな うみ」に。太陽と まちがえる ため）
+3. L959 core（objective・じじつ）: 「Camels have humps so that they can live without food.」→「…so that they can go a long time without food.」（ラクダは たべものなしでは 生きられない。こぶの しぼうで ながく がまん できる。L936 の せつめいとも あう）
+
+### きめた こと
+- **AI の さいしょの ひとこと**: こどもの キャラが オールド・トック・ニブ先生・ステラ・フェン・ハンフリー・ミラはかせ・ガイドとして 話して いた（「I'm Professor Nib.」「Tick, tock!」「Yip!」）。goalJa の やくは のこし、「Let's pretend I'm ～.」で ごっこあそびに した（W25-30 と おなじ）。L901 は Who are you? を きく ゴールなので なまえを いわず「the keeper of this corridor」
+- じじつ・数は ぜんぶ たしかめた（ベル 1876・ライト兄弟 1903・日本の 鉄道 1872・東京オリンピック〈1964 は「the first」に〉・ラクダ・サボテン・7大陸 5大洋・サハラ・水の つかう りょう・グラフと ひょうの けいさん）。L930「a big, dry, sandy place」→ sandy を とった（さばくの おおくは すなでは ない）
+- 声に 出す ための なおし: 音の つくった つづり（cher・zher・na・Jee oh・suh thern）を ほんものの ことば（picture・treasure・bridge）や ハイフンの 拍（SUH-thern・en-vi-ron-MEN-tal）に、文字の 読みあげは コンマ区切り（a, l・e, r, n）に
+- のこした こと: L918 core「Before the train was built」・L925 core「There are two reasons.」（テスト・学習項目）、「tap」（アメリカは faucet が ふつうだが つうじる。学習項目）、たんどくの 接頭辞（Im・Re・Ist）、タイトルの「…」。くわしくは W31-32.md
+- ほかの ワールドで みつけた もの: t で おわる 動詞に「Add t, i, o, n」、y を とらない「Add e, r」（geography → geographer）、「X plus ation」、つくった 音の つづり、「エマ先生は ～」の 字幕が「I say」の 下に のこる もの、話す 人の ない 引用（「Kiko points. This pot …」）
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新
