@@ -285,6 +285,8 @@ export function lintEntry(e: TextEntry, words: WordChecker, isAllowedIn?: LintOp
     for (const rs of [UK_WORDS, WASEI_EIGO, STIFF_PHRASES, GRAMMAR_HABITS, CANONICAL_FORMS]) {
       for (const r of phraseIssues(rs, c, e.spoken)) {
         const m = c.match(r.re);
+        // [allow] の「ことば_ことば」（_ = スペース）は その ユニットで だけ ゆるす 表現（例: L0757 i'm_exciting）
+        if (m && isAllowedIn?.(e.unit, m[0].toLowerCase().trim().replace(/\s+/g, "_"))) continue;
         // 先生の 台本では「one bread, two breads とは いわない」の ように わざと 書く ことが あるので warn
         const lv: Level = teaching && r.level === "error" && r.rule === "grammar-habit" ? "warn" : r.level;
         add(r.rule, lv, `"${m?.[0] ?? ""}" → ${r.suggestion}${lv !== r.level ? " (teacher script: intentional?)" : ""}`);

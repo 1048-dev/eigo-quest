@@ -6,6 +6,7 @@
 
 - **全1,200レッスン（40ワールド×30・5ステージ）** が完成しています（run7: 小1〜小6 の 6 年間 使う 設計。週5レッスン×年40週 ≒ 6年）。ステージ1（W1〜12・L1〜360）は小1〜小6・中学準備のテーマで Pre-A1〜A1、ステージ2〜5（W13〜40）は A1+ → A2 → A2+ → B1 → B1+ へ進みます。フォニックスは文字の音26音から始まり、つづりのパターン・ことばのパーツ（接頭辞・接尾辞）・語根まで積み上げます。保護者には「学校の英語: 小N まで修了」も表示します。
 - 各レッスンの最初は **エマ先生の 3〜4 分の 授業**（run8）。1,200 レッスン ぜんぶに 台本があり、アプリの中の **バーチャル教室**（うごくエマ先生＋黒板＋字幕＋ブラウザの読み上げ）で教えます。あとで AI アバター動画にするための書きだし（`npm run teacher:export`）と、できた動画をつなぐ口（`npm run teacher:link`）もあります（下の「エマ先生の授業」）。
+- **英語は ぜんぶ ネイティブ品質の 見なおし済み**（run9）。子ども向けの 自然な **アメリカ英語** に そろえ、1,200 レッスン・としょかん・力だめし・AI 会話の 台本・UI を 3人の レビュアー（先生・ESL 専門家・声優）の 方式で 見なおしました（下の「英語の品質」）。利用規約・プライバシーポリシー・特定商取引法の 下書きは /terms・/privacy・/tokushoho（docs/legal/。【要確認】を うめてから 公開）。
 - レッスン以外の毎日のインプットとして **えいごの としょかん**（/library: おはなし 100話・チャンツ 28曲・フリートーク）と、年に1回の **力だめし**（/yearly）があります。
 - 各レッスンの最後に **AIキャラ（ハル・リコ・キコ・ビリモがレッスンごとに交代）との英語の会話**（最後まで話すと +5コイン）、終わったあとに任意の **2〜3分「きょうのまとめ動画」**（レッスンデータから自動生成）があります。
 
@@ -64,7 +65,7 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 
 | コマンド | 内容 |
 |---|---|
-| `npm test` | 単体テスト（vitest・78ファイル・約2,590件） |
+| `npm test` | 単体テスト（vitest・82ファイル・約2,630件） |
 | `npm run typecheck` | 型チェック |
 | `npm run smoke -- http://localhost:3000` | Playwright でゲームの画面（マップ・各ワールド最初のレッスン・テスト・まとめ・ガチャなど）と保護者アカウントの画面（/welcome・/register・/login・/who・/parent・/setup-pin・/d/<token>・/forgot-password・/reset-password・/verify-email・/forgot-pin）を開き、ページエラー・console.error・5xx・404・エラー文言・読み込みで止まる を検出。スクリーンショットは `docs/night2/screens/`（2つ目の引数で保存先を指定）。DB なしでも動く。初回は `npx playwright install chromium` |
 | `npm run smoke:offline -- <保存先> [--port 3100]` | つながらない DATABASE_URL で `next start` を起動 → スモーク（DB 停止中のアカウントの流れも確認）→ 停止 を1コマンドで。先に `npx next build`。ポートが使用中（古いサーバーの消し忘れ）なら次の空きポートを使う。40 ワールドで約 70 画面・20 分ほど |
@@ -86,6 +87,8 @@ http://localhost:3000 を開くと、はじめてのときはスタート画面�
 | `python3 worksheets/generate_worksheets.py --test boss --range 1-30` | ボス戦テスト（1〜30）を出力 |
 | `npm run worksheets:month -- --pack 1` | 1か月ワークブック No.1（20レッスン＝平日ペースで約1か月を1冊。No.2 = L21〜40 …）を `worksheets/out/monthly/month-NN.pdf` に出力（`-- --world 13` で そのワールドに かかる冊） |
 | `npm run worksheets:month -- --all` | 全レッスン分の 1か月ワークブックを出力（360レッスンで 18冊、1,200レッスンで 60冊） |
+| `npm run english:lint [-- --from 1 --to 30] [-- --library] [-- --yearly] [-- --strict]` | 英語チェック（cspell en-US・UK の つづり/ことば・和製英語・かたい 表現・文法の くせ・ステージごとの 文の 長さ・句読点・名前・書きかたの ゆれ）。結果は `docs/run9/lint/<はんい>.md`。わざとの 形は `scripts/english-words.txt` の `[intentional]`・`[allow]`（ユニットごと。`_` で つなぐと 表現）。いまは ぜんぶで error 0（run9） |
+| `npm run english:reports [-- --status open] [-- --mark <id> fixed]` | 「この英語、へん？」ボタンで 届いた 報告の 一覧・対応ずみに する（run9） |
 | `npm run curriculum:index` / `npm run curriculum:check` | `content/curriculum/worlds/` から 索引（index.json・titles.json・src/lib/curriculum/bundledWorlds.ts）を作る / 最新か確かめる（run7） |
 | `npm run teacher:merge -- <下書き.json> [--dry] [--strict]` | 先生の 台本の 下書きを カリキュラムに とりこむ（長さ・英語の わりあい・黒板の ことばを チェック。すでに 台本が ある レッスンは とばす）（run8） |
 | `npm run teacher:screens` | バーチャル教室の スクリーンショット（L1・300・700・1100 × スマホ／タブレット）を `docs/run8/screens/` に。先に `npx next build`（run8） |
@@ -183,7 +186,9 @@ eigo-quest/
 ├── assets/fonts/             レポート PDF 用の Noto Sans JP（SIL Open Font License・OFL.txt）
 ├── vercel.json               Vercel の設定（ビルドコマンド・東京リージョン・Cron Jobs）
 ├── docs/curriculum-plan.md   年間計画（12ワールド×30）と全ワールドのレッスン詳細表
-├── docs/night/ docs/night2/ docs/run3/ 〜 docs/run8/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md、公開の手順は docs/run5/DEPLOY.md
+├── docs/english-style-guide.md   英語の きまり（アメリカ英語・ステージごとの 文の 長さ・さける 表現・lint の ルール）（run9）
+├── docs/legal/               利用規約・プライバシーポリシー・特定商取引法の 下書き（/terms・/privacy・/tokushoho）（run9）
+├── docs/night/ docs/night2/ docs/run3/ 〜 docs/run9/  夜間作業の記録（PROGRESS.md・MORNING.md・キャラクタープレビュー・スクリーンショット）。LINE の設定手順は docs/run4/LINE-SETUP.md、公開の手順は docs/run5/DEPLOY.md
 └── tests/                    単体テスト（カリキュラム検証・フォニックス問題・まとめ動画・会話・イラスト など）
 ```
 
@@ -324,6 +329,13 @@ L1 → C1 → L2 → C2 → L3 → C3 → L4 → C4 → L5 → C5 → まとめ(
 - 学年は「テーマの対応先」で、子どもの実際の学年ではありません（全員 Lesson 1 から）。教科書の文・イラストは使わず、単元のテーマと目標表現だけを合わせ、英文はすべてオリジナルです。
 - 各レッスンには会話シーン（`conversation`：場面・セリフ・AI会話のゴールと目標表現）と、まとめのポイント（`recap.highlightsJa`）があります。どちらも省略可能なフィールドで、worksheets のスクリプトには影響しません。
 - `tests/curriculum.test.ts` が、連番・ワールドと学年の対応・空欄・英語欄に日本語がないこと・フォニックスの順番・まだ習っていない文法（3人称・過去形など）を先に出していないこと・AI会話で個人情報を聞かないこと などを自動で確認します。
+
+## 英語の品質（run9・docs/english-style-guide.md・docs/run9/）
+
+- **きまり**: 子ども向けの 自然な アメリカ英語（US の つづり・ことば、短縮形、教室で ほんとうに 言う 言いかた）。1文の 長さの 上限は ステージ1〜5 で 8 / 12 / 15 / 18 / 22 語。
+- **見なおしかた**（docs/run9/BRIEF.md）: `npm run english:lint` → 10 レッスンずつ 3人の レビュアー（A=アメリカの 小学校の 先生 / B=子どもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書く → 2人 いじょうの 指摘か 客観的な まちがいだけ 小さく なおす → 英語と 日本語の 意味を あわせる → 学習項目を かえたら 参照も ぜんぶ かえる。
+- **記録**: 変更は ぜんぶ `docs/run9/changes/<ブロック>.md`（before → after・レビュアー・理由）。見なおした レッスン・おはなし には `"reviewed": "run9"`。数字と 例は docs/run9/MORNING.md（なおした 欄 9,542・lint error 74 → 0）。
+- **人の ネイティブは 見ていません**（AI の 方式）。気づいた 英語は アプリの「この英語、へん？」ボタン（レッスン・先生の 字幕・としょかん）から 送れ、DB が 止まって いても 端末に のこして あとで 送ります。運営は `npm run english:reports`。
 
 ## エマ先生の授業（run8・src/lib/teacher・src/components/teacher）
 
@@ -473,12 +485,12 @@ npm run line:monthly -- --month 2026-11 --force
 | 項目 | 今の実装 | 本番での想定 |
 |---|---|---|
 | 認証 | 保護者アカウント（メール＋パスワード・LINE・暗証番号・子どもを選ぶ）、パスワードの再設定・暗証番号を忘れた・メールアドレスの確認（run5）は実装済み。レート制限は DB（run5。DB 停止中はメモリ） | 送信サービス（Resend か SMTP）のキーと `MAIL_FROM`・`APP_BASE_URL` を設定。月額課金は Stripe などのWebhookで `Parent.subscriptionStatus` を更新 |
-| AI教師の動画 | 1,200 本の台本 ＋ バーチャル教室（SVG のエマ先生・口とジェスチャー・黒板・字幕）＋ブラウザの音声合成。動画用の書きだしと つなぎ先（`content/teacher-videos.json`）は実装済み（run8） | AI アバター動画サービスで作った動画を `npm run teacher:link` でつなぐ（docs/run8/VIDEO-VENDORS.md）。台本のネイティブ確認 |
+| AI教師の動画 | 1,200 本の台本 ＋ バーチャル教室（SVG のエマ先生・口とジェスチャー・黒板・字幕）＋ブラウザの音声合成。動画用の書きだしと つなぎ先（`content/teacher-videos.json`）は実装済み（run8） | 動画は つくらない（オーナー決定・費用）。バーチャル教室の エマ先生が 先生。台本の 英語は run9 で AI の 方式で 見なおし済み。人の ネイティブの 確認は 未定（docs/run9/MORNING.md） |
 | 音声 | ブラウザの音声合成（`NEXT_PUBLIC_RECORDED_AUDIO=1` のときだけ `/media/audio/{audioKey}.mp3` を優先） | ネイティブの収録音声か、事前に生成したTTS |
 | 発音判定 | Web Speech API で単語の一致率 × 確信度 | 音素単位で評価できるAPIを `PronunciationScorer` の実装として差し替える |
 | アリーナの採点 | seed と現在の記憶状態から問題を作り直す | 出題した内容を TestSession テーブルに保存して採点する |
 | まとめ動画 | 台本＋ブラウザの音声合成で自動再生 | リアルなAI先生の動画サービスで生成した動画（`videoUrl` の差し替え口を使う） |
 | AI会話 | Claude ＋ 台本フォールバック（相手は4人のローテーション） | 同意フォームは不要（オーナー決定）。電話・メール・URL の伏せ字と「子どもの発話は保存しない」を守ったまま有効化 |
-| カリキュラム | 1,200レッスン（40ワールド・5ステージ）完成。ステージ2 以降はネイティブの最終チェック前 | ネイティブ講師による英文の確認、全クリア後の体験（2周目など）は未定 |
+| カリキュラム | 1,200レッスン（40ワールド・5ステージ）完成。英語は run9 で ぜんぶ 見なおし済み（AI の 3人レビュー・lint error 0） | 人の ネイティブの 抜きとり確認（任意）、全クリア後の体験（2周目など）は未定 |
 | 月額課金・無料体験 | 未実装（保護者アカウントとようす画面が土台） | 今後のフェーズで実装 |
 | LINE の月間レポート | 実装済み（キーが無い間は dry-run）。PDF の置き場所は ローカル / S3 互換（run5）、毎月の送信は Cron Jobs | 本番の `S3_*`・`CRON_SECRET` を設定し、ワークブックをアップロード（docs/run5/DEPLOY.md） |

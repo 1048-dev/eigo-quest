@@ -188,6 +188,16 @@ describe("CLI の 部品と 本物の データ", () => {
     expect(wl.names).toContain("Birimo");
     expect(wl.names.every((n) => /^[A-Z]/.test(n))).toBe(true);
     expect(wl.allow.get("L1178")?.has("goed")).toBe(true);
+    expect(wl.allow.get("L0757")?.has("i'm_exciting")).toBe(true);
+  });
+  it("[allow] は その ユニットで だけ ことばと 表現（_ = スペース）を ゆるす", () => {
+    const allow = new Map([["L0757", new Set(["i'm_exciting"])], ["L1014", new Set(["favourite"])]]);
+    const o = { ...opts, isAllowedIn: (u: string, w: string) => allow.get(u)?.has(w) ?? false };
+    const run = (text: string, unit: string) => lintEntries([entry(text, { unit })], o).map((i) => i.rule);
+    expect(run("I'm exciting, too!", "L0757")).not.toContain("grammar-habit");
+    expect(run("I'm exciting, too!", "L0001")).toContain("grammar-habit");
+    expect(run("My favourite is red.", "L1014")).not.toContain("uk-spelling");
+    expect(run("My favourite is red.", "L0001")).toContain("uk-spelling");
   });
   it("スタイルガイドに ルールが ぜんぶ のっている", () => {
     const guide = readFileSync(path.resolve(__dirname, "../docs/english-style-guide.md"), "utf8");

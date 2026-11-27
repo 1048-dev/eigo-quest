@@ -708,3 +708,37 @@
 - npx tsc --noEmit: OK
 - npx vitest run: 82 ファイル・2,631 件 OK
 - npx next build: OK（/terms・/privacy・/tokushoho は 静的ページ）
+
+## まとめ: lint ぜんぶ・DB を 止めた スモーク・ワールド9・10 の しあげ・README・MORNING（2026-11-27）
+
+### やった こと
+- `npm run english:lint`（ぜんぶ）を かけた: **error 61 / warn 475 / info 278**。error を 1つずつ 見た
+  - L977 の「osahashimo」は「おはしも」の ローマ字の まちがい → **ohashimo** に なおした（objective）
+  - L757「I'm exciting」・L1014〜1018 の UK の つづり（colour・centre・theatre・favourite）は レッスンの ねらいなので、`scripts/english-words.txt` の `[allow]` に いれた。`[allow]` は `_` で つなぐと 表現（`i'm_exciting`）も ゆるせる ように した（scripts/lib/englishLint.ts、テスト 1件 追加）
+  - W01-02 の レビューの あとに できた きまりで のこって いた L26 の 英語字幕「Lovely work!」→「Great work!」
+  - 記録: docs/run9/changes/final.md
+- **ワールド9・10（L241〜300）が とちゅうで 止まって いた**: auto-save の 時点では 共通の なおし（00・01）だけ あたって いて、L251〜300 の グループの パッチ 11〜15 は 書いて あるのに あたって いなかった。L241〜250 は メモも パッチも なかった
+  - L241〜250 を おなじ やりかた（3人の レビュアーを べつべつに → 2人 いじょう か objective）で レビューした（66 欄。文型を コンマで ならべる まとめ、L244 の 耳では わからない「Me, too / Me, two」の クイズ、L244「Good day」→「Hello」、L247 英語の「Yesterday we」、testPoints の「よみわけ」）
+  - パッチ 10〜15 を「before が いまの 値と おなじ ときだけ」で あてた（はずれ 0）。あとの そろえで L278「lunch time」→「lunchtime」。60 レッスンに `"reviewed": "run9"`。台本の 長さ・英語の わりあい・スライドは ALL OK
+  - 変更一覧と 3人の メモ: docs/run9/changes/W09-10.md
+- DB を 止めた スモーク（`npm run smoke:offline -- docs/run9/screens`）を さいごの ビルドで かけた
+- README.md を run9 に あわせた（英語の品質の 節・english:lint / english:reports の コマンド・docs/english-style-guide.md と docs/legal/・テストの 件数・骨組みの 表の 動画と カリキュラムの 行）
+- オーナー向けの **docs/run9/MORNING.md**（見なおしかた・ステージごとの 数・lint の まえ / あと・10 の 例・正直な 限界・決めて ほしい こと）
+
+### 数
+- ワールド9・10: lint **まえ error 0 / warn 22 / info 10 → あと error 0 / warn 5 / info 7**（のこりの warn 5 は ステージ1 の 会話の 9〜11 語の 文で、レッスンの 文型に 時・ばしょ・なまえが ついた もの）。なおした 欄 **624**（パッチ 640 件: 機械的な なおし 9・ブロックの きめごと 252・レビュアー 377・あとの そろえ 2）、なおした レッスン **60 / 60**
+- lint ぜんぶ: run9 の はじめ **error 74 / warn 1,258 / info 306** → いま **error 0 / warn 465 / info 275**（warn は ほぼ わざと: W26 の「…」293・犬の「Biscuit」59・UK と US を くらべる レッスン・テストで きまった タイトルの「…」）
+- run9 で なおした 欄の 合計: **9,542**（ステージ1 2,591・ステージ2 2,409・ステージ3 1,509・ステージ4 1,540・ステージ5 1,253・レッスン いがい 240）。`"reviewed": "run9"` は 1,200 / 1,200 レッスン
+
+### きめた こと
+- ブロックを またいだ ゆれ（seat belt / seatbelt、tug of war / tug-of-war、me too / me, too、W2・5・6 の lunch time）は どれも アメリカ英語で ただしく、おおくは 学習項目の ID なので かえなかった。MORNING の「決めて ほしい こと」に のせた
+- スモークの スクリーンショット（約 40 MB）は git に いれない（.gitignore。run7・run8 と おなじ）
+- `.run9-w910/applied.json` は apply.mjs が わたした ファイルの ぶんだけで うわがき するので、あてる まえの ものと つなげて のこした（640 件）
+
+### チェック
+- npm run english:lint（ぜんぶ）: error 0
+- npx tsc --noEmit: OK
+- npx vitest run: 82 ファイル・2,632 件 OK
+- npx next build: OK
+- npm run smoke:offline: SMOKE_RESULT
+- npm run curriculum:check: 索引は 最新

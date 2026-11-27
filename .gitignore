@@ -18,3 +18,5 @@ docs/run8/screens/smoke/
 # run8 P9: 先生の 動画用の 書きだし（npm run teacher:export で 作りなおせる。約 7,200 ファイル）。見つもり用の summary.csv だけ のこす
 exports/teacher/*
 !exports/teacher/summary.csv
+# run9: さいごの スモーク（npm run smoke:offline -- docs/run9/screens で 作りなおせる。約 40 MB）
+docs/run9/screens/
