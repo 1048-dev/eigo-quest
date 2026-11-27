@@ -195,3 +195,38 @@
 - npx vitest run: 81 ファイル・2,622 件 OK
 - npx next build: OK
 - npm run curriculum:check: 索引は 最新
+
+## REVIEW: ワールド13・14（レッスン 361〜420）の ネイティブ品質レビュー（2026-11-27）
+
+### やった こと
+- docs/run9/BRIEF.md の やりかたで、学校の 表現・ことば・TPR・フォニックスの ことば・会話と aiTask・まとめ・先生の 台本（say・字幕・スライド）・teacherScript・testPoints を 60 レッスン ぜんぶ 見なおした
+- さきに 機械的な なおし（2重の 文末記号・クイズの 2択）と ブロックの きめごと（Okay → OK・thumbs-up・イギリスふうの ほめことば・Ding-dong・「Now, / Then, / First,」の あとの 小文字・「Yesterday / きのうは」→「Last time / まえの レッスンでは」）を あて、そのあと 10 レッスンずつ 6 グループで 3人の レビュアー（A=アメリカの 小学校の 先生 / B=こどもの ESL の 専門家 / C=台本を 読む 声優）を べつべつに 書いて から 決めた。2人 いじょうの 指摘か 客観的な まちがいだけ、いちばん 小さく なおした
+- さいごに、グループの 報告で「ほかにも ある」と 出た ものを ブロック全体で そろえた（L405「show time」→「showtime」、L391「どこにも りんごの はこが あります」→「あちこちに」、L397 の 口の かたち、L417・L420 の「rong」「nife」、L390・L420 の まとめの「スピード TPR」）
+- 変更は ぜんぶ パッチ（レッスン・欄・before・after）で、before が いまの 値と あう ときだけ あてた（はずれ 0）。60 レッスン ぜんぶで スライドの 検証・台本の 長さ（180〜240 秒）・英語の わりあいも たしかめた（ALL OK）。くわしい 一覧と レビュアーの メモ: **docs/run9/changes/W13-14.md**
+- 60 レッスンに `"reviewed": "run9"` を つけた
+- W11-12 から うつした 機械的な なおしの 道具に バグが あった（「I sometimes... or I never...」が「... Or I never...」に なる）。「...」の あとでは 大文字に しない ように なおしてから つかった
+
+### 数
+- lint（`npm run english:lint -- --from 361 --to 420`）: **まえ error 0 / warn 29 / info 19 → あと error 0 / warn 4 / info 17**（まえの warn は Okay 23・L393 の bread 3・L384 の ながい 文 2・thumbs up の ゆれ 1。のこりの warn 4 は L393 の「one bread, two breads とは いわない」の 説明と クイズの まちがいの 選択肢〈3〉と、L384 の「Sorry? One more time, please.」を 言わせる ための 15 語の 早口ことば〈1〉。どれも わざと なので のこす）
+- なおした 欄 **487**（パッチ 503 件: 機械的な なおし 21・ブロックの きめごと 220・レビュアー 246・あとの そろえ 16。重なり あり）、なおした レッスン **60 / 60**
+- 学習項目 ID が かわった もの 1つ: L406 TPR「Give a thumbs up.」→「Give a thumbs-up.」（この 項目だけ 記録が あたらしく なる）
+
+### before → after の 例
+1. L367 会話（A・B）: 「Hey! That seagull watches my sandwich!」→「Hey! That seagull wants my sandwich!」（3人称の s を 見せたくて、いま おきて いる ことに 現在形を つかって いた。スライド・say・字幕も あわせた）
+2. L394 クイズ（A・B）: 「You want two milks.」→「You want milk for two.」（「two milks と いわない」を 教える クイズの 問題文で、その まちがいを 先生が つかって いた。日本語も あわせた）
+3. L402 会話（A・B）: 「Welcome to cooking class! First, wash your hands.」→「Before we start, wash your hands.」（その あとの「What's next?」→「First, cut the carrots.」と First が 2回 出て じゅんばんが おかしかった。日本語も「はじめる まえに」）
+
+### きめた こと
+- Okay / okay は スタイルガイドどおり OK に そろえた（会話・スライドも）
+- 名詞の「a thumbs-up」は ハイフン、「Two thumbs up!」「Thumbs up, ～!」は そのまま
+- 「Here's the point」や「Today's goal」で きまりを ことばの きれはしで よむ 文（「A glass of.」「Same like?」「Welcome. Try our. First, then.」）は、その レッスンの 見本の 文か ふつうの 説明に した（W11-12 と おなじ）
+- フォニックスで TTS が よみまちがえる つづり（「Badg, er」「Ty」「rong」「nife」）は なおした。「t c h」の ような 文字の よみあげは ブロック全体の 型なので のこした
+- L409 の teacherScript は「ph は まんなかか おわり」→「まんなか」の なおしで 英語が 118 語に なり、ワールド14 の テスト（120 語 いじょう）に ひっかかったので「of the word」を たした
+- のこした こと: 「fisher」（男女の ない 学習項目）、L414「too many sweets」、「Well done!」「Cheers!」、おはなしの なかの「Tomorrow is ～」、L370 TPR「Give a big hand.」（ID）、L365 teacherScript の「～」。くわしくは W13-14.md
+- 英語の わりあいは 97〜98%（W11-12 は 89〜90%）。ワールド13・14 の 決まりの はんいの なか
+
+### チェック
+- npx tsc --noEmit: OK
+- npx vitest run: 81 ファイル・2,622 件 OK（さいしょ L409 の 英語の 語数で 1 件 おちた → なおして OK）
+- npx next build: OK
+- npm run curriculum:check: 索引は 最新
