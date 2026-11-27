@@ -392,6 +392,35 @@ export const LibraryTalkRequestSchema = z.object({
 export type LibraryTalkRequest = z.input<typeof LibraryTalkRequestSchema>;
 
 // ---------------------------------------------------------------------------
+// 「この英語、へん？」の 報告（run9 Phase 1）
+// POST /api/english-report … どの 英語が へんか（レッスン・場所の id・その ときの 文・ひとこと）を のこす
+// ---------------------------------------------------------------------------
+export const ENGLISH_REPORT_PAGES = ["lesson", "teacher", "library"] as const;
+export const EnglishReportRequestSchema = z.object({
+  /** 端末で つくる id（おなじ 報告を 何回 送っても 1件だけ） */
+  clientId: z.string().regex(/^[A-Za-z0-9_-]{8,64}$/),
+  page: z.enum(ENGLISH_REPORT_PAGES),
+  lessonNo: z.number().int().min(1).max(1200).optional(),
+  /** 場所の id（例: "step:quiz:6" / "teacher:3:words" / "story:s1-01"） */
+  segmentId: z.string().regex(/^[A-Za-z0-9:_.\-]{1,80}$/),
+  /** その ときに 出ていた 英語 */
+  text: z.string().max(300).optional(),
+  /** 子どもや 保護者の ひとこと（かかなくても よい） */
+  comment: z.string().max(200).optional(),
+  /** 端末で ボタンを おした 時刻（ミリ秒） */
+  reportedAt: z.number().int().positive().optional(),
+});
+export type EnglishReportRequest = z.infer<typeof EnglishReportRequestSchema>;
+
+export const EnglishReportResponseSchema = z.object({
+  ...META,
+  ok: bool(false),
+  /** DB に 保存できたか（false なら 端末に のこして あとで 送りなおす） */
+  saved: bool(false),
+});
+export type EnglishReportResponse = z.output<typeof EnglishReportResponseSchema>;
+
+// ---------------------------------------------------------------------------
 // 年に1回の 力だめし（run7 P-yearly）
 // ---------------------------------------------------------------------------
 const SkillScoresSchema = z.object({ listening: num(0), reading: num(0), speaking: num(0), writing: num(0) });

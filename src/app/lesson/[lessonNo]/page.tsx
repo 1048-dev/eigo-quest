@@ -18,6 +18,7 @@ import { recordTrialLesson } from "@/lib/offline/trialLog";
 import { TOTAL_LESSONS } from "@/lib/curriculum";
 import { worldName } from "@/lib/game/worlds";
 import { OfflineNote } from "@/components/common/OfflineNote";
+import { ReportEnglishButton } from "@/components/common/ReportEnglishButton";
 import { LessonCompleteResponseSchema, LessonResponseSchema, type LessonCompleteResponse, type LessonResponse } from "@/lib/api/contracts";
 
 const STEP_LABEL: Record<LessonStep["kind"], string> = {
@@ -150,6 +151,12 @@ export default function LessonPage({ params }: { params: Promise<{ lessonNo: str
         if (steps[step + 1]?.kind === "conversation") { setSpeedBest(best); next(l); } else void finish(l, best);
       }} />}
       {s.kind === "conversation" && <ConversationStep lessonNo={lesson.lessonNo} conversation={lesson.conversation} character={s.character} maxTurns={s.maxTurns} items={items} onDone={(l, finished) => void finish(l, speedBest, finished)} />}
+      {/* 先生の 授業は 字幕の ところに ボタンが あるので、それ以外の ステップに だけ おく */}
+      {(s.kind !== "teacher_video" || !!s.videoUrl) && (
+        <div className="text-center">
+          <ReportEnglishButton page="lesson" lessonNo={lesson.lessonNo} segmentId={`step:${s.kind}:${step}`} tone="dark" />
+        </div>
+      )}
     </div>
   );
 }

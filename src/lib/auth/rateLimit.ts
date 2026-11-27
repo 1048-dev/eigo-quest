@@ -204,6 +204,8 @@ export const forgotEmailLimiter = new SharedRateLimiter("forgot-email", 3, 60 * 
 export const tokenIpLimiter = new SharedRateLimiter("token-ip", 20, 15 * MIN);
 /** メールアドレスの追加（確認メール）: 同じ保護者で 1時間に 5回まで */
 export const emailAddLimiter = new SharedRateLimiter("email-add", 5, 60 * MIN);
+/** 「この英語、へん？」（run9）: 同じ IP から 10分に 30件まで（端末の 送りなおしも ふくめる） */
+export const englishReportLimiter = new SharedRateLimiter("english-report", 30, 10 * MIN);
 
 /**
  * レート制限のキーにする IP。x-forwarded-for の先頭 → x-real-ip → "unknown"。
@@ -218,6 +220,6 @@ export function clientIp(req: Request): string {
 
 /** テスト用: メモリの数とロックを消す（DB の分は消さない） */
 export function resetAllLimiters() {
-  for (const l of [loginLimiter, loginIpLimiter, loginEmailLimiter, registerLimiter, pinLimiter, reauthLimiter, forgotIpLimiter, forgotEmailLimiter, tokenIpLimiter, emailAddLimiter]) l.clearMemory();
+  for (const l of [loginLimiter, loginIpLimiter, loginEmailLimiter, registerLimiter, pinLimiter, reauthLimiter, forgotIpLimiter, forgotEmailLimiter, tokenIpLimiter, emailAddLimiter, englishReportLimiter]) l.clearMemory();
   memoryLocks.clear();
 }

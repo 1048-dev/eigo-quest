@@ -529,3 +529,26 @@ model YearlyTestResult {
   @@unique([userId, takenOn])
   @@index([userId, createdAt])
 }
+
+// -----------------------------------------------------------------------------
+// 「この英語、へん？」の 報告（run9 Phase 1）
+// -----------------------------------------------------------------------------
+
+/// 子ども・保護者が「この英語、へん？」で 送った 報告。運営が scripts/english-reports.ts で 見る（保護者ページには 出さない）。
+/// userId は 外部キーに しない（おためし学習者を そうじで 消しても 報告は のこす）。comment は 200 文字まで。
+model EnglishReport {
+  id         String   @id @default(cuid())
+  clientId   String   @unique /// 端末で つくった id（送りなおしても 1件だけ）
+  userId     String? /// 送った 学習者（わからなければ null）
+  page       String /// "lesson" | "teacher" | "library"
+  lessonNo   Int?
+  segmentId  String /// 場所の id（例: "step:quiz:6" / "teacher:3:words" / "story:s1-01"）
+  text       String? /// その ときに 出ていた 英語（300 文字まで）
+  comment    String? /// ひとこと（200 文字まで）
+  status     String   @default("open") /// "open" | "fixed" | "wontfix"
+  reportedAt DateTime /// 端末で おした 時刻
+  createdAt  DateTime @default(now())
+
+  @@index([lessonNo, createdAt])
+  @@index([status, createdAt])
+}

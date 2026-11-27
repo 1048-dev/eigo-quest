@@ -35,7 +35,9 @@
     "check:run4-flow": "tsx scripts/run4-flow-check.ts",
     "check:reset-db": "tsx scripts/reset-db-check.ts",
     "check:run5-flow": "tsx scripts/run5-flow-check.ts",
-    "screens:auth": "tsx scripts/auth-ui-screens.ts"
+    "screens:auth": "tsx scripts/auth-ui-screens.ts",
+    "english:lint": "tsx scripts/english-lint.ts",
+    "english:reports": "tsx scripts/english-reports.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",
@@ -54,6 +56,8 @@
     "@types/nodemailer": "^6.4.24",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
+    "cspell": "^10.5.2",
+    "cspell-lib": "^10.5.2",
     "playwright": "^1.65.1",
     "prisma": "^6.6.0",
     "tailwindcss": "^4.1.0",

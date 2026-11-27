@@ -11,6 +11,7 @@ import { vttUrlFor } from "@/lib/teacher/media";
 import type { TeacherSegmentKind } from "@/lib/domain/types";
 import { EmmaAnimated, type EmmaGesture } from "./EmmaAnimated";
 import { useTeacherPlayer, type PlayerState } from "./useTeacherPlayer";
+import { ReportEnglishButton } from "@/components/common/ReportEnglishButton";
 
 const KIND_COLOR: Record<TeacherSegmentKind, string> = {
   greet: "#f2c14e", goal: "#ff9f43", words: "#4fc3f7", expressions: "#7e8cff", phonics: "#c77dff",
@@ -220,6 +221,7 @@ export function VirtualClassroom({ lesson, partner, teacherName, onDone }: { les
           <>
             {showEn && <p className="text-base font-bold leading-snug text-white sm:text-lg" lang="en">{seg.subtitleEn}</p>}
             {showJa && <p className="mt-0.5 text-sm leading-snug text-[#ffe9b0]" lang="ja">{seg.subtitleJa}</p>}
+            <ReportEnglishButton page="teacher" lessonNo={lesson.lessonNo} segmentId={`teacher:${state.index}:${seg.kind}`} text={seg.subtitleEn || undefined} tone="dark" className="mt-1" />
           </>
         ) : (
           <p className="pt-4 text-xs text-white/50">{sub === "off" && started ? "じまく なし" : "じまく"}</p>

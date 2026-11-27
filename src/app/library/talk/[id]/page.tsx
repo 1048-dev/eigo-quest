@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { ConversationStep } from "@/components/lesson/ConversationStep";
 import { OfflineNote } from "@/components/common/OfflineNote";
+import { ReportEnglishButton } from "@/components/common/ReportEnglishButton";
 import { loadTalkTheme } from "@/lib/library/catalog";
 import { finishActivity, loadLibraryState, type FinishResult, type LibraryState } from "@/lib/library/client";
 import { isTalkUnlocked } from "@/lib/library/rules";
@@ -87,6 +88,9 @@ export default function TalkPage() {
           }}
         />
       )}
+      <div className="text-center">
+        <ReportEnglishButton page="library" segmentId={`talk:${theme.id}`} tone="dark" />
+      </div>
     </div>
   );
 }

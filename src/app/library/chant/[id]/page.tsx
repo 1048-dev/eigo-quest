@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ReadAlongText, useReadAloud } from "@/components/library/ReadAlong";
 import { OfflineNote } from "@/components/common/OfflineNote";
+import { ReportEnglishButton } from "@/components/common/ReportEnglishButton";
 import { Portrait } from "@/components/characters/CharacterArt";
 import { loadChant } from "@/lib/library/catalog";
 import { finishActivity, loadLibraryState, type FinishResult, type LibraryState } from "@/lib/library/client";
@@ -88,6 +89,9 @@ export default function ChantPage() {
 
       <div className="card p-3">
         <ReadAlongText lines={chant.lines} reader={reader} showJa={showJa} big />
+        <div className="mt-2 text-right">
+          <ReportEnglishButton page="library" segmentId={`chant:${chant.id}:${reader.lineIdx >= 0 ? reader.lineIdx : "all"}`} text={chant.lines[reader.lineIdx]?.en} />
+        </div>
       </div>
 
       {result && (

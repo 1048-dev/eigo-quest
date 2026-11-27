@@ -9,6 +9,7 @@ import { useParams } from "next/navigation";
 import { ReadAlongText, useReadAloud } from "@/components/library/ReadAlong";
 import { StoryQuiz } from "@/components/library/StoryQuiz";
 import { OfflineNote } from "@/components/common/OfflineNote";
+import { ReportEnglishButton } from "@/components/common/ReportEnglishButton";
 import { StandingFigure } from "@/components/characters/StandingArt";
 import { loadStory } from "@/lib/library/catalog";
 import { finishActivity, loadLibraryState, type FinishResult, type LibraryState } from "@/lib/library/client";
@@ -106,6 +107,10 @@ export default function StoryPage() {
 
           <div key={round} className="card p-3">
             <ReadAlongText lines={story.lines} reader={reader} showJa={ja} />
+            <div className="mt-2 text-right">
+              {/* さいごに よんだ（タップした）文を いっしょに 送る */}
+              <ReportEnglishButton page="library" segmentId={`story:${story.id}:${reader.lineIdx >= 0 ? reader.lineIdx : "all"}`} text={story.lines[reader.lineIdx]?.en} />
+            </div>
           </div>
 
           {story.words.length > 0 && (

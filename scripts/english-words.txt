@@ -1,0 +1,48 @@
+# english:lint の 単語リスト（cspell en-US に ない けれど 正しい と 確かめた もの）。
+# 1行に いくつ 書いても よい（空白くぎり）。# から うしろは コメント。
+# 足す ときは かならず 本文の 前後を みて「ほんとうに 正しい」と 確かめてから（まちがいを かくさない）。
+
+[names]
+# メインの なかま
+Haru Riko Kiko Birimo Emma Kiki
+# 旅で あう 人・どうぶつ
+Pell Amara Mateo Priya Capy Aino Mori Oswin Hana Lumi Kai Amina Pipo Luma Amira Nana Yuna Tomo Bram Luka Yuki Toma
+Bobo Bibi Pochi Tanaka Sato Yui Momo Pip Skye Rowan
+# 場所
+Brightwater Cloudtop Willowford Skyport Heatherbrook Brightfield Starfall Aomori Ehime Shimbashi
+
+[words]
+# 名前の 複数形
+Birimos
+# 日本の ことば（英語でも そのまま つかう もの・説明つきで つかう もの）
+mochi onigiri takoyaki bento kendama furoshiki umeboshi karakuri tanabata itadakimasu gochisousama janken uchiwa koban
+# 世界の あいさつ（Ni hao / Jambo / Namaste / Asante / Côte d'Ivoire）
+hao jambo namaste asante d'Ivoire
+# 音まね・かんたんな 感動詞（会話でも つかう）
+ahh aww tock choo boing blub glug grr ribbit bzzz bzzzt hehe squee argh hmph whoo splish mwah rawr plip pssh eww awoo awooo owooo biri
+# 正しい 英語だけど 辞書に ない ことば
+lanternfish anglerfish bioluminescent dodgeball geopark geoglyph geoglyphs biomimicry biofuel autofocus autoplay leakproof seatbelts rainforests brainstormers peasy
+# 略語
+TPR VR
+
+[intentional]
+# 先生の 台本・字幕・スライドで だけ ゆるす（会話・おはなしの 行では エラーの まま）。
+# わざと まちがえた 形（「goed では なく went」の ように 説明する）
+goed eated swimmed studyed droped writed drawed buyed sayed teachs washs goodest beautifuler beautifuller beautifulest colorfuler willn't he'm
+# つながる 音・音の つづり（Meet you → meechu など）
+meechu coodju woodju didju donchu holdon canai comin checki picki thinka leeva tayka sendit aneemail bustop taycare gooday hotea thissummer
+thehedgehogeatsporridge firstthedeepseaisdarksecondit wuz duz dooz thay sed yuh yeh tuh suh buh puh iz zher zhun yoor skw eess eez duv kee chee jee oyd
+# 音節・語の 部品（Pen, cil. / Word part: spect / -tion / -ment）
+tion ation ment ful ive ity ize ly ous ible ance ence ture idge ies ist ject rupt spect vis tele mis ree im ough ount ves ve ative fect stle tw gy n't
+ank shus kup coun cil uff ug nch ig ev gg ys wn een kro mant fti ndr lus rup tid tra trea ple dov ju joo chu zz nup Tay Ist Jel Sof Banan Festiv
+koff bou ble thern rade haaa
+Fyoo Fuuu Haa Wenz Yee Pok Bam Plas Jee REE TRA TRIC SEV SUH KAI COMF Sev Tra Tw Ment Iz
+# 音を のばした・しゃれ（Baa-rilliant / Pawsome）
+rilliant pawsome buzzy
+
+[allow]
+# その ユニットで だけ ゆるす ことば（ユニット ことば ことば …）
+L1178 goed eated
+L1197 goed
+L1184 mmf
+L1057 wel
