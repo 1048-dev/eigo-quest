@@ -22,3 +22,8 @@ exports/teacher/*
 !exports/teacher/summary.csv
 # run9: さいごの スモーク（npm run smoke:offline -- docs/run9/screens で 作りなおせる。約 40 MB）
 docs/run9/screens/
+# run11: run9 の レビュー作業フォルダ（中身の 変更表は docs/run9/changes/ に ある）。ほかの 一時作業フォルダも 入れない
+.run9-*/
+.run10-*/
+.run11-*/
+.run[0-9]*-*/
