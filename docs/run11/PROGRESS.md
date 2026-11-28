@@ -48,3 +48,27 @@
 - 決定 3 の 置きかえは L1011〜1018 に 1 か所も かからなかった（W34 で かえたのは L995・L996 だけ）。colour・centre・theatre・favourite などの UK の つづりも のこした
 - tests/spelling-unify.test.ts に「L1011〜1018 の 8 レッスンに colour・centre・theatre・favourite が のこって いる」テストを 追加（そろえる 作業で うっかり 消さない ため）
 - tsc OK・vitest 2,745 passed（+6）・next build OK
+
+## さいごの 確認: npm run check:all（ぜんぶ・E2E こみ）（2026-11-28）
+
+- コミット 45dcf96（決定 1〜4 の あと）で `npm run check:all` を 1 回 通した。けっか: **11 PASS / 0 FAIL / 0 SKIP**・ぜんぶで **49 分 28 秒**・終了コード 0
+
+| # | ステップ | けっか | 数 | 時間 |
+|---|---|---|---|---|
+| 1 | english:lint（ぜんぶ・`--strict`） | ✅ PASS | 161,841 文字列 / 1,635 ユニット・error 0・warn 462・info 274 | 8s |
+| 2 | tsc | ✅ PASS | error 0 | 8s |
+| 3 | vitest | ✅ PASS | 2,745 / 2,745 passed（90 ファイル） | 1m13s |
+| 4 | next build | ✅ PASS | 81 ルート | 1m24s |
+| 5 | データの 確認（check:data） | ✅ PASS | レッスン 1,200・テスト 2,719・問題 455,781・おはなし 100・力だめし 5・問題 0 | 1m21s |
+| 6 | 画面の 描画（check:render） | ✅ PASS | 描画 333,549 画面・問題 0 | 5m43s |
+| 7 | DB 停止の スモーク | ✅ PASS | 125 OK / 0 NG | 7m20s |
+| 8 | E2E（本物の DB・ポート 5544） | ✅ PASS | ワールド 40/40・チェック 341 OK / 0 NG | 21m57s |
+| 9 | アクセシビリティ（axe） | ✅ PASS | 26 ページ・critical/serious 0・moderate/minor 0 | 1m52s |
+| 10 | 内部リンク | ✅ PASS | 4,125 URL（画面 27）・リンク切れ 0・クロール エラー 0 | 8m19s |
+| 11 | JS の 大きさ | ✅ PASS | /map 195/230 kB・/lesson 200/230 kB | 2s |
+
+- 失敗が 1 つも なかったので、なおした コードも 新しい テストも なし（run11 の 決定 2・3・4 で 追加した テストは すでに vitest に ふくまれて いる）
+- lint の warn が run10 の 464 → 462 に へった（決定 3 で ゆれ表の「tug of war / tug-of-war」などが きえた ため）
+- vitest の ファイル数 88 → 90（tests/emoji-marks.test.ts・tests/spelling-unify.test.ts）
+- 本番の DB（ポート 5432）には さわって いない。確認用 DB は ポート 5544 の 使いすて
+- レポートは docs/run10/report/（latest.md ほか）を 今回の けっかで 上書きした

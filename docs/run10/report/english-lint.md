@@ -1,9 +1,9 @@
 # English lint: all
 
-- 日付: 2026-11-27
+- 日付: 2026-11-28
 - はんい: レッスン 1〜1200 ＋ としょかん ＋ 力だめし ＋ アプリの 文字（src・worksheets。フレーズブックだけ）（`npm run english:lint -- --all --strict --out C:\Users\EMICLE\eigo-quest-night\docs\run10\report\english-lint.md`）
 - しらべた 文字列: 161841（1635 ユニット）
-- 結果: **error 0 / warn 464 / info 274**
+- 結果: **error 0 / warn 462 / info 274**
 
 ルールの いみは docs/english-style-guide.md §11。
 
@@ -12,7 +12,7 @@
 | capitalization | 0 | 3 | 0 |
 | contraction | 0 | 0 | 85 |
 | grammar-habit | 0 | 4 | 0 |
-| inconsistent-form | 0 | 17 | 0 |
+| inconsistent-form | 0 | 15 | 0 |
 | lets-overuse | 0 | 0 | 38 |
 | near-duplicate | 0 | 0 | 3 |
 | please-command | 0 | 0 | 17 |
@@ -1927,7 +1927,6 @@
 - "make an x with your arms" ×1 (L0178) vs "make an X with your arms" ×1 (L0386)
 - "january, February, March, April" ×1 (L0186) vs "january, February, March, April," ×1 (chant:c-10)
 - "bow and say thank you" ×10 (L0219, L0298, L0520, …) vs "bow and say, Thank you" ×3 (L1001, L1180, L1191)
-- "tug of war" ×2 (L0302, L0349) vs "tug-of-war" ×1 (L0434)
 - "shout Bingo" ×1 (L0506) vs "shout, "Bingo" ×1 (L0700)
 - "whisper thank you" ×1 (L0537) vs "whisper, "Thank you" ×1 (L0651)
 - "rub your tummy and say yum" ×1 (L0582) vs "rub your tummy and say, Yum" ×1 (L1174)
@@ -1935,5 +1934,4 @@
 - "stem" ×2 (L0682, L0938) vs "STEM" ×2 (L0889, L0898)
 - "take a deep breath. In and out" ×1 (L0773) vs "take a deep breath, in and out" ×1 (L1113)
 - "sure. Go ahead" ×1 (L0833) vs "sure, go ahead" ×1 (L0853)
-- "seat belt" ×1 (L0873) vs "seatbelt" ×1 (L0996)
 - "put your hand on your heart and say thank you" ×2 (L1112, L1169) vs "put your hand on your heart and say, Thank you" ×1 (L1010)
