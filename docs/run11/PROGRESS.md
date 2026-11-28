@@ -72,3 +72,9 @@
 - vitest の ファイル数 88 → 90（tests/emoji-marks.test.ts・tests/spelling-unify.test.ts）
 - 本番の DB（ポート 5432）には さわって いない。確認用 DB は ポート 5544 の 使いすて
 - レポートは docs/run10/report/（latest.md ほか）を 今回の けっかで 上書きした
+
+## 朝の まとめ: docs/run11/MORNING.md（2026-11-28）
+
+- オーナー向けに 短い まとめを 書いた: 決定 1〜4 で かわった こと と 数（18 フォルダ・840 ファイル／34 か所／91 か所・ID 5 つ／L1011〜1018 は そのまま）、さいごの check:all の 表（11 PASS / 0 FAIL / 0 SKIP・49 分 28 秒）、のこって いる こと
+- のこって いる こと として 書いた もの: W25 L22 の 🙅 の かぶり（未対応）、docs/run9 に のこる `.run9-wXXXX/` への 言及、レポートの 場所が docs/run10/report の まま、ワークブック PDF の 作りなおし（`npm run worksheets` → `npm run worksheets:upload`）、実機・本物の 音声・ネイティブの 読みあわせ
+- docs だけの 変更。tsc OK・vitest 2,745 passed（90 ファイル）・next build OK
