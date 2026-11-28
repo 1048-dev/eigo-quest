@@ -467,6 +467,20 @@ export const PHRASEBOOK: readonly PhraseFunction[] = [
       { form: "Please listen to my speech.", reason: "textbook", why: "Japanese school formula (きいて ください). A real speech just starts.", use: "Let me tell you about ～.", re: /\bPlease listen to my speech\b/ },
     ],
   },
+  {
+    id: "spelling",
+    en: "One spelling for compound words (run11)",
+    ja: "ふくごう語の つづりを 1つに",
+    canonical: [
+      { stages: [1, 5], forms: ["seat belt", "tug-of-war", "lunchtime"], note: "The more common US spelling. Learning item IDs use these forms." },
+    ],
+    variants: [],
+    avoid: [
+      { form: "seatbelt", reason: "consistency", why: "One spelling: seat belt (two words, the more common US form).", use: "seat belt", re: /\b[Ss]eatbelts?\b/, fix: (t) => t.replace(/\b([Ss])eatbelt(s?)\b/g, "$1eat belt$2") },
+      { form: "tug of war", reason: "consistency", why: "One spelling: tug-of-war (hyphenated, the more common US form).", use: "tug-of-war", re: /\b[Tt]ug of war\b/, fix: (t) => t.replace(/\b([Tt])ug of war\b/g, "$1ug-of-war") },
+      { form: "lunch time", reason: "consistency", why: "One spelling: lunchtime (one word, the more common US form).", use: "lunchtime", re: /\b[Ll]unch time\b/, fix: (t) => t.replace(/\b([Ll])unch time\b/g, "$1unchtime") },
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------

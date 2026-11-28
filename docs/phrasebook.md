@@ -53,6 +53,7 @@ Reasons: **British** · **stiff / formal** · **textbook-only** · **unnatural**
 21. Asking about words（ことばの しつもん）
 22. Checking understanding (teacher)（わかったか たしかめる（先生））
 23. Starting and ending a speech（スピーチの はじめと おわり）
+24. One spelling for compound words (run11)（ふくごう語の つづりを 1つに）
 
 ## Greetings（あいさつ（会った とき））
 
@@ -624,6 +625,24 @@ id: `speech`
 | Avoid | Why | Use instead | Lint |
 |---|---|---|---|
 | Please listen to my speech. | **textbook-only** — Japanese school formula (きいて ください). A real speech just starts. | Let me tell you about ～. | ✓ |
+
+## One spelling for compound words (run11)（ふくごう語の つづりを 1つに）
+
+id: `spelling`
+
+**Canonical**
+
+| Stage | Use | Note |
+|---|---|---|
+| 1–5 | `seat belt` `tug-of-war` `lunchtime` | The more common US spelling. Learning item IDs use these forms. |
+
+**Avoid**
+
+| Avoid | Why | Use instead | Lint |
+|---|---|---|---|
+| seatbelt | **house style (one spelling)** — One spelling: seat belt (two words, the more common US form). | seat belt | ✓ auto-fix |
+| tug of war | **house style (one spelling)** — One spelling: tug-of-war (hyphenated, the more common US form). | tug-of-war | ✓ auto-fix |
+| lunch time | **house style (one spelling)** — One spelling: lunchtime (one word, the more common US form). | lunchtime | ✓ auto-fix |
 
 ## Related
 

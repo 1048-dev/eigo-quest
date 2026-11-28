@@ -1,9 +1,9 @@
 # English lint: all
 
-- 日付: 2026-11-27
-- はんい: レッスン 1〜1200 ＋ としょかん ＋ 力だめし（`npm run english:lint --`）
-- しらべた 文字列: 154506（1344 ユニット）
-- 結果: **error 0 / warn 465 / info 275**
+- 日付: 2026-11-28
+- はんい: レッスン 1〜1200 ＋ としょかん ＋ 力だめし ＋ アプリの 文字（src・worksheets。フレーズブックだけ）（`npm run english:lint --`）
+- しらべた 文字列: 161841（1635 ユニット）
+- 結果: **error 0 / warn 462 / info 274**
 
 ルールの いみは docs/english-style-guide.md §11。
 
@@ -12,10 +12,10 @@
 | capitalization | 0 | 3 | 0 |
 | contraction | 0 | 0 | 85 |
 | grammar-habit | 0 | 4 | 0 |
-| inconsistent-form | 0 | 18 | 0 |
+| inconsistent-form | 0 | 15 | 0 |
 | lets-overuse | 0 | 0 | 38 |
 | near-duplicate | 0 | 0 | 3 |
-| please-command | 0 | 0 | 18 |
+| please-command | 0 | 0 | 17 |
 | punctuation | 0 | 293 | 0 |
 | sentence-length | 0 | 35 | 0 |
 | stiff-phrase | 0 | 13 | 109 |
@@ -68,10 +68,6 @@
   > We don't have a zoo, but we have a farm.
 - **warn** sentence-length `conversation.lines[1].en` — 10 words > 8 (stage 1): "We don't have a zoo, but we have a farm."  
   > We don't have a zoo, but we have a farm.
-
-### L0239 — Hero Speech Rehearsal
-- **info** please-command `conversation.lines[1].en` — "Please listen to my speech." → Can you ~? / Let's ~. / plain imperative  
-  > Please listen to my speech. My hero is my coach. He is strong and kind. Thank you for listening.
 
 ### L0248 — A Day at Sky School
 - **warn** sentence-length `conversation.lines[2].en` — 9 words > 8 (stage 1): "I sometimes read books in the library after lunch."  
@@ -1924,7 +1920,6 @@
 - **info** lets-overuse `(lesson)` — 4 "Let's" in one lesson (aim ≤ 3)
 
 ## 書きかたの ゆれ（はんい ぜんたい）
-- "me too" ×9 (L0004, L0005, L0007, …) vs "me, too" ×2 (L0183, L0244)
 - "thank you" ×12 (L0010, L0019, L0028, …) vs "thank-you" ×1 (L0569)
 - "beep, beep" ×1 (L0104) vs "beep beep" ×1 (L0498)
 - "say thank you and bow" ×4 (L0145, L0160, L0380, …) vs "say, "Thank you!" and bow" ×1 (L0633)
@@ -1932,7 +1927,6 @@
 - "make an x with your arms" ×1 (L0178) vs "make an X with your arms" ×1 (L0386)
 - "january, February, March, April" ×1 (L0186) vs "january, February, March, April," ×1 (chant:c-10)
 - "bow and say thank you" ×10 (L0219, L0298, L0520, …) vs "bow and say, Thank you" ×3 (L1001, L1180, L1191)
-- "tug of war" ×2 (L0302, L0349) vs "tug-of-war" ×1 (L0434)
 - "shout Bingo" ×1 (L0506) vs "shout, "Bingo" ×1 (L0700)
 - "whisper thank you" ×1 (L0537) vs "whisper, "Thank you" ×1 (L0651)
 - "rub your tummy and say yum" ×1 (L0582) vs "rub your tummy and say, Yum" ×1 (L1174)
@@ -1940,5 +1934,4 @@
 - "stem" ×2 (L0682, L0938) vs "STEM" ×2 (L0889, L0898)
 - "take a deep breath. In and out" ×1 (L0773) vs "take a deep breath, in and out" ×1 (L1113)
 - "sure. Go ahead" ×1 (L0833) vs "sure, go ahead" ×1 (L0853)
-- "seat belt" ×1 (L0873) vs "seatbelt" ×1 (L0996)
 - "put your hand on your heart and say thank you" ×2 (L1112, L1169) vs "put your hand on your heart and say, Thank you" ×1 (L1010)

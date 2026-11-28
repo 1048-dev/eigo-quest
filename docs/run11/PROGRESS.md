@@ -25,3 +25,26 @@
 - これから もどらない ように tests/emoji-marks.test.ts を 追加: 教材の emoji 欄に ❌ ❎ ✖ ✗ ✘ ✕ ╳ が ない こと・「Make an X / Cross your arms」の TPR は 🙅・mistake は 🤦（または 😅）
 - 気づいた こと（今回は 未対応）: W25 L22 の 単語 can't be と TPR Shake your head. No, no, no! が もとから どちらも 🙅（data-check は 問題 0）
 - check:data 問題 0・tsc OK・vitest 2,739 passed（+4）・next build OK
+
+## 決定 3: のこりの つづりの ゆれを アメリカで ふつうの 形に（2026-11-28）
+
+- しらべた（content/ ぜんぶ。docs の 過去の 記録は のぞく）:
+  - **me too**: ひとことの へんじ「Me, too」は もう 0 こ（run10 の フレーズブックで そろえ済み。lint の ゆれ表からも きえた）。のこる「Can you show me, too?」（L814）・「you and me, too!」（L274）・「listen to me, too.」（L1167）は 文の さいごの too で、ハウススタイル（Can I come, too? / Nice to meet you, too.）どおり コンマを のこした
+  - **seatbelt → seat belt**: W34 の L995・L996（ことば・TPR・会話・teacherScript・スライド・字幕）18 か所
+  - **tug of war → tug-of-war**: W11 L302（ことば・TPR・表現・スライド）25 か所、W12 L349 10 か所
+  - **lunch time → lunchtime**: W2 L37（会話・aiTask の starter・スライド）5 か所、W5 L137・L140（表現・目標・スライド・会話の 目標文）21 か所、W6 L156・L177（ことば・スライド）12 か所。breakfast time・bath time・dinner time は 2 語の まま
+  - 合計 91 か所（6 ファイル）。大文字（Seatbelt・Tug of war・Lunch time）も そろえた。日本語の 字幕の 中の 英語（「tug-of-war は つなひき」）も 同じ
+- **学習項目 ID が かわった もの 5 つ**: L137 表現「It's lunchtime.」、L140 表現「It's lunchtime in Tokyo.」、L177 ことば `L177-W-lunchtime`、L996 ことば `L996-W-seat-belt`・TPR `L996-C-fasten-your-seat-belt-click`（この 5 項目だけ 記録が あたらしく なる）。tug-of-war は スラッグが もとと 同じ（`tug-of-war`）なので L302・L349 の ID は かわらない
+- テスト・src・タイトル・としょかん・力だめしには もとの 形が なかったので 変更 なし（会話の 目標文・スライド・まとめは レッスンの JSON の 中で いっしょに なおした）
+- これから もどらない ように:
+  - フレーズブック（scripts/lib/phrasebook.ts）に「spelling」を 追加。seatbelt・tug of war・lunch time を avoid（consistency）に して、lint は error、`npm run phrasebook:fix` で 自動で なおせる。docs/phrasebook.md を つくりなおした（23 → 24 functions。doc が 最新か の テスト OK）
+  - scripts/english-words.txt から「seatbelts」を はずした
+  - docs/english-style-guide.md §9 の 表に Me too・seat belt・tug-of-war・lunchtime を 追加
+  - tests/spelling-unify.test.ts を 追加（content/ に もとの 形が ない・ID が あたらしい つづり・lint と fix が つかまえて 2 回 かけても おなじ）
+- english:lint error 0（ゆれ表の「tug of war / tug-of-war」も きえた）・check:data 問題 0
+
+## 決定 4: L1011〜1018（UK と US の くらべっこ）は そのまま（2026-11-28）
+
+- 決定 3 の 置きかえは L1011〜1018 に 1 か所も かからなかった（W34 で かえたのは L995・L996 だけ）。colour・centre・theatre・favourite などの UK の つづりも のこした
+- tests/spelling-unify.test.ts に「L1011〜1018 の 8 レッスンに colour・centre・theatre・favourite が のこって いる」テストを 追加（そろえる 作業で うっかり 消さない ため）
+- tsc OK・vitest 2,745 passed（+6）・next build OK
